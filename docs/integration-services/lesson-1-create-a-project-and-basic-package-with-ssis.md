@@ -14,15 +14,15 @@ manager: craigg
 ---
 # Lesson 1: Create a Project and Basic Package with SSIS
 
-In this lesson, you will create a simple ETL package that extracts data from a single flat file source, transforms the data using two lookup transformation components, and writes that data to the **FactCurrency** fact table in **AdventureWorksDW2012**. As part of this lesson, you will learn how to create new packages, add and configure data source and destination connections, and work with new control flow and data flow components.  
+In this lesson, you will create a simple ETL package that extracts data from a single flat file source, transforms the data using two lookup transformation components, and writes that data to a copy of the **FactCurrencyRate** fact table in **AdventureWorksDW2012**. As part of this lesson, you will learn how to create new packages, add and configure data source and destination connections, and work with new control flow and data flow components.  
   
 > [!IMPORTANT]  
-> This tutorial requires the **AdventureWorksDW2012** sample database. For more information on installing and deploying **AdventureWorksDW2012**, see [Reporting Services Product Samples on CodePlex](http://go.microsoft.com/fwlink/p/?LinkID=526910).  
+> This tutorial requires the **AdventureWorksDW2012** sample database. For more information on installing and deploying **AdventureWorksDW2012**, see [Reporting Services Product Samples on CodePlex](https://go.microsoft.com/fwlink/p/?LinkID=526910).  
   
 ## Understanding the Package Requirements  
 This tutorial requires Microsoft SQL Server Data Tools.  
   
-For more information on installing the SQL Server Data Tools see [SQL Server Data Tools Download](http://msdn.microsoft.com/data/hh297027).  
+For more information on installing the SQL Server Data Tools see [SQL Server Data Tools Download](https://msdn.microsoft.com/data/hh297027).  
   
 Before creating a package, you need a good understanding of the formatting used in both the source data and the destination. Once you understand both of these data formats, you will be ready to define the transformations necessary to map the source data to the destination.  
   
@@ -45,7 +45,7 @@ Here is an example of the source data contained in the SampleCurrencyData.txt fi
 When working with flat file source data, it is important to understand how the Flat File connection manager interprets the flat file data. If the flat file source is Unicode, the Flat File connection manager defines all columns as [DT_WSTR] with a default column width of 50. If the flat file source is ANSI-encoded, the columns are defined as [DT_STR] with a column width of 50. You will probably have to change these defaults to make the string column types more appropriate for your data. To do this, you will need to look at the data type of the destination where the data will be written to and then choose the correct type within the Flat File connection manager.  
   
 ### Looking at the Destination  
-The ultimate destination for the source data is the **FactCurrency** fact table in **AdventureWorksDW**. The **FactCurrency** fact table has four columns, and has relationships to two dimension tables, as shown in the following table.  
+The ultimate destination for the source data is a copy of the **FactCurrencyRate** fact table in **AdventureWorksDW**. The **FactCurrencyRate** fact table has four columns, and has relationships to two dimension tables, as shown in the following table.  
   
 |Column Name|Data Type|Lookup Table|Lookup Column|  
 |---------------|-------------|----------------|-----------------|  
@@ -59,10 +59,10 @@ Analysis of the source and destination data formats indicates that lookups will 
   
 |Flat File Column|Table Name|Column Name|Data Type|  
 |--------------------|--------------|---------------|-------------|  
-|0|FactCurrency|AverageRate|float|  
+|0|FactCurrencyRate|AverageRate|float|  
 |1|DimCurrency|CurrencyAlternateKey|nchar (3)|  
 |2|DimDate|FullDateAlternateKey|date|  
-|3|FactCurrency|EndOfDayRate|float|  
+|3|FactCurrencyRate|EndOfDayRate|float|  
   
 ## Lesson Tasks  
 This lesson contains the following tasks:  

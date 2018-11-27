@@ -87,7 +87,7 @@ DBCC CHECKFILEGROUP
 >  Specifying PHYSICAL_ONLY causes DBCC CHECKFILEGROUP to skip all checks of FILESTREAM data.  
   
  MAXDOP  
- **Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2014 SP2 through [current version](http://go.microsoft.com/fwlink/p/?LinkId=299658).  
+ **Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2014 SP2 through [current version](https://go.microsoft.com/fwlink/p/?LinkId=299658).  
   
  Overrides the **max degree of parallelism** configuration option of **sp_configure** for the statement. The MAXDOP can exceed the value configured with sp_configure. If MAXDOP exceeds the value configured with Resource Governor, the Database Engine uses the Resource Governor MAXDOP value, described in ALTER WORKLOAD GROUP (Transact-SQL). All semantic rules used with the max degree of parallelism configuration option are applicable when you use the MAXDOP query hint. For more information, see [Configure the max degree of parallelism Server Configuration Option](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md).  
   

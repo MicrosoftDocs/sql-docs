@@ -139,7 +139,7 @@ manager: craigg
   
  For this reason, you must grant the PowerPivot unattended data refresh account read-only permissions on all of the external data sources that are used in any data refresh operation that runs under the unattended account.  
   
- If you are an administrator of the data sources used in your organization, you can create a login and assign the necessary permissions. Otherwise, you must contact the data owners and provide the account information. Be sure to specify the Windows domain user account that maps to the PowerPivot unattended data refresh account. This is the account you specified in “(Step 1): Create a target application and set the credentials” in this topic.  
+ If you are an administrator of the data sources used in your organization, you can create a login and assign the necessary permissions. Otherwise, you must contact the data owners and provide the account information. Be sure to specify the Windows domain user account that maps to the PowerPivot unattended data refresh account. This is the account you specified in "(Step 1): Create a target application and set the credentials" in this topic.  
   
 ###  <a name="bkmk_verify"></a> Step 5: Verify account availability in data refresh configuration pages  
   

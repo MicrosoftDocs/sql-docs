@@ -6,7 +6,6 @@ ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
 ms.technology: 
-  - "database-engine"
 ms.topic: "reference"
 apiname: 
   - "LocalDBGetVersions"
@@ -32,7 +31,7 @@ manager: craigg
   
 ## Parameters  
  *pVersionNames*  
- [Output] Contains names of the LocalDB versions that are available on the user’s workstation.  
+ [Output] Contains names of the LocalDB versions that are available on the user's workstation.  
   
  *lpdwNumberOfVersions*  
  [Input/Output] On input holds the number of slots for versions in the *pVersionNames* buffer.   

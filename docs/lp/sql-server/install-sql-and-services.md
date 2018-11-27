@@ -150,7 +150,7 @@ featureFlags:
                                                 </div>
                                                 <div class="cardText">
                                                     <h3>Install SQL Server Reporting Services (SSRS)</h3>
-                                                    <p>A solution for creating, publishing, and managing reports, then delivering them to the right users in different ways, whether that’s viewing them in web browser, on their mobile device, or as an email in their in-box. </p>
+                                                    <p>A solution for creating, publishing, and managing reports, then delivering them to the right users in different ways, whether that's viewing them in web browser, on their mobile device, or as an email in their in-box. </p>
                                                 </div>
                                             </div>
                                         </div>
@@ -320,7 +320,7 @@ featureFlags:
         <h2>Keep in touch with us</h2>
         <ul class="links">
            <li>
-                <a href="http://aka.ms/editsqldocs" data-linktype="external">
+                <a href="https://aka.ms/editsqldocs" data-linktype="external">
                     Contribute
                 </a>
             </li>
@@ -330,12 +330,12 @@ featureFlags:
                 </a>
             </li>
            <li>
-                <a href="http://aka.ms/sqldocsfeedback" data-linktype="external">
+                <a href="https://aka.ms/sqldocsfeedback" data-linktype="external">
                     Feedback
                 </a>
             </li>
            <li>
-                <a href="http://aka.ms/sqldocsurvey" data-linktype="external">
+                <a href="https://aka.ms/sqldocsurvey" data-linktype="external">
                     Survey
                 </a>
             </li>

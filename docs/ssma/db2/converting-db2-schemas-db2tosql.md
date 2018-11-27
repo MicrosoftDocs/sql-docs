@@ -31,7 +31,7 @@ The following table shows which DB2 objects are converted, and the resulting [!I
 |User-Defined Types|**SSMA maps the following User-Defined:**<br /><br />Distinct Type<br /><br />Structured Type<br /><br />SQL PL data types – Note: Weak cursor type are not supported.|  
 |Special Registers|**SSMA only maps registers listed below:**<br /><br />CURRENT TIMESTAMP<br /><br />CURRENT DATE<br /><br />CURRENT TIME<br /><br />CURRENT TIMEZONE<br /><br />CURRENT USER<br /><br />SESSION_USER and USER<br /><br />SYSTEM_USER<br /><br />CURRENT CLIENT_APPLNAME<br /><br />CURRENT CLIENT_WRKSTNNAME<br /><br />CURRENT LOCK TIMEOUT<br /><br />CURRENT SCHEMA<br /><br />CURRENT SERVER<br /><br />CURRENT ISOLATION<br /><br />Other Special Registers are not mapped to SQL server semantic.|  
 |CREATE TABLE|**SSMA maps CREATE TABLE with the following exceptions:**<br /><br />Multidimensional clustering (MDC) tables<br /><br />Range-clustered tables (RCT)<br /><br />Partitioned tables<br /><br />Detached table<br /><br />DATA CAPTURE clause<br /><br />IMPLICITLY HIDDEN option<br /><br />VOLATILE option|  
-|CREATE VIEW|SSMA maps CREATE VIEW with ‘WITH LOCAL CHECK OPTION’ but other options are not mapped to SQL server semantics|  
+|CREATE VIEW|SSMA maps CREATE VIEW with 'WITH LOCAL CHECK OPTION' but other options are not mapped to SQL server semantics|  
 |CREATE INDEX|**SSMA maps CREATE INDEX with the following exceptions:**<br /><br />XML index<br /><br />BUSINESS_TIME WITHOUT OVERLAPS option<br /><br />PARTITIONED clause<br /><br />SPECIFICATION ONLY option<br /><br />EXTEND USING option<br /><br />MINPCTUSED option<br /><br />PAGE SPLIT option|  
 |Triggers|**SSMA maps the following trigger semantics:**<br /><br />AFTER / FOR EACH ROW Triggers<br /><br />AFTER /FOR EACH STATEMENT Triggers<br /><br />BEFORE / FOR EACH ROW and INSTEAD OF / FOR EACH ROW Triggers|  
 |Sequences|Are mapped.|  
@@ -62,7 +62,7 @@ The following table shows which DB2 objects are converted, and the resulting [!I
 |GET DIAGNOSTICS Statement|**SSMA maps GET DIAGNOSTICS with the following exceptions:**<br /><br />ROW_COUNT – Is mapped.<br /><br />DB2_RETURN_STATUS – Is mapped.<br /><br />MESSAGE_TEXT – Is mapped.<br /><br />DB2_SQL_NESTING_LEVEL - Does not map to SQL Server semantics<br /><br />DB2_TOKEN_STRING - Does not map to SQL Server semantics|  
 |Cursors|**SSMA maps CURSORS with the following exceptions:**<br /><br />ALLOCATE CURSOR statement - Does not map to SQL Server semantics<br /><br />ASSOCIATE LOCATORS statement - Does not map to SQL Server semantics<br /><br />DECLARE CURSOR statement - Returnability clause is not mapped to SQL server semantics<br /><br />FETCH statement – Partial mapping. Variables as target are supported only. SQLDA DESCRIPTOR is not  mapped to SQL server semantics|  
 |Variables|Are mapped.|  
-|Exceptions, Handlers, and Conditions|**SSMA maps “exception handling” with the following exceptions:**<br /><br />EXIT Handlers – Are mapped.<br /><br />UNDO Handlers – Are mapped.<br /><br />CONTINUE Handlers – Are not mapped.<br /><br />Conditions - It does not map to SQL server semantics.|  
+|Exceptions, Handlers, and Conditions|**SSMA maps "exception handling" with the following exceptions:**<br /><br />EXIT Handlers – Are mapped.<br /><br />UNDO Handlers – Are mapped.<br /><br />CONTINUE Handlers – Are not mapped.<br /><br />Conditions - It does not map to SQL server semantics.|  
 |Dynamic SQL|Not mapped.|  
 |Aliases|Are mapped.|  
 |Nicknames|Partial mapping. Manual processing is required for underlying object|  
@@ -141,7 +141,7 @@ For each item that could not be converted, you have to determine what you want t
 -   You can exclude the object from migration. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Metadata Explorer and DB2 Metadata Explorer, clear the check box next to the item before loading the objects into [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and migrating data from DB2.  
   
 ## Next Step  
-The next step in the migration process is to [Load the converted objects into SQL Server](http://msdn.microsoft.com/f4ea1ced-9f9f-4a9d-88ab-81dbab64adc3).  
+The next step in the migration process is to [Load the converted objects into SQL Server](https://msdn.microsoft.com/f4ea1ced-9f9f-4a9d-88ab-81dbab64adc3).  
   
 ## See Also  
 [Migrating DB2 Data into SQL Server &#40;DB2ToSQL&#41;](../../ssma/db2/migrating-db2-data-into-sql-server-db2tosql.md)  

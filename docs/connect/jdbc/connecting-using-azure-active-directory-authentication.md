@@ -115,7 +115,7 @@ Access to a Windows domain-joined machine to query your Kerberos Domain Controll
 
 ##### Step 1: Find Kerberos KDC
 - **Run on**: Windows command line
-- **Action**: `nltest /dsgetdc:DOMAIN.COMPANY.COM` (where “DOMAIN.COMPANY.COM” maps to your domain’s name)
+- **Action**: `nltest /dsgetdc:DOMAIN.COMPANY.COM` (where "DOMAIN.COMPANY.COM" maps to your domain's name)
 - **Sample Output**
   ```
   DC: \\co1-red-dc-33.domain.company.com
@@ -217,15 +217,15 @@ The example below contains a simple Java application that connects to Azure SQL 
 	3. Click the "App registrations" tab.
 	4. In the drawer, click "New application registration".
 	5. Enter mytokentest as a friendly name for the application, select "Web App/API".
-	6. We don't need SIGN-ON URL. Just provide anything: "http://mytokentest".
+	6. We don't need SIGN-ON URL. Just provide anything: "https://mytokentest".
 	7. Click "Create" at the bottom.
 	9. While still in the Azure portal, click the "Settings" tab of your application, and open the "Properties" tab.
 	10. Find the "Application ID" (AKA Client ID) value and copy it aside, you need this later when configuring your application (for example, 1846943b-ad04-4808-aa13-4702d908b5c1). See the following snapshot.
-	11. Under section “Keys”, create a key by filling in the name field, selecting the duration of the key, and saving the configuration (leave the value field empty). After saving, the value field should be filled automatically, copy the generated value. This is the client Secret.
+	11. Under section "Keys", create a key by filling in the name field, selecting the duration of the key, and saving the configuration (leave the value field empty). After saving, the value field should be filled automatically, copy the generated value. This is the client Secret.
 	12. Click Azure Active Directory on the left side panel. Under "App Registrations", find the "End points" tab. Copy the URL under "OATH 2.0 TOKEN ENDPOINT", this is your STS URL.
 	
 	![JDBC_AAD_Token](../../connect/jdbc/media/jdbc_aad_token.png)  
-2. Sign in to your Azure SQL Server’s user database as an Azure Active Directory admin and using a T-SQL command
+2. Sign in to your Azure SQL Server's user database as an Azure Active Directory admin and using a T-SQL command
 provision a contained database user for your application principal. For more information, see the [Connecting to SQL Database or SQL Data Warehouse By Using Azure Active Directory Authentication](https://azure.microsoft.com/documentation/articles/sql-database-aad-authentication/)
  for more details on how to create an Azure Active Directory admin and a contained database user.
 

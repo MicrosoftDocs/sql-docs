@@ -15,11 +15,11 @@ manager: cgronlun
 
 R integration is available in SQL Server 2016 or later when you include the R language option in an [SQL Server 2016 R Services](../install/sql-r-services-windows-install.md) or [SQL Server 2017 Machine Learning Services (In-Database)](../install/sql-machine-learning-services-windows-install.md) installation. 
 
-To create and deploy solutions written in R, you must have a client workstation that has necessary components for full interaction with the R infrastructure in SQL Server. Coordination between a local workstation and a remote SQL Server database engine instance is achieved by having Microsoft's [RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) R library on both systems. Among other things, this library has functions for coordinating the computations on both sides. You can obtain RevoScaleR by installing [Microsoft R Client](https://docs.microsoft.com/machine-learning-server/r-client/what-is-microsoft-r-client).
+To create and deploy R solutions on SQL Server, install [Microsoft R Client](https://docs.microsoft.com/machine-learning-server/r-client/what-is-microsoft-r-client) to get [RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) and other R libraries on your development workstation. The RevoScaleR library, which is also on the remote SQL Server instance, coordinates computing requests between both systems. 
 
-In this article, learn how to configure an R client development workstation so that you can connect to a remote SQL Server enabled for machine learning and R integration. After completing the steps in this article, you will have the same R libraries as those on SQL Server. You will also know how to push computations from a local R session to a remote Python session on SQL Server.
+In this article, learn how to configure an R client development workstation so that you can connect to a remote SQL Server enabled for machine learning and R integration. After completing the steps in this article, you will have the same R libraries as those on SQL Server. You will also know how to push computations from a local R session to a remote R session on SQL Server.
 
-  ![Client-server components](media/sqlmls-r-client-revo.png "Local and remote R sessions and libraries")
+![Client-server components](media/sqlmls-r-client-revo.png "Local and remote R sessions and libraries")
 
 You can use built-in **RGUI** tool as described in this article, or [link the libraries](#install-ide) to RStudio or any another IDE that you normally use.
 
@@ -35,13 +35,13 @@ Whether you are an R developer new to SQL, or a SQL developer new to R and in-da
 
 For simple R development scenarios, you can use the RGUI executable, bundled in the base R distribution in MRO and SQL Server. This article explains how to use RGUI for both local and remote R sessions. For improved productivity, you should use a full-featured IDE such as [RStudio or Visual Studio](#install-ide).
 
-SSMS is a separate download, useful for creating and running stored procedures on SQL Server, including those containing R code. Almost any R code that you write in a development environment can be embedded in a stored procedure. You can pursue other tutorials to learn about [SSMS and embedded R](../tutorials/sqldev-in-database-r-for-sql-developers.md).
+SSMS is a separate download, useful for creating and running stored procedures on SQL Server, including those containing R code. Almost any R code that you write in a development environment can be embedded in a stored procedure. You can step through other tutorials to learn about [SSMS and embedded R](../tutorials/sqldev-in-database-r-for-sql-developers.md).
 
 ## 1 - Install R packages
 
 Microsoft's R packages are available in multiple products and services. On a local workstation, we recommend installing Microsoft R Client. R Client provides [RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler), [MicrosoftML](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/microsoftml-package), [SQLRUtils](https://docs.microsoft.com/machine-learning-server/r-reference/sqlrutils/sqlrutils), and other R packages.
 
-1. [Download Microsoft R Client](http://aka.ms/rclient/download).
+1. [Download Microsoft R Client](https://aka.ms/rclient/download).
 
 2. In the installation wizard, accept or change default installation path, accept or change the components list, and accept the Microsoft R Client license terms.
 
@@ -83,9 +83,9 @@ To connect to an instance of SQL Server to run scripts and upload data, you must
 
 At a minimum, the account used to run code must have permission to read from the databases you are working with, plus the special permission EXECUTE ANY EXTERNAL SCRIPT. Most developers also require permissions to create stored procedures, and to write data into tables containing training data or scored data. 
 
-Ask the database administrator to [configure the following permissions for your account](../security/user-permission.md), in the database where you use Python:
+Ask the database administrator to [configure the following permissions for your account](../security/user-permission.md), in the database where you use R:
 
-+ **EXECUTE ANY EXTERNAL SCRIPT** to run Python on the server.
++ **EXECUTE ANY EXTERNAL SCRIPT** to run R script on the server.
 + **db_datareader** privileges to run the queries used for training the model.
 + **db_datawriter** to write training data or scored data.
 + **db_owner** to create objects such as stored procedures, tables, functions. 
@@ -106,9 +106,16 @@ The following steps assume the demo database, [NYCTaxi_Sample](../tutorials/demo
 3. Enter demo script that executes on the remote server. You must modify the following sample script to include a valid name for a remote SQL Server instance. This session begins as a local session, but the **rxSummary** function executes on the remote SQL Server instance.
 
   ```r
+  # Define a connection. Replace server with a valid server name.
   connStr <- "Driver=SQL Server;Server=<your-server-name>;Database=NYCTaxi_Sample;Trusted_Connection=true"
+  
+  # Specify the input data in a SQL query.
   sampleQuery <-"SELECT DISTINCT TOP(100) tip_amount FROM [dbo].nyctaxi_sample ORDER BY tip_amount DESC;"
+  
+  # Define a remote compute context based on the remote server.
   cc <-RxInSqlServer(connectionString=connStr)
+
+  # Execute the function using the remote compute context.
   rxSummary(formula = ~ ., data = RxSqlServerData(sqlQuery=sampleQuery, connectionString=connStr), computeContext=cc)
   ```
 
@@ -132,14 +139,14 @@ The following steps assume the demo database, [NYCTaxi_Sample](../tutorials/demo
 4. Get and set the compute context. Once you set a compute context, it remains in effect for the duration of the session. If you aren't sure whether computation is local or remote, run the following command to find out. Results that specify a connection string indicate a remote compute context.
 
   ```r
-  # Return the current compute context
+  # Return the current compute context.
   rxGetComputeContext()
 
-  # Revert to a local compute context
+  # Revert to a local compute context.
   rxSetComputeContext("local")
   rxGetComputeContext()
 
-  # Switch back to remote
+  # Switch back to remote.
   connStr <- "Driver=SQL Server;Server=<your-server-name>;Database=NYCTaxi_Sample;Trusted_Connection=true"
   cc <-RxInSqlServer(connectionString=connStr)
   rxSetComputeContext(cc)
@@ -157,7 +164,7 @@ The following steps assume the demo database, [NYCTaxi_Sample](../tutorials/demo
 6. Generate a scatter plot to explore whether there are dependencies between two variables. 
 
   ```r
-  # Set the connection string. Substitute a valid server name for the placeholder
+  # Set the connection string. Substitute a valid server name for the placeholder.
   connStr <- "Driver=SQL Server;Server=<your database name>;Database=NYCTaxi_Sample;Trusted_Connection=true"
 
   # Specify a query on the nyctaxi_sample table.
@@ -165,7 +172,7 @@ The following steps assume the demo database, [NYCTaxi_Sample](../tutorials/demo
   sampleQuery <-"SELECT DISTINCT TOP 100 * from [dbo].[nyctaxi_sample] WHERE fare_amount <> '' AND  tip_amount <> ''"
   cc <-RxInSqlServer(connectionString=connStr)
 
-  # Generate a scatter plot
+  # Generate a scatter plot.
   rxLinePlot(fare_amount ~ tip_amount, data = RxSqlServerData(sqlQuery=sampleQuery, connectionString=connStr, computeContext=cc), type="p")
   ```
 

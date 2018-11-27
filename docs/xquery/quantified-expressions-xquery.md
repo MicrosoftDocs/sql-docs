@@ -47,7 +47,7 @@ manager: craigg
   
 ```  
 SELECT Instructions.query('  
-     declare namespace AWMI="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";  
+     declare namespace AWMI="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";  
         if (every $WC in //AWMI:root/AWMI:Location   
             satisfies $WC/@LocationID)  
         then  
@@ -69,7 +69,7 @@ where ProductModelID=7
   
 ```  
 SELECT Instructions.value('  
-     declare namespace AWMI="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";  
+     declare namespace AWMI="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";  
         every $WC in  //AWMI:root/AWMI:Location   
             satisfies $WC/@LocationID',   
   'nvarchar(10)') as Result  
@@ -81,7 +81,7 @@ where ProductModelID=7
   
 ```  
 SELECT ProductModelID, CatalogDescription.value('  
-     declare namespace PD="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription";  
+     declare namespace PD="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription";  
      some $F in /PD:ProductDescription/PD:Picture  
         satisfies $F/PD:Size="small"', 'nvarchar(20)') as SmallPicturesStored  
 FROM Production.ProductModel  

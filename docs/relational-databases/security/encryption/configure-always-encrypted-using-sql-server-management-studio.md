@@ -265,7 +265,7 @@ For more information, see [Create and Store Column Master Keys (Always Encrypted
 <a name="rotatecmk"></a>
 ## Rotating Column Master Keys
 
-The rotation of a column master key is the process of replacing an existing column master key with a new column master key. You may need to rotate a key if it has been compromised, or in order to comply with your organization’s policies or compliance regulations that mandate cryptographic keys must be rotated on a regular basis. A column master key rotation involves decrypting column encryption keys that are protected with the current column master key, re-encrypting them using the new column master key, and updating the key metadata. For more information, see [Overview of Key Management for Always Encrypted](../../../relational-databases/security/encryption/overview-of-key-management-for-always-encrypted.md).
+The rotation of a column master key is the process of replacing an existing column master key with a new column master key. You may need to rotate a key if it has been compromised, or in order to comply with your organization's policies or compliance regulations that mandate cryptographic keys must be rotated on a regular basis. A column master key rotation involves decrypting column encryption keys that are protected with the current column master key, re-encrypting them using the new column master key, and updating the key metadata. For more information, see [Overview of Key Management for Always Encrypted](../../../relational-databases/security/encryption/overview-of-key-management-for-always-encrypted.md).
 
 **Step 1: Provision a new column master key**
 
@@ -291,8 +291,8 @@ SQL Server Management Studio will obtain the metadata of the column encryption k
 
 In this step you need to make sure that all your client applications that query database columns protected with the column master key that you are rotating can access the new column master key  (i.e. database columns encrypted with a column encryption key that is encrypted with the column master key, being rotated). This step depends on the type of key store your new column master key is in. For example:
 - If the new column master key is a certificate stored in Windows Certificate Store, you need to deploy the certificate to the same certificate store location (*Current User* or *Local computer*) as the location specified in the key path of your column master key in the database. The application needs to be able to access the certificate:
-    - If the certificate is stored in the *Current User* certificate store location, the certificate needs to be imported into the Current User store of the application’s Windows identity (user).
-    - If the certificate is stored in the *Local computer* certificate store location, the application’s Windows identity must have permission to access the certificate.
+    - If the certificate is stored in the *Current User* certificate store location, the certificate needs to be imported into the Current User store of the application's Windows identity (user).
+    - If the certificate is stored in the *Local computer* certificate store location, the application's Windows identity must have permission to access the certificate.
 - If the new column master key is stored in Microsoft Azure Key Vault, the application must be implemented so that it can authenticate to Azure and has permission to access the key.
 
 For details, see [Create and Store Column Master Keys (Always Encrypted)](../../../relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted.md).
@@ -304,7 +304,7 @@ For details, see [Create and Store Column Master Keys (Always Encrypted)](../../
 
 Once you have configured all your applications to use the new column master key, remove the values of column encryption keys that are encrypted with the *old* column master key from the database. Removing old values will ensure you are ready for the next rotation (remember, each column encryption key, protected with a column master key to be rotated, must have exactly one encrypted value).
 
-Another reason to clean up the old value before archiving or removing the old column master key, is performance-related: when querying an encrypted column, an Always Encrypted-enabled client driver might need to attempt to decrypt two values: the old value and the new one. The driver does not know which of the two column master keys is valid in the application’s environment so the driver will retrieve both encrypted values from the server. If decrypting one of the values fails, because it is protected with the column master key is that not available (e.g. it is the old column master key that has been removed from the store), the driver will attempt to decrypt another value using the new column master key.
+Another reason to clean up the old value before archiving or removing the old column master key, is performance-related: when querying an encrypted column, an Always Encrypted-enabled client driver might need to attempt to decrypt two values: the old value and the new one. The driver does not know which of the two column master keys is valid in the application's environment so the driver will retrieve both encrypted values from the server. If decrypting one of the values fails, because it is protected with the column master key is that not available (e.g. it is the old column master key that has been removed from the store), the driver will attempt to decrypt another value using the new column master key.
 
 > [!WARNING]
 > If you remove the value of a column encryption key before its corresponding column master key has been made available to an application, the application will no longer be able to decrypt the database column.

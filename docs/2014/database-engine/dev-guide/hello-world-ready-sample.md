@@ -120,7 +120,7 @@ manager: craigg
   
     -   To read  
   
-    -   `<value xml:space="preserve">` `ã“ã‚“ã«ã¡ã¯</value>`  
+    -   `<value xml:space="preserve">` `ã"ã‚"ã«ã¡ã¯</value>`  
   
 11. In c:\MySample, create the file `build.com` and copy the sample code into the file  
   

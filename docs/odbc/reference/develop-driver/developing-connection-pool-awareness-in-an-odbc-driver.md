@@ -62,7 +62,7 @@ This topic discusses the details of developing an ODBC driver that contains info
 ## The Connection Rating  
  Compared to establishing a new connection, you can get better performance by resetting some connection information (such as DATABASE) in a pooled connection. So, you may not want the database name to be in your set of key attributes. Otherwise, you can have a separate pool for each database, which may not be good in mid-tier applications, where customers use various different connection strings.  
   
- Whenever you reuse a connection that has some attribute mismatch, you should reset the mismatched attributes based on the new application request, so that the returned connection is identical to the application request (see the discussion of the attribute SQL_ATTR_DBC_INFO_TOKEN in [SQLSetConnectAttr Function](http://go.microsoft.com/fwlink/?LinkId=59368)). However, resetting those attributes may decrease performance. For example, resetting a database requires a network call to server. Therefore, reuse a connection that is perfectly matched, if one is available.  
+ Whenever you reuse a connection that has some attribute mismatch, you should reset the mismatched attributes based on the new application request, so that the returned connection is identical to the application request (see the discussion of the attribute SQL_ATTR_DBC_INFO_TOKEN in [SQLSetConnectAttr Function](https://go.microsoft.com/fwlink/?LinkId=59368)). However, resetting those attributes may decrease performance. For example, resetting a database requires a network call to server. Therefore, reuse a connection that is perfectly matched, if one is available.  
   
  A rating function in the driver can evaluate an existing connection with a new connection request. For example, the driver's rating function can determine:  
   
@@ -103,7 +103,7 @@ This topic discusses the details of developing an ODBC driver that contains info
   
  The Driver Manager's **SQLAllocHandle** and **SQLFreeHandle** will not accept this new handle type.  
   
- SQL_HANDLE_DBC_INFO_TOKEN may contain confidential information such as credentials. Therefore, a driver should securely clear the memory buffer (using [SecureZeroMemory](http://msdn.microsoft.com/library/windows/desktop/aa366877\(v=vs.85\).aspx)) that contains the sensitive information before releasing this handle with **SQLFreeHandle**. Whenever an application’s environment handle is closed, all associated connection pools will be closed.  
+ SQL_HANDLE_DBC_INFO_TOKEN may contain confidential information such as credentials. Therefore, a driver should securely clear the memory buffer (using [SecureZeroMemory](https://msdn.microsoft.com/library/windows/desktop/aa366877\(v=vs.85\).aspx)) that contains the sensitive information before releasing this handle with **SQLFreeHandle**. Whenever an application's environment handle is closed, all associated connection pools will be closed.  
   
 ## Driver Manager Connection Pool Rating Algorithm  
  This section discusses the rating algorithm for Driver Manager connection pooling. Driver developers can implement the same algorithm for backward compatibility. This algorithm may not be the best one. You should refine this algorithm based your implementation (otherwise, there is no reason to implement this feature).  

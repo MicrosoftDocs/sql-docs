@@ -20,7 +20,7 @@ manager: craigg
   
 -   All of the entity's attributes, including **Name** and **Code**, for both leaf and consolidated members.  
   
--   All of the entity’s collections.  
+-   All of the entity's collections.  
   
 -   Explicit hierarchy memberships and relationships.  
   

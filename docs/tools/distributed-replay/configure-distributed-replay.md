@@ -160,9 +160,9 @@ manager: craigg
 ```  
 
 ### Possible Issue When Running With Synchronization Sequencing Mode
- You may encounter a symptom in which the replay functionality appears to “stall”, or replays events very slowly. This phenomenon can occur if the trace being replayed relies on data and/or events that do not exist in the restored target database. 
+ You may encounter a symptom in which the replay functionality appears to "stall", or replays events very slowly. This phenomenon can occur if the trace being replayed relies on data and/or events that do not exist in the restored target database. 
  
- One example is a captured workload that uses WAITFOR, such as in Service Broker’s WAITFOR RECEIVE statement. When using the synchronization sequencing mode, batches are replayed serially. If an INSERT occurs against the source database after the database backup, but before the replay capture trace is started, the WAITFOR RECEIVE issued during replay may have to wait the entire duration of the WAITFOR. Events set to be replayed after the WAITFOR RECEIVE will be stalled. This can result in the Batch Requests/sec performance monitor counter for the replay database target dropping to zero until the WAITFOR completes. 
+ One example is a captured workload that uses WAITFOR, such as in Service Broker's WAITFOR RECEIVE statement. When using the synchronization sequencing mode, batches are replayed serially. If an INSERT occurs against the source database after the database backup, but before the replay capture trace is started, the WAITFOR RECEIVE issued during replay may have to wait the entire duration of the WAITFOR. Events set to be replayed after the WAITFOR RECEIVE will be stalled. This can result in the Batch Requests/sec performance monitor counter for the replay database target dropping to zero until the WAITFOR completes. 
  
  If you need to use synchronization mode and wish to avoid this behavior, you must do the following:
  
@@ -178,8 +178,8 @@ manager: craigg
 ## See Also  
  [Administration Tool Command-line Options &#40;Distributed Replay Utility&#41;](../../tools/distributed-replay/administration-tool-command-line-options-distributed-replay-utility.md)   
  [SQL Server Distributed Replay](../../tools/distributed-replay/sql-server-distributed-replay.md)   
- [SQL Server Distributed Replay Forum](http://social.technet.microsoft.com/Forums/sl/sqldru/)   
- [Using Distributed Replay to Load Test Your SQL Server – Part 2](http://blogs.msdn.com/b/mspfe/archive/2012/11/14/using-distributed-replay-to-load-test-your-sql-server-part-2.aspx)   
- [Using Distributed Replay to Load Test Your SQL Server - Part 1](http://blogs.msdn.com/b/mspfe/archive/2012/11/08/using-distributed-replay-to-load-test-your-sql-server-part-1.aspx)  
+ [SQL Server Distributed Replay Forum](https://social.technet.microsoft.com/Forums/sl/sqldru/)   
+ [Using Distributed Replay to Load Test Your SQL Server – Part 2](https://blogs.msdn.com/b/mspfe/archive/2012/11/14/using-distributed-replay-to-load-test-your-sql-server-part-2.aspx)   
+ [Using Distributed Replay to Load Test Your SQL Server - Part 1](https://blogs.msdn.com/b/mspfe/archive/2012/11/08/using-distributed-replay-to-load-test-your-sql-server-part-1.aspx)  
   
   

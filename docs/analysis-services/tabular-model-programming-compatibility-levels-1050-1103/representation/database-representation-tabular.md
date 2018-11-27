@@ -47,7 +47,7 @@ currentCnx.ChangeDatabase("myOtherDatabase");
 ## Database in AMO  
  When using AMO to manage a database object, start with a <xref:Microsoft.AnalysisServices.Server> object. Then search for your database in the databases collection or create a new database by adding one to the collection.  
   
- The following code snippet shows the steps to connect to a server and create an empty database, after checking the database doesn’t exist:  
+ The following code snippet shows the steps to connect to a server and create an empty database, after checking the database doesn't exist:  
   
 ```  
   

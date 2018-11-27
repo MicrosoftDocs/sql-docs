@@ -70,7 +70,7 @@ GO
 ### B. Getting the number of rows in each nonempty partition of a partitioned table or index  
  The following example returns the number of rows in each partition of table `TransactionHistory` that contains data. The `TransactionHistory` table uses partition function `TransactionRangePF1` and is partitioned on the `TransactionDate` column.  
   
- To execute this example, you must first run the PartitionAW.sql script against the [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] sample database. For more information, see [PartitioningScript](http://go.microsoft.com/fwlink/?LinkId=201015).  
+ To execute this example, you must first run the PartitionAW.sql script against the [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] sample database. For more information, see [PartitioningScript](https://go.microsoft.com/fwlink/?LinkId=201015).  
   
 ```  
 USE AdventureWorks2012;  
@@ -86,7 +86,7 @@ GO
  The following example returns all rows that are in partition `5` of the table `TransactionHistory`.  
   
 > [!NOTE]  
->  To execute this example, you must first run the PartitionAW.sql script against the [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] sample database. For more information, see [PartitioningScript](http://go.microsoft.com/fwlink/?LinkId=201015).  
+>  To execute this example, you must first run the PartitionAW.sql script against the [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] sample database. For more information, see [PartitioningScript](https://go.microsoft.com/fwlink/?LinkId=201015).  
   
 ```  
 SELECT * FROM Production.TransactionHistory  

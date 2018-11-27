@@ -70,9 +70,9 @@ To start the web portal from a browser, do the following:
 
 2. In the address bar of the web browser, type the web portal URL.
 
-    By default, the URL is *http://[ComputerName]/reports*.
+    By default, the URL is *https://[ComputerName]/reports*.
 
-    The report server might be configured to use a specific port. For example, *http://[ComputerName]:80/reports* or *http://[ComputerName]:8080/reports*.
+    The report server might be configured to use a specific port. For example, *https://[ComputerName]:80/reports* or *https://[ComputerName]:8080/reports*.
 
 ## Grouping by categories
 
@@ -99,7 +99,7 @@ You can upload, organize and manage permissions for Power BI Desktop reports and
 
 ![ssRSWebPortal-view-pbi-and-excel](../reporting-services/media/ssrswebportal-view-pbi-and-excel.png)
 
-The files are stored within Reporting Services, similar to other resource files. Selecting one of these items will download them locally to your desktop. You can save changes you’ve made by re-uploading them to the report server.
+The files are stored within Reporting Services, similar to other resource files. Selecting one of these items will download them locally to your desktop. You can save changes you've made by re-uploading them to the report server.
 
 ## Search for items
 

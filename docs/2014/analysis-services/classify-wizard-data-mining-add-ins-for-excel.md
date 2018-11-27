@@ -32,7 +32,7 @@ manager: craigg
   
 3.  On the **Classification** page, choose the column that you want to classify.  
   
-     Review the columns in the list, **Input columns**, and deselect any columns that have unique values and thus aren’t useful for creating patterns, such as ID numbers, customer names, and so on. You should also remove columns that essentially duplicate the classifiable column.  
+     Review the columns in the list, **Input columns**, and deselect any columns that have unique values and thus aren't useful for creating patterns, such as ID numbers, customer names, and so on. You should also remove columns that essentially duplicate the classifiable column.  
   
      For example, if you are classifying predicting the category of a product, you should exclude the subcategory field if there is a known business rule, or else the strength of that rule might prevent you from discovering other correlations.  
   

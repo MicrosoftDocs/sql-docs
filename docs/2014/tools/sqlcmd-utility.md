@@ -212,7 +212,7 @@ manager: craigg
  Redirects the error message output to the screen (**stderr**). If you do not specify a parameter or if you specify **0**, only error messages that have a severity level of 11 or higher are redirected. If you specify **1**, all error message output including PRINT is redirected. Has no effect if you use -o. By default, messages are sent to **stdout**.  
   
  **-R**  
- Causes `sqlcmd` to localize numeric, currency, date, and time columns retrieved from [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] based on the client’s locale. By default, these columns are displayed using the server’s regional settings.  
+ Causes `sqlcmd` to localize numeric, currency, date, and time columns retrieved from [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] based on the client's locale. By default, these columns are displayed using the server's regional settings.  
   
  **-u**  
  Specifies that *output_file* is stored in Unicode format, regardless of the format of *input_file*.  
@@ -701,7 +701,7 @@ manager: craigg
   
  `GO`  
   
- When you press ENTER, the following result set is retuned.  
+ When you press ENTER, the following result set is returned.  
   
  `BusinessEntityID FirstName    LastName`  
   

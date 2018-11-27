@@ -64,7 +64,7 @@ To determine the attestation service URL, you need to configure your tools and a
 1. Log on to your SQL Server computer as administrator.
 2. Run PowerShell as administrator.
 3. Run [Get-HGSClientConfiguration](https://docs.microsoft.com/powershell/module/hgsclient/get-hgsclientconfiguration).
-4. Write down and save the AttestationServerURL property. It should look similar to this: `http://x.x.x.x/Attestation`.
+4. Write down and save the AttestationServerURL property. It should look similar to this: `https://x.x.x.x/Attestation`.
 
 
 ### Install tools
@@ -855,7 +855,7 @@ To use Always Encrypted with secure enclaves in a .NET Framework application, yo
 
 ### Develop and Test Your App 
 
-To use Always Encrypted and enclave computations, your application needs to connect to the database with the following two keywords in the connection string: `Column Encryption Setting = Enabled; Enclave Attestation Url=http://x.x.x.x/Attestation` (where xxxx can be an ip, domain, etc).
+To use Always Encrypted and enclave computations, your application needs to connect to the database with the following two keywords in the connection string: `Column Encryption Setting = Enabled; Enclave Attestation Url=https://x.x.x.x/Attestation` (where xxxx can be an ip, domain, etc).
 
 In addition, your application needs to adhere to common guidelines that apply to applications using Always Encrypted, for example, your application must have access to column master keys associated with the database columns, referenced in application queries.
 
@@ -907,7 +907,7 @@ namespace ConsoleApp1
       static void Main(string\[\] args)
    {
 
-   string connectionString = "Data Source = myserver; Initial Catalog = ContosoHR; Column Encryption Setting = Enabled;Enclave Attestation Url = http://10.193.16.185/Attestation/attestationservice.svc/signingCertificates; Integrated Security = true";
+   string connectionString = "Data Source = myserver; Initial Catalog = ContosoHR; Column Encryption Setting = Enabled;Enclave Attestation Url = https://10.193.16.185/Attestation/attestationservice.svc/signingCertificates; Integrated Security = true";
 
 using (SqlConnection connection = new SqlConnection(connectionString))
 {

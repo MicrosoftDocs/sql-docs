@@ -60,7 +60,7 @@ manager: craigg
  Interactive, or manual data refresh in SharePoint Server 2013 Excel Services can refresh data models with data from the original data source. Interactive data refresh is available after you configure an Excel Services application by registering an [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] server, running in SharePoint mode. For more information, see [Manage Excel Services data model settings (SharePoint Server 2013)](http://technet.microsoft.com/library/jj219780.aspx).  
   
 > [!NOTE]  
->  Interactive data refresh is only available for workbooks that created in Excel 2013. If you try to refresh an Excel 2010 workbook, Excel Services displays an error message similar to “PowerPivot Operation Failed: The Workbook was created in an older version of Excel and PowerPivot cannot be refreshed until the file is upgraded”. For more information on upgrading workbooks, see [Upgrade Workbooks and Scheduled Data Refresh &#40;SharePoint 2013&#41;](../instances/install-windows/upgrade-workbooks-and-scheduled-data-refresh-sharepoint-2013.md).  
+>  Interactive data refresh is only available for workbooks that created in Excel 2013. If you try to refresh an Excel 2010 workbook, Excel Services displays an error message similar to "PowerPivot Operation Failed: The Workbook was created in an older version of Excel and PowerPivot cannot be refreshed until the file is upgraded". For more information on upgrading workbooks, see [Upgrade Workbooks and Scheduled Data Refresh &#40;SharePoint 2013&#41;](../instances/install-windows/upgrade-workbooks-and-scheduled-data-refresh-sharepoint-2013.md).  
   
  **Interactive refresh key point of interest:**  
   
@@ -87,7 +87,7 @@ manager: craigg
 ###  <a name="bkmk_windows_auth_interactive_data_refresh"></a> Windows Authentication with Workbook Data Connections and Interactive Data Refresh  
  Excel Services sends the Analysis Services server a process command that instructs the server to impersonate a user account. To obtain system rights sufficient to perform the user impersonation-delegation process, the Analysis Services service account, requires **Act as part of the operating system** privilege on the local server. The Analysis Services server also needs to be able to delegate the user's credentials to data sources. The query result is sent to Excel Services.  
   
- Typical user experience: When a customer selects “Refresh All Connections” in an Excel 2013 workbook that contains a PowerPivot model, they see an error message similar to the following:  
+ Typical user experience: When a customer selects "Refresh All Connections" in an Excel 2013 workbook that contains a PowerPivot model, they see an error message similar to the following:  
   
 -   **External Data Refresh Failed:** An error occurred while working on the Data Model in the workbook. Please try again. We are unable to refresh one or more data connections in this workbook.  
   
@@ -109,7 +109,7 @@ manager: craigg
   
 1.  On the Analysis Services Server running in SharePoint mode, Add the Analysis Services service account to the "**Act as part of the operating system**" privilege:  
   
-    1.  Run “`secpol.msc`”  
+    1.  Run "`secpol.msc`"  
   
     2.  Click **Local Security Policy**, then click **Local policies**, and then click **User rights assignment**.  
   
@@ -174,7 +174,7 @@ manager: craigg
 |**(2)**|User Interface|The user interface is comprised of two pages. One to define the schedule and the second to view the refresh history. The pages do not directly access the PowerPivot Service application databases but use the PowerPivot system service to access the databases.|  
 |**(3)**|PowerPivot System Service|The service is installed when you deploy the PowerPivot for SharePoint add-in. The service is used for the following:<br /><br /> This service hosts the refresh scheduling engine, which calls Excel Services APIs for data refresh of Excel 2013 workbooks. For Excel 2010 workbooks, the service directly performs the data model processing but continues to reply on Excel Services for loading the data model and updating the workbook.<br /><br /> This service provides methods for components such as the user interface pages, to communicate with the system service.<br /><br /> Manages requests for external access to workbooks as a data source, received through the PowerPivot Web Service.<br /><br /> Scheduled data refresh request management for timer jobs and configuration pages. The service manages requests to read data in and out of the service application database and trigger data refresh with Excel Services.<br /><br /> Usage processing and related timer job.|  
 |**(4)**|Excel Calculation Services|Responsible for loading the data models.|  
-|**(5)**|Secure Store Service|If the authentication settings in the workbook are configured to **Use the authenticated user’s account** or **None**, the credentials stored in the Secure Store target application ID are used for data refresh. For more information, see the [Additional Authentication Considerations](#datarefresh_additional_authentication) section in this topic.|  
+|**(5)**|Secure Store Service|If the authentication settings in the workbook are configured to **Use the authenticated user's account** or **None**, the credentials stored in the Secure Store target application ID are used for data refresh. For more information, see the [Additional Authentication Considerations](#datarefresh_additional_authentication) section in this topic.|  
 |**(6)**|PowerPivot data refresh timer Job|Instructs the PowerPivot system service to connect with Excel Services for refreshing data models.|  
   
  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] requires appropriate data providers and client libraries so that the [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] server in SharePoint mode can access data sources.  
@@ -191,7 +191,7 @@ manager: craigg
   
 3.  For more information on usage data and how to enable it, see [PowerPivot Management Dashboard and Usage Data](power-pivot-management-dashboard-and-usage-data.md).  
   
- **Diagnostic log data:** You can view SharePoint diagnostic log data related to data refresh. First, verify the configuration of diagnostic logging for the **PowerPivot Service** in SharePoint Central Administration **Monitoring** page. You may need to increase the level of logging for the “least critical event” to log. For example, temporarily set the value to **Verbose** and then rerun data refresh operations.  
+ **Diagnostic log data:** You can view SharePoint diagnostic log data related to data refresh. First, verify the configuration of diagnostic logging for the **PowerPivot Service** in SharePoint Central Administration **Monitoring** page. You may need to increase the level of logging for the "least critical event" to log. For example, temporarily set the value to **Verbose** and then rerun data refresh operations.  
   
  The log entries contain:  
   
@@ -204,7 +204,7 @@ manager: craigg
 ##  <a name="datarefresh_additional_authentication"></a> Additional Authentication Considerations  
  The settings in the **Excel Services Authentication Settings** dialog in Excel 2013, determine the Windows identity that Excel Services and [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] use for data refresh.  
   
--   **Use the authenticated user’s account**: Excel Services performs data refresh under the identity of the currently logged-in user.  
+-   **Use the authenticated user's account**: Excel Services performs data refresh under the identity of the currently logged-in user.  
   
 -   **Use a stored account**: Assumes a SharePoint Secure Store Service application ID, which Excel Services uses to retrieve the user name and password to authenticate data refresh authentication.  
   

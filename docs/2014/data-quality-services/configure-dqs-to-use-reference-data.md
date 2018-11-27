@@ -60,7 +60,7 @@ manager: craigg
   
     4.  In the Schema box, specify the schema that defines the string of fields (column names) to be used from the direct reference data service provider. A field name should not contain a space, and the fields should be separated by commas. For example: `FirstName, LastName, City, State`.  
   
-    5.  In the **URI** box, type the URI of the direct reference data service provider. Only secure URIs (address starting with “https://”) are allowed in DQS.  
+    5.  In the **URI** box, type the URI of the direct reference data service provider. Only secure URIs (address starting with "https://") are allowed in DQS.  
   
     6.  In the **Max Batch Size** box, type the maximum number of records per batch that will be sent to the reference data service provider for cleansing. A maximum of 100 records per batch can be specified for the cleansing activity.  
   

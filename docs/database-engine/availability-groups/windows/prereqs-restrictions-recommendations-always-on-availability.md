@@ -33,7 +33,7 @@ manager: craigg
   
 ||Dependent Feature|Hotfix|Link|  
 |------|-----------------------|------------|----------|  
-|![Checkbox](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "Checkbox")|[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]|Hotfix for .Net 3.5 SP1 adds support to SQL Client for Always On features of Read-intent, readonly, and multisubnetfailover. The hotfix needs to be installed on each [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] report server.|KB 2654347: [Hotfix for .Net 3.5 SP1 to add support for Always On features](http://go.microsoft.com/fwlink/?LinkId=242896)|  
+|![Checkbox](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "Checkbox")|[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]|Hotfix for .Net 3.5 SP1 adds support to SQL Client for Always On features of Read-intent, readonly, and multisubnetfailover. The hotfix needs to be installed on each [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] report server.|KB 2654347: [Hotfix for .Net 3.5 SP1 to add support for Always On features](https://go.microsoft.com/fwlink/?LinkId=242896)|  
   
 
 ###  <a name="SystemRequirements"></a> Checklist: Requirements (Windows System)  
@@ -61,7 +61,7 @@ manager: craigg
 ###  <a name="PermissionsWindows"></a> Permissions (Windows System)  
  To administer a WSFC, the user must be a system administrator on every cluster node.  
   
- For more information about the account for administering the cluster, see [Appendix A: Failover Cluster Requirements](http://technet.microsoft.com/library/dd197454.aspx).  
+ For more information about the account for administering the cluster, see [Appendix A: Failover Cluster Requirements](https://technet.microsoft.com/library/dd197454.aspx).  
   
 ###  <a name="RelatedTasksWindows"></a> Related Tasks (Windows System)  
   
@@ -77,7 +77,7 @@ manager: craigg
   
 3.  Use the **Get-ClusterResource** cmdlet to find the Network Name resource, then use **Set-ClusterParameter** cmdlet to set the **HostRecordTTL** value, as follows:  
   
-     Get-ClusterResource “*\<NetworkResourceName>*” | Set-ClusterParameter HostRecordTTL *\<TimeInSeconds>*  
+     Get-ClusterResource "*\<NetworkResourceName>*" | Set-ClusterParameter HostRecordTTL *\<TimeInSeconds>*  
   
      The following PowerShell example sets the HostRecordTTL to 300 seconds for a Network Name resource named `SQL Network Name (SQL35)`.  
   
@@ -93,17 +93,17 @@ manager: craigg
   
 ##### Related Content (PowerShell)  
   
--   [Clustering and High-Availability](http://blogs.msdn.com/b/clustering/archive/2009/05/23/9636665.aspx) (Failover Clustering and Network Load Balancing Team Blog)  
+-   [Clustering and High-Availability](https://blogs.msdn.com/b/clustering/archive/2009/05/23/9636665.aspx) (Failover Clustering and Network Load Balancing Team Blog)  
   
--   [Getting Started with Windows PowerShell on a Failover Cluster](http://technet.microsoft.com/library/ee619762\(WS.10\).aspx)  
+-   [Getting Started with Windows PowerShell on a Failover Cluster](https://technet.microsoft.com/library/ee619762\(WS.10\).aspx)  
   
--   [Cluster resource commands and equivalent Windows PowerShell cmdlets](http://msdn.microsoft.com/library/ee619744.aspx#BKMK_resource)  
+-   [Cluster resource commands and equivalent Windows PowerShell cmdlets](https://msdn.microsoft.com/library/ee619744.aspx#BKMK_resource)  
   
 ###  <a name="RelatedContentWS"></a> Related Content (Windows System)  
   
--   [Configure DNS settings in a Multi-Site Failover Cluster](http://technet.microsoft.com/library/dd197562\(WS.10\).aspx)  
+-   [Configure DNS settings in a Multi-Site Failover Cluster](https://technet.microsoft.com/library/dd197562\(WS.10\).aspx)  
   
--   [DNS Registration with Network Name Resource](http://blogs.msdn.com/b/clustering/archive/2009/07/17/9836756.aspx)  
+-   [DNS Registration with Network Name Resource](https://blogs.msdn.com/b/clustering/archive/2009/07/17/9836756.aspx)  
   
 
 ##  <a name="ServerInstance"></a> SQL Server Instance Prerequisites and Restrictions  
@@ -161,7 +161,7 @@ manager: craigg
   
     -   A backup on a secondary replica holds a thread on the primary replica for the duration of the backup operation.  
   
- For more information, see [Always On - HADRON Learning Series: Worker Pool Usage for HADRON Enabled Databases](http://blogs.msdn.com/b/psssql/archive/2012/05/17/Always%20On-hadron-learning-series-worker-pool-usage-for-hadron-enabled-databases.aspx) (a CSS [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Engineers Blog).  
+ For more information, see [Always On - HADRON Learning Series: Worker Pool Usage for HADRON Enabled Databases](https://blogs.msdn.com/b/psssql/archive/2012/05/17/Always%20On-hadron-learning-series-worker-pool-usage-for-hadron-enabled-databases.aspx) (a CSS [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Engineers Blog).  
   
 ###  <a name="PermissionsSI"></a> Permissions (Server Instance)  
   
@@ -180,7 +180,7 @@ manager: craigg
   
 ###  <a name="RelatedContentSI"></a> Related Content (Server Instance)  
   
--   [Always On - HADRON Learning Series: Worker Pool Usage for HADRON Enabled Databases](http://blogs.msdn.com/b/psssql/archive/2012/05/17/Always%20On-hadron-learning-series-worker-pool-usage-for-hadron-enabled-databases.aspx)  
+-   [Always On - HADRON Learning Series: Worker Pool Usage for HADRON Enabled Databases](https://blogs.msdn.com/b/psssql/archive/2012/05/17/Always%20On-hadron-learning-series-worker-pool-usage-for-hadron-enabled-databases.aspx)  
   
 ##  <a name="NetworkConnect"></a> Network Connectivity Recommendations  
  We strongly recommend that you use the same network links for communications between WSFC nodes and communications between availability replicas.  Using separate network links can cause unexpected behaviors if some of links fail (even intermittently).  
@@ -204,7 +204,7 @@ manager: craigg
 ###  <a name="RestrictionsFCI"></a> Restrictions (FCIs)  
   
 > [!NOTE]  
-> Failover Cluster Instances supports Clustered Shared Volumes (CSV). For more information on CSV, see [Understanding Cluster Shared Volumes in a Failover Cluster](http://technet.microsoft.com/library/dd759255.aspx).  
+> Failover Cluster Instances supports Clustered Shared Volumes (CSV). For more information on CSV, see [Understanding Cluster Shared Volumes in a Failover Cluster](https://technet.microsoft.com/library/dd759255.aspx).  
   
 -   **The cluster nodes of an FCI can host only one replica for a given availability group:**  If you add an availability replica on an FCI, the WSFC nodes that are possible FCI owners cannot host another replica for the same availability group.  To avoid possible conflicts, it is recommended to configure possible owners for the failover cluster instance. This will prevent potentially causing a single WSFC from attempting to host two availability replicas for the same availability group.
   
@@ -236,7 +236,7 @@ manager: craigg
   
 -   [Failover Clustering and Availability Groups &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/failover-clustering-and-always-on-availability-groups-sql-server.md)  
   
--   [Always On Architecture Guide: Building a High Availability and Disaster Recovery Solution by Using Failover Cluster Instances and Availability Groups](http://technet.microsoft.com/library/jj215886.aspx)  
+-   [Always On Architecture Guide: Building a High Availability and Disaster Recovery Solution by Using Failover Cluster Instances and Availability Groups](https://technet.microsoft.com/library/jj215886.aspx)  
   
 ##  <a name="PrerequisitesForAGs"></a> Availability Group Prerequisites and Restrictions  
  **In This Section:**  
@@ -376,11 +376,11 @@ manager: craigg
   
 ##  <a name="RelatedContent"></a> Related Content  
   
--   [Microsoft SQL Server Always On Solutions Guide for High Availability and Disaster Recovery](http://go.microsoft.com/fwlink/?LinkId=227600)  
+-   [Microsoft SQL Server Always On Solutions Guide for High Availability and Disaster Recovery](https://go.microsoft.com/fwlink/?LinkId=227600)  
   
 -   [SQL Server Always On Team Blog: The official SQL Server Always On Team Blog](https://blogs.msdn.microsoft.com/sqlalwayson/)  
   
--   [Always On - HADRON Learning Series: Worker Pool Usage for HADRON Enabled Databases](http://blogs.msdn.com/b/psssql/archive/2012/05/17/Always%20On-hadron-learning-series-worker-pool-usage-for-hadron-enabled-databases.aspx)  
+-   [Always On - HADRON Learning Series: Worker Pool Usage for HADRON Enabled Databases](https://blogs.msdn.com/b/psssql/archive/2012/05/17/Always%20On-hadron-learning-series-worker-pool-usage-for-hadron-enabled-databases.aspx)  
   
 ## See Also  
  [Overview of Always On Availability Groups &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   

@@ -60,7 +60,7 @@ This system function works under both **standard** and **lightweight** query exe
   
 **Lightweight** statistics profiling infrastructure is available in [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2 and [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] and can be enabled:
   -  Globally by using trace flag 7412.
-  -  Using the [*query_thread_profile*](http://support.microsoft.com/kb/3170113) extended event.
+  -  Using the [*query_thread_profile*](https://support.microsoft.com/kb/3170113) extended event.
   
 > [!NOTE]
 > Once enabled by trace flag 7412, lightweight profiling will be enabled to any consumer of the query execution statistics profiling infrastructure instead of standard profiling, such as the DMV [sys.dm_exec_query_profiles](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-profiles-transact-sql.md).

@@ -106,7 +106,7 @@ This value is only valid on secondaries while the database in on the primary, an
 
 PARAMETER_SNIFFING **=** { **ON** | OFF | PRIMARY}
 
-Enables or disables [parameter sniffing](../../relational-databases/query-processing-architecture-guide.md#ParamSniffing). The default is ON. Setting PARAMETER_SNIFFING to ON is equivalent to enabling [Trace Flag 4136](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md).
+Enables or disables [parameter sniffing](../../relational-databases/query-processing-architecture-guide.md#ParamSniffing). The default is ON. Setting PARAMETER_SNIFFING to OFF is equivalent to enabling [Trace Flag 4136](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md).
 
 > [!TIP]
 > To accomplish this at the query level, see the **OPTIMIZE FOR UNKNOWN** [query hint](../../t-sql/queries/hints-transact-sql-query.md).
@@ -255,7 +255,7 @@ The granular settings can override the global ones and that resource governor ca
 
   - If the query hint is not 0, it is capped by the resource governor setting.
 
-- The DB scoped setting (unless it’s 0) overrides the sp_configure setting unless there is a query hint and is capped by the resource governor setting.
+- The DB scoped setting (unless it's 0) overrides the sp_configure setting unless there is a query hint and is capped by the resource governor setting.
 
 - The sp_configure setting is overridden by the resource governor setting.
 
@@ -405,7 +405,7 @@ ALTER DATABASE SCOPED CONFIGURATION SET ELEVATE_RESUMABLE=WHEN_SUPPORTED ;
 ### MAXDOP Resources
 
 - [Degree of Parallelism](../../relational-databases/query-processing-architecture-guide.md#DOP)
-- [Recommendations and guidelines for the "max degree of parallelism" configuration option in SQL Server](https://support.microsoft.com/en-us/kb/2806535)
+- [Recommendations and guidelines for the "max degree of parallelism" configuration option in SQL Server](https://support.microsoft.com/kb/2806535)
 
 ### LEGACY_CARDINALITY_ESTIMATION Resources
 
@@ -420,7 +420,7 @@ ALTER DATABASE SCOPED CONFIGURATION SET ELEVATE_RESUMABLE=WHEN_SUPPORTED ;
 ### QUERY_OPTIMIZER_HOTFIXES Resources
 
 - [Trace Flags](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)
-- [SQL Server query optimizer hotfix trace flag 4199 servicing model](https://support.microsoft.com/en-us/kb/974006)
+- [SQL Server query optimizer hotfix trace flag 4199 servicing model](https://support.microsoft.com/kb/974006)
 
 ### ELEVATE_ONLINE Resources
 

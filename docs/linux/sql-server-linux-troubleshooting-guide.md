@@ -88,16 +88,16 @@ You can stop or restart the SQL Server service as needed using the following com
 
 ## Access the log files
    
-The SQL Server engine logs to the /var/opt/mssql/log/errorlog file in both the Linux and Docker installations. You need to be in ‘superuser’ mode to browse this directory.
+The SQL Server engine logs to the /var/opt/mssql/log/errorlog file in both the Linux and Docker installations. You need to be in 'superuser' mode to browse this directory.
 
 The installer logs here: /var/opt/mssql/setup-< time stamp representing time of install>
-You can browse the errorlog files with any UTF-16 compatible tool like ‘vim’ or ‘cat’ like this: 
+You can browse the errorlog files with any UTF-16 compatible tool like 'vim' or 'cat' like this: 
 
    ```bash
    sudo cat errorlog
    ```
 
-If you prefer, you can also convert the files to UTF-8 to read them with ‘more’ or ‘less’ with the following command:
+If you prefer, you can also convert the files to UTF-8 to read them with 'more' or 'less' with the following command:
    
    ```bash
    sudo iconv –f UTF-16LE –t UTF-8 <errorlog> -o <output errorlog file>
@@ -202,7 +202,7 @@ There are many factors that affect performance, including database design, hardw
 
 2. ERROR: Hostname must be 15 characters or less.
 
-   This is a known-issue that happens whenever the name of the machine that is trying to install the SQL Server Debian package is longer than 15 characters. There are currently no workarounds other than changing the name of the machine. One way to achieve this is by editing the hostname file and rebooting the machine. The following [website guide](http://www.cyberciti.biz/faq/ubuntu-change-hostname-command/) explains this in detail.
+   This is a known-issue that happens whenever the name of the machine that is trying to install the SQL Server Debian package is longer than 15 characters. There are currently no workarounds other than changing the name of the machine. One way to achieve this is by editing the hostname file and rebooting the machine. The following [website guide](https://www.cyberciti.biz/faq/ubuntu-change-hostname-command/) explains this in detail.
 
 3. Resetting the system administration (SA) password.
 
@@ -235,7 +235,7 @@ There are many factors that affect performance, including database design, hardw
    ```
 
    Resources:
-   [Special characters](http://tldp.org/LDP/abs/html/special-chars.html)
-   [Escaping](http://tldp.org/LDP/abs/html/escapingsection.html)
+   [Special characters](https://tldp.org/LDP/abs/html/special-chars.html)
+   [Escaping](https://tldp.org/LDP/abs/html/escapingsection.html)
 
 [!INCLUDE[Get Help Options](../includes/paragraph-content/get-help-options.md)]

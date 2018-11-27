@@ -52,7 +52,7 @@ To make sure that changes to multiserver jobs take effect, you must post the cha
 EXECUTE sp_post_msx_operation 'INSERT', 'JOB', '<job id>'  
 ```  
   
-For more information, see [sp_purge_jobhistory (Transact-SQL)](http://msdn.microsoft.com/237f9bad-636d-4262-9bfb-66c034a43e88).  
+For more information, see [sp_purge_jobhistory (Transact-SQL)](https://msdn.microsoft.com/237f9bad-636d-4262-9bfb-66c034a43e88).  
   
 Members of the **sysadmin** fixed server role can view the definition or history of any job, and can modify any job.  
   

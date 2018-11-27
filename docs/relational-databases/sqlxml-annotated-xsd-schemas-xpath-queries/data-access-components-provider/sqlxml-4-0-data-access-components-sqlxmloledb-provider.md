@@ -37,7 +37,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
      Exposes SQLXML 4.0 functionality through a new data access technology that extends and compliments current versions of Microsoft Data Access Components (MDAC). SQLNCLI11 provides full support for features introduced in [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]. For more information, see [SQL Server Native Client Programming](../../../relational-databases/native-client/sql-server-native-client-programming.md).  
   
 ## In This Section  
- [SQLXMLOLEDB Provider &#40;SQLXML 4.0&#41;](http://msdn.microsoft.com/library/fc489682-690a-4bb0-b5ac-237d376dc110)  
+ [SQLXMLOLEDB Provider &#40;SQLXML 4.0&#41;](https://msdn.microsoft.com/library/fc489682-690a-4bb0-b5ac-237d376dc110)  
  Describes the SQLXMLOLEDB Provider and illustrates its usage.  
   
   

@@ -93,7 +93,7 @@ manager: craigg
   
 3.  Use the `Get-ClusterResource` cmdlet to find the Network Name resource, then use `Set-ClusterParameter` cmdlet to set the `HostRecordTTL` value, as follows:  
   
-     Get-ClusterResource “*\<NetworkResourceName>*” | Set-ClusterParameter HostRecordTTL *\<TimeInSeconds>*  
+     Get-ClusterResource "*\<NetworkResourceName>*" | Set-ClusterParameter HostRecordTTL *\<TimeInSeconds>*  
   
      The following PowerShell example sets the HostRecordTTL to 300 seconds for a Network Name resource named "`SQL Network Name (SQL35)`".  
   

@@ -27,7 +27,7 @@ manager: craigg
   
  The following rules apply to `Name` and `ID` properties.  
   
--   Names are case insensitive. You cannot have a cube named “sales” and another named “Sales” in the same database.  
+-   Names are case insensitive. You cannot have a cube named "sales" and another named "Sales" in the same database.  
   
 -   No leading or trailing spaces allowed in an object name, although you can embed spaces within a name. Leading and trailing spaces are implicitly trimmed. This applies to both the `Name` and `ID` of an object.  
   

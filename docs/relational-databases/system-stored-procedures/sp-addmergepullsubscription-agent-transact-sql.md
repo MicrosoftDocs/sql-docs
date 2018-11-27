@@ -294,7 +294,7 @@ sp_addmergepullsubscription_agent [ [ @name = ] 'name' ]
  Indicates that Web synchronization is enabled. *use_web_sync* is **bit**, with a default of 0. **1** specifies that the pull subscription can be synchronized over the internet using HTTP.  
   
  [ **@internet_url =** ] **'***internet_url***'**  
- Is the location of the replication listener (REPLISAPI.DLL) for Web synchronization. *internet_url* is **nvarchar(260)**, with a default of NULL. *internet_url* is a fully qualified URL, in the format `http://server.domain.com/directory/replisapi.dll`. If the server is configured to listen on a port other than port 80, the port number must also be supplied in the format `http://server.domain.com:portnumber/directory/replisapi.dll`, where `portnumber` represents the port.  
+ Is the location of the replication listener (REPLISAPI.DLL) for Web synchronization. *internet_url* is **nvarchar(260)**, with a default of NULL. *internet_url* is a fully qualified URL, in the format `https://server.domain.com/directory/replisapi.dll`. If the server is configured to listen on a port other than port 80, the port number must also be supplied in the format `https://server.domain.com:portnumber/directory/replisapi.dll`, where `portnumber` represents the port.  
   
  [ **@internet_login =** ] **'***internet_login***'**  
  Is the login that the Merge Agent uses when connecting to the Web server that is hosting Web synchronization using HTTP Basic Authentication. *internet_login* is **sysname**, with a default of NULL.  

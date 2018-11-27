@@ -34,7 +34,7 @@ manager: craigg
   
  Also, it is useful to check the two performance objects `SQL Server:Availability Replica > Flow Control Time (ms/sec)` and `SQL Server:Availability Replica > Flow Control/sec`. Multiplying these two values shows you in the last second how much time was spent waiting for flow control to clear. The longer the flow control wait time, the lower the send rate.  
   
- The following metrics are useful in diagnosing network latency and throughput. You can use other Windows tools, such as **ping.exe** and [Network Monitor](http://www.microsoft.com/download/details.aspx?id=4865) to evaluate latency and network utilization.  
+ The following metrics are useful in diagnosing network latency and throughput. You can use other Windows tools, such as **ping.exe** and [Network Monitor](https://www.microsoft.com/download/details.aspx?id=4865) to evaluate latency and network utilization.  
   
 -   DMV `sys.dm_hadr_database_replica_states, log_send_queue_size`  
   
@@ -64,9 +64,9 @@ To remedy this issue, try upgrading your network bandwidth or removing or reduci
  Data loss is prevented as soon as the log block is hardened on the log file. Therefore, it is critical to isolate the log file from the data file. If the log file and the data file are both mapped to the same hard disk, reporting workload with intensive reads on the data file will consume the same I/O resources needed by the log hardening operation. Slow log hardening can translate to slow acknowledgment to the primary replica, which can cause excessive activation of the flow control and long flow control wait times.  
   
 ### Diagnosis and resolution  
- If you have verified that the network is not suffering from high latency or low throughput, then you should investigate the secondary replica for I/O contentions. Queries from [SQL Server: Minimize Disk I/O](http://technet.microsoft.com/magazine/jj643251.aspx) are useful in identifying contentions. Examples from that article are derived below for your convenience.  
+ If you have verified that the network is not suffering from high latency or low throughput, then you should investigate the secondary replica for I/O contentions. Queries from [SQL Server: Minimize Disk I/O](https://technet.microsoft.com/magazine/jj643251.aspx) are useful in identifying contentions. Examples from that article are derived below for your convenience.  
   
- The following script lets you see the number of reads and writes on each data and log file for every availability database running on an instance of SQL Server. It’s sorted by average I/O stall time, in milliseconds. Note that the numbers are cumulative from the last time the server instance was started. Therefore, you should take the difference between two measurements after some time has elapsed.  
+ The following script lets you see the number of reads and writes on each data and log file for every availability database running on an instance of SQL Server. It's sorted by average I/O stall time, in milliseconds. Note that the numbers are cumulative from the last time the server instance was started. Therefore, you should take the difference between two measurements after some time has elapsed.  
   
 ```sql  
 SELECT DB_NAME(database_id) AS   
@@ -121,6 +121,6 @@ ORDER BY r.io_pending , r.io_pending_ms_ticks DESC;
  If you identify an I/O bottleneck and you have placed the log file and the data file on the same hard disk, the first thing you should do is to place the data file and the log file on separate disks. This best practice prevents reporting workload from interfering with the log transfer path from the primary replica to the log buffer and its ability to harden the transaction on the secondary replica.  
   
 ## Next steps  
- [Troubleshooting performance problems in SQL Server (applies to SQL Server 2012)](http://msdn.microsoft.com/library/dd672789(v=SQL.100).aspx)  
+ [Troubleshooting performance problems in SQL Server (applies to SQL Server 2012)](https://msdn.microsoft.com/library/dd672789(v=SQL.100).aspx)  
   
   

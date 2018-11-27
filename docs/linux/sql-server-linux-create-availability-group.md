@@ -197,7 +197,7 @@ This example will create certificates for a three-node configuration. The instan
     GO
     ```
     
-7.  Restore LinAGN2_Cert and LinAGN3_Cert on LinAGN1. Having the other replicas’ certificates is an important aspect of AG communication and security.
+7.  Restore LinAGN2_Cert and LinAGN3_Cert on LinAGN1. Having the other replicas' certificates is an important aspect of AG communication and security.
     
     ```SQL
     CREATE CERTIFICATE LinAGN2_Cert
@@ -342,7 +342,7 @@ This section shows how to create an AG with a cluster type of External using SSM
 
 9.  If you want to alter the backup preferences, click on the Backup Preferences tab. For more information on backup preferences with AGs, see [Configure backup on availability replicas](../database-engine/availability-groups/windows/configure-backup-on-availability-replicas-sql-server.md).
 
-10. If using readable secondaries or creating an AG with a cluster type of None for read-scale, you can create a listener by selecting the Listener tab. A listener can also be added later. To create a listener, choose the option **Create an availability group listener** and enter a name, a TCP/IP port, and whether to use a static or automatically assigned DHCP IP address. Remember that for an AG with a cluster type of None, the IP should be static and set to the primary’s IP address.
+10. If using readable secondaries or creating an AG with a cluster type of None for read-scale, you can create a listener by selecting the Listener tab. A listener can also be added later. To create a listener, choose the option **Create an availability group listener** and enter a name, a TCP/IP port, and whether to use a static or automatically assigned DHCP IP address. Remember that for an AG with a cluster type of None, the IP should be static and set to the primary's IP address.
 
     ![](./media/sql-server-linux-create-availability-group/image6.png)
 

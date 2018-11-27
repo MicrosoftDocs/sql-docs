@@ -41,7 +41,7 @@ manager: craigg
   
 |Value|Description|  
 |-----------|-----------------|  
-|**Variable**|This column indicates whether the characteristic is a value, or a transition.<br /><br /> If the characteristic is a value, the **Variable** column contains the attribute name.<br /><br /> If the characteristic represents a state transition, the **Variable** column contains the text “Transitions”.|  
+|**Variable**|This column indicates whether the characteristic is a value, or a transition.<br /><br /> If the characteristic is a value, the **Variable** column contains the attribute name.<br /><br /> If the characteristic represents a state transition, the **Variable** column contains the text "Transitions".|  
 |**Values**|The value of this column depends on whether the characteristic is a simple attribute-value pair, or a state transition representing a common sequence of items or events.<br /><br /> If the characteristic is a value, the **Value** column contains the state.<br /><br /> If the characteristic represents a state transition, the **Value** column contains the description of the state transition.|  
 |**Probability**|This column displays a bar that indicates the relative probability that this characteristic (either a simple attribute-value pair, or some combination of states) are members of the current cluster.<br /><br /> You can hover the mouse over the par to display the frequency value of the characteristic.|  
   

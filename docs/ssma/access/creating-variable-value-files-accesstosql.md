@@ -17,7 +17,7 @@ A Variable Value File is an XML file comprising the parameter values of commands
 > [!NOTE]  
 > -  Variable names are prefixed and suffixed with a $ (dollar) symbol. If a variable is not assigned a value in the variable value file, an error during the parsing of the script file will occur, resulting in stalling the console execution process.  
 > -  The escape character for **$** is **$$**. If the value of a variable or static value of a parameter contains a **$** (dollar) symbol, then **$$** must be specified to treat it as a character instead of a variable.  
-> -  For maintainability purposes, variables can be declared inside `‘variable-group’` elements for logical separation of user-defined variables.  Usage of this element is not mandatory.  
+> -  For maintainability purposes, variables can be declared inside `'variable-group'` elements for logical separation of user-defined variables.  Usage of this element is not mandatory.  
   
 **Examples:**  
   
@@ -83,11 +83,11 @@ A Variable Value File is an XML file comprising the parameter values of commands
 ```  
   
 ## Variable value file validation  
-The user can easily validate his/her variable value file against the schema definition file **ConsoleScriptVariablesSchema.xsd** available in the ‘Schemas’ folder.  
+The user can easily validate his/her variable value file against the schema definition file **ConsoleScriptVariablesSchema.xsd** available in the 'Schemas' folder.  
   
 ## Next step  
 The next step in operating the console is [Creating the Server Connection Files &#40;AccessToSQL&#41;](../../ssma/access/creating-the-server-connection-files-accesstosql.md)  
   
 ## See also  
-[Creating the Server Connection Files (Access)](http://msdn.microsoft.com/829153be-aa8e-4162-87e8-69882feecf19)  
+[Creating the Server Connection Files (Access)](https://msdn.microsoft.com/829153be-aa8e-4162-87e8-69882feecf19)  
   

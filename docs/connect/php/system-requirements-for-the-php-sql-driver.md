@@ -24,7 +24,7 @@ Versions 3.1 and later of the Microsoft PHP Drivers for SQL Server are officiall
 
 ## PHP
 
-For information about how to download and install the latest stable PHP binaries, see [the PHP web site](http://php.net).  The Microsoft Drivers for PHP for SQL Server require the following versions of PHP:
+For information about how to download and install the latest stable PHP binaries, see [the PHP web site](https://php.net).  The Microsoft Drivers for PHP for SQL Server require the following versions of PHP:
 
 |PHP for SQL Server driver version &#8594;<br />&#8595; PHP version|5.3 and 5.2<br />&nbsp;|4.3<br />&nbsp;|4.0<br />&nbsp;|3.2<br />&nbsp;|3.1<br />&nbsp;|
 |---|---|---|---|---|---|
@@ -37,7 +37,7 @@ For information about how to download and install the latest stable PHP binaries
 
 -   A version of the driver file must be in your PHP extension directory. See [Driver Versions](#driver-versions) for information about the different driver files.  To download the drivers, see [Download the Microsoft Drivers for PHP for SQL Server](download-drivers-php-sql-server.md). For information on configuring the driver for the PHP, see [Loading the Microsoft Drivers for PHP for SQL Server](../../connect/php/loading-the-php-sql-driver.md).
 
--   A Web server is required. Your Web server must be configured to run PHP. For information about hosting PHP applications with IIS, see the [tutorial on PHP's web site](http://php.net/manual/fa/install.windows.iis.php).  
+-   A Web server is required. Your Web server must be configured to run PHP. For information about hosting PHP applications with IIS, see the [tutorial on PHP's web site](https://php.net/manual/fa/install.windows.iis.php).  
 
     The [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] has been tested using IIS 10 with FastCGI.  
 

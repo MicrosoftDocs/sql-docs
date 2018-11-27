@@ -210,7 +210,7 @@ For an overview of indexes on memory-optimized tables, see:
 
 Hash indexes can be the fastest format for accessing one specific row by its exact primary key value by using the '**=**' operator.
 
-- Inexact operators such as '**!=**', '**>**', or '**BETWEEN**' would harm performace if used with a hash index.
+- Inexact operators such as '**!=**', '**>**', or '**BETWEEN**' would harm performance if used with a hash index.
 
 - A hash index might not be the best choice if the rate of key value duplication becomes too high.
 

@@ -34,7 +34,7 @@ ms.author: maggies
     > [!IMPORTANT]  
     > *  The query text must not include the DECLARE statement for the query variable.  
     > *  The text for the query variable must include the **IN** operator, as shown in the example above.  
-    > *  Be sure to include the parentheses around the variable as shown above. Otherwise, the report fails to render and the “must declare the scalar variable” error is displayed.  
+    > *  Be sure to include the parentheses around the variable as shown above. Otherwise, the report fails to render and the "must declare the scalar variable" error is displayed.  
   
     A dataset parameter for an embedded dataset or a shared dataset is created automatically for the query variable. A report parameter is created automatically for the dataset parameter.  
   

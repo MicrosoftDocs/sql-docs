@@ -144,7 +144,7 @@ manager: craigg
   
 -   Combinations of numbers, punctuation marks, and alphabetical characters. For example, *A23B#99* returns the term *A23B*.  
   
--   The characters, %, @, &, $, #, \*, :, ;, ., **,** , !, ?, \<, >, +, =, ^, ~, |, \\, /, (, ), [, ], {, }, “, and ‘.  
+-   The characters, %, @, &, $, #, \*, :, ;, ., **,** , !, ?, \<, >, +, =, ^, ~, |, \\, /, (, ), [, ], {, }, ", and '.  
   
     > [!NOTE]  
     >  Acronyms that include one or more periods (.) are not separated into multiple sentences.  
@@ -171,7 +171,7 @@ manager: craigg
   
  For more information about the properties that you can set in the **Advanced Editor** dialog box or programmatically, click one of the following topics:  
   
--   [Common Properties](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
+-   [Common Properties](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
 -   [Transformation Custom Properties](../../../integration-services/data-flow/transformations/transformation-custom-properties.md)  
   
@@ -191,7 +191,7 @@ manager: craigg
  Provide a name for the output column that will contain the score for each extracted term.  
   
  **Configure Error Output**  
- Use the [Configure Error Output](http://msdn.microsoft.com/library/5f8da390-fab5-44f8-b268-d8fa313ce4b9) dialog box to specify error handling for rows that cause errors.  
+ Use the [Configure Error Output](https://msdn.microsoft.com/library/5f8da390-fab5-44f8-b268-d8fa313ce4b9) dialog box to specify error handling for rows that cause errors.  
   
 ## Term Extraction Transformation Editor (Exclusion Tab)
   Use the **Exclusion** tab of the **Term Extraction Transformation Editor** dialog box to set up a connection to an exclusion table and specify the columns that contain exclusion terms.  
@@ -213,7 +213,7 @@ manager: craigg
  Select the column in the table or view that contains the exclusion terms.  
   
  **Configure Error Output**  
- Use the [Configure Error Output](http://msdn.microsoft.com/library/5f8da390-fab5-44f8-b268-d8fa313ce4b9) dialog box to specify error handling for rows that cause errors.  
+ Use the [Configure Error Output](https://msdn.microsoft.com/library/5f8da390-fab5-44f8-b268-d8fa313ce4b9) dialog box to specify error handling for rows that cause errors.  
   
 ## Term Extraction Transformation Editor (Advanced Tab)
   Use the **Advanced** tab of the **Term Extraction Transformation Editor** dialog box to specify properties for the extraction such as frequency, length, and whether to extract words or phrases.  
@@ -244,7 +244,7 @@ manager: craigg
  Specify whether to make the extraction case-sensitive. The default is **False**.  
   
  **Configure Error Output**  
- Use the [Configure Error Output](http://msdn.microsoft.com/library/5f8da390-fab5-44f8-b268-d8fa313ce4b9) dialog box to specify error handling for rows that cause errors.  
+ Use the [Configure Error Output](https://msdn.microsoft.com/library/5f8da390-fab5-44f8-b268-d8fa313ce4b9) dialog box to specify error handling for rows that cause errors.  
   
 ## See Also  
  [Integration Services Error and Message Reference](../../../integration-services/integration-services-error-and-message-reference.md)   

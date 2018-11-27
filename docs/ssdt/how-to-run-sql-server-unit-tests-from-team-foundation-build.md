@@ -17,9 +17,9 @@ You can use Team Foundation Build to run your SQL Server unit tests as part of a
   
 -   [Creating and Defining SQL Server Unit Tests](../ssdt/creating-and-defining-sql-server-unit-tests.md)  
   
--   [How to: Configure and Run Scheduled Tests After Building Your Application](http://msdn.microsoft.com/library/ms182465(VS.100).aspx)  
+-   [How to: Configure and Run Scheduled Tests After Building Your Application](https://msdn.microsoft.com/library/ms182465(VS.100).aspx)  
   
--   [Create a Basic Build Definition](http://msdn.microsoft.com/library/ms181716(VS.100).aspx)  
+-   [Create a Basic Build Definition](https://msdn.microsoft.com/library/ms181716(VS.100).aspx)  
   
 Before you use these procedures, you must first configure your working environment by performing the following tasks:  
   
@@ -209,22 +209,22 @@ In this procedure, you check in all the files of your solution. These files incl
   
 1.  Connect to a computer that is running Team Foundation Server.  
   
-    For more information, see [Using Source Control Explorer](http://msdn.microsoft.com/library/ms181370(VS.100).aspx).  
+    For more information, see [Using Source Control Explorer](https://msdn.microsoft.com/library/ms181370(VS.100).aspx).  
   
 2.  If your solution is not already in source control, add it to source control.  
   
-    For more information, see [Add a Project or Solution to Version Control](http://msdn.microsoft.com/library/ms181374(VS.100).aspx).  
+    For more information, see [Add a Project or Solution to Version Control](https://msdn.microsoft.com/library/ms181374(VS.100).aspx).  
   
 3.  Click **View**, and then click **Pending Checkins**.  
   
 4.  Check in all the files of your solution.  
   
-    For more information, see [Check In Pending Changes](http://msdn.microsoft.com/library/ms181411(VS.100).aspx).  
+    For more information, see [Check In Pending Changes](https://msdn.microsoft.com/library/ms181411(VS.100).aspx).  
   
     > [!NOTE]  
     > You might have a specific team process that governs how automated tests are created and managed. For example, the process might require that you verify your build locally before you check in that code together with the tests that will be run on it.  
   
-    In **Solution Explorer**, a padlock icon appears next to each file to indicate that it is checked in. For more information, see [View Version Control File and Folder Properties](http://msdn.microsoft.com/library/ms245468(VS.100).aspx).  
+    In **Solution Explorer**, a padlock icon appears next to each file to indicate that it is checked in. For more information, see [View Version Control File and Folder Properties](https://msdn.microsoft.com/library/ms245468(VS.100).aspx).  
   
     Your tests are available to Team Foundation Build. You can now create a build definition that contains the tests that you want to run.  
   
@@ -274,11 +274,11 @@ In this procedure, you check in all the files of your solution. These files incl
   
 3.  Confirm that the values in the **Build definition**, **Build agent**, and **Drop folder for this Build** fields are all appropriate, and then click **Queue**.  
   
-    The **Queued** tab of **Build Explorer** appears. For more information, see [Manage and View Completed Builds (Visual Studio 2010)](http://msdn.microsoft.com/library/ms181730(VS.100).aspx) or [Manage Your Builds in Build Explorer (Visual Studio 2012)](http://msdn.microsoft.com/library/ms181732.aspx).  
+    The **Queued** tab of **Build Explorer** appears. For more information, see [Manage and View Completed Builds (Visual Studio 2010)](https://msdn.microsoft.com/library/ms181730(VS.100).aspx) or [Manage Your Builds in Build Explorer (Visual Studio 2012)](https://msdn.microsoft.com/library/ms181732.aspx).  
   
 ## See Also  
 [Running SQL Server Unit Tests](../ssdt/running-sql-server-unit-tests.md)  
-[Create a Basic Build Definition](http://msdn.microsoft.com/library/ms181716(VS.100).aspx)  
-[Queue a Build](http://msdn.microsoft.com/library/ms181722(VS.100).aspx)  
-[Monitor Progress of a Running Build](http://msdn.microsoft.com/library/ms181724(VS.100).aspx)  
+[Create a Basic Build Definition](https://msdn.microsoft.com/library/ms181716(VS.100).aspx)  
+[Queue a Build](https://msdn.microsoft.com/library/ms181722(VS.100).aspx)  
+[Monitor Progress of a Running Build](https://msdn.microsoft.com/library/ms181724(VS.100).aspx)  
   

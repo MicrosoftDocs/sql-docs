@@ -1,4 +1,4 @@
----
+﻿---
 title: "Assess an enterprise and consolidate assessment reports (SQL Server) | Microsoft Docs"
 description: Learn how to use DMA to assess an enterprise and consolidate assessment reports before upgrading SQL Server or migrating to Azure SQL Database.
 ms.custom: ""
@@ -26,7 +26,7 @@ The following step-by-step instructions help you use the Data Migration Assistan
 - Designate a tools computer on your network from which DMA will be initiated. Ensure that this computer has connectivity to your SQL Server targets.
 - Download and install:
     - [Data Migration Assistant](https://www.microsoft.com/download/details.aspx?id=53595) v3.6 or above.
-    - [PowerShell](http://aka.ms/wmf5download) v5.0 or above.
+    - [PowerShell](https://aka.ms/wmf5download) v5.0 or above.
     - [.NET Framework](https://www.microsoft.com/download/details.aspx?id=30653) v4.5 or above.
     - [SSMS](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms) 17.0 or above.
     - [PowerBI desktop](https://docs.microsoft.com/power-bi/desktop-get-the-desktop).
@@ -65,7 +65,7 @@ This inventory can be in one of two forms:
 - SQL Server table
 
 ### If using a CSV file
-When using a csv file to import the data, ensure there are only two columns of data – **Instance Name** and **Database Name**, and that the columns don’t have header rows.
+When using a csv file to import the data, ensure there are only two columns of data – **Instance Name** and **Database Name**, and that the columns don't have header rows.
  
  ![csv file contents](../dma/media//dma-consolidatereports/dma-csv-file-contents.png)
 

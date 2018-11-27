@@ -282,11 +282,11 @@ manager: craigg
 -   **Provision Subscriptions and Data Alerts** in which you find out whether Reporting Services can use SQL Server Agent for data alerts and download scripts that allow access to SQL Server Agent. For more information, see [Provision Subscriptions and Alerts for SSRS Service Applications](install-windows/provision-subscriptions-and-alerts-for-ssrs-service-applications.md).  
   
 ##  <a name="Globalization"></a> Globalization of Data Alerts  
- Certain script such as Arabic and Hebrew are written right to left. Data alerts support right-to-left scripts as well as left-to-right scripts. Data alerts detect culture and alter the appearance and behavior of the user interface and the layout of data alert messages accordingly. The culture is derived from the regional setting of the operating system on the user’s computer. The culture is saved each time you update and then resave the data alert definition.  
+ Certain script such as Arabic and Hebrew are written right to left. Data alerts support right-to-left scripts as well as left-to-right scripts. Data alerts detect culture and alter the appearance and behavior of the user interface and the layout of data alert messages accordingly. The culture is derived from the regional setting of the operating system on the user's computer. The culture is saved each time you update and then resave the data alert definition.  
   
  Whether data satisfies the rules in the alert definition can be affected by the culture in the alert definition. String comparisons are most commonly affected by culture specific rules.  
   
- Determining whether report data satisfies the rules in the alert definition can be affected by the culture in the alert definition. This most commonly occurs in of strings. For example, in an alert definition with the German culture, a rule that compares the English letter “o” and the German letter “ö” would not be satisfied. In the same alert definition using the English culture the rule would be satisfied.  
+ Determining whether report data satisfies the rules in the alert definition can be affected by the culture in the alert definition. This most commonly occurs in of strings. For example, in an alert definition with the German culture, a rule that compares the English letter "o" and the German letter "ö" would not be satisfied. In the same alert definition using the English culture the rule would be satisfied.  
   
  Data formatting is also based the culture of the alert definition. For example, if the culture uses a period as the decimal symbol, then the value displays as 45.67; whereas a culture that uses a comma as the decimal symbol, displays 45,67.  
   

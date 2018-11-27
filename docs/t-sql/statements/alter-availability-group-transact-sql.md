@@ -50,10 +50,10 @@ ALTER AVAILABILITY GROUP group_name
    | DENY CREATE ANY DATABASE  
    | FAILOVER  
    | FORCE_FAILOVER_ALLOW_DATA_LOSS   
-   | ADD LISTENER ‘dns_name’ ( <add_listener_option> )  
-   | MODIFY LISTENER ‘dns_name’ ( <modify_listener_option> )  
-   | RESTART LISTENER ‘dns_name’  
-   | REMOVE LISTENER ‘dns_name’  
+   | ADD LISTENER 'dns_name' ( <add_listener_option> )  
+   | MODIFY LISTENER 'dns_name' ( <modify_listener_option> )  
+   | RESTART LISTENER 'dns_name'  
+   | REMOVE LISTENER 'dns_name'  
    | OFFLINE  
   }  
 [ ; ]  
@@ -86,8 +86,8 @@ ALTER AVAILABILITY GROUP group_name
      } )  
      | PRIMARY_ROLE ( {   
             [ ALLOW_CONNECTIONS = { READ_WRITE | ALL } ]   
-        [,] [ READ_ONLY_ROUTING_LIST = { ( ‘<server_instance>’ [ ,...n ] ) | NONE } ]  
-        [,] [ READ_WRITE_ROUTING_URL = { ( ‘<server_instance>’ ) ] 
+        [,] [ READ_ONLY_ROUTING_LIST = { ( '<server_instance>' [ ,...n ] ) | NONE } ]  
+        [,] [ READ_WRITE_ROUTING_URL = { ( '<server_instance>' ) ] 
      } )  
      | SESSION_TIMEOUT = integer
   
@@ -105,7 +105,7 @@ ALTER AVAILABILITY GROUP group_name
           } )  
      | PRIMARY_ROLE ( {   
           ALLOW_CONNECTIONS = { READ_WRITE | ALL }   
-        | READ_ONLY_ROUTING_LIST = { ( ‘<server_instance>’ [ ,...n ] ) | NONE }   
+        | READ_ONLY_ROUTING_LIST = { ( '<server_instance>' [ ,...n ] ) | NONE }   
           } )  
      | SESSION_TIMEOUT = seconds  
     )   
@@ -134,12 +134,12 @@ ALTER AVAILABILITY GROUP group_name
    }  
   
   <network_subnet_option> ::=  
-     ‘four_part_ipv4_address’, ‘four_part_ipv4_mask’    
+     'four_part_ipv4_address', 'four_part_ipv4_mask'    
   
   <ip_address_option> ::=  
      {   
-        ‘four_part_ipv4_address’, ‘four_part_ipv4_mask’  
-      | ‘ipv6_address’  
+        'four_part_ipv4_address', 'four_part_ipv4_mask'  
+      | 'ipv6_address'  
      }  
   
 <modify_listener_option>::=  
@@ -191,7 +191,7 @@ ALTER AVAILABILITY GROUP group_name
   
 |Level|Failure Condition|  
 |-----------|-----------------------|  
-|1|Specifies that an automatic failover should be initiated when any of the following occurs:<br /><br /> The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] service is down.<br /><br /> The lease of the availability group for connecting to the WSFC cluster expires because no ACK is received from the server instance. For more information, see [How It Works: SQL Server Always On Lease Timeout](http://blogs.msdn.com/b/psssql/archive/2012/09/07/how-it-works-sql-server-Always%20On-lease-timeout.aspx).|  
+|1|Specifies that an automatic failover should be initiated when any of the following occurs:<br /><br /> The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] service is down.<br /><br /> The lease of the availability group for connecting to the WSFC cluster expires because no ACK is received from the server instance. For more information, see [How It Works: SQL Server Always On Lease Timeout](https://blogs.msdn.com/b/psssql/archive/2012/09/07/how-it-works-sql-server-Always%20On-lease-timeout.aspx).|  
 |2|Specifies that an automatic failover should be initiated when any of the following occurs:<br /><br /> The instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] does not connect to cluster, and the user-specified HEALTH_CHECK_TIMEOUT threshold of the availability group is exceeded.<br /><br /> The availability replica is in failed state.|  
 |3|Specifies that an automatic failover should be initiated on critical [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] internal errors, such as orphaned spinlocks, serious write-access violations, or too much dumping.<br /><br /> This is the default behavior.|  
 |4|Specifies that an automatic failover should be initiated on moderate [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] internal errors, such as a persistent out-of-memory condition in the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] internal resource pool.|  
@@ -356,7 +356,7 @@ ALTER AVAILABILITY GROUP group_name
   
  For a named instance, you can obtain the port number by querying the **port** and **type_desc** columns of the [sys.dm_tcp_listener_states](../../relational-databases/system-dynamic-management-views/sys-dm-tcp-listener-states-transact-sql.md) dynamic management view. The server instance uses the Transact-SQL listener (**type_desc='TSQL'**).  
   
- For more information about calculating the read-only routing URL for an availability replica, see [Calculating read_only_routing_url for Always On](http://blogs.msdn.com/b/mattn/archive/2012/04/25/calculating-read-only-routing-url-for-Always%20On.aspx).  
+ For more information about calculating the read-only routing URL for an availability replica, see [Calculating read_only_routing_url for Always On](https://blogs.msdn.com/b/mattn/archive/2012/04/25/calculating-read-only-routing-url-for-Always%20On.aspx).  
   
 > [!NOTE]  
 >  For a named instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], the Transact-SQL listener should be configured to use a specific port. For more information, see [Configure a Server to Listen on a Specific TCP Port &#40;SQL Server Configuration Manager&#41;](../../database-engine/configure-windows/configure-a-server-to-listen-on-a-specific-tcp-port.md).  
@@ -375,7 +375,7 @@ ALTER AVAILABILITY GROUP group_name
  ALL  
  All connections are allowed to the databases in the primary replica. This is the default behavior.  
   
- READ_ONLY_ROUTING_LIST **=** { **(‘**\<server_instance>**’** [ **,**...*n* ] **)** | NONE }  
+ READ_ONLY_ROUTING_LIST **=** { **('**\<server_instance>**'** [ **,**...*n* ] **)** | NONE }  
  Specifies a comma-separated list of server instances that host availability replicas for this availability group that meet the following requirements when running under the secondary role:  
   
 -   Be configured to allow all connections or read-only connections (see the ALLOW_CONNECTIONS argument of the SECONDARY_ROLE option, above).  
@@ -445,7 +445,7 @@ Initiates a manual failover of the availability group without data loss to the s
   
  For information about the limitations, prerequisites and recommendations for forcing failover and the effect of a forced failover on the former primary databases in the availability group, see [Perform a Forced Manual Failover of an Availability Group &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/perform-a-forced-manual-failover-of-an-availability-group-sql-server.md).  
   
- ADD LISTENER **‘**_dns\_name_**’(** \<add_listener_option> **)**  
+ ADD LISTENER **'**_dns\_name_**'(** \<add_listener_option> **)**  
  Defines a new availability group listener for this availability group. Supported only on the primary replica.  
   
 > [!IMPORTANT]  
@@ -464,7 +464,7 @@ Initiates a manual failover of the availability group without data loss to the s
  We recommend that you specify a meaningful string. For example, for an availability group named `AG1`, a meaningful DNS host name would be `ag1-listener`.  
   
 > [!IMPORTANT]  
->  NetBIOS recognizes only the first 15 chars in the dns_name. If you have two WSFC clusters that are controlled by the same Active Directory and you try to create availability group listeners in both of clusters using names with more than 15 characters and an identical 15 character prefix, you will get an error reporting that the Virtual Network Name resource could not be brought online. For information about prefix naming rules for DNS names, see [Assigning Domain Names](http://technet.microsoft.com/library/cc731265\(WS.10\).aspx).  
+>  NetBIOS recognizes only the first 15 chars in the dns_name. If you have two WSFC clusters that are controlled by the same Active Directory and you try to create availability group listeners in both of clusters using names with more than 15 characters and an identical 15 character prefix, you will get an error reporting that the Virtual Network Name resource could not be brought online. For information about prefix naming rules for DNS names, see [Assigning Domain Names](https://technet.microsoft.com/library/cc731265\(WS.10\).aspx).  
   
  JOIN AVAILABILITY GROUP ON  
  Joins to a *distributed availability group*. When you create a distributed availability group, the availability group on the cluster where it is created is the primary availability group. The availability group that joins the distributed availability group is the secondary availability group.  
@@ -529,7 +529,7 @@ Initiates a manual failover of the availability group without data loss to the s
  \<add_listener_option>  
  ADD LISTENER takes one of the following options:  
   
- WITH DHCP [ ON { **(‘**_four\_part\_ipv4\_address_**’,‘**_four\_part\_ipv4\_mask_**’)** } ]  
+ WITH DHCP [ ON { **('**_four\_part\_ipv4\_address_**','**_four\_part\_ipv4\_mask_**')** } ]  
  Specifies that the availability group listener will use the Dynamic Host Configuration Protocol (DHCP).  Optionally, use the ON clause to identify the network on which this listener will be created. DHCP is limited to a single subnet that is used for every server instances that hosts an availability replica in the availability group.  
   
 > [!IMPORTANT]  
@@ -539,7 +539,7 @@ Initiates a manual failover of the availability group without data loss to the s
   
  `WITH DHCP ON ('10.120.19.0','255.255.254.0')`  
   
- WITH IP **(** { **(‘**_four\_part\_ipv4\_address_**’,‘**_four\_part\_ipv4\_mask_**’)** | **(‘**_ipv6\_address_**’)** } [ **,** ..._n_ ] **)** [ **,** PORT **=**_listener\_port_ ]  
+ WITH IP **(** { **('**_four\_part\_ipv4\_address_**','**_four\_part\_ipv4\_mask_**')** | **('**_ipv6\_address_**')** } [ **,** ..._n_ ] **)** [ **,** PORT **=**_listener\_port_ ]  
  Specifies that, instead of using DHCP, the availability group listener will use one or more static IP addresses. To create an availability group across multiple subnets, each subnet requires one static IP address in the listener configuration. For a given subnet, the static IP address can be either an IPv4 address or an IPv6 address. Contact your network administrator to get a static IP address for each subnet that will host an availability replica for the new availability group.  
   
  For example:  
@@ -562,22 +562,22 @@ Initiates a manual failover of the availability group without data loss to the s
   
  For example: `WITH IP ( ('2001::4898:23:1002:20f:1fff:feff:b3a3') ) , PORT = 7777`  
   
- MODIFY LISTENER **‘**_dns\_name_**’(** \<modify\_listener\_option\> **)**  
+ MODIFY LISTENER **'**_dns\_name_**'(** \<modify\_listener\_option\> **)**  
  Modifies an existing availability group listener for this availability group. Supported only on the primary replica.  
   
  \<modify\_listener\_option\>  
  MODIFY LISTENER takes one of the following options:  
   
- ADD IP { **(‘**_four\_part\_ipv4\_address_**’,‘**_four\_part\_ipv4_mask_**’)** \| <b>(‘</b>dns\_name*ipv6\_address*__’)__ }  
+ ADD IP { **('**_four\_part\_ipv4\_address_**','**_four\_part\_ipv4_mask_**')** \| <b>('</b>dns\_name*ipv6\_address*__')__ }  
  Adds the specified IP address to the availability group listener specified by *dns\_name*.  
   
  PORT **=** *listener_port*  
  See the description of this argument earlier in this section.  
   
- RESTART LISTENER **‘**_dns\_name_**’**  
+ RESTART LISTENER **'**_dns\_name_**'**  
  Restarts the listener that is associated with the specified DNS name. Supported only on the primary replica.  
   
- REMOVE LISTENER **‘**_dns\_name_**’**  
+ REMOVE LISTENER **'**_dns\_name_**'**  
  Removes the listener that is associated with the specified DNS name. Supported only on the primary replica.  
   
  OFFLINE  

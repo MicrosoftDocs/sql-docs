@@ -137,6 +137,9 @@ Renames the database with the name specified as *new_database_name*.
   
 COLLATE *collation_name*  
 Specifies the collation for the database. *collation_name* can be either a Windows collation name or a SQL collation name. If not specified, the database is assigned the collation of the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+
+> [!NOTE]
+> Collation cannot be changed after database has been created on [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
   
 When creating databases with other than the default collation, the data in the database always respects the specified collation. For [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], when creating a contained database, the internal catalog information is maintained using the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] default collation, **Latin1_General_100_CI_AS_WS_KS_SC**.  
   

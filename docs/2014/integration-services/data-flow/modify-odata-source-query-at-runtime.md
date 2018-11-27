@@ -15,7 +15,7 @@ manager: craigg
 # Modify OData Source Query at Runtime
   You can modify the OData Source query at runtime by adding an expression to the **[OData Source].[Query]** property of the Data Flow task.  
   
- Note that the columns must remain the same as what was used at design time; otherwise you will get an error when the package is executed. Be sure to specify the same columns (in the same order) when using the $select query option. A safer alternative to using the $select option is to deselect the columns you don’t want directly from the Source Component UI.  
+ Note that the columns must remain the same as what was used at design time; otherwise you will get an error when the package is executed. Be sure to specify the same columns (in the same order) when using the $select query option. A safer alternative to using the $select option is to deselect the columns you don't want directly from the Source Component UI.  
   
  There are a few different ways of dynamically setting the query value at runtime. Below are some of the more common methods.  
   

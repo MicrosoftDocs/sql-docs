@@ -16,11 +16,11 @@ ms.assetid: 9dcc6a90-0add-42c2-815b-862e4e2a21ac
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 ::: moniker range="= sql-server-2017 || = sqlallproducts-allversions"
-Starting with SQL Server 2017, SQL Server runs on Linux. It’s the same SQL Server database engine, with many similar features and services regardless of your operating system.
+Starting with SQL Server 2017, SQL Server runs on Linux. It's the same SQL Server database engine, with many similar features and services regardless of your operating system.
 ::: moniker-end
 
 ::: moniker range=">= sql-server-ver15 || >= sql-server-linux-ver15"
-SQL Server 2019 preview runs on Linux. It’s the same SQL Server database engine, with many similar features and services regardless of your operating system. To find out more about this release, see [What's new in SQL Server 2019 preview for Linux](../sql-server/what-s-new-in-sql-server-ver15.md#sqllinux).
+SQL Server 2019 preview runs on Linux. It's the same SQL Server database engine, with many similar features and services regardless of your operating system. To find out more about this release, see [What's new in SQL Server 2019 preview for Linux](../sql-server/what-s-new-in-sql-server-ver15.md#sqllinux).
 ::: moniker-end
 
 ::: moniker range="= sql-server-2017"

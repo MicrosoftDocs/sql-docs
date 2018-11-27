@@ -155,7 +155,7 @@
     - name: Linked servers +
       href: ../relational-databases/linked-servers/linked-servers-database-engine.md
     - name: Scripting +
-      href: ../relational-databases/scripting/database-engine-scripting.md
+      href: ../ssms/scripting/database-engine-scripting.md
     - name: Full-text Search  +
       href: ../relational-databases/search/full-text-search.md
     - name: Subqueries +

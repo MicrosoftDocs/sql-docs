@@ -38,7 +38,7 @@ The process of managing keys can be divided into the following high-level tasks:
 
 - **Key provisioning** - Creating the physical keys in a trusted key store (for example, in the Windows Certificate Store, Azure Key Vault, or a hardware security module), encrypting column encryption keys with column master keys, and creating metadata for both types of keys in the database.
 
-- **Key rotation** - Periodically replacing an existing key with a new key. You may need to rotate a key if the key has been compromised, or in order to comply with your organization’s policies or compliance regulations that mandate cryptographic keys must be rotated. 
+- **Key rotation** - Periodically replacing an existing key with a new key. You may need to rotate a key if the key has been compromised, or in order to comply with your organization's policies or compliance regulations that mandate cryptographic keys must be rotated. 
 
 
 ## <a name="KeyManagementRoles"></a> Key Management Roles
@@ -87,7 +87,7 @@ The primary objective of Always Encrypted is to ensure sensitive data stored in 
 
 To ensure Always Encrypted is effective in preventing these types of attacks, your key management process must ensure the column master keys and column encryption keys, as well as credentials to a key store containing the column master keys, are never revealed to a potential attacker. Here are a few guidelines, you should follow:
 
-- Never generate column master keys or column encryption keys on a computer hosting your database. Instead generate the keys on a separate computer, which is either dedicated for key management, or is a machine hosting applications that will need access to the keys anyway. This means that **you should never run tools used to generate the keys on the computer hosting your database** because if an attacker accesses a computer used to provision or maintain your Always Encrypted keys, the attacker can potentially get your keys, even if the keys only appear in the tool’s memory for a short time.
+- Never generate column master keys or column encryption keys on a computer hosting your database. Instead generate the keys on a separate computer, which is either dedicated for key management, or is a machine hosting applications that will need access to the keys anyway. This means that **you should never run tools used to generate the keys on the computer hosting your database** because if an attacker accesses a computer used to provision or maintain your Always Encrypted keys, the attacker can potentially get your keys, even if the keys only appear in the tool's memory for a short time.
 - To ensure your key management process does not inadvertently reveal column master keys or column encryption keys, it is critical to identify potential adversaries and security threats before defining and implementing a key management process. For example, if your goal is to ensure DBAs have no access to sensitive data, then a DBA cannot be responsible for generating the keys. A DBA, however, *can* manage key metadata in the database, as the metadata does not contain the plaintext keys.
 
 ## Next Steps

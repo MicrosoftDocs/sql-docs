@@ -32,7 +32,7 @@ manager: craigg
   
 ```sql
 SELECT Instructions.query('  
-     declare namespace AWMI="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";  
+     declare namespace AWMI="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";  
     <ManuStep ProdModelID = "{sql:column("Production.ProductModel.ProductModelID")}"  
                 ProductModelName = "{ sql:column("Production.ProductModel.Name") }" >  
      <Location>  
@@ -83,7 +83,7 @@ WHERE ProductModelID=7
   
 ```sql
 SELECT Instructions.query('  
-    declare namespace AWMI="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";  
+    declare namespace AWMI="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";  
    <Location>  
       { (//AWMI:root/AWMI:Location)[1]/@* }  
        <Tools>  
@@ -136,7 +136,7 @@ where ProductModelID=7
   
 ```sql
 SELECT CatalogDescription.query('  
-     declare namespace p1="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription";  
+     declare namespace p1="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription";  
      <ProductModel ProductModelID= "{ data( (/p1:ProductDescription/@ProductModelID)[1] ) }"  
                    ProductModelName = "{ data( (/p1:ProductDescription/@ProductModelName)[1] ) }" >  
        {  
@@ -161,12 +161,12 @@ where ProductModelID=19
 ```xml
 <ProductModel ProductModelID="19" ProductModelName="Mountain 100">  
  <p1:Warranty   
-  xmlns:p1="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelWarrAndMain">  
+  xmlns:p1="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelWarrAndMain">  
   <p1:WarrantyPeriod>3 year</p1:WarrantyPeriod>  
   <p1:Description>parts and labor</p1:Description>  
  </p1:Warranty>  
  <p2:Maintenance   
-  xmlns:p2="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelWarrAndMain">  
+  xmlns:p2="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelWarrAndMain">  
   <p2:NoOfYears>10</p2:NoOfYears>  
   <p2:Description>maintenance contact available through your dealer   
             or any AdventureWorks retail store.  
@@ -180,7 +180,7 @@ where ProductModelID=19
   
 ```sql
 SELECT Instructions.query('  
-     declare namespace AWMI="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";  
+     declare namespace AWMI="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";  
    for $Inst in (//AWMI:root/AWMI:Location)[1]  
    return   
      <Location>  
@@ -216,7 +216,7 @@ where ProductModelID=7
   
 ```sql
 SELECT Instructions.query('   
-declare namespace AWMI="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";  
+declare namespace AWMI="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";  
   <LastTwoManuSteps>  
    <Last-1Step>   
      { (/AWMI:root/AWMI:Location)[1]/AWMI:step[(last()-1)]/text() }  

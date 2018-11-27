@@ -112,7 +112,7 @@ manager: craigg
 ###  <a name="Security"></a> Security  
   
 ####  <a name="Permissions"></a> Permissions  
- By default, only members of the local administrators group can start, stop, pause, resume or restart a service. To grant non-administrators the ability to manage services, see [How to grant users rights to manage services in Windows Server 2003](http://support.microsoft.com/kb/325349). (The process is similar on other versions of Windows.)  
+ By default, only members of the local administrators group can start, stop, pause, resume or restart a service. To grant non-administrators the ability to manage services, see [How to grant users rights to manage services in Windows Server 2003](https://support.microsoft.com/kb/325349). (The process is similar on other versions of Windows.)  
   
  Stopping the [!INCLUDE[ssDE](../../includes/ssde-md.md)] by using the [!INCLUDE[tsql](../../includes/tsql-md.md)]**SHUTDOWN** command requires membership in the **sysadmin** or **serveradmin** fixed server roles, and is not transferable.  
   
@@ -349,7 +349,7 @@ manager: craigg
     ```  
   
 ## See Also  
- [Overview of SQL Server Setup Documentation](http://msdn.microsoft.com/library/2620439a-f9d3-4b3c-9968-48f60b4bb9a5)   
+ [Overview of SQL Server Setup Documentation](https://msdn.microsoft.com/library/2620439a-f9d3-4b3c-9968-48f60b4bb9a5)   
  [View and Read SQL Server Setup Log Files](../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md)   
  [SQL Server Configuration Manager](../../relational-databases/sql-server-configuration-manager.md)   
  [Start SQL Server with Minimal Configuration](../../database-engine/configure-windows/start-sql-server-with-minimal-configuration.md)   

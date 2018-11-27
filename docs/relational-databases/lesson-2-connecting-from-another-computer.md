@@ -6,11 +6,10 @@ ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
 ms.technology: 
-  - "database-engine"
 ms.topic: conceptual
 ms.assetid: fd4ddeb8-0cb6-441b-9704-03575c07020f
-author: "rothja"
-ms.author: "jroth"
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ---
 # Lesson 2: Connecting from Another Computer
@@ -64,7 +63,7 @@ If you plan to connect to the [!INCLUDE[ssDE](../includes/ssde-md.md)] from anot
 To enhance security, Windows Server 2008, [!INCLUDE[wiprlhlong](../includes/wiprlhlong-md.md)], and Windows 7 all turn on the Windows Firewall. When you want to connect to this instance from another computer, you must open a communication port in the firewall. The default instance of the [!INCLUDE[ssDE](../includes/ssde-md.md)] listens on port 1433; therefore, you do not have to configure a fixed port. However, named instances including [!INCLUDE[ssExpress](../includes/ssexpress-md.md)] listen on dynamic ports. Before you can open a port in the firewall, you must first configure the [!INCLUDE[ssDE](../includes/ssde-md.md)] to listen on a specific port known as a fixed port or a static port; otherwise, the [!INCLUDE[ssDE](../includes/ssde-md.md)] might listen on a different port each time it is started. For more information about firewalls, the default Windows firewall settings, and a description of the TCP ports that affect the Database Engine, Analysis Services, Reporting Services, and Integration Services, see [Configure the Windows Firewall to Allow SQL Server Access](../sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md).  
   
 > [!NOTE]  
-> Port number assignments are managed by the Internet Assigned Numbers Authority and are listed at [http://www.iana.org](http://go.microsoft.com/fwlink/?LinkId=48844). Port numbers should be assigned from numbers 49152 through 65535.  
+> Port number assignments are managed by the Internet Assigned Numbers Authority and are listed at [https://www.iana.org](https://go.microsoft.com/fwlink/?LinkId=48844). Port numbers should be assigned from numbers 49152 through 65535.  
   
 #### Configure SQL Server to listen on a specific port  
   

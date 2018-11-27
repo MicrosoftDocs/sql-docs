@@ -68,7 +68,7 @@ To connect to Microsoft Dynamics AX Online or Microsoft Dynamics CRM online, you
  Name of the connection manager.  
   
  **Service document location**  
- URL for the OData service. For example: http://services.odata.org/V3/Northwind/Northwind.svc/.  
+ URL for the OData service. For example: https://services.odata.org/V3/Northwind/Northwind.svc/.  
   
  **Authentication**  
 Select one of the following options:

@@ -93,7 +93,7 @@ SQL Server Machine Learning Services starts some services that run outside of th
 
     **Python:** `C:\Program Files\Microsoft SQL Server\MSSQL_version_number.MSSQLSERVER\PYTHON_SERVICES\library\RevoScaleR\rxLibs\x64`.
 
-The configuration file must be named the same as the executable, using the format “[name].xevents.xml”. In other words, the files must be named as follows:
+The configuration file must be named the same as the executable, using the format "[name].xevents.xml". In other words, the files must be named as follows:
 
 + `Launchpad.xevents.xml`
 + `bxlserver.xevents.xml`

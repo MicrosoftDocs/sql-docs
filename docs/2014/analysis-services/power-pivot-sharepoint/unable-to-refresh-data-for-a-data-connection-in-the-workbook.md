@@ -35,7 +35,7 @@ manager: craigg
   
  The workbook you are attempting to open might have been created in the SQL Server 2008 R2 version of PowerPivot for Excel. Most likely, the Analysis Services data provider that is specified in the data connection string is not present on the computer that is handling the request.  
   
- If this is the case, you will find this message in the ULS log: “Refresh failed for ‘PowerPivot Data’ in the workbook ‘\<URL to workbook>’”, followed by “Unable to get a connection”.  
+ If this is the case, you will find this message in the ULS log: "Refresh failed for 'PowerPivot Data' in the workbook '\<URL to workbook>'", followed by "Unable to get a connection".  
   
  To determine the version of the workbook, open it in Excel and check which data provider is specified in the connection string. A SQL Server 2008 R2 workbook uses MSOLAP.4 as its data provider.  
   

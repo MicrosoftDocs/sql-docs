@@ -112,7 +112,7 @@
         href: tutorials/sqldev-train-and-save-a-model-using-t-sql.md
       - name: 4 - Predictions
         href: tutorials/sqldev-operationalize-the-model.md
-    - name: Data science end-to-end walkthrough
+    - name: Data science walkthrough
       href: tutorials/walkthrough-data-science-end-to-end-walkthrough.md
       items:
       - name: Explore and summarize data
@@ -125,7 +125,7 @@
         href: tutorials/walkthrough-build-and-save-the-model.md
       - name: Deploy and use the model
         href: tutorials/walkthrough-deploy-and-use-the-model.md
-    - name: Deep dive with RevoScaleR
+    - name: RevoScaleR deep dive
       href: tutorials/deepdive-data-science-deep-dive-using-the-revoscaler-packages.md
       items:
       - name: Create database and permissions

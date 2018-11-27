@@ -21,7 +21,7 @@ In this article, learn how to configure an R client development workstation so t
 
 ![Client-server components](media/sqlmls-r-client-revo.png "Local and remote R sessions and libraries")
 
-To validate installation, you can use built-in **RGUI** tool as described in this article, or [link the libraries](#install-ide) to RStudio or any another IDE that you normally use.
+To validate the installation, you can use built-in **RGUI** tool as described in this article, or [link the libraries](#install-ide) to RStudio or any another IDE that you normally use.
 
 > [!Tip]
 > For a video demonstration of these exercises, see [Run R and Python remotely in SQL Server from Jupyter Notebooks](https://blogs.msdn.microsoft.com/mlserver/2018/07/10/run-r-and-python-remotely-in-sql-server-from-jupyter-notebooks-or-any-ide/).

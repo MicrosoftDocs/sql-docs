@@ -202,9 +202,9 @@ Before you can call the model from an external application, you must save the mo
 
 A typical deployment workflow consists of the following steps:
 
-+ Serialize the model into a hexadecimal string
-+ Transmit the serialized object to the database
-+ Save the model in a varbinary(max) column
+1. Serialize the model into a hexadecimal string
+2. Transmit the serialized object to the database
+3. Save the model in a varbinary(max) column
 
 In this section, learn how to use a stored procedure to persist the model and make it available for predictions. The stored procedure used in this section is PersistModel. The definition of PersistModel is in [Prerequisites](#prerequisites).
 

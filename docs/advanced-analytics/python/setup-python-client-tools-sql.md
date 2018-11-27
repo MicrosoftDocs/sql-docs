@@ -15,13 +15,13 @@ manager: cgronlun
 
 Python integration is available starting in SQL Server 2017 or later when you include the Python option in a [Machine Learning Services (In-Database) installation](../install/sql-machine-learning-services-windows-install.md). 
 
-To develope and deploy Python solutions for SQL Server, install Microsoft's [revoscalepy](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/revoscalepy-package) and other Python libraries your development workstation. The revoscalepy library, which is also on the remote SQL Server instance, coordinates computing requests between both systems. 
+To develop and deploy Python solutions for SQL Server, install Microsoft's [revoscalepy](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/revoscalepy-package) and other Python libraries your development workstation. The revoscalepy library, which is also on the remote SQL Server instance, coordinates computing requests between both systems. 
 
 In this article, learn how to configure a Python development workstation so that you can interact with a remote SQL Server enabled for machine learning and Python integration. After completing the steps in this article, you will have the same Python libraries as those on SQL Server. You will also know how to push computations from a local Python session to a remote Python session on SQL Server.
 
 ![Client-server components](media/sqlmls-python-client-revo.png "Local and remote Python sessions and libraries")
 
-To validate installaiton, you can use built-in Jupyter Notebooks as described in this article, or [link the libraries](#install-ide) to PyCharm or any another IDE that you normally use.
+To validate the installation, you can use built-in Jupyter Notebooks as described in this article, or [link the libraries](#install-ide) to PyCharm or any another IDE that you normally use.
 
 > [!Tip]
 > For a video demonstration of these exercises, see [Run R and Python remotely in SQL Server from Jupyter Notebooks](https://blogs.msdn.microsoft.com/mlserver/2018/07/10/run-r-and-python-remotely-in-sql-server-from-jupyter-notebooks-or-any-ide/).

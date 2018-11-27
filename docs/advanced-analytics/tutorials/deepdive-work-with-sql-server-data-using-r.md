@@ -1,9 +1,9 @@
 ---
-title: Work with SQL Server data using R  (SQL and R deep dive)| Microsoft Docs
+title: Create a database and permissions (SQL and RevoScaleR deep dive)| Microsoft Docs
 ms.prod: sql
 ms.technology: machine-learning
 
-ms.date: 04/15/2018  
+ms.date: 11/27/2018  
 ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist

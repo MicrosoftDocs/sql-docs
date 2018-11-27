@@ -71,7 +71,7 @@
       href: ../relational-databases/extended-events/extended-events.md
     - name: SQL Server Profiler
       href: ../tools/sql-server-profiler/sql-server-profiler.md
-    - name: SQL Trace +
+    - name: SQL Trace
       href: ../relational-databases/sql-trace/sql-trace.md
   - name: Performance Monitoring and Tuning Tools
     href: performance-monitoring-and-tuning-tools.md

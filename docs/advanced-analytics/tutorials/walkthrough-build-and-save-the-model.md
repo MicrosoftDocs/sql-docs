@@ -12,7 +12,49 @@ manager: cgronlun
 # Build an R model and save to SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-In this step, learn how to build a machine learning model and save the model in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
+In this step, learn how to build a machine learning model and save the model in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. By saving a model, you can call it directly from [!INCLUDE[tsql](../../includes/tsql-md.md)] code, using the system stored procedure, [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) or the [PREDICT (T-SQL) function](https://docs.microsoft.com/sql/t-sql/queries/predict-transact-sql).
+
+## Prerequisites
+
+This step assumes an ongoing R session based on previous steps in this walkthrough. It uses the connection strings and data source objects created in those steps. The following tools and packages are used to run the script.
+
++ Rgui.exe to run R commands
++ Management Studio to run T-SQL
++ ROCR package
++ RODBC package
+
+### Create a stored procedure to save models
+
+This step uses a stored procedure to save a trained model to SQL Server. Creating a stored procedure to perform this operation makes the task easier.
+
+Run the following T-SQL code in a query windows in Management Studio to create the stored procedure.
+
+```tsql
+USE [NYCTaxi_Sample]
+GO
+
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+
+IF EXISTS (SELECT * FROM sys.objects WHERE type = 'P' AND name = 'PersistModel')
+  DROP PROCEDURE PersistModel
+GO
+
+CREATE PROCEDURE [dbo].[PersistModel] @m nvarchar(max)
+AS
+BEGIN
+	-- SET NOCOUNT ON added to prevent extra result sets from
+	-- interfering with SELECT statements.
+	SET NOCOUNT ON;
+	insert into nyc_taxi_models (model) values (convert(varbinary(max),@m,2))
+END
+GO
+```
+
+> [!NOTE]
+> If you get an error, make sure that your login has permission to create objects. You can grant explicit permissions to create objects by running a T-SQL statement like this: `exec sp_addrolemember 'db_owner', '<user_name>'`.
 
 ## Create a classification model using rxLogit
 
@@ -21,7 +63,7 @@ The model is a binary classifier that predicts whether the taxi driver is likely
 1. Call the [rxLogit](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxlogit) function, included in the **RevoScaleR** package, to create a logistic regression model. 
 
     ```R
-    system.time(logitObj <- rxLogit(tipped ~ passenger_count + trip_distance + trip_time_in_secs + direct_distance, data = sql_feature_ds));
+    system.time(logitObj <- rxLogit(tipped ~ passenger_count + trip_distance + trip_time_in_secs + direct_distance, data = featureDataSource));
     ```
 
     The call that builds the model is enclosed in the system.time function. This lets you get the time required to build the model.
@@ -78,7 +120,7 @@ Now that the model is built, you can use to predict whether the driver is likely
 
     ```R
     rxPredict(modelObject = logitObj,
-        data = sql_feature_ds,
+        data = featureDataSource,
         outData = scoredOutput,
         predVarNames = "Score",
         type = "response",
@@ -108,7 +150,7 @@ In this section, you'll experiment with both techniques.
 
     This call returns the values used in computing the ROC chart. The label column is _tipped_, which has the actual results you are trying to predict, while the _Score_ column has the prediction.
 
-2. To actually plot the chart, you can save the ROC object and then draw it with the `plot` function. The graph is created on the remote compute context, and returned to your R environment.
+2. To actually plot the chart, you can save the ROC object and then draw it with the plot function. The graph is created on the remote compute context, and returned to your R environment.
 
     ```R
     scoredOutput = rxImport(scoredOutput);
@@ -121,6 +163,8 @@ In this section, you'll experiment with both techniques.
     ![ROC plot for the model](media/rsql-e2e-rocplot.png "ROC plot for the model")
 
 ### Create the plots in the local compute context using data from SQL Server
+
+You can verify the compute context is local by running `rxGetComputeContext()` at the command prompt. The return value should be "RxLocalSeq Compute Context".
 
 1. For the local compute context, the process is much the same. You use the [rxImport](https://docs.microsoft.com/r-server/r-reference/revoscaler/rximport) function to bring the specified data into your local R environment.
 
@@ -152,11 +196,9 @@ In this section, you'll experiment with both techniques.
 
 ## Deploy the model
 
-After you have built a model and ascertained that it is performing well, you probably want to deploy it to a site where users or people in your organization can make use of the model, or perhaps retrain and recalibrate the model on a regular basis. This process is sometimes called  *operationalizing* a model.
+After you have built a model and ascertained that it is performing well, you probably want to deploy it to a site where users or people in your organization can make use of the model, or perhaps retrain and recalibrate the model on a regular basis. This process is sometimes called  *operationalizing* a model. In SQL Server, operationalization is achieved by embedding R code in a stored procedure. Because code resides in the procedure, it can be called from any application that can connect to SQL Server.
 
-In SQL Server, operationalization is achieved by embedding R code in a stored procedure. Because code resides in the procedure, it can be called from any application that can connect to SQL Server.
-
-However, before you can call the model from an external application, you must save the model to the database used for production. Trained models are stored in binary form, in a single column of type **varbinary(max)**.
+Before you can call the model from an external application, you must save the model to the database used for production. Trained models are stored in binary form, in a single column of type **varbinary(max)**.
 
 A typical deployment workflow consists of the following steps:
 
@@ -164,7 +206,7 @@ A typical deployment workflow consists of the following steps:
 + Transmit the serialized object to the database
 + Save the model in a varbinary(max) column
 
-In this section, you learn how to persist the model and then call it to make predictions.
+In this section, learn how to use a stored procedure to persist the model and make it available for predictions. The stored procedure used in this section is PersistModel. The definition of PersistModel is in [Prerequisites](#prerequisites).
 
 1. Switch back to your local R environment if you are not already using it, serialize the model, and save it in a variable.
 
@@ -174,49 +216,27 @@ In this section, you learn how to persist the model and then call it to make pre
     modelbinstr=paste(modelbin, collapse="");
     ```
 
-2. Open an ODBC connection using **RODBC**.
+2. Open an ODBC connection using **RODBC**. You can omit the call to RODBC if you already have the package loaded.
 
     ```R
     library(RODBC);
     conn <- odbcDriverConnect(connStr);
     ```
 
-    You can omit the call to RODBC if you already have the package loaded.
-
-3. Call the stored procedure created by the PowerShell script, to store the binary representation of the model in a column in the database.
+3. Call the PersistModel stored procedure on SQL Server to transmite the serialized object to the database and store the binary representation of the model in a column. 
 
     ```R
     q <- paste("EXEC PersistModel @m='", modelbinstr,"'", sep="");
     sqlQuery (conn, q);
     ```
 
-    Saving a model to a table requires only an INSERT statement. However, it's easier when wrapped in a stored procedure, such as _PersistModel_.
+4. Use Management Studio to verify the model exists. In Object Explorer, right-click on the **nyc_taxi_models** table and click **Select Top 1000 Rows**. In Results, you should see a binary representation in the **models** column.
 
-    > [!NOTE]
-    > If you get an error such as "The EXECUTE permission was denied on the object PersistModel", make sure that your login has permission. You can grant explicit permissions on just the stored procedure by running a T-SQL statement like this: `GRANT EXECUTE ON [dbo].[PersistModel] TO <user_name>`
-
-4. After you have created a model and saved it in a database, you can call it directly from [!INCLUDE[tsql](../../includes/tsql-md.md)] code, using the system stored procedure, [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md).
-
-    However, with any model you use often, it's easier to wrap the input query and the call to the model, together with other parameters, in a custom stored procedure.
-
-    Here is the complete code of one such stored procedure. We recommend creating stored procedure such as this one to make it easier to manage and update your R models in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
-
-    ```tsql
-    CREATE PROCEDURE [dbo].[PersistModel]  @m nvarchar(max)
-    AS
-    BEGIN
-      SET NOCOUNT ON;
-      INSERT INTO nyc_taxi_models (model) values (convert(varbinary(max),@m,2))
-    END
-    ```
-
-  > [!NOTE]
-  > Use the **SET NOCOUNT ON** clause to prevent extra result sets from interfering with SELECT statements.
-
-
-In the next and final lesson, you learn how to perform scoring against the saved model using [!INCLUDE[tsql](../../includes/tsql-md.md)].
+Saving a model to a table requires only an INSERT statement. However, it's often easier when wrapped in a stored procedure, such as *PersistModel*.
 
 ## Next steps
+
+In the next and final lesson, learn how to perform scoring against the saved model using [!INCLUDE[tsql](../../includes/tsql-md.md)].
 
 > [!div class="nextstepaction"]
 > [Deploy the R model and use in SQL](walkthrough-deploy-and-use-the-model.md)

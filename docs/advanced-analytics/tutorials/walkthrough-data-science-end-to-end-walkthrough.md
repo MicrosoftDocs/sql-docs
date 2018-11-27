@@ -22,17 +22,22 @@ Because the walkthrough is designed to introduce R developers to [!INCLUDE[rsql_
 
 ## Prerequisites
 
-+ [SQL Server 2017 Machine Learning Services with R](../install/sql-machine-learning-services-windows-install.md#verify-installation) or [Install SQL Server 2016 R Services](../install/sql-r-services-windows-install.md).
++ [SQL Server 2017 Machine Learning Services with R integration](../install/sql-machine-learning-services-windows-install.md#verify-installation) or [SQL Server 2016 R Services](../install/sql-r-services-windows-install.md)
 
-+ [Permissions](../security/user-permission.md) and a SQL Server database user login.
++ [Database permissions](../security/user-permission.md) and a SQL Server database user login
+
++ [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms)
 
 + [NYC Taxi demo database](demo-data-nyctaxi-in-sql.md)
 
-+ An IDE such as RStudio or the built-in RGUI tool included with R.
++ An IDE such as RStudio or the built-in RGUI tool included with R
 
 We recommend that you do this walkthrough on a client workstation. You must be able to connect, on the same network, to a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] computer with SQL Server and the R language enabled. For instructions on workstation configuration, see [Set up a data science client for R development](../r/set-up-a-data-science-client.md).
 
-Alternatively, you can run the walkthrough on a computer that has both [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and an R development environment but we don't recommend this configuration for a production environment. If you need to put client and server on the same computer, be sure to install a second set of Microsoft R libraries for sending R script from a "remote" client. Do not use the R libraries that are installed in the program files of the SQL Server instance.
+Alternatively, you can run the walkthrough on a computer that has both [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and an R development environment, but we don't recommend this configuration for a production environment. If you need to put client and server on the same computer, be sure to install a second set of Microsoft R libraries for sending R script from a "remote" client. Do not use the R libraries that are installed in the program files of the SQL Server instance. Specifically, if you are using one computer, you need the RevoScaleR library in both of these locations to support client and server operations.
+
++ C:\Program Files\Microsoft\R Client\R_SERVER\library\RevoScaleR 
++ C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\R_SERVICES\library\RevoScaleR
 
 <a name="add-packages"></a>
 
@@ -42,7 +47,7 @@ This walkthrough requires several R libraries that are not installed by default 
 
 ### On a client workstation
 
-In your R environment, copy the following lines and execute the code in a Console window. Some packages also install required packages. In all, about 32 packages are required.
+In your R environment, copy the following lines and execute the code in a Console window (Rgui or an IDE). Some packages also install required packages. In all, about 32 packages are installed. You must have an internet connection to complete this step.
     
     ```r
     # Install required R libraries, if they are not already installed.
@@ -59,7 +64,7 @@ You have several options for installing packages on SQL Server. For example, SQL
 > [!NOTE]
 > On the server, **do not** install to a user library even if prompted. If you install to a user library, the SQL Server instance cannot find or run the packages. For more information, see [Installing new R Packages on SQL Server](../r/install-additional-r-packages-on-sql-server.md).
 
-1. On the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] computer, open RGui.exe **as an administrator**.  If you have installed SQL Server R Services using the defaults, RGui.exe can be found in C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\R_SERVICES\bin\x64).
+1. On the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] computer, open RGui.exe **as an administrator**.  If you have installed SQL Server R Services using the defaults, Rgui.exe can be found in C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\R_SERVICES\bin\x64).
 
 2. At an R prompt, run the following R commands:
   
@@ -75,7 +80,7 @@ You have several options for installing packages on SQL Server. For example, SQL
 
 ## Target audience
 
-This walkthrough is intended for R or SQL developers. It provides an introduction into how R can be integrated into enterprise workflows using [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)].  You should be familiar with database operations, such as creating databases and tables, importing data, and running queries.
+This walkthrough is intended for R or SQL developers. It provides an introduction into how R can be integrated into enterprise workflows using [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)]. You should be familiar with database operations, such as creating databases and tables, importing data, and running queries.
 
 + All SQL and R scripts are included.
 + You might need to modify strings in the scripts, to run in your environment. You can do this with any code editor, such as [Visual Studio Code](https://code.visualstudio.com/Download).

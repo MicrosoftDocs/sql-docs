@@ -3,7 +3,7 @@ title: Create data features using R and SQL (walkthrough) | Microsoft Docs
 ms.prod: sql
 ms.technology: machine-learning
 
-ms.date: 04/15/2018  
+ms.date: 11/26/2018  
 ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
@@ -16,12 +16,20 @@ Data engineering is an important part of machine learning. Data often requires t
 
 For this modeling task, rather than using the raw latitude and longitude values of the pickup and drop-off location, you'd like to have the distance in miles between the two locations. To create this feature, you compute the direct linear distance between two points, by using the [haversine formula](https://en.wikipedia.org/wiki/Haversine_formula).
 
-In this step, we compare two different methods for creating a feature from data:
+In this step, learn two different methods for creating a feature from data:
 
-- Using a custom R function
-- Using a custom T-SQL function in [!INCLUDE[tsql](../../includes/tsql-md.md)]
+> [!div class="checklist"]
+> * Using a custom R function
+> * Using a custom T-SQL function in [!INCLUDE[tsql](../../includes/tsql-md.md)]
 
 The goal is to create a new [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] set of data that includes the original columns plus the new numeric feature, *direct_distance*.
+
+## Prerequisites
+
+This step assumes an ongoing R session based on previous steps in this walkthrough. It uses the connection strings and data source objects created in those steps. The following tools and packages are used to run the script.
+
++ Rgui.exe to run R commands
++ Management Studio to run T-SQL
 
 ## Featurization using R
 
@@ -35,7 +43,7 @@ First, let's do it the way R users are accustomed to: get the data onto your lap
     bigQuery <- "SELECT tipped, fare_amount, passenger_count,trip_time_in_secs,trip_distance, pickup_datetime, dropoff_datetime,  pickup_latitude, pickup_longitude,  dropoff_latitude, dropoff_longitude FROM nyctaxi_sample";
     ```
 
-2. Create a new SQL Server data source using the query.
+2. Create a new data source object using the query.
 
     ```R
     featureDataSource <- RxSqlServerData(sqlQuery = bigQuery,colClasses = c(pickup_longitude = "numeric", pickup_latitude = "numeric", dropoff_longitude = "numeric", dropoff_latitude = "numeric", passenger_count  = "numeric", trip_distance  = "numeric", trip_time_in_secs  = "numeric", direct_distance  = "numeric"), connectionString = connStr);
@@ -81,7 +89,7 @@ First, let's do it the way R users are accustomed to: get the data onto your lap
     ```R
     start.time <- proc.time();
   
-    changed_ds <- rxDataStep(inData = featureEngineeringQuery,
+    changed_ds <- rxDataStep(inData = featureDataSource,
     transforms = list(direct_distance=ComputeDist(pickup_longitude,pickup_latitude, dropoff_longitude, dropoff_latitude),
     tipped = "tipped", fare_amount = "fare_amount", passenger_count = "passenger_count",
     trip_time_in_secs = "trip_time_in_secs",  trip_distance="trip_distance",
@@ -110,9 +118,13 @@ First, let's do it the way R users are accustomed to: get the data onto your lap
 
 ## Featurization using Transact-SQL
 
-In this exercise, learn how to accomplish the same task using SQL functions instead of custom R functions.
+In this exercise, learn how to accomplish the same task using SQL functions instead of custom R functions. 
 
-1. Define a SQL function, named *fnCalculateDistance*. The function should already exist in the NYCTaxi_Sample database. If it does not exist, use SQL Server Management Studio to generate the function in the same database where the taxi data is stored.
+Switch to [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms) or another query editor to run the T-SQL script.
+
+1. Use a SQL function, named *fnCalculateDistance*. The function should already exist in the NYCTaxi_Sample database. In Object Explorer, verify the function exists by navigating this path: Databases > NYCTaxi_Sample > Programmability > Functions > Scalar-valued Functions >  dbo.fnCalculateDistance.
+
+  If the function does not exist, use SQL Server Management Studio to generate the function in the NYCTaxi_Sample database.
 
     ```sql
     CREATE FUNCTION [dbo].[fnCalculateDistance] (@Lat1 float, @Long1 float, @Lat2 float, @Long2 float)
@@ -137,25 +149,29 @@ In this exercise, learn how to accomplish the same task using SQL functions inst
     END
     ```
 
-2. Run the following [!INCLUDE[tsql](../../includes/tsql-md.md)] statement from any application that supports [!INCLUDE[tsql](../../includes/tsql-md.md)] to see how the function works.
+2. In Management Studio, in a new query window, run the following [!INCLUDE[tsql](../../includes/tsql-md.md)] statement from any application that supports [!INCLUDE[tsql](../../includes/tsql-md.md)] to see how the function works.
 
     ```sql
+    USE nyctaxi_sample
+    GO
+
     SELECT tipped, fare_amount, passenger_count,trip_time_in_secs,trip_distance, pickup_datetime, dropoff_datetime,
-    dbo.fnCalculateDistance(pickup_latitude, pickup_longitude,  dropoff_latitude, dropoff_longitude) as direct_distance,
-    pickup_latitude, pickup_longitude,  dropoff_latitude, dropoff_longitude
+    dbo.fnCalculateDistance(pickup_latitude, pickup_longitude, dropoff_latitude, dropoff_longitude) as direct_distance, pickup_latitude, pickup_longitude,  dropoff_latitude, dropoff_longitude 
     FROM nyctaxi_sample
     ```
-3. To insert values directly into a new table, you can add an **INTO** clause specifying the table name.
+3. To insert values directly into a new table (you have to create it first), you can add an **INTO** clause specifying the table name.
 
     ```sql
-    SELECT tipped, fare_amount, passenger_count,trip_time_in_secs,trip_distance, pickup_datetime, dropoff_datetime,
-    dbo.fnCalculateDistance(pickup_latitude, pickup_longitude,  dropoff_latitude, dropoff_longitude) as direct_distance,
-    pickup_latitude, pickup_longitude,  dropoff_latitude, dropoff_longitude
+    USE nyctaxi_sample
+    GO
+
+    SELECT tipped, fare_amount, passenger_count, trip_time_in_secs, trip_distance, pickup_datetime, dropoff_datetime,
+    dbo.fnCalculateDistance(pickup_latitude, pickup_longitude, dropoff_latitude, dropoff_longitude) as direct_distance, pickup_latitude, pickup_longitude, dropoff_latitude, dropoff_longitude
     INTO NewFeatureTable
     FROM nyctaxi_sample
     ```
 
-4. You can also call the SQL function from R code. First, store the SQL featurization query in an R variable.
+4. You can also call the SQL function from R code. Switch back to Rgui and store the SQL featurization query in an R variable.
 
     ```R
     featureEngineeringQuery = "SELECT tipped, fare_amount, passenger_count,
@@ -174,9 +190,9 @@ In this exercise, learn how to accomplish the same task using SQL functions inst
     ```R
     featureDataSource = RxSqlServerData(sqlQuery = featureEngineeringQuery,
       colClasses = c(pickup_longitude = "numeric", pickup_latitude = "numeric",
-             dropoff_longitude = "numeric", dropoff_latitude = "numeric",
-             passenger_count  = "numeric", trip_distance  = "numeric",
-              trip_time_in_secs  = "numeric", direct_distance  = "numeric"),
+        dropoff_longitude = "numeric", dropoff_latitude = "numeric",
+        passenger_count  = "numeric", trip_distance  = "numeric",
+        trip_time_in_secs  = "numeric", direct_distance  = "numeric"),
       connectionString = connStr)
     ```
   

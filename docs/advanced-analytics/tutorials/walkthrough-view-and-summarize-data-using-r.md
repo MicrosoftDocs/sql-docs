@@ -22,7 +22,7 @@ This lesson introduces you to functions in the **RevoScaleR** package and steps 
 
 ## Define a SQL Server compute context
 
-Run the following R statements in an R environment. This section assumes a [data science workstations with Microsoft R Client](../r/set-up-a-data-science-client.md), because it includes all the RevoScaleR packages, as well as a basic, lightweight set of R tools. For example, you can use RGUI to run the R script in this section.
+Run the following R statements in an R environment on the client workstation. This section assumes a [data science workstation with Microsoft R Client](../r/set-up-a-data-science-client.md), because it includes all the RevoScaleR packages, as well as a basic, lightweight set of R tools. For example, you can use Rgui.exe to run the R script in this section.
 
 1. If the **RevoScaleR** package is  not already loaded, run this line of R code:
 
@@ -34,13 +34,15 @@ Run the following R statements in an R environment. This section assumes a [data
      
      If you get an error, make sure that your R development environment is using a library that includes the RevoScaleR package. Use a command such as `.libPaths()` to view the current library path.
 
-2. Create the connection string for SQL Server and save it in an R variable, _connStr_.
+2. Create the connection string for SQL Server and save it in an R variable, *connStr*.
+
+   You must change the placeholder "your_server_name" to a valid SQL Server instance name. For the server name, you might be able to use only the instance name, or you might need to fully qualify the name, depending on your network.
     
+   For SQL Server authentication, the connection syntax is as follows:
+
     ```R
     connStr <- "Driver=SQL Server;Server=your_server_name;Database=nyctaxi_sample;Uid=your-sql-login;Pwd=your-login-password"
     ```
-
-    For the server name, you might be able to use only the instance name, or you might need to fully qualify the name, depending on your network.
 
     For Windows authentication, the syntax is a bit different:
     
@@ -60,10 +62,9 @@ Run the following R statements in an R environment. This section assumes a [data
 
     - R uses a temporary directory when serializing R objects back and forth between your workstation and the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] computer. You can specify the local directory that is used as *sqlShareDir*, or accept the default.
   
-    - Use *sqlWait* to indicate whether you want R to wait for results from the server.  For a discussion of waiting vs. non-waiting jobs, see [Distributed and parallel computing with ScaleR in Microsoft R](https://docs.microsoft.com/r-server/r/how-to-revoscaler-distributed-computing).
+    - Use *sqlWait* to indicate whether you want R to wait for results from the server.  For a discussion of waiting versus non-waiting jobs, see [Distributed and parallel computing with RevoScaleR in Microsoft R](https://docs.microsoft.com/r-server/r/how-to-revoscaler-distributed-computing).
   
     - Use the argument *sqlConsoleOutput* to indicate that you don't want to see output from the R console.
-
 
 4. You call the [RxInSqlServer](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxinsqlserver) constructor to create the compute context object with the variables and connection strings already defined, and save the new object in the R variable *sqlcc*.
   
@@ -77,14 +78,14 @@ Run the following R statements in an R environment. This section assumes a [data
     rxSetComputeContext(sqlcc)
     ```
 
-    + `rxSetComputeContext` returns the previously active compute context invisibly so that you can use it
-    + `rxGetComputeContext` returns the active compute context
+    + [rxSetComputeContext](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxsetcomputecontext) returns the previously active compute context invisibly so that you can use it
+    + [rxGetComputeContext](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxsetcomputecontext)  returns the active compute context
     
     Note that setting a compute context only affects operations that use functions in the **RevoScaleR** package; the compute context does not affect the way that open-source R operations are performed.
 
 ## Create a data source using RxSqlServer
 
-In Microsoft R, a *data source* is an object you create using RevoScaleR functions. The data source object specifies some set of data that you want to use for a task, such as model training or feature extraction. You can get data from a variety of sources; for the list of currently supported sources, see [RxDataSource](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxdatasource).
+When using the Microsoft R libraries like RevoScaleR and MicrosoftML, a *data source* is an object you create using RevoScaleR functions. The data source object specifies some set of data that you want to use for a task, such as model training or feature extraction. You can get data from a variety of sources including SQL Server. For the list of currently supported sources, see [RxDataSource](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxdatasource).
 
 Earlier you defined a connection string, and saved that information in an R variable. You can re-use that connection information to specify the data you want to get.
 

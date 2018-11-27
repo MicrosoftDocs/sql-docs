@@ -1,7 +1,7 @@
 ---
 title: "Monitor SQL Server Components | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/14/2017"
+ms.date: "11/27/2018"
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: performance
@@ -51,7 +51,7 @@ After determining why you are monitoring, you should select the appropriate tool
   
 Windows provides the following tools for monitoring applications that are running on a server:  
   
--   System Monitor, which lets you collect and view real-time data about activities such as memory, disk, and processor usage  
+-   [System Monitor](../../relational-databases/performance/start-system-monitor-windows.md), which lets you collect and view real-time data about activities such as memory, disk, and processor usage.  
 -   Performance logs and alerts  
 -   Task Manager  
   

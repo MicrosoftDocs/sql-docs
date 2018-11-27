@@ -41,8 +41,8 @@ manager: craigg
    <MaxStringResultLength>3000</MaxStringResultLength>  
    <MaxArrayResultLength>250</MaxArrayResultLength>  
    <Types>  
-      <Allow Namespace=”System.Drawing” AllowNew=”True”>Bitmap</Allow>  
-      <Allow Namespace=”TypeConverters.Custom” AllowNew=”True”>*</Allow>  
+      <Allow Namespace="System.Drawing" AllowNew="True">Bitmap</Allow>  
+      <Allow Namespace="TypeConverters.Custom" AllowNew="True">*</Allow>  
    </Types>  
    <Members>  
       <Deny>Format</Deny>  

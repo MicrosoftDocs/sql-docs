@@ -722,7 +722,7 @@ SIZE_BASED_CLEANUP_MODE
 Controls whether cleanup will be automatically activated when total amount of data gets close to maximum size:  
   
 OFF  
-Size based cleanup won’t be automatically activated. 
+Size based cleanup won't be automatically activated. 
   
 AUTO  
 Size based cleanup will be automatically activated when size on disk reaches 90% of **max_storage_size_mb**. Size based cleanup removes the least expensive and oldest queries first. It stops at approximately 80% of **max_storage_size_mb**.  This is the default configuration value.  
@@ -1690,7 +1690,7 @@ SIZE_BASED_CLEANUP_MODE
 Controls whether cleanup will be automatically activated when total amount of data gets close to maximum size:  
   
 OFF  
-Size based cleanup won’t be automatically activated. 
+Size based cleanup won't be automatically activated. 
   
 AUTO  
 Size based cleanup will be automatically activated when size on disk reaches 90% of **max_storage_size_mb**. Size based cleanup removes the least expensive and oldest queries first. It stops at approximately 80% of **max_storage_size_mb**.  This is the default configuration value.  
@@ -2421,7 +2421,7 @@ SIZE_BASED_CLEANUP_MODE
 Controls whether cleanup will be automatically activated when total amount of data gets close to maximum size:  
   
 OFF  
-Size based cleanup won’t be automatically activated. 
+Size based cleanup won't be automatically activated. 
   
 AUTO  
 Size based cleanup will be automatically activated when size on disk reaches 90% of **max_storage_size_mb**. Size based cleanup removes the least expensive and oldest queries first. It stops at approximately 80% of **max_storage_size_mb**.  This is the default configuration value.  

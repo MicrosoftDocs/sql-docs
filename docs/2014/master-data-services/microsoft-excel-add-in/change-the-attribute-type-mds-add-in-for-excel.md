@@ -46,7 +46,7 @@ manager: craigg
   
 -   Change the data type of the attribute.  
   
--   Generate a copy of the attribute with the suffix “_old” that does not contain any value. This is called a **deprecated** attribute.  
+-   Generate a copy of the attribute with the suffix "_old" that does not contain any value. This is called a **deprecated** attribute.  
   
  However, all the existing dependencies on the original attribute will point to the deprecated attribute, and not to the changed one.  
   

@@ -105,7 +105,7 @@ Analysis Services (AS):
 Integration Services (IS):
 
 - Fixed a side-by-side issue where the deployment wizard fails to connect to Sql Server if SQL Server 2019 and SSMS 18.0 are installed on the same machine.
-- Fixed an issue that maintenance plan task can’t be edited when designing the maintenance plan.
+- Fixed an issue that maintenance plan task can't be edited when designing the maintenance plan.
 - Fixed an issue where the deployment wizard hangs when the project under deployment is renamed.
 - Enabled environment setting in Azure-SSIS IR schedule feature.
 
@@ -421,8 +421,8 @@ SSMS
 
 SSIS
 
-- Package can’t be deployed or executed successfully when it targets SQL Server of old version and contains Script Task/Script component at the same time.
-- SSMS can’t connect to remote Integration Services.
+- Package can't be deployed or executed successfully when it targets SQL Server of old version and contains Script Task/Script component at the same time.
+- SSMS can't connect to remote Integration Services.
 
 
 ## SSMS 17.9.1 (latest GA release)
@@ -957,7 +957,7 @@ Generally available | Build number: 14.0.17199.0
 
 - XEvent: 
    - Fixed issue where SSMS opens only part of the events in .xel file.
-   - Improved “Watch Live Data” experience when default database is not 'master' - [Connect item 1222582](https://connect.microsoft.com/SQLServer/feedback/details/1222582).
+   - Improved "Watch Live Data" experience when default database is not 'master' - [Connect item 1222582](https://connect.microsoft.com/SQLServer/feedback/details/1222582).
 - Always On: Fixed issue where "Restore log backups" may fail with error "The sign in this backup set terminates at LSN x, which is too early to apply to the database".
 - Job Activity Monitor: fixed inconsistent icons - [Connect item 3133100](https://connect.microsoft.com/SQLServer/feedback/details/3133100).
 - Query Store: Fixed Issue where user cannot choose "custom" date range for Query Store reports. Linked to below connect items.
@@ -986,7 +986,7 @@ Fixed issue where SSMS was not allowing scripting for "Alter" or "Execute" on so
    - Fixed issue where Profiler was not working when targeting SQL 2005.
    - Fixed issue where Profiler was not honoring the "trust server certificate" connection option.
 - Activity Monitor: fixed an issue where Activity Monitor does not work when pointed at SQL Server running on Linux.
-- Fixed an issue with the SMO Transfer class where it wouldn’t transfer External Data Source or External File Format objects, objects of those types should now correctly be included in the transfer.
+- Fixed an issue with the SMO Transfer class where it wouldn't transfer External Data Source or External File Format objects, objects of those types should now correctly be included in the transfer.
 - Registered Servers:
    - Enabled multiserver query for UA servers (it tries to use the same token for every UA server in the group).
 - AD Universal Authentication:
@@ -1023,7 +1023,7 @@ Fixed issue where SSMS was not allowing scripting for "Alter" or "Execute" on so
 
 **Integration Services (IS)**
 
-- The [execution_path] in [catalog].[event_messagea] is not correct for package executions in Scale Out. The [execution_path] starts with “\Package” instead of the object name of the package executable. When viewing the overview report of package executions in SSMS, the link of “Execution Path” in Execution Overview cannot work. The workaround is to click “View Messages” on overview report to check all event messages.
+- The [execution_path] in [catalog].[event_messagea] is not correct for package executions in Scale Out. The [execution_path] starts with "\Package" instead of the object name of the package executable. When viewing the overview report of package executions in SSMS, the link of "Execution Path" in Execution Overview cannot work. The workaround is to click "View Messages" on overview report to check all event messages.
 
 
 ## ![download](../ssdt/media/download.png) [SSMS 17.2](https://go.microsoft.com/fwlink/?linkid=854085)
@@ -1290,7 +1290,7 @@ Fixed issue in AE wizard where the Azure Key Vault sign-in page was not showing 
 - Fixed an issue where "View SQL Server Log" context menu item appeared incorrectly for non-relational server types (AS\RS\IS) 
 - Fixed an issue where checking syntax of an Analysis Services partition query using SQL auth could result in login failed message
 - Fixed an issue where renaming a preview 1400 compat-level AS tabular model would fail in SSMS
-- Fixed an “operation failed on model” issue that could occur after attempting an invalid operation on the AS server in rare circumstances, revert local changes after unsuccessful save on the model
+- Fixed an "operation failed on model" issue that could occur after attempting an invalid operation on the AS server in rare circumstances, revert local changes after unsuccessful save on the model
 - Fixed a typo in Analysis Services Synchronize Database popup dialog
 - Backup/restore container dialogs come up offscreen on multiple monitor setups. 
 - SecurityPolicy create fails if target object has ] in its name.
@@ -1340,7 +1340,7 @@ Avoid issuing table queries that sort on the server
 - Fixed UI truncation issue on "New Server Registration" dialog
 - Fix DMF Condition UI incorrectly updating expressions that contain string constant values with quotes in them
 - Fixed an issue that may cause SSMS to crash when running custom reports
-- Add “Execution in Scale Out…” menu item to the folder node
+- Add "Execution in Scale Out…" menu item to the folder node
 - Fixed an issue with Azure SQL DB firewall whitelist IP address feature
 - Fixed an issue in SSMS which caused an Object reference not set exception when editing the source of AS multi-dimensional partition
 - Fixed an issue in SSMS which caused an Object reference not set exception when deleting a customer assembly from multi-dimensional AS server

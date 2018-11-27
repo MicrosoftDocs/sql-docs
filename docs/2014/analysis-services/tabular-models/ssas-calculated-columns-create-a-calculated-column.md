@@ -15,7 +15,7 @@ ms.author: owend
 manager: craigg
 ---
 # Create a Calculated Column (SSAS Tabular)
-  Calculated columns allow you to add new data to your model. Instead of pasting or importing values into the column, you create a DAX formula that defines the column’s row level values. The values in each row of a calculated column are calculated and populated when you create a valid formula and then click ENTER. The calculated column can then be added to a reporting or analysis application just as would any other column of data. This topic describes how to create a new calculated column by using the DAX formula bar in the model designer.  
+  Calculated columns allow you to add new data to your model. Instead of pasting or importing values into the column, you create a DAX formula that defines the column's row level values. The values in each row of a calculated column are calculated and populated when you create a valid formula and then click ENTER. The calculated column can then be added to a reporting or analysis application just as would any other column of data. This topic describes how to create a new calculated column by using the DAX formula bar in the model designer.  
   
 #### To create a new calculated column  
   

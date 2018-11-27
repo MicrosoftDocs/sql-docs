@@ -62,7 +62,7 @@ GO
  For partitioned data, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] first assigns each row to a partition, and then performs columnstore operations on the data within the partition. Each partition has its own rowgroups and at least one deltastore.  
   
 ### Deltastore loading scenarios  
- Rows accumulate in the deltastore until the number of rows is the maximum number of rows allowed for a rowgroup. When the deltastore contains the maximum number of rows per rowgroup, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] marks the rowgroup as “CLOSED”. A background process, called the “tuple-mover”, finds the CLOSED rowgroup and moves into the columnstore, where the rowgroup is compressed into column segments and the column segments are stored in the columnstore.  
+ Rows accumulate in the deltastore until the number of rows is the maximum number of rows allowed for a rowgroup. When the deltastore contains the maximum number of rows per rowgroup, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] marks the rowgroup as "CLOSED". A background process, called the "tuple-mover", finds the CLOSED rowgroup and moves into the columnstore, where the rowgroup is compressed into column segments and the column segments are stored in the columnstore.  
   
  For each clustered columnstore index there can be multiple deltastores.  
   
@@ -114,7 +114,7 @@ SELECT * FROM sys.column_store_row_groups
 ### Rebuild Process  
  To rebuild a clustered columnstore index, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]:  
   
--   Acquires an exclusive lock on the table or partition while the rebuild occurs.  The data is “offline” and unavailable during the rebuild.  
+-   Acquires an exclusive lock on the table or partition while the rebuild occurs.  The data is "offline" and unavailable during the rebuild.  
   
 -   Defragments the columnstore by physically deleting rows that have been logically deleted from the table; the deleted bytes are reclaimed on the physical media.  
   

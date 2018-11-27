@@ -168,7 +168,7 @@ manager: craigg
 >  For more information about troubleshooting this failure, see [Troubleshoot the SQL Server Utility](../../database-engine/troubleshoot-the-sql-server-utility.md).  
   
 > [!IMPORTANT]  
->  Do not change any properties of the “Utility Information” collection set on a managed instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], and do not turn data collection on/off manually, as data collection is controlled by a Utility agent job.  
+>  Do not change any properties of the "Utility Information" collection set on a managed instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], and do not turn data collection on/off manually, as data collection is controlled by a Utility agent job.  
   
  After completing the Enroll Instance Wizard, click on the **Managed Instances** node in the **Utility Explorer Navigation** pane in SSMS. Enrolled instances of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] are displayed in the list view in **Utility Explorer Content** pane.  
   

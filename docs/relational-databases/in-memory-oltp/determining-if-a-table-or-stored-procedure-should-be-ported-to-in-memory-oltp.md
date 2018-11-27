@@ -19,7 +19,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
 # Determining if a Table or Stored Procedure Should Be Ported to In-Memory OLTP
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
-  The Transaction Performance Analysis report in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] helps you evaluate if In-Memory OLTP will improve your database application’s performance. The report also indicates how much work you must do to enable In-Memory OLTP in your application. After you identify a disk-based table to port to In-Memory OLTP, you can use the [Memory Optimization Advisor](../../relational-databases/in-memory-oltp/memory-optimization-advisor.md), to help you migrate the table. Similarly, the [Native Compilation Advisor](../../relational-databases/in-memory-oltp/native-compilation-advisor.md) will help you port a stored procedure to a natively compiled stored procedure. For information about migration methodologies, see [In-Memory OLTP – Common Workload Patterns and Migration Considerations](https://msdn.microsoft.com/library/dn673538.aspx).  
+  The Transaction Performance Analysis report in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] helps you evaluate if In-Memory OLTP will improve your database application's performance. The report also indicates how much work you must do to enable In-Memory OLTP in your application. After you identify a disk-based table to port to In-Memory OLTP, you can use the [Memory Optimization Advisor](../../relational-databases/in-memory-oltp/memory-optimization-advisor.md), to help you migrate the table. Similarly, the [Native Compilation Advisor](../../relational-databases/in-memory-oltp/native-compilation-advisor.md) will help you port a stored procedure to a natively compiled stored procedure. For information about migration methodologies, see [In-Memory OLTP – Common Workload Patterns and Migration Considerations](https://msdn.microsoft.com/library/dn673538.aspx).  
   
  The Transaction Performance Analysis report is run directly against the production database, or a test database with an active workload that is similar to the production workload.  
   
@@ -75,7 +75,7 @@ Scan and contention statistics on the table details report is gathered and aggre
   
 -   Execution Statistics Section  
   
-     This section includes a table that shows the statistics that were collected about the stored procedure’s executions. The columns are as follows:  
+     This section includes a table that shows the statistics that were collected about the stored procedure's executions. The columns are as follows:  
   
     -   Cached Time. The time this execution plan is cached. If the stored procedure drops out of the plan cache and re-enters, there will be times for each cache.  
   
@@ -83,7 +83,7 @@ Scan and contention statistics on the table details report is gathered and aggre
   
     -   Total Execution Time. The total amount of execution time the stored procedure used during profiling. The higher the difference between this number and the CPU time is, the less efficiently the stored procedure is using the CPU.  
   
-    -   Total Cache Missed. The number of cache misses (reads from physical storage) that is caused by the stored procedure’s executions during profiling.  
+    -   Total Cache Missed. The number of cache misses (reads from physical storage) that is caused by the stored procedure's executions during profiling.  
   
     -   Execution Count. The number of times this stored procedure executed during profiling.  
   
@@ -131,12 +131,12 @@ Scan and contention statistics on the table details report is gathered and aggre
 2.  Enter the following command.  
   
     ```  
-    Save-SqlMigrationReport –FolderPath “<folder_path>”  
+    Save-SqlMigrationReport –FolderPath "<folder_path>"  
     ```  
   
 3.  Verify the following.  
   
-    -   The folder path is created, if it doesn’t already exist.  
+    -   The folder path is created, if it doesn't already exist.  
   
     -   The migration checklist report is generated for all tables and stored procedures in the database, and the report is in the location specified by folder_path.  
   

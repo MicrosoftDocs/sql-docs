@@ -131,7 +131,7 @@ Parallel Data Warehouse exposes many of the SQL Server dynamic management views 
 Each of these DMV's has a specific column called pdw_node_id. This is the identifier for the Compute node. 
 
 > [!NOTE]
-> To use these view, insert ‘pdw_nodes_’ into the name, as shown in the following table.
+> To use these view, insert 'pdw_nodes_' into the name, as shown in the following table.
 > 
 > 
 

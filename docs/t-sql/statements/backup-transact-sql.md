@@ -1270,7 +1270,7 @@ The target appliance for restoring the backup must have at least as many Compute
   
 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] does track the success or failure of database backups.  
   
-A differential backup is only allowed if the last full backup completed successfully. For example, suppose that on Monday you create a full backup of the Sales database and the backup finishes successfully. Then on Tuesday you create a full backup of the Sales database and it fails. After this failure, you cannot then create a differential backup based on Monday’s full backup. You must first create a successful full backup before creating a differential backup.  
+A differential backup is only allowed if the last full backup completed successfully. For example, suppose that on Monday you create a full backup of the Sales database and the backup finishes successfully. Then on Tuesday you create a full backup of the Sales database and it fails. After this failure, you cannot then create a differential backup based on Monday's full backup. You must first create a successful full backup before creating a differential backup.  
   
 ## Metadata  
 These dynamic management views contain information about all backup, restore, and load operations. The information persists across system restarts.  

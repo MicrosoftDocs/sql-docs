@@ -17,7 +17,7 @@ This topic shows you how to connect to a **flat file** (text file) data source f
 
 ## An alternative for simple text import
 If you have to import a text file into SQL Server, and you don't need all the configuration options available in the Import and Export Wizard, consider using the **Import Flat File Wizard** in SQL Server Management Studio (SSMS). For more info, see the following articles:
-- [What’s new in SQL Server Management Studio 17.3
+- [What's new in SQL Server Management Studio 17.3
 ](https://blogs.technet.microsoft.com/dataplatforminsider/2017/10/10/whats-new-in-sql-server-management-studio-17-3/)
 - [Introducing the new Import Flat File Wizard in SSMS 17.3](https://channel9.msdn.com/Shows/Data-Exposed/Introducing-the-new-Import-Flat-File-Wizard-in-SSMS-173)
 

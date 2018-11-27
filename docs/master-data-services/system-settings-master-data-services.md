@@ -55,7 +55,7 @@ manager: craigg
 |**Number of rows per batch**|**RowsPerBatch**|The number of records to retrieve in each batch by the web service. The default value is **50**.|  
 ||**ApplicationName**|The text that is displayed in event logs. The default value is **MDM**.|  
 ||**SiteTitle**|The text that is displayed in the [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] web browser's title bar. The default value is **Master Data Manager**.|  
-|**Log retention in Days**|**LogRentionDays**|The number of days after which the logs will be deleted. The default value is -1 and indicates the log tables will not be cleaned.<br /><br /> If the value is 0, log tables retain only today’s data. Data logs for the previous days are truncated.<br /><br /> If the value is greater than 0, the log data is retained for the number of days specified by the value.|  
+|**Log retention in Days**|**LogRentionDays**|The number of days after which the logs will be deleted. The default value is -1 and indicates the log tables will not be cleaned.<br /><br /> If the value is 0, log tables retain only today's data. Data logs for the previous days are truncated.<br /><br /> If the value is greater than 0, the log data is retained for the number of days specified by the value.|  
   
 ##  <a name="Versions"></a> Version Management Settings  
   

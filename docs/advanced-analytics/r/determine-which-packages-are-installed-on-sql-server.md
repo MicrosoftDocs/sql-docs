@@ -78,7 +78,7 @@ C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\PYTHON_SERVICES\lib\si
 C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\PYTHON_SERVICES\lib\site-packages\setuptools-27.2.0-py3.5.egg
 ```
 
-For more information about the variable `sys.path` and how it is used to set the interpreter’s search path for modules, see the [Python documentation](https://docs.python.org/2/tutorial/modules.html#the-module-search-path)
+For more information about the variable `sys.path` and how it is used to set the interpreter's search path for modules, see the [Python documentation](https://docs.python.org/2/tutorial/modules.html#the-module-search-path)
 
 ## List all packages
 

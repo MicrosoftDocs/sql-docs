@@ -36,7 +36,7 @@ To create a new shared dataset, you can do the following.
 To manage an existing paginated report, you can do the following.  
   
 > [!NOTE]
-> If you don’t see paginated reports in the folder, make sure you are viewing paginated reports. You can select **View** from the menu bar in the upper right of the web portal. Make sure **Paginated Reports** is checked.  
+> If you don't see paginated reports in the folder, make sure you are viewing paginated reports. You can select **View** from the menu bar in the upper right of the web portal. Make sure **Paginated Reports** is checked.  
   
 1.  Select the **ellipsis (…)** for the dataset you want to manage.  
       

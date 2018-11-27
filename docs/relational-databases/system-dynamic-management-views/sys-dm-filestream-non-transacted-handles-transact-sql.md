@@ -35,14 +35,14 @@ manager: craigg
 |object_id|int|Object ID of the FileTable the handle is associated with.|  
 |handle_id|int|Unique handle context identifier. Used by the [sp_kill_filestream_non_transacted_handles &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/filestream-and-filetable-sp-kill-filestream-non-transacted-handles.md) stored procedure to kill a specific handle.|  
 |file_object_type|int|Type of the handle. This indicates the level of the hierarchy the handle was opened against, ie. database or item.|  
-|file_object_type_desc|nvarchar(120)|“UNDEFINED",<br />“SERVER_ROOT",<br />“DATABASE_ROOT",<br />“TABLE_ROOT",<br />“TABLE_ITEM"|  
+|file_object_type_desc|nvarchar(120)|"UNDEFINED",<br />"SERVER_ROOT",<br />"DATABASE_ROOT",<br />"TABLE_ROOT",<br />"TABLE_ITEM"|  
 |correlation_process_id|varbinary(8)|Contains a unique identifier for the process that originated the request.|  
 |correlation_thread_id|varbinary(8)|Contains a unique identifier for the thread that originated the request.|  
 |file_context|varbinary(8)|Pointer to the file object used by this handle.|  
 |state|int|Current state of the handle. May be active, closed or killed.|  
-|state_desc|nvarchar(120)|“ACTIVE",<br />“CLOSED",<br />“KILLED"|  
+|state_desc|nvarchar(120)|"ACTIVE",<br />"CLOSED",<br />"KILLED"|  
 |current_workitem_type|int|State this handle is currently being processed by.|  
-|current_workitem_type_desc|nvarchar(120)|“NoSetWorkItemType",<br />“FFtPreCreateWorkitem",<br />“FFtGetPhysicalFileNameWorkitem",<br />“FFtPostCreateWorkitem",<br />“FFtPreCleanupWorkitem",<br />“FFtPostCleanupWorkitem",<br />“FFtPreCloseWorkitem",<br />“FFtQueryDirectoryWorkItem",<br />“FFtQueryInfoWorkItem",<br />“FFtQueryVolumeInfoWorkItem",<br />“FFtSetInfoWorkitem",<br />“FFtWriteCompletionWorkitem"|  
+|current_workitem_type_desc|nvarchar(120)|"NoSetWorkItemType",<br />"FFtPreCreateWorkitem",<br />"FFtGetPhysicalFileNameWorkitem",<br />"FFtPostCreateWorkitem",<br />"FFtPreCleanupWorkitem",<br />"FFtPostCleanupWorkitem",<br />"FFtPreCloseWorkitem",<br />"FFtQueryDirectoryWorkItem",<br />"FFtQueryInfoWorkItem",<br />"FFtQueryVolumeInfoWorkItem",<br />"FFtSetInfoWorkitem",<br />"FFtWriteCompletionWorkitem"|  
 |fcb_id|bigint|FileTable File Control Block ID.|  
 |item_id|varbinary(892)|The Item ID for a file or directory. May be null for server root handles.|  
 |is_directory|bit|Is this a directory.|  

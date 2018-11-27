@@ -19,7 +19,7 @@ manager: craigg
  Version Introduced: ODBC 3.81 Standards Compliance: ODBC  
   
  **Summary**  
- **SQLSetConnectInfo** is used to set the data source, user ID, and password into the connection info token for an application’s [SQLConnect](../../../odbc/reference/syntax/sqlconnect-function.md) call.  
+ **SQLSetConnectInfo** is used to set the data source, user ID, and password into the connection info token for an application's [SQLConnect](../../../odbc/reference/syntax/sqlconnect-function.md) call.  
   
 ## Syntax  
   

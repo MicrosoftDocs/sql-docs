@@ -37,12 +37,12 @@ manager: craigg
   
  `http://<Server name>/ReportServer`  
   
- It is now required that you include the SharePoint site in the URL path. For example, if your site name is ‘`videos`’ and used the ‘`sites`’ prefix, the URL would look similar to the following:  
+ It is now required that you include the SharePoint site in the URL path. For example, if your site name is '`videos`' and used the '`sites`' prefix, the URL would look similar to the following:  
   
  `http://<Server Name>/sites/videos/_vti_bin/ReportServer`  
   
 ### Changes to SharePoint Mode Command-Line Installation  
- The input setting **/RSINSTALLMODE** only works with Native mode installations and it does not work for SharePoint mode installations. For example, the following is not supported in [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]: **/RSINSTALLMODE="DefaultSharePointMode”**. In place of that input setting, use **/RSSHPINSTALLMODE="DefaultSharePointMode"**.  
+ The input setting **/RSINSTALLMODE** only works with Native mode installations and it does not work for SharePoint mode installations. For example, the following is not supported in [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]: **/RSINSTALLMODE="DefaultSharePointMode"**. In place of that input setting, use **/RSSHPINSTALLMODE="DefaultSharePointMode"**.  
   
  The following statement is an example of a complete installation command and parameter set: **setup /ACTION=install /FEATURES=SQL,RS /InstanceName=Denali_INST1 …. /RSSHPINSTALLMODE="DefaultSharePointMode"**  
   

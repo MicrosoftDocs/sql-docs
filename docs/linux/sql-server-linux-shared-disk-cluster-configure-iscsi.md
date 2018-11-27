@@ -87,7 +87,7 @@ For more information on iSCSI initiator for the supported distributions, consult
 6.	Check iSCSI attached disks
 
     ```bash
-    sudo grep “Attached SCSI” /var/log/messages
+    sudo grep "Attached SCSI" /var/log/messages
     ```
     ![30-iSCSIattachedDisks][7]
 
@@ -268,7 +268,7 @@ For more information on iSCSI initiator for the supported distributions, consult
     mkdir <FolderName>
     ```
 
-    \<FolderName> is the name of the folder. The folder’s full path needs to be specified if not in the right location. The example below creates a folder named /var/opt/mssql/userdata.
+    \<FolderName> is the name of the folder. The folder's full path needs to be specified if not in the right location. The example below creates a folder named /var/opt/mssql/userdata.
 
     ```bash
     mkdir /var/opt/mssql/userdata

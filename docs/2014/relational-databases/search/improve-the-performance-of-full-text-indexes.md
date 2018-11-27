@@ -52,7 +52,7 @@ manager: craigg
 ##  <a name="tuning"></a> Tuning the Performance of Full-Text Indexes  
  To maximize the performance of your full-text indexes, implement the following best practices:  
   
--   To use all processors or cores to the maximum, set [sp_configure](/sql/relational-databases/system-stored-procedures/sp-configure-transact-sql)‘`max full-text crawl ranges`’ to the number of CPUs on the system. For information about this configuration option, see [max full-text crawl range Server Configuration Option](../../database-engine/configure-windows/max-full-text-crawl-range-server-configuration-option.md).  
+-   To use all processors or cores to the maximum, set [sp_configure](/sql/relational-databases/system-stored-procedures/sp-configure-transact-sql)'`max full-text crawl ranges`' to the number of CPUs on the system. For information about this configuration option, see [max full-text crawl range Server Configuration Option](../../database-engine/configure-windows/max-full-text-crawl-range-server-configuration-option.md).  
   
 -   Make sure that the base table has a clustered index. Use an integer data type for the first column of the clustered index. Avoid using GUIDs in the first column of the clustered index. A multi-range population on a clustered index can produce the highest population speed. We recommend that the column serving as the full-text key be an integer data type.  
   

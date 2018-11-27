@@ -25,9 +25,9 @@ Use the following procedure to implement a secure connection:
   
 Specify a valid password using one of the following three methods:  
   
-1.  **Clear Text:** Type the database password in the value attribute of the ‘password’ node. It is found under the server definition node in the Server section of the script file or server connection file.  
+1.  **Clear Text:** Type the database password in the value attribute of the 'password' node. It is found under the server definition node in the Server section of the script file or server connection file.  
   
-    Passwords in clear text are not secure. Therefore, you will encounter the following warning message in the console output: *“Server &lt;server-id&gt; password is provided in non-secure clear text form, SSMA Console application provides an option to protect the password through encryption, please see –securepassword option in SSMA help file for more information.”*  
+    Passwords in clear text are not secure. Therefore, you will encounter the following warning message in the console output: *"Server &lt;server-id&gt; password is provided in non-secure clear text form, SSMA Console application provides an option to protect the password through encryption, please see –securepassword option in SSMA help file for more information."*  
   
     **Encrypted Passwords:** The specified password, in this case, is stored in an encrypted form on the local machine in ProtectedStorage.ssma.  
   

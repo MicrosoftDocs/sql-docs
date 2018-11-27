@@ -181,7 +181,7 @@ Use the example in [sys.dm_db_column_store_row_group_physical_stats &#40;Transac
 ### Rebuild Process  
  To rebuild a columnstore index, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:  
   
-1.  Acquires an exclusive lock on the table or partition while the rebuild occurs. The data is “offline” and unavailable during the rebuild, even when using `NOLOCK`, RCSI, or SI.  
+1.  Acquires an exclusive lock on the table or partition while the rebuild occurs. The data is "offline" and unavailable during the rebuild, even when using `NOLOCK`, RCSI, or SI.  
   
 2.  Re-compresses all data into the columnstore. Two copies of the columnstore index exist while the rebuild is taking place. When the rebuild is finished, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] deletes the original columnstore index.  
   

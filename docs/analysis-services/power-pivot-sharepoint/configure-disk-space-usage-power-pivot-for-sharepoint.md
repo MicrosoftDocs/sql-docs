@@ -60,7 +60,7 @@ manager: kfile
   
 3.  In Disk Usage, set a value (in gigabytes) for **Total disk space** to set an upper limit on the amount of space used for caching purposes. The default is 0, which allows Analysis Services to use all available disk space.  
   
-4.  In Disk Usage, in the **Delete cached databases in last ‘n’ hours** setting, specify last-used criteria for emptying the cache when disk space is at the maximum limit.  
+4.  In Disk Usage, in the **Delete cached databases in last 'n' hours** setting, specify last-used criteria for emptying the cache when disk space is at the maximum limit.  
   
      The default is 4 hours, meaning that all databases that have been inactive for 4 hours or more are deleted from the file system. Databases that are inactive but still in memory are unloaded and then deleted from the file system.  
   

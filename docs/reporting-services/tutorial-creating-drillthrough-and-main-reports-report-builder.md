@@ -13,7 +13,7 @@ ms.author: maggies
 # Tutorial: Creating Drillthrough and Main Reports (Report Builder)
 This tutorial teaches you how to create two kinds of [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] paginated reports: a drillthrough report and a main report. The sample sales data used in these reports is retrieved from an Analysis Services cube. 
 
-The following illustration shows the reports you will create, and shows how the field value, Games and Toys, in the main report displays in the drillthrough report’s title. The data in the drillthrough report pertains to the Games and Toys product category.  
+The following illustration shows the reports you will create, and shows how the field value, Games and Toys, in the main report displays in the drillthrough report's title. The data in the drillthrough report pertains to the Games and Toys product category.  
   
 ![rs_DrillthroughCubeTutorial](../reporting-services/media/rs-drillthroughcubetutorial.gif "rs_DrillthroughCubeTutorial")  
    

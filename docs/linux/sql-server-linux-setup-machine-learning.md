@@ -234,7 +234,7 @@ sudo zypper install mssql-server-extensibility-java
 Additional configuration is primarily through the [mssql-conf tool](sql-server-linux-configure-mssql-conf.md).
 
 
-1. Add the mssql user account used to run the SQL Server Launchpad service.
+1. Add the mssql user account used to run the SQL Server service. This is required if you haven't run the setup previously.
 
   ```bash
   sudo /opt/mssql/bin/mssql-conf setup

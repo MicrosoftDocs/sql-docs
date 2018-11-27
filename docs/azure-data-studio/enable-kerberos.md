@@ -36,7 +36,7 @@ Find the Kerberos KDC (Key Distribution Center) configuration value. Run the fol
 Start `cmd.exe` and run `nltest`.
 
 ```
-nltest /dsgetdc:DOMAIN.COMPANY.COM (where “DOMAIN.COMPANY.COM” maps to your domain’s name)
+nltest /dsgetdc:DOMAIN.COMPANY.COM (where "DOMAIN.COMPANY.COM" maps to your domain's name)
 
 Sample Output
 DC: \\dc-33.domain.company.com

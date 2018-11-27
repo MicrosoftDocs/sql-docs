@@ -41,7 +41,7 @@ ALTER DATABASE [WideWorldImportersDW] SET COMPATIBILITY_LEVEL = 140;
 ```
 
 ## Batch mode memory grant feedback
-A query’s post-execution plan in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] includes the minimum required memory needed for execution and the ideal memory grant size to have all rows fit in memory. Performance suffers when memory grant sizes are incorrectly sized. Excessive grants result in wasted memory and reduced concurrency. Insufficient memory grants cause expensive spills to disk. By addressing repeating workloads, batch mode memory grant feedback recalculates the actual memory required for a query and then updates the grant value for the cached plan.  When an identical query statement is executed, the query uses the revised memory grant size, reducing excessive memory grants that impact concurrency and fixing underestimated memory grants that cause expensive spills to disk.
+A query's post-execution plan in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] includes the minimum required memory needed for execution and the ideal memory grant size to have all rows fit in memory. Performance suffers when memory grant sizes are incorrectly sized. Excessive grants result in wasted memory and reduced concurrency. Insufficient memory grants cause expensive spills to disk. By addressing repeating workloads, batch mode memory grant feedback recalculates the actual memory required for a query and then updates the grant value for the cached plan.  When an identical query statement is executed, the query uses the revised memory grant size, reducing excessive memory grants that impact concurrency and fixing underestimated memory grants that cause expensive spills to disk.
 The following graph shows one example of using batch mode adaptive memory grant feedback. For the first execution of the query, duration was **88 seconds** due to high spills:   
 
 ```sql
@@ -65,7 +65,7 @@ For an excessive memory grant condition, if the granted memory is more than two 
 For an insufficiently sized memory grant condition, that result in a spill to disk for batch mode operators, memory grant feedback will trigger a recalculation of the memory grant. Spill events are reported to memory grant feedback and can be surfaced via the *spilling_report_to_memory_grant_feedback* xEvent. This event returns the node id from the plan and spilled data size of that node.
 
 ### Memory grant feedback and parameter sensitive scenarios
-Different parameter values may also require different query plans in order to remain optimal. This type of query is defined as “parameter-sensitive.” For parameter-sensitive plans, memory grant feedback will disable itself on a query if it has unstable memory requirements. The plan is disabled after several repeated runs of the query and this can be observed by monitoring the *memory_grant_feedback_loop_disabled* xEvent. For more information about parameter sniffing and parameter sensitivity, refer to the [Query Processing Architecture Guide](../../relational-databases/query-processing-architecture-guide.md#ParamSniffing).
+Different parameter values may also require different query plans in order to remain optimal. This type of query is defined as "parameter-sensitive." For parameter-sensitive plans, memory grant feedback will disable itself on a query if it has unstable memory requirements. The plan is disabled after several repeated runs of the query and this can be observed by monitoring the *memory_grant_feedback_loop_disabled* xEvent. For more information about parameter sniffing and parameter sensitivity, refer to the [Query Processing Architecture Guide](../../relational-databases/query-processing-architecture-guide.md#ParamSniffing).
 
 ### Memory grant feedback caching
 Feedback can be stored in the cached plan for a single execution. It is the consecutive executions of that statement, however, that benefit from the memory grant feedback adjustments. This feature applies to repeated execution of statements. Memory grant feedback will change only the cached plan. Changes are currently not captured in the Query Store.
@@ -155,7 +155,7 @@ A USE HINT query hint takes precedence over a database scoped configuration or t
 
 ## Batch mode Adaptive Joins
 The batch mode Adaptive Joins feature enables the choice of a [Hash Join or Nested Loops Join](../../relational-databases/performance/joins.md) method to be deferred until **after** the first input has been scanned. The Adaptive Join operator defines a threshold that is used to decide when to switch to a Nested Loops plan. Your plan can therefore dynamically switch to a better join strategy during execution.
-Here’s how it works:
+Here's how it works:
 -  If the row count of the build join input is small enough that a nested loop join would be more optimal than a Hash Join, your plan switches to a Nested Loops algorithm.
 -  If the build join input exceeds a specific row count threshold, no switch occurs and your plan continues with a Hash Join.
 
@@ -176,8 +176,8 @@ The query returns 336 rows. Enabling [Live Query Statistics](../../relational-d
 In the plan, we see the following:
 1. We have a columnstore index scan used to provide rows for the hash join build phase.
 1. We have the new Adaptive Join operator. This operator defines a threshold that is used to decide when to switch to a Nested Loops plan. For our example, the threshold is 78 rows. Anything with &gt;= 78 rows will use a Hash Join. If less than the threshold, a Nested Loops Join will be used.
-1. Since we return 336 rows, we are exceeding the threshold and so the second branch represents the probe phase of a standard Hash Join operation. Notice that Live Query Statistics shows rows flowing through the operators – in this case “672 of 672”.
-1. And the last branch is our Clustered Index Seek for use by the nested loop join had the threshold not been exceeded. Notice that we see “0 of 336” rows displayed (the branch is unused).
+1. Since we return 336 rows, we are exceeding the threshold and so the second branch represents the probe phase of a standard Hash Join operation. Notice that Live Query Statistics shows rows flowing through the operators – in this case "672 of 672".
+1. And the last branch is our Clustered Index Seek for use by the nested loop join had the threshold not been exceeded. Notice that we see "0 of 336" rows displayed (the branch is unused).
  Now contrast the plan with the same query, but this time for a *Quantity* value that only has one row in the table:
  
 ```sql
@@ -269,7 +269,7 @@ Interleaved execution changes the unidirectional boundary between the optimizati
 
 MSTVFs have a fixed cardinality guess of 100 starting with [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], and 1 for earlier [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] versions. Interleaved execution helps workload performance issues that are due to these fixed cardinality estimates associated with MSTVFs. For more information on MSTVFs, see [Create User-defined Functions (Database Engine)](../../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md#TVF).
 
-The following image depicts a [Live Query Statistics](../../relational-databases/performance/live-query-statistics.md) ouput, a subset of an overall execution plan that shows the impact of fixed cardinality estimates from MSTVFs. You can see the actual row flow vs. estimated rows. There are three noteworthy areas of the plan (flow is from right to left):
+The following image depicts a [Live Query Statistics](../../relational-databases/performance/live-query-statistics.md) output, a subset of an overall execution plan that shows the impact of fixed cardinality estimates from MSTVFs. You can see the actual row flow vs. estimated rows. There are three noteworthy areas of the plan (flow is from right to left):
 1. The MSTVF Table Scan has a fixed estimate of 100 rows. For this example, however, there are 527,597 rows flowing through this MSTVF Table Scan, as seen in Live Query Statistics via the *527597 of 100* actual of estimated – so the fixed estimate is significantly skewed.
 1. For the Nested Loops operation, only 100 rows are assumed to be returned by the outer side of the join. Given the high number of rows actually being returned by the MSTVF, you are likely better off with a different join algorithm altogether.
 1. For the Hash Match operation, notice the small warning symbol, which in this case is indicating a spill to disk.
@@ -282,7 +282,7 @@ Contrast the prior plan with the actual plan generated with interleaved executio
 
 1. Notice that the MSTVF table scan now reflects an accurate cardinality estimate. Also notice the re-ordering of this table scan and the other operations.
 1. And regarding join algorithms, we have switched from a Nested Loop operation to a Hash Match operation instead, which is more optimal given the large number of rows involved.
-1. Also notice that we no longer have spill-warnings, as we’re granting more memory based on the true row count flowing from the MSTVF table scan.
+1. Also notice that we no longer have spill-warnings, as we're granting more memory based on the true row count flowing from the MSTVF table scan.
 
 ### Interleaved execution eligible statements
 MSTVF referencing statements in interleaved execution must currently be read-only and not part of a data modification operation. Also, MSTVFs are not eligible for interleaved execution if they do not use runtime constants.
@@ -295,7 +295,7 @@ In general, interleaved execution benefits queries where:
 A simple `SELECT *` from an MSTVF will not benefit from interleaved execution.
 
 ### Interleaved execution overhead
-The overhead should be minimal-to-none. MSTVFs were already being materialized prior to the introduction of interleaved execution, however the difference is that now we’re now allowing deferred optimization and are then leveraging the cardinality estimate of the materialized row set.
+The overhead should be minimal-to-none. MSTVFs were already being materialized prior to the introduction of interleaved execution, however the difference is that now we're now allowing deferred optimization and are then leveraging the cardinality estimate of the materialized row set.
 As with any plan affecting changes, some plans could change such that with better cardinality for the subtree we get a worse plan for the query overall. Mitigation can include reverting the compatibility level or using Query Store to force the non-regressed version of the plan.
 
 ### Interleaved execution and consecutive executions

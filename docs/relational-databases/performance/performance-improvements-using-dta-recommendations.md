@@ -18,7 +18,7 @@ manager: craigg
 
 
 ---
-The performance of data warehousing and analytic workloads can greatly benefit from **columnstore** indexes, particularly for queries that need to scan large tables. **Rowstore** (B+-tree) indexes are most effective for queries that access relatively small amounts of data searching for a particular value or range of values. Since rowstore indexes can deliver rows in sorted order, they can also reduce the cost of sorting in query execution plans. Therefore, the choice of which combination of rowstore and columnstore indexes to build is dependent on your application’s workload.
+The performance of data warehousing and analytic workloads can greatly benefit from **columnstore** indexes, particularly for queries that need to scan large tables. **Rowstore** (B+-tree) indexes are most effective for queries that access relatively small amounts of data searching for a particular value or range of values. Since rowstore indexes can deliver rows in sorted order, they can also reduce the cost of sorting in query execution plans. Therefore, the choice of which combination of rowstore and columnstore indexes to build is dependent on your application's workload.
 
 The Database Engine Tuning Advisor (DTA), starting in SQL Server 2016, can recommend a suitable **combination of rowstore and columnstore** indexes by analyzing a given database workload. 
 
@@ -41,9 +41,9 @@ In each case, we then implemented the recommended indexes. We report the CPU Tim
 
 **Effectiveness of columnstore index recommendations**: The fourth set of bars corresponding to Customer 2 Query 2 represents a case where the query scans large tables which would benefit from columnstore indexes. DTA (rowstore only) generates a recommendation whose CPU Time is higher compared to when columnstore indexes are present. DTA (rowstore + columnstore) recommends suitable columnstore indexes, thus matching the query execution performance of the columnstore only option.
 
-**Effectiveness of recommendations for workload with multiple queries**: The final set of bars corresponding to the full workload for Customer 2 exemplifies DTA’s ability to analyze multiple queries in the workload to recommend a suitable set of rowstore and columnstore indexes which can improve the overall workload’s execution cost. DTA (rowstore + columnstore) recommends four columnstore indexes and tens of rowstore indexes that result in over an order of magnitude improvement for the workload when compared to the option that builds only columnstore indexes; and about 4X–5X improvement when compared to DTA (rowstore only).
+**Effectiveness of recommendations for workload with multiple queries**: The final set of bars corresponding to the full workload for Customer 2 exemplifies DTA's ability to analyze multiple queries in the workload to recommend a suitable set of rowstore and columnstore indexes which can improve the overall workload's execution cost. DTA (rowstore + columnstore) recommends four columnstore indexes and tens of rowstore indexes that result in over an order of magnitude improvement for the workload when compared to the option that builds only columnstore indexes; and about 4X–5X improvement when compared to DTA (rowstore only).
 
-In summary, the above examples illustrate DTA’s ability to suitably leverage both rowstore and columnstore indexes supported in the SQL Server Database Engine, and recommend an appropriate combination of indexes that can significantly reduce CPU Time for the workload. 
+In summary, the above examples illustrate DTA's ability to suitably leverage both rowstore and columnstore indexes supported in the SQL Server Database Engine, and recommend an appropriate combination of indexes that can significantly reduce CPU Time for the workload. 
 
 See Also
 ---

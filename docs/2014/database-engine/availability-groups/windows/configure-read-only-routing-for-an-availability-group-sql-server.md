@@ -94,7 +94,7 @@ manager: craigg
   
     -   To configure read-only routing for the primary role, in the ADD REPLICA or MODIFY REPLICA WITH clause, specify the PRIMARY_ROLE option, as follows:  
   
-         PRIMARY_ROLE **(** READ_ONLY_ROUTING_LIST **=(‘*`server`*’** [ **,**...*n* ] **))**  
+         PRIMARY_ROLE **(** READ_ONLY_ROUTING_LIST **=('*`server`*'** [ **,**...*n* ] **))**  
   
          where, *server* identifies a server instance that hosts a read-only secondary replica in the availability group.  
   

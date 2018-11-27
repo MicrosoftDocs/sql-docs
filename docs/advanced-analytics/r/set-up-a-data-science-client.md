@@ -15,13 +15,13 @@ manager: cgronlun
 
 R integration is available in SQL Server 2016 or later when you include the R language option in an [SQL Server 2016 R Services](../install/sql-r-services-windows-install.md) or [SQL Server 2017 Machine Learning Services (In-Database)](../install/sql-machine-learning-services-windows-install.md) installation. 
 
-To create and deploy R solutions on SQL Server, install [Microsoft R Client](https://docs.microsoft.com/machine-learning-server/r-client/what-is-microsoft-r-client) to get [RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) and other R libraries on your development workstation. The RevoScaleR library, which is also on the remote SQL Server instance, coordinates computing requests between both systems. 
+To develop and deploy R solutions for SQL Server, install [Microsoft R Client](https://docs.microsoft.com/machine-learning-server/r-client/what-is-microsoft-r-client) on your development workstation to get [RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) and other R libraries. The RevoScaleR library, which is also required on the remote SQL Server instance, coordinates computing requests between both systems. 
 
-In this article, learn how to configure an R client development workstation so that you can connect to a remote SQL Server enabled for machine learning and R integration. After completing the steps in this article, you will have the same R libraries as those on SQL Server. You will also know how to push computations from a local R session to a remote R session on SQL Server.
+In this article, learn how to configure an R client development workstation so that you can interact with a remote SQL Server enabled for machine learning and R integration. After completing the steps in this article, you will have the same R libraries as those on SQL Server. You will also know how to push computations from a local R session to a remote R session on SQL Server.
 
 ![Client-server components](media/sqlmls-r-client-revo.png "Local and remote R sessions and libraries")
 
-You can use built-in **RGUI** tool as described in this article, or [link the libraries](#install-ide) to RStudio or any another IDE that you normally use.
+To validate the installation, you can use built-in **RGUI** tool as described in this article, or [link the libraries](#install-ide) to RStudio or any another IDE that you normally use.
 
 > [!Tip]
 > For a video demonstration of these exercises, see [Run R and Python remotely in SQL Server from Jupyter Notebooks](https://blogs.msdn.microsoft.com/mlserver/2018/07/10/run-r-and-python-remotely-in-sql-server-from-jupyter-notebooks-or-any-ide/).

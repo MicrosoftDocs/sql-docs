@@ -176,7 +176,7 @@ After configuring WSUS for Analytics Platform System, the next step is to group 
   
     ![Add a computer group.](./media/configure-windows-server-update-services-wsus/SQL_Server_PDW_WSUSAddComputerGroup.png "SQL_Server_PDW_WSUSAddComputerGroup")  
   
-2.  Enter the name “APS” for the computer group, and then click **Add**.  
+2.  Enter the name "APS" for the computer group, and then click **Add**.  
   
     ![Enter name for your new computer group.](./media/configure-windows-server-update-services-wsus/SQL_Server_PDW_WSUSSpecifyGroupName.png "SQL_Server_PDW_WSUSSpecifyGroupName")  
   

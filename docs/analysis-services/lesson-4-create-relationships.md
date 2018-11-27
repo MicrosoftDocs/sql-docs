@@ -35,7 +35,7 @@ When you imported data by using the Table Import Wizard, you got seven tables fr
   
 2.  Click the solid line between the **DimCustomer** table and the **DimGeography** table. The solid line between these two tables show this relationship is active, that is, it is used by default when calculating DAX formulas.  
   
-    Notice the **GeographyKey** column in the **DimCustomer** table and the **GeographyKey** column in the **DimGeography** table now both each appear within a box. This show these are the columns used in the relationship. The relationship’s properties now also appear in the **Properties** window.  
+    Notice the **GeographyKey** column in the **DimCustomer** table and the **GeographyKey** column in the **DimGeography** table now both each appear within a box. This show these are the columns used in the relationship. The relationship's properties now also appear in the **Properties** window.  
   
     > [!TIP]  
     > In addition to using the model designer in diagram view, you can also use the Manage Relationships dialog box to show the relationships between all tables in a table format. Right-click **Relationships** in Tabular Model Explorer, and then click **Manage Relationships**. The Manage Relationships dialog box show the relationships that were automatically created when you imported data.  

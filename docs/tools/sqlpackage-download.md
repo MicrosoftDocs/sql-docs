@@ -20,8 +20,8 @@ Download and install the latest .NET Framework release and macOS and Linux previ
 |Platform|Download|Release date|Version|Build
 |:---|:---|:---|:---|:---|
 |Windows|[MSI Installer](https://go.microsoft.com/fwlink/?linkid=2033947)|October 24, 2018|18.0|15.0.4200.1|
-|macOS (preview)|[.zip file](https://go.microsoft.com/fwlink/?linkid=873927)|May 9, 2018 |0.0.1|15.0.4057.1|
-|Linux (preview)|[.zip file](https://go.microsoft.com/fwlink/?linkid=873926)|May 9, 2018 |0.0.1|15.0.4057.1|
+|macOS .NET Core (preview)|[.zip file](https://go.microsoft.com/fwlink/?linkid=2044514)|November 15, 2018 | - |15.0.4240.1|
+|Linux .NET Core (preview)|[.zip file](https://go.microsoft.com/fwlink/?linkid=2044263)|November 15, 2018 | - |15.0.4240.1|
 
 For details about the latest release, see the [release notes](sqlpackage-release-notes.md).
 
@@ -36,7 +36,7 @@ This release of sqlpackage includes a standard Windows installer experience, and
 
 ## Get sqlpackage (preview) for macOS
 
-1. Download [sqlpackage for macOS](https://go.microsoft.com/fwlink/?linkid=873927).
+1. Download [sqlpackage for macOS](https://go.microsoft.com/fwlink/?linkid=2044514).
 2. To extract the file and launch sqlpackage, open a new Terminal window and type the following commands:
 
    **.zip Installation:**
@@ -51,7 +51,7 @@ This release of sqlpackage includes a standard Windows installer experience, and
 
 ## Get sqlpackage (preview) for Linux
 
-1. Download [sqlpackage for Linux](https://go.microsoft.com/fwlink/?linkid=873926) by using one of the installers or the tar.gz archive:
+1. Download [sqlpackage for Linux](https://go.microsoft.com/fwlink/?linkid=2044263) by using one of the installers or the tar.gz archive:
 2. To extract the file and launch sqlpackage, open a new Terminal window and type the following commands:
 
    **.zip Installation:**

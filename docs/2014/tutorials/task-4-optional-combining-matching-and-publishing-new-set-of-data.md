@@ -15,7 +15,7 @@ ms.author: douglasl
 manager: craigg
 ---
 # Task 4 (Optional): Combining, Matching, and Publishing New Set of Data
-  Over time, you will want to add more data to the MDS repository. Before adding data, it can be useful to compare the new data to the data that’s already managed in MDS, to ensure that you are not adding duplicate or inaccurate data. In the Master Data Services Add-in for Excel, you can combine data from two worksheets and the compare the data to identify and remove duplicates before publishing the data to MDS. The matching feature of MDS Excel Add-in uses the DQS matching functionality to identify matches in the data. In this task, you will combine data from a two worksheets into one and then perform the matching activity to identify and remove duplicates before publishing to MDS. See [Data Quality Matching in the MDS Add-in for Excel](http://msdn.microsoft.com/library/hh548681.aspx) and [Combine Data](http://msdn.microsoft.com/library/hh548680.aspx) topics for more details.  
+  Over time, you will want to add more data to the MDS repository. Before adding data, it can be useful to compare the new data to the data that's already managed in MDS, to ensure that you are not adding duplicate or inaccurate data. In the Master Data Services Add-in for Excel, you can combine data from two worksheets and the compare the data to identify and remove duplicates before publishing the data to MDS. The matching feature of MDS Excel Add-in uses the DQS matching functionality to identify matches in the data. In this task, you will combine data from a two worksheets into one and then perform the matching activity to identify and remove duplicates before publishing to MDS. See [Data Quality Matching in the MDS Add-in for Excel](http://msdn.microsoft.com/library/hh548681.aspx) and [Combine Data](http://msdn.microsoft.com/library/hh548680.aspx) topics for more details.  
   
 1.  Launch new instance of **Excel**. Click **Start**, point to **Run**, type **Excel**, and click **OK**.  
   
@@ -93,7 +93,7 @@ manager: craigg
   
 27. Select the **duplicate row (orange)**, right-click, and click **Delete** to delete the row.  
   
-28. Delete the **CLUSTER_ID** column since you don’t need it anymore.  
+28. Delete the **CLUSTER_ID** column since you don't need it anymore.  
   
 29. Click **Publish** to publish the other two new records with **Codes S66** and **S57** to MDS.  
   

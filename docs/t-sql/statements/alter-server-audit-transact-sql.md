@@ -137,7 +137,7 @@ Forces the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
   
  You can add, alter, and remove audit specifications without stopping an audit.  
   
- You cannot change an audit’s GUID after the audit has been created.  
+ You cannot change an audit's GUID after the audit has been created.  
   
 ## Permissions  
  To create, alter, or drop a server audit principal, you must have ALTER ANY SERVER AUDIT or the CONTROL SERVER permission.  

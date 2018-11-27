@@ -46,7 +46,7 @@ manager: craigg
   
 ##  <a name="SSMSProcedure"></a> Using SQL Server Management Studio  
   
-#### To show a user-defined function’s properties  
+#### To show a user-defined function's properties  
   
 1.  In **Object Explorer**, click the plus sign next to the database that contains the function to which you want to view the properties, and then click the plus sign to expand the **Programmability** folder.  
   

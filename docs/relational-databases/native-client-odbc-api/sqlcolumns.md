@@ -36,7 +36,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 |Column name|Description|  
 |-----------------|-----------------|  
 |DATA_TYPE|Returns SQL_VARCHAR, SQL_VARBINARY, or SQL_WVARCHAR for the **varchar(max)** data types.|  
-|TYPE_NAME|Returns “varchar”, “varbinary”, or “nvarchar” for the **varchar(max)**, **varbinary(max)**, and **nvarchar(max)** data types.|  
+|TYPE_NAME|Returns "varchar", "varbinary", or "nvarchar" for the **varchar(max)**, **varbinary(max)**, and **nvarchar(max)** data types.|  
 |COLUMN_SIZE|Returns SQL_SS_LENGTH_UNLIMITED for **varchar(max)** data types indicating that the size of the column is unlimited.|  
 |BUFFER_LENGTH|Returns SQL_SS_LENGTH_UNLIMITED for **varchar(max)** data types indicating that the size of the buffer is unlimited.|  
 |SQL_DATA_TYPE|Returns SQL_VARCHAR, SQL_VARBINARY, or SQL_WVARCHAR for the **varchar(max)** data types.|  

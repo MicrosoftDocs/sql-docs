@@ -44,9 +44,9 @@ manager: craigg
   
 |[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] Native mode|SharePoint|  
 |---------------------------------------------|----------------|  
-|**Role:** For example “Content Manager”.|**Group:** For example the default “Viewers” group.|  
-|---|**Permission level group:** For example “View Only” for the “Viewers” group.|  
-|**Tasks:** for example “Manage Reports”.|**Permissions:** For example, within the “View Only” group there are list related permissions of view items, view versions, and view application pages.|  
+|**Role:** For example "Content Manager".|**Group:** For example the default "Viewers" group.|  
+|---|**Permission level group:** For example "View Only" for the "Viewers" group.|  
+|**Tasks:** for example "Manage Reports".|**Permissions:** For example, within the "View Only" group there are list related permissions of view items, view versions, and view application pages.|  
   
  For more information on SharePoint permissions, see [Permission levels and permissions](http://office.microsoft.com/windows-sharepoint-services-help/permission-levels-and-permissions-HA010100149.aspx) and [Determine permission levels and groups in SharePoint 2013](http://technet.microsoft.com/library/cc262690.aspx).  
   

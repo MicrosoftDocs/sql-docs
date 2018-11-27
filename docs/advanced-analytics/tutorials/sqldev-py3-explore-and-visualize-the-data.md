@@ -26,7 +26,7 @@ First, take a minute to browse the data schema, as we've made some changes to ma
 
 **Taxi identifiers**
 
-The _medallion_ column represents the taxi’s unique ID number.
+The _medallion_ column represents the taxi's unique ID number.
 
 The _hack_license_ column contains the taxi driver's license number (anonymized).
 

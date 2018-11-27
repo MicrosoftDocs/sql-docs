@@ -142,7 +142,7 @@ manager: craigg
   
     -   **Drill Through Model**. This option gets the cases that belong to the selected node, and saves them to a table in Excel. You get back only the columns of data that were actually used in building the model.  
   
-    -   **Drill Through Structure Columns**. This option gets the cases that belong to the selected node, and saves them to a table in Excel. You get all information that was available in the underlying data when you built it, even of a column wasn’t used in the model. For example, you might have excluded the customer address and zip code because those fields are not useful with analysis, but left them in the structure.  
+    -   **Drill Through Structure Columns**. This option gets the cases that belong to the selected node, and saves them to a table in Excel. You get all information that was available in the underlying data when you built it, even of a column wasn't used in the model. For example, you might have excluded the customer address and zip code because those fields are not useful with analysis, but left them in the structure.  
   
      Return to Excel to view your data. The Browse viewer runs a query, saves the data to a table in a new worksheet, and labels the results.  
   

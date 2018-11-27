@@ -82,7 +82,7 @@ Automatic failover of an AG is possible when the following conditions are met:
 -   The primary and the secondary replica are set to synchronous data movement.
 -   The secondary has a state of synchronized (not synchronizing), meaning the two are at the same data point.
 -   The cluster type is set to External. Automatic failover is not possible with a cluster type of None.
--   The `sequence_number` of the secondary replica to become the primary has the highest sequence number – in other words, the secondary replica’s `sequence_number` matches the one from the original primary replica.
+-   The `sequence_number` of the secondary replica to become the primary has the highest sequence number – in other words, the secondary replica's `sequence_number` matches the one from the original primary replica.
 
 If these conditions are met and the server hosting the primary replica fails, the AG will change ownership to a synchronous replica. The behavior for synchronous replicas (of which there can be three total: one primary and two secondary replicas) can further be controlled by `required_synchronized_secondaries_to_commit`. This works with AGs on both Windows and Linux, but is configured completely differently. On Linux, the value is configured automatically by the cluster on the AG resource itself.
 
@@ -123,13 +123,13 @@ As on Windows-based AGs, the drive and folder structure for the user databases p
 
 The listener is optional functionality for an AG. It provides a single point of entry for all connections (read/write to the primary replica and/or read-only to secondary replicas) so that applications and end users do not need to know which server is hosting the data. In a WSFC, this is the combination of a network name resource and an IP resource, which is then registered in AD DS (if needed) as well as DNS. In combination with the AG resource itself, it provides that abstraction. For more information on a listener, see [Listeners, Client Connectivity, and Application Failover](../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md).
 
-The listener under Linux is configured differently, but its functionality is the same. There is no concept of a network name resource in Pacemaker, nor is an object created in AD DS; there is just an IP address resource created in Pacemaker that can run on any of the nodes. An entry associated with the IP resource for the listener in DNS with a “friendly name” needs to be created. The IP resource for the listener will only be active on the server hosting the primary replica for that availability group.
+The listener under Linux is configured differently, but its functionality is the same. There is no concept of a network name resource in Pacemaker, nor is an object created in AD DS; there is just an IP address resource created in Pacemaker that can run on any of the nodes. An entry associated with the IP resource for the listener in DNS with a "friendly name" needs to be created. The IP resource for the listener will only be active on the server hosting the primary replica for that availability group.
 
 If Pacemaker is used and an IP address resource is created that is associated with the listener, there will be a brief outage as the IP address stops on the one server and starts on the other, whether it is automatic or manual failover. While this provides abstraction through the combination of a single name and IP address, it does not mask the outage. An application must be able to handle the disconnect by having some sort of functionality to detect this and reconnect.
 
-However, the combination of the DNS name and IP address is still not enough to provide all the functionality that a listener on a WSFC provides, such as read-only routing for secondary replicas. When configuring an AG, a “listener” still needs to be configured in [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]. This can be seen in the wizard as well as the Transact-SQL syntax. There are two ways that this can be configured to function the same as on Windows:
+However, the combination of the DNS name and IP address is still not enough to provide all the functionality that a listener on a WSFC provides, such as read-only routing for secondary replicas. When configuring an AG, a "listener" still needs to be configured in [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]. This can be seen in the wizard as well as the Transact-SQL syntax. There are two ways that this can be configured to function the same as on Windows:
 
--   For an AG with a cluster type of External, the IP address associated with the “listener” created in [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] should be the IP address of the resource created in Pacemaker.
+-   For an AG with a cluster type of External, the IP address associated with the "listener" created in [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] should be the IP address of the resource created in Pacemaker.
 -   For an AG created with a cluster type of None, use the IP address associated with the primary replica.
 
 The instance associated with the provided IP address then becomes the coordinator for things like the read-only routing requests from applications.
@@ -146,7 +146,7 @@ A distributed AG can also cross OS boundaries. The underlying AGs are bound by t
 
 ![Hybrid Dist AG](./media/sql-server-linux-availability-group-overview/image2.png)
 
-<!-- Distributed AGs are also supported for upgrades from [!INCLUDE[sssql15-md](../includes/sssql15-md.md)] to [!INCLUDE[sssql17-md](../includes/sssql17-md.md)]. For more information on how to achieve this, see [the article “x”].
+<!-- Distributed AGs are also supported for upgrades from [!INCLUDE[sssql15-md](../includes/sssql15-md.md)] to [!INCLUDE[sssql17-md](../includes/sssql17-md.md)]. For more information on how to achieve this, see [the article "x"].
 
 If using automatic seeding with a distributed availability group that crosses OSes, it can handle the differences in folder structure. How this works is described in [the documentation for automatic seeding].
 -->

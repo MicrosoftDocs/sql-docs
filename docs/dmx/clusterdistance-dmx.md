@@ -48,7 +48,7 @@ ClusterDistance([<ClusterID expression>])
   
 -   Use the [ClusterProbability &#40;DMX&#41;](../dmx/clusterprobability-dmx.md) function to get the probability that a case belongs to a particular cluster. This value serves as the inverse of the cluster distance.  
   
--   Use the [PredictHistogram &#40;DMX&#41;](../dmx/predicthistogram-dmx.md) function to return a histogram of the likelihood of the input case existing in each of the model’s clusters.  
+-   Use the [PredictHistogram &#40;DMX&#41;](../dmx/predicthistogram-dmx.md) function to return a histogram of the likelihood of the input case existing in each of the model's clusters.  
   
 -   Use the [PredictCaseLikelihood &#40;DMX&#41;](../dmx/predictcaselikelihood-dmx.md) function to return a measure from 0 to 1 that indicates how likely an input case is to exist considering the model learned by the algorithm.  
   

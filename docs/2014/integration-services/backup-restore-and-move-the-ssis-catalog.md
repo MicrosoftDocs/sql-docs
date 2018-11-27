@@ -15,7 +15,7 @@ manager: craigg
 # Backup, Restore, and Move the SSIS Catalog
   [!INCLUDE[ssISCurrent](../includes/ssiscurrent-md.md)] includes the SSISDB database. You query views in the SSISDB database to inspect objects, settings, and operational data that are stored in the **SSISDB** catalog. This topic provides instructions for backing up and restoring the database.  
   
- The **SSISDB** catalog stores the packages that you’ve deployed to the [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] server. For more information about the catalog, see [SSIS Catalog](catalog/ssis-catalog.md).  
+ The **SSISDB** catalog stores the packages that you've deployed to the [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] server. For more information about the catalog, see [SSIS Catalog](catalog/ssis-catalog.md).  
   
 ##  <a name="backup"></a> To Back up the SSIS Database  
   
@@ -106,7 +106,7 @@ manager: craigg
   
     -   **Method 1**  
   
-         Use this method if you’ve already performed a backup of the database master key, and you have the password used to encrypt the master key.  
+         Use this method if you've already performed a backup of the database master key, and you have the password used to encrypt the master key.  
   
         ```  
                Restore master key from file = 'c:\temp\RCTestInstKey'  

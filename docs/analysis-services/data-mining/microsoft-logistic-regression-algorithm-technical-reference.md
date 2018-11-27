@@ -67,7 +67,7 @@ FROM <model name>.CONTENT
 WHERE NODE_TYPE = 23  
 ```  
   
- For each output value, this query returns the coefficients and an ID that points back to the related input node. It also returns a row that contains the value of the output and the intercept. Each input X has its own coefficient (Ci), but the nested table also contains a “free” coefficient (Co), calculated according to the following formula:  
+ For each output value, this query returns the coefficients and an ID that points back to the related input node. It also returns a row that contains the value of the output and the intercept. Each input X has its own coefficient (Ci), but the nested table also contains a "free" coefficient (Co), calculated according to the following formula:  
   
  `F(X) = X1*C1 + X2*C2 + … +Xn*Cn + X0`  
   

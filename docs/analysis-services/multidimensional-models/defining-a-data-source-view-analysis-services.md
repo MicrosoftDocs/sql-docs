@@ -89,7 +89,7 @@ manager: kfile
   
 4.  **Filter Available Objects**  
   
-     If the Available objects list contains a very large number of objects, you can reduce the list by applying a simple filter that species a string as selection criteria. For example, if you type **dbo** and click the **Filter** button, then only those items starting with "dbo" show up in the **Available objects** list. The filter can be a partial string (for example, “sal” returns sales and salary) but it cannot include multiple strings or operators.  
+     If the Available objects list contains a very large number of objects, you can reduce the list by applying a simple filter that species a string as selection criteria. For example, if you type **dbo** and click the **Filter** button, then only those items starting with "dbo" show up in the **Available objects** list. The filter can be a partial string (for example, "sal" returns sales and salary) but it cannot include multiple strings or operators.  
   
 5.  For relational data sources that do not have table relationships defined, a **Name Matching** page appears so that you can select the appropriate name matching method. For more information, see the [Specify Name Matching Criteria for Relationships](#bkmk_NameMatch) section in this topic.  
   

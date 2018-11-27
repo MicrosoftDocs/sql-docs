@@ -105,7 +105,7 @@ ms.author: maghan
   
  You can also pass the name of a specific scope to an aggregate function. Scope can refer to the name of a dataset, a data region, or the name of a scope higher on the data hierarchy. This applies to the following messages:  
   
--   The *\<report item type>* '*\<report item name>*' has an invalid scope “*\<scope name>*”. The scope must be the current scope, or contained within the current scope.  
+-   The *\<report item type>* '*\<report item name>*' has an invalid scope "*\<scope name>*". The scope must be the current scope, or contained within the current scope.  
   
 -   The *\<property name>* expression for the *\<report item type>* '*\<report item name>*' has a scope parameter that is not valid for an aggregate function. The scope parameter must be set to a string constant that is equal to either the name of a containing group, the name of a containing data region, or the name of a dataset.  
   

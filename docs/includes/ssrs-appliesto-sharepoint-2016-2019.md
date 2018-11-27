@@ -9,4 +9,4 @@
  ms.author: maggies
  ms.custom: include file
 ---
- ![yes](media/yes.png)SharePoint 2017 & 2019
+ ![yes](media/yes.png)SharePoint 2016 & later

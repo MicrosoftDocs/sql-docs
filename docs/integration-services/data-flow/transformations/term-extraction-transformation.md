@@ -144,7 +144,7 @@ manager: craigg
   
 -   Combinations of numbers, punctuation marks, and alphabetical characters. For example, *A23B#99* returns the term *A23B*.  
   
--   The characters, %, @, &, $, #, \*, :, ;, ., **,** , !, ?, \<, >, +, =, ^, ~, |, \\, /, (, ), [, ], {, }, “, and ‘.  
+-   The characters, %, @, &, $, #, \*, :, ;, ., **,** , !, ?, \<, >, +, =, ^, ~, |, \\, /, (, ), [, ], {, }, ", and '.  
   
     > [!NOTE]  
     >  Acronyms that include one or more periods (.) are not separated into multiple sentences.  

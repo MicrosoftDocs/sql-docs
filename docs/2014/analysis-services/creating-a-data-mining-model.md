@@ -66,7 +66,7 @@ manager: craigg
  [Cluster Wizard &#40;Data Mining Add-ins for Excel&#41;](cluster-wizard-data-mining-add-ins-for-excel.md).  
   
 ## Detect Categories (Analyze)  
- The **Detect Categories** tool lets you add any data set and apply clustering to find groupings of data. It’s useful for finding similarities and for creating groups to further analyze.  
+ The **Detect Categories** tool lets you add any data set and apply clustering to find groupings of data. It's useful for finding similarities and for creating groups to further analyze.  
   
  The **Detect Categories** tool uses the Microsoft Clustering algorithm.  
   
@@ -97,7 +97,7 @@ manager: craigg
  [Forecast Wizard &#40;Data Mining Add-ins for Excel&#41;](forecast-wizard-data-mining-add-ins-for-excel.md)  
   
 ## Highlight Exceptions (Analyze)  
- The **Highlight Exceptions** tool analyzes patterns in a table of data and finds rows and values that don’t fit the pattern. You can then review and correct them and rerun the model, or flag values for later action.  
+ The **Highlight Exceptions** tool analyzes patterns in a table of data and finds rows and values that don't fit the pattern. You can then review and correct them and rerun the model, or flag values for later action.  
   
  The **Highlight Exceptions** tool uses the Microsoft Clustering algorithm.  
   

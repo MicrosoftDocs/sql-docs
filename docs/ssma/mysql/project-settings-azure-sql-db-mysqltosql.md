@@ -25,7 +25,7 @@ The SQL Azure pane is available in the **Project Settings** and **Default Projec
 ## Connectivity  
 **Heartbeat Interval**  
   
-Specifies a time interval to be used for heartbeat mechanism to keep the SQL Azure connection alive in ‘minutes : seconds’ format.  
+Specifies a time interval to be used for heartbeat mechanism to keep the SQL Azure connection alive in 'minutes : seconds' format.  
   
 **Default Value**:'4:45'  
   

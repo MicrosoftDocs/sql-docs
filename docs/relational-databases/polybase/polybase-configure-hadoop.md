@@ -192,7 +192,7 @@ The following query exports data from SQL Server to Hadoop. To do this, you firs
 
 ```sql
 -- Enable INSERT into external table  
-sp_configure ‘allow polybase export’, 1;  
+sp_configure 'allow polybase export', 1;  
 reconfigure  
   
 -- Create an external table.

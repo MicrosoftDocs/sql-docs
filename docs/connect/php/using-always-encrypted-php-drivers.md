@@ -271,7 +271,7 @@ Azure Key Vault offers a way to store encryption keys, passwords, and other secr
      -   If `KeyStoreAuthentication` is set to `KeyVaultPassword`, then `KeyStorePrincipalId` must be the name of an Azure ActiveDirectory user.
      -   If `KeyStoreAuthentication` is set to `KeyVaultClientSecret`, then `KeyStorePrincipalId` must be an application client ID.
  -   `KeyStoreSecret` takes a string representing a credential secret. 
-     -   If `KeyStoreAuthentication` is set to `KeyVaultPassword`, then `KeyStoreSecret` must be the user’s password. 
+     -   If `KeyStoreAuthentication` is set to `KeyVaultPassword`, then `KeyStoreSecret` must be the user's password. 
      -   If `KeyStoreAuthentication` is set to `KeyVaultClientSecret`, then `KeyStoreSecret` must be the application secret associated with the application client ID.
 
 All three options must be present in the connection string to use Azure Key Vault. In addition, `ColumnEncryption` must be set to `Enabled`. If `ColumnEncryption` is set to `Disabled` but the Azure Key Vault options are present, the script will proceed without errors but no encryption will be performed.

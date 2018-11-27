@@ -30,7 +30,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 
   Returns distinct rows by comparing the results of two queries.  
   
- EXCEPT returns distinct rows from the left input query that aren’t output by the right input query.  
+ EXCEPT returns distinct rows from the left input query that aren't output by the right input query.  
   
  INTERSECT returns distinct rows that are output by both the left and right input queries operator.  
   

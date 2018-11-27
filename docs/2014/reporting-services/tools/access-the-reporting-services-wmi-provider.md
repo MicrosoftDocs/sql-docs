@@ -35,7 +35,7 @@ manager: craigg
  An instance of each of the above classes is created for each report server instance. You can use any Microsoft or third party tools to access the WMI objects exposed by the report server, including WMI programming interfaces exposed by the .NET Framework itself. This topic describes how to access and use the WMI class instances with the PowerShell command [Get-WmiObject](http://technet.microsoft.com/library/dd315295.aspx).  
   
 ## Determine the Instance Name in the Namespace String  
- The instance name in the namespace path for the Reporting Services WMI classes is an encoding of the instance names that you specify when installing the named Reporting Services instances. Namely, special characters in the instance names are encoded. For example, an underline (_) is encoded as “_5f”, so an instance name of “My_Instance” is encoded as “My_5fInstance” in the WMI namespace path.  
+ The instance name in the namespace path for the Reporting Services WMI classes is an encoding of the instance names that you specify when installing the named Reporting Services instances. Namely, special characters in the instance names are encoded. For example, an underline (_) is encoded as "_5f", so an instance name of "My_Instance" is encoded as "My_5fInstance" in the WMI namespace path.  
   
  To list the encoded instance names of your report server instances in the WMI namespace path, use the following PowerShell command:  
   

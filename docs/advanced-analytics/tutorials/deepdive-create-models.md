@@ -53,7 +53,7 @@ Estimate Std. Error t value Pr(>|t|) (Intercept)
 gender=Male -88.813 78.360 -1.133 0.257
 gender=Female Dropped Dropped Dropped Dropped
 creditLine 95.379 3.862 24.694 2.22e-16
-Signif. codes: 0  0.001  0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+Signif. codes: 0  0.001  0.01 '*' 0.05 '.' 0.1 ' ' 1
 
 Residual standard error: 3812 on 9997 degrees of freedom
 Multiple R-squared: 0.05765
@@ -66,7 +66,7 @@ Condition number: 1.0184
 
 Next, you create a logistic regression model that indicates whether a particular customer is a fraud risk. You'll use the **RevoScaleR** [rxLogit](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxlogit) function, which supports fitting of logistic regression models in remote compute contexts.
 
-1.  Keep the compute context as is. You’ll also continue to use the same data source as well.
+1.  Keep the compute context as is. You'll also continue to use the same data source as well.
 
 2.  Call the **rxLogit** function and pass the formula needed to define the model.
 
@@ -112,7 +112,7 @@ numTrans              4.950e-02  2.202e-03  22.477 2.22e-16
 numIntlTrans          3.414e-02  5.318e-03   6.420 1.36e-10
 creditLine            1.042e-01  4.705e-03  22.153 2.22e-16
 
-Signif. codes:  0 ‘\*\*\*’ 0.001 ‘\*\*’ 0.01 ‘\*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+Signif. codes:  0 '\*\*\*' 0.001 '\*\*' 0.01 '\*' 0.05 '.' 0.1 ' ' 1
 Condition number of final variance-covariance matrix: 3997.308
 Number of iterations: 15
 ```

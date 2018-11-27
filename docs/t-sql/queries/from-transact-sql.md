@@ -704,7 +704,7 @@ JOIN DimProduct AS dp
 ON dp.ProductKey = fis.ProductKey;  
 ```  
   
- A `WHERE` clause could also be used with this query to limit results. This example limits results to `SalesOrderNumber` values higher than ‘SO5000’:  
+ A `WHERE` clause could also be used with this query to limit results. This example limits results to `SalesOrderNumber` values higher than 'SO5000':  
   
 ```sql
 -- Uses AdventureWorks  
@@ -804,7 +804,7 @@ ORDER BY fis.SalesOrderNumber;
 ```  
   
 ### R. Using a derived table  
- The following example uses a derived table (a `SELECT` statement after the `FROM` clause) to return the `CustomerKey` and `LastName` columns of all customers in the `DimCustomer` table with `BirthDate` values later than January 1, 1970 and the last name ‘Smith’.  
+ The following example uses a derived table (a `SELECT` statement after the `FROM` clause) to return the `CustomerKey` and `LastName` columns of all customers in the `DimCustomer` table with `BirthDate` values later than January 1, 1970 and the last name 'Smith'.  
   
 ```sql
 -- Uses AdventureWorks  

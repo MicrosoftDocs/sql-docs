@@ -27,7 +27,7 @@ manager: craigg
   
 4.  On the **Choose Your Data Connection** page, click **New Connection**.  
   
-5.  If this is the first time you’ve created a data source in Visual Studio, you will see the **Choose Data Source** page. In the **Data Source** box, select **Microsoft SQL Server**.  
+5.  If this is the first time you've created a data source in Visual Studio, you will see the **Choose Data Source** page. In the **Data Source** box, select **Microsoft SQL Server**.  
   
 6.  In the **Add Connection** dialog box, perform the following steps:  
   

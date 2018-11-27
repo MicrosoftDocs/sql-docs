@@ -85,7 +85,7 @@ If your environment will use Kerberos constrained delegation, then the SharePoin
 
 3. Configure C2WTS *AllowedCallers*.
 
-    C2WTS requires the ‘callers’ identities explicitly listed in the configuration file, **C2WTShost.exe.config**. C2WTS does not accept requests from all authenticated users in the system unless it is configured to do so. In this case the 'caller' is the WSS_WPG Windows group. The C2WTShost.exe.confi file is saved in the following location:
+    C2WTS requires the 'callers' identities explicitly listed in the configuration file, **C2WTShost.exe.config**. C2WTS does not accept requests from all authenticated users in the system unless it is configured to do so. In this case the 'caller' is the WSS_WPG Windows group. The C2WTShost.exe.confi file is saved in the following location:
 
     Changing the service account within SharePoint Central Admin, for the C2WTS service, will add that account to the WSS_WPG group.
 

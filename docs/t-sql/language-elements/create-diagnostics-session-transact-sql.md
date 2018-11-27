@@ -28,18 +28,18 @@ monikerRange: ">= aps-pdw-2016 || = sqlallproducts-allversions"
   
 ```  
 Creating a new diagnostics session:  
-CREATE DIAGNOSTICS SESSION diagnostics_name AS N’{<session_xml>}’;  
+CREATE DIAGNOSTICS SESSION diagnostics_name AS N'{<session_xml>}';  
   
 <session_xml>::  
 <Session>  
    [ <MaxItemCount>max_item_count_num</MaxItemCount> ]  
    <Filter>  
-      { \<Event Name=”event_name”/>  
-         [ <Where>\<filter_property_name Name=”value” ComparisonType="comp_type"/></Where> ] [ ,...n ]  
+      { \<Event Name="event_name"/>  
+         [ <Where>\<filter_property_name Name="value" ComparisonType="comp_type"/></Where> ] [ ,...n ]  
       } [ ,...n ]  
    </Filter> ]   
    <Capture>  
-      \<Property Name=”property_name”/> [ ,...n ]  
+      \<Property Name="property_name"/> [ ,...n ]  
    </Capture>  
 <Session>  
   

@@ -21,7 +21,7 @@ manager: craigg
 
 The task of migrating your databases to the cloud is a complicated and time-consuming, involving a number of variables. Picking the right Azure database target and SKU for your database can be challenging. Our goal with the Database Migration Assistant (DMA) is to address these questions and to make your database migration experience simple and effective.
 
-This article focuses primarily on DMA’s Azure SQL Database SKU recommendations feature, which allows you to identify the minimum recommended Azure SQL Database SKU based on performance counters collected from the computer(s) hosting your databases. This feature provides recommendations related to pricing tier, compute level, and max data size, as well as estimated cost per month. It also offers the ability to provision all your databases to Azure in bulk.
+This article focuses primarily on DMA's Azure SQL Database SKU recommendations feature, which allows you to identify the minimum recommended Azure SQL Database SKU based on performance counters collected from the computer(s) hosting your databases. This feature provides recommendations related to pricing tier, compute level, and max data size, as well as estimated cost per month. It also offers the ability to provision all your databases to Azure in bulk.
 
 > [!NOTE] 
 > This functionality is currently available only via the Command Line Interface (CLI). Support for this feature via the DMA user interface will be added in an upcoming release.

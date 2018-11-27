@@ -109,7 +109,7 @@ manager: craigg
   
   
 ##  <a name="ReptPartGallery"></a> The Report Part Gallery  
- The easiest way to create a report is to find an existing report part, like a table or chart, on the report server or a report server integrated into a SharePoint site. You search for report parts to add to your report in the Report Part Gallery. You can filter the report parts by all or part of the name of the report part, who created it, who last modified it, when it was last modified, where it’s stored, or what type of report part it is. For example, you could search for all charts created last week by one of your coworkers.  
+ The easiest way to create a report is to find an existing report part, like a table or chart, on the report server or a report server integrated into a SharePoint site. You search for report parts to add to your report in the Report Part Gallery. You can filter the report parts by all or part of the name of the report part, who created it, who last modified it, when it was last modified, where it's stored, or what type of report part it is. For example, you could search for all charts created last week by one of your coworkers.  
   
 > [!NOTE]  
 >  You must be connected to a server to view the Report Part Gallery.  

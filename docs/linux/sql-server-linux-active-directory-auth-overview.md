@@ -27,7 +27,7 @@ AD Authentication has the following advantages over [!INCLUDE[ssNoVersion](../in
 
 - Users authenticate via single sign-on, without being prompted for a password.   
 - By creating logins for AD groups, you can manage access and permissions in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] using AD group memberships.  
-- Each user has a single identity across your organization, so you don’t have to keep track of which [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] logins correspond to which people.   
+- Each user has a single identity across your organization, so you don't have to keep track of which [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] logins correspond to which people.   
 - AD enables you to enforce a centralized password policy across your organization.   
 
 ## Configuration steps

@@ -65,7 +65,7 @@ manager: craigg
   
 6.  **Specify Columns Content and Data Types**: For each column that you use in the structure, you must choose both a *data type* and a *content type*.  
   
-     The wizard will automatically detect possible data types, but you don’t need to use the data type recommended by the wizard. For example, even if your data contains numbers, they might be representative of categorical data. Columns that you specify as keys are automatically assigned the correct data type for that particular model type. For more information, see [Mining Model Columns](mining-model-columns.md) and [Data Types &#40;Data Mining&#41;](data-types-data-mining.md).  
+     The wizard will automatically detect possible data types, but you don't need to use the data type recommended by the wizard. For example, even if your data contains numbers, they might be representative of categorical data. Columns that you specify as keys are automatically assigned the correct data type for that particular model type. For more information, see [Mining Model Columns](mining-model-columns.md) and [Data Types &#40;Data Mining&#41;](data-types-data-mining.md).  
   
      The *content type* that you choose for each column that you use in the model tells the algorithm how the data should be processed.  
   
@@ -105,14 +105,14 @@ manager: craigg
  Near the end of the wizard, you must decide whether to partition your data into training and testing sets. The ability to provision a randomly sampled portion of the data for testing is very convenient, as it ensures that a consistent set of test data is available for use with all mining models associated with the new mining structure.  
   
 > [!WARNING]  
->  Note that this option is not available for all model types. For example, if you create a forecasting model, you won’t be able to use holdout, because the time series algorithm requires that there be no gaps in data. For a list of the model types that support holdout data sets, see [Training and Testing Data Sets](training-and-testing-data-sets.md).  
+>  Note that this option is not available for all model types. For example, if you create a forecasting model, you won't be able to use holdout, because the time series algorithm requires that there be no gaps in data. For a list of the model types that support holdout data sets, see [Training and Testing Data Sets](training-and-testing-data-sets.md).  
   
  To create this holdout data set, you specify the percentage of the data you want to use for testing. All remaining data will be used for training. Optionally, you can set a maximum number of cases to use for testing, or set a seed value to use in starting the random selection process.  
   
  The definition of the holdout test set is stored with the mining structure, so that whenever you create a new model based on the structure, the testing data set will be available for assessing the accuracy of the model. If you delete the cache of the mining structure, the information about which cases were used for training and which were used for testing will be deleted as well.  
   
 ##  <a name="BKMK_DrillThru"></a> Why and How to Enable Drillthrough  
- Almost at the very end of the wizard, you have the option to enable *drillthrough*. It is easy to miss this option, but it’s an important one. Drillthrough lets you view source data in the mining structure by querying the mining model.  
+ Almost at the very end of the wizard, you have the option to enable *drillthrough*. It is easy to miss this option, but it's an important one. Drillthrough lets you view source data in the mining structure by querying the mining model.  
   
  Why is this useful? Suppose you are viewing the results of a clustering model, and want to see the customers who were put into a specific cluster. By using drillthrough, you can view details such as contact information.  
   

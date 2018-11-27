@@ -54,7 +54,7 @@ When data is imported or processed, impersonation credentials are used to connec
 |------------|-----------------|  
 |**Impersonate Account**|Specifies the model use a Windows user account to import or process data from the datasource. The domain and name of the user account uses the following format:**\<Domain name>\\<User account name\>**.|  
 |**Impersonate Current User**|Specifies data should be accessed from the datasource using the identity of the user who sent the request. This mode  applies only to Direct Query mode.|  
-|**Impersonate Identity**|Specifies a username to access the datasource, but doesn’t need to specify the account’s password. This mode applies only when Kerberos delegation is enabled and specifies the S4U authentication should be used.|  
+|**Impersonate Identity**|Specifies a username to access the datasource, but doesn't need to specify the account's password. This mode applies only when Kerberos delegation is enabled and specifies the S4U authentication should be used.|  
 |**Impersonate Service Account**|Specifies the model use the security credentials associated with the Analysis Services service instance that manages the model.|  
 |**Impersonate Unattended Account**|Specifies the Analysis Services engine should use a preconfigured unattended account to access the data.|  
 

@@ -41,8 +41,8 @@ You specify MS-Deploy verbs using the **–verb** switch on the MS-Deploy comman
   
 |Verb|Description|  
 |--------|---------------|  
-|dump|Provides information including name, version number, and description, about a source database contained in a .dacpac file. Specify the source database using the following format on the command line:<br /><br />**msdeploy –verb:dump –source:dbSqlPackage=”***.dacpac-file-path***”**|  
-|sync|Specifies dbSqlPackage actions using the following format on the command line:<br /><br />**msdeploy –verb:sync –source:dbSqlPackage**=”input” *[,DbSqlPackage-source-parameters] -***dest:dbSqlPackage**=”input” *[,DbSqlPackage-destination-parameters]*<br /><br />See the sections below for the valid source and destination parameters for the sync verb.|  
+|dump|Provides information including name, version number, and description, about a source database contained in a .dacpac file. Specify the source database using the following format on the command line:<br /><br />**msdeploy –verb:dump –source:dbSqlPackage="***.dacpac-file-path***"**|  
+|sync|Specifies dbSqlPackage actions using the following format on the command line:<br /><br />**msdeploy –verb:sync –source:dbSqlPackage**="input" *[,DbSqlPackage-source-parameters] -***dest:dbSqlPackage**="input" *[,DbSqlPackage-destination-parameters]*<br /><br />See the sections below for the valid source and destination parameters for the sync verb.|  
   
 ## dbSqlPackage Source  
 The **dbSqlPackage** provider takes an input that is either a valid SQL Server/SQL Azure connection string or a path to a .dacpac file on disk.  The syntax for specifying the input source for the provider is the following:  
@@ -128,7 +128,7 @@ The following **Destination** parameters are available for all **dbSqlPackage** 
 |**IgnoreLockHintsOnIndexes= {True &#124; False}**|**False**|Specifies whether to ignore or update differences in the lock hints on indexes when you publish to a database.|  
 |**IgnoreLoginSids= {True &#124; False}**|**True**|Specifies whether to ignore or update differences in the security identifier (SID) when you publish to a database.|  
 |**IgnoreNotForReplication= {True &#124; False}**|**False**|Specifies whether to ignore or update the not-for-replication setting when you publish to a database.|  
-|**IgnoreObjectPlacementOnPartitionScheme= {True &#124; False}**|**True**|Specifies whether to ignore or update an object’s placement on a partition scheme when you publish to a database.|  
+|**IgnoreObjectPlacementOnPartitionScheme= {True &#124; False}**|**True**|Specifies whether to ignore or update an object's placement on a partition scheme when you publish to a database.|  
 |**IgnorePartitionSchemes= {True &#124; False}**|**False**|Specifies whether to ignore or update differences in partition schemes and functions when you publish to a database.|  
 |**IgnorePermissions= {True &#124; False}**|**False**|Specifies whether to ignore or update differences in permissions when you publish to a database.|  
 |**IgnoreQuotedIdentifiers= {True &#124; False}**|**False**|Specifies whether to ignore or update differences in quoted identifier settings when you publish to a database.|  
@@ -177,7 +177,7 @@ The following **Destination** parameters are available for **DeployReport** and 
 The following is example syntax for an **Extract** operation using **dbSqlPackage**:  
   
 ```  
-MSDeploy.exe –verb:sync –source:dbSqlPackage="<source connection string>”,<source parameter> –dest:dbSqlPackage="<target dacpac file path>”  
+MSDeploy.exe –verb:sync –source:dbSqlPackage="<source connection string>",<source parameter> –dest:dbSqlPackage="<target dacpac file path>"  
 ```  
   
 The following is example syntax for a **Publish** operation using **dbSqlPackage**:  

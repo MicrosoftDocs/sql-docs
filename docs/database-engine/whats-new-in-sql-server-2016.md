@@ -85,7 +85,7 @@ This release offers improvements for columnstore indexes including updateable no
 
 For more details, see these topics in the [Columnstore Indexes Guide](../relational-databases/indexes/columnstore-indexes-overview.md) section of Books Online:
 
-- [Columnstore Indexes Versioned Feature Summary](~/relational-databases/indexes/columnstore-indexes-what-s-new.md) – includes what’s new.
+- [Columnstore Indexes Versioned Feature Summary](~/relational-databases/indexes/columnstore-indexes-what-s-new.md) – includes what's new.
 
 - [Columnstore Indexes Data Loading](../relational-databases/indexes/columnstore-indexes-data-loading-guidance.md)
 
@@ -287,7 +287,7 @@ SQL Server 2016 adds built-in support for importing and exporting JSON and worki
  For more information, see [PolyBase Guide](../relational-databases/polybase/polybase-guide.md).
 
 ## Stretch database
- Stretch Database is a new feature in [!INCLUDE[ssSQL15](../includes/sssql15-md.md)] that migrates your historical data transparently and securely to the Microsoft Azure cloud. You can access your SQL Server data seamlessly regardless of whether it’s on-premises or stretched to the cloud. You set the policy that determines where data is stored, and SQL Server handles the data movement in the background. The entire table is always online and queryable. And, Stretch Database doesn't require any changes to existing queries or applications – the location of the data is completely transparent to the application. For more info, see [Stretch Database](../sql-server/stretch-database/stretch-database.md).
+ Stretch Database is a new feature in [!INCLUDE[ssSQL15](../includes/sssql15-md.md)] that migrates your historical data transparently and securely to the Microsoft Azure cloud. You can access your SQL Server data seamlessly regardless of whether it's on-premises or stretched to the cloud. You set the policy that determines where data is stored, and SQL Server handles the data movement in the background. The entire table is always online and queryable. And, Stretch Database doesn't require any changes to existing queries or applications – the location of the data is completely transparent to the application. For more info, see [Stretch Database](../sql-server/stretch-database/stretch-database.md).
  
 ## Support for UTF-8
 [bcp Utility](../tools/bcp-utility.md), [BULK INSERT](../t-sql/statements/bulk-insert-transact-sql.md), and [OPENROWSET](../t-sql/functions/openrowset-transact-sql.md) now support the UTF-8 code page. For more information, see those topics and [Create a Format File &#40;SQL Server&#41;](../relational-databases/import-export/create-a-format-file-sql-server.md).
@@ -376,11 +376,11 @@ Row-level security introduces predicate based access control. It features a flex
 
 
 ### Always Encrypted
-With Always Encrypted, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] can perform operations on encrypted data, and best of all the encryption key resides with the application inside the customer’s trusted environment and not on the server. Always Encrypted secures customer data so DBAs do not have access to plain text data. Encryption and decryption of data happens transparently at the driver level minimizing changes that have to be made to existing applications. For more information, see [Always Encrypted &#40;Database Engine&#41;](../relational-databases/security/encryption/always-encrypted-database-engine.md).
+With Always Encrypted, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] can perform operations on encrypted data, and best of all the encryption key resides with the application inside the customer's trusted environment and not on the server. Always Encrypted secures customer data so DBAs do not have access to plain text data. Encryption and decryption of data happens transparently at the driver level minimizing changes that have to be made to existing applications. For more information, see [Always Encrypted &#40;Database Engine&#41;](../relational-databases/security/encryption/always-encrypted-database-engine.md).
 
 
 ### Dynamic Data Masking
-Dynamic data masking limits sensitive data exposure by masking it to non-privileged users. Dynamic data masking helps prevent unauthorized access to sensitive data by enabling customers to designate how much of the sensitive data to reveal with minimal impact on the application layer. It’s a policy-based security feature that hides the sensitive data in the result set of a query over designated database fields, while the data in the database is not changed. For more information, see [Dynamic Data Masking](../relational-databases/security/dynamic-data-masking.md).
+Dynamic data masking limits sensitive data exposure by masking it to non-privileged users. Dynamic data masking helps prevent unauthorized access to sensitive data by enabling customers to designate how much of the sensitive data to reveal with minimal impact on the application layer. It's a policy-based security feature that hides the sensitive data in the result set of a query over designated database fields, while the data in the database is not changed. For more information, see [Dynamic Data Masking](../relational-databases/security/dynamic-data-masking.md).
 
 
 ### New permissions

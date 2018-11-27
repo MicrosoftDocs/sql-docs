@@ -81,7 +81,7 @@ manager: craigg
   
      The default file names of the thesaurus files use following format:  
   
-     ‘ts’ + \<three-letter language-abbreviation> + '.xml'  
+     'ts' + \<three-letter language-abbreviation> + '.xml'  
   
      The name of the thesaurus file for a given language is specified in the registry in the following value HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<instance-name>\MSSearch\\<language-abbrev>.  
   

@@ -101,7 +101,7 @@ manager: craigg
   
  AMO is installed by SQL Server Setup and used by SQL Server client applications to connect to Analysis Services. You can also download and install it manually when using AMO in custom code (see [How to determine the version of the Analysis Services data providers](#bkmk_LibUpdate) in this topic). AMO can be found in the global assembly cache, as `Microsoft.AnalysisServices`.  
   
- A connection using AMO is typically minimal, consisting of “data source=\<servername>”. After a connection is established, you use the API to work with database collections and major objects. Both SSDT and SSMS use AMO to connect to an Analysis Services instance.  
+ A connection using AMO is typically minimal, consisting of "data source=\<servername>". After a connection is established, you use the API to work with database collections and major objects. Both SSDT and SSMS use AMO to connect to an Analysis Services instance.  
   
  For more information about connecting programmatically, see [Programming AMO Fundamental Objects](https://docs.microsoft.com/bi-reference/amo/programming-amo-fundamental-objects).  
   

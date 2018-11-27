@@ -120,9 +120,9 @@ manager: craigg
   
      The following will be exported for matching results:  
   
-    -   A list of clusters and the matched records in each cluster, including the rule name and the score. The pivot record will be marked as “Pivot”. The clusters will appear first in the export list.  
+    -   A list of clusters and the matched records in each cluster, including the rule name and the score. The pivot record will be marked as "Pivot". The clusters will appear first in the export list.  
   
-    -   A list of the unmatched records, with “NULL” in the Score and Rule Name columns. These records will be appended to the export list after the clusters.  
+    -   A list of the unmatched records, with "NULL" in the Score and Rule Name columns. These records will be appended to the export list after the clusters.  
   
      The following will be exported for survivorship results:  
   

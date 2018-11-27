@@ -58,7 +58,7 @@ manager: craigg
   
     ```  
   
-3.  When you run this, you will see this message: “The file "TestDB1Alter" has been modified in the system catalog. The new path will be used the next time the database is started.”  
+3.  When you run this, you will see this message: "The file "TestDB1Alter" has been modified in the system catalog. The new path will be used the next time the database is started."  
   
 4.  Then, set the database offline.  
   

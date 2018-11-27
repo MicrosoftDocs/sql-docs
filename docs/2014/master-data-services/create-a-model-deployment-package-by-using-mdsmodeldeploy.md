@@ -87,7 +87,7 @@ manager: craigg
   
      If you do not want to include data, do not use the `-version` and `-includedata` switches.  
   
-6.  Press Enter. When the package is successfully created, a message stating “MDSModelDeploy operation completed successfully” is displayed.  
+6.  Press Enter. When the package is successfully created, a message stating "MDSModelDeploy operation completed successfully" is displayed.  
   
 ## Next Steps  
   

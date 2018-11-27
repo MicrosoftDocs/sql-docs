@@ -65,11 +65,11 @@ SELECT * FROM db.sys.dm_db_xtp_checkpoint_stats;
 |hardened_truncation_lsn|**numeric(38)**|LSN of the truncation point.|  
 |log_bytes_since_last_close|**bigint**|Bytes from last close to the current end of log.|  
 |time_since_last_close_in_ms|**bigint**|Time since last close of the checkpoint.|  
-|current_checkpoint_id|**bigint**|Currently new segments are being assigned to this checkpoint. The checkpoint system is a pipeline. The current checkpoint is the one which segments from the log are being assigned to. Once it’s reached a limit, the checkpoint is released by the controller and a new one created as current.|  
+|current_checkpoint_id|**bigint**|Currently new segments are being assigned to this checkpoint. The checkpoint system is a pipeline. The current checkpoint is the one which segments from the log are being assigned to. Once it's reached a limit, the checkpoint is released by the controller and a new one created as current.|  
 |current_checkpoint_segment_count|**bigint**|Count of segments in the current checkpoint.|  
 |recovery_lsn_candidate|**bigint**|**Internally Only**. Candidate to be picked as recoverylsn when current_checkpoint_id closes.|  
 |outstanding_checkpoint_count|**bigint**|Number of checkpoints in the pipeline waiting to be closed.|  
-|closing_checkpoint_id|**bigint**|ID of the closing checkpoint.<br /><br /> Serializers are working in parallel, so once they’re finished then the checkpoint is a candidate to be closed by close thread. But the close thread can only close one at a time and it must be in order, so the closing checkpoint is the one that the close thread is working on.|  
+|closing_checkpoint_id|**bigint**|ID of the closing checkpoint.<br /><br /> Serializers are working in parallel, so once they're finished then the checkpoint is a candidate to be closed by close thread. But the close thread can only close one at a time and it must be in order, so the closing checkpoint is the one that the close thread is working on.|  
 |recovery_checkpoint_id|**bigint**|ID of the checkpoint to be used in recovery.|  
 |recovery_checkpoint_ts|**bigint**|Time stamp of recovery checkpoint.|  
 |bootstrap_recovery_lsn|**numeric(38)**|Recovery LSN for the bootstrap.|  

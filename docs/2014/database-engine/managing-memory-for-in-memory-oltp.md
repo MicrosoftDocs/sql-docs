@@ -18,7 +18,7 @@ manager: craigg
   
 |Section|Description|  
 |-------------|-----------------|  
-|[Estimate Memory Requirements for Memory-Optimized Tables](../relational-databases/in-memory-oltp/memory-optimized-tables.md)|Estimate a table’s memory needs.|  
+|[Estimate Memory Requirements for Memory-Optimized Tables](../relational-databases/in-memory-oltp/memory-optimized-tables.md)|Estimate a table's memory needs.|  
 |[Bind a Database with Memory-Optimized Tables to a Resource Pool](../relational-databases/in-memory-oltp/bind-a-database-with-memory-optimized-tables-to-a-resource-pool.md)|Step by step walkthrough to bind a database with a resource pool.|  
 |[Monitor and Troubleshoot Memory Usage](../relational-databases/in-memory-oltp/monitor-and-troubleshoot-memory-usage.md)|Tools you can use to monitor your memory usage. Also covers troubleshooting if memory usage gets too high.|  
 |[Resolve Out Of Memory Issues](../relational-databases/in-memory-oltp/resolve-out-of-memory-issues.md)|Steps to recover from an OOM (Out of Memory) situation.|  

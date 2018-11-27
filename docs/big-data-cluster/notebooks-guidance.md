@@ -100,7 +100,7 @@ Add a new code cell by clicking the **+Code** command in the toolbar.
 
 ![image12](media/notebooks-guidance/image12.png)
 
-You can also view the “Cell Options” when you click on the options icon below –
+You can also view the "Cell Options" when you click on the options icon below –
 
 ![image13](media/notebooks-guidance/image13.png)
 

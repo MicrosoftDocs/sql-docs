@@ -232,7 +232,7 @@ GO
     SELECT * FROM t_hk WITH (UPDLOCK)  
     ```  
   
--   For cross-container transactions, transactions with session isolation level “snapshot” that access memory-optimized tables is not supported. For example,  
+-   For cross-container transactions, transactions with session isolation level "snapshot" that access memory-optimized tables is not supported. For example,  
   
     ```tsql  
     SET TRANSACTION ISOLATION LEVEL SNAPSHOT  

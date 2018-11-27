@@ -29,7 +29,7 @@ manager: craigg
   
 1.  Click a cell in the row that contains transactions you want to view.  
   
-2.  Right-click and from the menu that’s displayed, click **View Transactions** or **View History**.  
+2.  Right-click and from the menu that's displayed, click **View Transactions** or **View History**.  
   
 3.  In the **View Transactions** dialog box, the list of transactions is displayed. To view all annotations associated with a transaction, click a row in the grid.  
   

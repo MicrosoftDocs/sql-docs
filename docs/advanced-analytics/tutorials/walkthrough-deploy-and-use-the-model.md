@@ -204,12 +204,7 @@ We also recommend that you check out some of these additional samples and resour
 
 + [Additional Resources](https://msdn.microsoft.com/microsoft-r/microsoft-r-more-resources)
 
-## Previous lesson
-
-[Build an R model and save it in SQL Server](walkthrough-build-and-save-the-model.md)
-
 ## Next steps
 
-[SQL Server R tutorials](sql-server-r-tutorials.md)
-
-[How to create a stored procedure using sqlrutils](../r/how-to-create-a-stored-procedure-using-sqlrutils.md)
+> [!div class="nextstepaction"]
+> [SQL Server R tutorials](sql-server-r-tutorials.md)

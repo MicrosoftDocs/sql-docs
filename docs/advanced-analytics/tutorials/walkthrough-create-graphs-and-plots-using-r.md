@@ -14,9 +14,9 @@ manager: cgronlun
 
 In this part of the walkthrough, you learn techniques for generating plots and maps using R with SQL Server data. You create a simple histogram, to get some practice, and then develop a more complex map plot.
 
-### Create a histogram
+## Create a histogram
 
-1. Generate the first plot, using the [rxHistogram](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxdatasource) function.  The rxHistogram function provides functionality similar to that in open source R packages, but can run in a remote execution context.
+1. Generate the first plot, using the [rxHistogram](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxdatasource) function.  The rxHistogram function provides functionality similar to that in open-source R packages, but can run in a remote execution context.
 
     ```R
     # Plot fare amount on SQL Server and return the plot
@@ -36,7 +36,7 @@ In this part of the walkthrough, you learn techniques for generating plots and m
     > That's because _inDataSource_ uses only the top 1000 rows. The ordering of rows using TOP is non-deterministic in the absence of an ORDER BY clause, so it's expected that the data and the resulting graph might vary.
     > This particular image was generated using about 10,000 rows of data. We recommend that you experiment with different numbers of rows to get different graphs, and note how long it takes to return the results in your environment.
 
-### Create a map plot
+## Create a map plot
 
 Typically, database servers block Internet access. This can be inconvenient when using R packages that need to download maps or other images to generate plots. However, there is a workaround that you might find useful when developing your own applications. Basically, you generate the map representation on the client, and then overlay on the map the points that are stored as attributes in the SQL Server table.
 
@@ -56,7 +56,7 @@ Typically, database servers block Internet access. This can be inconvenient when
 
     + The *mapPlot* function takes two arguments: an existing data object, which you defined earlier using RxSqlServerData, and the map representation passed from the client.
     + In the line beginning with the *ds* variable, rxImport is used to load into memory data from the previously created data source, *inDataSource*. (That data source contains only 1000 rows; if you want to create a map with more data points, you can substitute a different data source.)
-    + Whenever you use **open source** R functions, data must be loaded into data frames in local memory. However, by calling the [rxImport](https://docs.microsoft.com/r-server/r-reference/revoscaler/rximport) function, you can run in the memory of the remote compute context.
+    + Whenever you use open-source R functions, data must be loaded into data frames in local memory. However, by calling the [rxImport](https://docs.microsoft.com/r-server/r-reference/revoscaler/rximport) function, you can run in the memory of the remote compute context.
 
 2. Change the compute context to local, and load the libraries required for creating the maps.
 
@@ -91,10 +91,7 @@ Typically, database servers block Internet access. This can be inconvenient when
 
     ![plotting taxi rides using a custom R function](media/rsql-e2e-mapplot.png "plotting taxi rides using a custom R function")
 
-## Next lesson
+## Next steps
 
-[Create data features using R and SQL](walkthrough-create-data-features.md)
-
-## Previous lesson
-
-[Summarize data using R](walkthrough-view-and-summarize-data-using-r.md)
+> [!div class="nextstepaction"]
+> [Create data features using R and SQL](walkthrough-create-data-features.md)

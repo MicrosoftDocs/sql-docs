@@ -216,11 +216,7 @@ In this section, you learn how to persist the model, and how to call it to make 
 
 In the next and final lesson, you learn how to perform scoring against the saved model using [!INCLUDE[tsql](../../includes/tsql-md.md)].
 
-## Next lesson
+## Next steps
 
-[Deploy the R model and use in SQL](walkthrough-deploy-and-use-the-model.md)
-
-## Previous lesson
-
-[Create data features using R and SQL](walkthrough-create-data-features.md)
-
+> [!div class="nextstepaction"]
+> [Deploy the R model and use in SQL](walkthrough-deploy-and-use-the-model.md)

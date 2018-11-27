@@ -54,25 +54,24 @@ In your R environment, copy the following lines and execute the code in a Consol
 
 ### On the server
 
-You have several options for istalling packages on SQL Server. For example, SQL Server provides [R package management](../r/install-additional-r-packages-on-sql-server.md) feature that lets database administrators create a package repository and assign user the rights to install their own packages. However, if you are an administrator on the computer, you can install new packages using R, as long as you install to the correct library.
+You have several options for installing packages on SQL Server. For example, SQL Server provides [R package management](../r/install-additional-r-packages-on-sql-server.md) feature that lets database administrators create a package repository and assign user the rights to install their own packages. However, if you are an administrator on the computer, you can install new packages using R, as long as you install to the correct library.
 
 > [!NOTE]
 > On the server, **do not** install to a user library even if prompted. If you install to a user library, the SQL Server instance cannot find or run the packages. For more information, see [Installing new R Packages on SQL Server](../r/install-additional-r-packages-on-sql-server.md).
 
 1. On the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] computer, open RGui.exe **as an administrator**.  If you have installed SQL Server R Services using the defaults, RGui.exe can be found in C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\R_SERVICES\bin\x64).
 
-2.  At an R prompt, run the following R commands:
+2. At an R prompt, run the following R commands:
   
-    ```r
-    install.packages("ggmap", lib=grep("Program Files", .libPaths(), value=TRUE)[1])
-    install.packages("mapproj", lib=grep("Program Files", .libPaths(), value=TRUE)[1])
-    install.packages("ROCR", lib=grep("Program Files", .libPaths(), value=TRUE)[1])
-    install.packages("RODBC", lib=grep("Program Files", .libPaths(), value=TRUE)[1])
-    ```
+  ```R
+  install.packages("ggmap", lib=grep("Program Files", .libPaths(), value=TRUE)[1])
+  install.packages("mapproj", lib=grep("Program Files", .libPaths(), value=TRUE)[1])
+  install.packages("ROCR", lib=grep("Program Files", .libPaths(), value=TRUE)[1])
+  install.packages("RODBC", lib=grep("Program Files", .libPaths(), value=TRUE)[1])
+  ```
+  This example uses the R grep function to search the vector of available paths and find the path that includes "Program Files". For more information, see [https://www.rdocumentation.org/packages/base/functions/grep](https://www.rdocumentation.org/packages/base/functions/grep).
 
-    - This example uses the R grep function to search the vector of available paths and find the path that includes "Program Files". For more information, see [https://www.rdocumentation.org/packages/base/functions/grep](https://www.rdocumentation.org/packages/base/functions/grep).
-
-    - If you think the packages are already installed, check the list of installed packages by running `installed.packages()`.
+  If you think the packages are already installed, check the list of installed packages by running `installed.packages()`.
 
 ## Target audience
 
@@ -83,4 +82,5 @@ This walkthrough is intended for R or SQL developers. It provides an introductio
 
 ## Next steps
 
-
+> [!div class="nextstepaction"]
+> [Explore and summarize the data](walkthrough-view-and-summarize-data-using-r.md)

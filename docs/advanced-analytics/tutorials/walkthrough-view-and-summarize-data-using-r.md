@@ -80,7 +80,7 @@ Run the following R statements in an R environment. This section assumes a [data
     + `rxSetComputeContext` returns the previously active compute context invisibly so that you can use it
     + `rxGetComputeContext` returns the active compute context
     
-    Note that setting a compute context only affects operations that use functions in the **RevoScaleR** package; the compute context does not affect the way that open source R operations are performed.
+    Note that setting a compute context only affects operations that use functions in the **RevoScaleR** package; the compute context does not affect the way that open-source R operations are performed.
 
 ## Create a data source using RxSqlServer
 
@@ -165,9 +165,9 @@ In this section, you'll try out several of the functions provided in [!INCLUDE[r
   
     **Results**
 
-    If the rxSummary function runs successfuly, you should see results like these, followed by a list of statistics by category. 
+    If the rxSummary function runs successfully, you should see results like these, followed by a list of statistics by category. 
 
-    ```
+    ```R
     rxSummary(formula = ~fare_amount:F(passenger_count, 1,6), data = inDataSource)
     Data: inDataSource (RxSqlServerData Data Source)
     Number of valid observations: 1000

@@ -13,12 +13,12 @@
         {
             "source_path": "docs/advanced-analytics/tutorials/walkthrough-prepare-the-data.md",
             "redirect_url": "/sql/advanced-analytics/tutorials/demo-data-nyctaxi-in-sql",
-            "redirect_document_id": true
+            "redirect_document_id": false
         }, 
         {
             "source_path": "docs/advanced-analytics/tutorials/walkthrough-view-and-explore-the-data.md",
             "redirect_url": "/sql/advanced-analytics/tutorials/demo-data-nyctaxi-in-sql",
-            "redirect_document_id": true
+            "redirect_document_id": false
         }, 
         {
             "source_path": "docs/advanced-analytics/r/sqldev-train-and-save-a-model-using-t-sql.md",

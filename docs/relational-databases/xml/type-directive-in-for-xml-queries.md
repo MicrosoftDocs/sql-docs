@@ -83,7 +83,7 @@ FROM Person.Person
 FOR XML AUTO, TYPE).query('/Person.Person[1]');  
 ```  
   
- The inner `SELECT … FOR XML` query returns an **xml** type result to which the outer `SELECT` applies the `query()` method to the **xml** type. Note the `TYPE` directive specified.  
+ The inner `SELECT ... FOR XML` query returns an **xml** type result to which the outer `SELECT` applies the `query()` method to the **xml** type. Note the `TYPE` directive specified.  
   
  This is the result:  
   
@@ -99,7 +99,7 @@ FOR XML AUTO, TYPE).query('/Person.Person[1]');
   
  `</Person.Person>`  
   
- In the following query, the `value()` method of the **xml** data type is used to retrieve a value from the XML result returned by the `SELECT…FOR XML` query. For more information, see [value&#40;&#41; Method &#40;xml Data Type&#41;](../../t-sql/xml/value-method-xml-data-type.md).  
+ In the following query, the `value()` method of the **xml** data type is used to retrieve a value from the XML result returned by the `SELECT...FOR XML` query. For more information, see [value&#40;&#41; Method &#40;xml Data Type&#41;](../../t-sql/xml/value-method-xml-data-type.md).  
   
 ```  
 USE AdventureWorks2012;  

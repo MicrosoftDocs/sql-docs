@@ -33,7 +33,7 @@ The following table lists string manipulation functions. An application can dete
 |--------------|-----------------|  
 |**ASCII(** *string_exp* **)**  (ODBC 1.0)|Returns the ASCII code value of the leftmost character of *string_exp* as an integer.|  
 |**BIT_LENGTH(** *string_exp* **)**  (ODBC 3.0)|Returns the length in bits of the string expression.<br /><br /> Does not work only for string data types, therefore will not implicitly convert *string_exp* to string but instead will return the (internal) size of whatever datatype it is given.|  
-|**CHAR(** *code* **)**  (ODBC 1.0)|Returns the character that has the ASCII code value specified by *code*. The value of *code* should be between 0 and 255; otherwise, the return value is data source–dependent.|  
+|**CHAR(** *code* **)**  (ODBC 1.0)|Returns the character that has the ASCII code value specified by *code*. The value of *code* should be between 0 and 255; otherwise, the return value is data source-dependent.|  
 |**CHAR_LENGTH(** *string_exp* **)**  (ODBC 3.0)|Returns the length in characters of the string expression, if the string expression is of a character data type; otherwise, returns the length in bytes of the string expression (the smallest integer not less than the number of bits divided by 8). (This function is the same as the CHARACTER_LENGTH function.)|  
 |**CHARACTER_LENGTH(** *string_exp* **)**  (ODBC 3.0)|Returns the length in characters of the string expression, if the string expression is of a character data type; otherwise, returns the length in bytes of the string expression (the smallest integer not less than the number of bits divided by 8). (This function is the same as the CHAR_LENGTH function.)|  
 |**CONCAT(** *string_exp1*,*string_exp2***)**  (ODBC 1.0)|Returns a character string that is the result of concatenating *string_exp2* to *string_exp1*. The resulting string is DBMS-dependent. For example, if the column represented by *string_exp1* contained a NULL value, DB2 would return NULL but SQL Server would return the non-NULL string.|  
@@ -50,7 +50,7 @@ The following table lists string manipulation functions. An application can dete
 |**REPLACE(** *string_exp1*, *string_exp2*, *string_exp3***)** (ODBC 1.0)|Search *string_exp1* foroccurrences of *string_exp2*, and replace with *string_exp3*.|  
 |**RIGHT(** *string_exp*, *count***)** (ODBC 1.0)|Returns the rightmost *count* characters of *string_exp*.|  
 |**RTRIM(** *string_exp* **)** (ODBC 1.0)|Returns the characters of *string_exp* with trailing blanks removed.|  
-|**SOUNDEX(** *string_exp* **)** (ODBC 2.0)|Returns a data source–dependent character string representing the sound of the words in *string_exp*. For example, SQL Server returns a 4-digit SOUNDEX code; Oracle returns a phonetic representation of each word.|  
+|**SOUNDEX(** *string_exp* **)** (ODBC 2.0)|Returns a data source-dependent character string representing the sound of the words in *string_exp*. For example, SQL Server returns a 4-digit SOUNDEX code; Oracle returns a phonetic representation of each word.|  
 |**SPACE(** *count* **)** (ODBC 2.0)|Returns a character string consisting of *count* spaces.|  
 |**SUBSTRING(** *string_exp*, *start*, length**)** (ODBC 1.0)|Returns a character string that is derived from *string_exp*, beginning at the character position specified by *start* for *length* characters.|  
 |**UCASE(** *string_exp* **)** (ODBC 1.0)|Returns a string equal to that in *string_exp*, with all lowercase characters converted to uppercase.|

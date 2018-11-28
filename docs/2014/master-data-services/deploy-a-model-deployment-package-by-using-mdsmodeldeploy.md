@@ -33,7 +33,7 @@ manager: craigg
   
 -   You must be an administrator in the environment where you are deploying the model. For more information, see [Administrators &#40;Master Data Services&#41;](administrators-master-data-services.md).  
   
--   If you are updating a model with data, the version you’re deploying to cannot be **Locked** or **Committed**.  
+-   If you are updating a model with data, the version you're deploying to cannot be **Locked** or **Committed**.  
   
 ### To deploy a model deployment package  
   
@@ -64,19 +64,19 @@ manager: craigg
     -   To create a new model:  
   
         ```  
-        MDSModelDeploy deploynew –package PackageName -model ModelName -service ServiceName  
+        MDSModelDeploy deploynew -package PackageName -model ModelName -service ServiceName  
         ```  
   
     -   To create a clone of a model:  
   
         ```  
-        MDSModelDeploy deployclone –package PackageName  
+        MDSModelDeploy deployclone -package PackageName  
         ```  
   
     -   To update an existing model and its data:  
   
         ```  
-        MDSModelDeploy deployupdate –package PackageName –version VersionName  
+        MDSModelDeploy deployupdate -package PackageName -version VersionName  
         ```  
   
     > [!IMPORTANT]  
@@ -84,7 +84,7 @@ manager: craigg
   
      Where *PackageName* is the name of the package (.pkg) file, *ModelName* is the name of the new model, *VersionName* is the name of the version, and *ServiceName* is the name of the service that you returned in the previous step. Ensure that the model and version names match the exact case-sensitive names.  
   
-6.  When the package is successfully deployed, a message stating “MDSModelDeploy operation completed successfully” is displayed.  
+6.  When the package is successfully deployed, a message stating "MDSModelDeploy operation completed successfully" is displayed.  
   
  **Notes:**  
   

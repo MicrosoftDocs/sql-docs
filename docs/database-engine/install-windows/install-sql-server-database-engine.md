@@ -37,7 +37,7 @@ The following features are installed when you select **[!INCLUDE[ssNoVersion](..
 
 -   Full-Text Search - is an optional component  
   
--   Data Quality Services – is an optional component  
+-   Data Quality Services - is an optional component  
   
     > [!NOTE]  
     >  In this release, selecting the **Data Quality Services** check box in setup does not install the Data Quality Services (DQS) server. You will have to perform additional steps post installation to install DQS server. For more information, see [Install Data Quality Services](../../data-quality-services/install-windows/install-data-quality-services.md).  

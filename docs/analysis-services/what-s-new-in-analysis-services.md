@@ -26,7 +26,7 @@ SQL Server 2016 Service SP1 Analysis Services provides improved performance and 
 
 In particular, SQL Server 2016 SP1 Analysis Services features improvements in these key areas:
 
--	**NUMA awareness** - For better NUMA support, the in-memory (VertiPaq) engine inside Analysis Services now maintains a separate job queue on each NUMA node. This guarantees the segment scan jobs run on the same node where the memory is allocated for the segment data. Note, NUMA awareness is only enabled by default on systems with at least four NUMA nodes. On two-node systems, the costs of accessing remote allocated memory generally doesn’t warrant the overhead of managing NUMA specifics.
+-	**NUMA awareness** - For better NUMA support, the in-memory (VertiPaq) engine inside Analysis Services now maintains a separate job queue on each NUMA node. This guarantees the segment scan jobs run on the same node where the memory is allocated for the segment data. Note, NUMA awareness is only enabled by default on systems with at least four NUMA nodes. On two-node systems, the costs of accessing remote allocated memory generally doesn't warrant the overhead of managing NUMA specifics.
 -	**Memory allocation** - Analysis Services has been accelerated with Intel Threading Building Blocks, a scalable allocator that provides separate memory pools for every core. As the number of cores increases, the system can scale almost linearly.
 -	**Heap fragmentation** - The Intel TBB-based scalable allocator also helps to mitigate performance problems due to heap fragmentation that have been shown to occur with the Windows Heap.
 
@@ -128,7 +128,7 @@ refresh|Processes the object. ASSL equivalent is PROCESS.
 
 ## DAX
 ### Improved DAX formula editing
-Updates to the formula bar help you write formulas with more ease by differentiating functions, fields and measures using syntax coloring, it provides intelligent function and field suggestions and tells you if parts of your DAX expression are wrong using error *squiggles*. It also allows you to use multiple lines (Alt + Enter) and indentation (Tab). The formula bar now also allows you to write comments as part of your measures, just type “//” and everything after these characters on the same line will be considered a comment.
+Updates to the formula bar help you write formulas with more ease by differentiating functions, fields and measures using syntax coloring, it provides intelligent function and field suggestions and tells you if parts of your DAX expression are wrong using error *squiggles*. It also allows you to use multiple lines (Alt + Enter) and indentation (Tab). The formula bar now also allows you to write comments as part of your measures, just type "//" and everything after these characters on the same line will be considered a comment.
 
 ### DAX variables    
 This release now includes support for variables in DAX. Variables can now store the result of an expression as a named variable, which can then be passed as an argument to other measure expressions. Once resultant values have been calculated for a variable expression, those values do not change, even if the variable is referenced in another expression. For more information, see [VAR Function](http://msdn.microsoft.com/library/mt243785.aspx).    
@@ -183,7 +183,7 @@ At a minimum, an empty model will contain  the following JSON:
     
 ## DirectQuery    
 ### New DirectQuery implementation    
-This release sees significant enhancements in DirectQuery for tabular 1200 models. Here’s a summary:    
+This release sees significant enhancements in DirectQuery for tabular 1200 models. Here's a summary:    
 -   DirectQuery now generates simpler queries that provide better performance.    
 -   Extra  control over defining sample datasets used for model design and testing.    
 -   Row level security (RLS) is now supported for tabular 1200 models in DirectQuery mode. Previously, the presence of RLS prevented deploying a tabular model in DirectQuery mode.    

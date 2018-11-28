@@ -33,9 +33,9 @@ order by source_component_name, destination_component_name
   
 -   **total_rows** - the sum of all the rows sent by the component  
   
--   **wall_clock_time_ms** – the total elapsed execution time, in milliseconds, for each component  
+-   **wall_clock_time_ms** - the total elapsed execution time, in milliseconds, for each component  
   
--   **num_rows_per_millisecond** – the number of rows per millisecond sent by each component  
+-   **num_rows_per_millisecond** - the number of rows per millisecond sent by each component  
   
  The `HAVING` clause is used to prevent a divide-by-zero error in the calculations.  
   

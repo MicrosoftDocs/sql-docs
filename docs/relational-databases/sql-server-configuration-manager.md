@@ -67,11 +67,11 @@ manager: craigg
   
  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Configuration Manager allows you to create or remove an alias, change the order in which protocols are uses, or view properties for a server alias, including:  
   
--   Server Alias — The server alias used for the computer to which the client is connecting.  
+-   Server Alias - The server alias used for the computer to which the client is connecting.  
   
--   Protocol — The network protocol used for the configuration entry.  
+-   Protocol - The network protocol used for the configuration entry.  
   
--   Connection Parameters — The parameters associated with the connection address for the network protocol configuration.  
+-   Connection Parameters - The parameters associated with the connection address for the network protocol configuration.  
   
  The [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Configuration Manager also allows you to view information about failover cluster instances, though Cluster Administrator should be used for some actions such as starting and stopping the services.  
   

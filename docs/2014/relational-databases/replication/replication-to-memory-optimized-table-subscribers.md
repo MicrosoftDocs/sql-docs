@@ -236,7 +236,7 @@ manager: craigg
     GO  
     ```  
   
-6.  Apply the schema to a subscriber’s database and save the schema for future use.  
+6.  Apply the schema to a subscriber's database and save the schema for future use.  
   
 7.  Load the publisher (source) data to the subscriber. Data should not change at the publisher until you add a subscription.  You can use BCP as shown below:  
   

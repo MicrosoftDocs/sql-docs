@@ -45,7 +45,7 @@ EXEC managed_backup.sp_backup_config_advanced
  The database name for enabling managed backup on a specific database. If NULL or *, then this managed backup applies to all databases on the server.  
   
  @encryption_algorithm  
- The name of the encryption algorithm used during the backup to encrypt the backup file. The @encryption_algorithm is **SYSNAME**. It is a required parameter when configuring [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] for the first time for the database. Specify **NO_ENCRYPTION** if you do not wish to encrypt the backup file. When changing the [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] configuration settings, this parameter is optional – if the parameter is not specified then the existing configuration values are retained. The allowed values for this parameter are:  
+ The name of the encryption algorithm used during the backup to encrypt the backup file. The @encryption_algorithm is **SYSNAME**. It is a required parameter when configuring [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] for the first time for the database. Specify **NO_ENCRYPTION** if you do not wish to encrypt the backup file. When changing the [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] configuration settings, this parameter is optional - if the parameter is not specified then the existing configuration values are retained. The allowed values for this parameter are:  
   
 -   AES_128  
   

@@ -50,7 +50,7 @@ sys.dm_fts_parser('query_string', lcid, stoplist_id, accent_sensitivity)
  *accent_sensitivity*  
  Boolean value that controls whether full-text search is sensitive or insensitive to diacritics. *accent_sensitivity* is **bit**, with one of the following values:  
   
-|Value|Accent sensitivity is…|  
+|Value|Accent sensitivity is...|  
 |-----------|----------------------------|  
 |0|Insensitive<br /><br /> Words such as "café" and "cafe" are treated identically.|  
 |1|Sensitive<br /><br /> Words such as "café" and "cafe" are treated differently.|  

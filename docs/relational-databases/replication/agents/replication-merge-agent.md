@@ -61,7 +61,7 @@ replmerg [-?]
 [-InternetLogin internet_login]  
 [-InternetPassword internet_password]  
 [-InternetProxyLogin internet_proxy_login]  
-[–InternetProxyPassword internet_proxy_password]  
+[-InternetProxyPassword internet_proxy_password]  
 [-InternetProxyServer internet_proxy_server]  
 [-InternetSecurityMode [0|1]]  
 [-InternetTimeout internet_timeout]  
@@ -168,7 +168,7 @@ replmerg [-?]
 |**2**|Specifies that SSL is used, and that the certificate is verified.|  
 
  > [!NOTE]  
- >  A valid SSL certificate is defined with a fully qualified domain name of the SQL Server. In order for the agent to connect successfully when setting -EncryptionLevel to 2, create an alias on the local SQL Server. The ‘Alias Name’ parameter should be the server name and the ‘Server’ parameter should be set to the fully qualified name of the SQL Server.
+ >  A valid SSL certificate is defined with a fully qualified domain name of the SQL Server. In order for the agent to connect successfully when setting -EncryptionLevel to 2, create an alias on the local SQL Server. The 'Alias Name' parameter should be the server name and the 'Server' parameter should be set to the fully qualified name of the SQL Server.
 
  For more information, see [Security Overview &#40;Replication&#41;](../../../relational-databases/replication/security/security-overview-replication.md).  
   
@@ -240,7 +240,7 @@ replmerg [-?]
  **-InternetProxyLogin**  *internet_proxy_login*  
  Specifies the login name used when connecting to a proxy server, defined in *internet_proxy_server*, that requires authentication.  
   
- **–InternetProxyPassword**  *internet_proxy_password*  
+ **-InternetProxyPassword**  *internet_proxy_password*  
  Specifies the password used when connecting to a proxy server, defined in *internet_proxy_server*, that requires authentication.  
   
  **-InternetProxyServer**  *internet_proxy_server*  

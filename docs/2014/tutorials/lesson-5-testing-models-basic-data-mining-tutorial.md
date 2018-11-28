@@ -19,7 +19,7 @@ manager: craigg
   
  In this lesson you will validate your models using multiple methods:  
   
-1.  You’ll make predictions against the testing set to see how accurate the model is on known results. You’ll use a *lift chart* to measure its effectiveness.  
+1.  You'll make predictions against the testing set to see how accurate the model is on known results. You'll use a *lift chart* to measure its effectiveness.  
   
      [Testing Accuracy with Lift Charts &#40;Basic Data Mining Tutorial&#41;](../../2014/tutorials/testing-accuracy-with-lift-charts-basic-data-mining-tutorial.md)  
   

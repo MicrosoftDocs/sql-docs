@@ -49,7 +49,7 @@ The following table describes numeric functions that are included in the ODBC sc
 |**RADIANS(** *numeric_exp* **)**  (ODBC 2.0)|Returns the number of radians converted from *numeric_exp* degrees.|  
 |**RAND(**[*integer_exp*]**)**  (ODBC 1.0)|Returns a random floating-point value using *integer_exp* as the optional seed value.|  
 |**ROUND(** *numeric_exp*, _integer_exp_**)**  (ODBC 2.0)|Returns *numeric_exp* rounded to *integer_exp* places right of the decimal point. If *integer_exp* is negative, *numeric_exp* is rounded to &#124;*integer_exp*&#124; places to the left of the decimal point.|  
-|**SIGN(** *numeric_exp* **)**  (ODBC 1.0)|Returns an indicator of the sign of *numeric_exp*. If *numeric_exp* is less than zero, –1 is returned. If *numeric_exp* equals zero, 0 is returned. If *numeric_exp* is greater than zero, 1 is returned.|  
+|**SIGN(** *numeric_exp* **)**  (ODBC 1.0)|Returns an indicator of the sign of *numeric_exp*. If *numeric_exp* is less than zero, -1 is returned. If *numeric_exp* equals zero, 0 is returned. If *numeric_exp* is greater than zero, 1 is returned.|  
 |**SIN(** *float_exp* **)**  (ODBC 1.0)|Returns the sine of *float_exp*, where *float_exp* is an angle expressed in radians.|  
 |**SQRT(** *float_exp* **)**  (ODBC 1.0)|Returns the square root of *float_exp*.|  
 |**TAN(** *float_exp* **)**  (ODBC 1.0)|Returns the tangent of *float_exp*, where *float_exp* is an angle expressed in radians.|  

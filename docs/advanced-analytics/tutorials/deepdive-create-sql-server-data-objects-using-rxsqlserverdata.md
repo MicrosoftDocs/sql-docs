@@ -57,7 +57,7 @@ To create tables on the remote [!INCLUDE[ssNoVersion](../../includes/ssnoversion
   
     Although this parameter is optional, it is important for handling memory usage and efficient computations.  Most of the enhanced analytical functions in [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)] process data in chunks and store intermediate results, returning the final computations after all of the data has been read.
   
-    If the value of this parameter is too large, data access might be slow because you don’t have enough memory to efficiently process such a large chunk of data.  On some systems, if the value of *rowsPerRead* is too small, performance might be slower. Therefore, we recommend that you experiment with this setting on your system when you are working with a large data set.
+    If the value of this parameter is too large, data access might be slow because you don't have enough memory to efficiently process such a large chunk of data.  On some systems, if the value of *rowsPerRead* is too small, performance might be slower. Therefore, we recommend that you experiment with this setting on your system when you are working with a large data set.
   
     For this walkthrough, use the default batch process size defined by the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance to control the number of rows in each chunk. Save that value in the variable `sqlRowsPerRead`.
   

@@ -20,7 +20,7 @@ ms.author: "douglasl"
 manager: craigg
 ---
 # Configuring the Script Component in the Script Component Editor
-  Before you write custom code in the Script component, you must select the type of data flow component that you want to create—source, transformation, or destination—and then configure the component's metadata and properties in the **Script Transformation Editor**.  
+  Before you write custom code in the Script component, you must select the type of data flow component that you want to create-source, transformation, or destination-and then configure the component's metadata and properties in the **Script Transformation Editor**.  
   
 ## Selecting the Type of Component to Create  
  When you add a Script component to the Data Flow pane of [!INCLUDE[ssIS](../../../includes/ssis-md.md)] Designer, the **Select Script Component Type** dialog box appears. You preconfigure the component as a source, transformation, or destination. After you make this initial selection, you can continue to configure the component in the **Script Transformation Editor**.  
@@ -79,9 +79,9 @@ Dim currentCustomerName as String = CustomerInput.CustomerName
 > [!NOTE]  
 >  When the **Script Transformation Editor** creates the first output, the editor sets the **SynchronousInputID** property of the output to the **ID** of the component's input. However, when the editor creates subsequent outputs, the editor sets the **SynchronousInputID** properties of those outputs to zero.  
 >   
->  If you are creating a component with synchronous outputs, each output must have its **SynchronousInputID** property set to the **ID** of the component’s input. Therefore, each output that the editor creates after the first output must have its **SynchronousInputID** value changed from zero to the **ID** of the component's input.  
+>  If you are creating a component with synchronous outputs, each output must have its **SynchronousInputID** property set to the **ID** of the component's input. Therefore, each output that the editor creates after the first output must have its **SynchronousInputID** value changed from zero to the **ID** of the component's input.  
 >   
->  If you are creating a component with asynchronous outputs, each output must have its **SynchronousInputID** property set to zero. Therefore, the first output must have its **SynchronousInputID** value changed from the **ID** of the component’s input to zero.  
+>  If you are creating a component with asynchronous outputs, each output must have its **SynchronousInputID** property set to zero. Therefore, the first output must have its **SynchronousInputID** value changed from the **ID** of the component's input to zero.  
   
  For an example of directing rows to one of two synchronous outputs in the Script component, see [Creating a Synchronous Transformation with the Script Component](../../../integration-services/extending-packages-scripting-data-flow-script-component-types/creating-a-synchronous-transformation-with-the-script-component.md).  
   

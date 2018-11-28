@@ -21,9 +21,9 @@ This article will cover the key security-related concepts in the big data cluste
 
 There are three entry points to the big data cluster
 
-* HDFS/Spark (Knox) gateway – This is an HTTPS-based endpoint. Other endpoints are proxied through this. HDFS/Spark gateway is used for accessing services like webHDFS and Livy. Wherever you see references to Knox, this is the endpoint.
+* HDFS/Spark (Knox) gateway - This is an HTTPS-based endpoint. Other endpoints are proxied through this. HDFS/Spark gateway is used for accessing services like webHDFS and Livy. Wherever you see references to Knox, this is the endpoint.
 
-* Controller endpoint – big data cluster  management service that exposes REST APIs for managing the cluster. Some tools, such as the Admin portal, are also accessed through this endpoint.
+* Controller endpoint - big data cluster  management service that exposes REST APIs for managing the cluster. Some tools, such as the Admin portal, are also accessed through this endpoint.
 
 * Master Instance  - TDS endpoint for database tools and applications to connect to SQL Server Master Instance in the cluster.
 

@@ -161,7 +161,7 @@ ALTER SERVER ROLE LargeRC ADD MEMBER Anna;
 ```  
   
 ### I. Remove a login from a resource class.  
-The following example drops Anna’s membership in the `LargeRC` server role.  
+The following example drops Anna's membership in the `LargeRC` server role.  
   
 ```  
 ALTER SERVER ROLE LargeRC DROP MEMBER Anna;  

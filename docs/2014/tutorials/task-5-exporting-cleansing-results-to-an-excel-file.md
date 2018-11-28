@@ -33,7 +33,7 @@ manager: craigg
   
 7.  Open the **Cleansed Supplier List.xls** and do the following:  
   
-    1.  Ensure that there are no email addresses that end with adventure-work.com (without character ‘s’) by searching for adventure-work.com in the worksheet.  
+    1.  Ensure that there are no email addresses that end with adventure-work.com (without character 's') by searching for adventure-work.com in the worksheet.  
   
     2.  See that there is no **USA** value in the **Country** column.  
   

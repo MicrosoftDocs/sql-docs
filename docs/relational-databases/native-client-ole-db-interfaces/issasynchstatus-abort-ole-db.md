@@ -40,7 +40,7 @@ HRESULT Abort(
  *eOperation*[in]  
  The operation to abort. This should be the following value:  
   
- DBASYNCHOP_OPEN—The request to cancel applies to the asynchronous opening or population of a rowset or to the asynchronous initialization of a data source object.  
+ DBASYNCHOP_OPEN-The request to cancel applies to the asynchronous opening or population of a rowset or to the asynchronous initialization of a data source object.  
   
 ## Return Code Values  
  S_OK  

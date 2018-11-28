@@ -17,7 +17,7 @@ manager: craigg
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-  In the User and Group Permissions functional area, administrators can grant permission to functional areas, to attributes (on the Models tab), and to members (on the Hierarchy Members tab). Overlapping permissions are resolved to determine a user’s permission to each individual attribute value.  
+  In the User and Group Permissions functional area, administrators can grant permission to functional areas, to attributes (on the Models tab), and to members (on the Hierarchy Members tab). Overlapping permissions are resolved to determine a user's permission to each individual attribute value.  
   
  [Administrators &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md)  
   

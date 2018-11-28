@@ -47,7 +47,7 @@ manager: craigg
   
 10. In the **Manage Domain Values** page, click **Supplier Name** domain from the list of domains.  
   
-11. In the right pane, right-click **Lazy Country Storex** (notice ‘x’ at the end), and select **Lazy Country Store**. DQS suggests this change after running the spell checker on the domain. By default, speller is enabled on the domains you create.  
+11. In the right pane, right-click **Lazy Country Storex** (notice 'x' at the end), and select **Lazy Country Store**. DQS suggests this change after running the spell checker on the domain. By default, speller is enabled on the domains you create.  
   
      ![Correct Supplier Name - Lazy Country Store](../../2014/tutorials/media/et-discoveringknowledge-05.jpg "Correct Supplier Name - Lazy Country Store")  
   

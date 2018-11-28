@@ -27,7 +27,7 @@ manager: craigg
   
 |Column|Type|Description|  
 |------------|----------|-----------------|  
-|**handle_context_address**|**varbinary(8)**|Shows the address of the internal NSO structure associated with the client’s handle. Is nullable.|  
+|**handle_context_address**|**varbinary(8)**|Shows the address of the internal NSO structure associated with the client's handle. Is nullable.|  
 |**creation_request_id**|**int**|Shows a field from the REQ_PRE_CREATE I/O request used to create this handle. Is not nullable.|  
 |**creation_irp_id**|**int**|Shows a field from the REQ_PRE_CREATE I/O request used to create this handle. Is not nullable|  
 |**handle_id**|**int**|Shows the unique ID of this handle that is assigned by the driver. Is not nullable.|  

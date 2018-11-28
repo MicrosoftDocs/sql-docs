@@ -21,7 +21,7 @@ manager: craigg
 > [!IMPORTANT]
 >  Beginning with Windows 8 and Windows Server 2012, RDS server components are no longer included in the Windows operating system (see Windows 8 and [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) for more detail). RDS client components will be removed in a future version of Windows. Avoid using this feature in new development work, and plan to modify applications that currently use this feature. Applications that use RDS should migrate to [WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565).  
   
- The following code shows how to set the [ExecuteOptions](../../../ado/reference/rds-api/executeoptions-property-rds.md) and [FetchOptions](../../../ado/reference/rds-api/fetchoptions-property-rds.md) properties at design time. If left unset, **ExecuteOptions** defaults to **adcExecSync**. This setting indicates that when the **RDS.Refresh** method is called, it will be executed on the current calling thread—that is, synchronously. Cut and paste the following code to Notepad or another text editor and save it as **ExecuteOptionsDesignVBS.asp**.  
+ The following code shows how to set the [ExecuteOptions](../../../ado/reference/rds-api/executeoptions-property-rds.md) and [FetchOptions](../../../ado/reference/rds-api/fetchoptions-property-rds.md) properties at design time. If left unset, **ExecuteOptions** defaults to **adcExecSync**. This setting indicates that when the **RDS.Refresh** method is called, it will be executed on the current calling thread-that is, synchronously. Cut and paste the following code to Notepad or another text editor and save it as **ExecuteOptionsDesignVBS.asp**.  
   
 ```  
 <!-- BeginExecuteOptionsDesignVBS -->  

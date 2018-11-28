@@ -43,7 +43,7 @@ ms.author: maghan
  **SharePoint mode:** SharePoint Central Administration pages or PowerShell.  
   
 ##  <a name="bkmk_backup_sharepoint"></a> Backup SharePoint Mode Report Servers  
- For SharePoint mode report servers you can either use PowerShell commands or use the management pages for the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] service application. For more information, see the “Key Management” section of [Manage a Reporting Services SharePoint Service Application](../../reporting-services/report-server-sharepoint/manage-a-reporting-services-sharepoint-service-application.md)  
+ For SharePoint mode report servers you can either use PowerShell commands or use the management pages for the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] service application. For more information, see the "Key Management" section of [Manage a Reporting Services SharePoint Service Application](../../reporting-services/report-server-sharepoint/manage-a-reporting-services-sharepoint-service-application.md)  
   
 ##  <a name="bkmk_backup_configuration_manager"></a> Back up encryption keys -Reporting Services Configuration Manager (Native Mode)  
   
@@ -57,7 +57,7 @@ ms.author: maghan
   
 5.  Select **OK**.  
   
-###  <a name="bkmk_backup_rskeymgmt"></a> Back up encryption keys –rskeymgmt (Native Mode)  
+###  <a name="bkmk_backup_rskeymgmt"></a> Back up encryption keys -rskeymgmt (Native Mode)  
   
 1.  Run **rskeymgmt.exe** locally on the computer that hosts the report server. You must use the **-e** extract argument to copy the key, provide a file name, and specify a password. The following example illustrates the arguments you must specify:  
   
@@ -90,7 +90,7 @@ ms.author: maghan
   
 5.  Select **OK**. 
   
-###  <a name="bkmk_restore_rskeymgmt"></a> Restore encryption keys – rskeymgmt (Native Mode)  
+###  <a name="bkmk_restore_rskeymgmt"></a> Restore encryption keys - rskeymgmt (Native Mode)  
   
 1.  Run **rskeymgmt.exe** locally on the computer that hosts the report server. Use the **-a** argument to restore the keys. You must provide a fully-qualified file name and specify a password. The following example illustrates the arguments you must specify:  
   

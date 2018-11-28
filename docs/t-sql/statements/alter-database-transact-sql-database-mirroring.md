@@ -148,7 +148,7 @@ SELECT role_desc, state_desc FROM sys.database_mirroring_endpoints
   
 -   When safety is set to FULL and the witness is set to OFF, the session runs in high-safety mode without automatic failover. If the mirror server instance goes down, the principal server instance is unaffected. If the principal server instance goes down, you can force service (with possible data loss) to the mirror server instance.  
   
- If SAFETY is set to OFF, the session runs in high-performance mode, and automatic failover and manual failover are not supported. However, problems on the mirror do not affect the principal, and if the principal server instance goes down, you can, if necessary, force service (with possible data loss) to the mirror server instance—if WITNESS is set to OFF or the witness is currently connected to the mirror. For more information on forcing service, see "FORCE_SERVICE_ALLOW_DATA_LOSS" earlier in this section.  
+ If SAFETY is set to OFF, the session runs in high-performance mode, and automatic failover and manual failover are not supported. However, problems on the mirror do not affect the principal, and if the principal server instance goes down, you can, if necessary, force service (with possible data loss) to the mirror server instance-if WITNESS is set to OFF or the witness is currently connected to the mirror. For more information on forcing service, see "FORCE_SERVICE_ALLOW_DATA_LOSS" earlier in this section.  
   
 > [!IMPORTANT]  
 >  High-performance mode is not intended to use a witness. However, whenever you set SAFETY to OFF, we strongly recommend that you ensure that WITNESS is set to OFF.  

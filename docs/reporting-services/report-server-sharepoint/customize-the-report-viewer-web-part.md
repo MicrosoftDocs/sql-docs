@@ -1,6 +1,6 @@
 ---
 title: "Customize the Report Viewer web part | Microsoft Docs"
-ms.date: 09/25/2017
+ms.date: 11/26/2018
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
 ms.technology: report-server-sharepoint
@@ -12,11 +12,11 @@ ms.author: maghan
 ---
 # Customize the Report Viewer web part
 
-[!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016](../../includes/ssrs-appliesto-2016.md)] [!INCLUDE[ssrs-appliesto-sharepoint-2013-2016i](../../includes/ssrs-appliesto-sharepoint-2013-2016.md)] [!INCLUDE[ssrs-appliesto-not-pbirsi](../../includes/ssrs-appliesto-not-pbirs.md)]
+[!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../../includes/ssrs-appliesto-pbirs.md)] [!INCLUDE[ssrs-appliesto-sharepoint-2016-2019](../../includes/ssrs-appliesto-sharepoint-2016-2019.md)] [!INCLUDE[ssrs-appliesto-not-sharepoint-online](../../includes/ssrs-appliesto-not-sharepoint-online.md)]
 
 [!INCLUDE [ssrs-previous-versions](../../includes/ssrs-previous-versions.md)]
 
-You can use the Report Viewer web part to view reports that run on a report server that is configured for SharePoint integration. Reports that you can display include report definition (.rdl) files and Report Builder reports. Reports open in the Report Viewer web part in a new page automatically, but you can also add a Report Viewer web part to an existing web page or site if you want a particular report to always be visible on that page.
+You can use the Report Viewer web part to view reports that run on a report server configured for SharePoint integration. Reports that you can display include report definition (.rdl) files and Report Builder reports. Reports open in the Report Viewer web part in a new page automatically. You can also add a Report Viewer web part to an existing web page or site if you want a particular report to be always visible on that page.
 
 > [!NOTE]
 > Although they have identical names, the Report Viewer web part that is installed through the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Add-in is different from the Report Viewer web part that is included in the RSWebParts.cab file. The instructions in this topic are specifically for the Report Viewer web part that is installed through the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Add-in.
@@ -37,7 +37,7 @@ You can use the Report Viewer web part to view reports that run on a report serv
   
 ### Change default properties
 
- The Report Viewer web part has default properties that are ideally suited for opening reports on demand from a library or folder. By default, all available controls are displayed on the toolbar, and height and width are set to use all of the available space on the web page. If you want to modify the default properties, you can customize the web part through **Site Settings**.  
+ The Report Viewer web part has default properties that are ideally suited for opening reports on demand from a library or folder. By default, all available controls are displayed on the toolbar. Height and width are set to use all of the available space on the web page. If you want to modify the default properties, you can customize the web part through **Site Settings**.  
   
 1.  On the **Site Actions** menu, click **Site Settings**.  
   
@@ -49,7 +49,7 @@ You can use the Report Viewer web part to view reports that run on a report serv
   
 ### Customize an embedded Report Viewer in a web page
 
- You can set properties to make the Report Viewer fit within a web page. The report viewer can use the same style and colors as the page that contains it. You can hide all or part of the toolbar, document map, and parameters area to maximize the report viewing area within the allocated space. The report always uses the styles that are defined for it when it was created; you cannot customize report appearance after it is published to a SharePoint library.  
+ You can set properties to make the Report Viewer fit within a web page. The report viewer can use the same style and colors as the page that contains it. You can hide all or part of the toolbar, document map, and parameters area to maximize the report viewing area within the allocated space. The report always uses the styles you defined for it when you created it. You can't customize report appearance after you publish it to a SharePoint library.  
   
  If you are embedding the Report Viewer web part in a web page, you should set the **Report URL** property to a specific report. If you do not, the Report Viewer will display instructions for linking to a report. You cannot customize or remove the instructions.  
   

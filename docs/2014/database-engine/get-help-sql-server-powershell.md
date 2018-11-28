@@ -56,16 +56,16 @@ manager: craigg
 Get-Help Invoke-Sqlcmd  
   
 ## Get the full help.  
-Get-Help Invoke-Sqlcmd –Full  
+Get-Help Invoke-Sqlcmd -Full  
   
 ## Get the parameter descriptions.  
 Get-Help Invoke-Sqlcmd -Parameter *  
   
 ## Get the code examples.  
-Get-Help Invoke-Sqlcmd –Examples  
+Get-Help Invoke-Sqlcmd -Examples  
   
 ## Get the syntax diagram.  
-Get-Help Invoke-Sqlcmd –Syntax  
+Get-Help Invoke-Sqlcmd -Syntax  
 ```  
   
 ## Get a List of Providers  
@@ -99,7 +99,7 @@ Get-Help SQLServer
   
 1.  Either CD to a node in the SQL Server path, or create a variable set to that location.  
   
-2.  Run the **Get-Member** cmdlet with the –Type parameter set to either Methods or Properties  
+2.  Run the **Get-Member** cmdlet with the -Type parameter set to either Methods or Properties  
   
 ### Examples: Listing Methods and Properties  
  This example lists the methods supported for the Databases node:  

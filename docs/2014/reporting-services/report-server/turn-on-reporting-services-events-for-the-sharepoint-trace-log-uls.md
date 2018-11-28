@@ -81,9 +81,9 @@ Get-SPDiagnosticConfig
   
 1.  **Product:SQL Server Reporting Services**  
   
-2.  **Category:** Events related to the server will have the characters “Report Server”, at the beginning of the name. For example “Report Server Alerting Runtime” These events are also logged to the report server log files.  
+2.  **Category:** Events related to the server will have the characters "Report Server", at the beginning of the name. For example "Report Server Alerting Runtime" These events are also logged to the report server log files.  
   
-3.  **Category:** Events related to or communicated from a web front-end component do not contain “Report Server”. For example “Service Application Proxy” Report Server Alerting Runtime”. The WFE entries do contain a CorrelationID but the server entries do not.  
+3.  **Category:** Events related to or communicated from a web front-end component do not contain "Report Server". For example "Service Application Proxy" Report Server Alerting Runtime". The WFE entries do contain a CorrelationID but the server entries do not.  
   
 ##  <a name="bkmk_list"></a> List of SQL Server Reporting Services Events  
  The following table is a list of the events in the SQL Server Reporting Services Category:  
@@ -96,7 +96,7 @@ Get-SPDiagnosticConfig
 |Local Mode Rendering||  
 |SOAP Client Proxy||  
 |UI Pages||  
-|Power View|Log entries that were written to the **LogClientTraceEvents** API. These entries are sourced from client applications, including [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)], a feature of [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] Add-in for [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[SPS2010](../../includes/sps2010-md.md)] Enterprise Edition.<br /><br /> All log entries from the LogClientTraceEvents API will be logged under the **Category** of “SQL Server Reporting Services” and the **Area** of “Power View”.<br /><br /> The content of entries logged with the area of “Power View” is determined by the client application.|  
+|Power View|Log entries that were written to the **LogClientTraceEvents** API. These entries are sourced from client applications, including [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)], a feature of [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] Add-in for [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[SPS2010](../../includes/sps2010-md.md)] Enterprise Edition.<br /><br /> All log entries from the LogClientTraceEvents API will be logged under the **Category** of "SQL Server Reporting Services" and the **Area** of "Power View".<br /><br /> The content of entries logged with the area of "Power View" is determined by the client application.|  
 |Report Server Alerting Runtime||  
 |Report Server App Domain Manager||  
 |Report Server Buffered Response||  
@@ -134,10 +134,10 @@ Get-SPDiagnosticConfig
 |Shared Service|Sample entries:<br /><br /> MediumUpdating ReportingWebServiceApplication<br /><br /> MediumGranting access to content databases.<br /><br /> MediumProvisioning instances for ReportingWebServiceApplication<br /><br /> MediumProcessing service account change for ReportingWebServiceApplication<br /><br /> MediumSetting database permissions.|  
   
 ##  <a name="bkmk_powershell"></a> View a Log file with PowerShell  
- ![PowerShell related content](../media/rs-powershellicon.jpg "PowerShell related content")You can use PowerShell to return a list of the [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] related events from a ULS Log file. Type the following command from the SharePoint 2010 Management Shell to return a filtered list of rows from the file a ULS log file UESQL11SPOINT-20110606-1530.log, that contain “**sql server reporting services**”:  
+ ![PowerShell related content](../media/rs-powershellicon.jpg "PowerShell related content")You can use PowerShell to return a list of the [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] related events from a ULS Log file. Type the following command from the SharePoint 2010 Management Shell to return a filtered list of rows from the file a ULS log file UESQL11SPOINT-20110606-1530.log, that contain "**sql server reporting services**":  
   
 ```  
-Get-content -path "C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\14\LOGS\UESQL11SPOINT-20110606-1530.log" | select-string "sql server reporting services”  
+Get-content -path "C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\14\LOGS\UESQL11SPOINT-20110606-1530.log" | select-string "sql server reporting services"  
 ```  
   
  There are also many tools you can download which will allow you read ULS logs. For example, the [SharePoint LogViewer](http://sharepointlogviewer.codeplex.com/) or [SharePoint ULS Log Viewer](http://ulsviewer.codeplex.com/workitem/list/basic). Both are available on CodePlex.  

@@ -34,7 +34,7 @@ manager: craigg
   
  These changes have the following effect on user-defined system functions:  
   
--   Data Definition Language (DDL) statements that reference **system_function_schema** will fail. For example, the statement `CREATE FUNCTION system`_`function`\_`schema.fn`\_`MySystemFunction` … will not succeed.  
+-   Data Definition Language (DDL) statements that reference **system_function_schema** will fail. For example, the statement `CREATE FUNCTION system`_`function`\_`schema.fn`\_`MySystemFunction` ... will not succeed.  
   
 -   After you upgrade to [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], existing objects that are owned by **system_function_schema** are contained only in the **sys** schema of the **master** database. Because system objects cannot be modified, these functions can never be changed or dropped from the **master** database. Additionally, these functions cannot be invoked from other databases by specifying only a one-part function name.  
   

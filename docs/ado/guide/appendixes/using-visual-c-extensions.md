@@ -133,7 +133,7 @@ Update(CADORecordBinding *binding)
 |**adFldSignMismatch**|5|Value is signed and variable data type is unsigned.|
 |**adFldDataOverFlow**|6|Value is larger than could be stored in the variable data type.|
 |**adFldCantCreate**|7|Unknown column type and field already open.|
-|**adFldUnavailable**|8|Field value could not be determined—for example, on a new, unassigned field with no default value.|
+|**adFldUnavailable**|8|Field value could not be determined-for example, on a new, unassigned field with no default value.|
 |**adFldPermissionDenied**|9|When updating, no permission to write data.|
 |**adFldIntegrityViolation**|10|When updating, field value would violate column integrity.|
 |**adFldSchemaViolation**|11|When updating, field value would violate column schema.|

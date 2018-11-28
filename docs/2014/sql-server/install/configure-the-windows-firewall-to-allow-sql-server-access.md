@@ -116,7 +116,7 @@ manager: craigg
   
     -   [How to Use the Netsh.exe Tool and Command-Line Switches](http://support.microsoft.com/kb/242468)  
   
-    -   [How to use the “netsh advfirewall firewall” context instead of the “netsh firewall” context to control Windows Firewall behavior in Windows Server 2008 and in Windows Vista](http://support.microsoft.com/kb/947709)  
+    -   [How to use the "netsh advfirewall firewall" context instead of the "netsh firewall" context to control Windows Firewall behavior in Windows Server 2008 and in Windows Vista](http://support.microsoft.com/kb/947709)  
   
     -   [The "netsh firewall" command together with the "profile=all" parameter does not configure the public profile on a Windows Vista-based computer](http://support.microsoft.com/kb/947213)  
   

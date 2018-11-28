@@ -200,7 +200,7 @@ manager: craigg
  [Analysis Services Instance Management](instances/analysis-services-instance-management.md)   
  [What's New in Analysis Services and Business Intelligence](what-s-new-in-analysis-services.md)   
  [What's New &#40;Reporting Services&#41;](../../2014/reporting-services/what-s-new-reporting-services.md)   
- [What’s New in PowerPivot](http://go.microsoft.com/fwlink/?LinkId=238141)   
+ [What's New in PowerPivot](http://go.microsoft.com/fwlink/?LinkId=238141)   
  [PowerPivot Help for SQL Server 2012](http://go.microsoft.com/fwlink/?LinkID=220946)   
  [PowerPivot BI Semantic Model Connection &#40;.bism&#41;](power-pivot-sharepoint/power-pivot-bi-semantic-model-connection-bism.md)   
  [Create and Manage Shared Data Sources &#40;Reporting Services in SharePoint Integrated Mode&#41;](../../2014/reporting-services/create-manage-shared-data-sources-reporting-services-sharepoint-integrated-mode.md)  

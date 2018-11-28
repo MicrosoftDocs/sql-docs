@@ -28,19 +28,19 @@ manager: craigg
   
  TYPE indicates the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] edition. The following file name segments are used to identify [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] editions:  
   
--   ENT – Enterprise Edition: Server/Client Access License (CAL) Licensing  
+-   ENT - Enterprise Edition: Server/Client Access License (CAL) Licensing  
   
--   ENTCORE – Enterprise Edition: Core-based Licensing  
+-   ENTCORE - Enterprise Edition: Core-based Licensing  
   
--   BI – Business Intelligence  
+-   BI - Business Intelligence  
   
--   DEV – Developer  
+-   DEV - Developer  
   
--   STD – Standard  
+-   STD - Standard  
   
--   WEB – Web  
+-   WEB - Web  
   
--   EXPR – Express  
+-   EXPR - Express  
   
  LCID is a number, which refers to the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] language locale ID.  The following file name segments are used to identify the corresponding [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] languages:  
   

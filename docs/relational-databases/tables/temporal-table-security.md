@@ -36,15 +36,15 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
 |Operation|Current Table|History Table|  
 |---------------|-------------------|-------------------|  
 |**DROP TABLE**|Disallowed|Disallowed|  
-|**ALTER TABLE…SWITCH PARTITION**|SWITCH IN only (see [Partitioning with Temporal Tables](../../relational-databases/tables/partitioning-with-temporal-tables.md))|SWITCH OUT only (see [Partitioning with Temporal Tables](../../relational-databases/tables/partitioning-with-temporal-tables.md))|  
-|**ALTER TABLE…DROP PERIOD**|Disallowed|-|  
-|**ALTER TABLE…ADD PERIOD**|-|Disallowed|  
+|**ALTER TABLE...SWITCH PARTITION**|SWITCH IN only (see [Partitioning with Temporal Tables](../../relational-databases/tables/partitioning-with-temporal-tables.md))|SWITCH OUT only (see [Partitioning with Temporal Tables](../../relational-databases/tables/partitioning-with-temporal-tables.md))|  
+|**ALTER TABLE...DROP PERIOD**|Disallowed|-|  
+|**ALTER TABLE...ADD PERIOD**|-|Disallowed|  
   
 ## Allowed ALTER TABLE operations  
   
 |Operation|Current|History|  
 |---------------|-------------|-------------|  
-|**ALTER TABLE…REBUILD**|Allowed (independently)|Allowed (independently)|  
+|**ALTER TABLE...REBUILD**|Allowed (independently)|Allowed (independently)|  
 |**CREATE INDEX**|Allowed (independently)|Allowed (independently)|  
 |**CREATE STATISTICS**|Allowed (independently)|Allowed (independently)|  
   

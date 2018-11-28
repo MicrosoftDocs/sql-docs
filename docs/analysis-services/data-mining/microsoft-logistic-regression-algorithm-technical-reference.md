@@ -31,13 +31,13 @@ manager: kfile
 ### Scoring Inputs  
  *Scoring* in the context of a neural network model or logistic regression model means the process of converting the values that are present in the data into a set of values that use the same scale and therefore can be compared to each other. For example, suppose the inputs for Income range from 0 to 100,000 whereas the inputs for [Number of Children] range from 0 to 5. This conversion process allows you to compare the importance of each input regardless of the difference in values.  
   
- For each state that appears in the training set, the model generates an input. For discrete or discretized inputs, an additional input is created to represent the Missing state, if the missing state appears at least once in the training set. For continuous inputs, at most two input nodes are created: one for Missing values, if present in the training data, and one input for all existing, or non-null, values. Each input is scaled to a numeric format using the z-score normalization method, `(x – μ)\StdDev`.  
+ For each state that appears in the training set, the model generates an input. For discrete or discretized inputs, an additional input is created to represent the Missing state, if the missing state appears at least once in the training set. For continuous inputs, at most two input nodes are created: one for Missing values, if present in the training data, and one input for all existing, or non-null, values. Each input is scaled to a numeric format using the z-score normalization method, `(x - μ)\StdDev`.  
   
  During z-score normalization, the mean (μ) and standard deviation are obtained over the complete training set.  
   
  **Continuous values**  
   
- Value is present:   `(X – μ)/σ ` (X is the actual value being encoded)  
+ Value is present:   `(X - μ)/σ ` (X is the actual value being encoded)  
   
  Value is absent:    `-   μ/σ `  (negative mu divided by sigma)  
   
@@ -47,9 +47,9 @@ manager: kfile
   
  StdDev  `= sqrt(p\(1-p))`  
   
- Value is present:     `\(1 – μ)/σ` (One minus mu divided by sigma)  
+ Value is present:     `\(1 - μ)/σ` (One minus mu divided by sigma)  
   
- Value is absent:     `(– μ)/σ` (negative mu divided by sigma)  
+ Value is absent:     `(- μ)/σ` (negative mu divided by sigma)  
   
 ### Understanding Logistic Regression Coefficients  
  There are various methods in the statistical literature for performing logistic regression, but an important part of all methods is assessing the fit of the model. A variety of goodness-to-fit statistics have been proposed, among them odds ratios and covariate patterns. A discussion of how to measure the fit of a model is beyond the scope of this topic; however, you can retrieve the value of the coefficients in the model and use them to design your own measures of fit.  
@@ -67,9 +67,9 @@ FROM <model name>.CONTENT
 WHERE NODE_TYPE = 23  
 ```  
   
- For each output value, this query returns the coefficients and an ID that points back to the related input node. It also returns a row that contains the value of the output and the intercept. Each input X has its own coefficient (Ci), but the nested table also contains a “free” coefficient (Co), calculated according to the following formula:  
+ For each output value, this query returns the coefficients and an ID that points back to the related input node. It also returns a row that contains the value of the output and the intercept. Each input X has its own coefficient (Ci), but the nested table also contains a "free" coefficient (Co), calculated according to the following formula:  
   
- `F(X) = X1*C1 + X2*C2 + … +Xn*Cn + X0`  
+ `F(X) = X1*C1 + X2*C2 + ... +Xn*Cn + X0`  
   
  Activation: `exp(F(X)) / (1 + exp(F(X)) )`  
   

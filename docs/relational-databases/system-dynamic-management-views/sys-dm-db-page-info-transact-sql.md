@@ -122,7 +122,7 @@ Requires the `VIEW DATABASE STATE` permission in the database.
 ## Examples  
   
 ### A. Displaying all the properties of a page
-The following query returns one row with all the page information for a given `database_id`, `file_id`, `page_id` combination with default mode (‘LIMITED’)
+The following query returns one row with all the page information for a given `database_id`, `file_id`, `page_id` combination with default mode ('LIMITED')
 
 ```sql
 SELECT *  

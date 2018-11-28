@@ -40,7 +40,7 @@ manager: craigg
 ## System and user-defined variables  
  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] supports two types of variables: user-defined variables and system variables. User-defined variables are defined by package developers, and system variables are defined by [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]. You can create as many user-defined variables as a package requires, but you cannot create additional system variables.  
   
- All variables—system and user-defined—can be used in the parameter bindings that the Execute SQL task uses to map variables to parameters in SQL statements. For more information, see [Execute SQL Task](../integration-services/control-flow/execute-sql-task.md) and [Parameters and Return Codes in the Execute SQL Task](https://msdn.microsoft.com/library/a3ca65e8-65cf-4272-9a81-765a706b8663).  
+ All variables-system and user-defined-can be used in the parameter bindings that the Execute SQL task uses to map variables to parameters in SQL statements. For more information, see [Execute SQL Task](../integration-services/control-flow/execute-sql-task.md) and [Parameters and Return Codes in the Execute SQL Task](https://msdn.microsoft.com/library/a3ca65e8-65cf-4272-9a81-765a706b8663).  
   
 > [!NOTE]  
 >  The names of user-defined and system variables are case sensitive.  
@@ -215,7 +215,7 @@ Use the **Add Variable** dialog box to specify the properties of a new variable.
   
 4.  Select the variable to delete, and then click **Delete Variable**.  
   
-     If you don’t see the variable in the Variables window, click **Grid Options** and then select **Show variables of all scopes**.  
+     If you don't see the variable in the Variables window, click **Grid Options** and then select **Show variables of all scopes**.  
   
 5.  If the **Confirm Deletion of Variables** dialog box opens, click **Yes** to confirm.  
   
@@ -231,7 +231,7 @@ Use the **Add Variable** dialog box to specify the properties of a new variable.
   
 4.  Select the variable and then click **Move Variable**.  
   
-     If you don’t see the variable in the Variables window, click **Grid Options** and then select **Show variables of all scopes**.  
+     If you don't see the variable in the Variables window, click **Grid Options** and then select **Show variables of all scopes**.  
   
 5.  In the **Select New Scope** dialog box, select the package or a container, task, or event handler in the package, to change the variable scope.  
   

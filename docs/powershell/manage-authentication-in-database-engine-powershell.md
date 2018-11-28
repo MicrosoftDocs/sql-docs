@@ -14,7 +14,7 @@ manager: craigg
 # Manage Authentication in Database Engine PowerShell
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-By default, the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] PowerShell components use Windows Authentication when connecting to an instance of the [!INCLUDE[ssDE](../includes/ssde-md.md)]. You can use SQL Server Authentication by either defining a PowerShell virtual drive, or by specifying the **–Username** and **–Password** parameters for **Invoke-Sqlcmd**.  
+By default, the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] PowerShell components use Windows Authentication when connecting to an instance of the [!INCLUDE[ssDE](../includes/ssde-md.md)]. You can use SQL Server Authentication by either defining a PowerShell virtual drive, or by specifying the **-Username** and **-Password** parameters for **Invoke-Sqlcmd**.  
   
 > [!NOTE]
 > There are two SQL Server PowerShell modules; **SqlServer** and **SQLPS**. The **SQLPS** module is included with the SQL Server installation (for backwards compatibility), but is no longer being updated. The most up-to-date PowerShell module is the **SqlServer** module. The **SqlServer** module contains updated versions of the cmdlets in **SQLPS**, and also includes new cmdlets to support the latest SQL features.  
@@ -68,7 +68,7 @@ cd SQLAuth
 ##  <a name="SQLAuthInvSqlCmd"></a> SQL Server Authentication Using Invoke-Sqlcmd  
  **To use Invoke-Sqlcmd with SQL Server Authentication**  
   
-1.  Use the **–Username** parameter to specify a login ID, and the **–Password** parameter to specify the associated password.  
+1.  Use the **-Username** parameter to specify a login ID, and the **-Password** parameter to specify the associated password.  
   
 ### Example (Invoke-Sqlcmd)  
  This example uses the read-host cmdlet to prompt the user for a password, and then connects using SQL Server Authentication.  
@@ -77,7 +77,7 @@ cd SQLAuth
 ## Prompt the user for their password.  
 $pwd = read-host -AsSecureString -Prompt "Password"  
   
-Invoke-Sqlcmd -Query "SELECT GETDATE() AS TimeOfQuery;" -ServerInstance "MyComputer\MyInstance" –Username “MyLogin” –Password $pwd  
+Invoke-Sqlcmd -Query "SELECT GETDATE() AS TimeOfQuery;" -ServerInstance "MyComputer\MyInstance" -Username "MyLogin" -Password $pwd  
 ```  
   
 ## See Also  

@@ -20,7 +20,7 @@ monikerRange: ">=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions"
 
 [!INCLUDE [ssrs-previous-versions](../../includes/ssrs-previous-versions.md)]
 
-SQL Server Reporting Services in SharePoint, enables report creation and viewing in document libraries, [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] subscription delivery of reports through email,  [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)], data alerting, and report management features, all in a deployment of based of [!INCLUDE[msCoName](../../includes/msconame-md.md)] SharePoint. For more information regarding features in SharePoint mode, see the section “Feature Support and Behavior Differences by Server Mode” in [Reporting Services Report Server](../../reporting-services/report-server-sharepoint/reporting-services-report-server.md).
+SQL Server Reporting Services in SharePoint, enables report creation and viewing in document libraries, [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] subscription delivery of reports through email,  [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)], data alerting, and report management features, all in a deployment of based of [!INCLUDE[msCoName](../../includes/msconame-md.md)] SharePoint. For more information regarding features in SharePoint mode, see the section "Feature Support and Behavior Differences by Server Mode" in [Reporting Services Report Server](../../reporting-services/report-server-sharepoint/reporting-services-report-server.md).
 
 > [!NOTE]
 > Reporting Services integration with SharePoint is no longer available after SQL Server 2016.

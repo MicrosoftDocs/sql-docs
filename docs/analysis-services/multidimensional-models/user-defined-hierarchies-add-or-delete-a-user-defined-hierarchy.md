@@ -41,11 +41,11 @@ manager: kfile
   
 -   On the **Dimension Structure** tab, click the user-defined hierarchy that you want to remove in the **Hierarchies** pane. On the toolbar, click **Delete**.  
   
-     — or —  
+     - or -  
   
 -   Right-click the user-defined hierarchy that you want to remove in the **Hierarchies** pane and then click **Delete**.  
   
-     — or —  
+     - or -  
   
 -   Drag the user-defined hierarchy off of the design surface.  
   

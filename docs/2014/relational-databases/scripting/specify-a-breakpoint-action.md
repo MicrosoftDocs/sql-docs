@@ -25,7 +25,7 @@ manager: craigg
   
  A print message is specified in the **Print a Message** option, and is specified as a text string that includes expressions containing information from the [!INCLUDE[tsql](../../includes/tsql-md.md)] being debugged. Expressions include:  
   
--   A [!INCLUDE[tsql](../../includes/tsql-md.md)] expression contained in curly braces ({}). The expressions can include [!INCLUDE[tsql](../../includes/tsql-md.md)] variables, parameters, and built-in functions. Examples include {@MyVariable}, {@NameParameter}, {@@SPID}, or {SERVERPROPERTY(‘ProcessID’)}.  
+-   A [!INCLUDE[tsql](../../includes/tsql-md.md)] expression contained in curly braces ({}). The expressions can include [!INCLUDE[tsql](../../includes/tsql-md.md)] variables, parameters, and built-in functions. Examples include {@MyVariable}, {@NameParameter}, {@@SPID}, or {SERVERPROPERTY('ProcessID')}.  
   
 -   One of the following keywords:  
   
@@ -37,7 +37,7 @@ manager: craigg
   
     4.  $FUNCTION returns the name of the stored procedure or user-defined function where the breakpoint is set. If the breakpoint is set in the editor window, $FUNCTION returns the name of the script file being edited.  
   
-    5.  $PID and $PNAME return the ID and name of the operating system process running the instance of the Database Engine where the [!INCLUDE[tsql](../../includes/tsql-md.md)] is running. $PID returns the same ID as SERVERPROPERTY(‘ProcessID’), except that $PID is a hexadecimal value while SERVERPROPERTY(‘ProcessID’) is a decimal value.  
+    5.  $PID and $PNAME return the ID and name of the operating system process running the instance of the Database Engine where the [!INCLUDE[tsql](../../includes/tsql-md.md)] is running. $PID returns the same ID as SERVERPROPERTY('ProcessID'), except that $PID is a hexadecimal value while SERVERPROPERTY('ProcessID') is a decimal value.  
   
     6.  $TID and $TNAME return the ID and name of the operating system thread running the [!INCLUDE[tsql](../../includes/tsql-md.md)] batch. The thread is one associated with the process running the instance of the Database Engine. $TID returns the same value as SELECT kpid FROM sys.sysprocesses WHERE spid = @@SPID, except that $TID is a hexadecimal value while kpid is a decimal value.  
   

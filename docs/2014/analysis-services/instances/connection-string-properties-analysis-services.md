@@ -65,10 +65,10 @@ manager: craigg
 |`Persist Encrypted`|Set this property when the client application requires the data source object to persist sensitive authentication information, such as a password, in encrypted form. By default, authentication information is not persisted.|  
 |`Persist Security Info`|Valid values are True and False. When set to True, security information, such as the user identity or password previously specified on the connection string, can be obtained from the connection after the connection is made. The default value is False.|  
 |`ProtectionLevel`|Determines the security level used on the connection. Valid values are:<br /><br /> `None`. Unauthenticated or anonymous connections. Performs no authentication on data sent to the server.<br /><br /> `Connect`. Authenticated connections. Authenticates only when the client establishes a relationship with a server.<br /><br /> `PktIntegrity`. Encrypted connections. Verifies that all data is received from the client and that it has not been changed in transit.<br /><br /> `PktPrivacy`. Signed encryption, supported only for XMLA. Verifies that all data is received from the client, that it has not been changed in transit, and protects the privacy of the data by encrypting it.<br /><br /> <br /><br /> For more information, see [Establishing Secure Connections in ADOMD.NET](https://docs.microsoft.com/bi-reference/adomd/multidimensional-models-adomd-net-client/connections-in-adomd-net-establishing-secure-connections)|  
-|`Roles`|Specify a comma-delimited list of predefined roles to connect to a server or database using permissions conveyed by that role. If this property is omitted, all roles are used, and the effective permissions are the combination of all roles. Setting the property to an empty value (for example, Roles=’ ‘) the client connection has no role membership.<br /><br /> An administrator using this property connects using the permissions conveyed by the role. Some commands might fail if the role does not provide sufficient permission.|  
+|`Roles`|Specify a comma-delimited list of predefined roles to connect to a server or database using permissions conveyed by that role. If this property is omitted, all roles are used, and the effective permissions are the combination of all roles. Setting the property to an empty value (for example, Roles=' ') the client connection has no role membership.<br /><br /> An administrator using this property connects using the permissions conveyed by the role. Some commands might fail if the role does not provide sufficient permission.|  
 |`SSPI`|Explicitly specifies which security package to use for client authentication when `Integrated Security` is set to `SSPI`. SSPI supports multiple packages, but you can use this property to specify a particular package. Valid values are Negotiate, Kerberos, NTLM, and Anonymous User. If this property is not set, all packages will be available to the connection.|  
 |`Use Encryption for Data`|Encrypts data transmissions. Value values are True and False.|  
-|`User ID`=…; `Password`=|`User ID` and `Password` are used together. Analysis Services impersonates the user identity specified through these credentials. On an Analysis Services connection, putting credentials on the command line is used only when the server is configured for HTTP access, and you specified Basic authentication instead of integrated security on the IIS virtual directory.<br /><br /> The user name and password must be the credentials of a Windows identity, either a local or a domain user account. Notice that `User ID` has an embedded space. Other aliases for this property include `UserName` (no space), and `UID`. Alias for `Password` is `PWD`.|  
+|`User ID`=...; `Password`=|`User ID` and `Password` are used together. Analysis Services impersonates the user identity specified through these credentials. On an Analysis Services connection, putting credentials on the command line is used only when the server is configured for HTTP access, and you specified Basic authentication instead of integrated security on the IIS virtual directory.<br /><br /> The user name and password must be the credentials of a Windows identity, either a local or a domain user account. Notice that `User ID` has an embedded space. Other aliases for this property include `UserName` (no space), and `UID`. Alias for `Password` is `PWD`.|  
   
 ##  <a name="bkmk_special"></a> Special-purpose parameters  
  This section describes the remainder of the connection string parameters. These are used to ensure specific connection behaviors required by an application.  
@@ -77,7 +77,7 @@ manager: craigg
   
 |Property|Description|  
 |--------------|-----------------|  
-|`Application Name`|Sets the name of the application associated with the connection. This value can be useful when monitoring tracing events, especially when you have several applications accessing the same databases. For example, adding Application Name=’test’ to a connection string causes ‘test’ to appear in a SQL Server Profiler trace, as shown in the following screenshot:<br /><br /> ![SSAS_AppNameExcample](../media/ssas-appnameexcample.gif "SSAS_AppNameExcample")<br /><br /> Aliases for this property include `sspropinitAppName`, `AppName`. For more information, see [Use Application Name parameter when connecting to SQL Server](http://go.microsoft.com/fwlink/?LinkId=301699).|  
+|`Application Name`|Sets the name of the application associated with the connection. This value can be useful when monitoring tracing events, especially when you have several applications accessing the same databases. For example, adding Application Name='test' to a connection string causes 'test' to appear in a SQL Server Profiler trace, as shown in the following screenshot:<br /><br /> ![SSAS_AppNameExcample](../media/ssas-appnameexcample.gif "SSAS_AppNameExcample")<br /><br /> Aliases for this property include `sspropinitAppName`, `AppName`. For more information, see [Use Application Name parameter when connecting to SQL Server](http://go.microsoft.com/fwlink/?LinkId=301699).|  
 |`AutoSyncPeriod`|Sets the frequency (in milliseconds) of client and server cache synchronization. ADOMD.NET provides client caching for frequently used objects that have minimal memory overhead. This helps reduce the number of round trips to the server. The default is 10000 milliseconds (or 10 seconds). When set to null or 0, automatic synchronization is turned off.|  
 |`Character Encoding`|Defines how characters are encoded on the request. Valid values are Default or UTF-8 (these are equivalent), and UTF-16|  
 |`CompareCaseSensitiveStringFlags`|Adjusts case-sensitive string comparisons for a specified locale. For more information about setting this property, see [CompareCaseSensitiveStringFlags Property](http://msdn.microsoft.com/library/aa237459\(v=sql.80\).aspx).|  
@@ -122,7 +122,7 @@ manager: craigg
 -   Use Formula Cache  
   
 ##  <a name="bkmk_examples"></a> Example connection strings  
- This section shows the connection string that you’ll most likely use when setting up an Analysis Services connection in commonly used applications.  
+ This section shows the connection string that you'll most likely use when setting up an Analysis Services connection in commonly used applications.  
   
  **Generic connection string**  
   
@@ -143,17 +143,17 @@ manager: craigg
   
  **Native (or direct) connections to the server**  
   
- `Data Source=server[:port][\instance]` where “port” and “\instance” are optional. For example, specifying “Data Source=server1” opens a connection to the default instance (and default port 2383) on a server named “server1”.  
+ `Data Source=server[:port][\instance]` where "port" and "\instance" are optional. For example, specifying "Data Source=server1" opens a connection to the default instance (and default port 2383) on a server named "server1".  
   
- “Data Source=server1:port1” will open a connection to an Analysis Services instance running on port “port1” on “server1”.  
+ "Data Source=server1:port1" will open a connection to an Analysis Services instance running on port "port1" on "server1".  
   
- “Data Source=server1\instance1” will open a connection to SQL Browser (on its default port 2382), resolve the port for the named instance  “instance1”, then open the connection to that Analysis Services port.  
+ "Data Source=server1\instance1" will open a connection to SQL Browser (on its default port 2382), resolve the port for the named instance  "instance1", then open the connection to that Analysis Services port.  
   
- “Data Source=server1:port1\instance1” will open a connection to SQL Browser on “port1”, resolve the port for the “instance1” named instance, then open the connection to that Analysis Services port.  
+ "Data Source=server1:port1\instance1" will open a connection to SQL Browser on "port1", resolve the port for the "instance1" named instance, then open the connection to that Analysis Services port.  
   
  **Local cube connections (.cub files)**  
   
- `Data Source=<path>`, for example “Data Source=c:\temp\a.cub”  
+ `Data Source=<path>`, for example "Data Source=c:\temp\a.cub"  
   
  **Http(s) connections to msmdpump.dll**  
   
@@ -161,11 +161,11 @@ manager: craigg
   
  **Http(s) connections to PowerPivot workbooks (.xlsx, .xlsb or .xlsm files)**  
   
- `Data Source=<URL>`, where the URL is the SharePoint path to a PowerPivot workbook that has been published to a SharePoint library. For example, “Data Source=http://localhost/Shared Documents/Sales.xlsx”.  
+ `Data Source=<URL>`, where the URL is the SharePoint path to a PowerPivot workbook that has been published to a SharePoint library. For example, "Data Source=http://localhost/Shared Documents/Sales.xlsx".  
   
  **Http(s) connections to BI Semantic Model Connection files**  
   
- `Data Source=<URL>` where the URL is the SharePoint path to the .bism file. For example, “Data Source=http://localhost/Shared Documents/Sales.bism”.  
+ `Data Source=<URL>` where the URL is the SharePoint path to the .bism file. For example, "Data Source=http://localhost/Shared Documents/Sales.bism".  
   
  **Embedded PowerPivot connections**  
   

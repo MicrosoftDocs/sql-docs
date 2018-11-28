@@ -70,7 +70,7 @@ Before performing these steps, you need to:
   
 3.  Select all updates, and then click the **Approve** link in the right pane.  
   
-    You can also right-click the selected updates, and then click **Approve**. You may be prompted to accept the “Microsoft Software License Terms”. If so, click **I Accept** in the window to continue.  
+    You can also right-click the selected updates, and then click **Approve**. You may be prompted to accept the "Microsoft Software License Terms". If so, click **I Accept** in the window to continue.  
   
     ![Select all updates that apply and click Approve.](./media/download-and-apply-microsoft-updates/SQL_Server_PDW_WSUSSelectApprove.png "SQL_Server_PDW_WSUSSelectApprove")  
   

@@ -56,7 +56,7 @@ manager: craigg
   
      where \<*system-address>* is a string that unambiguously identifies the destination computer system, and \<*port>* is the port number used by the mirroring endpoint of the partner server instance. For more information, see [Specify a Server Network Address &#40;Database Mirroring&#41;](specify-a-server-network-address-database-mirroring.md).  
   
-     For example, on the principal server instance, the following ALTER DATABASE statement sets the witness. The database name is **AdventureWorks**, the system address is DBSERVER3—the name of the witness system, and the port used by the database mirroring endpoint of the witness is `7022`:  
+     For example, on the principal server instance, the following ALTER DATABASE statement sets the witness. The database name is **AdventureWorks**, the system address is DBSERVER3-the name of the witness system, and the port used by the database mirroring endpoint of the witness is `7022`:  
   
     ```  
     ALTER DATABASE AdventureWorks   

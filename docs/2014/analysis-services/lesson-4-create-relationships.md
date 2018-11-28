@@ -33,7 +33,7 @@ manager: craigg
   
 2.  Click on the solid line between the **Customer** table and the **Geography** table. The solid line between these two tables show this relationship is active, that is, it is used by default when calculating DAX formulas.  
   
-     Notice the **Geography Id** column in the **Customer** table and the **Geography Id** column in the **Geography** table now both each appear within a box. This shows these are the columns used in the relationship. The relationship’s properties now also appear in the **Properties** window.  
+     Notice the **Geography Id** column in the **Customer** table and the **Geography Id** column in the **Geography** table now both each appear within a box. This shows these are the columns used in the relationship. The relationship's properties now also appear in the **Properties** window.  
   
     > [!TIP]  
     >  In addition to using the model designer in diagram view, you can also use the **Manage Relationships** dialog box to show the relationships between all tables in a table format. Click on the **Table** menu, and then click **Manage Relationships**. The **Manage Relationships** dialog box shows the relationships that were automatically created when you imported data.  

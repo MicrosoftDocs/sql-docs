@@ -23,7 +23,7 @@ For more information, see [Dimension Relationships](../analysis-services/multidi
 This lesson contains the following tasks:  
   
 [Defining a Referenced Relationship](../analysis-services/lesson-5-1-defining-a-referenced-relationship.md)  
-In this task, you learn to link a dimension to a fact table indirectly through a dimension that is linked directly through a primary key–foreign key relationship.  
+In this task, you learn to link a dimension to a fact table indirectly through a dimension that is linked directly through a primary key-foreign key relationship.  
   
 [Defining a Fact Relationship](../analysis-services/lesson-5-2-defining-a-fact-relationship.md)  
 In this task, you learn to define a dimension based on data in the fact table, and to define the dimension relationship as a fact relationship.  

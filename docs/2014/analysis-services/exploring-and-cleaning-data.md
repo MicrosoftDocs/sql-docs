@@ -63,7 +63,7 @@ manager: craigg
   
 -   Bin data, by creating groups to represents number ranges.  
   
-     For example, you might want to replace an Income column of numbers with labels such as **Income – Moderate** and **Income – High**.  
+     For example, you might want to replace an Income column of numbers with labels such as **Income - Moderate** and **Income - High**.  
   
 -   Collapse discrete values into categories.  
   

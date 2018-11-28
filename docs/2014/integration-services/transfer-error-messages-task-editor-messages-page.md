@@ -40,13 +40,13 @@ manager: craigg
 |**False**|Copy only the specified user-defined messages.|  
   
  **ErrorMessagesList**  
- Click the browse button **(…)** to select the error messages to copy.  
+ Click the browse button **(...)** to select the error messages to copy.  
   
 > [!NOTE]  
 >  You must specify the **SourceConnection** before you can select error messages to copy.  
   
  **ErrorMessageLanguagesList**  
- Click the browse button **(…)** to select the languages for which to copy user-defined error messages to the destination server. A us_english (code page 1033) version of the message must exist on the destination server before you can transfer other language versions of the message to that server.  
+ Click the browse button **(...)** to select the languages for which to copy user-defined error messages to the destination server. A us_english (code page 1033) version of the message must exist on the destination server before you can transfer other language versions of the message to that server.  
   
 > [!NOTE]  
 >  You must specify the **SourceConnection** before you can select error messages to copy.  

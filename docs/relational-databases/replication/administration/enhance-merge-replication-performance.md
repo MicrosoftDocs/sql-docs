@@ -96,9 +96,9 @@ manager: craigg
   
      Upgrading the Subscriber to [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] or a later version upgrades the Merge Agent used by the subscriptions at that Subscriber. To take advantage of many of the new features and performance optimizations, the Merge Agent from [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] or a later version is required.  
   
--   If a subscription is synchronized over a fast connection and changes are sent from the Publisher and Subscriber, use the **–ParallelUploadDownload** parameter for the Merge Agent.  
+-   If a subscription is synchronized over a fast connection and changes are sent from the Publisher and Subscriber, use the **-ParallelUploadDownload** parameter for the Merge Agent.  
   
-     [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] introduced a new Merge Agent parameter: **–ParallelUploadDownload**. Setting this parameter allows the Merge Agent to process in parallel the changes uploaded to the Publisher and those downloaded to the Subscriber. This is useful in high volume environments with high network bandwidth. Agent parameters can be specified in agent profiles and on the command line. For more information, see:  
+     [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] introduced a new Merge Agent parameter: **-ParallelUploadDownload**. Setting this parameter allows the Merge Agent to process in parallel the changes uploaded to the Publisher and those downloaded to the Subscriber. This is useful in high volume environments with high network bandwidth. Agent parameters can be specified in agent profiles and on the command line. For more information, see:  
   
     -   [Work with Replication Agent Profiles](../../../relational-databases/replication/agents/work-with-replication-agent-profiles.md)  
   

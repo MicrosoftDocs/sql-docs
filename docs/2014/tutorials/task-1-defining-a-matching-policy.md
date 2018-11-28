@@ -50,7 +50,7 @@ manager: craigg
   
 10. Click **Add a new domain element** from the toolbar again.  
   
-11. Select **Supplier Name** domain, select **Similar** for **Similarity**, and Type **70** for the **Weight**.  Here, you are specifying that supplier names do not need to be identical but can be similar for the records to be considered as a match. The weight indicates the contribution of this field’s score to the overall matching score.  
+11. Select **Supplier Name** domain, select **Similar** for **Similarity**, and Type **70** for the **Weight**.  Here, you are specifying that supplier names do not need to be identical but can be similar for the records to be considered as a match. The weight indicates the contribution of this field's score to the overall matching score.  
   
 12. Repeat previous two steps to add **Contact Email** domain with **30** for the **Weight**.  
   

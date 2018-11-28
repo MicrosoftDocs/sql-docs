@@ -70,7 +70,7 @@ It is allowed to connect/reconnect to higher versions of SQL Server.
   
 4.  You will be able to connect to only [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2014 or [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016 when the project created is [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2014.  
   
-5.  Higher version compatibility is not valid for “SQL Azure”.  
+5.  Higher version compatibility is not valid for "SQL Azure".  
   
 ||||||||  
 |-|-|-|-|-|-|-|  

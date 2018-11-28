@@ -27,7 +27,7 @@ manager: craigg
   
 3.  Dictionary compression  
   
- When you use page compression, non–leaf-level pages of indexes are compressed by using only row compression. For more information about row compression, see [Row Compression Implementation](../data-compression/row-compression-implementation.md).  
+ When you use page compression, non-leaf-level pages of indexes are compressed by using only row compression. For more information about row compression, see [Row Compression Implementation](../data-compression/row-compression-implementation.md).  
   
 ## Prefix Compression  
  For each page that is being compressed, prefix compression uses the following steps:  

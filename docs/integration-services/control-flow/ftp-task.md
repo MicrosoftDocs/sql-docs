@@ -145,7 +145,7 @@ manager: craigg
   
 #### IsRemotePathVariable = False  
  **RemotePath**  
- Select an existing FTP connection manager, or click \<**New connection…**> to create a connection manager.  
+ Select an existing FTP connection manager, or click \<**New connection...**> to create a connection manager.  
   
  **Related Topics:** [FTP Connection Manager](../../integration-services/connection-manager/ftp-connection-manager.md), [FTP Connection Manager Editor](../../integration-services/connection-manager/ftp-connection-manager-editor.md)  
   
@@ -159,7 +159,7 @@ manager: craigg
   
 #### IsLocalPathVariable = False  
  **LocalPath**  
- Select an existing File connection manager, or click \<**New connection…**> to create a connection manager.  
+ Select an existing File connection manager, or click \<**New connection...**> to create a connection manager.  
   
  **Related Topics**: [Flat File Connection Manager](../../integration-services/connection-manager/flat-file-connection-manager.md)  
   

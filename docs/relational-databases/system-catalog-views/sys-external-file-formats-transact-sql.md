@@ -30,7 +30,7 @@ monikerRange: ">=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallpr
 |field_terminator|**nvarchar(10)**|For format_type = DELIMITEDTEXT, this is the field terminator.||  
 |string_delimiter|**nvarchar(10)**|For format_type = DELIMITEDTEXT, this is the string delimiter.||  
 |date_format|**nvarchar(50)**|For format_type = DELIMITEDTEXT, this is the user-defined date and time format.||  
-|use_type_default|**bit**|For format_type = DELIMITED TEXT, specifies how to handle missing values when PolyBase is importing data from HDFS text files into [!INCLUDE[ssSDW](../../includes/sssdw-md.md)].|0 – store missing values as the string 'NULL'.<br /><br /> 1 – store missing values as the column default value.|  
+|use_type_default|**bit**|For format_type = DELIMITED TEXT, specifies how to handle missing values when PolyBase is importing data from HDFS text files into [!INCLUDE[ssSDW](../../includes/sssdw-md.md)].|0 - store missing values as the string 'NULL'.<br /><br /> 1 - store missing values as the column default value.|  
 |serde_method|**nvarchar(255)**|For format_type = RCFILE, this is the serialization/deserialization method.||  
 |row_terminator|**nvarchar(10)**|For format_type = DELIMITEDTEXT, this is the character string that terminates each row in the external Hadoop file.|Always '\n'.|  
 |encoding|**nvarchar(10)**|For format_type = DELIMITEDTEXT, this is the encoding method for the external Hadoop file.|Always 'UTF8'.|  

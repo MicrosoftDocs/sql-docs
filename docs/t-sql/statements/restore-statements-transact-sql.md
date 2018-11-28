@@ -94,7 +94,7 @@ RESTORE DATABASE { database_name | @database_name_var }
    | , <change_data_capture_WITH_option>  
    | , <FILESTREAM_WITH_option>  
    | , <service_broker_WITH options>   
-   | , \<point_in_time_WITH_options—RESTORE_DATABASE>   
+   | , \<point_in_time_WITH_options-RESTORE_DATABASE>   
    } [ ,...n ]  
  ]  
 [;]  
@@ -106,7 +106,7 @@ RESTORE DATABASE { database_name | @database_name_var }
    WITH   
       PARTIAL, NORECOVERY   
       [  , <general_WITH_options> [ ,...n ]   
-       | , \<point_in_time_WITH_options—RESTORE_DATABASE>   
+       | , \<point_in_time_WITH_options-RESTORE_DATABASE>   
       ] [ ,...n ]   
 [;]  
   
@@ -142,7 +142,7 @@ RESTORE LOG { database_name | @database_name_var }
        ]  
     | ,  <general_WITH_options> [ ,...n ]  
     | , <replication_WITH_option>  
-    | , \<point_in_time_WITH_options—RESTORE_LOG>   
+    | , \<point_in_time_WITH_options-RESTORE_LOG>   
    } [ ,...n ]  
  ]   
 [;]  
@@ -215,7 +215,7 @@ Note: URL is the format used to specify the location and the file name for the M
  | ERROR_BROKER_CONVERSATIONS   
  | NEW_BROKER  
   
-\<point_in_time_WITH_options—RESTORE_DATABASE>::=   
+\<point_in_time_WITH_options-RESTORE_DATABASE>::=   
  | {  
    STOPAT = { 'datetime'| @datetime_var }   
  | STOPATMARK = 'lsn:lsn_number'  
@@ -224,7 +224,7 @@ Note: URL is the format used to specify the location and the file name for the M
                  [ AFTER 'datetime']   
    }   
   
-\<point_in_time_WITH_options—RESTORE_LOG>::=   
+\<point_in_time_WITH_options-RESTORE_LOG>::=   
  | {  
    STOPAT = { 'datetime'| @datetime_var }   
  | STOPATMARK = { 'mark_name' | 'lsn:lsn_number' }  
@@ -288,7 +288,7 @@ For descriptions of the arguments, see [RESTORE Arguments &#40;Transact-SQL&#41;
   
 ### Discontinued RESTORE Keywords  
 The following keywords were discontinued in [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]:  
-|Discontinued keyword|Replaced by…|Example of replacement keyword|  
+|Discontinued keyword|Replaced by...|Example of replacement keyword|  
 |--------------------------|------------------|------------------------------------|  
 |LOAD|RESTORE|`RESTORE DATABASE`|  
 |TRANSACTION|LOG|`RESTORE LOG`|  

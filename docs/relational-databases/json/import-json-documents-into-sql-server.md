@@ -134,10 +134,10 @@ SELECT value
 OPENROWSET reads a single text value from the file, returns it as a BulkColumn, and passes it to the OPENJSON function. OPENJSON iterates through the array of JSON objects in the BulkColumn array and returns one book in each row, formatted as JSON:
 
 ```json
-{"id":"978-0641723445", "cat":["book","hardcover"], "name":"The Lightning Thief", … }
-{"id":"978-1423103349", "cat":["book","paperback"], "name":"The Sea of Monsters", … }
-{"id":"978-1857995879", "cat":["book","paperback"], "name":"Sophie’s World : The Greek", … } 
-{"id":"978-1933988177", "cat":["book","paperback"], "name":"Lucene in Action, Second", … }
+{"id":"978-0641723445", "cat":["book","hardcover"], "name":"The Lightning Thief", ... }
+{"id":"978-1423103349", "cat":["book","paperback"], "name":"The Sea of Monsters", ... }
+{"id":"978-1857995879", "cat":["book","paperback"], "name":"Sophie's World : The Greek", ... } 
+{"id":"978-1933988177", "cat":["book","paperback"], "name":"Lucene in Action, Second", ... }
 ```
 
 ### Example 3
@@ -157,7 +157,7 @@ In this example, OPENROWSET(BULK) reads the content of the file and passes that 
 |---|---|---|---|---|
 978-0641723445|The Lightning Thief|12.5|384|Rick Riordan| 
 978-1423103349|The Sea of Monsters|6.49|304|Rick Riordan| 
-978-1857995879|Sophie’s World : The Greek Philosophers|3.07|64|Jostein Gaarder| 
+978-1857995879|Sophie's World : The Greek Philosophers|3.07|64|Jostein Gaarder| 
 978-1933988177|Lucene in Action, Second Edition|30.5|475|Michael McCandless|
 ||||||
 

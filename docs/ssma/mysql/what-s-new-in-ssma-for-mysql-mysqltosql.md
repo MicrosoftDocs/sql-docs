@@ -86,7 +86,7 @@ The v7.3 release of SSMA for MySQL contains the following changes:
 ## SSMA v7.2
 The v7.2 release of SSMA for MySQL contains the following changes:
 - Improved quality and conversion metric with targeted fixes based on customer feedback.
-- Telemetry enhancements to provide better data points to troubleshoot customer issues and improve SSMA’s conversion rates.
+- Telemetry enhancements to provide better data points to troubleshoot customer issues and improve SSMA's conversion rates.
 
 ## SSMA v7.1
 The v7.1 release of SSMA for Access contains the following changes:
@@ -132,7 +132,7 @@ The July 2014 release of SSMA for MySQL contains the following changes:
 -  Extension pack functionality moved to schema to support Azure SQL DB.  
 -  Performance improvements tested for databases with over 10k objects.  
 -  UI improvements for dealing with large number of objects.  
--  Highlighting of “well known” LOB schemas (so they can be ignored in conversion).  
+-  Highlighting of "well known" LOB schemas (so they can be ignored in conversion).  
 -  Conversion speed improvements.  
 -  Show object counts in UI.  
 -  Report size reduction by more than 25%.  
@@ -148,14 +148,14 @@ The July 2011 release of SSMA for MySQL contains the following changes:
 ## July 2011  
 The July 2011 release of SSMA for MySQL contains the following changes:  
   
--   Support for conversion of LIMIT to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] “Denali” OFFSET.  
+-   Support for conversion of LIMIT to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] "Denali" OFFSET.  
 -   Improved error reporting during data migration.  
   
 ## April 2011  
 The April 2011 release of SSMA for MySQL contains the following changes:  
   
--   Single installable of “SSMA for MySQL”, which supports [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2005, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2008, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] “Denali” and Azure SQL.  
--   The ability to connect [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] “Denali.”  
+-   Single installable of "SSMA for MySQL", which supports [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2005, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2008, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] "Denali" and Azure SQL.  
+-   The ability to connect [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] "Denali."  
 -   Enhanced client-side data migration engine, supporting parallel migration of data.  
 -   Improved data migration performance with Simple and Bulk logged recovery models.  
 -   SSMA for MySQL Console version supports backward compatibility. You can open the projects created by versions earlier to SSMA v5.0.  
@@ -166,11 +166,11 @@ The July 2010 release of SSMA for MySQL contains the following features:
   
 1.  **Improvements to User Interface:**  
   
-    -   ‘SQL Modes’ Tab for MySQL Database objects  
-    -   ‘Settings’ Tab for MySQL Database objects  
-    -   ‘Data’ Tab for MySQL Tables  
+    -   'SQL Modes' Tab for MySQL Database objects  
+    -   'Settings' Tab for MySQL Database objects  
+    -   'Data' Tab for MySQL Tables  
     -   Updated Project Settings in Conversion and Migration Pages  
-    -   ‘Data Migration Settings’ at Table level  
+    -   'Data Migration Settings' at Table level  
   
 2.  **Improvements to Connect to MySQL and SQL Server:**  
   
@@ -183,7 +183,7 @@ The July 2010 release of SSMA for MySQL contains the following features:
   
 4.  **Improvements to Object Conversion:**  
   
-    -   Conversion of MySQL Metabase objects – Procedures, Functions, Views, Triggers, and Statements.  
+    -   Conversion of MySQL Metabase objects - Procedures, Functions, Views, Triggers, and Statements.  
     -   Limited support for Spatial Data Types in Tables.  
     -   Option to convert MySQL functions to SQL Server Stored Procedures  
     -   Option to apply SQL Modes and Charset mapping during Object Conversion  

@@ -1540,7 +1540,7 @@
   - name: Tabular Object Model (TOM)
     href: https://docs.microsoft.com/bi-reference/tom/introduction-to-the-tabular-object-model-tom-in-analysis-services-amo  
   - name: Analysis Management Objects (AMO)
-    href: https://docs.microsoft.com/bi-reference/amo/amo-classes-introduction 
+    href: https://docs.microsoft.com/bi-reference/amo/developing-with-analysis-management-objects-amo 
   - name: Conceptual Schema Definition Language (CSDL)
     href: https://docs.microsoft.com/bi-reference/csdl/csdl-annotations-for-business-intelligence-csdlbi
   - name: XML for Analysis (XMLA)

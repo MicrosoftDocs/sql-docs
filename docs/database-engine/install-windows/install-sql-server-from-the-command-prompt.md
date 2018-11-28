@@ -791,7 +791,7 @@ setup.exe /q /ACTION=CompleteFailoverCluster /InstanceName="<Insert Instance Nam
  To add a node to an existing failover cluster instance with the [!INCLUDE[ssDE](../../includes/ssde-md.md)] and [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. 
   
 ```  
-setup.exe /q /ACTION=AddNode /INSTANCENAME="<Insert Instance Name>" /SQLSVCACCOUNT="<SQL account that is used on other nodes>" /SQLSVCPASSWORD="<password for SQL account>" /AGTSVCACCOUNT="<SQL Server Agent account that is used on other nodes>", /AGTSVCPASSWORD="<SQL Server Agent account password>" /ASSVCACCOUNT="<AS account that is used on other nodes>" /ASSVCPASSWORD=”<password for AS account>” /INDICATEPROGRESS /IACCEPTSQLSERVERLICENSETERMS /FAILOVERCLUSTERIPADDRESSES="IPv4;xx.xxx.xx.xx;ClusterNetwork1;xxx.xxx.xxx.x" /CONFIRMIPDEPENDENCYCHANGE=0  
+setup.exe /q /ACTION=AddNode /INSTANCENAME="<Insert Instance Name>" /SQLSVCACCOUNT="<SQL account that is used on other nodes>" /SQLSVCPASSWORD="<password for SQL account>" /AGTSVCACCOUNT="<SQL Server Agent account that is used on other nodes>", /AGTSVCPASSWORD="<SQL Server Agent account password>" /ASSVCACCOUNT="<AS account that is used on other nodes>" /ASSVCPASSWORD="<password for AS account>" /INDICATEPROGRESS /IACCEPTSQLSERVERLICENSETERMS /FAILOVERCLUSTERIPADDRESSES="IPv4;xx.xxx.xx.xx;ClusterNetwork1;xxx.xxx.xxx.x" /CONFIRMIPDEPENDENCYCHANGE=0  
 ```  
   
 #### Remove Node Parameters  
@@ -883,7 +883,7 @@ setup.exe /q /ACTION=RemoveNode /INSTANCENAME="<Insert Instance Name>" [/INDICAT
   
  The AllFeatures_WithDefaults role is the default behavior for editions of [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] and reduces the number of dialog boxes presented to the user. It can be specified from the command line when installing a SQL Server edition that is not [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]. 
   
-|Role|Description|Installs…|  
+|Role|Description|Installs...|  
 |----------|-----------------|---------------|  
 |SPI_AS_ExistingFarm|Installs [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] as a [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] named instance on an existing [!INCLUDE[SPS2010](../../includes/sps2010-md.md)] farm or standalone server.|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] calculation engine, preconfigured for in-memory data storage and processing.<br /><br /> [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] solution packages<br /><br /> Installer program for the [!INCLUDE[ssGeminiClient](../../includes/ssgeminiclient-md.md)]<br /><br /> SQL Server Books Online|  
 |SPI_AS_NewFarm|Installs [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] and [!INCLUDE[ssDE](../../includes/ssde-md.md)] as a [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] named instance on a new, un-configured Office [!INCLUDE[SPS2010](../../includes/sps2010-md.md)] farm or standalone server. SQL Server Setup will configure the farm during feature role installation.|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] calculation engine, preconfigured for in-memory data storage and processing.<br /><br /> [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] solution packages<br /><br /> SQL Server Books Online<br /><br /> [!INCLUDE[ssDE](../../includes/ssde-md.md)]<br /><br /> Configuration Tools<br /><br /> [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]|  

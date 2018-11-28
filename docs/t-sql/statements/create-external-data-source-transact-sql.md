@@ -82,8 +82,6 @@ WITH
 GO
 
 
-
-
 -- PolyBase only: Hadoop cluster as data source
 -- (on Parallel Data Warehouse)
 CREATE EXTERNAL DATA SOURCE data_source_name
@@ -94,14 +92,6 @@ CREATE EXTERNAL DATA SOURCE data_source_name
     )
 [;]
 
--- PolyBase only: Azure Storage Blob as data source 
--- (on Parallel Data Warehouse)
-CREATE EXTERNAL DATA SOURCE data_source_name
-    WITH ( 
-        TYPE = BLOB_STORAGE,
-        LOCATION = 'wasb[s]://container@account_name.blob.core.windows.net'
-    )
-[;]
   
 -- Elastic Database query only: a shard map manager as data source   
 -- (only on Azure SQL Database)  

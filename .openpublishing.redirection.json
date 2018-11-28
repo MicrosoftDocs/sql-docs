@@ -1322,6 +1322,11 @@
             "redirect_document_id": true
         },
         {
+            "source_path": "docs/relational-database/replication/transactional/publication-types-for-transactional-replication.md",
+            "redirect_url": "/sql/relational-database/replication/transactional/transactional-replication",
+            "redirect_document_id": true
+        },
+        {
             "source_path": "docs/relational-database/replication/execute-scripts-before-and-after-the-snapshot-is-applied.md",
             "redirect_url": "/sql/relational-database/replication/execute-scripts-before-and-after-a-snapshot-is-applied",
             "redirect_document_id": true

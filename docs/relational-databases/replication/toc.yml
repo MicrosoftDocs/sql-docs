@@ -453,6 +453,15 @@
             href: non-sql/ibm-db2-subscribers.md
           - name: Other Non-SQL Subscribers
             href: non-sql/other-non-sql-server-subscribers.md
+- name: Tutorials
+  href: replication-tutorials.md
+  items:
+  - name: Prepare Server for Replication
+    href: tutorial-preparing-the-server-for-replication.md
+  - name: Configure Transactional Replication
+    href: tutorial-replicating-data-between-continuously-connected-servers.md
+  - name: Configure Merge Replication
+    href: tutorial-replicating-data-with-mobile-clients.md
 - Name: Reference
   items: 
     - name: Properties of replication objects
@@ -817,13 +826,5 @@
           href: mssql-repl-2147201021.md
     - name: Replication Language Reference
       href: replication-language-reference.md
-    - name: Replication Tutorials
-      href: replication-tutorials.md
-      items:
-      - name: Prepare Server for Replication
-        href: tutorial-preparing-the-server-for-replication.md
-      - name: Configure Transactional Replication
-        href: tutorial-replicating-data-between-continuously-connected-servers.md
-      - name: Configure Merge Replication
-        href: tutorial-replicating-data-with-mobile-clients.md
+
 

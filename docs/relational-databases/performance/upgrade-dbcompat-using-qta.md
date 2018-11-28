@@ -32,7 +32,7 @@ This gating capability provided by the database compatibility level, in combinat
 
 This control over upgrades was further improved with [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] where [Automatic Tuning](../../relational-databases/automatic-tuning/automatic-tuning.md) was introduced and allows automating the last step in the recommended workflow above.
 
-Starting with [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] v18, the new **Query Tuning Assistant (QTA)** feature will guide users through the recommended workflow to keep performance stability during upgrades to newer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] versions, as documented in section of [Query Store Usage Scenarios](../../relational-databases/performance/query-store-usage-scenarios.md#CEUpgrade). 
+Starting with [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] v18, the new **Query Tuning Assistant (QTA)** feature will guide users through the recommended workflow to keep performance stability during upgrades to newer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] versions, as documented in the section *Keep performance stability during the upgrade to newer SQL Server* of [Query Store Usage Scenarios](../../relational-databases/performance/query-store-usage-scenarios.md#CEUpgrade). 
 
 > [!IMPORTANT]
 > QTA does not generate user workload. If running QTA in an environment that is not used by your aplications, ensure that you can still execute representative test workload on the targeted [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] by other means. 
@@ -43,7 +43,7 @@ The starting point of QTA assumes that a database from a previous version of [!I
 2.  Request to start the required workload, so that Query Store can collect a baseline of workload data (if none available yet).
 3.  Upgrade to the target database compatibility level chosen by the user.
 4.  Request that a 2nd pass of workload data is collected for comparison and regression detection.
-5.  Iterate through any regressions found based on [Query Store **Regressed Queries**](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md#Regressed) view, experiment by collecting runtime statistics on possible permutations of applicable [USE HINT query hints](../../t-sql/queries/hints-transact-sql-query.md#use_hint), and measure the outcome. 
+5.  Iterate through any regressions found based on [Query Store **Regressed Queries**](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md#Regressed) view, experiment by collecting runtime statistics on possible permutations of applicable optimizer model variations, and measure the outcome. 
 6.  Report on the measured improvements, and optionally allow those changes to be persisted using [plan guides](../../relational-databases/performance/plan-guides.md).
 
 For more information on attaching a database, see [Database Detach and Attach](../../relational-databases/databases/database-detach-and-attach-sql-server.md#AttachDb).
@@ -58,8 +58,8 @@ QTA targets only `SELECT` queries that can be executed from Query Store. Paramet
 QTA targets known possible patterns of query regressions due to changes in [Cardinality Estimator (CE)](../../relational-databases/performance/cardinality-estimation-sql-server.md) versions. For example, when upgrading a database from [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] and database compatibility level 110, to [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] and database compatibility level 140, some queries may regress because they were designed specifically to work with the CE version that existed in [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] (CE 70). This does not mean that reverting from CE 140 to CE 70 is the only option. If only a specific change in the newer version is introducing the regression, then it is possible to hint that query to use just the relevant part of the previous CE version that was working better for the specific query, while still leveraging all other improvements of newer CE versions. And also allow other queries in the workload that have not regressed to benefit from newer CE improvements.
 
 The CE patterns searched by QTA are the following: 
--  **Independence vs. Correlation**: If independence provides better estimations for the specific query, then the query hint `USE HINT ('ASSUME_MIN_SELECTIVITY_FOR_FILTER_ESTIMATES')` causes [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to generate an execution plan by using minimum selectivity when estimating `AND` predicates for filters to account for correlation. 
--  **Simple Containment vs. Base Containment**: If a different join containment provides better estimations for the specific query, then the query hint `USE HINT ('ASSUME_JOIN_PREDICATE_DEPENDS_ON_FILTERS')` causes [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to generate an execution plan by using the Simple Containment assumption instead of the default Base Containment assumption.
+-  **Independence vs. Correlation**: If independence assumption provides better estimations for the specific query, then the query hint `USE HINT ('ASSUME_MIN_SELECTIVITY_FOR_FILTER_ESTIMATES')` causes [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to generate an execution plan by using minimum selectivity when estimating `AND` predicates for filters to account for correlation. For more information, see [USE HINT query hints](../../t-sql/queries/hints-transact-sql-query.md#use_hint) and [Versions of the CE](../../relational-databases/performance/cardinality-estimation-sql-server.md#versions-of-the-ce).
+-  **Simple Containment vs. Base Containment**: If a different join containment provides better estimations for the specific query, then the query hint `USE HINT ('ASSUME_JOIN_PREDICATE_DEPENDS_ON_FILTERS')` causes [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to generate an execution plan by using the Simple Containment assumption instead of the default Base Containment assumption. For more information, see [USE HINT query hints](../../t-sql/queries/hints-transact-sql-query.md#use_hint) and [Versions of the CE](../../relational-databases/performance/cardinality-estimation-sql-server.md#versions-of-the-ce).
 -  **Multi-statement table-valued function (MSTVF) fixed cardinality guess** of 100 rows vs. 1 row: If the default fixed estimation for TVFs of 100 rows does not result in a more efficient plan than using the fixed estimation for TVFs of 1 row (corresponding to the default under the query optimizer CE model of [!INCLUDE[ssKilimanjaro](../../includes/ssKilimanjaro-md.md)] and earlier versions), then the query hint `QUERYTRACEON 9488` is used to generate an execution plan. For more information on MSTVFs, see [Create User-defined Functions &#40;Database Engine&#41;](../../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md#TVF).
 
 > [!NOTE]
@@ -69,11 +69,9 @@ The CE patterns searched by QTA are the following:
 > Any hint forces certain behaviors that may be addressed in future [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] updates. We recommend you only apply hints when no other option exists, and plan to revisit hinted code with every new upgrade. By forcing behaviors, you may be precluding your workload from benefiting of enhancements introduced in newer versions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
 
 ## Starting Query Tuning Assistant for database upgrades
-
 QTA is a session-based feature that stores session state in the `msqta` schema of the user database where a session is created for the first time. Multiple tuning sessions can be created on a single database over time, but only one active session can exist for any given database.
 
 ### Creating a database upgrade session
-
 1.  In [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] open the Object Explorer and connect to [!INCLUDE[ssDE](../../includes/ssde-md.md)].
 
 2.  For the database that is intended to upgrade the database compatibility level, right-click the database name, select **Tasks**, select **Database Upgrade**, and click on **New Database Upgrade Session**.
@@ -107,7 +105,6 @@ QTA is a session-based feature that stores session state in the `msqta` schema o
 > A possible alternative scenario starts by restoring a database backup from the production server where a database has already gone through the recommended database compatibility upgrade workflow, to a test server.
 
 ### Executing the database upgrade workflow
-  
 1.  For the database that is intended to upgrade the database compatibility level, right-click the database name, select **Tasks**, select **Database Upgrade**, and click on **Monitor Sessions**.
 
 2.  The **session management** page lists current and past sessions for the database in scope. Select the desired session, and click on **Details**.
@@ -204,7 +201,7 @@ QTA is a session-based feature that stores session state in the `msqta` schema o
     > Instead, search for plan guides using the [sys.plan_guides](../../relational-databases/system-catalog-views/sys-plan-guides-transact-sql.md) system table, and delete manually using [sp_control_plan_guide](../../relational-databases/system-stored-procedures/sp-control-plan-guide-transact-sql.md).  
   
 ## Permissions  
- Requires membership of **db_owner** role membership.
+Requires membership of **db_owner** role membership.
   
 ## See Also  
  [Compatibility Levels and SQL Server Upgrades](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md#compatibility-levels-and-sql-server-upgrades)    

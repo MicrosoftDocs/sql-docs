@@ -57,7 +57,7 @@ Are based on the DECLARE CURSOR syntax and are used mainly in [!INCLUDE[tsql](..
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] supports four cursor types. 
 
 > [!NOTE]
-> Cursors may leverage tempdb worktables. Just like aggregation or sort operations that spill, these incur in I/O, and are a potential performance bottleneck. `STATIC` cursors use worktables from its inception. For more information, see [worktables in the Query Processing Architecture Guide](../../relational-databases/query-processing-architecture-guide.md#worktables).
+> Cursors may leverage tempdb worktables. Just like aggregation or sort operations that spill, these incur in I/O, and are a potential performance bottleneck. `STATIC` cursors use worktables from its inception. For more information, see [worktables in the Query Processing Architecture Guide](../relational-databases/query-processing-architecture-guide.md#worktables).
 
 ### Forward-only  
  A forward-only cursor does not support scrolling; it supports only fetching the rows serially from the start to the end of the cursor. The rows are not retrieved from the database until they are fetched. The effects of all `INSERT`, `UPDATE`, and `DELETE` statements made by the current user or committed by other users that affect rows in the result set are visible as the rows are fetched from the cursor.  

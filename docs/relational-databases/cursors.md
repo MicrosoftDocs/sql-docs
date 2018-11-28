@@ -23,7 +23,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
 ---
 # Cursors
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  Operations in a relational database act on a complete set of rows. For example, the set of rows returned by a SELECT statement consists of all the rows that satisfy the conditions in the WHERE clause of the statement. This complete set of rows returned by the statement is known as the result set. Applications, especially interactive online applications, cannot always work effectively with the entire result set as a unit. These applications need a mechanism to work with one row or a small block of rows at a time. Cursors are an extension to result sets that provide that mechanism.  
+  Operations in a relational database act on a complete set of rows. For example, the set of rows returned by a `SELECT` statement consists of all the rows that satisfy the conditions in the `WHERE` clause of the statement. This complete set of rows returned by the statement is known as the result set. Applications, especially interactive online applications, cannot always work effectively with the entire result set as a unit. These applications need a mechanism to work with one row or a small block of rows at a time. Cursors are an extension to result sets that provide that mechanism.  
   
  Cursors extend result processing by:  
   
@@ -39,19 +39,19 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
   
 > [!TIP]
 > In some scenarios, if there is a primary key on a table, a `WHILE` loop can be used instead of a cursor, without incurring in the overhead of a cursor.
-> However, there are scenarios where cursors are not only unavoidable, they are actually needed. When that is the case, if there is no requirement to update tables based on the cursor, then use *firehose* cursors, meaning [forward-only](#Forward-only) and read-only cursors.
+> However, there are scenarios where cursors are not only unavoidable, they are actually needed. When that is the case, if there is no requirement to update tables based on the cursor, then use *firehose* cursors, meaning [fast-forward and read-only](#Forward-only) cursors.
   
 ## Cursor Implementations  
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] supports three cursor implementations.  
   
 ### Transact-SQL cursors  
-Are based on the DECLARE CURSOR syntax and are used mainly in [!INCLUDE[tsql](../includes/tsql-md.md)] scripts, stored procedures, and triggers. [!INCLUDE[tsql](../includes/tsql-md.md)] cursors are implemented on the server and are managed by [!INCLUDE[tsql](../includes/tsql-md.md)] statements sent from the client to the server. They may also be contained in batches, stored procedures, or triggers.  
+[!INCLUDE[tsql](../includes/tsql-md.md)] cursors are based on the `DECLARE CURSOR` syntax and used mainly in [!INCLUDE[tsql](../includes/tsql-md.md)] scripts, stored procedures, and triggers. [!INCLUDE[tsql](../includes/tsql-md.md)] cursors are implemented on the server and are managed by [!INCLUDE[tsql](../includes/tsql-md.md)] statements sent from the client to the server. They may also be contained in batches, stored procedures, or triggers.  
   
 ### Application programming interface (API) server cursors  
- Support the API cursor functions in OLE DB and ODBC. API server cursors are implemented on the server. Each time a client application calls an API cursor function, the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Native Client OLE DB provider or ODBC driver transmits the request to the server for action against the API server cursor.  
+API cursors support the API cursor functions in OLE DB and ODBC. API server cursors are implemented on the server. Each time a client application calls an API cursor function, the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Native Client OLE DB provider or ODBC driver transmits the request to the server for action against the API server cursor.  
   
 ### Client cursors  
- Are implemented internally by the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Native Client ODBC driver and by the DLL that implements the ADO API. Client cursors are implemented by caching all the result set rows on the client. Each time a client application calls an API cursor function, the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Native Client ODBC driver or the ADO DLL performs the cursor operation on the result set rows cached on the client.  
+Client cursors are implemented internally by the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Native Client ODBC driver and by the DLL that implements the ADO API. Client cursors are implemented by caching all the result set rows on the client. Each time a client application calls an API cursor function, the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Native Client ODBC driver or the ADO DLL performs the cursor operation on the result set rows cached on the client.  
   
 ## Type of Cursors  
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] supports four cursor types. 
@@ -60,7 +60,7 @@ Are based on the DECLARE CURSOR syntax and are used mainly in [!INCLUDE[tsql](..
 > Cursors may leverage tempdb worktables. Just like aggregation or sort operations that spill, these incur in I/O, and are a potential performance bottleneck. `STATIC` cursors use worktables from its inception. For more information, see [worktables in the Query Processing Architecture Guide](../relational-databases/query-processing-architecture-guide.md#worktables).
 
 ### Forward-only  
- A forward-only cursor does not support scrolling; it supports only fetching the rows serially from the start to the end of the cursor. The rows are not retrieved from the database until they are fetched. The effects of all `INSERT`, `UPDATE`, and `DELETE` statements made by the current user or committed by other users that affect rows in the result set are visible as the rows are fetched from the cursor.  
+A forward-only cursor is specified as `FORWARD_ONLY` and `READ_ONLY` and does not support scrolling. These are also called *firehose* cursors and support only fetching the rows serially from the start to the end of the cursor. The rows are not retrieved from the database until they are fetched. The effects of all `INSERT`, `UPDATE`, and `DELETE` statements made by the current user or committed by other users that affect rows in the result set are visible as the rows are fetched from the cursor.  
   
  Because the cursor cannot be scrolled backward, most changes made to rows in the database after the row was fetched are not visible through the cursor. In cases where a value used to determine the location of the row within the result set is modified, such as updating a column covered by a clustered index, the modified value is visible through the cursor.  
   

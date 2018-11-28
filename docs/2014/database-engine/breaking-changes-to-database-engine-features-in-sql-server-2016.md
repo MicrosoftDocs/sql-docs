@@ -1,7 +1,7 @@
 ---
 title: "Breaking Changes to Database Engine Features in SQL Server 2014 | Microsoft Docs"
 ms.custom: ""
-ms.date: "06/13/2017"
+ms.date: "11/27/2018"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
 ms.technology: 
@@ -16,7 +16,7 @@ ms.author: mikeray
 manager: craigg
 ---
 # Breaking Changes to Database Engine Features in SQL Server 2014
-  This topic describes breaking changes in the [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)][!INCLUDE[ssDE](../includes/ssde-md.md)] and earlier versions of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. These changes might break applications, scripts, or functionalities that are based on earlier versions of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. You might encounter these issues when you upgrade. For more information, see [Use Upgrade Advisor to Prepare for Upgrades](../sql-server/install/use-upgrade-advisor-to-prepare-for-upgrades.md).  
+  This topic describes breaking changes in the [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] [!INCLUDE[ssDE](../includes/ssde-md.md)] and earlier versions of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. These changes might break applications, scripts, or functionalities that are based on earlier versions of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. You might encounter these issues when you upgrade. For more information, see [Use Upgrade Advisor to Prepare for Upgrades](../sql-server/install/use-upgrade-advisor-to-prepare-for-upgrades.md).  
   
 ##  <a name="SQL14"></a> Breaking Changes in [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]  
  No new issues.  
@@ -39,7 +39,7 @@ manager: craigg
 |SOUNDEX|Under database compatibility level 110, the SOUNDEX function implements new rules that may cause the values computed by the function to be different than the values computed under earlier compatibility levels. After upgrading to compatibility level 110, you may need to rebuild the indexes, heaps, or CHECK constraints that use the SOUNDEX function. For more information, see [SOUNDEX &#40;Transact-SQL&#41;](/sql/t-sql/functions/soundex-transact-sql)
  .|  
 |Row count message for failed DML statements|In [!INCLUDE[ssSQL11](../includes/sssql11-md.md)], the [!INCLUDE[ssDE](../includes/ssde-md.md)] will consistently send the TDS DONE token with RowCount: 0 to clients when a DML statement fails. In earlier versions of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], an incorrect value of -1 is sent to the client when the DML statement that fails is contained in a TRY-CATCH block and is either autoparameterized by the [!INCLUDE[ssDE](../includes/ssde-md.md)] or the TRY-CATCH block is not on the same level as the failed statement. For example, if a TRY-CATCH block calls a stored procedure and a DML statement in the procedure fails, the client will incorrectly receive a -1 value.<br /><br /> Applications that rely on this incorrect behavior will fail.|  
-|SERVERPROPERTY (‘Edition’)|Installed product edition of the instance of [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]. Use the value of this property to determine the features and the limits, such as maximum number of CPUs that are supported by the installed product.<br /><br /> Based on the installed Enterprise edition, this can return ‘Enterprise Edition’ or ‘Enterprise Edition: Core-based Licensing’. The Enterprise editions are differentiated based on the maximum compute capacity by a single instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. For more information on Compute capacity limits in [!INCLUDE[ssSQL11](../includes/sssql11-md.md)], see [Compute Capacity Limits by Edition of SQL Server](../sql-server/compute-capacity-limits-by-edition-of-sql-server.md).|  
+|SERVERPROPERTY ('Edition')|Installed product edition of the instance of [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]. Use the value of this property to determine the features and the limits, such as maximum number of CPUs that are supported by the installed product.<br /><br /> Based on the installed Enterprise edition, this can return 'Enterprise Edition' or 'Enterprise Edition: Core-based Licensing'. The Enterprise editions are differentiated based on the maximum compute capacity by a single instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. For more information on Compute capacity limits in [!INCLUDE[ssSQL11](../includes/sssql11-md.md)], see [Compute Capacity Limits by Edition of SQL Server](../sql-server/compute-capacity-limits-by-edition-of-sql-server.md).|  
 |CREATE LOGIN|The `CREATE LOGIN WITH PASSWORD = '`*password*`' HASHED` option cannot be used with hashes created by [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 7 or earlier.|  
 |CAST and CONVERT operations for `datetimeoffset`|The only styles that are supported when converting from date and time types to `datetimeoffset` are 0 or 1. All other conversion styles return error 9809. For example, the following code returns error 9809.<br /><br /> `SELECT CONVERT(date, CAST('7070-11-25 16:25:01.00986 -02:07' as datetimeoffset(5)), 107);`|  
   
@@ -65,9 +65,9 @@ manager: craigg
 ### SQL CLR Data Types (geometry, geography, and hierarchyid)  
  The assembly **Microsoft.SqlServer.Types.dll**, which contains the spatial data types and the hierarchyid type, has been upgraded from version 10.0 to version 11.0. Custom applications that reference this assembly may fail when the following conditions are true.  
   
--   When you move a custom application from a computer on which [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] was installed to a computer on which only [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] is installed, the application will fail because the referenced version 10.0 of the **SqlTypes** assembly is not present. You may see this error message: `“Could not load file or assembly 'Microsoft.SqlServer.Types, Version=10.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91' or one of its dependencies. The system cannot find the file specified.”`  
+-   When you move a custom application from a computer on which [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] was installed to a computer on which only [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] is installed, the application will fail because the referenced version 10.0 of the **SqlTypes** assembly is not present. You may see this error message: `"Could not load file or assembly 'Microsoft.SqlServer.Types, Version=10.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91' or one of its dependencies. The system cannot find the file specified."`  
   
--   When you reference the **SqlTypes** assembly version 11.0, and version 10.0 is also installed, you may see this error message: `“System.InvalidCastException: Unable to cast object of type 'Microsoft.SqlServer.Types.SqlGeometry' to type 'Microsoft.SqlServer.Types.SqlGeometry'.”`  
+-   When you reference the **SqlTypes** assembly version 11.0, and version 10.0 is also installed, you may see this error message: `"System.InvalidCastException: Unable to cast object of type 'Microsoft.SqlServer.Types.SqlGeometry' to type 'Microsoft.SqlServer.Types.SqlGeometry'."`  
   
 -   When you reference the **SqlTypes** assembly version 11.0 from a custom application that targets .NET 3.5, 4, or 4.5, the application will fail because SqlClient by design loads version 10.0 of the assembly. This failure occurs when the application calls one of the following methods:  
   
@@ -128,7 +128,7 @@ manager: craigg
  32-bit Address Windowing Extensions (AWE) support is discontinued. This might result in slower performance on 32-bit operating systems. For installations using large amounts of memory, migrate to a 64-bit operating system.  
   
 ### XQuery Functions Are Surrogate-Aware  
- The W3C recommendation for XQuery functions and operators requires them to count a surrogate pair that represents a high-range Unicode character as a single glyph in UTF-16 encoding. However, in versions of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] prior to [!INCLUDE[ssSQL11](../includes/sssql11-md.md)], string functions did not recognize surrogate pairs as a single character. Some string operations – such as string length calculations and substring extractions – returned incorrect results. [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] now fully supports UTF-16 and the correct handling of surrogate pairs.  
+ The W3C recommendation for XQuery functions and operators requires them to count a surrogate pair that represents a high-range Unicode character as a single glyph in UTF-16 encoding. However, in versions of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] prior to [!INCLUDE[ssSQL11](../includes/sssql11-md.md)], string functions did not recognize surrogate pairs as a single character. Some string operations - such as string length calculations and substring extractions - returned incorrect results. [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] now fully supports UTF-16 and the correct handling of surrogate pairs.  
   
  The XML data type in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] only allows well-formed surrogate pairs. However, some functions can still return undefined or unexpected results in certain circumstances, since it is possible to pass invalid or partial surrogate pairs to XQuery functions as string values. Consider the following methods for generating string values when using XQuery in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]:  
   
@@ -253,17 +253,18 @@ manager: craigg
 |Feature|Description|  
 |-------------|-----------------|  
 |Connecting from [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Native Client using SSL|When connecting with [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Native Client, applications that use "SERVER=shortname; FORCE ENCRYPTION=true" with certificate whose Subjects specify Fully Qualified Domain Names (FQDN's) have connected in the past due to relaxed validation. SQL Server 2008 R2 enhances security by enforcing FQDN subjects for certificates. Applications that rely upon relaxed validation must take one of the following actions:<br /><br /> Use the FQDN in the connection string.<br /><br /> -This option does not require recompiling the application if the SERVER keyword of the connection string is configured outside the application.<br /><br /> -This option does not work for applications that have their connection strings hardcoded.<br /><br /> -This option does not work for applications that use Database Mirroring since the mirrored server replies with a simple name.|  
-||Add an alias for the shortname to map to the FQDN.<br /><br /> -This option works even for applications that have their connection strings hardcoded.<br /><br /> -This option does not work for applications that use Database Mirroring since the providers don’t look up aliases for received failover partner names.|  
+||Add an alias for the shortname to map to the FQDN.<br /><br /> -This option works even for applications that have their connection strings hardcoded.<br /><br /> -This option does not work for applications that use Database Mirroring since the providers don't look up aliases for received failover partner names.|  
 ||Have a certificate issued for shortname.<br /><br /> -This option works for all applications.|  
-  
-##  <a name="Yukon"></a> Breaking Changes in SQL Server 2005  
- For a list of breaking changes introduced in [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)], see [Breaking Changes to Database Engine Features in SQL Server 2005](breaking-changes-to-database-engine-features-in-sql-server-2016.md).  
-  
+
+## <a name="Yukon"></a> Breaking Changes in SQL Server 2005  
+
+[!INCLUDE[Archived documentation for very old versions of SQL Server](../includes/paragraph-content/previous-versions-archive-documentation-sql-server.md)]
+
 ## See Also  
  [Deprecated Database Engine Features in SQL Server 2014](deprecated-database-engine-features-in-sql-server-2016.md)   
  [Behavior Changes to Database Engine Features in SQL Server 2014](../../2014/database-engine/behavior-changes-to-database-engine-features-in-sql-server-2014.md)   
  [Discontinued Database Engine Functionality in SQL Server 2014](discontinued-database-engine-functionality-in-sql-server-2016.md)   
  [SQL Server Database Engine Backward Compatibility](sql-server-database-engine-backward-compatibility.md)   
  [ALTER DATABASE Compatibility Level &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-compatibility-level)  
-  
+ [Breaking Changes to Management Tools Features in SQL Server 2014](breaking-changes-to-management-tools-features-in-sql-server-2014.md?view=sql-server-2014)  
   

@@ -23,7 +23,7 @@ The following procedures utilize entities created in previous procedures in the 
   
 ### To apply the changes made in the previous procedures  
   
-1.  Click the green **Update** button on the toolbar (“Update Database” tooltip is displayed if you hover over the button). The toolbar is above the Columns Grid of the Table Designer.  
+1.  Click the green **Update** button on the toolbar ("Update Database" tooltip is displayed if you hover over the button). The toolbar is above the Columns Grid of the Table Designer.  
   
 2.  The **Preview Database Updates** dialog box appears. A deployment script based on your changes is generated in the background. The dialog box then shows a summary of the actions SSDT is going to take (e.g., creating or dropping database entities), together with potential issues it has identified (this is not applicable to our procedure, but will come in handy when your database definition contains errors that prevent an update action until resolved).  
   

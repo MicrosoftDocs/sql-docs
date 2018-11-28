@@ -71,11 +71,11 @@ monikerRange: "= azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-
 -   Delete database  
   
 ## Example  
- Show most recent geo-replication operations associated with database ‘mydb’.  
+ Show most recent geo-replication operations associated with database 'mydb'.  
   
 ```  
 SELECT * FROM sys.dm_ operation_status   
-   WHERE major_resource_id = ‘myddb’   
+   WHERE major_resource_id = 'myddb'   
    ORDER BY start_time DESC;  
 ```  
   

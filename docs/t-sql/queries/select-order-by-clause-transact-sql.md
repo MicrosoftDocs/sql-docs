@@ -130,7 +130,7 @@ ORDER BY order_by_expression
  In a SELECT TOP (*N*) statement, always use an ORDER BY clause. This is the only way to predictably indicate which rows are affected by TOP. For more information, see [TOP &#40;Transact-SQL&#41;](../../t-sql/queries/top-transact-sql.md).  
   
 ## Interoperability  
- When used with a SELECT…INTO statement to insert rows from another source, the ORDER BY clause does not guarantee the rows are inserted in the specified order.  
+ When used with a SELECT...INTO statement to insert rows from another source, the ORDER BY clause does not guarantee the rows are inserted in the specified order.  
   
  Using OFFSET and FETCH in a view does not change the updateability property of the view.  
   

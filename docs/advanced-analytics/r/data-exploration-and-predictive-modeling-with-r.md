@@ -25,7 +25,7 @@ However, this approach has many drawbacks, that hae hindered the wider adoption 
 + Data movement can be slow, inefficient, or insecure
 + R itself has performance and scale limitations
 
-These drawbacks become more apparent when you need to move and analyze large amounts of data, or use data sets that don’t fit into the memory available on your computer.
+These drawbacks become more apparent when you need to move and analyze large amounts of data, or use data sets that don't fit into the memory available on your computer.
 
 The new, scalable packages and R functions included with [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)] help you overcome many of these challenges. 
 

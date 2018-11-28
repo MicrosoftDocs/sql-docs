@@ -60,7 +60,7 @@ Website, click OK, otherwise click Cancel.
 -   If the site does not appear in the Trusted Sites zone list, the code is blocked and access to local files is denied.
 
     > [!NOTE]
-    >  In ADO 2.8 and later, the user is not alerted or advised to add sites to the Trusted Sites zone list. Therefore the management of the Trusted Sites list is the responsibility of those who are deploying or supporting Web site–based applications that require access to the local file system.
+    >  In ADO 2.8 and later, the user is not alerted or advised to add sites to the Trusted Sites zone list. Therefore the management of the Trusted Sites list is the responsibility of those who are deploying or supporting Web site-based applications that require access to the local file system.
 
 ### Access blocked to the ActiveCommand property on Recordset objects
  When running in Internet Explorer, ADO 2.8 now blocks access to the [ActiveCommand](../../ado/reference/ado-api/activecommand-property-ado.md) property for an active **Recordset** object and returns an error. The error occurs regardless of whether the page comes from a Web site registered in the Trusted Sites list.

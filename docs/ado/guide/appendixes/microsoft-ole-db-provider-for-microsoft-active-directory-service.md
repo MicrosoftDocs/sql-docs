@@ -59,7 +59,7 @@ ADSDSOObject
 |*Root*|Indicates the **ADsPath** object from which to start the search (that is, the root of the search).|  
 |*Filter*|Indicates the search filter in the RFC 1960 format.|  
 |*Attributes*|Indicates a comma-delimited list of attributes to be returned.|  
-|*Scope*|Optional. A **String** that specifies the scope of the search. Can be one of the following:<br /><br /> -   Base — Search only the base object (root of the search).<br />-   OneLevel — Search only one level.<br />-   Subtree — Search the whole subtree.|  
+|*Scope*|Optional. A **String** that specifies the scope of the search. Can be one of the following:<br /><br /> -   Base - Search only the base object (root of the search).<br />-   OneLevel - Search only one level.<br />-   Subtree - Search the whole subtree.|  
   
  For example:  
   

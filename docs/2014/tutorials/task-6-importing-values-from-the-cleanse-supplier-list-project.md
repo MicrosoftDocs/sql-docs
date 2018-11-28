@@ -34,7 +34,7 @@ manager: craigg
     |bobby0@adventure-work.com|bobby0@adventure-works.com|  
     |tad0@adventure-work.com|tad0@adventure-works.com|  
   
-6.  Repeat the previous step of importing project values for the **Country** domain and notice that a new entry is added for correcting **United State** to **United States** (with ‘s’).  
+6.  Repeat the previous step of importing project values for the **Country** domain and notice that a new entry is added for correcting **United State** to **United States** (with 's').  
   
     |Value|Correct To|  
     |-----------|----------------|  
@@ -53,7 +53,7 @@ manager: craigg
   
 10. Navigate to the Tutorial folder, type **Suppliers.dqs** for the **file name**, and click **Save**. You can use this DQS file to create a new knowledge base based on it.  
   
-11. Click **OK** to close the **Export Knowledge Base – Suppliers** message box.  
+11. Click **OK** to close the **Export Knowledge Base - Suppliers** message box.  
   
 12. Click **Finish** to finish the activity.  
   

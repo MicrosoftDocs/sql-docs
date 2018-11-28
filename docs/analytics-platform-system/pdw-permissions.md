@@ -119,7 +119,7 @@ The following list describes general rules for determining permissions:
   
 -   **DENY** overrides **GRANT** when permissions conflict.  
   
-    For example, suppose login David has no permissions on the Customer table and is a member of two database roles –dbgroup1, which has **DENY** permission on the Customer table, and dbgroup2, which has **GRANT** permission on the Customer table. In this case, David will inherit the **DENY** permission on the Customer table. This is the case whether the roles gained their permissions explicitly or implicitly.  
+    For example, suppose login David has no permissions on the Customer table and is a member of two database roles -dbgroup1, which has **DENY** permission on the Customer table, and dbgroup2, which has **GRANT** permission on the Customer table. In this case, David will inherit the **DENY** permission on the Customer table. This is the case whether the roles gained their permissions explicitly or implicitly.  
   
 ### Auditing Permissions  
 To research the permissions of a user check the following.  

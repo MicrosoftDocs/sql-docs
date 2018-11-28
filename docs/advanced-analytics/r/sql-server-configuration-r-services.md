@@ -225,7 +225,7 @@ However, depending on the algorithm you use, some models can be quite large, esp
 
 ## Articles in this series
 
-[Performance tuning for R – introduction](../r/sql-server-r-services-performance-tuning.md)
+[Performance tuning for R - introduction](../r/sql-server-r-services-performance-tuning.md)
 
 [Performance tuning for R - SQL Server configuration](../r/sql-server-configuration-r-services.md)
 

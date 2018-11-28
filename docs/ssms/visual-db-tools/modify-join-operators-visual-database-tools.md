@@ -25,7 +25,7 @@ By default, the [Query and View Designer](../../ssms/visual-db-tools/query-and-v
   
 1.  In the [Diagram pane](../../ssms/visual-db-tools/diagram-pane-visual-database-tools.md), right-click the join line you want to modify, and then choose **Properties** from the shortcut menu.  
   
-2.  In the Property window, click **Join Condition and Type** and click the **ellipses (…)** to the right of the property.  
+2.  In the Property window, click **Join Condition and Type** and click the **ellipses (...)** to the right of the property.  
   
 3.  In the **Join** dialog box, select a new operator.  
   

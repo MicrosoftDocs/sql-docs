@@ -97,7 +97,7 @@ manager: craigg
  For more information, see [Use the Values of Variables and Parameters in a Child Package](../../integration-services/packages/legacy-package-deployment-ssis.md#child).  
   
 ### Accessing Parent Package Variables  
- Child packages can access parent package variables by using the Script task. When you enter the name of the parent package variable on the **Script** page in the **Script Task Editor**, don’t include **User:** in the variable name. Otherwise, the child package doesn’t locate the variable when you run the parent package.  
+ Child packages can access parent package variables by using the Script task. When you enter the name of the parent package variable on the **Script** page in the **Script Task Editor**, don't include **User:** in the variable name. Otherwise, the child package doesn't locate the variable when you run the parent package.  
   
 ## Configuring the Execute Package Task  
  You can set properties through [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer or programmatically.  
@@ -152,7 +152,7 @@ manager: craigg
 >  The **ReferenceType** option is ready-only and set to **External Reference** if the project that contains the package has not been converted to the project deployment model. [Deploy Integration Services (SSIS) Projects and Packages](../../integration-services/packages/deploy-integration-services-ssis-projects-and-packages.md).  
   
  **Password**  
- If the child package is password protected, provide the password for the child package, or click the ellipsis button (…) and create a new password for the child package.  
+ If the child package is password protected, provide the password for the child package, or click the ellipsis button (...) and create a new password for the child package.  
   
  **ExecuteOutOfProcess**  
  Specify whether the child package runs in the process of the parent package or in a separate process. By default, the ExecuteOutOfProcess property of the Execute Package task is set to **False**, and the child package runs in the same process as the parent package. If you set this property to **true**, the child package runs in a separate process. This may slow down the launching of the child package. In addition, if set the property to **true**, you cannot debug the package in a tools-only install; you must install the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] product. For more information, see [Install Integration Services](../../integration-services/install-windows/install-integration-services.md).  
@@ -187,7 +187,7 @@ manager: craigg
  **Related Topics:** [OLE DB Connection Manager](../../integration-services/connection-manager/ole-db-connection-manager.md)  
   
  **PackageName**  
- Type the name of the child package, or click the ellipsis (…) and then locate the package.  
+ Type the name of the child package, or click the ellipsis (...) and then locate the package.  
   
 ##### Location = File system  
  **Connection**  

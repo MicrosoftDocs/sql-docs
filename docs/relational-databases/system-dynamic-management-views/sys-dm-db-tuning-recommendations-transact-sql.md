@@ -29,7 +29,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversio
 
   Returns detailed information about tuning recommendations.  
   
- In [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], dynamic management views cannot expose information that would impact database containment or expose information about other databases the user has access to. To avoid exposing this information, every row that contains data that doesn’t belong to the connected tenant is filtered out.
+ In [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], dynamic management views cannot expose information that would impact database containment or expose information about other databases the user has access to. To avoid exposing this information, every row that contains data that doesn't belong to the connected tenant is filtered out.
 
 | **Column name** | **Data type** | **Description** |
 | --- | --- | --- |
@@ -38,7 +38,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversio
 | **reason** | **nvarchar(4000)** | Reason why this recommendation was provided. |
 | **valid\_since** | **datetime2** | The first time this recommendation was generated. |
 | **last\_refresh** | **datetime2** | The last time this recommendation was generated. |
-| **state** | **nvarchar(4000)** | JSON document that describes the state of the recommendation. Following fields are available:<br />-   `currentValue` - current state of the recommendation.<br />-   `reason` – constant that describes why the recommendation is in the current state.|
+| **state** | **nvarchar(4000)** | JSON document that describes the state of the recommendation. Following fields are available:<br />-   `currentValue` - current state of the recommendation.<br />-   `reason` - constant that describes why the recommendation is in the current state.|
 | **is\_executable\_action** | **bit** | 1 = The recommendation can be executed against the database via [!INCLUDE[tsql_md](../../includes/tsql-md.md)] script.<br />0 = The recommendation cannot be executed against the database (for example: information only or reverted recommendation) |
 | **is\_revertable\_action** | **bit** | 1 = The recommendation can be automatically monitored and reverted by Database engine.<br />0 = The recommendation cannot be automatically monitored and reverted. Most &quot;executable&quot; actions will be &quot;revertable&quot;. |
 | **execute\_action\_start\_time** | **datetime2** | Date the recommendation is applied. |
@@ -74,7 +74,7 @@ JSON document in `state` column contains the reason that describes why is the re
 | `AutomaticTuningOptionDisabled` | `FORCE_LAST_GOOD_PLAN` option is disabled by the user during verification process. Enable `FORCE_LAST_GOOD_PLAN` option using [ALTER DATABASE SET AUTOMATIC_TUNING &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md) statement or force the plan manually using the script in `[details]` column. |
 | `UnsupportedStatementType` | Plan cannot be forced on the query. Examples of unsupported queries are cursors and `INSERT BULK` statement. |
 | `LastGoodPlanForced` | Recommendation is successfully applied. |
-| `AutomaticTuningOptionNotEnabled`| [!INCLUDE[ssde_md](../../includes/ssde_md.md)] identified potential performance regression, but the `FORCE_LAST_GOOD_PLAN` option is not enabled – see [ALTER DATABASE SET AUTOMATIC_TUNING &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md). Apply recommendation manually or enable `FORCE_LAST_GOOD_PLAN` option. |
+| `AutomaticTuningOptionNotEnabled`| [!INCLUDE[ssde_md](../../includes/ssde_md.md)] identified potential performance regression, but the `FORCE_LAST_GOOD_PLAN` option is not enabled - see [ALTER DATABASE SET AUTOMATIC_TUNING &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md). Apply recommendation manually or enable `FORCE_LAST_GOOD_PLAN` option. |
 | `VerificationAborted`| Verification process is aborted due to the restart or Query Store cleanup. |
 | `VerificationForcedQueryRecompile`| Query is recompiled because there is no significant performance improvement. |
 | `PlanForcedByUser`| User manually forced the plan using [sp_query_store_force_plan &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-query-store-force-plan-transact-sql.md) procedure. |

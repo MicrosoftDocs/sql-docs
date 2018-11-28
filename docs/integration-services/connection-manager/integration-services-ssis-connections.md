@@ -153,7 +153,7 @@ A connection manager can be created at the package level or at the project level
   
     -   Click the connection manager type to add to the package.  
   
-         —or—  
+         -or-  
   
     -   If the type that you want to add is not listed, click **New Connection** to open the **Add SSIS Connection Manager** dialog box, select a connection manager type, and then click **OK**.  
   
@@ -220,7 +220,7 @@ A connection manager can be created at the package level or at the project level
 4.  Optionally, right-click the connection manager in the **Solution Explorer** window under **Connection Managers** node (or) in the **Connection Managers** tab of the **SSIS Designer** window, click **Rename**, and then modify the default name of the connection manager.  
   
     > [!NOTE]  
-    >  In the **Connection Managers** tab of the **SSIS Designer** window, you won’t be able to overwrite the **(project)** prefix from the connection manager name. This is by design.  
+    >  In the **Connection Managers** tab of the **SSIS Designer** window, you won't be able to overwrite the **(project)** prefix from the connection manager name. This is by design.  
 
 ### Add SSIS Connection Manager dialog box
 Use the **Add SSIS Connection Manager** dialog box to select the type of connection to add to a package.  

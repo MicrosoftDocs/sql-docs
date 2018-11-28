@@ -36,7 +36,7 @@ ODBC applications can be classified as follows:
 -   **Pure ODBC 2.**  
      ***x* Unicode Application** A pure ODBC 2.*x* recompiled application that is Unicode-compliant and uses the SQL_WCHAR data type.  
   
--   **Pure Open Group and ISO**–**compliant ODBC Application** A 32-bit application that:  
+-   **Pure Open Group and ISO**-**compliant ODBC Application** A 32-bit application that:  
   
     -   Calls functions defined in the Open Group or ISO CLI standards. (These functions may include deprecated 3.0 functions.)  
   

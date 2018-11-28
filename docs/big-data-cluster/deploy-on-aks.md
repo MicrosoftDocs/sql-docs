@@ -4,7 +4,7 @@ description: Learn how to configure Azure Kubernetes Service (AKS) for SQL Serve
 author: rothja 
 ms.author: jroth 
 manager: craigg
-ms.date: 11/15/2018
+ms.date: 11/27/2018
 ms.topic: conceptual
 ms.prod: sql
 ---
@@ -67,7 +67,7 @@ An Azure resource group is a logical group in which Azure resources are deployed
 
 ## Create a Kubernetes cluster
 
-1. Create a Kubernetes cluster in AKS with the [az aks create](https://docs.microsoft.com/cli/azure/aks) command. The following example creates a Kubernetes cluster named *kubcluster* with one Linux master node and two Linux agent nodes. Make sure you create the AKS cluster in the same resource group that you used in the previous sections.
+1. Create a Kubernetes cluster in AKS with the [az aks create](https://docs.microsoft.com/cli/azure/aks) command. The following example creates a Kubernetes cluster named *kubcluster* with three Linux agent nodes. Make sure you create the AKS cluster in the same resource group that you used in the previous sections.
 
     ```bash
    az aks create --name kubcluster \
@@ -78,9 +78,9 @@ An Azure resource group is a logical group in which Azure resources are deployed
     --kubernetes-version 1.10.8
     ```
 
-    You can increase or decrease the number of Kubernetes agent nodes by changing the `--node-count <n>` where `<n>` is the number of agent nodes you want to have, which it does not include the master Kubernetes node. So in the example above, there will be **4** VMs of size **Standard_L4s** used for the AKS cluster: **1** for the master and **3** for the agent nodes.
+   You can increase or decrease the number of Kubernetes agent nodes by changing the `--node-count <n>` where `<n>` is the number of agent nodes you want to use. This does not include the master Kubernetes node, which is managed behind the scenes by AKS. So in the example above, there are **3** VMs of size **Standard_L4s** used for the agent nodes of your AKS cluster.
 
-    After several minutes, the command completes and returns JSON-formatted information about the cluster.
+   After several minutes, the command completes and returns JSON-formatted information about the cluster.
 
 1. Save the JSON output from the previous command for later use.
 

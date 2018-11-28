@@ -40,7 +40,7 @@ fn:expanded-QName($paramURI as xs:string?, $paramLocal as xs:string?) as xs:QNam
   
 -   If the *$paramLocal* value specified is not in the correct lexical form for xs:NCName type, the empty sequence is returned and represents a dynamic error.  
   
--   Conversion from xs:QName type to any other type is not supported in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Because of this, the **expanded-QName()** function cannot be used in XML construction. For example, when you are constructing a node, such as `<e> expanded-QName(…) </e>`, the value has to be untyped. This would require that you convert the xs:QName type value returned by `expanded-QName()` to xdt:untypedAtomic. However, this is not supported. A solution is provided in an example later in this topic.  
+-   Conversion from xs:QName type to any other type is not supported in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Because of this, the **expanded-QName()** function cannot be used in XML construction. For example, when you are constructing a node, such as `<e> expanded-QName(...) </e>`, the value has to be untyped. This would require that you convert the xs:QName type value returned by `expanded-QName()` to xdt:untypedAtomic. However, this is not supported. A solution is provided in an example later in this topic.  
   
 -   You can modify or compare the existing QName type values. For example, `/root[1]/e[1] eq expanded-QName("https://nsURI" "myNS")` compares the value of the element, <`e`>, with the QName returned by the **expanded-QName()** function.  
   

@@ -38,7 +38,7 @@ manager: craigg
 ## Cloud Adapter Configuration Settings  
  Use the following Cloud Adapter configuration details to modify settings for a Cloud Adapter.  
   
--   **Default path for the configuration file** – C:\Program Files\Microsoft SQL Server\120\Tools\CloudAdapter\  
+-   **Default path for the configuration file** - C:\Program Files\Microsoft SQL Server\120\Tools\CloudAdapter\  
   
 -   **Configuration file parameters** -  
   
@@ -46,19 +46,19 @@ manager: craigg
   
         -   \<appSettings>  
   
-            -   \<add key=”WebServicePort” value=”” />  
+            -   \<add key="WebServicePort" value="" />  
   
-            -   \<add key=”WebServiceCertificate” value=”GUID” />  
+            -   \<add key="WebServiceCertificate" value="GUID" />  
   
-            -   \<add key=”ExposeExceptionDetails” value=”true” />  
+            -   \<add key="ExposeExceptionDetails" value="true" />  
   
         -   \</appSettings>  
   
     -   \</configuration>  
   
--   **Certificate details** – The certificate has the following values:  
+-   **Certificate details** - The certificate has the following values:  
   
-    -   Subject – “CN=CloudAdapter\<VMName>, DC=SQL Server, DC=Microsoft”  
+    -   Subject - "CN=CloudAdapter\<VMName>, DC=SQL Server, DC=Microsoft"  
   
     -   The certificate should have only Server Authentication EKU enabled.  
   
@@ -75,11 +75,11 @@ manager: craigg
 ## Cloud Adapter Troubleshooting  
  Use the following information to troubleshoot the Cloud Adapter for [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]:  
   
--   **Error handling and logging** – Errors and status messages are written to the Application Event Log.  
+-   **Error handling and logging** - Errors and status messages are written to the Application Event Log.  
   
--   **Tracing, Events** – All events are written to the Application Event Log.  
+-   **Tracing, Events** - All events are written to the Application Event Log.  
   
--   **Control, configuration** – Use the configuration file located in:  C:\Program Files\Microsoft SQL Server\120\Tools\CloudAdapter\\.  
+-   **Control, configuration** - Use the configuration file located in:  C:\Program Files\Microsoft SQL Server\120\Tools\CloudAdapter\\.  
   
 |Error|Error ID|Cause|Resolution|  
 |-----------|--------------|-----------|----------------|  

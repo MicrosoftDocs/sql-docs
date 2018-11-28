@@ -91,7 +91,7 @@ GO
 ```  
   
 ### B. Creating a Credential for EKM  
- The following example uses a previously created account called `User1OnEKM` on an EKM module through the EKM’s Management tools, with a basic account type and password. The **sysadmin** account on the server creates a credential that is used to connect to the EKM account, and assigns it to the `User1`[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] account:  
+ The following example uses a previously created account called `User1OnEKM` on an EKM module through the EKM's Management tools, with a basic account type and password. The **sysadmin** account on the server creates a credential that is used to connect to the EKM account, and assigns it to the `User1`[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] account:  
   
 ```  
 CREATE CREDENTIAL CredentialForEKM  
@@ -149,7 +149,7 @@ EXEC ('CREATE CREDENTIAL Azure_EKM_TDE_cred
 USE master  
 CREATE CREDENTIAL [https://<mystorageaccountname>.blob.core.windows.net/<mystorageaccountcontainername>] -- this name must match the container path, start with https and must not contain a trailing forward slash.  
    WITH IDENTITY='SHARED ACCESS SIGNATURE' -- this is a mandatory string and do not change it.   
-   , SECRET = 'sharedaccesssignature' –- this is the shared access signature token   
+   , SECRET = 'sharedaccesssignature' -- this is the shared access signature token   
 GO    
 ```  
   

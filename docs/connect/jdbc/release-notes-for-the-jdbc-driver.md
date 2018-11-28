@@ -156,7 +156,7 @@ The JDBC Driver now has support for:
 
 ### Added Timeouts
 
-The JDBC Driver now supports the following configurable timeouts you can change based on your application’s needs:
+The JDBC Driver now supports the following configurable timeouts you can change based on your application's needs:
 
 - Query Timeout to control the number of seconds to wait before a timeout occurs when running a query.
 - Socket Timeout to specify the number of milliseconds to wait before a timeout occurs on a socket read or accept.
@@ -169,7 +169,7 @@ The Microsoft JDBC Driver 6.1 for SQL Server is fully compliant with JDBC specif
 
 The Microsoft JDBC Driver 6.0 for SQL Server is fully compliant with JDBC specifications 4.1 and 4.2. The jars in the 6.0 package are named according to their compliance with the JDBC API version. For example, the sqljdbc42.jar file from the 6.0 package is JDBC API 4.2 compliant. Similarly, the sqljdbc41.jar file is compliant with JDBC API 4.1.
 
-To ensure you have the right sqljdbc42.jar or sqljdbc41.jar, run the following lines of code. If the output is “Driver version: 6.0.7507.100“, you have the JDBC Driver 6.0 package.
+To ensure you have the right sqljdbc42.jar or sqljdbc41.jar, run the following lines of code. If the output is "Driver version: 6.0.7507.100", you have the JDBC Driver 6.0 package.
 
 ```java
 Connection conn = DriverManager.getConnection("jdbc:sqlserver://<server>;user=<user>;password=<password>;");

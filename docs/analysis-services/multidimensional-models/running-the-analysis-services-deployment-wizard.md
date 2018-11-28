@@ -20,7 +20,7 @@ manager: kfile
 -   **From the command prompt** When run at the command prompt, the [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Deployment Wizard generates a deployment script based upon the switches that you use to run the wizard. The wizard may any one of the following: prompt you for user input and modify input files based on that input; run a silent, unattended deployment using the input files as is; or create a deployment script that you can use later.  
   
 ## Running the Analysis Services Deployment Wizard Interactively  
- When you run interactively, the [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Deployment Wizard reads the values from the input files and presents this information to you. You can modify these input values—such as deployment destination, configuration settings, deployment options, and connection string passwords—or leave them as is. If you change any input values, the wizard uses these changes when generating the deployment script. However, the wizard does not make any changes to the values in the input file.  
+ When you run interactively, the [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Deployment Wizard reads the values from the input files and presents this information to you. You can modify these input values-such as deployment destination, configuration settings, deployment options, and connection string passwords-or leave them as is. If you change any input values, the wizard uses these changes when generating the deployment script. However, the wizard does not make any changes to the values in the input file.  
   
 > [!NOTE]  
 >  If you want to have the [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Deployment Wizard modify the input values, run the wizard at the command prompt and set the wizard to run in answer file mode.  
@@ -31,7 +31,7 @@ manager: kfile
   
 -   Click **Start** > **Microsoft SQL Server** > **Deployment Wizard**.  
   
-     —or—  
+     -or-  
   
 -   In the **Projects** folder of the [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] project, double-click the \<project name>.asdatabase file.
     > [!NOTE]  

@@ -23,7 +23,7 @@ manager: craigg
   
     -   Right-click a dimension and then click **Open** or **View Designer**.  
   
-         —or—  
+         -or-  
   
     -   Double-click a dimension.  
   

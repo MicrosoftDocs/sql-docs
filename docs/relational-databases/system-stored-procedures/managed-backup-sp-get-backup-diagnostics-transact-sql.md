@@ -39,7 +39,7 @@ managed_backup.sp_get_backup_diagnostics [@xevent_channel = ] 'event type' [, [@
   
 ##  <a name="Arguments"></a> Arguments  
  @xevent_channel  
- The type of Extended Event. The default value is set to return all events logged for the previous 30 minutes. The events logged depend on the type of Extended Events enabled. You can use this parameter to filter the stored procedure to show only events of a certain type. You can either specify the full event name or specify a substring such as: **‘Admin’**, **‘Analytic’**, **‘Operational’**, and **‘Debug’**. The @event_channel is **VARCHAR (255)**.  
+ The type of Extended Event. The default value is set to return all events logged for the previous 30 minutes. The events logged depend on the type of Extended Events enabled. You can use this parameter to filter the stored procedure to show only events of a certain type. You can either specify the full event name or specify a substring such as: **'Admin'**, **'Analytic'**, **'Operational'**, and **'Debug'**. The @event_channel is **VARCHAR (255)**.  
   
  To get a list of event types currently enabled use the **managed_backup.fn_get_current_xevent_settings** function.  
   

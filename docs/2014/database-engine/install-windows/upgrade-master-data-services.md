@@ -292,7 +292,7 @@ manager: craigg
     3.  Click **Apply**.  
   
 ## Troubleshooting  
- **Issue:** When you open the [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] or [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)][!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] web application, a “client version is not compatible with the database version” error message is displayed.  
+ **Issue:** When you open the [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] or [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)][!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] web application, a "client version is not compatible with the database version" error message is displayed.  
   
  **Solution:** This issue occurs when a [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] or [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] Master Data Manager web application tries to access a database that has been upgraded to [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Master Data Services. You must use a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] web application instead.  
   

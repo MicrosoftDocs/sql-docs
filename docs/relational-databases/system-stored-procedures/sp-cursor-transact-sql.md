@@ -131,7 +131,7 @@ sp_cursor  cursor, optype, rownum, table
   
  When a single parameter is used, an UPDATE statement may be submitted using the following syntax:  
   
- `[ [ UPDATE <table name> ] SET ] {<column name> = expression} [,…n]`  
+ `[ [ UPDATE <table name> ] SET ] {<column name> = expression} [,...n]`  
   
 > [!NOTE]  
 >  If UPDATE \<table name> is specified, any value specified for the *table* parameter will be ignored.  
@@ -163,7 +163,7 @@ sp_cursor  cursor, optype, rownum, table
   
  `expression [,...n]`  
   
- except where VALUES was specified, in which case there must be a trailing ")" after the last expression. In this case, the *\<table name>* in the constructed UDPATE statement is the one either specified or defaulted to by the *table* parameter.  
+ except where VALUES was specified, in which case there must be a trailing ")" after the last expression. In this case, the *\<table name>* in the constructed UPDATE statement is the one either specified or defaulted to by the *table* parameter.  
   
 > [!NOTE]  
 >  It is possible to submit one parameter as a named parameter, i.e. "`@VALUES`". In this case no other named parameters may be used.  

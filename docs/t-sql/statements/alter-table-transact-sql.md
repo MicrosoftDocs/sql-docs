@@ -588,9 +588,9 @@ Online alter column allows user created and auto statistics to reference the alt
   
 -   The `WAIT_AT_LOW_PRIORITY` option cannot be used with online alter column.  
   
--   `ALTER COLUMN … ADD/DROP PERSISTED` is not supported for online alter column.  
+-   `ALTER COLUMN ... ADD/DROP PERSISTED` is not supported for online alter column.  
   
--   `ALTER COLUMN … ADD/DROP ROWGUIDCOL/NOT FOR REPLICATION` is not affected by online alter column.  
+-   `ALTER COLUMN ... ADD/DROP ROWGUIDCOL/NOT FOR REPLICATION` is not affected by online alter column.  
   
 -   Online alter column does not support altering a table where change tracking is enabled or that is a publisher of merge replication.  
   
@@ -623,7 +623,7 @@ If you do not want to verify new CHECK or FOREIGN KEY constraints against existi
 ALTER INDEX *index_name*
 Specifies that the bucket count for *index_name* is to be changed or altered.
   
-The syntax ALTER TABLE … ADD/DROP/ALTER INDEX is supported only for memory-optimized tables.    
+The syntax ALTER TABLE ... ADD/DROP/ALTER INDEX is supported only for memory-optimized tables.    
 
 > [!IMPORTANT]
 > Without using an ALTER TABLE statement, the statements [CREATE INDEX](create-index-transact-sql.md), [DROP INDEX](drop-index-transact-sql.md), [ALTER INDEX](alter-index-transact-sql.md), and [PAD_INDEX](alter-table-index-option-transact-sql.md) are not supported for indexes on memory-optimized tables.
@@ -656,7 +656,7 @@ A PRIMARY KEY constraint cannot be dropped if an XML index exists on the table.
 INDEX *index_name*    
 Specifies that *index_name* is removed from the table.
   
-The syntax ALTER TABLE … ADD/DROP/ALTER INDEX is supported only for memory-optimized tables.    
+The syntax ALTER TABLE ... ADD/DROP/ALTER INDEX is supported only for memory-optimized tables.    
 
 > [!IMPORTANT]
 > Without using an ALTER TABLE statement, the statements [CREATE INDEX](create-index-transact-sql.md), [DROP INDEX](drop-index-transact-sql.md), [ALTER INDEX](alter-index-transact-sql.md), and [PAD_INDEX](alter-table-index-option-transact-sql.md) are not supported for indexes on memory-optimized tables.
@@ -1005,7 +1005,7 @@ Conditionally drops the column or constraint  only if it already exists.
  You can change the length, precision, or scale of a column by specifying a new size for the column data type in the ALTER COLUMN clause. If data exists in the column, the new size cannot be smaller than the maximum size of the data. Also, the column cannot be defined in an index, unless the column is a **varchar**, **nvarchar**, or **varbinary** data type and the index is not the result of a PRIMARY KEY constraint. See example P.  
   
 ## Locks and ALTER TABLE  
- The changes specified in ALTER TABLE are implemented immediately. If the changes require modifications of the rows in the table, ALTER TABLE updates the rows. ALTER TABLE acquires a schema modify (SCH-M) lock on the table to make sure that no other connections reference even the metadata for the table during the change, except online index operations that require a very short SCH-M lock at the end. In an `ALTER TABLE…SWITCH` operation, the lock is acquired on both the source and target tables. The modifications made to the table are logged and fully recoverable. Changes that affect all the rows in very large tables, such as dropping a column or, on some editions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], adding a NOT NULL column with a default value, can take a long time to complete and generate many log records. These ALTER TABLE statements should be executed with the same care as any INSERT, UPDATE, or DELETE statement that affects many rows.  
+ The changes specified in ALTER TABLE are implemented immediately. If the changes require modifications of the rows in the table, ALTER TABLE updates the rows. ALTER TABLE acquires a schema modify (SCH-M) lock on the table to make sure that no other connections reference even the metadata for the table during the change, except online index operations that require a very short SCH-M lock at the end. In an `ALTER TABLE...SWITCH` operation, the lock is acquired on both the source and target tables. The modifications made to the table are logged and fully recoverable. Changes that affect all the rows in very large tables, such as dropping a column or, on some editions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], adding a NOT NULL column with a default value, can take a long time to complete and generate many log records. These ALTER TABLE statements should be executed with the same care as any INSERT, UPDATE, or DELETE statement that affects many rows.  
   
 ### Adding NOT NULL Columns as an Online Operation  
  Starting with [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] Enterprise Edition, adding a NOT NULL column with a default value is an online operation when the default value is a *runtime constant*. This means that the operation is completed almost instantaneously regardless of the number of rows in the table. This is because the existing rows in the table are not updated during the operation; instead, the default value is stored only in the metadata of the table and the value is looked up as needed in queries that access these rows. This behavior is automatic; no additional syntax is required to implement the online operation beyond the ADD COLUMN syntax. A runtime constant is an expression that produces the same value at runtime for each row in the table regardless of its determinism. For example, the constant expression "My temporary data", or the system function GETUTCDATETIME() are runtime constants. In contrast, the functions `NEWID()` or `NEWSEQUENTIALID()` are not runtime constants because a unique value is produced for each row in the table. Adding a NOT NULL column with a default value that is not a runtime constant is always performed offline and an exclusive (SCH-M) lock is acquired for the duration of the operation.  

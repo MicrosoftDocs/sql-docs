@@ -128,7 +128,7 @@ Configure the Linux server routing table so that RPC communication on port 135 i
 
 The **iptables-save** and **iptables-restore** commands provide a basic mechanism to save and restore iptables entries. Depending on your Linux distribution, there might be more advanced or automated options available. For example, an Ubuntu alternative is the **iptables-persistent** package to make entries persistent. 
 
-On distributions which use firewalld service, the same service can be used for both opening the port on the server and internal port forwarding. For example, on Red Hat Enterprise Linux, you should use firewalld service (via firewall-cmd configuration utility with –add-forward-port or similar options) to create and manage persistent port forwarding rules instead of using iptables.
+On distributions which use firewalld service, the same service can be used for both opening the port on the server and internal port forwarding. For example, on Red Hat Enterprise Linux, you should use firewalld service (via firewall-cmd configuration utility with -add-forward-port or similar options) to create and manage persistent port forwarding rules instead of using iptables.
 
 ```bash
 firewall-cmd --permanent --add-forward-port=port=135:proto=tcp:toport=13500

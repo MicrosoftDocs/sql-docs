@@ -58,21 +58,21 @@ Follow these guidelines to improve the security of your [!INCLUDE[ssNoVersion](.
   
 -   Do not specify the NT Admin account as a service account or proxy account.  
   
--   Note that [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent have access to each other’s assets. The two services share a single process space and [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent is a sysadmin on the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] service.  
+-   Note that [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent have access to each other's assets. The two services share a single process space and [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent is a sysadmin on the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] service.  
   
 -   When a TSX enlists with an MSX, the MSX sysadmins gets total control over the TSX instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
--   ACE is an extension and cannot invoke itself. ACE is invoked by Chainer ScenarioEngine.exe – also known as Microsoft.SqlServer.Chainer.Setup.exe – or it can be invoked by another host process.  
+-   ACE is an extension and cannot invoke itself. ACE is invoked by Chainer ScenarioEngine.exe - also known as Microsoft.SqlServer.Chainer.Setup.exe - or it can be invoked by another host process.  
   
--   ACE depends on the following configuration DLL’s owned by SSDP, because those API’s of DLL’s are called by ACE:  
+-   ACE depends on the following configuration DLL's owned by SSDP, because those API's of DLL's are called by ACE:  
   
-    -   **SCO** – Microsoft.SqlServer.Configuration.Sco.dll, including new SCO validations for virtual accounts  
+    -   **SCO** - Microsoft.SqlServer.Configuration.Sco.dll, including new SCO validations for virtual accounts  
   
-    -   **Cluster** – Microsoft.SqlServer.Configuration.Cluster.dll  
+    -   **Cluster** - Microsoft.SqlServer.Configuration.Cluster.dll  
   
-    -   **SFC** – Microsoft.SqlServer.Configuration.SqlConfigBase.dll  
+    -   **SFC** - Microsoft.SqlServer.Configuration.SqlConfigBase.dll  
   
-    -   **Extension** – Microsoft.SqlServer.Configuration.ConfigExtension.dll  
+    -   **Extension** - Microsoft.SqlServer.Configuration.ConfigExtension.dll  
   
 ## See Also  
 [Using Predefined Roles](../../reporting-services/security/role-definitions-predefined-roles.md)  

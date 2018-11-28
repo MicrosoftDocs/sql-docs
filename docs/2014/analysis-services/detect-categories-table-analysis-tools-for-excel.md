@@ -60,7 +60,7 @@ manager: craigg
  The shading in the column, **Relative Importance**, indicates how important that combination of attribute and value is as a distinguishing factor. The longer the bar, the more likely it is that this attribute is strongly representative of this category.  
   
 ### Categories Profile Chart  
- The final chart in the **Categories Report** worksheet, **Category Profiles**, is an interactive **Pivot Chart** that you can use to rearrange and hide fields, filter on values, and customize the chart’s appearance.  
+ The final chart in the **Categories Report** worksheet, **Category Profiles**, is an interactive **Pivot Chart** that you can use to rearrange and hide fields, filter on values, and customize the chart's appearance.  
   
  Excel 2013 now provides **Chart Styles** and **Chart Elements** controls right in the design surface that make it easy to improve the chart design.  
   

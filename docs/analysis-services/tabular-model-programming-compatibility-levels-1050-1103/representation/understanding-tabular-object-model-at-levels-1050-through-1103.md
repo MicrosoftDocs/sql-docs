@@ -50,7 +50,7 @@ manager: kfile
   
  See [Hierarchy Representation &#40;Tabular&#41;](../../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/representation/tables-hierarchy-representation.md) for a detailed explanation on how to create and manipulate the hierarchy representation.  
   
-### Key Performance Indicator –KPI- Representation  
+### Key Performance Indicator -KPI- Representation  
  A KPI is used to gauge performance of a value, defined by a Base measure, against a Target value. In terms of AMO objects, a KPI representation has a one-to-many mapping relationship. A KPI is represented by the usage of the following AMO objects: `xref:Microsoft.AnalysisServices.MdxScript.Commands%2A` and `xref:Microsoft.AnalysisServices.MdxScript.CalculationProperties%2A` are the main required objects.  It is important to note that this doesn't mean that all contained objects in the previously mentioned AMO objects can be used when modeling.  
   
 > [!NOTE]  

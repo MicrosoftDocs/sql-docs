@@ -70,20 +70,22 @@ The release includes the following fixes:
 - Added /DiagnosticsFile:"C:\Temp\sqlpackage.log" command-line parameter to specify a file path to save diagnostic information.
 - Added /Diagnostics command-line parameter to log diagnostic information to the console.
 
-## sqlpackage on macOS and Linux 0.0.1 (preview)
+## sqlpackage on macOS and Linux .NET Core (preview)
 
-Release date: May 9, 2018  
-Build: 15.0.4057.1
+Release date: November 15, 2018  
+Build: 15.0.4240.1
 
-This release contains the cross-platform preview build of sqlpackage that targets .NET Core 2.0, and can run on macOS and Linux. 
+This release contains the cross-platform preview build of sqlpackage that targets .NET Core 2.1, and can run on macOS and Linux. 
+
+The release includes the following fixes:
+
+- Moved to .NET Core 2.1 
+- Support for CLR UDT types, including the SQL CLR UDT types: SqlGeography, SqlGeometry, & SqlHierarchyId.
 
 This release is an early preview with following known issues:
 
 - The /p:CommandTimeout parameter is hard coded to 120.
 - Build and deployment contributors aren't supported.
-  - Will be fixed after moving to .NET Core 2.1 where System.ComponentModel.Composition.dll is supported.
-  - Need to handle case-sensitive paths.
-- SQL CLR UDT types aren't supported, including SQL Server CLR UDT Types: SqlGeography, SqlGeometry, & SqlHierarchyId.
 - Older .dacpac and .bacpac files that use json data serialization aren't supported.
 - Referenced .dacpacs (for example master.dacpac) may not resolve due to issues with case-sensitive file systems.
   - A workaround is to capitalize the name of the reference file (for example MASTER.BACPAC).

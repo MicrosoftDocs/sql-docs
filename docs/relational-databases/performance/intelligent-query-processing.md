@@ -23,10 +23,15 @@ The **Intelligent query processing** feature family includes features with broad
 ![Intelligent Query Processing Features](./media/3_IQPFeatureFamily.png)
 
 ## Adaptive Query Processing
-The adaptive query processing feature family includes query processing improvements that adapt optimization strategies to your application workload’s runtime conditions. These improvements included: batch mode adaptive joins, memory grant feedback, and interleaved execution for multi-statement table-valued functions.
+The adaptive query processing feature family includes query processing improvements that adapt optimization strategies to your application workload's runtime conditions. These improvements included: 
+-  Batch mode adaptive joins
+-  Memory grant feedback
+-  Interleaved execution for multi-statement table-valued functions (MSTVFs)
 
 ### Batch mode adaptive joins
 This feature allows your plan to dynamically switch to a better join strategy during execution using a single cached plan.
+
+For more information on batch mode adaptive joins, see [Adaptive query processing in SQL databases](../../relational-databases/performance/adaptive-query-processing.md).
 
 ### Row and batch mode memory grant feedback
 > [!NOTE]
@@ -34,10 +39,12 @@ This feature allows your plan to dynamically switch to a better join strategy du
 
 This feature recalculates the actual memory required for a query and then updates the grant value for the cached plan, reducing excessive memory grants that impact concurrency and fixing underestimated memory grants that cause expensive spills to disk.
 
-### Interleaved execution for multi-statement table-valued functions (MSTVFs)
-With interleaved execution, the actual row counts from the function are used to make better-informed downstream query plan decisions. 
+For more information on memory grant feedback, see [Adaptive query processing in SQL databases](../../relational-databases/performance/adaptive-query-processing.md).
 
-For more information, see [Adaptive query processing in SQL databases](../../relational-databases/performance/adaptive-query-processing.md).
+### Interleaved execution for multi-statement table-valued functions (MSTVFs)
+With interleaved execution, the actual row counts from the function are used to make better-informed downstream query plan decisions. For more information on multi-statement table-valued functions (MSTVFs), see [Table-Valued Functions](../../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md#TVF).
+
+For more information on interleaved execution, see [Adaptive query processing in SQL databases](../../relational-databases/performance/adaptive-query-processing.md).
 
 ## Table variable deferred compilation
 > [!NOTE]
@@ -53,7 +60,7 @@ For more information, see [Table variable deferred compilation](../../t-sql/data
 > [!NOTE]
 > Scalar UDF inlining is a public preview feature.  
 
-Scalar UDF inlining automatically transforms scalar user-defined functions (UDF) into relational expressions and embeds them in the calling SQL query, thereby improving the performance of workloads that leverage scalar UDFs. Scalar UDF inlining facilitates cost-based optimization of operations inside UDFs, and results in efficient plans that are set-oriented and parallel as opposed to inefficient, iterative, serial execution plans. This feature is enabled by default under database compatibility level 150.
+Scalar UDF inlining automatically transforms [scalar user-defined functions (UDF)](../../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md#Scalar) into relational expressions and embeds them in the calling SQL query, thereby improving the performance of workloads that leverage scalar UDFs. Scalar UDF inlining facilitates cost-based optimization of operations inside UDFs, and results in efficient plans that are set-oriented and parallel as opposed to inefficient, iterative, serial execution plans. This feature is enabled by default under database compatibility level 150.
 
 For more information, see [Scalar UDF Inlining](https://docs.microsoft.com/sql/relational-databases/user-defined-functions/scalar-udf-inlining?view=sqlallproducts-allversions).
 
@@ -70,9 +77,9 @@ For more information, see [APPROX_COUNT_DISTINCT (Transact-SQL)](../../t-sql/fun
 > Batch Mode on Rowstore is a public preview feature.  
 
 ### Background
-SQL Server 2012 introduced a new feature for accelerating analytical workloads: columnstore indexes. We have expanded the use cases and improved the performance of columnstore indexes in each subsequent release. Until now, we have surfaced and documented all these capabilities as a single feature: You create columnstore indexes on your tables, and your analytical workload "just goes faster". Under the covers, however, there are two related but distinct sets of technologies:
+[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] introduced a new feature for accelerating analytical workloads: columnstore indexes. We have expanded the use cases and improved the performance of columnstore indexes in each subsequent release. Until now, we have surfaced and documented all these capabilities as a single feature: You create columnstore indexes on your tables, and your analytical workload "just goes faster". Under the covers, however, there are two related but distinct sets of technologies:
 - **Columnstore** indexes allow analytical queries to access only the data in the columns they need. The columnstore format also allows much more effective compression than what you get with page compression in traditional "rowstore" indexes. 
-- **Batch mode** processing allows query operators to process data more efficiently by working on a batch of rows at a time, instead of one row at a time. A number of other scalability improvements are tied to batch mode processing.
+- **Batch mode** processing allows query operators to process data more efficiently by working on a batch of rows at a time, instead of one row at a time. A number of other scalability improvements are tied to batch mode processing. For more information on batch mode, see [Execution Modes](../../relational-databases/query-processing-architecture-guide.md#execution-modes).
 
 The two sets of features work together to improve I/O and CPU utilization:
 - Columnstore indexes allow more of your data to fit in memory, and thus reduce the need for I/O.
@@ -100,7 +107,7 @@ Even if a query does not involve any table with a columnstore index, the query p
 1.	An initial check of table sizes, operators used, and estimated cardinalities in the input query.
 2.	Additional checkpoints, as the optimizer discovers new, cheaper plans for the query. If these alternative plans do not make significant use of batch mode, the optimizer will stop exploring batch mode alternatives.
 
-If batch mode on rowstore is used, in the query execution plan you will see the actual execution mode as “batch mode” used by the scan operator for on-disk heaps and B-tree indexes.  This batch mode scan  can evaluate batch mode bitmap filters.  You may also see other batch mode operators in the plan, such as hash joins, hash-based aggregates, sorts, window aggregates, filters, concatenation, and compute scalar operators.
+If batch mode on rowstore is used, in the query execution plan you will see the actual execution mode as "batch mode" used by the scan operator for on-disk heaps and B-tree indexes.  This batch mode scan  can evaluate batch mode bitmap filters.  You may also see other batch mode operators in the plan, such as hash joins, hash-based aggregates, sorts, window aggregates, filters, concatenation, and compute scalar operators.
 
 ### Remarks
 1.	There is no guarantee that query plans will use batch mode. The query optimizer may decide that batch mode does not look beneficial for the query. 
@@ -111,6 +118,7 @@ If batch mode on rowstore is used, in the query execution plan you will see the 
 
 ### Configuring batch mode on rowstore
 The BATCH_MODE_ON_ROWSTORE database scoped configuration is on by default and can be used to disable batch mode on rowstore without requiring a change in database compatibility level:
+
 ```sql
 -- Disabling batch mode on rowstore
 ALTER DATABASE SCOPED CONFIGURATION SET BATCH_MODE_ON_ROWSTORE = OFF;
@@ -118,7 +126,9 @@ ALTER DATABASE SCOPED CONFIGURATION SET BATCH_MODE_ON_ROWSTORE = OFF;
 -- Enabling batch mode on rowstore
 ALTER DATABASE SCOPED CONFIGURATION SET BATCH_MODE_ON_ROWSTORE = ON;
 ```
+
 You can disable batch mode on rowstore via database scoped configuration but still override the setting at the query level using the ALLOW_BATCH_MODE query hint. The following example enables batch mode on rowstore even with the feature disabled via database scoped configuration:
+
 ```sql
 SELECT [Tax Rate], [Lineage Key], [Salesperson Key], SUM(Quantity) AS SUM_QTY, SUM([Unit Price]) AS SUM_BASE_PRICE, COUNT(*) AS COUNT_ORDER
 FROM Fact.OrderHistoryExtended
@@ -127,7 +137,9 @@ GROUP BY [Tax Rate], [Lineage Key], [Salesperson Key]
 ORDER BY [Tax Rate], [Lineage Key], [Salesperson Key]
 OPTION(RECOMPILE, USE HINT('ALLOW_BATCH_MODE'));
 ```
+
 You can also disable batch mode on rowstore for a specific query by using the DISALLOW_BATCH_MODE query hint. For example:
+
 ```sql
 SELECT [Tax Rate], [Lineage Key], [Salesperson Key], SUM(Quantity) AS SUM_QTY, SUM([Unit Price]) AS SUM_BASE_PRICE, COUNT(*) AS COUNT_ORDER
 FROM Fact.OrderHistoryExtended

@@ -68,7 +68,7 @@ For columnstore tables and indexes, all columnstore tables and indexes always us
 -   You can enable or disable ROW or PAGE compression online or offline. Enabling compression on a heap is single threaded for an online operation.  
 -   The disk space requirements for enabling or disabling row or page compression are the same as for creating or rebuilding an index. For partitioned data, you can reduce the space that is required by enabling or disabling compression for one partition at a time.  
 -   To determine the compression state of partitions in a partitioned table, query the data_compression column of the sys.partitions catalog view.  
--   When you are compressing indexes, leaf-level pages can be compressed with both row and page compression. Non–leaf-level pages do not receive page compression.  
+-   When you are compressing indexes, leaf-level pages can be compressed with both row and page compression. Non-leaf-level pages do not receive page compression.  
 -   Because of their size, large-value data types are sometimes stored separately from the normal row data on special purpose pages. Data compression is not available for the data that is stored separately.  
 -   Tables that implemented the vardecimal storage format in [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], retain that setting when upgraded. You can apply row compression to a table that has the vardecimal storage format. However, because row compression is a superset of the vardecimal storage format, there is no reason to retain the vardecimal storage format. Decimal values gain no additional compression when you combine the vardecimal storage format with row compression. You can apply page compression to a table that has the vardecimal storage format; however, the vardecimal storage format columns probably will not achieve additional compression.  
   
@@ -131,7 +131,7 @@ REBUILD PARTITION = ALL WITH (
 ### Metadata  
 The following system views contain information about data compression for clustered indexes:  
 -   [sys.indexes &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md) - The **type** and **type_desc** columns include CLUSTERED COLUMNSTORE and NONCLUSTERED COLUMNSTORE.  
--   [sys.partitions &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-partitions-transact-sql.md) – The **data_compression** and **data_compression_desc** columns include COLUMNSTORE and COLUMNSTORE_ARCHIVE.  
+-   [sys.partitions &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-partitions-transact-sql.md) - The **data_compression** and **data_compression_desc** columns include COLUMNSTORE and COLUMNSTORE_ARCHIVE.  
   
 The procedure [sp_estimate_data_compression_savings &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-estimate-data-compression-savings-transact-sql.md) does not apply to columnstore indexes.  
   

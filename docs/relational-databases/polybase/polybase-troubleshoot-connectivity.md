@@ -37,9 +37,9 @@ Each one of Hadoop's secured resources is registered with the **Key Distributio
 
 In PolyBase, when authentication is requested against any Kerberos-secured resource, the following four-round-trip handshake takes place:
 
-1. SQL Server connects to the KDC and obtains a TGT for the user. The TGT is encrypted using the KDC’s private key.
+1. SQL Server connects to the KDC and obtains a TGT for the user. The TGT is encrypted using the KDC's private key.
 1. SQL Server calls the Hadoop secured resource (e.g. HDFS) and determines which SPN it needs a ST for.
-1. SQL Server goes back to the KDC, passes the TGT back, and requests a ST to access that particular secured resource. The ST is encrypted using the secured service’s private key.
+1. SQL Server goes back to the KDC, passes the TGT back, and requests a ST to access that particular secured resource. The ST is encrypted using the secured service's private key.
 1. SQL Server forwards the ST to Hadoop and gets authenticated to have a session created against that service.
 
 ![](./media/polybase-sqlserver.png)
@@ -131,11 +131,11 @@ PolyBase does **not** support trust relationships between AD and MIT and must be
  0020: 1F A0 03 02 01 02 A1 18 30 16 1B 06 6B 72 62 74 ........0...krbt 
  0030: 67 74 1B 0C 41 50 53 48 44 50 4D 53 2E 43 4F 4D gt..CONTOSO.COM 
  0040: A3 82 01 08 30 82 01 04 A0 03 02 01 10 A1 03 02 ....0........... 
- *[…Condensed…]* 
+ *[...Condensed...]* 
  0140: 67 6D F6 41 6C EB E0 C3 3A B2 BD B1 gm.Al...:... 
  Client Principal = admin_user@CONTOSO.COM 
  Server Principal = krbtgt/CONTOSO.COM@CONTOSO.COM 
- *[…Condensed…]* 
+ *[...Condensed...]* 
  [2017-04-25 21:34:34,500] INFO 1639[main] - com.microsoft.polybase.client.HdfsBridge.main(HdfsBridge.java:1579) - Successfully authenticated against KDC server. 
 ```
 
@@ -173,7 +173,7 @@ A second hex dump indicates that SQL Server successfully used the TGT and acquir
  0050: 15 73 68 61 73 74 61 2D 68 64 70 32 35 2D 30 30 .hadoop-hdp25-00 
  0060: 2E 6C 6F 63 61 6C A3 82 01 1A 30 82 01 16 A0 03 .local....0..... 
  0070: 02 01 10 A1 03 02 01 01 A2 82 01 08 04 82 01 04 ................ 
- *[…Condensed…]* 
+ *[...Condensed...]* 
  0240: 03 E3 68 72 C4 D2 8D C2 8A 63 52 1F AE 26 B6 88 ..hr.....cR..&.. 
  0250: C4 . 
 ```
@@ -199,7 +199,7 @@ If the tool was run and the file properties of the target path were *not* printe
 |javax.security.auth.login.LoginException<br>Client not found in Kerberos database  (6) - CLIENT_NOT_FOUND |	The admin Service Principal supplied does not exist in the realm specified in core-site.xml.|
 | javax.security.auth.login.LoginException<br> Checksum failed |	Admin Service Principal exists, but bad password. |
 | Native config name: C:\Windows\krb5.ini<br>Loaded from native config | This is not an exception, but it indicates that Java's krb5LoginModule detected custom client configurations on your machine. Check your custom client settings as they may be causing the issue. |
-| javax.security.auth.login.LoginException<br>java.lang.IllegalArgumentException<br>Illegal principal name admin_user@CONTOSO.COM: org.apache.hadoop.security.authentication.util.KerberosName$NoMatchingRule: No rules applied to admin_user@CONTOSO.COM | Add the property “hadoop.security.auth_to_local” to core-site.xml with the appropriate rules per the Hadoop cluster. |
+| javax.security.auth.login.LoginException<br>java.lang.IllegalArgumentException<br>Illegal principal name admin_user@CONTOSO.COM: org.apache.hadoop.security.authentication.util.KerberosName$NoMatchingRule: No rules applied to admin_user@CONTOSO.COM | Add the property "hadoop.security.auth_to_local" to core-site.xml with the appropriate rules per the Hadoop cluster. |
 | java.net.ConnectException<br>Attempting to access external filesystem at URI: hdfs://10.193.27.230:8020<br>Call From IAAS16981207/10.107.0.245 to 10.193.27.230:8020 failed on connection exception |	Authentication against the KDC was successful, but it failed to access the Hadoop name node. Check the name node IP and port. Verify the firewall is disabled on Hadoop. |
 | java.io.FileNotFoundException<br>File does not exist: /test/data.csv |	Authentication was successful, but the location specified does not exist. Check the path or test with root "/" first. |
 
@@ -225,6 +225,6 @@ In Active Directory, the SPNs can be viewed by browsing to Control Panel > Activ
 ## See also
 
 [Integrating PolyBase with Cloudera using Active Directory Authentication](https://blogs.msdn.microsoft.com/microsoftrservertigerteam/2016/10/17/integrating-polybase-with-cloudera-using-active-directory-authentication)  
-[Cloudera’s Guide to setting up Kerberos for CDH](https://www.cloudera.com/documentation/enterprise/5-6-x/topics/cm_sg_principal_keytab.html)  
-[Hortonworks’ Guide to Setting up Kerberos for HDP](https://docs.hortonworks.com/HDPDocuments/Ambari-2.2.0.0/bk_Ambari_Security_Guide/content/ch_configuring_amb_hdp_for_kerberos.html)  
+[Cloudera's Guide to setting up Kerberos for CDH](https://www.cloudera.com/documentation/enterprise/5-6-x/topics/cm_sg_principal_keytab.html)  
+[Hortonworks' Guide to Setting up Kerberos for HDP](https://docs.hortonworks.com/HDPDocuments/Ambari-2.2.0.0/bk_Ambari_Security_Guide/content/ch_configuring_amb_hdp_for_kerberos.html)  
 [PolyBase troubleshooting](polybase-troubleshooting.md)

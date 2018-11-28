@@ -32,7 +32,7 @@ manager: craigg
  Open the dynamic management view **sys.dm_db_rda_migration_status** to see how many batches and rows of data have been migrated. For more info, see [sys.dm_db_rda_migration_status &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/stretch-database-sys-dm-db-rda-migration-status.md).  
   
 ##  <a name="Firewall"></a> Troubleshoot data migration  
- **Rows from my Stretch-enabled table are not being migrated to Azure. What’s the problem?**  
+ **Rows from my Stretch-enabled table are not being migrated to Azure. What's the problem?**  
  There are several problems that can affect migration. Check the following things.  
   
 -   Check network connectivity for the SQL Server computer.  

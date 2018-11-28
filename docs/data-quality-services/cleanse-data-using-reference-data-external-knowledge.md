@@ -44,7 +44,7 @@ manager: craigg
 ## Before You Begin  
   
 ###  <a name="Prerequisites"></a> Prerequisites  
- You must have mapped required domains in a DQS knowledge base to the appropriate reference data service. Additionally, the knowledge base must contain knowledge about the type of data that you want to cleanse. For example, if you want to cleanse your source data that contains US addresses, you must map your domains to a reference data service provider that provides high-quality” data for US addresses. For more information, see [Attach Domain or Composite Domain to Reference Data](../data-quality-services/attach-domain-or-composite-domain-to-reference-data.md).  
+ You must have mapped required domains in a DQS knowledge base to the appropriate reference data service. Additionally, the knowledge base must contain knowledge about the type of data that you want to cleanse. For example, if you want to cleanse your source data that contains US addresses, you must map your domains to a reference data service provider that provides high-quality" data for US addresses. For more information, see [Attach Domain or Composite Domain to Reference Data](../data-quality-services/attach-domain-or-composite-domain-to-reference-data.md).  
   
 ###  <a name="Security"></a> Security  
   
@@ -66,7 +66,7 @@ manager: craigg
     > [!NOTE]  
     >  On the **Cleanse** page, DQS displays information about the domains that are attached to reference data service in the following two ways:  
     >   
-    >  -   A message is displayed below the **Start** button: “Domains \<Domain1>, \<Domain2>,… \<DomainN> are cleansed using reference data service provider.” In this example, the following message will be displayed: “Domain Address Verification is cleansed using reference data service provider.”  
+    >  -   A message is displayed below the **Start** button: "Domains \<Domain1>, \<Domain2>,... \<DomainN> are cleansed using reference data service provider." In this example, the following message will be displayed: "Domain Address Verification is cleansed using reference data service provider."  
     > -   An icon, ![Domain is attached to RDS](../data-quality-services/media/dqs-rdsindicator.JPG "Domain is attached to RDS"), is displayed in the **Profiler** area against the domains attached to reference data service provider. In this example, the icon will be displayed against the **Address Verification** composite domain.  
   
 4.  On the **Manage and view results** page, review your domain values. The reference data service can display more than one suggestion, if available, for a value depending upon the maximum number of suggestions specified in the **Suggested Candidates** box during the mapping of the domain to the reference data service. For example, two suggestions are displayed for the following US address:  

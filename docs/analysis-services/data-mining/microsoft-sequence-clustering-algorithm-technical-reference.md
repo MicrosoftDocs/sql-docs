@@ -87,7 +87,7 @@ manager: kfile
  The default is 64.  
   
  MAXIMUM_STATES  
- Specifies the maximum number of states for a non-sequence attribute that the algorithm supports. If the number of states for a non-sequence attribute is greater than the maximum number of states, the algorithm uses the attribute’s most popular states and treats the remaining states as **Missing**.  
+ Specifies the maximum number of states for a non-sequence attribute that the algorithm supports. If the number of states for a non-sequence attribute is greater than the maximum number of states, the algorithm uses the attribute's most popular states and treats the remaining states as **Missing**.  
   
  The default is 100.  
   

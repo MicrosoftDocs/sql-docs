@@ -100,15 +100,15 @@ Add a new code cell by clicking the **+Code** command in the toolbar.
 
 ![image12](media/notebooks-guidance/image12.png)
 
-You can also view the “Cell Options” when you click on the options icon below –
+You can also view the "Cell Options" when you click on the options icon below -
 
 ![image13](media/notebooks-guidance/image13.png)
 
-Here are the options for every cell –
+Here are the options for every cell -
 
 ![image14](media/notebooks-guidance/image14.png)-
 
-Now, choose the Spark Kernel in the dropdown for the kernels and in the cell type/paste in –
+Now, choose the Spark Kernel in the dropdown for the kernels and in the cell type/paste in -
 
 ![image15](media/notebooks-guidance/image15.png)
 

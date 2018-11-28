@@ -110,7 +110,7 @@ Rssharepoint.msi /?
     3.  The amount of time it takes for the changes to take effect may vary, depending on your server environment. You can also run **iisreset** to force a quicker update.  
   
 ### Quiet installation for scripting  
- You can use the **/q** or **/quiet** switches for a “quiet” installation that will not display any dialogs or warnings. The quiet installation is useful if you want to script the installation of the add-in.  
+ You can use the **/q** or **/quiet** switches for a "quiet" installation that will not display any dialogs or warnings. The quiet installation is useful if you want to script the installation of the add-in.  
   
 > [!NOTE]  
 >  If you use the **/q** switch for a silent command line installation, the end-user license agreement will not be displayed. Regardless of the installation method, the use of this software is governed by a license agreement and you are responsible for complying with the license agreement.  
@@ -230,7 +230,7 @@ Rssharepoint.msi /?
   
 #### View a Log file with PowerShell  
   
-1.  Type the following command from the SharePoint Management Shell to return a filtered list of rows from the file, that contain “ssrscustomactionerror”:  
+1.  Type the following command from the SharePoint Management Shell to return a filtered list of rows from the file, that contain "ssrscustomactionerror":  
   
     ```  
     Get-content -path C:\Users\<UserName\AppData\Local\Temp\rs_sp_0.log | select-string "ssrscustomactionerror"  

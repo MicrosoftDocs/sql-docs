@@ -43,7 +43,7 @@ manager: craigg
 |[sys.dm_os_memory_nodes &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-nodes-transact-sql.md)|[sys.dm_os_windows_info &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-windows-info-transact-sql.md)|  
 |[sys.dm_os_memory_objects &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-objects-transact-sql.md)|[sys.dm_os_workers &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-workers-transact-sql.md)|  
   
- The following [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Operating System–related dynamic management views are [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)].  
+ The following [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Operating System-related dynamic management views are [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)].  
   
 |||  
 |-|-|  

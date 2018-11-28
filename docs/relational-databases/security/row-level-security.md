@@ -233,7 +233,7 @@ WHERE @SalesRep = USER_NAME() OR USER_NAME() = 'Manager';
 ```  
   
 > [!NOTE]
-> Azure SQL Data Warehouse doesn’t support USER_NAME(), hence use SYSTEM_USER instead.
+> Azure SQL Data Warehouse doesn't support USER_NAME(), hence use SYSTEM_USER instead.
 
  Create a security policy adding the function as a filter predicate. The state must be set to ON to enable the policy.  
   

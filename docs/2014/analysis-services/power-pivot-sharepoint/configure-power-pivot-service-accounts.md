@@ -154,7 +154,7 @@ manager: craigg
   
     1.  Right-click the application pool name and select **Advanced Settings**.  
   
-    2.  Select **Identity** and click the … button to open the Application Pool Identity dialog box.  
+    2.  Select **Identity** and click the ... button to open the Application Pool Identity dialog box.  
   
     3.  Click **Set**.  
   

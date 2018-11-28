@@ -60,7 +60,7 @@ manager: craigg
   
     1.  In the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Setup Wizard, click **Installation**.  
   
-    2.  Click **Upgrade from SQL Server…..**.  
+    2.  Click **Upgrade from SQL Server.....**.  
   
     3.  On the **Select Instance** page, select the **POWERPIVOT** instance name and then click **Next**.  
   
@@ -194,7 +194,7 @@ manager: craigg
     1.  Start the SharePoint 2010 Management Shell as an administrator and then run the following command to view jobs in the queue:  
   
         ```  
-        Stsadm –o enumdeployments  
+        Stsadm -o enumdeployments  
         ```  
   
     2.  Review existing deployments for the following information: **Type** is Retraction or Deployment, **File** is powerpivotwebapp.wsp or powerpivotfarm.wsp.  
@@ -202,7 +202,7 @@ manager: craigg
     3.  For deployments or retractions related to PowerPivot solutions, copy the GUID value for **JobId** and then paste it into the following command (use the Mark, Copy, and Paste commands on the Shell's Edit menu to copy the GUID):  
   
         ```  
-        Stsadm –o canceldeployment –id "<GUID>"  
+        Stsadm -o canceldeployment -id "<GUID>"  
         ```  
   
     4.  Retry the task in the configuration tool by clicking **Validate** followed by **Run**.  

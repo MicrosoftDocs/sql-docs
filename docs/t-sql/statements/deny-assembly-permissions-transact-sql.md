@@ -41,7 +41,7 @@ DENY { permission [ ,...n ] } ON ASSEMBLY :: assembly_name
  *permission*  
  Specifies a permission that can be denied on an assembly. Listed below.  
   
- ON ASSEMBLY **::***assembly_name*  
+ ON ASSEMBLY **::**_assembly_name_  
  Specifies the assembly on which the permission is being denied. The scope qualifier "::" is required.  
   
  *database_principal*  

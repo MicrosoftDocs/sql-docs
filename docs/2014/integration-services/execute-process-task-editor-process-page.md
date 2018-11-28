@@ -32,7 +32,7 @@ manager: craigg
  Provide command prompt arguments.  
   
  **WorkingDirectory**  
- Type the path of the folder that contains the executable, or click the browse button **(…)** and locate the folder.  
+ Type the path of the folder that contains the executable, or click the browse button **(...)** and locate the folder.  
   
  **StandardInputVariable**  
  Select a variable to provide the input to the process, or click \<**New variable...**> to create a new variable:  

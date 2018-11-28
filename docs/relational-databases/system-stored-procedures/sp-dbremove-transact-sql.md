@@ -37,10 +37,10 @@ sp_dbremove [ @dbname = ] 'database' [ , [ @dropdev = ] 'dropdev' ]
 ```  
   
 ## Arguments  
- [ **@dbname=** ] **'***database***'**  
+ [ **@dbname=** ] **'**_database_**'**  
  Is the name of the database to be removed. *database* is **sysname**, with a default value of NULL.  
   
- [ **@dropdev=** ] **'***dropdev***'**  
+ [ **@dropdev=** ] **'**_dropdev_**'**  
  Is a flag provided for backward compatibility only and is currently ignored. *dropdev* has the value **dropdev**.  
   
 ## Return Code Values  

@@ -26,7 +26,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
 
   Returns one row for each alias data type that can be accessed by the current user in the current database.  
   
- To retrieve information from these views, specify the fully qualified name of **INFORMATION_SCHEMA.***view_name*.  
+ To retrieve information from these views, specify the fully qualified name of **INFORMATION_SCHEMA.**_view_name_.  
   
 |Column name|Data type|Description|  
 |-----------------|---------------|-----------------|  

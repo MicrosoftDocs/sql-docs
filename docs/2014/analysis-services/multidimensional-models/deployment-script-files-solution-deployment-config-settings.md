@@ -46,11 +46,11 @@ manager: craigg
   
 -   Run the [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Deployment Wizard interactively, and on the **Configuration Settings** page, specify the configuration setting for the objects being deployed.  
   
-     —or—  
+     -or-  
   
 -   Run the [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Deployment Wizard at the command prompt and set the wizard to run in answer file mode. For more information about answer file mode, see [Running the Analysis Services Deployment Wizard](running-the-analysis-services-deployment-wizard.md).  
   
-     —or—  
+     -or-  
   
 -   Modify the \<*project name*>.configsettings file by using any text editor.  
   

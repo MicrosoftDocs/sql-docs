@@ -186,4 +186,4 @@ For more information about resolving in-doubt transactions, see [Resolve Transac
 
 [Supporting XA Transactions](https://technet.microsoft.com/library/cc753563(v=ws.10).aspx)
 
-[How It Works: Session/SPID (–2) for DTC Transactions](https://blogs.msdn.microsoft.com/bobsql/2016/08/04/how-it-works-sessionspid-2-for-dtc-transactions/)
+[How It Works: Session/SPID (-2) for DTC Transactions](https://blogs.msdn.microsoft.com/bobsql/2016/08/04/how-it-works-sessionspid-2-for-dtc-transactions/)

@@ -38,7 +38,7 @@ manager: craigg
   
 3.  In **Select data set to be used for accuracy chart**, select the option **Specify a different data set**.  
   
-4.  Click the browse button **(…)** to choose the external data set from a list of data source views on the current server.  
+4.  Click the browse button **(...)** to choose the external data set from a list of data source views on the current server.  
   
 5.  Click **Select Case Table**. In the **Select Table** dialog box, choose the table from the data source view that contains the case data, and then click **OK**.  
   

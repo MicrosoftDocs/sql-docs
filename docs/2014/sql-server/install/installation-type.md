@@ -24,7 +24,7 @@ manager: craigg
   
      If you select the option to add features to an existing instance, use the drop-down list to select the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to update.  
   
- You can only add the SysPrep supported features—[!INCLUDE[ssDE](../../includes/ssde-md.md)] and [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]—to a prepared image of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Other features that are not supported by SysPrep can be added after the prepared instance is completed.  
+ You can only add the SysPrep supported features-[!INCLUDE[ssDE](../../includes/ssde-md.md)] and [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]-to a prepared image of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Other features that are not supported by SysPrep can be added after the prepared instance is completed.  
   
  **Note** You cannot add features to a failover cluster instance after it is installed. To add [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] features to an existing failover cluster, you must perform a new installation to install a separate instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   

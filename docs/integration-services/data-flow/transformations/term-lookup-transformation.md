@@ -52,7 +52,7 @@ manager: craigg
   
 -   If the text in the input column is a lemmatized noun phrase, only the last word in the noun phrase is affected by normalization. For example, the lemmatized version of *doctors appointments* is *doctors appointment*.  
   
- When a lookup item contains terms that overlap in the reference set—that is, a sub-term is found in more than one reference record—the Term Lookup transformation returns only one lookup result. The following example shows the result when a lookup item contains an overlapping sub-term. The overlapping sub-term in this case is *Windows*, which is found within two reference terms. However, the transformation does not return two results, but returns only a single reference term, *Windows*. The second reference term, *Windows 7 Professional*, is not returned.  
+ When a lookup item contains terms that overlap in the reference set-that is, a sub-term is found in more than one reference record-the Term Lookup transformation returns only one lookup result. The following example shows the result when a lookup item contains an overlapping sub-term. The overlapping sub-term in this case is *Windows*, which is found within two reference terms. However, the transformation does not return two results, but returns only a single reference term, *Windows*. The second reference term, *Windows 7 Professional*, is not returned.  
   
 |Item|Value|  
 |----------|-----------|  

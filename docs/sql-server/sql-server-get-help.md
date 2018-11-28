@@ -24,6 +24,12 @@ The [User Voice](https://feedback.azure.com/forums/908035-sql-server) is also a 
 ## I want to make a suggestion about SQL Server Management Studio
 The SQL Server Management Studio (SSMS) team also closely monitors the SQL Server [User Voice](https://feedback.azure.com/forums/908035-sql-server) so if you have any issues to report, or suggestions to make, the User Voice is the best place to do so. 
 
+## I want to access the SQL Server technical documentation offline
+If you would like to view the SQL Server documentation on an offline system, you have two options to do so. You can either create a PDF wherever you are in the SQL Server technical documentation, or you can download the offline content using [SQL Server offline Help Viewer](sql-server-help-installation.md). 
+
+If you'd like to create a PDF, click the **Download PDF** link found at the bottom of every table of contents.
+![Download PDF](media/sql-server-get-help/download-pdf.png)
+
 ## I want to contact Microsoft Support
 If you're a business user, please review the [support options](https://support.microsoft.com/gp/support-options-for-business?forceorigin=esmc).
 
@@ -72,12 +78,14 @@ There are a few social media outlets that can reach the SQL team as well.
 - [MashaMSFT Twitter](https://twitter.com/mashamsft)
 - [MikeRayMSFT Twitter](https://twitter.com/mncray)
 
+## I want to contribute to SQL Server documentation
+
+###![edit content](../includes/media/edit-topic-pencil.png) Editing content
+Did you find something wrong with our documentation? Or do you have a contribution that can improve our documentation? Well, you can edit the content found on docs.microsoft.com yourself. If you do so, not only will our documentation improve, but you'll also be credited as a contributor to the page! Find out more information at [https://aka.ms/editsqldocs](https://aka.ms/editsqldocs). 
+
+All public contributions are reviewed by the SQL content team for technical accuracy and consistency. 
+
 ## I want to provide feedback for SQL Docs content
-
-### ![edit content](../includes/media/edit-topic-pencil.png) Editing content
-Did you find something wrong with our documentation? Did you know that you could edit the content yourself? If you do so, not only will our documentation improve, but you'll also be credited as a contributor to the page! Find out more information at [https://aka.ms/editsqldocs](https://aka.ms/editsqldocs). 
-
-### Surveys
 If you've got some time to spare, and would like to share some thoughts on your SQL Docs experience, please take our survey! It can be found at [https://aka.ms/SQLDocSurvey](https://aka.ms/SQLDocSurvey) and should take you about 10-15 minutes. 
 
 If you have something to share with the SQL content team, an idea, a suggestion, feedback, anything! You can do so at [https://aka.ms/SQLDocsFeedback](https://aka.ms/SQLDocsFeedback). 

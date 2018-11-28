@@ -96,13 +96,13 @@ The following is a size computation for 5,000,000 (5 million) rows in a memory-o
   
 #### Memory for the table's rows  
   
-From the above calculations, the size of each row in the memory-optimized table is 24 + 32 + 200, or 256 bytes.  Since we have 5 million rows, the table will consume 5,000,000 * 256 bytes, or 1,280,000,000 bytes – approximately 1.28 GB.  
+From the above calculations, the size of each row in the memory-optimized table is 24 + 32 + 200, or 256 bytes.  Since we have 5 million rows, the table will consume 5,000,000 * 256 bytes, or 1,280,000,000 bytes - approximately 1.28 GB.  
   
 ###  <a name="bkmk_IndexMeemory"></a> Memory for indexes  
 
 #### Memory for each hash index  
   
-Each hash index is a hash array of 8-byte address pointers.  The size of the array is best determined by the number of unique index values for that index – e.g., the number of unique Col2 values is a good starting point for the array size for the t1c2_index. A hash array that is too big wastes memory.  A hash array that is too small slows performance since there will be too many collisions by index values that hash to the same index.  
+Each hash index is a hash array of 8-byte address pointers.  The size of the array is best determined by the number of unique index values for that index - e.g., the number of unique Col2 values is a good starting point for the array size for the t1c2_index. A hash array that is too big wastes memory.  A hash array that is too small slows performance since there will be too many collisions by index values that hash to the same index.  
   
 Hash indexes achieve very fast equality lookups such as:  
   

@@ -204,7 +204,7 @@ manager: craigg
   
 6.  Upgrade the original primary server (server A).  
   
-7.  On the database to which you failed over—the interim primary database (on server B), manually back up the transaction log using WITH NORECOVERY. This takes the database offline.  
+7.  On the database to which you failed over-the interim primary database (on server B), manually back up the transaction log using WITH NORECOVERY. This takes the database offline.  
   
 8.  Restore all transaction log backups that you created on the interim primary database (on server B) to every other secondary database (on server C) using WITH NORECOVERY. This allows log shipping to continue from the original primary database after its upgrade, without requiring a full database restore on each secondary database.  
   

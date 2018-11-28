@@ -199,7 +199,7 @@ manager: craigg
   
      Note that, under the covers, the **Cluster Discrimination** viewer sends complex queries to the data mining server, to extract the attributes that are most important in distinguishing between the two groups, making it easier to compare two sets of customers.  
   
-2.  Click either of the **Favors…** columns.  
+2.  Click either of the **Favors...** columns.  
   
      The bar to the right of the attribute and value list shows which features or values are most important as a characteristic of the selected cluster.  
   

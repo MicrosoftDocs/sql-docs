@@ -44,11 +44,11 @@ manager: kfile
   
 -   Run the [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Deployment Wizard interactively, and on the **Partition and Role Deployment Options** page, specify new deployment options for the partitions and roles.  
   
-     —or—  
+     -or-  
   
 -   Run the [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Deployment Wizard at the command prompt, and set the wizard to run in answer file mode. (For more information about answer file mode, see [Running the Analysis Services Deployment Wizard](../../analysis-services/multidimensional-models/running-the-analysis-services-deployment-wizard.md).)  
   
-     —or—  
+     -or-  
   
 -   Open the \<*project name*>.deploymentoptions in any text editor and manually change the options. The options for PartitionDeployment are DeployPartitions, RetainPartitions. The options for RoleDeployment are DeployRolesAndMembers, DeployRolesRetainMembers, RetainRoles.
   

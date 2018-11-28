@@ -113,7 +113,7 @@ sp_cursorprepare prepared_handle OUTPUT, params , stmt , options
 ## Examples  
  When *stmt* is parameterized and the *scrollopt* PARAMETERIZED_STMT value is ON, the format of the string is as follows:  
   
- { *\<local variable name>**\<data type>* } [ ,…*n* ]  
+ { *\<local variable name>**\<data type>* } [ ,...*n* ]  
   
 ## See Also  
  [sp_cursorexecute &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-cursorexecute-transact-sql.md)   

@@ -33,7 +33,7 @@ manager: craigg
 |Low latency.|Require low latency business transactions which typical database solutions cannot achieve.|Eliminate contention.<br /><br /> Minimize code execution time.<br /><br /> Low latency code execution.<br /><br /> Efficient data retrieval.|  
 |Session state management.|Frequent insert, update and point lookups.<br /><br /> High scale load from numerous stateless web servers.|Eliminate contention.<br /><br /> Efficient data retrieval.<br /><br /> Optional IO reduction or removal, when using non-durable tables|  
   
- For more information about scenarios where [!INCLUDE[hek_2](../../../includes/hek-2-md.md)] will result in the greatest performance gains, see [In-Memory OLTP – Common Workload Patterns and Migration Considerations](http://msdn.microsoft.com/library/dn673538.aspx).  
+ For more information about scenarios where [!INCLUDE[hek_2](../../../includes/hek-2-md.md)] will result in the greatest performance gains, see [In-Memory OLTP - Common Workload Patterns and Migration Considerations](http://msdn.microsoft.com/library/dn673538.aspx).  
   
  [!INCLUDE[hek_2](../../../includes/hek-2-md.md)] will improve performance best in OLTP with short-running transactions.  
   
@@ -82,7 +82,7 @@ manager: craigg
   
 -   [In-Memory OLTP Blog](http://go.microsoft.com/fwlink/?LinkId=311696)  
   
--   [In-Memory OLTP – Common Workload Patterns and Migration Considerations](http://msdn.microsoft.com/library/dn673538.aspx)  
+-   [In-Memory OLTP - Common Workload Patterns and Migration Considerations](http://msdn.microsoft.com/library/dn673538.aspx)  
   
 -   [SQL Server In-Memory OLTP Internals Overview](http://msdn.microsoft.com/library/dn720242.aspx)  
   

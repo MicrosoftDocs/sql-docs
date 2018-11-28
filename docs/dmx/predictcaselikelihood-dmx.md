@@ -44,7 +44,7 @@ PredictCaseLikelihood([NORMALIZED|NONNORMALIZED])
   
 -   y = Marginal case likelihood, calculated as the log likelihood of the case based on counting the training cases  
   
--   Z = Exp( log(x) – Log(Y))  
+-   Z = Exp( log(x) - Log(Y))  
   
  Normalized = (z/ (1+z))  
   

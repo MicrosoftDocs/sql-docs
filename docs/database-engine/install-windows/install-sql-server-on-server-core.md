@@ -49,7 +49,7 @@ The Server Core installation option provides a minimal environment for running s
 |Client Tools SDK|No||  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Books Online|No||  
 |Management Tools - Basic|Remote Only|Installation of these features on Server Core is not supported. These components can be installed on a different server that is not Server Core and connected to the [!INCLUDE[ssDE](../../includes/ssde-md.md)] services installed on Server Core.|  
-|Management Tools – Complete|Remote Only|Installation of these features on Server Core is not supported. These components can be installed on a different server that is not Server Core and connected to the [!INCLUDE[ssDE](../../includes/ssde-md.md)] services installed on Server Core.|  
+|Management Tools - Complete|Remote Only|Installation of these features on Server Core is not supported. These components can be installed on a different server that is not Server Core and connected to the [!INCLUDE[ssDE](../../includes/ssde-md.md)] services installed on Server Core.|  
 |Distributed Replay Controller|No||  
 |Distributed Replay Client|Remote Only|Installation of these features on Server Core is not supported. These components can be installed on a different server that is not Server Core , and connected to the [!INCLUDE[ssDE](../../includes/ssde-md.md)] services installed on Server Core.|  
 |SQL Client Connectivity SDK|Yes||  

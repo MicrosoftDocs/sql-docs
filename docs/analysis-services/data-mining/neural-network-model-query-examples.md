@@ -188,7 +188,7 @@ NATURAL PREDICTION JOIN
   
 |Predicted Orders|Probability|  
 |----------------------|-----------------|  
-|364|0.9532…|  
+|364|0.9532...|  
   
  The predicted sales volume is higher than the current range of sales for Tuesday, and the probability of the prediction is very high. However, you might want to create multiple predictions by using a batch process to test a variety of hypotheses on the model.  
   

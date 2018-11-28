@@ -46,7 +46,7 @@ ms.author: maghan
   
 5.  In the **Connection Type** area, verify that **Shared data source** is selected.  
   
-6.  In the **Data Source Link** area, click the ellipsis (…) button.  
+6.  In the **Data Source Link** area, click the ellipsis (...) button.  
   
 7.  Locate the data source you want to use.  
   

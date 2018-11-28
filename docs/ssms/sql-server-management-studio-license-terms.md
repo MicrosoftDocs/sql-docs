@@ -107,7 +107,7 @@ As described below, using some features also operates as your consent to the tra
 
 **13.   DISCLAIMER OF WARRANTY. The software is licensed "as-is." You bear the risk of using it. Microsoft gives no express warranties, guarantees or conditions. You may have additional consumer rights or statutory guarantees under your local laws which this agreement cannot change. To the extent permitted under your local laws, Microsoft excludes the implied warranties of merchantability, fitness for a particular purpose and non-infringement.**  
   
-**FOR AUSTRALIA – You have statutory guarantees under the Australian Consumer Law and nothing in these terms is intended to affect those rights.**  
+**FOR AUSTRALIA - You have statutory guarantees under the Australian Consumer Law and nothing in these terms is intended to affect those rights.**  
   
 **14.   LIMITATION ON AND EXCLUSION OF REMEDIES AND DAMAGES. You can recover from Microsoft and its suppliers only direct damages up to U.S. $5.00. You cannot recover any other damages, including consequential, lost profits, special, indirect or incidental damages.**  
 This limitation applies to  

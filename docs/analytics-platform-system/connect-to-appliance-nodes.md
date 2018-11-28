@@ -42,7 +42,7 @@ sqlcmd -S "mypdw-sqlctl01,17001" -U sa -P password -I -Q "exec sp_pdw_add_networ
 For example, a loading command will start with the following:  
   
 ```  
-dwloader –S mypdw-SQLCTL01  
+dwloader -S mypdw-SQLCTL01  
 ```  
   
 <!-- MISSING LINKS ## See Also  

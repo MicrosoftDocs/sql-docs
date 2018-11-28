@@ -59,7 +59,7 @@ manager: craigg
   
 3.  If the Properties window is not open, open the Properties window, and then click the **Auto Hide** button on the title bar so that it stays open.  
   
-4.  Click the **NameColumn** property field near the bottom of the window, and then click the ellipsis browse (**…**) button to open the **Name Column** dialog box.  
+4.  Click the **NameColumn** property field near the bottom of the window, and then click the ellipsis browse (**...**) button to open the **Name Column** dialog box.  
   
 5.  Select `SimpleDate` at the bottom of the **Source column** list, and then click **OK**.  
   

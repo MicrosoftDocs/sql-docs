@@ -31,13 +31,13 @@ set transaction isolation level serializable
 go  
   
 begin transaction  
- ……  
+ ......  
   set transaction isolation level repeatable read  
   
   insert t3 select * from t1 join t2 on t1.id=t2.id  
   
   set transaction isolation level serializable  
- ……  
+ ......  
 commit  
 ```  
   
@@ -48,11 +48,11 @@ set transaction isolation level read committed
 go  
   
 begin transaction  
- ……  
+ ......  
   
   insert t3 select * from t1 (serializable) join t2 (snapshot) on t1.id=t2.id  
   
-  ……  
+  ......  
 commit  
 ```  
   

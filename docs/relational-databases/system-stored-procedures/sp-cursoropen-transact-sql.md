@@ -201,7 +201,7 @@ sp_cursoropen cursor OUTPUT, stmt
 ### bound_param Parameter  
  Any parameters after the fifth are passed along to the statement plan as input parameters. The first such parameter must be a string in the form of:  
   
- *{ local variable name data type } [,…n]*  
+ *{ local variable name data type } [,...n]*  
   
  Subsequent parameters are used to pass the values to be substituted for the *local variable name* in the statement.  
   

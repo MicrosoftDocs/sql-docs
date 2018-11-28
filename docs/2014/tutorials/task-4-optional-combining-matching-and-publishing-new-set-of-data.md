@@ -37,7 +37,7 @@ manager: craigg
   
 8.  Open **Suppliers.xls** file (the original input file that is included in the tutorial files) and copy all (three) rows from the **CombineAndCleanse** worksheet to **Sheet2**.  
   
-9. Switch back to the **Supplier** sheet in the **Book 1 – Microsoft Excel** (not the **Cleansed and Matched Supplier List** Excel) that is connected to **MDS**.  
+9. Switch back to the **Supplier** sheet in the **Book 1 - Microsoft Excel** (not the **Cleansed and Matched Supplier List** Excel) that is connected to **MDS**.  
   
 10. Click **Master Data** on the menu bar.  
   
@@ -105,7 +105,7 @@ manager: craigg
   
 33. **Sort** the list by **Code** and look for records with **S57** and **S66** as codes. You can also use the **Filter** button on the toolbar to search for a specific record in the list.  
   
-34. Now, close **Book1 – Microsoft Excel** window without saving the file.  
+34. Now, close **Book1 - Microsoft Excel** window without saving the file.  
   
 ## Next Step  
  [Task 5: Creating a Domain-Based Attribute from Excel](../../2014/tutorials/task-5-creating-a-domain-based-attribute-from-excel.md)  

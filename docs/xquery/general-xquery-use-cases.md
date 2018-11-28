@@ -27,8 +27,8 @@ manager: craigg
  The following query returns the product model IDs and weights, if they exist, from the product catalog description. The query constructs XML that has the following form:  
   
 ```  
-<Product ProductModelID="…">  
-  <Weight>…</Weight>  
+<Product ProductModelID="...">  
+  <Weight>...</Weight>  
 </Product>  
 ```  
   
@@ -89,7 +89,7 @@ WHERE CatalogDescription.exist('/pd:ProductDescription/pd:Specifications//Weight
  For product models whose catalog descriptions include front-angle and small-size pictures, the query constructs XML that has the following form:  
   
 ```  
-< Product ProductModelID="…">  
+< Product ProductModelID="...">  
   <Picture>  
     <Angle>front</Angle>  
     <Size>small</Size>  

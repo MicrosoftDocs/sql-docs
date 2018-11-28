@@ -35,7 +35,7 @@ manager: craigg
   
 7.  On the **New Database** dialog box, enter **ProductReplica** in the **Database name** box, click **OK**, and then click **Next**.  
   
-8.  In the **Distribution Agent Security** dialog box, click the ellipsis (**…**) button, enter \<*Machine_Name>***\repl_distribution** in the **Process account** box, enter the password for this account, click **OK**, and then click **Next**.  
+8.  In the **Distribution Agent Security** dialog box, click the ellipsis (**...**) button, enter \<*Machine_Name>***\repl_distribution** in the **Process account** box, enter the password for this account, click **OK**, and then click **Next**.  
   
 9. Click **Finish** to accept the default values on the remaining pages and complete the wizard.  
   
@@ -45,7 +45,7 @@ manager: craigg
   
 2.  On the **General** page, in the **User type** list, select **Windows user**.  
   
-3.  Select the **User name** box and click the ellipsis (…) button, in the **Enter the object name to select** box type <Machine_Name>**\repl_distribution**, click **Check Names**, and then click **OK**.  
+3.  Select the **User name** box and click the ellipsis (...) button, in the **Enter the object name to select** box type <Machine_Name>**\repl_distribution**, click **Check Names**, and then click **OK**.  
   
 4.  On the **Membership** page, in **Database role membership** area, select **db_owner**, and then click **OK** to create the user.  
   

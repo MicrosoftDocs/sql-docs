@@ -29,7 +29,7 @@ A table-valued function that splits a string into rows of substrings, based on a
 
 #### Compatibility level 130
 
-STRING_SPLIT requires that the compatibility level be at least 130. When the level is less than 130, SQL Server is unable to find the STRING_SPLIT function.
+STRING_SPLIT requires the compatibility level to be at least 130. When the level is less than 130, SQL Server is unable to find the STRING_SPLIT function.
 
 To change the compatibility level of a database, refer to [View or Change the Compatibility Level of a Database](../../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md).
 
@@ -56,9 +56,9 @@ Returns a single-column table whose rows are the substrings. The name of the col
 
 **STRING_SPLIT** inputs a string that has delimited substrings, and inputs one character to use as the delimiter or separator. STRING_SPLIT outputs a single-column table whose rows contain the substrings. The name of the output column is **value**.
 
-The output rows might be in any order. The order is not guaranteed to match the order of the substrings in the input string. Of course, you can override the final sort order by using an ORDER BY clause on the SELECT statement (`ORDER BY value`).
+The output rows might be in any order. The order is _not_ guaranteed to match the order of the substrings in the input string. You can override the final sort order by using an ORDER BY clause on the SELECT statement (`ORDER BY value`).
 
-Empty zero-length substrings are present when the input string contains two or more consecutive occurrences of the delimiter character. Empty substrings are treated the same as are plain substrings. Of course, you can filter out any rows that contain the empty substring by using the WHERE clause (`WHERE value <> ''`). If the input string is NULL, the STRING_SPLIT table-valued function returns an empty table.  
+Empty zero-length substrings are present when the input string contains two or more consecutive occurrences of the delimiter character. Empty substrings are treated the same as are plain substrings. You can filter out any rows that contain the empty substring by using the WHERE clause (`WHERE value <> ''`). If the input string is NULL, the STRING_SPLIT table-valued function returns an empty table.  
 
 As an example, the following SELECT statement uses the space character as the separator:
 
@@ -80,7 +80,7 @@ In a practice run, the preceding SELECT returned following result table:
 ## Examples  
   
 ### A. Split comma-separated value string  
-Parse a comma separated list of values and return all non-empty tokens:  
+Parse a comma-separated list of values and return all non-empty tokens:  
   
 ```sql  
 DECLARE @tags NVARCHAR(400) = 'clothing,road,,touring,bike'  
@@ -164,9 +164,9 @@ FROM Product
 JOIN STRING_SPLIT('1,2,3',',')   
     ON value = ProductId;  
 ```  
-  
-This is a replacement for a common anti-pattern, such as creating a dynamic SQL string in application layer or [!INCLUDE[tsql](../../includes/tsql-md.md)], or by using LIKE operator:  
-  
+
+The preceding STRING_SPLIT usage is a replacement for a common anti-pattern. Such an anti-pattern can involve the creation of a dynamic SQL string in the application layer or in Transact-SQL. Or an anti-pattern can be achieved by using the LIKE operator. See the following example SELECT statement:
+
 ```sql  
 SELECT ProductId, Name, Tags  
 FROM Product  

@@ -76,8 +76,7 @@ As the number of users increases, so does the competition for a server's resourc
 
   
 ## See also  
- [Automated Administration Across an Enterprise](../../ssms/agent/automated-administration-across-an-enterprise.md)   
- [Monitor Resource Usage &#40;System Monitor&#41;](../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md)      
+ [Automated Administration Across an Enterprise](../../ssms/agent/automated-administration-across-an-enterprise.md)    
  [Compare and Analyze Execution Plans](../../relational-databases/performance/compare-and-analyze-execution-plans.md)    
  [Display and Save Execution Plans](../../relational-databases/performance/display-and-save-execution-plans.md)    
   

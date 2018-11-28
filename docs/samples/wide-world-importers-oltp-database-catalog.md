@@ -181,7 +181,7 @@ Simulates a workload that inserts sales and purchases. The main stored procedure
 |-----------------------------|---------------------|
 |Configuration_ApplyDataLoadSimulationProcedures|Recreates the procedures needed for data load simulation. This is needed for bringing data up to the current date.|
 |Configuration_RemoveDataLoadSimulationProcedures|This removes the procedures again after data simulation is complete.|
-|DeactiveTemporalTablesBeforeDataLoad|Removes the temporal nature of all temporal tables and where applicable, applies a trigger so that changes can be made as though they were being applied at an earlier date than the sys-temporal tables allow.|
+|DeactivateTemporalTablesBeforeDataLoad|Removes the temporal nature of all temporal tables and where applicable, applies a trigger so that changes can be made as though they were being applied at an earlier date than the sys-temporal tables allow.|
 |PopulateDataToCurrentDate|Used to bring the data up to the current date. Should be run before any other configuration options after restoring the database from an initial backup.|
 |ReactivateTemporalTablesAfterDataLoad|Re-establishes the temporal tables, including checking for data consistency. (Removes the associated triggers).|
 

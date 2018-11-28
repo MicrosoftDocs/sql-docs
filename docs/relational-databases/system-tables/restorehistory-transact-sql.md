@@ -27,7 +27,7 @@ manager: craigg
 |Column name|Data type|Description|  
 |-----------------|---------------|-----------------|  
 |**restore_history_id**|**int**|Unique identification number that identifies each restore operation. Identity, primary key.|  
-|**restore_date**|**datetime**|Date and time of the completion of the restore operation. Can be NULL.|  
+|**restore_date**|**datetime**|Date and time of the start of the restore operation. Can be NULL.|  
 |**destination_database_name**|**nvarchar(128)**|Name of the destination database for the restore operation. Can be NULL.|  
 |**user_name**|**nvarchar(128)**|Name of the user who performed the restore operation. Can be NULL.|  
 |**backup_set_id**|**int**|Unique identification number identifying the backup set being restored. References **backupset(backup_set_id)**.|  

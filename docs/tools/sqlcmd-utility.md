@@ -244,8 +244,8 @@ Prints raw error messages to the screen.
  **-K** *application_intent*  
  Declares the application workload type when connecting to a server. The only currently supported value is **ReadOnly**. If **-K** is not specified, the sqlcmd utility will not support connectivity to a secondary replica in an Always On availability group. For more information, see [Active Secondaries: Readable Secondary Replica (Always On Availability Groups)](../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)  
   
- **-M** *multisubnet_failover*  
- Always specify **-M** when connecting to the availability group listener of a  SQL Server  availability group or a  SQL Server  Failover Cluster Instance. **-M** provides for faster detection of and connection to the (currently) active server. If **-M** is not specified, **-M** is off. For more information about [!INCLUDE[ssHADR](../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md), [Creation and Configuration of Availability Groups &#40;SQL Server&#41;](../database-engine/availability-groups/windows/creation-and-configuration-of-availability-groups-sql-server.md), [Failover Clustering and Always On Availability Groups (SQL Server)](https://msdn.microsoft.com/library/ff929171.aspx), and [Active Secondaries: Readable Secondary Replicas(Always On Availability Groups)](https://msdn.microsoft.com/library/ff878253.aspx).  
+**-M** *multisubnet_failover*  
+ Always specify **-M** when connecting to the availability group listener of a  SQL Server  availability group or a  SQL Server  Failover Cluster Instance. **-M** provides for faster detection of and connection to the (currently) active server. If **-M** is not specified, **-M** is off. For more information about [Listeners, Client Connectivity, Application Failover](../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md), [Creation and Configuration of Availability Groups &#40;SQL Server&#41;](../database-engine/availability-groups/windows/creation-and-configuration-of-availability-groups-sql-server.md), [Failover Clustering and Always On Availability Groups (SQL Server)](https://msdn.microsoft.com/library/ff929171.aspx), and [Active Secondaries: Readable Secondary Replicas(Always On Availability Groups)](https://msdn.microsoft.com/library/ff878253.aspx). 
   
  **-N**  
  This switch is used by the client to request an encrypted connection.  
@@ -257,7 +257,7 @@ Prints raw error messages to the screen.
 
 We recommend that you use a strong password.
  
-#### [**Use a strong password!**](https://msdn.microsoft.com/library/ms161962(SQL.130).aspx)
+#### [**Use a strong password!**](../relational-databases/security/strong-passwords.md)
   
   
  The password prompt is displayed by printing the password prompt to the console, as follows: `Password:`  

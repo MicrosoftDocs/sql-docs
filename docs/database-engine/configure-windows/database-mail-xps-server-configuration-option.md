@@ -21,9 +21,9 @@ manager: craigg
 
 Use the **DatabaseMail XPs** option to enable Database Mail on this server. The possible values are:  
   
-- `0` : Database Mail isn't available (default).  
+- `0`: Database Mail isn't available (default).  
   
-- `1` : Database Mail is available.  
+- `1`: Database Mail is available.  
   
  The setting takes effect immediately without a server stop and restart.  
   

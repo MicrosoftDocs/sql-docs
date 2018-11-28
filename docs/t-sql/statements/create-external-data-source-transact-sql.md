@@ -88,10 +88,20 @@ CREATE EXTERNAL DATA SOURCE data_source_name
     WITH ( 
         TYPE = HADOOP, 
         LOCATION = 'hdfs://NameNode_URI[:port]'
-        [, JOB_TRACKER_LOCATION = 'JobTracker_URI[:port]' ]
+        [, RESOURCE_MANAGER_LOCATION = 'ResourceManager_URI[:port]' ]
+        [, CREDENTIAL = credential_name]
     )
 [;]
 
+-- PolyBase only: Azure Storage Blob as data source   
+-- (on Parallel Data Warehouse)  
+CREATE EXTERNAL DATA SOURCE data_source_name  
+    WITH (   
+        TYPE = HADOOP,  
+        LOCATION = 'wasb[s]://container@account_name.blob.core.windows.net'
+        [, CREDENTIAL = credential_name ]
+    )  
+[;]
   
 -- Elastic Database query only: a shard map manager as data source   
 -- (only on Azure SQL Database)  

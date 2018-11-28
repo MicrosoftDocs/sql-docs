@@ -1,7 +1,7 @@
 ---
 title: "STRING_SPLIT (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "11/27/2018"
+ms.date: "11/28/2018"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
@@ -54,7 +54,9 @@ Returns a single-column table whose rows are the substrings. The name of the col
   
 ## Remarks  
 
-**STRING_SPLIT** inputs a string that has delimited substrings, and inputs one character to use as the delimiter or separator. STRING_SPLIT outputs a single-column table whose rows contain the substrings. The name of the output column is **value**. The sort order of the output rows matches the order of the substrings in the input string. Of course, you can override the final sort order by using an ORDER BY clause on the SELECT statement (`ORDER BY value`).
+**STRING_SPLIT** inputs a string that has delimited substrings, and inputs one character to use as the delimiter or separator. STRING_SPLIT outputs a single-column table whose rows contain the substrings. The name of the output column is **value**.
+
+The output rows might be in any order. The order is not guaranteed to match the order of the substrings in the input string. Of course, you can override the final sort order by using an ORDER BY clause on the SELECT statement (`ORDER BY value`).
 
 Empty zero-length substrings are present when the input string contains two or more consecutive occurrences of the delimiter character. Empty substrings are treated the same as are plain substrings. Of course, you can filter out any rows that contain the empty substring by using the WHERE clause (`WHERE value <> ''`). If the input string is NULL, the STRING_SPLIT table-valued function returns an empty table.  
 
@@ -64,7 +66,7 @@ As an example, the following SELECT statement uses the space character as the se
 SELECT value FROM STRING_SPLIT('Lorem ipsum dolor sit amet.', ' ');
 ```
 
-The preceding SELECT returns following result table:  
+In a practice run, the preceding SELECT returned following result table:  
   
 |value|  
 | :-- |  

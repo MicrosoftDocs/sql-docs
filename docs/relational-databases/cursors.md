@@ -37,29 +37,36 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
   
 -   Providing [!INCLUDE[tsql](../includes/tsql-md.md)] statements in scripts, stored procedures, and triggers access to the data in a result set.  
   
-## Concepts 
-
-### Cursor Implementations  
+> [!TIP]
+> In some scenarios, if there is a primary key on a table, a `WHILE` loop can be used instead of a cursor, without incurring in the overhead of a cursor.
+> However, there are scenarios where cursors are not only unavoidable, they are actually needed. When that is the case, if there is no requirement to update tables based on the cursor, then use *firehose* cursors, meaning [forward-only](#Forward-only) and read-only cursors.
+  
+## Cursor Implementations  
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] supports three cursor implementations.  
   
-#### Transact-SQL cursors  
+### Transact-SQL cursors  
 Are based on the DECLARE CURSOR syntax and are used mainly in [!INCLUDE[tsql](../includes/tsql-md.md)] scripts, stored procedures, and triggers. [!INCLUDE[tsql](../includes/tsql-md.md)] cursors are implemented on the server and are managed by [!INCLUDE[tsql](../includes/tsql-md.md)] statements sent from the client to the server. They may also be contained in batches, stored procedures, or triggers.  
   
-#### Application programming interface (API) server cursors  
+### Application programming interface (API) server cursors  
  Support the API cursor functions in OLE DB and ODBC. API server cursors are implemented on the server. Each time a client application calls an API cursor function, the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Native Client OLE DB provider or ODBC driver transmits the request to the server for action against the API server cursor.  
   
-#### Client cursors  
+### Client cursors  
  Are implemented internally by the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Native Client ODBC driver and by the DLL that implements the ADO API. Client cursors are implemented by caching all the result set rows on the client. Each time a client application calls an API cursor function, the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Native Client ODBC driver or the ADO DLL performs the cursor operation on the result set rows cached on the client.  
   
-### Type of Cursors  
-#### Forward-only  
- A forward-only cursor does not support scrolling; it supports only fetching the rows serially from the start to the end of the cursor. The rows are not retrieved from the database until they are fetched. The effects of all INSERT, UPDATE, and DELETE statements made by the current user or committed by other users that affect rows in the result set are visible as the rows are fetched from the cursor.  
+## Type of Cursors  
+[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] supports four cursor types. 
+
+> [!NOTE]
+> Cursors may leverage tempdb worktables. Just like aggregation or sort operations that spill, these incur in I/O, and are a potential performance bottleneck. `STATIC` cursors use worktables from its inception. For more information, see [worktables in the Query Processing Architecture Guide](../../relational-databases/query-processing-architecture-guide.md#worktables).
+
+### Forward-only  
+ A forward-only cursor does not support scrolling; it supports only fetching the rows serially from the start to the end of the cursor. The rows are not retrieved from the database until they are fetched. The effects of all `INSERT`, `UPDATE`, and `DELETE` statements made by the current user or committed by other users that affect rows in the result set are visible as the rows are fetched from the cursor.  
   
  Because the cursor cannot be scrolled backward, most changes made to rows in the database after the row was fetched are not visible through the cursor. In cases where a value used to determine the location of the row within the result set is modified, such as updating a column covered by a clustered index, the modified value is visible through the cursor.  
   
  Although the database API cursor models consider a forward-only cursor to be a distinct type of cursor, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] does not. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] considers both forward-only and scroll as options that can be applied to static, keyset-driven, and dynamic cursors. [!INCLUDE[tsql](../includes/tsql-md.md)] cursors support forward-only static, keyset-driven, and dynamic cursors. The database API cursor models assume that static, keyset-driven, and dynamic cursors are always scrollable. When a database API cursor attribute or property is set to forward-only, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] implements this as a forward-only dynamic cursor.  
   
-#### Static  
+### Static  
  The complete result set of a static cursor is built in **tempdb** when the cursor is opened. A static cursor always displays the result set as it was when the cursor was opened. Static cursors detect few or no changes, but consume relatively few resources while scrolling.  
   
  The cursor does not reflect any changes made in the database that affect either the membership of the result set or changes to the values in the columns of the rows that make up the result set. A static cursor does not display new rows inserted in the database after the cursor was opened, even if they match the search conditions of the cursor SELECT statement. If rows making up the result set are updated by other users, the new data values are not displayed in the static cursor. The static cursor displays rows deleted from the database after the cursor was opened. No UPDATE, INSERT, or DELETE operations are reflected in a static cursor (unless the cursor is closed and reopened), not even modifications made using the same connection that opened the cursor.  
@@ -70,10 +77,10 @@ Are based on the DECLARE CURSOR syntax and are used mainly in [!INCLUDE[tsql](..
   
  [!INCLUDE[tsql](../includes/tsql-md.md)] uses the term insensitive for static cursors. Some database APIs identify them as snapshot cursors.  
   
-#### Keyset  
+### Keyset  
  The membership and order of rows in a keyset-driven cursor are fixed when the cursor is opened. Keyset-driven cursors are controlled by a set of unique identifiers, keys, known as the keyset. The keys are built from a set of columns that uniquely identify the rows in the result set. The keyset is the set of the key values from all the rows that qualified for the SELECT statement at the time the cursor was opened. The keyset for a keyset-driven cursor is built in **tempdb** when the cursor is opened.  
   
-#### Dynamic  
+### Dynamic  
  Dynamic cursors are the opposite of static cursors. Dynamic cursors reflect all changes made to the rows in their result set when scrolling through the cursor. The data values, order, and membership of the rows in the result set can change on each fetch. All UPDATE, INSERT, and DELETE statements made by all users are visible through the cursor. Updates are visible immediately if they are made through the cursor using either an API function such as **SQLSetPos** or the [!INCLUDE[tsql](../includes/tsql-md.md)] WHERE CURRENT OF clause. Updates made outside the cursor are not visible until they are committed, unless the cursor transaction isolation level is set to read uncommitted. Dynamic cursor plans never use spatial indexes.  
   
 ## Requesting a Cursor  

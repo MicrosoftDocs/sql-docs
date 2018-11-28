@@ -122,7 +122,7 @@ ALTER FULLTEXT INDEX ON table_name
   
  Creates the additional key phrase and document similarity indexes that are part of statistical semantic indexing. For more information, see [Semantic Search &#40;SQL Server&#41;](../../relational-databases/search/semantic-search-sql-server.md).  
   
- [ **,***...n*]  
+ [ **,**_...n_]  
  Indicates that multiple columns may be specified for the ADD, ALTER, or DROP clauses. When multiple columns are specified, separate these columns with commas.  
   
  WITH NO POPULATION  

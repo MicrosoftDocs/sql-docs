@@ -88,7 +88,7 @@ sp_cursorfetch cursor
 |*\<nrows>*|Set to|  
 |-----------------|------------|  
 |If not open|0|  
-|For KEYSET and STATIC cursors|Typically, the current keyset size.<br /><br /> **–m** if the cursor is in asynchronous creation with *m* rows found to this point.|  
+|For KEYSET and STATIC cursors|Typically, the current keyset size.<br /><br /> **-m** if the cursor is in asynchronous creation with *m* rows found to this point.|  
 |For DYNAMIC cursors|-1|  
   
 ## Remarks  

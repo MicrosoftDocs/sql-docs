@@ -183,7 +183,7 @@ The July 2010 release of SSMA for MySQL contains the following features:
   
 4.  **Improvements to Object Conversion:**  
   
-    -   Conversion of MySQL Metabase objects – Procedures, Functions, Views, Triggers, and Statements.  
+    -   Conversion of MySQL Metabase objects - Procedures, Functions, Views, Triggers, and Statements.  
     -   Limited support for Spatial Data Types in Tables.  
     -   Option to convert MySQL functions to SQL Server Stored Procedures  
     -   Option to apply SQL Modes and Charset mapping during Object Conversion  

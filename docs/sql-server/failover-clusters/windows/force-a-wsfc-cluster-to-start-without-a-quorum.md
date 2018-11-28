@@ -38,7 +38,7 @@ manager: craigg
   
 1.  Open a Failover Cluster Manager and connect to the desired cluster node to force online.  
   
-2.  In the **Actions** pane, click **Force Cluster Start**, and then click **Yes – Force my cluster to start**.  
+2.  In the **Actions** pane, click **Force Cluster Start**, and then click **Yes - Force my cluster to start**.  
   
 3.  In the left pane, in the **Failover Cluster Manager** tree, click the cluster name.  
   
@@ -54,9 +54,9 @@ manager: craigg
   
 3.  Use `Stop-ClusterNode` to make sure that the cluster service is stopped.  
   
-4.  Use `Start-ClusterNode` with `–FixQuorum` to force the cluster service to start.  
+4.  Use `Start-ClusterNode` with `-FixQuorum` to force the cluster service to start.  
   
-5.  Use `Get-ClusterNode` with `–Propery NodeWieght = 1` to set the value the guarantees that the node is a voting member of the quorum.  
+5.  Use `Get-ClusterNode` with `-Propery NodeWieght = 1` to set the value the guarantees that the node is a voting member of the quorum.  
   
 6.  Output the cluster node properties in a readable format.  
   
@@ -67,8 +67,8 @@ manager: craigg
 Import-Module FailoverClusters  
   
 $node = "Always OnSrv02"  
-Stop-ClusterNode –Name $node  
-Start-ClusterNode –Name $node -FixQuorum  
+Stop-ClusterNode -Name $node  
+Start-ClusterNode -Name $node -FixQuorum  
   
 (Get-ClusterNode $node).NodeWeight = 1  
   

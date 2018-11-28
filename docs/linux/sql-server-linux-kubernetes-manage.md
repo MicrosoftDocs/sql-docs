@@ -57,7 +57,7 @@ To fail over or move a primary replica to a different node in an availability gr
   The following example returns the status of the job named `manual-failover`.
 
   ```azurecli
-  kubectl describe jobs/manual-failover -–namespace ag1
+  kubectl describe jobs/manual-failover --namespace ag1
   ```
 
 1. Delete the manual failover job. 
@@ -70,7 +70,7 @@ To fail over or move a primary replica to a different node in an availability gr
   The following command deletes the job.
 
   ```azurecli
-  kubectl delete jobs manual-failover -–namespace ag1
+  kubectl delete jobs manual-failover --namespace ag1
   ```
 
 ## Rotate credentials

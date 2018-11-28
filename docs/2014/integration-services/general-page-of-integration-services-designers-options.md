@@ -31,7 +31,7 @@ manager: craigg
  Select to display a warning when loading a package that is not signed.  
   
  **Show precedence constraint labels**  
- Select which label—Success, Failure, or Completion—to display on precedence constraints when viewing packages in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)].  
+ Select which label-Success, Failure, or Completion-to display on precedence constraints when viewing packages in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)].  
   
  **Scripting language**  
  Select the default scripting language for new Script tasks and Script components.  

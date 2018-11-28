@@ -40,7 +40,7 @@ manager: craigg
 |**False**|Copy only the specified jobs.|  
   
  **JobsList**  
- Click the browse button **(…)** to select the jobs to copy. At least one job must be selected.  
+ Click the browse button **(...)** to select the jobs to copy. At least one job must be selected.  
   
 > [!NOTE]  
 >  Specify the **SourceConnection** before selecting jobs to copy.  

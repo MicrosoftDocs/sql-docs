@@ -26,7 +26,7 @@ You can add a table to your database diagram to edit its structure or relate it 
   
     To create a table in your current diagram, click the **New Table** button on the toolbar.  
   
-    –or–  
+    -or-  
   
     Right-click in the diagram and select **New Table**.  
   

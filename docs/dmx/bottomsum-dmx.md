@@ -87,8 +87,8 @@ NATURAL PREDICTION JOIN
   
 |Model|$SUPPORT|$PROBABILITY|$ADJUSTEDPROBABILITY|  
 |-----------|--------------|------------------|--------------------------|  
-|Road Bottle Cage|1195|0.08…|0.07…|  
-|Mountain Bottle Cage|1367|0.09…|0.08…|  
+|Road Bottle Cage|1195|0.08...|0.07...|  
+|Mountain Bottle Cage|1367|0.09...|0.08...|  
   
  **Note** This example is provided only to illustrate the usage of BottomSum. Depending on the size of your data set, this query might take a long time to run.  
   

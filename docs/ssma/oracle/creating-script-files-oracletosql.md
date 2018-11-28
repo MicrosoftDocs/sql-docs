@@ -63,7 +63,7 @@ The user-configurable options include:
     *or*  
   
     ```xml  
-    <…All commands…>  
+    <...All commands...>  
   
       <output-window  
   
@@ -75,7 +75,7 @@ The user-configurable options include:
   
        />  
   
-    </…All commands…>  
+    </...All commands...>  
     ```  
   
 2.  **Data Migration Connection Provider:** This specifies which source/target server is to be considered for data-migration.  Source-use-last-used indicates that the last used source server is used for data migration. Similarly target-use-last-used indicates that the last used target server is used for data migration. The user can also specify the server (source or target) by using the attributes source-server or target-server.  
@@ -265,7 +265,7 @@ The user-configurable options include:
     *or*  
   
     ```xml  
-    <…All commands…>  
+    <...All commands...>  
   
       <progress-reporting  
   
@@ -275,7 +275,7 @@ The user-configurable options include:
   
         report-progress="every-1%/every-2%/every-5%/every-10%/every-20%/off"     (optional)/>  
   
-    </…All commands…>  
+    </...All commands...>  
     ```  
   
 9. **Logger Verbosity:** Sets log verbosity level. This corresponds with the All Categories option in the UI. By default, the log verbosity level is "error".  
@@ -307,11 +307,11 @@ The user-configurable options include:
     *or*  
   
     ```xml  
-    <…All commands…>  
+    <...All commands...>  
   
       <log-verbosity level="fatal-error/error/warning/info/debug"/>  
   
-    </…All commands…>  
+    </...All commands...>  
     ```  
   
 10. **Override Encrypted Password:** If 'true', the clear text password specified in the server definition section of the server connection file or in the script file, overrides the encrypted password stored in protected storage if exists. If no password is specified in clear text, the user is prompted to enter the password.  

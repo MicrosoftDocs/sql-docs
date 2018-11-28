@@ -29,11 +29,11 @@ Data alert messages are sent by email. Depending on the importance of the inform
 
 The following summarizes the key areas of [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] data alerts:
 
--   **Define and save data alert definitions**—you run a report, create rules that identify interesting data values, define a recurrence pattern for sending the data alert message, and specify the recipients of the alert message.  
+-   **Define and save data alert definitions**-you run a report, create rules that identify interesting data values, define a recurrence pattern for sending the data alert message, and specify the recipients of the alert message.  
   
--   **Run data alert definitions**—Alerting service processes alert definitions at a scheduled time, retrieves report data, creates data alert instances based on rules in the alert definition.  
+-   **Run data alert definitions**-Alerting service processes alert definitions at a scheduled time, retrieves report data, creates data alert instances based on rules in the alert definition.  
   
--   **Deliver data alert messages to recipients**—Alerting service creates an alert instance and sends an alert message to recipients by email.  
+-   **Deliver data alert messages to recipients**-Alerting service creates an alert instance and sends an alert message to recipients by email.  
   
  In addition, as a data alert owner you can view information about your data alerts and delete and edit your data alert definitions. An alert has only one owner, the person who created it.  
   
@@ -186,7 +186,7 @@ The following summarizes the key areas of [!INCLUDE[ssRSnoversion](../includes/s
   
  `<IsAlertingService>True</IsAlertingService>`  
   
- `…`  
+ `...`  
   
  `</Service>`  
   

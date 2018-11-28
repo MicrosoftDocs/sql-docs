@@ -42,7 +42,7 @@ DENY permission  [ ,...n ]
  *permission*  
  Specifies a permission that can be denied on a certificate. Listed below.  
   
- ON CERTIFICATE **::***certificate_name*  
+ ON CERTIFICATE **::**_certificate_name_  
  Specifies the certificate on which the permission is being denied. The scope qualifier "::" is required.  
   
  *database_principal*  

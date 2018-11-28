@@ -49,7 +49,7 @@ REVOKE [ GRANT OPTION FOR ] permission  [ ,...n ]
  *permission*  
  Specifies a permission that can be revoked on a database scoped credential. Listed below.  
   
- ON CERTIFICATE **::***credential_name*  
+ ON CERTIFICATE **::**_credential_name_  
  Specifies the database scoped credential on which the permission is being revoked. The scope qualifier "::" is required.  
   
  *database_principal*  

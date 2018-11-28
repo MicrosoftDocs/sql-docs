@@ -77,7 +77,7 @@ manager: craigg
   
 -   XML schema collection  
   
--   Object – The object class has the following members:  
+-   Object - The object class has the following members:  
   
     -   Aggregate  
   

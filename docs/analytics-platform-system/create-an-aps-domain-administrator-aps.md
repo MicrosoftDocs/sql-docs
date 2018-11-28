@@ -25,7 +25,7 @@ To have sufficient permissions to configure all APS nodes, the user running the 
   
 3.  In the **Active Directory Users and Computers** program, right-click **Users**, point to **New**, and then click **User**.  
   
-4.  In the **New Object – User** dialog box, complete the description of the new user, and then click **Next**.  
+4.  In the **New Object - User** dialog box, complete the description of the new user, and then click **Next**.  
   
     Complete the password dialog box, and then click **Next**.  
   

@@ -26,7 +26,7 @@ manager: kfile
   
 3.  Select the model, and right-click to open the shortcut menu.  
   
-     –or–  
+     -or-  
   
      Select the model. On the **Mining Model** menu, select **New Mining Model**.  
   
@@ -36,7 +36,7 @@ manager: kfile
   
 1.  Select the mining model.  
   
-2.  In the **Properties** window, click the text box for the **Filter** property, and the click the build **(…)** button.  
+2.  In the **Properties** window, click the text box for the **Filter** property, and the click the build **(...)** button.  
   
 3.  Change the filter conditions.  
   

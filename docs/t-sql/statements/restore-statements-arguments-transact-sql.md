@@ -71,7 +71,7 @@ This topic documents the arguments that are described in the Syntax sections of 
   
  For a database that uses the full or bulk-logged recovery model, after using RESTORE DATABASE to restore one or more files, filegroups, and/or pages, typically, you must apply the transaction log to the files containing the restored data; applying the log makes those files consistent with the rest of the database. The exceptions to this are as follows:  
   
--   If the files being restored were read-only before they were last backed up—then a transaction log does not have to be applied, and the RESTORE statement informs you of this situation.  
+-   If the files being restored were read-only before they were last backed up-then a transaction log does not have to be applied, and the RESTORE statement informs you of this situation.  
   
 -   If the backup contains the primary filegroup and a partial restore is being performed. In this case, the restore log is not needed because the log is restored automatically from the backup set.  
   
@@ -386,7 +386,7 @@ FILE **=**{ *backup_set_file_number* | **@**_backup\_set\_file\_number_ }
  CONTINUE_AFTER_ERROR  
  Specifies that the restore operation is to continue after an error is encountered.  
   
- If a backup contains damaged pages, it is best to repeat the restore operation using an alternative backup that does not contain the errors—for example, a backup taken before the pages were damaged. As a last resort, however, you can restore a damaged backup using the CONTINUE_AFTER_ERROR option of the restore statement and try to salvage the data.  
+ If a backup contains damaged pages, it is best to repeat the restore operation using an alternative backup that does not contain the errors-for example, a backup taken before the pages were damaged. As a last resort, however, you can restore a damaged backup using the CONTINUE_AFTER_ERROR option of the restore statement and try to salvage the data.  
   
 ##### FILESTREAM Options  
  FILESTREAM ( DIRECTORY_NAME =*directory_name* )  
@@ -579,20 +579,20 @@ Use KEEP_REPLICATION when setting up replication to work with log shipping. It p
 > [!NOTE]  
 >  The PARTIAL option is supported only by RESTORE DATABASE.  
   
- The following table lists the WITH options that are used by one or more statements and indicates which statements support each option. A check mark (√) indicates that an option is supported; a dash (—) indicates that an option is not supported.  
+ The following table lists the WITH options that are used by one or more statements and indicates which statements support each option. A check mark (√) indicates that an option is supported; a dash (-) indicates that an option is not supported.  
   
 |WITH option|RESTORE|RESTORE FILELISTONLY|RESTORE HEADERONLY|RESTORE LABELONLY|RESTORE REWINDONLY|RESTORE VERIFYONLY|  
 |-----------------|-------------|--------------------------|------------------------|-----------------------|------------------------|------------------------|  
-|{ CHECKSUM<br /><br /> &#124; NO_CHECKSUM }|√|√|√|√|—|√|  
-|{ CONTINUE_AFTER_ERROR<br /><br /> &#124; STOP_ON_ERROR }|√|√|√|√|—|√|  
-|FILE<sup>1</sup>|√|√|√|—|—|√|  
-|LOADHISTORY|—|—|—|—|—|√|  
-|MEDIANAME|√|√|√|√|—|√|  
-|MEDIAPASSWORD|√|√|√|√|—|√|  
-|MOVE|√|—|—|—|—|√|  
-|PASSWORD|√|√|√|—|—|√|  
-|{ REWIND &#124; NOREWIND }|√|Only REWIND|Only REWIND|Only REWIND|—|√|  
-|STATS|√|—|—|—|—|√|  
+|{ CHECKSUM<br /><br /> &#124; NO_CHECKSUM }|√|√|√|√|-|√|  
+|{ CONTINUE_AFTER_ERROR<br /><br /> &#124; STOP_ON_ERROR }|√|√|√|√|-|√|  
+|FILE<sup>1</sup>|√|√|√|-|-|√|  
+|LOADHISTORY|-|-|-|-|-|√|  
+|MEDIANAME|√|√|√|√|-|√|  
+|MEDIAPASSWORD|√|√|√|√|-|√|  
+|MOVE|√|-|-|-|-|√|  
+|PASSWORD|√|√|√|-|-|√|  
+|{ REWIND &#124; NOREWIND }|√|Only REWIND|Only REWIND|Only REWIND|-|√|  
+|STATS|√|-|-|-|-|√|  
 |{ UNLOAD &#124; NOUNLOAD }|√|√|√|√|√|√|  
   
  <sup>1</sup> FILE **=**_backup\_set\_file\_number_, which is distinct from {FILE | FILEGROUP}.  

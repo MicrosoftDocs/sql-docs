@@ -65,7 +65,7 @@ manager: craigg
   
 8.  DQS does not allow you to export the cleansing or matching results to an Excel file if you are using **64-bit version of Excel**. This issue is a known issue. To work around the issue, do the following:  
   
-    1.  Run **DQLInstaller.exe –upgrade**. If you installed the default instance of SQL Server, the DQSInstaller.exe file is available at C:\Program Files\Microsoft SQL Server\MSSQL12.MSSQLSERVER\MSSQL\Binn. Double-click the DQSInstaller.exe file.  
+    1.  Run **DQLInstaller.exe -upgrade**. If you installed the default instance of SQL Server, the DQSInstaller.exe file is available at C:\Program Files\Microsoft SQL Server\MSSQL12.MSSQLSERVER\MSSQL\Binn. Double-click the DQSInstaller.exe file.  
   
     2.  In **Master Data Services Configuration Manager**, click **Select Database**, select existing **MDS** database, and then click **Upgrade**.  
   

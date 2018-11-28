@@ -4,7 +4,7 @@ description: In this tutorial, learn how to call RevoScaleR function in SQL Serv
 ms.prod: sql
 ms.technology: machine-learning
 
-ms.date: 07/15/2018  
+ms.date: 11/27/2018  
 ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
@@ -13,7 +13,7 @@ manager: cgronlun
 # Tutorial: Use RevoScaleR R functions with SQL Server data
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-RevoScaleR is a Microsoft R package providing distributed and parallel processing for data science and machine learning workloads. For R development in SQL Server, RevoScaleR is one of the core built-in packages, with functions for setting a compute context, managing packages, and most importantly: working with data end-to-end, from import to visualization and analysis. Machine Learning algorithms in SQL Server have a dependency on RevoScaleR data sources. Given the importance of RevoScaleR, knowing when and how to call its functions is an essential skill. 
+RevoScaleR is a Microsoft R package providing distributed and parallel processing for data science and machine learning workloads. For R development in SQL Server, RevoScaleR is one of the core built-in packages, with functions for creating data source objects, setting a compute context, managing packages, and most importantly: working with data end-to-end, from import to visualization and analysis. Machine Learning algorithms in SQL Server have a dependency on RevoScaleR data sources. Given the importance of RevoScaleR, knowing when and how to call its functions is an essential skill. 
 
 In this tutorial, you will learn how to create a remote compute context, move data between local and remote compute contexts, and execute R code on a remote SQL Server. You also learn how to analyze and plot data both locally and on the remote server, and how to create and deploy models.
 
@@ -41,29 +41,34 @@ You should also be comfortable with [!INCLUDE[tsql](../../includes/tsql-md.md)] 
 
 ## Prerequisites
 
-- **SQL Server with support for R**
++ [SQL Server 2017 Machine Learning Services](../install/sql-machine-learning-services-windows-install.md) with the R feature, or [SQL Server 2016 R Services (in-Database)](../install/sql-r-services-windows-install.md)
   
-    Install [SQL Server 2017 Machine Learning Services](../install/sql-machine-learning-services-windows-install.md) with the R feature, or install [SQL Server 2016 R Services (in-Database)](../install/sql-r-services-windows-install.md).
++ [Database permissions](../security/user-permission.md) and a SQL Server database user login
 
-    Make sure external scripting is enabled, Launchpad service is running, and that you have permissions to access the service.
-  
--  **Database permissions**
-  
-    To run the queries used to train the model, you must have **db_datareader** privileges on the database where the data is stored. To run R, your user must have the permission, EXECUTE ANY EXTERNAL SCRIPT.
++ [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms)
 
--   **Data science development computer**
++ An IDE such as RStudio or the built-in RGUI tool included with R
+
+To switch back and forth between local and remote compute contexts, you need two systems. Local is typically a development workstation with sufficent power for data science workloads. Remote in this case is SQL Server 2017 or SQL Server 2016 with the R feature enabled. 
+
+Switching compute contexts is predicated on having the same-version RevoScaleR on both local and remote systems. On a local workstation, you can get the RevoScaleR packages and related providers by installing Microsoft R Client.
+
+If you need to put client and server on the same computer, be sure to install a second set of Microsoft R libraries for sending R script from a "remote" client. Do not use the R libraries that are installed in the program files of the SQL Server instance. Specifically, if you are using one computer, you need the RevoScaleR library in both of these locations to support client and server operations.
+
++ C:\Program Files\Microsoft\R Client\R_SERVER\library\RevoScaleR 
++ C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\R_SERVICES\library\RevoScaleR
+
+For instructions on client configuration, see [Set up a data science client for R development](../r/set-up-a-data-science-client.md).
+
+<a name="add-packages"></a>
+
+## Additional R packages
   
-    To switch back and forth between local and remote compute contexts, you need two systems. Local is typically a development workstation with sufficent power for data science workloads. Remote in this case is SQL Server 2017 or SQL Server 2016 with the R feature enabled. 
-    
-    Switching compute contexts is predicated on having the same-version RevoScaleR on both local and remote systems. On a local workstation, you can get the RevoScaleR packages and related providers by installing or using any one of the following: [Data Science VM on Azure](https://docs.microsoft.com/azure/machine-learning/data-science-virtual-machine/overview), [Microsoft R Client (free)](https://docs.microsoft.com/machine-learning-server/r-client/what-is-microsoft-r-client), or [Microsoft Machine Learning Server (Standalone)](https://docs.microsoft.com/machine-learning-server/install/machine-learning-server-install). For the standalone server option, install the free developer edition, using either Linux or Windows installers. You can also use SQL Server Setup to install a standalone server.
-      
--   **Additional R Packages**
+In this tutorial, you install the following packages: **dplyr**, **ggplot2**, **ggthemes**, **reshape2**, and **e1071**. Instructions are provided as part of the tutorial.
   
-    In this tutorial, you install the following packages: **dplyr**, **ggplot2**, **ggthemes**, **reshape2**, and **e1071**. Instructions are provided as part of the tutorial.
-  
-    All packages must be installed in two places: on the workstation used for R solution development, and on the SQL Server computer where R scripts are executed. If you do not have permission to install packages on the server computer, ask an administrator. 
-    
-    **Do not install the packages to a user library.** The packages must be installed in the R package library that is used by the SQL Server instance.
+All packages must be installed in two places: on the workstation used for R solution development, and on the SQL Server computer where R scripts are executed. If you do not have permission to install packages on the server computer, ask an administrator. 
+
+**Do not install the packages to a user library.** The packages must be installed in the R package library that is used by the SQL Server instance.
 
 ## R development tools
 

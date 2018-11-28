@@ -37,7 +37,7 @@ manager: kfile
   
  A project is initially created with a single configuration, called Development. You can create additional configurations and switch between configurations using the Configuration Manager.  
   
- Until additional configurations are created, all developers use this common configuration. However, during the various phases of project development — such as during the initial development and testing of a project — different developers will may use different data sources and deploy the project to different servers for different purposes. Configurations enable you to retain these different settings in different configuration files.  
+ Until additional configurations are created, all developers use this common configuration. However, during the various phases of project development - such as during the initial development and testing of a project - different developers will may use different data sources and deploy the project to different servers for different purposes. Configurations enable you to retain these different settings in different configuration files.  
   
 ## See Also  
  [Build Analysis Services Projects &#40;SSDT&#41;](../../analysis-services/multidimensional-models/build-analysis-services-projects-ssdt.md)   

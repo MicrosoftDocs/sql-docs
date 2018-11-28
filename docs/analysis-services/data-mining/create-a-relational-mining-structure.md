@@ -77,7 +77,7 @@ manager: kfile
 ##  <a name="BKMK_ChooseRelData"></a> How to Choose Relational Data  
  Relational mining structures can be based on any data that is available through an OLE DB data source. If the source data is contained within multiple tables, you use a data source view to assemble the tables and columns that you need in one place.  
   
- If the tables include any one-to-many relationships—for example, you have multiple purchase records for each customer that you want to analyze—you can add both tables, and then use one table as the case table, linking data on the many side of the relationship as a nested table.  
+ If the tables include any one-to-many relationships-for example, you have multiple purchase records for each customer that you want to analyze-you can add both tables, and then use one table as the case table, linking data on the many side of the relationship as a nested table.  
   
  The data in a mining structure is derived from whatever is in the existing data source view. You can modify data as you need within the data source view, adding relationships or derived columns that might not be present in the underlying relational data. You can also create named calculations or aggregations within the data source view. These features are very handy if you do not have control over the arrangement of data in the data source, or if you want to experiment with different aggregations of data for your data mining models.  
   
@@ -86,7 +86,7 @@ manager: kfile
 ##  <a name="bkmk_ContentDataType"></a> How to Specify Content Type and Data Type  
  The data type is pretty much the same as the data types you specify in SQL Server or other application interfaces: dates and times, numbers of different sizes, Boolean values, text and other discrete data.  
   
- However, content types are important for data mining and affect the outcome of analysis. The content type tells the algorithm what it should do with the data: should numbers be treated on a continuous scale, or binned? How many potential values are there? Is each value distinct? If the value is a key, what kind of key is it – does it indicate a date/time value, a sequence, or some other kind of key?  
+ However, content types are important for data mining and affect the outcome of analysis. The content type tells the algorithm what it should do with the data: should numbers be treated on a continuous scale, or binned? How many potential values are there? Is each value distinct? If the value is a key, what kind of key is it - does it indicate a date/time value, a sequence, or some other kind of key?  
   
  Note that the choice of data type can limit your choice of content types. For example, you cannot discretize values that are not numeric. If you cannot see the content type that you want, you can click **Back** to return to the data type page and try a different data type.  
   

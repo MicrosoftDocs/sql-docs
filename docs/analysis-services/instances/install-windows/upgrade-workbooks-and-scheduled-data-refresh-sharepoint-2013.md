@@ -120,7 +120,7 @@ PS C:\Windows\system32> Get-PowerPivotSystemService
  To enable automatic workbook upgrade, run the following command:  
   
 ```  
-PS C:\Windows\system32> Set-PowerPivotSystemService –WorkbookUpgradeOnDataRefresh:$true –Confirm:$false  
+PS C:\Windows\system32> Set-PowerPivotSystemService -WorkbookUpgradeOnDataRefresh:$true -Confirm:$false  
 ```  
   
  After you upgrade the workbook, you can use scheduled data refresh and new features in the [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] for Excel add-in.  

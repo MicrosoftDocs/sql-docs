@@ -111,7 +111,7 @@ manager: craigg
   
 -   Specifying backupset options - `RETAINDAYS` and `EXPIREDATE` are not supported.  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] has a maximum limit of 259 characters for a backup device name. The BACKUP TO URL consumes 36 characters for the required elements used to specify the URL – 'https://.blob.core.windows.net//.bak', leaving 223 characters for account, container, and blob names put together.  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] has a maximum limit of 259 characters for a backup device name. The BACKUP TO URL consumes 36 characters for the required elements used to specify the URL - 'https://.blob.core.windows.net//.bak', leaving 223 characters for account, container, and blob names put together.  
   
 ###  <a name="Support"></a> Support for Backup/Restore Statements  
   

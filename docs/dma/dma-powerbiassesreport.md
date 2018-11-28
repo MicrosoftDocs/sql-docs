@@ -57,7 +57,7 @@ You can modify these reports to work with your environment by changing the data 
 
    ![Edit Queries menu, Data source settings](../dma/media/DataSourceSettings.png)
 
-1. Select **Change Source…**, and enter the server and database values.
+1. Select **Change Source...**, and enter the server and database values.
 
    ![Change source, server and database](../dma/media/ChangeSource.png)
 

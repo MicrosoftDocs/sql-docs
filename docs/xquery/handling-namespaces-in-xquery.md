@@ -41,7 +41,7 @@ WHERE ProductModelID=7
   
 ```  
 <AWMI:step xmlns:AWMI="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions">Insert <AWMI:material>aluminum sheet MS-2341</AWMI:material> into the <AWMI:tool>T-85A framing tool</AWMI:tool>. </AWMI:step>  
-…  
+...  
 ```  
   
  Note that the **namespace** keyword is used to define a new namespace prefix, "AWMI:". This prefix then must be used in the query for all elements that fall within the scope of that namespace.  
@@ -62,7 +62,7 @@ where ProductModelID=7
   
 ```  
 <step xmlns="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions">Insert <material>aluminum sheet MS-2341</material> into the <tool>T-85A framing tool</tool>. </step>  
-…  
+...  
 ```  
   
  Note in this example that the namespace defined, `"https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions"`, is made to override the default, or empty, namespace. Because of this, you no longer have a namespace prefix in the path expression that is used to query. You also no longer have a namespace prefix in the element names that appear in the results. Additionally, the default namespace is applied to all elements, but not to their attributes.  

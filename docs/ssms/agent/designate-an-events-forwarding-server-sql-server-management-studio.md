@@ -50,7 +50,7 @@ Requires membership in the **sysadmin** fixed server role.
   
 2.  Right-click **SQL Server Agent** and select **Properties**.  
   
-3.  In the **SQL Server Agent Properties –***server_name* dialog box, under **Select a page**, select **Advanced**.  
+3.  In the **SQL Server Agent Properties -**_server_name_ dialog box, under **Select a page**, select **Advanced**.  
   
 4.  Under **SQL Server event forwarding**, select the **Forward events to a different server** check box.  
   

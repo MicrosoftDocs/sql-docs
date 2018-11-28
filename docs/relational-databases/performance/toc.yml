@@ -27,7 +27,7 @@
       href: display-an-actual-execution-plan.md
     - name: Save an Execution Plan in XML Format
       href: save-an-execution-plan-in-xml-format.md
-    name: Compare and Analyze Execution Plans
+  - name: Compare and Analyze Execution Plans
     href: compare-and-analyze-execution-plans.md
     items:
     - name: Compare Execution Plans
@@ -62,6 +62,17 @@
   items:
   - name: Monitor SQL Server Components
     href: monitor-sql-server-components.md
+    items:
+    - name: Activity Monitor
+      href: ../performance-monitor/activity-monitor.md
+    - name: Dynamic management views and functions
+      href: ../system-dynamic-management-views/system-dynamic-management-views.md
+    - name: Extended events
+      href: ../extended-events/extended-events.md
+    - name: SQL Server Profiler
+      href: ../../tools/sql-server-profiler/sql-server-profiler.md
+    - name: SQL Trace
+      href: ../sql-trace/sql-trace.md
   - name: Performance Monitoring and Tuning Tools
     href: performance-monitoring-and-tuning-tools.md
     items:
@@ -125,9 +136,39 @@
       href: save-showplan-xml-events-separately-sql-server-profiler.md
     - name: Save Showplan XML Statistics Profile Events Separately (SQL Server Profiler)
       href: save-showplan-xml-statistics-profile-events-separately-sql-server-profiler.md
-- name: Monitor Resource Usage (System Monitor)
-  href: ../performance-monitor/monitor-resource-usage-system-monitor.md
-- name: Joins
-  href: joins.md
-- name: Subqueries
-  href: subqueries.md
+    - name: Use the system_health Session
+      href: ../extended-events/use-the-system-health-session.md
+  - name: Monitor Resource Usage (System Monitor)
+    href: ../performance-monitor/monitor-resource-usage-system-monitor.md
+- name: Internals and Architecture
+  href: ../sql-server-guides.md
+  items:
+  - name: Cursors
+    href: ../cursors.md
+  - name: Ghost record cleanup process
+    href: ../ghost-record-cleanup-process-guide.md
+  - name: Index Architecture and Design
+    href: ../sql-server-index-design-guide.md
+  - name: Joins
+    href: joins.md
+  - name: Memory Management Architecture
+    href: ../memory-management-architecture-guide.md
+    items:
+      - name: Reading pages
+        href: ../reading-pages.md
+      - name: Writing pages
+        href: ../writing-pages.md
+  - name: Pages and Extents Architecture
+    href: ../pages-and-extents-architecture-guide.md
+  - name: Query Processing Architecture
+    href: ../query-processing-architecture-guide.md
+  - name: Showplan Logical and Physical Operators Reference
+    href: ../showplan-logical-and-physical-operators-reference.md
+  - name: Subqueries
+    href: subqueries.md
+  - name: Thread and Task Architecture
+    href: ../thread-and-task-architecture-guide.md
+  - name: Transaction Log Architecture and Management
+    href: ../sql-server-transaction-log-architecture-and-management-guide.md
+  - name: Transaction Locking and Row Versioning
+    href: ../sql-server-transaction-locking-and-row-versioning-guide.md

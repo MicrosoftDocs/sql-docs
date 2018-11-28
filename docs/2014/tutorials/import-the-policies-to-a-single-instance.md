@@ -26,7 +26,7 @@ manager: craigg
   
 3.  Right-click **Policies**, and then click **Import Policy**.  
   
-4.  In the **Import** dialog box, next to the **Files to import** box, click the ellipsis (**…**) button.  
+4.  In the **Import** dialog box, next to the **Files to import** box, click the ellipsis (**...**) button.  
   
 5.  In the **Look in** list, browse to the following folder, which contains the best practices policies:  
   

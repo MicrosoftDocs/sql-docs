@@ -30,7 +30,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
  View or specify the extended properties for the object. Each extended property consists of a name/value pair of metadata associated with the object.  
   
  **Browse button**  
- Click the browse (…) button after **Value** to open the **Value for Extended Property Dialog Box** dialog box. Type or view the value of the extended property in this larger location.  
+ Click the browse (...) button after **Value** to open the **Value for Extended Property Dialog Box** dialog box. Type or view the value of the extended property in this larger location.  
   
  **Delete**  
  Removes the selected extended property.  

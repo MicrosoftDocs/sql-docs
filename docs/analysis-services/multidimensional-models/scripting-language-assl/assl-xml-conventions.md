@@ -29,7 +29,7 @@ manager: kfile
   
  `<Database>`  
   
- `…`  
+ `...`  
   
  `<Dimensions>`  
   
@@ -101,10 +101,10 @@ manager: kfile
  Analysis Services uses the following standard XML Schema definition language (XSD) data types:  
   
  **Int**  
- An integer value in the range of -231 to 231 – 1.  
+ An integer value in the range of -231 to 231 - 1.  
   
  **Long**  
- An integer value in range of -263 to 263 – 1.  
+ An integer value in range of -263 to 263 - 1.  
   
  **String**  
  A string value that conforms to the following global rules:  

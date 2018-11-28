@@ -67,7 +67,7 @@ public void CreateSSLCertificateBinding(string application,
   
 2.  The IPAddress specified does not correspond to an IPAddress of this computer.  
   
-3.  The IPAddress specified is a DHCP IPAddress (changes periodically) – use the Wildcard IP address instead (0.0.0.0).  
+3.  The IPAddress specified is a DHCP IPAddress (changes periodically) - use the Wildcard IP address instead (0.0.0.0).  
   
 4.  IPAddress specified does not match the IP address of a URL reservations AND neither a wildcard or host name URL reservation exist.  
   

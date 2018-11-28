@@ -25,7 +25,7 @@ manager: craigg
   
 -   Generate transaction performance analysis reports to identify performance-critical tables and stored procedures.  
   
- For information about migration methodologies, see [In-Memory OLTP – Common Workload Patterns and Migration Considerations](http://msdn.microsoft.com/library/dn673538.aspx).  
+ For information about migration methodologies, see [In-Memory OLTP - Common Workload Patterns and Migration Considerations](http://msdn.microsoft.com/library/dn673538.aspx).  
   
  The transaction performance collector and the transaction performance analysis reports help you accomplish the following tasks:  
   
@@ -38,7 +38,7 @@ manager: craigg
     > [!IMPORTANT]  
     >  The performance of a database system is dependent on a variety of factors, not all of which the transaction performance collector can observe and measure. Therefore, the transaction performance analysis report does not guarantee actual performance gains will match its predictions, if any predictions are made.  
   
- The transaction performance collector and the ability to generate a transaction performance analysis report are installed when you select **Management Tools—Basic** or **Management Tools—Advanced** when you install [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)].  
+ The transaction performance collector and the ability to generate a transaction performance analysis report are installed when you select **Management Tools-Basic** or **Management Tools-Advanced** when you install [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)].  
   
 ## Best Practices  
  The recommended workflow is illustrated in the following flowchart. The yellow nodes represent optional procedures:  

@@ -72,7 +72,7 @@ As the number of users increases, so does the competition for a server's resourc
 |[Identify Bottlenecks](../../relational-databases/performance/identify-bottlenecks.md)|Monitor and track server performance to identify bottlenecks.|  
 |[Use DMVs to Determine Usage Statistics and Performance of Views](../../relational-databases/performance/use-dmvs-determine-usage-performance-views.md)|Covers methodology and scripts used to get information about the performance of queries.|  
 |[Server Performance and Activity Monitoring](../../relational-databases/performance/server-performance-and-activity-monitoring.md)|Use [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and Windows performance and activity monitoring tools.|  
-|[Monitor Resource Usage](../../relational-databases/performance/monitor-resource-usage-system-monitor.md)|Using System Monitor to measure the performance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] using performance counters.|  
+|[Monitor Resource Usage](../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md)|Using System Monitor (also known as perfmon) to measure the performance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] using performance counters.|  
 
   
 ## See also  

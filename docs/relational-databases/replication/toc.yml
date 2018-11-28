@@ -1,15 +1,6 @@
 - name: Replication Overview
   href: sql-server-replication.md
   items: 
-    - name: Types of replication
-      href: types-of-replication.md
-      items:
-        - name: Transactional replication
-          href: transactional/transactional-replication.md
-        - name: Merge replication
-          href: merge/merge-replication.md
-        - name: Snapshot replication
-          href: snapshot-replication.md
     - name: What's New (Replication)
       href: what-s-new-replication.md
     - name: Replication Backward Compatibility
@@ -259,6 +250,14 @@
         href: publish/publish-execution-of-stored-procedure-in-transactional-publication.md
       - name: View data conflicts 
         href: view-data-conflicts-for-transactional-publications-sql-server-management-studio.md
+      - name: Find errors with transactional replication
+        href: troubleshoot-tran-repl-errors.md
+      - name: Specify how changes are propagated
+        href: transactional/transactional-articles-specify-how-changes-are-propagated.md
+      - name: Regenerate schema changes
+        href: transactional/transactional-articles-regenerate-to-reflect-schema-changes.md
+      - name: Publish stored procedure execution
+        href: transactional/publishing-stored-procedure-execution-in-transactional-replication.md
   - name: Merge replication
     items: 
     - name: Specify properties
@@ -353,10 +352,20 @@
           - name: Parameterized row filters
             href: merge/parameterized-filters-parameterized-row-filters.md
       - name: Transactional Replication
-        href: ./transactional/transactional-replication.md
+        href: transactional/transactional-replication.md
         items:
-          - name: Find errors with transactional replication
-            href: troubleshoot-tran-repl-errors.md
+          - name: Article options
+            href: transactional/article-options-for-transactional-replication.md
+          - name: Updatable subscriptions 
+            href: transactional/updatable-subscriptions-for-transactional-replication.md
+          - name: Conflict resolution for updatable subscriptions 
+            href: transactional/updatable-subscriptions-queued-updating-conflict-resolution.md
+          - name: Peer-to-peer replication 
+            href: transactional/peer-to-peer-transactional-replication.md
+          - name: Conflict detection for peer-to-peer replicatoin
+            href: transactional/peer-to-peer-conflict-detection-in-peer-to-peer-replication.md
+          - name: Bidirectional replication
+            href: transactional/bidirectional-transactional-replication.md
       - name: Replication to Memory-Optimized Table Subscribers
         href: replication-to-memory-optimized-table-subscribers.md
       - name: Replication to SQL Database + 

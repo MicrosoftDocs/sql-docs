@@ -27,18 +27,17 @@ manager: craigg
   
  The following section contains topics that describe how to use [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and Windows performance and activity monitoring tools. It contains the following topics:  
   
-## In This Section  
-**To perform monitoring tasks with Windows tools**  
+## To perform monitoring tasks with Windows tools 
   
 -   [Start System Monitor &#40;Windows&#41;](../../relational-databases/performance/start-system-monitor-windows.md)  
   
 -   [View the Windows Application Log &#40;Windows&#41;](../../relational-databases/performance/view-the-windows-application-log-windows-10.md)  
   
-**To create SQL Server database alerts with Windows tools**  
+## To create SQL Server database alerts with Windows tools  
   
 -   [Set Up a SQL Server Database Alert &#40;Windows&#41;](../../relational-databases/performance/set-up-a-sql-server-database-alert-windows.md)  
 
-**To perform monitoring tasks with Extended Events**  
+## To perform monitoring tasks with Extended Events  
  
  -   [Extended Events](../../relational-databases/extended-events/extended-events.md)
  
@@ -52,13 +51,15 @@ manager: craigg
  
  -   [View the Extended Events Equivalents to SQL Trace Event Classes](../../relational-databases/extended-events/view-the-extended-events-equivalents-to-sql-trace-event-classes.md)
    
-**To perform monitoring tasks with SQL Server Management Studio**  
+## To perform monitoring tasks with SQL Server Management Studio  
   
 -   [View the SQL Server Error Log &#40;SQL Server Management Studio&#41;](../../relational-databases/performance/view-the-sql-server-error-log-sql-server-management-studio.md)  
   
 -   [Open Activity Monitor &#40;SQL Server Management Studio&#41;](../../relational-databases/performance-monitor/open-activity-monitor-sql-server-management-studio.md)  
 
 -   [Monitoring performance by using the Query Store](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)
+
+## To perform monitoring tasks with SQL Trace and SQL Server Profiler
 
 > [!IMPORTANT]
 > The next sections describe methods of using SQL Trace and [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)].  
@@ -69,7 +70,7 @@ manager: craigg
 > [!NOTE] 
 > [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] for Analysis Services workloads is NOT deprecated, and will continue to be supported.
 
-**To perform monitoring tasks with SQL Trace by using Transact-SQL stored procedures**  
+### To perform monitoring tasks with SQL Trace by using Transact-SQL stored procedures  
   
 -   [Create a Trace &#40;Transact-SQL&#41;](../../relational-databases/sql-trace/create-a-trace-transact-sql.md)  
   
@@ -83,7 +84,7 @@ manager: craigg
   
 -   [Delete a Trace &#40;Transact-SQL&#41;](../../relational-databases/sql-trace/delete-a-trace-transact-sql.md)  
   
-**To create and modify traces by using SQL Server Profiler**  
+### To create and modify traces by using SQL Server Profiler  
   
 -   [Create a Trace &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/create-a-trace-sql-server-profiler.md)  
   
@@ -115,7 +116,7 @@ manager: craigg
   
 -   [Organize Columns Displayed in a Trace &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/organize-columns-displayed-in-a-trace-sql-server-profiler.md)  
   
-**To start, pause, and stop traces by using SQL Server Profiler**  
+### To start, pause, and stop traces by using SQL Server Profiler  
   
 -   [Start a Trace Automatically after Connecting to a Server &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/start-a-trace-automatically-after-connecting-to-a-server-sql-server-profiler.md)  
   
@@ -125,7 +126,7 @@ manager: craigg
   
 -   [Run a Trace After It Has Been Paused or Stopped &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/run-a-trace-after-it-has-been-paused-or-stopped-sql-server-profiler.md)  
   
-**To open traces and configure how traces are displayed by using SQL Server Profiler**  
+### To open traces and configure how traces are displayed by using SQL Server Profiler  
   
 -   [Open a Trace File &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/open-a-trace-file-sql-server-profiler.md)  
   
@@ -139,7 +140,7 @@ manager: craigg
   
 -   [Set Trace Display Defaults &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/set-trace-display-defaults-sql-server-profiler.md)  
   
-**To replay traces by using SQL Server Profiler**  
+### To replay traces by using SQL Server Profiler  
   
 -   [Replay a Trace File &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/replay-a-trace-file-sql-server-profiler.md)  
   
@@ -153,7 +154,7 @@ manager: craigg
   
 -   [Replay a Transact-SQL Script &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/replay-a-transact-sql-script-sql-server-profiler.md)  
   
-**To create, modify, and use trace templates by using SQL Server Profiler**  
+### To create, modify, and use trace templates by using SQL Server Profiler  
   
 -   [Create a Trace Template &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/create-a-trace-template-sql-server-profiler.md)  
   
@@ -167,7 +168,7 @@ manager: craigg
   
 -   [Import a Trace Template &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/import-a-trace-template-sql-server-profiler.md)  
   
-**To use SQL Server Profiler traces to collect and monitor server performance**  
+### To use SQL Server Profiler traces to collect and monitor server performance  
   
 -   [Find a Value or Data Column While Tracing &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/find-a-value-or-data-column-while-tracing-sql-server-profiler.md)  
   

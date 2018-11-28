@@ -17,7 +17,7 @@ manager: craigg
 ## Behavior Changes in [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]  
  Information to come later.  
 
-## <name="previous-versions"></a> Archived Documentation for Very Old Versions of SQL Server
+## <a name="previous-versions"></a> Archived Documentation for Very Old Versions of SQL Server
 
 [!INCLUDE[Archived documentation for very old versions of SQL Server](../includes/paragraph-content/previous-versions-archive-documentation-sql-server.md)]
 

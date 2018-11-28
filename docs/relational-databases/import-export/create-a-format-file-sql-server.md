@@ -146,7 +146,7 @@ The following example format file for a table with 5 columns includes the collat
   
 ```  
   
- If you try to import data into [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] using `bcp in –c –C65001 –f format_file` …" or "`BULK INSERT`/`OPENROWSET` … `FORMATFILE='format_file' CODEPAGE=65001` …", information about the collation/code page will have priority over 65001 option.  
+ If you try to import data into [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] using `bcp in -c -C65001 -f format_file` ..." or "`BULK INSERT`/`OPENROWSET` ... `FORMATFILE='format_file' CODEPAGE=65001` ...", information about the collation/code page will have priority over 65001 option.  
 Therefore, if you generate a  format file, you must manually delete the collation info from the generated format file before you start importing data back into [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
 The following is an example of the format file without the collation info.  
   
@@ -197,7 +197,7 @@ The following is an example of the format file without the collation info.
  At the Windows command prompt, enter the following `bcp` command:  
   
 ```cmd
-bcp AdventureWorks2012.HumanResources.Department format nul -c -x -f Department-c..xml –t, -T  
+bcp AdventureWorks2012.HumanResources.Department format nul -c -x -f Department-c..xml -t, -T  
 ```  
   
  The generated format file, `Department-c.xml`, contains the following XML elements:  

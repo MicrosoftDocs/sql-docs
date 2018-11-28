@@ -164,7 +164,7 @@ manager: craigg
 |SQL Configuration Manager|Yes|Yes|Yes|Yes|Yes|Yes|Yes|  
 |SQL CMD (Command Prompt tool)|Yes|Yes|Yes|Yes|Yes|Yes|Yes|  
 |[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Management Studio|Yes|Yes|Yes|Yes|Yes|Yes||  
-|Distributed Replay – Admin Tool|Yes|Yes|Yes|Yes|Yes|Yes||  
+|Distributed Replay - Admin Tool|Yes|Yes|Yes|Yes|Yes|Yes||  
 |Distributed Replay - Client|Yes|No|Yes|Yes||||  
 |Distributed Replay - Controller|Yes (Enterprise supports up to 16 clients,  Developer supports only 1 client)|No|Yes (1 client support only)|Yes (1 client support only)||||  
 |SQL Profiler|Yes|Yes|Yes|No<sup>2</sup>|No<sup>2</sup>|No<sup>2</sup>|No<sup>2</sup>|  
@@ -187,7 +187,7 @@ manager: craigg
 |Dedicated admin connection|Yes|Yes|Yes|Yes|Yes (under trace flag)|Yes (under trace flag)|Yes (under trace flag)|  
 |PowerShell scripting support|Yes|Yes|Yes|Yes|Yes|Yes|Yes|  
 |SysPrep support<sup>1</sup>|Yes|Yes|Yes|Yes|Yes|Yes|Yes|  
-|Support for Data-tier application component operations – extract, deploy, upgrade, delete|Yes|Yes|Yes|Yes|Yes|Yes|Yes|  
+|Support for Data-tier application component operations - extract, deploy, upgrade, delete|Yes|Yes|Yes|Yes|Yes|Yes|Yes|  
 |Policy automation (check on schedule and change)|Yes|Yes|Yes|Yes||||  
 |Performance data collector|Yes|Yes|Yes|Yes||||  
 |Able to enroll  as a managed instance in a multi-instance management|Yes|Yes|Yes|Yes||||  

@@ -24,7 +24,7 @@ manager: kfile
   
 3.  Select the model, and right-click to open the shortcut menu.  
   
-     –or–  
+     -or-  
   
      Select the model. On the **Mining Model** menu, select **Set Model Filter**.  
   

@@ -23,13 +23,13 @@ manager: craigg
 # Compatibility Matrix
 The following table describes the compatibility of the types of applications and drivers defined previously in this section.  
   
-|Application type<br /><br /> and version|32-bit ODBC<br /><br /> 2.*x* driver|ODBC 3.*x*<br /><br /> driver|ODBC 3.8 driver|ISO and Open Group–compliant driver|  
+|Application type<br /><br /> and version|32-bit ODBC<br /><br /> 2.*x* driver|ODBC 3.*x*<br /><br /> driver|ODBC 3.8 driver|ISO and Open Group-compliant driver|  
 |--------------------------------------|-----------------------------------|---------------------------|---------------------|-----------------------------------------|  
 |16-bit application, any version|Compatible|Compatible|Compatible|Compatible|  
 |Pure 2.*x* application|Compatible|Compatible|Compatible|Not compatible[3]|  
 |Pure 2.*x* recompiled application|Compatible|Compatible[1]|Compatible[1]|Not compatible[3]|  
 |Pure 2.*x* Unicode application|Compatible|Compatible[1]|Compatible[1]|Not Compatible[3]|  
-|Pure Open Group and ISO–compliant application|Not compatible|Compatible[2]|Compatible[2]|Compatible[2]|  
+|Pure Open Group and ISO-compliant application|Not compatible|Compatible[2]|Compatible[2]|Compatible[2]|  
 |Pure 3.0 application|Not compatible|Compatible|Compatible|Not compatible[4]|  
 |Pure 3.5 application|Not compatible|Compatible|Compatible|Not compatible[4]|  
 |Pure 3.8 (or higher) application|Not compatible [5]|Not compatible [5]|Compatible|Not compatible [4]|  

@@ -36,7 +36,7 @@ manager: craigg
   
 5.  In the pane, double-click **Lock pages in memory**.  
   
-6.  In the **Local Security Setting – Lock pages in memory** dialog box, click **Add User or Group**.  
+6.  In the **Local Security Setting - Lock pages in memory** dialog box, click **Add User or Group**.  
   
 7.  In the **Select Users, Service Accounts, or Groups** dialog box, add an account with privileges to run sqlservr.exe.  
   

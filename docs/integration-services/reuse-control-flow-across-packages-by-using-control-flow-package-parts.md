@@ -74,7 +74,7 @@ manager: craigg
  **Options**  
   
  **Package Part path**  
- Type the path to the part file, or click the browse button (…) and locate the part file to copy or to reference.  
+ Type the path to the part file, or click the browse button (...) and locate the part file to copy or to reference.  
   
  **Add as a reference**  
  -   If selected, the part is added to the Integration Services project as a reference. Select this option when you  when want to reference a single copy of a  part file in multiple Integration Services projects.  

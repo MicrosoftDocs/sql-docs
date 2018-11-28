@@ -81,7 +81,7 @@ manager: craigg
  **Default** or **Inherit**  
  The dialog box uses **Default** for the impersonation options set at the database level and **Inherit** for impersonation options set at the data source level.  
   
- **Data Sources – Inherit Option**  
+ **Data Sources - Inherit Option**  
   
  At the data source level, **Inherit** specifies that [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] should use the impersonation option of the parent object. In a multidimensional model, the parent object is the [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] database. Choosing the **Inherit** option lets you centrally manage the impersonation settings for this and other data sources that are part of the same database. For this option to be meaningful, choose a specific Windows user name and password at the database level. Otherwise, the combination of **Inherit** on the data source and **Default** on the database are equivalent to using service account option.  
   
@@ -95,7 +95,7 @@ manager: craigg
   
  For more information about default settings at the database level, see [Set Multidimensional Database Properties &#40;Analysis Services&#41;](set-multidimensional-database-properties-analysis-services.md).  
   
- **Databases – Default option**  
+ **Databases - Default option**  
   
  For tabular databases, **Default** means use the service account.  
   

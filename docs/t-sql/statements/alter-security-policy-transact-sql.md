@@ -34,10 +34,10 @@ manager: craigg
 ALTER SECURITY POLICY schema_name.security_policy_name   
     (  
         { ADD { FILTER | BLOCK } PREDICATE tvf_schema_name.security_predicate_function_name   
-           ( { column_name | arguments } [ , …n ] ) ON table_schema_name.table_name   
+           ( { column_name | arguments } [ , ...n ] ) ON table_schema_name.table_name   
            [ <block_dml_operation> ]  }   
         | { ALTER { FILTER | BLOCK } PREDICATE tvf_schema_name.new_security_predicate_function_name   
-             ( { column_name | arguments } [ , …n ] ) ON table_schema_name.table_name   
+             ( { column_name | arguments } [ , ...n ] ) ON table_schema_name.table_name   
            [ <block_dml_operation> ] }  
         | { DROP { FILTER | BLOCK } PREDICATE ON table_schema_name.table_name }   
         | [ <additional_add_alter_drop_predicate_statements> [ , ...n ] ]  

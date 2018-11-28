@@ -79,7 +79,7 @@ The OGC Simple Features for SQL Specification discusses outer rings and inner ri
 
 For more information on OGC specifications, see the following:  
 -   [OGC Specifications, Simple Feature Access Part 1 - Common Architecture](https://go.microsoft.com/fwlink/?LinkId=93627)  
--   [OGC Specifications, Simple Feature Access Part 2 – SQL Options](https://go.microsoft.com/fwlink/?LinkId=93628)  
+-   [OGC Specifications, Simple Feature Access Part 2 - SQL Options](https://go.microsoft.com/fwlink/?LinkId=93628)  
 
 ##  <a name="circular"></a> Circular Arc Segments  
 Three instantiable types can take circular arc segments: **CircularString**, **CompoundCurve**, and **CurvePolygon**.  A circular arc segment is defined by three points in a two dimensional plane and the third point cannot be the same as the first point.  
@@ -118,7 +118,7 @@ SELECT @g1.STLength() AS [LS Length], @g2.STLength() AS [CS Length];
 This snippet producse the following results:  
 ```
 LS LengthCS Length
-5.65685…6.28318…
+5.65685...6.28318...
 ```
 
 **CircularString** instances use fewer points to store curve boundaries with greater precision than **LineString** instances. **CircularString** instances are useful for storing circular boundaries like a twenty-mile search radius from a specific point. **LineString** instances are good for storing boundaries that are linear like a square city block.  

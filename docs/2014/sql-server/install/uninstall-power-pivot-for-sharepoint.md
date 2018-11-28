@@ -112,7 +112,7 @@ Get-Service | where {$_.displayname -like "*sharepoint* administration*"}
 2.  Start the SharePoint Management Shell as an administrator and then run the following command to view jobs in the queue:  
   
     ```  
-    Stsadm –o enumdeployments  
+    Stsadm -o enumdeployments  
     ```  
   
 3.  Review existing deployments for the following information: **Type** is Retraction or Deployment, **File** is powerpivotwebapp.wsp or powerpivotfarm.wsp.  
@@ -120,7 +120,7 @@ Get-Service | where {$_.displayname -like "*sharepoint* administration*"}
 4.  For deployments or retractions related to PowerPivot solutions, copy the GUID value for **JobId** and then paste it into the following command (use the Mark, Copy, and Paste commands on the Shell's Edit menu to copy the GUID):  
   
     ```  
-    Stsadm –o canceldeployment –id "<GUID>"  
+    Stsadm -o canceldeployment -id "<GUID>"  
     ```  
   
 5.  Retry the task in the configuration tool by clicking **Validate** followed by **Run**.  

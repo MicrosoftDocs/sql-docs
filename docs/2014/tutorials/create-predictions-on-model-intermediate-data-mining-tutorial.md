@@ -142,7 +142,7 @@ NATURAL PREDICTION JOIN
   
 2.  In the **Singleton Query Input** dialog box, click the **Value** box for `Region`, and select the empty row to clear the input for this field.  
   
-3.  In the **Singleton Query Input** dialog box, click the **Value** box for `vAssocSeqLineItems`, and then click the (…) button.  
+3.  In the **Singleton Query Input** dialog box, click the **Value** box for `vAssocSeqLineItems`, and then click the (...) button.  
   
 4.  In the **Nested Table Input** dialog box, click **Add**.  
   

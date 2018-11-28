@@ -31,9 +31,9 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 ### Using the File/New Menu  
  On the **File** menu, click **New**, and then select one of the query editor options:  
   
--   **Query with Current Connection** –Opens a new editor window of the type associated with the current connection in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]. The editor window uses the same authentication information as the current connection. For example, if you select an instance of the [!INCLUDE[ssDE](../../includes/ssde-md.md)] in Object Explorer, and then use **Query with Current Connection**, [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] opens a [!INCLUDE[ssDE](../../includes/ssde-md.md)] Query Editor connected to the same instance using the same authentication information.  
+-   **Query with Current Connection** -Opens a new editor window of the type associated with the current connection in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]. The editor window uses the same authentication information as the current connection. For example, if you select an instance of the [!INCLUDE[ssDE](../../includes/ssde-md.md)] in Object Explorer, and then use **Query with Current Connection**, [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] opens a [!INCLUDE[ssDE](../../includes/ssde-md.md)] Query Editor connected to the same instance using the same authentication information.  
   
--   **Database Engine Query** – Opens a new [!INCLUDE[ssDE](../../includes/ssde-md.md)] Query Editor and a dialog to get the information required to connect to an instance of the [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+-   **Database Engine Query** - Opens a new [!INCLUDE[ssDE](../../includes/ssde-md.md)] Query Editor and a dialog to get the information required to connect to an instance of the [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 -   **Analysis Services MDX Query** - Opens a new [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] MDX Query Editor and a dialog to get the information required to connect to an instance of [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  
   
@@ -49,9 +49,9 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 ### Using the Toolbar  
  On the **Standard** toolbar, click one of the following buttons:  
   
--   **New Query** - –Opens a new editor window of the type associated with the current connection in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]. The editor window uses the same authentication information as the current connection. For example, if you select an instance of the [!INCLUDE[ssDE](../../includes/ssde-md.md)] in Object Explorer, and then click the **New Query** button, [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] opens a [!INCLUDE[ssDE](../../includes/ssde-md.md)] Query Editor connected to the same instance using the same authentication information.  
+-   **New Query** - -Opens a new editor window of the type associated with the current connection in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]. The editor window uses the same authentication information as the current connection. For example, if you select an instance of the [!INCLUDE[ssDE](../../includes/ssde-md.md)] in Object Explorer, and then click the **New Query** button, [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] opens a [!INCLUDE[ssDE](../../includes/ssde-md.md)] Query Editor connected to the same instance using the same authentication information.  
   
--   **Database Engine Query** – Opens a new [!INCLUDE[ssDE](../../includes/ssde-md.md)] Query Editor and a dialog to get the information required to connect to an instance of the [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+-   **Database Engine Query** - Opens a new [!INCLUDE[ssDE](../../includes/ssde-md.md)] Query Editor and a dialog to get the information required to connect to an instance of the [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 -   **Analysis Services MDX Query** - Opens a new [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] MDX Query Editor and a dialog to get the information required to connect to an instance of [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  
   

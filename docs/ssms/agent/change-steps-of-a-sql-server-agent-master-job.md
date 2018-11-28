@@ -57,13 +57,13 @@ Unless you are a member of the **sysadmin** fixed server role, you can only modi
   
 4.  Right-click the job where you want to modify steps and select **Properties**.  
   
-5.  In the **Job Properties –**_job\_name_ dialog box, under **Select a page**, select **Steps**.  
+5.  In the **Job Properties -**_job\_name_ dialog box, under **Select a page**, select **Steps**.  
   
-6.  Click **Edit** to open the **Job Step Properties –**_job\_step\_name_ dialog box. For more information on the available options in this dialog box, see [Job Step Properties - New Job Step &#40;General Page&#41;](../../ssms/agent/job-step-properties-new-job-step-general-page.md) and [Job Step Properties - New Job Step &#40;Advanced Page&#41;](../../ssms/agent/job-step-properties-new-job-step-advanced-page.md).  
+6.  Click **Edit** to open the **Job Step Properties -**_job\_step\_name_ dialog box. For more information on the available options in this dialog box, see [Job Step Properties - New Job Step &#40;General Page&#41;](../../ssms/agent/job-step-properties-new-job-step-general-page.md) and [Job Step Properties - New Job Step &#40;Advanced Page&#41;](../../ssms/agent/job-step-properties-new-job-step-advanced-page.md).  
   
 7.  When finished, click **OK**.  
   
-8.  In the **Job Properties –**_job\_name_ dialog box, click **OK**.  
+8.  In the **Job Properties -**_job\_name_ dialog box, click **OK**.  
   
 ## <a name="TsqlProcedure"></a>Using Transact-SQL  
   

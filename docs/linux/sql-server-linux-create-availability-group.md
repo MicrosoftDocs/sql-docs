@@ -373,7 +373,7 @@ This section shows examples of creating an AG using Transact-SQL. The listener a
 -   [Configure Read-Only Routing for an Availability Group (SQL Server)](../database-engine/availability-groups/windows/configure-read-only-routing-for-an-availability-group-sql-server.md)
 -   [Create or Configure an Availability Group Listener (SQL Server)](../database-engine/availability-groups/windows/create-or-configure-an-availability-group-listener-sql-server.md)
 
-#### Example One – Two replicas with a configuration-only replica (External cluster type)
+#### Example One - Two replicas with a configuration-only replica (External cluster type)
 
 This example shows how to create a two-replica AG that uses a configuration-only replica.
 
@@ -419,7 +419,7 @@ This example shows how to create a two-replica AG that uses a configuration-only
     GO
    ```
 
-#### Example Two – Three replicas with read-only routing (External cluster type)
+#### Example Two - Three replicas with read-only routing (External cluster type)
 
 This example shows three full replicas and how read-only routing can be configured as part of the initial AG creation.
 
@@ -477,7 +477,7 @@ This example shows three full replicas and how read-only routing can be configur
     
 3.  Repeat Step 2 for the third replica.
 
-#### Example Three – Two replicas with read-only routing (None cluster type)
+#### Example Three - Two replicas with read-only routing (None cluster type)
 
 This example shows the creation of a two-replica configuration using a cluster type of None. It is used for the read scale scenario where no failover is expected,. This creates the listener that is actually the primary replica, as well as the read-only routing, using the round robin functionality.
 

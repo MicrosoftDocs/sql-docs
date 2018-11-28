@@ -34,7 +34,7 @@ manager: craigg
 |Backslash<sup>1</sup>|\\\|  
 |Null terminator (nonvisible terminator)<sup>2</sup>|\0|  
 |Any printable character (control characters are not printable, except null, tab, newline, and carriage return)|(*, A, t, l, and so on)|  
-|String of up to 10 printable characters, including some or all of the terminators listed earlier|(**\t\*\*, end, !!!!!!!!!!, \t—\n, and so on)|  
+|String of up to 10 printable characters, including some or all of the terminators listed earlier|(**\t\*\*, end, !!!!!!!!!!, \t-\n, and so on)|  
   
  <sup>1</sup> Only the t, n, r, 0 and '\0' characters work with the backslash escape character to produce a control character.  
   

@@ -168,15 +168,15 @@ WHERE ProductModelID = 7
 ## Comparing the Node Type Returned by an Expression  
  If an expression returns a sequence of nodes, you may have to find the type of the node in the sequence. The following examples illustrate how sequence type syntax can be used to evaluate the node type returned by an expression. You can use the following sequence types:  
   
--   **item()** – Matches any item in the sequence.  
+-   **item()** - Matches any item in the sequence.  
   
--   **node()** – Determines whether the sequence is a node.  
+-   **node()** - Determines whether the sequence is a node.  
   
--   **processing-instruction()** – Determines whether the expression returns a processing instruction.  
+-   **processing-instruction()** - Determines whether the expression returns a processing instruction.  
   
--   **comment()** – Determines whether the expression returns a comment.  
+-   **comment()** - Determines whether the expression returns a comment.  
   
--   **document-node()** – Determines whether the expression returns a document node.  
+-   **document-node()** - Determines whether the expression returns a document node.  
   
  The following example illustrates these sequence types.  
   

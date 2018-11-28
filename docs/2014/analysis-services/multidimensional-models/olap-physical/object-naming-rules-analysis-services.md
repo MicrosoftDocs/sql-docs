@@ -79,7 +79,7 @@ manager: craigg
 |MOLAP (all versions)|No|  
 |Tabular - 1050|No|  
 |Tabular - 1100|No|  
-|Tabular – 1130 and higher|Yes|  
+|Tabular - 1130 and higher|Yes|  
   
  Databases can have a ModelType of default. Default is equivalent to multidimensional, and thus does not support the use of reserved characters in column names.  
   

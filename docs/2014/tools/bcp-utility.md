@@ -260,7 +260,7 @@ manager: craigg
  `-q`  
  Executes the SET QUOTED_IDENTIFIERS ON statement in the connection between the **bcp** utility and an instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Use this option to specify a database, owner, table, or view name that contains a space or a single quotation mark. Enclose the entire three-part table or view name in quotation marks ("").  
   
- To specify a database name that contains a space or single quotation mark, you must use the **–q** option.  
+ To specify a database name that contains a space or single quotation mark, you must use the **-q** option.  
   
  `-q` does not apply to values passed to `-d`.  
   
@@ -287,7 +287,7 @@ manager: craigg
  If *field_term* begins with a hyphen (-) or a forward slash (/), do not include a space between `-t` and the *field_term* value.  
   
  **-T**  
- Specifies that the **bcp** utility connects to [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] with a trusted connection using integrated security. The security credentials of the network user, *login_id*, and *password* are not required. If **–T** is not specified, you need to specify **–U** and **–P** to successfully log in.  
+ Specifies that the **bcp** utility connects to [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] with a trusted connection using integrated security. The security credentials of the network user, *login_id*, and *password* are not required. If **-T** is not specified, you need to specify **-U** and **-P** to successfully log in.  
   
  **-U** *login_id*  
  Specifies the login ID used to connect to [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  

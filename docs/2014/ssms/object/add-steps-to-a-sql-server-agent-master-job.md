@@ -50,7 +50,7 @@ manager: craigg
   
 4.  Right-click the job to which you want to add steps and select **Properties**.  
   
-5.  In the **Job Properties –***job_name* dialog box, under **Select a page**, select **Steps**. For more information on the available options on this page, see [Job Properties:New Job &#40;Steps Page&#41;](../agent/job-properties-new-job-steps-page.md).  
+5.  In the **Job Properties -***job_name* dialog box, under **Select a page**, select **Steps**. For more information on the available options on this page, see [Job Properties:New Job &#40;Steps Page&#41;](../agent/job-properties-new-job-steps-page.md).  
   
 6.  When finished, click **OK**.  
   

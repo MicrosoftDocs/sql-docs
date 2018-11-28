@@ -120,7 +120,7 @@ GO
 ```  
   
 ### C. Revoking a previously granted WITH GRANT OPTION clause  
- If a permission was granted using the WITH GRANT OPTION, use REVOKE GRANT OPTION FOR … to remove the WITH GRANT OPTION. The following example grants the permission and then removes the WITH GRANT portion of the permission.  
+ If a permission was granted using the WITH GRANT OPTION, use REVOKE GRANT OPTION FOR ... to remove the WITH GRANT OPTION. The following example grants the permission and then removes the WITH GRANT portion of the permission.  
   
 ```  
 USE master;  

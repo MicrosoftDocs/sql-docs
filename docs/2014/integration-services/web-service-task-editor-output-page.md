@@ -34,13 +34,13 @@ manager: craigg
   
 ### OutputType = File Connection  
  **File**  
- Select a File connection manager in the list or click \<**New Connection…**> to create a new connection manager.  
+ Select a File connection manager in the list or click \<**New Connection...**> to create a new connection manager.  
   
  **Related Topics:** [File Connection Manager](connection-manager/file-connection-manager.md), [File Connection Manager Editor](../../2014/integration-services/file-connection-manager-editor.md)  
   
 ### OutputType = Variable  
  **Variable**  
- Select a variable in the list or click \<**New Variable…**> to create a new variable.  
+ Select a variable in the list or click \<**New Variable...**> to create a new variable.  
   
  **Related Topics:**  [Integration Services &#40;SSIS&#41; Variables](integration-services-ssis-variables.md), [Add Variable](../../2014/integration-services/add-variable.md)  
   

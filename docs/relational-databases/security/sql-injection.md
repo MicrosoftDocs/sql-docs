@@ -200,7 +200,7 @@ DECLARE @command varchar(200)
 -- to set the password of 'sa'.   
 -- 26 for UPDATE statement, 16 for WHERE clause, 4 for 'sa', and 2 for  
 -- quotation marks surrounded by QUOTENAME(@loginname):  
--- 200 – 26 – 16 – 4 – 2 = 154.  
+-- 200 - 26 - 16 - 4 - 2 = 154.  
 -- But because @new is declared as a sysname, this variable can only hold  
 -- 128 characters.   
 -- We can overcome this by passing some single quotation marks in @new.  
@@ -295,7 +295,7 @@ AS
 -- where n is the 127th character.   
 -- Because the string returned by QUOTENAME() will be truncated, it  
 -- can be made to look like the following statement:  
--- UPDATE Users SET password='1234…[127] WHERE username=' -- other stuff here   
+-- UPDATE Users SET password='1234...[127] WHERE username=' -- other stuff here   
     SET @command= 'update Users set password = ''' + @newpassword + ''' where username='''   
      + @login + ''' AND password = ''' + @oldpassword + '''';  
   

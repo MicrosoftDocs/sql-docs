@@ -350,10 +350,10 @@ sp_addpublication [ @publication = ] 'publication'
 >  We recommend that you use the default value of FALSE. When this option is set to TRUE, the Distribution Agent tries to converge data in the topology by applying the conflicting row from the node that has the highest originator ID. This method does not guarantee convergence. You should make sure that the topology is consistent after a conflict is detected. For more information, see "Handling Conflicts" in [Conflict Detection in Peer-to-Peer Replication](../../relational-databases/replication/transactional/peer-to-peer-conflict-detection-in-peer-to-peer-replication.md).  
   
  [ **@allow_partition_switch=** ] **'***allow_partition_switch***'**  
- Specifies whether ALTER TABLE…SWITCH statements can be executed against the published database. *allow_partition_switch* is **nvarchar(5)** with a default value of FALSE. For more information, see [Replicate Partitioned Tables and Indexes](../../relational-databases/replication/publish/replicate-partitioned-tables-and-indexes.md).  
+ Specifies whether ALTER TABLE...SWITCH statements can be executed against the published database. *allow_partition_switch* is **nvarchar(5)** with a default value of FALSE. For more information, see [Replicate Partitioned Tables and Indexes](../../relational-databases/replication/publish/replicate-partitioned-tables-and-indexes.md).  
   
  [ **@replicate_partition_switch=** ] **'***replicate_partition_switch***'**  
- Specifies whether ALTER TABLE…SWITCH statements that are executed against the published database should be replicated to Subscribers. *replicate_partition_switch* is **nvarchar(5)** with a default value of FALSE. This option is valid only if *allow_partition_switch* is set to TRUE.  
+ Specifies whether ALTER TABLE...SWITCH statements that are executed against the published database should be replicated to Subscribers. *replicate_partition_switch* is **nvarchar(5)** with a default value of FALSE. This option is valid only if *allow_partition_switch* is set to TRUE.  
   
 ## Return Code Values  
  **0** (success) or **1** (failure)  

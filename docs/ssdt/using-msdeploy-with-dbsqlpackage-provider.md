@@ -33,16 +33,16 @@ For more information regarding DACFx, please see the DACFx managed API documenta
   
 ```  
   
-MSDeploy –verb: MSDeploy-verb –source:dbSqlPackage="Input"[,dbSqlPackage-source-parameters] –dest:dpSqlPackage="Input"[,dbSqlPackage-target-parameters]  
+MSDeploy -verb: MSDeploy-verb -source:dbSqlPackage="Input"[,dbSqlPackage-source-parameters] -dest:dpSqlPackage="Input"[,dbSqlPackage-target-parameters]  
 ```  
   
 ## MS-Deploy Verbs  
-You specify MS-Deploy verbs using the **–verb** switch on the MS-Deploy command line. The **dbSqlPackage** provider supports the following **MSDeploy** verbs:  
+You specify MS-Deploy verbs using the **-verb** switch on the MS-Deploy command line. The **dbSqlPackage** provider supports the following **MSDeploy** verbs:  
   
 |Verb|Description|  
 |--------|---------------|  
-|dump|Provides information including name, version number, and description, about a source database contained in a .dacpac file. Specify the source database using the following format on the command line:<br /><br />**msdeploy –verb:dump –source:dbSqlPackage="***.dacpac-file-path***"**|  
-|sync|Specifies dbSqlPackage actions using the following format on the command line:<br /><br />**msdeploy –verb:sync –source:dbSqlPackage**="input" *[,DbSqlPackage-source-parameters] -***dest:dbSqlPackage**="input" *[,DbSqlPackage-destination-parameters]*<br /><br />See the sections below for the valid source and destination parameters for the sync verb.|  
+|dump|Provides information including name, version number, and description, about a source database contained in a .dacpac file. Specify the source database using the following format on the command line:<br /><br />**msdeploy -verb:dump -source:dbSqlPackage="***.dacpac-file-path***"**|  
+|sync|Specifies dbSqlPackage actions using the following format on the command line:<br /><br />**msdeploy -verb:sync -source:dbSqlPackage**="input" *[,DbSqlPackage-source-parameters] -***dest:dbSqlPackage**="input" *[,DbSqlPackage-destination-parameters]*<br /><br />See the sections below for the valid source and destination parameters for the sync verb.|  
   
 ## dbSqlPackage Source  
 The **dbSqlPackage** provider takes an input that is either a valid SQL Server/SQL Azure connection string or a path to a .dacpac file on disk.  The syntax for specifying the input source for the provider is the following:  
@@ -177,24 +177,24 @@ The following **Destination** parameters are available for **DeployReport** and 
 The following is example syntax for an **Extract** operation using **dbSqlPackage**:  
   
 ```  
-MSDeploy.exe –verb:sync –source:dbSqlPackage="<source connection string>",<source parameter> –dest:dbSqlPackage="<target dacpac file path>"  
+MSDeploy.exe -verb:sync -source:dbSqlPackage="<source connection string>",<source parameter> -dest:dbSqlPackage="<target dacpac file path>"  
 ```  
   
 The following is example syntax for a **Publish** operation using **dbSqlPackage**:  
   
 ```  
-MSDeploy.exe –verb:sync –source:dbSqlPackage="<source dacpac file path>" –dest:dbSqlPackage="<target SQL Server/SQL Azure connection string>",Action=Publish,<destination parameters>  
+MSDeploy.exe -verb:sync -source:dbSqlPackage="<source dacpac file path>" -dest:dbSqlPackage="<target SQL Server/SQL Azure connection string>",Action=Publish,<destination parameters>  
 ```  
   
 The following is example syntax for a **DeployReport** operation using **dbSqlPackage**:  
   
 ```  
-MSDeploy.exe –verb:sync –source:dbSqlPackage="<source dacpac file path>" –dest:dbSqlPackage="<target SQL Server/SQL Azure connection string>",Action=DeployReport,OutputPath="<path to output XML file>",<destination parameters>  
+MSDeploy.exe -verb:sync -source:dbSqlPackage="<source dacpac file path>" -dest:dbSqlPackage="<target SQL Server/SQL Azure connection string>",Action=DeployReport,OutputPath="<path to output XML file>",<destination parameters>  
 ```  
   
 The following is example syntax for a **Script** operation using **dbSqlPackage**:  
   
 ```  
-MSDeploy.exe –verb:sync –source:dbSqlPackage="<source dacpac file path>" –dest:dbSqlPackage="<target SQL Server/SQL Azure connection string>",Action=Script,OutputPath="<path to output sql script>",<destination parameters>  
+MSDeploy.exe -verb:sync -source:dbSqlPackage="<source dacpac file path>" -dest:dbSqlPackage="<target SQL Server/SQL Azure connection string>",Action=Script,OutputPath="<path to output sql script>",<destination parameters>  
 ```  
   

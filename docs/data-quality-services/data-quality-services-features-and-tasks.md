@@ -17,7 +17,7 @@ manager: craigg
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-  Find information that anyone—data steward, Data Quality Services administrator, or SQL Server administrator—requires to prepare and execute a data quality project.  
+  Find information that anyone-data steward, Data Quality Services administrator, or SQL Server administrator-requires to prepare and execute a data quality project.  
   
  ![Small File Folder Icon](../analysis-services/media/filefolder-small.png "Small File Folder Icon") **Designing and Implementing a Data Quality Solution**  
  [Data Quality Client Application](../data-quality-services/data-quality-client-application.md)  

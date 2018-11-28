@@ -23,7 +23,7 @@ manager: craigg
  Lists the assemblies that the report references. The assembly must be available on the computer on which the tool you are using to design the report is installed and on the report server. The name of the reference must match the contents of **\<CodeModule>** tags in the Report Definition Language (.rdl) file exactly.  
   
  **Add**  
- Click to add an assembly. Click the ellipsis (…) button to open the **Open** dialog box and select the assemblies necessary to complete report processing and expression evaluation.  
+ Click to add an assembly. Click the ellipsis (...) button to open the **Open** dialog box and select the assemblies necessary to complete report processing and expression evaluation.  
   
  **Delete**  
  To remove an assembly reference from the list, select the assembly name and click the **Remove** button.  
@@ -32,7 +32,7 @@ manager: craigg
  Lists the class instances that are used by the report. The class list is used only by instance-based members, not static members.  
   
  **Add**  
- Click to add a class reference. Click the ellipsis (…) button to open the **Open** dialog box and select the classes necessary to complete report processing and expression evaluation.  
+ Click to add a class reference. Click the ellipsis (...) button to open the **Open** dialog box and select the classes necessary to complete report processing and expression evaluation.  
   
  **Delete**  
  To delete the class instance, select it and click the **Remove** button.  

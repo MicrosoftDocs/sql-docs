@@ -51,7 +51,7 @@ UPDATE STATISTICS table_or_indexed_view_name
             | SAMPLE number { PERCENT | ROWS }   
               [ [ , ] PERSIST_SAMPLE_PERCENT = { ON | OFF } ]    
             | RESAMPLE   
-              [ ON PARTITIONS ( { <partition_number> | <range> } [, …n] ) ]  
+              [ ON PARTITIONS ( { <partition_number> | <range> } [, ...n] ) ]  
             | <update_stats_stream_option> [ ,...n ]  
         ]   
         [ [ , ] [ ALL | COLUMNS | INDEX ]   
@@ -125,7 +125,7 @@ When **ON**, the statistics will retain the set sampling percentage for subseque
  
  **Applies to**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] (starting with [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 CU4) through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] (starting with [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU1).  
  
- ON PARTITIONS ( { \<partition_number> | \<range> } [, …n] ) ] 
+ ON PARTITIONS ( { \<partition_number> | \<range> } [, ...n] ) ] 
  Forces the leaf-level statistics covering the partitions specified in the ON PARTITIONS clause to be recomputed, and then merged to build the global statistics. WITH RESAMPLE is required because partition statistics built with different sample rates cannot be merged together.  
   
 **Applies to**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]

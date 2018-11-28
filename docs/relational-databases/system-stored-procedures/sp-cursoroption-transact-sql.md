@@ -47,7 +47,7 @@ sp_cursoroption cursor, code, value
 |0x0003|TEXTDATA|Returns the actual data, not the text pointer, for certain text or image columns on subsequent fetches (i.e. this undoes the effect of TEXTPTR_ONLY).<br /><br /> If TEXTDATA is enabled for a particular column the row is re-fetched or refreshed, and can then be set back to TEXTPTR_ONLY. As with TEXTPTR_ONLY, the value parameter is an integer that specifies the column number and a zero value returns all text or image columns.|  
 |0x0004|SCROLLOPT|Scroll option. See "Returned Code Values" later in this topic for additional information.|  
 |0x0005|CCOPT|Concurrency control option. See "Returned Code Values" later in this topic for additional information.|  
-|0x0006|ROWCOUNT|The number of rows currently in the result set.<br /><br /> Note: The ROWCOUNT may have changed since the value returned by sp_cursoropen if asynchronous population is being used. The value –1 is returned if the number of rows is unknown.|  
+|0x0006|ROWCOUNT|The number of rows currently in the result set.<br /><br /> Note: The ROWCOUNT may have changed since the value returned by sp_cursoropen if asynchronous population is being used. The value -1 is returned if the number of rows is unknown.|  
   
  *value*  
  Designates the value returned by *code*. *value* is a required parameter that calls for a 0x0001, 0x0002, or 0x0003 *code* input value.  

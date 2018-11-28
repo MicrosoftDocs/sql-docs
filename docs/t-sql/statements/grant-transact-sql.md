@@ -129,7 +129,7 @@ The use of AS in this statement does not imply the ability to impersonate anothe
  The sp_helprotect system stored procedure reports permissions on a database-level securable.  
   
 ## WITH GRANT OPTION  
- The **GRANT** … **WITH GRANT OPTION** specifies that the security principal receiving the permission is given the ability to grant the specified permission to other security accounts. When the principal that receives the permission is a role or a Windows group, the **AS** clause must be used when the object permission needs to be further granted to users who are not members of the group or role. Because only a user, rather than a group or role, can execute a **GRANT** statement, a specific member of the group or role must use the **AS** clause to explicitly invoke the role or group membership when granting the permission. The following example shows how the **WITH GRANT OPTION** is used when granted to a role or Windows group.  
+ The **GRANT** ... **WITH GRANT OPTION** specifies that the security principal receiving the permission is given the ability to grant the specified permission to other security accounts. When the principal that receives the permission is a role or a Windows group, the **AS** clause must be used when the object permission needs to be further granted to users who are not members of the group or role. Because only a user, rather than a group or role, can execute a **GRANT** statement, a specific member of the group or role must use the **AS** clause to explicitly invoke the role or group membership when granting the permission. The following example shows how the **WITH GRANT OPTION** is used when granted to a role or Windows group.  
   
 ```  
 -- Execute the following as a database owner  

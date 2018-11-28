@@ -44,13 +44,13 @@ manager: craigg
   
 3.  Right-click the **Jobs** folder and select **Manage Job Categories**.  
   
-4.  In the **Manage Job Categories***server_name* dialog box, select the job category to delete.  
+4.  In the **Manage Job Categories**_server_name_ dialog box, select the job category to delete.  
   
 5.  Click **Delete**.  
   
 6.  In the **Job Categories** dialog box, click **Yes**.  
   
-7.  Close the **Manage Job Categories***server_name* dialog box.  
+7.  Close the **Manage Job Categories**_server_name_ dialog box.  
   
 
   

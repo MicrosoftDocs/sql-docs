@@ -113,7 +113,7 @@ Cheryl Carson       Abraham Bennet
   
 3.  Right-click the join line and choose **Properties** from the shortcut menu.  
   
-4.  In the Properties window click **Join Condition and Type** and click the **ellipses (…)** to the right of the property.  
+4.  In the Properties window click **Join Condition and Type** and click the **ellipses (...)** to the right of the property.  
   
 5.  In the [Join Dialog Box](../../ssms/visual-db-tools/join-dialog-box-visual-database-tools.md) change the comparison operator between the primary keys as required. For example, you might change the operator to less than (<).  
   

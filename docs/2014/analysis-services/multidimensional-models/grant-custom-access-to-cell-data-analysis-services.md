@@ -28,7 +28,7 @@ manager: craigg
   
  Cell permissions apply to data inside the cell, and not to its metadata. Notice how the cell is still visible in the results of a query, displaying a value of `#N/A` instead of the actual cell value. The `#N/A` value appears in the cell unless the client application translates the value, or another value is specified by setting the Secured Cell Value property in the connection string.  
   
- To hide the cell entirely, you have to limit the members—dimensions, dimension attributes, and dimension attribute members—that are viewable. For more information, see [Grant custom access to dimension data &#40;Analysis Services&#41;](grant-custom-access-to-dimension-data-analysis-services.md).  
+ To hide the cell entirely, you have to limit the members-dimensions, dimension attributes, and dimension attribute members-that are viewable. For more information, see [Grant custom access to dimension data &#40;Analysis Services&#41;](grant-custom-access-to-dimension-data-analysis-services.md).  
   
  As an administrator, you can specify whether role members have read, read contingent, or read/write permissions on cells within a cube. Putting permissions on a cell is the lowest level of security allowed, so before you start applying permissions at this level, it's important to keep a few facts in mind:  
   

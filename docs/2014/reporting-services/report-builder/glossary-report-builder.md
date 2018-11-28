@@ -183,7 +183,7 @@ manager: craigg
 |KPI|See Other Term: key performance indicator|  
 |label field|A report dataset field that identifies a label for a corresponding key field. Parameters and data regions can display the label for a key field instead of the value.|  
 |latency|The amount of time that elapses when a data change is completed at one server and when that change appears at another server.|  
-|latitude|The latitude coordinate as a decimal degree value in World Geodetic System (WGS 84) datum. Valid range is from –90.0 through +90.0.|  
+|latitude|The latitude coordinate as a decimal degree value in World Geodetic System (WGS 84) datum. Valid range is from -90.0 through +90.0.|  
 |layer|In a map report item, a layer specifies type and presentation of a single type of spatial data. A map report item is a container for multiple layers.|  
 |LCID|A number that identifies a Windows-based locale.|  
 |legend|In a report chart, map, or gauge data region, an element that provides a guide between the display presentation of data and the underlying data values.|  
@@ -196,7 +196,7 @@ manager: craigg
 |log file|A file or set of files that contain records of the modifications made in a database.|  
 |logical name|A name used by SQL Server to identify a file.|  
 |logical operators|The operators AND, OR, and NOT. Used to connect search conditions in WHERE clauses.|  
-|longitude|A coordinate as a decimal degree value in World Geodetic System (WGS 84) datum. Valid range is from –180.0 through +180.0.|  
+|longitude|A coordinate as a decimal degree value in World Geodetic System (WGS 84) datum. Valid range is from -180.0 through +180.0.|  
 |many-to-many relationship|A relationship between two tables in which rows in each table have multiple matching rows in the related table. For example, each sales invoice can contain multiple products, but each product can appear on multiple sales invoices.|  
 |many-to-one relationship|A relationship between two tables in which one row in one table can relate to many rows in another table.|  
 |map|A report item that is a container for titles, various types of legends, and map layers.|  

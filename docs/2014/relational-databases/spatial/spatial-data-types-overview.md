@@ -95,7 +95,7 @@ manager: craigg
   
 -   [OGC Specifications, Simple Feature Access Part 1 - Common Architecture](http://go.microsoft.com/fwlink/?LinkId=93627)  
   
--   [OGC Specifications, Simple Feature Access Part 2 – SQL Options](http://go.microsoft.com/fwlink/?LinkId=93628)  
+-   [OGC Specifications, Simple Feature Access Part 2 - SQL Options](http://go.microsoft.com/fwlink/?LinkId=93628)  
   
   
 ##  <a name="circular"></a> Circular Arc Segments  
@@ -143,7 +143,7 @@ SELECT @g1.STLength() AS [LS Length], @g2.STLength() AS [CS Length];
   
 ```  
 LS LengthCS Length  
-5.65685…6.28318…  
+5.65685...6.28318...  
 ```  
   
  The following illustration shows how each type is stored (red line shows `LineString``@g1`, blue line shows `CircularString``@g2`):  

@@ -108,7 +108,7 @@ To create a deployment contributor, you must perform the following tasks:
   
     ```  
   
-    In this case the first parameter to the attribute should be a unique identifier – this will be used to identify your contributor in project files. A best practice is to combine your library's namespace - in this walkthrough, MyDeploymentContributor - with the class name - in this walkthrough, DeploymentUpdateReportContributor - to produce the identifier.  
+    In this case the first parameter to the attribute should be a unique identifier - this will be used to identify your contributor in project files. A best practice is to combine your library's namespace - in this walkthrough, MyDeploymentContributor - with the class name - in this walkthrough, DeploymentUpdateReportContributor - to produce the identifier.  
   
 3.  Next, add the following member that you will use to enable this provider to accept a command-line parameter:  
   
@@ -520,7 +520,7 @@ To create a deployment contributor, you must perform the following tasks:
     |-----------------|--------------------|  
     |Class members|[TSqlModel](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.model.tsqlmodel.aspx), [ModelComparisonResult](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.modelcomparisonresult.aspx), [DeploymentStep](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentstep.aspx)|  
     |WriteReport method|XmlWriter and XmlWriterSettings|  
-    |ReportPlanOperations method|Types of interest include the following: [DeploymentStep](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentstep.aspx), [SqlRenameStep](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.sqlrenamestep.aspx), [SqlMoveSchemaStep](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.sqlmoveschemastep.aspx), [SqlTableMigrationStep](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.sqltablemigrationstep.aspx), [CreateElementStep](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.createelementstep.aspx), [AlterElementStep](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.alterelementstep.aspx), [DropElementStep](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.dropelementstep.aspx).<br /><br />There are a number of other steps – see the API documentation for a full list of steps.|  
+    |ReportPlanOperations method|Types of interest include the following: [DeploymentStep](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentstep.aspx), [SqlRenameStep](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.sqlrenamestep.aspx), [SqlMoveSchemaStep](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.sqlmoveschemastep.aspx), [SqlTableMigrationStep](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.sqltablemigrationstep.aspx), [CreateElementStep](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.createelementstep.aspx), [AlterElementStep](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.alterelementstep.aspx), [DropElementStep](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.dropelementstep.aspx).<br /><br />There are a number of other steps - see the API documentation for a full list of steps.|  
     |GetElementCategory|[TSqlObject](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.model.tsqlobject.aspx)|  
     |GetElementName|[TSqlObject](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.model.tsqlobject.aspx)|  
   
@@ -607,7 +607,7 @@ After you have followed one of these approaches, you can use MSBuild to pass in 
 > You must always update the "DeploymentContributors" property to specify your contributor ID. This is the same ID used in the "ExportDeploymentPlanExecutor" attribute in your contributor source file. Without this your contributor will not be run when building the project. The "ContributorArguments" property needs to be updated only if you have arguments required for your contributor to run.  
   
 ### Deploy the Database Project  
-Your project can be published or deployed as normal inside Visual Studio. Simply open a solution containing your SQL project and choose the "Publish…" option from the right-click context menu for the project, or use F5 for a debug deployment to LocalDB. In this example we will use the "Publish…" dialog to generate a deployment script.  
+Your project can be published or deployed as normal inside Visual Studio. Simply open a solution containing your SQL project and choose the "Publish..." option from the right-click context menu for the project, or use F5 for a debug deployment to LocalDB. In this example we will use the "Publish..." dialog to generate a deployment script.  
   
 ##### To deploy your SQL project and generate a deployment report  
   

@@ -24,4 +24,4 @@ manager: craigg
   
  When an application calls **SQLRowCount** with the statement associated with a positioned update or delete statement, the cursor library returns the number of rows affected by the statement.  
   
- When an application calls **SQLRowCount** after a **SELECT** statement, the cursor library returns –1.
+ When an application calls **SQLRowCount** after a **SELECT** statement, the cursor library returns -1.

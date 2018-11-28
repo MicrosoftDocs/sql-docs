@@ -52,7 +52,7 @@ manager: craigg
   
 4.  In the console pane, click **SQL Server Services**.  
   
-5.  In the details pane, right-click **SQL Server (***\<instance name>***)**, and then click **Restart**, to stop and restart the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] service.  
+5.  In the details pane, right-click **SQL Server (**_\<instance name>_**)**, and then click **Restart**, to stop and restart the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] service.  
   
 ##  <a name="PowerShellProcedure"></a> Using SQL Server PowerShell  
   

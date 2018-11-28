@@ -42,7 +42,7 @@ Alternatively, you can browse data using the built-in MDX query designer that is
 ## Step 3: Install databases  
 An Analysis Services multidimensional model uses transactional data that you import from a relational database management system. For the purposes of this tutorial, you use the following relational database as your data source.  
   
--   **AdventureWorksDW2012 or later** – This is a relational data warehouse that runs on a Database Engine instance. It provides the original data  used by the Analysis Services databases and projects that you build and deploy throughout the tutorial. The tutorial assumes you are using AdventureWorksDW2012, however, later versions do work.
+-   **AdventureWorksDW2012 or later** - This is a relational data warehouse that runs on a Database Engine instance. It provides the original data  used by the Analysis Services databases and projects that you build and deploy throughout the tutorial. The tutorial assumes you are using AdventureWorksDW2012, however, later versions do work.
   
     You can use this sample database with [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] and later. In-general, you should use the sample database version matching your database engine version.
   

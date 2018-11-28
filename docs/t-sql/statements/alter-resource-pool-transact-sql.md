@@ -47,10 +47,10 @@ ALTER RESOURCE POOL { pool_name | "default" }
 [;]  
   
 <scheduler_range_spec> ::=  
-{SCHED_ID | SCHED_ID TO SCHED_ID}[,…n]  
+{SCHED_ID | SCHED_ID TO SCHED_ID}[,...n]  
   
 <NUMA_node_range_spec> ::=  
-{NUMA_node_ID | NUMA_node_ID TO NUMA_node_ID}[,…n]  
+{NUMA_node_ID | NUMA_node_ID TO NUMA_node_ID}[,...n]  
 ```  
   
 ## Arguments  

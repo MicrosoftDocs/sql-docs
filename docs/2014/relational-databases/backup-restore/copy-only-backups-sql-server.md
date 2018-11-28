@@ -46,14 +46,14 @@ manager: craigg
   
 -   For a copy-only full backup:  
   
-     BACKUP DATABASE *database_name* TO \<backup_device*>* … WITH COPY_ONLY …  
+     BACKUP DATABASE *database_name* TO \<backup_device*>* ... WITH COPY_ONLY ...  
   
     > [!NOTE]  
     >  COPY_ONLY has no effect when specified with the DIFFERENTIAL option.  
   
 -   For a copy-only log backup:  
   
-     BACKUP LOG *database_name* TO *\<*backup_device*>* … WITH COPY_ONLY …  
+     BACKUP LOG *database_name* TO *\<*backup_device*>* ... WITH COPY_ONLY ...  
   
 ###  <a name="PowerShellProcedure"></a> Using PowerShell  
   

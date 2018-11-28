@@ -216,7 +216,7 @@ The **SalesDate** values display in the default date format, and the summary val
   
     Note that the bars in the sparkline charts don't line up with each other. There are only four bars in the second row of data, so the bars are wider than the bars in the first row, which has six. You can't compare values for each product per day. They need to line up.  
   
-    Also, for each row the tallest bar is the height of the row. This is misleading, too, because the largest values for each row are not equal: the largest value for Budget Movie-Maker is $10,400, but for Slim Digital it's $26,576 — more than twice as large. And yet the largest bars in those two rows are about the same height. All the sparklines need to use the same scale.  
+    Also, for each row the tallest bar is the height of the row. This is misleading, too, because the largest values for each row are not equal: the largest value for Budget Movie-Maker is $10,400, but for Slim Digital it's $26,576 - more than twice as large. And yet the largest bars in those two rows are about the same height. All the sparklines need to use the same scale.  
   
      ![report-builder-sparkline-misaligned](../reporting-services/media/report-builder-sparkline-misaligned.png)
   

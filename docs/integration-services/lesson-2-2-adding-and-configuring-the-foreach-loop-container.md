@@ -68,7 +68,7 @@ After you have made these modifications to the package, when the package is run,
   
 1.  Click **Variable Mappings**.  
   
-2.  On the **Variable Mappings** page, in the **Variable** column, click the empty cell and select **\<New Variable…>**.  
+2.  On the **Variable Mappings** page, in the **Variable** column, click the empty cell and select **\<New Variable...>**.  
   
 3.  In the **Add Variable** dialog box, for **Name**, type **varFileName**.  
   

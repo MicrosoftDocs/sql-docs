@@ -41,4 +41,4 @@ Some arguments in the catalog functions, such as the *TableName* argument in **S
 > [!NOTE]  
 >  ODBC 2.*x* drivers do not support search patterns in the *CatalogName* argument in **SQLTables**. ODBC 3*.x* drivers accept search patterns in this argument if the SQL_ATTR_ ODBC_VERSION environment attribute is set to SQL_OV_ODBC3; they do not accept search patterns in this argument if it is set to SQL_OV_ODBC2.  
   
- Passing a null pointer to a search pattern argument does not constrain the search for that argument; that is, a null pointer and the search pattern % (any characters) are equivalent. However, a zero-length search pattern — that is, a valid pointer to a string of length zero — matches only the empty string ("").
+ Passing a null pointer to a search pattern argument does not constrain the search for that argument; that is, a null pointer and the search pattern % (any characters) are equivalent. However, a zero-length search pattern - that is, a valid pointer to a string of length zero - matches only the empty string ("").

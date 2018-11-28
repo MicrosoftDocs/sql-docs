@@ -73,7 +73,7 @@ manager: craigg
  **Select or enter a server name**  
  Select a server to connect to when performing this task.  
   
- **…**  
+ **...**  
  Select to view the list of available servers.  
   
  **Enter information to log on to the server**  

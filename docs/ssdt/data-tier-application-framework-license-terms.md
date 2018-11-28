@@ -94,7 +94,7 @@ b.  **Outside the United States.** If you acquired the software in any other cou
   
 12. **DISCLAIMER OF WARRANTY. THE SOFTWARE IS LICENSED "AS-IS." YOU BEAR THE RISK OF USING IT. MICROSOFT GIVES NO EXPRESS WARRANTIES, GUARANTEES OR CONDITIONS. YOU MAY HAVE ADDITIONAL CONSUMER RIGHTS OR STATUTORY GUARANTEES UNDER YOUR LOCAL LAWS WHICH THIS AGREEMENT CANNOT CHANGE. TO THE EXTENT PERMITTED UNDER YOUR LOCAL LAWS, MICROSOFT EXCLUDES THE IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT.**  
   
-    **FOR AUSTRALIA – YOU HAVE STATUTORY GUARANTEES UNDER THE AUSTRALIAN CONSUMER LAW AND NOTHING IN THESE TERMS IS INTENDED TO AFFECT THOSE RIGHTS.**  
+    **FOR AUSTRALIA - YOU HAVE STATUTORY GUARANTEES UNDER THE AUSTRALIAN CONSUMER LAW AND NOTHING IN THESE TERMS IS INTENDED TO AFFECT THOSE RIGHTS.**  
   
 13. **LIMITATION ON AND EXCLUSION OF REMEDIES AND DAMAGES. YOU CAN RECOVER FROM MICROSOFT AND ITS SUPPLIERS ONLY DIRECT DAMAGES UP TO U.S. $5.00. YOU CANNOT RECOVER ANY OTHER DAMAGES, INCLUDING CONSEQUENTIAL, LOST PROFITS, SPECIAL, INDIRECT OR INCIDENTAL DAMAGES.**  
   
@@ -111,7 +111,7 @@ It also applies even if Microsoft knew or should have known about the possibilit
   
 -   **EXCLUSIONS DE GARANTIE. Le logiciel est concédé sous licence « en l'état ». Vous assumez tous les risques liés à son utilisation. Microsoft n'accorde aucune garantie ou condition expresse. Vous pouvez bénéficier de droits des consommateurs supplémentaires ou de garanties statutaires dans le cadre du droit local, que ce contrat ne peut modifier. Lorsque cela est autorisé par le droit local, Microsoft exclut les garanties implicites de qualité, d'adéquation à un usage particulier et d'absence de contrefaçon.**  
   
-    **POUR L'AUSTRALIE – La loi australienne sur la consommation (Australian Consumer Law) vous accorde des garanties statutaires qu'aucun élément du présent accord ne peut affecter.**  
+    **POUR L'AUSTRALIE - La loi australienne sur la consommation (Australian Consumer Law) vous accorde des garanties statutaires qu'aucun élément du présent accord ne peut affecter.**  
   
 -   **LIMITATION ET EXCLUSION DE RECOURS ET DE DOMMAGES. Vous pouvez obtenir de Microsoft et de ses fournisseurs une indemnisation en cas de dommages directs limitée uniquement à hauteur de 5,00 $ US. Vous ne pouvez prétendre à aucune indemnisation pour les autres dommages, y compris les dommages spéciaux, indirects ou accessoires et pertes de bénéfices.**  
   

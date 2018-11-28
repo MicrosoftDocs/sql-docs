@@ -19,7 +19,7 @@ manager: craigg
   
 ### To set up a connection  
   
-1.  In the **Report Data** pane, click **New** and then click **Data Source…**.  
+1.  In the **Report Data** pane, click **New** and then click **Data Source...**.  
   
     > [!NOTE]  
     >  If the **Report Data** pane is not visible, from the **View** menu, click **Report Data**.  

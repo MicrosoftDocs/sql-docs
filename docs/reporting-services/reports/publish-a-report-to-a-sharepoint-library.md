@@ -24,7 +24,7 @@ ms.author: maghan
   
 1.  In [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], open an existing or new Report Server project.  
   
-2.  From the **Project** menu, click **Properties**. The *\<project>***Property Pages** dialog box opens.  
+2.  From the **Project** menu, click **Properties**. The _\<project>_**Property Pages** dialog box opens.  
   
 3.  In the **Configuration** list, select the name of a solution build configuration to use to build and publish your report. The current configuration is listed as **Active**(*\<configuration>*).  
   

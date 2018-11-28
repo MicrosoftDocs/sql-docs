@@ -25,14 +25,14 @@ manager: craigg
   
  [Cube Objects &#40;Analysis Services - Multidimensional Data&#41;](../../multidimensional-models-olap-logical-cube-objects/cube-objects-analysis-services-multidimensional-data.md)  
   
- [More…](../olap-logical/understanding-microsoft-olap-logical-architecture.md)  
+ [More...](../olap-logical/understanding-microsoft-olap-logical-architecture.md)  
   
  ![Small File Folder Icon](../../../integration-services/media/filefolder-small.gif "Small File Folder Icon") **Physical Architecture**  
  [OLAP Engine Server Components](olap-engine-server-components.md)  
   
  [Local Cubes &#40;Analysis Services - Multidimensional Data&#41;](local-cubes-analysis-services-multidimensional-data.md)  
   
- [More…](understanding-microsoft-olap-physical-architecture.md)  
+ [More...](understanding-microsoft-olap-physical-architecture.md)  
   
  ![Small File Folder Icon](../../../integration-services/media/filefolder-small.gif "Small File Folder Icon") **Programming Architecture**  
  [Developing with Analysis Management Objects &#40;AMO&#41;](https://docs.microsoft.com/bi-reference/amo/developing-with-analysis-management-objects-amo)  

@@ -89,7 +89,7 @@ Enterprise customers can configure Group Policy settings to opt in or out of usa
     Entry type DWORD: 0 is opt out; 1 is opt in
 
 > [!NOTE]
-> {Major Version} refers to the version of SQL Server—for example, 140 for SQL Server 2017
+> {Major Version} refers to the version of SQL Server-for example, 140 for SQL Server 2017
 
 - For SQL Server Management Studio:
   

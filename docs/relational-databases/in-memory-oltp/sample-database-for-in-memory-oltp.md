@@ -32,9 +32,9 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
   
 -   Instructions for [Installing the In-Memory OLTP sample based on AdventureWorks](#InstallingtheIn-MemoryOLTPsamplebasedonAdventureWorks)  
   
--   [Description of the sample tables and procedures](#Descriptionofthesampletablesandprocedures) – this includes descriptions of the tables and procedures added to AdventureWorks by the In-Memory OLTP sample, as well as considerations for migrating some of the original AdventureWorks tables to memory-optimized  
+-   [Description of the sample tables and procedures](#Descriptionofthesampletablesandprocedures) - this includes descriptions of the tables and procedures added to AdventureWorks by the In-Memory OLTP sample, as well as considerations for migrating some of the original AdventureWorks tables to memory-optimized  
   
--   Instructions for performing [Performance Measurements using the Demo Workload](#PerformanceMeasurementsusingtheDemoWorkload) – this includes instructions for installing and running ostress, a tool using for driving the workload, as well as running the demo workload itself  
+-   Instructions for performing [Performance Measurements using the Demo Workload](#PerformanceMeasurementsusingtheDemoWorkload) - this includes instructions for installing and running ostress, a tool using for driving the workload, as well as running the demo workload itself  
   
 -   [Memory and Disk Space Utilization in the Sample](#MemoryandDiskSpaceUtilizationintheSample)  
   
@@ -78,7 +78,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
 ##  <a name="Descriptionofthesampletablesandprocedures"></a> Description of the sample tables and procedures  
  The sample creates new tables for products and sales orders, based on existing tables in AdventureWorks. The schema of the new tables is similar to the existing tables, with a few differences, as explained below.  
   
- The new memory-optimized tables carry the suffix '_inmem'. The sample also includes corresponding tables carrying the suffix '_ondisk' – these tables can be used to make a one-to-one comparison between the performance of memory-optimized tables and disk-based tables on your system..  
+ The new memory-optimized tables carry the suffix '_inmem'. The sample also includes corresponding tables carrying the suffix '_ondisk' - these tables can be used to make a one-to-one comparison between the performance of memory-optimized tables and disk-based tables on your system..  
   
  Note that the memory-optimized tables used in the workload for performance comparison are fully durable and fully logged. They do not sacrifice durability or reliability to attain the performance gain.  
   
@@ -152,15 +152,15 @@ Beginning with [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1, c
   
  Sales.SalesOrderDetail  
   
--   *Default constraints* – similar to SalesOrderHeader, the default constraint requiring the system date/time is not migrated, instead the stored procedure inserting sales orders takes care of inserting the current system date/time on first insert.  
+-   *Default constraints* - similar to SalesOrderHeader, the default constraint requiring the system date/time is not migrated, instead the stored procedure inserting sales orders takes care of inserting the current system date/time on first insert.  
   
--   *Computed columns* – the computed column LineTotal was not migrated as computed columns are not supported with memory-optimized tables in [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]. To access this column use the view Sales.vSalesOrderDetail_extended_inmem.  
+-   *Computed columns* - the computed column LineTotal was not migrated as computed columns are not supported with memory-optimized tables in [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]. To access this column use the view Sales.vSalesOrderDetail_extended_inmem.  
   
 -   *Rowguid* - The rowguid column is omitted. For details see the description for the table SalesOrderHeader.  
   
  Production.Product  
   
--   *Alias UDTs* – the original table uses the user-defined data type dbo.Flag, which is equivalent to the system data type bit. The migrated table uses the bit data type instead.  
+-   *Alias UDTs* - the original table uses the user-defined data type dbo.Flag, which is equivalent to the system data type bit. The migrated table uses the bit data type instead.  
   
 -   *Rowguid* - The rowguid column is omitted. For details see the description for the table SalesOrderHeader.  
   
@@ -207,7 +207,7 @@ Beginning with [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1, c
   
  Sales.SpecialOffer_inmem has one HASH index on (SpecialOfferID): point lookups of special offers are in the critical part of the demo workload. The bucket_count is sized at 1 million to allow for future growth.  
   
- Sales.SpecialOfferProduct_inmem is not referenced in the demo workload, and thus there is no apparent need to use hash indexes on this table to optimize the workload – the indexes on (SpecialOfferID, ProductID) and (ProductID) are NONCLUSTERED.  
+ Sales.SpecialOfferProduct_inmem is not referenced in the demo workload, and thus there is no apparent need to use hash indexes on this table to optimize the workload - the indexes on (SpecialOfferID, ProductID) and (ProductID) are NONCLUSTERED.  
   
  Notice that in the above some of the bucket_counts are over-sized, but not the bucket_counts for the indexes on SalesOrderHeader_inmem and SalesOrderDetail_inmem: they are sized for just 10 million sales orders. This was done to allow installing the sample on systems with low memory availability, although in those cases the demo workload will fail with out-of-memory. If you do want to scale well beyond 10 million sales orders, feel free to increase the bucket counts accordingly.  
   
@@ -223,7 +223,7 @@ Beginning with [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1, c
   
     -   Output parameter:  
   
-        -   @SalesOrderID int – the SalesOrderID for the sales order that was just inserted  
+        -   @SalesOrderID int - the SalesOrderID for the sales order that was just inserted  
   
     -   Input parameters (required):  
   
@@ -237,7 +237,7 @@ Beginning with [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1, c
   
         -   @ShipMethodID [int]  
   
-        -   @SalesOrderDetails Sales.SalesOrderDetailType_inmem – TVP that contains the line items of the order  
+        -   @SalesOrderDetails Sales.SalesOrderDetailType_inmem - TVP that contains the line items of the order  
   
     -   Input parameters (optional):  
   
@@ -293,9 +293,9 @@ Beginning with [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1, c
   
 1.  dbo.usp_ValidateIntegrity  
   
-    -   Optional parameter: @object_id – ID of the object to validate integrity for  
+    -   Optional parameter: @object_id - ID of the object to validate integrity for  
   
-    -   This procedure relies on the tables dbo.DomainIntegrity, dbo.ReferentialIntegrity, and dbo.UniqueIntegrity for the integrity rules that need to be verified – the sample populates these tables based on the check, foreign key, and unique constraints that exist for the original tables in the AdventureWorks database.  
+    -   This procedure relies on the tables dbo.DomainIntegrity, dbo.ReferentialIntegrity, and dbo.UniqueIntegrity for the integrity rules that need to be verified - the sample populates these tables based on the check, foreign key, and unique constraints that exist for the original tables in the AdventureWorks database.  
   
     -   It relies on the helper procedures dbo.usp_GenerateCKCheck, dbo.usp_GenerateFKCheck, and dbo.GenerateUQCheck to generate the T-SQL needed for performing the integrity checks.  
   
@@ -324,7 +324,7 @@ Beginning with [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1, c
   
 -   -S name of Microsoft SQL Server instance to connect to  
   
--   -E use Windows authentication to connect (default); if you use SQL Server authentication, use the options –U and –P to specify the username and password, respectively  
+-   -E use Windows authentication to connect (default); if you use SQL Server authentication, use the options -U and -P to specify the username and password, respectively  
   
 -   -d name of the database, for this example AdventureWorks2014  
   
@@ -388,7 +388,7 @@ END
  Click the Copy button to copy the command, and paste it into the RML Utilities command prompt.  
   
 ```  
-ostress.exe –n100 –r5000 -S. -E -dAdventureWorks2016CTP3 -q -Q"DECLARE @i int = 0, @od Sales.SalesOrderDetailType_inmem, @SalesOrderID int, @DueDate datetime2 = sysdatetime(), @CustomerID int = rand() * 8000, @BillToAddressID int = rand() * 10000, @ShipToAddressID int = rand() * 10000, @ShipMethodID int = (rand() * 5) + 1; INSERT INTO @od SELECT OrderQty, ProductID, SpecialOfferID FROM Demo.DemoSalesOrderDetailSeed WHERE OrderID= cast((rand()*106) + 1 as int); while (@i < 20) begin; EXEC Sales.usp_InsertSalesOrder_inmem @SalesOrderID OUTPUT, @DueDate, @CustomerID, @BillToAddressID, @ShipToAddressID, @ShipMethodID, @od; set @i += 1 end"  
+ostress.exe -n100 -r5000 -S. -E -dAdventureWorks2016CTP3 -q -Q"DECLARE @i int = 0, @od Sales.SalesOrderDetailType_inmem, @SalesOrderID int, @DueDate datetime2 = sysdatetime(), @CustomerID int = rand() * 8000, @BillToAddressID int = rand() * 10000, @ShipToAddressID int = rand() * 10000, @ShipMethodID int = (rand() * 5) + 1; INSERT INTO @od SELECT OrderQty, ProductID, SpecialOfferID FROM Demo.DemoSalesOrderDetailSeed WHERE OrderID= cast((rand()*106) + 1 as int); while (@i < 20) begin; EXEC Sales.usp_InsertSalesOrder_inmem @SalesOrderID OUTPUT, @DueDate, @CustomerID, @BillToAddressID, @ShipToAddressID, @ShipMethodID, @od; set @i += 1 end"  
 ```  
   
  On one test server with a total number of 8 physical (16 logical) cores, this took 2 minutes and 5 seconds. On a second test server with 24 physical (48 logical) cores, this took 1 minute and 0 seconds.  
@@ -403,7 +403,7 @@ ostress.exe –n100 –r5000 -S. -E -dAdventureWorks2016CTP3 -q -Q"DECLARE @i in
  Click the Copy button to copy the command, and paste it into the RML Utilities command prompt.  
   
 ```  
-ostress.exe –n100 –r5000 -S. -E -dAdventureWorks2016CTP3 -q -Q"DECLARE @i int = 0, @od Sales.SalesOrderDetailType_ondisk, @SalesOrderID int, @DueDate datetime2 = sysdatetime(), @CustomerID int = rand() * 8000, @BillToAddressID int = rand() * 10000, @ShipToAddressID int = rand() * 10000, @ShipMethodID int = (rand() * 5) + 1; INSERT INTO @od SELECT OrderQty, ProductID, SpecialOfferID FROM Demo.DemoSalesOrderDetailSeed WHERE OrderID= cast((rand()*106) + 1 as int); while (@i < 20) begin; EXEC Sales.usp_InsertSalesOrder_ondisk @SalesOrderID OUTPUT, @DueDate, @CustomerID, @BillToAddressID, @ShipToAddressID, @ShipMethodID, @od; set @i += 1 end"  
+ostress.exe -n100 -r5000 -S. -E -dAdventureWorks2016CTP3 -q -Q"DECLARE @i int = 0, @od Sales.SalesOrderDetailType_ondisk, @SalesOrderID int, @DueDate datetime2 = sysdatetime(), @CustomerID int = rand() * 8000, @BillToAddressID int = rand() * 10000, @ShipToAddressID int = rand() * 10000, @ShipMethodID int = (rand() * 5) + 1; INSERT INTO @od SELECT OrderQty, ProductID, SpecialOfferID FROM Demo.DemoSalesOrderDetailSeed WHERE OrderID= cast((rand()*106) + 1 as int); while (@i < 20) begin; EXEC Sales.usp_InsertSalesOrder_ondisk @SalesOrderID OUTPUT, @DueDate, @CustomerID, @BillToAddressID, @ShipToAddressID, @ShipMethodID, @od; set @i += 1 end"  
 ```  
   
  On one test server with a total number of 8 physical (16 logical) cores, this took 41 minutes and 25 seconds. On a second test server with 24 physical (48 logical) cores, this took 52 minutes and 16 seconds.  
@@ -589,7 +589,7 @@ WHERE f.type=N'FX'
 ```  
   
 #### Initial state  
- When the sample filegroup and sample memory-optimized tables are created initially, a number of checkpoint files are pre-created and the system starts filling the files – the number of checkpoint files pre-created depends on the number of logical processors in the system. As the sample is initially very small, the pre-created files will be mostly empty after initial create.  
+ When the sample filegroup and sample memory-optimized tables are created initially, a number of checkpoint files are pre-created and the system starts filling the files - the number of checkpoint files pre-created depends on the number of logical processors in the system. As the sample is initially very small, the pre-created files will be mostly empty after initial create.  
   
  The following shows the initial on-disk size for the sample on a machine with 16 logical processors:  
   

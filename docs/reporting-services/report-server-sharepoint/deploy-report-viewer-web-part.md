@@ -51,7 +51,7 @@ This section shows you how to deploy the solution package to your SharePoint far
 2. Run [Add-SPSolution](https://technet.microsoft.com/library/ff607552(v=office.16).aspx) to add the farm solution.
 
     ```
-    Add-SPSolution –LiteralPath "{path to file}\ReportViewerWebPart.wsp"
+    Add-SPSolution -LiteralPath "{path to file}\ReportViewerWebPart.wsp"
     ```
 
     The cmdlet returns the name of the solution, its solution ID, and Deployed=False. In the next step, you will deploy the solution.
@@ -61,13 +61,13 @@ This section shows you how to deploy the solution package to your SharePoint far
     **SharePoint 2013**
 
     ```
-    Install-SPSolution –Identity ReportViewerWebPart.wsp -CompatibilityLevel "14,15" -GACDeployment -WebApplication {URL to web application}
+    Install-SPSolution -Identity ReportViewerWebPart.wsp -CompatibilityLevel "14,15" -GACDeployment -WebApplication {URL to web application}
     ```
 
     **SharePoint 2016**
 
     ```
-    Install-SPSolution –Identity ReportViewerWebPart.wsp -GACDeployment -WebApplication {URL to web application}
+    Install-SPSolution -Identity ReportViewerWebPart.wsp -GACDeployment -WebApplication {URL to web application}
     ```
 
 ## Activate feature

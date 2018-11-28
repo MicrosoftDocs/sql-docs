@@ -41,7 +41,7 @@ manager: craigg
   
  To get around the problem use the following procedure:  
   
-1.  Remove the –m startup parameter from the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] advanced Properties.  
+1.  Remove the -m startup parameter from the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] advanced Properties.  
   
 2.  Take the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] resource offline.  
   

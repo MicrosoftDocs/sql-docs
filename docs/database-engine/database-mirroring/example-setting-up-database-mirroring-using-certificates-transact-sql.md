@@ -28,7 +28,7 @@ manager: craigg
   
  The initial principal role is taken by HOST_A, and the mirror role is taken by HOST_B.  
   
- Setting up database mirroring using certificates involves four general stages, of which three stages—1, 2, and 4—are demonstrated by this example. These stages are as follows:  
+ Setting up database mirroring using certificates involves four general stages, of which three stages-1, 2, and 4-are demonstrated by this example. These stages are as follows:  
   
 1.  [Configuring Outbound Connections](#ConfiguringOutboundConnections)  
   

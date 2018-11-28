@@ -44,7 +44,7 @@ manager: craigg
 ### Changes to SharePoint Mode Command-Line Installation  
  The input setting **/RSINSTALLMODE** only works with Native mode installations and it does not work for SharePoint mode installations. For example, the following is not supported in [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]: **/RSINSTALLMODE="DefaultSharePointMode"**. In place of that input setting, use **/RSSHPINSTALLMODE="DefaultSharePointMode"**.  
   
- The following statement is an example of a complete installation command and parameter set: **setup /ACTION=install /FEATURES=SQL,RS /InstanceName=Denali_INST1 …. /RSSHPINSTALLMODE="DefaultSharePointMode"**  
+ The following statement is an example of a complete installation command and parameter set: **setup /ACTION=install /FEATURES=SQL,RS /InstanceName=Denali_INST1 .... /RSSHPINSTALLMODE="DefaultSharePointMode"**  
   
  For more information on command-line installations, see [Command Prompt Installation of Reporting Services SharePoint Mode and Native Mode](install-windows/install-reporting-services-at-the-command-prompt.md).  
   

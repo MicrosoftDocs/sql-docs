@@ -22,7 +22,7 @@ This is the RDS Tutorial, written in Microsoft Visual Basic Scripting Edition. F
 > [!IMPORTANT]
 >  Beginning with Windows 8 and Windows Server 2012, RDS server components are no longer included in the Windows operating system (see Windows 8 and [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) for more detail). RDS client components will be removed in a future version of Windows. Avoid using this feature in new development work, and plan to modify applications that currently use this feature. Applications that use RDS should migrate to [WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565).  
   
- In this tutorial, [RDS.DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) and [RDS.DataSpace](../../../ado/reference/rds-api/dataspace-object-rds.md) are created at design time — that is, they are defined with object tags, like this: `<OBJECT>...</OBJECT>`. Alternatively, they could be created at run time with the [CreateObject Method (RDS)](../../../ado/reference/rds-api/createobject-method-rds.md) method. For example, the **RDS.DataControl** object could be created like this:  
+ In this tutorial, [RDS.DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) and [RDS.DataSpace](../../../ado/reference/rds-api/dataspace-object-rds.md) are created at design time - that is, they are defined with object tags, like this: `<OBJECT>...</OBJECT>`. Alternatively, they could be created at run time with the [CreateObject Method (RDS)](../../../ado/reference/rds-api/createobject-method-rds.md) method. For example, the **RDS.DataControl** object could be created like this:  
   
 ```vb
 Set DC = Server.CreateObject("RDS.DataControl")  
@@ -43,7 +43,7 @@ Set DC = Server.CreateObject("RDS.DataControl")
    Dim DF1   
 ```  
   
-## Step 1 — Specify a server program  
+## Step 1 - Specify a server program  
  VBScript can discover the name of the IIS Web server it is running on by accessing the VBScript **Request.ServerVariables** method available to Active Server Pages:  
   
 ```vb
@@ -59,7 +59,7 @@ Set DC = Server.CreateObject("RDS.DataControl")
 Set DF1 = DS1.CreateObject("RDSServer.DataFactory", "https://yourServer")  
 ```  
   
-## Step 2a — Invoke the server program with RDS.DataControl  
+## Step 2a - Invoke the server program with RDS.DataControl  
  This example is merely a comment demonstrating that the default behavior of the **RDS.DataControl** is to perform the specified query.  
   
 ```vb
@@ -78,17 +78,17 @@ Sub RDSTutorial2A()
 ...  
 ```  
   
-## Step 2b — Invoke the server program with RDSServer.DataFactory  
+## Step 2b - Invoke the server program with RDSServer.DataFactory  
   
-## Step 3 — Server obtains a Recordset  
+## Step 3 - Server obtains a Recordset  
   
-## Step 4 — Server returns the Recordset  
+## Step 4 - Server returns the Recordset  
   
 ```vb
 Set RS = DF1.Query("DSN=Pubs;", "SELECT * FROM Authors")  
 ```  
   
-## Step 5 — DataControl is made usable by visual controls  
+## Step 5 - DataControl is made usable by visual controls  
   
 ```vb
 ' Assign the returned recordset to the DataControl.  
@@ -96,7 +96,7 @@ Set RS = DF1.Query("DSN=Pubs;", "SELECT * FROM Authors")
 DC1.SourceRecordset = RS  
 ```  
   
-## Step 6a — Changes are sent to the server with RDS.DataControl  
+## Step 6a - Changes are sent to the server with RDS.DataControl  
  This example is merely a comment demonstrating how the **RDS.DataControl** performs updates.  
   
 ```vb
@@ -120,7 +120,7 @@ Set DC1.SourceRecordset = RS
 DC1.SubmitChanges  
 ```  
   
-## Step 6b — Changes are sent to the server with RDSServer.DataFactory  
+## Step 6b - Changes are sent to the server with RDSServer.DataFactory  
   
 ```vb
 DF.SubmitChanges "DSN=Pubs", RS  

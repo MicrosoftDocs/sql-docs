@@ -51,7 +51,7 @@ Public Sub Main()
     ' Begin a transaction, then execute a command asynchronously  
     Cnxn.BeginTrans  
     Cnxn.Execute strCmdChange, , adAsyncExecute  
-    ' do something else for a little while –  
+    ' do something else for a little while -  
     ' use i = 1 to 32000 to allow completion  
     Dim i As Integer  
     For i = 1 To 1000  

@@ -44,7 +44,7 @@ If the source data contains control characters, the **FOR JSON** clause encodes 
 |---------------------------|--------------------------|  
 |CHAR(0)|\u0000|  
 |CHAR(1)|\u0001|  
-|…|…|  
+|...|...|  
 |CHAR(31)|\u001f|  
   
 ## Example  

@@ -94,7 +94,7 @@ STATE = STOP
   
 4.  Expand the **Template** drop down box.  
   
-5.  Click **\<File From …>Open** and browse for the session (XML file) you want to import.  
+5.  Click **\<File From ...>Open** and browse for the session (XML file) you want to import.  
   
  The session appears under the **Sessions** node. By default, the session is not started.  
   

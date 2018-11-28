@@ -113,7 +113,7 @@ When you install SQL Server 2016 Reporting Services SharePoint mode, PowerShell 
  Return a list of cmdlets that contain 'SPRS' in the name. This will be the full list of Reporting Services cmdlets.  
   
 ```  
-Get-command –noun *SPRS*  
+Get-command -noun *SPRS*  
 ```  
   
  Or with a little more detail, piped to a text file named commandlist.txt  
@@ -146,7 +146,7 @@ Get-content -path C:\Users\testuser\AppData\Local\Temp\rs_sp_0.log | select-stri
   
 ## Detailed samples
 
- In addition to the following samples, see the section "Windows PowerShell Script" in the topic [Windows PowerShell script for Steps 1–4](../../reporting-services/install-windows/install-the-first-report-server-in-sharepoint-mode.md#bkmk_full_script).  
+ In addition to the following samples, see the section "Windows PowerShell Script" in the topic [Windows PowerShell script for Steps 1-4](../../reporting-services/install-windows/install-the-first-report-server-in-sharepoint-mode.md#bkmk_full_script).  
   
 ### Create a reporting services service application and proxy
 
@@ -161,11 +161,11 @@ Get-content -path C:\Users\testuser\AppData\Local\Temp\rs_sp_0.log | select-stri
 ```  
 # Create service application and service application proxy  
 $appPool = Get-SPServiceApplicationPool "My App Pool"  
-$serviceApp = New-SPRSServiceApplication "My RS Service App" –ApplicationPool $appPool  
-$serviceAppProxy = New-SPRSServiceApplicationProxy –Name "My RS Service App Proxy" –ServiceApplication $serviceApp  
+$serviceApp = New-SPRSServiceApplication "My RS Service App" -ApplicationPool $appPool  
+$serviceAppProxy = New-SPRSServiceApplicationProxy -Name "My RS Service App Proxy" -ServiceApplication $serviceApp  
   
 # Add service application proxy to default proxy group.  Any web application that uses the default proxy group will now be able to use this service application.  
-Get-SPServiceApplicationProxyGroup –default | Add-SPServiceApplicationProxyGroupMember –Member $serviceAppProxy  
+Get-SPServiceApplicationProxyGroup -default | Add-SPServiceApplicationProxyGroupMember -Member $serviceAppProxy  
   
 # Grant application pool account access to the port 80 web application's content database.  
 $webApp = Get-SPWebApplication "https://sitename"  
@@ -200,14 +200,14 @@ $app=get-sprsserviceapplication | where {$_.name -like " ssrs_testapp *"}
  The second statement will Get the 'Report Server Email' delivery extension for the service application object in variable $app, and select the configurationXML  
   
 ```  
-$app=get-sprsserviceapplication –Name "Reporting Services Application"  
+$app=get-sprsserviceapplication -Name "Reporting Services Application"  
 Get-SPRSExtension -identity $app -ExtensionType "Delivery" -name "Report Server Email" | select -ExpandProperty ConfigurationXml  
 ```  
   
  You can also rewrite the above two statements as one:  
   
 ```  
-get-sprsserviceapplication –Name "Reporting Services Application" | Get-SPRSExtension -ExtensionType "Delivery" -name "Report Server Email" | select -ExpandProperty ConfigurationXml  
+get-sprsserviceapplication -Name "Reporting Services Application" | Get-SPRSExtension -ExtensionType "Delivery" -name "Report Server Email" | select -ExpandProperty ConfigurationXml  
 ```  
   
 ### Get and set properties of the Reporting Service application database
@@ -233,13 +233,13 @@ get-SPRSDatabase | select id, querytimeout,connectiontimeout, status, server, Se
      `ServiceInstance   : SPDatabaseServiceInstance`  
   
 ```  
-Set-SPRSDatabase –identity 56f8d1bc-cb04-44cf-bd41-a873643c5a14 -QueryTimeout 300  
+Set-SPRSDatabase -identity 56f8d1bc-cb04-44cf-bd41-a873643c5a14 -QueryTimeout 300  
 ```  
   
  To verify the value is set, run the GET cmdlet again.  
   
 ```  
-Get-SPRSDatabase –identity 56f8d1bc-cb04-44cf-bd41-a873643c5a14 | select id, querytimeout,connectiontimeout, status, server, ServiceInstance  
+Get-SPRSDatabase -identity 56f8d1bc-cb04-44cf-bd41-a873643c5a14 | select id, querytimeout,connectiontimeout, status, server, ServiceInstance  
 ```  
   
 ### List Reporting Services data extensions

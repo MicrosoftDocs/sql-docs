@@ -34,7 +34,7 @@ manager: craigg
   
  Alternatively, you can browse data using the built-in MDX query designer that is built into [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]. The query designer returns the same data, except the data is presented as a flat rowset.  
   
-## Step 2: Download SQL Server Data Tools – Business Intelligence for Visual Studio 2012  
+## Step 2: Download SQL Server Data Tools - Business Intelligence for Visual Studio 2012  
  In this release, SQL Server Data Tools is downloaded and installed separately from other SQL Server features. The designers and project templates used to create BI models and reports are now available as a free web download.  
   
 -   [Download the Business Intelligence version of SQL Server Data Tools](http://go.microsoft.com/fwlink/p/?LinkID=322038). The file is saved to the Downloads folder. Run setup to install the tool.  
@@ -44,7 +44,7 @@ manager: craigg
 ## Step 3: Install Databases  
  An Analysis Services multidimensional model uses transactional data that you import from a relational database management system. For the purposes of this tutorial, you will use the following relational database as your data source.  
   
--   **AdventureWorksDW2012** – This is a relational data warehouse that runs on a Database Engine instance. It provides the original data that will be used by the Analysis Services databases and projects that you build and deploy throughout the tutorial.  
+-   **AdventureWorksDW2012** - This is a relational data warehouse that runs on a Database Engine instance. It provides the original data that will be used by the Analysis Services databases and projects that you build and deploy throughout the tutorial.  
   
      You can use this sample database with [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] as well as [!INCLUDE[ssSQL11](../includes/sssql11-md.md)].  
   

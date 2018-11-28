@@ -31,5 +31,5 @@ manager: craigg
 The buffer pool's initial memory allocations or reservations have failed, and SQL Server exits.  
   
 ## User Action  
-Usually caused by starting SQL Server on an extremely small machine – far smaller than the minimum system requirements.  
+Usually caused by starting SQL Server on an extremely small machine - far smaller than the minimum system requirements.  
   

@@ -62,7 +62,7 @@ manager: craigg
   
 4.  Right-click the operator to which you want to assign an alert and select **Properties**, and select the **Notifications** page.  
   
-5.  In the *operator_name***Properties** dialog box, under **Select a page**, select **Notifications**.  
+5.  In the _operator_name_**Properties** dialog box, under **Select a page**, select **Notifications**.  
   
 6.  Under **View notifications sent to this user by**, select **Alerts** to view a list of alerts sent to this operator or select **Jobs** to view a list of jobs that send notifications to this operator. Select one or more of the following checkboxes to define the notification method for each notification as necessary: **E-mail**, **Pager**, or **Net send**.  
   

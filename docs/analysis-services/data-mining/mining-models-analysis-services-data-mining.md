@@ -35,11 +35,11 @@ manager: kfile
   
  ![model contains metadata, patterns, and bindings](../../analysis-services/data-mining/media/dmcon-modelarch2.gif "model contains metadata, patterns, and bindings")  
   
- The metadata specifies the name of the model and the server where it is stored, as well as a definition of the model, including the columns from the mining structure that were used in building the model, the definitions of any filters that were applied when processing the model, and the algorithm that was used to analyze the data. All these choices—the data columns and their data types, filters, and algorithm—have a powerful influence on the results of analysis.  
+ The metadata specifies the name of the model and the server where it is stored, as well as a definition of the model, including the columns from the mining structure that were used in building the model, the definitions of any filters that were applied when processing the model, and the algorithm that was used to analyze the data. All these choices-the data columns and their data types, filters, and algorithm-have a powerful influence on the results of analysis.  
   
  For example, you can use the same data to create multiple models, using perhaps a clustering algorithm, decision tree algorithm, and Naïve Bayes algorithm. Each model type creates different set of patterns, itemsets, rules, or formulas, which you can use for making predictions. Generally each algorithm analyses the data in a different way, so the *content* of the resulting model is also organized in different structures. In one type of model, the data and patterns might be grouped in *clusters*; in another type of model, data might be organized into trees, branches, and the rules that divide and define them.  
   
- The model is also affected by the data that you train it on: even models trained on the same mining structure can yield different results if you filter the data differently or use different seeds during analysis. However, the actual data is not stored in the model—only summary statistics are stored, with the actual data residing in the mining structure. If you have created filters on the data when you trained the model, the filter definitions are saved with the model object as well.  
+ The model is also affected by the data that you train it on: even models trained on the same mining structure can yield different results if you filter the data differently or use different seeds during analysis. However, the actual data is not stored in the model-only summary statistics are stored, with the actual data residing in the mining structure. If you have created filters on the data when you trained the model, the filter definitions are saved with the model object as well.  
   
  The model does contain a set of bindings, which point back to the data cached in the mining structure. If the data has been cached in the structure and has not been cleared after processing, these bindings enable you to drill through from the results to the cases that support the results. However, the actual data is stored in the structure cache, not in the model.  
   
@@ -52,7 +52,7 @@ manager: kfile
   
 -   Select the algorithm that is best suited to the analytical task.  
   
--   Choose the columns from the structure to use in the model, and specify how they should be used—which column contains the outcome you want to predict, which columns are for input only, and so forth.  
+-   Choose the columns from the structure to use in the model, and specify how they should be used-which column contains the outcome you want to predict, which columns are for input only, and so forth.  
   
 -   Optionally, set parameters to fine-tune the processing by the algorithm.  
   

@@ -88,7 +88,7 @@ manager: craigg
     EXEC dbo.sp_add_alert  
         @name = N'Test Alert 2',  
         @message_id = 54001  
-        @notification_message = N'Error 54001 has occurred on the Sales.SalesOrderDetail table on the AdventureWorks2012 database. Please see the following information…',  
+        @notification_message = N'Error 54001 has occurred on the Sales.SalesOrderDetail table on the AdventureWorks2012 database. Please see the following information...',  
         @wmi_namespace = '\\.\root\Microsoft\SqlServer\ServerEvents\,  
         @wmi_query = N'SELECT * FROM ALTER_TABLE   
     WHERE DatabaseName = 'AdventureWorks2012' AND SchemaName = 'Sales'   

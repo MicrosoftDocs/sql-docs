@@ -40,27 +40,27 @@ sp_add_data_file_recover_suspect_db [ @dbName= ] 'database'
 ```  
   
 ## Arguments  
- [ **@dbName=** ] **'***database* **'**  
+ [ **@dbName=** ] **'**_database_ **'**  
  Is the name of the database. *database* is **sysname**, with no default.  
   
- [ **@filegroup=** ] **'***filegroup_name* **'**  
+ [ **@filegroup=** ] **'**_filegroup_name_ **'**  
  Is the filegroup to which to add the file. *filegroup_name* is **nvarchar(260)**, with a default of NULL, which indicates the primary file.  
   
- [ **@name=** ] **'***logical_file_name* **'**  
+ [ **@name=** ] **'**_logical_file_name_ **'**  
  Is the name used in the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to reference the file. The name must be unique in the server. *logical_file_name* is **nvarchar(260)**, with no default.  
   
- [ **@filename=** ] **'***os_file_name* **'**  
+ [ **@filename=** ] **'**_os_file_name_ **'**  
  Is the path and file name used by the operating system for the file. The file must reside on an instance of the [!INCLUDE[ssDE](../../includes/ssde-md.md)]. *os_file_name* is **nvarchar(260)**, with no default.  
   
- [ **@size=** ] **'***size* **'**  
+ [ **@size=** ] **'**_size_ **'**  
  Is the initial size of the file. *size* is **nvarchar(20)**, with a default of NULL. Specify a whole number; do not include a decimal. The MB and KB suffixes can be used to specify megabytes or kilobytes. The default is MB. The minimum value is 512 KB. If *size* is not specified, the default is 1 MB.  
   
- [ **@maxsize=** ] **'***max_size* **'**  
+ [ **@maxsize=** ] **'**_max_size_ **'**  
  Is the maximum size to which the file can grow. *max_size* is **nvarchar(20)**, with a default of NULL. Specify a whole number; do not include a decimal. The MB and KB suffixes can be used to specify megabytes or kilobytes. The default is MB.  
   
  If *max_size* is not specified, the file will grow until the disk is full. The [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows application log warns an administrator when a disk is about to become full.  
   
- [ **@filegrowth=** ] **'***growth_increment* **'**  
+ [ **@filegrowth=** ] **'**_growth_increment_ **'**  
  Is the amount of space added to the file each time new space is required. *growth_increment* is **nvarchar(20)**, with a default of NULL. A value of 0 indicates no growth. Specify a whole number; do not include a decimal. The value can be specified in MB, KB, or percent (%). When % is specified, the growth increment is the specified percentage of the size of the file at the time the increment occurs. If a number is specified without an MB, KB, or % suffix, the default is MB.  
   
  If *growth_increment* is NULL, the default value is 10%, and the minimum value is 64 KB. The size specified is rounded to the nearest 64 KB.  

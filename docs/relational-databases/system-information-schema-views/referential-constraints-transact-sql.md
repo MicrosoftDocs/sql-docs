@@ -26,7 +26,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
 
   Returns one row for each FOREIGN KEY constraint in the current database. This information schema view returns information about the objects to which the current user has permissions.  
   
- To retrieve information from these views, specify the fully qualified name of **INFORMATION_SCHEMA.***view_name*.  
+ To retrieve information from these views, specify the fully qualified name of **INFORMATION_SCHEMA.**_view_name_.  
   
 |Column name|Data type|Description|  
 |-----------------|---------------|-----------------|  

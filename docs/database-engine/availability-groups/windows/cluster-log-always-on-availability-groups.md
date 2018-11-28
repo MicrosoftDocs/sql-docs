@@ -28,7 +28,7 @@ manager: craigg
   
 ```powershell  
 Import-Module FailoverClusters   
-Get-ClusterLog –TimeSpan 15 –Destination .  
+Get-ClusterLog -TimeSpan 15 -Destination .  
 ```  
   
 ## Always On log verbosity  

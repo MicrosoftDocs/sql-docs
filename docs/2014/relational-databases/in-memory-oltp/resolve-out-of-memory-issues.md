@@ -20,7 +20,7 @@ manager: craigg
 |-----------|--------------|  
 |[Resolve database restore failures due to OOM](resolve-out-of-memory-issues.md#bkmk_resolverecoveryfailures)|What to do if you get the error message, "Restore operation failed for database '*\<databaseName>*' due to insufficient memory in the resource pool '*\<resourcePoolName>*'."|  
 |[Resolve impact of low memory or OOM conditions on the workload](resolve-out-of-memory-issues.md#bkmk_recoverfromoom)|What to do if you find low memory issues are negatively impacting performance.|  
-|[Resolve page allocation failures due to insufficient memory when sufficient memory is available](resolve-out-of-memory-issues.md#bkmk_pageallocfailure)|What to do if you get the error message, "Disallowing page allocations for database '*\<databaseName>*' due to insufficient memory in the resource pool '*\<resourcePoolName>*'. …" when available memory is sufficient for the operation.|  
+|[Resolve page allocation failures due to insufficient memory when sufficient memory is available](resolve-out-of-memory-issues.md#bkmk_pageallocfailure)|What to do if you get the error message, "Disallowing page allocations for database '*\<databaseName>*' due to insufficient memory in the resource pool '*\<resourcePoolName>*'. ..." when available memory is sufficient for the operation.|  
   
 ##  <a name="bkmk_resolveRecoveryFailures"></a> Resolve database restore failures due to OOM  
  When you attempt to restore a database you may get the error message: "Restore operation failed for database '*\<databaseName>*' due to insufficient memory in the resource pool '*\<resourcePoolName>*'." Before you can successfully restore the database you must resolve the insufficient memory issue by making more memory available.  
@@ -68,7 +68,7 @@ manager: craigg
 2.  [Take corrective action](resolve-out-of-memory-issues.md#bkmk_takecorrectiveaction)  
   
 ###  <a name="bkmk_openDAC"></a> Open a DAC (Dedicated Administrator Connection)  
- Microsoft SQL Server provides a dedicated administrator connection (DAC). The DAC allows an administrator to access a running instance of SQL Server Database Engine to troubleshoot problems on the server—even when the server is unresponsive to other client connections. The DAC is available through the `sqlcmd` utility and SQL Server Management Studio (SSMS).  
+ Microsoft SQL Server provides a dedicated administrator connection (DAC). The DAC allows an administrator to access a running instance of SQL Server Database Engine to troubleshoot problems on the server-even when the server is unresponsive to other client connections. The DAC is available through the `sqlcmd` utility and SQL Server Management Studio (SSMS).  
   
  For guidance on using `sqlcmd` and DAC see [Using a Dedicated Administrator Connection](../../database-engine/configure-windows/diagnostic-connection-for-database-administrators.md). For guidance on using DAC through SSMS see [How to: Use the Dedicated Administrator Connection with SQL Server Management Studio](http://msdn.microsoft.com/library/ms178068.aspx).  
   

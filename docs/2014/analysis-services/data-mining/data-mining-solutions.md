@@ -29,7 +29,7 @@ manager: craigg
  [Solution Walkthroughs](#bkmk_Walkthru)  
   
 ##  <a name="bkmk_RelMD"></a> Relational vs. Multidimensional Solutions  
- A data mining solution can be based either on multidimensional data—that is, an existing cube—or on purely relational data, such as the tables and views in a data warehouse, or on text files, Excel workbooks, or other external data sources.  
+ A data mining solution can be based either on multidimensional data-that is, an existing cube-or on purely relational data, such as the tables and views in a data warehouse, or on text files, Excel workbooks, or other external data sources.  
   
 -   You can create data mining objects within an existing multidimensional database solution.  
   

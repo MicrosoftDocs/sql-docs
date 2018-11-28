@@ -44,7 +44,7 @@ manager: craigg
   
 -   **Building index**  
   
--   **Disk is full—Paused**  
+-   **Disk is full-Paused**  
   
 -   **Change tracking**  
   

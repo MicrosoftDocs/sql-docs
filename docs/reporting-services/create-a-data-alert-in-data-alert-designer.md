@@ -71,15 +71,15 @@ You create data alert definitions in Data Alert Designer. After you save the ale
   
 10. Type the comparison value.  
   
-11. Optionally, click the ellipsis **(…)** again.  
+11. Optionally, click the ellipsis **(...)** again.  
   
-     The ellipsis **(…)** appears on the line that contains the first clause.  
+     The ellipsis **(...)** appears on the line that contains the first clause.  
   
      An OR clause is added below and within the AND rule.  
   
 12. Optionally, click the down-arrow, select **Field Selection Mode**, and then select a column in the list.  
   
-     You will notice that the ellipsis **(…)** that you click to add OR clauses has disappeared.  
+     You will notice that the ellipsis **(...)** that you click to add OR clauses has disappeared.  
   
 13. Optionally, click **Add rule** again to add additional rules.  
   

@@ -52,7 +52,7 @@ manager: craigg
   
     -   Select one or more rows in the upper grid, and then click **Remove**, which removes the row from the conflicts metadata table.  
   
-    -   Click the properties button (**…**) to view more information on a column involved in a conflict.  
+    -   Click the properties button (**...**) to view more information on a column involved in a conflict.  
   
     -   Select **Log the details of this conflict** to log conflict data to a file. To specify a location for the file, point to the **View** menu, and then click **Options**. Enter a value, or click the browse button (**...**), and then navigate to the appropriate file. Click **OK** to close the **Options** dialog box.  
   

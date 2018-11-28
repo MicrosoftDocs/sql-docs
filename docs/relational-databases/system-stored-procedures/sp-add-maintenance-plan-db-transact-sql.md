@@ -40,10 +40,10 @@ sp_add_maintenance_plan_db [ @plan_id = ] 'plan_id' ,
 ```  
   
 ## Arguments  
- [ **@plan_id =**] **'***plan_id***'**  
+ [ **@plan_id =**] **'**_plan_id_**'**  
  Specifies the plan ID of the maintenance plan. *plan_id* is **uniqueidentifier**, and must be a valid ID.  
   
- [ **@db_name =**] **'***database_name***'**  
+ [ **@db_name =**] **'**_database_name_**'**  
  Specifies the name of the database to be added to the maintenance plan. The database must be created or exist before its addition to the plan. *database_name* is **sysname**.  
   
 ## Return Code Values  

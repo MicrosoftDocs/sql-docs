@@ -35,7 +35,7 @@ ms.author: maggies
   
 7.  In **Use this Field**, select the field that contains images in your report.  
   
-8.  In **Use this MIME type**, select the MIME type, or file format, of the image—for example, bmp.  
+8.  In **Use this MIME type**, select the MIME type, or file format, of the image-for example, bmp.  
   
 9. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   

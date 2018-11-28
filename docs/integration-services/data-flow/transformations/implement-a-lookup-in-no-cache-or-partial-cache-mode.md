@@ -55,11 +55,11 @@ manager: craigg
   
     -   Click **Use results of an SQL query**, and then build a query in the **SQL Command** window.  
   
-         —or—  
+         -or-  
   
          Click **Build Query** to build a query by using the graphical tools that the **Query Builder** provides.  
   
-         —or—  
+         -or-  
   
          Click **Browse** to import an SQL statement from a file.  
   

@@ -30,7 +30,7 @@ For instance, SSMS 17.7 was released in May 2018. 17.7 got full support until Ju
 
 For best experience, it is recommended for customers to install the most recent version via https://aka.ms/ssms  
 
-**Full Support** servicing phase: When running the latest current branch version of SQL Server Management Studio, you receive all updates – Security Updates, Critical Updates, new features etc.
+**Full Support** servicing phase: When running the latest current branch version of SQL Server Management Studio, you receive all updates - Security Updates, Critical Updates, new features etc.
 
 
 

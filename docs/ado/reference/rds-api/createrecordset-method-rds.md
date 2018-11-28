@@ -56,7 +56,7 @@ object.CreateRecordset(ColumnInfos)
   
  The following table lists the [DataTypeEnum](../../../ado/reference/ado-api/datatypeenum.md) values supported by the **CreateRecordset** method. The number listed is the reference number used to define fields.  
   
- Each of the data types is either fixed length or variable length. Fixed-length types should be defined with a size of –1, because the size is predetermined and a size definition is still required. Variable-length data types allow a size from 1 to 32767.  
+ Each of the data types is either fixed length or variable length. Fixed-length types should be defined with a size of -1, because the size is predetermined and a size definition is still required. Variable-length data types allow a size from 1 to 32767.  
   
  For some of the variable data types, the type can be coerced to the type noted in the Substitution column. You will not see the substitutions until after the **Recordset** is created and filled. Then you can check for the actual data type, if necessary.  
   

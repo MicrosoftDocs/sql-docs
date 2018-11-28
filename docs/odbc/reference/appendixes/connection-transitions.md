@@ -260,7 +260,7 @@ ODBC connections have the following states.
   
  [1]   The connection was in auto-commit mode, or the data source did not begin a transaction.  
   
- [2]   The connection was in manual–commit mode, and the data source began a transaction.  
+ [2]   The connection was in manual-commit mode, and the data source began a transaction.  
   
 ## SQLSetConnectAttr  
   

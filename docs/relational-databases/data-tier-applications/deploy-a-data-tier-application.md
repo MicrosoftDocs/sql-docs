@@ -59,7 +59,7 @@ Deploying a DAC with logins to [!INCLUDE[ssSDS](../../includes/sssds-md.md)] req
   
 1.  In **Object Explorer**, expand the node for the instance to which you want to deploy the DAC.  
   
-2.  Right-click the **Databases** node, then select **Deploy Data-tier Application…**  
+2.  Right-click the **Databases** node, then select **Deploy Data-tier Application...**  
   
 3.  Complete the wizard dialogs and click finish.
 More about some of the wizard pages below: 

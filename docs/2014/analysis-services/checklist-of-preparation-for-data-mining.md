@@ -34,13 +34,13 @@ manager: craigg
   
 -   How much data do you have? Is there sufficient data for modeling?  
   
-     It need not be a huge amount – smaller and balanced can be better.  
+     It need not be a huge amount - smaller and balanced can be better.  
   
 -   Is the data from multiple sources, or a single source?  
   
 -   Is the data already processed and clean? Is more input data available?  
   
--   Do you know how it was manipulated before you received it – how data might have been truncated, summarized, or converted?  
+-   Do you know how it was manipulated before you received it - how data might have been truncated, summarized, or converted?  
   
 -   Does the input data have some example results that can be used for training?  
   
@@ -66,7 +66,7 @@ manager: craigg
 -   If you combined data sets, did you check for multiple columns representing the same data?  
   
  **I know where source data is stored, where it came from, and how it is processed. The process can be easily repeated if needed.**  
- One-off data sets are fine for experiments, but if you ever want to move the model into production, you'll want to think in advance about how the cleaning process can be applied to operational data. Also, if you have operational data, you need to know how it might have been altered before you got it—you'll need to know how it was rounded, or summarized, certainly.  
+ One-off data sets are fine for experiments, but if you ever want to move the model into production, you'll want to think in advance about how the cleaning process can be applied to operational data. Also, if you have operational data, you need to know how it might have been altered before you got it-you'll need to know how it was rounded, or summarized, certainly.  
   
 -   Do you want to be able to repeat the experiment?  
   

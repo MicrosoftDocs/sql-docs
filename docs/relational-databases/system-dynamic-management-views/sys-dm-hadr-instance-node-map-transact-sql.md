@@ -34,7 +34,7 @@ manager: craigg
 |Column name|Data type|Description|  
 |-----------------|---------------|-----------------|  
 |**ag_resource_id**|**nvarchar(256)**|Unique ID of the availability group as a resource in the WSFC cluster.|  
-|**instance_name**|**nvarchar(256)**|Name—*server*/*instance*—of a server instance that hosts a replica for the availability group.|  
+|**instance_name**|**nvarchar(256)**|Name-*server*/*instance*-of a server instance that hosts a replica for the availability group.|  
 |**node_name**|**nvarchar(256)**|Name of the WSFC cluster node.|  
   
 ## Permissions  

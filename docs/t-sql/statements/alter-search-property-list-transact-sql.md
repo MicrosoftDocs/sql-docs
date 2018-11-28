@@ -170,7 +170,7 @@ GO
 ## Examples  
   
 ### A. Adding a property  
- The following example adds several properties—`Title`, `Author`, and `Tags`—to a property list named `DocumentPropertyList`.  
+ The following example adds several properties-`Title`, `Author`, and `Tags`-to a property list named `DocumentPropertyList`.  
   
 > [!NOTE]  
 >  For an example that creates `DocumentPropertyList` property list, see [CREATE SEARCH PROPERTY LIST &#40;Transact-SQL&#41;](../../t-sql/statements/create-search-property-list-transact-sql.md).  

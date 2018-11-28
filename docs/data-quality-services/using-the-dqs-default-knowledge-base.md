@@ -33,7 +33,7 @@ manager: craigg
   
 -   **US - State**: Contains the conventional long (official) name and two-letter abbreviation for each state in US. Leading value is set to the conventional state name.  
   
--   **US – State (2-letter heading)**: Contains the conventional long (official) name and two-letter abbreviation for each state in US. Leading value is set to the two-letter abbreviation state name.  
+-   **US - State (2-letter heading)**: Contains the conventional long (official) name and two-letter abbreviation for each state in US. Leading value is set to the two-letter abbreviation state name.  
   
 ## Using the Default Knowledge Base  
  You can use the default DQS knowledge base, DQS Data, in the following ways:  

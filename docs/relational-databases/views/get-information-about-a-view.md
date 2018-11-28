@@ -134,7 +134,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
      Shows whether all columns are returned by the selected view. This is set at the time the view is created.  
   
      **SQL Comment**  
-     Shows a description of the SQL statements. To see the entire description, or to edit it, click the description and then click the ellipses **(…)** to the right of the property. Your comments might include information such as who uses the view and when they use it.  
+     Shows a description of the SQL statements. To see the entire description, or to edit it, click the description and then click the ellipses **(...)** to the right of the property. Your comments might include information such as who uses the view and when they use it.  
   
      **Top Specification**  
      Expands to show properties for the **Top**, **Expression**, **Percent**, and **With Ties** properties.  

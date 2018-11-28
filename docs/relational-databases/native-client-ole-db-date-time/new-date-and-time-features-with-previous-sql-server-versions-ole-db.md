@@ -33,8 +33,8 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 |DBTYPE_DBTIMESTAMP|||Time fields set to zero.|IRowsetChange will fail due to string truncation if the time field is non-zero.|  
 |DBTYPE_DBTIME||Time(0)|OK|OK|  
 |DBTYPE_DBTIMESTAMP|||Date fields set to current date.|IRowsetChange will fail due to string truncation if fractional seconds are non-zero.<br /><br /> Date is ignored.|  
-|DBTYPE_DBTIME||Time(7)|Fails – invalid time literal.|OK|  
-|DBTYPE_DBTIMESTAMP|||Fails – invalid time literal.|OK|  
+|DBTYPE_DBTIME||Time(7)|Fails - invalid time literal.|OK|  
+|DBTYPE_DBTIMESTAMP|||Fails - invalid time literal.|OK|  
 |DBTYPE_DBTIMESTAMP||Datetime2(3)|OK|OK|  
 |DBTYPE_DBTIMESTAMP||Datetime2(7)|OK|OK|  
 |DBTYPE_DBDATE|Smalldatetime|Date|OK|OK|  

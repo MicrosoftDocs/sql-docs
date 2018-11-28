@@ -71,7 +71,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 6.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
 ### Additional Options  
- The **Schema– New** dialog box also offers options on two additional pages: **Permissions** and **Extended Properties**.  
+ The **Schema- New** dialog box also offers options on two additional pages: **Permissions** and **Extended Properties**.  
   
 -   The **Permissions** page lists all possible securables and the permissions on those securables that can be granted to the login.  
   

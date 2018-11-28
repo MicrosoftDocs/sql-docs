@@ -38,7 +38,7 @@ Each **Field** object usually corresponds to a column in a database table. Howev
  Resolve discrepancies in field values during batch updating by using the **OriginalValue** and **UnderlyingValue** properties, if the provider supports batch updates.  
   
 ## Describing a Field  
- The topics that follow will discuss properties of the [Field](../../../ado/reference/ado-api/field-object.md) object that represent information that describes the **Field** object itself — that is, metadata about the field. This information can be used to determine much about the schema of the **Recordset**. These properties include **Type**, **DefinedSize** and **ActualSize**, **Name**, and **NumericScale** and **Precision**.  
+ The topics that follow will discuss properties of the [Field](../../../ado/reference/ado-api/field-object.md) object that represent information that describes the **Field** object itself - that is, metadata about the field. This information can be used to determine much about the schema of the **Recordset**. These properties include **Type**, **DefinedSize** and **ActualSize**, **Name**, and **NumericScale** and **Precision**.  
   
 ### Discovering the Data Type  
  The **Type** property indicates the data type of the field. The data type enumerated constants that are supported by ADO are described in [DataTypeEnum](../../../ado/reference/ado-api/datatypeenum.md) in the *ADO Programmer's Reference*.  

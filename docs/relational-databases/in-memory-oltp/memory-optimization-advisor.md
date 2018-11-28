@@ -27,7 +27,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
   
 -   Migrate a table and data to memory-optimized (if there are no unsupported features).  
     
- For information about migration methodologies, see [In-Memory OLTP – Common Workload Patterns and Migration Considerations](https://msdn.microsoft.com/library/dn673538.aspx).  
+ For information about migration methodologies, see [In-Memory OLTP - Common Workload Patterns and Migration Considerations](https://msdn.microsoft.com/library/dn673538.aspx).  
   
 ## Walkthrough Using the Memory-Optimization Advisor  
  In **Object Explorer**, right click the table you want to convert, and select **Memory-Optimization Advisor**. This will display the welcome page for the **Table Memory Optimization Advisor**.  

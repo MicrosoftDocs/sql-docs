@@ -82,9 +82,9 @@ manager: craigg
   
 1.  browse to the document library that contains the report  
   
-2.  Open the context menu of the report (**…**).  
+2.  Open the context menu of the report (**...**).  
   
-3.  Select the expanded menu option (**…**).  
+3.  Select the expanded menu option (**...**).  
   
 4.  Select **Manage Subscriptions**  
   

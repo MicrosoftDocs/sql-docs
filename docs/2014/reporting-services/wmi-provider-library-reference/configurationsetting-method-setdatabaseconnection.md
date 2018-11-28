@@ -49,7 +49,7 @@ public void BackupEncryptionKey(string Server,
   
 -   0 - Windows  
   
--   1 – [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
+-   1 - [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
   
 -   2 - Windows Service  
   

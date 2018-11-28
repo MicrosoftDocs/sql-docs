@@ -33,13 +33,13 @@ manager: craigg
     > [!NOTE]  
     >  By default, the local instance is used as the source of the policies. If you have previously imported best practices policies, they will be listed, together with any other policies that you have created. You can select any of the imported best practices policies, and then click **Evaluate**. If you have not imported the best practices policies, continue with this procedure.  
   
-3.  In the **Evaluate Policies** dialog box, next to the **Source** box, click the ellipsis (**…**) button.  
+3.  In the **Evaluate Policies** dialog box, next to the **Source** box, click the ellipsis (**...**) button.  
   
 4.  In the **Select Source** dialog box, you can select either **Files** or **Server** as the source of the policy files to evaluate. If you click **Server**, you can perform an on-demand evaluation of any best practices policies that were previously imported into Policy-Based Management on a local or remote server. In this tutorial, you will click **Files**, and then select the individual policy files that you want to evaluate. To do this, follow these steps:  
   
     1.  Click **Files**.  
   
-    2.  Next to **Files**, click the ellipsis (**…**) button.  
+    2.  Next to **Files**, click the ellipsis (**...**) button.  
   
     3.  In the **Select Policy** dialog box, browse to the following folder, which contains the best practices policies:  
   

@@ -59,8 +59,8 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   
 |Expression|Syntax|Description|  
 |----------------|------------|-----------------|  
-|Minimal — zero or more|@|Matches zero or more occurrences of the preceding expression, matching as few characters as possible.|  
-|Minimal — one or more|#|Matches one or more occurrences of the preceding expression, matching as few characters as possible.|  
+|Minimal - zero or more|@|Matches zero or more occurrences of the preceding expression, matching as few characters as possible.|  
+|Minimal - one or more|#|Matches one or more occurrences of the preceding expression, matching as few characters as possible.|  
 |Repeat n times|^n|Matches n occurrences of the preceding expression. For example, [0-9]^4 matches any 4-digit sequence.|  
 |Grouping|()|Groups a subexpression.|  
 |nth tagged text|\n|In a **Find or Replace** expression, indicates the text matched by the nth tagged expression, where n is a number from 1 to 9.<br /><br /> In a **Replace** expression, \0 inserts the entire matched text.|  

@@ -64,7 +64,7 @@ To use data from a shared dataset, you can do the following.
   
     ![rsCreateKPI3](../reporting-services/media/rscreatekpi3.png)  
   
-2.  Select the **ellipsis (…)** in the data box. This will bring up the **Pick a Dataset** screen.  
+2.  Select the **ellipsis (...)** in the data box. This will bring up the **Pick a Dataset** screen.  
   
     ![rsCreateKPI4](../reporting-services/media/rscreatekpi4.png)  
   
@@ -86,7 +86,7 @@ To use data from a shared dataset, you can do the following.
   
 To remove a KPI, you can do the following.  
   
-1.  Select the **ellipsis (…)** of the KPI you want to remove. Select **Manage**.  
+1.  Select the **ellipsis (...)** of the KPI you want to remove. Select **Manage**.  
   
     ![rsRemoveKPI1](../reporting-services/media/rsremovekpi1.png)  
   

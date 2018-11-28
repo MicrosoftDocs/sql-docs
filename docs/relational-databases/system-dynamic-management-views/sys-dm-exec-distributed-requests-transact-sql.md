@@ -29,7 +29,7 @@ monikerRange: ">=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallpr
 
   Holds information about all requests currently or recently active in PolyBase queries. It lists one row per request/query.  
   
- Based on session and request ID, a user can then retrieve the actual distributed requests generated to be executed – via sys.dm_exec_distributed_requests. For example, a query involving regular SQL and external SQL tables will be decomposed into various statements/requests executed across the various compute nodes. To track the distributed steps across all compute nodes, we introduce a 'global' execution ID which can be used to track all operations on the compute nodes associated with one particular request and operator, respectively.  
+ Based on session and request ID, a user can then retrieve the actual distributed requests generated to be executed - via sys.dm_exec_distributed_requests. For example, a query involving regular SQL and external SQL tables will be decomposed into various statements/requests executed across the various compute nodes. To track the distributed steps across all compute nodes, we introduce a 'global' execution ID which can be used to track all operations on the compute nodes associated with one particular request and operator, respectively.  
   
 |Column Name|Data Type|Description|Range|  
 |-----------------|---------------|-----------------|-----------|  

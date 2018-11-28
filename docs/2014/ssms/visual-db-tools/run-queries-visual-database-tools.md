@@ -23,7 +23,7 @@ manager: craigg
   
 2.  Right-click anywhere in the query window, and select **Execute SQL** from the shortcut menu.  
   
-     –or–  
+     -or-  
   
      Press CTRL+R.  
   

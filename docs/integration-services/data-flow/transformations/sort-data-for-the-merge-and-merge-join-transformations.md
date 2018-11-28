@@ -33,7 +33,7 @@ manager: craigg
   
      The Sort transformation uses Windows collation to sort string values.  
   
-     —or—  
+     -or-  
   
 -   Use the Transact-SQL CAST operator to first cast **varchar** values to **nvarchar** values, and then use the Transact-SQL ORDER BY clause to sort the data.  
   

@@ -20,7 +20,7 @@ ms.author: maggies
 
   In this tutorial, you use a wizard to create a pie chart in a [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] paginated report in [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]. Then you add percentages and modify the pie chart a little. 
   
-You can do this tutorial two different ways. Both methods have the same outcome—a pie chart like the one in this illustration:  
+You can do this tutorial two different ways. Both methods have the same outcome-a pie chart like the one in this illustration:  
   
  ![Report Builder quick pie chart](../../reporting-services/report-builder/media/report-builder-quick-pie-chart.png "Report Builder quick pie chart")  
   

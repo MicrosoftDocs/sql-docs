@@ -33,7 +33,7 @@ manager: craigg
   
  [Upgrade Workbooks and Scheduled Data Refresh](#bkmk_upgrade_workbook)  
   
- [Beyond the Single-Server Installation –PowerPivot for Microsoft SharePoint](#bkmk_multiple_servers)  
+ [Beyond the Single-Server Installation -PowerPivot for Microsoft SharePoint](#bkmk_multiple_servers)  
   
 ##  <a name="bkmk_background"></a> Background  
  PowerPivot for SharePoint is a collection of middle-tier and backend services that provide PowerPivot data access in a SharePoint 2013 farm.  
@@ -243,7 +243,7 @@ manager: craigg
 ##  <a name="bkmk_upgrade_workbook"></a> Upgrade Workbooks and Scheduled Data Refresh  
  The steps required to upgrade workbooks created in previous versions of PowerPivot depend on what version of PowerPivot created the workbook. For more information, see [Upgrade Workbooks and Scheduled Data Refresh &#40;SharePoint 2013&#41;](../../../analysis-services/instances/install-windows/upgrade-workbooks-and-scheduled-data-refresh-sharepoint-2013.md).  
   
-##  <a name="bkmk_multiple_servers"></a> Beyond the Single-Server Installation –PowerPivot for Microsoft SharePoint  
+##  <a name="bkmk_multiple_servers"></a> Beyond the Single-Server Installation -PowerPivot for Microsoft SharePoint  
  **Web front-end (WFE)** or **Middle-tier:**: To use an [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] server in SharePoint mode in a larger SharePoint farm and to install additional PowerPivot features into the farm, run the installer package **spPowerPivot.msi** on each of the SharePoint servers. The spPowerPivot.msi installs required data providers and the PowerPivot for SharePoint 2013 Configuration tool.  
   
  For more information on installing and configuring the middle-tier, see the following:  

@@ -356,7 +356,7 @@ $FileName = 'Sales.bak';
 $database = 'Sales';
 $BackupFile = $container + '/' + $FileName ;
   
-Backup-SqlDatabase -ServerInstance "MyServer" –Database $database -BackupFile $BackupFile;
+Backup-SqlDatabase -ServerInstance "MyServer" -Database $database -BackupFile $BackupFile;
 ```
  
  **To set up and use the SQL Server PowerShell provider**  

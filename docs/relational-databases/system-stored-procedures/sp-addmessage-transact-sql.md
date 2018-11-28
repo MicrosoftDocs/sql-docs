@@ -43,10 +43,10 @@ sp_addmessage [ @msgnum= ] msg_id , [ @severity= ] severity , [ @msgtext= ] 'msg
  [ **@severity =** ]*severity*  
  Is the severity level of the error. *severity* is **smallint** with a default of NULL. Valid levels are from 1 through 25. For more information about severities, see [Database Engine Error Severities](../../relational-databases/errors-events/database-engine-error-severities.md).  
   
- [ **@msgtext =** ] **'***msg***'**  
+ [ **@msgtext =** ] **'**_msg_**'**  
  Is the text of the error message. *msg* is **nvarchar(255)** with a default of NULL.  
   
- [ **@lang =** ] **'***language***'**  
+ [ **@lang =** ] **'**_language_**'**  
  Is the language for this message. *language* is **sysname** with a default of NULL. Because multiple languages can be installed on the same server, *language* specifies the language in which each message is written. When *language* is omitted, the language is the default language for the session.  
   
  [ **@with_log =** ] { **'**TRUE**'** | **'FALSE'** }  
@@ -55,7 +55,7 @@ sp_addmessage [ @msgnum= ] msg_id , [ @severity= ] severity , [ @msgtext= ] 'msg
 > [!NOTE]  
 >  If a message is written to the Windows application log, it is also written to the [!INCLUDE[ssDE](../../includes/ssde-md.md)] error log file.  
   
- [ **@replace** *=* ] **'***replace***'**  
+ [ **@replace** *=* ] **'**_replace_**'**  
  If specified as the string *replace*, an existing error message is overwritten with new message text and severity level. *replace* is **varchar(7)** with a default of NULL. This option must be specified if *msg_id* already exists. If you replace a U.S. English message, the severity level is replaced for all messages in all other languages that have the same *msg_id*.  
   
 ## Return Code Values  

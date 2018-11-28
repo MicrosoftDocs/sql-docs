@@ -121,7 +121,7 @@ manager: craigg
   
      Notice that the **Employee** and `Date` cube dimensions are linked to the **Sales Quotasand Sales Quotas 1** measure groups through regular relationships. Notice also that the **Sales Territory** cube dimension is not linked to either of these measure groups.  
   
-4.  Click the cell at the intersection of the **Sales Territory** dimension and the `Sales Quotas` measure group and then click the browse button (**…**). The **Define Relationship** dialog box opens.  
+4.  Click the cell at the intersection of the **Sales Territory** dimension and the `Sales Quotas` measure group and then click the browse button (**...**). The **Define Relationship** dialog box opens.  
   
 5.  In the **Select relationship type** list, select **Referenced**.  
   
@@ -135,7 +135,7 @@ manager: craigg
   
 10. Click **OK**.  
   
-11. Click the cell at the intersection of the **Sales Territory** dimension and the **Sales Quotas 1** measure group and then click the browse button (**…**). The **Define Relationship** dialog box opens.  
+11. Click the cell at the intersection of the **Sales Territory** dimension and the **Sales Quotas 1** measure group and then click the browse button (**...**). The **Define Relationship** dialog box opens.  
   
 12. In the **Select relationship type** list, select **Referenced**.  
   
@@ -157,7 +157,7 @@ manager: craigg
   
      Renaming the **Order Date** cube dimension to `Date` makes it easier for users to understand its role as the primary date dimension in this cube.  
   
-20. Click the browse button (**…**) in the cell at the intersection of the `Sales Quotas` measure group and the `Date` dimension.  
+20. Click the browse button (**...**) in the cell at the intersection of the `Sales Quotas` measure group and the `Date` dimension.  
   
 21. In the **Define Relationship** dialog box, select **Regular** in the **Select relationship type** list.  
   

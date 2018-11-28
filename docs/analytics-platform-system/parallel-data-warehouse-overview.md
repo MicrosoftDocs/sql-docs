@@ -35,7 +35,7 @@ To learn more about Analytics Platform System, see:
   
 ![Parallel Data Warehouse software](media/parallel-data-warehouse-software.png "Parallel Data Warehouse software")  
   
-## <a name="sec1"></a>Appliance Software – Query Processing and User Data Storage  
+## <a name="sec1"></a>Appliance Software - Query Processing and User Data Storage  
   
 ### Control Node  
 MPP Engine  

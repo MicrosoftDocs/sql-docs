@@ -18,7 +18,7 @@ manager: craigg
 # Outer Joins
 ODBC supports the SQL-92 left, right, and full outer join syntax. The escape sequence for outer joins is  
   
- **{oj** *outer-join***}**  
+ **{oj** _outer-join_**}**  
   
  where *outer-join* is  
   

@@ -357,7 +357,7 @@ Performs the bulk-copy operation using the native (database) data types of the d
  **-q**<a name="q"></a>  
  Executes the SET QUOTED_IDENTIFIERS ON statement in the connection between the **bcp** utility and an instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Use this option to specify a database, owner, table, or view name that contains a space or a single quotation mark. Enclose the entire three-part table or view name in quotation marks ("").  
   
- To specify a database name that contains a space or single quotation mark, you must use the **–q** option.  
+ To specify a database name that contains a space or single quotation mark, you must use the **-q** option.  
   
  **-q** does not apply to values passed to **-d**.  
   
@@ -384,7 +384,7 @@ Performs the bulk-copy operation using the native (database) data types of the d
  If *field_term* begins with a hyphen (-) or a forward slash (/), do not include a space between **-t** and the *field_term* value.  
   
  **-T**<a name="T"></a>  
- Specifies that the **bcp** utility connects to [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] with a trusted connection using integrated security. The security credentials of the network user, *login_id*, and *password* are not required. If **–T** is not specified, you need to specify **–U** and **–P** to successfully log in.
+ Specifies that the **bcp** utility connects to [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] with a trusted connection using integrated security. The security credentials of the network user, *login_id*, and *password* are not required. If **-T** is not specified, you need to specify **-U** and **-P** to successfully log in.
  
 > [!IMPORTANT]
 > When the **bcp** utility is connecting to [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] with a trusted connection using integrated security, use the **-T** option (trusted connection) instead of the *user name* and *password* combination. When the **bcp** utility is connecting to SQL Database or SQL Data Warehouse, using Windows authentication or Azure Active Directory authentication is not supported. Use the **-U** and **-P** options. 

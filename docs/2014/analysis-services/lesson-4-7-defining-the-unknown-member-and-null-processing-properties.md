@@ -84,7 +84,7 @@ manager: craigg
   
 9. In the **Attributes** pane, change the name of this new attribute to `Category`.  
   
-10. In the Properties window, click in the **NameColumn** property field and then click the browse (**…**) button to open the **Name Column** dialog box.  
+10. In the Properties window, click in the **NameColumn** property field and then click the browse (**...**) button to open the **Name Column** dialog box.  
   
 11. Select **EnglishProductCategoryName** in the **Source column** list and then click **OK**.  
   
@@ -92,7 +92,7 @@ manager: craigg
   
 13. In the **Attributes** pane, change the name of this new attribute to `Subcategory`.  
   
-14. In the Properties window, click in the **NameColumn** property field and then click the browse **(…)** button to open the **Name Column** dialog box.  
+14. In the Properties window, click in the **NameColumn** property field and then click the browse **(...)** button to open the **Name Column** dialog box.  
   
 15. Select **EnglishProductSubcategoryName** in the **Source column** list and then click **OK**.  
   

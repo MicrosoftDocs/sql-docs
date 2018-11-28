@@ -44,7 +44,7 @@ manager: craigg
   
 1.  In **Object Explorer**, expand the database where you want to create your new view.  
   
-2.  Right-click the **Synonyms** folder, then click **New Synonym…**.  
+2.  Right-click the **Synonyms** folder, then click **New Synonym...**.  
   
 3.  In the **Add Synonym** dialog box, enter the following information.  
   

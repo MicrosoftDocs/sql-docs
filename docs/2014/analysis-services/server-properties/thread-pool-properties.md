@@ -173,7 +173,7 @@ manager: craigg
  For multidimensional Analysis Services instances, you can set `PerNumaNode` on the `IOProcess` thread pool to further optimize thread scheduling and execution. Whereas `GroupAffinity` identifies which set of logical processors to use for a given thread pool, `PerNumaNode` goes one step further by specifying whether to create multiple thread pools, further affinitized to some subset of the allowed logical processors.  
   
 > [!NOTE]  
->  On Windows Server 2012, use Task Manager to view the number of NUMA nodes on the computer. In Task Manager, on the Performance tab, select **CPU** and then right-click the graph area to view NUMA nodes. Alternatively, [download](http://technet.microsoft.com/sysinternals/cc835722.aspx) the Coreinfo utility from Windows Sysinternals and run `coreinfo –n` to return NUMA nodes and logical processors in each node.  
+>  On Windows Server 2012, use Task Manager to view the number of NUMA nodes on the computer. In Task Manager, on the Performance tab, select **CPU** and then right-click the graph area to view NUMA nodes. Alternatively, [download](http://technet.microsoft.com/sysinternals/cc835722.aspx) the Coreinfo utility from Windows Sysinternals and run `coreinfo -n` to return NUMA nodes and logical processors in each node.  
   
  Valid values for `PerNumaNode` are -1, 0, 1, 2, as described in the [Thread Pool Property Reference](#bkmk_propref) section in this topic.  
   

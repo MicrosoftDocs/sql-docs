@@ -151,7 +151,7 @@ manager: craigg
   
         2.  Type a name for the table that will contain the query results.  
   
-        3.  Use the option, **Add to DSV**, to create the table and add it to an existing data source view. This is useful if you want to keep all related tables for a model—such as training data, prediction source data, and query results—in the same data source view.  
+        3.  Use the option, **Add to DSV**, to create the table and add it to an existing data source view. This is useful if you want to keep all related tables for a model-such as training data, prediction source data, and query results-in the same data source view.  
   
         4.  Use the option, **Overwrite if exists**, to update an existing table with the latest results.  
   

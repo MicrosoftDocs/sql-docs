@@ -52,9 +52,9 @@ The combination of `required_synchronized_secondaries_to_commit` and the new seq
 
 There are three values that can be set for `required_synchronized_secondaries_to_commit`: 0, 1, or 2. They control the behavior of what happens when a replica becomes unavailable. The numbers correspond to the number of secondary replicas that must be synchronized with the primary. The behavior is as follows under Linux:
 
--   0 – No automatic failover is possible since no secondary replica is required to be synchronized. The primary database is available at all times.
--   1 – One secondary replica must be in a synchronized state with the primary; automatic failover is possible. The primary database is unavailable until a secondary synchronous replica is available.
--   2 – Both secondary replicas in a three or more node AG configuration must be synchronized with the primary; automatic failover is possible.
+-   0 - No automatic failover is possible since no secondary replica is required to be synchronized. The primary database is available at all times.
+-   1 - One secondary replica must be in a synchronized state with the primary; automatic failover is possible. The primary database is unavailable until a secondary synchronous replica is available.
+-   2 - Both secondary replicas in a three or more node AG configuration must be synchronized with the primary; automatic failover is possible.
 
 `required_synchronized_secondaries_to_commit` controls not only the behavior of failovers with synchronous replicas, but data loss. With a value of 1 or 2, a secondary replica is always required to be synchronized, so there will always be data redundancy. That means no data loss.
 
@@ -82,7 +82,7 @@ Automatic failover of an AG is possible when the following conditions are met:
 -   The primary and the secondary replica are set to synchronous data movement.
 -   The secondary has a state of synchronized (not synchronizing), meaning the two are at the same data point.
 -   The cluster type is set to External. Automatic failover is not possible with a cluster type of None.
--   The `sequence_number` of the secondary replica to become the primary has the highest sequence number – in other words, the secondary replica's `sequence_number` matches the one from the original primary replica.
+-   The `sequence_number` of the secondary replica to become the primary has the highest sequence number - in other words, the secondary replica's `sequence_number` matches the one from the original primary replica.
 
 If these conditions are met and the server hosting the primary replica fails, the AG will change ownership to a synchronous replica. The behavior for synchronous replicas (of which there can be three total: one primary and two secondary replicas) can further be controlled by `required_synchronized_secondaries_to_commit`. This works with AGs on both Windows and Linux, but is configured completely differently. On Linux, the value is configured automatically by the cluster on the AG resource itself.
 

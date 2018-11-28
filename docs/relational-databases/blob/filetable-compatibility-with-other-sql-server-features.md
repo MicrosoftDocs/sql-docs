@@ -84,7 +84,7 @@ manager: craigg
   
 -   File path for a file can be visualized in the view by adding it as an explicit column in the view. For example:  
   
-     `CREATE VIEW MP3FILES AS SELECT column1, column2, …, GetFileNamespacePath() AS PATH, column3,…  FROM Documents`  
+     `CREATE VIEW MP3FILES AS SELECT column1, column2, ..., GetFileNamespacePath() AS PATH, column3,...  FROM Documents`  
   
  **Indexed Views**  
  Currently Indexed views cannot include FILESTREAM columns or computed/persisted computed columns that depend on the FILESTREAM columns. This behavior remains unchanged with views defined on the FileTable also.  

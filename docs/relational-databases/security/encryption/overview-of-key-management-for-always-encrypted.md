@@ -46,7 +46,7 @@ The process of managing keys can be divided into the following high-level tasks:
 There are two distinct roles of users who manage Always Encrypted keys; Security Administrators and Database Administrators (DBAs):
 
 - **Security Administrator** - generates column encryption keys and column master keys and manages key stores containing the column master keys. To perform these tasks, a Security Administrator needs to be able to access the keys and the key store, but does not need access to the database.
-- **DBA** – manages metadata about the keys in the database. To perform key management tasks, a DBA needs to be able to manage key metadata in the database, but does not need access to the keys or the key store holding the column master keys.
+- **DBA** - manages metadata about the keys in the database. To perform key management tasks, a DBA needs to be able to manage key metadata in the database, but does not need access to the keys or the key store holding the column master keys.
 
 Considering the above roles, there are two different ways to perform key management tasks for Always Encrypted; *with role separation*, and *without role separation*. Depending on the needs of your organization you can select the key management process that best suits your requirements.
 
@@ -64,14 +64,14 @@ When Always Encrypted keys are managed without role separation, a single person 
 
 Always Encrypted keys can be managed using [SQL Server Management Studio (SSMS)](https://msdn.microsoft.com/library/ms174173.aspx) and [PowerShell](../../scripting/sql-server-powershell.md):
 
-- **SQL Server Management Studio (SSMS)** – provides dialogs and wizards that combine tasks involving key store access and database access, so SSMS does not support role separation, but it makes configuring your keys easy. For more information about managing keys using SSMS, see:
+- **SQL Server Management Studio (SSMS)** - provides dialogs and wizards that combine tasks involving key store access and database access, so SSMS does not support role separation, but it makes configuring your keys easy. For more information about managing keys using SSMS, see:
     - [Provisioning Column Master Keys](../../../relational-databases/security/encryption/configure-always-encrypted-using-sql-server-management-studio.md#provisioncmk)
     - [Provisioning Column Encryption Keys](../../../relational-databases/security/encryption/configure-always-encrypted-using-sql-server-management-studio.md#provisioncek)
     - [Rotating Column Master Keys](../../../relational-databases/security/encryption/configure-always-encrypted-using-sql-server-management-studio.md#rotatecmk)
     - [Rotating Column Encryption Keys](../../../relational-databases/security/encryption/configure-always-encrypted-using-sql-server-management-studio.md#rotatecek)
 
 
-- **SQL Server PowerShell** – includes cmdlets for managing Always Encrypted keys with and without role separation. For more information, see:
+- **SQL Server PowerShell** - includes cmdlets for managing Always Encrypted keys with and without role separation. For more information, see:
     - [Configure Always Encrypted Keys using PowerShell](../../../relational-databases/security/encryption/configure-always-encrypted-keys-using-powershell.md)
     - [Rotate Always Encrypted Keys using PowerShell](../../../relational-databases/security/encryption/rotate-always-encrypted-keys-using-powershell.md)
 

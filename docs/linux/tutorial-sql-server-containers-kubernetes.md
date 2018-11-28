@@ -168,7 +168,7 @@ In this step, create a manifest to describe the container based on the SQL Serve
          terminationGracePeriodSeconds: 10
          containers:
          - name: mssql
-           image: mcr.microsoft.com/mssql/server/mssql-server-linux
+           image: mcr.microsoft.com/mssql/server
            ports:
            - containerPort: 1433
            env:

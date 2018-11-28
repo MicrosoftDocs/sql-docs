@@ -51,8 +51,8 @@ manager: craigg
 |---------------------|--------------------------------------------------------|-----------------------|  
 |Tables|X|X|  
 |Partitioned Tables|X|X|  
-|Stored Procedures - Definition ([!INCLUDE[tsql](../../../includes/tsql-md.md)] and CLR)|X|X|  
-|Stored Procedures - Execution ([!INCLUDE[tsql](../../../includes/tsql-md.md)] and CLR)|X|no|  
+|Stored Procedures – Definition ([!INCLUDE[tsql](../../../includes/tsql-md.md)] and CLR)|X|X|  
+|Stored Procedures – Execution ([!INCLUDE[tsql](../../../includes/tsql-md.md)] and CLR)|X|no|  
 |Views|X|X|  
 |Indexed Views|X|X|  
 |Indexed Views as Tables|X|no|  

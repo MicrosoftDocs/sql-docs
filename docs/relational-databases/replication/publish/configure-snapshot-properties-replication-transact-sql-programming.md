@@ -95,11 +95,10 @@ manager: craigg
  [!code-sql[HowTo#sp_mergealtsnapshot](../../../relational-databases/replication/codesnippet/tsql/configure-snapshot-prope_1.sql)]  
   
 ## See Also  
- [Alternate Snapshot Folder Locations](../../../relational-databases/replication/alternate-snapshot-folder-locations.md)   
- [Compressed Snapshots](../../../relational-databases/replication/compressed-snapshots.md)   
- [Execute Scripts Before and After the Snapshot Is Applied](../../../relational-databases/replication/execute-scripts-before-and-after-the-snapshot-is-applied.md)   
+ [Modify snapshot options](../../../relational-databases/replication/snapshot-options.md)   
+ [Execute Scripts Before and After the Snapshot Is Applied](../../../relational-databases/replication/execute-scripts-before-and-after-a-snapshot-is-applied.md)   
  [Replication System Stored Procedures Concepts](../../../relational-databases/replication/concepts/replication-system-stored-procedures-concepts.md)   
- [Transfer Snapshots Through FTP](../../../relational-databases/replication/transfer-snapshots-through-ftp.md)   
+ [Transfer Snapshots Through FTP](../../../relational-databases/replication//publish/deliver-a-snapshot-through-ftp.md)   
  [Change Publication and Article Properties](../../../relational-databases/replication/publish/change-publication-and-article-properties.md)  
   
   

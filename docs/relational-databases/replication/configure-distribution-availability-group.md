@@ -42,7 +42,7 @@ After a distribution database in the AG is configured based on the steps describ
 - Adding or removing nodes to existing distribution database AG.
 - A distributor may have multiple distribution databases. Each distribution database can be in its own AG and can be not in any AG. Multiple distribution databases can share an AG.
 - Publisher and distributor need to be on separate SQL Server instances.
-- If the listener for the availability group hosting the distribution database is configured to use a non-default port, then its required to setup an alias for the listener and the non-default port. This alias would need to created on all the publisher, distributor and subsciber replicas (for subscribers running in pull mode). 
+- If the listener for the availability group hosting the distribution database is configured to use a non-default port, then its required to setup an alias for the listener and the non-default port.
 
 ## Limitations or exclusions
 
@@ -230,7 +230,7 @@ This example removes a distributor from a current distribution database AG while
 
 ## Remove a publisher from distribution database AG
 
-This example removes a publisher from a distributor's current distribution database AG while the rest of the publishers served by this distribution database AG are not affected. In this example, an existing configuration has distribution database in an AG. DIST1, DIST2, and DIST3 are the distributors, `distribution` is the distribution database in AG, and PUB1 and PUB2 are the publishers served by `distribution` database. The example removes PUB1 from these distributors.
+This example removes a publisher from a distributor’s current distribution database AG while the rest of the publishers served by this distribution database AG are not affected. In this example, an existing configuration has distribution database in an AG. DIST1, DIST2, and DIST3 are the distributors, `distribution` is the distribution database in AG, and PUB1 and PUB2 are the publishers served by `distribution` database. The example removes PUB1 from these distributors.
 
 ### Publisher workflow
 

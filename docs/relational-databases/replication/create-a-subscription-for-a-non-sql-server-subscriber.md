@@ -92,7 +92,7 @@ manager: craigg
   
     -   For IBM DB2, the database is specified in the **Initial Catalog** property of the DB2 connection string, which can be entered in the **Additional connection options** field described later in this process.  
   
-8.  On the **Distribution Agent Security** page, click the properties button (**...**) next to the Subscriber to access the **Distribution Agent Security** dialog box.  
+8.  On the **Distribution Agent Security** page, click the properties button (**…**) next to the Subscriber to access the **Distribution Agent Security** dialog box.  
   
 9. In the **Distribution Agent Security** dialog box:  
   

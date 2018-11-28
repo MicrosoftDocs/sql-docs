@@ -49,9 +49,8 @@ manager: craigg
   
 -   [Specify Snapshot Format &#40;SQL Server Management Studio&#41;](../../../relational-databases/replication/publish/specify-snapshot-format-sql-server-management-studio.md)  
   
--   [Specify an Alternate Snapshot Folder Location &#40;SQL Server Management Studio&#41;](../../../relational-databases/replication/publish/specify-an-alternate-snapshot-folder-location-sql-server-management-studio.md)  
+-   [Modify snapshot options](../../../relational-databases/replication/snapshot-options.md)  
   
--   [Compress Snapshot Files &#40;SQL Server Management Studio&#41;](../../../relational-databases/replication/publish/compress-snapshot-files-sql-server-management-studio.md)  
   
 -   [Configure Snapshot Properties &#40;Replication Transact-SQL Programming&#41;](../../../relational-databases/replication/publish/configure-snapshot-properties-replication-transact-sql-programming.md)  
   
@@ -79,25 +78,17 @@ manager: craigg
   
 -   [Enable Updating Subscriptions for Transactional Publications](../../../relational-databases/replication/publish/enable-updating-subscriptions-for-transactional-publications.md)  
   
--   [Set Queued Updating Conflict Resolution Options &#40;SQL Server Management Studio&#41;](../../../relational-databases/replication/publish/set-queued-updating-conflict-resolution-options-sql-server-management-studio.md)  
+-   [Set Queued Updating Conflict Resolution Options &#40;SQL Server Management Studio&#41;](../../../relational-databases/replication/publish/create-an-updatable-subscription-to-a-transactional-publication.md)  
   
 -   [Publish the Execution of a Stored Procedure in a Transactional Publication &#40;SQL Server Management Studio&#41;](../../../relational-databases/replication/publish/publish-execution-of-stored-procedure-in-transactional-publication.md)  
   
 ## Merge Replication Options  
   
--   [Define a Logical Record Relationship Between Merge Table Articles](../../../relational-databases/replication/publish/define-a-logical-record-relationship-between-merge-table-articles.md)  
-  
--   [Specify the Processing Order of Merge Table Articles &#40;Replication Transact-SQL Programming&#41;](../../../relational-databases/replication/publish/specify-the-processing-order-of-merge-table-articles.md)  
-  
--   [Specify That a Merge Table Article is Download-Only](../../../relational-databases/replication/publish/specify-that-a-merge-table-article-is-download-only.md)  
-  
--   [Specify That Deletes Should Not Be Tracked For Merge Articles &#40;Replication Transact-SQL Programming&#41;](../../../relational-databases/replication/publish/specify-that-deletes-should-not-be-tracked-for-merge-articles.md)  
-  
--   [Specify the Conflict Tracking and Resolution Level for Merge Articles](../../../relational-databases/replication/publish/specify-the-conflict-tracking-and-resolution-level-for-merge-articles.md)  
-  
+-   [Define a Logical Record Relationship Between Merge Table Articles](../../../relational-databases/replication/publish/define-a-logical-record-relationship-between-merge-table-articles.md)   
+-   [Specify Merge Replication options](../../../relational-databases/replication/publish/specify-merge-replication-properties.md)  
+   
 -   [Specify a Merge Article Resolver](../../../relational-databases/replication/publish/specify-a-merge-article-resolver.md)  
   
--   [Specify Interactive Conflict Resolution for Merge Articles](../../../relational-databases/replication/publish/specify-interactive-conflict-resolution-for-merge-articles.md)  
   
 ## See Also  
  [Publish Data and Database Objects](../../../relational-databases/replication/publish/publish-data-and-database-objects.md)  

@@ -96,9 +96,9 @@ manager: craigg
   
      Upgrading the Subscriber to [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] or a later version upgrades the Merge Agent used by the subscriptions at that Subscriber. To take advantage of many of the new features and performance optimizations, the Merge Agent from [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] or a later version is required.  
   
--   If a subscription is synchronized over a fast connection and changes are sent from the Publisher and Subscriber, use the **-ParallelUploadDownload** parameter for the Merge Agent.  
+-   If a subscription is synchronized over a fast connection and changes are sent from the Publisher and Subscriber, use the **–ParallelUploadDownload** parameter for the Merge Agent.  
   
-     [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] introduced a new Merge Agent parameter: **-ParallelUploadDownload**. Setting this parameter allows the Merge Agent to process in parallel the changes uploaded to the Publisher and those downloaded to the Subscriber. This is useful in high volume environments with high network bandwidth. Agent parameters can be specified in agent profiles and on the command line. For more information, see:  
+     [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] introduced a new Merge Agent parameter: **–ParallelUploadDownload**. Setting this parameter allows the Merge Agent to process in parallel the changes uploaded to the Publisher and those downloaded to the Subscriber. This is useful in high volume environments with high network bandwidth. Agent parameters can be specified in agent profiles and on the command line. For more information, see:  
   
     -   [Work with Replication Agent Profiles](../../../relational-databases/replication/agents/work-with-replication-agent-profiles.md)  
   
@@ -130,7 +130,7 @@ manager: craigg
   
 -   Pre-generate snapshots and/or allow Subscribers to request snapshot generation and application the first time they synchronize.  
   
-     Use one or both of these options to provide snapshots for publications that use parameterized filters. If you do not specify one of these options, subscriptions are initialized using a series of SELECT and INSERT statements, rather than using the **bcp** utility; this process is much slower. For more information, see [Snapshots for Merge Publications with Parameterized Filters](../../../relational-databases/replication/snapshots-for-merge-publications-with-parameterized-filters.md).  
+     Use one or both of these options to provide snapshots for publications that use parameterized filters. If you do not specify one of these options, subscriptions are initialized using a series of SELECT and INSERT statements, rather than using the **bcp** utility; this process is much slower. For more information, see [Snapshots for Merge Publications with Parameterized Filters](../../../relational-databases/replication/create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md).  
   
 ## Maintenance and Monitoring Considerations  
   
@@ -140,6 +140,6 @@ manager: craigg
   
 -   Monitor synchronization performance using the **Synchronization History** tab in Replication Monitor.  
   
-     For merge replication, Replication Monitor displays detailed statistics in the **Synchronization History** tab for each article processed during synchronization, including the amount of time spent in each processing phase (uploading changes, downloading changes, and so on). It can help pinpoint specific tables that are causing slow downs and is the best place to troubleshoot performance issues with merge subscriptions. For more information on viewing detailed statistics, see [View Information and Perform Tasks for the Agents Associated With a Subscription &#40;Replication Monitor&#41;](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-subscription-agents.md).  
+     For merge replication, Replication Monitor displays detailed statistics in the **Synchronization History** tab for each article processed during synchronization, including the amount of time spent in each processing phase (uploading changes, downloading changes, and so on). It can help pinpoint specific tables that are causing slow downs and is the best place to troubleshoot performance issues with merge subscriptions. For more information on viewing detailed statistics, see [View information and perform tasks using Replication Monitor](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-replication-monitor.md).  
   
   

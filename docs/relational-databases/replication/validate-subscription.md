@@ -36,6 +36,6 @@ manager: craigg
  Click to access the **Subscription Validation Options** dialog box, which allows you to specify whether to use row count validation or binary checksum validation.  
   
 ## See Also  
- [Validate Replicated Data](../../relational-databases/replication/validate-replicated-data.md)  
+ [Validate Replicated Data](../../relational-databases/replication/validate-data-at-the-subscriber.md)  
   
   

@@ -57,7 +57,7 @@ DECLARE cursor_name CURSOR [ LOCAL | GLOBAL ]
  Is the name of the [!INCLUDE[tsql](../../includes/tsql-md.md)] server cursor defined. *cursor_name* must conform to the rules for identifiers.  
   
  INSENSITIVE  
- Defines a cursor that makes a temporary copy of the data to be used by the cursor. All requests to the cursor are answered from this temporary table in **tempdb**; therefore, modifications made to base tables are not reflected in the data returned by fetches made to this cursor, and this cursor does not allow modifications. When ISO syntax is used, if INSENSITIVE is omitted, committed deletes and updates made to the underlying tables (by any user) are reflected in subsequent fetches.  
+ Defines a cursor that makes a temporary copy of the data to be used by the cursor. All requests to the cursor are answered from this temporary table in **tempdb**; therefore, modifications made to base tables are not reflected in the data returned by fetches made to this cursor, and this cursor does not allow modifications. When ISO syntax is used, if `INSENSITIVE` is omitted, committed deletes and updates made to the underlying tables (by any user) are reflected in subsequent fetches.  
   
  SCROLL  
  Specifies that all fetch options (`FIRST`, `LAST`, `PRIOR`, `NEXT`, `RELATIVE`, `ABSOLUTE`) are available. If `SCROLL` is not specified in an ISO `DECLARE CURSOR`, `NEXT` is the only fetch option supported. `SCROLL` cannot be specified if `FAST_FORWARD` is also specified.  
@@ -71,7 +71,7 @@ DECLARE cursor_name CURSOR [ LOCAL | GLOBAL ]
  Prevents updates made through this cursor. The cursor cannot be referenced in a `WHERE CURRENT OF` clause in an `UPDATE` or `DELETE` statement. This option overrides the default capability of a cursor to be updated.  
   
  UPDATE [OF *column_name* [**,**...*n*]]  
- Defines updatable columns within the cursor. If OF *column_name* [**,**..*.n*] is specified, only the columns listed allow modifications. If `UPDATE` is specified without a column list, all columns can be updated.  
+ Defines updatable columns within the cursor. If OF <column_name> [, <... n>] is specified, only the columns listed allow modifications. If `UPDATE` is specified without a column list, all columns can be updated.  
   
  *cursor_name*  
  Is the name of the [!INCLUDE[tsql](../../includes/tsql-md.md)] server cursor defined. *cursor_name* must conform to the rules for identifiers.  

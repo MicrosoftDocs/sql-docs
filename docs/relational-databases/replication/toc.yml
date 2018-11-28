@@ -214,7 +214,7 @@
            href: merge/optimize-merge-replication-performance-with-conditional-delete-tracking.md
          - name: Optimize with download only
            href: merge/optimize-merge-replication-performance-with-download-only-articles.md
-         - name: Optiemize filters for precomputed partitions
+         - name: Optimize filters for precomputed partitions
            href: merge/parameterized-filters-optimize-for-precomputed-partitions.md
      - name: Transactional replication
        href: administration/enhance-transactional-replication-performance.md
@@ -486,59 +486,60 @@
     - name: Tools Reference
       items:
       - name: Replication Monitor
-      - name: Add Publisher
-        href: add-publisher.md
-      - name: Distributor Settings
-        href: distributor-settings.md
-      - name: Distributor Information
-        href: distributor-information-publications.md
-      - name: Publisher Settings
-        href: publisher-settings.md
-      - name: Publisher Information
-        href: publisher-information-publications.md
-        items:
-          - name: Transactional Replication
-            items:
-              - name: Subscription watch list
-                href: publisher-information-subscription-watch-list-transactional.md
-              - name: Subscriptions
-                href: publication-information-all-subscriptions-transactional-publication.md
-              - name: Warnings
-                href: publication-information-warnings-transactional-publication.md
-              - name: Agents
-                href: publication-information-agents-transactional-publication.md
-              - name: Tracer tokens
-                href: publication-information-tracer-tokens-sql-server-2005-and-later.md
-              - name: Undistributed commands
-                href: subscription-undistributed-commands-transactional-subscription.md
-              - name: Publisher to distributor history
-                href: subscription-publisher-to-distributor-history-transactional-subscription.md
-              - name: Distributor to subscriber history
-                href: subscription-distributor-to-subscriber-history-transactional-subscription.md
-          - name: Merge replication 
-            items:
-              - name: Subscription watch list
-                href: publisher-information-subscription-watch-list-merge-publication.md
-              - name: Subscriptions
-                href: publication-information-all-subscriptions-merge-publication.md
-              - name: Warnings
-                href: publication-information-warnings-merge-publication-sql-server-2005-and-later.md
-              - name: Agents
-                href: publication-information-agents-merge-publication.md
-              - name: Synchronization history
-                href: subscription-synchronization-history.md
-          - name: Snapshot replication 
-            items: 
-              - name: Subscription Watch list
-                href: publisher-information-subscription-watch-list-snapshot.md
-              - name: Subscriptions
-                href: publication-information-all-subscriptions-snapshot-publication.md
-              - name: Warnings
-                href: publication-information-warnings-snapshot-publication-sql-server-2005-and-later.md
-              - name: Agents
-                href: publication-information-agents-snapshot-publication.md
-              - name: Distributor to subscriber history
-                href: subscription-distributor-to-subscriber-history-snapshot-subscription.md
+        items:  
+        - name: Add Publisher
+          href: add-publisher.md
+        - name: Distributor Settings
+          href: distributor-settings.md
+        - name: Distributor Information
+          href: distributor-information-publications.md
+        - name: Publisher Settings
+          href: publisher-settings.md
+        - name: Publisher Information
+          href: publisher-information-publications.md
+          items:
+            - name: Transactional Replication
+              items:
+                - name: Subscription watch list
+                  href: publisher-information-subscription-watch-list-transactional.md
+                - name: Subscriptions
+                  href: publication-information-all-subscriptions-transactional-publication.md
+                - name: Warnings
+                  href: publication-information-warnings-transactional-publication.md
+                - name: Agents
+                  href: publication-information-agents-transactional-publication.md
+                - name: Tracer tokens
+                  href: publication-information-tracer-tokens-sql-server-2005-and-later.md
+                - name: Undistributed commands
+                  href: subscription-undistributed-commands-transactional-subscription.md
+                - name: Publisher to distributor history
+                  href: subscription-publisher-to-distributor-history-transactional-subscription.md
+                - name: Distributor to subscriber history
+                  href: subscription-distributor-to-subscriber-history-transactional-subscription.md
+            - name: Merge replication 
+              items:
+                - name: Subscription watch list
+                  href: publisher-information-subscription-watch-list-merge-publication.md
+                - name: Subscriptions
+                  href: publication-information-all-subscriptions-merge-publication.md
+                - name: Warnings
+                  href: publication-information-warnings-merge-publication-sql-server-2005-and-later.md
+                - name: Agents
+                  href: publication-information-agents-merge-publication.md
+                - name: Synchronization history
+                  href: subscription-synchronization-history.md
+            - name: Snapshot replication 
+              items: 
+                - name: Subscription Watch list
+                  href: publisher-information-subscription-watch-list-snapshot.md
+                - name: Subscriptions
+                  href: publication-information-all-subscriptions-snapshot-publication.md
+                - name: Warnings
+                  href: publication-information-warnings-snapshot-publication-sql-server-2005-and-later.md
+                - name: Agents
+                  href: publication-information-agents-snapshot-publication.md
+                - name: Distributor to subscriber history
+                  href: subscription-distributor-to-subscriber-history-snapshot-subscription.md
       - name: Configure Distribution Wizard
         href: configure-distribution-wizard.md
         items:

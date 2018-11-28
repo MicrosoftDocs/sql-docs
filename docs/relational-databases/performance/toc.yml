@@ -4,15 +4,6 @@
   href: ../automatic-tuning/automatic-tuning.md
 - name: Configuring Storage Spaces with a NVDIMM-N write-back cache
   href: configuring-storage-spaces-with-a-nvdimm-n-write-back-cache.md
-- name: Cardinality Estimation
-  href: cardinality-estimation-sql-server.md
-- name: Intelligent Query Processing
-  href: intelligent-query-processing.md
-  items:
-  - name: Adaptive Query Processing
-    href: adaptive-query-processing.md
-  - name: Scalar User-defined function inlining
-    href: ../user-defined-functions/scalar-udf-inlining.md
 - name: Execution Plans
   href: execution-plans.md
   items:
@@ -27,7 +18,7 @@
       href: display-an-actual-execution-plan.md
     - name: Save an Execution Plan in XML Format
       href: save-an-execution-plan-in-xml-format.md
-    name: Compare and Analyze Execution Plans
+  - name: Compare and Analyze Execution Plans
     href: compare-and-analyze-execution-plans.md
     items:
     - name: Compare Execution Plans
@@ -57,6 +48,13 @@
       href: delete-a-plan-guide.md
     - name: Enable or Disable a Plan Guide
       href: enable-or-disable-a-plan-guide.md
+- name: Intelligent Query Processing
+  href: intelligent-query-processing.md
+  items:
+  - name: Adaptive Query Processing
+    href: adaptive-query-processing.md
+  - name: Scalar User-defined function inlining
+    href: ../user-defined-functions/scalar-udf-inlining.md
 - name: Monitor and Tune for Performance
   href: monitor-and-tune-for-performance.md
   items:
@@ -143,6 +141,8 @@
 - name: Internals and Architecture
   href: ../sql-server-guides.md
   items:
+  - name: Cardinality Estimation
+    href: cardinality-estimation-sql-server.md
   - name: Cursors
     href: ../cursors.md
   - name: Ghost record cleanup process

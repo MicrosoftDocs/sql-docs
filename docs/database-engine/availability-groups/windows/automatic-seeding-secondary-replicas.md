@@ -3,7 +3,7 @@ title: "Automatic seeding for secondary replicas (SQL Server) | Microsoft Docs"
 description: "Use automatic seeding to initialize secondary replicas."
 services: data-lake-analytics
 ms.custom: ""
-ms.date: "09/25/2017"
+ms.date: "11/27/2018"
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: high-availability
@@ -118,9 +118,7 @@ On an instance that becomes a secondary replica, once the instance is joined the
 After joining, grant the availability group permission to create databases on the secondary replica instance of SQL Server. In order for automatic seeding to work, the availability group needs permission to create a database. 
 
 >[!TIP]
->When the availability group creates a database on a secondary replica, it sets the database owner as the account that ran the `ALTER AVAILABILITY GROUP` statement to grant permission to create any database. Most applications require the database owner on the secondary replica to be the same as on the primary replica.
->
->To ensure that all databases are created with the same database owner as the primary replica, run the example command below under the security context of the login that is database owner on the primary replica. Note that this login needs `ALTER AVAILABILITY GROUP` permission. 
+>When the availability group creates a database on a secondary replica, it sets "sa" (more specifically account with sid 0x01) as the owner of the database owner. 
 >
 >To change database owner after a secondary replica automatically creates a database use `ALTER AUTHORIZATION`. See [ALTER AUTHORIZATION (Transact-SQL)](../../../t-sql/statements/alter-authorization-transact-sql.md).
  

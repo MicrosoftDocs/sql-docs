@@ -53,7 +53,7 @@ Explanation:
   
 -   **Memory** per appliance. Each core has 256 GB memory.  
   
-### Data Scale unit configuration examples – Dell, Quanta  
+### Data Scale unit configuration examples - Dell, Quanta  
 These are examples of the supported Dell and Quanta configurations for Data Scale Uunits. They might vary from the most current supported configurations, but are provided as an example of how to increase capacity by approximately 20 percent.  
   
 Uplift is the percent capacity gain by increasing the Data Scale Uunits from one row to the next. For example, increasing the Data Scale units from 6 to 8 gives a 33% uplift in CPU cores and memory. It also increases the disk space which isn't shown in this table.  

@@ -77,7 +77,7 @@ manager: craigg
     > [!NOTE]  
     >  You can map your source data to a DQS domain while creating a matching policy only if the source data type is supported in DQS, and matches with the DQS domain data type. For information about supported data types in DQS, see [Supported SQL Server and SSIS Data Types for DQS Domains](../data-quality-services/supported-sql-server-and-ssis-data-types-for-dqs-domains.md).  
   
-5.  Click the **plus (+)** control to add a row to the Mappings table or the **minus (–)** control to remove a row.  
+5.  Click the **plus (+)** control to add a row to the Mappings table or the **minus (-)** control to remove a row.  
   
 6.  Click **Preview data source** to see the data in the SQL Server table or view that you selected, or the Excel worksheet that you selected.  
   
@@ -172,13 +172,13 @@ manager: craigg
   
 7.  If you are satisfied with the results of all rules, click **Finish** to complete the matching policy process, and then click one of the following:  
   
-    -   **Yes – Publish the knowledge base and exit**: The knowledge base will be published for the current user or others to use. The knowledge base will not be locked, the state of the knowledge base (in the knowledge base table) will be set to empty, and both the Domain Management and Knowledge Discovery activities will be available. You will be returned to the Open Knowledge Base screen.  
+    -   **Yes - Publish the knowledge base and exit**: The knowledge base will be published for the current user or others to use. The knowledge base will not be locked, the state of the knowledge base (in the knowledge base table) will be set to empty, and both the Domain Management and Knowledge Discovery activities will be available. You will be returned to the Open Knowledge Base screen.  
   
-    -   **No – Save the work on the knowledge base and exit**: Your work will be saved, the knowledge base will remained locked, and the state of the knowledge base will be set to **In work**. Both the Domain Management and Knowledge Discovery activities will be available. You will be returned to the home page.  
+    -   **No - Save the work on the knowledge base and exit**: Your work will be saved, the knowledge base will remained locked, and the state of the knowledge base will be set to **In work**. Both the Domain Management and Knowledge Discovery activities will be available. You will be returned to the home page.  
   
-    -   **Cancel – Stay on the current screen**: The popup will be closed and you will be returned to the Domain Management screen.  
+    -   **Cancel - Stay on the current screen**: The popup will be closed and you will be returned to the Domain Management screen.  
   
-8.  Click **Close** to save your work, and return to the DQS home page. The state of the knowledge base will show the string "Matching Policy – ", and the current state. If you clicked **Close** while you are in the **Matching Result** screen, the state will show: "Matching Policy - Results". If you clicked close while you are in the **Matching Policy** screen, the state will show: "Matching Policy - Matching Policy". After clicking **Close**, to perform the **Knowledge Discovery** activity, you would have to return to the **Matching policy** activity, click **Finish**, and then click either **Yes** to publish the knowledge base or **No** to save the work on the knowledge base and exit.  
+8.  Click **Close** to save your work, and return to the DQS home page. The state of the knowledge base will show the string "Matching Policy - ", and the current state. If you clicked **Close** while you are in the **Matching Result** screen, the state will show: "Matching Policy - Results". If you clicked close while you are in the **Matching Policy** screen, the state will show: "Matching Policy - Matching Policy". After clicking **Close**, to perform the **Knowledge Discovery** activity, you would have to return to the **Matching policy** activity, click **Finish**, and then click either **Yes** to publish the knowledge base or **No** to save the work on the knowledge base and exit.  
   
     > [!NOTE]  
     >  If you click **Close** while a matching process is running, the matching process will not terminate when you click **Close**. You can reopen the knowledge base and see either that the process is still running, or if completed, that the results are displayed. If the process has not completed, the screen will display the progress.  

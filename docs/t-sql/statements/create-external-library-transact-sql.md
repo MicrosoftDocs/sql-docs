@@ -35,7 +35,7 @@ Currently only the R language and Windows platform are supported. Support for Py
 ```text
 CREATE EXTERNAL LIBRARY library_name  
     [ AUTHORIZATION owner_name ]  
-FROM <file_spec> [,…2]  
+FROM <file_spec> [,...2]  
 WITH ( LANGUAGE = 'R' )  
 [ ; ]  
 

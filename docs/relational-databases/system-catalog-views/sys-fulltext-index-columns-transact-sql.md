@@ -33,7 +33,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
 |-----------------|---------------|-----------------|  
 |**object_id**|**int**|ID of the object of which this is part.|  
 |**column_id**|**int**|ID of the column that is part of the full-text index.|  
-|**type_column_id**|**int**|ID of the type column that stores the user-supplied document file extension—".doc", ".xls", and so forth—of the document in a given row. The type column is specified only for columns whose data requires filtering during full-text indexing. NULL if not applicable. For more information, see [Configure and Manage Filters for Search](../../relational-databases/search/configure-and-manage-filters-for-search.md).|  
+|**type_column_id**|**int**|ID of the type column that stores the user-supplied document file extension-".doc", ".xls", and so forth-of the document in a given row. The type column is specified only for columns whose data requires filtering during full-text indexing. NULL if not applicable. For more information, see [Configure and Manage Filters for Search](../../relational-databases/search/configure-and-manage-filters-for-search.md).|  
 |**language_id**|**int**|LCID of language whose word breaker is used to index this full-text column.<br /><br /> 0 = Neutral.<br /><br /> For more information, see [sys.fulltext_languages &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-fulltext-languages-transact-sql.md).|  
 |**statistical_semantics**|**int**|1 = This column has statistical semantics enabled in addition to full-text indexing.|  
   

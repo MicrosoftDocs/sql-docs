@@ -41,7 +41,7 @@ manager: craigg
   
 -   [Step 4: Activate the Power View Site Collection Feature.](#bkmk_powerview)  
   
--   [Windows PowerShell script for Steps 1–4](#bkmk_full_script)  
+-   [Windows PowerShell script for Steps 1-4](#bkmk_full_script)  
   
 -   [Additional Configuration](#bkmk_additional_config) including provisioning for subscriptions and alerts, [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] content types, and configuring Excel Services to Use an Analysis Services Server.  
   
@@ -112,7 +112,7 @@ manager: craigg
   
 10. Select the following on the **Feature Selection** page:  
   
-    -   **Reporting Services – SharePoint**  
+    -   **Reporting Services - SharePoint**  
   
     -   **Reporting Services add-in for SharePoint Products**.  
   
@@ -248,7 +248,7 @@ manager: craigg
   
  ![PowerShell related content](../../../2014/reporting-services/media/rs-powershellicon.jpg "PowerShell related content") For information on using PowerShell to create a [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] service application, see:  
   
--   See the following section [Windows PowerShell script for Steps 1–4](#bkmk_full_script).  
+-   See the following section [Windows PowerShell script for Steps 1-4](#bkmk_full_script).  
   
 -   Topic [To create a Reporting Services Service Application using PowerShell](../../../2014/reporting-services/reporting-services-sharepoint-service-and-service-applications.md#bkmk_powershell_create_ssrs_serviceapp).  
   
@@ -275,7 +275,7 @@ manager: craigg
   
  This procedure is completed per site collection. For more information, see [Activate the Report Server and Power View Integration Features in SharePoint](../../../2014/reporting-services/activate-the-report-server-and-power-view-integration-features-in-sharepoint.md).  
   
-##  <a name="bkmk_full_script"></a> Windows PowerShell script for Steps 1–4  
+##  <a name="bkmk_full_script"></a> Windows PowerShell script for Steps 1-4  
  The PowerShells script in this section are the equivalent of completing steps 1 to 4 in the previous sections. The script completes the following:  
   
 -   Installs [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] service and service proxy, and starts the service.  
@@ -290,9 +290,9 @@ manager: craigg
   
 -   Update the **-Account** for the service proxy. The account needs to be a managed service account in the SharePoint farm. For more information, see the SharePoint topic [Plan for administrative and service accounts in SharePoint 2013](http://technet.microsoft.com/library/cc263445.aspx).  
   
--   Update the **–DatabaseServer** parameter for the service application. This parameter is the database engine instance  
+-   Update the **-DatabaseServer** parameter for the service application. This parameter is the database engine instance  
   
--   Update the **–url** parameter of the site that you want the [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] feature enabled.  
+-   Update the **-url** parameter of the site that you want the [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] feature enabled.  
   
  **To use the script:**  
   
@@ -309,7 +309,7 @@ $starttime=Get-Date
 write-host -foregroundcolor DarkGray StartTime>> $starttime   
   
 Write-Host -ForegroundColor Green "Import the SharePoint PowerShell snappin"  
-Add-PSSnapin Microsoft.Sharepoint.Powershell –EA 0  
+Add-PSSnapin Microsoft.Sharepoint.Powershell -EA 0  
   
 Write-Host -ForegroundColor Green "Install SSRS Service and Service Proxy, and start the service"  
 Write-Host -ForegroundColor Green ">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>"  

@@ -46,7 +46,7 @@ manager: craigg
   
 2.  Expand the **Databases** node.  
   
-3.  Right-click the database to be registered, point to **Tasks**, and then select **Register As Data-tier Application…**  
+3.  Right-click the database to be registered, point to **Tasks**, and then select **Register As Data-tier Application...**  
   
 4.  Complete the wizard dialogs:  
   

@@ -137,7 +137,7 @@ The introduction of enclave-enabled keys does not fundamentally change the [key 
 - The **ENCLAVE_COMPUTATIONS** property in the column master key metadata in the database is set.
 - The column master key property values (including the setting of **ENCLAVE_COMPUTATIONS**) are digitally signed. The tool adds the signature, which is produced using the actual column master key, to the metadata. The purpose of the signature is to prevent malicious DBAs and computer admins from tampering with the **ENCLAVE_COMPUTATIONS** setting. The SQL client drivers verify the signatures before allowing the enclave use. This provides security administrators with control over which column data can be computed inside the enclave.
 
-The **ENCLAVE_COMPUTATIONS** property of a column master key is immutable – you cannot change it after the key has been provisioned. You can, however, replace the column master key with a new key that has a different value of the **ENCLAVE_COMPUTATIONS** property than the original key, via a process called a [column master key rotation](#initiate-the-rotation-from-the-current-column-master-key-to-the-new-column-master-key). For more information about the **ENCLAVE_COMPUTATIONS** property, see [CREATE COLUMN MASTER KEY](../../../t-sql/statements/create-column-master-key-transact-sql.md).
+The **ENCLAVE_COMPUTATIONS** property of a column master key is immutable - you cannot change it after the key has been provisioned. You can, however, replace the column master key with a new key that has a different value of the **ENCLAVE_COMPUTATIONS** property than the original key, via a process called a [column master key rotation](#initiate-the-rotation-from-the-current-column-master-key-to-the-new-column-master-key). For more information about the **ENCLAVE_COMPUTATIONS** property, see [CREATE COLUMN MASTER KEY](../../../t-sql/statements/create-column-master-key-transact-sql.md).
 
 To provision an enclave-enabled column encryption key, you need to make sure that the column master key that encrypts the column encryption key, is enclave-enabled.
 
@@ -153,7 +153,7 @@ The following steps create enclave-enabled keys (requires SSMS 18.0 or later):
 2. In **Object Explorer**, expand your database and navigate to **Security** > **Always Encrypted Keys**.
 3. Provision a new enclave-enabled column master key:
 
-    1. Right click **Always Encrypted Keys** and select **New Column Master Key…**.
+    1. Right click **Always Encrypted Keys** and select **New Column Master Key...**.
     2. Select your column master key name.
     3. Make sure you select either **Windows Certificate Store (Current User or Local Machine)** or **Azure Key Vault**.
     4. Select **Allow enclave computations**.
@@ -174,7 +174,7 @@ The following steps create enclave-enabled keys (requires SSMS 18.0 or later):
 
 The following sections provide sample PowerShell scripts for provisioning enclave-enabled keys. The steps that are specific (new) to Always Encrypted with secure enclaves are highlighted. For more information (not specific to Always Encrypted with secure enclaves) about provisioning keys using PowerShell, see [Configure Always Encrypted Keys using PowerShell](https://docs.microsoft.com/sql/relational-databases/security/encryption/configure-always-encrypted-keys-using-powershell).
 
-**Provisioning Enclave-Enabled Keys – Windows Certificate Store**
+**Provisioning Enclave-Enabled Keys - Windows Certificate Store**
 
 On the client/development computer, open Windows PowerShell ISE, and run the following script.
 
@@ -207,7 +207,7 @@ New-SqlColumnEncryptionKey -Name $cekName -InputObject $database -ColumnMasterKe
 ```
 
 
-### Provisioning Enclave-Enabled Keys – Azure Key Vault
+### Provisioning Enclave-Enabled Keys - Azure Key Vault
 
 On the client/development computer, open Windows PowerShell ISE, and run the following script.
 
@@ -231,7 +231,7 @@ $akvKeyName = "<key name>"
 $azureCtx = Set-AzureRMConteXt -SubscriptionId $SubscriptionId
 
 # Create a new resource group - skip, if your desired group already exists.
-New-AzureRmResourceGroup –Name $resourceGroup –Location $azureLocation
+New-AzureRmResourceGroup -Name $resourceGroup -Location $azureLocation
 
 # Create a new key vault - skip if your vault already exists.
 New-AzureRmKeyVault -VaultName $akvName -ResourceGroupName $resourceGroup -Location $azureLocation
@@ -506,7 +506,7 @@ Here are the three approaches for enabling enclaves for existing columns:
 - Cons:
   - Does not support changing the encryption type from deterministic to randomized, so while it unlocks in-place encryption for columns encrypted deterministically, it does not enable rich computations.
   - Does not allow you to selectively convert some of the columns, associated with a given column master key.
-  - Introduces key management overhead – you need to create a new column master key and make it available to applications that query the impacted columns.  
+  - Introduces key management overhead - you need to create a new column master key and make it available to applications that query the impacted columns.  
 
 
 #### Option 2: This approach involves two steps: 1) rotating the column master key (as in Option 1) and 2) re-encrypting a subset of deterministically encrypted columns using randomized encryption, to enable rich computations for those columns.
@@ -517,7 +517,7 @@ Here are the three approaches for enabling enclaves for existing columns:
   
 - Cons:
   - Does not allow you to selectively convert some of the columns, associated with a given column master key.
-  - It introduces key management overhead – you need to create a new column master key and make it available to applications that query the impacted columns.
+  - It introduces key management overhead - you need to create a new column master key and make it available to applications that query the impacted columns.
 
 #### Option 3: Re-encrypting selected columns with a new enclave-enabled column encryption key and randomized encryption (if needed) on the client side.
   
@@ -726,7 +726,7 @@ the online mode.
 
 #### Example
 
-Assuming the SSN column is encrypted and the current collation, set at the column level is Latin1\_General\_BIN2, the below statement decrypts the column (and keep the collation unchanged – alternatively, you can choose to change the collation, for example, to a non-BIN2 collation in the same statement).
+Assuming the SSN column is encrypted and the current collation, set at the column level is Latin1\_General\_BIN2, the below statement decrypts the column (and keep the collation unchanged - alternatively, you can choose to change the collation, for example, to a non-BIN2 collation in the same statement).
 
 
 ```sql
@@ -743,7 +743,7 @@ GO
 
 The quickest way to try rich queries against your enclave-enabled columns is from an SSMS query window with Parameterization for Always Encrypted enabled. For details on this useful capability in SSMS, see:
 
-- [Parameterization for Always Encrypted – Using SSMS to Insert into, Update and Filter by Encrypted Columns](https://blogs.msdn.microsoft.com/sqlsecurity/2016/12/13/parameterization-for-always-encrypted-using-ssms-to-insert-into-update-and-filter-by-encrypted-columns/)
+- [Parameterization for Always Encrypted - Using SSMS to Insert into, Update and Filter by Encrypted Columns](https://blogs.msdn.microsoft.com/sqlsecurity/2016/12/13/parameterization-for-always-encrypted-using-ssms-to-insert-into-update-and-filter-by-encrypted-columns/)
 - [Querying Encrypted Columns](configure-always-encrypted-using-sql-server-management-studio.md#querying-encrypted-columns)
 
 
@@ -760,7 +760,7 @@ The quickest way to try rich queries against your enclave-enabled columns is fro
 2.  Enable Parameterization for Always Encrypted.
     
     1.  Select **Query** from the main menu of SSMS.
-    2.  Select **Query Options…**.
+    2.  Select **Query Options...**.
     3.  Navigate to **Execution** > **Advanced**.
     4.  Select or unselect Enable Parameterization for Always Encrypted.
     5.  Click OK.

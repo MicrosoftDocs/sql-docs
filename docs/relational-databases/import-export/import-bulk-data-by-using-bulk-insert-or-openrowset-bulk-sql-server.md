@@ -27,10 +27,10 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
 # Import Bulk Data by Using BULK INSERT or OPENROWSET(BULK...) (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
-  This topic provides an overview of how to use the [!INCLUDE[tsql](../../includes/tsql-md.md)] BULK INSERT statement and the INSERT...SELECT * FROM OPENROWSET(BULK...) statement to bulk import data from a data file into a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] table. This topic also describes security considerations for using BULK INSERT and OPENROWSET(BULK…), and using these methods to bulk import from a remote data source.  
+  This topic provides an overview of how to use the [!INCLUDE[tsql](../../includes/tsql-md.md)] BULK INSERT statement and the INSERT...SELECT * FROM OPENROWSET(BULK...) statement to bulk import data from a data file into a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] table. This topic also describes security considerations for using BULK INSERT and OPENROWSET(BULK...), and using these methods to bulk import from a remote data source.  
   
 > [!NOTE]
-> When you use BULK INSERT or OPENROWSET(BULK…), it is important to understand how [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] version handles impersonation. For more information, see "Security Considerations," later in this topic.  
+> When you use BULK INSERT or OPENROWSET(BULK...), it is important to understand how [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] version handles impersonation. For more information, see "Security Considerations," later in this topic.  
   
 ## BULK INSERT statement  
  BULK INSERT loads data from a data file into a table. This functionality is similar to that provided by the **in** option of the **bcp** command; however, the data file is read by the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] process. For a description of the BULK INSERT syntax, see [BULK INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/bulk-insert-transact-sql.md).  
@@ -62,12 +62,12 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
   
 -   [Use a Format File to Map Table Columns to Data-File Fields &#40;SQL Server&#41;](../../relational-databases/import-export/use-a-format-file-to-map-table-columns-to-data-file-fields-sql-server.md)  
   
-## OPENROWSET(BULK…) Function  
- The OPENROWSET bulk rowset provider is accessed by calling the OPENROWSET function and specifying the BULK option. The OPENROWSET(BULK…) function allows you to access remote data by connecting to a remote data source, such as a data file, through an OLE DB provider.  
+## OPENROWSET(BULK...) Function  
+ The OPENROWSET bulk rowset provider is accessed by calling the OPENROWSET function and specifying the BULK option. The OPENROWSET(BULK...) function allows you to access remote data by connecting to a remote data source, such as a data file, through an OLE DB provider.  
 
 **Applies to:** `OPENROWSET` is not available in [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)].
   
- To bulk import data, call OPENROWSET(BULK…) from a SELECT…FROM clause within an INSERT statement. The basic syntax for bulk importing data is:  
+ To bulk import data, call OPENROWSET(BULK...) from a SELECT...FROM clause within an INSERT statement. The basic syntax for bulk importing data is:  
   
  INSERT ... SELECT * FROM OPENROWSET(BULK...)  
   

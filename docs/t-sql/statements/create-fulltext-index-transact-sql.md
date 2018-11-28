@@ -68,7 +68,7 @@ CREATE FULLTEXT INDEX ON table_name
  *column_name*  
  Is the name of the column included in the full-text index. Only columns of type **char**, **varchar**, **nchar**, **nvarchar**, **text**, **ntext**, **image**, **xml**, and **varbinary(max)** can be indexed for full-text search. To specify multiple columns, repeat the *column_name* clause as follows:  
   
- CREATE FULLTEXT INDEX ON *table_name* (*column_name1* […], *column_name2* […]) …  
+ CREATE FULLTEXT INDEX ON *table_name* (*column_name1* [...], *column_name2* [...]) ...  
   
  TYPE COLUMN *type_column_name*  
  Specifies the name of a table column, *type_column_name*, that is used to hold the document type for a **varbinary(max)** or **image** document. This column, known as the type column, contains a user-supplied file extension (.doc, .pdf, .xls, and so forth). The type column must be of type **char**, **nchar**, **varchar**, or **nvarchar**.  
@@ -115,7 +115,7 @@ CREATE FULLTEXT INDEX ON table_name
  Specifies whether changes (updates, deletes or inserts) made to table columns that are covered by the full-text index will be propagated by [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to the full-text index. Data changes through WRITETEXT and UPDATETEXT are not reflected in the full-text index, and are not picked up with change tracking.  
   
  MANUAL  
- Specifies that the tracked changes must be propagated manually by calling the ALTER FULLTEXT INDEX … START UPDATE POPULATION [!INCLUDE[tsql](../../includes/tsql-md.md)] statement (*manual population*). You can use [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent to call this [!INCLUDE[tsql](../../includes/tsql-md.md)] statement periodically.  
+ Specifies that the tracked changes must be propagated manually by calling the ALTER FULLTEXT INDEX ... START UPDATE POPULATION [!INCLUDE[tsql](../../includes/tsql-md.md)] statement (*manual population*). You can use [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent to call this [!INCLUDE[tsql](../../includes/tsql-md.md)] statement periodically.  
   
  **AUTO**  
  Specifies that the tracked changes will be propagated automatically as data is modified in the base table (*automatic population*). Although changes are propagated automatically, these changes might not be reflected immediately in the full-text index. AUTO is the default.  

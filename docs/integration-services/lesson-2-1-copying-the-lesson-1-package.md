@@ -43,7 +43,7 @@ In this task, you will create a copy of the Lesson 1.dtsx package that you creat
   
 3.  In the **Add Copy of Existing Package** dialog box, in **Package location**, select **File system**.  
   
-4.  Click the browse **(…)** button, navigate to **Lesson 1.dtsx** on your machine, and then click **Open**.  
+4.  Click the browse **(...)** button, navigate to **Lesson 1.dtsx** on your machine, and then click **Open**.  
   
     To download all of the lesson packages for this tutorial, do the following.  
   

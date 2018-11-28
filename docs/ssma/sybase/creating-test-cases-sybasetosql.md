@@ -17,7 +17,7 @@ manager: craigg
 Use the Test Case Wizard to create a test. This wizard lets you create test cases by choosing tested and verified objects and by specifying the testing parameters.  
   
 ## Starting the Test Case Wizard  
-To start the Test Case Wizard click **New Test Case…** from the **Tester** menu.  
+To start the Test Case Wizard click **New Test Case...** from the **Tester** menu.  
   
 When started, the wizard looks for database ssmatester2005db or ssmatester2008db (depending on the project type) on the source Sybase server. It is the Tester extension schema used for storing auxiliary objects. If the Test Case Wizard cannot find ssmatester2005db or ssmatester2008db, it displays a dialog window that proposes to create the Tester extension database. (That situation usually happens during the first run of SSMA Tester.)  
   

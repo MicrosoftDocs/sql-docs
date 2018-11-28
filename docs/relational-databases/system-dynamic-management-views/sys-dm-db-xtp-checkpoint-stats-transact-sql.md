@@ -61,7 +61,7 @@ SELECT * FROM db.sys.dm_db_xtp_checkpoint_stats;
 |last_closed_checkpoint_ts|**bigint**|Timestamp of the last closed checkpoint.|  
 |hardened_recovery_lsn|**numeric(38)**|Recovery will start from this LSN.|  
 |hardened_root_file_guid|**uniqueidentifier**|GUID of the root file that hardened as a result of the last completed checkpoint.|  
-|hardened_root_file_watermark|**bigint**|**Internal Only**. How far it is valid to read the root file up to (this is an internally relevant type only – called BSN).|  
+|hardened_root_file_watermark|**bigint**|**Internal Only**. How far it is valid to read the root file up to (this is an internally relevant type only - called BSN).|  
 |hardened_truncation_lsn|**numeric(38)**|LSN of the truncation point.|  
 |log_bytes_since_last_close|**bigint**|Bytes from last close to the current end of log.|  
 |time_since_last_close_in_ms|**bigint**|Time since last close of the checkpoint.|  

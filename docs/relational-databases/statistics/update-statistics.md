@@ -54,7 +54,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   
 5.  Right-click the statistics object you wish to update and select **Properties**.  
   
-6.  In the **Statistics Properties –**_statistics\_name_ dialog box, select the **Update statistics for these columns** check box and then click **OK**.  
+6.  In the **Statistics Properties -**_statistics\_name_ dialog box, select the **Update statistics for these columns** check box and then click **OK**.  
   
 ##  <a name="TsqlProcedure"></a> Using Transact-SQL  
   

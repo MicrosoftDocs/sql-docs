@@ -46,7 +46,7 @@ manager: craigg
   
 1.  Click **Site Actions** at the top left corner of the page.  
   
-2.  Click **More Options**…  
+2.  Click **More Options**...  
   
 3.  Under Libraries, click **Data Feed Library**.  
   

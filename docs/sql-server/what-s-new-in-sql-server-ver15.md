@@ -325,7 +325,7 @@ For detailed information, see [What's new in SQL Server Machine Learning Service
 
 The lightweight query profiling infrastructure (LWP) provides query performance data more efficiently than standard profiling technologies. Lightweight profiling is now enabled by default. It was introduced in [!INCLUDE[ssSQL15](../includes/sssql15-md.md)] SP1. Lightweight profiling offers a query execution statistics collection mechanism with an expected overhead of 2% CPU, compared with an overhead of up to 75% CPU for the standard query profiling mechanism. On previous versions, it was OFF by default. Database administrators could enable it with [trace flag 7412](../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md). 
 
-For more information on lightweight profiling, see [Developers Choice: Query progress – anytime, anywhere](https://blogs.msdn.microsoft.com/sql_server_team/query-progress-anytime-anywhere/).
+For more information on lightweight profiling, see [Developers Choice: Query progress - anytime, anywhere](https://blogs.msdn.microsoft.com/sql_server_team/query-progress-anytime-anywhere/).
 
 ### <a id="polybase"></a>New PolyBase connectors
 

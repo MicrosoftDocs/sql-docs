@@ -73,10 +73,10 @@ cbRow
   
 |Property|Description|  
 |--------------|-----------------|  
-|BCP_OUT_CHARACTER_MODE|Specifies character output mode.<br /><br /> Corresponds to the –c option in BCP.EXE, and to bcp_setcolfmt with `BCP_FMT_TYPE` property set to `SQLCHARACTER`.|  
-|BCP_OUT_WIDE_CHARACTER_MODE|Specifies Unicode output mode.<br /><br /> Corresponds to the –w option in BCP.EXE and bcp_setcolfmt with `BCP_FMT_TYPE` property set to `SQLNCHAR`.|  
-|BCP_OUT_NATIVE_TEXT_MODE|Specifies native types for non-character types and Unicode for character types.<br /><br /> Corresponds to the –N option in BCP.EXE and bcp_setcolfmt with `BCP_FMT_TYPE` property set to `SQLNCHAR` if the column type is a string (default if not a string).|  
-|BCP_OUT_NATIVE_MODE|Specifies native database types.<br /><br /> Corresponds to the –n option in BCP.EXE and bcp_setcolfmt with `BCP_FMT_TYPE` property set to the default.|  
+|BCP_OUT_CHARACTER_MODE|Specifies character output mode.<br /><br /> Corresponds to the -c option in BCP.EXE, and to bcp_setcolfmt with `BCP_FMT_TYPE` property set to `SQLCHARACTER`.|  
+|BCP_OUT_WIDE_CHARACTER_MODE|Specifies Unicode output mode.<br /><br /> Corresponds to the -w option in BCP.EXE and bcp_setcolfmt with `BCP_FMT_TYPE` property set to `SQLNCHAR`.|  
+|BCP_OUT_NATIVE_TEXT_MODE|Specifies native types for non-character types and Unicode for character types.<br /><br /> Corresponds to the -N option in BCP.EXE and bcp_setcolfmt with `BCP_FMT_TYPE` property set to `SQLNCHAR` if the column type is a string (default if not a string).|  
+|BCP_OUT_NATIVE_MODE|Specifies native database types.<br /><br /> Corresponds to the -n option in BCP.EXE and bcp_setcolfmt with `BCP_FMT_TYPE` property set to the default.|  
   
  You should not use bcp_setbulkmode with a sequence of function calls that includes bcp_setcolfmt, bcp_control, and bcp_readfmt. For example, you should not call bcp_control(BCPTEXTFILE) and bcp_setbulkmode.  
   
@@ -101,7 +101,7 @@ bcp_readfmt();
   
 ```  
 bcp_init(NULL, DB_OUT);  
-bcp_control(BCPHINTS, "select …");  
+bcp_control(BCPHINTS, "select ...");  
 bcp_setbulkmode();  
 ```  
   
@@ -122,7 +122,7 @@ bcp_setcolfmt();
 bcp_init(NULL, DB_OUT);  
 bcp_control(BCPDELAYREADFMT, true);  
 bcp_setbulkmode();  
-bcp_control(BCPHINTS, "select …");  
+bcp_control(BCPHINTS, "select ...");  
 bcp_readfmt();  
 ```  
   

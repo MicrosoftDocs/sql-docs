@@ -121,7 +121,7 @@ SELECT TOP (1) - 17 FROM DimEmployee;
 ```  
 USE ssawPDW;  
   
-SELECT TOP (1) – ( - 17) FROM DimEmployee;  
+SELECT TOP (1) - ( - 17) FROM DimEmployee;  
 ```  
   
  Returns  

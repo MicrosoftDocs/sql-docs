@@ -114,7 +114,7 @@ Select * FROM Win32_QuickFixEngineering
   
 ### Static Options  
  **WMIConnectionName**  
- Select a WMI connection manager in the list, or click \<**New WMI Connection…**> to create a new connection manager.  
+ Select a WMI connection manager in the list, or click \<**New WMI Connection...**> to create a new connection manager.  
   
  **Related Topics:** [WMI Connection Manager](../../integration-services/connection-manager/wmi-connection-manager.md), [WMI Connection Manager Editor](../../integration-services/connection-manager/wmi-connection-manager-editor.md)  
   
@@ -145,7 +145,7 @@ Select * FROM Win32_QuickFixEngineering
   
 #### WQLQuerySourceType = Direct input  
  **WQLQuerySource**  
- Provide a query, or click the ellipsis (…) and enter a query using the **WQL Query** dialog box.  
+ Provide a query, or click the ellipsis (...) and enter a query using the **WQL Query** dialog box.  
   
 #### WQLQuerySourceType = File connection  
  **WQLQuerySource**  

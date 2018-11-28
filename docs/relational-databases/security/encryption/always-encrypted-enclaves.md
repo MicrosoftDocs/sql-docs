@@ -42,9 +42,9 @@ During query processing, the data or the column encryption keys are not exposed 
 
 With secure enclaves, Always Encrypted protects the confidentiality of sensitive data while providing the following benefits:
 
-- **In-place encryption** – cryptographic operations on sensitive data, for example: initial data encryption or rotating a column encryption key, are performed inside the secure enclave and do not require moving the data outside of the database. You can issue in-place encryption using the ALTER TABLE Transact-SQL statement, and you do not need to use tools, such as the Always Encrypted wizard in SSMS or the Set-SqlColumnEncryption PowerShell cmdlet.
+- **In-place encryption** - cryptographic operations on sensitive data, for example: initial data encryption or rotating a column encryption key, are performed inside the secure enclave and do not require moving the data outside of the database. You can issue in-place encryption using the ALTER TABLE Transact-SQL statement, and you do not need to use tools, such as the Always Encrypted wizard in SSMS or the Set-SqlColumnEncryption PowerShell cmdlet.
 
-- **Rich computations (preview)** – operations on encrypted columns, including pattern matching (the LIKE predicate) and range comparisons, are supported inside the secure enclave, which unlocks Always Encrypted to a broad range of applications and scenarios that require such computations to be performed inside the database system.
+- **Rich computations (preview)** - operations on encrypted columns, including pattern matching (the LIKE predicate) and range comparisons, are supported inside the secure enclave, which unlocks Always Encrypted to a broad range of applications and scenarios that require such computations to be performed inside the database system.
 
 > [!IMPORTANT]
 > In [!INCLUDE[sql-server-2019](..\..\..\includes\sssqlv15-md.md)], rich computations are pending several performance optimizations, include limited functionality (no indexing, etc), and are currently disabled by default. To enable rich computations, see  [Enable rich computations](configure-always-encrypted-enclaves.md#configure-a-secure-enclave).
@@ -67,8 +67,8 @@ To use Always Encrypted with secure enclaves, an application must use a client d
 
 Always Encrypted with secure enclaves introduces the concept of enclave-enabled keys:
 
-- **Enclave-enabled column master key** – a column master key that has the ENCLAVE_COMPUTATIONS property specified in the column master key metadata object inside the database. The column master key metadata object must also contain a valid signature of the metadata properties.
-- **Enclave-enabled column encryption key** – a column encryption key that is encrypted with an enclave-enabled column master key.
+- **Enclave-enabled column master key** - a column master key that has the ENCLAVE_COMPUTATIONS property specified in the column master key metadata object inside the database. The column master key metadata object must also contain a valid signature of the metadata properties.
+- **Enclave-enabled column encryption key** - a column encryption key that is encrypted with an enclave-enabled column master key.
 
 When the SQL Server Engine determines operations, specified in a query, need to be performed inside the secure enclave, the SQL Server Engine requests the client driver shares the column encryption keys that are needed for the computations with the secure enclave. The client driver shares the column encryption keys only if the keys are enclave-enabled (that is, encrypted with enclave-enabled column master keys) and they are properly signed. Otherwise, the query fails.
 
@@ -116,7 +116,7 @@ General limitations:
 
 - Equality comparison remains the only Transact-SQL operator supported with deterministic encryption and equality comparisons are performed by comparing ciphertext values outside of the enclave, regardless if the columns encryption key is enclave-enabled or not. The only new functionality that gets unlocked with enclave-enabled column encryption keys for deterministic encryption, are in-place cryptographic operations. If you have a column that is encrypted using deterministic encryption (and a key that is not enclave-enabled), to enable rich computations (pattern matching, comparison operations), you need to re-encrypt the column using randomized encryption.
 
-- The existing restriction on using collations apply to columns encrypted with enclave-enabled column encryption keys: character string columns (char, nchar, varchar, nvarchar) encrypted using deterministic encryption must use collations with a binary2 sort order (BIN2 collations). Character string columns using non-BIN2 collations can be encrypted using randomized encryption – however the only new functionality that is enabled for such columns (if they are encrypted with enclave-enabled column encryption keys) is in-place encryption. **To support rich computations (pattern matching, comparison operations), a column must use a BIN2 collation** (and the column must be encrypted using randomized encryption and an enclave-enabled column encryption key).
+- The existing restriction on using collations apply to columns encrypted with enclave-enabled column encryption keys: character string columns (char, nchar, varchar, nvarchar) encrypted using deterministic encryption must use collations with a binary2 sort order (BIN2 collations). Character string columns using non-BIN2 collations can be encrypted using randomized encryption - however the only new functionality that is enabled for such columns (if they are encrypted with enclave-enabled column encryption keys) is in-place encryption. **To support rich computations (pattern matching, comparison operations), a column must use a BIN2 collation** (and the column must be encrypted using randomized encryption and an enclave-enabled column encryption key).
 
 - Using enclave-enabled keys for columns in in-memory tables is not supported.
 
@@ -138,4 +138,4 @@ The following limitations apply to the current Preview, but are on the roadmap t
 
 ## Next Steps
 
-- Set up your test environment and try the functionality of Always Encrypted with secure enclaves in SSMS – see [Tutorial: Getting started with Always Encrypted with secure enclaves using SSMS](../tutorial-getting-started-with-always-encrypted-enclaves.md).
+- Set up your test environment and try the functionality of Always Encrypted with secure enclaves in SSMS - see [Tutorial: Getting started with Always Encrypted with secure enclaves using SSMS](../tutorial-getting-started-with-always-encrypted-enclaves.md).

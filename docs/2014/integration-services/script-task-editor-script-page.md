@@ -38,13 +38,13 @@ manager: craigg
  If you change the name of the method in the VSTA project, you must change the value of the **EntryPoint** property.  
   
  **ReadOnlyVariables**  
- Type a comma-separated list of read-only variables that are available to the script, or click the ellipsis (**…**) button and select the variables in the **Select variables** dialog box.  
+ Type a comma-separated list of read-only variables that are available to the script, or click the ellipsis (**...**) button and select the variables in the **Select variables** dialog box.  
   
 > [!NOTE]  
 >  Variable names are case sensitive.  
   
  **ReadWriteVariables**  
- Type a comma-separated list of read/write variables that are available to the script, or click the ellipsis (**…**) button and select the variables in the **Select variables** dialog box.  
+ Type a comma-separated list of read/write variables that are available to the script, or click the ellipsis (**...**) button and select the variables in the **Select variables** dialog box.  
   
 > [!NOTE]  
 >  Variable names are case sensitive.  

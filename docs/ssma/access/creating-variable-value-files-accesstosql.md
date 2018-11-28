@@ -12,7 +12,7 @@ ms.author: "Shamikg"
 manager: craigg
 ---
 # Creating Variable Value Files (AccessToSQL)
-A Variable Value File is an XML file comprising the parameter values of commands (such as the source or destination server name) that frequently change across server migrations. When a large number of database migrations occur, multiple variable files for storing the value of each source server are created and referenced in a master script file with the **–v** switch at command line. This behavior helps in maintaining static values in a few script files with the variable values in multiple variable files.  
+A Variable Value File is an XML file comprising the parameter values of commands (such as the source or destination server name) that frequently change across server migrations. When a large number of database migrations occur, multiple variable files for storing the value of each source server are created and referenced in a master script file with the **-v** switch at command line. This behavior helps in maintaining static values in a few script files with the variable values in multiple variable files.  
   
 > [!NOTE]  
 > -  Variable names are prefixed and suffixed with a $ (dollar) symbol. If a variable is not assigned a value in the variable value file, an error during the parsing of the script file will occur, resulting in stalling the console execution process.  

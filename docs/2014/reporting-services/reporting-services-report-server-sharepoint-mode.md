@@ -88,7 +88,7 @@ manager: craigg
   
 -   SQL Server Reporting Services does **not** support SharePoint document library version control. If you save report items in a document library that is configured with "Document Version History" enabled, Reporting Services features will not function correctly and generate errors in the ULS log. The following is an example of an error in the ULS log:  
   
-    -   "…a data source associated with the report has been disabled".  
+    -   "...a data source associated with the report has been disabled".  
   
      Document library version history is configured on the "Versioning Settings" page of "Library Settings".  
   

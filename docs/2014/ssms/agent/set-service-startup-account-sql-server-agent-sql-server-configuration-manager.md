@@ -59,7 +59,7 @@ manager: craigg
   
 2.  Click the plus sign to expand the **Local Server Groups** folder.  
   
-3.  Right-click the server instance where you want set up the Service Startup Account, and select **SQL Server Configuration Manager…**.  
+3.  Right-click the server instance where you want set up the Service Startup Account, and select **SQL Server Configuration Manager...**.  
   
 4.  In the **User Account Control** dialog box, click **Yes**.  
   

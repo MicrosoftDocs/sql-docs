@@ -187,7 +187,7 @@ manager: craigg
   
 1.  In SharePoint Central Administration, click **PowerPivot Management Dashboard** in the **General application settings** group.  
   
-2.  At the bottom of the dashboard, see the **Data Refresh – Recent Activity** and **Data Refresh – Recent Failures**.  
+2.  At the bottom of the dashboard, see the **Data Refresh - Recent Activity** and **Data Refresh - Recent Failures**.  
   
 3.  For more information on usage data and how to enable it, see [PowerPivot Management Dashboard and Usage Data](power-pivot-management-dashboard-and-usage-data.md).  
   
@@ -218,7 +218,7 @@ manager: craigg
   
 3.  In the **Workbook connections dialog**, select the connection and click **Properties**.  
   
-4.  In the **Connection properties** dialog, click **Definition**, and then click the **Authentication Settings…** button.  
+4.  In the **Connection properties** dialog, click **Definition**, and then click the **Authentication Settings...** button.  
   
  ![excel services authentication settings](../media/as-authentication-settings-4-ecs-in-excel2013.gif "excel services authentication settings")  
   

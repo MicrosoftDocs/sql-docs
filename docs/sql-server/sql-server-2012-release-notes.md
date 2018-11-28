@@ -31,7 +31,7 @@ Before installing [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)], consider t
 ### 1.2 Adding a Local User Account for the Distributed Replay Controller Service Might Terminate Setup Unexpectedly  
 **Issue:** In the **Distributed Replay Controller** page of SQL Server setup, when attempting to add a local user account for the Distributed Replay Controller service, setup will be terminated unexpectedly with a "SQL Server Setup failure" error message.  
   
-**Workaround:** During SQL setup, do not add local user accounts via either "Add Current User" or "Add…". After setup, add a local user account manually by using the following steps:  
+**Workaround:** During SQL setup, do not add local user accounts via either "Add Current User" or "Add...". After setup, add a local user account manually by using the following steps:  
   
 1.  Stop the SQL Server Distributed Replay controller service  
   
@@ -182,9 +182,9 @@ The following items describe the prerequisite installation behavior during SQL S
   
 -   Windows PowerShell 2.0 is a prerequisite for installing SQL Server 2012 Database Engine components and SQL Server Management Studio, but Windows PowerShell is no longer installed by SQL Server Setup. If PowerShell 2.0 is not present on your computer, you can enable it by following the instructions on the [Windows Management Framework](https://support.microsoft.com/kb/968929) page. How you get Windows PowerShell 2.0 depends on which operating system you are running:  
   
-    -   Windows Server 2008 – Windows PowerShell 1.0 is a feature and can be added. Windows PowerShell 2.0 versions are downloaded and installed (effectively as an OS Patch).  
+    -   Windows Server 2008 - Windows PowerShell 1.0 is a feature and can be added. Windows PowerShell 2.0 versions are downloaded and installed (effectively as an OS Patch).  
   
-    -   Windows 7/Windows Server 2008 R2 – Windows PowerShell 2.0 are installed by default.  
+    -   Windows 7/Windows Server 2008 R2 - Windows PowerShell 2.0 are installed by default.  
   
 -   If you plan to use SQL Server 2012 features in a SharePoint environment, then SharePoint Server 2010 Service Pack 1 (SP1) and the SharePoint August Cumulative Update is required. You must install SP1, the SharePoint [August Cumulative Update](https://blogs.technet.com/b/stefan_gossner/archive/2010/09/02/august-2010-cumulative-update-for-sharepoint-has-been-released.aspx), and fully patch the server farm before you add SQL Server 2012 features to the farm. This requirement applies to the following SQL Server 2012 features: using an instance of Database Engine as the farm's database server, configuring PowerPivot for SharePoint, or deploying Reporting Services in SharePoint mode.  
   
@@ -335,7 +335,7 @@ There are problems with the AS Processing Task when you work with tabular models
 **Workaround:** To avoid this, publish work that you need to persist in the knowledge base before starting a new activity.  
   
 ### 4.5 Controls Do Not Scale Properly On Large Font Sizes  
-**Issue:** If you change the size of text to "Larger – 150%" (in Windows Server 2008 or Windows 7), or change the Custom DPI setting to 200% (in Windows 7), the **Cancel** and **Create** buttons on the **New Knowledge Base** page are not accessible.  
+**Issue:** If you change the size of text to "Larger - 150%" (in Windows Server 2008 or Windows 7), or change the Custom DPI setting to 200% (in Windows 7), the **Cancel** and **Create** buttons on the **New Knowledge Base** page are not accessible.  
   
 **Workaround:**To resolve the issue, set the font to a smaller size.  
   

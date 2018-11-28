@@ -39,7 +39,7 @@ Delete the full-text index selected in the **Selected Full-Text Index** list.
 When expanded, shows **Columns** and **Full-text Catalog Name**.  
   
 **Columns**  
-Displays a comma-separated list of the names of full-text-searchable columns. To see the complete list, click the ellipsis button (**…**) to the left of the property field.  
+Displays a comma-separated list of the names of full-text-searchable columns. To see the complete list, click the ellipsis button (**...**) to the left of the property field.  
   
 **Full-Text Catalog Name**  
 Displays the name of the full-text catalog on which this full-text index is stored. To store the index on a different catalog, click the catalog name and choose another from the drop-down list.  

@@ -25,7 +25,7 @@ manager: craigg
   
 sqllogship  
 -server  
-instance_name { -backupprimary_id | -copysecondary_id | -restoresecondary_id } [ –verboselevellevel ] [ –logintimeouttimeout_value ] [ -querytimeouttimeout_value ]  
+instance_name { -backupprimary_id | -copysecondary_id | -restoresecondary_id } [ -verboselevellevel ] [ -logintimeouttimeout_value ] [ -querytimeouttimeout_value ]  
 ```  
   
 ## Arguments  
@@ -47,7 +47,7 @@ instance_name { -backupprimary_id | -copysecondary_id | -restoresecondary_id } [
   
  Any backup files in the destination directory that were created after the most recent restore point are restored to the secondary database, or databases. The **sqllogship** application then cleans out any old backup files, based on the file retention period. Next, the application logs history for the restore operation on the secondary server and the monitor server. Finally, the application runs **sp_cleanup_log_shipping_history**, which cleans out old history information, based on the retention period.  
   
- **–verboselevel** *level*  
+ **-verboselevel** *level*  
  Specifies the level of messages added to the log shipping history. *level* is one of the following integers:  
   
 |Level|Description|  
@@ -58,7 +58,7 @@ instance_name { -backupprimary_id | -copysecondary_id | -restoresecondary_id } [
 |**3**|Output informational messages, warnings, and error-handling messages. This is the default value.|  
 |4|Output all debugging and tracing messages.|  
   
- **–logintimeout** *timeout_value*  
+ **-logintimeout** *timeout_value*  
  Specifies the amount of time allotted for attempting to log in to the server instance before the attempt times out. The default is 15 seconds. *timeout_value* is **int***.*  
   
  **-querytimeout** *timeout_value*  

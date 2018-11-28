@@ -135,7 +135,7 @@ GO
   
 -   IX_OrderSequence: 0 percent of the buckets are empty, which is too low. In addition, the average chain length is 8. As the values in this index are unique, this means on average 8 values are mapped to each bucket. The bucket count should be increased. As the index key has 262,144 unique values, the bucket count should be at least 262,144. If future growth is expected, the number should be higher.  
   
--   Primary key index (PK__SalesOrder…): 36 percent of the buckets are empty, which is good. In addition the average chain length is 1, which is also good. No change needed.  
+-   Primary key index (PK__SalesOrder...): 36 percent of the buckets are empty, which is good. In addition the average chain length is 1, which is also good. No change needed.  
   
  For more information on troubleshooting issues with your memory-optimized hash indexes, see [Troubleshooting Common Performance Problems with Memory-Optimized Hash Indexes](../../2014/database-engine/troubleshooting-common-performance-problems-with-memory-optimized-hash-indexes.md).  
   

@@ -40,7 +40,7 @@ manager: craigg
 ## System and User-Defined Variables  
  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] supports two types of variables: user-defined variables and system variables. User-defined variables are defined by package developers, and system variables are defined by [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]. You can create as many user-defined variables as a package requires, but you cannot create additional system variables.  
   
- All variables—system and user-defined—can be used in the parameter bindings that the Execute SQL task uses to map variables to parameters in SQL statements. For more information, see [Execute SQL Task](control-flow/execute-sql-task.md) and [Parameters and Return Codes in the Execute SQL Task](../../2014/integration-services/parameters-and-return-codes-in-the-execute-sql-task.md).  
+ All variables-system and user-defined-can be used in the parameter bindings that the Execute SQL task uses to map variables to parameters in SQL statements. For more information, see [Execute SQL Task](control-flow/execute-sql-task.md) and [Parameters and Return Codes in the Execute SQL Task](../../2014/integration-services/parameters-and-return-codes-in-the-execute-sql-task.md).  
   
 > [!NOTE]  
 >  The names of user-defined and system variables are case sensitive.  

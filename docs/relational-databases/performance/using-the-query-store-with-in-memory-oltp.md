@@ -46,7 +46,7 @@ However, there are some specific aspects that users should be aware of when usin
   
 -   The duration of query compilation captured by the Query Store includes only time spent in query optimization, before the native code was generated. More precisely, it doesn't include time for C code compilation and generation of internal structures necessary for C code generation.  
   
--   Memory grants metrics within [sys.query_store_runtime_stats &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-runtime-stats-transact-sql.md) are not populated for natively compiled queries – their values are always 0. The memory grants columns are: avg_query_max_used_memory, last_query_max_used_memory, min_query_max_used_memory, max_query_max_used_memory, and stdev_query_max_used_memory.  
+-   Memory grants metrics within [sys.query_store_runtime_stats &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-runtime-stats-transact-sql.md) are not populated for natively compiled queries - their values are always 0. The memory grants columns are: avg_query_max_used_memory, last_query_max_used_memory, min_query_max_used_memory, max_query_max_used_memory, and stdev_query_max_used_memory.  
   
 ## Enabling and using Query Store with In-Memory OLTP  
  The following simple example  demonstrates using Query Store with in-memory OLTP in an end-to-end user scenario. In this example we assume that a  database (`MemoryOLTP`) is enabled for in-memory OLTP.  

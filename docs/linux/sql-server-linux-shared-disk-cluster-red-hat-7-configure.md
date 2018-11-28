@@ -308,8 +308,8 @@ At this point both instances of SQL Server are configured to run with the databa
 1. On one of the nodes, create the cluster.
 
    ```bash
-   sudo pcs cluster auth <nodeName1 nodeName2 …> -u hacluster
-   sudo pcs cluster setup --name <clusterName> <nodeName1 nodeName2 …>
+   sudo pcs cluster auth <nodeName1 nodeName2 ...> -u hacluster
+   sudo pcs cluster setup --name <clusterName> <nodeName1 nodeName2 ...>
    sudo pcs cluster start --all
    ```
 

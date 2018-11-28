@@ -54,7 +54,7 @@ manager: craigg
   
 2.  Right-click **SQL Server Agent** and select **Properties**.  
   
-3.  In the **SQL Server Agent Properties –***server_name* dialog box, under **Select a page**, select **Alert System**.  
+3.  In the **SQL Server Agent Properties -***server_name* dialog box, under **Select a page**, select **Alert System**.  
   
 4.  Under **Fail-safe operator**, select **Enable fail-safe operator**.  
   

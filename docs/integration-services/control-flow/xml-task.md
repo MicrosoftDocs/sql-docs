@@ -159,7 +159,7 @@ manager: craigg
 |**Variable**|Set the source to a variable that contains the XML document.|  
   
  **Source**  
- If **Source** is set to **Direct input**, provide the XML code or click the ellipsis button **(…)** and then provide the XML by using the **Document Source Editor** dialog box.  
+ If **Source** is set to **Direct input**, provide the XML code or click the ellipsis button **(...)** and then provide the XML by using the **Document Source Editor** dialog box.  
   
  If **Source** is set to **File connection**, select a File connection manager, or click \<**New connection...**> to create a new connection manager.  
   
@@ -220,7 +220,7 @@ manager: craigg
 |**Variable**|Set the source to a variable that contains the XML document.|  
   
  **SecondOperand**  
- If **SecondOperandType** is set to **Direct input**, provide the XML code or click the ellipsis button **(…)** and then provide the XML by using the **Source Editor** dialog box.  
+ If **SecondOperandType** is set to **Direct input**, provide the XML code or click the ellipsis button **(...)** and then provide the XML by using the **Source Editor** dialog box.  
   
  If **SecondOperandType** is set to **File connection**, select a File connection manager, or click \<**New connection...**> to create a new connection manager.  
   
@@ -266,7 +266,7 @@ manager: craigg
 |**Variable**|Set the source to a variable that contains the XML document.|  
   
  **SecondOperand**  
- If **SecondOperandType** is set to **Direct input**, provide the XML code or click the ellipsis button **(…)** and then provide the XML by using the **Source Editor** dialog box.  
+ If **SecondOperandType** is set to **Direct input**, provide the XML code or click the ellipsis button **(...)** and then provide the XML by using the **Source Editor** dialog box.  
   
  If **SecondOperandType** is set to **File connection**, select a File connection manager, or click \<**New connection...**> to create a new connection manager.  
   
@@ -312,7 +312,7 @@ manager: craigg
 |**Variable**|Set the source to a variable that contains the XML document.|  
   
  **SecondOperand**  
- If **SecondOperandType** is set to **Direct input**, provide the XML code or click the ellipsis button **(…)** and then provide the XML by using the **Source Editor** dialog box.  
+ If **SecondOperandType** is set to **Direct input**, provide the XML code or click the ellipsis button **(...)** and then provide the XML by using the **Source Editor** dialog box.  
   
  If **SecondOperandType** is set to **File connection**, select a File connection manager, or click \<**New connection...**> to create a new connection manager.  
   
@@ -347,7 +347,7 @@ manager: craigg
 |**Variable**|Set the source to a variable that contains the XML document.|  
   
  **XPathStringSource**  
- If **XPathStringSourceType** is set to **Direct input**, provide the XML code or click the ellipsis button **(…)** and then provide the XML by using the **Document Source Editor** dialog box.  
+ If **XPathStringSourceType** is set to **Direct input**, provide the XML code or click the ellipsis button **(...)** and then provide the XML by using the **Document Source Editor** dialog box.  
   
  If **XPathStringSourceType** is set to **File connection**, select a File connection manager, or click \<**New connection...**> to create a new connection manager.  
   
@@ -392,7 +392,7 @@ manager: craigg
 |**Variable**|Set the source to a variable that contains the XML document.|  
   
  **SecondOperand**  
- If **SecondOperandType** is set to **Direct input**, provide the XML code or click the ellipsis button **(…)** and then provide the XML by using the **Document Source Editor** dialog box.  
+ If **SecondOperandType** is set to **Direct input**, provide the XML code or click the ellipsis button **(...)** and then provide the XML by using the **Document Source Editor** dialog box.  
   
  If **SecondOperandType** is set to **File connection**, select a File connection manager, or click \<**New connection...**> to create a new connection manager.  
   
@@ -467,7 +467,7 @@ manager: craigg
 |**Variable**|Set the source to a variable that contains the XML document.|  
   
  **SecondOperand**  
- If **SecondOperandType** is set to **Direct input**, provide the XML code or click the ellipsis button **(…)** and then provide the XML by using the **Document Source Editor** dialog box.  
+ If **SecondOperandType** is set to **Direct input**, provide the XML code or click the ellipsis button **(...)** and then provide the XML by using the **Document Source Editor** dialog box.  
   
  If **SecondOperandType** is set to **File connection**, select a File connection manager, or click \<**New connection...**> to create a new connection manager.  
   
@@ -513,7 +513,7 @@ manager: craigg
 |**Variable**|Set the source to a variable that contains the XML document.|  
   
  **SecondOperand**  
- If **SecondOperandType** is set to **Direct input**, provide the XML code or click the ellipsis button **(…)** and then provide the XML by using the **Document Source Editor** dialog box.  
+ If **SecondOperandType** is set to **Direct input**, provide the XML code or click the ellipsis button **(...)** and then provide the XML by using the **Document Source Editor** dialog box.  
   
  If **SecondOperandType** is set to **File connection**, select a File connection manager, or click \<**New connection...**> to create a new connection manager.  
   

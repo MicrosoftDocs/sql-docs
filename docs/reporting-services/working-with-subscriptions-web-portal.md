@@ -24,7 +24,7 @@ Before you can create a new subscription, you must verify that the report data s
   
 ![ssRSWebPortal-subscriptions1](../reporting-services/media/ssrswebportal-subscriptions1.png)  
    
-You can get to the Subscriptions page by selecting the **ellipsis (…)** of a report, selecting **Manage** and selecting **Subscriptions**.  
+You can get to the Subscriptions page by selecting the **ellipsis (...)** of a report, selecting **Manage** and selecting **Subscriptions**.  
   
 From the Subscriptions page, you can create new subscriptions by selecting **+ New Subscription**. You can also edit existing subscriptions, or delete subscriptions that you have selected.  
   

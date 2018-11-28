@@ -58,8 +58,8 @@ CREATE SPATIAL INDEX index_name
     [ USING GEOMETRY_AUTO_GRID ]  
           WITH  (  
         <bounding_box>  
-            [ [,] <tessellation_cells_per_object> [ ,…n] ]  
-            [ [,] <spatial_index_option> [ ,…n] ]  
+            [ [,] <tessellation_cells_per_object> [ ,...n] ]  
+            [ [,] <spatial_index_option> [ ,...n] ]  
                  )  
 }  
   
@@ -68,9 +68,9 @@ CREATE SPATIAL INDEX index_name
        [ USING GEOMETRY_GRID ]  
          WITH (  
                     <bounding_box>  
-                        [ [,]<tessellation_grid> [ ,…n] ]  
-                        [ [,]<tessellation_cells_per_object> [ ,…n] ]  
-                        [ [,]<spatial_index_option> [ ,…n] ]  
+                        [ [,]<tessellation_grid> [ ,...n] ]  
+                        [ [,]<tessellation_cells_per_object> [ ,...n] ]  
+                        [ [,]<spatial_index_option> [ ,...n] ]  
    )  
 }   
   
@@ -83,7 +83,7 @@ CREATE SPATIAL INDEX index_name
 {  
     [ USING GEOGRAPHY_AUTO_GRID ]  
     [ WITH (  
-        [ [,] <tessellation_cells_per_object> [ ,…n] ]  
+        [ [,] <tessellation_cells_per_object> [ ,...n] ]  
         [ [,] <spatial_index_option> ]  
      ) ]  
 }  
@@ -92,9 +92,9 @@ CREATE SPATIAL INDEX index_name
 {  
     [ USING GEOGRAPHY_GRID ]  
     [ WITH (  
-                [ <tessellation_grid> [ ,…n] ]  
-                [ [,] <tessellation_cells_per_object> [ ,…n] ]  
-                [ [,] <spatial_index_option> [ ,…n] ]  
+                [ <tessellation_grid> [ ,...n] ]  
+                [ [,] <tessellation_cells_per_object> [ ,...n] ]  
+                [ [,] <spatial_index_option> [ ,...n] ]  
                 ) ]  
 }  
   

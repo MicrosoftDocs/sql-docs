@@ -4,8 +4,6 @@
   href: ../automatic-tuning/automatic-tuning.md
 - name: Configuring Storage Spaces with a NVDIMM-N write-back cache
   href: configuring-storage-spaces-with-a-nvdimm-n-write-back-cache.md
-- name: Cardinality Estimation
-  href: cardinality-estimation-sql-server.md
 - name: Intelligent Query Processing
   href: intelligent-query-processing.md
   items:
@@ -143,6 +141,8 @@
 - name: Internals and Architecture
   href: ../sql-server-guides.md
   items:
+  - name: Cardinality Estimation
+    href: cardinality-estimation-sql-server.md
   - name: Cursors
     href: ../cursors.md
   - name: Ghost record cleanup process

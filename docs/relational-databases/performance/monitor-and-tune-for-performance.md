@@ -47,7 +47,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
 -   Troubleshoot problems or debug application components, such as stored procedures.  
   
 ## Monitoring in a dynamic environment  
-Changing conditions result in changing performance. In your evaluations, you can see performance changes as the number of users increases, user access and connection methods change, database contents grow, client applications change, data in the applications changes, queries become more complex, and network traffic rises. Using tools to monitor performance helps you associate changes in performance with changing conditions and complex queries. **Examples:**:  
+Changing conditions result in changing performance. In your evaluations, you can see performance changes as the number of users increases, user access and connection methods change, database contents grow, client applications change, data in the applications changes, queries become more complex, and network traffic rises. Using tools to monitor performance helps you associate changes in performance with changing conditions and complex queries. **Examples:**  
   
 -   By monitoring the response times for frequently used queries, you can determine whether changes to the query or indexes on the tables where the queries execute are required.  
   
@@ -55,9 +55,9 @@ Changing conditions result in changing performance. In your evaluations, you can
   
 -   By monitoring users that try to connect to an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], you can determine whether security is set up adequately and test applications or development systems.  
   
- Response time is the length of time required for the first row of the result set to be returned to the user in the form of visual confirmation that a query is being processed. Throughput is the total number of queries handled by the server during a specified period of time.  
+Response time is the length of time required for the first row of the result set to be returned to the user in the form of visual confirmation that a query is being processed. Throughput is the total number of queries handled by the server during a specified period of time.  
   
- As the number of users increases, so does the competition for a server's resources, which in turn increases response time and decreases overall throughput.  
+As the number of users increases, so does the competition for a server's resources, which in turn increases response time and decreases overall throughput.  
   
 ## Monitoring and performance tuning tasks  
   

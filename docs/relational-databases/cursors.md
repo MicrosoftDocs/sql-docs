@@ -69,19 +69,25 @@ Are based on the DECLARE CURSOR syntax and are used mainly in [!INCLUDE[tsql](..
 ### Static  
  The complete result set of a static cursor is built in **tempdb** when the cursor is opened. A static cursor always displays the result set as it was when the cursor was opened. Static cursors detect few or no changes, but consume relatively few resources while scrolling.  
   
- The cursor does not reflect any changes made in the database that affect either the membership of the result set or changes to the values in the columns of the rows that make up the result set. A static cursor does not display new rows inserted in the database after the cursor was opened, even if they match the search conditions of the cursor SELECT statement. If rows making up the result set are updated by other users, the new data values are not displayed in the static cursor. The static cursor displays rows deleted from the database after the cursor was opened. No UPDATE, INSERT, or DELETE operations are reflected in a static cursor (unless the cursor is closed and reopened), not even modifications made using the same connection that opened the cursor.  
+The cursor does not reflect any changes made in the database that affect either the membership of the result set or changes to the values in the columns of the rows that make up the result set. A static cursor does not display new rows inserted in the database after the cursor was opened, even if they match the search conditions of the cursor `SELECT` statement. If rows making up the result set are updated by other users, the new data values are not displayed in the static cursor. The static cursor displays rows deleted from the database after the cursor was opened. No `UPDATE`, `INSERT`, or `DELETE` operations are reflected in a static cursor (unless the cursor is closed and reopened), not even modifications made using the same connection that opened the cursor.  
   
- [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] static cursors are always read-only.  
+> [!NOTE]
+> [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] static cursors are always read-only.  
   
- Because the result set of a static cursor is stored in a work table in **tempdb**, the size of the rows in the result set cannot exceed the maximum row size for a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] table.  
+> [!NOTE]
+> Because the result set of a static cursor is stored in a worktable in **tempdb**, the size of the rows in the result set cannot exceed the maximum row size for a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] table.  
+> For more information, see [worktables in the Query Processing Architecture Guide](../relational-databases/query-processing-architecture-guide.md#worktables). For more information on max row size, see [Maximum Capacity Specifications for SQL Server](../sql-server/maximum-capacity-specifications-for-sql-server.md#Engine).  
   
- [!INCLUDE[tsql](../includes/tsql-md.md)] uses the term insensitive for static cursors. Some database APIs identify them as snapshot cursors.  
+[!INCLUDE[tsql](../includes/tsql-md.md)] uses the term insensitive for static cursors. Some database APIs identify them as snapshot cursors.  
   
 ### Keyset  
- The membership and order of rows in a keyset-driven cursor are fixed when the cursor is opened. Keyset-driven cursors are controlled by a set of unique identifiers, keys, known as the keyset. The keys are built from a set of columns that uniquely identify the rows in the result set. The keyset is the set of the key values from all the rows that qualified for the SELECT statement at the time the cursor was opened. The keyset for a keyset-driven cursor is built in **tempdb** when the cursor is opened.  
+The membership and order of rows in a keyset-driven cursor are fixed when the cursor is opened. Keyset-driven cursors are controlled by a set of unique identifiers, keys, known as the keyset. The keys are built from a set of columns that uniquely identify the rows in the result set. The keyset is the set of the key values from all the rows that qualified for the `SELECT` statement at the time the cursor was opened. The keyset for a keyset-driven cursor is built in **tempdb** when the cursor is opened.  
   
 ### Dynamic  
- Dynamic cursors are the opposite of static cursors. Dynamic cursors reflect all changes made to the rows in their result set when scrolling through the cursor. The data values, order, and membership of the rows in the result set can change on each fetch. All UPDATE, INSERT, and DELETE statements made by all users are visible through the cursor. Updates are visible immediately if they are made through the cursor using either an API function such as **SQLSetPos** or the [!INCLUDE[tsql](../includes/tsql-md.md)] WHERE CURRENT OF clause. Updates made outside the cursor are not visible until they are committed, unless the cursor transaction isolation level is set to read uncommitted. Dynamic cursor plans never use spatial indexes.  
+Dynamic cursors are the opposite of static cursors. Dynamic cursors reflect all changes made to the rows in their result set when scrolling through the cursor. The data values, order, and membership of the rows in the result set can change on each fetch. All `UPDATE`, `INSERT`, and `DELETE` statements made by all users are visible through the cursor. Updates are visible immediately if they are made through the cursor using either an API function such as **SQLSetPos** or the [!INCLUDE[tsql](../includes/tsql-md.md)] `WHERE CURRENT OF` clause. Updates made outside the cursor are not visible until they are committed, unless the cursor transaction isolation level is set to read uncommitted. For more information on isolation levels, see [SET TRANSACTION ISOLATION LEVEL &#40;Transact-SQL&#41;](../t-sql/statements/set-transaction-isolation-level-transact-sql.md). 
+ 
+> [!NOTE]
+> Dynamic cursor plans never use spatial indexes.  
   
 ## Requesting a Cursor  
  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] supports two methods for requesting a cursor:  
@@ -126,4 +132,6 @@ If neither a [!INCLUDE[tsql](../includes/tsql-md.md)] nor API cursor has been re
 [Cursors &#40;Transact-SQL&#41;](../t-sql/language-elements/cursors-transact-sql.md)   
 [Cursor Functions &#40;Transact-SQL&#41;](../t-sql/functions/cursor-functions-transact-sql.md)   
 [Cursor Stored Procedures &#40;Transact-SQL&#41;](../relational-databases/system-stored-procedures/cursor-stored-procedures-transact-sql.md)   
+[SET TRANSACTION ISOLATION LEVEL &#40;Transact-SQL&#41;](../t-sql/statements/set-transaction-isolation-level-transact-sql.md)    
+
   

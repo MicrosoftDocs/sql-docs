@@ -1423,7 +1423,7 @@
         },
         {
            "source_path": "docs/relational-database/replication/publish/create-updatable-subscription-to-transactional-publication.md",
-           "redirect_url": "/sql/relational-database/replication/create-an-updatable-subscription-to-a-transactional-publication",
+           "redirect_url": "/sql/relational-database/replication/publish/create-an-updatable-subscription-to-a-transactional-publication",
            "redirect_document_id": true
         },
         {

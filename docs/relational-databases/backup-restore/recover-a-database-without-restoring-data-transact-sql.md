@@ -59,7 +59,7 @@ RESTORE DATABASE AdventureWorks2012
   
  The [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md) syntax for a recovery-only file restore is:  
   
- RESTORE DATABASE *database_name* { FILE **=***logical_file_name* | FILEGROUP **=***logical_filegroup_name* }[ **,**...*n* ] WITH RECOVERY  
+ RESTORE DATABASE *database_name* { FILE **=**_logical_file_name_ | FILEGROUP **=**_logical_filegroup_name_ }[ **,**...*n* ] WITH RECOVERY  
   
  **Example**  
   

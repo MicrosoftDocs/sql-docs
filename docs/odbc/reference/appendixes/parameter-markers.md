@@ -31,7 +31,7 @@ In accordance with the SQL-92 specification, an application cannot place paramet
   
 -   As both the expression and the first value of an **IN** operation  
   
--   As the operand of a unary + or – operation  
+-   As the operand of a unary + or - operation  
   
 -   As the argument of a *set-function-reference*  
   

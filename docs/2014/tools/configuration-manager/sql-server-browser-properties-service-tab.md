@@ -49,7 +49,7 @@ manager: craigg
 -   Disabled: This service cannot be started.  
   
  **State**  
- Indicates whether this service is running, stopped, or disabled. "**…**" indicates a state change is pending.  
+ Indicates whether this service is running, stopped, or disabled. "**...**" indicates a state change is pending.  
   
 ## See Also  
  [SQL Server Browser Service](../../../2014/tools/configuration-manager/sql-server-browser-service.md)  

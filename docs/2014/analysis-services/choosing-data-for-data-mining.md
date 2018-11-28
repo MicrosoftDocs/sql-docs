@@ -63,7 +63,7 @@ manager: craigg
 ### How Much Data Do I Need?  
  A rule of thumb is to never have less than 50-100 rows of data for the simplest models types and scenarios. For example, if you are predicting a single attribute using a Naïve Bayes model and the data set is well-formed, you might be able to generate fairly accurate predictions using 50-100 rows of data.  
   
- For association models, you typically need much more data – a thousand rows might not suffice if you are analyzing many attributes, such as associations among products. If your data set is too big or too small, you can sometimes achieve better results by collapsing rows into categories. For example, instead of analyzing associations among individual products, you could categorize the products.  
+ For association models, you typically need much more data - a thousand rows might not suffice if you are analyzing many attributes, such as associations among products. If your data set is too big or too small, you can sometimes achieve better results by collapsing rows into categories. For example, instead of analyzing associations among individual products, you could categorize the products.  
   
  If you have a data set of a reasonable size, focus more on data quality rather than adding more and more data. After a point, all the patterns that are statistically valid will have been found, and adding more data does not improve their validity. Conversely, as you add more data sometimes you can introduce accidental correlations.  
   
@@ -107,7 +107,7 @@ manager: craigg
 ##  <a name="bkmk_CommonDataProblems"></a> Common Data Problems  
   
 ### Excel Number Formats  
- Excel is an easy tool to use because it is forgiving – you can put just about any kind of data anywhere! However, before you begin to look for patterns and analyze correlations, you need to impose some structure or constraints on your data.  
+ Excel is an easy tool to use because it is forgiving - you can put just about any kind of data anywhere! However, before you begin to look for patterns and analyze correlations, you need to impose some structure or constraints on your data.  
   
  By default, when you import numeric data into [!INCLUDE[msCoName](../includes/msconame-md.md)] Office Excel, the numbers are stored in a decimal format with two decimal places. If this is not an appropriate number format, you should change to another numeric format, or change the number of decimal places.  
   

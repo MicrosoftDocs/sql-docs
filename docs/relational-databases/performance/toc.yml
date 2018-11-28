@@ -27,7 +27,7 @@
       href: display-an-actual-execution-plan.md
     - name: Save an Execution Plan in XML Format
       href: save-an-execution-plan-in-xml-format.md
-    name: Compare and Analyze Execution Plans
+  - name: Compare and Analyze Execution Plans
     href: compare-and-analyze-execution-plans.md
     items:
     - name: Compare Execution Plans

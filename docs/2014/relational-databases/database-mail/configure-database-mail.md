@@ -73,11 +73,11 @@ manager: craigg
 ###  <a name="Welcome"></a> Welcome Page  
  This page describes the steps to configuring Database Mail.  
   
- **Do not show this page again** – Check this to skip this welcome page from displaying in the future.  
+ **Do not show this page again** - Check this to skip this welcome page from displaying in the future.  
   
  **Next** - Proceeds to the **Select a configuration task** page.  
   
- **Cancel** – Terminates the wizard without configuring Database Mail  
+ **Cancel** - Terminates the wizard without configuring Database Mail  
   
  
   

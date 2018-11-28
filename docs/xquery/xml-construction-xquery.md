@@ -73,7 +73,7 @@ This is product model catalog description.
 </ProductModel>  
 ```  
   
- Although constructing elements from constant expressions, as shown in this example, is useful, the true power of this XQuery language feature is the ability to construct XML that dynamically extracts data from a database. You can use curly braces to specify query expressions. In the resulting XML, the expression is replaced by its value. For example, the following query constructs a <`NewRoot`> element with one child element (<`e`>). The value of element <`e`> is computed by specifying a path expression inside curly braces ("{ … }").  
+ Although constructing elements from constant expressions, as shown in this example, is useful, the true power of this XQuery language feature is the ability to construct XML that dynamically extracts data from a database. You can use curly braces to specify query expressions. In the resulting XML, the expression is replaced by its value. For example, the following query constructs a <`NewRoot`> element with one child element (<`e`>). The value of element <`e`> is computed by specifying a path expression inside curly braces ("{ ... }").  
   
 ```sql
 DECLARE @x xml;  
@@ -272,7 +272,7 @@ where ProductModelID=7;
   
 ```xml
 <FirstLocation LocationID="10" SetupHours="0.5" >  
-  <AWMI:step …   
+  <AWMI:step ...   
   </AWMI:step>  
   ...  
 </FirstLocation>  

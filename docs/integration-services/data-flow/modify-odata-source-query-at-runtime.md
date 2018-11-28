@@ -22,7 +22,7 @@ manager: craigg
 ## Provide the query as a parameter  
  The following procedure shows how to expose the query used by an OData Source component as a parameter of the package.  
   
-1.  Right click on the **Data Flow task** and select the **Parameterize…** option.  
+1.  Right click on the **Data Flow task** and select the **Parameterize...** option.  
   
 2.  In the **Parameterize** dialog, select **[\<Name of the OData Source Component>].[Query]** for **Property**.  
   
@@ -47,11 +47,11 @@ manager: craigg
   
 2.  In the **Properties** window, highlight the **Expressions** property.  
   
-3.  Click the … (ellipsis) button to bring up the **Property Expressions Editor**.  
+3.  Click the ... (ellipsis) button to bring up the **Property Expressions Editor**.  
   
 4.  Select the **[OData Source].[Query]** property.  
   
-5.  Click the … (ellipsis) button for **Expression**.  
+5.  Click the ... (ellipsis) button for **Expression**.  
   
 6.  Enter the **expression**.  
   

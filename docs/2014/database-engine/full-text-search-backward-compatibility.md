@@ -18,7 +18,7 @@ manager: craigg
 # Full-Text Search Backward Compatibility
   Topics in the backward compatibility section describe changes in the behavior of full-text search between earlier versions of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] and [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)].  
   
-|See…|For topics about…|  
+|See...|For topics about...|  
 |----------|-----------------------|  
 |[Deprecated Full-Text Search Features in SQL Server 2014](../relational-databases/search/deprecated-full-text-search-features-in-sql-server-2016.md)|Deprecated full-text search features in this release.|  
 |[Discontinued Full-Text Search Features in SQL Server 2014](../../2014/database-engine/discontinued-full-text-search-features-in-sql-server-2014.md)|Discontinued full-text search features in this release.|  

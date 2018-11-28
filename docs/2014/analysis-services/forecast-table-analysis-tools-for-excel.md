@@ -34,7 +34,7 @@ manager: craigg
   
 2.  Click **Forecast** on the **Analyze** tab.  
   
-3.  Specify the columns to forecast. The tool automatically selects columns in the data that have a predictable data type—that is, continuous numeric data. The tool might not select some columns that have continuous numeric data if the columns contain many null or zero values, because the missing data might affect the results. If this happens, you can fix the data by using the [Relabel &#40;SQL Server Data Mining Add-ins&#41;](relabel-sql-server-data-mining-add-ins.md) tool.  
+3.  Specify the columns to forecast. The tool automatically selects columns in the data that have a predictable data type-that is, continuous numeric data. The tool might not select some columns that have continuous numeric data if the columns contain many null or zero values, because the missing data might affect the results. If this happens, you can fix the data by using the [Relabel &#40;SQL Server Data Mining Add-ins&#41;](relabel-sql-server-data-mining-add-ins.md) tool.  
   
 4.  Specify the column that contains the date, time, or other series identifier. If you select the option **\<no time stamp>** the tool will create a series based on the sequence of rows in the source data.  
   
@@ -49,7 +49,7 @@ manager: craigg
 ### Requirements  
  The columns that you predict must contain continuous numeric data, such as currency or other numbers.  
   
- If possible, your data should also include a column that contains a series of times or dates. You can use a numeric series (1,2,3….) instead of date and time data. However, values in the series column must be unique. An error occurs if the **Forecast** tool finds duplicate values in the series column.  
+ If possible, your data should also include a column that contains a series of times or dates. You can use a numeric series (1,2,3....) instead of date and time data. However, values in the series column must be unique. An error occurs if the **Forecast** tool finds duplicate values in the series column.  
   
  You cannot predict a date by using the **Forecast** tool. Although an error might not occur, this algorithm is not designed to use dates as predictable values.  
   

@@ -28,7 +28,7 @@ manager: craigg
 |Unary operator|Description|  
 |--------------------|-----------------|  
 |+ (plus sign)|The value of the member is added to the aggregate value of the sibling members that occur before the member. This operator is the default operator if no unary operator column is defined for an attribute.|  
-|– (minus sign)|The value of the member is subtracted from the aggregate value of the sibling members that occur before the member.|  
+|- (minus sign)|The value of the member is subtracted from the aggregate value of the sibling members that occur before the member.|  
 |* (asterisk)|The value of the member is multiplied by the aggregate value of the sibling members that occur before the member.|  
 |/ (slash mark)|The value of the member is divided by the aggregate value of the sibling members that occur before the member.|  
 |~ (tilde)|The value of the member is ignored.|  

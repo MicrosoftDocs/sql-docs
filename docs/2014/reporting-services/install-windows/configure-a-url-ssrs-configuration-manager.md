@@ -74,7 +74,7 @@ manager: craigg
   
     -   From a command prompt, type the following command to return a list of TCP ports that are being used:  
   
-         `netstat –a –n -p tcp`  
+         `netstat -a -n -p tcp`  
   
     -   Review the Microsoft Support article, [Information about TCP/IP port assignments](http://support.microsoft.com/kb/174904), to read about TCP port assignments and the differences between Well Known Ports (0 through 1023), Registered Ports (1024 through 49151), and Dynamic or Private Ports (49152 through 65535).  
   

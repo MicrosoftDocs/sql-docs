@@ -37,7 +37,7 @@ sp_droprole [ @rolename= ] 'role'
 ```  
   
 ## Arguments  
- [ **@rolename =** ] **'***role***'**  
+ [ **@rolename =** ] **'**_role_**'**  
  Is the name of the database role to remove from the current database. *role* is a **sysname**, with no default. *role* must already exist in the current database.  
   
 ## Return Code Values  

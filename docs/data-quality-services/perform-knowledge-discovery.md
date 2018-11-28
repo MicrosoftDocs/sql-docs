@@ -195,7 +195,7 @@ manager: craigg
   
     -   **Cancel** to terminate the Knowledge Discovery activity, losing your work, and return to the DQS home page.  
   
-    -   **Close** to return to the DQS home page while saving your work. The knowledge base will be locked to you, and the state of the knowledge base in the knowledge base table in the **Open Knowledge Base** screen will be **Discovery – Value Management**.  
+    -   **Close** to return to the DQS home page while saving your work. The knowledge base will be locked to you, and the state of the knowledge base in the knowledge base table in the **Open Knowledge Base** screen will be **Discovery - Value Management**.  
   
     -   Click **Back** to return to the **Discover** page. After clicking **Close**, to perform the Domain Management activity, you would have to click **Knowledge Discovery** from the **Open knowledge base** screen, proceed to the **Knowledge Base Management: Manage Domain Terms** screen, click **Finish**, and then click either **Yes** to publish the knowledge base or **No** to save the work on the knowledge base and exit.  
   

@@ -65,7 +65,7 @@ manager: craigg
   
 18. Select the **Address Validation** composite domain from the domain list.  
   
-19. In the right pane, switch to the **Correct** tab. You should see the addresses that are found to be correct by the **Melissa Data – Address Check** DQS service on the **Azure Marketplace**.  
+19. In the right pane, switch to the **Correct** tab. You should see the addresses that are found to be correct by the **Melissa Data - Address Check** DQS service on the **Azure Marketplace**.  
   
 20. Switch to the **Corrected** tab.  
   
@@ -75,7 +75,7 @@ manager: craigg
   
 22. Notice that the **Approve** radio button is already selected for this item in the list. This is the default behavior for items on the **Corrected** tab.  
   
-23. Switch to the **Suggested** tab. Review the changes suggested by the **Melissa Data – Address Check** service.  
+23. Switch to the **Suggested** tab. Review the changes suggested by the **Melissa Data - Address Check** service.  
   
 24. **Click Approve all terms** on the toolbar button and click **OK** on the **Confirmation** message box.  
   

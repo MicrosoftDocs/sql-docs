@@ -56,7 +56,7 @@ monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest |
   
 1.  In Object Explorer, expand the database that contains the table on which you want to disable compression and then expand the **Tables** folder.  
   
-2.  Right-click the table or index on which you want to disable compression, point to **Storage** and select **Manage Compression…**.  
+2.  Right-click the table or index on which you want to disable compression, point to **Storage** and select **Manage Compression...**.  
   
 3.  To disable compression on an index, expand the table that contains the index and then expand the **Indexes** folder.  
   

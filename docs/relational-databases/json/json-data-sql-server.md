@@ -211,7 +211,7 @@ For more information, see [Format query results as JSON with FOR JSON (SQL Serve
 
 ## Use cases for JSON data in SQL Server
 
-JSON support in SQL Server and Azure SQL Database lets you combine relational and NoSQL concepts. You can easily transform relational to semi-structured data and vice-versa. JSON is not a replacement for existing relational models, however. Here are some specific use cases that benefit from the JSON support in SQL Server and in SQL Database. For more info, see [JSON in SQL Server – Use cases](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2018/01/31/json-in-sql-server-use-cases/).
+JSON support in SQL Server and Azure SQL Database lets you combine relational and NoSQL concepts. You can easily transform relational to semi-structured data and vice-versa. JSON is not a replacement for existing relational models, however. Here are some specific use cases that benefit from the JSON support in SQL Server and in SQL Database. For more info, see [JSON in SQL Server - Use cases](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2018/01/31/json-in-sql-server-use-cases/).
 
 ### Simplify complex data models
 
@@ -223,7 +223,7 @@ Store info about products with a wide range of variable attributes in a denormal
 
 ### Process log and telemetry data
 
-Load, query, and analyze log data stored as JSON files with all the power of the Transact-SQL language. For more info, see the section *Log and telemetry data analysis* in [JSON in SQL Server – Use cases](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2018/01/31/json-in-sql-server-use-cases/).
+Load, query, and analyze log data stored as JSON files with all the power of the Transact-SQL language. For more info, see the section *Log and telemetry data analysis* in [JSON in SQL Server - Use cases](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2018/01/31/json-in-sql-server-use-cases/).
 
 ### Store semi-structured IoT data
 

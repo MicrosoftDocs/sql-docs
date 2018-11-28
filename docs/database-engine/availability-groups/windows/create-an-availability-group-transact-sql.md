@@ -56,7 +56,7 @@ manager: craigg
   
 |Task|Transact-SQL Statement(s)|Where to Perform Task**\***|  
 |----------|----------------------------------|---------------------------------|  
-|Create database mirroring endpoint (once per [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] instance)|[CREATE ENDPOINT](../../../t-sql/statements/create-endpoint-transact-sql.md) *endpointName* … FOR DATABASE_MIRRORING|Execute on each server instance that lacks database mirroring endpoint.|  
+|Create database mirroring endpoint (once per [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] instance)|[CREATE ENDPOINT](../../../t-sql/statements/create-endpoint-transact-sql.md) *endpointName* ... FOR DATABASE_MIRRORING|Execute on each server instance that lacks database mirroring endpoint.|  
 |Create availability group|[CREATE AVAILABILITY GROUP](../../../t-sql/statements/create-availability-group-transact-sql.md)|Execute on the server instance that is to host the initial primary replica.|  
 |Join secondary replica to availability group|[ALTER AVAILABILITY GROUP](../../../database-engine/availability-groups/windows/join-a-secondary-replica-to-an-availability-group-sql-server.md) *group_name* JOIN|Execute on each server instance that hosts a secondary replica.|  
 |Prepare the secondary database|[BACKUP](../../../t-sql/statements/backup-transact-sql.md) and [RESTORE](../../../t-sql/statements/restore-statements-transact-sql.md).|Create backups on the server instance that hosts the primary replica.<br /><br /> Restore backups on each server instance that hosts a secondary replica, using RESTORE WITH NORECOVERY.|  

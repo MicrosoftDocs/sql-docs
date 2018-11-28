@@ -37,15 +37,15 @@ manager: craigg
   
     -   [Native Mode Report Server to Native Mode Report Server](#bkmk_native_2_native)  
   
-    -   [Native Mode to SharePoint Mode – root site](#bkmk_native_2_sharepoint_root)  
+    -   [Native Mode to SharePoint Mode - root site](#bkmk_native_2_sharepoint_root)  
   
-    -   [Native mode to SharePoint Mode –'bi' site collection](#bkmk_native_2_sharepoint_with_site)  
+    -   [Native mode to SharePoint Mode -'bi' site collection](#bkmk_native_2_sharepoint_with_site)  
   
-    -   [SharePoint Mode to SharePoint Mode –'bi' site collection](#bkmk_sharepoint_2_sharepoint)  
+    -   [SharePoint Mode to SharePoint Mode -'bi' site collection](#bkmk_sharepoint_2_sharepoint)  
   
-    -   [Native Mode to Native Mode – Windows Azure Virtual Machine](#bkmk_native_to_native_Azure_vm)  
+    -   [Native Mode to Native Mode - Windows Azure Virtual Machine](#bkmk_native_to_native_Azure_vm)  
   
-    -   [SharePoint Mode –'bi' site collection to a Native Mode Server on Windows Azure Virtual Machine](#bkmk_sharepoint_site_to_native_Azure_vm)  
+    -   [SharePoint Mode -'bi' site collection to a Native Mode Server on Windows Azure Virtual Machine](#bkmk_sharepoint_site_to_native_Azure_vm)  
   
 -   [Verification](#bkmk_verification)  
   
@@ -85,7 +85,7 @@ manager: craigg
 |Item|Migrated|SharePoint|Description|  
 |----------|--------------|----------------|-----------------|  
 |Passwords|**No**|**No**|Passwords are **NOT** migrated. After content items are migrated, update the credential information on the destination server. For example, data sources with stored credentials.|  
-|My Reports|**No**|**No**|The Native mode "My Reports" feature is based on individual user logins therefore the scripting service does not have access to content in "My Reports" folders for users other than the **–u** parameter used to run the rss script. Also, "My Reports" is not a feature of [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] SharePoint mode and items in the folders cannot be copied to a SharePoint environment. Therefore, the script does not copy report items that are in the "My Reports" folders on a source native mode report server. To migrate the content in "My Reports" folders with this script, complete the following:<br /><br /> 1) Create new folder(s) in Report Manager. Optionally, you can create folders or subfolder for each user.<br /><br /> 2) Login as one of the users with "My Reports" content.<br /><br /> 3) In Report Manager, click the **My Reports** folder.<br /><br /> 4) Click the **Details** view for the folder.<br /><br /> 5) Select each report that you want to copy.<br /><br /> 6) Click **Move** in the Report Manager toolbar.<br /><br /> 7) Select the desired destination folder.<br /><br /> 8) Repeat steps 2-7 for each user.<br /><br /> 9) Run the script.|  
+|My Reports|**No**|**No**|The Native mode "My Reports" feature is based on individual user logins therefore the scripting service does not have access to content in "My Reports" folders for users other than the **-u** parameter used to run the rss script. Also, "My Reports" is not a feature of [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] SharePoint mode and items in the folders cannot be copied to a SharePoint environment. Therefore, the script does not copy report items that are in the "My Reports" folders on a source native mode report server. To migrate the content in "My Reports" folders with this script, complete the following:<br /><br /> 1) Create new folder(s) in Report Manager. Optionally, you can create folders or subfolder for each user.<br /><br /> 2) Login as one of the users with "My Reports" content.<br /><br /> 3) In Report Manager, click the **My Reports** folder.<br /><br /> 4) Click the **Details** view for the folder.<br /><br /> 5) Select each report that you want to copy.<br /><br /> 6) Click **Move** in the Report Manager toolbar.<br /><br /> 7) Select the desired destination folder.<br /><br /> 8) Repeat steps 2-7 for each user.<br /><br /> 9) Run the script.|  
 |History|**No**|**No**||  
 |History settings|Yes|Yes|The history settings are migrated however the history details are NOT migrated.|  
 |Schedules|yes|yes|To migrate schedules, it is required that SQL Server Agent is running on the target server. If SQL Server Agent is not running on the target, you will see an error message similar to the following:<br /><br /> `Migrating schedules: 1 items found. Migrating schedule: theMondaySchedule ... FAILURE:  The SQL Agent service is not running. This operation requires the SQL Agent service. ---> Microsoft.ReportingServices.Diagnostics.Utilities.SchedulerNotResponding Exception: The SQL Agent service is not running. This operation requires the SQL Agent service.`|  
@@ -238,7 +238,7 @@ manager: craigg
 |Parameter|Description|Required|  
 |---------------|-----------------|--------------|  
 |**-s** Source_URL|URL of the source report server|Yes|  
-|**-u** Domain\password **–p** password|Credentials for source server.|OPTIONAL, default credentials are used if missing|  
+|**-u** Domain\password **-p** password|Credentials for source server.|OPTIONAL, default credentials are used if missing|  
 |**-v st**="SITE"||OPTIONAL. This parameter is only used for SharePoint mode report servers.|  
 |**- v f**="SOURCEFOLDER"|Set to "/" for migrating everything, or to something like "/folder/subfolder" for partial migration. Everything within this folder will be copied|OPTIONAL, default is "/".|  
 |**-v ts**="TARGET_URL"|'URL of the target RS server"||  
@@ -262,7 +262,7 @@ rs.exe -i ssrs_migration.rss -e Mgmt2010 -s http://SourceServer/ReportServer -u 
 rs.exe -i ssrs_migration.rss -e Mgmt2010 -s http://SourceServer/ReportServer -u Domain\User -p password -v ts="http://TargetServer/reportserver" -v tu="Domain\Userser" -v tp="password" -v security="True"  
 ```  
   
-###  <a name="bkmk_native_2_sharepoint_root"></a> Native Mode to SharePoint Mode – root site  
+###  <a name="bkmk_native_2_sharepoint_root"></a> Native Mode to SharePoint Mode - root site  
  The following example migrates content from a native mode **SourceServer** to the "root site " on a SharePoint mode server **TargetServer**. The "Reports" and "Data Sources" folders on the native mode server as migrated as new libraries on the SharePoint deployment.  
   
  ![ssrs_rss_migrate_root_site](../media/ssrs-rss-migrate-root-site.gif "ssrs_rss_migrate_root_site")  
@@ -271,14 +271,14 @@ rs.exe -i ssrs_migration.rss -e Mgmt2010 -s http://SourceServer/ReportServer -u 
 rs.exe -i ssrs_migration.rss -e Mgmt2010 -s http://SourceServer/ReportServer -u Domain\User -p Password -v ts="http://TargetServer/_vti_bin/ReportServer" -v tu="Domain\User" -v tp="Password"  
 ```  
   
-###  <a name="bkmk_native_2_sharepoint_with_site"></a> Native mode to SharePoint Mode –'bi' site collection  
+###  <a name="bkmk_native_2_sharepoint_with_site"></a> Native mode to SharePoint Mode -'bi' site collection  
  The following example migrates content from a native mode server to a SharePoint server that contains a site collection of "sites/bi" and a shared documents library. The script creates folders in document the destination library. For example, the script will create a "Reports" and "Data Sources" folders in the target document library.  
   
 ```  
 rs.exe -i ssrs_migration.rss -e Mgmt2010 -s http://SourceServer/ReportServer -u Domain\User -p Password -v ts="http://TargetServer/sites/bi/_vti_bin/reportserver" -v tst="sites/bi" -v tf="Shared Documents" -v tu="Domain\User" -v tp="Password"  
 ```  
   
-###  <a name="bkmk_sharepoint_2_sharepoint"></a> SharePoint Mode to SharePoint Mode –'bi' site collection  
+###  <a name="bkmk_sharepoint_2_sharepoint"></a> SharePoint Mode to SharePoint Mode -'bi' site collection  
  The following example migrates content:  
   
 -   From a SharePoint server **SourceServer** that contains a site collection of "sites/bi" and a shared documents library.  
@@ -289,7 +289,7 @@ rs.exe -i ssrs_migration.rss -e Mgmt2010 -s http://SourceServer/ReportServer -u 
 rs.exe -i ssrs_migration.rss -e Mgmt2010 -s http://SourceServer/_vti_bin/reportserver -v st="sites/bi" -v f="Shared Documents" -u Domain\User1 -p Password -v ts="http://TargetServer/sites/bi/_vti_bin/reportserver" -v tst="sites/bi" -v tf="Shared Documents" -v tu="Domain\User" -v tp="Password"  
 ```  
   
-###  <a name="bkmk_native_to_native_Azure_vm"></a> Native Mode to Native Mode – Windows Azure Virtual Machine  
+###  <a name="bkmk_native_to_native_Azure_vm"></a> Native Mode to Native Mode - Windows Azure Virtual Machine  
  The following example migrates content:  
   
 -   From a Native mode report server **SourceServer**.  
@@ -303,7 +303,7 @@ rs.exe -i ssrs_migration.rss -e Mgmt2010 -s http://SourceServer/ReportServer -u 
 > [!TIP]  
 >  For information on how to use Windows PowerShell to create [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] report servers on Windows Azure virtual machines, see [Use PowerShell to Create a Windows Azure VM With a Native Mode Report Server](http://msdn.microsoft.com/library/dn449661.aspx).  
   
-##  <a name="bkmk_sharepoint_site_to_native_Azure_vm"></a> SharePoint Mode –'bi' site collection to a Native Mode Server on Windows Azure Virtual Machine  
+##  <a name="bkmk_sharepoint_site_to_native_Azure_vm"></a> SharePoint Mode -'bi' site collection to a Native Mode Server on Windows Azure Virtual Machine  
  The following example migrates content:  
   
 -   From a SharePoint mode report server **SourceServer** that contains a site collection of "sites/bi" and a shared documents library.  
@@ -344,11 +344,11 @@ rs.exe -i ssrs_migration.rss -e Mgmt2010 -s http://uetesta02/_vti_bin/reportserv
 3.  Click **Roles**.  
   
 ##  <a name="bkmk_troubleshoot"></a> Troubleshooting  
- Use the trace flag **–t** to receive more information. For example, if you run the script and see a message similar to the following  
+ Use the trace flag **-t** to receive more information. For example, if you run the script and see a message similar to the following  
   
 -   Could not connect to server: http://\<servername>/ReportServer/ReportService2010.asmx  
   
- Run the script again with the **–t** flag, to see a message similar to the following:  
+ Run the script again with the **-t** flag, to see a message similar to the following:  
   
 -   System.Exception: Could not connect to server: http://\<servername>/ReportServer/ReportService2010.asmx ---> System.Net.WebException: **The request failed with HTTP status 401: Unauthorized**.   at System.Web.Services.Protocols.SoapHttpClientProtocol.ReadResponse(SoapClientMessage message, WebResponse response, Stream responseStream, Boolean asyncCall)   at System.Web.Services.Protocols.SoapHttpClientProtocol.Invoke(String methodName, Object[] parameters)   at Microsoft.SqlServer.ReportingServices2010.ReportingService2010.IsSSLRequired()   at Microsoft.ReportingServices.ScriptHost.Management2010Endpoint.PingService(String url, String userName, String password, String domain, Int32 timeout)   at Microsoft.ReportingServices.ScriptHost.ScriptHost.DetermineServerUrlSecurity()   --- End of inner exception stack trace ---  
   

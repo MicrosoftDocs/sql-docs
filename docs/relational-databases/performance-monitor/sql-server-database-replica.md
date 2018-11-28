@@ -21,7 +21,7 @@ manager: craigg
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   The **SQLServer:Database Replica** performance object contains performance counters that report information about the secondary databases of an Always On availability group in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. This object is valid only on an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] that hosts a secondary replica.  
   
-|Counter Name|Description|View on…|  
+|Counter Name|Description|View on...|  
 |------------------|-----------------|--------------|  
 |**File Bytes Received/sec**|Amount of FILESTREAM data received by the secondary replica for the secondary database in the last second.|Secondary replica|  
 |**Log Apply Pending Queue**|Number of log blocks that is waiting to be applied to the database replica.|Secondary replica|

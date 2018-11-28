@@ -27,7 +27,7 @@ manager: craigg
     > [!NOTE]  
     >  If you do not see the Properties pane, click the **View** tab and then select the **Properties** checkbox.  
   
-3.  In the **Pointers** property, click the (…) button. The Pointer Collection Editor opens.  
+3.  In the **Pointers** property, click the (...) button. The Pointer Collection Editor opens.  
   
 4.  Set the **SnappingEnabled** property to `True`.  
   

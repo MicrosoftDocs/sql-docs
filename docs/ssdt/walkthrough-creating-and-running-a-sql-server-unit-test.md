@@ -550,7 +550,7 @@ The tests assume that the database starts in a clean state. You will create test
   
 4.  In the **Test Conditions** pane, click **Expected Schema** in the list, and then click **Add Test Condition**.  
   
-5.  In the **Properties** window, in the **Configuration** property, click the browse button ('**…**').  
+5.  In the **Properties** window, in the **Configuration** property, click the browse button ('**...**').  
   
 6.  In the **Configuration for expectedSchemaCondition1** dialog box, specify a connection to your database. For example, if you used the default deployment location, which is LocalDB, you would click **New Connection** specify **(LocalDB)\Projects**. Then, choose the name of the database.  
   
@@ -615,7 +615,7 @@ The tests assume that the database starts in a clean state. You will create test
   
 13. In the **Test Conditions** pane, click **Data Checksum** in the list, and then click **Add Test Condition**.  
   
-14. In the **Properties** window, in the **Configuration** property, click the browse button ('**…**').  
+14. In the **Properties** window, in the **Configuration** property, click the browse button ('**...**').  
   
 15. In the **Configuration for checksumCondition1** dialog box, specify a connection to your database.  
   

@@ -66,9 +66,9 @@ Using a Command Window (not PowerShell), configure the following environment var
 SET ACCEPT_EULA=Y
 SET CLUSTER_PLATFORM=aks
 
-SET CONTROLLER_USERNAME=<controller_admin_name – can be anything>
-SET CONTROLLER_PASSWORD=<controller_admin_password – can be anything, password complexity compliant>
-SET KNOX_PASSWORD=<knox_password – can be anything, password complexity compliant>
+SET CONTROLLER_USERNAME=<controller_admin_name - can be anything>
+SET CONTROLLER_PASSWORD=<controller_admin_password - can be anything, password complexity compliant>
+SET KNOX_PASSWORD=<knox_password - can be anything, password complexity compliant>
 SET MSSQL_SA_PASSWORD=<sa_password_of_master_sql_instance, password complexity compliant>
 
 SET DOCKER_REGISTRY=private-repo.microsoft.com
@@ -87,9 +87,9 @@ Initialize the following environment variables:
 export ACCEPT_EULA="Y"
 export CLUSTER_PLATFORM="aks"
 
-export CONTROLLER_USERNAME="<controller_admin_name – can be anything>"
-export CONTROLLER_PASSWORD="<controller_admin_password – can be anything, password complexity compliant>"
-export KNOX_PASSWORD="<knox_password – can be anything, password complexity compliant>"
+export CONTROLLER_USERNAME="<controller_admin_name - can be anything>"
+export CONTROLLER_PASSWORD="<controller_admin_password - can be anything, password complexity compliant>"
+export KNOX_PASSWORD="<knox_password - can be anything, password complexity compliant>"
 export MSSQL_SA_PASSWORD="<sa_password_of_master_sql_instance, password complexity compliant>"
 
 export DOCKER_REGISTRY="private-repo.microsoft.com"

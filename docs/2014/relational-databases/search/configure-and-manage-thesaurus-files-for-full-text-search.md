@@ -101,7 +101,7 @@ manager: craigg
   
   
 ##  <a name="structure"></a> Understanding the Structure of a Thesaurus File  
- Each thesaurus file defines an XML container whose ID is `Microsoft Search Thesaurus`, and a comment, `<!--` … `-->`, that contains a sample thesaurus. The thesaurus is defined in a \<thesaurus> element that contains samples of the child elements that define the diacritics setting, expansion sets, and replacement sets, as follows:  
+ Each thesaurus file defines an XML container whose ID is `Microsoft Search Thesaurus`, and a comment, `<!--` ... `-->`, that contains a sample thesaurus. The thesaurus is defined in a \<thesaurus> element that contains samples of the child elements that define the diacritics setting, expansion sets, and replacement sets, as follows:  
   
 -   XML Structure of the Diacritical Setting  
   

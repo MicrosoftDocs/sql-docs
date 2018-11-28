@@ -42,13 +42,13 @@ manager: craigg
   
     -   To evaluate the policies against a specific server or server group, expand **Local Server Groups** or the central management server name, right-click the server or server group that you want to evaluate policies against, and then click **Evaluate Policies**.  
   
-4.  In the **Evaluate Policies** dialog box, next to the **Source** box, click the ellipsis (**…**) button.  
+4.  In the **Evaluate Policies** dialog box, next to the **Source** box, click the ellipsis (**...**) button.  
   
 5.  In the **Select Source** dialog box, you can select either **Files** or **Server** as the source of the policy files to evaluate. If you click **Server**, you can perform an on-demand evaluation of any best practices policies that were previously imported into Policy-Based Management on a local or remote server. In this tutorial, you will click **Files**, and then select the individual policy files that you want to evaluate. To do this, follow these steps:  
   
     1.  Click **Files**.  
   
-    2.  Next to **Files**, click the ellipsis (**…**) button.  
+    2.  Next to **Files**, click the ellipsis (**...**) button.  
   
     3.  Select one or more .xml policy files to evaluate, and then click **Open**.  
   

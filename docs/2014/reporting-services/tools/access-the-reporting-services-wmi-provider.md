@@ -40,25 +40,25 @@ manager: craigg
  To list the encoded instance names of your report server instances in the WMI namespace path, use the following PowerShell command:  
   
 ```  
-PS C:\windows\system32> Get-WmiObject –namespace root\Microsoft\SqlServer\ReportServer  –class __Namespace –ComputerName hostname | select Name  
+PS C:\windows\system32> Get-WmiObject -namespace root\Microsoft\SqlServer\ReportServer  -class __Namespace -ComputerName hostname | select Name  
 ```  
   
 ## Access the WMI Classes Using PowerShell  
  To access the WMI classes, run the following command:  
   
 ```  
-PS C:\windows\system32> Get-WmiObject –namespace <namespacename> –class <classname> –ComputerName <hostname>  
+PS C:\windows\system32> Get-WmiObject -namespace <namespacename> -class <classname> -ComputerName <hostname>  
 ```  
   
  For example, to access the MSReportServer_ConfigurationSetting class on the default report server instance of the host myrshost, run the following command. The default report server instance must be installed on myrshost for this command to succeed.  
   
 ```  
-PS C:\windows\system32> Get-WmiObject –namespace "root\Microsoft\SqlServer\ReportServer\RS_MSSQLSERER\v11\Admin" -class MSReportServer_ConfigurationSetting -ComputerName myrshost  
+PS C:\windows\system32> Get-WmiObject -namespace "root\Microsoft\SqlServer\ReportServer\RS_MSSQLSERER\v11\Admin" -class MSReportServer_ConfigurationSetting -ComputerName myrshost  
 ```  
   
  This command syntax outputs all class property names and values. Note that all instances of the class MSReportServer_ConfigurationSetting is returned, even though you are accessing the class in the namespace of the default report server instance (RS_MSSQLSERVER). For example, if myrshost is installed with the default report server instance and a named report server instance called SHAREPOINT, this command will return two WMI objects and output the property names and values for both report server instances.  
   
- To return a specific class instance when multiple instances are returned, use the –Filter parameter to filter the results based on properties with unique values such as InstanceName. For example, to return only the WMI object for the default report server instance, use the following command:  
+ To return a specific class instance when multiple instances are returned, use the -Filter parameter to filter the results based on properties with unique values such as InstanceName. For example, to return only the WMI object for the default report server instance, use the following command:  
   
 ```  
 PS C:\windows\system32> Get-WmiObject -namespace "root\Microsoft\SqlServer\ReportServer\RS_MSSQLServer\v11\Admin" -class MSReportServer_ConfigurationSetting -ComputerName myrshost -filter "InstanceName='MSSQLSERVER'"  
@@ -71,7 +71,7 @@ PS C:\windows\system32> Get-WmiObject -namespace "root\Microsoft\SqlServer\Repor
 PS C:\windows\system32> Get-WmiObject -namespace "root\Microsoft\SqlServer\ReportServer\RS_MSSQLServer\v11\Admin" -class MSReportServer_ConfigurationSetting -ComputerName myrshost | Get-Member  
 ```  
   
- For documentation on the properties and methods of the Reporting Services WMI classes, see ….  
+ For documentation on the properties and methods of the Reporting Services WMI classes, see ....  
   
 ## Use a WMI Method or Property  
  Once you have the WMI objects to the Reporting Services classes and know the available methods and properties, you can use these methods and properties. For example, if you have a named report server instance in SharePoint integrated mode called SHAREPOINT, use the following command sequence to retrieve the URL for the SharePoint Central Administration site:  

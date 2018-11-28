@@ -19,7 +19,7 @@ Sybase Backup Management lets you backup and restore table data before or after 
 ## Sybase Backup Management  
   
 ### Backup  
-To open the backup dialog, on the Tester menu point to Sybase Backup Management, then click Backup…. In the backup dialog you will find the Sybase Metadata tree displaying all tables of the loaded Sybase schema. Select one or more tables to perform a backup.  
+To open the backup dialog, on the Tester menu point to Sybase Backup Management, then click Backup.... In the backup dialog you will find the Sybase Metadata tree displaying all tables of the loaded Sybase schema. Select one or more tables to perform a backup.  
   
 The following buttons are available on the dialog:  
   
@@ -30,7 +30,7 @@ The following buttons are available on the dialog:
 -   Click the **Cancel** button to close the dialog.  
   
 ### Restore  
-To open the restore dialog, on the Tester menu point to Sybase Backup Management, then click Restore…. There you will find a tree containing the tables available in backup. Select one or more tables to restore its data.  
+To open the restore dialog, on the Tester menu point to Sybase Backup Management, then click Restore.... There you will find a tree containing the tables available in backup. Select one or more tables to restore its data.  
   
 The following buttons are available on the dialog:  
   
@@ -41,7 +41,7 @@ The following buttons are available on the dialog:
 -   Click the **Cancel** button to close the dialog.  
   
 ### Managing Backup Contents  
-To open Managing Backup Contents, on the Tester menu point to Sybase Backup Management, then click Backup Content…. There you will find a tree containing the tables in the backup.  
+To open Managing Backup Contents, on the Tester menu point to Sybase Backup Management, then click Backup Content.... There you will find a tree containing the tables in the backup.  
   
 The following buttons are available on the dialog:  
   
@@ -55,7 +55,7 @@ The following buttons are available on the dialog:
 SQL Server Backup Management lets you backup and restore table data before or after running a test. You can also manage the backup content with Manage Backup Contents dialog.  
   
 ### Backup  
-To open the backup dialog, on the Tester menu point to SQL Server Backup Management, then click Backup….. In the backup dialog you will find the SQL Server Metadata tree displaying all tables of the loaded SQL Server databases. Select one or more tables to perform a backup.  
+To open the backup dialog, on the Tester menu point to SQL Server Backup Management, then click Backup..... In the backup dialog you will find the SQL Server Metadata tree displaying all tables of the loaded SQL Server databases. Select one or more tables to perform a backup.  
   
 The following buttons are available on the dialog:  
   
@@ -66,7 +66,7 @@ The following buttons are available on the dialog:
 -   Click the **Cancel** button to close the dialog.  
   
 ### Restore  
-To open the restore dialog, on the Tester menu point to SQL Server Backup Management, the click Restore…. There you will find a tree containing the tables available in backup. Select one or more table to restore its data.  
+To open the restore dialog, on the Tester menu point to SQL Server Backup Management, the click Restore.... There you will find a tree containing the tables available in backup. Select one or more table to restore its data.  
   
 The following buttons are available on the dialog:  
   
@@ -77,7 +77,7 @@ The following buttons are available on the dialog:
 -   Click the **Cancel** button to close the dialog.  
   
 ### Managing Backup Contents  
-To open Managing Backup Contents, on the Tester menu point to SQL Server Backup Management, then click Backup Content…. There you will find a tree containing the tables in the backup.  
+To open Managing Backup Contents, on the Tester menu point to SQL Server Backup Management, then click Backup Content.... There you will find a tree containing the tables in the backup.  
   
 The following buttons are available on the dialog:  
   

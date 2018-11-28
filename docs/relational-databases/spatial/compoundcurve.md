@@ -134,7 +134,7 @@ SET @g = geometry::Parse('COMPOUNDCURVE(CIRCULARSTRING(0 2, 2 0, 4 2), CIRCULARS
 SELECT @g.STLength();  
 ```  
   
- This produces the following output: 12.566370… which is the equivalent of 4∏. The `CompoundCurve` instance in the example stores a circle with a radius of 2. Both of the previous code examples did not have to use a `CompoundCurve`. For the first example a `LineString` instance would have been simpler, and a `CircularString` instance would have been simpler for the second example. However, the next example shows where a `CompoundCurve` provides a better alternative.  
+ This produces the following output: 12.566370... which is the equivalent of 4∏. The `CompoundCurve` instance in the example stores a circle with a radius of 2. Both of the previous code examples did not have to use a `CompoundCurve`. For the first example a `LineString` instance would have been simpler, and a `CircularString` instance would have been simpler for the second example. However, the next example shows where a `CompoundCurve` provides a better alternative.  
   
 ### F. Using a CompoundCurve to store a semicircle  
  The following example uses a `CompoundCurve` instance to store a semicircle.  
@@ -176,8 +176,8 @@ SELECT 'Circle Two', @g2.STLength() AS Perimeter;  -- now we get an accurate amo
  The output is as follows:  
   
 ```  
-Circle One11.940039…  
-Circle Two12.566370…  
+Circle One11.940039...  
+Circle Two12.566370...  
 ```  
   
  The perimeter for Circle Two is approximately 4∏, which is the actual value for the perimeter. However, the perimeter for Circle One is significantly inaccurate. Circle One's `CompoundCurve` instance stores one circular arc segment (ABC) and two line segments (CD, DA). The `CompoundCurve` instance has to store two circular arc segments (ABC, CDA) to define a circle. A `LineString` instance defines the second set of points (4 2, 2 4, 0 2) in Circle One's `CompoundCurve` instance. You have to explicitly declare a `CircularString` instance inside a `CompoundCurve`.  

@@ -17,7 +17,7 @@ ms.author: genemi
 manager: craigg
 ---
 # MarshalOptions Property Example (VB)
-This example uses the [MarshalOptions](../../../ado/reference/ado-api/marshaloptions-property-ado.md) property to specify what rows are sent back to the server — All Rows or only Modified Rows.  
+This example uses the [MarshalOptions](../../../ado/reference/ado-api/marshaloptions-property-ado.md) property to specify what rows are sent back to the server - All Rows or only Modified Rows.  
   
 ```  
 'BeginMarshalOptionsVB  

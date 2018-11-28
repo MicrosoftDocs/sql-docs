@@ -52,7 +52,7 @@ manager: craigg
     ```  
     ipconfig /flushdns  
     ipconfig /registerdns  
-    nbtstat –RR  
+    nbtstat -RR  
     ```  
   
 ## Additional considerations after the Renaming Operation  

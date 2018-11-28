@@ -177,7 +177,7 @@ code with other computers, and integrate R analytics inside web, desktop, mobile
 
 ## Articles in this series
 
-[Performance tuning for R – introduction](sql-server-r-services-performance-tuning.md)
+[Performance tuning for R - introduction](sql-server-r-services-performance-tuning.md)
 
 [Performance tuning for R - SQL Server configuration](sql-server-configuration-r-services.md)
 

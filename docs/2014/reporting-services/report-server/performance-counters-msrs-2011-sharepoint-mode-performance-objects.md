@@ -77,12 +77,12 @@ manager: craigg
 |`Active Sessions`|Number of active sessions stored in the report server database. This counter provides a cumulative count of all usable browser sessions generated from report subscriptions, whether they are still active or not.|  
 |`Alerting: event queue length`||  
 |`Alerting: events processed - CreateSchedule`||  
-|`Alerting: events processed – Delete schedule`||  
-|`Alerting: events processed – DeliverAlert`||  
-|`Alerting: events processed – FireAlert`||  
-|`Alerting: events processed – FireSchedule`||  
-|`Alerting: events processed – GenerateAlert`||  
-|`Alerting: events processed – UpdateSchedule`||  
+|`Alerting: events processed - Delete schedule`||  
+|`Alerting: events processed - DeliverAlert`||  
+|`Alerting: events processed - FireAlert`||  
+|`Alerting: events processed - FireSchedule`||  
+|`Alerting: events processed - GenerateAlert`||  
+|`Alerting: events processed - UpdateSchedule`||  
 |`Cache Flushes/Sec`|Number of cache flushes per second.|  
 |`Cache Hits/Sec`|Number of requests per second for cached reports. These are requests for re-rendered reports, not requests for reports processed directly from the cache. (See `Total Cache Hits` later in this topic.)|  
 |`Cache Hits/Sec (Semantic Models)`|Number of requests per second for cached models.|  

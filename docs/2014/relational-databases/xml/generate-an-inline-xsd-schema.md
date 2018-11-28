@@ -233,7 +233,7 @@ for    XML RAW, ELEMENTS, XMLSCHEMA
   
  This is the corresponding XML generated. Only a fraction of the inline XSD is shown:  
   
- `…`  
+ `...`  
   
  `<xsd:schema targetNamespace="urn:schemas-microsoft-com:sql:SqlRowSet1" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:sqltypes="http://schemas.microsoft.com/sqlserver/2004/sqltypes" elementFormDefault="qualified">`  
   
@@ -271,7 +271,7 @@ for    XML RAW, ELEMENTS, XMLSCHEMA
   
 -   In the result, because the `DealerPrice` value is NULL in the table, only `ListPrice` is returned as a <`Price`> element. If you add the `XSINIL` parameter to the ELEMENTS directive, you will receive both of the elements that have the `xsi:nil` value set to TRUE for the<`Price`> element that corresponds to DealerPrice. You will also receive two <`Price`> child elements in the <`row`> complex type definition in the inline XSD schema with the `nillable` attribute set to TRUE for both. This fragment is a partial result:  
   
- `…`  
+ `...`  
   
  `<xsd:schema targetNamespace="urn:schemas-microsoft-com:sql:SqlRowSet1" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:sqltypes="http://schemas.microsoft.com/sqlserver/2004/sqltypes" elementFormDefault="qualified">`  
   
@@ -327,7 +327,7 @@ FOR XML RAW, ELEMENTS, XMLSCHEMA
   
  This is the result. Only a fragment of the inline XSD schema is shown.  
   
- `…`  
+ `...`  
   
  `<xsd:schema targetNamespace="urn:schemas-microsoft-com:sql:SqlRowSet1" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:sqltypes="http://schemas.microsoft.com/sqlserver/2004/sqltypes" elementFormDefault="qualified">`  
   
@@ -396,7 +396,7 @@ FOR XML RAW, ELEMENTS, XMLSCHEMA
   
  In the following query, Col2 and Col3 are given the same aliases. This generates two sibling elements that have the same name and that are both children of the <`raw`> element in the result. Both of these columns are of different types and both can be NULL. This is the result. Only partial inline XSD schema is shown.  
   
- `…`  
+ `...`  
   
  `<xsd:schema targetNamespace="urn:schemas-microsoft-com:sql:SqlRowSet1" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:sqltypes="http://schemas.microsoft.com/sqlserver/2004/sqltypes" elementFormDefault="qualified">`  
   

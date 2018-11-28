@@ -259,14 +259,14 @@ rs->Open(...);
   
  One variable can be used in two ways because the "`->`" operator is overloaded to allow an instance of a class to behave like a pointer to an interface. A private class member of the instance variable contains a pointer to the **_Recordset** interface; the "`->`" operator returns that pointer; and the returned pointer accesses the members of the **_Recordset** object.  
   
-### Coding a Missing Parameter — String  
+### Coding a Missing Parameter - String  
  When you need to code a missing **String** operand in Visual Basic, you merely omit the operand. You must specify the operand in Visual C++. Code a **_bstr_t** that has an empty string as a value.  
   
 ```cpp
 _bstr_t strMissing(L"");  
 ```
   
-### Coding a Missing Parameter — Variant  
+### Coding a Missing Parameter - Variant  
  When you need to code a missing **Variant** operand in Visual Basic, you merely omit the operand. You must specify all operands in Visual C++. Code a missing **Variant** parameter with a **_variant_t** set to the special value, DISP_E_PARAMNOTFOUND, and type, VT_ERROR. Alternatively, specify **vtMissing**, which is an equivalent predefined constant supplied by the **#import** directive.  
   
 ```cpp

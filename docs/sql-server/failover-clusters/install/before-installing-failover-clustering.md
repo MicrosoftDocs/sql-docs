@@ -179,7 +179,7 @@ manager: craigg
 |---------------------------------------|------------------------------------------------|-------------------------------------------------------|----------------------------------------------|-----------------------------------------------------|  
 |[!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] Enterprise (64-bit) x64*|Yes|Yes|Yes**|Yes**|  
 |[!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] Enterprise (32-bit)|Yes|Yes|||  
-|[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] –bit) Developer (64|Yes|Yes|Yes**|Yes**|  
+|[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] -bit) Developer (64|Yes|Yes|Yes**|Yes**|  
 |[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] Developer (32-bit)|Yes|Yes|||  
 |[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] Standard (64-bit)|Yes|Yes|Yes|Yes|  
 |[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] Standard (32-bit)|Yes|Yes|||  

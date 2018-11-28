@@ -53,7 +53,7 @@ manager: craigg
   
 5.  To add the new project to the existing solution, in the **Solution** drop-down list, select **Add to Solution**.  
   
-     —or—  
+     -or-  
   
      To create a new solution, in the **Solution** drop-down list, select **Create new Solution**. To create a new folder for the new solution, select **Create directory for solution**. In **Solution Name**, type the name of the new solution.  
   

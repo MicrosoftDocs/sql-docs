@@ -38,7 +38,7 @@ manager: craigg
   
 -   You can specify any document type that is supported for full-text indexing for `varbinary(max)` columns. For more information, see [How To: Determine Which Document Types Can Be Indexed](#doctypes) in this topic.  
   
--   Semantic indexing creates two types of indexes for the columns that you select – an index of key phrases, and an index of document similarity. You cannot select only one type of index or the other when you enable semantic indexing. However you can query these two indexes independently. For more information, see [Find Key Phrases in Documents with Semantic Search](find-key-phrases-in-documents-with-semantic-search.md) and [Find Similar and Related Documents with Semantic Search](find-similar-and-related-documents-with-semantic-search.md).  
+-   Semantic indexing creates two types of indexes for the columns that you select - an index of key phrases, and an index of document similarity. You cannot select only one type of index or the other when you enable semantic indexing. However you can query these two indexes independently. For more information, see [Find Key Phrases in Documents with Semantic Search](find-key-phrases-in-documents-with-semantic-search.md) and [Find Similar and Related Documents with Semantic Search](find-similar-and-related-documents-with-semantic-search.md).  
   
 -   If you do not explicitly specify an LCID for a semantic index, then only the primary language and its associated language statistics are used for semantic indexing.  
   

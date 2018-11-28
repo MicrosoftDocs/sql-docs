@@ -74,7 +74,7 @@ Specifies the number of the first row to export from a table or import from a da
 Specifies that empty columns should retain a null value during the operation, rather than have any default values for the columns inserted.  
   
 - -l  
-Specifies a login timeout. The –l option specifies the number of seconds before a login to [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] times out when you try to connect to a server. The default login timeout is 15 seconds. The login timeout must be a number between 0 and 65534. If the value supplied is not numeric or does not fall into that range, `bcp` generates an error message. A value of 0 specifies an infinite timeout.
+Specifies a login timeout. The -l option specifies the number of seconds before a login to [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] times out when you try to connect to a server. The default login timeout is 15 seconds. The login timeout must be a number between 0 and 65534. If the value supplied is not numeric or does not fall into that range, `bcp` generates an error message. A value of 0 specifies an infinite timeout.
   
 - -L *last_row*  
 Specifies the number of the last row to export from a table or import from a data file.  

@@ -131,7 +131,7 @@ manager: craigg
 -   The [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] version of MSOLAP is included in SQL Server Setup, therefore explicitly installing the [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] version of MSOLAP is only required if your application server is not a PowerPivot application server.  
   
     > [!NOTE]  
-    >  The Excel Calculation Services application server also needs an instance of the file **Microsoft.AnalysisServices.Xmla.dll** in the global assembly. To install the .dll on the application server, install [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Select the "Management Tools – Complete" on the **Feature Selection** page of the SQL Server Setup wizard.  
+    >  The Excel Calculation Services application server also needs an instance of the file **Microsoft.AnalysisServices.Xmla.dll** in the global assembly. To install the .dll on the application server, install [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Select the "Management Tools - Complete" on the **Feature Selection** page of the SQL Server Setup wizard.  
   
 -   If you want the application server to support older [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] workbooks, you need to install the SQL Server 2008 R2 version of MSOLAP.  
   

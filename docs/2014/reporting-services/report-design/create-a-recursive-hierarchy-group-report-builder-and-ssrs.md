@@ -45,7 +45,7 @@ manager: craigg
     > [!NOTE]  
     >  If you do not see the Properties pane, click **Properties** on the **View** tab.  
   
-2.  In the Properties pane, expand the `Padding` node, click **Left**, and from the drop-down list, select **\<Expression…>**.  
+2.  In the Properties pane, expand the `Padding` node, click **Left**, and from the drop-down list, select **\<Expression...>**.  
   
 3.  In the Expression pane, type the following expression:  
   

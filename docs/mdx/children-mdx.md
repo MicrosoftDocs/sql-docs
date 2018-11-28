@@ -50,7 +50,7 @@ FROM
   
 |Release|History|  
 |-------------|-------------|  
-|[!INCLUDE[ssBOL2005_R03](../includes/ssbol2005-r03-md.md)]|**Changed content:**<br /> — Updated syntax and arguments to improve clarity.<br /><br /> — Added updated examples.|  
+|[!INCLUDE[ssBOL2005_R03](../includes/ssbol2005-r03-md.md)]|**Changed content:**<br /> - Updated syntax and arguments to improve clarity.<br /><br /> - Added updated examples.|  
   
 ## See Also  
  [MDX Function Reference &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  

@@ -40,7 +40,7 @@ After you navigate to a node in a [!INCLUDE[ssDE](../includes/ssde-md.md)] provi
   
 ```  
 $MyDBVar = New-Object Microsoft.SqlServer.Management.SMO.Database  
-$MyDBVar | Get-Member –Type Methods  
+$MyDBVar | Get-Member -Type Methods  
 $MyDBVar | Get-Member -Type Properties  
 ```  
   

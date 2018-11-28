@@ -29,8 +29,8 @@ manager: craigg
   
 |Property|Default setting|Description|  
 |--------------|---------------------|-----------------|  
-|**Build Action**|Compile|This property specifies how the file relates to the build and deployment process. This property setting has the following options:<br /><br /> **Compile** – A normal build action occurs. Definitions for model objects will be written to the .asdatabase file.<br /><br /> **None** – The output to the .asdatabase file will be empty.|  
-|**Copy to Output Directory**|Do Not Copy|This property specifies the source file will be copied to the output directory. This property setting has the following options:<br /><br /> **Do not copy** – No copy is created in the output directory.<br /><br /> **Copy always** – A copy is always created in the output directory.<br /><br /> **Copy if newer** - A copy is created in the output directory only if there are changes to the model.bim file.|  
+|**Build Action**|Compile|This property specifies how the file relates to the build and deployment process. This property setting has the following options:<br /><br /> **Compile** - A normal build action occurs. Definitions for model objects will be written to the .asdatabase file.<br /><br /> **None** - The output to the .asdatabase file will be empty.|  
+|**Copy to Output Directory**|Do Not Copy|This property specifies the source file will be copied to the output directory. This property setting has the following options:<br /><br /> **Do not copy** - No copy is created in the output directory.<br /><br /> **Copy always** - A copy is always created in the output directory.<br /><br /> **Copy if newer** - A copy is created in the output directory only if there are changes to the model.bim file.|  
   
  **Miscellaneous**  
   

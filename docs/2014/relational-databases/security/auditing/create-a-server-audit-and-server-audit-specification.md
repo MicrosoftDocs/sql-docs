@@ -59,7 +59,7 @@ manager: craigg
   
 1.  In Object Explorer, expand the **Security** folder.  
   
-2.  Right-click the **Audits** folder and select **New Audit…**.  
+2.  Right-click the **Audits** folder and select **New Audit...**.  
   
      The following options are available on the **General** page of the **Create Audit** dialog box.  
   
@@ -88,8 +88,8 @@ manager: craigg
      **File path**  
      Specifies the location of the folder where audit data is written when the **Audit destination** is a file.  
   
-     **Ellipsis (…)**  
-     Opens the **Locate Folder –***server_name* dialog box to specify a file path or create a folder where the audit file is written.  
+     **Ellipsis (...)**  
+     Opens the **Locate Folder -***server_name* dialog box to specify a file path or create a folder where the audit file is written.  
   
      **Audit File Maximum Limit:**  
      **Maximum rollover files**  
@@ -118,7 +118,7 @@ manager: craigg
   
 1.  In Object Explorer, click the plus sign to expand the **Security** folder.  
   
-2.  Right-click the **Server Audit Specifications** folder and select **New Server Audit Specification…**.  
+2.  Right-click the **Server Audit Specifications** folder and select **New Server Audit Specification...**.  
   
      The following options are available on the **Create Server Audit Specification** dialog box.  
   
@@ -137,13 +137,13 @@ manager: craigg
      **Object Name**  
      The name of the object to audit. This is only available for audit actions; it does not apply to audit groups.  
   
-     **Ellipsis (…)**  
+     **Ellipsis (...)**  
      Opens the **Select Objects** dialog to browse for and select an available object, based on the specified **Audit Action Type**.  
   
      **Principal Name**  
      The account to filter the audit by for the object being audited.  
   
-     **Ellipsis (…)**  
+     **Ellipsis (...)**  
      Opens the **Select Objects** dialog to browse for and select an available object, based on the specified **Object Name**.  
   
 3.  When you are finished, click **OK**.  

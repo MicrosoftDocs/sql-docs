@@ -106,7 +106,7 @@ manager: craigg
   
 7.  In the main grid, under **(General)**, select **Type** and then choose **Index** from the list.  
   
-8.  Select **Columns**, and then click the ellipsis **(…)**.  
+8.  Select **Columns**, and then click the ellipsis **(...)**.  
   
 9. In the **Index Columns** dialog box, under **Column Name**, select the columns you want to index. You can select up to 16 columns. For optimal performance, select only one or two columns per index. For each column you select, indicate whether the index arranges values of this column in ascending or descending order.  
   
@@ -128,13 +128,13 @@ manager: craigg
   
 3.  Expand the table on which you want to create a unique index.  
   
-4.  Right-click the **Indexes** folder, point to **New Index**, and select **Non-Clustered Index…**.  
+4.  Right-click the **Indexes** folder, point to **New Index**, and select **Non-Clustered Index...**.  
   
 5.  In the **New Index** dialog box, on the **General** page, enter the name of the new index in the **Index name** box.  
   
 6.  Select the **Unique** check box.  
   
-7.  Under **Index key columns**, click **Add…**.  
+7.  Under **Index key columns**, click **Add...**.  
   
 8.  In the **Select Columns from***table_name* dialog box, select the check box or check boxes of the table column or columns to be added to the unique index.  
   

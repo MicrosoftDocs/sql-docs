@@ -17,7 +17,7 @@ ms.author: mathoma
 manager: craigg
 ---
 # Replication Features and Tasks
-  Find information that anyone—designer, developer, analyst, or administrator—requires to design and implement replication solutions.  
+  Find information that anyone-designer, developer, analyst, or administrator-requires to design and implement replication solutions.  
   
 ## In This Section  
   

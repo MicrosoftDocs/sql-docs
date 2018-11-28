@@ -69,7 +69,7 @@ ON { table_or_indexed_view_name } ( column [ ,...n ] )
     <disjunct> | <comparison>  
   
 <disjunct> ::=  
-        column_name IN (constant ,…)  
+        column_name IN (constant ,...)  
   
 <comparison> ::=  
         column_name <comparison_op> constant  
@@ -104,7 +104,7 @@ CREATE STATISTICS statistics_name
     <disjunct> | <comparison>  
   
 <disjunct> ::=  
-        column_name IN (constant ,…)  
+        column_name IN (constant ,...)  
   
 <comparison> ::=  
         column_name <comparison_op> constant  
@@ -120,7 +120,7 @@ CREATE STATISTICS statistics_name
  *table_or_indexed_view_name*  
  Is the name of the table, indexed view, or external table on which to create the statistics. To create statistics on another database, specify a qualified table name.  
   
- *column [ ,…n]*  
+ *column [ ,...n]*  
  One or more columns to be included in the statistics. The columns should be in priority order from left to right. Only the first column is used for creating the histogram. All columns are used for cross-column correlation statistics called densities.  
   
  You can specify any column that can be specified as an index key column with the following exceptions:  

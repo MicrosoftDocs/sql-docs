@@ -104,11 +104,11 @@ SET QUERY_STORE (SIZE_BASED_CLEANUP_MODE = AUTO);
   
  **Query Store Capture Mode:** Specifies the query capture policy for the Query Store.  
   
--   **All** – Captures all queries. This is the default option.  
+-   **All** - Captures all queries. This is the default option.  
   
--   **Auto** – Infrequent queries and queries with insignificant compile and execution duration are ignored. Thresholds for execution count, compile and runtime duration are internally determined.  
+-   **Auto** - Infrequent queries and queries with insignificant compile and execution duration are ignored. Thresholds for execution count, compile and runtime duration are internally determined.  
   
--   **None** – Query Store stops capturing new queries.  
+-   **None** - Query Store stops capturing new queries.  
   
  The following script sets the Query Capture mode to Auto:  
   

@@ -13,7 +13,7 @@ manager: kfile
 # TupleToStr (MDX)
 
 
-  Returns a Multidimensional Expressions (MDX)–formatted string that corresponds to a specified tuple.  
+  Returns a Multidimensional Expressions (MDX)-formatted string that corresponds to a specified tuple.  
   
 ## Syntax  
   

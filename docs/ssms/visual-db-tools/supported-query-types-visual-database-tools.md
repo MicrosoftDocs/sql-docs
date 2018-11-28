@@ -35,7 +35,7 @@ You can create the following types of queries in the Diagram and Criteria panes 
   
 -   **Insert Values** Creates a new row and inserts values into specified columns. This type of query creates an SQL INSERT INTO...VALUES statement.  
   
--   **Update query** Changes the values of individual columns in one or more existing rows in a table. This type of query creates an SQL UPDATE…SET statement.  
+-   **Update query** Changes the values of individual columns in one or more existing rows in a table. This type of query creates an SQL UPDATE...SET statement.  
   
 -   **Delete query** Removes one or more rows from a table. This type of query creates an SQL DELETE statement.  
   

@@ -59,7 +59,7 @@ Adds the specified server principal to the server role. *server_principal* can b
 DROP MEMBER *server_principal*  
 Removes the specified server principal from the server role. *server_principal* can be a login or a user-defined server role. *server_principal* cannot be a fixed server role, a database role, or sa.  
   
-WITH NAME **=***new_server_role_name*  
+WITH NAME **=**_new_server_role_name_  
 Specifies the new name of the user-defined server role. This name cannot already exist in the server.  
   
 ## Remarks  

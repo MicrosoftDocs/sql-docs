@@ -40,7 +40,7 @@ dreplay status [-m controller] [-f status_interval]
  In the following example, the current status is displayed every 60 seconds. The value `localhost` indicates that the controller service is running on the same computer as the administration tool.  
   
 ```  
-dreplay status –m localhost -f 60  
+dreplay status -m localhost -f 60  
 ```  
   
 ## Permissions  

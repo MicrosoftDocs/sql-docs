@@ -80,7 +80,7 @@ A thesaurus query uses both a language-specific thesaurus and the global thesaur
 2.  These steps are then repeated for the global thesaurus. However, if a term is already part of a match in the language specific thesaurus file, the term is ineligible for matching in the global thesaurus.  
 
 ##  <a name="structure"></a> Structure of a thesaurus file  
- Each thesaurus file defines an XML container whose ID is `Microsoft Search Thesaurus`, and a comment, `<!--` … `-->`, that contains a sample thesaurus. The thesaurus is defined in a `<thesaurus>` element that contains samples of the child elements that define the diacritics setting, expansion sets, and replacement sets.
+ Each thesaurus file defines an XML container whose ID is `Microsoft Search Thesaurus`, and a comment, `<!--` ... `-->`, that contains a sample thesaurus. The thesaurus is defined in a `<thesaurus>` element that contains samples of the child elements that define the diacritics setting, expansion sets, and replacement sets.
 
 A typical empty thesaurus file contains the following XML text:  
   

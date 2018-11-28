@@ -131,7 +131,7 @@ sp_cursor  cursor, optype, rownum, table
   
  When a single parameter is used, an UPDATE statement may be submitted using the following syntax:  
   
- `[ [ UPDATE <table name> ] SET ] {<column name> = expression} [,…n]`  
+ `[ [ UPDATE <table name> ] SET ] {<column name> = expression} [,...n]`  
   
 > [!NOTE]  
 >  If UPDATE \<table name> is specified, any value specified for the *table* parameter will be ignored.  

@@ -28,7 +28,7 @@ manager: craigg
   
  [Identity and Access Control &#40;Replication&#41;](../../../relational-databases/replication/security/identity-and-access-control-replication.md)  
   
- [More…](../../../relational-databases/replication/security/security-overview-replication.md)  
+ [More...](../../../relational-databases/replication/security/security-overview-replication.md)  
   
  ![Small File Folder Icon](../../../analysis-services/media/filefolder-small.png "Small File Folder Icon") **Secure Development**  
  [Replication Agent Security Model](../../../relational-databases/replication/security/replication-agent-security-model.md)  
@@ -37,7 +37,7 @@ manager: craigg
   
  [Replication Security Best Practices](../../../relational-databases/replication/security/replication-security-best-practices.md)  
   
- [More…](../../../relational-databases/replication/security/secure-development-replication.md)  
+ [More...](../../../relational-databases/replication/security/secure-development-replication.md)  
   
  ![Small File Folder Icon](../../../analysis-services/media/filefolder-small.png "Small File Folder Icon") **Secure Deployment**  
  [Secure the Distributor](../../../relational-databases/replication/security/secure-the-distributor.md)  
@@ -50,7 +50,7 @@ manager: craigg
   
  [Securing Replication Over the Internet](../../../relational-databases/replication/security/securing-replication-over-the-internet.md)  
   
- [More…](../../../relational-databases/replication/security/secure-deployment-replication.md)  
+ [More...](../../../relational-databases/replication/security/secure-deployment-replication.md)  
   
  ![Small File Folder Icon](../../../analysis-services/media/filefolder-small.png "Small File Folder Icon") **Secure Operation**  
  [Manage Logins and Passwords in Replication](../../../relational-databases/replication/security/manage-logins-and-passwords-in-replication.md)  

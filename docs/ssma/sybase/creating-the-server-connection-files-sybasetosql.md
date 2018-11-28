@@ -64,7 +64,7 @@ Server information can be specified either in the servers section of the script 
 ```  
   
 ```  
-2.<!—Sample of server connection file commands-->  
+2.<!-Sample of server connection file commands-->  
 <sybase name="<source-server-unique-name>">  
   
   <advanced-mode>  

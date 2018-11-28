@@ -37,7 +37,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
 |**batch_sql_handle**|**varbinary(64)**|ID of the statement batch the query is part of. Populated only if query references temporary tables or table variables.|  
 |**query_hash**|**binary(8)**|MD5 hash of the individual query, based on the logical query tree. Includes optimizer hints.|  
 |**is_internal_query**|**bit**|The query was generated internally.|  
-|**query_parameterization_type**|**tinyint**|Kind of parameterization:<br /><br /> 0 – None<br /><br /> 1 – User<br /><br /> 2 – Simple<br /><br /> 3 – Forced|  
+|**query_parameterization_type**|**tinyint**|Kind of parameterization:<br /><br /> 0 - None<br /><br /> 1 - User<br /><br /> 2 - Simple<br /><br /> 3 - Forced|  
 |**query_parameterization_type_desc**|**nvarchar(60)**|Textual description for the parameterization type.|  
 |**initial_compile_start_time**|**datetimeoffset**|Compile start time.|  
 |**last_compile_start_time**|**datetimeoffset**|Compile start time.|  

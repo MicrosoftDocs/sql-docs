@@ -78,7 +78,7 @@ manager: craigg
   
 8.  Install the audit database by executing  
   
-    -   `Sqlcmd –S server_name [ \instance_name ] -E -I -i installDB.sql`  
+    -   `Sqlcmd -S server_name [ \instance_name ] -E -I -i installDB.sql`  
   
      with appropriate values of the instance and server.  
   
@@ -92,7 +92,7 @@ manager: craigg
   
 12. Execute the script with the following command  
   
-    -   `Sqlcmd –S server_name [ \instance_name ] -E -I -i cleanup.sql`  
+    -   `Sqlcmd -S server_name [ \instance_name ] -E -I -i cleanup.sql`  
   
          with appropriate values of the instance and server.  
   

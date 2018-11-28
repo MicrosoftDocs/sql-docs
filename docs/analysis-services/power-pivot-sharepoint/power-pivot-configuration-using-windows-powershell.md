@@ -61,7 +61,7 @@ manager: kfile
 2.  Run the first cmdlet:  
   
     ```  
-    Add-SPSolution –LiteralPath "C:\Program Files\Microsoft SQL Server\110\Tools\PowerPivotTools\ConfigurationTool\Resources\PowerPivotFarm.wsp"  
+    Add-SPSolution -LiteralPath "C:\Program Files\Microsoft SQL Server\110\Tools\PowerPivotTools\ConfigurationTool\Resources\PowerPivotFarm.wsp"  
     ```  
   
      The cmdlet returns the name of the solution, its solution ID, and Deployed=False. In the next step, you deploy the solution.  
@@ -69,7 +69,7 @@ manager: kfile
 3.  Run the second cmdlet to deploy the solution:  
   
     ```  
-    Install-SPSolution –Identity PowerPivotFarm.wsp –GACDeployment -Force  
+    Install-SPSolution -Identity PowerPivotFarm.wsp -GACDeployment -Force  
     ```  
   
 4.  Close the window. Reopen it, again using the **Run as Administrator** option.  

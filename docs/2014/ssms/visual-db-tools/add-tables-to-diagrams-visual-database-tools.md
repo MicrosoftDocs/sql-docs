@@ -23,7 +23,7 @@ manager: craigg
   
      To create a table in your current diagram, click the **New Table** button on the toolbar.  
   
-     –or–  
+     -or-  
   
      Right-click in the diagram and select **New Table**.  
   

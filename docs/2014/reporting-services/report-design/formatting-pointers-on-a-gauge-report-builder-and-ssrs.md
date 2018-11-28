@@ -33,7 +33,7 @@ manager: craigg
 ##  <a name="DisplayingMultiple"></a> Displaying Multiple Pointers on the Gauge  
  You can add multiple pointers to the gauge to point at multiple values on the same scale. This can be useful for showing a low and a high value at the same time. To specify more than one pointer on the gauge for the same scale, right-click anywhere inside the gauge and click **Add Pointer** on the shortcut menu. Alternatively, you can add a scale by right-clicking anywhere in the gauge and clicking **Add Scale**. Then you can add a new pointer, and it will automatically be associated with the last scale.  
   
- When pointers overlap, the drawing order of the pointers is determined by the order in which they are added to the gauge. You cannot reorder the drawing order of the pointers by changing the order of the fields in the data pane. To change the order of drawing for multiple pointers, open the Properties pane and click **Pointers (…)**. Then, change the order of the pointers in the Pointer collection.  
+ When pointers overlap, the drawing order of the pointers is determined by the order in which they are added to the gauge. You cannot reorder the drawing order of the pointers by changing the order of the fields in the data pane. To change the order of drawing for multiple pointers, open the Properties pane and click **Pointers (...)**. Then, change the order of the pointers in the Pointer collection.  
   
   
 ##  <a name="SettingGradients"></a> Setting Gradients on a Needle Cap  

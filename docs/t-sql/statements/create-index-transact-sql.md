@@ -729,7 +729,7 @@ The following guidelines apply for resumable index operations:
 - To pause immediately the index operation, you can stop (Ctrl-C) the ongoing command, execute the [ALTER INDEX](alter-index-transact-sql.md) PAUSE command, or execute the KILL `<session_id>` command. Once the command is paused, it can be resumed using [ALTER INDEX](alter-index-transact-sql.md) command. 
 - Re-executing the original CREATE INDEX statement for resumable index, automatically resumes a paused index create operation.
 - The SORT_IN_TEMPDB=ON option is not supported for resumable index. 
-- The DDL command with RESUMABLE=ON cannot be executed inside an explicit transaction (cannot be part of begin TRAN … COMMIT block).
+- The DDL command with RESUMABLE=ON cannot be executed inside an explicit transaction (cannot be part of begin TRAN ... COMMIT block).
 - To resume/abort an index create/rebuild, use the [ALTER INDEX](alter-index-transact-sql.md) T-SQL syntax
 
 > [!NOTE]

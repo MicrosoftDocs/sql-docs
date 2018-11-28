@@ -85,7 +85,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
   
 1.  In Object Explorer, right-click the database in which you want to create a partitioned table and select **Properties**.  
   
-2.  In the **Database Properties –** *database_name* dialog box, under **Select a page**, select **Filegroups**.  
+2.  In the **Database Properties -** *database_name* dialog box, under **Select a page**, select **Filegroups**.  
   
 3.  Under **Rows**, click **Add**. In the new row, enter the filegroup name.  
   
@@ -106,7 +106,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
   
 #### To create a partitioned table  
   
-1.  Right-click the table that you wish to partition, point to **Storage**, and then click **Create Partition…**.  
+1.  Right-click the table that you wish to partition, point to **Storage**, and then click **Create Partition...**.  
   
 2.  In the **Create Partition Wizard**, on the **Welcome to the Create Partition Wizard** page, click **Next**.  
   
@@ -138,7 +138,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
   
      The following additional options are available on this page:  
   
-     **Set Boundaries…**  
+     **Set Boundaries...**  
      Opens the **Set Boundary Values** dialog box to select the boundary values and date ranges you want for your partitions. This option is only available when you have selected a partitioning column that contains one of the following data types: **date**, **datetime**, **smalldatetime**, **datetime2**, or **datetimeoffset**.  
   
      **Estimate storage**  

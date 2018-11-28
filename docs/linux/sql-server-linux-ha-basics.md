@@ -34,16 +34,16 @@ In Linux, many commands need to be executed with elevated privileges, much like 
 2. The more common and security conscious way to run things is to use `sudo` before executing anything. Many of the examples in this article use `sudo`.
 
 Some common commands, each of which have various switches and options that can be researched online:
--   `cd` – change the directory
--   `chmod` – change the permissions of a file or directory
--   `chown` – change the ownership of a file or directory
--   `ls` – show the contents of a directory
--   `mkdir` – create a folder (directory) on a drive
--   `mv` – move a file from one location to another
--   `ps` – show all of the working processes
--   `rm` – delete a file locally on a server
--   `rmdir` – delete a folder (directory)
--   `systemctl` – start, stop, or enable services
+-   `cd` - change the directory
+-   `chmod` - change the permissions of a file or directory
+-   `chown` - change the ownership of a file or directory
+-   `ls` - show the contents of a directory
+-   `mkdir` - create a folder (directory) on a drive
+-   `mv` - move a file from one location to another
+-   `ps` - show all of the working processes
+-   `rm` - delete a file locally on a server
+-   `rmdir` - delete a folder (directory)
+-   `systemctl` - start, stop, or enable services
 -   Text editor commands. On Linux, there are various text editor options, such as vi and emacs.
 
 ## Common tasks for availability configurations of [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] on Linux
@@ -63,7 +63,7 @@ When using `scp`, you must provide the credentials of the server if it is not th
 scp MyAGCert.cer username@servername:/folder/subfolder
 ```
 
-copies the file MyAGCert.cer to the folder specified on the other server. Note that you must have permissions – and possibly ownership – of the file to copy it, so `chown` may also need to be employed before copying. Similarly, on the receiving side, the right user needs access to manipulate the file. For example, to restore that certificate file, the `mssql` user must be able to access it.
+copies the file MyAGCert.cer to the folder specified on the other server. Note that you must have permissions - and possibly ownership - of the file to copy it, so `chown` may also need to be employed before copying. Similarly, on the receiving side, the right user needs access to manipulate the file. For example, to restore that certificate file, the `mssql` user must be able to access it.
 
 Samba, which is the Linux variant of server message block (SMB), can also be used to create shares accessed by UNC paths such as `\\SERVERNAME\SHARE`. For more information on configuring Samba, see the information at the following links for each distribution:
 -   [RHEL](https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/6/html/Managing_Confined_Services/chap-Managing_Confined_Services-Samba.html)
@@ -81,27 +81,27 @@ Similar to Windows, Linux distributions have a built-in firewall. If your compan
 
 | Port Number | Type     | Description                                                                                                                 |
 |-------------|----------|-----------------------------------------------------------------------------------------------------------------------------|
-| 111         | TCP/UDP  | NFS – `rpcbind/sunrpc`                                                                                                    |
-| 135         | TCP      | Samba (if used) – End Point Mapper                                                                                          |
-| 137         | UDP      | Samba (if used) – NetBIOS Name Service                                                                                      |
-| 138         | UDP      | Samba (if used) – NetBIOS Datagram                                                                                          |
-| 139         | TCP      | Samba (if used) – NetBIOS Session                                                                                           |
-| 445         | TCP      | Samba (if used) – SMB over TCP                                                                                              |
-| 1433        | TCP      | [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] – default port; if desired, can change with `mssql-conf set network.tcpport <portnumber>`                       |
+| 111         | TCP/UDP  | NFS - `rpcbind/sunrpc`                                                                                                    |
+| 135         | TCP      | Samba (if used) - End Point Mapper                                                                                          |
+| 137         | UDP      | Samba (if used) - NetBIOS Name Service                                                                                      |
+| 138         | UDP      | Samba (if used) - NetBIOS Datagram                                                                                          |
+| 139         | TCP      | Samba (if used) - NetBIOS Session                                                                                           |
+| 445         | TCP      | Samba (if used) - SMB over TCP                                                                                              |
+| 1433        | TCP      | [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] - default port; if desired, can change with `mssql-conf set network.tcpport <portnumber>`                       |
 | 2049        | TCP, UDP | NFS (if used)                                                                                                               |
-| 2224        | TCP      | Pacemaker – used by `pcsd`                                                                                                |
-| 3121        | TCP      | Pacemaker – Required if there are Pacemaker Remote nodes                                                                    |
-| 3260        | TCP      | iSCSI Initiator (if used) – Can be altered in `/etc/iscsi/iscsid.config` (RHEL), but should match port of iSCSI Target |
+| 2224        | TCP      | Pacemaker - used by `pcsd`                                                                                                |
+| 3121        | TCP      | Pacemaker - Required if there are Pacemaker Remote nodes                                                                    |
+| 3260        | TCP      | iSCSI Initiator (if used) - Can be altered in `/etc/iscsi/iscsid.config` (RHEL), but should match port of iSCSI Target |
 | 5022        | TCP      | [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] - default port used for an AG endpoint; can be changed when creating the endpoint                                |
 | 5403        | TCP      | Pacemaker                                                                                                                   |
-| 5404        | UDP      | Pacemaker – Required by Corosync if using multicast UDP                                                                     |
-| 5405        | UDP      | Pacemaker – Required by Corosync                                                                                            |
-| 21064       | TCP      | Pacemaker – Required by resources using DLM                                                                                 |
+| 5404        | UDP      | Pacemaker - Required by Corosync if using multicast UDP                                                                     |
+| 5405        | UDP      | Pacemaker - Required by Corosync                                                                                            |
+| 21064       | TCP      | Pacemaker - Required by resources using DLM                                                                                 |
 | Variable    | TCP      | AG endpoint port; default is 5022                                                                                           |
-| Variable    | TCP      | NFS – port for `LOCKD_TCPPORT` (found in `/etc/sysconfig/nfs` on RHEL)                                              |
-| Variable    | UDP      | NFS – port for `LOCKD_UDPPORT` (found in `/etc/sysconfig/nfs` on RHEL)                                              |
-| Variable    | TCP/UDP  | NFS – port for `MOUNTD_PORT` (found in `/etc/sysconfig/nfs` on RHEL)                                                |
-| Variable    | TCP/UDP  | NFS – port for `STATD_PORT` (found in `/etc/sysconfig/nfs` on RHEL)                                                 |
+| Variable    | TCP      | NFS - port for `LOCKD_TCPPORT` (found in `/etc/sysconfig/nfs` on RHEL)                                              |
+| Variable    | UDP      | NFS - port for `LOCKD_UDPPORT` (found in `/etc/sysconfig/nfs` on RHEL)                                              |
+| Variable    | TCP/UDP  | NFS - port for `MOUNTD_PORT` (found in `/etc/sysconfig/nfs` on RHEL)                                                |
+| Variable    | TCP/UDP  | NFS - port for `STATD_PORT` (found in `/etc/sysconfig/nfs` on RHEL)                                                 |
 
 For additional ports that may be used by Samba,see [Samba Port Usage](https://wiki.samba.org/index.php/Samba_Port_Usage).
 
@@ -130,11 +130,11 @@ As previous noted, the only clustering mechanism currently supported by Microsof
 
 ### HA add-on/extension basics
 All of the currently supported distributions ship a high availability add-on/extension, which is based on the Pacemaker clustering stack. This stack incorporates two key components: Pacemaker and Corosync. All the components of the stack are:
--   Pacemaker – The core clustering component, that does things like coordinate across the clustered machines.
--   Corosync – A framework and set of APIs that provides things like quorum, the ability to restart failed processes, and so on.
--   libQB – Provides things like logging.
--   Resource agent – Specific functionality provided so that an application can integrate with Pacemaker.
--   Fence agent – Scripts/functionality that assist in isolating nodes and deal with them if they are having issues.
+-   Pacemaker - The core clustering component, that does things like coordinate across the clustered machines.
+-   Corosync - A framework and set of APIs that provides things like quorum, the ability to restart failed processes, and so on.
+-   libQB - Provides things like logging.
+-   Resource agent - Specific functionality provided so that an application can integrate with Pacemaker.
+-   Fence agent - Scripts/functionality that assist in isolating nodes and deal with them if they are having issues.
     
 > [!NOTE]
 > The cluster stack is commonly referred to as Pacemaker in the Linux world.
@@ -195,7 +195,7 @@ The `corosync.conf` file contains the configuration of the cluster. It is locate
 #### Cluster log location
 Log locations for Pacemaker clusters differ depending on the distribution.
 -   RHEL and SLES - `/var/log/cluster/corosync.log`
--   Ubuntu – `/var/log/corosync/corosync.log`
+-   Ubuntu - `/var/log/corosync/corosync.log`
 
 To change the default logging location, modify `corosync.conf`.
 
@@ -208,8 +208,8 @@ Using virtual machines to deploy Linux-based [!INCLUDE[ssnoversion-md](../includ
 When it comes to AGs and FCIs under virtualization, ensure that anti-affinity is set for the nodes of a given Pacemaker cluster. When configured for high availability in an AG or FCI configuration, the VMs hosting [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] should never be running on the same hypervisor host. For example, if a two-node FCI is deployed, there would need to be *at least* three hypervisor hosts so that there is somewhere for one of the VMs hosting a node to go in the event of a host failure, especially if using features like Live Migration or vMotion.
 
 For more specifics, consult:
--   Hyper-V Documentation – [Using Guest Clustering for High Availability](https://technet.microsoft.com/library/dn440540(v=ws.11).aspx)
--   Whitepaper (written for Windows-based deployments, but most of the concepts still apply) – [Planning Highly Available, Mission Critical SQL Server Deployments with VMware vSphere](https://www.vmware.com/content/dam/digitalmarketing/vmware/en/pdf/solutions/vmware-vsphere-highly-available-mission-critical-sql-server-deployments.pdf)
+-   Hyper-V Documentation - [Using Guest Clustering for High Availability](https://technet.microsoft.com/library/dn440540(v=ws.11).aspx)
+-   Whitepaper (written for Windows-based deployments, but most of the concepts still apply) - [Planning Highly Available, Mission Critical SQL Server Deployments with VMware vSphere](https://www.vmware.com/content/dam/digitalmarketing/vmware/en/pdf/solutions/vmware-vsphere-highly-available-mission-critical-sql-server-deployments.pdf)
 
 >[!NOTE]
 >RHEL with a Pacemaker cluster with STONITH is not yet supported by Hyper-V. Until that is supported, for more information and updates, consult [Support Policies for RHEL High Availability Clusters](https://access.redhat.com/articles/29440#3physical_host_mixing).

@@ -116,20 +116,20 @@ The schema section is required. As the previous example shows, ADO writes out de
 ```  
 <!-- 1. String with no max length -->  
 <s:AttributeType name="title_id"/>  
-<!—or -->  
+<!-or -->  
 <s:AttributeType name="title_id" dt:type="string"/>  
   
-<!—- 2. Fixed length string with max length of 6 -->  
+<!-- 2. Fixed length string with max length of 6 -->  
 <s:AttributeType name="title_id">  
     <s:datatype dt:type="string" dt:maxLength="6" rs:fixedlength="true" />  
 </s:AttributeType>  
   
-<!—- 3. Variable length string with max length of 6 -->  
+<!-- 3. Variable length string with max length of 6 -->  
 <s:AttributeType name="title_id">  
     <s:datatype dt:type="string" dt:maxLength="6" />  
 </s:AttributeType>  
   
-<!—- 4. Integer -->  
+<!-- 4. Integer -->  
 <s:AttributeType name="title_id" dt:type="int"/>  
 ```  
   

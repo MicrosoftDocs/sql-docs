@@ -37,7 +37,7 @@ manager: craigg
   
 5.  Export the results from the cleansing process to an Excel file.  
   
-6.  Import the values from the cleansing project into domains to augment the knowledge in the knowledge base with new rules, values, corrections etc…  
+6.  Import the values from the cleansing project into domains to augment the knowledge in the knowledge base with new rules, values, corrections etc...  
   
 ## Next Step  
  [Task 1: Creating a Data Quality Project](../../2014/tutorials/task-1-creating-a-data-quality-project.md)  

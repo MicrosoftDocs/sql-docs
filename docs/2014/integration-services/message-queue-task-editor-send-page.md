@@ -47,17 +47,17 @@ manager: craigg
   
 ### MessageType = Data file message  
  **DataFileMessage**  
- Type the path of the data file, or click the ellipsis **(…)** and then locate the file.  
+ Type the path of the data file, or click the ellipsis **(...)** and then locate the file.  
   
 ### MessageType = Variable message  
  **VariableMessage**  
- Type the variable names, or click the ellipsis **(…)** and then select the variables. Variables are separated by commas.  
+ Type the variable names, or click the ellipsis **(...)** and then select the variables. Variables are separated by commas.  
   
  **Related Topics:** Select Variables  
   
 ### MessageType = String message  
  **StringMessage**  
- Type the string message, or click the ellipsis **(…)** and then type the message in the **Enter String Message** dialog box.  
+ Type the string message, or click the ellipsis **(...)** and then type the message in the **Enter String Message** dialog box.  
   
 ## See Also  
  [Integration Services Error and Message Reference](../../2014/integration-services/integration-services-error-and-message-reference.md)   

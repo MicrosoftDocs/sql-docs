@@ -148,7 +148,7 @@ In Transact-SQL, operations that result in a numerical overflow return an overfl
 However, the same formula when used in an in-memory model returns an eight-byte integer. That is because the formula engine does not perform checks for numerical overflows.  
   
 **LOG functions with blanks return different results**  
-SQL Server handles nulls and blanks differently than the xVelocity engine. As a result, the following formula returns an error in DirectQuery mode, but return infinity (–inf) in in-memory mode.  
+SQL Server handles nulls and blanks differently than the xVelocity engine. As a result, the following formula returns an error in DirectQuery mode, but return infinity (-inf) in in-memory mode.  
   
 `EXAMPLE: LOG(blank())`  
   

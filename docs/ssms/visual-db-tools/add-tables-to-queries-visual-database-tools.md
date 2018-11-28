@@ -19,7 +19,7 @@ manager: craigg
 ---
 # Add Tables to Queries (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-When you create a query, you are retrieving data from a table or other objects structured like tables — views and certain user-defined functions. To work with any of these objects in your query, you add them to the **Diagram Pane**.  
+When you create a query, you are retrieving data from a table or other objects structured like tables - views and certain user-defined functions. To work with any of these objects in your query, you add them to the **Diagram Pane**.  
   
 ### To add a table or table-valued object to a query  
   
@@ -45,7 +45,7 @@ The Query and View Designer will not display data columns for a table or table-s
   
 3.  Open the Query Designer for the existing query. (You now have two Query Designers open.)  
   
-4.  Display the **SQL Pane** for the inner query – the existing query you are including in the new, outer query.  
+4.  Display the **SQL Pane** for the inner query - the existing query you are including in the new, outer query.  
   
 5.  Select all the text in the **SQL Pane**, and copy it to the Clipboard.  
   

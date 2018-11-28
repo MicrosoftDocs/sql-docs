@@ -41,7 +41,7 @@ manager: craigg
  Confirm the password of the security principal.  
   
  **Service status**  
- Indicates whether this service is running, stopped, or disabled. "**…**" indicates a state change is pending.  
+ Indicates whether this service is running, stopped, or disabled. "**...**" indicates a state change is pending.  
   
  **Start**  
  Start the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser service.  

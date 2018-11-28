@@ -60,9 +60,9 @@ The *ODBC Programmer's Reference* contains the following sections.
 ## Recommended Reading  
  For more information about SQL, the following standards are available:  
   
--   Database Language — SQL with Integrity Enhancement, ANSI, 1989 ANSI X3.135-1989.  
+-   Database Language - SQL with Integrity Enhancement, ANSI, 1989 ANSI X3.135-1989.  
   
--   Database Language — SQL: ANSI X3H2 and ISO/IEC JTC1/SC21/WG3 9075:1992 (SQL-92).  
+-   Database Language - SQL: ANSI X3H2 and ISO/IEC JTC1/SC21/WG3 9075:1992 (SQL-92).  
   
 -   Open Group, Data Management: Structured Query Language (SQL), Version 2 (The Open Group, 1996).  
   

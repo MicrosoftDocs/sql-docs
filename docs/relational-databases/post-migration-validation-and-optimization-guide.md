@@ -102,7 +102,7 @@ Some examples of non-SARGable predicates:
 3. Reason out the usefulness of the following constructs:
   -   Functions being used as predicates;
   -   Wildcard searches;
-  -   Complex expressions based on columnar data – evaluate the need to instead create persisted computed columns, which can be indexed;
+  -   Complex expressions based on columnar data - evaluate the need to instead create persisted computed columns, which can be indexed;
 
 > [!NOTE] 
 > All of the above can be done programmatically.

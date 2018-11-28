@@ -189,7 +189,7 @@ SELECT * FROM smart_admin.fn_backup_instance_config ();
     ```  
     C:\ PS> cd SQLSERVER:\SQL\Computer\MyInstance   
     $encryptionOption = New-SqlBackupEncryptionOption -EncryptionAlgorithm Aes128 -EncryptorType ServerCertificate -EncryptorName "MyBackupCert"  
-    Get-SqlSmartAdmin | Set-SqlSmartAdmin –BackupEnabled $True –BackupRetentionPeriodInDays 10 -EncryptionOption $encryptionOption  
+    Get-SqlSmartAdmin | Set-SqlSmartAdmin -BackupEnabled $True -BackupRetentionPeriodInDays 10 -EncryptionOption $encryptionOption  
     ```  
   
 > [!IMPORTANT]  
@@ -312,7 +312,7 @@ GO
   
     ```  
     C:\ PS> cd SQLSERVER:\SQL\Computer\MyInstance   
-    Set-SqlSmartAdmin –BackupEnabled $False  
+    Set-SqlSmartAdmin -BackupEnabled $False  
     ```  
   
 ##  <a name="InstancePause"></a> Pause [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] at the Instance Level  
@@ -342,7 +342,7 @@ Go
   
     ```  
     C:\ PS> cd SQLSERVER:\SQL\Computer\MyInstance   
-    Get-SqlSmartAdmin | Set-SqlSmartAdmin –MasterSwitch $False  
+    Get-SqlSmartAdmin | Set-SqlSmartAdmin -MasterSwitch $False  
     ```  
   
 #### To resume [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] Using Transact-SQL  
@@ -369,7 +369,7 @@ GO
   
     ```  
     C:\ PS> cd SQLSERVER:\SQL\Computer\MyInstance   
-    Get-SqlSmartAdmin | Set-SqlSmartAdmin –MasterSwitch $True  
+    Get-SqlSmartAdmin | Set-SqlSmartAdmin -MasterSwitch $True  
     ```  
   
   

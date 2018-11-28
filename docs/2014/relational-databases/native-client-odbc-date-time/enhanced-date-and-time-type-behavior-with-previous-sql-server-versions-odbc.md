@@ -31,8 +31,8 @@ manager: craigg
 |||SQL_C_TYPE_TIMESTAMP|Time fields set to zero.|OK (2)<br /><br /> Fails if time field is non-zero. Works with [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)].|  
 ||Time(0)|SQL_C_TYPE_TIME|OK|OK (1)|  
 |||SQL_C_TYPE_TIMESTAMP|Date fields set to current date.|OK (2)<br /><br /> Date ignored. Fails if fractional seconds are non-zero. Works with [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)].|  
-||Time(7)|SQL_C_TIME|Fails – invalid time literal.|OK (1)|  
-|||SQL_C_TYPE_TIMESTAMP|Fails – invalid time literal.|OK (1)|  
+||Time(7)|SQL_C_TIME|Fails - invalid time literal.|OK (1)|  
+|||SQL_C_TYPE_TIMESTAMP|Fails - invalid time literal.|OK (1)|  
 ||Datetime2(3)|SQL_C_TYPE_TIMESTAMP|OK|OK (1)|  
 ||Datetime2(7)|SQL_C_TYPE_TIMESTAMP|OK|Value will be rounded to 1/300th second by client conversion.|  
 |Smalldatetime|Date|SQL_C_TYPE_DATE|OK|OK|  

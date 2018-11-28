@@ -55,7 +55,7 @@ manager: craigg
   
 -   For more information on the SharePoint 2010 browser support, see [Plan browser support (SharePoint Server 2010)](http://technet.microsoft.com/library/cc263526\(office.14\).aspx) (http://technet.microsoft.com/library/cc263526(office.14).aspx).  
   
-|**Browser**|**Windows 8 and 8.1**|**Windows 7**|**Windows Server 2012 and 2012 R2**|**Windows Server 2008 R2**|**Windows Server 2008**|**Mac OS X 10.6 – 10.9**|  
+|**Browser**|**Windows 8 and 8.1**|**Windows 7**|**Windows Server 2012 and 2012 R2**|**Windows Server 2008 R2**|**Windows Server 2008**|**Mac OS X 10.6 - 10.9**|  
 |-----------------|---------------------------|-------------------|-----------------------------------------|--------------------------------|-----------------------------|------------------------------|  
 |**Internet Explorer 11 (for the desktop)**|32-bit, 64-bit|32-bit, 64-bit|32-bit, 64-bit|32-bit, 64-bit|Not supported|Not supported|  
 |**Internet Explorer 10 (for the desktop)**|32-bit, 64-bit|32-bit, 64-bit|32-bit, 64-bit|32-bit, 64-bit|Not supported|Not supported|  
@@ -75,7 +75,7 @@ manager: craigg
   
 -   For more information on the SharePoint 2013 browser support, see [Plan browser support in SharePoint 2013](http://technet.microsoft.com/library/cc263526\(office.15\).aspx) (http://technet.microsoft.com/library/cc263526(office.15).aspx).  
   
-|**Browser**|**Windows 8 and 8.1**|**Windows 7**|**Windows Server 2012 and 2012 R2**|**Windows Server 2008 R2**|**Windows Server 2008**|**Mac OS X 10.6 – 10.9**|  
+|**Browser**|**Windows 8 and 8.1**|**Windows 7**|**Windows Server 2012 and 2012 R2**|**Windows Server 2008 R2**|**Windows Server 2008**|**Mac OS X 10.6 - 10.9**|  
 |-----------------|---------------------------|-------------------|-----------------------------------------|--------------------------------|-----------------------------|------------------------------|  
 |**Internet Explorer 11 (for the desktop)**|32-bit, 64-bit|32-bit, 64-bit|32-bit, 64-bit|32-bit, 64-bit|Not supported|Not supported|  
 |**Internet Explorer 10 (for the desktop)**|32-bit, 64-bit|32-bit, 64-bit|32-bit, 64-bit|32-bit, 64-bit|Not supported|Not supported|  
@@ -100,7 +100,7 @@ manager: craigg
 ##  <a name="bkmk_reportviewer"></a> Browser Requirements for Viewing Reports  
  The following is the current list of browsers and features supported with the report viewer. The report viewer supports viewing reports from [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] report manager and SharePoint libraries.  
   
-|**Browser**|**Windows 8 and 8.1**|**Windows 7**|**Windows Server 2012 and 2012 R2**|**Windows Server 2008 R2**|**Windows Server 2008**|**Mac OS X 10.6 – 10.9**|**iOS 6 -7 for iPad**|  
+|**Browser**|**Windows 8 and 8.1**|**Windows 7**|**Windows Server 2012 and 2012 R2**|**Windows Server 2008 R2**|**Windows Server 2008**|**Mac OS X 10.6 - 10.9**|**iOS 6 -7 for iPad**|  
 |-----------------|---------------------------|-------------------|-----------------------------------------|--------------------------------|-----------------------------|------------------------------|----------------------------|  
 |**Internet Explorer 11 (for the desktop)**|32-bit, 64-bit|32-bit, 64-bit|32-bit, 64-bit|Not supported|Not supported|Not supported|Not supported|  
 |**Internet Explorer 10 (for the desktop)**|32-bit, 64-bit|32-bit, 64-bit|32-bit, 64-bit|Not supported|Not supported|Not supported|Not supported|  
@@ -163,7 +163,7 @@ manager: craigg
   
 |||||||||  
 |-|-|-|-|-|-|-|-|  
-|**Browser**|**Windows 8** and **Windows 8.1**|**Windows 7**|**Windows Server 2012** and **2012 R2**|**Windows Server 2008** and **2008 R2**|**Windows Server 2003**|**Mac OS X 10.6 – 10.9**|**Notes**|  
+|**Browser**|**Windows 8** and **Windows 8.1**|**Windows 7**|**Windows Server 2012** and **2012 R2**|**Windows Server 2008** and **2008 R2**|**Windows Server 2003**|**Mac OS X 10.6 - 10.9**|**Notes**|  
 |**Internet Explorer 11 (for the desktop**|Yes|Yes|Yes|Not supported|Not supported|Not supported|Internet Explorer supports the complete set of ReportViewer features.|  
 |**Internet Explorer 10 (for the desktop)**|Yes|Yes|Yes|Not supported|Not supported|Not supported|Internet Explorer supports the complete set of ReportViewer features.|  
 |**Internet Explorer 9**|Not supported|Yes|Not supported|Yes|Yes|Yes|Internet Explorer supports the complete set of ReportViewer features.|  

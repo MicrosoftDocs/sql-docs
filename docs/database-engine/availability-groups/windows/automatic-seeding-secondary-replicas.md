@@ -18,7 +18,7 @@ manager: craigg
 # Automatic seeding for secondary replicas
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-In SQL Server 2012 and 2014, the only way to initialize a secondary replica in a SQL Server Always On availability group is to use backup, copy, and restore. SQL Server 2016 introduces a new feature to initialize a secondary replica – *automatic seeding*. Automatic seeding uses the log stream transport to stream the backup using VDI to the secondary replica for each database of the availability group using the configured endpoints. This new feature can be used either during the initial creation of an availability group or when a database is added to one. Automatic seeding is in all editions of SQL Server that support Always On availability groups, and can be used with both traditional availability groups and [distributed availability groups](distributed-availability-groups.md).
+In SQL Server 2012 and 2014, the only way to initialize a secondary replica in a SQL Server Always On availability group is to use backup, copy, and restore. SQL Server 2016 introduces a new feature to initialize a secondary replica - *automatic seeding*. Automatic seeding uses the log stream transport to stream the backup using VDI to the secondary replica for each database of the availability group using the configured endpoints. This new feature can be used either during the initial creation of an availability group or when a database is added to one. Automatic seeding is in all editions of SQL Server that support Always On availability groups, and can be used with both traditional availability groups and [distributed availability groups](distributed-availability-groups.md).
 
 ## Considerations
 
@@ -111,7 +111,7 @@ Setting `SEEDING_MODE` on a primary replica during a `CREATE AVAILABILITY GROUP`
 
 On an instance that becomes a secondary replica, once the instance is joined the following message is added to the SQL Server Log:
 
->Local availability replica for availability group 'AGName' has not been granted permission to create databases, but has a `SEEDING_MODE` of `AUTOMATIC`. Use `ALTER AVAILABILITY GROUP … GRANT CREATE ANY DATABASE` to allow the creation of databases seeded by the primary availability replica.
+>Local availability replica for availability group 'AGName' has not been granted permission to create databases, but has a `SEEDING_MODE` of `AUTOMATIC`. Use `ALTER AVAILABILITY GROUP ... GRANT CREATE ANY DATABASE` to allow the creation of databases seeded by the primary availability replica.
 
 ### <a name = "grantCreate"></a> Grant create database permission on secondary replica to availability group
 

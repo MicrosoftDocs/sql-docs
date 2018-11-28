@@ -13,7 +13,7 @@ ms.author: maghan
 manager: craigg
 ---
 # Error Page (Report Manager)
-  Use the Error page to view details about an error condition. Server–based or session-based errors appear on this page. Validation errors that relate to specific page controls display inline next to the control.  
+  Use the Error page to view details about an error condition. Server-based or session-based errors appear on this page. Validation errors that relate to specific page controls display inline next to the control.  
   
 -   If you are browsing to a local report server and you see errors similar to the following, see: [Configure a Native Mode Report Server for Local Administration &#40;SSRS&#41;](report-server/configure-a-native-mode-report-server-for-local-administration-ssrs.md)  
   

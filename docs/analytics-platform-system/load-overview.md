@@ -26,7 +26,7 @@ dwloader loads data directly to the Compute nodes without passing the data throu
   
 On each Compute node, Data Movement Service (DMS) receives and processes the chunks of data. Processing the data includes converting each row into SQL Server native format, and computing the distribution hash to determine the Compute node to which each row belongs.  
   
-After processing the rows, DMS uses a shuffle move to transfer each row to the correct Compute node and instance of SQL Server. As SQL Server receives the rows, it batches them according to the **–b** batch size parameter set in dwloader, and then bulk loads the batch.  
+After processing the rows, DMS uses a shuffle move to transfer each row to the correct Compute node and instance of SQL Server. As SQL Server receives the rows, it batches them according to the **-b** batch size parameter set in dwloader, and then bulk loads the batch.  
 
 ## Load with prepared statements
 

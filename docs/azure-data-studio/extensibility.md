@@ -62,7 +62,7 @@ Dashboard.tabs creates the tab sections inside the dashboard page. It expects an
 	"when": "connectionProvider == 'MSSQL' && !mssql:iscloud",
 	"alwaysShow": true,
 	"container": {
-		…
+		...
 	}
 }
 ]
@@ -77,13 +77,13 @@ Instead of specifying dashboard container inline (inside the dashboard.tab). You
 {
 	"id": "innerTab1",
 	"container": {
-		…
+		...
 	}
 },
 {
 	"id": "innerTab2",
 	"container": {
-	   …
+	   ...
 	}
 }
 ]
@@ -235,7 +235,7 @@ There are currently four supported container types:
 					"dark": "./icons/tab1Icon_dark.svg"
 				}
 				"container": {
-					…
+					...
 				}
 			},
 			{
@@ -246,7 +246,7 @@ There are currently four supported container types:
 					"dark": "./icons/tab2Icon_dark.svg"
 				}
 				"container": {
-					…
+					...
 				}
 			}
 		]

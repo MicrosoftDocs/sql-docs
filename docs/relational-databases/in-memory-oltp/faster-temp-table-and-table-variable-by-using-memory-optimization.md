@@ -180,7 +180,7 @@ Third, in your general T-SQL code:
     - _Old:_ &#x23;tempSessionC  
     - _New:_ dbo.soSessionC  
 2. Replace the `CREATE TABLE #tempSessionC` statements in your code with `DELETE FROM dbo.soSessionC`, to ensure a session is not exposed to table contents inserted by a previous session with the same session_id. It is important to create the memory-optimized table at deployment time, not at runtime, to avoid the compilation overhead that comes with table creation.
-3. Remove the `DROP TABLE #tempSessionC` statements from your code – optionally you can insert a `DELETE FROM dbo.soSessionC` statement, in case memory size is a potential concern
+3. Remove the `DROP TABLE #tempSessionC` statements from your code - optionally you can insert a `DELETE FROM dbo.soSessionC` statement, in case memory size is a potential concern
   
   
   

@@ -13,7 +13,7 @@ manager: kfile
 # MemberToStr (MDX)
 
 
-  Returns a Multidimensional Expressions (MDX)–formatted string that corresponds to a specified member.  
+  Returns a Multidimensional Expressions (MDX)-formatted string that corresponds to a specified member.  
   
 ## Syntax  
   

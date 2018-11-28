@@ -32,7 +32,7 @@ The **userlist** section pertains to the **connect** section with the same secti
 |Part|Description|  
 |----------|-----------------|  
 |*userName*|The *user name* of the person employing this connection. Valid user names are established with the IIS **Service Manager** dialog.|  
-|***accessRights***|One of the following access rights:<br /><br /> -   **NoAccess** — User cannot access the data source.<br />-   **ReadOnly** — User can read the data source.<br />-   **ReadWrite** — User can read or write to the data source.|  
+|***accessRights***|One of the following access rights:<br /><br /> -   **NoAccess** - User cannot access the data source.<br />-   **ReadOnly** - User can read the data source.<br />-   **ReadWrite** - User can read or write to the data source.|  
   
 ## See Also  
  [Customization File Connect Section](../../../ado/guide/remote-data-service/customization-file-connect-section.md)   

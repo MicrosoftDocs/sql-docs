@@ -23,7 +23,7 @@ manager: craigg
   
 ## Static Options  
  **WMIConnectionName**  
- Select a WMI connection manager in the list, or click \<**New WMI Connection…**> to create a new connection manager.  
+ Select a WMI connection manager in the list, or click \<**New WMI Connection...**> to create a new connection manager.  
   
  **Related Topics:** [WMI Connection Manager](connection-manager/wmi-connection-manager.md), [WMI Connection Manager Editor](../../2014/integration-services/wmi-connection-manager-editor.md)  
   
@@ -58,7 +58,7 @@ manager: craigg
   
 ### WQLQuerySource = Direct input  
  **WQLQuerySource**  
- Provide a query, or click the ellipsis button (…) and enter a query using the **WQL Query** dialog box.  
+ Provide a query, or click the ellipsis button (...) and enter a query using the **WQL Query** dialog box.  
   
 ### WQLQuerySource = File connection  
  **WQLQuerySource**  

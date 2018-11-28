@@ -175,7 +175,7 @@ To learn more about the Transact-SQL query language, see [Transact-SQL Reference
   
 #### SQLSourceType = Direct input  
  **SQLStatement**  
- Type the SQL statement to execute in the option box, or click the browse button (…) to type the SQL statement in the **Enter SQL Query** dialog box, or click **Build Query** to compose the statement using the **Query Builder** dialog box.  
+ Type the SQL statement to execute in the option box, or click the browse button (...) to type the SQL statement in the **Enter SQL Query** dialog box, or click **Build Query** to compose the statement using the **Query Builder** dialog box.  
   
  **Related Topics:** [Query Builder](https://msdn.microsoft.com/library/780752c9-6e3c-4f44-aaff-4f4d5e5a45c5)  
   
@@ -272,10 +272,10 @@ SQL statements and stored procedures frequently use **input** parameters, **outp
   
 |Connection type|Parameter marker|Parameter name|Example SQL command|  
 |---------------------|----------------------|--------------------|-------------------------|  
-|ADO|?|Param1, Param2, …|SELECT FirstName, LastName, Title FROM Person.Contact WHERE ContactID = ?|  
+|ADO|?|Param1, Param2, ...|SELECT FirstName, LastName, Title FROM Person.Contact WHERE ContactID = ?|  
 |[!INCLUDE[vstecado](../../includes/vstecado-md.md)]|\@\<parameter name>|\@\<parameter name>|SELECT FirstName, LastName, Title FROM Person.Contact WHERE ContactID = \@parmContactID|  
-|ODBC|?|1, 2, 3, …|SELECT FirstName, LastName, Title FROM Person.Contact WHERE ContactID = ?|  
-|EXCEL and OLE DB|?|0, 1, 2, 3, …|SELECT FirstName, LastName, Title FROM Person.Contact WHERE ContactID = ?|  
+|ODBC|?|1, 2, 3, ...|SELECT FirstName, LastName, Title FROM Person.Contact WHERE ContactID = ?|  
+|EXCEL and OLE DB|?|0, 1, 2, 3, ...|SELECT FirstName, LastName, Title FROM Person.Contact WHERE ContactID = ?|  
   
 #### Use parameters with ADO.NET and ADO Connection Managers  
  [!INCLUDE[vstecado](../../includes/vstecado-md.md)] and ADO connection managers have specific requirements for SQL commands that use parameters:  
@@ -434,10 +434,10 @@ This section describes how to use a parameterized SQL statement in the Execute S
   
     |Connection type|Parameter name|  
     |---------------------|--------------------|  
-    |ADO|Param1, Param2, …|  
+    |ADO|Param1, Param2, ...|  
     |ADO.NET and SQLMOBILE|\@\<parameter name>|  
-    |ODBC|1, 2, 3, …|  
-    |EXCEL and OLE DB|0, 1, 2, 3, …|  
+    |ODBC|1, 2, 3, ...|  
+    |EXCEL and OLE DB|0, 1, 2, 3, ...|  
   
 10. From the **Variable Name** list, select a variable. For more information, see [Add, Delete, Change Scope of User-Defined Variable in a Package](https://msdn.microsoft.com/library/cbf40c7f-3c8a-48cd-aefa-8b37faf8b40e).  
   
@@ -458,7 +458,7 @@ This section describes how to use a parameterized SQL statement in the Execute S
 ##  <a name="Return_codes"></a> Get the values of return codes  
  A stored procedure can return an integer value, called a return code, to indicate the execution status of a procedure. To implement return codes in the Execute SQL task, you use parameters of the **ReturnValue** type.  
   
- The following table lists by connection type some examples of EXEC commands that implement return codes. All examples use an **input** parameter. The rules for how to use parameter markers and parameter names are the same for all parameter types—**Input**, **Output**, and **ReturnValue**.  
+ The following table lists by connection type some examples of EXEC commands that implement return codes. All examples use an **input** parameter. The rules for how to use parameter markers and parameter names are the same for all parameter types-**Input**, **Output**, and **ReturnValue**.  
   
  Some syntax does not support parameter literals. In that case, you must provide the parameter value by using a variable.  
   

@@ -113,6 +113,6 @@ manager: craigg
 -   [Perform an Incremental Load of Multiple Tables](perform-an-incremental-load-of-multiple-tables.md)  
   
 ## Related Content  
- Blog entry, [SSIS Design Pattern – Incremental Load](http://go.microsoft.com/fwlink/?LinkId=217679), on sqlblog.com  
+ Blog entry, [SSIS Design Pattern - Incremental Load](http://go.microsoft.com/fwlink/?LinkId=217679), on sqlblog.com  
   
   

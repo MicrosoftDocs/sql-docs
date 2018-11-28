@@ -16,7 +16,7 @@ ms.author: craigg
 manager: craigg
 ---
 # Database Engine Features and Tasks
-  Find information that anyone—designer, developer, analyst, or administrator—requires to build [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] databases.  
+  Find information that anyone-designer, developer, analyst, or administrator-requires to build [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] databases.  
   
 ## In This Section  
  [Database Engine Instances &#40;SQL Server&#41;](configure-windows/database-engine-instances-sql-server.md)  

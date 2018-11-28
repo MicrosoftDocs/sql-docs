@@ -35,17 +35,17 @@ manager: craigg
 ## Model Properties that Affect Reporting  
  When authoring a tabular model, there are certain properties that you can set on individual columns and tables to enhance the end-user reporting experience in Power View. In addition, you can create additional model data to support data visualization and other features specific to the reporting client. For the sample Adventure Works Internet Sales Model, here are some of the changes you will make:  
   
--   **Add new data** – Adding new data in a calculated column by using a DAX formula creates date information in a format that is easier to display in charts.  
+-   **Add new data** - Adding new data in a calculated column by using a DAX formula creates date information in a format that is easier to display in charts.  
   
 -   **Hide tables and columns that are not useful to the end user** - The **Hidden** property controls whether tables and table columns are displayed in the reporting client. Items with that are hidden are still part of the model and remain available for queries and calculations.  
   
--   **Enable one-click tables** – By default, no action occurs if an end-user clicks a table in the field list. To change this behavior so that a click on the table adds the table to the report, you will set Default Field Set on each column that you want to include in the table. This property is set on the table columns that end users will most likely want to use.  
+-   **Enable one-click tables** - By default, no action occurs if an end-user clicks a table in the field list. To change this behavior so that a click on the table adds the table to the report, you will set Default Field Set on each column that you want to include in the table. This property is set on the table columns that end users will most likely want to use.  
   
 -   **Set grouping where needed** - The **Keep Unique Rows** property determines if the values in the column should be grouped by values in a different field, such as an identifier field. For columns that contain duplicate values such as Customer Name (for example, multiple customers named John Smith), it is important to group (keep unique rows) on the **Row Identifier** field in order to provide your end users with the correct results.  
   
 -   **Set data types and data formats** - By default, Power View applies rules based on column data type to determine whether the field can be used as a measure. Because each data visualization in Power View also has rules about where measures and non-measures can be placed, it is important to set the data type in the model, or override the default, to achieve the behavior you want for your end-user.  
   
--   **Set the Sort by Column** property – The **Sort By Column** property specifies if the values in the column should be sorted by values in a different field. For example, on the Month Calendar column that contains the month name, sort by the column Month Number.  
+-   **Set the Sort by Column** property - The **Sort By Column** property specifies if the values in the column should be sorted by values in a different field. For example, on the Month Calendar column that contains the month name, sort by the column Month Number.  
   
 ## Hide Tables from Client Tools  
  Because there is already a Product Category calculated column and Product Subcategory calculated column in the Product table, it is not necessary to have the Product Category and Product Subcategory tables visible to client applications.  

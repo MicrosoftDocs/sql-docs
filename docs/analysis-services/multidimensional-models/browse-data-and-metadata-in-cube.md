@@ -16,7 +16,7 @@ manager: kfile
   
  Before you browse a cube, you must process it and the reconnect to it. After you process it, open the **Browser** tab of Cube Designer. Click the Reconnect button on the toolbar to refresh the connection.  
   
- The **Browser** tab has three panes — the Metadata pane, the Filter pane, and the Data pane. Use the Metadata pane to examine the structure of the cube in tree format. Use the Filter pane at the top of the **Browser** tab to define any subcube you want to browse. Use the Data pane to view the result set and drill down through dimension hierarchies.  
+ The **Browser** tab has three panes - the Metadata pane, the Filter pane, and the Data pane. Use the Metadata pane to examine the structure of the cube in tree format. Use the Filter pane at the top of the **Browser** tab to define any subcube you want to browse. Use the Data pane to view the result set and drill down through dimension hierarchies.  
   
 ## Setting up the Browser  
  To prepare to browse a cube, you can specify a perspective or translation that you want to use. You add measures and dimensions to the Data pane and specify any filters in the Filter pane.  

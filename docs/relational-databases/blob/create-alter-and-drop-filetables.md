@@ -92,7 +92,7 @@ GO
   
 -   A FileTable requires a valid FILESTREAM filegroup, since a FileTable contains a FILESTREAM column. You can optionally specify a valid FILESTREAM filegroup as part of the **CREATE TABLE** command for creating a FileTable. If you do not specify a filegroup, then the FileTable uses the default FILESTREAM filegroup for the database. If the database does not have a FILESTREAM filegroup, then an error is raised.  
   
--   You cannot create a table constraint as part of a **CREATE TABLE…AS FILETABLE** statement. However you can add the constraint later by using an **ALTER TABLE** statement.  
+-   You cannot create a table constraint as part of a **CREATE TABLE...AS FILETABLE** statement. However you can add the constraint later by using an **ALTER TABLE** statement.  
   
 -   You cannot create a FileTable in the **tempdb** database or in any of the other system databases.  
   

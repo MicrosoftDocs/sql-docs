@@ -54,11 +54,11 @@ The basic syntax of **NEAR** is:
   
  {  
   
- *search_term* [ ,…*n* ]  
+ *search_term* [ ,...*n* ]  
   
  |  
   
- (*search_term* [ ,…*n* ] ) [, <maximum_distance> [, <match_order> ] ]  
+ (*search_term* [ ,...*n* ] ) [, <maximum_distance> [, <match_order> ] ]  
   
  }  
   
@@ -123,7 +123,7 @@ GO
 CONTAINS(column_name, 'NEAR((term1, term2), 5, TRUE) AND term3')  
 ```  
   
- You can't combine NEAR with a generation term (ISABOUT …) or a weighted term (FORMSOF …).  
+ You can't combine NEAR with a generation term (ISABOUT ...) or a weighted term (FORMSOF ...).  
   
 ##  <a name="Additional_Considerations"></a> More info about proximity searches  
    

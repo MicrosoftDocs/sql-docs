@@ -61,7 +61,7 @@ manager: craigg
     -   **Use temporary model**. If you select this option, the model will not be saved to the server. Temporary models are deleted when you close Excel.  
   
 ### Requirements  
- Your data should include at least one column that can be used as the time series. The values in this column should be unique and continuous – that is, there should be no gaps. Before running the wizard, sort the data by the time series column in ascending order.  
+ Your data should include at least one column that can be used as the time series. The values in this column should be unique and continuous - that is, there should be no gaps. Before running the wizard, sort the data by the time series column in ascending order.  
   
  If your data does not include a time or date column, you can assign an arbitrary numeric series, or let the wizard create one. F you let the wizard create the series order column, make sure the other columns are sorted in the worder you want them before starting the wizard.  
   

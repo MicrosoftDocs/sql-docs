@@ -23,7 +23,7 @@ manager: craigg
 |-----------|--------------|  
 |[Resolve database restore failures due to OOM](#bkmk_resolveRecoveryFailures)|What to do if you get the error message, "Restore operation failed for database '*\<databaseName>*' due to insufficient memory in the resource pool '*\<resourcePoolName>*'."|  
 |[Resolve impact of low memory or OOM conditions on the workload](#bkmk_recoverFromOOM)|What to do if you find low memory issues are negatively impacting performance.|  
-|[Resolve page allocation failures due to insufficient memory when sufficient memory is available](#bkmk_PageAllocFailure)|What to do if you get the error message, "Disallowing page allocations for database '*\<databaseName>*' due to insufficient memory in the resource pool '*\<resourcePoolName>*'. …" when available memory is sufficient for the operation.|
+|[Resolve page allocation failures due to insufficient memory when sufficient memory is available](#bkmk_PageAllocFailure)|What to do if you get the error message, "Disallowing page allocations for database '*\<databaseName>*' due to insufficient memory in the resource pool '*\<resourcePoolName>*'. ..." when available memory is sufficient for the operation.|
 |[Best Practices using In-Memory OLTP in a VM environment](#bkmk_VMs)|What to keep in mind when using In-Memory OLTP in a virtualized environment.|
   
 ##  <a name="bkmk_resolveRecoveryFailures"></a> Resolve database restore failures due to OOM  
@@ -73,7 +73,7 @@ If the server does have enough physical memory, but you are still seeing this er
 2.  [Take corrective action](#bkmk_takeCorrectiveAction)  
   
 ###  <a name="bkmk_openDAC"></a> Open a DAC (Dedicated Administrator Connection)  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provides a dedicated administrator connection (DAC). The DAC allows an administrator to access a running instance of SQL Server Database Engine to troubleshoot problems on the server—even when the server is unresponsive to other client connections. The DAC is available through the `sqlcmd` utility and [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provides a dedicated administrator connection (DAC). The DAC allows an administrator to access a running instance of SQL Server Database Engine to troubleshoot problems on the server-even when the server is unresponsive to other client connections. The DAC is available through the `sqlcmd` utility and [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
  For guidance on using DAC through SSMS or `sqlcmd`, refer to [Diagnostic Connection for Database Administrators](../../database-engine/configure-windows/diagnostic-connection-for-database-administrators.md).  
   

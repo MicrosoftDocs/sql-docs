@@ -23,7 +23,7 @@ manager: craigg
   
      ![Excel - Refresh Button on Master Data Tab](../../2014/tutorials/media/et-viewupdatesmadeusingmdminexcel-01.jpg "Excel - Refresh Button on Master Data Tab")  
   
-3.  Notice that **names** show up (California, New York etc…) for the **State** field along with their **codes**.  
+3.  Notice that **names** show up (California, New York etc...) for the **State** field along with their **codes**.  
   
      ![Excel - Updated State Codes and Names](../../2014/tutorials/media/et-viewupdatesmadeusingmdminexcel-02.jpg "Excel - Updated State Codes and Names")  
   

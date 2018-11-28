@@ -26,7 +26,7 @@ If the product of **ConnectRetryCount** multiplied by **ConnectRetryInterval** i
 
 #### Remarks
 
-Connection resiliency applies when the connection is idle. Failures that occur while executing a transaction, for example, will not trigger reconnection attempts – they will fail as would otherwise be expected. The following situations, known as non-recoverable session states, will not trigger reconnection attempts:
+Connection resiliency applies when the connection is idle. Failures that occur while executing a transaction, for example, will not trigger reconnection attempts - they will fail as would otherwise be expected. The following situations, known as non-recoverable session states, will not trigger reconnection attempts:
 
 * Temporary tables
 * Global and local cursors

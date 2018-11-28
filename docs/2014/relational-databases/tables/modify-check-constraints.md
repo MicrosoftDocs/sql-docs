@@ -45,7 +45,7 @@ manager: craigg
   
 1.  In the **Object Explorer**, right-click the table containing the check constraint and select **Design**.  
   
-2.  On the **Table Designer** menu, click **Check Constraints…**.  
+2.  On the **Table Designer** menu, click **Check Constraints...**.  
   
 3.  In the **Check Constraints** dialog box, under **Selected Check Constraint**, select the constraint you wish to edit.  
   

@@ -37,7 +37,7 @@ manager: craigg
 |**And/Or**|Choose an operator to join multiple conditions.|  
 |**Mining Structure Column**|Click to select a data source, and then click successive lines in the grid to add columns from the data source.<br /><br /> The first line in the grid specifies the data source view. After you select a data source view, **Mining Structure Column** displays a table icon, and the **Value** field displays the combination of all criteria that you have defined for this data source.<br /><br /> After you have selected a data source, the **Mining Structure Column** box provides a dropdown list of individual columns in the data source.|  
 |**Operator**|Select an operator from the list.|  
-|**Value**|For tables, the **Value** field shows the combination of all filters applied to the data source. You can also click the build **(…)** button at the right of the text box to open the **Filter** dialog box and build a condition.|  
+|**Value**|For tables, the **Value** field shows the combination of all filters applied to the data source. You can also click the build **(...)** button at the right of the text box to open the **Filter** dialog box and build a condition.|  
   
  **Expression**  
  Displays the set of criteria that you built by using the grid.  

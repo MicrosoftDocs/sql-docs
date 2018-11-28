@@ -37,7 +37,7 @@ manager: kfile
   
 ###  <a name="bkmk_copy"></a> To copy a perspective  
   
--   When you hover over a perspective's column header, the **Copy** button appears. To create a copy of that perspective, click the **Copy** button. A copy of the selected perspective is added as a new perspective to the right of existing perspectives. The new perspective inherits the name of the copied perspective and a *- Copy* annotation is appended to the end of the name. For example, if a copy of the *Sales* perspective is created, the new perspective is called *Sales – Copy*.  
+-   When you hover over a perspective's column header, the **Copy** button appears. To create a copy of that perspective, click the **Copy** button. A copy of the selected perspective is added as a new perspective to the right of existing perspectives. The new perspective inherits the name of the copied perspective and a *- Copy* annotation is appended to the end of the name. For example, if a copy of the *Sales* perspective is created, the new perspective is called *Sales - Copy*.  
   
 ## See also  
  [Perspectives](../../analysis-services/tabular-models/perspectives-ssas-tabular.md)   

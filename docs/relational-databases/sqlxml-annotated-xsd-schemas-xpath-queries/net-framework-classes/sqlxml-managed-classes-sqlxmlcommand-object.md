@@ -41,7 +41,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
 public SqlXmlCommand(string cnString)  
 ```  
   
- Where `cnString` is the ADO or OLEDB connection string that identifies the server, database, and the login information—for example, `Provider=SQLOLEDB; Server=(local); database=AdventureWorks; Integrated Security=SSPI"`.  
+ Where `cnString` is the ADO or OLEDB connection string that identifies the server, database, and the login information-for example, `Provider=SQLOLEDB; Server=(local); database=AdventureWorks; Integrated Security=SSPI"`.  
   
  In the connection string, the `Provider` must be SQLOLEDB and the `Data Provider` should not be included in the provider string).  
   

@@ -41,7 +41,7 @@ A Plan Guide applies either a fixed query plan, and/or query hints, to a query.
  
 1.  Click the plus sign to expand the database in which you want to create a plan guide, and then click the plus sign to expand the **Programmability** folder.  
   
-2.  Right-click the **Plan Guides** folder and select **New Plan Guide…**.
+2.  Right-click the **Plan Guides** folder and select **New Plan Guide...**.
 ![select_plan_guide](../../relational-databases/performance/media/select-plan-guide.png)
   
 3.  In the **New Plan Guide** dialog box, in the **Name** box, enter the name of the plan guide.  

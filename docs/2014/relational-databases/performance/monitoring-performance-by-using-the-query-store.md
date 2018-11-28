@@ -272,9 +272,9 @@ DEALLOCATE adhoc_queries_cursor;
   
  The example above uses the `sp_query_store_remove_query` extended stored procedure for removing unnecessary data. You can also use two other procedures.  
   
--   `sp_query_store_reset_exec_stats` – clear runtime statistics for a given plan.  
+-   `sp_query_store_reset_exec_stats` - clear runtime statistics for a given plan.  
   
--   `sp_query_store_remove_plan` – removes a single plan.  
+-   `sp_query_store_remove_plan` - removes a single plan.  
   
 
   

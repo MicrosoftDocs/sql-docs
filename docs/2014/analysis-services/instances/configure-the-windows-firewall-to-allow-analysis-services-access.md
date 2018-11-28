@@ -60,7 +60,7 @@ manager: craigg
   
 -   Start Task Manager and then click **Services** to get the PID of the `MSOLAP$InstanceName`.  
   
--   Run `netstat –ao –p TCP` from the command line to view the TCP port information for that PID.  
+-   Run `netstat -ao -p TCP` from the command line to view the TCP port information for that PID.  
   
 -   Verify the port by using SQL Server Management Studio and connect to an Analysis Services server in this format: \<IPAddress>:\<portnumber>.  
   
@@ -198,7 +198,7 @@ manager: craigg
   
 1.  Determine an available TCP/IP port to use.  
   
-     To view a list of reserved and registered ports that you should avoid using, see [Port Numbers (IANA)](http://go.microsoft.com/fwlink/?LinkID=198469). To view a list of ports that are already in use on your system, open a command prompt window and type `netstat –a –p TCP` to display a list of the TCP ports that are open on the system.  
+     To view a list of reserved and registered ports that you should avoid using, see [Port Numbers (IANA)](http://go.microsoft.com/fwlink/?LinkID=198469). To view a list of ports that are already in use on your system, open a command prompt window and type `netstat -a -p TCP` to display a list of the TCP ports that are open on the system.  
   
 2.  After you determine which port to use, specify the port by either editing the `Port` configuration setting in the msmdsrv.ini file or in the General properties page of an Analysis Services instance in SQL Server Management Studio.  
   
@@ -224,7 +224,7 @@ manager: craigg
   
  **SharePoint 2010**  
   
- If you are using SharePoint 2010, you do not need to open ports in Windows Firewall. SharePoint opens the ports that it requires, and add-ins such as PowerPivot for SharePoint operate within the SharePoint environment. In a PowerPivot for SharePoint 2010 installation, the PowerPivot System Service has exclusive use of the local SQL Server Analysis Services (PowerPivot) service instance that is installed with it on the same computer. It uses local connections, not network connections, to access the local Analysis Services engine service that loads, queries, and processes PowerPivot data on the SharePoint server. To request PowerPivot data from client applications, requests are routed through ports that are opened by SharePoint Setup (specifically, inbound rules are defined to allow access to SharePoint – 80, SharePoint Central Administration v4, SharePoint Web Services, and SPUserCodeV4). Because PowerPivot web services run within a SharePoint farm, the SharePoint firewall rules are sufficient for remote access to PowerPivot data in a SharePoint farm.  
+ If you are using SharePoint 2010, you do not need to open ports in Windows Firewall. SharePoint opens the ports that it requires, and add-ins such as PowerPivot for SharePoint operate within the SharePoint environment. In a PowerPivot for SharePoint 2010 installation, the PowerPivot System Service has exclusive use of the local SQL Server Analysis Services (PowerPivot) service instance that is installed with it on the same computer. It uses local connections, not network connections, to access the local Analysis Services engine service that loads, queries, and processes PowerPivot data on the SharePoint server. To request PowerPivot data from client applications, requests are routed through ports that are opened by SharePoint Setup (specifically, inbound rules are defined to allow access to SharePoint - 80, SharePoint Central Administration v4, SharePoint Web Services, and SPUserCodeV4). Because PowerPivot web services run within a SharePoint farm, the SharePoint firewall rules are sufficient for remote access to PowerPivot data in a SharePoint farm.  
   
 ## See Also  
  [SQL Server Browser Service &#40;Database Engine and SSAS&#41;](../../database-engine/configure-windows/sql-server-browser-service-database-engine-and-ssas.md)   

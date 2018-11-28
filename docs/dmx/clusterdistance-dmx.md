@@ -35,11 +35,11 @@ ClusterDistance([<ClusterID expression>])
   
  In the case of the default EM clustering method, all the points inside the cluster are considered equally likely; therefore, by design there is no centroid for the cluster. The value of **ClusterDistance** between a particular case and a particular cluster *N* is calculated as follows:  
   
- ClusterDistance(N) =1–(membershipWeight(N))  
+ ClusterDistance(N) =1-(membershipWeight(N))  
   
  Or:  
   
- ClusterDistance(N) =1–ClusterProbability (N))  
+ ClusterDistance(N) =1-ClusterProbability (N))  
   
 ## Related Prediction Functions  
  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] provides the following additional functions for querying clustering models:  

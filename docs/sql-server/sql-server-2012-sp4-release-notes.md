@@ -50,7 +50,7 @@ The Service Packs are available online only, not on the installation media, and 
 - **New DMF to replace DBCC INPUTBUFFER** -  A new Dynamic Management Function sys.dm_input_buffer that takes the session_id as parameter is introduced to replace DBCC INPUTBUFFER
 - **XEvents enhancement for read routing failure for an Availability Group** - Currently the read_only_rout_fail XEvent only gets fired if there is a routing list present, but none of the servers in the routing list is available for connections. This improvement includes additional information to assist with troubleshooting and it also expands on the code points where the XEvent gets fired. 
 - **Improved handling of Service Broker with Availability group failover** - Currently when Service Broker is enabled on an Availability Group Databases, during an AG failover all Service broker connections that originated on the Primary Replica are left open. The improvement closes all such open connections during an AG failover.
-- **Automatic Soft-NUMA partitioning** – With SQL 2014 SP2, Automatic [Soft-NUMA](../database-engine/configure-windows/soft-numa-sql-server.md) partitioning is introduced when Trace Flag 8079 is enabled at the server level. When Trace Flag 8079 is enabled during startup, SQL Server 2014 SP2 interrogates the hardware layout and automatically configures Soft NUMA on systems reporting 8 or more CPUs per NUMA node. The automatic soft NUMA behavior is Hyperthread (HT/logical processor) aware. The partitioning and creation of additional nodes scales background processing by increasing the number of listeners, scaling, and network and encryption capabilities. It is recommended to first test the performance of the workload with Auto-Soft NUMA before it is turned ON in production.
+- **Automatic Soft-NUMA partitioning** - With SQL 2014 SP2, Automatic [Soft-NUMA](../database-engine/configure-windows/soft-numa-sql-server.md) partitioning is introduced when Trace Flag 8079 is enabled at the server level. When Trace Flag 8079 is enabled during startup, SQL Server 2014 SP2 interrogates the hardware layout and automatically configures Soft NUMA on systems reporting 8 or more CPUs per NUMA node. The automatic soft NUMA behavior is Hyperthread (HT/logical processor) aware. The partitioning and creation of additional nodes scales background processing by increasing the number of listeners, scaling, and network and encryption capabilities. It is recommended to first test the performance of the workload with Auto-Soft NUMA before it is turned ON in production.
 
 ## Service Pack 3 release notes
 
@@ -220,11 +220,11 @@ Previously, DACFx did not preserve the state (WITH CHECK/NOCHECK) of check const
   
 **Updates to SqlPackage.exe (DACFx command-line tool)**  
   
--   Extract DACPAC with data – Creates a database snapshot file (.dacpac) from a live SQL Server or Windows Azure SQL Database that contains data from user tables in addition to the database schema. These packages can be published to a new or existing SQL Server or Windows Azure SQL Database using the SqlPackage.exe Publish action. Data contained in package replaces the existing data in the target database.  
+-   Extract DACPAC with data - Creates a database snapshot file (.dacpac) from a live SQL Server or Windows Azure SQL Database that contains data from user tables in addition to the database schema. These packages can be published to a new or existing SQL Server or Windows Azure SQL Database using the SqlPackage.exe Publish action. Data contained in package replaces the existing data in the target database.  
   
 -   Export BACPAC - Creates a logical backup file (.bacpac) of a live SQL Server or Windows Azure SQL Database containing the database schema and user data which can be used to migrate a database from on-premise SQL Server to Windows Azure SQL Database. Databases compatible with Azure can be exported and then later imported between supported versions of SQL Server.  
   
--   Import BACPAC – Import a .bacpac file to create a new or populate an empty SQL Server or Windows Azure SQL Database.  
+-   Import BACPAC - Import a .bacpac file to create a new or populate an empty SQL Server or Windows Azure SQL Database.  
   
 Full SqlPackage.exe documentation on MSDN can be found [here](https://msdn.microsoft.com/library/hh550080%28v=vs.103%29.aspx).  
   

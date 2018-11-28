@@ -30,13 +30,13 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 ##  <a name="SetOEServerColor"></a> Set the Status Color for a Server in Object Explorer  
  **To set a server status color in Object Explorer**  
   
-1.  In **Object Explorer**, select the **Connect** button and then select **Database Engine…**.  
+1.  In **Object Explorer**, select the **Connect** button and then select **Database Engine...**.  
   
 2.  On the **Connect to Server** dialog, select **Options >>**.  
   
 3.  Select the **Use custom color** check box.  
   
-4.  To select the color, select the **Select…** button.  
+4.  To select the color, select the **Select...** button.  
   
 5.  Select either a basic or custom color, then select OK.  
   
@@ -45,13 +45,13 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 ##  <a name="SetRegServerColor"></a> Set the Status Color For a Registered Server  
  **To set a server color For a Registered Server**  
   
-1.  In **Registered Servers**, right click the server node and then select **Properties…**.  
+1.  In **Registered Servers**, right click the server node and then select **Properties...**.  
   
 2.  On the **Edit Server Registration Properties** dialog, select the **Connection Properties** tab.  
   
 3.  Select the **Use custom color** check box.  
   
-4.  To select the color, select the **Select…** button.  
+4.  To select the color, select the **Select...** button.  
   
 5.  Select either a basic or custom color, then select OK.  
   
@@ -75,7 +75,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   
 -   Select the **Use custom color** check box.  
   
--   To select the color, select the **Select…** button.  
+-   To select the color, select the **Select...** button.  
   
 -   Select either a basic or custom color, then select OK.  
   

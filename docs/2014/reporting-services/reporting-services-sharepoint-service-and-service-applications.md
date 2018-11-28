@@ -64,13 +64,13 @@ manager: craigg
 2.  Create the service application with a name and application pool name you provide.  
   
     ```  
-    New-SPRSServiceApplication –Name 'MyServiceApplication' –ApplicationPool $appPoolName –DatabaseName 'MyServiceApplicationDatabase' –DatabaseServer '<Server Name>'  
+    New-SPRSServiceApplication -Name 'MyServiceApplication' -ApplicationPool $appPoolName -DatabaseName 'MyServiceApplicationDatabase' -DatabaseServer '<Server Name>'  
     ```  
   
 3.  Get the new service application object, and pipe the object into the Pipe the new proxy cmdlet.  
   
     ```  
-    Get-SPRSServiceApplication –name MyServiceApplication | New-SPRSServiceApplicationProxy "MyServiceApplicationProxy"  
+    Get-SPRSServiceApplication -name MyServiceApplication | New-SPRSServiceApplicationProxy "MyServiceApplicationProxy"  
     ```  
   
 ##  <a name="bkmk_related"></a> Related Tasks  

@@ -108,7 +108,7 @@ Shows the maximum number of digits that can appear to the right of the decimal p
 Expands to show the remaining properties.  
   
 **Collation**  
-Shows the collation setting for the selected column. To change this setting, click **Collation** and then click the ellipses **(…)** to the right of the value.  
+Shows the collation setting for the selected column. To change this setting, click **Collation** and then click the ellipses **(...)** to the right of the value.  
   
 **Computed Column Specification Category**  
 Expands to show properties for **Formula** and **Is Persisted**. If the column is computed, the formula will also be displayed. To edit the formula, expand this category and edit it in the **Formula** property.  
@@ -123,7 +123,7 @@ Allows you to save the computed column with the data source. A persisted compute
 Displays information about the field's data type, in the same format as the SQL CREATE TABLE statement. For example, a field containing a variable-length string with a maximum length of 20 characters would be represented as "varchar(20)." To change this property, type the value directly.  
   
 **Description**  
-Shows the description of the column. To see the full description or to edit it, click Description, and then click the ellipses **(…)** to the right of the property.  
+Shows the description of the column. To see the full description or to edit it, click Description, and then click the ellipses **(...)** to the right of the property.  
   
 **Full-text Specification Category**  
 Expands to show properties specific to full-text columns.  

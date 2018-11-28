@@ -42,7 +42,7 @@ manager: craigg
  For more information, see "Remarks," later in this topic.  
   
 ## Remarks  
- If information is currently unavailable for a server instance, the cells of the corresponding **Threshold at** column display a gray background and watermark text. If the monitor is not connected to the server instance, in every cell the grid displays either **Not connected to** *<SYSTEM_NAME>* or **Not connected to** *<SYSTEM_NAME>***\\***<instance_name>*, depending on whether the instance is the default instance or a named instance. If the monitor is waiting for a query to return, the grid displays **Waiting for data…** in every cell.  
+ If information is currently unavailable for a server instance, the cells of the corresponding **Threshold at** column display a gray background and watermark text. If the monitor is not connected to the server instance, in every cell the grid displays either **Not connected to** *<SYSTEM_NAME>* or **Not connected to** *<SYSTEM_NAME>***\\***<instance_name>*, depending on whether the instance is the default instance or a named instance. If the monitor is waiting for a query to return, the grid displays **Waiting for data...** in every cell.  
   
  When information is available, the cell for each warning displays either a specified threshold value (and unit of measurement), or **Not enabled**.  
   
@@ -51,7 +51,7 @@ manager: craigg
  On a given partner, the events logged depend on its current role, principal or mirror. However, we recommend that you set a warning threshold for a given event on both partners to ensure that the warning persists if the database fails over. The appropriate threshold for each partner depends on the performance capabilities of that partner's system.  
   
 > [!NOTE]  
->  You can also use the **sp_dbmmonitorchangealert** system stored procedure to configure thresholds for the equivalent events—unsent log, unrecovered log, oldest unsent transaction, and mirror commit overhead. For more information, see [sp_dbmmonitorchangealert &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-dbmmonitorchangealert-transact-sql).  
+>  You can also use the **sp_dbmmonitorchangealert** system stored procedure to configure thresholds for the equivalent events-unsent log, unrecovered log, oldest unsent transaction, and mirror commit overhead. For more information, see [sp_dbmmonitorchangealert &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-dbmmonitorchangealert-transact-sql).  
   
  The following table shows the event ID associated with each warning.  
   

@@ -43,7 +43,7 @@ manager: craigg
 |Client Tools SDK|No|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Books Online|No|  
 |Management Tools - Basic|Remote Only<sup>[2]</sup>|  
-|Management Tools – Complete|Remote Only<sup>[2]</sup>|  
+|Management Tools - Complete|Remote Only<sup>[2]</sup>|  
 |Distributed Replay Controller|No|  
 |Distributed Replay Client|Remote Only<sup>[2]</sup>|  
 |SQL Client Connectivity SDK|Yes|  

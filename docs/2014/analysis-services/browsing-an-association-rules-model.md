@@ -91,7 +91,7 @@ manager: craigg
   
 ##### Explore the rules list  
   
-1.  Try clicking the column headings — **Probability**, **Importance**, and **Rule** — to see how the data changes.  
+1.  Try clicking the column headings - **Probability**, **Importance**, and **Rule** - to see how the data changes.  
   
 2.  Use the **Filter Rule** option to type in values and focus on targeted rules.  
   
@@ -124,7 +124,7 @@ manager: craigg
   
      The direction of the arrow tells you the direction of the rule. For example, if someone who buys gloves is also likely to buy a vest, the arrow will start from the "glove" node and terminate on the "vest" node.  
   
-     To get additional statistics about this rule, you can click the **Rules** tab and look for a rule with the description, "Glove - Existing" -> "Vest – Existing.")  
+     To get additional statistics about this rule, you can click the **Rules** tab and look for a rule with the description, "Glove - Existing" -> "Vest - Existing.")  
   
 2.  Click and drag the slider at the left of the viewer.  
   

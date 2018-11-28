@@ -38,7 +38,7 @@ manager: craigg
  Shows the name of the data source of the selected table.  
   
  **Description**  
- Shows a description of the selected table. To see the entire description, or to edit it, click the description and then click the ellipses **(…)** to the right of the property.  
+ Shows a description of the selected table. To see the entire description, or to edit it, click the description and then click the ellipses **(...)** to the right of the property.  
   
  **Schema**  
  Shows the name of the schema to which this table belongs. (Applies only to Microsoft SQL Server.)  

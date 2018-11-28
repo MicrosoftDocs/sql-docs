@@ -476,7 +476,7 @@ ID     Value
 |[Updating User-defined Types](#UDTs)|user-defined types|  
 |[Overriding the Default Behavior of the Query Optimizer by Using Hints](#TableHints)|table hints • query hints|  
 |[Capturing the Results of the UPDATE Statement](#CaptureResults)|OUTPUT clause|  
-|[Using UPDATE in Other Statements](#Other)|Stored Procedures • TRY…CATCH|  
+|[Using UPDATE in Other Statements](#Other)|Stored Procedures • TRY...CATCH|  
   
 ###  <a name="BasicSyntax"></a> Basic Syntax  
  Examples in this section demonstrate the basic functionality of the UPDATE statement using the minimum required syntax.  
@@ -1027,8 +1027,8 @@ GO
 EXEC HumanResources.Update_VacationHours 40;  
 ```  
   
-#### AC. Using UPDATE in a TRY…CATCH Block  
- The following example uses an UPDATE statement in a TRY…CATCH block to handle execution errors that may occur during the update operation.  
+#### AC. Using UPDATE in a TRY...CATCH Block  
+ The following example uses an UPDATE statement in a TRY...CATCH block to handle execution errors that may occur during the update operation.  
   
 ```sql  
 USE AdventureWorks2012;  

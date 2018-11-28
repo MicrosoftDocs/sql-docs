@@ -146,7 +146,7 @@ manager: craigg
   
      Threads are shared on an on-demand basis, as follows:  
   
-    -   Typically, there are 3–10 shared threads, but this number can increase depending on the primary replica workload.  
+    -   Typically, there are 3-10 shared threads, but this number can increase depending on the primary replica workload.  
   
     -   If a given thread is idle for a while, it is released back into the general [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] thread pool. Normally, an inactive thread is released after ~15 seconds of inactivity. However, depending on the last activity, an idle thread might be retained longer.  
 

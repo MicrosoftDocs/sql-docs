@@ -42,7 +42,7 @@ EXP ( float_expression )
  **float**  
   
 ## Remarks  
- The constant **e** (2.718281…), is the base of natural logarithms.  
+ The constant **e** (2.718281...), is the base of natural logarithms.  
   
  The exponent of a number is the constant **e** raised to the power of the number. For example EXP(1.0) = e^1.0 = 2.71828182845905 and EXP(10) = e^10 = 22026.4657948067.  
   

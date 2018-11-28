@@ -193,7 +193,7 @@ manager: craigg
   
 -   The Derived Column transformation that is named "Calculate LineItemTotalCost" spent 356 ms. performing calculations on incoming rows.  
   
--   The Aggregate transformation that is named "Sum Quantity and LineItemTotalCost" spent a combined 220 ms—141 in PrimeOutput and 79 in ProcessInput—performing calculations and passing the data to the next transformation.  
+-   The Aggregate transformation that is named "Sum Quantity and LineItemTotalCost" spent a combined 220 ms-141 in PrimeOutput and 79 in ProcessInput-performing calculations and passing the data to the next transformation.  
   
 ## Related Tasks  
  The following list contains links to topics that show how to perform tasks related to the logging feature.  

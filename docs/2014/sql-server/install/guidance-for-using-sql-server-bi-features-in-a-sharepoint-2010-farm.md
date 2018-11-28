@@ -62,7 +62,7 @@ manager: craigg
   
 -   **SharePoint Products Configuration Wizard:** Run the wizard to complete the SP1 upgrade and configuration.  
   
--   **Complete the upgrade with psconfig:** Run the command `psconfig –upgrade` to complete the SP1 upgrade  
+-   **Complete the upgrade with psconfig:** Run the command `psconfig -upgrade` to complete the SP1 upgrade  
   
  For more information, see the "upgrade" section of [(SharePoint Server 2010)](http://technet.microsoft.com/library/cc263093.aspx) and [Resource center: Updates for SharePoint 2010 Products](http://technet.microsoft.com/sharepoint/ff800847.aspx)  
   

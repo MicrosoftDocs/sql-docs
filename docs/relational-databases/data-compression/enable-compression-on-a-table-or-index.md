@@ -68,7 +68,7 @@ monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest |
   
 2.  To compress an index, expand the table that contains the index that you want to compress and then expand the **Indexes** folder.  
   
-3.  Right-click the table or index to compress, point to **Storage** and select **Manage Compression…**.  
+3.  Right-click the table or index to compress, point to **Storage** and select **Manage Compression...**.  
   
 4.  In the Data Compression Wizard, on the **Welcome to the Data Compression Wizard** page, click **Next**.  
   

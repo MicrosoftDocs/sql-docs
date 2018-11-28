@@ -29,12 +29,12 @@ manager: craigg
  The `Batch` command executes commands in one of two ways:  
   
  **Transactional**  
- If the `Transaction` attribute of the `Batch` command is set to true, the `Batch` command run commands all of the commands contained by the `Batch` command in a single transaction—a *transactional* batch.  
+ If the `Transaction` attribute of the `Batch` command is set to true, the `Batch` command run commands all of the commands contained by the `Batch` command in a single transaction-a *transactional* batch.  
   
  If any command fails in a transactional batch, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] rolls back any command in the `Batch` command that ran before the command that failed and the `Batch` command immediately ends. Any commands in the `Batch` command that have not yet run are not executed. After the `Batch` command ends, the `Batch` command reports any errors that occurred for the failed command.  
   
  **Nontransactional**  
- If the `Transaction` attribute is set to false, the `Batch` command runs each command contained by the `Batch` command in a separate transaction—a *nontransactional* batch. If any command fails in a nontransactional batch, the `Batch` command continues to run commands after the command which failed. After the `Batch` command tries to run all the commands that the `Batch` command contains, the `Batch` command reports any errors that occurred.  
+ If the `Transaction` attribute is set to false, the `Batch` command runs each command contained by the `Batch` command in a separate transaction-a *nontransactional* batch. If any command fails in a nontransactional batch, the `Batch` command continues to run commands after the command which failed. After the `Batch` command tries to run all the commands that the `Batch` command contains, the `Batch` command reports any errors that occurred.  
   
  All results returned by commands contained in a `Batch` command are returned in the same order in which the commands are contained in the `Batch` command. The results returned by a `Batch` command vary based on whether the `Batch` command is transactional or nontransactional.  
   

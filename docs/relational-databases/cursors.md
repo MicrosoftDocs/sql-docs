@@ -1,7 +1,7 @@
 ---
 title: "Cursors | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/14/2017"
+ms.date: "11/28/2018"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
@@ -39,7 +39,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
   
 > [!TIP]
 > In some scenarios, if there is a primary key on a table, a `WHILE` loop can be used instead of a cursor, without incurring in the overhead of a cursor.
-> However, there are scenarios where cursors are not only unavoidable, they are actually needed. When that is the case, if there is no requirement to update tables based on the cursor, then use *firehose* cursors, meaning [fast-forward and read-only](#Forward-only) cursors.
+> However, there are scenarios where cursors are not only unavoidable, they are actually needed. When that is the case, if there is no requirement to update tables based on the cursor, then use *firehose* cursors, meaning [fast-forward and read-only](#forward-only) cursors.
   
 ## Cursor Implementations  
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] supports three cursor implementations.  

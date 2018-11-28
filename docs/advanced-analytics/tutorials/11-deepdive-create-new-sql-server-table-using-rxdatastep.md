@@ -1,18 +1,18 @@
 ---
-title: Create new SQL Server table using rxDataStep (SQL and R deep dive)| Microsoft Docs
+title: Create new SQL Server table using rxDataStep (SQL Server and RevoScaleR tutorial) | Microsoft Docs
 ms.prod: sql
 ms.technology: machine-learning
 
-ms.date: 04/15/2018  
+ms.date: 11/27/2018  
 ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
 ---
-# Create new SQL Server table using rxDataStep (SQL and R deep dive)
+# Create new SQL Server table using rxDataStep (SQL Server and RevoScaleR tutorial)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-This article is part of the Data Science Deep Dive tutorial, on how to use [RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) with SQL Server.
+This lesson is part of the [RevoScaleR tutorial](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md) on how to use [RevoScaleR functions](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) with SQL Server.
 
 In this lesson, you learn how to move data between in-memory data frames, the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] context, and local files.
 
@@ -60,7 +60,7 @@ The XDF format is an XML standard developed for high-dimensional data and is the
 
 > [!NOTE]
 > 
-> Did you notice that you did not need to call any other functions to load the data into the XDF file, and could call **rxGetVarInfo** on the data immediately? That's because XDF is the default interim storage method for RevoScaleR. In addition to XDF files, the **rxGetVarInfo** function now supports multiple source types.
+> Did you notice that you did not need to call any other functions to load the data into the XDF file, and could call **rxGetVarInfo** on the data immediately? That's because XDF is the default interim storage method for **RevoScaleR**. In addition to XDF files, the **rxGetVarInfo** function now supports multiple source types.
   
 4. Put this data into a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] table, storing _DayOfWeek_ as an integer with values from 1 to 7.
   
@@ -109,10 +109,7 @@ The XDF format is an XML standard developed for high-dimensional data and is the
     rxSummary(~., data = sqlServerAirDemo)
     ```
 
-## Next step
+## Next steps
 
-[Perform chunking analysis using rxDataStep](../../advanced-analytics/tutorials/deepdive-perform-chunking-analysis-using-rxdatastep.md)
-
-## Previous step
-
-[Load data into memory using rxImport](../../advanced-analytics/tutorials/deepdive-load-data-into-memory-using-rximport.md)
+> [!div class="nextstepaction"]
+> [Perform chunking analysis using rxDataStep](../../advanced-analytics/tutorials/deepdive-perform-chunking-analysis-using-rxdatastep.md)

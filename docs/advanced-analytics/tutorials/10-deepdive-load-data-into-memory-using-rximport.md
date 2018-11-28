@@ -1,18 +1,18 @@
 ---
-title: Load data into memory using rxImport (SQL and R deep dive)| Microsoft Docs
+title: Load data into memory using rxImport (SQL Server and RevoScaleR tutorial) | Microsoft Docs
 ms.prod: sql
 ms.technology: machine-learning
 
-ms.date: 04/15/2018  
+ms.date: 11/27/2018  
 ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
 ---
-# Load data into memory using rxImport (SQL and R deep dive)
+# Load data into memory using rxImport (SQL Server and RevoScaleR tutorial)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-This article is part of the Data Science Deep Dive tutorial, on how to use [RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) with SQL Server.
+This lesson is part of the [RevoScaleR tutorial](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md) on how to use [RevoScaleR functions](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) with SQL Server.
 
 The [rxImport](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rximport) function can be used to move data from a data source into a data frame in session memory, or into an XDF file on disk. If you don't specify a file as destination, data is put into memory as a data frame.
 
@@ -77,11 +77,7 @@ The **rxImport** function assigns variable names to the columns during the impor
 
 By specifying additional operations in the *transforms* parameter, you can do elementary processing on each chunk of data that is read.
 
-## Next step
+## Next steps
 
-[Create new SQL Server table using rxDataStep](../../advanced-analytics/tutorials/deepdive-create-new-sql-server-table-using-rxdatastep.md)
-
-## Previous step
-
-[Transform data using R](../../advanced-analytics/tutorials/deepdive-transform-data-using-r.md)
-
+> [!div class="nextstepaction"]
+> [Create new SQL Server table using rxDataStep](../../advanced-analytics/tutorials/deepdive-create-new-sql-server-table-using-rxdatastep.md)

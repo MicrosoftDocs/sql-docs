@@ -1,5 +1,5 @@
 ---
-title: Create a database and permissions (SQL and RevoScaleR deep dive)| Microsoft Docs
+title: Create a database and permissions (SQL Server and RevoScaleR tutorial) | Microsoft Docs
 ms.prod: sql
 ms.technology: machine-learning
 
@@ -9,26 +9,16 @@ author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
 ---
-# Lesson 1: Create a database and permissions
+# Create a database and permissions (SQL Server and RevoScaleR tutorial)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-This article is part of the [RevoScaleR tutorial](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md) on how to use [RevoScaleR functions](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) with SQL Server.
+This lesson is part of the [RevoScaleR tutorial](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md) on how to use [RevoScaleR functions](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) with SQL Server.
 
-In this lesson, you set up the environment and add the data you need for training your models and run some quick summaries of the data. As part of the process, you must complete these tasks:
-  
-- Create a new database to store the data for training and scoring two R models.
-  
-- Create an account (either a Windows user or SQL login) to use when communicating between your workstation and the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] computer.
-  
-- Create data sources in R for working with [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] data and database objects.
-  
-- Use the R data source to load data into [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
-  
-- Use R to get a list of variables and modify the metadata of the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] table.
-  
-- Create a compute context to enable remote execution of R code.
-  
-- (Optional) Enable tracing on the remote compute context.
+In this lesson, use [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms) or another query editor to complete these tasks using T-SQL:
+
+> [!div class="checklist"]
+> * Create a new database to store the data for training and scoring two R models
+> * Create an account (either a Windows user or SQL login) to use when communicating between your workstation and the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] computer
   
 ## Create the database and user
 
@@ -56,10 +46,10 @@ For this walkthrough, create a new database in [!INCLUDE[ssCurrent](../../includ
  -- Create server user based on Windows account
 USE master
 GO
-CREATE LOGIN [<DOMAIN>\<user_name>] FROM WINDOWS WITH DEFAULT_DATABASE=[DeepDive]
+CREATE LOGIN [<DOMAIN>\<user_name>] FROM WINDOWS WITH DEFAULT_DATABASE=[RevoDeepDive]
 
  --Add the new user to tutorial database
-USE [DeepDive]
+USE [RevoDeepDive]
 GO
 CREATE USER [<user_name>] FOR LOGIN [<DOMAIN>\<user_name>] WITH DEFAULT_SCHEMA=[db_datareader]
 ```
@@ -73,14 +63,14 @@ GO
 CREATE LOGIN DDUser01 WITH PASSWORD='<type password here>', CHECK_EXPIRATION=OFF, CHECK_POLICY=OFF;
 
 -- Add the new SQL login to tutorial database
-USE [DeepDive]
+USE [RevoDeepDive]
 GO
 CREATE USER [DDUser01] FOR LOGIN [DDUser01] WITH DEFAULT_SCHEMA=[db_datareader]
 ```
 
 5. To verify that the user has been created, select the new database, expand **Security**, and expand **Users**.
 
-## Troubleshooting
+## Troubleshooting connection problems
 
 This section lists some common issues that you might run across in the course of setting up the database.
 
@@ -90,7 +80,7 @@ This section lists some common issues that you might run across in the course of
   
     If you don't want to install additional database management tools, you can create a test connection to the SQL Server instance by using the [ODBC Data Source Administrator](https://msdn.microsoft.com/library/ms714024.aspx) in Control Panel. If the database is configured correctly and you enter the correct user name and password, you should be able to see the database you just created and select it as your default database.
   
-    If you cannot connect to the database,  verify that remote connections are enabled for the server, and that the Named Pipes protocol has been enabled. Additional troubleshooting tips are provided in this article: [Troubleshoot Connecting to the SQL Server Database Engine](https://docs.microsoft.com/sql/database-engine/configure-windows/troubleshoot-connecting-to-the-sql-server-database-engine).
+    Common reasons for connection failures include remote connections are not enabled for the server, and Named Pipes protocol is not enabled. You can find more troubleshooting tips in this article: [Troubleshoot Connecting to the SQL Server Database Engine](https://docs.microsoft.com/sql/database-engine/configure-windows/troubleshoot-connecting-to-the-sql-server-database-engine).
   
 - **My table name has datareader prefixed to it - why?**
   
@@ -106,17 +96,11 @@ This section lists some common issues that you might run across in the course of
   
 - **I don't have DDL privileges. Can I still run the tutorial?**?
   
-    Yes; however, you should ask someone to pre-load the data into the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tables, and skip past the sections that call for creating new tables. The functions that require DDL privileges are called out in the tutorial wherever possible.
+    Yes, but you should ask someone to pre-load the data into the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tables, and skip ahead to the next lesson. The functions that require DDL privileges are called out in the tutorial wherever possible.
 
     Also, ask your administrator to grant you the permission, EXECUTE ANY EXTERNAL SCRIPT. It is needed for R script execution, whether remote or by using `sp_execute_external_script`.
 
-## Next step
+## Next steps
 
-[Create SQL Server data objects using RxSqlServerData](../../advanced-analytics/tutorials/deepdive-create-sql-server-data-objects-using-rxsqlserverdata.md)
-
-## Overview
-
-[Data Science Deep Dive: Using the RevoScaleR Packages](../../advanced-analytics/tutorials/deepdive-data-science-deep-dive-using-the-revoscaler-packages.md)
-
-
-
+> [!div class="nextstepaction"]
+> [Create SQL Server data objects using RxSqlServerData](../../advanced-analytics/tutorials/deepdive-create-sql-server-data-objects-using-rxsqlserverdata.md)

@@ -1,27 +1,31 @@
 ---
-title: Score new data (SQL and R deep dive)| Microsoft Docs
+title: Score new data (SQL Server and RevoScaleR tutorial)| Microsoft Docs
 ms.prod: sql
 ms.technology: machine-learning
 
-ms.date: 04/15/2018  
+ms.date: 11/27/2018  
 ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
 ---
-# Score new data (SQL and R deep dive)
+# Score new data (SQL Server and RevoScaleR tutorial)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-This article is part of the Data Science Deep Dive tutorial, on how to use [RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) with SQL Server.
+This lesson is part of the [RevoScaleR tutorial](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md) on how to use [RevoScaleR functions](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) with SQL Server.
 
-In this step, you use the logistic regression model that you created earlier, to create scores for another data set that uses the same independent variables as inputs.
+In this step, you use the logistic regression model that you created in the previous lesson to create scores for another data set that uses the same independent variables as inputs.
+
+> [!div class="checklist"]
+> * Score new data
+> * Create a histogram of the scores
 
 > [!NOTE]
 > You need DDL admin privileges for some of these steps.
 
 ## Generate and save scores
   
-1. Update the data source that you set up earlier, `sqlScoreDS`, to add the required column information.
+1. Update the data source that you set up earlier, sqlScoreDS, to add the required column information.
   
     ```R
     sqlScoreDS <- RxSqlServerData(
@@ -40,13 +44,13 @@ In this step, you use the logistic regression model that you created earlier, to
     ```
     At this point, the table has not been created. This statement just defines a container for the data.
      
-3. Check the current compute context, and set the compute context to the server if needed.
+3. Check the current compute context using `rxGetComputeContext()`, and set the compute context to the server if needed.
   
     ```R
     rxSetComputeContext(sqlCompute)
     ```
   
-4. Before running the prediction function that generates the results, you need to check for the existence of an existing output table. Otherwise, you would get an error when you tried to write the new table.
+4. Before running the prediction function that generates the results, check for the existence of the output table. If one already exists with the same name, you will get an error when attempting to write the new table.
   
     To do this, make a call to the functions **rxSqlServerTableExists** and **rxSqlServerDropTable**, passing the table name as input.
   
@@ -95,7 +99,7 @@ In this step, you use the logistic regression model that you created earlier, to
 
 ## Display scores in a histogram
 
-After the new table has been created, you can compute and display a histogram of the 10,000 predicted scores. Computation is faster if you specify the low and high values, so get those from the database and add them to your working data.
+After the new table has been created, compute and display a histogram of the 10,000 predicted scores. Computation is faster if you specify the low and high values, so get those from the database and add them to your working data.
 
 1. Create a new data source, `sqlMinMax`, that queries the database to get the low and high values.
   
@@ -112,15 +116,17 @@ After the new table has been created, you can compute and display a histogram of
   
     ```R
     minMaxVals <- rxImport(sqlMinMax)
-    minMaxVals \<- as.vector(unlist(minMaxVals))
+    minMaxVals <- as.vector(unlist(minMaxVals))
   
     ```
      **Results**
      
-     *> minMaxVals*
+    ``` 
+    > minMaxVals
      
-     *[1] -23.970256   9.786345*
-  
+    [1] -23.970256   9.786345
+    ```
+
 3. Now that the maximum and minimum values are available, use the values to create another data source for the generated scores.
   
     ```R
@@ -132,7 +138,7 @@ After the new table has been created, you can compute and display a histogram of
                         high = ceiling(minMaxVals[2]) ) ) )
     ```
 
-4. Use the data source object `sqlOutScoreDS` to get the scores, and compute and display a histogram. Add the code to set the compute context if needed.
+4. Use the data source object sqlOutScoreDS to get the scores, and compute and display a histogram. Add the code to set the compute context if needed.
   
     ```R
     # rxSetComputeContext(sqlCompute)
@@ -143,12 +149,7 @@ After the new table has been created, you can compute and display a histogram of
   
     ![complex histogram created by R](media/rsql-sue-complex-histogram.png "complex histogram created by R")
   
-## Next step
+## Next steps
 
-[Transform data using R](../../advanced-analytics/tutorials/deepdive-transform-data-using-r.md)
-
-## Previous step
-
-[Create models](../../advanced-analytics/tutorials/deepdive-create-models.md)
-
-
+> [!div class="nextstepaction"]
+> [Transform data using R](../../advanced-analytics/tutorials/deepdive-transform-data-using-r.md)

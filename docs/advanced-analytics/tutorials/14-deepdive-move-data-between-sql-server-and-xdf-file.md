@@ -1,18 +1,18 @@
 ---
-title: Move data between SQL Server and XDF file (SQL and R deep dive)| Microsoft Docs
+title: Move data between SQL Server and XDF file (SQL Server and RevoScaleR tutorial) | Microsoft Docs
 ms.prod: sql
 ms.technology: machine-learning
 
-ms.date: 04/15/2018  
+ms.date: 11/27/2018  
 ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
 ---
-# Move data between SQL Server and XDF file (SQL and R deep dive)
+# Move data between SQL Server and XDF file (SQL Server and RevoScaleR tutorial)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-This article is part of the Data Science Deep Dive tutorial, on how to use [RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) with SQL Server.
+This lesson is part of the [RevoScaleR tutorial](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md) on how to use [RevoScaleR functions](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) with SQL Server.
 
 In this step, you learn to use an XDF file to transfer data between remote and local compute contexts. Storing the data in an XDF file allows you to perform transformations on the data.
 
@@ -104,14 +104,7 @@ For this exercise, you use the credit card fraud data again. In this scenario, y
     ```
 
 Now that you've mastered the use of compute contexts and working with various data sources, it's time to try something fun. In the next and final lesson, you create a simple simulation that runs a custom R function on the remote server.
+## Next steps
 
-## Next step
-
-[Create a simple simulation](../../advanced-analytics/tutorials/deepdive-create-a-simple-simulation.md)
-
-## Previous step
-
-[Analyze data in local compute context](../../advanced-analytics/tutorials/deepdive-analyze-data-in-local-compute-context.md)
-
-
-
+> [!div class="nextstepaction"]
+> [Create a simple simulation](../../advanced-analytics/tutorials/deepdive-create-a-simple-simulation.md)

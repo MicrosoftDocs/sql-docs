@@ -1,18 +1,18 @@
 ---
-title: Perform chunking analysis using rxDataStep (SQL and R deep dive)| Microsoft Docs
+title: Perform chunking analysis using rxDataStep (SQL Server and RevoScaleR tutorial) | Microsoft Docs
 ms.prod: sql
 ms.technology: machine-learning
 
-ms.date: 04/15/2018  
+ms.date: 11/27/2018  
 ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
 ---
-# Perform chunking analysis using rxDataStep (SQL and R deep dive)
+# Perform chunking analysis using rxDataStep (SQL Server and RevoScaleR tutorial)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-This article is part of the Data Science Deep Dive tutorial, on how to use [RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) with SQL Server.
+This lesson is part of the [RevoScaleR tutorial](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md) on how to use [RevoScaleR functions](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) with SQL Server.
 
 In this lesson, you use the **rxDataStep** function to process data in chunks, rather than requiring that the entire dataset be loaded into memory and processed at one time, as in traditional R. The **rxDataStep** functions reads the data in chunk, applies R functions to each chunk of data in turn, and then saves the summary results for each chunk to a common [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] data source. When all data has been read, the results are combined.
 
@@ -107,10 +107,7 @@ In this lesson, you use the **rxDataStep** function to process data in chunks, r
     rxSqlServerDropTable( table = "iroResults", connectionString = sqlConnString)
     ```
 
-## Next step
+## Next steps
 
-[Analyze data in local compute context](../../advanced-analytics/tutorials/deepdive-analyze-data-in-local-compute-context.md)
-
-## Previous step
-
-[Create new SQL Server table using rxDataStep](../../advanced-analytics/tutorials/deepdive-create-new-sql-server-table-using-rxdatastep.md)
+> [!div class="nextstepaction"]
+> [R Tutorials for SQL Server](sql-server-r-tutorials.md)

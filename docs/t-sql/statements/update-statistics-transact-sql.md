@@ -224,7 +224,7 @@ update statistics t1 (a) with stats_stream = 0x01;
 ```  
   
 ## Permissions  
- Requires ALTER permission on the table or view.  
+ Requires `ALTER` permission on the table or view.  
   
 ## Examples  
   

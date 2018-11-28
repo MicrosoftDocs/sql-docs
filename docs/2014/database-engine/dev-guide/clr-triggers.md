@@ -494,7 +494,7 @@ EXTERNAL NAME SQLCLRTest.CLRTriggers.EmailAudit
 ```  
 Msg 6549, Level 16, State 1, Procedure trig_InsertValidator, Line 0  
 A .NET Framework error occurred during execution of user defined routine or aggregate 'trig_InsertValidator':   
-System.Data.SqlClient.SqlException: Transaction is not allowed to roll back inside a user defined routine, trigger or aggregate because the transaction is not started in that CLR level. Change application logic to enforce strict transaction nesting… User transaction, if any, will be rolled back.  
+System.Data.SqlClient.SqlException: Transaction is not allowed to roll back inside a user defined routine, trigger or aggregate because the transaction is not started in that CLR level. Change application logic to enforce strict transaction nesting... User transaction, if any, will be rolled back.  
 ```  
   
  This exception is expected and the try/catch block is necessary for code execution to continue. When the trigger code finishes execution, another exception is raised  

@@ -109,7 +109,7 @@ manager: craigg
 -   [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md)  
   
 ##  <a name="RelatedContent"></a> Related Content  
- **SQL Server AlwaysOn Team Blogs—Monitoring AlwaysOn Health with PowerShell:**  
+ **SQL Server AlwaysOn Team Blogs-Monitoring AlwaysOn Health with PowerShell:**  
   
 -   [Part 1: Basic Cmdlet Overview](http://blogs.msdn.com/b/sqlalwayson/archive/2012/02/13/monitoring-alwayson-health-with-powershell-part-1.aspx)  
   

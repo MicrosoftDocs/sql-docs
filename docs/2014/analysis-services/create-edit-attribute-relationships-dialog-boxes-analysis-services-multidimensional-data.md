@@ -23,7 +23,7 @@ manager: craigg
   
 2.  On the toolbar, click the New Attribute Relationship icon.  
   
-     —or—  
+     -or-  
   
      In the attribute relationship diagram or **Attributes** list, right-click an attribute, and then click **New Attribute Relationship**.  
   

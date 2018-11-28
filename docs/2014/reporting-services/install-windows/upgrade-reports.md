@@ -167,7 +167,7 @@ manager: craigg
         ```  
         <CustomProperty>  
          <Name>CUSTOM_CODE_CS</Name>  
-         <Value>dXNpWERwegfdfgiobxxl3bmc… </Value>  
+         <Value>dXNpWERwegfdfgiobxxl3bmc... </Value>  
         </CustomProperty>  
         ```  
   

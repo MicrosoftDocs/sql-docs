@@ -129,7 +129,7 @@ HAVING clause:
 
 ```sql
 DECLARE @v INT = 9000;
-SELECT TOP (@v) … FROM … ORDER BY …
+SELECT TOP (@v) ... FROM ... ORDER BY ...
 ```
 
 However, a constant in the **TOP** clause results in better performance compared to using a variable.  

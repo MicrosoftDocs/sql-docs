@@ -19,7 +19,7 @@ manager: craigg
   
 ### To define a Transact-SQL query for report data  
   
-1.  In the **Report Data** pane, click **New**, and then click **Dataset…**. The **Dataset Properties** dialog box opens.  
+1.  In the **Report Data** pane, click **New**, and then click **Dataset...**. The **Dataset Properties** dialog box opens.  
   
 2.  In the **Name** box, type **AdventureWorksDataset**.  
   

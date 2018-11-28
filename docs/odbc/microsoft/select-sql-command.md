@@ -29,7 +29,7 @@ SELECT [ALL | DISTINCT]
 FROM [DatabaseName!]Table [Local_Alias]  
    [, [DatabaseName!]Table [Local_Alias] ...]   
 [WHERE JoinCondition [AND JoinCondition  
-…]  
+...]  
    [AND | OR FilterCondition [AND | OR FilterCondition ...]]]  
 [GROUP BY GroupColumn [, GroupColumn ...]]  
 [HAVING FilterCondition]  
@@ -76,15 +76,15 @@ FROM [DatabaseName!]Table [Local_Alias]
   
  The following field functions are available for use with a select item that is a field or an expression involving a field:  
   
--   AVG(*Select_Item*)—Averages a column of numeric data.  
+-   AVG(*Select_Item*)-Averages a column of numeric data.  
   
--   COUNT(*Select_Item*)—Counts the number of select items in a column. COUNT(*) counts the number of rows in the query output.  
+-   COUNT(*Select_Item*)-Counts the number of select items in a column. COUNT(*) counts the number of rows in the query output.  
   
--   MIN(*Select_Item*)—Determines the smallest value of *Select_Item* in a column.  
+-   MIN(*Select_Item*)-Determines the smallest value of *Select_Item* in a column.  
   
--   MAX(*Select_Item*)—Determines the largest value of *Select_Item* in a column.  
+-   MAX(*Select_Item*)-Determines the largest value of *Select_Item* in a column.  
   
--   SUM(*Select_Item*)—Totals a column of numeric data.  
+-   SUM(*Select_Item*)-Totals a column of numeric data.  
   
  You cannot nest field functions.  
   

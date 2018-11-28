@@ -30,7 +30,7 @@ manager: craigg
     RESTORE DATABASE AdventureWorks2012   
     FROM URL = 'https://mystorageaccount.blob.core.windows.net/privatecontainertest/AdventureWorks2012.bak'   
     WITH CREDENTIAL = 'mycredential';  
-    , STATS = 5 – use this to see monitor the progress  
+    , STATS = 5 - use this to see monitor the progress  
     GO  
   
     ```  

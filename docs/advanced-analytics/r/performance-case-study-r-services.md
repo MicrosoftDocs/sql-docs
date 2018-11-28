@@ -167,7 +167,7 @@ The execution time is more consistent and faster when using the Windows **High p
 
 This test assessed the impact of modifying the R code to avoid a common problem with string factors. Specifically, a model was trained using `rxLinMod` using two tables: in the first, factors are stored as strings; in the second table, factors are stored as integers.
 
-+ For the *airline* table, the [DayOfWeek] column contains strings. The _colInfo_ parameter was used to specify the factor levels (Monday, Tuesday, …)
++ For the *airline* table, the [DayOfWeek] column contains strings. The _colInfo_ parameter was used to specify the factor levels (Monday, Tuesday, ...)
 
 +  For the *airlineWithIndex* table, [DayOfWeek] is an integer. The _colInfo_ parameter was not specified.
 
@@ -396,7 +396,7 @@ The following are links to information, tools, and scripts used in the developme
 
 ## Other articles in this series
 
-[Performance tuning for R – introduction](sql-server-r-services-performance-tuning.md)
+[Performance tuning for R - introduction](sql-server-r-services-performance-tuning.md)
 
 [Performance tuning for R - SQL Server configuration](sql-server-configuration-r-services.md)
 

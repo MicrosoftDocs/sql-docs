@@ -56,7 +56,7 @@ INSERT INTO Customers2 VALUES (
 GO  
 ```  
   
- In addition, you must create a virtual directory for the tempdb database—and a template virtual name of `template` type named "template".  
+ In addition, you must create a virtual directory for the tempdb database-and a template virtual name of `template` type named "template".  
   
  In the following example, the mapping schema retrieves the unconsumed data that is stored in the AddressOverflow column of the Customers2 table:  
   

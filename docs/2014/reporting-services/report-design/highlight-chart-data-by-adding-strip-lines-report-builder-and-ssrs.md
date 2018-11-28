@@ -44,7 +44,7 @@ manager: craigg
   
      The axis properties are displayed in the Properties window.  
   
-2.  In the **Appearance** section of the Properties pane, for the StripLines property, click the Edit Collection (…) button to open the **ChartStripLine Collection Editor**.  
+2.  In the **Appearance** section of the Properties pane, for the StripLines property, click the Edit Collection (...) button to open the **ChartStripLine Collection Editor**.  
   
 3.  Click **Add** to add a new strip line to the collection.  
   

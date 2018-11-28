@@ -20,11 +20,11 @@ In this lesson, you will create roles. Roles provide model database object and d
   
 You will create three roles:  
   
--   **Sales Manager** – This role can include users in your organization for which you want to have Read permission to all model objects and data.  
+-   **Sales Manager** - This role can include users in your organization for which you want to have Read permission to all model objects and data.  
   
--   **Sales Analyst US** – This role can include users in your organization for which you want only to be able to browse data related to sales in the United States. For this role, you will use a DAX formula to define a *Row Filter*, which restricts members to browse data only for the United States.  
+-   **Sales Analyst US** - This role can include users in your organization for which you want only to be able to browse data related to sales in the United States. For this role, you will use a DAX formula to define a *Row Filter*, which restricts members to browse data only for the United States.  
   
--   **Administrator** – This role can include users for which you want to have Administrator permission, which allows unlimited access and permissions to perform administrative tasks on the model database.  
+-   **Administrator** - This role can include users for which you want to have Administrator permission, which allows unlimited access and permissions to perform administrative tasks on the model database.  
   
 Because Windows user and group accounts in your organization are unique, you can add accounts from your particular organization to members. However, for this tutorial, you can also leave the members blank. You will still be able to test the effect of each role later in Lesson 12: Analyze in Excel.  
   

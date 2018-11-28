@@ -34,15 +34,15 @@ Before powering off the appliance, you should end all activity on the appliance.
 > [!WARNING]  
 > All steps must be performed in the exact order listed and each step must complete before the next step is performed, unless otherwise noted. Performing steps out of order or without waiting for each step to complete can result in errors when the appliance is powered up at a later time.  
   
-1.  Connect to the PDW Control node (***PDW_region*-CTL01** ) and login with the Analytics Platform System appliance domain administrator account.  
+1.  Connect to the PDW Control node (**_PDW_region_-CTL01** ) and login with the Analytics Platform System appliance domain administrator account.  
   
 2.  Run `C:\Program Files\Microsoft SQL Server Parallel Data Warehouse\100\dwconfig.exe` to open the **Configuration Manager**.  
   
 3.  In the Configuration Manager, under the **Parallel Data Warehouse Topology** menu, click the **Services Status** tab, and click **Stop Region** to stop PDW services.   
   
-4.  Connect to ***appliance_domain*-HST01** and login with the appliance domain administrator account.  
+4.  Connect to **_appliance_domain_-HST01** and login with the appliance domain administrator account.  
   
-5.  Using the **Failover Cluster Manager** connect to the ***appliance_domain*-WFOHST01** cluster, if not automatically connected, and then in the Navigation pane, click **Roles**. In the **Roles** pane:  
+5.  Using the **Failover Cluster Manager** connect to the **_appliance_domain_-WFOHST01** cluster, if not automatically connected, and then in the Navigation pane, click **Roles**. In the **Roles** pane:  
   
     1.  Multi-select all of the virtual machines. Right-click them, and select **Shut Down**.  
   
@@ -50,9 +50,9 @@ Before powering off the appliance, you should end all activity on the appliance.
   
 6.  Close the **Failover Cluster Manager** application.  
   
-7. Shut down all the servers except ***appliance_domain*-HST01**.  
+7. Shut down all the servers except **_appliance_domain_-HST01**.  
   
-8. Shut down the ***appliance_domain*-HST01** server.  
+8. Shut down the **_appliance_domain_-HST01** server.  
   
 9. Shut down the Power Distribution Units (PDUs).  
   
@@ -65,25 +65,25 @@ Before powering off the appliance, you should end all activity on the appliance.
   
 1.  Power on the Power Distribution Units (PDU's), and wait for the switches to automatically start.  
   
-2.  Power on the ***appliance_domain*-HST01** server.  
+2.  Power on the **_appliance_domain_-HST01** server.  
   
-3.  Log in to ***appliance_domain*-HST01** as the appliance domain administrator.  
+3.  Log in to **_appliance_domain_-HST01** as the appliance domain administrator.  
   
-4.  Start the **Hyper-V Manager** program (**virtmgmt.msc**) and connect to ***appliance_domain*-HST01** if not connected by default.  
+4.  Start the **Hyper-V Manager** program (**virtmgmt.msc**) and connect to **_appliance_domain_-HST01** if not connected by default.  
   
-    1.  If you cannot connect by name because the ***PDW_region*-AD01** is not running, try connecting by using the IP address.  
+    1.  If you cannot connect by name because the **_PDW_region_-AD01** is not running, try connecting by using the IP address.  
   
-    2.  In the **Virtual Machines** pane, locate ***PDW_region*-AD01** and confirm that it is running. If not, start this VM and wait for it to be fully started.  
+    2.  In the **Virtual Machines** pane, locate **_PDW_region_-AD01** and confirm that it is running. If not, start this VM and wait for it to be fully started.  
   
 5.  Power on the rest of the servers in the appliance.  
   
 6.  While on **HST01** logged on as the appliance domain administrator, from **Hyper-V Manager**:  
   
-    1.  Connect to ***appliance_domain*-HST02**.  
+    1.  Connect to **_appliance_domain_-HST02**.  
   
-    2.  In the **Virtual Machines** pane, locate ***PDW_region*-AD02** and confirm that it is running.  If not, start this VM and wait for it to be fully started.  
+    2.  In the **Virtual Machines** pane, locate **_PDW_region_-AD02** and confirm that it is running.  If not, start this VM and wait for it to be fully started.  
   
-7.  Using the **Failover Cluster Manager** connect to the ***appliance_domain*-WFOHST01** cluster, if not automatically connected, and then in the **Navigation** pane, click **Roles**. In the **Roles** pane:  
+7.  Using the **Failover Cluster Manager** connect to the **_appliance_domain_-WFOHST01** cluster, if not automatically connected, and then in the **Navigation** pane, click **Roles**. In the **Roles** pane:  
   
     1.  Multi-select all of the virtual machines, right-click them, and then click **Start**.  
   
@@ -93,7 +93,7 @@ Before powering off the appliance, you should end all activity on the appliance.
   
 8. Disconnect from **HST01** if you wish.  
   
-9. Connect to ***PDW_region*-CTL01** using the appliance domain administrator account.  
+9. Connect to **_PDW_region_-CTL01** using the appliance domain administrator account.  
   
 10. Run `C:\Program Files\Microsoft SQL Server Parallel Data Warehouse\100\dwconfig.exe` to launch the **Configuration Manager**.  
   

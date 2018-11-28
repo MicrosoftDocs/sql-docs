@@ -87,15 +87,15 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 |CURDATE( ) (ODBC 3.0)|Returns the current date.|  
 |CURRENT_TIME`[( time-precision )]` (ODBC 3.0)|Returns the current local time. The time-precision argument determines the seconds precision of the returned value|  
 |CURTIME() (ODBC 3.0)|Returns the current local time.|  
-|DAYNAME( date_exp ) (ODBC 2.0)|Returns a character string that contains the data source–specific name of the day (for example, Sunday through Saturday or Sun. through Sat. for a data source that uses English, or Sonntag through Samstag for a data source that uses German) for the day part of date_exp.|  
-|DAYOFMONTH( date_exp ) (ODBC 1.0)|Returns the day of the month based on the month field in date_exp as an integer value in the range of 1–31.|  
-|DAYOFWEEK( date_exp ) (ODBC 1.0)|Returns the day of the week based on the week field in date_exp as an integer value in the range of 1–7, where 1 represents Sunday.|  
-|HOUR( time_exp ) (ODBC 1.0)|Returns the hour based on the hour field in time_exp as an integer value in the range of 0–23.|  
-|MINUTE( time_exp ) (ODBC 1.0)|Returns the minute based on the minute field in time_exp as an integer value in the range of 0–59.|  
-|SECOND( time_exp ) (ODBC 1.0)|Returns the second based on the second field in time_exp as an integer value in the range of 0–59.|  
-|MONTHNAME( date_exp ) (ODBC 2.0)|Returns a character string that contains the data source–specific name of the month (for example, January through December or Jan. through Dec. for a data source that uses English, or Januar through Dezember for a data source that uses German) for the month part of date_exp.|  
-|QUARTER( date_exp ) (ODBC 1.0)|Returns the quarter in date_exp as an integer value in the range of 1–4, where 1 represents January 1 through March 31.|  
-|WEEK( date_exp ) (ODBC 1.0)|Returns the week of the year based on the week field in date_exp as an integer value in the range of 1–53.|  
+|DAYNAME( date_exp ) (ODBC 2.0)|Returns a character string that contains the data source-specific name of the day (for example, Sunday through Saturday or Sun. through Sat. for a data source that uses English, or Sonntag through Samstag for a data source that uses German) for the day part of date_exp.|  
+|DAYOFMONTH( date_exp ) (ODBC 1.0)|Returns the day of the month based on the month field in date_exp as an integer value in the range of 1-31.|  
+|DAYOFWEEK( date_exp ) (ODBC 1.0)|Returns the day of the week based on the week field in date_exp as an integer value in the range of 1-7, where 1 represents Sunday.|  
+|HOUR( time_exp ) (ODBC 1.0)|Returns the hour based on the hour field in time_exp as an integer value in the range of 0-23.|  
+|MINUTE( time_exp ) (ODBC 1.0)|Returns the minute based on the minute field in time_exp as an integer value in the range of 0-59.|  
+|SECOND( time_exp ) (ODBC 1.0)|Returns the second based on the second field in time_exp as an integer value in the range of 0-59.|  
+|MONTHNAME( date_exp ) (ODBC 2.0)|Returns a character string that contains the data source-specific name of the month (for example, January through December or Jan. through Dec. for a data source that uses English, or Januar through Dezember for a data source that uses German) for the month part of date_exp.|  
+|QUARTER( date_exp ) (ODBC 1.0)|Returns the quarter in date_exp as an integer value in the range of 1-4, where 1 represents January 1 through March 31.|  
+|WEEK( date_exp ) (ODBC 1.0)|Returns the week of the year based on the week field in date_exp as an integer value in the range of 1-53.|  
   
 ## Examples  
   

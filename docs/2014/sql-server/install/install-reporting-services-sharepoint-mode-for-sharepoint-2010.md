@@ -85,7 +85,7 @@ manager: craigg
   
 9. Select the following on the **Feature Selection** page:  
   
-    -   **Reporting Services – SharePoint**  
+    -   **Reporting Services - SharePoint**  
   
     -   **Reporting Services add-in for SharePoint 2010 products**. ![note](../../../2014/reporting-services/media/rs-fyinote.png "note")The installation wizard option for installing the add-in is new with the [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] release.  
   

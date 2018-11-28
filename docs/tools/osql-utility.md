@@ -42,7 +42,7 @@ osql
 [-L] |  
 [  
   {  
-     {-Ulogin_id [-Ppassword]} | –E }  
+     {-Ulogin_id [-Ppassword]} | -E }  
      [-Sserver_name[\instance_name]] [-Hwksta_name] [-ddb_name]  
      [-ltime_out] [-ttime_out] [-hheaders]  
      [-scol_separator] [-wcolumn_width] [-apacket_size]  
@@ -106,7 +106,7 @@ C:\>osql
  Specifies the number of seconds before a command times out. If a *time_out* value is not specified, commands do not time out.  
   
  **-h** *headers*  
- Specifies the number of rows to print between column headings. The default is to print headings one time for each set of query results. Use -1 to specify that no headers will be printed. If –1 is used, there must be no space between the parameter and the setting (**-h-1**, not **-h -1**).  
+ Specifies the number of rows to print between column headings. The default is to print headings one time for each set of query results. Use -1 to specify that no headers will be printed. If -1 is used, there must be no space between the parameter and the setting (**-h-1**, not **-h -1**).  
   
  **-s** *col_separator*  
  Specifies the column-separator character, which is a blank space by default. To use characters that have special meaning to the operating system (for example, | ; & < >), enclose the character in double quotation marks (").  

@@ -65,11 +65,11 @@ For more information about syntax and examples, see [Analysis Services PowerShel
   
  Connections to Analysis Services are characterized as either native connections or HTTP connections. A native connection is a direct connection from a client application to the server. In a PowerShell session, the PowerShell client uses the OLE DB provider for Analysis Services to connect directly to an Analysis Services instance. A native connection is always made using Windows integrated security, where Analysis Services PowerShell executes as the current user. Analysis Services does not support impersonation. If you want to perform an operation as a specific user, you must start the PowerShell session as that user.  
   
- HTTP connections are made indirectly through IIS, allowing for additional authentication options, such as Basic authentication, to connect to an Analysis Services instance. Because IIS supports impersonation, you can provide a connection string that includes credentials IIS will use to impersonate when making a connection. To provide credentials, you can use the –Credential parameter.  
+ HTTP connections are made indirectly through IIS, allowing for additional authentication options, such as Basic authentication, to connect to an Analysis Services instance. Because IIS supports impersonation, you can provide a connection string that includes credentials IIS will use to impersonate when making a connection. To provide credentials, you can use the -Credential parameter.  
   
- **Using the –Credential Parameter in PowerShell**  
+ **Using the -Credential Parameter in PowerShell**  
   
- The –Credential parameter takes a PSCredential object that specifies a user name and password. In Analysis Services PowerShell, the –Credential parameter is available for cmdlets that make a connection request to Analysis Services, as opposed to cmdlets that run within the context of an existing connection. Cmdlets that make a connection request include Invoke-ASCmd, Backup-ASDatabase, and Restore-ASDatabase. For these cmdlets, the –Credential parameter can be used, assuming the following criteria are met:  
+ The -Credential parameter takes a PSCredential object that specifies a user name and password. In Analysis Services PowerShell, the -Credential parameter is available for cmdlets that make a connection request to Analysis Services, as opposed to cmdlets that run within the context of an existing connection. Cmdlets that make a connection request include Invoke-ASCmd, Backup-ASDatabase, and Restore-ASDatabase. For these cmdlets, the -Credential parameter can be used, assuming the following criteria are met:  
   
 1.  The server is configured for HTTP access, which means that IIS handles the connection, reads the user name and password, and impersonates that user identity when connecting to Analysis Services. For more information, see [Configure HTTP Access to Analysis Services on Internet Information Services &#40;IIS&#41; 8.0](instances/configure-http-access-to-analysis-services-on-iis-8-0.md).  
   
@@ -81,7 +81,7 @@ For more information about syntax and examples, see [Analysis Services PowerShel
   
 ```  
 PS SQLSERVER:\SQLAS\HTTP_DS> $cred = Get-credential adventureworks\dbadmin  
-PS SQLSERVER:\SQLAS\HTTP_DS> Invoke-ASCmd –Inputfile:"c:\discoverconnections.xmla" –Credential:$cred  
+PS SQLSERVER:\SQLAS\HTTP_DS> Invoke-ASCmd -Inputfile:"c:\discoverconnections.xmla" -Credential:$cred  
 ```  
   
  When using Basic authentication, you should always use HTTPS with SSL so that username and passwords are sent over an encrypted connection. For more information, see [Configure Secure Sockets Layer in IIS 7.0](http://go.microsoft.com/fwlink/?linkID=184299) and [Configure Basic Authentication (IIS 7)](http://go.microsoft.com/fwlink/?LinkId=230776).  
@@ -132,7 +132,7 @@ PS SQLSERVER:\SQLAS\Localhost\default> Remove-Variable -Name pwd
     Import-module "sqlps"  
     ```  
   
-     Alternatively, use `import-module "sqlps" –disablenamechecking` to suppress the warning about unapproved verb names.  
+     Alternatively, use `import-module "sqlps" -disablenamechecking` to suppress the warning about unapproved verb names.  
   
 -   To load just the task-specific Analysis Services cmdlets, without the Analysis Services provider or the Invoke-ASCmd cmdlet, you can load the SQLASCmdlets module as an independent operation.  
   
@@ -240,28 +240,28 @@ Restart-service mssqlserverolapservice
 2.  `Get-command` returns a list of the eleven Analysis Services PowerShell cmdlets:  
   
     ```  
-    get-command –module SQLASCmdlets  
+    get-command -module SQLASCmdlets  
     ```  
   
 3.  `Get-member` returns properties or methods of a service or process.  
   
     ```  
-    Get-service mssqlserverolapservice | get-member –type Property  
+    Get-service mssqlserverolapservice | get-member -type Property  
     ```  
   
     ```  
-    Get-service mssqlserverolapservice | get-member –type Method  
+    Get-service mssqlserverolapservice | get-member -type Method  
     ```  
   
     ```  
-    Get-process msmdsrv | get-member –type Property  
+    Get-process msmdsrv | get-member -type Property  
     ```  
   
 4.  `Get-member` can also be used to return properties or methods of an object (for example, AMO methods on the server object) using the SQLAS provider to specify the server instance.  
   
     ```  
     PS SQLSERVER:\sqlas\localhost\default > $serverObj = New-Object Microsoft.AnalysisServices.Server  
-    PS SQLSERVER:\sqlas\localhost\default > $serverObj = | get-member –type Method  
+    PS SQLSERVER:\sqlas\localhost\default > $serverObj = | get-member -type Method  
     ```  
   
 5.  `Get-PSdrive` returns a list of the providers that are currently installed. If you imported the SQLPS module, you will see the `SQLServer` provider in the list (SQLAS is part of the SQLServer provider and never appears separately in the list):  

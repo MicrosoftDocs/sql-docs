@@ -76,8 +76,8 @@ manager: craigg
   
  For more information about reverting to the previous context, see [REVERT &#40;Transact-SQL&#41;](../../t-sql/statements/revert-transact-sql.md).  
   
- COOKIE INTO **@***varbinary_variable*  
- Specifies the execution context can only be reverted back to the previous context if the calling REVERT WITH COOKIE statement contains the correct **@***varbinary_variable* value. The [!INCLUDE[ssDE](../../includes/ssde-md.md)] passes the cookie to **@***varbinary_variable*. The **COOKIE INTO** option can only be used at the adhoc level.  
+ COOKIE INTO **@**_varbinary_variable_  
+ Specifies the execution context can only be reverted back to the previous context if the calling REVERT WITH COOKIE statement contains the correct **@**_varbinary_variable_ value. The [!INCLUDE[ssDE](../../includes/ssde-md.md)] passes the cookie to **@**_varbinary_variable_. The **COOKIE INTO** option can only be used at the adhoc level.  
   
  **@** *varbinary_variable* is **varbinary(8000)**.  
   

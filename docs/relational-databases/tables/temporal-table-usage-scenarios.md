@@ -130,9 +130,9 @@ FROM Employee
   
 > [!TIP]  
 >  Filtering conditions specified in temporal clauses with FOR SYSTEM_TIME are SARG-able (i.e SQL Server can utilize underlying clustered index to perform a seek instead of a scan operation.   
-> If you query the history table directly, make sure that your filtering condition is also SARG-able by specifying filters in form of \<period column>  {< | > | =, …} date_condition AT TIME ZONE 'UTC'.  
+> If you query the history table directly, make sure that your filtering condition is also SARG-able by specifying filters in form of \<period column>  {< | > | =, ...} date_condition AT TIME ZONE 'UTC'.  
 > If you apply AT TIME ZONE to period columns, SQL Server will perform a table/index scan, which can be very expensive. Avoid this type of condition in your queries:  
-> \<period column>  AT TIME ZONE '\<your time zone>'  >  {< | > | =, …} date_condition.  
+> \<period column>  AT TIME ZONE '\<your time zone>'  >  {< | > | =, ...} date_condition.  
   
  See also: [Querying Data in a System-Versioned Temporal Table](../../relational-databases/tables/querying-data-in-a-system-versioned-temporal-table.md).  
   

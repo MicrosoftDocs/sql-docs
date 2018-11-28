@@ -52,19 +52,19 @@ DENY permission  [ ,...n ] ON
  *permission*  
  Specifies a permission that can be denied on a [!INCLUDE[ssSB](../../includes/sssb-md.md)] securable. For a list of the permissions, see the Remarks section later in this topic.  
   
- CONTRACT **::***contract_name*  
+ CONTRACT **::**_contract_name_  
  Specifies the contract on which the permission is being denied. The scope qualifier **::** is required.  
   
- MESSAGE TYPE **::***message_type_name*  
+ MESSAGE TYPE **::**_message_type_name_  
  Specifies the message type on which the permission is being denied. The scope qualifier **::** is required.  
   
- REMOTE SERVICE BINDING **::***remote_binding_name*  
+ REMOTE SERVICE BINDING **::**_remote_binding_name_  
  Specifies the remote service binding on which the permission is being denied. The scope qualifier **::** is required.  
   
- ROUTE **::***route_name*  
+ ROUTE **::**_route_name_  
  Specifies the route on which the permission is being denied. The scope qualifier **::** is required.  
   
- SERVICE **::***message_type_name*  
+ SERVICE **::**_message_type_name_  
  Specifies the service on which the permission is being denied. The scope qualifier **::** is required.  
   
  *database_principal*  

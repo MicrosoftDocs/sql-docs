@@ -76,8 +76,8 @@ out Int32 HRESULT);
 |LocalSystem|Local System|\<Domain>\\<ComputerName\>$|  
 |(S-1-5-20)|Network Service|\<Domain>\\<ComputerName\>$|  
 |NT AUTHORITY\NetworkService|Network Service|\<Domain>\\<ComputerName\>$|  
-|(S-1-5-19)|Local Service|Error – see below.|  
-|NT AUTHORITY\LocalService|Local Service|Error – see below.|  
+|(S-1-5-19)|Local Service|Error - see below.|  
+|NT AUTHORITY\LocalService|Local Service|Error - see below.|  
   
  On [!INCLUDE[win2kfamily](../../includes/win2kfamily-md.md)], if you are using a built-in account and the report server database is remote, an error is returned.  
   

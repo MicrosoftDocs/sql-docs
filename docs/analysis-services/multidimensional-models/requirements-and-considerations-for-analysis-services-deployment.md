@@ -44,7 +44,7 @@ manager: kfile
  Cubes that have large fact tables require more disk space than cubes that have small fact tables. Similarly, although to a lesser extent, cubes that have many large dimensions require more disk space than cubes that have fewer dimension members. Generally, you can expect that an [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] database will require approximately 20 percent of the amount of space required for the same data stored in the underlying relational database.  
   
  Aggregations  
- Aggregations require additional space proportional to aggregations added—the more aggregations there are, the more space is required. If you avoid creating unneeded aggregations, the additional disk space that is needed for aggregations typically should not exceed approximately 10 percent of the size of the data that is stored in the underlying relational database.  
+ Aggregations require additional space proportional to aggregations added-the more aggregations there are, the more space is required. If you avoid creating unneeded aggregations, the additional disk space that is needed for aggregations typically should not exceed approximately 10 percent of the size of the data that is stored in the underlying relational database.  
   
  Data Mining  
  By default, mining structures cache to disk the dataset with which they are trained. To remove this cached data from the disk, you can use the **Process Clear Structure** processing option on the mining structure object. For more information, see [Processing Requirements and Considerations &#40;Data Mining&#41;](../../analysis-services/data-mining/processing-requirements-and-considerations-data-mining.md).  

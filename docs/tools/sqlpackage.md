@@ -267,7 +267,7 @@ A SqlPackage.exe Export action exports a live database from SQL Server or Azure 
   
 ## Import Parameters and Properties
 
-A SqlPackage.exe Import action imports the schema and table data from a BACPAC package - .bacpac file – into a new or empty database in SQL Server or Azure SQL Database. At the time, of the import operation to an existing database, the target database cannot contain any user-defined schema objects.  
+A SqlPackage.exe Import action imports the schema and table data from a BACPAC package - .bacpac file - into a new or empty database in SQL Server or Azure SQL Database. At the time, of the import operation to an existing database, the target database cannot contain any user-defined schema objects.  
   
 ### Help for command actions
 

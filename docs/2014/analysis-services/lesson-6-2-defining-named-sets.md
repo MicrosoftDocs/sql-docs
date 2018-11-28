@@ -62,7 +62,7 @@ manager: craigg
     Exists([Reseller].[Reseller Name].[Reseller Name].Members)  
     ```  
   
-     Now that you have defined the first set for the Exists set expression, you are ready to add the second set—the set of members of the Reseller dimension that contains the largest number of employees.  
+     Now that you have defined the first set for the Exists set expression, you are ready to add the second set-the set of members of the Reseller dimension that contains the largest number of employees.  
   
 7.  On the **Metadata** tab in the **Calculation Tools** pane, expand **Number of Employees** in the Reseller dimension, expand `Members`, and then expand **All Resellers**.  
   

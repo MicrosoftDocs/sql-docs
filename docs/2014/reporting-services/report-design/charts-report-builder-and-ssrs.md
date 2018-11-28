@@ -35,7 +35,7 @@ manager: craigg
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
 ##  <a name="DesigningChart"></a> Designing a Chart  
- After you add a chart data region to the design surface, you can drag report dataset fields for numeric and non-numeric data to the Chart Data pane of the chart. When you click the chart on the design surface, the Chart Data pane appears, with three areas—Category Groups, Series Groups, and Values. If the report has a shared or embedded dataset, the fields in the dataset appear in the Report Data pane. Drag fields from the dataset into the appropriate area. By default, when a field is added to one of the areas of the chart, [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] calculates an aggregate for the field. You can also use series grouping to dynamically generate series. The chart is also closely related to the matrix.  
+ After you add a chart data region to the design surface, you can drag report dataset fields for numeric and non-numeric data to the Chart Data pane of the chart. When you click the chart on the design surface, the Chart Data pane appears, with three areas-Category Groups, Series Groups, and Values. If the report has a shared or embedded dataset, the fields in the dataset appear in the Report Data pane. Drag fields from the dataset into the appropriate area. By default, when a field is added to one of the areas of the chart, [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] calculates an aggregate for the field. You can also use series grouping to dynamically generate series. The chart is also closely related to the matrix.  
   
  ![rs_chartwSeriesCategories](../media/rs-chartwseriescategories.gif "rs_chartwSeriesCategories")  
   

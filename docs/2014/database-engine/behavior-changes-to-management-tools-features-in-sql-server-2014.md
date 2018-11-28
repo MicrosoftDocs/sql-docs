@@ -1,7 +1,7 @@
 ---
 title: "Behavior Changes to Management Tools Features in SQL Server 2014 | Microsoft Docs"
 ms.custom: ""
-ms.date: "06/13/2017"
+ms.date: "11/27/2018"
 ms.prod: "sql-server-2014"
 ms.technology: ssms
 ms.reviewer: ""
@@ -16,8 +16,13 @@ manager: craigg
   
 ## Behavior Changes in [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]  
  Information to come later.  
-  
+
+## <a name="previous-versions"></a> Archived Documentation for Very Old Versions of SQL Server
+
+[!INCLUDE[Archived documentation for very old versions of SQL Server](../includes/paragraph-content/previous-versions-archive-documentation-sql-server.md)]
+
 ## See Also  
  [Backward Compatibility](../../2014/getting-started/backward-compatibility.md)  
-  
+ [Breaking Changes to Management Tools Features in SQL Server 2014](breaking-changes-to-database-engine-features-in-sql-server-2016.md?view=sql-server-2014)
+
   

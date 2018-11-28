@@ -30,9 +30,9 @@ manager: craigg
   
 5.  In **Select the image source**, select **External**.  
   
-     For an image on a report server in native mode, type a relative path to the image in the **Use this image** box—for example, ../images/image1.jpg.  
+     For an image on a report server in native mode, type a relative path to the image in the **Use this image** box-for example, ../images/image1.jpg.  
   
-     For an image on a report server in SharePoint integrated mode, or any other Web site, type a full URL to the image in the **Use this image** box—for example, http://\<SharePointservername>/\<site>/Documents/images/image1.jpg.  
+     For an image on a report server in SharePoint integrated mode, or any other Web site, type a full URL to the image in the **Use this image** box-for example, http://\<SharePointservername>/\<site>/Documents/images/image1.jpg.  
   
      For more information, see [Specifying Paths to External Items &#40;Report Builder and SSRS&#41;](specifying-paths-to-external-items-report-builder-and-ssrs.md).  
   

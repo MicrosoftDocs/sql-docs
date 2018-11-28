@@ -46,7 +46,7 @@ manager: craigg
   
 2.  On the **Insert** tab, click **Text Box**. Click in the list, and then drag to create a box that is the size you want.  
   
-3.  Type a label in the text box — for example, **My Field**:.  
+3.  Type a label in the text box - for example, **My Field**:.  
   
 4.  Drag a field from your dataset into the text box. A placeholder is created for your field.  
   

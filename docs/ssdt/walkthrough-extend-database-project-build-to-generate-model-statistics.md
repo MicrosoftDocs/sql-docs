@@ -40,7 +40,7 @@ Build contributors are run during project build, after the model representing th
   
 -   Generating model statistics and reporting to the user. This is the example shown here.  
   
-The main entry point for build contributors is the OnExecute method. All classes inheriting from BuildContributor must implement this method. A BuildContributorContext object is passed to this method – this contains all the relevant data for the build, such as a model of the database, build properties, and arguments/files to be used by build contributors.  
+The main entry point for build contributors is the OnExecute method. All classes inheriting from BuildContributor must implement this method. A BuildContributorContext object is passed to this method - this contains all the relevant data for the build, such as a model of the database, build properties, and arguments/files to be used by build contributors.  
   
 **TSqlModel and the database model API**  
   
@@ -50,7 +50,7 @@ Here are some of the commands used by the example contributor in this walkthroug
   
 |**Class**|**Method/Property**|**Description**|  
 |-------------|------------------------|-------------------|  
-|[TSqlModel](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.model.tsqlmodel.aspx)|GetObjects()|Queries the model for objects, and is the main entry point to the model API. Only top-level types such as Table or View can be queried – types such as Columns can only be found by traversing the model. If no ModelTypeClass filters are specified then all top level types will be returned.|  
+|[TSqlModel](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.model.tsqlmodel.aspx)|GetObjects()|Queries the model for objects, and is the main entry point to the model API. Only top-level types such as Table or View can be queried - types such as Columns can only be found by traversing the model. If no ModelTypeClass filters are specified then all top level types will be returned.|  
 |[TSqlObject](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.model.tsqlobject.aspx)|GetReferencedRelationshipInstances()|Finds relationships to elements referenced by the current TSqlObject. For instance, for a table this will return objects like the Table's columns. In this case, a ModelRelationshipClass filter can be used to specify exact relationships to query (for instance using the "Table.Columns" filter would ensure only columns were returned).<br /><br />There are a number of similar methods, such as GetReferencingRelationshipInstances, GetChildren, and GetParent. See the API documentation for more information.|  
   
 **Uniquely Identifying your Contributor**  
@@ -62,7 +62,7 @@ During the build process, custom contributors are loaded from a standard extensi
   
 ```  
   
-In this case the first parameter to the attribute should be a unique identifier – this will be used to identify your contributor in project files. Best practice is to combine your library's namespace (in this walkthrough, "ExampleContributors") with the class name (in this walkthrough, "ModelStatistics") to produce the identifier. You will see how this namespace is used to specify that your contributor should be run later in the walkthrough.  
+In this case the first parameter to the attribute should be a unique identifier - this will be used to identify your contributor in project files. Best practice is to combine your library's namespace (in this walkthrough, "ExampleContributors") with the class name (in this walkthrough, "ModelStatistics") to produce the identifier. You will see how this namespace is used to specify that your contributor should be run later in the walkthrough.  
   
 ## <a name="CreateBuildContributor"></a>Create a Build Contributor  
 To create a build contributor, you must perform the following tasks:  

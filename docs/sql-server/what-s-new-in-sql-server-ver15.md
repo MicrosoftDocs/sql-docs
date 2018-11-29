@@ -23,7 +23,8 @@ monikerRange: ">=sql-server-ver15||=sqlallproducts-allversions"
 
 ## CTP 2.2
 
-Community technology preview (CTP) 2.2 is the latest public release of [!INCLUDE[sql-server-2019](..\includes\sssqlv15-md.md)]. The following features are added or enhanced for [!INCLUDE[sql-server-2019](..\includes\sssqlv15-md.md)] CTP 2.2.
+Community technology preview (CTP) 2.2 is the latest public release of [!INCLUDE[sql-server-2019](..\includes\sssqlv15-md.md)]. CTP 2.2 does not introduce and new features but includes fixes and minor optimizations. 
+<!--The following features are added or enhanced for [!INCLUDE[sql-server-2019](..\includes\sssqlv15-md.md)] CTP 2.2.-->
 
 ## Previous CTPs
 

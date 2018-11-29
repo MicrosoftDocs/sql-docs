@@ -66,7 +66,7 @@ After completing installation, your next step is [Configure external script exec
 
 To provide SQL Server with permissions to execute the Java classes, you need to set permissions.
 
-To grant read and execute access to jar files or class files, run the following **chmod** command on each class or jar file. We recommend putting your class files in a jar when you work with SQL Server.
+To grant read and execute access to jar files or class files, run the following **chmod** command on each class or jar file. We recommend putting your class files in a jar when you work with SQL Server. For help creating a jar, see [How to create a jar file](#create-jar).
 
 ```cmd
 chmod ug+rx <MyJarFile.jar>
@@ -84,17 +84,6 @@ chown mssql_satellite:mssql_satellite <directory>
 ```cmd
 chown mssql_satellite:mssql_satellite <MyJarFile.jar>
 ```
-
-### How to create a jar file from class files
-
-Navigate to the folder containing your class file and run this command:
-
-```cmd
-jar -cf <MyJar.jar> *.class
-```
-
-Make sure the path to **jar.exe** is part of the system path variable. Alternatively, specify the full path to jar which can be found under /bin in the JDK folder: `C:\Users\MyUser\Desktop\jdk-10.0.2\bin\jar -cf <MyJar.jar> *.class`
-
 
 <a name="install-on-windows"></a>
 
@@ -186,6 +175,18 @@ If you are already familiar with Machine Learning Services, the authorization an
 * Streaming using the sp_execute_external_script parameter @r_rowsPerRead is not supported in this CTP.
 
 * Partitioning using the sp_execute_external_script parameter @input_data_1_partition_by_columns is not supported in this CTP.
+
+<a name="create-jar"></a>
+
+## How to create a jar file from class files
+
+Navigate to the folder containing your class file and run this command:
+
+```cmd
+jar -cf <MyJar.jar> *.class
+```
+
+Make sure the path to **jar.exe** is part of the system path variable. Alternatively, specify the full path to jar which can be found under /bin in the JDK folder: `C:\Users\MyUser\Desktop\jdk-10.0.2\bin\jar -cf <MyJar.jar> *.class`
 
 ## Next steps
 

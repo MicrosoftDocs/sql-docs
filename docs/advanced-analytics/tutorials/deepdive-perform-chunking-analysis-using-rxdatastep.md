@@ -82,12 +82,12 @@ In this lesson, you use the **rxDataStep** function to process data in chunks, r
     iroResults
     ```
 
-**Partial results**
+    **Partial results**
 
-|      |    1  |   2   |  3   |  4   |  5  |   6   |  7 |
-| --- | ---  | --- | ---  |  ---  | ---  | ---  | --- |
-| 1 | 8228 | 8924 | 6916 | 6932 | 6944 | 5602 | 6454 |
-| 2  | 8321  | 5351 | 7329 | 7411 | 7409 | 6487 | 7692 |
+    |      |    1  |   2   |  3   |  4   |  5  |   6   |  7 |
+    | --- | ---  | --- | ---  |  ---  | ---  | ---  | --- |
+    | 1 | 8228 | 8924 | 6916 | 6932 | 6944 | 5602 | 6454 |
+    | 2  | 8321  | 5351 | 7329 | 7411 | 7409 | 6487 | 7692 |
 
 9. To compute the final results across all chunks, sum the columns, and display the results in the console.
 
@@ -96,11 +96,11 @@ In this lesson, you use the **rxDataStep** function to process data in chunks, r
     finalResults
     ```
 
- **Results**
+    **Results**
 
-  1  |   2  |   3  |   4  |   5  |   6  |   7
----  |   ---  |   ---  |   ---  |   ---  |   ---  |   ---
-97975 | 77725 | 78875 | 81304 | 82987 | 86159 | 94975 
+    1  |   2  |   3  |   4  |   5  |   6  |   7
+    ---  |   ---  |   ---  |   ---  |   ---  |   ---  |   ---
+    97975 | 77725 | 78875 | 81304 | 82987 | 86159 | 94975 
 
 10. To remove the intermediate results table, make a call to **rxSqlServerDropTable**.
   

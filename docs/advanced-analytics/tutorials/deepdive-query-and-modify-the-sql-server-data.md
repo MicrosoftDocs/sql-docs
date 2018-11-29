@@ -26,25 +26,25 @@ Use an R IDE or RGui.exe to run R script.
 
 First, get a list of the columns and their data types. You can use the function [rxGetVarInfo](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxgetvarinfoxdf) and specify the data source you want to analyze. Depending on your version of **RevoScaleR**, you could also use [rxGetVarNames](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxgetvarnames). 
   
-   ```R
-   rxGetVarInfo(data = sqlFraudDS)
-   ```
+```R
+rxGetVarInfo(data = sqlFraudDS)
+```
 
-  **Results**
-    
-    ```
-   Var 1: custID, Type: integer
-   Var 2: gender, Type: integer
-   Var 3: state, Type: integer
-   Var 4: cardholder, Type: integer
-   Var 5: balance, Type: integer
-   Var 6: numTrans, Type: integer
-   Var 7: numIntlTrans, Type: integer
-   Var 8: creditLine, Type: integer
-   Var 9: fraudRisk, Type: integer
-   ```
+**Results**
 
-## Modify metadata (strings to integers)
+```
+Var 1: custID, Type: integer
+Var 2: gender, Type: integer
+Var 3: state, Type: integer
+Var 4: cardholder, Type: integer
+Var 5: balance, Type: integer
+Var 6: numTrans, Type: integer
+Var 7: numIntlTrans, Type: integer
+Var 8: creditLine, Type: integer
+Var 9: fraudRisk, Type: integer
+```
+
+## Create categorical data from raw integers
 
 All the variables are stored as integers, but some variables represent categorical data, called *factor variables* in R. For example, the column *state* contains numbers used as identifiers for the 50 states plus the District of Columbia. To make it easier to understand the data, you replace the numbers with a list of state abbreviations.
 

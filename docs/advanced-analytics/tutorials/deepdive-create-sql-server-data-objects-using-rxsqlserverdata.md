@@ -24,11 +24,13 @@ From R, connect to SQL Server and use **RevoScaleR** functions to perform the fo
 
 Sample data is simulated credit card fraud data (the ccFraud dataset), partitioned into training and scoring datasets. The data file is included in **RevoScaleR**.
 
-### Create the training data table
-
 Use an R IDE or **Rgui** to complete these taks. Be sure to use the R executables found at this location: C:\Program Files\Microsoft\R Client\R_SERVER\bin\x64 (either Rgui.exe if you are using that tool, or an R IDE pointing to C:\Program Files\Microsoft\R Client\R_SERVER).
 
-1. Store the database connection string in an R variable. Here are two examples of valid ODBC connection strings for SQL Server: one using a SQL login, and one for Windows integrated authentication. Be sure to modify the server name, user name, and password as appropriate.
+## Create the training data table
+
+1. Store the database connection string in an R variable. Below are two examples of valid ODBC connection strings for SQL Server: one using a SQL login, and one for Windows integrated authentication. 
+
+   Be sure to modify the server name, user name, and password as appropriate.
 
     **SQL login**
     ```R

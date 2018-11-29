@@ -73,29 +73,23 @@ From the **boot** package, use the  function **inv.logit**, which computes the i
   
 6. Call **rxGetVarInfo** to view a summary of the variables in the new data set.
   
-    ```R
-    rxGetVarInfo(sqlOutScoreDS2)
-    ```
+```R
+rxGetVarInfo(sqlOutScoreDS2)
+```
 
-    **Results**
-    
-    *Var 1: ccFraudLogitScore, Type: numeric*
-    
-    *Var 2: state, Type: character*
-    
-    *Var 3: gender, Type: character*
-    
-    *Var 4: cardholder, Type: character*
-    
-    *Var 5: balance, Type: integer*
-    
-    *Var 6: numTrans, Type: integer*
-    
-    *Var 7: numIntlTrans, Type: integer*
-    
-    *Var 8: creditLine, Type: integer*
-    
-    *Var 9: ccFraudProb, Type: numeric*
+**Results**
+
+```
+Var 1: ccFraudLogitScore, Type: numeric
+Var 2: state, Type: character
+Var 3: gender, Type: character
+Var 4: cardholder, Type: character
+Var 5: balance, Type: integer
+Var 6: numTrans, Type: integer
+Var 7: numIntlTrans, Type: integer
+Var 8: creditLine, Type: integer
+Var 9: ccFraudProb, Type: numeric
+```
 
 The original logit scores are preserved, but a new column, *ccFraudProb*, has been added, in which the logit scores are represented as values between 0 and 1.
 

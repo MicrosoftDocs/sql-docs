@@ -72,14 +72,17 @@ CREATE USER [DDUser01] FOR LOGIN [DDUser01] WITH DEFAULT_SCHEMA=[db_datareader]
 
 This tutorial demonstrates R script and DDL operations, including creating and deleting tables and stored procedures, and running R script in an external process on SQL Server. In this step, assign permssions to a database user login used for performing these tasks.
 
+This example assumes a SQL login (DDUser01), but if you created a Windows login, use that instead.
+
 ```SQL
 USE RevoDeepDive
 GO
 
-EXEC sp_addrolemember 'db_owner', '[UserName]'
-GRANT EXECUTE ANY EXTERNAL SCRIPT TO [UserName]
+EXEC sp_addrolemember 'db_owner', 'DDUser01'
+GRANT EXECUTE ANY EXTERNAL SCRIPT TO DDUser01
 GO
 ```
+
 ## Troubleshoot connections
 
 This section lists some common issues that you might run across in the course of setting up the database.

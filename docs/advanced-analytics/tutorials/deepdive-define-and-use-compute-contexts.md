@@ -33,7 +33,7 @@ The **RxInSqlServer** function that creates the SQL Server compute context uses 
 
 This section walks you through each part.
 
-1. Specify the connection string for the instance where computations are performed.  You can re-use the connection string that you created earlier. You can create a different connection string if you want to move the computations to a different server, or use a different login to perform some tasks.
+1. Specify the connection string for the instance where computations are performed. You can re-use the connection string that you created earlier.
 
     **Using a SQL login**
 
@@ -47,7 +47,7 @@ This section walks you through each part.
     sqlConnString <- "Driver=SQL Server;Server=instance_name;Database=RevoDeepDive;Trusted_Connection=True"
     ```
     
-2. Specify how you want the output handled. In the following code, you are indicating that the R session on the workstation should always wait for R job results, but not return console output from remote computations.
+2. Specify how you want the output handled. The following script directs the local R session to wait for R job results on the server before processing the next operation. It also suppresses output from remote computations from appearing in the local session.
   
     ```R
     sqlWait <- TRUE
@@ -60,7 +60,7 @@ This section walks you through each part.
   
     -   **FALSE**. Jobs are configured as non-blocking and return immediately, allowing you to continue running other R code. However, even in non-blocking mode, the client connection with [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] must be maintained while the job is running.
 
-3. Optionally, you can specify the location of a local directory for shared use by the local R session and by the remote [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] computer and its accounts.
+3. Optionally, specify the location of a local directory for shared use by the local R session and by the remote [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] computer and its accounts.
 
     ```R
     sqlShareDir <- paste("c:\\AllShare\\", Sys.getenv("USERNAME"), sep="")
@@ -72,7 +72,7 @@ This section walks you through each part.
     dir.create(sqlShareDir, recursive = TRUE)
     ```
 
-4. Having prepared all the variables, provide them as arguments to the **RxInSqlServer** constructor, to create the *compute context object*.
+4. Pass arguments to the **RxInSqlServer** constructor to create the *compute context object*.
 
     ```R
     sqlCompute <- RxInSqlServer(  
@@ -89,13 +89,13 @@ This section walks you through each part.
     
     Defining a compute context does not affect any other generic R computations that you might perform on your workstation, and does not change the source of the data. For example, you could define a local text file as the data source but change the compute context to SQL Server and do all your reading and summaries on the data on the SQL Server computer.
 
-5. Set the compute context to the remote server. 
+5. Activate the remote server. 
 
     ```R
     rxSetComputeContext(sqlCompute)
     ```
 
-6. To return information about the compute context, including its properties:
+6. Return information about the compute context, including its properties:
 
     ```R
     rxGetComputeContext()

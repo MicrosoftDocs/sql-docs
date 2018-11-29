@@ -4,7 +4,7 @@ description: "Describes auto statistics feature introduced in Analytics Platform
 author: "mzaman1" 
 manager: "craigg"	  
 ms.prod: "sql"
-ms.technology: "data-warehouse"
+ms.technology: data-warehouse
 ms.topic: "conceptual"
 ms.date: "06/27/2018"
 ms.author: "murshedz"

@@ -75,7 +75,7 @@ GO
 SELECT   
         CASE enqueued_count WHEN 0   
                 THEN 'No jobs posted'   
-                ELSE CAST((enqueue_failed_full_count + enqueue_failed_duplicate_count) / CAST(enqueued_count AS float) * 100 AS varchar(20))   
+                ELSE CAST((enqueue_failed_full_count + enqueue_failed_duplicate_count) / CAST(enqueued_count + enqueue_failed_full_count + enqueue_failed_duplicate_count AS float) * 100 AS varchar(20))   
         END AS [Percent Enqueue Failed]  
 FROM sys.dm_exec_background_job_queue_stats;  
 GO  

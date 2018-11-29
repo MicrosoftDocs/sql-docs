@@ -164,7 +164,7 @@ ms.author: maghan
   
 -   The values under \<Explicit> will contain the SPNs configured in Active Directory for the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] service account.  
   
- If you do not want continue using Extended Protection, then set the configuration values back to defaults and restart the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Service account.  
+ If you do not want to continue using Extended Protection, then set the configuration values back to defaults and restart the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Service account.  
   
 ```  
 <RSWindowsExtendedProtectionLevel>Off</RSWindowsExtendedProtectionLevel>  

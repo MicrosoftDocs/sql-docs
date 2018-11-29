@@ -108,7 +108,7 @@ ALTER ASSEMBLY assembly_name
   
  For more information, see [Implementing Assemblies](../../relational-databases/clr-integration/assemblies-implementing.md).  
   
- [ DROP FILE { *file_name*[ **,***...n*] | ALL } ]  
+ [ DROP FILE { *file_name*[ **,**_...n_] | ALL } ]  
  Removes the file name associated with the assembly, or all files associated with the assembly, from the database. If used with ADD FILE that follows, DROP FILE executes first. This lets you to replace a file with the same file name.  
   
 > [!NOTE]  

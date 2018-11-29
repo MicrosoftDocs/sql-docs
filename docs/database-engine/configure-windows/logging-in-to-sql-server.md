@@ -59,7 +59,7 @@ manager: craigg
 |Connection to a named instance by specifying both the IP address and the TCP port that is being used, in this case 2828.|192.168.17.28\SQLEXPRESS,2828|  
 |Connecting to default instance by name, forcing a TCP connection.|tcp:APPHOST|  
 |Connecting to named instance by name, forcing a TCP connection.|tcp:APPHOST\SQLEXPRESS|  
-|Connecting to a default instance by specifying a named pipe name.|\\\APPHOST\pipe\unit\app|  
+|Connecting to a default instance by specifying a named pipe name.|\\\APPHOST\pipe\SQL\query|  
 |Connecting to a named instance by specifying a named pipe name.|\\\APPHOST\pipe\MSSQL$SQLEXPRESS\SQL\query|  
 |Connecting to default instance by name, forcing a named pipes connection.|np:APPHOST|  
 |Connecting to named instance by name, forcing a named pipes connection.|np:APPHOST\SQLEXPRESS|  

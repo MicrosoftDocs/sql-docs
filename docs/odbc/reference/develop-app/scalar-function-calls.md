@@ -37,7 +37,7 @@ SELECT {fn SUBSTRING(Name, 1, CHARINDEX(',', Name) - 1)} FROM Customers
   
  For maximum interoperability, applications should use the **CONVERT** scalar function to make sure that the output of a scalar function is the required type. The **CONVERT** function converts data from one SQL data type to the specified SQL data type. The syntax of the **CONVERT** function is  
   
- **CONVERT(** *value_exp* **,** *data_type***)**  
+ **CONVERT(** *value_exp* **,** _data_type_**)**  
   
  where *value_exp* is a column name, the result of another scalar function, or a literal value, and *data_type* is a keyword that matches the **#define** name that is used by an SQL data type identifier as defined in [Appendix D: Data Types](../../../odbc/reference/appendixes/appendix-d-data-types.md). For example, the following SQL statement uses the **CONVERT** function to make sure that the output of the **CURDATE** function is a date, instead of a timestamp or character data:  
   

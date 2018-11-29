@@ -1,7 +1,7 @@
-﻿---
+---
 title: Common issues with Launchpad service and external script execution in SQL Server| Microsoft Docs
 ms.prod: sql
-ms.technology: mlserver
+ms.technology: 
 ms.date: 05/31/2018  
 ms.topic: conceptual
 author: HeidiSteen
@@ -11,7 +11,7 @@ manager: cgronlun
 # Common issues with Launchpad service and external script execution in SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
- SQL Server Trusted Launchpad service supports external script execution for R and Python. On SQL Server 2016 R Services, SP1 provides the service. SQL Server 2017 includes the Launchpad ervice as part of the intitial installation.
+ SQL Server Trusted Launchpad service supports external script execution for R and Python. On SQL Server 2016 R Services, SP1 provides the service. SQL Server 2017 includes the Launchpad service as part of the initial installation.
 
 Multiple issues can prevent Launchpad from starting, including configuration problems or changes, or missing network protocols. This article provides troubleshooting guidance for many issues. For any we missed, you can post questions to the [Machine Learning Server forum](https://social.msdn.microsoft.com/Forums/en-US/home?category=MicrosoftR).
 

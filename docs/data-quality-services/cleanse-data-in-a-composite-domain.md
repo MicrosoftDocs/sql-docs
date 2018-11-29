@@ -5,8 +5,7 @@ ms.date: "03/01/2017"
 ms.prod: sql
 ms.prod_service: "data-quality-services"
 ms.reviewer: ""
-ms.technology: 
-  - "data-quality-services"
+ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 7d1076e0-7710-469a-9107-e293e4bd80ac
 author: "douglaslMS"

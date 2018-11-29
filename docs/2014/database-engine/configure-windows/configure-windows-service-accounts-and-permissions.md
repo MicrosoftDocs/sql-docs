@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "11/21/2016"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "database-engine"
+ms.technology: configuration
 ms.topic: conceptual
 helpviewer_keywords: 
   - "startup service states [SQL Server]"
@@ -658,11 +657,11 @@ manager: craigg
 |Language|Name for Local Service|Name for Network Service|Name for Local System|Name for Admin Group|  
 |--------------|----------------------------|------------------------------|---------------------------|--------------------------|  
 |English<br /><br /> Simplified Chinese<br /><br /> Traditional Chinese<br /><br /> Korean<br /><br /> Japanese|NT AUTHORITY\LOCAL SERVICE|NT AUTHORITY\NETWORK SERVICE|NT AUTHORITY\SYSTEM|BUILTIN\Administrators|  
-|German|NT-AUTORITÄT\LOKALER DIENST|NT-AUTORITÄT\NETZWERKDIENST|NT-AUTORITÄT\SYSTEM|VORDEFINIERT\Administratoren|  
-|French|AUTORITE NT\SERVICE LOCAL|AUTORITE NT\SERVICE RÉSEAU|AUTORITE NT\SYSTEM|BUILTIN\Administrators|  
+|German|NT-AUTORIT??T\LOKALER DIENST|NT-AUTORIT??T\NETZWERKDIENST|NT-AUTORIT??T\SYSTEM|VORDEFINIERT\Administratoren|  
+|French|AUTORITE NT\SERVICE LOCAL|AUTORITE NT\SERVICE R??SEAU|AUTORITE NT\SYSTEM|BUILTIN\Administrators|  
 |Italian|NT AUTHORITY\SERVIZIO LOCALE|NT AUTHORITY\SERVIZIO DI RETE|NT AUTHORITY\SYSTEM|BUILTIN\Administrators|  
 |Spanish|NT AUTHORITY\SERVICIO LOC|NT AUTHORITY\SERVICIO DE RED|NT AUTHORITY\SYSTEM|BUILTIN\Administradores|  
-|Russian|NT AUTHORITY\LOCAL SERVICE|NT AUTHORITY\NETWORK SERVICE|NT AUTHORITY\SYSTEM|BUILTIN\Администраторы|  
+|Russian|NT AUTHORITY\LOCAL SERVICE|NT AUTHORITY\NETWORK SERVICE|NT AUTHORITY\SYSTEM|BUILTIN\????????????????????????????|  
   
 ## Related Content  
  [Security Considerations for a SQL Server Installation](../../sql-server/install/security-considerations-for-a-sql-server-installation.md)  

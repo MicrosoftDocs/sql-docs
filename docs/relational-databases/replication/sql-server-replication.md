@@ -28,7 +28,7 @@ manager: craigg
 - SQL Server 2017 has not introduced significant new features to SQL Server replication. 
 - SQL Server 2016 has not introduced significant new features to SQL Server replication. 
 
-For backward compatibility information see, [Replication Backward Compatibility](backward-compatibility.md) 
+For backward compatibility information see, [Replication Backward Compatibility](replication-backward-compatibility.md) 
 
 
  ## Replication security

@@ -191,8 +191,6 @@
             href: initialize-a-transactional-subscription-without-a-snapshot.md
           - name: Initialize a Subscription with a Snapshot
             href: initialize-a-subscription-with-a-snapshot.md
-          - name: Executing scripts before and after snapshot
-            href: execute-scripts-before-and-after-a-snapshot-is-applied.md
           - name: Merge publication with parameterized filters
             href: create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md
           - name: Reinitialize Subscriptions

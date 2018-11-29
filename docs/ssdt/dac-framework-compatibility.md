@@ -17,5 +17,5 @@ When you attempt an action that uses the DAC Framework, SQL Server Data Tools (S
   
 **Incompatible versions of SQL Server Data Tools and database runtime components are installed on this computer**  
   
-You can download a newer version of SSDT from [Install Latest SQL Server Data Tools](https://go.microsoft.com/fwlink/?LinkID=616714).  
+You can download a newer version of SSDT from [Install Latest SQL Server Data Tools](https://docs.microsoft.com/sql/ssdt/download-sql-server-data-tools-ssdt).  
   

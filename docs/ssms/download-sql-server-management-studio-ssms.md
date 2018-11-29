@@ -66,7 +66,7 @@ For additional details about SSMS 17.9.1, please see the [SSMS 17.9.1 changelog]
 * Take the following actions to reduce the chances of SSMS setup requiring a reboot at the end of installation:
   * Make sure you are running an up-to-date version of the Visual C++ 2013 Redistributable Package. Version 12.0.40649.5 (or greater) is required. Only the x64 version is needed.
   * Verify the version of .NET Framework on the computer is 4.6.1 (or greater).
-  * Close all instances of Visual Studio that are open on the computer.
+  * Close every instance of Visual Studio that are open on the computer.
   * Make sure all the latest OS updates are installed on the computer.
   * The noted actions are typically required only once. There are few cases where a reboot is required during additional upgrades to the same major version of SSMS. For minor upgrades, all the prerequisites for SSMS are already installed on the computer.
 

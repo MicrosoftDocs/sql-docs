@@ -101,7 +101,7 @@
     items:
     - name: Create partition-based models
       href: tutorials/r-tutorial-create-models-per-partition.md
-    - name: Create a simple simulation
+    - name: Run custom R function on SQL
       href: tutorials/r-tutorial-create-a-simple-simulation.md
     - name: Learn in-database analytics
       href: tutorials/sqldev-in-database-r-for-sql-developers.md

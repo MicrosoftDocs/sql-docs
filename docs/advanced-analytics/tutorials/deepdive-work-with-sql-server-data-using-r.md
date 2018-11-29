@@ -14,31 +14,28 @@ manager: cgronlun
 
 This lesson is part of the [RevoScaleR tutorial](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md) on how to use [RevoScaleR functions](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) with SQL Server.
 
-In this lesson, use [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms) or another query editor to complete these tasks using T-SQL:
+Lesson one is about setting up a SQL Server database and permissions necessary for completing this tutorial. Use [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms) or another query editor to complete the following tasks:
 
 > [!div class="checklist"]
 > * Create a new database to store the data for training and scoring two R models
-> * Create an account (either a Windows user or SQL login) to use when communicating between your workstation and the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] computer
+> * Create a database user login with permissions for creating and using database objects
   
-## Create the database and user
+## Create the database
 
-For this walkthrough, create a new database in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], and add a SQL login with permissions to write and read data, and to run R scripts.
+This tutorial requires a database for storing data and code. If you are not an administrator, ask your DBA to create the database and login for you. You will need permissions to write and read data, and to run R scripts.
 
-> [!NOTE]
-> If you are only reading data, the account that runs the R scripts requires SELECT permissions (**db_datareader** role) on the specified database. However, in this tutorial, you must have DDL admin privileges to prepare the database, and to create tables for saving the scoring results.
-> 
-> Additionally, if you are not the database owner, you need the permission, EXECUTE ANY EXTERNAL SCRIPT, in order to execute R scripts.
+1. In SQL Server Management Studio, connect to an R-enabled database instance.
 
-1. In [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], select the instance where [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)] is enabled, right-click **Databases**, and select **New database**.
+2. Right-click **Databases**, and select **New database**.
   
-2. Type a name for the new database. You can use any name you want; just remember to edit all the [!INCLUDE[tsql](../../includes/tsql-md.md)] scripts and R scripts in this walkthrough accordingly.
+2. Type a name for the new database: RevoDeepDive.
   
-    > [!TIP]
-    > To view the updated database name, right-click **Databases** and select **Refresh** .
+
+## Create a login
   
-3. Click **New Query**, and change the database context to  the master database.
+1. Click **New Query**, and change the database context to  the master database.
   
-4. In the new **Query** window, run the following commands to create the user accounts and assign them to the database used for this tutorial. Be sure to change the database name if needed.
+2. In the new **Query** window, run the following commands to create the user accounts and assign them to the database used for this tutorial. Be sure to change the database name if needed.
   
 **Windows user**
   
@@ -60,17 +57,30 @@ CREATE USER [<user_name>] FOR LOGIN [<DOMAIN>\<user_name>] WITH DEFAULT_SCHEMA=[
 -- Create new SQL login
 USE master
 GO
-CREATE LOGIN DDUser01 WITH PASSWORD='<type password here>', CHECK_EXPIRATION=OFF, CHECK_POLICY=OFF;
+CREATE LOGIN [DDUser01] WITH PASSWORD='<type password here>', CHECK_EXPIRATION=OFF, CHECK_POLICY=OFF;
 
 -- Add the new SQL login to tutorial database
-USE [RevoDeepDive]
+USE RevoDeepDive
 GO
 CREATE USER [DDUser01] FOR LOGIN [DDUser01] WITH DEFAULT_SCHEMA=[db_datareader]
 ```
 
 5. To verify that the user has been created, select the new database, expand **Security**, and expand **Users**.
 
-## Troubleshooting connection problems
+
+## Assign permissions
+
+This tutorial demonstrates R script and DDL operations, including creating and deleting tables and stored procedures, and running R script in an external process on SQL Server. In this step, assign permssions to a database user login used for performing these tasks.
+
+```SQL
+USE RevoDeepDive
+GO
+
+EXEC sp_addrolemember 'db_owner', '[UserName]'
+GRANT EXECUTE ANY EXTERNAL SCRIPT TO [UserName]
+GO
+```
+## Troubleshoot connections
 
 This section lists some common issues that you might run across in the course of setting up the database.
 

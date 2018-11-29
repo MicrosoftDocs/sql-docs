@@ -80,7 +80,7 @@ manager: craigg
   
 ## See Also  
  [Modify snapshot options](../../../relational-databases/replication/snapshot-options.md)   
- [Execute Scripts Before and After the Snapshot Is Applied](../../../relational-databases/replication/snapshot-options.md#execute-scripts-before-and-after-snapshot-is-applied.md)   
+ [Execute Scripts Before and After the Snapshot Is Applied](../../../relational-databases/replication/snapshot-options.md#execute-scripts-before-and-after-snapshot-is-applied)   
  [Replication System Stored Procedures Concepts](../../../relational-databases/replication/concepts/replication-system-stored-procedures-concepts.md)   
  [Transfer Snapshots Through FTP](../../../relational-databases/replication//publish/deliver-a-snapshot-through-ftp.md)   
  [Change Publication and Article Properties](../../../relational-databases/replication/publish/change-publication-and-article-properties.md)  

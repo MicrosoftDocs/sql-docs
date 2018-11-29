@@ -54,7 +54,7 @@ manager: craigg
   
 -   [Configure Snapshot Properties &#40;Replication Transact-SQL Programming&#41;](../../../relational-databases/replication/publish/configure-snapshot-properties-replication-transact-sql-programming.md)  
   
--   [Execute Scripts Before and After a Snapshot Is Applied &#40;SQL Server Management Studio&#41;](../../../relational-databases/replication/snapshot-options.md#execute-scripts-before-and-after-snapshot-is-applied.md)  
+-   [Execute Scripts Before and After a Snapshot Is Applied &#40;SQL Server Management Studio&#41;](../../../relational-databases/replication/snapshot-options.md#execute-scripts-before-and-after-snapshot-is-applied)  
   
 -   [Deliver a Snapshot Through FTP](../../../relational-databases/replication/publish/deliver-a-snapshot-through-ftp.md)  
   

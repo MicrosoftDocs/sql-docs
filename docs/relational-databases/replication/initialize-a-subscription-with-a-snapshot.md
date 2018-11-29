@@ -39,7 +39,7 @@ manager: craigg
   
 -   Compress snapshots for storage on removable media or for transfer over a slow network. For more information, see [Compressed Snapshots](../../relational-databases/replication/snapshot-options.md#compressed-snapshots). 
 
--   Execute Transact-SQL scripts before or after the snapshot is applied. For more information, see [Execute Scripts Before and After the Snapshot Is Applied](../../relational-databases/replication/snapshot-options.md#execute-scripts-before-and-after-snapshot-is-applied.md).  
+-   Execute Transact-SQL scripts before or after the snapshot is applied. For more information, see [Execute Scripts Before and After the Snapshot Is Applied](../../relational-databases/replication/snapshot-options.md#execute-scripts-before-and-after-snapshot-is-applied).  
   
 -   Transfer snapshot files using File Transfer Protocol (FTP). For more information, see [Transfer Snapshots Through FTP](../../relational-databases/replication/publish/deliver-a-snapshot-through-ftp.md).  
   

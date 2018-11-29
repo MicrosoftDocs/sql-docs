@@ -136,7 +136,7 @@ manager: craigg
   
 -   Execute GRANT statements at the subscription database directly.  
   
--   Use a post-snapshot script to execute the statements. For more information, see [Execute Scripts Before and After the Snapshot Is Applied](../../../relational-databases/replication/snapshot-options.md#execute-scripts-before-and-after-snapshot-is-applied.md).  
+-   Use a post-snapshot script to execute the statements. For more information, see [Execute Scripts Before and After the Snapshot Is Applied](../../../relational-databases/replication/snapshot-options.md#execute-scripts-before-and-after-snapshot-is-applied).  
 
  
 -   Use the stored procedure [sp_addscriptexec](../../../relational-databases/system-stored-procedures/sp-addscriptexec-transact-sql.md) to execute the statements.  

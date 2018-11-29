@@ -26,17 +26,17 @@ While query completion is a prerequisite for the availability of an actual query
 
 ## The standard query execution statistics profiling infrastructure
 
-The *query execution statistics profile infrastructure*, or standard profiling, must be enabled to collect information about execution plans, namely row count, CPU and I/O usage. The following methods of collecting execution plan information for a **target session** leverage the standard profiling infrastruture:
+The *query execution statistics profile infrastructure*, or standard profiling, must be enabled to collect information about execution plans, namely row count, CPU and I/O usage. The following methods of collecting execution plan information for a **target session** leverage the standard profiling infrastructure:
 
 - [SET STATISTICS XML](../../t-sql/statements/set-statistics-xml-transact-sql.md) 
 - [SET STATISTICS PROFILE](../../t-sql/statements/set-statistics-profile-transact-sql.md)
 - [Live Query Statistics](../../relational-databases/performance/live-query-statistics.md)
 
 > [!NOTE]
-> Using live query statistics with [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] leverages the standard profiling infrastruture.    
-> In higher versions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], if [lightweight profiling infrastrcture](#lwp) is enabled, then it is leveraged by Live Query Statistics instead of standard profiling.
+> Using live query statistics with [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] leverages the standard profiling infrastructure.    
+> In higher versions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], if [lightweight profiling infrastructure](#lwp) is enabled, then it is leveraged by Live Query Statistics instead of standard profiling.
 
-The following methods of collecting execution plan information globally for **all sessions** leverage the standard profiling infrastruture:
+The following methods of collecting execution plan information globally for **all sessions** leverage the standard profiling infrastructure:
 
 -  The ***query_post_execution_showplan*** extended event. To enable extended events, see [Monitor System Activity Using Extended Events](../../relational-databases/extended-events/monitor-system-activity-using-extended-events.md).  
 - The **Showplan XML** trace event in [SQL Trace](../../relational-databases/sql-trace/sql-trace.md) and [SQL Server Profiler](../../tools/sql-server-profiler/sql-server-profiler.md). For more information on this trace event, see [Showplan XML Event Class](../../relational-databases/event-classes/showplan-xml-event-class.md).

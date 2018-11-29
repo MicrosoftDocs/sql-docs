@@ -333,7 +333,7 @@
       - name: Snapshot Replication
         href: snapshot-replication.md
       - name: Merge Replication
-        href: ./merge/merge-replication.md
+        href: merge/merge-replication.md
         items:
           - name: Article options
             href: merge/article-options-for-merge-replication.md
@@ -358,7 +358,7 @@
             href: transactional/updatable-subscriptions-queued-updating-conflict-resolution.md
           - name: Peer-to-peer replication 
             href: transactional/peer-to-peer-transactional-replication.md
-          - name: Conflict detection for peer-to-peer replicatoin
+          - name: Conflict detection for peer-to-peer replication
             href: transactional/peer-to-peer-conflict-detection-in-peer-to-peer-replication.md
           - name: Bidirectional replication
             href: transactional/bidirectional-transactional-replication.md
@@ -458,7 +458,7 @@
     href: tutorial-replicating-data-between-continuously-connected-servers.md
   - name: Configure Merge Replication
     href: tutorial-replicating-data-with-mobile-clients.md
-- Name: Reference
+- name: Reference
   items: 
     - name: Properties of replication objects
       items:
@@ -581,13 +581,13 @@
       - name: New Subscription Wizard (UI Reference)
         href: new-subscription-wizard-ui-reference.md
         items:
-        - name: <AgentName> Agent Location
+        - name: Agent Location
           href: agentname-agent-location.md
         - name: Subscribers
           href: subscribers.md
         - name: Add Non-SQL Server Subscriber
           href: add-non-sql-server-subscriber.md
-        - name: <AgentName> Agent Security
+        - name: Agent Security
           href: agentname-agent-security.md
         - name: Updatable Subscriptions
           href: updatable-subscriptions.md
@@ -638,11 +638,11 @@
           href: merge-agent-security.md
         - name: Queue Reader Agent Security
           href: queue-reader-agent-security.md
-        - name: Agent Profiles (single agent)
+        - name: Agent Profiles
           href: agent-profiles-single-agent.md
         - name: Agent Profiles
           href: agent-profiles.md
-        - name: <AgentProfileName> Properties
+        - name: Properties
           href: agentprofilename-properties.md
         - name: New Agent Profile
           href: new-agent-profile.md
@@ -660,7 +660,7 @@
           href: reinitialize-subscription-s-all-subscriptions.md
         - name: Reinitialize Subscription(s) - One Subscription
           href: reinitialize-subscription-s-one-subscription.md
-        - name: Generate SQL Script (Replication Objects)
+        - name: Generate SQL Script 
           href: generate-sql-script-replication-objects.md
         - name: Connect to Server (Oracle), Login
           href: connect-to-server-oracle-login.md

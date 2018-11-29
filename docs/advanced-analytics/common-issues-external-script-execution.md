@@ -1,7 +1,7 @@
-﻿---
+---
 title: Common issues with Launchpad service and external script execution in SQL Server| Microsoft Docs
 ms.prod: sql
-ms.technology: mlserver
+ms.technology: 
 ms.date: 05/31/2018  
 ms.topic: conceptual
 author: HeidiSteen

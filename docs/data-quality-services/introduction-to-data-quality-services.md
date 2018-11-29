@@ -5,8 +5,7 @@ ms.date: "03/05/2012"
 ms.prod: sql
 ms.prod_service: "data-quality-services"
 ms.reviewer: ""
-ms.technology: 
-  - "data-quality-services"
+ms.technology: data-quality-services
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Domains"

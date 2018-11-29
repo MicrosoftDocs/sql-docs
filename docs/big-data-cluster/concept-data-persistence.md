@@ -19,7 +19,7 @@ The way SQL Server big data cluster consumes these persistent volumes is by usin
 
 > [!NOTE]
 
-> For CTP 2.1, only `ReadWriteOnce` access mode for the whole cluster is supported.
+> For CTP 2.2, only `ReadWriteOnce` access mode for the whole cluster is supported.
 
 ## Deployment settings
 

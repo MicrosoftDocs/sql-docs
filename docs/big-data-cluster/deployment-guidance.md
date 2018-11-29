@@ -84,9 +84,16 @@ kubectl config view
 
 1. Install **mssqlctl** with the following command:
 
-   ```bash
-   pip3 install --extra-index-url https://private-repo.microsoft.com/python/ctp-2.1 mssqlctl
+   ```PowerShell
+   pip3 install --extra-index-url https://private-repo.microsoft.com/python/ctp-2.2 mssqlctl
    ```
+
+   > [!NOTE]
+   > The installation of mssqlctl might fail with the following error: `Found existing installation: PyYAML 3.11 Cannot uninstall 'PyYAML'. It is a distutils installed project and thus we cannot accurately determine which files belong to it which would lead to only a partial uninstall.` To work around this error, add the **--ignore-installed PyYAML** parameter to the installation command:
+   >
+   > ```PowerShell
+   > pip3 install --extra-index-url https://private-repo.microsoft.com/python/ctp-2.2 mssqlctl --ignore-installed PyYAML
+   > ```
 
 ### Linux mssqlctl installation
 
@@ -104,8 +111,15 @@ On Linux, you must install the **python3** and **python3-pip** packages and then
 1. Install **mssqlctl** with the following command:
 
    ```bash
-   pip3 install --extra-index-url https://private-repo.microsoft.com/python/ctp-2.1 mssqlctl
+   pip3 install --extra-index-url https://private-repo.microsoft.com/python/ctp-2.2 mssqlctl
    ```
+
+   > [!NOTE]
+   > The installation of mssqlctl might fail with the following error: `Found existing installation: PyYAML 3.11 Cannot uninstall 'PyYAML'. It is a distutils installed project and thus we cannot accurately determine which files belong to it which would lead to only a partial uninstall.` To work around this error, add the **--ignore-installed PyYAML** parameter to the installation command:
+   >
+   > ```bash
+   > pip3 install --extra-index-url https://private-repo.microsoft.com/python/ctp-2.2 mssqlctl --ignore-installed PyYAML
+   > ```
 
 ## Define environment variables
 
@@ -246,7 +260,7 @@ When the deployment finishes, the output notifies you of success:
 
 ## <a id="masterip"></a> Get the SQL Server Master instance and SQL Server big data cluster IP addresses
 
-After the deployment script has completed successfully, you can obtain the IP address of the SQL Server master instance using the steps outlined below. You will use this IP address and port number 31433 to connect to the SQL Server master instance (for example: **\<ip-address\>,31433**). Similarly, for the SQL Server big data cluster IP. All cluster endpoints are outlined in the Service Endpoints tab in the Cluster Administration Portal as well. You can use the Cluster Administration Portal to monitor the deployment. You can access the portal using the external IP address and port number for the `service-proxy-lb` (for example: **https://\<ip-address\>:30777**). Credentials for accessing the admin portal are the values of `CONTROLLER_USERNAME` and `CONTROLLER_PASSWORD` environment variables provided above.
+After the deployment script has completed successfully, you can obtain the IP address of the SQL Server master instance using the steps outlined below. You will use this IP address and port number 31433 to connect to the SQL Server master instance (for example: **\<ip-address\>,31433**). Similarly, for the SQL Server big data cluster IP. All cluster endpoints are outlined in the Service Endpoints tab in the Cluster Administration Portal as well. You can use the Cluster Administration Portal to monitor the deployment. You can access the portal using the external IP address and port number for the `service-proxy-lb` (for example: **https://\<ip-address\>:30777/portal**). Credentials for accessing the admin portal are the values of `CONTROLLER_USERNAME` and `CONTROLLER_PASSWORD` environment variables provided above.
 
 ### AKS
 
@@ -288,7 +302,7 @@ Currently, the only way to upgrade a big data cluster to a new release is to man
 1. Install the latest version of **mssqlctl**.
    
    ```bash
-   pip3 install --extra-index-url https://private-repo.microsoft.com/python/ctp-2.1 mssqlctl
+   pip3 install --extra-index-url https://private-repo.microsoft.com/python/ctp-2.2 mssqlctl
    ```
 
    > [!IMPORTANT]
@@ -341,7 +355,7 @@ To monitor or troubleshoot a deployment, use **kubectl** to inspect the status o
    |---|---|
    | **service-master-pool-lb**<br/>**service-master-pool-nodeport** | Provides access to the master instance.<br/>(**EXTERNAL-IP,31433** and the **SA** user) |
    | **service-mssql-controller-lb**<br/>**service-mssql-controller-nodeport** | Supports tools and clients that manage the cluster. |
-   | **service-proxy-lb**<br/>**service-proxy-nodeport** | Provides access to the [Cluster Administration Portal](cluster-admin-portal.md).<br/>(https://**EXTERNAL-IP**:30777)|
+   | **service-proxy-lb**<br/>**service-proxy-nodeport** | Provides access to the [Cluster Administration Portal](cluster-admin-portal.md).<br/>(https://**EXTERNAL-IP**:30777/portal)|
    | **service-security-lb**<br/>**service-security-nodeport** | Provides access to the HDFS/Spark Gateway.<br/>(**EXTERNAL-IP** and the **root** user) |
 
    > [!NOTE]

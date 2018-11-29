@@ -25,13 +25,6 @@ monikerRange: ">=sql-server-ver15||=sqlallproducts-allversions"
 
 Community technology preview (CTP) 2.2 is the latest public release of [!INCLUDE[sql-server-2019](..\includes\sssqlv15-md.md)]. The following features are added or enhanced for [!INCLUDE[sql-server-2019](..\includes\sssqlv15-md.md)] CTP 2.2.
 
-- [Database Engine](#databaseengine)
-  - Improve Hadoop bridge for Polybase
-
-- [SQL Server on Linux](#sqllinux)
-  - Kubernetes operator introduces configurable liveness probe
-  - Query tuning assistant for post migration and upgrade
-
 ## Previous CTPs
 
 Earlier CTP releases added or enhanced the following features for [!INCLUDE[sql-server-2019](..\includes\sssqlv15-md.md)].

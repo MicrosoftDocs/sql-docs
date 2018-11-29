@@ -95,7 +95,7 @@ Ensure that your security standards are enforced for accessing. When configuring
    * Delete the files from the existing SQL Server data directory. You will not receive any acknowledgement if successful.
 
     ```bash
-    rm – f /var/opt/mssql/data/*
+    rm - f /var/opt/mssql/data/*
     ```
 
    * Verify that the files have been deleted. 

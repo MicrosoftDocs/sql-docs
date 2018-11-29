@@ -697,11 +697,11 @@ After you have followed one of these approaches, you can use MSBuild to pass in 
   
 #### To deploy your SQL project and generate a deployment report  
   
--   Your project can be published or deployed as normal inside Visual Studio. Simply open a solution containing your SQL project and choose the Publish… option from the right-click context menu for the project, or use F5 for a debug deployment to LocalDB. In this example we will use the "Publish…" dialog to generate a deployment script.  
+-   Your project can be published or deployed as normal inside Visual Studio. Simply open a solution containing your SQL project and choose the Publish... option from the right-click context menu for the project, or use F5 for a debug deployment to LocalDB. In this example we will use the "Publish..." dialog to generate a deployment script.  
   
     1.  Open Visual Studio and open the solution containing your SQL Project.  
   
-    2.  Right-click on the project in Solution Explorer and choose the **Publish…** option.  
+    2.  Right-click on the project in Solution Explorer and choose the **Publish...** option.  
   
     3.  Set the server name and database name to publish to.  
   

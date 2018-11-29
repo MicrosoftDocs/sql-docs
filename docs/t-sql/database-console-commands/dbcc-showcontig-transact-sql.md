@@ -157,7 +157,7 @@ When an index is heavily fragmented, the following choices are available for red
 -   Drop and re-create a clustered index.  
      Re-creating a clustered index reorganizes the data, and causes full data pages. The level of fullness can be configured by using the FILLFACTOR option in CREATE INDEX. The drawbacks of this method are that the index is offline during the drop or re-create cycle, and that the operation is atomic. If the index creation is interrupted, the index is not re-created.  
 -   Reorder the leaf-level pages of the index in a logical order.  
-     Use ALTER INDEX…REORGANIZE to reorder the leaf-level pages of the index in a logical order. Because this operation is an online operation, the index is available when the statement is running. The operation is also interruptible without loss of completed work. The drawback of this method is that the method does not do as good a job of reorganizing the data as a clustered index drop or re-create operation.  
+     Use ALTER INDEX...REORGANIZE to reorder the leaf-level pages of the index in a logical order. Because this operation is an online operation, the index is available when the statement is running. The operation is also interruptible without loss of completed work. The drawback of this method is that the method does not do as good a job of reorganizing the data as a clustered index drop or re-create operation.  
 -   Rebuild the index.  
      Use ALTER INDEX with REBUILD to rebuild the index. For more information, see [ALTER INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md).  
   

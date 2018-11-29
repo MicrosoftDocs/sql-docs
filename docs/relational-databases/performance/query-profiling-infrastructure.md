@@ -26,17 +26,17 @@ While query completion is a prerequisite for the availability of an actual query
 
 ## The standard query execution statistics profiling infrastructure
 
-The *query execution statistics profile infrastructure*, or standard profiling, must be enabled to collect information about execution plans, namely row count, CPU and I/O usage. The following methods of collecting execution plan information for a **target session** leverage the standard profiling infrastruture:
+The *query execution statistics profile infrastructure*, or standard profiling, must be enabled to collect information about execution plans, namely row count, CPU and I/O usage. The following methods of collecting execution plan information for a **target session** leverage the standard profiling infrastructure:
 
 - [SET STATISTICS XML](../../t-sql/statements/set-statistics-xml-transact-sql.md) 
 - [SET STATISTICS PROFILE](../../t-sql/statements/set-statistics-profile-transact-sql.md)
 - [Live Query Statistics](../../relational-databases/performance/live-query-statistics.md)
 
 > [!NOTE]
-> Using live query statistics with [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] leverages the standard profiling infrastruture.    
-> In higher versions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], if [lightweight profiling infrastrcture](#lwp) is enabled, then it is leveraged by Live Query Statistics instead of standard profiling.
+> Using live query statistics with [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] leverages the standard profiling infrastructure.    
+> In higher versions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], if [lightweight profiling infrastructure](#lwp) is enabled, then it is leveraged by Live Query Statistics instead of standard profiling.
 
-The following methods of collecting execution plan information globally for **all sessions** leverage the standard profiling infrastruture:
+The following methods of collecting execution plan information globally for **all sessions** leverage the standard profiling infrastructure:
 
 -  The ***query_post_execution_showplan*** extended event. To enable extended events, see [Monitor System Activity Using Extended Events](../../relational-databases/extended-events/monitor-system-activity-using-extended-events.md).  
 - The **Showplan XML** trace event in [SQL Trace](../../relational-databases/sql-trace/sql-trace.md) and [SQL Server Profiler](../../tools/sql-server-profiler/sql-server-profiler.md). For more information on this trace event, see [Showplan XML Event Class](../../relational-databases/event-classes/showplan-xml-event-class.md).
@@ -76,7 +76,7 @@ WITH (MAX_MEMORY=4096 KB,
 ```
 
 > [!NOTE]
-> For more information on the performance overhead of query profiling, see the blog post [Developers Choice: Query progress – anytime, anywhere](https://blogs.msdn.microsoft.com/sql_server_team/query-progress-anytime-anywhere/). 
+> For more information on the performance overhead of query profiling, see the blog post [Developers Choice: Query progress - anytime, anywhere](https://blogs.msdn.microsoft.com/sql_server_team/query-progress-anytime-anywhere/). 
 
 When running an extended event session that uses the *query_thread_profile* event, then the [sys.dm_exec_query_profiles](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-profiles-transact-sql.md) DMV is also populated using lightweight profiling, which enables live query statistics for all sessions, using [Activity Monitor](../../relational-databases/performance-monitor/activity-monitor.md) or directly querying the DMV.
 
@@ -118,7 +118,7 @@ WITH (MAX_MEMORY=4096 KB,
 
 Starting with lightweight profiling v2 and its low overhead, any server that is not already CPU bound can run lightweight profiling **continuously**, and allow database professionals to tap into any running execution at any time, for example using Activity Monitor or directly querying `sys.dm_exec_query_profiles`, and get the query plan with runtime statistics.
 
-For more information on the performance overhead of query profiling, see the blog post [Developers Choice: Query progress – anytime, anywhere](https://blogs.msdn.microsoft.com/sql_server_team/query-progress-anytime-anywhere/). 
+For more information on the performance overhead of query profiling, see the blog post [Developers Choice: Query progress - anytime, anywhere](https://blogs.msdn.microsoft.com/sql_server_team/query-progress-anytime-anywhere/). 
 
 ## See Also  
  [Monitor and Tune for Performance](../../relational-databases/performance/monitor-and-tune-for-performance.md)     
@@ -133,4 +133,4 @@ For more information on the performance overhead of query profiling, see the blo
  [Showplan Logical and Physical Operators Reference](../../relational-databases/showplan-logical-and-physical-operators-reference.md)    
  [actual execution plan](../../relational-databases/performance/display-an-actual-execution-plan.md)    
  [Live Query Statistics](../../relational-databases/performance/live-query-statistics.md)      
- [Developers Choice: Query progress – anytime, anywhere](https://blogs.msdn.microsoft.com/sql_server_team/query-progress-anytime-anywhere/)
+ [Developers Choice: Query progress - anytime, anywhere](https://blogs.msdn.microsoft.com/sql_server_team/query-progress-anytime-anywhere/)

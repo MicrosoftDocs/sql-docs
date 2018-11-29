@@ -22,11 +22,11 @@ Specifies the type of ADO run-time error.
   
  Three forms of the error number are listed:  
   
--   Positive decimal—The low two bytes of the full number in decimal format. This number is displayed in the default Visual Basic error message dialog box. For example, Run-time error '3707'.  
+-   Positive decimal-The low two bytes of the full number in decimal format. This number is displayed in the default Visual Basic error message dialog box. For example, Run-time error '3707'.  
   
--   Negative decimal—The decimal translation of the full error number.  
+-   Negative decimal-The decimal translation of the full error number.  
   
--   Hexadecimal—The hexadecimal representation of the full error number. The Windows facility code is in the fourth digit. The facility code for ADO error numbers is *A*. For example: 0x800***A***0E7B.  
+-   Hexadecimal-The hexadecimal representation of the full error number. The Windows facility code is in the fourth digit. The facility code for ADO error numbers is *A*. For example: 0x800***A***0E7B.  
   
 > [!NOTE]
 >  OLE DB errors may be passed to your ADO application. Typically, these can be identified by a Windows facility code of *4*. For example, 0x800***4***.  

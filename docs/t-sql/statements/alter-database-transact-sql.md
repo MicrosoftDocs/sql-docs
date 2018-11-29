@@ -316,7 +316,7 @@ ALTER DATABASE { database_name | CURRENT }
 <edition_options> ::= 
 {  
 
-  MAXSIZE = { 100 MB | 250 MB | 500 MB | 1 … 1024 … 4096 GB }  
+  MAXSIZE = { 100 MB | 250 MB | 500 MB | 1 ... 1024 ... 4096 GB }  
   | EDITION = { 'basic' | 'standard' | 'premium' | 'GeneralPurpose' | 'BusinessCritical' 'Hyperscale'} 
   | SERVICE_OBJECTIVE = 
        {  <service-objective>
@@ -394,7 +394,7 @@ ALTER DATABASE current
 
 EDITION change fails if the MAXSIZE property for the database is set to a value outside the valid range supported by that edition.  
 
-MODIFY (MAXSIZE **=** [100 MB | 500 MB | 1 | 1024…4096] GB)  
+MODIFY (MAXSIZE **=** [100 MB | 500 MB | 1 | 1024...4096] GB)  
 
 Specifies the maximum size of the database. The maximum size must comply with the valid set of values for the EDITION property of the database. Changing the maximum size of the database may cause the database EDITION to be changed. 
 

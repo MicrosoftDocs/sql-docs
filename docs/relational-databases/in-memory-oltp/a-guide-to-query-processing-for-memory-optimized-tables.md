@@ -220,7 +220,7 @@ Execution of natively compiled stored procedures.
   
  Invocation of a natively compiled stored procedure is described as follows:  
   
-1.  The user issues an **EXEC***usp_myproc* statement.  
+1.  The user issues an **EXEC**_usp_myproc_ statement.  
   
 2.  The parser extracts the name and stored procedure parameters.  
   

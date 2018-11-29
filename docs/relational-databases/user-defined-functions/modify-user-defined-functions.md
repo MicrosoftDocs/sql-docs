@@ -67,7 +67,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
   
 5.  In the Query Window, make the necessary changes to the ALTER FUNCTION statement.  
   
-6.  On the **File** menu, click **Save***function_name*.  
+6.  On the **File** menu, click **Save**_function_name_.  
   
 ##  <a name="TsqlProcedure"></a> Using Transact-SQL  
   

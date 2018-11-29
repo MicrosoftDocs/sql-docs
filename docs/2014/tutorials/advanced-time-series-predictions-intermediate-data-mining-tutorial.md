@@ -118,7 +118,7 @@ manager: craigg
   
 3.  On the **Select Data Source** page, select [!INCLUDE[ssAWDWsp](../includes/ssawdwsp-md.md)], and then click **Next**.  
   
-4.  In the page, **Select Tables and Views**, do not add any tables—just click **Next**.  
+4.  In the page, **Select Tables and Views**, do not add any tables-just click **Next**.  
   
 5.  On the page, **Completing the Wizard**, type the name `AllRegions`, and then click **Finish**.  
   

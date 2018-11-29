@@ -82,7 +82,7 @@ After you add a Data Checksum test condition to your database unit test, you mus
   
 3.  (Optional) You might want to change the **(Name)** property of the test condition to be more descriptive.  
   
-4.  In the **Configuration** property, click the browse (**…**) button.  
+4.  In the **Configuration** property, click the browse (**...**) button.  
   
     The **Configuration for TestConditionName** dialog box appears.  
   
@@ -112,7 +112,7 @@ After you add an Expected Schema test condition to your SQL Server unit test, yo
   
 3.  (Optional) You might want to change the **(Name)** property of the test condition to be more descriptive.  
   
-4.  In the **Configuration** property, click the browse (**…**) button.  
+4.  In the **Configuration** property, click the browse (**...**) button.  
   
     The **Configuration for TestConditionName** dialog box appears.  
   

@@ -59,9 +59,9 @@ manager: craigg
   
 4.  Right-click the alert on which you want to define a response and select **Properties**.  
   
-5.  In the *alert_name***alert properties** dialog box, under **Select a page**, select **Response**.  
+5.  In the _alert_name_**alert properties** dialog box, under **Select a page**, select **Response**.  
   
-6.  Select the **Execute job** check box and, from the list below the **Execute job** check box, select a job to execute when the alert occurs. You can create a new job by clicking **New Job**. You can view more information about the job by clicking **View Job**. For more information about the available options in the **New Job** and **Job Properties***job_name* dialog boxes, see [Create a Job](create-a-job.md) and [View a Job](view-a-job.md).  
+6.  Select the **Execute job** check box and, from the list below the **Execute job** check box, select a job to execute when the alert occurs. You can create a new job by clicking **New Job**. You can view more information about the job by clicking **View Job**. For more information about the available options in the **New Job** and **Job Properties**_job_name_ dialog boxes, see [Create a Job](create-a-job.md) and [View a Job](view-a-job.md).  
   
 7.  Select the **Notify Operators** check box if you want to notify operators when the alert is activated. In the **Operator list**, select one or more of the following methods for notifying the operator or operators: **E-mail**, **Pager**, or **Net Send**. You can create a new operator by clicking **New Operator**. You can view more information about an operator by clicking **View Operator**. For more information about the available options in the **New Operator** and **View Operator Properties** dialog boxes, see [Create an Operator](create-an-operator.md) and [View Information About an Operator](view-information-about-an-operator.md).  
   

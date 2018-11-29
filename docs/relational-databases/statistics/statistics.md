@@ -39,7 +39,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 A **histogram** measures the frequency of occurrence for each distinct value in a data set. The query optimizer computes a histogram on the column values in the first key column of the statistics object, selecting the column values by statistically sampling the rows or by performing a full scan of all rows in the table or view. If the histogram is created from a sampled set of rows, the stored totals for number of rows and number of distinct values are estimates and do not need to be whole integers.
 
 > [!NOTE]
-> <a name="frequency"></a> Histograms in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] are only built for a single column—the first column in the set of key columns of the statistics object.
+> <a name="frequency"></a> Histograms in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] are only built for a single column-the first column in the set of key columns of the statistics object.
   
 To create the histogram, the query optimizer sorts the column values, computes the number of values that match each distinct column value and then aggregates the column values into a maximum of 200 contiguous histogram steps. Each histogram step includes a range of column values followed by an upper bound column value. The range includes all possible column values between boundary values, excluding the boundary values themselves. The lowest of the sorted column values is the upper boundary value for the first histogram step.
 

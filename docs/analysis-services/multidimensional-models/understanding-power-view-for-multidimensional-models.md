@@ -171,7 +171,7 @@ manager: kfile
  ![Pinned Filter](../../analysis-services/multidimensional-models/media/daxmd-pinnedfilterinpowerview.gif "Pinned Filter")  
   
 ## Unsupported features  
- **Power View in Excel 2013** – does not support connecting to and creating reports for multidimensional models. However, **Power View in Excel 2016** does support connecting to and creating reports for multidimensional models. To learn more, see [Power View and OLAP in Excel 2016](https://support.office.com/en-us/article/power-view-and-olap-in-excel-2016-ea5ff7a5-ea5f-48d4-aeb0-98c89ab738ac)  
+ **Power View in Excel 2013** - does not support connecting to and creating reports for multidimensional models. However, **Power View in Excel 2016** does support connecting to and creating reports for multidimensional models. To learn more, see [Power View and OLAP in Excel 2016](https://support.office.com/en-us/article/power-view-and-olap-in-excel-2016-ea5ff7a5-ea5f-48d4-aeb0-98c89ab738ac)  
   
  **Actions** - are not supported in Power View reports or in DAX queries against a multidimensional model.  
   
@@ -180,7 +180,7 @@ manager: kfile
 > [!NOTE]  
 >  Unsupported Actions and Named sets do not prevent users from connecting to and exploring multidimensional models using Power View.  
   
- **Cell level security** – is not supported in Power View reports.  
+ **Cell level security** - is not supported in Power View reports.  
   
 ## CSDLBI Annotations  
  Multidimensional cube metadata is exposed as an Entity Data Model (EDM) based conceptual model by Conceptual Schema Definition Language with Business Intelligence annotations (CSDLBI).  

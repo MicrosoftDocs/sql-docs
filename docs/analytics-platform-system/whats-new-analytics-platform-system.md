@@ -1,17 +1,17 @@
 ---
-title: "What's new in Analytics Platform System – a scale-out data warehouse"
-description: "See what's new in Microsoft® Analytics Platform System, a scale-out on-premises appliance that hosts MPP SQL Server Parallel Data Warehouse."
+title: "What's new in Analytics Platform System - a scale-out data warehouse"
+description: "See what's new in Microsoft?? Analytics Platform System, a scale-out on-premises appliance that hosts MPP SQL Server Parallel Data Warehouse."
 author: "mzaman1"
 manager: "craigg"
 ms.prod: "sql"
-ms.technology: "data-warehouse"
+ms.technology: data-warehouse
 ms.topic: "conceptual"
 ms.date: "06/27/2018"
 ms.author: "murshedz"
 ms.reviewer: "martinle"
 ---
 # What's new in Analytics Platform System, a scale-out MPP data warehouse
-See what's new in the latest Appliance Updates for Microsoft® Analytics Platform System (APS). APS is a scale-out on-premises appliance that hosts MPP SQL Server Parallel Data Warehouse. 
+See what's new in the latest Appliance Updates for Microsoft?? Analytics Platform System (APS). APS is a scale-out on-premises appliance that hosts MPP SQL Server Parallel Data Warehouse. 
 
 ::: moniker range=">= aps-pdw-2016-au7 || = sqlallproducts-allversions"
 <a name="h2-aps-cu7.2"></a>

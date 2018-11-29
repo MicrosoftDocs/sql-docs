@@ -17,7 +17,7 @@ ms.author: maggies
 manager: craigg
 ---
 # Tutorial: Create a Quick Chart Report Offline (Report Builder)
-  In this tutorial, you'll create a pie chart by using a wizard, and then you'll modify it a little, just to get an idea of what's possible. You can do this tutorial two different ways. Both methods have the same outcome—a pie chart like the one in the following illustration:  
+  In this tutorial, you'll create a pie chart by using a wizard, and then you'll modify it a little, just to get an idea of what's possible. You can do this tutorial two different ways. Both methods have the same outcome-a pie chart like the one in the following illustration:  
   
  !["My First Pie Chart" in Run view](../media/rs-my1stpierunview.gif "My First Pie Chart in Run view")  
   

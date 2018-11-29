@@ -64,19 +64,19 @@ manager: craigg
     -   To create a new model:  
   
         ```  
-        MDSModelDeploy deploynew –package PackageName -model ModelName -service ServiceName  
+        MDSModelDeploy deploynew -package PackageName -model ModelName -service ServiceName  
         ```  
   
     -   To create a clone of a model:  
   
         ```  
-        MDSModelDeploy deployclone –package PackageName  
+        MDSModelDeploy deployclone -package PackageName  
         ```  
   
     -   To update an existing model and its data:  
   
         ```  
-        MDSModelDeploy deployupdate –package PackageName –version VersionName  
+        MDSModelDeploy deployupdate -package PackageName -version VersionName  
         ```  
   
     > [!IMPORTANT]  

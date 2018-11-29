@@ -17,7 +17,7 @@ ms.author: genemi
 manager: craigg
 ---
 # Core Interface Conformance
-All ODBC drivers must exhibit at least Core-level interface conformance. Because the features in the Core level are those required by most generic interoperable applications, the driver can work with such applications. The features in the Core level also correspond to the features defined in the ISO CLI specification and to the nonoptional features defined in the Open Group CLI specification. A Core-level interface–conformant ODBC driver allows the application to do all of the following:  
+All ODBC drivers must exhibit at least Core-level interface conformance. Because the features in the Core level are those required by most generic interoperable applications, the driver can work with such applications. The features in the Core level also correspond to the features defined in the ISO CLI specification and to the nonoptional features defined in the Open Group CLI specification. A Core-level interface-conformant ODBC driver allows the application to do all of the following:  
   
 -   Allocate and free all types of handles, by calling **SQLAllocHandle** and **SQLFreeHandle**.  
   

@@ -183,7 +183,7 @@ manager: craigg
 >  Clear the text box in the **SQL Destination Editor** to indicate that you do not want to assign a value for this property. Use -1 in the **Properties** window, the **Advanced Editor**, and the object model.  
   
  **Maximum number of errors**  
- Specify the number of errors that can occur before the bulk insert stops. The default value of this property is **–1**, indicating that no value has been assigned.  
+ Specify the number of errors that can occur before the bulk insert stops. The default value of this property is **-1**, indicating that no value has been assigned.  
   
 > [!NOTE]  
 >  Clear the text box in the **SQL Destination Editor** to indicate that you do not want to assign a value for this property. Use -1 in the **Properties** window, the **Advanced Editor**, and the object model.  

@@ -45,7 +45,7 @@ manager: craigg
 
 -   OLE DB Driver for SQL Server supports access to previous [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] databases.  
 
--   OLE DB Driver for SQL Server does not contain XML integration. OLE DB Driver for SQL Server supports SELECT … FOR XML queries, but does not support any other XML functionality. However, OLE DB Driver for SQL Server does support the **xml** data type introduced in [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)].  
+-   OLE DB Driver for SQL Server does not contain XML integration. OLE DB Driver for SQL Server supports SELECT ... FOR XML queries, but does not support any other XML functionality. However, OLE DB Driver for SQL Server does support the **xml** data type introduced in [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)].  
 
 -   OLE DB Driver for SQL Server supports configuring client-side network libraries using only connection string attributes. If you need more complete network library configuration, you must use [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Configuration Manager.  
 

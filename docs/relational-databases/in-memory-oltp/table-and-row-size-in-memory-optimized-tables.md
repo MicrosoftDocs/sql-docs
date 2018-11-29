@@ -41,7 +41,7 @@ Memory-optimized table, consisting of indexes and rows.
 The in-memory size of a table, in bytes, is computed as follows:  
   
 ```  
-[table size] = [size of index 1] + … + [size of index n] + ([row size] * [row count])  
+[table size] = [size of index 1] + ... + [size of index n] + ([row size] * [row count])  
 ```  
   
 The size of a hash index is fixed at table creation time and depends on the actual bucket count. The `bucket_count` specified with the index definition is rounded up to the nearest power of 2 to obtain the *actual bucket count*. For example, if the specified bucket_count is 100000, the *actual bucket count* for the index is 131072.  
@@ -198,7 +198,7 @@ Next, let's calculate [actual row body size]:
   
     -   Nearest multiple of 8 is 24.  
   
-    -   Total padding is 24 – 22 = 2 bytes.  
+    -   Total padding is 24 - 22 = 2 bytes.  
   
 -   There are no fixed-length deep type columns (Fixed-length deep type columns: 0.).  
   

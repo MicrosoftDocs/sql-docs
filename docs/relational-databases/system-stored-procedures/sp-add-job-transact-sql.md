@@ -49,25 +49,25 @@ sp_add_job [ @job_name = ] 'job_name'
 ```  
   
 ## Arguments  
- [ **@job_name =** ] **'***job_name***'**  
+ [ **@job_name =** ] **'**_job_name_**'**  
  The name of the job. The name must be unique and cannot contain the percent (**%**) character. *job_name*is **nvarchar(128)**, with no default.  
   
  [ **@enabled =** ] *enabled*  
  Indicates the status of the added job. *enabled*is **tinyint**, with a default of 1 (enabled). If **0**, the job is not enabled and does not run according to its schedule; however, it can be run manually.  
   
- [ **@description =** ] **'***description***'**  
+ [ **@description =** ] **'**_description_**'**  
  The description of the job. *description* is **nvarchar(512)**, with a default of NULL. If *description* is omitted, "No description available" is used.  
   
  [ **@start_step_id =** ] *step_id*  
  The identification number of the first step to execute for the job. *step_id*is **int**, with a default of 1.  
   
- [ **@category_name =** ] **'***category***'**  
+ [ **@category_name =** ] **'**_category_**'**  
  The category for the job. *category*is **sysname**, with a default of NULL.  
   
  [ **@category_id =** ] *category_id*  
  A language-independent mechanism for specifying a job category. *category_id*is **int**, with a default of NULL.  
   
- [ **@owner_login_name =** ] **'***login***'**  
+ [ **@owner_login_name =** ] **'**_login_**'**  
  The name of the login that owns the job. *login*is **sysname**, with a default of NULL, which is interpreted as the current login name. Only members of the **sysadmin** fixed server role can set or change the value for **@owner_login_name**. If users who are not members of the **sysadmin** role set or change the value of **@owner_login_name**, execution of this stored procedure fails and an error is returned.  
   
  [ **@notify_level_eventlog =** ] *eventlog_level*  
@@ -89,13 +89,13 @@ sp_add_job [ @job_name = ] 'job_name'
  [ **@notify_level_page =** ] *page_level*  
  A value that indicates when to send a page upon the completion of this job. *page_level*is **int**, with a default of **0**, which indicates never. *page_level*uses the same values as *eventlog_level*.  
   
- [ **@notify_email_operator_name =** ] **'***email_name***'**  
+ [ **@notify_email_operator_name =** ] **'**_email_name_**'**  
  The e-mail name of the person to send e-mail to when *email_level* is reached. *email_name* is **sysname**, with a default of NULL.  
   
- [ **@notify_netsend_operator_name =** ] **'***netsend_name***'**  
+ [ **@notify_netsend_operator_name =** ] **'**_netsend_name_**'**  
  The name of the operator to whom the network message is sent upon completion of this job. *netsend_name*is **sysname**, with a default of NULL.  
   
- [ **@notify_page_operator_name =** ] **'***page_name***'**  
+ [ **@notify_page_operator_name =** ] **'**_page_name_**'**  
  The name of the person to page upon completion of this job. *page_name*is **sysname**, with a default of NULL.  
   
  [ **@delete_level =** ] *delete_level*  
@@ -104,7 +104,7 @@ sp_add_job [ @job_name = ] 'job_name'
 > [!NOTE]  
 >  When *delete_level* is **3**, the job is executed only once, regardless of any schedules defined for the job. Furthermore, if a job deletes itself, all history for the job is also deleted.  
   
- [ **@job_id =** ] *job_id***OUTPUT**  
+ [ **@job_id =** ] _job_id_**OUTPUT**  
  The job identification number assigned to the job if created successfully. *job_id*is an output variable of type **uniqueidentifier**, with a default of NULL.  
   
 ## Return Code Values  

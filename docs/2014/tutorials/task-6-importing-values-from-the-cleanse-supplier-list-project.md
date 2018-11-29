@@ -53,7 +53,7 @@ manager: craigg
   
 10. Navigate to the Tutorial folder, type **Suppliers.dqs** for the **file name**, and click **Save**. You can use this DQS file to create a new knowledge base based on it.  
   
-11. Click **OK** to close the **Export Knowledge Base – Suppliers** message box.  
+11. Click **OK** to close the **Export Knowledge Base - Suppliers** message box.  
   
 12. Click **Finish** to finish the activity.  
   

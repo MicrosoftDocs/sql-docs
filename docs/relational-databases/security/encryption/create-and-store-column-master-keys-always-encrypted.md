@@ -121,7 +121,7 @@ $azureLocation = "<key vault location>"
 $akvName = "<key vault name>"
 $akvKeyName = "<column master key name>"
 $azureCtx = Set-AzureRMContext -SubscriptionId $SubscriptionId # Sets the context for the below cmdlets to the specified subscription.
-New-AzureRmResourceGroup –Name $resourceGroup –Location $azureLocation # Creates a new resource group - skip, if you desire group already exists.
+New-AzureRmResourceGroup -Name $resourceGroup -Location $azureLocation # Creates a new resource group - skip, if you desire group already exists.
 New-AzureRmKeyVault -VaultName $akvName -ResourceGroupName $resourceGroup -Location $azureLocation -SKU premium # Creates a new key vault - skip if your vault already exists.
 Set-AzureRmKeyVaultAccessPolicy -VaultName $akvName -ResourceGroupName $resourceGroup -PermissionsToKeys get, create, delete, list, update, import, backup, restore, wrapKey, unwrapKey, sign, verify -UserPrincipalName $azureCtx.Account
 $akvKey = Add-AzureKeyVaultKey -VaultName $akvName -Name $akvKeyName -Destination HSM
@@ -159,7 +159,7 @@ A column master key for Always Encrypted can be stored in a key store implementi
 
 To make an HSM available to applications on a given machine, a Key Storage Provider (KSP), which implements CNG, must be installed and configured on the machine. An Always Encrypted client driver (a column master key store provider inside the driver), uses the KSP to encrypt and decrypt column encryption keys, protected with column master key stored in the key store.
 
-Windows includes Microsoft Software Key Storage Provider – a software-based KSP, which you can use for testing purposes. See [CNG Key Storage Providers](/windows/desktop/SecCertEnroll/cng-key-storage-providers).
+Windows includes Microsoft Software Key Storage Provider - a software-based KSP, which you can use for testing purposes. See [CNG Key Storage Providers](/windows/desktop/SecCertEnroll/cng-key-storage-providers).
 
 ### Creating Column Master Keys in a Key Store using CNG/KSP
 

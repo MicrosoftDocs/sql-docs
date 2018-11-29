@@ -31,7 +31,7 @@ The Analytics Platform System appliance is configured to prevent resolving DNS n
   
 6.  Enter the IP address for the external DNS server that will provide the name resolution. The VMs and servers (hosts) in the appliance will connect to external servers by using fully qualified domain names.  
   
-7.  Repeat steps 1 – 6 on the **_appliance\_domain_-AD02** node  
+7.  Repeat steps 1 - 6 on the **_appliance\_domain_-AD02** node  
   
 **To create a DNS forwarder by using Windows PowerShell**  
   

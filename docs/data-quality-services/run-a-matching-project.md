@@ -5,8 +5,7 @@ ms.date: "03/01/2017"
 ms.prod: sql
 ms.prod_service: "data-quality-services"
 ms.reviewer: ""
-ms.technology: 
-  - "data-quality-services"
+ms.technology: data-quality-services
 ms.topic: conceptual
 f1_keywords: 
   - "sql13.dqs.matchingproject.map.f1"
@@ -61,7 +60,7 @@ manager: craigg
     > [!NOTE]  
     >  You can map your source data to a DQS domain only if the source data type is supported in DQS, and matches with the DQS domain data type. For information about supported data types in DQS, see [Supported SQL Server and SSIS Data Types for DQS Domains](../data-quality-services/supported-sql-server-and-ssis-data-types-for-dqs-domains.md).  
   
-4.  Click the **plus (+)** control to add a row to the Mappings table or the **minus (–)** control to remove a row.  
+4.  Click the **plus (+)** control to add a row to the Mappings table or the **minus (-)** control to remove a row.  
   
 5.  Click **Preview data source** to see the data in the SQL Server table or view that you selected, or the Excel worksheet that you selected.  
   

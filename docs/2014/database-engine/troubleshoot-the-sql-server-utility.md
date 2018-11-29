@@ -118,13 +118,13 @@ Get-WmiObject Win32_LogicalDisk -ErrorAction Stop | Out-Null
   
 -   The SQL Server Browser service on the UCP should be started and configured to start automatically. If your organization prevents use of the SQL Server Browser service, use the following steps to allow a managed instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] to connect to the UCP:  
   
-    1.  On the Windows taskbar on the managed instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], click **Start**, then click **Run…**.  
+    1.  On the Windows taskbar on the managed instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], click **Start**, then click **Run...**.  
   
     2.  Type "cliconfg.exe" in the space provided, then click **OK**.  
   
     3.  If prompted to allow "SQL Client Configuration Utility EXE" to start, click "**Continue**."  
   
-    4.  On the **SQL Server Client Network Utility** dialog box, select the **Alias** tab, then click **Add…**.  
+    4.  On the **SQL Server Client Network Utility** dialog box, select the **Alias** tab, then click **Add...**.  
   
     5.  On the **Add Network Library Configuration** dialog box:  
   

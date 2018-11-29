@@ -47,7 +47,7 @@ Select **LocalDB** on the **Feature Selection/Shared Features** page during inst
   
  For more information about including **LocalDB** in an application, see the [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] documentation [Local Data Overview](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2012/ms233817(v=vs.110)), [Walkthrough: Creating a SQL Server LocalDB Database](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2012/ms233763(v=vs.110)), and [Walkthrough: Connecting to Data in a SQL Server LocalDB Database (Windows Forms)](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2012/ms171890(v=vs.110)).  
   
- For more information about the **LocalDB** API, see [SQL Server Express LocalDB Reference](../../relational-databases/sql-server-express-localdb-reference).  
+ For more information about the **LocalDB** API, see [SQL Server Express LocalDB Reference](../../relational-databases/sql-server-express-localdb-reference.md).  
   
  The SqlLocalDb utility can create new instances of **LocalDB**, start and stop an instance of **LocalDB**, and includes options to help you manage **LocalDB**.  For more information about the SqlLocalDb utility, see [SqlLocalDB Utility](../../tools/sqllocaldb-utility.md).  
   

@@ -81,13 +81,13 @@ manager: craigg
 ```csharp  
 [Microsoft.SqlServer.Server.SqlProcedure]  
 public static void PriceSum(out SqlInt32 value)  
-{ … }  
+{ ... }  
 ```  
   
 ```vb  
 \<Microsoft.SqlServer.Server.SqlProcedure> _  
 Public Shared Sub PriceSum( \<Out()> ByRef value As SqlInt32)  
-…  
+...  
 End Sub  
 ```  
   

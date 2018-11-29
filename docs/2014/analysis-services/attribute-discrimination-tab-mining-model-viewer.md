@@ -36,7 +36,7 @@ manager: craigg
  Choose a state of the predictable attribute to compare to the state that is contained in **Value 2**.  
   
  **Value 2**  
- Select a state of the predictable attribute to compare to the state that is contained in **Value 1**. You can also select **All Other States** to compare the value in **Value 1** with its complement—that is, all other values except Value 1.  
+ Select a state of the predictable attribute to compare to the state that is contained in **Value 1**. You can also select **All Other States** to compare the value in **Value 1** with its complement-that is, all other values except Value 1.  
   
  **Discrimination scores for \<Value 1> and \<Value 2>**  
  The graph contains the following columns, which describe how the target attribute is related to specific states of the input attribute.  

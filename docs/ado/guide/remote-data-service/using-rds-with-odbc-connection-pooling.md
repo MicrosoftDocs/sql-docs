@@ -43,7 +43,7 @@ If you're using an ODBC data source, you can use the connection pooling option i
   
 2.  Click Continue twice.  
   
-3.  In the Microsoft SQL Server —Options dialog box, select Change Network Support, and then click Continue.  
+3.  In the Microsoft SQL Server -Options dialog box, select Change Network Support, and then click Continue.  
   
 4.  Make sure the TCP/IP Sockets check box is selected, and click OK.  
   

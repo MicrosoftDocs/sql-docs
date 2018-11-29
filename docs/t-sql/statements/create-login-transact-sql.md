@@ -420,6 +420,10 @@ Used to recreate a login. Applies to SQL Server authentication logins only. Spec
     - The login_name must represent an existing Azure AD account (user, group, or application) that is accessible in Azure AD by the current Azure SQL Managed Instance.
     - The **PASSWORD** option cannot be used.
     - Currently, the first Azure AD login must be created by the standard SQL Server account (non Azure AD) that is a `sysadmin` using the syntax above.
+        - When creating an Azure AD login using an Azure AD admin for the SQL Database Managed Instance, the following error occurs:</br>
+        `Msg 15247, Level 16, State 1, Line 1
+        User does not have permission to perform this action.`
+        - This is a known limitation for **public preview** and will be fixed at a later date.
     - Once the first Azure AD login is created, this login can create other Azure AD logins once it is granted the necessary permissions.
 - By default, when the **FROM EXTERNAL PROVIDER** clause is omitted, a regular SQL login is created.
 - Azure AD logins are visible in sys.server_principals, with type column value set to **E** and type_desc set to **EXTERNAL_LOGIN** for logins mapped to Azure AD users, or type column value set to **X** and type_desc value set to **EXTERNAL_GROUP** for logins mapped to Azure AD groups.
@@ -456,12 +460,6 @@ After creating a login, the login can connect to a SQL Database Managed Instance
 - Only SQL server-level principals (logins) that are part of the `sysadmin` role can execute the following operations targeting Azure AD principals:
   - EXECUTE AS USER
   - EXECUTE AS LOGIN
-- Azure AD admins cannot create an Azure AD login for a SQL Database Managed Instance. When creating an Azure AD login using an Azure AD admin for the SQL Database Managed Instance, the following error occurs:</br>
-
-    `Msg 15247, Level 16, State 1, Line 1
-    User does not have permission to perform this action.`
-
-    - This is a known limitation for **public preview** and will be fixed at a later date.
   
 ## Examples  
   

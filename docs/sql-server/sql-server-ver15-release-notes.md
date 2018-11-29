@@ -70,7 +70,7 @@ Limited support may be found at one of the following locations:
 
 - **Workaround**: N/A
 
-- **Applies to**: SQL Server 2019 CTP 2.1, CTP 2.2
+- **Applies to**: SQL Server 2019 CTP 2.2, CTP 2.1
 
 ### SQL Server Integration Services (SSIS) page deployment after switching DB to single-user mode and then switching back
 
@@ -80,7 +80,7 @@ Limited support may be found at one of the following locations:
 
 - **Workaround**: Stop and restart the SQL Server instance and switch SSISDB back to multi-user mode.
 
-- **Applies to**: SQL Server 2019 preview CTP 2.1
+- **Applies to**: SQL Server 2019 preview CTP 2.2, CTP 2.1
 
 ### UDF Inlining
 
@@ -90,22 +90,10 @@ Limited support may be found at one of the following locations:
 
 - **Applies to**: SQL Server 2019 CTP 2.1
 
-### Lightweight query profiling infrastructure
-
-- **Issue and customer impact**: Executing the command `ALTER DATABASE SCOPED CONFIGURATION SET LIGHTWEIGHT_QUERY_PROFILING = ON` returns a syntax error. Any scenarios that depend on executing this command will fail.
-
-  > [!NOTE]
-  > Currently, the lightweight query profiling infrastructure (LWP) cannot be controlled at the individual database level, and remains enabled for all databases by default. For more information on LWP, see [What's New in SQL Server 2019](../sql-server/what-s-new-in-sql-server-ver15.md).
-
-- **Workaround**: No workaround for [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] CTPs.
-
-- **Applies to**: [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] CTP 2.1 and CTP 2.0.
-
 ### UTF-8 collations
 
 - **Issue and customer impact**: UTF-8 enabled collations cannot be used with some other [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] features. UTF-8 is not supported when the following [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] features are in use:
 
-  - SQL Server Replication
   - Linked Server
   - In-memory OLTP
   - External Table for PolyBase
@@ -114,7 +102,7 @@ Limited support may be found at one of the following locations:
 
 - **Workaround**: No workaround for [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] CTPs.
 
-- **Applies to**: [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] CTP 2.1, CTP 2.0.
+- **Applies to**: [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] CTP 2.2, CTP 2.1, CTP 2.0.
 
 ### SQL Graph
 
@@ -122,7 +110,7 @@ Limited support may be found at one of the following locations:
 
 - **Workaround**: Writing [!INCLUDE[tsql](../includes/tsql-md.md)] scripts and running them against the server using [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] or SQLCMD will work. Exporting or Importing database objects that create Edge constraints, have the new merge DML syntax, or create derived tables/views on graph objects will not work. Users will have to manually create such objects in their database using [!INCLUDE[tsql](../includes/tsql-md.md)] scripts. 
 
-- **Applies to**: [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] CTP 2.1, 2.0.
+- **Applies to**: [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] CTP 2.2, CTP 2.1, 2.0.
 
 ### Always Encrypted with secure enclaves
 
@@ -130,7 +118,11 @@ Limited support may be found at one of the following locations:
 
 - **Workaround**: To enable rich computations, run `DBCC traceon(127,-1)`. For details, see  [Enable rich computations](../relational-databases/security/encryption/configure-always-encrypted-enclaves.md#configure-a-secure-enclave).
 
-- **Applies to**: [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] CTP 2.1, 2.0.
+- **Applies to**: [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] CTP 2.2, CTP 2.1, 2.0.
+
+## CTP 2.1 (October 2018)
+
+[!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] CTP 2.1 is the previous public release of [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)].
 
 ### SQL Server Integration Service - Fuzzy Lookup Transformation
 
@@ -144,19 +136,16 @@ Limited support may be found at one of the following locations:
 
 - **Applies To**: [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] CTP2.1
 
-## CTP 2.0 (September 2018)
+### Lightweight query profiling infrastructure
 
-[!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] CTP 2.0 is the first public release of [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)].
+- **Issue and customer impact**: Executing the command `ALTER DATABASE SCOPED CONFIGURATION SET LIGHTWEIGHT_QUERY_PROFILING = ON` returns a syntax error. Any scenarios that depend on executing this command will fail.
 
-### SQL Server Integration Services (SSIS) Transfer Database Task
+  > [!NOTE]
+  > Currently, the lightweight query profiling infrastructure (LWP) cannot be controlled at the individual database level, and remains enabled for all databases by default. For more information on LWP, see [What's New in SQL Server 2019](../sql-server/what-s-new-in-sql-server-ver15.md).
 
-- **Issue and customer impact**:  When a `Transfer Database Task` is configured to transfer a database in `Database Online` mode, it may fail with the following error:
+- **Workaround**: No workaround for [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] CTPs.
 
-  >The Execute method on the task returned error code 0x80131500 (An error occurred while transferring data. See the inner exception for details.). The Execute method must succeed, and indicate the result using an "out" parameter.
-
-- **Workaround**: Execute `DBCC TRACEON (7416,-1)` on the server and try again.
-
-- **Applies to**: [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] CTP 2.0.
+- **Applies to**: [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] CTP 2.1 and CTP 2.0.
 
 [!INCLUDE[get-help-options-msft-only](../includes/paragraph-content/get-help-options.md)]
 

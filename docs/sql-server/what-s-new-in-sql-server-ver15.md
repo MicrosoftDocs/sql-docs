@@ -23,14 +23,20 @@ monikerRange: ">=sql-server-ver15||=sqlallproducts-allversions"
 
 ## CTP 2.2
 
-Community technology preview (CTP) 2.2 is the latest public release of [!INCLUDE[sql-server-2019](..\includes\sssqlv15-md.md)]. CTP 2.2 does not introduce any new features but includes fixes and minor optimizations. 
-<!--The following features are added or enhanced for [!INCLUDE[sql-server-2019](..\includes\sssqlv15-md.md)] CTP 2.2.-->
+Community technology preview (CTP) 2.2 is the latest public release of [!INCLUDE[sql-server-2019](..\includes\sssqlv15-md.md)]. <!--CTP 2.2 does not introduce any new features but includes fixes and minor optimizations.-->The following features are added or enhanced for [!INCLUDE[sql-server-2019](..\includes\sssqlv15-md.md)] CTP 2.2. 
+
+- [Big data clusters](#bigdatacluster)
+  - Use SparkR with Big data cluster
+  - Access SparkR kernel with Azure Data Studio
+
+- [Database engine](#databaseengine)
+  - Configure Kubernetes liveliness probe on availability group
 
 ## Previous CTPs
 
 Earlier CTP releases added or enhanced the following features for [!INCLUDE[sql-server-2019](..\includes\sssqlv15-md.md)].
 
-- [Big Data Clusters](#bigdatacluster) 
+- [Big data clusters](#bigdatacluster) 
   - Deploy a Big Data cluster with SQL and Spark Linux containers on Kubernetes (CTP 2.0)
   - Access your big data from HDFS (CTP 2.0)
   - Run Advanced analytics and machine learning with Spark (CTP 2.0)
@@ -87,9 +93,9 @@ Earlier CTP releases added or enhanced the following features for [!INCLUDE[sql-
 
 Continue reading for more details about these features.
 
-## <a id="bigdatacluster"></a>Big Data Clusters
+## <a id="bigdatacluster"></a>Big data clusters
 
-[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] [Big Data Clusters](../big-data-cluster/big-data-cluster-overview.md) enables new scenarios including the following:
+[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] [Big data clusters](../big-data-cluster/big-data-cluster-overview.md) enables new scenarios including the following:
 
 - [Deploy Python and R apps](../big-data-cluster/big-data-cluster-create-apps.md). (CTP 2.1)
 - Deploy a Big Data cluster with [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] and Spark Linux containers on Kubernetes (CTP 2.0)
@@ -98,7 +104,7 @@ Continue reading for more details about these features.
 - Use Spark streaming to data to SQL data pools (CTP 2.0)
 - Run Query books that provide a notebook experience in [**Azure Data Studio**](../sql-operations-studio/what-is.md). (CTP 2.0)
  
-[!INCLUDE [Big Data Clusters preview](../includes/big-data-cluster-preview-note.md)]
+[!INCLUDE [Big data clusters preview](../includes/big-data-cluster-preview-note.md)]
 
 ## <a id="databaseengine"></a> Database Engine
 
@@ -344,9 +350,7 @@ FROM sys.dm_exec_requests AS d
 
 ## <a id="sqllinux"></a> SQL Server on Linux
 
-### CTP 2.0 
-
-- **Replication support**: [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] supports SQL Server Replication on Linux. A Linux virtual machine with SQL Agent can be a publisher, distributor, or subscriber. 
+- **Replication support (CTP 2.0)**: [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] supports SQL Server Replication on Linux. A Linux virtual machine with SQL Agent can be a publisher, distributor, or subscriber. 
 
   Create the following types of publications:
   - Transactional
@@ -355,15 +359,15 @@ FROM sys.dm_exec_requests AS d
 
   Configure replication [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] or use [replication stored procedures](../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md).
 
-- **Support for the Microsoft Distributed Transaction Coordinator (MSDTC)**: SQL Server 2019 on Linux supports the Microsoft Distributed Transaction Coordinator (MSDTC). For details, see [How to configure MSDTC on Linux](../linux/sql-server-linux-configure-msdtc.md).
+- **Support for the Microsoft Distributed Transaction Coordinator (MSDTC) (CTP 2.0)**: SQL Server 2019 on Linux supports the Microsoft Distributed Transaction Coordinator (MSDTC). For details, see [How to configure MSDTC on Linux](../linux/sql-server-linux-configure-msdtc.md).
 
-- **Always On Availability Group on Docker containers with Kubernetes**: Kubernetes can orchestrate containers running [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] instances to provide a highly available set of databases with SQL Server Always On Availability Groups. A Kubernetes operator deploys a StatefulSet including a container with **mssql-server container** and a health monitor.
+- **Always On Availability Group on Docker containers with Kubernetes (CTP 2.2)**: Kubernetes can orchestrate containers running [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] instances to provide a highly available set of databases with SQL Server Always On Availability Groups. A Kubernetes operator deploys a StatefulSet including a container with **mssql-server container**, a health monitor and a liveliness probe.
 
-- **OpenLDAP support for third-party AD providers**: [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] on Linux supports OpenLDAP, which allows third-party providers to join Active Directory.
+- **OpenLDAP support for third-party AD providers (CTP 2.0)**: [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] on Linux supports OpenLDAP, which allows third-party providers to join Active Directory.
 
-- **Machine Learning on Linux**: SQL Server 2019 Machine Learning Services (In-Database) is now supported on Linux. Support includes `sp_execute_external_script` stored procedure. For instructions on how to install Machine Learning Services on Linux, see [Install SQL Server 2019 Machine Learning Services R and Python support on Linux](../linux/sql-server-linux-setup-machine-learning.md).
+- **Machine Learning on Linux (CTP 2.0)**: SQL Server 2019 Machine Learning Services (In-Database) is now supported on Linux. Support includes `sp_execute_external_script` stored procedure. For instructions on how to install Machine Learning Services on Linux, see [Install SQL Server 2019 Machine Learning Services R and Python support on Linux](../linux/sql-server-linux-setup-machine-learning.md).
 
-- **New container registry**: All container images for [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] as well as [!INCLUDE[ssSQL17](../includes/sssql17-md.md)] are now located in the Microsoft Container Registry. Microsoft Container Registry is the official container registry for the distribution of Microsoft product containers. In addition, certified RHEL-based images are now published.
+- **New container registry (CTP 2.1)**: All container images for [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] as well as [!INCLUDE[ssSQL17](../includes/sssql17-md.md)] are now located in the Microsoft Container Registry. Microsoft Container Registry is the official container registry for the distribution of Microsoft product containers. In addition, certified RHEL-based images are now published.
 
   - Microsoft Container Registry: `mcr.microsoft.com/mssql/server:vNext-CTP2.0`
   - Certified RHEL-based container images: `mcr.microsoft.com/mssql/rhel/server:vNext-CTP2.0`
@@ -396,7 +400,7 @@ FROM sys.dm_exec_requests AS d
   - Analyze data in an integrated notebook experience built on Jupyter. (CTP 2.0)
   - Enhance your experience with custom theming and extensions.(CTP 2.0)
   - And explore your Azure resources with a built-in subscription and resource browser. (CTP 2.0)
-  - Supports scenarios using SQL Server Big Data Cluster. (CTP 2.0)
+  - Supports scenarios using SQL Server big data cluster. (CTP 2.0)
 
 - [**SQL Server Management Studio (SSMS) 18.0 (preview)**](../ssms/sql-server-management-studio-ssms.md)
 

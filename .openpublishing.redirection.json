@@ -1532,6 +1532,11 @@
            "redirect_document_id": true
         },
         {
+            "source_path": "docs/relational-database/replication/what-s-new-replication.md",
+            "redirect_url": "/sql/relational-database/replication/sql-server-replication",
+            "redirect_document_id": true
+         },
+        {
            "source_path": "docs/relational-database/replication/distributor-properties-general.md",
            "redirect_url": "/sql/relational-database/replication/distribution-properties",
            "redirect_document_id": true

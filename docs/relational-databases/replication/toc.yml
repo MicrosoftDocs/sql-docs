@@ -1,8 +1,6 @@
 - name: Replication Overview
   href: sql-server-replication.md
   items: 
-    - name: What's New (Replication)
-      href: what-s-new-replication.md
     - name: Replication Backward Compatibility
       href: replication-backward-compatibility.md
     - name: Deprecated Features in SQL Server Replication

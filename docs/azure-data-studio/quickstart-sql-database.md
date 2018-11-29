@@ -1,5 +1,5 @@
 ---
-title: "Quickstart: Create and query an Azure SQL database using Azure Data Studio | Microsoft Docs"
+title: "Quickstart: Connect and query an Azure SQL database using Azure Data Studio | Microsoft Docs"
 description: This quickstart shows how to use Azure Data Studio to connect to a SQL database and run a query
 ms.custom: "tools|sos"
 ms.date: "09/24/2018"

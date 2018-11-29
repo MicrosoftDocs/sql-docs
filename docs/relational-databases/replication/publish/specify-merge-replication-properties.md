@@ -130,7 +130,7 @@ This topic describes how to specify the conflict tracking and resolution level f
 3.  On the **Properties** tab of the **Article Properties \<Article>** dialog box, select one of the following values for the **Tracking level** property: **Row-level tracking** or **Column-level tracking**.   
 4.  If you are in the **Publication Properties - \<Publication>** dialog box, click **OK** to save and close the dialog box.  
   
-## Use Transact-SQL  
+### Use Transact-SQL  
   
 #### To specify conflict tracking options for a new merge article  
   
@@ -161,7 +161,7 @@ This topic describes how to specify the conflict tracking and resolution level f
   
 ### Specify that deletes be ignored for a new merge article  
   
-1.  At the Publisher on the publication database, execute [sp_addmergearticle &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md). Specify a value of **false** for **@delete_tracking**. For more information, see [Define an Article](../../../relational-databases/replication/publish/define-an-article.md).  
+At the Publisher on the publication database, execute [sp_addmergearticle &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md). Specify a value of **false** for **@delete_tracking**. For more information, see [Define an Article](../../../relational-databases/replication/publish/define-an-article.md).
   
     > [!NOTE]  
     >  If the source table for an article is already published in another publication, the value of **delete_tracking** must be the same for both articles.  

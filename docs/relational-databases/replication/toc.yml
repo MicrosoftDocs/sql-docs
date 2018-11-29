@@ -244,7 +244,7 @@
         href: publish/set-the-propagation-method-for-data-changes-to-transactional-articles.md
       - name: Enable updating subscriptions
         href: publish/enable-updating-subscriptions-for-transactional-publications.md
-      - name: Create updateable subscription
+      - name: Create updatable subscription
         href: publish/create-an-updatable-subscription-to-a-transactional-publication.md
       - name: Publish the execution of an SP
         href: publish/publish-execution-of-stored-procedure-in-transactional-publication.md

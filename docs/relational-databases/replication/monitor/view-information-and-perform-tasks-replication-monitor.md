@@ -20,7 +20,7 @@ manager: craigg
 Replication monitor provides a number of tabs and options to view information and perform various tasks. This article describes the different things that can be viewed and accomplished when using Replication Monitor. 
 
 
-## For a publication
+## For a Publication
 
 ### View information
 Replication Monitor provides the following tabs that include information about the selected publication:  

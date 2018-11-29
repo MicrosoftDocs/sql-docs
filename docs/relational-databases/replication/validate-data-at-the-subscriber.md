@@ -1,5 +1,5 @@
 ---
-title: "Validate Data at the Subscriber | Microsoft Docs"
+title: "Validate Replicated Data | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/16/2017"
 ms.prod: sql
@@ -19,7 +19,7 @@ ms.author: "mathoma"
 manager: craigg
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
-# Validate Data at the Subscriber
+# Validate Replicated Data
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   This topic describes how to validate data at the Subscriber in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)], or Replication Management Objects (RMO).  
   
@@ -29,22 +29,7 @@ Transactional and merge replication allow you to validate that data at the Subsc
 -   **Row count and binary checksum**. In addition to taking a count of rows at the Publisher and Subscriber, a checksum of all the data is calculated using the checksum algorithm. If the row count fails, the checksum is not performed.  
   
  In addition to validating that data at the Subscriber and Publisher match, merge replication provides the ability to validate that data is partitioned correctly for each Subscriber. For more information, see [Validate Partition Information for a Merge Subscriber](../../relational-databases/replication/validate-partition-information-for-a-merge-subscriber.md).  
-  
-  
-## Data Validation Results  
- When validation is complete, the Distribution Agent or Merge Agent logs messages regarding success or failure (replication does not report which rows failed). These messages can be viewed in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], Replication Monitor, and replication system tables. The how-to topic listed above demonstrates how to run validation and view the results.  
-  
- To handle validation failures, consider the following:  
-  
--   Configure the replication alert named **Replication: Subscriber has failed data validation** so that you are notified of the failure. For more information, see [Configure Predefined Replication Alerts &#40;SQL Server Management Studio&#41;](../../relational-databases/replication/administration/configure-predefined-replication-alerts-sql-server-management-studio.md).  
-  
--   Is the fact that validation failed an issue for your application? If the validation failure is an issue, manually update the data so that it is synchronized, or reinitialize the subscription:  
-  
-    -   Data can be updated using the [tablediff utility](../../tools/tablediff-utility.md). For more information about using this utility, see [Compare Replicated Tables for Differences &#40;Replication Programming&#41;](../../relational-databases/replication/administration/compare-replicated-tables-for-differences-replication-programming.md).  
-  
-    -   For more information about reinitializaton, see [Reinitialize Subscriptions](../../relational-databases/replication/reinitialize-subscriptions.md).  
-  
-  
+   
 ## How Data Validation Works  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] validates data by calculating a row count or a checksum at the Publisher and then comparing those values to the row count or checksum calculated at the Subscriber. One value is calculated for the entire publication table and one value is calculated for the entire subscription table, but data in **text**, **ntext**, or **image** columns is not included in the calculations.  
   
@@ -78,6 +63,21 @@ Transactional and merge replication allow you to validate that data at the Subsc
 -   Validation is not supported for data replicated to non-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Subscribers.    
 -   The procedures for Replication Monitor are for push subscriptions only because pull subscriptions cannot be synchronized in Replication Monitor. However, you can mark a subscription for validation and view validation results for pull subscriptions in Replication Monitor.    
 -   The validation results indicate whether validation succeeded or failed, but do not specify which rows failed validation if a failure occurred. To compare data at the Publisher and Subscriber, use the [tablediff Utility](../../tools/tablediff-utility.md). For more information about using this utility with replicated data, see [Compare Replicated Tables for Differences &#40;Replication Programming&#41;](../../relational-databases/replication/administration/compare-replicated-tables-for-differences-replication-programming.md).  
+
+
+## Data Validation Results  
+ When validation is complete, the Distribution Agent or Merge Agent logs messages regarding success or failure (replication does not report which rows failed). These messages can be viewed in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], Replication Monitor, and replication system tables. The how-to topic listed above demonstrates how to run validation and view the results.  
+  
+ To handle validation failures, consider the following:  
+  
+-   Configure the replication alert named **Replication: Subscriber has failed data validation** so that you are notified of the failure. For more information, see [Configure Predefined Replication Alerts &#40;SQL Server Management Studio&#41;](../../relational-databases/replication/administration/configure-predefined-replication-alerts-sql-server-management-studio.md).  
+  
+-   Is the fact that validation failed an issue for your application? If the validation failure is an issue, manually update the data so that it is synchronized, or reinitialize the subscription:  
+  
+    -   Data can be updated using the [tablediff utility](../../tools/tablediff-utility.md). For more information about using this utility, see [Compare Replicated Tables for Differences &#40;Replication Programming&#41;](../../relational-databases/replication/administration/compare-replicated-tables-for-differences-replication-programming.md).  
+  
+    -   For more information about reinitializaton, see [Reinitialize Subscriptions](../../relational-databases/replication/reinitialize-subscriptions.md).  
+
   
   
 ## Transactional Replication 

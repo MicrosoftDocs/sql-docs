@@ -18,8 +18,7 @@ manager: craigg
 ## General
   The **General** page of the **Publisher Properties** dialog box displays read-only information on the Distributor and distribution database that the Publisher uses. To change the Distributor or distribution database for a Publisher:  
   
-1.  Disable publishing on the Publisher. For more information, see [Disable Publishing and Distribution](../../relational-databases/replication/disable-publishing-and-distribution.md).  
-  
+1.  Disable publishing on the Publisher. For more information, see [Disable Publishing and Distribution](../../relational-databases/replication/disable-publishing-and-distribution.md).    
 2.  Reconfigure publishing and distribution. For more information, see [Configure Publishing and Distribution](../../relational-databases/replication/configure-publishing-and-distribution.md).  
   
 ## Distributor 
@@ -29,16 +28,14 @@ The **Publisher Properties** dialog box allows you to view and modify properties
  **Agent Connection to the Publisher**  
  Specify the context under which the following agents make connections from the Distributor to the Publisher:  
   
--   The Queue Reader Agent for transactional publications that allow queued updating subscriptions.  
-  
+-   The Queue Reader Agent for transactional publications that allow queued updating subscriptions.    
 -   The Snapshot Agent and Log Reader Agent for Oracle publications.  
   
  Select **Impersonate agent process account** to make connections to the Publisher using the context of the [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows account under which these agents run, or specify **SQL Server Authentication**, and then enter a value for **Login** and **Password**. It is recommended that you select **Impersonate agent process account**. For more information on agent security, see [Replication Agent Security Model](../../relational-databases/replication/security/replication-agent-security-model.md).  
   
  The Windows accounts under which these agents run are specified in the New Publication Wizard. These accounts can be changed:  
   
--   In the **Distributor Properties** dialog box for the Queue Reader Agent.  
-  
+-   In the **Distributor Properties** dialog box for the Queue Reader Agent.    
 -   In the **Publication Properties** dialog box for the Snapshot Agent and Log Reader Agent.  
   
  **Miscellaneous**  
@@ -49,7 +46,7 @@ The **Publisher Properties** dialog box allows you to view and modify properties
   
 ## Options  
  **Transactional**  
- Select this check box to allow users in the **db_owner** fixed database role to create snapshot publications or transactional publications in the database.  
+ Select this check box to allow users in the **db_owner** fixed database role to create snapshot publications or transactional publications in the database. 
   
  **Merge**  
  Select this check box to allow users in the **db_owner** fixed database role to create merge publications in the database.  

@@ -1,7 +1,7 @@
 ---
 title: "CREATE USER (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/01/2018"
+ms.date: "12/03/2018"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""

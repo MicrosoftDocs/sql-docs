@@ -168,13 +168,15 @@ In this step, create a manifest to describe the container based on the SQL Serve
          terminationGracePeriodSeconds: 10
          containers:
          - name: mssql
-           image: mcr.microsoft.com/mssql/server/mssql-server-linux
+           image: mcr.microsoft.com/mssql/server:2017-latest
            ports:
            - containerPort: 1433
            env:
+           - name: MSSQL_PID
+             value: "Developer"
            - name: ACCEPT_EULA
              value: "Y"
-           - name: SA_PASSWORD
+           - name: MSSQL_SA_PASSWORD
              valueFrom:
                secretKeyRef:
                  name: mssql
@@ -203,7 +205,7 @@ In this step, create a manifest to describe the container based on the SQL Serve
 
    Copy the preceding code into a new file, named `sqldeployment.yaml`. Update the following values: 
 
-   * `value: "Developer"`: Sets the container to run SQL Server Developer edition. Developer edition is not licensed for production data. If the deployment is for production use, set the appropriate edition (`Enterprise`, `Standard`, or `Express`). 
+   * MSSQL_PID `value: "Developer"`: Sets the container to run SQL Server Developer edition. Developer edition is not licensed for production data. If the deployment is for production use, set the appropriate edition (`Enterprise`, `Standard`, or `Express`). 
 
       >[!NOTE]
       >For more information, see [How to license SQL Server](https://www.microsoft.com/sql-server/sql-server-2017-pricing).

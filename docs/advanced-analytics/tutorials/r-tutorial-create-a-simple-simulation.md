@@ -1,5 +1,5 @@
 ---
-title: Create a simple simulation | Microsoft Docs
+title: Run custom R functions on SQL Server using RevoScaleR rxExec | Microsoft Docs
 ms.prod: sql
 ms.technology: machine-learning
 
@@ -9,23 +9,36 @@ author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
 ---
-# Wrap R code in the rxExec function to run it on SQL Server
+# Run custom R functions on SQL Server using rxExec
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-You can call an arbitrary R function in the context of the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] computer by using the [rxExec](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxexec) function. You can also use **rxExec** to explicitly distribute work across cores in a single server.
+You can run custom R functions in the context of SQL Server by passing your function via [rxExec](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxexec), assuming that any libraries your script requires are also installed on the server and those libraries are compatible with the base distribution of R. 
 
-In this tutorial, you will use simulated data to demonstrate execution of a custom R function that runs on a remote server. This simulation doesn't require any [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] data.
+The **rxExec** function in **RevoScaleR** provides a mechanism for running any R script you require. Additionally,  **rxExec** is able to explicitly distribute work across multiple cores in a single server, adding scale to scripts that are otherwise limited to the resource constraints of the native R engine.
 
+In this tutorial, you will use simulated data to demonstrate execution of a custom R function that runs on a remote server.
+
+## Prerequisites
+
++ [SQL Server 2017 Machine Learning Services (with R)](../install/sql-machine-learning-services-windows-install.md) or [SQL Server 2016 R Services (in-Database)](../install/sql-r-services-windows-install.md)
+  
++ [Database permissions](../security/user-permission.md) and a SQL Server database user login
+
++ [A development workstation with the RevoScaleR libraries](../r/set-up-a-data-science-client.md)
+
+The R distribution on the client workstation provides a built-in **Rgui** tool that you can use to run the R script in this tutorial. You can also use an IDE such as RStudio or R Tools for Visual Studio.
 
 ## Create the remote compute context
 
-1. Specify the connection string for the instance where computations are performed. The database name is not used, but the connectiong string requires one. If you have a test or sample database, you can use that.
+Run the following R commands on a client workstation. For example, you are using **Rgui**, start it from this location: C:\Program Files\Microsoft\R Client\R_SERVER\bin\x64\.
+
+1. Specify the connection string for the SQL Server instance where computations are performed. The server must be configured for R integration. The database name is not used in this exercise, but the connection string requires one. If you have a test or sample database, you can use that.
 
     **Using a SQL login**
 
     ```R
     sqlConnString <- "Driver=SQL Server;Server=<SQL-Server-instance-name>; Database=<database-name>;Uid=<SQL-user-name>;Pwd=<password>"
-      ```
+    ```
 
     **Using Windows authentication**
 
@@ -33,26 +46,26 @@ In this tutorial, you will use simulated data to demonstrate execution of a cust
     sqlConnString <- "Driver=SQL Server;Server=<SQL-Server-instance-name>;Database=<database-name>;Trusted_Connection=True"
     ```
 
-2. Create the compute context.
+2. Create a remote compute context to the SQL Server instance referenced in the connection string.
 
     ```R
-    CCsqlrxExec <- RxInSqlServer(connectionString = sqlConnString)
+    ccsqlremote <- RxInSqlServer(connectionString = sqlConnString)
     ```
 
-3. Set the compute context and then return the object definition as a confirmation step.
+3. Activate the compute context and then return the object definition as a confirmation step. You should see the properties of the compute context object.
 
     ```R
-    rxSetComputeContext(CCsqlrxExec)
+    rxSetComputeContext(ccsqlremote)
     rxGetComputeContext()
     ```
 
 ## Create the custom function
 
-A common casino game consists of rolling a pair of dice, with these rules:
+In this exercise, you will create a custom R function that simulates a common casino consisting of rolling a pair of dice. Rules of the game determine a win or loss outcome:
 
-- If you roll a 7 or 11 on your initial roll, you win.
-- If you roll 2, 3, or 12, you lose.
-- If you roll a 4, 5, 6, 8, 9, or 10, that number becomes your point and you continue rolling until you either roll your point again (in which case you win) or roll a 7, in which case you lose.
++ Roll a 7 or 11 on your initial roll, you win.
++ Roll 2, 3, or 12, you lose.
++ Roll a 4, 5, 6, 8, 9, or 10, that number becomes your point, and you continue rolling until you either roll your point again (in which case you win) or roll a 7, in which case you lose.
 
 The game is easily simulated in R, by creating a custom function, and then running it many times.
 
@@ -84,7 +97,7 @@ The game is easily simulated in R, by creating a custom function, and then runni
     }
     ```
   
-2.  To simulate a single game of dice, run the function.
+2.  Simulate a single game of dice by running the function.
   
     ```R
     rollDice()
@@ -92,11 +105,11 @@ The game is easily simulated in R, by creating a custom function, and then runni
   
     Did you win or lose?
   
-Now let's see how you can use **rxExec** to run the function multiple times, to create a simulation that helps determine the probability of a win.
+Now that you have an operational script, let's see how you can use **rxExec** to run the function multiple times to create a simulation that helps determine the probability of a win.
 
-## Create the simulation
+## Pass rollDice() in rxExec
 
-To run an arbitrary function in the context of the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] computer, you call the **rxExec** function. Although **rxExec** also supports distributed execution of a function in parallel across nodes or cores in a server context, here it runs your custom function on the SQL Server computer.
+To run an arbitrary function in the context of a remote SQL Server, call the **rxExec** function.
 
 1. Call the custom function as an argument to **rxExec**, together with other parameters that modify the simulation.
   
@@ -105,15 +118,15 @@ To run an arbitrary function in the context of the [!INCLUDE[ssNoVersion](../../
     length(sqlServerExec)
     ```
   
-    - Use the *timesToRun* argument to indicate how many times the function should be executed.  In this case, you roll the dice 20 times.
+    + Use the *timesToRun* argument to indicate how many times the function should be executed.  In this case, you roll the dice 20 times.
   
-    - The arguments *RNGseed* and *RNGkind* can be used to control random number generation. When *RNGseed* is set to **auto**, a parallel random number stream is initialized on each worker.
+    + The arguments *RNGseed* and *RNGkind* can be used to control random number generation. When *RNGseed* is set to **auto**, a parallel random number stream is initialized on each worker.
   
-2. The **rxExec** function creates a list with one element for each run; however, you won't see much happening until the list is complete. When all the iterations are complete, the line starting with `length` will return a value.
+2. The **rxExec** function creates a list with one element for each run; however, you won't see much happening until the list is complete. When all the iterations are complete, the line starting with **length** will return a value.
   
     You can then go to the next step to get a summary of your win-loss record.
   
-3. Convert the returned list to a vector using R's `unlist` function, and summarize the results using the `table` function.
+3. Convert the returned list to a vector using R's **unlist** function, and summarize the results using the **table** function.
   
     ```R
     table(unlist(sqlServerExec))
@@ -123,6 +136,16 @@ To run an arbitrary function in the context of the [!INCLUDE[ssNoVersion](../../
   
      *Loss  Win*
      *12  8*
+
+## Conclusion
+
+Although this exercise is simplistic, it demonstrates an important mechanism for integrating arbitrary R functions in R script running on SQL Server. To summarize the key points that make this technique possible:
+
++ SQL Server must be configured for machine learning and R integration: [SQL Server 2017 Machine Learning Services](../install/sql-machine-learning-services-windows-install.md) with the R feature, or [SQL Server 2016 R Services (in-Database)](../install/sql-r-services-windows-install.md).
+
++ Open-source or third-party libraries used in your function, including any dependencies, must be installed on SQL Server. For more information, see [Install new R packages](../r/install-additional-r-packages-on-sql-server.md).
+
++ Moving script from a development enviroment to a hardened production environment can introduce firewall and network restrictions. Test carefully to make sure your script is able to perform as expected.
 
 ## Next steps
 

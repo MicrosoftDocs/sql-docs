@@ -55,19 +55,15 @@ You've decided that you want to examine only the high risk individuals in more d
 
 **Results**
 
-*ccFraudLogitScore   state gender cardholder balance numTrans numIntlTrans creditLine ccFraudProb1*
-
-*9.786345    SD   Male  Principal   23456       25            5 75   0.99994382*
-
-*9.433040    FL Female  Principal   20629       24           28 75   0.99992003*
-
-*8.556785    NY Female  Principal   19064       82           53 43   0.99980784*
-
-*8.188668    AZ Female  Principal   19948       29            0 75   0.99972235*
-
-*7.551699    NY Female  Principal   11051       95            0 75   0.99947516*
-
-*7.335080    NV   Male  Principal   21566        4            6  75   0.9993482*
+```
+ccFraudLogitScore   state gender cardholder balance numTrans numIntlTrans creditLine ccFraudProb1
+9.786345    SD   Male  Principal   23456       25            5 75   0.99994382
+9.433040    FL Female  Principal   20629       24           28 75   0.99992003
+8.556785    NY Female  Principal   19064       82           53 43   0.99980784
+8.188668    AZ Female  Principal   19948       29            0 75   0.99972235
+7.551699    NY Female  Principal   11051       95            0 75   0.99947516
+7.335080    NV   Male  Principal   21566        4            6  75   0.9993482
+```
 
 ## More about rxImport
 
@@ -80,4 +76,4 @@ By specifying additional operations in the *transforms* parameter, you can do el
 ## Next steps
 
 > [!div class="nextstepaction"]
-> [Create new SQL Server table using rxDataStep](../../advanced-analytics/tutorials/deepdive-create-new-sql-server-table-using-rxdatastep.md)
+> [Create new SQL Server table using rxDataStep](../../advanced-analytics/tutorials/deepdive-move-data-between-sql-server-and-xdf-file.md)

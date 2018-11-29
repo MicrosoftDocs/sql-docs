@@ -14,7 +14,7 @@ manager: cgronlun
 
 This lesson is part of the [RevoScaleR tutorial](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md) on how to use [RevoScaleR functions](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) with SQL Server.
 
-In this step, you learn to use an XDF file to transfer data between remote and local compute contexts. Storing the data in an XDF file allows you to perform transformations on the data.
+In this step, learn to use an XDF file to transfer data between remote and local compute contexts. Storing the data in an XDF file allows you to perform transformations on the data.
 
 When you're done, you use the data in the file to create a new [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] table. The function [rxDataStep](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxdatastep) can apply transformations to the data and performs the conversion between data frames and .xdf files.
   
@@ -87,24 +87,25 @@ For this exercise, you use the credit card fraud data again. In this scenario, y
 
     **Results**
     
-    *rxGetVarInfo(data = localDS)*
+    ```
+    rxGetVarInfo(data = localDS)
+    Var 1: gender, Type: factor, no factor levels available
+    Var 2: cardholder, Type: factor, no factor levels available
+    Var 3: balance, Type: integer, Low/High: (0, 22463)
+    Var 4: state, Type: factor, no factor levels available
+    ```
 
-    *Var 1: gender, Type: factor, no factor levels available*
-
-    *Var 2: cardholder, Type: factor, no factor levels available*
-
-    *Var 3: balance, Type: integer, Low/High: (0, 22463)*
-
-    *Var 4: state, Type: factor, no factor levels available*
-  
-8. You can now call various R functions to analyze the `localDs` object, just as you would with the source data on [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. For example, you might summarize by gender:
+8. You can now call various R functions to analyze the **localDs** object, just as you would with the source data on SQL Server. For example, you might summarize by gender:
   
     ```R
     rxSummary(~gender + cardholder + balance + state, data = localDS)
     ```
 
-Now that you've mastered the use of compute contexts and working with various data sources, it's time to try something fun. In the next and final lesson, you create a simple simulation that runs a custom R function on the remote server.
 ## Next steps
 
+This lesson concludes the multi-part tutorial series on **RevoScaleR** and SQL Server. It introduced you to numerous data-related and computational concepts, giving you a foundation for moving forward with your own data and project requirements.
+
+To deepen your knowledge of **RevoScaleR**, you can return to the R tutorials list to step through any exercises you might have missed. Alternatively, review the How-to articles in the table of contents for information about general tasks.
+
 > [!div class="nextstepaction"]
-> [Create a simple simulation](../../advanced-analytics/tutorials/deepdive-create-a-simple-simulation.md)
+> [R Tutorials for SQL Server](sql-server-r-tutorials.md)

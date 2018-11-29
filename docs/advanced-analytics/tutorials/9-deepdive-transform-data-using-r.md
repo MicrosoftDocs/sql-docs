@@ -17,8 +17,8 @@ This lesson is part of the [RevoScaleR tutorial](deepdive-data-science-deep-dive
 In this lesson, learn about the **RevoScaleR** functions for transforming data at various stages of your analysis.
 
 > [!div class="checklist"]
-> * Use **rxDataStep** to create and transform a data subse
-> * Use **rxImport** to transform in-transit data to or from an XDF file or an in-memory data frame during import.
+> * Use **rxDataStep** to create and transform a data subset
+> * Use **rxImport** to transform in-transit data to or from an XDF file or an in-memory data frame during import
 
 Although not specifically for data movement, the functions **rxSummary**, **rxCube**, **rxLinMod**, and **rxLogit** all support data transformations.
 

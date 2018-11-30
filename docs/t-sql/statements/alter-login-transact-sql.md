@@ -28,23 +28,23 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 ---
 # ALTER LOGIN (Transact-SQL)
 ::: moniker range=">=sql-server-2016||>=sql-server-linux-2017||=sqlallproducts-allversions"
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 ::: moniker-end
 
 ::: moniker range="=azuresqldb-current||=sqlallproducts-allversions"
-[!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md]
+[!INCLUDE [tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
 ::: moniker-end
 
 ::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
-[!INCLUDE[tsql-appliesto-xxxxxx-asdbmi-xxxx-xxx-md]
+[!INCLUDE [tsql-appliesto-xxxxxx-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdbmi-xxxx-xxx-md.md)]
 ::: moniker-end
 
 ::: moniker range="=azure-sqldw-latest||=sqlallproducts-allversions"
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md]
+[!INCLUDE [tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md.md)]
 ::: moniker-end
 
 ::: moniker range=">=aps-pdw-2016||=sqlallproducts-allversions"
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md]
+[!INCLUDE [tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]
 ::: moniker-end
 
   Changes the properties of a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] login account.  
@@ -639,11 +639,21 @@ ALTER LOGIN login_name
 
 
 ## Arguments  
+
+### Arguments applicable to SQL and Azure AD logins
  *login_name*  
  Specifies the name of the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] login that is being changed. Azure AD logins must be specified as user@domain. For example, john.smith@contoso.com, or as the Azure AD group or application name. For Azure AD logins, the *login_name* must correspond to an existing Azure AD login created in the master database.  
   
  ENABLE | DISABLE  
  Enables or disables this login. Disabling a login does not affect the behavior of logins that are already connected. (Use the `KILL` statement to terminate an existing connection.) Disabled logins retain their permissions and can still be impersonated.  
+
+ DEFAULT_DATABASE **=**_database_  
+ Specifies a default database to be assigned to the login.  
+  
+ DEFAULT_LANGUAGE **=**_language_  
+ Specifies a default language to be assigned to the login. The default language for all SQL Database logins is English and cannot be changed. The default language of the `sa` login on [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] on Linux, is English but it can be changed.
+
+### Arguments applicable only to SQL logins
   
  PASSWORD **='**_password_**'**  
  Applies only to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] logins. Specifies the password for the login that is being changed. Passwords are case-sensitive. Passwords also do not apply when used with external logins, like Azure AD logins.
@@ -651,72 +661,40 @@ ALTER LOGIN login_name
  Continuously active connections to SQL Database require reauthorization (performed by the Database Engine) at least every 10 hours. The Database Engine attempts reauthorization using the originally submitted password and no user input is required. For performance reasons, when a password is reset in SQL Database, the connection will not be re-authenticated, even if the connection is reset due to connection pooling. This is different from the behavior of on-premises SQL Server. If the password has been changed since the connection was initially authorized, the connection must be terminated and a new connection made using the new password. A user with the KILL DATABASE CONNECTION permission can explicitly terminate a connection to SQL Database by using the KILL command. For more information, see [KILL &#40;Transact-SQL&#41;](../../t-sql/language-elements/kill-transact-sql.md).  
   
  PASSWORD **=**_hashed\_password_  
- **Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], and Azure SQL Database Managed Instance.
-  
  Applies to the HASHED keyword only. Specifies the hashed value of the password for the login that is being created.  
   
  HASHED  
-   
-**Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], and Azure SQL Database Managed Instance.
-  
  Applies to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] logins only. Specifies that the password entered after the PASSWORD argument is already hashed. If this option is not selected, the password is hashed before being stored in the database. This option should only be used for login synchronization between two servers. Do not use the HASHED option to routinely change passwords.  
   
  OLD_PASSWORD **='**_oldpassword_**'**  
  Applies only to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] logins. The current password of the login to which a new password will be assigned. Passwords are case-sensitive.  
   
- MUST_CHANGE  
- **Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], Parallel Data Warehouse, and Azure SQL Database Managed Instance.
-  
- Applies only to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] logins. If this option is included, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] will prompt for an updated password the first time the altered login is used.  
-  
- DEFAULT_DATABASE **=**_database_  
-**Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], and Azure SQL Database Managed Instance.
-  
- Specifies a default database to be assigned to the login.  
-  
- DEFAULT_LANGUAGE **=**_language_  
- 
- **Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], and Azure SQL Database Managed Instance.
-  
- Specifies a default language to be assigned to the login. The default language for all SQL Database logins is English and cannot be changed. The default language of the `sa` login on [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] on Linux, is English but it can be changed.  
+ MUST_CHANGE<br>
+ Applies only to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] logins. If this option is included, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] will prompt for an updated password the first time the altered login is used.   
   
  NAME = *login_name*  
  The new name of the login that is being renamed. If the login is a Windows login, the SID of the Windows principal corresponding to the new name must match the SID associated with the login in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. The new name of a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] login cannot contain a backslash character (\\).  
   
  CHECK_EXPIRATION = { ON | **OFF** }  
- **Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], Parallel Data Warehouse, and Azure SQL Database Managed Instance.
-  
  Applies only to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] logins. Specifies whether password expiration policy should be enforced on this login. The default value is OFF.  
   
  CHECK_POLICY **=** { **ON** | OFF }  
- **Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], Parallel Data Warehouse, and Azure SQL Database Managed Instance.
-  
  Applies only to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] logins. Specifies that the Windows password policies of the computer on which [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is running should be enforced on this login. The default value is ON.  
   
  CREDENTIAL = *credential_name*  
- **Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], and Azure SQL Database Managed Instance. 
-  
  The name of a credential to be mapped to a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] login. The credential must already exist in the server. For more information, see [Credentials &#40;Database Engine&#41;](../../relational-databases/security/authentication-access/credentials-database-engine.md). A credential cannot be mapped to the sa login.  
   
  NO CREDENTIAL  
- **Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], and Azure SQL Database Managed Instance.
-  
  Removes any existing mapping of the login to a server credential. For more information, see [Credentials &#40;Database Engine&#41;](../../relational-databases/security/authentication-access/credentials-database-engine.md).  
   
  UNLOCK  
- **Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], Parallel Data Warehouse, and Azure SQL Database Managed Instance.
-  
  Applies only to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] logins. Specifies that a login that is locked out should be unlocked.  
   
  ADD CREDENTIAL  
- **Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], and Azure SQL Database Managed Instance.
-  
  Adds an Extensible Key Management (EKM) provider credential to the login. For more information, see [Extensible Key Management &#40;EKM&#41;](../../relational-databases/security/encryption/extensible-key-management-ekm.md).  
   
  DROP CREDENTIAL  
- **Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], and Azure SQL Database Managed Instance.
-  
-Removes an Extensible Key Management (EKM) provider credential from the login. For more information, see [Extensible Key Management &#40;EKM&#41;](../../relational-databases/security/encryption/extensible-key-management-ekm.md).  
+ Removes an Extensible Key Management (EKM) provider credential from the login. For more information, see [Extensible Key Management &#40;EKM&#41;](../../relational-databases/security/encryption/extensible-key-management-ekm.md).  
   
 ## Remarks  
  When CHECK_POLICY is set to ON, the HASHED argument cannot be used.  

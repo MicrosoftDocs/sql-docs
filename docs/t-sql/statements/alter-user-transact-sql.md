@@ -37,7 +37,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 ## Syntax  
   
 ```  
--- Syntax for SQL Server and Azure SQL Database Managed Instance
+-- Syntax for SQL Server and Azure SQL Database
   
 ALTER USER userName    
      WITH <set_item> [ ,...n ]  

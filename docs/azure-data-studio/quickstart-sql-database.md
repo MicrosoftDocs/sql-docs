@@ -13,7 +13,7 @@ manager: craigg
 ---
 # Quickstart: Use [!INCLUDE[name-sos](../includes/name-sos-short.md)] to connect and query Azure SQL database
 
-This quickstart demonstrates how to use [!INCLUDE[name-sos](../includes/name-sos-short.md)] to connect to an Azure SQL Database server, and then use Transact-SQL (T-SQL) statements to create and query the TutorialDB database used in [!INCLUDE[name-sos](../includes/name-sos-short.md)] tutorials.
+This quickstart demonstrates how to use [!INCLUDE[name-sos](../includes/name-sos-short.md)] to connect to an Azure SQL Database server and then use Transact-SQL (T-SQL) statements to create and query the TutorialDB database used in [!INCLUDE[name-sos](../includes/name-sos-short.md)] tutorials.
 
 ## Prerequisites
 

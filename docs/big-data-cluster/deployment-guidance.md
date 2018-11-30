@@ -30,13 +30,14 @@ SQL Server big data cluster requires a minimum v1.10 version for Kubernetes, for
 
 If you already have a Kubernetes cluster that meets above prerequisites, then you can skip directly to the [deployment step](#deploy). This section assumes a basic understanding of Kubernetes concepts.  For detailed information on Kubernetes, see the [Kubernetes documentation](https://kubernetes.io/docs/home).
 
-You can choose to deploy Kubernetes in any of three ways:
+You can choose to deploy Kubernetes in any of four ways:
 
 | Deploy Kubernetes on: | Description |
 |---|---|
 | **Minikube** | A single-node Kubernetes cluster in a VM. |
 | **Azure Kubernetes Services (AKS)** | A managed Kubernetes container service in Azure. |
-| **Multiple machines** | A Kubernetes cluster deployed on physical or virtual machines using **kubeadm** |
+| **Azure Container Service Engine ([ACS Engine](https://github.com/Azure/acs-engine/blob/master/docs/kubernetes.md))** | An un-managed Kubernetes container service in Azure. |
+| **Multiple machines** | A Kubernetes cluster deployed on physical or virtual machines using  **kubeadm** |
 
 For guidance on configuring one of these Kubernetes cluster options for a SQL Server big data cluster, see one of the following articles:
 

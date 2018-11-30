@@ -68,5 +68,3 @@ To meet strict RTO requirements we recommend to spread the checkpoint files over
 
 In terms of disk capacity, we recommend to have 2-3X the size of the memory-optimized tables available.
 
-Want to learn even more about In-Memory OLTP? Download SQL Server 2014 CTP1 and get started today or see more blogs in the series introduction and index here!
-

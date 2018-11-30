@@ -25,7 +25,7 @@ The RSReportServer.config is located in the following folders, depending on the 
 
 
   
-### Native mode report server  
+### Native mode report server 
 
  
 **[!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)]** [!INCLUDE[ssrs-appliesto-2016](../../includes/ssrs-appliesto-2016.md)]
@@ -34,7 +34,7 @@ The RSReportServer.config is located in the following folders, depending on the 
 C:\Program Files\Microsoft SQL Server\MSRS13.MSSQLSERVER\Reporting Services\ReportServer  
 ```
 
-**[!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)]** [!INCLUDE[ssrs-appliesto-pbirsi](../includes/ssrs-appliesto-pbirs.md)]
+**[!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)]** [!INCLUDE[ssrs-appliesto-pbirsi](../../includes/ssrs-appliesto-pbirs.md)]
 
 ```  
 C:\Program Files\Microsoft SQL Server Reporting Services\RSServer\ReportServer

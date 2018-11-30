@@ -337,6 +337,6 @@ You have successfully completed the Adding a KPI to Your Report tutorial. For mo
   
 ## See Also  
 * [Report Builder Tutorials](../reporting-services/report-builder-tutorials.md)
-* [Report Builder in SQL Server 2016](../reporting-services/report-builder/report-builder-in-sql-server-2016.md)  
+* [Report Builder in SQL Server](../reporting-services/report-builder/report-builder-in-sql-server-2016.md)  
   
 

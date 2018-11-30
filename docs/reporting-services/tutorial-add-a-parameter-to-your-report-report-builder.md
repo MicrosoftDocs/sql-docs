@@ -496,5 +496,5 @@ This concludes the walkthrough for how to add a parameter to your report. To lea
   
 ## See Also  
 * [Report Builder Tutorials](../reporting-services/report-builder-tutorials.md)
-* [Report Builder in SQL Server 2016](../reporting-services/report-builder/report-builder-in-sql-server-2016.md)  
+* [Report Builder in SQL Server](../reporting-services/report-builder/report-builder-in-sql-server-2016.md)  
 *  [Lookup Function](../reporting-services/report-design/report-builder-functions-lookup-function.md)   

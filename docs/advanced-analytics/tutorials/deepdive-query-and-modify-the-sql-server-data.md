@@ -50,7 +50,7 @@ All the variables are stored as integers, but some variables represent categoric
 
 In this step, you create a string vector containing the abbreviations, and then map these categorical values to the original integer identifiers. Then you use the new variable in the *colInfo* argument, to specify that this column be handled as a factor. Whenever you analyze the data or move it, the abbreviations are used and the column is handled as a factor.
 
-Mapping the column to abbreviations before using it as a factor actually improves performance as well. For more information, see [R and data optimization](..\r\r-and-data-optimization-r-services.md).
+Mapping the column to abbreviations before using it as a factor actually improves performance as well. For more information, see [R and data optimization](../r/r-and-data-optimization-r-services.md).
 
 1. Begin by creating an R variable, *stateAbb*, and defining the vector of strings to add to it, as follows:
   

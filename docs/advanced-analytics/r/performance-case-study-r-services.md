@@ -361,7 +361,7 @@ The following are links to information, tools, and scripts used in the developme
 
 ### Learn about SQL Server optimizations
 
-+ [Reorganize and Rebuild Indexes](../../relational-databases\indexes\reorganize-and-rebuild-indexes.md)
++ [Reorganize and Rebuild Indexes](../../relational-databases/indexes/reorganize-and-rebuild-indexes.md)
 
 + [Introduction to memory-optimized tables](https://docs.microsoft.com/sql/relational-databases/in-memory-oltp/introduction-to-memory-optimized-tables)
 

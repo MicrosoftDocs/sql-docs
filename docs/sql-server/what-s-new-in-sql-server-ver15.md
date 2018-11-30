@@ -29,9 +29,6 @@ Community technology preview (CTP) 2.2 is the latest public release of [!INCLUDE
   - Use SparkR with Big data cluster
   - Access SparkR kernel with Azure Data Studio
 
-- [Database engine](#databaseengine)
-  - Configure Kubernetes liveliness probe on availability group
-
 ## Previous CTPs
 
 Earlier CTP releases added or enhanced the following features for [!INCLUDE[sql-server-2019](..\includes\sssqlv15-md.md)].
@@ -361,7 +358,7 @@ FROM sys.dm_exec_requests AS d
 
 - **Support for the Microsoft Distributed Transaction Coordinator (MSDTC) (CTP 2.0)**: SQL Server 2019 on Linux supports the Microsoft Distributed Transaction Coordinator (MSDTC). For details, see [How to configure MSDTC on Linux](../linux/sql-server-linux-configure-msdtc.md).
 
-- **Always On Availability Group on Docker containers with Kubernetes (CTP 2.2)**: Kubernetes can orchestrate containers running [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] instances to provide a highly available set of databases with SQL Server Always On Availability Groups. A Kubernetes operator deploys a StatefulSet including a container with **mssql-server container**, a health monitor and a liveliness probe.
+- **Always On Availability Group on Docker containers with Kubernetes (CTP 2.2)**: Kubernetes can orchestrate containers running [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] instances to provide a highly available set of databases with SQL Server Always On Availability Groups. A Kubernetes operator deploys a StatefulSet including a container with **mssql-server container**, and a health monitor.
 
 - **OpenLDAP support for third-party AD providers (CTP 2.0)**: [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] on Linux supports OpenLDAP, which allows third-party providers to join Active Directory.
 

@@ -74,9 +74,9 @@ Kubernetes is an open source container orchestrator, which can scale container d
 
 In SQL Server big data clusters, Kubernetes is responsible for the state of the SQL Server big data clusters; Kubernetes builds and configures the cluster nodes, assigns pods to nodes, and monitors the health of the cluster.
 
-### Big Data Clusters Architecture
+### Big data clusters architecture
 
-Nodes in the cluster are arranged into three logical planes: the control plane, the compute pane, and the data plane. Each plane has different responsibilities in the cluster. Every Kubernetes node in a SQL Server big data cluster is hosting pods for components of at least one plane.
+Nodes in the cluster are arranged into three logical planes: the control plane, the compute plane, and the data plane. Each plane has different responsibilities in the cluster. Every Kubernetes node in a SQL Server big data cluster is hosting pods for components of at least one plane.
 
 ![Architecture overview](media/big-data-cluster-overview/architecture-diagram-planes.png)
 

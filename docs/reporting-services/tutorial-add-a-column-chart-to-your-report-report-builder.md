@@ -297,6 +297,6 @@ You have successfully completed the Adding a Column Chart to Your Report tutoria
   
 ## See Also  
 -    [Report Builder tutorials](../reporting-services/report-builder-tutorials.md) 
--    [Report Builder in SQL Server 2016](../reporting-services/report-builder/report-builder-in-sql-server-2016.md)  
+-    [Report Builder in SQL Server](../reporting-services/report-builder/report-builder-in-sql-server-2016.md)  
   
 

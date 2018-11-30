@@ -34,13 +34,13 @@ The RSReportServer.config is located in the following folders, depending on the 
 C:\Program Files\Microsoft SQL Server\MSRS13.MSSQLSERVER\Reporting Services\ReportServer  
 ```
 
-**[!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)]** [!INCLUDE[ssrs-appliesto-pbirs](../includes/ssrs-appliesto-pbirs.md)]
+**[!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)]** [!INCLUDE[ssrs-appliesto-pbirsi](../includes/ssrs-appliesto-pbirs.md)]
 
 ```  
 C:\Program Files\Microsoft SQL Server Reporting Services\RSServer\ReportServer
 ```  
   
-### SharePoint mode report server
+### SharePoint mode report server 
 
 > [!NOTE]
 > SharePoint integrated mode is not available with the January 2017 Technical Preview of Power BI reports in SQL Server Reporting Services.

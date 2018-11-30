@@ -51,7 +51,7 @@ The utility uses ODBC to execute Transact-SQL batches.
 **[![download](../ssdt/media/download.png) Download Microsoft Command Line Utilities 15.0.x for SQL Server (x64) (2.4 MB)](https://go.microsoft.com/fwlink/?linkid=2043518)**
 <br>**[![download](../ssdt/media/download.png) Download Microsoft Command Line Utilities 15.0.x for SQL Server (x86) (2.2 MB)](https://go.microsoft.com/fwlink/?linkid=2043622)**
 
-The command line tools are General Availability (GA), however they are being released with the installer package for [!INCLUDE[sql-server-2019](..\includes\sssqlv15-md.md)].
+The command line tools are General Availability (GA), however they are being released with the installer package for [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)].
 
 **Version Information**
 

@@ -1,5 +1,5 @@
 ---
-title: Tutorial about RevoScaleR functions with SQL Server Machine Learning | Microsoft Docs
+title: RevoScaleR deep dive into functions used with SQL Server Machine Learning | Microsoft Docs
 description: In this tutorial, learn how to call RevoScaleR function in SQL Server Machine Learning with R supported enabled.
 ms.prod: sql
 ms.technology: machine-learning

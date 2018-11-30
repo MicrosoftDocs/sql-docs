@@ -82,14 +82,6 @@ Limited support may be found at one of the following locations:
 
 - **Applies to**: SQL Server 2019 preview CTP 2.2, CTP 2.1
 
-### UDF Inlining
-
-- **Issue and customer impact**: There are corner case scenarios where nested calls to user defined functions inline do not correctly validate security.
-  
-- **Workaround**: Disable UDF inlining for such UDFs using the `INLINE = OFF` setting.
-
-- **Applies to**: SQL Server 2019 CTP 2.1
-
 ### UTF-8 collations
 
 - **Issue and customer impact**: UTF-8 enabled collations cannot be used with some other [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] features. UTF-8 is not supported when the following [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] features are in use:
@@ -124,6 +116,14 @@ Limited support may be found at one of the following locations:
 ## CTP 2.1 (October 2018)
 
 [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] CTP 2.1 is the previous public release of [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)].
+
+### UDF Inlining
+
+- **Issue and customer impact**: There are corner case scenarios where nested calls to user defined functions inline do not correctly validate security.
+  
+- **Workaround**: Disable UDF inlining for such UDFs using the `INLINE = OFF` setting.
+
+- **Applies to**: SQL Server 2019 CTP 2.1
 
 ### SQL Server Integration Service - Fuzzy Lookup Transformation
 

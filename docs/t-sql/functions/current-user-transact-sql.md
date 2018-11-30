@@ -110,7 +110,7 @@ In this example, user `Wanida` executes the following [!INCLUDE[tsql](../../incl
 ```sql
 SELECT CURRENT_USER;  
 GO  
-EXECUTE AS USER = 'Wanida';  
+EXECUTE AS USER = 'Arnalfo';  
 GO  
 SELECT CURRENT_USER;  
 GO  

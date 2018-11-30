@@ -355,6 +355,6 @@ There are many ways to format text in Report Builder. [Tutorial: Creating a Free
 
 [Report Builder Tutorials ](../reporting-services/report-builder-tutorials.md) 
 [Formatting Report Items](../reporting-services/report-design/formatting-report-items-report-builder-and-ssrs.md)  
-[Report Builder in SQL Server 2016](../reporting-services/report-builder/report-builder-in-sql-server-2016.md)  
+[Report Builder in SQL Server](../reporting-services/report-builder/report-builder-in-sql-server-2016.md)  
 
 More questions? [Try asking the Reporting Services forum](https://go.microsoft.com/fwlink/?LinkId=620231)

@@ -350,6 +350,6 @@ This concludes the walkthrough for how to create a basic table report. For more 
   
 ## See Also  
 [Report Builder Tutorials](../reporting-services/report-builder-tutorials.md)  
-[Report Builder in SQL Server 2016](../reporting-services/report-builder/report-builder-in-sql-server-2016.md)  
+[Report Builder in SQL Server](../reporting-services/report-builder/report-builder-in-sql-server-2016.md)  
   
 

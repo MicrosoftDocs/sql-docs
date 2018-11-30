@@ -1,7 +1,7 @@
 ---
 title: "sys.query_context_settings (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/22/2016"
+ms.date: "11/29/2018"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
@@ -23,7 +23,7 @@ manager: craigg
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.query_context_settings (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
 
   Contains  information about the semantics affecting context settings associated with a query. There are a number of context settings available in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] that influence the query semantics (defining the correct result of the query). The same query text compiled under different settings may produce different results (depending on the underlying data).  
   

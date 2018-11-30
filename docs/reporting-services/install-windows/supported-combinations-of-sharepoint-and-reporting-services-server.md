@@ -71,7 +71,7 @@ A SQL Server Reporting Services report server installed in SharePoint mode requi
 ## Next steps
 
  [Where to find the Reporting Services add-in for SharePoint Products](../../reporting-services/install-windows/where-to-find-the-reporting-services-add-in-for-sharepoint-products.md)   
- [Features Supported by the Editions of SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md)   
+ [Features Supported by the Editions of SQL Server 2016](~/sql-server/editions-and-components-of-sql-server-2017.md)   
  [Hardware and Software Requirements for Installing SQL Server 2016](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)  
 
 More questions? [Try asking the Reporting Services forum](https://go.microsoft.com/fwlink/?LinkId=620231)

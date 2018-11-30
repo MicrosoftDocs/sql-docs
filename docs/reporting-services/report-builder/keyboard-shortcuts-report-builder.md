@@ -86,7 +86,7 @@ ms.author: maggies
 |Accelerator mode for pan and zoom in map view area when a map viewport is selected.|CTRL +Left click|  
   
 ## See Also  
- [Report Builder in SQL Server 2016](../../reporting-services/report-builder/report-builder-in-sql-server-2016.md)   
+ [Report Builder in SQL Server](../../reporting-services/report-builder/report-builder-in-sql-server-2016.md)   
  [Report Design View &#40;Report Builder&#41;](../../reporting-services/report-builder/report-design-view-report-builder.md)   
  [Glossary &#40;Report Builder&#41;](../../reporting-services/report-builder/glossary-report-builder.md)  
   

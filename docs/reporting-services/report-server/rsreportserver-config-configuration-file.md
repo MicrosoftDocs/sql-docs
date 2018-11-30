@@ -28,12 +28,14 @@ The RSReportServer.config is located in the following folders, depending on the 
 ### Native mode report server  
 
  
-**[!INCLUDE[applies](../../includes/applies-md.md)]**  SQL Server 2016
+**[!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)]** [!INCLUDE[ssrs-appliesto-2016](../../includes/ssrs-appliesto-2016.md)]
+
 ```  
 C:\Program Files\Microsoft SQL Server\MSRS13.MSSQLSERVER\Reporting Services\ReportServer  
 ```
 
-**[!INCLUDE[applies](../../includes/applies-md.md)]**  January 2017 Technical Preview of Power BI reports in SQL Server Reporting Services
+**[!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)]** [!INCLUDE[ssrs-appliesto-pbirsi](../includes/ssrs-appliesto-pbirs.md)]
+
 ```  
 C:\Program Files\Microsoft SQL Server Reporting Services\RSServer\ReportServer
 ```  

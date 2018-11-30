@@ -13,15 +13,15 @@ manager: craigg
 ---
 # Quickstart: Use [!INCLUDE[name-sos](../includes/name-sos-short.md)] to connect and query Azure SQL database
 
-This quickstart demonstrates how to use *[!INCLUDE[name-sos](../includes/name-sos-short.md)]* to connect to an Azure SQL Database server, and then use Transact-SQL (T-SQL) statements to create and query the *TutorialDB* database used in [!INCLUDE[name-sos](../includes/name-sos-short.md)] tutorials.
+This quickstart demonstrates how to use [!INCLUDE[name-sos](../includes/name-sos-short.md)] to connect to an Azure SQL Database server, and then use Transact-SQL (T-SQL) statements to create and query the TutorialDB database used in [!INCLUDE[name-sos](../includes/name-sos-short.md)] tutorials.
 
 ## Prerequisites
 
 To complete this quickstart, you need [!INCLUDE[name-sos](../includes/name-sos-short.md)], and an Azure SQL Database server.
 
-- [Install [!INCLUDE[name-sos](../includes/name-sos-short.md)]](download.md).
+- [Install [!INCLUDE[name-sos](../includes/name-sos-short.md)]](download.md)
 
-If you do not already have an Azure SQL server, complete one of the following Azure SQL Database quickstarts (remember the fully qualified server name, and login credentials!):
+If you don't already have an Azure SQL server, complete one of the following Azure SQL Database quickstarts (remember the fully qualified server name and sign in credentials):
 
 - [Create DB - Portal](https://docs.microsoft.com/azure/sql-database/sql-database-get-started-portal)
 - [Create DB - CLI](https://docs.microsoft.com/azure/sql-database/sql-database-get-started-cli)
@@ -36,23 +36,23 @@ Use [!INCLUDE[name-sos](../includes/name-sos-short.md)] to establish a connectio
    
    ![New Connection Icon](media/quickstart-sql-database/new-connection-icon.png)
 
-2. This article uses *SQL Login*, but *Windows Authentication* is also supported. Fill in the following fields using the server name, user name, and password for *your* Azure SQL server:
+2. This article uses SQL Login, but Windows Authentication is also supported. Fill in the following fields using the server name, user name, and password for *your* Azure SQL server:
 
    | Setting       | Suggested value | Description |
    | ------------ | ------------------ | ------------------------------------------------- | 
-   | **Server name** | The fully qualified server name | This name should be something like: **servername.database.windows.net** |
+   | **Server name** | The fully qualified server name | Something like: **servername.database.windows.net** |
    | **Authentication** | SQL Login| This tutorial uses SQL Authentication. |
    | **User name** | The server admin account user name | The user name from the account used to create the server. |
    | **Password (SQL Login)** | The server admin account password | The password from the account used to create the server. |
-   | **Save Password?** | Yes or No | Select Yes if you do not want to enter the password each time. |
-   | **Database name** | *leave blank* | You are only connecting to the server here. |
-   | **Server Group** | Select <Default> | If you created a server group, you can set to a specific server group. | 
+   | **Save Password?** | Yes or No | Select **Yes** if you don't want to enter the password each time. |
+   | **Database name** | *leave blank* | You're only connecting to the server here. |
+   | **Server Group** | Select <Default> | You can set this to a specific server group you created. | 
 
    ![New Connection Icon](media/quickstart-sql-database/new-connection-screen.png)  
 
 3. Click **Connect**.
 
-4. If your server does not have a firewall rule allowing Azure Data Studio to connect, the **Create new firewall rule** form opens. Complete the form to create a new firewall rule. For details, see [Firewall rules](https://docs.microsoft.com/azure/sql-database/sql-database-firewall-configure).
+4. If your server doesn't have a firewall rule allowing Azure Data Studio to connect, the **Create new firewall rule** form opens. Complete the form to create a new firewall rule. For details, see [Firewall rules](https://docs.microsoft.com/azure/sql-database/sql-database-firewall-configure).
 
    ![New firewall rule](media/quickstart-sql-database/firewall.png)  
 
@@ -60,11 +60,11 @@ After successfully connecting, your server opens in the *SERVERS* sidebar.
 
 ## Create the tutorial database
 
-The following sections create the *TutorialDB* database that is used in several [!INCLUDE[name-sos](../includes/name-sos-short.md)] tutorials.
+The following sections create the TutorialDB database that's used in several [!INCLUDE[name-sos](../includes/name-sos-short.md)] tutorials.
 
-1. Right click on your Azure SQL server in the SERVERS sidebar and select **New Query.**
+1. Right-click on your Azure SQL server in the SERVERS sidebar and select **New Query.**
 
-1. Paste the following SQL snippet into the query editor and click **Run**:
+1. Paste the following SQL snippet into the query editor and select **Run**.
 
    ```sql
    IF NOT EXISTS (
@@ -83,7 +83,7 @@ The following sections create the *TutorialDB* database that is used in several 
 
 ## Create a table
 
-The query editor is still connected to the *master* database, but we want to create a table in the *TutorialDB* database. 
+The query editor is still connected to the master database, but we want to create a table in the TutorialDB database. 
 
 1. Connect to the **TutorialDB** database:
 
@@ -91,12 +91,12 @@ The query editor is still connected to the *master* database, but we want to cre
 
 
 
-1. Create a *Customers* table. 
+1. Create a `Customers` table. 
 
-   Paste the following SQL snippet into the query editor and click **Run**:
+   Paste the following SQL snippet into the query editor and select **Run**.
 
    > [!NOTE]
-   > You can append this to, or overwrite the previous query in the editor. Note that clicking **Run** executes only the query that is selected. If nothing is selected, clicking **Run** executes all queries in the editor.
+   > You can append this to, or overwrite, the previous query in the editor. Choosing **Run** executes the selected query. If no queries are selected, then all queries are executed.
 
    ```sql
    -- Create a new table called 'Customers' in schema 'dbo'
@@ -116,9 +116,9 @@ The query editor is still connected to the *master* database, but we want to cre
    ```
 
 
-## Insert rows into table
+## Insert rows into the table
 
-- Paste the following SQL snippet into the query editor and click **Run**:
+- Paste the following SQL snippet into the query editor and select **Run**.
 
    ```sql
    -- Insert rows into table 'Customers'
@@ -141,15 +141,15 @@ The query editor is still connected to the *master* database, but we want to cre
    SELECT * FROM dbo.Customers;
    ```
 
-  The query results are displayed:
+  The query results display:
 
    ![Select results](media/quickstart-sql-database/select-results2.png)
 
 
 ## Clean up resources
 
-Subsequent quickstart articles build upon the resources created here. If you plan to work through these articles, do *NOT* delete these resources. Otherwise, in the Azure portal, delete the resources you no longer need. For details, see [Clean up resources](https://docs.microsoft.com/azure/sql-database/sql-database-get-started-portal#clean-up-resources).
+Subsequent quickstart articles build upon the resources created here. If you plan to work through these articles, be sure you don't delete these resources. Otherwise, in the Azure portal, delete the resources you no longer need. For details, see [Clean up resources](https://docs.microsoft.com/azure/sql-database/sql-database-get-started-portal#clean-up-resources).
 
 ## Next steps
 
-Now that you have successfully connected to an Azure SQL database and ran a query, try out the [Code editor tutorial](tutorial-sql-editor.md).
+Now that you have successfully connected to an Azure SQL database and run a query, try out the [Code editor tutorial](tutorial-sql-editor.md).

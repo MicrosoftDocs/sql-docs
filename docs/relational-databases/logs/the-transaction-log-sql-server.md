@@ -153,17 +153,17 @@ When transactional replication is enabled, SELECT INTO operations are fully logg
     -   [DROP INDEX](../../t-sql/statements/drop-index-transact-sql.md) new heap rebuild (if applicable). Index page deallocation during a `DROP INDEX` operation is **always** fully logged.
   
 ##  <a name="RelatedTasks"></a> Related tasks  
- **Managing the transaction log**  
+**Managing the transaction log**  
   
 -   [Manage the Size of the Transaction Log File](../../relational-databases/logs/manage-the-size-of-the-transaction-log-file.md)  
   
 -   [Troubleshoot a Full Transaction Log &#40;SQL Server Error 9002&#41;](../../relational-databases/logs/troubleshoot-a-full-transaction-log-sql-server-error-9002.md)  
   
- **Backing Up the Transaction Log (Full Recovery Model)**  
+**Backing Up the Transaction Log (Full Recovery Model)**  
   
 -   [Back Up a Transaction Log &#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-a-transaction-log-sql-server.md)  
   
- **Restoring the Transaction Log (Full Recovery Model)**  
+**Restoring the Transaction Log (Full Recovery Model)**  
   
 -   [Restore a Transaction Log Backup &#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-a-transaction-log-backup-sql-server.md)  
   

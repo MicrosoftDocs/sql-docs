@@ -633,7 +633,7 @@ WHERE b = CONVERT(Varbinary(4), 1);
 
 A *columnstore index* is a technology for storing, retrieving and managing data by using a columnar data format, called a columnstore. For more information, refer to [Columnstore Indexes overview](../relational-databases/indexes/columnstore-indexes-overview.md). 
 
-For version information, see [Columnstore indexes - What's new](/sql/relational-databases/indexes/columnstore-indexes-what-s-new).
+For version information, see [Columnstore indexes - What's new](../relational-databases/indexes/columnstore-indexes-what-s-new).
 
 ### Columnstore Index Architecture
 

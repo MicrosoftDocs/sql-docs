@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "06/22/2016"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "database-engine"
+ms.technology: release-landing
 ms.topic: conceptual
 helpviewer_keywords: 
   - "what's new [SQL Server Database Engine]"

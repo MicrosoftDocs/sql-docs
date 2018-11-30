@@ -49,13 +49,13 @@ Run the following R commands on a client workstation. For example, you are using
 2. Create a remote compute context to the SQL Server instance referenced in the connection string.
 
     ```R
-    ccsqlremote <- RxInSqlServer(connectionString = sqlConnString)
+    sqlCompute <- RxInSqlServer(connectionString = sqlConnString)
     ```
 
 3. Activate the compute context and then return the object definition as a confirmation step. You should see the properties of the compute context object.
 
     ```R
-    rxSetComputeContext(ccsqlremote)
+    rxSetComputeContext(sqlCompute)
     rxGetComputeContext()
     ```
 

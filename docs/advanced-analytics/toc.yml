@@ -101,8 +101,8 @@
     items:
     - name: Create partition-based models
       href: tutorials/r-tutorial-create-models-per-partition.md
-    - name: Run custom R function on SQL
-      href: tutorials/r-tutorial-create-a-simple-simulation.md
+    - name: Run custom R functions on SQL
+      href: tutorials/r-tutorial-custom-r-functions.md
     - name: Learn in-database analytics
       href: tutorials/sqldev-in-database-r-for-sql-developers.md
       items:
@@ -138,7 +138,7 @@
         href: tutorials/deepdive-query-and-modify-the-sql-server-data.md
       - name: Define a compute context
         href: tutorials/deepdive-define-and-use-compute-contexts.md
-      - name: Create and run R scripts
+      - name: Compute summary statistics
         href: tutorials/deepdive-create-and-run-r-scripts.md
       - name: Visualize data
         href: tutorials/deepdive-visualize-sql-server-data-using-r.md

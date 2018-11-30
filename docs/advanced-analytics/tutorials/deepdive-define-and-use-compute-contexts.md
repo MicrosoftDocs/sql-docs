@@ -14,7 +14,7 @@ manager: cgronlun
 
 This lesson is part of the [RevoScaleR tutorial](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md) on how to use [RevoScaleR functions](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) with SQL Server.
 
-In the previous lesson, you used **RevoScaleR** functions to inspect data objects. This lesson introduces the [RxInSqlServer](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxinsqlserver) function, which lets you define a compute context for a remote SQL Server and then execute complex calculations on the server, rather than your local computer. 
+In the previous lesson, you used **RevoScaleR** functions to inspect data objects. This lesson introduces the [RxInSqlServer](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxinsqlserver) function, which lets you define a compute context for a remote SQL Server. With a remote compute context, you can shift R execution from a local session to a remote session on the server. 
 
 > [!div class="checklist"]
 > * Learn the elements of a remote SQL Server compute context
@@ -89,19 +89,19 @@ This section walks you through each part.
     
     Defining a compute context does not affect any other generic R computations that you might perform on your workstation, and does not change the source of the data. For example, you could define a local text file as the data source but change the compute context to SQL Server and do all your reading and summaries on the data on the SQL Server computer.
 
-5. Activate the remote server. 
+5. Activate the remote compute context.
 
     ```R
     rxSetComputeContext(sqlCompute)
     ```
 
-6. Return information about the compute context, including its properties:
+6. Return information about the compute context, including its properties.
 
     ```R
     rxGetComputeContext()
     ```
 
-7. Reset the compute context back to the local computer by specifying the "local" keyword.
+7. Reset the compute context back to the local computer by specifying the "local" keyword (the next lesson demonstrates using the remote compute context).
 
     ```R
     rxSetComputeContext("local")
@@ -110,7 +110,7 @@ This section walks you through each part.
 > [!Tip]
 > For a list of other keywords supported by this function, type `help("rxSetComputeContext")` from an R command line.
 
-## Enable tracing on the compute context
+## Enable tracing
 
 Sometimes operations work on your local context, but have issues when running in a remote compute context. If you want to analyze issues or monitor performance, you can enable tracing in the compute context, to support run-time troubleshooting.
 
@@ -136,7 +136,7 @@ Sometimes operations work on your local context, but have issues when running in
 
 ## Next steps
 
-Learn how to use compute contexts to run R code on the server or locally.
+Learn how to switch compute contexts to run R code on the server or locally.
 
 > [!div class="nextstepaction"]
-> [Create and run R scripts in local and remote compute contexts](../../advanced-analytics/tutorials/deepdive-create-and-run-r-scripts.md)
+> [Compute summary statistics in local and remote compute contexts](../../advanced-analytics/tutorials/deepdive-create-and-run-r-scripts.md)

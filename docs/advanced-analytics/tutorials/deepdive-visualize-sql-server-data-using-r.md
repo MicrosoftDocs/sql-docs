@@ -21,7 +21,7 @@ In this lesson, use R functions to view the distribution of values in the *credi
 > * Visualize data in a histogram using **rxHistogram** from **RevoScaleR**
 > * Visualize with scatter plots using **levelplot** from **lattice** included in the base R distribution
 
-As this lesson demonstrates, you can use open-source, third-party, and Microsoft-specific functions in the same code.
+As this lesson demonstrates, you can combine open-source and Microsoft-specific functions in the same script.
 
 ## Add maximum and minimum values
 

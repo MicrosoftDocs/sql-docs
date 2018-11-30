@@ -14,7 +14,7 @@ manager: cgronlun
 
 This lesson is part of the [RevoScaleR tutorial](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md) on how to use [RevoScaleR functions](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) with SQL Server.
 
-Lesson two is a continuation of database creation: adding tables and loading data. If a DBA created the database and a login with sufficient permission in the previous lesson, you can finish setting up the environment using an R IDE like RStudio or a built-in tool like **Rgui**.
+Lesson two is a continuation of database creation: adding tables and loading data. If a DBA created the database and login in [lesson one](deepdive-work-with-sql-server-using-r.md), you can add tables using an R IDE like RStudio or a built-in tool like **Rgui**.
 
 From R, connect to SQL Server and use **RevoScaleR** functions to perform the folowing tasks:
 
@@ -24,7 +24,7 @@ From R, connect to SQL Server and use **RevoScaleR** functions to perform the fo
 
 Sample data is simulated credit card fraud data (the ccFraud dataset), partitioned into training and scoring datasets. The data file is included in **RevoScaleR**.
 
-Use an R IDE or **Rgui** to complete these taks. Be sure to use the R executables found at this location: C:\Program Files\Microsoft\R Client\R_SERVER\bin\x64 (either Rgui.exe if you are using that tool, or an R IDE pointing to C:\Program Files\Microsoft\R Client\R_SERVER).
+Use an R IDE or **Rgui** to complete these taks. Be sure to use the R executables found at this location: C:\Program Files\Microsoft\R Client\R_SERVER\bin\x64 (either Rgui.exe if you are using that tool, or an R IDE pointing to C:\Program Files\Microsoft\R Client\R_SERVER). Having an [R client workstation](../r/set-up-a-data-science-client.md) with these executables is considered a prerequisite of this tutorial.
 
 ## Create the training data table
 
@@ -56,11 +56,11 @@ Use an R IDE or **Rgui** to complete these taks. Be sure to use the R executable
     sqlRowsPerRead = 5000
     ```
   
-    Although this parameter is optional, it is important for handling memory usage and efficient computations.  Most of the enhanced analytical functions in **RevoScaleR** and **MicrosoftML** process data in chunks and store intermediate results, returning the final computations after all of the data has been read.
+    Although this parameter is optional, setting it can result in more efficient computations. Most of the enhanced analytical functions in **RevoScaleR** and **MicrosoftML** process data in chunks. The *rowsPerRead* parameter determines the number of rows in each chunk.
   
-    If the value of this parameter is too large, data access might be slow because you don't have enough memory to efficiently process such a large chunk of data. On some systems, if the value of *rowsPerRead* is too small, performance might be slower. Therefore, we recommend that you experiment with this setting on your system when you are working with a large data set.
+    You might need to experiment with this setting to find the right balance. If the value is too large, data access might be slow if there is not enough memory to process data in chunks of that size. Conversely, on some systems, if the value of *rowsPerRead* is too small, performance can also slow down.
   
-    For this walkthrough, use the default batch process size defined by the database engine instance to control the number of rows in each chunk (5,000 rows). Save that value in the variable *sqlRowsPerRead*.
+    As an initial value, use the default batch process size defined by the database engine instance to control the number of rows in each chunk (5,000 rows). Save that value in the variable *sqlRowsPerRead*.
   
 4.  Define a variable for the new data source object, and pass the arguments previously defined to the **RxSqlServerData** constructor. Note that this only creates the data source object and does not populate it. Loading data is a separate step.
   

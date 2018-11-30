@@ -14,7 +14,7 @@ manager: cgronlun
 
 This lesson is part of the [RevoScaleR tutorial](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md) on how to use [RevoScaleR functions](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) with SQL Server.
 
-Now that you have enriched the training data, it's time to analyze the data using linear regression. Linear models are an important tool in the world of predictive analytics, and the **RevoScaleR** package includes regression algorithms that can subdivide the workload and run it in parallel.
+Now that you have enriched the training data, it's time to analyze the data using regression modeling. Linear models are an important tool in the world of predictive analytics, and the **RevoScaleR** package includes regression algorithms that can subdivide the workload and run it in parallel.
 
 > [!div class="checklist"]
 > * Create a linear regression model
@@ -68,7 +68,7 @@ Condition number: 1.0184
 
 ## Create a logistic regression model
 
-Next, you create a logistic regression model that indicates whether a particular customer is a fraud risk. You'll use the **RevoScaleR** [rxLogit](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxlogit) function, which supports fitting of logistic regression models in remote compute contexts.
+Next, create a logistic regression model that indicates whether a particular customer is a fraud risk. You'll use the **RevoScaleR** [rxLogit](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxlogit) function, which supports fitting of logistic regression models in remote compute contexts.
 
 Keep the compute context as is. You'll also continue to use the same data source as well.
 
@@ -82,7 +82,7 @@ Keep the compute context as is. You'll also continue to use the same data source
     
     The reason the model is so large is that, in R and in the **RevoScaleR** package, every level of a categorical factor variable is automatically treated as a separate dummy variable.
   
-2. To view a summary of the returned model, call the R `summary` function.
+2. To view a summary of the returned model, call the R **summary** function.
   
     ```R
     summary(logitObj)

@@ -36,6 +36,8 @@ This tutorial requires a database for storing data and code. If you are not an a
 1. Click **New Query**, and change the database context to  the master database.
   
 2. In the new **Query** window, run the following commands to create the user accounts and assign them to the database used for this tutorial. Be sure to change the database name if needed.
+
+3. To verify the login, select the new database, expand **Security**, and expand **Users**.
   
 **Windows user**
   
@@ -65,12 +67,9 @@ GO
 CREATE USER [DDUser01] FOR LOGIN [DDUser01] WITH DEFAULT_SCHEMA=[db_datareader]
 ```
 
-5. To verify that the user has been created, select the new database, expand **Security**, and expand **Users**.
-
-
 ## Assign permissions
 
-This tutorial demonstrates R script and DDL operations, including creating and deleting tables and stored procedures, and running R script in an external process on SQL Server. In this step, assign permssions to a database user login used for performing these tasks.
+This tutorial demonstrates R script and DDL operations, including creating and deleting tables and stored procedures, and running R script in an external process on SQL Server. In this step, assign permssions to allow these tasks.
 
 This example assumes a SQL login (DDUser01), but if you created a Windows login, use that instead.
 

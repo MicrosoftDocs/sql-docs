@@ -14,7 +14,7 @@ manager: cgronlun
 
 This lesson is part of the [RevoScaleR tutorial](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md) on how to use [RevoScaleR functions](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) with SQL Server.
 
-In this step, you use the logistic regression model that you created in the previous lesson to create scores for another data set that uses the same independent variables as inputs.
+In this step, you use the logistic regression model that you created in the previous lesson to score another data set that uses the same independent variables as inputs.
 
 > [!div class="checklist"]
 > * Score new data
@@ -25,7 +25,7 @@ In this step, you use the logistic regression model that you created in the prev
 
 ## Generate and save scores
   
-1. Update the data source that you set up earlier, sqlScoreDS, to add the required column information.
+1. Update the sqlScoreDS data source (created in [lesson two](deepdive-create-sql-server-data-objects-using-rxsqlserverdata.md)) to use column information created in the previous lesson.
   
     ```R
     sqlScoreDS <- RxSqlServerData(
@@ -35,7 +35,7 @@ In this step, you use the logistic regression model that you created in the prev
         rowsPerRead = sqlRowsPerRead)
     ```
   
-2. To make sure you don't lose the results, create a new data source object. Then, use the new data source object to populate a new table in the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database.
+2. To make sure you don't lose the results, create a new data source object. Then, use the new data source object to populate a new table in the RevoDeepDive database.
   
     ```R
     sqlServerOutDS <- RxSqlServerData(table = "ccScoreOutput",
@@ -44,25 +44,24 @@ In this step, you use the logistic regression model that you created in the prev
     ```
     At this point, the table has not been created. This statement just defines a container for the data.
      
-3. Check the current compute context using `rxGetComputeContext()`, and set the compute context to the server if needed.
+3. Check the current compute context using **rxGetComputeContext()**, and set the compute context to the server if needed.
   
     ```R
     rxSetComputeContext(sqlCompute)
     ```
   
-4. Before running the prediction function that generates the results, check for the existence of the output table. If one already exists with the same name, you will get an error when attempting to write the new table.
+4. As a precaution, check for the existence of the output table. If one already exists with the same name, you will get an error when attempting to write the new table.
   
-    To do this, make a call to the functions **rxSqlServerTableExists** and **rxSqlServerDropTable**, passing the table name as input.
+    To do this, make a call to the functions [rxSqlServerTableExists](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxsqlserverdroptable) and [rxSqlServerDropTable](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxsqlserverdroptable), passing the table name as input.
   
     ```R
     if (rxSqlServerTableExists("ccScoreOutput"))     rxSqlServerDropTable("ccScoreOutput")
     ```
   
-    -  The function **rxSqlServerTableExists** queries the ODBC driver and returns TRUE if the table exists, FALSE otherwise.
-    -  The function **rxSqlServerDropTable** executes the DDL and returns TRUE if the table is successfully dropped, FALSE otherwise.
-    - Reference for both functions can be found here: [rxSqlServerDropTable](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxsqlserverdroptable)
-  
-5. Now you are ready to use the [rxPredict](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxpredict) function to create the scores, and save them in the new table defined in data source `sqlScoreDS`.
+    + **rxSqlServerTableExists** queries the ODBC driver and returns TRUE if the table exists, FALSE otherwise.
+    + **rxSqlServerDropTable** executes the DDL and returns TRUE if the table is successfully dropped, FALSE otherwise.
+
+5. Execute [rxPredict](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxpredict) to create the scores, and save them in the new table defined in data source sqlScoreDS.
   
     ```R
     rxPredict(modelObject = logitObj,
@@ -74,7 +73,7 @@ In this step, you use the logistic regression model that you created in the prev
         overwrite = TRUE)
     ```
   
-    The **rxPredict** function is another function that supports running in remote compute contexts. You can use the **rxPredict** function to create scores from models created using [rxLinMod](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxlinmod), [rxLogit](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxlogit), or [rxGlm](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxglm).
+    The **rxPredict** function is another function that supports running in remote compute contexts. You can use the **rxPredict** function to create scores from models based on [rxLinMod](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxlinmod), [rxLogit](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxlogit), or [rxGlm](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxglm).
   
     - The parameter *writeModelVars* is set to **TRUE** here. This means that the variables that were used for estimation will be included in the new table.
   
@@ -84,7 +83,7 @@ In this step, you use the logistic regression model that you created in the prev
 
 6. After a while, you can refresh the list of tables in Management Studio to see the new table and its data.
 
-7. To add additional variables to the output predictions, use the *extraVarsToWrite* argument.  For example, in the following code, the variable `custID` is added from the scoring data table into the output table of predictions.
+7. To add additional variables to the output predictions, use the *extraVarsToWrite* argument.  For example, in the following code, the variable *custID* is added from the scoring data table into the output table of predictions.
   
     ```R
     rxPredict(modelObject = logitObj,
@@ -101,7 +100,7 @@ In this step, you use the logistic regression model that you created in the prev
 
 After the new table has been created, compute and display a histogram of the 10,000 predicted scores. Computation is faster if you specify the low and high values, so get those from the database and add them to your working data.
 
-1. Create a new data source, `sqlMinMax`, that queries the database to get the low and high values.
+1. Create a new data source, sqlMinMax, that queries the database to get the low and high values.
   
     ```R
     sqlMinMax <- RxSqlServerData(

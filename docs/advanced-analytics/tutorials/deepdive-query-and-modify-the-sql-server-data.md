@@ -18,7 +18,9 @@ In the previous lesson, you loaded the data into [!INCLUDE[ssNoVersion](../../in
 
 > [!div class="checklist"]
 > * Return basic information about the variables
-> * Modify metadata
+> * Create categorical data from raw data
+
+Categorical data, or *factor variables*, are useful for exploratory data visualizations. You can use them as inputs to histograms to get an idea of what variable data looks like.
 
 ## Query for columns and types
 
@@ -44,7 +46,7 @@ Var 8: creditLine, Type: integer
 Var 9: fraudRisk, Type: integer
 ```
 
-## Create categorical data from raw integers
+## Create categorical data
 
 All the variables are stored as integers, but some variables represent categorical data, called *factor variables* in R. For example, the column *state* contains numbers used as identifiers for the 50 states plus the District of Columbia. To make it easier to understand the data, you replace the numbers with a list of state abbreviations.
 
@@ -52,7 +54,7 @@ In this step, you create a string vector containing the abbreviations, and then 
 
 Mapping the column to abbreviations before using it as a factor actually improves performance as well. For more information, see [R and data optimization](../r/r-and-data-optimization-r-services.md).
 
-1. Begin by creating an R variable, *stateAbb*, and defining the vector of strings to add to it, as follows:
+1. Begin by creating an R variable, *stateAbb*, and defining the vector of strings to add to it, as follows.
   
     ```R
     stateAbb <- c("AK", "AL", "AR", "AZ", "CA", "CO", "CT", "DC",

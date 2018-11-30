@@ -1,5 +1,5 @@
 ---
-title: Create and run R scripts (SQL Server and RevoScaleR tutorial) | Microsoft Docs
+title: Compute summary statistics (SQL Server and RevoScaleR tutorial) | Microsoft Docs
 ms.prod: sql
 ms.technology: machine-learning
 
@@ -9,7 +9,7 @@ author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
 ---
-# Create and run R scripts (SQL Server and RevoScaleR tutorial)
+# Compute summary statistics in R (SQL Server and RevoScaleR tutorial)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 This lesson is part of the [RevoScaleR tutorial](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md) on how to use [RevoScaleR functions](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) with SQL Server.
@@ -18,20 +18,20 @@ It uses the established data sources and compute contexts created in previous le
 
 > [!div class="checklist"]
 > * Switch the compute context to SQL Server
-> * Obtain summary statistics on remote data
+> * Obtain summary statistics on remote data objects
 > * Compute a local summary
 
 If you completed the previous lessons, you should have these remote compute contexts: sqlCompute and sqlComputeTrace. Moving forward, you use will sqlCompute and the local compute context in subsequent lessons.
 
-Use an R IDE or Rgui.exe to run the R script in this lesson.
+Use an R IDE or **Rgui** to run the R script in this lesson.
 
 ## Compute summary statistics on remote data
 
-Before you run any R code remote, you need to specify the remote compute context. All subsequent computations take place on the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] computer specified in the *sqlCompute* parameter.
+Before you can run any R code remotely, you need to specify the remote compute context. All subsequent computations take place on the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] computer specified in the *sqlCompute* parameter.
 
 A compute context remains active until you change it. However, any R scripts that *cannot* run in a remote server context will automatically run locally.
 
-To see how a compute context works, generate summary statistics on the sqlFraudDS data source on the remote SQL Server.
+To see how a compute context works, generate summary statistics on the sqlFraudDS data source on the remote SQL Server. This data source object was created in [lesson two](deepdive-create-sql-server-data-objects-using-rxsqlserverdata.md) and represents the ccFraudSmall table in the RevoDeepDive database. 
 
 1. Switch the compute context to sqlCompute created in the previous lesson:
   
@@ -53,7 +53,7 @@ To see how a compute context works, generate summary statistics on the sqlFraudD
     sumOut
     ```
     > [!NOTE]
-    > Don't try to print the results before they have returned from the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] computer, or you might get an error.
+    > If you get an error, wait a few minutes for execution to finish before retrying the command.
 
 **Results**
 
@@ -86,7 +86,7 @@ Number of valid observations: 10000
     rxSetComputeContext ("local")
     ```
   
-2. When extracting data from SQL Server, you can often get better performance by increasing the number of rows extracted for each read. To do this, increase the value for the *rowsPerRead* parameter on the data source. Previously, the value of *rowsPerRead* was set to 5000.
+2. When extracting data from SQL Server, you can often get better performance by increasing the number of rows extracted for each read, assuming the increased block size can be accommodated in memory. Run the following command to increase the value for the *rowsPerRead* parameter on the data source. Previously, the value of *rowsPerRead* was set to 5000.
   
     ```R
     sqlServerDS1 <- RxSqlServerData(

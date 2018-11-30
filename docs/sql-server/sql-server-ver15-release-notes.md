@@ -94,10 +94,6 @@ Limited support may be found at one of the following locations:
 
 - **Issue and customer impact**: UTF-8 enabled collations cannot be used with some other [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] features. UTF-8 is not supported when the following [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] features are in use:
 
-<<<<<<< HEAD
-=======
-  - SQL Server Replication (**Applies to:** [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] CTP 2.1, CTP 2.0)
->>>>>>> a892f4134f3a2cd461ff106cb08a2ef94477c8df
   - Linked Server
   - In-memory OLTP
   - External Table for PolyBase

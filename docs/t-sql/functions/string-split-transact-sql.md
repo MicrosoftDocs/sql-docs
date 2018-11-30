@@ -92,36 +92,7 @@ WHERE RTRIM(value) <> '';
   
 STRING_SPLIT will return empty string if there is nothing between separator. Condition RTRIM(value) <> '' will remove empty tokens.  
   
-### B. Split comma-separated value string in a column  
-Product table has a column with comma-separate list of tags shown in the following example:  
-  
-|ProductId|Name|Tags|  
-|---------------|----------|----------|  
-|1|Full-Finger Gloves|clothing,road,touring,bike|  
-|2|LL Headset|bike|  
-|3|HL Mountain Frame|bike,mountain|  
-  
-Following query transforms each list of tags and joins them with the original row:  
-  
-```sql  
-SELECT ProductId, Name, value  
-FROM Product  
-    CROSS APPLY STRING_SPLIT(Tags, ',');  
-```  
-  
- [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
-  
-|ProductId|Name|value|  
-|---------------|----------|-----------|  
-|1|Full-Finger Gloves|clothing|  
-|1|Full-Finger Gloves|road|  
-|1|Full-Finger Gloves|touring|  
-|1|Full-Finger Gloves|bike|  
-|2|LL Headset|bike|  
-|3|HL Mountain Frame|bike|  
-|3|HL Mountain Frame|mountain|  
-  
-### C. Aggregation by values  
+### B. Aggregation by values  
 Users must create a report that shows the number of products per each tag, ordered by number of products, and to filter only the tags with more than two products.  
   
 ```sql  
@@ -133,7 +104,7 @@ HAVING COUNT(*) > 2
 ORDER BY COUNT(*) DESC;  
 ```  
   
-### D. Search by tag value  
+### C. Search by tag value  
 Developers must create queries that find articles by keywords. They can use following queries:  
   
 To find products with a single tag (clothing):  
@@ -155,7 +126,7 @@ WHERE EXISTS (SELECT *
     WHERE value IN ('clothing', 'road');  
 ```  
   
-### E. Find rows by list of values  
+### D. Find rows by list of values  
 Developers must create a query that finds articles by a list of IDs. They can use following query:  
   
 ```sql  

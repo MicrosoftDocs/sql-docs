@@ -59,7 +59,7 @@ A [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] native mode repo
 ##  <a name="bkmk_requirements"></a> Requirements  
  The default configuration option uses default values to configure the core settings required to make a report server operational. It has the following requirements:  
   
--   Review [Hardware and Software Requirements for Installing SQL Server 2016](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md) .  
+-   Review [Hardware and Software Requirements for Installing SQL Server](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md) .  
   
 -   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] and [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] must be installed together in the same instance. The [!INCLUDE[ssDE](../../includes/ssde-md.md)] instance hosts the report server database that Setup creates and configures.  
   

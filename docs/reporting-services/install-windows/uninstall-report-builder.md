@@ -25,7 +25,7 @@ If folders used by Report Builder include custom files, the folders and the file
   
 2.  In the Control Panel, click **Programs and Features**.  
   
-3.  Locate [!INCLUDE[msCoName](../../includes/msconame-md.md)] SQL Server 2016 Report Builder in the **Name** list and click it.  
+3.  Locate [!INCLUDE[msCoName](../../includes/msconame-md.md)] SQL Server Report Builder in the **Name** list and click it.  
   
 4.  Click **Uninstall**.  
   

@@ -86,7 +86,7 @@ There are multiple ways that you can get a complete list of the packages current
 
 ### R
 
-The following example uses the R function `installed.packages()` in a [!INCLUDE[tsql](..\..\includes\tsql-md.md)] stored procedure to get a matrix of packages that have been installed in the R_SERVICES library for the current instance. This script returns package name and version fields in the DESCRIPTION file, only the name is returned.
+The following example uses the R function `installed.packages()` in a [!INCLUDE[tsql](../../includes/tsql-md.md)] stored procedure to get a matrix of packages that have been installed in the R_SERVICES library for the current instance. This script returns package name and version fields in the DESCRIPTION file, only the name is returned.
 
 ```SQL
 EXECUTE sp_execute_external_script

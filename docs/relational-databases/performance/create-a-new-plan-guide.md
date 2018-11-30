@@ -30,7 +30,7 @@ A Plan Guide applies either a fixed query plan, and/or query hints, to a query.
 -   Plan guides of type OBJECT cannot be created for an @module_or_batch value that references a stored procedure, function, or DML trigger that specifies the WITH ENCRYPTION clause or that is temporary.  
   
 -   Trying to drop or modify a function, stored procedure, or DML trigger that is referenced by a plan guide, either enabled or disabled, causes an error. Trying to drop a table that has a trigger defined on it that is referenced by a plan guide also causes an error.  
- 
+
 ##  <a name="Permissions"></a> Permissions  
  To create a plan guide of type OBJECT, you need ALTER permission on the referenced object. To create a plan guide of type SQL or TEMPLATE, you need ALTER permission on the current database.  
   
@@ -46,7 +46,7 @@ A Plan Guide applies either a fixed query plan, and/or query hints, to a query.
   
 5.  In the **Scope type** list, select the type of entity in which the [!INCLUDE[tsql](../../includes/tsql-md.md)] statement appears. This specifies the context for matching the [!INCLUDE[tsql](../../includes/tsql-md.md)] statement to the plan guide. Possible values are **OBJECT**, **SQL**, and **TEMPLATE**.  
   
-6.  In the **Scope batch** box, enter the batch text in which the [!INCLUDE[tsql](../../includes/tsql-md.md)] statement appears. The batch text cannot include a USE``*database* statement. The **Scope batch** box is only available when **SQL** is selected as a scope type. If nothing is entered in the scope batch box when SQL is the scope type, then the value of the batch text is set to the same value as is in the **Statement** box.  
+6.  In the **Scope batch** box, enter the batch text in which the [!INCLUDE[tsql](../../includes/tsql-md.md)] statement appears. The batch text cannot include a `USE`*database* statement. The **Scope batch** box is only available when **SQL** is selected as a scope type. If nothing is entered in the scope batch box when SQL is the scope type, then the value of the batch text is set to the same value as is in the **Statement** box.  
   
 7.  In the **Scope schema name** list, enter the name of the schema in which the object is contained. The **Scope schema name** box is only available when **Object** is selected as a scope type.  
   
@@ -54,20 +54,19 @@ A Plan Guide applies either a fixed query plan, and/or query hints, to a query.
   
 9. In the **Parameters** box, enter the parameter name and data type of all parameters that are embedded in the [!INCLUDE[tsql](../../includes/tsql-md.md)] statement.  
   
-     Parameters apply only when either of the following is true:  
+   Parameters apply only when either of the following is true:  
   
-    -   The scope type is **SQL** or **TEMPLATE**. If **TEMPLATE**, parameters must not be NULL.  
+   -   The scope type is **SQL** or **TEMPLATE**. If **TEMPLATE**, parameters must not be NULL.  
   
-    -   The [!INCLUDE[tsql](../../includes/tsql-md.md)] statement is submitted by using sp_executesql and a value for the parameter is specified, or [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] internally submits a statement after parameterizing it.  
+   -   The [!INCLUDE[tsql](../../includes/tsql-md.md)] statement is submitted by using sp_executesql and a value for the parameter is specified, or [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] internally submits a statement after parameterizing it.  
   
 10. In the **Hints** box, enter the query hints or query plan to be applied to the [!INCLUDE[tsql](../../includes/tsql-md.md)] statement. To specify one or more query hints, enter a valid OPTION clause.  
   
 11. Click **OK**.  
 
 ![plan_guide](../../relational-databases/performance/media/plan-guide.png)  
- 
+
 ##  <a name="TsqlProcedure"></a> Create a plan guide using T-SQL  
-  
 1.  In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 2.  On the Standard bar, click **New Query**.  
@@ -87,7 +86,7 @@ A Plan Guide applies either a fixed query plan, and/or query hints, to a query.
         @hints = N'OPTION (MAXDOP 1)';  
   
     ```  
-  
+
 For more information, see [sp_create_plan_guide &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-create-plan-guide-transact-sql.md).  
-  
+
   

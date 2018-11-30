@@ -14,7 +14,7 @@ monikerRange: ">=sql-server-ver15||=sqlallproducts-allversions"
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-[!INCLUDE[sql-server-2019](..\includes\sssqlv15-md.md)] builds on previous releases to grow SQL Server as a platform that gives you choices of development languages, data types, on-premises or cloud, and operating systems. This article summarizes what is new for SQL Server 2019. For more information and known issues, see the [SQL Server 2019 Release Notes](sql-server-ver15-release-notes.md).
+[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] builds on previous releases to grow SQL Server as a platform that gives you choices of development languages, data types, on-premises or cloud, and operating systems. This article summarizes what is new for SQL Server 2019. For more information and known issues, see the [SQL Server 2019 Release Notes](sql-server-ver15-release-notes.md).
 
 **Try SQL Server 2019!**
 - [![Download from Evaluation Center](../includes/media/download2.png)](https://go.microsoft.com/fwlink/?LinkID=862101) [Download SQL Server 2019 to install on Windows](https://go.microsoft.com/fwlink/?LinkID=862101)
@@ -23,7 +23,7 @@ monikerRange: ">=sql-server-ver15||=sqlallproducts-allversions"
 
 ## CTP 2.1
 
-Community technology preview (CTP) 2.1 is the latest public release of [!INCLUDE[sql-server-2019](..\includes\sssqlv15-md.md)]. The following features are added or enhanced for [!INCLUDE[sql-server-2019](..\includes\sssqlv15-md.md)] CTP 2.1.
+Community technology preview (CTP) 2.1 is the latest public release of [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]. The following features are added or enhanced for [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] CTP 2.1.
 
 - [Big Data Clusters](#bigdatacluster)
   - Deploy Python and R apps
@@ -40,7 +40,7 @@ Community technology preview (CTP) 2.1 is the latest public release of [!INCLUDE
 
 ## CTP 2.0 
 
-Community technology preview (CTP) 2.0 is the first public release of [!INCLUDE[sql-server-2019](..\includes\sssqlv15-md.md)]. The following features are added or enhanced for [!INCLUDE[sql-server-2019](..\includes\sssqlv15-md.md)] CTP 2.0.
+Community technology preview (CTP) 2.0 is the first public release of [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]. The following features are added or enhanced for [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] CTP 2.0.
 
 - [Big Data Clusters](#bigdatacluster)
   - Deploy a Big Data cluster with SQL and Spark Linux containers on Kubernetes

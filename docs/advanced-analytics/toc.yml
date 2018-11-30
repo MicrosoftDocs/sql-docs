@@ -101,6 +101,8 @@
     items:
     - name: Create partition-based models
       href: tutorials/r-tutorial-create-models-per-partition.md
+    - name: Run custom R functions on SQL
+      href: tutorials/r-tutorial-custom-r-functions.md
     - name: Learn in-database analytics
       href: tutorials/sqldev-in-database-r-for-sql-developers.md
       items:
@@ -130,13 +132,13 @@
       items:
       - name: Create database and permissions
         href: tutorials/deepdive-work-with-sql-server-data-using-r.md
-      - name: Create data objects using RxSqlServerData
+      - name: Create an RxSqlServerData object
         href: tutorials/deepdive-create-sql-server-data-objects-using-rxsqlserverdata.md
       - name: Query and modify data
         href: tutorials/deepdive-query-and-modify-the-sql-server-data.md
       - name: Define a compute context
         href: tutorials/deepdive-define-and-use-compute-contexts.md
-      - name: Create and run R scripts
+      - name: Compute summary statistics
         href: tutorials/deepdive-create-and-run-r-scripts.md
       - name: Visualize data
         href: tutorials/deepdive-visualize-sql-server-data-using-r.md
@@ -146,18 +148,14 @@
         href: tutorials/deepdive-score-new-data.md
       - name: Transform data
         href: tutorials/deepdive-transform-data-using-r.md
-      - name: Load data into memory using rxImport
+      - name: Load data using rxImport
         href: tutorials/deepdive-load-data-into-memory-using-rximport.md
       - name: Create a table using rxDataStep
         href: tutorials/deepdive-create-new-sql-server-table-using-rxdatastep.md
-      - name: Perform chunking analysis using rxDataStep
+      - name: Perform chunking analysis
         href: tutorials/deepdive-perform-chunking-analysis-using-rxdatastep.md
-      - name: Analyze data in local compute context
-        href: tutorials/deepdive-analyze-data-in-local-compute-context.md
       - name: Move data between SQL Server and XDF file
         href: tutorials/deepdive-move-data-between-sql-server-and-xdf-file.md
-      - name: Create a simple simulation
-        href: tutorials/deepdive-create-a-simple-simulation.md
 - name: Samples
   href: https://github.com/Microsoft/sql-server-samples
 - name: Solutions

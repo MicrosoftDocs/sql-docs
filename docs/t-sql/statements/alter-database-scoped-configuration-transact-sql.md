@@ -116,7 +116,7 @@ PRIMARY
 
 This value is only valid on secondaries while the database in on the primary, and specifies that the value for this setting on all secondaries will be the value set for the primary. If the configuration on the primary for using [parameter sniffing](../../relational-databases/query-processing-architecture-guide.md#ParamSniffing) changes, the value on the secondaries will change accordingly without the need to set the secondaries value explicitly. PRIMARY is the default setting for the secondaries.
 
-QUERY_OPTIMIZER_HOTFIXES **=** { ON | **OFF** | PRIMARY }
+<a name="qo_hotfixes"></a> QUERY_OPTIMIZER_HOTFIXES **=** { ON | **OFF** | PRIMARY }
 
 Enables or disables query optimization hotfixes regardless of the compatibility level of the database. The default is **OFF**, which disables query optimization hotfixes that were released after the highest available compatibility level was introduced for a specific version (post-RTM). Setting this to **ON** is equivalent to enabling [Trace Flag 4199](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md).
 

@@ -1,7 +1,7 @@
 ---
 title: "Best Practice with the Query Store | Microsoft Docs"
 ms.custom: ""
-ms.date: "11/16/2018"
+ms.date: "11/29/2018"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
@@ -16,7 +16,7 @@ manager: craigg
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Best Practice with the Query Store
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
 
   This article outlines the best practices for using the Query Store with your workload.  
   

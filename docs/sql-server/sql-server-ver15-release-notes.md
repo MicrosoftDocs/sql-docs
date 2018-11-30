@@ -1,6 +1,6 @@
 ---
 title: "SQL Server 2019 Release Notes | Microsoft Docs"
-ms.date: 11/06/2018
+ms.date: 11/29/2018
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: release-landing
@@ -32,7 +32,7 @@ This article describes limitations and known issues for the [!INCLUDE[SQL Server
 ## CTP 2.2 (December 2018)
 [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] CTP 2.2 is the latest public release of [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)].
 
-[!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] CTP 2.2 is available only as Evaluation Edition. No other editions are available. Support for CTP 2.2 is described in license_Eval.rtf with your installation media.
+[!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] CTP 2.2 is available only as Evaluation Edition. No other editions are available. Support for CTP 2.2 is described in `license_Eval.rtf` with your installation media.
 
 Limited support may be found at one of the following locations:
 
@@ -94,12 +94,20 @@ Limited support may be found at one of the following locations:
 
 - **Issue and customer impact**: UTF-8 enabled collations cannot be used with some other [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] features. UTF-8 is not supported when the following [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] features are in use:
 
+<<<<<<< HEAD
+=======
+  - SQL Server Replication (**Applies to:** [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] CTP 2.1, CTP 2.0)
+>>>>>>> a892f4134f3a2cd461ff106cb08a2ef94477c8df
   - Linked Server
   - In-memory OLTP
   - External Table for PolyBase
 
-    Also note there is currently no UI support to choose UTF-8 enabled collations in Azure Data Studio or SSDT. The latest SSMS version supports choice of UTF-8 enabled collations in the UI.
+   > [!Note]
+   > There is currently no UI support to choose UTF-8 enabled collations in Azure Data Studio or SQL Server Data Tools (SSDT). The latest [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] (SSMS) version supports choice of UTF-8 enabled collations in the UI.
 
+  > [!Note]
+  > [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] CTP 2.0 Setup does not support UTF-8 collations.  
+   
 - **Workaround**: No workaround for [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] CTPs.
 
 - **Applies to**: [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] CTP 2.2, CTP 2.1, CTP 2.0.

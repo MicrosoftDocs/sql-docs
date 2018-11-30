@@ -1,7 +1,7 @@
 ---
 title: "Sample Database for In-Memory OLTP | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/16/2016"
+ms.date: "11/30/2018"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
@@ -42,8 +42,8 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
   
 -   [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]  
   
--   For performance testing, a server with specifications similar to your production environment. For this particular sample you should have at least 16GB of memory available to SQL Server. For general guidelines on hardware for In-Memory OLTP, see the following blog post:[https://blogs.technet.com/b/dataplatforminsider/archive/2013/08/01/hardware-considerations-for-in-memory-oltp-in-sql-server-2014.aspx](https://blogs.technet.com/b/dataplatforminsider/archive/2013/08/01/hardware-considerations-for-in-memory-oltp-in-sql-server-2014.aspx)  
-  
+-   For performance testing, a server with specifications similar to your production environment. For this particular sample you should have at least 16GB of memory available to SQL Server. For general guidelines on hardware for In-Memory OLTP, see the following blog post: [Hardware considerations for In-Memory OLTP in SQL Server 2014](blog-hardware-in-memory-oltp.md)
+
 ##  <a name="InstallingtheIn-MemoryOLTPsamplebasedonAdventureWorks"></a> Installing the In-Memory OLTP sample based on AdventureWorks  
  Follow these steps to install the sample:  
   
@@ -307,8 +307,8 @@ Beginning with [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1, c
   
  Installation steps:  
   
-1.  Download and run the x64 installation package for the RML utilities from the following page: [https://blogs.msdn.com/b/psssql/archive/2013/10/29/cumulative-update-2-to-the-rml-utilities-for-microsoft-sql-server-released.aspx](https://blogs.msdn.com/b/psssql/archive/2013/10/29/cumulative-update-2-to-the-rml-utilities-for-microsoft-sql-server-released.aspx)  
-  
+1.  Download and run the x64 installation package for the RML utilities from the following page: [Download Report Markup Language (RML) for SQL Server](https://www.microsoft.com/en-us/download/details.aspx?id=4511)
+
 2.  If there is a dialog box saying certain files are in use, click 'Continue'  
   
 ### Running ostress  

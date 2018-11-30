@@ -14,7 +14,7 @@ manager: cgronlun
 
 This lesson is part of the [RevoScaleR tutorial](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md) on how to use [RevoScaleR functions](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) with SQL Server.
 
-Lesson two is a continuation of database creation: adding tables and loading data. If a DBA created the database and login in [lesson one](deepdive-work-with-sql-server-using-r.md), you can add tables using an R IDE like RStudio or a built-in tool like **Rgui**.
+Lesson two is a continuation of database creation: adding tables and loading data. If a DBA created the database and login in [lesson one](deepdive-work-with-sql-server-data-using-r.md), you can add tables using an R IDE like RStudio or a built-in tool like **Rgui**.
 
 From R, connect to SQL Server and use **RevoScaleR** functions to perform the folowing tasks:
 

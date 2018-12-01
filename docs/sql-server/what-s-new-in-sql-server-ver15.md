@@ -23,11 +23,15 @@ monikerRange: ">=sql-server-ver15||=sqlallproducts-allversions"
 
 ## CTP 2.2
 
-Community technology preview (CTP) 2.1 is the latest public release of [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]. The following features are added or enhanced for [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] CTP 2.1.
+Community technology preview (CTP) 2.2 is the latest public release of [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]. The following features are added or enhanced for [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] CTP 2.2.
 
 - [Big data clusters](#bigdatacluster)
   - Use SparkR with Big data cluster
   - Access SparkR kernel with Azure Data Studio
+
+- [Database engine](#databaseengine)
+  - Use UTF-8 character encoding with SQL Server Replication.
+  - External libraries for Java language enabled (Windows)
 
 ## Previous CTPs
 
@@ -107,9 +111,9 @@ Continue reading for more details about these features.
 
 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] introduces or enhances the following new features for the [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]
 
-### UTF-8 support (CTP 2.2)
+### External libraries for Java language (CTP 2.2)
 
-Added support for SQL Server Replication. 
+On Windows, you can save .jar files as external libraries in the database. Call these libraries when executing Java code from SQL Server.
 
 ### Scalar UDF inlining (CTP 2.1)
 
@@ -124,10 +128,6 @@ The error message ID 8152 `String or binary data would be truncated` is familiar
 `String or binary data would be truncated in table '%.*ls', column '%.*ls'. Truncated value: '%.*ls'.`
 
 The new error message 2628 provides more context for the data truncation problem, simplifying the troubleshooting process. For CTP 2.1 and CTP 2.2, this is an opt-in error message and requires [trace flag](../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 460 to be enabled.
-
-### UTF-8 support (CTP 2.1)
-
-Added support to select UTF-8 collation as default during [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] setup. 
 
 ### Improved diagnostic data for stats blocking (CTP 2.1)
 
@@ -155,7 +155,7 @@ Database **COMPATIBILITY_LEVEL 150** is added. To enable for a specific user dat
    ALTER DATABASE database_name SET COMPATIBILITY_LEVEL =  150;
    ```
 
-### UTF-8 support (CTP 2.0)
+### UTF-8 support (CTP 2.2)
 
 Full support for the widely used UTF-8 character encoding as an import or export encoding, or as database-level or column-level collation for text data. UTF-8 is allowed in the `CHAR` and `VARCHAR` datatypes, and is enabled when creating or changing an object's collation to a collation with the `UTF8` suffix. 
 
@@ -164,6 +164,10 @@ For example,`LATIN1_GENERAL_100_CI_AS_SC` to `LATIN1_GENERAL_100_CI_AS_SC_UTF8`.
 This feature may provide significant storage savings, depending on the character set in use. For example, changing an existing column data type with Latin strings from `NCHAR(10)` to `CHAR(10)` using an UTF-8 enabled collation, translates into 50% reduction in storage requirements. This reduction is because `NCHAR(10)` requires 20 bytes for storage, whereas `CHAR(10)` requires 10 bytes for the same Unicode string.
 
 For more information, see [Collation and Unicode Support](../relational-databases/collations/collation-and-unicode-support.md).
+
+CTP 2.1 Adds support to select UTF-8 collation as default during [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] setup.
+
+CTP 2.2 Adds support to use UTF-8 character encoding with SQL Server Replication.
 
 ### Resumable online index create (CTP 2.0)
 

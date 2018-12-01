@@ -49,7 +49,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 **[![download](../ssdt/media/download.png) Download Microsoft Command Line Utilities 15.0 for SQL Server (x64)](https://go.microsoft.com/fwlink/?linkid=2043518)**
 <br>**[![download](../ssdt/media/download.png) Download Microsoft Command Line Utilities 15.0 for SQL Server (x86)](https://go.microsoft.com/fwlink/?linkid=2043622)**
 
-The command line tools are General Availability (GA), however they are being released with the installer package for [!INCLUDE[sql-server-2019](..\includes\sssqlv15-md.md)].
+The command line tools are General Availability (GA), however they are being released with the installer package for [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)].
 
 **Version Information**
 

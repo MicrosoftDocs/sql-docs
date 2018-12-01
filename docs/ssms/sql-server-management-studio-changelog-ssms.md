@@ -192,10 +192,10 @@ SSMS is not added to the PATH environment variable:
 
 - Path to SSMS.EXE (and tools in general) is not added to the path anymore. The users can either add it themselves or, if on a modern Windows, rely on the Start menu.
 
-Support for [!INCLUDE[sql-server-2019](..\includes\sssqlv15-md.md)]
+Support for [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]
 
-- This release is the first release of SSMS that is fully *aware* of [!INCLUDE[sql-server-2019](..\includes\sssqlv15-md.md)] (compatLevel 150, etc).
-- Support "BATCH_STARTED_GROUP" and "BATCH_COMPLETED_GROUP" in [!INCLUDE[sql-server-2019](..\includes\sssqlv15-md.md)] and Managed Instance in SSMS.
+- This release is the first release of SSMS that is fully *aware* of [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] (compatLevel 150, etc).
+- Support "BATCH_STARTED_GROUP" and "BATCH_COMPLETED_GROUP" in [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] and Managed Instance in SSMS.
 - GraphDB: Add flag in showplan for Graph TC Sequence.
 - Always Encrypted: Added support for [Always Encrypted with secure enclaves](../relational-databases/security/encryption/always-encrypted-enclaves.md).
   - Connection dialog has a new "Always Encrypted" tab when the user clicks on the "Options" button to enable and configure enclave support.

@@ -17,7 +17,7 @@ ms.author: maghan
 
 A Key Performance Indicator (KPI) is a visual cue that communicates the amount of progress made toward a goal.  Key Performance Indicators are valuable for teams, managers, and businesses to evaluate quickly the progress made against measurable goals.   
   
-By using KPIs in SQL Server 2016 Reporting Services, you can easily visualize answers to the following questions:  
+By using KPIs in SQL Server Reporting Services, you can easily visualize answers to the following questions:  
   
 -   What am I ahead or behind on?  
   

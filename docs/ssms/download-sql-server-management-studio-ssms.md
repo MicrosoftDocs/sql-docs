@@ -37,7 +37,7 @@ Use SQL Server Management Studio (SSMS) to query, design, and manage your databa
 
 **SSMS is free!**
 
-**[SSMS 18.0 Public Preview 5 is now available](#ssms-180-preview-5), and is the latest generation of *SQL Server Management Studio* that provides support for [!INCLUDE[sql-server-2019](..\includes\sssqlv15-md.md)]!**
+**[SSMS 18.0 Public Preview 5 is now available](#ssms-180-preview-5), and is the latest generation of *SQL Server Management Studio* that provides support for [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]!**
 
 ## SSMS 17.9.1 is the current General Availability (GA) version of SSMS
 
@@ -72,7 +72,7 @@ For additional details about SSMS 17.9.1, please see the [SSMS 17.9.1 changelog]
 
 ## SSMS 18.0 (preview 5)
 
-**SSMS 18.0 Public Preview 5 is now available, and is the latest generation of *SQL Server Management Studio* that provides support for [!INCLUDE[sql-server-2019](..\includes\sssqlv15-md.md)]!**
+**SSMS 18.0 Public Preview 5 is now available, and is the latest generation of *SQL Server Management Studio* that provides support for [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]!**
 
 **[![download](../ssdt/media/download.png) Download SQL Server Management Studio 18.0 (preview 5)](https://go.microsoft.com/fwlink/?linkid=2041155)**
 
@@ -114,7 +114,7 @@ For details about what's new in this release, see [the SSMS changelog](sql-serve
 
 ## Supported SQL offerings (SSMS 18.0 preview 5)
 
-* This version of SSMS works with all [supported versions of SQL Server 2008 - [!INCLUDE[sql-server-2019](..\includes\sssqlv15-md.md)]](https://support.microsoft.com/lifecycle?C2=1044) and provides the greatest level of support for working with the latest cloud features in Azure SQL Database and Azure SQL Data Warehouse.
+* This version of SSMS works with all [supported versions of SQL Server 2008 - [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]](https://support.microsoft.com/lifecycle?C2=1044) and provides the greatest level of support for working with the latest cloud features in Azure SQL Database and Azure SQL Data Warehouse.
 * Additionally, SSMS 18.x can be installed side by side with SSMS 17.x, SSMS 16.x, or SQL Server 2014 SSMS and earlier.
 * SQL Server Integration Services (SSIS) - SSMS version 17.x or later does not support connecting to the legacy SQL Server Integration Services service. To connect to an earlier version of the legacy Integration Services, use the version of SSMS aligned with the version of SQL Server. For example, use SSMS 16.x to connect to the legacy SQL Server 2016 Integration Services service. SSMS 17.x and SSMS 16.x can be installed side-by-side on the same computer. Since the release of SQL Server 2012, the SSIS Catalog database, SSISDB, is the recommended way to store, manage, run, and monitor Integration Services packages. For details, see [SSIS Catalog](../integration-services/catalog/ssis-catalog.md).
 

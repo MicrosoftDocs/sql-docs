@@ -1,24 +1,28 @@
 ---
-title: Create R models (SQL and R deep dive)| Microsoft Docs
+title: Create R models (SQL Server and RevoScaleR tutorial) | Microsoft Docs
 ms.prod: sql
 ms.technology: machine-learning
 
-ms.date: 04/15/2018  
+ms.date: 11/27/2018  
 ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
 ---
-# Create R models (SQL and R deep dive)
+# Create R models (SQL Server and RevoScaleR tutorial)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-This article is part of the Data Science Deep Dive tutorial, on how to use [RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) with SQL Server.
+This lesson is part of the [RevoScaleR tutorial](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md) on how to use [RevoScaleR functions](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) with SQL Server.
 
-Now that you have enriched the training data, it's time to analyze the data using linear regression. Linear models are an important tool in the world of predictive analytics, and the **RevoScaleR** package in [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)] includes a high-performance, scalable algorithm.
+Now that you have enriched the training data, it's time to analyze the data using regression modeling. Linear models are an important tool in the world of predictive analytics, and the **RevoScaleR** package includes regression algorithms that can subdivide the workload and run it in parallel.
+
+> [!div class="checklist"]
+> * Create a linear regression model
+> * Create a logistic regression model
 
 ## Create a linear regression model
 
-In this step, you create a simple linear model that estimates the credit card balance for the customers, using as independent variables the values in the *gender* and *creditLine* columns.
+In this step, create a simple linear model that estimates the credit card balance for the customers using as independent variables the values in the *gender* and *creditLine* columns.
   
 To do this, use the [rxLinMod](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxlinmod) function, which supports remote compute contexts.
   
@@ -28,13 +32,13 @@ To do this, use the [rxLinMod](https://docs.microsoft.com/machine-learning-serve
     linModObj <- rxLinMod(balance ~ gender + creditLine,  data = sqlFraudDS)
     ```
   
-2. To view a summary of the results, call the standard R `summary` function on the model object.
+2. To view a summary of the results, call the standard R **summary** function on the model object.
   
      ```R
      summary(linModObj)
      ```
 
-You might think it peculiar that a plain R function like `summary` would work here, since in the previous step, you set the compute context to the server. However, even when the **rxLinMod** function uses the remote compute context to create the model, it also returns an object that contains the model to your local workstation, and stores it in the shared directory.
+You might think it peculiar that a plain R function like **summary** would work here, since in the previous step, you set the compute context to the server. However, even when the **rxLinMod** function uses the remote compute context to create the model, it also returns an object that contains the model to your local workstation, and stores it in the shared directory.
 
 Therefore, you can run standard R commands against the model just as if it had been created using the "local" context.
 
@@ -64,11 +68,11 @@ Condition number: 1.0184
 
 ## Create a logistic regression model
 
-Next, you create a logistic regression model that indicates whether a particular customer is a fraud risk. You'll use the **RevoScaleR** [rxLogit](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxlogit) function, which supports fitting of logistic regression models in remote compute contexts.
+Next, create a logistic regression model that indicates whether a particular customer is a fraud risk. You'll use the **RevoScaleR** [rxLogit](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxlogit) function, which supports fitting of logistic regression models in remote compute contexts.
 
-1.  Keep the compute context as is. You'll also continue to use the same data source as well.
+Keep the compute context as is. You'll also continue to use the same data source as well.
 
-2.  Call the **rxLogit** function and pass the formula needed to define the model.
+1. Call the **rxLogit** function and pass the formula needed to define the model.
 
     ```R
     logitObj <- rxLogit(fraudRisk ~ state + gender + cardholder + balance + numTrans + numIntlTrans + creditLine, data = sqlFraudDS, dropFirst = TRUE)
@@ -78,7 +82,7 @@ Next, you create a logistic regression model that indicates whether a particular
     
     The reason the model is so large is that, in R and in the **RevoScaleR** package, every level of a categorical factor variable is automatically treated as a separate dummy variable.
   
-3.  To view a summary of the returned model, call the R `summary` function.
+2. To view a summary of the returned model, call the R **summary** function.
   
     ```R
     summary(logitObj)
@@ -117,10 +121,7 @@ Condition number of final variance-covariance matrix: 3997.308
 Number of iterations: 15
 ```
 
-## Next step
+## Next steps
 
-[Score new data](../../advanced-analytics/tutorials/deepdive-score-new-data.md)
-
-## Previous step
-
-[Visualize SQL Server data using R](../../advanced-analytics/tutorials/deepdive-visualize-sql-server-data-using-r.md)
+> [!div class="nextstepaction"]
+> [Score new data](../../advanced-analytics/tutorials/deepdive-score-new-data.md)

@@ -136,7 +136,7 @@ manager: craigg
 |Property Name (**Catalog Properties** dialog box)|Property Name (database view)|  
 |---------------------------------------------------------|-------------------------------------|  
 |Encryption Algorithm Name|ENCRYPTION_ALGORITHM|  
-|Clean Logs Periodically|OPERATION_CLEANUP_ENABLED???|  
+|Clean Logs Periodically|OPERATION_CLEANUP_ENABLED|  
 |Retention Period (days)|RETENTION_WINDOW|  
 |Periodically Remove Old Versions|VERSION_CLEANUP_ENABLED|  
 |Maximum Number of Versions per Project|MAX_PROJECT_VERSIONS|  

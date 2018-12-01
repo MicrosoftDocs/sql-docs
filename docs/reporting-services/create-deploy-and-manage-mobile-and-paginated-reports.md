@@ -33,7 +33,7 @@ Create, deploy, and manage mobile and paginated Reporting Services reports on pr
 
 SQL Server Reporting Services is a solution that customers deploy on their own premises for creating, publishing, and managing reports, then delivering them to the right users in different ways, whether that's viewing them in web browser, on their mobile device, or as an email in their in-box.
 
-For SQL Server 2016, Reporting Services offers an updated suite of products:
+SQL Server Reporting Services offers an updated suite of products:
 
 * **"Traditional" paginated reports** brought up to date, so you can create modern-looking reports, with updated tools and new features for creating them.
 * **New mobile reports** with a responsive layout that adapts to different devices and the different ways you hold them.
@@ -43,7 +43,7 @@ Read on for more about each.
 
 ### What's new in Reporting Services
 
-These sources will keep you up-to-date on new features in SQL Server 2016 Reporting Services.
+These sources will keep you up-to-date on new features in SQL Server Reporting Services.
 
 * [What's New in Reporting Services](../reporting-services/what-s-new-in-sql-server-reporting-services-ssrs.md)
 * [SQL Server Reporting Services Team Blog](https://blogs.msdn.microsoft.com/sqlrsteamblog/)
@@ -70,7 +70,7 @@ Mobile computing has shifted the devices we need to work, meaning people today h
 
 What you need with these widely different screen form factors is not a fixed layout, but a responsive layout that adapts to these different devices and the different ways you hold them. For that we've added a new report type: mobile reports, based on the Datazen technology we acquired about a year ago and integrated into the product. You can migrate your existing Datazen reports to Reporting Services with the [SQL Server Migration Assistant for Datazen](https://www.microsoft.com/download/details.aspx?id=53128). 
 
-You create these mobile reports in the new [Mobile Report Publisher](../reporting-services/mobile-reports/create-mobile-reports-with-sql-server-mobile-report-publisher.md) app. Then in the native [Power BI apps for mobile devices](https://powerbi.microsoft.com/documentation/powerbi-power-bi-apps-for-mobile-devices/) for Windows 10, iOS, Android, and HTML5, you can access the data you have in Power BI the cloud, plus your on-premises SQL Server 2016 Reporting Services data. As you create visualizations, Mobile Report Publisher automatically generates sample data for each, so you see how the visualization will look with your data, and what kind of data works well in each visualization.
+You create these mobile reports in the new [Mobile Report Publisher](../reporting-services/mobile-reports/create-mobile-reports-with-sql-server-mobile-report-publisher.md) app. Then in the native [Power BI apps for mobile devices](https://powerbi.microsoft.com/documentation/powerbi-power-bi-apps-for-mobile-devices/) for Windows 10, iOS, Android, and HTML5, you can access the data you have in Power BI the cloud, plus your on-premises SQL Server Reporting Services data. As you create visualizations, Mobile Report Publisher automatically generates sample data for each, so you see how the visualization will look with your data, and what kind of data works well in each visualization.
 
 ## Web portal
 

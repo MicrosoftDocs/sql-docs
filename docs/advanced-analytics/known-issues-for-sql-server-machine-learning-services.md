@@ -267,9 +267,9 @@ If you need to use larger models, the following workarounds are available:
 + Use feature selection to remove unnecessary columns.
 + If you are using an open source algorithm, consider a similar implementation using the corresponding algorithm in MicrosoftML or RevoScaleR. These packages have been optimized for deployment scenarios.
 + After the model has been rationalized and the size reduced using the preceding steps, see if the [memCompress](https://www.rdocumentation.org/packages/base/versions/3.4.1/topics/memCompress) function in base R can be used to reduce the size of the model before passing it to SQL Server. This option is best when the model is close to the 2 GB limit.
-+ For larger models, you can use the SQL Server [FileTable](..\relational-databases\blob\filetables-sql-server.md) feature to store the models, rather than using a varbinary column.
++ For larger models, you can use the SQL Server [FileTable](../relational-databases/blob/filetables-sql-server.md) feature to store the models, rather than using a varbinary column.
 
-    To use FileTables, you must add a firewall exception, because data stored in FileTables is managed by the Filestream filesystem driver in SQL Server, and default firewall rules block network file access. For more information, see [Enable Prerequisites for FileTable](../relational-databases/blob/enable-the-prerequisites-for-filetable.md). 
+    To use FileTables, you must add a firewall exception, because data stored in FileTables is managed by the Filestream filesystem driver in SQL Server, and default firewall rules block network file access. For more information, see [Enable Prerequisites for FileTable](../relational-databases/blob/enable-the-prerequisites-for-filetable.md).
 
     After you have enabled FileTable, to write the model, you get a path from SQL using the FileTable API, and then write the model to that location from your code. When you need to read the model, you get the path from SQL and then call the model using the path from your script. For more information, see [Access FileTables with File Input-Output APIs](../relational-databases/blob/access-filetables-with-file-input-output-apis.md).
 

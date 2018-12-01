@@ -51,7 +51,7 @@ The tutorial uses the *Sales order* report created in the tutorial [Create a Bas
   
 Your computer must have the following installed to use this tutorial:  
   
--   An edition of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] that supports data-driven subscriptions. For more information, see [Editions and Components of SQL Server 2016](../sql-server/editions-and-components-of-sql-server-2016.md).  
+-   An edition of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] that supports data-driven subscriptions. For more information, see [Editions and Features of SQL Server 2017](../sql-server/editions-and-components-of-sql-server-2017.md).  
   
 -   The report server must be running in native mode. The user interface described in this tutorial is based on a native mode report server. Subscriptions are supported on SharePoint mode report servers but the user interface will be different than what is described in this tutorial.  
   

@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "integration-services"
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 24bd987e-164a-48fd-b4f2-cbe16a3cd95e
 author: douglaslMS
@@ -137,7 +136,7 @@ manager: craigg
 |Property Name (**Catalog Properties** dialog box)|Property Name (database view)|  
 |---------------------------------------------------------|-------------------------------------|  
 |Encryption Algorithm Name|ENCRYPTION_ALGORITHM|  
-|Clean Logs Periodically|OPERATION_CLEANUP_ENABLED​|  
+|Clean Logs Periodically|OPERATION_CLEANUP_ENABLED???|  
 |Retention Period (days)|RETENTION_WINDOW|  
 |Periodically Remove Old Versions|VERSION_CLEANUP_ENABLED|  
 |Maximum Number of Versions per Project|MAX_PROJECT_VERSIONS|  

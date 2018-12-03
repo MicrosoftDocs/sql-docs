@@ -32,7 +32,7 @@ If you don't already have an Azure SQL server, complete one of the following Azu
 
 Use [!INCLUDE[name-sos](../includes/name-sos-short.md)] to establish a connection to your Azure SQL Database server.
 
-1. The first time you run [!INCLUDE[name-sos](../includes/name-sos-short.md)] the **Connection** page should open. If you don't see the **Connection** page, click **Add Connection**, or the **New Connection** icon in the **SERVERS** sidebar:
+1. The first time you run [!INCLUDE[name-sos](../includes/name-sos-short.md)] the **Connection** page should open. If you don't see the **Connection** page, select **Add Connection**, or the **New Connection** icon in the **SERVERS** sidebar:
    
    ![New Connection Icon](media/quickstart-sql-database/new-connection-icon.png)
 
@@ -50,7 +50,7 @@ Use [!INCLUDE[name-sos](../includes/name-sos-short.md)] to establish a connectio
 
    ![New Connection Icon](media/quickstart-sql-database/new-connection-screen.png)  
 
-3. Click **Connect**.
+3. Select **Connect**.
 
 4. If your server doesn't have a firewall rule allowing Azure Data Studio to connect, the **Create new firewall rule** form opens. Complete the form to create a new firewall rule. For details, see [Firewall rules](https://docs.microsoft.com/azure/sql-database/sql-database-firewall-configure).
 
@@ -135,7 +135,7 @@ Paste the following SQL snippet into the query editor and select **Run**.
 
 
 ## View the result
-Paste the following snippet into the query editor and click **Run**.
+Paste the following snippet into the query editor and select **Run**.
 
    ```sql
    -- Select rows from table 'Customers'

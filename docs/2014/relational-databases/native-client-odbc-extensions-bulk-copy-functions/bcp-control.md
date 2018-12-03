@@ -62,7 +62,7 @@ iValue
  BCPFILECP  
  *iValue* contains the number of the code page for the data file. You can specify the number of the code page, such as 1252 or 850, or one of these values:  
   
- BCPFILE_ACP: data in the file is in the Microsoft Windows® code page of the client.  
+ BCPFILE_ACP: data in the file is in the Microsoft Windows?? code page of the client.  
   
  BCPFILE_OEMCP: data in the file is in the OEM code page of the client (default).  
   

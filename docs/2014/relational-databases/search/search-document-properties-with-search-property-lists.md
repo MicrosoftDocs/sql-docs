@@ -55,7 +55,7 @@ manager: craigg
 ##  <a name="impact"></a> Impact of Enabling Property Searching  
  Configuring a full-text index to support searching on one or more properties increases the size of the index somewhat, depending on the number of properties you specify in your search property list and on the content of each property.  
   
- In testing typical corpuses of Microsoft Word<sup>®</sup>, Excel<sup>®</sup>, and PowerPoint<sup>®</sup> documents, we configured a full-text index to index typical search properties. Indexing these properties increased the size of the full-text index size by approximately 5 percent. We anticipate that this approximate size increase will to be typical for most document corpuses. However, ultimately, the size increase will depend on the amount of property data in a given document corpus relative to the amount of overall data.  
+ In testing typical corpuses of Microsoft Word<sup>??</sup>, Excel<sup>??</sup>, and PowerPoint<sup>??</sup> documents, we configured a full-text index to index typical search properties. Indexing these properties increased the size of the full-text index size by approximately 5 percent. We anticipate that this approximate size increase will to be typical for most document corpuses. However, ultimately, the size increase will depend on the amount of property data in a given document corpus relative to the amount of overall data.  
   
   
   

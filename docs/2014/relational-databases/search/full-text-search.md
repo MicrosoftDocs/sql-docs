@@ -4,7 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: search
+ms.technology:
 ms.topic: conceptual
 helpviewer_keywords: 
   - "full-text search [SQL Server]"

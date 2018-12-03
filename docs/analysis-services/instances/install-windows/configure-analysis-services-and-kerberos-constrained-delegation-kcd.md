@@ -193,7 +193,7 @@ manager: kfile
   
 4.  Run the PowerPivot Configuration wizard. See [Power Pivot Configuration Tools](../../../analysis-services/power-pivot-sharepoint/power-pivot-configuration-tools.md).  
   
-5.  Connect  SharePoint to the Office Online Server.    ??Configure_xlwac_on_SPO.ps1 ??  
+5. Connect SharePoint to the Office Online Server. (Configure_xlwac_on_SPO.ps1)
   
 6.  Configure SharePoint Authentication providers for Kerberos. **This is needed for scenario 1**. For more information, see [Plan for Kerberos authentication in SharePoint 2013](https://technet.microsoft.com/library/ee806870.aspx).  
   

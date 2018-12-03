@@ -4,13 +4,7 @@ ms.custom: ""
 ms.date: "05/25/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "analysis-services"
-  - "database-engine"
-  - "integration-services"
-  - "master-data-services"
-  - "replication"
-  - "reporting-services-native"
+ms.technology: install
 ms.topic: conceptual
 helpviewer_keywords: 
   - "new features [SQL Server]"
@@ -46,12 +40,12 @@ manager: craigg
 ## [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] Service Pack 1 (SP1)
 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] (SP1) did not introduce significant new features.
 -  [SQL Server 2014 Service Pack 1 release information ](https://support.microsoft.com/en-us/kb/3058865).
--  [![Download Service Pack 1 for Microsoft® SQL Server® 2014](./media/what-s-new-in-sql-server-2016/download.png)](https://www.microsoft.com/en-us/download/details.aspx?id=46694) [Download Service Pack 1 for Microsoft® SQL Server® 2014](https://www.microsoft.com/en-us/download/details.aspx?id=46694).
+-  [![Download Service Pack 1 for Microsoft?? SQL Server?? 2014](./media/what-s-new-in-sql-server-2016/download.png)](https://www.microsoft.com/en-us/download/details.aspx?id=46694) [Download Service Pack 1 for Microsoft?? SQL Server?? 2014](https://www.microsoft.com/en-us/download/details.aspx?id=46694).
 
 
 ## [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] Service Pack 2 (SP2)
 - [SQL Server 2014 Service Pack 2 release information](https://support.microsoft.com/en-us/kb/3171021).
--  [![Download Service Pack 2 for Microsoft® SQL Server® 2014](./media/what-s-new-in-sql-server-2016/download.png)](http://go.microsoft.com/fwlink/?LinkID=821558) [Download Service Pack 2 for Microsoft® SQL Server® 2014](http://go.microsoft.com/fwlink/?LinkID=821558).
+-  [![Download Service Pack 2 for Microsoft?? SQL Server?? 2014](./media/what-s-new-in-sql-server-2016/download.png)](http://go.microsoft.com/fwlink/?LinkID=821558) [Download Service Pack 2 for Microsoft?? SQL Server?? 2014](http://go.microsoft.com/fwlink/?LinkID=821558).
 -  [![Download SQL Server 2014 SP2 Feature Pack](./media/what-s-new-in-sql-server-2016/download.png)](https://www.microsoft.com/en-us/download/details.aspx?id=53164) [Download the SQL Server 2014 SP2 Feature Pack](https://www.microsoft.com/en-us/download/details.aspx?id=53164).
 
 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] (SP2) Includes the following improvements:

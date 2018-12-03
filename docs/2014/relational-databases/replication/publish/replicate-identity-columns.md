@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "10/04/2016"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "replication"
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords: 
   - "identities [SQL Server replication]"

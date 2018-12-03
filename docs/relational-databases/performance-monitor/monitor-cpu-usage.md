@@ -5,7 +5,7 @@ ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
-s.technology: performance
+ms.technology: performance
 ms.topic: conceptual
 helpviewer_keywords: 
   - "monitoring performance [SQL Server], CPU usage"

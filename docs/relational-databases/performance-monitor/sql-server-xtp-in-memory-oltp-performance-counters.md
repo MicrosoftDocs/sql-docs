@@ -5,7 +5,7 @@ ms.date: "04/06/2016"
 ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
-s.technology: performance
+ms.technology: performance
 ms.topic: conceptual
 ms.assetid: fe3cbaf4-65f4-44c5-acc6-7b735cda0c5d
 author: MikeRayMSFT

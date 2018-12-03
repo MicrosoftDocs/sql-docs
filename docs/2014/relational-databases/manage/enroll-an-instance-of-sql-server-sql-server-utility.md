@@ -4,7 +4,7 @@ ms.custom: ""
 ms.date: "05/24/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology:
+ms.technology: configuration
 ms.topic: conceptual
 f1_keywords: 
   - "SQL12.SWB.makemanaged.agentaccount.F1"

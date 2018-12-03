@@ -483,7 +483,7 @@
         },
         {
             "source_path": "docs/2014/relational-database/replication/replication-features-and-tasks.md",
-            "redirect_url": "/sql/relational-database/replication/sql-server-replication"?view=sql-server-2014,
+            "redirect_url": "/sql/relational-database/replication/sql-server-replication?view=sql-server-2014",
             "redirect_document_id": true
         },
         {

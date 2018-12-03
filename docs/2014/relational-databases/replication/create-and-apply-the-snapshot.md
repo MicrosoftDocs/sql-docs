@@ -38,8 +38,7 @@ manager: craigg
   
  To view or modify the default snapshot folder location, see  
   
--   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]: [Specify the Default Snapshot Location](snapshot-options.md#snapshot-folder-locations)  
-  
+-   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]: [Specify the Default Snapshot Location](snapshot-options.md#snapshot-folder-locations)
 -   Replication Programming and RMO programming: [Configure Publishing and Distribution](configure-publishing-and-distribution.md)  
   
 ## See Also  

@@ -105,12 +105,12 @@ order_id    cust_id     order_date           order_amt    order_person
 ```
   
 ### C. Using CURRENT_USER from an impersonated context  
-In this example, user `Wanida` executes the following [!INCLUDE[tsql](../../includes/tsql-md.md)] code.
+In this example, user `Wanida` executes the following [!INCLUDE[tsql](../../includes/tsql-md.md)] code to impersonate user 'Arnalfo'.
   
 ```sql
 SELECT CURRENT_USER;  
 GO  
-EXECUTE AS USER = 'Wanida';  
+EXECUTE AS USER = 'Arnalfo';  
 GO  
 SELECT CURRENT_USER;  
 GO  

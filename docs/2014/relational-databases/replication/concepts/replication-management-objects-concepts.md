@@ -31,7 +31,7 @@ manager: craigg
  [Configure Distribution](../configure-distribution.md)  
  Topics in this section show how to use RMO to configure publishing and distribution.  
   
- [Create a Publication](../publish/create-modify-and-delete-publications-and-articles-replication.md)  
+ [Create a Publication](../publish/create-a-publication.md)  
  Topics in this section show how to use RMO to create, delete, and modify publications and articles.  
   
  [Subscribe to Publications](../subscribe-to-publications.md)  

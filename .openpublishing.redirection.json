@@ -267,7 +267,7 @@
             "redirect_document_id": true
         },
         {
-            "source_path": "docs/2014/relational-database/replication/monitor/monitor-replication-overview.md",
+            "source_path": "docs/2014/relational-database/replication/monitor/monitoring-replication-overview.md",
             "redirect_url": "/sql/relational-database/replication/monitor/monitoring-replication?view=sql-server-2014",
             "redirect_document_id": true
         },
@@ -542,7 +542,7 @@
             "redirect_document_id": true
         },
         {
-            "source_path": "docs/2014/relational-database/replication/merge/create-modify-and-delete-publications-and-articles-replication.md",
+            "source_path": "docs/2014/relational-database/replication/merge/create-a-publication.md",
             "redirect_url": "/sql/relational-database/replication/merge/create-a-publication?view=sql-server-2014",
             "redirect_document_id": true
         },    

@@ -155,6 +155,6 @@ manager: craigg
   
 ## See Also  
  [Specify How Changes Are Propagated for Transactional Articles](../transactional/transactional-articles-specify-how-changes-are-propagated.md)   
- [Create a publication](create-modify-and-delete-publications-and-articles-replication.md)  
+ [Create a publication](create-a-publication.md)  
   
   

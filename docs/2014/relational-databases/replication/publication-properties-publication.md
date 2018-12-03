@@ -194,7 +194,7 @@ manager: craigg
  **Run additional scripts**  
  Specify scripts to be executed before and after the snapshot is applied at the Subscriber. Scripts cannot be specified if **Snapshot format** is **Character**.  
   
- Scripts are optional, but they provide a convenient way to execute commands and apply administrative changes at Subscribers. For more information about executing scripts, see [Execute Scripts Before and After the Snapshot Is Applied](snapshot-options.md#snapshot-options.md#execute-scripts-before-and-after-snapshot-is-applied.md).  
+ Scripts are optional, but they provide a convenient way to execute commands and apply administrative changes at Subscribers. For more information about executing scripts, see [Execute Scripts Before and After the Snapshot Is Applied](snapshot-options.md#execute-scripts-before-and-after-snapshot-is-applied).  
   
 -   Enter a path in the **Before applying the snapshot, execute this script** text box or click **Browse** to specify a location for the script.   
 -   Enter a path in the **After applying the snapshot, execute this script** text box or click **Browse** to specify a location for the script.  

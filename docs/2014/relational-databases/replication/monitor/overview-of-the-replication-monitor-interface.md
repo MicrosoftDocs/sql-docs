@@ -172,7 +172,7 @@ manager: craigg
   
          The error messages available provide detailed information on why an agent is not running and provide a starting point for troubleshooting issues with the agents associated with a publication.  
   
- For more information, see [View Information and Perform Tasks using Replication Monitor](view-information-and-perform-tasks-for-a-publication-replication-monitor.md).  
+ For more information, see [View Information and Perform Tasks using Replication Monitor](view-information-and-perform-tasks-replication-monitor.md).  
   
  Replication Monitor also provides a context menu for the publications node. Right-click a publication in the left pane to:  
   

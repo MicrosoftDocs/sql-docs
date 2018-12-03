@@ -25,7 +25,7 @@ manager: craigg
   
 -   [!INCLUDE[msCoName](../../includes/msCoName-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssNoVersion-md.md)] Replication Monitor  
   
-     Replication Monitor is the most important tool for monitoring replication, presenting a Publisher-focused view of all replication activity. For more information, see [Monitor Replication](monitor/monitoring-replication-overview.md).  
+     Replication Monitor is the most important tool for monitoring replication, presenting a Publisher-focused view of all replication activity. For more information, see [Monitor Replication](monitor/monitoring-replication.md).  
   
 -   [!INCLUDE[msCoName](../../includes/msCoName-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssManStudioFull-md.md)]  
   
@@ -46,6 +46,6 @@ manager: craigg
 ## See Also  
  [Replication Administration FAQ](administration/frequently-asked-questions-for-replication-administrators.md)   
  [Best Practices for Replication Administration](administration/best-practices-for-replication-administration.md)   
- [Monitor Replication](monitor/monitoring-replication-overview.md)  
+ [Monitor Replication](monitor/monitoring-replication.md)  
   
   

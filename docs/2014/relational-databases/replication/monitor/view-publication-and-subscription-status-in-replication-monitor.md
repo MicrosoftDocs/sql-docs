@@ -48,7 +48,7 @@ manager: craigg
   
  **To view publication and subscription status**  
   
--   Replication Monitor: [View Information and Perform Tasks using Replication Monitor](view-information-and-perform-tasks-for-a-publication-replication-monitor.md).
+-   Replication Monitor: [View Information and Perform Tasks using Replication Monitor](view-information-and-perform-tasks-replication-monitor.md).
   
   
 ## Publication Status Values  

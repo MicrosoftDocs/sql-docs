@@ -305,7 +305,7 @@
             topicHref: /sql/relational-databases/replication/merge/merge-replication
           - name: Monitor
             tocHref: /sql/relational-databases/replication/monitor/
-            topicHref: /sql/relational-databases/replication/monitor/monitoring-replication-overview
+            topicHref: /sql/relational-databases/replication/monitor/monitoring-replication
           - name: Non-SQL
             tocHref: /sql/relational-databases/replication/non-sql/
             topicHref: /sql/relational-databases/replication/non-sql/heterogeneous-database-replication

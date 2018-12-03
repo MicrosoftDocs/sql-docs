@@ -71,7 +71,7 @@ manager: craigg
   
     -   For merge replication, it can be more efficient to use business logic handlers. For more information, see [Execute Business Logic During Merge Synchronization](../merge/execute-business-logic-during-merge-synchronization.md).  
   
-     If you use triggers to maintain referential integrity in tables published for merge replication, specify the processing order of tables to reduce the number of retries required for the Merge Agent. For more information, see [Specify Merge Replication properties](../merge/specify-merge-replication-properties.md).  
+     If you use triggers to maintain referential integrity in tables published for merge replication, specify the processing order of tables to reduce the number of retries required for the Merge Agent. For more information, see [Specify Merge Replication properties](../publish/specify-merge-replication-properties.md).  
   
 -   Limit the use of Large Object (LOB) data types.  
   

@@ -177,7 +177,7 @@ Because it can be difficult to determine all dependencies just from looking at t
 
 ### C. Create a library from a byte stream
 
-If you do not have the ability to save the package files in a location on the server, you can  pass the package contents in a variable. The following example creates a library by passing the bits as a hexidecimal literal.
+If you do not have the ability to save the package files in a location on the server, you can  pass the package contents in a variable. The following example creates a library by passing the bits as a hexadecimal literal.
 
 ```SQL
 CREATE EXTERNAL LIBRARY customLibrary FROM (CONTENT = 0xabc123) WITH (LANGUAGE = 'R');

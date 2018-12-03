@@ -159,7 +159,7 @@ public static boolean[][] outputNullMap
 
 ## Use CREATE EXTERNAL LIBRARY
 
-In CTP 2.2 on Windows only, you can create an external library for compiled Java code in a jar, uploaded along with any dependencies into a database. Use the [CREATE EXTERNAL LIBRARY (Transact-SQL)](../../sql/t-sql/statements/create-external-library-transact-sql.md) statement to upload your code:
+In CTP 2.2 on Windows only, you can create an external library for compiled Java code in a jar, uploaded along with any dependencies into a database. Use the [CREATE EXTERNAL LIBRARY (Transact-SQL)](../../t-sql/statements/create-external-library-transact-sql.md) statement to upload your code:
 
 ```sql
 CREATE EXTERNAL LIBRARY myJar

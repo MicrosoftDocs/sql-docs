@@ -52,10 +52,12 @@ The behavior of the `TRANSLATE` function is similar to using multiple [REPLACE](
 SELECT TRANSLATE('abcdef','abc','bcd') AS Translated,
        REPLACE(REPLACE(REPLACE('abcdef','a','b'),'b','c'),'c','d') AS Replaced;
 ```
+
 The results are:
-Translated  |Replaced |  
----------|--------- |
-bcddef |ddddef |
+
+| Translated | Replaced |  
+| ---------|--------- |
+| bcddef | ddddef |
 
 `TRANSLATE` is always SC collation aware.
 

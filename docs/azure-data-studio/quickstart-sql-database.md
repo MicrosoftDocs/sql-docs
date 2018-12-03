@@ -7,7 +7,7 @@ ms.prod: sql
 ms.technology: azure-data-studio
 ms.reviewer: "alayu; sstein"
 ms.topic: "quickstart"
-author: "yualan, v-pgoldman"
+author: "yualan, v-pagold"
 ms.author: "alayu"
 manager: craigg
 ---
@@ -82,7 +82,7 @@ The following sections create the TutorialDB database that's used in other [!INC
    > [!NOTE]
    > You can append this to, or overwrite, the previous query in the editor. Choosing **Run** executes the selected query. If no queries are selected, then all queries are executed.
 
-1. Select **Run**.
+1. Select **Run**. Notifications appear in the **MESSAGES** pane showing query progress.
 
 ## Create a table
 

@@ -267,7 +267,7 @@ After the deployment script has completed successfully, you can obtain the IP ad
 If you are using AKS, Azure provides the Azure LoadBalancer service. Run following command:
 
 ```bash
-kubectl get svc service-master-pool-lb -n <your-cluster-name>
+kubectl get svc endpoint-master-pool -n <your-cluster-name>
 kubectl get svc service-security-lb -n <your-cluster-name>
 kubectl get svc service-proxy-lb -n <your-cluster-name>
 ```
@@ -353,7 +353,7 @@ To monitor or troubleshoot a deployment, use **kubectl** to inspect the status o
 
    | Service | Description |
    |---|---|
-   | **service-master-pool-lb**<br/>**service-master-pool-nodeport** | Provides access to the master instance.<br/>(**EXTERNAL-IP,31433** and the **SA** user) |
+   | **endpoint-master-pool** | Provides access to the master instance.<br/>(**EXTERNAL-IP,31433** and the **SA** user) |
    | **service-mssql-controller-lb**<br/>**service-mssql-controller-nodeport** | Supports tools and clients that manage the cluster. |
    | **service-proxy-lb**<br/>**service-proxy-nodeport** | Provides access to the [Cluster Administration Portal](cluster-admin-portal.md).<br/>(https://**EXTERNAL-IP**:30777/portal)|
    | **service-security-lb**<br/>**service-security-nodeport** | Provides access to the HDFS/Spark Gateway.<br/>(**EXTERNAL-IP** and the **root** user) |

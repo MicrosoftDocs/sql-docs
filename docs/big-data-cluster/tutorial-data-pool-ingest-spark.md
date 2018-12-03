@@ -79,7 +79,7 @@ The next step is to create a Spark streaming job that loads web clickstream data
 1. In the **Arguments** field, enter the following text, specifying the password to the SQL Server master instance in the `<your_password>` placeholder. 
 
    ```text
-   mssql-master-pool-0.service-master-pool 1433 sa <your_password> sales web_clickstreams_spark_results hdfs:///clickstream_data csv false
+   mssql-master-pool-0.endpoint-master-pool 1433 sa <your_password> sales web_clickstreams_spark_results hdfs:///clickstream_data csv false
    ```
 
    The following table describes each argument:

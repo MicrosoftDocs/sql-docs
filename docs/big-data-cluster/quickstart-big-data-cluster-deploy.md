@@ -150,11 +150,11 @@ After the deployment script has completed successfully, you can obtain the IP ad
 Azure provides the Azure LoadBalancer service to AKS. Run following command in a cmd or bash window:
 
 ```bash
-kubectl get svc service-master-pool-lb -n <your-cluster-name>
+kubectl get svc endpoint-master-pool -n <your-cluster-name>
 kubectl get svc service-security-lb -n <your-cluster-name>
 ```
 
-Look for the **External-IP** value that is assigned to the services. Connect to the SQL Server master instance using the IP address for the `service-master-pool-lb` at port 31433 (Ex: **\<ip-address\>,31433**) and to the SQL Server big data cluster endpoint using the external-IP for the `service-security-lb` service.   That big data cluster end point is where you can interact with HDFS and submit Spark jobs through Knox.
+Look for the **External-IP** value that is assigned to the services. Connect to the SQL Server master instance using the IP address for the `endpoint-master-pool` at port 31433 (Ex: **\<ip-address\>,31433**) and to the SQL Server big data cluster endpoint using the external-IP for the `service-security-lb` service.   That big data cluster end point is where you can interact with HDFS and submit Spark jobs through Knox.
 
 ## Sample deployment script
 

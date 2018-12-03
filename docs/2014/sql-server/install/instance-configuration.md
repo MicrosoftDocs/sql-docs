@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "2016-05-04"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "database-engine"
+ms.technology: install
 ms.topic: conceptual
 f1_keywords: 
   - "instance configuration, Setup"

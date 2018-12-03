@@ -4,7 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology:
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords: 
   - "SQL Server Agent jobs, operators"
@@ -81,13 +81,13 @@ manager: craigg
 3.  Copy and paste the following example into the query window and click **Execute**.  
   
     ```  
-    -- reports information about operator François Ajenstat   
+    -- reports information about operator Fran??ois Ajenstat   
     -- This example assumes that the operator exists.  
     USE msdb ;  
     GO  
   
     EXEC dbo.sp_help_operator  
-        @operator_name = N'François Ajenstat' ;  
+        @operator_name = N'Fran??ois Ajenstat' ;  
     GO  
     ```  
   

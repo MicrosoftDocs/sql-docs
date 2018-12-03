@@ -2,18 +2,18 @@
 title: "Quickstart: Connect and query an Azure SQL database using Azure Data Studio | Microsoft Docs"
 description: This quickstart shows how to use Azure Data Studio to connect to a SQL database and run a query
 ms.custom: "tools|sos"
-ms.date: "09/24/2018"
+ms.date: "12/03/2018"
 ms.prod: sql
 ms.technology: azure-data-studio
 ms.reviewer: "alayu; sstein"
 ms.topic: "quickstart"
-author: "yualan"
+author: "yualan", "v-pagold"
 ms.author: "alayu"
 manager: craigg
 ---
 # Quickstart: Use [!INCLUDE[name-sos](../includes/name-sos-short.md)] to connect and query Azure SQL database
 
-This quickstart demonstrates how to use [!INCLUDE[name-sos](../includes/name-sos-short.md)] to connect to an Azure SQL Database server and then use Transact-SQL (T-SQL) statements to create and query the TutorialDB database used in [!INCLUDE[name-sos](../includes/name-sos-short.md)] tutorials.
+This quickstart demonstrates how to use [!INCLUDE[name-sos](../includes/name-sos-short.md)] to connect to an Azure SQL Database server and then use Transact-SQL (T-SQL) statements to create and query the TutorialDB database, which is used in other [!INCLUDE[name-sos](../includes/name-sos-short.md)] tutorials.
 
 ## Prerequisites
 
@@ -21,7 +21,7 @@ To complete this quickstart, you need [!INCLUDE[name-sos](../includes/name-sos-s
 
 - [Install [!INCLUDE[name-sos](../includes/name-sos-short.md)]](download.md)
 
-If you don't already have an Azure SQL server, complete one of the following Azure SQL Database quickstarts (remember the fully qualified server name and sign in credentials):
+If you don't already have an Azure SQL server, complete one of the following Azure SQL Database quickstarts (remember the fully qualified server name and sign in credentials for steps in the next section):
 
 - [Create DB - Portal](https://docs.microsoft.com/azure/sql-database/sql-database-get-started-portal)
 - [Create DB - CLI](https://docs.microsoft.com/azure/sql-database/sql-database-get-started-cli)
@@ -36,11 +36,11 @@ Use [!INCLUDE[name-sos](../includes/name-sos-short.md)] to establish a connectio
    
    ![New Connection Icon](media/quickstart-sql-database/new-connection-icon.png)
 
-2. This article uses SQL Login, but Windows Authentication is also supported. Fill in the following fields using the server name, user name, and password for *your* Azure SQL server:
+2. This article uses SQL Login, but Windows Authentication is also supported. Fill in the following fields using the server name, user name, and password for your Azure SQL server:
 
    | Setting       | Suggested value | Description |
    | ------------ | ------------------ | ------------------------------------------------- | 
-   | **Server name** | The fully qualified server name | Something like: **servername.database.windows.net** |
+   | **Server name** | The fully qualified server name | Something like: **servername.database.windows.net**. |
    | **Authentication** | SQL Login| This tutorial uses SQL Authentication. |
    | **User name** | The server admin account user name | The user name from the account used to create the server. |
    | **Password (SQL Login)** | The server admin account password | The password from the account used to create the server. |
@@ -60,11 +60,11 @@ After successfully connecting, your server opens in the *SERVERS* sidebar.
 
 ## Create the tutorial database
 
-The following sections create the TutorialDB database that's used in several [!INCLUDE[name-sos](../includes/name-sos-short.md)] tutorials.
+The following sections create the TutorialDB database that's used in other [!INCLUDE[name-sos](../includes/name-sos-short.md)] tutorials.
 
-1. Right-click on your Azure SQL server in the SERVERS sidebar and select **New Query.**
+1. Right-click on your Azure SQL server in the SERVERS sidebar and select **New Query**.
 
-1. Paste the following SQL snippet into the query editor and select **Run**.
+1. Paste the following SQL snippet into the query editor.
 
    ```sql
    IF NOT EXISTS (
@@ -79,7 +79,10 @@ The following sections create the TutorialDB database that's used in several [!I
    GO
    ```
 
+   > [!NOTE]
+   > You can append this to, or overwrite, the previous query in the editor. Choosing **Run** executes the selected query. If no queries are selected, then all queries are executed.
 
+1. Select **Run**.
 
 ## Create a table
 
@@ -95,8 +98,6 @@ The query editor is still connected to the master database, but we want to creat
 
    Paste the following SQL snippet into the query editor and select **Run**.
 
-   > [!NOTE]
-   > You can append this to, or overwrite, the previous query in the editor. Choosing **Run** executes the selected query. If no queries are selected, then all queries are executed.
 
    ```sql
    -- Create a new table called 'Customers' in schema 'dbo'
@@ -118,7 +119,7 @@ The query editor is still connected to the master database, but we want to creat
 
 ## Insert rows into the table
 
-- Paste the following SQL snippet into the query editor and select **Run**.
+Paste the following SQL snippet into the query editor and select **Run**.
 
    ```sql
    -- Insert rows into table 'Customers'
@@ -134,7 +135,7 @@ The query editor is still connected to the master database, but we want to creat
 
 
 ## View the result
-* Paste the following snippet into the query editor and click **Run**:
+Paste the following snippet into the query editor and click **Run**.
 
    ```sql
    -- Select rows from table 'Customers'
@@ -148,7 +149,7 @@ The query editor is still connected to the master database, but we want to creat
 
 ## Clean up resources
 
-Subsequent quickstart articles build upon the resources created here. If you plan to work through these articles, be sure you don't delete these resources. Otherwise, in the Azure portal, delete the resources you no longer need. For details, see [Clean up resources](https://docs.microsoft.com/azure/sql-database/sql-database-get-started-portal#clean-up-resources).
+Later quickstart articles build upon the resources created here. If you plan to work through these articles, be sure not to delete these resources. Otherwise, in the Azure portal, you can delete the resources you no longer need. For details, see [Clean up resources](https://docs.microsoft.com/azure/sql-database/sql-database-get-started-portal#clean-up-resources).
 
 ## Next steps
 

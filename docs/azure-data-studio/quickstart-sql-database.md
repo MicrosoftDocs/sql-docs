@@ -56,13 +56,13 @@ Use [!INCLUDE[name-sos](../includes/name-sos-short.md)] to establish a connectio
 
    ![New firewall rule](media/quickstart-sql-database/firewall.png)  
 
-After successfully connecting, your server opens in the *SERVERS* sidebar.
+After successfully connecting, your server opens in the **SERVERS** sidebar.
 
 ## Create the tutorial database
 
 The following sections create the TutorialDB database that's used in other [!INCLUDE[name-sos](../includes/name-sos-short.md)] tutorials.
 
-1. Right-click on your Azure SQL server in the SERVERS sidebar and select **New Query**.
+1. Right-click on your Azure SQL server in the **SERVERS** sidebar and select **New Query**.
 
 1. Paste the following SQL snippet into the query editor.
 
@@ -79,9 +79,6 @@ The following sections create the TutorialDB database that's used in other [!INC
    GO
    ```
 
-   > [!NOTE]
-   > You can append this to, or overwrite, the previous query in the editor. Choosing **Run** executes the selected query. If no queries are selected, then all queries are executed.
-
 1. Select **Run**. Notifications appear in the **MESSAGES** pane showing query progress.
 
 ## Create a table
@@ -96,8 +93,7 @@ The query editor is still connected to the master database, but we want to creat
 
 1. Create a `Customers` table. 
 
-   Paste the following SQL snippet into the query editor and select **Run**.
-
+Overwrite the previous query in the query editor with this SQL snippet and select **Run**.
 
    ```sql
    -- Create a new table called 'Customers' in schema 'dbo'
@@ -119,7 +115,7 @@ The query editor is still connected to the master database, but we want to creat
 
 ## Insert rows into the table
 
-Paste the following SQL snippet into the query editor and select **Run**.
+Overwrite the previous query in the query editor with this SQL snippet and select **Run**.
 
    ```sql
    -- Insert rows into table 'Customers'
@@ -135,14 +131,14 @@ Paste the following SQL snippet into the query editor and select **Run**.
 
 
 ## View the result
-Paste the following snippet into the query editor and select **Run**.
+Overwrite the previous query in the query editor with this SQL snippet and select **Run**.
 
    ```sql
    -- Select rows from table 'Customers'
    SELECT * FROM dbo.Customers;
    ```
 
-  The query results display:
+The query results display:
 
    ![Select results](media/quickstart-sql-database/select-results2.png)
 

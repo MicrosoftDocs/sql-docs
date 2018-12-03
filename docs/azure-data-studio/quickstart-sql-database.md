@@ -7,7 +7,7 @@ ms.prod: sql
 ms.technology: azure-data-studio
 ms.reviewer: "alayu; sstein"
 ms.topic: "quickstart"
-author: "yualan; pgoldman5699"
+author: "yualan"
 ms.author: "alayu"
 manager: craigg
 ---

@@ -93,7 +93,7 @@ The query editor is still connected to the master database, but we want to creat
 
 1. Create a `Customers` table. 
 
-Overwrite the previous query in the query editor with this SQL snippet and select **Run**.
+   Overwrite the previous query in the query editor with this SQL snippet and select **Run**.
 
    ```sql
    -- Create a new table called 'Customers' in schema 'dbo'

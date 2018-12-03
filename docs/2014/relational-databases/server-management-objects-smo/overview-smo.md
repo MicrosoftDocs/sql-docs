@@ -5,8 +5,6 @@ ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
 ms.technology: 
-  - "database-engine"
-  - "docset-sql-devref"
 ms.topic: "reference"
 ms.assetid: e988f9e8-6801-41d1-8069-726f487244d5
 author: stevestein

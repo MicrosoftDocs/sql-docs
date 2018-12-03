@@ -78,7 +78,7 @@ manager: craigg
   
  More information about [!INCLUDE[hek_2](../../../includes/hek-2-md.md)] is available on:  
   
--   [Microsoft® SQL Server® 2014 Product Guide](http://www.microsoft.com/download/confirmation.aspx?id=39269)  
+-   [Microsoft?? SQL Server?? 2014 Product Guide](http://www.microsoft.com/download/confirmation.aspx?id=39269)  
   
 -   [In-Memory OLTP Blog](http://go.microsoft.com/fwlink/?LinkId=311696)  
   

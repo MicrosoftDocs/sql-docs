@@ -37,7 +37,7 @@ FOR XML AUTO, TYPE;
   
  This is the partial result:  
   
- `<Person.Person BusinessEntityID="1" FirstName="Ken" LastName="Sánchez"/>`  
+ `<Person.Person BusinessEntityID="1" FirstName="Ken" LastName="S??nchez"/>`  
   
  `<Person.Person BusinessEntityID="2" FirstName="Terri" LastName="Duffy"/>`  
   
@@ -85,7 +85,7 @@ FOR XML AUTO, TYPE).query('/Person.Person[1]');
   
  This is the result:  
   
- `<Person.Person BusinessEntityID="1" FirstName="Ken" LastName="Sánchez">`  
+ `<Person.Person BusinessEntityID="1" FirstName="Ken" LastName="S??nchez">`  
   
  `<PhoneNumbers>`  
   

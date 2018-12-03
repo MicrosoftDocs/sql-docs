@@ -4,7 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology:
+ms.technology: configuration
 ms.topic: conceptual
 f1_keywords: 
   - "SQL12.SWB.UE.UTILITY.ADMINISTRATION.F1"

@@ -127,7 +127,7 @@ SELECT 'Perimeter = ' + CAST(@g.STLength() AS NVARCHAR(10));
 Perimeter = 5.65685  
 ```  
   
- Notice that the value for the `CircularString` example is close to 2∏, which is the actual circumference of the circle.  
+ Notice that the value for the `CircularString` example is close to 2???, which is the actual circumference of the circle.  
   
 ### D. Declaring and Instantiating a Geometry Instance with a CircularString in the Same Statement  
  This snippet shows how to declare and instantiate a `geometry` instance with a `CircularString` in the same statement:  

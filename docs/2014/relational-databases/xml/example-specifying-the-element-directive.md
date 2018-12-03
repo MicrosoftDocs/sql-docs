@@ -57,7 +57,7 @@ FOR XML EXPLICIT;
   
  `<FName>Ken</FName>`  
   
- `<LName>Sánchez</LName>`  
+ `<LName>S??nchez</LName>`  
   
  `</Name>`  
   

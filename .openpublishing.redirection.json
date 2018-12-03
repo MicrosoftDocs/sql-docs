@@ -2117,6 +2117,11 @@
             "redirect_document_id": true
         },
         {
+            "source_path": "docs/analysis-services/tabular-model-scripting-language-tmsl-reference.md",
+            "redirect_url": "https://docs.microsoft.com/sql/analysis-services/tabular-model-scripting-language-tmsl-reference/",
+            "redirect_document_id": true
+        },
+        {
             "source_path": "docs/analysis-services/multidimensional-models/scripting-language-assl/xmla-concepts.md",
             "redirect_url": "/sql/analysis-services/xmla/xml-for-analysis-xmla-reference",
             "redirect_document_id": true

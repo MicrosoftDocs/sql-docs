@@ -107,7 +107,7 @@ Memory-optimized table, consisting of indexes and rows.
   
 -   Second bucket: (John, Paris), (Jane, Prague)  
   
- An end timestamp ∞ (infinity) indicates that this is the currently valid version of the row. The row has not been updated or deleted since this row version was written.  
+ An end timestamp ??? (infinity) indicates that this is the currently valid version of the row. The row has not been updated or deleted since this row version was written.  
   
  For a time greater than 200, the table contains the following rows:  
   

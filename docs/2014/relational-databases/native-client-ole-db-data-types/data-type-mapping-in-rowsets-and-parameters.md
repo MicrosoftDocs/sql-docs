@@ -62,7 +62,7 @@ manager: craigg
  The **sql_variant** objects can hold data of any [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] data type except text, ntext, image, varchar(max), nvarchar(max), varbinary(max), xml, timestamp, and Microsoft .NET Framework common language runtime (CLR) user-defined types. An instance of sql_variant data also cannot have sql_variant as its underlying base data type. For example, the column can contain **smallint** values for some rows, **float** values for other rows, and **char**/**nchar** values in the remainder.  
   
 > [!NOTE]  
->  The **sql_variant** data type is similar to the Variant data type in Microsoft Visual Basic® and the DBTYPE_VARIANT, DBTYPE_SQLVARIANT in OLEDB.  
+>  The **sql_variant** data type is similar to the Variant data type in Microsoft Visual Basic?? and the DBTYPE_VARIANT, DBTYPE_SQLVARIANT in OLEDB.  
   
  When **sql_variant** data is fetched as DBTYPE_VARIANT, it is put in a VARIANT structure in the buffer. But the subtypes in the VARIANT structure may not map to subtypes defined in the **sql_variant** data type. The **sql_variant** data must then be fetched as DBTYPE_SQLVARIANT in order for all the subtypes to match.  
   

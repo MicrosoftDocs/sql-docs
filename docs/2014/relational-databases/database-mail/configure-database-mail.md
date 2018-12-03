@@ -5,7 +5,6 @@ ms.date: "04/27/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
 ms.technology: 
-  - "database-engine"
 ms.topic: conceptual
 f1_keywords: 
   - "Sql12.swb.sqlimail.newaccount.f1"

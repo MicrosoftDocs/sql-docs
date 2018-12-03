@@ -1,7 +1,7 @@
 ---
 title: "CREATE EXTERNAL LIBRARY (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/05/2018"
+ms.date: "12/02/2018"
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: t-sql
@@ -24,11 +24,13 @@ monikerRange: ">=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linu
 
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]  
 
-Uploads R packages to a database from the specified byte stream or file path.
+Uploads R packages or compiled Java (.jar) files to a database from the specified byte stream or file path. This statement serves as a generic mechanism for the database administrator to upload artifacts needed for any new external language runtimes (R, Python, Java) and OS platforms supported by [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)]. 
 
-This statement serves as a generic mechanism for the database administrator to upload artifacts needed for any new external language runtimes (R, Python, Java, etc.) and OS platforms supported by [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)]. 
+In SQL Server 2017 and later, R language and Windows platform are supported.
 
-Currently only the R language and Windows platform are supported. Support for Python and Linux is planned for a later release.
+In SQL Server 2019 preview CTP 2.2, on Windows only, Java language is supported. For more information about uploading a jar to SQL Server, see [How to call Java in SQL Server](../../advanced-analytics/java/howto-call-java-from-sql.md).
+
+Support for Python and Linux is planned for a later release.
 
 ## Syntax
 
@@ -88,7 +90,7 @@ This option is useful if you need to create a library or alter an existing libra
 
 Specifies the platform for the content of the library. The value defaults to the host platform on which SQL Server is running. Therefore, the user doesn't have to specify the value. It is required in case where multiple platforms are supported, or the user needs to specify a different platform. 
 
-in SQL Server 2017, Windows is the only supported platform.
+Currently, Windows is the only supported platform.
 
 ## Remarks
 

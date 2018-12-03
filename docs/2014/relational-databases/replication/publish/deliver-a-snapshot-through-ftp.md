@@ -71,7 +71,7 @@ manager: craigg
   
     -   The default snapshot location for the Distributor associated with this publication.  
   
-         For more information about specifying the default snapshot location, see [Specify the Default Snapshot Location &#40;SQL Server Management Studio&#41;](../specify-the-default-snapshot-location-sql-server-management-studio.md).  
+         For more information about specifying the default snapshot location, see [Specify the Default Snapshot Location](../snapshot-options.md#snapshot-folder-locations.md).  
   
     -   An alternate snapshot folder location for this publication. An alternate location is required if the snapshot is compressed.  
   

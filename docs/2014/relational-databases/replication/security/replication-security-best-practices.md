@@ -32,7 +32,7 @@ manager: craigg
   
     -   [Replication Agent Executables Concepts](../concepts/replication-agent-executables-concepts.md)  
   
--   Run each replication agent under a different Windows account, and use Windows Authentication for all replication agent connections. For more information about specifying accounts, see [Manage Logins and Passwords in Replication](manage-logins-and-passwords-in-replication.md).  
+-   Run each replication agent under a different Windows account, and use Windows Authentication for all replication agent connections. For more information about specifying accounts, see [Manage Logins and Passwords in Replication](identity-and-access-control-replication.md#manage-logins-and-passwords-in-replication.md).  
   
 -   Grant only the required permissions to each agent. For more information, see the "Permissions Required by Agents" section of [Replication Agent Security Model](replication-agent-security-model.md).  
   

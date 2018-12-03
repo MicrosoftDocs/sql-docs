@@ -31,6 +31,6 @@ manager: craigg
   
 ## See Also  
  [Validate Data at the Subscriber](validate-data-at-the-subscriber.md)   
- [Validate Replicated Data](validate-replicated-data.md)  
+ [Validate Replicated Data](validate-data-at-the-subscriber.md)  
   
   

@@ -49,10 +49,10 @@ manager: craigg
   
 ## See Also  
  [Create a Publication](publish/create-a-publication.md)   
- [Create an Updatable Subscription to a Transactional Publication](create-updatable-subscription-transactional-publication-transact-sql.md)   
+ [Create an Updatable Subscription to a Transactional Publication](create-an-updatable-subscription-to-a-transactional-publication.md)   
  [View and Modify Distributor and Publisher Properties](view-and-modify-distributor-and-publisher-properties.md)   
  [View and Modify Publication Properties](publish/view-and-modify-publication-properties.md)   
- [Manage Logins and Passwords in Replication](security/manage-logins-and-passwords-in-replication.md)   
+ [Manage Logins and Passwords in Replication](security/identity-and-access-control-replication.md#identity-and-access-control-replication.md#manage-logins-and-passwords-in-replication.md)   
  [Publish Data and Database Objects](publish/publish-data-and-database-objects.md)   
  [Replication Agents Overview](agents/replication-agents-overview.md)  
   

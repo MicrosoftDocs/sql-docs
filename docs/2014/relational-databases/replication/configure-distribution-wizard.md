@@ -30,6 +30,6 @@ manager: craigg
 ## See Also  
  [Configure Distribution](configure-distribution.md)   
  [Configure Publishing and Distribution](configure-publishing-and-distribution.md)   
- [Properties Reference &#40;Replication&#41;](properties-reference-replication.md)  
+
   
   

@@ -22,7 +22,7 @@ manager: craigg
   
  Replication security uses authentication and authorization to control access to replicated database objects and to the computers and agents involved in replication processing. This is accomplished through three mechanisms:  
   
--   Agent security:  The replication agent security model allows fine-grained control over the accounts under which replication agents run and make connections. For detailed information about the agent security model, see [Replication Agent Security Model](replication-agent-security-model.md). For information about setting logins and passwords for agents, see [Manage Logins and Passwords in Replication](manage-logins-and-passwords-in-replication.md).  
+-   Agent security:  The replication agent security model allows fine-grained control over the accounts under which replication agents run and make connections. For detailed information about the agent security model, see [Replication Agent Security Model](replication-agent-security-model.md). For information about setting logins and passwords for agents, see [Manage Logins and Passwords in Replication](identity-and-access-control-replication.md#manage-logins-and-passwords-in-replication.md).  
   
 -   Administration roles:  Ensure that the correct server and database roles are used for replication setup, maintenance, and processing. For more information, see [Security Role Requirements for Replication](security-role-requirements-for-replication.md).  
   

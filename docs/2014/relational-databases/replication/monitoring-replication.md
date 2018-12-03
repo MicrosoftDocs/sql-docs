@@ -44,7 +44,7 @@ manager: craigg
      System Monitor can be useful for monitoring performance, providing a number of counters for replication. For more information, see [Monitoring Replication with System Monitor](monitor/monitoring-replication-with-system-monitor.md).  
   
 ## See Also  
- [Administration &#40;Replication&#41;](administration/administration-replication.md)   
+ [Replication Administration FAQ](administration/frequently-asked-questions-for-replication-administrators.md)   
  [Best Practices for Replication Administration](administration/best-practices-for-replication-administration.md)   
  [Monitor Replication](monitor/monitoring-replication-overview.md)  
   

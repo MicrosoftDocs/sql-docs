@@ -115,7 +115,7 @@ Take the following issues into consideration when validating data:
     >  When you execute [sp_publication_validation &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-publication-validation-transact-sql), [sp_article_validation &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-article-validation-transact-sql) is executed for each article in the publication. To successfully execute [sp_publication_validation &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-publication-validation-transact-sql), you must have SELECT permissions on all columns in the published base tables.  
   
 2.  (Optional) Start the Distribution Agent for each subscription if it is not already running. For more information, see [Synchronize a Pull Subscription](synchronize-a-pull-subscription.md) and [Synchronize a Push Subscription](synchronize-a-push-subscription.md).    
-3.  Check the agent output for the result of the validation. For more information, see [Validate Replicated Data](validate-replicated-data.md).  
+3.  Check the agent output for the result of the validation. For more information, see [Validate Replicated Data](validate-data-at-the-subscriber.md).  
   
 #### Single article 
   
@@ -127,7 +127,7 @@ Take the following issues into consideration when validating data:
     >  To successfully execute [sp_article_validation &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-article-validation-transact-sql), you must have SELECT permissions on all columns in the published base table.  
   
 2.  (Optional) Start the Distribution Agent for each subscription if it is not already running. For more information, see [Synchronize a Pull Subscription](synchronize-a-pull-subscription.md) and [Synchronize a Push Subscription](synchronize-a-push-subscription.md).    
-3.  Check the agent output for the result of the validation. For more information, see [Validate Replicated Data](validate-replicated-data.md).  
+3.  Check the agent output for the result of the validation. For more information, see [Validate Replicated Data](validate-data-at-the-subscriber.md).  
   
 #### Single subscriber
   

@@ -175,7 +175,7 @@ When a subscription to a merge publication is synchronized, replication checks f
     >  If the source table for an article is already published in another publication, the value of **delete_tracking** must be the same for both articles.  
   
 ## Processing Order
-  Merge replication enables you to specify the order in which articles are processed by the Merge Agent during the synchronization process. You can assign an order to each article programmatically when creating an article using replication stored procedures. Articles are processed in order from lowest to highest value. If two articles have the same value, they are processed concurrently. For more information, see [Specify the Processing Order of Merge Articles](../merge/specify-the-processing-order-of-merge-articles.md).  
+  Merge replication enables you to specify the order in which articles are processed by the Merge Agent during the synchronization process. You can assign an order to each article programmatically when creating an article using replication stored procedures. Articles are processed in order from lowest to highest value. If two articles have the same value, they are processed concurrently. For more information, see [Specify Merge Replication properties](../merge/specify-merge-replication-properties.md).  
 
   Beginning with [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], it is possible to override the default order of article processing for merge publications. This is useful, for example, if you define referential integrity through triggers and those triggers must fire in a certain order. 
 
@@ -207,7 +207,7 @@ When a subscription to a merge publication is synchronized, replication checks f
  [Optimize Merge Replication Performance with Conditional Delete Tracking](../merge/optimize-merge-replication-performance-with-conditional-delete-tracking.md)  
  [Detecting and Resolving Conflicts in Logical Records](../merge/advanced-merge-replication-conflict-resolving-in-logical-record.md)   
  [Define a Logical Record Relationship Between Merge Table Articles](define-a-logical-record-relationship-between-merge-table-articles.md)   
- [Detect and Resolve Merge Replication Conflicts](../merge/advanced-merge-replication-resolve-merge-replication-conflicts.md)   
+ [Detect and Resolve Merge Replication Conflicts](../merge/advanced-merge-replication-conflict-detection-and-resolution.md)   
  [Optimize Merge Replication Performance with Download-Only Articles](../merge/optimize-merge-replication-performance-with-download-only-articles.md)   
  [Define an Article](define-an-article.md)   
  [View and Modify Article Properties](view-and-modify-article-properties.md)  

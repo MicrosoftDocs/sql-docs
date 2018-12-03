@@ -47,9 +47,9 @@ manager: craigg
   
      Check the error details in Replication Monitor, and then restart the agent if it has stopped. The error details might provide additional information on why the agent was not running properly. If the agent is running, do not stop and restart the agent, because that can exacerbate the problem. For information about viewing agent status and error details in Replication Monitor, see the following topics:  
   
-    -   For the Snapshot Agent, Log Reader Agent, and Queue Reader Agent, see [View Information and Perform Tasks for the Agents Associated With a Publication &#40;Replication Monitor&#41;](monitor/view-information-and-perform-tasks-for-publication-agents.md).  
+    -   For the Snapshot Agent, Log Reader Agent, and Queue Reader Agent, see [View Information and Perform Tasks using Replication Monitor](monitor/view-information-and-perform-tasks-replication-monitor.md).  
   
-    -   For the Distribution Agent and Merge Agent, see [View Information and Perform Tasks for the Agents Associated With a Subscription &#40;Replication Monitor&#41;](monitor/view-information-and-perform-tasks-for-subscription-agents.md).  
+    -   For the Distribution Agent and Merge Agent, see [View Information and Perform Tasks using Replication Monitor](monitor/view-information-and-perform-tasks-replication-monitor.md).  
   
 -   If this error is raised frequently because the agent is busy:  
   

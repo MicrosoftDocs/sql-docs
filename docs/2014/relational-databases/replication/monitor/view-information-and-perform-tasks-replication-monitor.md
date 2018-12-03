@@ -48,9 +48,9 @@ Replication monitor provides a number of tabs and options to view information an
 2.  To view and modify publication properties, right-click the publication, and then click **Properties**.    
 3.  To view information about subscriptions, click the **All Subscriptions** tab.  
   
-     To view and modify subscription properties, right-click the subscription, and then click **Properties**. You can also access more detailed information and perform tasks on this tab. For more information, see [View Information and Perform Tasks for the Agents Associated With a Subscription &#40;Replication Monitor&#41;](view-information-and-perform-tasks-for-subscription-agents.md).  
+     To view and modify subscription properties, right-click the subscription, and then click **Properties**. You can also access more detailed information and perform tasks on this tab. For more information, see [View Information and Perform Tasks using Replication Monitor](view-information-and-perform-tasks-replication-monitor.md).  
   
-4.  To view information about agents, click the **Agents** tab. You can also access more detailed information and perform tasks on this tab. For more information, see [View Information and Perform Tasks for the Agents Associated With a Publication &#40;Replication Monitor&#41;](view-information-and-perform-tasks-for-publication-agents.md).    
+4.  To view information about agents, click the **Agents** tab. You can also access more detailed information and perform tasks on this tab. For more information, see [View Information and Perform Tasks using Replication Monitor](view-information-and-perform-tasks-replication-monitor.md).    
 5.  To view information about agent warnings and thresholds, click the **Warnings** tab. For more information, see [Set Thresholds and Warnings in Replication Monitor](set-thresholds-and-warnings-in-replication-monitor.md).   
 6.  To view information about tracer tokens, click the **Tracer Tokens** tab. For more information about how to use tracer tokens, see [Measure Latency and Validate Connections for Transactional Replication](measure-latency-and-validate-connections-for-transactional-replication.md).  
   
@@ -95,18 +95,18 @@ Replication monitor provides a number of tabs and options to view information an
   
 1.  Expand a Publisher group in the left pane, expand a Publisher, and then click a publication.   
 2.  To view information about subscriptions, click the **All Subscriptions** tab. To view only those subscriptions in a given state, such as synchronizing, select an option from the **Show** drop-down list.   
-3.  To view and modify subscription properties, right-click the subscription, and then click **Properties**. You can also access more detailed information and perform tasks on this tab. For more information, see [View Information and Perform Tasks for the Agents Associated With a Subscription &#40;Replication Monitor&#41;](view-information-and-perform-tasks-for-subscription-agents.md).  
+3.  To view and modify subscription properties, right-click the subscription, and then click **Properties**. You can also access more detailed information and perform tasks on this tab. For more information, see [View Information and Perform Tasks using Replication Monitor](view-information-and-perform-tasks-replication-monitor.md).  
   
 ### Subscription Watch List tab  
   
 1.  Expand a Publisher group in the left pane, and then click a Publisher.   
 2.  To view information about subscriptions, click the **Subscription Watch List** tab.  
 3.  Select the type of subscription to display from the **Show \<SubscriptionType> Subscriptions** drop-down list. To view only those subscriptions in a given state, such as synchronizing, select an option from the **Show** drop-down list.    
-4.  To view and modify subscription properties, right-click the subscription, and then click **Properties**. You can also access more detailed information and perform tasks on this tab. For more information, see [View Information and Perform Tasks for the Agents Associated With a Subscription &#40;Replication Monitor&#41;](view-information-and-perform-tasks-for-subscription-agents.md).  
+4.  To view and modify subscription properties, right-click the subscription, and then click **Properties**. You can also access more detailed information and perform tasks on this tab. For more information, see [View Information and Perform Tasks using Replication Monitor](view-information-and-perform-tasks-replication-monitor.md).  
 
 ## For Publication Agents
 
-  Replication Monitor provides the **Agents** tab, which includes information about the agents associated with the selected publication. The Distribution Agent and Merge Agent are associated with subscriptions; for more information, see [View Information and Perform Tasks for the Agents Associated With a Subscription &#40;Replication Monitor&#41;](view-information-and-perform-tasks-for-subscription-agents.md).  
+  Replication Monitor provides the **Agents** tab, which includes information about the agents associated with the selected publication. The Distribution Agent and Merge Agent are associated with subscriptions; for more information, see [View Information and Perform Tasks using Replication Monitor](view-information-and-perform-tasks-replication-monitor.md).  
   
  This tab displays information about the following agents:    
 -   The Snapshot Agent, which is used by all publications.    

@@ -37,7 +37,7 @@ manager: craigg
  [Subscribe to Publications](../subscribe-to-publications.md)  
  Topics in this section show how to use RMO to create, delete, and modify subscriptions.  
   
- [Secure a Replication Topology](../security/secure-a-replication-topology.md)  
+ [Secure a Replication Topology](../security/view-and-modify-replication-security-settings.md)  
  Topics in this section show how to use RMO to view and modify security settings.  
   
  [Synchronize Subscriptions &#40;Replication&#41;](../synchronize-subscriptions-replication.md)  

@@ -188,13 +188,13 @@ manager: craigg
  **Location of snapshot files**  
  Select the location to store snapshot files. They can be stored in the default location; they can also be stored in an alternate location instead of, or in addition to, the default location. Files stored in an alternate location can be compressed.  
   
--   Select **Put files in the default folder** to use the default snapshot folder for the Publisher. The snapshot folder location is read-only in this dialog box, because it can only be changed for the Publisher in the **Distributor Properties** dialog box. For more information, see [Specify the Default Snapshot Location &#40;SQL Server Management Studio&#41;](specify-the-default-snapshot-location-sql-server-management-studio.md).   
+-   Select **Put files in the default folder** to use the default snapshot folder for the Publisher. The snapshot folder location is read-only in this dialog box, because it can only be changed for the Publisher in the **Distributor Properties** dialog box. For more information, see [Specify the Default Snapshot Location](snapshot-options.md#snapshot-folder-locations.md).   
 -   Select **Put files in the following folder** to specify an alternate location instead of, or in addition to, the default location. Enter a path in the text box or click **Browse** and navigate to a location. Select **Compress snapshot files in this folder** to compress the files in the alternate snapshot location. The alternate location can be on another server, on a network drive, or on removable media such as a CD-ROM or removable disk. For more information, see [Alternate Snapshot Folder Locations](alternate-snapshot-folder-locations.md) and [Compressed Snapshots](compressed-snapshots.md).  
   
  **Run additional scripts**  
  Specify scripts to be executed before and after the snapshot is applied at the Subscriber. Scripts cannot be specified if **Snapshot format** is **Character**.  
   
- Scripts are optional, but they provide a convenient way to execute commands and apply administrative changes at Subscribers. For more information about executing scripts, see [Execute Scripts Before and After the Snapshot Is Applied](execute-scripts-before-and-after-the-snapshot-is-applied.md).  
+ Scripts are optional, but they provide a convenient way to execute commands and apply administrative changes at Subscribers. For more information about executing scripts, see [Execute Scripts Before and After the Snapshot Is Applied](snapshot-options.md#snapshot-options.md#execute-scripts-before-and-after-snapshot-is-applied.md).  
   
 -   Enter a path in the **Before applying the snapshot, execute this script** text box or click **Browse** to specify a location for the script.   
 -   Enter a path in the **After applying the snapshot, execute this script** text box or click **Browse** to specify a location for the script.  
@@ -205,7 +205,6 @@ manager: craigg
  [Create a Publication](publish/create-a-publication.md)   
  [View and Modify Publication Properties](publish/view-and-modify-publication-properties.md)   
  [Publish Data and Database Objects](publish/publish-data-and-database-objects.md)   
- [Properties Reference &#40;Replication&#41;](properties-reference-replication.md)  
  [Replication Security Best Practices](security/replication-security-best-practices.md)   
  [Security and Protection &#40;Replication&#41;](security/security-and-protection-replication.md)  
  [Initialize a Subscription with a Snapshot](initialize-a-subscription-with-a-snapshot.md)   

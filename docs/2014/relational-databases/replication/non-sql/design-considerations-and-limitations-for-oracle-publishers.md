@@ -130,7 +130,7 @@ manager: craigg
   
 -   Subscribers to Oracle publications cannot be automatically initialized from a backup.  
   
--   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] supports two types of validation: binary and rowcount. Oracle Publishers support rowcount validation. For more information, see [Validate Replicated Data](../validate-replicated-data.md).  
+-   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] supports two types of validation: binary and rowcount. Oracle Publishers support rowcount validation. For more information, see [Validate Replicated Data](../validate-data-at-the-subscriber.md).  
   
 -   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] offers two snapshot formats: native bcp-mode and character-mode. Oracle Publishers support character mode snapshots.  
   

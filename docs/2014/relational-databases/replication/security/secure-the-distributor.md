@@ -18,7 +18,7 @@ manager: craigg
 # Secure the Distributor
   The following replication agents connect to the Distributor: the Log Reader Agent, Snapshot Agent, Queue Reader Agent, Distribution Agent, and Merge Agent. It is important to provide an appropriate login for each of these agents while following the principle of granting the minimal rights necessary and also protecting the storage of all passwords:  
   
--   For information about managing logins and passwords, see [Manage Logins and Passwords in Replication](manage-logins-and-passwords-in-replication.md).  
+-   For information about managing logins and passwords, see [Manage Logins and Passwords in Replication](identity-and-access-control-replication.md#manage-logins-and-passwords-in-replication.md).  
   
 -   For detailed information about the permissions required for each agent, see [Replication Agent Security Model](replication-agent-security-model.md).  
   

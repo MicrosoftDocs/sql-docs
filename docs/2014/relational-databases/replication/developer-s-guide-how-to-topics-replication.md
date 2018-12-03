@@ -112,7 +112,7 @@ manager: craigg
   
 -   [Specify Synchronization Schedules](specify-synchronization-schedules.md)  
   
--   [Create an Updatable Subscription to a Transactional Publication](create-updatable-subscription-transactional-publication-transact-sql.md)  
+-   [Create an Updatable Subscription to a Transactional Publication](create-an-updatable-subscription-to-a-transactional-publication.md)  
   
 -   [Create a Subscription for a Non-SQL Server Subscriber](create-a-subscription-for-a-non-sql-server-subscriber.md)  
   

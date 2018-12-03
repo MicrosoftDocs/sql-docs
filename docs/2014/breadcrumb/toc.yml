@@ -290,7 +290,7 @@
           items:
           - name: Administration
             tocHref: /sql/relational-databases/replication/administration/
-            topicHref: /sql/relational-databases/replication/administration/administration-replication
+            topicHref: /sql/relational-databases/replication/administration/frequently-asked-questions-for-replication-administrators
           - name: Agents
             tocHref: /sql/relational-databases/replication/agents/
             topicHref: /sql/relational-databases/replication/agents/replication-agents

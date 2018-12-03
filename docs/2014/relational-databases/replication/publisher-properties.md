@@ -44,6 +44,6 @@ manager: craigg
 
 ## See Also  
  [View and Modify Distributor and Publisher Properties](view-and-modify-distributor-and-publisher-properties.md)   
- [Properties Reference &#40;Replication&#41;](properties-reference-replication.md)  
+
   
   

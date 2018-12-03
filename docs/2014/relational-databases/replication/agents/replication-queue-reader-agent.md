@@ -4,7 +4,8 @@ ms.custom: ""
 ms.date: "10/29/2018"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: replication
+ms.technology: 
+  - "replication"
 ms.topic: conceptual
 helpviewer_keywords: 
   - "agents [SQL Server replication], Queue Reader Agent"

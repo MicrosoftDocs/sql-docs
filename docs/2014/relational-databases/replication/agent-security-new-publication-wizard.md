@@ -4,7 +4,8 @@ ms.custom: ""
 ms.date: "04/27/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: replication
+ms.technology: 
+  - "replication"
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.rep.agentsecurity.articles.f1"

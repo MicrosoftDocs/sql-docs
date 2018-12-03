@@ -4,7 +4,8 @@ ms.custom: ""
 ms.date: "03/08/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: replication
+ms.technology: 
+  - "replication"
 ms.topic: conceptual
 helpviewer_keywords: 
   - "security [SQL Server replication], best practices"

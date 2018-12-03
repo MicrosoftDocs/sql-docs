@@ -4,7 +4,8 @@ ms.custom: ""
 ms.date: "29/10/2018"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: replication
+ms.technology: 
+  - "replication"
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Distribution Agent, executables"

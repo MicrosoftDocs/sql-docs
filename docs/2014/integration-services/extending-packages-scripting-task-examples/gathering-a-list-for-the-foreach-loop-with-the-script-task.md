@@ -4,9 +4,7 @@ ms.custom: ""
 ms.date: "08/22/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "docset-sql-devref"
-  - "integration-services"
+ms.technology: integration-services
 ms.topic: "reference"
 helpviewer_keywords: 
   - "Foreach Loop containers"

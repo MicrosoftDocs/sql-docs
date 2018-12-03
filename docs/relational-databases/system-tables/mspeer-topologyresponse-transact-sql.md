@@ -5,8 +5,7 @@ ms.date: "03/03/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
-ms.technology: 
-  - "replication"
+ms.technology: replication
 ms.topic: "language-reference"
 f1_keywords: 
   - "MSpeer_topologyresponse"

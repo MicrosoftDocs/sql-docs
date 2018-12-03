@@ -6,7 +6,7 @@ ms.prod: sql-server-2014
 ms.prod_service: "integration-services"
 ms.reviewer: ""
 ms.custom: ""
-ms.technology: "integration-services"
+ms.technology: integration-services
 ms.topic: conceptual
 author: douglaslMS
 ms.author: douglasl

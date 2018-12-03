@@ -4,9 +4,7 @@ ms.custom: ""
 ms.date: "03/07/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "database-engine"
-  - "docset-sql-devref"
+ms.technology: xml
 ms.topic: "reference"
 helpviewer_keywords: 
   - "nontransacted XML Bulk Load operations"

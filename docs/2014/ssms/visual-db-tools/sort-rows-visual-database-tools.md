@@ -4,7 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology:
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords: 
   - "sorting rows [SQL Server]"
@@ -83,7 +83,7 @@ manager: craigg
   
      Notice that the query uses `state` as a secondary sort column. Thus, if two states have the same number of authors, those states will appear in alphabetical order.  
   
--   **You can sort using international data** That is; you can sort a column using collating conventions that differ from the default conventions for that column. For example, you can write a query that retrieves all the book titles by Jaime Patiño. To display the titles in alphabetical order, you use a Spanish collating sequence for the title column. The resulting SQL might look like this:  
+-   **You can sort using international data** That is; you can sort a column using collating conventions that differ from the default conventions for that column. For example, you can write a query that retrieves all the book titles by Jaime Pati??o. To display the titles in alphabetical order, you use a Spanish collating sequence for the title column. The resulting SQL might look like this:  
   
     ```  
     SELECT title  
@@ -99,7 +99,7 @@ manager: craigg
                 =  titles.title_id   
     WHERE   
          au_fname = 'Jaime' AND   
-         au_lname = 'Patiño'  
+         au_lname = 'Pati??o'  
     ORDER BY   
          title COLLATE SQL_Spanish_Pref_CP1_CI_AS  
     ```  

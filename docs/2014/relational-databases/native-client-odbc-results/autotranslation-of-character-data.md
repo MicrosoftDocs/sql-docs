@@ -26,7 +26,7 @@ manager: craigg
 # Autotranslation of Character Data
   Character data, such as ANSI character variables declared with SQL_C_CHAR or data stored in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] using the **char**, **varchar**, or **text** data types, can represent only a limited number of characters. Character data stored using one byte per character can only represent 256 characters. The values stored in SQL_C_CHAR variables are interpreted using the ANSI code page (ACP) of the client computer. The values stored using **char**, **varchar**, or **text** data types on the server are evaluated using the ACP of the server.  
   
- If both the server and the client have the same ACP, then they have no problems in interpreting the values stored in SQL_C_CHAR, **char**, **varchar**, or **text** objects. If the server and client have different ACPs, then SQL_C_CHAR data from the client may be interpreted as a different character on the server if it is used in **char**, **varchar**, or **text** columns, variables, or parameters. For example, a character byte containing the value 0xA5 is interpreted as the character Ñ on a computer using code page 437 and is interpreted as the yen sign (¥) on a computer running code page 1252.  
+ If both the server and the client have the same ACP, then they have no problems in interpreting the values stored in SQL_C_CHAR, **char**, **varchar**, or **text** objects. If the server and client have different ACPs, then SQL_C_CHAR data from the client may be interpreted as a different character on the server if it is used in **char**, **varchar**, or **text** columns, variables, or parameters. For example, a character byte containing the value 0xA5 is interpreted as the character ?? on a computer using code page 437 and is interpreted as the yen sign (??) on a computer running code page 1252.  
   
  Unicode data is stored using two bytes per character. All extended characters are covered by the Unicode specification, so all Unicode characters are interpreted the same by all computers.  
   
@@ -42,7 +42,7 @@ manager: craigg
   
  Because all of these conversions are done by the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC driver executing on the client, the server ACP must be one of the code pages installed on the client computer.  
   
- Making the character conversions through Unicode ensures the proper conversion of all characters that exist in both code pages. If a character exists in one code page but not another, however, then the character cannot be represented in the target code page. For example, code page 1252 has the registered trademark symbol (®), while code page 437 does not.  
+ Making the character conversions through Unicode ensures the proper conversion of all characters that exist in both code pages. If a character exists in one code page but not another, however, then the character cannot be represented in the target code page. For example, code page 1252 has the registered trademark symbol (??), while code page 437 does not.  
   
  The AutoTranslate setting has no effect on these conversions:  
   

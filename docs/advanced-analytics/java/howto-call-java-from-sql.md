@@ -4,7 +4,7 @@ description: Learn how to call Java classes from SQL Server stored procedures us
 ms.prod: sql
 ms.technology: machine-learning
 
-ms.date: 09/24/2018  
+ms.date: 12/02/2018  
 ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
@@ -12,13 +12,20 @@ manager: cgronlun
 monikerRange: ">=sql-server-ver15||=sqlallproducts-allversions"
 ---
 
-# How to call Java from SQL Server 2019
+# How to call Java from SQL Server 2019 preview
+
+CTP 2.2 introduces an additional approach for calling Java from SQL Server 2019 preview. Depending on your operating system, you can adopt the following approaches:
+
+* Use the existing approach, **sp_execute_external_script**, for SQL Server on Windows or Linux.
+* Currently Windows-only in this CTP: [upload compiled Java code to an external library](#create-external-library). 
+
+## Use a system stored procedure (sp_execute_external_script)
 
 When using the [Java language extension](extension-java.md), the [sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql) system stored procedure is the interface used to call the Java runtime. Permissions on the database apply to Java code execution.
 
 This article explains implementation details for Java classes and methods that execute on SQL Server. Once you are familiar with these details, review the [Java sample](java-first-sample.md) as your next step.
 
-## Basic principles
+### Basic principles
 
 * Compiled custom Java classes must exist in .class files or .jar files in your Java classpath. The [CLASSPATH parameter](#set-classpath) provides the path to the compiled Java files. 
 
@@ -29,15 +36,15 @@ This article explains implementation details for Java classes and methods that e
 * "params" is used to pass parameters to a Java class. Calling a method that requires arguments is not supported, which makes parameters the only way to pass argument values to your method. 
 
 > [!Note]
-> This note restates supported and unsupported operations specific to Java in CTP 2.0.
+> This note restates supported and unsupported operations specific to Java in CTP 2.x.
 > * On the stored procedure, input parameters are supported. Output parameters are not.
 > * Streaming using the sp_execute_external_script parameter **@r_rowsPerRead** is not supported.
 > * Partitioning using **@input_data_1_partition_by_columns** is not supported.
 > * Parallel processing using **@parallel=1** is supported.
 
-## Call sp_execute_external_script
+### Call sp_execute_external_script
 
-The [sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql) system stored procedure is the interface used to call the Java runtime. The following example shows an sp_execute_external_script using the Java extension, and parameters for specifying path, script, and your custom code.
+Applicable to both Windows and Linux, the [sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql) system stored procedure is the interface used to call the Java runtime. The following example shows an sp_execute_external_script using the Java extension, and parameters for specifying path, script, and your custom code.
 
 ```sql
 DECLARE @myClassPath nvarchar(30)
@@ -57,7 +64,7 @@ EXEC sp_execute_external_script
 
 <a name="set-classpath"></a>
 
-## Set CLASSPATH
+### Set CLASSPATH
 
 Once you have compiled your Java class or classes and placed the .class file(s) or .jar files in your Java classpath, you have two options for providing the classpath to the SQL Server Java extension:
 
@@ -72,27 +79,27 @@ One approach for specifying a path to compiled code is by setting CLASSPATH as a
 
 Just as you created a system variable for the JDK executables, you can create a system variable for code paths. To do this, created a system environment variable called "CLASSPATH"
 
-## Class requirements
+### Class requirements
 
 In order for SQL Server to communicate with the Java runtime, you need to implement specific static variables in your class. SQL Server can then execute a method in the Java class and exchange data using the Java language extension.
 
 > [!Note]
 > Expect the implementation details to change in upcoming CTPs as we work to improve the experience for developers.
 
-## Method requirements
+### Method requirements
 To pass arguments, use the **@param** parameter in sp_execute_external_script. The method itself cannot have any arguments. The return type must be void.  
 
 ```java
 public static void test()  {}
 ```
 
-## Data inputs 
+### Data inputs 
 
 This section explains how to push data to Java from a SQL Server query using **InputDataSet** in sp_execute_external_script.
 
 For every input column your SQL query pushes to Java, you need to declare an array.
 
-### inputDataCol
+#### inputDataCol
 
 In the current version of the Java extension, the **inputDataColN** variable is required, where *N* is the column number. 
 
@@ -106,7 +113,7 @@ Example: `public static int[] inputDataCol1 = new int[1];`
 
 These array variables will be populated with input data from a SQL server query before execution of the Java program you are calling.
 
-### inputNullMap
+#### inputNullMap
 
 Null map is used by the extension to know which values are null. This variable will be populated with information about null values by SQL Server before execution of the user function.
 
@@ -116,14 +123,14 @@ The user only needs to initialize this variable (and the size of the array needs
 public static boolean[][] inputNullMap = new boolean[1][1];
 ```
 
-## Data outputs 
+### Data outputs 
 
 This section describes **OutputDataSet**, the output data sets returned from Java, which you can send to and persist in SQL Server.
 
 > [!Note]
 > Output parameters in [sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql) are not supported in this version.
 
-### outputDataColN
+#### outputDataColN
 
 Similar to **inputDataSet**, for every output column your Java program sends back to SQL Server, you must declare an array variable. All **outputDataCol** arrays should have the same length. You need to make sure this is initialized by the time the class execution finishes.
 
@@ -131,7 +138,7 @@ Similar to **inputDataSet**, for every output column your Java program sends bac
 public static <type>[] outputDataColN = new <type>[]
 ```
 
-### numberofOutputCols
+#### numberofOutputCols
 
 Set this variable to the number of output data columns you expect to have when the user function finishes execution.
 
@@ -139,7 +146,7 @@ Set this variable to the number of output data columns you expect to have when t
 public static short numberofOutputCols = <expected number of output columns>;
 ```
 
-### outputNullMap
+#### outputNullMap
 
 Null map is used by the extension to indicate which values are null. We require this since primitive types don't support null. Currently, we also require the null map for String types, even though Strings can be null. Null values are indicated by "true".
 
@@ -148,6 +155,31 @@ This NullMap must be populated with the expected number of columns and rows you 
 ```java
 public static boolean[][] outputNullMap
 ```
+<a name="create-external-library"></a>
+
+## Use DDL (CREATE EXTERNAL LIBRARY)
+
+In CTP 2.2 on Windows only, you can create an external library for compiled Java code in a jar, uploaded along with any dependencies into a database. Use the [CREATE EXTERNAL LIBRARY (Transact-SQL)](../../t-sql/statements/create-external-library-transact-sql.md) statement to upload your code:
+
+```sql
+CREATE EXTERNAL LIBRARY myJar
+FROM (CONTENT = '<local path to .jar file>') 
+WITH (LANGUAGE = 'Java'); 
+GO
+```
+
+Using an external library eliminates the classpath requirement, as well as the necessity of setting permissions on each folder in the path. You can simply call the Java class, and SQL Server will automatically have access to your classes in the library. 
+
+```sql
+EXEC sp_execute_external_script
+  @language = N'Java'
+, @script = N'MyPackage.MyCLass.myMethod'
+, @input_data_1 = N'SELECT * FROM MYTABLE'
+with result sets ((column1 int))
+```
+
+> [!Note]
+> Jar files are recommended over individual .class files. It's common practice in Java, which makes the overall experience easier.
 
 ## Next steps
 

@@ -138,4 +138,4 @@ kubectl get nodes
 
 The steps in this article configured a Kubernetes cluster on multiple Ubuntu machines. The next step is to deploy SQL Server 2019 big data cluster. For instructions, see the following article:
 
-[Deploy SQL Server 2019 CTP 2.1 on Kubernetes](deployment-guidance.md#deploy)
+[Deploy SQL Server 2019 CTP 2.2 on Kubernetes](deployment-guidance.md#deploy)

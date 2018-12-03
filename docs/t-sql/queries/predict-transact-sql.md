@@ -1,7 +1,7 @@
 ---
 title: "PREDICT (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "11/06/2018"
+ms.date: "12/03/2018"
 ms.prod: sql
 ms.prod_service: "sql-database"
 ms.reviewer: ""
@@ -109,10 +109,10 @@ This example calls an existing logistic regression model stored in table [models
 
 ```sql
 DECLARE @logit_model varbinary(max) = "SELECT TOP 1 [model_binary] from [models_table] ORDER BY [trained_date] DESC";
-DECLARE @input_qry = "SELECT ID, [Gender], [Income] from NewCustomers";
+DECLARE @input_qry nvarchar(100) = "SELECT ID, [Gender], [Income] from NewCustomers";
 
 SELECT PREDICT [class]
-FROM PREDICT( MODEL = @logit_model,  DATA = @input_qry)
+FROM PREDICT(MODEL = @logit_model,  DATA = @input_qry)
 WITH (class string);
 ```
 

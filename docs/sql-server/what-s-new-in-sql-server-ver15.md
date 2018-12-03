@@ -26,8 +26,7 @@ monikerRange: ">=sql-server-ver15||=sqlallproducts-allversions"
 Community technology preview (CTP) 2.2 is the latest public release of [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]. The following features are added or enhanced for [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] CTP 2.2.
 
 - [Big data clusters](#bigdatacluster)
-  - Use SparkR with Big data cluster
-  - Access SparkR kernel with Azure Data Studio
+  - Use SparkR from Azure Data Studio on a big data cluster
 
 - [Database engine](#databaseengine)
   - Use UTF-8 character encoding with SQL Server Replication.
@@ -98,6 +97,7 @@ Continue reading for more details about these features.
 
 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] [Big data clusters](../big-data-cluster/big-data-cluster-overview.md) enables new scenarios including the following:
 
+- Use SparkR from Azure Data Studio on a big data cluster. (CTP 2.2)
 - [Deploy Python and R apps](../big-data-cluster/big-data-cluster-create-apps.md). (CTP 2.1)
 - Deploy a Big Data cluster with [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] and Spark Linux containers on Kubernetes (CTP 2.0)
 - Access your big data from HDFS (CTP 2.0)

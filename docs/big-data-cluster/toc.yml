@@ -48,7 +48,7 @@
       href: deploy-on-aks.md
     - name: Deploy with Kubeadm
       href: deploy-with-kubeadm.md
-    - name: Connect with Azure Data Studio
+    - name: Install big data tools
       href: deploy-big-data-tools.md
   - name: Data virtualization
     items:

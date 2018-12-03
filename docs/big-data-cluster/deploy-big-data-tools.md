@@ -1,62 +1,74 @@
 ---
-title: Connect to a SQL Server big data cluster with Azure Data Studio | Microsoft Docs
+title: Install SQL Server 2019 big data tools | Microsoft Docs
 description: Learn how to connect to a SQL Server 2019 big data cluster with Azure Data Studio.
 author: rothja 
 ms.author: jroth 
 manager: craigg
-ms.date: 10/05/2018
+ms.date: 12/03/2018
 ms.topic: conceptual
 ms.prod: sql
 ---
 
-# Connect to a SQL Server big data cluster with Azure Data Studio
+# Install SQL Server 2019 big data tools
 
-This article describes how to install Azure Data Studio, the SQL Server 2019 extension (preview), and then connect to a big data cluster. The new SQL Server 2019 extension includes preview support for [SQL Server 2019 big data clusters](big-data-cluster-overview.md), an integrated [notebook experience](notebooks-guidance.md), and a PolyBase [Create External Table wizard](../relational-databases/polybase/data-virtualization.md?toc=%2fsql%2fbig-data-cluster%2ftoc.json).
+This article describes the client tools that should be installed for creating and managing SQL Server 2019 big data clusters (preview).
 
 [!INCLUDE [Limited public preview note](../includes/big-data-cluster-preview-note.md)]
 
-## Install Azure Data Studio
+## Big data cluster tools
 
-To install Azure Data Studio, see [Download and install the latest version of Azure Data Studio](../azure-data-studio/download.md).
+To manage big data clusters, install the following client tools:
 
-## Install the SQL Server 2019 extension (preview)
+| Tool | Installation |
+|---|---|
+| Azure Data Studio | [Install](../azure-data-studio/download.md) |
+| SQL Server 2019 extension (preview) | [Install](../azure-data-studio/sql-server-2019-extension.md) |
+| kubectl | [Install](https://kubernetes.io/docs/tasks/tools/install-kubectl/#install-kubectl) |
+| sqlcmd | [Windows](https://www.microsoft.com/download/details.aspx?id=36433) \| [Linux](../linux/sql-server-linux-setup-tools.md) |
+| curl | [Windows](https://curl.haxx.se/windows/) \| Linux: install curl package |
 
-To install the extension, see [Install the SQL Server 2019 extension (preview)](../azure-data-studio/sql-server-2019-extension.md).
+> [!TIP]
+> **sqlcmd** and **curl** are required for some scripts and tutorials, but they are not a prerequisite for installing and using big data clusters.
 
-## Connect to the cluster
+## <a id="mssqlctl"></a> Install mssqlctl
 
-When you connect to a big data cluster, you have the option to connect to the SQL Server [master instance](concept-master-instance.md) or to the HDFS/Spark gateway. The following sections show how to connect to each.
+**mssqlctl** is a command-line utility written in Python that enables cluster administrators to bootstrap and manage the big data cluster via REST APIs. The minimum Python version required is v3.5. You must also have `pip` that is used to download and install **mssqlctl** tool. The instructions below provide examples for Windows and Ubuntu. For installing Python on other platforms, see the [Python documentation](https://wiki.python.org/moin/BeginnersGuide/Download).
 
-## <a id="master"></a> Master instance
+> [!IMPORTANT]
+> If you installed a previous release, you must delete the cluster *before* upgrading **mssqlctl** and installing the new release. For more information, see [Upgrading to a new release](deployment-guidance.md#upgrade).
 
-1. In Azure Data Studio, press **F1** > **New Connection**.
+### Windows mssqlctl installation
 
-1. In **Connection type**, select **Microsoft SQL Server**.
+1. On a Windows client, download the necessary Python package from [https://www.python.org/downloads/](https://www.python.org/downloads/). For python3.5.3 and later, pip3 is also installed when you install Python. 
 
-1. Type the IP address of the SQL Server master instance in **Server name** (for example: **\<IP Address\>,31433**).
+   > [!TIP] 
+   > When installing Python3, select to add Python to your path. If you do not, you can later find where pip3 is located and manually add it to your path.
 
-1. Enter a SQL login **User name** and **Password**.
+1. Install **mssqlctl** with the following command:
 
-1. Change the **Database name** to the **high_value_data** database.
+   ```bash
+   pip3 install --extra-index-url https://private-repo.microsoft.com/python/ctp-2.1 mssqlctl
+   ```
 
-   ![Connect to the master instance](./media/deploy-big-data-tools/connect-to-cluster.png)
+### Linux mssqlctl installation
 
-1. Press **Connect**, and the **Server Dashboard** should appear.
+On Linux, you must install the **python3** and **python3-pip** packages and then upgrade pip. This installs the latest 3.5 version of Python and pip. The following example shows how these commands would work for Ubuntu (for other Linux platforms, see the [Python documentation](https://wiki.python.org/moin/BeginnersGuide/Download).
 
-## <a id="hdfs"></a> HDFS/Spark gateway
+1. Install the necessary Python packages:
 
-1. In Azure Data Studio, press **F1** > **New Connection**.
+   ```bash
+   sudo apt-get update && /
+   sudo apt-get install -y python3 && /
+   sudo apt-get install -y python3-pip && /
+   sudo -H pip3 install --upgrade pip
+   ```
 
-1. In **Connection type**, select **SQL Server big data cluster**.
+1. Install **mssqlctl** with the following command:
 
-1. Type the IP address of the big data cluster in **Server name**.
-
-1. Enter `root` for the **User** and specify the **Password** to your big data cluster.
-
-   ![Connect to HDFS/Spark gateway](./media/deploy-big-data-tools/connect-to-cluster-hdfs-spark.png)
-
-1. Press **Connect**, and the **Server Dashboard** should appear.
+   ```bash
+   pip3 install --extra-index-url https://private-repo.microsoft.com/python/ctp-2.1 mssqlctl
+   ```
 
 ## Next steps
 
-To run notebooks in Azure Data Studio, see [How to use notebooks in SQL Server 2019 preview](notebooks-guidance.md).
+For more information about big data clusters, see [What are SQL Server 2019 big data clusters?](big-data-cluster-overview.md).

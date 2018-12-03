@@ -1,7 +1,7 @@
 ---
 title: "ALTER USER (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "05/05/2017"
+ms.date: "12/03/2018"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
@@ -37,7 +37,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 ## Syntax  
   
 ```  
--- Syntax for SQL Server  
+-- Syntax for SQL Server and Azure SQL Database
   
 ALTER USER userName    
      WITH <set_item> [ ,...n ]  
@@ -50,9 +50,14 @@ ALTER USER userName
     | PASSWORD = 'password' [ OLD_PASSWORD = 'oldpassword' ]  
     | DEFAULT_LANGUAGE = { NONE | <lcid> | <language name> | <language alias> }  
     | ALLOW_ENCRYPTED_VALUE_MODIFICATIONS = [ ON | OFF ]  
-```  
-  
-```  
+```
+
+> [!IMPORTANT]
+> Azure AD logins for SQL Database Managed Instance is in **public preview**. Only the following options are supported for Azure SQL Database Managed Instance when applying to users with Azure AD logins:
+> `DEFAULT_SCHEMA = { schemaName | NULL }` and
+> `DEFAULT_LANGUAGE = { NONE | lcid | language name | language alias }`
+
+```
 -- Syntax for Azure SQL Database  
   
 ALTER USER userName    

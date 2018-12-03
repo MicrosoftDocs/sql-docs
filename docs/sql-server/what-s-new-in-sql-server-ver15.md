@@ -115,6 +115,8 @@ Continue reading for more details about these features.
 
 On Windows, you can save .jar files as external libraries in the database. Call these libraries when executing Java code from SQL Server.
 
+For more information, see [How to call Java in SQL Server](../advanced-analytics/java/howto-call-java-from-sql.md)
+
 ### Scalar UDF inlining (CTP 2.1)
 
 Scalar UDF inlining automatically transforms scalar user-defined functions (UDF) into relational expressions and embeds them in the calling SQL query, thereby improving the performance of workloads that leverage scalar UDFs. Scalar UDF inlining facilitates cost-based optimization of operations inside UDFs, and results in efficient plans that are set-oriented and parallel as opposed to inefficient, iterative, serial execution plans. This feature is enabled by default under database compatibility level 150.

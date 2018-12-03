@@ -41,7 +41,7 @@ manager: craigg
 ## See Also  
  [Replication Agent Security Model](replication-agent-security-model.md)   
  [Replication Security Best Practices](replication-security-best-practices.md)   
- [Security and Protection &#40;Replication&#41;](security-and-protection-replication.md) 
+ [SQL Server Replication Security](view-and-modify-replication-security-settings.md) 
  [Threat and Vulnerability Mitigation &#40;Replication&#41;](threat-and-vulnerability-mitigation-replication.md)   
 
   

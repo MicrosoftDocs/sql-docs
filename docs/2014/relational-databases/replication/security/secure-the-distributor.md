@@ -43,6 +43,6 @@ manager: craigg
  [View and Modify Replication Security Settings](view-and-modify-replication-security-settings.md)   
  [Enable Encrypted Connections to the Database Engine &#40;SQL Server Configuration Manager&#41;](../../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md)   
  [Replication Security Best Practices](replication-security-best-practices.md)   
- [Security and Protection &#40;Replication&#41;](security-and-protection-replication.md)  
+ [SQL Server Replication Security](view-and-modify-replication-security-settings.md)  
   
   

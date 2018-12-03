@@ -99,7 +99,7 @@ manager: craigg
   
      This tab displays detailed information about the agents and jobs used by all types of replication. The tab also allows you to start and stop each agent and job.  
   
- For more information, see [View Information and Perform Tasks for a Publisher &#40;Replication Monitor&#41;](view-information-and-perform-tasks-for-a-publisher-replication-monitor.md).  
+ For more information, see [View Information and Perform Tasks using Replication Monitor](view-information-and-perform-tasks-replication-monitor.md).  
   
  Replication Monitor also provides a context menu for the Publisher node. Right-click a Publisher in the left pane to:  
   

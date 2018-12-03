@@ -33,7 +33,7 @@ manager: craigg
   
 -   [Replication over the Internet](replication-over-the-internet.md)  
   
--   [Security and Protection &#40;Replication&#41;](security/security-and-protection-replication.md)  
+-   [SQL Server Replication Security](security/view-and-modify-replication-security-settings.md)  
   
 -   [Monitoring &#40;Replication&#41;](monitoring-replication.md)  
   

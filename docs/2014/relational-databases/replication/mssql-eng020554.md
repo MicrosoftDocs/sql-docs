@@ -55,7 +55,7 @@ manager: craigg
   
      You might need to redesign your application so that the agent spends less time processing.  
   
-     You can increase the interval at which agent status is checked using the **Job Properties** dialog box. For information about accessing this dialog box for replication jobs, see [View Information and Perform Tasks for a Publisher &#40;Replication Monitor&#41;](monitor/view-information-and-perform-tasks-for-a-publisher-replication-monitor.md).  
+     You can increase the interval at which agent status is checked using the **Job Properties** dialog box. For information about accessing this dialog box for replication jobs, see [View Information and Perform Tasks using Replication Monitor](monitor/view-information-and-perform-tasks-replication-monitor.md).  
   
 -   If an agent cannot log in to one of the computers in the topology:  
   

@@ -570,7 +570,7 @@ manager: craigg
  [Manage Logins and Passwords in Replication](identity-and-access-control-replication.md#manage-logins-and-passwords-in-replication.md)   
  [Replication Agent Security Model](replication-agent-security-model.md)   
  [Replication Security Best Practices](replication-security-best-practices.md)   
- [Security and Protection &#40;Replication&#41;](security-and-protection-replication.md)   
+ [SQL Server Replication Security](view-and-modify-replication-security-settings.md)   
  [Replication System Stored Procedures Concepts](../concepts/replication-system-stored-procedures-concepts.md)  
   
   

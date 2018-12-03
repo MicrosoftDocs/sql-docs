@@ -31,7 +31,7 @@ manager: craigg
   
  **To specify alternate snapshot locations**  
   
--   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]: [Specify an Alternate Snapshot Folder Location](snapshot-options.md#snapshot-folder-locations.md) 
+-   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]: [Specify an Alternate Snapshot Folder Location](snapshot-options.md#snapshot-folder-locations) 
   
 -   Replication [!INCLUDE[tsql](../../includes/tsql-md.md)] programming: [Configure Snapshot Properties &#40;Replication Transact-SQL Programming&#41;](publish/configure-snapshot-properties-replication-transact-sql-programming.md)  
   

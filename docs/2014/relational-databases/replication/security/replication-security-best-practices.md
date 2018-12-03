@@ -68,6 +68,6 @@ manager: craigg
  [Secure the Subscriber](secure-the-subscriber.md)   
  [Secure the Distributor](secure-the-distributor.md)   
  [Secure the Publisher](secure-the-publisher.md)   
- [Security and Protection &#40;Replication&#41;](security-and-protection-replication.md)  
+ [SQL Server Replication Security](view-and-modify-replication-security-settings.md)  
   
   

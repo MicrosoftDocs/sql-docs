@@ -158,7 +158,7 @@ manager: craigg
   
     -   You cannot change the **@job_login** parameter through [sp_changepublication_snapshot &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-changepublication-snapshot-transact-sql) or [sp_changelogreader_agent &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-changelogreader-agent-transact-sql), but the password can be changed.  
   
- For more information about replication security, see [Security and Protection &#40;Replication&#41;](../security/security-and-protection-replication.md).  
+ For more information about replication security, see [SQL Server Replication Security](../security/view-and-modify-replication-security-settings.md).  
   
 ## See Also  
  [Administrative Considerations for Oracle Publishers](administrative-considerations-for-oracle-publishers.md)   

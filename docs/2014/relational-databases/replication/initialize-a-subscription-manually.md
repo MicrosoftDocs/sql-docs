@@ -45,7 +45,7 @@ manager: craigg
   
 2.  At the Publisher on the publication database, execute [sp_addsubscription](/sql/relational-databases/system-stored-procedures/sp-addsubscription-transact-sql). Specify **@publication**, **@subscriber**, the name of the database at the Subscriber containing the published data for **@destination_db**, a value of **pull** for **@subscription_type**, and a value of **replication support only** for **@sync_type**. For more information, see [Create a Pull Subscription](create-a-pull-subscription.md).  
   
-3.  At the Subscriber, execute [sp_addpullsubscription](/sql/relational-databases/system-stored-procedures/sp-addpullsubscription-transact-sql). For updating subscriptions, see [Create an Updatable Subscription to a Transactional Publication](publish/create-an-updatable-subscription-to-a-transactional-publication.md).  
+3.  At the Subscriber, execute [sp_addpullsubscription](/sql/relational-databases/system-stored-procedures/sp-addpullsubscription-transact-sql). For updating subscriptions, see [Create an Updatable Subscription to a Transactional Publication](publish/publish/create-an-updatable-subscription-to-a-transactional-publication.md).  
   
 4.  At the Subscriber, execute [sp_addpullsubscription_agent](/sql/relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql). For more information, see [Create a Pull Subscription](create-a-pull-subscription.md).  
   
@@ -55,7 +55,7 @@ manager: craigg
   
 1.  Ensure that the schema and data exist on the subscription database. For more information, see [Initialize a Transactional Subscription Without a Snapshot](initialize-a-transactional-subscription-without-a-snapshot.md).  
   
-2.  At the Publisher on the publication database, execute [sp_addsubscription](/sql/relational-databases/system-stored-procedures/sp-addsubscription-transact-sql). Specify the name of the database at the Subscriber containing the published data for **@destination_db**, a value of **push** for **@subscription_type**, and a value of **replication support only** for **@sync_type**. For updating subscriptions, see [Create an Updatable Subscription to a Transactional Publication](publish/create-an-updatable-subscription-to-a-transactional-publication.md).  
+2.  At the Publisher on the publication database, execute [sp_addsubscription](/sql/relational-databases/system-stored-procedures/sp-addsubscription-transact-sql). Specify the name of the database at the Subscriber containing the published data for **@destination_db**, a value of **push** for **@subscription_type**, and a value of **replication support only** for **@sync_type**. For updating subscriptions, see [Create an Updatable Subscription to a Transactional Publication](publish/publish/create-an-updatable-subscription-to-a-transactional-publication.md).  
   
 3.  At the Publisher on the publication database, execute [sp_addpushsubscription_agent](/sql/relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql). For more information, see [Create a Push Subscription](create-a-push-subscription.md).  
   

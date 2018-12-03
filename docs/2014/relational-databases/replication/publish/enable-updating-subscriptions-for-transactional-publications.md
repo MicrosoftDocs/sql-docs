@@ -32,7 +32,7 @@ manager: craigg
 ##  <a name="SSMSProcedure"></a> Using SQL Server Management Studio  
  Enable updating subscriptions for transactional publications on the **Publication Type** page of the New Publication Wizard. For more information about using this wizard, see [Create a Publication](create-a-publication.md). You cannot enable updating subscriptions after a publication is created.  
   
- To use updating subscriptions, you must also configure options in the New Subscription Wizard. For more information, see [Create an Updatable Subscription to a Transactional Publication](../create-an-updatable-subscription-to-a-transactional-publication.md).  
+ To use updating subscriptions, you must also configure options in the New Subscription Wizard. For more information, see [Create an Updatable Subscription to a Transactional Publication](../publish/create-an-updatable-subscription-to-a-transactional-publication.md).  
   
 #### To enable updating subscriptions  
   
@@ -62,7 +62,7 @@ manager: craigg
   
 4.  Add articles to the publication. For more information, see [Define an Article](define-an-article.md).  
   
-5.  At the Subscriber, create an updating subscription to this publication. For more information, see [Create an Updatable Subscription to a Transactional Publication](../create-an-updatable-subscription-to-a-transactional-publication.md).  
+5.  At the Subscriber, create an updating subscription to this publication. For more information, see [Create an Updatable Subscription to a Transactional Publication](../publish/create-an-updatable-subscription-to-a-transactional-publication.md).  
   
 #### To create a publication that supports queued updating subscriptions  
   
@@ -88,7 +88,7 @@ manager: craigg
   
 5.  Add articles to the publication. For more information, see [Define an Article](define-an-article.md).  
   
-6.  At the Subscriber, create an updating subscription to this publication. For more information, see [Create an Updatable Subscription to a Transactional Publication](../create-an-updatable-subscription-to-a-transactional-publication.md).  
+6.  At the Subscriber, create an updating subscription to this publication. For more information, see [Create an Updatable Subscription to a Transactional Publication](../publish/create-an-updatable-subscription-to-a-transactional-publication.md).  
   
 #### To change the conflict policy for a publication that allows queued updating subscriptions  
   
@@ -104,7 +104,7 @@ manager: craigg
  [Publication Types for Transactional Replication](../transactional/publication-types-for-transactional-replication.md)   
  [Updatable Subscriptions for Transactional Replication](../transactional/updatable-subscriptions-for-transactional-replication.md)   
  [Create a Publication](create-a-publication.md)   
- [Create an Updatable Subscription to a Transactional Publication](../create-an-updatable-subscription-to-a-transactional-publication.md)   
+ [Create an Updatable Subscription to a Transactional Publication](../publish/create-an-updatable-subscription-to-a-transactional-publication.md)   
  [Updatable Subscriptions for Transactional Replication](../transactional/updatable-subscriptions-for-transactional-replication.md)   
  [Use sqlcmd with Scripting Variables](../../scripting/sqlcmd-use-with-scripting-variables.md)  
   

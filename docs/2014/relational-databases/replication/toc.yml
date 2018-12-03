@@ -98,7 +98,6 @@
       - name: Encrypted columns
         href: security/replicate-data-in-encrypted-columns-sql-server-management-studio.md
   - name: Configure replication
-    href: publish/create-modify-and-delete-publications-and-articles-replication.md
     items:
     - name: Configure distribution
       href: configure-distribution.md
@@ -241,7 +240,7 @@
       - name: Enable updating subscriptions
         href: publish/enable-updating-subscriptions-for-transactional-publications.md
       - name: Create updatable subscription
-        href: publish/create-an-updatable-subscription-to-a-transactional-publication.md
+        href: publish/publish/create-an-updatable-subscription-to-a-transactional-publication.md
       - name: Publish the execution of an SP
         href: publish/publish-execution-of-stored-procedure-in-transactional-publication.md
       - name: View data conflicts 

@@ -85,7 +85,6 @@ manager: craigg
 ## See Also  
  [Replication Administration FAQ](../../relational-databases/replication/administration/frequently-asked-questions-for-replication-administrators.md)   
  [Replication Backward Compatibility](../../../2014/relational-databases/replication/replication-backward-compatibility.md)   
- [What's New &#40;Replication&#41;](../../../2014/relational-databases/replication/what-s-new-replication.md)   
  [Supported Version and Edition Upgrades](../../database-engine/install-windows/supported-version-and-edition-upgrades.md)   
  [Upgrade to SQL Server 2014](upgrade-sql-server.md)  
   

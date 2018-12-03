@@ -317,7 +317,7 @@
             topicHref: /sql/relational-databases/replication/transactional/transactional-replication
           - name: Security
             tocHref: /sql/relational-databases/replication/security/
-            topicHref: /sql/relational-databases/replication/security/security-and-protection-replication
+            topicHref: /sql/relational-databases/replication/security/view-and-modify-replication-security-settings
         - name: Native Client Programming
           tocHref: /sql/relational-databases/native-client/
           topicHref: /sql/relational-databases/native-client/sql-server-native-client-programming

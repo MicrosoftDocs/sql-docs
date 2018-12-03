@@ -118,13 +118,13 @@ manager: craigg
 |||||  
 |-|-|-|-|  
 |Backup/Restore Statement|Supported|Exceptions|Comments|  
-|BACKUP|√|BLOCKSIZE, and MAXTRANSFERSIZE are not supported.|Requires WITH CREDENTIAL specified|  
-|RESTORE|√||Requires WITH CREDENTIAL specified|  
-|RESTORE FILELISTONLY|√||Requires WITH CREDENTIAL specified|  
-|RESTORE HEADERONLY|√||Requires WITH CREDENTIAL specified|  
-|RESTORE LABELONLY|√||Requires WITH CREDENTIAL specified|  
-|RESTORE VERIFYONLY|√||Requires WITH CREDENTIAL specified|  
-|RESTORE REWINDONLY|−|||  
+|BACKUP|???|BLOCKSIZE, and MAXTRANSFERSIZE are not supported.|Requires WITH CREDENTIAL specified|  
+|RESTORE|???||Requires WITH CREDENTIAL specified|  
+|RESTORE FILELISTONLY|???||Requires WITH CREDENTIAL specified|  
+|RESTORE HEADERONLY|???||Requires WITH CREDENTIAL specified|  
+|RESTORE LABELONLY|???||Requires WITH CREDENTIAL specified|  
+|RESTORE VERIFYONLY|???||Requires WITH CREDENTIAL specified|  
+|RESTORE REWINDONLY|???|||  
   
  For syntax and general information about backup statements, see [BACKUP &#40;Transact-SQL&#41;](/sql/t-sql/statements/backup-transact-sql).  
   
@@ -135,34 +135,34 @@ manager: craigg
 |||||  
 |-|-|-|-|  
 |Argument|Supported|Exception|Comments|  
-|DATABASE|√|||  
-|LOG|√|||  
+|DATABASE|???|||  
+|LOG|???|||  
 ||  
-|TO (URL)|√|Unlike DISK and TAPE, URL does not support specifying or creating a logical name.|This argument is used to specify the URL path for the backup file.|  
-|MIRROR TO|−|||  
+|TO (URL)|???|Unlike DISK and TAPE, URL does not support specifying or creating a logical name.|This argument is used to specify the URL path for the backup file.|  
+|MIRROR TO|???|||  
 |**WITH OPTIONS:**||||  
-|CREDENTIAL|√||WITH CREDENTIAL is only supported when using BACKUP TO URL option to back up to the Windows Azure Blob storage service.|  
-|DIFFERENTIAL|√|||  
-|COPY_ONLY|√|||  
-|COMPRESSION&#124;NO_COMPRESSION|√|||  
-|DESCRIPTION|√|||  
-|NAME|√|||  
-|EXPIREDATE &#124; RETAINDAYS|−|||  
-|NOINIT &#124; INIT|−||This option is ignored if used.<br /><br /> Appending to blobs is not possible. To overwrite a backup use the FORMAT argument.|  
-|NOSKIP &#124; SKIP|−|||  
-|NOFORMAT &#124; FORMAT|√||This option is ignored if used.<br /><br /> A backup taken to an existing blob fails unless WITH FORMAT is specified. The existing blob is overwritten when WITH FORMAT is specified.|  
-|MEDIADESCRIPTION|√|||  
-|MEDIANAME|√|||  
-|BLOCKSIZE|−|||  
-|BUFFERCOUNT|√|||  
-|MAXTRANSFERSIZE|−|||  
-|NO_CHECKSUM &#124; CHECKSUM|√|||  
-|STOP_ON_ERROR &#124; CONTINUE_AFTER_ERROR|√|||  
-|STATS|√|||  
-|REWIND &#124; NOREWIND|−|||  
-|UNLOAD &#124; NOUNLOAD|−|||  
-|NORECOVERY &#124; STANDBY|√|||  
-|NO_TRUNCATE|√|||  
+|CREDENTIAL|???||WITH CREDENTIAL is only supported when using BACKUP TO URL option to back up to the Windows Azure Blob storage service.|  
+|DIFFERENTIAL|???|||  
+|COPY_ONLY|???|||  
+|COMPRESSION&#124;NO_COMPRESSION|???|||  
+|DESCRIPTION|???|||  
+|NAME|???|||  
+|EXPIREDATE &#124; RETAINDAYS|???|||  
+|NOINIT &#124; INIT|???||This option is ignored if used.<br /><br /> Appending to blobs is not possible. To overwrite a backup use the FORMAT argument.|  
+|NOSKIP &#124; SKIP|???|||  
+|NOFORMAT &#124; FORMAT|???||This option is ignored if used.<br /><br /> A backup taken to an existing blob fails unless WITH FORMAT is specified. The existing blob is overwritten when WITH FORMAT is specified.|  
+|MEDIADESCRIPTION|???|||  
+|MEDIANAME|???|||  
+|BLOCKSIZE|???|||  
+|BUFFERCOUNT|???|||  
+|MAXTRANSFERSIZE|???|||  
+|NO_CHECKSUM &#124; CHECKSUM|???|||  
+|STOP_ON_ERROR &#124; CONTINUE_AFTER_ERROR|???|||  
+|STATS|???|||  
+|REWIND &#124; NOREWIND|???|||  
+|UNLOAD &#124; NOUNLOAD|???|||  
+|NORECOVERY &#124; STANDBY|???|||  
+|NO_TRUNCATE|???|||  
   
  For more information about backup arguments, see [BACKUP &#40;Transact-SQL&#41;](/sql/t-sql/statements/backup-transact-sql).  
   
@@ -171,35 +171,35 @@ manager: craigg
 |||||  
 |-|-|-|-|  
 |Argument|Supported|Exceptions|Comments|  
-|DATABASE|√|||  
-|LOG|√|||  
-|FROM (URL)|√||The FROM URL argument is used to specify the URL path for the backup file.|  
+|DATABASE|???|||  
+|LOG|???|||  
+|FROM (URL)|???||The FROM URL argument is used to specify the URL path for the backup file.|  
 |**WITH Options:**||||  
-|CREDENTIAL|√||WITH CREDENTIAL is only supported when using RESTORE FROM URL option to restore from Windows Azure Blob Storage service.|  
-|PARTIAL|√|||  
-|RECOVERY &#124; NORECOVERY &#124; STANDBY|√|||  
-|LOADHISTORY|√|||  
-|MOVE|√|||  
-|REPLACE|√|||  
-|RESTART|√|||  
-|RESTRICTED_USER|√|||  
-|FILE|−|||  
-|PASSWORD|√|||  
-|MEDIANAME|√|||  
-|MEDIAPASSWORD|√|||  
-|BLOCKSIZE|√|||  
-|BUFFERCOUNT|−|||  
-|MAXTRANSFERSIZE|−|||  
-|CHECKSUM &#124; NO_CHECKSUM|√|||  
-|STOP_ON_ERROR &#124; CONTINUE_AFTER_ERROR|√|||  
-|FILESTREAM|√|||  
-|STATS|√|||  
-|REWIND &#124; NOREWIND|−|||  
-|UNLOAD &#124; NOUNLOAD|−|||  
-|KEEP_REPLICATION|√|||  
-|KEEP_CDC|√|||  
-|ENABLE_BROKER &#124; ERROR_BROKER_CONVERSATIONS &#124; NEW_BROKER|√|||  
-|STOPAT &#124; STOPATMARK &#124; STOPBEFOREMARK|√|||  
+|CREDENTIAL|???||WITH CREDENTIAL is only supported when using RESTORE FROM URL option to restore from Windows Azure Blob Storage service.|  
+|PARTIAL|???|||  
+|RECOVERY &#124; NORECOVERY &#124; STANDBY|???|||  
+|LOADHISTORY|???|||  
+|MOVE|???|||  
+|REPLACE|???|||  
+|RESTART|???|||  
+|RESTRICTED_USER|???|||  
+|FILE|???|||  
+|PASSWORD|???|||  
+|MEDIANAME|???|||  
+|MEDIAPASSWORD|???|||  
+|BLOCKSIZE|???|||  
+|BUFFERCOUNT|???|||  
+|MAXTRANSFERSIZE|???|||  
+|CHECKSUM &#124; NO_CHECKSUM|???|||  
+|STOP_ON_ERROR &#124; CONTINUE_AFTER_ERROR|???|||  
+|FILESTREAM|???|||  
+|STATS|???|||  
+|REWIND &#124; NOREWIND|???|||  
+|UNLOAD &#124; NOUNLOAD|???|||  
+|KEEP_REPLICATION|???|||  
+|KEEP_CDC|???|||  
+|ENABLE_BROKER &#124; ERROR_BROKER_CONVERSATIONS &#124; NEW_BROKER|???|||  
+|STOPAT &#124; STOPATMARK &#124; STOPBEFOREMARK|???|||  
   
  For more information about Restore arguments, see [RESTORE Arguments &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-arguments-transact-sql).  
   

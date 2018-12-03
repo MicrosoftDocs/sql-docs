@@ -32,7 +32,7 @@ FOR XML PATH;
   
  This is the result:  
   
- `<row EmpID="1">KenJSánchez</row>`  
+ `<row EmpID="1">KenJS??nchez</row>`  
   
  If the column is of `xml` type, the corresponding XML tree is inserted. For example, the following query specifies "*" for the column name that contains the XML returned by the XQuery against the Instructions column.  
   

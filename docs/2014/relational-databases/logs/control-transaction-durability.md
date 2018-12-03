@@ -4,7 +4,7 @@ ms.custom: ""
 ms.date: "05/19/2016"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
+ms.technology: supportability
 ms.topic: conceptual
 helpviewer_keywords: 
   - "delayed durability"

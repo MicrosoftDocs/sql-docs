@@ -5,7 +5,7 @@ ms.date: "04/10/2018"
 ms.prod: sql
 ms.prod_service: "search, sql-database"
 ms.reviewer: ""
-ms.technology: database-engine
+ms.technology:
 ms.topic: conceptual
 helpviewer_keywords: 
   - "full-text search [SQL Server]"

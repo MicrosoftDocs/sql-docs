@@ -5,7 +5,6 @@ ms.date: "11/20/2015"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
 ms.technology: 
-  - "database-engine"
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.swb.linkedserver.properties.general.f1"

@@ -14,7 +14,6 @@ ms.assetid: a33f12bd-15c4-42a8-b343-de44c3e87729
 author: "CarlRabeler"
 ms.author: "carlrab"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # WMI Provider Error 0x8007052f
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

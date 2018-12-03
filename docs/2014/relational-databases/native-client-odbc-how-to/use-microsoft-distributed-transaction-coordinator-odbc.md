@@ -19,7 +19,7 @@ manager: craigg
   
 1.  Connect to MS DTC by using the MS DTC OLE DtcGetTransactionManager function. For information about MS DTC, see Microsoft Distributed Transaction Coordinator.  
   
-2.  Call SQL DriverConnect once for each Microsoft® SQL Server™ connection you want to establish.  
+2.  Call SQL DriverConnect once for each Microsoft?? SQL Server??? connection you want to establish.  
   
 3.  Call the MS DTC OLE ITransactionDispenser::BeginTransaction function to begin an MS DTC transaction and obtain a Transaction object that represents the transaction.  
   

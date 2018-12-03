@@ -4,7 +4,7 @@ ms.custom: ""
 ms.date: "01/04/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
+ms.technology: supportability
 ms.topic: conceptual
 helpviewer_keywords: 
   - "transaction logs [SQL Server], about"

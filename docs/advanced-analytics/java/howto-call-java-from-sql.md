@@ -12,14 +12,14 @@ manager: cgronlun
 monikerRange: ">=sql-server-ver15||=sqlallproducts-allversions"
 ---
 
-# How to call Java from SQL Server 2019 preview.
+# How to call Java from SQL Server 2019 preview
 
 CTP 2.2 introduces an additional approach for calling Java from SQL Server 2019 preview. Depending on your operating system, you can adopt the following approaches:
 
 * Use the existing approach, **sp_execute_external_script**, for SQL Server on Windows or Linux.
 * Currently Windows-only in this CTP: [upload compiled Java code to an external library](#create-external-library). 
 
-## Use sp_execute_external_script
+## Use a system stored procedure (sp_execute_external_script)
 
 When using the [Java language extension](extension-java.md), the [sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql) system stored procedure is the interface used to call the Java runtime. Permissions on the database apply to Java code execution.
 
@@ -157,7 +157,7 @@ public static boolean[][] outputNullMap
 ```
 <a name="create-external-library"></a>
 
-## Use CREATE EXTERNAL LIBRARY
+## Use DDL (CREATE EXTERNAL LIBRARY)
 
 In CTP 2.2 on Windows only, you can create an external library for compiled Java code in a jar, uploaded along with any dependencies into a database. Use the [CREATE EXTERNAL LIBRARY (Transact-SQL)](../../t-sql/statements/create-external-library-transact-sql.md) statement to upload your code:
 

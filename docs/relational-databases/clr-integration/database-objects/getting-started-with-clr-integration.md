@@ -170,7 +170,7 @@ IF EXISTS (SELECT name FROM sys.assemblies WHERE name = 'helloworld')
 ```  
   
 ## See also  
- [CLR Stored Procedures](http://msdn.microsoft.com/library/bbdd51b2-a9b4-4916-ba6f-7957ac6c3f33)   
+ [CLR Stored Procedures](https://msdn.microsoft.com/library/bbdd51b2-a9b4-4916-ba6f-7957ac6c3f33)   
  [SQL Server In-Process Specific Extensions to ADO.NET](../../../relational-databases/clr-integration-data-access-in-process-ado-net/sql-server-in-process-specific-extensions-to-ado-net.md)   
  [Debugging CLR Database Objects](../../../relational-databases/clr-integration/debugging-clr-database-objects.md)   
  [CLR Integration Security](../../../relational-databases/clr-integration/security/clr-integration-security.md)  

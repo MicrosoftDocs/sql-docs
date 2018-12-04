@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "integration-services"
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.dts.designer.vstahostingui.variablepickermodaldialog.f1"
@@ -20,7 +19,7 @@ manager: craigg
 # Select Variables Page
   Use the **Select variables** dialog box to select one or more variables for the **ReadOnlyVariables** and **ReadWriteVariables** properties when you configure a Script task or a Script component.  
   
- To open the **Select Variables** dialog box, on the **Script** page of the **Script Transformation Editor** dialog box, under **Custom Properties**, locate either the **ReadOnlyVariables** or **ReadWriteVariables** property, and then click the ellipsis (…) button associated with that property.  
+ To open the **Select Variables** dialog box, on the **Script** page of the **Script Transformation Editor** dialog box, under **Custom Properties**, locate either the **ReadOnlyVariables** or **ReadWriteVariables** property, and then click the ellipsis (...) button associated with that property.  
   
 ## Options  
  Select box  

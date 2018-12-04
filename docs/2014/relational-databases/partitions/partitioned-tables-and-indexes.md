@@ -4,7 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: table-view-index
+ms.technology: 
 ms.topic: conceptual
 helpviewer_keywords: 
   - "partitioned tables [SQL Server], about partitioned tables"

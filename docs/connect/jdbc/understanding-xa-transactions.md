@@ -39,7 +39,7 @@ The following additional guidelines apply to tightly coupled transactions:
 
 - When you use XA transactions together with Microsoft Distributed Transaction Coordinator (MS DTC), you may notice that the current version of MS DTC doesn't support tightly coupled XA branch behavior. For example, MS DTC has a one-to-one mapping between an XA branch transaction ID (XID) and an MS DTC transaction ID and the work that is performed by loosely coupled XA branches is isolated from one another.  
   
-     The hotfix provided at [MSDTC and Tightly Coupled Transactions](http://support.microsoft.com/kb/938653) enables the support for tightly coupled XA branches where multiple XA branches with same global transaction ID (GTRID) are mapped to a single MS DTC transaction ID. This support enables multiple tightly coupled XA branches to see one another's changes in the resource manager, such as [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+     The hotfix provided at [MSDTC and Tightly Coupled Transactions](https://support.microsoft.com/kb/938653) enables the support for tightly coupled XA branches where multiple XA branches with same global transaction ID (GTRID) are mapped to a single MS DTC transaction ID. This support enables multiple tightly coupled XA branches to see one another's changes in the resource manager, such as [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 - A [SSTRANSTIGHTLYCPLD](../../connect/jdbc/reference/sstranstightlycpld-field-sqlserverxaresource.md) flag allows the applications to use tightly coupled XA transactions, which have different XA branch transaction IDs (BQUAL) but have the same global transaction ID (GTRID) and format ID (FormatID). In order to use that feature, you must set the [SSTRANSTIGHTLYCPLD](../../connect/jdbc/reference/sstranstightlycpld-field-sqlserverxaresource.md) on the flags parameter of the XAResource.start method:  
   
@@ -112,7 +112,7 @@ There are three ways to verify the version of sqljdbc_xa.dll is currently instal
 ### <a name="BKMK_ServerSide"></a> Configuring server-side timeout settings for automatic rollback of unprepared transactions  
 
 > [!WARNING]  
-> This server-side option is new with Microsoft JDBC Driver 4.2 (and higher) for SQL Server. To get the updated behavior, make sure the sqljdbc_xa.dll on the server is updated. For more information on setting client side timeouts, see [XAResource.setTransactionTimeout()](http://docs.oracle.com/javase/8/docs/api/javax/transaction/xa/XAResource.html).  
+> This server-side option is new with Microsoft JDBC Driver 4.2 (and higher) for SQL Server. To get the updated behavior, make sure the sqljdbc_xa.dll on the server is updated. For more information on setting client side timeouts, see [XAResource.setTransactionTimeout()](https://docs.oracle.com/javase/8/docs/api/javax/transaction/xa/XAResource.html).  
 
 There are two registry settings (DWORD values) to control the timeout behavior of distributed transactions:  
   
@@ -141,11 +141,11 @@ A timeout value is set for each transaction when it's started and the transactio
   
 - `XADefaultTimeout = 30`, `XAMaxTimeout = 60`
   
-     Means all transactions will have a 30 seconds timeout if the client doesn't specify any timeout. If client specifies any timeout, then the client’s timeout will be used as long as it is less than 60 seconds (the max value).  
+     Means all transactions will have a 30 seconds timeout if the client doesn't specify any timeout. If client specifies any timeout, then the client's timeout will be used as long as it is less than 60 seconds (the max value).  
   
 - `XADefaultTimeout = 0`, `XAMaxTimeout = 30`
   
-     Means all transactions will have a 30 seconds timeout (the max value) if the client does not specify any timeout. If the client specifies any timeout, then the client’s timeout will be used as long as it is less than 30 seconds (the max value).  
+     Means all transactions will have a 30 seconds timeout (the max value) if the client does not specify any timeout. If the client specifies any timeout, then the client's timeout will be used as long as it is less than 30 seconds (the max value).  
   
 ### Upgrading sqljdbc_xa.dll
 

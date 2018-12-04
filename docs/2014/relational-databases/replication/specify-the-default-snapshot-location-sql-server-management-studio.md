@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "03/08/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "replication"
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords: 
   - "snapshots [SQL Server replication], default locations"
@@ -22,7 +21,7 @@ manager: craigg
   
 ### To modify the default snapshot location  
   
-1.  On the **Publishers** page of the **Distributor Properties - \<Distributor>** dialog box, click the properties button (**…**) for the Publisher for which you want to change the default snapshot location.  
+1.  On the **Publishers** page of the **Distributor Properties - \<Distributor>** dialog box, click the properties button (**...**) for the Publisher for which you want to change the default snapshot location.  
   
 2.  In the **Publisher Properties - \<Publisher>** dialog box, enter a value for the **Default Snapshot Folder** property.  
   

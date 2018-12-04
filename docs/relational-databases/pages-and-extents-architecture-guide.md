@@ -6,7 +6,6 @@ ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
 ms.technology: 
-  - "database-engine"
 ms.topic: conceptual
 helpviewer_keywords: 
   - "page and extent architecture guide"
@@ -152,7 +151,7 @@ IAM pages are allocated as required for each allocation unit and are located ran
 IAM pages linked in a chain per allocation unit
 An IAM page has a header that indicates the starting extent of the range of extents mapped by the IAM page. The IAM page also has a large bitmap in which each bit represents one extent. The first bit in the map represents the first extent in the range, the second bit represents the second extent, and so on. If a bit is 0, the extent it represents is not allocated to the allocation unit owning the IAM. If the bit is 1, the extent it represents is allocated to the allocation unit owning the IAM page.
 
-When the [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] has to insert a new row and no space is available in the current page, it uses the IAM and PFS pages to find a page to allocate, or, for a heap or a Text/Image page, a page with sufficient space to hold the row. The [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] uses the IAM pages to find the extents allocated to the allocation unit. For each extent, the [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] searches the PFS pages to see if there is a page that can be used. Each IAM and PFS page covers lots of data pages, so there are few IAM and PFS pages in a database. This means that the IAM and PFS pages are generally in memory in the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] buffer pool, so they can be searched quickly. For indexes, the insertion point of a new row is set by the index key. In this case, the search process previously described does not occur.
+When the [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] has to insert a new row and no space is available in the current page, it uses the IAM and PFS pages to find a page to allocate, or, for a heap or a Text/Image page, a page with sufficient space to hold the row. The [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] uses the IAM pages to find the extents allocated to the allocation unit. For each extent, the [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] searches the PFS pages to see if there is a page that can be used. Each IAM and PFS page covers lots of data pages, so there are few IAM and PFS pages in a database. This means that the IAM and PFS pages are generally in memory in the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] buffer pool, so they can be searched quickly. For indexes, the insertion point of a new row is set by the index key, but when a new page is needed, the previously described process occurs.
 
 The [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] allocates a new extent to an allocation unit only when it cannot quickly find a page in an existing extent with sufficient space to hold the row being inserted. 
 

@@ -68,5 +68,5 @@ Support for PDO was added in version 2.0 of the [!INCLUDE[ssDriverPHP](../../inc
 
 [Getting Started with the Microsoft Drivers for PHP for SQL Server](../../connect/php/getting-started-with-the-php-sql-driver.md)
 
-[PDO](http://php.net/manual/book.pdo.php)  
+[PDO](https://php.net/manual/book.pdo.php)  
   

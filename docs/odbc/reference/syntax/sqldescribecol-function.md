@@ -26,7 +26,7 @@ manager: craigg
  Version Introduced: ODBC 1.0 Standards Compliance: ISO 92  
   
  **Summary**  
- **SQLDescribeCol** returns the result descriptor — column name,type, column size, decimal digits, and nullability — for one column in the result set. This information also is available in the fields of the IRD.  
+ **SQLDescribeCol** returns the result descriptor - column name,type, column size, decimal digits, and nullability - for one column in the result set. This information also is available in the fields of the IRD.  
   
 ## Syntax  
   

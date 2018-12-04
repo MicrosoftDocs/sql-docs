@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "master-data-services"
+ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: c2687e39-dc20-494f-a707-2aa29f4c329e
 author: leolimsft
@@ -87,7 +86,7 @@ manager: craigg
   
      If you do not want to include data, do not use the `-version` and `-includedata` switches.  
   
-6.  Press Enter. When the package is successfully created, a message stating “MDSModelDeploy operation completed successfully” is displayed.  
+6.  Press Enter. When the package is successfully created, a message stating "MDSModelDeploy operation completed successfully" is displayed.  
   
 ## Next Steps  
   

@@ -36,12 +36,12 @@ manager: craigg
   
  For more information about how to set these properties in [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer, click the following topic:  
   
--   [Set the Properties of a Task or Container](http://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
+-   [Set the Properties of a Task or Container](https://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
   
 ### Property Settings  
  When the Execute Process task runs a custom application, the task provides input to the application through one or both of the following methods:  
   
--   A variable that you specify in the **StandardInputVariable** property setting. For more information about variables, see [Integration Services &#40;SSIS&#41; Variables](../../integration-services/integration-services-ssis-variables.md) and [Use Variables in Packages](http://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787).  
+-   A variable that you specify in the **StandardInputVariable** property setting. For more information about variables, see [Integration Services &#40;SSIS&#41; Variables](../../integration-services/integration-services-ssis-variables.md) and [Use Variables in Packages](https://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787).  
   
 -   An argument that you specify in the **Arguments** property setting. (For example, if the task opens a document in Word, the argument can name the .doc file.)  
   
@@ -51,7 +51,7 @@ manager: craigg
   
  You can use an expression to set various Execute Process task properties.  
   
- When you use the **StandardInputVariable** property to configure the Execute Process task to provide input, call the **Console.ReadLine** method from the application to read the input. For more information, see [Console.ReadLine Method](http://go.microsoft.com/fwlink/?LinkId=129201)the topic, , in the [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] Class Library.  
+ When you use the **StandardInputVariable** property to configure the Execute Process task to provide input, call the **Console.ReadLine** method from the application to read the input. For more information, see [Console.ReadLine Method](https://go.microsoft.com/fwlink/?LinkId=129201)the topic, , in the [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] Class Library.  
   
  When you use the **Arguments** property to configure the Execute Process task to provide input, do one of the following steps to obtain the arguments:  
   
@@ -62,11 +62,11 @@ manager: craigg
     Dim variable2 As String = My.Application.CommandLineArgs.Item(1)   
     ```  
   
-     For more information, see the topic, [My.Application.CommandLineArgs Property](http://go.microsoft.com/fwlink/?LinkId=129200), in the [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] reference.  
+     For more information, see the topic, [My.Application.CommandLineArgs Property](https://go.microsoft.com/fwlink/?LinkId=129200), in the [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] reference.  
   
 -   If you use Microsoft Visual C# to write the application, use the **Main** method.  
   
-     For more information, see the topic, [Command-Line Arguments (C# Programming Guide)](http://go.microsoft.com/fwlink/?LinkId=129406), in the C# Programming Guide.  
+     For more information, see the topic, [Command-Line Arguments (C# Programming Guide)](https://go.microsoft.com/fwlink/?LinkId=129406), in the C# Programming Guide.  
   
  The Execute Process task also includes the **StandardOutputVariable** and **StandardErrorVariable** properties for specifying the variables that consume the standard output and error output of the application, respectively.  
   
@@ -104,12 +104,12 @@ manager: craigg
  Provide command prompt arguments.  
   
  **WorkingDirectory**  
- Type the path of the folder that contains the executable, or click the browse button **(…)** and locate the folder.  
+ Type the path of the folder that contains the executable, or click the browse button **(...)** and locate the folder.  
   
  **StandardInputVariable**  
  Select a variable to provide the input to the process, or click \<**New variable...**> to create a new variable:  
   
- **Related Topics:** [Add Variable](http://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
+ **Related Topics:** [Add Variable](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
   
  **StandardOutputVariable**  
  Select a variable to capture the output of the process, or click \<**New variable...**> to create a new variable.  

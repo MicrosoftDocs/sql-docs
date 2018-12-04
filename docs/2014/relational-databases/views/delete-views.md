@@ -45,7 +45,7 @@ manager: craigg
 3.  In the **Delete Object** dialog box, click **OK**.  
   
     > [!IMPORTANT]  
-    >  Click **Show Dependencies** in the **Delete Object** dialog box to open the *view_name***Dependencies** dialog box. This will show all of the objects that depend on the view and all of the objects on which the view depends.  
+    >  Click **Show Dependencies** in the **Delete Object** dialog box to open the _view_name_**Dependencies** dialog box. This will show all of the objects that depend on the view and all of the objects on which the view depends.  
   
 ##  <a name="TsqlProcedure"></a> Using Transact-SQL  
   

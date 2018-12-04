@@ -16,7 +16,7 @@ Choosing the right business intelligence tool can be overwhelming. Learn about t
 
 The following table maps workloads for data analysis and reporting to the Microsoft BI tools that are best suited for those workloads. For more information about a product, click the product link in the table.  
   
- If you’re looking for a brief overview of these tools to help you decide which tools are right for you, see [Introducing Microsoft Business Intelligence (BI) Tools](https://msdn.microsoft.com/library/dn655131.aspx).  
+ If you're looking for a brief overview of these tools to help you decide which tools are right for you, see [Introducing Microsoft Business Intelligence (BI) Tools](https://msdn.microsoft.com/library/dn655131.aspx).  
   
 |Workloads|User|||BI Tools|||  
 |---------------|----------|-|-|--------------|-|-|  

@@ -25,7 +25,7 @@ manager: craigg
   
 -   You must have an Azure subscription  
   
--   Install the latest [Azure PowerShell](https://azure.microsoft.com/en-us/documentation/articles/powershell-install-configure/) (5.2.0 or higher).  
+-   Install the latest [Azure PowerShell](https://azure.microsoft.com/documentation/articles/powershell-install-configure/) (5.2.0 or higher).  
 
 -   Create an Azure Active Directory  
 
@@ -141,7 +141,7 @@ SQL Server Version  |Redistributable Install Link
 4.  **Grant Permission for the Azure Active Directory Service Principal to Access the Key Vault**  
   
      You can authorize other users and applications to use your key vault.   
-    In this case, let’s use the Azure Active Directory service principal created in Part I to authorize the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] instance.  
+    In this case, let's use the Azure Active Directory service principal created in Part I to authorize the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] instance.  
   
     > [!IMPORTANT]  
     >  The Azure Active Directory service principal must have at least the `get`, `wrapKey`, and `unwrapKey` permissions for the key vault.  
@@ -154,7 +154,7 @@ SQL Server Version  |Redistributable Install Link
       -PermissionsToKeys get, wrapKey, unwrapKey  
     ```  
   
-     Call the `Get-AzureRmKeyVault` cmdlet to confirm the permissions. In the statement output under ‘Access Policies,’ you should see your AAD application name listed as another tenant that has access to this key vault.  
+     Call the `Get-AzureRmKeyVault` cmdlet to confirm the permissions. In the statement output under 'Access Policies,' you should see your AAD application name listed as another tenant that has access to this key vault.  
   
        
 5.  **Generate an Asymmetric Key in the Key Vault**  
@@ -184,16 +184,16 @@ SQL Server Version  |Redistributable Install Link
     -   **HSM-protected:** Created and protected by a hardware security module (HSM) for additional security. Cost is about $1 per key version.  
   
         > [!IMPORTANT]  
-        >  The SQL Server Connector requires the key name to only use the characters “a-z”, “A-Z”, “0-9”, and “-“, with a 26-character limit.   
-        > Different key versions under the same key name in Azure Key Vault will not work with [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Connector. To rotate an Azure Key Vault key that’s being used by [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], please refer to the Key Rollover steps in the [SQL Server Connector Maintenance & Troubleshooting](../../../relational-databases/security/encryption/sql-server-connector-maintenance-troubleshooting.md).  
+        >  The SQL Server Connector requires the key name to only use the characters "a-z", "A-Z", "0-9", and "-", with a 26-character limit.   
+        > Different key versions under the same key name in Azure Key Vault will not work with [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Connector. To rotate an Azure Key Vault key that's being used by [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], please refer to the Key Rollover steps in the [SQL Server Connector Maintenance & Troubleshooting](../../../relational-databases/security/encryption/sql-server-connector-maintenance-troubleshooting.md).  
 
     ### Import an Existing Key   
   
     If you have an existing 2048-bit RSA software-protected key, you can upload the key to Azure Key Vault. For example, if you had a .PFX file saved to your `C:\\` drive in a file named `softkey.pfx` that you want to upload to Azure Key Vault, type the following to set the variable `securepfxpwd` for a password of `12987553` for the .PFX file:  
   
     ``` powershell  
-    $securepfxpwd = ConvertTo-SecureString –String '12987553' `  
-      –AsPlainText –Force  
+    $securepfxpwd = ConvertTo-SecureString -String '12987553' `  
+      -AsPlainText -Force  
     ```  
   
     Then you can type the following to import the key from the .PFX file, which protects the key by hardware (recommended) in the Key Vault service:  
@@ -209,7 +209,7 @@ SQL Server Version  |Redistributable Install Link
 
     ### Create a new key
     #### Example:  
-    Alternatively, you can create a new encryption key directly in Azure Key vault and have it be either software-protected or HSM-protected.  In this example, let’s create a software-protected key using the `Add-AzureKeyVaultKey cmdlet`:  
+    Alternatively, you can create a new encryption key directly in Azure Key vault and have it be either software-protected or HSM-protected.  In this example, let's create a software-protected key using the `Add-AzureKeyVaultKey cmdlet`:  
 
     ``` powershell  
     Add-AzureKeyVaultKey -VaultName 'ContosoDevKeyVault' `  
@@ -233,13 +233,13 @@ SQL Server Version  |Redistributable Install Link
    
   
 ## Part III: Install the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Connector  
- Download the SQL Server Connector from the [Microsoft Download Center](http://go.microsoft.com/fwlink/p/?LinkId=521700). (This should be done by the administrator of the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] computer.)  
+ Download the SQL Server Connector from the [Microsoft Download Center](https://go.microsoft.com/fwlink/p/?LinkId=521700). (This should be done by the administrator of the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] computer.)  
 
 > [!NOTE]  
->  Versions 1.0.0.440 and older have been replaced and are no longer supported in production environments. Upgrade to version 1.0.1.0 or later by visiting the [Microsoft Download Center](https://www.microsoft.com/download/details.aspx?id=45344) and using the instructions on the [SQL Server Connector Maintenance & Troubleshooting](../../../relational-databases/security/encryption/sql-server-connector-maintenance-troubleshooting.md) page under “Upgrade of SQL Server Connector.”
+>  Versions 1.0.0.440 and older have been replaced and are no longer supported in production environments. Upgrade to version 1.0.1.0 or later by visiting the [Microsoft Download Center](https://www.microsoft.com/download/details.aspx?id=45344) and using the instructions on the [SQL Server Connector Maintenance & Troubleshooting](../../../relational-databases/security/encryption/sql-server-connector-maintenance-troubleshooting.md) page under "Upgrade of SQL Server Connector."
 
 > [!NOTE]  
-> There is a breaking change in 1.0.5.0 version, in terms of the thumbprint algorithm. You may experience database restore failure after upgrading to 1.0.5.0 version. Please refer KB aritcle [447099](https://support.microsoft.com/en-us/help/4470999/db-backup-problems-to-sql-server-connector-for-azure-1-0-5-0).
+> There is a breaking change in 1.0.5.0 version, in terms of the thumbprint algorithm. You may experience database restore failure after upgrading to 1.0.5.0 version. Please refer KB aritcle [447099](https://support.microsoft.com/help/4470999/db-backup-problems-to-sql-server-connector-for-azure-1-0-5-0).
   
  ![ekm-connector-install](../../../relational-databases/security/encryption/media/ekm-connector-install.png "ekm-connector-install")  
   
@@ -339,7 +339,7 @@ SQL Server Version  |Redistributable Install Link
   
      If you imported an asymmetric key as described in Part II, open the key by providing your key name in the following [!INCLUDE[tsql](../../../includes/tsql-md.md)] script.  
   
-    -   Replace `CONTOSO_KEY` with the name you’d like the key to have in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+    -   Replace `CONTOSO_KEY` with the name you'd like the key to have in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
     -   Replace `ContosoRSAKey0` with the name of your key in Azure Key Vault.  
   

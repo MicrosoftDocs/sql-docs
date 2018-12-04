@@ -35,8 +35,8 @@ You should only have to do this step the first time you install SSRS 2017. Servi
 
 ## Related information
 
-- For information on installing SQL Server 2016 Reporting Services native mode, see [Install Reporting Services native mode report server](install-reporting-services-native-mode-report-server.md). 
-- For information on installing SQL Server 2016 Reporting Services in SharePoint integration mode, see [Install the first Report Server in SharePoint mode](install-the-first-report-server-in-sharepoint-mode.md).
+- For information on installing SQL Server Reporting Services native mode, see [Install Reporting Services native mode report server](install-reporting-services-native-mode-report-server.md). 
+- For information on installing SQL Server 2016 Reporting Services (and earlier) in SharePoint integration mode, see [Install the first Report Server in SharePoint mode](install-the-first-report-server-in-sharepoint-mode.md).
 
 ## Next steps
 

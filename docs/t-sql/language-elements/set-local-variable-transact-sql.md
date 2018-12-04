@@ -180,7 +180,7 @@ SET @local_variable {+= | -= | *= | /= | %= | &= | ^= | |= } expression
   
  The compound assignment operator can be used anywhere you have an assignment with an expression on the right hand side of the operator, including variables, and a SET in an UPDATE, SELECT and RECEIVE statement.  
   
- Do not use a variable in a SELECT statement to concatenate values (that is, to compute aggregate values). Unexpected query results may occur. This is because all expressions in the SELECT list (including assignments) are not guaranteed to be executed exactly once for each output row. For more information, see [this KB article](http://support.microsoft.com/kb/287515).  
+ Do not use a variable in a SELECT statement to concatenate values (that is, to compute aggregate values). Unexpected query results may occur. This is because all expressions in the SELECT list (including assignments) are not guaranteed to be executed exactly once for each output row. For more information, see [this KB article](https://support.microsoft.com/kb/287515).  
   
 ## Permissions  
  Requires membership in the public role. All users can use SET **@***local_variable*.  

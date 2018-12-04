@@ -103,7 +103,7 @@ manager: craigg
  **Next topic:** [Determine Whether the Change Data Is Ready](../../integration-services/change-data-capture/determine-whether-the-change-data-is-ready.md)  
   
 ## See Also  
- [Use Variables in Packages](http://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787)   
+ [Use Variables in Packages](https://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787)   
  [Integration Services &#40;SSIS&#41; Expressions](../../integration-services/expressions/integration-services-ssis-expressions.md)   
  [Execute SQL Task](../../integration-services/control-flow/execute-sql-task.md)   
  [Script Task](../../integration-services/control-flow/script-task.md)  

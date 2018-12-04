@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "03/08/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "replication"
+ms.technology: replication
 ms.topic: conceptual
 ms.assetid: 1a8e6bc7-433e-471d-b646-092dc80a2d1a
 author: MashaMSFT
@@ -236,7 +235,7 @@ manager: craigg
     GO  
     ```  
   
-6.  Apply the schema to a subscriber’s database and save the schema for future use.  
+6.  Apply the schema to a subscriber's database and save the schema for future use.  
   
 7.  Load the publisher (source) data to the subscriber. Data should not change at the publisher until you add a subscription.  You can use BCP as shown below:  
   

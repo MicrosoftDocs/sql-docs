@@ -5,8 +5,7 @@ ms.date: "03/15/2017"
 ms.prod: sql
 ms.prod_service: "mds"
 ms.reviewer: ""
-ms.technology: 
-  - "master-data-services"
+ms.technology: master-data-services
 ms.topic: conceptual
 helpviewer_keywords: 
   - "attributes [Master Data Services], creating link attributes"
@@ -20,10 +19,10 @@ manager: craigg
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-  In [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], create a link attribute when you want users to enter a hyperlink as an attribute value, such as http://www.contoso.com.  
+  In [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], create a link attribute when you want users to enter a hyperlink as an attribute value, such as https://www.contoso.com.  
   
 > [!NOTE]  
->  When users enter a value for a link attribute, the string must begin with **http://** or an error will be displayed.  
+>  When users enter a value for a link attribute, the string must begin with **https://** or an error will be displayed.  
   
 ## Prerequisites  
  To perform this procedure:  

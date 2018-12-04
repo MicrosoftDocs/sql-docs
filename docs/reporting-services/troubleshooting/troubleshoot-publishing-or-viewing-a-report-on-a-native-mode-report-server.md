@@ -25,7 +25,7 @@ Report Server Name is Not Specified Correctly
   
 When you deploy the report to a report server in native mode, a common error is to specify the name of the reports folder instead of the name of the report server.   
   
-Verify that the report server URL is the address of the report server (for example, `http://localhost/reportserver`), not the address of the Report Manager virtual directory (for example, `http://localhost/reports`). If you have specified a port number for the report server that is different than the default port number 80, you must specify it in the report server address (for example, `http://localhost:81/reportserver`).   
+Verify that the report server URL is the address of the report server (for example, `https://localhost/reportserver`), not the address of the Report Manager virtual directory (for example, `https://localhost/reports`). If you have specified a port number for the report server that is different than the default port number 80, you must specify it in the report server address (for example, `https://localhost:81/reportserver`).   
   
  ## Nothing happens when I toggle items in my published report.  
   When you view a report in local preview, you can toggle items in the report and show or hide them. When you view the same report after it is published to the report server, toggle items no longer work.   

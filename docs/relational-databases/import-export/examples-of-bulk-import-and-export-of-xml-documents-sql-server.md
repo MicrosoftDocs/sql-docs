@@ -39,7 +39,7 @@ manager: craigg
 For more information, see the following topics.
 - [Import and Export Bulk Data by Using the bcp Utility (SQL Server).](../../relational-databases/import-export/import-and-export-bulk-data-by-using-the-bcp-utility-sql-server.md)
 - [Import Bulk Data by Using BULK INSERT or OPENROWSET (BULK...)(SQL Server).](../../relational-databases/import-export/import-bulk-data-by-using-bulk-insert-or-openrowset-bulk-sql-server.md) 
-- [How to import XML into SQL Server with the XML Bulk Load component.](https://support.microsoft.com/en-us/kb/316005)
+- [How to import XML into SQL Server with the XML Bulk Load component.](https://support.microsoft.com/kb/316005)
 - [XML Schema Collections (SQL Server)](../xml/xml-schema-collections-sql-server.md)
   
 ## Examples  
@@ -56,7 +56,7 @@ For more information, see the following topics.
 -  [E. Bulk exporting XML data](#bulk_export_xml_data)  
   
 ## <a name="binary_byte_stream"></a>Bulk importing XML data as a binary byte stream  
- When you bulk import XML data from a file that contains an encoding declaration that you want to apply, specify the SINGLE_BLOB option in the OPENROWSET(BULK…) clause. The SINGLE_BLOB option ensures that the XML parser in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] imports the data according to the encoding scheme specified in the XML declaration.  
+ When you bulk import XML data from a file that contains an encoding declaration that you want to apply, specify the SINGLE_BLOB option in the OPENROWSET(BULK...) clause. The SINGLE_BLOB option ensures that the XML parser in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] imports the data according to the encoding scheme specified in the XML declaration.  
   
 #### Sample Table  
  To test example A below, create sample table `T`.  
@@ -152,7 +152,7 @@ GO
   
  To work around this problem, you can import XML data from a data file that contains a DTD by using the `OPENROWSET(BULK...)` function and then specifying the `CONVERT` option in the `SELECT` clause of the command. The basic syntax for the command is:  
   
- `INSERT ... SELECT CONVERT(…) FROM OPENROWSET(BULK...)`  
+ `INSERT ... SELECT CONVERT(...) FROM OPENROWSET(BULK...)`  
   
 #### Sample Data File  
  Before you can test this bulk import example, create a file (`C:\temp\Dtdfile.xml`) that contains the following sample instance:  

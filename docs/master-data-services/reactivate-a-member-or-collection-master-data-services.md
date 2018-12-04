@@ -5,8 +5,7 @@ ms.date: "04/01/2016"
 ms.prod: sql
 ms.prod_service: "mds"
 ms.reviewer: ""
-ms.technology: 
-  - "master-data-services"
+ms.technology: master-data-services
 ms.topic: conceptual
 helpviewer_keywords: 
   - "collections [Master Data Services], reactivating"
@@ -34,7 +33,7 @@ manager: craigg
   
  When you reactivate a member, its attributes and its membership in hierarchies and collections are restored.  
   
- You can also reactivate collections. When you do, the collection’s attributes and the members that belong to the collection are restored.  
+ You can also reactivate collections. When you do, the collection's attributes and the members that belong to the collection are restored.  
   
  When either a collection or member is reactivated, all previous transactions are restored.  
   

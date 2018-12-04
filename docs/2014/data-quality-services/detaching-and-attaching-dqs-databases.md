@@ -65,7 +65,7 @@ manager: craigg
     C:\Program Files\Microsoft SQL Server\MSSQL12.MSSQLSERVER\MSSQL\DATA\DQS_MAIN.mdf  
     ```  
   
-5.  The **database details** (lower) pane displays the names of the files to be attached. To verify or change the pathname of a file, click the **Browse** button (…).  
+5.  The **database details** (lower) pane displays the names of the files to be attached. To verify or change the pathname of a file, click the **Browse** button (...).  
   
 6.  Click **OK** to attach the DQS_MAIN database.  
   

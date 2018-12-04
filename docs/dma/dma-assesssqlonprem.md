@@ -43,7 +43,7 @@ The following step-by-step instructions help you perform your first assessment f
    When you're assessing your source SQL Server instance for migrating to on-premises SQL Server or to SQL Server hosted on Azure VM targets, you can choose one or both of the following assessment report types:
 
     -   **Compatibility Issues**
-    -   **New features’ recommendation**
+    -   **New features' recommendation**
 
     ![Select an assessment report type for SQL Server target](../dma/media/AssessmentTypes.png)
 

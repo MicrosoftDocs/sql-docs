@@ -27,7 +27,7 @@ manager: craigg
 ## Common Issues  
  Cannot connect to model  
   No content is displayed  
-  Can’t see the details  
+  Can't see the details  
   
 ## See Also  
  [Viewing Data Mining Models in Visio &#40;Data Mining Add-ins&#41;](viewing-data-mining-models-in-visio-data-mining-add-ins.md)   

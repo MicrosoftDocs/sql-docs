@@ -5,7 +5,7 @@ ms.date: "04/10/2018"
 ms.prod: sql
 ms.prod_service: "search, sql-database"
 ms.reviewer: ""
-ms.technology: database-engine
+ms.technology:
 ms.topic: conceptual
 helpviewer_keywords: 
   - "full-text search [SQL Server]"
@@ -55,21 +55,21 @@ A full-text index includes one or more character-based columns in a table. These
   
  Full-text queries use a small set of [!INCLUDE[tsql](../../includes/tsql-md.md)] predicates (CONTAINS and FREETEXT) and functions (CONTAINSTABLE and FREETEXTTABLE). However, the search goals of a given business scenario influence the structure of the full-text queries. For example:  
   
--   e-business—searching for a product on a website:  
+-   e-business-searching for a product on a website:  
   
     ```  
     SELECT product_id   
     FROM products   
-    WHERE CONTAINS(product_description, ”Snap Happy 100EZ” OR FORMSOF(THESAURUS,’Snap Happy’) OR ‘100EZ’)   
+    WHERE CONTAINS(product_description, "Snap Happy 100EZ" OR FORMSOF(THESAURUS,'Snap Happy') OR '100EZ')   
     AND product_cost < 200 ;  
     ```  
   
--   Recruitment scenario—searching for job candidates that have experience working with [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:  
+-   Recruitment scenario-searching for job candidates that have experience working with [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:  
   
     ```  
     SELECT candidate_name,SSN   
     FROM candidates   
-    WHERE CONTAINS(candidate_resume,”SQL Server”) AND candidate_division =DBA;  
+    WHERE CONTAINS(candidate_resume,"SQL Server") AND candidate_division =DBA;  
     ```  
   
  For more information, see [Query with Full-Text Search](../../relational-databases/search/query-with-full-text-search.md).  

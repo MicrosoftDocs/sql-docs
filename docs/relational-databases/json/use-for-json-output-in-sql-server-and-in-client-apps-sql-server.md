@@ -105,10 +105,6 @@ else
 
 ## Learn more about JSON in SQL Server and Azure SQL Database  
   
-### Microsoft blog posts  
-  
-For specific solutions, use cases, and recommendations, see these [blog posts](http://blogs.msdn.com/b/sqlserverstorageengine/archive/tags/json/) about the built-in JSON support in SQL Server and Azure SQL Database.  
-
 ### Microsoft videos
 
 For a visual introduction to the built-in JSON support in SQL Server and Azure SQL Database, see the following videos:

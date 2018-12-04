@@ -4,9 +4,7 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "database-engine"
-  - "docset-sql-devref"
+ms.technology: xml
 ms.topic: "reference"
 helpviewer_keywords: 
   - "sql:guid"
@@ -36,7 +34,7 @@ manager: craigg
  The `sql:identity` and `sql:guid` annotations can be defined on a complex content element.  
   
 ## sql:identity Annotation  
- You can specify the `sql:identity` annotation in the XSD schema on any node that maps to an IDENTITY-type database column. The value specified for this annotation defines how the IDENTITY-type column is updated (either by using the value provided in the updategram to modify the column or by ignoring the value, in which case a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]–generated value is used for this column).  
+ You can specify the `sql:identity` annotation in the XSD schema on any node that maps to an IDENTITY-type database column. The value specified for this annotation defines how the IDENTITY-type column is updated (either by using the value provided in the updategram to modify the column or by ignoring the value, in which case a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-generated value is used for this column).  
   
  The `sql:identity` annotation can be assigned two values:  
   

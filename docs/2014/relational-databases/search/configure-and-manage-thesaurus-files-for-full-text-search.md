@@ -23,7 +23,7 @@ manager: craigg
   
 -   Diacritics setting  
   
-     For a given thesaurus, all search patterns are either sensitive or insensitive to diacritical marks such as a tilde (**~**), acute accent mark (**´**), or umlaut (**¨**) (that is, *accent sensitive* or *accent insensitive*). For example, suppose you specify the pattern "café" to be replaced by other patterns in a full-text query. If the thesaurus is accent-insensitive, full-text search replaces the patterns "café" and "cafe". If the thesaurus is accent-sensitive, full-text search replaces only the pattern "café". By default, a thesaurus is accent-insensitive.  
+     For a given thesaurus, all search patterns are either sensitive or insensitive to diacritical marks such as a tilde (**~**), acute accent mark (**??**), or umlaut (**??**) (that is, *accent sensitive* or *accent insensitive*). For example, suppose you specify the pattern "caf??" to be replaced by other patterns in a full-text query. If the thesaurus is accent-insensitive, full-text search replaces the patterns "caf??" and "cafe". If the thesaurus is accent-sensitive, full-text search replaces only the pattern "caf??". By default, a thesaurus is accent-insensitive.  
   
 -   Expansion set  
   
@@ -81,7 +81,7 @@ manager: craigg
   
      The default file names of the thesaurus files use following format:  
   
-     ‘ts’ + \<three-letter language-abbreviation> + '.xml'  
+     'ts' + \<three-letter language-abbreviation> + '.xml'  
   
      The name of the thesaurus file for a given language is specified in the registry in the following value HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<instance-name>\MSSearch\\<language-abbrev>.  
   
@@ -101,7 +101,7 @@ manager: craigg
   
   
 ##  <a name="structure"></a> Understanding the Structure of a Thesaurus File  
- Each thesaurus file defines an XML container whose ID is `Microsoft Search Thesaurus`, and a comment, `<!--` … `-->`, that contains a sample thesaurus. The thesaurus is defined in a \<thesaurus> element that contains samples of the child elements that define the diacritics setting, expansion sets, and replacement sets, as follows:  
+ Each thesaurus file defines an XML container whose ID is `Microsoft Search Thesaurus`, and a comment, `<!--` ... `-->`, that contains a sample thesaurus. The thesaurus is defined in a \<thesaurus> element that contains samples of the child elements that define the diacritics setting, expansion sets, and replacement sets, as follows:  
   
 -   XML Structure of the Diacritical Setting  
   

@@ -5,8 +5,7 @@ ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
-ms.technology: 
-  - "database-engine"
+ms.technology: configuration
 ms.topic: conceptual
 helpviewer_keywords: 
   - "logs [SQL Server], files"
@@ -72,7 +71,7 @@ manager: craigg
   
 8.  Specify the initial size of the file. Make the data file as large as possible, based on the maximum amount of data you expect in the database.  
   
-9. To specify how the file should grow, click (**…**) in the **Autogrowth** column. Select from the following options:  
+9. To specify how the file should grow, click (**...**) in the **Autogrowth** column. Select from the following options:  
   
     1.  To allow for the currently selected file to grow as more data space is required, select the **Enable Autogrowth** check box and then select from the following options:  
   

@@ -46,9 +46,9 @@ The following elements are used in the SQL statements listed previously.
   
  *dynamic-parameter* ::= ?  
   
- *expression* ::= term &#124; expression {+&#124;–} term  
+ *expression* ::= term &#124; expression {+&#124;-} term  
   
- *factor* ::= [*+*&#124;*–*]*primary*  
+ *factor* ::= [*+*&#124;*-*]*primary*  
   
  *insert-value* ::=  
   

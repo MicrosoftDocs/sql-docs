@@ -70,7 +70,7 @@
 - name: Tutorials
   href: tutorials/machine-learning-services-tutorials.md
   items:
-  - name: Data
+  - name: Sample data
     items:
     - name: Airline data set
       href: tutorials/demo-data-airlinedemo-in-sql.md
@@ -82,65 +82,61 @@
     href: tutorials/sql-server-python-tutorials.md
     items:
     - name: Train and use your first model
-      href: tutorials/train-score-using-python-in-tsql.md    
+      href: tutorials/train-score-using-python-in-tsql.md 
+    - name: Create a Python model using revoscalepy
+      href: tutorials/use-python-revoscalepy-to-create-model.md  
     - name: Learn in-database analytics
       href: tutorials/sqldev-in-database-python-for-sql-developers.md
       items:
-      - name: 1 - Visualize data
+      - name: 1 - Data exploration
         href: tutorials/sqldev-py3-explore-and-visualize-the-data.md
-      - name: 2 - Create data features
+      - name: 2 - Feature engineering
         href: tutorials/sqldev-py4-create-data-features-using-t-sql.md
-      - name: 3 - Train and save to SQL
+      - name: 3 - Train and deploy
         href: tutorials/sqldev-py5-train-and-save-a-model-using-t-sql.md
-      - name: 4 - Predict outcomes
+      - name: 4 - Predictions
         href: tutorials/sqldev-py6-operationalize-the-model.md
-    - name: Create a model using revoscalepy
-      href: tutorials/use-python-revoscalepy-to-create-model.md
   - name: R
     href: tutorials/sql-server-r-tutorials.md
     items:
     - name: Create partition-based models
       href: tutorials/r-tutorial-create-models-per-partition.md
-    - name: Learn in-database analytics
+    - name: In-database analytics for SQL developers
       href: tutorials/sqldev-in-database-r-for-sql-developers.md
       items:
-      - name: 1 - Visualize data
+      - name: 1 - Data exploration
         href: tutorials/sqldev-explore-and-visualize-the-data.md
-      - name: 2 - Create data features
+      - name: 2 - Feature engineering
         href: tutorials/sqldev-create-data-features-using-t-sql.md
-      - name: 3 - Train and save to SQL
+      - name: 3 - Train and deploy
         href: tutorials/sqldev-train-and-save-a-model-using-t-sql.md
-      - name: 4 - Predict outcomes
+      - name: 4 - Predictions
         href: tutorials/sqldev-operationalize-the-model.md
-    - name: Data science end-to-end walkthrough
+    - name: In-database analytics for data scientists
       href: tutorials/walkthrough-data-science-end-to-end-walkthrough.md
       items:
-      - name: Prepare data
-        href: tutorials/walkthrough-prepare-the-data.md
-      - name: Explore data using SQL
-        href: tutorials/walkthrough-view-and-explore-the-data.md
-      - name: Summarize data using R
+      - name: 1 - Data exploration
         href: tutorials/walkthrough-view-and-summarize-data-using-r.md
-      - name: Create graphs and plots
+      - name: 2 - Graphs and plots
         href: tutorials/walkthrough-create-graphs-and-plots-using-r.md
-      - name: Create data features
+      - name: 3 - Feature engineering
         href: tutorials/walkthrough-create-data-features.md
-      - name: Build and save the model
+      - name: 4 - Build and save the model
         href: tutorials/walkthrough-build-and-save-the-model.md
-      - name: Deploy and use the model
+      - name: 5 - Deploy and use the model
         href: tutorials/walkthrough-deploy-and-use-the-model.md
-    - name: Deep dive with RevoScaleR
+    - name: RevoScaleR deep dive
       href: tutorials/deepdive-data-science-deep-dive-using-the-revoscaler-packages.md
       items:
       - name: Create database and permissions
         href: tutorials/deepdive-work-with-sql-server-data-using-r.md
-      - name: Create data objects using RxSqlServerData
+      - name: Create an RxSqlServerData object
         href: tutorials/deepdive-create-sql-server-data-objects-using-rxsqlserverdata.md
       - name: Query and modify data
         href: tutorials/deepdive-query-and-modify-the-sql-server-data.md
       - name: Define a compute context
         href: tutorials/deepdive-define-and-use-compute-contexts.md
-      - name: Create and run R scripts
+      - name: Compute summary statistics
         href: tutorials/deepdive-create-and-run-r-scripts.md
       - name: Visualize data
         href: tutorials/deepdive-visualize-sql-server-data-using-r.md
@@ -150,18 +146,16 @@
         href: tutorials/deepdive-score-new-data.md
       - name: Transform data
         href: tutorials/deepdive-transform-data-using-r.md
-      - name: Load data into memory using rxImport
+      - name: Load data using rxImport
         href: tutorials/deepdive-load-data-into-memory-using-rximport.md
       - name: Create a table using rxDataStep
         href: tutorials/deepdive-create-new-sql-server-table-using-rxdatastep.md
-      - name: Perform chunking analysis using rxDataStep
+      - name: Perform chunking analysis
         href: tutorials/deepdive-perform-chunking-analysis-using-rxdatastep.md
-      - name: Analyze data in local compute context
-        href: tutorials/deepdive-analyze-data-in-local-compute-context.md
       - name: Move data between SQL Server and XDF file
         href: tutorials/deepdive-move-data-between-sql-server-and-xdf-file.md
-      - name: Create a simple simulation
-        href: tutorials/deepdive-create-a-simple-simulation.md
+      - name: Send custom R using rxExec 
+        href: tutorials/r-tutorial-custom-r-functions.md
 - name: Samples
   href: https://github.com/Microsoft/sql-server-samples
 - name: Solutions
@@ -295,13 +289,13 @@
       href: python/what-is-revoscalepy.md
 - name: Resources
   items:
-  - name: Known issues
-    href: known-issues-for-sql-server-machine-learning-services.md
   - name: Release notes
     href: https://docs.microsoft.com/sql/sql-server/sql-server-2017-release-notes
   - name: Troubleshooting
     href: machine-learning-troubleshooting-faq.md
     items:
+    - name: Known issues
+      href: known-issues-for-sql-server-machine-learning-services.md
     - name: Data collection
       href: data-collection-ml-troubleshooting-process.md
     - name: Install and upgrade errors
@@ -323,4 +317,4 @@
     - name: SQL Server
       href: https://social.msdn.microsoft.com/Forums/sqlserver/home?category=sqlserver
     - name: Machine Learning Server
-      href: https://social.msdn.microsoft.com/Forums/home?forum=MicrosoftR
+      href: https://social.msdn.microsoft.com/Forums/en-US/home?forum=MicrosoftR

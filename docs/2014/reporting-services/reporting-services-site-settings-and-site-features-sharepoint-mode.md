@@ -23,7 +23,7 @@ manager: craigg
   
 ## To open the Reporting Services Site Settings page  
   
-1.  From the SharePoint site’s **Site Actions** menu click **Site Settings**.  
+1.  From the SharePoint site's **Site Actions** menu click **Site Settings**.  
   
 2.  In the **Reporting Services** section, click **Reporting Services Site Settings**.  
   

@@ -5,8 +5,6 @@ ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
 ms.technology: 
-  - "database-engine"
-  - "docset-sql-devref"
 ms.topic: "reference"
 api_name: 
   - "LocalDBGetVersions"
@@ -32,7 +30,7 @@ manager: craigg
   
 ## Parameters  
  *pVersionNames*  
- [Output] Contains names of the LocalDB versions that are available on the user’s workstation.  
+ [Output] Contains names of the LocalDB versions that are available on the user's workstation.  
   
  *lpdwNumberOfVersions*  
  [Input/Output] On input holds the number of slots for versions in the *pVersionNames* buffer.   

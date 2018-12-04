@@ -86,11 +86,11 @@ manager: craigg
   
 3.  Expand the table on which you want to create a nonclustered index.  
   
-4.  Right-click the **Indexes** folder, point to **New Index**, and select **Non-Clustered Index…**.  
+4.  Right-click the **Indexes** folder, point to **New Index**, and select **Non-Clustered Index...**.  
   
 5.  In the **New Index** dialog box, on the **General** page, enter the name of the new index in the **Index name** box.  
   
-6.  Under **Index key columns**, click **Add…**.  
+6.  Under **Index key columns**, click **Add...**.  
   
 7.  In the **Select Columns from***table_name* dialog box, select the check box or check boxes of the table column or columns to be added to the nonclustered index.  
   

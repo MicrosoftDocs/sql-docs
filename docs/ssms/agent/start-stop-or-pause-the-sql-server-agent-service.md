@@ -74,7 +74,7 @@ For more information about the Windows permissions required for the [!INCLUDE[ss
   
 For more information, see:  
   
--   [Start, Stop, Pause, Resume, Restart the Database Engine, SQL Server Agent, or SQL Server Browser Service](http://msdn.microsoft.com/32660a02-e5a1-411a-9e57-7066ca459df6)  
+-   [Start, Stop, Pause, Resume, Restart the Database Engine, SQL Server Agent, or SQL Server Browser Service](https://msdn.microsoft.com/32660a02-e5a1-411a-9e57-7066ca459df6)  
   
 -   [Autostart SQL Server Agent &#40;SQL Server Management Studio&#41;](../../ssms/agent/autostart-sql-server-agent-sql-server-management-studio.md)  
   

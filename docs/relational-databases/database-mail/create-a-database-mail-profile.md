@@ -6,15 +6,14 @@ ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
 ms.technology: 
-  - "database-engine"
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Database Mail [SQL Server], public profiles"
   - "profiles [SQL Server], Database Mail"
   - "public profiles [Database Mail]"
 ms.assetid: 58ae749d-6ada-4f9c-bf00-de7c7a992a2d
-author: "stevestein"
-ms.author: "sstein"
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # Create a Database Mail Profile

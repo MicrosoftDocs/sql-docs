@@ -85,7 +85,7 @@ for xml PATH
 SELECT   
        ProductModelID,  
        Name,  
-       Instructions.query('declare namespace MI="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";  
+       Instructions.query('declare namespace MI="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";  
                 /MI:root/MI:Location   
               ') as ManuWorkCenterInformation  
 FROM Production.ProductModel  
@@ -151,7 +151,7 @@ FOR XML PATH, ELEMENTS XSINIL
  This is the result:  
   
 ```  
-<row xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"   
+<row xmlns:xsi="https://www.w3.org/2001/XMLSchema-instance"   
       EmpID="1">  
   <EmpName>  
     <First>Gustavo</First>  

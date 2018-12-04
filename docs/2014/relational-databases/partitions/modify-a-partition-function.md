@@ -4,7 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: table-view-index
+ms.technology: 
 ms.topic: conceptual
 ms.assetid: ae5bfc09-f27a-4ea9-9518-485278b11674
 author: MikeRayMSFT
@@ -15,7 +15,7 @@ manager: craigg
   You can change the way a table or index is partitioned in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] by adding or subtracting the number of partitions specified, in increments of 1, in the partition function of the partitioned table or index by using [!INCLUDE[tsql](../../includes/tsql-md.md)]. When you add a partition, you do so by "splitting" an existing partition into two partitions and redefining the boundaries of the new partitions. When you drop a partition, you do so by "merging" the boundaries of two partitions into one. This last action repopulates one partition and leaves the other partition unassigned.  
   
 > [!CAUTION]  
->  More than one table or index can use the same partition function. When you modify a partition function, you affect all of them in a single transaction. Check the partition function’s dependencies before modifying it.  
+>  More than one table or index can use the same partition function. When you modify a partition function, you affect all of them in a single transaction. Check the partition function's dependencies before modifying it.  
   
  **In This Topic**  
   
@@ -50,7 +50,7 @@ manager: craigg
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] does not provide replication support for modifying a partition function. If you want to make changes to a partition function in the publication database, you must do this manually in the subscription database.  
   
--   All filegroups that are affected by ALTER PARITITION FUNCTION must be online.  
+-   All filegroups that are affected by ALTER PARTITION FUNCTION must be online.  
   
 ###  <a name="Security"></a> Security  
   
@@ -89,12 +89,12 @@ manager: craigg
 3.  Copy and paste the following example into the query window and click **Execute**.  
   
     ```  
-    -- Look for a previous version of the partition function “myRangePF1” and deletes it if it is found.  
+    -- Look for a previous version of the partition function "myRangePF1" and deletes it if it is found.  
     IF EXISTS (SELECT * FROM sys.partition_functions  
         WHERE name = 'myRangePF1')  
         DROP PARTITION FUNCTION myRangePF1;  
     GO  
-    -- Create a new partition function called “myRangePF1” that partitions a table into four partitions.  
+    -- Create a new partition function called "myRangePF1" that partitions a table into four partitions.  
     CREATE PARTITION FUNCTION myRangePF1 (int)  
     AS RANGE LEFT FOR VALUES ( 1, 100, 1000 );  
     GO  
@@ -114,12 +114,12 @@ manager: craigg
 3.  Copy and paste the following example into the query window and click **Execute**.  
   
     ```  
-    -- Look for a previous version of the partition function “myRangePF1” and deletes it if it is found.  
+    -- Look for a previous version of the partition function "myRangePF1" and deletes it if it is found.  
     IF EXISTS (SELECT * FROM sys.partition_functions  
         WHERE name = 'myRangePF1')  
         DROP PARTITION FUNCTION myRangePF1;  
     GO  
-    -- Create a new partition function called “myRangePF1” that partitions a table into four partitions.  
+    -- Create a new partition function called "myRangePF1" that partitions a table into four partitions.  
     CREATE PARTITION FUNCTION myRangePF1 (int)  
     AS RANGE LEFT FOR VALUES ( 1, 100, 1000 );  
     GO  

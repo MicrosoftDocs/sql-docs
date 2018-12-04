@@ -48,7 +48,7 @@ CREATE SUBCUBE Subcube_Identifier AS Subcube_Expression
   
  Additionally, aggregate values within the subcube are visually totaled. For example, a subcube contains `USA`, `WA`, and `OR`. The aggregate value for `USA` will be the sum of `{WA,OR}` because `WA` and `OR` are the only states defined by the subcube. All other states will be ignored.  
   
- Also, explicit references to cells outside the subcube return cell values that are evaluated in the context of the whole cube. For example, you create a subcube that is limited to the current year. You then use the [ParallelPeriod](/sql/mdx/parallelperiod-mdx) function to compare the current year to the previous year. The difference in values will be returned even though the previous year’s value lies outside the subcube.  
+ Also, explicit references to cells outside the subcube return cell values that are evaluated in the context of the whole cube. For example, you create a subcube that is limited to the current year. You then use the [ParallelPeriod](/sql/mdx/parallelperiod-mdx) function to compare the current year to the previous year. The difference in values will be returned even though the previous year's value lies outside the subcube.  
   
  Finally, if the original context is not overwritten, set functions evaluated in a subselect are evaluated in the context of the subselect. If the context is overwritten, set functions are evaluated in the context of the whole cube.  
   

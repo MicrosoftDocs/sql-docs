@@ -55,9 +55,9 @@ manager: craigg
   
      Clustered index: 1 million * 200 bytes / 80% ~ 250 MB  
   
-     Nonclustered index A: 1 million * (50 – 8 + 24) bytes / 80% ~ 83 MB  
+     Nonclustered index A: 1 million * (50 - 8 + 24) bytes / 80% ~ 83 MB  
   
-     Nonclustered index B: 1 million * (80 – 8 + 24) bytes / 80% ~ 120 MB  
+     Nonclustered index B: 1 million * (80 - 8 + 24) bytes / 80% ~ 120 MB  
   
      Total size of new structures: 453 MB  
   

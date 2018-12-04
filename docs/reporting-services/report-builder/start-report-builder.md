@@ -33,7 +33,7 @@ ms.author: maggies
   
 ## To start [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] from the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] web portal  
   
-1.  In your Web browser, type the URL for your report server in the address bar. By default, the URL is http://\<*servername*>/reports.  
+1.  In your Web browser, type the URL for your report server in the address bar. By default, the URL is https://\<*servername*>/reports.  
   
 2.  In the top bar of the web portal, select **New** > **Paginated Report**.  
   
@@ -61,7 +61,7 @@ ms.author: maggies
 
 ## Next steps
 
-[Report Builder in SQL Server 2016](../../reporting-services/report-builder/report-builder-in-sql-server-2016.md)   
+[Report Builder in SQL Server](../../reporting-services/report-builder/report-builder-in-sql-server-2016.md)   
 [Set default options for Report Builder](../../reporting-services/report-builder/set-default-options-for-report-builder.md)  
 
 More questions? [Try asking the Reporting Services forum](https://go.microsoft.com/fwlink/?LinkId=620231)

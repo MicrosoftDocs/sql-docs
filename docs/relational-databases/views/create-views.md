@@ -57,7 +57,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   
 1.  In **Object Explorer**, expand the database where you want to create your new view.  
   
-2.  Right-click the **Views** folder, then click **New View…**.  
+2.  Right-click the **Views** folder, then click **New View...**.  
   
 3.  In the **Add Table** dialog box, select the element or elements that you want to include in your new view from one of the following tabs: Tables, Views, Functions, and Synonyms.  
   
@@ -71,7 +71,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   
 8.  In the **Choose Name** dialog box, enter a name for the new view and click **OK**.  
   
-     For more information about the query and view designer, see [Query and View Designer Tools &#40;Visual Database Tools&#41;](http://msdn.microsoft.com/library/12e4b5a5-b793-4b6c-a0e5-c450c49bf26f).  
+     For more information about the query and view designer, see [Query and View Designer Tools &#40;Visual Database Tools&#41;](https://msdn.microsoft.com/library/12e4b5a5-b793-4b6c-a0e5-c450c49bf26f).  
   
 ##  <a name="TsqlProcedure"></a> Using Transact-SQL  
   

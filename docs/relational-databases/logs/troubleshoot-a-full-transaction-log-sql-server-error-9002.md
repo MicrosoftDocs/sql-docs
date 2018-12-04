@@ -106,7 +106,7 @@ This statement lets you identify the user ID of the owner of the transaction, so
 Sometimes you just have to end the process; you may have to use the [KILL](../../t-sql/language-elements/kill-transact-sql.md) statement. Please use this statement very carefully,  especially when critical processes are running that you don't want to kill. For more information, see [KILL (Transact-SQL)](../../t-sql/language-elements/kill-transact-sql.md)
 
 ## See also  
-[KB support article - A transaction log grows unexpectedly or becomes full in SQL Server](https://support.microsoft.com/en-us/kb/317375)
+[KB support article - A transaction log grows unexpectedly or becomes full in SQL Server](https://support.microsoft.com/kb/317375)
  [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)   
  [Manage the Size of the Transaction Log File](../../relational-databases/logs/manage-the-size-of-the-transaction-log-file.md)   
  [Transaction Log Backups &#40;SQL Server&#41;](../../relational-databases/backup-restore/transaction-log-backups-sql-server.md)   

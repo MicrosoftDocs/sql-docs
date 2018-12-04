@@ -13,7 +13,7 @@ ms.author: "douglasl"
 manager: craigg
 ---
 # Installing the Microsoft Connector for SAP BW
-  The [!INCLUDE[msCoName](../includes/msconame-md.md)] Connector for SAP BW for SQL Server 2016 is a component of the SQL Server 2016 Feature Pack. To install the Connector for SAP BW and its documentation, download and run the installer from the [SQL Server 2016 Feature Pack web page](http://go.microsoft.com/fwlink/?LinkId=746297).  
+  The [!INCLUDE[msCoName](../includes/msconame-md.md)] Connector for SAP BW for SQL Server 2016 is a component of the SQL Server 2016 Feature Pack. To install the Connector for SAP BW and its documentation, download and run the installer from the [SQL Server 2016 Feature Pack web page](https://go.microsoft.com/fwlink/?LinkId=746297).  
 
 > [!IMPORTANT]
 > Microsoft does not anticipate providing an updated version of the Connector for SAP BW. Microsoft does not own the source code for the SAP BW components, which were developed by a third party, and as a result cannot update them. Consider purchasing the latest SAP connectivity components from a Microsoft ISV partner such as [Theobald Software](https://theobald-software.com/en/xtract-is-productinfo.html). Microsoft's ISV partners have adapted their SAP connectivity components for SSIS for installation in Azure.

@@ -36,7 +36,7 @@ Find the Kerberos KDC (Key Distribution Center) configuration value. Run the fol
 Start `cmd.exe` and run `nltest`.
 
 ```
-nltest /dsgetdc:DOMAIN.COMPANY.COM (where “DOMAIN.COMPANY.COM” maps to your domain’s name)
+nltest /dsgetdc:DOMAIN.COMPANY.COM (where "DOMAIN.COMPANY.COM" maps to your domain's name)
 
 Sample Output
 DC: \\dc-33.domain.company.com
@@ -119,7 +119,7 @@ sudo realm join contoso.com -U 'user@CONTOSO.COM' -v
 
 ### macOS
 
-- Join your macOS to the Active Directory Domain Controller by [following these steps](https://support.apple.com/kb/PH26282?viewlocale=en_US&locale=en_US).
+- Join your macOS to the Active Directory Domain Controller by following these steps:
 
 
 

@@ -66,7 +66,7 @@ FROM [Adventure Works]
   
 ```  
   
- The NON EMPTY keyword, used before the set definition, is an easy way to remove all empty tuples from an axis. For example, in the examples we’ve seen so far there is no data in the cube from August 2004 onwards. To remove all rows from the cellset that have no data in any column, simply add NON EMPTY before the set on the Rows axis definition as follows:  
+ The NON EMPTY keyword, used before the set definition, is an easy way to remove all empty tuples from an axis. For example, in the examples we've seen so far there is no data in the cube from August 2004 onwards. To remove all rows from the cellset that have no data in any column, simply add NON EMPTY before the set on the Rows axis definition as follows:  
   
 ```  
 SELECT {[Measures].[Internet Sales Amount]} ON COLUMNS,  

@@ -30,7 +30,7 @@ manager: craigg
   
 -   To install In-Memory OLTP, select **Database Engine Services** when you install [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)].  
   
-     To install report generation ([Determining if a Table or Stored Procedure Should Be Ported to In-Memory OLTP](determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp.md)) and [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] (to manage In-Memory OLTP via [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] Object Explorer), select **Management Tools—Basic** or **Management Tools—Advanced** when you install [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)].  
+     To install report generation ([Determining if a Table or Stored Procedure Should Be Ported to In-Memory OLTP](determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp.md)) and [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] (to manage In-Memory OLTP via [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] Object Explorer), select **Management Tools-Basic** or **Management Tools-Advanced** when you install [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)].  
   
 ## Important Notes on Using [!INCLUDE[hek_2](../../../includes/hek-2-md.md)]  
   
@@ -46,8 +46,8 @@ manager: craigg
   
 -   If you create one or more databases with memory-optimized tables, you should enable Instant File Initialization (grant the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] service startup account the SE_MANAGE_VOLUME_NAME user right) for the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance. Without Instant File Initialization, memory-optimized storage files (data and delta files) will be initialized upon creation, which can have negative impact on the performance of your workload. For more information about Instant File Initialization, see [Database File Initialization](../databases/database-instant-file-initialization.md). For information on how to enable Instant File Initialization, see [How and Why to Enable Instant File Initialization](http://blogs.msdn.com/b/sql_pfe_blog/archive/2009/12/23/how-and-why-to-enable-instant-file-initialization.aspx).  
   
-## Did this Article Help You? We’re Listening  
- What information are you looking for, and did you find it? We’re listening to your feedback to improve the content. Please submit your comments to [sqlfeedback@microsoft.com](mailto:sqlfeedback@microsoft.com?subject=Your%20feedback%20about%20the%20Requirements%20for%20Using%20Memory-Optimized%20Tables%20page).  
+## Did this Article Help You? We're Listening  
+ What information are you looking for, and did you find it? We're listening to your feedback to improve the content. Please submit your comments to [sqlfeedback@microsoft.com](mailto:sqlfeedback@microsoft.com?subject=Your%20feedback%20about%20the%20Requirements%20for%20Using%20Memory-Optimized%20Tables%20page).  
   
 ## See Also  
  [In-Memory OLTP &#40;In-Memory Optimization&#41;](in-memory-oltp-in-memory-optimization.md)  

@@ -94,7 +94,7 @@ manager: craigg
   
     -   To configure read-only routing for the primary role, in the ADD REPLICA or MODIFY REPLICA WITH clause, specify the PRIMARY_ROLE option, as follows:  
   
-         PRIMARY_ROLE **(** READ_ONLY_ROUTING_LIST **=(‘*`server`*’** [ **,**...*n* ] **))**  
+         PRIMARY_ROLE **(** READ_ONLY_ROUTING_LIST **=('*`server`*'** [ **,**...*n* ] **))**  
   
          where, *server* identifies a server instance that hosts a read-only secondary replica in the availability group.  
   
@@ -104,7 +104,7 @@ manager: craigg
         >  You must set the read-only routing URL before configuring the read-only routing list.  
   
 ###  <a name="TsqlExample"></a> Example (Transact-SQL)  
- The following example modifies two availability replicas of an existing availability group, `AG1` to support read-only routing if one of these replicas currently owns the primary role. To identify the server instances that host the availability replica, this example specifies the instance names—`COMPUTER01` and `COMPUTER02`.  
+ The following example modifies two availability replicas of an existing availability group, `AG1` to support read-only routing if one of these replicas currently owns the primary role. To identify the server instances that host the availability replica, this example specifies the instance names-`COMPUTER01` and `COMPUTER02`.  
   
 ```  
 ALTER AVAILABILITY GROUP [AG1]  

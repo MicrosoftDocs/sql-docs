@@ -15,7 +15,7 @@ manager: "craigg"
 # How to: Use Microsoft SQL Server 2012 Objects in Your Project
 In this example, you will add a sequence object to a database project targeting Microsoft SQL Server 2012.  
   
-Sequences are introduced in Microsoft SQL Server 2012. A sequence is a user-defined schema-bound object that generates a sequence of numeric values according to the specification with which the sequence was created. The sequence of numeric values is generated in an ascending or descending order at a defined interval and may cycle (repeat) as requested.  For more information on sequence objects, see [Sequence Numbers](htttp://msdn.microsoft.com/library/ff878058(SQL.110).aspx). For information on what’s new in Microsoft SQL Server 2012, see [What's New in SQL Server 2012](http://msdn.microsoft.com/library/bb500435(SQL.110).aspx).  
+Sequences are introduced in Microsoft SQL Server 2012. A sequence is a user-defined schema-bound object that generates a sequence of numeric values according to the specification with which the sequence was created. The sequence of numeric values is generated in an ascending or descending order at a defined interval and may cycle (repeat) as requested.  For more information on sequence objects, see [Sequence Numbers](htttp://msdn.microsoft.com/library/ff878058(SQL.110).aspx). For information on what's new in Microsoft SQL Server 2012, see [What's New in SQL Server 2012](https://msdn.microsoft.com/library/bb500435(SQL.110).aspx).  
   
 > [!WARNING]  
 > The following procedures utilize entities created in previous procedures in the [Connected Database Development](../ssdt/connected-database-development.md) and [Project-Oriented Offline Database Development](../ssdt/project-oriented-offline-database-development.md) sections.  
@@ -38,7 +38,7 @@ Sequences are introduced in Microsoft SQL Server 2012. A sequence is a user-defi
     CACHE 10  
     ```  
   
-4.  If your project’s target platform is not set to Microsoft SQL Server 2012, the **Error List** will show a syntax error for the `CREATE SEQUENCE` statement. To correct this, follow the [How to: Change Target Platform and Publish a Database Project](../ssdt/how-to-change-target-platform-and-publish-a-database-project.md) topic to change the target platform accordingly.  
+4.  If your project's target platform is not set to Microsoft SQL Server 2012, the **Error List** will show a syntax error for the `CREATE SEQUENCE` statement. To correct this, follow the [How to: Change Target Platform and Publish a Database Project](../ssdt/how-to-change-target-platform-and-publish-a-database-project.md) topic to change the target platform accordingly.  
   
 5.  Follow the [How to: Change Target Platform and Publish a Database Project](../ssdt/how-to-change-target-platform-and-publish-a-database-project.md) topic to publish the project to a database in your connected Microsoft SQL Server 2012 server.  
   

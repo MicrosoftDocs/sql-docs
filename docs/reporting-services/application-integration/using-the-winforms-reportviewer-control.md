@@ -69,7 +69,7 @@ public partial class Form1 : Form
   
         // Set the report server URL and report path  
         serverReport.ReportServerUrl =   
-            new Uri("http:// <Server Name>/reportserver");  
+            new Uri("https:// <Server Name>/reportserver");  
         serverReport.ReportPath =   
             "/AdventureWorks Sample Reports/Sales Order Detail";  
   
@@ -116,7 +116,7 @@ Public Class Form1
   
         'Set the report server URL and report path  
         serverReport.ReportServerUrl = _  
-           New Uri("http://<Server Name>/reportserver")  
+           New Uri("https://<Server Name>/reportserver")  
         serverReport.ReportPath = _  
            "/AdventureWorks Sample Reports/Sales Order Detail"  
   

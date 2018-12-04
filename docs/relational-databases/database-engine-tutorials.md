@@ -49,7 +49,7 @@ This tutorial helps you understand how to store SQL Server data files in the Win
   
 ## See Also  
 [Tutorials for SQL Server 2016](../sql-server/tutorials-for-sql-server-2016.md)  
-[TechNet WIKI: SQL Server 2012 Samples](http://go.microsoft.com/fwlink/?linkID=220734)  
+[TechNet WIKI: SQL Server 2012 Samples](https://go.microsoft.com/fwlink/?linkID=220734)  
   
   
   

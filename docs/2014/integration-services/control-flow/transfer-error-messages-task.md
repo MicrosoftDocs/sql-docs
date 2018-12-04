@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "integration-services"
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.dts.designer.transfererrormessagestask.f1"
@@ -21,7 +20,7 @@ manager: craigg
   
  The Transfer Error Messages task can be configured to transfer all error messages, or only the specified error messages. User-defined error messages may be available in a number of different languages and the task can be configured to transfer only messages in selected languages. A us_english version of the message that uses code page 1033 must exist on the destination server before you can transfer other language versions of the message to that server.  
   
- The sysmessages table in the master database contains all the error messages—both system and user-defined—that [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] uses.  
+ The sysmessages table in the master database contains all the error messages-both system and user-defined-that [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] uses.  
   
  The user-defined messages to be transferred may already exist on the destination. An error message is defined as a duplicate error message if the identifier and the language are the same. The Transfer Error Messages task can be configured to handle existing error messages in the following ways:  
   

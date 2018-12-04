@@ -53,7 +53,7 @@ manager: kfile
 >  If you want to view the formulas, you can find the complete regression formula at the leaf node level, but not in an intermediate or root node.  
   
 ### Structure of an ARIMA Model  
- The ARIMA algorithm creates a single piece of information for each combination of a data series (such as **[Region]**) and a predictable attribute (such as **[Sales Amount]**)—the equation that describes the change of the predictable attribute over time.  
+ The ARIMA algorithm creates a single piece of information for each combination of a data series (such as **[Region]**) and a predictable attribute (such as **[Sales Amount]**)-the equation that describes the change of the predictable attribute over time.  
   
  The equation for each series is derived from multiple components, one for each periodic structure that was found in the data. For example, if you have sales data that is collected on a monthly basis, the algorithm might detect monthly, quarterly, or yearly periodic structures.  
   
@@ -402,7 +402,7 @@ AND (NODE_TYPE = 29 or NODE_TYPE = 30)
 |27 (ARIMA Root)|Intercept<br /><br /> Periodicity|11|  
 |28 (ARIMA Periodic Structure)|Periodicity<br /><br /> Auto Regressive order<br /><br /> Difference order<br /><br /> Moving average order|12<br /><br /> 13<br /><br /> 15<br /><br /> 14|  
 |29 (ARIMA Autoregressive)|Coefficient<br /><br /> (complement of coefficient)|7|  
-|30 (ARIMA Moving Average)|Value at t<br /><br /> Value at t-1<br /><br /> …<br /><br /> Value at t-n|7|  
+|30 (ARIMA Moving Average)|Value at t<br /><br /> Value at t-1<br /><br /> ...<br /><br /> Value at t-n|7|  
   
  The value for the *moving average order* indicates the number of moving averages in a series. Generally the moving average is calculated `n-1` times if there are `n` terms in a series, but the number can be reduced for easier computation.  
   

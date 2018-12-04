@@ -37,7 +37,7 @@ ms.author: maggies
   
 -   Save your report and related items to a SharePoint library, a report server, or your local computer.  
   
- Report Builder and Report Designer share many features. Read more about [Report Builder in SQL Server 2016](../../reporting-services/report-builder/report-builder-in-sql-server-2016.md).  
+ Report Builder and Report Designer share many features. Read more about [Report Builder in SQL Server](../../reporting-services/report-builder/report-builder-in-sql-server-2016.md).  
   
 ## See Also  
  [Install Report Builder](../../reporting-services/install-windows/install-report-builder.md)   

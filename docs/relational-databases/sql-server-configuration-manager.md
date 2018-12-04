@@ -5,8 +5,7 @@ ms.date: "07/13/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
-ms.technology: 
-  - "database-engine"
+ms.technology:
 ms.topic: conceptual
 helpviewer_keywords: 
   - "protocols [SQL Server], managing"
@@ -68,11 +67,11 @@ manager: craigg
   
  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Configuration Manager allows you to create or remove an alias, change the order in which protocols are uses, or view properties for a server alias, including:  
   
--   Server Alias — The server alias used for the computer to which the client is connecting.  
+-   Server Alias - The server alias used for the computer to which the client is connecting.  
   
--   Protocol — The network protocol used for the configuration entry.  
+-   Protocol - The network protocol used for the configuration entry.  
   
--   Connection Parameters — The parameters associated with the connection address for the network protocol configuration.  
+-   Connection Parameters - The parameters associated with the connection address for the network protocol configuration.  
   
  The [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Configuration Manager also allows you to view information about failover cluster instances, though Cluster Administrator should be used for some actions such as starting and stopping the services.  
   
@@ -80,11 +79,11 @@ manager: craigg
  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] supports Shared Memory, TCP/IP, and Named Pipes protocols. For information about choosing a network protocols, see [Configure Client Protocols](../database-engine/configure-windows/configure-client-protocols.md). [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] does not support the VIA, Banyan VINES Sequenced Packet Protocol (SPP), Multiprotocol, AppleTalk, or NWLink IPX/SPX network protocols. Clients previously connecting with these protocols must select a different protocol to connect to [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. You cannot use [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Configuration Manager to configure the WinSock proxy. To configure the WinSock proxy, see your ISA Server documentation.  
   
 ## Related Tasks  
- [Managing Services How-to Topics &#40;SQL Server Configuration Manager&#41;](http://msdn.microsoft.com/library/78dee169-df0c-4c95-9af7-bf033bc9fdc6)  
+ [Managing Services How-to Topics &#40;SQL Server Configuration Manager&#41;](https://msdn.microsoft.com/library/78dee169-df0c-4c95-9af7-bf033bc9fdc6)  
   
  [Start, Stop, Pause, Resume, Restart the Database Engine, SQL Server Agent, or SQL Server Browser Service](../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md)  
   
- [Start, Stop, or Pause the SQL Server Agent Service](http://msdn.microsoft.com/library/c95a9759-dd30-4ab6-9ab0-087bb3bfb97c)  
+ [Start, Stop, or Pause the SQL Server Agent Service](https://msdn.microsoft.com/library/c95a9759-dd30-4ab6-9ab0-087bb3bfb97c)  
   
  [Set an Instance of SQL Server to Start Automatically &#40;SQL Server Configuration Manager&#41;](../database-engine/configure-windows/scm-services-set-an-instance-to-start-automatically.md)  
   

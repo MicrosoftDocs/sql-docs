@@ -4,7 +4,7 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: native-client
+ms.technology: 
 ms.topic: "reference"
 helpviewer_keywords: 
   - "metadata [OLE DB]"

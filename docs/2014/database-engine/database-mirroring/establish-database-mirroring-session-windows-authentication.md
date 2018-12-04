@@ -20,7 +20,7 @@ manager: craigg
   
  To establish a database mirroring session and to modify the properties of database mirroring for a database, use the **Mirroring** page of the **Database Properties** dialog box.Before you use the **Mirroring** page to configure database mirroring, ensure that the following requirements have been met:  
   
--   The principal and mirror server instances must be running the same edition of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]—either Standard or Enterprise. Also, we strongly recommend that they run on comparable systems that can handle identical workloads.  
+-   The principal and mirror server instances must be running the same edition of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-either Standard or Enterprise. Also, we strongly recommend that they run on comparable systems that can handle identical workloads.  
   
     > [!NOTE]  
     >  A witness server instance is not available in every edition of [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. For a list of features that are supported by the editions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], see [Features Supported by the Editions of SQL Server 2014](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md).  

@@ -1,7 +1,7 @@
 ---
 title: "CAST and CONVERT (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "04/13/2018"
+ms.date: "11/19/2018"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
@@ -188,7 +188,7 @@ For a **binary(n)**, **char(n)**, **varbinary(n)**, or **varchar(n)** *expressio
 Implicit conversions do not require specification of either the CAST function or the CONVERT function. Explicit conversions require specification of the CAST function or the CONVERT function. The following illustration shows all explicit and implicit data type conversions allowed for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] system-supplied data types. These include **bigint**, and **sql_variant**, and **xml**. There is no implicit conversion on assignment from the **sql_variant** data type, but there is implicit conversion to **sql_variant**.
   
 > [!TIP]  
->  The [Microsoft Download Center](http://www.microsoft.com/download/details.aspx?id=35834) has this chart available for download as a PDF file.  
+>  The [Microsoft Download Center](https://www.microsoft.com/download/details.aspx?id=35834) has this chart available for download as a PDF file.  
   
 ![Data type conversion table](../../t-sql/data-types/media/lrdatahd.png "Data type conversion table")
   
@@ -319,7 +319,9 @@ The following table lists the styles for which the string-to-datetime conversion
 |113|130|  
   
 <sup>1</sup> With the exception of styles 20 and 21
-  
+
+For more information, see [Nondeterministic conversion of literal date strings into DATE values](../data-types/nondeterministic-convert-date-literals.md).
+
 ## Supplementary characters (surrogate pairs)
 Starting with [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], when using supplementary character (SC) collations, a CAST operation from **nchar** or **nvarchar** to an **nchar** or **nvarchar** type of smaller length will not truncate inside a surrogate pair. Instead, the operation truncates before the supplementary character. For example, the following code fragment leaves `@x` holding just `'ab'`. There is not enough space to hold the supplementary character.
   

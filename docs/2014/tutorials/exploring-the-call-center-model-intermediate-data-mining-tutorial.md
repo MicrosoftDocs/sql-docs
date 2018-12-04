@@ -20,7 +20,7 @@ manager: craigg
 -   [Microsoft Generic Content Tree Viewer](#bkmk_genviewer) **:** This standard viewer provides in-depth detail about the patterns and statistics discovered by the algorithm when it generated the model.  
   
 ##  <a name="bkmk_NNviewer"></a> Microsoft Neural Network Viewer  
- The viewer has three panes — **Input**, **Output**, and **Variables**.  
+ The viewer has three panes - **Input**, **Output**, and **Variables**.  
   
  By using the **Output** pane, you can select different values for the predictable attribute, or dependent variable. If your model contains multiple predictable attributes, you can select the attribute from the **Output Attribute** list.  
   
@@ -70,7 +70,7 @@ manager: craigg
   
 2.  For **Value**, select **AM**.  
   
-     The **Variables** pane updates to show the impact on the model when the shift is **AM**. All other selections remain the same — you are still comparing the lowest and highest service grades.  
+     The **Variables** pane updates to show the impact on the model when the shift is **AM**. All other selections remain the same - you are still comparing the lowest and highest service grades.  
   
 3.  For **Value**, select **PM1**.  
   

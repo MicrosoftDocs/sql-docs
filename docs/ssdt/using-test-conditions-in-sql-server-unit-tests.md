@@ -82,11 +82,11 @@ After you add a Data Checksum test condition to your database unit test, you mus
   
 3.  (Optional) You might want to change the **(Name)** property of the test condition to be more descriptive.  
   
-4.  In the **Configuration** property, click the browse (**…**) button.  
+4.  In the **Configuration** property, click the browse (**...**) button.  
   
     The **Configuration for TestConditionName** dialog box appears.  
   
-5.  Specify a connection to the database that you want to test. For more information, see [How to: Create a Database Connection](http://msdn.microsoft.com/library/aa833420(VS.100).aspx).  
+5.  Specify a connection to the database that you want to test. For more information, see [How to: Create a Database Connection](https://msdn.microsoft.com/library/aa833420(VS.100).aspx).  
   
 6.  By default, the Transact\-SQL body of your test appears in the edit pane. You can modify the code, if necessary, to produce the expected results. For example, if your test has code in the pre-test, you might have to add that code.  
   
@@ -112,11 +112,11 @@ After you add an Expected Schema test condition to your SQL Server unit test, yo
   
 3.  (Optional) You might want to change the **(Name)** property of the test condition to be more descriptive.  
   
-4.  In the **Configuration** property, click the browse (**…**) button.  
+4.  In the **Configuration** property, click the browse (**...**) button.  
   
     The **Configuration for TestConditionName** dialog box appears.  
   
-5.  Specify a connection to the database that you want to test. For more information, see [How to: Create a Database Connection](http://msdn.microsoft.com/library/aa833420(VS.100).aspx).  
+5.  Specify a connection to the database that you want to test. For more information, see [How to: Create a Database Connection](https://msdn.microsoft.com/library/aa833420(VS.100).aspx).  
   
 6.  By default, the Transact\-SQL body of your test appears in the edit pane. You can modify the code, if necessary, to produce the expected results. For example, if your test has code in the pre-test, you might have to add that code.  
   

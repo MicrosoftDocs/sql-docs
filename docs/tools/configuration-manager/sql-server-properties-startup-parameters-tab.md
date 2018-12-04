@@ -31,7 +31,7 @@ manager: craigg
   
 -   Leading and trailing spaces are trimmed from any startup parameter.  
   
--   All startup parameters start with a – (dash) and the second value is a letter.  
+-   All startup parameters start with a - (dash) and the second value is a letter.  
   
 ## Required Parameters  
  The following parameters are required. They can be changed but not removed.  

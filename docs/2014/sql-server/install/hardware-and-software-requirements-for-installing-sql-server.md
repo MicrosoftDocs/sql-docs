@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "07/10/2018"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "database-engine"
+ms.technology: install
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Setup [SQL Server], software"

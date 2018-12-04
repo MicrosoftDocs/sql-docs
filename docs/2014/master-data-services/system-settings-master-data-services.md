@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "master-data-services"
+ms.technology: master-data-services
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Master Data Services, system settings"
@@ -73,7 +72,7 @@ manager: craigg
   
 |Configuration Manager Setting|System Setting|Description|  
 |-----------------------------------|--------------------|-----------------|  
-|**Number of members in the hierarchy by default**|**HierarchyChildNodeLimit**|In the [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] **Explorer** functional area, the maximum number of members that are displayed in each hierarchy node before **…more…** is displayed. You can click **…more…** to show the next group of members. The default value is **50**.|  
+|**Number of members in the hierarchy by default**|**HierarchyChildNodeLimit**|In the [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] **Explorer** functional area, the maximum number of members that are displayed in each hierarchy node before **...more...** is displayed. You can click **...more...** to show the next group of members. The default value is **50**.|  
 |**Show names in hierarchy by default**|**ShowNamesInHierarchy**|In the [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] **Explorer** functional area, determines the default setting that is selected when you view hierarchies.<br /><br /> The default value is **Yes** or **1**, which indicates that the name and code of each member are displayed. Change to **No** or **2** to display the code only.|  
 |**Number of domain-based attributes in list**|**DBAListRowLimit**|In the [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] **Explorer** functional area, the number of attributes that are displayed in a list when you double-click a domain-based attribute value in the grid. The default value is **50**. If more than 50 members exist, a searchable dialog is displayed instead.|  
 ||**GridFilterDefaultFuzzySimilarityLevel**|In the [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] **Explorer** functional area, the level of similarity used when using the **Matches** filter criteria. The default value is **0.3**. Set the value closer to **1** to return a match that is closer to the search criteria. Set to **1** for an exact match.|  

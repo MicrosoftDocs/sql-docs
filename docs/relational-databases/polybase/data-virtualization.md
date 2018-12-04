@@ -42,7 +42,7 @@ In this step, you create a database master key. Creating a master key is require
 > If you already have a database master key, the input fields are restricted and you can bypass this step. Select **Next** to proceed.
 
 > [!NOTE]
-> If you don’t choose a strong password, the wizard does so in the last step. This is a known issue.
+> If you don't choose a strong password, the wizard does so in the last step. This is a known issue.
 
 ## Enter external data source credentials
 

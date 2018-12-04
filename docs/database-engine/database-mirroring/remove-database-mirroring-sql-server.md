@@ -97,7 +97,7 @@ manager: craigg
     ```  
   
     > [!IMPORTANT]  
-    >  If you recover this database, two divergent databases with the same name are online. Therefore, you need to ensure that clients can access only one of them—typically the most recent principal database.  
+    >  If you recover this database, two divergent databases with the same name are online. Therefore, you need to ensure that clients can access only one of them-typically the most recent principal database.  
   
 ##  <a name="RelatedTasks"></a> Related Tasks  
   

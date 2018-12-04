@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "integration-services"
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords: 
   - "SSIS, operators"
@@ -41,7 +40,7 @@ manager: craigg
 |[& &#40;Bitwise AND&#41; &#40;SSIS Expression&#41;](bitwise-and-ssis-expression.md)|Performs a bitwise AND operation of two integer values.|  
 |[~ &#40;Bitwise Not&#41; &#40;SSIS Expression&#41;](bitwise-not-ssis-expression.md)|Performs a bitwise negation of an integer.|  
 |[== &#40;Equal&#41; &#40;SSIS Expression&#41;](equal-ssis-expression.md)|Performs a comparison to determine if two expressions are equal.|  
-|[!= &#40;Unequal&#41; &#40;SSIS Expression&#41;](unequal-ssis-expression.md)|Performs a comparison to determine if two expressions are not equal.|  
+|[\!= &#40;Unequal&#41; &#40;SSIS Expression&#41;](unequal-ssis-expression.md)|Performs a comparison to determine if two expressions are not equal.|  
 |[&#62; &#40;Greater Than&#41; &#40;SSIS Expression&#41;](greater-than-ssis-expression.md)|Performs a comparison to determine if the first expression is greater than the second one.|  
 |[&#60; &#40;Less Than&#41; &#40;SSIS Expression&#41;](less-than-ssis-expression.md)|Performs a comparison to determine if the first expression is less than the second one.|  
 |[&#62;= &#40;Greater Than or Equal To&#41; &#40;SSIS Expression&#41;](greater-than-or-equal-to-ssis-expression.md)|Performs a comparison to determine if the first expression is greater than or equal to the second one.|  

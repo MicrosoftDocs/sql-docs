@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "database-engine"
+ms.technology: scripting
 ms.topic: conceptual
 ms.assetid: ab9212a6-6628-4f08-a38c-d3156e05ddea
 author: stevestein
@@ -13,7 +12,7 @@ ms.author: sstein
 manager: craigg
 ---
 # Manage Authentication in Database Engine PowerShell
-  By default, the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] PowerShell components use Windows Authentication when connecting to an instance of the [!INCLUDE[ssDE](../includes/ssde-md.md)]. You can use SQL Server Authentication by either defining a PowerShell virtual drive, or by specifying the `–Username` and `–Password` parameters for `Invoke-Sqlcmd`.  
+  By default, the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] PowerShell components use Windows Authentication when connecting to an instance of the [!INCLUDE[ssDE](../includes/ssde-md.md)]. You can use SQL Server Authentication by either defining a PowerShell virtual drive, or by specifying the `-Username` and `-Password` parameters for `Invoke-Sqlcmd`.  
   
 1.  **Before you begin:**  [Permissions](#Permissions)  
   
@@ -65,7 +64,7 @@ cd SQLAuth
 ##  <a name="SQLAuthInvSqlCmd"></a> SQL Server Authentication Using Invoke-Sqlcmd  
  **To use Invoke-Sqlcmd with SQL Server Authentication**  
   
-1.  Use the `–Username` parameter to specify a login ID, and the `–Password` parameter to specify the associated password.  
+1.  Use the `-Username` parameter to specify a login ID, and the `-Password` parameter to specify the associated password.  
   
 ### Example (Invoke-Sqlcmd)  
  This example uses the read-host cmdlet to prompt the user for a password, and then connects using SQL Server Authentication.  
@@ -74,7 +73,7 @@ cd SQLAuth
 ## Prompt the user for their password.  
 $pwd = read-host -AsSecureString -Prompt "Password"  
   
-Invoke-Sqlcmd -Query "SELECT GETDATE() AS TimeOfQuery;" -ServerInstance "MyComputer\MyInstance" –Username “MyLogin” –Password $pwd  
+Invoke-Sqlcmd -Query "SELECT GETDATE() AS TimeOfQuery;" -ServerInstance "MyComputer\MyInstance" -Username "MyLogin" -Password $pwd  
 ```  
   
 ## See Also  

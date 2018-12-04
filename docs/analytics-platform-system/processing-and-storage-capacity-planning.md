@@ -18,14 +18,14 @@ Your business requirements determine the number of Data Scale Units, and the siz
 ## <a name="section1"></a>Planning for processing capacity  
 Query performance for SQL Server Parallel Data Warehouse (PDW) depends heavily on the number of CPU cores working on your data in parallel. Within limits, increasing parallelism improves the massively parallel processing (MPP) query performance. Even if your data size is relatively small, the power of the MPP query engine is enhanced by having greater parallelism.  
   
-For example, an appliance with 12 Compute nodes has 192 CPU cores that process your data in parallel. That’s 192-way parallelism! An appliance with 56 Compute nodes has 896 cores all working in parallel. This magnitude of parallelism is not achievable without MPP computing.  
+For example, an appliance with 12 Compute nodes has 192 CPU cores that process your data in parallel. That's 192-way parallelism! An appliance with 56 Compute nodes has 896 cores all working in parallel. This magnitude of parallelism is not achievable without MPP computing.  
   
 As the number of Compute nodes increases, scaling out the appliance requires adding more than one Compute node at a time to get a noticeable benefit. Hardware vendors support only specific configurations of Data Scale Units to ensure that the benefit of scaling the appliance outweighs the cost of redistributing the data across more Compute nodes.  
   
 ### Data Scale Unit configuration examples - HPE  
 These are examples of the supported HPE configurations for Data Scale Uunits. They might vary from the most current supported configurations, but are provided as an example of how to increase capacity by approximately 20 percent.  
   
-Uplift is the percent capacity gain by increasing the Data Scale Uunits from one row to the next. For example, increasing the Data Scale units from 6 to 8 gives a 33% uplift in CPU cores and memory.  It also increases the disk space which isn’t shown in this table.  
+Uplift is the percent capacity gain by increasing the Data Scale Uunits from one row to the next. For example, increasing the Data Scale units from 6 to 8 gives a 33% uplift in CPU cores and memory.  It also increases the disk space which isn't shown in this table.  
   
 |Data Scale units|Compute nodes|CPU cores|Memory (GB)|Uplift|  
 |--------------------|-----------------|-------------|-----------------|----------|  
@@ -53,10 +53,10 @@ Explanation:
   
 -   **Memory** per appliance. Each core has 256 GB memory.  
   
-### Data Scale unit configuration examples – Dell, Quanta  
+### Data Scale unit configuration examples - Dell, Quanta  
 These are examples of the supported Dell and Quanta configurations for Data Scale Uunits. They might vary from the most current supported configurations, but are provided as an example of how to increase capacity by approximately 20 percent.  
   
-Uplift is the percent capacity gain by increasing the Data Scale Uunits from one row to the next. For example, increasing the Data Scale units from 6 to 8 gives a 33% uplift in CPU cores and memory. It also increases the disk space which isn’t shown in this table.  
+Uplift is the percent capacity gain by increasing the Data Scale Uunits from one row to the next. For example, increasing the Data Scale units from 6 to 8 gives a 33% uplift in CPU cores and memory. It also increases the disk space which isn't shown in this table.  
   
 |Data Scale Units|Compute Nodes|CPU Cores|Memory (GB)|Uplift|  
 |--------------------|-----------------|-------------|-----------------|----------|  

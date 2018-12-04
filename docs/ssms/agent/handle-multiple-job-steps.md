@@ -46,7 +46,7 @@ Job steps must be self-contained. That is, a job cannot pass Boolean values, dat
 ## See Also  
 [sp_add_job](../../relational-databases/system-stored-procedures/sp-add-job-transact-sql.md)  
 [sysjobhistory](../../relational-databases/system-tables/dbo-sysjobhistory-transact-sql.md)  
-[sysjobs (Transact-SQL)](http://msdn.microsoft.com/e244a6a5-54c2-47a6-8039-dd1852b0ae59)  
+[sysjobs (Transact-SQL)](https://msdn.microsoft.com/e244a6a5-54c2-47a6-8039-dd1852b0ae59)  
 [sysjobsteps](../../relational-databases/system-tables/dbo-sysjobsteps-transact-sql.md)  
 [Implement Jobs](../../ssms/agent/implement-jobs.md)  
 [Manage Job Steps](../../ssms/agent/manage-job-steps.md)  

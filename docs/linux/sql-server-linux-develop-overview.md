@@ -26,7 +26,7 @@ You can create applications that connect to and use SQL Server on Linux from a v
 
 The best way to get started and build applications with SQL Server is to try it out for yourself.
 
-- Browse to [Getting Started Tutorials](http://aka.ms/sqldev).
+- Browse to [Getting Started Tutorials](https://aka.ms/sqldev).
 - Select your language and development platform.
 - Try the code samples.
 

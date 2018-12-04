@@ -61,7 +61,7 @@ manager: kfile
  [Back to Top](#BKMK_ViewerTabs)  
   
 ###  <a name="BKMK_Dependency"></a> Dependency Net  
- The **Dependency Net** tab includes a dependency network viewer. Each node in the viewer represents an item, such as "state = WA". The arrow between nodes represents the association between items. The direction of the arrow dictates the association between the items according to the rules that the algorithm discovered. For example, if the viewer contains three items, A, B, and C, and C is predicted by A and B, if you select node C, two arrows point toward node C — A to C and B to C.  
+ The **Dependency Net** tab includes a dependency network viewer. Each node in the viewer represents an item, such as "state = WA". The arrow between nodes represents the association between items. The direction of the arrow dictates the association between the items according to the rules that the algorithm discovered. For example, if the viewer contains three items, A, B, and C, and C is predicted by A and B, if you select node C, two arrows point toward node C - A to C and B to C.  
   
  The slider at the left of the viewer acts as a filter that is tied to the probability of the rules. Lowering the slider shows only the strongest links.  
   

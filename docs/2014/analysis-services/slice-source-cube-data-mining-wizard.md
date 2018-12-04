@@ -46,7 +46,7 @@ manager: craigg
  **Operator**  
  Select the operator to use in building a slice expression.  
   
- For example, if you chose Geography as the hierarchy, you could select the operator = and then type “Europe” as the filter, to get cube data for Europe only.  
+ For example, if you chose Geography as the hierarchy, you could select the operator = and then type "Europe" as the filter, to get cube data for Europe only.  
   
  **Filter Expression**  
  Type an expression to use as a criterion when filtering the cube on the selected dimension.  

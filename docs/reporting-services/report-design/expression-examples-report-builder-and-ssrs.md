@@ -161,7 +161,7 @@ To learn how to write expressions that use many of the functions and operators a
 -   The following expression generates the interval years between SellStartDate and LastReceiptDate. These fields are in two different datasets, DataSet1 and DataSet2. The [First Function &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/report-builder-functions-first-function.md), which is an aggregate function, returns the first value of SellStartDate in DataSet1 and the first value of LastReceiptDate in DataSet2.  
   
     ```  
-    =DATEDIFF(“yyyy”, First(Fields!SellStartDate.Value, "DataSet1"), First(Fields!LastReceiptDate.Value, "DataSet2"))  
+    =DATEDIFF("yyyy", First(Fields!SellStartDate.Value, "DataSet1"), First(Fields!LastReceiptDate.Value, "DataSet2"))  
     ```  
   
 -   The **DatePart** function returns an Integer value containing the specified component of a given Date value.The following expression returns the year for the first value of the SellStartDate in DataSet1. The dataset scope is specified because there are multiple datasets in the report.  
@@ -225,7 +225,7 @@ To learn how to write expressions that use many of the functions and operators a
      The following example does the same as the above example, as well as displays a text string prior to the list of selected values.  
   
     ```  
-    =”Report for “ & JOIN(Parameters!MySelection.Value, “ & “)  
+    ="Report for " & JOIN(Parameters!MySelection.Value, " & ")  
   
     ```  
   
@@ -240,7 +240,7 @@ To learn how to write expressions that use many of the functions and operators a
   
 ### Lookup  
   
--   By specifying a key field, you can use the **Lookup** function to retrieve a value from a dataset for a one-to-one relationship, for example, a key-value pair. The following expression displays the product name from a dataset (“Product”), given the product identifier to match on:  
+-   By specifying a key field, you can use the **Lookup** function to retrieve a value from a dataset for a one-to-one relationship, for example, a key-value pair. The following expression displays the product name from a dataset ("Product"), given the product identifier to match on:  
   
     ```  
     =Lookup(Fields!PID.Value, Fields!ProductID.Value, Fields.ProductName.Value, "Product")  
@@ -471,7 +471,7 @@ To learn how to write expressions that use many of the functions and operators a
 -   The following expression, when used as an action on a text box, generates a customized URL that specifies the dataset field `EmployeeID` as a URL parameter.  
   
     ```  
-    ="http://adventure-works/MyInfo?ID=" & Fields!EmployeeID.Value  
+    ="https://adventure-works/MyInfo?ID=" & Fields!EmployeeID.Value  
     ```  
   
      For more information, see [Add a Hyperlink to a URL &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/add-a-hyperlink-to-a-url-report-builder-and-ssrs.md).  
@@ -479,7 +479,7 @@ To learn how to write expressions that use many of the functions and operators a
 -   The following expression conditionally controls whether to add a URL in a text box. This expression depends on a parameter named `IncludeURLs` that allows a user to decide whether to include active URLs in a report. This expression is set as an action on a text box. By setting the parameter to False and then viewing the report, you can export the report Microsoft Excel without hyperlinks.  
   
     ```  
-    =IIF(Parameters!IncludeURLs.Value,"http://adventure-works.com/productcatalog",Nothing)  
+    =IIF(Parameters!IncludeURLs.Value,"https://adventure-works.com/productcatalog",Nothing)  
     ```  
   
 ##  <a name="ReportData"></a> Report Data  
@@ -539,7 +539,7 @@ To learn how to write expressions that use many of the functions and operators a
     End Function  
     ```  
   
-     The following expression shows how to call this custom code from a text box, for the “ColumnGroupByYear” container (group or data region).  
+     The following expression shows how to call this custom code from a text box, for the "ColumnGroupByYear" container (group or data region).  
   
     ```  
     =Code.GetDeltaPercentage(Previous(Sum(Fields!Sales.Value),"ColumnGroupByYear"), Sum(Fields!Sales.Value))  

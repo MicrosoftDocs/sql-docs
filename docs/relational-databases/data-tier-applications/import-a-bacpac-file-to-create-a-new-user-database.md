@@ -29,7 +29,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
 ---
 # Import a BACPAC File to Create a New User Database
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  Import a data-tier application (DAC) file – a .bacpac file – to create a copy of the original database, with the data, on a new instance of the [!INCLUDE[ssDE](../../includes/ssde-md.md)], or to [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]. Export-import operations can be combined to migrate a DAC or database between instances, or to create a logical backup, such as creating an on-premise copy of a database deployed in [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
+  Import a data-tier application (DAC) file - a .bacpac file - to create a copy of the original database, with the data, on a new instance of the [!INCLUDE[ssDE](../../includes/ssde-md.md)], or to [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]. Export-import operations can be combined to migrate a DAC or database between instances, or to create a logical backup, such as creating an on-premise copy of a database deployed in [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
   
 ## Before You Begin  
  The import process builds a new DAC in two stages.  
@@ -84,18 +84,18 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
   
  **Options**  
   
--   **Do not show this page again.** – Click the check box to stop the Introduction page from being displayed in the future.  
+-   **Do not show this page again.** - Click the check box to stop the Introduction page from being displayed in the future.  
   
--   **Next** – Proceeds to the **Import Settings** page.  
+-   **Next** - Proceeds to the **Import Settings** page.  
   
--   **Cancel** – Cancels the operation and closes the wizard.  
+-   **Cancel** - Cancels the operation and closes the wizard.  
   
 ###  <a name="Import_settings"></a> Import Settings Page  
  Use this page to specify the location of the .bacpac file to import.  
   
--   **Import from local disk** – Click **Browse…** to navigate the local computer, or specify the path in the space provided. The path name must include a file name and the .bacpac extension.  
+-   **Import from local disk** - Click **Browse...** to navigate the local computer, or specify the path in the space provided. The path name must include a file name and the .bacpac extension.  
   
--   **Import from Azure** – Imports a BACPAC file from a Microsoft Azure container. You must connect to an Microsoft Azure container to validate this option. Note that this option also requires that you specify a local directory for the temporary file. The temporary file will be created at the specified location and will remain there after the operation completes.  
+-   **Import from Azure** - Imports a BACPAC file from a Microsoft Azure container. You must connect to an Microsoft Azure container to validate this option. Note that this option also requires that you specify a local directory for the temporary file. The temporary file will be created at the specified location and will remain there after the operation completes.  
   
      When browsing Azure, you will be able to switch between containers within a single account. You must specify a single .bacpac file to continue the import operation. Note that you can sort columns by **Name**, **Size**, or **Date Modified**.  
   
@@ -106,11 +106,11 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
   
  **For a local instance of SQL Server:**  
   
--   **New database name** – Provide a name for the imported database.  
+-   **New database name** - Provide a name for the imported database.  
   
--   **Data file path** – Provide a local directory for data files. Click **Browse…** to navigate the local computer, or specify the path in the space provided.  
+-   **Data file path** - Provide a local directory for data files. Click **Browse...** to navigate the local computer, or specify the path in the space provided.  
   
--   **Log file path** – Provide a local directory for log files. Click **Browse…** to navigate the local computer, or specify the path in the space provided.  
+-   **Log file path** - Provide a local directory for log files. Click **Browse...** to navigate the local computer, or specify the path in the space provided.  
   
  To continue, click **Next**.  
   
@@ -138,7 +138,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
  Click **Close** to close the wizard.  
   
 ## See Also  
-[Import a BACPAC file to create a new Azure SQL database](https://azure.microsoft.com/en-us/documentation/articles/sql-database-import/)  
+[Import a BACPAC file to create a new Azure SQL database](https://azure.microsoft.com/documentation/articles/sql-database-import/)  
  [Data-tier Applications](../../relational-databases/data-tier-applications/data-tier-applications.md)   
  [Export a Data-tier Application](../../relational-databases/data-tier-applications/export-a-data-tier-application.md)  
   

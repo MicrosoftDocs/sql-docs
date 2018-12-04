@@ -197,7 +197,7 @@ This example will create certificates for a three-node configuration. The instan
     GO
     ```
     
-7.  Restore LinAGN2_Cert and LinAGN3_Cert on LinAGN1. Having the other replicas’ certificates is an important aspect of AG communication and security.
+7.  Restore LinAGN2_Cert and LinAGN3_Cert on LinAGN1. Having the other replicas' certificates is an important aspect of AG communication and security.
     
     ```SQL
     CREATE CERTIFICATE LinAGN2_Cert
@@ -342,7 +342,7 @@ This section shows how to create an AG with a cluster type of External using SSM
 
 9.  If you want to alter the backup preferences, click on the Backup Preferences tab. For more information on backup preferences with AGs, see [Configure backup on availability replicas](../database-engine/availability-groups/windows/configure-backup-on-availability-replicas-sql-server.md).
 
-10. If using readable secondaries or creating an AG with a cluster type of None for read-scale, you can create a listener by selecting the Listener tab. A listener can also be added later. To create a listener, choose the option **Create an availability group listener** and enter a name, a TCP/IP port, and whether to use a static or automatically assigned DHCP IP address. Remember that for an AG with a cluster type of None, the IP should be static and set to the primary’s IP address.
+10. If using readable secondaries or creating an AG with a cluster type of None for read-scale, you can create a listener by selecting the Listener tab. A listener can also be added later. To create a listener, choose the option **Create an availability group listener** and enter a name, a TCP/IP port, and whether to use a static or automatically assigned DHCP IP address. Remember that for an AG with a cluster type of None, the IP should be static and set to the primary's IP address.
 
     ![](./media/sql-server-linux-create-availability-group/image6.png)
 
@@ -373,7 +373,7 @@ This section shows examples of creating an AG using Transact-SQL. The listener a
 -   [Configure Read-Only Routing for an Availability Group (SQL Server)](../database-engine/availability-groups/windows/configure-read-only-routing-for-an-availability-group-sql-server.md)
 -   [Create or Configure an Availability Group Listener (SQL Server)](../database-engine/availability-groups/windows/create-or-configure-an-availability-group-listener-sql-server.md)
 
-#### Example One – Two replicas with a configuration-only replica (External cluster type)
+#### Example One - Two replicas with a configuration-only replica (External cluster type)
 
 This example shows how to create a two-replica AG that uses a configuration-only replica.
 
@@ -419,7 +419,7 @@ This example shows how to create a two-replica AG that uses a configuration-only
     GO
    ```
 
-#### Example Two – Three replicas with read-only routing (External cluster type)
+#### Example Two - Three replicas with read-only routing (External cluster type)
 
 This example shows three full replicas and how read-only routing can be configured as part of the initial AG creation.
 
@@ -477,7 +477,7 @@ This example shows three full replicas and how read-only routing can be configur
     
 3.  Repeat Step 2 for the third replica.
 
-#### Example Three – Two replicas with read-only routing (None cluster type)
+#### Example Three - Two replicas with read-only routing (None cluster type)
 
 This example shows the creation of a two-replica configuration using a cluster type of None. It is used for the read scale scenario where no failover is expected,. This creates the listener that is actually the primary replica, as well as the read-only routing, using the round robin functionality.
 

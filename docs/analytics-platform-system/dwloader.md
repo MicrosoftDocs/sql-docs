@@ -181,7 +181,7 @@ To load multiple files with one command:
   
 -   None of the files can contain header information.  
   
--   All files must use the same character encoding type. See the –e option.  
+-   All files must use the same character encoding type. See the -e option.  
   
 -   All files must be loaded into the same table.  
   
@@ -277,7 +277,7 @@ Examples:
 < fixed_width_column_options>  
 The options for a source data file that has fixed-length columns. By default, *source_data_file_name* contains ASCII characters in variable-length columns.  
   
-Fixed width columns are not supported when –e is UTF8.  
+Fixed width columns are not supported when -e is UTF8.  
   
 **-w** *fixed_width_config_file*  
 Path and name of the configuration file that specifies the number of characters in each column. Every field must be specified.  
@@ -307,7 +307,7 @@ For information on how to handle leading and trailing spaces or data type conver
 **-e** *character_encoding*  
 Specifies a character-encoding type for the data to be loaded from the data file. Options are ASCII (default), UTF8, UTF16, or UTF16BE, where UTF16 is little endian and UTF16BE is big endian. These options are case insensitive.  
   
-Fixed width columns are not supported when –e is UTF8.  
+Fixed width columns are not supported when -e is UTF8.  
   
 **-r** *row_delimiter*  
 The delimiter for each row of the source data file. The row delimiter is one or more ASCII values.  
@@ -335,7 +335,7 @@ Examples of LF:
 An LF is required for Unix. A CR is required for Windows.  
   
 **-D** { **ymd** | ydm | mdy | myd |  dmy | dym | *custom_date_format* }  
-Specifies the order of month (m), day (d), and year (y) for all datetime fields in the input file. The default order is ymd. To specify multiple order formats for the same source file, use the –dt option.  
+Specifies the order of month (m), day (d), and year (y) for all datetime fields in the input file. The default order is ymd. To specify multiple order formats for the same source file, use the -dt option.  
   
 ymd | dmy  
 ydm and dmy allow the same input formats. Both allow the year to be at the beginning or the end of the date. For example, for both **ydm** and **dmy** date formats, you could have 2013-02-03 or 02-03-2013 in the input file.  
@@ -365,7 +365,7 @@ Input file examples for March 04, 2010: 04-2010-03, 4/2010/3
 *custom_date_format*  
 *custom_date_format* is a custom date format (e.g., MM/dd/yyyy ) and included for backward compatibility only. dwloader does not enfoce the custom date format. Instead, when you specify a custom date format, **dwloader** will convert it to the corresponding setting of ymd, ydm,  mdy,  myd,  dym, or dmy.  
   
-For example, if you specify –D MM/dd/yyyy, dwloader expects all date input to be ordered with month first, then day, and then year (mdy). It does not enforce 2 character months, 2 digit days, and 4 digit years as specified by the custom date format. Here are some examples of ways dates can be formatted in the input file when the date format is –D MM/dd/yyyy: 01/02/2013, Jan.02.2013, 1/2/2013  
+For example, if you specify -D MM/dd/yyyy, dwloader expects all date input to be ordered with month first, then day, and then year (mdy). It does not enforce 2 character months, 2 digit days, and 4 digit years as specified by the custom date format. Here are some examples of ways dates can be formatted in the input file when the date format is -D MM/dd/yyyy: 01/02/2013, Jan.02.2013, 1/2/2013  
   
 For more comprehensive formatting information, see [Data type conversion rules for dwloader](dwloader-data-type-conversion-rules.md).  
   
@@ -390,7 +390,7 @@ append
 The Loader inserts rows at the end of existing rows in the destination table.  
   
 fastappend  
-The Loader inserts rows directly, without using a temporary table, to the end of existing rows in the destination table. fastappend requires the multi-transaction (–m) option. A staging database cannot be specified when using fastappend. There is no rollback with fastappend, which means that recovery from a failed or aborted load must be handled by your own load process.  
+The Loader inserts rows directly, without using a temporary table, to the end of existing rows in the destination table. fastappend requires the multi-transaction (-m) option. A staging database cannot be specified when using fastappend. There is no rollback with fastappend, which means that recovery from a failed or aborted load must be handled by your own load process.  
   
 upsert **-K**  *merge_column* [ ,...*n* ]  
 The Loader uses the SQL Server Merge statement to update existing rows and insert new rows.  
@@ -411,7 +411,7 @@ The Loader truncates the destination table before it inserts the source data.
 **-b** *batchsize*  
 Recommended only for use by Microsoft Support, *batchsize* is the SQL Server batch size for the bulk copy that DMS performs into SQL Server instances on the Compute nodes.  When *batchsize* is specified, SQL Server PDW will override the batch load size that is calculated dynamically for each load.  
   
-Beginning with SQL Server 2012 PDW, the Control node dynamically computes a batch size for each load by default. This automatic calculation is based on several parameters such as memory size, target table type, target table schema, load type, file size, and the user’s resource class.  
+Beginning with SQL Server 2012 PDW, the Control node dynamically computes a batch size for each load by default. This automatic calculation is based on several parameters such as memory size, target table type, target table schema, load type, file size, and the user's resource class.  
   
 For example, if the load mode is FASTAPPEND and the table has a clustered columnstore index, SQL Server PDW will by default attempt to use a batch size of 1,048,576 so that rowgroups will become CLOSED and load directly into the columnstore without going through the delta store. If memory does not allow the batch size of 1,048,576, dwloader will choose a smaller batchsize.  
   
@@ -448,7 +448,7 @@ Examples:
   
 '    abc     ' gets truncated to 'abc'  
   
-When –c is used with -E, the –E operation occurs first. Fields that contain only white space characters are converted to the empty string, and not to NULL.  
+When -c is used with -E, the -E operation occurs first. Fields that contain only white space characters are converted to the empty string, and not to NULL.  
   
 **-E**  
 Convert empty strings to NULL. The default is to not perform these conversions.  
@@ -456,9 +456,9 @@ Convert empty strings to NULL. The default is to not perform these conversions.
 **-m**  
 Use multi-transaction mode for the second phase of loading; when loading data from the staging table into a distributed table.  
   
-With **–m**, SQL Server PDW performs and commits loads in parallel. This performs much faster than the default loading mode, but is not transaction-safe.  
+With **-m**, SQL Server PDW performs and commits loads in parallel. This performs much faster than the default loading mode, but is not transaction-safe.  
   
-Without **–m**, SQL Server PDW performs and commits loads serially across the distributions within each Compute node, and concurrently across the Compute nodes. This method is slower than multi-transaction mode, but is transaction-safe.  
+Without **-m**, SQL Server PDW performs and commits loads serially across the distributions within each Compute node, and concurrently across the Compute nodes. This method is slower than multi-transaction mode, but is transaction-safe.  
   
 **-m** is optional for *append*, *reload*, and *upsert*.  
   
@@ -470,7 +470,7 @@ Without **–m**, SQL Server PDW performs and commits loads serially across the 
   
 There is no rollback with multi-transaction mode, which means that recovery from a failed or aborted load must be handled by your own load process.  
   
-We recommend using **–m** only when loading into an empty table, so that you can recover without data loss. To recover from a load failure: drop the destination table, resolve the load issue, re-create the destination table, and run the load again.  
+We recommend using **-m** only when loading into an empty table, so that you can recover without data loss. To recover from a load failure: drop the destination table, resolve the load issue, re-create the destination table, and run the load again.  
   
 **-N**  
 Verify the target appliance has a valid SQL Server PDW certificate from a trusted authority. Use this to help ensure your data is not being hijacked by an attacker and sent to an unauthorized location. The certificate must already be installed on the appliance. The only supported way to install the certificate is for the appliance administrator to install it by using the Configuration Manager tool. Ask your appliance administrator if you are not sure whether the appliance has a trusted certificate installed.  
@@ -523,25 +523,25 @@ The total size of all loads occurring concurrently must be smaller than LOG_SIZE
   
 When loading multiple files with one load command, all rejected rows are written to the same reject file. The reject file does not show which input file contains each rejected row.  
   
-The empty string should not be used as a delimiter . When an empty string is used as a row delimiter, the load will fail. When used as column delimiter, the load ignores the delimiter and continues to use the default “|” as the column delimiter. When used as string delimiter, the empty string is ignored and the default behavior is applied.  
+The empty string should not be used as a delimiter . When an empty string is used as a row delimiter, the load will fail. When used as column delimiter, the load ignores the delimiter and continues to use the default "|" as the column delimiter. When used as string delimiter, the empty string is ignored and the default behavior is applied.  
   
 ## Locking Behavior  
 **dwloader** locking behavior varies depending on the *load_mode_option*.  
   
--   **append** – Append is the recommended and the most common option. Append loads data into a staging table. The locking is described in detail below.  
+-   **append** - Append is the recommended and the most common option. Append loads data into a staging table. The locking is described in detail below.  
   
--   **fast append** – Fast-append loads directly into the final table taking an ExclusiveUpdate table lock, and is the only mode that does not use a staging table.  
+-   **fast append** - Fast-append loads directly into the final table taking an ExclusiveUpdate table lock, and is the only mode that does not use a staging table.  
   
--   **reload** – Reload loads data into a staging table and requires an exclusive lock on both the staging table and the final table. Reload is not recommended for concurrent operations.  
+-   **reload** - Reload loads data into a staging table and requires an exclusive lock on both the staging table and the final table. Reload is not recommended for concurrent operations.  
   
--   **upsert** – Upsert loads data into a staging table, and then performs a merge operation from the staging table to the final table. Upsert does not require exclusive locks on the final table. Performance may vary when using upsert. Test the behavior in your environment.  
+-   **upsert** - Upsert loads data into a staging table, and then performs a merge operation from the staging table to the final table. Upsert does not require exclusive locks on the final table. Performance may vary when using upsert. Test the behavior in your environment.  
   
 ### Locking Behavior  
 **A append mode locking**  
   
-Append can be run in multi-transactional mode (using the –m argument) but it is not transaction safe. Therefore append should be used as a transactional operation (without using the –m argument). Unfortunately, during the final INSERT-SELECT operation, transactional mode is currently about six times slower than the multi-transactional mode.  
+Append can be run in multi-transactional mode (using the -m argument) but it is not transaction safe. Therefore append should be used as a transactional operation (without using the -m argument). Unfortunately, during the final INSERT-SELECT operation, transactional mode is currently about six times slower than the multi-transactional mode.  
   
-The append mode loads data in two phases. Phase one loads data from the source file into a staging table concurrently (fragmentation can occur). Phase two loads data from the staging table to the final table. The second phase performs an **INSERT INTO…SELECT WITH (TABLOCK)** operation. The following table shows the locking behavior on the final table, and logging behavior when using append mode:  
+The append mode loads data in two phases. Phase one loads data from the source file into a staging table concurrently (fragmentation can occur). Phase two loads data from the staging table to the final table. The second phase performs an **INSERT INTO...SELECT WITH (TABLOCK)** operation. The following table shows the locking behavior on the final table, and logging behavior when using append mode:  
   
 |Table Type|Multi-transaction<br />Mode (-m)|Table is Empty|Concurrency Supported|Logging|  
 |--------------|-----------------------------------|------------------|-------------------------|-----------|  
@@ -661,7 +661,7 @@ The following is an example of the data file, DimAccount.txt, that contains data
 The script in Example B can be replaced by entering all the parameters on the command line, as shown in the following example.  
   
 ```  
-C:\Program Files\Microsoft SQL Server Parallel Data Warehouse\100\dwloader.exe –S <Control node IP> -E –M reload –e UTF16 -i .\DimAccount.txt –T AdventureWorksPDW2012.dbo.DimAccount –R DimAccount.bad –t "|" –r \r\n –U <login> -P <password>  
+C:\Program Files\Microsoft SQL Server Parallel Data Warehouse\100\dwloader.exe -S <Control node IP> -E -M reload -e UTF16 -i .\DimAccount.txt -T AdventureWorksPDW2012.dbo.DimAccount -R DimAccount.bad -t "|" -r \r\n -U <login> -P <password>  
 ```  
   
 Description of the command-line parameters:  
@@ -682,7 +682,7 @@ Description of the command-line parameters:
   
 -   *-R DimAccount.bad* specifies the rows that fail to load will be written to a file called DimAccount.bad.  
   
--   *–t "|"* indicates the fields in the input file, DimAccount.txt, are separated with the pipe character.  
+-   *-t "|"* indicates the fields in the input file, DimAccount.txt, are separated with the pipe character.  
   
 -   *-r \r\n* specifies each row in DimAccount.txt ends with a carriage return and a line feed character.  
   

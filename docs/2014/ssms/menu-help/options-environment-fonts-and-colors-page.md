@@ -4,7 +4,7 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology:
+ms.technology: ssms
 ms.topic: conceptual
 ms.assetid: ea3aa222-538d-485f-99dc-01eb02cdcfea
 author: stevestein
@@ -36,7 +36,7 @@ manager: craigg
  The **Use Defaults** button resets the value for the default font and color values of the list item that you selected from the **Show settings for** list.  
   
  **Font (bold type indicates fixed-width fonts)**  
- Lists all the fonts installed on your system. When this drop-down list is first opened, the current font for the element you chose from the **Show settings for** list is selected. Fixed fonts — which are easier to align in an editor — appear in bold.  
+ Lists all the fonts installed on your system. When this drop-down list is first opened, the current font for the element you chose from the **Show settings for** list is selected. Fixed fonts - which are easier to align in an editor - appear in bold.  
   
  **Size**  
  Lists available point sizes for the selected font. Changing the size of the font affects all **Display items** entries for a **Show settings for** selection.  

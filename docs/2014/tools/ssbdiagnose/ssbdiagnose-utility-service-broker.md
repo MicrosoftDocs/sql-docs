@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "database-engine"
+ms.technology: tools-other
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Service Broker, runtime reports"
@@ -86,7 +85,7 @@ manager: craigg
   [ CONNECT TO <connectionoptions> ] [ ...n]  
   
 <connectionoptions> ::=  
-    [ –E | { -Ulogin_id [ -Ppassword ] } ]  
+    [ -E | { -Ulogin_id [ -Ppassword ] } ]  
   [ -Sserver_name[\instance_name] ]  
   [ -ddatabase_name ]  
   [ -llogin_timeout ]  
@@ -200,7 +199,7 @@ WHERE database_id = DB_ID();
  **\<runtimeconnectionoptions>**  
  Specifies the connection information for the databases that contain the services associated with conversation elements being monitored. If all the services are in the same database, you only have to specify one **CONNECT TO** clause. If the services are in separate databases you must supply a **CONNECT TO** clause for each database. If **runtimeconnectionoptions** is not specified, **ssbdiagnose** uses the connection information from **baseconnectionoptions**.  
   
- **–E**  
+ **-E**  
  Open a Windows Authentication connection to an instance of the [!INCLUDE[ssDE](../../includes/ssde-md.md)] by using your current Windows account as the login ID. The login must be a member of the **sysadmin** fixed-server role.  
   
  The -E option ignores the user and password settings of the SQLCMDUSER and SQLCMDPASSWORD environment variables.  
@@ -214,7 +213,7 @@ WHERE database_id = DB_ID();
   
  If neither **-E** nor **-U** is specified, **ssbdiagnose** uses the value from the SQLCMDUSER environment variable. If SQLCMDUSER is not set either, **ssbdiagnose** tries to connect by using Windows Authentication mode based on the Windows account of the user who is running **ssbdiagnose**.  
   
- If the **-U** option is used together with the **-E** option, an error message is generated. If the **–U** option is followed by more than one argument, an error message is generated and the program exits.  
+ If the **-U** option is used together with the **-E** option, an error message is generated. If the **-U** option is followed by more than one argument, an error message is generated and the program exits.  
   
  **-P** *password*  
  Specifies the password for the **-U** login ID. Passwords are case sensitive. If the **-U** option is used and the **-P** option is not used, **ssbdiagnose** uses the value from the SQLCMDPASSWORD environment variable. If SQLCMDPASSWORD is not set either, **ssbdiagnose** prompts the user for a password.  

@@ -9,10 +9,16 @@
     href: download-sql-server-management-studio-ssms.md#release-notes
   - name: Install non-English SSMS
     href: install-other-languages.md
+  - name: SSMS Support Policy
+    href: support-policy.md
 - name: Install SQL Server PowerShell Module
   href: ../powershell/download-sql-server-ps-module.md?toc=/sql/ssms/toc.json
+- name: Tutorials +
+  href: ../ssms/tutorials/tutorial-sql-server-management-studio.md
 - name: SQL Server Agent +
   href: ../ssms/agent/sql-server-agent.md
+- name: Scripting +
+  href: ../ssms/scripting/database-engine-scripting.md
 - name: F1 Help +
   href: ../ssms/f1-help/f1-help-for-server-connections-sql-server-management-studio.md
 - name: Menu Help +
@@ -27,8 +33,6 @@
   href: ../ssms/visual-db-tools/visual-database-tools.md
 - name: Register Servers +
   href: ../ssms/register-servers/register-servers.md
-- name: Tutorials +
-  href: ../ssms/tutorials/tutorial-sql-server-management-studio.md
 - name: Introduction to SSMS for BI
   href: introduction-to-sql-server-management-studio-for-business-intelligence.md
 - name: Customize Menus and Shortcut Keys

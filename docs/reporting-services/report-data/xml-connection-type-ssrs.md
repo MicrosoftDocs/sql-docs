@@ -25,8 +25,8 @@ ms.author: maghan
   
 |XML document type|Connection String Example|  
 |-----------------------|-------------------------------|  
-|Web service|`http://adventure-works.com/results.aspx`|  
-|XML document|`http://localhost/XML/Customers.xml`|  
+|Web service|`https://adventure-works.com/results.aspx`|  
+|XML document|`https://localhost/XML/Customers.xml`|  
 |Embedded XML document|*Empty*|  
   
  For more connection string examples, see [Data Connections, Data Sources, and Connection Strings in Report Builder](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md).  

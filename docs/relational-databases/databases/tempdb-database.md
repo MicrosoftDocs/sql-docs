@@ -6,7 +6,6 @@ ms.date: "07/17/2018"
 ms.prod: sql
 ms.prod_service: "database-engine"
 ms.technology: 
-  - "database-engine"
 ms.topic: conceptual
 helpviewer_keywords: 
   - "temporary tables [SQL Server], tempdb database"
@@ -34,7 +33,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
   > Each internal object uses a minimum of nine pages; an IAM page and an eight-page extent. For more information about pages and extents, see [Pages and Extents](../../relational-databases/pages-and-extents-architecture-guide.md#pages-and-extents).
 
   > [!IMPORTANT]
-  > Azure SQL Database logical server supports global temporary tables and global temporary stored procedures that are stored in tempdb and are scoped to the database level. Global temporary tables and global temporary stored procedures are shared for all users’ sessions within the same Azure SQL database. User sessions from other Azure SQL databases cannot access global temporary tables. For more information, see [Database scoped global temporary tables (Azure SQL Database)](../../t-sql/statements/create-table-transact-sql.md#database-scoped-global-temporary-tables-azure-sql-database). [Azure SQL Database Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)) supports the same temporary objects as does SQL Server. 
+  > Azure SQL Database logical server supports global temporary tables and global temporary stored procedures that are stored in tempdb and are scoped to the database level. Global temporary tables and global temporary stored procedures are shared for all users' sessions within the same Azure SQL database. User sessions from other Azure SQL databases cannot access global temporary tables. For more information, see [Database scoped global temporary tables (Azure SQL Database)](../../t-sql/statements/create-table-transact-sql.md#database-scoped-global-temporary-tables-azure-sql-database). [Azure SQL Database Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)) supports the same temporary objects as does SQL Server. 
   > For Azure SQL Database logical server, only master Database and tempdb Database apply. For the concept of a logical server and logical master database, see [What is an Azure SQL logical server?](https://docs.microsoft.com/azure/sql-database/sql-database-servers-databases#what-is-an-azure-sql-logical-server). For a discussion of tempdb in the context of Azure SQL Database logical server, see [tempdb Database in Azure SQL Database logical server](#tempdb-database-in-sql-database). For Azure SQL Database Managed Instance, all system databases apply. 
 
 - **Version stores**, which are a collection of data pages that hold the data rows that are required to support the features that use row versioning. There are two version stores: a common version store and an online-index-build version store. The version stores contain:
@@ -55,7 +54,7 @@ Operations within **tempdb** are minimally logged so that transactions can be ro
  \* The number of files depends on the number of (logical) processors on the machine. As a general rule, if the number of logical processors is less than or equal to eight, use the same number of data files as logical processors. If the number of logical processors is greater than eight, use eight data files and then if contention continues, increase the number of data files by multiples of 4 until the contention is reduced to acceptable levels or make changes to the workload/code.
 
 > [!NOTE]
-> The default value for the number of data files is based on the general guidelines in [KB 2154845](http://support.microsoft.com/kb/2154845/).  
+> The default value for the number of data files is based on the general guidelines in [KB 2154845](https://support.microsoft.com/kb/2154845/).  
   
 ### Moving the tempdb data and log files in SQL Server  
  To move the **tempdb** data and log files, see [Move System Databases](../../relational-databases/databases/move-system-databases.md).  
@@ -200,7 +199,7 @@ GO
 
 For more information on performance improvements in tempdb, see the following blog article:
 
-[TEMPDB – Files and Trace Flags and Updates, Oh My!](https://blogs.msdn.microsoft.com/sql_server_team/tempdb-files-and-trace-flags-and-updates-oh-my/)
+[TEMPDB - Files and Trace Flags and Updates, Oh My!](https://blogs.msdn.microsoft.com/sql_server_team/tempdb-files-and-trace-flags-and-updates-oh-my/)
 
 ## Capacity Planning for tempdb in SQL Server
  Determining the appropriate size for tempdb in a SQL Server production environment depends on many factors. As described previously in this article, these factors include the existing workload and the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] features that are used. We recommend that you analyze the existing workload by performing the following tasks in a SQL Server test environment:
@@ -273,4 +272,4 @@ For more information on performance improvements in tempdb, see the following bl
   
 ## See Also  
  [Working with tempdb in SQL Server 2005](https://technet.microsoft.com/library/cc966545.aspx)  
- [Troubleshooting Insufficient Disk Space in tempdb](http://msdn.microsoft.com/library/ms176029.aspx) 
+ [Troubleshooting Insufficient Disk Space in tempdb](https://msdn.microsoft.com/library/ms176029.aspx) 

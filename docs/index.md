@@ -143,7 +143,7 @@ ms.technology:
                             <li class="fullSpan">
                                 <ul class="cardsC panelContent singlePanelContent cols cols4" style="display:flex!important;">
                                     <li>
-                                      <a href="/sql/lp/sql-server/install-sql-and-services/">
+                                      <a style="display: block;" href="/sql/lp/sql-server/install-sql-and-services/">
                                           <div class="cardSize">
                                               <div class="cardPadding">
                                                   <div class="card">
@@ -162,7 +162,7 @@ ms.technology:
                                       </a>
                                     </li>
                                     <li>
-                                      <a href="/sql/lp/sql-server/business-continuity/">
+                                      <a style="display: block;" href="/sql/lp/sql-server/business-continuity/">
                                           <div class="cardSize">
                                               <div class="cardPadding">
                                                   <div class="card">
@@ -181,7 +181,7 @@ ms.technology:
                                       </a>
                                     </li>
                                     <li>
-                                      <a href="/sql/lp/sql-server/secure-sql-server/">
+                                      <a style="display: block;" href="/sql/lp/sql-server/secure-sql-server/">
                                           <div class="cardSize">
                                               <div class="cardPadding">
                                                   <div class="card">
@@ -200,7 +200,7 @@ ms.technology:
                                       </a>
                                     </li>
                                     <li>
-                                      <a href="/sql/lp/sql-server/manage-monitor-tune/">
+                                      <a style="display: block;" href="/sql/lp/sql-server/manage-monitor-tune/">
                                           <div class="cardSize">
                                               <div class="cardPadding">
                                                   <div class="card">
@@ -219,7 +219,7 @@ ms.technology:
                                       </a>
                                     </li>
                                     <li>
-                                      <a href="/sql/lp/sql-server/load-move-data/">
+                                      <a style="display: block;" href="/sql/lp/sql-server/load-move-data/">
                                           <div class="cardSize">
                                               <div class="cardPadding">
                                                   <div class="card">
@@ -238,7 +238,7 @@ ms.technology:
                                       </a>
                                     </li>
                                     <li>
-                                      <a href="/sql/lp/sql-server/database-design/">
+                                      <a style="display: block;" href="/sql/lp/sql-server/database-design/">
                                           <div class="cardSize">
                                               <div class="cardPadding">
                                                   <div class="card">
@@ -257,7 +257,7 @@ ms.technology:
                                       </a>
                                     </li>
                                     <li>
-                                      <a href="/sql/lp/sql-server/query-data/">
+                                      <a style="display: block;" href="/sql/lp/sql-server/query-data/">
                                           <div class="cardSize">
                                               <div class="cardPadding">
                                                   <div class="card">
@@ -276,7 +276,7 @@ ms.technology:
                                       </a>
                                     </li>
                                     <li>
-                                      <a href="/sql/lp/sql-server/sql-education-center/">
+                                      <a style="display: block;" href="/sql/lp/sql-server/sql-education-center/">
                                           <div class="cardSize">
                                               <div class="cardPadding">
                                                   <div class="card">
@@ -385,9 +385,9 @@ ms.technology:
                                                         <h3>Data Analytics</h3>
                                                         <ul class="noBullet">
                                                         <li><a class="barLink" href="/sql/analytics-platform-system/">Microsoft Analytics Platform System</a></li>
-                                                            <li><a class="barLink" href="/sql/relational-databases/polybase/polybase-guide/">PolyBase</a></li>
                                                             <li><a class="barLink" href="/sql/analysis-services/analysis-services">SQL Server Analysis Services</a></li>
                                                             <li><a class="barLink" href="/azure/analysis-services/">Azure Analysis Services</a></li>
+                                                            <li><a class="barLink" href="/sql/relational-databases/polybase/polybase-guide/">PolyBase</a></li>                                                            <li><a class="barLink" href="/sql/big-data-cluster/big-data-cluster-overview/">SQL Server 2019 big data clusters</a></li>
                                                        </ul>
                                                     </div>
                                                 </div>
@@ -422,7 +422,7 @@ ms.technology:
         <h2>Keep in touch with us</h2>
         <ul class="links">
            <li>
-                <a href="http://aka.ms/editsqldocs" data-linktype="external">
+                <a href="https://aka.ms/editsqldocs" data-linktype="external">
                     Contribute
                 </a>
             </li>
@@ -432,12 +432,12 @@ ms.technology:
                 </a>
             </li>
            <li>
-                <a href="http://aka.ms/sqldocsfeedback" data-linktype="external">
+                <a href="https://aka.ms/sqldocsfeedback" data-linktype="external">
                     Feedback
                 </a>
             </li>
            <li>
-                <a href="http://aka.ms/sqldocsurvey" data-linktype="external">
+                <a href="https://aka.ms/sqldocsurvey" data-linktype="external">
                     Survey
                 </a>
             </li>

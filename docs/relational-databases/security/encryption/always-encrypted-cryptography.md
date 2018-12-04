@@ -22,7 +22,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
 ## Keys, Key Stores and Key Encryption Algorithms  
  Always Encrypted uses two types of keys: Column master keys and column encryption keys.  
   
- A column master key (CMK) is a key encrypting key (i.e. a key used to encrypt other keys) that is always in client’s control and is stored in an external key store. An Always Encrypted-enabled client driver interacts with the key store via a CMK store provider, which can be either part of the driver library (a [!INCLUDE[msCoName](../../../includes/msconame-md.md)]/system provider) or part of the client application (a custom provider). Client driver libraries currently include [!INCLUDE[msCoName](../../../includes/msconame-md.md)] key store providers for [Windows Certificate Store](/windows/desktop/SecCrypto/using-certificate-stores) and hardware security modules (HSMs).  (For the current list of providers, see [CREATE COLUMN MASTER KEY &#40;Transact-SQL&#41;](../../../t-sql/statements/create-column-master-key-transact-sql.md).) An application developer can supply a custom provider for an arbitrary store.  
+ A column master key (CMK) is a key encrypting key (i.e. a key used to encrypt other keys) that is always in client's control and is stored in an external key store. An Always Encrypted-enabled client driver interacts with the key store via a CMK store provider, which can be either part of the driver library (a [!INCLUDE[msCoName](../../../includes/msconame-md.md)]/system provider) or part of the client application (a custom provider). Client driver libraries currently include [!INCLUDE[msCoName](../../../includes/msconame-md.md)] key store providers for [Windows Certificate Store](/windows/desktop/SecCrypto/using-certificate-stores) and hardware security modules (HSMs).  (For the current list of providers, see [CREATE COLUMN MASTER KEY &#40;Transact-SQL&#41;](../../../t-sql/statements/create-column-master-key-transact-sql.md).) An application developer can supply a custom provider for an arbitrary store.  
   
  A column encryption key (CEK), is a content encryption key (i.e. a key used to protect data) that is protected by a CMK.  
   
@@ -31,9 +31,9 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
 ## Data Encryption Algorithm  
  Always Encrypted uses the **AEAD_AES_256_CBC_HMAC_SHA_256** algorithm to encrypt data in the database.  
   
- **AEAD_AES_256_CBC_HMAC_SHA_256** is derived from the specification draft at [http://tools.ietf.org/html/draft-mcgrew-aead-aes-cbc-hmac-sha2-05](http://tools.ietf.org/html/draft-mcgrew-aead-aes-cbc-hmac-sha2-05). It uses an Authenticated Encryption scheme with Associated Data, following an Encrypt-then-MAC approach. That is, the plaintext is first encrypted, and the MAC is produced based on the resulting ciphertext.  
+ **AEAD_AES_256_CBC_HMAC_SHA_256** is derived from the specification draft at [https://tools.ietf.org/html/draft-mcgrew-aead-aes-cbc-hmac-sha2-05](https://tools.ietf.org/html/draft-mcgrew-aead-aes-cbc-hmac-sha2-05). It uses an Authenticated Encryption scheme with Associated Data, following an Encrypt-then-MAC approach. That is, the plaintext is first encrypted, and the MAC is produced based on the resulting ciphertext.  
   
- In order to conceal patterns, **AEAD_AES_256_CBC_HMAC_SHA_256** uses the Cipher Block Chaining (CBC) mode of operation, where an initial value is fed into the system named the initialization vector (IV). The full description of the CBC mode can be found at [http://csrc.nist.gov/publications/nistpubs/800-38a/sp800-38a.pdf](http://csrc.nist.gov/publications/nistpubs/800-38a/sp800-38a.pdf).  
+ In order to conceal patterns, **AEAD_AES_256_CBC_HMAC_SHA_256** uses the Cipher Block Chaining (CBC) mode of operation, where an initial value is fed into the system named the initialization vector (IV). The full description of the CBC mode can be found at [https://csrc.nist.gov/publications/nistpubs/800-38a/sp800-38a.pdf](https://csrc.nist.gov/publications/nistpubs/800-38a/sp800-38a.pdf).  
   
  **AEAD_AES_256_CBC_HMAC_SHA_256** computes a ciphertext value for a given plaintext value using the following steps.  
   
@@ -170,7 +170,7 @@ aead_aes_256_cbc_hmac_sha_256 = versionbyte + MAC + IV + aes_256_cbc_ciphertext
 |**xml**|N/A (not supported)|  
   
 ## .NET Reference  
- For details about the algorithms, discussed in this document, see the **SqlAeadAes256CbcHmac256Algorithm.cs** and **SqlColumnEncryptionCertificateStoreProvider.cs** files in the [.NET Reference](http://referencesource.microsoft.com/).  
+ For details about the algorithms, discussed in this document, see the **SqlAeadAes256CbcHmac256Algorithm.cs** and **SqlColumnEncryptionCertificateStoreProvider.cs** files in the [.NET Reference](https://referencesource.microsoft.com/).  
   
 ## See Also  
  [Always Encrypted &#40;Database Engine&#41;](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)   

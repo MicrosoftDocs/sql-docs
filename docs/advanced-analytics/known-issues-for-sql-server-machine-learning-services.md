@@ -71,7 +71,7 @@ If you try to install SQL Server 2016 R Services or SQL Server 2017 Machine Lear
 > 
 > *Component error code: 0x80131509*
 
-The failure occurs because, on a domain controller, the service cannot create the 20 local accounts required to run machine learning. In general, we do not recommend installing SQL Server on a domain controller. For more information, see [Support bulletin 2032911](https://support.microsoft.com/en-us/help/2032911/you-may-encounter-problems-when-installing-sql-server-on-a-domain-cont).
+The failure occurs because, on a domain controller, the service cannot create the 20 local accounts required to run machine learning. In general, we do not recommend installing SQL Server on a domain controller. For more information, see [Support bulletin 2032911](https://support.microsoft.com/help/2032911/you-may-encounter-problems-when-installing-sql-server-on-a-domain-cont).
 
 ### Install the latest service release to ensure compatibility with Microsoft R Client
 
@@ -95,7 +95,7 @@ A limited number of Azure virtual machines were provisioned without the R instal
 
 A service release has been provided that includes the correct version of the R installation files.
 
-+ [Cumulative Update Package 3 for SQL Server 2017 KB4052987](https://www.microsoft.com/en-us/download/details.aspx?id=56128).
++ [Cumulative Update Package 3 for SQL Server 2017 KB4052987](https://www.microsoft.com/download/details.aspx?id=56128).
 
 To install the components and repair SQL Server 2017 CU3, you must uninstall CU3, and reinstall the updated version:
 
@@ -267,9 +267,9 @@ If you need to use larger models, the following workarounds are available:
 + Use feature selection to remove unnecessary columns.
 + If you are using an open source algorithm, consider a similar implementation using the corresponding algorithm in MicrosoftML or RevoScaleR. These packages have been optimized for deployment scenarios.
 + After the model has been rationalized and the size reduced using the preceding steps, see if the [memCompress](https://www.rdocumentation.org/packages/base/versions/3.4.1/topics/memCompress) function in base R can be used to reduce the size of the model before passing it to SQL Server. This option is best when the model is close to the 2 GB limit.
-+ For larger models, you can use the SQL Server [FileTable](..\relational-databases\blob\filetables-sql-server.md) feature to store the models, rather than using a varbinary column.
++ For larger models, you can use the SQL Server [FileTable](../relational-databases/blob/filetables-sql-server.md) feature to store the models, rather than using a varbinary column.
 
-    To use FileTables, you must add a firewall exception, because data stored in FileTables is managed by the Filestream filesystem driver in SQL Server, and default firewall rules block network file access. For more information, see [Enable Prerequisites for FileTable](../relational-databases/blob/enable-the-prerequisites-for-filetable.md). 
+    To use FileTables, you must add a firewall exception, because data stored in FileTables is managed by the Filestream filesystem driver in SQL Server, and default firewall rules block network file access. For more information, see [Enable Prerequisites for FileTable](../relational-databases/blob/enable-the-prerequisites-for-filetable.md).
 
     After you have enabled FileTable, to write the model, you get a path from SQL using the FileTable API, and then write the model to that location from your code. When you need to read the model, you get the path from SQL and then call the model using the path from your script. For more information, see [Access FileTables with File Input-Output APIs](../relational-databases/blob/access-filetables-with-file-input-output-apis.md).
 

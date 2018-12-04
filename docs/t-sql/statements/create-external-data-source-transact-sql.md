@@ -1,7 +1,7 @@
 ---
 title: "CREATE EXTERNAL DATA SOURCE (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "08/20/2018"
+ms.date: "11/12/2018"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
@@ -70,23 +70,37 @@ WITH (
     CREDENTIAL = AzureStorageCredential
 );
 
+-- PolyBase only: Azure Data Lake Store Gen 2
+-- (on Azure SQL Data Warehouse)
+CREATE EXTERNAL DATA SOURCE ABFS 
+WITH
+(
+              TYPE=HADOOP,
+              LOCATION='abfs://<container>@<AzureDataLake account_name>.dfs.core.windows.net',
+              CREDENTIAL=ABFS_Credemt
+);
+GO
+
+
 -- PolyBase only: Hadoop cluster as data source
 -- (on Parallel Data Warehouse)
 CREATE EXTERNAL DATA SOURCE data_source_name
     WITH ( 
         TYPE = HADOOP, 
         LOCATION = 'hdfs://NameNode_URI[:port]'
-        [, JOB_TRACKER_LOCATION = 'JobTracker_URI[:port]' ]
+        [, RESOURCE_MANAGER_LOCATION = 'ResourceManager_URI[:port]' ]
+        [, CREDENTIAL = credential_name]
     )
 [;]
 
--- PolyBase only: Azure Storage Blob as data source 
--- (on Parallel Data Warehouse)
-CREATE EXTERNAL DATA SOURCE data_source_name
-    WITH ( 
-        TYPE = BLOB_STORAGE,
+-- PolyBase only: Azure Storage Blob as data source   
+-- (on Parallel Data Warehouse)  
+CREATE EXTERNAL DATA SOURCE data_source_name  
+    WITH (   
+        TYPE = HADOOP,  
         LOCATION = 'wasb[s]://container@account_name.blob.core.windows.net'
-    )
+        [, CREDENTIAL = credential_name ]
+    )  
 [;]
   
 -- Elastic Database query only: a shard map manager as data source   
@@ -139,7 +153,7 @@ Example: `LOCATION = 'hdfs://10.10.10.10:8020'`
 For Azure blob storage with Hadoop, specifies the URI for connecting to Azure blob storage.  
 `LOCATION = 'wasb[s]://container@account_name.blob.core.windows.net'`  
 wasb[s]: Specifies the protocol for Azure blob storage. The [s] is optional and specifies a secure SSL connection; data sent from SQL Server is securely encrypted through the SSL protocol. We strongly recommend using 'wasbs' instead of 'wasb'. Note that the location can use asv[s] instead of wasb[s]. The asv[s] syntax is deprecated and will be removed in a future release.  
-container: Specifies the name of the Azure blob storage container. To specify the root container of a domain’s storage account, use the domain name instead of the container name. Root containers are read-only, so data cannot be written back to the container.  
+container: Specifies the name of the Azure blob storage container. To specify the root container of a domain's storage account, use the domain name instead of the container name. Root containers are read-only, so data cannot be written back to the container.  
 account_name: The fully qualified domain name (FQDN) of the Azure storage account.  
 Example: `LOCATION = 'wasbs://dailylogs@myaccount.blob.core.windows.net/'`
 
@@ -210,11 +224,11 @@ For more information on shared access signatures, see [Using Shared Access Signa
 
   
  RESOURCE_MANAGER_LOCATION = '*ResourceManager_URI*[:*port*]'  
- Specifies the Hadoop resource manager location. When specified, the query optimizer can make a cost-based decision to pre-process data for a PolyBase query by using Hadoop’s computation capabilities with MapReduce. Called predicate pushdown, this can significantly reduce the volume of data transferred between Hadoop and SQL, and therefore improve query performance.  
+ Specifies the Hadoop resource manager location. When specified, the query optimizer can make a cost-based decision to pre-process data for a PolyBase query by using Hadoop's computation capabilities with MapReduce. Called predicate pushdown, this can significantly reduce the volume of data transferred between Hadoop and SQL, and therefore improve query performance.  
   
  When this is not specified, pushing compute to Hadoop is disabled for PolyBase queries.  
  
-If the port is not specified, the default value is determined using the current setting for ‘hadoop connectivity’ configuration.
+If the port is not specified, the default value is determined using the current setting for 'hadoop connectivity' configuration.
 
 |Hadoop Connectivity|Default Resource Manager Port|
 |-------------------|-----------------------------|
@@ -479,7 +493,7 @@ Use the following data source for bulk operations using [BULK INSERT](../../t-sq
 ```sql
 CREATE DATABASE SCOPED CREDENTIAL AccessAzureInvoices 
  WITH IDENTITY = 'SHARED ACCESS SIGNATURE',
- SECRET = '(REMOVE ? FROM THE BEGINING)******srt=sco&sp=rwac&se=2017-02-01T00:55:34Z&st=2016-12-29T16:55:34Z***************';
+ SECRET = '(REMOVE ? FROM THE BEGINNING)******srt=sco&sp=rwac&se=2017-02-01T00:55:34Z&st=2016-12-29T16:55:34Z***************';
 
 CREATE EXTERNAL DATA SOURCE MyAzureInvoices
     WITH  (

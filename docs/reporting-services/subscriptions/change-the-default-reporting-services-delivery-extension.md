@@ -98,7 +98,7 @@ ms.author: maghan
     get-sprsserviceapplication | format-list *  
     ```  
   
-3.  Run the following PowerShell to verify the current default delivery extension for the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] service application “ssrsapp”.  
+3.  Run the following PowerShell to verify the current default delivery extension for the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] service application "ssrsapp".  
   
     ```  
     $app=get-sprsserviceapplication | where {$_.name -like "ssrsapp*"};Get-SPRSExtension -identity $app | where{$_.ServerDirectivesXML -like "<DefaultDelivery*"} | format-list *  
@@ -118,7 +118,7 @@ https://msdn.microsoft.com/b838f970-d11a-4239-b164-8d11f4581d83
 
 ...is redirected to the following Docs link, for SQL Server 2014...
 
-https://docs.microsoft.com/en-us/sql/sql-server/install/configure-a-report-server-for-e-mail-delivery-ssrs-configuration-manager?view=sql-server-2014
+https://docs.microsoft.com/sql/sql-server/install/configure-a-report-server-for-e-mail-delivery-ssrs-configuration-manager?view=sql-server-2014
 
 ...So if I was not presently resolving conflicts with public repo PR, related to private repo PR 7827,
 the better fix would be to replace the whole MSDN link with the newer Docs link (to which the older MSDN link is redirected).

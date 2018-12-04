@@ -116,7 +116,7 @@ Therefore, using the PHYSICAL_ONLY option may cause a much shorter run-time for 
 DATA_PURITY  
  Causes DBCC CHECKTABLE to check the table for column values that are not valid or out-of-range. For example, DBCC CHECKTABLE detects columns with date and time values that are larger than or less than the acceptable range for the **datetime** data type; or **decimal** or approximate-numeric data type columns with scale or precision values that are not valid.  
  Column-value integrity checks are enabled by default and do not require the DATA_PURITY option. For databases upgraded from earlier versions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], you can use DBCC CHECKTABLE WITH DATA_PURITY to find and correct errors on a specific table; however, column-value checks on the table are not enabled by default until DBCC CHECKDB WITH DATA_PURITY has been run error free on the database. After this, DBCC CHECKDB and DBCC CHECKTABLE check column-value integrity by default.  
- Validation errors reported by this option cannot be fixed by using DBCC repair options. For information about manually correcting these errors, see Knowledge Base article 923247: [Troubleshooting DBCC error 2570 in SQL Server 2005 and later versions](http://support.microsoft.com/kb/923247).  
+ Validation errors reported by this option cannot be fixed by using DBCC repair options. For information about manually correcting these errors, see Knowledge Base article 923247: [Troubleshooting DBCC error 2570 in SQL Server 2005 and later versions](https://support.microsoft.com/kb/923247).  
  If PHYSICAL_ONLY is specified, column-integrity checks are not performed.  
     
 MAXDOP  

@@ -15,7 +15,7 @@ ms.author: "sstein"
 manager: "craigg"
 ---
 # Install SQL Server Data Tools
-This topic describes how to install SQL Server Data Tools. Updates to SQL Server Data Tools are available on the SQL Server Data Tools download page ([Install Latest SQL Server Data Tools](http://go.microsoft.com/fwlink/?LinkID=616714)).  
+This topic describes how to install SQL Server Data Tools. Updates to SQL Server Data Tools are available on the SQL Server Data Tools download page ([Install Latest SQL Server Data Tools](https://go.microsoft.com/fwlink/?LinkID=616714)).  
   
 Whether you are using Visual Studio 2012 or Visual Studio 2013, install the latest SQL Server Data Tools updates to get the newest features.  
   
@@ -32,5 +32,5 @@ If you need to install SQL Server Data Tools on multiple computers or computers 
   
 To create an installation layout, download SSDTSetup.EXE and run it with the `/layout`*location* option to create a layout at *location*. Users can then run SSDTSetup.Exe from *location*.  
   
-Download SSDTSetup.exe by going to [Install Latest SQL Server Data Tools](http://go.microsoft.com/fwlink/?LinkID=616714), click the link for your version of Visual Studio, and then download SSDTSetup.exe for your language.  
+Download SSDTSetup.exe by going to [Install Latest SQL Server Data Tools](https://go.microsoft.com/fwlink/?LinkID=616714), click the link for your version of Visual Studio, and then download SSDTSetup.exe for your language.  
   

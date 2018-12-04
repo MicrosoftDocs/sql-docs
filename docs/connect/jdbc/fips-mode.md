@@ -26,7 +26,7 @@ The Microsoft JDBC Driver for SQL Server supports *FIPS 140 Compliant Mode*. For
 
 ## FIPS Configured JVM
 
-To see the approved modules for FIPS Configuration, refer to the [Validated FIPS 140-1 and FIPS 140-2 Cryptographic Modules](http://csrc.nist.gov/groups/STM/cmvp/documents/140-1/1401val2016.htm). 
+To see the approved modules for FIPS Configuration, refer to the [Validated FIPS 140-1 and FIPS 140-2 Cryptographic Modules](https://csrc.nist.gov/groups/STM/cmvp/documents/140-1/1401val2016.htm). 
 
 Vendors may have some additional steps to configure JVM with FIPS.
 
@@ -82,7 +82,7 @@ The following example is importing an Azure SSL Certificate in PKCS12 format wit
 `saveGenericKeyStore(BCFIPS, PKCS12, "SQLAzure SSL Certificate Name", "SQLAzure.cer");`
 
 ## Appropriate policy files
-For some FIPS Providers, unrestricted Policy jars are needed. In such cases, for Sun / Oracle, download the Java Cryptography Extension (JCE) Unlimited Strength Jurisdiction Policy Files for [JRE 8](http://www.oracle.com/technetwork/java/javase/downloads/jce8-download-2133166.html) or [JRE 7](http://www.oracle.com/technetwork/java/javase/downloads/jce-7-download-432124.html). 
+For some FIPS Providers, unrestricted Policy jars are needed. In such cases, for Sun / Oracle, download the Java Cryptography Extension (JCE) Unlimited Strength Jurisdiction Policy Files for [JRE 8](https://www.oracle.com/technetwork/java/javase/downloads/jce8-download-2133166.html) or [JRE 7](https://www.oracle.com/technetwork/java/javase/downloads/jce-7-download-432124.html). 
 
 ## Appropriate Configuration Parameters
 To run the JDBC Driver in FIPS-compliant mode, configure connection properties as shown in following table. 

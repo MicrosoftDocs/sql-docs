@@ -5,7 +5,6 @@ ms.date: "05/24/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
 ms.technology: 
-  - "database-engine"
 ms.topic: conceptual
 f1_keywords: 
   - "CHANGE_TRACKING_CLEANUP_VERSION"

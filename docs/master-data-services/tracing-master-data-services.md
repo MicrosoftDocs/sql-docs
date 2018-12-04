@@ -5,8 +5,7 @@ ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "mds"
 ms.reviewer: ""
-ms.technology: 
-  - "master-data-services"
+ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: 45823fc8-723a-49f2-9a11-94d241245cfd
 author: leolimsft
@@ -22,7 +21,7 @@ manager: "erikre"
 ```  
 <sources>  
       <!-- Adjust the switch value to control the types of messages that should be logged.   
-           http://msdn.microsoft.com/library/system.diagnostics.sourcelevels  
+           https://msdn.microsoft.com/library/system.diagnostics.sourcelevels  
            Use the a switchValue of Verbose to generate a full log. Please be aware that   
            the trace file can get quite large very quickly -->  
       <source name="MDS" switchType="System.Diagnostics.SourceSwitch" switchValue="Warning, ActivityTracing">  
@@ -64,6 +63,6 @@ manager: "erikre"
     |Message|Message body of the trace|  
   
 ## External Resources  
- Blog post, [Troubleshooting Logging Improvement](http://go.microsoft.com/fwlink/p/?LinkId=615377), on msdn.com.  
+ Blog post, [Troubleshooting Logging Improvement](https://go.microsoft.com/fwlink/p/?LinkId=615377), on msdn.com.  
   
   

@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "05/24/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "replication"
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords: 
   - "user-defined types [SQL Server replication]"
@@ -50,8 +49,8 @@ manager: craigg
 |---------------------|--------------------------------------------------------|-----------------------|  
 |Tables|X|X|  
 |Partitioned Tables|X|X|  
-|Stored Procedures – Definition ([!INCLUDE[tsql](../../../includes/tsql-md.md)] and CLR)|X|X|  
-|Stored Procedures – Execution ([!INCLUDE[tsql](../../../includes/tsql-md.md)] and CLR)|X|no|  
+|Stored Procedures - Definition ([!INCLUDE[tsql](../../../includes/tsql-md.md)] and CLR)|X|X|  
+|Stored Procedures - Execution ([!INCLUDE[tsql](../../../includes/tsql-md.md)] and CLR)|X|no|  
 |Views|X|X|  
 |Indexed Views|X|X|  
 |Indexed Views as Tables|X|no|  

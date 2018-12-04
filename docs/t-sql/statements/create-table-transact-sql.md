@@ -1042,9 +1042,9 @@ GO
 
 ## Database scoped global temporary tables (Azure SQL Database)
 
-Global temporary tables for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (initiated with ## table name) are stored in tempdb and shared among all users’ sessions across the whole [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance. For information on SQL table types, see the above section on Create Tables.  
+Global temporary tables for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (initiated with ## table name) are stored in tempdb and shared among all users' sessions across the whole [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance. For information on SQL table types, see the above section on Create Tables.  
 
-[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] supports global temporary tables that are also stored in tempdb and scoped to the database level. This means that global temporary tables are shared for all users’ sessions within the same [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]. User sessions from other databases cannot access global temporary tables.
+[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] supports global temporary tables that are also stored in tempdb and scoped to the database level. This means that global temporary tables are shared for all users' sessions within the same [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]. User sessions from other databases cannot access global temporary tables.
 
 Global temporary tables for [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] follow the same syntax and semantics that [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] uses for temporary tables. Similarly, global temporary stored procedures are also scoped to the database level in [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]. Local temporary tables (initiated with # table name) are also supported for [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] and follow the same syntax and semantics that [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] uses.  See the above section on [Temporary Tables](#temporary-tables).  
 
@@ -1053,7 +1053,7 @@ Global temporary tables for [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)
 
 ### Troubleshooting global temporary tables for Azure SQL Database 
 
-For the troubleshooting the tempdb, see [Troubleshooting Insufficient Disk space in tempdb](http://docs.microsoft.com/previous-versions/sql/sql-server-2008-r2/ms176029(v=sql.105)). 
+For the troubleshooting the tempdb, see [Troubleshooting Insufficient Disk space in tempdb](https://docs.microsoft.com/previous-versions/sql/sql-server-2008-r2/ms176029(v=sql.105)). 
 
 > [!NOTE]
 > Only a server admin can access the troubleshooting DMVs in [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].

@@ -52,15 +52,15 @@ It provides an option to configure the connection to MySQL through Secure Socket
 > [!NOTE]  
 > To enable **Configure**, SSL must be set to **True**.  
   
-On clicking the button “Configure”, a dialog-box appears. To use encryption while connecting to MySQL Database, path to the following three certificate files present in the dialog-box must be defined [Privacy Enhanced Mail Certificates (PEM)]:  
+On clicking the button "Configure", a dialog-box appears. To use encryption while connecting to MySQL Database, path to the following three certificate files present in the dialog-box must be defined [Privacy Enhanced Mail Certificates (PEM)]:  
   
--   **SSL Certificate Authority:** Specifies the path to a file with a list of trust SSL CAs’.  
+-   **SSL Certificate Authority:** Specifies the path to a file with a list of trust SSL CAs'.  
   
 -   **SSL Certificate:** Specifies the name of the SSL certificate file to use for establishing a secure connection.  
   
 -   **SSL KEY:** Specifies the name of the SSL key file to use for establishing a secure connection.  
   
 > [!NOTE]  
-> -   The **OK** button is enabled when the required information has been provided. If any of the file paths are invalid, the “OK” button will remain disabled.  
+> -   The **OK** button is enabled when the required information has been provided. If any of the file paths are invalid, the "OK" button will remain disabled.  
 > -   The **Cancel** button closes the dialog box and **turns off** the SSL option from the main Connection Form.  
   

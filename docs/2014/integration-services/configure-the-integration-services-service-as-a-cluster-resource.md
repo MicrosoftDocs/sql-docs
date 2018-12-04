@@ -73,7 +73,7 @@ manager: craigg
   
 4.  On the **File** menu, point to **New**, and then click **Resource**.  
   
-5.  On the **New Resource** page of the Resource Wizard, type a name and select **“Generic Service”** as the **Service Type**. Do not change the value of **Group**. Click **Next**.  
+5.  On the **New Resource** page of the Resource Wizard, type a name and select **"Generic Service"** as the **Service Type**. Do not change the value of **Group**. Click **Next**.  
   
 6.  On the **Possible Owners** page, add or remove the nodes of the cluster as the possible owners of the resource. Click **Next**.  
   

@@ -109,9 +109,9 @@ ms.author: maggies
   
  The following topics provide additional information about setting Office and Word options.  
   
--   Change the editing language in **Microsoft Office Language Preferences** or **Word Options** dialog box in Word. For more information, see [Enable the use of other languages in your Office programs](http://office.microsoft.com/word-help/enable-the-use-of-other-languages-in-your-office-programs-HA010354783.aspx?CTT=1).  
+-   Change the editing language in **Microsoft Office Language Preferences** or **Word Options** dialog box in Word. For more information, see [Enable the use of other languages in your Office programs](https://office.microsoft.com/word-help/enable-the-use-of-other-languages-in-your-office-programs-HA010354783.aspx?CTT=1).  
   
--   Add Office language packs and then change the editing language. For more information, see [Enable the use of other languages in your Office programs](http://office.microsoft.com/word-help/enable-the-use-of-other-languages-in-your-office-programs-HA010354783.aspx?CTT=1) and [Office Language Options](http://office.microsoft.com/language/).  
+-   Add Office language packs and then change the editing language. For more information, see [Enable the use of other languages in your Office programs](https://office.microsoft.com/word-help/enable-the-use-of-other-languages-in-your-office-programs-HA010354783.aspx?CTT=1) and [Office Language Options](https://office.microsoft.com/language/).  
   
 > [!NOTE]  
 >  When you change the editing language in **Microsoft Office Language Preferences** or the **Word Options** dialog box in Word, the change applies to all Office programs.  
@@ -176,7 +176,7 @@ ms.author: maggies
   
  `<Extension Name="WORD" Type="Microsoft.ReportingServices.Rendering.WordRenderer.WordDocumentRenderer,Microsoft.ReportingServices.WordRendering" Visible="false"/>`  
   
- The WORDOPENXML extension defines the Word renderer for [!INCLUDE[ofprword](../../includes/ofprword-md.md)] .docx files. The WORD extension defines the [!INCLUDE[ofprword](../../includes/ofprword-md.md)] 2003 version. `Visible = “false”` indicates the Word 2003 renderer is hidden. For more information, see [RsReportServer.config Configuration File](../../reporting-services/report-server/rsreportserver-config-configuration-file.md) and [RSReportDesigner Configuration File](../../reporting-services/report-server/rsreportdesigner-configuration-file.md).  
+ The WORDOPENXML extension defines the Word renderer for [!INCLUDE[ofprword](../../includes/ofprword-md.md)] .docx files. The WORD extension defines the [!INCLUDE[ofprword](../../includes/ofprword-md.md)] 2003 version. `Visible = "false"` indicates the Word 2003 renderer is hidden. For more information, see [RsReportServer.config Configuration File](../../reporting-services/report-server/rsreportserver-config-configuration-file.md) and [RSReportDesigner Configuration File](../../reporting-services/report-server/rsreportdesigner-configuration-file.md).  
   
 ### Differences Between the Word and Word 2003 Renderers  
  Reports, rendered by using the Word or Word 2003 renderers tend to be visually indistinguishable. However, you might notice minor differences between the two the Word or Word 2003formats.  

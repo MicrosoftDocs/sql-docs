@@ -4,7 +4,7 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology:
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords: 
   - "deleting tables"
@@ -17,7 +17,7 @@ ms.author: sstein
 manager: craigg
 ---
 # Remove Tables from Queries (Visual Database Tools)
-  You can remove a table — or any table-valued object — from the query.  
+  You can remove a table - or any table-valued object - from the query.  
   
 > [!NOTE]  
 >  Removing a table or table-valued object does not delete anything from the database; it only removes it from the current query. For details about removing a table from a database, see [Delete Tables &#40;Database Engine&#41;](../../relational-databases/tables/delete-tables-database-engine.md).  
@@ -26,7 +26,7 @@ manager: craigg
   
 -   In the **Diagram Pane**, select the table, view, user-defined function, synonym, or query, and then press DELETE, or right-click the object and then choose **Remove** in the resulting dialog box. You can select and remove multiple objects at one time.  
   
-     –or–  
+     -or-  
   
 -   Remove all references to the object in the **SQL Pane.**  
   

@@ -16,7 +16,7 @@ To use data from an Oracle database in your report, you must you must have a dat
 
 To install the Oracle Client tools you can do the following.
  
-1.	Go to [Oracle's download site](http://www.oracle.com/us/products/tools/index-090165.html)
+1.	Go to [Oracle's download site](https://www.oracle.com/us/products/tools/index-090165.html)
 2.	Download ODAC 12c Release 4 (12.1.0.2.4) for Windows (64bit for server, 32bit for tools)
 3.	Install the Data Provider for .NET 4
   
@@ -57,9 +57,9 @@ Data Source="Oracle"; Unicode="True"
   
 -   [Using the .NET Framework Data Provider for Oracle](https://go.microsoft.com/fwlink/?LinkId=112314) on msdn.microsoft.com  
   
--   [How to use Reporting Services to configure and to access an Oracle data source](http://support.microsoft.com/kb/834305)  
+-   [How to use Reporting Services to configure and to access an Oracle data source](https://support.microsoft.com/kb/834305)  
   
--   [How to add permissions for the NETWORK SERVICE security principal](http://support.microsoft.com/kb/870668)  
+-   [How to add permissions for the NETWORK SERVICE security principal](https://support.microsoft.com/kb/870668)  
   
 ###### Alternate Data Extensions  
  You can also retrieve data from an Oracle database by using an OLE DB data source type. For more information, see [OLE DB Connection Type &#40;SSRS&#41;](../../reporting-services/report-data/ole-db-connection-type-ssrs.md).  

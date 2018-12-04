@@ -40,16 +40,22 @@
   items:
   - name: Install
     items:
-    - name: Deployment guidance
-      href: deployment-guidance.md
-    - name: Deploy on Minikube
-      href: deploy-on-minikube.md
-    - name: Deploy on AKS
-      href: deploy-on-aks.md
-    - name: Deploy with Kubeadm
-      href: deploy-with-kubeadm.md
-    - name: Install big data tools
-      href: deploy-big-data-tools.md
+    - name: Deploy big data clusters
+      items:  
+      - name: Deployment guidance
+        href: deployment-guidance.md
+      - name: Deploy on Minikube
+        href: deploy-on-minikube.md
+      - name: Deploy on AKS
+        href: deploy-on-aks.md
+      - name: Deploy with Kubeadm
+        href: deploy-with-kubeadm.md
+    - name: Install tools
+      items:
+      - name: Install big data tools
+        href: deploy-big-data-tools.md
+      - name: Install mssqlctl
+        href: deploy-install-mssqlctl.md
   - name: Data virtualization
     items:
     - name: Virtualize external data

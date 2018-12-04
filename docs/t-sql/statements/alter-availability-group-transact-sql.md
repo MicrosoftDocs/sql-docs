@@ -301,7 +301,10 @@ ALTER AVAILABILITY GROUP group_name
  Specifies the failover mode of the availability replica that you are defining.  
   
  AUTOMATIC  
- Enables automatic failover. AUTOMATIC is supported only if you also specify AVAILABILITY_MODE = SYNCHRONOUS_COMMIT. You can specify AUTOMATIC for two availability replicas, including the primary replica.  
+ Enables automatic failover. AUTOMATIC is supported only if you also specify AVAILABILITY_MODE = SYNCHRONOUS_COMMIT. You can specify AUTOMATIC for three availability replicas, including the primary replica.  
+  
+> [!NOTE]  
+>  Prior to SQL Server 2016, you were limited to two automatic failover replicas, including the primary replica
   
 > [!NOTE]  
 >  SQL Server Failover Cluster Instances (FCIs) do not support automatic failover by availability groups, so any availability replica that is hosted by an FCI can only be configured for manual failover.  

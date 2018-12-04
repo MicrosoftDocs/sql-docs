@@ -49,7 +49,7 @@ ms.reviewer: carlrab
   
 ## Setting the instance collation in Azure SQL Database Managed Instance
 
-Server collation in Azure SQL Managed Instance can be specified when the instance is created. For a script template demonstrating how to set the instance collation is Azure SQL Database Managed instance, see [Set Managed Instance collation using resource manager template](https://review.docs.microsoft.com/azure/sql-database/scripts/sql-managed-instance-create-powershell-azure-resource-manager-template). Instance collation cannot be changed on the existing instance.
+Server collation in Azure SQL Managed Instance can be specified when the instance is created. For a script template demonstrating how to set the instance collation is Azure SQL Database Managed instance, see [Set Managed Instance collation using Resource Manager template](https://review.docs.microsoft.com/azure/sql-database/scripts/sql-managed-instance-create-powershell-azure-resource-manager-template). You cannot change server-level collation on the existing Managed Instance.
 
 ## See Also
 

@@ -21,7 +21,7 @@ It is based on the **RevoScaleR** package for R, which was provided in Microsoft
 + Provides Python versions of RevoScaleR machine learning algorithms for distributed or parallel processing
 + Improved performance, including use of the Intel math libraries
 
-MicrosoftML packages are also provided for both R and Python. For more information, see [Using MicrosoftML in SQL Server](../using-the-microsoftml-package.md)
+Data sources and compute contexts that you create in **revoscalepy** can also be used in machine learning algorithms. For more information about these algorithms, see [microsoftml Python module in SQL Server](ref-py-microsoftml.md).
 
 ## Versions and supported platforms
 

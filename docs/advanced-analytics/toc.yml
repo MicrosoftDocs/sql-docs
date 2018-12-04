@@ -268,25 +268,24 @@
     - name: R code profiling functions
       href: r/using-r-code-profiling-functions.md
 - name: Reference
-  href: r/machine-learning-services-r-reference.md
+  href: 
   items:
   - name: R packages
-    href: r/machine-learning-services-r-reference.md
     items:
-    - name: olapR in SQL
+    - name: olapR (SQL)
       href: r/how-to-create-mdx-queries-using-olapr.md
-    - name: MicrosoftML in SQL
-      href: using-the-microsoftml-package.md
-    - name: RevoScaleR in SQL
-      href: r/revoscaler-overview.md
-    - name: RevoScaleR function list for SQL Server data
-      href: r/scaler-functions-for-working-with-sql-server-data.md
-    - name: sqlrutils in SQL
+    - name: MicrosoftML (SQL)
+      href: r/ref-r-microsoftml.md
+    - name: RevoScaleR (SQL)
+      href: r/ref-r-revoscaler.md
+    - name: sqlrutils (SQL)
       href: r/generating-an-r-stored-procedure-for-r-code-using-the-sqlrutils-package.md
   - name: Python packages
     items:
-    - name: revoscalepy in SQL
-      href: python/what-is-revoscalepy.md
+    - name: microsoftml (SQL)
+      href: python/ref-py-microsoftml.md
+    - name: revoscalepy (SQL)
+      href: python/ref-py-revoscalepy.md
 - name: Resources
   items:
   - name: Release notes

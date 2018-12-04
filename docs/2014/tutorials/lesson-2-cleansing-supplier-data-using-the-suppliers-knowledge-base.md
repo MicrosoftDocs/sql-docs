@@ -4,15 +4,12 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "data-quality-services"
   - "integration-services"
   - "master-data-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: 215c14de-fc3f-46de-a022-bf69b9ea2a96
-caps.latest.revision: 7
 author: douglaslms
 ms.author: douglasl
 manager: craigg
@@ -40,7 +37,7 @@ manager: craigg
   
 5.  Export the results from the cleansing process to an Excel file.  
   
-6.  Import the values from the cleansing project into domains to augment the knowledge in the knowledge base with new rules, values, corrections etc…  
+6.  Import the values from the cleansing project into domains to augment the knowledge in the knowledge base with new rules, values, corrections etc...  
   
 ## Next Step  
  [Task 1: Creating a Data Quality Project](../../2014/tutorials/task-1-creating-a-data-quality-project.md)  

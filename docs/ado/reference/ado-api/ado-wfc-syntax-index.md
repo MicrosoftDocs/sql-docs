@@ -4,17 +4,14 @@ ms.technology: connectivity
 ms.custom: 
 ms.date: "02/15/2017"
 ms.reviewer: 
-ms.suite: sql
 ms.prod: sql  
 ms.prod_service: connectivity
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 apitype: "COM"
 helpviewer_keywords: 
   - "syntax indexes [ADO], ADO/WFC"
   - "ADO/WFC syntax index [ADO]"
 ms.assetid: a14bbc36-87ec-409d-97b3-393b66b1b8e3
-caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg

@@ -4,8 +4,6 @@ ms.custom: ""
 ms.date: "06/27/2016"
 ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Stretch Database, predicates"
@@ -13,7 +11,6 @@ helpviewer_keywords:
   - "Stretch Database, inline table-valued functions"
   - "inline table-valued functions for Stretch Database"
 ms.assetid: 090890ee-7620-4a08-8e15-d2fbc71dd12f
-caps.latest.revision: 43
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
@@ -136,7 +133,7 @@ RETURN  SELECT 1 AS is_eligible
 ### Constant expressions  
  The constants that you use in a filter function can be any deterministic expression that can be evaluated when you define the function. Constant expressions can contain the following things.  
   
--   Literals. For example, `N’abc’, 123`.  
+-   Literals. For example, `N'abc', 123`.  
   
 -   Algebraic expressions. For example, `123 + 456`.  
   
@@ -506,7 +503,7 @@ ALTER TABLE stretch_table_name SET ( REMOTE_DATA_ARCHIVE = ON (
   
 -   All the operators that existed in the old function must exist in the new function.  
   
--   The new function can't contain operators that don’t exist in the old function.  
+-   The new function can't contain operators that don't exist in the old function.  
   
 -   The order of operator arguments can't change.  
   

@@ -4,13 +4,10 @@ ms.custom: ""
 ms.date: "12/29/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: 7c888c95-8986-461e-9f11-2395044b9d97
-caps.latest.revision: 7
 author: minewiskan
 ms.author: owend
 manager: craigg
@@ -66,7 +63,7 @@ manager: craigg
   
 -   Bin data, by creating groups to represents number ranges.  
   
-     For example, you might want to replace an Income column of numbers with labels such as **Income – Moderate** and **Income – High**.  
+     For example, you might want to replace an Income column of numbers with labels such as **Income - Moderate** and **Income - High**.  
   
 -   Collapse discrete values into categories.  
   

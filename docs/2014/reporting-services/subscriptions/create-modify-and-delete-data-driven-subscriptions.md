@@ -4,10 +4,8 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "reporting-services-native"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "query-based subscriptions [Reporting Services]"
@@ -15,7 +13,6 @@ helpviewer_keywords:
   - "subscriptions [Reporting Services], data-driven"
   - "data-driven subscriptions"
 ms.assetid: 0ba2093e-9393-4eb6-af06-9da10988cfaf
-caps.latest.revision: 50
 author: markingmyname
 ms.author: maghan
 manager: craigg
@@ -95,7 +92,7 @@ manager: craigg
 ##  <a name="bkmk_run_subscription"></a> Run a subscription  
  You configure the conditions for subscription processing. You can configure a schedule, or you can trigger the subscription to coincide with updates to a report execution snapshot.  
   
- ![note](../media/rs-fyinote.png "note") While there is no feature in the user interface that you can use to immediately run a subscription, you can use a simple Windows PowerShell script to trigger a subscription to run. For more information, see the “Script: Run (fire) a single subscription” section of [Use PowerShell to Change and List Reporting Services Subscription Owners and Run a Subscription](manage-subscription-owners-and-run-subscription-powershell.md).  
+ ![note](../media/rs-fyinote.png "note") While there is no feature in the user interface that you can use to immediately run a subscription, you can use a simple Windows PowerShell script to trigger a subscription to run. For more information, see the "Script: Run (fire) a single subscription" section of [Use PowerShell to Change and List Reporting Services Subscription Owners and Run a Subscription](manage-subscription-owners-and-run-subscription-powershell.md).  
   
  Schedule and conditions for running a data-driven subscriptions is the same as processing for standard subscriptions.  
   

@@ -47,7 +47,7 @@ For the latest list of functions in the Python libraries released to date, see t
 
 ### Data types, data sources, and compute contexts
 
-SQL Server and Python use different data types in some cases. For a list of mappings between SQL and Python data types, see [Python libraries and data Types](python-libraries-and-data-types.md).
+SQL Server and Python use different data types in some cases. For a list of mappings between SQL and Python data types, see [Python extension](../concepts/extension-python.md).
 
 Data sources supported for machine learning with Python in SQL Server includes ODBC data sources, SQL Server database, and local files, including XDF files.
 
@@ -158,7 +158,7 @@ Complete documentation for these APIs will be available when the product is rele
 
 You can get help on any Python function by importing the module, and then calling `help()`. For example, running `help(revoscalepy)` from your Python IDE returns a list of all functions in the revoscalepy module, with their signatures.
 
-If you use Python Tools for Visual Studio, you can use IntelliSense to get syntax and argument help. For more information, see [Python support in Visual Studio](http://docs.microsoft.com/visualstudio/python/installation), and download the extension that matches your version of Visual Studio. You can use Python with Visual Studio 2015 and 2017, or earlier versions.
+If you use Python Tools for Visual Studio, you can use IntelliSense to get syntax and argument help. For more information, see [Python support in Visual Studio](https://docs.microsoft.com/visualstudio/python/installation), and download the extension that matches your version of Visual Studio. You can use Python with Visual Studio 2015 and 2017, or earlier versions.
 
 ## See Also
 

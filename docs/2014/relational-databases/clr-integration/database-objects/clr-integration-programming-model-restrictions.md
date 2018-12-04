@@ -4,9 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: clr
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 
   - "common language runtime [SQL Server], programming model restrictions"
@@ -14,7 +12,6 @@ helpviewer_keywords:
   - "programming model restrictions [CLR integration]"
   - "assemblies [CLR integration], runtime checks"
 ms.assetid: 2446afc2-9d21-42d3-9847-7733d3074de9
-caps.latest.revision: 21
 author: rothja
 ms.author: jroth
 manager: craigg
@@ -36,7 +33,7 @@ manager: craigg
   
 -   You are using `CREATE ASSEMBLY FROM`*\<location>,* and all the referenced assemblies and their dependencies are available in *\<location>*.  
   
--   You are using `CREATE ASSEMBLY FROM`*\<bytes …>,* and all the references are specified via space separated bytes.  
+-   You are using `CREATE ASSEMBLY FROM`*\<bytes ...>,* and all the references are specified via space separated bytes.  
   
 ### EXTERNAL_ACCESS  
  All `EXTERNAL_ACCESS` assemblies must meet the following criteria:  
@@ -83,7 +80,7 @@ manager: craigg
  At runtime, the code assembly is checked for the following conditions. If any of these conditions are found, the managed code will not be allowed to run and an exception will be thrown.  
   
 ### UNSAFE  
- Loading an assembly—either explicitly by calling the `System.Reflection.Assembly.Load()` method from a byte array, or implicitly through the use of `Reflection.Emit` namespace—is not permitted.  
+ Loading an assembly-either explicitly by calling the `System.Reflection.Assembly.Load()` method from a byte array, or implicitly through the use of `Reflection.Emit` namespace-is not permitted.  
   
 ### EXTERNAL_ACCESS  
  All `UNSAFE` conditions are checked.  

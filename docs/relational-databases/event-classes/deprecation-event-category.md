@@ -4,14 +4,11 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: supportability
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Deprecation event category"
 ms.assetid: 49364423-6aa9-40f3-914a-eca37be12b88
-caps.latest.revision: 13
 author: "stevestein"
 ms.author: "sstein"
 manager: craigg

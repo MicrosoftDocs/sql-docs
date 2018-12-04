@@ -5,12 +5,8 @@ ms.date: "03/01/2017"
 ms.prod: sql
 ms.prod_service: "integration-services"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: integration-services
-ms.tgt_pltfrm: ""
 ms.topic: tutorial
-applies_to: 
-  - "SQL Server 2016"
 ms.assetid: 9a77dd32-d8c2-4961-ad37-2a971f9d6043
 author: "douglaslMS"
 ms.author: "douglasl"
@@ -41,7 +37,7 @@ The Flat File connection manager provides locale information about the data file
   
     The sample data is included with the [!INCLUDE[ssIS](../includes/ssis-md.md)] lesson packages. To download the sample data and the lesson packages, do the following.  
   
-    1.  Navigate to [Integration Services Product Samples](http://go.microsoft.com/fwlink/?LinkId=275027)  
+    1.  Navigate to [Integration Services Product Samples](https://www.microsoft.com/download/details.aspx?id=56827)  
   
     2.  Click the **DOWNLOADS** tab.  
   
@@ -84,10 +80,10 @@ The Flat File connection manager provides locale information about the data file
   
     |Flat File Column|Suggested Type|Destination Column|Destination Type|  
     |--------------------|------------------|----------------------|--------------------|  
-    |AverageRate|float [DT_R4]|FactCurrency.AverageRate|float|  
+    |AverageRate|float [DT_R4]|FactCurrencyRate.AverageRate|float|  
     |CurrencyID|string [DT_STR]|DimCurrency.CurrencyAlternateKey|nchar(3)|  
     |CurrencyDate|date [DT_DATE]|DimDate.FullDateAlternateKey|date|  
-    |EndOfDayRate|float [DT_R4]|FactCurrency.EndOfDayRate|float|  
+    |EndOfDayRate|float [DT_R4]|FactCurrencyRate.EndOfDayRate|float|  
   
     The data type suggested for the **CurrencyID** column is incompatible with the data type of the field in the destination table. Because the data type of `DimCurrency.CurrencyAlternateKey` is nchar (3), **CurrencyID** must be changed from string [DT_STR] to Unicode string [DT_WSTR]. Additionally, the field `DimDate.FullDateAlternateKey` is defined as a date data type; therefore, **CurrencyDate** needs to be changed from date [DT_Date] to database date [DT_DBDATE].  
   

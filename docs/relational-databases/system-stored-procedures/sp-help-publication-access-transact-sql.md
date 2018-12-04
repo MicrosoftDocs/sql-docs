@@ -4,22 +4,15 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "system-stored-procedures"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
+ms.technology: replication
 ms.topic: "language-reference"
-applies_to: 
-  - "SQL Server"
 f1_keywords: 
   - "sp_help_publication_access"
   - "sp_help_publication_access_TSQL"
 helpviewer_keywords: 
   - "sp_help_publication_access"
 ms.assetid: 9408fa13-54a0-4cb1-8fb0-845e5536ef50
-caps.latest.revision: 26
 author: stevestein
 ms.author: sstein
 manager: craigg

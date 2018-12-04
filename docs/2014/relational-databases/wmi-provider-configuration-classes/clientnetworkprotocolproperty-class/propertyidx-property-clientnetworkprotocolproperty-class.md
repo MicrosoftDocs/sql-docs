@@ -4,11 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-  - "docset-sql-devref"
-ms.tgt_pltfrm: ""
+ms.technology: wmi
 ms.topic: "reference"
 api_name: 
   - "PropertyIdx Property (ClientNetworkProtocolProperty Class)"
@@ -19,7 +15,6 @@ topic_type:
 helpviewer_keywords: 
   - "PropertyIdx property"
 ms.assetid: d7845962-ac68-4435-9c59-70ec450fec88
-caps.latest.revision: 29
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg

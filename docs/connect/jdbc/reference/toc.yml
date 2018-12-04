@@ -1367,8 +1367,10 @@
       items:
       - name: executeUpdate Method ()
         href: executeupdate-method.md
-      - name: executeUpdate Method (java.lang.String)
+      - name: executeUpdate Method (java.lang.String, int[])
         href: executeupdate-method-java-lang-string.md
+      - name: executeUpdate Method (java.lang.String)
+        href: executeupdate-method-java-lang-string2.md
     - name: getMetaData Method (SQLServerPreparedStatement)
       href: getmetadata-method-sqlserverpreparedstatement.md
     - name: getParameterMetaData Method (SQLServerPreparedStatement)
@@ -1575,6 +1577,8 @@
       items:
       - name: getBinaryStream Method (int)
         href: getbinarystream-method-int.md
+      - name: getBinaryStream Method (long, long)
+        href: getbinarystream-method-long-long.md
       - name: getBinaryStream Method (java.lang.String)
         href: getbinarystream-method-java-lang-string.md
     - name: getBlob Method (SQLServerResultSet)
@@ -1612,6 +1616,8 @@
         href: getcharacterstream-method-int.md
       - name: getCharacterStream Method (java.lang.String)
         href: getcharacterstream-method-java-lang-string.md
+      - name: getCharacterStream Method () (SQLServerNClob)
+        href: getcharacterstream-method-braces-sqlservernclob.md
     - name: getClob Method (SQLServerResultSet)
       href: getclob-method-sqlserverresultset.md
       items:

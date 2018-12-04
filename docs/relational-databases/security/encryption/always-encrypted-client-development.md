@@ -3,10 +3,8 @@ title: "Always Encrypted (client development) | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/21/2018"
 ms.prod: sql
-ms.reviewer: ""
-ms.suite: "sql"
+ms.reviewer: vanto
 ms.technology: security
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 dev_langs: 
   - "CSharp"

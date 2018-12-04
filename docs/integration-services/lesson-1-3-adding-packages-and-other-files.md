@@ -5,12 +5,8 @@ ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "integration-services"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: integration-services
-ms.tgt_pltfrm: ""
 ms.topic: tutorial
-applies_to: 
-  - "SQL Server 2016"
 ms.assetid: a7e6ec9c-d31d-4613-9525-8947a7b358f7
 author: "douglaslMS"
 ms.author: "douglasl"
@@ -50,7 +46,7 @@ In the next task, you will add configurations to the DataTransfer and LoadXMLDat
   
 4.  In the **Add Copy of Existing Package** dialog box, in **Package location**, select **File System**.  
   
-5.  Click the browse **(…)** button, navigate to C:\Program Files\Microsoft SQL Server\100\Samples\Integration ServicesTutorial\Deploying Packages\Completed Packages, select **DataTransfer.dtsx**, and then click **Open**.  
+5.  Click the browse **(...)** button, navigate to C:\Program Files\Microsoft SQL Server\100\Samples\Integration ServicesTutorial\Deploying Packages\Completed Packages, select **DataTransfer.dtsx**, and then click **Open**.  
   
 6.  Click **OK**.  
   

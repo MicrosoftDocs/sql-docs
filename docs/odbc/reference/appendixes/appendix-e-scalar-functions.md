@@ -5,16 +5,13 @@ ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: connectivity
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "SQL-92 functions [ODBC]"
   - "scalar functions [ODBC]"
   - "functions [ODBC], scalar"
 ms.assetid: 59c7cd5e-32d6-43ab-bac3-7010322d105a
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
@@ -36,7 +33,7 @@ ODBC specifies the following types of scalar functions, with detailed informatio
   
 -   [SQL-92 CAST Function](../../../odbc/reference/appendixes/sql-92-cast-function.md)  
   
- ODBC does not mandate a data type for return values from scalar functions because the functions are often data source–specific. Applications should use the CONVERT scalar function whenever possible to force data type conversion.  
+ ODBC does not mandate a data type for return values from scalar functions because the functions are often data source-specific. Applications should use the CONVERT scalar function whenever possible to force data type conversion.  
   
 ## ODBC and SQL-92 Scalar Functions  
  The tables in this appendix include functions that have been added in ODBC 3.0 to align with SQL-92. Those functions added for a particular type of scalar function, as defined in ODBC, are indicated in each section.  

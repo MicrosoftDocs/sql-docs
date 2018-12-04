@@ -4,9 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: clr
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 
   - "common language runtime [SQL Server], about CLR integration"
@@ -17,7 +15,6 @@ helpviewer_keywords:
   - "managed code [SQL Server], vs. extended stored procedures"
   - "execution at client vs. execution at server [CLR integration]"
 ms.assetid: 5aa176da-3652-4afa-a742-4c40c77ce5c3
-caps.latest.revision: 49
 author: rothja
 ms.author: jroth
 manager: craigg

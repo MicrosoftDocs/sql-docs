@@ -4,15 +4,12 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.dm.dmwizard.slicesourcecube.f1"
 ms.assetid: 16485608-d3b9-49ee-8baa-948038cdd7ec
-caps.latest.revision: 23
 author: minewiskan
 ms.author: owend
 manager: craigg
@@ -49,7 +46,7 @@ manager: craigg
  **Operator**  
  Select the operator to use in building a slice expression.  
   
- For example, if you chose Geography as the hierarchy, you could select the operator = and then type “Europe” as the filter, to get cube data for Europe only.  
+ For example, if you chose Geography as the hierarchy, you could select the operator = and then type "Europe" as the filter, to get cube data for Europe only.  
   
  **Filter Expression**  
  Type an expression to use as a criterion when filtering the cube on the selected dimension.  

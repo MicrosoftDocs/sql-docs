@@ -4,10 +4,7 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: tools-other
 ms.topic: conceptual
 helpviewer_keywords: 
   - "physical design structures [SQL Server]"
@@ -20,7 +17,6 @@ helpviewer_keywords:
   - "Database Engine Tuning Advisor [SQL Server], command prompt"
   - "optimizing databases [SQL Server]"
 ms.assetid: a0b210ce-9b58-4709-80cb-9363b68a1f5a
-caps.latest.revision: 52
 author: stevestein
 ms.author: sstein
 manager: craigg
@@ -38,7 +34,7 @@ manager: craigg
 [ -? ] |  
 [  
       [ -S server_name[ \instance ] ]  
-      { { -U login_id [-P password ] } | –E  }  
+      { { -U login_id [-P password ] } | -E  }  
       { -D database_name [ ,...n ] }  
       [ -ddatabase_name ]   
       [ -Tltable_list | -Tf table_list_file ]  
@@ -100,13 +96,13 @@ manager: craigg
  Specifies the name of each database that is to be tuned. The first database is the default database. You can specify multiple databases by separating the database names with commas, for example:  
   
 ```  
-dta –D database_name1, database_name2...  
+dta -D database_name1, database_name2...  
 ```  
   
- Alternatively, you can specify multiple databases by using the **–D** argument for each database name, for example:  
+ Alternatively, you can specify multiple databases by using the **-D** argument for each database name, for example:  
   
 ```  
-dta –D database_name1 -D database_name2... n  
+dta -D database_name1 -D database_name2... n  
 ```  
   
  The **-D** argument is mandatory. If the **-d** argument has not been specified, **dta** initially connects to the database that is specified with the first `USE database_name` clause in the workload. If there is not explicit `USE database_name` clause in the workload, you must use the **-d** argument.  
@@ -146,7 +142,7 @@ dta -d AdventureWorks2012 ...
   
 |Parameter|Default value|  
 |---------------|-------------------|  
-|*database_name*|*database_name* specified with the **–D** option|  
+|*database_name*|*database_name* specified with the **-D** option|  
 |*owner_name*|**dbo**<br /><br /> Note: *owner_name* must be **dbo**. If any other value is specified, then **dta** execution fails and it returns an error.|  
 |*table_name*|None|  
   
@@ -200,10 +196,10 @@ dta -d AdventureWorks2012 ...
  Specifies a numerical identifier for the tuning session. If not specified, then **dta** generates an ID number. You can use this identifier to view information for existing tuning sessions. If you do not specify a value for **-ID**, then a session name must be specified with **-s**.  
   
  **-ip**  
- Specifies that the plan cache be used as the workload. The top 1,000 plan cache events for explicitly selected databases are analyzed. This value can be changed using the **–n** option.  
+ Specifies that the plan cache be used as the workload. The top 1,000 plan cache events for explicitly selected databases are analyzed. This value can be changed using the **-n** option.  
   
  **-ipf**  
- Specifies that the plan cache be used as the workload. The top 1,000 plan cache events for all databases are analyzed. This value can be changed using the **–n** option.  
+ Specifies that the plan cache be used as the workload. The top 1,000 plan cache events for all databases are analyzed. This value can be changed using the **-n** option.  
   
  **-if** *workload_file*  
  Specifies the path and name of the workload file to use as input for tuning. The file must be in one of these formats: .trc (SQL Server Profiler trace file), .sql (SQL file), or .log ([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] trace file). Either one workload file or one workload table must be specified.  
@@ -215,7 +211,7 @@ dta -d AdventureWorks2012 ...
   
 |Parameter|Default value|  
 |---------------|-------------------|  
-|*database_name*|*database_name* specified with **–D** option.|  
+|*database_name*|*database_name* specified with **-D** option.|  
 |*owner_name*|**dbo**.|  
 |*table_name*|None.|  
   
@@ -341,7 +337,7 @@ dta -n number_of_events -A 0
  This example uses a secure connection (`-E`) to connect to the **tpcd1G** database on MyServer to analyze a workload and create recommendations. It writes the output to a script file named script.sql. If script.sql already exists, then **dta** will overwrite the file because the `-F` argument has been specified. The tuning session runs for an unlimited length of time to ensure a complete analysis of the workload (`-A 0`). The recommendation must provide a minimum improvement of 5% (`-m 5`). **dta** should include indexes and indexed views in its final recommendation (`-fa IDX_IV`).  
   
 ```  
-dta –S MyServer –E -D tpcd1G -if tpcd_22.sql -F –of script.sql –A 0 -m 5 -fa IDX_IV  
+dta -S MyServer -E -D tpcd1G -if tpcd_22.sql -F -of script.sql -A 0 -m 5 -fa IDX_IV  
 ```  
   
  **B. Limit disk use**  
@@ -349,7 +345,7 @@ dta –S MyServer –E -D tpcd1G -if tpcd_22.sql -F –of script.sql –A 0 -m 5
  This example limits the total database size, which includes the raw data and the additional indexes, to 3 gigabytes (GB) (`-B 3000`) and directs the output to d:\result_dir\script1.sql. It runs for no more than 1 hour (`-A 60`).  
   
 ```  
-dta –D tpcd1G –if tpcd_22.sql -B 3000 –of "d:\result_dir\script1.sql" –A 60  
+dta -D tpcd1G -if tpcd_22.sql -B 3000 -of "d:\result_dir\script1.sql" -A 60  
 ```  
   
  **C. Limit the number of tuned queries**  
@@ -357,7 +353,7 @@ dta –D tpcd1G –if tpcd_22.sql -B 3000 –of "d:\result_dir\script1.sql" –A
  This example limits the number of queries read from the file orders_wkld.sql to a maximum of 10 (`-n 10`) and runs for 15 minutes (`-A 15`), whichever comes first. To make sure that all 10 queries are tuned, specify an unlimited tuning time with `-A 0`. If time is important, specify an appropriate time limit by specifying the number of minutes that are available for tuning with the `-A` argument as shown in this example.  
   
 ```  
-dta –D orders –if orders_wkld.sql –of script.sql –A 15 -n 10  
+dta -D orders -if orders_wkld.sql -of script.sql -A 15 -n 10  
 ```  
   
  **D. Tune specific tables listed in a file**  
@@ -383,7 +379,7 @@ AdventureWorks2012.Production.Product  2000000
  The tuning time is 2 hours (`-A 120`) and the output is written to an XML file (`-ox XMLTune.xml`).  
   
 ```  
-dta –D pubs –if pubs_wkld.sql –ox XMLTune.xml –A 120 –Tf table_list.txt  
+dta -D pubs -if pubs_wkld.sql -ox XMLTune.xml -A 120 -Tf table_list.txt  
 ```  
   
 ## See Also  

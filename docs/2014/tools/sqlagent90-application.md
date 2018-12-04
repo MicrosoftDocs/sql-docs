@@ -4,10 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: tools-other
 ms.topic: conceptual
 helpviewer_keywords: 
   - "starting SQL Server Agent"
@@ -15,7 +12,6 @@ helpviewer_keywords:
   - "SQL Server Agent, starting"
   - "command prompt utilities [SQL Server], sqlagent90"
 ms.assetid: e8b80e8d-d0c9-4500-a868-0ce08233da08
-caps.latest.revision: 34
 author: stevestein
 ms.author: sstein
 manager: craigg

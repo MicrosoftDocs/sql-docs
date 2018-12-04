@@ -5,9 +5,7 @@ ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: native-client
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 
   - "date/time [ODBC], data type support"
@@ -134,7 +132,7 @@ typedef struct tagSS_TIMESTAMPOFFSET_STRUCT {
 } SQL_SS_TIMESTAMPOFFSET_STRUCT;  
 ```  
   
- If the **timezone_hour** is negative, the **timezone_minute** must be negative or zero. If the **timezone_hour** is positive, the **timezone_minute** must be positive or zero. If the **timezone_hour** is zero, the s**timezone_minute** may have any value in the range -59 through +59.  
+ If the **timezone_hour** is negative, the **timezone_minute** must be negative or zero. If the **timezone_hour** is positive, the **timezone_minute** must be positive or zero. If the **timezone_hour** is zero, the **timezone_minute** may have any value in the range -59 through +59.  
   
 ## See Also  
  [Date and Time Improvements &#40;ODBC&#41;](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)  

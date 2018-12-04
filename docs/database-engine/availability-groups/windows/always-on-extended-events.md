@@ -4,12 +4,9 @@ ms.custom: "ag-guide"
 ms.date: "06/13/2017"
 ms.prod: sql
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: high-availability
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: 5950f98a-3950-473d-95fd-cde3557b8fc2
-caps.latest.revision: 6
 author: rothja
 ms.author: jroth
 manager: craigg
@@ -352,7 +349,7 @@ GO
   
 |Column|Description|  
 |------------|-----------------|  
-|Name|error_reported<br /><br /> Error Number 1480: The REPLICATION_TYPE_MSG database "DATABASE_NAME" is changing roles from “OLD_ROLE” to “NEW_ROLE” due to REASON_MSG|  
+|Name|error_reported<br /><br /> Error Number 1480: The REPLICATION_TYPE_MSG database "DATABASE_NAME" is changing roles from "OLD_ROLE" to "NEW_ROLE" due to REASON_MSG|  
 |Category|errors|  
 |Channel|Admin|  
   

@@ -6,8 +6,6 @@ ms.technology: connectivity
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 apitype: "COM"
 f1_keywords: 
@@ -15,7 +13,6 @@ f1_keywords:
 helpviewer_keywords: 
   - "Record object [ADO]"
 ms.assetid: db83ed2c-a8e3-460c-8682-64667e4d5d01
-caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
@@ -57,7 +54,7 @@ Represents a row from a [Recordset](../../../ado/reference/ado-api/recordset-obj
   
 -   Indicate the current status of the **Record** with the [State](../../../ado/reference/ado-api/state-property-ado.md) property.  
   
--   Indicate the type of **Record** — *simple*, *collection*, or *structured document* — with the [RecordType](../../../ado/reference/ado-api/recordtype-property-ado.md)property.  
+-   Indicate the type of **Record** - *simple*, *collection*, or *structured document* - with the [RecordType](../../../ado/reference/ado-api/recordtype-property-ado.md)property.  
   
 -   Stop execution of an asynchronous operation with the [Cancel](../../../ado/reference/ado-api/cancel-method-ado.md) method.  
   

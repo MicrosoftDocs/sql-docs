@@ -5,14 +5,11 @@ ms.date: "08/08/2017"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: connectivity
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 dev_langs: 
   - "CSharp"
 ms.assetid: 9b608b0b-6b38-42da-bb83-79df8c170cd7
-caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
@@ -36,7 +33,7 @@ The ADO.NET classes for connecting to your local Microsoft SQL Server can also c
   
 Your program must distinguish between transient errors versus persistent errors. Transient errors are error conditions that may clear up within a short period of time, such as transient network problems.  An example of a persistent error would be, if your program has a misspelling of the target database name - in this case, the "No such database found" error would persist, and has no chance of clearing up within a short period of time.  
   
-The list of error numbers that are categorized as transient faults is available at at [Error messages for SQL Database client applications](http://docs.microsoft.com/azure/sql-database/sql-database-develop-error-messages/)  
+The list of error numbers that are categorized as transient faults is available at [Error messages for SQL Database client applications](https://docs.microsoft.com/azure/sql-database/sql-database-develop-error-messages/)  
   
 ## Step 2: Create and Run sample application  
   
@@ -314,4 +311,4 @@ To prove the code handles persistent errors correctly, rerun the preceding test 
   
 ## Next Steps  
   
-To explore other best practicies and design guidelines, visit [Connecting to SQL Database: Links, Best Practices and Design Guidelines](http://azure.microsoft.com/documentation/articles/sql-database-connect-central-recommendations/)  
+To explore other best practicies and design guidelines, visit [Connecting to SQL Database: Links, Best Practices and Design Guidelines](https://azure.microsoft.com/documentation/articles/sql-database-connect-central-recommendations/)  

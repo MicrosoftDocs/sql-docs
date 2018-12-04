@@ -5,16 +5,13 @@ ms.date: "01/04/2018"
 ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: supportability
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "transaction logs [SQL Server], about"
   - "databases [SQL Server], transaction logs"
   - "logs [SQL Server], transaction logs"
 ms.assetid: d7be5ac5-4c8e-4d0a-b114-939eb97dac4d
-caps.latest.revision: 65
 author: "MashaMSFT"
 ms.author: "mathoma"
 manager: craigg
@@ -54,7 +51,7 @@ After a hardware loss or disk failure affecting the database files, you can rest
 As you restore each log backup, the Database Engine reapplies all the modifications recorded in the log to roll forward all the transactions. When the last log backup is restored, the Database Engine then uses the log information to roll back all transactions that were not complete at that point. 
 
 ### Supporting transactional replication
-The Log Reader Agent monitors the transaction log of each database configured for transactional replication and copies the transactions marked for replication from the transaction log into the distribution database. For more information, see [How Transactional Replication Works](http://msdn.microsoft.com/library/ms151706.aspx).
+The Log Reader Agent monitors the transaction log of each database configured for transactional replication and copies the transactions marked for replication from the transaction log into the distribution database. For more information, see [How Transactional Replication Works](https://msdn.microsoft.com/library/ms151706.aspx).
 
 ### Supporting high availability and disaster recovery solutions
 The standby-server solutions, [!INCLUDE[ssHADR](../../includes/sshadr-md.md)], database mirroring, and log shipping, rely heavily on the transaction log. 
@@ -111,9 +108,9 @@ To avoid running out of space, unless log truncation is delayed for some reason,
 |7|DATABASE_SNAPSHOT_CREATION|A database snapshot is being created. (All recovery models)<br /><br /> This is a routine, and typically brief, cause of delayed log truncation.|  
 |8|LOG_SCAN|A log scan is occurring. (All recovery models)<br /><br /> This is a routine, and typically brief, cause of delayed log truncation.|  
 |9|AVAILABILITY_REPLICA|A secondary replica of an availability group is applying transaction log records of this database to a corresponding secondary database. (Full recovery model)<br /><br /> For more information, see [Overview of Always On Availability Groups &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md).|  
-|10|—|For internal use only|  
-|11|—|For internal use only|  
-|12|—|For internal use only|  
+|10|-|For internal use only|  
+|11|-|For internal use only|  
+|12|-|For internal use only|  
 |13|OLDEST_PAGE|If a database is configured to use indirect checkpoints, the oldest page on the database might be older than the checkpoint [log sequence number (LSN)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#Logical_Arch). In this case, the oldest page can delay log truncation. (All recovery models)<br /><br /> For information about indirect checkpoints, see [Database Checkpoints &#40;SQL Server&#41;](../../relational-databases/logs/database-checkpoints-sql-server.md).|  
 |14|OTHER_TRANSIENT|This value is currently not used.|  
   
@@ -156,17 +153,17 @@ When transactional replication is enabled, SELECT INTO operations are fully logg
     -   [DROP INDEX](../../t-sql/statements/drop-index-transact-sql.md) new heap rebuild (if applicable). Index page deallocation during a `DROP INDEX` operation is **always** fully logged.
   
 ##  <a name="RelatedTasks"></a> Related tasks  
- **Managing the transaction log**  
+**Managing the transaction log**  
   
 -   [Manage the Size of the Transaction Log File](../../relational-databases/logs/manage-the-size-of-the-transaction-log-file.md)  
   
 -   [Troubleshoot a Full Transaction Log &#40;SQL Server Error 9002&#41;](../../relational-databases/logs/troubleshoot-a-full-transaction-log-sql-server-error-9002.md)  
   
- **Backing Up the Transaction Log (Full Recovery Model)**  
+**Backing Up the Transaction Log (Full Recovery Model)**  
   
 -   [Back Up a Transaction Log &#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-a-transaction-log-sql-server.md)  
   
- **Restoring the Transaction Log (Full Recovery Model)**  
+**Restoring the Transaction Log (Full Recovery Model)**  
   
 -   [Restore a Transaction Log Backup &#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-a-transaction-log-backup-sql-server.md)  
   

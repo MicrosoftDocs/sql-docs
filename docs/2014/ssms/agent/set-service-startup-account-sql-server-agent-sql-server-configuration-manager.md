@@ -4,17 +4,13 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-cross-instance"
-ms.tgt_pltfrm: ""
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords: 
   - "SQL Server Agent, service accounts"
   - "startup accounts [SQL Server]"
   - "service startup accounts [SQL Server Agent]"
 ms.assetid: 46ffe818-ebb5-43a0-840b-923f219a2472
-caps.latest.revision: 42
 author: stevestein
 ms.author: sstein
 manager: craigg
@@ -63,7 +59,7 @@ manager: craigg
   
 2.  Click the plus sign to expand the **Local Server Groups** folder.  
   
-3.  Right-click the server instance where you want set up the Service Startup Account, and select **SQL Server Configuration Manager…**.  
+3.  Right-click the server instance where you want set up the Service Startup Account, and select **SQL Server Configuration Manager...**.  
   
 4.  In the **User Account Control** dialog box, click **Yes**.  
   

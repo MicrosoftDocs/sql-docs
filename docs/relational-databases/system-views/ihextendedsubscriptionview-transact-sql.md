@@ -4,15 +4,9 @@ ms.custom: ""
 ms.date: "03/03/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "system-views"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
+ms.technology: replication
 ms.topic: "language-reference"
-applies_to: 
-  - "SQL Server"
 f1_keywords: 
   - "IHextendedSubscriptionView_TSQL"
   - "IHextendedSubscriptionView"
@@ -21,7 +15,6 @@ dev_langs:
 helpviewer_keywords: 
   - "IHextendedSubscriptionView view"
 ms.assetid: 124756a4-463a-4a81-bf5b-de7e8ffc7a62
-caps.latest.revision: 11
 author: "stevestein"
 ms.author: "sstein"
 manager: craigg

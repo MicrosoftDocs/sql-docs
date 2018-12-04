@@ -4,16 +4,13 @@ ms.custom: ""
 ms.date: "03/09/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "database-engine"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "files-only installation [Reporting Services]"
   - "installation options [Reporting Services]"
 ms.assetid: bdc74a8f-046c-4aa0-bfbd-4f1711dfb9ce
-caps.latest.revision: 20
 author: markingmyname
 ms.author: maghan
 manager: craigg

@@ -5,15 +5,12 @@ ms.date: "03/01/2017"
 ms.prod: sql
 ms.prod_service: "sql-tools"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: profiler
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "trace window [SQL Server]"
   - "clearing trace window"
 ms.assetid: 8a9f0892-d812-4173-a498-abc36b230147
-caps.latest.revision: 23
 author: "stevestein"
 ms.author: "sstein"
 manager: craigg

@@ -4,11 +4,9 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "docset-sql-devref"
   - "reporting-services-native"
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 
   - "DataSet objects [Reporting Services]"
@@ -16,7 +14,6 @@ helpviewer_keywords:
   - "custom DataSet objects [Reporting Services]"
   - "external DataSet objects [Reporting Services]"
 ms.assetid: 11daa013-ec17-4760-80e3-6d84cd8d5722
-caps.latest.revision: 48
 author: markingmyname
 ms.author: maghan
 manager: craigg

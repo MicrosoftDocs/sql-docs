@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "03/16/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.component: "sqlxml"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: xml
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 
   - "SQLXMLOLEDB Provider, executing XPath queries"
@@ -17,7 +14,6 @@ helpviewer_keywords:
   - "XPath queries [SQLXML], SQLXMLOLEDB Provider"
   - "Mapping Schema property"
 ms.assetid: 19063222-dc9c-48ae-a55f-778103674a9e
-caps.latest.revision: 30
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: craigg
@@ -36,7 +32,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
  In this sample ADO application, an XPath query (root) is specified against an XSD mapping schema (MySchema.xml). The schema has a **\<Contacts>** element with **ContactID**, **FirstName**, and **LastName** attributes. In the schema, default mapping takes place: an element name maps to the table with the same name, and attributes of simple type map to the columns with the same names.  
   
 ```  
-<xsd:schema xmlns:xsd='http://www.w3.org/2001/XMLSchema'  
+<xsd:schema xmlns:xsd='https://www.w3.org/2001/XMLSchema'  
    xmlns:sql='urn:schemas-microsoft-com:mapping-schema'>  
  <xsd:element name= 'root' sql:is-constant='1'>   
     <xsd:complexType>  

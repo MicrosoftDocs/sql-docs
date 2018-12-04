@@ -4,12 +4,8 @@ ms.custom: ""
 ms.date: "03/01/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
-ms.component: "databases"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: supportability
 ms.topic: conceptual
 helpviewer_keywords: 
   - "space allocation [SQL Server], database size"
@@ -21,7 +17,6 @@ helpviewer_keywords:
   - "estimating database size"
   - "designing databases [SQL Server], estimating size"
 ms.assetid: 5b240161-eba4-44b0-946c-61a8fc00fc8c
-caps.latest.revision: 20
 author: "stevestein"
 ms.author: "sstein"
 manager: craigg

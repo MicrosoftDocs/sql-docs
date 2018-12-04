@@ -4,10 +4,8 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "database-engine"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Upgrade Advisor Report Viewer"
@@ -17,7 +15,6 @@ helpviewer_keywords:
   - "starting Upgrade Advisor"
   - "SQL Server Upgrade Advisor, running"
 ms.assetid: 7f47c9b3-88d3-43d6-837e-f157b49a55ac
-caps.latest.revision: 40
 author: mashamsft
 ms.author: mathoma
 manager: craigg

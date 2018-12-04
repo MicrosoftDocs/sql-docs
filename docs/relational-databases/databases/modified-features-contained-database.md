@@ -4,17 +4,12 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "databases"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "contained database, modifications to DBs"
 ms.assetid: a2942509-39a2-4903-b504-ae80a300a9de
-caps.latest.revision: 27
 author: "stevestein"
 ms.author: "sstein"
 manager: craigg

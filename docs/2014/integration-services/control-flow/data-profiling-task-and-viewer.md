@@ -4,17 +4,13 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Data Profiling task [Integration Services], about data profiling"
   - "data profiling"
   - "profiling data"
 ms.assetid: 756840e3-aa09-45cd-9951-1a17af4b5925
-caps.latest.revision: 32
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
@@ -46,7 +42,7 @@ manager: craigg
   
 -   The distribution of values in the City column.  
   
--   The strength of the functional dependency of the State column on the Zip column—that is, the state should always be the same for a given zip value.  
+-   The strength of the functional dependency of the State column on the Zip column-that is, the state should always be the same for a given zip value.  
   
  The statistics that a data profile provides gives you the information that you need in order to effectively minimize the quality issues that might occur from using the source data.  
   

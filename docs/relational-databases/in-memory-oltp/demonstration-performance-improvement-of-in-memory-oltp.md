@@ -4,14 +4,10 @@ ms.custom: ""
 ms.date: "08/19/2016"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.component: "in-memory-oltp"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: in-memory-oltp
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: c6def45d-d2d4-4d24-8068-fab4cd94d8cc
-caps.latest.revision: 16
 author: "CarlRabeler"
 ms.author: "carlrab"
 manager: craigg
@@ -62,9 +58,9 @@ go
   
 1.  Decide which existing test database you will use for the code example.  
   
-2.  If you decide to create a new test database, use the [Azure portal](http://portal.azure.com) to create a database named **imoltp**.  
+2.  If you decide to create a new test database, use the [Azure portal](https://portal.azure.com) to create a database named **imoltp**.  
   
- If you would like instructions for using the Azure portal for this, see [Get Started with Azure SQL Database](http://azure.microsoft.com/documentation/articles/sql-database-get-started).  
+ If you would like instructions for using the Azure portal for this, see [Get Started with Azure SQL Database](https://azure.microsoft.com/documentation/articles/sql-database-get-started).  
   
 ### Step 2: Create Memory-Optimized Tables, and NCSProc  
  This step creates memory-optimized tables, and a natively compiled stored procedure (NCSProc). Do the following:  

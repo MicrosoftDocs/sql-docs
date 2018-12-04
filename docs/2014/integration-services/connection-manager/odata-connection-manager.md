@@ -4,13 +4,9 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 3caa4372-aff3-4c0f-9ecd-97870948b8d0
-caps.latest.revision: 6
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
@@ -21,11 +17,11 @@ manager: craigg
 ## Adding Connection Manager to an SSIS Package  
  You can add a new OData Connection Manager to an SSIS package in three ways:  
   
--   Click the **New…** button in the **OData Source Editor**  
+-   Click the **New...** button in the **OData Source Editor**  
   
 -   Right-click **Connection Managers** folder in the **Solution Explorer** and click **New Connection Manager**. Select **ODATA** for **Connection manager type**.  
   
--   Right-click in the **Connection Managers** pane at the bottom of the package designer, and select **New Connection…**. Select **ODATA** for **Connection manager type**.  
+-   Right-click in the **Connection Managers** pane at the bottom of the package designer, and select **New Connection...**. Select **ODATA** for **Connection manager type**.  
   
 ## Connection Manager Authentication  
  The OData Connection Manager supports two modes of authentication.  

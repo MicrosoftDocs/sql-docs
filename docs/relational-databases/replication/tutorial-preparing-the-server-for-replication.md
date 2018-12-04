@@ -4,18 +4,12 @@ ms.custom: ""
 ms.date: "04/02/2018"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "replication"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: replication
-ms.tgt_pltfrm: ""
 ms.topic: quickstart
-applies_to: 
-  - "SQL Server 2016"
 helpviewer_keywords: 
   - "replication [SQL Server], tutorials"
 ms.assetid: ce30a095-2975-4387-9377-94a461ac78ee
-caps.latest.revision: 15
 author: "MashaMSFT"
 ms.author: "mathoma"
 manager: craigg
@@ -49,7 +43,7 @@ To complete this tutorial, you need SQL Server, SQL Server Management Studio (SS
 - At the subscriber server (destination), install any edition of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], except [!INCLUDE[ssEW](../../includes/ssew-md.md)]. [!INCLUDE[ssEW](../../includes/ssew-md.md)] cannot be a subscriber in transactional replication.  
   
 - Install [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms).
-- Install [SQL Server 2017 Developer edition](https://www.microsoft.com/en-us/sql-server/sql-server-downloads).
+- Install [SQL Server 2017 Developer edition](https://www.microsoft.com/sql-server/sql-server-downloads).
 - Download the [AdventureWorks sample database](https://github.com/Microsoft/sql-server-samples/releases). For instructions on restoring a database in SSMS, see [Restoring a database](https://docs.microsoft.com/sql/relational-databases/backup-restore/restore-a-database-backup-using-ssms). 
     
 >[!NOTE]

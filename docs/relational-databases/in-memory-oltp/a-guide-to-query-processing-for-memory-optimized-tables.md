@@ -4,14 +4,10 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.component: "in-memory-oltp"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: in-memory-oltp
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: 065296fe-6711-4837-965e-252ef6c13a0f
-caps.latest.revision: 26
 author: MightyPen
 ms.author: genemi
 manager: craigg
@@ -62,7 +58,7 @@ CREATE INDEX IX_OrderDate ON dbo.[Order](OrderDate)
 GO  
 ```  
   
- For constructing the query plans shown in this article, the two tables were populated with sample data from the Northwind sample database, which you can download from [Northwind and pubs Sample Databases for SQL Server 2000](http://www.microsoft.com/download/details.aspx?id=23654).  
+ For constructing the query plans shown in this article, the two tables were populated with sample data from the Northwind sample database, which you can download from [Northwind and pubs Sample Databases for SQL Server 2000](https://www.microsoft.com/download/details.aspx?id=23654).  
   
  Consider the following query, which joins the tables Customer and Order and returns the ID of the order and the associated customer information:  
   
@@ -224,7 +220,7 @@ Execution of natively compiled stored procedures.
   
  Invocation of a natively compiled stored procedure is described as follows:  
   
-1.  The user issues an **EXEC***usp_myproc* statement.  
+1.  The user issues an **EXEC**_usp_myproc_ statement.  
   
 2.  The parser extracts the name and stored procedure parameters.  
   

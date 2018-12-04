@@ -4,12 +4,8 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "wmi"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: wmi
 ms.topic: "reference"
 apiname: 
   - "PropertyIdx Property (ClientNetworkProtocolProperty Class)"
@@ -19,7 +15,6 @@ apitype: "MOFDef"
 helpviewer_keywords: 
   - "PropertyIdx property"
 ms.assetid: d7845962-ac68-4435-9c59-70ec450fec88
-caps.latest.revision: 29
 author: "CarlRabeler"
 ms.author: "carlrab"
 manager: craigg

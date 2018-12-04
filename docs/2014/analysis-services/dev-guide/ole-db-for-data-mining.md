@@ -4,17 +4,14 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
   - "docset-sql-devref"
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 
   - "data mining [Analysis Services], OLE DB for Data Mining"
   - "OLE DB for Data Mining"
 ms.assetid: 69f306df-8038-463f-91c3-5413503246c2
-caps.latest.revision: 29
 author: minewiskan
 ms.author: owend
 manager: craigg
@@ -27,7 +24,7 @@ manager: craigg
  **For More Information:** [Data Mining Schema Rowsets](../../relational-databases/native-client-ole-db-rowsets/rowsets.md), [CREATE MINING STRUCTURE &#40;DMX&#41;](/sql/dmx/create-mining-structure-dmx), [ALTER MINING STRUCTURE &#40;DMX&#41;](/sql/dmx/alter-mining-structure-dmx), [DROP MINING STRUCTURE &#40;DMX&#41;](/sql/dmx/drop-mining-structure-dmx)  
   
 ## See Also  
- [Analysis Services Schema Rowsets](../schema-rowsets/analysis-services-schema-rowsets.md)   
+ [Analysis Services Schema Rowsets](https://docs.microsoft.com/bi-reference/schema-rowsets/analysis-services-schema-rowsets)   
  [Data Mining Extensions &#40;DMX&#41; Reference](/sql/dmx/data-mining-extensions-dmx-reference)  
   
   

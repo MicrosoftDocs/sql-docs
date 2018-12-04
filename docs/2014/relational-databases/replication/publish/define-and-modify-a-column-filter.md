@@ -4,10 +4,7 @@ ms.custom: ""
 ms.date: "06/14/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords: 
   - "filters [SQL Server replication], column"
@@ -15,7 +12,6 @@ helpviewer_keywords:
   - "modifying filters"
   - "column filters [SQL Server replication]"
 ms.assetid: d7c3186a-9a8c-45d8-ab34-05beec4c26dd
-caps.latest.revision: 38
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg

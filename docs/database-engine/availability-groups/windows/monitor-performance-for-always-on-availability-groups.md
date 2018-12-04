@@ -4,12 +4,9 @@ ms.custom: "ag-guide"
 ms.date: "06/13/2017"
 ms.prod: sql
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: high-availability
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: dfd2b639-8fd4-4cb9-b134-768a3898f9e6
-caps.latest.revision: 13
 author: rothja
 ms.author: jroth
 manager: craigg
@@ -325,7 +322,7 @@ It is possible to query the DMVs [sys.dm_hadr_database_replica_states](../../../
 
   
 ##  Monitoring for RTO and RPO  
- This section demonstrates how to monitor your availability groups for RTO and RPO metrics. This demonstration is similar to the GUI tutorial given in [The Always On health model, part 2: Extending the health model](http://blogs.msdn.com/b/sqlalwayson/archive/2012/02/13/extending-the-alwayson-health-model.aspx).  
+ This section demonstrates how to monitor your availability groups for RTO and RPO metrics. This demonstration is similar to the GUI tutorial given in [The Always On health model, part 2: Extending the health model](https://blogs.msdn.com/b/sqlalwayson/archive/2012/02/13/extending-the-alwayson-health-model.aspx).  
   
  Elements of the failover time and potential data loss calculations in [Estimating failover time (RTO)](#BKMK_RTO) and [Estimating potential data loss (RPO)](#BKMK_RPO) are conveniently provided as performance metrics in the policy management facet **Database Replica State** (see [View the policy-based management facets on a SQL Server object](~/relational-databases/policy-based-management/view-the-policy-based-management-facets-on-a-sql-server-object.md)). You can monitor these two metrics on a schedule and be alerted when the metrics exceed your RTO and RPO, respectively.  
   

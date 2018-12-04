@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "06/10/2016"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "system-stored-procedures"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "sp_backup_config_optional"
@@ -21,7 +18,6 @@ helpviewer_keywords:
   - "sp_backup_config_optional"
   - "managed_backup.sp_backup_config_optional"
 ms.assetid: 4fae8193-1f88-48fd-a94a-4786efe8d6af
-caps.latest.revision: 15
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
@@ -49,7 +45,7 @@ EXEC managed_backup.sp_backup_config_advanced
  The database name for enabling managed backup on a specific database. If NULL or *, then this managed backup applies to all databases on the server.  
   
  @encryption_algorithm  
- The name of the encryption algorithm used during the backup to encrypt the backup file. The @encryption_algorithm is **SYSNAME**. It is a required parameter when configuring [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] for the first time for the database. Specify **NO_ENCRYPTION** if you do not wish to encrypt the backup file. When changing the [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] configuration settings, this parameter is optional – if the parameter is not specified then the existing configuration values are retained. The allowed values for this parameter are:  
+ The name of the encryption algorithm used during the backup to encrypt the backup file. The @encryption_algorithm is **SYSNAME**. It is a required parameter when configuring [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] for the first time for the database. Specify **NO_ENCRYPTION** if you do not wish to encrypt the backup file. When changing the [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] configuration settings, this parameter is optional - if the parameter is not specified then the existing configuration values are retained. The allowed values for this parameter are:  
   
 -   AES_128  
   

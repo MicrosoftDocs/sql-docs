@@ -4,17 +4,14 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "database-engine"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "event file target"
   - "file target [SQL Server extended events]"
   - "targets [SQL Server extended events], file target"
 ms.assetid: 4f0ee6ec-a0a8-4c38-aa61-8293ab6ac7fd
-caps.latest.revision: 17
 author: mashamsft
 ms.author: mathoma
 manager: craigg
@@ -31,7 +28,7 @@ manager: craigg
 |max_rollover_files|Any 32 bit integer. This value is optional.|The maximum number of files to retain in the file system. The default value is 5.|  
 |increment|Any 32 bit integer. This value is optional.|The incremental growth, in megabytes (MB), for the file. If unspecified, the default value for increment is twice the session buffer size.|  
   
- The first time that an event file target is created, the filename you specify is appended with _0\_ and a long integer value. The integer value is calculated as the number of milliseconds between January 1, 1600 and the date and time the file is created. Subsequent rollover files also use this format. From examining the value of the long integer, you can determine the most current file. The following example illustrates how files are named in a scenario where you specify the filename option as C:\OutputFiles\MyOutput.xel:  
+ The first time that an event file target is created, the filename you specify is appended with _0\_ and a long integer value. The integer value is calculated as the number of milliseconds between January 1, 1601 and the date and time the file is created. Subsequent rollover files also use this format. From examining the value of the long integer, you can determine the most current file. The following example illustrates how files are named in a scenario where you specify the filename option as C:\OutputFiles\MyOutput.xel:  
   
 -   first file created - C:\OutputFiles\MyOutput_0_128500310259380000.xel  
   

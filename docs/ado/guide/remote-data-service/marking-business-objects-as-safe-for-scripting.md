@@ -4,22 +4,19 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ""
-ms.date: "01/19/2017"
+ms.date: 11/09/2018
 ms.reviewer: ""
-ms.suite: "sql"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "business objects in RDS [ADO]"
 ms.assetid: 0be98d1a-ab3d-4dce-a166-dacda10d154a
-caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ---
 # Marking Business Objects as Safe for Scripting
 > [!IMPORTANT]
->  Beginning with Windows 8 and Windows Server 2012, RDS server components are no longer included in the Windows operating system (see Windows 8 and [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/en-us/download/details.aspx?id=27416) for more detail). RDS client components will be removed in a future version of Windows. Avoid using this feature in new development work, and plan to modify applications that currently use this feature. Applications that use RDS should migrate to [WCF Data Service](http://go.microsoft.com/fwlink/?LinkId=199565).  
+>  Beginning with Windows 8 and Windows Server 2012, RDS server components are no longer included in the Windows operating system (see Windows 8 and [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) for more detail). RDS client components will be removed in a future version of Windows. Avoid using this feature in new development work, and plan to modify applications that currently use this feature. Applications that use RDS should migrate to [WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565).  
   
  To help ensure a secure Internet environment, you need to mark any business objects instantiated with the [RDS.DataSpace](../../../ado/reference/rds-api/dataspace-object-rds.md) object's [CreateObject](../../../ado/reference/rds-api/createobject-method-rds.md) method as "safe for scripting." You need to ensure they are marked as such in the License area of the system registry before they can be used in DCOM.  
   
@@ -28,7 +25,7 @@ manager: craigg
   
  To manually mark your business object as safe for scripting, create a text file with a .reg extension that contains the following text. In this example, \<*MyActiveXGUID*> is the hexadecimal GUID number of your business object. The following two numbers enable the safe-for-scripting feature:  
   
-```  
+```console
 [HKEY_CLASSES_ROOT\CLSID\<MyActiveXGUID>\Implemented   
 Categories\{7DD95801-9882-11CF-9FA9-00AA006C42C4}]  
 [HKEY_CLASSES_ROOT\CLSID\<MyActiveXGUID>\Implemented   

@@ -4,9 +4,7 @@ ms.custom: ""
 ms.date: "05/17/2017"
 ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "dm_db_log_stats_TSQL"
@@ -18,7 +16,6 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.dm_db_log_stats dynamic management function"
 ms.assetid: 
-caps.latest.revision: 
 author: stevestein
 ms.author: sstein
 manager: craigg

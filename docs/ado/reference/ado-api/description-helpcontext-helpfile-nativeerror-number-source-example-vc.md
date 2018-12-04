@@ -6,8 +6,6 @@ ms.technology: connectivity
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 dev_langs: 
   - "C++"
@@ -20,7 +18,6 @@ helpviewer_keywords:
   - "HelpFile property [ADO], VC++ example"
   - "Description property [ADO], VC++ example"
 ms.assetid: 5321fc0f-cd0c-4e2a-a5bc-0008fba86b59
-caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg

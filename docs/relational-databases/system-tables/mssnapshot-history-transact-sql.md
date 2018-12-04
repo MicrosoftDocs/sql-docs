@@ -4,15 +4,9 @@ ms.custom: ""
 ms.date: "03/04/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "system-tables"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
+ms.technology: replication
 ms.topic: "language-reference"
-applies_to: 
-  - "SQL Server"
 f1_keywords: 
   - "MSsnapshot_history"
   - "MSsnapshot_history_TSQL"
@@ -21,7 +15,6 @@ dev_langs:
 helpviewer_keywords: 
   - "MSsnapshot_history system table"
 ms.assetid: 56bf4128-1689-4963-9343-432dd0898d31
-caps.latest.revision: 27
 author: stevestein
 ms.author: sstein
 manager: craigg

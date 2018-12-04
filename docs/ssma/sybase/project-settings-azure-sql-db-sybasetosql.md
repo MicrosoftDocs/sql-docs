@@ -4,15 +4,9 @@ ms.custom: ""
 ms.date: "01/19/2017"
 ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: ssma
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
-applies_to: 
-  - "Azure SQL Database"
-  - "SQL Server"
 ms.assetid: 57002374-0d4d-43c1-b4e9-cbec02355a9c
-caps.latest.revision: 4
 author: "Shamikg"
 ms.author: "Shamikg"
 manager: craigg
@@ -29,7 +23,7 @@ The Azure SQL DB pane is available in the **Project Settings** and **Default Pro
 ## Connectivity  
 **Heartbeat Interval**  
   
-Specifies a time interval to be used for heartbeat mechanism to keep the Azure SQL DB connection alive in ‘minutes : seconds’ format.  
+Specifies a time interval to be used for heartbeat mechanism to keep the Azure SQL DB connection alive in 'minutes : seconds' format.  
   
 **Default Value**:'4:45'  
   

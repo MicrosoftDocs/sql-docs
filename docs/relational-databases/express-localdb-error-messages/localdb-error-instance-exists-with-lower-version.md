@@ -4,12 +4,9 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: performance
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 ms.assetid: a7c5ce08-8841-49a3-b252-116807ba469a
-caps.latest.revision: 8
 author: "stevestein"
 ms.author: "sstein"
 manager: craigg

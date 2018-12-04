@@ -4,16 +4,13 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "process [Analysis Services]"
   - "processing [Analysis Services]"
 ms.assetid: 82347a16-4145-4655-8adf-2a300f1fdf99
-caps.latest.revision: 33
 author: minewiskan
 ms.author: owend
 manager: craigg
@@ -39,7 +36,7 @@ manager: craigg
   
 -   Monitor processing with SQL Server Profiler  
   
--   Program a custom solution using AMO. For more information, see [Programming AMO OLAP Basic Objects](analysis-management-objects/programming-amo-olap-basic-objects.md).  
+-   Program a custom solution using AMO. For more information, see [Programming AMO OLAP Basic Objects](https://docs.microsoft.com/bi-reference/amo/programming-amo-olap-basic-objects).  
   
  Processing is a highly configurable operation, controlled by a set of processing options that determine whether full or incremental processing occurs at the object level. For more information about processing options and objects, see [Processing Options and Settings &#40;Analysis Services&#41;](processing-options-and-settings-analysis-services.md) and [Processing Analysis Services Objects](processing-analysis-services-objects.md).  
   

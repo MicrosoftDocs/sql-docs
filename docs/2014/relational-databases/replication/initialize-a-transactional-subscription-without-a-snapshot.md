@@ -4,17 +4,13 @@ ms.custom: ""
 ms.date: "03/07/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords: 
   - "transactional replication, initializing"
   - "replication [SQL Server], initializing"
   - "initializing subscriptions [SQL Server replication], without snapshots"
 ms.assetid: 75c8c1f8-60bc-44a8-944b-d18d1f6bda11
-caps.latest.revision: 36
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg

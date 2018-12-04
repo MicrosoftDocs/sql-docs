@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "06/10/2016"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "system-catalog-views"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "sys.service_queue_usages"
@@ -20,7 +17,6 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.service_queue_usages catalog view"
 ms.assetid: d58dcdaf-f82d-43d9-941b-f520581442bf
-caps.latest.revision: 16
 author: "stevestein"
 ms.author: "sstein"
 manager: craigg

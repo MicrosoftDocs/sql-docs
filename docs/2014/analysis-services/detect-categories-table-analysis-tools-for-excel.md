@@ -4,10 +4,8 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Table Analysis tools"
@@ -15,7 +13,6 @@ helpviewer_keywords:
   - "mining model, decision tree"
   - "category detection"
 ms.assetid: 3c7e9ebb-d0c9-498e-a9ba-cc13eaa43520
-caps.latest.revision: 19
 author: minewiskan
 ms.author: owend
 manager: craigg
@@ -63,7 +60,7 @@ manager: craigg
  The shading in the column, **Relative Importance**, indicates how important that combination of attribute and value is as a distinguishing factor. The longer the bar, the more likely it is that this attribute is strongly representative of this category.  
   
 ### Categories Profile Chart  
- The final chart in the **Categories Report** worksheet, **Category Profiles**, is an interactive **Pivot Chart** that you can use to rearrange and hide fields, filter on values, and customize the chart’s appearance.  
+ The final chart in the **Categories Report** worksheet, **Category Profiles**, is an interactive **Pivot Chart** that you can use to rearrange and hide fields, filter on values, and customize the chart's appearance.  
   
  Excel 2013 now provides **Chart Styles** and **Chart Elements** controls right in the design surface that make it easy to improve the chart design.  
   

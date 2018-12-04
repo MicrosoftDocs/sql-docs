@@ -4,13 +4,9 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: e74217c8-234a-4095-b3c0-5870707e5a87
-caps.latest.revision: 4
 author: douglaslMS
 ms.author: douglasl
 manager: craigg

@@ -4,13 +4,9 @@ ms.custom: ""
 ms.date: "10/13/2015"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: supportability
 ms.topic: conceptual
 ms.assetid: e466419a-d8a4-48f7-8d97-13a903ad6b15
-caps.latest.revision: 11
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg

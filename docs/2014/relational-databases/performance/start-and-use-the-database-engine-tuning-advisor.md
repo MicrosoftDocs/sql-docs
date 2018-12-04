@@ -4,10 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: performance
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.dta.advancedtuningoptions.f1"
@@ -19,7 +16,6 @@ f1_keywords:
 helpviewer_keywords: 
   - "Database Engine Tuning Advisor [SQL Server], starting"
 ms.assetid: a4e3226a-3917-4ec8-bdf0-472879d231c9
-caps.latest.revision: 30
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
@@ -232,16 +228,16 @@ manager: craigg
     dta -E -D DatabaseName -ip -s SessionName  
     ```  
   
-2.  To modify the number of events to use for analysis, specify the **–n** option. The following example increases the number of cache entries to 2,000.  
+2.  To modify the number of events to use for analysis, specify the **-n** option. The following example increases the number of cache entries to 2,000.  
   
     ```  
-    dta -E -D DatabaseName -ip –n 2000-s SessionName1  
+    dta -E -D DatabaseName -ip -n 2000-s SessionName1  
     ```  
   
 3.  To analyze events for all databases in the instance, specify the **-ipf** option.  
   
     ```  
-    dta -E -D DatabaseName -ip –ipf –n 2000 -s SessionName2  
+    dta -E -D DatabaseName -ip -ipf -n 2000 -s SessionName2  
     ```  
   
 ##### To tune a database by using a workload and dta utility default settings  

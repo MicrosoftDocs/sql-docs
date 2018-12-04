@@ -4,9 +4,7 @@ ms.custom: ""
 ms.date: "08/08/2018"
 ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: ssms
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: 8f3d273c-c663-4341-aa2f-5ed8ebcba5b0
 author: stevestein
@@ -43,7 +41,7 @@ for this software, unless other terms accompany those items. If so, those terms 
 &nbsp;&nbsp;**a.	Distributable Code.**
 
 &nbsp;&nbsp;&nbsp;&nbsp;**i.	Right to Use and Distribute. If you comply with the terms below:**
-*	You may copy and distribute the object code form of the software (“Distributable Code”) in programs you develop; and
+*	You may copy and distribute the object code form of the software ("Distributable Code") in programs you develop; and
 *	You may permit distributors of your programs to copy and distribute the Distributable Code as part of those programs.
 
 &nbsp;&nbsp;&nbsp;&nbsp;**ii.	Distribution Requirements. For any Distributable Code you distribute, you must**
@@ -51,11 +49,11 @@ for this software, unless other terms accompany those items. If so, those terms 
 * for any Distributable Code having a filename extension of .dll, distribute only the results of running such Distributable Code through a linker with your program;
 * require distributors and external end users to agree to terms that protect it at least as much as this agreement; 
 * display your valid copyright notice on your programs; and
-* indemnify, defend, and hold harmless Microsoft from any claims, including attorneys’ fees, related to the distribution or use of your programs.
+* indemnify, defend, and hold harmless Microsoft from any claims, including attorneys' fees, related to the distribution or use of your programs.
 
 &nbsp;&nbsp;&nbsp;&nbsp;**iii.	Distribution Restrictions. You may not**
 * alter any copyright, trademark or patent notice in the Distributable Code;
-* use Microsoft’s trademarks in your programs’ names or in a way that suggests your programs come from or are endorsed by Microsoft;
+* use Microsoft's trademarks in your programs' names or in a way that suggests your programs come from or are endorsed by Microsoft;
 * include Distributable Code in malicious, deceptive or unlawful programs; or
 * modify or distribute the source code of any Distributable Code so that any part of it becomes subject to an Excluded License. An Excluded License is one that requires, as a condition of use, modification or distribution, that
   * the code be disclosed or distributed in source code form; or
@@ -77,7 +75,7 @@ for this software, unless other terms accompany those items. If so, those terms 
 
 **7.	EXPORT RESTRICTIONS.** The software is subject to United States export laws and regulations. You must comply with all domestic and international export laws and regulations that apply to the software. These laws include restrictions on destinations, end users and end use. For additional information, see www.microsoft.com/exporting.
 
-**8.	SUPPORT SERVICES.** Because this software is “as is,” we may not provide support services for it.
+**8.	SUPPORT SERVICES.** Because this software is "as is," we may not provide support services for it.
 
 **9.	ENTIRE AGREEMENT**. This agreement, and the terms for supplements, updates, Internet-based services and support services that you use, are the entire agreement for the software and support services.
 
@@ -89,9 +87,9 @@ for this software, unless other terms accompany those items. If so, those terms 
 
 **11.	LEGAL EFFECT.** This agreement describes certain legal rights. You may have other rights under the laws of your country. You may also have rights with respect to the party from whom you acquired the software. This agreement does not change your rights under the laws of your country if the laws of your country do not permit it to do so.
 
-**12.	DISCLAIMER OF WARRANTY. THE SOFTWARE IS LICENSED “AS-IS.” YOU BEAR THE RISK OF USING IT. MICROSOFT GIVES NO EXPRESS WARRANTIES, GUARANTEES OR CONDITIONS. YOU MAY HAVE ADDITIONAL CONSUMER RIGHTS OR STATUTORY GUARANTEES UNDER YOUR LOCAL LAWS WHICH THIS AGREEMENT CANNOT CHANGE. TO THE EXTENT PERMITTED UNDER YOUR LOCAL LAWS, MICROSOFT EXCLUDES THE IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT.**
+**12.	DISCLAIMER OF WARRANTY. THE SOFTWARE IS LICENSED "AS-IS." YOU BEAR THE RISK OF USING IT. MICROSOFT GIVES NO EXPRESS WARRANTIES, GUARANTEES OR CONDITIONS. YOU MAY HAVE ADDITIONAL CONSUMER RIGHTS OR STATUTORY GUARANTEES UNDER YOUR LOCAL LAWS WHICH THIS AGREEMENT CANNOT CHANGE. TO THE EXTENT PERMITTED UNDER YOUR LOCAL LAWS, MICROSOFT EXCLUDES THE IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT.**
 
-**FOR AUSTRALIA – You have statutory guarantees under the Australian Consumer Law and nothing in these terms is intended to affect those rights.**
+**FOR AUSTRALIA - You have statutory guarantees under the Australian Consumer Law and nothing in these terms is intended to affect those rights.**
 
 **13.	LIMITATION ON AND EXCLUSION OF REMEDIES AND DAMAGES. YOU CAN RECOVER FROM MICROSOFT AND ITS SUPPLIERS ONLY DIRECT DAMAGES UP TO U.S. $5.00. YOU CANNOT RECOVER ANY OTHER DAMAGES, INCLUDING CONSEQUENTIAL, LOST PROFITS, SPECIAL, INDIRECT OR INCIDENTAL DAMAGES.**
 This limitation applies to

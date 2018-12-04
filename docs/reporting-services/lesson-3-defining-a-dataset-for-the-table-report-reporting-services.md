@@ -4,11 +4,8 @@ ms.date: 05/23/2016
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
 ms.technology: reporting-services
-ms.suite: pro-bi
 
 ms.topic: conceptual
-applies_to: 
-  - "SQL Server 2016"
 ms.assetid: ee93dfcb-8f52-4d63-b4f6-0d38e00fd350
 author: maggiesMSFT
 ms.author: maggies
@@ -20,7 +17,7 @@ Use the query designer in Report Designer to design the dataset. For this tutori
   
 ### To define a Transact-SQL query for report data  
   
-1.  In the **Report Data** pane, click **New**, and then click **Dataset…**. The **Dataset Properties** dialog box opens.  
+1.  In the **Report Data** pane, click **New**, and then click **Dataset...**. The **Dataset Properties** dialog box opens.  
   
 2.  In the **Name** box, type **AdventureWorksDataset**.  
   

@@ -5,9 +5,7 @@ ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: native-client
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 
   - "fetching rows"
@@ -16,7 +14,6 @@ helpviewer_keywords:
   - "IRowset interface"
   - "SQL Server Native Client OLE DB provider, fetching"
 ms.assetid: 5e6dbe36-b682-464d-adfa-8e886f9bd452
-caps.latest.revision: 30
 author: MightyPen
 ms.author: genemi
 manager: craigg

@@ -4,10 +4,8 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "reporting-services-native"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "10183"
@@ -27,7 +25,6 @@ f1_keywords:
   - "10188"
   - "sql12.rtp.rptdesigner.legendtitleproperties.general.f1"
 ms.assetid: b035b2e0-ab1e-4a37-bff7-a42d1e914bac
-caps.latest.revision: 8
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
@@ -67,7 +64,7 @@ manager: craigg
  You cannot drag the legend inside or outside the chart area. If you want to position the legend inside the chart area, on the **Legend Properties** dialog box, under **Docking**, select **Default** from the drop-down list and clear the **Show legend outside chart area** option. By placing the legend inside the chart area, you can maximize space for data points on the chart. However, depending on the dataset, it can cause the legend to overlap some data points on the chart area, making the chart more difficult to read.  
   
 ## Displaying Legend Items Horizontally  
- By default, the legend is formatted as a list of one or more rows containing one legend item each. The legend area expands to accommodate the number of legend items. If the legend cannot expand, an ellipsis (…) is displayed. Depending on the specified legend style, the legend can expand vertically or horizontally. You can change the layout style on the **Legend Properties** dialog box or change the allocated space to display all the legend items.  
+ By default, the legend is formatted as a list of one or more rows containing one legend item each. The legend area expands to accommodate the number of legend items. If the legend cannot expand, an ellipsis (...) is displayed. Depending on the specified legend style, the legend can expand vertically or horizontally. You can change the layout style on the **Legend Properties** dialog box or change the allocated space to display all the legend items.  
   
  To display the legend horizontally, dock the legend to the top or bottom of the chart. This causes the legend to expand horizontally. You can also set the Layout property to **Row** or **Wide Table**. Set the MaxAutoSize property in the Properties pane to control the vertical space allocated to the legend when it is docked at the top or bottom of the chart area.  
   

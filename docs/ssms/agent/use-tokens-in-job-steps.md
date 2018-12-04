@@ -1,14 +1,11 @@
-﻿---
+---
 title: "Use Tokens in Job Steps | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: "sql-tools"
-ms.component: "ssms-agent"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: ssms
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "job steps [SQL Server Agent]"
@@ -17,7 +14,6 @@ helpviewer_keywords:
   - "tokens [SQL Server]"
   - "escape macros [SQL Server Agent]"
 ms.assetid: 105bbb66-0ade-4b46-b8e4-f849e5fc4d43
-caps.latest.revision: 4
 author: "stevestein"
 ms.author: "sstein"
 manager: craigg
@@ -39,7 +35,7 @@ monikerRange: "= azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts
 ## Understanding Using Tokens  
   
 > [!IMPORTANT]  
-> Any Windows user with write permissions on the Windows Event Log can access job steps that are activated by [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent alerts or WMI alerts. To avoid this security risk, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent tokens that can be used in jobs activated by alerts are disabled by default. These tokens are: **A-DBN**, **A-SVR**, **A-ERR**, **A-SEV**, **A-MSG**., and **WMI(***property***)**. Note that in this release, use of tokens is extended to all alerting.  
+> Any Windows user with write permissions on the Windows Event Log can access job steps that are activated by [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent alerts or WMI alerts. To avoid this security risk, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent tokens that can be used in jobs activated by alerts are disabled by default. These tokens are: **A-DBN**, **A-SVR**, **A-ERR**, **A-SEV**, **A-MSG**., and **WMI(**_property_**)**. Note that in this release, use of tokens is extended to all alerting.  
 >   
 > If you need to use these tokens, first ensure that only members of trusted Windows security groups, such as the Administrators group, have write permissions on the Event Log of the computer where [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] resides. Then, right-click **SQL Server Agent** in Object Explorer, select **Properties**, and on the **Alert System** page, select **Replace tokens for all job responses to alerts** to enable these tokens.  
   
@@ -71,8 +67,8 @@ The following tables list and describe the tokens and macros that [!INCLUDE[ssNo
 |**(A-ERR)**|Error number. If the job is run by an alert, the error number value automatically replaces this token in the job step.|  
 |**(A-SEV)**|Error severity. If the job is run by an alert, the error severity value automatically replaces this token in the job step.|  
 |**(A-MSG)**|Message text. If the job is run by an alert, the message text value automatically replaces this token in the job step.|  
-|**(JOBNAME)**|The name of the job.|  
-|**(STEPNAME)**|The name of the step.|  
+|**(JOBNAME)**|The name of the job. This token is only available on SQL Server 2016 and above.|  
+|**(STEPNAME)**|The name of the step. This token is only available on SQL Server 2016 and above.|  
 |**(DATE)**|Current date (in YYYYMMDD format).|  
 |**(INST)**|Instance name. For a default instance, this token will have the default instance name: MSSQLSERVER.|  
 |**(JOBID)**|Job ID.|  
@@ -80,34 +76,34 @@ The following tables list and describe the tokens and macros that [!INCLUDE[ssNo
 |**(MSSA)**|Master SQLServerAgent service name.|  
 |**(OSCMD)**|Prefix for the program used to run **CmdExec** job steps.|  
 |**(SQLDIR)**|The directory in which [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is installed. By default, this value is C:\Program Files\Microsoft SQL Server\MSSQL.|  
-|**(SQLLOGDIR)**|Replacement token for the SQL Server error log folder path – for example, $(ESCAPE_SQUOTE(SQLLOGDIR)).|  
+|**(SQLLOGDIR)**|Replacement token for the SQL Server error log folder path - for example, $(ESCAPE_SQUOTE(SQLLOGDIR)).|  
 |**(STEPCT)**|A count of the number of times this step has executed (excluding retries). Can be used by the step command to force termination of a multistep loop.|  
 |**(STEPID)**|Step ID.|  
 |**(SRVR)**|Name of the computer running [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. If the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance is a named instance, this includes the instance name.|  
 |**(TIME)**|Current time (in HHMMSS format).|  
 |**(STRTTM)**|The time (in HHMMSS format) that the job began executing.|  
 |**(STRTDT)**|The date (in YYYYMMDD format) that the job began executing.|  
-|**(WMI(***property***))**|For jobs that run in response to WMI alerts, the value of the property specified by *property*. For example, `$(WMI(DatabaseName))` provides the value of the **DatabaseName** property for the WMI event that caused the alert to run.|  
+|**(WMI(**_property_**))**|For jobs that run in response to WMI alerts, the value of the property specified by *property*. For example, `$(WMI(DatabaseName))` provides the value of the **DatabaseName** property for the WMI event that caused the alert to run.|  
   
 ### SQL Server Agent Escape Macros  
   
 |Escape Macros|Description|  
 |-----------------|---------------|  
-|**$(ESCAPE_SQUOTE(***token_name***))**|Escapes single quotation marks (') in the token replacement string. Replaces one single quotation mark with two single quotation marks.|  
-|**$(ESCAPE_DQUOTE(***token_name***))**|Escapes double quotation marks (") in the token replacement string. Replaces one double quotation mark with two double quotation marks.|  
-|**$(ESCAPE_RBRACKET(***token_name***))**|Escapes right brackets (]) in the token replacement string. Replaces one right bracket with two right brackets.|  
-|**$(ESCAPE_NONE(***token_name***))**|Replaces token without escaping any characters in the string. This macro is provided to support backward compatibility in environments where token replacement strings are only expected from trusted users. For more information, see "Updating Job Steps to Use Macros," later in this topic.|  
+|**$(ESCAPE_SQUOTE(**_token\_name_**))**|Escapes single quotation marks (') in the token replacement string. Replaces one single quotation mark with two single quotation marks.|  
+|**$(ESCAPE_DQUOTE(**_token\_name_**))**|Escapes double quotation marks (") in the token replacement string. Replaces one double quotation mark with two double quotation marks.|  
+|**$(ESCAPE_RBRACKET(**_token\_name_**))**|Escapes right brackets (]) in the token replacement string. Replaces one right bracket with two right brackets.|  
+|**$(ESCAPE_NONE(**_token\_name_**))**|Replaces token without escaping any characters in the string. This macro is provided to support backward compatibility in environments where token replacement strings are only expected from trusted users. For more information, see "Updating Job Steps to Use Macros," later in this topic.|  
   
 ## Updating Job Steps to Use Macros  
 Beginning with [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Service Pack 1, job steps that contain tokens without escape macros will fail and return an error message indicating the job step contains one or more tokens that must be updated with a macro before the job can run.  
   
-A script is provided with [!INCLUDE[msCoName](../../includes/msconame_md.md)] Knowledge Base article 915845: [SQL Server Agent Job Steps That Use Tokens Fail in SQL Server 2005 Service Pack 1](http://support.microsoft.com/kb/915845).You can use this script to update all of your job steps that use tokens with the **ESCAPE_NONE** macro. After using this script, we recommend that you review your job steps that use tokens as soon as possible, and replace the **ESCAPE_NONE** macro with an escape macro that is appropriate for the job step context.  
+A script is provided with [!INCLUDE[msCoName](../../includes/msconame_md.md)] Knowledge Base article 915845: [SQL Server Agent Job Steps That Use Tokens Fail in SQL Server 2005 Service Pack 1](https://support.microsoft.com/kb/915845).You can use this script to update all of your job steps that use tokens with the **ESCAPE_NONE** macro. After using this script, we recommend that you review your job steps that use tokens as soon as possible, and replace the **ESCAPE_NONE** macro with an escape macro that is appropriate for the job step context.  
   
 The following table describes how token replacement is handled by [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent. To turn alert token replacement on or off, right-click **SQL Server Agent** in Object Explorer, select **Properties**, and on the **Alert System** page, select or clear the **Replace tokens for all job responses to alerts** check box.  
   
 |Token syntax|Alert token replacement on|Alert token replacement off|  
 |----------------|------------------------------|-------------------------------|  
-|ESCAPE macro used|All tokens in jobs are successfully replaced.|Tokens activated by alerts are not replaced. These tokens are **A-DBN**, **A-SVR**, **A-ERR**, **A-SEV**, **A-MSG**, and **WMI(***property***)**. Other static tokens are replaced successfully.|  
+|ESCAPE macro used|All tokens in jobs are successfully replaced.|Tokens activated by alerts are not replaced. These tokens are **A-DBN**, **A-SVR**, **A-ERR**, **A-SEV**, **A-MSG**, and **WMI(**_property_**)**. Other static tokens are replaced successfully.|  
 |No ESCAPE macro used|Any jobs containing tokens fail.|Any jobs containing tokens fail.|  
   
 ## Token Syntax Update Examples  

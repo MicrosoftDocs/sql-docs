@@ -4,12 +4,8 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "database-mail"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql13.swb.sqlimail.profileandaccountmanagement.f1"
@@ -41,9 +37,8 @@ f1_keywords:
   - "sql13.swb.dbmail.manageexistingprofile.f1"
   - "sql13.swb.dbmail.manageprofilesecurity.principalview.f1"
 ms.assetid: 7edc21d4-ccf3-42a9-84c0-3f70333efce6
-caps.latest.revision: 13
-author: "stevestein"
-ms.author: "sstein"
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # Configure Database Mail
@@ -103,11 +98,11 @@ manager: craigg
 ###  <a name="Welcome"></a> Welcome Page  
  This page describes the steps to configuring Database Mail.  
   
- **Do not show this page again** – Check this to skip this welcome page from displaying in the future.  
+ **Do not show this page again** - Check this to skip this welcome page from displaying in the future.  
   
  **Next** - Proceeds to the **Select a configuration task** page.  
   
- **Cancel** – Terminates the wizard without configuring Database Mail  
+ **Cancel** - Terminates the wizard without configuring Database Mail  
   
  [Database Mail Configuration Wizard](#DBWizard)  
   
@@ -439,7 +434,7 @@ manager: craigg
  The **mailitem_id** of the test e-mail message.  
   
  **Troubleshoot**  
- Click to open Books Online to the [Troubleshooting Database Mail](http://msdn.microsoft.com/library/ms188663.aspx)topic.  
+ Click to open Books Online to the [Troubleshooting Database Mail](https://msdn.microsoft.com/library/ms188663.aspx)topic.  
   
  [Database Mail Configuration Wizard](#DBWizard)  
   

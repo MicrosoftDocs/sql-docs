@@ -4,11 +4,7 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-  - "docset-sql-devref"
-ms.tgt_pltfrm: ""
+ms.technology: stored-procedures
 ms.topic: "reference"
 api_name: 
   - "srv_pfield"
@@ -21,7 +17,6 @@ dev_langs:
 helpviewer_keywords: 
   - "srv_pfield"
 ms.assetid: a61e4c1f-e65b-48ea-a7d1-3e1544af389d
-caps.latest.revision: 32
 author: rothja
 ms.author: jroth
 manager: craigg

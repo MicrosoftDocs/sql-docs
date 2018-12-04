@@ -3,8 +3,6 @@ title: "Prerequisites for Using the ADO Documentation | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.tgt_pltfrm: ""
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -12,7 +10,6 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "ADO, prerequisites"
 ms.assetid: 557ee99f-3cc8-4578-9694-6b1b0788cfdd
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg

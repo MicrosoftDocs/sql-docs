@@ -4,15 +4,12 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.asvs.partitionpropertiesdialog.f1"
 ms.assetid: dfb5b7a0-7543-4e5e-8a30-4b734606e157
-caps.latest.revision: 10
 author: minewiskan
 ms.author: owend
 manager: craigg

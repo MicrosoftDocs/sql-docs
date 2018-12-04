@@ -5,18 +5,13 @@ ms.date: "03/17/2017"
 ms.prod: sql
 ms.prod_service: "integration-services"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: integration-services
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
-applies_to: 
-  - "SQL Server 2016 Preview"
 helpviewer_keywords: 
   - "Integration Services packages, running"
   - "packages [Integration Services], running"
   - "remote packages [Integration Services]"
 ms.assetid: 9f6ef376-3408-46bf-b5fa-fc7b18c689c9
-caps.latest.revision: 41
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: craigg
@@ -44,7 +39,7 @@ manager: craigg
 > [!NOTE]  
 >  The return value of the **sp_start_job** stored procedure indicates whether the stored procedure was able to start the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent job successfully. The return value does not indicate whether the package succeeded or failed.  
   
- For information on troubleshooting packages that are run from [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent jobs, see the Microsoft article, [An SSIS package does not run when you call the SSIS package from a SQL Server Agent job step](http://support.microsoft.com/kb/918760).  
+ For information on troubleshooting packages that are run from [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent jobs, see the Microsoft article, [An SSIS package does not run when you call the SSIS package from a SQL Server Agent job step](https://support.microsoft.com/kb/918760).  
   
 ### Sample Code  
   
@@ -175,7 +170,7 @@ Imports System.Web.Services.Protocols
 Imports Microsoft.SqlServer.Dts.Runtime  
 Imports System.IO  
   
-<WebService(Namespace:="http://dtsue/")> _  
+<WebService(Namespace:="https://dtsue/")> _  
 <WebServiceBinding(ConformsTo:=WsiProfiles.BasicProfile1_1)> _  
 <Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _  
 Public Class LaunchSSISPackageService  
@@ -251,7 +246,7 @@ using System.Web.Services.Protocols;
 using Microsoft.SqlServer.Dts.Runtime;  
 using System.IO;  
   
-[WebService(Namespace = "http://dtsue/")]  
+[WebService(Namespace = "https://dtsue/")]  
 [WebServiceBinding(ConformsTo = WsiProfiles.BasicProfile1_1)]  
 public class LaunchSSISPackageServiceCS : System.Web.Services.WebService  
 {  
@@ -416,7 +411,7 @@ namespace LaunchSSISPackageSvcTestCS
   
 ## External Resources  
   
--   Video, [How to: Automate SSIS Package Execution by Using the SQL Server Agent (SQL Server Video)](http://technet.microsoft.com/sqlserver/ff686764.aspx), on technet.microsoft.com  
+-   Video, [How to: Automate SSIS Package Execution by Using the SQL Server Agent (SQL Server Video)](https://technet.microsoft.com/sqlserver/ff686764.aspx), on technet.microsoft.com  
   
 ## See Also  
  [Understanding the Differences between Local and Remote Execution](../../integration-services/run-manage-packages-programmatically/understanding-the-differences-between-local-and-remote-execution.md)   

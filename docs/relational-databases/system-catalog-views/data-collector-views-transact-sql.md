@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "system-catalog-views"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 dev_langs: 
   - "TSQL"
@@ -16,7 +13,6 @@ helpviewer_keywords:
   - "data collector view"
   - "data collector [SQL Server], views"
 ms.assetid: a005e885-7813-4c7e-b332-b01d9e9d4054
-caps.latest.revision: 14
 author: "stevestein"
 ms.author: "sstein"
 manager: craigg

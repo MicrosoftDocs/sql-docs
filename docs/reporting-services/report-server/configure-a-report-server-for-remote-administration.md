@@ -4,7 +4,6 @@ ms.date: 09/14/2015
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
 ms.technology: report-server
-ms.suite: pro-bi
 
 
 ms.topic: conceptual
@@ -36,7 +35,7 @@ ms.author: maghan
   
  Some organizations have group policies that prevent remote server administration for certain operating systems or users. Before you begin modifying firewall settings, check with your network administrator to verify whether there are restrictions on remote administration.  
   
- For more information, see [Connecting Through Windows Firewall](http://go.microsoft.com/fwlink/?LinkId=63615) in the Platform SDK documentation on MSDN.  
+ For more information, see [Connecting Through Windows Firewall](https://go.microsoft.com/fwlink/?LinkId=63615) in the Platform SDK documentation on MSDN.  
   
 ## Tasks  
  Tasks that enable remote report server configuration include the following:  

@@ -4,11 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-  - "docset-sql-devref"
-ms.tgt_pltfrm: ""
+ms.technology: wmi
 ms.topic: "reference"
 api_name: 
   - "SetNumValue Method (ClientNetworkProtocolProperty Class)"
@@ -19,7 +15,6 @@ topic_type:
 helpviewer_keywords: 
   - "SetNumValue method"
 ms.assetid: c292e2ae-6d0a-44ad-ba54-5b0bd705ef37
-caps.latest.revision: 29
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg

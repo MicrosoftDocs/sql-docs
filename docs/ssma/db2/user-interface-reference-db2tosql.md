@@ -4,15 +4,9 @@ ms.prod: sql
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: ssma
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
-applies_to: 
-  - "Azure SQL Database"
-  - "SQL Server"
 ms.assetid: 98ecc4ff-9416-48a2-af0f-86852cf69dab
-caps.latest.revision: 5
 author: "Shamikg"
 ms.author: "Shamikg"
 manager: craigg
@@ -31,7 +25,7 @@ The following table lists the SSMA dialog boxes:
 |[Connecting to DB2 Database &#40;DB2ToSQL&#41;](../../ssma/db2/connecting-to-db2-database-db2tosql.md)|Use the **Connect to DB2** dialog box to connect to the DB2 database that you want to migrate.|  
 |[Connect to SQL Server &#40;DB2ToSQL&#41;](../../ssma/db2/connect-to-sql-server-db2tosql.md)|Use the **Connect to SQL Server** dialog box to connect to the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to which you want to migrate.|  
 |[Data Migration Report &#40;DB2ToSQL&#41;](../../ssma/db2/data-migration-report-db2tosql.md)|Displays the results of migrating data from DB2 to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
-|[Data Migration Settings](http://msdn.microsoft.com/573e673e-a194-4cb2-9aba-aaac6e1a225c)|Use the **Extended Data Migration Settings** tab to write custom queries for data migration.|  
+|[Data Migration Settings](https://msdn.microsoft.com/573e673e-a194-4cb2-9aba-aaac6e1a225c)|Use the **Extended Data Migration Settings** tab to write custom queries for data migration.|  
 |[Edit Type Mapping &#40;DB2ToSQL&#41;](../../ssma/db2/edit-type-mapping-db2tosql.md)|Use the **New Type Mapping** or **Edit Type Mapping** dialog boxes to create or modify the mapping of data types between the source and target databases and database objects.|  
 |[Global Settings &#40;Editor&#41; &#40;DB2ToSQL&#41;](../../ssma/db2/global-settings-editor-db2tosql.md)|Use the Editor page of the **Global Settings** dialog box to configure code editor options.|  
 |[Global Settings &#40;Dialogs&#41; &#40;DB2ToSQL&#41;](../../ssma/db2/global-settings-dialogs-db2tosql.md)|Use the Dialogs page of the **Global Settings** dialog box to configure default dialog box and warning settings.|  

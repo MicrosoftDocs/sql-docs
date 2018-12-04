@@ -4,17 +4,14 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ""
-ms.date: "01/19/2017"
+ms.date: 11/08/2018
 ms.reviewer: ""
-ms.suite: "sql"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords:
   - "Indexing Service provider [ADO]"
   - "providers [ADO], OLE DB provider for Microsoft Indexing service"
   - "OLE DB provider for Microsoft Indexing service [ADO]"
 ms.assetid: f86a0598-5097-471b-8318-d2c859d085f2
-caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
@@ -27,7 +24,7 @@ The Microsoft OLE DB Provider for Microsoft Indexing Service provides programmat
 ## Connection String Parameters
  To connect to this provider, set the **Provider=** argument to the [ConnectionString](../../../ado/reference/ado-api/connectionstring-property-ado.md) property to:
 
-```
+```vb
 MSIDXS
 ```
 
@@ -36,7 +33,7 @@ MSIDXS
 ## Typical Connection String
  A typical connection string for this provider is:
 
-```
+```vb
 "Provider=MSIDXS;Data Source=myCatalog;Locale Identifier=nnnn;"
 ```
 

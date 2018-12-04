@@ -1,13 +1,11 @@
 ---
 title: "DSN and Connection String Keywords and Attributes Used in the ODBC Driver for SQL Server| Microsoft Docs"
 ms.custom: ""
-ms.date: "03/21/2018"
+ms.date: "11/07/2018"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: connectivity
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 author: MightyPen
 ms.author: "v-jizho2"
@@ -157,6 +155,9 @@ Sets the authentication mode to use when connecting to SQL Server. See [Using Az
 |ActiveDirectoryPassword|SQL_AU_AD_PASSWORD|Azure Active Directory Password authentication.|
 |ActiveDirectoryInteractive|SQL_AU_AD_INTERACTIVE|Azure Active Directory Interactive authentication.|
 | |SQL_AU_RESET|Unset. Overrides any DSN or connection string setting.|
+
+> [!NOTE]
+> When using `Authentication` keyword or attribute, explicitly specify `Encrypt` setting to the desired value in connection string / DSN / connection attribute. Refer to [Using Connection String Keywords with SQL Server Native Client](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md) for details.
 
 ### ColumnEncryption - SQL_COPT_SS_COLUMN_ENCRYPTION
 

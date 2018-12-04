@@ -4,17 +4,13 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: configuration
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.swb.serverproperties.filestream.f1"
 helpviewer_keywords: 
   - "FILESTREAM [SQL Server], properties page"
 ms.assetid: 8a8d38d3-e97a-4b09-a40b-659b2e3a5c47
-caps.latest.revision: 9
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg

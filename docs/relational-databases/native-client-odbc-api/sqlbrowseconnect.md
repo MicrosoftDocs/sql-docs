@@ -5,15 +5,12 @@ ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: native-client
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 apitype: "DLLExport"
 helpviewer_keywords: 
   - "SQLBrowseConnect function"
 ms.assetid: 57faf388-c7ca-4696-9845-34e0a10cc5f7
-caps.latest.revision: 54
 author: MightyPen
 ms.author: genemi
 manager: craigg
@@ -74,7 +71,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 |Documented SQL_COPT_SS_BROWSE_CACHE_DATA.|  
   
 ## See Also  
- [SQLBrowseConnect Function](http://go.microsoft.com/fwlink/?LinkId=59329)   
+ [SQLBrowseConnect Function](https://go.microsoft.com/fwlink/?LinkId=59329)   
  [ODBC API Implementation Details](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)  
   
   

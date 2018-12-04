@@ -4,13 +4,10 @@ ms.custom: ""
 ms.date: "03/09/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: 8e3ffecd-7f40-41a8-8735-bc9858a310cb
-caps.latest.revision: 20
 author: minewiskan
 ms.author: owend
 manager: craigg
@@ -55,7 +52,7 @@ manager: craigg
   
 2.  In the **Attributes** pane of the **Dimension Structure** tab, select **Product Line**.  
   
-3.  In the Properties window on the right side of the screen, click the **NameColumn** property field at the bottom of the window, and then click the browse (**…**) button to open the **Name Column** dialog box. (You might need to click the **Properties** tab on the right side of the screen to open the Properties window.  
+3.  In the Properties window on the right side of the screen, click the **NameColumn** property field at the bottom of the window, and then click the browse (**...**) button to open the **Name Column** dialog box. (You might need to click the **Properties** tab on the right side of the screen to open the Properties window.  
   
 4.  Select `ProductLineName` at the bottom of the **Source column** list, and then click **OK**.  
   
@@ -63,7 +60,7 @@ manager: craigg
   
 5.  In the **Attributes** pane of the **Dimension Structure** tab, select **Product Key**.  
   
-6.  In the Properties window, click the **NameColumn** property field, and then click the ellipsis browse (**…**) button to open the **Name Column** dialog box.  
+6.  In the Properties window, click the **NameColumn** property field, and then click the ellipsis browse (**...**) button to open the **Name Column** dialog box.  
   
 7.  Select **EnglishProductName** in the **Source column** list, and then click **OK**.  
   

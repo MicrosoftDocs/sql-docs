@@ -4,17 +4,13 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords: 
   - "agents [SQL Server replication], viewing information"
   - "viewing replication agent information"
   - "agents [SQL Server replication], tasks in Replication Monitor"
 ms.assetid: fbb59d31-2424-4552-9195-0da8d83e755f
-caps.latest.revision: 36
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg

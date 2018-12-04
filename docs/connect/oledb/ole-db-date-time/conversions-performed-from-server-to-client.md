@@ -5,11 +5,8 @@ ms.custom: ""
 ms.date: "06/14/2018"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
-ms.component: "oledb|ole-db-date-time"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: connectivity
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 
   - "conversions [OLE DB], server to client"
@@ -25,7 +22,7 @@ manager: craigg
   This article describes date/time conversions performed between [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] (or later) and a client application written with OLE DB Driver for SQL Server.  
   
 ## Conversions  
- The following table describes conversions between the type returned to the client and the type in the binding. For output parameters, if ICommandWithParameters::SetParameterInfo has been called and the type specified in *pwszDataSourceType* does not match the actual type on the server, an implicit conversion will be performed by the server, and the type returned to the client will match the type specified through ICommandWithParameters::SetParameterInfo. This can lead to unexpected conversion results when the server’s conversion rules are different from those described in this article. For example, when a default date must be provided, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] uses 1900-1-1 rather than 1899-12-30.  
+ The following table describes conversions between the type returned to the client and the type in the binding. For output parameters, if ICommandWithParameters::SetParameterInfo has been called and the type specified in *pwszDataSourceType* does not match the actual type on the server, an implicit conversion will be performed by the server, and the type returned to the client will match the type specified through ICommandWithParameters::SetParameterInfo. This can lead to unexpected conversion results when the server's conversion rules are different from those described in this article. For example, when a default date must be provided, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] uses 1900-1-1 rather than 1899-12-30.  
   
 |To -><br /><br /> From|DATE|DBDATE|DBTIME|DBTIME2|DBTIMESTAMP|DBTIMESTAMPOFFSET|FILETIME|BYTES|VARIANT|SSVARIANT|BSTR|STR|WSTR|  
 |----------------------|----------|------------|------------|-------------|-----------------|-----------------------|--------------|-----------|-------------|---------------|----------|---------|----------|  

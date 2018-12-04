@@ -5,9 +5,7 @@ ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: connectivity
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "driver manager [ODBC], role in connection process"
@@ -15,7 +13,6 @@ helpviewer_keywords:
   - "connecting to driver [ODBC], driver manager"
   - "ODBC driver manager [ODBC]"
 ms.assetid: 77c05630-5a8b-467d-b80e-c705dc06d601
-caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: craigg
@@ -35,6 +32,6 @@ Remember that applications do not call driver functions directly. Instead, they 
   
 -   If a different driver is loaded on the connection, the Driver Manager calls **SQLFreeHandle** in the driver to free the connection. If there are no other connections that use the driver, the Driver Manager calls **SQLFreeHandle** in the driver to free the environment and unloads the driver. The Driver Manager then performs the same operations as when a driver is not loaded on the connection.  
   
- The Driver Manager will lock the environment handle (*henv*) before calling a driver’s **SQLAllocHandle** and **SQLFreeHandle** when *HandleType* is set to **SQL_HANDLE_DBC**.  
+ The Driver Manager will lock the environment handle (*henv*) before calling a driver's **SQLAllocHandle** and **SQLFreeHandle** when *HandleType* is set to **SQL_HANDLE_DBC**.  
   
  When the application calls **SQLDisconnect**, the Driver Manager calls **SQLDisconnect** in the driver. However, it leaves the driver loaded in case the application reconnects to the driver. When the application calls **SQLFreeHandle** with the SQL_HANDLE_DBC option, the Driver Manager calls **SQLFreeHandle** in the driver. If the driver is not used by any other connections, the Driver Manager then calls **SQLFreeHandle** in the driver with the SQL_HANDLE_ENV option and unloads the driver.

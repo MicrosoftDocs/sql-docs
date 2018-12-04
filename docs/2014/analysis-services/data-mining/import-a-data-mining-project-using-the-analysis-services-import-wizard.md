@@ -4,13 +4,10 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: 62bc9fc5-c6ff-4517-b598-d92df76743a2
-caps.latest.revision: 5
 author: minewiskan
 ms.author: owend
 manager: craigg
@@ -21,7 +18,7 @@ manager: craigg
 ## Import data sources, mining structures, and mining models from an existing data mining project  
  When you use the template, **Import from Server (Multidimensional and Data Mining) Project**, [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] creates a new data mining project, and then copies the metadata from the specified data mining project. The new project contains the same data sources, data source views, mining structures, and mining models as the ssASnoversion database that you imported from. However, the project cannot be used until you have updated certain properties and processed the objects as described:  
   
--   The data itself is not copied from the source server to the new data mining project—only the definitions of the data sources and data source views are imported. Therefore, after the import process has completed, and the objects have been created, you must populate the objects with data by training the mining structures and dependent models. You can use the command **Process All** in Data Mining Designer to train the models and structures.  
+-   The data itself is not copied from the source server to the new data mining project-only the definitions of the data sources and data source views are imported. Therefore, after the import process has completed, and the objects have been created, you must populate the objects with data by training the mining structures and dependent models. You can use the command **Process All** in Data Mining Designer to train the models and structures.  
   
 -   If you are importing a project that was created in a previous version of [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], the data source might use providers that are not installed on the server to which you are importing the project. If you encounter errors when processing the imported mining structures, right-click each data source and select **Open Designer** to edit the connection string and review the provider properties.  
   

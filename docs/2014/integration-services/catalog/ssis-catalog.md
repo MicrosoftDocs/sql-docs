@@ -4,19 +4,15 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 24bd987e-164a-48fd-b4f2-cbe16a3cd95e
-caps.latest.revision: 25
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ---
 # SSIS Catalog
-  The `SSISDB` catalog is the central point for working with [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] (SSIS) projects that you’ve deployed to the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] server. For example, you set project and package parameters, configure environments to specify runtime values for packages, execute and troubleshoot packages, and manage [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] server operations.  
+  The `SSISDB` catalog is the central point for working with [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] (SSIS) projects that you've deployed to the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] server. For example, you set project and package parameters, configure environments to specify runtime values for packages, execute and troubleshoot packages, and manage [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] server operations.  
   
  The objects that are stored in the `SSISDB` catalog include projects, packages, parameters, environments, and operational history.  
   
@@ -140,7 +136,7 @@ manager: craigg
 |Property Name (**Catalog Properties** dialog box)|Property Name (database view)|  
 |---------------------------------------------------------|-------------------------------------|  
 |Encryption Algorithm Name|ENCRYPTION_ALGORITHM|  
-|Clean Logs Periodically|OPERATION_CLEANUP_ENABLED​|  
+|Clean Logs Periodically|OPERATION_CLEANUP_ENABLED|  
 |Retention Period (days)|RETENTION_WINDOW|  
 |Periodically Remove Old Versions|VERSION_CLEANUP_ENABLED|  
 |Maximum Number of Versions per Project|MAX_PROJECT_VERSIONS|  

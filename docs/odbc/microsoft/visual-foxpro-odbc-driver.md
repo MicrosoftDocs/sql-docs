@@ -5,9 +5,7 @@ ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: connectivity
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "FoxPro ODBC driver [ODBC]"
@@ -15,7 +13,6 @@ helpviewer_keywords:
   - "Visual FoxPro ODBC driver [ODBC]"
   - "FoxPro ODBC driver [ODBC], about FoxPro ODBC driver"
 ms.assetid: 27359133-dd41-478f-8902-996022deb845
-caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
@@ -42,4 +39,4 @@ Microsoft Visual FoxPro is a powerful object-oriented environment for database c
 |View a simple example using Visual C++ to access Visual FoxPro data|[Using the Visual FoxPro ODBC Driver with Your C or C++ Application](../../odbc/microsoft/using-the-visual-foxpro-odbc-driver-with-your-c-or-visual-c-application.md)|  
 |See a list of supported hardware and software|[System Requirements](../../odbc/microsoft/system-requirements-visual-foxpro-odbc-driver.md)|  
   
- For information about downloading and installing the Visual FoxPro ODBC driver, see [Visual FoxPro ODBC Driver](http://go.microsoft.com/fwlink/?LinkId=121318) on MSDN Downloads.
+ For information about downloading and installing the Visual FoxPro ODBC driver, see [Visual FoxPro ODBC Driver](https://go.microsoft.com/fwlink/?LinkId=121318) on MSDN Downloads.

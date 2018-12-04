@@ -4,17 +4,14 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "integration-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.dts.designer.sqlmobileconnection.all.f1"
 helpviewer_keywords: 
   - "SQL Server Compact Connection Manager Editor"
 ms.assetid: f9fbff4b-c502-44b3-8e7b-398d66e82206
-caps.latest.revision: 25
 author: douglaslms
 ms.author: douglasl
 manager: craigg

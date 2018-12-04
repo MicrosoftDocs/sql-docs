@@ -5,15 +5,12 @@ ms.date: "03/16/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: native-client
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 apitype: "DLLExport"
 helpviewer_keywords: 
   - "SQLDriverConnect function"
 ms.assetid: a1e38e2c-3a97-42d1-9c45-a0ca3282ffd1
-caps.latest.revision: 60
 author: MightyPen
 ms.author: genemi
 manager: craigg
@@ -79,7 +76,7 @@ SQLDriverConnect(hdbc, hwnd,
 ```  
   
 ## See Also  
- [SQLDriverConnect Function](http://go.microsoft.com/fwlink/?LinkId=59340)   
+ [SQLDriverConnect Function](https://go.microsoft.com/fwlink/?LinkId=59340)   
  [ODBC API Implementation Details](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)   
  [SET ANSI_NULLS &#40;Transact-SQL&#41;](../../t-sql/statements/set-ansi-nulls-transact-sql.md)   
  [SET ANSI_PADDING &#40;Transact-SQL&#41;](../../t-sql/statements/set-ansi-padding-transact-sql.md)   

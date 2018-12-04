@@ -4,11 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-  - "docset-sql-devref"
-ms.tgt_pltfrm: ""
+ms.technology: wmi
 ms.topic: "reference"
 api_name: 
   - "ErrorControl Property (SqlService Class)"
@@ -19,7 +15,6 @@ topic_type:
 helpviewer_keywords: 
   - "ErrorControl property"
 ms.assetid: cbb1e0fa-5bfc-4b1b-a6ed-f7d5cfad4d73
-caps.latest.revision: 34
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg

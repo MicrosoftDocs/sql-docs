@@ -5,15 +5,12 @@ ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: connectivity
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "default data types"
   - "converting data types"
 ms.assetid: b66c301d-3d20-45b8-a112-225d8f01c0bd
-caps.latest.revision: 40
 author: MightyPen
 ms.author: genemi
 manager: craigg
@@ -110,7 +107,7 @@ Partial type support means that you cannot programmatically query for the type o
 
 [Converting Data Types](../../connect/php/converting-data-types.md)
 
-[PHP Types](http://php.net/manual/en/language.types.php)
+[PHP Types](https://php.net/manual/en/language.types.php)
 
 [Data Types (Transact-SQL)](../../t-sql/data-types/data-types-transact-sql.md)
 

@@ -4,13 +4,9 @@ ms.custom: ""
 ms.date: "08/12/2015"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "reporting-services-native"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
-applies_to: 
-  - "SQL Server 2014"
 helpviewer_keywords: 
   - "security [Reporting Services], extensions"
   - "report servers [Reporting Services], about report server"
@@ -26,7 +22,6 @@ helpviewer_keywords:
   - "Web service [Reporting Services], report server"
   - "storage [Reporting Services]"
 ms.assetid: 88ed5b97-1d28-4980-80e4-b36761f3c03a
-caps.latest.revision: 89
 author: markingmyname
 ms.author: maghan
 manager: craigg
@@ -79,7 +74,7 @@ manager: craigg
   
 -   **SharePoint mode**: where a report server is installed as part of a SharePoint server farm.  Deploy and configure SharePoint mode by using PowerShell commands or SharePoint content management pages.  
   
- In [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] you cannot switch a report server from one mode to the other. If you want to change the type of report server that your environment uses, you must install the desired mode of report server and then copy or move the report items or report server database from the older versioned report server to the new report server. This process is typically referred to as a ‘migration’. The steps needed to migrate depend on the mode you are migrating to and the version you are migrating from. For more information, see [Upgrade and Migrate Reporting Services](install-windows/upgrade-and-migrate-reporting-services.md)  
+ In [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] you cannot switch a report server from one mode to the other. If you want to change the type of report server that your environment uses, you must install the desired mode of report server and then copy or move the report items or report server database from the older versioned report server to the new report server. This process is typically referred to as a 'migration'. The steps needed to migrate depend on the mode you are migrating to and the version you are migrating from. For more information, see [Upgrade and Migrate Reporting Services](install-windows/upgrade-and-migrate-reporting-services.md)  
   
 ##  <a name="bkmk_featuresupport"></a> Feature Comparison of SharePoint and Native Mode  
   

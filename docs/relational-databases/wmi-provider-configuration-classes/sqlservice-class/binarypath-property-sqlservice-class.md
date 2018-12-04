@@ -4,12 +4,8 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "wmi"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: wmi
 ms.topic: "reference"
 apiname: 
   - "BinaryPath Property (SqlService Class )"
@@ -18,7 +14,6 @@ apilocation:
 helpviewer_keywords: 
   - "BinaryPath property"
 ms.assetid: c59ec28e-be76-44a8-b7aa-e53ea10f71d1
-caps.latest.revision: 15
 author: "CarlRabeler"
 ms.author: "carlrab"
 manager: craigg
@@ -44,6 +39,6 @@ object.BinaryPath [= value]
 ## Remarks  
   
 ## See Also  
- [Starting and Stopping Services](http://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  
+ [Starting and Stopping Services](https://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  
   
   

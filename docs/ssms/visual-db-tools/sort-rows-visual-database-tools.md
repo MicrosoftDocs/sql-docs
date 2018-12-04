@@ -4,17 +4,13 @@ ms.custom: ""
 ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: "sql-tools"
-ms.component: "ssms-visual-db"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: ssms
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "sorting rows [SQL Server]"
   - "sorting query results [SQL Server]"
 ms.assetid: 780ef467-f96e-4373-8235-6dacbedb05a2
-caps.latest.revision: 4
 author: "stevestein"
 ms.author: "sstein"
 manager: craigg
@@ -61,7 +57,7 @@ There are several ways in which you can sort query results:
     ORDER BY price DESC  
     ```  
   
--   **You can sort by derived columns** For example, you can create a result set in which each row contains a book title — with the books that pay the highest royalty per copy appearing first. The resulting SQL might look like this:  
+-   **You can sort by derived columns** For example, you can create a result set in which each row contains a book title - with the books that pay the highest royalty per copy appearing first. The resulting SQL might look like this:  
   
     ```  
     SELECT title, price * royalty / 100 as royalty_per_unit  
@@ -73,7 +69,7 @@ There are several ways in which you can sort query results:
   
     To calculate a derived column, you can use SQL syntax, as in the preceding example, or you can use a user-defined function that returns a scalar value. For more information about user-defined functions, see the SQL Server documentation.  
   
--   **You can sort grouped rows** For example; you can create a result set in which each row describes a city, plus the number of authors in that city — with the cities containing many authors appearing first. The resulting SQL might look like this:  
+-   **You can sort grouped rows** For example; you can create a result set in which each row describes a city, plus the number of authors in that city - with the cities containing many authors appearing first. The resulting SQL might look like this:  
   
     ```  
     SELECT city, state, COUNT(*)  

@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "06/10/2016"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.component: "system-functions"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "fn_listextendedproperty"
@@ -26,7 +23,6 @@ helpviewer_keywords:
   - "extended properties [SQL Server], columns"
   - "table extended properties [SQL Server]"
 ms.assetid: 59bbb91f-a277-4a35-803e-dcb91e847a49
-caps.latest.revision: 32
 author: "rothja"
 ms.author: "jroth"
 manager: craigg

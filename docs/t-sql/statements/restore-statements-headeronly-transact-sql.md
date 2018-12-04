@@ -1,13 +1,11 @@
-﻿---
+---
 title: "RESTORE HEADERONLY (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/30/2018"
 ms.prod: sql
 ms.prod_service: "sql-database"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "HEADERONLY"
@@ -22,7 +20,6 @@ helpviewer_keywords:
   - "RESTORE HEADERONLY statement"
   - "backup header information [SQL Server]"
 ms.assetid: 4b88e98c-49c4-4388-ab0e-476cc956977c
-caps.latest.revision: 95
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
@@ -32,9 +29,7 @@ monikerRange: "=azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allver
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md )]
 
   Returns a result set containing all the backup header information for all backup sets on a particular backup device in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. 
-
-[!INCLUDE[ssMIlimitation](../../includes/sql-db-mi-limitation.md)] 
-  
+ 
 > [!NOTE]  
 >  For the descriptions of the arguments, see [RESTORE Arguments &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-arguments-transact-sql.md).  
   
@@ -107,7 +102,7 @@ FROM <backup_device>
 |**FirstLSN**|**numeric(25,0)**|Log sequence number of the first log record in the backup set.|  
 |**LastLSN**|**numeric(25,0)**|Log sequence number of the next log record after the backup set.|  
 |**CheckpointLSN**|**numeric(25,0)**|Log sequence number of the most recent checkpoint at the time the backup was created.|  
-|**DatabaseBackupLSN**|**numeric(25,0)**|Log sequence number of the most recent full database backup.<br /><br /> **DatabaseBackupLSN**  is the “begin of checkpoint” that is triggered when the backup starts. This LSN will coincide with **FirstLSN** if the backup is taken when the database is idle and no replication is configured.|  
+|**DatabaseBackupLSN**|**numeric(25,0)**|Log sequence number of the most recent full database backup.<br /><br /> **DatabaseBackupLSN**  is the "begin of checkpoint" that is triggered when the backup starts. This LSN will coincide with **FirstLSN** if the backup is taken when the database is idle and no replication is configured.|  
 |**BackupStartDate**|**datetime**|Date and time that the backup operation began.|  
 |**BackupFinishDate**|**datetime**|Date and time that the backup operation finished.|  
 |**SortOrder**|**smallint**|Server sort order. This column is valid for database backups only. Provided for backward compatibility.|  

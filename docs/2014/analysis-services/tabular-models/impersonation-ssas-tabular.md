@@ -4,13 +4,10 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: fcc79e96-182a-45e9-8ae2-aeb440e9bedd
-caps.latest.revision: 16
 author: minewiskan
 ms.author: owend
 manager: craigg
@@ -35,7 +32,7 @@ manager: craigg
   
  Credentials used for impersonation are different from the credentials of the user currently logged on. Logged on user credentials are used for particular client side operations when authoring a model.  
   
- It is important to understand how impersonation credentials are specified and secured as well as the difference between contexts in which both the current logged on user’s credentials and when other credentials are used.  
+ It is important to understand how impersonation credentials are specified and secured as well as the difference between contexts in which both the current logged on user's credentials and when other credentials are used.  
   
  **Understanding server side credentials**  
   
@@ -53,7 +50,7 @@ manager: craigg
   
  Similarly, for existing models that have already been created, you can use the **Edit Table Properties** dialog to preview and filter data imported into a table. The preview and filter features here use the same functionality as the **Preview and Filter** feature on the **Select Tables and Views** page of the Table Import Wizard.  
   
- The **Preview and Filter** feature, and the **Table Properties** and **Partition Manager** dialog boxes are an in-process *client side* operation; that is, what is done during this operation are different from how the data source is connected to and data is fetched from the data source; a server side operation. The credentials used to preview and filter data are the credentials of the user currently logged on. Client side operations always use the current user’s Windows credentials to connect to the data source.  
+ The **Preview and Filter** feature, and the **Table Properties** and **Partition Manager** dialog boxes are an in-process *client side* operation; that is, what is done during this operation are different from how the data source is connected to and data is fetched from the data source; a server side operation. The credentials used to preview and filter data are the credentials of the user currently logged on. Client side operations always use the current user's Windows credentials to connect to the data source.  
   
  This separation of credentials used during server side and client side operations can lead to a mismatch in what the user sees using the **Preview and Filter** feature or **Table Properties** dialog (client side operations) and what data will be fetched during an import or process (a server side operation). If the credentials of the user currently logged on and the impersonation credentials specified are different, the data seen in the **Preview and Filter** feature or the **Table Properties** dialog and the data fetched during an import or process can be different depending on the credentials required by the data source.  
   
@@ -68,7 +65,7 @@ manager: craigg
 |**Specific Windows user name and password** <sup>2</sup>|ImpersonateWindowsUserAccount|This option specifies the model use a Windows user account to import or process data from the data source. The domain and name of the user account uses the following format:**\<Domain name>\\<User account name\>**. When creating a new model using the Table Import Wizard, this is the default option.|  
 |**Service Account**|ImpersonateServiceAccount|This option specifies the model use the security credentials associated with the Analysis Services service instance that manages the model.|  
   
- <sup>1</sup>ImpersonationMode specifies the value for the [DataSourceImpersonationInfo Element &#40;ASSL&#41;](../scripting/properties/impersonationinfo-element-assl.md) property on the data source.  
+ <sup>1</sup>ImpersonationMode specifies the value for the [DataSourceImpersonationInfo Element &#40;ASSL&#41;](https://docs.microsoft.com/bi-reference/assl/properties/impersonationinfo-element-assl) property on the data source.  
   
  <sup>2</sup>When using this option, if the workspace database is removed from memory, either due to a reboot or the **Workspace Retention** property is set to **Unload from Memory** or **Delete from Workspace**, and the model project is closed, in the subsequent session, if you attempt to process table data, you will be prompted to enter the credentials for each data source. Similarly, if a deployed model database is removed from memory, you will be prompted for credentials for each data source.  
   

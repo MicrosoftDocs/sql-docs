@@ -4,15 +4,9 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: sql
-ms.component: "xquery"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: xml
 ms.topic: "language-reference"
-applies_to: 
-  - "SQL Server"
 dev_langs: 
   - "XML"
 helpviewer_keywords: 
@@ -23,7 +17,6 @@ helpviewer_keywords:
   - "literals [XQuery]"
   - "context item expressions [XQuery]"
 ms.assetid: d4183c3e-12b5-4ca0-8413-edb0230cb159
-caps.latest.revision: 20
 author: "rothja"
 ms.author: "jroth"
 manager: craigg
@@ -127,7 +120,7 @@ GO
 DECLARE @var XML  
 SET @var = '<root>1</root>'  
 SELECT @var.query('  
-DECLARE namespace x="http://X";  
+DECLARE namespace x="https://X";  
 for $x:i in /root return data($x:i)')  
 GO  
 ```  

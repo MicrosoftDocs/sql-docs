@@ -9,10 +9,16 @@
     href: download-sql-server-management-studio-ssms.md#release-notes
   - name: Install non-English SSMS
     href: install-other-languages.md
+  - name: SSMS Support Policy
+    href: support-policy.md
 - name: Install SQL Server PowerShell Module
   href: ../powershell/download-sql-server-ps-module.md?toc=/sql/ssms/toc.json
+- name: Tutorials +
+  href: ../ssms/tutorials/tutorial-sql-server-management-studio.md
 - name: SQL Server Agent +
   href: ../ssms/agent/sql-server-agent.md
+- name: Scripting +
+  href: ../ssms/scripting/database-engine-scripting.md
 - name: F1 Help +
   href: ../ssms/f1-help/f1-help-for-server-connections-sql-server-management-studio.md
 - name: Menu Help +
@@ -27,8 +33,6 @@
   href: ../ssms/visual-db-tools/visual-database-tools.md
 - name: Register Servers +
   href: ../ssms/register-servers/register-servers.md
-- name: Tutorials +
-  href: ../ssms/tutorials/tutorial-sql-server-management-studio.md
 - name: Introduction to SSMS for BI
   href: introduction-to-sql-server-management-studio-for-business-intelligence.md
 - name: Customize Menus and Shortcut Keys
@@ -39,43 +43,48 @@
   href: build-database-projects-by-using-sql-server-management-studio.md
 - name: Understand SSMS Windows Management
   href: understand-sql-server-management-studio-windows-management.md
-- name: External Tools Dialog Box
-  href: external-tools-dialog-box.md
-- name: Arguments Dialog Box
-  href: arguments-dialog-box.md
 - name: Administer Servers with SSMS
   href: administer-servers-with-sql-server-management-studio.md
-- name: License Terms
-  href: sql-server-management-studio-license-terms.md
 - name: Configure WMI to Show Server Status in SQL Server Tools
   href: configure-wmi-to-show-server-status-in-sql-server-tools.md
 - name: The SSMS Environment
   href: the-sql-server-management-studio-environment.md
-- name: Property Pages in SSMS
-  href: property-pages-in-sql-server-management-studio.md
-- name: Properties Window in SSMS
-  href: properties-window-management-studio.md
-- name: Output Window in SSMS
-  href: output-window.md
-- name: About Dialog Box
-  href: about-dialog-box.md
-- name: SSMS Web Browser
-  href: sql-server-management-studio-web-browser.md
-- name: General User Interface Elements
-  href: general-user-interface-elements.md
-- name: User Assistance in SSMS
-  href: user-assistance-in-sql-server-management-studio.md
+  items:
+  - name: General User Interface Elements
+    href: general-user-interface-elements.md
+  - name: Arguments Dialog Box
+    href: arguments-dialog-box.md
+  - name: About Dialog Box
+    href: about-dialog-box.md
+  - name: SSMS Web Browser
+    href: sql-server-management-studio-web-browser.md
+  - name: External Tools Dialog Box
+    href: external-tools-dialog-box.md
+  - name: Property Pages in SSMS
+    href: property-pages-in-sql-server-management-studio.md
+  - name: Properties Window in SSMS
+    href: properties-window-management-studio.md
+  - name: Output Window in SSMS
+    href: output-window.md
+  - name: SSMS Web Browser
+    href: sql-server-management-studio-web-browser.md
+  - name: Use the Toolbox
+    href: use-the-toolbox.md
 - name: Arguments for External Tools
   href: use-of-sql-server-features-and-capabilities-wwi-oltp.md
 - name: Add an External Tool to the Tools Menu
   href: add-an-external-tool-to-the-tools-menu-sql-server-management-studio.md
 - name: Configure Login Auditing
   href: configure-login-auditing-sql-server-management-studio.md
-- name: Use the Toolbox
-  href: use-the-toolbox.md
-- name: Ssms Utility
+- name: SSMS Utility
   href: ssms-utility.md
 - name: SSMS Keyboard Shortcuts
   href: sql-server-management-studio-keyboard-shortcuts.md
-- name: Anonymous Usage Data
-  href: sql-server-management-studio-telemetry-ssms.md
+- name: Resources
+  items:
+  - name: License Terms
+    href: sql-server-management-studio-license-terms.md
+  - name: User Assistance in SSMS
+    href: user-assistance-in-sql-server-management-studio.md
+  - name: Anonymous Usage Data
+    href: sql-server-management-studio-telemetry-ssms.md

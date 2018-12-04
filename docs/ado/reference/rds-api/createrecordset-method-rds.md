@@ -6,8 +6,6 @@ ms.technology: connectivity
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 apitype: "COM"
 f1_keywords: 
@@ -19,7 +17,6 @@ f1_keywords:
 helpviewer_keywords: 
   - "CreateRecordset method [RDS]"
 ms.assetid: 6840b1e5-c04d-4d3e-9dcc-42128c83492f
-caps.latest.revision: 17
 author: MightyPen
 ms.author: genemi
 manager: craigg
@@ -28,7 +25,7 @@ manager: craigg
 Creates an empty, disconnected [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md).  
   
 > [!IMPORTANT]
->  Beginning with Windows 8 and Windows Server 2012, RDS server components are no longer included in the Windows operating system (see Windows 8 and [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/en-us/download/details.aspx?id=27416) for more detail). RDS client components will be removed in a future version of Windows. Avoid using this feature in new development work, and plan to modify applications that currently use this feature. Applications that use RDS should migrate to [WCF Data Service](http://go.microsoft.com/fwlink/?LinkId=199565).  
+>  Beginning with Windows 8 and Windows Server 2012, RDS server components are no longer included in the Windows operating system (see Windows 8 and [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) for more detail). RDS client components will be removed in a future version of Windows. Avoid using this feature in new development work, and plan to modify applications that currently use this feature. Applications that use RDS should migrate to [WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565).  
   
 ## Syntax  
   
@@ -59,7 +56,7 @@ object.CreateRecordset(ColumnInfos)
   
  The following table lists the [DataTypeEnum](../../../ado/reference/ado-api/datatypeenum.md) values supported by the **CreateRecordset** method. The number listed is the reference number used to define fields.  
   
- Each of the data types is either fixed length or variable length. Fixed-length types should be defined with a size of –1, because the size is predetermined and a size definition is still required. Variable-length data types allow a size from 1 to 32767.  
+ Each of the data types is either fixed length or variable length. Fixed-length types should be defined with a size of -1, because the size is predetermined and a size definition is still required. Variable-length data types allow a size from 1 to 32767.  
   
  For some of the variable data types, the type can be coerced to the type noted in the Substitution column. You will not see the substitutions until after the **Recordset** is created and filled. Then you can check for the actual data type, if necessary.  
   

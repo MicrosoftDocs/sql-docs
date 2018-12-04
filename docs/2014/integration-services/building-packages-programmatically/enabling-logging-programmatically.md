@@ -4,11 +4,7 @@ ms.custom: ""
 ms.date: "04/27/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "docset-sql-devref"
-  - "integration-services"
-ms.tgt_pltfrm: ""
+ms.technology: integration-services 
 ms.topic: "reference"
 dev_langs: 
   - "VB"
@@ -24,7 +20,6 @@ helpviewer_keywords:
   - "LogProvider object"
   - "packages [Integration Services], logs"
 ms.assetid: 3222a1ed-83eb-421c-b299-a53b67bba740
-caps.latest.revision: 48
 author: douglaslMS
 ms.author: douglasl
 manager: craigg

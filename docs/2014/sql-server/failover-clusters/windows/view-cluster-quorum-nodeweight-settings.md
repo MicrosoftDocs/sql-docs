@@ -4,15 +4,12 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: high-availability
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Availability Groups [SQL Server], WSFC clusters"
   - "quorum [SQL Server], AlwaysOn and WSFC quorum"
 ms.assetid: b845e73a-bb01-4de2-aac2-8ac12abebc95
-caps.latest.revision: 16
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
@@ -49,7 +46,7 @@ manager: craigg
 2.  Query the [sys].[dm_hadr_cluster_members] view.  
   
 ### Example (Transact-SQL)  
- The following example queries a system view to return values for all of the nodes in that instance’s cluster.  
+ The following example queries a system view to return values for all of the nodes in that instance's cluster.  
   
 ```tsql  
 SELECT  member_name, member_state_desc, number_of_quorum_votes  
@@ -69,7 +66,7 @@ SELECT  member_name, member_state_desc, number_of_quorum_votes
 4.  Output the cluster node properties in a readable format.  
   
 ### Example (Powershell)  
- The following example output some of the node properties for the cluster called “Cluster001”.  
+ The following example output some of the node properties for the cluster called "Cluster001".  
   
 ```powershell  
 Import-Module FailoverClusters  
@@ -92,7 +89,7 @@ $nodes | Format-Table -property NodeName, State, NodeWeight
 2.  Use **cluster.exe** to return node status and NodeWeight values  
   
 ### Example (Cluster.exe)  
- The following example outputs some of the node properties for the cluster called “Cluster001”.  
+ The following example outputs some of the node properties for the cluster called "Cluster001".  
   
 ```ms-dos  
 cluster.exe Cluster001 node /status /properties  

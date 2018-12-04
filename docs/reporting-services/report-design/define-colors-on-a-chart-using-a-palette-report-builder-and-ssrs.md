@@ -4,7 +4,6 @@ ms.date: 03/03/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
 ms.technology: report-design
-ms.suite: pro-bi
 
 
 ms.topic: conceptual
@@ -39,11 +38,11 @@ ms.author: maggies
   
 3.  In the **Chart** section, for the **Palette** property, select **Custom**.  
   
-4.  In the CustomPaletteColors property, click the Edit Collection (**…**) button. The **ReportColorExpression Collection Editor** opens.  
+4.  In the CustomPaletteColors property, click the Edit Collection (**...**) button. The **ReportColorExpression Collection Editor** opens.  
   
 5.  Click **Add** to add a color. Select a color from the drop-down list or select Expression and specify a hex value for a specific color, such as ff6600 for "Orange".  
   
-     For more information about hex values, see [Color Table](http://go.microsoft.com/fwlink/?linkid=9258) on MSDN.  
+     For more information about hex values, see [Color Table](https://go.microsoft.com/fwlink/?linkid=9258) on MSDN.  
   
 6.  Click **Add** to add more colors to the palette.  
   

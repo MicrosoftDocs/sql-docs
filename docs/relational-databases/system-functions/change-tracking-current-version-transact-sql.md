@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "08/08/2016"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.component: "system-functions"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "CHANGE_TRACKING_CURRENT_VERSION_TSQL"
@@ -19,7 +16,6 @@ helpviewer_keywords:
   - "change tracking [SQL Server], CHANGE_TRACKING_CURRENT_VERSION"
   - "CHANGE_TRACKING_CURRENT_VERSION"
 ms.assetid: 3027c4f7-6b4d-4089-a369-5926e8a8da1c
-caps.latest.revision: 16
 author: "rothja"
 ms.author: "jroth"
 manager: craigg

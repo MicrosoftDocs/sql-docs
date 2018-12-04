@@ -6,8 +6,6 @@ ms.technology: connectivity
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 apitype: "COM"
 f1_keywords: 
@@ -15,7 +13,6 @@ f1_keywords:
 helpviewer_keywords: 
   - "Prepared property [ADO]"
 ms.assetid: 11ca8825-765e-4bb4-a6ce-3f6564ad8755
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg

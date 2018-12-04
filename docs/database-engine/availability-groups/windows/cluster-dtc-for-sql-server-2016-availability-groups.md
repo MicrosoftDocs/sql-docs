@@ -1,15 +1,12 @@
-﻿---
+---
 title: "Cluster DTC for SQL Server 2016 Availability Groups | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/30/2016"
 ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: high-availability
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: a47c5005-20e3-4880-945c-9f78d311af7a
-caps.latest.revision: 3
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
@@ -45,7 +42,7 @@ Once you have created your Availability Group resource, create a clustered DTC r
 |![Checkbox](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "Checkbox")|Stop and disable local DTC service.|[Configure How a Service Is Started](https://technet.microsoft.com/library/cc755249(v=ws.11).aspx)|
 |![Checkbox](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "Checkbox")|Cycle the SQL Server service for each instance in the Availability Group.  Failover the Availability Group as needed.|[Perform a Planned Manual Failover of an Availability Group (SQL Server)](../../../database-engine/availability-groups/windows/perform-a-planned-manual-failover-of-an-availability-group-sql-server.md)<br /><br />[Start, Stop, Pause, Resume, Restart the Database Engine, SQL Server Agent, or SQL Server Browser Service](../../../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md)|
 
-- If the server is Windows Server 2012 R2 the operating system must have [KB 3030373](http://support.microsoft.com/kb/3090973) applied.
+- If the server is Windows Server 2012 R2 the operating system must have [KB 3030373](https://support.microsoft.com/kb/3090973) applied.
 
 - Prepare the servers for Availability Groups according to the checklists at [Prerequisites, Restrictions, and Recommendations for Always On Availability Groups](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md).
 
@@ -61,6 +58,6 @@ Once you have created your Availability Group resource, create a clustered DTC r
 [Create Availability Group Step by Step](create-an-availability-group-transact-sql.md)
 
 
-[SQL Server 2016 DTC Support in Availability Groups](http://blogs.technet.microsoft.com/dataplatform/2016/01/25/sql-server-2016-dtc-support-in-availability-groups/) 
+[SQL Server 2016 DTC Support in Availability Groups](https://blogs.technet.microsoft.com/dataplatform/2016/01/25/sql-server-2016-dtc-support-in-availability-groups/) 
 
-[External link: Configure DTC for a clustered instance of SQL Server with Windows Server 2008 R2](http://sqlha.com/2013/03/12/how-to-properly-configure-dtc-for-clustered-instances-of-sql-server-with-windows-server-2008-r2/)
+[External link: Configure DTC for a clustered instance of SQL Server with Windows Server 2008 R2](https://sqlha.com/2013/03/12/how-to-properly-configure-dtc-for-clustered-instances-of-sql-server-with-windows-server-2008-r2/)

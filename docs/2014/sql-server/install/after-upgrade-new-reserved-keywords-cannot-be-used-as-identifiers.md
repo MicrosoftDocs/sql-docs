@@ -4,17 +4,14 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "database-engine"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "keywords [SQL Server], after upgrade"
   - "keywords [SQL Server], reserved"
   - "keywords [SQL Server]"
 ms.assetid: cb242081-54f8-4273-a8ef-52f3751c25ef
-caps.latest.revision: 10
 author: mashamsft
 ms.author: mathoma
 manager: craigg

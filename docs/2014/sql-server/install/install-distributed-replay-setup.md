@@ -4,13 +4,10 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "database-engine"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: 64479cdc-661a-4e32-a381-8f8b5a238337
-caps.latest.revision: 24
 author: mashamsft
 ms.author: mathoma
 manager: craigg
@@ -98,7 +95,7 @@ manager: craigg
   
      Group accounts (local or domain) and other built-in accounts (like Everyone) are not accepted.  
   
-8.  Optionally, click the ellipsis (…) button to change the shared feature directory path.  
+8.  Optionally, click the ellipsis (...) button to change the shared feature directory path.  
   
     1.  On 32-bit computers, the default installation path is **C:\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\\**  
   

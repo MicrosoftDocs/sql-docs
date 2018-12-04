@@ -4,15 +4,12 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "intrinsic member properties [MDX]"
 ms.assetid: 84e6fe64-9b37-4e79-bedf-ae02e80bfce8
-caps.latest.revision: 41
 author: minewiskan
 ms.author: owend
 manager: craigg
@@ -85,7 +82,7 @@ manager: craigg
  The following table lists the non-context sensitive intrinsic properties supported by [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].  
   
 > [!NOTE]  
->  Columns in the MEMBERS schema rowset support the intrinsic member properties listed in the following table. For more information about the `MEMBERS` schema rowset, see [MDSCHEMA_MEMBERS Rowset](../../schema-rowsets/ole-db-olap/mdschema-members-rowset.md).  
+>  Columns in the MEMBERS schema rowset support the intrinsic member properties listed in the following table. For more information about the `MEMBERS` schema rowset, see [MDSCHEMA_MEMBERS Rowset](https://docs.microsoft.com/bi-reference/schema-rowsets/ole-db-olap/mdschema-members-rowset).  
   
 |Property|Description|  
 |--------------|-----------------|  

@@ -4,17 +4,13 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: supportability
 ms.topic: conceptual
 topic_type: 
   - "apiref"
 helpviewer_keywords: 
   - "Object:Deleted event class"
 ms.assetid: d4db32bc-972d-4429-809a-a62047c33e79
-caps.latest.revision: 33
 author: stevestein
 ms.author: sstein
 manager: craigg

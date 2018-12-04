@@ -4,7 +4,6 @@ ms.date: 07/02/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
 ms.technology: reporting-services
-ms.suite: pro-bi
 
 ms.topic: conceptual
 ms.assetid: fb0bc38f-dc56-4350-8457-cd135c0346e1
@@ -37,9 +36,9 @@ To create a new shared dataset, you can do the following.
 To manage an existing paginated report, you can do the following.  
   
 > [!NOTE]
-> If you don’t see paginated reports in the folder, make sure you are viewing paginated reports. You can select **View** from the menu bar in the upper right of the web portal. Make sure **Paginated Reports** is checked.  
+> If you don't see paginated reports in the folder, make sure you are viewing paginated reports. You can select **View** from the menu bar in the upper right of the web portal. Make sure **Paginated Reports** is checked.  
   
-1.  Select the **ellipsis (…)** for the dataset you want to manage.  
+1.  Select the **ellipsis (...)** for the dataset you want to manage.  
       
     ![ssRSWebPortal-manage-report1](../reporting-services/media/ssrswebportal-manage-report1.png)  
   
@@ -121,7 +120,7 @@ A Reporting Services subscription is a configuration that delivers a report at a
 ![ssRSWebPortal-report-subscription1](../reporting-services/media/ssrswebportal-report-subscription1.png)
    
 ## Dependent Items  
-Use the Dependent Items page to view a list of items that are referencing this report. The icon for each item type indicates what it is. You can then select the **ellipsis (…)** on each item to manage those items further.  
+Use the Dependent Items page to view a list of items that are referencing this report. The icon for each item type indicates what it is. You can then select the **ellipsis (...)** on each item to manage those items further.  
   
 ## Caching  
 You have options when it comes to caching data for a paginated report. You will start off with a simple selection.  
@@ -190,4 +189,4 @@ Select to change how security is defined for the current item.
 [Web portal](../reporting-services/web-portal-ssrs-native-mode.md)  
 [Work with Shared Datasets](../reporting-services/work-with-shared-datasets-web-portal.md)
 
-More questions? [Try asking the Reporting Services forum](http://go.microsoft.com/fwlink/?LinkId=620231)
+More questions? [Try asking the Reporting Services forum](https://go.microsoft.com/fwlink/?LinkId=620231)

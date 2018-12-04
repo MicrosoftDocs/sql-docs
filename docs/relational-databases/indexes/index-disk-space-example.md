@@ -5,9 +5,7 @@ ms.date: "03/02/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: table-view-index
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "online index disk space"
@@ -17,7 +15,6 @@ helpviewer_keywords:
   - "indexes [SQL Server], disk space requirements"
   - "offline index disk space [SQL Server]"
 ms.assetid: e5c71f55-0be3-4c93-97e9-7b3455c8f581
-caps.latest.revision: 30
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
@@ -60,9 +57,9 @@ manager: craigg
   
      Clustered index: 1 million * 200 bytes / 80% ~ 250 MB  
   
-     Nonclustered index A: 1 million * (50 – 8 + 24) bytes / 80% ~ 83 MB  
+     Nonclustered index A: 1 million * (50 - 8 + 24) bytes / 80% ~ 83 MB  
   
-     Nonclustered index B: 1 million * (80 – 8 + 24) bytes / 80% ~ 120 MB  
+     Nonclustered index B: 1 million * (80 - 8 + 24) bytes / 80% ~ 120 MB  
   
      Total size of new structures: 453 MB  
   

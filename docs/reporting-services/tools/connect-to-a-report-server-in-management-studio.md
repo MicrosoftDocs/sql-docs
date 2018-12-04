@@ -4,7 +4,6 @@ ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
 ms.technology: tools
-ms.suite: pro-bi
 
 
 ms.topic: conceptual
@@ -59,7 +58,7 @@ ms.author: maghan
   
 2.  Click Connect to view the list of server types, and then select **Reporting Services**.  
   
-3.  In the **Connect to Server** dialog box, enter a URL to a SharePoint site. The following example illustrates the syntax: `http://<web server>/sites/<site>`.  
+3.  In the **Connect to Server** dialog box, enter a URL to a SharePoint site. The following example illustrates the syntax: `https://<web server>/sites/<site>`.  
   
 4.  Select the authentication type. If you are using Windows Authentication, you must connect using your credentials. If you select Basic authentication or Forms authentication, type the account and password.  
   
@@ -79,7 +78,7 @@ ms.author: maghan
   
     -   For a native mode report server, type the name of the report server instance. Report server instance names are based on [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance names. By default, the instance name of a local report server instance is just the computer name. If you installed the report server as a named instance, use this syntax to specify the server: *\<servername>[\\<instancename\>]*.  
   
-    -   For a report server that runs in SharePoint integrated mode, the server to connect to is the SharePoint site with which the report server is connected. Connecting to the SharePoint site is necessary so that you can view the permission levels that control access to report server content and operations. You can specify any site in the site collection. The following example illustrates the syntax: `http://mysharepointsite`.  
+    -   For a report server that runs in SharePoint integrated mode, the server to connect to is the SharePoint site with which the report server is connected. Connecting to the SharePoint site is necessary so that you can view the permission levels that control access to report server content and operations. You can specify any site in the site collection. The following example illustrates the syntax: `https://mysharepointsite`.  
   
 5.  For **Authentication**, select which authentication mode to use to access the Web server. You must choose the authentication mode that the report server is already using.  
   
@@ -103,8 +102,8 @@ ms.author: maghan
 |Connect to|Tasks|Permissions|  
 |----------------|-----------|-----------------|  
 |Native mode report server, connected as the default or named instance:<br /><br /> \<server name>\<_instance><br /><br /> The connection to the report server is made through the Report Server WMI provider.|View and set server properties and defaults.<br /><br /> View and cancel jobs.<br /><br /> Create and manage shared schedules.<br /><br /> Create, modify, or delete role definitions.|Assigned to the System Administrator role.|  
-|Native mode report server, connected as the default or named instance, through the endpoint to the Report Server Web service:<br /><br /> `http://<servername>/reportserver`<br /><br /> Specifying a URL to the report server provides an alternate way to connect to the report server.|View and set server properties and defaults.<br /><br /> View and cancel jobs.<br /><br /> Create and manage shared schedules.<br /><br /> Create, modify, or delete role definitions.|Assigned to the System Administrator role.|  
-|SharePoint integrated mode report server, connected through the SharePoint site:<br /><br /> `http://<webserver>/<SharePointSite>`|View and set server properties and defaults.<br /><br /> View and cancel jobs.<br /><br /> Create and manage shared schedules defined for the site to which you are connected.<br /><br /> View the permission levels defined for the site to which you are connected.|Full Control level of permission on the SharePoint site to which you are connected.|  
+|Native mode report server, connected as the default or named instance, through the endpoint to the Report Server Web service:<br /><br /> `https://<servername>/reportserver`<br /><br /> Specifying a URL to the report server provides an alternate way to connect to the report server.|View and set server properties and defaults.<br /><br /> View and cancel jobs.<br /><br /> Create and manage shared schedules.<br /><br /> Create, modify, or delete role definitions.|Assigned to the System Administrator role.|  
+|SharePoint integrated mode report server, connected through the SharePoint site:<br /><br /> `https://<webserver>/<SharePointSite>`|View and set server properties and defaults.<br /><br /> View and cancel jobs.<br /><br /> Create and manage shared schedules defined for the site to which you are connected.<br /><br /> View the permission levels defined for the site to which you are connected.|Full Control level of permission on the SharePoint site to which you are connected.|  
 |SharePoint integrated mode report server, connected through the name of the report server instance:<br /><br /> \<server name>\<_instance>|View and set server properties and defaults.<br /><br /> View and cancel jobs.|Full Control level of permission on the SharePoint site that is integrated with the report server.<br /><br /> Notice that when you connect to the report server rather than the SharePoint site, the number of tasks that you can perform is significantly reduced. This is because the report server can only return application data that is stored or managed in the report server database, and not in the SharePoint configuration and content databases.|  
   
 ## See Also  

@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
-ms.component: "system-stored-procedures"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "sp_statistics_TSQL"
@@ -18,7 +15,6 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_statistics"
 ms.assetid: 0bb6495f-258a-47ec-9f74-fd16671d23b8
-caps.latest.revision: 32
 author: stevestein
 ms.author: sstein
 manager: craigg
@@ -97,7 +93,7 @@ sp_statistics [ @table_name = ] 'table_name'
   
  The index type Hashed accepts exact match or range searches, but pattern matching searches do not use the index.  
   
- **sp_statistics** is equivalent to **SQLStatistics** in ODBC. The results returned are ordered by **NON_UNIQUE**, **TYPE**, **INDEX_QUALIFIER**, **INDEX_NAME**, and **SEQ_IN_INDEX**. For more information, see the [ODBC API Reference](http://go.microsoft.com/fwlink/?LinkId=68323).  
+ **sp_statistics** is equivalent to **SQLStatistics** in ODBC. The results returned are ordered by **NON_UNIQUE**, **TYPE**, **INDEX_QUALIFIER**, **INDEX_NAME**, and **SEQ_IN_INDEX**. For more information, see the [ODBC API Reference](https://go.microsoft.com/fwlink/?LinkId=68323).  
   
 ## Permissions  
  Requires SELECT permission on the schema.  

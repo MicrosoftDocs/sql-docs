@@ -4,9 +4,7 @@ ms.custom: ""
 ms.date: "08/09/2016"
 ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "dm_xe_packages_TSQL"
@@ -19,7 +17,6 @@ helpviewer_keywords:
   - "sys.dm_xe_packages dynamic management view"
   - "extended events [SQL Server], views"
 ms.assetid: 2e5ecbe9-3ea8-45e6-a161-e31671a03e1d
-caps.latest.revision: 24
 author: stevestein
 ms.author: sstein
 manager: craigg

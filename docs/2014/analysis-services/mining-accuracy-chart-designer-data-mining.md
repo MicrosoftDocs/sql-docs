@@ -4,15 +4,12 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.dm.miningmodeleditor.accuracychart.overview.f1"
 ms.assetid: cbf379d1-0859-414a-a63f-ddc7f789b422
-caps.latest.revision: 30
 author: minewiskan
 ms.author: owend
 manager: craigg

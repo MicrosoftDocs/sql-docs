@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "03/17/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
-ms.component: "native-client|ODBC"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: native-client
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 
   - "profiling ODBC driver performance data [SQL Server Native Client]"
@@ -20,7 +17,6 @@ helpviewer_keywords:
   - "SQLPERF data structure"
   - "statistical information [ODBC]"
 ms.assetid: 8f44e194-d556-4119-a759-4c9dec7ecead
-caps.latest.revision: 36
 author: MightyPen
 ms.author: genemi
 manager: craigg
@@ -85,7 +81,7 @@ ErrorMsg: [Microsoft][SQL Server Native Client]
 |SQLSelects|Number of SELECT statements processed after SQL_PERF_START.|  
 |SQLSelectRows|Number of rows selected after SQL_PERF_START.|  
 |Transactions|Number of user transactions after SQL_PERF_START, including rollbacks. When an ODBC application is running with SQL_AUTOCOMMIT_ON, each command is considered a transaction.|  
-|SQLPrepares|Number of [SQLPrepare Function](http://go.microsoft.com/fwlink/?LinkId=59360) calls after SQL_PERF_START.|  
+|SQLPrepares|Number of [SQLPrepare Function](https://go.microsoft.com/fwlink/?LinkId=59360) calls after SQL_PERF_START.|  
 |ExecDirects|Number of **SQLExecDirect** calls after SQL_PERF_START.|  
 |SQLExecutes|Number of **SQLExecute** calls after SQL_PERF_START.|  
 |CursorOpens|Number of times the driver has opened a server cursor after SQL_PERF_START.|  

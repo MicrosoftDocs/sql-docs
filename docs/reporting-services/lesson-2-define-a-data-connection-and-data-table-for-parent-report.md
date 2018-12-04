@@ -4,11 +4,8 @@ ms.date: 05/18/2016
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
 ms.technology: reporting-services
-ms.suite: pro-bi
 
 ms.topic: conceptual
-applies_to: 
-  - "SQL Server 2016"
 ms.assetid: f02dee0c-85ad-45d4-b707-10e9e8541db9
 author: markingmyname
 ms.author: maghan
@@ -24,11 +21,11 @@ After you create a new website project using the ASP.NET website template for Vi
   
     This adds a new XSD file **DataSet1.xsd** to the project and opens the DataSet Designer.  
   
-3.  From the Toolbox window, drag a **[TableAdapter](http://msdn.microsoft.com/library/bz9tthwx.aspx)** control to the design surface. This launches the **TableAdapter** Configuration Wizard.  
+3.  From the Toolbox window, drag a **[TableAdapter](https://msdn.microsoft.com/library/bz9tthwx.aspx)** control to the design surface. This launches the **TableAdapter** Configuration Wizard.  
   
 4.  On the **Choose Your Data Connection** page, select **New Connection**.  
   
-5.  If this is the first time you’ve created a data source in Visual Studio, you will see the **Choose Data Source** page. In the **Data Source** box, select **Microsoft SQL Server**.  
+5.  If this is the first time you've created a data source in Visual Studio, you will see the **Choose Data Source** page. In the **Data Source** box, select **Microsoft SQL Server**.  
   
 6.  In the **Add Connection** dialog box, perform the following steps:  
   

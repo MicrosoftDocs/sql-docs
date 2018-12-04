@@ -42,7 +42,7 @@ CREATE MINING MODEL <model> FROM PMML <xml string>
  The name of a data mining algorithm, as defined by the current provider.  
   
 > [!NOTE]  
->  A list of the algorithms supported by the current provider can be retrieved by using [DMSCHEMA_MINING_SERVICES Rowset](../analysis-services/schema-rowsets/data-mining/dmschema-mining-services-rowset.md). To view the algorithms supported in the current instance of [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], see [Data Mining Properties](../analysis-services/server-properties/data-mining-properties.md).  
+>  A list of the algorithms supported by the current provider can be retrieved by using [DMSCHEMA_MINING_SERVICES Rowset](https://docs.microsoft.com/bi-reference/schema-rowsets/data-mining/dmschema-mining-services-rowset). To view the algorithms supported in the current instance of [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], see [Data Mining Properties](../analysis-services/server-properties/data-mining-properties.md).  
   
  *parameter list*  
  Optional. A comma-separated list of provider-defined parameters for the algorithm.  
@@ -113,7 +113,7 @@ CREATE MINING MODEL <model> FROM PMML <xml string>
  You can use the parameter list to adjust the performance and functionality of a mining model. The syntax of the parameter list is as follows:  
   
 ```  
-[<parameter> = <value>, <parameter> = <value>,…]  
+[<parameter> = <value>, <parameter> = <value>,...]  
 ```  
   
  For a list of the parameters that are associated with each algorithm, see [Data Mining Algorithms &#40;Analysis Services - Data Mining&#41;](../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md).  
@@ -121,7 +121,7 @@ CREATE MINING MODEL <model> FROM PMML <xml string>
 ## Remarks  
  If you want to create a model that has a built-in testing data set, you should use the statement CREATE MINING STRUCTURE followed by ALTER MINING STRUCTURE. However, not all model types support a holdout data set. For more information, see [CREATE MINING STRUCTURE &#40;DMX&#41;](../dmx/create-mining-structure-dmx.md).  
   
- For a walkthrough of how to create a mining model by using the CREATEMODEL statement, see [Time Series Prediction DMX Tutorial](http://msdn.microsoft.com/library/38ea7c03-4754-4e71-896a-f68cc2c98ce2).  
+ For a walkthrough of how to create a mining model by using the CREATEMODEL statement, see [Time Series Prediction DMX Tutorial](https://msdn.microsoft.com/library/38ea7c03-4754-4e71-896a-f68cc2c98ce2).  
   
 ## Naive Bayes Example  
  The following example uses the [!INCLUDE[msCoName](../includes/msconame-md.md)] Naive Bayes algorithm to create a new mining model. The Bike Buyer column is defined as the predictable attribute.  

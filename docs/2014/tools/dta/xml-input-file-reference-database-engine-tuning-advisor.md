@@ -4,10 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: tools-other
 ms.topic: conceptual
 dev_langs: 
   - "XML"
@@ -16,7 +13,6 @@ helpviewer_keywords:
   - "input file reference [Database Engine Tuning Advisor]"
   - "XML input files [Database Engine Tuning Advisor]"
 ms.assetid: 05e5e5f0-d6df-4336-b18e-e9bc2835a766
-caps.latest.revision: 25
 author: stevestein
 ms.author: sstein
 manager: craigg

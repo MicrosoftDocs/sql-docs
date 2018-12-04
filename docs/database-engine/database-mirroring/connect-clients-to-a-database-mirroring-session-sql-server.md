@@ -5,9 +5,7 @@ ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: high-availability
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "partners [SQL Server], connecting clients to"
@@ -15,7 +13,6 @@ helpviewer_keywords:
   - "client connections [SQL Server], database mirroring"
   - "connections [SQL Server], database mirroring"
 ms.assetid: 0d5d2742-2614-43de-9ab9-864addb6299b
-caps.latest.revision: 95
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
@@ -192,7 +189,7 @@ Server=123.34.45.56,4724;
   
   
 ### Retry Delays During Failover  
- If a client attempts to connect to a partner that is failing over, the partner immediately responds that it is inactive. In this case, each round of connection attempts are much briefer than the allotted retry time. This means that many rounds of connection attempts could happen before the login period times out. To avoid overloading the partners with a rapid series of connection attempts during a failover, the data access provider adds a brief retry delay after each retry cycle. The length of a given retry delay is determined by the retry-delay algorithm. After the first round, the delay is 100 milliseconds. After each of the next three rounds, the retry delay doubles—to 200, 400, and 800. For all later rounds, the retry delay is 1 second until the connection attempt succeeds or times out.  
+ If a client attempts to connect to a partner that is failing over, the partner immediately responds that it is inactive. In this case, each round of connection attempts are much briefer than the allotted retry time. This means that many rounds of connection attempts could happen before the login period times out. To avoid overloading the partners with a rapid series of connection attempts during a failover, the data access provider adds a brief retry delay after each retry cycle. The length of a given retry delay is determined by the retry-delay algorithm. After the first round, the delay is 100 milliseconds. After each of the next three rounds, the retry delay doubles-to 200, 400, and 800. For all later rounds, the retry delay is 1 second until the connection attempt succeeds or times out.  
   
 > [!NOTE]  
 >  If the server instance is stopped, then the connection request fails immediately.  

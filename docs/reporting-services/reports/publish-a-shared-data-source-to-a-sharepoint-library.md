@@ -4,7 +4,6 @@ ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
 ms.technology: reports
-ms.suite: pro-bi
 
 
 ms.topic: conceptual
@@ -25,26 +24,26 @@ ms.author: maghan
   
 1.  In [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], open your existing or new Report Server project.  
   
-2.  On the **Project** menu, click **Properties**. The *\<project>***Property Pages** dialog box opens.  
+2.  On the **Project** menu, click **Properties**. The _\<project>_**Property Pages** dialog box opens.  
   
 3.  Choose the **Configuration** you use to publish to a SharePoint site.  
   
 4.  If you want to publish the shared data sources in your project and overwrite previously published shared data sources, set **OverwriteDataSources** to **True**.  
   
-5.  (Optional) For **TargetDataSourceFolder**, type a URL to a SharePoint library or library folder. For example, `http://TestServer/TestSite/Documents/DataSources`.  
+5.  (Optional) For **TargetDataSourceFolder**, type a URL to a SharePoint library or library folder. For example, `https://TestServer/TestSite/Documents/DataSources`.  
   
      If you do not specify a value, the **TargetReportFolder** value is used.  
   
-6.  For **TargetReportFolder**, type a URL to a library or library folder. For example, `http://TestServer/TestSite/Documents/Reports`.  
+6.  For **TargetReportFolder**, type a URL to a library or library folder. For example, `https://TestServer/TestSite/Documents/Reports`.  
   
-7.  For **TargetServerURL**, type a URL to a SharePoint top-level site or subsite. If you do not specify a site, the default top-level site is used. For example, `http://servername`, `http://servername/site`, or `http://servername/site/subsite`.  
+7.  For **TargetServerURL**, type a URL to a SharePoint top-level site or subsite. If you do not specify a site, the default top-level site is used. For example, `https://servername`, `https://servername/site`, or `https://servername/site/subsite`.  
   
 8.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
 9. In Solution Explorer, right-click the shared data source you want to publish, and click **Deploy**. The data source is published to the location specified in **TargetDataSourceFolder**. Deployment errors appear in the Output window.  
   
     > [!NOTE]  
-    >  After you publish a shared data source to a SharePoint site, the file name extension is changed to .rsds. You can edit and manage a shared data source directly on the SharePoint site. For more information, see [Create and Manage Shared Data Sources &#40;Reporting Services in SharePoint Integrated Mode&#41;](http://msdn.microsoft.com/library/2d3428e4-a810-4e66-a287-ff18e57fad76).  
+    >  After you publish a shared data source to a SharePoint site, the file name extension is changed to .rsds. You can edit and manage a shared data source directly on the SharePoint site. For more information, see [Create and Manage Shared Data Sources &#40;Reporting Services in SharePoint Integrated Mode&#41;](https://msdn.microsoft.com/library/2d3428e4-a810-4e66-a287-ff18e57fad76).  
   
 ## See Also  
  [Publish a Report to a SharePoint Library](../../reporting-services/reports/publish-a-report-to-a-sharepoint-library.md)   

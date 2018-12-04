@@ -4,10 +4,8 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "integration-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "return codes [Integration Services]"
@@ -15,7 +13,6 @@ helpviewer_keywords:
   - "parameterized SQL statements [Integration Services]"
   - "Execute SQL task [Integration Services]"
 ms.assetid: a3ca65e8-65cf-4272-9a81-765a706b8663
-caps.latest.revision: 28
 author: douglaslms
 ms.author: douglasl
 manager: craigg
@@ -51,10 +48,10 @@ manager: craigg
   
 |Connection type|Parameter marker|Parameter name|Example SQL command|  
 |---------------------|----------------------|--------------------|-------------------------|  
-|ADO|?|Param1, Param2, …|SELECT FirstName, LastName, Title FROM Person.Contact WHERE ContactID = ?|  
+|ADO|?|Param1, Param2, ...|SELECT FirstName, LastName, Title FROM Person.Contact WHERE ContactID = ?|  
 |[!INCLUDE[vstecado](../includes/vstecado-md.md)]|\@\<parameter name>|\@\<parameter name>|SELECT FirstName, LastName, Title FROM Person.Contact WHERE ContactID = \@parmContactID|  
-|ODBC|?|1, 2, 3, …|SELECT FirstName, LastName, Title FROM Person.Contact WHERE ContactID = ?|  
-|EXCEL and OLE DB|?|0, 1, 2, 3, …|SELECT FirstName, LastName, Title FROM Person.Contact WHERE ContactID = ?|  
+|ODBC|?|1, 2, 3, ...|SELECT FirstName, LastName, Title FROM Person.Contact WHERE ContactID = ?|  
+|EXCEL and OLE DB|?|0, 1, 2, 3, ...|SELECT FirstName, LastName, Title FROM Person.Contact WHERE ContactID = ?|  
   
 ### Using Parameters with ADO.NET and ADO Connection Managers  
  [!INCLUDE[vstecado](../includes/vstecado-md.md)] and ADO connection managers have specific requirements for SQL commands that use parameters:  
@@ -166,7 +163,7 @@ manager: craigg
 ##  <a name="Return_codes"></a> Getting Values of Return Codes  
  A stored procedure can return an integer value, called a return code, to indicate the execution status of a procedure. To implement return codes in the Execute SQL task, you use parameters of the `ReturnValue` type.  
   
- The following table lists by connection type some examples of EXEC commands that implement return codes. All examples use an `input` parameter. The rules for how to use parameter markers and parameter names are the same for all parameter types—`Input`, `Output`, and `ReturnValue`.  
+ The following table lists by connection type some examples of EXEC commands that implement return codes. All examples use an `input` parameter. The rules for how to use parameter markers and parameter names are the same for all parameter types-`Input`, `Output`, and `ReturnValue`.  
   
  Some syntax does not support parameter literals. In that case, you must provide the parameter value by using a variable.  
   

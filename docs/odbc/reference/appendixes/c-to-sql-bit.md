@@ -5,16 +5,13 @@ ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: connectivity
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "converting data from c to SQL types [ODBC], bit"
   - "bit data type [ODBC]"
   - "data conversions from C to SQL types [ODBC], bit"
 ms.assetid: 267c9fa9-599e-4ee6-b51b-0cae43f09183
-caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: craigg

@@ -4,13 +4,10 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "reporting-services-native"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: 10778ec9-5fe4-4b4e-89b0-ade1f06b781d
-caps.latest.revision: 14
 author: markingmyname
 ms.author: maghan
 manager: craigg
@@ -26,7 +23,7 @@ manager: craigg
   
 -   [Add an Additional Report Server to a Farm &#40;SSRS Scale-out&#41;](install-windows/add-an-additional-report-server-to-a-farm-ssrs-scale-out.md).  
   
- For information on what’s new in this release, see the ‘SharePoint’ section in [What's New &#40;Reporting Services&#41;](../../2014/reporting-services/what-s-new-reporting-services.md).  
+ For information on what's new in this release, see the 'SharePoint' section in [What's New &#40;Reporting Services&#41;](../../2014/reporting-services/what-s-new-reporting-services.md).  
   
  **In this topic:**  
   
@@ -89,11 +86,11 @@ manager: craigg
   
 -   SharePoint personalization is also not supported on the [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] pages. Report Server integration is not supported if the SharePoint Web application is enabled for Anonymous access.  
   
--   SQL Server Reporting Services does **not** support SharePoint document library version control. If you save report items in a document library that is configured with “Document Version History” enabled, Reporting Services features will not function correctly and generate errors in the ULS log. The following is an example of an error in the ULS log:  
+-   SQL Server Reporting Services does **not** support SharePoint document library version control. If you save report items in a document library that is configured with "Document Version History" enabled, Reporting Services features will not function correctly and generate errors in the ULS log. The following is an example of an error in the ULS log:  
   
-    -   “…a data source associated with the report has been disabled”.  
+    -   "...a data source associated with the report has been disabled".  
   
-     Document library version history is configured on the ”Versioning Settings” page of “Library Settings”.  
+     Document library version history is configured on the "Versioning Settings" page of "Library Settings".  
   
 ##  <a name="bkmk_supportedcombinations"></a> Supported combinations of the SharePoint add-in and Report Server  
  Not all features are supported in all combinations of report server, Reporting Services add-in for SharePoint, and SharePoint Products. For more information, see [Supported Combinations of SharePoint and Reporting Services Server and Add-in &#40;SQL Server 2014&#41;](install-windows/supported-combinations-of-sharepoint-and-reporting-services-server.md)  

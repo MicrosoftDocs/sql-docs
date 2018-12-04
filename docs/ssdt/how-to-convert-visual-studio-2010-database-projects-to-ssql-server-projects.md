@@ -6,14 +6,11 @@ ms.date: "02/09/2017"
 ms.prod: "sql"
 ms.technology: ssdt
 ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql.data.tools.projectconversion.dialog"
   - "sql.data.tools.ImportDAC"
 ms.assetid: 7e5acf94-5c46-44c7-9ff5-ca7926f5332a
-caps.latest.revision: 21
 author: "stevestein"
 ms.author: "sstein"
 manager: "craigg"
@@ -41,7 +38,7 @@ The following table lists all the project artifacts that can or cannot be conver
   
 4.  Notice that in **Solution Explorer**, project file, property files, and schema objects are all converted.  
   
-### To change a project’s target platform  
+### To change a project's target platform  
   
 1.  Right-click your newly converted project in **Solution Explorer** and select **Properties** to access the **Project Settings** dialog box.  
   

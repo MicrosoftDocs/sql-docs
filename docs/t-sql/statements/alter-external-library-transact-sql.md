@@ -4,9 +4,7 @@ ms.custom: ""
 ms.date: "03/05/2018"
 ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: 
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "ALTER EXTERNAL LIBRARY"

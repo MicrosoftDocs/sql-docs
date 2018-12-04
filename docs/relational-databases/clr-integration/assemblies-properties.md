@@ -4,13 +4,11 @@ ms.custom: ""
 ms.date: "03/03/2017"
 ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: clr
 ms.topic: "reference"
 f1_keywords: 
   - "sql13.swb.assemblies.general.f1"
 ms.assetid: 88d40d3b-8983-4a57-b79d-ed1477a5c3c6
-caps.latest.revision: 22
 author: "rothja"
 ms.author: "jroth"
 manager: craigg

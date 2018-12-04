@@ -4,10 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords: 
   - "grouping containers"
@@ -15,7 +12,6 @@ helpviewer_keywords:
   - "containers [Integration Services], grouping"
   - "grouping tasks"
 ms.assetid: 34320838-c271-4f8c-90b3-1254690890bb
-caps.latest.revision: 45
 author: douglaslMS
 ms.author: douglasl
 manager: craigg

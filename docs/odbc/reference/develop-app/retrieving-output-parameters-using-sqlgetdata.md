@@ -5,16 +5,13 @@ ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: connectivity
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "SQLGetData function [ODBC], retrieving output parameters"
   - "output parameters [ODBC]"
   - "retrieving output parameters [ODBC]"
 ms.assetid: 7a8c298a-2160-491d-a300-d36f45568d9c
-caps.latest.revision: 32
 author: MightyPen
 ms.author: genemi
 manager: craigg

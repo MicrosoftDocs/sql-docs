@@ -4,15 +4,9 @@ ms.custom: ""
 ms.date: "03/04/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "system-tables"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
+ms.technology: replication
 ms.topic: "language-reference"
-applies_to: 
-  - "SQL Server"
 f1_keywords: 
   - "MSsnapshotdeliveryprogress_TSQL"
   - "MSsnapshotdeliveryprogress"
@@ -21,7 +15,6 @@ dev_langs:
 helpviewer_keywords: 
   - "MSsnapshotdeliveryprogress system table"
 ms.assetid: 9164bfe2-6fc4-4b52-946a-09ea3cf67041
-caps.latest.revision: 30
 author: stevestein
 ms.author: sstein
 manager: craigg

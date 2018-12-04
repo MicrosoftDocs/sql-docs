@@ -5,9 +5,7 @@ ms.date: "01/09/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: security
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql13.swb.roleproperties.selectroll.f1"
@@ -28,7 +26,6 @@ helpviewer_keywords:
   - "users [SQL Server], principals"
   - "##MS_SQLReplicationSigningCertificate##"
 ms.assetid: 3f7adbf7-6e40-4396-a8ca-71cbb843b5c2
-caps.latest.revision: 57
 author: VanMSFT
 ms.author: vanto
 manager: craigg

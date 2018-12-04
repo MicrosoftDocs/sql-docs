@@ -4,9 +4,7 @@ ms.custom: ""
 ms.date: "03/16/2017"
 ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: 
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: 0e908ec0-7173-4cd2-8f48-2700757b53a5
 author: "jovanpop-msft"
@@ -136,10 +134,10 @@ SELECT value
 OPENROWSET reads a single text value from the file, returns it as a BulkColumn, and passes it to the OPENJSON function. OPENJSON iterates through the array of JSON objects in the BulkColumn array and returns one book in each row, formatted as JSON:
 
 ```json
-{"id":"978-0641723445", "cat":["book","hardcover"], "name":"The Lightning Thief", … }
-{"id":"978-1423103349", "cat":["book","paperback"], "name":"The Sea of Monsters", … }
-{"id":"978-1857995879", "cat":["book","paperback"], "name":"Sophie’s World : The Greek", … } 
-{"id":"978-1933988177", "cat":["book","paperback"], "name":"Lucene in Action, Second", … }
+{"id":"978-0641723445", "cat":["book","hardcover"], "name":"The Lightning Thief", ... }
+{"id":"978-1423103349", "cat":["book","paperback"], "name":"The Sea of Monsters", ... }
+{"id":"978-1857995879", "cat":["book","paperback"], "name":"Sophie's World : The Greek", ... } 
+{"id":"978-1933988177", "cat":["book","paperback"], "name":"Lucene in Action, Second", ... }
 ```
 
 ### Example 3
@@ -159,7 +157,7 @@ In this example, OPENROWSET(BULK) reads the content of the file and passes that 
 |---|---|---|---|---|
 978-0641723445|The Lightning Thief|12.5|384|Rick Riordan| 
 978-1423103349|The Sea of Monsters|6.49|304|Rick Riordan| 
-978-1857995879|Sophie’s World : The Greek Philosophers|3.07|64|Jostein Gaarder| 
+978-1857995879|Sophie's World : The Greek Philosophers|3.07|64|Jostein Gaarder| 
 978-1933988177|Lucene in Action, Second Edition|30.5|475|Michael McCandless|
 ||||||
 
@@ -169,7 +167,7 @@ Now you can return this table to the user, or load the data into another table.
   
 ### Microsoft blog posts  
   
-For specific solutions, use cases, and recommendations, see these [blog posts](http://blogs.msdn.com/b/sqlserverstorageengine/archive/tags/json/) about the built-in JSON support in SQL Server and Azure SQL Database.  
+For specific solutions, use cases, and recommendations, see these [blog posts](https://blogs.msdn.com/b/sqlserverstorageengine/archive/tags/json/) about the built-in JSON support in SQL Server and Azure SQL Database.  
 
 ### Microsoft videos
 

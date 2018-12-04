@@ -1,17 +1,11 @@
 ---
 title: SQL Server help content and Help Viewer | Microsoft Docs
 ms.custom: ""
-ms.date: "12/15/2017"
+ms.date: "12/16/2017"
 ms.prod: sql
 ms.technology: 
 ms.reviewer: ""
-ms.suite: "sql"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
-applies_to: 
-  - "SQL Server 2014"
-  - "SQL Server 2016"
-  - "SQL Server 2017"
 ms.assetid: 51f8a08c-51d0-41d8-8bc5-1cb4d42622fb
 author: MightyPen
 ms.author: genemi
@@ -22,6 +16,8 @@ manager: craigg
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 You can use the Help Viewer in SQL Server Management Studio (SSMS) or Visual Studio (VS) to download and install SQL Server help packages from online sources or disk and view them offline. This article describes tools that install the Help Viewer, how to install offline help content, and how to view help for [!INCLUDE[ssSQL14_md](../includes/sssql14-md.md)], SQL Server 2016, and SQL Server 2017.
+
+Once the content has been downloaded on a system that has internet access, you can then migrate the content to a system that does not have internet access. 
 
 > [!NOTE]
 > SQL Server 2016 and SQL Server 2017 help are combined, although some topics apply to individual versions where noted. Most topics apply to both.
@@ -125,7 +121,8 @@ To view the installed help in Visual Studio:
    ![View Help](../sql-server/media/sql-server-help-installation/viewhelp.png)
 
    The help table of contents shows on the left, and the selected help topic on the right. 
-   
+
+  
 ## Use Help Viewer v1.x
 
 Earlier versions of SSMS and VS use Help Viewer 1.x, which supports SQL Server 2014 Help. 
@@ -134,7 +131,7 @@ Earlier versions of SSMS and VS use Help Viewer 1.x, which supports SQL Server 2
 
 This process uses Help Viewer 1.x to download SQL Server 2014 help from the Microsoft Download Center and install it on your computer.
 
-1. Navigate to the [Product Documentation for Microsoft SQL Server 2014](https://www.microsoft.com/en-us/download/details.aspx?id=42557) download site and click **Download**.  
+1. Navigate to the [Product Documentation for Microsoft SQL Server 2014](https://www.microsoft.com/download/details.aspx?id=42557) download site and click **Download**.  
 2. Click **Save** in the message box to save the *SQLServer2014Documentation\_\*.exe* file to your computer.  
    
    >[!NOTE]
@@ -165,13 +162,15 @@ This process uses Help Viewer 1.x to download SQL Server 2014 help from the Micr
    
    ![HelpViewer1_withContentInstalled_ZoomedIn](../sql-server/media/sql-server-help-installation/helpviewer1-withcontentinstalled-zoomedin.png)  
    
+
+
 ## View online help
 
 Online help always shows the most up-to-date content. 
 
 **To view SQL Server online help in SSMS 17.x**
 
-- Click **View Help** in the **Help** menu. The latest SQL Server 2016/2017 documentation from [https://docs.microsoft.com/sql/https://docs.microsoft.com/en-us/sql/sql-server/sql-server-technical-documentation](https://docs.microsoft.com/en-us/sql/sql-server/sql-server-technical-documentation) displays in a browser. 
+- Click **View Help** in the **Help** menu. The latest SQL Server 2016/2017 documentation from [https://docs.microsoft.com/sql/https://docs.microsoft.com/sql/sql-server/sql-server-technical-documentation](https://docs.microsoft.com/sql/sql-server/sql-server-technical-documentation) displays in a browser. 
 
    ![View Help](../sql-server/media/sql-server-help-installation/viewhelp.png)
 
@@ -204,6 +203,22 @@ When you press F1 or click **Help** or the **?** icon in a dialog box in SSMS or
 
 >  [!NOTE]
 >  F1 help only works when you are online. There are no offline sources for F1 help. 
+
+## Systems without internet access
+Once you've followed the [steps mentioned previously](#use-help-viewer-v2x) to download  offline content using SQL Server Help Viewer on a system that has internet access, you can then migrate that content to a system that does not have internet access. You can do so with the following steps. 
+
+  >[!NOTE]
+  >Software that supports the Help Viewer, such as SQL Server Management Studio, must be installed on the offline system. 
+
+1. Open Help Viewer (Ctrl + Alt + F1).
+1. Select the documentation you're interested in. For example, filter by SQL and select the SQL Server Technical Documentation. 
+1. Identify the physical path of the files on disk, which can be found under **Local store path**.
+1. Navigate to this location using your file system explorer. 
+    1.  The default location is: `C:\Program Files (x86)\Microsoft SQL Server\140\Tools\Binn\ManagementStudio\Extensions\Application`
+1. Select the three folders, **ContentStore**, **Incoming**, **IndexStore** and copy them to the same location on your offline system. You may need to use an interim media device such as a USB or CD. 
+1. Once these files have been moved, launch Help Viewer on the offline system and the SQL Server technical documentation will be available.
+
+![physical-location-of-offline-content.png](media/sql-server-help-installation/physical-location-of-offline-content.png)
    
 
 ## Next steps

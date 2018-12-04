@@ -4,16 +4,12 @@ ms.custom: ""
 ms.date: "03/07/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords: 
   - "security [SQL Server replication], deployment"
   - "deployment security [SQL Server replication]"
 ms.assetid: 9c8c284a-e497-48b7-b2e2-c96a0e940e67
-caps.latest.revision: 12
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg

@@ -4,16 +4,13 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: supportability
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "SQL Server event classes, TSQL event category"
   - "TSQL event category [SQL Server]"
   - "event classes [SQL Server], TSQL event category"
 ms.assetid: 215f8747-64b5-4bf3-9845-d476b10cda3a
-caps.latest.revision: 28
 author: "stevestein"
 ms.author: "sstein"
 manager: craigg

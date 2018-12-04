@@ -4,9 +4,7 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: performance
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.swb.statistics.propertis.f1"
@@ -63,7 +61,7 @@ manager: craigg
   
 3.  Click the plus sign to expand the table in which you want to create a new statistic.  
   
-4.  Right-click the **Statistics** folder and select **New Statistics…**.  
+4.  Right-click the **Statistics** folder and select **New Statistics...**.  
   
      The following properties show on the **General** page in the **New Statistics on Table***table_name* dialog box.  
   

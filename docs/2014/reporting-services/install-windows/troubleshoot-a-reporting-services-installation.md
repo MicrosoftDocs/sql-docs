@@ -4,13 +4,10 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "database-engine"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: e2536f7f-d90c-4571-9ffd-6bbfe69018d6
-caps.latest.revision: 9
 author: markingmyname
 ms.author: maghan
 manager: craigg
@@ -86,7 +83,7 @@ manager: craigg
  **Workaround:** Use SharePoint Central Administration to configure a report server in SharePoint mode. For more information, see [Manage a Reporting Services SharePoint Service Application](../../../2014/reporting-services/manage-a-reporting-services-sharepoint-service-application.md)  
   
 ###  <a name="bkmk_no_ssrs_service"></a> You do not see the SQL Server Reporting Services service in SharePoint Central Administration after installing SQL Server 2012 SSRS in SharePoint mode  
- **Description:** If after successfully installing [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] in SharePoint mode and the [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Add-in for SharePoint 2010, you do not see “SQL Server Reporting Services” in the following two menus, then the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] service has not been registered:  
+ **Description:** If after successfully installing [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] in SharePoint mode and the [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Add-in for SharePoint 2010, you do not see "SQL Server Reporting Services" in the following two menus, then the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] service has not been registered:  
   
 -   SharePoint 2010 Central Administration -> "Application Management" -> "Manage Services on Server" page  
   
@@ -110,7 +107,7 @@ manager: craigg
         Get-SPServiceInstance -all |where {$_.TypeName -like "SQL Server Reporting*"} | Start-SPServiceInstance  
         ```  
   
-2.  Verify the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Service shows status as “**Started**” on the page: SharePoint 2010 Central Administration -> "**Application Management**" -> "**Manage Services on Server**"  
+2.  Verify the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Service shows status as "**Started**" on the page: SharePoint 2010 Central Administration -> "**Application Management**" -> "**Manage Services on Server**"  
   
 ###  <a name="bkmk_cmdlets_not_recognized"></a> Reporting Services PowerShell cmdlets are not available and commands are not recognized  
  **Description:** When you try to run a [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] PowerShell cmdlet, you see an error message similar to the following:  
@@ -138,7 +135,7 @@ manager: craigg
   
  This SQL Server Reporting Services (SSRS) functionality is not supported. Use Central Administration to verify and fix one or more of the following issues:•A report server URL is not configured. Use the SSRS Integration page to set it.•The SSRS service application proxy is not configured. Use the SSRS service application pages to configure the proxy.•The SSRS service application is not mapped to this web application. Use the SSRS service application pages to associate the SSRS service application proxy to the Application Proxy Group for this web application.  
   
- **Workaround:** The error message contains three suggested steps to correct this issue. The first suggestion in the message ‘A report server URL is not configured..’ is relevant when integrating with report server version previous to [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]. SharePoint Configuration for the previous report server versions is completed on the **General Application Settings** page, using the **SQL Server Reporting Services (2008 and 2008 R2)**..  
+ **Workaround:** The error message contains three suggested steps to correct this issue. The first suggestion in the message 'A report server URL is not configured..' is relevant when integrating with report server version previous to [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]. SharePoint Configuration for the previous report server versions is completed on the **General Application Settings** page, using the **SQL Server Reporting Services (2008 and 2008 R2)**..  
   
  **More Information:** You will see this error message when attempting to use any of the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] functionality that requires a connection to the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] service. This includes:  
   
@@ -173,12 +170,12 @@ manager: craigg
   
  This functionality is not supported because a SQL Server Reporting Services service application does not exist or a report server URL has not been configured in Central Administration.  
   
- **Workaround:** Verify you have an [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] service application and it is correctly configured. For more information see, the section ‘Create a Reporting Services Service Application’ in [Install Reporting Services SharePoint Mode for SharePoint 2010](../../../2014/sql-server/install/install-reporting-services-sharepoint-mode-for-sharepoint-2010.md)  
+ **Workaround:** Verify you have an [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] service application and it is correctly configured. For more information see, the section 'Create a Reporting Services Service Application' in [Install Reporting Services SharePoint Mode for SharePoint 2010](../../../2014/sql-server/install/install-reporting-services-sharepoint-mode-for-sharepoint-2010.md)  
   
 ###  <a name="bkmk_RS_SHP_notsupported"></a> You see an error message that RS_SHP is not supported with PREPAREIMAGE  
  **Description:** When you try to run PREPAREIMAGE for [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] you see an error message similar to the following:  
   
- “The specified feature 'RS_SHP' is not supported when running the PREPAREIMAGE action, since it does not support SysPrep. Remove the features that are not compatible with SysPrep and run setup again.”  
+ "The specified feature 'RS_SHP' is not supported when running the PREPAREIMAGE action, since it does not support SysPrep. Remove the features that are not compatible with SysPrep and run setup again."  
   
  **Workaround:** There is no work around. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] does not support SYSPREP (PREPAREIMAGE). [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Native mode does support SYSPREP.  
   

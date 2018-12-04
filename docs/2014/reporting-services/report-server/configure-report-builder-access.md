@@ -4,17 +4,14 @@ ms.custom: ""
 ms.date: "05/24/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "reporting-services-native"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Reporting Services, Report Builder"
   - "Report Builder 1.0, configuring access"
   - "configuring servers [Reporting Services]"
 ms.assetid: a79003d0-c905-4d4c-9560-93a7cc1e1dd4
-caps.latest.revision: 46
 author: markingmyname
 ms.author: maghan
 manager: craigg

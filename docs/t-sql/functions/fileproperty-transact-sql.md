@@ -5,9 +5,7 @@ ms.date: "03/03/2017"
 ms.prod: sql
 ms.prod_service: "sql-database"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "FILEPROPERTY_TSQL"
@@ -22,7 +20,6 @@ helpviewer_keywords:
   - "FILEPROPERTY function"
   - "file names [SQL Server], FILEPROPERTY"
 ms.assetid: b82244ed-d623-431f-aa06-8017349d847f
-caps.latest.revision: 35
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg

@@ -4,12 +4,8 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "sql-trace"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "filters [SQL Server], events"
@@ -20,7 +16,6 @@ helpviewer_keywords:
   - "traces [SQL Server], scheduling"
   - "stopping traces"
 ms.assetid: 620b79db-924b-4502-8af3-39efcfca245d
-caps.latest.revision: 24
 author: "MashaMSFT"
 ms.author: "mathoma"
 manager: craigg
@@ -46,6 +41,6 @@ manager: craigg
  [sp_trace_setstatus &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setstatus-transact-sql.md)  
   
 ## See Also  
- [Automated Administration Tasks &#40;SQL Server Agent&#41;](http://msdn.microsoft.com/library/541ee5ac-2c9f-4b74-b4f0-13b7bd5920b0)  
+ [Automated Administration Tasks &#40;SQL Server Agent&#41;](https://msdn.microsoft.com/library/541ee5ac-2c9f-4b74-b4f0-13b7bd5920b0)  
   
   

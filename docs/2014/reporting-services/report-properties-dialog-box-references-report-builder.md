@@ -4,15 +4,12 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "reporting-services-native"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "10082"
 ms.assetid: 3414c857-8ea6-4fc4-a6d5-b4883c039efa
-caps.latest.revision: 11
 author: maggiesmsft
 ms.author: douglasl
 manager: craigg
@@ -25,7 +22,7 @@ manager: craigg
  Lists the assemblies that the report references. The assembly must be available on the computer on which the tool you are using to design the report is installed and on the report server. The name of the reference must match the contents of **\<CodeModule>** tags in the Report Definition Language (.rdl) file exactly.  
   
  **Add**  
- Click to add an assembly. Click the ellipsis (…) button to open the **Open** dialog box and select the assemblies necessary to complete report processing and expression evaluation.  
+ Click to add an assembly. Click the ellipsis (...) button to open the **Open** dialog box and select the assemblies necessary to complete report processing and expression evaluation.  
   
  **Remove**  
  To remove an assembly reference from the list, select the assembly name and click the **Remove** button.  
@@ -34,7 +31,7 @@ manager: craigg
  Lists the class instances that are used by the report. The class list is used only by instance-based members, not static members.  
   
  **Add**  
- Click to add a class reference. Click the ellipsis (…) button to open the **Open** dialog box and select the classes necessary to complete report processing and expression evaluation.  
+ Click to add a class reference. Click the ellipsis (...) button to open the **Open** dialog box and select the classes necessary to complete report processing and expression evaluation.  
   
  **Remove**  
  To delete the class instance, select it and click the **Remove** button.  

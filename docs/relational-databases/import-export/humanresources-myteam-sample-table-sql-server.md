@@ -4,18 +4,14 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
-ms.component: "import-export"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: data-movement
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "myTeam sample table [SQL Server]"
   - "bulk importing [SQL Server], examples"
   - "bulk exporting [SQL Server], examples"
 ms.assetid: 27da45a0-c1f4-4bf4-ab24-6196e80d3834
-caps.latest.revision: 35
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: craigg
@@ -28,7 +24,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 > [!NOTE]  
 >  [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] is one of the sample databases in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
- The **myTeam** table is contains the following columns.  
+ The **myTeam** table contains the following columns.  
   
 |Column|Data type|Nullability|Description|  
 |------------|---------------|-----------------|-----------------|  

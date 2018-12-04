@@ -4,15 +4,12 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.asvs.sqlserverstudio.assemblyproperties.f1"
 ms.assetid: da1174d6-d82b-4337-ac19-7368dbd95a84
-caps.latest.revision: 19
 author: minewiskan
 ms.author: owend
 manager: craigg
@@ -32,7 +29,7 @@ manager: craigg
 |**Type**|Displays the type of the assembly reference. The following values are displayed:<br /><br /> **.NET Assembly**: The assembly reference refers to a [!INCLUDE[msCoName](../includes/msconame-md.md)] .NET Framework assembly.<br /><br /> **COM DLL**: The assembly reference refers to a COM library.|  
 |**Source**|Displays the source of the assembly reference. This property typically contains the full path and file name of the assembly referred to by the assembly reference.|  
 |**Permission Set**|Select the permission set used to determine access to the assembly reference. For more information about the available values for this property, see <xref:Microsoft.AnalysisServices.ClrAssembly.PermissionSet%2A>.|  
-|**Impersonation Info**|Select the impersonation information to use when accessing the assembly reference. For more information about the available values for this property, see [ImpersonationInfo Element &#40;ASSL&#41;](scripting/properties/impersonationinfo-element-assl.md)|  
+|**Impersonation Info**|Select the impersonation information to use when accessing the assembly reference. For more information about the available values for this property, see [ImpersonationInfo Element &#40;ASSL&#41;](https://docs.microsoft.com/bi-reference/assl/properties/impersonationinfo-element-assl)|  
   
 ## See Also  
  [Analysis Services Designers and Dialog Boxes &#40;Multidimensional Data&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   

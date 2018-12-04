@@ -4,22 +4,15 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "system-stored-procedures"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
+ms.technology: replication
 ms.topic: "language-reference"
-applies_to: 
-  - "SQL Server"
 f1_keywords: 
   - "sp_lookupcustomresolver_TSQL"
   - "sp_lookupcustomresolver"
 helpviewer_keywords: 
   - "sp_lookupcustomresolver"
 ms.assetid: 356a7b8a-ae53-4fb5-86ee-fcfddbf23ddd
-caps.latest.revision: 20
 author: stevestein
 ms.author: sstein
 manager: craigg

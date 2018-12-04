@@ -6,11 +6,8 @@ ms.date: "04/10/2018"
 ms.prod: sql
 ms.prod_service: "integration-services"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: integration-services
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
-caps.latest.revision: 1
 author: "haoqian"
 ms.author: "haoqian"
 manager: craigg
@@ -20,7 +17,7 @@ manager: craigg
 To set up high availability on the Scale Out Master side with SQL Server failover cluster instance, do the following things:
 
 ## 1. Prerequisites
-Set up a Windows failover cluster. See the blog post [Installing the Failover Cluster Feature and Tools for Windows Server 2012](http://blogs.msdn.com/b/clustering/archive/2012/04/06/10291601.aspx) for instructions. Install the feature and tools on all cluster nodes.
+Set up a Windows failover cluster. See the blog post [Installing the Failover Cluster Feature and Tools for Windows Server 2012](https://blogs.msdn.com/b/clustering/archive/2012/04/06/10291601.aspx) for instructions. Install the feature and tools on all cluster nodes.
 
 ## 2. Install SQL Server failover cluster
 Install a SQL Server failover cluster. See [SQL Server Failover Cluster Installation](../../sql-server/failover-clusters/install/sql-server-failover-cluster-installation.md) for instructions. During the installation, select Database Engine Services on Feature Selection page. Log the SQL Server network name for future configuration.

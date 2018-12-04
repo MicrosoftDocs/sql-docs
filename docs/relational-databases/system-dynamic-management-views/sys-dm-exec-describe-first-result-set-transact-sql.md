@@ -5,9 +5,7 @@ ms.date: "06/10/2016"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "sys.dm_exec_describe_first_result_set"
@@ -17,7 +15,6 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.dm_exec_describe_first_result_set catalog view"
 ms.assetid: 6ea88346-0bdb-4f0e-9f1f-4d85e3487d23
-caps.latest.revision: 25
 author: stevestein
 ms.author: sstein
 manager: craigg
@@ -113,7 +110,7 @@ sys.dm_exec_describe_first_result_set(@tsql, @params, @include_browse_informatio
 |5|CLR_PROCEDURE|The result could not be determined because a CLR stored procedure could potentially return the first result.|  
 |6|CLR_TRIGGER|The result could not be determined because a CLR trigger could potentially return the first result.|  
 |7|EXTENDED_PROCEDURE|The result could not be determined because an extended stored procedure could potentially return the first result.|  
-|8|UNDECLARED_PARAMETER|The result could not be determined because the data type of one or more of the result set’s columns potentially depends on an undeclared parameter.|  
+|8|UNDECLARED_PARAMETER|The result could not be determined because the data type of one or more of the result set's columns potentially depends on an undeclared parameter.|  
 |9|RECURSION|The result could not be determined because the batch contains a recursive statement.|  
 |10|TEMPORARY_TABLE|The result could not be determined because the batch contains a temporary table and is not supported by **sp_describe_first_result_set** .|  
 |11|UNSUPPORTED_STATEMENT|The result could not be determined because the batch contains a statement that is not supported by **sp_describe_first_result_set** (e.g., FETCH, REVERT etc.).|  

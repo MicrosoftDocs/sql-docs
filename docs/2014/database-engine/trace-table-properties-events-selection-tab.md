@@ -4,17 +4,14 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "database-engine"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.pro.tracetableproperties.eventsselection.f1"
 helpviewer_keywords: 
   - "Trace Table Properties dialog box"
 ms.assetid: fa21df6a-b6b5-4b15-9104-957385821594
-caps.latest.revision: 23
 author: mashamsft
 ms.author: mathoma
 manager: craigg

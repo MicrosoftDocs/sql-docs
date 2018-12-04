@@ -4,18 +4,13 @@ ms.custom: ""
 ms.date: "03/01/2017"
 ms.prod: sql
 ms.prod_service: "sql-tools"
-ms.component: "ssbdiagnose"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: tools-other
 ms.topic: conceptual
 helpviewer_keywords: 
   - "XML output file format [ssbdiagnose]"
   - "ssbdiagnose"
 ms.assetid: 3ceb991b-6f15-4504-8828-de5adf448bc5
-caps.latest.revision: 13
 author: "stevestein"
 ms.author: "sstein"
 manager: craigg

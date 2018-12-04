@@ -4,13 +4,10 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "reporting-services-native"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: 12ad0e77-4c28-4bbb-ab11-473ae89ec9f1
-caps.latest.revision: 6
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
@@ -42,7 +39,7 @@ manager: craigg
     ```  
   
     > [!IMPORTANT]  
-    >  If you don’t include the parentheses around the variable as shown above, the report fails to render and the “must declare the scalar variable” error is displayed.  
+    >  If you don't include the parentheses around the variable as shown above, the report fails to render and the "must declare the scalar variable" error is displayed.  
   
      A dataset parameter for an embedded dataset or a shared dataset is created automatically for the query variable. A report parameter is created automatically for the dataset parameter.  
   
@@ -76,7 +73,7 @@ manager: craigg
     ```  
   
     > [!IMPORTANT]  
-    >  If you don’t include the parentheses around the variable as shown above, the report fails to render and the “must declare the scalar variable” error is displayed.  
+    >  If you don't include the parentheses around the variable as shown above, the report fails to render and the "must declare the scalar variable" error is displayed.  
   
      A dataset parameter for an embedded dataset or a shared dataset is created automatically for the query variable. A report parameter is created automatically for the dataset parameter.  
   

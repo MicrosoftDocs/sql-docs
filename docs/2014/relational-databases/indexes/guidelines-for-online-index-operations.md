@@ -4,9 +4,7 @@ ms.custom: ""
 ms.date: "11/11/2016"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: table-view-index
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "clustered indexes, online operations"
@@ -16,7 +14,6 @@ helpviewer_keywords:
   - "nonclustered indexes [SQL Server], online operations"
   - "transaction logs [SQL Server], indexes"
 ms.assetid: d82942e0-4a86-4b34-a65f-9f143ebe85ce
-caps.latest.revision: 62
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg

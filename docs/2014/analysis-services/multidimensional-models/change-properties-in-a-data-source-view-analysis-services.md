@@ -4,10 +4,8 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "friendly names [Analysis Services]"
@@ -17,7 +15,6 @@ helpviewer_keywords:
   - "data source views [Analysis Services], tables"
   - "tables [Analysis Services], data source views"
 ms.assetid: 4ccdabea-9c4d-460d-ba78-d23068143696
-caps.latest.revision: 33
 author: minewiskan
 ms.author: owend
 manager: craigg

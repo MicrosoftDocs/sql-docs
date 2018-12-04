@@ -4,12 +4,8 @@ ms.custom: ""
 ms.date: "08/09/2016"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "database-mail"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "archiving mail messages and attachments [SQL Server]"
@@ -17,9 +13,8 @@ helpviewer_keywords:
   - "Database Mail [SQL Server], archiving"
   - "saving mail messages and attachments"
 ms.assetid: 8f8f0fba-f750-4533-9b76-a9cdbcdc3b14
-caps.latest.revision: 19
-author: "stevestein"
-ms.author: "sstein"
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # Create a SQL Server Agent Job to Archive Database Mail Messages and Event Logs

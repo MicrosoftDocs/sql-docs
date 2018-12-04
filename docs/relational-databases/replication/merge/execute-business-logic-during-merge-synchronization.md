@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "03/01/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "replication"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: replication
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "custom error resolution [SQL Server replication]"
@@ -18,7 +15,6 @@ helpviewer_keywords:
   - "conflict resolution [SQL Server replication], merge replication"
   - "business logic handlers [SQL Server replication]"
 ms.assetid: 9d4da2ef-c17f-4a31-a1f6-5c3b7ca85f71
-caps.latest.revision: 31
 author: "MashaMSFT"
 ms.author: "mathoma"
 manager: craigg
@@ -48,7 +44,7 @@ manager: craigg
   
 -   Reject the data  
   
-     This is useful for applications that do not want changes propagated to or from a given Subscriber. For example, an administrator could filter out inserts that do not belong in the Subscriber’s partition, or possibly reject deletes performed at a Subscriber. As another example, an application could reject an order entered at a Subscriber because the inventory is no longer available.  
+     This is useful for applications that do not want changes propagated to or from a given Subscriber. For example, an administrator could filter out inserts that do not belong in the Subscriber's partition, or possibly reject deletes performed at a Subscriber. As another example, an application could reject an order entered at a Subscriber because the inventory is no longer available.  
   
 -   Accept the data  
   

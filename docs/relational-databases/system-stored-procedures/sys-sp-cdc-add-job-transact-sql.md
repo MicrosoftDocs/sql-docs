@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "system-stored-procedures"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "sp_cdc_add_job_TSQL"
@@ -46,7 +43,7 @@ sys.sp_cdc_add_job [ @job_type = ] 'job_type'
 ```  
   
 ## Arguments  
- [ **@job_type=** ] **'***job_type***'**  
+ [ **@job_type=** ] **'**_job\_type_**'**  
  Type of job to add. *job_type* is **nvarchar(20)** and cannot be NULL. Valid inputs are **'capture'** and **'cleanup'**.  
   
  [ **@start_job=** ] *start_job*  
@@ -57,12 +54,12 @@ sys.sp_cdc_add_job [ @job_type = ] 'job_type'
   
  *max_trans* is valid only for capture jobs.  
   
- [ **@maxscans** ] **=***max_scans*  
+ [ **@maxscans** ] **=**_max\_scans_  
  Maximum number of scan cycles to execute in order to extract all rows from the log. *max_scans* is **int** with a default of 10.  
   
  *max_scan* is valid only for capture jobs.  
   
- [ **@continuous** ] **=***continuous*  
+ [ **@continuous** ] **=**_continuous_  
  Indicates whether the capture job is to run continuously (1), or run only once (0). *continuous* is **bit** with a default of 1.  
   
  When *continuous* = 1, the [sp_cdc_scan](../../relational-databases/system-stored-procedures/sys-sp-cdc-scan-transact-sql.md) job scans the log and processes up to (*max_trans* \* *max_scans*) transactions. It then waits the number of seconds specified in *polling_interval* before beginning the next log scan.  
@@ -71,17 +68,17 @@ sys.sp_cdc_add_job [ @job_type = ] 'job_type'
   
  *continuous* is valid only for capture jobs.  
   
- [ **@pollinginterval** ] **=***polling_interval*  
+ [ **@pollinginterval** ] **=**_polling\_interval_  
  Number of seconds between log scan cycles. *polling_interval* is **bigint** with a default of 5.  
   
  *polling_interval* is valid only for capture jobs when *continuous* is set to 1. If specified, the value cannot be negative and cannot exceed 24 hours. If a value of 0 is specified, there is no wait between log scans.  
   
- [ **@retention** ] **=***retention*  
+ [ **@retention** ] **=**_retention_  
  Number of minutes that change data rows are to be retained in change tables. *retention* is **bigint** with a default of 4320 (72 hours). The maximum value is 52494800 (100 years). If specified, the value must be a positive integer.  
   
  *retention* is valid only for cleanup jobs.  
   
- [ **@threshold =** ] **'***delete_threshold***'**  
+ [ **@threshold =** ] **'**_delete\_threshold_**'**  
  Maximum number of delete entries that can be deleted by using a single statement on cleanup. *delete_threshold* is **bigint** with a default of 5000.  
   
 ## Return Code Values  
@@ -95,7 +92,7 @@ sys.sp_cdc_add_job [ @job_type = ] 'job_type'
   
  Because the cleanup and capture jobs are created by default, this stored procedure is necessary only when a job has been explicitly dropped and must be recreated.  
   
- The name of the job is **cdc.***<database_name>***_cleanup** or **cdc.***<database_name>***_capture**, where *<database_name>* is the name of the current database. If a job with the same name already exists, the name is appended with a period (**.**) followed by a unique identifier, for example: **cdc.AdventureWorks_capture.A1ACBDED-13FC-428C-8302-10100EF74F52**.  
+ The name of the job is **cdc.**_\<database\_name\>_**\_cleanup** or **cdc.**_\<database\_name\>_**\_capture**, where *<database_name>* is the name of the current database. If a job with the same name already exists, the name is appended with a period (**.**) followed by a unique identifier, for example: **cdc.AdventureWorks_capture.A1ACBDED-13FC-428C-8302-10100EF74F52**.  
   
  To view the current configuration of a cleanup or capture job, use [sp_cdc_help_jobs](../../relational-databases/system-stored-procedures/sys-sp-cdc-help-jobs-transact-sql.md). To change the configuration of a job, use [sp_cdc_change_job](../../relational-databases/system-stored-procedures/sys-sp-cdc-change-job-transact-sql.md).  
   

@@ -4,7 +4,6 @@ ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
 ms.technology: report-design
-ms.suite: pro-bi
 
 
 ms.topic: conceptual
@@ -44,7 +43,7 @@ ms.author: maggies
   
      The axis properties are displayed in the Properties window.  
   
-2.  In the **Appearance** section of the Properties pane, for the StripLines property, click the Edit Collection (…) button to open the **ChartStripLine Collection Editor**.  
+2.  In the **Appearance** section of the Properties pane, for the StripLines property, click the Edit Collection (...) button to open the **ChartStripLine Collection Editor**.  
   
 3.  Click **Add** to add a new strip line to the collection.  
   

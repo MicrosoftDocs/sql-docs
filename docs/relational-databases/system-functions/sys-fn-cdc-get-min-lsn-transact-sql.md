@@ -4,14 +4,9 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "system-functions"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
-applies_to: 
-  - "SQL Server (starting with 2008)"
 f1_keywords: 
   - "sys.fn_cdc_get_min_lsn"
   - "fn_cdc_get_min_lsn"
@@ -23,7 +18,6 @@ helpviewer_keywords:
   - "fn_cdc_get_min_lsn"
   - "sys.fn_cdc_get_min_lsn"
 ms.assetid: bd49e28a-128b-4f6b-8545-6a2ec3f4afb3
-caps.latest.revision: 17
 author: "rothja"
 ms.author: "jroth"
 manager: craigg

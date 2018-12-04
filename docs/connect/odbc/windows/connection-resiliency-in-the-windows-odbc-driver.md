@@ -5,12 +5,9 @@ ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: connectivity
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: 614fa0b4-e9fd-4c68-aab3-183f9b9df143
-caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
@@ -23,7 +20,7 @@ manager: craigg
 > [!IMPORTANT]  
 >  The connection resiliency feature is supported on Microsoft Azure SQL Databases and SQL Server 2014 (and later) server versions.  
   
- For additional information about idle connection resiliency, see [Technical Article – Idle Connection Resiliency](http://go.microsoft.com/fwlink/?LinkId=393996).  
+ For additional information about idle connection resiliency, see [Technical Article - Idle Connection Resiliency](https://go.microsoft.com/fwlink/?LinkId=393996).  
   
  To control reconnect behavior, the ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] on Windows has two options:  
   
@@ -41,7 +38,7 @@ manager: craigg
   
 -   Connect retry interval.  
   
-     The connect retry interval specifies the number of seconds between each connection retry attempt. Valid values are 1–60. The total time to reconnect cannot exceed the connection timeout (SQL_ATTR_QUERY_TIMEOUT in SQLSetStmtAttr). The default value is 10 seconds.  
+     The connect retry interval specifies the number of seconds between each connection retry attempt. Valid values are 1-60. The total time to reconnect cannot exceed the connection timeout (SQL_ATTR_QUERY_TIMEOUT in SQLSetStmtAttr). The default value is 10 seconds.  
   
      You can modify the connection retry interval when you:  
   

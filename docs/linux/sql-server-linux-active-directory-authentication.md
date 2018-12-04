@@ -7,8 +7,6 @@ ms.author: meetb
 manager: craigg
 ms.topic: conceptual
 ms.prod: sql
-ms.component: ""
-ms.suite: "sql"
 ms.custom: "sql-linux"
 ms.technology: linux
 helpviewer_keywords: 
@@ -28,6 +26,10 @@ This tutorial consists of the following tasks:
 > * Configure [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] service keytab
 > * Create AD-based logins in Transact-SQL
 > * Connect to [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] using AD Authentication
+
+> [!NOTE]
+>
+> If you wish to configure [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] on Linux to use a third-party AD provider, please see [Use third-party Active Directory providers with SQL Server on Linux](./sql-server-linux-active-directory-third-party-providers.md).
 
 ## Prerequisites
 
@@ -87,7 +89,7 @@ Use the following steps to join a [!INCLUDE[ssNoVersion](../includes/ssnoversion
 
       Now check that your `/etc/resolv.conf` file contains a line like the following example:  
 
-      ```Code
+      ```/etc/resolv.conf
       nameserver **<AD domain controller IP address>**
       ```
 
@@ -109,7 +111,28 @@ Use the following steps to join a [!INCLUDE[ssNoVersion](../includes/ssnoversion
 
      Now check that your `/etc/resolv.conf` file contains a line like the following example:  
 
-     ```Code
+     ```/etc/resolv.conf
+     nameserver **<AD domain controller IP address>**
+     ```
+
+   - **SLES**:
+
+     Edit the `/etc/sysconfig/network/config` file so that your AD domain controller IP will be used for DNS queries and the your AD domain is in the domain search list:
+
+     ```/etc/sysconfig/network/config
+     <...>
+     NETCONFIG_DNS_STATIC_SERVERS="**<AD domain controller IP address>**"
+     ```
+
+     After editing this file, restart the network service:
+
+     ```bash
+     sudo systemctl restart network
+     ```
+
+     Now check that your `/etc/resolv.conf` file contains a line like the following example:
+
+     ```/etc/resolv.conf
      nameserver **<AD domain controller IP address>**
      ```
 
@@ -134,7 +157,7 @@ Use the following steps to join a [!INCLUDE[ssNoVersion](../includes/ssnoversion
    
    > SQL Server uses SSSD and NSS for mapping user accounts and groups to security identifiers (SID's). SSSD must be configured and running in order for SQL Server to create AD logins successfully. Realmd usually does this automatically as part of joining the domain, but in some cases you must do this separately.
    >
-   > Check out the following to configure [SSSD manually](https://access.redhat.com/articles/3023951), and [configure NSS to work with SSSD](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/7/html/system-level_authentication_guide/configuring_services#Configuration_Options-NSS_Configuration_Options)
+   > Check out the following to configure [SSSD manually](https://access.redhat.com/articles/3023951), and [configure NSS to work with SSSD](https://access.redhat.com/documentation/red_hat_enterprise_linux/7/html/system-level_authentication_guide/configuring_services#Configuration_Options-NSS_Configuration_Options)
 
   
 5. Verify that you can now gather information about a user from the domain, and that you can acquire a Kerberos ticket as that user.
@@ -301,19 +324,27 @@ The specific connection string parameter for clients to use AD Authentication de
    Make sure you've installed the [mssql-tools](sql-server-linux-setup-tools.md) package, then connect using `sqlcmd` without specifying any credentials:
 
    ```bash
-   sqlcmd -S mssql.contoso.com
+   sqlcmd -S mssql-host.contoso.com
    ```
 
 * SSMS on a domain-joined Windows client
 
-   Log in to a domain-joined Windows client using your domain credentials. Make sure [!INCLUDE[ssmanstudiofull-md](../includes/ssmanstudiofull-md.md)] is installed, then connect to your [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] instance by specifying **Windows Authentication** in the **Connect to Server** dialog.
+   Log in to a domain-joined Windows client using your domain credentials. Make sure [!INCLUDE[ssmanstudiofull-md](../includes/ssmanstudiofull-md.md)] is installed, then connect to your [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] instance (e.g. "mssql-host.contoso.com") by specifying **Windows Authentication** in the **Connect to Server** dialog.
 
 * AD Authentication using other client drivers
 
   * JDBC: [Using Kerberos Integrated Authentication to Connect SQL Server](https://docs.microsoft.com/sql/connect/jdbc/using-kerberos-integrated-authentication-to-connect-to-sql-server)
   * ODBC: [Using Integrated Authentication](https://docs.microsoft.com/sql/connect/odbc/linux/using-integrated-authentication)
   * ADO.NET: [Connection String Syntax](https://msdn.microsoft.com/library/system.data.sqlclient.sqlauthenticationmethod(v=vs.110).aspx)
- 
+
+## Performance Improvements
+If you notice that AD account lookups are taking a while, and you have checked you AD configuration is valid with the steps at [Use Active Directory Authentication with SQL Server on Linux through Third-Party AD Providers](sql-server-linux-active-directory-third-party-providers.md), you can add the lines below to `/var/opt/mssql/mssql.conf` to skip SSSD calls and directly use LDAP calls.
+
+```/var/opt/mssql/mssql.conf
+[network]
+disablesssd = true
+```
+
 ## Next steps
 
 In this tutorial, we walked through how to set up Active Directory authentication with SQL Server on Linux. You learned how to:

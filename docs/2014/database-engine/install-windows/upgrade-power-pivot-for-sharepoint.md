@@ -4,13 +4,9 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: 80ba9e43-f3f0-4730-9fb1-2afd2dd3e6fc
-caps.latest.revision: 13
 author: Minewiskan
 ms.author: owend
 manager: craigg
@@ -64,7 +60,7 @@ manager: craigg
   
     1.  In the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Setup Wizard, click **Installation**.  
   
-    2.  Click **Upgrade from SQL Server…..**.  
+    2.  Click **Upgrade from SQL Server.....**.  
   
     3.  On the **Select Instance** page, select the **POWERPIVOT** instance name and then click **Next**.  
   
@@ -84,7 +80,7 @@ manager: craigg
   
          On the **Start** menu, point to **All Programs**, click [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)], click **Configuration Tools**, and then click **PowerPivot for SharePoint 2013 Configuration Too**. Note that this tool is listed only when [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] is installed on the local server.  
   
-    2.  At startup, the configuration tool checks the upgrade status of the PowerPivot farm solution and PowerPivot web application solutions. If older versions of these solutions are detected, you will see the message “**Newer versions of the PowerPivot solution files have been detected. Please select the upgrade option to upgrade your farm**.” Click **OK** to close the system validation message.  
+    2.  At startup, the configuration tool checks the upgrade status of the PowerPivot farm solution and PowerPivot web application solutions. If older versions of these solutions are detected, you will see the message "**Newer versions of the PowerPivot solution files have been detected. Please select the upgrade option to upgrade your farm**." Click **OK** to close the system validation message.  
   
     3.  Click **Upgrade Features, Services, Applications and Solutions**, and then click **OK**.  
   
@@ -101,11 +97,11 @@ manager: craigg
         > [!IMPORTANT]  
         >  The first action, **Upgrade Farm Solution**, must always be processed first. It registers the PowerShell cmdlets that are used to configure the server. If you get an error on this action, do not continue. Instead, use the information provided by the error to diagnose and resolve the problem before processing additional actions in the task list.  
   
-    7.  Click **Run** to perform all of the actions that are valid for this task. **Run** is available only after the validation check is passed. When you click **Run**, the following warning appears, reminding you that actions are processed in batch mode: “**All of the configuration settings that are flagged as valid in the tool will be applied to the SharePoint farm. Do you want to continue?**”.  
+    7.  Click **Run** to perform all of the actions that are valid for this task. **Run** is available only after the validation check is passed. When you click **Run**, the following warning appears, reminding you that actions are processed in batch mode: "**All of the configuration settings that are flagged as valid in the tool will be applied to the SharePoint farm. Do you want to continue?**".  
   
     8.  Click **Yes** to continue.  
   
-    9. Upgrading solutions and features in the farm can take several minutes to complete. During this time, connection requests for PowerPivot data **will fail** with errors similar to “**Unable to refresh data**” or “**An error has occurred trying to perform the requested action. Please try again**.” After upgrade is finished, the server will become available and these errors will no longer occur.  
+    9. Upgrading solutions and features in the farm can take several minutes to complete. During this time, connection requests for PowerPivot data **will fail** with errors similar to "**Unable to refresh data**" or "**An error has occurred trying to perform the requested action. Please try again**." After upgrade is finished, the server will become available and these errors will no longer occur.  
   
      For more information, see the following:  
   
@@ -154,11 +150,11 @@ manager: craigg
   
     1.  On the **Start** menu, point to **All Programs**, click [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)], click **Configuration Tools**, and then click **PowerPivot Configuration Tool**. Note that this tool is listed only when [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] is installed on the local server.  
   
-    2.  At startup, the configuration tool checks the upgrade status of the PowerPivot farm solution and PowerPivot web application solutions. If older versions of these solutions are detected, you will see the message “Newer versions of the PowerPivot solution files have been detected. Please select the upgrade option to upgrade your farm.” Click **OK** to close the message.  
+    2.  At startup, the configuration tool checks the upgrade status of the PowerPivot farm solution and PowerPivot web application solutions. If older versions of these solutions are detected, you will see the message "Newer versions of the PowerPivot solution files have been detected. Please select the upgrade option to upgrade your farm." Click **OK** to close the message.  
   
     3.  Click **Upgrade Features, Services, Applications and Solutions**, and then click **OK** to continue.  
   
-    4.  The following warning appears: “Workbooks in the PowerPivot Management Dashboard are about to be upgraded to the latest version. Any customizations you made to the existing workbooks will be lost. Do you want to continue?”  
+    4.  The following warning appears: "Workbooks in the PowerPivot Management Dashboard are about to be upgraded to the latest version. Any customizations you made to the existing workbooks will be lost. Do you want to continue?"  
   
          This warning refers to workbooks in the PowerPivot Management Dashboard that report on data refresh activity. If you customized these workbooks, any changes you made to those workbooks will be lost when existing files are replaced with newer versions.  
   
@@ -179,11 +175,11 @@ manager: craigg
         > [!IMPORTANT]  
         >  The first action, **Upgrade Farm Solution**, must always be processed first. It registers the PowerShell cmdlets that are used to configure the server. If you get an error on this action, do not continue. Instead, use the information provided by the error to diagnose and resolve the problem before processing additional actions in the task list.  
   
-    8.  Click **Run** to perform all of the actions that are valid for this task. **Run** is available only after the validation check is passed. When you click **Run**, the following warning appears, reminding you that actions are processed in batch mode: “All of the configuration settings that are flagged as valid in the tool will be applied to the SharePoint farm. Do you want to continue?”  
+    8.  Click **Run** to perform all of the actions that are valid for this task. **Run** is available only after the validation check is passed. When you click **Run**, the following warning appears, reminding you that actions are processed in batch mode: "All of the configuration settings that are flagged as valid in the tool will be applied to the SharePoint farm. Do you want to continue?"  
   
     9. Click **Yes** to continue.  
   
-    10. Upgrading solutions and features in the farm can take several minutes to complete. During this time, connection requests for PowerPivot data will fail with errors like “Unable to refresh data” or “An error has occurred trying to perform the requested action. Please try again.” After upgrade is finished, the server will become available and these errors will no longer occur.  
+    10. Upgrading solutions and features in the farm can take several minutes to complete. During this time, connection requests for PowerPivot data will fail with errors like "Unable to refresh data" or "An error has occurred trying to perform the requested action. Please try again." After upgrade is finished, the server will become available and these errors will no longer occur.  
   
 8.  **Repeat the process** for each SQL Server Analysis Services (PowerPivot) service in the farm: 1) Run SQL Server setup 2) Run the PowerPivot Configuration tool.  
   
@@ -198,15 +194,15 @@ manager: craigg
     1.  Start the SharePoint 2010 Management Shell as an administrator and then run the following command to view jobs in the queue:  
   
         ```  
-        Stsadm –o enumdeployments  
+        Stsadm -o enumdeployments  
         ```  
   
     2.  Review existing deployments for the following information: **Type** is Retraction or Deployment, **File** is powerpivotwebapp.wsp or powerpivotfarm.wsp.  
   
-    3.  For deployments or retractions related to PowerPivot solutions, copy the GUID value for **JobId** and then paste it into the following command (use the Mark, Copy, and Paste commands on the Shell’s Edit menu to copy the GUID):  
+    3.  For deployments or retractions related to PowerPivot solutions, copy the GUID value for **JobId** and then paste it into the following command (use the Mark, Copy, and Paste commands on the Shell's Edit menu to copy the GUID):  
   
         ```  
-        Stsadm –o canceldeployment –id “<GUID>”  
+        Stsadm -o canceldeployment -id "<GUID>"  
         ```  
   
     4.  Retry the task in the configuration tool by clicking **Validate** followed by **Run**.  

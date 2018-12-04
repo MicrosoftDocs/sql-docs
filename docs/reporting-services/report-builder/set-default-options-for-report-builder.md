@@ -4,7 +4,6 @@ ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
 ms.technology: report-builder
-ms.suite: pro-bi
 
 
 ms.topic: conceptual
@@ -21,7 +20,7 @@ ms.author: maggies
   
 ## UIElement List  
  **Use this report server or SharePoint site by default**  
- Your administrator may have configured this. The value can be a well-formed URL starting with http:// or https://. This setting determines which data source connections appear by default in the Table/Matrix and Chart wizards. In addition, your reports will be processed on this server and you can reference resources from this server.  
+ Your administrator may have configured this. The value can be a well-formed URL starting with https:// or https://. This setting determines which data source connections appear by default in the Table/Matrix and Chart wizards. In addition, your reports will be processed on this server and you can reference resources from this server.  
   
  If you select a different report server, you may need to restart Report Builder in order for this change to take affect.  
   

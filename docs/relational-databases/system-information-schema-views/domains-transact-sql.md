@@ -5,9 +5,7 @@ ms.date: "03/15/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "DOMAINS_TSQL"
@@ -28,7 +26,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
 
   Returns one row for each alias data type that can be accessed by the current user in the current database.  
   
- To retrieve information from these views, specify the fully qualified name of **INFORMATION_SCHEMA.***view_name*.  
+ To retrieve information from these views, specify the fully qualified name of **INFORMATION_SCHEMA.**_view_name_.  
   
 |Column name|Data type|Description|  
 |-----------------|---------------|-----------------|  
@@ -51,7 +49,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
 |**DOMAIN_DEFAULT**|**nvarchar(**4000**)**|Actual text of the definition [!INCLUDE[tsql](../../includes/tsql-md.md)] statement.|  
   
 ## See Also  
- [System Views &#40;Transact-SQL&#41;](http://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90)   
+ [System Views &#40;Transact-SQL&#41;](https://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90)   
  [Information Schema Views &#40;Transact-SQL&#41;](~/relational-databases/system-information-schema-views/system-information-schema-views-transact-sql.md)   
  [sys.syscharsets &#40;Transact-SQL&#41;](../../relational-databases/system-compatibility-views/sys-syscharsets-transact-sql.md)   
  [sys.sql_modules &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md)   

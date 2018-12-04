@@ -5,9 +5,7 @@ ms.date: "03/03/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "SCHEMA_NAME"
@@ -18,7 +16,6 @@ helpviewer_keywords:
   - "SCHEMA_NAME function"
   - "schemas [SQL Server], names"
 ms.assetid: 20071b77-2b6e-4ce7-a8e3-fa71480baf73
-caps.latest.revision: 27
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg

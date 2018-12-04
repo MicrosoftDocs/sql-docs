@@ -5,16 +5,13 @@ ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: connectivity
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "FoxPro ODBC driver [ODBC], scalar functions"
   - "scalar functions [ODBC], Visual FoxPro ODBC driver"
   - "Visual FoxPro ODBC driver [ODBC], scalar functions"
 ms.assetid: 6541192e-e562-4de0-9f20-40afa41fb84a
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg

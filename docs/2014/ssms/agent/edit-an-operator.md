@@ -4,10 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-cross-instance"
-ms.tgt_pltfrm: ""
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords: 
   - "SQL Server Agent jobs, operators"
@@ -15,7 +12,6 @@ helpviewer_keywords:
   - "jobs [SQL Server Agent], operators"
   - "operators (users) [Database Engine], modifying with Management Studio"
 ms.assetid: b2ba2168-ca0b-4b59-9007-4e1e4c30679e
-caps.latest.revision: 26
 author: stevestein
 ms.author: sstein
 manager: craigg
@@ -91,9 +87,9 @@ manager: craigg
     GO  
   
     EXEC dbo.sp_update_operator   
-        @name = N'François Ajenstat',  
+        @name = N'Fran??ois Ajenstat',  
         @enabled = 1,  
-        @email_address = N'françoisa',  
+        @email_address = N'fran??oisa',  
         @pager_address = N'5551290AW@pager.Adventure-Works.com',  
         @weekday_pager_start_time = 080000,  
         @weekday_pager_end_time = 170000,  

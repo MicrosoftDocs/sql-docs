@@ -4,17 +4,14 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "database-engine"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "URL reservations"
   - "URL registration"
   - "Report Server service, URL reservations"
 ms.assetid: c2c460c3-e749-4efd-aa02-0f8a98ddbc76
-caps.latest.revision: 12
 author: markingmyname
 ms.author: maghan
 manager: craigg
@@ -56,7 +53,7 @@ manager: craigg
   
  URLs are unregistered if you stop the service or recycle the Web service or Report Manager application domain. If you modify a URL reservation while the service is running, the report server will recycle the application domain immediately so that the old URL can be unregistered and the new one put into use.  
   
- A few simple examples illustrate the concept of a URL reservation and how it relates to URL addresses used for [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] applications. A key point to notice is that the URL reservation has different syntax than the the URL you use to access the application:  
+ A few simple examples illustrate the concept of a URL reservation and how it relates to URL addresses used for [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] applications. A key point to notice is that the URL reservation has different syntax than the URL you use to access the application:  
   
 |URL Reservation in HTTP.SYS|URL|Explanation|  
 |---------------------------------|---------|-----------------|  

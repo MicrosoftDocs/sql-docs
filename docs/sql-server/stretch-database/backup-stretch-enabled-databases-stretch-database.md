@@ -5,8 +5,6 @@ ms.date: "06/14/2016"
 ms.prod: sql
 ms.technology: backup-restore
 ms.reviewer: ""
-ms.suite: "sql"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Stretch Database, backing up"

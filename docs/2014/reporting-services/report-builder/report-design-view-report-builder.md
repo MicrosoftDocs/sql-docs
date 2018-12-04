@@ -4,10 +4,8 @@ ms.custom: ""
 ms.date: "03/08/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "reporting-services-native"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "10440"
@@ -21,7 +19,6 @@ helpviewer_keywords:
   - "user interface"
   - "overview of Report Builder"
 ms.assetid: 1544472c-2803-448d-af52-e901cb457a00
-caps.latest.revision: 20
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
@@ -112,7 +109,7 @@ manager: craigg
   
   
 ##  <a name="ReptPartGallery"></a> The Report Part Gallery  
- The easiest way to create a report is to find an existing report part, like a table or chart, on the report server or a report server integrated into a SharePoint site. You search for report parts to add to your report in the Report Part Gallery. You can filter the report parts by all or part of the name of the report part, who created it, who last modified it, when it was last modified, where it’s stored, or what type of report part it is. For example, you could search for all charts created last week by one of your coworkers.  
+ The easiest way to create a report is to find an existing report part, like a table or chart, on the report server or a report server integrated into a SharePoint site. You search for report parts to add to your report in the Report Part Gallery. You can filter the report parts by all or part of the name of the report part, who created it, who last modified it, when it was last modified, where it's stored, or what type of report part it is. For example, you could search for all charts created last week by one of your coworkers.  
   
 > [!NOTE]  
 >  You must be connected to a server to view the Report Part Gallery.  

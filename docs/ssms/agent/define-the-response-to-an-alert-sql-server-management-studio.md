@@ -4,18 +4,14 @@ ms.custom: ""
 ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: "sql-tools"
-ms.component: "ssms-agent"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: ssms
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "SQL Server Agent, alerts"
   - "alerts [SQL Server], responding to"
   - "responding to alerts"
 ms.assetid: c86ca6eb-c59f-46e9-bc32-d474e7c3b170
-caps.latest.revision: 5
 author: "stevestein"
 ms.author: "sstein"
 manager: craigg
@@ -70,9 +66,9 @@ Only members of the **sysadmin** fixed server role can define the response to an
   
 4.  Right-click the alert on which you want to define a response and select **Properties**.  
   
-5.  In the *alert_name***alert properties** dialog box, under **Select a page**, select **Response**.  
+5.  In the _alert\_name_**alert properties** dialog box, under **Select a page**, select **Response**.  
   
-6.  Select the **Execute job** check box and, from the list below the **Execute job** check box, select a job to execute when the alert occurs. You can create a new job by clicking **New Job**. You can view more information about the job by clicking **View Job**. For more information about the available options in the **New Job** and **Job Properties***job_name* dialog boxes, see [Create a Job](../../ssms/agent/create-a-job.md) and [View a Job](../../ssms/agent/view-a-job.md).  
+6.  Select the **Execute job** check box and, from the list below the **Execute job** check box, select a job to execute when the alert occurs. You can create a new job by clicking **New Job**. You can view more information about the job by clicking **View Job**. For more information about the available options in the **New Job** and **Job Properties**_job\_name_ dialog boxes, see [Create a Job](../../ssms/agent/create-a-job.md) and [View a Job](../../ssms/agent/view-a-job.md).  
   
 7.  Select the **Notify Operators** check box if you want to notify operators when the alert is activated. In the **Operator list**, select one or more of the following methods for notifying the operator or operators: **E-mail**, **Pager**, or **Net Send**. You can create a new operator by clicking **New Operator**. You can view more information about an operator by clicking **View Operator**. For more information about the available options in the **New Operator** and **View Operator Properties** dialog boxes, see [Create an Operator](../../ssms/agent/create-an-operator.md) and [View Information About an Operator](../../ssms/agent/view-information-about-an-operator.md).  
   
@@ -102,5 +98,5 @@ Only members of the **sysadmin** fixed server role can define the response to an
     GO  
     ```  
   
-For more information, see [sp_add_notification (Transact-SQL)](http://msdn.microsoft.com/0525e0a2-ed0b-4e69-8a4c-a9e3e3622fbd).  
+For more information, see [sp_add_notification (Transact-SQL)](https://msdn.microsoft.com/0525e0a2-ed0b-4e69-8a4c-a9e3e3622fbd).  
   

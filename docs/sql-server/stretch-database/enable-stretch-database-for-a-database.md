@@ -4,8 +4,6 @@ ms.custom: ""
 ms.date: "08/05/2016"
 ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Stretch Database, enabling database"
@@ -34,7 +32,7 @@ manager: craigg
   
 -   Review [Limitations for Stretch Database](../../sql-server/stretch-database/limitations-for-stretch-database.md).  
   
--   Stretch Database migrates data to Azure . Therefore you have to have an Azure account and a subscription for billing. To get an Azure account, [click here](http://azure.microsoft.com/en-us/pricing/free-trial/).  
+-   Stretch Database migrates data to Azure . Therefore you have to have an Azure account and a subscription for billing. To get an Azure account, [click here](https://azure.microsoft.com/pricing/free-trial/).  
   
 -   Have the connection and login info you need to create a new Azure server or to select an existing Azure server.  
   

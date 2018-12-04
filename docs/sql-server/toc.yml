@@ -6,6 +6,8 @@
     href: what-s-new-in-sql-server-2016.md
   - name: What's New in SQL Server 2017
     href: what-s-new-in-sql-server-2017.md
+  - name: What's New in SQL Server 2019
+    href: what-s-new-in-sql-server-ver15.md
   - name: Editions and supported features of SQL Server 2016
     href: editions-and-components-of-sql-server-2016.md
   - name: Editions and supported features of SQL Server 2017
@@ -20,6 +22,8 @@
     href: sql-server-customer-feedback.md
 - name: Release Notes
   items:
+  - name: SQL Server 2019 Notes
+    href: sql-server-ver15-release-notes.md
   - name: SQL Server 2017 Notes
     href: sql-server-2017-release-notes.md
   - name: SQL Server 2016 Notes
@@ -52,10 +56,14 @@
   href: ../master-data-services/master-data-services-overview-mds.md
 - name: Reporting Services
   href: ../reporting-services/create-deploy-and-manage-mobile-and-paginated-reports.md
+- name: Machine Learning Services
+  href: ../advanced-analytics/index.md
 - name: SQL Server Migration Assistant
   href: ../ssma/sql-server-migration-assistant.md
 - name: Data Migration Assistant
   href: ../dma/dma-overview.md
+- name: Database Experimentation Assistant
+  href: ../dea/database-experimentation-assistant-overview.md
 - name: Stretch Database
   href: ../sql-server/stretch-database/stretch-database.md
 - name: Tutorials for SQL Server
@@ -81,6 +89,7 @@
     - name: SQL on Channel 9
       href: https://channel9.msdn.com/Search?term=sql#ch9Search&lang-en=en&pubDate=year
   - name: Feedback and help
+    href: sql-server-get-help.md
     items:
     - name: Contribute to SQL Documentation!
       href: sql-server-docs-contribute.md
@@ -89,7 +98,7 @@
     - name: DBA Stack Exchange
       href: https://dba.stackexchange.com/questions/tagged/sql-server
     - name: Stack Overflow
-      href: http://stackoverflow.com/questions/tagged/sql-server
+      href: https://stackoverflow.com/questions/tagged/sql-server
     - name: MSDN Forums
       href: https://social.msdn.microsoft.com/Forums/en-US/home?category=sqlserver
     - name: Reddit

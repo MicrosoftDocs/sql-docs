@@ -4,10 +4,8 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "database-engine"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.swb.deploymentwizard.deploymentsettings.f1"
@@ -42,7 +40,6 @@ helpviewer_keywords:
   - "Deploy a SQL Server database to Azure"
   - "Azure VM"
 ms.assetid: 5e82e66a-262e-4d4f-aa89-39cb62696d06
-caps.latest.revision: 24
 author: stevestein
 ms.author: sstein
 manager: craigg
@@ -176,7 +173,7 @@ manager: craigg
   
 2.  In **Object Explorer**, expand the instance name, then expand the **Databases** node.  
   
-3.  Right-click the database you want to deploy, select **Tasks**, and then select **Deploy Database to Windows Azure VM…**  
+3.  Right-click the database you want to deploy, select **Tasks**, and then select **Deploy Database to Windows Azure VM...**  
   
 
   
@@ -189,16 +186,16 @@ manager: craigg
   
 -   **Next** - Proceeds to the **Source Settings** page.  
   
--   **Cancel** – Cancels the operation and closes the wizard.  
+-   **Cancel** - Cancels the operation and closes the wizard.  
   
--   **Help** – Launches the MSDN Help topic for the wizard.  
+-   **Help** - Launches the MSDN Help topic for the wizard.  
   
 ##  <a name="Source_settings"></a> Source Settings  
  Use this page to connect to the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] that hosts the database you want to deploy to the Windows Azure VM. You will also specify a temporary location for files to be saved from the local machine before they are transferred to Windows Azure. This can be a shared, network location.  
   
  **Options**  
   
--   Click **Connect…** and then specify connection details for the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] that hosts the database to deploy.  
+-   Click **Connect...** and then specify connection details for the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] that hosts the database to deploy.  
   
 -   Use the **Select Database** drop-down list to specify the database to deploy.  
   
@@ -209,34 +206,34 @@ manager: craigg
   
  **Options**  
   
--   **Management Certificate** – Use this option to specify a certificate from the local certificate store that matches the management certificate from Windows Azure.  
+-   **Management Certificate** - Use this option to specify a certificate from the local certificate store that matches the management certificate from Windows Azure.  
   
--   **Publishing Profile** – Use this option if you already have a publishing profile downloaded to your computer.  
+-   **Publishing Profile** - Use this option if you already have a publishing profile downloaded to your computer.  
   
--   **Sign In** – Use this option to sign in to Windows Azure using a Microsoft account – for example, a Live ID or Hotmail account – to generate and download a new management certificate. Note that the number of certificates per subscription is limited.  
+-   **Sign In** - Use this option to sign in to Windows Azure using a Microsoft account - for example, a Live ID or Hotmail account - to generate and download a new management certificate. Note that the number of certificates per subscription is limited.  
   
--   **Subscription** – Select, type, or paste your Windows Azure subscription ID that matches the management certificate from the local certificate store or a publishing profile.  
+-   **Subscription** - Select, type, or paste your Windows Azure subscription ID that matches the management certificate from the local certificate store or a publishing profile.  
   
 ##  <a name="Deployment_settings"></a> Deployment Settings Page  
  Use this page to specify the destination server and to provide details about your new database.  
   
  **Options**  
   
--   **Azure Virtual Machine** – Specify details for the VM that will host the SQL Server database:  
+-   **Azure Virtual Machine** - Specify details for the VM that will host the SQL Server database:  
   
--   **Cloud Service name** – Specify the name of the service that hosts the VM. To create a new Cloud Service, specify a name for the new Cloud Service.  
+-   **Cloud Service name** - Specify the name of the service that hosts the VM. To create a new Cloud Service, specify a name for the new Cloud Service.  
   
--   **Virtual Machine name** – Specify the name of the VM that will host the SQL Server database. To create a new Windows Azure VM, specify a name for the new VM.  
+-   **Virtual Machine name** - Specify the name of the VM that will host the SQL Server database. To create a new Windows Azure VM, specify a name for the new VM.  
   
--   **Settings** – Use the Settings button to create a new VM to host the SQL Server database. If you are using an existing VM, the information you provide will be used to authenticate your credentials.  
+-   **Settings** - Use the Settings button to create a new VM to host the SQL Server database. If you are using an existing VM, the information you provide will be used to authenticate your credentials.  
   
--   **Storage account** – Select the storage account from the drop-down list. To create a new storage account, specify a name for the new account. Note that storage accounts associated with an Affinity Group will not be available in the drop-down list.  
+-   **Storage account** - Select the storage account from the drop-down list. To create a new storage account, specify a name for the new account. Note that storage accounts associated with an Affinity Group will not be available in the drop-down list.  
   
--   **Target Database** – Specify details for the target database.  
+-   **Target Database** - Specify details for the target database.  
   
--   **Server Connection** – Connection details for the server.  
+-   **Server Connection** - Connection details for the server.  
   
--   **Database** – Specify or confirm the name of a new database. If the database name already exists on the destination SQL Server instance, we suggest that you specify a modified database name.  
+-   **Database** - Specify or confirm the name of a new database. If the database name already exists on the destination SQL Server instance, we suggest that you specify a modified database name.  
   
 ##  <a name="Summary"></a> Summary Page  
  Use this page to review the specified settings for the operation. To complete the deploy operation using the specified settings, click **Finish**. To cancel the deploy operation and exit the wizard, click **Cancel**.  

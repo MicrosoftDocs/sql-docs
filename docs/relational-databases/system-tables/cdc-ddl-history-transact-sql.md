@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "06/10/2016"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "system-tables"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "cdc.ddl_history_TSQL"
@@ -18,7 +15,6 @@ dev_langs:
 helpviewer_keywords: 
   - "cdc.ddl_history"
 ms.assetid: cb97ea71-da2f-441a-bbd2-db1f5f48ab49
-caps.latest.revision: 18
 author: stevestein
 ms.author: sstein
 manager: craigg

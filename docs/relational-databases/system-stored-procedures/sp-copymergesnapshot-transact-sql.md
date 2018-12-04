@@ -4,22 +4,15 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "system-stored-procedures"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
+ms.technology: replication
 ms.topic: "language-reference"
-applies_to: 
-  - "SQL Server"
 f1_keywords: 
   - "sp_copymergesnapshot"
   - "sp_copymergesnapshot_TSQL"
 helpviewer_keywords: 
   - "sp_copymergesnapshot"
 ms.assetid: eaecd6e0-8486-4e5d-ace7-8ae75768c0a8
-caps.latest.revision: 26
 author: stevestein
 ms.author: sstein
 manager: craigg

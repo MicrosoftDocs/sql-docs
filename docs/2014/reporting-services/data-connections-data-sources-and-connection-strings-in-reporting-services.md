@@ -4,10 +4,8 @@ ms.custom: ""
 ms.date: "06/14/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "reporting-services-native"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "connections [Reporting Services], data sources"
@@ -19,7 +17,6 @@ helpviewer_keywords:
   - "Reporting Services, data sources"
   - "logins [Reporting Services]"
 ms.assetid: 4d8f0ae1-102b-4b3d-9155-fa584c962c9e
-caps.latest.revision: 112
 author: maggiesmsft
 ms.author: douglasl
 manager: craigg
@@ -107,7 +104,7 @@ manager: craigg
   
  ![note](media/rs-fyinote.png "note")A good practice is to verify that the data source connections continue to connect successfully after you publish a report. If you need to change the credentials, you can modify them directly on the report server.  
   
- To change the data sources that a report uses, you can modify the report properties in in Native mode Report Manager or from document libraries in SharePoint mode. For more information, see the following:  
+ To change the data sources that a report uses, you can modify the report properties in Native mode Report Manager or from document libraries in SharePoint mode. For more information, see the following:  
   
 -   [Store Credentials in a Reporting Services Data Source](report-data/store-credentials-in-a-reporting-services-data-source.md) [Store Credentials in a Reporting Services Data Source](report-data/store-credentials-in-a-reporting-services-data-source.md)  
   
@@ -131,7 +128,7 @@ manager: craigg
 |[!INCLUDE[ssSDS](../includes/sssds-md.md)] in the cloud|`Data Source=<host>;Initial Catalog=AdventureWorks; Encrypt=True`|Set data source type to `Windows Azure SQL Database`. For more information, see [SQL Azure Connection Type &#40;SSRS&#41;](report-data/sql-azure-connection-type-ssrs.md).|  
 |SQL Server Parallel Data Warehouse|`HOST=<IP address>;database= AdventureWorks; port=<port>`|Set data source type to `Microsoft SQL Server Parallel Data Warehouse`. For more information, see [SQL Server Parallel Data Warehouse Connection Type &#40;SSRS&#41;](report-data/sql-server-parallel-data-warehouse-connection-type-ssrs.md).|  
 |Analysis Services database on the local server|`data source=localhost;initial catalog=Adventure Works DW`|Set data source type to `Microsoft SQL Server Analysis Services`. For more information, see [Analysis Services Connection Type for MDX &#40;SSRS&#41;](report-data/analysis-services-connection-type-for-mdx-ssrs.md) or [Analysis Services Connection Type for DMX &#40;SSRS&#41;](report-data/analysis-services-connection-type-for-dmx-ssrs.md).|  
-|Analysis Services tabular model database with Sales perspective|`Data source=<servername>;initial catalog= Adventure Works DW;cube='Sales’`|Set data source type to `Microsoft SQL Server Analysis Services`. Specify perspective name in cube= setting. For more information, see [Perspectives &#40;SSAS Tabular&#41;](../analysis-services/tabular-models/perspectives-ssas-tabular.md).|  
+|Analysis Services tabular model database with Sales perspective|`Data source=<servername>;initial catalog= Adventure Works DW;cube='Sales'`|Set data source type to `Microsoft SQL Server Analysis Services`. Specify perspective name in cube= setting. For more information, see [Perspectives &#40;SSAS Tabular&#41;](../analysis-services/tabular-models/perspectives-ssas-tabular.md).|  
 |Report model data source on a report server configured in native mode|`Server=http://myreportservername/reportserver; datasource=/models/Adventure Works`|Specify the report server or document library URL and the path to the published model in the report server folder or document library folder namespace. For more information, see [Report Model Connection &#40;SSRS&#41;](report-data/report-model-connection-ssrs.md).|  
 |Report model data source on a report server configured in SharePoint integrated mode|`Server=http://server; datasource=http://server/site/documents/models/Adventure Works.smdl`|Specify the report server or document library URL and the path to the published model in the report server folder or document library folder namespace.|  
 |[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 2000 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] server|`provider=MSOLAP.2;data source=<remote server name>;initial catalog=FoodMart 2000`|Set the data source type to `OLE DB Provider for OLAP Services 8.0`.<br /><br /> You can achieve a faster connection to [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 2000 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] data sources if you set the `ConnectTo` property to `8.0`. To set this property, use the **Connection Properties** dialog box, **Advanced Properties** tab.|  

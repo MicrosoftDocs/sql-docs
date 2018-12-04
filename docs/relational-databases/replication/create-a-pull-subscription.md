@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "03/17/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "replication"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: replication
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "pull subscriptions [SQL Server replication], creating"
@@ -17,7 +14,6 @@ helpviewer_keywords:
   - "snapshot replication [SQL Server], subscribing"
   - "transactional replication, subscribing"
 ms.assetid: 41d1886d-59c9-41fc-9bd6-a59b40e0af6e
-caps.latest.revision: 46
 author: "MashaMSFT"
 ms.author: "mathoma"
 manager: craigg
@@ -117,9 +113,9 @@ manager: craigg
   
 2.  At the Subscriber, execute [sp_addmergepullsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-transact-sql.md). Specify **@publisher**, **@publisher_db**, **@publication**, and the following parameters:  
   
-    -   **@subscriber_type** – specify **local** for a client subscription and **global** for a server subscription.  
+    -   **@subscriber_type** - specify **local** for a client subscription and **global** for a server subscription.  
   
-    -   **@subscription_priority** – Specify a priority for the subscription (**0.00** to **99.99**). This is only required for a server subscription.  
+    -   **@subscription_priority** - Specify a priority for the subscription (**0.00** to **99.99**). This is only required for a server subscription.  
   
          For more information, see [Advanced Merge Replication Conflict Detection and Resolution](../../relational-databases/replication/merge/advanced-merge-replication-conflict-detection-and-resolution.md).  
   

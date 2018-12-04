@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "03/17/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.component: "sqlxml"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: xml
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 
   - "DiffGrams [SQLXML], Managed Classes"
@@ -16,7 +13,6 @@ helpviewer_keywords:
   - "Managed Classes [SQLXML], DiffGrams"
   - "SQLXML, Managed Classes"
 ms.assetid: 81c687ca-8c9f-4f58-801f-8dabcc508a06
-caps.latest.revision: 23
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: craigg
@@ -97,7 +93,7 @@ class Test
 2.  Save the following XSD schema (DiffGramSchema.xml) in a folder:  
   
     ```  
-    <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
+    <xsd:schema xmlns:xsd="https://www.w3.org/2001/XMLSchema"  
                 xmlns:sql="urn:schemas-microsoft-com:mapping-schema">  
      <xsd:annotation>  
       <xsd:documentation>  

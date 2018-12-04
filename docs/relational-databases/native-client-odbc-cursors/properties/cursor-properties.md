@@ -5,9 +5,7 @@ ms.date: "03/03/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: native-client
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 
   - "SQL Server Native Client ODBC driver, cursors"
@@ -15,7 +13,6 @@ helpviewer_keywords:
   - "ODBC applications, cursors"
   - "ODBC cursors, cursor behaviors"
 ms.assetid: e70960e1-2085-46ed-9d55-aeb8c3532c84
-caps.latest.revision: 30
 author: MightyPen
 ms.author: genemi
 manager: craigg

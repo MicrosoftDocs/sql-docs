@@ -5,14 +5,9 @@ ms.date: "03/01/2017"
 ms.prod: sql
 ms.prod_service: "integration-services"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: integration-services
-ms.tgt_pltfrm: ""
 ms.topic: tutorial
-applies_to: 
-  - "SQL Server 2016"
 ms.assetid: 459e3995-2116-4f15-aaa2-32f26113869c
-caps.latest.revision: 20
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: craigg
@@ -26,11 +21,11 @@ By modifying the connection manager to use the value of the user-defined variabl
   
 1.  In the **Connection Managers** pane, right-click **Sample Flat File Source Data**, and select **Properties**.  
   
-2.  In the Properties window, for **Expressions**, click in the empty cell, and then click the ellipsis button **(…)**.  
+2.  In the Properties window, for **Expressions**, click in the empty cell, and then click the ellipsis button **(...)**.  
   
 3.  In the **Property Expressions Editor** dialog box, in the **Property** column, type or select **ConnectionString**.  
   
-4.  In the **Expression** column, click the ellipsis button **(…)** to open the **Expression Builder** dialog box.  
+4.  In the **Expression** column, click the ellipsis button **(...)** to open the **Expression Builder** dialog box.  
   
 5.  In the **Expression Builder** dialog box, expand the **Variables** node.  
   

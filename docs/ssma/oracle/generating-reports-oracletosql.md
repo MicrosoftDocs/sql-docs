@@ -4,16 +4,13 @@ ms.prod: sql
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: ssma
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Report Generation in Oracle Console, synchronize-target"
   - "Report Generation in Oracle Console,refresh-from-database"
   - "Report Generation in Oracle Console,write-summary-report-to"
 ms.assetid: ccad6262-01e1-447a-bd2b-c105154c80ce
-caps.latest.revision: 17
 author: "Shamikg"
 ms.author: "Shamikg"
 manager: "v-thobro"
@@ -47,8 +44,8 @@ Use the following procedure to generate reports:
     ||||  
     |-|-|-|  
     |**Sl. No.**|**Command and Parameter**|**Output Description**|  
-    |1|verbose=”false”|Generates a summarized report of the activity.|  
-    |2|verbose=”true”|Generates a summarized and detailed status report for each activity.|  
+    |1|verbose="false"|Generates a summarized report of the activity.|  
+    |2|verbose="true"|Generates a summarized and detailed status report for each activity.|  
   
     > [!NOTE]  
     > The Report Verbosity Settings specified above are applicable for generate-assessment-report, convert-schema, migrate-data, convert-sql-statement commands.  
@@ -58,8 +55,8 @@ Use the following procedure to generate reports:
     ||||  
     |-|-|-|  
     |**Sl. No.**|**Command and Parameter**|**Output Description**|  
-    |1|report-errors=”false”|No details on error/ warning/ info messages.|  
-    |2|report-errors=”true”|Detailed error/ warning/ info messages.|  
+    |1|report-errors="false"|No details on error/ warning/ info messages.|  
+    |2|report-errors="true"|Detailed error/ warning/ info messages.|  
   
     > [!NOTE]  
     > The Error Reporting Settings specified above are applicable for generate-assessment-report, convert-schema, migrate-data, convert-sql-statement commands.  
@@ -87,7 +84,7 @@ Use the following procedure to generate reports:
 ### synchronize-target:  
 The command **synchronize-target** has **report-errors-to** parameter, which specifies the location of error report for the synchronization operation. Then, a file by name **TargetSynchronizationReport&lt;n&gt;.XML** is created at the specified location, where **&lt;n&gt;** is the unique file number that increments with a digit with each execution of the same command.  
   
-**Note:** If the folder path is given, then ‘report-errors-to’ parameter becomes an optional attribute for the command ‘synchronize-target’.  
+**Note:** If the folder path is given, then 'report-errors-to' parameter becomes an optional attribute for the command 'synchronize-target'.  
   
 ```  
 <!-- Example: Synchronize target entire Database with all attributes-->  
@@ -113,7 +110,7 @@ The command **synchronize-target** has **report-errors-to** parameter, which spe
 ### refresh-from-database:  
 The command **refresh-from-database** has **report-errors-to** parameter, which specifies the location of error report for the refresh operation. Then, a file by name **SourceDBRefreshReport&lt;n&gt;.XML** is created at the specified location, where **&lt;n&gt;** is the unique file number that increments with a digit with each execution of the same command.  
   
-**Note:** If the folder path is given, then ‘report-errors-to’ parameter becomes an optional attribute for the command ‘synchronize-target’.  
+**Note:** If the folder path is given, then 'report-errors-to' parameter becomes an optional attribute for the command 'synchronize-target'.  
   
 ```  
 <!-- Example: Refresh entire Schema (with all attributes)-->  
@@ -139,5 +136,5 @@ The command **refresh-from-database** has **report-errors-to** parameter, which 
 -   fail-script  
   
 ## See Also  
-[Executing the SSMA Console (Oracle)](http://msdn.microsoft.com/en-us/7228ccba-c69f-4b4c-8664-01a2750183c5)  
+[Executing the SSMA Console (Oracle)](https://msdn.microsoft.com/7228ccba-c69f-4b4c-8664-01a2750183c5)  
   

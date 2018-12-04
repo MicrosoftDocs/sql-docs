@@ -4,11 +4,7 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-  - "docset-sql-devref"
-ms.tgt_pltfrm: ""
+ms.technology: xml
 ms.topic: "reference"
 helpviewer_keywords: 
   - "IDREFS relationships [SQLXML]"
@@ -23,7 +19,6 @@ helpviewer_keywords:
   - "annotated XSD schemas, IDREF type attribute"
   - "ID relationships [SQLXML]"
 ms.assetid: 1c7f77d3-81f3-4820-bb63-c4aaa4ea9aa1
-caps.latest.revision: 27
 author: douglaslMS
 ms.author: douglasl
 manager: craigg

@@ -5,9 +5,7 @@ ms.date: "08/09/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "FOR"
@@ -21,7 +19,6 @@ helpviewer_keywords:
   - "BROWSE option"
   - "FOR clause [Transact-SQL]"
 ms.assetid: 08a6f084-8f73-4f2a-bae4-3c7513dc99b9
-caps.latest.revision: 54
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: craigg
@@ -102,7 +99,7 @@ JSON
   
 -   You must run the following [!INCLUDE[tsql](../../includes/tsql-md.md)] statement to turn on the browse mode by using the **NO_BROWSETABLE** option:  
   
-    ```  
+    ```sql
     SET NO_BROWSETABLE ON  
     ```  
   
@@ -120,7 +117,7 @@ JSON
   
 2.  In the SampleDB database, create a tleft table and a tright table that both contain a single column that is named c1. Define a unique index on the c1 column in the tleft table, and set the column to accept null values. To do this, run the following [!INCLUDE[tsql](../../includes/tsql-md.md)] statements in an appropriate query window:  
   
-    ```  
+    ```sql
     CREATE TABLE tleft(c1 INT NULL UNIQUE) ;  
     GO   
     CREATE TABLE tright(c1 INT NULL) ;  
@@ -129,7 +126,7 @@ JSON
   
 3.  Insert several values in the tleft table and the tright table. Make sure that you insert a null value in the tleft table. To do this, run the following [!INCLUDE[tsql](../../includes/tsql-md.md)] statements in the query window:  
   
-    ```  
+    ```sql
     INSERT INTO tleft VALUES(2) ;  
     INSERT INTO tleft VALUES(NULL) ;  
     INSERT INTO tright VALUES(1) ;  
@@ -140,14 +137,14 @@ JSON
   
 4.  Turn on the **NO_BROWSETABLE** option. To do this, run the following [!INCLUDE[tsql](../../includes/tsql-md.md)] statements in the query window:  
   
-    ```  
+    ```sql
     SET NO_BROWSETABLE ON ;  
     GO  
     ```  
   
 5.  Access the data in the tleft table and the tright table by using an outer join statement in the SELECT query. Make sure that the tleft table is on the inner side of the outer join statement. To do this, run the following [!INCLUDE[tsql](../../includes/tsql-md.md)] statements in the query window:  
   
-    ```  
+    ```sql
     SELECT tleft.c1   
     FROM tleft   
     RIGHT JOIN tright   
@@ -220,7 +217,7 @@ JSON
   
  The following example specifies `FOR XML AUTO` with the `TYPE` and `XMLSCHEMA` options. Because of the `TYPE` option, the result set is returned to the client as an **xml** type. The `XMLSCHEMA` option specifies that the inline XSD schema is included in the XML data returned, and the `ELEMENTS` option specifies that the XML result is element-centric.  
   
-```  
+```sql
 USE AdventureWorks2012;  
 GO  
 SELECT p.BusinessEntityID, FirstName, LastName, PhoneNumber AS Phone  

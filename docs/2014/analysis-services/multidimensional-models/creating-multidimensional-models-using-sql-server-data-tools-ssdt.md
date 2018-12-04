@@ -4,10 +4,8 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "SSAS, environments"
@@ -16,7 +14,6 @@ helpviewer_keywords:
   - "projects [Analysis Services]"
   - "solutions [Analysis Services]"
 ms.assetid: 132ed779-3ec8-4734-9698-802116d1b017
-caps.latest.revision: 62
 author: minewiskan
 ms.author: owend
 manager: craigg

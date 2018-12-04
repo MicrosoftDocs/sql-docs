@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "replication"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: replication
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "access controls [SQL Server replication]"
@@ -16,7 +13,6 @@ helpviewer_keywords:
   - "authentication [SQL Server replication]"
   - "identity [Replication]"
 ms.assetid: 4da0e793-1ee4-4f69-a80b-45c6732a238d
-caps.latest.revision: 8
 author: "MashaMSFT"
 ms.author: "mathoma"
 manager: craigg

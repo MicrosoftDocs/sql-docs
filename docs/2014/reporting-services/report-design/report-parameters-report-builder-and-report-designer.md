@@ -4,13 +4,9 @@ ms.custom: ""
 ms.date: "07/27/2016"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "reporting-services-native"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
-applies_to: 
-  - "SQL Server 2014"
 f1_keywords: 
   - "sql12.rtp.rptdesigner.subreportproperties.parameters.f1"
   - "sql12.rtp.rptdesigner.reportparameters.general.f1"
@@ -19,7 +15,6 @@ f1_keywords:
   - "10070"
   - "sql12.rtp.rptdesigner.reportparameters.advanced.f1"
 ms.assetid: 58b96555-d876-4f61-bff8-db5764b9f5f9
-caps.latest.revision: 36
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
@@ -220,8 +215,8 @@ manager: craigg
   
 -   [How to use SSRS parameters with stored procedures](http://go.microsoft.com/fwlink/p/?LinkId=396970)  
   
-## Did this Article Help You? We’re Listening  
- What information are you looking for, and did you find it? We’re listening to your feedback to improve the content. Please submit your comments to [sqlfeedback@microsoft.com](mailto:sqlfeedback@microsoft.com?subject=Your%20feedback%20about%20the%20Report%20Parameters%20page)  
+## Did this Article Help You? We're Listening  
+ What information are you looking for, and did you find it? We're listening to your feedback to improve the content. Please submit your comments to [sqlfeedback@microsoft.com](mailto:sqlfeedback@microsoft.com?subject=Your%20feedback%20about%20the%20Report%20Parameters%20page)  
   
 ##  <a name="bkmk_Related_Topics"></a> Related Content  
  [Configuring SSRS Report Parameters (quiz)](http://go.microsoft.com/fwlink/p/?LinkID=306443)  

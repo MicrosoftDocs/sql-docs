@@ -3,10 +3,8 @@ title: "Always Encrypted (Database Engine) | Microsoft Docs"
 ms.custom: ""
 ms.date: "04/24/2017"
 ms.prod: sql
-ms.reviewer: ""
-ms.suite: "sql"
+ms.reviewer: vanto
 ms.technology: security
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "encryption [SQL Server], Always Encrypted"
@@ -68,7 +66,7 @@ Here's an example of an update that attempts to move data from an encrypted colu
 update dbo.Patients set testssn = SSN
 ```
 
-If SSN is a column encrypted using Always Encryption, the above update statement will fail with an error similar to:
+If SSN is a column encrypted using Always Encrypted, the above update statement will fail with an error similar to:
 
 ```
 Msg 206, Level 16, State 2, Line 89
@@ -183,7 +181,7 @@ Tool Requirements
 
 - SQL Server Management Studio can decrypt the results retrieved from encrypted columns if you connect with the *column encryption setting=enabled* in the **Additional Properties** tab of the **Connect to Server** dialog. Requires at least SQL Server Management Studio version 17 to insert, update, or filter encrypted columns.
 
-- Encrypted connections from `sqlcmd` require at least version 13.1, which is available from the [Download Center](http://go.microsoft.com/fwlink/?LinkID=825643).
+- Encrypted connections from `sqlcmd` require at least version 13.1, which is available from the [Download Center](https://go.microsoft.com/fwlink/?LinkID=825643).
 
   
 ## Database Permissions  

@@ -4,11 +4,8 @@ ms.date: 11/07/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
 ms.technology: reporting-services
-ms.suite: pro-bi
 
 ms.topic: conceptual
-applies_to: 
-  - "SQL Server 2016"
 helpviewer_keywords: 
   - "walkthroughs [Reporting Services]"
   - "tutorials [Reporting Services]"
@@ -56,4 +53,4 @@ You must also have read-only permissions to retrieve data from the [!INCLUDE[ssS
 
 [Reporting Services Tutorials](../reporting-services/reporting-services-tutorials-ssrs.md)  
 
-More questions? [Try asking the Reporting Services forum](http://go.microsoft.com/fwlink/?LinkId=620231)
+More questions? [Try asking the Reporting Services forum](https://go.microsoft.com/fwlink/?LinkId=620231)

@@ -4,14 +4,11 @@ ms.custom: ""
 ms.date: "04/04/2017"
 ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: supportability
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 helpviewer_keywords: 
   - "7903 (Database Engine error)"
 ms.assetid: 991a86df-42cd-435e-85b3-f42e4cb13039
-caps.latest.revision: 19
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg

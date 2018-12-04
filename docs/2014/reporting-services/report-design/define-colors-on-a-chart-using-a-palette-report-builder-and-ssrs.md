@@ -4,13 +4,10 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "reporting-services-native"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: d95efc22-5a32-43d4-9bd2-12753e7fd395
-caps.latest.revision: 6
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
@@ -42,7 +39,7 @@ manager: craigg
   
 3.  In the **Chart** section, for the `Palette` property, select **Custom**.  
   
-4.  In the CustomPaletteColors property, click the Edit Collection (**…**) button. The **ReportColorExpression Collection Editor** opens.  
+4.  In the CustomPaletteColors property, click the Edit Collection (**...**) button. The **ReportColorExpression Collection Editor** opens.  
   
 5.  Click **Add** to add a color. Select a color from the drop-down list or select Expression and specify a hex value for a specific color, such as ff6600 for "Orange".  
   

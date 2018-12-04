@@ -4,22 +4,15 @@ ms.custom: ""
 ms.date: "06/15/2018"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "system-stored-procedures"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
+ms.technology: replication
 ms.topic: "language-reference"
-applies_to: 
-  - "SQL Server"
 f1_keywords: 
   - "sp_changelogreader_agent"
   - "sp_changelogreader_agent_TSQL"
 helpviewer_keywords: 
   - "sp_changelogreader_agent"
 ms.assetid: 929b2fa7-1267-41d0-8b69-e9ab26a62c0f
-caps.latest.revision: 21
 author: stevestein
 ms.author: sstein
 manager: craigg

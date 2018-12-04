@@ -1,15 +1,11 @@
-﻿---
+---
 title: "osql Utility | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/16/2017"
 ms.prod: sql
 ms.prod_service: "sql-tools"
-ms.component: "osql"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: tools-other
 ms.topic: conceptual
 helpviewer_keywords: 
   - "statements [SQL Server], command prompt"
@@ -25,7 +21,6 @@ helpviewer_keywords:
   - "command prompt utilities [SQL Server], osql"
   - "CTRL+C command"
 ms.assetid: cf530d9e-0609-4528-8975-ab8e08e40b9a
-caps.latest.revision: 49
 author: "stevestein"
 ms.author: "sstein"
 manager: craigg
@@ -47,7 +42,7 @@ osql
 [-L] |  
 [  
   {  
-     {-Ulogin_id [-Ppassword]} | –E }  
+     {-Ulogin_id [-Ppassword]} | -E }  
      [-Sserver_name[\instance_name]] [-Hwksta_name] [-ddb_name]  
      [-ltime_out] [-ttime_out] [-hheaders]  
      [-scol_separator] [-wcolumn_width] [-apacket_size]  
@@ -95,8 +90,8 @@ C:\>osql
  **-E**  
  Uses a trusted connection instead of requesting a password.  
   
- **-S** *server_name*[ **\\***instance_name*]  
- Specifies the instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] to connect to. Specify *server_name* to connect to the default instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] on that server. Specify *server_name***\\***instance_name* to connect to a named instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] on that server. If no server is specified, **osql** connects to the default instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] on the local computer. This option is required when executing **osql** from a remote computer on the network.  
+ **-S** _server\_name_[ **\\**_instance\_name_]  
+ Specifies the instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] to connect to. Specify *server_name* to connect to the default instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] on that server. Specify _server\_name_**\\**_instance\_name_ to connect to a named instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] on that server. If no server is specified, **osql** connects to the default instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] on the local computer. This option is required when executing **osql** from a remote computer on the network.  
   
  **-H** *wksta_name*  
  Is a workstation name. The workstation name is stored in **sysprocesses.hostname** and is displayed by **sp_who**. If this option is not specified, the current computer name is assumed.  
@@ -111,7 +106,7 @@ C:\>osql
  Specifies the number of seconds before a command times out. If a *time_out* value is not specified, commands do not time out.  
   
  **-h** *headers*  
- Specifies the number of rows to print between column headings. The default is to print headings one time for each set of query results. Use -1 to specify that no headers will be printed. If –1 is used, there must be no space between the parameter and the setting (**-h-1**, not **-h -1**).  
+ Specifies the number of rows to print between column headings. The default is to print headings one time for each set of query results. Use -1 to specify that no headers will be printed. If -1 is used, there must be no space between the parameter and the setting (**-h-1**, not **-h -1**).  
   
  **-s** *col_separator*  
  Specifies the column-separator character, which is a blank space by default. To use characters that have special meaning to the operating system (for example, | ; & < >), enclose the character in double quotation marks (").  
@@ -196,7 +191,7 @@ osql -E -q "select name, object_id from %table%"
 ## Remarks  
  The **osql** utility is started directly from the operating system with the case-sensitive options listed here. After **osql**starts, it accepts SQL statements and sends them to [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] interactively. The results are formatted and displayed on the screen (**stdout**). Use QUIT or EXIT to exit from **osql**.  
   
- If you do not specify a user name when you start **osql**, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] checks for the environment variables and uses those, for example, **osqluser=(***user***)** or **osqlserver=(***server***)**. If no environment variables are set, the workstation user name is used. If you do not specify a server, the name of the workstation is used.  
+ If you do not specify a user name when you start **osql**, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] checks for the environment variables and uses those, for example, **osqluser=(**_user_**)** or **osqlserver=(**_server_**)**. If no environment variables are set, the workstation user name is used. If you do not specify a server, the name of the workstation is used.  
   
  If neither the **-U** or **-P** options are used, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] attempts to connect using [!INCLUDE[msCoName](../includes/msconame-md.md)] Windows Authentication Mode. Authentication is based on the [!INCLUDE[msCoName](../includes/msconame-md.md)] Windows account of the user running **osql**.  
   
@@ -255,7 +250,7 @@ osql -E -i titles.qry -o titles.res
 > [!IMPORTANT]  
 >  When possible, use the **-E**option (trusted connection).  
   
- When using **osql** interactively, you can read an operating-system file into the command buffer with **:r***file_name*. This sends the SQL script in *file_name* directly to the server as a single batch.  
+ When using **osql** interactively, you can read an operating-system file into the command buffer with **:r**_file\_name_. This sends the SQL script in *file_name* directly to the server as a single batch.  
   
 > [!NOTE]  
 >  When using **osql**, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] treats the batch separator GO, if it appears in a SQL script file, as a syntax error.  
@@ -296,7 +291,7 @@ osql -E -Q "EXIT(SELECT COUNT(*) FROM '%1')"
 > [!NOTE]  
 >  Executes the batch, and then quits and returns no value.  
   
--   EXIT**(***query***)**  
+-   EXIT**(**_query_**)**  
   
 > [!NOTE]  
 >  Executes the batch, including the query, and then quits after returning the results of the query.  

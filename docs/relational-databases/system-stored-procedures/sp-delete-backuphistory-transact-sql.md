@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "system-stored-procedures"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "sp_delete_backuphistory"
@@ -18,7 +15,6 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_delete_backuphistory"
 ms.assetid: bdb56834-616e-47e4-b942-e895d2325e97
-caps.latest.revision: 31
 author: "stevestein"
 ms.author: "sstein"
 manager: craigg
@@ -41,7 +37,7 @@ sp_delete_backuphistory [ @oldest_date = ] 'oldest_date'
 ```  
   
 ## Arguments  
- [ **@oldest_date=** ] **'***oldest_date***'**  
+ [ **@oldest_date=** ] **'**_oldest\_date_**'**  
  Is the oldest date retained in the backup and restore history tables. *oldest_date* is **datetime**, with no default.  
   
 ## Return Code Values  

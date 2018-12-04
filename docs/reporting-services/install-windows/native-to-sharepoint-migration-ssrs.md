@@ -3,7 +3,6 @@ title: "Native to SharePoint Migration (SSRS) | Microsoft Docs"
 ms.date: 08/17/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
-ms.suite: pro-bi
 
 
 ms.topic: conceptual
@@ -20,7 +19,7 @@ ms.author: maghan
 ##  <a name="bkmk_native_to_sharepoint"></a> Reporting Services Migration tool  
  The tool supports content migration from a native mode Deployment to a SharePoint mode deployment. The tool does not support migration from SharePoint mode to SharePoint mode or from SharePoint mode to Native mode.  
   
- For more information, see [Reporting Services Migration Tool](http://www.microsoft.com/download/details.aspx?id=29560) (http://www.microsoft.com/download/details.aspx?id=29560).  
+ For more information, see [Reporting Services Migration Tool](https://www.microsoft.com/download/details.aspx?id=29560) (https://www.microsoft.com/download/details.aspx?id=29560).  
   
 ## Use Script to migrate content  
  If the migration tool does not meet your needs, you can manually migrate the report server data. The following is a summary of the steps to complete to migrate report items from a one [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] deployment ot another. The approach supports either Native or SharePoint mode as the source or destination servers.  
@@ -31,7 +30,7 @@ ms.author: maghan
   
     -   [Sample Reporting Services rs.exe Script to Copy Content between Report Servers](../../reporting-services/tools/sample-reporting-services-rs-exe-script-to-copy-content-between-report-servers.md). The topics explains how to use the sample script you can download from CodePlex.  
   
-    -   The sample rss script on CodePlex, [Reporting Services RS.exe script that migrates content from one report server to another](http://azuresql.codeplex.com/releases/view/115207)  
+    -   The sample rss script on CodePlex, [Reporting Services RS.exe script that migrates content from one report server to another](https://azuresql.codeplex.com/releases/view/115207)  
   
     -   [Scripting and PowerShell with Reporting Services](../../reporting-services/tools/scripting-and-powershell-with-reporting-services.md)  
   
@@ -48,4 +47,4 @@ ms.author: maghan
 |Subscriptions|yes|See the List Subscriptions method [Subscription and Delivery Methods](../../reporting-services/report-server-web-service/methods/subscription-and-delivery-methods.md) and the <xref:ReportService2010.ReportingService2010.ChangeSubscriptionOwner%2A> method.|  
 |Snapshots|||
 
-More questions? [Try asking the Reporting Services forum](http://go.microsoft.com/fwlink/?LinkId=620231)
+More questions? [Try asking the Reporting Services forum](https://go.microsoft.com/fwlink/?LinkId=620231)

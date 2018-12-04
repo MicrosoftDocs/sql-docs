@@ -5,9 +5,7 @@ ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: connectivity
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 apiname: 
   - "SQLParamOptions"
@@ -19,7 +17,6 @@ f1_keywords:
 helpviewer_keywords: 
   - "SQLParamOptions function [ODBC]"
 ms.assetid: ee08e987-0243-4060-ab21-64da11fe444f
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg

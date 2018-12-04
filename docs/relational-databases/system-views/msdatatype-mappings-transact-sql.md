@@ -4,15 +4,9 @@ ms.custom: ""
 ms.date: "03/03/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "system-views"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
+ms.technology: replication
 ms.topic: "language-reference"
-applies_to: 
-  - "SQL Server"
 f1_keywords: 
   - "MSdatatype_mappings"
   - "MSdatatype_mappings_TSQL"
@@ -21,7 +15,6 @@ dev_langs:
 helpviewer_keywords: 
   - "MSdatatype_mappings view"
 ms.assetid: 13cdabb3-6e07-4e8d-ae80-4235022ccc7f
-caps.latest.revision: 12
 author: "stevestein"
 ms.author: "sstein"
 manager: craigg

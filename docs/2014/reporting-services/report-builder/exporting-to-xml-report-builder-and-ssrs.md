@@ -4,13 +4,10 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "reporting-services-native"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: 11d72068-2d97-495e-948f-12d1e8c1957d
-caps.latest.revision: 7
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
@@ -78,7 +75,7 @@ manager: craigg
   
  XML namespace definitions and schema reference attributes are also included in the report element. Variables are noted in bold face type:  
   
- \<**Report** xmlns=”**SchemaName**” xmlns:xsi=”http://www.w3.org/2001/XMLSchema-instance” xsi:**schemaLocation**=”**SchemaNameReportURL**&amp;rc%3aSchema=true” Name=”ReportName”>  
+ \<**Report** xmlns="**SchemaName**" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:**schemaLocation**="**SchemaNameReportURL**&amp;rc%3aSchema=true" Name="ReportName">  
   
  The values for the variables are as follows:  
   
@@ -125,7 +122,7 @@ manager: craigg
  The corner is not rendered. Only the contents of the corner are rendered.  
   
 #### Tablix Cells  
- Tablix cells are rendered as elements. The name of the element is taken from the cell’s DataElementName RDL property.  
+ Tablix cells are rendered as elements. The name of the element is taken from the cell's DataElementName RDL property.  
   
 #### Automatic Subtotals  
  Tablix automatic subtotals are not rendered.  

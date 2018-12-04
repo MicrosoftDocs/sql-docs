@@ -3,12 +3,12 @@ title: "Install or Uninstall the Reporting Services Add-in for SharePoint | Micr
 ms.date: 08/17/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-sharepoint"
-ms.suite: pro-bi
 
 ms.topic: conceptual
 ms.assetid: c2804a9a-08ea-4f4a-805d-a2c19c68733d
 author: markingmyname
 ms.author: maghan
+monikerRange: ">=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions"
 ---
 
 # Install or Uninstall the Reporting Services Add-in for SharePoint
@@ -47,7 +47,7 @@ ms.author: maghan
 ##  <a name="bkmk_3ways_to_install"></a> Overview of the Installation Methods  
  The SQL Server 2016 Reporting Services Add-in for SharePoint products can be installed using one of the following two methods:  
   
--   **The installation wizard:** ![note](../../analysis-services/instances/install-windows/media/ssrs-fyi-note.png "note")New with SQL Server 2016, the add-in can be installed by the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] installation wizard. Choose **Reporting Services Add-in for SharePoint Products** on the **Feature Selection** page of the wizard.  
+-   **The installation wizard:** ![note](../../analysis-services/instances/install-windows/media/ssrs-fyi-note.png "note") In SQL Server 2016, the add-in can be installed by the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] installation wizard. Choose **Reporting Services Add-in for SharePoint Products** on the **Feature Selection** page of the wizard.  
   
 -   **rsSharepoint.msi:** The add-in can be installed directly from the installation media or downloaded and installed. The rsSharepoint.msi supports both a graphical user interface and a command line installation. You must run the .msi with administrator privileges by first opening a command prompt with elevated permissions, and then running the rsSharepoint.msi from the command line. For more information on downloading the add-in, see [Where to find the Reporting Services add-in for SharePoint Products](../../reporting-services/install-windows/where-to-find-the-reporting-services-add-in-for-sharepoint-products.md).  
   
@@ -110,7 +110,7 @@ Rssharepoint.msi /?
     3.  The amount of time it takes for the changes to take effect may vary, depending on your server environment. You can also run **iisreset** to force a quicker update.  
   
 ### Quiet installation for scripting  
- You can use the **/q** or **/quiet** switches for a “quiet” installation that will not display any dialogs or warnings. The quiet installation is useful if you want to script the installation of the add-in.  
+ You can use the **/q** or **/quiet** switches for a "quiet" installation that will not display any dialogs or warnings. The quiet installation is useful if you want to script the installation of the add-in.  
   
 > [!NOTE]  
 >  If you use the **/q** switch for a silent command line installation, the end-user license agreement will not be displayed. Regardless of the installation method, the use of this software is governed by a license agreement and you are responsible for complying with the license agreement.  
@@ -230,7 +230,7 @@ Rssharepoint.msi /?
   
 #### View a Log file with PowerShell  
   
-1.  Type the following command from the SharePoint Management Shell to return a filtered list of rows from the file, that contain “ssrscustomactionerror”:  
+1.  Type the following command from the SharePoint Management Shell to return a filtered list of rows from the file, that contain "ssrscustomactionerror":  
   
     ```  
     Get-content -path C:\Users\<UserName\AppData\Local\Temp\rs_sp_0.log | select-string "ssrscustomactionerror"  
@@ -268,4 +268,4 @@ Rssharepoint.msi /?
 [Install the first Report Server in SharePoint mode](install-the-first-report-server-in-sharepoint-mode.md)   
 [Reporting Services Report Server &#40;SharePoint Mode&#41;](../../reporting-services/report-server-sharepoint/reporting-services-report-server-sharepoint-mode.md)  
 
-More questions? [Try asking the Reporting Services forum](http://go.microsoft.com/fwlink/?LinkId=620231)
+More questions? [Try asking the Reporting Services forum](https://go.microsoft.com/fwlink/?LinkId=620231)

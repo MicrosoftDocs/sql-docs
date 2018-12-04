@@ -4,9 +4,7 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "dm_clr_appdomains"
@@ -18,7 +16,6 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.dm_clr_appdomains dynamic management dynamic management view"
 ms.assetid: 9fe0d4fd-950a-4274-a493-85e776278045
-caps.latest.revision: 24
 author: stevestein
 ms.author: sstein
 manager: craigg
@@ -30,7 +27,7 @@ manager: craigg
   
  There are several types of CLR integration managed database objects. For general information about these objects, see [Building Database Objects with Common Language Runtime (CLR) Integration](../../relational-databases/clr-integration/database-objects/building-database-objects-with-common-language-runtime-clr-integration.md). Whenever these objects are executed, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] creates an **AppDomain** under which it can load and execute the required code. The isolation level for an **AppDomain** is one **AppDomain** per database per owner. That is, all CLR objects owned by a user are always executed in the same **AppDomain** per-database (if a user registers CLR database objects in different databases, the CLR database objects will run in different application domains). An **AppDomain** is not destroyed after the code finishes execution. Instead, it is cached in memory for future executions. This improves performance.  
   
- For more information, see [Application Domains](http://go.microsoft.com/fwlink/p/?LinkId=299658).  
+ For more information, see [Application Domains](https://go.microsoft.com/fwlink/p/?LinkId=299658).  
   
 |Column name|Data type|Description|  
 |-----------------|---------------|-----------------|  

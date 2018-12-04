@@ -4,13 +4,10 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: 6d751477-6bf1-48b4-8833-5a631bbe7650
-caps.latest.revision: 15
 author: minewiskan
 ms.author: owend
 manager: craigg
@@ -32,7 +29,7 @@ manager: craigg
 > [!NOTE]  
 >  Delegation is not required if the connection to Analysis Services is a single hop, or your solution uses stored credentials provided by SharePoint Secure Store Service or Reporting Services. If all connections are direct connections from Excel to an Analysis Services database, or based on stored credentials, you can use Kerberos (or NTLM) without having to configure constrained delegation.  
 >   
->  Kerberos constrained delegation is required if the user identity has to flow over multiple computer connections (known as “double-hop”). When Analysis Services data access is contingent upon user identity, and the connection request is from a delegating service, use the checklist in the next section to ensure that Analysis Services is able to impersonate the original caller. For more information about Analysis Services authentication flows, see [Microsoft BI Authentication and Identity Delegation](http://go.microsoft.com/fwlink/?LinkID=286576).  
+>  Kerberos constrained delegation is required if the user identity has to flow over multiple computer connections (known as "double-hop"). When Analysis Services data access is contingent upon user identity, and the connection request is from a delegating service, use the checklist in the next section to ensure that Analysis Services is able to impersonate the original caller. For more information about Analysis Services authentication flows, see [Microsoft BI Authentication and Identity Delegation](http://go.microsoft.com/fwlink/?LinkID=286576).  
 >   
 >  As a security best practice, Microsoft always recommends constrained delegation over unconstrained delegation. Unconstrained delegation is a major security risk because it allows the service identity to impersonate another user on *any* downstream computer, service, or application (as opposed to just those services explicitly defined via constrained delegation).  
   

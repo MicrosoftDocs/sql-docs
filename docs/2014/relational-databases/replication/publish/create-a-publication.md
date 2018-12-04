@@ -4,10 +4,7 @@ ms.custom: ""
 ms.date: "06/30/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords: 
   - "publications [SQL Server replication], creating"
@@ -15,7 +12,6 @@ helpviewer_keywords:
   - "adding articles"
   - "articles [SQL Server replication], adding"
 ms.assetid: 52ee6de9-1d58-4cb9-8711-372bddbe7154
-caps.latest.revision: 43
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg

@@ -4,13 +4,10 @@ ms.custom: ""
 ms.date: "03/09/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "database-engine"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: 5f9a94c4-854b-4577-a8b1-7142f19904e3
-caps.latest.revision: 30
 author: markingmyname
 ms.author: maghan
 manager: craigg
@@ -65,9 +62,9 @@ manager: craigg
   
 -   **SharePoint Products Configuration Wizard:** Run the wizard to complete the SP1 upgrade and configuration.  
   
--   **Complete the upgrade with psconfig:** Run the command `psconfig –upgrade` to complete the SP1 upgrade  
+-   **Complete the upgrade with psconfig:** Run the command `psconfig -upgrade` to complete the SP1 upgrade  
   
- For more information, see the “upgrade” section of [(SharePoint Server 2010)](http://technet.microsoft.com/library/cc263093.aspx) and [Resource center: Updates for SharePoint 2010 Products](http://technet.microsoft.com/sharepoint/ff800847.aspx)  
+ For more information, see the "upgrade" section of [(SharePoint Server 2010)](http://technet.microsoft.com/library/cc263093.aspx) and [Resource center: Updates for SharePoint 2010 Products](http://technet.microsoft.com/sharepoint/ff800847.aspx)  
   
 ## SharePoint Installation with SQL Server BI Features  
   

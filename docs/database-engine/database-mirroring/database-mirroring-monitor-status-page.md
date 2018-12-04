@@ -5,14 +5,11 @@ ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: high-availability
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql13.swb.dbmmonitor.status.f1"
 ms.assetid: 4f64b4e1-89e9-4827-98fa-b92c3dc73b48
-caps.latest.revision: 36
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
@@ -39,7 +36,7 @@ manager: craigg
 |-----------------|-----------------|  
 |**Server Instance**|Name of the server instance whose status is displayed in the **Status** row.|  
 |**Current Role**|Current role of the server instance, either **Principal** or **Mirror**.|  
-|**Mirroring State**|The mirroring state reported by the server instance and an icon that indicates the severity of the state. The possible statuses and their associated icons are as follows:<br /><br /> Icon: —, status **Unknown**. The monitor is not connected to either partner. The only available information is what has been cached by the monitor.<br /><br /> Icon: Warning icon, status **Synchronizing**. The contents of the mirror database are lagging behind the contents of the principal database. The principal server instance is sending log records to the mirror server instance, which is applying the changes to the mirror database to roll it forward. At the start of a database mirroring session, the mirror and principal databases are in this state.<br /><br /> Icon: Standard database cylinder, status **Synchronized**. When the mirror server becomes sufficiently caught up to the principal server, the database state changes to **Synchronized**. The database remains in this state as long as the principal server is sending changes to the mirror server and the mirror server is applying changes to the mirror database.  For high-safety mode, automatic failover and manual failover are both possible, without any data loss.  For high-performance mode, some data loss is always possible, even in the **Synchronized** state.<br /><br /> Icon: Warning icon, status **Suspended**. <br />                            The principal database is available but is not sending any logs to the mirror server.<br /><br /> Icon: Error icon, status **Disconnected**. The server instance cannot connect to its partner.|  
+|**Mirroring State**|The mirroring state reported by the server instance and an icon that indicates the severity of the state. The possible statuses and their associated icons are as follows:<br /><br /> Icon: -, status **Unknown**. The monitor is not connected to either partner. The only available information is what has been cached by the monitor.<br /><br /> Icon: Warning icon, status **Synchronizing**. The contents of the mirror database are lagging behind the contents of the principal database. The principal server instance is sending log records to the mirror server instance, which is applying the changes to the mirror database to roll it forward. At the start of a database mirroring session, the mirror and principal databases are in this state.<br /><br /> Icon: Standard database cylinder, status **Synchronized**. When the mirror server becomes sufficiently caught up to the principal server, the database state changes to **Synchronized**. The database remains in this state as long as the principal server is sending changes to the mirror server and the mirror server is applying changes to the mirror database.  For high-safety mode, automatic failover and manual failover are both possible, without any data loss.  For high-performance mode, some data loss is always possible, even in the **Synchronized** state.<br /><br /> Icon: Warning icon, status **Suspended**. <br />                            The principal database is available but is not sending any logs to the mirror server.<br /><br /> Icon: Error icon, status **Disconnected**. The server instance cannot connect to its partner.|  
 |**Witness Connection**|Connection status of the witness, preceded by a status icon, **Unknown**, **Connected**, or **Disconnected**.|  
 |**History**|Click to display the history of mirroring on the server instance. This opens the **Database Mirroring History** dialog box, which displays the history of mirroring status and statistics for a mirrored database on a given server instance.<br /><br /> The **History** button is dimmed if the monitor is not connected to the server instance.|  
   
@@ -94,7 +91,7 @@ manager: craigg
 ## Remarks  
  Members of the **dbm_monitor** fixed database role can view the existing mirroring status by using either Database Mirroring Monitor or the **sp_dbmmonitorresults** stored procedure. But these users cannot update the status table. They depend on the **Database Mirroring Monitor Job**to update the status table at regular intervals. To learn the age of the displayed status a user can look at the times in the **Principal log (***\<time>***)** and **Mirror log (***\<time>***)** labels.  
   
- If this job does not exist or [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent is stopped, the status becomes increasingly stale and may no longer reflect the configuration of the mirroring session. For example, after a failover, the partners might appear to share the same role—principal or mirror, or the current principal server might be shown as the mirror, while the current mirror server is shown as the principal.  
+ If this job does not exist or [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent is stopped, the status becomes increasingly stale and may no longer reflect the configuration of the mirroring session. For example, after a failover, the partners might appear to share the same role-principal or mirror, or the current principal server might be shown as the mirror, while the current mirror server is shown as the principal.  
   
 ## See Also  
  [Start Database Mirroring Monitor &#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/start-database-mirroring-monitor-sql-server-management-studio.md)   

@@ -4,11 +4,7 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-  - "docset-sql-devref"
-ms.tgt_pltfrm: ""
+ms.technology: stored-procedures
 ms.topic: "reference"
 api_name: 
   - "srv_sendrow"
@@ -21,7 +17,6 @@ dev_langs:
 helpviewer_keywords: 
   - "srv_sendrow"
 ms.assetid: a08f608a-10e6-4bff-9b48-0d02e8026cdb
-caps.latest.revision: 31
 author: rothja
 ms.author: jroth
 manager: craigg

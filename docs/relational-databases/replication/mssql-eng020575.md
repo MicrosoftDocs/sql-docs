@@ -4,16 +4,12 @@ ms.custom: ""
 ms.date: "03/01/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "replication"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: replication
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "MSSQL_ENG020575 error"
 ms.assetid: 8886378c-e70e-481a-bd24-2d613a39f491
-caps.latest.revision: 9
 author: "MashaMSFT"
 ms.author: "mathoma"
 manager: craigg

@@ -4,18 +4,14 @@ ms.custom: ""
 ms.date: "05/03/2016"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "replication"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: replication
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "parameterized filters [SQL Server replication], snapshots"
   - "snapshots [SQL Server replication], parameterized filters and"
   - "filters [SQL Server replication], parameterized"
 ms.assetid: 00dfb229-f1de-4d33-90b0-d7c99ab52dcb
-caps.latest.revision: 45
 author: "MashaMSFT"
 ms.author: "mathoma"
 manager: craigg
@@ -273,7 +269,7 @@ PAUSE
 >  When filtering for an article yields non-overlapping partitions that are unique for each subscription (by specifying a value of F:Microsoft.SqlServer.Replication.PartitionOptions.NonOverlappingSingleSubscription for P:Microsoft.SqlServer.Replication.MergeArticle.PartitionOption when creating a merge article), metadata is cleaned up whenever the Merge Agent runs. This means that the partitioned snapshot expires more quickly. When you use this option, you should consider allowing Subscribers to request snapshot generation. For more information, see the section Using the Appropriate Filtering Options in the topic [Parameterized Row Filters](../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md).  
   
 > [!IMPORTANT]  
->  When possible, prompt users to enter security credentials at runtime. If you must store credentials, use the [cryptographic services](http://go.microsoft.com/fwlink/?LinkId=34733) provided by the [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows .NET Framework.  
+>  When possible, prompt users to enter security credentials at runtime. If you must store credentials, use the [cryptographic services](https://go.microsoft.com/fwlink/?LinkId=34733) provided by the [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows .NET Framework.  
   
 #### To create a publication that allows Subscribers to initiate snapshot generation and delivery  
   

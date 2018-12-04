@@ -4,17 +4,13 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords: 
   - "positive values [Integration Services]"
   - "SIGN function"
   - "negative values"
 ms.assetid: 1547db08-4329-4781-91c2-36898ed71b15
-caps.latest.revision: 32
 author: douglaslMS
 ms.author: douglasl
 manager: craigg

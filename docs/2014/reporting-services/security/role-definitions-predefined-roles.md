@@ -4,17 +4,14 @@ ms.custom: ""
 ms.date: "10/22/2015"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "reporting-services-native"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "security [Reporting Services], defaults"
   - "default security"
   - "role-based security [Reporting Services], defaults"
 ms.assetid: 6b46db51-7c30-467d-a251-50f50647fe21
-caps.latest.revision: 41
 author: markingmyname
 ms.author: maghan
 manager: craigg

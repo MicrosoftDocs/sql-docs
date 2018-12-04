@@ -1,19 +1,15 @@
-﻿---
+---
 title: "SQL Server Agent Properties (General Page) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: "sql-tools"
-ms.component: "ssms-agent"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: ssms
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql13.ag.agent.general.f1"
 ms.assetid: b51601e9-5454-43c6-bb5e-24eb2ff043c8
-caps.latest.revision: 4
 author: "stevestein"
 ms.author: "sstein"
 manager: craigg

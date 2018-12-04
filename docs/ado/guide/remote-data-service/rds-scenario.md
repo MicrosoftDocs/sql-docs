@@ -4,29 +4,26 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ""
-ms.date: "01/19/2017"
+ms.date: 11/09/2018
 ms.reviewer: ""
-ms.suite: "sql"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "address book application scenario [ADO]"
   - "RDS scenarios [ADO]"
 ms.assetid: a7dcad87-aaf0-4b02-9660-472f8469761c
-caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ---
 # RDS Scenario
 > [!IMPORTANT]
->  Beginning with Windows 8 and Windows Server 2012, RDS server components are no longer included in the Windows operating system (see Windows 8 and [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/en-us/download/details.aspx?id=27416) for more detail). RDS client components will be removed in a future version of Windows. Avoid using this feature in new development work, and plan to modify applications that currently use this feature. Applications that use RDS should migrate to [WCF Data Service](http://go.microsoft.com/fwlink/?LinkId=199565).  
+>  Beginning with Windows 8 and Windows Server 2012, RDS server components are no longer included in the Windows operating system (see Windows 8 and [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) for more detail). RDS client components will be removed in a future version of Windows. Avoid using this feature in new development work, and plan to modify applications that currently use this feature. Applications that use RDS should migrate to [WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565).  
   
- The Address Book application is a scenario that shows you how to use Remote Data Service (RDS) to build a simple, data-aware Web application — an online corporate address book. This scenario is useful for Microsoft Visual Basic Scripting Edition (VBScript) and COM programmers who want to learn how to use data-aware ActiveX Controls with RDS, and for more experienced software developers who want to build data-centric Web applications.  
+ The Address Book application is a scenario that shows you how to use Remote Data Service (RDS) to build a simple, data-aware Web application - an online corporate address book. This scenario is useful for Microsoft Visual Basic Scripting Edition (VBScript) and COM programmers who want to learn how to use data-aware ActiveX Controls with RDS, and for more experienced software developers who want to build data-centric Web applications.  
   
  This scenario assumes that you know how to use basic HTML layout tags, use DHTML data binding techniques, and program with ActiveX Controls.  
   
- If you have installed the SDK, the complete source code for the Address Book sample application can be found in the SDK directory at samples\dataaccess\rds\AddressBook\AddressBook.asp. To view the Address Book scenario, in Internet Explorer 4.0 or later, type **http://*webserver*/RDS/AddressBook/AddressBook.asp** where *webserver* is the name given to your Windows NT 4.0 or Windows 2000 Web server computer that is running Internet Information Services (IIS) and ASP.  
+ If you have installed the SDK, the complete source code for the Address Book sample application can be found in the SDK directory at samples\dataaccess\rds\AddressBook\AddressBook.asp. To view the Address Book scenario, in Internet Explorer 4.0 or later, type **https://*webserver*/RDS/AddressBook/AddressBook.asp** where *webserver* is the name given to your Windows NT 4.0 or Windows 2000 Web server computer that is running Internet Information Services (IIS) and ASP.  
   
 ## Introduction to Address Book  
  The Address Book sample application provides a simple online address book that you can use to publish a searchable directory over an intranet. The address book is designed so that a user can enter a search string in one or more fields to request information about employees. To show you the basic features of Remote Data Service, the sample application is intentionally kept small, with a minimum number of objects and search fields.  

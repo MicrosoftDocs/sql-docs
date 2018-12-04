@@ -5,9 +5,7 @@ ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "FULLTEXTSERVICEPROPERTY_TSQL"
@@ -20,7 +18,6 @@ helpviewer_keywords:
   - "services [SQL Server], full-text search properties"
   - "test"
 ms.assetid: b7dcacb0-af83-4807-9d1e-49148b56b59c
-caps.latest.revision: 43
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg

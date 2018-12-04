@@ -4,11 +4,7 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-  - "docset-sql-devref"
-ms.tgt_pltfrm: ""
+ms.technology: xml
 ms.topic: "reference"
 helpviewer_keywords: 
   - "ICommandStream interface"
@@ -16,7 +12,6 @@ helpviewer_keywords:
   - "OLE DB, SQLXML"
   - "executing updategrams [SQLXML]"
 ms.assetid: 4154c590-1541-49d0-8117-4ddf2ce5ccba
-caps.latest.revision: 23
 author: douglaslMS
 ms.author: douglasl
 manager: craigg

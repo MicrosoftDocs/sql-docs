@@ -5,9 +5,7 @@ ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: connectivity
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "desktop database drivers [ODBC], descriptors"
@@ -15,7 +13,6 @@ helpviewer_keywords:
   - "descriptors [ODBC], Jet-supported descriptor fields"
   - "ODBC desktop database drivers [ODBC], descriptors"
 ms.assetid: 9ae2d9b5-365f-4f0a-9116-defe9498b401
-caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg

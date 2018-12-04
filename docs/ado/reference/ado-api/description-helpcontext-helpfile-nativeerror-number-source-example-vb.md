@@ -6,8 +6,6 @@ ms.technology: connectivity
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 dev_langs: 
   - "VB"
@@ -20,7 +18,6 @@ helpviewer_keywords:
   - "SQLState property [ADO], Visual Basic example"
   - "HelpContext property [ADO], Visual Basic example"
 ms.assetid: 5c728458-d85c-497c-afcf-2cfa36c3342a
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg

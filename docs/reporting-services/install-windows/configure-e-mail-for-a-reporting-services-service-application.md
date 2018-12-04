@@ -3,12 +3,12 @@ title: "Configure E-mail for a Reporting Services Service Application | Microsof
 ms.date: 05/10/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-sharepoint"
-ms.suite: pro-bi
 
 ms.topic: conceptual
 ms.assetid: 38fc34a6-aae7-4dde-9ad2-f1eee0c42a9f
 author: markingmyname
 ms.author: maghan
+monikerRange: ">=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions"
 ---
 # Configure E-mail for a Reporting Services Service Application
 
@@ -47,16 +47,16 @@ ms.author: maghan
   
     -   Failure sending mail: The SMTP server requires a secure connection or the client was not authenticated. The server response was: 5.7.1 Client was not authenticatedMail will not be resent.  
   
-     Change the **SMTPAuthenticate** to use a value of “2”. This value cannot be changed from the user interface. The following PowerShell script example, updates the full configuration for the report server e-mail delivery extension for the service application named “SSRS_TESTAPPLICATION”. Note some of the nodes listed in the script can also be set from the user interface, for example the “From” address.  
+     Change the **SMTPAuthenticate** to use a value of "2". This value cannot be changed from the user interface. The following PowerShell script example, updates the full configuration for the report server e-mail delivery extension for the service application named "SSRS_TESTAPPLICATION". Note some of the nodes listed in the script can also be set from the user interface, for example the "From" address.  
   
     ```  
     $app=get-sprsserviceapplication |where {$_.name -like "SSRS_TESTAPPLICATION *"}  
     $emailCfg = Get-SPRSExtension -identity $app -ExtensionType "Delivery" -name "Report Server Email" | select -ExpandProperty ConfigurationXml   
     $emailXml = [xml]$emailCfg   
-    $emailXml.SelectSingleNode("//SMTPServer").InnerText = “your email server name"  
+    $emailXml.SelectSingleNode("//SMTPServer").InnerText = "your email server name"  
     $emailXml.SelectSingleNode("//SendUsing").InnerText = "2"  
     $emailXml.SelectSingleNode("//SMTPAuthenticate").InnerText = "2"  
-    $emailXml.SelectSingleNode("//From").InnerText = “your FROM email address”  
+    $emailXml.SelectSingleNode("//From").InnerText = "your FROM email address"  
     Set-SPRSExtension -identity $app -ExtensionType "Delivery" -name "Report Server Email" -ExtensionConfiguration $emailXml.OuterXml  
     ```  
   
@@ -66,14 +66,14 @@ ms.author: maghan
     get-sprsserviceapplication  
     ```  
   
-3.  The following example will return the current values of the e-mail extension for the service application named “SSRS_TESTAPPLICATION”.  
+3.  The following example will return the current values of the e-mail extension for the service application named "SSRS_TESTAPPLICATION".  
   
     ```  
     $app=get-sprsserviceapplication |where {$_.name -like "SSRSTEST_APPLICATION*"}  
     Get-SPRSExtension -identity $app -ExtensionType "Delivery" -name "Report Server Email" | select -ExpandProperty ConfigurationXml  
     ```  
   
-4.  The following example will create a new file named “emailconfig.txt” with the current values of the e-mail extension for the service application named “SSRS_TESTAPPLICATION”  
+4.  The following example will create a new file named "emailconfig.txt" with the current values of the e-mail extension for the service application named "SSRS_TESTAPPLICATION"  
   
     ```  
     $app=get-sprsserviceapplication |where {$_.name -like "SSRS_TESTAPPLICATION*"}  
@@ -81,4 +81,4 @@ ms.author: maghan
     ```  
   
   
-More questions? [Try asking the Reporting Services forum](http://go.microsoft.com/fwlink/?LinkId=620231)
+More questions? [Try asking the Reporting Services forum](https://go.microsoft.com/fwlink/?LinkId=620231)

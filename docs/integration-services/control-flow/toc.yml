@@ -89,6 +89,8 @@
           href: functional-dependency-profile-request-options-data-profiling-task.md
         - name: Value Inclusion Profile Request Options (Data Profiling Task)
           href: value-inclusion-profile-request-options-data-profiling-task.md
+      - name: Data Profiling Task Editor (General Page)
+        href: data-profiling-task-editor-general-page.md
       - name: Incorporate a Data Profiling Task in Package Workflow
         href: incorporate-a-data-profiling-task-in-package-workflow.md
   - name: Execute Package Task

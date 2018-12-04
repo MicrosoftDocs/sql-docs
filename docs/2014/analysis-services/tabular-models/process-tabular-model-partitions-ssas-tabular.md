@@ -4,13 +4,10 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: 6c498d2b-22d6-4661-bc21-2ee708336c8b
-caps.latest.revision: 5
 author: minewiskan
 ms.author: owend
 manager: craigg
@@ -24,7 +21,7 @@ manager: craigg
   
 2.  In the **Partitions** dialog box, in **Partitions**, click on the Process button.  
   
-3.  In the **Process Parition(s)** dialog box, in the **Mode** listbox, select one of the following process modes:  
+3.  In the **Process Partition(s)** dialog box, in the **Mode** listbox, select one of the following process modes:  
   
     |Mode|Description|  
     |----------|-----------------|  

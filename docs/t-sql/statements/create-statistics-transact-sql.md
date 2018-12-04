@@ -5,9 +5,7 @@ ms.date: "01/04/2018"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "STATISTICS"
@@ -25,7 +23,6 @@ helpviewer_keywords:
   - "creating statistics [SQL Server]"
   - "NORECOMPUTE clause"
 ms.assetid: b23e2f6b-076c-4e6d-9281-764bdb616ad2
-caps.latest.revision: 105
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
@@ -72,7 +69,7 @@ ON { table_or_indexed_view_name } ( column [ ,...n ] )
     <disjunct> | <comparison>  
   
 <disjunct> ::=  
-        column_name IN (constant ,…)  
+        column_name IN (constant ,...)  
   
 <comparison> ::=  
         column_name <comparison_op> constant  
@@ -107,7 +104,7 @@ CREATE STATISTICS statistics_name
     <disjunct> | <comparison>  
   
 <disjunct> ::=  
-        column_name IN (constant ,…)  
+        column_name IN (constant ,...)  
   
 <comparison> ::=  
         column_name <comparison_op> constant  
@@ -123,7 +120,7 @@ CREATE STATISTICS statistics_name
  *table_or_indexed_view_name*  
  Is the name of the table, indexed view, or external table on which to create the statistics. To create statistics on another database, specify a qualified table name.  
   
- *column [ ,…n]*  
+ *column [ ,...n]*  
  One or more columns to be included in the statistics. The columns should be in priority order from left to right. Only the first column is used for creating the histogram. All columns are used for cross-column correlation statistics called densities.  
   
  You can specify any column that can be specified as an index key column with the following exceptions:  
@@ -288,7 +285,7 @@ CREATE STATISTICS CustomerStats1 ON DimCustomer (CustomerKey, EmailAddress) WITH
 ```  
 
 ### E. Using CREATE STATISTICS with FULLSCAN and PERSIST_SAMPLE_PERCENT  
- The following example creates the `ContactMail2` statistics for all rows in the `BusinessEntityID` and `EmailPromotion` columns of the `Contact` table and sets a 100 percent sampling percentage for all subsequent updates that do not explicitely specify a sampling percentage.  
+ The following example creates the `ContactMail2` statistics for all rows in the `BusinessEntityID` and `EmailPromotion` columns of the `Contact` table and sets a 100 percent sampling percentage for all subsequent updates that do not explicitly specify a sampling percentage.  
   
 ```sql  
 CREATE STATISTICS NamePurchase  

@@ -4,17 +4,13 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: supportability
 ms.topic: conceptual
 topic_type: 
   - "apiref"
 helpviewer_keywords: 
   - "SP:CacheInsert event class"
 ms.assetid: 37fb9bec-b462-4563-8e50-ec84d5407e20
-caps.latest.revision: 36
 author: stevestein
 ms.author: sstein
 manager: craigg

@@ -4,13 +4,10 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: 662daf08-a514-44a7-8675-44644aa454a2
-caps.latest.revision: 18
 author: minewiskan
 ms.author: owend
 manager: craigg
@@ -75,7 +72,7 @@ manager: craigg
   
 |Topic|Description|  
 |-----------|-----------------|  
-|[Model Properties &#40;SSAS Tabular&#41;](model-properties-ssas-tabular.md)|Provides descriptions and configuration steps for a model’s workspace database properties.|  
+|[Model Properties &#40;SSAS Tabular&#41;](model-properties-ssas-tabular.md)|Provides descriptions and configuration steps for a model's workspace database properties.|  
   
 ## See Also  
  [Configure Default Data Modeling and Deployment Properties &#40;SSAS Tabular&#41;](configure-default-data-modeling-and-deployment-properties-ssas-tabular.md)   

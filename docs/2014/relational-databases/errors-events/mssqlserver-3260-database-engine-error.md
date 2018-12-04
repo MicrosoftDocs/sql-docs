@@ -4,14 +4,11 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: supportability
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "3260 (Database Engine error)"
 ms.assetid: ed62f86d-90cb-4b04-8bc5-43e0b9ba6141
-caps.latest.revision: 19
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg

@@ -5,21 +5,18 @@ ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: connectivity
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "batches [ODBC], executing"
   - "SQL statements [ODBC], batches"
 ms.assetid: f082c717-4f82-4820-a2fa-ba607d8fd872
-caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ---
 # Executing Batches
-Before an application executes a batch of statements, it should first check whether they are supported. To do this, the application calls **SQLGetInfo** with the SQL_BATCH_SUPPORT, SQL_PARAM_ARRAY_ROW_COUNTS, and SQL_PARAM_ARRAY_SELECTS options. The first option returns whether row count–generating and result set–generating statements are supported in explicit batches and procedures, while the latter two options return information about the availability of row counts and result sets in parameterized execution.  
+Before an application executes a batch of statements, it should first check whether they are supported. To do this, the application calls **SQLGetInfo** with the SQL_BATCH_SUPPORT, SQL_PARAM_ARRAY_ROW_COUNTS, and SQL_PARAM_ARRAY_SELECTS options. The first option returns whether row count-generating and result set-generating statements are supported in explicit batches and procedures, while the latter two options return information about the availability of row counts and result sets in parameterized execution.  
   
  Batches of statements are executed through **SQLExecute** or **SQLExecDirect**. For example, the following call executes an explicit batch of statements to open a new sales order.  
   

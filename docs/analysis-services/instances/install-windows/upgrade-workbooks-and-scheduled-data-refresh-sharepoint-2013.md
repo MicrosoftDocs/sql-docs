@@ -12,7 +12,7 @@ manager: kfile
 ---
 # Upgrade Workbooks and Scheduled Data Refresh (SharePoint 2013)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
-  This topic explains the user experience of workbooks created in previous [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] environments and how to upgrade [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] workbooks so that you can take advantage of new features introduced in this release. To learn more about new features, see [What’s New in Power Pivot](http://go.microsoft.com/fwlink/?LinkID=203917).  
+  This topic explains the user experience of workbooks created in previous [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] environments and how to upgrade [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] workbooks so that you can take advantage of new features introduced in this release. To learn more about new features, see [What's New in Power Pivot](http://go.microsoft.com/fwlink/?LinkID=203917).  
   
 > [!WARNING]  
 >  You cannot rollback upgrade for workbooks that are upgraded automatically on the server. Once a workbook is upgraded, it remains upgraded. To use a previous version, you can republish the previous workbook to SharePoint, restore a previous version, or recycle the workbook. For more information about restoring or recycling a document in SharePoint, see [Plan to protect content by using recycle bins and versioning](http://go.microsoft.com/fwlink/?LinkId=238669).  
@@ -46,7 +46,7 @@ manager: kfile
   
  2008 R2 workbooks will open in [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] for SharePoint 2013, however scheduled data refreshes will not work. If you review the refresh history you will see an error message similar to the following:  
   
- “The workbook contains an unsupported [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] model. The [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] model in the workbook is in the SQL Server 2008 R2 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] for Excel 2010 format. Supported [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] models are the following:  
+ "The workbook contains an unsupported [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] model. The [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] model in the workbook is in the SQL Server 2008 R2 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] for Excel 2010 format. Supported [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] models are the following:  
   
 -   SQL Server 2012 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] for Excel 2010.  
   
@@ -75,7 +75,7 @@ manager: kfile
   
  Upgrading a workbook resolves the following error that occurs when attempting scheduled data refresh on the previous workbook version workbook:  
   
- “Refresh operation for workbooks created with earlier version of [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] is not available.”  
+ "Refresh operation for workbooks created with earlier version of [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] is not available."  
   
  **How to upgrade a workbook**  
   
@@ -92,7 +92,7 @@ manager: kfile
   
  Upgrading a workbook resolves the following error that occurs when attempting scheduled data refresh on the previous workbook version workbook:  
   
- “Refresh operation for workbooks created with earlier version of [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] is not available.”  
+ "Refresh operation for workbooks created with earlier version of [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] is not available."  
   
  **How to upgrade a workbook**  
   
@@ -120,7 +120,7 @@ PS C:\Windows\system32> Get-PowerPivotSystemService
  To enable automatic workbook upgrade, run the following command:  
   
 ```  
-PS C:\Windows\system32> Set-PowerPivotSystemService –WorkbookUpgradeOnDataRefresh:$true –Confirm:$false  
+PS C:\Windows\system32> Set-PowerPivotSystemService -WorkbookUpgradeOnDataRefresh:$true -Confirm:$false  
 ```  
   
  After you upgrade the workbook, you can use scheduled data refresh and new features in the [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] for Excel add-in.  

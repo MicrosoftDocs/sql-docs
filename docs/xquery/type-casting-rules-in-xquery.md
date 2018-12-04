@@ -4,15 +4,9 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: sql
-ms.component: "xquery"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: xml
 ms.topic: "language-reference"
-applies_to: 
-  - "SQL Server"
 dev_langs: 
   - "XML"
 helpviewer_keywords: 
@@ -23,7 +17,6 @@ helpviewer_keywords:
   - "cast as operator"
   - "implicit casting"
 ms.assetid: f2e91306-2b1b-4e1c-b6d8-a34fb9980057
-caps.latest.revision: 35
 author: "rothja"
 ms.author: "jroth"
 manager: craigg
@@ -83,7 +76,7 @@ go
   
 ```  
 create xml schema collection myCollection as N'  
-<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">  
+<xs:schema xmlns:xs="https://www.w3.org/2001/XMLSchema">  
       <xs:element name="root">  
             <xs:complexType>  
                   <xs:sequence>  

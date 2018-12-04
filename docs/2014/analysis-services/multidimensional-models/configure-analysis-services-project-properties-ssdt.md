@@ -4,17 +4,14 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "VS.TOOLSOPTIONSPAGES.BUSINESS_INTELLIGENCE_DESIGNERS.ANALYSIS_SERVICES_DESIGNERS.GENERAL"
 helpviewer_keywords: 
   - "projects [Analysis Services], properties"
 ms.assetid: d9786c66-7d8c-48e3-950d-3f25044b4ce2
-caps.latest.revision: 22
 author: minewiskan
 ms.author: owend
 manager: craigg
@@ -45,7 +42,7 @@ manager: craigg
   
  A project is initially created with a single configuration, called Development. You can create additional configurations and switch between configurations using the Configuration Manager.  
   
- Until additional configurations are created, all developers use this common configuration. However, during the various phases of project development — such as during the initial development and testing of a project — different developers will may use different data sources and deploy the project to different servers for different purposes. Configurations enable you to retain these different settings in different configuration files.  
+ Until additional configurations are created, all developers use this common configuration. However, during the various phases of project development - such as during the initial development and testing of a project - different developers will may use different data sources and deploy the project to different servers for different purposes. Configurations enable you to retain these different settings in different configuration files.  
   
 ## See Also  
  [Build Analysis Services Projects &#40;SSDT&#41;](build-analysis-services-projects-ssdt.md)   

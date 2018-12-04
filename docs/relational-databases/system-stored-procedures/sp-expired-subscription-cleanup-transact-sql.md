@@ -4,22 +4,15 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "system-stored-procedures"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
+ms.technology: replication
 ms.topic: "language-reference"
-applies_to: 
-  - "SQL Server"
 f1_keywords: 
   - "sp_expired_subscription_cleanup"
   - "SP_EXPIRED_SUBSCRIPTION_CLEANUP_TSQL"
 helpviewer_keywords: 
   - "sp_expired_subscription_cleanup"
 ms.assetid: 6abc29fe-d77a-4673-9d99-ae31c688012c
-caps.latest.revision: 22
 author: stevestein
 ms.author: sstein
 manager: craigg

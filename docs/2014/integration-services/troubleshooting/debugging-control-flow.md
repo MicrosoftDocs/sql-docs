@@ -4,10 +4,7 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords: 
   - "progress reporting [Integration Services]"
@@ -17,7 +14,6 @@ helpviewer_keywords:
   - "color-coded progress reporting [Integration Services]"
   - "Set Breakpoints dialog box"
 ms.assetid: 54a458cc-9f4f-4b48-8cf2-db2e0fa7756c
-caps.latest.revision: 54
 author: douglaslMS
 ms.author: douglasl
 manager: craigg

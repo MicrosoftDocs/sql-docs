@@ -4,14 +4,11 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: supportability
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Showplan All event class"
 ms.assetid: ee341319-c34a-43e3-ad33-6bfb1f85e314
-caps.latest.revision: 38
 author: "stevestein"
 ms.author: "sstein"
 manager: craigg

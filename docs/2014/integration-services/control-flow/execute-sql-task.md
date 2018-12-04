@@ -4,10 +4,7 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.dts.designer.executesqltask.f1"
@@ -17,7 +14,6 @@ helpviewer_keywords:
   - "batches [Integration Services]"
   - "Execute SQL task [Integration Services]"
 ms.assetid: bebb2e8c-0410-43b2-ac2f-6fc80c8f2e9e
-caps.latest.revision: 113
 author: douglaslMS
 ms.author: douglasl
 manager: craigg

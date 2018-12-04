@@ -5,13 +5,9 @@ ms.date: "01/16/2018"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
-ms.component: "in-memory-oltp"
-ms.suite: "sql"
 ms.technology: in-memory-oltp
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: ba6f1a15-8b69-4ca6-9f44-f5e3f2962bc5
-caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
@@ -315,6 +311,6 @@ go
   
 - [sp_getapplock (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-getapplock-transact-sql.md)  
   
-- [Row Versioning-based Isolation Levels in the Database Engine](http://msdn.microsoft.com/library/ms177404.aspx)  
+- [Row Versioning-based Isolation Levels in the Database Engine](https://msdn.microsoft.com/library/ms177404.aspx)  
   
 - [Control Transaction Durability](../../relational-databases/logs/control-transaction-durability.md)   

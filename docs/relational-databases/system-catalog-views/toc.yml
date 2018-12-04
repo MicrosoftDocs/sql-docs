@@ -75,6 +75,8 @@
     href: sys-assembly-files-transact-sql.md
   - name: sys.assembly_references
     href: sys-assembly-references-transact-sql.md
+  - name: sys.trusted_assemblies (Transact-SQL)
+    href: sys-trusted-assemblies-transact-sql.md
 - name: Data Collector
   href: data-collector-views-transact-sql.md
   items:
@@ -133,6 +135,8 @@
     href: sys-database-recovery-status-transact-sql.md
   - name: sys.database_scoped_configurations
     href: sys-database-scoped-configurations-transact-sql.md
+  - name: sys.database_automatic_tuning_options (Transact-SQL)
+    href: sys-database-automatic-tuning-options-transact-sql.md
   - name: sys.master_files
     href: sys-master-files-transact-sql.md
 - name: Endpoints

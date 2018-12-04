@@ -5,12 +5,9 @@ ms.date: "07/11/2018"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: connectivity
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: 574e326f-0520-4003-bdf1-62d92c3db457
-caps.latest.revision: 80
 author: MightyPen
 ms.author: genemi
 manager: craigg
@@ -42,7 +39,7 @@ The following additional guidelines apply to tightly coupled transactions:
 
 - When you use XA transactions together with Microsoft Distributed Transaction Coordinator (MS DTC), you may notice that the current version of MS DTC doesn't support tightly coupled XA branch behavior. For example, MS DTC has a one-to-one mapping between an XA branch transaction ID (XID) and an MS DTC transaction ID and the work that is performed by loosely coupled XA branches is isolated from one another.  
   
-     The hotfix provided at [MSDTC and Tightly Coupled Transactions](http://support.microsoft.com/kb/938653) enables the support for tightly coupled XA branches where multiple XA branches with same global transaction ID (GTRID) are mapped to a single MS DTC transaction ID. This support enables multiple tightly coupled XA branches to see one another's changes in the resource manager, such as [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+     The hotfix provided at [MSDTC and Tightly Coupled Transactions](https://support.microsoft.com/kb/938653) enables the support for tightly coupled XA branches where multiple XA branches with same global transaction ID (GTRID) are mapped to a single MS DTC transaction ID. This support enables multiple tightly coupled XA branches to see one another's changes in the resource manager, such as [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 - A [SSTRANSTIGHTLYCPLD](../../connect/jdbc/reference/sstranstightlycpld-field-sqlserverxaresource.md) flag allows the applications to use tightly coupled XA transactions, which have different XA branch transaction IDs (BQUAL) but have the same global transaction ID (GTRID) and format ID (FormatID). In order to use that feature, you must set the [SSTRANSTIGHTLYCPLD](../../connect/jdbc/reference/sstranstightlycpld-field-sqlserverxaresource.md) on the flags parameter of the XAResource.start method:  
   
@@ -56,7 +53,17 @@ The following steps are required if you want to use XA data sources together wit
 
 > [!NOTE]  
 > The JDBC distributed transaction components are included in the xa directory of the JDBC driver installation. These components include the xa_install.sql and sqljdbc_xa.dll files.  
-  
+
+> [!NOTE]  
+> Starting with SQL Server 2019 public preview CTP 2.0, the JDBC XA distributed transaction components are included in the SQL Server engine which can be enabled or disabled with a system stored procedure. 
+> To enable the required components to perform XA distributed transactions using the JDBC driver, execute following stored procedure.
+>
+> EXEC sp_sqljdbc_xa_install
+>
+> To disable the previously installed components, execute following stored procedure. 
+>
+> EXEC sp_sqljdbc_xa_uninstall
+
 ### Running the MS DTC Service
 
 The MS DTC service should be marked **Automatic** in Service Manager to make sure that it is running when the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] service is started. To enable MS DTC for XA transactions, you must follow these steps:  
@@ -105,7 +112,7 @@ There are three ways to verify the version of sqljdbc_xa.dll is currently instal
 ### <a name="BKMK_ServerSide"></a> Configuring server-side timeout settings for automatic rollback of unprepared transactions  
 
 > [!WARNING]  
-> This server-side option is new with Microsoft JDBC Driver 4.2 (and higher) for SQL Server. To get the updated behavior, make sure the sqljdbc_xa.dll on the server is updated. For more information on setting client side timeouts, see [XAResource.setTransactionTimeout()](http://docs.oracle.com/javase/8/docs/api/javax/transaction/xa/XAResource.html).  
+> This server-side option is new with Microsoft JDBC Driver 4.2 (and higher) for SQL Server. To get the updated behavior, make sure the sqljdbc_xa.dll on the server is updated. For more information on setting client side timeouts, see [XAResource.setTransactionTimeout()](https://docs.oracle.com/javase/8/docs/api/javax/transaction/xa/XAResource.html).  
 
 There are two registry settings (DWORD values) to control the timeout behavior of distributed transactions:  
   
@@ -134,11 +141,11 @@ A timeout value is set for each transaction when it's started and the transactio
   
 - `XADefaultTimeout = 30`, `XAMaxTimeout = 60`
   
-     Means all transactions will have a 30 seconds timeout if the client doesn't specify any timeout. If client specifies any timeout, then the client’s timeout will be used as long as it is less than 60 seconds (the max value).  
+     Means all transactions will have a 30 seconds timeout if the client doesn't specify any timeout. If client specifies any timeout, then the client's timeout will be used as long as it is less than 60 seconds (the max value).  
   
 - `XADefaultTimeout = 0`, `XAMaxTimeout = 30`
   
-     Means all transactions will have a 30 seconds timeout (the max value) if the client does not specify any timeout. If the client specifies any timeout, then the client’s timeout will be used as long as it is less than 30 seconds (the max value).  
+     Means all transactions will have a 30 seconds timeout (the max value) if the client does not specify any timeout. If the client specifies any timeout, then the client's timeout will be used as long as it is less than 30 seconds (the max value).  
   
 ### Upgrading sqljdbc_xa.dll
 

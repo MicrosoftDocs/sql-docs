@@ -4,11 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-  - "docset-sql-devref"
-ms.tgt_pltfrm: ""
+ms.technology: wmi
 ms.topic: "reference"
 api_name: 
   - "SetEnable Method (ClientNetworkProtocol Class)"
@@ -19,7 +15,6 @@ topic_type:
 helpviewer_keywords: 
   - "SetEnable method"
 ms.assetid: a66c756a-1311-4f4a-8088-818f8ed90056
-caps.latest.revision: 34
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg

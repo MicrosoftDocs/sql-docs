@@ -4,14 +4,11 @@ ms.custom: ""
 ms.date: "06/14/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: high-availability
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Availability Groups [SQL Server], creating"
 ms.assetid: 8b0a6301-8b79-4415-b608-b40876f30066
-caps.latest.revision: 49
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
@@ -44,7 +41,7 @@ manager: craigg
   
 |Task|Transact-SQL Statement(s)|Where to Perform Task**<sup>*</sup>**|  
 |----------|----------------------------------|-------------------------------------------|  
-|Create database mirroring endpoint (once per [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] instance)|[CREATE ENDPOINT](/sql/t-sql/statements/create-endpoint-transact-sql) *endpointName* … FOR DATABASE_MIRRORING|Execute on each server instance that lacks database mirroring endpoint.|  
+|Create database mirroring endpoint (once per [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] instance)|[CREATE ENDPOINT](/sql/t-sql/statements/create-endpoint-transact-sql) *endpointName* ... FOR DATABASE_MIRRORING|Execute on each server instance that lacks database mirroring endpoint.|  
 |Create availability group|[CREATE AVAILABILITY GROUP](/sql/t-sql/statements/create-availability-group-transact-sql)|Execute on the server instance that is to host the initial primary replica.|  
 |Join secondary replica to availability group|[ALTER AVAILABILITY GROUP](join-a-secondary-replica-to-an-availability-group-sql-server.md) *group_name* JOIN|Execute on each server instance that hosts a secondary replica.|  
 |Prepare the secondary database|[BACKUP](/sql/t-sql/statements/backup-transact-sql) and [RESTORE](/sql/t-sql/statements/restore-statements-transact-sql).|Create backups on the server instance that hosts the primary replica.<br /><br /> Restore backups on each server instance that hosts a secondary replica, using RESTORE WITH NORECOVERY.|  

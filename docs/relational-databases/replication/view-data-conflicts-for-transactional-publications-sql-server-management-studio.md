@@ -4,18 +4,14 @@ ms.custom: ""
 ms.date: "03/17/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "replication"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: replication
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "conflict resolution [SQL Server replication], queued updating subscriptions"
   - "queued updating subscriptions [SQL Server replication]"
   - "viewing conflict information"
 ms.assetid: 9977dd75-b0de-4376-9c13-86d80567d8aa
-caps.latest.revision: 36
 author: "MashaMSFT"
 ms.author: "mathoma"
 manager: craigg
@@ -56,7 +52,7 @@ manager: craigg
   
     -   Select one or more rows in the upper grid, and then click **Remove**, which removes the row from the conflicts metadata table.  
   
-    -   Click the properties button (**…**) to view more information on a column involved in a conflict.  
+    -   Click the properties button (**...**) to view more information on a column involved in a conflict.  
   
     -   Select **Log the details of this conflict** to log conflict data to a file. To specify a location for the file, point to the **View** menu, and then click **Options**. Enter a value, or click the browse button (**...**), and then navigate to the appropriate file. Click **OK** to close the **Options** dialog box.  
   

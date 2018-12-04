@@ -4,16 +4,12 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: xevents
 ms.topic: conceptual
 helpviewer_keywords: 
   - "extended events [SQL Server]"
   - "xe"
 ms.assetid: bf3b98a6-51ed-4f2d-9c26-92f07f1fa947
-caps.latest.revision: 43
 author: MightyPen
 ms.author: genemi
 manager: craigg

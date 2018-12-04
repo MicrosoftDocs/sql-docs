@@ -4,14 +4,10 @@ ms.custom: ""
 ms.date: "03/20/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.component: "in-memory-oltp"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: in-memory-oltp
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: 83d47694-e56d-4dae-b54e-14945bf8ba31
-caps.latest.revision: 18
 author: "CarlRabeler"
 ms.author: "carlrab"
 manager: craigg
@@ -24,7 +20,7 @@ manager: craigg
 > [!NOTE]  
 >  During a backup, if you detect a CHECKSUM error in one or more files in a memory-optimized filegroup, the backup operation fails. In that situation, you must restore your database from the last known good backup.  
 >   
->  If you don’t have a backup, you can export the data from memory-optimized tables and disk-based tables and reload after you drop and recreate the database.  
+>  If you don't have a backup, you can export the data from memory-optimized tables and disk-based tables and reload after you drop and recreate the database.  
   
  A full backup of a database with one or more memory-optimized tables consists of the allocated storage for disk-based tables (if any), the active transaction log, and the data and delta file pairs (also known as checkpoint file pairs) for memory-optimized tables. However, as described in [Durability for Memory-Optimized Tables](../../relational-databases/in-memory-oltp/durability-for-memory-optimized-tables.md), the storage used by memory-optimized tables can be much larger than its size in memory, and it affects the size of the database backup.  
   
@@ -46,7 +42,7 @@ manager: craigg
 ### Estimating Size of Full Database Backup  
   
 > [!IMPORTANT]  
->  It’s recommended that you not use the BackupSizeInBytes value to estimate the backup size for In-Memory OLTP.  
+>  It's recommended that you not use the BackupSizeInBytes value to estimate the backup size for In-Memory OLTP.  
   
  The first workload scenario is for (mostly) insert. In this scenario, most data files are in the Active state, fully loaded, and with very few deleted rows. The size of database backup up is close to the size of data in memory.  
   
@@ -68,6 +64,6 @@ manager: craigg
  If memory-optimized tables are a significant portion of your database size, the differential backup can significantly reduce the size of your database backup. For typical OLTP workloads, the differential backups will be considerably smaller than the full database backups.  
   
 ## See Also  
- [Backup, Restore, and Recovery of Memory-Optimized Tables](http://msdn.microsoft.com/library/3f083347-0fbb-4b19-a6fb-1818d545e281)  
+ [Backup, Restore, and Recovery of Memory-Optimized Tables](https://msdn.microsoft.com/library/3f083347-0fbb-4b19-a6fb-1818d545e281)  
   
   

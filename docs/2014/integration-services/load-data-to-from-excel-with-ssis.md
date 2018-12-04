@@ -5,10 +5,8 @@ ms.date: "04/10/2018"
 ms.prod: sql-server-2014
 ms.prod_service: "integration-services"
 ms.reviewer: ""
-ms.suite: ""
 ms.custom: ""
-ms.technology: "integration-services"
-ms.tgt_pltfrm: ""
+ms.technology: integration-services
 ms.topic: conceptual
 author: douglaslMS
 ms.author: douglasl
@@ -158,17 +156,17 @@ After you select or enter the Excel objects to import or export, you can also do
 
 The Excel driver recognizes only a limited set of data types. For example, all numeric columns are interpreted as doubles (DT_R8), and all string columns (other than memo columns) are interpreted as 255-character Unicode strings (DT_WSTR). SSIS maps the Excel data types as follows:
 
--   Numeric – double-precision float (DT_R8)
+-   Numeric - double-precision float (DT_R8)
 
--   Currency – currency (DT_CY)
+-   Currency - currency (DT_CY)
 
--   Boolean – Boolean (DT_BOOL)
+-   Boolean - Boolean (DT_BOOL)
 
--   Date/time – datetime (DT_DATE)
+-   Date/time - datetime (DT_DATE)
 
--   String – Unicode string, length 255 (DT_WSTR)
+-   String - Unicode string, length 255 (DT_WSTR)
 
--   Memo – Unicode text stream (DT_NTEXT)
+-   Memo - Unicode text stream (DT_NTEXT)
 
 ### Data type and length conversions
 
@@ -251,9 +249,9 @@ For more information about the components and procedures described in this artic
 [Working with Excel Files with the Script Task](extending-packages-scripting-task-examples/working-with-excel-files-with-the-script-task.md)
 
 ### About the SQL Server Import and Export Wizard
-[Connect to an Excel Data Source](/integration-services/import-export-data/connect-to-an-excel-data-source-sql-server-import-and-export-wizard.md)  
-[Get started with this simple example of the Import and Export Wizard](/integration-services/import-export-data/get-started-with-this-simple-example-of-the-import-and-export-wizard.md)
+[Connect to an Excel Data Source](/sql/integration-services/import-export-data/connect-to-an-excel-data-source-sql-server-import-and-export-wizard)  
+[Get started with this simple example of the Import and Export Wizard](/sql/integration-services/import-export-data/get-started-with-this-simple-example-of-the-import-and-export-wizard)
 
 ### Other articles
-[Import data from Excel to SQL Server or Azure SQL Database](/relational-databases/import-export/import-data-from-excel-to-sql.md)  
+[Import data from Excel to SQL Server or Azure SQL Database](/sql/relational-databases/import-export/import-data-from-excel-to-sql)  
 

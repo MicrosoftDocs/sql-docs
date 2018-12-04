@@ -5,13 +5,9 @@ ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "mds"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "master-data-services"
-ms.tgt_pltfrm: ""
+ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: fb2a4df4-5e0d-4b34-818f-383dbde1b15c
-caps.latest.revision: 16
 author: leolimsft
 ms.author: lle
 manager: craigg
@@ -40,7 +36,7 @@ manager: craigg
   
 -   You must be an administrator in the environment where you are deploying the model. For more information, see [Administrators &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md).  
   
--   If you are updating a model with data, the version you’re deploying to cannot be **Locked** or **Committed**.  
+-   If you are updating a model with data, the version you're deploying to cannot be **Locked** or **Committed**.  
   
 ### To deploy a model deployment package  
   
@@ -91,7 +87,7 @@ manager: craigg
   
      Where *PackageName* is the name of the package (.pkg) file, *ModelName* is the name of the new model, *VersionName* is the name of the version, and *ServiceName* is the name of the service that you returned in the previous step. Ensure that the model and version names match the exact case-sensitive names.  
   
-6.  When the package is successfully deployed, a message stating “MDSModelDeploy operation completed successfully” is displayed.  
+6.  When the package is successfully deployed, a message stating "MDSModelDeploy operation completed successfully" is displayed.  
   
  **Notes:**  
   

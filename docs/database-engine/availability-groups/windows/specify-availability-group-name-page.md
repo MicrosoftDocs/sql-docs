@@ -4,15 +4,12 @@ ms.custom: ""
 ms.date: "05/17/2016"
 ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: high-availability
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql13.swb.newagwizard.specifyagname.f1"
   - "sql13.swb.adddatabasewizard.specifyagname.f1"
 ms.assetid: dcb6374d-becb-4c6c-b88c-5a8273f8aa38
-caps.latest.revision: 13
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg

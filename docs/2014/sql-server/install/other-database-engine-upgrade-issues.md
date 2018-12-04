@@ -4,15 +4,12 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "database-engine"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Database Engine [SQL Server], upgrading"
 ms.assetid: 78a1d8e8-fa97-476f-8777-84617d145340
-caps.latest.revision: 42
 author: mashamsft
 ms.author: mathoma
 manager: craigg
@@ -61,7 +58,7 @@ manager: craigg
 -   HierarchyID  
   
 ## Target Table of the OUTPUT INTO Clause Cannot Have Any Defined Triggers  
- OUPUT INTO a target table when the table has any enabled triggers is not supported.  
+ OUTPUT INTO a target table when the table has any enabled triggers is not supported.  
   
 ## Compile Time Error for UDFs When the Target of an OUTPUT INTO Clause is a Table  
  User-defined functions (UDF) cannot be used to perform actions that modify the database state. For example, a UDF cannot perform any DDL (CREATE/ALTER/DROP) or DML (INSERT/UPDATE/DELETE) actions on any objects, except for table variables.  

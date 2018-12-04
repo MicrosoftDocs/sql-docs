@@ -4,10 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: configuration
 ms.topic: conceptual
 helpviewer_keywords: 
   - "SQL Server, determining if installed"
@@ -15,7 +12,6 @@ helpviewer_keywords:
   - "viewing Database Engine installation"
   - "installed Database Engine verification [SQL Server]"
 ms.assetid: babb02e4-3521-4b75-b5df-e09205594375
-caps.latest.revision: 16
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg

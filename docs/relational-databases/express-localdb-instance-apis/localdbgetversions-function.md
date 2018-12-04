@@ -4,12 +4,8 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "localdb"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 apiname: 
   - "LocalDBGetVersions"
@@ -17,7 +13,6 @@ apilocation:
   - "sqluserinstance.dll"
 apitype: "DLLExport"
 ms.assetid: 033a9c6b-0d7f-4f8a-ab60-33cd6fee0d33
-caps.latest.revision: 8
 author: "CarlRabeler"
 ms.author: "carlrab"
 manager: craigg
@@ -36,7 +31,7 @@ manager: craigg
   
 ## Parameters  
  *pVersionNames*  
- [Output] Contains names of the LocalDB versions that are available on the user’s workstation.  
+ [Output] Contains names of the LocalDB versions that are available on the user's workstation.  
   
  *lpdwNumberOfVersions*  
  [Input/Output] On input holds the number of slots for versions in the *pVersionNames* buffer.   

@@ -4,9 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: performance
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.swb.statistics.details.f1"
@@ -48,7 +46,7 @@ manager: craigg
   
 2.  Click the plus sign to expand the **Tables** folder.  
   
-3.  Click the plus sign to expand the table in which you want to view the statistic’s properties.  
+3.  Click the plus sign to expand the table in which you want to view the statistic's properties.  
   
 4.  Click the plus sign to expand the **Statistics** folder.  
   

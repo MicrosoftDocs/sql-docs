@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "08/25/2016"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "replication"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: replication
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "push subscriptions [SQL Server replication], creating"
@@ -17,7 +14,6 @@ helpviewer_keywords:
   - "snapshot replication [SQL Server], subscribing"
   - "transactional replication, subscribing"
 ms.assetid: adfbbc61-58d1-4330-9ad6-b14ab1142e2b
-caps.latest.revision: 41
 author: "MashaMSFT"
 ms.author: "mathoma"
 manager: craigg
@@ -153,7 +149,7 @@ manager: craigg
 ##  <a name="RMOProcedure"></a> Using Replication Management Objects (RMO)  
  You can create push subscriptions programmatically by using Replication Management Objects (RMO). The RMO classes you use to create a push subscription depend on the type of publication to which the subscription is created.  
   
-> **IMPORTANT!** When possible, prompt users to enter security credentials at runtime. If you must store credentials, use the [cryptographic services](http://go.microsoft.com/fwlink/?LinkId=34733) provided by the [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows .NET Framework.  
+> **IMPORTANT!** When possible, prompt users to enter security credentials at runtime. If you must store credentials, use the [cryptographic services](https://go.microsoft.com/fwlink/?LinkId=34733) provided by the [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows .NET Framework.  
   
 #### To create a push subscription to a snapshot or transactional publication  
   

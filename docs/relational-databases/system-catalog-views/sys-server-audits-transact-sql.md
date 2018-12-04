@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "04/05/2016"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "system-catalog-views"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "server_audits_TSQL"
@@ -20,7 +17,6 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.server_audits catalog view"
 ms.assetid: c2c4a000-1127-46a8-b1e9-947fd1136e1e
-caps.latest.revision: 19
 author: stevestein
 ms.author: sstein
 manager: craigg
@@ -38,11 +34,11 @@ manager: craigg
 |**create_date**|**datetime**|UTC date the audit was created.|  
 |**modify_date**|**datetime**|UTC date the audit was last modified.|  
 |**principal_id**|**int**|ID of the owner of the audit, as registered to the server.|  
-|**type**|**char(2)**|Audit type:<br /><br /> SL – NT Security event log<br /><br /> AL – NT Application event log<br /><br /> FL – File on file system|  
+|**type**|**char(2)**|Audit type:<br /><br /> SL - NT Security event log<br /><br /> AL - NT Application event log<br /><br /> FL - File on file system|  
 |**type_desc**|**nvarchar(60)**|SECURITY LOG<br /><br /> APPICATION LOG<br /><br /> FILE|  
-|**on_failure**|**tinyint**|On Failure to write an action entry:<br /><br /> 0 – Continue<br /><br /> 1 – Shutdown server instance<br /><br /> 2 – Fail operation|  
+|**on_failure**|**tinyint**|On Failure to write an action entry:<br /><br /> 0 - Continue<br /><br /> 1 - Shutdown server instance<br /><br /> 2 - Fail operation|  
 |**on_failure_desc**|**nvarchar(60)**|On Failure to write an action entry:<br /><br /> CONTINUE<br /><br /> SHUTDOWN SERVER INSTANCE<br /><br /> FAIL_OPERATION|  
-|**is_state_enabled**|**tinyint**|0 – Disabled<br /><br /> 1 - Enabled|  
+|**is_state_enabled**|**tinyint**|0 - Disabled<br /><br /> 1 - Enabled|  
 |**queue_delay**|**int**|Maximum time, in milliseconds, to wait before writing to disk. If 0, the audit will guarantee a write before an event can continue.|  
 |**predicate**|**nvarchar(3000)**|The predicate expression that is applied to the event.|  
   

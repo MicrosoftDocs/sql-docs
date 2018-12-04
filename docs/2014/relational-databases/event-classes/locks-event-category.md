@@ -4,10 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: supportability
 ms.topic: conceptual
 topic_type: 
   - "apiref"
@@ -17,7 +14,6 @@ helpviewer_keywords:
   - "event classes [SQL Server], Locks event category"
   - "lock escalation [SQL Server], locks event category"
 ms.assetid: 27d6afa2-7dab-4fe7-a1ad-064b879dc654
-caps.latest.revision: 26
 author: stevestein
 ms.author: sstein
 manager: craigg

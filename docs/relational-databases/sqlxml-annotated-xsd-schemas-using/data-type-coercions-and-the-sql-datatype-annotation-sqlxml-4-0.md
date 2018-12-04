@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "03/17/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.component: "sqlxml"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: xml
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 
   - "mapping data types [SQLXML]"
@@ -22,7 +19,6 @@ helpviewer_keywords:
   - "data types [SQLXML], mapping data types"
   - "XSD schemas [SQLXML], mapping data types"
 ms.assetid: db192105-e8aa-4392-b812-9d727918c005
-caps.latest.revision: 29
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: craigg
@@ -102,7 +98,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
  This example shows how an XSD **date** type that is specified by using the **xsd:type** attribute in the schema affects the resulting XML document. The schema provides an XML view of the Sales.SalesOrderHeader table in the AdventureWorks database.  
   
 ```  
-<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"   
+<xsd:schema xmlns:xsd="https://www.w3.org/2001/XMLSchema"   
             xmlns:sql="urn:schemas-microsoft-com:mapping-schema">  
   <xsd:element name="Order" sql:relation="Sales.SalesOrderHeader">  
      <xsd:complexType>  

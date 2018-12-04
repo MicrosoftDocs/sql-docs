@@ -8,8 +8,6 @@ manager: craigg
 ms.topic: conceptual
 ms.prod: sql
 
-ms.component: ""
-ms.suite: "sql"
 ms.custom: "sql-linux"
 ms.technology: linux
 helpviewer_keywords: 
@@ -29,7 +27,7 @@ AD Authentication has the following advantages over [!INCLUDE[ssNoVersion](../in
 
 - Users authenticate via single sign-on, without being prompted for a password.   
 - By creating logins for AD groups, you can manage access and permissions in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] using AD group memberships.  
-- Each user has a single identity across your organization, so you don’t have to keep track of which [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] logins correspond to which people.   
+- Each user has a single identity across your organization, so you don't have to keep track of which [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] logins correspond to which people.   
 - AD enables you to enforce a centralized password policy across your organization.   
 
 ## Configuration steps
@@ -47,7 +45,6 @@ The details for how to configure AD authentication are provided in the tutorial,
 ## Known issues
 
 - At this time, the only authentication method supported for database mirroring endpoint is CERTIFICATE. WINDOWS authentication method will be enabled in a future release.
-- Third-party AD tools like Centrify, Powerbroker, and Vintela are not supported.
 
 ## Next Steps
 

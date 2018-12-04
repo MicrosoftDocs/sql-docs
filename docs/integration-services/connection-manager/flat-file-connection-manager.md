@@ -5,9 +5,7 @@ ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "integration-services"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: integration-services
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql13.dts.designer.ffileconnection.general.f1"
@@ -22,7 +20,6 @@ helpviewer_keywords:
   - "flat files"
   - "flat file connections [Integration Services]"
 ms.assetid: 7830f80d-af32-4e8f-a6fc-f03af6bc1946
-caps.latest.revision: 49
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: craigg
@@ -58,7 +55,7 @@ manager: craigg
   
 -   Specify a text qualifier character. Each column can be configured to recognize a text qualifier.  
   
-     The use of a qualifier character to embed a qualifier character into a qualified string is supported by the Flat File Connection Manager. The double instance of a text qualifier is interpreted as a literal, single instance of that string. For example, if the text qualifier is a single quote and the input data is ‘abc’, ‘def’, ‘g’hi’, the output data is abc, def, g’hi. However, an instance of a qualifier embedded in a qualified string causes the Flat File Source to fail with the error DTS_E_PRIMEOUTPUTFAILED.
+     The use of a qualifier character to embed a qualifier character into a qualified string is supported by the Flat File Connection Manager. The double instance of a text qualifier is interpreted as a literal, single instance of that string. For example, if the text qualifier is a single quote and the input data is 'abc', 'def', 'g'hi', the output data is abc, def, g'hi. However, an instance of a qualifier embedded in a qualified string causes the Flat File Source to fail with the error DTS_E_PRIMEOUTPUTFAILED.
   
 -   Set properties such as the name, data type, and maximum width on individual columns.  
   

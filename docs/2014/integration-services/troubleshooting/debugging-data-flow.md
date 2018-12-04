@@ -4,10 +4,7 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords: 
   - "progress reporting [Integration Services]"
@@ -16,7 +13,6 @@ helpviewer_keywords:
   - "debugging [Integration Services], data flow"
   - "counting rows"
 ms.assetid: 1c574f1b-54f7-4c05-8e42-8620e2c1df0f
-caps.latest.revision: 41
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
@@ -37,7 +33,7 @@ manager: craigg
   
  A data viewer can display data in a grid. Using a grid, you select the columns to display. The values for the selected columns display in a tabular format.  
   
- You can also include multiple data viewers on a path. You can display the same data in different formats—for example, create a chart view and a grid view of the data—or create different data viewers for different columns of data.  
+ You can also include multiple data viewers on a path. You can display the same data in different formats-for example, create a chart view and a grid view of the data-or create different data viewers for different columns of data.  
   
  When you add a data viewer to a path, [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer adds a data viewer icon to the design surface of the **Data Flow** tab, next to the path. Transformations that can have multiple outputs, such as the Conditional Split transformation, can include a data viewer on each path.  
   

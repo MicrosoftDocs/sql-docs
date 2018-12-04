@@ -5,9 +5,7 @@ ms.date: "06/18/2018"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "ALTER_CERTIFICATE_TSQL"
@@ -22,7 +20,6 @@ helpviewer_keywords:
   - "ALTER CERTIFICATE statement"
   - "certificates [SQL Server], modifying"
 ms.assetid: da4dc25e-72e0-4036-87ce-22de83160836
-caps.latest.revision: 46
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
@@ -67,13 +64,13 @@ ALTER CERTIFICATE certificate_name
  *certificate_name*  
  Is the unique name by which the certificate is known in database.  
   
- FILE **='***path_to_private_key***'**  
+ FILE **='**_path\_to\_private\_key_**'**  
  Specifies the complete path, including file name, to the private key. This parameter can be a local path or a UNC path to a network location. This file will be accessed within the security context of the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] service account. When you use this option, you must make sure that the service account has access to the specified file.  
   
- DECRYPTION BY PASSWORD **='***key_password***'**  
+ DECRYPTION BY PASSWORD **='**_key\_password_**'**  
  Specifies the password that is required to decrypt the private key.  
   
- ENCRYPTION BY PASSWORD **='***password***'**  
+ ENCRYPTION BY PASSWORD **='**_password_**'**  
  Specifies the password used to encrypt the private key of the certificate in the database. *password* must meet the Windows password policy requirements of the computer that is running the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. For more information, see [Password Policy](../../relational-databases/security/password-policy.md).  
   
  REMOVE PRIVATE KEY  

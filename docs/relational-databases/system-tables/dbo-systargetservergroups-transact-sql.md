@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "08/09/2016"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "system-tables"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "dbo.systargetservergroups"
@@ -20,7 +17,6 @@ dev_langs:
 helpviewer_keywords: 
   - "systargetservergroups system table"
 ms.assetid: df1195b1-62c3-4b94-8b2e-a646dcaf281b
-caps.latest.revision: 24
 author: "stevestein"
 ms.author: "sstein"
 manager: craigg

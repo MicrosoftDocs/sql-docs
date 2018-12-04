@@ -4,15 +4,9 @@ ms.custom: ""
 ms.date: "03/04/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "system-tables"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
+ms.technology: replication
 ms.topic: "language-reference"
-applies_to: 
-  - "SQL Server"
 f1_keywords: 
   - "MSmerge_tombstone_TSQL"
   - "MSmerge_tombstone"
@@ -21,7 +15,6 @@ dev_langs:
 helpviewer_keywords: 
   - "MSmerge_tombstone system table"
 ms.assetid: 8b3fc7bf-729b-40f2-8a26-e7dfbe8ddb38
-caps.latest.revision: 13
 author: stevestein
 ms.author: sstein
 manager: craigg

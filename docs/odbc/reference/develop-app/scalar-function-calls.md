@@ -5,14 +5,11 @@ ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: connectivity
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "escape sequences [ODBC], scalar function calls"
 ms.assetid: 10cb4dcf-4cd8-4a56-8725-d080bd3ffe47
-caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: craigg
@@ -35,12 +32,12 @@ SELECT uppercase(Name) FROM Customers
  An application can mix calls to scalar functions that use native syntax and calls to scalar functions that use ODBC syntax. For example, assume that names in the Employee table are stored as a last name, a comma, and a first name. The following SQL statement creates a result set of last names of employees in the Employee table. The statement uses the ODBC scalar function **SUBSTRING** and the SQL Server scalar function **CHARINDEX** and will execute correctly only on SQL Server.  
   
 ```  
-SELECT {fn SUBSTRING(Name, 1, CHARINDEX(',', Name) – 1)} FROM Customers  
+SELECT {fn SUBSTRING(Name, 1, CHARINDEX(',', Name) - 1)} FROM Customers  
 ```  
   
  For maximum interoperability, applications should use the **CONVERT** scalar function to make sure that the output of a scalar function is the required type. The **CONVERT** function converts data from one SQL data type to the specified SQL data type. The syntax of the **CONVERT** function is  
   
- **CONVERT(** *value_exp* **,** *data_type***)**  
+ **CONVERT(** *value_exp* **,** _data_type_**)**  
   
  where *value_exp* is a column name, the result of another scalar function, or a literal value, and *data_type* is a keyword that matches the **#define** name that is used by an SQL data type identifier as defined in [Appendix D: Data Types](../../../odbc/reference/appendixes/appendix-d-data-types.md). For example, the following SQL statement uses the **CONVERT** function to make sure that the output of the **CURDATE** function is a date, instead of a timestamp or character data:  
   

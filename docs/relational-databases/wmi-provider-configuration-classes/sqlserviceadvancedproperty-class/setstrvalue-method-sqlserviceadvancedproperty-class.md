@@ -4,12 +4,8 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "wmi"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: wmi
 ms.topic: "reference"
 apiname: 
   - "SetStrValue Method (SqlServiceAdvancedProperty Class)"
@@ -19,7 +15,6 @@ apitype: "MOFDef"
 helpviewer_keywords: 
   - "SetStrValue method"
 ms.assetid: 1fededc3-81ba-4b08-83f9-189b96140799
-caps.latest.revision: 35
 author: "CarlRabeler"
 ms.author: "carlrab"
 manager: craigg
@@ -52,6 +47,6 @@ object.SetStrValue(StrValue)
  The property value type must be *string* to set the property to a string value.  
   
 ## See Also  
- [Starting and Stopping Services](http://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  
+ [Starting and Stopping Services](https://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  
   
   

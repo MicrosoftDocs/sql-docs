@@ -4,10 +4,8 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "reporting-services-native"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "performance counters [Reporting Services]"
@@ -17,7 +15,6 @@ helpviewer_keywords:
   - "counters [Reporting Services]"
   - "performance [Reporting Services]"
 ms.assetid: c642fc4f-8734-4626-a194-42ac9cd8e2ef
-caps.latest.revision: 51
 author: markingmyname
 ms.author: maghan
 manager: craigg
@@ -112,7 +109,7 @@ manager: craigg
 |`Total Snapshot Updates`|Total number of updates for report execution snapshots|  
   
 ##  <a name="bkmk_powershell"></a> Use PowerShell Cmdlets to return lists  
- ![PowerShell related content](../media/rs-powershellicon.jpg "PowerShell related content")The following Windows PowerShell script returns the counter sets where the CounterSetName starts with “msr”:  
+ ![PowerShell related content](../media/rs-powershellicon.jpg "PowerShell related content")The following Windows PowerShell script returns the counter sets where the CounterSetName starts with "msr":  
   
 ```  
 get-counter -listset msr*  

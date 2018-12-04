@@ -4,11 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-  - "docset-sql-devref"
-ms.tgt_pltfrm: ""
+ms.technology: wmi
 ms.topic: "reference"
 api_name: 
   - "SetStringValue Method (ServerNetworkProtocolProperty Class)"
@@ -19,7 +15,6 @@ topic_type:
 helpviewer_keywords: 
   - "SetStringValue method"
 ms.assetid: 0911df30-55f7-4fca-a1fb-01d2c91c1467
-caps.latest.revision: 30
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg

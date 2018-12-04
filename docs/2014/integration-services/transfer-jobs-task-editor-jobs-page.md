@@ -4,17 +4,14 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "integration-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.dts.designer.transferjobstask.jobs.f1"
 helpviewer_keywords: 
   - "Transfer Jobs Task Editor"
 ms.assetid: e72b1dc7-8cda-4ee6-abb5-d438370f04df
-caps.latest.revision: 22
 author: douglaslms
 ms.author: douglasl
 manager: craigg
@@ -43,7 +40,7 @@ manager: craigg
 |**False**|Copy only the specified jobs.|  
   
  **JobsList**  
- Click the browse button **(…)** to select the jobs to copy. At least one job must be selected.  
+ Click the browse button **(...)** to select the jobs to copy. At least one job must be selected.  
   
 > [!NOTE]  
 >  Specify the **SourceConnection** before selecting jobs to copy.  

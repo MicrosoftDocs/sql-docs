@@ -1,18 +1,13 @@
----
+﻿---
 title: "Overview and Usage Scenarios | Microsoft Docs"
 ms.custom: ""
 ms.date: "04/10/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.component: "in-memory-oltp"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: in-memory-oltp
 ms.topic: conceptual
 ms.assetid: 62c964c5-eae4-4cf1-9024-d5a19adbd652
-caps.latest.revision: 5
 author: "jodebrui"
 ms.author: "jodebrui"
 manager: craigg
@@ -28,7 +23,7 @@ This article covers the In-Memory OLTP technology in both [!INCLUDE[ssNoVersion]
 
 ## In-Memory OLTP Overview
 
-In-Memory OLTP can provide great performance gains, for the right workloads. One customer, bwin, managed to [achieve 1.2 Million requests per second](https://blogs.msdn.microsoft.com/sqlcat/2016/10/26/how-bwin-is-using-sql-server-2016-in-memory-oltp-to-achieve-unprecedented-performance-and-scale/) with a single machine running [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], leveraging In-Memory OLTP. Another customer, Quorum, managed to double their workload while [reducing their resource utilization by 70%](https://customers.microsoft.com/en-US/story/quorum-doubles-key-databases-workload-while-lowering-dtu-with-sql-database), by leveraging In-Memory OLTP in [!INCLUDE[ssSDS](../../includes/sssds-md.md)]. While customers have seen up to 30X performance gain in some cases, how much gain you see depends on the workload.
+In-Memory OLTP can provide great performance gains, for the right workloads. One customer, bwin, managed to [achieve 1.2 Million requests per second](https://blogs.msdn.microsoft.com/sqlcat/2016/10/26/how-bwin-is-using-sql-server-2016-in-memory-oltp-to-achieve-unprecedented-performance-and-scale/) with a single machine running [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], leveraging In-Memory OLTP. Another customer, Quorum, managed to double their workload while [reducing their resource utilization by 70%](https://customers.microsoft.com/story/quorum-doubles-key-databases-workload-while-lowering-dtu-with-sql-database), by leveraging In-Memory OLTP in [!INCLUDE[ssSDS](../../includes/sssds-md.md)]. While customers have seen up to 30X performance gain in some cases, how much gain you see depends on the workload.
 
 Now, where does this performance gain come from? In essence, In-Memory OLTP improves performance of transaction processing by making data access and transaction execution more efficient, and by removing lock and latch contention between concurrently executing transactions: it is not fast because it is in-memory; it is fast because it is optimized around the data being in-memory. Data storage, access, and processing algorithms were redesigned from the ground up to take advantage of the latest enhancements in in-memory and high concurrency computing.
 
@@ -45,7 +40,7 @@ In-Memory OLTP is built into [!INCLUDE[ssNoVersion](../../includes/ssnoversion-m
 
 ## Usage Scenarios for In-Memory OLTP
 
-In-Memory OLTP is not a magic go-fast button, and is not suitable for all workloads. For example, memory-optimized tables don't bring down your CPU utilization if most of the queries are performing aggregation over large ranges of data – Columnstore indexes help with that scenario.
+In-Memory OLTP is not a magic go-fast button, and is not suitable for all workloads. For example, memory-optimized tables don't bring down your CPU utilization if most of the queries are performing aggregation over large ranges of data - Columnstore indexes help with that scenario.
 
 Here is a list of scenarios and application patterns where we have seen customers be successful with In-Memory OLTP.
 
@@ -53,7 +48,7 @@ Here is a list of scenarios and application patterns where we have seen customer
 
 This is the core scenario for which we built In-Memory OLTP: support large volumes of transactions, with consistent low latency for individual transactions.
 
-Common workload scenarios are: trading of financial instruments, sports betting, mobile gaming, and ad delivery. Another common pattern we’ve seen is a “catalog” that is frequently read and/or updated. One example is where you have large files, each distributed over a number of cluster nodes, and you catalog the location of each shard of each file in a memory-optimized table.
+Common workload scenarios are: trading of financial instruments, sports betting, mobile gaming, and ad delivery. Another common pattern we've seen is a "catalog" that is frequently read and/or updated. One example is where you have large files, each distributed over a number of cluster nodes, and you catalog the location of each shard of each file in a memory-optimized table.
 
 #### Implementation considerations
 
@@ -65,8 +60,8 @@ To get started in an existing application:
 
 #### Customer Case Studies
 
-- CMC Markets leverages In-Memory OLTP in [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] to achieve consistent low latency: [Because a second is too long to wait, this financial services firm is updating its trading software now.](https://customers.microsoft.com/en-us/story/because-a-second-is-too-long-to-wait-this-financial-services-firm-is-updating-its-trading-software)
-- Derivco leverages In-Memory OLTP in [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] to support increased throughput and handle spikes in the workload: [When an online gaming company doesn’t want to risk its future, it bets on [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)].](https://customers.microsoft.com/en-us/story/when-an-online-gaming-company-doesnt-want-to-risk-its-future-it-bets-on-sql-server-2016)
+- CMC Markets leverages In-Memory OLTP in [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] to achieve consistent low latency: [Because a second is too long to wait, this financial services firm is updating its trading software now.](https://customers.microsoft.com/story/because-a-second-is-too-long-to-wait-this-financial-services-firm-is-updating-its-trading-software)
+- Derivco leverages In-Memory OLTP in [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] to support increased throughput and handle spikes in the workload: [When an online gaming company doesn't want to risk its future, it bets on [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)].](https://customers.microsoft.com/story/when-an-online-gaming-company-doesnt-want-to-risk-its-future-it-bets-on-sql-server-2016)
 
 
 ### Data ingestion, including IoT (Internet-of-Things)
@@ -82,7 +77,7 @@ Common application patterns are:
 Use a memory-optimized table for the data ingestion. If the ingestion consists mostly of inserts (rather than updates) and In-Memory OLTP storage footprint of the data is a concern, either
 
 - Use a job to regularly batch-offload data to a disk-based table with a [Clustered Columnstore index](../indexes/columnstore-indexes-overview.md), using a job that does `INSERT INTO <disk-based table> SELECT FROM <memory-optimized table>`; or
-- Use a [temporal memory-optimized table](../tables/system-versioned-temporal-tables-with-memory-optimized-tables.md) to manage historical data – in this mode, historical data lives on disk, and data movement is managed by the system.
+- Use a [temporal memory-optimized table](../tables/system-versioned-temporal-tables-with-memory-optimized-tables.md) to manage historical data - in this mode, historical data lives on disk, and data movement is managed by the system.
 
 The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] samples repository contains a smart grid application that uses a temporal memory-optimized table, a memory-optimized table type, and a natively compiled stored procedure, to speed up data ingestion, while managing the In-Memory OLTP storage footprint of the sensor data: 
 
@@ -91,9 +86,9 @@ The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] samples repository
  
 #### Customer Case Studies
 
-- [Quorum doubles key database’s workload while lowering utilization by 70% by leveraging In-Memory OLTP in Azure SQL Database](http://customers.microsoft.com/story/quorum-doubles-key-databases-workload-while-lowering-dtu-with-sql-database)
-- EdgeNet improved the performance of batch data load and removed the need to maintain a mid-tier cache, with In-Memory OLTP in [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]: [Data Services Firm Gains Real-Time Access to Product Data with In-Memory Technology](https://customers.microsoft.com/en-us/story/data-services-firm-gains-real-time-access-to-product-d)
-- Beth Israel Deaconess Medical Center was able to dramatically improve data ingestion rate from domain controllers, and handle spikes in the workload, with In-Memory OLTP in [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]: [https://customers.microsoft.com/en-us/story/strengthening-data-security-and-creating-more-time-for]
+- [Quorum doubles key database's workload while lowering utilization by 70% by leveraging In-Memory OLTP in Azure SQL Database](https://customers.microsoft.com/story/quorum-doubles-key-databases-workload-while-lowering-dtu-with-sql-database)
+- EdgeNet improved the performance of batch data load and removed the need to maintain a mid-tier cache, with In-Memory OLTP in [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]: [Data Services Firm Gains Real-Time Access to Product Data with In-Memory Technology](https://customers.microsoft.com/story/data-services-firm-gains-real-time-access-to-product-d)
+- Beth Israel Deaconess Medical Center was able to dramatically improve data ingestion rate from domain controllers, and handle spikes in the workload, with In-Memory OLTP in [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]: [https://customers.microsoft.com/story/strengthening-data-security-and-creating-more-time-for]
 
 ### Caching and session state
 
@@ -111,7 +106,7 @@ Get started with memory-optimizing ASP.NET session state by leveraging the scrip
 
 #### Customer case studies
 
-- bwin was able to dramatically increase throughput and reduce hardware footprint for ASP.NET session state, with In-Memory OLTP in [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]: [Gaming Site Can Scale to 250,000 Requests Per Second and Improve Player Experience](https://customers.microsoft.com/en-us/story/gaming-site-can-scale-to-250000-requests-per-second-an)
+- bwin was able to dramatically increase throughput and reduce hardware footprint for ASP.NET session state, with In-Memory OLTP in [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]: [Gaming Site Can Scale to 250,000 Requests Per Second and Improve Player Experience](https://customers.microsoft.com/story/gaming-site-can-scale-to-250000-requests-per-second-an)
 - bwin increased throughput with ASP.NET session state even further and implemented an enterprise-wide mid-tier caching system, with In-Memory OLTP in [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]: [How bwin is using [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] In-Memory OLTP to achieve unprecedented performance and scale](https://blogs.msdn.microsoft.com/sqlcat/2016/10/26/how-bwin-is-using-sql-server-2016-in-memory-oltp-to-achieve-unprecedented-performance-and-scale/)
 
 ### Tempdb object replacement
@@ -127,6 +122,7 @@ To get started see: [Improving temp table and table variable performance using m
 #### Customer Case Studies
 
 - One customer was able to improve performance by 40%, just by replacing traditional TVPs with memory-optimized TVPs: [High Speed IoT Data Ingestion Using In-Memory OLTP in Azure](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/04/07/a-technical-case-study-high-speed-iot-data-ingestion-using-in-memory-oltp-in-azure/)
+- SentryOne significantly improved data ingestion capacity with almost zero latency in their monitoring solution by swapping tables in tempdb to In-Memory OLTP tables as part of their enterprise scalability improvements: [Solution provider breaks through performance ceiling with data monitoring innovation.](https://customers.microsoft.com/story/sentryone-partner-professional-services-sql-server-azure)
 
 ### ETL (Extract Transform Load)
 
@@ -221,7 +217,7 @@ GO
 
 ## Resources to learn more:
 
-[In-Memory OLTP Technologies for Faster T-SQL Performance](http://msdn.microsoft.com/library/mt694156.aspx)   
+[In-Memory OLTP Technologies for Faster T-SQL Performance](https://msdn.microsoft.com/library/mt694156.aspx)   
 Perf demo using In-Memory OLTP can be found at: [in-memory-oltp-perf-demo-v1.0](https://github.com/Microsoft/sql-server-samples/releases/tag/in-memory-oltp-demo-v1.0)   
 [17-minute video explaining In-Memory OLTP and showing the demo](https://www.youtube.com/watch?v=l5l5eophmK4) (demo is at 8:25)   
 [Script to enable In-Memory OLTP and set recommended options](https://raw.githubusercontent.com/Microsoft/sql-server-samples/master/samples/features/in-memory/t-sql-scripts/enable-in-memory-oltp.sql)   
@@ -230,4 +226,4 @@ Perf demo using In-Memory OLTP can be found at: [in-memory-oltp-perf-demo-v1.0](
 [Improving temp table and table variable performance using memory optimization](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/03/21/improving-temp-table-and-table-variable-performance-using-memory-optimization/)   
 [Optimize Performance using In-Memory Technologies in SQL Database](https://docs.microsoft.com/azure/sql-database/sql-database-in-memory)  
 [System-Versioned Temporal Tables with Memory-Optimized Tables](../tables/system-versioned-temporal-tables-with-memory-optimized-tables.md)  
-[In-Memory OLTP – Common Workload Patterns and Migration Considerations](http://msdn.microsoft.com/library/dn673538.aspx). 
+[In-Memory OLTP - Common Workload Patterns and Migration Considerations](https://msdn.microsoft.com/library/dn673538.aspx). 

@@ -4,15 +4,11 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "configmgr-client"
-ms.tgt_pltfrm: ""
+ms.technology: configuration
 ms.topic: conceptual
 helpviewer_keywords: 
   - "shared memory [SQL Server]"
 ms.assetid: dc1704da-eacd-4d26-b529-c996f958ca4b
-caps.latest.revision: 20
 author: stevestein
 ms.author: sstein
 manager: craigg

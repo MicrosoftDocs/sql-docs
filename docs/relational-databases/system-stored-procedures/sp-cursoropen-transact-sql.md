@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "system-stored-procedures"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "sp_cursoropen"
@@ -18,7 +15,6 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_cursoropen"
 ms.assetid: 16462ede-4393-4293-a598-ca88c48ca70b
-caps.latest.revision: 10
 author: stevestein
 ms.author: sstein
 manager: craigg
@@ -205,7 +201,7 @@ sp_cursoropen cursor OUTPUT, stmt
 ### bound_param Parameter  
  Any parameters after the fifth are passed along to the statement plan as input parameters. The first such parameter must be a string in the form of:  
   
- *{ local variable name data type } [,…n]*  
+ *{ local variable name data type } [,...n]*  
   
  Subsequent parameters are used to pass the values to be substituted for the *local variable name* in the statement.  
   

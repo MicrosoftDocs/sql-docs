@@ -5,16 +5,13 @@ ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: connectivity
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "data conversions from SQL to C types [ODBC], numeric"
   - "numeric data type [ODBC], converting"
   - "converting data from SQL to C types [ODBC], numeric"
 ms.assetid: 76f8b5d5-4bd0-4dcb-a90a-698340e0d36e
-caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg

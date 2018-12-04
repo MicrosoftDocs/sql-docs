@@ -4,11 +4,7 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-  - "docset-sql-devref"
-ms.tgt_pltfrm: ""
+ms.technology: stored-procedures
 ms.topic: "reference"
 api_name: 
   - "srv_alloc"
@@ -21,7 +17,6 @@ dev_langs:
 helpviewer_keywords: 
   - "srv_alloc"
 ms.assetid: 91505c59-a273-452f-b71d-5e8205c21863
-caps.latest.revision: 32
 author: rothja
 ms.author: jroth
 manager: craigg

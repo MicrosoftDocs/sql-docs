@@ -4,15 +4,12 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: high-availability
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Availability Groups [SQL Server], WSFC clusters"
   - "quorum [SQL Server], AlwaysOn and WSFC quorum"
 ms.assetid: cb3fd9a6-39a2-4e9c-9157-619bf3db9951
-caps.latest.revision: 14
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
@@ -55,12 +52,12 @@ manager: craigg
 4.  Output the cluster node properties in a readable format.  
   
 ### Example (Powershell)  
- The following example changes the NodeWeight setting to remove the quorum vote for the “AlwaysOnSrv1” node, and then outputs the settings for all nodes in the cluster.  
+ The following example changes the NodeWeight setting to remove the quorum vote for the "AlwaysOnSrv1" node, and then outputs the settings for all nodes in the cluster.  
   
 ```powershell  
 Import-Module FailoverClusters  
   
-$node = “AlwaysOnSrv1”  
+$node = "AlwaysOnSrv1"  
 (Get-ClusterNode $node).NodeWeight = 0  
   
 $cluster = (Get-ClusterNode $node).Cluster  
@@ -81,7 +78,7 @@ $nodes | Format-Table -property NodeName, State, NodeWeight
 2.  Use **cluster.exe** to set `NodeWeight` values.  
   
 ### Example (Cluster.exe)  
- The following example changes the NodeWeight value to remove the quorum vote of the “AlwaysOnSrv1” node in the “Cluster001” cluster.  
+ The following example changes the NodeWeight value to remove the quorum vote of the "AlwaysOnSrv1" node in the "Cluster001" cluster.  
   
 ```ms-dos  
 cluster.exe Cluster001 node AlwaysOnSrv1 /prop NodeWeight=0  

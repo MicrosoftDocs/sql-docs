@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: "sql-tools"
-ms.component: "ssms-visual-db"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: ssms
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "users [SQL Server], multiuser environments"
@@ -19,7 +16,6 @@ helpviewer_keywords:
   - "version control [Visual Database Tools]"
   - "Visual Database Tools [SQL Server], multiuser environments"
 ms.assetid: 330bd48c-9427-4967-b58e-b7c492d5ee36
-caps.latest.revision: 3
 author: "stevestein"
 ms.author: "sstein"
 manager: craigg

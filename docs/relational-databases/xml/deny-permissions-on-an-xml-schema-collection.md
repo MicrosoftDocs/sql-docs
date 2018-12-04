@@ -4,16 +4,12 @@ ms.custom: ""
 ms.date: "03/04/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "xml"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: xml
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "denying permissions [SQL Server], XML server collections"
 ms.assetid: e2b300b0-e734-4c43-a4da-c78e6e5d4fba
-caps.latest.revision: 34
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: craigg
@@ -75,8 +71,8 @@ GO
 SETUSER 'TestLogin1'  
 GO  
 CREATE XML SCHEMA COLLECTION myOtherDBSchema.myTestSchemaCollection AS '<?xml version="1.0" encoding="UTF-8" ?>  
-<xsd:schema targetNamespace="http://schemas.adventure-works.com/Additional/ContactInfo"   
-            xmlns:xsd="http://www.w3.org/2001/XMLSchema"   
+<xsd:schema targetNamespace="https://schemas.adventure-works.com/Additional/ContactInfo"   
+            xmlns:xsd="https://www.w3.org/2001/XMLSchema"   
 elementFormDefault="qualified">  
 <xsd:element name="telephone" type="xsd:string" />  
 </xsd:schema>'  
@@ -92,8 +88,8 @@ GO
 SETUSER 'TestLogin1'  
 GO  
 CREATE XML SCHEMA COLLECTION myOtherDBSchema.myTestSchemaCollection AS '<?xml version="1.0" encoding="UTF-8" ?>  
-<xsd:schema targetNamespace="http://schemas.adventure-works.com/Additional/ContactInfo"   
-            xmlns:xsd="http://www.w3.org/2001/XMLSchema"   
+<xsd:schema targetNamespace="https://schemas.adventure-works.com/Additional/ContactInfo"   
+            xmlns:xsd="https://www.w3.org/2001/XMLSchema"   
 elementFormDefault="qualified">  
 <xsd:element name="telephone" type="xsd:string" />  
 </xsd:schema>'  
@@ -139,8 +135,8 @@ GO
 SETUSER 'TestLogin1'  
 GO  
 CREATE XML SCHEMA COLLECTION myOtherDBSchema.myTestSchemaCollection AS '<?xml version="1.0" encoding="UTF-8" ?>  
-<xsd:schema targetNamespace="http://schemas.adventure-works.com/Additional/ContactInfo"   
-            xmlns:xsd="http://www.w3.org/2001/XMLSchema"   
+<xsd:schema targetNamespace="https://schemas.adventure-works.com/Additional/ContactInfo"   
+            xmlns:xsd="https://www.w3.org/2001/XMLSchema"   
 elementFormDefault="qualified">  
 <xsd:element name="telephone" type="xsd:string" />  
 </xsd:schema>'  

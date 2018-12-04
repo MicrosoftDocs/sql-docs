@@ -5,9 +5,7 @@ ms.date: "06/30/2016"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: performance
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "page compression [Database Engine]"
@@ -33,7 +31,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
   
 3.  Dictionary compression  
   
- When you use page compression, non–leaf-level pages of indexes are compressed by using only row compression. For more information about row compression, see [Row Compression Implementation](../../relational-databases/data-compression/row-compression-implementation.md).  
+ When you use page compression, non-leaf-level pages of indexes are compressed by using only row compression. For more information about row compression, see [Row Compression Implementation](../../relational-databases/data-compression/row-compression-implementation.md).  
   
 ## Prefix Compression  
  For each page that is being compressed, prefix compression uses the following steps:  

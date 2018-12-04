@@ -4,16 +4,12 @@ ms.custom: ""
 ms.date: "05/24/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords: 
   - "incremental loads [SQL Server change data capture]"
   - "change data capture [SQL Server], Integration Services and"
 ms.assetid: c4aaba1b-73e5-4187-a97b-61c10069cc5a
-caps.latest.revision: 39
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
@@ -116,6 +112,6 @@ manager: craigg
 -   [Perform an Incremental Load of Multiple Tables](perform-an-incremental-load-of-multiple-tables.md)  
   
 ## Related Content  
- Blog entry, [SSIS Design Pattern – Incremental Load](http://go.microsoft.com/fwlink/?LinkId=217679), on sqlblog.com  
+ Blog entry, [SSIS Design Pattern - Incremental Load](http://go.microsoft.com/fwlink/?LinkId=217679), on sqlblog.com  
   
   

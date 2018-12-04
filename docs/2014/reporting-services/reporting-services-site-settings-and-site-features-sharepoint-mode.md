@@ -4,13 +4,10 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "reporting-services-native"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: e0040fec-e2b7-4099-ae01-3b9bb9128bbd
-caps.latest.revision: 9
 author: markingmyname
 ms.author: maghan
 manager: craigg
@@ -26,7 +23,7 @@ manager: craigg
   
 ## To open the Reporting Services Site Settings page  
   
-1.  From the SharePoint site’s **Site Actions** menu click **Site Settings**.  
+1.  From the SharePoint site's **Site Actions** menu click **Site Settings**.  
   
 2.  In the **Reporting Services** section, click **Reporting Services Site Settings**.  
   

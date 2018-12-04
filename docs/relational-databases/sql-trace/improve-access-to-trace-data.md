@@ -4,19 +4,14 @@ ms.custom: ""
 ms.date: "03/01/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "sql-trace"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Profiler [SQL Server Profiler], space"
   - "SQL Server Profiler, space"
   - "space [SQL Server], SQL Server Profiler"
 ms.assetid: c260c000-fd53-4831-993f-df6894f3228b
-caps.latest.revision: 14
 author: "MashaMSFT"
 ms.author: "mathoma"
 manager: craigg

@@ -4,17 +4,13 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords: 
   - "subscriptions [SQL Server replication], viewing information"
   - "subscriptions [SQL Server replication], Replication Monitor tasks"
   - "viewing subscription information"
 ms.assetid: 54aac83b-6f29-40d7-8901-cf059749867f
-caps.latest.revision: 32
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg

@@ -3,8 +3,6 @@ title: "ADO Introduction | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.tgt_pltfrm: ""
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -12,7 +10,6 @@ ms.topic: conceptual
 helpviewer_keywords:
   - "ADO, programming"
 ms.assetid: c5b3a134-de22-4e9c-9489-9a1cc7a5dcfa
-caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg

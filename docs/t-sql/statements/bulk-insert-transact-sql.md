@@ -1,13 +1,11 @@
 ---
 title: "BULK INSERT (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "04/09/2018"
+ms.date: "09/07/2018"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "BULK_TSQL"
@@ -26,7 +24,6 @@ helpviewer_keywords:
   - "bulk importing [SQL Server], BULK INSERT statement"
   - "file importing [SQL Server]"
 ms.assetid: be3984e1-5ab3-4226-a539-a9f58e1e01e2
-caps.latest.revision: 153
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
@@ -34,9 +31,10 @@ manager: craigg
 # BULK INSERT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Imports a data file into a database table or view in a user-specified format in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
+> [!div class="nextstepaction"]
+> [Please help improve SQL Server docs!](https://80s3ignv.optimalworkshop.com/optimalsort/36yyw5kq-0)
 
-[!INCLUDE[ssMIlimitation](../../includes/sql-db-mi-limitation.md)]
+Imports a data file into a database table or view in a user-specified format in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
 
  ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -101,6 +99,10 @@ FROM '\\SystemX\DiskZ\Sales\data\orders.dat';
 
 **Applies to:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.   
 Beginning with [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP1.1, the data_file can be in Azure blob storage. In that case, you need to specify **data_source_name** option.
+
+> [!IMPORTANT]
+> Azure SQL Database does not support reading from Windows files.
+
 
 **'** *data_source_name* **'**   
 **Applies to:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.   
@@ -296,7 +298,7 @@ CREATE TABLE t_float(c1 float, c2 decimal (5,4));
   
  ```
  <?xml version="1.0"?> 
- <BCPFORMAT xmlns="http://schemas.microsoft.com/sqlserver/2004/bulkload/format" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"> 
+ <BCPFORMAT xmlns="https://schemas.microsoft.com/sqlserver/2004/bulkload/format" xmlns:xsi="https://www.w3.org/2001/XMLSchema-instance"> 
  <RECORD> 
  <FIELD ID="1" xsi:type="CharTerm" TERMINATOR="\t" MAX_LENGTH="30"/> 
  <FIELD ID="2" xsi:type="CharTerm" TERMINATOR="\r\n" MAX_LENGTH="30"/>  </RECORD>  <ROW> 
@@ -311,7 +313,11 @@ BULK INSERT bulktest..t_float
 FROM 'C:\t_float-c.dat' WITH (FORMATFILE='C:\t_floatformat-c-xml.xml');  
 GO  
 ```  
+
+> [!IMPORTANT]
+> Azure SQL Database does not support reading from Windows files.
   
+
 ### Data Types for Bulk Exporting or Importing SQLXML Documents  
  To bulk export or import SQLXML data, use one of the following data types in your format file:  
   
@@ -385,6 +391,9 @@ BULK INSERT AdventureWorks2012.Sales.SalesOrderDetail
          ROWTERMINATOR =' |\n'  
       );  
 ```  
+
+> [!IMPORTANT]
+> Azure SQL Database does not support reading from Windows files.
   
 ### B. Using the FIRE_TRIGGERS argument  
  The following example specifies the `FIRE_TRIGGERS` argument.  
@@ -399,6 +408,9 @@ BULK INSERT AdventureWorks2012.Sales.SalesOrderDetail
         FIRE_TRIGGERS  
       );  
 ```  
+
+> [!IMPORTANT]
+> Azure SQL Database does not support reading from Windows files.
   
 ### C. Using line feed as a row terminator  
  The following example imports a file that uses the line feed as a row terminator such as a UNIX output:  
@@ -413,6 +425,9 @@ EXEC(@bulk_cmd);
   
 > [!NOTE]  
 >  Due to how Microsoft Windows treats text files **(\n** automatically gets replaced with **\r\n)**.  
+
+> [!IMPORTANT]
+> Azure SQL Database does not support reading from Windows files.
   
 ### D. Specifying a code page  
  The following example show how to specify a code page.  
@@ -426,6 +441,10 @@ WITH
     FIELDTERMINATOR = ','  
 );  
 ```  
+
+> [!IMPORTANT]
+> Azure SQL Database does not support reading from Windows files.
+
 ### E. Importing data from a CSV file   
 The following example show how to specify a CSV file, skipping the header (first row), using `;` as field terminator and `0x0a` as line terminator: 
 ```sql
@@ -437,6 +456,10 @@ WITH (FORMAT = 'CSV',
       FIELDTERMINATOR = ';', 
       ROWTERMINATOR = '0x0a'); 
 ```
+
+> [!IMPORTANT]
+> Azure SQL Database does not support reading from Windows files.
+
 
 ### F. Importing data from a file in Azure blob storage   
 The following example shows how to load data from a csv file in an Azure blob storage location, which has been configured as an external data source. This requires a database scoped credential using a shared access signature.    
@@ -460,6 +483,9 @@ BULK INSERT Sales.Invoices
 FROM 'inv-2017-12-08.csv'
 WITH (DATA_SOURCE = 'MyAzureBlobStorage'); 
 ```
+
+> [!IMPORTANT]
+> Azure SQL Database does not support reading from Windows files.
 
 ### G. Importing data from a file in Azure blob storage and specifying an error file   
 The following example shows how to load data from a csv file in an Azure blob storage location, which has been configured as an external data source and also specifying an error file. This requires a database scoped credential using a shared access signature. Note that if running on Azure SQL Database, ERRORFILE option should be accompanied by ERRORFILE_DATA_SOURCE otherwise the import might fail with permissions error. The file specified in ERRORFILE should not exist in the container.

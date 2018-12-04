@@ -32,7 +32,7 @@ BottomSum(<table expression>, <rank expression>, <sum>)
  The **BottomSum** function returns the bottom-most rows in increasing order of rank. The rank is based on the evaluated value of the \<rank expression> argument for each row, such that the sum of the \<rank expression> values is at least the given total that is specified by the \<sum> argument. **BottomSum** returns the smallest number of elements possible while still meeting the specified sum value.  
   
 ## Examples  
- The following example creates a prediction query against the Association model that you build by using the [Basic Data Mining Tutorial](http://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c).  
+ The following example creates a prediction query against the Association model that you build by using the [Basic Data Mining Tutorial](https://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c).  
   
  To understand how BottomSum works, it might be helpful to first execute a prediction query that returns only the nested table.  
   
@@ -87,8 +87,8 @@ NATURAL PREDICTION JOIN
   
 |Model|$SUPPORT|$PROBABILITY|$ADJUSTEDPROBABILITY|  
 |-----------|--------------|------------------|--------------------------|  
-|Road Bottle Cage|1195|0.08…|0.07…|  
-|Mountain Bottle Cage|1367|0.09…|0.08…|  
+|Road Bottle Cage|1195|0.08...|0.07...|  
+|Mountain Bottle Cage|1367|0.09...|0.08...|  
   
  **Note** This example is provided only to illustrate the usage of BottomSum. Depending on the size of your data set, this query might take a long time to run.  
   

@@ -4,19 +4,14 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "service-broker"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "event notifications [SQL Server], target service"
   - "target service [SQL Server]"
   - "event notifications [SQL Server], creating"
 ms.assetid: 29ac8f68-a28a-4a77-b67b-a8663001308c
-caps.latest.revision: 34
 author: "MashaMSFT"
 ms.author: "mathoma"
 manager: craigg
@@ -32,7 +27,7 @@ manager: craigg
  You do not have to create a [!INCLUDE[ssSB](../../includes/sssb-md.md)]-initiating service because [!INCLUDE[ssSB](../../includes/sssb-md.md)] includes the following specific message type and contract for event notifications:  
   
 ```  
-http://schemas.microsoft.com/SQL/Notifications/PostEventNotification  
+https://schemas.microsoft.com/SQL/Notifications/PostEventNotification  
 ```  
   
  The target service that receives event notifications must honor this preexisting contract.  
@@ -42,7 +37,7 @@ http://schemas.microsoft.com/SQL/Notifications/PostEventNotification
 1.  Create a queue to receive messages.  
   
     > [!NOTE]  
-    >  The queue receives the following message type: `http://schemas.microsoft.com/SQL/Notifications/QueryNotification`.  
+    >  The queue receives the following message type: `https://schemas.microsoft.com/SQL/Notifications/QueryNotification`.  
   
 2.  Create a service on the queue that references the event notifications contract.  
   
@@ -59,7 +54,7 @@ GO
 CREATE SERVICE NotifyService  
 ON QUEUE NotifyQueue  
 (  
-[http://schemas.microsoft.com/SQL/Notifications/PostEventNotification]  
+[https://schemas.microsoft.com/SQL/Notifications/PostEventNotification]  
 );  
 GO  
 CREATE ROUTE NotifyRoute  

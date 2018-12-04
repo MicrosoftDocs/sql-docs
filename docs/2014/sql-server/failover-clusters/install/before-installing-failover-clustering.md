@@ -4,17 +4,13 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: install
 ms.topic: conceptual
 helpviewer_keywords: 
   - "clusters [SQL Server], preinstallation checklist"
   - "installing failover clusters"
   - "failover clustering [SQL Server], preinstallation checklist"
 ms.assetid: a655225d-8c54-4b30-95fd-31f588167899
-caps.latest.revision: 137
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
@@ -190,7 +186,7 @@ manager: craigg
 |---------------------------------------|------------------------------------------------|-------------------------------------------------------|----------------------------------------------|-----------------------------------------------------|  
 |[!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] Enterprise (64-bit) x64<sup>1</sup>|Yes|Yes|Yes<sup>2</sup>|Yes<sup>2</sup>|  
 |[!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] Enterprise (32-bit)|Yes|Yes|||  
-|[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] –bit) Developer (64|Yes|Yes|Yes <sup>2</sup>|Yes <sup>2</sup>|  
+|[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] -bit) Developer (64|Yes|Yes|Yes <sup>2</sup>|Yes <sup>2</sup>|  
 |[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] Developer (32-bit)|Yes|Yes|||  
 |[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] Standard (64-bit)|Yes|Yes|Yes|Yes|  
 |[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] Standard (32-bit)|Yes|Yes|||  
@@ -252,7 +248,7 @@ manager: craigg
   
 -   Use the cluster's default instance of MSDTC, else  
   
--   Use the local machine’s installed instance of MSDTC  
+-   Use the local machine's installed instance of MSDTC  
   
 > [!IMPORTANT]  
 >  If the MSDTC instance that is installed to the local cluster group of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] fails, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] does not automatically attempt to use the default cluster instance or the local machine instance of MSDTC. You would need to completely remove the failed instance of MSDTC from the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] group to use another instance of MSDTC. Likewise, if you create a mapping for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] and the mapped instance of MSDTC fails, your distributed transactions will also fail. If you want [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] to use a different instance of MSDTC, you must either add an instance of MSDTC to the local cluster group of the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] or delete the mapping.  

@@ -4,12 +4,9 @@ ms.date: 03/16/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
 ms.technology: application-integration
-ms.suite: pro-bi
 
 
 ms.topic: reference
-applies_to: 
-  - "SQL Server 2016 Preview"
 helpviewer_keywords: 
   - "links [Reporting Services], URL access"
   - "URL access [Reporting Services], Web applications"
@@ -34,7 +31,7 @@ ms.author: maghan
  In the following example, the hyperlink targets a frame named "main", which might be different from the one that includes the hyperlink. The hyperlink might be part of Web portal.  
   
 ```  
-<a href="http://server/reportserver?/SampleReports/Territory Sales   
+<a href="https://server/reportserver?/SampleReports/Territory Sales   
 Drilldown&rs:Command=Render&rc:LinkTarget=main" target="main" >  
    Click here for the Territory Sales Drilldown sample report  
 </a>  
@@ -59,7 +56,7 @@ Drilldown&rs:Command=Render&rc:LinkTarget=main" target="main" >
  The following sample HTML demonstrates the use of a form that you can use to target a report server with a specific URL and pass query string parameters as part of the form's input fields.  
   
 ```  
-<FORM id="frmRender" action="http://server/reportserver?/SampleReports/  
+<FORM id="frmRender" action="https://server/reportserver?/SampleReports/  
    Territory Sales Drilldown" method="post" target="_self">  
    <INPUT type="hidden" name="rs:Command" value="Render">   
    <INPUT type="hidden" name="rc:LinkTarget" value="main">  
@@ -71,7 +68,7 @@ Drilldown&rs:Command=Render&rc:LinkTarget=main" target="main" >
  In the previous example, if a user clicks the button on the form, the report server returns an HTML-rendered report targeted at the current frame. A comparable URL access string might look like the following:  
   
 ```  
-http://server/reportserver?/SampleReports/Territory Sales   
+https://server/reportserver?/SampleReports/Territory Sales   
 Drilldown&rs:Command=Render&rc:LinkTarget=main&rs:Format=HTML4.0  
 ```  
   

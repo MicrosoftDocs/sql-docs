@@ -4,14 +4,10 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "xml"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: xml
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: 486ee339-165b-4aeb-b760-d2ba023d7d0a
-caps.latest.revision: 12
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: craigg
@@ -72,7 +68,7 @@ mypath03 = '/a/b/d'
 )  
 ```  
   
- The user-specified mapping mode lets you specify a type and cardinality for the node to obtain better performance. However, this improved performance is achieved by giving up safety – because a cast can fail - and generality – because only the specified type is matched with the selective XML index.  
+ The user-specified mapping mode lets you specify a type and cardinality for the node to obtain better performance. However, this improved performance is achieved by giving up safety - because a cast can fail - and generality - because only the specified type is matched with the selective XML index.  
   
  The XQuery types supported for untyped XML case are:  
   
@@ -101,8 +97,8 @@ mypath= '/a/b' as XQUERY 'node()',
 pathX = '/a/b/c' as XQUERY 'xs:double' SINGLETON,  
 pathY = '/a/b/d' as XQUERY 'xs:string' MAXLENGTH(200) SINGLETON  
 )  
--- mypath – Only the node value is needed; storage is saved.  
--- pathX – Performance is improved; secondary indexes are possible.  
+-- mypath - Only the node value is needed; storage is saved.  
+-- pathX - Performance is improved; secondary indexes are possible.  
 -- pathY - Performance is improved; secondary indexes are possible; storage is saved.  
 ```  
   
@@ -349,7 +345,7 @@ WHERE T.xmldata.exist('
   
  The use of optimization hints is optional. You can always accept the default mappings, which are reliable but may not provide optimal performance and storage.  
   
- Some optimization hints – for example, the SINGLETON hint - introduce constraints over your data. In some cases, errors may be raised when those constraints are not met.  
+ Some optimization hints - for example, the SINGLETON hint - introduce constraints over your data. In some cases, errors may be raised when those constraints are not met.  
   
 ### Benefits of Optimization Hints  
  The following table identifies the optimization hints that support more efficient storage or improved performance.  

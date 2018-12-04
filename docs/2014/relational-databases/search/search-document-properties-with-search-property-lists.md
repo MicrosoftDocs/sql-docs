@@ -4,9 +4,7 @@ ms.custom: ""
 ms.date: "04/26/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: search
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "full-text search [SQL Server], search property lists"
@@ -17,7 +15,6 @@ helpviewer_keywords:
   - "search property lists [SQL Server], about"
   - "property searching [SQL Server]"
 ms.assetid: ffae5914-b1b2-4267-b927-37e8382e0a9e
-caps.latest.revision: 49
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
@@ -45,11 +42,11 @@ manager: craigg
 ### Indexing of Registered Properties  
  After a full-text index is associated with a search property list, the index must be repopulated to index property-specific search terms. During full-text indexing, the contents of all properties are stored in the full-text index along with other content. However, when indexing a search term found in a registered property, the full-text indexer also stores the corresponding internal property ID with the term. In contrast, if a property is not registered, it is stored in the full-text index as if it were part of the document body, and it has a value of zero for the internal property ID.  
   
- The following illustration shows a logical view of how search terms appear in a full-text index that is associated with the search property list shown in the preceding illustration. A sample document, Document 1 contains three properties—Title, Author, and Keywords—as well as the document body. For the properties Title and Keywords, which are specified in the search property list, search terms are associated with their corresponding internal property IDs in the full-text index. In contrast, the content of the Author property is indexed as if it were part of the document body. This means registering a property increases the size of the full-text index somewhat, depending on the amount of content stored in the property.  
+ The following illustration shows a logical view of how search terms appear in a full-text index that is associated with the search property list shown in the preceding illustration. A sample document, Document 1 contains three properties-Title, Author, and Keywords-as well as the document body. For the properties Title and Keywords, which are specified in the search property list, search terms are associated with their corresponding internal property IDs in the full-text index. In contrast, the content of the Author property is indexed as if it were part of the document body. This means registering a property increases the size of the full-text index somewhat, depending on the amount of content stored in the property.  
   
  ![Full-text index that uses a search property list](../../database-engine/media/ifts-spl-and-fti.gif "Full-text index that uses a search property list")  
   
- Search terms in the Title property—"Favorite," "Biking," and "Trails"—are associated with the internal property ID assigned to Title for this index, 1. Search terms in the Keywords property—"biking" and "mountain"—are associated with the internal property ID assigned to Tags for this index, 2. For search terms n the Author property—"Jane" and "Doe"—and search terms in the document body, the internal property ID is 0. Note that the term "biking" occurs in the Title property, in the Keywords (Tags) property, and in the document body. A property search for "biking" in the Title or Keywords (Tags) property would return this document in the results. A generic full-text query for "biking" would also return this document, just as if the index were not configured for property searching. A property search for "biking" in the Author property would not return this document.  
+ Search terms in the Title property-"Favorite," "Biking," and "Trails"-are associated with the internal property ID assigned to Title for this index, 1. Search terms in the Keywords property-"biking" and "mountain"-are associated with the internal property ID assigned to Tags for this index, 2. For search terms n the Author property-"Jane" and "Doe"-and search terms in the document body, the internal property ID is 0. Note that the term "biking" occurs in the Title property, in the Keywords (Tags) property, and in the document body. A property search for "biking" in the Title or Keywords (Tags) property would return this document in the results. A generic full-text query for "biking" would also return this document, just as if the index were not configured for property searching. A property search for "biking" in the Author property would not return this document.  
   
  A property-scoped full-text query uses the internal property IDs registered for the current search property list of the full-text index.  
   
@@ -58,7 +55,7 @@ manager: craigg
 ##  <a name="impact"></a> Impact of Enabling Property Searching  
  Configuring a full-text index to support searching on one or more properties increases the size of the index somewhat, depending on the number of properties you specify in your search property list and on the content of each property.  
   
- In testing typical corpuses of Microsoft Word<sup>®</sup>, Excel<sup>®</sup>, and PowerPoint<sup>®</sup> documents, we configured a full-text index to index typical search properties. Indexing these properties increased the size of the full-text index size by approximately 5 percent. We anticipate that this approximate size increase will to be typical for most document corpuses. However, ultimately, the size increase will depend on the amount of property data in a given document corpus relative to the amount of overall data.  
+ In testing typical corpuses of Microsoft Word<sup>??</sup>, Excel<sup>??</sup>, and PowerPoint<sup>??</sup> documents, we configured a full-text index to index typical search properties. Indexing these properties increased the size of the full-text index size by approximately 5 percent. We anticipate that this approximate size increase will to be typical for most document corpuses. However, ultimately, the size increase will depend on the amount of property data in a given document corpus relative to the amount of overall data.  
   
   
   

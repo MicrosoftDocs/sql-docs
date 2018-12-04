@@ -15,7 +15,7 @@ manager: kfile
   This topic describes mining model content that is specific to models that use the [!INCLUDE[msCoName](../../includes/msconame-md.md)] Linear Regression algorithm. For a general explanation of mining model content for all model types, see [Mining Model Content &#40;Analysis Services - Data Mining&#41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md).  
   
 ## Understanding the Structure of a Linear Regression Model  
- A linear regression model has an extremely simple structure. Each model has a single parent node that represents the model and its metadata, and a regression tree node (NODE_TYPE = 25) that that contains the regression formula for each predictable attribute.  
+ A linear regression model has an extremely simple structure. Each model has a single parent node that represents the model and its metadata, and a regression tree node (NODE_TYPE = 25) that contains the regression formula for each predictable attribute.  
   
  ![Structure of model for linear regression](../../analysis-services/data-mining/media/modelcontentstructure-linreg.gif "Structure of model for linear regression")  
   

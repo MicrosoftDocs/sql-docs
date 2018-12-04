@@ -4,10 +4,7 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.dts.designer.dataprofilingtask.f1"
@@ -16,7 +13,6 @@ helpviewer_keywords:
   - "data profiling"
   - "profiling data"
 ms.assetid: 248ce233-4342-42c5-bf26-f4387ea152cf
-caps.latest.revision: 32
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
@@ -27,7 +23,7 @@ manager: craigg
  You can use the Data Profiling task inside an [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] package to profile data that is stored in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and to identify potential problems with data quality.  
   
 > [!NOTE]  
->  This topic only describes the the features and requirements of the Data Profiling task. For a walkthrough of how to use the Data Profiling task, see the section, [Data Profiling Task and Viewer](data-profiling-task-and-viewer.md).  
+>  This topic only describes the features and requirements of the Data Profiling task. For a walkthrough of how to use the Data Profiling task, see the section, [Data Profiling Task and Viewer](data-profiling-task-and-viewer.md).  
   
 ## Requirements and Limitations  
  The Data Profiling task works only with data that is stored in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. This task does not work with third-party or file-based data sources.  

@@ -5,9 +5,7 @@ ms.date: "12/06/2016"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "Match"
@@ -20,7 +18,6 @@ helpviewer_keywords:
   - "wildcard characters [SQL Server]"
   - "[ ] (wildcard - character(s) to match)"
 ms.assetid: 57817576-0bf1-49ed-b05d-fac27e8fed7a
-caps.latest.revision: 32
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: craigg

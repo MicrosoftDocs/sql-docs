@@ -4,10 +4,8 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "metadata [Analysis Services]"
@@ -18,7 +16,6 @@ helpviewer_keywords:
   - "data sources [Analysis Services]"
   - "storage [Analysis Services], data sources"
 ms.assetid: a16469d9-9d53-4e35-9982-fc06327a9d33
-caps.latest.revision: 44
 author: minewiskan
 ms.author: owend
 manager: craigg

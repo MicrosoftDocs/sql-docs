@@ -5,9 +5,7 @@ ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: connectivity
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "data types [ODBC], buffers"
@@ -15,13 +13,12 @@ helpviewer_keywords:
   - "buffers [ODBC], data"
   - "C data types [ODBC], buffers"
 ms.assetid: 58bea3e9-d552-447f-b3ad-ce1dab213b72
-caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ---
 # Data Buffer Type
-The C data type of a buffer is specified by the application. With a single variable, this occurs when the application allocates the variable. With generic memory — that is, memory pointed to by a pointer of type void — this occurs when the application casts the memory to a particular type. The driver discovers this type in two ways:  
+The C data type of a buffer is specified by the application. With a single variable, this occurs when the application allocates the variable. With generic memory - that is, memory pointed to by a pointer of type void - this occurs when the application casts the memory to a particular type. The driver discovers this type in two ways:  
   
 -   **Data buffer type argument.** Buffers used to transfer parameter values and result set data, such as the buffer bound with *TargetValuePtr* in **SQLBindCol**, usually have an associated type argument, such as the *TargetType* argument in **SQLBindCol**. In this argument, the application passes the C type identifier that corresponds to the type of the buffer. For example, in the following call to **SQLBindCol**, the value SQL_C_TYPE_DATE tells the driver that the *Date* buffer is an SQL_DATE_STRUCT:  
   

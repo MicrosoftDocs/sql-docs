@@ -4,15 +4,12 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "integration-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "parent packages [Integration Services]"
 ms.assetid: d8f94830-fa27-4151-88df-cbdc6bf0fc80
-caps.latest.revision: 23
 author: douglaslms
 ms.author: douglasl
 manager: craigg

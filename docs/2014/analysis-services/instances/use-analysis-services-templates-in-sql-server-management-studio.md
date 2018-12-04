@@ -4,13 +4,10 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: 54ad1954-22e2-4628-b334-8fad8e9433b8
-caps.latest.revision: 11
 author: minewiskan
 ms.author: owend
 manager: craigg
@@ -106,7 +103,7 @@ manager: craigg
 5.  Double-click the text within the \<File> element. Type the name of the backup file, including the .abf file extension. Specify the full file path if you are not using the default backup location. For more information, see [Backing Up, Restoring, and Synchronizing Databases &#40;XMLA&#41;](../multidimensional-models-scripting-language-assl-xmla/backing-up-restoring-and-synchronizing-databases-xmla.md).  
   
 ##  <a name="bkmk_schemarowset"></a> Generate a Schema Rowset Query using an XMLA Template  
- The **Template Explorer** contains only one template for schema rowset queries. To use this template, you must be familiar with the requirements of the individual schema rowset that you want to use, including any required elements, and the columns that can be used as restrictions. For more information, see [Analysis Services Schema Rowsets](../schema-rowsets/analysis-services-schema-rowsets.md).  
+ The **Template Explorer** contains only one template for schema rowset queries. To use this template, you must be familiar with the requirements of the individual schema rowset that you want to use, including any required elements, and the columns that can be used as restrictions. For more information, see [Analysis Services Schema Rowsets](https://docs.microsoft.com/bi-reference/schema-rowsets/analysis-services-schema-rowsets).  
   
  Note that many of the schema rowsets have also been exposed as Dynamic Management Views (DMV) for simplicity. By using the corresponding DMV, you can query the schema rowset using syntax like that of Transact-SQL. For example, the following queries return the same results, but one is in XML format, and one is in a tabular format. For more information about DMVs, see [Use Dynamic Management Views &#40;DMVs&#41; to Monitor Analysis Services](use-dynamic-management-views-dmvs-to-monitor-analysis-services.md).  
   
@@ -141,7 +138,7 @@ SELECT * FROM $system.DISCOVER_SCHEMA_ROWSETS
   
 2.  Open **Template Explorer**, and drag the template, **Discover Schema Rowsets**, into the blank query window.  
   
-3.  In the template, replace the [RequestType Element &#40;XMLA&#41;](../xmla/xml-elements-properties/type-element-xmla.md) element with the following text: `<RequestType>MDSCHEMA_INPUT_DATASOURCES</RequestType>`  
+3.  In the template, replace the [RequestType Element &#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/type-element-xmla) element with the following text: `<RequestType>MDSCHEMA_INPUT_DATASOURCES</RequestType>`  
   
 4.  Click **Execute**.  
   
@@ -225,7 +222,7 @@ SELECT * FROM $system.DISCOVER_SCHEMA_ROWSETS
 ## See Also  
  [Multidimensional Expressions &#40;MDX&#41; Reference](/sql/mdx/multidimensional-expressions-mdx-reference)   
  [Data Mining Extensions &#40;DMX&#41; Reference](/sql/dmx/data-mining-extensions-dmx-reference)   
- [Analysis Services Scripting Language &#40;ASSL&#41; Reference](../scripting/analysis-services-scripting-language-assl-for-xmla.md)   
- [Analysis Services Scripting Language &#40;ASSL&#41; Reference](../scripting/analysis-services-scripting-language-assl-for-xmla.md)  
+ [Analysis Services Scripting Language &#40;ASSL&#41; Reference](https://docs.microsoft.com/bi-reference/assl/analysis-services-scripting-language-assl-for-xmla)   
+ [Analysis Services Scripting Language &#40;ASSL&#41; Reference](https://docs.microsoft.com/bi-reference/assl/analysis-services-scripting-language-assl-for-xmla)  
   
   

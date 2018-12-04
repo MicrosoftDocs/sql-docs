@@ -4,17 +4,13 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "configmgr-client"
-ms.tgt_pltfrm: ""
+ms.technology: configuration
 ms.topic: conceptual
 helpviewer_keywords: 
   - "pipes [SQL Server], connecting to"
   - "Named Pipes [SQL Server], default pipe"
   - "client protocols [SQL Server]"
 ms.assetid: 30fbae62-2f2e-4d36-9c6e-3444fff68781
-caps.latest.revision: 22
 author: stevestein
 ms.author: sstein
 manager: craigg

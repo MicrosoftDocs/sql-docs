@@ -4,11 +4,9 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
   - "docset-sql-devref"
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 
   - "ready-only cube view"
@@ -19,7 +17,6 @@ helpviewer_keywords:
   - "visibility [Analysis Services]"
   - "storage [Analysis Services], perspectives"
 ms.assetid: b064171e-b1b4-4f32-95e5-59e1b831c4c9
-caps.latest.revision: 34
 author: minewiskan
 ms.author: owend
 manager: craigg

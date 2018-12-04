@@ -4,18 +4,13 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "docset-sql-devref"
-  - "integration-services"
-ms.tgt_pltfrm: ""
+ms.technology: integration-services
 ms.topic: "reference"
 helpviewer_keywords: 
   - "enumerators [Integration Services]"
   - "packages [Integration Services], managing"
   - "custom enumerators [Integration Services]"
 ms.assetid: ec59b75d-ba09-44ac-9039-9d593bb462d9
-caps.latest.revision: 31
 author: douglaslMS
 ms.author: douglasl
 manager: craigg

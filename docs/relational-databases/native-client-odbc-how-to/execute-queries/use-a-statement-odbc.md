@@ -5,14 +5,11 @@ ms.date: "03/06/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: native-client
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 
   - "statements [ODBC]"
 ms.assetid: f7573f8f-6f21-4e03-8dd5-a5f2ea4878cc
-caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
@@ -25,21 +22,21 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
     
 ### To use a statement  
   
-1.  Call [SQLAllocHandle](http://go.microsoft.com/fwlink/?LinkId=58396) with a *HandleType* of SQL_HANDLE_STMT to allocate a statement handle.  
+1.  Call [SQLAllocHandle](https://go.microsoft.com/fwlink/?LinkId=58396) with a *HandleType* of SQL_HANDLE_STMT to allocate a statement handle.  
   
 2.  Optionally, call [SQLSetStmtAttr](../../../relational-databases/native-client-odbc-api/sqlsetstmtattr.md) to set statement options or [SQLGetStmtAttr](../../../relational-databases/native-client-odbc-api/sqlgetstmtattr.md) to get statement attributes.  
   
      To use server cursors, you must set cursor attributes to values other than their defaults.  
   
-3.  Optionally, if the statement will be executed several times, prepare the statement for execution with [SQLPrepare Function](http://go.microsoft.com/fwlink/?LinkId=59360).  
+3.  Optionally, if the statement will be executed several times, prepare the statement for execution with [SQLPrepare Function](https://go.microsoft.com/fwlink/?LinkId=59360).  
   
-4.  Optionally, if the statement has bound parameter markers, bind the parameter markers to program variables by using [SQLBindParameter](../../../relational-databases/native-client-odbc-api/sqlbindparameter.md). If the statement was prepared, you can call [SQLNumParams](http://go.microsoft.com/fwlink/?LinkId=58404) and [SQLDescribeParam](../../../relational-databases/native-client-odbc-api/sqldescribeparam.md) to find the number and characteristics of the parameters.  
+4.  Optionally, if the statement has bound parameter markers, bind the parameter markers to program variables by using [SQLBindParameter](../../../relational-databases/native-client-odbc-api/sqlbindparameter.md). If the statement was prepared, you can call [SQLNumParams](https://go.microsoft.com/fwlink/?LinkId=58404) and [SQLDescribeParam](../../../relational-databases/native-client-odbc-api/sqldescribeparam.md) to find the number and characteristics of the parameters.  
   
 5.  Execute a statement directly by using SQLExecDirect.  
   
      \- or -  
   
-     If the statement was prepared, execute it multiple times by using [SQLExecute](http://go.microsoft.com/fwlink/?LinkId=58400).  
+     If the statement was prepared, execute it multiple times by using [SQLExecute](https://go.microsoft.com/fwlink/?LinkId=58400).  
   
      \- or -  
   

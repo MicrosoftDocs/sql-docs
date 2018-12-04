@@ -5,9 +5,7 @@ ms.date: "06/10/2016"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "sys.dm_db_missing_index_groups"
@@ -20,7 +18,6 @@ helpviewer_keywords:
   - "sys.dm_db_missing_index_groups dynamic management view"
   - "missing indexes feature [SQL Server], sys.dm_db_missing_index_groups dynamic management view"
 ms.assetid: 9cc00acd-d83d-49f8-be72-5b2aebed246b
-caps.latest.revision: 39
 author: stevestein
 ms.author: sstein
 manager: craigg
@@ -31,7 +28,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
 
   This DMV returns information about indexes that are missing in a specific index group, except for spatial indexes. 
   
- In [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], dynamic management views cannot expose information that would impact database containment or expose information about other databases the user has access to. To avoid exposing this information, every row that contains data that doesn’t belong to the connected tenant is filtered out.  
+ In [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], dynamic management views cannot expose information that would impact database containment or expose information about other databases the user has access to. To avoid exposing this information, every row that contains data that doesn't belong to the connected tenant is filtered out.  
    
 |Column name|Data type|Description|  
 |-----------------|---------------|-----------------|  

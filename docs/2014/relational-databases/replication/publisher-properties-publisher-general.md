@@ -4,17 +4,13 @@ ms.custom: ""
 ms.date: "06/30/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
+ms.technology: replication
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.rep.configdistwizard.pubproperties.general.f1"
 helpviewer_keywords: 
   - "Publisher Properties dialog box"
 ms.assetid: 9055bd4a-89cc-4059-9474-e213d7bcc36d
-caps.latest.revision: 18
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg

@@ -5,9 +5,7 @@ ms.date: "03/16/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "INTERSECT_TSQL"
@@ -22,7 +20,6 @@ helpviewer_keywords:
   - "comparing queries"
   - "INTERSECT operator"
 ms.assetid: b1019300-171a-4a1a-854f-e1e751de3565
-caps.latest.revision: 39
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: craigg
@@ -33,7 +30,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 
   Returns distinct rows by comparing the results of two queries.  
   
- EXCEPT returns distinct rows from the left input query that aren’t output by the right input query.  
+ EXCEPT returns distinct rows from the left input query that aren't output by the right input query.  
   
  INTERSECT returns distinct rows that are output by both the left and right input queries operator.  
   

@@ -3,7 +3,6 @@ title: "Configure a URL  (SSRS Configuration Manager) | Microsoft Docs"
 ms.date: 05/26/2016
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
-ms.suite: pro-bi
 
 ms.topic: conceptual
 helpviewer_keywords: 
@@ -72,9 +71,9 @@ ms.author: maghan
   
     -   From a command prompt, type the following command to return a list of TCP ports that are being used:  
   
-         `netstat –anp tcp`  
+         `netstat -anp tcp`  
   
-    -   Review the Microsoft Support article, [Information about TCP/IP port assignments](http://support.microsoft.com/kb/174904), to read about TCP port assignments and the differences between Well Known Ports (0 through 1023), Registered Ports (1024 through 49151), and Dynamic or Private Ports (49152 through 65535).  
+    -   Review the Microsoft Support article, [Information about TCP/IP port assignments](https://support.microsoft.com/kb/174904), to read about TCP port assignments and the differences between Well Known Ports (0 through 1023), Registered Ports (1024 through 49151), and Dynamic or Private Ports (49152 through 65535).  
   
     -   If you are using Windows Firewall, you must open the port. For instructions, see [Configure a Firewall for Report Server Access](../../reporting-services/report-server/configure-a-firewall-for-report-server-access.md).  
   
@@ -120,9 +119,9 @@ ms.author: maghan
 ## Setting Advanced Properties to Specify Additional URLs  
  You can reserve multiple URLs for the Report Server Web service or the [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] by specifying different ports or host names (either an IP address or a host header name that a domain name server can resolve to an IP address assigned to the computer). By creating multiple URLs, you can set up different access paths to the same report server instance. For example, to enable intranet and extranet access to a report server, you might use the default URL for access across the intranet, and an additional fully qualified host name for extranet access:  
   
--   `http://myserver01/reportserver`  
+-   `https://myserver01/reportserver`  
   
--   `http://www.adventure-works.com/reportserver`  
+-   `https://www.adventure-works.com/reportserver`  
   
  You cannot set multiple virtual directory names for the same application instance. Each [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] application instance is mapped to a single virtual directory name. If you have multiple instances of [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] on the same computer, the virtual directory name for an application should include the instance name to ensure that each request reaches its intended target.  
  
@@ -147,7 +146,7 @@ ms.author: maghan
   
 2.  Click **Add**.  
   
-3.  Click IP Address or Host Header Name. If you specify a host header, be sure to specify a name that the DNS service can resolve. If you are specifying publicly available domain name, include the whole URL, including `http://www`.  
+3.  Click IP Address or Host Header Name. If you specify a host header, be sure to specify a name that the DNS service can resolve. If you are specifying publicly available domain name, include the whole URL, including `https://www`.  
   
 4.  Specify the port. If you specify a custom port, the URL to the application must always include the port number.  
   
@@ -161,13 +160,13 @@ ms.author: maghan
 ##  <a name="URLExamples"></a> Examples of URL Configurations  
  The following list shows some examples of what a report server URL might resemble:  
   
--   `http://localhost/reportserver`  
+-   `https://localhost/reportserver`  
   
--   `http://localhost/reportserver_SQLEXPRESS`  
+-   `https://localhost/reportserver_SQLEXPRESS`  
   
--   `http://sales01/reportserver`  
+-   `https://sales01/reportserver`  
   
--   `http://sales01:8080/reportserver`  
+-   `https://sales01:8080/reportserver`  
   
 -   `https://sales.adventure-works.com/reportserver`  
   
@@ -175,13 +174,13 @@ ms.author: maghan
   
  URLs that you use to access the [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] share a similar format and are typically created under the same Web site that hosts the report server. The only difference is the virtual directory name (in this case, it is **reports** but you can configure it to use whatever name that you want):  
   
--   `http://localhost/reports`  
+-   `https://localhost/reports`  
   
--   `http://localhost/reports_SQLEXPRESS`  
+-   `https://localhost/reports_SQLEXPRESS`  
   
--   `http://sales01/reports`  
+-   `https://sales01/reports`  
   
--   `http://sales01:8080/reports`  
+-   `https://sales01:8080/reports`  
   
 -   `https://sales.adventure-works.com/reports`  
   

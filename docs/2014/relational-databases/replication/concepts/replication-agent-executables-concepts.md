@@ -4,11 +4,7 @@ ms.custom: ""
 ms.date: "04/27/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
-  - "docset-sql-devref"
-  - "replication"
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 
   - "programming interfaces [SQL Server replication]"
@@ -17,7 +13,6 @@ helpviewer_keywords:
   - "agents [SQL Server replication], executables"
   - "command prompt [SQL Server replication]"
 ms.assetid: cba476df-d4ea-44c9-bb86-81488971e328
-caps.latest.revision: 35
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg

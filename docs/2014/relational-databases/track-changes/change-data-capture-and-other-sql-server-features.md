@@ -4,15 +4,11 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "change data capture [SQL Server], other SQL Server features and"
 ms.assetid: 7dfcb362-1904-4578-8274-da16681a960e
-caps.latest.revision: 12
 author: rothja
 ms.author: jroth
 manager: craigg

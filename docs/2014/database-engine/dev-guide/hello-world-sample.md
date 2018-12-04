@@ -4,14 +4,11 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "database-engine"
   - "docset-sql-devref"
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 ms.assetid: fed6c358-f5ee-4d4c-9ad6-089778383ba7
-caps.latest.revision: 16
 author: mashamsft
 ms.author: mathoma
 manager: craigg
@@ -19,7 +16,7 @@ manager: craigg
 # Hello World Sample
   The Hello World sample demonstrates the basic operations that are involved in creating, deploying, and testing a simple common language runtime (CLR) integration-based stored procedure. This sample also demonstrates how to return data through a record, which is dynamically constructed by the stored procedure and returned to the caller.  
   
- The `HelloWorld` stored procedure returns the string “Hello world!” in a result set consisting of one row. This example illustrates some uses for the classes [Microsoft.SqlServer.Server.SqlMetaData](http://go.microsoft.com/fwlink/?LinkID=193572), [Microsoft.SqlServer.Server.SqlDataRecord](http://go.microsoft.com/fwlink/?LinkID=193573) and [Microsoft.SqlServer.Server.Pipe](http://go.microsoft.com/fwlink/?LinkID=193571).  
+ The `HelloWorld` stored procedure returns the string "Hello world!" in a result set consisting of one row. This example illustrates some uses for the classes [Microsoft.SqlServer.Server.SqlMetaData](http://go.microsoft.com/fwlink/?LinkID=193572), [Microsoft.SqlServer.Server.SqlDataRecord](http://go.microsoft.com/fwlink/?LinkID=193573) and [Microsoft.SqlServer.Server.Pipe](http://go.microsoft.com/fwlink/?LinkID=193571).  
   
 ## Prerequisites  
  To create and run this project the following the following software must be installed:  

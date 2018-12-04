@@ -4,22 +4,15 @@ ms.custom: ""
 ms.date: "03/04/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "system-stored-procedures"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
+ms.technology: replication
 ms.topic: "language-reference"
-applies_to: 
-  - "SQL Server"
 f1_keywords: 
   - "sp_deletemergeconflictrow"
   - "sp_deletemergeconflictrow_TSQL"
 helpviewer_keywords: 
   - "sp_deletemergeconflictrow"
 ms.assetid: 64cf1186-28b8-4cd9-88f1-a7808a9c8d60
-caps.latest.revision: 26
 author: stevestein
 ms.author: sstein
 manager: craigg
@@ -43,19 +36,19 @@ sp_deletemergeconflictrow [ [ @conflict_table = ] 'conflict_table' ]
 ```  
   
 ## Arguments  
- [ **@conflict_table=**] **'***conflict_table***'**  
+ [ **@conflict_table=**] **'**_conflict_table_**'**  
  Is the name of the conflict table. *conflict_table* is **sysname**, with a default of **%**. If the *conflict_table* is specified as NULL or **%**, the conflict is assumed to be a delete conflict and the row matching *rowguid* and *origin_datasource* and *source_object* is deleted from the [MSmerge_conflicts_info &#40;Transact-SQL&#41;](../../relational-databases/system-tables/msmerge-conflicts-info-transact-sql.md) table.  
   
- [ **@source_object=**] **'***source_object***'**  
+ [ **@source_object=**] **'**_source_object_**'**  
  Is the name of the source table. *source_object* is **nvarchar(386)**, with a default of NULL.  
   
- [ **@rowguid =**] **'***rowguid***'**  
+ [ **@rowguid =**] **'**_rowguid_**'**  
  Is the row identifier for the delete conflict. *rowguid* is **uniqueidentifier**, with no default.  
   
- [ **@origin_datasource=**] **'***origin_datasource***'**  
+ [ **@origin_datasource=**] **'**_origin_datasource_**'**  
  Is the origin of the conflict. *origin_datasource* is **varchar(255)**, with no default.  
   
- [ **@drop_table_if_empty=**] **'***drop_table_if_empty***'**  
+ [ **@drop_table_if_empty=**] **'**_drop_table_if_empty_**'**  
  Is a flag indicating that the *conflict_table* is to be dropped if is empty. *drop_table_if_empty* is **varchar(10)**, with a default of FALSE.  
   
 ## Return Code Values  

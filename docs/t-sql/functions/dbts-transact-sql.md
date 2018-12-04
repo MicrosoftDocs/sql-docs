@@ -5,9 +5,7 @@ ms.date: "09/18/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "@@DBTS_TSQL"
@@ -18,7 +16,6 @@ helpviewer_keywords:
   - "@@DBTS function"
   - "timestamp data type"
 ms.assetid: 91842ddd-91c0-4445-a03f-116f6bc991d0
-caps.latest.revision: 35
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg

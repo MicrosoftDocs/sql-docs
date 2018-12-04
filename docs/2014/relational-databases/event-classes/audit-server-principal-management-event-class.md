@@ -4,17 +4,13 @@ ms.custom: ""
 ms.date: "06/14/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: supportability
 ms.topic: conceptual
 topic_type: 
   - "apiref"
 helpviewer_keywords: 
   - "Audit Server Principal Management event class"
 ms.assetid: 7894850c-91fe-47c0-a03c-baacbc10d29c
-caps.latest.revision: 21
 author: stevestein
 ms.author: sstein
 manager: craigg

@@ -4,13 +4,8 @@ ms.prod: sql
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: ssma
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
-applies_to: 
-  - "Azure SQL Database"
-  - "SQL Server"
 helpviewer_keywords: 
   - "conversion, setting options"
   - "migration options"
@@ -19,7 +14,6 @@ helpviewer_keywords:
   - "project settings"
   - "schemas"
 ms.assetid: 0a7304df-2f35-4453-96ef-7ac83dea1167
-caps.latest.revision: 20
 author: "Shamikg"
 ms.author: "Shamikg"
 manager: craigg
@@ -32,15 +26,15 @@ SSMA has four sets of configuration settings and four modes for configuring thes
   
 The settings are described in the "User Interface Reference" section of this documentation. For more information about the settings and how the settings are applied in each mode, see the following topics :  
   
--   [Project Settings (Conversion)](http://msdn.microsoft.com/bcebc635-c638-4ddb-924c-b9ccfef86388)  
+-   [Project Settings (Conversion)](https://msdn.microsoft.com/bcebc635-c638-4ddb-924c-b9ccfef86388)  
   
--   [Project Settings (Migration)](http://msdn.microsoft.com/4caebc9c-8680-4b99-a8fa-89c43161c95d)  
+-   [Project Settings (Migration)](https://msdn.microsoft.com/4caebc9c-8680-4b99-a8fa-89c43161c95d)  
   
--   [Project Settings (GUI)](http://msdn.microsoft.com/cf06baf1-8714-48a3-95dc-781f6ca53693)  
+-   [Project Settings (GUI)](https://msdn.microsoft.com/cf06baf1-8714-48a3-95dc-781f6ca53693)  
   
--   [Project Settings (Type Mapping)](http://msdn.microsoft.com/b87b9683-abed-4677-8c50-18bdba704655)  
+-   [Project Settings (Type Mapping)](https://msdn.microsoft.com/b87b9683-abed-4677-8c50-18bdba704655)  
   
--   [Project Settings (SQL Azure)](http://msdn.microsoft.com/bbb8a204-d0e4-4f0b-9709-271feb1f136e)  
+-   [Project Settings (SQL Azure)](https://msdn.microsoft.com/bbb8a204-d0e4-4f0b-9709-271feb1f136e)  
   
 ## Setting Project Options  
 In SSMA, you can configure default settings for all projects. These settings are saved to the SSMA configuration file and applied to any new project that you create.  

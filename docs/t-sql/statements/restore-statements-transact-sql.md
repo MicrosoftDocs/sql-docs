@@ -1,13 +1,11 @@
 ---
 title: "RESTORE (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "08/08/2018"
+ms.date: "10/02/2018"
 ms.prod: sql
 ms.prod_service: "sql-database"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "RESTORE DATABASE"
@@ -39,7 +37,6 @@ helpviewer_keywords:
   - "transaction log backups [SQL Server], RESTORE statement"
   - "RESTORE LOG, see RESTORE statement"
 ms.assetid: 877ecd57-3f2e-4237-890a-08f16e944ef1
-caps.latest.revision: 248 
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
@@ -59,22 +56,13 @@ In the following row, click whichever product name you are interested in. The cl
 ::: moniker range=">=sql-server-2016||>=sql-server-linux-2017||=sqlallproducts-allversions"
 
 > [!div class="mx-tdCol2BreakAll"]
-> <table>
-> <tr>
->   <th> &nbsp; </th>
->   <th> &nbsp; </th>
->   <th> &nbsp; </th>
-> </tr>
-> <tr>
->   <th><strong><em>* SQL Server *<br />&nbsp;</em></strong></th>
->   <th><a href="restore-statements-transact-sql.md?view=azuresqldb-mi-current">SQL Database<br />Managed Instance</a></th>
->   <th><a href="restore-statements-transact-sql.md?view=aps-pdw-2016">SQL Parallel<br />Data Warehouse</a></th>
-> </tr>
-> </table>
+> ||||
+> |-|-|-|
+> |**_\* SQL Server \*_**|[SQL Database<br />Managed Instance](restore-statements-transact-sql.md?view=azuresqldb-mi-current)|[Parallel<br />Data Warehouse](restore-statements-transact-sql.md?view=aps-pdw-2016)
 
 &nbsp;
 
-# SQL Server
+## SQL Server
 
 This command enables you to perform the following restore scenarios:  
   
@@ -106,7 +94,7 @@ RESTORE DATABASE { database_name | @database_name_var }
    | , <change_data_capture_WITH_option>  
    | , <FILESTREAM_WITH_option>  
    | , <service_broker_WITH options>   
-   | , \<point_in_time_WITH_options—RESTORE_DATABASE>   
+   | , \<point_in_time_WITH_options-RESTORE_DATABASE>   
    } [ ,...n ]  
  ]  
 [;]  
@@ -118,7 +106,7 @@ RESTORE DATABASE { database_name | @database_name_var }
    WITH   
       PARTIAL, NORECOVERY   
       [  , <general_WITH_options> [ ,...n ]   
-       | , \<point_in_time_WITH_options—RESTORE_DATABASE>   
+       | , \<point_in_time_WITH_options-RESTORE_DATABASE>   
       ] [ ,...n ]   
 [;]  
   
@@ -154,7 +142,7 @@ RESTORE LOG { database_name | @database_name_var }
        ]  
     | ,  <general_WITH_options> [ ,...n ]  
     | , <replication_WITH_option>  
-    | , \<point_in_time_WITH_options—RESTORE_LOG>   
+    | , \<point_in_time_WITH_options-RESTORE_LOG>   
    } [ ,...n ]  
  ]   
 [;]  
@@ -227,7 +215,7 @@ Note: URL is the format used to specify the location and the file name for the M
  | ERROR_BROKER_CONVERSATIONS   
  | NEW_BROKER  
   
-\<point_in_time_WITH_options—RESTORE_DATABASE>::=   
+\<point_in_time_WITH_options-RESTORE_DATABASE>::=   
  | {  
    STOPAT = { 'datetime'| @datetime_var }   
  | STOPATMARK = 'lsn:lsn_number'  
@@ -236,7 +224,7 @@ Note: URL is the format used to specify the location and the file name for the M
                  [ AFTER 'datetime']   
    }   
   
-\<point_in_time_WITH_options—RESTORE_LOG>::=   
+\<point_in_time_WITH_options-RESTORE_LOG>::=   
  | {  
    STOPAT = { 'datetime'| @datetime_var }   
  | STOPATMARK = { 'mark_name' | 'lsn:lsn_number' }  
@@ -300,7 +288,7 @@ For descriptions of the arguments, see [RESTORE Arguments &#40;Transact-SQL&#41;
   
 ### Discontinued RESTORE Keywords  
 The following keywords were discontinued in [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]:  
-|Discontinued keyword|Replaced by…|Example of replacement keyword|  
+|Discontinued keyword|Replaced by...|Example of replacement keyword|  
 |--------------------------|------------------|------------------------------------|  
 |LOAD|RESTORE|`RESTORE DATABASE`|  
 |TRANSACTION|LOG|`RESTORE LOG`|  
@@ -371,7 +359,7 @@ Full-text data is restored together with other database data during a complete r
 The RESTORE statement also can be used to perform restores to alternate locations, differential restores, file and filegroup restores, and differential file and filegroup restores of full-text data. In addition, RESTORE can restore full-text files only, as well as with database data.  
   
 > [!NOTE] 
-> Full-text catalogs imported from [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] are still treated as database files. For these, the [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] procedure for backing up full-text catalogs remains applicable, except that pausing and resuming during the backup operation are no longer necessary. For more information, see [Backing Up and Restoring Full-Text Catalogs](http://go.microsoft.com/fwlink/?LinkId=107381).  
+> Full-text catalogs imported from [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] are still treated as database files. For these, the [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] procedure for backing up full-text catalogs remains applicable, except that pausing and resuming during the backup operation are no longer necessary. For more information, see [Backing Up and Restoring Full-Text Catalogs](https://go.microsoft.com/fwlink/?LinkId=107381).  
   
 ## Metadata  
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] includes backup and restore history tables that track the backup and restore activity for each server instance. When a restore is performed, the backup history tables are also modified. For information on these tables, see [Backup History and Header Information &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-history-and-header-information-sql-server.md).  
@@ -711,22 +699,13 @@ RESTORE DATABASE Sales
 ::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
 
 > [!div class="mx-tdCol2BreakAll"]
-> <table>
-> <tr>
->   <th> &nbsp; </th>
->   <th> &nbsp; </th>
->   <th> &nbsp; </th>
-> </tr>
-> <tr>
->   <th><a href="restore-statements-transact-sql.md?view=sql-server-2016">SQL Server</a></th>
->   <th><strong><em>* SQL Database<br />Managed Instance *</em></strong></th>
->   <th><a href="restore-statements-transact-sql.md?view=aps-pdw-2016">SQL Parallel<br />Data Warehouse</a></th>
-> </tr>
-> </table>
+> ||||
+> |-|-|-|
+> |[SQL Server](restore-statements-transact-sql.md?view=sql-server-2016)|**_\* SQL Database<br />Managed Instance \*_**|[Parallel<br />Data Warehouse](restore-statements-transact-sql.md?view=aps-pdw-2016)
 
 &nbsp;
 
-# Azure SQL Database Managed Instance
+## Azure SQL Database Managed Instance
 
 This command enables you to restore an entire database from a full database backup (a complete restore) from Azure Blob Storage account.
 
@@ -760,7 +739,7 @@ FROM URL
 Specifies one or more backup devices placed on URLs that will be used for the restore operation. The URL format is used for restoring backups from the Microsoft Azure storage service. 
 
 > [!IMPORTANT]  
-> In order to restore from multiple devices when restoring from URL, you must use Shared Access Signature (SAS) tokens. For examples creating a Shared Access Signature, see [SQL Server Backup to URL](../../relational-databases/backup-restore/sql-server-backup-to-url.md) and [Simplifying creation of SQL Credentials with Shared Access Signature (SAS) tokens on Azure Storage with Powershell](http://blogs.msdn.com/b/sqlcat/archive/2015/03/21/simplifying-creation-sql-credentials-with-shared-access-signature-sas-keys-on-azure-storage-containers-with-powershell.aspx).  
+> In order to restore from multiple devices when restoring from URL, you must use Shared Access Signature (SAS) tokens. For examples creating a Shared Access Signature, see [SQL Server Backup to URL](../../relational-databases/backup-restore/sql-server-backup-to-url.md) and [Simplifying creation of SQL Credentials with Shared Access Signature (SAS) tokens on Azure Storage with Powershell](https://blogs.msdn.com/b/sqlcat/archive/2015/03/21/simplifying-creation-sql-credentials-with-shared-access-signature-sas-keys-on-azure-storage-containers-with-powershell.aspx).  
   
 *n*  
 Is a placeholder that indicates that up to 64 backup devices may be specified in a comma-separated list.  
@@ -849,25 +828,16 @@ WHERE r.command = 'RESTORE DATABASE'
 > This view will probably show two restore requests. One is original RESTORE statement sent by the client, and the another one is background RESTORE statement that is executing even if the client connection fails.
 
 ::: moniker-end
-::: moniker range="=aps-pdw-2016||=sqlallproducts-allversions"
+::: moniker range=">=aps-pdw-2016||=sqlallproducts-allversions"
 
 > [!div class="mx-tdCol2BreakAll"]
-> <table>
-> <tr>
->   <th> &nbsp; </th>
->   <th> &nbsp; </th>
->   <th> &nbsp; </th>
-> </tr>
-> <tr>
->   <th><a href="restore-statements-transact-sql.md?view=sql-server-2016">SQL Server</a></th>
->   <th><a href="restore-statements-transact-sql.md?view=azuresqldb-mi-current">SQL Database<br />Managed Instance</a></th>
->   <th><strong><em>* SQL Parallel<br />Data Warehouse *</em></strong></th>
-> </tr>
-> </table>
+> ||||
+> |-|-|-|
+> |[SQL Server](restore-statements-transact-sql.md?view=sql-server-2016)|[SQL Database<br />Managed Instance](restore-statements-transact-sql.md?view=azuresqldb-mi-current)|**_\* Parallel<br />Data Warehouse \*_**
 
 &nbsp;
 
-# SQL Parallel Data Warehouse
+## Parallel Data Warehouse
 
 
 Restores a [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] user database from a database backup to a [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] appliance. The database is restored from a backup that was previously created by the [!INCLUDE[ssPDW](../../includes/sspdw-md.md)][BACKUP DATABASE &#40;Parallel Data Warehouse&#41;](../../t-sql/statements/backup-transact-sql.md) command. Use the backup and restore operations to build a disaster recovery plan, or to move databases from one appliance to another.  

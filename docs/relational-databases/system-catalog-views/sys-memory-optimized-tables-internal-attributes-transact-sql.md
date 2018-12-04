@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "03/07/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.component: "system-catalog-views"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "sys.memory_optimized_tables_internal_attributes"
@@ -20,7 +17,6 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.memory_optimized_tables_internal_attributes catalog view"
 ms.assetid: 78ef5807-0504-4de8-9a01-ede6c03c7ff1
-caps.latest.revision: 13
 author: "jodebrui"
 ms.author: "jodebrui"
 manager: craigg

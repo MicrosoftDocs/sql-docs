@@ -4,15 +4,12 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ""
-ms.date: "01/19/2017"
+ms.date: 11/08/2018
 ms.reviewer: ""
-ms.suite: "sql"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "multidimensional data [ADO]"
 ms.assetid: 84387746-aa3e-44fd-ad6c-a8214a6966dc
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
@@ -30,13 +27,13 @@ A *cellset* is the result of a query on multidimensional data. It consists of a 
   
 -   Salesperson  
   
--   Geography (natural hierarchy) — Continents, Countries, States, and so on  
+-   Geography (natural hierarchy) - Continents, Countries, States, and so on  
   
--   Quarters — Quarters, Months, Days  
+-   Quarters - Quarters, Months, Days  
   
 -   Years  
   
--   Measures — Sales, PercentChange, BudgetedSales  
+-   Measures - Sales, PercentChange, BudgetedSales  
   
 -   Products  
   
@@ -59,9 +56,9 @@ A *cellset* is the result of a query on multidimensional data. It consists of a 
   
  The x-axis has two nested dimensions: Salesperson and Geography. From Geography, four members are selected: Seattle, Boston, USA-South, and Japan. Two members are selected from Salesperson: Valentine and Nash. This yields a total of eight positions on this axis (8 = 4*2).  
   
- Each coordinate is represented as a position with two members — one from the Salesperson dimension and another from the Geography dimension:  
+ Each coordinate is represented as a position with two members - one from the Salesperson dimension and another from the Geography dimension:  
   
-```  
+```console
 (Valentine, Seattle), (Valentine, Boston), (Valentine, USA_North),  
 (Valentine, Japan), (Nash, Seattle), (Nash, Boston), (Nash, USA_North),  
 (Nash, Japan)  
@@ -69,7 +66,7 @@ A *cellset* is the result of a query on multidimensional data. It consists of a 
   
  The y-axis has only one dimension, containing the following eight positions:  
   
-```  
+```console
 Jan, Feb, Mar, Qtr2, Qtr3, Oct, Nov, Dec  
 ```  
   

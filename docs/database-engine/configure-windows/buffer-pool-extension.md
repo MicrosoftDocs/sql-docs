@@ -5,12 +5,9 @@ ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: configuration
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: 909ab7d2-2b29-46f5-aea1-280a5f8fedb4
-caps.latest.revision: 23
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
@@ -44,7 +41,7 @@ manager: craigg
  The following terms are applicable to the buffer pool extension feature.  
   
  Solid-state drive (SSD)  
- Solid-state drives store data in memory (RAM) in a persistent manner. For more information, see [this definition](http://en.wikipedia.org/wiki/Solid-state_drive).  
+ Solid-state drives store data in memory (RAM) in a persistent manner. For more information, see [this definition](https://en.wikipedia.org/wiki/Solid-state_drive).  
   
  Buffer  
  In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], A buffer is an 8-KB page in memory, the same size as a data or index page. Thus, the buffer cache is divided into 8-KB pages. A page remains in the buffer cache until the buffer manager needs the buffer area to read in more data. Data is written back to disk only if it is modified. These in-memory modified pages are known as dirty pages. A page is clean when it is equivalent to its database image on disk. Data in the buffer cache can be modified multiple times before being written back to disk.  

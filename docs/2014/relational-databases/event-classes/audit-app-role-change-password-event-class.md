@@ -4,17 +4,13 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: supportability
 ms.topic: conceptual
 topic_type: 
   - "apiref"
 helpviewer_keywords: 
   - "Audit App Role Change Password event class"
 ms.assetid: 28a76c12-e997-48bb-bb0e-9624237a188e
-caps.latest.revision: 29
 author: stevestein
 ms.author: sstein
 manager: craigg
@@ -30,7 +26,7 @@ manager: craigg
 |**ClientProcessID**|**int**|ID assigned by the host computer to the process where the client application is running. This data column is populated if the client process ID is provided by the client.|9|Yes|  
 |**DatabaseID**|**int**|ID of the database specified by the USE *database* statement or the default database if no USE *database* statement has been issued for a given instance. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] displays the name of the database if the **ServerName** data column is captured in the trace and the server is available. Determine the value for a database by using the DB_ID function.|3|Yes|  
 |**DatabaseName**|**nvarchar**|Name of the database where the application role is being modified.|35|Yes|  
-|**DBUserName**|**nvarchar**|Issuer’s username in the database.|40|Yes|  
+|**DBUserName**|**nvarchar**|Issuer's username in the database.|40|Yes|  
 |**EventClass**|**int**|Type of event = 112.|27|No|  
 |**EventSequence**|**int**|Sequence of a given event within the request.|51|No|  
 |**HostName**|**nvarchar**|Name of the computer on which the client is running. This data column is populated if the client provides the host name. To determine the host name, use the HOST_NAME function.|8|Yes|  

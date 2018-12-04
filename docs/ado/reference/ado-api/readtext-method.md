@@ -6,8 +6,6 @@ ms.technology: connectivity
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 apitype: "COM"
 f1_keywords: 
@@ -16,7 +14,6 @@ f1_keywords:
 helpviewer_keywords: 
   - "ReadText method [ADO]"
 ms.assetid: be5a409e-cf87-4859-9ea5-713401755a77
-caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
 manager: craigg
@@ -44,7 +41,7 @@ String = Stream.ReadText ( NumChars)
 > [!NOTE]
 >  The **ReadText** method is used with text streams ([Type](../../../ado/reference/ado-api/type-property-ado-stream.md) is **adTypeText**). For binary streams (**Type** is **adTypeBinary**), use [Read](../../../ado/reference/ado-api/read-method.md).  
   
- Queries that result in a large amount of XML data being returned through the **ReadText** method of the ActiveX Data Object (ADO) Stream object may take a great deal of time to execute; if this is done in a COM+ component that is invoked from an ASP page, the user's session may time out. ADO converts Stream object data from UTF-8 encoding to Unicode; the frequent memory reallocation involved in conversion of such a large quantity of data at once is quite time-consuming. To resolve, make repeated calls to the **ReadText** method of the ADO command object, and specify a smaller number of characters. Tests have shown that a value equivalent to 128K (131,072) is optimal. Response time decreases as this value is decreased. For more information, see Knowledge Base article 280067, "PRB: Retrieving very large XML Documents from SQL Server 2000 by using ReadText method of ADO stream object may be slow", in the Microsoft Knowledge Base at http://support.microsoft.com.  
+ Queries that result in a large amount of XML data being returned through the **ReadText** method of the ActiveX Data Object (ADO) Stream object may take a great deal of time to execute; if this is done in a COM+ component that is invoked from an ASP page, the user's session may time out. ADO converts Stream object data from UTF-8 encoding to Unicode; the frequent memory reallocation involved in conversion of such a large quantity of data at once is quite time-consuming. To resolve, make repeated calls to the **ReadText** method of the ADO command object, and specify a smaller number of characters. Tests have shown that a value equivalent to 128K (131,072) is optimal. Response time decreases as this value is decreased. For more information, see Knowledge Base article 280067, "PRB: Retrieving very large XML Documents from SQL Server 2000 by using ReadText method of ADO stream object may be slow", in the Microsoft Knowledge Base at https://support.microsoft.com.  
   
 ## Applies To  
  [Stream Object (ADO)](../../../ado/reference/ado-api/stream-object-ado.md)  

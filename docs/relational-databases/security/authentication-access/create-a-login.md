@@ -5,9 +5,7 @@ ms.date: "08/01/2016"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: security
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql13.swb.login.status.f1"
@@ -22,7 +20,6 @@ helpviewer_keywords:
   - "Create login [SQL Server]"
   - "SQL Server logins"
 ms.assetid: fb163e47-1546-4682-abaa-8c9494e9ddc7
-caps.latest.revision: 29
 author: VanMSFT
 ms.author: vanto
 manager: craigg
@@ -53,19 +50,19 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   
 1.  In Object Explorer, expand the folder of the server instance in which you want to create the new login.  
   
-2.  Right-click the **Security** folder, point to **New**, and select **Login…**.  
+2.  Right-click the **Security** folder, point to **New**, and select **Login...**.  
   
-3.  In the **Login – New** dialog box, on the **General** page, enter the name of a user in the **Login name** box. Alternately, click **Search…** to open the **Select User or Group** dialog box.  
+3.  In the **Login - New** dialog box, on the **General** page, enter the name of a user in the **Login name** box. Alternately, click **Search...** to open the **Select User or Group** dialog box.  
   
-     If you click **Search…**:  
+     If you click **Search...**:  
   
-    1.  Under **Select this object type**, click **Object Types…** to open the **Object Types** dialog box and select any or all of the following: **Built-in security principals**, **Groups**, and **Users**. **Built-in security principals** and **Users** are selected by default. When finished, click **OK**.  
+    1.  Under **Select this object type**, click **Object Types...** to open the **Object Types** dialog box and select any or all of the following: **Built-in security principals**, **Groups**, and **Users**. **Built-in security principals** and **Users** are selected by default. When finished, click **OK**.  
   
-    2.  Under **From this location**, click **Locations…** to open the **Locations** dialog box and select one of the available server locations. When finished, click **OK**.  
+    2.  Under **From this location**, click **Locations...** to open the **Locations** dialog box and select one of the available server locations. When finished, click **OK**.  
   
-    3.  Under **Enter the object name to select (examples)**, enter the user or group name that you want to find. For more information, see [Select Users, Computers, or Groups Dialog Box](http://technet.microsoft.com/library/cc771712.aspx).  
+    3.  Under **Enter the object name to select (examples)**, enter the user or group name that you want to find. For more information, see [Select Users, Computers, or Groups Dialog Box](https://technet.microsoft.com/library/cc771712.aspx).  
   
-    4.  Click **Advanced…** for more advanced search options. For more information, see [Select Users, Computers, or Groups Dialog Box - Advanced Page](http://technet.microsoft.com/library/cc733110.aspx).  
+    4.  Click **Advanced...** for more advanced search options. For more information, see [Select Users, Computers, or Groups Dialog Box - Advanced Page](https://technet.microsoft.com/library/cc733110.aspx).  
   
     5.  Click **OK**.  
   
@@ -96,7 +93,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 11. [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
 ### Additional Options  
- The **Login – New** dialog box also offers options on four additional pages: **Server Roles**, **User Mapping**, **Securables**, and **Status**.  
+ The **Login - New** dialog box also offers options on four additional pages: **Server Roles**, **User Mapping**, **Securables**, and **Status**.  
   
 ### Server Roles  
  The **Server Roles** page lists all possible roles that can be assigned to the new login. The following options are available:  
@@ -162,23 +159,23 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   
 1.  Click **Search**.  
   
-2.  In the **Add Objects** dialog box, select one of the following options: **Specific objects…**, **All objects of the types…**, or **The server***server_name*. [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
+2.  In the **Add Objects** dialog box, select one of the following options: **Specific objects...**, **All objects of the types...**, or **The server**_server\_name_. [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
-    > **NOTE:** Selecting **The server***server_name* automatically fills the upper grid with all of that servers' securable objects.  
+    > **NOTE:** Selecting **The server**_server\_name_ automatically fills the upper grid with all of that servers' securable objects.  
   
-3.  If you select **Specific objects…**:  
+3.  If you select **Specific objects...**:  
   
-    1.  In the **Select Objects** dialog box, under **Select these object types**, click **Object Types…**.  
+    1.  In the **Select Objects** dialog box, under **Select these object types**, click **Object Types...**.  
   
     2.  In the **Select Object Types** dialog box, select any or all of the following object types: **Endpoints**, **Logins**, **Servers**, **Availability Groups**, and **Server roles**. [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
-    3.  Under **Enter the object names to select (examples)**, click **Browse…**.  
+    3.  Under **Enter the object names to select (examples)**, click **Browse...**.  
   
     4.  In the **Browse for Objects** dialog box, select any of the available objects of the type that you selected in the **Select Object Types** dialog box, and then click **OK**.  
   
     5.  In the **Select Objects** dialog box, click **OK**.  
   
-4.  If you select **All objects of the types…**, in the **Select Object Types** dialog box, select any or all of the following object types: **Endpoints**, **Logins**, **Servers**, **Availability Groups**, and **Server roles**. [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
+4.  If you select **All objects of the types...**, in the **Select Object Types** dialog box, select any or all of the following object types: **Endpoints**, **Logins**, **Servers**, **Availability Groups**, and **Server roles**. [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
  **Name**  
  The name of each principal or securable that is added to the grid.  

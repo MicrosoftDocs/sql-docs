@@ -5,11 +5,7 @@ ms.date: "07/30/2018"
 ms.prod: sql
 ms.technology: t-sql
 ms.reviewer: ""
-ms.suite: "sql"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
-applies_to: 
-  - "SQL Server 2016"
 helpviewer_keywords: 
   - "database permissions"
 ms.assetid: f964b66a-ec32-44c2-a185-6a0f173bfa22
@@ -85,7 +81,7 @@ Type and execute the following statements (replacing `computer_name` with the na
 ## Create views and stored procedures
 As an administrator, you can execute the SELECT from the **Products** table and the **vw_Names** view, and execute the **pr_Names** procedure; however, Mary cannot. To grant Mary the necessary permissions, use the GRANT statement.  
 
-### Grant permission to stored prcoedure  
+### Grant permission to stored procedure  
 Execute the following statement to give `Mary` the `EXECUTE` permission for the `pr_Names` stored procedure.
   
   ```sql  

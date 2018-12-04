@@ -5,9 +5,7 @@ ms.date: "12/21/2017"
 ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: configuration
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "connections [SQL Server], encrypted"
@@ -20,7 +18,6 @@ helpviewer_keywords:
   - "installing certificates"
   - "security [SQL Server], encryption"
 ms.assetid: e1e55519-97ec-4404-81ef-881da3b42006
-caps.latest.revision: 48
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg

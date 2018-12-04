@@ -4,12 +4,8 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "wmi"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: wmi
 ms.topic: "reference"
 apiname: 
   - "AliasName Property (SqlServerAlias Class)"
@@ -18,7 +14,6 @@ apilocation:
 helpviewer_keywords: 
   - "AliasName property"
 ms.assetid: 5c4c88f3-c1cf-471a-9d91-f47657933e2f
-caps.latest.revision: 31
 author: "CarlRabeler"
 ms.author: "carlrab"
 manager: craigg

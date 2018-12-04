@@ -5,7 +5,7 @@
    sudo firewall-cmd --reload
    ```
 
-   > If the firewall doesn’t have a built-in high-availability configuration, open the following ports for Pacemaker.
+   > If the firewall doesn't have a built-in high-availability configuration, open the following ports for Pacemaker.
    >
    > * TCP: Ports 2224, 3121, 21064
    > * UDP: Port 5405

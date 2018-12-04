@@ -4,17 +4,13 @@ ms.custom: ""
 ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: "sql-tools"
-ms.component: "ssms-agent"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: ssms
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "aliases [SQL Server], creating"
   - "SQL Server Agent, aliases"
 ms.assetid: 02d6295d-ab52-44f0-8f1b-f3910a507d8f
-caps.latest.revision: 5
 author: "stevestein"
 ms.author: "sstein"
 manager: craigg
@@ -69,7 +65,7 @@ For more information about the Windows permissions required for the [!INCLUDE[ss
   
 2.  Right-click **SQL Server Agent**, and then click **Properties**.  
   
-3.  In the **SQL Server Agent Properties***server_name* dialog box, under **Select a page**, select **Connection**, and  
+3.  In the **SQL Server Agent Properties**_server\_name_ dialog box, under **Select a page**, select **Connection**, and  
   
 4.  In the **Alias local host server** box, type the alias of the server to which [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent should connect.  
   

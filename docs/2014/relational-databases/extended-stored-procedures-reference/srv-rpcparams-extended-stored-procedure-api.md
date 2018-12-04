@@ -4,11 +4,7 @@ ms.custom: ""
 ms.date: "04/27/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-  - "docset-sql-devref"
-ms.tgt_pltfrm: ""
+ms.technology: stored-procedures
 ms.topic: "reference"
 api_name: 
   - "srv_rpcparams"
@@ -21,7 +17,6 @@ dev_langs:
 helpviewer_keywords: 
   - "srv_rpcparams"
 ms.assetid: 96a5e6f6-d320-4623-b96e-0a856e3abebb
-caps.latest.revision: 30
 author: rothja
 ms.author: jroth
 manager: craigg

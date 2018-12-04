@@ -39,11 +39,11 @@ manager: kfile
   
      Advanced users can build custom DMX queries with the drag-and-drop **Advanced Query Editor**, or automate predictions using Excel VBA.  
   
--   **Document and manage.** After you’ve created a data set and built some models, document your work and your insights by generating a statistical summary of the data and model parameters.  
+-   **Document and manage.** After you've created a data set and built some models, document your work and your insights by generating a statistical summary of the data and model parameters.  
   
--   **Explore and visualize.** Data mining is not an activity that can be fully automated – you need to explore and understand your results to take meaningful action. The add-ins help you with exploration by providing interactive viewers in Excel, Visio templates that let you customize model diagrams, and the ability to export charts and tables to Excel for additional filtering or modification.  
+-   **Explore and visualize.** Data mining is not an activity that can be fully automated - you need to explore and understand your results to take meaningful action. The add-ins help you with exploration by providing interactive viewers in Excel, Visio templates that let you customize model diagrams, and the ability to export charts and tables to Excel for additional filtering or modification.  
   
--   **Deploy and integrate.** When you’ve created a useful model, put your model into production, by using the management tools to export the model from your experimental server to another instance of [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  
+-   **Deploy and integrate.** When you've created a useful model, put your model into production, by using the management tools to export the model from your experimental server to another instance of [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  
   
      You can also leave the model on the server where you created it, but refresh the training data and run predictions using Integration Services or DMX scripts.  
   

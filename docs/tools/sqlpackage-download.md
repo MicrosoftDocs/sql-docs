@@ -5,10 +5,7 @@ ms.custom: "tools|sos"
 ms.date: "06/18/2018"
 ms.prod: sql
 ms.reviewer: "alayu; sstein"
-ms.suite: "sql"
 ms.prod_service: sql-tools
-ms.component: sqlpackage
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 author: "pensivebrian"
 ms.author: "broneill"
@@ -20,11 +17,11 @@ sqlpackage runs on Windows, macOS, and Linux.
 
 Download and install the latest .NET Framework release and macOS and Linux previews:
 
-|Platform|Download|Release date|Version|Build|
+|Platform|Download|Release date|Version|Build
 |:---|:---|:---|:---|:---|
-|Windows|[Installer](https://go.microsoft.com/fwlink/?linkid=875508)|June 22, 2018|17.8|14.0.4079.2|
-|macOS (preview)|[.zip](https://go.microsoft.com/fwlink/?linkid=873927)|May 9, 2018 |0.0.1|15.0.4057.1|
-|Linux (preview)|[.zip](https://go.microsoft.com/fwlink/?linkid=873926)|May 9, 2018 |0.0.1|15.0.4057.1|
+|Windows|[MSI Installer](https://go.microsoft.com/fwlink/?linkid=2033947)|October 24, 2018|18.0|15.0.4200.1|
+|macOS .NET Core (preview)|[.zip file](https://go.microsoft.com/fwlink/?linkid=2044514)|November 15, 2018 | - |15.0.4240.1|
+|Linux .NET Core (preview)|[.zip file](https://go.microsoft.com/fwlink/?linkid=2044263)|November 15, 2018 | - |15.0.4240.1|
 
 For details about the latest release, see the [release notes](sqlpackage-release-notes.md).
 
@@ -32,19 +29,21 @@ For details about the latest release, see the [release notes](sqlpackage-release
 
 This release of sqlpackage includes a standard Windows installer experience, and a .zip: 
 
-1. Download and run the [DacFramework.msi installer for Windows](https://go.microsoft.com/fwlink/?linkid=875508).
+1. Download and run the [DacFramework.msi installer for Windows](https://go.microsoft.com/fwlink/?linkid=2033947).
 2. Open a new Command Prompt window, and run sqlpackage.exe
-    - sqlpackage is installed to the ```C:\Program Files\Microsoft SQL Server\140\DAC\bin``` folder
+    - sqlpackage is installed to the ```C:\Program Files\Microsoft SQL Server\150\DAC\bin``` folder
+    - Installing the x86 version on a x64 machine, sqlpackage is installed to the ```C:\Program Files (x86)\Microsoft SQL Server\150\DAC\bin``` folder
 
 ## Get sqlpackage (preview) for macOS
 
-1. Download [sqlpackage for macOS](https://go.microsoft.com/fwlink/?linkid=873927).
+1. Download [sqlpackage for macOS](https://go.microsoft.com/fwlink/?linkid=2044514).
 2. To extract the file and launch sqlpackage, open a new Terminal window and type the following commands:
 
    **.zip Installation:**
 
    ```bash
-   mv ~/Downloads/sqlpackage-linux-<version string> ~/sqlpackage 
+   mkdir sqlpackage
+   unzip ~/Downloads/sqlpackage-osx-<version string>.zip ~/sqlpackage 
    echo 'export PATH="$PATH:~/sqlpackage"' >> ~/.bash_profile
    source ~/.bash_profile
    sqlpackage
@@ -52,7 +51,7 @@ This release of sqlpackage includes a standard Windows installer experience, and
 
 ## Get sqlpackage (preview) for Linux
 
-1. Download [sqlpackage for Linux](https://go.microsoft.com/fwlink/?linkid=873926) by using one of the installers or the tar.gz archive:
+1. Download [sqlpackage for Linux](https://go.microsoft.com/fwlink/?linkid=2044263) by using one of the installers or the tar.gz archive:
 2. To extract the file and launch sqlpackage, open a new Terminal window and type the following commands:
 
    **.zip Installation:**

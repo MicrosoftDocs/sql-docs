@@ -4,10 +4,8 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.asvs.roledesignerdialog.dimensions.f1"
@@ -17,7 +15,6 @@ helpviewer_keywords:
   - "user access rights [Analysis Services], dimensions"
   - "permissions [Analysis Services], dimensions"
 ms.assetid: be5b2746-0336-4b12-827e-131462bdf605
-caps.latest.revision: 39
 author: minewiskan
 ms.author: owend
 manager: craigg
@@ -63,7 +60,7 @@ manager: craigg
      By default, permissions are inherited from a corresponding database dimension. Clear the **Inherit** check box to alter permissions from **Read** to **Read/Write**. Before using **Read/Write**, be sure to read the note in the previous section.  
   
 > [!IMPORTANT]  
->  If you configure database role permissions by using Analysis Management Objects (AMO), any reference to a cube dimension in a cube's DimensionPermission attribute severs the permission inheritance from the database's DimensionPermission attribute. For more information about AMO, see [Developing with Analysis Management Objects &#40;AMO&#41;](analysis-management-objects/developing-with-analysis-management-objects-amo.md).  
+>  If you configure database role permissions by using Analysis Management Objects (AMO), any reference to a cube dimension in a cube's DimensionPermission attribute severs the permission inheritance from the database's DimensionPermission attribute. For more information about AMO, see [Developing with Analysis Management Objects &#40;AMO&#41;](https://docs.microsoft.com/bi-reference/amo/developing-with-analysis-management-objects-amo).  
   
 ## See Also  
  [Roles and Permissions &#40;Analysis Services&#41;](roles-and-permissions-analysis-services.md)   

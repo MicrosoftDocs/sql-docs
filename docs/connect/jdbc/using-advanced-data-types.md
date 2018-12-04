@@ -5,12 +5,9 @@ ms.date: "07/11/2018"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: connectivity
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: b39461d3-48d6-4048-8300-1a886c00756d
-caps.latest.revision: 58
 author: MightyPen
 ms.author: genemi
 manager: craigg
@@ -52,7 +49,7 @@ The primary scenarios for working with large-value types involve retrieving them
 
 ### Retrieving Large-Value Types from a Database
 
-When you retrieve a non-binary large-value data type—such as the **varchar(max)** data type—from a database, one approach is to read that data as a character stream. In the following example, the [executeQuery](../../connect/jdbc/reference/executequery-method-sqlserverstatement.md) method of the [SQLServerStatement](../../connect/jdbc/reference/sqlserverstatement-class.md) class is used to retrieve data from the database and return it as a result set. Then the [getCharacterStream](../../connect/jdbc/reference/getcharacterstream-method-sqlserverresultset.md) method of the [SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md) class is used to read the large-value data from the result set.  
+When you retrieve a non-binary large-value data type-such as the **varchar(max)** data type-from a database, one approach is to read that data as a character stream. In the following example, the [executeQuery](../../connect/jdbc/reference/executequery-method-sqlserverstatement.md) method of the [SQLServerStatement](../../connect/jdbc/reference/sqlserverstatement-class.md) class is used to retrieve data from the database and return it as a result set. Then the [getCharacterStream](../../connect/jdbc/reference/getcharacterstream-method-sqlserverresultset.md) method of the [SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md) class is used to read the large-value data from the result set.  
 
 ```java
 ResultSet rs = stmt.executeQuery("SELECT TOP 1 * FROM Test1");  
@@ -63,7 +60,7 @@ Reader reader = rs.getCharacterStream(2);
 > [!NOTE]
 > This same approach can also be used for the **text**, **ntext**, and **nvarchar(max)** data types.  
 
-When you retrieve a binary large-value data type—such as the **varbinary(max)** data type—from a database, there are several approaches that you can take. The most efficient approach is to read the data as a binary stream, as in the following:  
+When you retrieve a binary large-value data type-such as the **varbinary(max)** data type-from a database, there are several approaches that you can take. The most efficient approach is to read the data as a binary stream, as in the following:  
 
 ```java
 ResultSet rs = stmt.executeQuery("SELECT photo FROM mypics");  

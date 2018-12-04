@@ -4,12 +4,9 @@ ms.custom: ""
 ms.date: "03/04/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "wmi"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: 
 
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 apiname: 
   - "ClientNetworkProtocolProperty Class"
@@ -18,7 +15,6 @@ apilocation:
 helpviewer_keywords: 
   - "ClientNetworkProtocolProperty class"
 ms.assetid: a6e8adb5-2ffd-4c49-b9e4-9a1e459ff7b4
-caps.latest.revision: 29
 author: "CarlRabeler"
 ms.author: "carlrab"
 manager: craigg
@@ -40,6 +36,6 @@ manager: craigg
 -   Set flags for the current property.  
   
 ## See Also  
- [Configure Client Protocols](http://technet.microsoft.com/library/ms181035.aspx)  
+ [Configure Client Protocols](https://technet.microsoft.com/library/ms181035.aspx)  
   
   

@@ -5,9 +5,7 @@ ms.date: "08/10/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 dev_langs: 
   - "TSQL"
@@ -17,7 +15,6 @@ helpviewer_keywords:
   - "revoking permissions, [SQL Server], availability groups"
   - "permissions [SQL Server], availability group"
 ms.assetid: 02c77378-a36d-4286-9235-d8867a2b92ad
-caps.latest.revision: 10
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
@@ -123,7 +120,7 @@ GO
 ```  
   
 ### C. Revoking a previously granted WITH GRANT OPTION clause  
- If a permission was granted using the WITH GRANT OPTION, use REVOKE GRANT OPTION FOR … to remove the WITH GRANT OPTION. The following example grants the permission and then removes the WITH GRANT portion of the permission.  
+ If a permission was granted using the WITH GRANT OPTION, use REVOKE GRANT OPTION FOR ... to remove the WITH GRANT OPTION. The following example grants the permission and then removes the WITH GRANT portion of the permission.  
   
 ```  
 USE master;  

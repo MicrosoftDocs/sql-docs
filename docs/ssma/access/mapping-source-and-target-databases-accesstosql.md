@@ -4,13 +4,8 @@ ms.prod: sql
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: ssma
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
-applies_to: 
-  - "Azure SQL Database"
-  - "SQL Server"
 helpviewer_keywords: 
   - "database schemas"
   - "mapping, databases"
@@ -20,7 +15,6 @@ helpviewer_keywords:
   - "source database"
   - "target database"
 ms.assetid: 69bee937-7b2c-49ee-8866-7518c683fad4
-caps.latest.revision: 17
 author: "Shamikg"
 ms.author: "Shamikg"
 manager: craigg
@@ -54,11 +48,11 @@ SSMA lets you map each Access database to [!INCLUDE[ssNoVersion](../../includes/
   
 -   Mapping to SQL Server  
   
-You can map source database to any target database. By default source database is mapped to target [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database with which you have connected using SSMA. If the target database being mapped does not exist on [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], then you will be prompted with a message **“The Database and/or schema does not exist in target [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] metadata. It would be created during synchronization. Do you wish to continue?”** Click Yes. Similarly, you can map schema to non-existing schema under target [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database which will be created during synchronization.  
+You can map source database to any target database. By default source database is mapped to target [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database with which you have connected using SSMA. If the target database being mapped does not exist on [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], then you will be prompted with a message **"The Database and/or schema does not exist in target [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] metadata. It would be created during synchronization. Do you wish to continue?"** Click Yes. Similarly, you can map schema to non-existing schema under target [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database which will be created during synchronization.  
   
 -   Mapping to SQL Azure  
   
-You can map the source database to the connected target [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database or to the any schema in the connected target [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database. If you map source Schema to any non-existing schema under connected target database, then you will be prompted with a message **”Schema does not exist in target metadata. It would be created during synchronization. Do you wish to continue? ”** Click Yes.  
+You can map the source database to the connected target [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database or to the any schema in the connected target [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database. If you map source Schema to any non-existing schema under connected target database, then you will be prompted with a message **"Schema does not exist in target metadata. It would be created during synchronization. Do you wish to continue? "** Click Yes.  
   
 ## Reverting to Your Initial Database and Schema  
 If you customize the mapping between an Access database and a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] or SQL Azure database and schema, you can revert the mapping back to the database that you specified when you connected to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] or SQL Azure.  

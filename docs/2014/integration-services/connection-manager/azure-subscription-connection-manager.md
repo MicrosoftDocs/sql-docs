@@ -4,16 +4,12 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.dts.designer.afpsubscrconn.f1"
   - "sql11.dts.designer.afpsubscrconn.f1"
 ms.assetid: e1225327-c308-4c50-8f44-c411f52ef378
-caps.latest.revision: 9
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
@@ -31,7 +27,7 @@ manager: craigg
   
 3.  Choose **Management certificate store location** and **Management certificate store name** from the drop-down lists.  
   
-4.  Enter **Management certificate thumbprint** or click the **Browse…** to choose a certificate from the selected store. The certificate must be uploaded as a management certificate for the subscription. To do so, click **Upload** on the following page of the Azure Portal (see this [MSDN post](https://msdn.microsoft.com/library/azure/gg551722.aspx) for more detail).  
+4.  Enter **Management certificate thumbprint** or click the **Browse...** to choose a certificate from the selected store. The certificate must be uploaded as a management certificate for the subscription. To do so, click **Upload** on the following page of the Azure Portal (see this [MSDN post](https://msdn.microsoft.com/library/azure/gg551722.aspx) for more detail).  
   
      ![SSIS-AzureSettings-ManagementCertificate](../media/ssis-azuresettings-managementcertificate.png "SSIS-AzureSettings-ManagementCertificate")  
   

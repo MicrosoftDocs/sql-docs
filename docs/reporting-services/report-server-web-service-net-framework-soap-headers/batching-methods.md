@@ -4,12 +4,9 @@ ms.date: 03/04/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
 ms.technology: report-server-web-service-net-framework-soap-headers
-ms.suite: pro-bi
 
 
 ms.topic: reference
-applies_to: 
-  - "SQL Server 2016 Preview"
 helpviewer_keywords: 
   - "methods [Reporting Services], batches"
   - "BatchHeader SOAP header"
@@ -44,7 +41,7 @@ Class Sample
         Dim rs As New ReportingService2005()  
         rs.Credentials = System.Net.CredentialCache.DefaultCredentials  
       ' Set the base Web service URL of the source server  
-      rs.Url = "http://<Server Name>/reportserver/ReportService2005.asmx"  
+      rs.Url = "https://<Server Name>/reportserver/ReportService2005.asmx"  
   
         Dim bh As New BatchHeader()  
   
@@ -76,7 +73,7 @@ class Sample
         ReportingService2005 rs = new ReportingService2005();  
         rs.Credentials = System.Net.CredentialCache.DefaultCredentials;  
       // Set the base Web service URL of the source server  
-      rs.Url = "http://<Server Name>/reportserver/ReportService2005.asmx"  
+      rs.Url = "https://<Server Name>/reportserver/ReportService2005.asmx"  
   
         BatchHeader bh = new BatchHeader();  
   

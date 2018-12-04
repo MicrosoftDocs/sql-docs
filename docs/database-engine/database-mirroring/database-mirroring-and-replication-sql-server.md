@@ -5,15 +5,12 @@ ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: high-availability
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "database mirroring [SQL Server], interoperability"
   - "replication [SQL Server], database mirroring and"
 ms.assetid: 82796217-02e2-4bc5-9ab5-218bae11a2d6
-caps.latest.revision: 39
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
@@ -74,7 +71,7 @@ manager: craigg
   
     -   Set the value of the **@working_directory** parameter to the snapshot folder used by the principal.  
   
-4.  Specify the mirror name for the **–PublisherFailoverPartner** agent parameter. Agent This parameter is required for the following agents to identify the mirror after failover:  
+4.  Specify the mirror name for the **-PublisherFailoverPartner** agent parameter. Agent This parameter is required for the following agents to identify the mirror after failover:  
   
     -   Snapshot Agent (for all publications)  
   
@@ -96,7 +93,7 @@ manager: craigg
   
     -   [Replication Agent Executables Concepts](../../relational-databases/replication/concepts/replication-agent-executables-concepts.md)  
   
-     We recommend adding the **–PublisherFailoverPartner** to an agent profile, and then specifying the mirror name in the profile. For example, if you are configuring replication with stored procedures:  
+     We recommend adding the **-PublisherFailoverPartner** to an agent profile, and then specifying the mirror name in the profile. For example, if you are configuring replication with stored procedures:  
   
     ```  
     -- Execute sp_help_agent_profile in the context of the distribution database to get the list of profiles.  

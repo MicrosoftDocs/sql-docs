@@ -93,8 +93,7 @@
 
       "feedback_system": {
         "azure-data-studio/**/*.md": "GitHub",
-        "linux/**/*.md": "GitHub",
-        "relational-databases/polybase/**/*.md": "GitHub"
+        "linux/**/*.md": "GitHub"
       },
       "feedback_product_url": {
         "azure-data-studio/**/*.md": "https://github.com/microsoft/azuredatastudio/issues/"

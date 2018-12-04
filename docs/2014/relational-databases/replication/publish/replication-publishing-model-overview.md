@@ -60,7 +60,7 @@ manager: craigg
  A subscription is a request for a copy of a publication to be delivered to a Subscriber. The subscription defines what publication will be received, where, and when. There are two types of subscriptions: push and pull. For more information about push and pull subscriptions, see [Subscribe to Publications](../subscribe-to-publications.md).  
   
 ## See Also  
- [Replication Agents Overview](../agents/replication-agents-overview.md)   
+ [Replication Agents Overview](../agents/replication-agents-overview-overview.md)   
  [Types of Replication](../types-of-replication.md)   
  [Configure Replication for AlwaysOn Availability Groups (SQL Server)](../../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md)
  [Maintaining an AlwaysOn Publication Database &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/maintaining-an-always-on-publication-database-sql-server.md)  

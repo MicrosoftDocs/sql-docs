@@ -141,7 +141,7 @@ Set oServer = nothing
   
 -   Queue Reader Agent (QueueReader job)  
   
- When replication is set up, you can specify to run the replication agents in one of three ways: continuously after [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent is started, on demand, or according to a schedule. For more information about replication agents, see [Replication Agents Overview](../../relational-databases/replication/agents/replication-agents-overview.md).  
+ When replication is set up, you can specify to run the replication agents in one of three ways: continuously after [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent is started, on demand, or according to a schedule. For more information about replication agents, see [Replication Agents Overview](../../relational-databases/replication/agents/replication-agents-overview-overview.md).  
   
 ## Analysis Services Job Steps  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent supports two distinct types of Analysis Services job steps, command job steps, and query job steps.  

@@ -567,7 +567,7 @@ manager: craigg
 ## See Also  
  [Replication Management Objects Concepts](../concepts/replication-management-objects-concepts.md)   
  [Upgrade Replication Scripts &#40;Replication Transact-SQL Programming&#41;](../administration/upgrade-replication-scripts-replication-transact-sql-programming.md)   
- [Manage Logins and Passwords in Replication](identity-and-access-control-replication.md#manage-logins-and-passwords-in-replication.md)   
+ [Manage Logins and Passwords in Replication](identity-and-access-control-replication.md#manage-logins-and-passwords-in-replication)   
  [Replication Agent Security Model](replication-agent-security-model.md)   
  [Replication Security Best Practices](replication-security-best-practices.md)   
  [SQL Server Replication Security](view-and-modify-replication-security-settings.md)   

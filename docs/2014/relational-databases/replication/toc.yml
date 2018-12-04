@@ -55,7 +55,7 @@
         - name: Command prompt parameters
           href: agents/view-and-modify-replication-agent-command-prompt-parameters.md
   - name: Monitor 
-    href: monitor/monitoring-replication.md 
+    href: monitoring-replication.md 
     items: 
       - name: Replication Monitor
         href: monitor/overview-of-the-replication-monitor-interface.md
@@ -104,8 +104,6 @@
       items: 
         - name: Configure Publishing and Distribution
           href: configure-publishing-and-distribution.md
-        - name: Configure Distribution in AG
-          href: configure-distribution-availability-group.md
         - name: View and Modify properties
           href: view-and-modify-distributor-and-publisher-properties.md
         - name: Disable Publishing and Distribution
@@ -380,7 +378,7 @@
     - name: Replication Agents
       items: 
         - name: Overview
-          href: agents/replication-agents-overview.md
+          href: agents/replication-agents-overview-overview.md
         - name: Distribution Agent
           href: agents/replication-distribution-agent.md
         - name: Log Reader Agent
@@ -820,7 +818,5 @@
           href: mssql-repl-2147201007.md
         - name: 2147201021
           href: mssql-repl-2147201021.md
-    - name: Replication Language Reference
-      href: replication-language-reference.md
 
 

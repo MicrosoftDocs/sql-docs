@@ -17,7 +17,7 @@ ms.author: mathoma
 manager: craigg
 ---
 # Synchronize a Pull Subscription
-  This topic describes how to synchronize a pull subscription in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [replication agents](agents/replication-agents-overview.md), or Replication Management Objects (RMO).  
+  This topic describes how to synchronize a pull subscription in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [replication agents](agents/replication-agents-overview-overview.md), or Replication Management Objects (RMO).  
   
   
 ##  <a name="SSMSProcedure"></a> Using SQL Server Management Studio  
@@ -38,7 +38,7 @@ manager: craigg
 5.  Click **Close**.  
   
 ##  <a name="ReplProg"></a> Replication Agents  
- Pull subscriptions can be synchronized programmatically and on-demand by invoking the appropriate replication agent executable file from the command prompt. The replication agent executable file that is invoked will depend on the type of publication to which the pull subscription belongs. For more information, see [Replication Agents](agents/replication-agents.md).  
+ Pull subscriptions can be synchronized programmatically and on-demand by invoking the appropriate replication agent executable file from the command prompt. The replication agent executable file that is invoked will depend on the type of publication to which the pull subscription belongs. For more information, see [Replication Agents](agents/replication-agents-overview.md).  
   
 > [!NOTE]  
 >  Replication agents connect to the local server using the Windows Authentication credentials of the user who started the agent from the command prompt. These Windows credentials are also used when connecting to remote servers using Windows Integrated Authentication.  

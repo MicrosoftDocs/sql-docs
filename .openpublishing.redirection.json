@@ -272,6 +272,11 @@
             "redirect_document_id": true
         },
         {
+            "source_path": "docs/2014/relational-database/replication/publish/specify-snapshot-format-sql-server-management-studio.md",
+            "redirect_url": "/sql/relational-database/replication/snapshot-options?view=sql-server-2014",
+            "redirect_document_id": true
+        },
+        {
             "source_path": "docs/2014/relational-database/replication/monitor/view-information-and-perform-tasks-for-a-publication-replication-monitor.md",
             "redirect_url": "/sql/relational-database/replication/monitor/view-information-and-perform-tasks-replication-monitor?view=sql-server-2014",
             "redirect_document_id": true

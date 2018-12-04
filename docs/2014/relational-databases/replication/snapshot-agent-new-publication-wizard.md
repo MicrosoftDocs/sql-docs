@@ -35,6 +35,6 @@ manager: craigg
  [View and Modify Publication Properties](publish/view-and-modify-publication-properties.md)   
  [Initialize a Subscription with a Snapshot](initialize-a-subscription-with-a-snapshot.md)   
  [Publish Data and Database Objects](publish/publish-data-and-database-objects.md)   
- [Replication Agents Overview](agents/replication-agents-overview.md)  
+ [Replication Agents Overview](agents/replication-agents-overview-overview.md)  
   
   

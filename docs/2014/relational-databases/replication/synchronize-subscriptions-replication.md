@@ -37,7 +37,7 @@ manager: craigg
   
 -   [Reinitialize a Subscription](reinitialize-a-subscription.md)  
   
--   [Execute Scripts Before and After a Snapshot Is Applied &#40;SQL Server Management Studio&#41;](execute-scripts-before-and-after-a-snapshot-is-applied.md)  
+-   [Execute Scripts Before and After a Snapshot Is Applied &#40;SQL Server Management Studio&#41;](snapshot-options.md#execute-scripts-before-and-after-snapshot-is-applied.md)  
   
 -   [Execute Scripts During Synchronization &#40;Replication Transact-SQL Programming&#41;](execute-scripts-during-synchronization-replication-transact-sql-programming.md)  
   

@@ -166,6 +166,6 @@ manager: craigg
 ## See Also  
  [Administer a Peer-to-Peer Topology &#40;Replication Transact-SQL Programming&#41;](../administration/administer-a-peer-to-peer-topology-replication-transact-sql-programming.md)   
  [Strategies for Backing Up and Restoring Snapshot and Transactional Replication](../administration/strategies-for-backing-up-and-restoring-snapshot-and-transactional-replication.md)   
- [Publication Types for Transactional Replication](publication-types-for-transactional-replication.md)  
+ [Publication Types for Transactional Replication](transactional-replication.md)  
   
   

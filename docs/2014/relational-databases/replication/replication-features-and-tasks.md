@@ -27,7 +27,7 @@ manager: craigg
   
 -   [Replication to Memory-Optimized Table Subscribers](replication-to-memory-optimized-table-subscribers.md)  
   
--   [Replication Agents](agents/replication-agents.md)  
+-   [Replication Agents](agents/replication-agents-overview.md)  
   
 -   [Republish Data](republish-data.md)  
   

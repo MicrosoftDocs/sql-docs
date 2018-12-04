@@ -293,7 +293,7 @@
             topicHref: /sql/relational-databases/replication/administration/frequently-asked-questions-for-replication-administrators
           - name: Agents
             tocHref: /sql/relational-databases/replication/agents/
-            topicHref: /sql/relational-databases/replication/agents/replication-agents
+            topicHref: /sql/relational-databases/replication/agents/replication-agents-overview
           - name: Developer's Guide - Replication
             tocHref: /sql/relational-databases/replication/concepts/
             topicHref: /sql/relational-databases/replication/concepts/replication-developer-documentation
@@ -305,7 +305,7 @@
             topicHref: /sql/relational-databases/replication/merge/merge-replication
           - name: Monitor
             tocHref: /sql/relational-databases/replication/monitor/
-            topicHref: /sql/relational-databases/replication/monitor/monitoring-replication
+            topicHref: /sql/relational-databases/replication/monitoring-replication
           - name: Non-SQL
             tocHref: /sql/relational-databases/replication/non-sql/
             topicHref: /sql/relational-databases/replication/non-sql/heterogeneous-database-replication

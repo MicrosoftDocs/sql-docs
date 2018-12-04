@@ -17,7 +17,15 @@ manager: craigg
 ---
 # Modify Snapshot Initialization Options for SQL Replication
 
-There are a number of options to specify when [initializing a subscription with a snapshot](initialize-a-subscription-with-a-snapshot.md).
+This article discusses how to modify a number of options when [initializing a subscription with a snapshot](initialize-a-subscription-with-a-snapshot.md).
+
+## Snapshot Format
+  Specify snapshot format on the **Snapshot** page of the **Publication Properties - \<Publication>** dialog box. For more information about accessing this dialog box, see [View and Modify Publication Properties](publish/view-and-modify-publication-properties.md).  
+
+1.  On the **Snapshot** page of the **Publication Properties - \<Publication>** dialog box, select **Native SQL Server - all Subscribers must be servers running SQL Server** or **Character - required if a Publisher or Subscriber is not running SQL Server**.    
+    > [!NOTE]  
+    >  It is recommended to select the native format unless this publication must support subscriptions to a [!INCLUDE[ssEW](../../../includes/ssew-md.md)] database or a non-[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] database.    
+2.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
 
 ## Snapshot folder locations
 
@@ -36,7 +44,7 @@ Specify the Default Snapshot Location (SQL Server Management Studio)
 3.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
 
 ### Alternate snapshot location
-  Specify an alternate snapshot location on the **Snapshot** page of the **Publication Properties - \<Publication>** dialog box. For more information about accessing this dialog box, see [View and Modify Publication Properties](view-and-modify-publication-properties.md). 
+  Specify an alternate snapshot location on the **Snapshot** page of the **Publication Properties - \<Publication>** dialog box. For more information about accessing this dialog box, see [View and Modify Publication Properties](publish/view-and-modify-publication-properties.md). 
 
   
 #### Specify an alternate snapshot location  
@@ -44,20 +52,20 @@ Specify the Default Snapshot Location (SQL Server Management Studio)
 1.  On the **Snapshot** page of the **Publication Properties - \<Publication>** dialog box:    
     1.  Select **Put files in the following folder**, and then click **Browse** to navigate to a directory, or enter the path to the directory in which the snapshot files should be stored.    
         > [!NOTE]  
-        >  The Snapshot Agent must have write permissions for the directory you specify, and the Distribution Agent or Merge Agent must have read permissions. If pull subscriptions are used, you must specify a shared directory as a universal naming convention (UNC) path, such as \\\computername\snapshot. For more information, see [Secure the Snapshot Folder](../security/secure-the-snapshot-folder.md).    
+        >  The Snapshot Agent must have write permissions for the directory you specify, and the Distribution Agent or Merge Agent must have read permissions. If pull subscriptions are used, you must specify a shared directory as a universal naming convention (UNC) path, such as \\\computername\snapshot. For more information, see [Secure the Snapshot Folder](security/secure-the-snapshot-folder.md).    
     2.  Clear **Put files in the default folder** unless you require snapshot files to be written to both locations.    
      To compress the snapshot files, select **Compress snapshot files in this location**. Compression is typically used for low bandwidth connections and alternate snapshot locations on removable media, such as a CD-ROM.    
 2.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]   
 
 
 ## Compress snapshot files
-Specify that files should be compressed on the **Snapshot** page of the **Publication Properties - \<Publication>** dialog box. For more information about accessing this dialog box, see [View and Modify Publication Properties](view-and-modify-publication-properties.md).  
+Specify that files should be compressed on the **Snapshot** page of the **Publication Properties - \<Publication>** dialog box. For more information about accessing this dialog box, see [View and Modify Publication Properties](publish/view-and-modify-publication-properties.md).  
   
 1.  On the **Snapshot** page of the **Publication Properties - \<Publication>** dialog box:  
   
     1.  Select **Put files in the following folder**, and then click **Browse** to navigate to a directory, or enter the path to the directory in which the snapshot files should be stored.    
         > [!NOTE]  
-        >  The Snapshot Agent must have write permissions for the directory you specify, and the Distribution Agent or Merge Agent must have read permissions. If pull subscriptions are used, you must specify a shared directory as a universal naming convention (UNC) path, such as \\\computername\snapshot. For more information, see [Secure the Snapshot Folder](../security/secure-the-snapshot-folder.md)  
+        >  The Snapshot Agent must have write permissions for the directory you specify, and the Distribution Agent or Merge Agent must have read permissions. If pull subscriptions are used, you must specify a shared directory as a universal naming convention (UNC) path, such as \\\computername\snapshot. For more information, see [Secure the Snapshot Folder](security/secure-the-snapshot-folder.md)  
   
     2.  Clear **Put files in the default folder** unless you require snapshot files to be written to both locations.    
         > [!NOTE]  

@@ -40,7 +40,7 @@ manager: craigg
  [Secure a Replication Topology](../security/view-and-modify-replication-security-settings.md)  
  Topics in this section show how to use RMO to view and modify security settings.  
   
- [Synchronize Subscriptions &#40;Replication&#41;](../synchronize-subscriptions-replication.md)  
+ [Synchronize Subscriptions &#40;Replication&#41;](../synchronize-data.md)  
  Topics in this section show how to synchronize subscriptions.  
   
  [Monitoring Replication](../monitoring-replication.md)  

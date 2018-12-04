@@ -243,8 +243,6 @@
         href: publish/publish-execution-of-stored-procedure-in-transactional-publication.md
       - name: View data conflicts 
         href: view-data-conflicts-for-transactional-publications-sql-server-management-studio.md
-      - name: Find errors with transactional replication
-        href: troubleshoot-tran-repl-errors.md
       - name: Specify how changes are propagated
         href: transactional/transactional-articles-specify-how-changes-are-propagated.md
       - name: Regenerate schema changes
@@ -475,7 +473,7 @@
         - name: Article Properties
           href: article-properties-article.md
         - name: Subscription properties
-          href: subscription-properties-subscription.md
+          href: subscription-properties-subscriber.md
     - name: Tools Reference
       items:
       - name: Replication Monitor

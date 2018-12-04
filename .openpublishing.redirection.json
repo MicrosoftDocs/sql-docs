@@ -497,8 +497,8 @@
             "redirect_document_id": true
         },
         {
-            "source_path": "docs/2014/relational-database/replication/subscription-properties-subscriber.md",
-            "redirect_url": "/sql/relational-database/replication/subscription-properties-subscription?view=sql-server-2014",
+            "source_path": "docs/2014/relational-database/replication/subscription-properties-subscription.md",
+            "redirect_url": "/sql/relational-database/replication/subscription-properties-subscriber?view=sql-server-2014",
             "redirect_document_id": true
         },
         {

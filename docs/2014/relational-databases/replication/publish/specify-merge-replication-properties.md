@@ -20,7 +20,7 @@ This topic explains how to specify various properties for your merge replication
 
 
 ## Download-only
-  This topic describes how to specify that a merge table article is download-only in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../../includes/tsql-md.md)]. Download-only articles are designed for applications with data that is not updated at Subscribers. For more information, see [Optimize Merge Replication Performance with Download-Only Articles](optimize-merge-replication-performance-with-download-only-articles.md).  
+  This topic describes how to specify that a merge table article is download-only in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../../includes/tsql-md.md)]. Download-only articles are designed for applications with data that is not updated at Subscribers. For more information, see [Optimize Merge Replication Performance with Download-Only Articles](../merge/optimize-merge-replication-performance-with-download-only-articles.md).  
  
   
 ###  Limitations and Restrictions  
@@ -72,7 +72,7 @@ This topic explains how to specify various properties for your merge replication
     
 ###  <a name="Recommendations"></a> Recommendations  
   
--   If a synchronization is performed outside of Windows Synchronization Manager (as a scheduled synchronization or an on demand synchronization in SQL Server Management Studio or Replication Monitor), conflicts are resolved automatically without user intervention, using the default conflict resolution specified for the article. For more information, see [Interactive Conflict Resolution](advanced-merge-replication-conflict-interactive-resolution.md).  
+-   If a synchronization is performed outside of Windows Synchronization Manager (as a scheduled synchronization or an on demand synchronization in SQL Server Management Studio or Replication Monitor), conflicts are resolved automatically without user intervention, using the default conflict resolution specified for the article. For more information, see [Interactive Conflict Resolution](../merge/advanced-merge-replication-conflict-interactive-resolution.md).  
   
 ###  Using SQL Server Management Studio  
   
@@ -112,7 +112,7 @@ This topic explains how to specify various properties for your merge replication
 At the Publisher on the publication database, execute [sp_addmergearticle](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql). Specify the name of the publication to which the article belongs for **@publication**, a name for the article for **@article**, the database object being published for **@source_object**, and a value of **true** for **@allow_interactive_resolver**. For more information, see [Define an Article](define-an-article.md).  
 
 ## Specify the Conflict Tracking and Resolution Level 
-When a subscription to a merge publication is synchronized, replication checks for conflicts caused by changes to the same data made at both the Publisher and the Subscriber. You can specify whether conflicts are detected at the row-level, where any change to the row is considered a conflict, or column-level, where only changes to the same row and column are considered a conflict. Conflict resolution for articles is performed at the row-level. For more information about conflict detection and resolution when logical records are used, see [Detecting and Resolving Conflicts in Logical Records](advanced-merge-replication-conflict-resolving-in-logical-record.md).  
+When a subscription to a merge publication is synchronized, replication checks for conflicts caused by changes to the same data made at both the Publisher and the Subscriber. You can specify whether conflicts are detected at the row-level, where any change to the row is considered a conflict, or column-level, where only changes to the same row and column are considered a conflict. Conflict resolution for articles is performed at the row-level. For more information about conflict detection and resolution when logical records are used, see [Detecting and Resolving Conflicts in Logical Records](../merge/advanced-merge-replication-conflict-resolving-in-logical-record.md).  
   
 
   

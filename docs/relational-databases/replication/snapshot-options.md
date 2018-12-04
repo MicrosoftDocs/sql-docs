@@ -21,16 +21,16 @@ manager: craigg
 There are a number of options to specify when [initializing a subscription with a snapshot](initialize-a-subscription-with-a-snapshot.md).
 
 ## Specify Snapshot Format (SQL Server Management Studio)
-  Specify snapshot format on the **Snapshot** page of the **Publication Properties - \<Publication>** dialog box. For more information about accessing this dialog box, see [View and Modify Publication Properties](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md).  
+  Specify snapshot format on the **Snapshot** page of the **Publication Properties - \<Publication>** dialog box. For more information about accessing this dialog box, see [View and Modify Publication Properties](../../relational-databases/replication/publish/view-and-modify-publication-properties.md).  
   
 ### To specify snapshot format  
   
 1.  On the **Snapshot** page of the **Publication Properties - \<Publication>** dialog box, select **Native SQL Server - all Subscribers must be servers running SQL Server** or **Character - required if a Publisher or Subscriber is not running SQL Server**.  
   
     > [!NOTE]  
-    >  It is recommended to select the native format unless this publication must support subscriptions to a [!INCLUDE[ssEW](../../../includes/ssew-md.md)] database or a non-[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] database.  
+    >  It is recommended to select the native format unless this publication must support subscriptions to a  SQL Server Compact database or a non-SQL Server database.  
   
-2.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]   
+2.  Select **OK**.   
 
 ## Snapshot Folder Locations
 

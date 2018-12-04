@@ -17,7 +17,7 @@ ms.author: "mathoma"
 manager: craigg
 ---
 # View information and perform tasks using Replication Monitor
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 Replication monitor provides a number of tabs and options to view information and perform various tasks. This article describes the different things that can be viewed and accomplished when using Replication Monitor. 
 
 

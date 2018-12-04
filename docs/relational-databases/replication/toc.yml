@@ -98,7 +98,6 @@
       - name: Encrypted columns
         href: security/replicate-data-in-encrypted-columns-sql-server-management-studio.md
   - name: Configure replication
-    href: publish/create-modify-and-delete-publications-and-articles-replication.md
     items:
     - name: Configure distribution
       href: configure-distribution.md

@@ -291,7 +291,7 @@ sp_addmergearticle [ @publication = ] 'publication'
 >  If the source table for an article is already published in another publication, then the value of *partition_options* must be the same for both articles.  
   
  [ **@processing_order=** ] *processing_order*  
- Indicates the processing order of articles in a merge publication. *processing_order* is **int**, with a default of 0. **0** specifies that the article is unordered, and any other value represents the ordinal value of the processing order for this article. Articles are processed in order from lowest to highest value. If two articles have the same value, processing order is determined by the order of the article nickname in the [sysmergearticles](../../relational-databases/system-tables/sysmergearticles-transact-sql.md) system table. For more information, see [Specify Merge Replication properties](../../relational-databases/replication/publish/specify-merge-replication-properties.md).  
+ Indicates the processing order of articles in a merge publication. *processing_order* is **int**, with a default of 0. **0** specifies that the article is unordered, and any other value represents the ordinal value of the processing order for this article. Articles are processed in order from lowest to highest value. If two articles have the same value, processing order is determined by the order of the article nickname in the [sysmergearticles](../../relational-databases/system-tables/sysmergearticles-transact-sql.md) system table. For more information, see [Specify Merge Replication properties](../../relational-databases/replication/merge/specify-merge-replication-properties.md).  
   
  [ **@subscriber_upload_options=** ] *subscriber_upload_options*  
  Defines restrictions on updates made at a Subscriber with a client subscription. For more information, see [Optimize Merge Replication Performance with Download-Only Articles](../../relational-databases/replication/merge/optimize-merge-replication-performance-with-download-only-articles.md). *subscriber_upload_options* is **tinyint**, and can be one of the following values.  
@@ -357,7 +357,7 @@ sp_addmergearticle [ @publication = ] 'publication'
   
  Adding an article with a static horizontal filter, using *subset_filterclause*, to an existing publication with articles that have parameterized filters requires the subscriptions be reinitialized.  
   
- When specifying *processing_order*, we recommend leaving gaps between the article order values, which makes it easier to set new values in the future. For example, if you have three articles Article1, Article2, and Article3, set *processing_order* to 10, 20, and 30, rather than 1, 2, and 3. For more information, see [Specify Merge Replication properties](../../relational-databases/replication/publish/specify-merge-replication-properties.md).  
+ When specifying *processing_order*, we recommend leaving gaps between the article order values, which makes it easier to set new values in the future. For example, if you have three articles Article1, Article2, and Article3, set *processing_order* to 10, 20, and 30, rather than 1, 2, and 3. For more information, see [Specify Merge Replication properties](../../relational-databases/replication/merge/specify-merge-replication-properties.md).  
   
 ## Default Schema Option Table  
  This table describes the default value that is set by the stored procedure if a NULL value is specified for *schema_option*, which depends on article type.  

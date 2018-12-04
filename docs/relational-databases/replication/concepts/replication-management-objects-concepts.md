@@ -33,7 +33,7 @@ manager: craigg
  [Configure Distribution](../../../relational-databases/replication/configure-distribution.md)  
  Topics in this section show how to use RMO to configure publishing and distribution.  
   
- [Create, Modify, and Delete Publications and Articles &#40;Replication&#41;](../../../relational-databases/replication/publish/create-modify-and-delete-publications-and-articles-replication.md)  
+ [Create a Publication](../../../relational-databases/replication/publish/create-a-publication.md)  
  Topics in this section show how to use RMO to create, delete, and modify publications and articles.  
   
  [Subscribe to Publications](../../../relational-databases/replication/subscribe-to-publications.md)  

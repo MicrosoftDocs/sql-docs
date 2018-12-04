@@ -91,6 +91,11 @@
             "redirect_document_id": true
         },
         {
+            "source_path": "docs/advanced-analytics/r/generating-an-r-stored-procedure-for-r-code-using-the-sqlrutils-package.md",
+            "redirect_url": "/sql/advanced-analytics/r/ref-r-sqlrutils",
+            "redirect_document_id": true
+        },
+        {
             "source_path": "docs/advanced-analytics/r/revoscaler-overview.md",
             "redirect_url": "/sql/advanced-analytics/r/ref-r-revoscaler",
             "redirect_document_id": true
@@ -903,7 +908,7 @@
         },
         {
             "source_path": "docs/advanced-analytics/r-services/generating-an-r-stored-procedure-for-r-code-using-the-sqlrutils-package.md",
-            "redirect_url": "/sql/advanced-analytics/r/generating-an-r-stored-procedure-for-r-code-using-the-sqlrutils-package",
+            "redirect_url": "/sql/advanced-analytics/r/ref-r-sqlrutils-package",
             "redirect_document_id": false
         },
         {

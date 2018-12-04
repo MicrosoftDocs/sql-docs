@@ -48,6 +48,8 @@ Database compatibility level upgrade:
 
 This feature is similar to the database upgrade process documented in [Keep performance stability during the upgrade to newer SQL Server](https://docs.microsoft.com/sql/relational-databases/performance/query-store-usage-scenarios#CEUpgrade), except for the last step where QTA does not rely on a previously known good state to generate recommendations.
 
+For more information, see [Upgrading Databases by using the Query Tuning Assistant](../../relational-databases/performance/upgrade-dbcompat-using-qta.md).
+
 Query Store:
 
 - Improved usability of some reports (Overall Resource Consumptions) by adding thousands separator to numbers displayed on the Y-axis of the charts.

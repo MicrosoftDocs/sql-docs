@@ -96,11 +96,6 @@
             "redirect_document_id": true
         },
         {
-            "source_path": "docs/advanced-analytics/r/revoscaler-overview.md",
-            "redirect_url": "/sql/advanced-analytics/r/ref-r-revoscaler",
-            "redirect_document_id": true
-        },
-        {
             "source_path": "docs/advanced-analytics/python/machine-learning-services-python-reference.md",
             "redirect_url": "/sql/advanced-analytics/python/ref-py-revoscalepy",
             "redirect_document_id": false

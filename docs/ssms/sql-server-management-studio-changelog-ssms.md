@@ -48,7 +48,7 @@ Database compatibility level upgrade:
 
 This feature is similar to the database upgrade process documented in [Keep performance stability during the upgrade to newer SQL Server](https://docs.microsoft.com/sql/relational-databases/performance/query-store-usage-scenarios#CEUpgrade), except for the last step where QTA does not rely on a previously known good state to generate recommendations.
 
-For more information, see [Upgrading Databases by using the Query Tuning Assistant](sql/relational-databases/performance/upgrade-dbcompat-using-qta).
+For more information, see [Upgrading Databases by using the Query Tuning Assistant](https://docs.microsoft.com/sql/relational-databases/performance/upgrade-dbcompat-using-qta).
 
 Query Store:
 

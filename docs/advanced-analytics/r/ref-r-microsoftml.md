@@ -11,7 +11,7 @@ ms.author: heidist
 manager: cgronlun
 ---
 # MicrosoftML R library in SQL Server
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 The **MicrosoftML** package is an R function library from Microsoft that provides machine learning algorithms. It is included in several products, including SQL Server 2016 R Services, SQL Server 2017 Machine Learning Services (with R), Microsoft Machine Learning Server, Microsoft R Client, and several virtual machine images on Azure. 
 
@@ -51,7 +51,7 @@ For more information, see [MicrosoftML functions](https://msdn.microsoft.com/mic
 
 This section describes how to locate and load the package. The MicrosoftML package for R is installed by default with Microsoft R Server 9.1.0 and in SQL Server 2017.
 
-It is also available for use with SQL Server 2016, if you upgrade the R components for the instance, by using the Microsoft R Server installer as described here: [Upgrade an instance of SQL Server using binding](r/use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md)
+It is also available for use with SQL Server 2016, if you upgrade the R components for the instance, by using the Microsoft R Server installer as described here: [Upgrade an instance of SQL Server using binding](use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md)
 
 The package is not loaded by default; thus, you must explicitly load the package as part of your code to use its functions.
 

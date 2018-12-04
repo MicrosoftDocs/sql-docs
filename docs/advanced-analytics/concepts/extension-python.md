@@ -89,7 +89,7 @@ The following diagram summarizes the overall workflow when scripts are sent from
 
 ## See also
 
-+ [revoscalepy module in SQL Server](python/ref-py-revoscalepy.md)
++ [revoscalepy module in SQL Server](../python/ref-py-revoscalepy.md)
 + [revoscalepy function reference](https://docs.microsoft.com/r-server/python-reference/revoscalepy/revoscalepy-package) 
 + [Extensibility framework in SQL Server](extensibility-framework.md)
 + [R and machine learning extensions in SQL Server](extension-r.md)

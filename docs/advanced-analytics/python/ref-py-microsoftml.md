@@ -23,7 +23,7 @@ There is an R-equivalent version of this package, [MicrosoftML](../r/ref-r-micro
 
 Algorithms in **microsoftml** are used with data source objects based on **revoscalepy** functions. Whenever you use **microsoftml**, you almost always have to make **revoscalepy** in the same script to load the data.
 
-+ [revoscalepy module in SQL Server](python/ref-py-revoscalepy.md)
++ [revoscalepy module in SQL Server](ref-py-revoscalepy.md)
 + [revoscalepy function reference](https://docs.microsoft.com/r-server/python-reference/revoscalepy/revoscalepy-package) 
 
 ## How to call microsoftml in SQL Server

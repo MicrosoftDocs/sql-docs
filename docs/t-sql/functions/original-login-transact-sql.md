@@ -45,7 +45,10 @@ ORIGINAL_LOGIN( )
  
   
 ## Examples  
- The following example switches the execution context of the current session from the caller of the statements to `login1`. The functions `SUSER_SNAME` and `ORIGINAL_LOGIN` are used to return the current session user (the user to whom the context was switched), and the original login account.  Please note, this script will not work on Azure SQL Database as *Execute as LOGIN* is not supported for Azure SQL Database. 
+ The following example switches the execution context of the current session from the caller of the statements to `login1`. The functions `SUSER_SNAME` and `ORIGINAL_LOGIN` are used to return the current session user (the user to whom the context was switched), and the original login account. 
+ 
+  >[!NOTE]
+  > Although the ORIGINAL_LOGIN function is supported on Azure SQL Database, the following script will fail because *Execute as LOGIN* is not supported for Azure SQL Database. 
   
 ```  
 USE AdventureWorks2012;  

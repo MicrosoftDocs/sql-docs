@@ -30,7 +30,6 @@ Community technology preview (CTP) 2.2 is the latest public release of [!INCLUDE
 
 - [Database engine](#databaseengine)
   - Use UTF-8 character encoding with SQL Server Replication.
-  - External libraries for Java language enabled (Windows)
 
 ## Previous CTPs
 
@@ -110,12 +109,6 @@ Continue reading for more details about these features.
 ## <a id="databaseengine"></a> Database Engine
 
 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] introduces or enhances the following new features for the [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]
-
-### External libraries for Java language (CTP 2.2)
-
-On Windows, you can save .jar files as external libraries in the database. Call these libraries when executing Java code from SQL Server.
-
-For more information, see [How to call Java in SQL Server](../advanced-analytics/java/howto-call-java-from-sql.md)
 
 ### Scalar UDF inlining (CTP 2.1)
 

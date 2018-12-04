@@ -227,7 +227,7 @@
         href: security/securing-replication-over-the-internet.md
       - name: Web synchronization
         href: security/security-architecture-for-web-synchronization.md
-      - name: SQL Serer Compact
+      - name: SQL Server Compact
         href: security/security-considerations-for-sql-server-compact-replication.md
       - name: View and modify settings
         href: security/view-and-modify-replication-security-settings.md
@@ -302,7 +302,7 @@
         href: merge/advanced-merge-replication-conflict-com-based-resolvers.md
       - name: Conflict detection and resolution
         href: merge/advanced-merge-replication-conflict-detection-and-resolution.md
-      - name: Iteractive resolution
+      - name: Interactive resolution
         href: merge/advanced-merge-replication-conflict-interactive-resolution.md
       - name: Resolving in a logical record
         href: merge/advanced-merge-replication-conflict-resolving-in-logical-record.md
@@ -378,9 +378,8 @@
       - name: Topologies for web synchronization
         href: topologies-for-web-synchronization.md
     - name: Replication Agents
+      href: agents/replication-agents-overview.md
       items: 
-        - name: Overview
-          href: agents/replication-agents-overview.md
         - name: Distribution Agent
           href: agents/replication-distribution-agent.md
         - name: Log Reader Agent

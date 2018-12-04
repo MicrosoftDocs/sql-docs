@@ -14,7 +14,7 @@ manager: cgronlun
 # RevoScaleR (R library in SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-RevoScaleR is a library of high-performance data science functions from Microsoft. Functions support data import, data transformation, summarization, visualization, and analysis.
+**RevoScaleR** is a library of high-performance data science functions from Microsoft. Functions support data import, data transformation, summarization, visualization, and analysis.
 
 In contrast with base R functions, RevoScaleR operations can be performed against very large datasets, in parallel, and on distributed file systems. Functions can operate over datasets that do not fit in memory, by using chunking and by reassembling results when operations are complete.
 

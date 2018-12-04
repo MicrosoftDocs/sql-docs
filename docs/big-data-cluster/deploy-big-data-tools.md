@@ -21,7 +21,7 @@ The following table lists common big data cluster tools and how to intall them:
 
 | Tool | Description | Installation |
 |---|---|---|
-| **mssqlctl** | Command-line tool for installing and managing a big data cluster. | [Windows](deploy-install-mssqlctl.md#windows) \| [Linux](deploy-install-mssqlctl.md#linux) |
+| **mssqlctl** | Command-line tool for installing and managing a big data cluster. | [Install](deploy-install-mssqlctl.md) |
 | **kubectl** | Command-line tool for monitoring the underlying Kuberentes cluster. | [Install](https://kubernetes.io/docs/tasks/tools/install-kubectl/#install-kubectl) |
 | **Azure Data Studio** | Cross-platform graphical tool for querying SQL Server. | [Install](../azure-data-studio/download.md) |
 | **SQL Server 2019 extension** | Extension for Azure Data Studio that supports connecting to the big data cluster. Also provides a Data Virtualization wizard. | [Install](../azure-data-studio/sql-server-2019-extension.md) |

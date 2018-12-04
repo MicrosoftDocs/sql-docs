@@ -11,7 +11,9 @@ ms.prod: sql
 
 # Install mssqlctl to manage SQL Server 2019 big data clusters
 
-This article describes how to install the **mssqlctl** tool on Windows or Linux. **mssqlctl** is a command-line utility written in Python that enables cluster administrators to bootstrap and manage the big data cluster via REST APIs. The minimum Python version required is v3.5. You must also have `pip` that is used to download and install **mssqlctl** tool. The instructions below provide examples for Windows and Ubuntu. For installing Python on other platforms, see the [Python documentation](https://wiki.python.org/moin/BeginnersGuide/Download).
+This article describes how to install the **mssqlctl** tool on Windows or Linux.
+
+**mssqlctl** is a command-line utility written in Python that enables cluster administrators to bootstrap and manage the big data cluster via REST APIs. The minimum Python version required is v3.5. You must also have `pip` that is used to download and install **mssqlctl** tool. The instructions below provide examples for Windows and Ubuntu. For installing Python on other platforms, see the [Python documentation](https://wiki.python.org/moin/BeginnersGuide/Download).
 
 > [!IMPORTANT]
 > If you installed a previous version of **mssqlctl**, you must delete the cluster *before* upgrading **mssqlctl** and installing the new release. For more information, see [Upgrading to a new release](deployment-guidance.md#upgrade).
@@ -31,7 +33,7 @@ This article describes how to install the **mssqlctl** tool on Windows or Linux.
 
 ## <a id="linux"></a> Linux mssqlctl installation
 
-On Linux, you must install the **python3** and **python3-pip** packages and then upgrade pip. This installs the latest 3.5 version of Python and pip. The following example shows how these commands would work for Ubuntu (for other Linux platforms, see the [Python documentation](https://wiki.python.org/moin/BeginnersGuide/Download).
+On Linux, you must install Python 3.5 and then upgrade pip. The following example shows the commands that would work for Ubuntu. For other Linux platforms, see the [Python documentation](https://wiki.python.org/moin/BeginnersGuide/Download).
 
 1. Install the necessary Python packages:
 

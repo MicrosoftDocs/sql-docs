@@ -74,7 +74,7 @@ Limited support may be found at one of the following locations:
 
 ### SQL Server Integration Services (SSIS) page deployment after switching DB to single-user mode and then switching back
 
-- **Issue and customer impact**: After SSISB is switched from single-user mode back to multi-user mode, the following error may be reported when deploying a package:
+- **Issue and customer impact**: After SSISDB is switched from single-user mode back to multi-user mode, the following error may be reported when deploying a package:
 
   `Cannot continue the execution because the session is in the kill state.`
 

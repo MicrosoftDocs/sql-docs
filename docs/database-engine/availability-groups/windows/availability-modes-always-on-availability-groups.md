@@ -40,7 +40,7 @@ manager: craigg
 -   [Related Content](#RelatedContent)  
   
 ##  <a name="SupportedAvModes"></a> Supported Availability Modes  
- [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] supports three availability modes—asynchronous-commit mode, synchronous-commit mode, and configuration only mode as follows:  
+ [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] supports three availability modes-asynchronous-commit mode, synchronous-commit mode, and configuration only mode as follows:  
   
 -   *Asynchronous-commit mode* is a disaster-recovery solution that works well when the availability replicas are distributed over considerable distances. If every secondary replica is running under asynchronous-commit mode, the primary replica does not wait for any of the secondary replicas to harden the log. Rather, immediately after writing the log record to the local log file, the primary replica sends the transaction confirmation to the client. The primary replica runs with minimum transaction latency in relation to a secondary replica that is configured for asynchronous-commit mode.  If the current primary is configured for asynchronous commit availability mode, it will commit transactions asynchronously for all secondary replicas regardless of their individual availability mode settings.  
   
@@ -177,7 +177,7 @@ For more information on investigating redo latency on the secondary replica, ple
   
 ##  <a name="RelatedContent"></a> Related Content  
   
--   [Microsoft SQL Server Always On Solutions Guide for High Availability and Disaster Recovery](http://go.microsoft.com/fwlink/?LinkId=227600)  
+-   [Microsoft SQL Server Always On Solutions Guide for High Availability and Disaster Recovery](https://go.microsoft.com/fwlink/?LinkId=227600)  
   
 -   [SQL Server Always On Team Blog: The official SQL Server Always On Team Blog](https://blogs.msdn.microsoft.com/sqlalwayson/)  
   

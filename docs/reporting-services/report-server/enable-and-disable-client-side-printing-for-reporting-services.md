@@ -21,7 +21,7 @@ ms.author: maghan
 
   The print button on the report viewer toolbar uses the Portable Document Format (PDF) format for client-side printing of [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] reports viewed in a browser. The new remote printing experience uses the PDF rendering extension that is included with [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], to render the report in PDF format. You can download a .PDF form of the report or if you have an application installed for viewing .PDF files, the print button displays a print dialog box for page common configuration items such as page size an orientation and a preview of the .PDF file. Although client-side printing is enabled by default, you can disable the feature to prevent it from being used.  
   
- Previous versions of [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] used an ActiveX control that required downloading to the client computer from the report server. If you upgrade your report server to SQL Server 2016 the print control is not removed from the report server or client computers.  
+ Previous versions of [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] used an ActiveX control that required downloading to the client computer from the report server. If you upgrade your report server to SQL Server 2016 or later, the print control is not removed from the report server or client computers.  
 
 ##  <a name="bkmk_clientside_printexpereince"></a> The Print Experience  
  When you click the print ![htmlviewer_print](../../reporting-services/report-server/media/htmlviewer-print.png "htmlviewer_print") button on the report viewer toolbar, the experience varies depending on what  .PDF viewing applications are installed on the client computer and what browser you are using.   You can download the PDF file or configure print options from a dialog, or both, depending on the client computer.  
@@ -95,7 +95,7 @@ Dim rs As New ReportingService()
         Dim props(0) As [Property]  
         Dim setProp As New [Property]  
         setProp.Name = "EnableClientPrinting"  
-        setProp.Value = “False”   
+        setProp.Value = "False"   
         props(0) = setProp  
         Try  
             rs.SetSystemProperties(props)  

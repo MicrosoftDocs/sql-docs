@@ -34,7 +34,7 @@ create-new-project
   
 -   `overwrite-if-exists`Optional attribute indicates if an existing project should be overwritten. {boolean}  
   
--   `project-type:`Optional attribute. Indicates the project type i.e. “sql-server-2005” project or “sql-server-2008” project or “sql-server-2012” project or “sql-server-2014” project or “sql-azure”. Default is “sql-server-2014”.  
+-   `project-type:`Optional attribute. Indicates the project type i.e. "sql-server-2005" project or "sql-server-2008" project or "sql-server-2012" project or "sql-server-2014" project or "sql-azure". Default is "sql-server-2014".  
   
 **Example:**  
   
@@ -51,9 +51,9 @@ create-new-project
   
 />  
 ```  
-Attribute ‘overwrite-if-exists’ is **false** by default.  
+Attribute 'overwrite-if-exists' is **false** by default.  
   
-Attribute ‘project-type’ is **sql-server-2008** by default.  
+Attribute 'project-type' is **sql-server-2008** by default.  
   
 **Command**  
   
@@ -114,7 +114,7 @@ The Database Connection commands help connect to the database.
   
 -   The **Browse** feature of the UI is not supported in console.  
   
--   For more information on ‘Creating Script Files’, see [Creating Script Files &#40;OracleToSQL&#41;](../../ssma/oracle/creating-script-files-oracletosql.md).  
+-   For more information on 'Creating Script Files', see [Creating Script Files &#40;OracleToSQL&#41;](../../ssma/oracle/creating-script-files-oracletosql.md).  
   
 **Command**  
   
@@ -288,7 +288,7 @@ or
 ## Migration Script File Commands  
 The Migration commands convert the target database schema to the source schema and migrates data to the target server.  
   
-The default console output setting for the migration commands is ‘Full' output report with no detailed error reporting: Only summary at the source object tree root node.  
+The default console output setting for the migration commands is 'Full' output report with no detailed error reporting: Only summary at the source object tree root node.  
   
 **Command**  
   
@@ -453,7 +453,7 @@ Migrates the source data to the target.
 ```  
   
 ## Manageability Script File Commands  
-The Manageability commands help synchronize the target database objects with the source database. The default console output setting for the migration commands is ‘Full' output report with no detailed error reporting: Only summary at the source object tree root node.  
+The Manageability commands help synchronize the target database objects with the source database. The default console output setting for the migration commands is 'Full' output report with no detailed error reporting: Only summary at the source object tree root node.  
   
 **Command**  
   

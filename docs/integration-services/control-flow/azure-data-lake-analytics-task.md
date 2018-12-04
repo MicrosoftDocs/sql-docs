@@ -6,8 +6,7 @@ ms.date: "05/18/2018"
 ms.prod: sql
 ms.prod_service: "integration-services"
 ms.reviewer: ""
-ms.technology: 
-  - "integration-services"
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords: 
   - "SQL13.DTS.DESIGNER.AFPADLSTASK.F1"
@@ -54,7 +53,7 @@ U-SQL configuration has two settings: **SourceType**, and dynamic options based 
 |-----------|-----------------|  
 |**SourceType = DirectInput**|Type the U-SQL query to be submitted in the option box directly, or select the browse button (...) to type the U-SQL query in the **Enter U-SQL Query** dialog box.|  
 |**SourceType = FileConnection**|Select an existing file connection manager, or select <**New connection...**> to create a new file connection. For related information, see [File Connection Manager](../../integration-services/connection-manager/file-connection-manager.md) and [File Connection Manager Editor](../../integration-services/connection-manager/file-connection-manager-editor.md).|  
-|**SourceType = Variable**|Select an existing variable, or select \<**New variable...**> to create a new variable. For related information, see [Integration Services &#40;SSIS&#41; Variables](../../integration-services/integration-services-ssis-variables.md) and [Add Variable](http://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5).|
+|**SourceType = Variable**|Select an existing variable, or select \<**New variable...**> to create a new variable. For related information, see [Integration Services &#40;SSIS&#41; Variables](../../integration-services/integration-services-ssis-variables.md) and [Add Variable](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5).|
 
 
 ### Job configuration

@@ -37,7 +37,7 @@ FOR XML AUTO, TYPE;
   
  This is the partial result:  
   
- `<Person.Person BusinessEntityID="1" FirstName="Ken" LastName="Sánchez"/>`  
+ `<Person.Person BusinessEntityID="1" FirstName="Ken" LastName="S??nchez"/>`  
   
  `<Person.Person BusinessEntityID="2" FirstName="Terri" LastName="Duffy"/>`  
   
@@ -81,11 +81,11 @@ FROM Person.Person
 FOR XML AUTO, TYPE).query('/Person.Person[1]');  
 ```  
   
- The inner `SELECT … FOR XML` query returns an `xml` type result to which the outer `SELECT` applies the `query()` method to the `xml` type. Note the `TYPE` directive specified.  
+ The inner `SELECT ... FOR XML` query returns an `xml` type result to which the outer `SELECT` applies the `query()` method to the `xml` type. Note the `TYPE` directive specified.  
   
  This is the result:  
   
- `<Person.Person BusinessEntityID="1" FirstName="Ken" LastName="Sánchez">`  
+ `<Person.Person BusinessEntityID="1" FirstName="Ken" LastName="S??nchez">`  
   
  `<PhoneNumbers>`  
   
@@ -97,7 +97,7 @@ FOR XML AUTO, TYPE).query('/Person.Person[1]');
   
  `</Person.Person>`  
   
- In the following query, the `value()` method of the `xml` data type is used to retrieve a value from the XML result returned by the `SELECT…FOR XML` query. For more information, see [value&#40;&#41; Method &#40;xml Data Type&#41;](/sql/t-sql/xml/value-method-xml-data-type).  
+ In the following query, the `value()` method of the `xml` data type is used to retrieve a value from the XML result returned by the `SELECT...FOR XML` query. For more information, see [value&#40;&#41; Method &#40;xml Data Type&#41;](/sql/t-sql/xml/value-method-xml-data-type).  
   
 ```  
 USE AdventureWorks2012;  

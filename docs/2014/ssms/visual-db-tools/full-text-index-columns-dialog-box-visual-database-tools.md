@@ -4,7 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology:
+ms.technology: ssms
 ms.topic: conceptual
 f1_keywords: 
   - "vdt.dlgbox.fulltextcolumn"
@@ -14,7 +14,7 @@ ms.author: sstein
 manager: craigg
 ---
 # Full-Text Index Columns Dialog Box (Visual Database Tools)
-  This dialog box lists the columns participating in the full-text index for the table open in Table Designer. To access this dialog box, right-click the table in Table Designer, choose **Full-Text Index**, and in the **Full-Text Index** dialog box, click the index with columns you want to view or edit, click the **Columns** field in the grid to the right, and click the ellipses (**…**).  
+  This dialog box lists the columns participating in the full-text index for the table open in Table Designer. To access this dialog box, right-click the table in Table Designer, choose **Full-Text Index**, and in the **Full-Text Index** dialog box, click the index with columns you want to view or edit, click the **Columns** field in the grid to the right, and click the ellipses (**...**).  
   
 ## Options  
  **Column**  

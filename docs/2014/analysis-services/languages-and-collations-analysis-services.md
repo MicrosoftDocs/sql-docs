@@ -23,7 +23,7 @@ manager: craigg
 # Languages and Collations (Analysis Services)
   [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] supports the languages and collations provided by [!INCLUDE[msCoName](../includes/msconame-md.md)] Windows operating systems. `Language` and `Collation` properties are initially set at the instance level during installation, but can be changed afterwards at different levels of the object hierarchy.  
   
- In a multidimensional model (only), you can set these properties on a database or cube – you can also set them on translations that you create for objects within a cube.  
+ In a multidimensional model (only), you can set these properties on a database or cube - you can also set them on translations that you create for objects within a cube.  
   
  When setting `Language` and `Collation`, you are either specifying settings used by the data model during processing and query execution, or (for multidimensional models only) you are equipping a model with multiple translations so that foreign language speakers can work with the model in their native language. Explicitly setting `Language` and `Collation` properties on an object (database, model, or cube) is for situations where the development environment and production server are configured for different locales, and you want to be sure that the language and collation matches those of the intended target environment.  
   
@@ -46,7 +46,7 @@ manager: craigg
 -   [GB18030 Support in Analysis Services](#bkmk_gb18030)  
   
 ##  <a name="bkmk_object"></a> Objects that support Language and Collation properties  
- `Language` and `Collation` properties are often exposed together – where you can set `Language`, you can also set `Collation`.  
+ `Language` and `Collation` properties are often exposed together - where you can set `Language`, you can also set `Collation`.  
   
  You can set `Language` and `Collation` on these objects:  
   

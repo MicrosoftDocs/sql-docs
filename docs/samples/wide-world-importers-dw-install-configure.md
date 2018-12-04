@@ -23,7 +23,7 @@ Installation and configuration instructions for the WideWorldImportersDW databas
 
 The latest release of the sample:
 
-[wide-world-importers-release](http://go.microsoft.com/fwlink/?LinkID=800630)
+[wide-world-importers-release](https://go.microsoft.com/fwlink/?LinkID=800630)
 
 Download the sample WideWorldImportersDW database backup/bacpac that corresponds to your edition of SQL Server or Azure SQL Database.
 

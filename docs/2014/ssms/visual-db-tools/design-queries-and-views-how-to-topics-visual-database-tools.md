@@ -4,10 +4,10 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology:
+ms.technology: ssms
 ms.topic: conceptual
 f1_keywords: 
-  - "• vs.solutionexplorer.file.query"
+  - "??? vs.solutionexplorer.file.query"
 helpviewer_keywords: 
   - "queries [Visual Database Tools]"
   - "View Designer, about View Designer"

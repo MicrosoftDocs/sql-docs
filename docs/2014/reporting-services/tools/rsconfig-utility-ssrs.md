@@ -26,13 +26,13 @@ manager: craigg
 ```  
   
       rsconfig {-?}  
-{–cconnection}  
-{–eunattendedaccount}  
-{–mcomputername}  
-{–iinstancename}  
-{–sservername}  
-{–ddatabasename}  
-{–aauthmethod}  
+{-cconnection}  
+{-eunattendedaccount}  
+{-mcomputername}  
+{-iinstancename}  
+{-sservername}  
+{-ddatabasename}  
+{-aauthmethod}  
 {-uusername}  
 {-ppassword}  
 {-ttrace}  

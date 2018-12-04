@@ -97,7 +97,7 @@ To query the data in your Hadoop data source, you must define an external table 
          [YearMeasured] int NOT NULL  
    )  
    WITH (LOCATION='/Demo/',
-         DATA_SOURCE = MyHadoopCluster,  
+         DATA_SOURCE = AzureStorage,  
          FILE_FORMAT = TextFileFormat  
    );  
    ```
@@ -155,7 +155,7 @@ The following query exports data from SQL Server to Azure Blob Storage. To do th
 
 ```sql
 -- Enable INSERT into external table  
-sp_configure ‘allow polybase export’, 1;  
+sp_configure 'allow polybase export', 1;  
 reconfigure  
   
 -- Create an external table.

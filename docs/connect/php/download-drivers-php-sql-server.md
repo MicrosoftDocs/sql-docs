@@ -19,10 +19,10 @@ manager: craigg
 
 The following versions of the drivers for PHP on Windows are available for download:
 
-- [Microsoft Drivers 5.3 for PHP for SQL Server](https://www.microsoft.com/en-us/download/details.aspx?id=57163)
-- [Microsoft Drivers 5.2 for PHP for SQL Server](https://www.microsoft.com/en-us/download/details.aspx?id=56729)
-- [Microsoft Drivers 4.3 for PHP for SQL Server](https://www.microsoft.com/en-us/download/details.aspx?id=55642)
-- [Microsoft Drivers 4.0, 3.2, 3.1, and 3.0 for PHP for SQL Server](https://www.microsoft.com/en-us/download/details.aspx?id=20098)
+- [Microsoft Drivers 5.3 for PHP for SQL Server](https://www.microsoft.com/download/details.aspx?id=57163)
+- [Microsoft Drivers 5.2 for PHP for SQL Server](https://www.microsoft.com/download/details.aspx?id=56729)
+- [Microsoft Drivers 4.3 for PHP for SQL Server](https://www.microsoft.com/download/details.aspx?id=55642)
+- [Microsoft Drivers 4.0, 3.2, 3.1, and 3.0 for PHP for SQL Server](https://www.microsoft.com/download/details.aspx?id=20098)
 
 ## Linux and macOS
 

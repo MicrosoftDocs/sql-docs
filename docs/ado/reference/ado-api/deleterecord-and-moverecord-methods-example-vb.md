@@ -28,7 +28,7 @@ This example demonstrates how to copy, move, edit, and delete the contents of a 
 ' use this sample you must:  
 '  
 ' 1. create folders named "test" and "test2"  
-'    in the root web folder of http://MyServer  
+'    in the root web folder of https://MyServer  
 '  
 ' 2. Create a text file named "test2.txt" in the  
 '    "test" folder.  
@@ -63,7 +63,7 @@ Public Sub Main()
   
      ' open a record on a text file  
     Set Cnxn = New ADODB.Connection  
-    strCnxn = "url=http://MyServer/"  
+    strCnxn = "url=https://MyServer/"  
     Cnxn.Open strCnxn  
     strFile = "test/test2.txt"  
     rcFile.Open strFile, Cnxn, adModeReadWrite, adOpenIfExists Or adCreateNonCollection  
@@ -95,7 +95,7 @@ Public Sub Main()
   
      ' copy the file to another folder  
     strDestFile = "test2/test1.txt"  
-    rcFile.CopyRecord "", "http://MyServer/" & strDestFile, "", "", adCopyOverWrite  
+    rcFile.CopyRecord "", "https://MyServer/" & strDestFile, "", "", adCopyOverWrite  
   
      ' delete the original file  
     rcFile.DeleteRecord  
@@ -115,7 +115,7 @@ Public Sub Main()
     rcDestFile.Open rsDestFolder, Cnxn  
   
      ' do the move  
-    rcDestFile.MoveRecord "", "http://MyServer/" & strFile, "", "", adMoveOverWrite  
+    rcDestFile.MoveRecord "", "https://MyServer/" & strFile, "", "", adMoveOverWrite  
   
     ' clean up  
     rsDestFolder.Close  

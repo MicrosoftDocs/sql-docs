@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "integration-services"
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords: 
   - "SQL12.SSIS.SSMS.ISPROJECTPROP.PARAMETERS.F1"
@@ -31,7 +30,7 @@ manager: craigg
   
 1.  In [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], connect to the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] server.  
   
-     You’re connecting to the instance of the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] that hosts the SSISDB database.  
+     You're connecting to the instance of the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] that hosts the SSISDB database.  
   
 2.  In Object Explorer, expand the tree to display the **Integration Services Catalogs** node.  
   
@@ -74,7 +73,7 @@ manager: craigg
 ##  <a name="references"></a> Set the options on the References page  
  Use the **References** page to add and remove references to environments, and to access environment properties.  
   
- An environment specifies runtime values for packages contained in the projects you’ve deployed to [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] server.  
+ An environment specifies runtime values for packages contained in the projects you've deployed to [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] server.  
   
  **Environment**  
  Lists the environment.  

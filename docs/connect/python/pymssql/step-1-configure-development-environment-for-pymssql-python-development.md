@@ -24,7 +24,7 @@ a. Go to [python.org](https://www.python.org/downloads/)
 b. Click on the appropriate Windows installer msi link.   
 c. Once downloaded run the msi to install Python runtime  
   
-2. **Download pymssql module** from [here](http://www.lfd.uci.edu/~gohlke/pythonlibs/#pymssql)  
+2. **Download pymssql module** from [here](https://www.lfd.uci.edu/~gohlke/pythonlibs/#pymssql)  
   
     Make sure you choose the correct whl file.  For example : If you are using Python 2.7 on a 64 bit machine choose : pymssql‑2.1.1‑cp27‑none‑win_amd64.whl. Once you download the .whl file place it in the C:/Python27 folder.  
       

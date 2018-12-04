@@ -4,7 +4,7 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
+ms.technology: t-sql
 ms.topic: conceptual
 dev_langs: 
   - "TSQL"

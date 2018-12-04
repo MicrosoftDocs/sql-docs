@@ -95,7 +95,7 @@ REPAIR_ALLOW_DATA_LOSS
 > [!WARNING]
 > The REPAIR_ALLOW_DATA_LOSS option is a supported feature but it may not always be the best option for bringing a database to a physically consistent state. If successful, the REPAIR_ALLOW_DATA_LOSS option may result in some data loss. In fact, it may result in more data lost than if a user were to restore the database from the last known good backup. 
 >
-> [!INCLUDE[msCoName](../../includes/msconame-md.md)] always recommends a user restore from the last known good backup as the primary method to recover from errors reported by DBCC CHECKDB. The REPAIR_ALLOW_DATA_LOSS option is not an alternative for restoring from a known good backup. It is an emergency “last resort” option recommended for use only if restoring from a backup is not possible.    
+> [!INCLUDE[msCoName](../../includes/msconame-md.md)] always recommends a user restore from the last known good backup as the primary method to recover from errors reported by DBCC CHECKDB. The REPAIR_ALLOW_DATA_LOSS option is not an alternative for restoring from a known good backup. It is an emergency "last resort" option recommended for use only if restoring from a backup is not possible.    
 >     
 > Certain errors, that can only be repaired using the REPAIR_ALLOW_DATA_LOSS option, may involve deallocating a row, page, or series of pages to clear the errors. Any deallocated data is no longer accessible or recoverable for the user, and the exact contents of the deallocated data cannot be determined. Therefore, referential integrity may not be accurate after any rows or pages are deallocated because foreign key constraints are not checked or maintained as part of this repair operation. The user must inspect the referential integrity of their database (using DBCC CHECKCONSTRAINTS) after using the REPAIR_ALLOW_DATA_LOSS option.    
 >     
@@ -153,7 +153,7 @@ DATA_PURITY
 > [!WARNING]
 > If PHYSICAL_ONLY is specified, column-integrity checks are not performed.
     
- Validation errors reported by this option cannot be fixed by using DBCC repair options. For information about manually correcting these errors, see Knowledge Base article 923247: [Troubleshooting DBCC error 2570 in SQL Server 2005 and later versions](http://support.microsoft.com/kb/923247).  
+ Validation errors reported by this option cannot be fixed by using DBCC repair options. For information about manually correcting these errors, see Knowledge Base article 923247: [Troubleshooting DBCC error 2570 in SQL Server 2005 and later versions](https://support.microsoft.com/kb/923247).  
     
  MAXDOP  
  **Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2 through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]).  
@@ -242,7 +242,7 @@ When the database is in emergency mode and DBCC CHECKDB with the REPAIR_ALLOW_DA
 > [!WARNING]
 > The REPAIR_ALLOW_DATA_LOSS option is a supported feature of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. However, it may not always be the best option for bringing a database to a physically consistent state. If successful, the REPAIR_ALLOW_DATA_LOSS option may result in some data loss. 
 > In fact, it may result in more data lost than if a user were to restore the database from the last known good backup. [!INCLUDE[msCoName](../../includes/msconame-md.md)] always recommends a user restore from the last known good backup as the primary method to recover from errors reported by DBCC CHECKDB. 
-> The REPAIR_ALLOW_DATA_LOSS option is **not** an alternative for restoring from a known good backup. It is an emergency “last resort” option recommended for use only if restoring from a backup is not possible.    
+> The REPAIR_ALLOW_DATA_LOSS option is **not** an alternative for restoring from a known good backup. It is an emergency "last resort" option recommended for use only if restoring from a backup is not possible.    
 >     
 >  After rebuilding the log, there is no full ACID guarantee.    
 >     

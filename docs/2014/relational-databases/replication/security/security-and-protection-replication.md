@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "replication"
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords: 
   - "security [SQL Server replication]"
@@ -27,7 +26,7 @@ manager: craigg
   
  [Identity and Access Control &#40;Replication&#41;](identity-and-access-control-replication.md)  
   
- [More…](security-overview-replication.md)  
+ [More...](security-overview-replication.md)  
   
  ![Small File Folder Icon](../../../integration-services/media/filefolder-small.gif "Small File Folder Icon") **Secure Development**  
  [Replication Agent Security Model](replication-agent-security-model.md)  
@@ -36,7 +35,7 @@ manager: craigg
   
  [Replication Security Best Practices](replication-security-best-practices.md)  
   
- [More…](secure-development-replication.md)  
+ [More...](secure-development-replication.md)  
   
  ![Small File Folder Icon](../../../integration-services/media/filefolder-small.gif "Small File Folder Icon") **Secure Deployment**  
  [Secure the Distributor](secure-the-distributor.md)  
@@ -49,7 +48,7 @@ manager: craigg
   
  [Securing Replication Over the Internet](securing-replication-over-the-internet.md)  
   
- [More…](secure-deployment-replication.md)  
+ [More...](secure-deployment-replication.md)  
   
  ![Small File Folder Icon](../../../integration-services/media/filefolder-small.gif "Small File Folder Icon") **Secure Operation**  
  [Manage Logins and Passwords in Replication](manage-logins-and-passwords-in-replication.md)  

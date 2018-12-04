@@ -116,14 +116,14 @@ In this step, you will configure the SQL Server computer as a guarded host regis
 7. On the SQL Server computer, run the following command in an elevated Windows PowerShell console, to tell the SQL Server computer where to attest. Make sure you specify the IP address or the DNS name of your HGS computer. 
 
    ```powershell
-   Set-HgsClientConfiguration -AttestationServerUrl http://<IP address or DNS name>/Attestation -KeyProtectionServerUrl http://<IP address or DNS name>/KeyProtection/  
+   Set-HgsClientConfiguration -AttestationServerUrl https://<IP address or DNS name>/Attestation -KeyProtectionServerUrl https://<IP address or DNS name>/KeyProtection/  
    ```
 
 The result of the above command should show that AttestationStatus = Passed.
 
 If you get a HostUnreachable error, that means your SQL Server computer cannot communicate with HGS. Ensure that you can ping the HGS computer.
 
-An UnauthorizedHost error indicates that the public key was not registered with the HGS server – repeat steps 5 and 6 to resolve the error.
+An UnauthorizedHost error indicates that the public key was not registered with the HGS server - repeat steps 5 and 6 to resolve the error.
 
 If all else fails, run Clear-HgsClientHostKey and repeat steps 4-7.
 
@@ -222,7 +222,7 @@ In this step, you will create a column master key and a column encryption key th
 1. Connect to your database using SSMS.
 2. In **Object Explorer**, expand your database and navigate to **Security** > **Always Encrypted Keys**.
 3. Provision a new enclave-enabled column master key:
-    1. Right-click **Always Encrypted Keys** and select **New Column Master Key…**.
+    1. Right-click **Always Encrypted Keys** and select **New Column Master Key...**.
     2. Select your column master key name: CMK1.
     3. Make sure you select either **Windows Certificate Store (Current User or Local Machine)** or **Azure Key Vault**.
     4. Select **Allow enclave computations**.
@@ -289,7 +289,7 @@ Now, you can run rich queries against the encrypted columns. Some query processi
 
 1. Enable Parameterization for Always Encrypted.
     1. Select **Query** from the main menu of SSMS.
-    2. Select **Query Options…**.
+    2. Select **Query Options...**.
     3. Navigate to **Execution** > **Advanced**.
     4. Select or unselect Enable Parameterization for Always Encrypted.
     5. Select OK.

@@ -108,7 +108,7 @@ ALTER ASSEMBLY assembly_name
   
  For more information, see [Implementing Assemblies](../../relational-databases/clr-integration/assemblies-implementing.md).  
   
- [ DROP FILE { *file_name*[ **,***...n*] | ALL } ]  
+ [ DROP FILE { *file_name*[ **,**_...n_] | ALL } ]  
  Removes the file name associated with the assembly, or all files associated with the assembly, from the database. If used with ADD FILE that follows, DROP FILE executes first. This lets you to replace a file with the same file name.  
   
 > [!NOTE]  
@@ -193,7 +193,7 @@ The following permissions required to alter a CLR assembly when `CLR strict secu
  The following example updates assembly `ComplexNumber` to the latest copy of the [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] modules that hold its implementation.  
   
 > [!NOTE]  
->  Assembly `ComplexNumber` can be created by running the UserDefinedDataType sample scripts. For more information, see [User Defined Type](http://msdn.microsoft.com/library/a9b75f36-d7f5-47f7-94d6-b4448c6a2191).  
+>  Assembly `ComplexNumber` can be created by running the UserDefinedDataType sample scripts. For more information, see [User Defined Type](https://msdn.microsoft.com/library/a9b75f36-d7f5-47f7-94d6-b4448c6a2191).  
   
  ```
  ALTER ASSEMBLY ComplexNumber 

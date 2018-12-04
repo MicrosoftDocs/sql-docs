@@ -36,7 +36,7 @@ CREATE TABLE T (Col1 int primary key, Col2 xml)
 GO  
 INSERT INTO T   
 values (1, '<p1:ProductDescription ProductModelID="1"   
-xmlns:p1="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription">  
+xmlns:p1="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription">  
             </p1:ProductDescription>')  
 GO   
 -- Make it a typed xml column by specifying a schema collection.  

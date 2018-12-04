@@ -26,15 +26,15 @@ The following table describes the methods defined in the SQLXML interface:
   
 |Method Syntax|Method Description|  
 |-------------------|------------------------|  
-|[void free()](http://go.microsoft.com/fwlink/?LinkId=131685)|This method frees the SQLXML object and releases the resources that it holds.|  
-|[InputStream getBinaryStream()](http://go.microsoft.com/fwlink/?LinkId=131754)|Returns an input stream to read data from the SQLXML.|  
-|[Reader getCharacterStream()](http://go.microsoft.com/fwlink/?LinkId=131755)|Returns the **XML** data as a java.io.Reader object or as a stream of characters.|  
-|[T extends Source T getSource(Class\<T> sourceClass)](http://go.microsoft.com/fwlink/?LinkId=131756)|Returns a **Source** for reading the **XML** value specified by this **SQLXML** object.<br /><br /> **Note:**  The getSource method supports the following sources: javax.xml.transform.dom.DOMSource, javax.xml.transform.sax.SAXSource, javax.xml.transform.stax.StAXSource, and java.io.InputStream.|  
-|[String getString()](http://go.microsoft.com/fwlink/?LinkId=131757)|Returns a string representation of the **XML** value designated by this SQLXML object.|  
-|[OutputStream setBinaryStream()](http://go.microsoft.com/fwlink/?LinkId=131758)|Retrieves a stream that can be used to write the **XML** value that this SQLXML object represents.|  
-|[Writer setCharacterStream()](http://go.microsoft.com/fwlink/?LinkId=131759)|Returns a stream to be used to write the **XML** value that this SQLXML object represents.|  
-|[T extends Result T setResult(Class\<T> resultClass)](http://go.microsoft.com/fwlink/?LinkId=131760)|Returns a **Result** for setting the **XML** value specified by this **SQLXML** object.<br /><br /> **Note:** The setResult method supports the following sources: javax.xml.transform.dom.DOMResult, javax.xml.transform.sax.SAXResult, javax.xml.transform.stax.StaxResult, and java.io.OutputStream.|  
-|[void setString(String value)](http://go.microsoft.com/fwlink/?LinkId=131762)|Sets the XML value designated by this SQLXML object to the specified **String** representation.|  
+|[void free()](https://go.microsoft.com/fwlink/?LinkId=131685)|This method frees the SQLXML object and releases the resources that it holds.|  
+|[InputStream getBinaryStream()](https://go.microsoft.com/fwlink/?LinkId=131754)|Returns an input stream to read data from the SQLXML.|  
+|[Reader getCharacterStream()](https://go.microsoft.com/fwlink/?LinkId=131755)|Returns the **XML** data as a java.io.Reader object or as a stream of characters.|  
+|[T extends Source T getSource(Class\<T> sourceClass)](https://go.microsoft.com/fwlink/?LinkId=131756)|Returns a **Source** for reading the **XML** value specified by this **SQLXML** object.<br /><br /> **Note:**  The getSource method supports the following sources: javax.xml.transform.dom.DOMSource, javax.xml.transform.sax.SAXSource, javax.xml.transform.stax.StAXSource, and java.io.InputStream.|  
+|[String getString()](https://go.microsoft.com/fwlink/?LinkId=131757)|Returns a string representation of the **XML** value designated by this SQLXML object.|  
+|[OutputStream setBinaryStream()](https://go.microsoft.com/fwlink/?LinkId=131758)|Retrieves a stream that can be used to write the **XML** value that this SQLXML object represents.|  
+|[Writer setCharacterStream()](https://go.microsoft.com/fwlink/?LinkId=131759)|Returns a stream to be used to write the **XML** value that this SQLXML object represents.|  
+|[T extends Result T setResult(Class\<T> resultClass)](https://go.microsoft.com/fwlink/?LinkId=131760)|Returns a **Result** for setting the **XML** value specified by this **SQLXML** object.<br /><br /> **Note:** The setResult method supports the following sources: javax.xml.transform.dom.DOMResult, javax.xml.transform.sax.SAXResult, javax.xml.transform.stax.StaxResult, and java.io.OutputStream.|  
+|[void setString(String value)](https://go.microsoft.com/fwlink/?LinkId=131762)|Sets the XML value designated by this SQLXML object to the specified **String** representation.|  
   
 The applications can read and write XML values to or from an SQLXML object only once.  
   

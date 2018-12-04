@@ -12,7 +12,7 @@ ms.author: carlrab
 manager: craigg
 ---
 # Creating Natively Compiled Stored Procedures
-  Natively compiled stored procedures do not implement the full [!INCLUDE[tsql](../../includes/tsql-md.md)] programmability and query surface area. There are certain [!INCLUDE[tsql](../../includes/tsql-md.md)] constructs that cannot be used inside natively compiled stored procedures. For more information, see [Supported Constructs in Natively Compiled Stored Procedures](..\in-memory-oltp\supported-features-for-natively-compiled-t-sql-modules.md).  
+  Natively compiled stored procedures do not implement the full [!INCLUDE[tsql](../../includes/tsql-md.md)] programmability and query surface area. There are certain [!INCLUDE[tsql](../../includes/tsql-md.md)] constructs that cannot be used inside natively compiled stored procedures. For more information, see [Supported Constructs in Natively Compiled Stored Procedures](../in-memory-oltp/supported-features-for-natively-compiled-t-sql-modules.md).  
   
  There are, however, several [!INCLUDE[tsql](../../includes/tsql-md.md)] features that are only supported for natively compiled stored procedures:  
   
@@ -53,7 +53,7 @@ go
 |`EXECUTE AS`|Natively compiled stored procedures do not support `EXECUTE AS CALLER`, which is the default execution context. Therefore, specifying the execution context is required. The options `EXECUTE AS OWNER`, `EXECUTE AS`*user*, and `EXECUTE AS SELF` are supported.|  
 |`BEGIN ATOMIC`|The natively compiled stored procedure body must consist of exactly one atomic block. Atomic blocks guarantee atomic execution of the stored procedure. If the procedure is invoked outside the context of an active transaction, it will start a new transaction, which commits at the end of the atomic block. Atomic blocks in natively compiled stored procedures have two required options:<br /><br /> `TRANSACTION ISOLATION LEVEL`. See [Transaction Isolation Levels](../../database-engine/transaction-isolation-levels.md) for supported isolation levels.<br /><br /> `LANGUAGE`. The language for the stored procedure must be set to one of the available languages or language aliases.|  
   
- Regarding `EXECUTE AS` and Windows logins, an error can occur because of the impersonation done through `EXECUTE AS`. If a user account uses Windows Authentication, there must be full trust between the service account used for the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] instance and the domain of the Windows login. If there is not full trust, the following error message is returned when creating a natively compiled stored procedure: Msg 15404, Could not obtain information about Windows NT group/user ‘username’, error code 0x5.  
+ Regarding `EXECUTE AS` and Windows logins, an error can occur because of the impersonation done through `EXECUTE AS`. If a user account uses Windows Authentication, there must be full trust between the service account used for the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] instance and the domain of the Windows login. If there is not full trust, the following error message is returned when creating a natively compiled stored procedure: Msg 15404, Could not obtain information about Windows NT group/user 'username', error code 0x5.  
   
  To resolve this error, use one of the following:  
   

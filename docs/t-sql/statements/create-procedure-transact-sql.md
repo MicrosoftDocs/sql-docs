@@ -225,7 +225,7 @@ ENCRYPTION
 EXECUTE AS *clause*  
  Specifies the security context under which to execute the procedure.  
   
- For natively compiled stored procedures, starting [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] and in [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], there are no limitations on the EXECUTE AS clause. In [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] the SELF, OWNER, and *‘user_name’* clauses are supported with natively compiled stored procedures.  
+ For natively compiled stored procedures, starting [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] and in [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], there are no limitations on the EXECUTE AS clause. In [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] the SELF, OWNER, and *'user_name'* clauses are supported with natively compiled stored procedures.  
   
  For more information, see [EXECUTE AS Clause &#40;Transact-SQL&#41;](../../t-sql/statements/execute-as-clause-transact-sql.md).  
   
@@ -356,7 +356,7 @@ See [Examples](#Examples) towards the end of this topic for many more examples.
   
 -   Use the SET NOCOUNT ON statement as the first statement in the body of the procedure. That is, place it just after the AS keyword. This turns off messages that [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sends back to the client after any SELECT, INSERT, UPDATE, MERGE, and DELETE statements are executed. Overall performance of the database and application is improved by eliminating this unnecessary network overhead. For information, see [SET NOCOUNT &#40;Transact-SQL&#41;](../../t-sql/statements/set-nocount-transact-sql.md).  
   
--   Use schema names when creating or referencing database objects in the procedure. It takes less processing time for the [!INCLUDE[ssDE](../../includes/ssde-md.md)] to resolve object names if it does not have to search multiple schemas. It also prevents permission and access problems caused by a user’s default schema being assigned when objects are created without specifying the schema.  
+-   Use schema names when creating or referencing database objects in the procedure. It takes less processing time for the [!INCLUDE[ssDE](../../includes/ssde-md.md)] to resolve object names if it does not have to search multiple schemas. It also prevents permission and access problems caused by a user's default schema being assigned when objects are created without specifying the schema.  
   
 -   Avoid wrapping functions around columns specified in the WHERE and JOIN clauses. Doing so makes the columns non-deterministic and prevents the query processor from using indexes.  
   
@@ -368,7 +368,7 @@ See [Examples](#Examples) towards the end of this topic for many more examples.
   
 -   Use explicit transactions by using BEGIN/COMMIT TRANSACTION and keep transactions as short as possible. Longer transactions mean longer record locking and a greater potential for deadlocking.  
   
--   Use the [!INCLUDE[tsql](../../includes/tsql-md.md)] TRY…CATCH feature for error handling inside a procedure. TRY…CATCH can encapsulate an entire block of [!INCLUDE[tsql](../../includes/tsql-md.md)] statements. This not only creates less performance overhead, it also makes error reporting more accurate with significantly less programming.  
+-   Use the [!INCLUDE[tsql](../../includes/tsql-md.md)] TRY...CATCH feature for error handling inside a procedure. TRY...CATCH can encapsulate an entire block of [!INCLUDE[tsql](../../includes/tsql-md.md)] statements. This not only creates less performance overhead, it also makes error reporting more accurate with significantly less programming.  
   
 -   Use the DEFAULT keyword on all table columns that are referenced by CREATE TABLE or ALTER TABLE [!INCLUDE[tsql](../../includes/tsql-md.md)] statements in the body of the procedure. This prevents passing NULL to columns that do not allow null values.  
   
@@ -492,7 +492,7 @@ GO
 |[Basic Syntax](#BasicSyntax)|CREATE PROCEDURE|  
 |[Passing parameters](#Parameters)|@parameter <br> &nbsp;&nbsp;  • = default <br> &nbsp;&nbsp; • OUTPUT <br> &nbsp;&nbsp; • table-valued parameter type <br> &nbsp;&nbsp; • CURSOR VARYING|  
 |[Modifying data by using a stored procedure](#Modify)|UPDATE|  
-|[Error Handling](#Error)|TRY…CATCH|  
+|[Error Handling](#Error)|TRY...CATCH|  
 |[Obfuscating the procedure definition](#Encrypt)|WITH ENCRYPTION|  
 |[Forcing the Procedure to Recompile](#Recompile)|WITH RECOMPILE|  
 |[Setting the Security Context](#Security)|EXECUTE AS|  
@@ -791,8 +791,8 @@ EXEC HumanResources.Update_VacationHours 40;
 ###  <a name="Error"></a> Error Handling  
  Examples in this section demonstrate methods to handle errors that might occur when the stored procedure is executed.  
   
-#### J. Using TRY…CATCH  
- The following example using the TRY…CATCH construct to return error information caught during the execution of a stored procedure.  
+#### J. Using TRY...CATCH  
+ The following example using the TRY...CATCH construct to return error information caught during the execution of a stored procedure.  
   
 ```sql  
 CREATE PROCEDURE Production.uspDeleteWorkOrder ( @WorkOrderID int )  
@@ -981,6 +981,7 @@ BEGIN
     ORDER BY AnnualSales DESC, ResellerName ASC;  
 END  
 ;  
+GO
   
 --Show 10 Top Resellers  
 EXEC Get10TopResellers;  

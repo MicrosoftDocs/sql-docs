@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "integration-services"
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: f14521b5-941e-443b-8f5e-385f98e37fbf
 author: douglaslMS
@@ -13,7 +12,7 @@ ms.author: douglasl
 manager: craigg
 ---
 # Step 1: Creating a New Integration Services Project
-  The first step in creating a package in [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] is to create an [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] project. This project includes the templates for the objects — data sources, data source views, and packages — that you use in a data transformation solution.  
+  The first step in creating a package in [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] is to create an [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] project. This project includes the templates for the objects - data sources, data source views, and packages - that you use in a data transformation solution.  
   
  The packages that you will create in this [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] tutorial interpret the values of locale-sensitive data. If your computer is not configured to use the regional option English (United States), you need to set additional properties in the package. The packages that you use in lessons 2 through 5 are copied from the package created in lesson 1, and you need not update locale-sensitive properties in the copied packages.  
   

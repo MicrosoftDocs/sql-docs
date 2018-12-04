@@ -5,14 +5,13 @@ ms.date: "03/01/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
-ms.technology: 
-  - "database-engine"
+ms.technology: security
 ms.topic: conceptual
 f1_keywords: 
   - "sql13.swb.dmf.facet.dependentconditions.f1"
 ms.assetid: 0b4f98a1-0151-4301-a675-a6db9ff20c87
-author: MikeRayMSFT
-ms.author: mikeray
+author: VanMSFT
+ms.author: vanto
 manager: craigg
 ---
 # Facet Properties Dialog Box, Dependent Conditions Page

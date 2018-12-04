@@ -163,7 +163,7 @@ bcp AdventureWorks2012.HumanResources.Department format nul -T -w -f Department-
  At the Windows command prompt, enter the following `bcp` command:  
   
 ```  
-bcp AdventureWorks2012.HumanResources.Department format nul -c -x -f Department-c..xml –t, -T  
+bcp AdventureWorks2012.HumanResources.Department format nul -c -x -f Department-c..xml -t, -T  
 ```  
   
  The generated format file, `Department-c.xml`, contains the following XML elements:  

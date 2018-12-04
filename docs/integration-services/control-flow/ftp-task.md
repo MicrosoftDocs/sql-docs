@@ -67,7 +67,7 @@ manager: craigg
 ## Related Tasks  
  You can set properties through [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer or programmatically.  
   
- For information about how to set these properties in [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer, see [Set the Properties of a Task or Container](http://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b).  
+ For information about how to set these properties in [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer, see [Set the Properties of a Task or Container](https://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b).  
   
  For more information about programmatically setting these properties, see <xref:Microsoft.SqlServer.Dts.Tasks.FtpTask.FtpTask>.  
   
@@ -145,7 +145,7 @@ manager: craigg
   
 #### IsRemotePathVariable = False  
  **RemotePath**  
- Select an existing FTP connection manager, or click \<**New connection…**> to create a connection manager.  
+ Select an existing FTP connection manager, or click \<**New connection...**> to create a connection manager.  
   
  **Related Topics:** [FTP Connection Manager](../../integration-services/connection-manager/ftp-connection-manager.md), [FTP Connection Manager Editor](../../integration-services/connection-manager/ftp-connection-manager-editor.md)  
   
@@ -159,7 +159,7 @@ manager: craigg
   
 #### IsLocalPathVariable = False  
  **LocalPath**  
- Select an existing File connection manager, or click \<**New connection…**> to create a connection manager.  
+ Select an existing File connection manager, or click \<**New connection...**> to create a connection manager.  
   
  **Related Topics**: [Flat File Connection Manager](../../integration-services/connection-manager/flat-file-connection-manager.md)  
   

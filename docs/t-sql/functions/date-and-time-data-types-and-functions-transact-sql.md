@@ -38,7 +38,7 @@ The sections in this topic cover all [!INCLUDE[tsql](../../includes/tsql-md.md)]
     -   [Functions That Modify Date and Time Values](#ModifyDateandTimeValues)  
     -   [Functions That Set or Return Session Format Functions](#SetorGetSessionFormatFunctions)  
     -   [Functions That Validate Date and Time Values](#ValidateDateandTimeValues)  
--   [Date and Time–Related Topics](#DateandTimeRelatedTopics)  
+-   [Date and Time-Related Topics](#DateandTimeRelatedTopics)  
   
 ##  <a name="DateandTimeDataTypes"></a> Date and Time data types
 The [!INCLUDE[tsql](../../includes/tsql-md.md)] date and time data types are listed in the following table:

@@ -19,7 +19,7 @@ manager: craigg
 
 This article contains a list of known issues with the Microsoft ODBC Driver 13, 13.1, and 17 for SQL Server on Linux and macOS.
 
-Additional issues will be posted on the [Microsoft ODBC driver team blog](http://blogs.msdn.com/b/sqlnativeclient/).  
+Additional issues will be posted on the [Microsoft ODBC driver team blog](https://blogs.msdn.com/b/sqlnativeclient/).  
 
 - Windows, Linux, and macOS convert characters from the Private Use Area (PUA) or End User-Defined Characters (EUDC) differently. Conversions performed on the server within [!INCLUDE[tsql](../../../includes/tsql-md.md)] use the Windows conversion library. Conversions in the driver use the Windows, Linux, or macOS conversion libraries. Each library may produce different results when performing these conversions. For more information, see [End-User-Defined and Private Use Area Characters](/windows/desktop/Intl/end-user-defined-characters).
 

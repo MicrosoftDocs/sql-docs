@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "database-engine"
+ms.technology: table-view-index
 ms.topic: conceptual
 helpviewer_keywords: 
   - "relationships [SQL Server], creating"
@@ -78,7 +77,7 @@ manager: craigg
   
 4.  Click the relationship in the **Selected Relationship** list.  
   
-5.  Click **Tables and Columns Specification** in the grid to the right and click the ellipses (**…**) to the right of the property.  
+5.  Click **Tables and Columns Specification** in the grid to the right and click the ellipses (**...**) to the right of the property.  
   
 6.  In the **Tables and Columns** dialog box, in the **Primary Key** drop-down list, choose the table that will be on the primary-key side of the relationship.  
   

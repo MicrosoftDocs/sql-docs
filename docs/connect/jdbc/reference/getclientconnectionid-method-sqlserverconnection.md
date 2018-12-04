@@ -43,9 +43,9 @@ UUID id = ((ISQLServerConnection)con).getClientConnectionId();
   
 ```  
 SQLServerConnectionPoolDataSource ds = new SQLServerConnectionPoolDataSource();  
-ds.setUser("…");  
-ds.setPassword("…");  
-ds.setServerName("…");  
+ds.setUser("...");  
+ds.setPassword("...");  
+ds.setServerName("...");  
 PooledConnection pcon= ds.getPooledConnection();  
 Connection cn = pcon.getConnection();  
 UUID conid = ((ISQLServerConnection)cn).getClientConnectionId();  
@@ -53,7 +53,7 @@ UUID conid = ((ISQLServerConnection)cn).getClientConnectionId();
   
  **getClientConnectionID** works regardless of which version of the server you connect to, but extended events logs and entry on connectivity ring buffer errors will not be present in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 2008 R2 and earlier.  
   
- You can locate the connection ID in the extended events log to see if the failure was on the server if the extended event for logging connection ID is enabled. You can also locate the connection ID in the connection ring buffer ([Connectivity troubleshooting in SQL Server 2008 with the Connectivity Ring Buffer](http://go.microsoft.com/fwlink/?LinkId=207752)) for certain connection errors. If the connection ID is not in the connection ring buffer, you can assume a network error.  
+ You can locate the connection ID in the extended events log to see if the failure was on the server if the extended event for logging connection ID is enabled. You can also locate the connection ID in the connection ring buffer ([Connectivity troubleshooting in SQL Server 2008 with the Connectivity Ring Buffer](https://go.microsoft.com/fwlink/?LinkId=207752)) for certain connection errors. If the connection ID is not in the connection ring buffer, you can assume a network error.  
   
 ## See Also  
  [SQLServerConnection Members](../../../connect/jdbc/reference/sqlserverconnection-members.md)   

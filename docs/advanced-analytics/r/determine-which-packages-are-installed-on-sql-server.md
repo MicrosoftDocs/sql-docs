@@ -78,7 +78,7 @@ C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\PYTHON_SERVICES\lib\si
 C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\PYTHON_SERVICES\lib\site-packages\setuptools-27.2.0-py3.5.egg
 ```
 
-For more information about the variable `sys.path` and how it is used to set the interpreter’s search path for modules, see the [Python documentation](https://docs.python.org/2/tutorial/modules.html#the-module-search-path)
+For more information about the variable `sys.path` and how it is used to set the interpreter's search path for modules, see the [Python documentation](https://docs.python.org/2/tutorial/modules.html#the-module-search-path)
 
 ## List all packages
 
@@ -86,7 +86,7 @@ There are multiple ways that you can get a complete list of the packages current
 
 ### R
 
-The following example uses the R function `installed.packages()` in a [!INCLUDE[tsql](..\..\includes\tsql-md.md)] stored procedure to get a matrix of packages that have been installed in the R_SERVICES library for the current instance. This script returns package name and version fields in the DESCRIPTION file, only the name is returned.
+The following example uses the R function `installed.packages()` in a [!INCLUDE[tsql](../../includes/tsql-md.md)] stored procedure to get a matrix of packages that have been installed in the R_SERVICES library for the current instance. This script returns package name and version fields in the DESCRIPTION file, only the name is returned.
 
 ```SQL
 EXECUTE sp_execute_external_script

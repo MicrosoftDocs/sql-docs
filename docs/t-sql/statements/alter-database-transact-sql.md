@@ -137,6 +137,9 @@ Renames the database with the name specified as *new_database_name*.
   
 COLLATE *collation_name*  
 Specifies the collation for the database. *collation_name* can be either a Windows collation name or a SQL collation name. If not specified, the database is assigned the collation of the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+
+> [!NOTE]
+> Collation cannot be changed after database has been created on [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
   
 When creating databases with other than the default collation, the data in the database always respects the specified collation. For [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], when creating a contained database, the internal catalog information is maintained using the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] default collation, **Latin1_General_100_CI_AS_WS_KS_SC**.  
   
@@ -313,7 +316,7 @@ ALTER DATABASE { database_name | CURRENT }
 <edition_options> ::= 
 {  
 
-  MAXSIZE = { 100 MB | 250 MB | 500 MB | 1 … 1024 … 4096 GB }  
+  MAXSIZE = { 100 MB | 250 MB | 500 MB | 1 ... 1024 ... 4096 GB }  
   | EDITION = { 'basic' | 'standard' | 'premium' | 'GeneralPurpose' | 'BusinessCritical' 'Hyperscale'} 
   | SERVICE_OBJECTIVE = 
        {  <service-objective>
@@ -391,7 +394,7 @@ ALTER DATABASE current
 
 EDITION change fails if the MAXSIZE property for the database is set to a value outside the valid range supported by that edition.  
 
-MODIFY (MAXSIZE **=** [100 MB | 500 MB | 1 | 1024…4096] GB)  
+MODIFY (MAXSIZE **=** [100 MB | 500 MB | 1 | 1024...4096] GB)  
 
 Specifies the maximum size of the database. The maximum size must comply with the valid set of values for the EDITION property of the database. Changing the maximum size of the database may cause the database EDITION to be changed. 
 

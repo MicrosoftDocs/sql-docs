@@ -50,7 +50,7 @@ fn:ceiling ( $arg as numeric?) as numeric?
   
 ```  
 SELECT ProductModelID, Instructions.query('  
-declare namespace AWMI="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";   
+declare namespace AWMI="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";   
      for $i in /AWMI:root/AWMI:Location  
      return   
        <Location LocationID="{ $i/@LocationID }"   

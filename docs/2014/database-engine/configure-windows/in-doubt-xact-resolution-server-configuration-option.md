@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "database-engine"
+ms.technology: configuration
 ms.topic: conceptual
 helpviewer_keywords: 
   - "distributed transactions [SQL Server], unresolved transactions"
@@ -34,7 +33,7 @@ sp_configure 'show advanced options', 1
 GO  
 RECONFIGURE  
 GO  
-sp_configure 'in-doubt xact resolution', 2 -– presume abort  
+sp_configure 'in-doubt xact resolution', 2 -- presume abort  
 GO  
 RECONFIGURE  
 GO  
@@ -52,13 +51,13 @@ sp_configure 'show advanced options', 1
 GO  
 RECONFIGURE  
 GO  
-sp_configure 'in-doubt xact resolution', 1 -– presume commit  
+sp_configure 'in-doubt xact resolution', 1 -- presume commit  
 GO  
 reconfigure  
 GO  
-ALTER DATABASE pubs SET ONLINE –- run recovery again  
+ALTER DATABASE pubs SET ONLINE -- run recovery again  
 GO  
-sp_configure 'in-doubt xact resolution', 0 –- back to no assumptions  
+sp_configure 'in-doubt xact resolution', 0 -- back to no assumptions  
 GO  
 sp_configure 'show advanced options', 0  
 GO  

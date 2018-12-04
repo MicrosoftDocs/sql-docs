@@ -5,7 +5,7 @@ ms.date: "03/21/2016"
 ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
-ms.technology: performance-monitor
+ms.technology: performance
 ms.topic: "language-reference"
 dev_langs: 
   - "TSQL"

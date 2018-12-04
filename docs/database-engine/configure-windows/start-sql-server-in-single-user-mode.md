@@ -47,7 +47,7 @@ For example, **-m"SQLCMD"** limits connections to a single connection and that c
   
  To get around the problem use the following procedure:  
   
-1.  Remove the –m startup parameter from the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] advanced Properties.  
+1.  Remove the -m startup parameter from the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] advanced Properties.  
   
 2.  Take the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] resource offline.  
   
@@ -61,7 +61,7 @@ For example, **-m"SQLCMD"** limits connections to a single connection and that c
 6.  Once the operation is complete, close the command prompt and bring back the SQL and other resources online through cluster administrator.  
   
 ## See Also  
- [Start, Stop, or Pause the SQL Server Agent Service](http://msdn.microsoft.com/library/c95a9759-dd30-4ab6-9ab0-087bb3bfb97c)   
+ [Start, Stop, or Pause the SQL Server Agent Service](https://msdn.microsoft.com/library/c95a9759-dd30-4ab6-9ab0-087bb3bfb97c)   
  [Diagnostic Connection for Database Administrators](../../database-engine/configure-windows/diagnostic-connection-for-database-administrators.md)   
  [sqlcmd Utility](../../tools/sqlcmd-utility.md)   
  [CHECKPOINT &#40;Transact-SQL&#41;](../../t-sql/language-elements/checkpoint-transact-sql.md)   

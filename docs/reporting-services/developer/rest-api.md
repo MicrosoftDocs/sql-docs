@@ -42,7 +42,7 @@ A REST API request/response pair can be separated into five components:
 
 * HTTP **response message header** fields:
 
-    * An [HTTP status code](http://www.w3.org/Protocols/HTTP/HTRESP.html), ranging from 2xx success codes to 4xx or 5xx error codes. Alternatively, a service-defined status code may be returned, as indicated in the API documentation.
+    * An [HTTP status code](https://www.w3.org/Protocols/HTTP/HTRESP.html), ranging from 2xx success codes to 4xx or 5xx error codes. Alternatively, a service-defined status code may be returned, as indicated in the API documentation.
     * Optional additional header fields, as required to support the request's response, such as a `Content-type` response header.
 
 * Optional HTTP **response message body** fields:
@@ -51,11 +51,11 @@ A REST API request/response pair can be separated into five components:
 
 ## API documentation
 
-A modern REST API calls for modern API documentation. The REST API is built on the OpenAPI specification (a.k.a. the swagger specification) and documentation is available on [SwaggerHub](https://app.swaggerhub.com/api/microsoft-rs/SSRS/2.0). Beyond documenting the API, SwaggerHub helps generate a client library in the language of choice – JavaScript, TypeScript, C#, Java, Python, Ruby, and more.
+A modern REST API calls for modern API documentation. The REST API is built on the OpenAPI specification (a.k.a. the swagger specification) and documentation is available on [SwaggerHub](https://app.swaggerhub.com/api/microsoft-rs/SSRS/2.0). Beyond documenting the API, SwaggerHub helps generate a client library in the language of choice - JavaScript, TypeScript, C#, Java, Python, Ruby, and more.
 
 ## Testing API calls
 
-A tool for testing HTTP request/response messages is [Fiddler](http://www.telerik.com/fiddler). Fiddler is a free web debugging proxy that can intercept your REST requests, making it easy to diagnose the HTTP request/ response messages.
+A tool for testing HTTP request/response messages is [Fiddler](https://www.telerik.com/fiddler). Fiddler is a free web debugging proxy that can intercept your REST requests, making it easy to diagnose the HTTP request/ response messages.
 
 ## Next steps
 

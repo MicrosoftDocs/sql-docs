@@ -58,7 +58,7 @@ SET SHOWPLAN_XML { ON | OFF }
   
  \Microsoft SQL Server\130\Tools\Binn\schemas\sqlserver\2004\07\showplan\showplanxml.xsd  
   
- The Showplan Schema can also be found at [this Web site](http://go.microsoft.com/fwlink/?linkid=43100&clcid=0x409).  
+ The Showplan Schema can also be found at [this Web site](https://go.microsoft.com/fwlink/?linkid=43100&clcid=0x409).  
   
 > [!NOTE]  
 >  If **Include Actual Execution Plan** is selected in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], this SET option does not produce XML Showplan output. Clear the **Include Actual Execution Plan** button before using this SET option.  

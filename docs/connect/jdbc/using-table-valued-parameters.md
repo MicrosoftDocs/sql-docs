@@ -29,9 +29,9 @@ Column values in table-valued parameters can be accessed using standard Transact
   
 | Resource                                                                                                             | Description                                                                         |
 | -------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- |
-| [Table-Valued Parameters (Database Engine)](http://go.microsoft.com/fwlink/?LinkId=98363) in SQL Server Books Online | Describes how to create and use table-valued parameters                             |
-| [User-Defined Table Types](http://go.microsoft.com/fwlink/?LinkId=98364) in SQL Server Books Online                  | Describes user-defined table types that are used to declare table-valued parameters |
-| The [Microsoft SQL Server Database Engine](http://go.microsoft.com/fwlink/?LinkId=120507) section of CodePlex        | Contains samples that demonstrate how to use SQL Server features and functionality  |
+| [Table-Valued Parameters (Database Engine)](https://go.microsoft.com/fwlink/?LinkId=98363) in SQL Server Books Online | Describes how to create and use table-valued parameters                             |
+| [User-Defined Table Types](https://go.microsoft.com/fwlink/?LinkId=98364) in SQL Server Books Online                  | Describes user-defined table types that are used to declare table-valued parameters |
+| The [Microsoft SQL Server Database Engine](https://go.microsoft.com/fwlink/?LinkId=120507) section of CodePlex        | Contains samples that demonstrate how to use SQL Server features and functionality  |
   
 ## Passing Multiple Rows in Previous Versions of SQL Server  
 
@@ -47,7 +47,7 @@ Before table-valued parameters were introduced to SQL Server 2008, the options f
   
 ## Creating Table-Valued Parameter Types  
 
-Table-valued parameters are based on strongly-typed table structures that are defined by using Transact-SQL `CREATE TYPE` statements. You have to create a table type and define the structure in SQL Server before you can use table-valued parameters in your client applications. For more information about creating table types, see [User-Defined Table Types](http://go.microsoft.com/fwlink/?LinkID=98364) in SQL Server Books Online.  
+Table-valued parameters are based on strongly-typed table structures that are defined by using Transact-SQL `CREATE TYPE` statements. You have to create a table type and define the structure in SQL Server before you can use table-valued parameters in your client applications. For more information about creating table types, see [User-Defined Table Types](https://go.microsoft.com/fwlink/?LinkID=98364) in SQL Server Books Online.  
 
 ```sql
 CREATE TYPE dbo.CategoryTableType AS TABLE  
@@ -104,7 +104,7 @@ The following two code fragments demonstrate how to configure a table-valued par
 ```java
 // Using table-valued parameter with a SQLServerPreparedStatement.  
 SQLServerPreparedStatement pStmt =
-    (SQLServerPreparedStatement) connection.prepareStatement(“INSERT INTO dbo.Categories SELECT * FROM ?”);  
+    (SQLServerPreparedStatement) connection.prepareStatement("INSERT INTO dbo.Categories SELECT * FROM ?");  
 pStmt.setStructured(1, "dbo.CategoryTableType", sourceTVPObject);  
 pStmt.execute();  
 ```
@@ -292,7 +292,7 @@ The following methods have been added to this class to support passing of table-
 
 | Name                                                                                                    | Description                                                                                                                                                                                                                                                                                                |
 | ------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| public final void setStructured(int parameterIndex, String tvpName, SQLServerDataTable tvpDataTbale)    | Populates a table valued parameter with a data table. parameterIndex is the parameter index, tvpName is the name of the table-valued parameter, and tvpDataTable is the source data table object.                                                                                                          |
+| public final void setStructured(int parameterIndex, String tvpName, SQLServerDataTable tvpDataTable)    | Populates a table valued parameter with a data table. parameterIndex is the parameter index, tvpName is the name of the table-valued parameter, and tvpDataTable is the source data table object.                                                                                                          |
 | public final void setStructured(int parameterIndex, String tvpName, ResultSet tvpResultSet)             | Populates a table valued parameter with a ResultSet retrieved from anther table. parameterIndex is the parameter index, tvpName is the name of the table-valued parameter, and tvpResultSet is the source result set object.                                                                               |
 | public final void setStructured(int parameterIndex, String tvpName, ISQLServerDataRecord tvpDataRecord) | Populates a table valued parameter with an ISQLServerDataRecord object. ISQLServerDataRecord is used for streaming data and the user decides how to use it. parameterIndex is the parameter index, tvpName is the name of the table-valued parameter, and tvpDataRecord is an ISQLServerDataRecord object. |
   

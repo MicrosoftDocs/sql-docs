@@ -453,7 +453,7 @@ ID     Value
  An UPDATE statement always acquires an exclusive (X) lock on the table it modifies, and holds that lock until the transaction completes. With an exclusive lock, no other transactions can modify data. You can specify table hints to override this default behavior for the duration of the UPDATE statement by specifying another locking method, however, we recommend that hints be used only as a last resort by experienced developers and database administrators. For more information, see [Table Hints &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-table.md).  
   
 ## Logging Behavior  
- The UPDATE statement is logged; however, partial updates to large value data types using the **.**WRITE clause are minimally logged. For more information, see "Updating Large Value Data Types" in the earlier section “Data Types”.  
+ The UPDATE statement is logged; however, partial updates to large value data types using the **.**WRITE clause are minimally logged. For more information, see "Updating Large Value Data Types" in the earlier section "Data Types".  
   
 ## Security  
   
@@ -476,7 +476,7 @@ ID     Value
 |[Updating User-defined Types](#UDTs)|user-defined types|  
 |[Overriding the Default Behavior of the Query Optimizer by Using Hints](#TableHints)|table hints • query hints|  
 |[Capturing the Results of the UPDATE Statement](#CaptureResults)|OUTPUT clause|  
-|[Using UPDATE in Other Statements](#Other)|Stored Procedures • TRY…CATCH|  
+|[Using UPDATE in Other Statements](#Other)|Stored Procedures • TRY...CATCH|  
   
 ###  <a name="BasicSyntax"></a> Basic Syntax  
  Examples in this section demonstrate the basic functionality of the UPDATE statement using the minimum required syntax.  
@@ -1027,8 +1027,8 @@ GO
 EXEC HumanResources.Update_VacationHours 40;  
 ```  
   
-#### AC. Using UPDATE in a TRY…CATCH Block  
- The following example uses an UPDATE statement in a TRY…CATCH block to handle execution errors that may occur during the update operation.  
+#### AC. Using UPDATE in a TRY...CATCH Block  
+ The following example uses an UPDATE statement in a TRY...CATCH block to handle execution errors that may occur during the update operation.  
   
 ```sql  
 USE AdventureWorks2012;  
@@ -1213,7 +1213,7 @@ DROP TABLE CTAS_acs
  [Cursors &#40;Transact-SQL&#41;](../../t-sql/language-elements/cursors-transact-sql.md)   
  [DELETE &#40;Transact-SQL&#41;](../../t-sql/statements/delete-transact-sql.md)   
  [INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/insert-transact-sql.md)   
- [Text and Image Functions &#40;Transact-SQL&#41;](http://msdn.microsoft.com/library/b9c70488-1bf5-4068-a003-e548ccbc5199)   
+ [Text and Image Functions &#40;Transact-SQL&#41;](https://msdn.microsoft.com/library/b9c70488-1bf5-4068-a003-e548ccbc5199)   
  [WITH common_table_expression &#40;Transact-SQL&#41;](../../t-sql/queries/with-common-table-expression-transact-sql.md)   
  [FILESTREAM &#40;SQL Server&#41;](../../relational-databases/blob/filestream-sql-server.md)  
   

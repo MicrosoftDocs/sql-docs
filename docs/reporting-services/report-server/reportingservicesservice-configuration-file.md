@@ -13,12 +13,11 @@ helpviewer_keywords:
   - "ReportingServicesService configuration file"
 ms.assetid: 40f4a401-cb61-4c42-b1ec-01acdacdacd1
 author: markingmyname
-ms.author: maghan
+ms.author: maghan 
 ---
 # ReportingServicesService Configuration File
- ||  
-|-|  
-|**[!INCLUDE[applies](../../includes/applies-md.md)]**  SQL Server 2016|
+
+[!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016](../../includes/ssrs-appliesto-2016.md)]
   
 The ReportingServicesService.exe.config file includes settings that configure tracing.  
   

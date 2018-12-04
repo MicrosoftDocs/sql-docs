@@ -20,7 +20,7 @@ This topic provides instructions for launching the **Configuration Manager** for
 The Analytics Platform System**Configuration Manager** can only be run by the appliance domain administrator. To run this tool, you need the password for the appliance domain administrator. To create additional APS administrators, see [Create an APS Domain Administrator &#40;APS&#41;](create-an-aps-domain-administrator-aps.md).  
   
 ## <a name="Accessing"></a>Launch the Configuration Manager Tool  
-To run the Configuration Manager, use Remote Desktop to connect to the PDW Control node (***PDW_region*-CTL01**)node, and log in as *appliance_domain***\Administrator**. When starting the **Configuration Manager** program, use the **Run as Administrator** option to ensure that your administrator credentials are used.  
+To run the Configuration Manager, use Remote Desktop to connect to the PDW Control node (**_PDW_region_-CTL01**)node, and log in as _appliance_domain_**\Administrator**. When starting the **Configuration Manager** program, use the **Run as Administrator** option to ensure that your administrator credentials are used.  
   
 #### To launch from a browser window  
   

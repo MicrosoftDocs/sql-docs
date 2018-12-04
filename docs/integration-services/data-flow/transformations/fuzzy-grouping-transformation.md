@@ -34,11 +34,11 @@ manager: craigg
   The Fuzzy Grouping transformation performs data cleaning tasks by identifying rows of data that are likely to be duplicates and selecting a canonical row of data to use in standardizing the data.  
   
 > [!NOTE]  
->  For more detailed information about the Fuzzy Grouping transformation, including performance and memory limitations, see the white paper, [Fuzzy Lookup and Fuzzy Grouping in SQL Server Integration Services 2005](http://go.microsoft.com/fwlink/?LinkId=96604).  
+>  For more detailed information about the Fuzzy Grouping transformation, including performance and memory limitations, see the white paper, [Fuzzy Lookup and Fuzzy Grouping in SQL Server Integration Services 2005](https://go.microsoft.com/fwlink/?LinkId=96604).  
   
  The Fuzzy Grouping transformation requires a connection to an instance of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] to create the temporary [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] tables that the transformation algorithm requires to do its work. The connection must resolve to a user who has permission to create tables in the database.  
   
- To configure the transformation, you must select the input columns to use when identifying duplicates, and you must select the type of match—fuzzy or exact—for each column. An exact match guarantees that only rows that have identical values in that column will be grouped. Exact matching can be applied to columns of any [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] data type except DT_TEXT, DT_NTEXT, and DT_IMAGE. A fuzzy match groups rows that have approximately the same values. The method for approximate matching of data is based on a user-specified similarity score. Only columns with the DT_WSTR and DT_STR data types can be used in fuzzy matching. For more information, see [Integration Services Data Types](../../../integration-services/data-flow/integration-services-data-types.md).  
+ To configure the transformation, you must select the input columns to use when identifying duplicates, and you must select the type of match-fuzzy or exact-for each column. An exact match guarantees that only rows that have identical values in that column will be grouped. Exact matching can be applied to columns of any [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] data type except DT_TEXT, DT_NTEXT, and DT_IMAGE. A fuzzy match groups rows that have approximately the same values. The method for approximate matching of data is based on a user-specified similarity score. Only columns with the DT_WSTR and DT_STR data types can be used in fuzzy matching. For more information, see [Integration Services Data Types](../../../integration-services/data-flow/integration-services-data-types.md).  
   
  The transformation output includes all input columns, one or more columns with standardized data, and a column that contains the similarity score. The score is a decimal value between 0 and 1. The canonical row has a score of 1. Other rows in the fuzzy group have scores that indicate how well the row matches the canonical row. The closer the score is to 1, the more closely the row matches the canonical row. If the fuzzy group includes rows that are exact duplicates of the canonical row, these rows also have a score of 1. The transformation does not remove duplicate rows; it groups them by creating a key that relates the canonical row to similar rows.  
   
@@ -81,7 +81,7 @@ manager: craigg
   
  For more information about the properties that you can set in the **Advanced Editor** dialog box or programmatically, click one of the following topics:  
   
--   [Common Properties](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
+-   [Common Properties](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
 -   [Transformation Custom Properties](../../../integration-services/data-flow/transformations/transformation-custom-properties.md)  
   

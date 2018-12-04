@@ -36,7 +36,7 @@ manager: craigg
 >  The verbs used in the names of two SQL Server cmdlets (`Encode-Sqlname` and `Decode-Sqlname`) do not match the approved verbs for Windows PowerShell 2.0. This has no effect on their operation, but Windows PowerShell raises a warning when the `sqlps` module is imported to a session.  
   
 ###  <a name="Security"></a> Security  
- By default, Windows PowerShell runs with the scripting execution policy set to **Restricted**, which prevents running any Windows PowerShell scripts. To load the `sqlps` module, you can use the `Set-ExecutionPolicy` cmdlet to enable running signed scripts, or any scripts. Only run scripts from trusted sources, and secure all input and output files using the appropriate NTFS permissions. For more information about enabling Windows PowerShell scripts, see [Running Windows PowerShell Scripts](http://www.microsoft.com/technet/scriptcenter/topics/winpsh/manual/run.mspx).  
+ By default, Windows PowerShell runs with the scripting execution policy set to **Restricted**, which prevents running any Windows PowerShell scripts. To load the `sqlps` module, you can use the `Set-ExecutionPolicy` cmdlet to enable running signed scripts, or any scripts. Only run scripts from trusted sources, and secure all input and output files using the appropriate NTFS permissions. For more information about enabling Windows PowerShell scripts, see [Running Windows PowerShell Scripts](https://docs.microsoft.com/powershell/scripting/setup/starting-windows-powershell?view=powershell-6#how-to-enable-windows-powershell-ise-on-earlier-releases-of-windows).  
   
 ##  <a name="LoadSqlps"></a> Load the sqlps Module  
  **To load the sqlps module in Windows PowerShell**  
@@ -51,7 +51,7 @@ manager: craigg
 ```  
 ## Import the SQL Server Module.  
   
-Import-Module “sqlps” -DisableNameChecking  
+Import-Module "sqlps" -DisableNameChecking  
   
 ```  
   

@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "integration-services"
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords: 
   - "XML validation"
@@ -91,7 +90,7 @@ SELECT col.value('@line','INT') AS line
 FROM @XML.nodes('/root/messages/error') AS tab(col)  
 )  
 SELECT * FROM rs;  
--- WHERE error LIKE ‘%whatever_string%’  
+-- WHERE error LIKE '%whatever_string%'  
   
 -- Query # 2, count of errors grouped by the error message  
 -- convert to relational/rectangular  

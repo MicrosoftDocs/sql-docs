@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "11/21/2016"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "database-engine"
+ms.technology: configuration
 ms.topic: conceptual
 helpviewer_keywords: 
   - "startup service states [SQL Server]"
@@ -152,7 +151,7 @@ manager: craigg
 ##  <a name="Serv_Prop"></a> Service Properties and Configuration  
  Startup accounts used to start and run [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] can be [domain user accounts](#Domain_User), [local user accounts](#Local_User), [managed service accounts](#MSA), [virtual accounts](#VA_Desc), or [built-in system accounts](#Local_Service). To start and run, each service in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] must have a startup account configured during installation.  
   
- This section describes the accounts that can be configured to start [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] services, the default values used by [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Setup, the concept of per-service SID’s, the startup options, and configuring the firewall.  
+ This section describes the accounts that can be configured to start [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] services, the default values used by [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Setup, the concept of per-service SID's, the startup options, and configuring the firewall.  
   
 -   [Default Service Accounts](#Default_Accts)  
   
@@ -275,7 +274,7 @@ manager: craigg
  In most cases, when initially installed, the [!INCLUDE[ssDE](../../includes/ssde-md.md)] can be connected to by tools such as [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] installed on the same computer as [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Setup does not open ports in the Windows firewall. Connections from other computers may not be possible until the [!INCLUDE[ssDE](../../includes/ssde-md.md)] is configured to listen on a TCP port, and the appropriate port is opened for connections in the Windows firewall. For more information, see [Configure the Windows Firewall to Allow SQL Server Access](../../sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md).  
   
 ##  <a name="Serv_Perm"></a> Service Permissions  
- This section describes the permissions that [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Setup configures for the per-service SID’s of the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] services.  
+ This section describes the permissions that [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Setup configures for the per-service SID's of the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] services.  
   
 -   [Service Configuration and Access Control](#Serv_SID)  
   
@@ -318,7 +317,7 @@ manager: craigg
 |---------------------------------------|------------------------------------------------------------|  
 |**[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]:**<br /><br /> (All rights are granted to the per-service SID. Default instance: **NT SERVICE\MSSQLSERVER**. Named instance: **NT SERVICE\MSSQL$**InstanceName.)|**Log on as a service** (SeServiceLogonRight)<br /><br /> **Replace a process-level token** (SeAssignPrimaryTokenPrivilege)<br /><br /> **Bypass traverse checking** (SeChangeNotifyPrivilege)<br /><br /> **Adjust memory quotas for a process** (SeIncreaseQuotaPrivilege)<br /><br /> Permission to start SQL Writer<br /><br /> Permission to read the Event Log service<br /><br /> Permission to read the Remote Procedure Call service|  
 |**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent:** <sup>1</sup><br /><br /> (All rights are granted to the per-service SID. Default instance: **NT Service\SQLSERVERAGENT**. Named instance: **NT Service\SQLAGENT$***InstanceName*.)|**Log on as a service** (SeServiceLogonRight)<br /><br /> **Replace a process-level token** (SeAssignPrimaryTokenPrivilege)<br /><br /> **Bypass traverse checking** (SeChangeNotifyPrivilege)<br /><br /> **Adjust memory quotas for a process** (SeIncreaseQuotaPrivilege)|  
-|**[!INCLUDE[ssAS](../../includes/ssas-md.md)]:**<br /><br /> (All rights are granted to a local Windows group. Default instance: **SQLServerMSASUser$***ComputerName***$MSSQLSERVER**. Named instance: **SQLServerMSASUser$***ComputerName***$***InstanceName*. [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] instance: **SQLServerMSASUser$***ComputerName***$***PowerPivot*.)|**Log on as a service** (SeServiceLogonRight)<br /><br /> For tabular only:<br /><br /> **Increase a process working set** (SeIncreaseWorkingSetPrivilege)<br /><br /> **Adjust memory quotas for a process** (SeIncreaseQuotaSizePrivilege)<br /><br /> **Lock pages in memory** (SeLockMemoryPrivilege) – this is needed only when paging is turned off entirely.<br /><br /> For failover cluster installations only:<br /><br /> **Increase scheduling priority** (SeIncreaseBasePriorityPrivilege)|  
+|**[!INCLUDE[ssAS](../../includes/ssas-md.md)]:**<br /><br /> (All rights are granted to a local Windows group. Default instance: **SQLServerMSASUser$***ComputerName***$MSSQLSERVER**. Named instance: **SQLServerMSASUser$***ComputerName***$***InstanceName*. [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] instance: **SQLServerMSASUser$***ComputerName***$***PowerPivot*.)|**Log on as a service** (SeServiceLogonRight)<br /><br /> For tabular only:<br /><br /> **Increase a process working set** (SeIncreaseWorkingSetPrivilege)<br /><br /> **Adjust memory quotas for a process** (SeIncreaseQuotaSizePrivilege)<br /><br /> **Lock pages in memory** (SeLockMemoryPrivilege) - this is needed only when paging is turned off entirely.<br /><br /> For failover cluster installations only:<br /><br /> **Increase scheduling priority** (SeIncreaseBasePriorityPrivilege)|  
 |**[!INCLUDE[ssRS](../../includes/ssrs.md)]:**<br /><br /> (All rights are granted to the per-service SID. Default instance: **NT SERVICE\ReportServer**. Named instance: **NT SERVICE\\$***InstanceName*.)|**Log on as a service** (SeServiceLogonRight)|  
 |**[!INCLUDE[ssIS](../../includes/ssis-md.md)]:**<br /><br /> (All rights are granted to the per-service SID. Default instance and named instance: **NT SERVICE\MsDtsServer120**. [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] does not have a separate process for a named instance.)|**Log on as a service** (SeServiceLogonRight)<br /><br /> Permission to write to application event log.<br /><br /> **Bypass traverse checking** (SeChangeNotifyPrivilege)<br /><br /> **Impersonate a client after authentication** (SeImpersonatePrivilege)|  
 |**Full-text search:**<br /><br /> (All rights are granted to the per-service SID. Default instance: **NT Service\MSSQLFDLauncher**. Named instance: **NT Service\ MSSQLFDLauncher$***InstanceName*.)|**Log on as a service** (SeServiceLogonRight)<br /><br /> **Adjust memory quotas for a process** (SeIncreaseQuotaPrivilege)<br /><br /> **Bypass traverse checking** (SeChangeNotifyPrivilege)|  
@@ -577,13 +576,13 @@ manager: craigg
   
     -   The per-service SID of the [!INCLUDE[ssDE](../../includes/ssde-md.md)] is provisioned in the [!INCLUDE[ssDE](../../includes/ssde-md.md)] as a member of the **sysadmin** fixed server role.  
   
-    -   The per-service SID’s are added to the local [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Windows groups, unless [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is a Failover Cluster Instance.  
+    -   The per-service SID's are added to the local [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Windows groups, unless [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is a Failover Cluster Instance.  
   
     -   The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] resources remain provisioned to the local [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Windows groups.  
   
-    -   The local Windows group for services is renamed from **SQLServer2005MSSQLUser$***<computer_name>***$***<instance_name>* to **SQLServerMSSQLUser$***<computer_name>***$***<instance_name>*. File locations for migrated databases will have Access Control Entries (ACE) for the local Windows groups. The file locations for new databases will have ACE’s for the per-service SID.  
+    -   The local Windows group for services is renamed from **SQLServer2005MSSQLUser$***<computer_name>***$***<instance_name>* to **SQLServerMSSQLUser$***<computer_name>***$***<instance_name>*. File locations for migrated databases will have Access Control Entries (ACE) for the local Windows groups. The file locations for new databases will have ACE's for the per-service SID.  
   
--   During upgrade from [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Setup will be preserve the ACE’s for the [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] per-service SID.  
+-   During upgrade from [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Setup will be preserve the ACE's for the [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] per-service SID.  
   
 -   For a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Failover Cluster Instance, the ACE for the domain account configured for the service will be retained.  
   

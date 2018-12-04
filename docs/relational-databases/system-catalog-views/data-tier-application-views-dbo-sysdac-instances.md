@@ -47,6 +47,6 @@ manager: craigg
   
 ## See Also  
  [Data-tier Applications](../../relational-databases/data-tier-applications/data-tier-applications.md)   
- [Data-tier Application Views &#40;Transact-SQL&#41;](http://msdn.microsoft.com/library/0de01328-d7a6-4677-b7a0-dcd3098c23d4)  
+ [Data-tier Application Views &#40;Transact-SQL&#41;](https://msdn.microsoft.com/library/0de01328-d7a6-4677-b7a0-dcd3098c23d4)  
   
   

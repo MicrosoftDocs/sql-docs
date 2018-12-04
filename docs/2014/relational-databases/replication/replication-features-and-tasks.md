@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "03/08/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "replication"
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords: 
   - "development [SQL Server replication]"
@@ -17,7 +16,7 @@ ms.author: mathoma
 manager: craigg
 ---
 # Replication Features and Tasks
-  Find information that anyone—designer, developer, analyst, or administrator—requires to design and implement replication solutions.  
+  Find information that anyone-designer, developer, analyst, or administrator-requires to design and implement replication solutions.  
   
 ## In This Section  
   

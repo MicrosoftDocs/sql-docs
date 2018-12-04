@@ -163,7 +163,7 @@ CREATE EXTERNAL TABLE [ [database_name  . [ schema_name ] . ] | schema_name . ] 
   
 -   External partition move  
   
- **APPLIES TO:**  [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]As a prerequisite for creating an external table, the appliance administrator needs to configure hadoop connectivity. For more information, see Configure Connectivity to External Data (Analytics Platform System) in the APS documentation which you can download from [here](http://www.microsoft.com/download/details.aspx?id=48241).  
+ **APPLIES TO:**  [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]As a prerequisite for creating an external table, the appliance administrator needs to configure hadoop connectivity. For more information, see Configure Connectivity to External Data (Analytics Platform System) in the APS documentation which you can download from [here](https://www.microsoft.com/download/details.aspx?id=48241).  
   
 ## Limitations and Restrictions  
  Since external table data resides outside of the database, backup and restore operations will only operate on data stored in the database. This means only the metadata will be backed up and restored.  

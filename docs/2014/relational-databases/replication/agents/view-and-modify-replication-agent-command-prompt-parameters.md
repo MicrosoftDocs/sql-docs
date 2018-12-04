@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "03/08/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "replication"
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords: 
   - "agents [SQL Server replication], command prompt parameters"
@@ -24,7 +23,7 @@ manager: craigg
   
  If you access agent jobs from the **Jobs** folder, use the following table to determine the agent job name and the parameters available for each agent.  
   
-|Agent|Job name|For a list of parameters, see…|  
+|Agent|Job name|For a list of parameters, see...|  
 |-----------|--------------|------------------------------------|  
 |Snapshot Agent|**\<Publisher>-\<PublicationDatabase>-\<Publication>-\<integer>**|[Replication Snapshot Agent](replication-snapshot-agent.md)|  
 |Snapshot Agent for a merge publication partition|**Dyn_\<Publisher>-\<PublicationDatabase>-\<Publication>-\<GUID>**|[Replication Snapshot Agent](replication-snapshot-agent.md)|  

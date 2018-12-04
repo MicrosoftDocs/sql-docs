@@ -61,7 +61,7 @@ USE AdventureWorks
 GO  
 --WITH XMLNAMESPACES clause specifies the namespace prefix  
 --to use.   
-WITH XMLNAMESPACES ('http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription' AS pd)  
+WITH XMLNAMESPACES ('https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription' AS pd)  
 --The XQuery contains() function is used to determine whether  
 --any of the text nodes below the <Summary> element contain  
 --the word 'frame'. The lower-case() function makes the   
@@ -87,9 +87,9 @@ where CatalogDescription.exist('
   
  `19     <Prod ProductModelID="19">`  
   
- `<pd:Summary xmlns:pd="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription">`  
+ `<pd:Summary xmlns:pd="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription">`  
   
- `<p1:p xmlns:p1="http://www.w3.org/1999/xhtml">Our top-of-the-line competition mountain bike.`  
+ `<p1:p xmlns:p1="https://www.w3.org/1999/xhtml">Our top-of-the-line competition mountain bike.`  
   
  `Performance-enhancing options include the innovative HL Frame,`  
   
@@ -103,9 +103,9 @@ where CatalogDescription.exist('
   
  `25     <Prod ProductModelID="25">`  
   
- `<pd:Summary xmlns:pd="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription">`  
+ `<pd:Summary xmlns:pd="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription">`  
   
- `<p1:p xmlns:p1="http://www.w3.org/1999/xhtml">This bike is ridden by race winners. Developed with the`  
+ `<p1:p xmlns:p1="https://www.w3.org/1999/xhtml">This bike is ridden by race winners. Developed with the`  
   
  `Adventure Works Cycles professional race team, it has a extremely light`  
   

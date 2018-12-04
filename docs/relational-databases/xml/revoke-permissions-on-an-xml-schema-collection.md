@@ -71,8 +71,8 @@ setuser 'TestLogin1'
 go  
 CREATE XML SCHEMA COLLECTION dbo.myTestSchemaCollection AS '<?xml version="1.0" encoding="UTF-8" ?>  
   
-<xsd:schema targetNamespace="http://schemas.adventure-works.com/Additional/ContactInfo"   
-            xmlns:xsd="http://www.w3.org/2001/XMLSchema"   
+<xsd:schema targetNamespace="https://schemas.adventure-works.com/Additional/ContactInfo"   
+            xmlns:xsd="https://www.w3.org/2001/XMLSchema"   
 elementFormDefault="qualified">  
 <xsd:element name="telephone" type="xsd:string" />  
 </xsd:schema>'  
@@ -80,8 +80,8 @@ go
 -- TestLogin1 can create XML schema collection in myOtherDBSchema relational schema  
 CREATE XML SCHEMA COLLECTION myOtherDBSchema.myTestSchemaCollection AS '<?xml version="1.0" encoding="UTF-8" ?>  
   
-<xsd:schema targetNamespace="http://schemas.adventure-works.com/Additional/ContactInfo"   
-            xmlns:xsd="http://www.w3.org/2001/XMLSchema"   
+<xsd:schema targetNamespace="https://schemas.adventure-works.com/Additional/ContactInfo"   
+            xmlns:xsd="https://www.w3.org/2001/XMLSchema"   
 elementFormDefault="qualified">  
 <xsd:element name="telephone" type="xsd:string" />  
 </xsd:schema>'  
@@ -100,8 +100,8 @@ go
 setuser 'TestLogin1'  
 go  
 CREATE XML SCHEMA COLLECTION myOtherDBSchema.myTestSchemaCollection AS '<?xml version="1.0" encoding="UTF-8" ?>  
-<xsd:schema targetNamespace="http://schemas.adventure-works.com/Additional/ContactInfo"   
-            xmlns:xsd="http://www.w3.org/2001/XMLSchema"   
+<xsd:schema targetNamespace="https://schemas.adventure-works.com/Additional/ContactInfo"   
+            xmlns:xsd="https://www.w3.org/2001/XMLSchema"   
 elementFormDefault="qualified">  
 <xsd:element name="telephone" type="xsd:string" />  
 </xsd:schema>'  
@@ -119,8 +119,8 @@ setuser 'TestLogin1'
 go  
 -- the following now should fail  
 CREATE XML SCHEMA COLLECTION dbo.myTestSchemaCollection AS '<?xml version="1.0" encoding="UTF-8" ?>  
-<xsd:schema targetNamespace="http://schemas.adventure-works.com/Additional/ContactInfo"   
-            xmlns:xsd="http://www.w3.org/2001/XMLSchema"   
+<xsd:schema targetNamespace="https://schemas.adventure-works.com/Additional/ContactInfo"   
+            xmlns:xsd="https://www.w3.org/2001/XMLSchema"   
 elementFormDefault="qualified">  
 <xsd:element name="telephone" type="xsd:string" />  
 </xsd:schema>'  

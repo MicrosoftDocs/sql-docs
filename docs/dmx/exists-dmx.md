@@ -37,7 +37,7 @@ EXISTS(<subquery>)
 ## Examples  
  You can use EXISTS and NOT EXISTS to check for conditions in a nested table. This is useful when creating a filter that controls the data used to train or test a data mining model. For more information, see [Filters for Mining Models &#40;Analysis Services - Data Mining&#41;](../analysis-services/data-mining/filters-for-mining-models-analysis-services-data-mining.md).  
   
- The following example is based on the `[Association]` mining structure and mining model that you created in the [Basic Data Mining Tutorial](http://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c). The query returns only those cases where the customer purchased at least one patch kit.  
+ The following example is based on the `[Association]` mining structure and mining model that you created in the [Basic Data Mining Tutorial](https://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c). The query returns only those cases where the customer purchased at least one patch kit.  
   
 ```  
 SELECT * FROM [Association].CASES  

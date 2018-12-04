@@ -37,11 +37,11 @@ manager: craigg
   
  The properties displayed vary by component. For more information on the properties that may be displayed in the **Advanced Editor**, see the following topics:  
   
--   [Common Properties](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
+-   [Common Properties](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
 -   [Transformation Custom Properties](../integration-services/data-flow/transformations/transformation-custom-properties.md)  
   
--   [Path Properties](http://msdn.microsoft.com/library/89b1e347-9579-4f6b-af74-c6519ea08eea)  
+-   [Path Properties](https://msdn.microsoft.com/library/89b1e347-9579-4f6b-af74-c6519ea08eea)  
   
  For more information about the specific component that you are editing, see the description of the component in the Data Flow Elements section of the [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] Objects and Concepts documentation:  
   

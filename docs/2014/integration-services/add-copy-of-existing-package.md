@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "integration-services"
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.dts.designer.addcopyexistingpackage.f1"
@@ -36,7 +35,7 @@ manager: craigg
  If using [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Authentication, provide a password.  
   
  **Package path**  
- Type the package path, or click the browse button **(…)** and locate the package to copy.  
+ Type the package path, or click the browse button **(...)** and locate the package to copy.  
   
 ## See Also  
  [Save Copy of Package](../../2014/integration-services/save-copy-of-package.md)   

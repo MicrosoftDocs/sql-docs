@@ -16,7 +16,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
 # Querying Data in a System-Versioned Temporal Table
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-  When you want to get latest (actual) state of data in a temporal table, you can query completely the same way as you query non-temporal table. If the PERIOD columns are not hidden, their values will appear in a SELECT \* query. If you specified **PERIOD** columns as hidden, their values won’t appear in a SELECT \* query. When the **PERIOD** columns are hidden, reference the **PERIOD** columns specifically in the SELECT clause to return the values for these columns.  
+  When you want to get latest (actual) state of data in a temporal table, you can query completely the same way as you query non-temporal table. If the PERIOD columns are not hidden, their values will appear in a SELECT \* query. If you specified **PERIOD** columns as hidden, their values won't appear in a SELECT \* query. When the **PERIOD** columns are hidden, reference the **PERIOD** columns specifically in the SELECT clause to return the values for these columns.  
   
  To perform any type of time-based analysis, use the new **FOR SYSTEM_TIME** clause with four temporal-specific sub-clauses to query data across the current and history tables. For more information on these clauses, see [Temporal Tables](../../relational-databases/tables/temporal-tables.md) and [FROM &#40;Transact-SQL&#41;](../../t-sql/queries/from-transact-sql.md)  
   

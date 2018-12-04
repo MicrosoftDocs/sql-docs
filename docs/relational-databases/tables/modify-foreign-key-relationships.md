@@ -22,7 +22,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
 # Modify Foreign Key Relationships
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-  You can modify the foreign key side of a relationship in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)]. Modifying a table’s foreign key changes which columns are related to columns in the primary key table.  
+  You can modify the foreign key side of a relationship in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)]. Modifying a table's foreign key changes which columns are related to columns in the primary key table.  
   
  **In This Topic**  
   
@@ -80,7 +80,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
      Verify all existing data in the table before the constraint was created or re-enabled, against the constraint.  
   
      **Tables and Columns Specifications Category**  
-     Expand to show which columns from which tables act as the foreign key and primary (or unique) key in the relationship. To edit or define these values, click the ellipsis button (**…**) to the right of the property field.  
+     Expand to show which columns from which tables act as the foreign key and primary (or unique) key in the relationship. To edit or define these values, click the ellipsis button (**...**) to the right of the property field.  
   
      **Foreign Key Base Table**  
      Shows which table contains the column acting as a foreign key in the selected relationship.  

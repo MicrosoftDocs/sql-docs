@@ -43,7 +43,7 @@ manager: craigg
   
 9. Type **frank7@adventure-works.com** (a valid value) in the **Contact Email** column.  
   
-10. Repeat previous two steps to add **joe2@adventure-work.com** (an invalid value with no ‘s’).  
+10. Repeat previous two steps to add **joe2@adventure-work.com** (an invalid value with no 's').  
   
 11. Click the last button (**Test the domain rule on all the terms**) on the toolbar to test the input data against the rule.  
   

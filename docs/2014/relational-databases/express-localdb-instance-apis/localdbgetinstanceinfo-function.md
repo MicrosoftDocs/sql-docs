@@ -5,8 +5,6 @@ ms.date: "03/08/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
 ms.technology: 
-  - "database-engine"
-  - "docset-sql-devref"
 ms.topic: "reference"
 api_name: 
   - "LocalDBGetInstanceInfo"
@@ -131,7 +129,7 @@ HRESULT LocalDBGetInstanceInfo(
   
 ```  
 LocalDBInstanceInfo ii;  
-LocalDBInstanceInfo(L”Test”, &ii, sizeof(LocalDBInstanceInfo));  
+LocalDBInstanceInfo(L"Test", &ii, sizeof(LocalDBInstanceInfo));  
   
 ```  
   

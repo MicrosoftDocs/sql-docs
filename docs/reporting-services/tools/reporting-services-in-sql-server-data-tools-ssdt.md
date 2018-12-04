@@ -53,7 +53,7 @@ ms.author: maggies
   
 -   **Datasets** Each dataset includes a query that specifies which data to retrieve from the data source. Expand the dataset to view the collection of fields specified by the dataset query.  
   
-     In some query designers for multidimensional datasets, you can specify filters in the Filters pane and indicate whether to create report parameters. If you specify the report parameter option, a special dataset is automatically created to populate the parameter’s valid values list.  By default, the dataset does not appear in the Report Data Pane. For more information, see [Show Hidden Datasets for Parameter Values for Multidimensional Data &#40;Report Builder and SSRS&#41;](../../reporting-services/report-data/show-hidden-datasets-for-parameter-values-multidimensional-data.md).  
+     In some query designers for multidimensional datasets, you can specify filters in the Filters pane and indicate whether to create report parameters. If you specify the report parameter option, a special dataset is automatically created to populate the parameter's valid values list.  By default, the dataset does not appear in the Report Data Pane. For more information, see [Show Hidden Datasets for Parameter Values for Multidimensional Data &#40;Report Builder and SSRS&#41;](../../reporting-services/report-data/show-hidden-datasets-for-parameter-values-multidimensional-data.md).  
   
 -   **Report parameters** The list of report parameters. Parameters can be created manually or automatically when a dataset query includes query parameters.  
   

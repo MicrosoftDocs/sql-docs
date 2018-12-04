@@ -5,8 +5,6 @@ ms.date: "10/20/2016"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
 ms.technology: 
-  - "database-engine"
-  - "docset-sql-devref"
 ms.topic: "reference"
 topic_type: 
   - "apiref"

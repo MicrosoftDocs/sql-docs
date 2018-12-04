@@ -32,7 +32,7 @@ Sub Main()
    Dim strCnxn As String  
   
    Set Cnxn = New ADODB.Connection  
-   strCnxn = "url=http://MyServer/"  
+   strCnxn = "url=https://MyServer/"  
    Cnxn.Open strCnxn  
   
    Set File = New ADODB.Record  

@@ -538,7 +538,7 @@ For more information, see [Maps &#40;Report Builder and SSRS&#41;](../reporting-
   
 ## See Also  
 [Report Builder tutorials](../reporting-services/report-builder-tutorials.md)  
-[Report Builder in SQL Server 2016](../reporting-services/report-builder/report-builder-in-sql-server-2016.md)  
+[Report Builder in SQL Server](../reporting-services/report-builder/report-builder-in-sql-server-2016.md)  
 [Map Wizard and Map Layer Wizard &#40;Report Builder and SSRS&#41;](../reporting-services/report-design/map-wizard-and-map-layer-wizard-report-builder-and-ssrs.md)  
 [Vary Polygon, Line, and Point Display by Rules and Analytical Data &#40;Report Builder and SSRS&#41;](../reporting-services/report-design/vary-polygon-line-and-point-display-by-rules-and-analytical-data.md)  
   

@@ -51,8 +51,8 @@ monikerRange: "=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversio
 |first_row_time|**bigint**|Timestamp when first row was opened (in milliseconds).|  
 |last_row_time|**bigint**|Timestamp when last row was opened(in milliseconds).|  
 |close_time|**bigint**|Timestamp when close (in milliseconds).|  
-|elapsed_time_ms|**bigint**|Total elapsed time (in milliseconds) used by the target node’s operations so far.|  
-|cpu_time_ms|**bigint**|Total CPU time (in milliseconds) use by target node’s operations so far.|  
+|elapsed_time_ms|**bigint**|Total elapsed time (in milliseconds) used by the target node's operations so far.|  
+|cpu_time_ms|**bigint**|Total CPU time (in milliseconds) use by target node's operations so far.|  
 |database_id|**smallint**|ID of the database that contains the object on which the reads and writes are being performed.|  
 |object_id|**int**|The identifier for the object on which the reads and writes are being performed. References sys.objects.object_id.|  
 |index_id|**int**|The index (if any) the rowset is opened against.|  
@@ -78,13 +78,23 @@ monikerRange: "=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversio
   
 -   If there is a parallel scan, this DMV reports counters for each of the parallel threads working on the scan.
  
- Starting with [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1, the standard query execution statistics profiling infrastructure exists side-by-side with a lightweight query execution statistics profiling infrastructure. The new query execution statistics profiling infrastructure dramatically reduces performance overhead of collecting per-operator query execution statistics, such as actual number of rows. This feature can be enabled either using global startup [trace flag 7412](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md), or is automatically turned on when query_thread_profile extended event is used.
+Starting with [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1, the standard query execution statistics profiling infrastructure exists side-by-side with a lightweight query execution statistics profiling infrastructure. The new query execution statistics profiling infrastructure dramatically reduces performance overhead of collecting per-operator query execution statistics, such as actual number of rows. This feature can be enabled either using global startup [trace flag 7412](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md), or is automatically turned on when query_thread_profile extended event is used.
 
 >[!NOTE]
 > CPU and elapsed times are not supported under the lightweight query execution statistics profiling infrastructure to reduce performance impact.
 
- SET STATISTICS XML ON and SET STATISTICS PROFILE ON always use the legacy query execution statistics profiling infrastructure.
-  
+SET STATISTICS XML ON and SET STATISTICS PROFILE ON always use the legacy query execution statistics profiling infrastructure.
+
+To enable output in sys.dm_exec_query_profiles do the following:
+
+In [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2 and later use SET STATISTICS PROFILE ON or SET STATISTICS XML ON together with the query under investigation. This enables the profiling infrastructure and produces results in the DMV for the session where the SET command was executed. If you are investigating a query running from an application and cannot enable SET options with it, you can create an Extended Event using the query_post_execution_showplan event which will turn on the profiling infrastructure. 
+
+In [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1, you can either turn on [trace flag 7412](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) or use the query_thread_profile extended event.
+
+>[!NOTE]
+> The query under investigation has to start after the profiling infrastructure has been enabled. If the query is already running, staring an Extended event session will not produce results in sys.dm_exec_query_profiles.
+
+
 ## Permissions  
 
 On [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], requires `VIEW SERVER STATE` permission.   

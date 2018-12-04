@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "05/24/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "replication"
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords: 
   - "pull subscriptions [SQL Server replication], creating"
@@ -113,9 +112,9 @@ manager: craigg
   
 2.  At the Subscriber, execute [sp_addmergepullsubscription &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addmergepullsubscription-transact-sql). Specify **@publisher**, **@publisher_db**, **@publication**, and the following parameters:  
   
-    -   **@subscriber_type** – specify **local** for a client subscription and **global** for a server subscription.  
+    -   **@subscriber_type** - specify **local** for a client subscription and **global** for a server subscription.  
   
-    -   **@subscription_priority** – Specify a priority for the subscription (**0.00** to **99.99**). This is only required for a server subscription.  
+    -   **@subscription_priority** - Specify a priority for the subscription (**0.00** to **99.99**). This is only required for a server subscription.  
   
          For more information, see [Advanced Merge Replication Conflict Detection and Resolution](merge/advanced-merge-replication-conflict-detection-and-resolution.md).  
   

@@ -49,7 +49,7 @@ You can use the web portal to browse the report server folders or search for spe
 
 The web portal is used only for a report server that runs in native mode. It is not supported for a report server that you configure for SharePoint integrated mode.
 
-Some web portal features are only available in specified editions of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. For more information, see [Reporting Services Features supported by the Editions of SQL Server 2016](../reporting-services/reporting-services-features-supported-by-the-editions-of-sql-server-2016.md).
+Some web portal features are only available in specified editions of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. For more information, see [Reporting Services Features supported by the Editions of SQL Server](../reporting-services/reporting-services-features-supported-by-the-editions-of-sql-server-2016.md).
 
 On a new installation, only local administrators have sufficient permissions to work with content and settings. To grant permissions to other users, a local administrator must create role assignments that provide access to the report server. The application pages and tasks that a user can subsequently access will depend on the role assignments for that user. For more information, see [Grant User Access to a Report Server](security/grant-user-access-to-a-report-server-report-manager.md)
 
@@ -70,9 +70,9 @@ To start the web portal from a browser, do the following:
 
 2. In the address bar of the web browser, type the web portal URL.
 
-    By default, the URL is *http://[ComputerName]/reports*.
+    By default, the URL is *https://[ComputerName]/reports*.
 
-    The report server might be configured to use a specific port. For example, *http://[ComputerName]:80/reports* or *http://[ComputerName]:8080/reports*.
+    The report server might be configured to use a specific port. For example, *https://[ComputerName]:80/reports* or *https://[ComputerName]:8080/reports*.
 
 ## Grouping by categories
 
@@ -99,7 +99,7 @@ You can upload, organize and manage permissions for Power BI Desktop reports and
 
 ![ssRSWebPortal-view-pbi-and-excel](../reporting-services/media/ssrswebportal-view-pbi-and-excel.png)
 
-The files are stored within Reporting Services, similar to other resource files. Selecting one of these items will download them locally to your desktop. You can save changes you’ve made by re-uploading them to the report server.
+The files are stored within Reporting Services, similar to other resource files. Selecting one of these items will download them locally to your desktop. You can save changes you've made by re-uploading them to the report server.
 
 ## Search for items
 
@@ -121,6 +121,6 @@ You can enter a search team, and you will see everything you can access. The res
 [Configure a URL (SSRS Configuration Manager)](../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md)  
 [Reporting Services Tools](../reporting-services/tools/reporting-services-tools.md)  
 [Planning for Reporting Services Browser Support](../reporting-services/browser-support-for-reporting-services-and-power-view.md)  
-[Reporting Services Features supported by the Editions of SQL Server 2016](../reporting-services/reporting-services-features-supported-by-the-editions-of-sql-server-2016.md)  
+[Reporting Services Features supported by the Editions of SQL Server](../reporting-services/reporting-services-features-supported-by-the-editions-of-sql-server-2016.md)  
 
 More questions? [Try the Reporting Services forum](https://go.microsoft.com/fwlink/?LinkId=620231)

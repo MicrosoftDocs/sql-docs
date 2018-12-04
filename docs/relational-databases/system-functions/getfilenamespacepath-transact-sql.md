@@ -66,7 +66,7 @@ manager: craigg
   
  `\\<machine>\<instance-level FILESTREAM share>\<database-level directory>\<FileTable directory>\...`  
   
- This logical path does not directly correspond to a physical NTFS path. It is translated to the physical path by FILESTREAM’s file system filter driver and the FILESTREAM agent. This separation between the logical path and physical path lets [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] reorganize data internally without affecting the validity of the path.  
+ This logical path does not directly correspond to a physical NTFS path. It is translated to the physical path by FILESTREAM's file system filter driver and the FILESTREAM agent. This separation between the logical path and physical path lets [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] reorganize data internally without affecting the validity of the path.  
   
 ## Best Practices  
  To keep code and applications independent of the current computer and database, avoid writing code that relies on absolute file paths. Instead, get the complete path for a file at run time by using the **FileTableRootPath** and **GetFileNamespacePath** functions together, as shown in the following example. By default, the **GetFileNamespacePath** function returns the relative path of the file under the root path for the database.  
@@ -78,7 +78,7 @@ SELECT @root = FileTableRootPath();
   
 @fullPath = varchar(1000);  
 SELECT @fullPath = @root + file_stream.GetFileNamespacePath() FROM DocumentStore  
-WHERE Name = N’document.docx’;  
+WHERE Name = N'document.docx';  
 ```  
   
 ## Remarks  
@@ -87,13 +87,13 @@ WHERE Name = N’document.docx’;
  The following examples show how to call the **GetFileNamespacePath** function to get the UNC path for a file or directory in a FileTable.  
   
 ```  
--- returns the relative path of the form “\MyFileTable\MyDocDirectory\document.docx”  
+-- returns the relative path of the form "\MyFileTable\MyDocDirectory\document.docx"  
 SELECT file_stream.GetFileNamespacePath() AS FilePath FROM DocumentStore  
-WHERE Name = N’document.docx’;  
+WHERE Name = N'document.docx';  
   
--- returns “\\MyServer\MSSQLSERVER\MyDocumentDatabase\MyFileTable\MyDocDirectory\document.docx”  
+-- returns "\\MyServer\MSSQLSERVER\MyDocumentDatabase\MyFileTable\MyDocDirectory\document.docx"  
 SELECT file_stream.GetFileNamespacePath(1, Null) AS FilePath FROM DocumentStore  
-WHERE Name = N’document.docx’;  
+WHERE Name = N'document.docx';  
 ```  
   
 ## See Also  

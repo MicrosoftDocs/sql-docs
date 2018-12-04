@@ -4,7 +4,7 @@ ms.custom: ""
 ms.date: "03/08/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: master-data-services
+ms.technology: 
 ms.topic: "reference"
 ms.assetid: 8bdab026-a0c0-41f3-9d36-f3919c23247f
 author: leolimsft
@@ -27,7 +27,7 @@ manager: craigg
 3.  Save changes to the file.  
   
 4.  Test metadata publishing by browsing to the service URL, for example: http://yourserver/MDS/service/service.svc. If metadata publishing is enabled, a page is displayed that begins with   
-    “You have created a service.”  
+    "You have created a service."  
   
 ## Creating Proxy Classes by Using Visual Studio  
  If you have Visual Studio 2010 installed, the simplest way to generate proxy classes is to add a **Service Reference** to your project. The address of the service reference is the URL of the [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] web application, appended with /service/service.svc. For example: http://yourserver/MDS/service/service.svc. For more information, see [How to: Add, Update, or Remove a Service Reference](http://go.microsoft.com/fwlink/?LinkId=221167).  

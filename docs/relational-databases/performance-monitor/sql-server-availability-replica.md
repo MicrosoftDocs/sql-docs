@@ -5,7 +5,7 @@ ms.date: "08/25/2016"
 ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
-ms.technology: performance-monitor
+ms.technology: performance
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Availability Groups [SQL Server], monitoring"

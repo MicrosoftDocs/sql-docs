@@ -5,8 +5,7 @@ ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "mds"
 ms.reviewer: ""
-ms.technology: 
-  - "master-data-services"
+ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: 98eb49e7-b190-4a21-8316-08c07cde14ed
 author: leolimsft
@@ -25,7 +24,7 @@ manager: craigg
 |Validation Type|Standards Determined by|When it Occurs|Displayed in the MasterData Manager web UI as|Displayed in the Add-in for Excel as|Is Data Saved to the MDS Repository?|  
 |---------------------|-----------------------------|--------------------|---------------------------------------------------|-------------------------------------------|------------------------------------------|  
 |Business rule validation|An MDS administrator|Automatically when a user adds or edits data.<br /><br /> Manually when a user applies business rules.<br /><br /> Manually when an administrator in the **Version Management** functional area of the [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] web application validates a version against business rules.|Validation Errors|ValidationStatus|Yes|  
-|Data type and content validation|An MDS administrator, when creating model objects (for example, an attribute’s length or data type)|Automatically when a user adds or edits data|Input Errors|InputStatus|No|  
+|Data type and content validation|An MDS administrator, when creating model objects (for example, an attribute's length or data type)|Automatically when a user adds or edits data|Input Errors|InputStatus|No|  
 |Data type and content validation|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] or [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]|Automatically when a user adds or edits data|Input Errors|InputStatus|No|  
   
 ## Related Tasks  

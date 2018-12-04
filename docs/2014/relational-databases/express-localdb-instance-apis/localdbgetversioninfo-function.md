@@ -5,8 +5,6 @@ ms.date: "03/08/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
 ms.technology: 
-  - "database-engine"
-  - "docset-sql-devref"
 ms.topic: "reference"
 api_name: 
   - "LocalDBGetVersionInfo"
@@ -89,7 +87,7 @@ HRESULT LocalDBGetVersionInfo(
   
 ```  
 LocalDBVersionInfo vi;  
-LocalDBVersionInfo(L”11.0”, &vi, sizeof(LocalDBVersionInfo));  
+LocalDBVersionInfo(L"11.0", &vi, sizeof(LocalDBVersionInfo));  
   
 ```  
   

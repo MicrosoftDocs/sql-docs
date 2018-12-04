@@ -193,7 +193,7 @@ Set-SqlAvailabilityReplica -ConnectionModeInPrimaryRole "AllowAllConnections" `
  If you have triggers and jobs that will fail when running on a non-readable secondary database or on a readable secondary database, you need to script the triggers and jobs to check on a given replica to determine whether the database is a primary database or is a readable secondary database. To obtain this information, use the [DATABASEPROPERTYEX](/sql/t-sql/functions/databasepropertyex-transact-sql) function to return the **Updatability** property of the database. To identify a read-only database, specify READ_ONLY as the value, as follows:  
   
 ```  
-DATABASEPROPERTYEX([db name],’Updatability’) = N’READ_ONLY’  
+DATABASEPROPERTYEX([db name],'Updatability') = N'READ_ONLY'  
 ```  
   
  To identify a read-write database, specify READ_WRITE as the value.  

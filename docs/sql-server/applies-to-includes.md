@@ -5,7 +5,7 @@ ms.date: "08/15/2018"
 ms.prod: sql
 ms.prod_service: "sql-tools"
 ms.reviewer: ""
-ms.technology: "database-engine"
+ms.technology:
 author: "MashaMSFT"
 ms.author: "mathoma"
 manager: craigg

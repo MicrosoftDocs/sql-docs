@@ -4,9 +4,7 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "docset-sql-devref"
-  - "integration-services"
+ms.technology: integration-services
 ms.topic: "reference"
 dev_langs: 
   - "VB"
@@ -52,7 +50,7 @@ public override void RegisterEvents()
     string [] parameterNames = new string[2]{"RowCount", "StartTime"};  
     ushort [] parameterTypes = new ushort[2]{ DtsConvert.VarTypeFromTypeCode(TypeCode.Int32), DtsConvert.VarTypeFromTypeCode(TypeCode.DateTime)};  
     string [] parameterDescriptions = new string[2]{"The number of rows to sort.", "The start time of the Sort operation."};  
-    EventInfos.Add("StartingSort","Fires when the component begins sorting the rows.",false,ref parameterNames, ref paramterTypes, ref parameterDescriptions);  
+    EventInfos.Add("StartingSort","Fires when the component begins sorting the rows.",false,ref parameterNames, ref parameterTypes, ref parameterDescriptions);  
 }  
 public override void ProcessInput(int inputID, PipelineBuffer buffer)  
 {  
@@ -72,7 +70,7 @@ Public  Overrides Sub RegisterEvents()
   Dim parameterNames As String() = New String(2) {"RowCount", "StartTime"}   
   Dim parameterTypes As System.UInt16() = New System.UInt16(2) {DtsConvert.VarTypeFromTypeCode(TypeCode.Int32), DtsConvert.VarTypeFromTypeCode(TypeCode.DateTime)}   
   Dim parameterDescriptions As String() = New String(2) {"The number of rows to sort.", "The start time of the Sort operation."}   
-  EventInfos.Add("StartingSort", "Fires when the component begins sorting the rows.", False, parameterNames, paramterTypes, parameterDescriptions)   
+  EventInfos.Add("StartingSort", "Fires when the component begins sorting the rows.", False, parameterNames, parameterTypes, parameterDescriptions)   
 End Sub   
   
 Public  Overrides Sub ProcessInput(ByVal inputID As Integer, ByVal buffer As PipelineBuffer)   

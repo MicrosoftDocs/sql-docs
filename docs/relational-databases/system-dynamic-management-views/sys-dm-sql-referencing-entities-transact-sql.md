@@ -119,7 +119,7 @@ sys.dm_sql_referencing_entities (
   
 ## Permissions  
   
-### [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] – [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]  
+### [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] - [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]  
   
 -   Requires CONTROL permission on the referenced object. When the referenced entity is a partition function, CONTROL permission on the database is required.  
   

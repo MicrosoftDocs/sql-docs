@@ -4,7 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: table-view-index
+ms.technology: 
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.swb.createpartition.partitionscheme.f1"
@@ -82,7 +82,7 @@ manager: craigg
   
 1.  In Object Explorer, right-click the database in which you want to create a partitioned table and select **Properties**.  
   
-2.  In the **Database Properties –** *database_name* dialog box, under **Select a page**, select **Filegroups**.  
+2.  In the **Database Properties -** *database_name* dialog box, under **Select a page**, select **Filegroups**.  
   
 3.  Under **Rows**, click **Add**. In the new row, enter the filegroup name.  
   
@@ -103,7 +103,7 @@ manager: craigg
   
 #### To create a partitioned table  
   
-1.  Right-click the table that you wish to partition, point to **Storage**, and then click **Create Partition…**.  
+1.  Right-click the table that you wish to partition, point to **Storage**, and then click **Create Partition...**.  
   
 2.  In the **Create Partition Wizard**, on the **Welcome to the Create Partition Wizard** page, click **Next**.  
   
@@ -121,11 +121,11 @@ manager: craigg
   
      After selecting the partitioning column and any other options, click **Next**.  
   
-4.  On the **Select a Partition Function** page, under **Select partition function**, click either **New partition function** or **Existing partition function**. If you choose **New partition function**, enter the name of the function. If you choose **Existing partition function**, select the name of the function you’d like to use from the list. The **Existing partition function** option will not be available if there are no other partition functions on the database.  
+4.  On the **Select a Partition Function** page, under **Select partition function**, click either **New partition function** or **Existing partition function**. If you choose **New partition function**, enter the name of the function. If you choose **Existing partition function**, select the name of the function you'd like to use from the list. The **Existing partition function** option will not be available if there are no other partition functions on the database.  
   
      After completing this page, click **Next**.  
   
-5.  On the **Select a Partition Scheme** page, under **Select partition scheme**, click either **New partition scheme** or **Existing partition scheme**. If you choose **New partition scheme**, enter the name of the scheme. If you choose **Existing partition scheme**, select the name of the scheme you’d like to use from the list. The **Existing partition scheme** option will not be available if there are no other partition schemes on the database.  
+5.  On the **Select a Partition Scheme** page, under **Select partition scheme**, click either **New partition scheme** or **Existing partition scheme**. If you choose **New partition scheme**, enter the name of the scheme. If you choose **Existing partition scheme**, select the name of the scheme you'd like to use from the list. The **Existing partition scheme** option will not be available if there are no other partition schemes on the database.  
   
      After completing this page, click **Next**.  
   
@@ -135,7 +135,7 @@ manager: craigg
   
      The following additional options are available on this page:  
   
-     **Set Boundaries…**  
+     **Set Boundaries...**  
      Opens the **Set Boundary Values** dialog box to select the boundary values and date ranges you want for your partitions. This option is only available when you have selected a partitioning column that contains one of the following data types: `date`, `datetime`, `smalldatetime`, `datetime2`, or `datetimeoffset`.  
   
      **Estimate storage**  
@@ -169,7 +169,7 @@ manager: craigg
   
      If you select **Schedule**, click **Change schedule**.  
   
-    1.  In the **New Job Schedule** dialog box, in the **Name** box, enter the job schedule’s name.  
+    1.  In the **New Job Schedule** dialog box, in the **Name** box, enter the job schedule's name.  
   
     2.  On the **Schedule type** list, select the type of schedule:  
   
@@ -193,15 +193,15 @@ manager: craigg
   
             -   If you select **Monthly**, select either **Day** or **The**.  
   
-                -   If you select **Day**, enter both the date of the month you want the job schedule to run and how often the job schedule repeats in months. For example, if you want the job schedule to run on the 15th day of the month every other month, select **Day** and enter “15” in the first box and “2” in the second box. Please note that the largest number allowed in the second box is “99”.  
+                -   If you select **Day**, enter both the date of the month you want the job schedule to run and how often the job schedule repeats in months. For example, if you want the job schedule to run on the 15th day of the month every other month, select **Day** and enter "15" in the first box and "2" in the second box. Please note that the largest number allowed in the second box is "99".  
   
-                -   If you select **The**, select the specific day of the week within the month that you want the job schedule to run and how often the job schedule repeats in months. For example, if you want the job schedule to run on the last weekday of the month every other month, select **Day**, select **last** from the first list and **weekday** from the second list, and then enter “2” in the last box. You can also select **first**, **second**, **third**, or **fourth**, as well as specific weekdays (for example: Sunday or Wednesday) from the first two lists. Please note that the largest number allowed in the last box is “99”.  
+                -   If you select **The**, select the specific day of the week within the month that you want the job schedule to run and how often the job schedule repeats in months. For example, if you want the job schedule to run on the last weekday of the month every other month, select **Day**, select **last** from the first list and **weekday** from the second list, and then enter "2" in the last box. You can also select **first**, **second**, **third**, or **fourth**, as well as specific weekdays (for example: Sunday or Wednesday) from the first two lists. Please note that the largest number allowed in the last box is "99".  
   
         2.  Under **Daily frequency**, specify how often the job schedule repeats on the day the job schedule runs:  
   
             -   If you select **Occurs once at**, enter the specific time of day when the job schedule should run in the **Occurs once at** box. Enter the hour, minute, and second of the day, as well as AM or PM.  
   
-            -   If you select **Occurs every**, specify how often the job schedule runs during the day chosen under **Frequency**. For example, if you want the job schedule to repeat every 2 hours during the day that the job schedule is run, select **Occurs every**, enter “2” in the first box, and then select **hour(s)** from the list. From this list you can also select **minute(s)** and **second(s)**. Please note that the largest number allowed in the first box is “100”.  
+            -   If you select **Occurs every**, specify how often the job schedule runs during the day chosen under **Frequency**. For example, if you want the job schedule to repeat every 2 hours during the day that the job schedule is run, select **Occurs every**, enter "2" in the first box, and then select **hour(s)** from the list. From this list you can also select **minute(s)** and **second(s)**. Please note that the largest number allowed in the first box is "100".  
   
                  In the **Starting at** box, enter the time that the job schedule should start running. In the **Ending at** box, enter the time that the job schedule should stop repeating. Enter the hour, minute, and second of the day, as well as AM or PM.  
   
@@ -243,10 +243,10 @@ manager: craigg
      Opens the **Save Report As** dialog box.  
   
      **Copy Report to Clipboard**  
-     Copies the results of the wizard’s progress report to the Clipboard.  
+     Copies the results of the wizard's progress report to the Clipboard.  
   
      **Send Report as Email**  
-     Copies the results of the wizard’s progress report into an email message.  
+     Copies the results of the wizard's progress report into an email message.  
   
      When complete, click **Close**.  
   

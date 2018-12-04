@@ -5,8 +5,7 @@ ms.date: "03/15/2017"
 ms.prod: sql
 ms.prod_service: "mds"
 ms.reviewer: ""
-ms.technology: 
-  - "master-data-services"
+ms.technology: master-data-services
 ms.topic: conceptual
 helpviewer_keywords: 
   - "attribute groups [Master Data Services], permissions"
@@ -44,7 +43,7 @@ manager: craigg
  The Read, Create, Update, and Delete permissions can be combined. When Create, Update and Delete are assigned, the read permission is assigned automatically.  
   
 ## Attribute Permissions  
- Attribute permissions apply to the attribute’s values for the specific entity. Users with attribute permissions only cannot add or remove members.  
+ Attribute permissions apply to the attribute's values for the specific entity. Users with attribute permissions only cannot add or remove members.  
   
 |Permission|Description|  
 |----------------|-----------------|  

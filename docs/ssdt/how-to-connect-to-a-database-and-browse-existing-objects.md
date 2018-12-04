@@ -17,7 +17,7 @@ manager: "craigg"
 # How to: Connect to a Database and Browse Existing Objects
 A very common task for database administrators and developers is to connect to a live database, design or browse its schema and query against its objects. The SQL Server Object Explorer in Visual Studio now contains a dedicated **SQL Server** node, under which all connected SQL Server instances and their databases are grouped in an SSMS-like hierarchy. The connected SQL Server instances can be an on-premise one, such as running SQL Server 2008 or an off-premise SQL Azure instance.  
   
-The following procedure assumes that you already have the AdventureWorks sample database installed. Use [CodePlex](http://msftdbprodsamples.codeplex.com/) to locate and install sample databases for different SQL Server versions. If you prefer, you can also follow the steps and use an existing database on your server.  
+The following procedure assumes that you already have the AdventureWorks sample database installed. Use [CodePlex](https://msftdbprodsamples.codeplex.com/) to locate and install sample databases for different SQL Server versions. If you prefer, you can also follow the steps and use an existing database on your server.  
   
 ### To connect to a database instance  
   

@@ -30,14 +30,14 @@ manager: craigg
   
 3.  On the Standard tool bar, click New Query.  
   
-4.  Copy and paste the following example into the query window, modify as needed. The following statement will create a SQL Server Credential to store your storage container’s Shared Access Certificate.  
+4.  Copy and paste the following example into the query window, modify as needed. The following statement will create a SQL Server Credential to store your storage container's Shared Access Certificate.  
   
     ```tsql  
   
     USE master  
-    CREATE CREDENTIAL credentialname – this name should match the container path and it must start with https.   
+    CREATE CREDENTIAL credentialname - this name should match the container path and it must start with https.   
        WITH IDENTITY='SHARED ACCESS SIGNATURE', -- this is a mandatory string and do not change it.   
-       SECRET = 'sharedaccesssignature' –- this is the shared access signature key that you obtained in Lesson 2.   
+       SECRET = 'sharedaccesssignature' -- this is the shared access signature key that you obtained in Lesson 2.   
     GO  
   
     ```  

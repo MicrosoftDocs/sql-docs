@@ -151,7 +151,7 @@ FOR(
   
 ```  
 CREATE SELECTIVE XML INDEX on T1(C1)  
-WITH XMLNAMESPACES ('http://www.tempuri.org/' as myns)  
+WITH XMLNAMESPACES ('https://www.tempuri.org/' as myns)  
 FOR ( path1 = '/myns:book/myns:author/text()' );  
 ```  
   

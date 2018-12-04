@@ -97,7 +97,7 @@ manager: craigg
   
 ##  <a name="bkmk_set_database_timeout"></a> Set database timeout  
   
-1.  Use Windows PowerShell to set the database timeout of a SharePoint report server. For more information, see the “Get and set Properties of the Reporting Service Application Database” section of [PowerShell cmdlets for Reporting Services SharePoint Mode](../../2014/reporting-services/powershell-cmdlets-for-reporting-services-sharepoint-mode.md).  
+1.  Use Windows PowerShell to set the database timeout of a SharePoint report server. For more information, see the "Get and set Properties of the Reporting Service Application Database" section of [PowerShell cmdlets for Reporting Services SharePoint Mode](../../2014/reporting-services/powershell-cmdlets-for-reporting-services-sharepoint-mode.md).  
   
 ## See Also  
  [Set Report Processing Properties](report-server/set-report-processing-properties.md)   

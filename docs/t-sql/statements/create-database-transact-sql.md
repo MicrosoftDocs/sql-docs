@@ -2,7 +2,7 @@
 title: "CREATE DATABASE (Transact-SQL) | Microsoft Docs"
 description: Create database syntax for SQL Server, Azure SQL Database, Azure SQL Data Warehouse, and Parallel Data Warehouse
 ms.custom: ""
-ms.date: "10/02/2018"
+ms.date: "11/16/2018"
 ms.prod: sql
 ms.prod_service: "sql-database"
 ms.reviewer: ""
@@ -188,7 +188,7 @@ CREATE DATABASE database_snapshot_name
  COLLATE *collation_name*  
  Specifies the default collation for the database. Collation name can be either a Windows collation name or a SQL collation name. If not specified, the database is assigned the default collation of the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. A collation name cannot be specified on a database snapshot.  
   
- A collation name cannot be specified with the FOR ATTACH or FOR ATTACH_REBUILD_LOG clauses. For information about how to change the collation of an attached database, visit this [Microsoft Web site](http://go.microsoft.com/fwlink/?linkid=16419&kbid=325335).  
+ A collation name cannot be specified with the FOR ATTACH or FOR ATTACH_REBUILD_LOG clauses. For information about how to change the collation of an attached database, visit this [Microsoft Web site](https://go.microsoft.com/fwlink/?linkid=16419&kbid=325335).  
   
  For more information about the Windows and SQL collation names, see [COLLATE &#40;Transact-SQL&#41;](~/t-sql/statements/collations.md).  
   
@@ -506,7 +506,7 @@ Some database features depend on features or capabilities present in the file sy
  Unless FOR ATTACH is specified, each new database inherits the database option settings from the model database. For example, the database option auto shrink is set to **true** in model and in any new databases you create. If you change the options in the model database, these new option settings are used in any new databases you create. Changing operations in the model database does not affect existing databases. If FOR ATTACH is specified on the CREATE DATABASE statement, the new database inherits the database option settings of the original database.  
   
 ## Viewing Database Information  
- You can use catalog views, system functions, and system stored procedures to return information about databases, files, and filegroups. For more information, see [System Views &#40;Transact-SQL&#41;](http://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90).  
+ You can use catalog views, system functions, and system stored procedures to return information about databases, files, and filegroups. For more information, see [System Views &#40;Transact-SQL&#41;](https://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90).  
   
 ## Permissions  
  Requires CREATE DATABASE, CREATE ANY DATABASE, or ALTER ANY DATABASE permission.  
@@ -895,7 +895,7 @@ CREATE DATABASE database_name [ COLLATE collation_name ]
 <edition_options> ::= 
 {  
 
-  MAXSIZE = { 100 MB | 250 MB | 500 MB | 1 … 1024 … 4096 GB }  
+  MAXSIZE = { 100 MB | 250 MB | 500 MB | 1 ... 1024 ... 4096 GB }  
   | ( EDITION = {  'basic' | 'standard' | 'premium' | 'GeneralPurpose' | 'BusinessCritical' | 'Hyperscale' } 
   | SERVICE_OBJECTIVE = 
     {  'basic' | 'S0' | 'S1' | 'S2' | 'S3' | 'S4'| 'S6'| 'S7'| 'S9'| 'S12' | 
@@ -932,13 +932,13 @@ CREATE DATABASE database_name
   
 *database_name* 
  
-The name of the new database. This name must be unique on the SQL server and comply with the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] rules for identifiers. For more information, see [Identifiers](http://go.microsoft.com/fwlink/p/?LinkId=180386).  
+The name of the new database. This name must be unique on the SQL server and comply with the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] rules for identifiers. For more information, see [Identifiers](https://go.microsoft.com/fwlink/p/?LinkId=180386).  
   
 *Collation_name*  
 
 Specifies the default collation for the database. Collation name can be either a Windows collation name or a SQL collation name. If not specified, the database is assigned the default collation, which is  SQL_Latin1_General_CP1_CI_AS.  
   
-For more information about the Windows and SQL collation names, [COLLATE (Transact-SQL)](http://msdn.microsoft.com/library/ms184391.aspx).  
+For more information about the Windows and SQL collation names, [COLLATE (Transact-SQL)](https://msdn.microsoft.com/library/ms184391.aspx).  
   
 CATALOG_COLLATION  
 
@@ -1073,10 +1073,7 @@ The name of the database that is to be copied.
 Databases in [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] have several default settings that are set when the database is created. For more information about these default settings, see the list of values in [DATABASEPROPERTYEX](../../t-sql/functions/databasepropertyex-transact-sql.md).  
   
 MAXSIZE provides the ability to limit the size of the database. If the size of the database reaches its MAXSIZE, you receive error code 40544. When this occurs, you cannot insert or update data, or create new objects (such as tables, stored procedures, views, and functions). However, you can still read and delete data, truncate tables, drop tables and indexes, and rebuild indexes. You can then update MAXSIZE to a value larger than your current database size or delete some data to free storage space. There may be as much as a fifteen-minute delay before you can insert new data.  
-  
-> [!IMPORTANT]  
->  The `CREATE DATABASE` statement must be the only statement in a [!INCLUDE[tsql](../../includes/tsql-md.md)] batch. 
-  
+   
 To change the size, edition, or service objective values later, use [ALTER DATABASE &#40;Azure SQL Database&#41;](../../t-sql/statements/alter-database-transact-sql.md?&tabs=sqldbls).  
 
 The CATALOG_COLLATION argument is only available during database creation. 
@@ -1095,7 +1092,7 @@ The following syntax and semantic rules apply to your use of the `AS COPY OF` ar
   
 - The source server name and the server name for the copy target may be the same or different. When they are the same, this parameter is optional and the server context of the current session is used by default.  
   
-- The source and destination database names must be specified, unique, and comply with the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] rules for identifiers. For more information, see [Identifiers](http://go.microsoft.com/fwlink/p/?LinkId=180386).  
+- The source and destination database names must be specified, unique, and comply with the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] rules for identifiers. For more information, see [Identifiers](https://go.microsoft.com/fwlink/p/?LinkId=180386).  
   
 - The `CREATE DATABASE` statement must be executed within the context of the master database of the [!INCLUDE[ssSDS](../../includes/sssds-md.md)] server where the new database will be created. 
 - After the copying completes, the destination database must be managed as an independent database. You can execute the `ALTER DATABASE` and `DROP DATABASE` statements against the new database independently of the source database. You can also copy the new database to another new database.  
@@ -1184,7 +1181,7 @@ CREATE DATABASE db_copy
 The following example sets the catalog collation to DATABASE_DEFAULT during database creation, which sets the catalog collation to be the same as the database collation.
 
 ```sql
-CREATE DATABASE TestDB3 COLLATE Japanese_XJIS_140  (MAXSIZE = 100 MB, EDITION = ‘basic’)  
+CREATE DATABASE TestDB3 COLLATE Japanese_XJIS_140  (MAXSIZE = 100 MB, EDITION = 'basic')  
   WITH CATALOG_COLLATION = DATABASE_DEFAULT 
 ```
   
@@ -1223,13 +1220,13 @@ CREATE DATABASE database_name [ COLLATE collation_name ]
   
 *database_name* 
  
-The name of the new database. This name must be unique on the SQL server and comply with the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] rules for identifiers. For more information, see [Identifiers](http://go.microsoft.com/fwlink/p/?LinkId=180386).  
+The name of the new database. This name must be unique on the SQL server and comply with the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] rules for identifiers. For more information, see [Identifiers](https://go.microsoft.com/fwlink/p/?LinkId=180386).  
   
 *Collation_name*  
 
 Specifies the default collation for the database. Collation name can be either a Windows collation name or a SQL collation name. If not specified, the database is assigned the default collation, which is  SQL_Latin1_General_CP1_CI_AS.  
   
-For more information about the Windows and SQL collation names, [COLLATE (Transact-SQL)](http://msdn.microsoft.com/library/ms184391.aspx).  
+For more information about the Windows and SQL collation names, [COLLATE (Transact-SQL)](https://msdn.microsoft.com/library/ms184391.aspx).  
   
 ## Remarks
  
@@ -1305,12 +1302,12 @@ CREATE DATABASE database_name [ COLLATE collation_name ]
   
 ## Arguments  
 *database_name*  
-The name of the new database. This name must be unique on the SQL server, which can host both [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] databases and [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] databases, and comply with the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] rules for identifiers. For more information, see [Identifiers](http://go.microsoft.com/fwlink/p/?LinkId=180386).  
+The name of the new database. This name must be unique on the SQL server, which can host both [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] databases and [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] databases, and comply with the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] rules for identifiers. For more information, see [Identifiers](https://go.microsoft.com/fwlink/p/?LinkId=180386).  
   
 *collation_name*  
 Specifies the default collation for the database. Collation name can be either a Windows collation name or a SQL collation name. If not specified, the database is assigned the default collation, which is SQL_Latin1_General_CP1_CI_AS.  
   
-For more information about the Windows and SQL collation names, see [COLLATE (Transact-SQL)](http://msdn.microsoft.com/library/ms184391.aspx).  
+For more information about the Windows and SQL collation names, see [COLLATE (Transact-SQL)](https://msdn.microsoft.com/library/ms184391.aspx).  
   
 *EDITION*  
 Specifies the service tier of the database. For [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] use 'datawarehouse' .  
@@ -1318,11 +1315,11 @@ Specifies the service tier of the database. For [!INCLUDE[ssSDW](../../includes/
 *MAXSIZE*  
 The default is 245,760 GB (240 TB).  
 
-**Applies to:** Optimized for Elasticity performance tier
+**Applies to:** Optimized for Compute Gen1
 
 The maximum allowable size for the database. The database cannot grow beyond MAXSIZE. 
 
-**Applies to:** Optimized for Compute performance tier
+**Applies to:** Optimized for Compute Gen2
 
 The maximum allowable size for rowstore data in the database. Data stored in rowstore tables, a columnstore index's deltastore, or a nonclustered index on a clustered columnstore index cannot grow beyond MAXSIZE.  Data compressed into columnstore format does not have a size limit and is not constrained by MAXSIZE.
   

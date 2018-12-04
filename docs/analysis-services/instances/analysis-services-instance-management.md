@@ -1,6 +1,6 @@
 ---
-title: "Analysis Services Server Management | Microsoft Docs"
-ms.date: 05/02/2018
+title: "SQL Server Analysis Services Server Management | Microsoft Docs"
+ms.date: 11/15/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom:
@@ -10,7 +10,10 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ---
-# Analysis Services server management
+# SQL Server Analysis Services server management
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+
+For Azure Analysis Services, see [Manage Azure Analysis Services](https://docs.microsoft.com/azure/analysis-services/analysis-services-manage).
 
   A server instance of Analysis Services is a copy of the **msmdsrv.exe** executable that runs as an operating system service. Each instance is fully independent of other instances on the same server, having its own configuration settings, permissions, ports, startup accounts, file storage, and server mode properties.  
   
@@ -36,7 +39,7 @@ manager: kfile
 > [!NOTE]  
 >  The exception is [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint. Server administration of a [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] deployment is always within the context of a SharePoint farm. [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] differs from other server modes in that it is always single-instance, and always managed through SharePoint Central Administration or the [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] Configuration Tool. Although it is possible to connect to [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint in SQL Server Management Studio or [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], it is not desirable. A SharePoint farm includes infrastructure that synchronizes server state and oversees server availability. Using other tools can interfere with these operations. For more information about [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] server administration, see [Power Pivot for SharePoint ](../../analysis-services/power-pivot-sharepoint/power-pivot-for-sharepoint-ssas.md).  
   
-## In this section  
+## Common server management topics  
   
 |Link|Task Description|  
 |----------|----------------------|  

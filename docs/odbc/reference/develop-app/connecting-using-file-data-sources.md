@@ -49,4 +49,4 @@ DSN = MyDataSource
  The connection string used for a file data source is the union of the keywords specified in the .dsn file and the keywords specified in the connection string in the call to **SQLDriverConnect**. If any of the keywords in the .dsn file conflict with keywords in the connection string, the Driver Manager decides which keyword value should be used. For more information, see [SQLDriverConnect](../../../odbc/reference/syntax/sqldriverconnect-function.md).  
   
 ## See Also  
- [http://support.microsoft.com/kb/165866](http://support.microsoft.com/kb/165866)
+ [https://support.microsoft.com/kb/165866](https://support.microsoft.com/kb/165866)

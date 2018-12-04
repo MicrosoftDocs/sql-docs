@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "integration-services"
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Data Profiling task [Integration Services], using output in workflow"
@@ -258,7 +257,7 @@ manager: craigg
   
 8.  Close the script development environment, and then close the Script Task Editor.  
   
-#### Alternative Code—Reading the Profile Output from a Variable  
+#### Alternative Code-Reading the Profile Output from a Variable  
  The previous procedure shows how to load the output of the Data Profiling task from a file. However, an alternative method would be to load this output from a package variable. To load the output from a variable, you have to make the following changes to the sample code:  
   
 -   Call the `LoadXml` method of the `XmlDocument` class instead of the `Load` method.  

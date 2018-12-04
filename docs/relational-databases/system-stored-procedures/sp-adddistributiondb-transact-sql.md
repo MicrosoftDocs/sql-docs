@@ -5,8 +5,7 @@ ms.date: "04/30/2018"
 ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
-ms.technology: 
-  - "replication"
+ms.technology: replication
 ms.topic: "language-reference"
 f1_keywords: 
   - "sp_adddistributiondb_TSQL"
@@ -52,19 +51,19 @@ sp_adddistributiondb [ @database= ] 'database'
  [ **@database=**] *database'*  
  Is the name of the distribution database to be created. *database* is **sysname**, with no default. If the specified database already exists and is not already marked as a distribution database, then the objects needed to enable distribution are installed and the database is marked as a distribution database. If the specified database is already enabled as a distribution database, an error is returned.  
   
- [ **@data_folder=**] **'***data_folder'*  
+ [ **@data_folder=**] **'**_data_folder'_  
  Is the name of the directory used to store the distribution database data file. *data_folder* is **nvarchar(255)**, with a default of NULL. If NULL, the data directory for that instance of [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is used, for example, `C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Data`.  
   
- [ **@data_file=**] **'***data_file***'**  
+ [ **@data_file=**] **'**_data_file_**'**  
  Is the name of the database file. *data_file* is **nvarchar(255)**, with a default of **database**. If NULL, the stored procedure constructs a file name using the database name.  
   
  [ **@data_file_size=**] *data_file_size*  
  Is the initial data file size in megabytes (MB). *data_file_size i*s **int**, with a default of 5MB.  
   
- [ **@log_folder=**] **'***log_folder***'**  
+ [ **@log_folder=**] **'**_log_folder_**'**  
  Is the name of the directory for the database log file. *log_folder* is **nvarchar(255)**, with a default of NULL. If NULL, the data directory for that instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is used (for example, `C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Data`).  
   
- [ **@log_file=**] **'***log_file***'**  
+ [ **@log_file=**] **'**_log_file_**'**  
  Is the name of the log file. *log_file* is **nvarchar(255)**, with a default of NULL. If NULL, the stored procedure constructs a file name using the database name.  
   
  [ **@log_file_size=**] *log_file_size*  
@@ -82,10 +81,10 @@ sp_adddistributiondb [ @database= ] 'database'
  [ **@security_mode=**] *security_mode*  
  Is the security mode to use when connecting to the Distributor. *security_mode* is **int**, with a default of 1. **0** specifies [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentication; **1** specifies Windows Integrated Authentication.  
   
- [ **@login=**] **'***login***'**  
+ [ **@login=**] **'**_login_**'**  
  Is the login name used when connecting to the Distributor to create the distribution database. This is required if *security_mode* is set to **0**. *login* is **sysname**, with a default of NULL.  
   
- [ **@password=**] **'***password***'**  
+ [ **@password=**] **'**_password_**'**  
  Is the password used when connecting to the Distributor. This is required if *security_mode* is set to **0**. *password* is **sysname**, with a default of NULL.  
   
  [ **@createmode=**] *createmode*  

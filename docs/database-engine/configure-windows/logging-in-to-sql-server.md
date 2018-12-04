@@ -59,7 +59,7 @@ manager: craigg
 |Connection to a named instance by specifying both the IP address and the TCP port that is being used, in this case 2828.|192.168.17.28\SQLEXPRESS,2828|  
 |Connecting to default instance by name, forcing a TCP connection.|tcp:APPHOST|  
 |Connecting to named instance by name, forcing a TCP connection.|tcp:APPHOST\SQLEXPRESS|  
-|Connecting to a default instance by specifying a named pipe name.|\\\APPHOST\pipe\unit\app|  
+|Connecting to a default instance by specifying a named pipe name.|\\\APPHOST\pipe\SQL\query|  
 |Connecting to a named instance by specifying a named pipe name.|\\\APPHOST\pipe\MSSQL$SQLEXPRESS\SQL\query|  
 |Connecting to default instance by name, forcing a named pipes connection.|np:APPHOST|  
 |Connecting to named instance by name, forcing a named pipes connection.|np:APPHOST\SQLEXPRESS|  
@@ -78,9 +78,9 @@ WHERE session_id = @@SPID;
   
  The following resources can help you troubleshoot a connection problem.  
   
--   [How to Troubleshoot Connecting to the SQL Server Database Engine](http://social.technet.microsoft.com/wiki/contents/articles/how-to-troubleshoot-connecting-to-the-sql-server-database-engine.aspx)  
+-   [How to Troubleshoot Connecting to the SQL Server Database Engine](https://social.technet.microsoft.com/wiki/contents/articles/how-to-troubleshoot-connecting-to-the-sql-server-database-engine.aspx)  
   
--   [Steps to troubleshoot SQL connectivity issues](http://blogs.msdn.com/b/sql_protocols/archive/2008/04/30/steps-to-troubleshoot-connectivity-issues.aspx)  
+-   [Steps to troubleshoot SQL connectivity issues](https://blogs.msdn.com/b/sql_protocols/archive/2008/04/30/steps-to-troubleshoot-connectivity-issues.aspx)  
   
 ## Related Content  
  [Choose an Authentication Mode](../../relational-databases/security/choose-an-authentication-mode.md)  

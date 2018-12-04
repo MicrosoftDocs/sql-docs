@@ -23,7 +23,7 @@ manager: kfile
   
  The following rules apply to **Name** and **ID** properties.  
   
--   Names are case insensitive. You cannot have a cube named “sales” and another named “Sales” in the same database.  
+-   Names are case insensitive. You cannot have a cube named "sales" and another named "Sales" in the same database.  
   
 -   No leading or trailing spaces allowed in an object name, although you can embed spaces within a name. Leading and trailing spaces are implicitly trimmed. This applies to both the **Name** and **ID** of an object.  
   
@@ -75,7 +75,7 @@ manager: kfile
 |MOLAP (all versions)|No|  
 |Tabular - 1050|No|  
 |Tabular - 1100|No|  
-|Tabular – 1130 and higher|Yes|  
+|Tabular - 1130 and higher|Yes|  
   
  Databases can have a ModelType of default. Default is equivalent to multidimensional, and thus does not support the use of reserved characters in column names.  
   

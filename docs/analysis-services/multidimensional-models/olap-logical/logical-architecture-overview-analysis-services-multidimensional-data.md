@@ -37,7 +37,7 @@ manager: kfile
  Each database object contains one or more cube objects. A cube is defined by its measures and dimensions. The measures and dimensions in a cube are derived from the tables and views in the data source view on which the cube is based, or which is generated from the measure and dimension definitions.  
   
 ## Object Inheritance  
- The ASSL object model contains many repeated element groups. For example, the element group, “**Dimensions** contain **Hierarchies**,” defines the dimension hierarchy of an element. Both **Cubes** and **MeasureGroups** contain the element group, "**Dimensions** contain **Hierarchies**."  
+ The ASSL object model contains many repeated element groups. For example, the element group, "**Dimensions** contain **Hierarchies**," defines the dimension hierarchy of an element. Both **Cubes** and **MeasureGroups** contain the element group, "**Dimensions** contain **Hierarchies**."  
   
  Unless explicitly overridden, an element inherits the details of these repeated element groups from the higher level. For example, the **Translations** for a **CubeDimension** are the same as the **Translations** for its ancestor element, **Cube**.  
   
@@ -63,7 +63,7 @@ manager: kfile
  The Route dimension represents the means by which the imports reach their destination. Members of this dimension include ground, nonground, air, sea, road, or rail. The Source dimension represents the locations where the imports are produced, such as Africa or Asia. The Time dimension represents the quarters and halves of a single year.  
   
 ### Aggregates  
- Business users of a cube can determine the value of any measure for each member of every dimension, regardless of the level of the member within the dimension, because [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] aggregates values at upper levels as needed. For example, the measure values in the preceding illustration can be aggregated according to a standard calendar hierarchy by using the Calendar Time hierachy in the Time dimension as illustrated in the following diagram.  
+ Business users of a cube can determine the value of any measure for each member of every dimension, regardless of the level of the member within the dimension, because [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] aggregates values at upper levels as needed. For example, the measure values in the preceding illustration can be aggregated according to a standard calendar hierarchy by using the Calendar Time hierarchy in the Time dimension as illustrated in the following diagram.  
   
  ![Diagram of measures organized along time dimension](../../../analysis-services/multidimensional-models/olap-logical/media/cubeintro2.gif "Diagram of measures organized along time dimension")  
   

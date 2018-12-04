@@ -4,7 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology:
+ms.technology: tools-other
 ms.topic: conceptual
 ms.assetid: 9b5012fd-233e-4a25-a2e1-585c63b70502
 author: stevestein
@@ -35,7 +35,7 @@ manager: craigg
  **-i** *input_trace_file*  
  Specifies the full path of the input trace file on the controller, such as `D:\Mytrace.trc`. The **-i** parameter is required.  
   
- If there are rollover files in the same directory, they will be loaded and used automatically. The files must follow the file rollover naming convention, for example: `Mytrace.trc`, `Mytrace_1.trc`, `Mytrace_2.trc`, `Mytrace_3.trc`, … `Mytrace_n.trc`.  
+ If there are rollover files in the same directory, they will be loaded and used automatically. The files must follow the file rollover naming convention, for example: `Mytrace.trc`, `Mytrace_1.trc`, `Mytrace_2.trc`, `Mytrace_3.trc`, ... `Mytrace_n.trc`.  
   
 > [!NOTE]  
 >  If you are using the administration tool on a different computer than the controller, you will need to copy the input trace files to the controller so that a local path can be used for this parameter.  
@@ -69,13 +69,13 @@ manager: craigg
  In this example, the preprocess stage is initiated with all of the default settings. The value `localhost` indicates that the controller service is running on the same computer as the administration tool. The *input_trace_file* parameter specifies the location of the input trace data, `c:\mytrace.trc`. Because there is no trace file filtering involved, the **-c** parameter does have to be specified.  
   
 ```  
-dreplay preprocess –m localhost -i c:\mytrace.trc -d c:\WorkingDir  
+dreplay preprocess -m localhost -i c:\mytrace.trc -d c:\WorkingDir  
 ```  
   
  In this example, the preprocess stage is initiated and a modified preprocess configuration file is specified. Unlike the previous example, the **-c** parameter is used to point to the modified configuration file, if you have stored it in a different location. For example:  
   
 ```  
-dreplay preprocess –m localhost -i c:\mytrace.trc -d c:\WorkingDir -c c:\DReplay.exe.preprocess.config  
+dreplay preprocess -m localhost -i c:\mytrace.trc -d c:\WorkingDir -c c:\DReplay.exe.preprocess.config  
 ```  
   
  In the modified preprocess configuration file, a filter condition is added that filters out system sessions during distributed replay. The filter is added by modifying the `<PreprocessModifiers>` element in the preprocess configuration file, `DReplay.exe.preprocess.config`.  

@@ -52,7 +52,7 @@ Get-spwebapplication http://<top-level site name> | format-list UseClaimsAuthent
 2.  Run the following cmdlet to add the farm solution.  
   
     ```  
-    Add-SPSolution –LiteralPath “C:\Program Files\Microsoft SQL Server\110\Tools\PowerPivotTools\ConfigurationTool\Resources\PowerPivotFarm.wsp”  
+    Add-SPSolution -LiteralPath "C:\Program Files\Microsoft SQL Server\110\Tools\PowerPivotTools\ConfigurationTool\Resources\PowerPivotFarm.wsp"  
     ```  
   
      The cmdlet returns the name of the solution, its solution ID, and Deployed=False. In the next step, you will deploy the solution.  
@@ -60,7 +60,7 @@ Get-spwebapplication http://<top-level site name> | format-list UseClaimsAuthent
 3.  Run the next cmdlet to deploy the farm solution:  
   
     ```  
-    Install-SPSolution –Identity PowerPivotFarm.wsp –GACDeployment -Force  
+    Install-SPSolution -Identity PowerPivotFarm.wsp -GACDeployment -Force  
     ```  
   
 ##  <a name="deployCA"></a> Step 2: Deploy the PowerPivot Web Application Solution to Central Administration  
@@ -77,7 +77,7 @@ Get-spwebapplication http://<top-level site name> | format-list UseClaimsAuthent
 3.  Run the following cmdlet to add the farm solution.  
   
     ```  
-    Add-SPSolution –LiteralPath “C:\Program Files\Microsoft SQL Server\110\Tools\PowerPivotTools\ConfigurationTool\Resources\PowerPivotWebApp.wsp”  
+    Add-SPSolution -LiteralPath "C:\Program Files\Microsoft SQL Server\110\Tools\PowerPivotTools\ConfigurationTool\Resources\PowerPivotWebApp.wsp"  
     ```  
   
      The cmdlet returns the name of the solution, its solution ID, and Deployed=False. In the next step, you will deploy the solution.  

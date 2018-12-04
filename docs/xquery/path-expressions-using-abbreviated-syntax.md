@@ -42,9 +42,9 @@ child::ProductDescription[attribute::ProductModelID=19]
   
     ```  
     SELECT AdditionalContactInfo.query('             
-                declare namespace act="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ContactTypes";             
-                declare namespace crm="http://schemas.adventure-works.com/Contact/Record";             
-                declare namespace ci="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ContactInfo";             
+                declare namespace act="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ContactTypes";             
+                declare namespace crm="https://schemas.adventure-works.com/Contact/Record";             
+                declare namespace ci="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ContactInfo";             
                 /descendant-or-self::node()/child::act:telephoneNumber             
                 ') as result             
     FROM Person.Contact             

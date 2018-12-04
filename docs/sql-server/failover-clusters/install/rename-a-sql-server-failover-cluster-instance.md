@@ -52,7 +52,7 @@ manager: craigg
     ```  
     ipconfig /flushdns  
     ipconfig /registerdns  
-    nbtstat –RR  
+    nbtstat -RR  
     ```  
   
 ## Additional considerations after the Renaming Operation  
@@ -60,7 +60,7 @@ manager: craigg
   
  **[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent Service:** Verify and perform the below additional actions for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent Service:  
   
--   Fix the registry settings if SQL Agent is configured for event forwarding. For more information, see [Designate an Events Forwarding Server &#40;SQL Server Management Studio&#41;](http://msdn.microsoft.com/library/81dfcbe4-3000-4e77-99de-bf85fef63a12).  
+-   Fix the registry settings if SQL Agent is configured for event forwarding. For more information, see [Designate an Events Forwarding Server &#40;SQL Server Management Studio&#41;](https://msdn.microsoft.com/library/81dfcbe4-3000-4e77-99de-bf85fef63a12).  
   
 -   Fix the master server (MSX) and target servers (TSX) instance names when machines / cluster network name is renamed. For more information, see the following topics:  
   

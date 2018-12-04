@@ -4,7 +4,7 @@ ms.custom: ""
 ms.date: "05/24/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology:
+ms.technology: configuration
 ms.topic: conceptual
 f1_keywords: 
   - "SQL12.SWB.makemanaged.agentaccount.F1"
@@ -81,12 +81,12 @@ manager: craigg
 -   [Enrolling the Instance of SQL Server](#Enrolling)  
   
 ##  <a name="Welcome"></a> Introduction to Enroll Instance Wizard  
- To launch the Wizard, expand the Utility Explorer tree on a utility control point, right-click on **Managed Instances**, and select **Add Managed Instance…**.  
+ To launch the Wizard, expand the Utility Explorer tree on a utility control point, right-click on **Managed Instances**, and select **Add Managed Instance...**.  
   
  To continue, click **Next**.  
   
 ##  <a name="Instance_name"></a> Specify the Instance of SQL Server  
- To select an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] from the connection dialog box, click **Connect…**. Provide the computer name and the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance name in the format ComputerName\InstanceName. For more information, see [Connect to Server &#40;Database Engine&#41;](../../ssms/f1-help/connect-to-server-database-engine.md).  
+ To select an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] from the connection dialog box, click **Connect...**. Provide the computer name and the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance name in the format ComputerName\InstanceName. For more information, see [Connect to Server &#40;Database Engine&#41;](../../ssms/f1-help/connect-to-server-database-engine.md).  
   
  To continue, click **Next**.  
   
@@ -96,7 +96,7 @@ manager: craigg
 > [!NOTE]  
 >  If the connection is encrypted, the encrypted connection is used. If the connection is not encrypted, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Utility reconnects using an encrypted connection.  
   
- To continue, click **Connect…**.  
+ To continue, click **Connect...**.  
   
 ##  <a name="Proxy_configuration"></a> Utility Collection Set Account  
  Specify a Windows domain account to run the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Utility collection set. This account is used as the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent proxy account for the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Utility collection set. Alternatively, you can use the existing [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent service account. To pass validation requirements, use the following guidelines to specify the account.  
@@ -168,7 +168,7 @@ manager: craigg
 >  For more information about troubleshooting this failure, see [Troubleshoot the SQL Server Utility](../../database-engine/troubleshoot-the-sql-server-utility.md).  
   
 > [!IMPORTANT]  
->  Do not change any properties of the “Utility Information” collection set on a managed instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], and do not turn data collection on/off manually, as data collection is controlled by a Utility agent job.  
+>  Do not change any properties of the "Utility Information" collection set on a managed instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], and do not turn data collection on/off manually, as data collection is controlled by a Utility agent job.  
   
  After completing the Enroll Instance Wizard, click on the **Managed Instances** node in the **Utility Explorer Navigation** pane in SSMS. Enrolled instances of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] are displayed in the list view in **Utility Explorer Content** pane.  
   

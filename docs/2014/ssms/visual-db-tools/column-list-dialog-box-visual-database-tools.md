@@ -4,7 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology:
+ms.technology: ssms
 ms.topic: conceptual
 f1_keywords: 
   - "vdt.dlgbox.columnlist"
@@ -16,7 +16,7 @@ manager: craigg
 # Column List Dialog Box (Visual Database Tools)
   When writing queries, it can be useful to see a list of columns available in your selected table-valued objects.  
   
- To access this dialog box, from the **Query Designer** menu, in the Diagram pane right-click the header of a table-valued object, and then click **Properties**. In the **Properties** window, click the **Column List** field. Then click the ellipses **(…)** to the right of the field.  
+ To access this dialog box, from the **Query Designer** menu, in the Diagram pane right-click the header of a table-valued object, and then click **Properties**. In the **Properties** window, click the **Column List** field. Then click the ellipses **(...)** to the right of the field.  
   
  This dialog box provides a list of the columns in the selected table-valued object and basic properties, such as data types and whether the columns allow null values.  
   

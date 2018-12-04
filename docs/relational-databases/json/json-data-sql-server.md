@@ -211,7 +211,7 @@ For more information, see [Format query results as JSON with FOR JSON (SQL Serve
 
 ## Use cases for JSON data in SQL Server
 
-JSON support in SQL Server and Azure SQL Database lets you combine relational and NoSQL concepts. You can easily transform relational to semi-structured data and vice-versa. JSON is not a replacement for existing relational models, however. Here are some specific use cases that benefit from the JSON support in SQL Server and in SQL Database. For more info, see [JSON in SQL Server – Use cases](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2018/01/31/json-in-sql-server-use-cases/).
+JSON support in SQL Server and Azure SQL Database lets you combine relational and NoSQL concepts. You can easily transform relational to semi-structured data and vice-versa. JSON is not a replacement for existing relational models, however. Here are some specific use cases that benefit from the JSON support in SQL Server and in SQL Database. For more info, see [JSON in SQL Server - Use cases](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2018/01/31/json-in-sql-server-use-cases/).
 
 ### Simplify complex data models
 
@@ -223,7 +223,7 @@ Store info about products with a wide range of variable attributes in a denormal
 
 ### Process log and telemetry data
 
-Load, query, and analyze log data stored as JSON files with all the power of the Transact-SQL language. For more info, see the section *Log and telemetry data analysis* in [JSON in SQL Server – Use cases](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2018/01/31/json-in-sql-server-use-cases/).
+Load, query, and analyze log data stored as JSON files with all the power of the Transact-SQL language. For more info, see the section *Log and telemetry data analysis* in [JSON in SQL Server - Use cases](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2018/01/31/json-in-sql-server-use-cases/).
 
 ### Store semi-structured IoT data
 
@@ -255,7 +255,7 @@ To learn more about your options for storing, indexing, and optimizing JSON data
 
 You can format information that's stored in files as standard JSON or line-delimited JSON. SQL Server can import the contents of JSON files, parse it by using the **OPENJSON** or **JSON_VALUE** functions, and load it into tables.  
   
--   If your JSON documents are stored in local files, on shared network drives, or in Azure Files locations that can be accessed by SQL Server, you can use bulk import to load your JSON data into SQL Server. For more information about this scenario, see [Importing JSON files into SQL Server using OPENROWSET (BULK)](http://blogs.msdn.com/b/sqlserverstorageengine/archive/2015/10/07/importing-json-files-into-sql-server-using-openrowset-bulk.aspx).  
+-   If your JSON documents are stored in local files, on shared network drives, or in Azure Files locations that can be accessed by SQL Server, you can use bulk import to load your JSON data into SQL Server. For more information about this scenario, see [Importing JSON files into SQL Server using OPENROWSET (BULK)](https://blogs.msdn.com/b/sqlserverstorageengine/archive/2015/10/07/importing-json-files-into-sql-server-using-openrowset-bulk.aspx).  
   
 -   If your line-delimited JSON files are stored in Azure Blob storage or the Hadoop file system, you can use PolyBase to load JSON text, parse it in Transact-SQL code, and load it into tables.  
 
@@ -335,12 +335,12 @@ For example, you might want to generate JSON output that's compliant with the OD
   
 -   Request: `/Northwind/Northwind.svc/Products(1)?$select=ProductID,ProductName`  
   
--   Response: `{"@odata.context":"http://services.odata.org/V4/Northwind/Northwind.svc/$metadata#Products(ProductID,ProductName)/$entity","ProductID":1,"ProductName":"Chai"}`  
+-   Response: `{"@odata.context":"https://services.odata.org/V4/Northwind/Northwind.svc/$metadata#Products(ProductID,ProductName)/$entity","ProductID":1,"ProductName":"Chai"}`  
   
 This OData URL represents a request for the ProductID and ProductName columns for the product with `id` 1. You can use **FOR JSON** to format the output as expected in SQL Server.  
   
 ```sql  
-SELECT 'http://services.odata.org/V4/Northwind/Northwind.svc/$metadata#Products(ProductID,ProductName)/$entity'
+SELECT 'https://services.odata.org/V4/Northwind/Northwind.svc/$metadata#Products(ProductID,ProductName)/$entity'
  AS '@odata.context',   
  ProductID, Name as ProductName   
 FROM Production.Product  
@@ -377,7 +377,7 @@ Here's what you can do with the scripts that are included in the file:
   
 ### Microsoft blog posts  
   
-For specific solutions, use cases, and recommendations, see these [blog posts](http://blogs.msdn.com/b/sqlserverstorageengine/archive/tags/json/) about the built-in JSON support in SQL Server and Azure SQL Database.  
+For specific solutions, use cases, and recommendations, see these [blog posts](https://blogs.msdn.com/b/sqlserverstorageengine/archive/tags/json/) about the built-in JSON support in SQL Server and Azure SQL Database.  
 
 ### Microsoft videos
 

@@ -50,7 +50,7 @@ fn_helpcollations ()
 ## Examples  
  The following example returns all collation names starting with the letter `L` and that are binary sort collations.  
   
-```  
+```sql  
 SELECT Name, Description FROM fn_helpcollations()  
 WHERE Name like 'L%' AND Description LIKE '% binary sort';  
 ```  

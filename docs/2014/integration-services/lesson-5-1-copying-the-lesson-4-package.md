@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "integration-services"
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 8aa7d690-4649-4c0a-ac6f-9504637ee426
 author: douglaslMS
@@ -43,7 +42,7 @@ manager: craigg
   
 3.  In the **Add Copy of Existing Package** dialog box, in **Package location**, select **File system**.  
   
-4.  Click the browse **(…)** button, navigate to **Lesson 4.dtsx** on your machine, and then click **Open**.  
+4.  Click the browse **(...)** button, navigate to **Lesson 4.dtsx** on your machine, and then click **Open**.  
   
      To download all of the lesson packages for this tutorial, do the following.  
   

@@ -46,7 +46,7 @@ manager: craigg
   
 2.  Expand the **Databases** node.  
   
-3.  Right-click the database to be registered, point to **Tasks**, and then select **Register As Data-tier Application…**  
+3.  Right-click the database to be registered, point to **Tasks**, and then select **Register As Data-tier Application...**  
   
 4.  Complete the wizard dialogs:  
   
@@ -72,7 +72,7 @@ manager: craigg
 ##  <a name="Set_properties"></a> Set Properties Page  
  Use this page to specify DAC-level properties such as the application name and version.  
   
- **Application name.** - A string that specifies the name used to identify the DAC defintion, the field is been populated with the database name.  
+ **Application name.** - A string that specifies the name used to identify the DAC definition, the field is been populated with the database name.  
   
  **Version.** - A numeric value that identifies the version of the DAC. The DAC version is used in Visual Studio to identify the version of the DAC that developers are working on. When deploying a DAC, the version is stored in the **msdb** database and can later be viewed under the **Data-tier Applications** node in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
@@ -103,7 +103,7 @@ manager: craigg
  [Using the Register Data-tier Application Wizard](#UsingRegisterDACWizard)  
   
 ### Validating Objects  
- **Checking**  *SchemaName* **.** *ObjectName* **.** - Displays a progress bar as the wizard verifies the dependencies of the retrieved objects, and verifies that they are all valid objects for a DAC. *SchemaName***.***ObjectName* identify which object is currently being verified.  
+ **Checking**  *SchemaName* **.** *ObjectName* **.** - Displays a progress bar as the wizard verifies the dependencies of the retrieved objects, and verifies that they are all valid objects for a DAC. _SchemaName_**.**_ObjectName_ identify which object is currently being verified.  
   
  **< Previous** - Returns you to the **Set Properties** page to change your entries.  
   

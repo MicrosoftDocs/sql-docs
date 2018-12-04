@@ -97,7 +97,7 @@ ms.author: maghan
 5.  Type the following command line, replacing *servername* with the actual name of your server:  
   
     ```  
-    rs -i EnableRemoteErrors.rss -s http://servername/ReportServer  
+    rs -i EnableRemoteErrors.rss -s https://servername/ReportServer  
     ```  
   
 6.  For more information, see [RS.exe Utility &#40;SSRS&#41;](../../reporting-services/tools/rs-exe-utility-ssrs.md)  

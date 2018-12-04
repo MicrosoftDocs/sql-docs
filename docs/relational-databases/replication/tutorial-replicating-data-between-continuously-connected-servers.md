@@ -45,7 +45,7 @@ To complete this tutorial, you need SQL Server, SQL Server Management Studio (SS
 - At the subscriber server (destination), install any edition of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], except [!INCLUDE[ssEW](../../includes/ssew-md.md)]. [!INCLUDE[ssEW](../../includes/ssew-md.md)] cannot be a subscriber in transactional replication.  
   
 - Install [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms).
-- Install [SQL Server 2017 Developer edition](https://www.microsoft.com/en-us/sql-server/sql-server-downloads).
+- Install [SQL Server 2017 Developer edition](https://www.microsoft.com/sql-server/sql-server-downloads).
 - Download the [AdventureWorks sample database](https://github.com/Microsoft/sql-server-samples/releases). For instructions on restoring a database in SSMS, see [Restoring a database](https://docs.microsoft.com/sql/relational-databases/backup-restore/restore-a-database-backup-using-ssms). 
  
 >[!NOTE]
@@ -176,7 +176,7 @@ In this section, you add a subscriber to the publication that you previously cre
   
    ![Entering a name for the subscription database](media/tutorial-replicating-data-between-continuously-connected-servers/productreplica.png)
   
-8. On the **Distribution Agent Security** page, select the ellipsis (**…**) button. Enter <*Publisher_Machine_Name*>**\repl_distribution** in the **Process account** box, enter the password for this account, select **OK**, and then select **Next**.
+8. On the **Distribution Agent Security** page, select the ellipsis (**...**) button. Enter <*Publisher_Machine_Name*>**\repl_distribution** in the **Process account** box, enter the password for this account, select **OK**, and then select **Next**.
 
    ![Distribution account information in the "Distribution Agent Security" dialog box](media/tutorial-replicating-data-between-continuously-connected-servers/adddistaccount.png)
   

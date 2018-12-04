@@ -5,14 +5,13 @@ ms.date: "03/01/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
-ms.technology: 
-  - "database-engine"
+ms.technology: security
 ms.topic: conceptual
 f1_keywords: 
   - "sql13.swb.dmf.condition.f1"
 ms.assetid: 106954bf-e4ba-412b-9c1a-907d06153dcd
-author: MikeRayMSFT
-ms.author: mikeray
+author: VanMSFT
+ms.author: vanto
 manager: craigg
 ---
 # Create New Condition or Open Condition Dialog Box, General Page

@@ -207,12 +207,12 @@ manager: craigg
   
      Note that there are sparkline charts in each row of the table, but they're not correct. The bars in the charts don't line up with each other. There are only four bars in the second row of data, so the bars are wider than the bars in the first row, which has six. You can't compare values for each product per day. They need to line up with each other.  
   
-     Also note that for each row, the tallest bar for that row is the height of the row. This is misleading, too, because the largest values for each row are not equal: the largest value for Budget Movie-Maker is $10,400, but the largest value for Slim Digital is $26,576—more than twice as large. And yet the largest bars in those two rows are about the same height. That also needs to be made to scale with the other sparklines.  
+     Also note that for each row, the tallest bar for that row is the height of the row. This is misleading, too, because the largest values for each row are not equal: the largest value for Budget Movie-Maker is $10,400, but the largest value for Slim Digital is $26,576-more than twice as large. And yet the largest bars in those two rows are about the same height. That also needs to be made to scale with the other sparklines.  
   
      ![rs_SprklineMtrxUnaligndBars](../../2014/tutorials/media/rs-sprklinemtrxunaligndbars.gif "rs_SprklineMtrxUnaligndBars")  
   
 ##  <a name="AlignSparklines"></a> 4. Align the Sparklines Vertically and Horizontally  
- The sparklines are hard to read when they don’t all use the same measurements. Both the horizontal and vertical axes for each need to match the rest.  
+ The sparklines are hard to read when they don't all use the same measurements. Both the horizontal and vertical axes for each need to match the rest.  
   
 #### To set alignment for the sparklines in the table  
   

@@ -36,7 +36,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 |Column name|Description|  
 |-----------------|-----------------|  
 |DATA_TYPE|Returns SQL_VARCHAR, SQL_VARBINARY, or SQL_WVARCHAR for the **varchar(max)** data types.|  
-|TYPE_NAME|Returns “varchar”, “varbinary”, or “nvarchar” for the **varchar(max)**, **varbinary(max)**, and **nvarchar(max)** data types.|  
+|TYPE_NAME|Returns "varchar", "varbinary", or "nvarchar" for the **varchar(max)**, **varbinary(max)**, and **nvarchar(max)** data types.|  
 |COLUMN_SIZE|Returns SQL_SS_LENGTH_UNLIMITED for **varchar(max)** data types indicating that the size of the column is unlimited.|  
 |BUFFER_LENGTH|Returns SQL_SS_LENGTH_UNLIMITED for **varchar(max)** data types indicating that the size of the buffer is unlimited.|  
 |SQL_DATA_TYPE|Returns SQL_VARCHAR, SQL_VARBINARY, or SQL_WVARCHAR for the **varchar(max)** data types.|  
@@ -87,7 +87,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
  For more information about sparse columns in ODBC, see [Sparse Columns Support &#40;ODBC&#41;](../../relational-databases/native-client/odbc/sparse-columns-support-odbc.md).  
   
 ## See Also  
- [SQLColumns Function](http://go.microsoft.com/fwlink/?LinkId=59336)   
+ [SQLColumns Function](https://go.microsoft.com/fwlink/?LinkId=59336)   
  [ODBC API Implementation Details](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)  
   
   

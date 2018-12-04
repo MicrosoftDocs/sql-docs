@@ -59,3 +59,4 @@ The Table Designer is a visual tool where you design and visualize [database tab
 [Indexes](../../relational-databases/indexes/indexes.md)  
 [Data types (Transact-SQL)](../../t-sql/data-types/data-types-transact-sql.md)  
 [Download SQL Server Management Studio (SSMS)](../download-sql-server-management-studio-ssms.md)  
+[Create a database and add tables in Visual Studio](/visualstudio/data-tools/create-a-sql-database-by-using-a-designer)

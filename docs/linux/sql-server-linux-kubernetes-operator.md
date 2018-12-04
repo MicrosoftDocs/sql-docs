@@ -51,7 +51,7 @@ The following example describes a deployment for the `mssql-operator`.
 
 * `MSSQL_K8S_RETRY_PERIOD_SECONDS`
   * Optional
-  * **Description**: Duration the acting [master](http://kubernetes.io/docs/concepts/architecture/master-node-communication/) will wait before renewing the leader lease. Must be less than `MSSQL_K8S_LEASE_DURATION_SECONDS`.
+  * **Description**: Duration the acting [master](https://kubernetes.io/docs/concepts/architecture/master-node-communication/) will wait before renewing the leader lease. Must be less than `MSSQL_K8S_LEASE_DURATION_SECONDS`.
   * **Default**: `MSSQL_K8S_RENEW_DEADLINE_SECONDS`/2
 
 * `MSSQL_K8S_ACQUIRE_PERIOD_SECONDS` 

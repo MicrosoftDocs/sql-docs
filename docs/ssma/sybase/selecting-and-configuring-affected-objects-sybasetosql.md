@@ -41,7 +41,7 @@ The Table tab contains the grid view of the table selected. The grid contains th
 -   Nullable  
   
 ## Sql  
-SQL tab contains the “Create table” SQL of the table selected.  
+SQL tab contains the "Create table" SQL of the table selected.  
   
 ## Data  
 Data tab displays data present in the table selected.  

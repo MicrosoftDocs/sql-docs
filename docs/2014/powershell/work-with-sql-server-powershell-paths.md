@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "database-engine"
+ms.technology: scripting
 ms.topic: conceptual
 ms.assetid: f31d8e2c-8d59-4fee-ac2a-324668e54262
 author: stevestein
@@ -38,7 +37,7 @@ manager: craigg
   
 ```  
 $MyDBVar = New-Object Microsoft.SqlServer.Management.SMO.Database  
-$MyDBVar | Get-Member –Type Methods  
+$MyDBVar | Get-Member -Type Methods  
 $MyDBVar | Get-Member -Type Properties  
 ```  
   

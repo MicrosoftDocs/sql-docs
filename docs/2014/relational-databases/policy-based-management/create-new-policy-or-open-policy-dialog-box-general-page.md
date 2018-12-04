@@ -4,7 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology:
+ms.technology: security
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.swb.dmf.newgroup.f1"
@@ -37,7 +37,7 @@ manager: craigg
  Policies that are run using **On demand** evaluation mode do not use this check box.  
   
  **Check condition**  
- Select the Policy-Based Management condition that this policy uses. All conditions on the server for the associated Policy-Based Management facet are listed. Click **New condition** to create a new condition. Click the ellipsis (**…**) button to modify the condition.  
+ Select the Policy-Based Management condition that this policy uses. All conditions on the server for the associated Policy-Based Management facet are listed. Click **New condition** to create a new condition. Click the ellipsis (**...**) button to modify the condition.  
   
  **Against targets**  
  Select the target types that are available for this facet to complete a filter expression.  

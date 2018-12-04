@@ -33,10 +33,10 @@ manager: craigg
   
 4.  On the **Add New Connection** dialog box, in the **Description** field, type a description for your connection. This connection will be displayed when you click the arrow under the **Connect** button on the toolbar.  
   
-5.  In the **MDS server address** box, type the URL of the [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] web application, for example `http://contoso/mds`.  
+5.  In the **MDS server address** box, type the URL of the [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] web application, for example `https://contoso/mds`.  
   
     > [!NOTE]  
-    >  Ensure that you use the computer name; do not use “localhost”.  
+    >  Ensure that you use the computer name; do not use "localhost".  
   
 6.  Click **OK**. The name is displayed in the **Existing Connections** section.  
   

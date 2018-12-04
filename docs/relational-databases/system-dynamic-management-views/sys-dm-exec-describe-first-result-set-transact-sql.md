@@ -110,7 +110,7 @@ sys.dm_exec_describe_first_result_set(@tsql, @params, @include_browse_informatio
 |5|CLR_PROCEDURE|The result could not be determined because a CLR stored procedure could potentially return the first result.|  
 |6|CLR_TRIGGER|The result could not be determined because a CLR trigger could potentially return the first result.|  
 |7|EXTENDED_PROCEDURE|The result could not be determined because an extended stored procedure could potentially return the first result.|  
-|8|UNDECLARED_PARAMETER|The result could not be determined because the data type of one or more of the result set’s columns potentially depends on an undeclared parameter.|  
+|8|UNDECLARED_PARAMETER|The result could not be determined because the data type of one or more of the result set's columns potentially depends on an undeclared parameter.|  
 |9|RECURSION|The result could not be determined because the batch contains a recursive statement.|  
 |10|TEMPORARY_TABLE|The result could not be determined because the batch contains a temporary table and is not supported by **sp_describe_first_result_set** .|  
 |11|UNSUPPORTED_STATEMENT|The result could not be determined because the batch contains a statement that is not supported by **sp_describe_first_result_set** (e.g., FETCH, REVERT etc.).|  

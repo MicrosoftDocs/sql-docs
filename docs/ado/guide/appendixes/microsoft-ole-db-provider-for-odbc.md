@@ -131,7 +131,7 @@ DATABASE=database; UID=MyUserID; PWD=MyPassword"
  ODBC provides a specific syntax for calling stored procedures. For the [CommandText](../../../ado/reference/ado-api/commandtext-property-ado.md) property of a **Command** object, the *CommandText* argument to the **Execute** method on a [Connection](../../../ado/reference/ado-api/connection-object-ado.md) object, or the *Source* argument to the **Open** method on a [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) object, passes in a string with this syntax:
 
 ```
-"{ [ ? = ] call procedure [ ( ? [, ? [ , … ]] ) ] }"
+"{ [ ? = ] call procedure [ ( ? [, ? [ , ... ]] ) ] }"
 ```
 
  Each **?** references an object in the [Parameters](../../../ado/reference/ado-api/parameters-collection-ado.md) collection. The first **?** references **Parameters**(0), the next **?** references **Parameters**(1), and so on.

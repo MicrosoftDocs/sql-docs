@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "integration-services"
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: f91fbb89-4626-4c47-b96d-56052dc45861
 author: douglaslMS
@@ -23,7 +22,7 @@ manager: craigg
   
 1.  On the destination computer, locate the deployment bundle.  
   
-     If you used the default value—bin\Deployment—as the location of the deployment utility, the deployment bundle is the Deployment folder in the Deployment Tutorial project.  
+     If you used the default value-bin\Deployment-as the location of the deployment utility, the deployment bundle is the Deployment folder in the Deployment Tutorial project.  
   
 2.  In the Deployment folder, double-click the manifest file, Deployment Tutorial.SSISDeploymentManifest.  
   

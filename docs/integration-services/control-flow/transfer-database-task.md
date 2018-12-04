@@ -37,7 +37,7 @@ manager: craigg
 ## Execution Value  
  The execution value, defined in the **ExecutionValue** property of the task, returns the value 1, because in contrast to other transfer tasks, the Transfer Database task can transfer only one database.  
   
- By assigning a user-defined variable to the **ExecValueVariable** property of the Transfer Database task, information about the error message transfer can be made available to other objects in the package. For more information, see [Integration Services &#40;SSIS&#41; Variables](../../integration-services/integration-services-ssis-variables.md) and [Use Variables in Packages](http://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787).  
+ By assigning a user-defined variable to the **ExecValueVariable** property of the Transfer Database task, information about the error message transfer can be made available to other objects in the package. For more information, see [Integration Services &#40;SSIS&#41; Variables](../../integration-services/integration-services-ssis-variables.md) and [Use Variables in Packages](https://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787).  
   
 ## Log Entries  
  The Transfer Database task includes the following custom log entries:  
@@ -74,7 +74,7 @@ manager: craigg
   
  For more information about how to set these properties in [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer, click the following topic:  
   
--   [Set the Properties of a Task or Container](http://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
+-   [Set the Properties of a Task or Container](https://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
   
 ## Programmatic Configuration of the Transfer Database Task  
  For more information about programmatically setting these properties, click the following topic:  
@@ -175,7 +175,7 @@ manager: craigg
  **Network File Share**  
  Network shared folder on the source server from where the database files will be transferred. Use **Network File Share** when you transfer a database in offline mode by specifying **DatabaseOffline** for **Method** in the **Databases** page of the **Transfer Database Task Editor** dialog box.  
   
- Enter the network file share location, or click the browse button **(…)** to locate the network file share location.  
+ Enter the network file share location, or click the browse button **(...)** to locate the network file share location.  
   
  When you transfer a database in offline mode, the database files are copied to the **Network file share** location on the source server before they are transferred to the destination server.  
 

@@ -32,7 +32,7 @@ manager: craigg
   
 #### To configure this Script Component example  
   
-1.  Before creating the new Script component, configure an upstream component in the data flow to redirect rows to its error output when an error or truncation occurs. For testing purposes, you may want to configure a component in a manner that ensures that errors will occur—for example, by configuring a Lookup transformation between two tables where the lookup will fail.  
+1.  Before creating the new Script component, configure an upstream component in the data flow to redirect rows to its error output when an error or truncation occurs. For testing purposes, you may want to configure a component in a manner that ensures that errors will occur-for example, by configuring a Lookup transformation between two tables where the lookup will fail.  
   
 2.  Add a new Script component to the Data Flow designer surface and configure it as a transformation.  
   

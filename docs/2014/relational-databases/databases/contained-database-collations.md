@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "07/17/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "database-engine"
+ms.technology: configuration
 ms.topic: conceptual
 helpviewer_keywords: 
   - "contained database, collations"
@@ -101,12 +100,12 @@ JOIN #T2
 CREATE FUNCTION f(@x INT) RETURNS INT  
 AS BEGIN   
       DECLARE @I INT = 1  
-      DECLARE @İ INT = 2  
+      DECLARE @?? INT = 2  
       RETURN @x * @i  
 END;  
 ```  
   
- This is a rather peculiar function. In a case-sensitive collation, the @i in the return clause cannot bind to either @I or @İ. In a case-insensitive Latin1_General collation, @i binds to @I, and the function returns 1. But in a case-insensitive Turkish collation, @i binds to @İ, and the function returns 2. This can wreak havoc on a database that moves between instances with different collations.  
+ This is a rather peculiar function. In a case-sensitive collation, the @i in the return clause cannot bind to either @I or @??. In a case-insensitive Latin1_General collation, @i binds to @I, and the function returns 1. But in a case-insensitive Turkish collation, @i binds to @??, and the function returns 2. This can wreak havoc on a database that moves between instances with different collations.  
   
 ## Contained Databases  
  Since a design objective of contained databases is to make them self-contained, the dependence on the instance and `tempdb` collations must be severed. To do this, contained databases introduce the concept of the catalog collation. The catalog collation is used for system metadata and transient objects. Details are provided below.  
@@ -158,7 +157,7 @@ JOIN #T2
   
 -   The reference may find multiple matches that were originally distinct. This will also raise an error.  
   
- We’ll illustrate this with a few examples. For these we assume there is a partially-contained database named `MyCDB` with its database collation set to the default collation, **Latin1_General_100_CI_AS_WS_KS_SC**. We assume that the instance collation is `Latin1_General_100_CS_AS_WS_KS_SC`. The two collations differ only in case sensitivity.  
+ We'll illustrate this with a few examples. For these we assume there is a partially-contained database named `MyCDB` with its database collation set to the default collation, **Latin1_General_100_CI_AS_WS_KS_SC**. We assume that the instance collation is `Latin1_General_100_CS_AS_WS_KS_SC`. The two collations differ only in case sensitivity.  
   
 ### Example 1  
  The following example illustrates the case where the reference finds exactly one match.  

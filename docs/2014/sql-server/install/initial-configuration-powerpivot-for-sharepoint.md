@@ -45,7 +45,7 @@ manager: craigg
 2.  Run the first cmdlet:  
   
     ```  
-    Add-SPSolution –LiteralPath “C:\Program Files\Microsoft SQL Server\120\Tools\PowerPivotTools\ConfigurationTool\Resources\PowerPivotFarm.wsp”  
+    Add-SPSolution -LiteralPath "C:\Program Files\Microsoft SQL Server\120\Tools\PowerPivotTools\ConfigurationTool\Resources\PowerPivotFarm.wsp"  
     ```  
   
      The cmdlet returns the name of the solution, its solution ID, and Deployed=False. In the next step, you will deploy the solution.  
@@ -53,7 +53,7 @@ manager: craigg
 3.  Run the second cmdlet to deploy the solution:  
   
     ```  
-    Install-SPSolution –Identity PowerPivotFarm.wsp –GACDeployment -Force  
+    Install-SPSolution -Identity PowerPivotFarm.wsp -GACDeployment -Force  
     ```  
   
  **Deploy the web application solution**  

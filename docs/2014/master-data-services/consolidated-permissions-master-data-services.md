@@ -35,7 +35,7 @@ manager: craigg
 |**Deny**|Consolidated members for the entity are not displayed.|  
   
 ## Attribute Permissions  
- Attribute permissions apply to the attribute’s values for the specific entity. Users with only attribute permissions cannot add or remove members.  
+ Attribute permissions apply to the attribute's values for the specific entity. Users with only attribute permissions cannot add or remove members.  
   
 |Permission|Description|  
 |----------------|-----------------|  

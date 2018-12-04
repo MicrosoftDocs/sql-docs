@@ -21,7 +21,7 @@ manager: craigg
 ## Adding an OData Connection Manager to an SSIS Package  
  You can add a new OData connection manager to an SSIS package in three ways:  
   
--   Click the **New…** button in the **OData Source Editor**  
+-   Click the **New...** button in the **OData Source Editor**  
   
 -   Right-click the **Connection Managers** folder in **Solution Explorer**, and then click **New Connection Manager**. Select **ODATA** for **Connection manager type**.  
   
@@ -68,7 +68,7 @@ To connect to Microsoft Dynamics AX Online or Microsoft Dynamics CRM online, you
  Name of the connection manager.  
   
  **Service document location**  
- URL for the OData service. For example: http://services.odata.org/V3/Northwind/Northwind.svc/.  
+ URL for the OData service. For example: https://services.odata.org/V3/Northwind/Northwind.svc/.  
   
  **Authentication**  
 Select one of the following options:

@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "06/22/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "database-engine"
+ms.technology: install
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Windows Firewall ports"
@@ -116,7 +115,7 @@ manager: craigg
   
     -   [How to Use the Netsh.exe Tool and Command-Line Switches](http://support.microsoft.com/kb/242468)  
   
-    -   [How to use the “netsh advfirewall firewall” context instead of the “netsh firewall” context to control Windows Firewall behavior in Windows Server 2008 and in Windows Vista](http://support.microsoft.com/kb/947709)  
+    -   [How to use the "netsh advfirewall firewall" context instead of the "netsh firewall" context to control Windows Firewall behavior in Windows Server 2008 and in Windows Vista](http://support.microsoft.com/kb/947709)  
   
     -   [The "netsh firewall" command together with the "profile=all" parameter does not configure the public profile on a Windows Vista-based computer](http://support.microsoft.com/kb/947213)  
   
@@ -167,8 +166,8 @@ manager: craigg
 |-------------|----------|--------------|  
 |[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|TCP port 2383 for the default instance|The standard port for the default instance of [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser service|TCP port 2382 only needed for an [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] named instance|Client connection requests for a named instance of [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] that do not specify a port number are directed to port 2382, the port on which [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser listens. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser then redirects the request to the port that the named instance uses.|  
-|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] configured for use through IIS/HTTP<br /><br /> (The PivotTable® Service uses HTTP or HTTPS)|TCP port 80|Used for an HTTP connection through a URL.|  
-|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] configured for use through IIS/HTTPS<br /><br /> (The PivotTable® Service uses HTTP or HTTPS)|TCP port 443|Used for an HTTPS connection through a URL. HTTPS is an HTTP connection that uses secure sockets layer (SSL).|  
+|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] configured for use through IIS/HTTP<br /><br /> (The PivotTable?? Service uses HTTP or HTTPS)|TCP port 80|Used for an HTTP connection through a URL.|  
+|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] configured for use through IIS/HTTPS<br /><br /> (The PivotTable?? Service uses HTTP or HTTPS)|TCP port 443|Used for an HTTPS connection through a URL. HTTPS is an HTTP connection that uses secure sockets layer (SSL).|  
   
  If users access [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] through IIS and the Internet, you must open the port on which IIS is listening and specify that port in the client connection string. In this case, no ports have to be open for direct access to [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. The default port 2389, and port 2382, should be restricted together with all other ports that are not required.  
   

@@ -1,7 +1,7 @@
 ---
 title: "Installing the Microsoft ODBC Driver for SQL Server on Linux and macOS | Microsoft Docs"
 ms.custom: ""
-ms.date: "07/03/2018"
+ms.date: "12/04/2018"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
@@ -132,7 +132,8 @@ source ~/.bashrc
 sudo apt-get install unixodbc-dev
 ```
 > [!NOTE]
-> Driver version 17.2 or higher is required for Ubuntu 18.04 support.
+> - Driver version 17.2 or higher is required for Ubuntu 18.04 support.
+> - The unixodbc-dev package for Ubuntu 14.04 is not provided by default. Please install it manually if needed. 
 
 ### OS X 10.11 (El Capitan), macOS 10.12 (Sierra), and macOS 10.13 (High Sierra)
 

@@ -36,7 +36,7 @@ Object Explorer:
 
 Object scripting:
 
-- Added new menu items for 'CREATE OR ALTER' when scripting objects.
+- Added new menu items for `CREATE OR ALTER` when scripting objects.
 
 Database compatibility level upgrade:
 
@@ -48,7 +48,7 @@ Database compatibility level upgrade:
 
 This feature is similar to the database upgrade process documented in [Keep performance stability during the upgrade to newer SQL Server](https://docs.microsoft.com/sql/relational-databases/performance/query-store-usage-scenarios#CEUpgrade), except for the last step where QTA does not rely on a previously known good state to generate recommendations.
 
-For more information, see [Upgrading Databases by using the Query Tuning Assistant](../../relational-databases/performance/upgrade-dbcompat-using-qta.md).
+For more information, see [Upgrading Databases by using the Query Tuning Assistant](sql/relational-databases/performance/upgrade-dbcompat-using-qta).
 
 Query Store:
 

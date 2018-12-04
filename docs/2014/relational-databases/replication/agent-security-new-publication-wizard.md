@@ -54,6 +54,6 @@ manager: craigg
  [View and Modify Publication Properties](publish/view-and-modify-publication-properties.md)   
  [Manage Logins and Passwords in Replication](security/identity-and-access-control-replication.md#manage-logins-and-passwords-in-replication)   
  [Publish Data and Database Objects](publish/publish-data-and-database-objects.md)   
- [Replication Agents Overview](agents/replication-agents-overview-overview.md)  
+ [Replication Agents Overview](agents/replication-agents-overview.md)  
   
   

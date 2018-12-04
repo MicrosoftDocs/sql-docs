@@ -91,7 +91,7 @@ Persist Security Info=False;Connection Pooling=True;
 ## See Also  
  [Manage Logins and Passwords in Replication](security/identity-and-access-control-replication.md#manage-logins-and-passwords-in-replication)   
  [Replication Agent Security Model](security/replication-agent-security-model.md)   
- [Replication Agents Overview](agents/replication-agents-overview-overview.md)   
+ [Replication Agents Overview](agents/replication-agents-overview.md)   
  [Replication Security Best Practices](security/replication-security-best-practices.md)   
  [Subscribe to Publications](subscribe-to-publications.md)  
   

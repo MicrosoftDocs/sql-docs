@@ -112,7 +112,7 @@ manager: craigg
   
 |Performance object|Description|  
 |------------------------|-----------------|  
-|**SQLServer:Replication Agents**<br /><br /> **SQLServer:Replication Snapshot**<br /><br /> **SQLServer:Replication Logreader**<br /><br /> **SQLServer:Replication Dist.**<br /><br /> **SQLServer:Replication Merge**<br /><br /> For more information, see [Monitoring Replication with System Monitor](../replication/monitoring-replication-with-system-monitor.md).|Provides information about replication agent activity.|  
+|**SQLServer:Replication Agents**<br /><br /> **SQLServer:Replication Snapshot**<br /><br /> **SQLServer:Replication Logreader**<br /><br /> **SQLServer:Replication Dist.**<br /><br /> **SQLServer:Replication Merge**<br /><br /> For more information, see [Monitoring Replication with System Monitor](../replication/monitor/monitoring-replication-with-system-monitor.md).|Provides information about replication agent activity.|  
   
 ##  <a name="SsisPipelineCounters"></a> SSIS Pipeline Counters  
  For the **SSIS Pipeline** counter, see [Performance Counters](../../integration-services/performance/performance-counters.md).  

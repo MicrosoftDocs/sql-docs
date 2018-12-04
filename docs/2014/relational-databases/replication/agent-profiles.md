@@ -46,7 +46,7 @@ manager: craigg
   
 ## See Also  
  [Work with Replication Agent Profiles](agents/work-with-replication-agent-profiles.md)   
- [Replication Agents Overview](agents/replication-agents-overview-overview.md)   
+ [Replication Agents Overview](agents/replication-agents-overview.md)   
  [Replication Agent Profiles](agents/replication-agent-profiles.md)  
   
   

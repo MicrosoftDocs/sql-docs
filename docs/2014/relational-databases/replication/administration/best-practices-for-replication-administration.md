@@ -111,7 +111,7 @@ manager: craigg
   
 -   [!INCLUDE[tsql](../../../includes/tsql-md.md)] and Replication Management Objects (RMO) provide interfaces for monitoring replication. For more information, see [Monitoring Replication](../monitoring-replication.md).  
   
--   System Monitor can also be useful for monitoring replication performance. For more information, see [Monitoring Replication with System Monitor](../monitoring-replication-with-system-monitor.md).  
+-   System Monitor can also be useful for monitoring replication performance. For more information, see [Monitoring Replication with System Monitor](../monitor/monitoring-replication-with-system-monitor.md).  
   
 ## Validate data periodically  
  Validation is not required by replication, but it is recommended to run validation periodically for transactional replication and merge replication. Validation allows you to verify that data at the Subscriber matches data at the Publisher. Successful validation indicates that at that point in time all changes from the Publisher have been replicated to the Subscriber (and from the Subscriber to the Publisher if updates are supported at the Subscriber) and that the two databases are in sync.  

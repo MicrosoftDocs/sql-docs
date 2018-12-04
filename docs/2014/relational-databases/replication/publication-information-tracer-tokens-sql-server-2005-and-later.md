@@ -67,6 +67,6 @@ manager: craigg
  [Measure Latency and Validate Connections for Transactional Replication](monitor/measure-latency-and-validate-connections-for-transactional-replication.md)   
  [Monitor Performance with Replication Monitor](monitor/monitor-performance-with-replication-monitor.md)   
  [Monitoring Replication](monitoring-replication.md)   
- [Replication Agents Overview](agents/replication-agents-overview-overview.md)  
+ [Replication Agents Overview](agents/replication-agents-overview.md)  
   
   

@@ -93,6 +93,6 @@ manager: craigg
  [Start the Replication Monitor](monitor/start-the-replication-monitor.md)   
  [View Information and Perform Tasks using Replication Monitor](monitor/view-information-and-perform-tasks-replication-monitor.md)   
  [Monitoring Replication](monitoring-replication.md)   
- [Replication Agents Overview](agents/replication-agents-overview-overview.md)  
+ [Replication Agents Overview](agents/replication-agents-overview.md)  
   
   

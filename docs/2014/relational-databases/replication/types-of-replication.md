@@ -30,6 +30,6 @@ manager: craigg
  Data changes are not tracked for snapshot replication; each time a snapshot is applied, it completely overwrites the existing data. Transactional replication tracks changes through the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] transaction log, and merge replication tracks changes through triggers and metadata tables.  
   
 ## See Also  
- [Replication Agents Overview](agents/replication-agents-overview-overview.md)  
+ [Replication Agents Overview](agents/replication-agents-overview.md)  
   
   

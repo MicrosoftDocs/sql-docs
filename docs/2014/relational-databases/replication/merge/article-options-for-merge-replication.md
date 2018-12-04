@@ -24,7 +24,7 @@ manager: craigg
   
 -   Specify that deletes for one or more articles should not be tracked by replication triggers and system tables. This option can be useful in many application scenarios. These include scenarios that use batch deletes that do not need to be replicated. For more information, see [Optimize Merge Replication Performance with Conditional Delete Tracking](optimize-merge-replication-performance-with-conditional-delete-tracking.md).  
   
--   Specify the processing order of articles to make sure that articles are processed in the order required by your application. For more information, see [Specify Merge Replication properties](specify-merge-replication-properties.md).  
+-   Specify the processing order of articles to make sure that articles are processed in the order required by your application. For more information, see [Specify Merge Replication properties](../publish/specify-merge-replication-properties.md).  
   
 -   Specify that a set of related records should be processed as a unit (by default, merge replication processes changes to tables on a row-by-row basis). For more information, see [Group Changes to Related Rows with Logical Records](group-changes-to-related-rows-with-logical-records.md).  
   

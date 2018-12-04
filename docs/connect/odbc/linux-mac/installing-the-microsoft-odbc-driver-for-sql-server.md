@@ -133,7 +133,7 @@ sudo apt-get install unixodbc-dev
 ```
 > [!NOTE]
 > - Driver version 17.2 or higher is required for Ubuntu 18.04 support.
-> - The unixodbc-dev package for Ubuntu 14.04 is not provided by default. Please install it manually if needed. 
+> - The unixodbc-dev package 2.3.1 is not available on Ubuntu 14.04.   
 
 ### OS X 10.11 (El Capitan), macOS 10.12 (Sierra), and macOS 10.13 (High Sierra)
 

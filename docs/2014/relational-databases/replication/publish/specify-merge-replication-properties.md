@@ -20,7 +20,7 @@ This topic explains how to specify various properties for your merge replication
 
 
 ## Download-only
-  This topic describes how to specify that a merge table article is download-only in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../../includes/tsql-md.md)]. Download-only articles are designed for applications with data that is not updated at Subscribers. For more information, see [Optimize Merge Replication Performance with Download-Only Articles](../merge/optimize-merge-replication-performance-with-download-only-articles.md).  
+  This section describes how to specify that a merge table article is download-only in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../../includes/tsql-md.md)]. Download-only articles are designed for applications with data that is not updated at Subscribers. For more information, see [Optimize Merge Replication Performance with Download-Only Articles](../merge/optimize-merge-replication-performance-with-download-only-articles.md).  
  
   
 ###  Limitations and Restrictions  
@@ -32,7 +32,7 @@ This topic explains how to specify various properties for your merge replication
   
 #### To specify that an article is download-only on the Articles page  
   
--   On the **Articles** page of the New Publication Wizard select a table, and then select the checkbox **Highlighted table is download-only**.  
+-   On the **Articles** page of the New Publication Wizard select a table, and then select the checkbox **Highlighted table is download-only**. 
   
 #### To specify that an article is download-only on the Properties tab of the Article Properties - \<Article> dialog box  
   
@@ -143,8 +143,8 @@ When a subscription to a merge publication is synchronized, replication checks f
 #### Change conflict tracking options for a merge article  
   
 1.  To determine the conflict tracking options for a merge article, execute [sp_helpmergearticle](/sql/relational-databases/system-stored-procedures/sp-helpmergearticle-transact-sql). Note the value of the **column_tracking** option in the result set for the article. A value of **1** means that column-level tracking is being used, and a value of **0** means that row-level tracking is being used.    
-2.  At the Publisher on the publication database, execute [sp_changemergearticle](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql). Specify a value of **column_tracking** for **@property** and one of the following values for **@value**:    
-    -   **true** - Use column-level tracking for the article.    
+2.  At the Publisher on the publication database, execute [sp_changemergearticle](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql). Specify a value of **column_tracking** for **@property** and one of the following values for **@value**:
+    -   **true** - Use column-level tracking for the article.
     -   **false** - Use row-level tracking, which is the default.  
   
      Specify a value of **1** for both **@force_invalidate_snapshot** and **@force_reinit_subscription**.  

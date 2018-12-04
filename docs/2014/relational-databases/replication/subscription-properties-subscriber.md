@@ -1,5 +1,5 @@
 ---
-title: "Subscription Properties - Subscriber | Microsoft Docs"
+title: "SQL Server Replication Subscription Properties - Subscriber | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
@@ -16,7 +16,7 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ---
-# Subscription Properties 
+# SQL Server Replication Subscription Properties 
 This section provides information on the **Subscription Properties** dialog box. 
 
 ## Publisher properties 

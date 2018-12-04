@@ -43,7 +43,8 @@ This topic explains how to specify various properties for your merge replication
     -   **Download to Subscriber, allow Subscriber changes**  
   
 4.  If you are in the **Publication Properties - \<Publication>** dialog box, click **OK** to save and close the dialog box.    
-##  <a name="TsqlProcedure"></a> Using Transact-SQL  
+
+###  Using Transact-SQL  
   
 #### To specify that a new merge table article is download-only    
 1.  Execute [sp_addmergearticle](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql), specifying a value of **1** or **2** for the parameter **@subscriber_upload_options**. The numbers correspond to the following behavior:  
@@ -131,7 +132,7 @@ When a subscription to a merge publication is synchronized, replication checks f
 3.  On the **Properties** tab of the **Article Properties \<Article>** dialog box, select one of the following values for the **Tracking level** property: **Row-level tracking** or **Column-level tracking**.    
 4.  If you are in the **Publication Properties - \<Publication>** dialog box, click **OK** to save and close the dialog box.  
   
-##  Using Transact-SQL  
+###  Using Transact-SQL  
   
 #### Specify conflict tracking options for a new merge article  
   

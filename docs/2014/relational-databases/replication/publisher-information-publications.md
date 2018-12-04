@@ -1,5 +1,5 @@
 ---
-title: "Publisher Information, Publications | Microsoft Docs"
+title: "SQL Server Replication 'Publisher Information' dialog box | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
@@ -14,7 +14,7 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ---
-# Publisher Information, Publications
+# SQL Server Replication 'Publisher Information' dialog box
   The **Publications** tab provides summary information for all publications at the Publisher selected in the left pane.  
   
 ## Options  

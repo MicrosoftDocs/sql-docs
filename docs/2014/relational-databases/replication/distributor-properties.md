@@ -1,5 +1,5 @@
 ---
-title: "Distributor Properties | Microsoft Docs"
+title: "SQL Server Replication Distributor Properties | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
@@ -12,7 +12,7 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ---
-# Distributor Properties
+# SQL Server Replication Distributor Properties
 This topic discusses the properties found on the **General**, **Publishers**, and **Distribution Database** pages within the **Distributor Properties** window. 
 
 ## General

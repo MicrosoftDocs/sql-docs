@@ -1,5 +1,5 @@
 ---
-title: "Publication Properties  - &lt;Publication&gt; | Microsoft Docs"
+title: "SQL Server Replication Publication Properties  -  | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
@@ -14,7 +14,7 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ---
-# Publication Properties  - &lt;Publication&gt;
+# SQL Server Replication Publication Properties 
   This section provides information on all pages of the **Publication Properties** dialog box. 
 
 ## General

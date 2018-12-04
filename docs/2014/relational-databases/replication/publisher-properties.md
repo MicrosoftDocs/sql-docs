@@ -1,5 +1,5 @@
 ---
-title: "Publisher Properties | Microsoft Docs"
+title: "SQL Server Replication Publisher Properties | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
@@ -12,7 +12,7 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ---
-# Publisher Properties
+# SQL Server Replication Publisher Properties
   This section contains information on Publisher properties available at the Distributor and the Publisher. 
 
 ## General  

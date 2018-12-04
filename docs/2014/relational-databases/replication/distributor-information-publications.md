@@ -1,5 +1,5 @@
 ---
-title: "Distributor Information Dialog Box | Microsoft Docs"
+title: "SQL Server Replication 'Distributor Information' dialog box | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"

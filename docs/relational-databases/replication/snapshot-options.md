@@ -1,5 +1,5 @@
 ---
-title: "Modify Snapshot Initialization Options | Microsoft Docs"
+title: "Modify Snapshot Initialization Options for SQL Replication | Microsoft Docs"
 ms.custom: ""
 ms.date: "11/20/2018"
 ms.prod: sql
@@ -15,10 +15,22 @@ author: "MashaMSFT"
 ms.author: "mathoma"
 manager: craigg
 ---
-# Modify Snapshot Initialization Options 
+# Modify Snapshot Initialization Options for SQL Replication 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-There are a number of options to specify when [initializing a subscription with a snapshot](initialize-a-subscription-with-a-snapshot.md). 
+There are a number of options to specify when [initializing a subscription with a snapshot](initialize-a-subscription-with-a-snapshot.md).
+
+## Specify Snapshot Format (SQL Server Management Studio)
+  Specify snapshot format on the **Snapshot** page of the **Publication Properties - \<Publication>** dialog box. For more information about accessing this dialog box, see [View and Modify Publication Properties](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md).  
+  
+### To specify snapshot format  
+  
+1.  On the **Snapshot** page of the **Publication Properties - \<Publication>** dialog box, select **Native SQL Server - all Subscribers must be servers running SQL Server** or **Character - required if a Publisher or Subscriber is not running SQL Server**.  
+  
+    > [!NOTE]  
+    >  It is recommended to select the native format unless this publication must support subscriptions to a [!INCLUDE[ssEW](../../../includes/ssew-md.md)] database or a non-[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] database.  
+  
+2.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]   
 
 ## Snapshot Folder Locations
 
@@ -121,8 +133,8 @@ You can specify scripts to execute at the Subscriber before or after the snapsho
 
 
 ## See Also  
- [Initialize a Subscription with a Snapshot](../../relational-databases/replication/initialize-a-subscription-with-a-snapshot.md)  
- [Transfer snapshot through FTP](../../relational-databases/replication/publish/deliver-a-snapshot-through-ftp.md)
- [Configure Snapshot Properties &#40;Replication Transact-SQL Programming&#41;](../../relational-databases/replication/publish/configure-snapshot-properties-replication-transact-sql-programming.md)  
+ [Initialize a Subscription with a Snapshot](../../relational-databases/replication/initialize-a-subscription-with-a-snapshot.md)   
+ [Transfer snapshot through FTP](../../relational-databases/replication/publish/deliver-a-snapshot-through-ftp.md)   
+ [Configure Snapshot Properties &#40;Replication Transact-SQL Programming&#41;](../../relational-databases/replication/publish/configure-snapshot-properties-replication-transact-sql-programming.md)     
   
   

@@ -1,5 +1,5 @@
 ---
-title: "Publisher Properties | Microsoft Docs"
+title: "SQL Server Replication Publisher Properties dialog box | Microsoft Docs"
 ms.custom: ""
 ms.date: "11/20/2018"
 ms.prod: sql
@@ -12,8 +12,10 @@ author: "MashaMSFT"
 ms.author: "mathoma"
 manager: craigg
 ---
-# Publisher Properties
+# SQL Server Replication Publisher Properties dialog box
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+
+This topic describes the different options found within the Publisher properties dialog box. 
 
 ## General
   The **General** page of the **Publisher Properties** dialog box displays read-only information on the Distributor and distribution database that the Publisher uses. To change the Distributor or distribution database for a Publisher:  

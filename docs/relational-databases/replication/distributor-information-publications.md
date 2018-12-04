@@ -20,14 +20,16 @@ manager: craigg
   
 The information that is displayed about the publications supported by the Distributor includes a column that contains the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance of the Publisher. Otherwise, the publication information is the same as the publication information that is provided when you view publications in the Publisher view of Replication Monitor. For more information about the columns in the **Publications** tab, see [Publisher Information, Publications](../../relational-databases/replication/publisher-information-publications.md).  
 
-## Subscription Watch List (Merge Pub, SQL 2005+)
+## Subscription Watch List
+
+### Transactional replication
+  Information for transactional subscriptions includes the name of the Publisher. Otherwise, the functionality and the information that is provided in this dialog box is the same as in the Publisher view. For more information about how to use this dialog box, see [Publisher Information, Subscription Watch List &#40;Transactional Publication, SQL Server 2005 and Later&#41;](../../relational-databases/replication/publisher-information-subscription-watch-list-transactional.md). 
+
+### Merge replication
   Information for merge publication subscriptions includes the name of the Publisher. Otherwise, the functionality and the information that is provided in this dialog box is the same as in the Publisher view. For more information about how to use this dialog box, see [Publisher Information, Subscription Watch List &#40;Merge Publication, SQL Server 2005 and Later&#41;](../../relational-databases/replication/publisher-information-subscription-watch-list-merge-publication.md).  
 
-## Subscription Watch List (Snapshot Pub, SQL 2005+)
+### Snapshot replication 
   Information for snapshot publication subscriptions includes the name of the Publisher. Otherwise, the functionality and the information that is provided in this dialog box is the same as in the Publisher view. For more information about how to use this dialog box, see [Publisher Information, Subscription Watch List &#40;Snapshot Publication, SQL Server 2005 and Later&#41;](../../relational-databases/replication/publisher-information-subscription-watch-list-snapshot.md).  
-
-## Subscription Watch List (Transaction Pub, SQL 2005+)
-  Information for transactional subscriptions includes the name of the Publisher. Otherwise, the functionality and the information that is provided in this dialog box is the same as in the Publisher view. For more information about how to use this dialog box, see [Publisher Information, Subscription Watch List &#40;Transactional Publication, SQL Server 2005 and Later&#41;](../../relational-databases/replication/publisher-information-subscription-watch-list-transactional.md). 
 
 ## Agents
 The **Agents** tab displays information about the agents and maintenance jobs that are associated with the Publisher and Subscriber.  

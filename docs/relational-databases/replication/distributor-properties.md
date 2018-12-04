@@ -1,5 +1,5 @@
 ---
-title: "Distributor Properties | Microsoft Docs"
+title: "SQL Server Replication Distributor Properties dialog box | Microsoft Docs"
 ms.custom: ""
 ms.date: "11/20/2018"
 ms.prod: sql
@@ -12,8 +12,10 @@ author: "MashaMSFT"
 ms.author: "mathoma"
 manager: craigg
 ---
-# Distributor Properties
+# SQL Server Replication Distributor Properties dialog box 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+
+This page describes the pages found within the Distributor properties dialog box. 
 
 ## General
 The **General** page of the **Distributor Properties** dialog box allows you to add and delete distribution databases and set distribution database properties.  

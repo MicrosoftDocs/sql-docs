@@ -17,6 +17,7 @@ ms.author: "mathoma"
 manager: craigg
 ---
 # Specify Merge Replication properties
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 This topic explains how to specify various properties for your merge replication. 
 
 ## Merge Article is Download-Only

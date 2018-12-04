@@ -78,7 +78,7 @@ For backward compatibility information see, [Replication Backward Compatibility]
 ### Merge Replication Options  
   
 -   [Define a Logical Record Relationship Between Merge Table Articles](publish/define-a-logical-record-relationship-between-merge-table-articles.md)    
--   [Specify Merge replication properties](publish/specify-merge-replication-properties.md)    
+-   [Specify Merge replication properties](merge/specify-merge-replication-properties.md)    
 -   [Specify a Merge Article Resolver](publish/specify-a-merge-article-resolver.md)    
 
   

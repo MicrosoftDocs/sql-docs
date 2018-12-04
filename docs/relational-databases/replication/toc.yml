@@ -257,7 +257,7 @@
   - name: Merge replication
     items: 
     - name: Specify properties
-      href: publish/specify-merge-replication-properties.md
+      href: merge/specify-merge-replication-properties.md
       displayName: Processing order, conflict tracking resolution, track deletes, interactive resolver
     - name: Specify article resolver
       href: publish/specify-a-merge-article-resolver.md
@@ -478,7 +478,7 @@
         - name: Article Properties
           href: article-properties-article.md
         - name: Subscription properties
-          href: subscription-properties-subscription.md
+          href: subscription-properties-subscriber.md
     - name: Tools Reference
       items:
       - name: Replication Monitor

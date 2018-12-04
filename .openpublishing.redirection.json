@@ -1383,7 +1383,7 @@
         },
         {
             "source_path": "docs/relational-database/replication/merge/specify-the-processing-order-of-merge-articles.md",
-            "redirect_url": "/sql/relational-database/replication/publish/specify-merge-replication-properties",
+            "redirect_url": "/sql/relational-database/replication/merge/specify-merge-replication-properties",
             "redirect_document_id": true
         },
         {
@@ -1453,22 +1453,22 @@
         },
         {
            "source_path": "docs/relational-database/replication/publish/specify-interactive-conflict-resolution-for-merge-articles.md",
-           "redirect_url": "/sql/relational-database/replication/publish/specify-merge-replication-properties",
+           "redirect_url": "/sql/relational-database/replication/merge/specify-merge-replication-properties",
            "redirect_document_id": true
         },
         {
            "source_path": "docs/relational-database/replication/publish/specify-that-a-merge-table-article-is-download-only.md",
-           "redirect_url": "/sql/relational-database/replication/publish/specify-merge-replication-properties",
+           "redirect_url": "/sql/relational-database/replication/merge/specify-merge-replication-properties",
            "redirect_document_id": false
         },
         {
            "source_path": "docs/relational-database/replication/publish/specify-that-deletes-should-not-be-tracked-for-merge-articles.md",
-           "redirect_url": "/sql/relational-database/replication/publish/specify-merge-replication-properties",
+           "redirect_url": "/sql/relational-database/replication/merge/specify-merge-replication-properties",
            "redirect_document_id": false
         },
         {
            "source_path": "docs/relational-database/replication/publish/specify-the-conflict-tracking-and-resolution-level-for-merge-articles.md",
-           "redirect_url": "/sql/relational-database/replication/publish/specify-merge-replication-properties",
+           "redirect_url": "/sql/relational-database/replication/merge/specify-merge-replication-properties",
            "redirect_document_id": false
         },
         {
@@ -1478,7 +1478,7 @@
         },
         {
           "source_path": "docs/relational-database/replication/publish/specify-the-processing-order-of-merge-table-articles.md",
-          "redirect_url": "/sql/relational-database/replication/publish/specify-merge-replication-properties",
+          "redirect_url": "/sql/relational-database/replication/merge/specify-merge-replication-properties",
           "redirect_document_id": false
         },
         {
@@ -1618,19 +1618,29 @@
         },
         {
            "source_path": "docs/relational-database/replication/subscription-properties-publisher.md",
-           "redirect_url": "/sql/relational-database/replication/subscription-properties-subscription",
+           "redirect_url": "/sql/relational-database/replication/subscription-properties-subscriber",
            "redirect_document_id": true
         },
         {
-           "source_path": "docs/relational-database/replication/subscription-properties-subscriber.md",
-           "redirect_url": "/sql/relational-database/replication/subscription-properties-subscription",
+           "source_path": "docs/relational-database/replication/subscription-properties-subscription.md",
+           "redirect_url": "/sql/relational-database/replication/subscription-properties-subscriber",
            "redirect_document_id": true
         },
         {
-           "source_path": "docs/relational-database/replication/replication-monitor.md",
-           "redirect_url": "/sql/relational-database/replication/sql-server-replication",
+           "source_path": "docs/relational-database/replication/publish/create-modify-and-delete-publications-and-articles-replication.md",
+           "redirect_url": "/sql/relational-database/replication/publish/create-a-publication",
            "redirect_document_id": true
         },
+        {
+            "source_path": "docs/relational-database/replication/publish/specify-snapshot-format-sql-server-management-studio.md",
+            "redirect_url": "/sql/relational-database/replication/snapshot-options",
+            "redirect_document_id": true
+         },
+        {
+            "source_path": "docs/relational-database/replication/replication-monitor.md",
+            "redirect_url": "/sql/relational-database/replication/sql-server-replication",
+            "redirect_document_id": true
+         },
         {
            "source_path": "docs/relational-database/replication/tools-reference-replication.md",
            "redirect_url": "/sql/relational-database/replication/sql-server-replication",

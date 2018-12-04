@@ -80,7 +80,7 @@ Transactional and merge replication allow you to validate that data at the Subsc
 
   
   
-## Transactional Replication 
+## Articles in Transactional Replication 
 
 ### Using SQL Server Management Studio
   
@@ -140,40 +140,8 @@ Transactional and merge replication allow you to validate that data at the Subsc
 6.  (Optional) Repeat steps 1 through 5 for each article being validated.   
 7.  (Optional) Start the Distribution Agent if it is not already running. For more information, see [Synchronize a Pull Subscription](../../relational-databases/replication/synchronize-a-pull-subscription.md) and [Synchronize a Push Subscription](../../relational-databases/replication/synchronize-a-push-subscription.md).    
 8.  Check the agent output for the result of the validation. For more information, see [Validate Data at the Subscriber](../../relational-databases/replication/validate-data-at-the-subscriber.md).  
-  
-  
-## For a single subscription to a merge publication
 
-### Using SQL Server Management Studio
-  
-1.  Connect to the Publisher in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], and then expand the server node.    
-2.  Expand the **Replication** folder, and then expand the **Local Publications** folder.   
-3.  Expand the publication for which you want to validate subscriptions, right-click the subscription, and then click **Validate Subscription**.    
-4.  In the **Validate Subscription** dialog box, select **Validate this subscription**.    
-5.  To specify the type of validation to perform (row count, or row count and checksum) click **Options**, and then specify options in the **Subscription Validation Options** dialog box.    
-6.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]    
-7.  View validation results in Replication Monitor or the **View Synchronization Status** dialog box:  
-  
-    1.  Expand the publication, right-click the subscription, and then click **View Synchronization Status**.    
-    2.  If the agent is not running, click **Start** in the **View Synchronization Status** dialog box. The dialog box will display informational messages regarding validation.  
-  
-     If you do not see any messages regarding validation, the agent has already logged a subsequent message. In this case, view the validation results in Replication Monitor. For more information, see the Replication Monitor how to procedures in this topic.  
-  
-## For all subscriptions to a merge publication
-
-### Using SQL Server Management Studio  
-1.  Connect to the Publisher in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], and then expand the server node.    
-2.  Expand the **Replication** folder, and then expand the **Local Publications** folder.   
-3.  Right-click the publication for which you want to validate subscriptions, and then click **Validate All Subscriptions**.    
-4.  In the **Validate All Subscriptions** dialog box, specify the type of validation to perform (row count, or row count and checksum).   
-5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]    
-6.  View validation results in Replication Monitor or the **View Synchronization Status** dialog box. For each subscription:    
-    1.  Expand the publication, right-click the subscription, and then click **View Synchronization Status**.    
-    2.  If the agent is not running, click **Start** in the **View Synchronization Status** dialog box. The dialog box will display informational messages regarding validation.  
-  
-     If you do not see any messages regarding validation, the agent has already logged a subsequent message. In this case, view the validation results in Replication Monitor. For more information, see the Replication Monitor how to procedures in this topic.  
-  
-## For all push subscriptions to a transactional publication 
+## All push subscriptions to a transactional publication 
 
 ### Using Replication Monitor
   
@@ -191,7 +159,39 @@ Transactional and merge replication allow you to validate that data at the Subsc
     2.  Right-click the subscription, and then click **View Details**.   
     3.  View information on the **Distributor to Subscriber History** tab in the **Actions in the selected session** text area.  
   
-## For a single push subscription to a merge publication 
+## For a single subscription to a Merge Publication
+
+### Using SQL Server Management Studio
+  
+1.  Connect to the Publisher in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], and then expand the server node.    
+2.  Expand the **Replication** folder, and then expand the **Local Publications** folder.   
+3.  Expand the publication for which you want to validate subscriptions, right-click the subscription, and then click **Validate Subscription**.    
+4.  In the **Validate Subscription** dialog box, select **Validate this subscription**.    
+5.  To specify the type of validation to perform (row count, or row count and checksum) click **Options**, and then specify options in the **Subscription Validation Options** dialog box.    
+6.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]    
+7.  View validation results in Replication Monitor or the **View Synchronization Status** dialog box:  
+  
+    1.  Expand the publication, right-click the subscription, and then click **View Synchronization Status**.    
+    2.  If the agent is not running, click **Start** in the **View Synchronization Status** dialog box. The dialog box will display informational messages regarding validation.  
+  
+     If you do not see any messages regarding validation, the agent has already logged a subsequent message. In this case, view the validation results in Replication Monitor. For more information, see the Replication Monitor how to procedures in this topic.  
+  
+## For all subscriptions to a Merge Publication
+
+### Using SQL Server Management Studio  
+1.  Connect to the Publisher in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], and then expand the server node.    
+2.  Expand the **Replication** folder, and then expand the **Local Publications** folder.   
+3.  Right-click the publication for which you want to validate subscriptions, and then click **Validate All Subscriptions**.    
+4.  In the **Validate All Subscriptions** dialog box, specify the type of validation to perform (row count, or row count and checksum).   
+5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]    
+6.  View validation results in Replication Monitor or the **View Synchronization Status** dialog box. For each subscription:    
+    1.  Expand the publication, right-click the subscription, and then click **View Synchronization Status**.    
+    2.  If the agent is not running, click **Start** in the **View Synchronization Status** dialog box. The dialog box will display informational messages regarding validation.  
+  
+     If you do not see any messages regarding validation, the agent has already logged a subsequent message. In this case, view the validation results in Replication Monitor. For more information, see the Replication Monitor how to procedures in this topic.  
+  
+ 
+## For a single push subscription to a Merge Publication 
 
 ### Using Replication Monitor  
 1.  In Replication Monitor, expand a Publisher group in the left pane, expand a Publisher, and then click a publication.    
@@ -220,7 +220,7 @@ Transactional and merge replication allow you to validate that data at the Subsc
 > [!NOTE]  
 >  A subscription to a merge publication can also be validated at the end of a synchronization by specifying the **-Validate** parameter when running the [Replication Merge Agent](../../relational-databases/replication/agents/replication-merge-agent.md).  
   
-## For all push subscriptions to a merge publication
+## For all push subscriptions to a Merge Publication
   
 ### Using Replication Monitor    
 1.  In Replication Monitor, expand a Publisher group in the left pane, and then expand a Publisher.    

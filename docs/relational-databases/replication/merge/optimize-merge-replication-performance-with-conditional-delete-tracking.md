@@ -42,7 +42,7 @@ manager: craigg
   
  **To specify that deletes should not be tracked**  
   
--   Replication [!INCLUDE[tsql](../../../includes/tsql-md.md)] programming: [Specify Merge Replication properties](../../../relational-databases/replication/publish/specify-merge-replication-properties.md)  
+-   Replication [!INCLUDE[tsql](../../../includes/tsql-md.md)] programming: [Specify Merge Replication properties](../../../relational-databases/replication/merge/specify-merge-replication-properties.md)  
   
 ## See Also  
  [Article Options for Merge Replication](../../../relational-databases/replication/merge/article-options-for-merge-replication.md)   

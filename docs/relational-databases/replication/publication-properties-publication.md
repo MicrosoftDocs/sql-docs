@@ -1,5 +1,5 @@
 ---
-title: "Publication Properties  - &lt;Publication&gt; | Microsoft Docs"
+title: "SQL Server Replication 'Publication Properties'  dialog box | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
 ms.prod: sql
@@ -14,8 +14,10 @@ author: "MashaMSFT"
 ms.author: "mathoma"
 manager: craigg
 ---
-# Publication Properties 
+# SQL Server Replication 'Publication Properties'  dialog box
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+
+This page describes the pages found within the Publication Properties dialog box. 
 
 ## General
  The **General** page of the **Publication Properties** dialog box contains basic information on the publication, including name, description, and the subscription expiration policy.  

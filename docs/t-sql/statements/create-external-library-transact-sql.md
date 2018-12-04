@@ -24,13 +24,9 @@ monikerRange: ">=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linu
 
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]  
 
-Uploads R packages or compiled Java (.jar) files to a database from the specified byte stream or file path. This statement serves as a generic mechanism for the database administrator to upload artifacts needed for any new external language runtimes (R, Python, Java) and OS platforms supported by [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)]. 
+Uploads R packages files to a database from the specified byte stream or file path. This statement serves as a generic mechanism for the database administrator to upload artifacts needed for any new external language runtimes (currently just R) and OS platforms supported by [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)]. 
 
-In SQL Server 2017 and later, R language and Windows platform are supported.
-
-In SQL Server 2019 preview CTP 2.2, on Windows only, Java language is supported. For more information about uploading a jar to SQL Server, see [How to call Java in SQL Server](../../advanced-analytics/java/howto-call-java-from-sql.md).
-
-Support for Python and Linux is planned for a later release.
+In SQL Server 2017 and later, R language and Windows platform are supported. Support for Python and Linux is planned for a later release.
 
 ## Syntax
 

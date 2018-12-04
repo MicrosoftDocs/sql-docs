@@ -115,7 +115,7 @@ Replication monitor provides a number of tabs and options to view information an
   
  To view more information about the options on this tab, click **Help** on the menu bar. For information about starting Replication Monitor, see [Start the Replication Monitor](start-the-replication-monitor.md).  
   
-### View information and perform tasks for the agents associated with a publication  
+### View information and perform tasks 
   
 1.  Expand a Publisher group in the left pane, expand a Publisher, and then click a publication.    
 2.  Click the **Agents** tab to view information about agents. You can also access more detailed information and perform tasks on this tab:  
@@ -128,7 +128,7 @@ Replication monitor provides a number of tabs and options to view information an
 
 ## For Subscription Agents
 
-# View Information and Perform Tasks for the Agents Associated With a Subscription (Replication Monitor)
+### View Information and Perform Tasks
   Replication Monitor provides two tabs that allow access to information about the agent(s) associated with a subscription:  
   
 -   **All Subscriptions**  - This tab displays information about all subscriptions to the selected publication.  
@@ -137,7 +137,7 @@ Replication monitor provides a number of tabs and options to view information an
   
  For more information about the options on each tab, click the tab in the right pane, and then click **Help** on the menu bar. For information about starting Replication Monitor, see [Start the Replication Monitor](start-the-replication-monitor.md).  
   
-### View information and perform tasks for the agents associated with a subscription (All Subscriptions tab)  
+### View information and perform tasks 
   
 1.  Expand a Publisher group in the left pane, expand a Publisher, and then click a publication.   
 2.  Click the **All Subscriptions** tab to view information about subscriptions. You can also access more detailed information and perform tasks on this tab:  
@@ -149,7 +149,7 @@ Replication monitor provides a number of tabs and options to view information an
     -   To validate a single merge subscription, right-click the subscription, and then click **Validate Subscription**. To validate all subscriptions to a merge publication, right-click the publication, and then click **Validate All Subscriptions**; to validate all subscriptions for a transactional publication, right-click the publication, and then click **Validate Subscriptions**.    
     -   To manage profiles for the agent, right-click the agent, and then click **Agent Profile**. For more information, see [Work with Replication Agent Profiles](../agents/replication-agent-profiles.md).  
   
-### View information and perform tasks for the agents associated with a subscription (Subscription Watch List tab)  
+### View information and perform tasks
   
 1.  Expand a Publisher group in the left pane, and then click a Publisher.   
 2.  Click the **Subscription Watch List** tab to view information about subscriptions. You can also access more detailed information and perform tasks on this tab:    

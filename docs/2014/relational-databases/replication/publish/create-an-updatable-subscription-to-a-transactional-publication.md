@@ -74,7 +74,7 @@ Configure updatable subscriptions on the **Updatable Subscriptions** page of the
 
 11. Complete the wizard.
 
-## create an immediate updating pull subscription
+## Create an immediate updating pull subscription
 
 1. At the Publisher, verify that the publication supports immediate updating subscriptions by executing [sp_helppublication](/sql/relational-databases/system-stored-procedures/sp-helppublication-transact-sql). 
 
@@ -305,8 +305,8 @@ GO
 2.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
 
 ## See Also ##
- [Create a Publication](create-a-publication.md)
- [Updatable Subscriptions for Transactional Replication](../transactional/updatable-subscriptions-for-transactional-replication.md)
- [Use sqlcmd with Scripting Variables](../../scripting/sqlcmd-use-with-scripting-variables.md)
+ [Create a Publication](create-a-publication.md)   
+ [Updatable Subscriptions for Transactional Replication](../transactional/updatable-subscriptions-for-transactional-replication.md)   
+ [Use sqlcmd with Scripting Variables](../../scripting/sqlcmd-use-with-scripting-variables.md)   
 
   

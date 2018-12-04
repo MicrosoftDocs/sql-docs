@@ -4,7 +4,7 @@ description: Learn how to call Java classes from SQL Server stored procedures us
 ms.prod: sql
 ms.technology: machine-learning
 
-ms.date: 12/02/2018  
+ms.date: 12/04/2018  
 ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
@@ -13,13 +13,6 @@ monikerRange: ">=sql-server-ver15||=sqlallproducts-allversions"
 ---
 
 # How to call Java from SQL Server 2019 preview
-
-CTP 2.2 introduces an additional approach for calling Java from SQL Server 2019 preview. Depending on your operating system, you can adopt the following approaches:
-
-* Use the existing approach, **sp_execute_external_script**, for SQL Server on Windows or Linux.
-* Currently Windows-only in this CTP: [upload compiled Java code to an external library](#create-external-library). 
-
-## Use a system stored procedure (sp_execute_external_script)
 
 When using the [Java language extension](extension-java.md), the [sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql) system stored procedure is the interface used to call the Java runtime. Permissions on the database apply to Java code execution.
 
@@ -157,29 +150,6 @@ public static boolean[][] outputNullMap
 ```
 <a name="create-external-library"></a>
 
-## Use DDL (CREATE EXTERNAL LIBRARY)
-
-In CTP 2.2 on Windows only, you can create an external library for compiled Java code in a jar, uploaded along with any dependencies into a database. Use the [CREATE EXTERNAL LIBRARY (Transact-SQL)](../../t-sql/statements/create-external-library-transact-sql.md) statement to upload your code:
-
-```sql
-CREATE EXTERNAL LIBRARY myJar
-FROM (CONTENT = '<local path to .jar file>') 
-WITH (LANGUAGE = 'Java'); 
-GO
-```
-
-Using an external library eliminates the classpath requirement, as well as the necessity of setting permissions on each folder in the path. You can simply call the Java class, and SQL Server will automatically have access to your classes in the library. 
-
-```sql
-EXEC sp_execute_external_script
-  @language = N'Java'
-, @script = N'MyPackage.MyCLass.myMethod'
-, @input_data_1 = N'SELECT * FROM MYTABLE'
-with result sets ((column1 int))
-```
-
-> [!Note]
-> Jar files are recommended over individual .class files. It's common practice in Java, which makes the overall experience easier.
 
 ## Next steps
 

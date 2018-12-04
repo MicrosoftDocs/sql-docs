@@ -47,9 +47,9 @@ ms.reviewer: carlrab
 > [!NOTE]  
 > Instead of changing the default collation of an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], you can specify a default collation for each new database you create.  
   
-## Changing the instance collation in Azure SQL Database Managed Instance
+## Setting the instance collation in Azure SQL Database Managed Instance
 
-For a script template demonstrating how to change the instance collation is Azure SQL Database Managed instance, see [Change collation resource manager template](https://review.docs.microsoft.com/azure/sql-database/scripts/sql-managed-instance-create-powershell-azure-resource-manager-template).
+Server collation in Azure SQL Managed Instance can be specified when the instance is created. For a script template demonstrating how to set the instance collation is Azure SQL Database Managed instance, see [Set Managed Instance collation using Resource Manager template](https://review.docs.microsoft.com/azure/sql-database/scripts/sql-managed-instance-create-powershell-azure-resource-manager-template). You cannot change server-level collation on the existing Managed Instance.
 
 ## See Also
 

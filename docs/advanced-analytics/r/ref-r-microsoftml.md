@@ -10,7 +10,7 @@ author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
 ---
-# MicrosoftML R library in SQL Server
+# MicrosoftML (R library in SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 The **MicrosoftML** package is an R function library from Microsoft that provides machine learning algorithms. It is included in several products, including SQL Server 2016 R Services, SQL Server 2017 Machine Learning Services (with R), Microsoft Machine Learning Server, Microsoft R Client, and several virtual machine images on Azure. 

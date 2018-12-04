@@ -10,7 +10,7 @@ author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
 ---
-# microsoftml Python module in SQL Server Machine Learning Services
+# microsoftml (Python module in SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 **microsoftml** is a Python35-compatible module from Microsoft that provides machine learning algorithms. It is included in several products, including SQL Server 2017 Machine Learning Services (with Python), Microsoft Machine Learning Server, the Python client libraries, and several virtual machine images on Azure. 

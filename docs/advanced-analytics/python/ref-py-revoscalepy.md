@@ -1,15 +1,16 @@
 ---
-title: Introducing revoscalepy Python package in SQL Server Machine Learning | Microsoft Docs
+title: revoscalepy Python package in SQL Server Machine Learning | Microsoft Docs
+description: Introduction to the revoscalepy module in SQL Server 2017 Machine Learning Services with Python.
 ms.prod: sql
 ms.technology: machine-learning
 
-ms.date: 04/15/2018  
+ms.date: 12/04/2018  
 ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
 ---
-# Introducing revoscalepy in SQL Server Machine Learning
+# revoscalepy (Python module in SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 **revoscalepy** is a new Python library provided by Microsoft to support distributed computing, remote compute contexts, and high-performance algorithms for Python developers.

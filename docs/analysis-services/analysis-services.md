@@ -1,6 +1,6 @@
 ---
 title: "About SQL Server Analysis Services | Microsoft Docs"
-ms.date: 05/08/2018
+ms.date: 12/05/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom:
@@ -35,7 +35,7 @@ In general, [Azure Analysis Services documentation](https://docs.microsoft.com/a
 *  [Tutorials](../analysis-services/analysis-services-tutorials-ssas.md)   
 *  [Server management](../analysis-services/instances/analysis-services-instance-management.md)    
 *  [Developer documentation](analysis-services-developer-documentation.md)  
-*  [Technical reference](../analysis-services/powershell/technical-reference-ssas.md)
+*  [Technical reference](https://docs.microsoft.com/bi-reference/)
 
 See also
 

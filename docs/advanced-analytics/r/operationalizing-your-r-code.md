@@ -37,7 +37,7 @@ Of course, converting your R code in SQL is easier if some optimizations are don
 
 + [Converting R code for use in R Services](converting-r-code-for-use-in-sql-server.md)
 
-+ [Generating an R stored procedure by using sqlrutils](generating-an-r-stored-procedure-for-r-code-using-the-sqlrutils-package.md)
++ [Use sqlrutils helper functions](ref-r-sqlrutils.md)
 
 ## Integrate R and Python with applications
 

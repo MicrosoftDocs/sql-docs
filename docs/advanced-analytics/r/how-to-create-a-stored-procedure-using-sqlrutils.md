@@ -225,6 +225,6 @@ myetl1function <- function() {
 
 ## See Also
 
-[Generating a Stored Procedure using sqlrutils](../../advanced-analytics/r-services/generating-an-r-stored-procedure-for-r-code-using-the-sqlrutils-package.md)
+[sqlrutils (SQL)](ref-r-sqlrutils.md)
 
 

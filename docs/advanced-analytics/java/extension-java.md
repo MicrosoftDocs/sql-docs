@@ -42,7 +42,7 @@ On Windows, we recommend installing the JDK under the default /Program Files/ fo
 
 ## Install on Linux
 
-You can install the [database engine and the Java extension together](../../linux/sql-server-linux-setup-machine-learning.md#chained-installation), or add Java support to an existing instance. The following examples add the Java extension to an existing installation.  
+You can install the [database engine and the Java extension together](../../linux/sql-server-linux-setup-machine-learning.md#install-all), or add Java support to an existing instance. The following examples add the Java extension to an existing installation.  
 
 ```bash
 # RedHat install commands

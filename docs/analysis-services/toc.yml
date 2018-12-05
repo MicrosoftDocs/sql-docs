@@ -161,7 +161,7 @@
       - name: Lesson 4-5 - Sorting attribute members based on a secondary attribute
         href: lesson-4-5-sorting-attribute-members-based-on-a-secondary-attribute.md
       - name: Lesson 4-6 - Specifying attribute relationships between attributes in a user-defined hierarchy
-        href: 4-6-specifying-attribute-relationships-in-user-defined-hierarchy.md
+        href: lesson-4-6-specifying-attribute-relationships-in-user-defined-hierarchy.md
       - name: Lesson 4-7 - Defining the unknown member and null processing properties
         href: lesson-4-7-defining-the-unknown-member-and-null-processing-properties.md
     - name: "Lesson 5: Defining relationships between dimensions and measure groups"

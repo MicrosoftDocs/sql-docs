@@ -4,7 +4,7 @@ description: This article describes how to install SQL Server Machine Learning S
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.date: 10/09/2018
+ms.date: 12/05/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.custom: "sql-linux"
@@ -17,7 +17,52 @@ monikerRange: ">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-all
 
 Machine learning and programming extensions are an add-on to the database engine. Although you can [install the database engine and Machine Learning Services concurrently](#install-all), it's a best practice to install and configure the SQL Server database engine first so that you can resolve any issues before adding more components. 
 
-Package location of the R, Python, and Java extensions are in the SQL Server Linux source repositories. If you already configured source repositories for the database engine install, you can run the mssql-mlservices package install commands using the same repo registration.
+Package location for the R, Python, and Java extensions are in the SQL Server Linux source repositories. If you already configured source repositories for the database engine install, you can run the **mssql-mlservices** package install commands using the same repo registration.
+
+## Uninstall previous CTP
+
+The package list has changed over the last several CTP releases, resulting in fewer packages. We recommend uninstalling CTP 2.0 or 2.1 to remove all previous packages before installing CTP 2.2 or later. Side-by-side installation of multiple versions is not supported.
+
+### 1. Confirm package installation
+
+You might want to check for the existance of previously installed features as a first step. 
+
+```bash
+ls /opt/microsoft/mssql/bin
+```
+The following files are used for extensions: checkinstallextensibility.sh, exthost, launchpad.
+
+### 2. Uninstall CTP 2.0 or 2.1 packages
+
+Uninstall at the lowest package level.
+
+   + For R integration, uninstall **microsoft-r-open***
+   + For Python integration, uninstall **mssql-mlservices-python**
+   + For Java integration, uninstall **mssql-server-extensibility-java**
+
+Commands for removing packages appear in the following table. The table uses Python as an example, but you might have R or Java instead.
+
+| Platform	| Package removal command(s) | 
+|-----------|----------------------------|
+| RHEL	| `sudo yum remove ssql-mlservices-python` |
+| SLES	| `sudo zypper remove ssql-mlservices-python` |
+| Ubuntu	| `sudo apt-get remove ssql-mlservices-python` |
+
+Microsoft R Open is composed of three packages. Run package removal commands for each package individually.
+
+```
+microsoft-r-open-foreachiterators-3.4.4
+microsoft-r-open-mkl-3.4.4
+microsoft-r-open-mro-3.4.4
+```
+
+### 3. Proceed with CTP 2.2 install
+
+Install at the highest package level using the instructions in this article for your operating system. For each os-specific set of installation instructions, "highest package level" would be **Example 1 - Full installation** if you want the full set of packages, or possibly **Example 2 - Minimal installation** if the most you want is the minimal install.
+
+1. For R integration, start with [MRO](#mro).
+
+2. Run install commands using the package managers and syntax for your operating system: [RedHat](#RHEL), [Ubuntu](#ubuntu), [SUSE](#SUSE).
 
 ## Prerequisites
 
@@ -32,6 +77,8 @@ Package location of the R, Python, and Java extensions are in the SQL Server Lin
    + [Ubuntu](quickstart-install-connect-ubuntu.md)
 
 + For R only, [Microsoft R Open](#mro) for mssql-mlsservices R packages. 
+
++ A tool for running T-SQL commands necessary for post-install configuration and install validation. We recommend [Azure Data Studio](https://docs.microsoft.com/sql/azure-data-studio/download?view=sql-server-2017#get-azure-data-studio-for-linux), a free download that runs on Linux.
 
 <a name="mro"></a>
 
@@ -111,10 +158,10 @@ On an internet-connected device, packages are downloaded and installed independe
 | [microsoft-r-open*](#mro) | R | Open-source distribution of R, composed of three packages. |
 | mssql-mlservices-python | Python | Open-source distribution of Anaconda and Python. |
 |mssql-mlservices-mlm-py  | Python | Full install. Provides revoscalepy, microsoftml, pre-trained models for image featurization and text sentiment analysis.| 
-|mssql-mlservices-mml-py  | Python | Partial install. Provides revoscalepy, microsoftml. <br/>Excludes pre-trained models. | 
+|mssql-mlservices-mml-py  | Python | Obsolete in CTP 2.2 due to package consolidation into mssql-mslservices-python. <br/>In previous CTP releases, this package is used for partial install. <br/>Provides revoscalepy, microsoftml. Excludes pre-trained models. | 
 |mssql-mlservices-packages-py  | Python | Partial install. Provides revoscalepy. <br/>Excludes pre-trained models and microsoftml. | 
 |mssql-mlservices-mlm-r  | R | Full install. Provides RevoScaleR, MicrosoftML, sqlRUtils, olapR, pre-trained models for image featurization and text sentiment analysis.| 
-|mssql-mlservices-mml-r  | R | Partial install. Provides RevoScaleR, MicrosoftML, sqlRUtils, olapR. <br/>Excludes pre-trained models.  |
+|mssql-mlservices-mml-r  | R | Obsolete in CTP 2.2 due to package consolidation into mssql-mslservices-python. <br/>In previous CTP releases, this package is used for partial install. <br/>Provides RevoScaleR, MicrosoftML, sqlRUtils, olapR. <br/>Excludes pre-trained models.  |
 |mssql-mlservices-packages-r  | R | Partial install. Provides RevoScaleR, sqlRUtils, olapR. <br/>Excludes  pre-trained models and MicrosoftML. | 
 
 <a name="RHEL"></a>
@@ -133,9 +180,9 @@ Includes open-source R and Python, extensibility framework, microsoft-openmpi, e
 ```bash
 # Install as root or sudo
 # Add everything (all R, Python, Java)
-# Be sure to include -9.4.5* in mlsservices package names
-sudo yum install mssql-mlservices-mlm-py-9.4.5*
-sudo yum install mssql-mlservices-mlm-r-9.4.5* 
+# Be sure to include -9.4.6* in mlsservices package names
+sudo yum install mssql-mlservices-mlm-py-9.4.6*
+sudo yum install mssql-mlservices-mlm-r-9.4.6* 
 sudo yum install mssql-server-extensibility-java
 ```
 
@@ -146,9 +193,9 @@ Includes open-source R and Python, extensibility framework, microsoft-openmpi, c
 ```bash
 # Install as root or sudo
 # Minimum install of R, Python, Java extensions
-# Be sure to include -9.4.5* in mlsservices package names
-sudo yum install mssql-mlservices-packages-py-9.4.5*
-sudo yum install mssql-mlservices-packages-r-9.4.5*
+# Be sure to include -9.4.6* in mlsservices package names
+sudo yum install mssql-mlservices-packages-py-9.4.6*
+sudo yum install mssql-mlservices-packages-r-9.4.6*
 sudo yum install mssql-server-extensibility-java
 ```
 
@@ -205,14 +252,14 @@ Install any *one* R package, plus any *one* Python package, and Java if you want
 
 ### Example 1 -  Full installation 
 
-Includes open-source R and Python, extensibility framework, microsoft-openmpi, extensions (R, Python, Java), with machine learning libraries and pre-trained models for R and Python. For R and Python, if you want something in between full and minimum install - such as machine learning libraries but without the pre-trained models - substitute `mssql-mlservices-mml-r-9.4.5*` and `mssql-mlservices-mml-py-9.4.5*` instead.
+Includes open-source R and Python, extensibility framework, microsoft-openmpi, extensions (R, Python, Java), with machine learning libraries and pre-trained models for R and Python. For R and Python, if you want something in between full and minimum install - such as machine learning libraries but without the pre-trained models - substitute `mssql-mlservices-mml-r-9.4.6*` and `mssql-mlservices-mml-py-9.4.6*` instead.
 
 ```bash
 # Install as root or sudo
 # Add everything (all R, Python, Java)
-# Be sure to include -9.4.5* in mlsservices package names
-sudo zypper install mssql-mlservices-mlm-py-9.4.5*
-sudo zypper install mssql-mlservices-mlm-r-9.4.5* 
+# Be sure to include -9.4.6* in mlsservices package names
+sudo zypper install mssql-mlservices-mlm-py-9.4.6*
+sudo zypper install mssql-mlservices-mlm-r-9.4.6* 
 sudo zypper install mssql-server-extensibility-java
 ```
 
@@ -223,9 +270,9 @@ Includes open-source R and Python, extensibility framework, microsoft-openmpi, c
 ```bash
 # Install as root or sudo
 # Minimum install of R, Python, Java extensions
-# Be sure to include -9.4.5* in mlsservices package names
-sudo zypper install mssql-mlservices-packages-py-9.4.5*
-sudo zypper install mssql-mlservices-packages-r-9.4.5*
+# Be sure to include -9.4.6* in mlsservices package names
+sudo zypper install mssql-mlservices-packages-py-9.4.6*
+sudo zypper install mssql-mlservices-packages-r-9.4.6*
 sudo zypper install mssql-server-extensibility-java
 ```
 
@@ -258,7 +305,7 @@ Additional configuration is primarily through the [mssql-conf tool](sql-server-l
   systemctl restart mssql-server.service
   ```
 
-4. Enable external script execution in SQL Server Management Studio or another tool that runs Transact-SQL. 
+4. Enable external script execution using Azure Data Studio or another tool like SQL Server Management Studio (Windows only) that runs Transact-SQL. 
 
   ```bash
   EXEC sp_configure 'external scripts enabled', 1 
@@ -271,7 +318,11 @@ R libraries (MicrosoftML, RevoScaleR, and others) can be found at `/opt/mssql/ml
 
 Python libraries (microsoftml and revoscalepy) can be found at `/opt/mssql/mlservices/libraries/PythonServer`.
 
-Using a SQL Server query tool, execute the following SQL command to test R execution in SQL Server. If the script does not run, try a service restart, `sudo systemctl restart mssql-server`.
+Java feature integration does not include libraries, but you can run `grep -r JAVA_HOME /etc` to confirm creation of the JAVA_HOME environment variable.
+
+To validate installation, run a T-SQL script that executes a system stored procedure invoking R or Python. You will need a query tool for this task. Azure Data Studio is a good choice. Other commonly used tools such as SQL Server Management Studio or PowerShell are Windows-only. If you have a Windows computer with these tools, use it to connect to your Linux installation of the database engine.
+
+Execute the following SQL command to test R execution in SQL Server. If the script does not run, try a service restart, `sudo systemctl restart mssql-server.service`.
 
 ```r
 EXEC sp_execute_external_script   
@@ -298,29 +349,41 @@ GO
 
 <a name="install-all"></a>
 
-## Chained installation
+## Chained "combo" install
 
 You can install and configure the database engine and Machine Learning Services in one procedure by appending R, Python, or Java packages and parameters on a command that installs the database engine. 
 
-The following example is a "template" illustration of what a combined package installation looks like using the Yum package manager. It installs the database engine and adds the Java language extension, which pulls in the extensibility framework package as a dependency.
+1. For R integration, install [Microsoft R Open](#mro) as a prerequisite. Skip this step if you are not installing the R feature.
 
-```bash
-sudo yum install -y mssql-server mssql-server-extensibility-java 
-```
+2. Add a single feature, such as Java integration, to a database engine install.
 
-An expanded example with all extensions (Java, R, Python) looks like this:
+  The following example is a "template" illustration of what a combined package installation looks like using the Yum package manager. It installs the database engine and adds the Java language extension, which pulls in the extensibility framework package as a dependency.
 
-```bash
-sudo yum install -y mssql-server mssql-server-extensibility-java mssql-mlservices-packages-r-9.4.5* mssql-mlservices-packages-py-9.4.5*
-```
+  ```bash
+  sudo yum install -y mssql-server mssql-server-extensibility-java 
+  ```
 
-Except for the R prerequisites, all of the packages used in this example are found at the same path. Adding R requires that you [register the microsoft-r-open package repository](#mro) as an extra step to get MRO. MRO is a prerequisite for R extensibility. On a computer connected to the internet, MRO is retrieved and installed automatically as part of the R extension, assuming you configured both repositories.
+  Or, add all extensions (Java, R, Python):
 
-Post-installation, remember to use the mssql-conf tool to configure the entire installation and accept licensing agreements. Unaccepted EULAs for open-source R and Python components are detected automatically, and you are prompted to accept them, along with the EULA for SQL Server.
+  ```bash
+  sudo yum install -y mssql-server mssql-server-extensibility-java mssql-mlservices-packages-r-9.4.6* mssql-mlservices-packages-py-9.4.6*
+  ```
 
-```bash
-sudo /opt/mssql/bin/mssql-conf setup MSSQL_PID=Developer 
-```
+  Except for the R prerequisite of [MRO](#mro), all of the packages are found at the same path.
+
+3. Accept license agreements and complete the post-install configuration. Use the **mssql-conf** tool for this task.
+
+  ```bash
+  sudo /opt/mssql/bin/mssql-conf setup
+  ```
+
+  You will be prompted to accept the license agreement for the database engine, choose an edition, and set the administrator password. You are also prompted to accept the license agreement for Machine Learning Services.
+
+4. Restart the service, if prompted to do so.
+
+  ```bash
+  sudo systemctl restart mssql-server.service
+  ```
 
 ## Unattended installation
 
@@ -344,7 +407,7 @@ Follow the [Offline installation](sql-server-linux-setup.md#offline) instruction
 
 #### Download site
 
-You can download packages from [https://packages.microsoft.com/](https://packages.microsoft.com/). All of the mlservices packages for R, Python, and Java are co-located with database engine package. Base version for the mlservices packages is 9.4.5. The micrososoft-r-open packages are in a different folder.
+You can download packages from [https://packages.microsoft.com/](https://packages.microsoft.com/). All of the mlservices packages for R, Python, and Java are co-located with database engine package. Base version for the mlservices packages is 9.4.5 (for CTP 2.0) 9.4.6 (for CTP 2.1 and later). The micrososoft-r-open packages are in a different folder.
 
 #### RHEL/7 paths
 
@@ -385,17 +448,28 @@ microsoft-openmpi-3.0.0
 microsoft-r-open-foreachiterators-3.4.4
 microsoft-r-open-mkl-3.4.4
 microsoft-r-open-mro-3.4.4
-mssql-mlservices-packages-r-9.4.5
-mssql-mlservices-mlm-r-9.4.5
-mssql-mlservices-mml-r-9.4.5
+mssql-mlservices-packages-r-9.4.6
+mssql-mlservices-mlm-r-9.4.6
+mssql-mlservices-mml-r-9.4.6
 
 # Python
 microsoft-openmpi-3.0.0
-mssql-mlservices-python-9.4.5
-mssql-mlservices-packages-py-9.4.5
-mssql-mlservices-mlm-py-9.4.5
-mssql-mlservices-mml-py-9.4.5 
+mssql-mlservices-python-9.4.6
+mssql-mlservices-packages-py-9.4.6
+mssql-mlservices-mlm-py-9.4.6
+mssql-mlservices-mml-py-9.4.6 
 ```
+
+#### Package list for original CTP 2.0 and 2.1
+
+CTP 2.2 removes **mssql-mlservices-mlm-py** and **mssql-mlservices-mlm-r** through package consolidation into **mssql-mlservices-packages-py** and **mssql-mlservices-packages-r**, respectively.
+
+If you specifically require the original CTP 2.0 or 2.1 packages, download the following packages:
+
+* For CTP 2.0, download package versions 9.4.5
+
+* For CTP 2.1, download package versions 9.4.6
+
 
 ## Add more R/Python packages 
  
@@ -444,9 +518,9 @@ You can install other R and Python packages and use them in script that executes
    @script = N'import httpie' 
    ```
 
-## Limitations in CTP 2.0
+## Limitations in CTP releases
 
-The following limitations exist in this CTP release.
+R, Python, and Java integration on Linux is still under active development. The following features are not yet enabled in the preview version.
 
 + Implied authentication is currently not available in Machine Learning Services on Linux at this time, which means you cannot connect back to the server from an in-progress R or Python script to access data or other resources. 
 

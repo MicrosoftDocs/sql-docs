@@ -215,7 +215,7 @@
       href: r/creating-multiple-models-using-rxexecby.md
     - name: Use data from OLAP cubes in R
       href: r/using-data-from-olap-cubes-in-r.md
-    - name: How to ceate MDX queries using olapR
+    - name: How to create MDX queries using olapR
       href: r/how-to-create-mdx-queries-using-olapr.md
     - name: Create a stored procedure using sqlrutils
       href: r/how-to-create-a-stored-procedure-using-sqlrutils.md

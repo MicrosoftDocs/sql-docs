@@ -1,5 +1,5 @@
 ---
-title: sqlrutils helper functions for generated stored procedcures with R script in SQL Server | Microsoft Docs
+title: sqlrutils helper functions for generated stored procedures with R script in SQL Server | Microsoft Docs
 description: Introduction to the sqlrutils function library in SQL Server 2016 R Services and SQL Server 2017 Machine Learning Services with R.
 ms.prod: sql
 ms.technology: machine-learning

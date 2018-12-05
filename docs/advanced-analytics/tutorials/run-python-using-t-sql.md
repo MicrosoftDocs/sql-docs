@@ -92,7 +92,7 @@ There are two ways to run Python code in SQL Server:
 
 + Add a Python script as an argument of the system stored procedure, [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md).
 
-+ From a [remote Python client](../python/setup-python-client-tools-sql.md), connect to SQL Server, and execute code using the SQL Server as the compute context. This requires [revoscalepy](../python/what-is-revoscalepy.md).
++ From a [remote Python client](../python/setup-python-client-tools-sql.md), connect to SQL Server, and execute code using the SQL Server as the compute context. This requires [revoscalepy](../python/ref-py-revoscalepy.md).
 
 The following exercise is focused on the first interaction model: how to pass Python code to a stored procedure.
 

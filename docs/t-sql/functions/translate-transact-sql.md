@@ -46,7 +46,18 @@ Returns a character expression of the same data type as `inputString` where char
 
 `TRANSLATE` will return an error if *characters* and *translations* expressions have different lengths. `TRANSLATE` will return NULL if any of the arguements are NULL.  
 
-The behavior of the `TRANSLATE` function is equivalent to using multiple [REPLACE](../../t-sql/functions/replace-transact-sql.md) functions.
+The behavior of the `TRANSLATE` function is similar to using multiple [REPLACE](../../t-sql/functions/replace-transact-sql.md) functions. `TRANSLATE` does not, however, replace a character more than once. This is disimilar to multiple `REPLACE` functions, as each use would replace all relevant characters. For example:
+
+```sql
+SELECT TRANSLATE('abcdef','abc','bcd') AS Translated,
+       REPLACE(REPLACE(REPLACE('abcdef','a','b'),'b','c'),'c','d') AS Replaced;
+```
+
+The results are:
+
+| Translated | Replaced |  
+| ---------|--------- |
+| bcddef | ddddef |
 
 `TRANSLATE` is always SC collation aware.
 

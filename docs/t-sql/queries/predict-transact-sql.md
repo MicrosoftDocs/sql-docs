@@ -103,19 +103,6 @@ No permissions are required for `PREDICT`; however, the user needs `EXECUTE` per
 
 The following examples demonstrate the syntax for calling `PREDICT`.
 
-### Call a stored model and use it for prediction
-
-This example calls an existing logistic regression model stored in table [models_table]. It gets the latest trained model, using a SELECT statement, and then passes the binary model to the PREDICT function. The input values represent features; the output represents the classification assigned by the model.
-
-```sql
-DECLARE @logit_model varbinary(max) = "SELECT TOP 1 [model_binary] from [models_table] ORDER BY [trained_date] DESC";
-DECLARE @input_qry nvarchar(100) = "SELECT ID, [Gender], [Income] from NewCustomers";
-
-SELECT PREDICT [class]
-FROM PREDICT(MODEL = @logit_model,  DATA = @input_qry)
-WITH (class string);
-```
-
 ### Using PREDICT in a FROM clause
 
 This example references the `PREDICT` function in the `FROM` clause of a `SELECT` statement:

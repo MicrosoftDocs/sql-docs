@@ -9,7 +9,7 @@ ms.topic: conceptual
 ms.prod: sql
 ---
 
-# How to deploy SQL Server big data cluster on Kubernetes
+# How to deploy SQL Server big data clusters on Kubernetes
 
 SQL Server big data cluster can be deployed as docker containers on a Kubernetes cluster. This is an overview of the setup and configuration steps:
 

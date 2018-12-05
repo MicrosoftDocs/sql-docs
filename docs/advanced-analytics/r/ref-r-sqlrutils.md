@@ -1,5 +1,6 @@
 ---
-title: Generate an R stored procedure for R Code using the sqlrutils Package | Microsoft Docs
+title: sqlrutils helper functions for generated stored procedures with R script in SQL Server | Microsoft Docs
+description: Introduction to the sqlrutils function library in SQL Server 2016 R Services and SQL Server 2017 Machine Learning Services with R.
 ms.prod: sql
 ms.technology: machine-learning
 
@@ -9,7 +10,7 @@ author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
 ---
-# Generate an R stored procedure for R Code using the sqlrutils package
+# sqlrutils (R library in SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 The **sqlrutils** package provides a mechanism for R users to put their R scripts into a T-SQL stored procedure, register that stored procedure with a database, and run the stored procedure from an R development environment. 

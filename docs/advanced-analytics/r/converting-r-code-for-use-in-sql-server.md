@@ -137,7 +137,7 @@ How much you change your code depends on whether you intend to submit the R code
 
     Then, use the **sqlrutils** package to generate the input and outputs in the correct format. The **sqlrutils** package generates the complete stored procedure code for you, and can also register the stored procedure in the database. 
 
-    For more information and examples, see [SqlRUtils](../r/generating-an-r-stored-procedure-for-r-code-using-the-sqlrutils-package.md).
+    For more information and examples, see [sqlrutils (SQL)](ref-r-sqlrutils.md).
 
 **Integrate with other workflows**
 

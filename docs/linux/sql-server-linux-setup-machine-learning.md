@@ -30,7 +30,7 @@ You might want to check for the existance of previously installed features as a 
 ```bash
 ls /opt/microsoft/mssql/bin
 ```
-The following files are used for exensions: checkinstallextensibility.sh, exthost, launchpad.
+The following files are used for extensions: checkinstallextensibility.sh, exthost, launchpad.
 
 ### 2. Uninstall CTP 2.0 or 2.1 packages
 

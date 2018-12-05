@@ -1,15 +1,16 @@
 ---
-title: Introducing revoscalepy Python package in SQL Server Machine Learning | Microsoft Docs
+title: revoscalepy Python package in SQL Server Machine Learning | Microsoft Docs
+description: Introduction to the revoscalepy module in SQL Server 2017 Machine Learning Services with Python.
 ms.prod: sql
 ms.technology: machine-learning
 
-ms.date: 04/15/2018  
+ms.date: 12/04/2018  
 ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
 ---
-# Introducing revoscalepy in SQL Server Machine Learning
+# revoscalepy (Python module in SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 **revoscalepy** is a new Python library provided by Microsoft to support distributed computing, remote compute contexts, and high-performance algorithms for Python developers.
@@ -21,7 +22,7 @@ It is based on the **RevoScaleR** package for R, which was provided in Microsoft
 + Provides Python versions of RevoScaleR machine learning algorithms for distributed or parallel processing
 + Improved performance, including use of the Intel math libraries
 
-MicrosoftML packages are also provided for both R and Python. For more information, see [Using MicrosoftML in SQL Server](../using-the-microsoftml-package.md)
+Data sources and compute contexts that you create in **revoscalepy** can also be used in machine learning algorithms. For more information about these algorithms, see [microsoftml Python module in SQL Server](ref-py-microsoftml.md).
 
 ## Versions and supported platforms
 

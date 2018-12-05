@@ -31,8 +31,16 @@ When you connect to a big data cluster, you have the option to connect to the SQ
 
 1. From the command-line, find the IP of your master instance with the following command:
 
+   **AKS deployments:**
+
    ```
-   kubectl get svc endpoint-master-pool -n <your-cluster-name>
+   kubectl get svc service-master-pool-lb -n <your-cluster-name>
+   ```
+
+   **Non-AKS deployments**:
+
+   ```
+   kubectl get svc service-master-pool-nodeport -n <your-cluster-name>
    ```
 
 1. In Azure Data Studio, press **F1** > **New Connection**.

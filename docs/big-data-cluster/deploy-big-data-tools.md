@@ -29,6 +29,12 @@ When you connect to a big data cluster, you have the option to connect to the SQ
 
 ## <a id="master"></a> Master instance
 
+1. From the command-line, find the IP of your master instance with the following command:
+
+   ```
+   kubectl get svc endpoint-master-pool -n <your-cluster-name>
+   ```
+
 1. In Azure Data Studio, press **F1** > **New Connection**.
 
 1. In **Connection type**, select **Microsoft SQL Server**.
@@ -45,11 +51,25 @@ When you connect to a big data cluster, you have the option to connect to the SQ
 
 ## <a id="hdfs"></a> HDFS/Spark gateway
 
+1. From the command-line, find the IP address of your HDFS/Spark gateway with one of the following commands.
+   
+   **AKS deployments:**
+
+   ```
+   kubectl get svc service-security-lb -n <your-cluster-name>
+   ```
+
+   **Non-AKS deployments**:
+
+   ```
+   kubectl get svc service-security-nodeport -n <your-cluster-name>
+   ```
+ 
 1. In Azure Data Studio, press **F1** > **New Connection**.
 
 1. In **Connection type**, select **SQL Server big data cluster**.
 
-1. Type the IP address of the big data cluster in **Server name**.
+1. Type the IP address of the big data cluster in **Server name** (do not specify a port).
 
 1. Enter `root` for the **User** and specify the **Password** to your big data cluster.
 

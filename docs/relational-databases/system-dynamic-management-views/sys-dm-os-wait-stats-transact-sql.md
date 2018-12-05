@@ -1,7 +1,7 @@
 ---
 title: "sys.dm_os_wait_stats (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "04/23/2018"
+ms.date: "12/04/2018"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
@@ -926,6 +926,7 @@ This command resets all counters to 0.
 |VIA_ACCEPT |Occurs when a Virtual Interface Adapter (VIA) provider connection is completed during startup.| 
 |VIEW_DEFINITION_MUTEX |Occurs during synchronization on access to cached view definitions.| 
 |WAIT_FOR_RESULTS |Occurs when waiting for a query notification to be triggered.| 
+|WAIT_ON_SYNC_STATISTICS_REFRESH |Occurs when waiting for synchronous statistics update to complete before query compilation and execution can resume.<br /> **Applies to**: Starting with [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]|
 |WAIT_SCRIPTDEPLOYMENT_REQUEST |TBD <br /> **Applies to**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
 |WAIT_SCRIPTDEPLOYMENT_WORKER |TBD <br /> **Applies to**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
 |WAIT_XLOGREAD_SIGNAL |TBD <br /> **Applies to**: [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 

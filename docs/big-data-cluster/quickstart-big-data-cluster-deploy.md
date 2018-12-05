@@ -10,7 +10,14 @@ ms.prod: sql
 ---
 # Quickstart: Deploy SQL Server big data cluster on Azure Kubernetes Service (AKS)
 
-Install SQL Server big data cluster on AKS in a default configuration suitable for dev/test environments. In addition to a SQL Master instance, the cluster includes one compute pool instance, one data pool instance, and two storage pool instances. Data is persisted using Kubernetes persistent volumes that use AKS default storage classes. To further customize your configuration, see the environment variables at [deployment guidance](deployment-guidance.md).
+In this quickstart, you will deploy a SQL Server 2019 big data cluster (preview) on AKS in a default configuration suitable for dev/test environments.
+
+> [!NOTE]
+> AKS is just one location to host Kubernetes. Big data clusters can be deployed to Kubernetes regardless of the underlying infrastructure. For more information, see [How to deploy SQL Server big data clusters on Kubernetes](deployment-guidance.md).
+
+In addition to a SQL Master instance, the cluster includes one compute pool instance, one data pool instance, and two storage pool instances. Data is persisted using Kubernetes persistent volumes that use AKS default storage classes. To further customize your configuration, see the environment variables in the [deployment guidance](deployment-guidance.md).
+
+If you would prefer to run a script to create your AKS cluster and install a big data cluster at the same time, see [Deploy a SQL Server big data cluster on Azure Kubernetes Service (AKS)](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/sql-big-data-cluster/deployment/aks).
 
 [!INCLUDE [Limited public preview note](../includes/big-data-cluster-preview-note.md)]
 
@@ -155,10 +162,6 @@ kubectl get svc service-security-lb -n <your-cluster-name>
 ```
 
 Look for the **External-IP** value that is assigned to the services. Connect to the SQL Server master instance using the IP address for the `endpoint-master-pool` at port 31433 (Ex: **\<ip-address\>,31433**) and to the SQL Server big data cluster endpoint using the external-IP for the `service-security-lb` service.   That big data cluster end point is where you can interact with HDFS and submit Spark jobs through Knox.
-
-## Sample deployment script
-
-For a sample python script that deploys both AKS and SQL Server big data cluster, see [Deploy a SQL Server big data cluster on Azure Kubernetes Service (AKS)](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/sql-big-data-cluster/deployment/aks).
 
 ## Next steps
 

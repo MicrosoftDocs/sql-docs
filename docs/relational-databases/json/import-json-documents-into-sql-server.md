@@ -116,8 +116,6 @@ FROM 'data/product.dat'
 WITH ( DATA_SOURCE = 'MyAzureBlobStorage');
 ```
 
-For more info and an example that uses OPENROWSET, see [Loading files from Azure Blob Storage into Azure SQL Database](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2017/02/23/loading-files-from-azure-blob-storage-into-azure-sql-database/).
-
 ## Parse JSON documents into rows and columns
 Instead of reading an entire JSON file as a single value, you may want to parse it and return the books in the file and their properties in rows and columns. The following example uses a JSON file from [this site](https://github.com/tamingtext/book/blob/master/apache-solr/example/exampledocs/books.json) containing a list of books.
 
@@ -165,10 +163,6 @@ Now you can return this table to the user, or load the data into another table.
 
 ## Learn more about JSON in SQL Server and Azure SQL Database  
   
-### Microsoft blog posts  
-  
-For specific solutions, use cases, and recommendations, see these [blog posts](https://blogs.msdn.com/b/sqlserverstorageengine/archive/tags/json/) about the built-in JSON support in SQL Server and Azure SQL Database.  
-
 ### Microsoft videos
 
 For a visual introduction to the built-in JSON support in SQL Server and Azure SQL Database, see the following videos:

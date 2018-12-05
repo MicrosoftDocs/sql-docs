@@ -22,11 +22,12 @@ The following table lists common big data cluster tools and how to intall them:
 | Tool | Description | Installation |
 |---|---|---|
 | **mssqlctl** | Command-line tool for installing and managing a big data cluster. | [Install](deploy-install-mssqlctl.md) |
-| **kubectl** | Command-line tool for monitoring the underlying Kuberentes cluster. | [Install](https://kubernetes.io/docs/tasks/tools/install-kubectl/#install-kubectl) |
-| **Azure Data Studio** | Cross-platform graphical tool for querying SQL Server. | [Install](../azure-data-studio/download.md) |
+| **kubectl** | Command-line tool for monitoring the underlying Kuberentes cluster ([More info](https://kubernetes.io/docs/tasks/tools/install-kubectl/)). | [Install](https://kubernetes.io/docs/tasks/tools/install-kubectl/#install-kubectl) |
+| **Azure Data Studio** | Cross-platform graphical tool for querying SQL Server ([More info](https://docs.microsoft.com/sql/azure-data-studio/what-is?view=sql-server-ver15)). | [Install](../azure-data-studio/download.md) |
 | **SQL Server 2019 extension** | Extension for Azure Data Studio that supports connecting to the big data cluster. Also provides a Data Virtualization wizard. | [Install](../azure-data-studio/sql-server-2019-extension.md) |
-| **mssql-cli** | Modern command-line interface for querying SQL Server. | [Install](https://github.com/dbcli/mssql-cli/blob/master/doc/installation_guide.md) |
-| **sqlcmd** | Legacy command-line tool for querying SQL Server. | [Windows](https://www.microsoft.com/download/details.aspx?id=36433) \| [Linux](../linux/sql-server-linux-setup-tools.md) |
+| **Azure CLI** | Modern command-line interface for managing Azure services. Used with AKS big data cluster deployments ([More info](https://docs.microsoft.com/en-us/cli/azure/?view=azure-cli-latest)). | [Install](https://docs.microsoft.com/cli/azure/install-azure-cli?view=azure-cli-latest) |
+| **mssql-cli** | Modern command-line interface for querying SQL Server ([More info](https://github.com/dbcli/mssql-cli/blob/master/README.rst)). | [Windows](https://github.com/dbcli/mssql-cli/blob/master/doc/installation/windows.md) \| [Linux](https://github.com/dbcli/mssql-cli/blob/master/doc/installation/linux.md) |
+| **sqlcmd** | Legacy command-line tool for querying SQL Server ([More info](https://docs.microsoft.com/en-us/sql/tools/sqlcmd-utility?view=sql-server-ver15)). | [Windows](https://www.microsoft.com/download/details.aspx?id=36433) \| [Linux](../linux/sql-server-linux-setup-tools.md) |
 | **curl** | Command-line tool for transferring data with URLs. | [Windows](https://curl.haxx.se/windows/) \| Linux: install curl package |
 
 ## Which tools are required?
@@ -38,8 +39,8 @@ The previous table provides all of the common tools that are used with big data 
 - **Azure Data Studio**
 - **SQL Server 2019 extension**
 
-The remaining tools are only required in certain scenarios. **mssql-cli** is an optional but useful tool that allows you to connect to the SQL Server master instance in the cluster and run queries from the command-line. And **sqlcmd** and **curl** are required if you plan to install sample data with the GitHub script.
+The remaining tools are only required in certain scenarios. **Azure CLI** can be used to manage Azure services associated with AKS deployments. **mssql-cli** is an optional but useful tool that allows you to connect to the SQL Server master instance in the cluster and run queries from the command-line. And **sqlcmd** and **curl** are required if you plan to install sample data with the GitHub script.
 
 ## Next steps
 
-For more information about big data clusters, see [What are SQL Server 2019 big data clusters?](big-data-cluster-overview.md).
+For More info about big data clusters, see [What are SQL Server 2019 big data clusters?](big-data-cluster-overview.md).

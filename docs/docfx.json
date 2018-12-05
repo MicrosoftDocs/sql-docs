@@ -83,10 +83,21 @@
           "depot_name": "SQL.linux",
           "folder_relative_path_in_docset": "."
         }
-      }
-    },
+      },
+      "feedback_system": "None",
+      "feedback_github_repo": "MicrosoftDocs/sql-docs",
+      "feedback_product_url": "https://feedback.azure.com/forums/908035-sql-server/"
+  },
 
     "fileMetadata": {
+
+      "feedback_system": {
+        "azure-data-studio/**/*.md": "GitHub",
+        "linux/**/*.md": "GitHub"
+      },
+      "feedback_product_url": {
+        "azure-data-studio/**/*.md": "https://github.com/microsoft/azuredatastudio/issues/"
+      },
 
       "breadcrumb_path": {
         "**/*.md": "~/breadcrumb/toc.yml",

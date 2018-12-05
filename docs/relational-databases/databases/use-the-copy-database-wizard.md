@@ -43,7 +43,8 @@ The Copy Database Wizard moves or copies databases and certain server objects ea
   
 -   Schedule when to move or copy the database(s).  
   
-
+## File Table Restrictions
+  When using File Table, you can not Use copy database wizard on same server, because "Same Directory name"
   
 ##  <a name="Restrictions"></a> Limitations and restrictions  
   

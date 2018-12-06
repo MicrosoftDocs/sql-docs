@@ -10,6 +10,7 @@ ms.topic: conceptual
 ms.prod: sql
 ms.custom: seodec18
 ---
+
 # Configure Azure Kubernetes Service for SQL Server 2019 (preview) deployments
 
 This article describes how to configure Azure Kubernetes Service (AKS) for SQL Server 2019 big data cluster (preview) deployments.

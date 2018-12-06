@@ -16,13 +16,13 @@ manager: kfile
   
  The following list describes some additional considerations for choosing the predictable attribute to use in testing:  
   
--   Some types of data mining models can predict multiple attributes—such as neural networks, which can explore the relationships between many attributes.  
+-   Some types of data mining models can predict multiple attributes-such as neural networks, which can explore the relationships between many attributes.  
   
--   Other types of mining models—such as clustering models—do not necessarily have a predictable attribute. Clustering models cannot be tested unless they have a predictable attribute.  
+-   Other types of mining models-such as clustering models-do not necessarily have a predictable attribute. Clustering models cannot be tested unless they have a predictable attribute.  
   
 -   To create a scatter plot or measure the accuracy of a regression model requires that you choose a continuous predictable attribute as the outcome. In that case, you cannot specify a target value. If you are creating anything other than a scatter plot, the underlying mining structure column must also have a content type of **Discrete** or **Discretized**.  
   
--   If you choose a discrete attribute as the predictable outcome, you can also specify a target value, or you can leave the **Predict Value** field blank. If you include a **Predict Value**, the chart will measure only the model’s effectiveness at predicting the target value. If you do not specify a target outcome, the model is measured for its accuracy in predicting all outcomes.  
+-   If you choose a discrete attribute as the predictable outcome, you can also specify a target value, or you can leave the **Predict Value** field blank. If you include a **Predict Value**, the chart will measure only the model's effectiveness at predicting the target value. If you do not specify a target outcome, the model is measured for its accuracy in predicting all outcomes.  
   
 -   If you want to include multiple models and compare them in a single accuracy chart, all models must use the same predictable column.  
   

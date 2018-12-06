@@ -4,10 +4,7 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.dts.designer.checkdatabaseintegritytask.f1"
@@ -19,7 +16,6 @@ helpviewer_keywords:
   - "verifying database consistency"
   - "integrity checking [Integration Services]"
 ms.assetid: 5a82fe99-4503-429f-9337-e6bac7649fe4
-caps.latest.revision: 37
 author: douglaslMS
 ms.author: douglasl
 manager: craigg

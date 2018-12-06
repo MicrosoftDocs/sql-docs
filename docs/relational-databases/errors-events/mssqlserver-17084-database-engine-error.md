@@ -4,14 +4,11 @@ ms.custom: ""
 ms.date: "04/04/2017"
 ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: supportability
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 helpviewer_keywords: 
   - "17084 (Database Engine error)"
 ms.assetid: e579d104-3307-4edd-8587-b14ecbc02ed9
-caps.latest.revision: 7
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
@@ -37,7 +34,7 @@ The WITH clause of BEGIN ATOMIC statement did not specify a value for an option.
 **ATOMIC** blocks require values for the **WITH** options **TRANSACTION ISOLATION LEVEL** and **LANGUAGE**. For example::  
   
 ```  
-BEGIN ATOMIC WITH (TRANSACTION ISOLATION LEVEL = SNAPSHOT, LANGUAGE= N’us_english’)  
+BEGIN ATOMIC WITH (TRANSACTION ISOLATION LEVEL = SNAPSHOT, LANGUAGE= N'us_english')  
 ```  
   
 For more information, see [In-Memory OLTP &#40;In-Memory Optimization&#41;](~/relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md).  

@@ -5,12 +5,9 @@ ms.date: "08/08/2017"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: connectivity
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: 9cba6a0d-5f21-49af-ac5a-17d199973590
-caps.latest.revision: 4
 author: MightyPen
 ms.author: genemi
 manager: craigg
@@ -28,8 +25,8 @@ Our current code example uses ADO.NET of the .NET Framework, for Windows. The .N
 1. ![Download-DownArrow-Circled](../../ssdt/media/download.png)[To download and install .NET Framework, including ADO.NET](../sql-connection-libraries.md#anchor-20-drivers-relational-access)
 
 2. Install Visual Studio Community, or a similar integrated development environment (IDE) for writing and compiling C# source code. Microsoft now provides Visual Studio Community for *free*.  
-    - [Download Visual Studio Community](http://www.visualstudio.com/products/visual-studio-community-vs)  
-    - [More options for free Visual Studio](http://www.visualstudio.com/products/free-developer-offers-vs.aspx)  
+    - [Download Visual Studio Community](https://www.visualstudio.com/products/visual-studio-community-vs)  
+    - [More options for free Visual Studio](https://www.visualstudio.com/products/free-developer-offers-vs.aspx)  
 
 
 ### .NET Core, for Linux-Ubuntu and MacOS

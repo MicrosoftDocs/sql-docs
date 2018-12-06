@@ -3,10 +3,8 @@ title: "Maximum Capacity Specifications for SQL Server | Microsoft Docs"
 ms.date: "11/6/2017"
 ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
 ms.custom: ""
 ms.technology: install
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "objects [SQL Server]"
@@ -20,14 +18,12 @@ helpviewer_keywords:
   - "objects [SQL Server], capacity specifications"
   - "Database Engine [SQL Server], capacity specifications"
 ms.assetid: 13e95046-0e76-4604-b561-d1a74dd824d7
-caps.latest.revision: 88
 author: "MikeRayMSFT"
 ms.author: "mikeray"
 manager: craigg
 ---
 # Maximum Capacity Specifications for SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
- > For content related to previous versions of SQL Server, see [Maximum Capacity Specifications for SQL Server](maximum-capacity-specifications-for-sql-server.md).
 
   The following tables specify maximum sizes and numbers of various objects defined in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] components. To navigate to the table for a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] technology, click on its link:  
   

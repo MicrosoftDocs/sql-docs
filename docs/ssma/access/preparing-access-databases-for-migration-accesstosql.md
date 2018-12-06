@@ -4,13 +4,8 @@ ms.prod: sql
 ms.custom: ""
 ms.date: "08/15/2017"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: ssma
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
-applies_to: 
-  - "Azure SQL Database"
-  - "SQL Server"
 helpviewer_keywords: 
   - "Access databases, versions"
   - "Access databases, when to migrate"
@@ -23,7 +18,6 @@ helpviewer_keywords:
   - "versions of Access"
   - "workgroup security"
 ms.assetid: 9b80a9e0-08e7-4b4d-b5ec-cc998d3f5114
-caps.latest.revision: 20
 author: "Shamikg"
 ms.author: "Shamikg"
 manager: "murato"
@@ -32,7 +26,7 @@ manager: "murato"
 Before you migrate Access databases to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], you must determine which databases to migrate and ensure that those databases are ready for migration.  
   
 ## Determining when to migrate to SQL Server  
-The Jet database engine, which is used as the database engine for Access, is a flexible, easy-to-use solution for data management. However, as databases become larger and more mission critical, many users find that they require greater performance, security, or availability. For applications that require a more robust data platform, consider moving the underlying databases for those applications to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. For more information about deciding when to migrate, see the [migration information page](http://go.microsoft.com/fwlink/?LinkId=68571) on the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Web site.  
+The Jet database engine, which is used as the database engine for Access, is a flexible, easy-to-use solution for data management. However, as databases become larger and more mission critical, many users find that they require greater performance, security, or availability. For applications that require a more robust data platform, consider moving the underlying databases for those applications to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. For more information about deciding when to migrate, see the [migration information page](https://go.microsoft.com/fwlink/?LinkId=68571) on the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Web site.  
   
 After you migrate databases to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], you can continue to use Access by using linked tables, or you can manually migrate your applications to [!INCLUDE[msCoName](../../includes/msconame_md.md)] .NET Framework-based code that interacts directly with [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   

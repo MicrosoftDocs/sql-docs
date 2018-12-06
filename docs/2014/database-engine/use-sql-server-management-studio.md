@@ -4,17 +4,13 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-cross-instance"
-ms.tgt_pltfrm: ""
+ms.technology:
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Management Studio [SQL Server]"
   - "Enterprise Manager (See SQL Server Management Studio [Analysis Services])"
   - "SQL Server Management Studio [SQL Server], about SQL Server Management Studio"
 ms.assetid: f289e978-14ca-46ef-9e61-e1fe5fd593be
-caps.latest.revision: 50
 author: mashamsft
 ms.author: mathoma
 manager: craigg

@@ -4,12 +4,9 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "wmi"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: 
 
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 apiname: 
   - "ServerNetworkProtocol Class"
@@ -19,7 +16,6 @@ apitype: "MOFDef"
 helpviewer_keywords: 
   - "ServerNetworkProtocol class"
 ms.assetid: 0f9f7f7d-f8ab-426e-a85d-4eda3a241eb5
-caps.latest.revision: 31
 author: "CarlRabeler"
 ms.author: "carlrab"
 manager: craigg
@@ -37,6 +33,6 @@ manager: craigg
 -   Enable and disable the server network protocol.  
   
 ## See Also  
- [Configuring Server Network Protocols and Net-Libraries](http://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  
+ [Configuring Server Network Protocols and Net-Libraries](https://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  
   
   

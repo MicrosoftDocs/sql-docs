@@ -47,12 +47,12 @@ DrilldownLevel(Set_Expression [,[Level_Expression] ,[Index]] [,INCLUDE_CALC_MEMB
   
  If neither a level expression nor an index value is specified, the function constructs a set in a hierarchical order by retrieving the children of only those members that are at the lowest level of the first dimension referenced in the specified set.  
   
- Querying the XMLA property MdpropMdxDrillFunctions enables you to verify the level of support that the server provides for the drilling functions; see [Supported XMLA Properties &#40;XMLA&#41;](../analysis-services/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties.md) for details.  
+ Querying the XMLA property MdpropMdxDrillFunctions enables you to verify the level of support that the server provides for the drilling functions; see [Supported XMLA Properties &#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties) for details.  
   
 ## Examples  
  You can try the following examples in the MDX query window in SSMS, using the Adventure Works cube.  
   
- **Example 1 – demonstrates minimal syntax**  
+ **Example 1 - demonstrates minimal syntax**  
   
  The first example shows the minimal syntax for **DrilldownLevel**. The only required argument is a set expression. Notice that when you run this query, you get the parent [All Categories] and members of the next level down: [Accessories], [Bikes], and so on. Although this example is simple, it demonstrates the basic purpose of the **DrilldownLevel** function, which is drilling down to the next level below.  
   
@@ -61,7 +61,7 @@ SELECT DRILLDOWNLEVEL({[Product].[Product Categories]} * {[Sales Territory].[Sal
 FROM [Adventure Works]  
 ```  
   
- Example 2 – alternate syntax using an explicit index level  
+ Example 2 - alternate syntax using an explicit index level  
   
  This example demonstrates the alternate syntax, where the index level is specified through a numeric expression. In this case, index level is 0. For a zero-based index, this is the lowest level.  
   
@@ -73,7 +73,7 @@ FROM [Adventure Works]
   
  Notice that the result set is identical to the previous query. As a general rule, setting the index level is unnecessary unless you want the drill down to start at a specific level. Re-run the previous query, setting the index value to 1, and then 2. With index value set to 1, you see the drill down starts at the second level in the hierarchy. With index value set to 2, drill down starts at the third level, the highest level in this example. The higher the numeric expression, the higher the index level.  
   
- **Example 3 – demonstrates a level expression**  
+ **Example 3 - demonstrates a level expression**  
   
  The next example shows how to use a level expression. Given a set that represents a hierarchical structure, using a level expression allows you to choose a level in the hierarchy to start the drill down.  
   
@@ -92,7 +92,7 @@ SELECT [Measures].[Internet Sales Amount] ON COLUMNS,
 FROM [Adventure Works]  
 ```  
   
- **Example 4 – including calculated members**  
+ **Example 4 - including calculated members**  
   
  The last example shows a calculated member, which appears at the bottom of the result set when you add the **include_calculated_members** flag. Notice that the flag is specified as the fourth parameter.  
   

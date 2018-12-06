@@ -4,9 +4,7 @@ ms.custom: ""
 ms.date: "06/10/2016"
 ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: stored-procedures
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 dev_langs: 
   - "TSQL"
@@ -36,7 +34,7 @@ Removes the authenticated connection between a local Stretch-enabled database an
  Reconciles the batch ID stored in the Stretch-enabled SQL Server table for the most recently migrated data with the batch ID stored in the remote Azure table. 
  
 [sys.sp_rda_reconcile_columns](../../relational-databases/system-stored-procedures/sys-sp-rda-reconcile-columns-transact-sql.md) 
- Reconciles the columns in the remote Azure table to the columns in the the Stretch-enabled SQL Server table.
+ Reconciles the columns in the remote Azure table to the columns in the Stretch-enabled SQL Server table.
  
  [sys.sp_rda_reconcile_indexes](../../relational-databases/system-stored-procedures/sys-sp-rda-reconcile-indexes-transact-sql.md) 
  Queues a schema task to reconcile indexes on the remote table.

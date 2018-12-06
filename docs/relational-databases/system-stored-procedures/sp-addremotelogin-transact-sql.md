@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "system-stored-procedures"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "sp_addremotelogin_TSQL"
@@ -42,13 +39,13 @@ sp_addremotelogin [ @remoteserver = ] 'remoteserver'
 ```  
   
 ## Arguments  
- [ @remoteserver **=** ] **'***remoteserver***'**  
+ [ @remoteserver **=** ] **'**_remoteserver_**'**  
  Is the name of the remote server that the remote login applies to. *remoteserver* is **sysname**, with no default. If only *remoteserver* is specified, all users on *remoteserver* are mapped to existing logins of the same name on the local server. The server must be known to the local server. This is added by using sp_addserver. When users on *remoteserver* connect to the local server that is running [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to execute a remote stored procedure, they connect as the local login that matches their own login on *remoteserver*. *remoteserver* is the server that initiates the remote procedure call.  
   
- [ @loginame **=** ] **'***login***'**  
+ [ @loginame **=** ] **'**_login_**'**  
  Is the login ID of the user on the local instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. *login* is **sysname**, with a default of NULL. *login*must already exist on the local instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. If *login* is specified, all users on *remoteserver* are mapped to that specific local login. When users on *remoteserver* connect to the local instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to execute a remote stored procedure, they connect as *login*.  
   
- [ @remotename **=** ] **'***remote_name***'**  
+ [ @remotename **=** ] **'**_remote_name_**'**  
  Is the login ID of the user on the remote server. *remote_name* is **sysname**, with a default of NULL. *remote_name* must exist on *remoteserver*. If *remote_name* is specified, the specific user *remote_name* is mapped to *login* on the local server. When *remote_name* on *remoteserver* connects to the local instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to execute a remote stored procedure, it connects as *login*. The login ID of *remote_name* can be different from the login ID on the remote server, *login*.  
   
 ## Return Code Values  

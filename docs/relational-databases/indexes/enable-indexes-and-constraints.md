@@ -5,9 +5,7 @@ ms.date: "02/17/2017"
 ms.prod: sql
 ms.prod_service: "table-view-index, sql-database"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: table-view-index
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "indexes [SQL Server], enabling"
@@ -17,7 +15,6 @@ helpviewer_keywords:
   - "constraints [SQL Server], enabling"
   - "clustered indexes, enabling disabled indexes"
 ms.assetid: c55c8865-322e-4ab0-ba04-ea1f56735353
-caps.latest.revision: 27
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
@@ -52,7 +49,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
   
 -   When the clustered index is disabled or enabled and the nonclustered index is disabled, the clustered index action has the following results on the disabled nonclustered index.  
   
-    |Clustered Index Action|Disabled Nonclustered Index …|  
+    |Clustered Index Action|Disabled Nonclustered Index ...|  
     |----------------------------|-----------------------------------|  
     |ALTER INDEX REBUILD.|Remains disabled.|  
     |ALTER INDEX ALL REBUILD.|Is rebuilt and enabled.|  

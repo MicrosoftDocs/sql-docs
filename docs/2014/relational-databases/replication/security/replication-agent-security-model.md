@@ -4,10 +4,7 @@ ms.custom: ""
 ms.date: "10/07/2015"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Snapshot Agent, security"
@@ -20,7 +17,6 @@ helpviewer_keywords:
   - "Merge Agent, security"
   - "replication [SQL Server], agents and profiles"
 ms.assetid: 6d09fc8d-843a-4a7a-9812-f093d99d8192
-caps.latest.revision: 70
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg

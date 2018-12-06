@@ -1,15 +1,11 @@
-﻿---
+---
 title: "sys.database_connection_stats (Azure SQL Database) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/25/2016"
 ms.prod: ""
 ms.prod_service: "sql-database"
 ms.reviewer: ""
-ms.service: "sql-database"
-ms.component: "system-catalog-views"
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "sys.database_connection_stats"
@@ -22,7 +18,6 @@ helpviewer_keywords:
   - "sys.database_connection_stats"
   - "database_connection_stats"
 ms.assetid: 5c8cece0-63b0-4dee-8db7-6b43d94027ec
-caps.latest.revision: 13
 author: stevestein
 ms.author: sstein
 manager: craigg
@@ -93,6 +88,6 @@ WHERE start_time>='2011-09-25:12:00:00' and end_time<='2011-09-28 12:00:00';
 ```  
   
 ## See Also  
- [Troubleshooting Windows Azure SQL Database](http://msdn.microsoft.com/library/windowsazure/ee730906.aspx)  
+ [Troubleshooting Windows Azure SQL Database](https://msdn.microsoft.com/library/windowsazure/ee730906.aspx)  
   
   

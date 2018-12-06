@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "system-stored-procedures"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "sp_dbremove"
@@ -18,7 +15,6 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_dbremove"
 ms.assetid: a8513f4a-c025-49c8-99c3-4c83cb7f51ed
-caps.latest.revision: 32
 author: stevestein
 ms.author: sstein
 manager: craigg
@@ -41,10 +37,10 @@ sp_dbremove [ @dbname = ] 'database' [ , [ @dropdev = ] 'dropdev' ]
 ```  
   
 ## Arguments  
- [ **@dbname=** ] **'***database***'**  
+ [ **@dbname=** ] **'**_database_**'**  
  Is the name of the database to be removed. *database* is **sysname**, with a default value of NULL.  
   
- [ **@dropdev=** ] **'***dropdev***'**  
+ [ **@dropdev=** ] **'**_dropdev_**'**  
  Is a flag provided for backward compatibility only and is currently ignored. *dropdev* has the value **dropdev**.  
   
 ## Return Code Values  

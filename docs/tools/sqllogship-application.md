@@ -4,17 +4,12 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "sql-tools"
-ms.component: "sqllogship"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: tools-other
 ms.topic: conceptual
 helpviewer_keywords: 
   - "sqllogship"
 ms.assetid: 8ae70041-f3d9-46e4-8fa8-31088572a9f8
-caps.latest.revision: 10
 author: "stevestein"
 ms.author: "sstein"
 manager: craigg
@@ -29,7 +24,7 @@ manager: craigg
   
 ```  
   
-sqllogship -server instance_name { -backup primary_id | -copy secondary_id | -restore secondary_id } [ –verboselevel level ] [ –logintimeout timeout_value ] [ -querytimeout timeout_value ]  
+sqllogship -server instance_name { -backup primary_id | -copy secondary_id | -restore secondary_id } [ -verboselevel level ] [ -logintimeout timeout_value ] [ -querytimeout timeout_value ]  
 ```  
   
 ## Arguments  
@@ -51,7 +46,7 @@ sqllogship -server instance_name { -backup primary_id | -copy secondary_id | -re
   
  Any backup files in the destination directory that were created after the most recent restore point are restored to the secondary database, or databases. The **sqllogship** application then cleans out any old backup files, based on the file retention period. Next, the application logs history for the restore operation on the secondary server and the monitor server. Finally, the application runs **sp_cleanup_log_shipping_history**, which cleans out old history information, based on the retention period.  
   
- **–verboselevel** *level*  
+ **-verboselevel** *level*  
  Specifies the level of messages added to the log shipping history. *level* is one of the following integers:  
   
 |Level|Description|  
@@ -62,11 +57,11 @@ sqllogship -server instance_name { -backup primary_id | -copy secondary_id | -re
 |**3**|Output informational messages, warnings, and error-handling messages. This is the default value.|  
 |4|Output all debugging and tracing messages.|  
   
- **–logintimeout** *timeout_value*  
- Specifies the amount of time allotted for attempting to log in to the server instance before the attempt times out. The default is 15 seconds. *timeout_value* is **int***.*  
+ **-logintimeout** *timeout_value*  
+ Specifies the amount of time allotted for attempting to log in to the server instance before the attempt times out. The default is 15 seconds. *timeout_value* is **int**_._  
   
  **-querytimeout** *timeout_value*  
- Specifies the amount of time allotted for starting the specified operation before the attempt times out. The default is no timeout period. *timeout_value* is **int***.*  
+ Specifies the amount of time allotted for starting the specified operation before the attempt times out. The default is no timeout period. *timeout_value* is **int**_._  
   
 ## Remarks  
  We recommend that you use the backup, copy, and restore jobs to perform the backup, copy and restore when possible. To start these jobs from a batch operation or other application, call the [sp_start_job](../relational-databases/system-stored-procedures/sp-start-job-transact-sql.md) stored procedure.  

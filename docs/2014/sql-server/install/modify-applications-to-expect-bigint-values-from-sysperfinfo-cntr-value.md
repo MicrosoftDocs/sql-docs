@@ -4,16 +4,13 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "database-engine"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "sysperfinfo"
   - "bigint values [SQL Server]"
 ms.assetid: b0345303-6e9a-4078-8148-6e1bce207b8c
-caps.latest.revision: 18
 author: mashamsft
 ms.author: mathoma
 manager: craigg

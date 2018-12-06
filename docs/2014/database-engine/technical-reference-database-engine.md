@@ -4,16 +4,13 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "database-engine"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "technical reference [SQL Server Database Engine]"
   - "Database Engine [SQL Server], getting assistance"
 ms.assetid: e9533f6b-c48a-4f53-a7a0-379e092bb667
-caps.latest.revision: 31
 author: craigg-msft
 ms.author: craigg
 manager: craigg
@@ -35,7 +32,7 @@ manager: craigg
   
  [SqlLocalDB Utility](../tools/sqllocaldb-utility.md)  
   
- [More…](../tools/command-prompt-utility-reference-database-engine.md)  
+ [More...](../tools/command-prompt-utility-reference-database-engine.md)  
   
  ![Small File Folder Icon](../../2014/integration-services/media/filefolder-small.gif "Small File Folder Icon") **Database Engine PowerShell Cmdlets**  
  [Invoke-PolicyEvaluation cmdlet](../../2014/database-engine/invoke-policyevaluation-cmdlet.md)  

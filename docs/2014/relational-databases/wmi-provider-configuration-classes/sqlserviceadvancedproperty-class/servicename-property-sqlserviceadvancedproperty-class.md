@@ -4,11 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-  - "docset-sql-devref"
-ms.tgt_pltfrm: ""
+ms.technology: wmi
 ms.topic: "reference"
 api_name: 
   - "ServiceName Property (SqlServiceAdvancedProperty Class)"
@@ -19,7 +15,6 @@ topic_type:
 helpviewer_keywords: 
   - "ServiceName property"
 ms.assetid: 6d857b8d-77ed-4014-b1b0-e0e3d5e943c8
-caps.latest.revision: 34
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg

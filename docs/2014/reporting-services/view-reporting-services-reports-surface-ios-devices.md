@@ -4,10 +4,8 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "reporting-services-native"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "iPad"
@@ -16,7 +14,6 @@ helpviewer_keywords:
   - "Report Viewer [Reporting Services]"
   - "iOS"
 ms.assetid: 2124bcf5-d60a-475f-a4ae-de6df44d2860
-caps.latest.revision: 21
 author: maggiesmsft
 ms.author: douglasl
 manager: craigg
@@ -86,7 +83,7 @@ Watch a demonstration of viewing reports on an iPad.
   
     -   Export the report by tapping the icon for the **Export drop down menu** and then tapping a file format.  
   
-        -   If you’re viewing the report on a Microsoft Surface device, you can export the report to one of the following formats.  
+        -   If you're viewing the report on a Microsoft Surface device, you can export the report to one of the following formats.  
   
             -   XML file with report data  
   
@@ -102,7 +99,7 @@ Watch a demonstration of viewing reports on an iPad.
   
             -   Word  
   
-        -   If you’re viewing the report on an iPad, you can export the report as a TIFF or PDF file.  
+        -   If you're viewing the report on an iPad, you can export the report as a TIFF or PDF file.  
   
 ## Authentication  
  RSWindowsNTLM authentication and RSWindowsBasic authentication work with [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] in native mode and the iPad.  

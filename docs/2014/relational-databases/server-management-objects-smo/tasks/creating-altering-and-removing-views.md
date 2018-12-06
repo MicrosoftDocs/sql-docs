@@ -4,16 +4,11 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
-  - "database-engine"
-  - "docset-sql-devref"
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 
   - "views [SMO]"
 ms.assetid: 7d445c0e-77ef-4734-993b-e022de31df23
-caps.latest.revision: 43
 author: stevestein
 ms.author: sstein
 manager: craigg

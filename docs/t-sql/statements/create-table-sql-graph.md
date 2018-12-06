@@ -5,9 +5,7 @@ ms.date: "05/04/2017"
 ms.prod: sql
 ms.prod_service: "sql-database"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "SQL_GRAPH_TSQL"
@@ -31,7 +29,6 @@ helpviewer_keywords:
   - "EDGE"
   - "SQL graph, CREATE TABLE statement"
 ms.assetid: 
-caps.latest.revision: 1
 author: "shkale-msft"
 ms.author: "shkale"
 manager: craigg
@@ -83,7 +80,7 @@ Creating a node or edge table as a temporal table is not supported.
 
 Stretch database is not supported for node or edge table.
 
-Node or edge tables cannot be external tables (no polybase support for graph tables). 
+Node or edge tables cannot be external tables (no PolyBase support for graph tables). 
   
  
 ## Examples  

@@ -4,10 +4,8 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "reporting-services-native"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "displaying reports"
@@ -19,7 +17,6 @@ helpviewer_keywords:
   - "components [Reporting Services], browsers"
   - "Web browsers [Reporting Services]"
 ms.assetid: 48a75bbb-0029-4c43-891d-dc8f4fc0ebe1
-caps.latest.revision: 99
 author: markingmyname
 ms.author: maghan
 manager: craigg
@@ -42,7 +39,7 @@ manager: craigg
 -   [Browser Support for ReportViewer Web Server Controls in Visual Studio](#bkmk_controls)  
   
 ##  <a name="bkmk_powerview"></a> Power View Browser Scenarios  
- The list of supported browsers and browser versions that [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] supports, depends on what type of document is opened. Excel 2013 workbooks and “**.rdlx**” files utilize different components.  
+ The list of supported browsers and browser versions that [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] supports, depends on what type of document is opened. Excel 2013 workbooks and "**.rdlx**" files utilize different components.  
   
 |Document Type|Environment|Browser support|  
 |-------------------|-----------------|---------------------|  
@@ -58,14 +55,14 @@ manager: craigg
   
 -   For more information on the SharePoint 2010 browser support, see [Plan browser support (SharePoint Server 2010)](http://technet.microsoft.com/library/cc263526\(office.14\).aspx) (http://technet.microsoft.com/library/cc263526(office.14).aspx).  
   
-|**Browser**|**Windows 8 and 8.1**|**Windows 7**|**Windows Server 2012 and 2012 R2**|**Windows Server 2008 R2**|**Windows Server 2008**|**Mac OS X 10.6 – 10.9**|  
+|**Browser**|**Windows 8 and 8.1**|**Windows 7**|**Windows Server 2012 and 2012 R2**|**Windows Server 2008 R2**|**Windows Server 2008**|**Mac OS X 10.6 - 10.9**|  
 |-----------------|---------------------------|-------------------|-----------------------------------------|--------------------------------|-----------------------------|------------------------------|  
 |**Internet Explorer 11 (for the desktop)**|32-bit, 64-bit|32-bit, 64-bit|32-bit, 64-bit|32-bit, 64-bit|Not supported|Not supported|  
 |**Internet Explorer 10 (for the desktop)**|32-bit, 64-bit|32-bit, 64-bit|32-bit, 64-bit|32-bit, 64-bit|Not supported|Not supported|  
 |**Internet Explorer 9**|Not supported|32-bit, 64-bit|Not supported|32-bit, 64-bit|32-bit, 64-bit|Not supported|  
 |**Internet Explorer 8**|Not supported|32-bit, 64-bit|Not supported|32-bit, 64-bit|32-bit, 64-bit|Not supported|  
-|**Mozilla Firefox (latest publically released version)**|32-bit|32-bit|32-bit|32-bit|32-bit|Not supported|  
-|**Apple Safari (latest publically released version)**|Not supported|Not supported|Not supported|Not supported|Not supported|32-bit, 64-bit|  
+|**Mozilla Firefox (latest publicly released version)**|32-bit|32-bit|32-bit|32-bit|32-bit|Not supported|  
+|**Apple Safari (latest publicly released version)**|Not supported|Not supported|Not supported|Not supported|Not supported|32-bit, 64-bit|  
   
 > [!NOTE]  
 >  "32-bit" refers to the browser, not the operating system. You can use 32-bit Internet Explorer 9 on 64-bit Windows 7, for example.  
@@ -78,15 +75,15 @@ manager: craigg
   
 -   For more information on the SharePoint 2013 browser support, see [Plan browser support in SharePoint 2013](http://technet.microsoft.com/library/cc263526\(office.15\).aspx) (http://technet.microsoft.com/library/cc263526(office.15).aspx).  
   
-|**Browser**|**Windows 8 and 8.1**|**Windows 7**|**Windows Server 2012 and 2012 R2**|**Windows Server 2008 R2**|**Windows Server 2008**|**Mac OS X 10.6 – 10.9**|  
+|**Browser**|**Windows 8 and 8.1**|**Windows 7**|**Windows Server 2012 and 2012 R2**|**Windows Server 2008 R2**|**Windows Server 2008**|**Mac OS X 10.6 - 10.9**|  
 |-----------------|---------------------------|-------------------|-----------------------------------------|--------------------------------|-----------------------------|------------------------------|  
 |**Internet Explorer 11 (for the desktop)**|32-bit, 64-bit|32-bit, 64-bit|32-bit, 64-bit|32-bit, 64-bit|Not supported|Not supported|  
 |**Internet Explorer 10 (for the desktop)**|32-bit, 64-bit|32-bit, 64-bit|32-bit, 64-bit|32-bit, 64-bit|Not supported|Not supported|  
 |**Internet Explorer 9**|Not supported|32-bit, 64-bit|Not supported|32-bit, 64-bit|32-bit, 64-bit|Not supported|  
 |**Internet Explorer 8**|Not supported|32-bit, 64-bit|Not supported|32-bit, 64-bit|32-bit, 64-bit|Not supported|  
-|**Mozilla Firefox (latest publically released version)**|32-bit|32-bit|32-bit|32-bit|32-bit|32-bit, 64-bit|  
-|**Apple Safari (latest publically released version)**|Not supported|Not supported|Not supported|Not supported|Not supported|32-bit, 64-bit|  
-|**Google Chrome (latest publically released version)**|32-bit **(\*)** For limited time|32-bit **(\*)** For limited time|32-bit **(\*)** For limited time|32-bit **(\*)** For limited time|32-bit **(\*)** For limited time|Not supported|  
+|**Mozilla Firefox (latest publicly released version)**|32-bit|32-bit|32-bit|32-bit|32-bit|32-bit, 64-bit|  
+|**Apple Safari (latest publicly released version)**|Not supported|Not supported|Not supported|Not supported|Not supported|32-bit, 64-bit|  
+|**Google Chrome (latest publicly released version)**|32-bit **(\*)** For limited time|32-bit **(\*)** For limited time|32-bit **(\*)** For limited time|32-bit **(\*)** For limited time|32-bit **(\*)** For limited time|Not supported|  
   
  **(\*)** Chrome will stop supporting the Netscape Plug-in API (NPAPI), used by Silverlight. Power View is dependent on Silverlight.  For more information, see [The Final Countdown for NPAPI](http://blog.chromium.org/2014/11/the-final-countdown-for-npapi.html).  
   
@@ -96,23 +93,23 @@ manager: craigg
 |Browser|  
 |-------------|  
 |Internet Explorer 7 or newer and scripting must be enabled.|  
-|Mozilla FireFox (latest publically released version)|  
-|Apple Safari (latest publically released version)|  
-|Google Chrome (latest publically released version)|  
+|Mozilla FireFox (latest publicly released version)|  
+|Apple Safari (latest publicly released version)|  
+|Google Chrome (latest publicly released version)|  
   
 ##  <a name="bkmk_reportviewer"></a> Browser Requirements for Viewing Reports  
  The following is the current list of browsers and features supported with the report viewer. The report viewer supports viewing reports from [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] report manager and SharePoint libraries.  
   
-|**Browser**|**Windows 8 and 8.1**|**Windows 7**|**Windows Server 2012 and 2012 R2**|**Windows Server 2008 R2**|**Windows Server 2008**|**Mac OS X 10.6 – 10.9**|**iOS 6 -7 for iPad**|  
+|**Browser**|**Windows 8 and 8.1**|**Windows 7**|**Windows Server 2012 and 2012 R2**|**Windows Server 2008 R2**|**Windows Server 2008**|**Mac OS X 10.6 - 10.9**|**iOS 6 -7 for iPad**|  
 |-----------------|---------------------------|-------------------|-----------------------------------------|--------------------------------|-----------------------------|------------------------------|----------------------------|  
 |**Internet Explorer 11 (for the desktop)**|32-bit, 64-bit|32-bit, 64-bit|32-bit, 64-bit|Not supported|Not supported|Not supported|Not supported|  
 |**Internet Explorer 10 (for the desktop)**|32-bit, 64-bit|32-bit, 64-bit|32-bit, 64-bit|Not supported|Not supported|Not supported|Not supported|  
 |**Internet Explorer 9**|Not supported|32-bit, 64-bit|Not supported|32-bit, 64-bit|32-bit, 64-bit|Not supported|Not supported|  
 |**Internet Explorer 8**|Not supported|32-bit, 64-bit|Not supported|32-bit, 64-bit|32-bit, 64-bit|Not supported|Not supported|  
 |**Internet Explorer 7**|Not supported|Not supported|Not supported|Not supported|32-bit, 64-bit|Not supported|Not supported|  
-|**Mozilla Firefox (latest publically released version)**|32-bit|32-bit|32-bit|32-bit|32-bit|Not supported|Not supported|  
-|**Apple Safari (latest publically released version)**|Not supported|Not supported|Not supported|Not supported|Not supported|32-bit, 64-bit|Supported with limited features <sup>(1)</sup>|  
-|**Google Chrome (latest publically released version)**|32-bit|32-bit|32-bit|32-bit|32-bit|Not supported|Not supported|  
+|**Mozilla Firefox (latest publicly released version)**|32-bit|32-bit|32-bit|32-bit|32-bit|Not supported|Not supported|  
+|**Apple Safari (latest publicly released version)**|Not supported|Not supported|Not supported|Not supported|Not supported|32-bit, 64-bit|Supported with limited features <sup>(1)</sup>|  
+|**Google Chrome (latest publicly released version)**|32-bit|32-bit|32-bit|32-bit|32-bit|Not supported|Not supported|  
   
  **<sup>(1)</sup>**  The following features are supported:  
   
@@ -166,15 +163,15 @@ manager: craigg
   
 |||||||||  
 |-|-|-|-|-|-|-|-|  
-|**Browser**|**Windows 8** and **Windows 8.1**|**Windows 7**|**Windows Server 2012** and **2012 R2**|**Windows Server 2008** and **2008 R2**|**Windows Server 2003**|**Mac OS X 10.6 – 10.9**|**Notes**|  
+|**Browser**|**Windows 8** and **Windows 8.1**|**Windows 7**|**Windows Server 2012** and **2012 R2**|**Windows Server 2008** and **2008 R2**|**Windows Server 2003**|**Mac OS X 10.6 - 10.9**|**Notes**|  
 |**Internet Explorer 11 (for the desktop**|Yes|Yes|Yes|Not supported|Not supported|Not supported|Internet Explorer supports the complete set of ReportViewer features.|  
 |**Internet Explorer 10 (for the desktop)**|Yes|Yes|Yes|Not supported|Not supported|Not supported|Internet Explorer supports the complete set of ReportViewer features.|  
 |**Internet Explorer 9**|Not supported|Yes|Not supported|Yes|Yes|Yes|Internet Explorer supports the complete set of ReportViewer features.|  
 |**Internet Explorer 8.0**|Not supported|Yes|Not supported|Yes|Yes<sup>1</sup>|Not supported|Internet Explorer supports the complete set of ReportViewer features. <sup>1</sup>|  
 |**Internet Explorer 7.0**|Not supported|Yes|Not supported|Yes|Yes<sup>1</sup>|Not supported|Internet Explorer supports the complete set of ReportViewer features. <sup>1</sup>|  
-|**Firefox (latest publically released version)**|Yes|Yes|Yes|Yes|Yes|Not supported|Printing and zooming are not supported.|  
-|**Safari (latest publically released version)**|Not supported|Not supported|Not supported|Not supported|Not supported|Yes|Printing and zooming are not supported.<br /><br /> The Calendar control that is used to select dates on a parameterized report is disabled in this browser. Users must type the dates that they want to use manually in the parameter prompt area.|  
-|**Chrome (latest publically released version)**|Yes|Yes|Yes|Yes|Yes|Not supported|Printing and Zooming are not supported.|  
+|**Firefox (latest publicly released version)**|Yes|Yes|Yes|Yes|Yes|Not supported|Printing and zooming are not supported.|  
+|**Safari (latest publicly released version)**|Not supported|Not supported|Not supported|Not supported|Not supported|Yes|Printing and zooming are not supported.<br /><br /> The Calendar control that is used to select dates on a parameterized report is disabled in this browser. Users must type the dates that they want to use manually in the parameter prompt area.|  
+|**Chrome (latest publicly released version)**|Yes|Yes|Yes|Yes|Yes|Not supported|Printing and Zooming are not supported.|  
   
  <sup>1</sup>In standards mode, Internet Explorer 7.0 and 8.0 do not display slanted lines in reports. If you use slanted lines in your reports, set your ASP.NET page to run in quirks mode in Internet Explorer. To do this, find the \<!DOCTYPE> tag in your ASP.NET page. Or, if you use a master page, you can find the tag in the .master file. This tag looks like the following:  
   

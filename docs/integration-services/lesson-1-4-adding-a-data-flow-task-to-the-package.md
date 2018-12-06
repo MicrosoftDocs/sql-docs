@@ -5,12 +5,8 @@ ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "integration-services"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: integration-services
-ms.tgt_pltfrm: ""
 ms.topic: tutorial
-applies_to: 
-  - "SQL Server 2016"
 ms.assetid: 96af3073-8f11-4444-b934-fe8613a2d084
 author: "douglaslMS"
 ms.author: "douglasl"
@@ -29,7 +25,7 @@ After you have created the connection managers for the source and destination da
 2.  In the **SSIS Toolbox**, expand **Favorites**, and drag a **Data Flow Task** onto the design surfaceof the **Control Flow** tab.  
   
     > [!NOTE]  
-    > If the SSIS Toolbox isn’t available, on the main menu select SSIS then SSIS Toolbox to display the SSIS Toolbox.  
+    > If the SSIS Toolbox isn't available, on the main menu select SSIS then SSIS Toolbox to display the SSIS Toolbox.  
   
 3.  On the **Control Flow** design surface, right-click the newly added **Data Flow Task**, click **Rename**, and change the name to **Extract Sample Currency Data**.  
   

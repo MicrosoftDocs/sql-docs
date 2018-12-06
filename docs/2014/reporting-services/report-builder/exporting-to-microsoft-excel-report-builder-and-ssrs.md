@@ -4,13 +4,10 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "reporting-services-native"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: 74f726fc-2167-47af-9093-1644e03ef01f
-caps.latest.revision: 24
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
@@ -69,7 +66,7 @@ manager: craigg
   
 -   The text effect "Overline" is not supported in Excel.  
   
--   Excel adds a default padding of approximately 3.75 points to the left and right sides of cells. If a text box’s padding settings are less than 3.75 points and is just barely wide enough to accommodate the text, the text may wrap in Excel.  
+-   Excel adds a default padding of approximately 3.75 points to the left and right sides of cells. If a text box's padding settings are less than 3.75 points and is just barely wide enough to accommodate the text, the text may wrap in Excel.  
   
     > [!NOTE]  
     >  To work around this issue, increase the width of the text box in the report.  
@@ -165,7 +162,7 @@ manager: craigg
   
  `<Extension Name="EXCEL" Type="Microsoft.ReportingServices.Rendering.ExcelRenderer.ExcelRenderer,Microsoft.ReportingServices.ExcelRendering" Visible="false"/>`  
   
- The EXCELOPENXML extension defines the Excel renderer for Excel 2007-2010. The EXCEL extension defines the Excel 2003 version. `Visible = “false”` indicates the Excel 2003 renderer is hidden. For more information, see [RSReportServer Configuration File](../report-server/rsreportserver-config-configuration-file.md) and [RSReportDesigner Configuration File](../report-server/rsreportdesigner-configuration-file.md).  
+ The EXCELOPENXML extension defines the Excel renderer for Excel 2007-2010. The EXCEL extension defines the Excel 2003 version. `Visible = "false"` indicates the Excel 2003 renderer is hidden. For more information, see [RSReportServer Configuration File](../report-server/rsreportserver-config-configuration-file.md) and [RSReportDesigner Configuration File](../report-server/rsreportdesigner-configuration-file.md).  
   
 ### Differences Between the Excel 2007-2010 and Excel 2003 Renderers  
  Reports, rendered by using the Excel or Excel 2003 renderers are typically identical and only under rare circumstances will you notice differences between the two formats. The following table compares the Excel and the Excel 2003 renderers.  
@@ -260,10 +257,10 @@ manager: craigg
  The root node of the map is the report name, the \<*reportname*>.rdl, and it is not interactive. The document map links font is Arial, 10pt.  
   
 ### Drillthrough Links  
- Drillthrough links that appear in text boxes are rendered as Excel hyperlinks in the cell in which the text is rendered. Drillthrough links for images and charts are rendered as Excel hyperlinks on the image when rendered. When clicked, the drillthrough link opens the client’s default browser and navigates to the HTML view of the target.  
+ Drillthrough links that appear in text boxes are rendered as Excel hyperlinks in the cell in which the text is rendered. Drillthrough links for images and charts are rendered as Excel hyperlinks on the image when rendered. When clicked, the drillthrough link opens the client's default browser and navigates to the HTML view of the target.  
   
 ### Hyperlinks  
- Hyperlinks that appear in text boxes are rendered as Excel hyperlinks in the cell in which the text is rendered. Hyperlinks for images and charts are rendered as Excel hyperlinks on the image when rendered. When clicked, the hyperlink opens the client’s default browser and navigates to the target URL.  
+ Hyperlinks that appear in text boxes are rendered as Excel hyperlinks in the cell in which the text is rendered. Hyperlinks for images and charts are rendered as Excel hyperlinks on the image when rendered. When clicked, the hyperlink opens the client's default browser and navigates to the target URL.  
   
 ### Interactive Sorting  
  Excel does not support interactive sort.  

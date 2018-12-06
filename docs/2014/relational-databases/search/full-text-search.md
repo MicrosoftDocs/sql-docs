@@ -4,14 +4,11 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: search
-ms.tgt_pltfrm: ""
+ms.technology:
 ms.topic: conceptual
 helpviewer_keywords: 
   - "full-text search [SQL Server]"
 ms.assetid: a0ce315d-f96d-4e5d-b4eb-ff76811cab75
-caps.latest.revision: 47
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
@@ -25,7 +22,7 @@ manager: craigg
 >  Full-text search is an optional component of the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Database Engine. For more information, see [Install SQL Server 2014](../../database-engine/install-windows/install-sql-server.md).  
   
 ##  <a name="benefits"></a> What Can I Do with Full-Text Search?  
- Full-text search is applicable to a wide range of business scenarios such as e-businesses—searching for items on a web site; law firms—searching for case histories in a legal-data repository; or human resources departments—matching job descriptions with stored resumes. The basic administrative and development tasks of full-text search are equivalent regardless of business scenarios. However, in a given business scenario, full-text index and queries can be honed to meet business goals. For example, for an e-business maximizing performance might be more important than ranking of results, recall accuracy (how many of the existing matches are actually returned by a full-text query), or supporting multiple languages. For a law firm, returning every possible hit (*total recall* of information) might be the most important consideration.  
+ Full-text search is applicable to a wide range of business scenarios such as e-businesses-searching for items on a web site; law firms-searching for case histories in a legal-data repository; or human resources departments-matching job descriptions with stored resumes. The basic administrative and development tasks of full-text search are equivalent regardless of business scenarios. However, in a given business scenario, full-text index and queries can be honed to meet business goals. For example, for an e-business maximizing performance might be more important than ranking of results, recall accuracy (how many of the existing matches are actually returned by a full-text query), or supporting multiple languages. For a law firm, returning every possible hit (*total recall* of information) might be the most important consideration.  
   
  [In This Topic](#top)  
   
@@ -48,7 +45,7 @@ manager: craigg
   
  Full-text queries use a small set of [!INCLUDE[tsql](../../../includes/tsql-md.md)] predicates (CONTAINS and FREETEXT) and functions (CONTAINSTABLE and FREETEXTTABLE). However, the search goals of a given business scenario influence the structure of the full-text queries. For example:  
   
--   e-business—searching for a product on a website:  
+-   e-business-searching for a product on a website:  
   
     ```  
     SELECT product_id   
@@ -59,7 +56,7 @@ manager: craigg
     AND product_cost < 200 ;  
     ```  
   
--   Recruitment scenario—searching for job candidates that have experience working with [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]:  
+-   Recruitment scenario-searching for job candidates that have experience working with [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]:  
   
     ```  
     SELECT candidate_name,SSN   

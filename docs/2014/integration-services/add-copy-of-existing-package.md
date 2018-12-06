@@ -4,17 +4,13 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.dts.designer.addcopyexistingpackage.f1"
 helpviewer_keywords: 
   - "Add Copy of Existing Package dialog box"
 ms.assetid: ed530b0d-438d-4c93-8e91-13f2b2b6a8b2
-caps.latest.revision: 12
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
@@ -39,7 +35,7 @@ manager: craigg
  If using [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Authentication, provide a password.  
   
  **Package path**  
- Type the package path, or click the browse button **(…)** and locate the package to copy.  
+ Type the package path, or click the browse button **(...)** and locate the package to copy.  
   
 ## See Also  
  [Save Copy of Package](../../2014/integration-services/save-copy-of-package.md)   

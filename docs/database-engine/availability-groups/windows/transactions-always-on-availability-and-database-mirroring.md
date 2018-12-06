@@ -4,9 +4,7 @@ ms.custom: ""
 ms.date: "05/22/2018"
 ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: high-availability
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "database mirroring [SQL Server], interoperability"
@@ -15,7 +13,6 @@ helpviewer_keywords:
   - "Availability Groups [SQL Server], interoperability"
   - "troubleshooting [SQL Server], cross-database transactions"
 ms.assetid: 9f7ed895-ad65-43e3-ba08-00d7bff1456d
-caps.latest.revision: 33
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
@@ -38,9 +35,9 @@ To configure an availability group for distributed transactions, see [Configure 
 
 See more information at:
 
-- [DTC Administration Guide](http://msdn.microsoft.com/library/ms681291.aspx)
-- [DTC Developers Guide](http://msdn.microsoft.com/library/ms679938.aspx)
-- [DTC Programmers Reference](http://msdn.microsoft.com/library/ms686108.aspx)
+- [DTC Administration Guide](https://msdn.microsoft.com/library/ms681291.aspx)
+- [DTC Developers Guide](https://msdn.microsoft.com/library/ms679938.aspx)
+- [DTC Programmers Reference](https://msdn.microsoft.com/library/ms686108.aspx)
 
 ## SQL Server 2016 SP1 and before: Support for cross-database transactions within the same SQL Server instance  
 
@@ -57,7 +54,7 @@ SQL Server 2016 introduces the capability to use distributed transactions where 
   
  The following requirements must be met:  
   
--   Availability groups must be running on Windows Server 2012 R2 or later. For Windows Server 2012 R2, you must install the update in KB3090973 available at [https://support.microsoft.com/en-us/kb/3090973](https://support.microsoft.com/en-us/kb/3090973).  
+-   Availability groups must be running on Windows Server 2012 R2 or later. For Windows Server 2012 R2, you must install the update in KB3090973 available at [https://support.microsoft.com/kb/3090973](https://support.microsoft.com/kb/3090973).  
   
 -   Availability groups must be created with the **CREATE AVAILABILITY GROUP** command and the **WITH DTC\_SUPPORT = PER_DB** clause. You cannot currently alter an existing availability group.  
 

@@ -5,12 +5,8 @@ ms.date: "08/20/2018"
 ms.prod: sql
 ms.prod_service: "integration-services"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: integration-services
-ms.tgt_pltfrm: ""
 ms.topic: quickstart
-applies_to: 
-  - "SQL Server 2016"
 helpviewer_keywords: 
   - "SSIS, tutorials"
   - "packages [Integration Services], tutorials"
@@ -19,14 +15,11 @@ helpviewer_keywords:
   - "logs [Integration Services], tutorials"
   - "walkthroughs [Integration Services]"
 ms.assetid: d6d5bb1f-4cb1-4605-9cd6-f60b858382c4
-caps.latest.revision: 38
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: craigg
 ---
 # SSIS How to Create an ETL Package
-
- > For content related to previous versions of SQL Server, see [SSIS Tutorial: Creating a Simple ETL Package](ssis-how-to-create-an-etl-package.md).
 
 In this tutorial, you learn how to use [!INCLUDE[ssIS](../includes/ssis-md.md)] Designer to create a simple [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] package. The package that you create takes data from a flat file, reformats the data, and then inserts the reformatted data into a fact table. In following lessons, the package is expanded to demonstrate looping, package configurations, logging, and error flow.  
   

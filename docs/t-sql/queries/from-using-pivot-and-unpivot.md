@@ -5,9 +5,7 @@ ms.date: "03/16/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "PIVOT_TSQL"
@@ -23,7 +21,6 @@ helpviewer_keywords:
   - "FROM clause, PIVOT operator"
   - "rotating columns"
 ms.assetid: 24ba54fc-98f7-4d35-8881-b5158aac1d66
-caps.latest.revision: 35
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: craigg
@@ -66,7 +63,7 @@ The column identifiers in the `UNPIVOT` clause follow the catalog collation. For
 ## Basic PIVOT Example  
  The following code example produces a two-column table that has four rows.  
   
-```  
+```sql
 USE AdventureWorks2014 ;  
 GO  
 SELECT DaysToManufacture, AVG(StandardCost) AS AverageCost   
@@ -90,7 +87,7 @@ GROUP BY DaysToManufacture;
   
  The following code displays the same result, pivoted so that the `DaysToManufacture` values become the column headings. A column is provided for three `[3]` days, even though the results are `NULL`.  
   
-```  
+```sql
 -- Pivot table with one row and five columns  
 SELECT 'AverageCost' AS Cost_Sorted_By_Production_Days,   
 [0], [1], [2], [3], [4]  
@@ -116,7 +113,7 @@ AverageCost                    5.0885      223.88      359.1082    NULL        9
 ## Complex PIVOT Example  
  A common scenario where `PIVOT` can be useful is when you want to generate cross-tabulation reports to summarize data. For example, suppose you want to query the `PurchaseOrderHeader` table in the `AdventureWorks2014` sample database to determine the number of purchase orders placed by certain employees. The following query provides this report, ordered by vendor.  
   
-```  
+```sql
 USE AdventureWorks2014;  
 GO  
 SELECT VendorID, [250] AS Emp1, [251] AS Emp2, [256] AS Emp3, [257] AS Emp4, [260] AS Emp5  
@@ -146,7 +143,7 @@ VendorID    Emp1        Emp2        Emp3        Emp4        Emp5
   
  The results returned by this subselect statement are pivoted on the `EmployeeID` column.  
   
-```  
+```sql
 SELECT PurchaseOrderID, EmployeeID, VendorID  
 FROM PurchaseOrderHeader;  
 ```  
@@ -158,7 +155,7 @@ FROM PurchaseOrderHeader;
   
  `UNPIVOT` performs almost the reverse operation of `PIVOT`, by rotating columns into rows. Suppose the table produced in the previous example is stored in the database as `pvt`, and you want to rotate the column identifiers `Emp1`, `Emp2`, `Emp3`, `Emp4`, and `Emp5` into row values that correspond to a particular vendor. This means that you must identify two additional columns. The column that will contain the column values that you are rotating (`Emp1`, `Emp2`,...) will be called `Employee`, and the column that will hold the values that currently reside under the columns being rotated will be called `Orders`. These columns correspond to the *pivot_column* and *value_column*, respectively, in the [!INCLUDE[tsql](../../includes/tsql-md.md)] definition. Here is the query.  
   
-```  
+```sql
 -- Create the table and insert values as portrayed in the previous example.  
 CREATE TABLE pvt (VendorID int, Emp1 int, Emp2 int,  
     Emp3 int, Emp4 int, Emp5 int);  

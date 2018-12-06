@@ -4,10 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: install
 ms.topic: conceptual
 helpviewer_keywords: 
   - "installing SQL Server, command prompt"
@@ -84,7 +81,6 @@ helpviewer_keywords:
   - "nodes [Faillover Clustering], command prompt"
   - "INSTALLSQLSHAREDDIR parameter"
 ms.assetid: df40c888-691c-4962-a420-78a57852364d
-caps.latest.revision: 223
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
@@ -140,7 +136,7 @@ manager: craigg
   
 -   /INSTANCEDIR=c:\Path is supported.  
   
--   /INSTANCEDIR=”c:\Path” is supported  
+-   /INSTANCEDIR="c:\Path" is supported  
   
 > [!NOTE]  
 >  -   The relational server values support the additional terminating backslash formats (backslash or two backslash characters) for the path.  
@@ -723,7 +719,7 @@ setup.exe /q /ACTION=CompleteFailoverCluster /InstanceName="<Insert Instance Nam
  To add a node to an existing failover cluster instance with the [!INCLUDE[ssDE](../../includes/ssde-md.md)] and [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  
   
 ```  
-setup.exe /q /ACTION=AddNode /INSTANCENAME="<Insert Instance Name>" /SQLSVCACCOUNT="<SQL account that is used on other nodes>" /SQLSVCPASSWORD="<password for SQL account>" /AGTSVCACCOUNT="<SQL Server Agent account that is used on other nodes>", /AGTSVCPASSWORD="<SQL Server Agent account password>" /ASSVCACCOUNT="<AS account that is used on other nodes>" /ASSVCPASSWORD=”<password for AS account>” /INDICATEPROGRESS /IACCEPTSQLSERVERLICENSETERMS /FAILOVERCLUSTERIPADDRESSES="IPv4;xx.xxx.xx.xx;ClusterNetwork1;xxx.xxx.xxx.x" /CONFIRMIPDEPENDENCYCHANGE=0  
+setup.exe /q /ACTION=AddNode /INSTANCENAME="<Insert Instance Name>" /SQLSVCACCOUNT="<SQL account that is used on other nodes>" /SQLSVCPASSWORD="<password for SQL account>" /AGTSVCACCOUNT="<SQL Server Agent account that is used on other nodes>", /AGTSVCPASSWORD="<SQL Server Agent account password>" /ASSVCACCOUNT="<AS account that is used on other nodes>" /ASSVCPASSWORD="<password for AS account>" /INDICATEPROGRESS /IACCEPTSQLSERVERLICENSETERMS /FAILOVERCLUSTERIPADDRESSES="IPv4;xx.xxx.xx.xx;ClusterNetwork1;xxx.xxx.xxx.x" /CONFIRMIPDEPENDENCYCHANGE=0  
 ```  
   
 #### Remove Node Parameters  
@@ -784,8 +780,8 @@ setup.exe /q /ACTION=RemoveNode /INSTANCENAME="<Insert Instance Name>" [/INDICAT
 ||BC|Installs backward compatibility components.|  
 ||BOL|Installs [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Books Online components to view and manage help content.|  
 ||Conn|Installs connectivity components.|  
-||SSMS|Installs [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Tools – Basic. This includes the following:<br /><br /> [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] support for the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)], **sqlcmd** utility, and the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell provider|  
-||ADV_SSMS|Installs [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Tools – Complete. This includes the following components in addition to the components in the Basic version:<br /><br /> [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] support for [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], and [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]<br /><br /> [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]<br /><br /> [!INCLUDE[ssDE](../../includes/ssde-md.md)] Tuning Advisor<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Utility management|  
+||SSMS|Installs [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Tools - Basic. This includes the following:<br /><br /> [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] support for the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)], **sqlcmd** utility, and the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell provider|  
+||ADV_SSMS|Installs [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Tools - Complete. This includes the following components in addition to the components in the Basic version:<br /><br /> [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] support for [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], and [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]<br /><br /> [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]<br /><br /> [!INCLUDE[ssDE](../../includes/ssde-md.md)] Tuning Advisor<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Utility management|  
 ||DREPLAY_CTLR|Installs Distributed Replay controller|  
 ||DREPLAY_CLT|Installs Distributed Replay client|  
 ||SNAC_SDK|Installs SDK for [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client|  
@@ -808,7 +804,7 @@ setup.exe /q /ACTION=RemoveNode /INSTANCENAME="<Insert Instance Name>" [/INDICAT
   
  The AllFeatures_WithDefaults role is the default behavior for editions of [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] and reduces the number of dialog boxes presented to the user. It can be specified from the command line when installing a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] edition that is not [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)].  
   
-|Role|Description|Installs…|  
+|Role|Description|Installs...|  
 |----------|-----------------|---------------|  
 |SPI_AS_ExistingFarm|Installs [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] as a [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] named instance on an existing [!INCLUDE[SPS2010](../../includes/sps2010-md.md)] farm or standalone server.|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] calculation engine, preconfigured for in-memory data storage and processing.<br /><br /> [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] solution packages<br /><br /> Installer program for the [!INCLUDE[ssGeminiClient](../../includes/ssgeminiclient-md.md)]<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Books Online|  
 |SPI_AS_NewFarm|Installs [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] and [!INCLUDE[ssDE](../../includes/ssde-md.md)] as a [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] named instance on a new, un-configured Office [!INCLUDE[SPS2010](../../includes/sps2010-md.md)] farm or standalone server. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Setup will configure the farm during feature role installation.|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] calculation engine, preconfigured for in-memory data storage and processing.<br /><br /> [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] solution packages<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Books Online<br /><br /> [!INCLUDE[ssDE](../../includes/ssde-md.md)]<br /><br /> Configuration Tools<br /><br /> [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]|  

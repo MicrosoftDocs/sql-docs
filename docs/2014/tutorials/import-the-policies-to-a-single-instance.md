@@ -4,13 +4,10 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "database-engine"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: bc5bcd87-663f-41d9-bb7b-b3e083cd63df
-caps.latest.revision: 8
 author: craigg-msft
 ms.author: craigg
 manager: craigg
@@ -29,7 +26,7 @@ manager: craigg
   
 3.  Right-click **Policies**, and then click **Import Policy**.  
   
-4.  In the **Import** dialog box, next to the **Files to import** box, click the ellipsis (**…**) button.  
+4.  In the **Import** dialog box, next to the **Files to import** box, click the ellipsis (**...**) button.  
   
 5.  In the **Look in** list, browse to the following folder, which contains the best practices policies:  
   

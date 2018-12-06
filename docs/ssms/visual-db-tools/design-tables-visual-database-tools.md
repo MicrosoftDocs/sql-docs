@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "08/25/2017"
 ms.prod: sql
 ms.prod_service: "sql-tools"
-ms.component: "ssms-visual-db"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: ssms
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Visual Database Tools [SQL Server], Table Designer"
@@ -18,7 +15,6 @@ helpviewer_keywords:
   - "tables [SQL Server], opening"
   - "Table Designer, opening"
 ms.assetid: c49e0155-5dcb-481f-9538-e1bde77105e2
-caps.latest.revision: 3
 author: "stevestein"
 ms.author: "sstein"
 manager: craigg
@@ -63,3 +59,4 @@ The Table Designer is a visual tool where you design and visualize [database tab
 [Indexes](../../relational-databases/indexes/indexes.md)  
 [Data types (Transact-SQL)](../../t-sql/data-types/data-types-transact-sql.md)  
 [Download SQL Server Management Studio (SSMS)](../download-sql-server-management-studio-ssms.md)  
+[Create a database and add tables in Visual Studio](/visualstudio/data-tools/create-a-sql-database-by-using-a-designer)

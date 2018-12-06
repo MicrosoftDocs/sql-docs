@@ -3,10 +3,8 @@ title: "SQL Server Native Client | Microsoft Docs"
 ms.date: "04/14/2017"
 ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
 ms.custom: ""
 ms.technology: native-client
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: e4d4fe39-0090-42a7-8405-6378370d11cb
 author: MightyPen
@@ -41,13 +39,13 @@ For more information on ODBC Driver for SQL Server, see [Microsoft ODBC Driver f
 
 ODBC in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client supports three features that were added to standard ODBC in the Windows 7 SDK:  
 
--   Asynchronous execution on connection-related operations. For more information, see [Asynchronous Execution](http://go.microsoft.com/fwlink/?LinkID=191493).  
+-   Asynchronous execution on connection-related operations. For more information, see [Asynchronous Execution](https://go.microsoft.com/fwlink/?LinkID=191493).  
 
--   C Data Type Extensibility. For more information, see [C Data Types in ODBC](http://go.microsoft.com/fwlink/?LinkID=191495).  
+-   C Data Type Extensibility. For more information, see [C Data Types in ODBC](https://go.microsoft.com/fwlink/?LinkID=191495).  
 
      To support this feature in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client, SQLGetDescField can return **SQL_C_SS_TIME2** (for **time** types) or **SQL_C_SS_TIMESTAMPOFFSET** (for **datetimeoffset**) instead of **SQL_C_BINARY**, if your application uses ODBC 3.8. For more information, see [Data Type Support for ODBC Date and Time Improvements](../../relational-databases/native-client-odbc-date-time/data-type-support-for-odbc-date-and-time-improvements.md).  
 
--   Calling **SQLGetData** with a small buffer multiple times to retrieve a large parameter value. For more information, see [Retrieving Output Parameters Using SQLGetData](http://go.microsoft.com/fwlink/?LinkID=191494).  
+-   Calling **SQLGetData** with a small buffer multiple times to retrieve a large parameter value. For more information, see [Retrieving Output Parameters Using SQLGetData](https://go.microsoft.com/fwlink/?LinkID=191494).  
 
  The following topics describe [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client behavior changes in [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)].  
 

@@ -4,12 +4,9 @@ ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
 ms.technology: report-server-web-service
-ms.suite: pro-bi
 
 
 ms.topic: reference
-applies_to: 
-  - "SQL Server 2016 Preview"
 helpviewer_keywords: 
   - "XML Web service [Reporting Services], WSDL"
   - "Web service [Reporting Services], SOAP"
@@ -43,7 +40,7 @@ ms.author: maghan
  The following example shows the format of the URL to the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] management WSDL file:  
   
 ```  
-http://server/reportserver/ReportService2010.asmx?wsdl  
+https://server/reportserver/ReportService2010.asmx?wsdl  
 ```  
   
  The following table describes each element in the URL.  
@@ -54,7 +51,7 @@ http://server/reportserver/ReportService2010.asmx?wsdl
 |*reportserver*|The name of the folder that contains the XML Web service. This is configured during setup.|  
 |*\<endpoint name>.asmx*|The name of the web service endpoint.|  
   
- For more information about the WSDL format, see the World Wide Web Consortium (W3C) WSDL specification at http://www.w3.org/TR/wsdl.  
+ For more information about the WSDL format, see the World Wide Web Consortium (W3C) WSDL specification at https://www.w3.org/TR/wsdl.  
   
 ## See Also  
  [Building Applications Using the Web Service and the .NET Framework](../../reporting-services/report-server-web-service/net-framework/building-applications-using-the-web-service-and-the-net-framework.md)   

@@ -4,18 +4,14 @@ ms.custom: ""
 ms.date: "03/04/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "replication"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: replication
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "bidirectional replication"
   - "transactional replication, bidirectional replication"
   - "bidirectional transactional replication"
 ms.assetid: 98772e95-67ed-4010-8108-5113dbe709ff
-caps.latest.revision: 27
 author: "MashaMSFT"
 ms.author: "mathoma"
 manager: craigg

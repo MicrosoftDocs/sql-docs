@@ -4,10 +4,8 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "MINIMUM_ITEMSET_SIZE parameter"
@@ -20,7 +18,6 @@ helpviewer_keywords:
   - "MAXIMUM_ITEMSET_SIZE parameter"
   - "MINIMUM_PROBABILITY parameter"
 ms.assetid: 50a22202-e936-4995-ae1d-4ff974002e88
-caps.latest.revision: 24
 author: minewiskan
 ms.author: owend
 manager: craigg
@@ -71,10 +68,10 @@ manager: craigg
  The [!INCLUDE[msCoName](../../includes/msconame-md.md)] Association Rules algorithm supports several parameters that affect the behavior, performance, and accuracy of the resulting mining model.  
   
 ### Setting Algorithm Parameters  
- You can change the parameters for a mining model at any time by using the Data Mining Designer in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. You can also change parameters programmatically by using the <xref:Microsoft.AnalysisServices.MiningModel.AlgorithmParameters%2A> collection in AMO, or by using the [MiningModels Element &#40;ASSL&#41;](../scripting/collections/miningmodels-element-assl.md) in XMLA. The following table describes each parameter.  
+ You can change the parameters for a mining model at any time by using the Data Mining Designer in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. You can also change parameters programmatically by using the <xref:Microsoft.AnalysisServices.MiningModel.AlgorithmParameters%2A> collection in AMO, or by using the [MiningModels Element &#40;ASSL&#41;](https://docs.microsoft.com/bi-reference/assl/collections/miningmodels-element-assl) in XMLA. The following table describes each parameter.  
   
 > [!NOTE]  
->  You cannot change the parameters in an existing model by using a DMX statement; you must specify the parameters in the DMX CREATE MODEL or ALTER STRUCTURE… ADD MODEL when you create the model.  
+>  You cannot change the parameters in an existing model by using a DMX statement; you must specify the parameters in the DMX CREATE MODEL or ALTER STRUCTURE... ADD MODEL when you create the model.  
   
  *MAXIMUM_ITEMSET_COUNT*  
  Specifies the maximum number of itemsets to produce. If no number is specified, the default value is used.  

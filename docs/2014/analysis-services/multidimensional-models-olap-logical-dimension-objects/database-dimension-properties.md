@@ -4,18 +4,15 @@ ms.custom: ""
 ms.date: "03/08/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
   - "docset-sql-devref"
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 
   - "metadata [Analysis Services]"
   - "dimensions [Analysis Services], characteristics"
   - "properties [Analysis Services], dimensions"
 ms.assetid: 075548ef-08a3-413c-8ee0-4a074c276fcc
-caps.latest.revision: 36
 author: minewiskan
 ms.author: owend
 manager: craigg

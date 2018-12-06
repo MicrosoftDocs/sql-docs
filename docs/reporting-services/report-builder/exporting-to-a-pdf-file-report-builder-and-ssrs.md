@@ -4,7 +4,6 @@ ms.date: 10/21/2016
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
 ms.technology: report-builder
-ms.suite: pro-bi
 
 
 ms.topic: conceptual
@@ -91,7 +90,7 @@ ms.author: maggies
  To preserve any compression for images included in the PDF file when possible, JPEG images are stored as JPEG and all other image types are stored as BMP.  
   
 > [!NOTE]  
->  PDF files don’t support embedding PNG images.  
+>  PDF files don't support embedding PNG images.  
   
   
 ##  <a name="DeviceInfo"></a> Device Information Settings  

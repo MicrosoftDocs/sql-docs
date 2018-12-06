@@ -4,13 +4,10 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: 31aeb271-47a1-433b-a8a5-120bcb4584d7
-caps.latest.revision: 14
 author: minewiskan
 ms.author: owend
 manager: craigg
@@ -26,7 +23,7 @@ manager: craigg
  This lesson contains the following tasks:  
   
  [Defining a Referenced Relationship](lesson-5-1-defining-a-referenced-relationship.md)  
- In this task, you learn to link a dimension to a fact table indirectly through a dimension that is linked directly through a primary key–foreign key relationship.  
+ In this task, you learn to link a dimension to a fact table indirectly through a dimension that is linked directly through a primary key-foreign key relationship.  
   
  [Defining a Fact Relationship](lesson-5-2-defining-a-fact-relationship.md)  
  In this task, you learn to define a dimension based on data in the fact table, and to define the dimension relationship as a fact relationship.  

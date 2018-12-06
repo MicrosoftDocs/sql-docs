@@ -4,13 +4,10 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: 987eff0f-bcfe-4bbd-81e0-9aca993a2a75
-caps.latest.revision: 7
 author: minewiskan
 ms.author: owend
 manager: craigg
@@ -121,7 +118,7 @@ manager: craigg
   
  For this reason, you must grant the account read-only permissions on all of the external data sources that are used during data refresh.  
   
- If you are an administrator of the data sources used in your organization, you can create a login and assign the necessary permissions. Otherwise, you must contact the data owners and provide the account information. Be sure to specify the Windows domain user account that maps to the target application. This is the account you specified in “Step 1: Create a target application” in this topic.  
+ If you are an administrator of the data sources used in your organization, you can create a login and assign the necessary permissions. Otherwise, you must contact the data owners and provide the account information. Be sure to specify the Windows domain user account that maps to the target application. This is the account you specified in "Step 1: Create a target application" in this topic.  
   
 ###  <a name="bkmk_verify"></a> Step 4: Verify account availability in data refresh configuration pages  
   
@@ -142,7 +139,7 @@ manager: craigg
   
  This step is only necessary if you want to provide users with an option of overriding the database credentials that are already embedded in the PowerPivot workbook.  
   
- This step only works if the connection string already includes a user name and password. Note that having credentials in the connection string is relatively uncommon, so your ability to make use of this option is somewhat limited. In most cases, you will only have a user ID and password in the connection string if you are using database authentication to connect to the data source. For more information about how to check the connection string to see if it includes a User ID and password, see the “Grant permissions to create schedules and access external data” section in [PowerPivot Data Refresh with SharePoint 2010](powerpivot-data-refresh-with-sharepoint-2010.md).  
+ This step only works if the connection string already includes a user name and password. Note that having credentials in the connection string is relatively uncommon, so your ability to make use of this option is somewhat limited. In most cases, you will only have a user ID and password in the connection string if you are using database authentication to connect to the data source. For more information about how to check the connection string to see if it includes a User ID and password, see the "Grant permissions to create schedules and access external data" section in [PowerPivot Data Refresh with SharePoint 2010](powerpivot-data-refresh-with-sharepoint-2010.md).  
   
 1.  In Central Administration, in Application Management, click **Manage service applications**.  
   

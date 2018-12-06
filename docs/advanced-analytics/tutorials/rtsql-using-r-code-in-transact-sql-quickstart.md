@@ -1,10 +1,10 @@
 ---
 title: Quickstart for a "Hello World" basic R code execution in T-SQL (SQL Server Machine Learning) | Microsoft Docs
-description: In this quickstart for R script in SQL Server, learn the basics of the sp_execute_external_script system stored procedure with a hello-world exercise.
+description: Quickstart for R script in SQL Server. Learn the basics of calling R script using the sp_execute_external_script system stored procedure in a hello-world exercise.
 ms.prod: sql
 ms.technology: machine-learning
 
-ms.date: 07/15/2018  
+ms.date: 10/08/2018  
 ms.topic: quickstart
 author: HeidiSteen
 ms.author: heidist
@@ -13,9 +13,14 @@ manager: cgronlun
 # Quickstart: "Hello world" R script in SQL Server 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-SQL Server includes R language feature support for in-database analytics on resident SQL Server data. You can use open-source R functions, third-party packages, and built-in Microsoft R packages for predictive analytics at scale.
+SQL Server includes R language support for data science analytics on resident SQL Server data. Your R script can consist of open-source R functions, third-party R libraries, or built-in Microsoft R libraries such as [RevoScaleR](../r/ref-r-revoscaler.md) for predictive analytics at scale. 
 
-In this quickstart, you learn key concepts by running a "Hello World" R script inT-SQL, with an introduction to the **sp_execute_external_script** system stored procedure. R script execution is through stored procedures. You can either use the [sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql) stored procedure and pass R script in as an input parameter as demonstrated in this quickstart, or wrap R script in a [custom stored procedure](sqldev-in-database-r-for-sql-developers.md). 
+Script execution is through stored procedures, using either of the following approaches:
+
++ Built-in [sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql) stored procedure, passing R script in as an input parameter.
++ Wrap R script in a [custom stored procedure](sqldev-in-database-r-for-sql-developers.md) that you create.
+
+In this quickstart, you learn key concepts by running a "Hello World" R script inT-SQL, with an introduction to the **sp_execute_external_script** system stored procedure. 
 
 ## Prerequisites
 
@@ -28,7 +33,7 @@ This exercise requires access to an instance of SQL Server with one of the follo
 
 + A tool for running SQL queries. You can use any application that can connect to a SQL Server database and run T-SQL code. SQL professionals can use SQL Server Management Studio (SSMS) or Visual Studio.
 
-For this tutorial, to show how easy it is to run R inside SQL Server, we've used the new **mssql extension for Visual Studio Code**. VS Code is a free development environment that can run on Linux, macOS, or Windows. The **mssql** extension is a lightweight extension for running T-SQL queries. To get Visual Studio Code, see [Download and install Visual Studio Code](https://code.visualstudio.com/Download). To add the **mssql** extension, see this article: [Use the mssql extension for Visual Studio Code](https://docs.microsoft.com/sql/linux/sql-server-linux-develop-use-vscode).
+For this quickstart, to show how easy it is to run R inside SQL Server, we've used the new **mssql extension for Visual Studio Code**. VS Code is a free development environment that can run on Linux, macOS, or Windows. The **mssql** extension is a lightweight extension for running T-SQL queries. To get Visual Studio Code, see [Download and install Visual Studio Code](https://code.visualstudio.com/Download). To add the **mssql** extension, see this article: [Use the mssql extension for Visual Studio Code](https://docs.microsoft.com/sql/linux/sql-server-linux-develop-use-vscode).
 
 ## Connect to a database and run a Hello World test script
 

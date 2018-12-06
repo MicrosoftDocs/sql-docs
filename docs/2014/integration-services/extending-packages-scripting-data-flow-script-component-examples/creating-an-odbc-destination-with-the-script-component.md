@@ -4,11 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "docset-sql-devref"
-  - "integration-services"
-ms.tgt_pltfrm: ""
+ms.technology: integration-services
 ms.topic: "reference"
 helpviewer_keywords: 
   - "Script component [Integration Services], destination components"
@@ -16,7 +12,6 @@ helpviewer_keywords:
   - "destinations [Integration Services], components"
   - "Script component [Integration Services], examples"
 ms.assetid: d198c866-78f4-4a50-ae15-333160645815
-caps.latest.revision: 41
 author: douglaslMS
 ms.author: douglasl
 manager: craigg

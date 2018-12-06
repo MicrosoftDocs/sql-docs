@@ -4,7 +4,6 @@ ms.date: 08/31/2018
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
 ms.technology: reporting-services
-ms.suite: ""
 
 ms.topic: conceptual
 author: "casualoak"
@@ -18,6 +17,12 @@ monikerRange: ">= sql-server-2017 || = sqlallproducts-allversions"
 This article describes changes in [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]. 
 
 ## SQL Server 2017 Reporting Services 
+
+### Version 14.0.600.906, Released: September 12, 2018
+
+This bug has been fixed:
+
+- Custom Authentication not returning correct cookie information
 
 ### Version 14.0.600.892, Released: August 31, 2018
 
@@ -72,4 +77,4 @@ Initial release
 
 [What's New in Reporting Services (SSRS)](what-s-new-in-sql-server-reporting-services-ssrs.md)   
 
-More questions? [Try asking the Reporting Services forum](http://go.microsoft.com/fwlink/?LinkId=620231)
+More questions? [Try asking the Reporting Services forum](https://go.microsoft.com/fwlink/?LinkId=620231)

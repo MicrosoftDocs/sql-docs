@@ -4,11 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "docset-sql-devref"
-  - "integration-services"
-ms.tgt_pltfrm: ""
+ms.technology: integration-services
 ms.topic: "reference"
 helpviewer_keywords: 
   - "flat files"
@@ -16,7 +12,6 @@ helpviewer_keywords:
   - "SSIS Script task, empty flat files"
   - "Script task [Integration Services], examples"
 ms.assetid: 1b4defb8-886a-483d-8056-d1b91d37bc90
-caps.latest.revision: 31
 author: douglaslMS
 ms.author: douglasl
 manager: craigg

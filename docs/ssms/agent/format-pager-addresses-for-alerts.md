@@ -1,14 +1,11 @@
-﻿---
+---
 title: "Format Pager Addresses for Alerts | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: "sql-tools"
-ms.component: "ssms-agent"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: ssms
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "pager addresses [SQL Server]"
@@ -18,7 +15,6 @@ helpviewer_keywords:
   - "addresses [SQL Server]"
   - "alerts [SQL Server], pager addresses"
 ms.assetid: a9797d01-1050-442c-9038-ed4bfee1e76a
-caps.latest.revision: 4
 author: "stevestein"
 ms.author: "sstein"
 manager: craigg

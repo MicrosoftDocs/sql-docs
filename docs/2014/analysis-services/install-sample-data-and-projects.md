@@ -4,13 +4,10 @@ ms.custom: ""
 ms.date: "03/07/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: fc475b25-cbb2-408a-901f-9299299538c5
-caps.latest.revision: 13
 author: minewiskan
 ms.author: owend
 manager: craigg
@@ -37,7 +34,7 @@ manager: craigg
   
  Alternatively, you can browse data using the built-in MDX query designer that is built into [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]. The query designer returns the same data, except the data is presented as a flat rowset.  
   
-## Step 2: Download SQL Server Data Tools – Business Intelligence for Visual Studio 2012  
+## Step 2: Download SQL Server Data Tools - Business Intelligence for Visual Studio 2012  
  In this release, SQL Server Data Tools is downloaded and installed separately from other SQL Server features. The designers and project templates used to create BI models and reports are now available as a free web download.  
   
 -   [Download the Business Intelligence version of SQL Server Data Tools](http://go.microsoft.com/fwlink/p/?LinkID=322038). The file is saved to the Downloads folder. Run setup to install the tool.  
@@ -47,7 +44,7 @@ manager: craigg
 ## Step 3: Install Databases  
  An Analysis Services multidimensional model uses transactional data that you import from a relational database management system. For the purposes of this tutorial, you will use the following relational database as your data source.  
   
--   **AdventureWorksDW2012** – This is a relational data warehouse that runs on a Database Engine instance. It provides the original data that will be used by the Analysis Services databases and projects that you build and deploy throughout the tutorial.  
+-   **AdventureWorksDW2012** - This is a relational data warehouse that runs on a Database Engine instance. It provides the original data that will be used by the Analysis Services databases and projects that you build and deploy throughout the tutorial.  
   
      You can use this sample database with [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] as well as [!INCLUDE[ssSQL11](../includes/sssql11-md.md)].  
   
@@ -96,9 +93,9 @@ manager: craigg
   
      The 2012 tutorials are valid for the [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] release.  
   
-     The “Analysis Services Tutorial SQL Server 2012.zip” file will be saved to the Downloads folder on your computer.  
+     The "Analysis Services Tutorial SQL Server 2012.zip" file will be saved to the Downloads folder on your computer.  
   
-2.  Move the .zip file to a folder just below the root drive (for example, C:\Tutorial). This step mitigates the “Path too long” error that sometimes occurs if you attempt to unzip the files in the Downloads folder.  
+2.  Move the .zip file to a folder just below the root drive (for example, C:\Tutorial). This step mitigates the "Path too long" error that sometimes occurs if you attempt to unzip the files in the Downloads folder.  
   
 3.  Unzip the sample projects: right-click on the file and select **Extract All**. After you extract the files, you should have the following projects installed on your computer:  
   

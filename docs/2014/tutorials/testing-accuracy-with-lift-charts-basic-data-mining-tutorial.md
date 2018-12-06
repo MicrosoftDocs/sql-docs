@@ -4,13 +4,10 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: 822d414b-4a39-473f-80c3-53476e30655a
-caps.latest.revision: 48
 author: minewiskan
 ms.author: owend
 manager: craigg
@@ -44,7 +41,7 @@ manager: craigg
   
      To use a column as the **Predictable Column Name** in an accuracy chart, the columns must have the usage type of `Predict` or `Predict Only`. Also, the content type of the target column must be either `Discrete` or `Discretized`. In other words, you cannot measure accuracy against continuous numeric outputs using the lift chart.  
   
--   Do you want to measure the model’s general accuracy, or its accuracy  in predicting a particular value (such as [Bike Buyer] = ‘Yes’)  
+-   Do you want to measure the model's general accuracy, or its accuracy  in predicting a particular value (such as [Bike Buyer] = 'Yes')  
   
 #### To generate the lift chart  
   

@@ -5,10 +5,7 @@ ms.date: "02/14/2017"
 ms.prod: sql
 ms.prod_service: "mds"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "master-data-services"
-ms.tgt_pltfrm: ""
+ms.technology: master-data-services
 ms.topic: conceptual
 keywords: 
   - "what is master data"
@@ -16,7 +13,6 @@ helpviewer_keywords:
   - "Master Data Services, overview"
   - "Master Data Services"
 ms.assetid: 8a4c28b1-6061-4850-80b6-132438b8c156
-caps.latest.revision: 28
 author: leolimsft
 ms.author: lle
 manager: craigg

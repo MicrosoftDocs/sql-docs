@@ -4,12 +4,8 @@ ms.custom: ""
 ms.date: "05/02/2016"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "system-stored-procedures"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
+ms.technology: replication
 ms.topic: "language-reference"
 f1_keywords: 
   - "sp_dropmergearticle"
@@ -17,7 +13,6 @@ f1_keywords:
 helpviewer_keywords: 
   - "sp_dropmergearticle"
 ms.assetid: 5ef1fbf7-c03d-4488-9ab2-64aae296fa4f
-caps.latest.revision: 34
 author: stevestein
 ms.author: sstein
 manager: craigg

@@ -4,10 +4,8 @@ ms.custom: ""
 ms.date: "03/09/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "hierarchies [Analysis Services], adding"
@@ -16,7 +14,6 @@ helpviewer_keywords:
   - "deleting hierarchies"
   - "hierarchies [Analysis Services], removing"
 ms.assetid: 953818b4-9543-4c01-bb20-1d45ec6dfb91
-caps.latest.revision: 50
 author: minewiskan
 ms.author: owend
 manager: craigg
@@ -51,11 +48,11 @@ manager: craigg
   
 -   On the **Dimension Structure** tab, click the user-defined hierarchy that you want to remove in the **Hierarchies** pane. On the toolbar, click **Delete**.  
   
-     — or —  
+     - or -  
   
 -   Right-click the user-defined hierarchy that you want to remove in the **Hierarchies** pane and then click **Delete**.  
   
-     — or —  
+     - or -  
   
 -   Drag the user-defined hierarchy off of the design surface.  
   

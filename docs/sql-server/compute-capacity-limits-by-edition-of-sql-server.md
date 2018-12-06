@@ -1,12 +1,10 @@
 ---
 title: "Compute capacity limits by edition of SQL Server | Microsoft Docs"
 ms.custom: ""
-ms.date: "11/06/2017"
+ms.date: "11/07/2017"
 ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: install
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "processors [SQL Server], supported"
@@ -85,7 +83,7 @@ The following table specifies the compute capacity limits for a single instance 
   
 In a virtualized environment, the compute capacity limit is based on the number of logical processors, not cores. The reason is that the processor architecture is not visible to the guest applications. 
 
-For example, a server that has four sockets populated with quad-core processors and the ability to enable two hyperthreads per core contains 32 logical processors with hyperthreading enabled. But it contains only 16 logical processors with hyperthreading disabled. These logical processors can be mapped to virtual machines on the server. The virtual machines’ compute load on that logical processor is mapped to a thread of execution on the physical processor in the host server.  
+For example, a server that has four sockets populated with quad-core processors and the ability to enable two hyperthreads per core contains 32 logical processors with hyperthreading enabled. But it contains only 16 logical processors with hyperthreading disabled. These logical processors can be mapped to virtual machines on the server. The virtual machines' compute load on that logical processor is mapped to a thread of execution on the physical processor in the host server.  
   
 You might want to disable hyperthreading when the performance for each virtual processor is important. You can enable or disable hyperthreading by using a BIOS setting for the processor during the BIOS setup. But it's typically a server-scoped operation that will affect all workloads running on the server. This might suggest separating workloads that will run in virtualized environments from workloads that would benefit from the hyperthreading performance boost in a physical operating system environment.  
   
@@ -93,7 +91,7 @@ You might want to disable hyperthreading when the performance for each virtual p
  [Editions and components of SQL Server 2016](../sql-server/editions-and-components-of-sql-server-2016.md)   
  [Features supported by the editions of SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md)   
  [Maximum capacity specifications for SQL Server](../sql-server/maximum-capacity-specifications-for-sql-server.md)   
- [Quickstart installation of SQL Server 2016](http://msdn.microsoft.com/library/672afac9-364d-4946-ad5d-8a2d89cf8d81)  
+ [Quickstart installation of SQL Server 2016](https://msdn.microsoft.com/library/672afac9-364d-4946-ad5d-8a2d89cf8d81)  
 
 [!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]
 

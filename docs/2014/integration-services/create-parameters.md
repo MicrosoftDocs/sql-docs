@@ -4,15 +4,12 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "integration-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
-  - "sql12.dts.designer.paramterwindow.f1"
+  - "sql12.dts.designer.parameterwindow.f1"
 ms.assetid: cd5d675b-dd5d-49cc-8b1f-dc717a973f99
-caps.latest.revision: 13
 author: douglaslms
 ms.author: douglasl
 manager: craigg

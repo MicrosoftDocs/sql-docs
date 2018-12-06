@@ -4,14 +4,11 @@ ms.custom: ""
 ms.date: "09/25/2017"
 ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: high-availability
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
 - "Availability Groups [SQL Server], domain independent"
 ms.assetid: 
-caps.latest.revision: 
 author: "MashaMSFT"
 ms.author: mathoma
 manager: craigg
@@ -53,7 +50,7 @@ Deploying a Domain Independent Availability Group has some known caveats:
 
 ## Set and verify the DNS suffix on all replica servers
 
-A common DNS suffix is necessary for a Domain Independent Availability Group’s Workgroup Cluster. To set and verify the DNS suffix on each Windows Server that will host a replica for the availability group, follow these instructions:
+A common DNS suffix is necessary for a Domain Independent Availability Group's Workgroup Cluster. To set and verify the DNS suffix on each Windows Server that will host a replica for the availability group, follow these instructions:
 
 1. Using the Windows Key + X shortcut, select System.
 2. If the computer name and the full computer name are the same, the DNS suffix has not been set. For example, if the computer name is ALLAN, the value for the full computer name should not be just ALLAN. It should be something like ALLAN.SQLHA.LAB. SQLHA.LAB is the DNS suffix. The value for Workgroup should say WORKGROUP. If you need to set the DNS suffix, select Change Settings.

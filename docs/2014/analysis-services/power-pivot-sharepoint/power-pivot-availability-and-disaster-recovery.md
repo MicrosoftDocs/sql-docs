@@ -4,13 +4,10 @@ ms.custom: ""
 ms.date: "03/07/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: 4aaf008c-3bcb-4dbf-862c-65747d1a668c
-caps.latest.revision: 13
 author: minewiskan
 ms.author: owend
 manager: craigg
@@ -77,7 +74,7 @@ manager: craigg
   
 ||Comments|  
 |-|--------------|  
-|[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] and [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] synchronous mirroring in a farm for availability.|Supported but not recommended. The recommendation is to use AlwaysOn in Synchronous – commit mode.|  
+|[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] and [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] synchronous mirroring in a farm for availability.|Supported but not recommended. The recommendation is to use AlwaysOn in Synchronous - commit mode.|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] in Synchronous-Commit mode|Supported and recommended.|  
 |[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] asynchronous mirroring or log-shipping to another farm for disaster recovery.|Supported.|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] with asynchronous-commit for disaster recovery|Supported|  

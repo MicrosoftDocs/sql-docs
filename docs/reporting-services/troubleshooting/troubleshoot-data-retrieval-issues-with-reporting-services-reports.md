@@ -4,7 +4,6 @@ ms.date: 02/27/2016
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
 ms.technology: troubleshooting
-ms.suite: pro-bi
 
 
 ms.topic: conceptual
@@ -52,7 +51,7 @@ To view calculated fields in the Report Data pane, you must define them for each
 When you define a query in the Dataset Properties dialog box, and then close the dialog box, the dataset field collection usually appears in the Report Data pane. For some data sources, the dataset field collection is not automatically populated.   
   
 To populate the dataset field collection, do the following:  
-* Make sure that you have permissions to retrieve field information from the database. For some data sources, you might have permissions to access the data source but not the the table or column. You may have permission to access a view but not the permissions to run the stored procedures that create the view. To validate your access to specific tables or columns in a database, verify your query results in a separate application such as SQL Server Management Studio using the same permissions you use for the report. If you cannot see the results that you want for your query, work with the system administrator to adjust your permissions to the data.   
+* Make sure that you have permissions to retrieve field information from the database. For some data sources, you might have permissions to access the data source but not the table or column. You may have permission to access a view but not the permissions to run the stored procedures that create the view. To validate your access to specific tables or columns in a database, verify your query results in a separate application such as SQL Server Management Studio using the same permissions you use for the report. If you cannot see the results that you want for your query, work with the system administrator to adjust your permissions to the data.   
 * Run the query in the query pane of the **Dataset Properties** dialog box. For more information, see [Report Datasets (Report Builder 3.0 and SSRS)](../../reporting-services/report-data/report-datasets-ssrs.md).  
 * Add fields manually. For more information, see [How to: Add, Edit, Refresh Fields in the Report Data Pane (Report Builder 3.0 and SSRS)](../../reporting-services/report-data/add-edit-refresh-fields-in-the-report-data-pane-report-builder-and-ssrs.md).   
   

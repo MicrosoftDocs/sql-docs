@@ -1,21 +1,17 @@
-﻿---
+---
 title: "Designate an Events Forwarding Server | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: "sql-tools"
-ms.component: "ssms-agent"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: ssms
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "event forwarding servers [SQL Server]"
   - "events [SQL Server], forwarding"
   - "alerts [SQL Server], forwarded events"
 ms.assetid: 81dfcbe4-3000-4e77-99de-bf85fef63a12
-caps.latest.revision: 4
 author: "stevestein"
 ms.author: "sstein"
 manager: craigg
@@ -54,7 +50,7 @@ Requires membership in the **sysadmin** fixed server role.
   
 2.  Right-click **SQL Server Agent** and select **Properties**.  
   
-3.  In the **SQL Server Agent Properties –***server_name* dialog box, under **Select a page**, select **Advanced**.  
+3.  In the **SQL Server Agent Properties -**_server_name_ dialog box, under **Select a page**, select **Advanced**.  
   
 4.  Under **SQL Server event forwarding**, select the **Forward events to a different server** check box.  
   

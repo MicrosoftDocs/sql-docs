@@ -4,10 +4,7 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords: 
   - "output data [Integration Services]"
@@ -17,7 +14,6 @@ helpviewer_keywords:
   - "data flow [Integration Services]"
   - "errors [Integration Services], data flow outputs"
 ms.assetid: 7a50de3c-4ca0-4922-8028-fdddeb47e5b0
-caps.latest.revision: 65
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
@@ -65,7 +61,7 @@ manager: craigg
  When the **Data Flow** tab is active, the Toolbox contains the sources, transformations, and destinations that you can add to the data flow.  
   
 ## Expressions  
- A number of the data flow components—sources, transformations, and destinations—support the use of property expressions in some of their properties. A property expression is an expression that replaces the value of the property when the package is loaded. At run time, the package uses the updated property values. The expressions are built using the [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] expression syntax and can include [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] functions, operators, identifiers, and variables. For more information, see [Integration Services &#40;SSIS&#41; Expressions](../expressions/integration-services-ssis-expressions.md), [Integration Services &#40;SSIS&#41; Expressions](../expressions/integration-services-ssis-expressions.md), and [Use Property Expressions in Packages](../expressions/use-property-expressions-in-packages.md).  
+ A number of the data flow components-sources, transformations, and destinations-support the use of property expressions in some of their properties. A property expression is an expression that replaces the value of the property when the package is loaded. At run time, the package uses the updated property values. The expressions are built using the [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] expression syntax and can include [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] functions, operators, identifiers, and variables. For more information, see [Integration Services &#40;SSIS&#41; Expressions](../expressions/integration-services-ssis-expressions.md), [Integration Services &#40;SSIS&#41; Expressions](../expressions/integration-services-ssis-expressions.md), and [Use Property Expressions in Packages](../expressions/use-property-expressions-in-packages.md).  
   
  If you construct a package in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], the properties of any data flow components that support property expressions are exposed on the Data Flow task to which they belong. To add, change, and remove the property expressions of data flow components, click the Data Flow task, and then use the Properties window or the editor for the task to add, change, or delete property expressions. Property expressions for the Data Flow task itself are managed in the Properties window.  
   
@@ -187,7 +183,7 @@ manager: craigg
  For more information, see [Error Handling in Data](error-handling-in-data.md).  
   
 ### Columns  
- Inputs, outputs, and error outputs are collections of columns. Each column is configurable and depending on the column type—input, output, or external—[!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] provides different properties for the column. [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] provides three different ways of setting column properties: programmatically, by using component-specific dialog boxes, or by using the **Advanced Editor** dialog box.  
+ Inputs, outputs, and error outputs are collections of columns. Each column is configurable and depending on the column type-input, output, or external-[!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] provides different properties for the column. [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] provides three different ways of setting column properties: programmatically, by using component-specific dialog boxes, or by using the **Advanced Editor** dialog box.  
   
 ## Paths  
  Paths connect data flow components. In [!INCLUDE[ssIS](../../../includes/ssis-md.md)] Designer, you can view and modify the path properties, view the output metadata for the path start point, and attach data viewers to a path.  

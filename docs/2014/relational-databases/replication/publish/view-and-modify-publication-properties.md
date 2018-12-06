@@ -4,10 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords: 
   - "viewing replication properties"
@@ -18,7 +15,6 @@ helpviewer_keywords:
   - "modifying replication properties, publications"
   - "publications [SQL Server replication], modifying"
 ms.assetid: 27d72ea4-bcb6-48f2-b4aa-eb1410da7efc
-caps.latest.revision: 43
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg

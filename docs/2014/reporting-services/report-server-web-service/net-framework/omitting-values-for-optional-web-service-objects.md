@@ -4,11 +4,9 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "docset-sql-devref"
   - "reporting-services-native"
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 
   - "Web service [Reporting Services], omitted values"
@@ -16,7 +14,6 @@ helpviewer_keywords:
   - "Report Server Web service, omitted values"
   - "omitting values [Reporting Services]"
 ms.assetid: ceb68b8b-9214-4745-abc9-f47f33ecd6f7
-caps.latest.revision: 36
 author: markingmyname
 ms.author: maghan
 manager: craigg

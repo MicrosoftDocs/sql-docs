@@ -4,10 +4,8 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Mining Accuracy Chart [Analysis Services], nested tables"
@@ -15,7 +13,6 @@ helpviewer_keywords:
   - "nested tables"
   - "adding nested tables"
 ms.assetid: 162e0686-ada3-4dd3-9151-9589926e6613
-caps.latest.revision: 23
 author: minewiskan
 ms.author: owend
 manager: craigg
@@ -41,7 +38,7 @@ manager: craigg
   
 3.  In **Select data set to be used for accuracy chart**, select the option **Specify a different data set**.  
   
-4.  Click the browse button **(…)** to choose the external data set from a list of data source views on the current server.  
+4.  Click the browse button **(...)** to choose the external data set from a list of data source views on the current server.  
   
 5.  Click **Select Case Table**. In the **Select Table** dialog box, choose the table from the data source view that contains the case data, and then click **OK**.  
   

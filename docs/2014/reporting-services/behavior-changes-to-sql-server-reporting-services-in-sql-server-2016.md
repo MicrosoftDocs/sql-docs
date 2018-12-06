@@ -4,10 +4,8 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "reporting-services-native"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Reporting Services, backward compatibility"
@@ -23,7 +21,6 @@ helpviewer_keywords:
   - "initializing installations [Reporting Services]"
   - "behavior changes [Reporting Services]"
 ms.assetid: 2a767f0f-84f2-4099-8784-1e37790f858e
-caps.latest.revision: 63
 author: markingmyname
 ms.author: maghan
 manager: craigg
@@ -46,9 +43,9 @@ manager: craigg
  This section describes behavior changes to [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] SharePoint mode.  
   
 ### View Items permission will not download Shared Datasets (SharePoint Mode)  
- **New Behavior:** Users with the SharePoint permission of “View Items” can no longer download the contents of Reporting Services shared datasets. This behavior change is now consistent with the “View Items” permissions for reports, data sources, and models. Users with “View Items” permission can view and execute reports, data sources, and models but they cannot download their content.  
+ **New Behavior:** Users with the SharePoint permission of "View Items" can no longer download the contents of Reporting Services shared datasets. This behavior change is now consistent with the "View Items" permissions for reports, data sources, and models. Users with "View Items" permission can view and execute reports, data sources, and models but they cannot download their content.  
   
- **Previous Behavior:** Users with the “View Items” SharePoint permission could download the contents of Reporting Services shared datasets.  
+ **Previous Behavior:** Users with the "View Items" SharePoint permission could download the contents of Reporting Services shared datasets.  
   
  For more information on SharePoint permission levels, see [User permissions and permission levels](http://technet.microsoft.com/library/cc721640.aspx)  
   
@@ -58,7 +55,7 @@ manager: craigg
  **Previous Behavior:** Report Server trace logs were found under a path similar to the following:  %Programfilesdir%\Microsoft SQL Server\\<RS_instance>\Reporting Services\LogFiles  
   
 ### GetServerConfigInfo SOAP API is no longer supported (SharePoint Mode)  
- **New behavior**: Use PowerShell cmdlet “Get-SPRSServiceApplicationServers”  
+ **New behavior**: Use PowerShell cmdlet "Get-SPRSServiceApplicationServers"  
   
  **Previous Behavior:** Customers could develop SOAP client code to communicate directly with the [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] end point, and call GetReportServerConfigInfo().  
   

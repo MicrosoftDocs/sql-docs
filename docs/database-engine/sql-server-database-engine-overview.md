@@ -4,18 +4,13 @@ ms.custom: ""
 ms.date: "07/26/2017"
 ms.prod: sql
 ms.prod_service: high-availability
-ms.component: "database-engine"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Database Engine [SQL Server]"
   - "SQL Server Database Engine"
 ms.assetid: 65e2f424-1386-45a6-8912-bd053f434073
-caps.latest.revision: 48
 author: "CarlRabeler"
 ms.author: "carlrab"
 manager: craigg
@@ -28,6 +23,6 @@ manager: craigg
 
 
 ## See Also  
- [SQL Server Resource Center](http://go.microsoft.com/fwlink/?LinkId=219676)  
+ [SQL Server Resource Center](https://go.microsoft.com/fwlink/?LinkId=219676)  
   
   

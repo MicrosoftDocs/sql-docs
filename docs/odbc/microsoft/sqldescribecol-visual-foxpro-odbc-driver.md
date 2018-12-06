@@ -5,14 +5,11 @@ ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: connectivity
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "SQLDescribeCol function [ODBC], Visual FoxPro ODBC Driver"
 ms.assetid: a8d06507-8376-42b5-b09f-338a77cea131
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg

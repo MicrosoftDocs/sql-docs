@@ -4,10 +4,8 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "templates [Analysis Services]"
@@ -17,7 +15,6 @@ helpviewer_keywords:
   - "Business Intelligence Development Studio, defining projects [Analysis Services]"
   - "items [Analysis Services]"
 ms.assetid: d00913b0-cd6d-4de0-a1e7-4ce86fcc078d
-caps.latest.revision: 36
 author: minewiskan
 ms.author: owend
 manager: craigg
@@ -56,7 +53,7 @@ manager: craigg
   
 5.  To add the new project to the existing solution, in the **Solution** drop-down list, select **Add to Solution**.  
   
-     —or—  
+     -or-  
   
      To create a new solution, in the **Solution** drop-down list, select **Create new Solution**. To create a new folder for the new solution, select **Create directory for solution**. In **Solution Name**, type the name of the new solution.  
   

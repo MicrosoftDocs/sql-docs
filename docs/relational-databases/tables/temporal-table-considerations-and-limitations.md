@@ -5,12 +5,9 @@ ms.date: "05/22/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: table-view-index
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: c8a21481-0f0e-41e3-a1ad-49a84091b422
-caps.latest.revision: 18
 author: "CarlRabeler"
 ms.author: "carlrab"
 manager: craigg
@@ -51,7 +48,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
   
 -   Direct modification of the data in a history table is not permitted.  
   
--   **ON DELETE CASCADE** and **ON UPDATE CASCADE** are not permitted on the current table. In other words, when temporal table is referencing table in the foreign key relationship (corresponding to *parent_object_id* in sys.foreign_keys) CASCADE options are not allowed. To work around this limitation, use application logic or after triggers to maintain consistency on delete in primary key table (corresponding to  *referenced_object_id* in sys.foreign_keys). If primary key table is temporal and referencing table is non-temporal, there’s no such  limitation. 
+-   **ON DELETE CASCADE** and **ON UPDATE CASCADE** are not permitted on the current table. In other words, when temporal table is referencing table in the foreign key relationship (corresponding to *parent_object_id* in sys.foreign_keys) CASCADE options are not allowed. To work around this limitation, use application logic or after triggers to maintain consistency on delete in primary key table (corresponding to  *referenced_object_id* in sys.foreign_keys). If primary key table is temporal and referencing table is non-temporal, there's no such  limitation. 
 
     **NOTE:** This limitation applies to SQL Server 2016 only. CASCADE options are supported in [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] and SQL Server 2017 starting from CTP 2.0.  
   
@@ -63,7 +60,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
   
     -   **Change Data Capture and Change Data Tracking:** Supported only on the current table  
   
-    -   **Snapshot and transactional replication**: Only supported for a single publisher without temporal being enabled and one subscriber with temporal enabled. In this case, the publisher is used for an OLTP workload while subscriber serves for offloading reporting (including ‘AS OF’ querying).    
+    -   **Snapshot and transactional replication**: Only supported for a single publisher without temporal being enabled and one subscriber with temporal enabled. In this case, the publisher is used for an OLTP workload while subscriber serves for offloading reporting (including 'AS OF' querying).    
         Use of multiple subscribers is not supported since this scenario may lead to inconsistent temporal data as each of them would depend on the local system clock.  
   
     -   **Merge replication:** Not supported for temporal tables  

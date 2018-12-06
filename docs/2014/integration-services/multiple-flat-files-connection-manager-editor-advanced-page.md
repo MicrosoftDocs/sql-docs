@@ -4,17 +4,14 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "integration-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.dts.designer.multifile.advanced.f1"
 helpviewer_keywords: 
   - "Multiple Flat Files Connection Manager Editor"
 ms.assetid: fc883131-c03d-4ab3-8220-b51cbe243a82
-caps.latest.revision: 36
 author: douglaslms
 ms.author: douglasl
 manager: craigg
@@ -44,7 +41,7 @@ manager: craigg
 |**TextQualified**|Indicate whether text data is qualified using a text qualifier character. Valid values are:<br /><br /> **True**: Text data in the flat file is qualified.<br /><br /> **False**: Text data in the flat file is not qualified.|  
 |**Name**|Provide a column name. The default is a numbered list of columns; however, you can choose any unique, descriptive name.|  
 |**DataScale**|Specify the scale of numeric data. Scale refers to the number of decimal places. For more information, see [Integration Services Data Types](data-flow/integration-services-data-types.md).|  
-|**ColumnDelimiter**|Select from the list of available column delimiters. Choose delimiters that are not likely to occur in the text. This value is ignored for fixed-width columns.<br /><br /> **{CR}{LF}** – columns are delimited by a carriage return-line feed combination<br /><br /> **{CR}** – columns are delimited by a carriage return<br /><br /> **{LF}** – columns are delimited by a line feed<br /><br /> **Semicolon {;}** – columns are delimited by a semicolon<br /><br /> **Colon {:}** – columns are delimited by a colon<br /><br /> **Comma {,}** – columns are delimited by a comma<br /><br /> **Tab {t}** – columns are delimited by a tab<br /><br /> **Vertical bar {&#124;}** – columns are delimited by a vertical bar|  
+|**ColumnDelimiter**|Select from the list of available column delimiters. Choose delimiters that are not likely to occur in the text. This value is ignored for fixed-width columns.<br /><br /> **{CR}{LF}** - columns are delimited by a carriage return-line feed combination<br /><br /> **{CR}** - columns are delimited by a carriage return<br /><br /> **{LF}** - columns are delimited by a line feed<br /><br /> **Semicolon {;}** - columns are delimited by a semicolon<br /><br /> **Colon {:}** - columns are delimited by a colon<br /><br /> **Comma {,}** - columns are delimited by a comma<br /><br /> **Tab {t}** - columns are delimited by a tab<br /><br /> **Vertical bar {&#124;}** - columns are delimited by a vertical bar|  
 |**DataPrecision**|Specify the precision of numeric data. Precision refers to the number of digits. For more information, see [Integration Services Data Types](data-flow/integration-services-data-types.md).|  
 |**InputColumnWidth**|Specify a value to be stored as a count of bytes; for Unicode files, this will display as a count of characters. This value is ignored for delimited columns.<br /><br /> **Note** In the object model, the name of this property is ColumnWidth.|  
   

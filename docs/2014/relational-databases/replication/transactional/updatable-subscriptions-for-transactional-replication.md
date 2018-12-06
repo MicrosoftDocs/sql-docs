@@ -4,10 +4,7 @@ ms.custom: ""
 ms.date: "03/31/2016"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords: 
   - "transactional replication, updatable subscriptions"
@@ -17,7 +14,6 @@ helpviewer_keywords:
   - "subscriptions [SQL Server replication], updatable"
   - "updatable subscriptions"
 ms.assetid: 8eec95cb-3a11-436e-bcee-bdcd05aa5c5a
-caps.latest.revision: 57
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg

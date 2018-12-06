@@ -4,13 +4,10 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: 9d8233bb-117e-4563-9302-8a5a8ad1fae2
-caps.latest.revision: 30
 author: minewiskan
 ms.author: owend
 manager: craigg
@@ -44,7 +41,7 @@ manager: craigg
 4.  Enter `12` for **HoldoutSeed**.  
   
 ## Deploying and Processing the Models  
- In Data Mining Designer, you can decide which objects to process, depending on the scope of changes you’ve made to your model or the underlying data:  
+ In Data Mining Designer, you can decide which objects to process, depending on the scope of changes you've made to your model or the underlying data:  
   
  For this task, because the data and the models are new, you will process the structure and all the models at the same time.  
   

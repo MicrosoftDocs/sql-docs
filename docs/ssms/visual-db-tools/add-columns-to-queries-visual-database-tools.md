@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: "sql-tools"
-ms.component: "ssms-visual-db"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: ssms
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "inserting columns"
@@ -16,7 +13,6 @@ helpviewer_keywords:
   - "queries [SQL Server], columns"
   - "adding columns"
 ms.assetid: 82f3ba72-3d72-4fb1-8179-2a953a782787
-caps.latest.revision: 4
 author: "stevestein"
 ms.author: "sstein"
 manager: craigg
@@ -27,7 +23,7 @@ manager: craigg
 To use a column in a query, you must add it to the query. You might add a column to display it in query output, to use it for sorting, to search the contents of the column, or to summarize its contents. You can decide which of the columns you use in the query are included in the results pane when the query is run. For more information see [Remove Columns from Query Results &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/remove-columns-from-query-results-visual-database-tools.md).  
   
 > [!NOTE]  
-> To view the data type of a column in Query and View Designer; select the table or table-valued object in the **Diagram Pane** and in the properties window click Column List. Then click the **ellipses (…)** to open the **Column List** dialog box.  
+> To view the data type of a column in Query and View Designer; select the table or table-valued object in the **Diagram Pane** and in the properties window click Column List. Then click the **ellipses (...)** to open the **Column List** dialog box.  
   
 Wherever you use a column in a query, you can also use an expression that can consist of any combination of columns, literals, operators, and functions.  
   
@@ -41,7 +37,7 @@ Wherever you use a column in a query, you can also use an expression that can co
   
 ### To add all columns for one table or table-valued object  
   
--   In the **Diagram Pane**, select the check box next to **\&#42;(All Columns)**.  
+-   In the **Diagram Pane**, select the check box next to **&#42;(All Columns)**.  
   
 ### To add all columns for all tables and table-structured objects  
   

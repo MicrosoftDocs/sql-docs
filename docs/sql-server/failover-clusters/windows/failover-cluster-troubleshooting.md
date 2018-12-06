@@ -4,9 +4,7 @@ ms.custom: ""
 ms.date: "10/21/2015"
 ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: high-availability
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "troublshooting, failover clustering"
@@ -53,7 +51,7 @@ Failover Clustering comes with a built-in safeguard to prevent accidental downti
   
 -   [Recommended hotfixes and updates for Windows Server 2012 R2-based failover clusters](https://support.microsoft.com/kb/2920151)  
   
--   [Recommended hotfixes and updates for Windows Server 2012-based failover clusters](https://support.microsoft.com/kb/278426)  
+-   [Recommended hotfixes and updates for Windows Server 2012-based failover clusters](https://support.microsoft.com/kb/2784261)  
   
 -   [Recommended hotfixes and updates for Windows Server 2008 R2-based failover clusters](https://support.microsoft.com/kb/980054)  
   

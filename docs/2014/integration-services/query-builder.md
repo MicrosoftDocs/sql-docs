@@ -4,17 +4,14 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "integration-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.dts.designer.querybuilder.f1"
 helpviewer_keywords: 
   - "Query Builder dialog box"
 ms.assetid: 780752c9-6e3c-4f44-aaff-4f4d5e5a45c5
-caps.latest.revision: 37
 author: douglaslms
 ms.author: douglasl
 manager: craigg

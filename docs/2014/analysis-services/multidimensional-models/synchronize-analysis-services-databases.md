@@ -4,10 +4,8 @@ ms.custom: ""
 ms.date: "05/24/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Analysis Services deployments, Synchronize Database Wizard"
@@ -15,7 +13,6 @@ helpviewer_keywords:
   - "Synchronize Database Wizard"
   - "synchronization [Analysis Services]"
 ms.assetid: 6aeff68d-8470-43fb-a3ed-a4b9685332c2
-caps.latest.revision: 39
 author: minewiskan
 ms.author: owend
 manager: craigg
@@ -185,7 +182,7 @@ manager: craigg
  If you did not synchronize roles or membership, remember to specify user access permissions now on the destination database.  
   
 ## See Also  
- [Synchronize Element &#40;XMLA&#41;](../xmla/xml-elements-commands/synchronize-element-xmla.md)   
+ [Synchronize Element &#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/synchronize-element-xmla)   
  [Deploy Model Solutions Using XMLA](deploy-model-solutions-using-xmla.md)   
  [Deploy Model Solutions Using the Deployment Wizard](deploy-model-solutions-using-the-deployment-wizard.md)  
   

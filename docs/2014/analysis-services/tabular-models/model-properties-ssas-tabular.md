@@ -4,16 +4,13 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.asvs.bidtoolset.fileprop.f1"
   - "sql12.asvs.bidtoolset.wspacedbconfig.f1"
 ms.assetid: 8ab04656-75a5-485c-9687-7b1ca49f7f80
-caps.latest.revision: 29
 author: minewiskan
 ms.author: owend
 manager: craigg
@@ -32,8 +29,8 @@ manager: craigg
   
 |Property|Default setting|Description|  
 |--------------|---------------------|-----------------|  
-|**Build Action**|Compile|This property specifies how the file relates to the build and deployment process. This property setting has the following options:<br /><br /> **Compile** – A normal build action occurs. Definitions for model objects will be written to the .asdatabase file.<br /><br /> **None** – The output to the .asdatabase file will be empty.|  
-|**Copy to Output Directory**|Do Not Copy|This property specifies the source file will be copied to the output directory. This property setting has the following options:<br /><br /> **Do not copy** – No copy is created in the output directory.<br /><br /> **Copy always** – A copy is always created in the output directory.<br /><br /> **Copy if newer** - A copy is created in the output directory only if there are changes to the model.bim file.|  
+|**Build Action**|Compile|This property specifies how the file relates to the build and deployment process. This property setting has the following options:<br /><br /> **Compile** - A normal build action occurs. Definitions for model objects will be written to the .asdatabase file.<br /><br /> **None** - The output to the .asdatabase file will be empty.|  
+|**Copy to Output Directory**|Do Not Copy|This property specifies the source file will be copied to the output directory. This property setting has the following options:<br /><br /> **Do not copy** - No copy is created in the output directory.<br /><br /> **Copy always** - A copy is always created in the output directory.<br /><br /> **Copy if newer** - A copy is created in the output directory only if there are changes to the model.bim file.|  
   
  **Miscellaneous**  
   

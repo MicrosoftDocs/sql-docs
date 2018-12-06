@@ -4,10 +4,8 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "DMX [Analysis Services], tutorials"
@@ -18,7 +16,6 @@ helpviewer_keywords:
   - "tutorials [Data Mining]"
   - "tutorials [DMX]"
 ms.assetid: 6e262a1d-c89e-4033-8368-46cf25168ef5
-caps.latest.revision: 28
 author: minewiskan
 ms.author: owend
 manager: craigg
@@ -73,7 +70,7 @@ manager: craigg
   
  There are several reasons that you would want to add more than one mining model in a single mining structure. For example, you might create several mining models using different algorithms to see which one works best. Alternatively, you might create several mining models using the same algorithm, but with a parameter set differently for each mining model to find the best setting for that parameter.  
   
- For more information, see [ALTER MINING STRUCTURE &#40;DMX&#41;]((~/dmx/alter-mining-structure-dmx.md).  
+ For more information, see [ALTER MINING STRUCTURE &#40;DMX&#41;](/sql/dmx/alter-mining-structure-dmx?view=sql-server-2016).  
   
  Because you will create a mining structure that contains several mining models, you will use the second method in this tutorial.  
   

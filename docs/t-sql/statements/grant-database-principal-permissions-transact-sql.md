@@ -5,9 +5,7 @@ ms.date: "03/12/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 dev_langs: 
   - "TSQL"
@@ -24,7 +22,6 @@ helpviewer_keywords:
   - "GRANT statement, roles"
   - "application roles [SQL Server], permissions"
 ms.assetid: 012588a2-cbe1-48f0-a731-b4a2b83203d5
-caps.latest.revision: 24
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
@@ -94,7 +91,7 @@ GRANT permission [ ,...n ]
  Specifies an application role.  
   
  *Database_user_mapped_to_Windows_User*  
- pecifies a database user mapped to a Windows user.  
+ Specifies a database user mapped to a Windows user.  
   
  *Database_user_mapped_to_Windows_Group*  
   

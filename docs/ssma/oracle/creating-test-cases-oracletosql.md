@@ -4,14 +4,11 @@ ms.prod: sql
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: ssma
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Test Case Wizard"
 ms.assetid: 22f38901-ec35-4707-a911-784e6ad8dafb
-caps.latest.revision: 7
 author: "Shamikg"
 ms.author: "Shamikg"
 manager: "v-thobro"
@@ -20,7 +17,7 @@ manager: "v-thobro"
 Use the Test Case Wizard to create a test. This wizard lets you create test cases by choosing tested and verified objects and by specifying the testing parameters.  
   
 ## Starting the Test Case Wizard  
-To start the Test Case Wizard click **New Test Case…** from the **Tester** menu.  
+To start the Test Case Wizard click **New Test Case...** from the **Tester** menu.  
   
 When started, the wizard looks for schema SSMATESTER_ORACLE on the source Oracle server. It is the Tester extension schema used for storing auxiliary objects. If the Test Case Wizard cannot find SSMATESTER_ORACLE, it displays a dialog window that proposes to create the schema. (That situation usually happens during the first run of SSMA Tester.)  
   

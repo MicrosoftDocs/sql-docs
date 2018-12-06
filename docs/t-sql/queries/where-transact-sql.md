@@ -5,9 +5,7 @@ ms.date: "08/09/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "WHERE_TSQL"
@@ -21,7 +19,6 @@ helpviewer_keywords:
   - "row retrieval [SQL Server], WHERE clause"
   - "WHERE clause"
 ms.assetid: a8430421-7bce-4fab-a2d2-56c00a3c6fa4
-caps.latest.revision: 37
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: craigg

@@ -4,10 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords: 
   - "synchronization [SQL Server replication], about synchronization"
@@ -21,7 +18,6 @@ helpviewer_keywords:
   - "replication [SQL Server], synchronization"
   - "scripts [SQL Server replication]"
 ms.assetid: 724802f7-7d69-46d3-a330-bd8aa7f53114
-caps.latest.revision: 35
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg

@@ -4,9 +4,7 @@ ms.custom: ""
 ms.date: "05/17/2016"
 ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: high-availability
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql13.swb.failoverwizard.progress.f1"
@@ -14,7 +12,6 @@ f1_keywords:
   - "sql13.swb.addreplicawizard.progress.f1"
   - "sql13.swb.newagwizard.progress.f1"
 ms.assetid: bd3b0306-8384-4120-a1c9-03825f0ae26a
-caps.latest.revision: 13
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg

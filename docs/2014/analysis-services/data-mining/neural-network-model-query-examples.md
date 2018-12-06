@@ -4,17 +4,14 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "neural network algorithms [Analysis Services]"
   - "content queries [DMX]"
   - "neural network model [Analysis Services]"
 ms.assetid: 81b06183-620f-4e0c-bc10-532e6a1f0829
-caps.latest.revision: 27
 author: minewiskan
 ms.author: owend
 manager: craigg
@@ -196,7 +193,7 @@ NATURAL PREDICTION JOIN
   
 |Predicted Orders|Probability|  
 |----------------------|-----------------|  
-|364|0.9532…|  
+|364|0.9532...|  
   
  The predicted sales volume is higher than the current range of sales for Tuesday, and the probability of the prediction is very high. However, you might want to create multiple predictions by using a batch process to test a variety of hypotheses on the model.  
   

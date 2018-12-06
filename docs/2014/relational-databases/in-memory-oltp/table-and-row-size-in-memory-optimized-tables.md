@@ -4,12 +4,9 @@ ms.custom: ""
 ms.date: "10/27/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: in-memory-oltp
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: b0a248a4-4488-4cc8-89fc-46906a8c24a1
-caps.latest.revision: 25
 author: MightyPen
 ms.author: genemi
 manager: craigg
@@ -37,7 +34,7 @@ Memory-optimized table, consisting of indexes and rows.
  The in-memory size of a table, in bytes, is computed as follows:  
   
 ```  
-[table size] = [size of index 1] + … + [size of index n] + ([row size] * [row count])  
+[table size] = [size of index 1] + ... + [size of index n] + ([row size] * [row count])  
 ```  
   
  The size of a hash index is fixed at table creation time and depends on the actual bucket count. The bucket_count specified with the index specification is rounded up to the nearest power of 2 to obtain the [actual bucket count]. For example, if the specified bucket_count is 100000, the [actual bucket count] for the index is 131072.  
@@ -110,7 +107,7 @@ Memory-optimized table, consisting of indexes and rows.
   
 -   Second bucket: (John, Paris), (Jane, Prague)  
   
- An end timestamp ∞ (infinity) indicates that this is the currently valid version of the row. The row has not been updated or deleted since this row version was written.  
+ An end timestamp ??? (infinity) indicates that this is the currently valid version of the row. The row has not been updated or deleted since this row version was written.  
   
  For a time greater than 200, the table contains the following rows:  
   
@@ -144,7 +141,7 @@ CREATE TABLE dbo.Orders (
 GO  
 ```  
   
- Notice that this table has one hash index and a nonclustered index (the primary key). It also has three fixed-length columns and one variable-length column, with one of the columns being NULLable (OrderDescription). Let’s assume the Orders table has 8379 rows, and the average length of the values in the OrderDescription column is 78 characters.  
+ Notice that this table has one hash index and a nonclustered index (the primary key). It also has three fixed-length columns and one variable-length column, with one of the columns being NULLable (OrderDescription). Let's assume the Orders table has 8379 rows, and the average length of the values in the OrderDescription column is 78 characters.  
   
  To determine the table size, first determine the size of the indexes. The bucket_count for both indexes is specified as 10000. This is rounded up to the nearest power of 2: 16384. Therefore, the total size of the indexes for the Orders table is:  
   
@@ -165,7 +162,7 @@ GO
 [row header size] = 24 + 8 * [number of indices] = 24 + 8 * 1 = 32 bytes  
 ```  
   
- Next, let’s calculate [actual row body size]:  
+ Next, let's calculate [actual row body size]:  
   
 -   Shallow type columns:  
   
@@ -193,7 +190,7 @@ GO
   
     -   Nearest multiple of 8 is 24.  
   
-    -   Total padding is 24 – 22 = 2 bytes.  
+    -   Total padding is 24 - 22 = 2 bytes.  
   
 -   There are no fixed-length deep type columns (Fixed-length deep type columns: 0.).  
   

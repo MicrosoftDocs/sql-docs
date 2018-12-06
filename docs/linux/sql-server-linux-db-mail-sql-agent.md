@@ -7,8 +7,6 @@ manager: craigg
 ms.date: 02/20/2018
 ms.topic: conceptual
 ms.prod: sql
-ms.component: ""
-ms.suite: "sql"
 ms.custom: "sql-linux"
 ms.technology: linux
 ms.assetid: tbd
@@ -109,7 +107,7 @@ EXEC msdb.dbo.sp_add_operator
 GO 
 ```
 
-## 9. Send email when 'Agent Test Job’ succeeds 
+## 9. Send email when 'Agent Test Job' succeeds 
 
 ```
 EXEC msdb.dbo.sp_update_job 

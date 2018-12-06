@@ -4,12 +4,9 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "extended-stored-procedures"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: 
 
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 
   - "gateway applications [SQL Server]"
@@ -17,7 +14,6 @@ helpviewer_keywords:
   - "Open Data Services [SQL Server]"
   - "ODS [SQL Server]"
 ms.assetid: 561305cd-c803-48af-9eec-2c19f4d311ce
-caps.latest.revision: 42
 author: "rothja"
 ms.author: "jroth"
 manager: craigg

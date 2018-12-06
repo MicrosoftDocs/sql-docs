@@ -4,14 +4,11 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: supportability
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "4846 (Database Engine error)"
 ms.assetid: a455e809-1883-4c7d-b3e3-835ee5bfe258
-caps.latest.revision: 19
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg

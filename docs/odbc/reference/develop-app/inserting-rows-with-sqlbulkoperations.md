@@ -5,16 +5,13 @@ ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: connectivity
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "SQLBulkOperations function [ODBC], inserting rows"
   - "data updates [ODBC], SQLBulkOperations"
   - "updating data [ODBC], SQLBulkOperations"
 ms.assetid: ed585ea7-4d56-4df9-8dc3-53ca82382450
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg

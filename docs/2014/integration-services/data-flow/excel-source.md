@@ -4,10 +4,7 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.dts.designer.excelsource.f1"
@@ -15,7 +12,6 @@ helpviewer_keywords:
   - "Excel [Integration Services]"
   - "sources [Integration Services], Excel"
 ms.assetid: e66349f3-b1b8-4763-89b7-7803541a4d62
-caps.latest.revision: 59
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
@@ -55,17 +51,17 @@ manager: craigg
   
 -   **Data types**. The Excel driver recognizes only a limited set of data types. For example, all numeric columns are interpreted as doubles (DT_R8), and all string columns (other than memo columns) are interpreted as 255-character Unicode strings (DT_WSTR). [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] maps the Excel data types as follows:  
   
-    -   Numeric – double-precision float (DT_R8)  
+    -   Numeric - double-precision float (DT_R8)  
   
-    -   Currency – currency (DT_CY)  
+    -   Currency - currency (DT_CY)  
   
-    -   Boolean – Boolean (DT_BOOL)  
+    -   Boolean - Boolean (DT_BOOL)  
   
-    -   Date/time – `datetime` (DT_DATE)  
+    -   Date/time - `datetime` (DT_DATE)  
   
-    -   String – Unicode string, length 255 (DT_WSTR)  
+    -   String - Unicode string, length 255 (DT_WSTR)  
   
-    -   Memo – Unicode text stream (DT_NTEXT)  
+    -   Memo - Unicode text stream (DT_NTEXT)  
   
 -   **Data type and length conversions**. [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] does not implicitly convert data types. As a result, you may need to use Derived Column or Data Conversion transformations to convert Excel data explicitly before loading it into a non-Excel destination, or to convert non-Excel data before loading it into an Excel destination. In this case, it may be useful to create the initial package by using the Import and Export Wizard, which configures the necessary conversions for you. Some examples of the conversions that may be required include the following:  
   

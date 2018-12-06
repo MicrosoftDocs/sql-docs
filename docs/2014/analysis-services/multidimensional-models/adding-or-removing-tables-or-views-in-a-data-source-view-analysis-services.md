@@ -4,10 +4,8 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.asvs.dsvdesigner.tablespane.f1"
@@ -19,7 +17,6 @@ helpviewer_keywords:
   - "data source views [Analysis Services], tables"
   - "tables [Analysis Services], data source views"
 ms.assetid: 98307d04-6548-4d7d-9244-2371dd165249
-caps.latest.revision: 34
 author: minewiskan
 ms.author: owend
 manager: craigg

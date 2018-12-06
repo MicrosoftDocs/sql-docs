@@ -5,9 +5,7 @@ ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: native-client
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 
   - "OLE DB rowsets, cursors"
@@ -16,7 +14,6 @@ helpviewer_keywords:
   - "properties [OLE DB]"
   - "cursors [OLE DB]"
 ms.assetid: 26a11e26-2a3a-451e-8f78-fba51e330ecb
-caps.latest.revision: 31
 author: MightyPen
 ms.author: genemi
 manager: craigg
@@ -143,7 +140,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   
  For a particular set of rowset properties, the cursor model that is selected is determined as follows.  
   
- From the specified collection of rowset properties, obtain a subset of properties listed in the previous tables. Divide these properties into two subgroups depending on the flag value—required (T, F) or optional (-)—of each rowset property. For each cursor model, start in the first table and move from left to right., Compare the values of the properties in the two subgroups with the values of the corresponding properties in that column. The cursor model that has no mismatch with the required properties and the least number of mismatches with the optional properties is selected. If there is more than one cursor model, the leftmost is chosen.  
+ From the specified collection of rowset properties, obtain a subset of properties listed in the previous tables. Divide these properties into two subgroups depending on the flag value-required (T, F) or optional (-)-of each rowset property. For each cursor model, start in the first table and move from left to right., Compare the values of the properties in the two subgroups with the values of the corresponding properties in that column. The cursor model that has no mismatch with the required properties and the least number of mismatches with the optional properties is selected. If there is more than one cursor model, the leftmost is chosen.  
   
 ## SQL Server Cursor Block Size  
  When a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cursor supports a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB provider rowset, the number of elements in the row handle array parameter of the **IRowset::GetNextRows** or the **IRowsetLocate::GetRowsAt** methods defines the cursor block size. The rows indicated by the handles in the array are the members of the cursor block.  

@@ -4,17 +4,14 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ""
-ms.date: "01/19/2017"
+ms.date: 11/08/2018
 ms.reviewer: ""
-ms.suite: "sql"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords:
   - "providers [ADO], OLE DB persistence provider"
   - "persistence provider [ADO]"
   - "OLE DB persistence provider [ADO]"
 ms.assetid: e75ef0dc-2016-4fcc-8918-23311c0d4e02
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
@@ -27,7 +24,7 @@ The Microsoft OLE DB Persistence Provider enables you to save a [Recordset](../.
 ## Provider Keyword
  To invoke this provider, specify the following keyword and value in the connection string.
 
-```
+```vb
 "Provider=MSPersist"
 ```
 

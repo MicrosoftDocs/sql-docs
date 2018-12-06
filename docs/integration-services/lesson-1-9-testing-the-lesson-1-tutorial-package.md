@@ -5,12 +5,8 @@ ms.date: "03/03/2017"
 ms.prod: sql
 ms.prod_service: "integration-services"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: integration-services
-ms.tgt_pltfrm: ""
 ms.topic: tutorial
-applies_to: 
-  - "SQL Server 2016"
 ms.assetid: 9aee7acf-797b-46f2-830d-80ab64a9f0b6
 author: "douglaslMS"
 ms.author: "douglasl"
@@ -42,7 +38,7 @@ Before you test the package you should verify that the control and data flows in
   
 1.  On the **Debug** menu, click **Start Debugging**.  
   
-    The package will run, resulting in 1097 rows successfully added into the **FactCurrency** fact table in **AdventureWorksDW2012**.  
+    The package will run, resulting in 1097 rows successfully added into the **NewFactCurrencyRate** fact table in **AdventureWorksDW2012**.  
   
 2.  After the package has completed running, on the **Debug** menu, click **Stop Debugging**.  
   

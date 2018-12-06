@@ -4,7 +4,6 @@ ms.date: 03/03/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
 ms.technology: report-design
-ms.suite: pro-bi
 
 
 ms.topic: conceptual
@@ -65,9 +64,9 @@ ms.author: maggies
  [Charts &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)   
  [Chart Types &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/chart-types-report-builder-and-ssrs.md)   
  [Empty and Null Data Points in Charts &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/empty-and-null-data-points-in-charts-report-builder-and-ssrs.md)   
- [Tutorial: Adding a Bar Chart to Your Report (Report Builder)](http://go.microsoft.com/fwlink/?LinkId=198052)   
- [Tutorial: Adding a Bar Chart to a Report (Report Designer)](http://go.microsoft.com/fwlink/?LinkId=198042)   
- [Tutorial: Adding a Pie Chart to Your Report (Report Builder)](http://go.microsoft.com/fwlink/?LinkId=198051)   
- [Tutorial: Adding a Pie Chart to a Report (Report Designer)](http://go.microsoft.com/fwlink/?LinkId=198041)  
+ [Tutorial: Adding a Bar Chart to Your Report (Report Builder)](https://go.microsoft.com/fwlink/?LinkId=198052)   
+ [Tutorial: Adding a Bar Chart to a Report (Report Designer)](https://go.microsoft.com/fwlink/?LinkId=198042)   
+ [Tutorial: Adding a Pie Chart to Your Report (Report Builder)](https://go.microsoft.com/fwlink/?LinkId=198051)   
+ [Tutorial: Adding a Pie Chart to a Report (Report Designer)](https://go.microsoft.com/fwlink/?LinkId=198041)  
   
   

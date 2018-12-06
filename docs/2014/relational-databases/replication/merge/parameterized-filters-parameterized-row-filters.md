@@ -4,10 +4,7 @@ ms.custom: ""
 ms.date: "06/02/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords: 
   - "publications [SQL Server replication], dynamic filters"
@@ -20,7 +17,6 @@ helpviewer_keywords:
   - "filters [SQL Server replication], parameterized"
   - "dynamic filters [SQL Server replication]"
 ms.assetid: b48a6825-068f-47c8-afdc-c83540da4639
-caps.latest.revision: 68
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg

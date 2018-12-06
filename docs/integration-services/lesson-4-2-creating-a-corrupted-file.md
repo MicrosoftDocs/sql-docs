@@ -5,14 +5,9 @@ ms.date: "03/01/2017"
 ms.prod: sql
 ms.prod_service: "integration-services"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: integration-services
-ms.tgt_pltfrm: ""
 ms.topic: tutorial
-applies_to: 
-  - "SQL Server 2016"
 ms.assetid: cd0b18dc-66c3-4d88-86ef-8e40cb660fae
-caps.latest.revision: 23
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: craigg
@@ -28,7 +23,7 @@ In this task, you will create a copy of an existing sample flat file. You will t
   
     The sample data is included with the SSIS Lesson packages. To download the sample data and the lesson packages, do the following.  
   
-    1.  Navigate to [Integration Services Product Samples](http://go.microsoft.com/fwlink/?LinkID=267527).  
+    1.  Navigate to [Integration Services Product Samples](https://go.microsoft.com/fwlink/?LinkID=267527).  
   
     2.  Click the **DOWNLOADS** tab.  
   

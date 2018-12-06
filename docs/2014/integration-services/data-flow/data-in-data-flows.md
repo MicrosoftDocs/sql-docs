@@ -4,10 +4,7 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords: 
   - "converting data types [Integration Services]"
@@ -17,7 +14,6 @@ helpviewer_keywords:
   - "string comparisons"
   - "data flow [Integration Services], data options"
 ms.assetid: 8a9d6186-eb52-48e3-997e-021f24d458a3
-caps.latest.revision: 41
 author: douglaslMS
 ms.author: douglasl
 manager: craigg

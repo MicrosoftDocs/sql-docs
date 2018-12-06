@@ -4,13 +4,10 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "reporting-services-native"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: d0e16108-7123-4788-87b3-05db962dbc94
-caps.latest.revision: 11
 author: markingmyname
 ms.author: maghan
 manager: craigg
@@ -20,7 +17,7 @@ manager: craigg
   
  The intent is to help you choose the tool that best meets your needs. For more information about a product, click the product link in the table.  
   
- If you’re looking for a brief overview of these tools to help you decide which tools are right for you, see [Introducing Microsoft Business Intelligence (BI) Tools](http://msdn.microsoft.com/en-us/library/dn655131.aspx).  
+ If you're looking for a brief overview of these tools to help you decide which tools are right for you, see [Introducing Microsoft Business Intelligence (BI) Tools](http://msdn.microsoft.com/library/dn655131.aspx).  
   
 |Workloads|User|||BI Tools|||  
 |---------------|----------|-|-|--------------|-|-|  

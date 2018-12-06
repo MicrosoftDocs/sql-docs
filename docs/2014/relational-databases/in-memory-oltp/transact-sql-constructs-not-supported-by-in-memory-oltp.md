@@ -4,12 +4,9 @@ ms.custom: ""
 ms.date: "03/07/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: in-memory-oltp
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: e3f8009c-319d-4d7b-8993-828e55ccde11
-caps.latest.revision: 34
 author: MightyPen
 ms.author: genemi
 manager: craigg
@@ -109,7 +106,7 @@ manager: craigg
 |Feature|Non-constant parameter defaults|When using default values with parameters on natively compiled stored procedures, the values must be constants. Remove any wildcards from the parameter declarations.|  
 |Feature|EXTERNAL|CLR stored procedures cannot be natively compiled. Either remove the AS EXTERNAL clause or the NATIVE_COMPILATION option from the CREATE PROCEDURE statement.|  
 |Feature|Numbered stored procedures|Natively compiled stored procedures cannot be numbered. Remove the `;`*number* from the `CREATE PROCEDURE` statement.|  
-|Feature|multi-row INSERT … VALUES statements|Cannot insert multiple rows using the same `INSERT` statement in a natively compiled stored procedure. Create `INSERT` statements for each row.|  
+|Feature|multi-row INSERT ... VALUES statements|Cannot insert multiple rows using the same `INSERT` statement in a natively compiled stored procedure. Create `INSERT` statements for each row.|  
 |Feature|Common Table Expressions (CTEs)|Common table expressions (CTE) are not supported in natively compiled stored procedures. Rewrite the query.|  
 |Feature|subquery|Subqueries (queries nested inside another query) are not supported. Rewrite the query.|  
 |Feature|COMPUTE|The `COMPUTE` clause is not supported. Remove it from the query.|  

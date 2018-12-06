@@ -4,10 +4,8 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "monitoring [Analysis Services - multidimensional data]"
@@ -15,7 +13,6 @@ helpviewer_keywords:
   - "monitoring performance [SQL Server], SQL Server Profiler"
   - "performance [SQL Server], monitoring tools"
 ms.assetid: 2f0ab717-05f3-427e-b8cd-a8bdca374add
-caps.latest.revision: 12
 author: minewiskan
 ms.author: owend
 manager: craigg
@@ -29,7 +26,7 @@ manager: craigg
 ## In This Section  
  Follow these links to learn more about monitoring.  
   
- [Analysis Services Trace Events](../trace-events/analysis-services-trace-events.md)  
+ [Analysis Services Trace Events](https://docs.microsoft.com/bi-reference/trace-events/analysis-services-trace-events)  
   
  [Use SQL Server Profiler to Monitor Analysis Services](use-sql-server-profiler-to-monitor-analysis-services.md)  
   

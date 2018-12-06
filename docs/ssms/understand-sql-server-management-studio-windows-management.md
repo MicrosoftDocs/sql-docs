@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: "sql-tools"
-ms.component: "ssms"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: ssms
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "autohide [SQL Server Management Studio]"
@@ -16,7 +13,6 @@ helpviewer_keywords:
   - "push pin [SQL Server Management Studio]"
   - "tool windows [SQL Server Management Studio]"
 ms.assetid: bebf8383-dcaf-466e-84f5-63b81c9cfe52
-caps.latest.revision: 4
 author: "stevestein"
 ms.author: "sstein"
 manager: craigg

@@ -5,12 +5,9 @@ ms.date: "07/03/2018"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: connectivity
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: b8459ed8-625e-4d8b-891c-e7e78c9977cc
-caps.latest.revision: 7
 author: MightyPen
 ms.author: v-jizho2
 manager: kenvh
@@ -25,6 +22,8 @@ manager: kenvh
 **Features Added**:
 
 Data Classification for Azure SQL Database and SQL Server, for more information see [Data Classification](../data-classification.md)
+
+Support for UTF-8 server encoding
 
 [Bug fixes](../bug-fixes.md)
 

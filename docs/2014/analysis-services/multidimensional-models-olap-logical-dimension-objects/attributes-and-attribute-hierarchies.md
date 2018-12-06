@@ -4,11 +4,9 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
   - "docset-sql-devref"
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 
   - "regular attributes [Analysis Services]"
@@ -23,7 +21,6 @@ helpviewer_keywords:
   - "attributes [Analysis Services]"
   - "relationships [Analysis Services], attributes"
 ms.assetid: 59de1ea2-e7a9-4a53-9ee0-14be52e95643
-caps.latest.revision: 49
 author: minewiskan
 ms.author: owend
 manager: craigg

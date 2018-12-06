@@ -4,12 +4,9 @@ ms.date: 03/03/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
 ms.technology: report-server-web-service
-ms.suite: pro-bi
 
 
 ms.topic: reference
-applies_to: 
-  - "SQL Server 2016 Preview"
 helpviewer_keywords: 
   - "management endpoints [Reporting Services]"
   - "Web service [Reporting Services], endpoints"
@@ -24,7 +21,7 @@ ms.author: maghan
   The Report Server Web service provides several endpoints for managing a report server as well as executing and navigating reports.  
   
 ## The Management Endpoints  
- There are three endpoints available for managing objects on a report server, <xref:ReportService2005>, <xref:ReportService2006>, and <xref:ReportService2010>. The <xref:ReportService2005> endpoint is used for managing objects on a report server that is configured for native mode. The <xref:ReportService2006> endpoint is used for managing objects on a report server that is configured for SharePoint integrated mode. The <xref:ReportService2010> endpoint merges the functionalities of <xref:ReportService2005> and <xref:ReportService2006> and can manage objects on a report server that that are configured for either native or SharePoint integrated mode.  
+ There are three endpoints available for managing objects on a report server, <xref:ReportService2005>, <xref:ReportService2006>, and <xref:ReportService2010>. The <xref:ReportService2005> endpoint is used for managing objects on a report server that is configured for native mode. The <xref:ReportService2006> endpoint is used for managing objects on a report server that is configured for SharePoint integrated mode. The <xref:ReportService2010> endpoint merges the functionalities of <xref:ReportService2005> and <xref:ReportService2006> and can manage objects on a report server that are configured for either native or SharePoint integrated mode.  
   
 > [!IMPORTANT]  
 >  When a report server is configured for SharePoint integrated mode, the <xref:ReportService2005> APIs will return an **rsOperationNotSupportedSharePointMode** error. If the report server is configured for native mode, the <xref:ReportService2006> APIs will return an **rsOperationNotSupportedNativeMode** error. Similarly, when mode-specific APIs in <xref:ReportService2010> are used on unintended modes, the APIs will return the respective errors.  
@@ -35,7 +32,7 @@ ms.author: maghan
  If the report server is configured for native mode or SharePoint integrate mode, the WSDL for the management endpoint can be accessed using one of the following URL:  
   
 ```  
-http://<Server Name>/ReportServer/ReportService2010.asmx?wsdl  
+https://<Server Name>/ReportServer/ReportService2010.asmx?wsdl  
 ```  
   
  For more information, see [Accessing the SOAP API](../../../reporting-services/report-server-web-service/accessing-the-soap-api.md).  
@@ -46,13 +43,13 @@ http://<Server Name>/ReportServer/ReportService2010.asmx?wsdl
  The WSDL for the management endpoint can be accessed using the following URL:  
   
 ```  
-http://<Server Name>/ReportServer/ReportExecution2005.asmx?wsdl  
+https://<Server Name>/ReportServer/ReportExecution2005.asmx?wsdl  
 ```  
   
  If the report server is configured for SharePoint integrate mode, the WSDL can be accessed using the following URL:  
   
 ```  
-http://<Server Name>/<Site Name>/_vti_bin/ReportServer/ReportExecution2005.asmx?wsdl  
+https://<Server Name>/<Site Name>/_vti_bin/ReportServer/ReportExecution2005.asmx?wsdl  
 ```  
   
  For more information, please see [Accessing the SOAP API](../../../reporting-services/report-server-web-service/accessing-the-soap-api.md).  
@@ -70,15 +67,15 @@ http://<Server Name>/<Site Name>/_vti_bin/ReportServer/ReportExecution2005.asmx?
  The following are example URLs for referencing the proxy endpoints on a SharePoint site.  
   
 ```  
-http://<Server Name>/<Site Name>/_vti_bin/ReportServer/ReportService2010.asmx  
+https://<Server Name>/<Site Name>/_vti_bin/ReportServer/ReportService2010.asmx  
 ```  
   
 ```  
-http://<Server Name>/<Site Name>/_vti_bin/ReportServer/ReportExecution2005.asmx  
+https://<Server Name>/<Site Name>/_vti_bin/ReportServer/ReportExecution2005.asmx  
 ```  
   
 ```  
-http://<Server Name>/<Site Name>/_vti_bin/ReportServer/ReportServiceAuthentication.asmx  
+https://<Server Name>/<Site Name>/_vti_bin/ReportServer/ReportServiceAuthentication.asmx  
 ```  
   
 ## See Also  

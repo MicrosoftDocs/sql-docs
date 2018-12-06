@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "03/15/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "system-compatibility-views"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "syslockinfo_TSQL"
@@ -21,7 +18,6 @@ helpviewer_keywords:
   - "syslockinfo system table"
   - "sys.syslockinfo compatibility view"
 ms.assetid: d8cae434-807a-473e-b94f-f7a0e1b2daf0
-caps.latest.revision: 29
 author: "rothja"
 ms.author: "jroth"
 manager: craigg

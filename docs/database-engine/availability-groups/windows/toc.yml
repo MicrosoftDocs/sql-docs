@@ -23,7 +23,7 @@
     - name: PowerShell
       href: create-an-availability-group-sql-server-powershell.md
     - name: Azure virtual machines
-      href: http://docs.microsoft.com/azure/virtual-machines/windows/sql/virtual-machines-windows-portal-sql-availability-group-overview
+      href: https://docs.microsoft.com/azure/virtual-machines/windows/sql/virtual-machines-windows-portal-sql-availability-group-overview
   - name: Listener
     href: create-or-configure-an-availability-group-listener-sql-server.md
 - name: Concepts
@@ -181,6 +181,8 @@
       href: use-the-add-replica-to-availability-group-wizard-sql-server-management-studio.md
     - name: Add secondary replica
       href: add-a-secondary-replica-to-an-availability-group-sql-server.md
+    - name: Use the Add Azure Replica Wizard (SQL Server)
+      href: use-the-add-azure-replica-wizard-sql-server.md
     - name: Change session-timeout period
       href: change-the-session-timeout-period-for-an-availability-replica-sql-server.md
     - name: Change the HADR cluster context

@@ -4,18 +4,14 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "replication"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: replication
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql13.rep.monitor.addpublisher.f1"
 helpviewer_keywords: 
   - "Add Publisher dialog box"
 ms.assetid: 4b57e298-655f-42c2-82bc-25cdad94a194
-caps.latest.revision: 23
 author: "MashaMSFT"
 ms.author: "mathoma"
 manager: craigg
@@ -28,15 +24,15 @@ manager: craigg
  **Add**  
  Click to select a type of Publisher to add, which launches the **Connect to Server** dialog box. The options are:  
   
--   **Add SQL Server Publisher…**  
+-   **Add SQL Server Publisher...**  
   
      Connect to the Publisher using the **Connect to Server** dialog box.  
   
--   **Add Oracle Publisher…**  
+-   **Add Oracle Publisher...**  
   
      Connect to the [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributor associated with the Oracle Publisher using the **Connect to Server** dialog box.  
   
--   **Specify a Distributor and Add Its Publishers…**  
+-   **Specify a Distributor and Add Its Publishers...**  
   
      Connect to the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributor associated with one or more Publishers using the **Connect to Server** dialog box.  
   

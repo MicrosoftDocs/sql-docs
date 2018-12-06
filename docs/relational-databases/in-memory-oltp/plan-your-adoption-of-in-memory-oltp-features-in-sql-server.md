@@ -4,14 +4,10 @@ ms.custom: ""
 ms.date: "11/21/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.component: "in-memory-oltp"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: in-memory-oltp
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: 041b428f-781d-4628-9f34-4d697894e61e
-caps.latest.revision: 4
 author: MightyPen
 ms.author: genemi
 manager: craigg
@@ -214,7 +210,7 @@ For an overview of indexes on memory-optimized tables, see:
 
 Hash indexes can be the fastest format for accessing one specific row by its exact primary key value by using the '**=**' operator.
 
-- Inexact operators such as '**!=**', '**>**', or '**BETWEEN**' would harm performace if used with a hash index.
+- Inexact operators such as '**!=**', '**>**', or '**BETWEEN**' would harm performance if used with a hash index.
 
 - A hash index might not be the best choice if the rate of key value duplication becomes too high.
 
@@ -295,7 +291,7 @@ In SQL Server 2016:
 You can make your Transact-SQL scripts more robust against a possible transaction error by adding *retry logic* to your scripts. Retry logic is more likely to help when UPDATE and DELETE calls are frequent, or if the memory-optimized table is referenced by a foreign key in another table. For details, see:
 
 - [Transactions with Memory-Optimized Tables](../../relational-databases/in-memory-oltp/transactions-with-memory-optimized-tables.md)
-- [Transaction dependency limits with memory optimized tables – Error 41839](https://blogs.msdn.microsoft.com/sqlcat/2016/07/11/transaction-dependency-limits-with-memory-optimized-tables-error-41839/)
+- [Transaction dependency limits with memory optimized tables - Error 41839](https://blogs.msdn.microsoft.com/sqlcat/2016/07/11/transaction-dependency-limits-with-memory-optimized-tables-error-41839/)
 
 
 

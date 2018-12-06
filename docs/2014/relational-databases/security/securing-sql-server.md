@@ -4,9 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: security
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "Security [SQL Server]"
@@ -82,7 +80,7 @@ GO
 ```  
   
 ## Principals and Database Object Security  
- Principals are the individuals, groups, and processes granted access to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. “Securables” are the server, database, and objects the database contains. Each has a set of permissions that can be configured to help reduce the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] surface area. The following table contains information about principals and securables.  
+ Principals are the individuals, groups, and processes granted access to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. "Securables" are the server, database, and objects the database contains. Each has a set of permissions that can be configured to help reduce the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] surface area. The following table contains information about principals and securables.  
   
 |For information about|See|  
 |---------------------------|---------|  

@@ -4,13 +4,10 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: 8516f0ad-32ee-4688-a304-e705143642ca
-caps.latest.revision: 9
 author: minewiskan
 ms.author: owend
 manager: craigg
@@ -52,7 +49,7 @@ manager: craigg
 |trEE|  
 |PlAnT|  
   
- If you use the column, **Classification – English**, in your model, wherever you display plant classification you will see not the original values, with their various uses of upper and lower case, but only the first instance. The reason is that all the uppercase and lowercase variants of **tree** are considered equivalent in this collation and locale; therefore, only one string was preserved and the first instance of that string that is encountered by the system is the one that is saved.  
+ If you use the column, **Classification - English**, in your model, wherever you display plant classification you will see not the original values, with their various uses of upper and lower case, but only the first instance. The reason is that all the uppercase and lowercase variants of **tree** are considered equivalent in this collation and locale; therefore, only one string was preserved and the first instance of that string that is encountered by the system is the one that is saved.  
   
 > [!WARNING]  
 >  You might decide that you want to define which string will be the first to store, according to what you consider correct, but this could be very hard to so. There is no simple way to determine in advance which row should be processed first by the engine, given that all values are considered to be the same. Instead, if you need to set the standard value, you should cleanse all your strings before loading the model.  

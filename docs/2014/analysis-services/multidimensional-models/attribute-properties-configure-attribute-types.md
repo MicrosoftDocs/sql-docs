@@ -4,10 +4,8 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "time dimensions [Analysis Services]"
@@ -17,7 +15,6 @@ helpviewer_keywords:
   - "currency dimensions [Analysis Services]"
   - "Type property"
 ms.assetid: c2c6a3da-555e-4362-a83f-88da28427520
-caps.latest.revision: 25
 author: minewiskan
 ms.author: owend
 manager: craigg

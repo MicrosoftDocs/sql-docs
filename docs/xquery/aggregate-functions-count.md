@@ -4,22 +4,15 @@ ms.custom: ""
 ms.date: "03/09/2017"
 ms.prod: sql
 ms.prod_service: sql
-ms.component: "xquery"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: xml
 ms.topic: "language-reference"
-applies_to: 
-  - "SQL Server"
 dev_langs: 
   - "XML"
 helpviewer_keywords: 
   - "fn:count function"
   - "count function [XQuery]"
 ms.assetid: a9f7131f-23e1-4d4d-a36c-180447543926
-caps.latest.revision: 27
 author: "rothja"
 ms.author: "jroth"
 manager: craigg
@@ -53,7 +46,7 @@ fn:count($arg as item()*) as xs:integer
 SELECT Production.ProductModel.ProductModelID,   
        Production.ProductModel.Name,   
        Instructions.query('  
-declare namespace AWMI="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";  
+declare namespace AWMI="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";  
        <NoOfWorkStations>  
           { count(/AWMI:root/AWMI:Location) }  
        </NoOfWorkStations>  
@@ -82,7 +75,7 @@ ProductModelID   Name                 WorkCtrCount
   
 ```  
 SELECT Instructions.query('  
-declare namespace AWMI="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";  
+declare namespace AWMI="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";  
        <NoOfWorkStations  
              ProductModelID= "{ sql:column("Production.ProductModel.ProductModelID") }"   
              ProductModelName = "{ sql:column("Production.ProductModel.Name") }" >  
@@ -105,7 +98,7 @@ WHERE Production.ProductModel.ProductModelID= 7
 ```  
 SELECT  ProductModelID,   
         Name,   
-        Instructions.value('declare namespace AWMI="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";  
+        Instructions.value('declare namespace AWMI="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";  
            count(/AWMI:root/AWMI:Location)', 'int' ) as WorkCtrCount  
 FROM Production.ProductModel  
 WHERE ProductModelID=7  

@@ -5,9 +5,7 @@ ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "integration-services"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: integration-services
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql13.dts.designer.oledbdest.f1"
@@ -23,7 +21,6 @@ helpviewer_keywords:
   - "fast load data access mode [Integration Services]"
   - "inserting data"
 ms.assetid: 873a2fa0-2a02-41fc-a80a-ec9767f36a8a
-caps.latest.revision: 79
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: craigg
@@ -105,7 +102,7 @@ manager: craigg
   
  The **Advanced Editor** dialog box reflects the properties that can be set programmatically. For more information about the properties that you can set in the **Advanced Editor** dialog box or programmatically, click one of the following topics:  
   
--   [Common Properties](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
+-   [Common Properties](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
 -   [OLE DB Custom Properties](../../integration-services/data-flow/ole-db-custom-properties.md)  
   
@@ -138,7 +135,7 @@ manager: craigg
 |------------|-----------------|  
 |Table or view|Load data into a table or view in the OLE DB destination.|  
 |Table or view - fast load|Load data into a table or view in the OLE DB destination and use the fast load option. For more information about the fast load data access modes, which are optimized for bulk inserts, see [OLE DB Destination](../../integration-services/data-flow/ole-db-destination.md).|  
-|Table name or view name variable|Specify the table or view name in a variable.<br /><br /> **Related information**: [Use Variables in Packages](http://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787)|  
+|Table name or view name variable|Specify the table or view name in a variable.<br /><br /> **Related information**: [Use Variables in Packages](https://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787)|  
 |Table name or view name variable - fast load|Specify the table or view name in a variable, and use the fast load option to load the data. For more information about the fast load data access modes, which are optimized for bulk inserts, see [OLE DB Destination](../../integration-services/data-flow/ole-db-destination.md).|  
 |SQL command|Load data into the OLE DB destination by using a SQL query.|  
   
@@ -158,7 +155,7 @@ manager: craigg
 > [!NOTE]  
 >  When you click **New**, [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] generates a default CREATE TABLE statement based on the connected data source. This default CREATE TABLE statement will not include the FILESTREAM attribute even if the source table includes a column with the FILESTREAM attribute declared. To run an [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] component with the FILESTREAM attribute, first implement FILESTREAM storage on the destination database. Then, add the FILESTREAM attribute to the CREATE TABLE statement in the **Create Table** dialog box. For more information, see [Binary Large Object &#40;Blob&#41; Data &#40;SQL Server&#41;](../../relational-databases/blob/binary-large-object-blob-data-sql-server.md).  
   
-#### Data access mode = Table or view – fast load  
+#### Data access mode = Table or view - fast load  
  **Name of the table or view**  
  Select a table or view from the database by using this list, or create a new table by clicking **New**.  
   
@@ -181,7 +178,7 @@ manager: craigg
  Specify whether the destination checks constraints when it loads data. The default value of this property is **true**.  
   
  **Rows per batch**  
- Specify the number of rows in a batch. The default value of this property is **–1**, which indicates that no value has been assigned.  
+ Specify the number of rows in a batch. The default value of this property is **-1**, which indicates that no value has been assigned.  
   
 > [!NOTE]  
 >  Clear the text box in the **OLE DB Destination Editor** to indicate that you do not want to assign a custom value for this property.  
@@ -201,7 +198,7 @@ manager: craigg
  **Variable name**  
  Select the variable that contains the name of the table or view.  
   
-#### Data Access Mode = Table name or view name variable – fast load)  
+#### Data Access Mode = Table name or view name variable - fast load)  
  **Variable name**  
  Select the variable that contains the name of the table or view.  
   
@@ -224,7 +221,7 @@ manager: craigg
  Specify whether the task checks constraints. The default value of this property is **false**.  
   
  **Rows per batch**  
- Specify the number of rows in a batch. The default value of this property is **–1**, which indicates that no value has been assigned.  
+ Specify the number of rows in a batch. The default value of this property is **-1**, which indicates that no value has been assigned.  
   
 > [!NOTE]  
 >  Clear the text box in the **OLE DB Destination Editor** to indicate that you do not want to assign a custom value for this property.  

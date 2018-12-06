@@ -4,15 +4,12 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "data-quality-services"
   - "integration-services"
   - "master-data-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: dd80a8e6-1e41-4c49-9898-02b1d2505a10
-caps.latest.revision: 7
 author: douglaslms
 ms.author: douglasl
 manager: craigg
@@ -50,7 +47,7 @@ manager: craigg
   
 10. In the **Manage Domain Values** page, click **Supplier Name** domain from the list of domains.  
   
-11. In the right pane, right-click **Lazy Country Storex** (notice ‘x’ at the end), and select **Lazy Country Store**. DQS suggests this change after running the spell checker on the domain. By default, speller is enabled on the domains you create.  
+11. In the right pane, right-click **Lazy Country Storex** (notice 'x' at the end), and select **Lazy Country Store**. DQS suggests this change after running the spell checker on the domain. By default, speller is enabled on the domains you create.  
   
      ![Correct Supplier Name - Lazy Country Store](../../2014/tutorials/media/et-discoveringknowledge-05.jpg "Correct Supplier Name - Lazy Country Store")  
   

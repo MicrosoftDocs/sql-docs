@@ -4,9 +4,7 @@ ms.custom: ""
 ms.date: "08/09/2018"
 ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: high-availability
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql13.swb.agdashboard.f1"
@@ -14,7 +12,6 @@ helpviewer_keywords:
   - "Availability Groups [SQL Server], policies"
   - "Availability Groups [SQL Server], dashboard"
 ms.assetid: c9ba2589-139e-42bc-99e1-94546717c64d
-caps.latest.revision: 30
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
@@ -321,6 +318,11 @@ The **Availability replica** pane displays the following columns:
  **Last Redone Time**  
  Indicates the time when the last log record was redone on the secondary database. This value is hidden by default.  
  
+
+   > [!NOTE]  
+   >  Most data is based on sys.dm_hadr_database_replica_states, so some restriction may apply. 
+   >  For more information, please see [sys.dm_hadr_database_replica_states (Transact-SQL)](../../../relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-states-transact-sql.md).
+
 
 ## Always On Availability Group latency reports
 The availability group latency report is a reporting tool built into the availability group dashboard and available in the [SQL Server Management Studio 17.4](../../../ssms/download-sql-server-management-studio-ssms.md) release. This feature provides an easy-to-understand report detailing time spent during various phases of the log transport process. This provides a way to narrow down the potential cause of latency during the synchronization process. 

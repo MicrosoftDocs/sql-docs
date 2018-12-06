@@ -5,9 +5,7 @@ ms.date: "01/15/2018"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "search"
@@ -36,7 +34,6 @@ helpviewer_keywords:
   - "logical operators [SQL Server], precedence"
   - "LIKE comparisons"
 ms.assetid: 09974469-c5d2-4be8-bc5a-78e404660b2c
-caps.latest.revision: 43
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: craigg
@@ -54,9 +51,12 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 ```  
 -- Syntax for SQL Server and Azure SQL Database  
   
-<search_condition> ::=   
-    { [ NOT ] <predicate> | ( <search_condition> ) }   
-    [ { AND | OR } [ NOT ] { <predicate> | ( <search_condition> ) } ]   
+<search_condition> ::=  
+    MATCH(<graph_search_pattern>) | <search_condition_without_match> | <search_condition> AND <search_condition>
+
+<search_condition_without_match> ::= 
+    { [ NOT ] <predicate> | ( <search_condition_without_match> ) }   
+    [ { AND | OR } [ NOT ] { <predicate> | ( <search_condition_without_match> ) } ]   
 [ ,...n ]   
   
 <predicate> ::=   
@@ -72,6 +72,20 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
     | expression { = | < > | ! = | > | > = | ! > | < | < = | ! < }   
   { ALL | SOME | ANY} ( subquery )   
     | EXISTS ( subquery )     }   
+    
+<graph_search_pattern> ::=
+    { <node_alias> { 
+                      { <-( <edge_alias> )- } 
+                    | { -( <edge_alias> )-> }
+                    <node_alias> 
+                   } 
+    }
+  
+<node_alias> ::=
+    node_table_name | node_table_alias 
+
+<edge_alias> ::=
+    edge_table_name | edge_table_alias
 ```  
   
 ```  
@@ -95,6 +109,9 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
  \<search_condition>  
  Specifies the conditions for the rows returned in the result set for a SELECT statement, query expression, or subquery. For an UPDATE statement, specifies the rows to be updated. For a DELETE statement, specifies the rows to be deleted. There is no limit to the number of predicates that can be included in a [!INCLUDE[tsql](../../includes/tsql-md.md)] statement search condition.  
   
+ \<graph_search_pattern>  
+ Specifies the graph match pattern. For more information about the arguments for this clause, see [MATCH &#40;Transact-SQL&#41;](../../t-sql/queries/match-sql-graph.md)
+ 
  NOT  
  Negates the Boolean expression specified by the predicate. For more information, see [NOT &#40;Transact-SQL&#41;](../../t-sql/language-elements/not-transact-sql.md).  
   
@@ -111,7 +128,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
  Is a column name, a constant, a function, a variable, a scalar subquery, or any combination of column names, constants, and functions connected by an operator or operators, or a subquery. The expression can also contain the CASE expression.  
   
 > [!NOTE]  
->  Non-Unicode string constants and variables use the code page that corresponds to the default collation of the database. Code page conversions can occurr when working with only non-Unicode character data and referencing the non-Unicode character data types **char**, **varchar**, and **text**. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] converts non-Unicode string constants and variables to the code page that corresponds to the collation of the referenced column or specified using COLLATE, if that code page is different than the code page that corresponds to the default collation of the database. Any characters not found in the new code page will be translated to a similar character, if a [best-fit mapping](http://www.unicode.org/Public/MAPPINGS/VENDORS/MICSFT/WindowsBestFit/) can be found, or else will be converted to the default replacement character of "?".  
+>  Non-Unicode string constants and variables use the code page that corresponds to the default collation of the database. Code page conversions can occurr when working with only non-Unicode character data and referencing the non-Unicode character data types **char**, **varchar**, and **text**. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] converts non-Unicode string constants and variables to the code page that corresponds to the collation of the referenced column or specified using COLLATE, if that code page is different than the code page that corresponds to the default collation of the database. Any characters not found in the new code page will be translated to a similar character, if a [best-fit mapping](https://www.unicode.org/Public/MAPPINGS/VENDORS/MICSFT/WindowsBestFit/) can be found, or else will be converted to the default replacement character of "?".  
 >  
 > When working with multiple code pages, character constants can be prefixed with the uppercase letter 'N', and Unicode variables can be used, to avoid code page conversions.  
   

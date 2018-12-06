@@ -5,9 +5,7 @@ ms.date: "04/19/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "STRING_AGG"
@@ -15,7 +13,6 @@ f1_keywords:
 helpviewer_keywords: 
   - "STRING_AGG function"
 ms.assetid: 8860ef3f-142f-4cca-aa64-87a123e91206
-caps.latest.revision: 13
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
@@ -63,8 +60,8 @@ Return type is depends on first argument (expression). If input argument is stri
 |-------|-------|
 |NVARCHAR(MAX) |NVARCHAR(MAX) |
 |VARCHAR(MAX) |VARCHAR(MAX) |
-|NVARCHAR(1…4000) |NVARCHAR(4000) |
-|VARCHAR(1…8000) |VARCHAR(8000) |
+|NVARCHAR(1...4000) |NVARCHAR(4000) |
+|VARCHAR(1...8000) |VARCHAR(8000) |
 |int, bigint, smallint, tinyint, numeric, float, real, bit, decimal, smallmoney, money, datetime, datetime2, |NVARCHAR(4000) |
 
 

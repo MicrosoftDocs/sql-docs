@@ -4,11 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-  - "docset-sql-devref"
-ms.tgt_pltfrm: ""
+ms.technology: xml
 ms.topic: "reference"
 helpviewer_keywords: 
   - "SQLXML Managed Classes, SqlXmlParameter object"
@@ -17,7 +13,6 @@ helpviewer_keywords:
   - "SqlXmlParameter object"
   - "Name property"
 ms.assetid: 40b938bf-7b09-48b3-9771-4421a673e17b
-caps.latest.revision: 21
 author: douglaslMS
 ms.author: douglasl
 manager: craigg

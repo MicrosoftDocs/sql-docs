@@ -3,7 +3,11 @@
 - name: Overview
   items:
   - name: Release notes
-    href: sql-server-linux-release-notes.md
+    items:
+    - name: SQL Server 2017
+      href: sql-server-linux-release-notes.md
+    - name: SQL Server 2019 preview
+      href: sql-server-linux-release-notes-2019.md
   - name: What's new?
     href: sql-server-linux-whats-new.md
   - name: Editions and supported features
@@ -45,12 +49,16 @@
       href: sql-server-linux-shared-disk-cluster-configure-nfs.md
     - name: SMB
       href: sql-server-linux-shared-disk-cluster-configure-smb.md
+  - name: Operate failover cluster instance - SQL Server on Linux
+    href: sql-server-linux-shared-disk-cluster-operate.md
   - name: 7_Deploy a Pacemaker cluster
     href: sql-server-linux-deploy-pacemaker-cluster.md
   - name: 8_Create and configure availability groups
     href: sql-server-linux-create-availability-group.md
-  - name: 9_Configure in Kubernetes for high availability
+  - name: 9_Deploy on Kubernetes
     href: tutorial-sql-server-containers-kubernetes.md
+  - name: 10_Configure replication
+    href: sql-server-linux-replication-tutorial-tsql.md
 - name: Concepts
   items:
   - name: Install
@@ -65,6 +73,8 @@
       href: sql-server-linux-setup-full-text-search.md
     - name: Install SQL Server Integration Services
       href: sql-server-linux-setup-ssis.md
+    - name: Install SQL Server Machine Learning Services
+      href: sql-server-linux-setup-machine-learning.md
     - name: Configure repositories
       href: sql-server-linux-change-repo.md
   - name: Configure
@@ -75,7 +85,15 @@
       href: sql-server-linux-configure-environment-variables.md
     - name: Configure Docker containers
       href: sql-server-linux-configure-docker.md
-    - name: Customer Feedback
+    - name: MSDTC
+      items:
+      - name: Configure MSDTC
+        href: sql-server-linux-configure-msdtc.md
+      - name: Configure Docker for MSDTC
+        href: sql-server-linux-configure-msdtc-docker.md
+    - name: Configure persistent memory PMEM
+      href: sql-server-linux-configure-pmem.md
+    - name: Customer feedback
       href: sql-server-linux-customer-feedback.md
   - name: Develop
     href: sql-server-linux-develop-overview.md
@@ -164,6 +182,20 @@
           href: sql-server-linux-availability-group-configure-rs.md
       - name: Configure cross-platform (Windows and Linux)
         href: sql-server-linux-availability-group-cross-platform.md
+    - name: High availability for containers
+      href: sql-server-linux-container-ha-overview.md
+      items:
+        - name: Always On Availability groups for SQL Server containers
+          href: sql-server-ag-kubernetes.md
+          items: 
+          - name: Deploy
+            href: sql-server-linux-kubernetes-deploy.md
+          - name: Manage
+            href: sql-server-linux-kubernetes-manage.md
+          - name: Connect
+            href: sql-server-linux-kubernetes-connect.md
+          - name: Create deployment scripts
+            href: sql-server-linux-kubernetes-create-deployment.md
   - name: Security
     href: sql-server-linux-security-overview.md
     items:
@@ -181,6 +213,15 @@
       href: sql-server-linux-performance-best-practices.md
     - name: Get started with performance features
       href: sql-server-linux-performance-get-started.md
+  - name: Replication
+    href: sql-server-linux-replication.md
+    items:
+    - name: Configure
+      href: sql-server-linux-replication-configure.md
+    - name: Snapshot folder
+      href: sql-server-linux-replication-snapshot-shares.md
+    - name: Non-default ports
+      href: sql-server-linux-replication-non-default-ports.md
 - name: Samples
   items:
   - name: Unattended install
@@ -212,7 +253,7 @@
   - name: DBA Stack Exchange
     href: https://dba.stackexchange.com/questions/tagged/sql-server
   - name: Stack Overflow
-    href: http://stackoverflow.com/questions/tagged/sql-server
+    href: https://stackoverflow.com/questions/tagged/sql-server
   - name: MSDN Forums
     href: https://social.msdn.microsoft.com/Forums/en-US/home?category=sqlserver
   - name: Submit feedback

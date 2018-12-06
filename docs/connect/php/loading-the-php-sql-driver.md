@@ -5,14 +5,11 @@ ms.date: "03/26/2018"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: connectivity
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "loading the driver"
 ms.assetid: e5c114c5-8204-49c2-94eb-62ca63f5d3ec
-caps.latest.revision: 42
 author: MightyPen
 ms.author: genemi
 manager: craigg
@@ -75,9 +72,9 @@ To load the SQLSRV driver when PHP is started, first move a driver file into you
 3.  Restart the Web server.  
   
 > [!NOTE]  
-> To determine whether the driver has been successfully loaded, run a script that calls [phpinfo()](http://php.net/manual/en/function.phpinfo.php).  
+> To determine whether the driver has been successfully loaded, run a script that calls [phpinfo()](https://php.net/manual/en/function.phpinfo.php).  
   
-For more information about **php.ini** directives, see [Description of core php.ini directives](http://php.net/manual/en/ini.core.php).  
+For more information about **php.ini** directives, see [Description of core php.ini directives](https://php.net/manual/en/ini.core.php).  
   
 ## See Also  
 [Getting Started with the Microsoft Drivers for PHP for SQL Server](../../connect/php/getting-started-with-the-php-sql-driver.md)

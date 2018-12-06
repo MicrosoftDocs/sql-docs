@@ -4,9 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: table-view-index
-ms.tgt_pltfrm: ""
+ms.technology:  table-view-index
 ms.topic: conceptual
 helpviewer_keywords: 
   - "online index operations"
@@ -16,7 +14,6 @@ helpviewer_keywords:
   - "temporary mapping index [SQL Server]"
   - "index temporary mappings [SQL Server]"
 ms.assetid: eef0c9d1-790d-46e4-a758-d0bf6742e6ae
-caps.latest.revision: 27
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg

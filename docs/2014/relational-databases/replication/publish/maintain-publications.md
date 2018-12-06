@@ -4,17 +4,13 @@ ms.custom: ""
 ms.date: "03/08/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords: 
   - "maintaining publications [SQL Server replication]"
   - "publications [SQL Server replication], maintaining"
   - "administering replication, publications"
 ms.assetid: d5bf7340-2b0b-4593-965c-de04ae628344
-caps.latest.revision: 13
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg

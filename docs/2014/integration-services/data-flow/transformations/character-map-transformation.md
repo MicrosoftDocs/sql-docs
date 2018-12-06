@@ -4,10 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.dts.designer.charactertrans.f1"
@@ -17,7 +14,6 @@ helpviewer_keywords:
   - "string functions"
   - "Character Map transformation [Integration Services]"
 ms.assetid: e0f50eb6-b893-400f-bb8c-fb3072cc2620
-caps.latest.revision: 41
 author: douglaslMS
 ms.author: douglasl
 manager: craigg

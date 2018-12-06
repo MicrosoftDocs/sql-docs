@@ -4,12 +4,8 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "sql-trace"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "filters [SQL Server], events"
@@ -18,7 +14,6 @@ helpviewer_keywords:
   - "filters [SQL Server], traces"
   - "traces [SQL Server], filters"
 ms.assetid: 019c10ab-68f6-4e40-a5e8-735b2e1270db
-caps.latest.revision: 28
 author: "MashaMSFT"
 ms.author: "mathoma"
 manager: craigg

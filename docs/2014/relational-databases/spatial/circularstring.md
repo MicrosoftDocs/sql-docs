@@ -4,13 +4,9 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
-  - "dbe-spatial"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: 9fe06b03-d98c-4337-9f89-54da98f49f9f
-caps.latest.revision: 26
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
@@ -131,7 +127,7 @@ SELECT 'Perimeter = ' + CAST(@g.STLength() AS NVARCHAR(10));
 Perimeter = 5.65685  
 ```  
   
- Notice that the value for the `CircularString` example is close to 2∏, which is the actual circumference of the circle.  
+ Notice that the value for the `CircularString` example is close to 2???, which is the actual circumference of the circle.  
   
 ### D. Declaring and Instantiating a Geometry Instance with a CircularString in the Same Statement  
  This snippet shows how to declare and instantiate a `geometry` instance with a `CircularString` in the same statement:  

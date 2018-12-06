@@ -4,13 +4,9 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: install
 ms.topic: conceptual
 ms.assetid: 1dd294cc-5b69-4d0c-9005-3e307b75678b
-caps.latest.revision: 36
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
@@ -47,7 +43,7 @@ manager: craigg
 |Client Tools SDK|No|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Books Online|No|  
 |Management Tools - Basic|Remote Only<sup>[2]</sup>|  
-|Management Tools – Complete|Remote Only<sup>[2]</sup>|  
+|Management Tools - Complete|Remote Only<sup>[2]</sup>|  
 |Distributed Replay Controller|No|  
 |Distributed Replay Client|Remote Only<sup>[2]</sup>|  
 |SQL Client Connectivity SDK|Yes|  

@@ -4,10 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords: 
   - "viewing replication properties"
@@ -17,7 +14,6 @@ helpviewer_keywords:
   - "modifying replication properties, push subscriptions"
   - "modifying subscriptions, SQL Server Management Studio"
 ms.assetid: 801d2995-7aa5-4626-906e-c8190758ec71
-caps.latest.revision: 36
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg

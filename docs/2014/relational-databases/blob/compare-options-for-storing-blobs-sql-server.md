@@ -5,8 +5,6 @@ ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.technology: filestream
 ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: 6038697b-36a9-49e8-a02a-2ad9e2e60e5a
 author: douglaslMS
@@ -16,7 +14,7 @@ manager: craigg
 # Compare Options for Storing Blobs (SQL Server)
   Discusses and compares the options that are available for storing files and documents in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-##  <a name="Expectations"></a> Storing Files in the Database – Benefits and Expectations  
+##  <a name="Expectations"></a> Storing Files in the Database - Benefits and Expectations  
  A large percentage of enterprise data is unstructured in nature, and is typically stored as files and documents in file systems. Most of this data is produced, managed and consumed by applications that access the files through Windows APIs. Enterprises typically keep this data in the file system, while storing the related metadata for the files in a relational database.  
   
  Integrating unstructured data into the relational database provides significant benefits. These benefits include the following:  

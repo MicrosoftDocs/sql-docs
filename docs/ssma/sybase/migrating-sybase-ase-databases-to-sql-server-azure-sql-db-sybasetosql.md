@@ -4,15 +4,9 @@ ms.custom: ""
 ms.date: "11/30/2017"
 ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: ssma
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
-applies_to: 
-  - "Azure SQL Database"
-  - "SQL Server"
 ms.assetid: ed7952d4-8331-44d7-bccf-3440e17238b2
-caps.latest.revision: 7
 author: "Shamikg"
 ms.author: "Shamikg"
 manager: craigg
@@ -31,17 +25,17 @@ To successfully migrate objects and data from SAP ASE databases to [!INCLUDE[ssN
   
 3.  [Connect to an instance SQL Server](connecting-to-sql-server-sybasetosql.md) or [Connect to an instance of Azure SQL Database](connecting-to-azure-sql-db-sybasetosql.md).  
   
-4.  [Map SAP ASE database schemas to SQL Server / Azure SQL Database database schemas](http://msdn.microsoft.com/2c927003-c49d-4fe1-8e3e-5b2899166268).  
+4.  [Map SAP ASE database schemas to SQL Server / Azure SQL Database database schemas](https://msdn.microsoft.com/2c927003-c49d-4fe1-8e3e-5b2899166268).  
   
 5.  Optionally, [create assessment reports](assessing-sybase-ase-database-objects-for-conversion-sybasetosql.md) to assess database objects for conversion and estimate the conversion time.  
   
-6.  [Convert SAP ASE database schemas into SQL Server / Azure SQL Database schemas](http://msdn.microsoft.com/509cb65d-2f54-427a-83d7-37919cc4e3e3).  
+6.  [Convert SAP ASE database schemas into SQL Server / Azure SQL Database schemas](https://msdn.microsoft.com/509cb65d-2f54-427a-83d7-37919cc4e3e3).  
   
-7.  [Load the converted database objects into SQL Server / Azure SQL Database](http://msdn.microsoft.com/4c59256f-99a8-4351-9559-a455813dbd06).  
+7.  [Load the converted database objects into SQL Server / Azure SQL Database](https://msdn.microsoft.com/4c59256f-99a8-4351-9559-a455813dbd06).  
   
     Either save a script and run it in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] or Azure SQL Database, or synchronize the database objects.  
   
-8.  [Migrate data to SQL Server / Azure SQL Database](http://msdn.microsoft.com/54a39f5e-9250-4387-a3ae-eae47c799811).  
+8.  [Migrate data to SQL Server / Azure SQL Database](https://msdn.microsoft.com/54a39f5e-9250-4387-a3ae-eae47c799811).  
   
 9. If necessary, update your database applications.  
   

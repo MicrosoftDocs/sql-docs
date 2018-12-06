@@ -5,12 +5,9 @@ ms.date: "03/01/2017"
 ms.prod: sql
 ms.prod_service: "mds"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: master-data-services
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: de90c81c-9e7f-4997-bf96-e22b97b2862c
-caps.latest.revision: 7
 author: leolimsft
 ms.author: lle
 manager: craigg
@@ -32,7 +29,7 @@ manager: craigg
   
 1.  Click a cell in the row that contains transactions you want to view.  
   
-2.  Right-click and from the menu that’s displayed, click **View Transactions** or **View History**.  
+2.  Right-click and from the menu that's displayed, click **View Transactions** or **View History**.  
   
 3.  In the **View Transactions** dialog box, the list of transactions is displayed. To view all annotations associated with a transaction, click a row in the grid.  
   

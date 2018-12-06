@@ -5,9 +5,7 @@ ms.date: "07/17/2017"
 ms.prod: sql
 ms.prod_service: "sql-database"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "DBCC_TRACEON_TSQL"
@@ -20,7 +18,6 @@ helpviewer_keywords:
   - "DBCC TRACEON statement"
   - "trace flags [SQL Server], enabling"
 ms.assetid: 93085324-ebaa-4e38-aac8-5e57b4b0d36d
-caps.latest.revision: 36
 author: uc-msft
 ms.author: umajay
 manager: craigg

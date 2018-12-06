@@ -5,9 +5,7 @@ ms.date: "08/31/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "TABLE_HINT_TSQL"
@@ -36,7 +34,6 @@ helpviewer_keywords:
   - "NOEXPAND table hint"
   - "PAGLOCK table hint"
 ms.assetid: 8bf1316f-c0ef-49d0-90a7-3946bc8e7a89
-caps.latest.revision: 174
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: craigg
@@ -146,7 +143,7 @@ We recommend using commas between table hints.
 NOEXPAND  
 Specifies that any indexed views are not expanded to access underlying tables when the query optimizer processes the query. The query optimizer treats the view like a table with clustered index. NOEXPAND applies only to indexed views. For more information, see Remarks.  
   
-INDEX  **(***index_value* [**,**... *n* ] ) | INDEX =  ( *index_value***)**  
+INDEX  **(**_index\_value_ [**,**... _n_ ] ) | INDEX =  ( _index\_value_**)**  
 The INDEX() syntax specifies the names or IDs of one  or more indexes to be used by the query optimizer when it processes the statement. The alternative INDEX = syntax specifies a single index value. Only one index hint per table can be specified.  
   
 If a clustered index exists, INDEX(0) forces a clustered index scan and INDEX(1) forces a clustered index scan or seek. If no clustered index exists, INDEX(0) forces a table scan and INDEX(1) is interpreted as an error.  
@@ -177,7 +174,7 @@ Specifies insertion of a table column's default value, if any, instead of NULL w
   
 For an example that uses this hint in an INSERT ... SELECT * FROM OPENROWSET(BULK...) statement, see [Keep Nulls or Use Default Values During Bulk Import &#40;SQL Server&#41;](../../relational-databases/import-export/keep-nulls-or-use-default-values-during-bulk-import-sql-server.md).  
   
-FORCESEEK [ **(***index_value***(***index_column_name* [ **,**... *n* ] **))** ]  
+FORCESEEK [ **(**_index\_value_**(**_index\_column\_name_ [ **,**... _n_ ] **))** ]  
 Specifies that the query optimizer use only an index seek operation as the access path to the data in the table or view. 
 
 > [!NOTE]

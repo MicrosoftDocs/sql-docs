@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "03/16/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.component: "sqlxml"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: xml
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 
   - "SQLXMLOLEDB Provider, executing template files"
@@ -19,7 +16,6 @@ helpviewer_keywords:
   - "Mapping Schema property"
   - "XML templates [SQLXML]"
 ms.assetid: 7368c188-607e-459e-8254-8f23352dfa01
-caps.latest.revision: 29
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: craigg
@@ -86,7 +82,7 @@ End Sub
  This is the schema:  
   
 ```  
-<xsd:schema xmlns:xsd='http://www.w3.org/2001/XMLSchema'  
+<xsd:schema xmlns:xsd='https://www.w3.org/2001/XMLSchema'  
    xmlns:sql='urn:schemas-microsoft-com:mapping-schema'>  
  <xsd:element name= 'root' sql:is-constant='1'>   
     <xsd:complexType>  

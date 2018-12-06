@@ -4,12 +4,8 @@ ms.custom: ""
 ms.date: "01/04/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "import-export"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: data-movement
 ms.topic: conceptual
 helpviewer_keywords: 
   - "bulk importing [SQL Server], from Azure blob storage"
@@ -17,7 +13,6 @@ helpviewer_keywords:
   - "BULK INSERT, Azure blob storage"
   - "OPENROWSET, Azure blob storage"
 ms.assetid: f7d85db3-7a93-400e-87af-f56247319ecd
-caps.latest.revision: 2
 author: "CarlRabeler"
 ms.author: "carlrab"
 manager: craigg
@@ -29,6 +24,11 @@ monikerRange: ">=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linu
 The `BULK INSERT` and `OPENROWSET` statements can directly access a file in Azure blob storage. The following examples use data from a CSV (comma separated value) file (named `inv-2017-01-19.csv`), stored in a container (named `Week3`), stored in a storage account (named `newinvoices`). The path to format file can be used, but is not included in these examples. 
 
 Bulk access to Azure blob storage from SQL Server, requires at least [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.
+
+>  [!IMPORTANT]
+>  All the paths to the container and to the files on blob are `CASE SENSITIVE`. If not correct, it might return error like "Cannot bulk load. The file "file.csv" does not exist or you don't have file access rights."
+"
+
 
 ## Create the credential   
    

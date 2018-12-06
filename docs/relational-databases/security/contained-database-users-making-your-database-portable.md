@@ -5,9 +5,7 @@ ms.date: "03/05/2018"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: security
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "contained database, users"
@@ -51,9 +49,9 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
   
  For more information about [!INCLUDE[ssSDS](../../includes/sssds-md.md)] firewall rules, see the following topics:  
   
--   [Azure SQL Database Firewall](http://msdn.microsoft.com/library/azure/ee621782.aspx)  
+-   [Azure SQL Database Firewall](https://msdn.microsoft.com/library/azure/ee621782.aspx)  
   
--   [How to: Configure Firewall Settings (Azure SQL Database)](http://msdn.microsoft.com/library/azure/jj553530.aspx)  
+-   [How to: Configure Firewall Settings (Azure SQL Database)](https://msdn.microsoft.com/library/azure/jj553530.aspx)  
   
 -   [sp_set_firewall_rule &#40;Azure SQL Database&#41;](../../relational-databases/system-stored-procedures/sp-set-firewall-rule-azure-sql-database.md)  
   

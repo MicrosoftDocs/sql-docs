@@ -4,21 +4,16 @@ description: A quick sample that will help you get started with the new syntax i
 ms.date: "04/19/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.component: "graphs"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.custom: ""
 ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 helpviewer_keywords: 
   - "SQL graph"
   - "SQL graph, tsql reference"
 ms.assetid: 
-caps.latest.revision: 1
-author: "shkale-msft"
-ms.author: "shkale"
+author: shkale-msft
+ms.author: shkale
 manager: craigg
 monikerRange: "=azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---

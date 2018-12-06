@@ -4,10 +4,7 @@ ms.custom: ""
 ms.date: "03/08/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords: 
   - "security [SQL Server replication], best practices"
@@ -15,7 +12,6 @@ helpviewer_keywords:
   - "authentication [SQL Server replication]"
   - "Internet [SQL Server replication], security"
 ms.assetid: 1ab2635d-0992-4c99-b17d-041d02ec9a7c
-caps.latest.revision: 41
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg

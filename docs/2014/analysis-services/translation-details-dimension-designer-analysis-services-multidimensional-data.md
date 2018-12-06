@@ -4,15 +4,12 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.asvs.dimensiondesigner.translations.translationpane.tranlationdetails.f1"
 ms.assetid: 0aa61df3-f2b0-4703-a63b-124da672dcc3
-caps.latest.revision: 31
 author: minewiskan
 ms.author: owend
 manager: craigg

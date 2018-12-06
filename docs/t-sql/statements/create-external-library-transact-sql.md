@@ -4,9 +4,7 @@ ms.custom: ""
 ms.date: "03/05/2018"
 ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "CREATE EXTERNAL LIBRARY"
@@ -37,7 +35,7 @@ Currently only the R language and Windows platform are supported. Support for Py
 ```text
 CREATE EXTERNAL LIBRARY library_name  
     [ AUTHORIZATION owner_name ]  
-FROM <file_spec> [,…2]  
+FROM <file_spec> [,...2]  
 WITH ( LANGUAGE = 'R' )  
 [ ; ]  
 
@@ -88,7 +86,7 @@ This option is useful if you need to create a library or alter an existing libra
 
 **PLATFORM = WINDOWS**
 
-Specifies the platform for the content of the library. The value defaults to the host platform on which SQL Server is running. Therefore, the user doesn’t have to specify the value. It is required in case where multiple platforms are supported, or the user needs to specify a different platform. 
+Specifies the platform for the content of the library. The value defaults to the host platform on which SQL Server is running. Therefore, the user doesn't have to specify the value. It is required in case where multiple platforms are supported, or the user needs to specify a different platform. 
 
 in SQL Server 2017, Windows is the only supported platform.
 

@@ -5,9 +5,7 @@ ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: connectivity
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 apiname: 
   - "SQLGetFunctions"
@@ -19,7 +17,6 @@ f1_keywords:
 helpviewer_keywords: 
   - "SQLGetFunctions function [ODBC]"
 ms.assetid: 0451d2f9-0f4f-46ba-b252-670956a52183
-caps.latest.revision: 23
 author: MightyPen
 ms.author: genemi
 manager: craigg
@@ -80,7 +77,7 @@ SQLRETURN SQLGetFunctions(
 ## Comments  
  **SQLGetFunctions** always returns that **SQLGetFunctions**, **SQLDataSources**, and **SQLDrivers** are supported. It does this because these functions are implemented in the Driver Manager. The Driver Manager will map an ANSI function to the corresponding Unicode function if the Unicode function exists and will map a Unicode function to the corresponding ANSI function if the ANSI function exists. For information about how applications use **SQLGetFunctions**, see [Interface Conformance Levels](../../../odbc/reference/develop-app/interface-conformance-levels.md).  
   
- The following is a list of valid values for *FunctionId* for functions that conform to the ISO 92 standards–compliance level:  
+ The following is a list of valid values for *FunctionId* for functions that conform to the ISO 92 standards-compliance level:  
   
 |FunctionId Value|FunctionId Value|  
 |----------|----------|  
@@ -106,14 +103,14 @@ SQLRETURN SQLGetFunctions(
 |SQL_API_SQLGETCURSORNAME|SQL_API_SQLSETSTMTATTR|  
 |SQL_API_SQLGETDATA| |  
   
- The following is a list of valid values for *FunctionId* for functions conforming to the Open Group standards–compliance level:  
+ The following is a list of valid values for *FunctionId* for functions conforming to the Open Group standards-compliance level:  
   
 |FunctionId Value|FunctionId Value|  
 |-|-|  
 |SQL_API_SQLCOLUMNS|SQL_API_SQLSTATISTICS|  
 |SQL_API_SQLSPECIALCOLUMNS|SQL_API_SQLTABLES|  
   
- The following is a list of valid values for *FunctionId* for functions conforming to the ODBC standards–compliance level.  
+ The following is a list of valid values for *FunctionId* for functions conforming to the ODBC standards-compliance level.  
   
 |FunctionId Value|FunctionId Value|  
 |-|-|  

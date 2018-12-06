@@ -4,10 +4,8 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "reporting-services-native"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "permissions [Reporting Services], SharePoint integrated mode"
@@ -18,7 +16,6 @@ helpviewer_keywords:
   - "security [Reporting Services], predefined roles"
   - "security [Reporting Services], SharePoint integrated mode"
 ms.assetid: 429f1dbb-183a-4097-bd1b-693da9fe7a36
-caps.latest.revision: 18
 author: markingmyname
 ms.author: maghan
 manager: craigg
@@ -47,9 +44,9 @@ manager: craigg
   
 |[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] Native mode|SharePoint|  
 |---------------------------------------------|----------------|  
-|**Role:** For example “Content Manager”.|**Group:** For example the default “Viewers” group.|  
-|---|**Permission level group:** For example “View Only” for the “Viewers” group.|  
-|**Tasks:** for example “Manage Reports”.|**Permissions:** For example, within the “View Only” group there are list related permissions of view items, view versions, and view application pages.|  
+|**Role:** For example "Content Manager".|**Group:** For example the default "Viewers" group.|  
+|---|**Permission level group:** For example "View Only" for the "Viewers" group.|  
+|**Tasks:** for example "Manage Reports".|**Permissions:** For example, within the "View Only" group there are list related permissions of view items, view versions, and view application pages.|  
   
  For more information on SharePoint permissions, see [Permission levels and permissions](http://office.microsoft.com/windows-sharepoint-services-help/permission-levels-and-permissions-HA010100149.aspx) and [Determine permission levels and groups in SharePoint 2013](http://technet.microsoft.com/library/cc262690.aspx).  
   

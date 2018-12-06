@@ -5,9 +5,7 @@ ms.date: "04/13/2017"
 ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: configuration
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 keywords: 
   - "server configuration (SQL Server)"
@@ -29,7 +27,6 @@ helpviewer_keywords:
   - "server configuration [SQL Server]"
   - "administering SQL Server, configuration options"
 ms.assetid: 9f38eba6-39b1-4f1d-ba24-ee4f7e2bc969
-caps.latest.revision: 128
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg

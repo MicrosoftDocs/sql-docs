@@ -4,10 +4,8 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "SQL12.ASVS.SSMSIMBI.SERVERPROPERTIES.F1"
@@ -15,7 +13,6 @@ f1_keywords:
 helpviewer_keywords: 
   - "Analysis Server Properties dialog box"
 ms.assetid: b01ec658-c191-49c9-a6cb-549b21a368ab
-caps.latest.revision: 21
 author: minewiskan
 ms.author: owend
 manager: craigg
@@ -32,7 +29,7 @@ manager: craigg
   
 -   **1103** is the default compatibility level for deployment modes 1 or 2, for installations supporting Tabular mode or [!INCLUDE[ssGeminiShort](../includes/ssgeminishort-md.md)].  
   
- The server returns this value when a client supporting the namespace requests DISCOVER_XML_METADATA. See [DISCOVER_XML_METADATA Rowset](schema-rowsets/xml/discover-xml-metadata-rowset.md) for more details.  
+ The server returns this value when a client supporting the namespace requests DISCOVER_XML_METADATA. See [DISCOVER_XML_METADATA Rowset](https://docs.microsoft.com/bi-reference/schema-rowsets/xml/discover-xml-metadata-rowset) for more details.  
   
 ## General Properties  
  Use this page to set the basic and advanced general properties, such as folder locations and network settings, for an [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] instance.  

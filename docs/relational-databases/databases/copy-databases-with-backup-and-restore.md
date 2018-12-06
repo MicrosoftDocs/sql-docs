@@ -4,12 +4,8 @@ ms.custom: ""
 ms.date: "07/15/2016"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "databases"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: backup-restore
 ms.topic: conceptual
 helpviewer_keywords: 
   - "full-text search [SQL Server], back up and restore"
@@ -20,7 +16,6 @@ helpviewer_keywords:
   - "backing up databases [SQL Server], copying databases"
   - "database backups [SQL Server], copying databases"
 ms.assetid: b93e9701-72a0-408e-958c-dc196872c040
-caps.latest.revision: 61
 author: "stevestein"
 ms.author: "sstein"
 manager: craigg

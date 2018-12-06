@@ -4,13 +4,10 @@ ms.custom: ""
 ms.date: "03/07/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "reporting-services-native"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: 2f69dcd3-cd6d-45a9-a62a-ba6f5f3179d8
-caps.latest.revision: 6
 author: markingmyname
 ms.author: maghan
 manager: craigg
@@ -41,7 +38,7 @@ manager: craigg
   
 7.  Click **Next** twice, then click **Finish** to close the **Report Wizard**.  
   
-     You’ve now created the .rdlc file. The file opens in Report Designer. The tablix you designed is now displayed in the design surface.  
+     You've now created the .rdlc file. The file opens in Report Designer. The tablix you designed is now displayed in the design surface.  
   
 8.  Save the .rdlc file.  
   

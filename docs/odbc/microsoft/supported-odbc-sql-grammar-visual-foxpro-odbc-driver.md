@@ -5,9 +5,7 @@ ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: connectivity
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "native Visual FoxPro language syntax [ODBC]"
@@ -18,7 +16,6 @@ helpviewer_keywords:
   - "Visual FoxPro ODBC driver [ODBC], native Visual FoxPro language syntax"
   - "FoxPro ODBC driver [ODBC], native Visual FoxPro language syntax"
 ms.assetid: f41a38c2-e22e-4c65-a32e-9a6777435160
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg

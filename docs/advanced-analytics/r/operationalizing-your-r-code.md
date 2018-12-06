@@ -37,7 +37,7 @@ Of course, converting your R code in SQL is easier if some optimizations are don
 
 + [Converting R code for use in R Services](converting-r-code-for-use-in-sql-server.md)
 
-+ [Generating an R stored procedure by using sqlrutils](generating-an-r-stored-procedure-for-r-code-using-the-sqlrutils-package.md)
++ [Use sqlrutils helper functions](ref-r-sqlrutils.md)
 
 ## Integrate R and Python with applications
 
@@ -65,7 +65,7 @@ See these solution templates for examples of how to integrate scoring in an appl
 
 Although the open source R language is known to have limitations, the RevoScaleR package APIs can operate on large datasets and benefit from multi-threaded, multi-core, multi-process in-database computations.
 
-If your R solution uses complex aggregations or involves large datasets, you can leverage SQL Server’s highly efficient in-memory aggregations and columnstore indexes, and let the R code handle the statistical computations and scoring.
+If your R solution uses complex aggregations or involves large datasets, you can leverage SQL Server's highly efficient in-memory aggregations and columnstore indexes, and let the R code handle the statistical computations and scoring.
 
 For more information about how to improve performance in SQL Server Machine Learning, see:
 

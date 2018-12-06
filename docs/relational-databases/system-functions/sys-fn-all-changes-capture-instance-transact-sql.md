@@ -4,14 +4,9 @@ ms.custom: ""
 ms.date: "06/02/2016"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "system-functions"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
-applies_to: 
-  - "SQL Server (starting with 2008)"
 f1_keywords: 
   - "fn_all_changes"
   - "sys.fn_all_changes"
@@ -23,7 +18,6 @@ helpviewer_keywords:
   - "fn_all_changes_<capture_instance>"
   - "sys.fn_all_changes_<capture_instance>"
 ms.assetid: 564fae96-b88c-4f22-9338-26ec168ba6f5
-caps.latest.revision: 15
 author: "rothja"
 ms.author: "jroth"
 manager: craigg
@@ -67,7 +61,7 @@ fn_all_changes_<capture_instance> ('start_time' ,'end_time', '<row_filter_option
   
 -   @closed_high_end_point = 0  
   
-     Only rows in the cdc.capture_instance_CT change table that have have an associated commit time strictly less than end_time are included in the result set.  
+     Only rows in the cdc.capture_instance_CT change table that have an associated commit time strictly less than end_time are included in the result set.  
   
  If a value of NULL is supplied for this argument, the high endpoint of the query range will correspond to the high endpoint of the valid range for the capture instance.  
   
@@ -109,7 +103,7 @@ fn_all_changes_<capture_instance> ('start_time' ,'end_time', '<row_filter_option
   
  Bit flags are then appended to the result set for each column that is identified in the @update_flag_list parameter. For the **all changes** wrapper, the bit flags will always be NULL if __CDC_OPERATION is 'D', 'I', or 'UO'. If \__CDC_OPERATION is 'UN', the flag will be set to 1 or 0, depending on whether the update operation caused a change to the column.  
   
- The change data capture configuration template 'Instantiate CDC Wrapper TVFs for Schema' shows how to use the sp_cdc_generate_wrapper_function stored procedure to obtain CREATE scripts for all of the wrapper functions for a schema’s defined query functions. The template then creates those scripts. For more information about templates, see [Template Explorer](../../ssms/template/template-explorer.md).  
+ The change data capture configuration template 'Instantiate CDC Wrapper TVFs for Schema' shows how to use the sp_cdc_generate_wrapper_function stored procedure to obtain CREATE scripts for all of the wrapper functions for a schema's defined query functions. The template then creates those scripts. For more information about templates, see [Template Explorer](../../ssms/template/template-explorer.md).  
   
 ## See Also  
  [sys.sp_cdc_generate_wrapper_function &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-generate-wrapper-function-transact-sql.md)   

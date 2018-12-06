@@ -1,15 +1,11 @@
-﻿---
+---
 title: "Estimate the Size of a Nonclustered Index | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/13/2017"
 ms.prod: sql  
 ms.reviewer: ""
-ms.suite: "SQL"
 ms.prod_service: database-engine, sql-database
-ms.component: indexes
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: supportability
 ms.topic: conceptual
 helpviewer_keywords: 
   - "space allocation [SQL Server], index size"
@@ -21,7 +17,6 @@ helpviewer_keywords:
   - "designing databases [SQL Server], estimating size"
   - "calculating table size"
 ms.assetid: c183b0e4-ef4c-4bfc-8575-5ac219c25b0a
-caps.latest.revision: 40
 author: "stevestein"
 ms.author: "sstein"
 manager: craigg

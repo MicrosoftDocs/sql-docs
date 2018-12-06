@@ -5,14 +5,11 @@ ms.date: "03/06/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: native-client
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 
   - "table-valued parameters (OLE DB), API support (properties)"
 ms.assetid: b9c4e6ed-fe4f-4ef8-9bc8-784d80d44039
-caps.latest.revision: 19
 author: MightyPen
 ms.author: genemi
 manager: craigg
@@ -25,7 +22,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   This topic provides information about OLE DB properties and property sets that are associated with table-valued parameter rowset objects.  
   
 ## Properties  
- The following is the list of properties exposed through the IRowsetInfo::GetPropeties method on table-valued parameter rowset objects. Note that all table-valued parameter rowset properties are read-only. Therefore, attempting to set any of the properties through IOpenRowset::OpenRowset or ITableDefinitionWithConstraints::CreateTableWithConstraints methods to their non-default values will result in an error, and no object will be created.  
+ The following is the list of properties exposed through the IRowsetInfo::GetProperties method on table-valued parameter rowset objects. Note that all table-valued parameter rowset properties are read-only. Therefore, attempting to set any of the properties through IOpenRowset::OpenRowset or ITableDefinitionWithConstraints::CreateTableWithConstraints methods to their non-default values will result in an error, and no object will be created.  
   
  Properties not implemented in the table-valued parameter rowset object are not listed here. For a complete list of properties, see the OLE DB documentation in Windows Data Access Components.  
   
@@ -83,7 +80,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 |SSPROP_COL_COMPUTED|R/W: Read/Write<br /><br /> Default: VARIANT_FALSE<br /><br /> Type: VT_BOOL<br /><br /> Description: When set to VARIANT_TRUE, indicates that the column is a computed column. VARIANT_FALSE indicates that it is not a computed column.|  
   
 ### DBPROPSET_SQLSERVERPARAMETER  
- These properties are read by the consumer while discovering the table-valued parameter type information in calls to ISSCommandWithParamters::GetParameterProperties and set by the consumer while setting specific properties about the table-valued parameter through ISSCommandWithParameters::SetParameterProperties.  
+ These properties are read by the consumer while discovering the table-valued parameter type information in calls to ISSCommandWithParameters::GetParameterProperties and set by the consumer while setting specific properties about the table-valued parameter through ISSCommandWithParameters::SetParameterProperties.  
   
  The following table provides detailed descriptions of these properties.  
   

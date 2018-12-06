@@ -4,17 +4,14 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "integration-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.dts.designer.wmieventwatcher.wmiquery.f1"
 helpviewer_keywords: 
   - "WMI Event Watcher Task Editor"
 ms.assetid: 525f3de7-a021-4e52-9939-3a83c88f131a
-caps.latest.revision: 37
 author: douglaslms
 ms.author: douglasl
 manager: craigg
@@ -26,7 +23,7 @@ manager: craigg
   
 ## Static Options  
  **WMIConnectionName**  
- Select a WMI connection manager in the list, or click \<**New WMI Connection…**> to create a new connection manager.  
+ Select a WMI connection manager in the list, or click \<**New WMI Connection...**> to create a new connection manager.  
   
  **Related Topics:** [WMI Connection Manager](connection-manager/wmi-connection-manager.md), [WMI Connection Manager Editor](../../2014/integration-services/wmi-connection-manager-editor.md)  
   
@@ -61,7 +58,7 @@ manager: craigg
   
 ### WQLQuerySource = Direct input  
  **WQLQuerySource**  
- Provide a query, or click the ellipsis button (…) and enter a query using the **WQL Query** dialog box.  
+ Provide a query, or click the ellipsis button (...) and enter a query using the **WQL Query** dialog box.  
   
 ### WQLQuerySource = File connection  
  **WQLQuerySource**  

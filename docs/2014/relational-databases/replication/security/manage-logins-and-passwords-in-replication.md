@@ -4,10 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords: 
   - "logins [SQL Server replication]"
@@ -16,7 +13,6 @@ helpviewer_keywords:
   - "passwords [SQL Server replication]"
   - "security [SQL Server replication], passwords"
 ms.assetid: 277759f9-b0da-4524-8abe-0460cdab69ec
-caps.latest.revision: 34
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg

@@ -5,9 +5,7 @@ ms.date: "03/06/2017"
 ms.prod: sql
 ms.prod_service: "sql-database"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "OPEN SYMMETRIC KEY"
@@ -18,7 +16,6 @@ helpviewer_keywords:
   - "symmetric keys [SQL Server], opening"
   - "OPEN SYMMETRIC KEY statement"
 ms.assetid: ff019a7c-c373-46c7-ac43-ffb7e2ee60b3
-caps.latest.revision: 34
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg

@@ -4,12 +4,8 @@ ms.custom: ""
 ms.date: "04/28/2017"
 ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: high-availability
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
-applies_to:
-  - "SQL Server 2016"
 helpviewer_keywords:
   - "AlwaysOn"
   - "DB_FAILOVER"
@@ -17,7 +13,6 @@ helpviewer_keywords:
   - "High Availability"
   - "SQL Server"
 ms.assetid: d74afd28-25c3-48a1-bc3f-e353bee615c2
-caps.latest.revision: 4
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
@@ -159,7 +154,7 @@ Explanation of the fields:
 |database_name	|The name of the database reporting the fault.
 |database_replica_id	|The ID of the availability replica database.
 |failover_ready_replicas	|The number of automatic failover secondary replicas that are synchronized.
-|fault_type 	| The fault id reported. Possible values:  <br/> 0 - NONE <br/>1 - Unknown<br/>2 – Shutdown
+|fault_type 	| The fault id reported. Possible values:  <br/> 0 - NONE <br/>1 - Unknown<br/>2 - Shutdown
 |is_critical	| This  value should always return true for the XEvent as of SQL Server 2016.
 
 

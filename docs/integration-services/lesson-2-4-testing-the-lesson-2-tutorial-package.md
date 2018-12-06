@@ -5,14 +5,9 @@ ms.date: "03/01/2017"
 ms.prod: sql
 ms.prod_service: "integration-services"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: integration-services
-ms.tgt_pltfrm: ""
 ms.topic: tutorial
-applies_to: 
-  - "SQL Server 2016"
 ms.assetid: 0e8c0a25-8f79-41df-8ed2-f82a74b129cd
-caps.latest.revision: 31
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: craigg
@@ -23,7 +18,7 @@ With the Foreach Loop container and the Flat File connection manager now configu
 Use the following procedure to test the new looping functionality that you have added to your package.  
   
 > [!NOTE]  
-> If you ran the package from Lesson 1, you will need to delete the records from dbo.FactCurrency in AdventureWorksDW2012 before you run the package from this lesson or the package will fail with errors indicating a Violation of Primary Key constraint. You will receive the same errors if you run the package by selecting Debug/Start Debugging (or press F5) because both Lesson 1 and Lesson 2 will run. Lesson 2 will attempt to insert records already inserted in Lesson 1.  
+> If you ran the package from Lesson 1, you will need to delete the records from dbo.NewFactCurrencyRate in AdventureWorksDW2012 before you run the package from this lesson or the package will fail with errors indicating a Violation of Primary Key constraint. You will receive the same errors if you run the package by selecting Debug/Start Debugging (or press F5) because both Lesson 1 and Lesson 2 will run. Lesson 2 will attempt to insert records already inserted in Lesson 1.  
   
 ## Checking the Package Layout  
 Before you test the package you should verify that the control and data flows in the Lesson 2 package contains the objects shown in the following diagrams. The data flow should be identical to the data flow in lesson 1.  

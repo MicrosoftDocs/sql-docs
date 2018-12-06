@@ -4,14 +4,9 @@ ms.custom: ""
 ms.date: "02/21/2016"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.component: "system-stored-procedures"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
-applies_to: 
-  - "SQL Server (starting with 2016 CTP3)"
 f1_keywords: 
   - "sql13.TSQLSysNoExpandPortal.f1"
   - "sql13.TSQLSysNoExpandPortal.f1_TSQL"
@@ -38,7 +33,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
   
 |Category|Description|  
 |--------------|-----------------|  
-|[Active Geo-Replication Stored Procedures](http://msdn.microsoft.com/library/81658ee4-4422-4d73-bf7a-86a07422cb0d)|Used to manage to manage Active Geo-Replication configurations in Azure SQL Database|  
+|[Active Geo-Replication Stored Procedures](https://msdn.microsoft.com/library/81658ee4-4422-4d73-bf7a-86a07422cb0d)|Used to manage to manage Active Geo-Replication configurations in Azure SQL Database|  
 |[Catalog Stored Procedures](../../relational-databases/system-stored-procedures/catalog-stored-procedures-transact-sql.md)|Used to implement ODBC data dictionary functions and isolate ODBC applications from changes to underlying system tables.|  
 |[Change Data Capture Stored Procedures](../../relational-databases/system-stored-procedures/change-data-capture-stored-procedures-transact-sql.md)|Used to enable, disable, or report on change data capture objects.|  
 |[Cursor Stored Procedures](../../relational-databases/system-stored-procedures/cursor-stored-procedures-transact-sql.md)|Used to implements cursor variable functionality.|  
@@ -47,7 +42,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
 |[Database Mail Stored Procedures &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-mail-stored-procedures-transact-sql.md)|Used to perform e-mail operations from within an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |[Database Maintenance Plan Stored Procedures](../../relational-databases/system-stored-procedures/database-maintenance-plan-stored-procedures-transact-sql.md)|Used to set up core maintenance tasks that are required to manage database performance.|  
 |[Distributed Queries Stored Procedures](../../relational-databases/system-stored-procedures/distributed-queries-stored-procedures-transact-sql.md)|Used to implement and manage distributed queries.|  
-|[Filestream and FileTable Stored Procedures &#40;Transact-SQL&#41;](http://msdn.microsoft.com/library/54beca08-c012-4ebd-aa68-d8a10d221b64)|Used to configure and manage the FILESTREAM and FileTable features.|  
+|[Filestream and FileTable Stored Procedures &#40;Transact-SQL&#41;](https://msdn.microsoft.com/library/54beca08-c012-4ebd-aa68-d8a10d221b64)|Used to configure and manage the FILESTREAM and FileTable features.|  
 |[Firewall Rules Stored Procedures &#40;Azure SQL Database&#41;](../../relational-databases/system-stored-procedures/firewall-rules-stored-procedures-azure-sql-database.md)|Used to configure the Azure SQL Database firewall.|  
 |[Full-Text Search Stored Procedures](../../relational-databases/system-stored-procedures/full-text-search-and-semantic-search-stored-procedures-transact-sql.md)|Used to implement and query full-text indexes.|  
 |[General Extended Stored Procedures](../../relational-databases/system-stored-procedures/general-extended-stored-procedures-transact-sql.md)|Used to provide an interface from an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to external programs for various maintenance activities.|  
@@ -55,16 +50,16 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
 |[Management Data Warehouse Stored Procedures &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/management-data-warehouse-stored-procedures-transact-sql.md)|Used to configure the management data warehouse.|  
 |[OLE Automation Stored Procedures](../../relational-databases/system-stored-procedures/ole-automation-stored-procedures-transact-sql.md)|Used to enable standard Automation objects for use within a standard [!INCLUDE[tsql](../../includes/tsql-md.md)] batch.|  
 |[Policy-Based Management Stored Procedures](../../relational-databases/system-stored-procedures/policy-based-management-stored-procedures-transact-sql.md)|Used for Policy-Based Management.|  
-|[PolyBase stored procedures](http://msdn.microsoft.com/library/a522b303-bd1b-410b-92d1-29c950a15ede)|Add or remove a computer from a PolyBase scale-out group.|  
+|[PolyBase stored procedures](https://msdn.microsoft.com/library/a522b303-bd1b-410b-92d1-29c950a15ede)|Add or remove a computer from a PolyBase scale-out group.|  
 |[Query Store Stored Procedures &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/query-store-stored-procedures-transact-sql.md)|Used to tune performance.|  
 |[Replication Stored Procedures](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)|Used to manage replication.|  
 |[Security Stored Procedures](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)|Used to manage security.|  
-|[Snapshot Backup Stored Procedures](http://msdn.microsoft.com/library/c278db87-5770-4037-a1e6-b9853a943339)|Used to delete the FILE_SNAPSHOT backup along with all of its snapshots or to delete an individual backup file snapshot.|  
-|[Spatial Index Stored Procedures](http://msdn.microsoft.com/library/1be0f34e-3d5a-4a1f-9299-bd482362ec7a)|Used to analyze and improve the indexing performance of spatial indexes.|  
+|[Snapshot Backup Stored Procedures](https://msdn.microsoft.com/library/c278db87-5770-4037-a1e6-b9853a943339)|Used to delete the FILE_SNAPSHOT backup along with all of its snapshots or to delete an individual backup file snapshot.|  
+|[Spatial Index Stored Procedures](https://msdn.microsoft.com/library/1be0f34e-3d5a-4a1f-9299-bd482362ec7a)|Used to analyze and improve the indexing performance of spatial indexes.|  
 |[SQL Server Agent Stored Procedures](../../relational-databases/system-stored-procedures/sql-server-agent-stored-procedures-transact-sql.md)|Used by [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] to monitor performance and activity.|  
 |[SQL Server Profiler Stored Procedures](../../relational-databases/system-stored-procedures/sql-server-profiler-stored-procedures-transact-sql.md)|Used by [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent to manage scheduled and event-driven activities.|  
 |[Stretch Database Stored Procedures](../../relational-databases/system-stored-procedures/stretch-database-extended-stored-procedures-transact-sql.md)|Used to manage stretch databases.|  
-|[Temporal Tables Stored Procedures](http://msdn.microsoft.com/library/f28ca74e-7876-4592-b794-e78e3690fff6)|Use for temporal tables|  
+|[Temporal Tables Stored Procedures](https://msdn.microsoft.com/library/f28ca74e-7876-4592-b794-e78e3690fff6)|Use for temporal tables|  
 |[XML Stored Procedures](../../relational-databases/system-stored-procedures/xml-stored-procedures-transact-sql.md)|Used for XML text management.|  
   
 > [!NOTE]  

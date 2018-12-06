@@ -4,7 +4,6 @@ ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
 ms.technology: report-design
-ms.suite: pro-bi
 
 
 ms.topic: conceptual
@@ -28,7 +27,7 @@ ms.author: maggies
   
 1.  Open a report in **Design** view.  
   
-2.  Select the data region on the design surface, and then right-click *\<data region>***Properties**. For a gauge, select **Gauge Panel Properties**. The *\<data region>***Properties** dialog box opens.  
+2.  Select the data region on the design surface, and then right-click _\<data region>_**Properties**. For a gauge, select **Gauge Panel Properties**. The _\<data region>_**Properties** dialog box opens.  
   
     > [!NOTE]  
     >  On a Tablix data region, right-click the corner cell or a row or column handle, and then click **Tablix Properties**.  

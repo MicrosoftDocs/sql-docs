@@ -4,10 +4,7 @@ ms.custom: ""
 ms.date: "07/24/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: supportability
 ms.topic: conceptual
 topic_type: 
   - "apiref"
@@ -15,7 +12,6 @@ helpviewer_keywords:
   - "Broker:Message Drop event class"
   - "Broker:Message Undeliverable event class"
 ms.assetid: f532b7c9-ca34-4bac-8dc3-53f9895fd6af
-caps.latest.revision: 24
 author: stevestein
 ms.author: sstein
 manager: craigg

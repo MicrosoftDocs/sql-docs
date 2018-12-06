@@ -4,9 +4,7 @@ ms.custom: ""
 ms.date: "08/09/2016"
 ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "sys.dm_resource_governor_resource_pool_volumes_TSQL"
@@ -19,7 +17,6 @@ helpviewer_keywords:
   - "dm_resource_governor_resource_pool_volumes"
   - "sys.dm_resource_governor_resource_pool_volumes"
 ms.assetid: fa692e56-c561-4533-97c5-bc12c600553f
-caps.latest.revision: 6
 author: stevestein
 ms.author: sstein
 manager: craigg

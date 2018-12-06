@@ -16,7 +16,7 @@ manager: kfile
   
  To represent the object hierarchy, ASSL uses the following XML conventions:  
   
--   All objects and properties are represented as elements, except for standard XML attributes such as ‘xml:lang’.  
+-   All objects and properties are represented as elements, except for standard XML attributes such as 'xml:lang'.  
   
 -   Both element names and enumeration values follow the Microsoft .NET Framework naming convention of Pascal casing with no underscores.  
   
@@ -29,7 +29,7 @@ manager: kfile
   
  `<Database>`  
   
- `…`  
+ `...`  
   
  `<Dimensions>`  
   
@@ -58,7 +58,7 @@ manager: kfile
   
  `<Cubes>`  
   
- `<Cube xsi:type=”RegularCube”>`  
+ `<Cube xsi:type="RegularCube">`  
   
  `<Name>Sales</Name>`  
   
@@ -66,7 +66,7 @@ manager: kfile
   
  `</Cube>`  
   
- `<Cube xsi:type=”VirtualCube”>`  
+ `<Cube xsi:type="VirtualCube">`  
   
  `<Name>SalesAndInventory</Name>`  
   
@@ -101,10 +101,10 @@ manager: kfile
  Analysis Services uses the following standard XML Schema definition language (XSD) data types:  
   
  **Int**  
- An integer value in the range of -231 to 231 – 1.  
+ An integer value in the range of -231 to 231 - 1.  
   
  **Long**  
- An integer value in range of -263 to 263 – 1.  
+ An integer value in range of -263 to 263 - 1.  
   
  **String**  
  A string value that conforms to the following global rules:  

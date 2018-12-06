@@ -5,9 +5,7 @@ ms.date: "07/30/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "DAY_TSQL"
@@ -22,7 +20,6 @@ helpviewer_keywords:
   - "functions [SQL Server], date and time"
   - "dateparts [SQL Server], day"
 ms.assetid: 2f4410ea-fd3e-4d69-ac4b-3b0091a084bc
-caps.latest.revision: 41
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg

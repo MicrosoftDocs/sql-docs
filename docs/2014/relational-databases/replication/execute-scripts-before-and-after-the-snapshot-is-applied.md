@@ -4,10 +4,7 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords: 
   - "snapshots [SQL Server replication], scripts"
@@ -15,7 +12,6 @@ helpviewer_keywords:
   - "snapshot replication [SQL Server], scripts"
   - "scripts [SQL Server replication]"
 ms.assetid: 9a6872c2-9bed-477f-9d2f-332d640edcf2
-caps.latest.revision: 34
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg

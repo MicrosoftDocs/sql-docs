@@ -4,16 +4,12 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "xml"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: xml
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "xs:QName type"
 ms.assetid: 72c5bfde-b0b2-4372-bf36-97ba930dea06
-caps.latest.revision: 9
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: craigg
@@ -27,7 +23,7 @@ manager: craigg
   
 ```  
 CREATE XML SCHEMA COLLECTION QNameLimitation1 AS N'  
-<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">  
+<xs:schema xmlns:xs="https://www.w3.org/2001/XMLSchema">  
     <xs:simpleType name="myUnion">  
         <xs:union memberTypes="xs:int xs:QName"/>  
     </xs:simpleType>  
@@ -35,7 +31,7 @@ CREATE XML SCHEMA COLLECTION QNameLimitation1 AS N'
 GO  
   
 CREATE XML SCHEMA COLLECTION QNameLimitation2 AS N'  
-<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">  
+<xs:schema xmlns:xs="https://www.w3.org/2001/XMLSchema">  
     <xs:simpleType name="myUnion">  
         <xs:union memberTypes="xs:integer">  
    <xs:simpleType>  

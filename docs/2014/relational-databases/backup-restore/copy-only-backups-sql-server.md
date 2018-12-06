@@ -4,16 +4,13 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: backup-restore
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "copy-only backups [SQL Server]"
   - "COPY_ONLY option [BACKUP statement]"
   - "backups [SQL Server], copy-only backups"
 ms.assetid: f82d6918-a5a7-4af8-868e-4247f5b00c52
-caps.latest.revision: 46
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
@@ -49,14 +46,14 @@ manager: craigg
   
 -   For a copy-only full backup:  
   
-     BACKUP DATABASE *database_name* TO \<backup_device*>* … WITH COPY_ONLY …  
+     BACKUP DATABASE *database_name* TO \<backup_device*>* ... WITH COPY_ONLY ...  
   
     > [!NOTE]  
     >  COPY_ONLY has no effect when specified with the DIFFERENTIAL option.  
   
 -   For a copy-only log backup:  
   
-     BACKUP LOG *database_name* TO *\<*backup_device*>* … WITH COPY_ONLY …  
+     BACKUP LOG *database_name* TO *\<*backup_device*>* ... WITH COPY_ONLY ...  
   
 ###  <a name="PowerShellProcedure"></a> Using PowerShell  
   

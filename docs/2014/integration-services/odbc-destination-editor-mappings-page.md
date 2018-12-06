@@ -4,15 +4,12 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "integration-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.ssis.designer.odbcdest.columns.f1"
 ms.assetid: 8fa05dd4-316c-44ed-8383-e6e9ea1d3994
-caps.latest.revision: 5
 author: douglaslms
 ms.author: douglasl
 manager: craigg

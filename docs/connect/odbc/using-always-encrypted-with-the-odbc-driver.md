@@ -1,16 +1,11 @@
 ---
 title: "Using Always Encrypted with the ODBC Driver for SQL Server | Microsoft Docs"
 ms.custom: ""
-ms.date: "10/01/2018"
+ms.date: 09/01/2018
 ms.prod: sql
-ms.prod_service: connectivity
-ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: connectivity
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: 02e306b8-9dde-4846-8d64-c528e2ffe479
-caps.latest.revision: 3
 ms.author: "v-chojas"
 manager: craigg
 author: MightyPen
@@ -364,9 +359,9 @@ Azure Key Vault is a convenient option to store and manage column master keys fo
 
 The driver supports authenticating to Azure Key Vault using the following credential types:
 
-- Username/Password – with this method, the credentials are the name of an Azure Active Directory user and its password.
+- Username/Password - with this method, the credentials are the name of an Azure Active Directory user and its password.
 
-- Client ID/Secret – with this method, the credentials are an application client ID and an application secret.
+- Client ID/Secret - with this method, the credentials are an application client ID and an application secret.
 
 To allow the driver to use CMKs stored in AKV for column encryption, use the following connection-string-only keywords:
 
@@ -465,7 +460,7 @@ To allow retrieving the entire list, every Get operation returns the current pro
 The `SQL_COPT_SS_CEKEYSTOREDATA` connection attribute enables a client application to communicate with loaded keystore providers for configuring additional parameters, keying material, etc. The communication between a client application and a provider follows a simple request-response protocol, based on Get and Set requests using this connection attribute. Communication is initiated only by the client application.
 
 > [!NOTE]
-> Due to the nature of the ODBC calls CEKeyStoreProvider’s respond to (SQLGet/SetConnectAttr), the ODBC interface only supports setting data at the resolution of the connection context.
+> Due to the nature of the ODBC calls CEKeyStoreProvider's respond to (SQLGet/SetConnectAttr), the ODBC interface only supports setting data at the resolution of the connection context.
 
 The application communicates with keystore providers through the driver via the CEKeystoreData structure:
 
@@ -604,5 +599,5 @@ See [Migrate Sensitive Data Protected by Always Encrypted](../../relational-data
 ## See Also
 
 - [Always Encrypted (Database Engine)](../../relational-databases/security/encryption/always-encrypted-database-engine.md)
-- [Always Encrypted blog](http://blogs.msdn.com/b/sqlsecurity/archive/tags/always-encrypted/)
+- [Always Encrypted blog](https://blogs.msdn.com/b/sqlsecurity/archive/tags/always-encrypted/)
 

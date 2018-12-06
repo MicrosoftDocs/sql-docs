@@ -5,16 +5,13 @@ ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: connectivity
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "batches [ODBC]"
   - "SQL statements [ODBC], batches"
   - "batches [ODBC], about batches"
 ms.assetid: 766488cc-450c-434c-9c88-467f6c57e17c
-caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: craigg
@@ -37,7 +34,7 @@ A batch of SQL statements is a group of two or more SQL statements or a single S
        VALUES (2002, 4, 412, 500)  
     ```  
   
--   **Procedures** If a procedure contains more than one SQL statement, it is considered to be a batch of SQL statements. For example, the following SQL Server–specific statement creates a procedure that returns a result set containing information about a customer and a result set listing all the open sales orders for that customer:  
+-   **Procedures** If a procedure contains more than one SQL statement, it is considered to be a batch of SQL statements. For example, the following SQL Server-specific statement creates a procedure that returns a result set containing information about a customer and a result set listing all the open sales orders for that customer:  
   
     ```  
     CREATE PROCEDURE GetCustInfo (@CustomerID INT) AS  

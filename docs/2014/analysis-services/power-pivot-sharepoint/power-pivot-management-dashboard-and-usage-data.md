@@ -4,13 +4,10 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: 541c8b1f-c6c2-423d-a97d-65c379967e0c
-caps.latest.revision: 12
 author: minewiskan
 ms.author: owend
 manager: craigg
@@ -122,7 +119,7 @@ manager: craigg
   
     7.  Click type a name for the connection and then click **Next**.  
   
-    8.  In Specify MDX Query, click **Design** to open the MDX query designer to assemble the data you want to work with **If you see the error message** “The Edit Mode property name is not formatted correctly.”, verify you edits the .ODC file.  
+    8.  In Specify MDX Query, click **Design** to open the MDX query designer to assemble the data you want to work with **If you see the error message** "The Edit Mode property name is not formatted correctly.", verify you edits the .ODC file.  
   
     9. Click **OK** and then click **Finish**.  
   

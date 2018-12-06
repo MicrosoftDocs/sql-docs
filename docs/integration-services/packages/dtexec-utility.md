@@ -5,12 +5,9 @@ ms.date: "08/26/2016"
 ms.prod: sql
 ms.prod_service: "integration-services"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: integration-services
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: 7b6867fa-1039-49b3-90fb-85b84678a612
-caps.latest.revision: 30
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: craigg
@@ -165,11 +162,11 @@ dtexec /option [value] [/option [value]]...
   
      You can use the **/ConfigFile** option to load additional configurations at run time that you did not specify at design time. However, you cannot use the **/ConfigFile** option to replace configured values that you also specified at design time. To understand how package configurations are applied, see [Package Configurations](../../integration-services/packages/package-configurations.md).  
   
--   **/Conn[ection]** *id_or_name;connection_string [[;id_or_name;connection_string]…]*: (Optional). Specifies that the connection manager with the specified name or GUID is located in the package, and specifies a connection string.  
+-   **/Conn[ection]** *id_or_name;connection_string [[;id_or_name;connection_string]...]*: (Optional). Specifies that the connection manager with the specified name or GUID is located in the package, and specifies a connection string.  
   
      This option requires that both parameters be specified: the connection manager name or GUID must be provided in the *id_or_name* argument, and a valid connection string must be specified in the *connection_string* argument. For more information, see [Integration Services &#40;SSIS&#41; Connections](../../integration-services/connection-manager/integration-services-ssis-connections.md).  
   
-     At run time, you can use the **/Connection** option to load package configurations from a location other than the location that you specified at design time. The values of these configurations then replace the values that were originally specified. However you can use the **/Connection** option only for configurations, such as [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] configurations, that use a connection manager. To understand how package configurations are applied, see [Package Configurations](../../integration-services/packages/package-configurations.md) and [Behavior Changes to Integration Services Features in SQL Server 2016](http://msdn.microsoft.com/library/611d22fa-5ac7-485e-9a40-7131e852f794).  
+     At run time, you can use the **/Connection** option to load package configurations from a location other than the location that you specified at design time. The values of these configurations then replace the values that were originally specified. However you can use the **/Connection** option only for configurations, such as [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] configurations, that use a connection manager. To understand how package configurations are applied, see [Package Configurations](../../integration-services/packages/package-configurations.md) and [Behavior Changes to Integration Services Features in SQL Server 2016](https://msdn.microsoft.com/library/611d22fa-5ac7-485e-9a40-7131e852f794).  
   
 -   **/Cons[oleLog]** [[*displayoptions*];[*list_options*;*src_name_or_guid*]...]: (Optional). Displays specified log entries to the console during package execution. If this option is omitted, no log entries are shown in the console. If the option is specified without parameters that limit the display, every log entry will display. To limit the entries that are displayed to the console, you can specify the columns to show by using the *displayoptions* parameter, and limit the log entry types by using the *list_options* parameter.  
   
@@ -219,7 +216,7 @@ dtexec /option [value] [/option [value]]...
   
 -   **/De[crypt]**  *password*: (Optional). Sets the decryption password that is used when you load a package with password encryption.  
   
--   (Optional) Creates the debug dump files, .mdmp and .tmp, when one or more specified events occur while the package is running. The *error code* argument specifies the type of event code—error, warning, or information—that will trigger the system to create the debug dump files. To specify multiple event codes, separate each *error code* argument by a semi-colon (;). Do not include quotes with the *error code* argument.  
+-   (Optional) Creates the debug dump files, .mdmp and .tmp, when one or more specified events occur while the package is running. The *error code* argument specifies the type of event code-error, warning, or information-that will trigger the system to create the debug dump files. To specify multiple event codes, separate each *error code* argument by a semi-colon (;). Do not include quotes with the *error code* argument.  
   
      The following example generates the debug dump files when the DTS_E_CANNOTACQUIRECONNECTIONFROMCONNECTIONMANAGER error occurs.  
   
@@ -330,7 +327,7 @@ dtexec /option [value] [/option [value]]...
   
      The following is an example of executing a package and providing myvalue for the project parameter (myparam) and the integer value 12 for the package parameter (anotherparam).  
   
-     `Dtexec /isserver “SSISDB\MyFolder\MyProject\MyPackage.dtsx” /server “.” /parameter $Project::myparam;myvalue /parameter anotherparam(int32);12`  
+     `Dtexec /isserver "SSISDB\MyFolder\MyProject\MyPackage.dtsx" /server "." /parameter $Project::myparam;myvalue /parameter anotherparam(int32);12`  
   
      You can also set connection manager properties by using parameters. You use the CM prefix to denote a connection manager parameter.  
   
@@ -400,7 +397,7 @@ dtexec /option [value] [/option [value]]...
   
      `/Project c:\project.ispac /Package Package1.dtsx /SET \Package.Variables[$Package::Parameter];1 /SET \Package.Variables[$Project::Parameter];1`  
   
-     You can use the **/Set** option to change the location from which package configurations are loaded. However, you cannot use the **/Set** option to override a value that was specified by a configuration at design time. To understand how package configurations are applied, see [Package Configurations](../../integration-services/packages/package-configurations.md) and [Behavior Changes to Integration Services Features in SQL Server 2016](http://msdn.microsoft.com/library/611d22fa-5ac7-485e-9a40-7131e852f794).  
+     You can use the **/Set** option to change the location from which package configurations are loaded. However, you cannot use the **/Set** option to override a value that was specified by a configuration at design time. To understand how package configurations are applied, see [Package Configurations](../../integration-services/packages/package-configurations.md) and [Behavior Changes to Integration Services Features in SQL Server 2016](https://msdn.microsoft.com/library/611d22fa-5ac7-485e-9a40-7131e852f794).  
   
 -   **/Ser[ver]** *server*: (Optional). When the **/SQL** or **/DTS** option is specified, this option specifies the name of the server from which to retrieve the package. If you omit the **/Server** option and the **/SQL** or **/DTS** option is specified, package execution is tried against the local server. The *server_instance* value may be quoted.  
   
@@ -622,11 +619,11 @@ dtexec /isserver "\SSISDB\MyFolder\MyProject\MyPackage.dtsx" /server "."
  The following example shows how to use the **/ISServer** option and set project and connection manager parameters.  
   
 ```  
-/Server localhost /ISServer “\SSISDB\MyFolder\Integration Services Project1\Package.dtsx” /Par "$Project::ProjectParameter(Int32)";1 /Par "CM.SourceServer.InitialCatalog";SourceDB  
+/Server localhost /ISServer "\SSISDB\MyFolder\Integration Services Project1\Package.dtsx" /Par "$Project::ProjectParameter(Int32)";1 /Par "CM.SourceServer.InitialCatalog";SourceDB  
   
 ```  
   
 ## Related Content  
- Blog entry, [Exit Codes, DTEXEC, and SSIS Catalog](http://www.mattmasson.com/2012/02/exit-codes-dtexec-and-ssis-catalog/), on www.mattmasson.com.  
+ Blog entry, [Exit Codes, DTEXEC, and SSIS Catalog](https://www.mattmasson.com/2012/02/exit-codes-dtexec-and-ssis-catalog/), on www.mattmasson.com.  
   
   

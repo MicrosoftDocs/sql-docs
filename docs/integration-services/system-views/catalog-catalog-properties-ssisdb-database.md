@@ -5,12 +5,9 @@ ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "integration-services"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: integration-services
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 ms.assetid: e604a382-95c8-4764-b268-742eb5c6d4cf
-caps.latest.revision: 10
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: craigg
@@ -30,7 +27,7 @@ manager: craigg
   
 |Property Name|Description|  
 |-------------------|-----------------|  
-|**DEFAULT_EXECUTION_MODE**|The server-wide default execution mode for packages – `Server` (0) or `Scale Out` (1). |
+|**DEFAULT_EXECUTION_MODE**|The server-wide default execution mode for packages - `Server` (0) or `Scale Out` (1). |
 |**ENCRYPTION_ALGORITHM**|The type of encryption algorithm that is used to encrypt sensitive data. The supported values include: `DES`, `TRIPLE_DES`, `TRIPLE_DES_3KEY`, `DESX`, `AES_128`, `AES_192`, and `AES_256`. Note: The catalog database must be in single-user mode in order to change this property.|
 |**IS_SCALEOUT_ENABLED**|When the value is `True`, the SSIS Scale Out feature is enabled. If you have not enabled Scale Out, this property may not appear in the view.|
 |**MAX_PROJECT_VERSIONS**|The number of new project versions that are retained for a single project. When version cleanup is enabled, older versions beyond this count are deleted.|  

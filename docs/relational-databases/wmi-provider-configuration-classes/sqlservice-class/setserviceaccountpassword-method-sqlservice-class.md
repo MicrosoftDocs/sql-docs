@@ -4,12 +4,8 @@ ms.custom: ""
 ms.date: "03/04/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "wmi"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: wmi
 ms.topic: "reference"
 apiname: 
   - "SetServiceAccountPassword Method (SqlService Class)"
@@ -19,7 +15,6 @@ apitype: "MOFDef"
 helpviewer_keywords: 
   - "SetServiceAccountPassword method"
 ms.assetid: e577a1ac-985c-4799-bb38-9393efc3def2
-caps.latest.revision: 36
 author: "CarlRabeler"
 ms.author: "carlrab"
 manager: craigg

@@ -1,13 +1,11 @@
 ---
 title: "CREATE CERTIFICATE (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "06/19/2018"
+ms.date: "09/07/2018"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "CERTIFICATE"
@@ -26,7 +24,6 @@ helpviewer_keywords:
   - "cryptography [SQL Server], certificates"
   - "CREATE CERTIFICATE statement"
 ms.assetid: a4274b2b-4cb0-446a-a956-1c8e6587515d
-caps.latest.revision: 74
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
@@ -36,8 +33,6 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-pdw-md.md)]
 
   Adds a certificate to a database in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
-
-[!INCLUDE[ssMIlimitation](../../includes/sql-db-mi-limitation.md)]
 
  This feature is incompatible with database export using Data Tier Application Framework (DACFx). You must drop all certificates before exporting.  
   
@@ -121,6 +116,9 @@ CREATE CERTIFICATE certificate_name
   
  [ EXECUTABLE ] FILE ='*path_to_file*'  
  Specifies the complete path, including file name, to a DER-encoded file that contains the certificate. If the EXECUTABLE option is used, the file is a DLL that has been signed by the certificate. *path_to_file* can be a local path or a UNC path to a network location. The file is accessed in the security context of the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] service account. This account must have the required file-system permissions.  
+
+> [!IMPORTANT]
+> Azure SQL Database does not support creating a certificate from a file or using private key files.
   
  WITH PRIVATE KEY  
  Specifies that the private key of the certificate is loaded into [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. This clause is only valid when the certificate is being created from a file. To load the private key of an assembly, use [ALTER CERTIFICATE](../../t-sql/statements/alter-certificate-transact-sql.md).  
@@ -128,8 +126,8 @@ CREATE CERTIFICATE certificate_name
  FILE ='*path_to_private_key*'  
  Specifies the complete path, including file name, to the private key. *path_to_private_key* can be a local path or a UNC path to a network location. The file is accessed in the security context of the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] service account. This account must have the necessary file-system permissions.  
   
-> [!NOTE]  
->  This option is not available in a contained database.  
+> [!IMPORTANT]  
+>  This option is not available in a contained database or in Azure SQL Database.  
   
  asn_encoded_certificate  
  ASN encoded certificate bits specified as a binary constant.  
@@ -205,7 +203,10 @@ CREATE CERTIFICATE Shipping11
     DECRYPTION BY PASSWORD = 'sldkflk34et6gs%53#v00');  
 GO   
 ```  
-  
+
+> [!IMPORTANT]
+> Azure SQL Database does not support creating a certificate from a file.
+   
 ### C. Creating a certificate from a signed executable file  
   
 ```  
@@ -224,7 +225,9 @@ GO
 CREATE CERTIFICATE Shipping19 FROM ASSEMBLY Shipping19;  
 GO  
 ```  
-  
+> [!IMPORTANT]
+> Azure SQL Database does not support creating a certificate from a file.
+   
 ### D. Creating a self-signed certificate  
  The following example creates a certificate called `Shipping04` without specifying an encryption password. This example can be used with [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].
   
@@ -233,7 +236,6 @@ CREATE CERTIFICATE Shipping04
    WITH SUBJECT = 'Sammamish Shipping Records';  
 GO  
 ```  
-  
   
 ## See Also  
  [ALTER CERTIFICATE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-certificate-transact-sql.md)   

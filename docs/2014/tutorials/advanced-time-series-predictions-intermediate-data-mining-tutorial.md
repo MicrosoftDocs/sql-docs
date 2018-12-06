@@ -4,13 +4,10 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: b614ebdb-07ca-44af-a0ff-893364bd4b71
-caps.latest.revision: 32
 author: minewiskan
 ms.author: owend
 manager: craigg
@@ -41,7 +38,7 @@ manager: craigg
 ##  <a name="bkmk_newExtendData"></a> Creating the New Extended Sales Data  
  To update your sales data, you will need to get the latest sales figures. Of particular interest are the data just in from the Pacific region, which launched a regional sales promotion to call attention to the new stores and raise awareness of their products.  
   
- For this scenario, we’ll assume that the data has been imported from an Excel workbook that contains just three months of new data for a couple of regions. You’ll create a table for the data using a Transact-SQL script, and then define a data source view to use for prediction.  
+ For this scenario, we'll assume that the data has been imported from an Excel workbook that contains just three months of new data for a couple of regions. You'll create a table for the data using a Transact-SQL script, and then define a data source view to use for prediction.  
   
 #### Create the table with new sales data  
   
@@ -121,7 +118,7 @@ manager: craigg
   
 3.  On the **Select Data Source** page, select [!INCLUDE[ssAWDWsp](../includes/ssawdwsp-md.md)], and then click **Next**.  
   
-4.  In the page, **Select Tables and Views**, do not add any tables—just click **Next**.  
+4.  In the page, **Select Tables and Views**, do not add any tables-just click **Next**.  
   
 5.  On the page, **Completing the Wizard**, type the name `AllRegions`, and then click **Finish**.  
   

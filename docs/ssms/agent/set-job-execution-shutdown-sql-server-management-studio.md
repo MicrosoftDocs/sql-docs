@@ -1,14 +1,11 @@
-﻿---
+---
 title: "Set Job Execution Shutdown (SQL Server Management Studio) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: "sql-tools"
-ms.component: "ssms-agent"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: ssms
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "jobs [SQL Server Agent], stopping"
@@ -16,7 +13,6 @@ helpviewer_keywords:
   - "stopping jobs"
   - "SQL Server Agent jobs, execution shutdowns"
 ms.assetid: ac23e88f-53fc-41de-bb16-0c27c002d5a5
-caps.latest.revision: 4
 author: "stevestein"
 ms.author: "sstein"
 manager: craigg

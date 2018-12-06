@@ -5,9 +5,7 @@ ms.date: "06/10/2016"
 ms.prod: sql
 ms.prod_service: "sql-database"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "WITH_XMLNAMESPACES_TSQL"
@@ -21,7 +19,6 @@ helpviewer_keywords:
   - "WITH XMLNAMESPACES clause"
   - "declaring XML namespaces"
 ms.assetid: 3b32662b-566f-454d-b7ca-e247002a9a0b
-caps.latest.revision: 17
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: craigg
@@ -81,7 +78,7 @@ DEFAULT <xml_namespace_uri>
   
 -   The XML namespace prefix `xmlns` cannot be declared.  
   
--   The XML namespace prefix `xml` cannot be overridden with a namespace, other than the namespaces URI `'http://www.w3.org/XML/1998/namespace'`, and this URI that cannot be assigned a different prefix.  
+-   The XML namespace prefix `xml` cannot be overridden with a namespace, other than the namespaces URI `'https://www.w3.org/XML/1998/namespace'`, and this URI that cannot be assigned a different prefix.  
   
 -   The XML namespace prefix `xsi` cannot be redeclared when the ELEMENTS XSINIL directive is being used on the query.  
   

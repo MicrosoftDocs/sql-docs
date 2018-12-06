@@ -4,16 +4,13 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "reporting-services-native"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "shared data sources [Reporting Services]"
   - "data sources [Reporting Services], shared"
 ms.assetid: 23cc15f2-2883-48e2-bc6c-fa0ab61a2e21
-caps.latest.revision: 10
 author: markingmyname
 ms.author: maghan
 manager: craigg
@@ -52,7 +49,7 @@ manager: craigg
   
 5.  In the **Connection Type** area, verify that **Shared data source** is selected.  
   
-6.  In the **Data Source Link** area, click the ellipsis (…) button.  
+6.  In the **Data Source Link** area, click the ellipsis (...) button.  
   
 7.  Locate the data source you want to use.  
   

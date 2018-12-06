@@ -5,15 +5,12 @@ ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: connectivity
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "connection strings [ODBC], ODBC driver for Oracle"
   - "ODBC driver for Oracle [ODBC], connection strings"
 ms.assetid: 0c360112-8720-4e54-a1a6-b9b18d943557
-caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
@@ -42,7 +39,7 @@ manager: craigg
 |DSN|The data source name listed in the Drivers tab of the **ODBC Data Source Administrator** dialog box.|""|  
 |PWD|The password for the Oracle Server that you want to access. This driver supports limitations that Oracle places on passwords.|""|  
 |SERVER|The connect string for the Oracle Server that you want to access.|""|  
-|UID|The Oracle Server user name. Depending on your system, this attribute might not be optional — that is, certain databases and tables might require this attribute for security purposes.<br /><br /> Use "/" to use Oracle's operating system authentication.|""|  
+|UID|The Oracle Server user name. Depending on your system, this attribute might not be optional - that is, certain databases and tables might require this attribute for security purposes.<br /><br /> Use "/" to use Oracle's operating system authentication.|""|  
 |BUFFERSIZE|The optimal buffer size used when fetching columns.<br /><br /> The driver optimizes fetching so that one fetch from the Oracle Server returns enough rows to fill a buffer of this size. Larger values tend to increase performance if you fetch a lot of data.|65535|  
 |SYNONYMCOLUMNS|When this value is true (1), an SQLColumn( ) API call returns column information. Otherwise, SQLColumn( ) returns only columns for tables and views. The ODBC Driver for Oracle provides faster access when this value is not set.|1|  
 |REMARKS|When this value is true (1), the driver returns Remarks columns for the [SQLColumns](../../odbc/microsoft/level-1-api-functions-odbc-driver-for-oracle.md) result set. The ODBC Driver for Oracle provides faster access when this value is not set.|0|  

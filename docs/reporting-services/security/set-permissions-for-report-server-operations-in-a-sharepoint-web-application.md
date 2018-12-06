@@ -4,7 +4,6 @@ ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
 ms.technology: security
-ms.suite: pro-bi
 
 
 ms.topic: conceptual
@@ -46,7 +45,7 @@ ms.author: maghan
   
  If you are using predefined permission levels, no action is required because the above permissions are already included in Full Control, Design, Contribute, Read, and Limited Access. However, if you are using custom permission levels or editing the permissions assigned to a particular user or group, you must add the permission manually.  
   
- "Browse User Information" permission allows the report server to return information about the creator of the item and the user who last modified the item. Without this permission, the report server will return the following errors. For browse operations, the error is: “Report Server has encountered a SharePoint error. ---> System.UnauthorizedAccessException: Access is denied.” For publish operations, the error is: “The permissions granted to user ‘\<domain>\\<user\>' are insufficient for performing this operation.”  
+ "Browse User Information" permission allows the report server to return information about the creator of the item and the user who last modified the item. Without this permission, the report server will return the following errors. For browse operations, the error is: "Report Server has encountered a SharePoint error. ---> System.UnauthorizedAccessException: Access is denied." For publish operations, the error is: "The permissions granted to user '\<domain>\\<user\>' are insufficient for performing this operation."  
   
 ##  <a name="permissionReports"></a> Permissions for viewing and managing reports  
  Report definition permissions are defined through List permissions on the library that contains the report, but you can set permissions on individual reports if you want to restrict access. The following table provides a list of tasks and permissions that support each one.  

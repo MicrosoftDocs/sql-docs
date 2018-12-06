@@ -1,13 +1,10 @@
 ---
 title: "Replication Merge Agent | Microsoft Docs"
 ms.custom: ""
-ms.date: "06/13/2017"
+ms.date: "10/29/2018"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Merge Agent, executables"
@@ -15,7 +12,6 @@ helpviewer_keywords:
   - "agents [SQL Server replication], Merge Agent"
   - "command prompt [SQL Server replication]"
 ms.assetid: fe1e7f60-b0c8-45e9-a5e8-4fedfa73d7ea
-caps.latest.revision: 63
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
@@ -61,7 +57,7 @@ manager: craigg
 [-InternetLogininternet_login]  
 [-InternetPasswordinternet_password]  
 [-InternetProxyLogininternet_proxy_login]  
-[–InternetProxyPasswordinternet_proxy_password]  
+[-InternetProxyPasswordinternet_proxy_password]  
 [-InternetProxyServerinternet_proxy_server]  
 [-InternetSecurityMode [0|1]]  
 [-InternetTimeoutinternet_timeout]  
@@ -166,6 +162,9 @@ manager: craigg
 |**0**|Specifies that SSL is not used.|  
 |**1**|Specifies that SSL is used, but the agent does not verify that the SSL server certificate is signed by a trusted issuer.|  
 |**2**|Specifies that SSL is used, and that the certificate is verified.|  
+
+ > [!NOTE]  
+ >  A valid SSL certificate is defined with a fully qualified domain name of the SQL Server. In order for the agent to connect successfully when setting -EncryptionLevel to 2, create an alias on the local SQL Server. The 'Alias Name' parameter should be the server name and the 'Server' parameter should be set to the fully qualified name of the SQL Server.
   
  For more information, see [Security Overview &#40;Replication&#41;](../security/security-overview-replication.md).  
   
@@ -237,7 +236,7 @@ manager: craigg
  **-InternetProxyLogin**  *internet_proxy_login*  
  Specifies the login name used when connecting to a proxy server, defined in *internet_proxy_server*, that requires authentication.  
   
- **–InternetProxyPassword**  *internet_proxy_password*  
+ **-InternetProxyPassword**  *internet_proxy_password*  
  Specifies the password used when connecting to a proxy server, defined in *internet_proxy_server*, that requires authentication.  
   
  **-InternetProxyServer**  *internet_proxy_server*  

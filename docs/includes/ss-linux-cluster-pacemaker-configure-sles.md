@@ -15,7 +15,7 @@
    sudo firewall-cmd --reload
    ```
 
-   > If you’re using another firewall that doesn’t have a built-in high-availability configuration, the following ports need to be opened for Pacemaker to be able to communicate with other nodes in the cluster
+   > If you're using another firewall that doesn't have a built-in high-availability configuration, the following ports need to be opened for Pacemaker to be able to communicate with other nodes in the cluster
    >
    > * TCP: Ports 2224, 3121, 21064
    > * UDP: Port 5405
@@ -28,7 +28,7 @@
 
    ​
 
-2. Set the password for for the default user that is created when installing Pacemaker and Corosync packages. Use the same password on all nodes. 
+2. Set the password for the default user that is created when installing Pacemaker and Corosync packages. Use the same password on all nodes. 
 
    ```bash
    sudo passwd hacluster

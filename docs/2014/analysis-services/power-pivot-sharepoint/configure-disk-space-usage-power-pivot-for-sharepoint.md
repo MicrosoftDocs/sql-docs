@@ -4,13 +4,10 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: 201a3fda-f162-45d7-bf39-74dcb92fd0e6
-caps.latest.revision: 16
 author: minewiskan
 ms.author: owend
 manager: craigg
@@ -64,7 +61,7 @@ manager: craigg
   
 3.  In Disk Usage, set a value (in gigabytes) for **Total disk space** to set an upper limit on the amount of space used for caching purposes. The default is 0, which allows Analysis Services to use all available disk space.  
   
-4.  In Disk Usage, in the **Delete cached databases in last ‘n’ hours** setting, specify last-used criteria for emptying the cache when disk space is at the maximum limit.  
+4.  In Disk Usage, in the **Delete cached databases in last 'n' hours** setting, specify last-used criteria for emptying the cache when disk space is at the maximum limit.  
   
      The default is 4 hours, meaning that all databases that have been inactive for 4 hours or more are deleted from the file system. Databases that are inactive but still in memory are unloaded and then deleted from the file system.  
   

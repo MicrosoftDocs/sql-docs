@@ -5,9 +5,7 @@ ms.date: "05/01/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "ALTER_SECURITY_POLICY_TSQL"
@@ -19,7 +17,6 @@ dev_langs:
 helpviewer_keywords: 
   - "ALTER SECURITY POLICY statement"
 ms.assetid: a8efc37e-113d-489c-babc-b914fea2c316
-caps.latest.revision: 20
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
@@ -37,10 +34,10 @@ manager: craigg
 ALTER SECURITY POLICY schema_name.security_policy_name   
     (  
         { ADD { FILTER | BLOCK } PREDICATE tvf_schema_name.security_predicate_function_name   
-           ( { column_name | arguments } [ , …n ] ) ON table_schema_name.table_name   
+           ( { column_name | arguments } [ , ...n ] ) ON table_schema_name.table_name   
            [ <block_dml_operation> ]  }   
         | { ALTER { FILTER | BLOCK } PREDICATE tvf_schema_name.new_security_predicate_function_name   
-             ( { column_name | arguments } [ , …n ] ) ON table_schema_name.table_name   
+             ( { column_name | arguments } [ , ...n ] ) ON table_schema_name.table_name   
            [ <block_dml_operation> ] }  
         | { DROP { FILTER | BLOCK } PREDICATE ON table_schema_name.table_name }   
         | [ <additional_add_alter_drop_predicate_statements> [ , ...n ] ]  

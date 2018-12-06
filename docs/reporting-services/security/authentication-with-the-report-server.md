@@ -4,7 +4,6 @@ ms.date: 05/30/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
 ms.technology: security
-ms.suite: pro-bi
 
 
 ms.topic: conceptual
@@ -33,7 +32,7 @@ ms.author: maghan
 |RSWindowsNegotiate|Negotiate|Yes|Attempts to use Kerberos for Windows Integrated authentication first, but falls back to NTLM if Active Directory cannot grant a ticket for the client request to the report server. Negotiate will only fall back to NTLM if the ticket is not available. If the first attempt results in an error rather than a missing ticket, the report server does not make a second attempt.|  
 |RSWindowsNTLM|NTLM|Yes|Uses NTLM for Windows Integrated authentication.<br /><br /> The credentials will not be delegated or impersonated on other requests. Subsequent requests will follow a new challenge-response sequence. Depending on network security settings, a user might be prompted for credentials or the authentication request will be handled transparently.|  
 |RSWindowsKerberos|Kerberos|No|Uses Kerberos for Windows Integrated authentication. You must configure Kerberos by setting up setup service principle names (SPNs) for your service accounts, which requires domain administrator privileges. If you set up identity delegation with Kerberos, the token of the user who is requesting a report can also be used on an additional connection to the external data sources that provide data to reports.<br /><br /> Before you specify RSWindowsKerberos, be sure that the browser type you are using actually supports it. If you are using Microsoft Edge, or Internet Explorer, Kerberos authentication is only supported through Negotiate. Microsoft Edge, or Internet Explorer, will not formulate an authentication request that specifies Kerberos directly.|  
-|RSWindowsBasic|Basic|No|Basic authentication is defined in the HTTP protocol and can only be used to authenticate HTTP requests to the report server.<br /><br /> Credentials are passed in the HTTP request in base64 encoding. If you use Basic authentication, use Secure Sockets Layer (SSL) to encrypt user account information before it is sent across the network. SSL provides an encrypted channel for sending a connection request from the client to the report server over an HTTP TCP/IP connection. For more information, see [Using SSL to Encrypt Confidential Data](http://go.microsoft.com/fwlink/?LinkId=71123) on the [!INCLUDE[msCoName](../../includes/msconame-md.md)] TechNet Web site.|  
+|RSWindowsBasic|Basic|No|Basic authentication is defined in the HTTP protocol and can only be used to authenticate HTTP requests to the report server.<br /><br /> Credentials are passed in the HTTP request in base64 encoding. If you use Basic authentication, use Secure Sockets Layer (SSL) to encrypt user account information before it is sent across the network. SSL provides an encrypted channel for sending a connection request from the client to the report server over an HTTP TCP/IP connection. For more information, see [Using SSL to Encrypt Confidential Data](https://go.microsoft.com/fwlink/?LinkId=71123) on the [!INCLUDE[msCoName](../../includes/msconame-md.md)] TechNet Web site.|  
 |Custom|(Anonymous)|No|Anonymous authentication directs the report server to ignore authentication header in an HTTP request. The report server accepts all requests, but call on a custom [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] Forms authentication that you provide to authenticate the user.<br /><br /> Specify **Custom** only if you are deploying a custom authentication module that handles all authentication requests on the report server. You cannot use the Custom authentication type with the default Windows Authentication extension.|  
   
 ## Unsupported Authentication Methods  
@@ -85,4 +84,4 @@ ms.author: maghan
 [Authentication in Reporting Services](../../reporting-services/extensions/security-extension/authentication-in-reporting-services.md)   
 [Authorization in Reporting Services](../../reporting-services/extensions/security-extension/authorization-in-reporting-services.md)  
 
-More questions? [Try asking the Reporting Services forum](http://go.microsoft.com/fwlink/?LinkId=620231)
+More questions? [Try asking the Reporting Services forum](https://go.microsoft.com/fwlink/?LinkId=620231)

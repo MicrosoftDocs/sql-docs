@@ -4,14 +4,10 @@ ms.custom: ""
 ms.date: "06/01/2018"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.component: "in-memory-oltp"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: in-memory-oltp
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: 38512a22-7e63-436f-9c13-dde7cf5c2202
-caps.latest.revision: 20
 author: Jodebrui
 ms.author: jodebrui
 manager: craigg
@@ -184,7 +180,7 @@ Third, in your general T-SQL code:
     - _Old:_ &#x23;tempSessionC  
     - _New:_ dbo.soSessionC  
 2. Replace the `CREATE TABLE #tempSessionC` statements in your code with `DELETE FROM dbo.soSessionC`, to ensure a session is not exposed to table contents inserted by a previous session with the same session_id. It is important to create the memory-optimized table at deployment time, not at runtime, to avoid the compilation overhead that comes with table creation.
-3. Remove the `DROP TABLE #tempSessionC` statements from your code – optionally you can insert a `DELETE FROM dbo.soSessionC` statement, in case memory size is a potential concern
+3. Remove the `DROP TABLE #tempSessionC` statements from your code - optionally you can insert a `DELETE FROM dbo.soSessionC` statement, in case memory size is a potential concern
   
   
   

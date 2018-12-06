@@ -1,19 +1,16 @@
-﻿---
+---
 title: "Configure Flexible Automatic Failover Policy | Microsoft Docs"
 ms.custom: ""
 ms.date: "05/17/2016"
 ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: high-availability
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Availability Groups [SQL Server], flexible failover policy"
   - "Availability Groups [SQL Server], failover"
   - "failover [SQL Server], AlwaysOn Availability Groups"
 ms.assetid: 1ed564b4-9835-4245-ae35-9ba67419a4ce
-caps.latest.revision: 24
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
@@ -83,7 +80,7 @@ monikerRange: ">=sql-server-2016||=sqlallproducts-allversions"
   
          The relationship of these integer values to the failure condition levels is as follows:  
   
-        |[!INCLUDE[tsql](../../../includes/tsql-md.md)] Value|Level|Automatic Is Failover Initiated When…|  
+        |[!INCLUDE[tsql](../../../includes/tsql-md.md)] Value|Level|Automatic Is Failover Initiated When...|  
         |------------------------------|-----------|-------------------------------------------|  
         |1|One|On server down. The SQL Server service stops because of a failover or restart.|  
         |2|Two|On server unresponsive. Any condition of lower value is satisfied, the SQL Server service is connected to the cluster and the health check timeout threshold is exceeded, or the current primary replica is in a failed state.|  
@@ -111,7 +108,7 @@ monikerRange: ">=sql-server-2016||=sqlallproducts-allversions"
   
     -   To set the failover condition level, use the **FailureConditionLevel***level* parameter, where, *level* is one of the following values:  
   
-        |Value|Level|Automatic Is Failover Initiated When…|  
+        |Value|Level|Automatic Is Failover Initiated When...|  
         |-----------|-----------|-------------------------------------------|  
         |**OnServerDown**|One|On server down. The SQL Server service stops because of a failover or restart.|  
         |**OnServerUnresponsive**|Two|On server unresponsive. Any condition of lower value is satisfied, the SQL Server service is connected to the cluster and the health check timeout threshold is exceeded, or the current primary replica is in a failed state.|  

@@ -4,10 +4,8 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "integration-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.dts.configwizard.selectobjects.f1"
@@ -15,7 +13,6 @@ f1_keywords:
   - "sql12.dts.configwizard.finishdtsconfiguration.f1"
   - "sql12.dts.configwizard.welcome.f1"
 ms.assetid: adca6938-6d5a-40ec-950e-dceb79d044fe
-caps.latest.revision: 25
 author: douglaslms
 ms.author: douglasl
 manager: craigg

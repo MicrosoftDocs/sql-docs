@@ -6,15 +6,12 @@ ms.technology: connectivity
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 dev_langs: 
   - "VB"
 helpviewer_keywords: 
   - "ConvertToString method [ADO], Visual Basic example"
 ms.assetid: 31731e4f-3c0c-451e-8cbc-c9df28fabf6c
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
@@ -46,7 +43,7 @@ Public Sub Main()
      ' Create a DataSpace object  
     Set rdsDS = New RDS.DataSpace  
      ' Create a DataFactory object  
-    Set rdsDF = rdsDS.CreateObject("RDSServer.DataFactory", "http://MyServer") 'MyServer  
+    Set rdsDF = rdsDS.CreateObject("RDSServer.DataFactory", "https://MyServer") 'MyServer  
   
      ' Get all of the Author records  
   

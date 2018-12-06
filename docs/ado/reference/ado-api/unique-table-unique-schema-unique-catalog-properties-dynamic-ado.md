@@ -6,8 +6,6 @@ ms.technology: connectivity
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 apitype: "COM"
 helpviewer_keywords: 
@@ -15,7 +13,6 @@ helpviewer_keywords:
   - "Unique Schema property [ADO]"
   - "Unique Catalog property [ADO]"
 ms.assetid: d0e775d8-e353-46a1-ad10-ed4cc240dfaa
-caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg

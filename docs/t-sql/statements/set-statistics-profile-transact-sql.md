@@ -5,9 +5,7 @@ ms.date: "06/10/2016"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "PROFILE"
@@ -23,7 +21,6 @@ helpviewer_keywords:
   - "STATISTICS PROFILE option"
   - "statistical information [SQL Server], profiles"
 ms.assetid: c635e262-35fa-421a-aa6f-a1c30f351647
-caps.latest.revision: 34
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg

@@ -13,7 +13,7 @@ ms.reviewer: martinle
 
 # Workload management in Analytics Platform System
 
-SQL Server PDW’s workload management capabilities allow users and administrators to assign requests to pre-set configurations of memory, and concurrency. Use workload management to improve performance of your workload, either consistent or mixed, by allowing requests to have the appropriate resources without starving any requests forever.  
+SQL Server PDW's workload management capabilities allow users and administrators to assign requests to pre-set configurations of memory, and concurrency. Use workload management to improve performance of your workload, either consistent or mixed, by allowing requests to have the appropriate resources without starving any requests forever.  
   
 For example, with the workload management techniques in SQL Server PDW, you could:  
   
@@ -102,7 +102,7 @@ For each login, the resource class settings are applied to individual statements
   
 Before SQL Server PDW runs a statement, it tries to acquire the concurrency slots needed for the request. If it cannot acquire enough concurrency slots, SQL Server PDW moves the request into a waiting-to-be-executed state. All resources system that were already allocated to the request are returned back to the system.  
   
-Most of the SQL statements always need the default resource allocations, and therefore are not controlled by resource classes. For example, CREATE LOGIN only needs a small amount of resources, and is allocated the default resources even if the login calling CREATE LOGIN is a member of a a resource class.  For example, if Anna is a member of the largerc resource class and she submits a CREATE LOGIN statement, the CREATE LOGIN statement will run with the default number of resources.  
+Most of the SQL statements always need the default resource allocations, and therefore are not controlled by resource classes. For example, CREATE LOGIN only needs a small amount of resources, and is allocated the default resources even if the login calling CREATE LOGIN is a member of a resource class.  For example, if Anna is a member of the largerc resource class and she submits a CREATE LOGIN statement, the CREATE LOGIN statement will run with the default number of resources.  
   
 SQL statements and operations governed by resource classes:  
   

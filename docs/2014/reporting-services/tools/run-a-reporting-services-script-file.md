@@ -4,15 +4,12 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "reporting-services-native"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "scripts [Reporting Services], running"
 ms.assetid: 0de4995c-85ec-4d4c-aaef-fbd30edfb20f
-caps.latest.revision: 35
 author: markingmyname
 ms.author: maghan
 manager: craigg
@@ -25,31 +22,31 @@ manager: craigg
 -   Run Script.rss in the script environment designating the target report server. Windows Authentication is applied by default:  
   
     ```  
-    rs –i Script.rss -s http://servername/reportserver  
+    rs -i Script.rss -s http://servername/reportserver  
     ```  
   
 -   Run Script.rss in the script environment specifying a user name and password for authenticating the Web service calls:  
   
     ```  
-    rs –i Script.rss -s http://servername/reportserver -u myusername -p mypassword  
+    rs -i Script.rss -s http://servername/reportserver -u myusername -p mypassword  
     ```  
   
 -   Run Script.rss in the script environment specifying a server time-out of 30 seconds:  
   
     ```  
-    rs –i Script.rss -s http://servername/reportserver -l 30  
+    rs -i Script.rss -s http://servername/reportserver -l 30  
     ```  
   
 -   Run Script.rss in the script environment specifying a global script variable called *report*.  
   
     ```  
-    rs –i Script.rss -s http://servername/reportserver -v report="Company Sales"  
+    rs -i Script.rss -s http://servername/reportserver -v report="Company Sales"  
     ```  
   
 -   Run Script.rss in the script environment specifying that the Web service operations in the script file are run as a batch.  
   
     ```  
-    rs –i Script.rss -s http://servername/reportserver -b  
+    rs -i Script.rss -s http://servername/reportserver -b  
     ```  
   
 ## See Also  

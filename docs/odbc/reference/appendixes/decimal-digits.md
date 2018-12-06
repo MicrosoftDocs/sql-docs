@@ -5,9 +5,7 @@ ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: connectivity
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "size of data types [ODBC]"
@@ -15,7 +13,6 @@ helpviewer_keywords:
   - "data types [ODBC], decimal digits"
   - "SQL data types [ODBC], column characteristics"
 ms.assetid: 07f3d1fc-b4ee-4693-b342-330b2231b6d0
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
@@ -30,7 +27,7 @@ The *decimal digits* of decimal and numeric data types is defined as the maximum
 |SQL type|Decimal digits|  
 |--------------|--------------------|  
 |All character and binary types[a]|n/a|  
-|SQL_DECIMAL<br />SQL_NUMERIC|The defined number of digits to the right of the decimal point. For example, the scale of a column defined as NUMERIC(10,3) is 3. This can be a negative number to support storage of very large numbers without using exponential notation; for example, "12000" could be stored as "12" with a scale of –3.|  
+|SQL_DECIMAL<br />SQL_NUMERIC|The defined number of digits to the right of the decimal point. For example, the scale of a column defined as NUMERIC(10,3) is 3. This can be a negative number to support storage of very large numbers without using exponential notation; for example, "12000" could be stored as "12" with a scale of -3.|  
 |All exact numeric types other than SQL_DECIMAL and SQL_NUMERIC[a]|0|  
 |All approximate data types[a]|n/a|  
 |SQL_TYPE_DATE, and all interval types with no seconds component[a]|n/a|  

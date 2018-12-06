@@ -5,12 +5,8 @@ ms.date: "03/01/2017"
 ms.prod: sql
 ms.prod_service: "integration-services"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: integration-services
-ms.tgt_pltfrm: ""
 ms.topic: tutorial
-applies_to: 
-  - "SQL Server 2016"
 ms.assetid: 005218ab-8dd5-48e9-a185-6bc60cd43a7a
 author: "douglaslMS"
 ms.author: "douglasl"
@@ -38,11 +34,11 @@ In this task, you will convert the project to the Package Deployment Model and e
   
 7.  Return to the **Control Flow** tab and double-click the **Foreach File in Folder** container.  
   
-8.  On the **Collection** page of the **Foreach Loop Editor**, click **Expressions**, and then click the ellipsis button **(…)**.  
+8.  On the **Collection** page of the **Foreach Loop Editor**, click **Expressions**, and then click the ellipsis button **(...)**.  
   
 9. In the **Property Expressions Editor**, click in the **Property** list, and select **Directory**.  
   
-10. In the **Expression** box, click the ellipsis button**(…)**.  
+10. In the **Expression** box, click the ellipsis button**(...)**.  
   
 11. In the **Expression Builder**, expand the Variables folder, and drag the variable **User::varFolderName** to the **Expression** box.  
   
@@ -86,7 +82,7 @@ In this task, you will convert the project to the Package Deployment Model and e
   
 16. Click **Close**.  
   
-17. The wizard creates a configuration file, named SSISTutorial.dtsConfig, that contains configuration settings for the v**alue** of the variable that in turn sets the **Directory** property of the enumerator.  
+17. The wizard creates a configuration file, named SSISTutorial.dtsConfig, that contains configuration settings for the **Value** of the variable that in turn sets the **Directory** property of the enumerator.  
   
     > [!NOTE]  
     > A configuration file typically contains complex information about the package properties, but for this tutorial the only configuration information should be  

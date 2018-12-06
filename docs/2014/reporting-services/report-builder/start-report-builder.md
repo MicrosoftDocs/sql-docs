@@ -4,10 +4,8 @@ ms.custom: ""
 ms.date: "03/08/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "reporting-services-native"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Report Builder, launching"
@@ -15,7 +13,6 @@ helpviewer_keywords:
   - "SharePoint integration [Reporting Services], starting Report Builder"
   - "starting Report Builder"
 ms.assetid: 8c8c7d2e-b315-418d-bf65-90e7685e4259
-caps.latest.revision: 50
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
@@ -76,7 +73,7 @@ manager: craigg
   
 4.  To open an existing report stored on your local machine or a report server, click the SQL Server icon in the upper left-hand corner, and then click Open.  
   
-     If you don’t see the report server in the list of existing servers, close the **Open Report** dialog box and then click **Connect** at the bottom of Report Builder to connect to the server.  
+     If you don't see the report server in the list of existing servers, close the **Open Report** dialog box and then click **Connect** at the bottom of Report Builder to connect to the server.  
   
 ## See Also  
  [Report Builder in SQL Server 2014](report-builder-in-sql-server-2016.md)  

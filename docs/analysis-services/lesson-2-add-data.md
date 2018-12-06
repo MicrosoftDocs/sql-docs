@@ -56,7 +56,7 @@ This topic is part of a tabular modeling tutorial, which should be completed in 
     **DO NOT** click **Finish**.  
   
 ## <a name="FilterData"></a>Filter the table data  
-The DimCustomer table that you're importing from the sample database contains a subset of the data from the original SQL Server Adventure Works database. You will filter out some more of the columns from the DimCustomer table that aren’t necessary when imported into your model. When possible, you'll want to filter out data that won't be used in order to save in-memory space used by the model.  
+The DimCustomer table that you're importing from the sample database contains a subset of the data from the original SQL Server Adventure Works database. You will filter out some more of the columns from the DimCustomer table that aren't necessary when imported into your model. When possible, you'll want to filter out data that won't be used in order to save in-memory space used by the model.  
   
 #### To filter the table data prior to importing  
   
@@ -70,7 +70,7 @@ The DimCustomer table that you're importing from the sample database contains a 
   
 3.  Verify that all other columns are checked, and then click **OK**.  
   
-    Notice the words **Applied filters** are now displayed in the **Filter Details** column in the **DimCustomer** row; if you click on that link you’ll see a text description of the filters you just applied.  
+    Notice the words **Applied filters** are now displayed in the **Filter Details** column in the **DimCustomer** row; if you click on that link you'll see a text description of the filters you just applied.  
     
     ![as-tabular-lesson2-applied-filters](../analysis-services/media/as-tabular-lesson2-applied-filters.png)
     

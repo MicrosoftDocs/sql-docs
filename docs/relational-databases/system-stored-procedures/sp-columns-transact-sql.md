@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "10/17/2016"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
-ms.component: "system-stored-procedures"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "sp_columns_TSQL"
@@ -18,7 +15,6 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_columns"
 ms.assetid: 2dec79cf-2baf-4c0f-8cbb-afb1a8654e1e
-caps.latest.revision: 45
 author: stevestein
 ms.author: sstein
 manager: craigg
@@ -53,7 +49,7 @@ sp_columns [ @table_name = ] object
  If the current user owns an object with the specified name, the columns of that object are returned. If *owner* is not specified and the current user does not own an object with the specified *object*, **sp_columns** looks for an object with the specified *object* owned by the database owner. If one exists, that object's columns are returned.  
   
  [ **@table_qualifier****=**] *qualifier*  
- Is the name of the object qualifier. *qualifier* is **sysname**, with a default of NULL. Various DBMS products support three-part naming for objects (*qualifier***.***owner***.***name*). In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], this column represents the database name. In some products, it represents the server name of the object's database environment.  
+ Is the name of the object qualifier. *qualifier* is **sysname**, with a default of NULL. Various DBMS products support three-part naming for objects (_qualifier_**.**_owner_**.**_name_). In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], this column represents the database name. In some products, it represents the server name of the object's database environment.  
   
  [ **@column_name=**] *column*  
  Is a single column and is used when only one column of catalog information is wanted. *column* is **nvarchar(384)**, with a default of NULL. If *column* is not specified, all columns are returned. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], *column* represents the column name as listed in the **syscolumns** table. Wildcard pattern matching is supported. For maximum interoperability, the gateway client should assume only SQL-92 standard pattern matching (the % and _ wildcard characters).  

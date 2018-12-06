@@ -4,13 +4,10 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "integration-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: ec970319-e749-4753-8675-9cf76ed99669
-caps.latest.revision: 9
 author: douglaslms
 ms.author: douglasl
 manager: craigg
@@ -31,7 +28,7 @@ manager: craigg
   
     -   Double-click the SAP BW connection manager.  
   
-         —or—  
+         -or-  
   
     -   Right-click the SAP BW connection manager, and then select **Edit**.  
   

@@ -5,15 +5,12 @@ ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: connectivity
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "SQLGetInfo function [ODBC], Access Driver"
   - "Access driver [ODBC], SQLGetInfo"
 ms.assetid: c226aba7-a2f4-4b32-b640-92654b40e5a7
-caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
@@ -24,11 +21,11 @@ manager: craigg
   
  **SQLGetInfo** supports the SQL_FILE_USAGE information type. The returned value is a 16-bit integer that indicates how the driver directly treats files in a data source:  
   
--   SQL_FILE_NOT_SUPPORTED — The driver is not a single-tier driver.  
+-   SQL_FILE_NOT_SUPPORTED - The driver is not a single-tier driver.  
   
--   SQL_FILE_TABLE — A single-tier driver treats files in a data source as tables.  
+-   SQL_FILE_TABLE - A single-tier driver treats files in a data source as tables.  
   
--   SQL_FILE_QUALIFIER — A single-tier driver treats files in a data source as a qualifier.  
+-   SQL_FILE_QUALIFIER - A single-tier driver treats files in a data source as a qualifier.  
   
  The ODBC driver returns SQL_FILE_QUALIFIER because each file is a complete database.  
   

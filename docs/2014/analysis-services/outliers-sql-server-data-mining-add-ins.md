@@ -4,10 +4,8 @@ ms.custom: ""
 ms.date: "12/29/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "exceptions [data mining]"
@@ -15,7 +13,6 @@ helpviewer_keywords:
   - "outliers [data mining]"
   - "data cleaning"
 ms.assetid: e6fa7c62-4005-4792-9211-3b699377a517
-caps.latest.revision: 19
 author: minewiskan
 ms.author: owend
 manager: craigg

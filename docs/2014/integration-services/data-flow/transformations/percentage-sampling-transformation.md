@@ -4,10 +4,7 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.dts.designer.percentagesamplingtrans.f1"
@@ -20,7 +17,6 @@ helpviewer_keywords:
   - "datasets [Integration Services], sample"
   - "training mining models"
 ms.assetid: 59767e52-f732-4b3f-8602-be50d0a64ef2
-caps.latest.revision: 46
 author: douglaslMS
 ms.author: douglasl
 manager: craigg

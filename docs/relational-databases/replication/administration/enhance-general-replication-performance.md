@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "replication"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: replication
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "publications [SQL Server replication], design and performance"
@@ -22,7 +19,6 @@ helpviewer_keywords:
   - "performance [SQL Server replication], general considerations"
   - "transactional replication, performance"
 ms.assetid: 895b1ad7-ffb9-4a5c-bda6-e1dfbd56d9bf
-caps.latest.revision: 45
 author: "MashaMSFT"
 ms.author: "mathoma"
 manager: craigg
@@ -152,11 +148,11 @@ manager: craigg
   
 -   Reduce the verbose levels of replication agents except during initial testing, monitoring, or debugging.  
   
-     Reduce the **–HistoryVerboseLevel** parameter and the **–OutputVerboseLevel** parameter of the Distribution Agents or Merge Agents. This reduces the number of new rows inserted to track agent history and output. Instead, previous history messages with the same status are updated to the new history information. Increase the verbose levels for testing, monitoring, and debugging so that you have as much information about agent activity as possible.  
+     Reduce the **-HistoryVerboseLevel** parameter and the **-OutputVerboseLevel** parameter of the Distribution Agents or Merge Agents. This reduces the number of new rows inserted to track agent history and output. Instead, previous history messages with the same status are updated to the new history information. Increase the verbose levels for testing, monitoring, and debugging so that you have as much information about agent activity as possible.  
   
--   Use the **–MaxBCPThreads** parameter of the Snapshot Agent, Merge Agent, and Distribution Agent (the number of threads specified should not exceed the number of processors on the computer). This parameter specifies the number of bulk copy operations that can be performed in parallel when the snapshot is created and applied.  
+-   Use the **-MaxBCPThreads** parameter of the Snapshot Agent, Merge Agent, and Distribution Agent (the number of threads specified should not exceed the number of processors on the computer). This parameter specifies the number of bulk copy operations that can be performed in parallel when the snapshot is created and applied.  
   
--   Use the **–UseInprocLoader** parameter of the Distribution Agent and the Merge Agent (this parameter cannot be used if published tables include XML columns). This parameter causes the agent to use the BULK INSERT command when the snapshot is applied.  
+-   Use the **-UseInprocLoader** parameter of the Distribution Agent and the Merge Agent (this parameter cannot be used if published tables include XML columns). This parameter causes the agent to use the BULK INSERT command when the snapshot is applied.  
   
  Agent parameters can be specified in agent profiles and on the command line. For more information, see:  
   

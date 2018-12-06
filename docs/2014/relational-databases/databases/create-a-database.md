@@ -4,17 +4,13 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: configuration
 ms.topic: conceptual
 helpviewer_keywords: 
   - "databases [SQL Server], creating"
   - "database creation [SQL Server], SQL Server Management Studio"
   - "creating databases"
 ms.assetid: 4c4beea2-6cbc-4352-9db6-49ea8130bb64
-caps.latest.revision: 35
 author: stevestein
 ms.author: sstein
 manager: craigg
@@ -75,7 +71,7 @@ manager: craigg
   
 4.  To create the database by accepting all default values, click **OK**; otherwise, continue with the following optional steps.  
   
-5.  To change the owner name, click (**…**) to select another owner.  
+5.  To change the owner name, click (**...**) to select another owner.  
   
     > [!NOTE]  
     >  The **Use full-text indexing** option is always checked and dimmed because, beginning in [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], all user databases are full-text enabled.  

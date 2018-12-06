@@ -4,16 +4,13 @@ ms.custom: ""
 ms.date: "12/29/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "nested tables, in association models"
   - "association [data mining]"
 ms.assetid: 4db6462f-93c7-443f-8ff7-39474dc7029e
-caps.latest.revision: 20
 author: minewiskan
 ms.author: owend
 manager: craigg
@@ -77,7 +74,7 @@ manager: craigg
   
          Drillthrough is useful, for example, if you want to click on a particular itemset and see the source data.  
   
-    -   **Use temporary model**. Select this option if you don’t want the model saved on the server. Temporary models are deleted when you close Excel.  
+    -   **Use temporary model**. Select this option if you don't want the model saved on the server. Temporary models are deleted when you close Excel.  
   
 9. The wizard analyzes all possible combinations and creates a report that contains the itemsets and rules.  
   

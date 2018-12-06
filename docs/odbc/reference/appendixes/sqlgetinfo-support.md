@@ -5,16 +5,13 @@ ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: connectivity
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "compatibility [ODBC], SQLGetInfo"
   - "backward compatibility [ODBC], SQLGetInfo"
   - "SQLGetInfo function [ODBC], support"
 ms.assetid: 57326f57-daba-46b6-b0be-6c97213b9ef1
-caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg

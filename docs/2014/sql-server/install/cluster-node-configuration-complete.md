@@ -4,13 +4,10 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "database-engine"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: 64174d54-edee-49b8-9b43-039574bf2ca1
-caps.latest.revision: 10
 author: mashamsft
 ms.author: mathoma
 manager: craigg
@@ -21,10 +18,10 @@ manager: craigg
 ## Options  
  From the drop-down boxes:  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance name — Select the instance name for the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] failover cluster.  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance name - Select the instance name for the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] failover cluster.  
   
--   Name of this node — This field is pre-populated with the computer name where the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Setup program is running.  
+-   Name of this node - This field is pre-populated with the computer name where the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Setup program is running.  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Failover Cluster Network Name — This field is not pre-populated. Specify the network name for the new [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] failover cluster instance. This is the name that identifies the failover cluster instance on the network.  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Failover Cluster Network Name - This field is not pre-populated. Specify the network name for the new [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] failover cluster instance. This is the name that identifies the failover cluster instance on the network.  
   
   

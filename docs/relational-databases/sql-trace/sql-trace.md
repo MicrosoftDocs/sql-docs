@@ -1,39 +1,36 @@
 ---
 title: "SQL Trace | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/14/2017"
+ms.date: "11/27/2018"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "sql-trace"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: 83c6d1d9-19ce-43fe-be9a-45aaa31f20cb
-caps.latest.revision: 13
 author: "MashaMSFT"
 ms.author: "mathoma"
 manager: craigg
 ---
 # SQL Trace
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  In SQL Trace, events are gathered if they are instances of event classes listed in the trace definition. These events can be filtered out of the trace or queued for their destination. The destination can be a file or [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Objects (SMO), which can use the trace information in applications that manage [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+In SQL Trace, events are gathered if they are instances of event classes listed in the trace definition. These events can be filtered out of the trace or queued for their destination. The destination can be a file or [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Objects (SMO), which can use the trace information in applications that manage [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-> [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Use Extended Events instead.  
-  
+> [!IMPORTANT]
+> SQL Trace and [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] are deprecated. The *Microsoft.SqlServer.Management.Trace* namespace that contains the Microsoft SQL Server Trace and Replay objects are also deprecated. 
+> [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] 
+> Use Extended Events instead. For more information on [Extended Events](../../relational-databases/extended-events/extended-events.md), see [Quick Start: Extended events in SQL Server](../../relational-databases/extended-events/quick-start-extended-events-in-sql-server.md) and [SSMS XEvent Profiler](../../relational-databases/extended-events/use-the-ssms-xe-profiler.md).
+
 ## Benefits of SQL Trace  
- Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provides [!INCLUDE[tsql](../../includes/tsql-md.md)] system stored procedures to create traces on an instance of the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. These system stored procedures can be used from within your own applications to create traces manually, instead of using [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]. This allows you to write custom applications specific to the needs of your enterprise.  
+Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provides [!INCLUDE[tsql](../../includes/tsql-md.md)] system stored procedures to create traces on an instance of the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. These system stored procedures can be used from within your own applications to create traces manually, instead of using [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]. This allows you to write custom applications specific to the needs of your enterprise.  
   
 ## SQL Trace Architecture  
- Event Sources can be any source that produces the trace event, such as [!INCLUDE[tsql](../../includes/tsql-md.md)] batches or [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] events, such as deadlocks. For more information about events, see [SQL Server Event Class Reference](../../relational-databases/event-classes/sql-server-event-class-reference.md). After an event occurs, if the event class has been included in a trace definition, the event information is gathered by the trace. If filters have been defined for the event class in the trace definition, the filters are applied and the trace event information is passed to a queue. From the queue, the trace information is either written to a file or can be used by SMO in applications, such as [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]. The following diagram shows how SQL Trace gathers events during a tracing.  
+Event Sources can be any source that produces the trace event, such as [!INCLUDE[tsql](../../includes/tsql-md.md)] batches or [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] events, such as deadlocks. For more information about events, see [SQL Server Event Class Reference](../../relational-databases/event-classes/sql-server-event-class-reference.md). After an event occurs, if the event class has been included in a trace definition, the event information is gathered by the trace. If filters have been defined for the event class in the trace definition, the filters are applied and the trace event information is passed to a queue. From the queue, the trace information is either written to a file or can be used by SMO in applications, such as [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]. The following diagram shows how SQL Trace gathers events during a tracing.  
   
- ![Database Engine event tracing process](../../relational-databases/sql-trace/media/tracarch.gif "Database Engine event tracing process")  
+![Database Engine event tracing process](../../relational-databases/sql-trace/media/tracarch.gif "Database Engine event tracing process")  
   
 ## SQL Trace Terminology  
- The following terms describe the key concepts of SQL Trace.  
+The following terms describe the key concepts of SQL Trace.  
   
  **Event**  
  The occurrence of an action within an instance of the [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)].  
@@ -69,7 +66,7 @@ manager: craigg
  In [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)], a table that is created when a trace is saved to a table.  
   
 ## Use Data Columns to Describe Returned Events  
- SQL Trace uses data columns in the trace output to describe events that are returned when the trace runs. The following table describes the [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] data columns, which are the same data columns as those used by SQL Trace, and indicates the columns that are selected by default.  
+SQL Trace uses data columns in the trace output to describe events that are returned when the trace runs. The following table describes the [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] data columns, which are the same data columns as those used by SQL Trace, and indicates the columns that are selected by default.  
   
 |Data column|Column number|Description|  
 |-----------------|-------------------|-----------------|  

@@ -4,10 +4,8 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "MINIMUM_DEPENDENCY_PROBABILITY parameter"
@@ -18,7 +16,6 @@ helpviewer_keywords:
   - "MAXIMUM_OUTPUT_ATTRIBUTES parameter"
   - "MAXIMUM_STATES parameter"
 ms.assetid: a4cd47fe-2127-4930-b18f-3edd17ee9a65
-caps.latest.revision: 16
 author: minewiskan
 ms.author: owend
 manager: craigg
@@ -70,7 +67,7 @@ manager: craigg
  The default is 0.5.  
   
  *MAXIMUM_STATES*  
- Specifies the maximum number of attribute states that the algorithm supports. If the number of states that an attribute has is greater than the maximum number of states, the algorithm uses the attribute’s most popular states and treats the remaining states as missing.  
+ Specifies the maximum number of attribute states that the algorithm supports. If the number of states that an attribute has is greater than the maximum number of states, the algorithm uses the attribute's most popular states and treats the remaining states as missing.  
   
  The default is 100.  
   

@@ -4,17 +4,13 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: tools-other
 ms.topic: conceptual
 dev_langs: 
   - "XML"
 helpviewer_keywords: 
   - "TestServer element"
 ms.assetid: caa3547a-2cd5-47ad-ace2-a36752835cfe
-caps.latest.revision: 11
 author: stevestein
 ms.author: sstein
 manager: craigg

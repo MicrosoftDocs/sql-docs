@@ -4,10 +4,7 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords: 
   - "truncating data"
@@ -15,7 +12,6 @@ helpviewer_keywords:
   - "expressions [Integration Services], data truncation"
   - "truncate options [Integration Services]"
 ms.assetid: 02461e15-49ca-445b-abb3-5c369c283ec2
-caps.latest.revision: 32
 author: douglaslMS
 ms.author: douglasl
 manager: craigg

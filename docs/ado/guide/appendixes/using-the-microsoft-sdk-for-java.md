@@ -4,16 +4,13 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ""
-ms.date: "02/15/2017"
+ms.date: 11/08/2018
 ms.reviewer: ""
-ms.suite: "sql"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Java (Microsoft SDK for)"
   - "Microsoft SDK for Java [ADO]"
 ms.assetid: 2d7cb5b5-8307-49dd-b07e-c07069bb1626
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
@@ -35,13 +32,13 @@ The Microsoft SDK for Java is the developer kit for the Microsoft Internet Explo
   
 1.  Run the following at a command prompt. You must set the path to include the Microsoft SDK for Java Bin directory, or run the command from that location. Typically, the Microsoft SDK for Java is installed in the same location as Visual Studio. This is a single command statement.  
   
-    ```  
+    ```java
     \<path to DevStudio>\<path to Java SDK>\bin\JactiveX.exe /javatlb "C:\program files\common files\system\ado\msado15.dll"  
     ```  
   
 2.  Run the following command to compile the generated classes. The /g:t switch turns on generation of debug symbols so that you can trace into the .Java symbols. Remove it for release builds.  
   
-    ```  
+    ```java
     jvc /g:t c:\<windows>\Java\trustlib\msado15\*.Java  
     ```  
   

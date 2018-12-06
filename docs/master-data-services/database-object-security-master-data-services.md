@@ -5,16 +5,12 @@ ms.date: "03/04/2017"
 ms.prod: sql
 ms.prod_service: "mds"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "master-data-services"
-ms.tgt_pltfrm: ""
+ms.technology: master-data-services
 ms.topic: conceptual
 helpviewer_keywords: 
   - "database [Master Data Services], object security"
   - "security [Master Data Services], database objects"
 ms.assetid: dd5ba503-7607-45d9-ad0d-909faaade179
-caps.latest.revision: 10
 author: leolimsft
 ms.author: lle
 manager: craigg
@@ -42,7 +38,7 @@ manager: craigg
 -   [Configuring System Settings](#SysSettings)  
   
 ##  <a name="Staging"></a> Staging Data  
- In the following table, each securable has “name” as part of the name. This indicates the name of the staging table that is specified when an entity is created. For more information, see [Overview: Importing Data from Tables &#40;Master Data Services&#41;](../master-data-services/overview-importing-data-from-tables-master-data-services.md)  
+ In the following table, each securable has "name" as part of the name. This indicates the name of the staging table that is specified when an entity is created. For more information, see [Overview: Importing Data from Tables &#40;Master Data Services&#41;](../master-data-services/overview-importing-data-from-tables-master-data-services.md)  
   
 |Action|Securables|Permissions|  
 |------------|----------------|-----------------|  

@@ -4,10 +4,8 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "mining models [Analysis Services], copying"
@@ -15,7 +13,6 @@ helpviewer_keywords:
   - "mining models [Analysis Services], how-to topics"
   - "copying mining models"
 ms.assetid: 7975bb02-f188-49a0-b7de-5b9b216254ad
-caps.latest.revision: 12
 author: minewiskan
 ms.author: owend
 manager: craigg
@@ -35,7 +32,7 @@ manager: craigg
   
 3.  Select the model, and right-click to open the shortcut menu.  
   
-     –or–  
+     -or-  
   
      Select the model. On the **Mining Model** menu, select **New Mining Model**.  
   
@@ -45,7 +42,7 @@ manager: craigg
   
 1.  Select the mining model.  
   
-2.  In the **Properties** window, click the text box for the **Filter** property, and the click the build **(…)** button.  
+2.  In the **Properties** window, click the text box for the **Filter** property, and the click the build **(...)** button.  
   
 3.  Change the filter conditions.  
   

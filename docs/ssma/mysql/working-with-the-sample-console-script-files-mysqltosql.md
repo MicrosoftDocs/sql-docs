@@ -4,17 +4,11 @@ ms.prod: sql
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: ssma
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
-applies_to: 
-  - "Azure SQL Database"
-  - "SQL Server"
 helpviewer_keywords: 
   - "Sample console script files"
 ms.assetid: 7e6aaa8a-5f5c-414d-9fb8-21e56b9ffaef
-caps.latest.revision: 10
 author: "Shamikg"
 ms.author: "Shamikg"
 manager: craigg
@@ -39,7 +33,7 @@ The following sample console script files covering different scenarios have been
   
     -   This sample gives the different modes of connection available to the source and target database and the user can select any mode as per the requirement. This sample contains the Server definitions.  
   
-    -   The user can connect to the required database by simply changing the values to the required source and target server definitions. In the example provided all values have been provided as variable values which are available in the **VariableValueFileSample.xml**.  All other connection parameters can be removed from the user’s working server connection file.  
+    -   The user can connect to the required database by simply changing the values to the required source and target server definitions. In the example provided all values have been provided as variable values which are available in the **VariableValueFileSample.xml**.  All other connection parameters can be removed from the user's working server connection file.  
   
     -   For more information on connecting to the source and target server, see [Creating the Server Connection Files &#40;MySQLToSQL&#41;](../../ssma/mysql/creating-the-server-connection-files-mysqltosql.md) .  
   
@@ -51,7 +45,7 @@ The following sample console script files covering different scenarios have been
   
     In the `generate-assessment-report` command the user has to mandatorily change the variable value (refer **VariableValueFileSample.xml**) in the `object-name` attribute to the database name being in use by the user. Depending on the kind of object specified, the `object-type` value will also have to be changed.  
   
-    If the user has to assess multiple objects / databases he can specify multiple `metabase-object` nodes as illustrated in the `generate-assessment-report` command’s Example 4 of the sample console script file.  
+    If the user has to assess multiple objects / databases he can specify multiple `metabase-object` nodes as illustrated in the `generate-assessment-report` command's Example 4 of the sample console script file.  
   
     For more information on generating reports, see [Generating Reports &#40;MySQLToSQL&#41;](../../ssma/mysql/generating-reports-mysqltosql.md).  
   
@@ -66,7 +60,7 @@ The following sample console script files covering different scenarios have been
   
     In the `convert-sql-statement` command the user has to mandatorily change the variable value (refer **VariableValueFileSample.xml**) in the `context` attribute to the database name that is being in use by the user. The user will also be required to change the `sql` attribute value to the source database `sql` command that he/she require to be converted.  
   
-    The user can also provide sql files to be converted. This has been illustrated in the `convert-sql-statement` command’s Example 4 of the sample console script file.  
+    The user can also provide sql files to be converted. This has been illustrated in the `convert-sql-statement` command's Example 4 of the sample console script file.  
   
     > [!NOTE]  
     > Ensure that the variable value file command line argument is passed to the console application and VariableValueFileSample.xml is updated with the user specified values.  
@@ -92,7 +86,7 @@ The following sample console script files covering different scenarios have been
   
     1.  Performs schema conversion from source to the target schema.  
   
-    2.  If the user has to assess multiple objects / databases he can specify multiple `metabase-object` nodes as illustrated in the `convert-schema` command’s Example 4 of the sample console script file.  
+    2.  If the user has to assess multiple objects / databases he can specify multiple `metabase-object` nodes as illustrated in the `convert-schema` command's Example 4 of the sample console script file.  
   
     **Attribute**  
   
@@ -104,7 +98,7 @@ The following sample console script files covering different scenarios have been
   
     1.  Synchronizes the target objects with the target database.  
   
-    2.  If the user has to assess multiple objects / databases he can specify multiple `metabase-object` nodes as illustrated in the `synchronize-target` command’s Example 3 of the sample console script file.  
+    2.  If the user has to assess multiple objects / databases he can specify multiple `metabase-object` nodes as illustrated in the `synchronize-target` command's Example 3 of the sample console script file.  
   
     **Attribute**  
   
@@ -116,7 +110,7 @@ The following sample console script files covering different scenarios have been
   
     1.  Migrates the source data to the target.  
   
-    2.  If the user has to assess multiple objects / databases he can specify multiple `metabase-object` nodes as illustrated in the `migrate-data` command’s Example 2 of the sample console script file.  
+    2.  If the user has to assess multiple objects / databases he can specify multiple `metabase-object` nodes as illustrated in the `migrate-data` command's Example 2 of the sample console script file.  
   
     **Attribute**  
   

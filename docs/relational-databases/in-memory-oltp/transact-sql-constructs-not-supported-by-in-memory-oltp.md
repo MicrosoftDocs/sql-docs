@@ -4,14 +4,10 @@ ms.custom: ""
 ms.date: "11/21/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.component: "in-memory-oltp"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: in-memory-oltp
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: e3f8009c-319d-4d7b-8993-828e55ccde11
-caps.latest.revision: 51
 author: MightyPen
 ms.author: genemi
 manager: craigg
@@ -84,7 +80,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
 |Feature|Filtered index|Filtered indexes are not supported with memory-optimized tables. Omit the **WHERE** clause from the index specification.|  
 |Feature|Included columns|Specifying included columns is not necessary for memory-optimized tables. All columns of the memory-optimized table are implicitly included in every memory-optimized index.|  
 |Operation|DROP INDEX|Dropping indexes on memory-optimized tables is not supported. You can delete indexes using ALTER TABLE.<br /><br /> For more information, see [Altering Memory-Optimized Tables](../../relational-databases/in-memory-oltp/altering-memory-optimized-tables.md).|  
-|Index option|*Index option*|Only one index option is supported – BUCKET_COUNT for HASH indexes.|  
+|Index option|*Index option*|Only one index option is supported - BUCKET_COUNT for HASH indexes.|  
   
 ## Nonclustered Hash Indexes  
  The following table lists the [!INCLUDE[tsql](../../includes/tsql-md.md)] features and keywords that can appear in the message text of an error involving a nonclustered hash index, as well as the corrective action to resolve the error.  
@@ -103,7 +99,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
 |Feature|Non-constant parameter defaults|When using default values with parameters on natively compiled stored procedures, the values must be constants. Remove any wildcards from the parameter declarations.|  
 |Feature|EXTERNAL|CLR stored procedures cannot be natively compiled. Either remove the AS EXTERNAL clause or the NATIVE_COMPILATION option from the CREATE PROCEDURE statement.|  
 |Feature|Numbered stored procedures|Natively compiled stored procedures cannot be numbered. Remove the **;***number* from the **CREATE PROCEDURE** statement.|  
-|Feature|multi-row INSERT … VALUES statements|Cannot insert multiple rows using the same **INSERT** statement in a natively compiled stored procedure. Create **INSERT** statements for each row.|  
+|Feature|multi-row INSERT ... VALUES statements|Cannot insert multiple rows using the same **INSERT** statement in a natively compiled stored procedure. Create **INSERT** statements for each row.|  
 |Feature|Common Table Expressions (CTEs)|Common table expressions (CTE) are not supported in natively compiled stored procedures. Rewrite the query.|  
 |Feature|COMPUTE|The **COMPUTE** clause is not supported. Remove it from the query.|  
 |Feature|SELECT INTO|The **INTO** clause is not supported with the **SELECT** statement. Rewrite the query as **INSERT INTO** *Table* **SELECT**.|  

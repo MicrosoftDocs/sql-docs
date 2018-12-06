@@ -4,10 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Aggregate transformation [Integration Services]"
@@ -23,7 +20,6 @@ helpviewer_keywords:
   - "sorting data [Integration Services]"
   - "aggregations [Integration Services]"
 ms.assetid: c4bbefa6-172b-4547-99a1-a0b38e3e2b05
-caps.latest.revision: 65
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
@@ -176,7 +172,7 @@ manager: craigg
   
 -   Technical article, [Top 10 SQL Server Integration Services Best Practices](http://go.microsoft.com/fwlink/?LinkId=220818), on sqlcat.com.  
   
--   Technical article and sample, [The “Balanced Data Distributor” for SSIS](http://go.microsoft.com/fwlink/?LinkId=220822), on sqlcat.com.  
+-   Technical article and sample, [The "Balanced Data Distributor" for SSIS](http://go.microsoft.com/fwlink/?LinkId=220822), on sqlcat.com.  
   
 -   Blog post, [Troubleshooting SSIS Package Performance Issues](http://go.microsoft.com/fwlink/?LinkId=238156), on blogs.msdn.com  
   

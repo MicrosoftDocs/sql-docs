@@ -32,7 +32,7 @@ manager: kfile
   
 -   Drillthrough works by retrieving information about the training cases that was cached when you processed the mining structure. Therefore, if you clear the cached data after processing the structure by changing the <xref:Microsoft.AnalysisServices.MiningStructureCacheMode> property to **ClearAfterProcessing**, drillthrough will not work. To enable drillthrough to structure columns, you must change the <xref:Microsoft.AnalysisServices.MiningStructureCacheMode> property to **KeepTrainingCases** and then reprocess the structure.  
   
--   Verify that both the mining structure and the mining model have the [AllowDrillThrough](../../analysis-services/scripting/properties/allowdrillthrough-element-assl.md) property set to **True**. Moreover, you must be a member of a role that has drillthrough permissions on both the structure and the model.  
+-   Verify that both the mining structure and the mining model have the [AllowDrillThrough](https://docs.microsoft.com/bi-reference/assl/properties/allowdrillthrough-element-assl) property set to **True**. Moreover, you must be a member of a role that has drillthrough permissions on both the structure and the model.  
   
 ## Security Issues for Drillthrough  
  Drillthrough permissions are set separately on the structure and model. The model permission lets you drill through from the model, even if you do not have permissions on the structure. Drillthrough permissions on the structure provide the additional ability to include structure columns in drillthrough queries from the model, by using the [StructureColumn &#40;DMX&#41;](../../dmx/structurecolumn-dmx.md) function.  

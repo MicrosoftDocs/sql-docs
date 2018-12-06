@@ -4,10 +4,8 @@ ms.custom: ""
 ms.date: "12/29/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "mining models, importing"
@@ -17,7 +15,6 @@ helpviewer_keywords:
   - "mining models, processing"
   - "mining models, exporting"
 ms.assetid: c11380f0-7c24-4668-9cdf-9c53e4aff665
-caps.latest.revision: 18
 author: minewiskan
 ms.author: owend
 manager: craigg

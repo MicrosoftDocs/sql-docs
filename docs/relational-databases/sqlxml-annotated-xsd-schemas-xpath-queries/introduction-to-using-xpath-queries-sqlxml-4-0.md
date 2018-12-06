@@ -4,18 +4,14 @@ ms.custom: ""
 ms.date: "03/17/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.component: "sqlxml"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: xml
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 
   - "XPath queries [SQLXML], about XPath queries"
   - "W3C XPath specification"
   - "XPath queries [SQLXML], functionality"
 ms.assetid: 01050a8e-0ccc-4a02-a4eb-b48be5c3f4f3
-caps.latest.revision: 29
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: craigg
@@ -50,7 +46,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
   
  XPath is a graph navigation language used to select a set of nodes from an XML document. Each XPath operator selects a node-set based on a node-set selected by a previous XPath operator. For example, given a set of **\<Customer>** nodes, XPath can select all **\<Order>** nodes with the **date** attribute value of **"7/14/1999"**. The resulting node-set contains all the orders with order date 7/14/1999.  
   
- The XPath language is defined by the World Wide Web Consortium (W3C) as a standard navigation language. SQLXML 4.0 implements a subset of the W3C XPath specification, which is located at http://www.w3.org/TR/1999/PR-xpath-19991008.html.  
+ The XPath language is defined by the World Wide Web Consortium (W3C) as a standard navigation language. SQLXML 4.0 implements a subset of the W3C XPath specification, which is located at https://www.w3.org/TR/1999/PR-xpath-19991008.html.  
   
  The following are key differences between the W3C XPath implementation and the SQLXML 4.0 implementation.  
   

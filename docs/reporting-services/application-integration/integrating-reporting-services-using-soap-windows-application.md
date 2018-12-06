@@ -4,12 +4,9 @@ ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
 ms.technology: application-integration
-ms.suite: pro-bi
 
 
 ms.topic: reference
-applies_to: 
-  - "SQL Server 2016 Preview"
 helpviewer_keywords: 
   - "rendered reports [Reporting Services]"
   - "Windows applications [Reporting Services]"
@@ -86,11 +83,11 @@ private void listReportsButton_Click(object sender, System.EventArgs e)
   
  However, the <xref:ReportExecution2005.ReportExecutionService.Render%2A> method of the SOAP API can be used to render reports and save them to various output formats programmatically. This is an advantage over URL access, which requires user interaction. When you render a report using the SOAP API <xref:ReportExecution2005.ReportExecutionService.Render%2A> method, you can render to any of the supported output formats.  
   
- You can also use the freely distributable ReportViewer controls that are included with [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsOrcas](../../includes/vsorcas-md.md)]. The ReportViewer controls make it easy to embed [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] functionality into custom applications. The ReportViewer controls are intended for developers who want to provide predesigned, fully authored reports as part of an application feature set (for example, a Web site management application might include reports that show click-stream analysis on company Web sites). Embedding the controls in an application provides a streamlined alternative to including the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] server components in your application deployment. The controls provide report functionality, but without the additional report authoring, publication, or distribution and delivery support that you find in [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
+ You can also use the freely distributable Report Viewer controls that are included with [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsOrcas](../../includes/vsorcas-md.md)]. The Report Viewer controls make it easy to embed [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] functionality into custom applications. The Report Viewer controls are intended for developers who want to provide predesigned, fully authored reports as part of an application feature set (for example, a Web site management application might include reports that show click-stream analysis on company Web sites). Embedding the controls in an application provides a streamlined alternative to including the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] server components in your application deployment. The controls provide report functionality, but without the additional report authoring, publication, or distribution and delivery support that you find in [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
   
- There are two versions of the ReportViewer controls, one for rich Windows client applications and one for [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] applications. The controls support both local processing and remote processing modes. In local processing mode, your application provides the report definition and datasets and triggers report processing. In remote processing mode, data retrieval and report processing happen on the report server and the control is used for display and report navigation. This model allows you to build rich applications that can be scaled from desktop to the enterprise.  
+ There are two versions of the Report Viewer controls, one for rich Windows client applications and one for [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] applications. The controls support both local processing and remote processing modes. In local processing mode, your application provides the report definition and datasets and triggers report processing. In remote processing mode, data retrieval and report processing happen on the report server and the control is used for display and report navigation. This model allows you to build rich applications that can be scaled from desktop to the enterprise.  
   
- ReportViewer controls are documented in [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] online Help. For more information, see the [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] product documentation.  
+ Report Viewer controls are documented in [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] online Help. For more information, see the [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] product documentation.  
   
 ## See Also  
  [Building Applications Using the Web Service and the .NET Framework](../../reporting-services/report-server-web-service/net-framework/building-applications-using-the-web-service-and-the-net-framework.md)   

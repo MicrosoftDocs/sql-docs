@@ -3,19 +3,12 @@ title: "SQL Server Distributed Replay | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
-ms.prod_service: "sql-tools"
-ms.component: "distributed-replay"
-ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: tools-other
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Distributed Replay"
   - "SQL Server Distributed Replay"
 ms.assetid: 58ef7016-b105-42c2-90a0-364f411849a4
-caps.latest.revision: 25
 author: "stevestein"
 ms.author: "sstein"
 manager: craigg
@@ -40,7 +33,7 @@ manager: craigg
   
  The following table describes when to use each tool.  
   
-|Tool|Use When…|  
+|Tool|Use When...|  
 |----------|---------------|  
 |[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]|You want to use the conventional replay mechanism on a single computer. In particular, you need line-by-line debugging capabilities, such as the **Step**, **Run to Cursor**, and **Toggle Breakpoint** commands.<br /><br /> You want to replay an [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] trace.|  
 |Distributed Replay|You want to evaluate application compatibility. For example, you want to test [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and operating system upgrade scenarios, hardware upgrades, or index tuning.<br /><br /> The concurrency in the captured trace is so high that a single replay client cannot sufficiently simulate it.|  
@@ -73,8 +66,8 @@ manager: craigg
 |Describes how to use the administration tool to initiate, monitor, and cancel operations on the controller.|[Administration Tool Command-line Options &#40;Distributed Replay Utility&#41;](../../tools/distributed-replay/administration-tool-command-line-options-distributed-replay-utility.md)|  
   
 ## See Also  
- [SQL Server Distributed Replay Forum](http://social.technet.microsoft.com/Forums/sl/sqldru/)   
- [Using Distributed Replay to Load Test Your SQL Server – Part 2](http://blogs.msdn.com/b/mspfe/archive/2012/11/14/using-distributed-replay-to-load-test-your-sql-server-part-2.aspx)   
- [Using Distributed Replay to Load Test Your SQL Server - Part 1](http://blogs.msdn.com/b/mspfe/archive/2012/11/08/using-distributed-replay-to-load-test-your-sql-server-part-1.aspx)  
+ [SQL Server Distributed Replay Forum](https://social.technet.microsoft.com/Forums/sl/sqldru/)   
+ [Using Distributed Replay to Load Test Your SQL Server - Part 2](https://blogs.msdn.com/b/mspfe/archive/2012/11/14/using-distributed-replay-to-load-test-your-sql-server-part-2.aspx)   
+ [Using Distributed Replay to Load Test Your SQL Server - Part 1](https://blogs.msdn.com/b/mspfe/archive/2012/11/08/using-distributed-replay-to-load-test-your-sql-server-part-1.aspx)  
   
   

@@ -4,10 +4,7 @@ ms.custom: ""
 ms.date: "01/07/2016"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: configuration
 ms.topic: conceptual
 helpviewer_keywords: 
   - "expired password [SQL Server], SQL Server Agent"
@@ -19,7 +16,6 @@ helpviewer_keywords:
   - "changing passwords used by SQL Server"
   - "modifying passwords"
 ms.assetid: 5b6dcc03-6cae-45d3-acef-6f85ca6d615f
-caps.latest.revision: 21
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg

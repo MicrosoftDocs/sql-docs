@@ -4,13 +4,10 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "reporting-services-native"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: f02dee0c-85ad-45d4-b707-10e9e8541db9
-caps.latest.revision: 7
 author: markingmyname
 ms.author: maghan
 manager: craigg
@@ -30,7 +27,7 @@ manager: craigg
   
 4.  On the **Choose Your Data Connection** page, click **New Connection**.  
   
-5.  If this is the first time you’ve created a data source in Visual Studio, you will see the **Choose Data Source** page. In the **Data Source** box, select **Microsoft SQL Server**.  
+5.  If this is the first time you've created a data source in Visual Studio, you will see the **Choose Data Source** page. In the **Data Source** box, select **Microsoft SQL Server**.  
   
 6.  In the **Add Connection** dialog box, perform the following steps:  
   

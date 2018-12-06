@@ -4,10 +4,8 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "reporting-services-native"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "10033"
@@ -15,7 +13,6 @@ f1_keywords:
 helpviewer_keywords: 
   - "Grouping Pane dialog box"
 ms.assetid: 8b4bd0b3-ec97-48f8-8bfb-82a53a2f35a1
-caps.latest.revision: 21
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg

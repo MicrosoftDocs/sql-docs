@@ -1,13 +1,10 @@
 ---
 title: "Replication Distribution Agent | Microsoft Docs"
 ms.custom: ""
-ms.date: "06/13/2017"
+ms.date: "29/10/2018"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Distribution Agent, executables"
@@ -15,7 +12,6 @@ helpviewer_keywords:
   - "Distribution Agent, parameter reference"
   - "command prompt [SQL Server replication]"
 ms.assetid: 7b4fd480-9eaf-40dd-9a07-77301e44e2ac
-caps.latest.revision: 62
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
@@ -137,7 +133,10 @@ manager: craigg
 |**0**|Specifies that SSL is not used.|  
 |**1**|Specifies that SSL is used, but the agent does not verify that the SSL server certificate is signed by a trusted issuer.|  
 |**2**|Specifies that SSL is used, and that the certificate is verified.|  
-  
+ 
+ > [!NOTE]  
+ >  A valid SSL certificate is defined with a fully qualified domain name of the SQL Server. In order for the agent to connect successfully when setting -EncryptionLevel to 2, create an alias on the local SQL Server. The 'Alias Name' parameter should be the server name and the 'Server' parameter should be set to the fully qualified name of the SQL Server.
+
  For more information, see [Security Overview &#40;Replication&#41;](../security/security-overview-replication.md).  
   
  **-ErrorFile** *error_path_and_file_name*  
@@ -199,7 +198,7 @@ manager: craigg
  If there is no replicated transaction available at the source, the agent reports a no-transaction message to the Distributor. This option specifies how long the agent waits before reporting another no-transaction message. Agents always report a no-transaction message when they detect that there are no transactions available at the source after previously processing replicated transactions. The default is 60 seconds.  
   
  **-OledbStreamThreshold** *oledb_stream_threshold*  
- Specifies the minimum size, in bytes, for binary large object data above which the data will be bound as a stream. You must specify **–UseOledbStreaming** to use this parameter. Values can range from 400 to 1048576 bytes, with a default of 16384 bytes.  
+ Specifies the minimum size, in bytes, for binary large object data above which the data will be bound as a stream. You must specify **-UseOledbStreaming** to use this parameter. Values can range from 400 to 1048576 bytes, with a default of 16384 bytes.  
   
  **-Output** *output_path_and_file_name*  
  Is the path of the agent output file. If the file name is not provided, the output is sent to the console. If the specified file name exists, the output is appended to the file.  
@@ -268,7 +267,7 @@ manager: craigg
  Specifies the subscription type for distribution. A value of **0** indicates a push subscription, a value of **1** indicates a pull subscription, and a value of **2** indicates an anonymous subscription.  
   
  **-TransactionsPerHistory** [ **0**| **1**|... **10000**]  
- Specifies the transaction interval for history logging. If the number of committed transactions after the last instance of history logging is greater than this option, a history message is logged. The default is 100. A value of **0** indicates infinite **TransactionsPerHistory**. See the preceding **–MessageInterval**parameter.  
+ Specifies the transaction interval for history logging. If the number of committed transactions after the last instance of history logging is greater than this option, a history message is logged. The default is 100. A value of **0** indicates infinite **TransactionsPerHistory**. See the preceding **-MessageInterval**parameter.  
   
  **-UseDTS**  
  Must be specified as a parameter for a publication that allows data transformation.  

@@ -4,12 +4,8 @@ ms.custom: ""
 ms.date: "03/04/2017"
 ms.prod: sql
 ms.prod_service: sql
-ms.component: "xquery"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: xml
 ms.topic: "language-reference"
 dev_langs: 
   - "XML"
@@ -17,7 +13,6 @@ helpviewer_keywords:
   - "expressions [XQuery], validate"
   - "validate expressions [XQuery]"
 ms.assetid: fb2592a1-1fad-41f9-8ff8-74c5905dbae9
-caps.latest.revision: 13
 author: "rothja"
 ms.author: "jroth"
 manager: craigg

@@ -4,16 +4,13 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "data mining [Analysis Services], how-to topics"
   - "drillthrough [Analysis Services]"
 ms.assetid: 4fa44f60-ef9a-4b59-98c0-c0baf1195c8e
-caps.latest.revision: 27
 author: minewiskan
 ms.author: owend
 manager: craigg
@@ -21,11 +18,11 @@ manager: craigg
 # Enable Drillthrough for a Mining Model
   If you have enabled drillthrough for a mining model, when you browse the model you can retrieve detailed information about the cases that were used to create the model. To view this information, you must have the necessary permissions, and the structure must have already been processed.  
   
- **Permissions** For a user to drill through to either model data or structure data, the user must be a member of a role that has [AllowDrillThrough](../scripting/properties/allowdrillthrough-element-assl.md) permissions on the mining model or mining structure. Drillthrough permissions are set separately on the structure and model.  
+ **Permissions** For a user to drill through to either model data or structure data, the user must be a member of a role that has [AllowDrillThrough](https://docs.microsoft.com/bi-reference/assl/properties/allowdrillthrough-element-assl) permissions on the mining model or mining structure. Drillthrough permissions are set separately on the structure and model.  
   
 -   Drillthrough permissions on the model enable you to drill through from the model, even if you do not have permissions on the structure.  
   
--   Drillthrough permissions on the structure provide the additional ability to include structure columns in drillthrough queries from the model, by using the [StructureColumn &#40;DMX&#41;](/sql/dmx/structurecolumn-dmx) function. You can also query the training and test cases in the structure by using the SELECT… FROM \<structure>.CASES syntax.  
+-   Drillthrough permissions on the structure provide the additional ability to include structure columns in drillthrough queries from the model, by using the [StructureColumn &#40;DMX&#41;](/sql/dmx/structurecolumn-dmx) function. You can also query the training and test cases in the structure by using the SELECT... FROM \<structure>.CASES syntax.  
   
  **Caching of training cases** Drillthrough works by retrieving information about the training cases in the mining structure. This information is cached when the structure is processed. Therefore, if you choose to clear all cached data by changing the <xref:Microsoft.AnalysisServices.MiningStructureCacheMode> property to `ClearAfterProcessing`, drillthrough will not work.  
   

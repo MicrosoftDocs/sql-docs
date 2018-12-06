@@ -4,19 +4,12 @@ ms.custom: ""
 ms.date: "06/10/2016"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.component: "system-catalog-views"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
-applies_to: 
-  - "Azure SQL Database"
-  - "SQL Server 2016 Preview"
 dev_langs: 
   - "TSQL"
 ms.assetid: 0262df2b-5ba7-4715-b17b-3d9ce470a38e
-caps.latest.revision: 13
 author: ronortloff
 ms.author: rortloff
 manager: craigg
@@ -34,7 +27,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
 |index_id|**int**|Index ID for the columnstore index defined on the table.<br /><br /> 1 = clustered columnstore index<br /><br /> 2 = nonclustered columnstore index|  
 |partition_number|**int**|The partition number.<br /><br /> 1 = first partition of a partitioned table, or the single partition of a nonpartitioned table.<br /><br /> 2 = second partition, and so on.|  
 |internal_object_type|**tinyint**|Rowset objects that track internal data for the columnstore index.<br /><br /> 2 = COLUMN_STORE_DELETE_BITMAP<br /><br /> 3 = COLUMN_STORE_DELTA_STORE<br /><br /> 4 = COLUMN_STORE_DELETE_BUFFER<br /><br /> 5 = COLUMN_STORE_MAPPING_INDEX|  
-|internal_object_type_desc|**nvarchar(60)**|COLUMN_STORE_DELETE_BITMAP – This bitmap index tracks rows that are marked as deleted from the columnstore. The bitmap is for every rowgroup since partitions can have rows in multiple rowgroups. The rows are that are still physically present and taking up space in the columnstore.<br /><br /> COLUMN_STORE_DELTA_STORE – Stores groups of rows, called rowgroups, that have not been compressed into columnar storage. Each table partition can have zero or more deltastore rowgroups.<br /><br /> COLUMN_STORE_DELETE_BUFFER – For maintaining deletes to updateable nonclustered columnstore indexes. When a query deletes a row from the underlying rowstore table, the delete buffer tracks the deletion from the columnstore. When the number of deleted rows exceed 1048576, they are merged back into the delete bitmap by background Tuple Mover thread or by an explicit Reorganize command.  At any given point in time, the union of the delete bitmap and the delete buffer represents all deleted rows.<br /><br /> COLUMN_STORE_MAPPING_INDEX – Used only when the clustered columnstore index has a secondary nonclustered index. This maps nonclustered index keys to the correct rowgroup and row ID in the columnstore. It only stores keys for rows that move to a different rowgroup; this occurs when a delta rowgroup is compressed into the columnstore, and when a merge operation merges rows from two different rowgroups.|  
+|internal_object_type_desc|**nvarchar(60)**|COLUMN_STORE_DELETE_BITMAP - This bitmap index tracks rows that are marked as deleted from the columnstore. The bitmap is for every rowgroup since partitions can have rows in multiple rowgroups. The rows are that are still physically present and taking up space in the columnstore.<br /><br /> COLUMN_STORE_DELTA_STORE - Stores groups of rows, called rowgroups, that have not been compressed into columnar storage. Each table partition can have zero or more deltastore rowgroups.<br /><br /> COLUMN_STORE_DELETE_BUFFER - For maintaining deletes to updateable nonclustered columnstore indexes. When a query deletes a row from the underlying rowstore table, the delete buffer tracks the deletion from the columnstore. When the number of deleted rows exceed 1048576, they are merged back into the delete bitmap by background Tuple Mover thread or by an explicit Reorganize command.  At any given point in time, the union of the delete bitmap and the delete buffer represents all deleted rows.<br /><br /> COLUMN_STORE_MAPPING_INDEX - Used only when the clustered columnstore index has a secondary nonclustered index. This maps nonclustered index keys to the correct rowgroup and row ID in the columnstore. It only stores keys for rows that move to a different rowgroup; this occurs when a delta rowgroup is compressed into the columnstore, and when a merge operation merges rows from two different rowgroups.|  
 |Row_group_id|**int**|ID for the deltastore rowgroup. Each table partition can have zero or more deltastore rowgroups.|  
 |hobt_id|**bigint**|ID of the internal rowset object. This is a good key for joining with other DMVs to get more information about the physical characteristics of the internal rowset.|  
 |rows|**bigint**|Approximate number of rows in this partition.|  

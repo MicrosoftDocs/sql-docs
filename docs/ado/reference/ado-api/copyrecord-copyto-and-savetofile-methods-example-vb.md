@@ -6,8 +6,6 @@ ms.technology: connectivity
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 dev_langs: 
   - "VB"
@@ -16,7 +14,6 @@ helpviewer_keywords:
   - "SaveToFile method [ADO], Visual Basic example"
   - "CopyTo method [ADO], Visual Basic example"
 ms.assetid: 61a51b74-93cd-439c-877f-f3055499d39f
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
@@ -29,7 +26,7 @@ This example demonstrates how to create copies of a file using [Stream](../../..
   
 'Note:  
 ' This sample requires that "C:\checkmrk.wmf" and  
-' "http://MyServer/mywmf.wmf" exist.  
+' "https://MyServer/mywmf.wmf" exist.  
   
 Option Explicit  
   
@@ -51,10 +48,10 @@ Private Sub Form_Load()
     ' Initialize path and URL strings  
     strPicturePath = "C:\checkmrk.wmf"  
     strStreamPath = "C:\mywmf.wmf"  
-    strStreamURL = "URL=http://MyServer/mywmf.wmf"  
+    strStreamURL = "URL=https://MyServer/mywmf.wmf"  
     strStream2Path = "C:\checkmrk2.wmf"  
     strRecordPath = "C:\mywmf.wmf"  
-    strRecordURL = "http://MyServer/mywmf2.wmf"  
+    strRecordURL = "https://MyServer/mywmf2.wmf"  
   
     ' Load the file into the stream  
     objStream.Open  

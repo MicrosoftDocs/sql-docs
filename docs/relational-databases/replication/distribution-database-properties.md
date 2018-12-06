@@ -4,18 +4,14 @@ ms.custom: ""
 ms.date: "03/16/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "replication"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: replication
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql13.rep.configdistwizard.distdbproperties.f1"
 helpviewer_keywords: 
   - "Distribution Database Properties dialog box"
 ms.assetid: 0f404ab9-1237-4936-8df5-888baab6a245
-caps.latest.revision: 23
 author: "MashaMSFT"
 ms.author: "mathoma"
 manager: craigg
@@ -38,7 +34,7 @@ manager: craigg
  The length of time history metadata is stored for all types of replication.  
   
  **Queue Reader Agent security**  
- The Queue Reader Agent is used by transactional replication with queued updating subscriptions. A Queue Reader Agent is created automatically if you select **Transactional publication with updating subscriptions** on the **Publication Type** page of the New Publication Wizard. Click **Security Settings…** to change the account under which the agent runs and makes connections to the Distributor.  
+ The Queue Reader Agent is used by transactional replication with queued updating subscriptions. A Queue Reader Agent is created automatically if you select **Transactional publication with updating subscriptions** on the **Publication Type** page of the New Publication Wizard. Click **Security Settings...** to change the account under which the agent runs and makes connections to the Distributor.  
   
  A Queue Reader Agent can also be created by selecting **Create Queue Reader Agent** on this page (this option is disabled if the agent has already been created).  
   

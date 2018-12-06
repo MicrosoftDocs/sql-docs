@@ -1,12 +1,9 @@
 ---
 title: "Stored Procedures | Microsoft Docs"
-ms.custom: ""
 ms.date: "06/13/2017"
-ms.prod: "sql-server-2014"
+ms.prod: sql-server-2014
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: native-clien
-ms.tgt_pltfrm: ""
+ms.technology: native-client
 ms.topic: "reference"
 helpviewer_keywords: 
   - "OLE DB, stored procedures"
@@ -14,7 +11,6 @@ helpviewer_keywords:
   - "SQL Server Native Client OLE DB provider, stored procedures"
   - "stored procedures [OLE DB], about OLE DB stored procedures"
 ms.assetid: 75611e40-789f-412b-91e5-0cc0b8d289ef
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg

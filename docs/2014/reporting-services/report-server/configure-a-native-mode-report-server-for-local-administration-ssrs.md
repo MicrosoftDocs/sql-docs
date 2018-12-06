@@ -4,10 +4,8 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "reporting-services-native"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "UAC"
@@ -17,7 +15,6 @@ helpviewer_keywords:
   - "windows server 2008"
   - "Vista"
 ms.assetid: 312c6bb8-b3f7-4142-a55f-c69ee15bbf52
-caps.latest.revision: 18
 author: markingmyname
 ms.author: maghan
 manager: craigg
@@ -160,7 +157,7 @@ manager: craigg
   
 -   When you attempt to deploy report items to the local report server, you see an error message similar to the following in the **Error List** window:  
   
-    -   The permissions granted to user ‘Domain\\<user name\>’ are insufficient for performing this operation.  
+    -   The permissions granted to user 'Domain\\<user name\>' are insufficient for performing this operation.  
   
  **To run with elevated permissions each time you open SSDT:**  
   

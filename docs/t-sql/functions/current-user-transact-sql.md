@@ -5,9 +5,7 @@ ms.date: "07/24/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "CURRENT_USER"
@@ -21,7 +19,6 @@ helpviewer_keywords:
   - "CURRENT_USER"
   - "users [SQL Server], names"
 ms.assetid: 29248949-325b-4063-9f55-5a445fb35c6e
-caps.latest.revision: 43
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
@@ -108,12 +105,12 @@ order_id    cust_id     order_date           order_amt    order_person
 ```
   
 ### C. Using CURRENT_USER from an impersonated context  
-In this example, user `Wanida` executes the following [!INCLUDE[tsql](../../includes/tsql-md.md)] code.
+In this example, user `Wanida` executes the following [!INCLUDE[tsql](../../includes/tsql-md.md)] code to impersonate user 'Arnalfo'.
   
 ```sql
 SELECT CURRENT_USER;  
 GO  
-EXECUTE AS USER = 'Wanida';  
+EXECUTE AS USER = 'Arnalfo';  
 GO  
 SELECT CURRENT_USER;  
 GO  

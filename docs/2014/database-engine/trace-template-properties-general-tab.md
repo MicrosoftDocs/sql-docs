@@ -4,17 +4,14 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "database-engine"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.pro.tracetemplateproperties.general.f1"
 helpviewer_keywords: 
   - "Trace Template Properties dialog box"
 ms.assetid: a5696c47-5f10-4ab4-bd6a-8eea71d4c020
-caps.latest.revision: 20
 author: mashamsft
 ms.author: mathoma
 manager: craigg

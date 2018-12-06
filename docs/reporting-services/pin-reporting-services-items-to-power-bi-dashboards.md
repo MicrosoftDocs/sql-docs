@@ -30,18 +30,18 @@ ms.author: maghan
   
      ![report viewer toolbar](../reporting-services/media/ssrs-report-powerbi.png)  
   
--   You pin from the [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] report viewer in the [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)], for example `https://myserver/Reports`.  You can't pin from [!INCLUDE[ssRBnoversion](../includes/ssrbnoversion.md)], from report designer in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], or from a report server URL.  For example,  `https://myserver/ReportServer`.  
+-   You pin from the [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] report viewer in the [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)], for example, `https://myserver/Reports`.  You can't pin from [!INCLUDE[ssRBnoversion](../includes/ssrbnoversion.md)], from report designer in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], or from a report server URL.  For example,  `https://myserver/ReportServer`.  
   
--   Your browser needs to be configured to allow pop-ups from your report server site.  
+-   You need to configure your browser to allow pop-ups from your report server site.  
   
--   Reports need to be configured for stored credentials if you want the pinned item to refresh.  When you pin an item, a [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] subscription is automatically created to manage the data refresh of the item to the dashboard.  If the report does not use stored credentials, the when the  subscription runs, you will see an error message similar to  the following on the **My subscriptions** page.  
+-   You need to configure reports for stored credentials, if you want the pinned item to refresh.  When you pin an item, a [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] subscription is automatically created to manage the data refresh of the item to the dashboard.  If the report does not use stored credentials, when the  subscription runs you'll see a message similar to  this one on the **My subscriptions** page.  
   
-        PowerBI Delivery error: dashboard: IT Spend Analysis Sample, visual: Chart2, error: The current action cannot be completed. The user data source credentials do not meet the requirements to run this report or shared dataset. Either the user data source credential.
+    "PowerBI Delivery error: dashboard: IT Spend Analysis Sample, visual: Chart2, error: The current action cannot be completed. The user data source credentials do not meet the requirements to run this report or shared dataset. Either the user data source credential."
  
     See the section "Configure stored credentials for a report-specific data source (Native mode)" in [Store Credentials in a Reporting Services Data Source](../reporting-services/report-data/store-credentials-in-a-reporting-services-data-source.md)  
   
 ##  <a name="bkmk_supported_items"></a> Items You Can Pin  
- The following report items can be pinned to a [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] dashboard.  You cannot pin items that are nested inside a data region. For example you cannot pin an item that is nested inside a [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] table or list.  
+ The following report items can be pinned to a [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] dashboard.  You can't pin items that are nested inside a data region. For example, you can't pin an item that is nested inside a [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] table or list.  
   
 -   Charts  
   
@@ -51,9 +51,9 @@ ms.author: maghan
   
 -   Images  
   
--   Items need to be in the report body.  You cannot pin items that are in the page header or page footer.  
+-   Items need to be in the report body.  You can't pin items that are in the page header or page footer.  
   
--   You can pin individual items that are inside a top level rectangle but you cannot pin them all as a single group.  
+-   You can pin individual items that are inside a top-level rectangle but you can't pin them all as a single group.  
   
 ##  <a name="bkmk_to_pin"></a> To Pin a Report Item  
   
@@ -67,7 +67,7 @@ ms.author: maghan
   
     ![ssRS_Report_PowerBI](../reporting-services/media/ssrs-report-powerbi.png)  
   
-4. Select the report item you want to pin to [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)]. You can only pin one item at a time.  The report viewer presents a shaded view of your report and the report items you can pin are highlighted while the items that you cannot pin, will be shaded dark.  
+4. Select the report item you want to pin to [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)]. You can only pin one item at a time.  The report viewer presents a shaded view of your report and the report items you can pin are highlighted while the items that you can't pin, will be shaded dark.  
   
     **(1)** select the group that contains the dashboard you want to pin to, **(2)** select the dashboard you want to pin the item too and **(3)** select how frequently you want the tile updated in the dashboard.   ![note](../analysis-services/instances/install-windows/media/ssrs-fyi-note.png "note") The refresh is managed by  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] subscriptions and after the item is pinned, you can edit the subscription and configure a different  refresh schedule.  
   
@@ -97,28 +97,28 @@ From the [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] dashboard the pinned
   
 ##  <a name="bkmk-troubleshoot"></a> Troubleshoot Issues  
   
--   **No [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] button on the report viewer toolbar:**  This indicates the report server has not been integrated with [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)]. For more information, see [Power BI Report Server Integration &#40;Configuration Manager&#41;](../reporting-services/install-windows/power-bi-report-server-integration-configuration-manager.md).  
+-   **No [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] button on the report viewer toolbar:**  This message indicates the report server has not been integrated with [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)]. For more information, see [Power BI Report Server Integration &#40;Configuration Manager&#41;](../reporting-services/install-windows/power-bi-report-server-integration-configuration-manager.md).  
   
 - **Cannot Pin**: When you attempt to pin an item, you see the following error message: See the section [Items You Can Pin](#bkmk_supported_items).  
   
       Cannot Pin: There are no report items on this page that you can pin to [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)].  
   
--   **Pinned items show stale data** in a [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] dashboard and it did update for a period of time.  The user credentials token has expired and you need to sign in again.  The user credential registration with Azure and [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] is good for 90 days. In t[!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)]he , click **My Settings**. For more information, see [My Settings for Power BI Integration &#40;web portal&#41;](https://msdn.microsoft.com/85c2fac7-80bf-45b7-8654-764b5f5231f5).  
+-   **Pinned items show stale data** in a [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] dashboard and it did update for a period of time.  The user credentials token has expired and you need to sign in again.  The user credential registration with Azure and [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] is good for 90 days. In the [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)], click **My Settings**. For more information, see [My Settings for Power BI Integration &#40;web portal&#41;](https://msdn.microsoft.com/85c2fac7-80bf-45b7-8654-764b5f5231f5).  
   
--   **Pinned items show stale data** in a [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] dashboard and it has not refreshed even once.  The issue is the report is not configured to use stored credentials. A report must used stored credentials because the action of pinning a report item creates a [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] subscription to manage the refresh schedule of the tiles. [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] subscriptions require stored credentials. If you review  the **My Subscriptions** page, you see an error message similar to the following:  
+-   **Pinned items show stale data** in a [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] dashboard and it has not refreshed even once.  The issue is the report is not configured to use stored credentials. A report must use stored credentials because the action of pinning a report item creates a [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] subscription to manage the refresh schedule of the tiles. [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] subscriptions require stored credentials. If you review  the **My Subscriptions** page, you see an error message similar to this one:  
   
-        PowerBI Delivery error: dashboard: SSRS items, visual: Image3, error: The current action cannot be completed. The user data source credentials do not meet the requirements to run this report or shared dataset. Either the user data source credentials are not stored in the report server database, or the user data source is configured not to require credentials but the unattended execution account is not specified. (rsInvalidDataSourceCredentialSetting)
+        PowerBI Delivery error: dashboard: SSRS items, visual: Image3, error: The current action can't be completed. The user data source credentials do not meet the requirements to run this report or shared dataset. Either the user data source credentials are not stored in the report server database, or the user data source is configured not to require credentials but the unattended execution account is not specified. (rsInvalidDataSourceCredentialSetting)
   
 -   **Expired Power BI credentials:**  You attempt to pin an item and see the following error message. In the [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)], click **My Settings** and on the My Settings  page, click **Sign in**. See  [My Settings for Power BI Integration &#40;web portal&#41;](https://msdn.microsoft.com/85c2fac7-80bf-45b7-8654-764b5f5231f5) for more information.  
   
-        Cannot Pin : Unexpected Server Error: Missing, invalid or expired Power BI credentials.  
+        Cannot Pin: Unexpected Server Error: Missing, invalid or expired Power BI credentials.  
   
--   **Cannot Pin**: If you attempt to pin an item to a dashboard that is in a read-only state, you will see an error message similar to the following:  
+-   **Cannot Pin**: If you attempt to pin an item to a dashboard that is in a read-only state, you will see an error message similar to this one:  
   
-        Server Error : The item 'Dashboard deleted 015cf022-8e2f-462e-88e5-75ab0a04c4d0' cannot be found. (rsItemNotFound)  
+        Server Error: The item 'Dashboard deleted 015cf022-8e2f-462e-88e5-75ab0a04c4d0' can't be found. (rsItemNotFound)  
   
 ##  <a name="bkmk_subscription_management"></a> Subscription Management  
- In addition to the subscription related issues described in the troubleshooting section, the following information will help you maintain [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] related subscriptions.
+ In addition to the subscription-related issues described in the troubleshooting section, the following information will help you maintain [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] related subscriptions.
   
 -   **Item name changed:** If a pinned report item is renamed or deleted, the [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] tile will no longer update and you will see an error message similar to the following.  If you rename the item back the original name, the subscription will start working again and the tile will be refreshed on the subscriptions schedule.  
   

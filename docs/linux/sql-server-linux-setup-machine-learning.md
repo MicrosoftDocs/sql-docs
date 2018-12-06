@@ -25,50 +25,48 @@ The package list has changed over the last several CTP releases, resulting in fe
 
 ### 1. Confirm package installation
 
-You might want to check for the existance of previously installed features as a first step. 
+You might want to check for the existance of a previous installation as a first step. 
 
 ```bash
 ls /opt/microsoft/mssql/bin
 ```
-The following files are used for extensions: checkinstallextensibility.sh, exthost, launchpad.
+The following files indicate an existing installation: checkinstallextensibility.sh, exthost, launchpad.
 
 ### 2. Uninstall CTP 2.0 or 2.1 packages
 
-Uninstall at the lowest package level.
+Uninstall at the lowest package level. Any upstream package dependent on a lower-level pacakge is automatically included in an uninstall.
 
    + For R integration, uninstall **microsoft-r-open***
    + For Python integration, uninstall **mssql-mlservices-python**
    + For Java integration, uninstall **mssql-server-extensibility-java**
 
-Commands for removing packages appear in the following table. The table uses Python as an example, but you might have R or Java instead.
+Commands for removing packages appear in the following table.
 
 | Platform	| Package removal command(s) | 
 |-----------|----------------------------|
-| RHEL	| `sudo yum remove ssql-mlservices-python` |
-| SLES	| `sudo zypper remove ssql-mlservices-python` |
-| Ubuntu	| `sudo apt-get remove ssql-mlservices-python` |
+| RHEL	| `sudo yum remove microsoft-r-open-mro-3.4.4`<br/>`sudo yum remove msssql-mlservices-python`<br/>`sudo yum remove msssql-server-extensibility-java` |
+| SLES	| `sudo zypper remove microsoft-r-open-mro-3.4.4`<br/>`sudo zypper remove msssql-mlservices-python`<br/>`sudo zypper remove msssql-server-extensibility-java` |
+| Ubuntu	| `sudo apt-get remove microsoft-r-open-mro-3.4.4`<br/>`sudo apt-get remove msssql-mlservices-python`<br/>`sudo apt-get remove msssql-server-extensibility-java`|
 
-Microsoft R Open is composed of three packages. Run package removal commands for each package individually.
-
-```
-microsoft-r-open-foreachiterators-3.4.4
-microsoft-r-open-mkl-3.4.4
-microsoft-r-open-mro-3.4.4
-```
+> [!Note]
+> Microsoft R Open is composed of three packages. Run package removal commands for each package individually.
+> ```
+> microsoft-r-open-foreachiterators-3.4.4
+> microsoft-r-open-mkl-3.4.4
+> microsoft-r-open-mro-3.4.4
+> ```
 
 ### 3. Proceed with CTP 2.2 install
 
-Install at the highest package level using the instructions in this article for your operating system. For each os-specific set of installation instructions, "highest package level" would be **Example 1 - Full installation** if you want the full set of packages, or possibly **Example 2 - Minimal installation** if the most you want is the minimal install.
+Install at the highest package level using the instructions in this article for your operating system. For each OS-specific set of installation instructions, "highest package level" would be **Example 1 - Full installation** if you want the full set of packages, or possibly **Example 2 - Minimal installation** if the most you want is the minimal install.
 
-1. For R integration, start with [MRO](#mro).
+1. For R integration, start with [MRO](#mro) because it is a prerequisite. R integration will not install unless MRO is already on the system.
 
 2. Run install commands using the package managers and syntax for your operating system: [RedHat](#RHEL), [Ubuntu](#ubuntu), [SUSE](#SUSE).
 
 ## Prerequisites
 
-+ Linux operating system must be [supported by SQL Server](sql-server-linux-release-notes-2019.md#supported-platforms), running on premises or in a Docker container.
-
-+ You must have a SQL Server 2019 Database Engine instance on: 
++ Linux operating system must be [supported by SQL Server](sql-server-linux-release-notes-2019.md#supported-platforms), running on premises or in a Docker container. Supported operation systems include the following:
 
    + [Red Hat Enterprise Linux (RHEL)](quickstart-install-connect-red-hat.md)
 
@@ -76,9 +74,9 @@ Install at the highest package level using the instructions in this article for 
 
    + [Ubuntu](quickstart-install-connect-ubuntu.md)
 
-+ For R only, [Microsoft R Open](#mro) for mssql-mlsservices R packages. 
++ For R only, [Microsoft R Open](#mro) is required for mssql-mlsservices R packages. 
 
-+ A tool for running T-SQL commands necessary for post-install configuration and install validation. We recommend [Azure Data Studio](https://docs.microsoft.com/sql/azure-data-studio/download?view=sql-server-2017#get-azure-data-studio-for-linux), a free download that runs on Linux.
++ Have a tool for running T-SQL commands. This is necessary for post-install configuration and validation. We recommend [Azure Data Studio](https://docs.microsoft.com/sql/azure-data-studio/download?view=sql-server-2017#get-azure-data-studio-for-linux), a free download that runs on Linux.
 
 <a name="mro"></a>
 
@@ -116,6 +114,9 @@ wget https://packages.microsoft.com/config/ubuntu/16.04/packages-microsoft-prod.
 
 # Register the repo
 dpkg -i packages-microsoft-prod.deb
+
+# Update packages on your system
+sudo apt-get update
 ```
 
 #### MRO on RHEL
@@ -131,6 +132,9 @@ sudo sh -c 'echo -e "[azure-cli]\nname=Azure CLI\nbaseurl=https://packages.micro
 # The following command is for version 7.x
 # For 6.x, replace 7 with 6 to get that version
 rpm -Uvh https://packages.microsoft.com/config/rhel/7/packages-microsoft-prod.rpm
+
+# Update packages on your system
+yum update
 ```
 #### MRO on SUSE
 
@@ -142,7 +146,7 @@ sudo su
 # This example is for SLES12, the only supported version of SUSE in Machine Learning Server
 zypper ar -f https://packages.microsoft.com/sles/12/prod packages-microsoft-com
 
-# Update packages on your system:
+# Update packages on your system
 zypper update
 ```
 
@@ -175,7 +179,7 @@ Install any *one* R package, plus any *one* Python package, and Java if you want
 
 ### Example 1 -  Full installation 
 
-Includes open-source R and Python, extensibility framework, microsoft-openmpi, extensions (R, Python, Java), with machine learning libraries and pre-trained models for R and Python. For R and Python, if you want something in between full and minimum install - such as machine learning libraries but without the pre-trained models - substitute `mssql-mlservices-mml-r-9.4.5*` and `mssql-mlservices-mml-py-9.4.5*` instead.
+Includes open-source R and Python, extensibility framework, microsoft-openmpi, extensions (R, Python, Java), with machine learning libraries and pre-trained models for R and Python. 
 
 ```bash
 # Install as root or sudo
@@ -220,7 +224,7 @@ dpkg -i libpng12-0_1.2.54-1ubuntu1_amd64.deb
 
 ### Example 1 -  Full installation 
 
-Includes open-source R and Python, extensibility framework, microsoft-openmpi, extensions (R, Python, Java), with machine learning libraries and pre-trained models for R and Python. For R and Python, if you want something in between full and minimum install - such as machine learning libraries but without the pre-trained models - substitute mssql-mlservices-mml-r and mssql-mlservices-mml-py instead.
+Includes open-source R and Python, extensibility framework, microsoft-openmpi, extensions (R, Python, Java), with machine learning libraries and pre-trained models for R and Python. 
 
 ```bash
 # Install as root or sudo
@@ -252,7 +256,7 @@ Install any *one* R package, plus any *one* Python package, and Java if you want
 
 ### Example 1 -  Full installation 
 
-Includes open-source R and Python, extensibility framework, microsoft-openmpi, extensions (R, Python, Java), with machine learning libraries and pre-trained models for R and Python. For R and Python, if you want something in between full and minimum install - such as machine learning libraries but without the pre-trained models - substitute `mssql-mlservices-mml-r-9.4.6*` and `mssql-mlservices-mml-py-9.4.6*` instead.
+Includes open-source R and Python, extensibility framework, microsoft-openmpi, extensions (R, Python, Java), with machine learning libraries and pre-trained models for R and Python. 
 
 ```bash
 # Install as root or sudo

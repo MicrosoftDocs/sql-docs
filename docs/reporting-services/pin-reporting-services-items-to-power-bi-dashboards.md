@@ -1,5 +1,5 @@
 ---
-title: "Pin paginated report items to Power BI dashboards - Reporting Services (SSRS) | Microsoft Docs"
+title: "Pin paginated report items to Power BI dashboards - Reporting Services | Microsoft Docs"
 ms.date: 12/05/2018
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
@@ -16,7 +16,7 @@ ms.assetid: 1d96c3f7-2fd4-40f7-8d1c-14a7f54cdb15
 author: markingmyname
 ms.author: maghan
 ---
-# Pin Reporting Services paginated report items to dashboards in Power BI - (SSRS)
+# Pin Reporting Services paginated report items to dashboards in Power BI
 
 [!INCLUDE[ssrs-appliesto](../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../includes/ssrs-appliesto-pbirs.md)]
 

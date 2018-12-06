@@ -151,9 +151,6 @@ manager: kfile
   
  The default value for this property is false, which indicates the server will not automatically create the log table and will not log query events.  
   
-> [!NOTE]  
->  For more information about configuring the query log, see [Configuring the Analysis Services Query Log](http://go.microsoft.com/fwlink/?LinkId=81890).  
-  
 ## Trace  
  **Trace\TraceBackgroundDistributionPeriod**  
  An advanced property that you should not change, except under the guidance of [!INCLUDE[msCoName](../../includes/msconame-md.md)] support.  

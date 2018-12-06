@@ -1,20 +1,20 @@
 ---
-title: "The Reporting Services web portal (SSRS Native Mode) | Microsoft Docs"
+title: "The web portal of a report server (SSRS Native Mode) | Microsoft Docs"
 ms.date: 12/05/2018
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
 ms.technology: reporting-services
-
+ms.description: The web portal of a Reporting Services report server is a web-based experience for viewing reports, mobile reports, KPIs, and navigating through the elements in your report server instance.
 ms.topic: conceptual
 ms.assetid: 7349e626-6ed5-4d21-b05f-cf042ad9ad70
 author: markingmyname
 ms.author: maghan
 ---
-# The web portal for Reporting Services (SSRS Native Mode)
+# The web portal or a report server (SSRS Native Mode)
 
 [!INCLUDE[ssrs-appliesto](../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../includes/ssrs-appliesto-pbirs.md)]
 
-The Reporting Services web portal is a web-based experience that allows you to view reports, mobile reports, KPIs, and navigate through the elements that are in your report server instance. You can also use the web portal to administer a single report server instance.
+The web portal of a Reporting Services report server is a web-based experience. In the portal, you can view reports, mobile reports, KPIs, and navigate through the elements in your report server instance. You can also use the web portal to administer a single report server instance.
 
 ![ssRSPortal](../reporting-services/media/ssrsportal.png)
 
@@ -23,23 +23,14 @@ The Reporting Services web portal is a web-based experience that allows you to v
 You can use the web portal to perform the following tasks:
 
 - View, search, print, and subscribe to reports.
-
 - Create, secure, and maintain the folder hierarchy to organize items on the server.
-
 - Configure role-based security that determines access to items and operations.
-
 - Configure report execution properties, report history, and report parameters.
-
 - Create shared schedules and shared data sources to make schedules and data source connections more manageable.
-
 - Create data-driven subscriptions that role out reports to a large recipient list.
-
 - Create linked reports to reuse and repurpose an existing report in different ways.
-
 - Download common tools such as Report Builder and Mobile Report Publisher.
-
 - [Create KPIs](../reporting-services/working-with-kpis-in-reporting-services.md).
-
 - Send feedback or make feature requests.
 
 You can use the web portal to browse the report server folders or search for specific reports. You can view a report, its general properties and past copies of the report that are captured in report history. Depending on your permissions, you might also be able to subscribe to reports for delivery to an e-mail inbox or a shared folder on the file system.

@@ -44,15 +44,10 @@ ms.author: maghan
  The following report items can be pinned to a [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] dashboard.  You can't pin items that are nested inside a data region. For example, you can't pin an item that is nested inside a [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] table or list.  
   
 -   Charts  
-  
 -   Gauge panels  
-  
 -   Maps  
-  
 -   Images  
-  
 -   Items need to be in the report body.  You can't pin items that are in the page header or page footer.  
-  
 -   You can pin individual items that are inside a top-level rectangle but you can't pin them all as a single group.  
   
 ##  <a name="bkmk_to_pin"></a> To Pin a Report Item  
@@ -87,11 +82,11 @@ From the [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] dashboard the pinned
 
 **(1)** You can pin the tile to other dashboards.
 
-**(2)** In the **Tile Details** you will notice the [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] report title is used for the default title of the tile.
+**(2)** In the **Tile Details** you'll notice the [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] report title is used for the default title of the tile.
 
 **(3)** The tile subtitle is based on the date and time the tile was pinned or the data was last refreshed from [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]. The refresh schedule is managed by the [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] subscription that was automatically created when you pinned the report item.
 
-**(4)** If you select the tile itself, [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] uses the **(3) custom link** to navigate to the [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)] page of the registered report server. the link was set when the item was pinned from [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]. If you do not have internet connectivity to the report server, you will see an error in the browser.  
+**(5)** If you select the tile itself, [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] uses the **(4) custom link** to navigate to the [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)] page of the registered report server. the link was set when the item was pinned from [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]. If you do not have internet connectivity to the report server, you will see an error in the browser.  
 
 ![ssrs_pinned_tile_details](../reporting-services/media/ssrs-pinned-tile-details.png "ssrs_pinned_tile_details")  
   

@@ -44,10 +44,6 @@ In order to take full advantage of all the enhancements in this release, be sure
 
 If you have a custom AMO-dependent application, you might need to install an updated version of AMO. For instructions, see [Install Analysis Services data providers &#40;AMO, ADOMD.NET, MSOLAP&#41;](../analysis-services/instances/install-windows/install-analysis-services-data-providers-amo-adomd-net-msolap.md).    
 
- #### TechNet Virtual Labs: SQL Server 2016 Analysis Services
-Learn better by doing? Follow along step-by-step with the [What's New in SQL Server 2016 Analysis Services Virtual Lab](http://vlabs.holsystems.com/vlabs/technet?eng=VLabs&auth=none&src=vlabs&altadd=true&labid=23110&lod=true).
-In this lab, you'll create and monitor Extended Events (xEvents), upgrade a tabular project to compatibility level 1200, work with Visual Studio configurations, implement new calculation capabilities, implement new table relationship capabilities, configure display folders, manage model translations, work with the new Tabular Model Scripting Language (TMSL), work with PowerShell, and try out new DirectQuery mode capabilities.
-
 ## Modeling    
 ### Improved modeling performance for tabular 1200 models    
 For tabular 1200 models,  metadata operations in SSDT are much faster than tabular 1100 or 1103 models. By comparison, on the same hardware, creating a relationship on a model set to the SQL Server 2014 compatibility level (1103) with 23 tables takes 3 seconds, whereas the same relationship on a model created set to compatibility level 1200 takes just under a second.    

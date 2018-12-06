@@ -1,7 +1,8 @@
 ---
-title: Azure Data Studio SQL Server Agent extension | Microsoft Docs
-description: SQL Server Agent extension (preview) for Azure Data Studio
-ms.custom: "tools|sos"
+title: SQL Server Agent extension
+titleSuffix: Azure Data Studio
+description: Install and use the SQL Server Agent extension (preview) for Azure Data Studio
+ms.custom: "seodec18"
 ms.date: "09/24/2018"
 ms.reviewer: "alayu; sstein"
 ms.prod: sql

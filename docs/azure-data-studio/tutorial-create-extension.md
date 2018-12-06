@@ -1,7 +1,8 @@
 ---
-title: "Tutorial: Create an extension for Azure Data Studio | Microsoft Docs"
-description: This tutorial demonstrates how to create an extension for Azure Data Studio.
-ms.custom: "tools|sos"
+title: "Tutorial: Create an extension"
+titleSuffix: Azure Data Studio
+description: This tutorial demonstrates how to create an extension to add custom functionality to Azure Data Studio.
+ms.custom: "seodec18"
 ms.date: "09/24/2018"
 ms.prod: sql
 ms.technology: azure-data-studio

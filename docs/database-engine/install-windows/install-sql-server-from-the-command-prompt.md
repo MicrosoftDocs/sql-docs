@@ -864,7 +864,7 @@ setup.exe /q /ACTION=RemoveNode /INSTANCENAME="<Insert Instance Name>" [/INDICAT
 ||SDK|Installs the software development kit.|  
 ||LocalDB**|Installs LocalDB, an execution mode of [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] targeted to program developers.|  
 
-* [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS) is now in a stand-alone installer that is separate from the [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] installer. For details, see [Install SQL Server Management Studio from the command line](../../ssms/download-sql-server-management-studio-ssms.md).
+*[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS) is now in a stand-alone installer that is separate from the [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] installer. For details, see [Install SQL Server Management Studio from the command line](../../ssms/download-sql-server-management-studio-ssms.md).
 
 **LocalDB is an option when installing any SKU of [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]. For more information, see [SQL Server 2016 Express LocalDB](../../database-engine/configure-windows/sql-server-2016-express-localdb.md). 
   

@@ -239,7 +239,7 @@ sp_addpublication [ @publication = ] 'publication'
  Is the name of an existing agent job. *queue_reader_agent_name* is **sysname**, with a default value of NULL. This parameter is only specified when the Queue Reader Agent will use an existing job instead of a new one being created.  
   
  [ **@publisher =** ] **'**_publisher_**'**  
- Specifies a non-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] publisher. *publisher* is **sysname**, with a default of NULL.  
+ Specifies a non- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] publisher. *publisher* is **sysname**, with a default of NULL.  
   
 > [!NOTE]  
 >  *publisher* should not be used when adding a publication to a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Publisher.  
@@ -259,7 +259,7 @@ sp_addpublication [ @publication = ] 'publication'
 >  To avoid missing subscriber data, when using **sp_addpublication** with `@allow_initialize_from_backup = N'true'`, always use `@immediate_sync = N'true'`.  
   
  [ **@replicate_ddl =** ] *replicate_ddl*  
- Indicates if schema replication is supported for the publication. *replicate_ddl* is **int**, with a default of **1** for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Publishers and **0** for non-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Publishers. **1** indicates that data definition language (DDL) statements executed at the publisher are replicated, and **0** indicates that DDL statements are not replicated. *Schema replication is not supported for Oracle Publishers.* For more information, see [Make Schema Changes on Publication Databases](../../relational-databases/replication/publish/make-schema-changes-on-publication-databases.md).  
+ Indicates if schema replication is supported for the publication. *replicate_ddl* is **int**, with a default of **1** for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Publishers and **0** for non- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Publishers. **1** indicates that data definition language (DDL) statements executed at the publisher are replicated, and **0** indicates that DDL statements are not replicated. *Schema replication is not supported for Oracle Publishers.* For more information, see [Make Schema Changes on Publication Databases](../../relational-databases/replication/publish/make-schema-changes-on-publication-databases.md).  
   
  The *@replicate_ddl* parameter is honored when a DDL statement adds a column. The *@replicate_ddl* parameter is ignored when a DDL statement alters or drops a column for the following reasons.  
   

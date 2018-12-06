@@ -30,7 +30,7 @@ This article describes the steps to deploy Kubernetes on AKS using Azure CLI. If
 - Same 1.10 minimum version applies to Kubernetes server. For AKS, you need to use `--kubernetes-version` parameter to specify a version different than the default.
 
 > [!NOTE]
-Note that the client/server version skew that is supported is +/-1 minor version. The Kubernetes documentation states that  "a client should be skewed no more than one minor version from the master, but may lead the master by up to one minor version. For example, a v1.3 master should work with v1.1, v1.2, and v1.3 nodes, and should work with v1.2, v1.3, and v1.4 clients." For more information, see [Kubernetes supported releases and component skew](https://github.com/kubernetes/community/blob/master/contributors/design-proposals/release/versioning.md#supported-releases-and-component-skew).
+> Note that the client/server version skew that is supported is +/-1 minor version. The Kubernetes documentation states that  "a client should be skewed no more than one minor version from the master, but may lead the master by up to one minor version. For example, a v1.3 master should work with v1.1, v1.2, and v1.3 nodes, and should work with v1.2, v1.3, and v1.4 clients." For more information, see [Kubernetes supported releases and component skew](https://github.com/kubernetes/community/blob/master/contributors/design-proposals/release/versioning.md#supported-releases-and-component-skew).
 
 Also, note that `az aks kubernetes install-cli` will install kubectl client with a version lower that the required 1.10. Follow above instructions to install the right version of kubectl client.
 

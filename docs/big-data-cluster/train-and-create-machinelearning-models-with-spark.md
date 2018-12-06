@@ -14,7 +14,7 @@ ms.date: 10/10/2018
 # Train and Create machine learning models with Spark
 Spark in SQL Server big data cluster enables AI and machine learning. The example demonstrates how to training a machine learning model using Python in Spark (PySpark) using data stored in HDFS. 
 
-The example is a step by step guide with code snippets that can be used from an Azure Data Studio Notebook and each cell run one step at a time. For more information on how to connect with Spark from notebook refer [here] (notebooks-guidance.md)
+The example is a step by step guide with code snippets that can be used from an Azure Data Studio Notebook and each cell run one step at a time. For more information on how to connect with Spark from notebook refer [here](notebooks-guidance.md)
 
 In the example:
 
@@ -107,7 +107,7 @@ print("train and test datasets saved to {} and {}".format(train_data_path, test_
 
 
 ## Step 5 - Put together a pipeline and build a model
-[Spark ML pipeline] ( https://spark.apache.org/docs/2.3.1/ml-pipeline.html ) allow to sequence all steps as a workflow and make it easier to experiment with various algorithms and their parameters. The following code first constructs the stages and then puts these stages together in Ml pipeline.  LogisticRegression is used to create the model.
+[Spark ML pipeline](https://spark.apache.org/docs/2.3.1/ml-pipeline.html) allow to sequence all steps as a workflow and make it easier to experiment with various algorithms and their parameters. The following code first constructs the stages and then puts these stages together in Ml pipeline.  LogisticRegression is used to create the model.
 
 ```python
 from pyspark.ml import Pipeline, PipelineModel

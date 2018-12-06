@@ -69,7 +69,7 @@ sp_OAMethod objecttoken , methodname
  *n*  
  Is a placeholder indicating that multiple parameters can be specified.  
   
-> [!NOTE]  
+> [!NOTE]
 >  *@parametername* can be a named parameter because it is part of the specified method and is passed through to the object. The other parameters for this stored procedure are specified by position, not name.  
   
 ## Return Code Values  

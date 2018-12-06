@@ -231,7 +231,7 @@ SQLDUMPEREDUMPFLAGS
  OFF  
  Disables automatic software partitioning of large NUMA hardware nodes into smaller NUMA nodes. Changing the running value requires a restart of the database engine.  
 
-> [!WARNING]  
+> [!WARNING]
 > There are known issues with the behavior of the ALTER SERVER CONFIGURATION statement with the SOFT NUMA option and SQL Server Agent.  The following is the recommended sequence of operations:  
 > 1) Stop the instance of SQL Server Agent.  
 > 2) Execute your ALTER SERVER CONFGURATION  SOFT NUMA option.  

@@ -184,7 +184,7 @@ manager: craigg
 |[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] Standard (64-bit)|Yes|Yes|Yes|Yes|  
 |[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] Standard (32-bit)|Yes|Yes|||  
   
- *[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] clusters are not supported in WOW mode. That includes upgrades from previous versions of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] failover clusters that were originally installed in WOW. For those the only upgrade option is to install the new version side by side and migrate.  
+ * [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] clusters are not supported in WOW mode. That includes upgrades from previous versions of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] failover clusters that were originally installed in WOW. For those the only upgrade option is to install the new version side by side and migrate.  
   
  **Supported for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] multi-subnet failover clustering.  
   

@@ -73,7 +73,7 @@ JOIN sys.dm_exec_connections AS conn
 ```  
   
 *UOW*  
-**Applies to**: ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+**Applies to**: ( [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
   
  Identifies the Unit of Work ID (UOW) of distributed transactions. *UOW* is a GUID that may be obtained from the request_owner_guid column of the sys.dm_tran_locks dynamic management view. *UOW* also can be obtained from the error log or through the MS DTC monitor. For more information about monitoring distributed transactions, see the MS DTC documentation.  
   

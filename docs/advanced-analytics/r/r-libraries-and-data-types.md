@@ -104,7 +104,7 @@ Note that inclusion of unnecessary columns can greatly reduce the performance of
 If a particular [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] data type is not supported by R, but you need to use the columns of data in the R script, we recommend that you use the [CAST and CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md) functions to ensure that the data type conversions are performed as intended before using the data in your R script.  
 
 > [!WARNING]
-If you use the **rxDataStep** to drop incompatible columns while moving data, be aware that the arguments _varsToKeep_ and _varsToDrop_ are not supported for the **RxSqlServerData** data source type.
+> If you use the **rxDataStep** to drop incompatible columns while moving data, be aware that the arguments _varsToKeep_ and _varsToDrop_ are not supported for the **RxSqlServerData** data source type.
 
 
 ## Examples

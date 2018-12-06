@@ -61,7 +61,7 @@ sp_changearticlecolumndatatype [ @publication= ] 'publication'
  Is the precision of the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] data type in the destination column. *precision* is **bigint**, with a default of NULL.  
   
  [ **@publisher**= ] **'***publisher***'**  
- Specifies a non-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] publisher. *publisher* is **sysname**, with a default of NULL.  
+ Specifies a non- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] publisher. *publisher* is **sysname**, with a default of NULL.  
   
 ## Return Code Values  
  **0** (success) or **1** (failure)  

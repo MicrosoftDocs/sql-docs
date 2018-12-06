@@ -171,10 +171,10 @@ At a minimum, an empty model will contain  the following JSON:
     }    
     ```    
     
-> [!WARNING]    
+> [!WARNING]
 > Avoid editing the JSON directly. Doing so can corrupt the model.    
- ### New elements in MS-CSDLBI 2.0 schema    
- The following elements have been added to the **TProperty** complex type defined in the [MS-CSDLBI] 2.0 schema:    
+>  ### New elements in MS-CSDLBI 2.0 schema    
+>  The following elements have been added to the **TProperty** complex type defined in the [MS-CSDLBI] 2.0 schema:    
     
 |Element|Definition|    
 |-------------|----------------|    

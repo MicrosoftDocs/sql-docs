@@ -78,7 +78,7 @@ CREATE AVAILABILITY GROUP group_name
      | PRIMARY_ROLE ( {   
             [ ALLOW_CONNECTIONS = { READ_WRITE | ALL } ]   
         [,] [ READ_ONLY_ROUTING_LIST = { ( '<server_instance>' [ ,...n ] ) | NONE } ]  
-        [,] [ READ_WRITE_ROUTING_URL = { ( '<server_instance>' ) ] 
+        [,] [ READ_WRITE_ROUTING_URL = { ( '<server_instance>' ) ] 
      } )  
      | SESSION_TIMEOUT = integer  
   
@@ -416,11 +416,11 @@ CREATE AVAILABILITY GROUP group_name
  LISTENER **'**_dns\_name_**'(** \<listener_option\> **)** 
  Defines a new availability group listener for this availability group. LISTENER is an optional argument.  
   
-> [!IMPORTANT]  
+> [!IMPORTANT]
 >  Before you create your first listener, we strongly recommend that you read [Create or Configure an Availability Group Listener &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/create-or-configure-an-availability-group-listener-sql-server.md).  
->   
+> 
 >  After you create a listener for a given availability group, we strongly recommend that you do the following:  
->   
+> 
 >  -   Ask your network administrator to reserve the listener's IP address for its exclusive use.  
 > -   Give the listener's DNS host name to application developers to use in connection strings when requesting client connections to this availability group.  
   

@@ -88,7 +88,7 @@ manager: craigg
   
  [!INCLUDE[ssGeminiShortvnext](../../includes/ssgeminishortvnext-md.md)] extends SharePoint Server 2013 to add server-side data refresh processing, data providers, [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] Gallery, and management support for [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] workbooks and Excel workbooks with advanced data models.  
   
- The installer package is available as part of the [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] feature pack. The feature pack can be downloaded from the [!INCLUDE[msCoName](../../includes/msconame-md.md)] download center at [Microsoft® SQL Server® 2014 PowerPivot® for Microsoft® SharePoint®](http://go.microsoft.com/fwlink/?LinkID=296473) ( HYPERLINK "http://go.microsoft.com/fwlink/?LinkID=296473" \t "_blank" http://go.microsoft.com/fwlink/?LinkID=296473).  
+ The installer package is available as part of the [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] feature pack. The feature pack can be downloaded from the [!INCLUDE[msCoName](../../includes/msconame-md.md)] download center at [Microsoft® SQL Server® 2014 PowerPivot® for Microsoft® SharePoint®](http://go.microsoft.com/fwlink/?LinkID=296473) ( HYPERLINK "<http://go.microsoft.com/fwlink/?LinkID=296473>" \t "_blank" <http://go.microsoft.com/fwlink/?LinkID=296473>).  
   
  ![SSAS PowerPivot Mode 2 Server Deployment](../../../2014/analysis-services/media/as-powerpivot-mode-2server-deployment.gif "SSAS PowerPivot Mode 2 Server Deployment")  
   

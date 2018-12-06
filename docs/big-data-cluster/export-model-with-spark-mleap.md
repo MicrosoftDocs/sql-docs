@@ -22,7 +22,7 @@ This guide demonstrates how you can export your spark models using Mleap. The st
 4. To validate, we'll import the `Mleap` bundle back again and use that to score in Spark.
 
 ## Step 1 - Start by creating a Spark model
-Run [Training and Creating machine learning model with Spark] (train-and-create-machinelearning-models-with-spark.md) to create training/test sets and model, and persist to HDFS storage. The model should be exported as `AdultCensus.mml` under the `spark_ml` directory.
+Run [Training and Creating machine learning model with Spark](train-and-create-machinelearning-models-with-spark.md) to create training/test sets and model, and persist to HDFS storage. The model should be exported as `AdultCensus.mml` under the `spark_ml` directory.
 
 
 ## Step 2 - Import the training\test data and the Model

@@ -346,7 +346,7 @@ ALTER LOGIN login_name
   
 ## Remarks  
   
- In [!INCLUDE[ssSDS](../../includes/sssds-md.md)], login data required to  authenticate a connection and server-level firewall rules are temporarily  cached in each database. This cache is periodically refreshed. To force a  refresh of the authentication cache and make sure that a database has the  latest version of the logins table, execute [DBCC FLUSHAUTHCACHE &#40; Transact-SQL&#41;] (../../t-sql/database-console-commands/dbcc-flushauthcache-transact-sql.md).  
+ In [!INCLUDE[ssSDS](../../includes/sssds-md.md)], login data required to  authenticate a connection and server-level firewall rules are temporarily  cached in each database. This cache is periodically refreshed. To force a  refresh of the authentication cache and make sure that a database has the  latest version of the logins table, execute [DBCC FLUSHAUTHCACHE &#40; Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-flushauthcache-transact-sql.md).  
   
 ## Permissions  
  Requires ALTER ANY LOGIN permission.  
@@ -772,7 +772,7 @@ ALTER LOGIN login_name
   
 ## Remarks  
   
- In [!INCLUDE[ssSDS](../../includes/sssds-md.md)], login data required to  authenticate a connection and server-level firewall rules are temporarily  cached in each database. This cache is periodically refreshed. To force a  refresh of the authentication cache and make sure that a database has the  latest version of the logins table, execute [DBCC FLUSHAUTHCACHE &#40; Transact-SQL&#41;] (../../t-sql/database-console-commands/dbcc-flushauthcache-transact-sql.md).  
+ In [!INCLUDE[ssSDS](../../includes/sssds-md.md)], login data required to  authenticate a connection and server-level firewall rules are temporarily  cached in each database. This cache is periodically refreshed. To force a  refresh of the authentication cache and make sure that a database has the  latest version of the logins table, execute [DBCC FLUSHAUTHCACHE &#40; Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-flushauthcache-transact-sql.md).  
   
 ## Permissions  
  Requires ALTER ANY LOGIN permission.  

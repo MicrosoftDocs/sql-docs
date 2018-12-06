@@ -1,1 +1,1 @@
-\<Token xmlns:xlink="http://www.w3.org/1999/xlink">Mobile Report Publisher</Token>
+\<Token xmlns:xlink="<http://www.w3.org/1999/xlink">Mobile> Report Publisher</Token>

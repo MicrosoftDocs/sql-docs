@@ -33,7 +33,7 @@ manager: craigg
 ```  
   
 SQLRETURN SQLDisconnect(  
-     SQLHDBC     ConnectionHandle);  
+     SQLHDBC     ConnectionHandle);  
 ```  
   
 ## Arguments  

@@ -236,7 +236,7 @@ sp_addarticle [ @publication = ] 'publication'
 |Published from a non-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Publisher.|Defaults to the owner of the destination database.|  
 |Publication uses character-mode bulk copy to generate the initial snapshot, which supports non-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Subscribers.|Not assigned.|  
   
- To support non-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Subscribers, *destination_owner* must be NULL.  
+ To support non- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Subscribers, *destination_owner* must be NULL.  
   
  [ **@status=**] *status*  
  Specifies if the article is active and additional options for how changes are propagated. *status* is **tinyint**, and can be the [| (Bitwise OR)](../../t-sql/language-elements/bitwise-or-transact-sql.md) product of one or more of these values.  
@@ -321,7 +321,7 @@ sp_addarticle [ @publication = ] 'publication'
  For more information, see [Replicate Identity Columns](../../relational-databases/replication/publish/replicate-identity-columns.md).  
   
  [ **@publisher =** ] **'***publisher***'**  
- Specifies a non-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Publisher. *publisher* is **sysname**, with a default of NULL.  
+ Specifies a non- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Publisher. *publisher* is **sysname**, with a default of NULL.  
   
 > [!NOTE]  
 >  *publisher* should not be used when adding an article to a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Publisher.  
@@ -386,8 +386,8 @@ sp_addarticle [ @publication = ] 'publication'
 |**serializable proc exec**|**0x01**|**0x01**|  
 |**view schema only**|**0x01**|**0x01**|  
   
-> [!NOTE]  
->  If a publication is enabled for queued updating, a *schema_option* value of **0x80** is added to the default value shown in the table. The default *schema_option* for a non-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] publication is **0x050D3**.  
+> [!NOTE]
+>  If a publication is enabled for queued updating, a *schema_option* value of **0x80** is added to the default value shown in the table. The default *schema_option* for a non- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] publication is **0x050D3**.  
   
 ## Valid Schema Options  
  This table describes the allowable values of *schema_option* based upon the replication type (shown across the top) and the article type (shown down the first column).  
@@ -409,8 +409,8 @@ sp_addarticle [ @publication = ] 'publication'
 |**func schema only**|**0x01**, **0x20**, **0x2000**, **0x400000**, **0x800000**, **0x2000000**, **0x8000000**, **0x10000000**, **0x20000000**, **0x40000000**, and **0x80000000**|**0x01**, **0x20**, **0x2000**, **0x400000**, **0x800000**, **0x2000000**, **0x8000000**, **0x10000000**, **0x20000000**, **0x40000000**, and **0x80000000**|  
 |**indexed view schema only**|**0x01**, **0x010**, **0x020**, **0x040**, **0x0100**, **0x2000**, **0x40000**, **0x100000**, **0x200000**, **0x400000**, **0x800000**, **0x2000000**, **0x8000000**, **0x40000000**, and **0x80000000**|**0x01**, **0x010**, **0x020**, **0x040**, **0x0100**, **0x2000**, **0x40000**, **0x100000**, **0x200000**, **0x400000**, **0x800000**, **0x2000000**, **0x8000000**, **0x40000000**, and **0x80000000**|  
   
-> [!NOTE]  
->  For queued updating publications, the *schema_option* values of **0x8000** and **0x80** must be enabled. The supported *schema_option* values for non-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] publications are: **0x01**, **0x02**, **0x10**, **0x40**, **0x80**, **0x1000**, **0x4000** and **0X8000**.  
+> [!NOTE]
+>  For queued updating publications, the *schema_option* values of **0x8000** and **0x80** must be enabled. The supported *schema_option* values for non- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] publications are: **0x01**, **0x02**, **0x10**, **0x40**, **0x80**, **0x1000**, **0x4000** and **0X8000**.  
   
 ## Example  
  [!code-sql[HowTo#sp_AddTranArticle](../../relational-databases/replication/codesnippet/tsql/sp-addarticle-transact-sql_1.sql)]  

@@ -33,7 +33,7 @@ manager: craigg
 ```  
   
 BOOL SQLRemoveDSNFromIni(  
-     LPCSTR   lpszDSN);  
+     LPCSTR   lpszDSN);  
 ```  
   
 ## Arguments  

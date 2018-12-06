@@ -317,9 +317,9 @@ Setup.exe /Q /Action=Uninstall /FEATURES=SQLEngine,AS,IS /INSTANCENAME=MSSQLSERV
   
  To remove a named instance, specify the name of the instance instead of "MSSQLSERVER" in the preceding example.  
   
-> [!WARNING]  
+> [!WARNING]
 >  If you accidentally close the command prompt, you can start a new command prompt by following these steps:  
->   
+> 
 >  1.  Press Ctrl+Shift+Esc to display Task Manager.  
 > 2.  On the **Applications** tab, click **New Task**.  
 > 3.  In the **Create New Task** dialog box, type **cmd** in the **Open** field and then [!INCLUDE[clickOK](../../includes/clickok-md.md)].  

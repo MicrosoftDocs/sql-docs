@@ -80,7 +80,7 @@ There are a few social media outlets that can reach the SQL team as well.
 
 ## I want to contribute to SQL Server documentation
 
-###![edit content](../includes/media/edit-topic-pencil.png) Editing content
+### ![edit content](../includes/media/edit-topic-pencil.png) Editing content
 Did you find something wrong with our documentation? Or do you have a contribution that can improve our documentation? Well, you can edit the content found on docs.microsoft.com yourself. If you do so, not only will our documentation improve, but you'll also be credited as a contributor to the page! Find out more information at [https://aka.ms/editsqldocs](https://aka.ms/editsqldocs). 
 
 All public contributions are reviewed by the SQL content team for technical accuracy and consistency. 

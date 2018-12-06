@@ -33,8 +33,8 @@ manager: craigg
 ```  
   
 SQLRETURN SQLNumParams(  
-     SQLHSTMT        StatementHandle,  
-     SQLSMALLINT *   ParameterCountPtr);  
+     SQLHSTMT        StatementHandle,  
+     SQLSMALLINT *   ParameterCountPtr);  
 ```  
   
 ## Arguments  

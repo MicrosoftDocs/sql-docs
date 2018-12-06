@@ -33,9 +33,9 @@ manager: craigg
 ```  
   
 BOOL SQLGetInstalledDrivers(  
-     LPSTR   lpszBuf,  
-     WORD    cbBufMax,  
-     WORD *  pcbBufOut);  
+     LPSTR   lpszBuf,  
+     WORD    cbBufMax,  
+     WORD *  pcbBufOut);  
 ```  
   
 ## Arguments  

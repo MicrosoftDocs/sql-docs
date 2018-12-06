@@ -24,7 +24,7 @@ manager: craigg
 > [!IMPORTANT]
 > This article is valid for SQL Server 2012, but not for SQL Server 2014 or later.
 > For DAC articles about SQL 2012 and earlier, see the following links:
->
+> 
 > - https://docs.microsoft.com/previous-versions/sql/sql-server-2008-r2/ee240739(v=sql.105)
 > - https://docs.microsoft.com/previous-versions/sql/sql-server-2012/hh753459(v=sql.110)
 

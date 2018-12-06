@@ -4,7 +4,7 @@ description: This article describes the latest updates and known issues for SQL 
 author: rothja 
 ms.author: jroth 
 manager: craigg
-ms.date: 12/04/2018
+ms.date: 12/07/2018
 ms.topic: conceptual
 ms.prod: sql
 ---

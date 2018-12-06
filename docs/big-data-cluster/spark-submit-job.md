@@ -8,7 +8,7 @@ ms.author: jejiang
 ms.reviewer: jroth
 ms.custom: ""
 ms.topic: conceptual
-ms.date: 11/06/2018
+ms.date: 12/07/2018
 ---
 # Submit Spark Job on SQL Server big data clusters in Azure Data Studio
 

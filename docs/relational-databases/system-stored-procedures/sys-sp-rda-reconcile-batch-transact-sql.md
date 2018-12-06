@@ -2,12 +2,9 @@
 title: "sys.sp_rda_reconcile_batch (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/10/2016"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-stretch"
-ms.tgt_pltfrm: ""
+ms.technology: stored-procedures
 ms.topic: "language-reference"
 f1_keywords: 
   - "sys.sp_rda_reconcile_batch"
@@ -17,13 +14,12 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.sp_rda_reconcile_batch stored procedure"
 ms.assetid: 6d21eac3-7b6c-4fe0-8bc4-bf503f3948a6
-caps.latest.revision: 12
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: craigg
 ---
 # sys.sp_rda_reconcile_batch (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   Reconciles the batch ID stored in the Stretch-enabled SQL Server table with the batch ID stored in the remote Azure table.  
   
@@ -42,7 +38,7 @@ sp_rda_reconcile_batch @objname = '@objname'
 ```  
   
 ## Arguments  
- @objname = '*@objname*'  
+ \@objname = '*\@objname*'  
  The name of the Stretch-enabled SQL Server table.  
   
 ## Permissions  
@@ -64,7 +60,7 @@ sp_rda_reconcile_batch @objname = '@objname'
 ## Example  
  To reconcile the batch IDs, run the following statement.  
   
-```tsql  
+```sql  
 EXEC sp_rda_reconcile_batch @objname = N'StretchEnabledTableName';  
 ```  
   

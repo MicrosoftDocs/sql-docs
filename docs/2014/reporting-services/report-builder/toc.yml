@@ -1,0 +1,155 @@
+- name: Finding, Viewing, and Managing Reports
+  href: finding-viewing-and-managing-reports-report-builder-and-ssrs.md
+  items:
+  - name: Finding and Viewing Reports in Report Manager
+    href: finding-and-viewing-reports-in-the-web-portal-report-builder-and-ssrs.md
+  - name: Finding and Viewing Reports with a Browser
+    href: finding-and-viewing-reports-with-a-browser-report-builder-and-ssrs.md
+  - name: Searching for Reports and Other Items
+    href: searching-for-reports-and-other-items-report-builder-and-ssrs.md
+  - name: Using My Reports
+    href: using-my-reports-report-builder-and-ssrs.md
+  - name: Previewing Reports in Report Builder
+    href: previewing-reports-in-report-builder.md
+- name: Exporting Reports
+  href: export-reports-report-builder-and-ssrs.md
+  items:
+  - name: Interactive Functionality for Different Report Rendering Extensions
+    href: interactive-functionality-different-report-rendering-extensions.md
+  - name: Exporting to a CSV File
+    href: exporting-to-a-csv-file-report-builder-and-ssrs.md
+  - name: Exporting to Microsoft Excel
+    href: exporting-to-microsoft-excel-report-builder-and-ssrs.md
+  - name: Exporting to Microsoft Word
+    href: exporting-to-microsoft-word-report-builder-and-ssrs.md
+  - name: Rendering to HTML
+    href: rendering-to-html-report-builder-and-ssrs.md
+  - name: Exporting to an Image File
+    href: exporting-to-an-image-file-report-builder-and-ssrs.md
+  - name: Exporting to a PDF File
+    href: exporting-to-a-pdf-file-report-builder-and-ssrs.md
+  - name: Exporting to XML
+    href: exporting-to-xml-report-builder-and-ssrs.md
+  - name: Export a Report as Another File Type
+    href: ../export-a-report-as-another-file-type-report-builder-and-ssrs.md
+  - name: Generating Data Feeds from Reports
+    href: generating-data-feeds-from-reports-report-builder-and-ssrs.md
+  - name: Generate Data Feeds from a Report
+    href: generate-data-feeds-from-a-report-report-builder-and-ssrs.md
+  - name: Work Around the Excel Row Limitation
+    href: work-around-the-excel-2003-row-limitation.md
+- name: Printing Reports
+  href: print-reports-report-builder-and-ssrs.md
+  items:
+  - name: Print Reports from a Browser with the Print Control
+    href: print-reports-from-a-browser-with-the-print-control-report-builder-and-ssrs.md
+  - name: Print Reports from Other Applications
+    href: print-reports-from-other-applications-report-builder-and-ssrs.md
+  - name: Print a Report
+    href: print-a-report-report-builder-and-ssrs.md
+  - name: Print a Report (Reporting Services in SharePoint Mode)
+    href: print-a-report-reporting-services-in-sharepoint-mode.md
+- name: Saving Reports
+  href: saving-reports-report-builder.md
+  items:
+  - name: Save Reports to a Report Server
+    href: save-reports-to-a-report-server-report-builder.md
+  - name: Save a Report to a SharePoint Library
+    href: save-a-report-to-a-sharepoint-library-report-builder.md
+  - name: Save Reports to Your Computer
+    href: ../save-reports-to-your-computer-report-builder.md
+- name: Report Builder F1 Help
+  href: report-builder-f1-help.md
+  items:
+  - name: Help for Dialog Boxes, Panes, and Wizards (F1)
+    href: ../report-builder-help-for-dialog-boxes-panes-and-wizards.md
+  - name: Action Properties Dialog Box
+    href: ../action-properties-dialog-box-report-builder-and-ssrs.md
+  - name: Chart Dialog Boxes ((Report Builder and SSRS)
+    href: ../chart-dialog-boxes-report-builder-and-ssrs.md
+  - name: Axis Properties Dialog Box, Axis Options
+    href: ../axis-properties-dialog-box-axis-options-report-builder-and-ssrs.md
+  - name: Axis Title Properties Dialog Box, General
+    href: ../axis-title-properties-dialog-box-general-report-builder-and-ssrs.md
+  - name: Calculated Series Properties Dialog Box, General (Report Builder and SSRS)
+    href: ../calculated-series-properties-dialog-box-general-report-builder-and-ssrs.md
+  - name: Calculated Series Properties Dialog Box, Markers
+    href: ../calculated-series-properties-dialog-box-markers-report-builder-and-ssrs.md
+  - name: Filters page, Chart Dialog Boxes
+    href: ../filters-page-chart-dialog-boxes-report-builder-and-ssrs.md
+  - name: Legend Properties Dialog Box, General
+    href: ../legend-properties-dialog-box-general-report-builder-and-ssrs.md
+  - name: Column Visibility Dialog Box
+    href: ../column-visibility-dialog-box-report-builder.md
+  - name: Convert CRI Dialog Box
+    href: convert-cri-dialog-box-report-builder.md
+  - name: Cube Selection Dialog Box
+    href: ../cube-selection-dialog-box-report-builder.md
+  - name: Data Source Properties Dialog Box, Credentials
+    href: ../data-source-properties-dialog-box-credentials-report-builder.md
+  - name: Data Source Properties Dialog Box, General
+    href: ../data-source-properties-dialog-box-general-report-builder.md
+  - name: Dataset Properties Dialog Box, Fields
+    href: ../dataset-properties-dialog-box-fields-report-builder.md
+  - name: Dataset Properties Dialog Box, Filters
+    href: ../dataset-properties-dialog-box-filters-report-builder.md
+  - name: Dataset Properties Dialog Box, Options
+    href: ../report-data/dataset-properties-dialog-box-options-report-builder.md
+  - name: Dataset Properties Dialog Box, Parameters
+    href: ../dataset-properties-dialog-box-parameters-report-builder.md
+  - name: Dataset Properties Dialog Box, Query
+    href: ../report-data/dataset-properties-dialog-box-query-report-builder.md
+  - name: Enter Data Source Credentials Dialog Box
+    href: ../report-data/enter-data-source-credentials-dialog-box-report-builder.md
+  - name: Expression Dialog Box
+    href: ../expression-dialog-box-report-builder.md
+  - name: Fill Dialog Box
+    href: ../fill-dialog-box-report-builder-and-ssrs.md
+  - name: Grouping Pane
+    href: ../report-design/grouping-pane-report-builder.md
+  - name: Image Properties Dialog Box, General
+    href: ../image-properties-dialog-box-general-report-builder-and-ssrs.md
+  - name: Image Properties Dialog Box, Size
+    href: ../image-properties-dialog-box-size-report-builder-and-ssrs.md
+  - name: Placeholder Properties Dialog Box, General
+    href: ../placeholder-properties-dialog-box-general-report-builder-and-ssrs.md
+  - name: Query Designers
+    href: ../query-designers-report-builder.md
+    items:
+    - name: Relational Query Designer User Interface
+      href: ../report-data/relational-query-designer-user-interface-report-builder.md
+    - name: Text-based Query Designer User Interface
+      href: ../report-data/text-based-query-designer-user-interface-report-builder.md
+      items:
+      - name: Define Query Parameters Dialog Box
+        href: ../define-query-parameters-dialog-box-report-builder.md
+    - name: Analysis Services MDX Query Designer User Interface
+      href: ../analysis-services-mdx-query-designer-user-interface-report-builder.md
+    - name: Hyperion Essbase Query Designer User Interface
+      href: ../hyperion-essbase-query-designer-user-interface-report-builder.md
+    - name: SharePoint List Query Designer
+      href: ../report-data/sharepoint-list-query-designer-report-builder.md
+    - name: SAP NetWeaver BI Query Designer User Interface
+      href: ../sap-netweaver-bi-query-designer-user-interface-report-builder.md
+  - name: Report Builder Options Dialog Box, Settings
+    href: set-default-options-for-report-builder.md
+  - name: Report Data Pane
+    href: ../report-data-pane-report-builder.md
+  - name: Report Sections Dialog Box
+    href: report-sections-dialog-box-report-builder.md
+  - name: Reporting Services Login Dialog Box
+    href: reporting-services-login-dialog-box-report-builder.md
+  - name: Report Properties Dialog Box, Code
+    href: ../report-properties-dialog-box-code-report-builder.md
+  - name: Report Properties Dialog Box, Page Setup
+    href: ../report-properties-dialog-box-page-setup-report-builder.md
+  - name: Report Properties Dialog Box, References
+    href: ../report-properties-dialog-box-references-report-builder.md
+  - name: Row Visibility Dialog Box
+    href: ../row-visibility-dialog-box-report-builder.md
+  - name: Select Color Dialog Box
+    href: ../select-color-dialog-box-report-builder-and-ssrs.md
+  - name: Text Box Properties Dialog Box, Alignment
+    href: ../text-box-properties-dialog-box-alignment-report-builder-and-ssrs.md
+  - name: Alignment Dialog Box for Text and Placeholders
+    href: ../alignment-dialog-box-for-text-and-placeholders-report-builder-and-ssrs.md

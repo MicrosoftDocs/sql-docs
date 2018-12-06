@@ -2,12 +2,10 @@
 title: "sys.column_store_row_groups (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/10/2016"
-ms.prod: "sql-non-specified"
+ms.prod: sql
+ms.prod_service: "database-engine"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: system-objects
 ms.topic: "language-reference"
 f1_keywords: 
   - "sys.column_store_row_groups_TSQL"
@@ -19,13 +17,12 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.column_store_row_groups catalog view"
 ms.assetid: 76e7fef2-d1a4-4272-a2bb-5f5dcd84aedc
-caps.latest.revision: 17
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
 ---
 # sys.column_store_row_groups (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
 
   Provides clustered columnstore index information on a per-segment basis to help the administrator make system management decisions. **sys.column_store_row_groups** has a column for the total number of rows physically stored (including those marked as deleted) and a column for the number of rows marked as deleted. Use **sys.column_store_row_groups** to determine which row groups have a high percentage of deleted rows and should be rebuilt.  
    
@@ -37,7 +34,7 @@ manager: "jhubbard"
 |**row_group_id**|**int**|The row group number associated with this row group. This is unique within the partition.<br /><br /> -1 = tail of an in-memory table.|  
 |**delta_store_hobt_id**|**bigint**|The hobt_id for OPEN row group in the delta store.<br /><br /> NULL if the row group is not in the delta store.<br /><br /> NULL for the tail of an in-memory table.|  
 |**state**|**tinyint**|ID number associated with the state_description.<br /><br /> 0 = INVISIBLE<br /><br /> 1 = OPEN<br /><br /> 2 = CLOSED<br /><br /> 3 = COMPRESSED <br /><br /> 4 = TOMBSTONE|  
-|**state_description**|**nvarchar(60)**|Description of the persistent state of the row group:<br /><br /> INVISIBLE –A hidden compressed segment in the process of being built from data in a delta store. Read actions will use the delta store until the invisible compressed segment is completed. Then the new segment is made visible, and the source delta store is removed.<br /><br /> OPEN – A read/write row group that is accepting new records. An open row group is still in rowstore format and has not been compressed to columnstore format.<br /><br /> CLOSED – A row group that has been filled, but not yet compressed by the tuple mover process.<br /><br /> COMPRESSED – A row group that has filled and compressed.|  
+|**state_description**|**nvarchar(60)**|Description of the persistent state of the row group:<br /><br /> INVISIBLE -A hidden compressed segment in the process of being built from data in a delta store. Read actions will use the delta store until the invisible compressed segment is completed. Then the new segment is made visible, and the source delta store is removed.<br /><br /> OPEN - A read/write row group that is accepting new records. An open row group is still in rowstore format and has not been compressed to columnstore format.<br /><br /> CLOSED - A row group that has been filled, but not yet compressed by the tuple mover process.<br /><br /> COMPRESSED - A row group that has filled and compressed.|  
 |**total_rows**|**bigint**|Total rows physically stored in the row group. Some may have been deleted but they are still stored. The maximum number of rows in a row group is 1,048,576 (hexadecimal FFFFF).|  
 |**deleted_rows**|**bigint**|Total rows in the row group marked deleted. This is always 0 for DELTA row groups.|  
 |**size_in_bytes**|**bigint**|Size in bytes of all the data in this row group (not including metadata or shared dictionaries), for both DELTA and COLUMNSTORE rowgroups.|  

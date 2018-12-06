@@ -2,12 +2,10 @@
 title: "Using Abbreviated Syntax in a Path Expression | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/03/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
+ms.prod_service: sql
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: xml
 ms.topic: "language-reference"
 dev_langs: 
   - "XML"
@@ -15,13 +13,12 @@ helpviewer_keywords:
   - "axis step [XQuery]"
   - "abbreviated syntax [XQuery]"
 ms.assetid: f83c2e41-5722-47c3-b5b8-bf0f8cbe05d3
-caps.latest.revision: 23
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "rothja"
+ms.author: "jroth"
+manager: craigg
 ---
 # Path Expressions - Using Abbreviated Syntax
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   All the examples in [Understanding the Path Expressions in XQuery](../xquery/path-expressions-xquery.md) use unabbreviated syntax for path expressions. The unabbreviated syntax for an axis step in a path expression includes the axis name and node test, separated by double colon, and followed by zero or more step qualifiers.  
   
@@ -45,9 +42,9 @@ child::ProductDescription[attribute::ProductModelID=19]
   
     ```  
     SELECT AdditionalContactInfo.query('             
-                declare namespace act="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ContactTypes";             
-                declare namespace crm="http://schemas.adventure-works.com/Contact/Record";             
-                declare namespace ci="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ContactInfo";             
+                declare namespace act="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ContactTypes";             
+                declare namespace crm="https://schemas.adventure-works.com/Contact/Record";             
+                declare namespace ci="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ContactInfo";             
                 /descendant-or-self::node()/child::act:telephoneNumber             
                 ') as result             
     FROM Person.Contact             

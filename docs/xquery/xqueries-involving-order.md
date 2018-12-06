@@ -2,15 +2,11 @@
 title: "XQueries Involving Order | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
+ms.prod_service: sql
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: xml
 ms.topic: "language-reference"
-applies_to: 
-  - "SQL Server"
 dev_langs: 
   - "XML"
 helpviewer_keywords: 
@@ -18,13 +14,12 @@ helpviewer_keywords:
   - "XQuery, sequence"
   - "ordered expressions [XQuery]"
 ms.assetid: 4f1266c5-93d7-402d-94ed-43f69494c04b
-caps.latest.revision: 23
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "rothja"
+ms.author: "jroth"
+manager: craigg
 ---
 # XQueries Involving Order
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   Relational databases do not have a concept of sequence. For example, you cannot make a request such as "Get the first customer from the database." However, you can query an XML document and retrieve the first \<Customer> element. Then, you will always retrieve the same customer.  
   
@@ -35,9 +30,9 @@ manager: "jhubbard"
 ### A. Retrieve manufacturing steps at the second work center location for a product  
  For a specific product model, the following query retrieves manufacturing steps at the second work center location in a sequence of work center locations in the manufacturing process.  
   
-```  
+```sql
 SELECT Instructions.query('  
-     declare namespace AWMI="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";  
+     declare namespace AWMI="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";  
     <ManuStep ProdModelID = "{sql:column("Production.ProductModel.ProductModelID")}"  
                 ProductModelName = "{ sql:column("Production.ProductModel.Name") }" >  
      <Location>  
@@ -75,7 +70,7 @@ WHERE ProductModelID=7
               MachineHours="2"  LaborHours="1.75" LotSize="1">  
   <Steps>  
    <Step>Assemble all frame components following blueprint 1299.</Step>  
-     …  
+     ...  
   </Steps>  
  </Location>  
 </ManuStep>    
@@ -86,9 +81,9 @@ WHERE ProductModelID=7
 ### B. Find all the material and tools used at the second work center location in the manufacturing of a product  
  For a specific product model, the following query retrieves the tools and materials used at the second work center location in the sequence of work center locations in the manufacturing process.  
   
-```  
+```sql
 SELECT Instructions.query('  
-    declare namespace AWMI="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";  
+    declare namespace AWMI="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";  
    <Location>  
       { (//AWMI:root/AWMI:Location)[1]/@* }  
        <Tools>  
@@ -121,7 +116,7 @@ where ProductModelID=7
   
  This is the result:  
   
-```  
+```xml
 <Location LocationID="10" SetupHours=".5"   
           MachineHours="3" LaborHours="2.5" LotSize="100">  
   <Tools>  
@@ -139,9 +134,9 @@ where ProductModelID=7
 ### C. Retrieve the first two product feature descriptions from the product catalog  
  For a specific product model, the query retrieves the first two feature descriptions from the <`Features`> element in the product model catalog.  
   
-```  
+```sql
 SELECT CatalogDescription.query('  
-     declare namespace p1="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription";  
+     declare namespace p1="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription";  
      <ProductModel ProductModelID= "{ data( (/p1:ProductDescription/@ProductModelID)[1] ) }"  
                    ProductModelName = "{ data( (/p1:ProductDescription/@ProductModelName)[1] ) }" >  
        {  
@@ -163,15 +158,15 @@ where ProductModelID=19
   
  This is the result:  
   
-```  
+```xml
 <ProductModel ProductModelID="19" ProductModelName="Mountain 100">  
  <p1:Warranty   
-  xmlns:p1="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelWarrAndMain">  
+  xmlns:p1="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelWarrAndMain">  
   <p1:WarrantyPeriod>3 year</p1:WarrantyPeriod>  
   <p1:Description>parts and labor</p1:Description>  
  </p1:Warranty>  
  <p2:Maintenance   
-  xmlns:p2="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelWarrAndMain">  
+  xmlns:p2="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelWarrAndMain">  
   <p2:NoOfYears>10</p2:NoOfYears>  
   <p2:Description>maintenance contact available through your dealer   
             or any AdventureWorks retail store.  
@@ -183,9 +178,9 @@ where ProductModelID=19
 ### D. Find the first two tools used at the first work center location in the manufacturing process of the product  
  For a product model, this query returns the first two tools used at the first work center location in the sequence of work center locations in the manufacturing process. The query is specified against the manufacturing instructions stored in the **Instructions** column of the **Production.ProductModel** table.  
   
-```  
+```sql
 SELECT Instructions.query('  
-     declare namespace AWMI="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";  
+     declare namespace AWMI="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";  
    for $Inst in (//AWMI:root/AWMI:Location)[1]  
    return   
      <Location>  
@@ -206,7 +201,7 @@ where ProductModelID=7
   
  This is the result:  
   
-```  
+```xml
 <Location LocationID="10" SetupHours=".5"   
             MachineHours="3" LaborHours="2.5" LotSize="100">  
   <Tools>  
@@ -219,9 +214,9 @@ where ProductModelID=7
 ### E. Find the last two manufacturing steps at the first work center location in the manufacturing of a specific product  
  The query uses the **last()** function to retrieve the last two manufacturing steps.  
   
-```  
+```sql
 SELECT Instructions.query('   
-declare namespace AWMI="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";  
+declare namespace AWMI="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";  
   <LastTwoManuSteps>  
    <Last-1Step>   
      { (/AWMI:root/AWMI:Location)[1]/AWMI:step[(last()-1)]/text() }  
@@ -236,7 +231,7 @@ where ProductModelID=7
   
  This is the result:  
   
-```  
+```xml
 <LastTwoManuSteps>  
    <Last-1Step>When finished, inspect the forms for defects per   
                Inspection Specification .</Last-1Step>  

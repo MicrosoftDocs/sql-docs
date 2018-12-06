@@ -1,22 +1,17 @@
 ---
 title: "Set Report Server Properties (Management Studio) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/20/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.date: 03/20/2017
+ms.prod: reporting-services
+ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
+ms.technology: tools
+
+
+ms.topic: conceptual
 helpviewer_keywords: 
   - "report servers [Reporting Services], properties"
 ms.assetid: 1ed0f84b-b12a-4e49-b65c-a11a99f9093f
-caps.latest.revision: 10
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
+author: markingmyname
+ms.author: maghan
 ---
 # Set Report Server Properties (Management Studio)
   You can set report server system properties in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] to enable features or set server defaults.  

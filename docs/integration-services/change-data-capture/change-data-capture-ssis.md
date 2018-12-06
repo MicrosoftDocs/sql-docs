@@ -2,21 +2,18 @@
 title: "Change Data Capture (SSIS) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
+ms.prod: sql
+ms.prod_service: "integration-services"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: integration-services
+ms.topic: conceptual
 helpviewer_keywords: 
   - "incremental loads [SQL Server change data capture]"
   - "change data capture [SQL Server], Integration Services and"
 ms.assetid: c4aaba1b-73e5-4187-a97b-61c10069cc5a
-caps.latest.revision: 38
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: craigg
 ---
 # Change Data Capture (SSIS)
   In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], change data capture offers an effective solution to the challenge of efficiently performing incremental loads from source tables to data marts and data warehouses.  
@@ -93,9 +90,9 @@ manager: "jhubbard"
 ## Samples of Change Data Capture Packages  
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] provides two samples that demonstrate how to use change data capture in packages. For more information, see the following topics:  
   
--   [Readme_Change Data Capture for Specified Interval Package Sample](http://go.microsoft.com/fwlink/?LinkId=133507)  
+-   [Readme_Change Data Capture for Specified Interval Package Sample](https://go.microsoft.com/fwlink/?LinkId=133507)  
   
--   [Readme_Change Data Capture since Last Request Package Sample](http://go.microsoft.com/fwlink/?LinkId=133508)  
+-   [Readme_Change Data Capture since Last Request Package Sample](https://go.microsoft.com/fwlink/?LinkId=133508)  
   
 ## Related Tasks  
   
@@ -116,6 +113,6 @@ manager: "jhubbard"
 -   [Perform an Incremental Load of Multiple Tables](../../integration-services/change-data-capture/perform-an-incremental-load-of-multiple-tables.md)  
   
 ## Related Content  
- Blog entry, [SSIS Design Pattern – Incremental Load](http://go.microsoft.com/fwlink/?LinkId=217679), on sqlblog.com  
+ Blog entry, [SSIS Design Pattern - Incremental Load](https://go.microsoft.com/fwlink/?LinkId=217679), on sqlblog.com  
   
   

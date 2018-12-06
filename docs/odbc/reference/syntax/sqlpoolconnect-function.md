@@ -2,20 +2,17 @@
 title: "SQLPoolConnect Function | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
+ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "drivers"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: connectivity
+ms.topic: conceptual
 helpviewer_keywords: 
   - "SQLPoolConnect function [ODBC]"
 ms.assetid: 41322737-890d-4a81-aed2-06cc3d546962
-caps.latest.revision: 16
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # SQLPoolConnect Function
 **Conformance**  
@@ -70,7 +67,7 @@ SQLRETURN  SQLPoolConnect(
   
  Whenever a driver returns SQL_SUCCESS_WITH_INFO, the Driver Manager will obtain the diagnostic information from *hDbcInfoToken*, and return SQL_SUCCESS_WITH_INFO to the application in [SQLConnect](../../../odbc/reference/syntax/sqlconnect-function.md) and [SQLDriverConnect](../../../odbc/reference/syntax/sqldriverconnect-function.md).  
   
- When an application uses [SQLConnect](../../../odbc/reference/syntax/sqlconnect-function.md), *wszOutConnectString* will be a NULL buffer (the last three parameters will all be set to NULL, 0, NULL). Otherwise, the driver must return the output connection string, which will be returned to application’s [SQLDriverConnect Function](../../../odbc/reference/syntax/sqldriverconnect-function.md) call.  
+ When an application uses [SQLConnect](../../../odbc/reference/syntax/sqlconnect-function.md), *wszOutConnectString* will be a NULL buffer (the last three parameters will all be set to NULL, 0, NULL). Otherwise, the driver must return the output connection string, which will be returned to application's [SQLDriverConnect Function](../../../odbc/reference/syntax/sqldriverconnect-function.md) call.  
   
  Include sqlspi.h for ODBC driver development.  
   

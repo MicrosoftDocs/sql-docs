@@ -2,12 +2,10 @@
 title: "Using Annotated XSD Schemas in Queries (SQLXML 4.0) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/16/2017"
-ms.prod: "sql-server-2016"
+ms.prod: sql
+ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-xml"
-ms.tgt_pltfrm: ""
+ms.technology: xml
 ms.topic: "reference"
 helpviewer_keywords: 
   - "queries [SQLXML]"
@@ -21,12 +19,13 @@ helpviewer_keywords:
   - "XSD schemas [SQLXML], queries"
   - "templates [SQLXML], annotated XSD schemas in queries"
 ms.assetid: 927a30a2-eae8-420d-851d-551c5f884f3c
-caps.latest.revision: 30
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: craigg
+monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Using Annotated XSD Schemas in Queries (SQLXML 4.0)
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   You can specify queries against an annotated schema to retrieve data from the database by specifying XPath queries in a template against the XSD schema.  
   
  The **\<sql:xpath-query>** element allows you to specify an XPath query against the XML view that is defined by the annotated schema. The annotated schema against which the XPath query is to be executed is identified by using the **mapping-schema** attribute of the **\<sql:xpath-query>** element.  
@@ -38,7 +37,7 @@ manager: "jhubbard"
  For example, consider this annotated schema:  
   
 ```  
-<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"   
+<xsd:schema xmlns:xsd="https://www.w3.org/2001/XMLSchema"   
             xmlns:sql="urn:schemas-microsoft-com:mapping-schema">  
   <xsd:element name="Person.Contact" >  
      <xsd:complexType>  
@@ -71,7 +70,7 @@ manager: "jhubbard"
   
 ```  
 <ROOT xmlns:sql='urn:schemas-microsoft-com:xml-sql'>  
-<xsd:schema xmlns:xsd='http://www.w3.org/2001/XMLSchema'  
+<xsd:schema xmlns:xsd='https://www.w3.org/2001/XMLSchema'  
         xmlns:ms='urn:schemas-microsoft-com:mapping-schema'  
         id='InLineSchema1' sql:is-mapping-schema='1'>  
   <xsd:element name='Employees' ms:relation='HumanResources.Employee'>  
@@ -84,7 +83,7 @@ manager: "jhubbard"
   </xsd:element>  
 </xsd:schema>  
   
-<xsd:schema xmlns:xsd='http://www.w3.org/2001/XMLSchema'  
+<xsd:schema xmlns:xsd='https://www.w3.org/2001/XMLSchema'  
         xmlns:ms='urn:schemas-microsoft-com:mapping-schema'  
         id='InLineSchema2' sql:is-mapping-schema='1'>  
   <xsd:element name='Contacts' ms:relation='Person.Contact'>  

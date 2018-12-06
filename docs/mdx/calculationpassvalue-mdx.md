@@ -1,28 +1,17 @@
 ---
 title: "CalculationPassValue (MDX) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/02/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "CALCULATIONPASSVALUE"
-dev_langs: 
-  - "kbMDX"
-helpviewer_keywords: 
-  - "CalculationPassValue function"
-ms.assetid: 1b4012cb-c8c7-441a-bb9c-59430703b189
-caps.latest.revision: 45
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
+ms.date: 06/04/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: mdx
+ms.topic: reference
+ms.author: owend
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
 ---
 # CalculationPassValue (MDX)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../includes/tsql-appliesto-ss2008-all-md.md)]
+
 
   Returns either the numeric or the string value of a Multidimensional Expressions (MDX) expression evaluated over the specified calculation pass of a cube.  
   
@@ -60,7 +49,7 @@ CalculationPassValue(String_Expression ,Pass_Value [, ABSOLUTE | RELATIVE [,ALL]
   
  If a string expression is provided, the function returns a string value by evaluating the specified MDX string expression in the specified calculation pass, and optionally modified by an access flag and an access flag modifier*.*  
   
- With automatic recursion resolution in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], this function has little practical use.  
+ With automatic recursion resolution in [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], this function has little practical use.  
   
 > [!NOTE]  
 >  Only administrators can use the **CalculationPassValue** function within an MDX script. An error occurs if an MDX script that contains this function is run in the context of a role that does not have administrator privileges.  

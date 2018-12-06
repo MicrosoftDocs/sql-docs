@@ -2,12 +2,10 @@
 title: "CERTENCODED (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/24/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
+ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: t-sql
 ms.topic: "language-reference"
 f1_keywords: 
   - "CERTENCODED"
@@ -17,15 +15,14 @@ dev_langs:
 helpviewer_keywords: 
   - "CERTENCODED"
 ms.assetid: 677a0719-7b9a-4f0b-bc61-41634563f924
-caps.latest.revision: 14
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
 ---
 # CERTENCODED (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
-Returns the public portion of a certificate in binary format. This function takes a certificate ID and returns the encoded certificate. The binary result can be passed to **CREATE CERTIFICATE … WITH BINARY** to create a new certificate.
+This function returns the public portion of a certificate in binary format. This function takes a certificate ID as an argument, and returns the encoded certificate. To create a new certificate, pass the binary result to **CREATE CERTIFICATE ... WITH BINARY**.
   
 ## Syntax  
   
@@ -35,39 +32,39 @@ CERTENCODED ( cert_id )
   
 ## Arguments  
 *cert_id*  
-Is the **certificate_id** of the certificate. This is available from sys.certificates or by using the [CERT_ID &#40;Transact-SQL&#41;](../../t-sql/functions/cert-id-transact-sql.md) function. *cert_id* is type **int**
+The **certificate_id** of the certificate. Find this value in sys.certificates; the [CERT_ID &#40;Transact-SQL&#41;](../../t-sql/functions/cert-id-transact-sql.md) function will return it as well. *cert_id* has data type **int**.
   
 ## Return types
 **varbinary**
   
 ## Remarks  
-**CERTENCODED** and **CERTPRIVATEKEY** are used together to return different portions of a certificate in binary form.
+Use **CERTENCODED** and **CERTPRIVATEKEY** together to return, in binary form, different portions of a certificate.
   
 ## Permissions  
-**CERTENCODED** is available to public.
+**CERTENCODED** is publicly available.
   
 ## Examples  
   
 ### Simple Example  
-The following example creates a certificate named `Shipping04` and then uses the **CERTENCODED** function to return the binary encoding of the certificate.
+This example creates a certificate named `Shipping04`, and then uses the **CERTENCODED** function to return the binary encoding of the certificate. This example sets the certificate expiry date to October 31, 2040.
   
 ```sql
-CREATE DATABASE TEST1;  
-GO  
-USE TEST1  
-CREATE CERTIFICATE Shipping04   
-ENCRYPTION BY PASSWORD = 'pGFD4bb925DGvbd2439587y'  
-WITH SUBJECT = 'Sammamish Shipping Records',   
-EXPIRY_DATE = '20161031';  
-GO  
-SELECT CERTENCODED(CERT_ID('Shipping04'));  
+CREATE DATABASE TEST1;
+GO
+USE TEST1
+CREATE CERTIFICATE Shipping04
+ENCRYPTION BY PASSWORD = 'pGFD4bb925DGvbd2439587y'
+WITH SUBJECT = 'Sammamish Shipping Records',
+EXPIRY_DATE = '20401031';
+GO
+SELECT CERTENCODED(CERT_ID('Shipping04'));
   
 ```  
   
 ### B. Copying a Certificate to Another Database  
-The following more complicated example, creates two databases, `SOURCE_DB` and `TARGET_DB`. The goal is to create a certificate in the `SOURCE_DB`, and then copy the certificate to the `TARGET_DB`, and then demonstrate that data encrypted in `SOURCE_DB` can be decrypted in `TARGET_DB` using the copy of the certificate.
+The more complex example creates two databases, `SOURCE_DB` and `TARGET_DB`. Then, create a certificate in `SOURCE_DB`, and then copy the certificate to the `TARGET_DB`. Finally, demonstrate that data encrypted in `SOURCE_DB` can be decrypted in `TARGET_DB` using the copy of the certificate.
   
-To create the example environment, create the `SOURCE_DB` and `TARGET_DB` databases, and a master key in each. Then create a certificate in `SOURCE_DB`.
+To create the example environment, create the `SOURCE_DB` and `TARGET_DB` databases, and a master key in each database. Then, create a certificate in `SOURCE_DB`.
   
 ```sql
 USE master;  
@@ -92,7 +89,7 @@ CREATE CERTIFICATE SOURCE_CERT WITH SUBJECT = 'SOURCE_CERTIFICATE';
 GO  
 ```  
   
-Now extract the binary description of the certificate.
+Next, extract the binary description of the certificate.
   
 ```sql
 DECLARE @CERTENC VARBINARY(MAX);  
@@ -105,7 +102,7 @@ SELECT @CERTPVK AS EncryptedBinaryCertificate;
 GO  
 ```  
   
-Create the duplicate certificate in the `TARGET_DB` database. You must modify the following code, inserting the two binary values returned in the previous step.
+Then, create the duplicate certificate in the `TARGET_DB` database. Modify the following code for this to work, inserting the two binary values - @CERTENC and @CERTPVK - returned in the previous step. Don't surround these values with quotes.
   
 ```sql
 -- Create the duplicate certificate in the TARGET_DB database  
@@ -124,7 +121,7 @@ UNION
 SELECT * FROM TARGET_DB.sys.certificates;  
 ```  
   
-The following code executed as a single batch demonstrates that data encrypted in `SOURCE_DB` can be decrypted in `TARGET_DB`.
+This code, executed as a single batch, demonstrates that `TARGET_DB` can decrypt data originally encrypted in `SOURCE_DB`.
   
 ```sql
 USE SOURCE_DB;  

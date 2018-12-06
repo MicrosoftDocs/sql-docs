@@ -1,54 +1,40 @@
 ---
 title: "Store Credentials in a Reporting Services Data Source | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "09/23/2015"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.date: 05/24/2018
+ms.prod: reporting-services
+ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
+ms.technology: report-data
+
+
+ms.topic: conceptual
 helpviewer_keywords: 
   - "credentials [Reporting Services]"
   - "security [Analysis Services], data sources"
   - "stored credentials [Reporting Services]"
   - "data sources [Reporting Services], stored credentials"
 ms.assetid: dc700922-97fa-4b30-9547-05bbbec4f09c
-caps.latest.revision: 42
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
+author: markingmyname
+ms.author: maghan
 ---
 # Store Credentials in a Reporting Services Data Source
   You can configure stored credentials that a [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] report server uses to access external data for a report. Stored credentials are used if the report runs unattended, for example a [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] subscription that publishes a report as an e-mail. The report server retrieves and uses the credentials when report processing is scheduled or triggered. This topic walks you through configuring stored credentials for both Native mode and SharePoint mode report servers.  
   
-||  
-|-|  
+|| |
+|-|-|
 |**[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Native mode &#124; [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint mode|  
-  
--   [Configure stored credentials for a report-specific data source (Native mode)](#bkmk_stored_credentials_data_source_native)  
-  
--   [Configure stored credentials for a report-specific data source (SharePoint mode)](#bkmk_stored_credentials_data_source_sharepoint)  
-  
--   [Configure stored credentials for a shared data source (Native mode)](#bkmk_stored_credentials_shared_data_source_native)  
-  
--   [Configure stored credentials for a shared data source (SharePoint mode)](#bkmk_stored_credentials_shared_data_source_sharepoint)  
   
 ##  <a name="bkmk_top"></a> Security policy requirements for stored credentials  
  ![as_powerpivot_refresh_sss_set_key](../../analysis-services/power-pivot-sharepoint/media/as-powerpivot-refresh-sss-set-key.gif "as_powerpivot_refresh_sss_set_key") It is required that the account you use for stored credentials, is configured for one of the following security policies on the report server. It is recommended you select the policy with the minimum level of permissions you require for your environment.  
   
-1.  **Allow log on locally**. For more information, see [Allow log on locally](http://technet.microsoft.com/library/cc756809\(v=WS.10\).aspx).  
+1.  **Allow log on locally**. For more information, see [Allow log on locally](https://technet.microsoft.com/library/cc756809\(v=WS.10\).aspx).  
   
-2.  **Log on as a batch job**. For more information, see [Log on as a batch job](http://technet.microsoft.com/library/cc755659\(v=ws.10\).aspx).  
+2.  **Log on as a batch job**. For more information, see [Log on as a batch job](https://technet.microsoft.com/library/cc755659\(v=ws.10\).aspx).  
   
-3.  For general information on policies, see [Edit security settings on a Group Policy object](http://technet.microsoft.com/library/cc736516\(v=ws.10\).aspx).  
+3.  For general information on policies, see [Edit security settings on a Group Policy object](https://technet.microsoft.com/library/cc736516\(v=ws.10\).aspx).  
   
 ##  <a name="bkmk_stored_credentials_data_source_native"></a> Configure stored credentials for a report-specific data source (Native mode)  
   
-1.  In Native mode Report Manager, browse to the folder that contains the report. Click the item context menu ![context menu in report manager for ssrs items](../../reporting-services/report-data/media/ssrs-report-manager-item-context-menu.png "context menu in report manager for ssrs items").  
+1.  In the web portal, browse to the folder that contains the report. Click the ellipsis (...) in the upper-right corner of the report tile.  
   
 2.  Click **Manage** and then click **Data Sources**.  
   
@@ -104,11 +90,11 @@ manager: "erikre"
   
 ##  <a name="bkmk_stored_credentials_shared_data_source_native"></a> Configure stored credentials for a shared data source (Native mode)  
   
-1.  In Native mode Report Manager, browse to the shared data source item. ![Shared data source icon](../../reporting-services/report-data/media/hlp-16datasource.png "Shared data source icon")  
+1.  In the web portal, browse to the shared data source item. 
   
-2.  Click the context menu ![context menu in report manager for ssrs items](../../reporting-services/report-data/media/ssrs-report-manager-item-context-menu.png "context menu in report manager for ssrs items") and then click **Manage**.  
+2.  Click the ellipsis (...) in the upper-right corner of the report tile > **Manage**. 
   
-3.  In the **Data Source Type** list, specify the data processing extension that is used to process data from the data source.  
+3.  In the **Type** list, specify the data processing extension that is used to process data from the data source.  
   
 4.  For **Connection String**, specify the connection string that the report server uses to connect to the data source. [!INCLUDE[msCoName](../../includes/msconame-md.md)] recommends that you do not specify credentials in the connection string.  
   
@@ -158,9 +144,4 @@ manager: "erikre"
   
 ## See Also  
  [Specify Credential and Connection Information for Report Data Sources](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md)   
- [Configure Data Source Properties for a Report  &#40;Report Manager&#41;](../../reporting-services/report-data/configure-data-source-properties-for-a-report-report-manager.md)   
- [Create, Delete, or Modify a Shared Data Source &#40;Report Manager&#41;](http://msdn.microsoft.com/library/cd7bace3-f8ec-4ee3-8a9f-2f217cdca9f2)   
- [Data Sources Properties Page &#40;Report Manager&#41;](http://msdn.microsoft.com/library/f37edda0-19e6-489e-b544-8751fa6b6cfb)   
- [New Data Source Page &#40;Report Manager&#41;](http://msdn.microsoft.com/library/35563d4c-a3d5-4f95-bf46-605da9dfcbb8)  
-  
   

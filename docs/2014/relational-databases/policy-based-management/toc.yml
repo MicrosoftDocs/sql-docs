@@ -1,0 +1,154 @@
+- name: Administer Servers by Using Policy-Based Management
+  href: administer-servers-by-using-policy-based-management.md
+  items:
+  - name: Policy-Based Management Storage
+    href: policy-based-management-storage.md
+  - name: Configure the General Properties of Policy-Based Management
+    href: configure-the-general-properties-of-policy-based-management.md
+  - name: Configure Alerts to Notify Policy Administrators of Policy Failures
+    href: configure-alerts-to-notify-policy-administrators-of-policy-failures.md
+  - name: Create a Policy-Based Management Policy
+    href: create-a-policy-based-management-policy.md
+  - name: Create a New Policy-Based Management Condition
+    href: create-a-new-policy-based-management-condition.md
+  - name: View or Modify the Properties of a Policy-Based Management Policy
+    href: view-or-modify-the-properties-of-a-policy-based-management-policy.md
+  - name: View or Modify the Properties of a Policy-Based Management Condition
+    href: view-or-modify-the-properties-of-a-policy-based-management-condition.md
+  - name: Delete a Policy-Based Management Policy
+    href: delete-a-policy-based-management-policy.md
+  - name: Delete a Policy-Based Management Condition
+    href: delete-a-policy-based-management-condition.md
+  - name: Evaluate a Policy-Based Management Policy from an Object
+    href: evaluate-a-policy-based-management-policy-from-an-object.md
+  - name: Evaluate a Policy-Based Management Policy from That Policy
+    href: evaluate-a-policy-based-management-policy-from-that-policy.md
+  - name: Evaluate a Policy-Based Management Policy on a Schedule
+    href: evaluate-a-policy-based-management-policy-on-a-schedule.md
+  - name: Export a Policy-Based Management Policy
+    href: export-a-policy-based-management-policy.md
+  - name: Import a Policy-Based Management Policy
+    href: import-a-policy-based-management-policy.md
+  - name: Subscribe or Unsubscribe a Database  to a Policy Category
+    href: subscribe-or-unsubscribe-a-database-to-a-policy-category.md
+  - name: Manage Policy Categories
+    href: manage-policy-categories.md
+- name: Working with Policy-Based Management Facets
+  href: working-with-policy-based-management-facets.md
+  items:
+  - name: View the Policy-Based Management Facets on a SQL Server Object
+    href: view-the-policy-based-management-facets-on-a-sql-server-object.md
+  - name: View the Properties of a Policy-Based Management Facet
+    href: view-the-properties-of-a-policy-based-management-facet.md
+  - name: Copy a Policy-Based Management Facet State to an XML File
+    href: copy-a-policy-based-management-facet-state-to-an-xml-file.md
+- name: Monitor and Enforce Best Practices by Using Policy-Based Management
+  href: monitor-and-enforce-best-practices-by-using-policy-based-management.md
+  items:
+  - name: Asymmetric Keys Encryption Strength
+    href: asymmetric-keys-encryption-strength.md
+  - name: Backup Files Must Be on Separate Devices from the Database Files
+    href: dbengine-backup-files-must-be-on-separate-devices-from-the-database-files.md
+  - name: Check Disk I/O Subsystem for I/O Delay Problems
+    href: check-disk-input-and-output-subsystem-for-io-delay-problems.md
+  - name: Check Disk Input Output Subsystem for Read Retry Problems
+    href: check-disk-input-output-subsystem-for-read-retry-problems.md
+  - name: Check Integrity of Database with Suspect Pages
+    href: check-integrity-of-database-with-suspect-pages.md
+  - name: Correct Affinity Mask and Affinity I/O Mask Overlap
+    href: correct-affinity-mask-and-affinity-input-and-output-mask-overlap.md
+  - name: Default Trace Log Files Disabled
+    href: default-trace-log-files-disabled.md
+  - name: Detect Failed I/O Request
+    href: detect-failed-input-and-output-requests.md
+  - name: Detect SCSI Host Adapter Issues
+    href: detect-scsi-host-adapter-issues.md
+  - name: Device Driver Control Error
+    href: device-driver-control-error.md
+  - name: Device Not Ready Error
+    href: device-not-ready-error.md
+  - name: Disable Lightweight Pooling
+    href: disable-lightweight-pooling.md
+  - name: Guest Permissions on User Databases
+    href: guest-permissions-on-user-databases.md
+  - name: Input and Output Error During Hard Page Fault
+    href: input-and-output-error-during-hard-page-fault.md
+  - name: Increase or Disable Blocked Process Threshold
+    href: increase-or-disable-blocked-process-threshold.md
+  - name: Keep the Affinity Mask Default Value
+    href: keep-the-affinity-mask-default-value.md
+  - name: Keep the Locks Configuration Option Default Value
+    href: keep-the-locks-configuration-option-default-value.md
+  - name: Network Packet Size Should Not Exceed 8060 Bytes
+    href: network-packet-size-should-not-exceed-8060-bytes.md
+  - name: Outdated Backup
+    href: outdated-backup.md
+  - name: Place Data and Log Files on Separate Drives
+    href: place-data-and-log-files-on-separate-drives.md
+  - name: Server public Permissions
+    href: server-public-permissions.md
+  - name: Set the AUTO_CLOSE Database Option to OFF
+    href: set-the-auto-close-database-option-to-off.md
+  - name: Set the AUTO_SHRINK Database Option to OFF
+    href: set-the-auto-shrink-database-option-to-off.md
+  - name: Set the Collation of User-defined Databases to Match Those of the master and model Databases
+    href: dbengine-set-collation-user-defined-databases.md
+  - name: Set the Max Degree of Parallelism Option for Optimal Performance
+    href: set-the-max-degree-of-parallelism-option-for-optimal-performance.md
+  - name: Set the PAGE_VERIFY Database Option to CHECKSUM
+    href: set-the-page-verify-database-option-to-checksum.md
+  - name: SQL Server Login Password Expiration
+    href: sql-server-login-password-expiration.md
+  - name: SQL Server Login Password Strength
+    href: sql-server-login-password-strength.md
+  - name: Storage System Input-Output Time-out
+    href: storage-system-input-output-time-out.md
+  - name: Symmetric Keys on System Databases
+    href: symmetric-keys-on-system-databases.md
+  - name: Symmetric Keys on User Databases
+    href: symmetric-keys-on-user-databases.md
+  - name: Trustworthy Bit
+    href: trustworthy-bit.md
+  - name: Unexpected System Failures
+    href: unexpected-system-failures.md
+  - name: Use Database Mail Instead of SQL Mail
+    href: use-database-mail-instead-of-sql-mail.md
+  - name: Verify Max Worker Threads Setting
+    href: verify-max-worker-threads-setting.md
+- name: Policy Management Node (Object Explorer)
+  href: policy-management-node-object-explorer.md
+  items:
+  - name: Create New Condition or Open Condition Dialog Box, General Page
+    href: create-new-condition-or-open-condition-dialog-box-general-page.md
+  - name: Create New Condition or Open Condition Dialog Box, Description Page
+    href: create-new-condition-or-open-condition-dialog-box-description-page.md
+  - name: Open Condition Dialog Box, Dependent Policies Page
+    href: open-condition-dialog-box-dependent-policies-page.md
+  - name: Advanced Edit (Condition) Dialog Box
+    href: advanced-edit-condition-dialog-box.md
+  - name: Create New Policy or Open Policy Dialog Box, General Page
+    href: create-new-policy-or-open-policy-dialog-box-general-page.md
+  - name: Create New Policy or Open Policy Dialog Box, Description Page
+    href: create-new-policy-or-open-policy-dialog-box-description-page.md
+  - name: View Policies Dialog Box
+    href: view-policies-dialog-box.md
+  - name: Evaluate Policies Dialog Box, Policy Selection Page
+    href: evaluate-policies-dialog-box-policy-selection-page.md
+  - name: Evaluate Policies Dialog Box, Evaluation Results Page
+    href: evaluate-policies-dialog-box-evaluation-results-page.md
+  - name: Facet Properties Dialog Box, General Page
+    href: facet-properties-dialog-box-general-page.md
+  - name: Facet Properties Dialog Box, Dependent Policies Page
+    href: facet-properties-dialog-box-dependent-policies-page.md
+  - name: Facet Properties Dialog Box, Dependent Conditions Page
+    href: facet-properties-dialog-box-dependent-conditions-page.md
+  - name: Results Detailed View Dialog Box
+    href: results-detailed-view-dialog-box.md
+  - name: View Facets Dialog Box
+    href: view-facets-dialog-box.md
+  - name: Select Source Dialog Box
+    href: select-source-dialog-box.md
+  - name: Export As Policy Dialog Box
+    href: export-as-policy-dialog-box.md
+  - name: Import Policies Dialog Box
+    href: import-policies-dialog-box.md

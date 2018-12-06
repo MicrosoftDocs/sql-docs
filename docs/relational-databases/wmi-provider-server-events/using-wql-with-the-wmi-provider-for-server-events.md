@@ -2,12 +2,10 @@
 title: "Using WQL with the WMI Provider for Server Events | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
+ms.prod: sql
+ms.prod_service: "database-engine"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: wmi
 ms.topic: "reference"
 helpviewer_keywords: 
   - "queries [WMI]"
@@ -16,12 +14,12 @@ helpviewer_keywords:
   - "WQL [WMI]"
   - "WMI Provider for Server Events, WQL"
 ms.assetid: 58b67426-1e66-4445-8e2c-03182e94c4be
-caps.latest.revision: 36
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "CarlRabeler"
+ms.author: "carlrab"
+manager: craigg
 ---
 # Using WQL with the WMI Provider for Server Events
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
   Management applications access [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] events using the WMI Provider for Server Events by issuing WMI Query Language (WQL) statements. WQL is a simplified subset of structured query language (SQL), with some WMI-specific extensions. In using WQL, an application retrieves an event type against a specific instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], a database, or a database object (the only object currently supported is queue). The WMI Provider for Server Events translates the query into an event notification that is created in the target database for database-scoped or object-scoped event notifications, or in the **master** database for server-scoped event notifications.  
   
  For example, consider the following WQL query:  
@@ -46,7 +44,7 @@ CREATE EVENT NOTIFICATION SQLWEP_76CF38C1_18BB_42DD_A7DC_C8820155B0E9
 GO  
 ```  
   
- The argument in the `FROM` clause of the WQL query (`DDL_DATABASE_LEVEL_EVENTS`) can be any valid event upon which an event notification can be created. The arguments in the `SELECT` and `WHERE` clauses can specify any event property associated with an event or its parent event. For a list of valid events and event properties, see [Event Notifications (Database Engine)](http://technet.microsoft.com/library/ms182602.aspx).  
+ The argument in the `FROM` clause of the WQL query (`DDL_DATABASE_LEVEL_EVENTS`) can be any valid event upon which an event notification can be created. The arguments in the `SELECT` and `WHERE` clauses can specify any event property associated with an event or its parent event. For a list of valid events and event properties, see [Event Notifications (Database Engine)](https://technet.microsoft.com/library/ms182602.aspx).  
   
  The following WQL syntax is supported explicitly by the WMI Provider for Server Events. Additional WQL syntax may be specified, but it is not specific to this provider and is parsed instead by the WMI host service. For more information about the WMI Query Language, see the WQL documentation on the Microsoft Developer Network (MSDN).  
   
@@ -70,7 +68,7 @@ WHERE where_condition
  Specifies that all properties associated with an event are queried.  
   
  *event_type*  
- Is any event against which an event notification can be created. For a list of available events, see [WMI Provider for Server Events Classes and Properties](http://technet.microsoft.com/library/ms186449.aspx). Note that *event type* names correspond to the same *event_type* | *event_group* that can be specified when you manually create an event notification by using CREATE EVENT NOTIFICATION. Examples of *event type* include CREATE_TABLE, LOCK_DEADLOCK, DDL_USER_EVENTS, and TRC_DATABASE.  
+ Is any event against which an event notification can be created. For a list of available events, see [WMI Provider for Server Events Classes and Properties](https://technet.microsoft.com/library/ms186449.aspx). Note that *event type* names correspond to the same *event_type* | *event_group* that can be specified when you manually create an event notification by using CREATE EVENT NOTIFICATION. Examples of *event type* include CREATE_TABLE, LOCK_DEADLOCK, DDL_USER_EVENTS, and TRC_DATABASE.  
   
 > [!NOTE]  
 >  Certain system stored procedures that perform DDL-like operations can also fire event notifications. Test your event notifications to determine their responses to system stored procedures that are run. For example, the CREATE TYPE statement and **sp_addtype** stored procedure will both fire an event notification that is created on a CREATE_TYPE event. However, the **sp_rename** stored procedure does not fire any event notifications. For more information, see[DDL Events](../../relational-databases/triggers/ddl-events.md).  
@@ -105,7 +103,7 @@ WHERE DatabaseName = 'AdventureWorks' AND SchemaName = 'Sales'
   
  If `SchemaName='X' AND ObjectType='Y' AND ObjectName='Z'` are all specified in the `WHERE` clause, an attempt is made to register the event notification directly on object `Z` in schema `X`. The registration succeeds if the client has permissions. Note that currently, object-level events are supported only on queues, and only for the QUEUE_ACTIVATION *event_type*.  
   
- Note that not all events can be queried at any particular scope. For example, a WQL query on a trace event such as Lock_Deadlock, or a trace event group such as TRC_LOCKS, can only be registered at the server level. Similarly, the CREATE_ENDPOINT event and the DDL_ENDPOINT_EVENTS event group can also be registered only at the server level. For more information about the appropriate scope for registering events, see [Designing Event Notifications](http://technet.microsoft.com/library/ms175854\(v=sql.105\).aspx). An attempt to register a WQL query whose *event_type* can only be registered at the server level is always made at the server level. Registration succeeds if the WMI client has permissions. Otherwise, an error is returned to the client. In some cases, however, you can still use the WHERE clause as a filter for server-level events based on the properties that correspond to the event. For example, many trace events have a **DatabaseName** property that can be used in the WHERE clause as a filter.  
+ Note that not all events can be queried at any particular scope. For example, a WQL query on a trace event such as Lock_Deadlock, or a trace event group such as TRC_LOCKS, can only be registered at the server level. Similarly, the CREATE_ENDPOINT event and the DDL_ENDPOINT_EVENTS event group can also be registered only at the server level. For more information about the appropriate scope for registering events, see [Designing Event Notifications](https://technet.microsoft.com/library/ms175854\(v=sql.105\).aspx). An attempt to register a WQL query whose *event_type* can only be registered at the server level is always made at the server level. Registration succeeds if the WMI client has permissions. Otherwise, an error is returned to the client. In some cases, however, you can still use the WHERE clause as a filter for server-level events based on the properties that correspond to the event. For example, many trace events have a **DatabaseName** property that can be used in the WHERE clause as a filter.  
   
  Server-scoped event notifications are created in the **master** database and can be queried for metadata by using the [sys.server_event_notifications](../../relational-databases/system-catalog-views/sys-server-event-notifications-transact-sql.md) catalog view.  
   
@@ -138,7 +136,7 @@ WHERE DatabaseName = 'AdventureWorks' AND SchemaName = 'Sales'
 ```  
   
 ## See Also  
- [WMI Provider for Server Events Concepts](http://technet.microsoft.com/library/ms180560.aspx)   
- [Event Notifications (Database Engine)](http://technet.microsoft.com/library/ms182602.aspx)  
+ [WMI Provider for Server Events Concepts](https://technet.microsoft.com/library/ms180560.aspx)   
+ [Event Notifications (Database Engine)](https://technet.microsoft.com/library/ms182602.aspx)  
   
   

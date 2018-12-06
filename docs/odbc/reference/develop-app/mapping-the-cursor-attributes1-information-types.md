@@ -2,13 +2,11 @@
 title: "Mapping the Cursor Attributes1 Information Types | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
+ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "drivers"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: connectivity
+ms.topic: conceptual
 helpviewer_keywords: 
   - "compatibility [ODBC], mapping cursor attributes1 information types"
   - "application upgrades [ODBC], mapping cursor attributes1 information types"
@@ -16,10 +14,9 @@ helpviewer_keywords:
   - "backward compatibility [ODBC], mapping cursor attributes1 information types"
   - "upgrading applications [ODBC], mapping cursor attributes1 information types"
 ms.assetid: 9f112449-ca86-45ac-a865-e6174d67f91b
-caps.latest.revision: 5
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # Mapping the Cursor Attributes1 Information Types
 When an ODBC 3.*x* application calls **SQLGetInfo** in an ODBC 2*.x* driver with the SQL_XXXX_CURSOR_ATTRIBUTES1 information type (for dynamic, forward-only, keyset-driver, or static cursors), the setting of the bits returned by Driver Manager depends on what the ODBC 2.*x* driver returns for the corresponding ODBC 2.*x* information types. The bits are set as shown in the following table.  

@@ -1,21 +1,18 @@
 ---
 title: "XML Persistence Format | Microsoft Docs"
-ms.prod: "sql-non-specified"
-ms.technology:
-  - "drivers"
+ms.prod: sql
+ms.prod_service: connectivity
+ms.technology: connectivity
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "XML persistence [ADO], persistence format"
 ms.assetid: 6e146738-ac4d-47bb-b6cd-d87b2260aead
-caps.latest.revision: 6
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # XML Persistence Format
 ADO uses UTF-8 encoding for the XML stream it persists.  
@@ -64,7 +61,7 @@ xmlns:z="#RowsetSchema">
   
  The schema shows the declarations of namespaces, the schema section, and the data section. The schema section contains definitions for row, ShipperID, CompanyName, and Phone.  
   
- Schema definitions conform to the [W3C XML-Data specification](http://www.w3.org/TR/1998/NOTE-XML-data/) and can be fully validated (though validation will not occur in Internet Explorer 5). XML-Data is currently the only supported schema format for Recordset persistence.  
+ Schema definitions conform to the [W3C XML-Data specification](https://www.w3.org/TR/1998/NOTE-XML-data/) and can be fully validated (though validation will not occur in Internet Explorer 5). XML-Data is currently the only supported schema format for Recordset persistence.  
   
  The data section has three rows containing information about shippers. For an empty rowset, the data section may be empty, but the \<rs:data> tags must be present. With no data, you could write the tag shorthand as simply \<rs:data/>. Any tag prefixed with "rs" indicates that it is in the namespace defined by urn:schemas-microsoft-com:rowset.  
   

@@ -1,37 +1,36 @@
 ---
-title: "R and SQL data types and data objects (R in SQL quickstart) | Microsoft Docs"
-ms.custom: ""
-ms.date: "07/26/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "r-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "R"
-  - "SQL"
-ms.assetid: 1a17fc5b-b8c5-498f-b8b1-3b7b43a567e1
-caps.latest.revision: 8
-author: "jeannt"
-ms.author: "jeannt"
-manager: "jhubbard"
----
-# R and SQL data types and data objects (R in SQL quickstart)
+title: Quickstart about R and SQL data types and objects (SQL Server Machine Learning) | Microsoft Docs
+description: In this quickstart, learn how to work with data types and data objects in R and SQL Server.
+ms.prod: sql
+ms.technology: machine-learning
 
-In this step, you learn about some common issues that arise when moving data between R and SQL Server:
+ms.date: 07/15/2018  
+ms.topic: quickstart
+author: HeidiSteen
+ms.author: heidist
+manager: cgronlun
+---
+# Quickstart: Handle data types and objects using R in SQL Server
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
+In this quickstart, get a hands-on introduction to common issues that occur when moving data between R and SQL Server. The experience you gain through this exercise provides essential background when working with data in your own script.
+
+Common issues to know up front include:
 
 + Data types sometimes do not match
 + Implicit conversions might take place
 + Cast and convert operations are sometimes required
 + R and SQL use different data objects
 
-## Always return R data as a data frame
+## Prerequisites
 
-When your script returns results from R to SQL Server, it must return the data as a **data.frame**. Any other type of object that you generate in your script — whether that be a list, factor, vector, or binary data — must be converted to a data frame if you want to output it as part of the stored procedure results. Fortunately, there are multiple R functions to support changing other objects to a data frame. You can even serialize a binary model and return it in a data frame, which you'll do later in this tutorial.
+A previous quickstart, [Hello World in R and SQL](rtsql-using-r-code-in-transact-sql-quickstart.md), provides information and links for setting up the R environment required for this quickstart.
 
-First, let's experiment with some R basic R objects — vectors, matrices, and lists — and see how conversion to a data frame changes the output passed to SQL Server.
+## Always return a data frame
+
+When your script returns results from R to SQL Server, it must return the data as a **data.frame**. Any other type of object that you generate in your script - whether that be a list, factor, vector, or binary data - must be converted to a data frame if you want to output it as part of the stored procedure results. Fortunately, there are multiple R functions to support changing other objects to a data frame. You can even serialize a binary model and return it in a data frame, which you'll do later in this tutorial.
+
+First, let's experiment with some R basic R objects - vectors, matrices, and lists - and see how conversion to a data frame changes the output passed to SQL Server.
 
 Compare these two "Hello World" scripts in R. The scripts look almost identical, but the first returns a single column of three values, whereas the second returns three columns with a single value each.
 
@@ -54,9 +53,9 @@ EXECUTE sp_execute_external_script
       , @input_data_1 = N'  ';
 ```
 
-## Identifying the schema and data types of R data
+## Identify schema and data types
 
-Why are the results so different?
+Why are the results so different? 
 
 The answer can usually be found by using the R `str()` command. Add the function `str(object_name)` anywhere in your R script to have the data schema of the specified R object returned as an informational message. To view messages, see in the **Messages** pane of Visual Studio Code, or the **Messages** tab in SSMS.
 
@@ -68,6 +67,7 @@ To figure out why Example 1 and Example 2 have such different results, insert th
 EXECUTE sp_execute_external_script
         @language = N'R'
       , @script = N' mytextvariable <- c("hello", " ", "world");
+      OutputDataSet <- as.data.frame(mytextvariable);
       str(OutputDataSet);'
       , @input_data_1 = N'  '
 ;
@@ -79,7 +79,7 @@ EXECUTE sp_execute_external_script
 EXECUTE sp_execute_external_script
   @language = N'R', 
   @script = N' OutputDataSet <- data.frame(c("hello"), " ", c("world"));
-    str(OutputDataSet)' , 
+    str(OutputDataSet);' , 
   @input_data_1 = N'  ';
 ```
 
@@ -103,19 +103,19 @@ $ X...      : Factor w/ 1 level " ": 1
 $ c..world..: Factor w/ 1 level "world": 1
 ```
 
-As you can see, a slight change in R syntax had a big effect on the schema of the results. We won't go into why, because the differences in R data types are explained more thoroughly in this article by Hadley Wickham: [R Data Structures](http://adv-r.had.co.nz/Data-structures.html).
+As you can see, a slight change in R syntax had a big effect on the schema of the results. We won't go into why, because the differences in R data types are explained more thoroughly in this article by Hadley Wickham: [R Data Structures](https://adv-r.had.co.nz/Data-structures.html).
 
 For now, just be aware that you need to check the expected results when coercing R objects into data frames.
 
 > [!TIP]
 > 
-> You can also use R identity functions, such as `is.matrix`, `is.vector`, etc.
+> You can also use R identity functions, such as `is.matrix`, `is.vector`, to return information about the internal data structure.
 
 ## Implicit conversion of data objects
 
 Each R data object has its own rules for how values are handled when combined with other data objects if the two data objects have the same number of dimensions, or if any data object contains heterogenous data types.
 
-For example, assume you run the following statement to perform matrix multiplication using R.  You multiply a single-column matrix with the three values by an array with four values, and expect a 4x3 matrix as a result.
+For example, assume you run the following statement to perform matrix multiplication using R. You multiply a single-column matrix with the three values by an array with four values, and expect a 4x3 matrix as a result.
 
 ```sql
 EXECUTE sp_execute_external_script
@@ -163,7 +163,7 @@ Why? In this case, because the two arguments can be handled as vectors of the sa
 
 > [!TIP]
 > 
-> Getting errors? These examples require the table **RTestData**. If you haven't created the test data table, go back to this topic: [Working with inputs and outputs](../tutorials/rtsql-working-with-inputs-and-outputs.md).
+> Getting errors? These examples require the table **RTestData**. If you haven't created the test data table, go back to this topic to create the table: [Handle inputs and outputs](../tutorials/rtsql-working-with-inputs-and-outputs.md).
 > 
 > If you have created the table but still get an error, make sure that you are running the stored procedure in the context of the database that contains the table, and not in **master** or another database.
 > 
@@ -210,13 +210,16 @@ R and SQL Server don't use the same data types, so when you run a query in SQL S
 - The database engine returns the data to SQL Server using a secured internal connection and presents the data in terms of SQL Server data types.
 - You get the data by connecting to SQL Server using a client or network library that can issue SQL queries and handle tabular data sets. This client application can potentially affect the data in other ways.
 
-To see how this works, run a query such as this one on the AdventureWorksDW data warehouse. This view returns sales data used in creating forecasts.
+To see how this works, run a query such as this one on the [AdventureWorksDW](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks) data warehouse. This view returns sales data used in creating forecasts.
 
 ```sql
+USE AdventureWorksDW
+GO
+
 SELECT ReportingDate
          , CAST(ModelRegion as varchar(50)) as ProductSeries
          , Amount
-           FROM [AdventureWorksDW2014].[dbo].[vTimeSeries]
+           FROM [AdventureWorksDW].[dbo].[vTimeSeries]
            WHERE [ModelRegion] = 'M200 Europe'
            ORDER BY ReportingDate ASC
 ```
@@ -236,7 +239,7 @@ EXECUTE sp_execute_external_script
            SELECT ReportingDate
          , CAST(ModelRegion as varchar(50)) as ProductSeries
          , Amount
-           FROM [AdventureWorksDW2014].[dbo].[vTimeSeries]
+           FROM [AdventureWorksDW].[dbo].[vTimeSeries]
            WHERE [ModelRegion] = ''M200 Europe''
            ORDER BY ReportingDate ASC ;'
 WITH RESULT SETS undefined;
@@ -271,8 +274,9 @@ For more information on supported and unsupported data types, see [R libraries a
 
 For information about the performance impact of run-time conversion of strings to numerical factors, see [SQL Server R Services performance tuning](../r/sql-server-r-services-performance-tuning.md).
 
-## Next lesson
+## Next step
 
-In the next step, you'll learn how to apply R functions to SQL Server data.
+In the next quickstart, you'll learn how to apply R functions to SQL Server data.
 
-[Using R functions with SQL Server data](../../advanced-analytics/tutorials/rtsql-using-r-functions-with-sql-server-data.md)
+> [!div class="nextstepaction"]
+> [Quickstart: Use R functions with SQL Server data](rtsql-using-r-functions-with-sql-server-data.md)

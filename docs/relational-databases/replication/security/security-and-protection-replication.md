@@ -2,13 +2,11 @@
 title: "Security and Protection (Replication) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
+ms.prod: sql
+ms.prod_service: "database-engine"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: replication
+ms.topic: conceptual
 helpviewer_keywords: 
   - "security [SQL Server replication]"
   - "security [SQL Server replication], about security"
@@ -17,12 +15,12 @@ helpviewer_keywords:
   - "snapshot replication [SQL Server], security"
   - "transactional replication, security"
 ms.assetid: 310a8203-c0aa-4794-93fe-737d7c3fcfd6
-caps.latest.revision: 44
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "MashaMSFT"
+ms.author: "mathoma"
+manager: craigg
 ---
 # Security and Protection (Replication)
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Help protect the replication scenarios that you deploy in [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] from malicious attacks and improve the security of your data.  
   
  ![Small File Folder Icon](../../../analysis-services/media/filefolder-small.png "Small File Folder Icon") **Security Overview**  
@@ -30,7 +28,7 @@ manager: "jhubbard"
   
  [Identity and Access Control &#40;Replication&#41;](../../../relational-databases/replication/security/identity-and-access-control-replication.md)  
   
- [More…](../../../relational-databases/replication/security/security-overview-replication.md)  
+ [More...](../../../relational-databases/replication/security/security-overview-replication.md)  
   
  ![Small File Folder Icon](../../../analysis-services/media/filefolder-small.png "Small File Folder Icon") **Secure Development**  
  [Replication Agent Security Model](../../../relational-databases/replication/security/replication-agent-security-model.md)  
@@ -39,7 +37,7 @@ manager: "jhubbard"
   
  [Replication Security Best Practices](../../../relational-databases/replication/security/replication-security-best-practices.md)  
   
- [More…](../../../relational-databases/replication/security/secure-development-replication.md)  
+ [More...](../../../relational-databases/replication/security/secure-development-replication.md)  
   
  ![Small File Folder Icon](../../../analysis-services/media/filefolder-small.png "Small File Folder Icon") **Secure Deployment**  
  [Secure the Distributor](../../../relational-databases/replication/security/secure-the-distributor.md)  
@@ -52,7 +50,7 @@ manager: "jhubbard"
   
  [Securing Replication Over the Internet](../../../relational-databases/replication/security/securing-replication-over-the-internet.md)  
   
- [More…](../../../relational-databases/replication/security/secure-deployment-replication.md)  
+ [More...](../../../relational-databases/replication/security/secure-deployment-replication.md)  
   
  ![Small File Folder Icon](../../../analysis-services/media/filefolder-small.png "Small File Folder Icon") **Secure Operation**  
  [Manage Logins and Passwords in Replication](../../../relational-databases/replication/security/manage-logins-and-passwords-in-replication.md)  

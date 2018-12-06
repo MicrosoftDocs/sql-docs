@@ -2,25 +2,24 @@
 title: "Execute Scripts Before and After the Snapshot Is Applied | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
+ms.prod: sql
+ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: replication
+ms.topic: conceptual
 helpviewer_keywords: 
   - "snapshots [SQL Server replication], scripts"
   - "scripts [SQL Server replication], snapshots"
   - "snapshot replication [SQL Server], scripts"
   - "scripts [SQL Server replication]"
 ms.assetid: 9a6872c2-9bed-477f-9d2f-332d640edcf2
-caps.latest.revision: 35
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "MashaMSFT"
+ms.author: "mathoma"
+manager: craigg
+monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Execute Scripts Before and After the Snapshot Is Applied
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   You can specify scripts to execute at the Subscriber before or after the snapshot is applied. Scripts can be used for a variety of reasons, such as creating logins and schemas (object owners) at each Subscriber.  
   
  You specify a file location for each script, and the Snapshot Agent copies the script files to the current snapshot folder each time snapshot processing occurs. The Distribution Agent or the Merge Agent runs the pre-snapshot script before any of the replicated object scripts when applying a snapshot. The Distribution Agent or the Merge Agent runs the post-snapshot script after all the other replicated object scripts and data have been applied. After the snapshot application is complete and script files run successfully, the script files are removed from the working directory on the Subscriber.  

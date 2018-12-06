@@ -1,34 +1,17 @@
 ---
 title: "SELECT FROM &lt;model&gt;.SAMPLE_CASES (DMX) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/02/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "SAMPLE_CASES"
-  - "SELECT"
-  - "FROM"
-dev_langs: 
-  - "DMX"
-helpviewer_keywords: 
-  - "SELECT FROM <model>.SAMPLE_CASES statement"
-  - "mining models [Analysis Services], sample cases"
-  - "sample cases [DMX]"
-  - "training mining models"
-ms.assetid: e7a34b9b-3562-4503-bfa7-dd9b12db480a
-caps.latest.revision: 39
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
+ms.date: 06/07/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: dmx
+ms.topic: conceptual
+ms.author: owend
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
 ---
 # SELECT FROM &lt;model&gt;.SAMPLE_CASES (DMX)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   Returns sample cases that are representative of the cases that are used to train the data mining model.  
   

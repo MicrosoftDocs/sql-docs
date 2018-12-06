@@ -1,0 +1,41 @@
+---
+title: "Place Data and Log Files on Separate Drives | Microsoft Docs"
+ms.custom: ""
+ms.date: "06/13/2017"
+ms.prod: "sql-server-2014"
+ms.reviewer: ""
+ms.technology: security
+ms.topic: conceptual
+helpviewer_keywords: 
+  - "Best Practices [Database Engine]"
+ms.assetid: 6cbedc27-4d77-44ad-bed2-c23b628475a7
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+---
+# Place Data and Log Files on Separate Drives
+  This rule checks whether data and log files are placed on separate logical drives. Placing both data and log files on the same device can cause contention for that device and result in poor performance. Placing the files on separate drives allows the I/O activity to occur at the same time for both the data and log files.  
+  
+## Best Practices Recommendations  
+ When you create a new database, specify separate drives for the data and log. To move files after the database is created, the database must be taken offline. Move the files by using one of the following methods:  
+  
+> [!NOTE]  
+>  This policy cannot detect separate physical devices through mount points  
+  
+-   Restore the database from backup by using the RESTORE DATABASE statement with the WITH MOVE option.  
+  
+-   Detach and then attach the database specifying separate locations for the data and log devices.  
+  
+-   Specify a new location by running the ALTER DATABASE statement with the MODIFY FILE option, and then restarting the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+  
+## For More Information  
+ [Move Database Files](../databases/move-database-files.md)  
+  
+ [Move User Databases](../databases/move-user-databases.md)  
+  
+ [Database Detach and Attach &#40;SQL Server&#41;](../databases/database-detach-and-attach-sql-server.md)  
+  
+## See Also  
+ [Monitor and Enforce Best Practices by Using Policy-Based Management](monitor-and-enforce-best-practices-by-using-policy-based-management.md)  
+  
+  

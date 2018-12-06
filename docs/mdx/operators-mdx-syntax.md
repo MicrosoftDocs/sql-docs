@@ -1,29 +1,17 @@
 ---
 title: "Operators (MDX Syntax) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/02/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "kbMDX"
-helpviewer_keywords: 
-  - "Multidimensional Expressions [Analysis Services], operators"
-  - "operators [MDX]"
-  - "precedence [MDX]"
-  - "MDX [Analysis Services], operators"
-ms.assetid: 1ff5a529-88fd-4619-86e1-19fa214650d6
-caps.latest.revision: 29
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
+ms.date: 06/04/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: mdx
+ms.topic: reference
+ms.author: owend
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
 ---
 # Operators (MDX Syntax)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+
 
   In Multidimensional Expressions (MDX), operators let you perform the following actions:  
   
@@ -53,7 +41,7 @@ manager: "erikre"
  When using multiple operators, the order in which MDX evaluates the operators is important. Similarly, the user of operators may require that one data type be converted into another data type before the operators can be evaluated.  
   
 ## Evaluating Complex Expressions  
- You can build an expression by using operators to combine several smaller expressions. In these complex expressions, MDX evaluates the operators in order based on the definition of operator precedence used by [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. MDX performs operators with higher precedence before performing operators with lower precedence.  
+ You can build an expression by using operators to combine several smaller expressions. In these complex expressions, MDX evaluates the operators in order based on the definition of operator precedence used by [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. MDX performs operators with higher precedence before performing operators with lower precedence.  
   
 ### Understanding Operator Precedence  
  The following list shows operator precedence, from highest to lowest. Operators in the same line are equal in precedence, and are evaluated from left to right unless otherwise forced by parenthesis:  

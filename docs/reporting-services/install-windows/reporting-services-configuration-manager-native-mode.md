@@ -1,29 +1,24 @@
 ---
 title: "Reporting Services Configuration Manager (Native Mode) | Microsoft Docs"
-ms.custom: ""
-ms.date: "05/25/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.date: 09/20/2017
+ms.prod: reporting-services
+ms.prod_service: "reporting-services-native"
+
+ms.topic: conceptual
 helpviewer_keywords: 
   - "Reporting Services Configuration tool"
   - "configuration options [Reporting Services]"
   - "report servers [Reporting Services], configuring"
   - "components [Reporting Services], Reporting Services Configuration tool"
-ms.assetid: 379eab68-7f13-4997-8d64-38810240756e
-caps.latest.revision: 49
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
+author: markingmyname
+ms.author: maghan
 ---
 
 # Reporting Services Configuration Manager (Native Mode)
 
-[!INCLUDE[ssrs-appliesto-sql2016-preview](../../includes/ssrs-appliesto-sql2016-preview.md)]
+[!INCLUDE [ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE [ssrs-appliesto-2016-and-later](../../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../../includes/ssrs-appliesto-pbirs.md)]
+
+[!INCLUDE [ssrs-previous-versions](../../includes/ssrs-previous-versions.md)]
 
 Use the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configuration Manager to configure a [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Native Mode installation. If you installed a report server by using the files-only installation option, you must use the Configuration Manager to configure the server before you can use it. If you installed a report server by using the default configuration installation option, you can use the Configuration Manager to verify or modify the settings that were specified during setup. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configuration Manager can be used to configure a local or remote report server instance.
 
@@ -69,7 +64,7 @@ The Reporting Services Configuration Manager is installed automatically when you
 
 1.  Use the following step that is appropriate for your version of Microsoft Windows:
 
-    - From the Windows start screen, type **Reporting** and select **Reporting Services Configuration Manager** from the earch results.
+    - From the Windows start screen, type **Reporting** and select **Reporting Services Configuration Manager** from the search results.
 
     - Select **Start**, point to **All Programs**, point to [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)], and then point to **Configuration Tools**.
 
@@ -95,4 +90,4 @@ The Reporting Services Configuration Manager is installed automatically when you
 [SQL Server Configuration Manager](../../relational-databases/sql-server-configuration-manager.md)   
 [Configure and Administer a Report Server](../../reporting-services/report-server/configure-and-administer-a-report-server-ssrs-native-mode.md)  
 
-More questions? [Try asking the Reporting Services forum](http://go.microsoft.com/fwlink/?LinkId=620231)
+More questions? [Try asking the Reporting Services forum](https://go.microsoft.com/fwlink/?LinkId=620231)

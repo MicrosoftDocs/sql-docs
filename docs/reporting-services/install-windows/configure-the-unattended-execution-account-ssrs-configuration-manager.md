@@ -1,14 +1,10 @@
 ---
 title: "Configure the Unattended Execution Account (SSRS Configuration Manager) | Microsoft Docs"
-ms.custom: ""
-ms.date: "05/31/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.date: 05/31/2016
+ms.prod: reporting-services
+ms.prod_service: "reporting-services-native"
+
+ms.topic: conceptual
 helpviewer_keywords: 
   - "no credentials option [Reporting Services]"
   - "security [Reporting Services], unattended report processing"
@@ -18,10 +14,8 @@ helpviewer_keywords:
   - "accounts [Reporting Services]"
   - "reports [Reporting Services], processing"
 ms.assetid: 4e50733e-bd8c-4bf6-8379-98b1531bb9ca
-caps.latest.revision: 10
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
+author: markingmyname
+ms.author: maghan
 ---
 # Configure the Unattended Execution Account (SSRS Configuration Manager)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] provides a special account that is used for unattended report processing and for sending connection requests across the network. The account is used in the following ways:  
@@ -102,6 +96,6 @@ manager: "erikre"
  The account information is removed from the RSReportServer.config file.  
   
 ## See Also  
- [Reporting Services Configuration Manager (SSRS Native Mode)](http://msdn.microsoft.com/en-us/379eab68-7f13-4997-8d64-38810240756e)  
+ [Reporting Services Configuration Manager (SSRS Native Mode)](https://msdn.microsoft.com/379eab68-7f13-4997-8d64-38810240756e)  
   
   

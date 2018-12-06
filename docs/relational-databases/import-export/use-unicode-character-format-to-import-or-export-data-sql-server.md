@@ -2,23 +2,22 @@
 title: "Use Unicode Character Format to Import or Export Data (SQL Server) | Microsoft Docs"
 ms.custom: ""
 ms.date: "09/30/2016"
-ms.prod: "sql-server-2016"
+ms.prod: sql
+ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-bulk-import-export"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: data-movement
+ms.topic: conceptual
 helpviewer_keywords: 
   - "data formats [SQL Server], Unicode character"
   - "Unicode [SQL Server], bulk importing and exporting"
 ms.assetid: 74342a11-c1c0-4746-b482-7f3537744a70
-caps.latest.revision: 37
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "douglaslMS"
+ms.author: "douglasl"
+manager: craigg
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Use Unicode Character Format to Import or Export Data (SQL Server)
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 Unicode character format is recommended for bulk transfer of data between multiple instances of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] by using a data file that contains extended/DBCS characters. The Unicode character data format allows data to be exported from a server by using a code page that differs from the code page used by the client that is performing the operation. In such cases, use of Unicode character format has the following advantages:  
   
 * If the source and destination data are Unicode data types, use of Unicode character format preserves all of the character data.  
@@ -57,7 +56,7 @@ The BOM may be misinterpreted under the following conditions:
 * The first field in the data file is non-character
 
 Consider whether any of the following workarounds may be available for your *specific* situation:
-* Don’t use a format file.  An example of this workaround is provided below, see [Using bcp and Unicode Character Format to Import Data without a Format File](#bcp_widechar_import),
+* Don't use a format file.  An example of this workaround is provided below, see [Using bcp and Unicode Character Format to Import Data without a Format File](#bcp_widechar_import),
 
 * Use the **-c** switch instead of **-w**,
 
@@ -92,7 +91,7 @@ The examples in this topic are based on the table, and format file defined below
 
 ### **Sample Table**<a name="sample_table"></a>
 The script below creates a test database, a table named `myWidechar` and populates the table with some initial values.  Execute the following Transact-SQL in Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS):
-```tsql
+```sql
 CREATE DATABASE TestDatabase;
 GO
 
@@ -158,7 +157,7 @@ REM Review results is SSMS
 ```
 
 ### **Using bcp and Unicode Character Format to Import Data with a Non-XML Format File**<a name="bcp_widechar_import_fmt"></a>
-**-w** and **-f** switches and **IN** command.  A workaround will need to be used since this example involves bcp, a format file, Unicode character, and the first data field in the data file is non-character.  See [Special Considerations for Using Unicode Character Format, bcp, and a Format File](#special_considerations), above.  The data file `myWidechar.bcp` will be altered by adding an additional record as a “dummy” record which will  then be skipped with the `-F 2` switch.
+**-w** and **-f** switches and **IN** command.  A workaround will need to be used since this example involves bcp, a format file, Unicode character, and the first data field in the data file is non-character.  See [Special Considerations for Using Unicode Character Format, bcp, and a Format File](#special_considerations), above.  The data file `myWidechar.bcp` will be altered by adding an additional record as a "dummy" record which will  then be skipped with the `-F 2` switch.
 
 At a command prompt, enter the following commands and follow the modification steps:
 ```
@@ -181,7 +180,7 @@ bcp TestDatabase.dbo.myWidechar OUT D:\BCP\myWidechar.bcp -T -w
   
 ### **Using BULK INSERT and Unicode Character Format without a Format File**<a name="bulk_widechar"></a>
 **DATAFILETYPE** argument.  Execute the following Transact-SQL in Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS):
-```tsql
+```sql
 TRUNCATE TABLE TestDatabase.dbo.myWidechar; -- for testing
 BULK INSERT TestDatabase.dbo.myWidechar
 	FROM 'D:\BCP\myWidechar.bcp'
@@ -195,7 +194,7 @@ SELECT * FROM TestDatabase.dbo.myWidechar;
   
 ### **Using BULK INSERT and Unicode Character Format with a Non-XML Format File**<a name="bulk_widechar_fmt"></a>
 **FORMATFILE** argument.  Execute the following Transact-SQL in Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS):
-```tsql
+```sql
 TRUNCATE TABLE TestDatabase.dbo.myWidechar; -- for testing
 BULK INSERT TestDatabase.dbo.myWidechar
    FROM 'D:\BCP\myWidechar.bcp'
@@ -209,7 +208,7 @@ SELECT * FROM TestDatabase.dbo.myWidechar;
   
 ### **Using OPENROWSET and Unicode Character Format with a Non-XML Format File**<a name="openrowset_widechar_fmt"></a>
 **FORMATFILE** argument.  Execute the following Transact-SQL in Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS):
-```tsql
+```sql
 TRUNCATE TABLE TestDatabase.dbo.myWidechar;  -- for testing
 INSERT INTO TestDatabase.dbo.myWidechar
 	SELECT *

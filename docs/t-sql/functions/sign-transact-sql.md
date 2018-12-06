@@ -2,12 +2,10 @@
 title: "SIGN (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/03/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
+ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: t-sql
 ms.topic: "language-reference"
 f1_keywords: 
   - "SIGN_TSQL"
@@ -23,13 +21,13 @@ helpviewer_keywords:
   - "0 (zero)"
   - "negative values"
 ms.assetid: c3a98b52-6fbe-4127-a5c9-8a4922e83e28
-caps.latest.revision: 33
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # SIGN (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Returns the positive (+1), zero (0), or negative (-1) sign of the specified expression.  
   
@@ -38,8 +36,6 @@ manager: "jhubbard"
 ## Syntax  
   
 ```  
--- Syntax for SQL Server, Azure SQL Database, Azure SQL Data Warehouse, Parallel Data Warehouse  
-  
 SIGN ( numeric_expression )  
 ```  
   
@@ -105,9 +101,10 @@ SELECT SIGN(-125), SIGN(0), SIGN(564);
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- `-----  -----  -----`  
-  
- `-1     0      1`  
+ ```
+-----  -----  -----  
+-1     0      1
+```  
   
 ## See Also  
  [Mathematical Functions &#40;Transact-SQL&#41;](../../t-sql/functions/mathematical-functions-transact-sql.md)  

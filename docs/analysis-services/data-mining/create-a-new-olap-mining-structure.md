@@ -1,26 +1,17 @@
 ---
 title: "Create a New OLAP Mining Structure | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "mining structures [Analysis Services], OLAP"
-  - "mining structures [Analysis Services], creating"
-  - "OLAP [Analysis Services], mining models"
-ms.assetid: 368f4273-a016-4748-bcb6-505a3e745af3
-caps.latest.revision: 32
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
+ms.date: 05/01/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: data-mining
+ms.topic: conceptual
+ms.author: owend
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
 ---
 # Create a New OLAP Mining Structure
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   You can use the Data Mining Wizard in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] to create a mining structure that uses data from a multidimensional model. Mining models that are based on OLAP cubes can use the column and values in fact tables, dimensions, and measure groups as attributes for analysis.  
   
 ### To create a new OLAP mining structure  
@@ -79,7 +70,7 @@ manager: "jhubbard"
   
         -   If you want to include the column as one of the predictable attributes for the model, select **Predict**.  
   
-        -   Any item that you include in the structure but do not specify as an input or predictable attribute is added to the structure with the flag **Ignore**; this means that the data is processed when you build the model but is not used in analysis, and is available only for drillthrough. This can be handy if you want to include details such as customer names but don’t want to use them in analysis.  
+        -   Any item that you include in the structure but do not specify as an input or predictable attribute is added to the structure with the flag **Ignore**; this means that the data is processed when you build the model but is not used in analysis, and is available only for drillthrough. This can be handy if you want to include details such as customer names but don't want to use them in analysis.  
   
      Click **Finish** to close the part of the wizard that works with nested tables. You can repeat the process to add multiple nested columns.  
   

@@ -1,26 +1,24 @@
 ---
 title: "Replication Snapshot Agent | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
+ms.date: "10/29/2018"
+ms.prod: sql
+ms.prod_service: "database-engine"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: replication
+ms.topic: conceptual
 helpviewer_keywords: 
   - "Snapshot Agent, executables"
   - "agents [SQL Server replication], Snapshot Agent"
   - "command prompt [SQL Server replication]"
   - "Snapshot Agent, parameter reference"
 ms.assetid: 2028ba45-4436-47ed-bf79-7c957766ea04
-caps.latest.revision: 41
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "MashaMSFT"
+ms.author: "mathoma"
+manager: craigg
 ---
 # Replication Snapshot Agent
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   The Replication Snapshot Agent is an executable file that prepares snapshot files containing schema and data of published tables and database objects, stores the files in the snapshot folder, and records synchronization jobs in the distribution database.  
   
 > [!NOTE]  
@@ -57,6 +55,7 @@ snapshot [ -?]
 [-Output output_path_and_file_name]  
 [-OutputVerboseLevel [0|1|2] ]  
 [-PacketSize packet_size]  
+[-PrefetchTables [0|1] ]  
 [-ProfileName profile_name]  
 [-PublisherDB publisher_database]  
 [-PublisherDeadlockPriority [-1|0|1] ]  
@@ -75,8 +74,8 @@ snapshot [ -?]
  **-?**  
  Prints all available parameters.  
   
- **-Publisher**  *server_name*[**\\***instance_name*]  
- Is the name of the Publisher. Specify server_name for the default instance of [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] on that server. Specify *server_name***\\***instance_name* for a named instance of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] on that server.  
+ **-Publisher**  *server_name*[**\\**_instance\_name_]  
+ Is the name of the Publisher. Specify server_name for the default instance of [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] on that server. Specify _server\_name_**\\**_instance\_name_ for a named instance of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] on that server.  
   
  **-Publication** *publication*  
  Is the name of the publication. This parameter is only valid if the publication is set to always have a snapshot available for new or reinitialized subscriptions.  
@@ -90,8 +89,8 @@ snapshot [ -?]
  **-DefinitionFile** *def_path_and_file_name*  
  Is the path of the agent definition file. An agent definition file contains command line arguments for the agent. The content of the file is parsed as an executable file. Use double quotation marks (") to specify argument values containing arbitrary characters.  
   
- **-Distributor** *server_name*[**\\***instance_name*]  
- Is the Distributor name. Specify *server_name* for the default instance of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] on that server. Specify *server_name***\\***instance_name* for a named instance of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] on that server.  
+ **-Distributor** *server_name*[**\\**_instance\_name_]  
+ Is the Distributor name. Specify *server_name* for the default instance of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] on that server. Specify _server\_name_**\\**_instance\_name_ for a named instance of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] on that server.  
   
  **-DistributorDeadlockPriority** [**-1**|**0**|**1**]  
  Is the priority of the Snapshot Agent connection to the Distributor when a deadlock occurs. This parameter is specified to resolve deadlocks that may occur between the Snapshot Agent and user applications during snapshot generation.  
@@ -128,6 +127,9 @@ snapshot [ -?]
 |**0**|Specifies that SSL is not used.|  
 |**1**|Specifies that SSL is used, but the agent does not verify that the SSL server certificate is signed by a trusted issuer.|  
 |**2**|Specifies that SSL is used, and that the certificate is verified.|  
+
+ > [!NOTE]  
+ >  A valid SSL certificate is defined with a fully qualified domain name of the SQL Server. In order for the agent to connect successfully when setting -EncryptionLevel to 2, create an alias on the local SQL Server. The 'Alias Name' parameter should be the server name and the 'Server' parameter should be set to the fully qualified name of the SQL Server.
   
  For more information, see [Security Overview &#40;Replication&#41;](../../../relational-databases/replication/security/security-overview-replication.md).  
   
@@ -150,7 +152,7 @@ snapshot [ -?]
 > [!NOTE]  
 >  This parameter is used for performance tuning of **bcp** performance from an Oracle Publisher.  
   
- -**HRBcpBlockSize***block_size*  
+ -**HRBcpBlockSize**_block\_size_  
  Is the size, in kilobytes (KB), of each **bcp** data block. The default value is 64 KB. **HRBcpBlocks** is only used with Oracle publications.  
   
 > [!NOTE]  
@@ -194,7 +196,15 @@ snapshot [ -?]
   
 > [!NOTE]  
 >  Do not change the packet size unless you are certain that it will improve performance. For most applications, the default packet size is best.  
+
+**-PrefetchTables** [ **0**| **1**]  
+ Optional parameter that specifies if the table objects will be prefetched and cached.  The default behavior is to prefetch certain table properties using SMO component based on an internal calculation.  This parameter can be helpful in scenarions where SMO prefetch operation takes considerable longer to run. If this parameter is not used, this decision is made at runtime based on the percentage of tables that are added as articles to the publication.  
   
+|OutputVerboseLevel value|Description|  
+|------------------------------|-----------------|  
+|**0**|Call to Prefetch method of SMO component is disabled.|  
+|**1**|Snapshot Agent will call Prefetch method to cache some table properties using SMO|  
+
  **-ProfileName** *profile_name*  
  Specifies an agent profile to use for agent parameters. If **ProfileName** is NULL, the agent profile is disabled. If **ProfileName** is not specified, the default profile for the agent type is used. For information, see [Replication Agent Profiles](../../../relational-databases/replication/agents/replication-agent-profiles.md).  
   
@@ -210,7 +220,7 @@ snapshot [ -?]
 |**0** (Default)|Priority is not assigned.|  
 |**1**|Snapshot Agent has priority when a deadlock occurs at the Publisher.|  
   
- **-PublisherFailoverPartner** *server_name*[**\\***instance_name*]  
+ **-PublisherFailoverPartner** *server_name*[**\\**_instance\_name_]  
  Specifies the failover partner instance of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] participating in a database mirroring session with the publication database. For more information, see [Database Mirroring and Replication &#40;SQL Server&#41;](../../../database-engine/database-mirroring/database-mirroring-and-replication-sql-server.md).  
   
  **-PublisherLogin** *publisher_login*  

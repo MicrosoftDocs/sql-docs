@@ -1,13 +1,11 @@
 ---
 title: "REVOKE Availability Group Permissions (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "06/10/2016"
-ms.prod: "sql-non-specified"
+ms.date: "08/10/2017"
+ms.prod: sql
+ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: t-sql
 ms.topic: "language-reference"
 dev_langs: 
   - "TSQL"
@@ -17,13 +15,12 @@ helpviewer_keywords:
   - "revoking permissions, [SQL Server], availability groups"
   - "permissions [SQL Server], availability group"
 ms.assetid: 02c77378-a36d-4286-9235-d8867a2b92ad
-caps.latest.revision: 10
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
 ---
 # REVOKE Availability Group Permissions (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
   Revokes permissions on an Always On availability group. 
   
@@ -53,7 +50,7 @@ REVOKE [ GRANT OPTION FOR ] permission  [ ,...n ]
  ON AVAILABILITY GROUP **::***availability_group_name*  
  Specifies the availability group on which the permission is being revoked. The scope qualifier (**::**) is required.  
   
- { FROM | TO } <server_principal>  
+ { FROM | TO } \<server_principal> 
  Specifies the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] login to which the permission is being revoked.  
   
  *SQL_Server_login*  
@@ -123,7 +120,7 @@ GO
 ```  
   
 ### C. Revoking a previously granted WITH GRANT OPTION clause  
- If a permission was granted using the WITH GRANT OPTION, use REVOKE GRANT OPTION FOR … to remove the WITH GRANT OPTION. The following example grants the permission and then removes the WITH GRANT portion of the permission.  
+ If a permission was granted using the WITH GRANT OPTION, use REVOKE GRANT OPTION FOR ... to remove the WITH GRANT OPTION. The following example grants the permission and then removes the WITH GRANT portion of the permission.  
   
 ```  
 USE master;  
@@ -145,3 +142,4 @@ GO
  [Principals &#40;Database Engine&#41;](../../relational-databases/security/authentication-access/principals-database-engine.md)  
   
   
+

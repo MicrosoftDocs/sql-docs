@@ -1,36 +1,17 @@
 ---
 title: "Grant custom access to dimension data (Analysis Services) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.asvs.roledesignerdialog.dimensiondata.f1"
-helpviewer_keywords: 
-  - "dimensions [Analysis Services], security"
-  - "AllowedSet property"
-  - "IsAllowed property"
-  - "DeniedSet property"
-  - "user access rights [Analysis Services], dimensions"
-  - "custom dimension data access [Analysis Services]"
-  - "permissions [Analysis Services], dimensions"
-  - "DefaultMember property"
-  - "VisualTotals property"
-  - "ApplyDenied property"
-ms.assetid: b028720d-3785-4381-9572-157d13ec4291
-caps.latest.revision: 40
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: multidimensional-models
+ms.topic: conceptual
+ms.author: owend
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
 ---
 # Grant custom access to dimension data (Analysis Services)
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   After enabling read access to a cube, you can set additional permissions that explicitly allow or deny access to dimension members (including measures contained in the Measures Dimension containing all of the measures used in a cube). For example, given multiple categories of resellers, you might want to set permissions to exclude data for a specific business type. The following illustration is a before-and-after effect of denying access to the Warehouse business type in the Reseller dimension.  
   
  ![PivotTables with and without a dimension member](../../analysis-services/multidimensional-models/media/ssas-permsdimdenied.png "PivotTables with and without a dimension member")  
@@ -42,7 +23,7 @@ manager: "erikre"
  Basic dimension security is the easiest; you simply select which dimension attributes and attribute hierarchies to include or exclude in the role. Advanced security is more complex and requires expertise in MDX scripting. Both approaches are described below.  
 
 > [!NOTE]  
->  The following instructions assume a client connection that issues queries in MDX. If the client uses DAX, such as Power View in Power BI, then dimension security is not evident in the query results. See [Understanding Power View for Multidimensional Models](https://msdn.microsoft.com/library/jj969574.aspx) for more information.
+>  The following instructions assume a client connection that issues queries in MDX. If the client uses DAX, such as Power View in Power BI, then dimension security is not evident in the query results. See [Understanding Power View for Multidimensional Models](understanding-power-view-for-multidimensional-models.md) for more information.
       
 ## Prerequisites  
  Not all measures or dimension members can be used in custom access scenarios. A connection will fail if a role restricts access to a default measure or member, or restricts access to measures that are part of measure expressions.  

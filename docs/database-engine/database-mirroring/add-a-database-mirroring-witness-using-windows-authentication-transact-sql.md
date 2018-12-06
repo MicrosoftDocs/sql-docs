@@ -2,24 +2,22 @@
 title: "Add a Database Mirroring Witness Using Windows Authentication (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/07/2017"
-ms.prod: "sql-server-2016"
+ms.prod: sql
+ms.prod_service: high-availability
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: high-availability
+ms.topic: conceptual
 helpviewer_keywords: 
   - "witness [SQL Server], establishing"
   - "Windows authentication [SQL Server]"
   - "database mirroring [SQL Server], witness"
 ms.assetid: bf5e87df-91a4-49f9-ae88-2a6dcf644510
-caps.latest.revision: 51
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ---
 # Add a Database Mirroring Witness Using Windows Authentication (Transact-SQL)
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   To set up a witness for a database, the database owner assigns a Database Engine instance to the role of witness server. The witness server instance can run on the same computer as the principal or mirror server instance, but this substantially reduces the robustness of automatic failover.  
   
  We strongly recommend that the witness reside on a separate computer. A given server can participate in multiple concurrent database mirroring sessions with the same or different partners. A given server can be a partner in some sessions and a witness in other sessions.  
@@ -50,17 +48,17 @@ manager: "jhubbard"
   
 3.  Connect to the principal server and issue the following statement:  
   
-     ALTER DATABASE *<database_name>* SET WITNESS **=***<server_network_address>*  
+     ALTER DATABASE *<database_name>* SET WITNESS **=**_<server_network_address>_  
   
      where *<database_name>* is the name of the database to be mirrored (this name is the same on both partners), and *<server_network_address>* is the server network address of the witness server instance.  
   
      The syntax for a server network address is as follows:  
   
-     TCP**://**\<*system-address>***:**\<*port>*  
+     TCP<b>://</b>_\<system-address>_<b>:</b>_\<port>_  
   
      where \<*system-address>* is a string that unambiguously identifies the destination computer system, and \<*port>* is the port number used by the mirroring endpoint of the partner server instance. For more information, see [Specify a Server Network Address &#40;Database Mirroring&#41;](../../database-engine/database-mirroring/specify-a-server-network-address-database-mirroring.md).  
   
-     For example, on the principal server instance, the following ALTER DATABASE statement sets the witness. The database name is **AdventureWorks**, the system address is DBSERVER3—the name of the witness system, and the port used by the database mirroring endpoint of the witness is `7022`:  
+     For example, on the principal server instance, the following ALTER DATABASE statement sets the witness. The database name is **AdventureWorks**, the system address is DBSERVER3-the name of the witness system, and the port used by the database mirroring endpoint of the witness is `7022`:  
   
     ```  
     ALTER DATABASE AdventureWorks   

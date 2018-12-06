@@ -1,14 +1,12 @@
 ---
 title: "Columns Collection (ADOX) | Microsoft Docs"
-ms.prod: "sql-non-specified"
-ms.technology:
-  - "drivers"
+ms.prod: sql
+ms.prod_service: connectivity
+ms.technology: connectivity
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 apitype: "COM"
 f1_keywords: 
   - "Index::Columns"
@@ -18,10 +16,9 @@ f1_keywords:
 helpviewer_keywords: 
   - "Columns collection [ADOX]"
 ms.assetid: 23b9fea8-4f76-4a51-95ce-1a6ce4560b34
-caps.latest.revision: 9
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # Columns Collection (ADOX)
 Contains all [Column](../../../ado/reference/adox-api/column-object-adox.md) objects of a table, index, or key.  

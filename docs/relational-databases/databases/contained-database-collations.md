@@ -2,22 +2,20 @@
 title: "Contained Database Collations | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
+ms.prod: sql
+ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: configuration
+ms.topic: conceptual
 helpviewer_keywords: 
   - "contained database, collations"
 ms.assetid: 4b44f6b9-2359-452f-8bb1-5520f2528483
-caps.latest.revision: 12
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: craigg
 ---
 # Contained Database Collations
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Various properties affect the sort order and equality semantics of textual data, including case sensitivity, accent sensitivity, and the base language being used. These qualities are expressed to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] through the choice of collation for the data. For a more in-depth discussion of collations themselves, see [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md).  
   
  Collations apply not only to data stored in user tables, but to all text handled by [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], including metadata, temporary objects, variable names, etc. The handling of these differs in contained and non-contained databases. This change will not affect many users, but helps provide instance independence and uniformity. But this may also cause some confusion, as well as problems for sessions that access both contained and non-contained databases.  
@@ -30,13 +28,13 @@ manager: "jhubbard"
 ### Example 1  
  For example, if we were working in Beijing, we might use a Chinese collation:  
   
-```tsql  
+```sql  
 ALTER DATABASE MyDB COLLATE Chinese_Simplified_Pinyin_100_CI_AS;  
 ```  
   
  Now if we create a column, its default collation will be this Chinese collation, but we can choose another one if we want:  
   
-```tsql  
+```sql  
 CREATE TABLE MyTable  
       (mycolumn1 nvarchar,  
       mycolumn2 nvarchar COLLATE Frisian_100_CS_AS);  
@@ -49,7 +47,7 @@ GO
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
-```tsql  
+```sql  
 name            collation_name  
 --------------- ----------------------------------  
 mycolumn1       Chinese_Simplified_Pinyin_100_CI_AS  
@@ -61,7 +59,7 @@ mycolumn2       Frisian_100_CS_AS
 ### Example 2  
  For example, consider the (Chinese) database above when used on an instance with a **Latin1_General** collation:  
   
-```tsql  
+```sql  
 CREATE TABLE T1 (T1_txt nvarchar(max)) ;  
 GO  
 CREATE TABLE #T2 (T2_txt nvarchar(max)) ;  
@@ -85,7 +83,7 @@ JOIN #T2
   
  We can fix this by explicitly collating the temporary table. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] makes this somewhat easier by providing the **DATABASE_DEFAULT** keyword for the **COLLATE** clause.  
   
-```tsql  
+```sql  
 CREATE TABLE T1 (T1_txt nvarchar(max)) ;  
 GO  
 CREATE TABLE #T2 (T2_txt nvarchar(max) COLLATE DATABASE_DEFAULT);  
@@ -135,7 +133,7 @@ END;
   
  If we temp table example previously described, we can see that this collation behavior eliminates the need for an explicit **COLLATE** clause in most temp table uses. In a contained database, this code now runs without error, even if the database and instance collations differ:  
   
-```tsql  
+```sql  
 CREATE TABLE T1 (T1_txt nvarchar(max)) ;  
 GO  
 CREATE TABLE #T2 (T2_txt nvarchar(max));  
@@ -161,7 +159,7 @@ JOIN #T2
   
 -   The reference may find multiple matches that were originally distinct. This will also raise an error.  
   
- We’ll illustrate this with a few examples. For these we assume there is a partially-contained database named `MyCDB` with its database collation set to the default collation, **Latin1_General_100_CI_AS_WS_KS_SC**. We assume that the instance collation is **Latin1_General_100_CS_AS_WS_KS_SC**. The two collations differ only in case sensitivity.  
+ We'll illustrate this with a few examples. For these we assume there is a partially-contained database named `MyCDB` with its database collation set to the default collation, **Latin1_General_100_CI_AS_WS_KS_SC**. We assume that the instance collation is **Latin1_General_100_CS_AS_WS_KS_SC**. The two collations differ only in case sensitivity.  
   
 ### Example 1  
  The following example illustrates the case where the reference finds exactly one match.  

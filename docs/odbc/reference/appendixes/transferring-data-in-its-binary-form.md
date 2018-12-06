@@ -2,22 +2,19 @@
 title: "Transferring Data in Its Binary Form | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
+ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "drivers"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: connectivity
+ms.topic: conceptual
 helpviewer_keywords: 
   - "data types [ODBC], transferring in binary form"
   - "transferring data in binary form [ODBC]"
   - "binary data transfers [ODBC]"
 ms.assetid: 4b12a9de-51d0-416a-87f4-9bf84959cad9
-caps.latest.revision: 5
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # Transferring Data in Its Binary Form
 An application can safely transfer data (in the internal form used by a specified DBMS) between two data sources that use the same DBMS and hardware platform. For a given piece of data, the SQL data types must be the same in the source and target data sources. The C data type is SQL_C_BINARY.  

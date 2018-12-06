@@ -8,13 +8,7 @@
    ALTER SERVER ROLE [sysadmin] ADD MEMBER [pacemakerLogin]
    ```
 
-   Alternatively, you can set the permissions at a more granular level. The Pacemaker login requires ALTER, CONTROL, and VIEW DEFINITION PERMISSION. For more information, see [GRANT Availability Group Permissions (Transact-SQL)](http://msdn.microsoft.com/library/hh968934.aspx).
-
-   The following Transact-SQL grants only the required permission to the Pacemaker login. In the statement below 'ag1' is the name of the availability group that will be added as a cluster resource.
-
-   ```Transact-SQL
-   GRANT ALTER, CONTROL, VIEW DEFINITION ON AVAILABILITY GROUP::ag1 TO pacemakerLogin
-   ```
+  At the time of availability group creation, the pacemaker user will require ALTER, CONTROL and VIEW DEFINITION permissions on the availability group, after it's created but before any nodes are added to it.
 
 1. **On all SQL Servers, save the credentials for the SQL Server login**.
 

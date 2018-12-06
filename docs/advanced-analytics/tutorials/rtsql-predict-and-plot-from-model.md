@@ -1,32 +1,29 @@
 ---
-title: "Predict and plot from model (R in SQL quickstart) | Microsoft Docs"
-ms.custom: ""
-ms.date: "07/31/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "r-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "R"
-  - "SQL"
-ms.assetid: 46babd8a-a331-44fc-bbd6-24daf58865e1
-caps.latest.revision: 15
-author: "jeannt"
-ms.author: "jeannt"
-manager: "jhubbard"
----
-# Predict and plot from model (R in SQL quickstart)
+title: Quickstart to predict and plot from model using R in SQL Server Machine Learning | Microsoft Docs
+description: In this quickstart, learn about scoring using a prebuilt model in R and SQL Server data.
+ms.prod: sql
+ms.technology: machine-learning
 
-To perform _scoring_ using new data, get one of the trained models from the table, and then call a new set of data on which to base predictions. Scoring is a term sometimes used in data science to mean generating predictions, probabilities, or other values based on new data fed into a trained model.
+ms.date: 07/15/2018  
+ms.topic: quickstart
+author: HeidiSteen
+ms.author: heidist
+manager: cgronlun
+---
+# Quickstart: Predict and plot from model using R in SQL Server
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
+In this quickstart, use the model you created in the previous quickstart to score predictions against fresh data. To perform _scoring_ using new data, get one of the trained models from the table, and then call a new set of data on which to base predictions. Scoring is a term sometimes used in data science to mean generating predictions, probabilities, or other values based on new data fed into a trained model.
+
+## Prerequisites
+
+This quickstart is an extension of [Create a predictive model](rtsql-create-a-predictive-model-r.md).
 
 ## Create the table of new speeds
 
 Did you notice that the original training data stops at a speed of 25 miles per hour? That's because the original data was based on an experiment from 1920!
 
-You might wonder, how long would it take an automobile from the 1920s to stop, assuming it could get going as fast as 60 mph or even 100 mph? To answer this question, you will provide some new speed values.
+You might wonder, how long would it take an automobile from the 1920s to stop, assuming it could get going as fast as 60 mph or even 100 mph? To answer this question, you must provide some new speed values.
 
 ```sql
 CREATE TABLE [dbo].[NewCarSpeed]([speed] [int] NOT NULL,
@@ -48,7 +45,7 @@ To get predictions based on one specific model, you must write a SQL script that
 2. Gets the new input data
 3. Calls an R prediction function that is compatible with that model
 
-In this example, because your model is based on the **rxLinMod** algorithm provided as part of the **RevoScaleR** package, you should call the `rxPredict` function, rather than the generic R `predict` function.
+In this example, because your model is based on the **rxLinMod** algorithm provided as part of the **RevoScaleR** package, you call the [rxPredict](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxpredict) function, rather than the generic R `predict` function.
 
 ```sql
 DECLARE @speedmodel varbinary(max) = (SELECT model FROM [dbo].[stopping_distance_models] WHERE model_name = 'latest model');
@@ -61,7 +58,7 @@ EXEC sp_execute_external_script
             str(predicted.distance);
             OutputDataSet <- cbind(new, ceiling(predicted.distance));
             '
-    , @input_data_1 = N' SELECT speed FROM [dbo].[NewCarSpeed] '
+    , @input_data_1 = N'SELECT speed FROM [dbo].[NewCarSpeed]'
     , @input_data_1_name = N'NewCarData'
     , @params = N'@speedmodel varbinary(max)'
     , @speedmodel = @speedmodel
@@ -69,10 +66,10 @@ WITH RESULT SETS (([new_speed] INT, [predicted_distance] INT))
 ```
 
 + Use a SELECT statement to get a single model from the table, and pass it as an input parameter.
-+  After retrieving the model from the table, call the `unserialize` function on the model.
++ After retrieving the model from the table, call the `unserialize` function on the model.
 
     > [!TIP] 
-    > Also check out the new [serialization functions](https://docs.microsoft.com/=r-server/r-reference/revoscaler/rxserializemodel) provided by RevoScaleR, which support [realtime scoring](../../advanced-analytics/real-time-scoring.md).
+    > Also check out the new [serialization functions](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxserializemodel) provided by RevoScaleR, which support [realtime scoring](../real-time-scoring.md).
 +  Apply the `rxPredict` function with appropriate arguments to the model, and provide the new input data.
 +  In the example, the `str` function is added during the testing phase, to check the schema of data being returned from R. You can remove the statement later.
 + The column names used in the R script are not necessarily passed to the stored procedure output. Here we've used the WITH RESULTS clause to define some new column names.
@@ -83,7 +80,7 @@ WITH RESULT SETS (([new_speed] INT, [predicted_distance] INT))
 
 ## Perform scoring in parallel
 
-The predictions came back fairly fast on this tiny data set. But suppose you needed to make lots of predictions very fast? There are many ways to speed up operations in SQL Server, more so if the operations can be processed in  parallel. For scoring in particular, one easy way is to add the *@parallel* parameter to `sp_execute_external_script` and set the value to **1**.
+The predictions came back fairly fast on this tiny data set. But suppose you needed to make lots of predictions very fast? There are many ways to speed up operations in SQL Server, more so if the operations can be processed in  parallel. For scoring in particular, one easy way is to add the *@parallel* parameter to sp_execute_external_script and set the value to **1**.
 
 Let's assume that you have obtained a much bigger table of possible car speeds, including hundreds of thousands of values. There are many sample T-SQL scripts from the community to help you generate number tables, so we won't reproduce those here. Let's just say that you have a column containing many integers, and want to use that as input for `speed` in the model.
 
@@ -140,7 +137,7 @@ The following example demonstrates how to create a simple graphic using a plotti
   WITH RESULT SETS ((plot varbinary(max)));
 ```
 
-+ The `tempfile` function returns a string that can be used as a file name, but the file is not actually generated yet.
++ The `tempfile` function returns a string that can be used as a file name, but the file has not been generated yet.
 + For arguments to `tempfile`, you can specify a prefix and file extension, as well as the directory. To verify the complete file name and path, print a message using `str()`.
 + The `jpeg` function creates an R device with the specified parameters.
 + After you create the plot, you can add more visual features to it. In this case, a regression line is added using `abline`.
@@ -154,26 +151,13 @@ The following example demonstrates how to create a simple graphic using a plotti
 If you want to do some more elaborate plots, using some of the great graphics packages for R, we recommend these articles. Both require the popular **ggplot2** package.
 
 + [Loan Classification using SQL Server 2016 R Services](https://blogs.msdn.microsoft.com/microsoftrservertigerteam/2016/09/27/loan-classification-using-sql-server-2016-r-services/): End-to-end scenario based on insurance data. Requires the **reshape** package.
-+ [Create Graphs and Plots Using R](../../advanced-analytics/tutorials/walkthrough-create-graphs-and-plots-using-r.md)
++ [Create Graphs and Plots Using R](walkthrough-create-graphs-and-plots-using-r.md)
 
-## Conclusions
+## Next steps
 
 Integration of R with SQL Server makes it easier to deploy R solutions at scale, leveraging the best features of R and relational databases, for high-performance data handling and rapid R analytics. 
 
-See these additional resources for more R samples:
+Continue learning about solutions using R with SQL Server through end-to-end scenarios created by the Microsoft Data Science and R Services development teams.
 
-+  [SQL Server R tutorials](../../advanced-analytics/tutorials/sql-server-r-tutorials.md)
-
-    Continue learning about solutions using R with SQL Server, through end-to-end scenarios created by the Microsoft Data Science and R Services development teams.
-
-+ [SQL Server Python tutorials](../../advanced-analytics/tutorials/sql-server-python-tutorials.md)
-
-    For SQL Server 2017, use the power of remote compute context and scalable algorithm with the Python language.
-
-+ [Tutorials and sample data for Microsoft R](https://docs.microsoft.com/r-server/r/tutorial-introduction)
-
-    Learn how to use the new RevoScaleR packages to create models and transform data.
-
-+ [Get Started with MicrosoftML](https://docs.microsoft.com/r-server/r/concept-what-is-the-microsoftml-package)
-
-    Learn more about the fast, scalable machine learning algorithms from Microsoft Research.
+> [!div class="nextstepaction"]
+> [SQL Server R tutorials](sql-server-r-tutorials.md)

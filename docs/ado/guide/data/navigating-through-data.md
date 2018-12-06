@@ -1,24 +1,21 @@
 ---
 title: "Navigating Through Data | Microsoft Docs"
-ms.prod: "sql-non-specified"
-ms.technology:
-  - "drivers"
+ms.prod: sql
+ms.prod_service: connectivity
+ms.technology: connectivity
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "data navigation [ADO]"
   - "scanning data [ADO]"
   - "searching data [ADO]"
   - "navigating data [ADO]"
 ms.assetid: 8d88c9aa-8ec8-4969-8fa1-1663fd29bfc4
-caps.latest.revision: 10
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # Navigating Through Data
 **Recordset** supports various methods and properties to navigate through the resultant dataset. We examine this functionality by going through a few scenarios with our sample **Recordset** objects.  

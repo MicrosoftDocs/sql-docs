@@ -1,25 +1,23 @@
 ---
 title: "model Database | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/04/2016"
-ms.prod: "sql-server-2016"
+ms.date: "11/19/2018"
+ms.prod: sql
+ms.prod_service: "database-engine"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "template databases [SQL Server]"
   - "model database [SQL Server], about model databases"
   - "model database [SQL Server]"
 ms.assetid: 4e4f739b-fd27-4dce-8be6-3d808040d8d7
-caps.latest.revision: 52
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: craigg
 ---
 # model Database
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   The **model** database is used as the template for all databases created on an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Because **tempdb** is created every time [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is started, the **model** database must always exist on a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] system. The entire contents of the **model** database, including database options, are copied to the new database. Some of the settings of **model** are also used for creating a new **tempdb** during start up, so the **model** database must always exist on a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] system.  
   
  Newly created user databases use the same [recovery model](../../relational-databases/backup-restore/recovery-models-sql-server.md) as the model database. The default is user configurable. To learn the current recovery model of the model, see [View or Change the Recovery Model of a Database &#40;SQL Server&#41;](../../relational-databases/backup-restore/view-or-change-the-recovery-model-of-a-database-sql-server.md).  
@@ -39,9 +37,9 @@ manager: "jhubbard"
 |----------|------------------|-------------------|-----------------|  
 |Primary data|modeldev|model.mdf|Autogrow by 64 MB until the disk is full.|  
 |Log|modellog|modellog.ldf|Autogrow by 64 MB to a maximum of 2 terabytes.|  
-  
- For versions before [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], see [model Database](https://msdn.microsoft.com/library/ms186388\(v=sql.120\).aspx)for default file growth values.  
-  
+
+For SQL Server 2014, see [model Database](https://docs.microsoft.com/sql/relational-databases/databases/model-database?view=sql-server-2014) for default file growth values.  
+
  To move the **model** database or log files, see [Move System Databases](../../relational-databases/databases/move-system-databases.md).  
   
 ### Database Options  

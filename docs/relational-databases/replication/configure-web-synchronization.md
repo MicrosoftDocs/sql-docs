@@ -2,13 +2,11 @@
 title: "Configure Web Synchronization | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/10/2017"
-ms.prod: "sql-server-2016"
+ms.prod: sql
+ms.prod_service: "database-engine"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: replication
+ms.topic: conceptual
 f1_keywords: 
   - "SQL10.REP.CONFIGWEBSYNCWIZARD.SNAPSHARE.F1"
   - "SQL13.REP.CONFIGWEBSYNCWIZARD.SNAPSHARE.F1"
@@ -32,13 +30,12 @@ helpviewer_keywords:
   - "Web synchronization, security best practices"
   - "Web synchronization, configuring"
 ms.assetid: 21f8e4d4-cd07-4856-98f0-9c9890ebbc82
-caps.latest.revision: 74
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "MashaMSFT"
+ms.author: "mathoma"
+manager: craigg
 ---
 # Configure Web Synchronization
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   The Web synchronization option for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Merge Replication enables data replication using the HTTPS protocol over the Internet. To use Web synchronization, you first need to perform the following configuration actions:  
   
@@ -133,7 +130,7 @@ manager: "jhubbard"
   
 -   If you replicate large volumes of data, you might have to adjust the Merge Agent batch size.  
   
- Batch size for merge replication is measured in *generations*, which are collections of changes per article. The number of generations in a batch is specified by using the–**DownloadGenerationsPerBatch** and –**UploadGenerationsPerBatch** parameters of the Merge Agent. For more information, see [Replication Merge Agent](../../relational-databases/replication/agents/replication-merge-agent.md).  
+ Batch size for merge replication is measured in *generations*, which are collections of changes per article. The number of generations in a batch is specified by using the-**DownloadGenerationsPerBatch** and -**UploadGenerationsPerBatch** parameters of the Merge Agent. For more information, see [Replication Merge Agent](../../relational-databases/replication/agents/replication-merge-agent.md).  
   
  For large volumes of data, specify a small number for each of the batching parameters. We recommend that you start with a value of 10, and then tune based on application needs and performance. Typically, these parameters are specified in an agent profile. For more information about profiles, see [Replication Agent Profiles](../../relational-databases/replication/agents/replication-agent-profiles.md).  
   

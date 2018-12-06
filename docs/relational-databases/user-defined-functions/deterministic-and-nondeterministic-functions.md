@@ -1,14 +1,12 @@
 ---
 title: "Deterministic and Nondeterministic Functions | Microsoft Docs"
 ms.custom: ""
-ms.date: "09/28/2016"
-ms.prod: "sql-server-2016"
+ms.date: "08/26/2017"
+ms.prod: sql
+ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
-  - "dbe-udf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "built-in functions [SQL Server]"
   - "nondeterministic functions"
@@ -16,12 +14,13 @@ helpviewer_keywords:
   - "deterministic functions"
   - "user-defined functions [SQL Server], deterministic"
 ms.assetid: 2f3ce5f5-c81c-4470-8141-8144d4f218dd
-caps.latest.revision: 43
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "rothja"
+ms.author: "jroth"
+manager: craigg
+monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Deterministic and Nondeterministic Functions
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
   Deterministic functions always return the same result any time they are called with a specific set of input values and given the same state of the database. Nondeterministic functions may return different results each time they are called with a specific set of input values even if the database state that they access remains the same. For example, the function AVG always returns the same result given the qualifications stated above, but the GETDATE function, which returns the current datetime value, always returns a different result.  
   
  There are several properties of user-defined functions that determine the ability of the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] to index the results of the function, either through indexes on computed columns that call the function, or through indexed views that reference the function. The determinism of a function is one such property. For example, a clustered index cannot be created on a view if the view references any nondeterministic functions. For more information about the properties of functions, including determinism, see [User-Defined Functions](../../relational-databases/user-defined-functions/user-defined-functions.md).  
@@ -29,7 +28,7 @@ manager: "jhubbard"
  This topic identifies the determinism of built-in system functions and the effect on the deterministic property of user-defined functions when it contains a call to extended stored procedures.  
   
 ## Built-in Function Determinism  
- You cannot influence the determinism of any built-in function. Each built-in function is deterministic or nondeterministic based on how the function is implemented by [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. For example, specifying an ORDER BY clause in a query does not change the determinism of a function that used in that query.  
+ You cannot influence the determinism of any built-in function. Each built-in function is deterministic or nondeterministic based on how the function is implemented by [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. For example, specifying an ORDER BY clause in a query does not change the determinism of a function that is used in that query.  
   
  All of the string built-in functions are deterministic. For a list of these functions, see [String Functions &#40;Transact-SQL&#41;](../../t-sql/functions/string-functions-transact-sql.md).  
   
@@ -84,15 +83,15 @@ manager: "jhubbard"
 |CURRENT_TIMESTAMP|RAND|  
 |DENSE_RANK|RANK|  
 |FIRST_VALUE|ROW_NUMBER|   
-||TEXTPTR|  
+|FORMAT|TEXTPTR|  
   
 ## Calling Extended Stored Procedures from Functions  
- Functions that call extended stored procedures are nondeterministic, because the extended stored procedures can cause side effects on the database. Side effects are changes to a global state of the database, such as an update to a table, or to an external resource, such as a file or the network; for example, modifying a file or sending an e-mail message. You should not rely on returning a consistent result set when executing an extended stored procedure from a user-defined function. User-defined functions that create side effects on the database are not recommended.  
+ Functions that call extended stored procedures are nondeterministic, because the extended stored procedures can cause side effects on the database. Side effects are changes to a global state of the database, such as an update to a table, or to an external resource, such as a file or the network; for example, modifying a file or sending an e-mail message. Do not rely on returning a consistent result set when executing an extended stored procedure from a user-defined function. User-defined functions that create side effects on the database are not recommended.  
   
- When called from inside a function, the extended stored procedure cannot return result sets to the client. Any Open Data Services API that returns result sets to the client will have a return code of FAIL.  
+ When called from inside a function, the extended stored procedure cannot return result sets to the client. Any Open Data Services API that returns result sets to the client, has a return code of FAIL.  
   
  The extended stored procedure can connect back to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. However, the procedure cannot join the same transaction as the original function that invoked the extended stored procedure.  
   
- Similar to invocations from a batch or stored procedure, the extended stored procedure is executed in the context of the [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows security account under which [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is running. The owner of the extended stored procedure should consider this when granting permissions to other users to execute the procedure.  
+ Similar to invocations from a batch or stored procedure, the extended stored procedure is executed in the context of the [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows security account under which [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is running. The owner of the extended stored procedure should consider the permissions of this security context, when granting permissions to other users to execute the procedure.  
   
   

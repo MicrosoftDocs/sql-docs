@@ -1,25 +1,20 @@
 ---
 title: "Report Server Service Trace Log | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/16/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.date: 03/16/2017
+ms.prod: reporting-services
+ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
+ms.technology: report-server
+
+
+ms.topic: conceptual
 helpviewer_keywords: 
   - "logs [Reporting Services], trace"
   - "traces [Reporting Services]"
   - "system information [Reporting Services]"
   - "versions [Reporting Services]"
 ms.assetid: 2fde08b2-137d-4f4b-88e5-216030216e0d
-caps.latest.revision: 52
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
+author: markingmyname
+ms.author: maghan
 ---
 # Report Server Service Trace Log
   The [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] report server trace logs are an ASCII text file that contain detailed information for Report Server service operations.  Ther information in the files include operations performed by the Report Server Web service, the web portal, and background processing. The trace log file includes redundant information that is recorded in other log files, plus additional information that is not otherwise available. Trace log information is useful if you are debugging an application that includes a report server or investigating a specific problem that was written to the event log or execution log. For example, when trouble shooting issues with subscriptions.  
@@ -81,7 +76,7 @@ manager: "erikre"
 <add name="Directory" value="U:\logs\" />  
 ```  
   
- For more information, see [Knowledge Base Article 913046](http://support.microsoft.com/?kbid=913046) on the [!INCLUDE[msCoName](../../includes/msconame-md.md)] Web site.  
+ For more information, see [Knowledge Base Article 913046](https://support.microsoft.com/?kbid=913046) on the [!INCLUDE[msCoName](../../includes/msconame-md.md)] Web site.  
   
 ##  <a name="bkmk_log_file_fields"></a> Log File Fields  
  The following fields can be found in a trace log:  
@@ -111,5 +106,5 @@ In previous releases of [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion
 ## See Also  
  [Reporting Services Log Files and Sources](../../reporting-services/report-server/reporting-services-log-files-and-sources.md)   
  [Errors and Events Reference &#40;Reporting Services&#41;](../../reporting-services/troubleshooting/errors-and-events-reference-reporting-services.md)  
- More questions? [Try the Reporting Services forum](http://go.microsoft.com/fwlink/?LinkId=620231)
+ More questions? [Try the Reporting Services forum](https://go.microsoft.com/fwlink/?LinkId=620231)
   

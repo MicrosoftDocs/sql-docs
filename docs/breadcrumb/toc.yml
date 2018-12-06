@@ -45,6 +45,9 @@
         - name: ADO RDS API (Deprecated)
           href: /sql/ado/reference/rds-api/
           homepage: /sql/ado/reference/rds-api/rds-api-reference
+    - name: Analytics Platform System
+      href: /sql/analytics-platform-system/
+      homepage: /sql/analytics-platform-system/index
     - name: Connect your client to SQL
       href: /sql/connect/
       homepage: /sql/connect/sql-server-drivers
@@ -103,6 +106,66 @@
           - name: Syntax
             href: /sql/odbc/reference/syntax/
             homepage: /sql/odbc/reference/syntax/odbc-reference
+      - name: OLE DB
+        href: /sql/connect/oledb/
+        homepage: /sql/connect/oledb/oledb-driver-for-sql-server
+        items:
+        - name: Features
+          href: /sql/connect/oledb/features/
+          homepage: /sql/connect/oledb/features/oledb-driver-for-sql-server-features
+        - name: Applications
+          href: /sql/connect/oledb/applications/
+          homepage: /sql/connect/oledb/applications/building-applications-with-oledb-driver-for-sql-server
+        - name: OLE DB Programming
+          href: /sql/connect/oledb/ole-db/
+          homepage: /sql/connect/oledb/ole-db/oledb-driver-for-sql-server-programming
+          items:
+          - name: Driver
+            href: /sql/connect/oledb/ole-db-driver/
+            homepage: /sql/connect/oledb/ole-db-driver/creating-a-oledb-driver-for-sql-server-application
+          - name: Data source objects
+            href: /sql/connect/oledb/ole-db-data-source-objects/
+            homepage: /sql/connect/oledb/ole-db-data-source-objects/data-source-objects-ole-db
+          - name: Commands
+            href: /sql/connect/oledb/ole-db-commands/
+            homepage: /sql/connect/oledb/ole-db-commands/commands
+          - name: Rowsets
+            href: /sql/connect/oledb/ole-db-rowsets/
+            homepage: /sql/connect/oledb/ole-db-rowsets/rowsets
+          - name: Blobs
+            href: /sql/connect/oledb/ole-db-blobs/
+            homepage: /sql/connect/oledb/ole-db-blobs/blobs-and-ole-objects
+          - name: Tables and indexes
+            href: /sql/connect/oledb/ole-db-tables-indexes/
+            homepage: /sql/connect/oledb/ole-db-tables-indexes/tables-and-indexes
+          - name: Data types
+            href: /sql/connect/oledb/ole-db-data-types/
+            homepage: /sql/connect/oledb/ole-db-data-types/data-types-ole-db
+          - name: Table valued parameters
+            href: /sql/connect/oledb/ole-db-table-valued-parameters/
+            homepage: /sql/connect/oledb/ole-db-table-valued-parameters/table-valued-parameters-ole-db
+          - name: Date time
+            href: /sql/connect/oledb/ole-db-date-time/
+            homepage: /sql/connect/oledb/ole-db-date-time/date-and-time-improvements-ole-db
+          - name: Transactions
+            href: /sql/connect/oledb/ole-db-transactions/
+            homepage: /sql/connect/oledb/ole-db-transactions/transactions
+          - name: Errors
+            href: /sql/connect/oledb/ole-db-errors/
+            homepage: /sql/connect/oledb/ole-db-errors/errors
+          - name: Interfaces
+            href: /sql/connect/oledb/ole-db-interfaces/
+            homepage: /sql/connect/oledb/ole-db-interfaces/oledb-driver-for-sql-server-ole-db-interfaces
+          - name: How to
+            href: /sql/connect/oledb/ole-db-how-to/
+            homepage: /sql/connect/oledb/ole-db-how-to/ole-db-how-to-topics
+            items:
+            - name: Results
+              href: /sql/connect/oledb/ole-db-how-to/results/
+              homepage: /sql/connect/oledb/ole-db-how-to/results/processing-results-how-to-topics-ole-db
+            - name: FileStream
+              href: /sql/connect/oledb/ole-db-how-to/filestream/
+              homepage: /sql/connect/oledb/ole-db-how-to/filestream/filestream-and-ole-db
       - name: PHP
         href: /sql/connect/php/
         homepage: /sql/connect/php/microsoft-php-driver-for-sql-server
@@ -122,12 +185,37 @@
     - name: SQL Server on Linux
       href: /sql/linux/
       homepage: /sql/linux/sql-server-linux-overview
-    - name: Advanced analytics on SQL Server
+    - name: SQL Server Machine Learning Services
       href: /sql/advanced-analytics/
-      homepage: /sql/advanced-analytics/getting-started-with-machine-learning-services
-    - name: R Services on SQL Server
+      homepage: /sql/advanced-analytics/what-is-sql-server-machine-learning
+      items:
+      - name: Java
+        href: /sql/advanced-analytics/java/
+        homepage: /sql/advanced-analytics/java/extension-java
+      - name: R
+        href: /sql/advanced-analytics/r/
+        homepage: /sql/advanced-analytics/r/architecture-overview-sql-server-r
+      - name: Python
+        href: /sql/advanced-analytics/python/
+        homepage: /sql/advanced-analytics/python/sql-server-python-services
+      - name: Install
+        href: /sql/advanced-analytics/install/
+        homepage: /sql/advanced-analytics/install/sql-machine-learning-services-windows-install.md
+      - name: Learn
+        href: /sql/advanced-analytics/tutorials/
+        homepage: /sql/advanced-analytics/tutorials/machine-learning-services-tutorials  
+      - name: Python
+        href: /sql/advanced-analytics/python/
+        homepage: /sql/advanced-analytics/python/dmvs-for-python
+    - name: R
       href: /sql/advanced-analytics/r/
       homepage: /sql/advanced-analytics/r/architecture-overview-sql-server-r
+    - name: Install and configure
+      href: /sql/advanced-analytics/install/
+      homepage: /sql/advanced-analytics/install/sql-machine-learning-services-windows-install.md
+    - name: Tutorials
+      href: /sql/advanced-analytics/tutorials/
+      homepage: /sql/advanced-analytics/tutorials/machine-learning-services-tutorials
     - name: SQL Server
       href: /sql/sql-server/
       homepage: /sql/sql-server/sql-server-technical-documentation
@@ -289,14 +377,14 @@
             homepage: /sql/analysis-services/xmla/xml-data-types/xml-data-types-xmla
       - name: Database Engine
         href: /sql/database-engine/
-        homepage: /sql/database-engine/sql-server-database-engine-backward-compatibility
+        homepage: /sql/database-engine/sql-server-database-engine-overview
         items:
         - name: Availability groups
           href: /sql/database-engine/availability-groups/windows/
           homepage: /sql/database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server
         - name: Configure on Windows
           href: /sql/database-engine/configure-windows/
-          homepage: /sql/database-engine/configure-windows/sql-server-database-engine
+          homepage: /sql/database-engine/configure-windows/configure-database-engine-instances-sql-server
         - name: Database mirroring
           href: /sql/database-engine/database-mirroring/
           homepage: /sql/database-engine/database-mirroring/the-database-mirroring-endpoint-sql-server
@@ -348,6 +436,9 @@
         - name: Performance
           href: /sql/integration-services/performance/
           homepage: /sql/integration-services/performance/monitor-running-packages-and-other-operations
+        - name: Scale out
+          href: /sql/integration-services/scale-out/
+          homepage: /sql/integration-services/scale-out/integration-services-ssis-scale-out
         - name: Security
           href: /sql/integration-services/security/
           homepage: /sql/integration-services/security/security-overview-integration-services
@@ -567,7 +658,7 @@
         homepage: /sql/relational-databases/graphs/sql-graph-overview
       - name: Import and export
         href: /sql/relational-databases/import-export/
-        homepage: /sql/relational-databases/import-export/bulk-import-and-export-of-data-sql-server
+        homepage: /sql/relational-databases/import-export/overview-import-export
       - name: In-memory OLTP
         href: /sql/relational-databases/in-memory-oltp/
         homepage: /sql/relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization
@@ -642,9 +733,6 @@
       - name: Resource Governor
         href: /sql/relational-databases/resource-governor/
         homepage: /sql/relational-databases/resource-governor/resource-governor
-      - name: Scripting
-        href: /sql/relational-databases/scripting/
-        homepage: /sql/relational-databases/scripting/database-engine-scripting
       - name: Search
         href: /sql/relational-databases/search/
         homepage: /sql/relational-databases/search/full-text-search
@@ -1007,9 +1095,6 @@
             - name: Security
               href: /sql/relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/security/
               homepage: /sql/relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/security/sqlxml-4-0-security-considerations
-    - name: SQL Server Release Notes
-      href: /sql/release-notes/
-      homepage: /sql/release-notes/sql-server-release-notes
     - name: DMX
       href: /sql/dmx/
       homepage: /sql/dmx/data-mining-extensions-dmx-reference
@@ -1030,6 +1115,9 @@
       href: /sql/tools/
       homepage: /sql/tools/overview-sql-tools
       items:
+      - name: Azure Data Studio
+        href: /sql/azure-data-studio/
+        homepage: /sql/azure-data-studio/what-is
       - name: Configuration Manager
         href: /sql/tools/configuration-manager/
         homepage: /sql/tools/configuration-manager/sql-server-configuration-manager-help
@@ -1040,15 +1128,46 @@
         href: /sql/tools/dta/
         homepage: /sql/tools/dta/dta-utility
         items:
-      - name: SQL Server Management Studio
-        href: /sql/tools/sql-server-management-studio/
-        homepage: /sql/tools/sql-server-management-studio/register-servers
       - name: SQL Server Profiler
         href: /sql/tools/sql-server-profiler/
         homepage: /sql/tools/sql-server-profiler/sql-server-profiler
       - name: ssbdiagnose
         href: /sql/tools/ssbdiagnose/
         homepage: /sql/tools/ssbdiagnose/ssbdiagnose-utility-service-broker
+      - name: SQL Server Management Studio (SSMS)
+        href: /sql/ssms/
+        homepage: /sql/ssms/download-sql-server-management-studio-ssms
+        items:
+        - name: Agent
+          href: /sql/ssms/agent/
+          homepage: /sql/ssms/agent/sql-server-agent
+        - name: F1 help
+          href: /sql/ssms/f1-help/
+          homepage: /sql/ssms/f1-help/f1-help-for-server-connections-sql-server-management-studio
+        - name: Menu help
+          href: /sql/ssms/menu-help/
+          homepage: /sql/ssms/menu-help/sql-server-management-studio-menu-help
+        - name: Object
+          href: /sql/ssms/object/
+          homepage: /sql/ssms/object/object-explorer
+        - name: Register Servers
+          href: /sql/ssms/register-servers/
+          homepage: /sql/ssms/register-servers/register-servers
+        - name: Solution
+          href: /sql/ssms/solution/
+          homepage: /sql/ssms/solution/solution-explorer
+        - name: Template
+          href: /sql/ssms/template/
+          homepage: /sql/ssms/template/template-explorer
+        - name: Tutorials
+          href: /sql/ssms/tutorials/
+          homepage: /sql/ssms/tutorials/tutorial-sql-server-management-studio
+        - name: Scripting
+          href: /sql/ssms/scripting/
+          homepage: /sql/ssms/scripting/database-engine-scripting
+        - name: Visual DB tools
+          href: /sql/ssms/visual-db-tools/
+          homepage: /sql/ssms/visual-db-tools/visual-database-tools
     - name: T-SQL
       href: /sql/t-sql/
       homepage: /sql/t-sql/language-reference
@@ -1109,34 +1228,3 @@
       - name: SSMA Sybase
         href: /sql/ssma/sybase/
         homepage: /sql/ssma/sybase/installing-ssma-for-sybase-sybasetosql
-    - name: SSMS
-      href: /sql/ssms/
-      homepage: /sql/ssms/download-sql-server-management-studio-ssms
-      items:
-      - name: Agent
-        href: /sql/ssms/agent/
-        homepage: /sql/ssms/agent/sql-server-agent
-      - name: F1 help
-        href: /sql/ssms/f1-help/
-        homepage: /sql/ssms/f1-help/f1-help-for-server-connections-sql-server-management-studio
-      - name: Menu help
-        href: /sql/ssms/menu-help/
-        homepage: /sql/ssms/menu-help/sql-server-management-studio-menu-help
-      - name: Object
-        href: /sql/ssms/object/
-        homepage: /sql/ssms/object/object-explorer
-      - name: Register Servers
-        href: /sql/ssms/register-servers/
-        homepage: /sql/ssms/register-servers/register-servers
-      - name: Solution
-        href: /sql/ssms/solution/
-        homepage: /sql/ssms/solution/solution-explorer
-      - name: Template
-        href: /sql/ssms/template/
-        homepage: /sql/ssms/template/template-explorer
-      - name: Tutorials
-        href: /sql/ssms/tutorials/
-        homepage: /sql/ssms/tutorials/tutorial-sql-server-management-studio
-      - name: Visual DB tools
-        href: /sql/ssms/visual-db-tools/
-        homepage: /sql/ssms/visual-db-tools/visual-database-tools

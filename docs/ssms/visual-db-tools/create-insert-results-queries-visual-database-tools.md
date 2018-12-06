@@ -2,13 +2,11 @@
 title: "Create Insert Results Queries (Visual Database Tools) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
+ms.prod_service: "sql-tools"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "tools-ssms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: ssms
+ms.topic: conceptual
 helpviewer_keywords: 
   - "queries [SQL Server], types"
   - "result sets [SQL Server], queries"
@@ -16,12 +14,13 @@ helpviewer_keywords:
   - "Insert Results query"
   - "queries [SQL Server], results"
 ms.assetid: 8770d630-09cc-47ec-a0e9-e9de2d7bbc89
-caps.latest.revision: 4
 author: "stevestein"
 ms.author: "sstein"
-manager: "jhubbard"
+manager: craigg
+
 ---
 # Create Insert Results Queries (Visual Database Tools)
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 You can copy rows from one table to another or within a table using an Insert Results query. For example, in a `titles` table, you can use an Insert Results query to copy information about all the titles for one publisher to a second table that you can make available to that publisher. An Insert Results query is similar to Make Table Queries, but copies rows into an existing table.  
   
 > [!TIP]  
@@ -74,11 +73,11 @@ When you create an Insert Results query, the Criteria pane changes to reflect op
     > [!NOTE]  
     > The Query and View Designer cannot determine in advance which tables and views you can update. Therefore, the **Table Name** list in the **Choose Table for Insert From Query** dialog box shows all available tables and views in the data connection you are querying, even those that you might not be able to copy rows to.  
   
-4.  In the rectangle representing the table or table-valued object, choose the names of the columns whose contents you want to copy. To copy entire rows, choose **\&#42; (All Columns)**.  
+4.  In the rectangle representing the table or table-valued object, choose the names of the columns whose contents you want to copy. To copy entire rows, choose **&#42; (All Columns)**.  
   
     The Query and View Designer adds the columns you choose to the **Column** column of the Criteriapane.  
   
-5.  In the **Append** column of the Criteria pane, select a target column in the destination table for each column you are copying. Choose *tablename.\&#42;* if you are copying entire rows. The columns in the destination table must have the same (or compatible) data types as the columns in the source table.  
+5.  In the **Append** column of the Criteria pane, select a target column in the destination table for each column you are copying. Choose *tablename.&#42;* if you are copying entire rows. The columns in the destination table must have the same (or compatible) data types as the columns in the source table.  
   
 6.  If you want to copy rows in a particular order, specify a sort order. For details, see [Sort and Group Query Results &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/sort-and-group-query-results-visual-database-tools.md).  
   

@@ -1,29 +1,17 @@
 ---
 title: "IsTrainingCase (DMX) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/02/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "IsTrainingCase"
-dev_langs: 
-  - "DMX"
-helpviewer_keywords: 
-  - "IsTrainingCase function"
-ms.assetid: 63eab315-e743-470d-9c4c-edfc3f4058a3
-caps.latest.revision: 12
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
+ms.date: 06/07/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: dmx
+ms.topic: conceptual
+ms.author: owend
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
 ---
 # IsTrainingCase (DMX)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   Indicates whether a case is used as a training case for the specified data mining model or mining structure.  
   
@@ -48,7 +36,7 @@ IsTrainingCase()
  To return cases that are part of the test data set, use the function [IsTestCase &#40;DMX&#41;](../dmx/istestcase-dmx.md).  
   
 ## Examples  
- The following example uses the clustering data mining model from the targeted mailing scenario in the [Basic Data Mining Tutorial](http://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c). The query returns only those cases that were used for training the mining model. Moreover, the training cases are restricted to customers younger than 40.  
+ The following example uses the clustering data mining model from the targeted mailing scenario in the [Basic Data Mining Tutorial](https://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c). The query returns only those cases that were used for training the mining model. Moreover, the training cases are restricted to customers younger than 40.  
   
 ```  
 SELECT *  

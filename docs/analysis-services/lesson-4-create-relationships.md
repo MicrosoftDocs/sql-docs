@@ -1,26 +1,19 @@
 ---
-title: "Lesson 5: Create Relationships | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/27/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
-applies_to: 
-  - "SQL Server 2016"
-ms.assetid: abac1a00-f827-4c3e-a473-6db5c8a3a66f
-caps.latest.revision: 29
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
+title: "Lesson 4: Create Relationships | Microsoft Docs"
+ms.date: 08/22/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: tabular-models
+ms.topic: tutorial
+ms.author: owend
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
 ---
 # Lesson 4: Create Relationships
 [!INCLUDE[ssas-appliesto-sql2016-later-aas](../includes/ssas-appliesto-sql2016-later-aas.md)]
 
-In this lesson you will verify the relationships that were created automatically when you imported data and add new relationships between different tables. A relationship is a connection between two tables that establishes how the data in those tables should be correlated. For example, the DimProduct table and the DimProductSubcategory table have a relationship based on the fact that each product belongs to a subcategory. To learn more, see [Relationships](../analysis-services/tabular-models/relationships-ssas-tabular.md).
+In this lesson, you will verify the relationships that were created automatically when you imported data and add new relationships between different tables. A relationship is a connection between two tables that establishes how the data in those tables should be correlated. For example, the DimProduct table and the DimProductSubcategory table have a relationship based on the fact that each product belongs to a subcategory. To learn more, see [Relationships](../analysis-services/tabular-models/relationships-ssas-tabular.md).
   
 Estimated time to complete this lesson: **10 minutes**  
   
@@ -38,14 +31,14 @@ When you imported data by using the Table Import Wizard, you got seven tables fr
     
     ![as-tabular-lesson4-diagram](../analysis-services/media/as-tabular-lesson4-diagram.png)
   
-    Use the minimap controls in the lower-right corner of the model designer to adjust the view to include as many of the tables as possible. You can also click and drag tables to different locations, bringing tables closer together, or putting them in a particular order. Moving tables does not affect the relationships already between the tables. To view all of the columns in a particular table, click and drag on a table edge to expand or make it smaller.  
+    Use the minimap controls in the lower-right corner of the model designer to adjust the view to include as many of the tables as possible. You can also click, and drag tables to different locations, bringing tables closer together, or putting them in a particular order. Moving tables does not affect the relationships already between the tables. To view all of the columns in a particular table, click, and drag on a table edge to expand or make it smaller.  
   
 2.  Click the solid line between the **DimCustomer** table and the **DimGeography** table. The solid line between these two tables show this relationship is active, that is, it is used by default when calculating DAX formulas.  
   
-    Notice the **GeographyKey** column in the **DimCustomer** table and the **GeographyKey** column in the **DimGeography** table now both each appear within a box. This shows these are the columns used in the relationship. The relationship’s properties now also appear in the **Properties** window.  
+    Notice the **GeographyKey** column in the **DimCustomer** table and the **GeographyKey** column in the **DimGeography** table now both each appear within a box. This show these are the columns used in the relationship. The relationship's properties now also appear in the **Properties** window.  
   
     > [!TIP]  
-    > In addition to using the model designer in diagram view, you can also use the Manage Relationships dialog box to show the relationships between all tables in a table format. Right-click **Relationships** in Tabular Model Explorer, and then click **Manage Relationships**. The Manage Relationships dialog box shows the relationships that were automatically created when you imported data.  
+    > In addition to using the model designer in diagram view, you can also use the Manage Relationships dialog box to show the relationships between all tables in a table format. Right-click **Relationships** in Tabular Model Explorer, and then click **Manage Relationships**. The Manage Relationships dialog box show the relationships that were automatically created when you imported data.  
   
 3.  Use the model designer in diagram view, or the Manage Relationships dialog box, to verify the following relationships were created when each of the tables were imported from the AdventureWorksDW database:  
   
@@ -64,7 +57,7 @@ In Diagram View, you'll notice an arrow, an asterisk, and a number on the lines 
 
 ![as-tabular-lesson4-line](../analysis-services/media/as-tabular-lesson4-line.png)
 
-The arrow shows the filter direction, the asterisk shows this table is the many side in the relationship's cardinality, and the 1 shows this table is the one side of the relationship. If you need to edit a relationship; for example, change the relationship's filter direction or cardinality, double click the relationship line in Diagram View to open the Edit Relationship dialog.
+The arrow shows the filter direction, the asterisk shows this table is the many side in the relationship's cardinality, and the 1 shows this table is the one side of the relationship. If you need to edit a relationship; for example, change the relationship's filter direction or cardinality, double-click the relationship line in Diagram View to open the Edit Relationship dialog.
 
 ![as-tabular-lesson4-edit](../analysis-services/media/as-tabular-lesson4-edit.png)
 
@@ -74,7 +67,7 @@ In some cases, you may need to create additional relationships between tables in
   
 #### To add new relationships between tables  
   
-1.  In the model designer, in the **FactInternetSales** table, click and hold on the **OrderDate** column, then drag the cursor to the **Date** column in the **DimDate** table, and then release.  
+1.  In the model designer, in the **FactInternetSales** table, click, and hold on the **OrderDate** column, then drag the cursor to the **Date** column in the **DimDate** table, and then release.  
 
     A solid line appears showing you have created an active relationship between the **OrderDate** column in the **Internet Sales** table and the **Date** column in the **Date** table. 
   
@@ -83,11 +76,11 @@ In some cases, you may need to create additional relationships between tables in
     > [!NOTE]  
     > When creating relationships, the cardinality and filter direction between the primary table and the related lookup table is automatically selected.  
   
-2.  In the **FactInternetSales** table, click and hold on the **DueDate** column, then drag the cursor to the **Date** column in the **DimDate** table, and then release.  
+2.  In the **FactInternetSales** table, click, and hold on the **DueDate** column, then drag the cursor to the **Date** column in the **DimDate** table, and then release.  
   
     A dotted line appears showing you have created an inactive relationship between the **DueDate** column in the **FactInternetSales** table and the **Date** column in the **DimDate** table. You can have multiple relationships between tables, but only one relationship can be active at a time.  
   
-3.  Finally, create one more relationship; in the **FactInternetSales** table, click and hold on the **ShipDate** column, then drag the cursor to the **Date** column in the **DimDate** table, and then release.  
+3.  Finally, create one more relationship; in the **FactInternetSales** table, click, and hold on the **ShipDate** column, then drag the cursor to the **Date** column in the **DimDate** table, and then release.  
     
      ![as-tabular-lesson4-newinactive](../analysis-services/media/as-tabular-lesson4-newinactive.png)
   

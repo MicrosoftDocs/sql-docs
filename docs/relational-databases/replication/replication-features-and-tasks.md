@@ -2,25 +2,23 @@
 title: "Replication Features and Tasks | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/11/2016"
-ms.prod: "sql-server-2016"
+ms.prod: sql
+ms.prod_service: "database-engine"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
+ms.technology: replication
+ms.topic: quickstart
 helpviewer_keywords: 
   - "development [SQL Server replication]"
   - "replication [SQL Server], development"
   - "replication [SQL Server], interoperability"
 ms.assetid: 47c613e4-7fe9-462a-89b4-659b14825b70
-caps.latest.revision: 21
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "MashaMSFT"
+ms.author: "mathoma"
+manager: craigg
 ---
 # Replication Features and Tasks
-  Find information that anyone—designer, developer, analyst, or administrator—requires to design and implement replication solutions.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  Find information that anyone-designer, developer, analyst, or administrator-requires to design and implement replication solutions.  
   
 ## In This Section  
   

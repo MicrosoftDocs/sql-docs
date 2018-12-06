@@ -2,23 +2,21 @@
 title: "Database Mirroring - Establish Session - Windows Authentication | Microsoft Docs"
 ms.custom: ""
 ms.date: "05/17/2016"
-ms.prod: "sql-server-2016"
+ms.prod: sql
+ms.prod_service: high-availability
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: high-availability
+ms.topic: conceptual
 helpviewer_keywords: 
   - "Windows authentication [SQL Server]"
   - "database mirroring [SQL Server], security"
 ms.assetid: 143c68a5-589f-4e7f-be59-02707e1a430a
-caps.latest.revision: 77
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ---
 # Database Mirroring - Establish Session - Windows Authentication
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
     
 > [!NOTE]  
 >  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Use [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] instead.  
@@ -61,17 +59,17 @@ manager: "jhubbard"
   
 4.  To set the principal server as partner on the mirror database, connect to the mirror server, and issue the following statement:  
   
-     ALTER DATABASE *<database_name>* SET PARTNER **=***<server_network_address>*  
+     ALTER DATABASE *\<database_name\>* SET PARTNER **=**_\<server\_network\_address\>_  
   
-     where *<database_name>* is the name of the database to be mirrored (this name is the same on both partners), and *<server_network_address>* is the server network address of the principal server.  
+     where _\<database\_name\>_ is the name of the database to be mirrored (this name is the same on both partners), and _\<server\_network\_address\>_ is the server network address of the principal server.  
   
      The syntax for a server network address is as follows:  
   
-     TCP**://**\<*system-address>***:**\<*port>*  
+     TCP<b>\://</b>_\<system-address\>_<b>\:</b>_\<port\>_  
   
-     where \<*system-address>* is a string that unambiguously identifies the destination computer system, and \<*port>* is the port number used by the mirroring endpoint of the partner server instance. For more information, see [Specify a Server Network Address &#40;Database Mirroring&#41;](../../database-engine/database-mirroring/specify-a-server-network-address-database-mirroring.md).  
+     where _\<system-address>_ is a string that unambiguously identifies the destination computer system, and _\<port>_ is the port number used by the mirroring endpoint of the partner server instance. For more information, see [Specify a Server Network Address &#40;Database Mirroring&#41;](../../database-engine/database-mirroring/specify-a-server-network-address-database-mirroring.md).  
   
-     For example, on the mirror server instance, the following ALTER DATABASE statement sets the partner as the original principal server instance. The database name is **AdventureWorks**, the system address is DBSERVER1—the name of the partner's system—and the port used by the partner's database mirroring endpoint is 7022:  
+     For example, on the mirror server instance, the following ALTER DATABASE statement sets the partner as the original principal server instance. The database name is **AdventureWorks**, the system address is DBSERVER1-the name of the partner's system-and the port used by the partner's database mirroring endpoint is 7022:  
   
     ```  
     ALTER DATABASE AdventureWorks   
@@ -82,11 +80,11 @@ manager: "jhubbard"
   
 5.  To set the mirror server as partner on the principal database, connect to the principal server, and issue the following statement:  
   
-     ALTER DATABASE *<database_name>* SET PARTNER **=***<server_network_address>*  
+     ALTER DATABASE _\<database\_name\>_ SET PARTNER **=**_\<server\_network\_address\>_  
   
      For more information, see step 4.  
   
-     For example, on the principal server instance, the following ALTER DATABASE statement sets the partner as the original mirror server instance. The database name is **AdventureWorks**, the system address is DBSERVER2—the name of the partner's system—and the port used by the partner's database mirroring endpoint is 7025:  
+     For example, on the principal server instance, the following ALTER DATABASE statement sets the partner as the original mirror server instance. The database name is **AdventureWorks**, the system address is DBSERVER2-the name of the partner's system-and the port used by the partner's database mirroring endpoint is 7025:  
   
     ```  
     ALTER DATABASE AdventureWorks SET PARTNER = 'TCP://DBSERVER2:7022'  

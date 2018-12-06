@@ -1,31 +1,17 @@
 ---
 title: "Write-Enabled Partitions | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/03/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "docset-sql-devref"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-applies_to: 
-  - "SQL Server 2016 Preview"
-helpviewer_keywords: 
-  - "storage [Analysis Services], partitions"
-  - "write-enabled partitions [Analysis Services]"
-  - "partitions [Analysis Services], write-enabled"
-  - "partitions [Analysis Services], storage"
-  - "writeback [Analysis Services], partitions"
-  - "storing data [Analysis Services], partitions"
-ms.assetid: 46e7683f-03ce-4af2-bd99-a5203733d723
-caps.latest.revision: 34
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: olap
+ms.topic: conceptual
+ms.author: owend
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
 ---
 # Partitions - Write-Enabled Partitions
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   The data in a cube is generally read-only. However, for certain scenarios, you may want to write-enable a partition. Write-enabled partitions are used to enable business users to explore scenarios by changing cell values and analyzing the effects of the changes on cube data. When you write-enable a partition, client applications can record changes to the data in the partition. These changes, known as writeback data, are stored in a separate table and do not overwrite any existing data in a measure group. However, they are incorporated into query results as if they are part of the cube data.  
   
  You can write-enable an entire cube or only certain partitions in the cube. Write-enabled dimensions are different but complementary. A write-enabled partition lets users update partition cells, whereas a write-enabled dimension lets users update dimension members. You can also use these two features in combination. For example, a write-enabled cube or a write-enabled partition does not have to include any write-enabled dimensions. **Related topic:**[Write-Enabled Dimensions](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/write-enabled-dimensions.md).  

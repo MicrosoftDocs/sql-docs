@@ -1,24 +1,20 @@
 ---
 title: "Discontinued functionality to SQL Server Reporting Services in SQL Server 2016 | Microsoft Docs"
-ms.date: "07/02/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.date: 07/02/2017
+ms.prod: reporting-services
+ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
+ms.technology: reporting-services
+
+
+ms.topic: conceptual
 helpviewer_keywords: 
   - "discontinued functionality [Reporting Services]"
   - "Reporting Services, backward compatibility"
   - "Rsactivate.exe"
   - "unsupported features [Reporting Services]"
 ms.assetid: d529cc96-3483-480b-9bfc-bd28b1d0ef52
-caps.latest.revision: 54
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
+author: markingmyname
+ms.author: maghan
 ---
 
 # Discontinued functionality to SQL Server Reporting Services in SQL Server 2016
@@ -35,6 +31,7 @@ A *discontinued feature* is one that is no longer supported. It might also be ph
 |-|-|
 |Upload report models through the web portal|This can still be done through the SOAP API.|
 |Manage report models through the web portal|This can still be done through the SOAP API.|
+|Customize style sheets for HTML Viewer and Report Manager|You can still [brand the web portal](branding-the-web-portal.md).|
 
 ## Next steps
 
@@ -42,4 +39,4 @@ A *discontinued feature* is one that is no longer supported. It might also be ph
 [Behavior Changes to SQL Server Reporting Services in SQL Server 2016](../reporting-services/behavior-changes-to-sql-server-reporting-services-in-sql-server-2016.md)  
 [Deprecated features in SQL Server Reporting Services in SQL Server 2016](../reporting-services/deprecated-features-in-sql-server-reporting-services-ssrs.md)  
 
-More questions? [Try asking the Reporting Services forum](http://go.microsoft.com/fwlink/?LinkId=620231)
+More questions? [Try asking the Reporting Services forum](https://go.microsoft.com/fwlink/?LinkId=620231)

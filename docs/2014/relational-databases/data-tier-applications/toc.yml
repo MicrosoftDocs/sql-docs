@@ -1,0 +1,29 @@
+- name: Data-tier Applications
+  href: data-tier-applications.md
+  items:
+  - name: DAC Support For SQL Server Objects and Versions
+    href: dac-support-for-sql-server-objects-and-versions.md
+  - name: Delete a Data-tier Application
+    href: delete-a-data-tier-application.md
+  - name: Deploy a Data-tier Application
+    href: deploy-a-data-tier-application.md
+  - name: Export a Data-tier Application
+    href: export-a-data-tier-application.md
+  - name: Extract a DAC From a Database
+    href: extract-a-dac-from-a-database.md
+  - name: Import a BACPAC File to Create a New User Database
+    href: import-a-bacpac-file-to-create-a-new-user-database.md
+  - name: Monitor Data-tier Applications
+    href: monitor-data-tier-applications.md
+  - name: Register a Database As a DAC
+    href: register-a-database-as-a-dac.md
+  - name: Unpack a DAC Package
+    href: unpack-a-dac-package.md
+  - name: Upgrade a Data-tier Application
+    href: upgrade-a-data-tier-application.md
+  - name: Validate a DAC Package
+    href: validate-a-dac-package.md
+  - name: Validation Rules for Data-tier Application Wizards
+    href: dbengine-validation-rules.md
+  - name: Deploy a Database By Using a DAC
+    href: deploy-a-database-by-using-a-dac.md

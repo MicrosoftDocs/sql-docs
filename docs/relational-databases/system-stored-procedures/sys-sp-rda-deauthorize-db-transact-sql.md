@@ -2,12 +2,9 @@
 title: "sys.sp_rda_deauthorize_db (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/10/2016"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-stretch"
-ms.tgt_pltfrm: ""
+ms.technology: stored-procedures
 ms.topic: "language-reference"
 f1_keywords: 
   - "sys.sp_rda_deauthorize_db"
@@ -17,13 +14,12 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.sp_rda_deauthorize_db stored procedure"
 ms.assetid: 2e362e15-2cd5-4856-9f0b-54df56b0866b
-caps.latest.revision: 11
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: craigg
 ---
 # sys.sp_rda_deauthorize_db (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   Removes the authenticated connection between a local Stretch-enabled database and the remote Azure database. Run **sp_rda_deauthorize_db**  when the remote database is unreachable or in an inconsistent state and you want to change query behavior for all Stretch-enabled tables in the database.  
   

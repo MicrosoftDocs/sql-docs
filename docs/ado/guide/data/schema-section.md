@@ -1,21 +1,18 @@
 ---
 title: "Schema Section | Microsoft Docs"
-ms.prod: "sql-non-specified"
-ms.technology:
-  - "drivers"
+ms.prod: sql
+ms.prod_service: connectivity
+ms.technology: connectivity
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "Schema section [ADO]"
 ms.assetid: 4ac6e524-2c92-48e8-b871-0a4b5c8fda18
-caps.latest.revision: 5
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # Schema Section
 The schema section is required. As the previous example shows, ADO writes out detailed metadata about each column to preserve the semantics of the data values as much as possible for updating. However, to load in the XML, ADO only requires the names of the columns and the rowset to which they belong. Here is an example of a minimal schema:  
@@ -96,7 +93,7 @@ The schema section is required. As the previous example shows, ADO writes out de
  Similarly, because there is no alias defined for `CompanyName` in the previous example, `CompanyName` must be used consistently throughout the document.  
   
 ## Data Types  
- You can apply a data type to a column with the dt:type attribute. For the definitive guide to allowed XML types, see the Data Types section of the [W3C XML-Data specification](http://www.w3.org/TR/1998/NOTE-XML-data/). You can specify a data type in two ways: either specify the dt:type attribute directly on the column definition itself or use the s:datatype construct as a nested element of the column definition. For example,  
+ You can apply a data type to a column with the dt:type attribute. For the definitive guide to allowed XML types, see the Data Types section of the [W3C XML-Data specification](https://www.w3.org/TR/1998/NOTE-XML-data/). You can specify a data type in two ways: either specify the dt:type attribute directly on the column definition itself or use the s:datatype construct as a nested element of the column definition. For example,  
   
 ```  
 <s:AttributeType name="Phone" >  
@@ -119,20 +116,20 @@ The schema section is required. As the previous example shows, ADO writes out de
 ```  
 <!-- 1. String with no max length -->  
 <s:AttributeType name="title_id"/>  
-<!—or -->  
+<!-or -->  
 <s:AttributeType name="title_id" dt:type="string"/>  
   
-<!—- 2. Fixed length string with max length of 6 -->  
+<!-- 2. Fixed length string with max length of 6 -->  
 <s:AttributeType name="title_id">  
     <s:datatype dt:type="string" dt:maxLength="6" rs:fixedlength="true" />  
 </s:AttributeType>  
   
-<!—- 3. Variable length string with max length of 6 -->  
+<!-- 3. Variable length string with max length of 6 -->  
 <s:AttributeType name="title_id">  
     <s:datatype dt:type="string" dt:maxLength="6" />  
 </s:AttributeType>  
   
-<!—- 4. Integer -->  
+<!-- 4. Integer -->  
 <s:AttributeType name="title_id" dt:type="int"/>  
 ```  
   

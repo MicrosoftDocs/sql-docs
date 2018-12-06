@@ -2,12 +2,10 @@
 title: "sp_dropmergearticle (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "05/02/2016"
-ms.prod: "sql-server-2016"
+ms.prod: sql
+ms.prod_service: "database-engine"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
+ms.technology: replication
 ms.topic: "language-reference"
 f1_keywords: 
   - "sp_dropmergearticle"
@@ -15,13 +13,12 @@ f1_keywords:
 helpviewer_keywords: 
   - "sp_dropmergearticle"
 ms.assetid: 5ef1fbf7-c03d-4488-9ab2-64aae296fa4f
-caps.latest.revision: 34
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: stevestein
+ms.author: sstein
+manager: craigg
 ---
 # sp_dropmergearticle (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Removes an article from a merge publication. This stored procedure is executed at the Publisher on the publication database.  
   
@@ -83,7 +80,7 @@ sp_dropmergearticle [ @publication= ] 'publication'
   
 ## Example  
   
-```tsql  
+```sql  
 DECLARE @publication AS sysname;  
 DECLARE @article1 AS sysname;  
 DECLARE @article2 AS sysname;  
@@ -104,7 +101,7 @@ EXEC sp_dropmergearticle
 GO  
 ```  
   
-```tsql  
+```sql  
 DECLARE @publication AS sysname;  
 DECLARE @table1 AS sysname;  
 DECLARE @table2 AS sysname;  

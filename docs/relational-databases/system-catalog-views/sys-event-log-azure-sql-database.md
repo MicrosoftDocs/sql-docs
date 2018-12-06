@@ -1,16 +1,10 @@
 ---
 title: "sys.event_log (Azure SQL Database) | Microsoft Docs"
-ms.custom: 
-  - "MSDN content"
-  - "MSDN - SQL DB"
+ms.custom: ""
 ms.date: "06/10/2016"
-ms.prod: "sql-non-specified"
+ms.prod:
+ms.prod_service: "sql-database"
 ms.reviewer: ""
-ms.service: "sql-database"
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "event_log"
@@ -23,13 +17,13 @@ helpviewer_keywords:
   - "event_log"
   - "sys.event_log"
 ms.assetid: ad5496b5-e5c7-4a18-b5a0-3f985d7c4758
-caps.latest.revision: 26
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+monikerRange: "= azuresqldb-current || = sqlallproducts-allversions"
 ---
 # sys.event_log (Azure SQL Database)
-[!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
 
   Returns successful [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] database connections, connection failures, and deadlocks. You can use this information to track or troubleshoot your database activity with [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
   
@@ -75,12 +69,12 @@ manager: "jhubbard"
 |**connectivity**|**connection_failed**|9|**reconfiguration**|2|*Note: Applies only to Azure SQL Database V11.*<br /><br /> Connection failed because the database was going through a reconfiguration at the time.|  
 |**connectivity**|**connection_terminated**|0|**idle_connection_timeout**|2|*Note: Applies only to Azure SQL Database V11.*<br /><br /> Connection has been idle for longer than system defined threshold.|  
 |**connectivity**|**connection_terminated**|1|**reconfiguration**|2|*Note: Applies only to Azure SQL Database V11.*<br /><br /> The session has been terminated due to a database reconfiguration.|  
-|**connectivity**|**throttling**|*\<reason code>*|**reason_code**|2|*Note: Applies only to Azure SQL Database V11.*<br /><br /> Request is throttled.  Throttling reason code: *\<reason code>*. For more information, see [Engine Throttling](http://msdn.microsoft.com/library/windowsazure/dn338079.aspx).|  
-|**connectivity**|**throttling_long_transaction**|40549|**long_transaction**|2|*Note: Applies only to Azure SQL Database V11.*<br /><br /> Session is terminated because you have a long-running transaction. Try shortening your transaction. For more information, see [Resource Limits](http://msdn.microsoft.com/library/windowsazure/dn338081.aspx).|  
-|**connectivity**|**throttling_long_transaction**|40550|**excessive_lock_usage**|2|*Note: Applies only to Azure SQL Database V11.*<br /><br /> The session has been terminated because it has acquired too many locks. Try reading or modifying fewer rows in a single transaction. For more information, see [Resource Limits](http://msdn.microsoft.com/library/windowsazure/dn338081.aspx).|  
-|**connectivity**|**throttling_long_transaction**|40551|**excessive_tempdb_usage**|2|*Note: Applies only to Azure SQL Database V11.*<br /><br /> The session has been terminated because of excessive TEMPDB usage. Try modifying your query to reduce the temporary table space usage. For more information, see [Resource Limits](http://msdn.microsoft.com/library/windowsazure/dn338081.aspx).|  
-|**connectivity**|**throttling_long_transaction**|40552|**excessive_log_space_usage**|2|*Note: Applies only to Azure SQL Database V11.*<br /><br /> The session has been terminated because of excessive transaction log space usage. Try modifying fewer rows in a single transaction. For more information, see [Resource Limits](http://msdn.microsoft.com/library/windowsazure/dn338081.aspx).|  
-|**connectivity**|**throttling_long_transaction**|40553|**excessive_memory_usage**|2|*Note: Applies only to Azure SQL Database V11.*<br /><br /> The session has been terminated because of excessive memory usage. Try modifying your query to process fewer rows. For more information, see [Resource Limits](http://msdn.microsoft.com/library/windowsazure/dn338081.aspx).|  
+|**connectivity**|**throttling**|*\<reason code>*|**reason_code**|2|*Note: Applies only to Azure SQL Database V11.*<br /><br /> Request is throttled.  Throttling reason code: *\<reason code>*. For more information, see [Engine Throttling](https://msdn.microsoft.com/library/windowsazure/dn338079.aspx).|  
+|**connectivity**|**throttling_long_transaction**|40549|**long_transaction**|2|*Note: Applies only to Azure SQL Database V11.*<br /><br /> Session is terminated because you have a long-running transaction. Try shortening your transaction. For more information, see [Resource Limits](https://msdn.microsoft.com/library/windowsazure/dn338081.aspx).|  
+|**connectivity**|**throttling_long_transaction**|40550|**excessive_lock_usage**|2|*Note: Applies only to Azure SQL Database V11.*<br /><br /> The session has been terminated because it has acquired too many locks. Try reading or modifying fewer rows in a single transaction. For more information, see [Resource Limits](https://msdn.microsoft.com/library/windowsazure/dn338081.aspx).|  
+|**connectivity**|**throttling_long_transaction**|40551|**excessive_tempdb_usage**|2|*Note: Applies only to Azure SQL Database V11.*<br /><br /> The session has been terminated because of excessive TEMPDB usage. Try modifying your query to reduce the temporary table space usage. For more information, see [Resource Limits](https://msdn.microsoft.com/library/windowsazure/dn338081.aspx).|  
+|**connectivity**|**throttling_long_transaction**|40552|**excessive_log_space_usage**|2|*Note: Applies only to Azure SQL Database V11.*<br /><br /> The session has been terminated because of excessive transaction log space usage. Try modifying fewer rows in a single transaction. For more information, see [Resource Limits](https://msdn.microsoft.com/library/windowsazure/dn338081.aspx).|  
+|**connectivity**|**throttling_long_transaction**|40553|**excessive_memory_usage**|2|*Note: Applies only to Azure SQL Database V11.*<br /><br /> The session has been terminated because of excessive memory usage. Try modifying your query to process fewer rows. For more information, see [Resource Limits](https://msdn.microsoft.com/library/windowsazure/dn338081.aspx).|  
 |**engine**|**deadlock**|0|**deadlock**|2|Deadlock occurred.|  
   
 ## Permissions  
@@ -131,7 +125,7 @@ start_time                    end_time
   
 ```  
 SELECT * FROM sys.event_log   
-WHERE start_time >= '2011-09-25:12:00:00'   
+WHERE start_time >= '2011-09-25 12:00:00'   
     AND end_time <= '2011-09-28 12:00:00';  
 ```  
   
@@ -170,7 +164,7 @@ WHERE event_type = 'throttling'
 ### DB-Scoped Extended Event  
  Use the following sample code to set up the db-scoped Extended Event (XEvent) session:  
   
-```tsql  
+```sql  
 IF EXISTS  
     (SELECT * from sys.database_event_sessions  
         WHERE name = 'azure_monitor_deadlock_session')  
@@ -202,7 +196,7 @@ ALTER EVENT SESSION azure_monitor_deadlock_session
 
 Use the following query to check if there is a deadlock.  
   
-```tsql  
+```sql  
 WITH CTE AS (  
     SELECT CAST(xet.target_data AS XML)  AS [target_data_XML]  
         FROM            sys.dm_xe_database_session_targets AS xet  
@@ -224,6 +218,6 @@ SELECT * FROM CTE2;
 ```  
   
 ## See Also  
- [Extended events in Azure SQL Database](http://azure.microsoft.com/documentation/articles/sql-database-xevent-db-diff-from-svr/)  
+ [Extended events in Azure SQL Database](https://azure.microsoft.com/documentation/articles/sql-database-xevent-db-diff-from-svr/)  
   
   

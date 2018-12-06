@@ -2,25 +2,23 @@
 title: "Connect Clients to a Database Mirroring Session (SQL Server) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
+ms.prod: sql
+ms.prod_service: high-availability
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: high-availability
+ms.topic: conceptual
 helpviewer_keywords: 
   - "partners [SQL Server], connecting clients to"
   - "database mirroring [SQL Server], connecting clients to"
   - "client connections [SQL Server], database mirroring"
   - "connections [SQL Server], database mirroring"
 ms.assetid: 0d5d2742-2614-43de-9ab9-864addb6299b
-caps.latest.revision: 95
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ---
 # Connect Clients to a Database Mirroring Session (SQL Server)
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   To connect to a database mirroring session, a client can use either [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client or .NET Framework Data Provider for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. When configured for a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] database, these data access providers both fully support database mirroring. For information about programming considerations for using a mirrored database, see [Using Database Mirroring](../../relational-databases/native-client/features/using-database-mirroring.md). In addition, the current principal server instance must be available and the login of the client must have been created on the server instance. For more information, see [Troubleshoot Orphaned Users &#40;SQL Server&#41;](../../sql-server/failover-clusters/troubleshoot-orphaned-users-sql-server.md). Client connections to a database mirroring session do not involve the witness server instance, if one exists.  
   
   
@@ -191,7 +189,7 @@ Server=123.34.45.56,4724;
   
   
 ### Retry Delays During Failover  
- If a client attempts to connect to a partner that is failing over, the partner immediately responds that it is inactive. In this case, each round of connection attempts are much briefer than the allotted retry time. This means that many rounds of connection attempts could happen before the login period times out. To avoid overloading the partners with a rapid series of connection attempts during a failover, the data access provider adds a brief retry delay after each retry cycle. The length of a given retry delay is determined by the retry-delay algorithm. After the first round, the delay is 100 milliseconds. After each of the next three rounds, the retry delay doubles—to 200, 400, and 800. For all later rounds, the retry delay is 1 second until the connection attempt succeeds or times out.  
+ If a client attempts to connect to a partner that is failing over, the partner immediately responds that it is inactive. In this case, each round of connection attempts are much briefer than the allotted retry time. This means that many rounds of connection attempts could happen before the login period times out. To avoid overloading the partners with a rapid series of connection attempts during a failover, the data access provider adds a brief retry delay after each retry cycle. The length of a given retry delay is determined by the retry-delay algorithm. After the first round, the delay is 100 milliseconds. After each of the next three rounds, the retry delay doubles-to 200, 400, and 800. For all later rounds, the retry delay is 1 second until the connection attempt succeeds or times out.  
   
 > [!NOTE]  
 >  If the server instance is stopped, then the connection request fails immediately.  

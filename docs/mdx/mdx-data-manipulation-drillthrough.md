@@ -1,30 +1,17 @@
 ---
 title: "DRILLTHROUGH Statement (MDX) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/02/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "DRILLTHROUGH"
-dev_langs: 
-  - "kbMDX"
-helpviewer_keywords: 
-  - "DRILLTHROUGH statement"
-  - "retrieving data"
-  - "data retrieval [MDX]"
-ms.assetid: dfa22755-0ed4-4bba-9c31-7ade26d9ebdb
-caps.latest.revision: 37
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
+ms.date: 06/04/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: mdx
+ms.topic: reference
+ms.author: owend
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
 ---
 # MDX Data Manipulation - DRILLTHROUGH
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+
 
   Retrieves the underlying table rows that were used to create a specified cell in a cube.  
   
@@ -50,7 +37,7 @@ DRILLTHROUGH[MAXROWSUnsigned_Integer]
  A comma-separated list of dimension attributes and measures.  
   
 ## Remarks  
- Drillthrough is an operation in which an end user selects a single cell from a cube and retrieves a result set from the source data for that cell in order to get more detailed information. By default, a drillthrough result set is derived from the table rows that were evaluated to calculate the value of the selected cube cell. For end users to drill through, their client applications must support this capability. In [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], the results are retrieved directly from MOLAP storage, unless ROLAP partitions or dimensions are queried.  
+ Drillthrough is an operation in which an end user selects a single cell from a cube and retrieves a result set from the source data for that cell in order to get more detailed information. By default, a drillthrough result set is derived from the table rows that were evaluated to calculate the value of the selected cube cell. For end users to drill through, their client applications must support this capability. In [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], the results are retrieved directly from MOLAP storage, unless ROLAP partitions or dimensions are queried.  
   
 > [!IMPORTANT]  
 >  Drillthrough security is based on the general security options defined on the cube. If a user cannot get some data by using MDX, drillthrough will also restrict the user in the exactly the same manner.  

@@ -2,12 +2,10 @@
 title: "sys.tables (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/22/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
+ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: system-objects
 ms.topic: "language-reference"
 f1_keywords: 
   - "tables_TSQL"
@@ -19,13 +17,13 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.tables catalog view"
 ms.assetid: 8c42eba1-c19f-4045-ac82-b97a5e994090
-caps.latest.revision: 70
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: stevestein
+ms.author: sstein
+manager: craigg
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.tables (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Returns a row for each user table in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
@@ -33,7 +31,7 @@ manager: "jhubbard"
 |-----------------|---------------|-----------------|  
 |\<inherited columns>||For a list of columns that this view inherits, see [sys.objects &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md).|  
 |lob_data_space_id|**int**|A nonzero value is the ID of the data space (filegroup or partition scheme) that holds the large object binary (LOB) data for this table. Examples of LOB data types include **varbinary(max)**, **varchar(max)**, **geography**, or **xml**.<br /><br /> 0 = The table does not LOB data.|  
-|filestream_data_space_id|**int**|Is the data space ID for a FILESTREAM filegroup or a partition scheme that consists of FILESTREAM filegroups.<br /><br /> To report the name of a FILESTREAM filegroup, execute the query `SELECT FILEGROUP`_`NAME (filestream`\_`data`\_`space`\_`id) FROM sys.tables`.<br /><br /> sys.tables can be joined to the following views on filestream_data_space_id = data_space_id.<br /><br /> - sys.filegroups<br /><br /> - sys.partition_schemes<br /><br /> - sys.indexes<br /><br /> - sys.allocation_units<br /><br /> - sys.fulltext_catalogs<br /><br /> - sys.data_spaces<br /><br /> - sys.destination_data_spaces<br /><br /> - sys.master_files<br /><br /> - sys.database_files<br /><br /> - backupfilegroup (join on filegroup_id)|  
+|filestream_data_space_id|**int**|Is the data space ID for a FILESTREAM filegroup or a partition scheme that consists of FILESTREAM filegroups.<br /><br /> To report the name of a FILESTREAM filegroup, execute the query `SELECT FILEGROUP_NAME (filestream_data_space_id) FROM sys.tables`.<br /><br /> sys.tables can be joined to the following views on filestream_data_space_id = data_space_id.<br /><br /> - sys.filegroups<br /><br /> - sys.partition_schemes<br /><br /> - sys.indexes<br /><br /> - sys.allocation_units<br /><br /> - sys.fulltext_catalogs<br /><br /> - sys.data_spaces<br /><br /> - sys.destination_data_spaces<br /><br /> - sys.master_files<br /><br /> - sys.database_files<br /><br /> - backupfilegroup (join on filegroup_id)|  
 |max_column_id_used|**int**|Maximum column ID ever used by this table.|  
 |lock_on_bulk_load|**bit**|Table is locked on bulk load. For more information, see [sp_tableoption &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-tableoption-transact-sql.md).|  
 |uses_ansi_nulls|**bit**|Table was created with the SET ANSI_NULLS database option ON.|  
@@ -59,7 +57,9 @@ manager: "jhubbard"
 |history_retention_period|**int**|**Applies to**: [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)]. <br/><br/>The numeric value representing duration of the temporal history retention period in units specified with history_retention_period_unit. |  
 |history_retention_period_unit|**int**|**Applies to**: [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)]. <br/><br/>The numeric value representing type of temporal history retention period unit. <br /><br />-1 :INFINITE <br /><br />3: DAY <br /><br />4: WEEK <br /><br />5: MONTH <br /><br />6: YEAR |  
 |history_retention_period_unit_desc|**nvarchar(10)**|**Applies to**: [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)]. <br/><br/>The text description of type of temporal history retention period unit. <br /><br />INFINITE <br /><br />DAY <br /><br />WEEK <br /><br />MONTH <br /><br />YEAR |  
-  
+|is_node|**bit**|**Applies to**: [!INCLUDE[sssql17-md.md](../../includes/sssql17-md.md)] and [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)]. <br/><br/>1 = This is a graph Node table. <br /><br />0 = This is not a graph Node table. |  
+|is_edge|**bit**|**Applies to**: [!INCLUDE[sssql17-md.md](../../includes/sssql17-md.md)] and [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)]. <br/><br/>1 = This is a graph Edge table. <br /><br />0 = This is not a graph Edge table. |  
+
 ## Permissions  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] For more information, see [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   

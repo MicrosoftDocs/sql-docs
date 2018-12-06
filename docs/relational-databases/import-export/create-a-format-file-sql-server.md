@@ -2,22 +2,21 @@
 title: "Create a Format File (SQL Server) | Microsoft Docs"
 ms.custom: ""
 ms.date: "02/23/2016"
-ms.prod: "sql-server-2016"
+ms.prod: sql
+ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-bulk-import-export"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: data-movement
+ms.topic: conceptual
 helpviewer_keywords: 
   - "format files [SQL Server], creating"
 ms.assetid: f680b4a0-630f-4052-9c79-d348c1076f7b
-caps.latest.revision: 57
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "douglaslMS"
+ms.author: "douglasl"
+manager: craigg
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Create a Format File (SQL Server)
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
   When you bulk import into a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] table or bulk export data from a table, you can use a format file to a flexible system for writing data files that requires little or no editing to comply with other data formats or to read data files from other software programs.  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] support two types of format file: non-XML format and XML format. The non-XML format is the original format that is supported by earlier versions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -67,7 +66,7 @@ manager: "jhubbard"
   
  At the Windows command prompt, enter the following `bcp` command:  
   
-```  
+```cmd
 bcp AdventureWorks2012.HumanResources.Department format nul -T -n -f Department-n.fmt  
 ```  
   
@@ -97,7 +96,7 @@ bcp AdventureWorks2012.HumanResources.Department format nul -T -n -f Department-
   
  At the Windows command prompt, enter the following `bcp` command:  
   
-```  
+```cmd
 bcp AdventureWorks2012.HumanResources.Department format nul -c -f Department-c.fmt -T  
 ```  
   
@@ -117,7 +116,7 @@ bcp AdventureWorks2012.HumanResources.Department format nul -c -f Department-c.f
 #### C. Creating a non-XML format file for Unicode native data  
  To create a non-XML format file for Unicode native data for the `HumanResources.Department` table, use the following command:  
   
-```  
+```cmd
 bcp AdventureWorks2012.HumanResources.Department format nul -T -N -f Department-n.fmt  
 ```  
   
@@ -126,14 +125,14 @@ bcp AdventureWorks2012.HumanResources.Department format nul -T -N -f Department-
 #### D. Creating a non-XML format file For Unicode character data  
  To create a non-XML format file for Unicode character data for the `HumanResources.Department` table that uses default terminators, use the following command:  
   
-```  
+```cmd
 bcp AdventureWorks2012.HumanResources.Department format nul -T -w -f Department-w.fmt  
 ```  
   
  For more information about how to use Unicode character data, see [Use Unicode Character Format to Import or Export Data &#40;SQL Server&#41;](../../relational-databases/import-export/use-unicode-character-format-to-import-or-export-data-sql-server.md).  
   
 #### F. Using a format file with the code page option  
- If you create a format file using the bcp command (i.e. using “`bcp forma`t …” ) information about the collation/code page will be written in the format file.   
+If you create a format file using the bcp command (that is, by using `bcp format`), information about the collation/code page will be written in the format file.   
 The following example format file for a table with 5 columns includes the collation.  
   
 ```  
@@ -147,7 +146,7 @@ The following example format file for a table with 5 columns includes the collat
   
 ```  
   
- If you try to import data into [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] using `bcp in –c –C65001 –f format_file` …” or “`BULK INSERT`/`OPENROWSET` … `FORMATFILE='format_file' CODEPAGE=65001` …”, information about the collation/code page will have priority over 65001 option.  
+ If you try to import data into [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] using `bcp in -c -C65001 -f format_file` ..." or "`BULK INSERT`/`OPENROWSET` ... `FORMATFILE='format_file' CODEPAGE=65001` ...", information about the collation/code page will have priority over 65001 option.  
 Therefore, if you generate a  format file, you must manually delete the collation info from the generated format file before you start importing data back into [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
 The following is an example of the format file without the collation info.  
   
@@ -197,15 +196,15 @@ The following is an example of the format file without the collation info.
   
  At the Windows command prompt, enter the following `bcp` command:  
   
-```  
-bcp AdventureWorks2012.HumanResources.Department format nul -c -x -f Department-c..xml –t, -T  
+```cmd
+bcp AdventureWorks2012.HumanResources.Department format nul -c -x -f Department-c..xml -t, -T  
 ```  
   
  The generated format file, `Department-c.xml`, contains the following XML elements:  
   
-```  
+```xml
 <?xml version="1.0"?>  
-<BCPFORMAT xmlns="http://schemas.microsoft.com/sqlserver/2004/bulkload/format" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">  
+<BCPFORMAT xmlns="https://schemas.microsoft.com/sqlserver/2004/bulkload/format" xmlns:xsi="https://www.w3.org/2001/XMLSchema-instance">  
  <RECORD>  
   <FIELD ID="1" xsi:type="CharTerm" TERMINATOR="," MAX_LENGTH="7"/>  
   <FIELD ID="2" xsi:type="CharTerm" TERMINATOR="," MAX_LENGTH="100" COLLATION="SQL_Latin1_General_CP1_CI_AS"/>  
@@ -236,15 +235,15 @@ bcp AdventureWorks2012.HumanResources.Department format nul -c -x -f Department-
   
  At the Windows command prompt, enter the following `bcp` command:  
   
-```  
+```cmd
 bcp AdventureWorks2012.HumanResources.Department format nul -x -f Department-n..xml -n -T  
 ```  
   
  The generated format file, `Department-n.xml`, contains the following XML elements:  
   
-```  
+```xml
 <?xml version="1.0"?>  
-<BCPFORMAT xmlns="http://schemas.microsoft.com/sqlserver/2004/bulkload/format" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">  
+<BCPFORMAT xmlns="https://schemas.microsoft.com/sqlserver/2004/bulkload/format" xmlns:xsi="https://www.w3.org/2001/XMLSchema-instance">  
  <RECORD>  
   <FIELD ID="1" xsi:type="NativeFixed" LENGTH="2"/>  
   <FIELD ID="2" xsi:type="NCharPrefix" PREFIX_LENGTH="2" MAX_LENGTH="100" COLLATION="SQL_Latin1_General_CP1_CI_AS"/>  

@@ -1,30 +1,23 @@
 ---
 title: "Creating Variable Value Files (AccessToSQL) | Microsoft Docs"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.custom: ""
-ms.date: "01/19/2017"
+ms.date: "08/17/2017"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "sql-ssma"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to: 
-  - "Azure SQL Database"
-  - "SQL Server"
+ms.technology: ssma
+ms.topic: conceptual
 ms.assetid: 808595c3-8ef1-40bd-a93e-5cf237950e08
-caps.latest.revision: 15
-author: "sabotta"
-ms.author: "carlasab"
-manager: "lonnyb"
+author: "Shamikg"
+ms.author: "Shamikg"
+manager: craigg
 ---
 # Creating Variable Value Files (AccessToSQL)
-Variable Value File is an XML file comprising the parameter values of commands like, the source or destination server name that frequently change from one server migration to another. When a large number of database migrations occur, multiple variable files for storing the value of each source server will be created and referenced in a master script file with the **–v** switch at command line. This helps in maintaining static values in a few script files with the variable values in multiple variable files.  
+A Variable Value File is an XML file comprising the parameter values of commands (such as the source or destination server name) that frequently change across server migrations. When a large number of database migrations occur, multiple variable files for storing the value of each source server are created and referenced in a master script file with the **-v** switch at command line. This behavior helps in maintaining static values in a few script files with the variable values in multiple variable files.  
   
 > [!NOTE]  
-> 1.  Variable names are prefixed and suffixed with a $ (dollar) symbol. If the variables are not assigned a value in the variable value file, you will encounter an error during the parsing of the script file resulting in stalling the console execution process.  
-> 2.  The escape character for **$** is **$$**. If the value of a variable or static value of a parameter contains **$** (dollar) symbol, then **$$** must be specified to treat it as a character instead of a variable.  
-> 3.  For maintainability purposes, variables can be declared inside `‘variable-group’` elements for logical separation of user defined variables.  Usage of this element is not mandatory.  
+> -  Variable names are prefixed and suffixed with a $ (dollar) symbol. If a variable is not assigned a value in the variable value file, an error during the parsing of the script file will occur, resulting in stalling the console execution process.  
+> -  The escape character for **$** is **$$**. If the value of a variable or static value of a parameter contains a **$** (dollar) symbol, then **$$** must be specified to treat it as a character instead of a variable.  
+> -  For maintainability purposes, variables can be declared inside `'variable-group'` elements for logical separation of user-defined variables.  Usage of this element is not mandatory.  
   
 **Examples:**  
   
@@ -89,12 +82,12 @@ Variable Value File is an XML file comprising the parameter values of commands l
 </variables>  
 ```  
   
-## Variable Value File Validation  
-The user can easily validate his/her variable value file against the schema definition file **ConsoleScriptVariablesSchema.xsd** available in the ‘Schemas’ folder.  
+## Variable value file validation  
+The user can easily validate his/her variable value file against the schema definition file **ConsoleScriptVariablesSchema.xsd** available in the 'Schemas' folder.  
   
-## Next Step  
+## Next step  
 The next step in operating the console is [Creating the Server Connection Files &#40;AccessToSQL&#41;](../../ssma/access/creating-the-server-connection-files-accesstosql.md)  
   
-## See Also  
-[Creating the Server Connection Files (Access)](http://msdn.microsoft.com/en-us/829153be-aa8e-4162-87e8-69882feecf19)  
+## See also  
+[Creating the Server Connection Files (Access)](https://msdn.microsoft.com/829153be-aa8e-4162-87e8-69882feecf19)  
   

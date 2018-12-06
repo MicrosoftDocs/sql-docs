@@ -2,13 +2,11 @@
 title: "Enhance Merge Replication Performance | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
+ms.prod: sql
+ms.prod_service: "database-engine"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: replication
+ms.topic: conceptual
 helpviewer_keywords: 
   - "publications [SQL Server replication], design and performance"
   - "designing databases [SQL Server], replication performance"
@@ -19,12 +17,12 @@ helpviewer_keywords:
   - "performance [SQL Server replication], merge replication"
   - "agents [SQL Server replication], performance"
 ms.assetid: f929226f-b83d-4900-a07c-a62f64527c7f
-caps.latest.revision: 47
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "MashaMSFT"
+ms.author: "mathoma"
+manager: craigg
 ---
 # Enhance Merge Replication Performance
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   After considering the general performance tips described in [Enhancing General Replication Performance](../../../relational-databases/replication/administration/enhance-general-replication-performance.md), consider these additional areas specific to merge replication.  
   
 ## Database Design  
@@ -98,9 +96,9 @@ manager: "jhubbard"
   
      Upgrading the Subscriber to [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] or a later version upgrades the Merge Agent used by the subscriptions at that Subscriber. To take advantage of many of the new features and performance optimizations, the Merge Agent from [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] or a later version is required.  
   
--   If a subscription is synchronized over a fast connection and changes are sent from the Publisher and Subscriber, use the **–ParallelUploadDownload** parameter for the Merge Agent.  
+-   If a subscription is synchronized over a fast connection and changes are sent from the Publisher and Subscriber, use the **-ParallelUploadDownload** parameter for the Merge Agent.  
   
-     [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] introduced a new Merge Agent parameter: **–ParallelUploadDownload**. Setting this parameter allows the Merge Agent to process in parallel the changes uploaded to the Publisher and those downloaded to the Subscriber. This is useful in high volume environments with high network bandwidth. Agent parameters can be specified in agent profiles and on the command line. For more information, see:  
+     [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] introduced a new Merge Agent parameter: **-ParallelUploadDownload**. Setting this parameter allows the Merge Agent to process in parallel the changes uploaded to the Publisher and those downloaded to the Subscriber. This is useful in high volume environments with high network bandwidth. Agent parameters can be specified in agent profiles and on the command line. For more information, see:  
   
     -   [Work with Replication Agent Profiles](../../../relational-databases/replication/agents/work-with-replication-agent-profiles.md)  
   

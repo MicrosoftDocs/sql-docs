@@ -1,13 +1,11 @@
 ---
 title: "Filter (geometry Data Type) | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-non-specified"
+ms.date: "08/03/2017"
+ms.prod: sql
+ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: t-sql
 ms.topic: "language-reference"
 f1_keywords: 
   - "Filter"
@@ -18,23 +16,18 @@ dev_langs:
 helpviewer_keywords: 
   - "Filter method"
 ms.assetid: 3d629a39-157e-4159-a3ca-a3c2e0ed4160
-caps.latest.revision: 10
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "douglaslMS"
+ms.author: "douglasl"
+manager: craigg
 ---
 # Filter (geometry Data Type)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  A method that offers a fast, index-only intersection method to determine if a **geometry** instance intersects another **geometry** instance, assuming an index is available.  
+A method that offers a fast, index-only intersection method to determine if a **geometry** instance intersects another **geometry** instance, assuming an index is available.
   
- Returns 1 if a **geometry** instance potentially intersects another **geometry** instance. This method may produce a false positive return, and the exact result may be plan-dependent. Returns an accurate 0 value (true negative return) if there is no intersection of **geometry** instances found.  
+Returns 1 if a **geometry** instance potentially intersects another **geometry** instance. This method may produce a false positive return, and the exact result may be plan-dependent. Returns an accurate 0 value (true negative return) if there is no intersection of **geometry** instances found.
   
- In cases where an index is not available, or is not used, the method will return the same values as **STIntersects()** when called with the same parameters.  
-  
-||  
-|-|  
-|**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [current version](http://go.microsoft.com/fwlink/p/?LinkId=299658)), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|  
+In cases where an index is not available, or is not used, the method will return the same values as **STIntersects()** when called with the same parameters.
   
 ## Syntax  
   
@@ -81,3 +74,4 @@ WHERE g.Filter(geometry::Parse('POLYGON((-1 -1, 1 -1, 1 1, -1 1, -1 -1))')) = 1;
  [STIntersects &#40;geometry Data Type&#41;](../../t-sql/spatial-geometry/stintersects-geometry-data-type.md)  
   
   
+

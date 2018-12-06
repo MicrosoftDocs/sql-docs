@@ -2,13 +2,11 @@
 title: "TRIM (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/20/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
+ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: t-sql
+ms.topic: conceptual
 f1_keywords: 
   - "TRIM"
   - "TRIM_TSQL"
@@ -17,13 +15,16 @@ dev_langs:
 helpviewer_keywords: 
   - "TRIM function"
 ms.assetid: a00245aa-32c7-4ad4-a0d1-64f3d6841153
-caps.latest.revision: 4
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+monikerRange: "=azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # TRIM (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ssvNxt-asdb-xxxx-xxx](../../includes/tsql-appliesto-ssvnxt-asdb-xxxx-xxx.md)]
+[!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
+
+> [!div class="nextstepaction"]
+> [Please help improve SQL Server docs!](https://80s3ignv.optimalworkshop.com/optimalsort/36yyw5kq-0)
 
 Removes the space character `char(32)` or other specified characters from the start or end of a string.  
  
@@ -51,7 +52,7 @@ By default `TRIM` function removes the space character `char(32)` from both side
 ## Examples
 ### A.  Removes the space character from both sides of string   
 The following example removes spaces from before and after the word `test`.   
-```tsql
+```sql
 SELECT TRIM( '     test    ') AS Result;
 ```
 
@@ -62,7 +63,7 @@ SELECT TRIM( '     test    ') AS Result;
 
 ### B.  Removes specified characters from both sides of string   
 The following example removes a trailing period and trailing spaces.
-```tsql
+```sql
 SELECT TRIM( '.,! ' FROM  '#     test    .') AS Result;
 ```
 
@@ -71,7 +72,10 @@ SELECT TRIM( '.,! ' FROM  '#     test    .') AS Result;
 
 
 ## See Also
-[String Functions (Transact-SQL)](../../t-sql/functions/string-functions-transact-sql.md)   
-[LTRIM (Transact-SQL)](../../t-sql/functions/ltrim-transact-sql.md)   
-[RTRIM (Transact-SQL)](../../t-sql/functions/rtrim-transact-sql.md)   
-[REPLACE (Transact-SQL)](../../t-sql/functions/replace-transact-sql.md)   
+ [LEFT &#40;Transact-SQL&#41;](../../t-sql/functions/left-transact-sql.md)  
+ [LTRIM &#40;Transact-SQL&#41;](../../t-sql/functions/ltrim-transact-sql.md)  
+ [RIGHT &#40;Transact-SQL&#41;](../../t-sql/functions/right-transact-sql.md)  
+ [RTRIM &#40;Transact-SQL&#41;](../../t-sql/functions/rtrim-transact-sql.md)  
+ [STRING_SPLIT &#40;Transact-SQL&#41;](../../t-sql/functions/string-split-transact-sql.md)  
+ [SUBSTRING &#40;Transact-SQL&#41;](../../t-sql/functions/substring-transact-sql.md)  
+ [String Functions &#40;Transact-SQL&#41;](../../t-sql/functions/string-functions-transact-sql.md)   

@@ -1,25 +1,18 @@
 ---
 title: "Connecting to MySQL (MySQLToSQL) | Microsoft Docs"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "sql-ssma"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to: 
-  - "Azure SQL Database"
-  - "SQL Server"
+ms.technology: ssma
+ms.topic: conceptual
 helpviewer_keywords: 
   - "Connecting to MySQL, MySQL permission"
   - "Connecting to MySQL,reconnecting"
 ms.assetid: 084c7020-f729-4f91-90e0-143f85fa68d1
-caps.latest.revision: 13
-author: "sabotta"
-ms.author: "carlasab"
-manager: "lonnyb"
+author: "Shamikg"
+ms.author: "Shamikg"
+manager: craigg
 ---
 # Connecting to MySQL (MySQLToSQL)
 To migrate MySQL databases to SQL Server or SQL Azure, you must connect to the MySQL database that you want to migrate. When you connect, SSMA obtains metadata about all MySQL schemas, and then displays it in the MySQL Metadata Explorer pane. SSMA stores information about the database server, but does not store passwords.  
@@ -31,11 +24,11 @@ Metadata about the MySQL database is not automatically updated. Instead, if you 
 ## Required MySQL Permissions  
 The account that is used to connect to the MySQL database must have at least **CONNECT** permissions. This enables SSMA to obtain metadata from schemas owned by the connecting user. To obtain metadata for objects in other schemas and then convert objects in those schemas, the account must have the following permissions:  
   
--   ‘SHOW’ privileges on database objects  
+-   'SHOW' privileges on database objects  
   
--   ‘SELECT’ privilege on ‘Information_schema’  
+-   'SELECT' privilege on 'Information_schema'  
   
--   ‘SELECT’ privilege on mysql (for UDFs)  
+-   'SELECT' privilege on mysql (for UDFs)  
   
 ## Establishing a Connection to MySQL  
 When you connect to a database, SSMA reads the database metadata, and then adds this metadata to the project file. This metadata is used by SSMA when it converts objects to SQL Server or SQL Azure syntax, and when it migrates data to SQL Server or SQL Azure. You can browse this metadata in the MySQL Metadata Explorer pane and review properties of individual database objects.  
@@ -70,16 +63,16 @@ When you connect to a database, SSMA reads the database metadata, and then adds 
     > [!NOTE]  
     > To enable **Configure**, SSL must be set to **True**.  
   
-    On clicking the button “Configure”, a dialog-box appears. To use encryption while connecting to MySQL Database, path to the following three certificate files present in the dialog-box must be defined [Privacy Enhanced Mail Certificates (PEM)]:  
+    On clicking the button "Configure", a dialog-box appears. To use encryption while connecting to MySQL Database, path to the following three certificate files present in the dialog-box must be defined [Privacy Enhanced Mail Certificates (PEM)]:  
   
-    -   **SSL Certificate Authority:** Specifies the path to a file with a list of trust SSL CAs’.  
+    -   **SSL Certificate Authority:** Specifies the path to a file with a list of trust SSL CAs'.  
   
     -   **SSL Certificate:** Specifies the name of the SSL certificate file to use for establishing a secure connection.  
   
     -   **SSL KEY:** Specifies the name of the SSL key file to use for establishing a secure connection.  
   
     > [!NOTE]  
-    > -   The **OK** button is enabled when the required information has been provided. If any of the file paths are invalid, the “OK” button will remain disabled.  
+    > -   The **OK** button is enabled when the required information has been provided. If any of the file paths are invalid, the "OK" button will remain disabled.  
     > -   The **Cancel** button closes the dialog box and **turns off** the SSL option from the main Connection Form.  
   
 7.  For more information, see [Connect to MySQL &#40;MySQLToSQL&#41;](../../ssma/mysql/connect-to-mysql-mysqltosql.md)  

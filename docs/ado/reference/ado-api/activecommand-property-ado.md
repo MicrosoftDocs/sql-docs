@@ -1,24 +1,21 @@
 ---
 title: "ActiveCommand Property (ADO) | Microsoft Docs"
-ms.prod: "sql-non-specified"
-ms.technology:
-  - "drivers"
+ms.prod: sql
+ms.prod_service: connectivity
+ms.technology: connectivity
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 apitype: "COM"
 f1_keywords: 
   - "Recordset20::ActiveCommand"
 helpviewer_keywords: 
   - "ActiveCommand property [ADO]"
 ms.assetid: fb4088d5-5968-42d6-aeaa-3955046bb4da
-caps.latest.revision: 11
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # ActiveCommand Property (ADO)
 Indicates the [Command](../../../ado/reference/ado-api/command-object-ado.md) object that created the associated [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) object.  

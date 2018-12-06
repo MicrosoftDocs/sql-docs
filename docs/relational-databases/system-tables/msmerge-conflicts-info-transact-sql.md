@@ -2,15 +2,11 @@
 title: "MSmerge_conflicts_info (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/16/2017"
-ms.prod: "sql-server-2016"
+ms.prod: sql
+ms.prod_service: "database-engine"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
+ms.technology: replication
 ms.topic: "language-reference"
-applies_to: 
-  - "SQL Server"
 f1_keywords: 
   - "MSmerge_conflicts_info_TSQL"
   - "MSmerge_conflicts_info"
@@ -19,13 +15,12 @@ dev_langs:
 helpviewer_keywords: 
   - "MSmerge_conflicts_info system table"
 ms.assetid: 6b76ae96-737a-4000-a6b6-fcc8772c2af4
-caps.latest.revision: 19
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: stevestein
+ms.author: sstein
+manager: craigg
 ---
 # MSmerge_conflicts_info (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   The **MSmerge_conflicts_info** table tracks conflicts that occur when synchronizing a subscription to a merge publication. The losing row data for conflicts is stored in the [MSmerge_conflict_publication_article](../../relational-databases/system-tables/msmerge-conflict-publication-article-transact-sql.md) table for the article where the conflict occurred. This table is stored at the Publisher in the publication database and at the Subscriber in the subscription database.  
   

@@ -1,32 +1,17 @@
 ---
 title: "SELECT FROM &lt;model&gt;.CONTENT (DMX) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/02/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "SELECT"
-  - "FROM"
-  - "Content"
-dev_langs: 
-  - "DMX"
-helpviewer_keywords: 
-  - "schema rowsets [Analysis Services], data mining"
-  - "SELECT FROM <model>.CONTENT statement"
-ms.assetid: a270b33f-77be-41fa-9340-2f6cb0dd75e5
-caps.latest.revision: 43
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
+ms.date: 06/07/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: dmx
+ms.topic: conceptual
+ms.author: owend
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
 ---
 # SELECT FROM &lt;model&gt;.CONTENT (DMX)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   Returns the mining model schema rowset for the specified data mining model.  
   
@@ -56,7 +41,7 @@ SELECT [FLATTENED] [TOP <n>] <expression list> FROM <model>.CONTENT
  Optional. An expression that returns a scalar value.  
   
 ## Remarks  
- The **SELECT FROM** *\<model>***.CONTENT** statement returns content that is specific to each algorithm. For example, you might want to use the descriptions of all the rules of an association rules model in a custom application. You can use a **SELECT FROM \<model>.CONTENT** statement to return values in the NODE_RULE column of the model.  
+ The **SELECT FROM** _\<model>_**.CONTENT** statement returns content that is specific to each algorithm. For example, you might want to use the descriptions of all the rules of an association rules model in a custom application. You can use a **SELECT FROM \<model>.CONTENT** statement to return values in the NODE_RULE column of the model.  
   
  The following table lists the columns that are included in the mining model content.  
   

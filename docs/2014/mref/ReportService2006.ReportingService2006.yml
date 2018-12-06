@@ -1,0 +1,11 @@
+### YamlMime:XRefMap
+sorted: true
+hrefUpdated: true
+references:
+- uid: ReportService2006.ReportingService2006
+  commentId: T:ReportService2006,ReportingService2006
+  href: https://msdn.microsoft.com/library/reportservice2006.reportingservice2006(v=sql.120).aspx
+  name: ReportingService2006
+  name.vb: ReportingService2006
+  fullName: ReportService2006.ReportingService2006
+  fullName.vb: ReportService2006.ReportingService2006

@@ -1,23 +1,20 @@
 ---
 title: "Microsoft OLE DB Provider for Internet Publishing | Microsoft Docs"
-ms.prod: "sql-non-specified"
-ms.technology:
-  - "drivers"
-ms.custom: "H1Hack27Feb2017"
-ms.date: "01/19/2017"
+ms.prod: sql
+ms.prod_service: connectivity
+ms.technology: connectivity
+ms.custom: ""
+ms.date: 11/08/2018
 ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords:
   - "OLE DB provider for Internet publishing [ADO]"
   - "providers [ADO], OLE DB provider for Internet publishing"
   - "Internet Publishing provider [ADO]"
 ms.assetid: 66a208d9-b580-4655-a41e-1d36e5b5bfca
-caps.latest.revision: 10
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # Microsoft OLE DB Provider for Internet Publishing Overview
 The Microsoft OLE DB Provider for Internet Publishing allows ADO to access resources served by Microsoft FrontPage or Microsoft Internet Information Server. Resources include web source files such as HTML files, or Windows 2000 web folders.
@@ -25,7 +22,7 @@ The Microsoft OLE DB Provider for Internet Publishing allows ADO to access resou
 ## Connection String Parameters
  To connect to this provider, set the *Provider* argument of the [ConnectionString](../../../ado/reference/ado-api/connectionstring-property-ado.md) property to:
 
-```
+```vb
 MSDAIPP.DSO
 ```
 
@@ -34,13 +31,13 @@ MSDAIPP.DSO
 ## Typical Connection String
  A typical connection string for this provider is:
 
-```
+```vb
 "Provider=MSDAIPP.DSO;Data Source=ResourceURL;User ID=MyUserID;Password=MyPassword;"
 ```
 
  -or-
 
-```
+```vb
 "URL=ResourceURL;User ID=MyUserID;Password=MyPassword;"
 ```
 

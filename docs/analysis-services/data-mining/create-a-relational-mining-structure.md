@@ -1,28 +1,17 @@
 ---
 title: "Create a Relational Mining Structure | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/13/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "dimensions [Analysis Services], data mining"
-  - "data mining [Analysis Services], structure"
-  - "mining structures [Analysis Services], creating"
-  - "relational mining models [Analysis Services]"
-  - "OLAP mining models [Analysis Services]"
-ms.assetid: 5547d639-377d-4ca7-88fc-ce1f9e2babc5
-caps.latest.revision: 35
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
+ms.date: 05/01/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: data-mining
+ms.topic: conceptual
+ms.author: owend
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
 ---
 # Create a Relational Mining Structure
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   Most data mining models are based on relational data sources. The advantages of creating a relational data mining model are that you can assemble ad hoc data and train and update a model without the complexity of creating a cube.  
   
  A relational mining structure can draw data from disparate sources. The raw data can be stored in tables, files, or relational database systems, so long as the data can be defined as part of data source view. For example, you should use a relational mining structure if your data is in Excel, a SQL Server data warehouse or SQL Server reporting database, or in external sources that are accessed via the OLE DB or ODBC providers.  
@@ -69,7 +58,7 @@ manager: "jhubbard"
   
 6.  **Specify Columns Content and Data Types**: For each column that you use in the structure, you must choose both a *data type* and a *content type*.  
   
-     The wizard will automatically detect possible data types, but you don’t need to use the data type recommended by the wizard. For example, even if your data contains numbers, they might be representative of categorical data. Columns that you specify as keys are automatically assigned the correct data type for that particular model type. For more information, see [Mining Model Columns](../../analysis-services/data-mining/mining-model-columns.md) and [Data Types &#40;Data Mining&#41;](../../analysis-services/data-mining/data-types-data-mining.md).  
+     The wizard will automatically detect possible data types, but you don't need to use the data type recommended by the wizard. For example, even if your data contains numbers, they might be representative of categorical data. Columns that you specify as keys are automatically assigned the correct data type for that particular model type. For more information, see [Mining Model Columns](../../analysis-services/data-mining/mining-model-columns.md) and [Data Types &#40;Data Mining&#41;](../../analysis-services/data-mining/data-types-data-mining.md).  
   
      The *content type* that you choose for each column that you use in the model tells the algorithm how the data should be processed.  
   
@@ -88,7 +77,7 @@ manager: "jhubbard"
 ##  <a name="BKMK_ChooseRelData"></a> How to Choose Relational Data  
  Relational mining structures can be based on any data that is available through an OLE DB data source. If the source data is contained within multiple tables, you use a data source view to assemble the tables and columns that you need in one place.  
   
- If the tables include any one-to-many relationships—for example, you have multiple purchase records for each customer that you want to analyze—you can add both tables, and then use one table as the case table, linking data on the many side of the relationship as a nested table.  
+ If the tables include any one-to-many relationships-for example, you have multiple purchase records for each customer that you want to analyze-you can add both tables, and then use one table as the case table, linking data on the many side of the relationship as a nested table.  
   
  The data in a mining structure is derived from whatever is in the existing data source view. You can modify data as you need within the data source view, adding relationships or derived columns that might not be present in the underlying relational data. You can also create named calculations or aggregations within the data source view. These features are very handy if you do not have control over the arrangement of data in the data source, or if you want to experiment with different aggregations of data for your data mining models.  
   
@@ -97,7 +86,7 @@ manager: "jhubbard"
 ##  <a name="bkmk_ContentDataType"></a> How to Specify Content Type and Data Type  
  The data type is pretty much the same as the data types you specify in SQL Server or other application interfaces: dates and times, numbers of different sizes, Boolean values, text and other discrete data.  
   
- However, content types are important for data mining and affect the outcome of analysis. The content type tells the algorithm what it should do with the data: should numbers be treated on a continuous scale, or binned? How many potential values are there? Is each value distinct? If the value is a key, what kind of key is it – does it indicate a date/time value, a sequence, or some other kind of key?  
+ However, content types are important for data mining and affect the outcome of analysis. The content type tells the algorithm what it should do with the data: should numbers be treated on a continuous scale, or binned? How many potential values are there? Is each value distinct? If the value is a key, what kind of key is it - does it indicate a date/time value, a sequence, or some other kind of key?  
   
  Note that the choice of data type can limit your choice of content types. For example, you cannot discretize values that are not numeric. If you cannot see the content type that you want, you can click **Back** to return to the data type page and try a different data type.  
   
@@ -109,14 +98,14 @@ manager: "jhubbard"
  Near the end of the wizard, you must decide whether to partition your data into training and testing sets. The ability to provision a randomly sampled portion of the data for testing is very convenient, as it ensures that a consistent set of test data is available for use with all mining models associated with the new mining structure.  
   
 > [!WARNING]  
->  Note that this option is not available for all model types. For example, if you create a forecasting model, you won’t be able to use holdout, because the time series algorithm requires that there be no gaps in data. For a list of the model types that support holdout data sets, see [Training and Testing Data Sets](../../analysis-services/data-mining/training-and-testing-data-sets.md).  
+>  Note that this option is not available for all model types. For example, if you create a forecasting model, you won't be able to use holdout, because the time series algorithm requires that there be no gaps in data. For a list of the model types that support holdout data sets, see [Training and Testing Data Sets](../../analysis-services/data-mining/training-and-testing-data-sets.md).  
   
  To create this holdout data set, you specify the percentage of the data you want to use for testing. All remaining data will be used for training. Optionally, you can set a maximum number of cases to use for testing, or set a seed value to use in starting the random selection process.  
   
  The definition of the holdout test set is stored with the mining structure, so that whenever you create a new model based on the structure, the testing data set will be available for assessing the accuracy of the model. If you delete the cache of the mining structure, the information about which cases were used for training and which were used for testing will be deleted as well.  
   
 ##  <a name="BKMK_DrillThru"></a> Why and How to Enable Drillthrough  
- Almost at the very end of the wizard, you have the option to enable *drillthrough*. It is easy to miss this option, but it’s an important one. Drillthrough lets you view source data in the mining structure by querying the mining model.  
+ Almost at the very end of the wizard, you have the option to enable *drillthrough*. It is easy to miss this option, but it's an important one. Drillthrough lets you view source data in the mining structure by querying the mining model.  
   
  Why is this useful? Suppose you are viewing the results of a clustering model, and want to see the customers who were put into a specific cluster. By using drillthrough, you can view details such as contact information.  
   

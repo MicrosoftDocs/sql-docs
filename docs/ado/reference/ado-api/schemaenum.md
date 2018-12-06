@@ -1,36 +1,33 @@
 ---
 title: "SchemaEnum | Microsoft Docs"
-ms.prod: "sql-non-specified"
-ms.technology:
-  - "drivers"
+ms.prod: sql
+ms.prod_service: connectivity
+ms.technology: connectivity
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 apitype: "COM"
 f1_keywords: 
   - "SchemaEnum"
 helpviewer_keywords: 
   - "SchemaEnum enumeration [ADO]"
 ms.assetid: 21c97651-297f-469f-b5b5-c48af72b62a8
-caps.latest.revision: 15
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # SchemaEnum
 Specifies the type of schema **Recordset** that the [OpenSchema](../../../ado/reference/ado-api/openschema-method.md) method retrieves.  
   
 ## Remarks  
- Additional information about the function and columns returned for each ADO constant can be found in topics in [Appendix B: Schema Rowsets](http://msdn.microsoft.com/en-us/2b5fbf03-e50d-44ee-bc57-5a57666c55f1) of the OLE DB Programmer's Reference. The name of each topic is listed in parentheses in the Description section of the following table.  
+ Additional information about the function and columns returned for each ADO constant can be found in topics in [Appendix B: Schema Rowsets](https://msdn.microsoft.com/2b5fbf03-e50d-44ee-bc57-5a57666c55f1) of the OLE DB Programmer's Reference. The name of each topic is listed in parentheses in the Description section of the following table.  
   
- Additional information about the function and columns returned for each ADO MD constant can be found in topics in [OLE DB for OLAP Objects and Schema Rowsets](http://msdn.microsoft.com/en-us/d20bb2a6-68bd-423f-9ec8-eb930cd0c144) in the OLE DB for Online Analytical Processing (OLAP) documentation. The name of each topic is listed in parentheses in the Description column of the following table.  
+ Additional information about the function and columns returned for each ADO MD constant can be found in topics in [OLE DB for OLAP Objects and Schema Rowsets](https://msdn.microsoft.com/d20bb2a6-68bd-423f-9ec8-eb930cd0c144) in the OLE DB for Online Analytical Processing (OLAP) documentation. The name of each topic is listed in parentheses in the Description column of the following table.  
   
  You can translate the data types of columns in the OLE DB documentation to ADO data types by referring to the Description column of the ADO [DataTypeEnum](../../../ado/reference/ado-api/datatypeenum.md) topic. For example, an OLE DB data type of **DBTYPE_WSTR** is equivalent to an ADO data type of **adWChar**.  
   
- ADO generates schema-like results for the constants, **adSchemaDBInfoKeywords** and **adSchemaDBInfoLiterals**. ADO creates a **Recordset**, and then fills each row with the values returned respectively by the **IDBInfo::GetKeywords** and **IDBInfo::GetLiteralInfo** methods. Additional information about these methods can be found in the [IDBInfo](http://msdn.microsoft.com/en-us/3f5ad97f-3fc6-4f21-b691-f6911e4007f3) section of the OLE DB Programmer's Reference.  
+ ADO generates schema-like results for the constants, **adSchemaDBInfoKeywords** and **adSchemaDBInfoLiterals**. ADO creates a **Recordset**, and then fills each row with the values returned respectively by the **IDBInfo::GetKeywords** and **IDBInfo::GetLiteralInfo** methods. Additional information about these methods can be found in the [IDBInfo](https://msdn.microsoft.com/3f5ad97f-3fc6-4f21-b691-f6911e4007f3) section of the OLE DB Programmer's Reference.  
   
 |Constant|Value|Description|Constraint Columns|  
 |--------------|-----------|-----------------|------------------------|  

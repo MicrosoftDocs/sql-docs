@@ -1,14 +1,12 @@
 ---
 title: "ADO for Visual C++ Syntax Index with #import | Microsoft Docs"
-ms.prod: "sql-non-specified"
-ms.technology:
-  - "drivers"
+ms.prod: sql
+ms.prod_service: connectivity
+ms.technology: connectivity
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 apitype: "COM"
 dev_langs: 
   - "C++"
@@ -17,15 +15,14 @@ helpviewer_keywords:
   - "ADO for Visual C++ syntax with #import [ADO]"
   - "#import [ADO]"
 ms.assetid: 5930ccd2-5bab-448a-b0bf-773b8a83e87c
-caps.latest.revision: 10
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # ADO for Visual C++ Syntax Index with #import
 This index is a cross-reference to the ADO Language Reference based on Microsoft Visual C++ and the **#import** directive.  
   
- This particular index was derived by compiling a program with the **#import** directive against the ADO .dll, then reformatting the *.tlh file that was generated. Only information about methods, properties, and events was preserved. The alternative syntax declared for each property is listed by the corresponding "`__declspec(property...)`" directive.  
+ This particular index was derived by compiling a program with the **#import** directive against the ADO .dll, then reformatting the \*.tlh file that was generated. Only information about methods, properties, and events was preserved. The alternative syntax declared for each property is listed by the corresponding "`__declspec(property...)`" directive.  
   
  You are strongly encouraged to read [Visual C++ ADO Programming](../../../ado/guide/appendixes/visual-c-ado-programming.md) for more information.  
   

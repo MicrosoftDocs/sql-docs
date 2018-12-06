@@ -1,26 +1,23 @@
 ---
 title: "cross db ownership chaining Server Configuration Option | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/02/2017"
-ms.prod: "sql-server-2016"
+ms.date: "08/15/2017"
+ms.prod: sql
+ms.prod_service: high-availability
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: configuration
+ms.topic: conceptual
 helpviewer_keywords: 
   - "cross-database ownership chaining"
   - "cross db ownership chaining option"
   - "chaining ownership"
 ms.assetid: 7b2d49f2-b91c-4aee-a52b-6cc49bed03af
-caps.latest.revision: 27
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ---
 # cross db ownership chaining Server Configuration Option
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   Use the **cross db ownership chaining** option to configure cross-database ownership chaining for an instance of [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
@@ -33,7 +30,13 @@ manager: "jhubbard"
 -   You can set cross-database ownership chaining for individual databases using the SET clause of the ALTER DATABASE statement. If you are creating a new database, you can set the cross-database ownership chaining option for the new database using the CREATE DATABASE statement.  
   
      Setting **cross db ownership chaining** to 1 is not recommended unless all of the databases hosted by the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] must participate in cross-database ownership chaining and you are aware of the security implications of this setting.  
-  
+
+To determine the current status of cross-database ownership chaining, execute the following query:  
+```sql
+SELECT is_db_chaining_on, name FROM sys.databases;
+```  
+A result of 1 indicates that cross-database ownership chaining is enabled.
+
 ## Controlling Cross-Database Ownership Chaining  
  Before turning cross-database ownership chaining on or off, consider the following:  
   

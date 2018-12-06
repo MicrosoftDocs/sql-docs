@@ -2,22 +2,21 @@
 title: "Sort Multiple Columns in Queries (Visual Database Tools) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
+ms.prod_service: "sql-tools"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "tools-ssms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: ssms
+ms.topic: conceptual
 helpviewer_keywords: 
   - "multiple query columns"
 ms.assetid: 5057a6ee-3ca8-4734-9e96-592b24624c55
-caps.latest.revision: 4
 author: "stevestein"
 ms.author: "sstein"
-manager: "jhubbard"
+manager: craigg
+
 ---
 # Sort Multiple Columns in Queries (Visual Database Tools)
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 You can specify the order in which you want to use the columns to sort the data by using the **Sort Order** column in the [Criteria pane](../../ssms/visual-db-tools/criteria-pane-visual-database-tools.md).  
   
 ### To sort query results by more than one column  

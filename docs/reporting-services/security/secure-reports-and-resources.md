@@ -1,15 +1,12 @@
 ---
 title: "Secure Reports and Resources | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.date: 03/01/2017
+ms.prod: reporting-services
+ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
+ms.technology: security
+
+
+ms.topic: conceptual
 helpviewer_keywords: 
   - "security [Reporting Services], reports"
   - "security [Reporting Services], resources"
@@ -17,10 +14,8 @@ helpviewer_keywords:
   - "confidential reports [Reporting Services]"
   - "resources [Reporting Services], security"
 ms.assetid: 63cd55c7-fd2a-49e3-a3f8-59eb1a1c6e83
-caps.latest.revision: 47
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
+author: markingmyname
+ms.author: maghan
 ---
 # Secure Reports and Resources
   You can set security for individual reports and resources to control the degree of access that users have to these items. By default, only users who are members of the **Administrators** built-in group can run reports, view resources, modify properties, and delete the items. All other users must have role assignments created for them that allow access to a report or resource.  
@@ -74,7 +69,6 @@ manager: "erikre"
   
 ## See Also  
  [Create and Manage Role Assignments](../../reporting-services/security/create-and-manage-role-assignments.md)   
- [Configure Report Builder Access](../../reporting-services/report-server/configure-report-builder-access.md)   
  [Granting Permissions on a Native Mode Report Server](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)   
  [Secure Shared Data Source Items](../../reporting-services/security/secure-shared-data-source-items.md)   
  [Store Credentials in a Reporting Services Data Source](../../reporting-services/report-data/store-credentials-in-a-reporting-services-data-source.md)  

@@ -2,12 +2,10 @@
 title: "PERCENTILE_CONT (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "10/20/2015"
-ms.prod: "sql-non-specified"
+ms.prod: sql
+ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: t-sql
 ms.topic: "language-reference"
 f1_keywords: 
   - "PERCENTILE_CONT_TSQL"
@@ -18,13 +16,13 @@ helpviewer_keywords:
   - "analytic functions, PERCENTILE_CONT"
   - "PERCENTILE_CONT function"
 ms.assetid: d019419e-5297-4994-97d5-e9c8fc61bbf4
-caps.latest.revision: 24
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # PERCENTILE_CONT (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-all_md](../../includes/tsql-appliesto-ss2012-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
 
   Calculates a percentile based on a continuous distribution of the column value in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. The result is interpolated and might not be equal to any of the specific values in the column.  
   
@@ -33,8 +31,6 @@ manager: "jhubbard"
 ## Syntax  
   
 ```  
--- Syntax for SQL Server, Azure SQL Database, Azure SQL Data Warehouse, Parallel Data Warehouse  
-  
 PERCENTILE_CONT ( numeric_literal )   
     WITHIN GROUP ( ORDER BY order_by_expression [ ASC | DESC ] )  
     OVER ( [ <partition_by_clause> ] )  
@@ -84,17 +80,14 @@ WHERE dh.EndDate IS NULL;
   
  Here is a partial result set.  
   
- `DepartmentName        MedianCont    MedianDisc`  
-  
- `--------------------   ----------   ----------`  
-  
- `Document Control       16.8269      16.8269`  
-  
- `Engineering            34.375       32.6923`  
-  
- `Executive              54.32695     48.5577`  
-  
- `Human Resources        17.427850    16.5865`  
+ ```
+DepartmentName        MedianCont    MedianDisc
+--------------------   ----------   ----------
+Document Control       16.8269      16.8269
+Engineering            34.375       32.6923
+Executive              54.32695     48.5577
+Human Resources        17.427850    16.5865
+```  
   
 ## Examples: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
@@ -115,17 +108,14 @@ FROM dbo.DimEmployee;
   
  Here is a partial result set.  
   
- `DepartmentName        MedianCont    MedianDisc`  
-  
- `--------------------   ----------   ----------`  
-  
- `Document Control       16.826900    16.8269`  
-  
- `Engineering            34.375000    32.6923`  
-  
- `Human Resources        17.427850    16.5865`  
-  
- `Shipping and Receiving 9.250000      9.0000`  
+ ```
+DepartmentName        MedianCont    MedianDisc
+--------------------   ----------   ----------
+Document Control       16.826900    16.8269
+Engineering            34.375000    32.6923
+Human Resources        17.427850    16.5865
+Shipping and Receiving 9.250000      9.0000
+```  
   
 ## See Also  
  [PERCENTILE_DISC &#40;Transact-SQL&#41;](../../t-sql/functions/percentile-disc-transact-sql.md)  

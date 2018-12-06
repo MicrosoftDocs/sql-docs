@@ -1,22 +1,19 @@
 ---
 title: "Parameter (ADO - WFC Syntax) | Microsoft Docs"
-ms.prod: "sql-non-specified"
-ms.technology:
-  - "drivers"
+ms.prod: sql
+ms.prod_service: connectivity
+ms.technology: connectivity
 ms.custom: ""
 ms.date: "02/15/2017"
 ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 apitype: "COM"
 helpviewer_keywords: 
   - "Parameter collection [ADO], ADO/WFC syntax"
 ms.assetid: d00d1e1e-14b1-41a2-a00f-2a3cb7396f15
-caps.latest.revision: 10
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # Parameter (ADO - WFC Syntax)
 ## package com.ms.wfc.data  
@@ -67,7 +64,7 @@ public AdoProperties getProperties()
   
  ADO/WFC implements the **Value** property with the **getValue** method, which returns a VARIANT object; and the **setValue** method, which takes a VARIANT as an argument. VARIANTs are highly efficient in certain languages, such as Microsoft Visual Basic.  
   
- In addition to the **Value** property, ADO/WFC provides *accessor* methods that use Java data types to get and set the content of **Parameter** objects. Most of these methods have names of the form **get***DataType* or **set***DataType*.  
+ In addition to the **Value** property, ADO/WFC provides *accessor* methods that use Java data types to get and set the content of **Parameter** objects. Most of these methods have names of the form **get**_DataType_ or **set**_DataType_.  
   
  There is one noteworthy exception: There is no **getNull** property; instead, there is an **isNull** property that returns a Boolean value indicating whether the field is null.  
   

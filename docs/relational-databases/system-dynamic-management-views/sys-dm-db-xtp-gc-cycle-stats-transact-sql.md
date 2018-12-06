@@ -2,12 +2,10 @@
 title: "sys.dm_db_xtp_gc_cycle_stats (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/29/2016"
-ms.prod: "sql-non-specified"
+ms.prod: sql
+ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: system-objects
 ms.topic: "language-reference"
 f1_keywords: 
   - "dm_db_xtp_gc_cycle_stats_TSQL"
@@ -19,13 +17,13 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.dm_db_xtp_gc_cycle_stats dynamic management view"
 ms.assetid: bbc9704e-158e-4d32-b693-f00dce31cd2f
-caps.latest.revision: 12
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: stevestein
+ms.author: sstein
+manager: craigg
+monikerRange: "=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.dm_db_xtp_gc_cycle_stats (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
 
   Outputs the current state of committed transactions that have deleted one or more rows. The idle garbage collection thread wakes every minute or when the number of committed DML transactions exceeds an internal threshold since the last garbage collection cycle. As part of the garbage collection cycle, it moves the transactions that have committed into one or more  queues associated with generations. The transactions that have generated stale versions are grouped in a unit of 16 transactions across 16 generations as follows:  
   
@@ -45,7 +43,7 @@ manager: "jhubbard"
 |cycle_id|**bigint**|A unique identifier for the garbage collection cycle.|  
 |ticks_at_cycle_start|**bigint**|Ticks at the time the cycle started.|  
 |ticks_at_cycle_end|**bigint**|Ticks at the time the cycle ended.|  
-|base_generation|**bigint**|The current base generation value in the database. This represents the timestamp of the oldest active transaction used to identify transactions for garbage collection. The oldest active transaction id is updated in the increment of 16. For example, if you have transaction ids as 124, 125, 126 … 139, the value will be 124. When you add another transaction, for example 140, the value will be 140.|  
+|base_generation|**bigint**|The current base generation value in the database. This represents the timestamp of the oldest active transaction used to identify transactions for garbage collection. The oldest active transaction id is updated in the increment of 16. For example, if you have transaction ids as 124, 125, 126 ... 139, the value will be 124. When you add another transaction, for example 140, the value will be 140.|  
 |xacts_copied_to_local|**bigint**|The number of transactions copied from the transaction pipeline into the database's generation array.|  
 |xacts_in_gen_0- xacts_in_gen_15|**bigint**|Number of transactions in each generation.|  
   

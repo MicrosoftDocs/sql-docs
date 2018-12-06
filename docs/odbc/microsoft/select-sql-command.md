@@ -2,20 +2,17 @@
 title: "SELECT - SQL Command | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
+ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "drivers"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: connectivity
+ms.topic: conceptual
 helpviewer_keywords: 
   - "select [ODBC]"
 ms.assetid: 2149c3ca-3a71-446d-8d53-3d056e2f301a
-caps.latest.revision: 7
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # SELECT - SQL Command
 Retrieves data from one or more tables.  
@@ -32,7 +29,7 @@ SELECT [ALL | DISTINCT]
 FROM [DatabaseName!]Table [Local_Alias]  
    [, [DatabaseName!]Table [Local_Alias] ...]   
 [WHERE JoinCondition [AND JoinCondition  
-…]  
+...]  
    [AND | OR FilterCondition [AND | OR FilterCondition ...]]]  
 [GROUP BY GroupColumn [, GroupColumn ...]]  
 [HAVING FilterCondition]  
@@ -79,15 +76,15 @@ FROM [DatabaseName!]Table [Local_Alias]
   
  The following field functions are available for use with a select item that is a field or an expression involving a field:  
   
--   AVG(*Select_Item*)—Averages a column of numeric data.  
+-   AVG(*Select_Item*)-Averages a column of numeric data.  
   
--   COUNT(*Select_Item*)—Counts the number of select items in a column. COUNT(*) counts the number of rows in the query output.  
+-   COUNT(*Select_Item*)-Counts the number of select items in a column. COUNT(*) counts the number of rows in the query output.  
   
--   MIN(*Select_Item*)—Determines the smallest value of *Select_Item* in a column.  
+-   MIN(*Select_Item*)-Determines the smallest value of *Select_Item* in a column.  
   
--   MAX(*Select_Item*)—Determines the largest value of *Select_Item* in a column.  
+-   MAX(*Select_Item*)-Determines the largest value of *Select_Item* in a column.  
   
--   SUM(*Select_Item*)—Totals a column of numeric data.  
+-   SUM(*Select_Item*)-Totals a column of numeric data.  
   
  You cannot nest field functions.  
   

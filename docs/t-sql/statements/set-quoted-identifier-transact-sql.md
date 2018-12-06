@@ -2,12 +2,10 @@
 title: "SET QUOTED_IDENTIFIER (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "02/03/2016"
-ms.prod: "sql-non-specified"
+ms.prod: sql
+ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: t-sql
 ms.topic: "language-reference"
 f1_keywords: 
   - "QUOTED_IDENTIFIER_TSQL"
@@ -24,13 +22,13 @@ helpviewer_keywords:
   - "ISO delimited identifiers rules"
   - "SET QUOTED_IDENTIFIER statement"
 ms.assetid: 10f66b71-9241-4a3a-9292-455ae7252565
-caps.latest.revision: 48
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # SET QUOTED_IDENTIFIER (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Causes [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to follow the ISO rules regarding quotation mark delimiting identifiers and literal strings. Identifiers delimited by double quotation marks can be either [!INCLUDE[tsql](../../includes/tsql-md.md)] reserved keywords or can contain characters not generally allowed by the [!INCLUDE[tsql](../../includes/tsql-md.md)] syntax rules for identifiers.  
   
@@ -75,12 +73,12 @@ SET QUOTED_IDENTIFIER ON
   
  SET QUOTED_IDENTIFIER also corresponds to the QUOTED_IDENTIFIER setting of ALTER DATABASE. For more information about database settings, see [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md).  
   
- SET QUOTED_IDENTIFIER is takes effect at parse-time and only affects parsing, not query execution.  
+ SET QUOTED_IDENTIFIER takes effect at parse-time and only affects parsing, not query execution.  
   
- For a top-level Ad-Hoc batch parsing begins using the session’s current setting for QUOTED_IDENTIFIER.  As the batch is parsed any occurrence of SET QUOTED_IDENTIFIER will change the parsing behavior from that point on, and save that setting for the session.  So after the batch is parsed and executed, the session’s QUOTED_IDENTIFER setting will be set according to the last occurrence of SET QUOTED_IDENTIFIER in the batch.  
+ For a top-level ad-hoc batch parsing begins using the session's current setting for QUOTED_IDENTIFIER.  As the batch is parsed any occurrence of SET QUOTED_IDENTIFIER will change the parsing behavior from that point on, and save that setting for the session.  So after the batch is parsed and executed, the session's QUOTED_IDENTIFER setting will be set according to the last occurrence of SET QUOTED_IDENTIFIER in the batch.  
  Static SQL in a stored procedure is parsed using the QUOTED_IDENTIFIER setting in effect for the batch that created or altered the stored procedure.  SET QUOTED_IDENTIFIER has no effect when it appears in the body of a stored procedure as static SQL.  
   
- For a nested batch using sp_executesql or exec() the parsing begins using the QUOTED_IDENTIFIER setting of the session.  If the nested batch is inside a stored procedure the parsing starts using the QUOTED_IDENTIFIER setting of the stored procedure.  As the nested batch is parsed the any occurrence of SET QUOTED_IDENTIFIER will change the parsing behavior from that point on, but the session’s QUOTED_IDENTIFIER setting will not be updated.  
+ For a nested batch using sp_executesql or exec() the parsing begins using the QUOTED_IDENTIFIER setting of the session.  If the nested batch is inside a stored procedure the parsing starts using the QUOTED_IDENTIFIER setting of the stored procedure.  As the nested batch is parsed, any occurrence of SET QUOTED_IDENTIFIER will change the parsing behavior from that point on, but the session's QUOTED_IDENTIFIER setting will not be updated.  
   
  Using brackets, **[** and **]**, to delimit identifiers is not affected by the QUOTED_IDENTIFIER setting.  
   
@@ -175,26 +173,20 @@ GO
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- `ID          String`  
-  
- `----------- ------------------------------`  
-  
- `1           'Text in single quotes'`  
-  
- `2           'Text in single quotes'`  
-  
- `3           Text with 2 '' single quotes`  
-  
- `4           "Text in double quotes"`  
-  
- `5           "Text in double quotes"`  
-  
- `6           Text with 2 "" double quotes`  
-  
- `7           Text with a single ' quote`  
+ ```
+ ID          String 
+ ----------- ------------------------------ 
+ 1           'Text in single quotes' 
+ 2           'Text in single quotes' 
+ 3           Text with 2 '' single quotes 
+ 4           "Text in double quotes" 
+ 5           "Text in double quotes" 
+ 6           Text with 2 "" double quotes 
+ 7           Text with a single ' quote
+ ```  
   
 ## See Also  
- [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md)   
+ [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-transact-sql.md?&tabs=sqlserver)   
  [CREATE DEFAULT &#40;Transact-SQL&#41;](../../t-sql/statements/create-default-transact-sql.md)   
  [CREATE PROCEDURE &#40;Transact-SQL&#41;](../../t-sql/statements/create-procedure-transact-sql.md)   
  [CREATE RULE &#40;Transact-SQL&#41;](../../t-sql/statements/create-rule-transact-sql.md)   

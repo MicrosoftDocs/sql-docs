@@ -2,13 +2,11 @@
 title: "sqlsrv_errors | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
+ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "drivers"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: connectivity
+ms.topic: conceptual
 apiname: 
   - "sqlsrv_errors"
 apitype: "NA"
@@ -17,10 +15,9 @@ helpviewer_keywords:
   - "sqlsrv_errors"
   - "errors and warnings"
 ms.assetid: d1fcffec-f34f-46de-9a0e-343f3b5dbae2
-caps.latest.revision: 39
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # sqlsrv_errors
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -68,14 +65,14 @@ An **array** of arrays, or **null**. Each **array** in the returned **array** co
   
 |Key|Description|  
 |-------|---------------|  
-|SQLSTATE|For errors that originate from the ODBC driver, the SQLSTATE returned by ODBC. For information about SQLSTATE values for ODBC, see [ODBC Error Codes](http://go.microsoft.com/fwlink/?linkid=119618).<br /><br />For errors that originate from the [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)], a SQLSTATE of IMSSP.<br /><br />For warnings that originate from the [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)], a SQLSTATE of 01SSP.|  
+|SQLSTATE|For errors that originate from the ODBC driver, the SQLSTATE returned by ODBC. For information about SQLSTATE values for ODBC, see [ODBC Error Codes](../../odbc/reference/appendixes/appendix-a-odbc-error-codes.md).<br /><br />For errors that originate from the [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)], a SQLSTATE of IMSSP.<br /><br />For warnings that originate from the [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)], a SQLSTATE of 01SSP.|  
 |code|For errors that originate from SQL Server, the native SQL Server error code.<br /><br />For errors that originate from the ODBC driver, the error code returned by ODBC.<br /><br />For errors that originate from the [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)], the [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] error code. For more information, see [Handling Errors and Warnings](../../connect/php/handling-errors-and-warnings.md).|  
 |message|A description of the error.|  
   
 The array values can also be accessed with numeric keys 0, 1, and 2. If no errors or warnings occur, **null** is returned.  
   
 ## Example  
-The following example displays errors that occur during a failed statement execution. (The statement fails because **InvalidColumName** is not a valid column name in the specified table.) The example assumes that SQL Server and the [AdventureWorks](http://go.microsoft.com/fwlink/?LinkID=67739) database are installed on the local computer. All output is written to the console when the example is run from the command line.  
+The following example displays errors that occur during a failed statement execution. (The statement fails because **InvalidColumName** is not a valid column name in the specified table.) The example assumes that SQL Server and the [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) database are installed on the local computer. All output is written to the console when the example is run from the command line.  
   
 ```  
 <?php  
@@ -115,6 +112,7 @@ sqlsrv_close( $conn);
 ```  
   
 ## See Also  
-[SQLSRV Driver API Reference](../../connect/php/sqlsrv-driver-api-reference.md)  
+[SQLSRV Driver API Reference](../../connect/php/sqlsrv-driver-api-reference.md)
+
 [About Code Examples in the Documentation](../../connect/php/about-code-examples-in-the-documentation.md)  
   

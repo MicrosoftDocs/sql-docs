@@ -1,25 +1,23 @@
 ---
-title: "SQL Graph overview | Microsoft Docs"
-ms.custom: 
+title: "Graph processing with SQL Server and Azure SQL Database | Microsoft Docs"
+ms.custom: ""
 ms.date: "07/18/2017"
-ms.prod: "sql-server-2017"
+ms.prod: sql
+ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 helpviewer_keywords: 
   - "SQL graph"
   - "SQL graph, overview"
 ms.assetid: 
-caps.latest.revision: 1
-author: "shkale-msft"
-ms.author: "shkale"
-manager: "jhubbard"
+author: shkale-msft
+ms.author: shkale
+manager: craigg
+monikerRange: "=azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Graph processing with SQL Server and Azure SQL Database
-[!INCLUDE[tsql-appliesto-ssvnxt-asdb-xxxx-xxx](../../includes/tsql-appliesto-ssvnxt-asdb-xxxx-xxx.md)]   
+[!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] offers graph database capabilities to model many-to-many relationships. The graph relationships are integrated into [!INCLUDE[tsql-md](../../includes/tsql-md.md)] and receive the benefits of using [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] as the foundational database management system.
 
@@ -65,11 +63,22 @@ AND Person1.Name = 'John';
 ```   
  
 ### Fully integrated in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Engine 
-Graph extensions are fully integrated in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] engine. We use the same storage engine, metadata, query processor, etc. to store and query graph data. This enables users to query across their graph and relational data in a single query. Users can also benefit from combining graph capabilities with other [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] technologies like columnstore, HA, R services, etc. SQL graph database also supports all the security and compliance features available with [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
+Graph extensions are fully integrated in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] engine. Use the same storage engine, metadata, query processor, etc. to store and query graph data. Query across graph and relational data in a single query. Combining graph capabilities with other [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] technologies like columnstore, HA, R services, etc. SQL graph database also supports all the security and compliance features available with [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
  
-### Tooling and ecosystem  
-Users benefit from existing tools and ecosystem that [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] offers. Tools like backup and restore, import and export, BCP just work out of the box. Other tools or services like SSIS, SSRS or PowerBI will work with graph tables, just the way they work with relational tables.
- 
+### Tooling and ecosystem
+
+Benefit from existing tools and ecosystem that [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] offers. Tools like backup and restore, import and export, BCP just work out of the box. Other tools or services like SSIS, SSRS, or Power BI will work with graph tables, just the way they work with relational tables.
+
+## Edge Constraints
+An edge constraint is defined on a graph edge table and is a pair of node table(s) that a given edge type can connect. This gives users a better control over their graph schema. With the help of edge constraints users can restrict the type of nodes a given edge is allowed to connect. 
+
+To learn more about how to create and use edge constraints refer to [Edge Constraints](../../relational-databases/tables/graph-edge-constraints.md)
+
+## Merge DML 
+The [MERGE](../../t-sql/statements/merge-transact-sql.md) statement performs insert, update, or delete operations on a target table based on the results of a join with a source table. For example, you can synchronize two tables by inserting, updating, or deleting rows in a target table based on differences between the target table and the source table. Using MATCH predicates in a MERGE statement is now supported on Azure SQL Database and SQL Server vNext. That is, it is now possible to merge your current graph data (node or edge tables) with new data using the MATCH predicates to specify graph relationships in a single statement, instead of separate INSERT/UPDATE/DELETE statements.
+
+To learn more about how match can be used in merge DML refer to [MERGE Statement](../../t-sql/statements/merge-transact-sql.md)
+
  ## Next steps  
 Read the [SQL Graph Database - Architecture](./sql-graph-architecture.md)
    

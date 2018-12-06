@@ -2,23 +2,20 @@
 title: "Date, Time, and Timestamp Escape Sequences | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
+ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "drivers"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: connectivity
+ms.topic: conceptual
 helpviewer_keywords: 
   - "escape sequences [ODBC]"
   - "escape sequences [ODBC], about escape sequences"
   - "ODBC escape sequences [ODBC], about escape sequences"
   - "ODBC escape sequences [ODBC]"
 ms.assetid: 67b7dee0-e5b1-4469-a626-0c7767852b80
-caps.latest.revision: 6
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # Date, Time, and Timestamp Escape Sequences
 ODBC defines escape sequences for date, time, and timestamp literals. The syntax of these escape sequences is as follows:  

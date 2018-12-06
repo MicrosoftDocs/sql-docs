@@ -2,12 +2,10 @@
 title: "Diagnostic Records and Fields | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/17/2017"
-ms.prod: "sql-server-2016"
+ms.prod: sql
+ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "docset-sql-devref"
-ms.tgt_pltfrm: ""
+ms.technology: native-client
 ms.topic: "reference"
 helpviewer_keywords: 
   - "header records [ODBC]"
@@ -19,13 +17,13 @@ helpviewer_keywords:
   - "errors [ODBC], diagnostic records"
   - "fields [ODBC]"
   - "status information [ODBC]"
-ms.assetid: 4949530c-62d1-4f1a-b592-144244444ce0
-caps.latest.revision: 30
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: MightyPen
+ms.author: genemi
+manager: craigg
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Diagnostic Records and Fields
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
   Diagnostic records are associated with ODBC environment, connection, statement, or descriptor handles. When any ODBC function raises a return code other than SQL_SUCCESS or SQL_INVALID_HANDLE, the handle called by the function has associated diagnostic records that contain informational or error messages. These records are retained until another function is called using that handle, at which time they are discarded. There is no limit to the number of diagnostic records that can be associated with a handle at any one time.  

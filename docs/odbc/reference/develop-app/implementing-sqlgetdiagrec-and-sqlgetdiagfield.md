@@ -2,13 +2,11 @@
 title: "Implementing SQLGetDiagRec and SQLGetDiagField | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
+ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "drivers"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: connectivity
+ms.topic: conceptual
 helpviewer_keywords: 
   - "diagnostic information [ODBC], SqlGetDiagField"
   - "SQLGetDiagField function [ODBC], and SQLGetDiagRec"
@@ -16,10 +14,9 @@ helpviewer_keywords:
   - "diagnostic information [ODBC], SqlGetDiagRec"
   - "retrieving diagnostic information [ODBC]"
 ms.assetid: 11ba1857-b533-4517-8131-a2a8a0154a0a
-caps.latest.revision: 5
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # Implementing SQLGetDiagRec and SQLGetDiagField
 **SQLGetDiagRec** and **SQLGetDiagField** are implemented by the Driver Manager and each driver. The Driver Manager and each driver maintain diagnostic records for each environment, connection, statement, and descriptor handle, and free those records only when another function is called with that handle or the handle is freed.  

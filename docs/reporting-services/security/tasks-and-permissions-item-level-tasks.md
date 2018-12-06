@@ -1,22 +1,17 @@
 ---
 title: "Item-Level Tasks | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.date: 03/01/2017
+ms.prod: reporting-services
+ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
+ms.technology: security
+
+
+ms.topic: conceptual
 helpviewer_keywords: 
   - "item-level tasks [Reporting Services]"
 ms.assetid: fdeb7bc3-167a-4342-84e3-32e3faa1fa39
-caps.latest.revision: 37
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
+author: markingmyname
+ms.author: maghan
 ---
 # Tasks and Permissions - Item-Level Tasks
   An item-level task is a collection of permissions that relate to a report, folder, report model, resource, or shared data source. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] also includes system-level tasks that apply to the report server site as a whole. For more information, see [System-Level Tasks](../../reporting-services/security/tasks-and-permissions-system-level-tasks.md). For more information about tasks and permissions in general, see [Tasks and Permissions](../../reporting-services/security/tasks-and-permissions.md).  

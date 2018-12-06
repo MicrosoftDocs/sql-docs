@@ -2,22 +2,19 @@
 title: "MSSQLSERVER_2570 | Microsoft Docs"
 ms.custom: ""
 ms.date: "04/04/2017"
-ms.prod: "sql-server-2016"
+ms.prod: sql
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: supportability
 ms.topic: "language-reference"
 helpviewer_keywords: 
   - "2570 (Database Engine error)"
 ms.assetid: 29800aa9-81aa-4371-992c-487dbb617f46
-caps.latest.revision: 20
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
 ---
 # MSSQLSERVER_2570
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   
 ## Details  
   
@@ -34,7 +31,7 @@ manager: "jhubbard"
 The column value that is contained in the specified column is outside the range of possible values for the column data type.  
   
 ## User Action  
-The error is not repairable. Update the column to a value within the range for the data type of the column and run the command again.  For more information, see this KB article [923247](http://support.microsoft.com/kb/923247).  
+The error is not repairable. Update the column to a value within the range for the data type of the column and run the command again.  For more information, see this KB article [923247](https://support.microsoft.com/kb/923247).  
   
 ## See Also  
 [UPDATE &#40;Transact-SQL&#41;](~/t-sql/queries/update-transact-sql.md)  

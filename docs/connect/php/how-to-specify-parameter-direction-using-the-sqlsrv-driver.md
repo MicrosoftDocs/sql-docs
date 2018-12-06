@@ -2,25 +2,22 @@
 title: "How to: Specify Parameter Direction Using the SQLSRV Driver | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
+ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "drivers"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: connectivity
+ms.topic: conceptual
 helpviewer_keywords: 
   - "stored procedure support"
 ms.assetid: 1209eeca-df75-4283-96dc-714f39956b95
-caps.latest.revision: 16
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # How to: Specify Parameter Direction Using the SQLSRV Driver
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-This topic describes how to use the SQLSRV driver to specify parameter direction when you call a stored procedure. Note that the parameter direction is specified when you construct a parameter array (step 3) that is passed to [sqlsrv_query](../../connect/php/sqlsrv-query.md) or [sqlsrv_prepare](../../connect/php/sqlsrv-prepare.md).  
+This topic describes how to use the SQLSRV driver to specify parameter direction when you call a stored procedure. The parameter direction is specified when you construct a parameter array (step 3) that is passed to [sqlsrv_query](../../connect/php/sqlsrv-query.md) or [sqlsrv_prepare](../../connect/php/sqlsrv-prepare.md).  
   
 ### To specify parameter direction  
   
@@ -31,7 +28,7 @@ This topic describes how to use the SQLSRV driver to specify parameter direction
     ```  
   
     > [!NOTE]  
-    > Calling stored procedures using canonical syntax is the recommended practice. For more information about canonical syntax, see [Calling a Stored Procedure](http://go.microsoft.com/fwlink/?linkid=119517).  
+    > Calling stored procedures using canonical syntax is the recommended practice. For more information about canonical syntax, see [Calling a Stored Procedure](../../relational-databases/native-client-odbc-stored-procedures/calling-a-stored-procedure.md).  
   
 2.  Initialize or update PHP variables that correspond to the placeholders in the Transact-SQL query. For example, the following code initializes the two parameters for the UpdateVacationHours stored procedure:  
   
@@ -54,7 +51,7 @@ This topic describes how to use the SQLSRV driver to specify parameter direction
   
     To understand the syntax for specifying parameter direction in general, suppose that *$var1*, *$var2*, and *$var3* correspond to input, output, and bidirectional parameters, respectively. You can specify the parameter direction in either of the following ways:  
   
-    -   Implicitly specificy the input parameter, explicitly specify the output parameter, and explicitly specify a bidirectional parameter:  
+    -   Implicitly specify the input parameter, explicitly specify the output parameter, and explicitly specify a bidirectional parameter:  
   
         ```  
         array(   
@@ -64,7 +61,7 @@ This topic describes how to use the SQLSRV driver to specify parameter direction
                );  
         ```  
   
-    -   Explicitly specificy the input parameter, explicitly specificy the output parameter, and explicitly specificy a bidirectional parameter:  
+    -   Explicitly specify the input parameter, explicitly specify the output parameter, and explicitly specify a bidirectional parameter:  
   
         ```  
         array(   
@@ -81,6 +78,7 @@ This topic describes how to use the SQLSRV driver to specify parameter direction
     ```  
   
 ## See Also  
-[How to: Retrieve Output Parameters Using the SQLSRV Driver](../../connect/php/how-to-retrieve-output-parameters-using-the-sqlsrv-driver.md)  
+[How to: Retrieve Output Parameters Using the SQLSRV Driver](../../connect/php/how-to-retrieve-output-parameters-using-the-sqlsrv-driver.md)
+
 [How to: Retrieve Input and Output Parameters Using the SQLSRV Driver](../../connect/php/how-to-retrieve-input-and-output-parameters-using-the-sqlsrv-driver.md)  
   

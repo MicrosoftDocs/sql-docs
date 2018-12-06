@@ -2,28 +2,23 @@
 title: "count Function (XQuery) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/09/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
+ms.prod_service: sql
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: xml
 ms.topic: "language-reference"
-applies_to: 
-  - "SQL Server"
 dev_langs: 
   - "XML"
 helpviewer_keywords: 
   - "fn:count function"
   - "count function [XQuery]"
 ms.assetid: a9f7131f-23e1-4d4d-a36c-180447543926
-caps.latest.revision: 27
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "rothja"
+ms.author: "jroth"
+manager: craigg
 ---
 # Aggregate Functions - count
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   Returns the number of items that are contained in the sequence specified by *$arg*.  
   
@@ -51,7 +46,7 @@ fn:count($arg as item()*) as xs:integer
 SELECT Production.ProductModel.ProductModelID,   
        Production.ProductModel.Name,   
        Instructions.query('  
-declare namespace AWMI="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";  
+declare namespace AWMI="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";  
        <NoOfWorkStations>  
           { count(/AWMI:root/AWMI:Location) }  
        </NoOfWorkStations>  
@@ -80,7 +75,7 @@ ProductModelID   Name                 WorkCtrCount
   
 ```  
 SELECT Instructions.query('  
-declare namespace AWMI="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";  
+declare namespace AWMI="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";  
        <NoOfWorkStations  
              ProductModelID= "{ sql:column("Production.ProductModel.ProductModelID") }"   
              ProductModelName = "{ sql:column("Production.ProductModel.Name") }" >  
@@ -103,7 +98,7 @@ WHERE Production.ProductModel.ProductModelID= 7
 ```  
 SELECT  ProductModelID,   
         Name,   
-        Instructions.value('declare namespace AWMI="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";  
+        Instructions.value('declare namespace AWMI="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";  
            count(/AWMI:root/AWMI:Location)', 'int' ) as WorkCtrCount  
 FROM Production.ProductModel  
 WHERE ProductModelID=7  

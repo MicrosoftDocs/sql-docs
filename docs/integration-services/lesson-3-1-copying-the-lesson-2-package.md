@@ -2,20 +2,15 @@
 title: "Step 1: Copying the Lesson 2 Package | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
+ms.prod: sql
+ms.prod_service: "integration-services"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
-applies_to: 
-  - "SQL Server 2016"
+ms.technology: integration-services
+ms.topic: tutorial
 ms.assetid: 4bd91402-4e37-41de-ab78-8ca5a1948a37
-caps.latest.revision: 29
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: craigg
 ---
 # Lesson 3-1 - Copying the Lesson 2 Package
 In this task, you will create a copy of the Lesson 2.dtsx package that you created in Lesson 2. Alternatively, you can add the completed lesson 2 package that is included with the tutorial to the project, and then copy it instead. You will use this new copy throughout the rest of Lesson 3.  
@@ -48,11 +43,11 @@ In this task, you will create a copy of the Lesson 2.dtsx package that you creat
   
 3.  In the **Add Copy of Existing Package** dialog box, in **Package location**, select **File system**.  
   
-4.  Click the browse **(…)** button, navigate to **Lesson 2.dtsx** on your machine, and then click **Open**.  
+4.  Click the browse **(...)** button, navigate to **Lesson 2.dtsx** on your machine, and then click **Open**.  
   
     To download all of the lesson packages for this tutorial, do the following.  
   
-    1.  Navigate to [Integration Services Product Samples](http://go.microsoft.com/fwlink/?LinkId=275027)  
+    1.  Navigate to [Integration Services Product Samples](https://go.microsoft.com/fwlink/?LinkId=275027)  
   
     2.  Click the **DOWNLOADS** tab.  
   

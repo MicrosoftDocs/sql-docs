@@ -1,14 +1,11 @@
 ---
 title: "sys.query_store_plan (Transact-SQL) | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "03/29/2016"
-ms.prod: "sql-non-specified"
+ms.custom: ""
+ms.date: "11/29/2018"
+ms.prod: sql
+ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: system-objects
 ms.topic: "language-reference"
 f1_keywords: 
   - "QUERY_STORE_PLAN_TSQL"
@@ -21,13 +18,13 @@ helpviewer_keywords:
   - "query_store_plan catalog view"
   - "sys.query_store_plan catalog view"
 ms.assetid: b4d05439-6360-45db-b1cd-794f4a64935e
-caps.latest.revision: 18
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: stevestein
+ms.author: sstein
+manager: craigg
+monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.query_store_plan (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
 
   Contains information about each execution plan associated with a query.  
   
@@ -35,7 +32,7 @@ manager: "jhubbard"
 |-----------------|---------------|-----------------|  
 |**plan_id**|**bigint**|Primary key.|  
 |**query_id**|**bigint**|Foreign key. Joins to [sys.query_store_query &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-query-transact-sql.md).|  
-|**plan_group_id**|**bigint**|ID of the plan group. Cursor queries typically require multiple (populate and fetch) plans. Populate and fetch plans that are compiled together have are in the same group.<br /><br /> 0 means plan is not in a group.|  
+|**plan_group_id**|**bigint**|ID of the plan group. Cursor queries typically require multiple (populate and fetch) plans. Populate and fetch plans that are compiled together are in the same group.<br /><br /> 0 means plan is not in a group.|  
 |**engine_version**|**nvarchar(32)**|Version of the engine used to compile the plan in **'major.minor.build.revision'** format.|  
 |**compatibility_level**|**smallint**|Database compatibility level of the database referenced in the query.|  
 |**query_plan_hash**|**binary(8)**|MD5 hash of the individual plan.|  

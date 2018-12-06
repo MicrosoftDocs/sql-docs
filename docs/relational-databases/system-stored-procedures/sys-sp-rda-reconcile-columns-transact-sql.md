@@ -2,12 +2,9 @@
 title: "sys.sp_rda_reconcile_columns (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/10/2016"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-stretch"
-ms.tgt_pltfrm: ""
+ms.technology: stored-procedures
 ms.topic: "language-reference"
 f1_keywords: 
   - "sys.sp_rda_reconcile_columns"
@@ -17,15 +14,14 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.sp_rda_reconcile_columns stored procedure"
 ms.assetid: 60d9cc4e-1828-450b-9d88-5b8485800d73
-caps.latest.revision: 11
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: craigg
 ---
 # sys.sp_rda_reconcile_columns (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
-  Reconciles the columns in the remote Azure table to the columns in the the Stretch-enabled SQL Server table.  
+  Reconciles the columns in the remote Azure table to the columns in the Stretch-enabled SQL Server table.  
     
   **sp_rda_reconcile_columns** adds columns to the remote table that exist in the Stretch-enabled SQL Server table but not in the remote table. These columns may be columns that you accidentally deleted from the remote table. However, **sp_rda_reconcile_columns** does not delete columns from the remote table that exist in the remote table but not in the SQL Server table.
   
@@ -43,7 +39,7 @@ sp_rda_reconcile_columns @objname = '@objname'
 ```  
   
 ## Arguments  
- @objname = '*@objname*'  
+ \@objname = '*\@objname*'  
  The name of the Stretch-enabled SQL Server table.  
   
 ## Return Code Values  
@@ -56,9 +52,9 @@ sp_rda_reconcile_columns @objname = '@objname'
  If there are columns in the remote Azure table that no longer exist in the Stretch-enabled SQL Server table, these extra columns do not prevent Stretch Database from operating normally. You can optionally remove the extra columns manually.  
   
 ## Example  
- To reconcile the the columns in the remote Azure table, run the following statement.  
+ To reconcile the columns in the remote Azure table, run the following statement.  
   
-```tsql  
+```sql  
 EXEC sp_rda_reconcile_columns @objname = N'StretchEnabledTableName';  
 ```  
   

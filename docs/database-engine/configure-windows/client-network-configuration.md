@@ -2,13 +2,11 @@
 title: "Client Network Configuration | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
+ms.prod: sql
+ms.prod_service: high-availability
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: configuration
+ms.topic: conceptual
 helpviewer_keywords: 
   - "client configuration [SQL Server], connections"
   - "Database Engine [SQL Server], network configurations"
@@ -18,12 +16,12 @@ helpviewer_keywords:
   - "client connections [SQL Server]"
   - "network connections [SQL Server], client configuration"
 ms.assetid: c382eacd-0a0c-40a4-958f-9b774eb2d734
-caps.latest.revision: 38
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ---
 # Client Network Configuration
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Client software enables client computers to connect to an instance of [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] on a network. A "client" is a front-end application that uses the services provided by a server such as the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. The computer that hosts this application is referred to as the *client computer*.  
   
  At the simplest level, a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] client can reside on the same machine as an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Typically, however, a client connects to one or more remote servers over a network. The client/server architecture of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] allows it to seamlessly manage multiple clients and servers on a network. The default client configurations suffice in most situations.  

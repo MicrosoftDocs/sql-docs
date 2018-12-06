@@ -2,23 +2,20 @@
 title: "Core Level API Functions (ODBC Driver for Oracle) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
+ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "drivers"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: connectivity
+ms.topic: conceptual
 helpviewer_keywords: 
   - "functions [ODBC], ODBC driver for Oracle"
   - "ODBC driver for Oracle [ODBC], functions"
   - "core level API functions [ODBC]"
   - "ODBC core level API functions [ODBC]"
 ms.assetid: 8596eed7-bda6-4cac-ae1f-efde1aab785f
-caps.latest.revision: 9
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # Core Level API Functions (ODBC Driver for Oracle)
 > [!IMPORTANT]  
@@ -47,7 +44,7 @@ manager: "jhubbard"
 |**SQLGetCursorName**|Returns the name of the cursor associated with the given hstmt.|  
 |**SQLNumResultCols**|Returns the number of columns in a result set cursor.|  
 |**SQLPrepare**|Prepares an SQL statement by planning how to optimize and execute the statement. The SQL statement is compiled for execution by **SQLExecDirect**.<br /><br /> If your table, view, or field names contain spaces, enclose the names in back quote marks. For example, if your database contains a table named *My Table* and the field *My Field*, enclose each element of the identifier as follows:<br /><br /> SELECT \`My Table\`.\`My Field\` FROM \`My Table`<br /><br /> For information about using result sets containing arrays as formal parameters, see [Returning Array Parameters from Stored Procedures](../../odbc/microsoft/returning-array-parameters-from-stored-procedures.md).|  
-|**SQLRowCount**|Oracle does not provide a way to determine the number of rows in a result set until after you fetch the last row, so it returns –1.|  
+|**SQLRowCount**|Oracle does not provide a way to determine the number of rows in a result set until after you fetch the last row, so it returns -1.|  
 |**SQLSetCursorName**|Associates a cursor name with an active statement handle, *hstmt*.|  
 |**SQLSetParam**|Replaced by SQLBindParameter in ODBC 2.*x*.|  
 |**SQLTransact**|Requests a commit or rollback operation for all active operations on all statement handles (hstmts) associated with a connection, or for all connections associated with the environment handle, *henv*. If a commit fails when in manual mode, the transaction remains active; you can choose to roll back the transaction or retry the commit operation. If a commit operation fails when in automatic transaction mode, the transaction is rolled back automatically; the transaction cannot be inactive.|

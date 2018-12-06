@@ -2,23 +2,21 @@
 title: "Create and Apply the Initial Snapshot | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
+ms.prod: sql
+ms.prod_service: "database-engine"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: replication
+ms.topic: conceptual
 helpviewer_keywords: 
   - "snapshots [SQL Server replication], creating"
   - "snapshot replication [SQL Server], initial snapshots"
 ms.assetid: 742727a1-5189-44ec-b3ae-6fd7aa1f5347
-caps.latest.revision: 44
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "MashaMSFT"
+ms.author: "mathoma"
+manager: craigg
 ---
 # Create and Apply the Initial Snapshot
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   This topic describes how to create and apply the initial snapshot in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)], or Replication Management Objects (RMO). Merge publications that use parameterized filters require a two-part snapshot. For more information, see [Create a Snapshot for a Merge Publication with Parameterized Filters](../../relational-databases/replication/create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md).  
   
  **In This Topic**  
@@ -157,7 +155,7 @@ REM --Start the Snapshot Agent to generate the snapshot for AdvWorksSalesOrdersM
  The Snapshot Agent generates snapshots after a publication is created. You can generate these snapshots programmatically by using Replication Management Objects (RMO) and direct managed code access to replication agent functionalities. The objects you use depend on the type of replication. The Snapshot Agent can be started synchronously using the <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent> object or asynchronously using the agent job. After the initial snapshot has been generated, it is transferred to and applied at the Subscriber when the subscription is first synchronized. You will need to rerun the agent whenever the existing snapshot no longer contains valid, up-to-date data. For more information, see [Maintain Publications](../../relational-databases/replication/publish/maintain-publications.md).  
   
 > [!IMPORTANT]  
->  When possible, prompt users to enter security credentials at runtime. If you must store credentials, use the [cryptographic services](http://go.microsoft.com/fwlink/?LinkId=34733) provided by the [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows .NET Framework.  
+>  When possible, prompt users to enter security credentials at runtime. If you must store credentials, use the [cryptographic services](https://go.microsoft.com/fwlink/?LinkId=34733) provided by the [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows .NET Framework.  
   
 #### To generate the initial snapshot for a snapshot or transactional publication by starting the Snapshot Agent job (asynchronous)  
   

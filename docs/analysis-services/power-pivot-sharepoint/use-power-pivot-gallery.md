@@ -1,23 +1,17 @@
 ---
 title: "Use Power Pivot Gallery | Microsoft Docs"
-ms.custom: ""
-ms.date: "08/31/2015"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-ms.assetid: c9ff92d1-787a-4f34-990f-6676b61875d7
-caps.latest.revision: 15
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: ppvt-sharepoint
+ms.topic: conceptual
+ms.author: owend
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
 ---
 # Use Power Pivot Gallery
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] Gallery is a special SharePoint document library that provides rich preview and document management for published Excel workbooks and Reporting Services reports that contain [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] data.  
   
 > [!NOTE]  
@@ -122,7 +116,7 @@ manager: "erikre"
   
 |||  
 |-|-|  
-|![GMNI_btn_NewDataRefreshReportGallery](../../analysis-services/power-pivot-sharepoint/media/gmni-btn-newdatarefreshreportgallery.gif "GMNI_btn_NewDataRefreshReportGallery")|Click the Manage Data refresh button to create or view a schedule that retrieves updated data from connected data sources. For instructions on how to create a schedule, see [Schedule a Data Refresh (Power Pivot for SharePoint)](http://msdn.microsoft.com/en-us/8571208f-6aae-4058-83c6-9f916f5e2f9b).|  
+|![GMNI_btn_NewDataRefreshReportGallery](../../analysis-services/power-pivot-sharepoint/media/gmni-btn-newdatarefreshreportgallery.gif "GMNI_btn_NewDataRefreshReportGallery")|Click the Manage Data refresh button to create or view a schedule that retrieves updated data from connected data sources. For instructions on how to create a schedule, see [Schedule a Data Refresh (Power Pivot for SharePoint)](http://msdn.microsoft.com/8571208f-6aae-4058-83c6-9f916f5e2f9b).|  
   
 ##  <a name="delete"></a> Delete a workbook or report in Power Pivot Gallery  
  To delete a document from the library, switch to the All Documents view first.  
@@ -153,9 +147,9 @@ manager: "erikre"
 ### Document Type is Not Supported  
  The **[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] Gallery Document** content type is not supported. If you enable the **[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] Gallery Document** content type for a document library, and attempt to create a new document of that type, you will see an error message similar to one of the following:  
   
--   ‘New Document’ requires a Microsoft Sharepoint Foundation-compatible application and web browser. To add a document to this document library, click the ‘Upload Document’ button.  
+-   'New Document' requires a Microsoft Sharepoint Foundation-compatible application and web browser. To add a document to this document library, click the 'Upload Document' button.  
   
--   "The Internet address 'http://[server name]/testSite/PowerPivot Gallery/ReportGallery/Forms/Template.xlsx' is not valid."“Microsoft Excel cannot access the file 'http://[server name]/testSite/PowerPivot Gallery/ReportGallery/Forms/Template.xlsx'. There are several possible reasons:  
+-   "The Internet address 'http://[server name]/testSite/PowerPivot Gallery/ReportGallery/Forms/Template.xlsx' is not valid.""Microsoft Excel cannot access the file 'http://[server name]/testSite/PowerPivot Gallery/ReportGallery/Forms/Template.xlsx'. There are several possible reasons:  
   
  The **[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] Gallery Document** content type is not automatically added to document libraries,  You will not encounter this issue unless you manually enable the unsupported content type.  
   
@@ -163,6 +157,6 @@ manager: "erikre"
  [Create a trusted location for Power Pivot sites in Central Administration](../../analysis-services/power-pivot-sharepoint/create-a-trusted-location-for-power-pivot-sites-in-central-administration.md)   
  [Delete Power Pivot Gallery](../../analysis-services/power-pivot-sharepoint/delete-power-pivot-gallery.md)   
  [Create and Customize Power Pivot Gallery](../../analysis-services/power-pivot-sharepoint/create-and-customize-power-pivot-gallery.md)   
- [Schedule a Data Refresh (Power Pivot for SharePoint)](http://msdn.microsoft.com/en-us/8571208f-6aae-4058-83c6-9f916f5e2f9b)  
+ [Schedule a Data Refresh (Power Pivot for SharePoint)](http://msdn.microsoft.com/8571208f-6aae-4058-83c6-9f916f5e2f9b)  
   
   

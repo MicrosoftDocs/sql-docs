@@ -1,23 +1,17 @@
 ---
 title: "Configure Analysis Services for Kerberos constrained delegation | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-ms.assetid: 6d751477-6bf1-48b4-8833-5a631bbe7650
-caps.latest.revision: 14
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom:
+ms.topic: conceptual
+ms.author: owend
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
 ---
 # Configure Analysis Services for Kerberos constrained delegation
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   When configuring Analysis Services for Kerberos authentication, you are most likely interested in achieving one or both of the following outcomes: having Analysis Services impersonate a user identity when querying data; or having Analysis Services delegate a user identity to a down-level service. Each scenario calls for slightly different configuration requirements. Both scenarios require verification to ensure configuration was done properly.  
   
 > [!TIP]  
@@ -34,7 +28,7 @@ manager: "erikre"
 > [!NOTE]  
 >  Delegation is not required if the connection to Analysis Services is a single hop, or your solution uses stored credentials provided by SharePoint Secure Store Service or Reporting Services. If all connections are direct connections from Excel to an Analysis Services database, or based on stored credentials, you can use Kerberos (or NTLM) without having to configure constrained delegation.  
 >   
->  Kerberos constrained delegation is required if the user identity has to flow over multiple computer connections (known as “double-hop”). When Analysis Services data access is contingent upon user identity, and the connection request is from a delegating service, use the checklist in the next section to ensure that Analysis Services is able to impersonate the original caller. For more information about Analysis Services authentication flows, see [Microsoft BI Authentication and Identity Delegation](http://go.microsoft.com/fwlink/?LinkID=286576).  
+>  Kerberos constrained delegation is required if the user identity has to flow over multiple computer connections (known as "double-hop"). When Analysis Services data access is contingent upon user identity, and the connection request is from a delegating service, use the checklist in the next section to ensure that Analysis Services is able to impersonate the original caller. For more information about Analysis Services authentication flows, see [Microsoft BI Authentication and Identity Delegation](http://go.microsoft.com/fwlink/?LinkID=286576).  
 >   
 >  As a security best practice, Microsoft always recommends constrained delegation over unconstrained delegation. Unconstrained delegation is a major security risk because it allows the service identity to impersonate another user on *any* downstream computer, service, or application (as opposed to just those services explicitly defined via constrained delegation).  
   
@@ -51,7 +45,7 @@ manager: "erikre"
 ##  <a name="bkmk_delegate"></a> Configure Analysis Services for trusted delegation  
  Configuring Analysis Services for Kerberos constrained delegation allows the service to impersonate a client identity on a down-level service, such as the relational database engine, so that data can be queried as if the client was connected directly.  
   
- Delegation scenarios for Analysis Services are limited to tabular models configured for **DirectQuery** mode. This is the only scenario in which Analysis Services can pass delegated credentials to another service. In all other scenarios, such as SharePoint scenarios mentioned in the previous section, Analysis Services is on the receiving end of the delegation chain. For more information about DirectQuery, see [DirectQuery Mode &#40;SSAS Tabular&#41;](../../analysis-services/tabular-models/directquery-mode-ssas-tabular.md).  
+ Delegation scenarios for Analysis Services are limited to tabular models configured for **DirectQuery** mode. This is the only scenario in which Analysis Services can pass delegated credentials to another service. In all other scenarios, such as SharePoint scenarios mentioned in the previous section, Analysis Services is on the receiving end of the delegation chain. For more information about DirectQuery, see [DirectQuery Mode](../../analysis-services/tabular-models/directquery-mode-ssas-tabular.md).  
   
 > [!NOTE]  
 >  A common misconception is that ROLAP storage, processing operations, or access to remote partitions somehow introduce requirements for constrained delegation. This is not the case. All of these operations are executed directly by the service account (also referred to as the processing account), on its own behalf. Delegation is not required for these operations in Analysis Services, given that permissions for such operations are granted directly to the service account (for example, granting db_datareader permissions on the relational database so that the service can process data). For more information about server operations and permissions, see [Configure Service Accounts &#40;Analysis Services&#41;](../../analysis-services/instances/configure-service-accounts-analysis-services.md).  

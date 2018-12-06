@@ -1,28 +1,17 @@
 ---
 title: "BottomPercent (MDX) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/02/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "BOTTOMPERCENT"
-dev_langs: 
-  - "kbMDX"
-helpviewer_keywords: 
-  - "BottomPercent function"
-ms.assetid: c04866e6-e6dd-4ed1-ae79-c718c194930c
-caps.latest.revision: 39
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
+ms.date: 06/04/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: mdx
+ms.topic: reference
+ms.author: owend
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
 ---
 # BottomPercent (MDX)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+
 
   Sorts a set in ascending order, and returns a set of tuples with the lowest values whose cumulative total is equal to or greater than a specified percentage.  
   

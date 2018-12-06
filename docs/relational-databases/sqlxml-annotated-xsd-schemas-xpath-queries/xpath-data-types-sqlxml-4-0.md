@@ -2,12 +2,10 @@
 title: "XPath Data Types (SQLXML 4.0) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
+ms.prod: sql
+ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-xml"
-ms.tgt_pltfrm: ""
+ms.technology: xml
 ms.topic: "reference"
 helpviewer_keywords: 
   - "mapping XDR types to XPath types [SQLXML]"
@@ -27,18 +25,19 @@ helpviewer_keywords:
   - "XPath data types [SQLXML]"
   - "operators [SQLXML]"
 ms.assetid: a90374bf-406f-4384-ba81-59478017db68
-caps.latest.revision: 27
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: craigg
+monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # XPath Data Types (SQLXML 4.0)
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], XPath, and XML Schema (XSD) have very different data types. For example, XPath does not have integer or date data types, but [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and XSD have many. XSD uses nanosecond precision for time values, and [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] uses at most 1/300-second precision. Consequently, mapping one data type to another is not always possible. For more information about mapping [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] data types to XSD data types, see [Data Type Coercions and the sql:datatype Annotation &#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-using/data-type-coercions-and-the-sql-datatype-annotation-sqlxml-4-0.md).  
   
  XPath has three data types: **string**, **number**, and **boolean**. The **number** data type is always an IEEE 754 double-precision floating-point. The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**float(53)** data type is the closest to XPath **number**. However, **float(53)** is not exactly IEEE 754. For example, neither NaN (Not-a-Number) nor infinity is used. Attempting to convert a nonnumeric string to **number** and trying to divide by zero results in an error.  
   
 ## XPath Conversions  
- When you use an XPath query such as `OrderDetail[@UnitPrice > "10.0"]`, implicit and explicit data type conversions can change the meaning of the query in subtle ways. Therefore, it is important to understand how XPath data types are implemented. The XPath language specification, XML Path Language (XPath) version 1.0 W3C Proposed Recommendation 8 October 1999, can be found at the W3C Web site at http://www.w3.org/TR/1999/PR-xpath-19991008.html.  
+ When you use an XPath query such as `OrderDetail[@UnitPrice > "10.0"]`, implicit and explicit data type conversions can change the meaning of the query in subtle ways. Therefore, it is important to understand how XPath data types are implemented. The XPath language specification, XML Path Language (XPath) version 1.0 W3C Proposed Recommendation 8 October 1999, can be found at the W3C Web site at https://www.w3.org/TR/1999/PR-xpath-19991008.html.  
   
  XPath operators are divided into four categories:  
   

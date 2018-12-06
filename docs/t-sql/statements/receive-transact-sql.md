@@ -2,12 +2,10 @@
 title: "RECEIVE (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/26/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
+ms.prod_service: "sql-database"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: t-sql
 ms.topic: "language-reference"
 f1_keywords: 
   - "RECEIVE_TSQL"
@@ -21,13 +19,12 @@ helpviewer_keywords:
   - "receiving messages"
   - "retrieving messages"
 ms.assetid: 878c6c14-37ab-4b87-9854-7f8f42bac7dd
-caps.latest.revision: 50
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
 ---
 # RECEIVE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Retrieves one or more messages from a queue. Depending on the retention setting for the queue, either removes the message from the queue or updates the status of the message in the queue.  
   
@@ -315,13 +312,13 @@ WAITFOR(
       AS ConversationErrors,  
       CASE WHEN message_type_name = N'//Adventure-Works.com/Expenses/SubmitExpense'  
           THEN CAST(message_body AS XML).value(  
-                'declare namespace rpt = "http://Adventure-Works.com/schemas/expenseReport"  
+                'declare namespace rpt = "https://Adventure-Works.com/schemas/expenseReport"  
                    (/rpt:ExpenseReport/rpt:EmployeeID)[1]', 'nvarchar(20)')  
          ELSE NULL  
       END AS EmployeeID,  
       CASE WHEN message_type_name = N'//Adventure-Works.com/Expenses/SubmitExpense'  
           THEN CAST(message_body AS XML).query(  
-                'declare namespace rpt = "http://Adventure-Works.com/schemas/expenseReport"   
+                'declare namespace rpt = "https://Adventure-Works.com/schemas/expenseReport"   
                      /rpt:ExpenseReport/rpt:ItemDetail')  
           ELSE NULL  
       END AS ItemList  

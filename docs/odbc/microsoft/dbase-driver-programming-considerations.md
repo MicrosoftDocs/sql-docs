@@ -2,23 +2,20 @@
 title: "dBASE Driver Programming Considerations | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
+ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "drivers"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: connectivity
+ms.topic: conceptual
 helpviewer_keywords: 
   - "Jet-based ODBC drivers [ODBC], DBasedriver"
   - "desktop database drivers [ODBC], DBasedriver"
   - "DBase driver [ODBC]"
   - "ODBC desktop database drivers [ODBC], DBasedriver"
 ms.assetid: ce5e8efc-6a2d-40d5-a658-8dd35cd1dd09
-caps.latest.revision: 5
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # dBASE Driver Programming Considerations
 This section contains the following topics.  

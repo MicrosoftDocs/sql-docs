@@ -2,12 +2,10 @@
 title: "SET DATEFIRST (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
+ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: t-sql
 ms.topic: "language-reference"
 f1_keywords: 
   - "SET DATEFIRST"
@@ -24,13 +22,13 @@ helpviewer_keywords:
   - "weekdays [SQL Server]"
   - "options [SQL Server], date"
 ms.assetid: 6b0d0e52-8ac1-4f88-b091-f98d6fb8574a
-caps.latest.revision: 31
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # SET DATEFIRST (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Sets the first day of the week to a number from 1 through 7.  
   
@@ -53,7 +51,7 @@ SET DATEFIRST 7 ;
 ```  
   
 ## Arguments  
- *number* | **@***number_var*  
+ *number* | **@**_number_var_  
  Is an integer that indicates the first day of the week. It can be one of the following values.  
   
 |Value|First day of the week is|  
@@ -97,14 +95,6 @@ SET DATEFIRST 3;
 SELECT CAST('1999-1-1' AS datetime2) AS SelectDate  
     ,DATEPART(dw, '1999-1-1') AS DayOfWeek;  
 GO  
-```  
-  
-## Examples: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
-  
-```  
--- SET DATEFIRST to U.S. English default value of 7.  
-SET DATEFIRST 7;  
-  
 ```  
   
 ## See Also  

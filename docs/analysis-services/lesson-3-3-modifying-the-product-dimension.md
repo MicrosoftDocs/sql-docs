@@ -1,23 +1,18 @@
 ---
 title: "Modifying the Product Dimension | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/04/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
-applies_to: 
-  - "SQL Server 2016"
-ms.assetid: 8e3ffecd-7f40-41a8-8735-bc9858a310cb
-caps.latest.revision: 19
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
+ms.date: 05/08/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: multidimensional-models
+ms.topic: tutorial
+ms.author: owend
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
 ---
 # Lesson 3-3 - Modifying the Product Dimension
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
 In the tasks in this topic, you use a named calculation to provide more descriptive names for the product lines, define a hierarchy in the Product dimension, and specify the (All) member name for the hierarchy. You also group attributes into display folders.  
   
 ## Adding a Named Calculation  
@@ -57,7 +52,7 @@ You can add a named calculation to a table in a data source view. In the followi
   
 2.  In the **Attributes** pane of the **Dimension Structure** tab, select **Product Line**.  
   
-3.  In the Properties window on the right side of the screen, click the **NameColumn** property field at the bottom of the window, and then click the browse (**…**) button to open the **Name Column** dialog box. (You might need to click the **Properties** tab on the right side of the screen to open the Properties window.  
+3.  In the Properties window on the right side of the screen, click the **NameColumn** property field at the bottom of the window, and then click the browse (**...**) button to open the **Name Column** dialog box. (You might need to click the **Properties** tab on the right side of the screen to open the Properties window.  
   
 4.  Select **ProductLineName** at the bottom of the **Source column** list, and then click **OK**.  
   
@@ -65,7 +60,7 @@ You can add a named calculation to a table in a data source view. In the followi
   
 5.  In the **Attributes** pane of the **Dimension Structure** tab, select **Product Key**.  
   
-6.  In the Properties window, click the **NameColumn** property field, and then click the ellipsis browse (**…**) button to open the **Name Column** dialog box.  
+6.  In the Properties window, click the **NameColumn** property field, and then click the ellipsis browse (**...**) button to open the **Name Column** dialog box.  
   
 7.  Select **EnglishProductName** in the **Source column** list, and then click **OK**.  
   

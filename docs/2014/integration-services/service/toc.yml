@@ -1,0 +1,39 @@
+- name: Integration Services Service (SSIS Service)
+  href: integration-services-service-ssis-service.md
+  items:
+  - name: Manage the Integration Services Service
+    href: ../manage-the-integration-services-service.md
+  - name: Set the Properties of the Integration Services Service
+    href: ../set-the-properties-of-the-integration-services-service.md
+  - name: Configuring the Integration Services Service (SSIS Service)
+    href: ../configuring-the-integration-services-service-ssis-service.md
+  - name: Configure a Windows Firewall for Access to the SSIS Service
+    href: ../configure-a-windows-firewall-for-access-to-the-ssis-service.md
+  - name: Connect to a Remote Integration Services Server (SSIS Service)
+    href: ../connect-to-a-remote-integration-services-server-ssis-service.md
+  - name: Connect to Integration Services
+    href: ../connect-to-integration-services.md
+  - name: Grant Permissions to Integration Services Service
+    href: ../grant-permissions-to-integration-services-service.md
+  - name: Events Logged by the Integration Services Service
+    href: events-logged-by-the-integration-services-service.md
+    items:
+    - name: View Events for the Integration Services Service
+      href: ../view-events-for-the-integration-services-service.md
+- name: Package Management (SSIS Service)
+  href: package-management-ssis-service.md
+  items:
+  - name: Import and Export Packages (SSIS Service)
+    href: ../import-and-export-packages-ssis-service.md
+  - name: Export Package Dialog Box UI Reference
+    href: ../export-package-dialog-box-ui-reference.md
+  - name: Import Package Dialog Box UI Reference
+    href: ../import-package-dialog-box-ui-reference.md
+  - name: Package Backup and Restore (SSIS Service)
+    href: ../package-backup-and-restore-ssis-service.md
+  - name: View Integration Services Packages in SQL Server Management Studio (SSIS Service)
+    href: ../view-integration-services-packages-in-sql-server-management-studio-ssis-service.md
+  - name: Integration Services (SSIS) in a Cluster
+    href: integration-services-ssis-in-a-cluster.md
+  - name: Configure the Integration Services Service as a Cluster Resource
+    href: ../configure-the-integration-services-service-as-a-cluster-resource.md

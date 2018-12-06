@@ -2,24 +2,22 @@
 title: "OLE Automation Return Codes and Error Information | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/05/2017"
-ms.prod: "sql-server-2016"
+ms.prod: sql
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-ole"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: stored-procedures
+ms.topic: conceptual
 helpviewer_keywords: 
   - "return codes [SQL Server]"
   - "OLE Automation [SQL Server], return codes"
   - "OLE Automation [SQL Server], errors"
 ms.assetid: 9696fb05-e9e8-4836-b359-d4de0be0eeb2
-caps.latest.revision: 22
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: craigg
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # OLE Automation Return Codes and Error Information
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
   The OLE Automation system stored procedures return an **int** return code that is the HRESULT returned by the underlying OLE Automation operation. An HRESULT of 0 indicates success. A nonzero HRESULT is an OLE error code of the hexadecimal form 0x800*nnnnn*, but when returned as an **int** value in a stored procedure return code, HRESULT has the form 214*nnnnnnn*.  
   
  For example, passing an invalid object name (SQLDMO.Xyzzy) to sp_OACreate causes the procedure to return an **int** HRESULT of 2147221005, which is 0x800401f3 in hexadecimal.  

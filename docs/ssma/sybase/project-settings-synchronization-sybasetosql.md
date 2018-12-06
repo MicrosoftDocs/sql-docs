@@ -2,24 +2,17 @@
 title: "Project Settings (Synchronization) (SybaseToSQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "sql-ssma"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to: 
-  - "Azure SQL Database"
-  - "SQL Server"
+ms.technology: ssma
+ms.topic: conceptual
 ms.assetid: 2cd6bc01-b8e5-4312-83a4-eac66dc1d460
-caps.latest.revision: 3
-author: "sabotta"
-ms.author: "carlasab"
-manager: "lonnyb"
+author: "Shamikg"
+ms.author: "Shamikg"
+manager: craigg
 ---
 # Project Settings (Synchronization) (SybaseToSQL)
-The Synchronization page of the **Project Settings** dialog box contains settings that customize how SSMA loads database objects, such as tables and stored procedures, into [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] or SQL Azure.  
+The Synchronization page of the **Project Settings** dialog box contains settings that customize how SSMA loads database objects, such as tables and stored procedures, into [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] or SQL Azure.  
   
 You can access two different Synchronization pages that contain the same settings:  
   
@@ -29,7 +22,7 @@ You can access two different Synchronization pages that contain the same setting
   
 ## Options  
 **Attempts**  
-Specifies the number of attempts SSMA should make when it loads objects into [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]. Objects that are not loaded into [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] in the current attempt will be tried again until SSMA reaches the maximum number of attempts in the current synchronization process.  
+Specifies the number of attempts SSMA should make when it loads objects into [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Objects that are not loaded into [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in the current attempt will be tried again until SSMA reaches the maximum number of attempts in the current synchronization process.  
   
 ## Synchronization for SQL Server  
 **Refresh local object on local and remote object change**  

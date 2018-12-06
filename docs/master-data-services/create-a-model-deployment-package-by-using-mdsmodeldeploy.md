@@ -1,22 +1,21 @@
 ---
 title: "Create a Model Deployment Package by Using MDSModelDeploy | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
+ms.custom: ""
 ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
+ms.prod: sql
+ms.prod_service: "mds"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "master-data-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: master-data-services
+ms.topic: conceptual
 ms.assetid: c2687e39-dc20-494f-a707-2aa29f4c329e
-caps.latest.revision: 13
-author: "sabotta"
-ms.author: "carlasab"
-manager: "jhubbard"
+author: leolimsft
+ms.author: lle
+manager: craigg
 ---
 # Create a Model Deployment Package by Using MDSModelDeploy
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
   In [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], use the MDSModelDeploy tool to create a package. Depending on the commands you specify, the package can contain either:  
   
 -   Model objects only.  
@@ -88,7 +87,7 @@ manager: "jhubbard"
   
      If you do not want to include data, do not use the `-version` and `-includedata` switches.  
   
-6.  Press Enter. When the package is successfully created, a message stating “MDSModelDeploy operation completed successfully” is displayed.  
+6.  Press Enter. When the package is successfully created, a message stating "MDSModelDeploy operation completed successfully" is displayed.  
   
 ## Next Steps  
   

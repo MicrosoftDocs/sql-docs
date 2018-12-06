@@ -2,23 +2,21 @@
 title: "Transactional Replication | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
+ms.prod: sql
+ms.prod_service: "database-engine"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: replication
+ms.topic: conceptual
 helpviewer_keywords: 
   - "transactional replication, about transactional replication"
   - "transactional replication"
 ms.assetid: 3ca82fb9-81e6-4c3c-94b3-b15f852b18bd
-caps.latest.revision: 38
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "MashaMSFT"
+ms.author: "mathoma"
+manager: craigg
 ---
 # Transactional Replication
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Transactional replication typically starts with a snapshot of the publication database objects and data. As soon as the initial snapshot is taken, subsequent data changes and schema modifications made at the Publisher are usually delivered to the Subscriber as they occur (in near real time). The data changes are applied to the Subscriber in the same order and within the same transaction boundaries as they occurred at the Publisher; therefore, within a publication, transactional consistency is guaranteed.  
   
  Transactional replication is typically used in server-to-server environments and is appropriate in each of the following cases:  
@@ -34,18 +32,6 @@ manager: "jhubbard"
 -   The Publisher or Subscriber is a non-[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] database, such as Oracle.  
   
  By default, Subscribers to transactional publications should be treated as read-only, because changes are not propagated back to the Publisher. However, transactional replication does offer options that allow updates at the Subscriber.  
-  
- **In This Topic**  
-  
- [How Transactional Replication Works](#HowWorks)  
-  
- [Initial Dataset](#Dataset)  
-  
- [Snapshot Agent](#SnapshotAgent)  
-  
- [Log Reader Agent](#LogReaderAgent)  
-  
- [Distribution Agent](#DistributionAgent)  
   
 ##  <a name="HowWorks"></a> How Transactional Replication Works  
  Transactional replication is implemented by the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Snapshot Agent, Log Reader Agent, and Distribution Agent. The Snapshot Agent prepares snapshot files containing schema and data of published tables and database objects, stores the files in the snapshot folder, and records synchronization jobs in the distribution database on the Distributor.  

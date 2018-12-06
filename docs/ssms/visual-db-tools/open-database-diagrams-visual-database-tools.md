@@ -2,24 +2,23 @@
 title: "Open Database Diagrams (Visual Database Tools) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
+ms.prod_service: "sql-tools"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "tools-ssms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: ssms
+ms.topic: conceptual
 helpviewer_keywords: 
   - "database diagrams [SQL Server], opening"
   - "opening database diagrams"
   - "diagrams [SQL Server], opening"
 ms.assetid: 06d9a7d5-ef04-400c-a340-7a3e5d54f685
-caps.latest.revision: 4
 author: "stevestein"
 ms.author: "sstein"
-manager: "jhubbard"
+manager: craigg
+
 ---
 # Open Database Diagrams (Visual Database Tools)
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 You can open database diagrams to view or edit the diagram's structure.  
   
 ### To open a database diagram  

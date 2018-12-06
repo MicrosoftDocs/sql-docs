@@ -2,28 +2,23 @@
 title: "sp_browsereplcmds (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
+ms.prod: sql
+ms.prod_service: "database-engine"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
+ms.technology: replication
 ms.topic: "language-reference"
-applies_to: 
-  - "SQL Server"
 f1_keywords: 
   - "sp_browsereplcmds_TSQL"
   - "sp_browsereplcmds"
 helpviewer_keywords: 
   - "sp_browsereplcmds"
 ms.assetid: 30abcb41-1d18-4f43-a692-4c80914c0450
-caps.latest.revision: 34
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: craigg
 ---
 # sp_browsereplcmds (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Returns a result set in a readable version of the replicated commands stored in the distribution database, and is used as a diagnostic tool. This stored procedure is executed at the Distributor on the distribution database.  
   
@@ -44,19 +39,19 @@ sp_browsereplcmds [ [ @xact_seqno_start = ] 'xact_seqno_start' ]
 ```  
   
 ## Arguments  
- [ **@xact_seqno_start =**] **'***xact_seqno_start***'**  
+ [ **@xact_seqno_start =**] **'**_xact_seqno_start_**'**  
  Specifies the lowest valued exact sequence number to return. *xact_seqno_start* is **nchar(22)**, with a default of 0x00000000000000000000.  
   
- [ **@xact_seqno_end =**] **'***xact_seqno_end***'**  
+ [ **@xact_seqno_end =**] **'**_xact_seqno_end_**'**  
  Specifies the highest exact sequence number to return. *xact_seqno_end* is **nchar(22)**, with a default of 0xFFFFFFFFFFFFFFFFFFFF.  
   
- [ **@originator_id =**] **'***originator_id***'**  
+ [ **@originator_id =**] **'**_originator_id_**'**  
  Specifies if commands with the specified *originator_id* are returned. *originator_id* is **int**, with a default of NULL.  
   
- [ **@publisher_database_id =**] **'***publisher_database_id***'**  
+ [ **@publisher_database_id =**] **'**_publisher_database_id_**'**  
  Specifies if commands with the specified *publisher_database_id* are returned. *publisher_database_id* is **int**, with a default of NULL.  
   
- [ **@article_id =**] **'***article_id***'**  
+ [ **@article_id =**] **'**_article_id_**'**  
  Specifies if commands with the specified *article_id* are returned. *article_id* is **int**, with a default of NULL.  
   
  [ **@command_id =**] *command_id*  

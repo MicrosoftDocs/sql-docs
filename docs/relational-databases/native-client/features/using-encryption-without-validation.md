@@ -1,13 +1,10 @@
 ---
 title: "Using Encryption Without Validation | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/16/2017"
-ms.prod: "sql-server-2016"
+ms.date: "12/21/2017"
+ms.prod: sql
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "docset-sql-devref"
-ms.tgt_pltfrm: ""
+ms.technology: native-client
 ms.topic: "reference"
 helpviewer_keywords: 
   - "data access [SQL Server Native Client], encryption"
@@ -16,19 +13,22 @@ helpviewer_keywords:
   - "encryption [SQL Server Native Client]"
   - "SQL Server Native Client, encryption"
 ms.assetid: f4c63206-80bb-4d31-84ae-ccfcd563effa
-caps.latest.revision: 18
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: MightyPen
+ms.author: genemi
+manager: craigg
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Using Encryption Without Validation
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../../includes/snac-deprecated.md)]
 
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] always encrypts network packets associated with logging in. If no certificate has been provisioned on the server when it starts up, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] generates a self-signed certificate which is used to encrypt login packets.  
-  
- Applications may also request encryption of all network traffic by using connection string keywords or connection properties. The keywords are "Encrypt" for ODBC and OLE DB when using a provider string with **IDbInitialize::Initialize**, or "Use Encryption for Data" for ADO and OLE DB when using an initialization string with **IDataInitialize**. This may also be configured by [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Configuration Manager using the **Force Protocol Encryption** option. By default, encryption of all network traffic for a connection requires that a certificate be provisioned on the server.  
-  
- For information about connection string keywords, see [Using Connection String Keywords with SQL Server Native Client](../../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md).  
+[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] always encrypts network packets associated with logging in. If no certificate has been provisioned on the server when it starts up, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] generates a self-signed certificate which is used to encrypt login packets.  
+
+Self-signed certificates do not guarantee security. The encrypted handshake is based on NT LAN Manager (NTLM). It is highly recommended that you provision a verifiable certificate on SQL Server for secure connectivity. Transport Security Layer (TLS) can be made secure only with certificate validation.
+
+Applications may also request encryption of all network traffic by using connection string keywords or connection properties. The keywords are "Encrypt" for ODBC and OLE DB when using a provider string with **IDbInitialize::Initialize**, or "Use Encryption for Data" for ADO and OLE DB when using an initialization string with **IDataInitialize**. This may also be configured by [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Configuration Manager using the **Force Protocol Encryption** option, and by configuring the client to request encrypted connections. By default, encryption of all network traffic for a connection requires that a certificate be provisioned on the server. By setting your client to trust the certificate on the server, you might become vulnerable to man-in-the-middle attacks. If you deploy a verifiable certificate on the server, ensure that you change the client settings about trust the certificate to FALSE.
+
+For information about connection string keywords, see [Using Connection String Keywords with SQL Server Native Client](../../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md).  
   
  To enable encryption to be used when a certificate has not been provisioned on the server, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Configuration Manager can be used to set both the **Force Protocol Encryption** and the **Trust Server Certificate** options. In this case, encryption will use a self-signed server certificate without validation if no verifiable certificate has been provisioned on the server.  
   
@@ -43,7 +43,11 @@ manager: "jhubbard"
 |Yes|Yes|No (default)|Ignored|Encryption always occurs, but may use a self-signed server certificate.|  
 |Yes|Yes|Yes|No (default)|Encryption occurs only if there is a verifiable server certificate, otherwise the connection attempt fails.|  
 |Yes|Yes|Yes|Yes|Encryption always occurs, but might use a self-signed server certificate.|  
-  
+||||||
+
+> [!CAUTION]
+> The preceding table only provides a guide on the system behavior under different configurations. For secure connectivity, ensure that the client and server both require encryption. Also ensure that the server has a verifiable certificate, and that the **TrustServerCertificate** setting on the client is set to FALSE.
+
 ## SQL Server Native Client OLE DB Provider  
  The [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB provider supports encryption without validation through the addition of the SSPROP_INIT_TRUST_SERVER_CERTIFICATE data source initialization property, which is implemented in the DBPROPSET_SQLSERVERDBINIT property set. In addition, a new connection string keyword, "TrustServerCertificate", as been added. It accepts yes or no values; no is the default. When using service components, it accepts true or false values; false is the default.  
   

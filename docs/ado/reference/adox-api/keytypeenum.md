@@ -1,24 +1,21 @@
 ---
 title: "KeyTypeEnum | Microsoft Docs"
-ms.prod: "sql-non-specified"
-ms.technology:
-  - "drivers"
+ms.prod: sql
+ms.prod_service: connectivity
+ms.technology: connectivity
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 apitype: "COM"
 f1_keywords: 
   - "KeyTypeEnum"
 helpviewer_keywords: 
   - "KeyTypeEnum enumeration [ADOX]"
 ms.assetid: 3e597c52-caf4-4341-8471-d1ade563dbf7
-caps.latest.revision: 11
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # KeyTypeEnum
 Specifies the type of [Key](../../../ado/reference/adox-api/key-object-adox.md): primary, foreign, or unique.  

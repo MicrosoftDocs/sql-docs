@@ -1,0 +1,18 @@
+- name: Overview
+  href: install-master-data-services.md
+- name: Web Application Requirements (Master Data Services)
+  href: web-application-requirements-master-data-services.md
+- name: Database Requirements (Master Data Services)
+  href: database-requirements-master-data-services.md
+- name: Create a Master Data Services Database
+  href: create-a-master-data-services-database.md
+- name: Create a Master Data Manager Web Application (Master Data Services)
+  href: create-a-master-data-manager-web-application-master-data-services.md
+- name: Secure a Master Data Manager Web Application
+  href: secure-a-master-data-manager-web-application.md
+- name: Associate a Master Data Services Database and Web Application
+  href: associate-a-master-data-services-database-and-web-application.md
+- name: Enable Data Quality Services Integration with Master Data Services
+  href: enable-data-quality-services-integration-with-master-data-services.md
+- name: Multi-Lingual and Global Deployments (Master Data Services)
+  href: multi-lingual-and-global-deployments-master-data-services.md

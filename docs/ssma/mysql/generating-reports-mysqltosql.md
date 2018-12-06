@@ -1,24 +1,17 @@
 ---
 title: "Generating Reports (MySQLToSQL) | Microsoft Docs"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "sql-ssma"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to: 
-  - "Azure SQL Database"
-  - "SQL Server"
+ms.technology: ssma
+ms.topic: conceptual
 helpviewer_keywords: 
   - "Generating reports"
 ms.assetid: 1c0202e8-546d-4cb3-a37f-1d2e35d53839
-caps.latest.revision: 6
-author: "sabotta"
-ms.author: "carlasab"
-manager: "lonnyb"
+author: "Shamikg"
+ms.author: "Shamikg"
+manager: craigg
 ---
 # Generating Reports (MySQLToSQL)
 The reports of certain activities performed using commands are generated in SSMA Console at object tree level.  
@@ -49,8 +42,8 @@ Use the following procedure to generate reports:
     ||||  
     |-|-|-|  
     |**Sl. No.**|**Command and Parameter**|**Output Description**|  
-    |1|verbose=”false”|Generates a summarized report of the activity.|  
-    |2|verbose=”true”|Generates a summarized and detailed status report for each activity.|  
+    |1|verbose="false"|Generates a summarized report of the activity.|  
+    |2|verbose="true"|Generates a summarized and detailed status report for each activity.|  
   
     > [!NOTE]  
     > The Report Verbosity Settings specified above are applicable for generate-assessment-report, convert-schema, migrate-data, convert-sql-statement commands.  
@@ -60,8 +53,8 @@ Use the following procedure to generate reports:
     ||||  
     |-|-|-|  
     |**Sl. No.**|**Command and Parameter**|**Output Description**|  
-    |1|report-errors=”false”|No details on error/ warning/ info messages.|  
-    |2|report-errors=”true”|Detailed error/ warning/ info messages.|  
+    |1|report-errors="false"|No details on error/ warning/ info messages.|  
+    |2|report-errors="true"|Detailed error/ warning/ info messages.|  
   
     > [!NOTE]  
     > The Error Reporting Settings specified above are applicable for generate-assessment-report, convert-schema, migrate-data, convert-sql-statement commands.  
@@ -89,7 +82,7 @@ Use the following procedure to generate reports:
 ### synchronize-target:  
 The command **synchronize-target** has **report-errors-to** parameter, which specifies the location of error report for the synchronization operation. Then, a file by name **TargetSynchronizationReport&lt;n&gt;.XML** is created at the specified location, where **&lt;n&gt;** is the unique file number that increments with a digit with each execution of the same command.  
   
-**Note:** If the folder path is given, then ‘report-errors-to’ parameter becomes an optional attribute for the command ‘synchronize-target’.  
+**Note:** If the folder path is given, then 'report-errors-to' parameter becomes an optional attribute for the command 'synchronize-target'.  
   
 ```xml  
 <!-- Example: Synchronize target entire Database with all attributes-->  
@@ -117,7 +110,7 @@ The command **synchronize-target** has **report-errors-to** parameter, which spe
 ### refresh-from-database:  
 The command **refresh-from-database** has **report-errors-to** parameter, which specifies the location of error report for the refresh operation. Then, a file by name **SourceDBRefreshReport&lt;n&gt;.XML** is created at the specified location, where **&lt;n&gt;** is the unique file number that increments with a digit with each execution of the same command.  
   
-**Note:** If the folder path is given, then ‘report-errors-to’ parameter becomes an optional attribute for the command ‘synchronize-target’.  
+**Note:** If the folder path is given, then 'report-errors-to' parameter becomes an optional attribute for the command 'synchronize-target'.  
   
 ```xml  
 <!-- Example: Refresh entire Schema (with all attributes)-->  
@@ -145,5 +138,5 @@ The command **refresh-from-database** has **report-errors-to** parameter, which 
 -   fail-script  
   
 ## See Also  
-[Executing the SSMA Console (MySQL)](http://msdn.microsoft.com/en-us/e3e9f7e4-0619-4861-a202-3d5d39953b26)  
+[Executing the SSMA Console (MySQL)](https://msdn.microsoft.com/e3e9f7e4-0619-4861-a202-3d5d39953b26)  
   

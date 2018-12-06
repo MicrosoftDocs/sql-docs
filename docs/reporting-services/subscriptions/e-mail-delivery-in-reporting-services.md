@@ -1,24 +1,19 @@
 ---
 title: "E-Mail Delivery in Reporting Services | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.date: 03/14/2017
+ms.prod: reporting-services
+ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
+ms.technology: subscriptions
+
+
+ms.topic: conceptual
 helpviewer_keywords: 
   - "subscriptions [Reporting Services], e-mail"
   - "e-mail [Reporting Services]"
   - "mail [Reporting Services]"
 ms.assetid: fda2f130-97b9-4258-9dbb-e93a70f4d08a
-caps.latest.revision: 45
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
+author: markingmyname
+ms.author: maghan
 ---
 # E-Mail Delivery in Reporting Services
   SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] includes an e-mail delivery extension that provides a way to e-mail a report to individual users or groups. To distribute a report by e-mail, you 1) configure the report server for e-mail delivery and 2) define either a standard subscription or a data-driven subscription. A single subscription cannot deliver multiple reports in a single e-mail message. However you can create multiple subscriptions.  
@@ -82,7 +77,7 @@ manager: "erikre"
  For a Native mode report server, the e-mail delivery extension is configured through the Native mode [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configuration Manager and by editing the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] configuration files. For a SharePoint mode report server, the e-mail delivery extension is configured in SharePoint management pages and PowerShell scripts.  
   
  
- For information on how to configure a native mode report server, see [email settings - Reporting Services Native mode (Configuration Manager)](https://msdn.microsoft.com/library/ms189342.aspx)
+ For information on how to configure a native mode report server, see [email settings - Reporting Services Native mode (Configuration Manager)](../install-windows/e-mail-settings-reporting-services-native-mode-configuration-manager.md)
  
  
  For information on how to configure a SharePoint mode report server, see the following:  

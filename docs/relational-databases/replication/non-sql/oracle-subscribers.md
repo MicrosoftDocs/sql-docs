@@ -2,13 +2,11 @@
 title: "Oracle Subscribers | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
+ms.prod: sql
+ms.prod_service: "database-engine"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: replication
+ms.topic: conceptual
 helpviewer_keywords: 
   - "data types [SQL Server replication], non-SQL Server Subscribers"
   - "Oracle Subscribers [SQL Server replication]"
@@ -16,12 +14,12 @@ helpviewer_keywords:
   - "heterogeneous Subscribers, Oracle"
   - "mapping data types [SQL Server replication]"
 ms.assetid: 591c0313-82ce-4689-9fc1-73752ff122cf
-caps.latest.revision: 55
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "MashaMSFT"
+ms.author: "mathoma"
+manager: craigg
 ---
 # Oracle Subscribers
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Beginning with [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] supports push subscriptions to Oracle through the Oracle OLE DB provider supplied by Oracle.  
   
 ## Configuring an Oracle Subscriber  
@@ -83,7 +81,7 @@ manager: "jhubbard"
   
     -   Ensure that empty strings are not inserted into the published table as column values.  
   
-    -   Use the **–SkipErrors** parameter for the Distribution Agent if it is acceptable to be notified of failures in the Distribution Agent history log and to continue processing. Specify the Oracle error code 1400 (**-SkipErrors1400**).  
+    -   Use the **-SkipErrors** parameter for the Distribution Agent if it is acceptable to be notified of failures in the Distribution Agent history log and to continue processing. Specify the Oracle error code 1400 (**-SkipErrors1400**).  
   
     -   Modify the generated create table script, removing the NOT NULL attribute from any character columns that may have associated empty strings, and supply the modified script as a custom create script for the article using the @creation_script parameter of [sp_addarticle](../../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md).  
   

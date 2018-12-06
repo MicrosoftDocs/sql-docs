@@ -1,29 +1,24 @@
 ---
 title: "sp_addpushsubscription_agent (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
+ms.date: "06/15/2018"
+ms.prod: sql
+ms.prod_service: "database-engine"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
+ms.technology: replication
 ms.topic: "language-reference"
-applies_to: 
-  - "SQL Server"
 f1_keywords: 
   - "sp_addpushsubscription_agent_TSQL"
   - "sp_addpushsubscription_agent"
 helpviewer_keywords: 
   - "sp_addpushsubscription_agent"
 ms.assetid: 1fdd2052-50d8-4318-8aa7-fc635d5cad18
-caps.latest.revision: 37
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: stevestein
+ms.author: sstein
+manager: craigg
 ---
 # sp_addpushsubscription_agent (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
 
   Adds a new scheduled agent job used to synchronize a push subscription to a transactional publication. This stored procedure is executed at the Publisher on the publication database.  
   
@@ -94,10 +89,10 @@ sp_addpushsubscription_agent [ @publication= ] 'publication'
 >  Do not use a blank password. Use a strong password. When possible, prompt users to enter security credentials at runtime. If you must store credentials in a script file, you must secure the file to prevent unauthorized access.  
   
  [ **@job_login =** ] **'***job_login***'**  
- Is the login for the Windows account under which the agent runs. *job_login* is **nvarchar(257)**, with a default value of NULL. This Windows account is always used for agent connections to the Distributor and for connections to the Subscriber when using Windows Integrated authentication.  
+ Is the login for the account under which the agent runs. On Azure SQL Database Managed Instance use a SQL Server account. *job_login* is **nvarchar(257)**, with a default value of NULL. This Windows account is always used for agent connections to the Distributor and for connections to the Subscriber when using Windows Integrated authentication.  
   
  [ **@job_password =** ] **'***job_password***'**  
- Is the password for the Windows account under which the agent runs. *job_password* is **sysname**, with no default.  
+ Is the password for the account under which the agent runs. *job_password* is **sysname**, with no default.  
   
 > [!IMPORTANT]  
 >  When possible, prompt users to enter security credentials at runtime. If you must store credentials in a script file, you must secure the file to prevent unauthorized access.  

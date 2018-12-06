@@ -2,20 +2,19 @@
 title: "How to: Insert Rows into Geography Column (ODBC) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
+ms.prod: sql
+ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "docset-sql-devref"
-ms.tgt_pltfrm: ""
+ms.technology: native-client
 ms.topic: "reference"
 ms.assetid: 0b6516f7-1fc0-4b01-a2d0-add0571070d5
-caps.latest.revision: 7
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: MightyPen
+ms.author: genemi
+manager: craigg
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # How to: Insert Rows into Geography Column (ODBC)
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
   This sample inserts two rows into a table with a geography column from a WellKnownBinary (WKB) using 2 different bindings (SQLCCHAR and SQLCBINARY). Then it selects one row from that table and uses ::STAsText() to display it.The WKB is 0x01010000000700ECFAD03A4C4001008000B5DF07C0 and the application prints to the console: POINT(56.4595 -2.9842).  
@@ -37,7 +36,7 @@ manager: "jhubbard"
   
  The third ([!INCLUDE[tsql](../../includes/tsql-md.md)]) code listing deletes the table used by this sample.  
   
-```  
+```sql
 use tempdb  
 GO  
   
@@ -48,7 +47,7 @@ CREATE TABLE SpatialSample (Name varchar(10), Geog Geography)
 GO  
 ```  
   
-```  
+```cpp
 // compile with: odbc32.lib user32.lib  
 #include <windows.h>  
 #include <Sqlext.h>  
@@ -69,7 +68,7 @@ class direxec {
       HSTMT hstmt;   // Statement Handle  
       SQLHDESC hdesc;   // Descriptor handle  
       SQLCHAR szData[MAX_DATA];   // Returned Data Storage  
-      SDWORD cbData;   // Output Lenght of data   
+      SDWORD cbData;   // Output Length of data   
   
       SQLCHAR szConnStrOut[MAX_DATA + 1];  
       SWORD swStrLen;  
@@ -86,7 +85,7 @@ public:
   
 // Allocate environment handles, connection handle, connect to data source, and allocate statement handle  
 void direxec::sqlconn() {  
-      // Allocate the enviroment handle  
+      // Allocate the environment handle  
       rc = SQLAllocHandle(SQL_HANDLE_ENV, SQL_NULL_HANDLE, &henv);  
       check_rc(rc);  
   
@@ -211,7 +210,7 @@ int main() {
 }  
 ```  
   
-```  
+```sql
 use tempdb  
 GO  
   

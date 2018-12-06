@@ -1,23 +1,20 @@
 ---
 title: "Temporal Table Security | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
+ms.custom: ""
 ms.date: "02/21/2016"
-ms.prod: "sql-server-2016"
+ms.prod: sql
+ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-tables"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: table-view-index
+ms.topic: conceptual
 ms.assetid: 60e5d6f6-a26d-4bba-aada-42e382bbcd38
-caps.latest.revision: 9
 author: "CarlRabeler"
 ms.author: "carlrab"
-manager: "jhubbard"
+manager: craigg
+monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Temporal Table Security
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   To understand security as it applies to temporal tables, it is important to understand the security principals that apply to temporal tables. After you understand these security principles, you are ready to dive into the security around the **CREATE TABLE**, **ALTER TABLE**, and **SELECT** statements.  
   
@@ -39,15 +36,15 @@ manager: "jhubbard"
 |Operation|Current Table|History Table|  
 |---------------|-------------------|-------------------|  
 |**DROP TABLE**|Disallowed|Disallowed|  
-|**ALTER TABLE…SWITCH PARTITION**|SWITCH IN only (see [Partitioning with Temporal Tables](../../relational-databases/tables/partitioning-with-temporal-tables.md))|SWITCH OUT only (see [Partitioning with Temporal Tables](../../relational-databases/tables/partitioning-with-temporal-tables.md))|  
-|**ALTER TABLE…DROP PERIOD**|Disallowed|-|  
-|**ALTER TABLE…ADD PERIOD**|-|Disallowed|  
+|**ALTER TABLE...SWITCH PARTITION**|SWITCH IN only (see [Partitioning with Temporal Tables](../../relational-databases/tables/partitioning-with-temporal-tables.md))|SWITCH OUT only (see [Partitioning with Temporal Tables](../../relational-databases/tables/partitioning-with-temporal-tables.md))|  
+|**ALTER TABLE...DROP PERIOD**|Disallowed|-|  
+|**ALTER TABLE...ADD PERIOD**|-|Disallowed|  
   
 ## Allowed ALTER TABLE operations  
   
 |Operation|Current|History|  
 |---------------|-------------|-------------|  
-|**ALTER TABLE…REBUILD**|Allowed (independently)|Allowed (independently)|  
+|**ALTER TABLE...REBUILD**|Allowed (independently)|Allowed (independently)|  
 |**CREATE INDEX**|Allowed (independently)|Allowed (independently)|  
 |**CREATE STATISTICS**|Allowed (independently)|Allowed (independently)|  
   
@@ -67,9 +64,6 @@ manager: "jhubbard"
   
 ## Security of SELECT Statement  
  **SELECT** permission is unchanged for **SELECT** statements that do not affect the history table. For **SELECT** statements that affect the history table, **SELECT** permission is required on both the current table and the history table.  
-  
-## Did this Article Help You? We’re Listening  
- What information are you looking for, and did you find it? We’re listening to your feedback to improve the content. Please submit your comments to [sqlfeedback@microsoft.com](mailto:sqlfeedback@microsoft.com?subject=Your%20feedback%20about%20the%20Temporal%20Table%20Security%20page)  
   
 ## See Also  
  [Temporal Tables](../../relational-databases/tables/temporal-tables.md)   

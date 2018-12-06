@@ -1,23 +1,19 @@
 ---
 title: "Temporal Table Usage Scenarios | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
+ms.custom: ""
 ms.date: "05/16/2017"
-ms.prod: "sql-server-2016"
+ms.prod: sql
+ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-tables"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: table-view-index
+ms.topic: conceptual
 ms.assetid: 4b8fa2dd-1790-4289-8362-f11e6d63bb09
-caps.latest.revision: 11
 author: "CarlRabeler"
 ms.author: "carlrab"
-manager: "jhubbard"
+manager: craigg
 ---
 # Temporal Table Usage Scenarios
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Temporal Tables are generally useful in scenarios that require tracking history of data changes.    
 We recommend you to consider Temporal Tables in the following use cases for major productivity benefits.  
@@ -134,9 +130,9 @@ FROM Employee
   
 > [!TIP]  
 >  Filtering conditions specified in temporal clauses with FOR SYSTEM_TIME are SARG-able (i.e SQL Server can utilize underlying clustered index to perform a seek instead of a scan operation.   
-> If you query the history table directly, make sure that your filtering condition is also SARG-able by specifying filters in form of \<period column>  {< | > | =, …} date_condition AT TIME ZONE ‘UTC’.  
+> If you query the history table directly, make sure that your filtering condition is also SARG-able by specifying filters in form of \<period column>  {< | > | =, ...} date_condition AT TIME ZONE 'UTC'.  
 > If you apply AT TIME ZONE to period columns, SQL Server will perform a table/index scan, which can be very expensive. Avoid this type of condition in your queries:  
-> \<period column>  AT TIME ZONE ‘\<your time zone>’  >  {< | > | =, …} date_condition.  
+> \<period column>  AT TIME ZONE '\<your time zone>'  >  {< | > | =, ...} date_condition.  
   
  See also: [Querying Data in a System-Versioned Temporal Table](../../relational-databases/tables/querying-data-in-a-system-versioned-temporal-table.md).  
   
@@ -145,7 +141,7 @@ FROM Employee
   
 -   Trends for the important indicators in the historical and current data  
   
--   Exact snapshot of the entire data “as of” any point in time in the past (yesterday, a month ago, etc.)  
+-   Exact snapshot of the entire data "as of" any point in time in the past (yesterday, a month ago, etc.)  
   
 -   Differences in between two point in time of interest (a month ago vs. three months ago, for instance)  
   
@@ -366,7 +362,7 @@ JOIN vw_ProductInventoryDetails FOR SYSTEM_TIME AS OF @monthAgo AS inventoryMont
 You can use system-versioned temporal tables to detect anomalies that occur periodically or irregularly as you can utilize temporal querying to quickly locate specific patterns.  
 What anomaly is depends on type of data you collect and your business logic.  
   
- The following example shows simplified logic for detecting “spikes” in sales numbers. Let’s assume that you work with a temporal table that collects history of the products purchased:  
+ The following example shows simplified logic for detecting "spikes" in sales numbers. Let's assume that you work with a temporal table that collects history of the products purchased:  
   
 ```  
 CREATE TABLE [dbo].[Product]  
@@ -444,7 +440,7 @@ FROM CTE
  The following example illustrates the process and assumes that the  DimLocation dimension table already has ValidFrom and ValidTo as datetime2 non-nullable columns which are populated by the ETL process:  
   
 ```  
-/*Move “closed” row versions into newly created history table*/  
+/*Move "closed" row versions into newly created history table*/  
 SELECT * INTO  DimLocationHistory  
     FROM DimLocation  
         WHERE ValidTo < '9999-12-31 23:59:59.99';  
@@ -460,7 +456,7 @@ ALTER TABLE DimLocation ADD PERIOD FOR SYSTEM_TIME (ValidFrom, ValidTo);
 ALTER TABLE DimLocation SET (SYSTEM_VERSIONING = ON (HISTORY_TABLE = dbo.DimLocationHistory));  
 ```  
   
- Note that Nno additional code is required to maintain SCD during the data warehouse loading process once you created it.  
+ Note that no additional code is required to maintain SCD during the data warehouse loading process once you created it.  
   
  The following illustration shows how you can use Temporal Tables in a simple scenario involving 2 SCDs (DimLocation and DimProduct) and one fact table.  
   

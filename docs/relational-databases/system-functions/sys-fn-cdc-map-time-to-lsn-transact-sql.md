@@ -2,15 +2,11 @@
 title: "sys.fn_cdc_map_time_to_lsn (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
+ms.prod_service: "database-engine"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: system-objects
 ms.topic: "language-reference"
-applies_to: 
-  - "SQL Server (starting with 2008)"
 f1_keywords: 
   - "sys.fn_cdc_map_time_to_lsn"
   - "fn_cdc_map_time_to_lsn_TSQL"
@@ -22,19 +18,14 @@ helpviewer_keywords:
   - "fn_cdc_map_time_to_lsn"
   - "sys.fn_cdc_map_time_to_lsn"
 ms.assetid: 6feb051d-77ae-4c93-818a-849fe518d1d4
-caps.latest.revision: 23
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "rothja"
+ms.author: "jroth"
+manager: craigg
 ---
 # sys.fn_cdc_map_time_to_lsn (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Returns the log sequence number (LSN) value from the **start_lsn** column in the [cdc.lsn_time_mapping](../../relational-databases/system-tables/cdc-lsn-time-mapping-transact-sql.md) system table for the specified time. You can use this function to systematically map datetime ranges into the LSN-based range needed by the change data capture enumeration functions [cdc.fn_cdc_get_all_changes_<capture_instance>](../../relational-databases/system-functions/cdc-fn-cdc-get-all-changes-capture-instance-transact-sql.md) and [cdc.fn_cdc_get_net_changes_<capture_instance>](../../relational-databases/system-functions/cdc-fn-cdc-get-net-changes-capture-instance-transact-sql.md) to return data changes within that range.  
-  
-||  
-|-|  
-|**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [current version](http://go.microsoft.com/fwlink/p/?LinkId=299658)).|  
   
  ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -79,7 +70,7 @@ sys.fn_cdc_map_time_to_lsn ( '<relational_operator>', tracking_time )
   
  `SELECT * FROM cdc.fn_cdc_get_net_changes_HR_Department(@begin_lsn, @end_lsn, 'all` `');`  
   
- The relational operator '`smallest greater than`' is used to restrict changes to those that occurred after midnight on the previous day. If multiple entries with different LSN values share the **tran_end_time** value identified as the lower bound in the [cdc.lsn_time_mapping](../../relational-databases/system-tables/cdc-lsn-time-mapping-transact-sql.md) table, the function will return the smallest LSN ensuring that all entries are included. For the upper bound, the relational operator ‘`largest less than or equal to`’ is used to ensure that the range includes all entries for the day including those than have midnight as their **tran_end_time** value. If multiple entries with different LSN values share the **tran_end_time** value identified as the upper bound, the function will return the largest LSN ensuring that all entries are included.  
+ The relational operator '`smallest greater than`' is used to restrict changes to those that occurred after midnight on the previous day. If multiple entries with different LSN values share the **tran_end_time** value identified as the lower bound in the [cdc.lsn_time_mapping](../../relational-databases/system-tables/cdc-lsn-time-mapping-transact-sql.md) table, the function will return the smallest LSN ensuring that all entries are included. For the upper bound, the relational operator '`largest less than or equal to`' is used to ensure that the range includes all entries for the day including those than have midnight as their **tran_end_time** value. If multiple entries with different LSN values share the **tran_end_time** value identified as the upper bound, the function will return the largest LSN ensuring that all entries are included.  
   
 ## Permissions  
  Requires membership in the **public** role.  

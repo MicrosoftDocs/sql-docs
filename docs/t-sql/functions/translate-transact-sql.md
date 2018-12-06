@@ -2,28 +2,26 @@
 title: "TRANSLATE (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "12/16/2016"
-ms.prod: "sql-non-specified"
+ms.prod: sql
+ms.prod_service: "sql-database"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: t-sql
+ms.topic: conceptual
 f1_keywords: 
   - "TRANSLATE"
   - "TRANSLATE_TSQL"
 helpviewer_keywords: 
   - "TRANSLATE function"
 ms.assetid: 0426fa90-ef6d-4d19-8207-02ee59f74aec
-caps.latest.revision: 5
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+monikerRange: ">=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # TRANSLATE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ssvNxt-xxxx-xxxx-xxx](../../includes/tsql-appliesto-ssvnxt-xxxx-xxxx-xxx.md)]
+[!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
 
-Returns the string provided as a first argument after some characters specified in the second argument are translated into a destination set of characters.
+Returns the string provided as a first argument after some characters specified in the second argument are translated into a destination set of characters specified in the third argument.
 
 ## Syntax   
 ```
@@ -32,23 +30,34 @@ TRANSLATE ( inputString, characters, translations)
 
 ## Arguments   
 
-inputString   
-Is an [expression](../../t-sql/language-elements/expressions-transact-sql.md) of any character type (nvarchar, varchar, nchar, char).
+ *inputString*   
+ Is the string [expression](../../t-sql/language-elements/expressions-transact-sql.md) to be searched. *inputString* can be any character data type (nvarchar, varchar, nchar, char).
 
-characters   
-Is a [expression](../../t-sql/language-elements/expressions-transact-sql.md) of any character type containing characters that should be replaced.
+ *characters*   
+ Is a string [expression](../../t-sql/language-elements/expressions-transact-sql.md) containing characters that should be replaced. *characters* can be any character data type.
 
-translations   
-Is a character [expression](../../t-sql/language-elements/expressions-transact-sql.md) that matches second argument by type and length.
+*translations*   
+ Is a string [expression](../../t-sql/language-elements/expressions-transact-sql.md) containing the replacment characters. *translations* must be the same data type and length as *characters*.
 
 ## Return Types   
-Returns a character expression of the same type as `inputString` where characters from the second argument are replaced with the matching characters from third argument.
+Returns a character expression of the same data type as `inputString` where characters from the second argument are replaced with the matching characters from third argument.
 
 ## Remarks   
 
-`TRANSLATE` function will return an error if characters and translations have different lengths. `TRANSLATE` function should return unchanged input if null vales are provided as characters or replacement arguments. The behavior of the `TRANSLATE` function should be identical to the [REPLACE](../../t-sql/functions/replace-transact-sql.md) function.   
+`TRANSLATE` will return an error if *characters* and *translations* expressions have different lengths. `TRANSLATE` will return NULL if any of the arguements are NULL.  
 
-The behavior of the `TRANSLATE` function is equivalent to using multiple `REPLACE` functions.
+The behavior of the `TRANSLATE` function is similar to using multiple [REPLACE](../../t-sql/functions/replace-transact-sql.md) functions. `TRANSLATE` does not, however, replace a character more than once. This is disimilar to multiple `REPLACE` functions, as each use would replace all relevant characters. For example:
+
+```sql
+SELECT TRANSLATE('abcdef','abc','bcd') AS Translated,
+       REPLACE(REPLACE(REPLACE('abcdef','a','b'),'b','c'),'c','d') AS Replaced;
+```
+
+The results are:
+
+| Translated | Replaced |  
+| ---------|--------- |
+| bcddef | ddddef |
 
 `TRANSLATE` is always SC collation aware.
 
@@ -64,14 +73,38 @@ SELECT TRANSLATE('2*[3+4]/{7-2}', '[]{}', '()()');
 2*(3+4)/(7-2)
 ```
 
->  [!NOTE]
->  The `TRANSLATE` function in this example is equivalent to but much simplier than the following statement using `REPLACE`:
-> `SELECT REPLACE(REPLACE(REPLACE(REPLACE('2*[3+4]/{7-2}','[','('), ']', ')'), '{', '('), '}', ')');` 
+#### Equivalent calls to REPLACE
 
+In the following SELECT statement, there is a group of four nested calls to the REPLACE function. This group is equivalent to the one call made to the TRANSLATE function in the preceding SELECT:
+
+```sql
+SELECT
+REPLACE
+(
+      REPLACE
+      (
+            REPLACE
+            (
+                  REPLACE
+                  (
+                        '2*[3+4]/{7-2}',
+                        '[',
+                        '('
+                  ),
+                  ']',
+                  ')'
+            ),
+            '{',
+            '('
+      ),
+      '}',
+      ')'
+);
+```
 
 ###  B. Convert GeoJSON points into WKT    
 GeoJSON is a format for encoding a variety of geographic data structures. With the `TRANSLATE` function, developers can easily convert GeoJSON points to WKT format and vice versa. The following query replaces square and curly braces in input  with regular braces:   
-```tsql
+```sql
 SELECT TRANSLATE('[137.4, 72.3]' , '[,]', '( )') AS Point,
     TRANSLATE('(137.4 72.3)' , '( )', '[,]') AS Coordinates;
 ```
@@ -85,7 +118,14 @@ SELECT TRANSLATE('[137.4, 72.3]' , '[,]', '( )') AS Point,
 
 
 ## See Also
-
-[String Functions (Transact-SQL)](../../t-sql/functions/string-functions-transact-sql.md)   
-[REPLACE (Transact-SQL)](../../t-sql/functions/replace-transact-sql.md)   
+ [CONCAT &#40;Transact-SQL&#41;](../../t-sql/functions/concat-transact-sql.md)  
+ [CONCAT_WS &#40;Transact-SQL&#41;](../../t-sql/functions/concat-ws-transact-sql.md)  
+ [FORMATMESSAGE &#40;Transact-SQL&#41;](../../t-sql/functions/formatmessage-transact-sql.md)  
+ [QUOTENAME &#40;Transact-SQL&#41;](../../t-sql/functions/quotename-transact-sql.md)  
+ [REPLACE &#40;Transact-SQL&#41;](../../t-sql/functions/replace-transact-sql.md)  
+ [REVERSE &#40;Transact-SQL&#41;](../../t-sql/functions/reverse-transact-sql.md)  
+ [STRING_AGG &#40;Transact-SQL&#41;](../../t-sql/functions/string-agg-transact-sql.md)  
+ [STRING_ESCAPE &#40;Transact-SQL&#41;](../../t-sql/functions/string-escape-transact-sql.md)  
+ [STUFF &#40;Transact-SQL&#41;](../../t-sql/functions/stuff-transact-sql.md)  
+ [String Functions (Transact-SQL)](../../t-sql/functions/string-functions-transact-sql.md)   
 

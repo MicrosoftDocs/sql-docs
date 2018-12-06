@@ -2,13 +2,11 @@
 title: "Bulk-Load Data into Tables in a Merge Publication | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/07/2017"
-ms.prod: "sql-server-2016"
+ms.prod: sql
+ms.prod_service: "database-engine"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: replication
+ms.topic: conceptual
 dev_langs: 
   - "TSQL"
 helpviewer_keywords: 
@@ -16,12 +14,12 @@ helpviewer_keywords:
   - "merge replication bulk loading [SQL Server replication]"
   - "sp_addtabletocontents"
 ms.assetid: 16e6498a-b449-4051-aec4-ea814a2ad993
-caps.latest.revision: 33
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "MashaMSFT"
+ms.author: "mathoma"
+manager: craigg
 ---
 # Bulk-Load Data into Tables in a Merge Publication
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   When data is loaded into tables using the [bcp Utility](../../tools/bcp-utility.md) or the [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) command, by default, the merge replication triggers that maintain tracking data in the [MSmerge_contents](../../relational-databases/system-tables/msmerge-contents-transact-sql.md) system table are not fired. You can either force the merge replication triggers to fire as the data is loaded, or you can insert the generated replication metadata programmatically after the bulk copy operation using replication stored procedures.  
   
 ### To bulk-load data into tables published by merge replication using the bcp utility  

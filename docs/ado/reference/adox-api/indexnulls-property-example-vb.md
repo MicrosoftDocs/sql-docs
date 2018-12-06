@@ -1,23 +1,20 @@
 ---
 title: "IndexNulls Property Example (VB) | Microsoft Docs"
-ms.prod: "sql-non-specified"
-ms.technology:
-  - "drivers"
+ms.prod: sql
+ms.prod_service: connectivity
+ms.technology: connectivity
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 dev_langs: 
   - "VB"
 helpviewer_keywords: 
   - "IndexNulls property [ADOX], Visual Basic example"
 ms.assetid: 45204669-32c0-4690-aab9-ddf0fd71ae48
-caps.latest.revision: 11
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # IndexNulls Property Example (VB)
 This example demonstrates the [IndexNulls](../../../ado/reference/adox-api/indexnulls-property-adox.md) property of an [Index](../../../ado/reference/adox-api/index-object-adox.md). The code creates a new index and sets the value of **IndexNulls** based on user input (from a list box named List1). Then, the **Index** is appended to the **Employees** [Table](../../../ado/reference/adox-api/table-object-adox.md) in the *Northwind* [Catalog](../../../ado/reference/adox-api/catalog-object-adox.md). The new **Index** is applied to a [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) based on the **Employees** table, and the **Recordset** is opened. A new record is added to the **Employees** table, with a **Null** value in the indexed field. Whether this new record is displayed depends on the setting of the **IndexNulls** property.  

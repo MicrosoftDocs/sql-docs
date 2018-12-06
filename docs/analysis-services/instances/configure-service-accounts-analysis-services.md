@@ -1,28 +1,17 @@
 ---
 title: "Configure Service Accounts (Analysis Services) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "security [Analysis Services], logon accounts"
-  - "logon accounts [Analysis Services]"
-  - "accounts [Analysis Services]"
-  - "logon accounts [Analysis Services], about logon accounts"
-ms.assetid: b481bd51-e077-42f6-8598-ce08c1a38716
-caps.latest.revision: 54
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom:
+ms.topic: conceptual
+ms.author: owend
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
 ---
 # Configure Service Accounts (Analysis Services)
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   Product-wide account provisioning is documented in [Configure Windows Service Accounts and Permissions](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md), a topic that provides comprehensive service account information for all [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] services, including [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Refer to it to learn about valid account types, Windows privileges assigned by setup, file system permissions, registry permissions, and more.  
   
  This topic provides supplemental information for [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], including additional permissions necessary for tabular and clustered installations. It also covers permissions needed to support server operations. For example, you can configure processing and query operations to execute under the service account ─ in which case you will need to grant additional permissions to get this to work.  
@@ -38,7 +27,7 @@ manager: "erikre"
 ## Logon account recommendations  
  In a failover cluster, all instances of Analysis Services should be configured to use a Windows domain user account. Assign the same account to all instances. See [How to Cluster Analysis Services](http://msdn.microsoft.com/library/dn736073.aspx) for details.  
   
- Standalone instances should use the default virtual account, **NT Service\MSSQLServerOLAPService** for the default instance, or **NT Service\MSOLAP$***instance-name* for a named instance. This recommendation applies to Analysis Services instances in all server modes, assuming Windows Server 2008 R2 and later for the operating system, and SQL Server 2012 and later for Analysis Services.  
+ Standalone instances should use the default virtual account, **NT Service\MSSQLServerOLAPService** for the default instance, or **NT Service\MSOLAP$**_instance-name_ for a named instance. This recommendation applies to Analysis Services instances in all server modes, assuming Windows Server 2008 R2 and later for the operating system, and SQL Server 2012 and later for Analysis Services.  
   
 ## Granting permissions to Analysis Services  
  This section explains the permissions that Analysis Services requires for local, internal operations, such as starting the executable, reading the configuration file, and loading databases from the data directory. If instead you're looking for guidance on setting permissions for external data access and interoperability with other services and applications, see [Granting additional permissions for specific server operations](#bkmk_tasks) further on in this topic.  
@@ -56,7 +45,7 @@ manager: "erikre"
  The sole member of the group is the per-service SID. Right next to it is the logon account. The logon account name is cosmetic, there to provide context to the per-service SID. If you subsequently change the logon account and then return to this page, you'll notice that the security group and per-service SID do not change, but the logon account label is different.  
   
 ##  <a name="bkmk_winpriv"></a> Windows privileges assigned to the Analysis Services service account  
- Analysis Services needs permissions from the operating system for service startup and to request system resources. Requirements vary by server mode and whether the instance is clustered. If you are unfamiliar with Windows privileges, see [Privileges](http://msdn.microsoft.com/library/windows/desktop/aa379306\(v=vs.85\).aspx) and [Privilege Constants (Windows)](http://msdn.microsoft.com/library/windows/desktop/bb530716\(v=vs.85\).aspx) for details.  
+ Analysis Services needs permissions from the operating system for service startup and to request system resources. Requirements vary by server mode and whether the instance is clustered. If you are unfamiliar with Windows privileges, see [Privileges](http://msdn.microsoft.com/library/windows/desktop/aa379306\(v=vs.85\).aspx) and [Privilege Constants (Windows)](/windows/desktop/SecAuthZ/privilege-constants) for details.  
   
  All instances of Analysis Services require the **Log on as a service** (SeServiceLogonRight) privilege. SQL Server Setup assigns the privilege for you on the service account specified during installation. For servers running in Multidimensional and Data Mining mode, this is the only Windows privilege required by the Analysis Services service account for standalone server installations, and it is the only privilege that Setup configures for Analysis Services. For clustered and tabular instances, additional Windows privileges must be added manually.  
   
@@ -67,7 +56,7 @@ manager: "erikre"
 |||  
 |-|-|  
 |**Increase a process working set** (SeIncreaseWorkingSetPrivilege)|This privilege is available to all users by default through the **Users** security group. If you lock down a server by removing privileges for this group, Analysis Services might fail to start, logging this error: "A required privilege is not held by the client." When this error occurs, restore the privilege to Analysis Services by granting it to the appropriate Analysis Services security group.|  
-|**Adjust memory quotas for a process** (SeIncreaseQuotaSizePrivilege)|This privilege is used to request more memory if a process has insufficient resources to complete its execution, subject to the memory thresholds established for the instance.|  
+|**Adjust memory quotas for a process** (SeIncreaseQuotaPrivilege)|This privilege is used to request more memory if a process has insufficient resources to complete its execution, subject to the memory thresholds established for the instance.|  
 |**Lock pages in memory** (SeLockMemoryPrivilege)|This privilege is needed only when paging is turned off entirely. By default, a tabular server instance uses the Windows paging file, but you can prevent it from using Windows paging by setting **VertiPaqPagingPolicy** to 0.<br /><br /> **VertiPaqPagingPolicy** to 1 (default), instructs the tabular server instance to use the Windows paging file. Allocations are not locked, allowing Windows to page out as needed. Because paging is being used, there is no need to lock pages in memory. Thus, for the default configuration (where **VertiPaqPagingPolicy** = 1), you do not need to grant the **Lock pages in memory** privilege to a tabular instance.<br /><br /> **VertiPaqPagingPolicy** to 0. If you turn off paging for Analysis Services, allocations are locked, assuming the **Lock pages in memory** privilege is granted to the tabular instance. Given this setting and the **Lock pages in memory** privilege, Windows cannot page out memory allocations made to Analysis Services when the system is under memory pressure. Analysis Services relies on the **Lock pages in memory** permission as the enforcement behind **VertiPaqPagingPolicy** = 0. Note that turning off Windows paging is not recommended. It will increase the rate of out-of-memory errors for operations that might otherwise succeed if paging were allowed. See [Memory Properties](../../analysis-services/server-properties/memory-properties.md) for more information about **VertiPaqPagingPolicy**.|  
   
 #### To view or add Windows privileges on the service account  
@@ -152,8 +141,8 @@ manager: "erikre"
  [Configure Windows Service Accounts and Permissions](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)   
  [SQL Server Service Account and Per-Service SID (Blog)](http://www.travisgan.com/2013/06/sql-server-service-account-and-per.html)   
  [SQL Server uses a service SID to provide service isolation (KB Article)](http://support.microsoft.com/kb/2620201)   
- [Access Token (MSDN)](http://msdn.microsoft.com/library/windows/desktop/aa374909\(v=vs.85\).aspx)   
- [Security Identifiers (MSDN)](http://msdn.microsoft.com/library/windows/desktop/aa379571\(v=vs.85\).aspx)   
+ [Access Token (MSDN)](/windows/desktop/SecAuthZ/access-tokens)   
+ [Security Identifiers (MSDN)](/windows/desktop/SecAuthZ/security-identifiers)   
  [Access Token (Wikipedia)](http://en.wikipedia.org/wiki/Access_token)   
  [Access Control Lists (Wikipedia)](http://en.wikipedia.org/wiki/Access_control_list)  
   

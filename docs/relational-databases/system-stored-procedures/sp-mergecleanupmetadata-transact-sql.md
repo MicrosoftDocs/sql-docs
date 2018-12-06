@@ -2,28 +2,23 @@
 title: "sp_mergecleanupmetadata (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
+ms.prod: sql
+ms.prod_service: "database-engine"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
+ms.technology: replication
 ms.topic: "language-reference"
-applies_to: 
-  - "SQL Server"
 f1_keywords: 
   - "sp_mergecleanupmetadata_TSQL"
   - "sp_mergecleanupmetadata"
 helpviewer_keywords: 
   - "sp_mergecleanupmetadata"
 ms.assetid: 892f8628-4cbe-4cc3-b959-ed45ffc24064
-caps.latest.revision: 17
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: stevestein
+ms.author: sstein
+manager: craigg
 ---
 # sp_mergecleanupmetadata (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Should be used only in replication topologies that include servers running versions of [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] prior to [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] Service Pack 1.**sp_mergecleanupmetadata** allows administrators to clean up metadata in the **MSmerge_genhistory**, **MSmerge_contents** and **MSmerge_tombstone** system tables. This stored procedure is executed at the Publisher on the publication database.  
   
@@ -64,7 +59,7 @@ sp_mergecleanupmetadata [ [ @publication = ] 'publication' ]
   
 1.  It is recommended, but not required, that you stop all updates to the publication and subscription databases. If updates continue, any updates made at a Subscriber since the last merge are lost when the publication is reinitialized, but data convergence is maintained.  
   
-2.  Execute a merge by running the Merge Agent. We recommend that you use the **–Validate** agent command line option at each Subscriber when you run the Merge Agent. If you are running continuous mode merges, see *Special Considerations for Continuous Mode Merges* later in this section.  
+2.  Execute a merge by running the Merge Agent. We recommend that you use the **-Validate** agent command line option at each Subscriber when you run the Merge Agent. If you are running continuous mode merges, see *Special Considerations for Continuous Mode Merges* later in this section.  
   
 3.  After all merges have completed, execute **sp_mergecleanupmetadata**.  
   
@@ -80,7 +75,7 @@ sp_mergecleanupmetadata [ [ @publication = ] 'publication' ]
   
 1.  Stop **all** updates to the publication and subscription databases.  
   
-2.  Execute a merge by running the Merge Agent. We recommend that you use the **–Validate** agent command line option at each Subscriber when you run the Merge Agent. If you are running continuous mode merges, see *Special Considerations for Continuous Mode Merges* later in this section.  
+2.  Execute a merge by running the Merge Agent. We recommend that you use the **-Validate** agent command line option at each Subscriber when you run the Merge Agent. If you are running continuous mode merges, see *Special Considerations for Continuous Mode Merges* later in this section.  
   
 3.  After all merges have completed, execute **sp_mergecleanupmetadata**.  
   
@@ -104,7 +99,7 @@ sp_mergecleanupmetadata [ [ @publication = ] 'publication' ]
   
  When you have completed step 3 of running **sp_mergecleanupmetadata**, resume continuous mode merges based on how you stopped them. Either:  
   
--   Add the **–Continuous** parameter back for the Merge Agent.  
+-   Add the **-Continuous** parameter back for the Merge Agent.  
   
 -   Reactivate the publication with **sp_changemergepublication.**  
   

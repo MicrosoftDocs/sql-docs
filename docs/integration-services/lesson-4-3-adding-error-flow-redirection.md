@@ -2,20 +2,15 @@
 title: "Step 3: Adding Error Flow Redirection | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
+ms.prod: sql
+ms.prod_service: "integration-services"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
-applies_to: 
-  - "SQL Server 2016"
+ms.technology: integration-services
+ms.topic: tutorial
 ms.assetid: 5683a45d-9e73-4cd5-83ca-fae8b26b488c
-caps.latest.revision: 39
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: craigg
 ---
 # Lesson 4-3 - Adding Error Flow Redirection
 As demonstrated in the previous task, the Lookup Currency Key transformation cannot generate a match when the transformation tries to process the corrupted sample flat file, which produced an error. Because the transformation uses the default settings for error output, any error causes the transformation to fail. When the transformation fails, the rest of the package also fails.  
@@ -50,7 +45,7 @@ To enhance the usefulness of the error output, before the package writes the fai
   
 9. In the **Name** property, type **ErrorDescription** and set the **DataType** property to **Unicode string [DT_WSTR]**.  
   
-10. On the **Script** page, verify that the **LocaleID** property is set to **English (United States.**  
+10. On the **Script** page, verify that the **LocaleID** property is set to **English (United States).**  
   
 11. Click **Edit Script** to open [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] Tools for Applications (VSTA). In the **Input0_ProcessInputRow** method, type or paste the following code.  
   

@@ -2,12 +2,10 @@
 title: "sp_replcounters (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/03/2017"
-ms.prod: "sql-server-2016"
+ms.prod: sql
+ms.prod_service: "database-engine"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
+ms.technology: replication
 ms.topic: "language-reference"
 f1_keywords: 
   - "sp_replcounters"
@@ -15,13 +13,12 @@ f1_keywords:
 helpviewer_keywords: 
   - "sp_replcounters"
 ms.assetid: fe585b1f-edda-421f-81d6-8a03a3a535d2
-caps.latest.revision: 24
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: stevestein
+ms.author: sstein
+manager: craigg
 ---
 # sp_replcounters (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Returns replication statistics about latency, throughput, and transaction count for each published database. This stored procedure is executed at the Publisher on any database.  
   
@@ -44,7 +41,7 @@ sp_replcounters
 |**Replication rate trans/sec**|**float**|Average number of transactions per second delivered to the distribution database.|  
 |**Replication latency**|**float**|Average time, in seconds, that transactions were in the log before being distributed.|  
 |**Replbeginlsn**|**binary(10)**|Log sequence number (LSN) of the current truncation point in the log.|  
-|**Replendlsn**|**binary(10)**|LSN of the next commit record awaiting delivery to the distribution database.|  
+|**Replnextlsn**|**binary(10)**|LSN of the next commit record awaiting delivery to the distribution database.|  
   
 ## Remarks  
  **sp_replcounters** is used in transactional replication.  

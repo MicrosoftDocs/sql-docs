@@ -2,12 +2,10 @@
 title: "sys.syscharsets (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/15/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
+ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: system-objects
 ms.topic: "language-reference"
 f1_keywords: 
   - "sys.syscharsets"
@@ -20,13 +18,13 @@ helpviewer_keywords:
   - "syscharsets system table"
   - "sys.syscharsets compatibility view"
 ms.assetid: f16d987c-bd19-4668-9ef7-785b8fb9ff5b
-caps.latest.revision: 42
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "rothja"
+ms.author: "jroth"
+manager: craigg
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.syscharsets (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Contains one row for each character set and sort order defined for use by the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. One of the sort orders is marked in **sysconfigures** as the default sort order. This is the only one actually being used.  
   

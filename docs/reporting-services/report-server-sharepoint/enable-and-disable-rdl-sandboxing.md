@@ -1,30 +1,32 @@
 ---
-title: "Enable and Disable RDL Sandboxing | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/20/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-ms.assetid: d5619e9f-ec5b-4376-9b34-1f74de6fade7
-caps.latest.revision: 9
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
+title: "Enable and disable RDL sandboxing for Reporting Services in SharePoint integrated mode | Microsoft Docs"
+ms.date: 09/25/2017
+ms.prod: reporting-services
+ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
+ms.technology: report-server-sharepoint
+
+
+ms.topic: conceptual
+author: markingmyname
+ms.author: maghan
 ---
-# Enable and Disable RDL Sandboxing
-  The RDL (Report Definition Language) Sandboxing feature lets you detect and restrict the usage of specific types of resources, by individual tenants, in an environment of multiple tenants that use a single web farm of report servers. An example of this is a hosting services scenario where you might maintain a single web farm of report servers that are used by multiple tenants, and perhaps different companies. As a report server administrator, you can enable this feature to help achieve the following objectives:  
+# Enable and disable RDL sandboxing for Reporting Services in SharePoint integrated mode
+
+[!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016](../../includes/ssrs-appliesto-2016.md)] [!INCLUDE[ssrs-appliesto-sharepoint-2013-2016i](../../includes/ssrs-appliesto-sharepoint-2013-2016.md)] [!INCLUDE[ssrs-appliesto-not-pbirsi](../../includes/ssrs-appliesto-not-pbirs.md)]
+
+[!INCLUDE [ssrs-previous-versions](../../includes/ssrs-previous-versions.md)]
+
+The RDL (Report Definition Language) sandboxing feature lets you detect and restrict the usage of specific types of resources, by individual tenants, in an environment of multiple tenants that use a single web farm of report servers. An example of this is a hosting services scenario where you might maintain a single web farm of report servers that are used by multiple tenants, and perhaps different companies. As a report server administrator, you can enable this feature to help achieve the following objectives:  
   
 -   Restrict external resource sizes. External resources include images, .xslt files, and map data.  
   
 -   At report publish time, limit types and members that are used in expression text.  
   
--   At report processing time, limit the length of the text and the size of the return value for expressions.  
-  
+-   At report processing time, limit the length of the text and the size of the return value for expressions.
+
+> [!NOTE]
+> Reporting Services integration with SharePoint is no longer available after SQL Server 2016.
+
  When RDL Sandboxing is enabled, the following features are disabled:  
   
 -   Custom code in the **\<Code>** element of a report definition.  
@@ -35,7 +37,7 @@ manager: "erikre"
   
  This topic describes each element in the \<**RDLSandboxing**> element in the RSReportServer.Config file. For more information about how to modify this file, see [Modify a Reporting Services Configuration File &#40;RSreportserver.config&#41;](../../reporting-services/report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md). A server trace log records activity related to the RDL Sandboxing feature. For more information about trace logs, see [Report Server Service Trace Log](../../reporting-services/report-server/report-server-service-trace-log.md).  
   
-## Example Configuration  
+## Example configuration
  The following example shows the settings and example values for the \<**RDLSandboxing**> element in the RSReportServer.Config file.  
   
 ```  
@@ -45,17 +47,18 @@ manager: "erikre"
    <MaxStringResultLength>3000</MaxStringResultLength>  
    <MaxArrayResultLength>250</MaxArrayResultLength>  
    <Types>  
-      <Allow Namespace=”System.Drawing” AllowNew=”True”>Bitmap</Allow>  
-      <Allow Namespace=”TypeConverters.Custom” AllowNew=”True”>*</Allow>  
+      <Allow Namespace="System.Drawing" AllowNew="True">Bitmap</Allow>  
+      <Allow Namespace="TypeConverters.Custom" AllowNew="True">*</Allow>  
    </Types>  
    <Members>  
       <Deny>Format</Deny>  
       <Deny>StrDup</Deny>  
    </Members>  
 </RDLSandboxing>  
-```  
-  
-## Configuration Settings  
+```
+
+## Configuration settings
+
  The following table provides information about configuration settings. Settings are presented in the order in which they appear in the configuration file.  
   
 |Setting|Description|  
@@ -67,13 +70,14 @@ manager: "erikre"
 |**Types**|The list of members to allow within RDL expressions.|  
 |**Allow**|A type or set of types to allow in RDL expressions.|  
 |**Namespace**|Attribute for **Allow** that is the namespace that contains one or more types that apply to Value. This property is case-insensitive.|  
-|**AllowNew**|Boolean attribute for **Allow** that controls whether new instances of the type are allowed to be created in RDL expressions or in an RDL **\<Class>** element.<br /><br /> Note: When **RDLSandboxing** is enabled, new arrays cannot be created in RDL expressions, regardless of the setting of **AllowNew**.|  
+|**AllowNew**|Boolean attribute for **Allow** that controls whether new instances of the type are allowed to be created in RDL expressions or in an RDL **\<Class>** element.<br /><br /> When **RDLSandboxing** is enabled, new arrays cannot be created in RDL expressions, regardless of the setting of **AllowNew**.|  
 |**Value**|Value for **Allow** that is the name of the type to allow in RDL expressions. The value **\*** indicates that all types in the namespace are allowed. This property is case-insensitive.|  
 |**Members**|For the list of types that are include in the **\<Types>** element, the list of member names that are not allowed in RDL expressions.|  
-|**Deny**|The name of a member that is not allowed in RDL expressions. This property is case-insensitive.<br /><br /> Note: When **Deny** is specified for a member, all members with this name for all types are not allowed.|  
+|**Deny**|The name of a member that is not allowed in RDL expressions. This property is case-insensitive.<br /><br /> When **Deny** is specified for a member, all members with this name for all types are not allowed.|  
   
-## Working with Expressions when RDL Sandboxing is Enabled  
- You can modify the RDL Sandboxing feature to help manage the resources that are used by an expression in the following ways:  
+## Working with expressions when RDL sandboxing is enabled
+
+You can modify the RDL Sandboxing feature to help manage the resources that are used by an expression in the following ways:  
   
 -   Restrict the number of characters that are used for an expression.  
   
@@ -90,7 +94,8 @@ manager: "erikre"
   
  RDL expression results are verified at run time. RDL expressions are verified in the report definition when the report is published. Monitor the report server trace log for violations. For more information, see [Report Server Service Trace Log](../../reporting-services/report-server/report-server-service-trace-log.md).  
   
-### Working with Types  
+### Working with types
+
  When you add a type to the allow list, you are controlling the following entry points to access RDL expressions:  
   
 -   Static members of a type.  
@@ -133,7 +138,8 @@ manager: "erikre"
   
  Adding a type from a custom assembly to the allow list does not implicitly grant execute permission on the assembly. You must specifically modify the code access security file and provide execute permission to your assembly. For more information, see [Code Access Security in Reporting Services](../../reporting-services/extensions/secure-development/code-access-security-in-reporting-services.md).  
   
-#### Maintaining the \<Deny> List of Members  
+#### Maintaining the \<Deny> list of members
+
  When you add a new type to the allow list, use the following list to determine when you might have to update the block list of members:  
   
 -   When you update a custom assembly with a version that introduces new types.  
@@ -146,7 +152,8 @@ manager: "erikre"
   
 -   When you update a report server to handle a later RDL schema, because new members might have been added to RDL types.  
   
-### Working with Operators and New  
+### Working with operators and new
+
  By default, [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] .NET Framework language operators, except for **New**, are always allowed. The **New** operator is controlled by the **AllowNew** attribute on the **\<Allow>** element. Other language operators, such as the default collection accessor operator **!** and [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] .NET Framework cast macros such as **CInt**, are always allowed.  
   
  Adding operators to a block list, including custom operators, is not supported. To exclude operators for a type, you must do the following:  
@@ -163,8 +170,9 @@ manager: "erikre"
   
 -   Add the class to the allow list.  
   
-## See Also  
- [RsReportServer.config Configuration File](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)   
- [Report Server Service Trace Log](../../reporting-services/report-server/report-server-service-trace-log.md)  
-  
-  
+## See also
+
+ [RsReportServer.config configuration file](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)   
+ [Report Server Service trace log](../../reporting-services/report-server/report-server-service-trace-log.md)  
+
+More questions? [Try asking the Reporting Services forum](https://go.microsoft.com/fwlink/?LinkId=620231)

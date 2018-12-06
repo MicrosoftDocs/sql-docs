@@ -2,24 +2,22 @@
 title: "Distribution Database Properties | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/16/2017"
-ms.prod: "sql-server-2016"
+ms.prod: sql
+ms.prod_service: "database-engine"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: replication
+ms.topic: conceptual
 f1_keywords: 
   - "sql13.rep.configdistwizard.distdbproperties.f1"
 helpviewer_keywords: 
   - "Distribution Database Properties dialog box"
 ms.assetid: 0f404ab9-1237-4936-8df5-888baab6a245
-caps.latest.revision: 23
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "MashaMSFT"
+ms.author: "mathoma"
+manager: craigg
 ---
 # Distribution Database Properties
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   The **Distribution Database Properties** dialog box allows you to view a number of properties and to set the transaction retention period and history retention period for the database.  
   
 ## Options  
@@ -36,7 +34,7 @@ manager: "jhubbard"
  The length of time history metadata is stored for all types of replication.  
   
  **Queue Reader Agent security**  
- The Queue Reader Agent is used by transactional replication with queued updating subscriptions. A Queue Reader Agent is created automatically if you select **Transactional publication with updating subscriptions** on the **Publication Type** page of the New Publication Wizard. Click **Security Settings…** to change the account under which the agent runs and makes connections to the Distributor.  
+ The Queue Reader Agent is used by transactional replication with queued updating subscriptions. A Queue Reader Agent is created automatically if you select **Transactional publication with updating subscriptions** on the **Publication Type** page of the New Publication Wizard. Click **Security Settings...** to change the account under which the agent runs and makes connections to the Distributor.  
   
  A Queue Reader Agent can also be created by selecting **Create Queue Reader Agent** on this page (this option is disabled if the agent has already been created).  
   

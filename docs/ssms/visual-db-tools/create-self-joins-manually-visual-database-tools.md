@@ -2,24 +2,23 @@
 title: "Create Self-Joins Manually (Visual Database Tools) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
+ms.prod_service: "sql-tools"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "tools-ssms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: ssms
+ms.topic: conceptual
 helpviewer_keywords: 
   - "self-joins"
   - "manual joins [SQL Server]"
   - "joins [SQL Server], self"
 ms.assetid: 910ed516-cb84-481b-95d0-cba3e89afdba
-caps.latest.revision: 4
 author: "stevestein"
 ms.author: "sstein"
-manager: "jhubbard"
+manager: craigg
+
 ---
 # Create Self-Joins Manually (Visual Database Tools)
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 You can join a table to itself even if the table does not have a reflexive relationship in the database. For example, you can use a self-join to find pairs of authors living in the same city.  
   
 As with any join, a self-join requires at least two tables. The difference is that, instead of adding a second table to the query, you add a second instance of the same table. That way, you can compare a column in the first instance of the table to the same column in the second instance, which allows you to compare the values in a column to each other. The [Query and View Designer](../../ssms/visual-db-tools/query-and-view-designer-tools-visual-database-tools.md) assigns an alias to the second instance of the table.  
@@ -114,7 +113,7 @@ Cheryl Carson       Abraham Bennet
   
 3.  Right-click the join line and choose **Properties** from the shortcut menu.  
   
-4.  In the Properties window click **Join Condition and Type** and click the **ellipses (…)** to the right of the property.  
+4.  In the Properties window click **Join Condition and Type** and click the **ellipses (...)** to the right of the property.  
   
 5.  In the [Join Dialog Box](../../ssms/visual-db-tools/join-dialog-box-visual-database-tools.md) change the comparison operator between the primary keys as required. For example, you might change the operator to less than (<).  
   

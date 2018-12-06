@@ -2,22 +2,20 @@
 title: "Management of Logins and Jobs After Role Switching (SQL Server) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
+ms.prod: sql
+ms.prod_service: high-availability
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: high-availability
+ms.topic: conceptual
 helpviewer_keywords: 
   - "role switching [SQL Server]"
 ms.assetid: fc2fc949-746f-40c7-b5d4-3fd51ccfbd7b
-caps.latest.revision: 25
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ---
 # Management of Logins and Jobs After Role Switching (SQL Server)
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   When deploying a high-availability or disaster-recovery solution for a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database, it is important to reproduce relevant information that is stored for the database in the **master** or **msdb** databases. Typically, the relevant information includes the jobs of the primary/principal database and the logins of users or processes that need to connect to the database. You should duplicate this information on any instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] that hosts a secondary/mirror database. If possible after roles are switched, it is best to programmatically reproduce the information on the new primary/principal database.  
   
 ## Logins  
@@ -28,12 +26,12 @@ manager: "jhubbard"
 ###  <a name="SSauthentication"></a> Logins Of Applications That Use SQL Server Authentication or a Local Windows Login  
  If an application uses SQL Server Authentication or a local Windows login, mismatched SIDs can prevent the application's login from resolving on a remote instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. The mismatched SIDs cause the login to become an orphaned user on the remote server instance. This issue can occur when an application connects to a mirrored or log shipping database after a failover or to a replication subscriber database that was initialized from a backup.  
   
- To prevent this issue, we recommend that you take preventative measures when you set up such an application to use a database that is hosted by a remote instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Prevention involves transferring the logins and the passwords from the local instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to the remote instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. For more information about how to prevent this issue, see KB article 918992 —[How to transfer logins and passwords between instances of SQL Server](http://support.microsoft.com/kb/918992/)).  
+ To prevent this issue, we recommend that you take preventative measures when you set up such an application to use a database that is hosted by a remote instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Prevention involves transferring the logins and the passwords from the local instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to the remote instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. For more information about how to prevent this issue, see KB article 918992 -[How to transfer logins and passwords between instances of SQL Server](https://support.microsoft.com/kb/918992/)).  
   
 > [!NOTE]  
 >  This problem affects Windows local accounts on different computers. However, this problem does not occur for domain accounts because the SID is the same on each of the computers.  
   
- For more information, see [Orphaned Users with Database Mirroring and Log Shipping](http://blogs.msdn.com/b/sqlserverfaq/archive/2009/04/13/orphaned-users-with-database-mirroring-and-log-shipping.aspx) (a Database Engine blog).  
+ For more information, see [Orphaned Users with Database Mirroring and Log Shipping](https://blogs.msdn.com/b/sqlserverfaq/archive/2009/04/13/orphaned-users-with-database-mirroring-and-log-shipping.aspx) (a Database Engine blog).  
   
 ## Jobs  
  Jobs, such as backup jobs, require special consideration. Typically, after a role switch, the database owner or system administrator must re-create the jobs for the new primary/principal database.  

@@ -2,13 +2,13 @@
 title: "File Connection Manager | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
+ms.prod: sql
+ms.prod_service: "integration-services"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: integration-services
+ms.topic: conceptual
+f1_keywords: 
+  - "sql13.dts.designer.fileconnectionmanager.f1"
 helpviewer_keywords: 
   - "folders [Integration Services], connections"
   - "files [Integration Services], connections"
@@ -17,10 +17,9 @@ helpviewer_keywords:
   - "connections [Integration Services], files"
   - "File connection manager"
 ms.assetid: 019078bc-44ee-4975-9169-0f9a89e3f3be
-caps.latest.revision: 50
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: craigg
 ---
 # File Connection Manager
   A File connection manager enables a package to reference an existing file or folder, or to create a file or folder at run time. For example, you can reference an Excel file. Certain components in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] use information in files to perform their work. For example, an Execute SQL task can reference a file that contains the SQL statements that the task executes. Other components perform operations on files. For example, the File System task can reference a file to copy it to a new location.  
@@ -58,5 +57,32 @@ manager: "jhubbard"
  For more information about the properties that you can set in [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer, see [File Connection Manager Editor](../../integration-services/connection-manager/file-connection-manager-editor.md).  
   
  For information about configuring a connection manager programmatically, see <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> and [Adding Connections Programmatically](../../integration-services/building-packages-programmatically/adding-connections-programmatically.md).  
+  
+## File Connection Manager Editor
+  Use the **File Connection Manager Editor** dialog box to specify the properties used to connect to a file or a folder.  
+  
+> [!NOTE]  
+>  You can set the ConnectionString property for the File connection manager by specifying an expression in the Properties window of [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. However, to avoid a validation error when you use an expression to specify the file or folder, in the **File Connection Manager Editor**, for **File/Folder**, add a file or folder path.  
+  
+ To learn more about the File connection manager, see [File Connection Manager](../../integration-services/connection-manager/file-connection-manager.md).  
+  
+### Options  
+ **Usage Type**  
+ Specify whether the **File Connection Manager** connects to an existing file or folder or creates a new file or folder.  
+  
+|Value|Description|  
+|-----------|-----------------|  
+|Create file|Create a new file at run time.|  
+|Existing file|Use an existing file.|  
+|Create folder|Create a new folder at run time.|  
+|Existing folder|Use an existing folder.|  
+  
+ **File / Folder**  
+ If **File**, specify the file to use.  
+  
+ If **Folder**, specify the folder to use.  
+  
+ **Browse**  
+ Select the file or folder by using the **Select File** or **Browse for Folder** dialog box.  
   
   

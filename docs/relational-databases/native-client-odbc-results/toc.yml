@@ -1,0 +1,14 @@
+- name: Processing Results (ODBC)
+  href: processing-results-odbc.md
+- name: Assigning Storage
+  href: assigning-storage.md
+- name: Autotranslation of Character Data
+  href: autotranslation-of-character-data.md
+- name: Data Type Usage
+  href: data-type-usage.md
+- name: Determining the Characteristics of a Result Set (ODBC)
+  href: determining-the-characteristics-of-a-result-set-odbc.md
+- name: Fetching Result Data
+  href: fetching-result-data.md
+- name: Mapping Data Types (ODBC)
+  href: mapping-data-types-odbc.md

@@ -2,13 +2,11 @@
 title: "Create Clustered Indexes | Microsoft Docs"
 ms.custom: ""
 ms.date: "02/17/2017"
-ms.prod: "sql-server-2016"
+ms.prod: sql
+ms.prod_service: "table-view-index, sql-database"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-indexes"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: table-view-index
+ms.topic: conceptual
 helpviewer_keywords: 
   - "index creation [SQL Server], clustered indexes"
   - "clustered indexes, creating"
@@ -16,13 +14,13 @@ helpviewer_keywords:
   - "clustered indexes, UNIQUE constraint"
   - "indexes [SQL Server], clustered"
 ms.assetid: 47148383-c2c7-4f08-a9e4-7016bf2d1d13
-caps.latest.revision: 33
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Create Clustered Indexes
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
   You can create clustered indexes on tables by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)]. With few exceptions, every table should have a clustered index. Besides improving query performance, a clustered index can be rebuilt or reorganized on demand to control table fragmentation. A clustered index can also be created on a view. (Clustered indexes are defined in the topic [Clustered and Nonclustered Indexes Described](../../relational-databases/indexes/clustered-and-nonclustered-indexes-described.md).)  
   
@@ -80,13 +78,13 @@ manager: "jhubbard"
   
 1.  In Object Explorer, expand the table on which you want to create a clustered index.  
   
-2.  Right-click the **Indexes** folder, point to **New Index**, and select **Clustered Index…**.  
+2.  Right-click the **Indexes** folder, point to **New Index**, and select **Clustered Index...**.  
   
 3.  In the **New Index** dialog box, on the **General** page, enter the name of the new index in the **Index name** box.  
   
-4.  Under **Index key columns**, click **Add…**.  
+4.  Under **Index key columns**, click **Add...**.  
   
-5.  In the **Select Columns from***table_name* dialog box, select the check box of the table column to be added to the clustered index.  
+5.  In the **Select Columns from**_table\_name_ dialog box, select the check box of the table column to be added to the clustered index.  
   
 6.  Click **OK**.  
   
@@ -96,7 +94,7 @@ manager: "jhubbard"
   
 1.  In Object Explorer, expand the database on which you want to create a table with a clustered index.  
   
-2.  Right-click the **Tables** folder and click **New Table…**.  
+2.  Right-click the **Tables** folder and click **New Table...**.  
   
 3.  Create a new table as you normally would. For more information, see [Create Tables &#40;Database Engine&#41;](../../relational-databases/tables/create-tables-database-engine.md).  
   
@@ -112,7 +110,7 @@ manager: "jhubbard"
   
 9. Click **Close**.  
   
-10. On the **File** menu, click **Save***table_name*.  
+10. On the **File** menu, click **Save**_table\_name_.  
   
 ##  <a name="TsqlProcedure"></a> Using Transact-SQL  
   

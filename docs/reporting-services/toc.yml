@@ -1,0 +1,252 @@
+- name: What is SQL Server Reporting Services (SSRS)?
+  href: create-deploy-and-manage-mobile-and-paginated-reports.md
+- name: Overview
+  items:
+  - name: What's new in Reporting Services
+    href: what-s-new-in-sql-server-reporting-services-ssrs.md
+  - name: Change log
+    href: change-log-sql-server-reporting-services.md
+  - name: Reporting Services Concepts (SSRS)
+    href: reporting-services-concepts-ssrs.md
+  - name: Reporting Services Features and Tasks
+    href: reporting-services-features-and-tasks-ssrs.md
+  - name: Backward Compatibility
+    href: reporting-services-backward-compatibility.md
+    items:
+    - name: Deprecated features
+      href: deprecated-features-in-sql-server-reporting-services-ssrs.md
+    - name: Discontinued functionality in SSRS in SQL Server 2016
+      href: discontinued-functionality-to-sql-server-reporting-services-in-sql-server.md
+    - name: Breaking changes in SSRS in SQL Server 2016
+      href: breaking-changes-in-sql-server-reporting-services-in-sql-server-2016.md
+    - name: Behavior changes to SQL Server Reporting Services in SQL Server 2016
+      href: behavior-changes-to-sql-server-reporting-services-in-sql-server-2016.md
+- name: Planning
+  items:
+  - name: Choosing BI tools for analysis and reporting
+    href: choosing-microsoft-business-intelligence-bi-tools-for-analysis-and-reporting.md
+  - name: Browser support for Reporting Services and Power View
+    href: browser-support-for-reporting-services-and-power-view.md
+  - name: Plan for report design and report deployment
+    href: plan-for-report-design-and-report-deployment-reporting-services.md
+  - name: Reporting Services features in editions of SQL Server
+    href: reporting-services-features-supported-by-the-editions-of-sql-server-2016.md
+- name: Install
+  href: ../reporting-services/install-windows/install-reporting-services.md
+- name: Web portal
+  href: web-portal-ssrs-native-mode.md
+  items:
+  - name: Branding the web portal
+    href: branding-the-web-portal.md
+  - name: Working with shared datasets
+    href: work-with-shared-datasets-web-portal.md
+  - name: Working with paginated reports
+    href: working-with-paginated-reports-web-portal.md
+  - name: Working with snapshots
+    href: working-with-snapshots-web-portal.md
+  - name: Working with subscriptions
+    href: working-with-subscriptions-web-portal.md
+  - name: Working with KPIs
+    href: working-with-kpis-in-reporting-services.md
+  - name: My Settings for Power BI Integration
+    href: my-settings-for-power-bi-integration-web-portal.md
+- name: Report Server
+  href: ../reporting-services/report-server/reporting-services-report-server-native-mode.md
+- name: Report Server (SharePoint)
+  href: ../reporting-services/report-server-sharepoint/reporting-services-report-server.md
+- name: Pin to Power BI
+  href: pin-reporting-services-items-to-power-bi-dashboards.md
+- name: Report Builder
+  href: ../reporting-services/report-builder/report-builder-in-sql-server-2016.md
+- name: Report Design
+  href: ../reporting-services/report-design/planning-a-report-report-builder.md
+- name: Working with reports
+  href: ../reporting-services/reports/reporting-services-reports-ssrs.md
+- name: Report Data
+  href: ../reporting-services/report-data/report-data-ssrs.md
+- name: Mobile reports
+  href: ../reporting-services/mobile-reports/create-mobile-reports-with-sql-server-mobile-report-publisher.md
+- name: Security and protection
+  href: ../reporting-services/security/reporting-services-security-and-protection.md
+- name: Subscriptions and delivery
+  href: ../reporting-services/subscriptions/schedules.md
+- name: Tools +
+  href: ../reporting-services/tools/reporting-services-tools.md
+- name: Data Alerts (SharePoint)
+  href: reporting-services-data-alerts.md
+  items:
+  - name: Data Alert Designer
+    href: data-alert-designer.md
+  - name: Data Alert Manager for SharePoint Users
+    href: data-alert-manager-for-sharepoint-users.md
+  - name: Data Alert Manager for Alerting Administrators
+    href: data-alert-manager-for-alerting-administrators.md
+  - name: Data Alert Messages
+    href: data-alert-messages.md
+  - name: Create a Data Alert in Data Alert Designer
+    href: create-a-data-alert-in-data-alert-designer.md
+  - name: Edit a Data Alert in Alert Designer
+    href: edit-a-data-alert-in-alert-designer.md
+  - name: Manage All Data Alerts on a SharePoint Site in Data Alert Manager
+    href: manage-all-data-alerts-on-a-sharepoint-site-in-data-alert-manager.md
+  - name: Manage My Data Alerts in Data Alert Manager
+    href: manage-my-data-alerts-in-data-alert-manager.md
+  - name: Grant Permissions to Users and Alerting Administrators
+    href: grant-permissions-to-users-and-alerting-administrators.md
+- name: Extensions
+  href: extensions-ssrs.md
+  items:
+  - name: Customize Rendering Extension Parameters in RSReportServer.Config
+    href: customize-rendering-extension-parameters-in-rsreportserver-config.md
+- name: URL Access
+  href: url-access-ssrs.md
+  items:
+  - name: Access Report Server Items Using URL Access
+    href: access-report-server-items-using-url-access.md
+  - name: Pass a Report Parameter Within a URL
+    href: pass-a-report-parameter-within-a-url.md
+  - name: URL Access Parameter Reference
+    href: url-access-parameter-reference.md
+  - name: Set the Language for Report Parameters in a URL
+    href: set-the-language-for-report-parameters-in-a-url.md
+  - name: Specify Device Information Settings in a URL
+    href: specify-device-information-settings-in-a-url.md
+  - name: Export a Report Using URL Access
+    href: export-a-report-using-url-access.md
+  - name: Search a Report Using URL Access
+    href: search-a-report-using-url-access.md
+  - name: Render a Report History Snapshot Using URL Access
+    href: render-a-report-history-snapshot-using-url-access.md
+- name: WMI provider
+  href: ../reporting-services/wmi-provider-library-reference/reporting-services-wmi-provider-library-reference-ssrs.md
+- name: Troubleshooting +
+  href: ../reporting-services/troubleshooting/troubleshoot-reporting-services.md
+- name: Developer
+  items:
+  - name: REST API
+    href: developer/rest-api.md
+  - name: REST API samples
+    href: https://github.com/Microsoft/Reporting-Services
+  - name: Application integration
+    href: ../reporting-services/application-integration/integrating-reporting-services-into-applications.md
+  - name: Report server web service
+    href: ../reporting-services/report-server-web-service/report-server-web-service.md
+  - name: Extensions
+    href: ../reporting-services/extensions/reporting-services-extension-library.md
+  - name: Custom report items
+    href: ../reporting-services/custom-report-items/creating-a-custom-report-item-design-time-component.md
+  - name: Custom assemblies
+    href: ../reporting-services/custom-assemblies/accessing-custom-assemblies-through-expressions.md
+- name: Technical Reference
+  href: technical-reference-ssrs.md
+  items:
+  - name: Feature Reference
+    href: feature-reference-reporting-services.md
+  - name: Device Information Settings for Rendering Extensions
+    href: device-information-settings-for-rendering-extensions-reporting-services.md
+    items:
+    - name: ATOM Device Information Settings
+      href: atom-device-information-settings.md
+    - name: CSV Device Information Settings
+      href: csv-device-information-settings.md
+    - name: Excel Device Information Settings
+      href: excel-device-information-settings.md
+    - name: HTML Device Information Settings
+      href: html-device-information-settings.md
+    - name: Image Device Information Settings
+      href: image-device-information-settings.md
+    - name: MHTML Device Information Settings
+      href: mhtml-device-information-settings.md
+    - name: PDF Device Information Settings
+      href: pdf-device-information-settings.md
+    - name: PPTX Device Information Settings
+      href: pptx-device-information-settings.md
+    - name: XML Device Information Settings
+      href: xml-device-information-settings.md
+    - name: Word Device Information Settings
+      href: word-device-information-settings.md
+    - name: RGDI Device Information Settings
+      href: rgdi-device-information-settings.md
+  - name: HTML Viewer and the Report Toolbar
+    href: html-viewer-and-the-report-toolbar.md
+- name: Tutorials
+  href: reporting-services-tutorials-ssrs.md
+  items:
+  - name: Create a Basic Table Report (SSRS Tutorial)
+    href: create-a-basic-table-report-ssrs-tutorial.md
+    items:
+    - name: "Lesson 1: Creating a Report Server Project"
+      href: lesson-1-creating-a-report-server-project-reporting-services.md
+    - name: "Lesson 2: Specifying Connection Information"
+      href: lesson-2-specifying-connection-information-reporting-services.md
+    - name: "Lesson 3: Defining a Dataset for the Table Report"
+      href: lesson-3-defining-a-dataset-for-the-table-report-reporting-services.md
+    - name: "Lesson 4: Adding a Table to the Report"
+      href: lesson-4-adding-a-table-to-the-report-reporting-services.md
+    - name: "Lesson 5: Formatting a Report"
+      href: lesson-5-formatting-a-report-reporting-services.md
+    - name: "Lesson 6: Adding Grouping and Totals"
+      href: lesson-6-adding-grouping-and-totals-reporting-services.md
+  - name: Create a Data-Driven Subscription (SSRS Tutorial)
+    href: create-a-data-driven-subscription-ssrs-tutorial.md
+    items:
+    - name: "Lesson 1: Creating a Sample Subscriber Database"
+      href: lesson-1-creating-a-sample-subscriber-database.md
+    - name: "Lesson 2: Modifying the Report Data Source Properties"
+      href: lesson-2-modifying-the-report-data-source-properties.md
+    - name: "Lesson 3: Defining a Data-Driven Subscription"
+      href: lesson-3-defining-a-data-driven-subscription.md
+  - name: Create a Drillthrough (RDLC) Report with Parameters using ReportViewer (SSRS Tutorial)
+    href: create-drillthrough-rdlc-report-with-parameters-reportviewer.md
+    items:
+    - name: "Lesson 1: Create a New Web Site"
+      href: lesson-1-create-a-new-web-site.md
+    - name: "Lesson 2: Define a Data Connection and Data Table for Parent Report"
+      href: lesson-2-define-a-data-connection-and-data-table-for-parent-report.md
+    - name: "Lesson 3: Design the Parent Report using the Report Wizard"
+      href: lesson-3-design-the-parent-report-using-the-report-wizard.md
+    - name: "Lesson 4: Define a Data Connection and Data Table for Child Report"
+      href: lesson-4-define-a-data-connection-and-data-table-for-child-report.md
+    - name: "Lesson 5: Design the Child Report using the Report Wizard"
+      href: lesson-5-design-the-child-report-using-the-report-wizard.md
+    - name: "Lesson 6: Add a ReportViewer Control to the Application"
+      href: lesson-6-add-a-reportviewer-control-to-the-application.md
+    - name: "Lesson 7: Add Drillthrough Action on Parent Report"
+      href: lesson-7-add-drillthrough-action-on-parent-report.md
+    - name: "Lesson 8: Create a Data Filter"
+      href: lesson-8-create-a-data-filter.md
+    - name: "Lesson 9: Build and Run the Application"
+      href: lesson-9-build-and-run-the-application.md
+  - name: Report Builder Tutorials
+    href: report-builder-tutorials.md
+    items:
+    - name: Prerequisites for Tutorials
+      href: prerequisites-for-tutorials-report-builder.md
+    - name: Alternative Ways to Get a Data Connection (Report Builder)
+      href: alternative-ways-to-get-a-data-connection-report-builder.md
+    - name: "Tutorial: Creating a Basic Table Report"
+      href: tutorial-creating-a-basic-table-report-report-builder.md
+    - name: "Tutorial: Creating a Matrix Report"
+      href: tutorial-creating-a-matrix-report-report-builder.md
+    - name: "Tutorial: Creating a Free Form Report"
+      href: tutorial-creating-a-free-form-report-report-builder.md
+    - name: "Tutorial: Format Text (Report Builder)"
+      href: tutorial-format-text-report-builder.md
+    - name: "Tutorial: Add a Column Chart to Your Report (Report Builder)"
+      href: tutorial-add-a-column-chart-to-your-report-report-builder.md
+    - name: "Tutorial: Add a Pie Chart to Your Report (Report Builder)"
+      href: tutorial-add-a-pie-chart-to-your-report-report-builder.md
+    - name: "Tutorial: Add a Bar Chart to Your Report (Report Builder)"
+      href: tutorial-add-a-bar-chart-to-your-report-report-builder.md
+    - name: "Tutorial: Add a Sparkline to Your Report (Report Builder)"
+      href: tutorial-add-a-sparkline-to-your-report-report-builder.md
+    - name: "Tutorial: Adding a KPI to Your Report"
+      href: tutorial-adding-a-kpi-to-your-report-report-builder.md
+    - name: "Tutorial: Map Report"
+      href: tutorial-map-report-report-builder.md
+    - name: "Tutorial: Add a Parameter to Your Report (Report Builder)"
+      href: tutorial-add-a-parameter-to-your-report-report-builder.md
+    - name: "Tutorial: Creating Drillthrough and Main Reports"
+      href: tutorial-creating-drillthrough-and-main-reports-report-builder.md
+    - name: "Tutorial: Introducing Expressions"
+      href: tutorial-introducing-expressions.md

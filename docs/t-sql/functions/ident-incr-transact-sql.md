@@ -2,12 +2,10 @@
 title: "IDENT_INCR (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
+ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: t-sql
 ms.topic: "language-reference"
 f1_keywords: 
   - "IDENT_INCR"
@@ -19,13 +17,12 @@ helpviewer_keywords:
   - "IDENT_INCR function"
   - "identity columns [SQL Server], IDENT_INCR function"
 ms.assetid: e13b491f-4f1f-4cb6-8b63-5084120f98cf
-caps.latest.revision: 39
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
 ---
 # IDENT_INCR (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Returns the increment value (returned as **numeric** (**@@**MAXPRECISION,0)) specified during the creation of an identity column in a table or view that has an identity column.  
   
@@ -76,25 +73,18 @@ WHERE IDENT_INCR(TABLE_SCHEMA + '.' + TABLE_NAME) IS NOT NULL;
   
  Here is a partial result set.  
   
- `TABLE_SCHEMA        TABLE_NAME                IDENT_INCR`  
-  
- `------------        ------------------------  ----------`  
-  
- `Person              Address                            1`  
-  
- `Production          ProductReview                      1`  
-  
- `Production          TransactionHistory                 1`  
-  
- `Person              AddressType                        1`  
-  
- `Production          ProductSubcategory                 1`  
-  
- `Person              vAdditionalContactInfo             1`  
-  
- `dbo                 AWBuildVersion                     1`  
-  
- `Production          BillOfMaterials                    1`  
+ ```
+ TABLE_SCHEMA        TABLE_NAME                IDENT_INCR  
+------------        ------------------------  ----------  
+Person              Address                            1  
+Production          ProductReview                      1  
+Production          TransactionHistory                 1  
+Person              AddressType                        1  
+Production          ProductSubcategory                 1  
+Person              vAdditionalContactInfo             1  
+dbo                 AWBuildVersion                     1  
+Production          BillOfMaterials                    1
+```  
   
 ## See Also  
  [Expressions &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)   

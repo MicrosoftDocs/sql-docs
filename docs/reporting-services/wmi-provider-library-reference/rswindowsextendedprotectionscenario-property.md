@@ -1,20 +1,15 @@
 ---
 title: "RSWindowsExtendedProtectionScenario Property | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/20/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.date: 03/20/2017
+ms.prod: reporting-services
+ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
+ms.technology: wmi-provider-library-reference
+
+
+ms.topic: conceptual
 ms.assetid: 5ac7ab80-9adf-4f65-abfa-fedf53b082b5
-caps.latest.revision: 6
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
+author: markingmyname
+ms.author: maghan
 ---
 # RSWindowsExtendedProtectionScenario Property
   Returns a string value that indicates the extended protection scenario the report server is configured to allow.  
@@ -30,11 +25,11 @@ public string RSWindowsExtendedProtectionScenario;
 ```  
   
 ## Remarks  
- Returns a string value that indicates the extended protection scenario the report server is configured to allow. If the report server that the WMI provider is connected to does not support extended protection, “” (empty string) is returned.  
+ Returns a string value that indicates the extended protection scenario the report server is configured to allow. If the report server that the WMI provider is connected to does not support extended protection, "" (empty string) is returned.  
   
  The following list shows valid values:  
   
- `”Any | Proxy | Direct”`  
+ `"Any | Proxy | Direct"`  
   
 ## Example Code  
  [MSReportServer_ConfigurationSetting Class](../../reporting-services/wmi-provider-library-reference/msreportserver-configurationsetting-class.md)  

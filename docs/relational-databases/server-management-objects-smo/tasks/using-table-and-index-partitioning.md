@@ -1,13 +1,12 @@
 ---
 title: "Using Table and Index Partitioning | Microsoft Docs"
 ms.custom: ""
-ms.date: "08/02/2016"
-ms.prod: "sql-server-2016"
+ms.date: "08/06/2017"
+ms.prod: sql
+ms.prod_service: "database-engine"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
-  - "docset-sql-devref"
-ms.tgt_pltfrm: ""
+
 ms.topic: "reference"
 helpviewer_keywords: 
   - "partitions [SMO]"
@@ -15,12 +14,14 @@ helpviewer_keywords:
   - "partitioned tables [SQL Server], SMO"
   - "partitioned indexes [SQL Server], SMO"
 ms.assetid: 0e682d7e-86c3-4d73-950d-aa692d46cb62
-caps.latest.revision: 46
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: craigg
+monikerRange: "=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Using Table and Index Partitioning
+[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
+
   Data can be stored by using the storage algorithms provided by [Partitioned Tables and Indexes](../../../relational-databases/partitions/partitioned-tables-and-indexes.md). Partitioning can make large tables and indexes more manageable and scalable.  
   
 ## Index and Table Partitioning  
@@ -31,53 +32,7 @@ manager: "jhubbard"
  Each <xref:Microsoft.SqlServer.Management.Smo.Table> and <xref:Microsoft.SqlServer.Management.Smo.Index> object specifies which partition scheme it uses in the <xref:Microsoft.SqlServer.Management.Smo.PartitionScheme> property and specifies the columns in the <xref:Microsoft.SqlServer.Management.Smo.PartitionSchemeParameterCollection>.  
   
 ## Example  
- For the following code example, you will have to select the programming environment, programming template and the programming language to create your application. For more information, see [Create a Visual Basic SMO Project in Visual Studio .NET](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-basic-smo-project-in-visual-studio-net.md) and [Create a Visual C&#35; SMO Project in Visual Studio .NET](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
-  
-## Setting Up a Partition Scheme for a Table in Visual Basic  
- The code example shows how to create a partition function and a partition scheme for the `TransactionHistory` table in the [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal-md.md)] sample database. The partitions are divided by date with the intention of separating out old records into the `TransactionHistoryArchive` table.  
-  
-```VBNET
-'Connect to the local, default instance of SQL Server.
-Dim srv As Server
-srv = New Server()
-'Reference the AdventureWorks2012database.
-Dim db As Database
-db = srv.Databases("AdventureWorks2012")
-'Define and create three new file groups on the database.
-Dim fg2 As FileGroup
-fg2 = New FileGroup(db, "Second")
-fg2.Create()
-Dim fg3 As FileGroup
-fg3 = New FileGroup(db, "Third")
-fg3.Create()
-Dim fg4 As FileGroup
-fg4 = New FileGroup(db, "Fourth")
-fg4.Create()
-'Define a partition function by supplying the parent database and name arguments in the constructor.
-Dim pf As PartitionFunction
-pf = New PartitionFunction(db, "TransHistPF")
-'Add a partition function parameter that specifies the function uses a DateTime range type.
-Dim pfp As PartitionFunctionParameter
-pfp = New PartitionFunctionParameter(pf, DataType.DateTime)
-pf.PartitionFunctionParameters.Add(pfp)
-'Specify the three dates that divide the data into four partitions.
-Dim val() As Object
-val = New Object() {"1/1/2003", "1/1/2004", "1/1/2005"}
-pf.RangeValues = val
-'Create the partition function.
-pf.Create()
-'Define a partition scheme by supplying the parent database and name arguments in the constructor.
-Dim ps As PartitionScheme
-ps = New PartitionScheme(db, "TransHistPS")
-'Specify the partition function and the filegroups required by the partition scheme.
-ps.PartitionFunction = "TransHistPF"
-ps.FileGroups.Add("PRIMARY")
-ps.FileGroups.Add("second")
-ps.FileGroups.Add("Third")
-ps.FileGroups.Add("Fourth")
-'Create the partition scheme.
-ps.Create()
-```
+ For the following code examples, you will have to select the programming environment, programming template and the programming language to create your application. For more information, see [Create a Visual C&#35; SMO Project in Visual Studio .NET](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
   
 ## Setting Up a Partition Scheme for a Table in Visual C#  
  The code example shows how to create a partition function and a partition scheme for the `TransactionHistory` table in the [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal-md.md)] sample database. The partitions are divided by date with the intention of separating out old records into the `TransactionHistoryArchive` table.  

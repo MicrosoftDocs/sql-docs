@@ -1,24 +1,19 @@
 ---
 title: "Publish a Report to a SharePoint Library | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/07/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.date: 03/07/2017
+ms.prod: reporting-services
+ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
+ms.technology: reports
+
+
+ms.topic: conceptual
 helpviewer_keywords: 
   - "deploying [Reporting Services], reports in SharePoint integrated mode"
   - "SharePoint integration [Reporting Services], publishing to a library"
   - "publishing reports [Reporting Services], to a SharePoint library"
 ms.assetid: 3f6dfc28-50d8-4231-bd25-871b5f77cce6
-caps.latest.revision: 15
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
+author: markingmyname
+ms.author: maghan
 ---
 # Publish a Report to a SharePoint Library
   To publish a report to a SharePoint site configured for SharePoint integration, you must set the project properties in Report Designer. In the project properties, all references to servers, reports, and shared data sources must be fully qualified URLs. In the report definition, all references to subreports, drillthrough reports, and resources such as Web-based images, must be fully qualified URLS.  
@@ -29,19 +24,19 @@ manager: "erikre"
   
 1.  In [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], open an existing or new Report Server project.  
   
-2.  From the **Project** menu, click **Properties**. The *\<project>***Property Pages** dialog box opens.  
+2.  From the **Project** menu, click **Properties**. The _\<project>_**Property Pages** dialog box opens.  
   
 3.  In the **Configuration** list, select the name of a solution build configuration to use to build and publish your report. The current configuration is listed as **Active**(*\<configuration>*).  
   
 4.  If you want to publish the shared data sources in your project and overwrite previously published shared data sources, set **OverwriteDataSources** to **True**.  
   
-5.  (Optional) For **TargetDataSourceFolder**, type a URL to a SharePoint library or library folder (for example, `http://TestServer/TestSite/Documents/DataSources`).  
+5.  (Optional) For **TargetDataSourceFolder**, type a URL to a SharePoint library or library folder (for example, `https://TestServer/TestSite/Documents/DataSources`).  
   
      If you do not specify a value, the **TargetReportFolder** value is used.  
   
-6.  For **TargetReportFolder**, type a URL to a library or library folder (for example, `http://TestServer/TestSite/Documents/Reports`).  
+6.  For **TargetReportFolder**, type a URL to a library or library folder (for example, `https://TestServer/TestSite/Documents/Reports`).  
   
-7.  For **TargetServerURL**, type a URL to a SharePoint top-level site or subsite. If you do not specify a site, the default top-level site is used (for example, `http://servername`, `http://servername/site`, or `http://servername/site/subsite`).  
+7.  For **TargetServerURL**, type a URL to a SharePoint top-level site or subsite. If you do not specify a site, the default top-level site is used (for example, `https://servername`, `https://servername/site`, or `https://servername/site/subsite`).  
   
 8.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   

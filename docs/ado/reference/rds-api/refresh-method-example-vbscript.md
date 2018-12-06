@@ -1,27 +1,24 @@
 ---
 title: "Refresh Method Example (VBScript) | Microsoft Docs"
-ms.prod: "sql-non-specified"
-ms.technology:
-  - "drivers"
+ms.technology: connectivity
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.reviewer: 
+ms.prod: sql  
+ms.prod_service: connectivity
+ms.topic: conceptual
 dev_langs: 
   - "VB"
 helpviewer_keywords: 
   - "Refresh method [ADO], VBScript example"
 ms.assetid: f2926578-bc60-464b-916e-ddfdb8014253
-caps.latest.revision: 14
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # Refresh Method Example (VBScript)
 > [!IMPORTANT]
->  Beginning with Windows 8 and Windows Server 2012, RDS server components are no longer included in the Windows operating system (see Windows 8 and [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/en-us/download/details.aspx?id=27416) for more detail). RDS client components will be removed in a future version of Windows. Avoid using this feature in new development work, and plan to modify applications that currently use this feature. Applications that use RDS should migrate to [WCF Data Service](http://go.microsoft.com/fwlink/?LinkId=199565).  
+>  Beginning with Windows 8 and Windows Server 2012, RDS server components are no longer included in the Windows operating system (see Windows 8 and [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) for more detail). RDS client components will be removed in a future version of Windows. Avoid using this feature in new development work, and plan to modify applications that currently use this feature. Applications that use RDS should migrate to [WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565).  
   
  The following example shows how to set the necessary parameters of [RDS.DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) at run time. The manner in which a [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) is retrieved using the [Refresh](../../../ado/reference/ado-api/refresh-method-ado.md) method is determined by the settings of the [ExecuteOptions](../../../ado/reference/rds-api/executeoptions-property-rds.md) and [FetchOptions](../../../ado/reference/rds-api/fetchoptions-property-rds.md) properties. To test this example, cut and paste the following code into a normal ASP document and name it **RefreshVBS.asp**. Use **Find** to locate the file Adovbs.inc and place it in the directory you plan to use. ASP script will identify your server.  
   
@@ -83,7 +80,7 @@ body {
    ID=RDC HEIGHT=1 WIDTH=1>  
 </OBJECT>  
 <HR>  
-Server: <Input Size=70 Name="txtServer" Value="http://<%=Request.ServerVariables("SERVER_NAME")%>"><BR>  
+Server: <Input Size=70 Name="txtServer" Value="https://<%=Request.ServerVariables("SERVER_NAME")%>"><BR>  
 Connect: <Input Size=70 Name="txtConnect" Value="Provider='sqloledb';Integrated Security='SSPI';Initial Catalog='Northwind'"><BR>  
 SQL: <Input Size=70 Name="txtSQL" Value="Select * from Employees">  
 <HR>  

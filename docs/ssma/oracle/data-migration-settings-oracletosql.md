@@ -1,18 +1,14 @@
 ---
 title: "Data Migration Settings (OracleToSQL) | Microsoft Docs"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "sql-ssma"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: ssma
+ms.topic: conceptual
 ms.assetid: 91f7f558-025d-4f4d-ac2c-aa095e7d1ace
-caps.latest.revision: 3
-author: "sabotta"
-ms.author: "carlasab"
+author: "Shamikg"
+ms.author: "Shamikg"
 manager: "v-thobro"
 ---
 # Data Migration Settings (OracleToSQL)
@@ -20,7 +16,7 @@ manager: "v-thobro"
 ## Data Migration Settings  
 **Data Migration Settings** allows the user to write custom queries for data migration.  
   
--   This tab is available when **Extended data migration options** is set to **Show** and is hidden when the setting is set to **Hide** in Project Settings. For more information about Project Migration Settings, see [Project Settings (Migration)](http://msdn.microsoft.com/en-us/fcd6b988-633b-4b2b-9f36-6368b5e86b60) .  
+-   This tab is available when **Extended data migration options** is set to **Show** and is hidden when the setting is set to **Hide** in Project Settings. For more information about Project Migration Settings, see [Project Settings (Migration)](https://msdn.microsoft.com/fcd6b988-633b-4b2b-9f36-6368b5e86b60) .  
   
 -   Parsing of Custom SQL statements will be implemented in **Data migration settings** tab of Table Node.  
   
@@ -51,5 +47,5 @@ There are two buttons present viz.:
 -   **Cancel:** Click **Cancel** to restore the settings present before the changes were being made.  
   
 ## See Also  
-[Migrating Oracle Data to SQL Server](http://msdn.microsoft.com/en-us/e23c5268-41ed-4e55-9fe7-a11376202a13)  
+[Migrating Oracle Data to SQL Server](migrating-oracle-data-into-sql-server-oracletosql.md)  
   

@@ -2,23 +2,20 @@
 title: "Create Custom Collection Set - Generic T-SQL Query Collector Type | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/07/2017"
-ms.prod: "sql-server-2016"
+ms.prod: sql
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: supportability
+ms.topic: conceptual
 helpviewer_keywords: 
   - "T-SQL Query collector type"
   - "collection sets [SQL Server], creating custom"
 ms.assetid: 6b06db5b-cfdc-4ce0-addd-ec643460605b
-caps.latest.revision: 26
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
 ---
 # Create Custom Collection Set - Generic T-SQL Query Collector Type
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   You can create a custom collection set with collection items that use the Generic T-SQL Query collector type by using the stored procedures that are provided with the data collector. Accomplishing this task involves using Query Editor in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] to carry out the following procedures:  
   
 -   Configure upload schedules.  
@@ -70,13 +67,13 @@ manager: "jhubbard"
   
     -   CollectorSchedule_Every_6h  
   
-     If you do not want to use one of the schedules that are provided, you can create a new schedule and use it for the collection set. For more information, see [Create and Attach Schedules to Jobs](http://msdn.microsoft.com/library/079c2984-0052-4a37-a2b8-4ece56e6b6b5).  
+     If you do not want to use one of the schedules that are provided, you can create a new schedule and use it for the collection set. For more information, see [Create and Attach Schedules to Jobs](../../ssms/agent/create-and-attach-schedules-to-jobs.md).  
   
 ### Define and create a collection item  
   
 1.  Because the new collection item is based on a generic collector type that is already installed, you can run the following code to set the GUID to correspond to the Generic T-SQL Query collector type.  
   
-    ```tsql  
+    ```sql  
     DECLARE @collector_type_uid uniqueidentifier;  
     SELECT @collector_type_uid = collector_type_uid FROM [msdb].[dbo].[syscollector_collector_types]   
     WHERE name = N'Generic T-SQL Query Collector Type';  
@@ -85,7 +82,7 @@ manager: "jhubbard"
   
 2.  Use the sp_syscollector_create_collection_item stored procedure to create the collection item. Declare the schema for the collection item so it maps to the schema that is required for the Generic T-SQL Query collector type.  
   
-    ```tsql  
+    ```sql  
     EXEC sp_syscollector_create_collection_item   
         @name=N'Query Stats - Test 1',   
         @parameters=N'  
@@ -106,7 +103,7 @@ manager: "jhubbard"
   
 1.  Before starting the new collection set, run the following query to verify that the new collection set and its collection item have been created.  
   
-    ```tsql  
+    ```sql  
     USE msdb;  
     SELECT * FROM syscollector_collection_sets;  
     SELECT * FROM syscollector_collection_items;  
@@ -118,7 +115,7 @@ manager: "jhubbard"
 ## Example  
  The following code sample combines the examples that are documented in the previous steps. Note that the collection frequency that is set for the collection item (5 seconds) is ignored because the collection set collection mode is set to 0, which is cached mode. For more information, see [Data Collection](../../relational-databases/data-collection/data-collection.md).  
   
-```tsql  
+```sql  
 USE msdb;  
   
 DECLARE @collection_set_id int;  
@@ -160,7 +157,7 @@ GO
   
 ## See Also  
  [Data Collector Stored Procedures &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/data-collector-stored-procedures-transact-sql.md)   
- [Manage Schedules](http://msdn.microsoft.com/library/f56c0736-dccc-41d2-afcf-71344aff143a)   
+ [Manage Schedules](../../ssms/agent/manage-schedules.md)   
  [Start or Stop a Collection Set](../../relational-databases/data-collection/start-or-stop-a-collection-set.md)  
   
   

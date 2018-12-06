@@ -1,22 +1,17 @@
 ---
 title: "ConfigurationSetting Property - VirtualDirectoryReportServer | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.date: 03/01/2017
+ms.prod: reporting-services
+ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
+ms.technology: wmi-provider-library-reference
+
+
+ms.topic: conceptual
 helpviewer_keywords: 
   - "VirtualDirectoryReportServer property"
 ms.assetid: 3e0e860a-afe9-47ce-ae6a-f8c7ca26494f
-caps.latest.revision: 9
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
+author: markingmyname
+ms.author: maghan
 ---
 # ConfigurationSetting Property - VirtualDirectoryReportServer
   Returns the virtual directory for the report server application. Read-only.  

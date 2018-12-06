@@ -2,24 +2,22 @@
 title: "Configure Column Encryption using PowerShell | Microsoft Docs"
 ms.custom: ""
 ms.date: "05/17/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "powershell"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.prod: sql
+ms.prod_service: "database-engine, sql-database"
+ms.reviewer: vanto
+ms.technology: security
+ms.topic: conceptual
 ms.assetid: 074c012b-cf14-4230-bf0d-55e23d24f9c8
-caps.latest.revision: 8
-author: "stevestein"
-ms.author: "sstein"
-manager: "jhubbard"
+author: VanMSFT
+ms.author: vanto
+manager: craigg
+monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Configure Column Encryption using PowerShell
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
-This article provides the steps for setting the target Always Encrypted configuration for database columns using the [Set-SqlColumnEncryption](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/set-sqlcolumnencryption) cmdlet (in the *SqlServer* PowerShell module). The **Set-SqlColumnEncryption** cmdlet modifies both the schema of the target database as well as the data stored in the selected columns. The data stored in a column can be encrypted, re-encrypted or decrypted, depending the specified target encryption settings for the columns and the current encryption configuration.
-For more information about Always Encrypted support in the SqlServer PowerShell module, please see [Configure Always Encrypted using PowerShell](../../../relational-databases/security/encryption/configure-always-encrypted-using-powershell.md).
+This article provides the steps for setting the target Always Encrypted configuration for database columns using the [Set-SqlColumnEncryption](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/set-sqlcolumnencryption) cmdlet (in the *SqlServer* PowerShell module). The **Set-SqlColumnEncryption** cmdlet modifies both the schema of the target database as well as the data stored in the selected columns. The data stored in a column can be encrypted, re-encrypted, or decrypted, depending on the specified target encryption settings for the columns and the current encryption configuration.
+For more information about Always Encrypted support in the SqlServer PowerShell module, see [Configure Always Encrypted using PowerShell](../../../relational-databases/security/encryption/configure-always-encrypted-using-powershell.md).
 
 ## Prerequisites
 
@@ -33,9 +31,9 @@ To apply the specified target encryption settings for the database, the **Set-Sq
 
 The **Set-SqlColumnEncryption** cmdlet supports two approaches for setting up the target encryption configuration: online and offline.
 
-With the offline approach, the target tables (and any tables related to the target tables, e.g. any tables a target table have foreign key relationships with) are unavailable to write transactions throughout the duration of the operation. The semantics of foreign key constraints (**CHECK** or **NOCHECK**) are always preserved when using the offline approach.
+With the offline approach, the target tables (and any tables related to the target tables, for example, any tables a target table have foreign key relationships with) are unavailable to write transactions throughout the duration of the operation. The semantics of foreign key constraints (**CHECK** or **NOCHECK**) are always preserved when using the offline approach.
 
-With the online approach (requires the SqlServer PowerShell module version 21.x or later), the operation of copying and encrypting, decrypting or re-encrypting the data is performed incrementally. Applications can read and write data from and to the target tables throughout the data movement operation, except the very last iteration, the duration of which is limited by the **MaxDownTimeInSeconds** parameter (you can define). To detect and process the changes, applications can make while the data is being copied, the cmdlet enables [Change Tracking](../../track-changes/enable-and-disable-change-tracking-sql-server.md) in the target database. Because of that, the online approach is likely to consume more resources on the server side than the online approach. The operation may also take much more time with the online approach, especially if a write-heavy workload is running against the database. The online approach can be used to encrypt one table at a time and the table must have a primary key. By default, foreign key constraints are recreated with the **NOCHECK** option to minimize the impact on applications. You can enforce preserving the semantics of foreign key constraints by specifying the **KeepCheckForeignKeyConstraints** option.
+With the online approach (requires the SqlServer PowerShell module version 21.x or later), the operation of copying and encrypting, decrypting, or re-encrypting the data is performed incrementally. Applications can read and write data from and to the target tables throughout the data movement operation, except the very last iteration, the duration of which is limited by the **MaxDownTimeInSeconds** parameter (you can define). To detect and process the changes, applications can make while the data is being copied, the cmdlet enables [Change Tracking](../../track-changes/enable-and-disable-change-tracking-sql-server.md) in the target database. Because of that, the online approach is likely to consume more resources on the server side than the online approach. The operation may also take much more time with the online approach, especially if a write-heavy workload is running against the database. The online approach can be used to encrypt one table at a time and the table must have a primary key. By default, foreign key constraints are recreated with the **NOCHECK** option to minimize the impact on applications. You can enforce preserving the semantics of foreign key constraints by specifying the **KeepCheckForeignKeyConstraints** option.
 
 Here are the guidelines for choosing between the offline and online approaches:
 
@@ -57,7 +55,7 @@ Step 1. Start a PowerShell environment and import the SqlServer module. | [Impor
 Step 2. Connect to your server and database | [Connecting to a Database](../../../relational-databases/security/encryption/configure-always-encrypted-using-powershell.md#connectingtodatabase) | No | Yes
 Step 3. Authenticate to Azure, if your column master key (protecting the column encryption key, to be rotated), is stored in Azure Key Vault | [Add-SqlAzureAuthenticationContext](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/add-sqlazureauthenticationcontext) | Yes | No
 Step 4. Construct an array of SqlColumnEncryptionSettings objects - one for each database column, you want to encrypt, re-encrypt, or decrypt. SqlColumnMasterKeySettings is an object that exists in memory (in PowerShell). It specifies the target encryption scheme for a column. | [New-SqlColumnEncryptionSettings](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/new-sqlcolumnencryptionsettings) | No | No
-Step 5. Set the desired encryption configuration, specified in the array of SqlColumnMasterKeySettings objects, you created in the previous step. A column will be encrypted, re-encrypted or decrypted, depending on the specified target settings and the current encryption configuration of the column.| [Set-SqlColumnEncryption](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/set-sqlcolumnencryption)<br><br>**Note:** This step may take a long time. Your applications will not be able to access the tables through the entire operation or a portion of it, depending on the approach (online vs. offline), you select. | Yes | Yes
+Step 5. Set the desired encryption configuration, specified in the array of SqlColumnMasterKeySettings objects, you created in the previous step. A column will be encrypted, re-encrypted, or decrypted, depending on the specified target settings and the current encryption configuration of the column.| [Set-SqlColumnEncryption](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/set-sqlcolumnencryption)<br><br>**Note:** This step may take a long time. Your applications will not be able to access the tables through the entire operation or a portion of it, depending on the approach (online vs. offline), you select. | Yes | Yes
 
 ## Encrypt Columns using Offline Approach - Example
 
@@ -111,7 +109,7 @@ Set-SqlColumnEncryption -InputObject $database -ColumnEncryptionSettings $ces -U
 ```
 ## Decrypt Columns - Example
 
-The following example shows how decrypt all columns that are currently encrypted in a database.
+The following example shows how to decrypt all columns that are currently encrypted in a database.
 
 
 ```

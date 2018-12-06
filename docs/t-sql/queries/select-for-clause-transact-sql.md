@@ -1,13 +1,11 @@
 ---
 title: "FOR Clause (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-non-specified"
+ms.date: "08/09/2017"
+ms.prod: sql
+ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: t-sql
 ms.topic: "language-reference"
 f1_keywords: 
   - "FOR"
@@ -21,13 +19,12 @@ helpviewer_keywords:
   - "BROWSE option"
   - "FOR clause [Transact-SQL]"
 ms.assetid: 08a6f084-8f73-4f2a-bae4-3c7513dc99b9
-caps.latest.revision: 54
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "douglaslMS"
+ms.author: "douglasl"
+manager: craigg
 ---
 # SELECT - FOR Clause (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Use the FOR clause to specify one of the following options for query results.  
   
@@ -89,7 +86,7 @@ JSON
  Specifies that updates be allowed while viewing the data in a DB-Library browse mode cursor. A table can be browsed in an application if the table includes a **timestamp** column, the table has a unique index, and the FOR BROWSE option is at the end of the SELECT statements sent to an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 > [!NOTE]  
->  You cannot use the <lock_hint> HOLDLOCK in a SELECT statement that includes the FOR BROWSE option.  
+>  You cannot use the \<lock_hint> HOLDLOCK in a SELECT statement that includes the FOR BROWSE option.
   
  FOR BROWSE cannot appear in SELECT statements that are joined by the UNION operator.  
   
@@ -102,7 +99,7 @@ JSON
   
 -   You must run the following [!INCLUDE[tsql](../../includes/tsql-md.md)] statement to turn on the browse mode by using the **NO_BROWSETABLE** option:  
   
-    ```  
+    ```sql
     SET NO_BROWSETABLE ON  
     ```  
   
@@ -120,7 +117,7 @@ JSON
   
 2.  In the SampleDB database, create a tleft table and a tright table that both contain a single column that is named c1. Define a unique index on the c1 column in the tleft table, and set the column to accept null values. To do this, run the following [!INCLUDE[tsql](../../includes/tsql-md.md)] statements in an appropriate query window:  
   
-    ```  
+    ```sql
     CREATE TABLE tleft(c1 INT NULL UNIQUE) ;  
     GO   
     CREATE TABLE tright(c1 INT NULL) ;  
@@ -129,7 +126,7 @@ JSON
   
 3.  Insert several values in the tleft table and the tright table. Make sure that you insert a null value in the tleft table. To do this, run the following [!INCLUDE[tsql](../../includes/tsql-md.md)] statements in the query window:  
   
-    ```  
+    ```sql
     INSERT INTO tleft VALUES(2) ;  
     INSERT INTO tleft VALUES(NULL) ;  
     INSERT INTO tright VALUES(1) ;  
@@ -140,14 +137,14 @@ JSON
   
 4.  Turn on the **NO_BROWSETABLE** option. To do this, run the following [!INCLUDE[tsql](../../includes/tsql-md.md)] statements in the query window:  
   
-    ```  
+    ```sql
     SET NO_BROWSETABLE ON ;  
     GO  
     ```  
   
 5.  Access the data in the tleft table and the tright table by using an outer join statement in the SELECT query. Make sure that the tleft table is on the inner side of the outer join statement. To do this, run the following [!INCLUDE[tsql](../../includes/tsql-md.md)] statements in the query window:  
   
-    ```  
+    ```sql
     SELECT tleft.c1   
     FROM tleft   
     RIGHT JOIN tright   
@@ -176,7 +173,7 @@ JSON
  Specifies that the results of a query are to be returned as an XML document. One of the following XML modes must be specified: RAW, AUTO, EXPLICIT. For more information about XML data and [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], see [FOR XML &#40;SQL Server&#41;](../../relational-databases/xml/for-xml-sql-server.md).  
   
  RAW [ **('***ElementName***')** ]  
- Takes the query result and transforms each row in the result set into an XML element with a generic identifier \<row /> as the element tag. You can optionally specify a name for the row element. The resulting XML output uses the specified *ElementName* as the row element generated for each row. For more information, see [Use RAW Mode with FOR XML](../../relational-databases/xml/use-raw-mode-with-for-xml.md) and [Use RAW Mode with FOR XML](../../relational-databases/xml/use-raw-mode-with-for-xml.md).  
+ Takes the query result and transforms each row in the result set into an XML element with a generic identifier \<row /> as the element tag. You can optionally specify a name for the row element. The resulting XML output uses the specified *ElementName* as the row element generated for each row. For more information, see [Use RAW Mode with FOR XML](../../relational-databases/xml/use-raw-mode-with-for-xml.md).
   
  AUTO  
  Returns query results in a simple, nested XML tree. Each table in the FROM clause, for which at least one column is listed in the SELECT clause, is represented as an XML element. The columns listed in the SELECT clause are mapped to the appropriate element attributes. For more information, see [Use AUTO Mode with FOR XML](../../relational-databases/xml/use-auto-mode-with-for-xml.md).  
@@ -220,7 +217,7 @@ JSON
   
  The following example specifies `FOR XML AUTO` with the `TYPE` and `XMLSCHEMA` options. Because of the `TYPE` option, the result set is returned to the client as an **xml** type. The `XMLSCHEMA` option specifies that the inline XSD schema is included in the XML data returned, and the `ELEMENTS` option specifies that the XML result is element-centric.  
   
-```  
+```sql
 USE AdventureWorks2012;  
 GO  
 SELECT p.BusinessEntityID, FirstName, LastName, PhoneNumber AS Phone  

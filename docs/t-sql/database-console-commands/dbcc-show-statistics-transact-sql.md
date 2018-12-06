@@ -1,13 +1,11 @@
 ---
 title: "DBCC SHOW_STATISTICS (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "7/17/2017"
-ms.prod: "sql-non-specified"
+ms.date: "12/18/2017"
+ms.prod: sql
+ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: t-sql
 ms.topic: "language-reference"
 f1_keywords: 
   - "SHOW_STATISTICS_TSQL"
@@ -32,13 +30,13 @@ helpviewer_keywords:
   - "densities [SQL Server]"
   - "displaying distribution statistics"
 ms.assetid: 12be2923-7289-4150-b497-f17e76a50b2e
-caps.latest.revision: 75
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: uc-msft
+ms.author: umajay
+manager: craigg
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # DBCC SHOW_STATISTICS (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
 DBCC SHOW_STATISTICS displays current query optimization statistics for a table or indexed view. The query optimizer uses statistics to estimate the cardinality or number of rows in the query result, which enables the query optimizer to create a high quality query plan. For example, the query optimizer could use cardinality estimates to choose the index seek operator instead of the index scan operator in the query plan, improving query performance by avoiding a resource-intensive index scan.
   
@@ -52,7 +50,7 @@ For more information, see [Statistics](../../relational-databases/statistics/sta
   
 ## Syntax  
   
-```sql
+```
 -- Syntax for SQL Server and Azure SQL Database  
   
 DBCC SHOW_STATISTICS ( table_or_indexed_view_name , target )   
@@ -61,9 +59,9 @@ DBCC SHOW_STATISTICS ( table_or_indexed_view_name , target )
     STAT_HEADER | DENSITY_VECTOR | HISTOGRAM | STATS_STREAM  
 ```  
   
-```sql
+```
 -- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
-  
+
 DBCC SHOW_STATISTICS ( table_name , target )   
     [ WITH {STAT_HEADER | DENSITY_VECTOR | HISTOGRAM } [ ,...n ] ]  
 [;]  
@@ -94,7 +92,7 @@ The following table describes the columns returned in the result set when STAT_H
 |Column name|Description|  
 |-----------------|-----------------|  
 |Name|Name of the statistics object.|  
-|Updated|Date and time the statistics were last updated. The [STATS_DATE](../../t-sql/functions/stats-date-transact-sql.md) function is an alternate way to retrieve this information.|  
+|Updated|Date and time the statistics were last updated. The [STATS_DATE](../../t-sql/functions/stats-date-transact-sql.md) function is an alternate way to retrieve this information. For more information, see the [Remarks](#Remarks) section in this page.|  
 |Rows|Total number of rows in the table or indexed view when the statistics were last updated. If the statistics are filtered or correspond to a filtered index, the number of rows might be less than the number of rows in the table. For more information, see[Statistics](../../relational-databases/statistics/statistics.md).|  
 |Rows Sampled|Total number of rows sampled for statistics calculations. If Rows Sampled < Rows, the displayed histogram and density results are estimates based on the sampled rows.|  
 |Steps|Number of steps in the histogram. Each step spans a range of column values followed by an upper bound column value. The histogram steps are defined on the first key column in the statistics. The maximum number of steps is 200.|  
@@ -103,6 +101,7 @@ The following table describes the columns returned in the result set when STAT_H
 |String Index|Yes indicates the statistics object contains string summary statistics to improve the cardinality estimates for query predicates that use the LIKE operator; for example, `WHERE ProductName LIKE '%Bike'`. String summary statistics are stored separately from the histogram and are created on the first key column of the statistics object when it is of type **char**, **varchar**, **nchar**, **nvarchar**, **varchar(max)**, **nvarchar(max)**, **text**, or **ntext.**.|  
 |Filter Expression|Predicate for the subset of table rows included in the statistics object. NULL = non-filtered statistics. For more information about filtered predicates, see [Create Filtered Indexes](../../relational-databases/indexes/create-filtered-indexes.md). For more information about filtered statistics, see [Statistics](../../relational-databases/statistics/statistics.md).|  
 |Unfiltered Rows|Total number of rows in the table before applying the filter expression. If Filter Expression is NULL, Unfiltered Rows is equal to Rows.|  
+|Persisted Sample Percent|Persisted sample percentage used for statistic updates that do not explicitly specify a sampling percentage. If value is zero, then no persisted sample percentage is set for this statistic.<br /><br /> **Applies to:** [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 CU4| 
   
 The following table describes the columns returned in the result set when DENSITY_VECTOR is specified.
   
@@ -122,9 +121,11 @@ The following table describes the columns returned in the result set when the HI
 |DISTINCT_RANGE_ROWS|Estimated number of rows with a distinct column value within a histogram step, excluding the upper bound.|  
 |AVG_RANGE_ROWS|Average number of rows with duplicate column values within a histogram step, excluding the upper bound (RANGE_ROWS / DISTINCT_RANGE_ROWS for DISTINCT_RANGE_ROWS > 0).| 
   
-## Remarks  
+## <a name="Remarks"></a> Remarks 
+
+Statistics update date is stored in the [statistics blob object](../../relational-databases/statistics/statistics.md#DefinitionQOStatistics) together with the [histogram](#histogram) and [density vector](#density), not in the metadata. When no data is read to generate statistics data, the statistics blob is not created, the date is not available, and the *updated* column is NULL. This is the case for filtered statistics for which the predicate does not return any rows, or for new empty tables.
   
-## Histogram  
+## <a name="histogram"></a> Histogram  
 A histogram measures the frequency of occurrence for each distinct value in a data set. The query optimizer computes a histogram on the column values in the first key column of the statistics object, selecting the column values by statistically sampling the rows or by performing a full scan of all rows in the table or view. If the histogram is created from a sampled set of rows, the stored totals for number of rows and number of distinct values are estimates and do not need to be whole integers.
   
 To create the histogram, the query optimizer sorts the column values, computes the number of values that match each distinct column value and then aggregates the column values into a maximum of 200 contiguous histogram steps. Each step includes a range of column values followed by an upper bound column value. The range includes all possible column values between boundary values, excluding the boundary values themselves. The lowest of the sorted column values is the upper boundary value for the first histogram step.
@@ -140,8 +141,8 @@ For each histogram step:
   
 The query optimizer defines the histogram steps according to their statistical significance. It uses a maximum difference algorithm to minimize the number of steps in the histogram while maximizing the difference between the boundary values. The maximum number of steps is 200. The number of histogram steps can be fewer than the number of distinct values, even for columns with fewer than 200 boundary points. For example, a column with 100 distinct values can have a histogram with fewer than 100 boundary points.
   
-## Density Vector  
-The query optimizer uses densities to enhance cardinality estimates for queries that return multiple columns from the same table or indexed view. The density vector contains one density for each prefix of columns in the statistics object. For example, if a statistics object has the key columns CustomerId, ItemId, Price, density is calculated on each of the following column prefixes.
+## <a name="density"></a> Density Vector  
+The query optimizer uses densities to enhance cardinality estimates for queries that return multiple columns from the same table or indexed view. The density vector contains one density for each prefix of columns in the statistics object. For example, if a statistics object has the key columns `CustomerId`, `ItemId` and `Price`, density is calculated on each of the following column prefixes.
   
 |Column prefix|Density calculated on|  
 |---|---|
@@ -155,7 +156,7 @@ The query optimizer uses densities to enhance cardinality estimates for queries 
 ## Permissions for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and [!INCLUDE[ssSDS](../../includes/sssds-md.md)]  
 In order to view the statistics object, the user must own the table or the user must be a member of the `sysadmin` fixed server role, the `db_owner` fixed database role, or the `db_ddladmin` fixed database role.
   
-SQL Server 2012 SP1 modifies the permission restrictions and allows users with SELECT permission to use this command. Note that the following requirements exist for SELECT permissions to be sufficient to run the command:
+[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 modifies the permission restrictions and allows users with SELECT permission to use this command. Note that the following requirements exist for SELECT permissions to be sufficient to run the command:
 -   Users must have permissions on all columns in the statistics object  
 -   Users must have permission on all columns in a filter condition (if one exists)  
 -   The table cannot have a row-level security policy.  
@@ -183,10 +184,10 @@ GO
 ```  
   
 ### B. Specifying the HISTOGRAM option  
-The following example limits the statistics information displayed for the `AK_Address_rowguid` index to the HISTOGRAM data.
+This limits the statistics information displayed for Customer_LastName to the HISTOGRAM data.
   
 ```sql
-DBCC SHOW_STATISTICS ("Person.Address", AK_Address_rowguid) WITH HISTOGRAM;  
+DBCC SHOW_STATISTICS ("dbo.DimCustomer",Customer_LastName) WITH HISTOGRAM;  
 GO  
 ```  
   
@@ -208,14 +209,6 @@ The results show the header, the density vector, and part of the histogram.
   
 ![DBCC SHOW_STATISTICS results](../../t-sql/database-console-commands/media/aps-sql-dbccshow-statistics.JPG "DBCC SHOW_STATISTICS results")
   
-### D. Specifying the HISTOGRAM option  
-This limits the statistics information displayed for Customer_LastName to the HISTOGRAM data.
-  
-```sql
-DBCC SHOW_STATISTICS ("dbo.DimCustomer",Customer_LastName) WITH HISTOGRAM;  
-GO  
-```  
-  
 ## See Also  
 [Statistics](../../relational-databases/statistics/statistics.md)  
 [CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md)  
@@ -224,6 +217,6 @@ GO
 [sp_autostats &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-autostats-transact-sql.md)  
 [sp_createstats &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-createstats-transact-sql.md)  
 [STATS_DATE &#40;Transact-SQL&#41;](../../t-sql/functions/stats-date-transact-sql.md)  
-[UPDATE STATISTICS &#40;Transact-SQL&#41;](../../t-sql/statements/update-statistics-transact-sql.md)
-  
-  
+[UPDATE STATISTICS &#40;Transact-SQL&#41;](../../t-sql/statements/update-statistics-transact-sql.md)  
+[sys.dm_db_stats_properties (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-db-stats-properties-transact-sql.md)  
+[sys.dm_db_stats_histogram (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-db-stats-histogram-transact-sql.md)   

@@ -1,21 +1,17 @@
 ---
 title: "Getting Started with SSMA  for Oracle Console (OracleToSQL) | Microsoft Docs"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "sql-ssma"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: ssma
+ms.topic: conceptual
 helpviewer_keywords: 
   - "Oracle Console, Console Output Conventions"
   - "Oracle Console, Launching Console"
 ms.assetid: 667a5e4a-6848-4973-a72d-1287f64718ac
-caps.latest.revision: 31
-author: "sabotta"
-ms.author: "carlasab"
+author: "Shamikg"
+ms.author: "Shamikg"
 manager: "v-thobro"
 ---
 # Getting Started with SSMA  for Oracle Console (OracleToSQL)
@@ -26,7 +22,7 @@ Use the following steps to start the SSMA console application:
   
 1.  Go to **Start** and point to **All Programs**.  
   
-2.  Click the **[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Migration Assistant for Oracle Command Prompt** shortcut.  
+2.  Click the **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Migration Assistant for Oracle Command Prompt** shortcut.  
   
     It displays the SSMA Console usage menu and `(/? Help)`, to help you get started with the console application.  
   
@@ -43,9 +39,9 @@ After the console is successfully launched on your Windows system, you could use
   
 Additional features:  
   
-1.  [Specify a password](http://msdn.microsoft.com/en-us/8c7d9f8e-06bb-476c-bbd2-15b61d5bba3c) and export/ import it onto other Window machines  
+1.  [Specify a password](managing-passwords-oracletosql.md) and export/ import it onto other Window machines  
   
-2.  [Generate Reports](http://msdn.microsoft.com/en-us/ccad6262-01e1-447a-bd2b-c105154c80ce) to view the detailed xml output reports for assessment /conversion and data migration. Detailed error reports can also be generated for refresh and synchronization commands.  
+2.  [Generate Reports](generating-reports-oracletosql.md) to view the detailed xml output reports for assessment /conversion and data migration. Detailed error reports can also be generated for refresh and synchronization commands.  
   
 ## SSMA Console Output Conventions  
 Upon executing the SSMA script commands and options, the console program displays the results and messages (information, error, etc.) to the user on the console or if required, redirects to an xml output file. Each type of message in the output is signified by a unique color. For example, the text message in white color denotes script file commands; the one in green color represents a prompt for user-input, and so on.  
@@ -64,5 +60,5 @@ Color-interpretation of the console output in the following table:
 |Cyan|Start, Finish and Result of an operation|  
   
 ## See Also  
-[Installing SSMA for Oracle](http://msdn.microsoft.com/en-us/9211013a-ab24-4c52-9b26-87994b35e502)  
+[Installing SSMA for Oracle](installing-ssma-for-oracle-oracletosql.md)  
   

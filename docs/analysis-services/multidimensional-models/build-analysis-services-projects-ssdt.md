@@ -1,26 +1,17 @@
 ---
 title: "Build Analysis Services Projects (SSDT) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/04/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "projects [Analysis Services], building"
-  - "Business Intelligence Development Studio, project building [Analysis Services]"
-ms.assetid: caac03cb-b2b4-4652-8913-3dd39c4b0127
-caps.latest.revision: 34
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: multidimensional-models
+ms.topic: conceptual
+ms.author: owend
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
 ---
 # Build Analysis Services Projects (SSDT)
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   In [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], you build an [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] project much like you build any programming project in Visual Studio. When you build the project, a set of XML files are created in the output directory. These XML files use Analysis Services Scripting Language (ASSL), which is the XML dialect the client applications including [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] and [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] use to communicate with an [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] instance to create or modify [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] objects. These XML files are used to deploy [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] object definitions in an [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] project to a specified [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] instance.  
   
 ## Building a Project  
@@ -58,7 +49,7 @@ manager: "erikre"
  Referenced assemblies (excluding standard system and [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] assemblies) are also copied to the output directory. When references are to other projects in a solution, those projects are built first, using the appropriate project configuration and build dependencies established by the project references, and then are copied to the project output folder.  
   
 ## See Also  
- [Analysis Services Scripting Language &#40;ASSL for XMLA&#41;](../../analysis-services/scripting/analysis-services-scripting-language-assl-for-xmla.md)   
+ [Analysis Services Scripting Language &#40;ASSL for XMLA&#41;](https://docs.microsoft.com/bi-reference/assl/analysis-services-scripting-language-assl-for-xmla)   
  [Deploy Analysis Services Projects &#40;SSDT&#41;](../../analysis-services/multidimensional-models/deploy-analysis-services-projects-ssdt.md)  
   
   

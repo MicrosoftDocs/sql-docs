@@ -2,12 +2,10 @@
 title: "SET @local_variable (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/16/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
+ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: t-sql
 ms.topic: "language-reference"
 dev_langs: 
   - "TSQL"
@@ -17,13 +15,13 @@ helpviewer_keywords:
   - "SET statement, @local_variable"
   - "local variables [SQL Server]"
 ms.assetid: d410e06e-061b-4c25-9973-b2dc9b60bd85
-caps.latest.revision: 52
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "douglaslMS"
+ms.author: "douglasl"
+manager: craigg
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # SET @local_variable (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Sets the specified local variable, previously created by using the DECLARE @*local_variable* statement, to the specified value.  
   
@@ -182,7 +180,7 @@ SET @local_variable {+= | -= | *= | /= | %= | &= | ^= | |= } expression
   
  The compound assignment operator can be used anywhere you have an assignment with an expression on the right hand side of the operator, including variables, and a SET in an UPDATE, SELECT and RECEIVE statement.  
   
- Do not use a variable in a SELECT statement to concatenate values (that is, to compute aggregate values). Unexpected query results may occur. This is because all expressions in the SELECT list (including assignments) are not guaranteed to be executed exactly once for each output row. For more information, see [this KB article](http://support.microsoft.com/kb/287515).  
+ Do not use a variable in a SELECT statement to concatenate values (that is, to compute aggregate values). Unexpected query results may occur. This is because all expressions in the SELECT list (including assignments) are not guaranteed to be executed exactly once for each output row. For more information, see [this KB article](https://support.microsoft.com/kb/287515).  
   
 ## Permissions  
  Requires membership in the public role. All users can use SET **@***local_variable*.  
@@ -360,6 +358,7 @@ SELECT TOP 1 @rows FROM sys.tables;
 ```  
   
 ## See Also  
+ [Compound Operators &#40;Transact-SQL&#41;](../../t-sql/language-elements/compound-operators-transact-sql.md)   
  [DECLARE @local_variable &#40;Transact-SQL&#41;](../../t-sql/language-elements/declare-local-variable-transact-sql.md)   
  [EXECUTE &#40;Transact-SQL&#41;](../../t-sql/language-elements/execute-transact-sql.md)   
  [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)   

@@ -2,25 +2,24 @@
 title: "Select Rows That Do Not Match a Value (Visual Database Tools) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
+ms.prod_service: "sql-tools"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "tools-ssms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: ssms
+ms.topic: conceptual
 helpviewer_keywords: 
   - "search conditions [SQL Server], rows not matching value"
   - "row not matching value [SQL Server]"
   - "NOT operator [Visual Database Tools]"
   - "search criteria [SQL Server], rows not matching value"
 ms.assetid: 19898578-7b2f-401c-bb8f-9f2a017efdf7
-caps.latest.revision: 4
 author: "stevestein"
 ms.author: "sstein"
-manager: "jhubbard"
+manager: craigg
+
 ---
 # Select Rows That Do Not Match a Value (Visual Database Tools)
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 To find rows that do not match a value, use the NOT operator.  
   
 ### To find rows that do not match a value  

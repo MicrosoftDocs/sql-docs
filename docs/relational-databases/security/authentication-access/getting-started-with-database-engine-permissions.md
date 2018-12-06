@@ -2,23 +2,21 @@
 title: "Getting Started with Database Engine Permissions | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/03/2017"
-ms.prod: "sql-server-2016"
+ms.prod: sql
+ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
+ms.technology: security
+ms.topic: quickstart
 helpviewer_keywords: 
   - "permissions [SQL Server], getting started"
 ms.assetid: 051af34e-bb5b-403e-bd33-007dc02eef7b
-caps.latest.revision: 15
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: VanMSFT
+ms.author: vanto
+manager: craigg
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Getting Started with Database Engine Permissions
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
   Permissions in the [!INCLUDE[ssDE](../../../includes/ssde-md.md)] are managed at the server level through logins and server roles, and at the database level through database users and database roles. The model for [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] exposes  the same system within each database, but the server level permissions are not available. This topic reviews some basic security concepts and then describes a typical implementation of the permissions.  
   
@@ -100,7 +98,7 @@ AUTHORIZATION  PERMISSION  ON  SECURABLE::NAME  TO  PRINCIPAL;
   
 -   The `PERMISSION` establishes what action is allowed or prohibited. [!INCLUDE[ssSQL15](../../../includes/sssql15-md.md)] can specify 230 permissions. [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] has fewer permissions because some actions are not relevant in Azure. The permissions are listed in the topic [Permissions &#40;Database Engine&#41;](../../../relational-databases/security/permissions-database-engine.md) and in the chart referenced below.  
   
--   `ON SECURABLE::NAME` is the type of securable (server, server object, database, or database object) and its name. Some permissions do not require `ON SECURABLE::NAME` because it is unambiguous or inappropriate in the context. For example the `CREATE TABLE` permission doesn’t require the `ON SECURABLE::NAME` clause. (For example `GRANT CREATE TABLE TO Mary;` allows Mary to create tables.)  
+-   `ON SECURABLE::NAME` is the type of securable (server, server object, database, or database object) and its name. Some permissions do not require `ON SECURABLE::NAME` because it is unambiguous or inappropriate in the context. For example the `CREATE TABLE` permission doesn't require the `ON SECURABLE::NAME` clause. (For example `GRANT CREATE TABLE TO Mary;` allows Mary to create tables.)  
   
 -   `PRINCIPAL` is the security principal (login, user, or role) which receives or loses the permission. Grant permissions to roles whenever possible.  
   
@@ -155,14 +153,14 @@ GRANT CONTROL ON DATABASE::SalesDB TO Ted;
  The first permission listed above (`GRANT SELECT ON OBJECT::Region TO Ted;`) is the most granular, that is, that statement is the least permission possible that grants the `SELECT`. No permissions to subordinate objects come with it. It's a good principal to always grant the least permission possible, but (contradicting that) grant at higher levels in order to simplify the granting system. So if Ted needs permissions to the entire schema, grant `SELECT` once at the schema level, instead of granting `SELECT` at the table or view level many times. The design of the database has a great deal of impact on how successful this strategy can be. This strategy will work best when your database is designed so that objects needing identical permissions are included in a single schema.  
   
 ## List of Permissions  
- [!INCLUDE[ssSQL15](../../../includes/sssql15-md.md)] has 230 permissions. [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] has 219 permissions. [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] has 214 permissions. [!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)] has 195 permissions. [!INCLUDE[ssSDS](../../../includes/sssds-md.md)], [!INCLUDE[ssDW](../../../includes/ssdw-md.md)], and [!INCLUDE[ssAPS](../../../includes/ssaps-md.md)] have fewer permissions because they expose only a portion of the database engine, though each have some permissions that do not apply to [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. The following graphic shows the permissions and their relationships to each other. Some of the higher level permissions (such as `CONTROL SERVER`) are listed many times. In this topic, the poster is far to small to read. Click the image to download the **Database Engine Permissions Poster** in pdf format.  
-  
-[![Database Engine Permissions](../../../relational-databases/security/media/database-engine-permissions.PNG)](http://go.microsoft.com/fwlink/?LinkId=229142)
+ [!INCLUDE[ssSQL15](../../../includes/sssql15-md.md)] has 230 permissions. [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] has 219 permissions. [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] has 214 permissions. [!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)] has 195 permissions. [!INCLUDE[ssSDS](../../../includes/sssds-md.md)], [!INCLUDE[ssDW](../../../includes/ssdw-md.md)], and [!INCLUDE[ssAPS](../../../includes/ssaps-md.md)] have fewer permissions because they expose only a portion of the database engine, though each have some permissions that do not apply to [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. 
+ 
+ [!INCLUDE[database-engine-permissions](../../../includes/paragraph-content/database-engine-permissions.md)]
  
  For a graphic showing the relationships among the [!INCLUDE[ssDE](../../../includes/ssde-md.md)] principals and server and database objects,  see [Permissions Hierarchy &#40;Database Engine&#41;](../../../relational-databases/security/permissions-hierarchy-database-engine.md).  
   
 ## Permissions vs. Fixed Server and Fixed Database Roles  
- The permissions of the fixed server roles and fixed database roles are similar but not exactly the same as the granular permissions. For example, members of the `sysadmin` fixed server role have all permissions on the instance of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], as do logins with the `CONTROL SERVER` permission. But granting the `CONTROL SERVER` permission does not make a login a member of the sysadmin fixed server role, and making adding a login to the  `sysadmin` fixed server role does not explicitly grant the login the  `CONTROL SERVER` permission. Sometimes a stored procedure will check permissions by checking the fixed role and not checking the granular permission. For example detaching a database requires membership in the `db_owner` fixed database role. The equivalent `CONTROL DATABASE` permission is not enough. These two systems operate in parallel but rarely interact with each other. Microsoft recommends using the newer, granular permission system instead of the fixed roles whenever possible.  
+ The permissions of the fixed server roles and fixed database roles are similar but not exactly the same as the granular permissions. For example, members of the `sysadmin` fixed server role have all permissions on the instance of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], as do logins with the `CONTROL SERVER` permission. But granting the `CONTROL SERVER` permission does not make a login a member of the sysadmin fixed server role, and adding a login to the  `sysadmin` fixed server role does not explicitly grant the login the  `CONTROL SERVER` permission. Sometimes a stored procedure will check permissions by checking the fixed role and not checking the granular permission. For example detaching a database requires membership in the `db_owner` fixed database role. The equivalent `CONTROL DATABASE` permission is not enough. These two systems operate in parallel but rarely interact with each other. Microsoft recommends using the newer, granular permission system instead of the fixed roles whenever possible.
   
 ## Monitoring Permissions  
  The following views return security information.  
@@ -186,7 +184,7 @@ GRANT CONTROL ON DATABASE::SalesDB TO Ted;
   
  To return the explicit permissions granted or denied in a database ([!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] and [!INCLUDE[ssSDS](../../../includes/sssds-md.md)]), execute the following statement in the database.  
   
-```tsql  
+```sql  
 SELECT   
     perms.state_desc AS State,   
     permission_name AS [Permission],   
@@ -201,7 +199,7 @@ JOIN sys.objects AS obj
   
  To return the members of the server roles ([!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] only), execute the following statement.  
   
-```tsql  
+```sql  
 SELECT sRole.name AS [Server Role Name] , sPrinc.name AS [Members]  
 FROM sys.server_role_members AS sRo  
 JOIN sys.server_principals AS sPrinc  
@@ -213,7 +211,7 @@ JOIN sys.server_principals AS sRole
  
  To return the members of the database roles ([!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] and [!INCLUDE[ssSDS](../../../includes/sssds-md.md)]), execute the following statement in the database.  
   
-```tsql  
+```sql  
 SELECT dRole.name AS [Database Role Name], dPrinc.name AS [Members]  
 FROM sys.database_role_members AS dRo  
 JOIN sys.database_principals AS dPrinc  
@@ -225,7 +223,7 @@ JOIN sys.database_principals AS dRole
 ## Next Steps  
  For more topics to get you started, see:  
   
--   [Tutorial: Getting Started with the Database Engine](../../../relational-databases/tutorial-getting-started-with-the-database-engine.md) [Creating a Database &#40;Tutorial&#41;](../../../t-sql/lesson-1-1-creating-a-database.md)  
+-   [Tutorial: Getting Started with the Database Engine](../../../relational-databases/tutorial-getting-started-with-the-database-engine.md) [Creating a Database &#40;Tutorial&#41;](../../../t-sql/lesson-1-creating-database-objects.md#)  
   
 -   [Tutorial: SQL Server Management Studio](../../../tools/sql-server-management-studio/tutorial-sql-server-management-studio.md)  
   

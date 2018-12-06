@@ -1,0 +1,10 @@
+- name: FlagName Property (ServerSettingsGeneralFlag Class)
+  href: flagname-property-serversettingsgeneralflag-class.md
+- name: FlagValue Property (ServerSettingsGeneralFlag Class)
+  href: flagvalue-property-serversettingsgeneralflag-class.md
+- name: InstanceName Property (ServerSettingsGeneralFlag Class)
+  href: instancename-property-serversettingsgeneralflag-class.md
+- name: ServerSettingsGeneralFlag Class
+  href: serversettingsgeneralflag-class.md
+- name: SetValue Method (ServerSettingsGeneralFlag Class)
+  href: setvalue-method-serversettingsgeneralflag-class.md

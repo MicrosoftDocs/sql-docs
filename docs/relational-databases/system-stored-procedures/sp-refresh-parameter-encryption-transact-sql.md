@@ -2,13 +2,11 @@
 title: "sp_refresh_parameter_encryption (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/11/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
+ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: system-objects
+ms.topic: conceptual
 f1_keywords: 
   - "sp_refresh_parameter_encryption"
   - "sp_refresh_parameter_encryption_TSQL"
@@ -18,13 +16,13 @@ helpviewer_keywords:
   - "sp_refresh_parameter_encryption"
   - "Always Encrypted, sp_refresh_parameter_encryption"
 ms.assetid: 00b44baf-fcf0-4095-aabe-49fa87e77316
-caps.latest.revision: 3
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: stevestein
+ms.author: sstein
+manager: craigg
+monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sp_refresh_parameter_encryption (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
 Updates the Always Encrypted metadata for the parameters of the specified non-schema-bound stored procedure, user-defined function, view, DML trigger, database-level DDL trigger, or server-level DDL trigger in the current database. 
 
@@ -84,7 +82,7 @@ For modules that are defined with the `EXECUTE AS` clause, `IMPERSONATE` permiss
 The following example creates a table and a procedure referencing the table, configures Always Encrypted, and then demonstrates altering the table and running the `sp_refresh_parameter_encryption` procedure.  
 
 First create the initial table and a stored procedure referencing the table.
-```tsql
+```sql
 CREATE TABLE [Patients]([PatientID] [int] IDENTITY(1,1) NOT NULL,
 	[SSN] [char](11), 
 	[FirstName] [nvarchar](50) NULL,
@@ -113,7 +111,7 @@ GO
 ```
 
 Then set up Always Encrypted keys.
-```tsql
+```sql
 CREATE COLUMN MASTER KEY [CMK1]
 WITH
 (
@@ -135,7 +133,7 @@ GO
 
 
 Finally we replace the SSN column with the encrypted column, and then runs the `sp_refresh_parameter_encryption` procedure to update the Always Encrypted components.
-```tsql
+```sql
 ALTER TABLE [Patients] DROP COLUMN [SSN];
 GO
 

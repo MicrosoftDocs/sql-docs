@@ -2,12 +2,10 @@
 title: "sys.database_audit_specifications (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "04/05/2016"
-ms.prod: "sql-non-specified"
+ms.prod: sql
+ms.prod_service: "database-engine"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: system-objects
 ms.topic: "language-reference"
 f1_keywords: 
   - "database_audit_specifications_TSQL"
@@ -19,13 +17,12 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.database_audit_specifications catalog view"
 ms.assetid: bf80e5c6-0588-4eb7-86ff-aa7c73461335
-caps.latest.revision: 17
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: stevestein
+ms.author: sstein
+manager: craigg
 ---
 # sys.database_audit_specifications (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Contains information about the database audit specifications in a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] audit on a server instance. For more information, see [SQL Server Audit &#40;Database Engine&#41;](../../relational-databases/security/auditing/sql-server-audit-database-engine.md).  
   
@@ -35,7 +32,7 @@ manager: "jhubbard"
 |database_specification_id|**int**|ID of the database specification.|  
 |create_date|**datetime**|Date the audit specification was created.|  
 |modified_date|**datetime**|Date the audit specification was last modified.|  
-|is_state_enabled|**bit**|Audit specification state:<br /><br /> 0 – DISABLED<br /><br /> 1 –ENABLED|  
+|is_state_enabled|**bit**|Audit specification state:<br /><br /> 0 - DISABLED<br /><br /> 1 -ENABLED|  
 |audit_GUID|**uniqueidentifer**|GUID for the audit that contains this specification. Used during enumeration of member database audit specifications during database attach/startup.|  
   
 ## Remarks  

@@ -2,29 +2,28 @@
 title: "Transfer Error Messages Task | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
+ms.prod: sql
+ms.prod_service: "integration-services"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: integration-services
+ms.topic: conceptual
 f1_keywords: 
   - "sql13.dts.designer.transfererrormessagestask.f1"
+  - "sql13.dts.designer.transfererrormessagestask.general.f1"
+  - "sql13.dts.designer.transfererrormessagestask.errormessages.F1"
 helpviewer_keywords: 
   - "Transfer Error Messages task [Integration Services]"
 ms.assetid: da702289-035a-4d14-bd74-04461fbfee1b
-caps.latest.revision: 31
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: craigg
 ---
 # Transfer Error Messages Task
   The Transfer Error Messages task transfers one or more [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] user-defined error messages between instances of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. User-defined messages are messages with an identifier that is equal to or greater than 50000. Messages with an identifier less than 50000 are system error messages, and cannot be transferred by using the Transfer Error Messages task.  
   
  The Transfer Error Messages task can be configured to transfer all error messages, or only the specified error messages. User-defined error messages may be available in a number of different languages and the task can be configured to transfer only messages in selected languages. A us_english version of the message that uses code page 1033 must exist on the destination server before you can transfer other language versions of the message to that server.  
   
- The sysmessages table in the master database contains all the error messages—both system and user-defined—that [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] uses.  
+ The sysmessages table in the master database contains all the error messages-both system and user-defined-that [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] uses.  
   
  The user-defined messages to be transferred may already exist on the destination. An error message is defined as a duplicate error message if the identifier and the language are the same. The Transfer Error Messages task can be configured to handle existing error messages in the following ways:  
   
@@ -44,7 +43,7 @@ manager: "jhubbard"
  The Transfer Error Messages task does not report incremental progress of the error message transfer; it reports only 0% and 100 % completion.  
   
 ## Execution Value  
- The execution value, defined in the **ExecutionValue** property of the task, returns the number of error messages that have been transferred. By assigning a user-defined variable to the **ExecValueVariable** property of the Transfer Error Message task, information about the error message transfer can be made available to other objects in the package. For more information, see [Integration Services &#40;SSIS&#41; Variables](../../integration-services/integration-services-ssis-variables.md) and [Use Variables in Packages](http://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787).  
+ The execution value, defined in the **ExecutionValue** property of the task, returns the number of error messages that have been transferred. By assigning a user-defined variable to the **ExecValueVariable** property of the Transfer Error Message task, information about the error message transfer can be made available to other objects in the package. For more information, see [Integration Services &#40;SSIS&#41; Variables](../../integration-services/integration-services-ssis-variables.md) and [Use Variables in Packages](https://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787).  
   
 ## Log Entries  
  The Transfer Error Messages task includes the following custom log entries:  
@@ -61,11 +60,7 @@ manager: "jhubbard"
 ## Configuration of the Transfer Error Messages Task  
  You can set properties through [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer or programmatically.  
   
- For more information about the properties that you can set in [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer, click one of the following topics:  
-  
--   [Transfer Error Messages Task Editor &#40;General Page&#41;](../../integration-services/control-flow/transfer-error-messages-task-editor-general-page.md)  
-  
--   [Transfer Error Messages Task Editor &#40;Messages Page&#41;](../../integration-services/control-flow/transfer-error-messages-task-editor-messages-page.md)  
+ For more information about the properties that you can set in [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer, click the following topic:  
   
 -   [Expressions Page](../../integration-services/expressions/expressions-page.md)  
   
@@ -76,7 +71,55 @@ manager: "jhubbard"
 ## Related Tasks  
  For more information about how to set these properties in [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer, click the following topic:  
   
--   [Set the Properties of a Task or Container](http://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
+-   [Set the Properties of a Task or Container](https://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
+  
+## Transfer Error Messages Task Editor (General Page)
+  Use the **General** page of the **Transfer Error Messages Task Editor** dialog box to name and describe the Transfer Error Messages task. The Transfer Error Messages task transfers one or more [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] user-defined error messages between instances of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].   
+  
+### Options  
+ **Name**  
+ Type a unique name for the Transfer Error Messages task. This name is used as the label in the task icon.  
+  
+> [!NOTE]  
+>  Task names must be unique within a package.  
+  
+ **Description**  
+ Type a description of the Transfer Error Messages task.  
+  
+## Transfer Error Messages Task Editor (Messages Page)
+  Use the **Messages** page of the **Transfer Error Messages Task Editor** dialog box to specify properties for copying one or more [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] user-defined error messages from one instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to another. 
+  
+### Options  
+ **SourceConnection**  
+ Select a SMO connection manager in the list, or click **\<New connection...>** to create a new connection to the source server.  
+  
+ **DestinationConnection**  
+ Select a SMO connection manager in the list, or click **\<New connection...>** to create a new connection to the destination server.  
+  
+ **IfObjectExists**  
+ Select whether the task should overwrite existing user-defined error messages, skip existing messages, or fail if error messages of the same name already exist on the destination server.  
+  
+ **TransferAllErrorMessages**  
+ Select whether the task should copy all or only the specified user-defined messages from the source server to the destination server.  
+  
+ This property has the options listed in the following table:  
+  
+|Value|Description|  
+|-----------|-----------------|  
+|**True**|Copy all user-defined messages.|  
+|**False**|Copy only the specified user-defined messages.|  
+  
+ **ErrorMessagesList**  
+ Click the browse button **(...)** to select the error messages to copy.  
+  
+> [!NOTE]  
+>  You must specify the **SourceConnection** before you can select error messages to copy.  
+  
+ **ErrorMessageLanguagesList**  
+ Click the browse button **(...)** to select the languages for which to copy user-defined error messages to the destination server. A us_english (code page 1033) version of the message must exist on the destination server before you can transfer other language versions of the message to that server.  
+  
+> [!NOTE]  
+>  You must specify the **SourceConnection** before you can select error messages to copy.  
   
 ## See Also  
  [Integration Services Tasks](../../integration-services/control-flow/integration-services-tasks.md)   

@@ -2,13 +2,11 @@
 title: "Processing Batches of SQL Statements | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
+ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "drivers"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: connectivity
+ms.topic: conceptual
 helpviewer_keywords: 
   - "ODBC cursor library [ODBC], batches"
   - "ODBC cursor library [ODBC], statement processing"
@@ -18,10 +16,9 @@ helpviewer_keywords:
   - "SQL statements [ODBC], batches"
   - "batches [ODBC], processing batches of SQL statements"
 ms.assetid: 04b93ef9-11de-47a3-8bd8-ba963c42f182
-caps.latest.revision: 9
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # Processing Batches of SQL Statements
 > [!IMPORTANT]  

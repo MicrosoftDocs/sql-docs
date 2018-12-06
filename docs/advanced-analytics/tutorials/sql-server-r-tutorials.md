@@ -1,25 +1,16 @@
 ---
-title: "SQL Server R Tutorials | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "07/26/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "r-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to: 
-  - "SQL Server 2016"
-dev_langs: 
-  - "R"
-caps.latest.revision: 1
-author: "jeannt"
-ms.author: "jeannt"
-manager: "jhubbard"
+title: SQL Server R Tutorials | Microsoft Docs
+ms.prod: sql
+ms.technology: machine-learning
+
+ms.date: 04/15/2018  
+ms.topic: tutorial
+author: HeidiSteen
+ms.author: heidist
+manager: cgronlun
 ---
 # SQL Server R tutorials
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 This article provides a list of tutorials and samples that demonstrate the use of R with SQL Server 2016 or SQL Server 2017. Through these samples and demos, you will learn:
 
@@ -33,7 +24,7 @@ For information about requirements and setup, see [Prerequisites](#bkmk_Prerequi
 
 ## <a name="bkmk_sqltutorials"></a>R tutorials
 
-Unless otherwise indicated, tutorials were developed for SQL Server 2016 R Services, and are expected to work without modification in SQL Server 2017 Machine Learning Services. 
+Unless otherwise indicated, tutorials were developed for SQL Server 2016 R Services, and are expected to work in SQL Server 2017 Machine Learning Services without significant changes.
 
 All tutorials make extensive use of features in the RevoScaleR package for SQL Server compute contexts.
 
@@ -105,9 +96,9 @@ To use these tutorials and samples, you must install one of the following server
 
 After running SQL Server setup, don't forget these important steps:
 
-+ Enable the external script execution feature by running `sp_configure 'enable external script', 1`
++ Enable the external script execution feature by running `sp_configure 'external scripts enabled', 1`
 + Restart the server
 + Ensure that the service that calls the external runtime has necessary permissions
 + Ensure that your SQL login or Windows user account has necessary permissions to connect to the server, to read data, and to create any database objects required by the sample
 
-If you run into trouble, see this article for some common issues: [Upgrade and Installation of SQL Server R Services](../../advanced-analytics/r/upgrade-and-installation-faq-sql-server-r-services.md)
+If you run into trouble, see this article for some common issues: [Troubleshooting Machine Learning Services](../machine-learning-troubleshooting-faq.md)

@@ -2,24 +2,22 @@
 title: "Create a Subscription for a Non-SQL Server Subscriber | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/17/2017"
-ms.prod: "sql-server-2016"
+ms.prod: sql
+ms.prod_service: "database-engine"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: replication
+ms.topic: conceptual
 helpviewer_keywords: 
   - "subscriptions [SQL Server replication], non-SQL Server Subscribers"
   - "Subscribers [SQL Server replication], non-SQL Server Subscribers"
   - "non-SQL Server Subscribers, subscriptions"
 ms.assetid: 5020ee68-b988-4d57-8066-67d183e61237
-caps.latest.revision: 28
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "MashaMSFT"
+ms.author: "mathoma"
+manager: craigg
 ---
 # Create a Subscription for a Non-SQL Server Subscriber
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   This topic describes how to create a subscription for a non-SQL Server Subscriber in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)]. Transactional and snapshot replication support publishing data to non-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Subscribers. For information about supported Subscriber platforms, see [Non-SQL Server Subscribers](../../relational-databases/replication/non-sql/non-sql-server-subscribers.md).  
   
  **In This Topic**  
@@ -94,7 +92,7 @@ manager: "jhubbard"
   
     -   For IBM DB2, the database is specified in the **Initial Catalog** property of the DB2 connection string, which can be entered in the **Additional connection options** field described later in this process.  
   
-8.  On the **Distribution Agent Security** page, click the properties button (**…**) next to the Subscriber to access the **Distribution Agent Security** dialog box.  
+8.  On the **Distribution Agent Security** page, click the properties button (**...**) next to the Subscriber to access the **Distribution Agent Security** dialog box.  
   
 9. In the **Distribution Agent Security** dialog box:  
   

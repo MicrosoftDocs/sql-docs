@@ -1,21 +1,18 @@
 ---
-title: "ADO Glossary | Microsoft Docs"
-ms.prod: "sql-non-specified"
-ms.technology:
-  - "drivers"
-ms.custom: "H1Hack27Feb2017"
-ms.date: "01/19/2017"
+title: "ADO Glossary Terms | Microsoft Docs"
+ms.prod: sql
+ms.prod_service: connectivity
+ms.technology: connectivity
+ms.custom: ""
+ms.date: 11/08/2018
 ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords:
   - "ADO, glossary"
 ms.assetid: b0478836-4123-4357-969a-c5784fc28be5
-caps.latest.revision: 15
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # ADO Glossary Terms
 This topic defines terms relevant to ADO.
@@ -93,7 +90,7 @@ This topic defines terms relevant to ADO.
  A binary standard that enables objects to interoperate in a networked environment regardless of the language in which they were developed or on which computers they reside. COM-based technologies include ActiveX Controls, Automation, and object linking and embedding (OLE). COM allows an object to expose its functionality to other components and to host applications. It defines both how the object exposes itself and how this exposure works across processes and across networks. COM also defines the object's life cycle.
 
  COM component
- Binary file — such as .dll, .ocx, and some .exe files — that supports the COM standard for providing objects. Such a file contains code for one or more class factories, COM classes, registry-entry mechanisms, loading code, and so on.
+ Binary file - such as .dll, .ocx, and some .exe files - that supports the COM standard for providing objects. Such a file contains code for one or more class factories, COM classes, registry-entry mechanisms, loading code, and so on.
 
  comparison operator
  An operator that compares two expressions and returns a Boolean value.

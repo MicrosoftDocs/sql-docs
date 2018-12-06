@@ -1,0 +1,70 @@
+- name: Database Engine Extended Stored Procedures - Reference
+  href: database-engine-extended-stored-procedures-reference.md
+- name: Data Types (Extended Stored Procedure API)
+  href: data-types-extended-stored-procedure-api.md
+- name: srv_* Extended Stored Procedures APIs
+  items:
+  - name: srv_alloc (Extended Stored Procedure API)
+    href: srv-alloc-extended-stored-procedure-api.md
+  - name: srv_convert (Extended Stored Procedure API)
+    href: srv-convert-extended-stored-procedure-api.md
+  - name: srv_describe (Extended Stored Procedure API)
+    href: srv-describe-extended-stored-procedure-api.md
+  - name: srv_getbindtoken (Extended Stored Procedure API)
+    href: srv-getbindtoken-extended-stored-procedure-api.md
+  - name: srv_got_attention (Extended Stored Procedure API)
+    href: srv-got-attention-extended-stored-procedure-api.md
+  - name: srv_message_handler (Extended Stored Procedure API)
+    href: srv-message-handler-extended-stored-procedure-api.md
+  - name: srv_paramdata (Extended Stored Procedure API)
+    href: srv-paramdata-extended-stored-procedure-api.md
+  - name: srv_paraminfo (Extended Stored Procedure API)
+    href: srv-paraminfo-extended-stored-procedure-api.md
+  - name: srv_paramlen (Extended Stored Procedure API)
+    href: srv-paramlen-extended-stored-procedure-api.md
+  - name: srv_parammaxlen (Extended Stored Procedure API)
+    href: srv-parammaxlen-extended-stored-procedure-api.md
+  - name: srv_paramname (Extended Stored Procedure API)
+    href: srv-paramname-extended-stored-procedure-api.md
+  - name: srv_paramnumber (Extended Stored Procedure API)
+    href: srv-paramnumber-extended-stored-procedure-api.md
+  - name: srv_paramset (Extended Stored Procedure API)
+    href: srv-paramset-extended-stored-procedure-api.md
+  - name: srv_paramsetoutput (Extended Stored Procedure API)
+    href: srv-paramsetoutput-extended-stored-procedure-api.md
+  - name: srv_paramstatus (Extended Stored Procedure API)
+    href: srv-paramstatus-extended-stored-procedure-api.md
+  - name: srv_paramtype (Extended Stored Procedure API)
+    href: srv-paramtype-extended-stored-procedure-api.md
+  - name: srv_pfield (Extended Stored Procedure API)
+    href: srv-pfield-extended-stored-procedure-api.md
+  - name: srv_pfieldex (Extended Stored Procedure API)
+    href: srv-pfieldex-extended-stored-procedure-api.md
+  - name: srv_rpcdb (Extended Stored Procedure API)
+    href: srv-rpcdb-extended-stored-procedure-api.md
+  - name: srv_rpcname (Extended Stored Procedure API)
+    href: srv-rpcname-extended-stored-procedure-api.md
+  - name: srv_rpcnumber (Extended Stored Procedure API)
+    href: srv-rpcnumber-extended-stored-procedure-api.md
+  - name: srv_rpcoptions (Extended Stored Procedure API)
+    href: srv-rpcoptions-extended-stored-procedure-api.md
+  - name: srv_rpcowner (Extended Stored Procedure API)
+    href: srv-rpcowner-extended-stored-procedure-api.md
+  - name: srv_rpcparams (Extended Stored Procedure API)
+    href: srv-rpcparams-extended-stored-procedure-api.md
+  - name: srv_senddone (Extended Stored Procedure API)
+    href: srv-senddone-extended-stored-procedure-api.md
+  - name: srv_sendmsg (Extended Stored Procedure API)
+    href: srv-sendmsg-extended-stored-procedure-api.md
+  - name: srv_sendrow (Extended Stored Procedure API)
+    href: srv-sendrow-extended-stored-procedure-api.md
+  - name: srv_setcoldata (Extended Stored Procedure API)
+    href: srv-setcoldata-extended-stored-procedure-api.md
+  - name: srv_setcollen (Extended Stored Procedure API)
+    href: srv-setcollen-extended-stored-procedure-api.md
+  - name: srv_setutype (Extended Stored Procedure API)
+    href: srv-setutype-extended-stored-procedure-api.md
+  - name: srv_willconvert (Extended Stored Procedure API)
+    href: srv-willconvert-extended-stored-procedure-api.md
+  - name: srv_wsendmsg (Extended Stored Procedure API)
+    href: srv-wsendmsg-extended-stored-procedure-api.md

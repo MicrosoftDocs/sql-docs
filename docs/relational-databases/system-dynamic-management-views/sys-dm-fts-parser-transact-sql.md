@@ -2,12 +2,9 @@
 title: "sys.dm_fts_parser (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/10/2016"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: system-objects
 ms.topic: "language-reference"
 f1_keywords: 
   - "sys.dm_fts_parser_TSQL"
@@ -20,13 +17,12 @@ helpviewer_keywords:
   - "sys.dm_fts_parser dynamic management function"
   - "troubleshooting [SQL Server], full-text search"
 ms.assetid: 2736d376-fb9d-4b28-93ef-472b7a27623a
-caps.latest.revision: 37
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: craigg
 ---
 # sys.dm_fts_parser (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Returns the final tokenization result after applying a given [word breaker](../../relational-databases/search/configure-and-manage-word-breakers-and-stemmers-for-search.md), [thesaurus](../../relational-databases/search/configure-and-manage-thesaurus-files-for-full-text-search.md), and [stoplist](../../relational-databases/search/configure-and-manage-stopwords-and-stoplists-for-full-text-search.md) combination to a query string input. The tokenization result is equivalent to the output of the Full-Text Engine for the specified query string.  
   
@@ -54,7 +50,7 @@ sys.dm_fts_parser('query_string', lcid, stoplist_id, accent_sensitivity)
  *accent_sensitivity*  
  Boolean value that controls whether full-text search is sensitive or insensitive to diacritics. *accent_sensitivity* is **bit**, with one of the following values:  
   
-|Value|Accent sensitivity is…|  
+|Value|Accent sensitivity is...|  
 |-----------|----------------------------|  
 |0|Insensitive<br /><br /> Words such as "café" and "cafe" are treated identically.|  
 |1|Sensitive<br /><br /> Words such as "café" and "cafe" are treated differently.|  

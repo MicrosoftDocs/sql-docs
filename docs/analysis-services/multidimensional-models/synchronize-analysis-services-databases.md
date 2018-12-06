@@ -1,28 +1,17 @@
 ---
 title: "Synchronize Analysis Services Databases | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/06/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Analysis Services deployments, Synchronize Database Wizard"
-  - "deploying [Analysis Services], Synchronize Database Wizard"
-  - "Synchronize Database Wizard"
-  - "synchronization [Analysis Services]"
-ms.assetid: 6aeff68d-8470-43fb-a3ed-a4b9685332c2
-caps.latest.revision: 40
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: multidimensional-models
+ms.topic: conceptual
+ms.author: owend
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
 ---
 # Synchronize Analysis Services Databases
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] includes a database synchronization feature that makes two [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] databases equivalent by copying the data and metadata a database on a source server to a database on a destination server. Use the Synchronize Database feature to accomplish any of the following tasks:  
   
 -   Deploy a database from a staging server onto a production server.  
@@ -187,7 +176,7 @@ manager: "erikre"
  If you did not synchronize roles or membership, remember to specify user access permissions now on the destination database.  
   
 ## See Also  
- [Synchronize Element &#40;XMLA&#41;](../../analysis-services/xmla/xml-elements-commands/synchronize-element-xmla.md)   
+ [Synchronize Element &#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/synchronize-element-xmla)   
  [Deploy Model Solutions Using XMLA](../../analysis-services/multidimensional-models/deploy-model-solutions-using-xmla.md)   
  [Deploy Model Solutions Using the Deployment Wizard](../../analysis-services/multidimensional-models/deploy-model-solutions-using-the-deployment-wizard.md)  
   

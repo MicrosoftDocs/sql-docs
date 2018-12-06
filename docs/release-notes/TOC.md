@@ -1,7 +1,0 @@
-# [SQL Server Release Notes](sql-server-release-notes.md)
-# [SQL Server 2014 Release Notes](sql-server-2014-release-notes.md)
-# [SQL Server 2012 Release Notes](sql-server-2012-release-notes.md)
-# [SQL Server 2012 SP1 Release Notes](sql-server-2012-sp1-release-notes.md)
-# [SQL Server 2012 SP2 Release Notes](sql-server-2012-sp2-release-notes.md)
-# [SQL Server 2012 SP3 Release Notes](sql-server-2012-sp3-release-notes.md)
-# [SQL Server 2008 R2 SP2 Release Notes](sql-server-2008-r2-sp2-release-notes.md)

@@ -2,22 +2,20 @@
 title: "CursorExecute Event Class | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
+ms.prod: sql
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: supportability
+ms.topic: conceptual
 helpviewer_keywords: 
   - "CursorExecute event class"
 ms.assetid: 83399fd8-cc25-4d3c-8985-7a824ef08e08
-caps.latest.revision: 32
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: craigg
+monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # CursorExecute Event Class
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   The **CursorExecute** event class describes cursor execute events that occur in application programming interface (API) cursors. Cursor execute events occur when [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] creates and populates a cursor from the execution plan created by a cursor prepare event.  
   
  Include the **CursorExecute** event class in traces that are recording the performance of cursors. When the **CursorExecute** event class is included in a trace, the amount of overhead incurred will depend on how frequently cursors are used against the database during the trace. If cursors are used extensively, the trace may significantly impede performance.  

@@ -1,7 +1,0 @@
-# [Creating a Custom Report Item Design-Time Component](creating-a-custom-report-item-design-time-component.md)
-# [Creating a Custom Report Item Run-Time Component](creating-a-custom-report-item-run-time-component.md)
-# [Custom Report Item Architecture](custom-report-item-architecture.md)
-# [Custom Report Item Class Libraries](custom-report-item-class-libraries.md)
-# [Custom Report Item Implementation Requirements](custom-report-item-implementation-requirements.md)
-# [Custom Report Items](custom-report-items.md)
-# [How to: Deploy a Custom Report Item](how-to-deploy-a-custom-report-item.md)

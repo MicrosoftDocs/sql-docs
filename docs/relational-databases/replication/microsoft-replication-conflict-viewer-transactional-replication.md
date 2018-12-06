@@ -2,22 +2,21 @@
 title: "Microsoft Replication Conflict Viewer (Transactional Replication) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
+ms.prod: sql
+ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: replication
+ms.topic: conceptual
 f1_keywords: 
   - "sql13.rep.replconflictviewer.cvqueued.f1"
 ms.assetid: eec59d8e-cadb-4623-a31f-9f42ec09c97f
-caps.latest.revision: 22
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "MashaMSFT"
+ms.author: "mathoma"
+manager: craigg
+monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Microsoft Replication Conflict Viewer (Transactional Replication)
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   The Replication Conflict Viewer enables you to view conflicts that have occurred during synchronization for peer-to-peer transactional replication and transactional replication with queued updating subscriptions. For more information, see [View Data Conflicts for Transactional Publications &#40;SQL Server Management Studio&#41;](../../relational-databases/replication/view-data-conflicts-for-transactional-publications-sql-server-management-studio.md).  
   
 > [!NOTE]  
@@ -58,7 +57,7 @@ manager: "jhubbard"
  **Show first five columns and other columns with conflicting data**  
  Select to display the first five columns and any columns that have conflicts. This is helpful when the table has a large number of columns, but you want to see only the columns most relevant to resolving the conflict. The first five columns are always included in this view, as fields that identify a row, such as the primary key or name fields, are often among the first columns of the table.  
   
- **Display Column Information** (**…**)  
+ **Display Column Information** (**...**)  
  Click to view column information: **Table Name**, **Column Name**, **Data Type**, and **Column Value**.  
   
  **Log the details of the conflict**  

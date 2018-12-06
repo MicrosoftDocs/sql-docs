@@ -1,0 +1,11 @@
+### YamlMime:XRefMap
+sorted: true
+hrefUpdated: true
+references:
+- uid: Microsoft.AnalysisServices.Server.Attach*
+  commentId: M:Microsoft.AnalysisServices.Server.Attach*
+  href: https://msdn.microsoft.com/library/cc281062(v=sql.120).aspx
+  name: Attach*
+  name.vb: Attach*
+  fullName: Server.Attach*
+  fullName.vb: Server.Attach*

@@ -1,13 +1,11 @@
 ---
 title: "EXECUTE AS (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "06/12/2017"
-ms.prod: "sql-non-specified"
+ms.date: "08/10/2017"
+ms.prod: sql
+ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: t-sql
 ms.topic: "language-reference"
 f1_keywords: 
   - "EXECUTE AS"
@@ -22,13 +20,12 @@ helpviewer_keywords:
   - "execution context [SQL Server]"
   - "switching execution context"
 ms.assetid: 613b8271-7f7d-4378-b7a2-5a7698551dbd
-caps.latest.revision: 39
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
 ---
 # EXECUTE AS (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Sets the execution context of a session.  
   
@@ -79,8 +76,8 @@ manager: "jhubbard"
   
  For more information about reverting to the previous context, see [REVERT &#40;Transact-SQL&#41;](../../t-sql/statements/revert-transact-sql.md).  
   
- COOKIE INTO **@***varbinary_variable*  
- Specifies the execution context can only be reverted back to the previous context if the calling REVERT WITH COOKIE statement contains the correct **@***varbinary_variable* value. The [!INCLUDE[ssDE](../../includes/ssde-md.md)] passes the cookie to **@***varbinary_variable*. The **COOKIE INTO** option can only be used at the adhoc level.  
+ COOKIE INTO **@**_varbinary_variable_  
+ Specifies the execution context can only be reverted back to the previous context if the calling REVERT WITH COOKIE statement contains the correct **@**_varbinary_variable_ value. The [!INCLUDE[ssDE](../../includes/ssde-md.md)] passes the cookie to **@**_varbinary_variable_. The **COOKIE INTO** option can only be used at the adhoc level.  
   
  **@** *varbinary_variable* is **varbinary(8000)**.  
   
@@ -106,7 +103,7 @@ manager: "jhubbard"
 You can create an execution context stack by calling the EXECUTE AS statement multiple times across multiple principals. When called, the REVERT statement switches the context to the login or user in the next level up in the context stack. For a demonstration of this behavior, see [Example A](#_exampleA).  
   
 ##  <a name="_user"></a> Specifying a User or Login Name  
- The user or login name specified in EXECUTE AS <context_specification> must exist as a principal in **sys.database_principals** or **sys.server_principals**, respectively, or the EXECUTE AS statement fails. Additionally, IMPERSONATE permissions must be granted on the principal. Unless the caller is the database owner, or is a member of the **sysadmin** fixed server role, the principal must exist even when the user is accessing the database or instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] through a Windows group membership. For example, assume the following conditions:  
+ The user or login name specified in EXECUTE AS \<context_specification> must exist as a principal in **sys.database_principals** or **sys.server_principals**, respectively, or the EXECUTE AS statement fails. Additionally, IMPERSONATE permissions must be granted on the principal. Unless the caller is the database owner, or is a member of the **sysadmin** fixed server role, the principal must exist even when the user is accessing the database or instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] through a Windows group membership. For example, assume the following conditions: 
   
 -   **CompanyDomain\SQLUsers** group has access to the **Sales** database.  
   
@@ -208,3 +205,4 @@ GO
  [EXECUTE AS Clause &#40;Transact-SQL&#41;](../../t-sql/statements/execute-as-clause-transact-sql.md)  
   
   
+

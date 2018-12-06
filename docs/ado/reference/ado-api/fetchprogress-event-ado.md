@@ -1,14 +1,12 @@
 ---
 title: "FetchProgress Event (ADO) | Microsoft Docs"
-ms.prod: "sql-non-specified"
-ms.technology:
-  - "drivers"
+ms.prod: sql
+ms.prod_service: connectivity
+ms.technology: connectivity
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 apitype: "COM"
 f1_keywords: 
   - "FetchProgress"
@@ -16,10 +14,9 @@ f1_keywords:
 helpviewer_keywords: 
   - "FetchProgress event [ADO]"
 ms.assetid: 301716fd-81fc-40eb-8a04-221ef7ab410e
-caps.latest.revision: 11
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # FetchProgress Event (ADO)
 The **FetchProgress**event is called periodically during a lengthy asynchronous operation to report how many more rows have currently been retrieved into the [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md).  

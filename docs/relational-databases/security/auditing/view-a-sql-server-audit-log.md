@@ -2,24 +2,22 @@
 title: "View a SQL Server Audit Log | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
+ms.prod: sql
+ms.prod_service: security
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: security
+ms.topic: conceptual
 helpviewer_keywords: 
   - "audits [SQL Server], viewing logs"
   - "viewing audit logs"
   - "logs [SQL Server], audit"
 ms.assetid: e8feaca0-7852-422b-895a-319b965d8d9b
-caps.latest.revision: 12
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: VanMSFT
+ms.author: vanto
+manager: craigg
 ---
 # View a SQL Server Audit Log
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   This topic describes how to view a SQL Server audit log in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)].  
   
  **In This Topic**  
@@ -47,7 +45,7 @@ manager: "jhubbard"
   
 2.  Expand the **Audits** folder.  
   
-3.  Right-click the audit log that you want to view and select **View Audit Logs**. This opens the **Log File Viewer –***server_name* dialog box. For more information, see [Log File Viewer F1 Help](../../../relational-databases/logs/log-file-viewer-f1-help.md).  
+3.  Right-click the audit log that you want to view and select **View Audit Logs**. This opens the **Log File Viewer -**_server\_name_ dialog box. For more information, see [Log File Viewer F1 Help](../../../relational-databases/logs/log-file-viewer-f1-help.md).  
   
 4.  When finished, click **Close**.  
   

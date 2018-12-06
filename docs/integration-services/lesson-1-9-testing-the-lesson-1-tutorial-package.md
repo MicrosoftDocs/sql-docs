@@ -2,20 +2,15 @@
 title: "Step 9: Testing the Lesson 1 Tutorial Package | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/03/2017"
-ms.prod: "sql-server-2016"
+ms.prod: sql
+ms.prod_service: "integration-services"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
-applies_to: 
-  - "SQL Server 2016"
+ms.technology: integration-services
+ms.topic: tutorial
 ms.assetid: 9aee7acf-797b-46f2-830d-80ab64a9f0b6
-caps.latest.revision: 28
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: craigg
 ---
 # Lesson 1-9 - Testing the Lesson 1 Tutorial Package
 In this lesson, you have done the following tasks:  
@@ -43,7 +38,7 @@ Before you test the package you should verify that the control and data flows in
   
 1.  On the **Debug** menu, click **Start Debugging**.  
   
-    The package will run, resulting in 1097 rows successfully added into the **FactCurrency** fact table in **AdventureWorksDW2012**.  
+    The package will run, resulting in 1097 rows successfully added into the **NewFactCurrencyRate** fact table in **AdventureWorksDW2012**.  
   
 2.  After the package has completed running, on the **Debug** menu, click **Stop Debugging**.  
   
@@ -51,7 +46,7 @@ Before you test the package you should verify that the control and data flows in
 [Lesson 2: Adding Looping with SSIS](../integration-services/lesson-2-adding-looping-with-ssis.md)  
   
 ## See Also  
-[Execution of Projects and Packages](https://msdn.microsoft.com/library/ms141708(v=sql.110).aspx) 
+[Execution of Projects and Packages](packages/run-integration-services-ssis-packages.md) 
   
   
   

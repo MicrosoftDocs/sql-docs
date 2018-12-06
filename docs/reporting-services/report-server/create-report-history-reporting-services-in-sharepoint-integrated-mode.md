@@ -1,22 +1,17 @@
 ---
 title: "Create Report History (Reporting Services in SharePoint Integrated Mode) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.date: 03/01/2017
+ms.prod: reporting-services
+ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
+ms.technology: report-server
+
+
+ms.topic: conceptual
 helpviewer_keywords: 
   - "report history [Reporting Services], SharePoint"
 ms.assetid: e57ec746-05ae-4ff6-8e39-6cde87310daa
-caps.latest.revision: 12
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
+author: markingmyname
+ms.author: maghan
 ---
 # Create Report History (Reporting Services in SharePoint Integrated Mode)
   Report history is a collection of report snapshots that you create over time. Each snapshot is a copy of the report as it existed when it was created. It includes the layout and data that was current for the report when the snapshot was created. Rendering information is not stored with the snapshot. When you open a snapshot in report history, it opens in HTML in the Report Viewer Web Part. After it is rendered, you can export it to other application formats.  

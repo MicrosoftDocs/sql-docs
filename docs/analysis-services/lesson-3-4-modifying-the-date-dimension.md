@@ -1,23 +1,18 @@
 ---
 title: "Modifying the Date Dimension | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
-applies_to: 
-  - "SQL Server 2016"
-ms.assetid: 4689d780-4bf6-4cf8-8fde-eb3f15dd668a
-caps.latest.revision: 19
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
+ms.date: 05/08/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: multidimensional-models
+ms.topic: tutorial
+ms.author: owend
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
 ---
 # Lesson 3-4 - Modifying the Date Dimension
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
 In the tasks in this topic, you create a user-defined hierarchy and change the member names that are displayed for the Date, Month, Calendar Quarter, and Calendar Semester attributes. You also define composite keys for attributes, control the sort order of dimension members, and define attribute relationships.  
   
 ## Adding a Named Calculation  
@@ -64,7 +59,7 @@ After you create a named calculation in the data source view, you can use the na
   
 3.  If the Properties window is not open, open the Properties window, and then click the **Auto Hide** button on the title bar so that it stays open.  
   
-4.  Click the **NameColumn** property field near the bottom of the window, and then click the ellipsis browse (**…**) button to open the **Name Column** dialog box.  
+4.  Click the **NameColumn** property field near the bottom of the window, and then click the ellipsis browse (**...**) button to open the **Name Column** dialog box.  
   
 5.  Select **SimpleDate** at the bottom of the **Source column** list, and then click **OK**.  
   
@@ -85,7 +80,7 @@ You can create a new hierarchy by dragging an attribute from the **Attributes** 
   
 5.  Drag the **Date Key** attribute from the **Attributes** pane into the **<new level>** cell in the **Hierarchies** pane, underneath the **English Month Name** level.  
   
-6.  In the **Hierarchies** pane, right-click the title bar of the **Hierarchy** hierarchy, cick **Rename**, and then type **Calendar Date**.  
+6.  In the **Hierarchies** pane, right-click the title bar of the **Hierarchy** hierarchy, click **Rename**, and then type **Calendar Date**.  
   
 7.  By using the right-click context menu, in the **Calendar Date** hierarchy, rename the **English Month Name** level to **Calendar Month**, and then rename the **Date Key** level to **Date**.  
   

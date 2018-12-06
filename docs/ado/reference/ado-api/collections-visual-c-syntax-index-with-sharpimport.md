@@ -1,14 +1,12 @@
 ---
 title: "Collections (Visual C++ Syntax Index with #import) | Microsoft Docs"
-ms.prod: "sql-non-specified"
-ms.technology:
-  - "drivers"
+ms.prod: sql
+ms.prod_service: connectivity
+ms.technology: connectivity
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 apitype: "COM"
 dev_langs: 
   - "C++"
@@ -18,10 +16,9 @@ helpviewer_keywords:
   - "ADO for Visual C++ syntax with #import [ADO]"
   - "#import [ADO]"
 ms.assetid: 36fbca8e-1884-44b5-806b-d15e30f42fe6
-caps.latest.revision: 10
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # Collections (Visual C++ Syntax Index with #import)
 It is useful to know that collections inherit certain common methods and properties.  

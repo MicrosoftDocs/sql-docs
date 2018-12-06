@@ -1,30 +1,21 @@
 ---
 title: "Mining Model Content for Linear Regression Models | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "linear regression algorithms [Analysis Services]"
-  - "mining model content, linear regression models"
-  - "regression algorithms [Analysis Services]"
-ms.assetid: a6abcb75-524e-4e0a-a375-c10475ac0a9d
-caps.latest.revision: 18
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
+ms.date: 05/08/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: data-mining
+ms.topic: conceptual
+ms.author: owend
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
 ---
 # Mining Model Content for Linear Regression Models (Analysis Services - Data Mining)
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   This topic describes mining model content that is specific to models that use the [!INCLUDE[msCoName](../../includes/msconame-md.md)] Linear Regression algorithm. For a general explanation of mining model content for all model types, see [Mining Model Content &#40;Analysis Services - Data Mining&#41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md).  
   
 ## Understanding the Structure of a Linear Regression Model  
- A linear regression model has an extremely simple structure. Each model has a single parent node that represents the model and its metadata, and a regression tree node (NODE_TYPE = 25) that that contains the regression formula for each predictable attribute.  
+ A linear regression model has an extremely simple structure. Each model has a single parent node that represents the model and its metadata, and a regression tree node (NODE_TYPE = 25) that contains the regression formula for each predictable attribute.  
   
  ![Structure of model for linear regression](../../analysis-services/data-mining/media/modelcontentstructure-linreg.gif "Structure of model for linear regression")  
   

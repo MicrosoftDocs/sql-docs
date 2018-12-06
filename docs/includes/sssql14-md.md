@@ -1,1 +1,1 @@
- SQL Server 2014 
+ SQL Server 2014 (12.x)

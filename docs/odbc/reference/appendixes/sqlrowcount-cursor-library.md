@@ -2,20 +2,17 @@
 title: "SQLRowCount (Cursor Library) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
+ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "drivers"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: connectivity
+ms.topic: conceptual
 helpviewer_keywords: 
   - "SQLRowCount function [ODBC], Cursor Library"
 ms.assetid: 781cf5a5-325e-4523-8633-d96d9e98277c
-caps.latest.revision: 8
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # SQLRowCount (Cursor Library)
 > [!IMPORTANT]  
@@ -27,4 +24,4 @@ manager: "jhubbard"
   
  When an application calls **SQLRowCount** with the statement associated with a positioned update or delete statement, the cursor library returns the number of rows affected by the statement.  
   
- When an application calls **SQLRowCount** after a **SELECT** statement, the cursor library returns –1.
+ When an application calls **SQLRowCount** after a **SELECT** statement, the cursor library returns -1.

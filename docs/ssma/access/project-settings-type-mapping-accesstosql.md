@@ -1,17 +1,11 @@
 ---
 title: "Project Settings (Type Mapping) (AccessToSQL) | Microsoft Docs"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "sql-ssma"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to: 
-  - "Azure SQL Database"
-  - "SQL Server"
+ms.technology: ssma
+ms.topic: conceptual
 helpviewer_keywords: 
   - "Access data types"
   - "data types, default mappings"
@@ -20,13 +14,12 @@ helpviewer_keywords:
   - "SQL Server data types"
   - "Type Mapping settings"
 ms.assetid: b87b9683-abed-4677-8c50-18bdba704655
-caps.latest.revision: 16
-author: "sabotta"
-ms.author: "carlasab"
-manager: "lonnyb"
+author: "Shamikg"
+ms.author: "Shamikg"
+manager: craigg
 ---
 # Project Settings (Type Mapping) (AccessToSQL)
-The Type Mapping project settings let you set default type mappings for the SSMA project. You can also specify type mappings for individual database objects. For more information, see [Mapping Source and Target Data Types](http://msdn.microsoft.com/en-us/b362a075-16e7-423f-b63f-e1e9f02844a9).  
+The Type Mapping project settings let you set default type mappings for the SSMA project. You can also specify type mappings for individual database objects. For more information, see [Mapping Source and Target Data Types](mapping-source-and-target-data-types-accesstosql.md).  
   
 Type mapping is available in the **Project Settings** and **Default Project Settings** dialog boxes:  
   
@@ -39,7 +32,7 @@ Type mapping is available in the **Project Settings** and **Default Project Sett
 The Access data type to map.  
   
 **Target Type**  
-The target [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] or SQL Azure data type for the specified Access data type.  
+The target [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] or SQL Azure data type for the specified Access data type.  
   
 The following table shows the default mapping between source and target data types.  
   
@@ -75,6 +68,6 @@ Click to remove the selected data type mapping from the mapping list.
 Click to reset all data type mappings to the SSMA defaults.  
   
 ## See Also  
-[Mapping Source and Target Data Types](http://msdn.microsoft.com/en-us/b362a075-16e7-423f-b63f-e1e9f02844a9)  
-[User Interface Reference(Access)](http://msdn.microsoft.com/en-us/af24c303-4a41-449b-9c86-d6558a97e839)  
+[Mapping Source and Target Data Types](mapping-source-and-target-data-types-accesstosql.md)  
+[User Interface Reference(Access)](https://msdn.microsoft.com/af24c303-4a41-449b-9c86-d6558a97e839)  
   

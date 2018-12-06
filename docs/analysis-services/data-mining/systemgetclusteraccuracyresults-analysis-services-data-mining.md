@@ -1,25 +1,17 @@
 ---
 title: "SystemGetClusterAccuracyResults (Analysis Services - Data Mining) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-helpviewer_keywords: 
-  - "stored procedures [Analysis Services], data mining"
-  - "SystemGetClusterAccuracyResults"
-  - "cross-validation [data mining]"
-ms.assetid: e1701738-50d5-46b4-b406-f1e800545abb
-caps.latest.revision: 18
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
+ms.date: 05/08/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: data-mining
+ms.topic: conceptual
+ms.author: owend
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
 ---
 # SystemGetClusterAccuracyResults (Analysis Services - Data Mining)
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   Returns cross-validation accuracy metrics for a mining structure and related clustering models.  
   
  This stored procedure returns metrics for the entire data set as a single partition. To partition the dataset into cross-sections and return metrics for each partition, use [SystemGetClusterCrossValidationResults &#40;Analysis Services - Data Mining&#41;](../../analysis-services/data-mining/systemgetclustercrossvalidationresults-analysis-services-data-mining.md).  

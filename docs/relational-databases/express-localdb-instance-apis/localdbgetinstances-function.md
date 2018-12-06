@@ -2,12 +2,10 @@
 title: "LocalDBGetInstances Function | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"
-ms.prod: "sql-server-2016"
+ms.prod: sql
+ms.prod_service: "database-engine"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 apiname: 
   - "LocalDBGetInstances"
@@ -15,12 +13,12 @@ apilocation:
   - "sqluserinstance.dll"
 apitype: "DLLExport"
 ms.assetid: f95a9980-8bc0-426c-8aa1-e2660b6784cf
-caps.latest.revision: 13
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "CarlRabeler"
+ms.author: "carlrab"
+manager: craigg
 ---
 # LocalDBGetInstances Function
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Returns all SQL Server Express LocalDB instances with the given version.  
   
  **Header file:** sqlncli.h  
@@ -37,10 +35,10 @@ HRESULT LocalDBGetInstances(
   
 ## Parameters  
  *pInstanceNames*  
- [Output] When this function returns, contains the names of both named and default LocalDB instances on the user’s workstation.  
+ [Output] When this function returns, contains the names of both named and default LocalDB instances on the user's workstation.  
   
  *lpdwNumberOfInstances*  
- [Input/Output] On input, contains the number of slots for instance names in the *pInstanceNames* buffer. On output, contains the number of LocalDB instances found on the user’s workstation.  
+ [Input/Output] On input, contains the number of slots for instance names in the *pInstanceNames* buffer. On output, contains the number of LocalDB instances found on the user's workstation.  
   
 ## Returns  
  S_OK  

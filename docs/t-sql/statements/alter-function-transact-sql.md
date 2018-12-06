@@ -1,13 +1,11 @@
 ---
 title: "ALTER FUNCTION (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "04/27/2017"
-ms.prod: "sql-non-specified"
+ms.date: "08/07/2017"
+ms.prod: sql
+ms.prod_service: "database-engine, pdw, sql-database"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: t-sql
 ms.topic: "language-reference"
 f1_keywords: 
   - "ALTER_FUNCTION_TSQL"
@@ -19,13 +17,13 @@ helpviewer_keywords:
   - "modifying functions"
   - "functions [SQL Server], modifying"
 ms.assetid: 89f066ee-05ac-4439-ab04-d8c3d5911179
-caps.latest.revision: 62
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # ALTER FUNCTION (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-pdw_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-pdw-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-pdw-md.md)]
 
   Alters an existing [!INCLUDE[tsql](../../includes/tsql-md.md)] or CLR function that was previously created by executing the CREATE FUNCTION statement, without changing permissions and without affecting any dependent functions, stored procedures, or triggers.  
   
@@ -229,7 +227,7 @@ RETURNS return_data_type
   
 -   The **dbo** schema in the current database.  
   
- [ **=***default* ]  
+ [ **=**_default_ ]  
  Is a default value for the parameter. If a *default* value is defined, the function can be executed without specifying a value for that parameter.  
   
 > [!NOTE]  
@@ -251,11 +249,11 @@ RETURNS return_data_type
  Specifies that the scalar function returns a scalar value.  
   
  TABLE  
- Specifies that the return value of the table-valued function is a table. Only constants and **@***local_variables* can be passed to table-valued functions.  
+ Specifies that the return value of the table-valued function is a table. Only constants and **@**_local\_variables_ can be passed to table-valued functions.  
   
  In inline table-valued functions, the TABLE return value is defined through a single SELECT statement. Inline functions do not have associated return variables.  
   
- In multistatement table-valued functions, **@***return_variable* is a TABLE variable used to store and accumulate the rows that should be returned as the value of the function. **@***return_variable* can be specified only for [!INCLUDE[tsql](../../includes/tsql-md.md)] functions and not for CLR functions.  
+ In multistatement table-valued functions, **@**_return\_variable_ is a TABLE variable used to store and accumulate the rows that should be returned as the value of the function. **@**_return\_variable_ can be specified only for [!INCLUDE[tsql](../../includes/tsql-md.md)] functions and not for CLR functions.  
   
  *select-stmt*  
  Is the single SELECT statement that defines the return value of an inline table-valued function.  
@@ -271,11 +269,11 @@ RETURNS return_data_type
 > [!NOTE]  
 >  This option is not available in a contained database.  
   
- *\<*table_type_definition*>***(** { \<column_definition> \<column_constraint> | \<computed_column_definition> } [ \<table_constraint> ] [ **,**...*n* ]**)**  
+ _\<_table\_type\_definition_\>_**(** { \<column_definition\> \<column\_constraint\> | \<computed\_column\_definition\> } [ \<table\_constraint\> ] [ **,**...*n* ]**)**  
  Defines the table data type for a [!INCLUDE[tsql](../../includes/tsql-md.md)] function. The table declaration includes column definitions and column or table constraints.  
   
- < clr_table_type_definition > **(** { *column_name**data_type* } [ **,**...*n* ] **)**  
- **Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] ([Preview in some regions](http://azure.microsoft.com/documentation/articles/sql-database-preview-whats-new/?WT.mc_id=TSQL_GetItTag)).  
+\< clr_table_type_definition \> **(** { *column_name**data_type* } [ **,**...*n* ] **)**
+ **Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] ([Preview in some regions](https://azure.microsoft.com/documentation/articles/sql-database-preview-whats-new/?WT.mc_id=TSQL_GetItTag)).  
   
  Defines the table data types for a CLR function. The table declaration includes only column names and data types.  
   
@@ -326,7 +324,7 @@ For a list of conditions that must be met before a function can be schema bound,
   
  For more information, see [EXECUTE AS Clause &#40;Transact-SQL&#41;](../../t-sql/statements/execute-as-clause-transact-sql.md).  
   
- **< column_definition >::=**  
+**\< column_definition >::=**
   
  Defines the table data type. The table declaration includes column definitions and constraints. For CLR functions, only *column_name* and *data_type* can be specified.  
   
@@ -362,7 +360,7 @@ For a list of conditions that must be met before a function can be schema bound,
  *increment*  
  Is the integer value to add to the *seed* value for successive rows in the table.  
   
- **< column_constraint >::= and < table_constraint>::=**  
+**\< column_constraint >::= and \< table_constraint>::=**
   
  Defines the constraint for a specified column or table. For CLR functions, the only constraint type allowed is NULL. Named constraints are not allowed.  
   

@@ -2,12 +2,10 @@
 title: "NOT (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/15/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
+ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: t-sql
 ms.topic: "language-reference"
 f1_keywords: 
   - "NOT_TSQL"
@@ -20,13 +18,13 @@ helpviewer_keywords:
   - "expressions [SQL Server], negating"
   - "reversing Boolean expression values"
 ms.assetid: dc07cc35-20f1-46e6-9995-2938390dc19a
-caps.latest.revision: 39
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "douglaslMS"
+ms.author: "douglasl"
+manager: craigg
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # NOT (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Negates a Boolean input.  
   
@@ -35,8 +33,6 @@ manager: "jhubbard"
 ## Syntax  
   
 ```  
--- Syntax for SQL Server, Azure SQL Database, Azure SQL Data Warehouse, Parallel Data Warehouse  
-  
 [ NOT ] boolean_expression  
 ```  
   
@@ -75,21 +71,16 @@ GO
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- `ProductID   Name                     Color         StandardCost`  
-  
- `---------   -------------------      ------      ------------`  
-  
- `984         Mountain-500 Silver, 40  Silver        308.2179`  
-  
- `985         Mountain-500 Silver, 42  Silver        308.2179`  
-  
- `986         Mountain-500 Silver, 44  Silver        308.2179`  
-  
- `987         Mountain-500 Silver, 48  Silver        308.2179`  
-  
- `988         Mountain-500 Silver, 52  Silver        308.2179`  
-  
- `(6 row(s) affected)`  
+ ```
+ ProductID   Name                     Color         StandardCost
+ ---------   -------------------      ------      ------------
+ 984         Mountain-500 Silver, 40  Silver        308.2179
+ 985         Mountain-500 Silver, 42  Silver        308.2179
+ 986         Mountain-500 Silver, 44  Silver        308.2179
+ 987         Mountain-500 Silver, 48  Silver        308.2179
+ 988         Mountain-500 Silver, 52  Silver        308.2179
+ (6 row(s) affected)
+ ```  
   
 ## Examples: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
  The following example restricts results to `SalesOrderNumber` to values starting with `SO6` and `ProductKeys` greater than or equal to 400.  

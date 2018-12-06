@@ -1,24 +1,21 @@
 ---
 title: "CREATE XML INDEX (Selective XML Indexes) | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/04/2017"
-ms.prod: "sql-non-specified"
+ms.date: "08/10/2017"
+ms.prod: sql
+ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: t-sql
 ms.topic: "language-reference"
 dev_langs: 
   - "TSQL"
 ms.assetid: 1f510151-41d5-45c2-9cd0-b1ca0246fffe
-caps.latest.revision: 14
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: craigg
 ---
 # CREATE XML INDEX (Selective XML Indexes)
-[!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
   Creates a new secondary selective XML index on a single path that is already indexed by an existing selective XML index. You can also create primary selective XML indexes. For information, see [Create, Alter, and Drop Selective XML Indexes](../../relational-databases/xml/create-alter-and-drop-selective-xml-indexes.md).  
   
@@ -67,7 +64,7 @@ xmlnamespace_uri AS xmlnamespace_prefix
  *index_name*  
  Is the name of the new index to create. Index names must be unique within a table, but do not have to be unique within a database. Index names must follow the rules of [identifiers](../../relational-databases/databases/database-identifiers.md).  
   
- ON *<table_object>*  
+ ON *\<table_object>* 
  Is the table that contains the XML column to index. You can use the following formats:  
   
 -   `database_name.schema_name.table_name`  
@@ -82,10 +79,10 @@ xmlnamespace_uri AS xmlnamespace_prefix
  USING XML INDEX *sxi_index_name*  
  Is the name of the existing selective XML index.  
   
- FOR **(** <xquery_or_sql_values_path> **)**  
+ FOR **(** \<xquery_or_sql_values_path> **)** 
  Is the name of the indexed path on which to create the secondary selective XML index. The path to index is the assigned name from the CREATE SELECTIVE XML INDEX statement. For more information, see [CREATE SELECTIVE XML INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-selective-xml-index-transact-sql.md).  
   
- WITH <index_options>  
+ WITH \<index_options> 
  For information about the index options, see [CREATE XML INDEX](../../t-sql/statements/create-xml-index-selective-xml-indexes.md).  
   
 ## Remarks  
@@ -114,3 +111,4 @@ FOR ( pathabc );
  [Create, Alter, and Drop Secondary Selective XML Indexes](../../relational-databases/xml/create-alter-and-drop-secondary-selective-xml-indexes.md)  
   
   
+

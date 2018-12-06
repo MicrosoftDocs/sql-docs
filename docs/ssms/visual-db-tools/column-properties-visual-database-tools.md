@@ -2,13 +2,11 @@
 title: "Column Properties (Visual Database Tools) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
+ms.prod_service: "sql-tools"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "tools-ssms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: ssms
+ms.topic: conceptual
 f1_keywords: 
   - "vdt.designers.properties.Column.ColumnIdentitySpec"
   - "vdt.designers.properties.Column"
@@ -16,13 +14,14 @@ f1_keywords:
   - "vdt.designers.properties.Column.ColumnComputedColumnSpec"
   - "vdt.designers.properties.Column.ColumnFulltextSpec"
 ms.assetid: e549a2a8-4154-4ec8-b146-614564169b39
-caps.latest.revision: 5
 author: "stevestein"
 ms.author: "sstein"
-manager: "jhubbard"
+manager: craigg
+
 ---
 # Column Properties (Visual Database Tools)
-There are two sets of properties for columns: a full set that you can see in the **Column Properties** tab within Table Designer (available only for [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] databases) and a subset you can see in the Properties window using Server Explorer.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+There are two sets of properties for columns: a full set that you can see in the **Column Properties** tab within Table Designer (available only for [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] databases) and a subset you can see in the Properties window using Server Explorer.  
   
 > [!NOTE]  
 > The properties in this topic are ordered by category rather than alphabet.  
@@ -34,7 +33,7 @@ There are two sets of properties for columns: a full set that you can see in the
 These properties appear in the Properties window when you select a column in Server Explorer.  
   
 > [!NOTE]  
-> These properties, accessed using Server Explorer, are read-only. To edit column properties for [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] databases, select the column in Table Designer. Those properties are described later in this topic.  
+> These properties, accessed using Server Explorer, are read-only. To edit column properties for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] databases, select the column in Table Designer. Those properties are described later in this topic.  
   
 **Identity Category**  
 Expands to show the **Name** and **Database** properties.  
@@ -49,16 +48,16 @@ Shows the name of the data source for the selected column. (Applies only to OLE 
 Expands to show the remaining properties.  
   
 **Data Type**  
-Shows the data type of the selected column. For more information, see [Data Types (Transact-SQL)](http://msdn.microsoft.com/en-us/a54f7373-b247-4d61-8fb8-7f2ec7a8d0a4).  
+Shows the data type of the selected column. For more information, see [Data Types (Transact-SQL)](https://msdn.microsoft.com/a54f7373-b247-4d61-8fb8-7f2ec7a8d0a4).  
   
 **Identity Increment**  
-Shows the increment that will be added to the **Identity Seed** for each subsequent row of the identity column. (Applies only to [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)].)  
+Shows the increment that will be added to the **Identity Seed** for each subsequent row of the identity column. (Applies only to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].)  
   
 **Identity Seed**  
-Shows the seed value assigned to the first row in the table for the identity column. (Applies only to [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)].)  
+Shows the seed value assigned to the first row in the table for the identity column. (Applies only to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].)  
   
 **Is Identity**  
-Shows whether the selected column is the identity column for the table. (Applies only to [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)].)  
+Shows whether the selected column is the identity column for the table. (Applies only to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].)  
   
 **Length**  
 Shows the number of characters allowed for character-based data types.  
@@ -76,7 +75,7 @@ Shows the maximum number of digits that can appear to the right of the decimal p
 To access these properties, in Server Explorer right-click the table to which the column belongs, choose **Open Table Definition**, and select the row in the table grid in Table Designer.  
   
 > [!NOTE]  
-> These properties apply only to [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)].  
+> These properties apply only to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 **General Category**  
 Expands to show **Name**, **Allow Nulls**, **Data Type**, **Default Value or Binding**, **Length**, **Precision**, and **Scale**.  
@@ -91,7 +90,7 @@ Displays the name of the column. To edit the name, type in the text box.
 Shows whether or not the column's data type allows null values.  
   
 **Data Type**  
-Shows the data type for the selected column. To edit this property, click its value, expand the drop-down list, and choose another value. For more information, see [Data Types (Transact-SQL)](http://msdn.microsoft.com/en-us/a54f7373-b247-4d61-8fb8-7f2ec7a8d0a4).  
+Shows the data type for the selected column. To edit this property, click its value, expand the drop-down list, and choose another value. For more information, see [Data Types (Transact-SQL)](https://msdn.microsoft.com/a54f7373-b247-4d61-8fb8-7f2ec7a8d0a4).  
   
 **Default Value or Binding**  
 Shows the default for this column when no value is specified for this column. The drop-down list contains all global defaults defined in the data source. To bind the column to a global default, select from the drop-down list. Alternatively, to create a default constraint for the column, type the default value directly as text.  
@@ -109,7 +108,7 @@ Shows the maximum number of digits that can appear to the right of the decimal p
 Expands to show the remaining properties.  
   
 **Collation**  
-Shows the collation setting for the selected column. To change this setting, click **Collation** and then click the ellipses **(…)** to the right of the value.  
+Shows the collation setting for the selected column. To change this setting, click **Collation** and then click the ellipses **(...)** to the right of the value.  
   
 **Computed Column Specification Category**  
 Expands to show properties for **Formula** and **Is Persisted**. If the column is computed, the formula will also be displayed. To edit the formula, expand this category and edit it in the **Formula** property.  
@@ -124,7 +123,7 @@ Allows you to save the computed column with the data source. A persisted compute
 Displays information about the field's data type, in the same format as the SQL CREATE TABLE statement. For example, a field containing a variable-length string with a maximum length of 20 characters would be represented as "varchar(20)." To change this property, type the value directly.  
   
 **Description**  
-Shows the description of the column. To see the full description or to edit it, click Description, and then click the ellipses **(…)** to the right of the property.  
+Shows the description of the column. To see the full description or to edit it, click Description, and then click the ellipses **(...)** to the right of the property.  
   
 **Full-text Specification Category**  
 Expands to show properties specific to full-text columns.  
@@ -139,7 +138,7 @@ Shows which column is used to define the document type of a column of type image
 Indicates the language used to index the column.  
   
 **Statistical Semantics**  
-Select whether to enable statistical semantic indexing for the selected column. For more information, see [Semantic Search placeholder](http://msdn.microsoft.com/en-us/cd8faa9d-07db-420d-93f4-a2ea7c974b97).  
+Select whether to enable statistical semantic indexing for the selected column. For more information, see [Semantic Search placeholder](https://msdn.microsoft.com/cd8faa9d-07db-420d-93f4-a2ea7c974b97).  
   
 If you select a **Language** prior to selecting **Statistical Semantics**, and the selected language does not have an associated Semantic Language Model, then the **Statistical Semantics** option is set to **No** and cannot be modified. If you select **Yes** for the **Statistical Semantics** option prior to selecting a **Language**, then the languages available in the **Language** column will be restricted to those for which there is Semantic Language Model support.  
   
@@ -177,11 +176,11 @@ Indicates whether original identity values are preserved during replication. To 
 Shows whether this column is replicated in another location.  
   
 **Is RowGuid**  
-Indicates whether [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] uses the column as a ROWGUID. You can set this value to **Yes** only for a column with the data type of **uniqueidentifier**. To edit this property, click its value, expand the drop-down list, and choose another value.  
+Indicates whether [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] uses the column as a ROWGUID. You can set this value to **Yes** only for a column with the data type of **uniqueidentifier**. To edit this property, click its value, expand the drop-down list, and choose another value.  
   
 **Size**  
 Shows the size in bytes allowed by column's data type. For example, a **nchar** data type may have a length of 10 (the number of characters) but it would have a size of 20 to account for Unicode character sets.  
   
 > [!NOTE]  
-> The length of a **varchar(max)** data type varies for each row. sp_help returns (-1) as the length of **varchar(max)** column. [!INCLUDE[ssManStudio](../../includes/ssmanstudio_md.md)] displays -1 as the column size.  
+> The length of a **varchar(max)** data type varies for each row. sp_help returns (-1) as the length of **varchar(max)** column. [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] displays -1 as the column size.  
   

@@ -2,12 +2,10 @@
 title: "SET DATEFORMAT (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
+ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: t-sql
 ms.topic: "language-reference"
 f1_keywords: 
   - "DATEFORMAT"
@@ -26,13 +24,13 @@ helpviewer_keywords:
   - "date and time [SQL Server], DATEFORMAT"
   - "dateparts [SQL Server], dateformat"
 ms.assetid: da217878-7ec4-477e-aa13-604073c948f8
-caps.latest.revision: 49
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # SET DATEFORMAT (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Sets the order of the month, day, and year date parts for interpreting **date**, **smalldatetime**, **datetime**, **datetime2** and **datetimeoffset** character strings.  
   
@@ -43,13 +41,11 @@ manager: "jhubbard"
 ## Syntax  
   
 ```  
--- Syntax for SQL Server, Azure SQL Database, Azure SQL Data Warehouse, Parallel Data Warehouse  
-  
 SET DATEFORMAT { format | @format_var }   
 ```  
   
 ## Arguments  
- *format* | **@***format_var*  
+ *format* | **@**_format_var_  
  Is the order of the date parts. Valid parameters are **mdy**, **dmy**, **ymd**, **ydm**, **myd**, and **dym**. Can be either Unicode or double-byte character sets (DBCS) converted to Unicode. The U.S. English default is **mdy**. For the default DATEFORMAT of all support languages, see [sp_helplanguage &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helplanguage-transact-sql.md).  
   
 ## Remarks  
@@ -85,16 +81,6 @@ GO
 -- Result: Msg 241: Conversion failed when converting date and/or time -- from character string.  
   
 GO  
-```  
-  
-## Examples: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
-  
-```  
--- Set date format to month/day/year.  
-SET DATEFORMAT mdy;  
-DECLARE @datevar datetime2 = '12/31/2012 09:01:01.1234567';  
-SELECT @datevar;  
-  
 ```  
   
 ## See Also  

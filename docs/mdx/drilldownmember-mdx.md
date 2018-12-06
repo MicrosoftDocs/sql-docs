@@ -1,28 +1,17 @@
 ---
 title: "DrilldownMember (MDX) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/02/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "DRILLDOWNMEMBER"
-dev_langs: 
-  - "kbMDX"
-helpviewer_keywords: 
-  - "DrilldownMember function"
-ms.assetid: 765f2fc7-0baa-428b-864a-22c9f3113083
-caps.latest.revision: 40
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
+ms.date: 06/04/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: mdx
+ms.topic: reference
+ms.author: owend
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
 ---
 # DrilldownMember (MDX)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+
 
   Drills down the members in a specified set that are present in a second specified set.  
   
@@ -54,7 +43,7 @@ DrillDownMember(<Set_Expression1>, <Set_Expression2> [,[<Target_Hierarchy>]] [,[
 ## Remarks  
  This function returns a set of child members that are ordered by hierarchy, and includes members specified in the first set that are also present in the second set. Parent members will not be drilled down if the first set contains the parent member and one or more children. The first set can have any dimensionality, but the second set must contain a one-dimensional set. Order is preserved among the original members in the first set, except that all child members included in the result set of the function are included immediately under their parent member. The function constructs the result set by retrieving the children for each member in the first set that is also present in the second set. If **RECURSIVE** is specified, the function continues to recursively compare the members of the result set against the second set, retrieving the children for each member in the result set that is also present in the second set until no more members from the result set can be found in the second set.  
   
- Querying the XMLA property **MdpropMdxDrillFunctions** enables you to verify the level of support that the server provides for the drilling functions; see [Supported XMLA Properties &#40;XMLA&#41;](../analysis-services/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties.md) for details.  
+ Querying the XMLA property **MdpropMdxDrillFunctions** enables you to verify the level of support that the server provides for the drilling functions; see [Supported XMLA Properties &#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties) for details.  
   
  The first set can contain tuples instead of members. Tuple drilldown is an extension of OLE DB, and it returns a set of tuples instead of members.  
   

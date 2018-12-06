@@ -2,18 +2,15 @@
 title: "valueOf Method (java.sql.Timestamp, java.util.Calendar) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
+ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "drivers"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: connectivity
+ms.topic: conceptual
 ms.assetid: 7320c383-0b06-446d-963b-7005e50324a2
-caps.latest.revision: 8
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # valueOf Method (java.sql.Timestamp, java.util.Calendar)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -37,7 +34,7 @@ public static DateTimeOffset valueOf(java.sql.Timestamp timestamp, java.util.Cal
  The offset value.  The date and time components of *calendar* will be set according to the *timestamp* value.  
   
 ## Return Value  
- Returns a DateTimeOffset object representing the point in time given by the java.sql.Timestamp object at the given java.util.Calendar object’s time zone.  
+ Returns a DateTimeOffset object representing the point in time given by the java.sql.Timestamp object at the given java.util.Calendar object's time zone.  
   
 ## Remarks  
  This method also sets the java.util.Calendar object to the point in time given by the java.sql.Timestamp object.  

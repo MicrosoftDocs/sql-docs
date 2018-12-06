@@ -1,22 +1,17 @@
 ---
 title: "Create the RSExecRole | Microsoft Docs"
-ms.custom: ""
-ms.date: "05/30/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.date: 05/30/2017
+ms.prod: reporting-services
+ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
+ms.technology: security
+
+
+ms.topic: conceptual
 helpviewer_keywords: 
   - "RSExecRole"
 ms.assetid: 7ac17341-df7e-4401-870e-652caa2859c0
-caps.latest.revision: 23
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
+author: markingmyname
+ms.author: maghan
 ---
 
 # Create the RSExecRole
@@ -228,6 +223,38 @@ manager: "erikre"
   
 15. Click the link to open Report Manager. You should see the report server items from the report server database.  
 
+## Creating the RSExecRole Role and permissions using T-SQL
+The role can also be created, and applicable permissions granted, on the system databases using the following T-SQL script:
+```sql
+USE master;
+GO
+IF NOT EXISTS (SELECT 1 FROM sys.database_principals WHERE [type] = 'R' AND [name] = 'RSExecRole') BEGIN
+    CREATE ROLE [RSExecRole];
+END
+GRANT EXECUTE ON dbo.xp_sqlagent_enum_jobs TO [RSExecRole];
+GRANT EXECUTE ON dbo.xp_sqlagent_is_starting TO [RSExecRole];
+GRANT EXECUTE ON dbo.xp_sqlagent_notify TO [RSExecRole];
+GO
+USE msdb;
+GO
+IF NOT EXISTS (SELECT 1 FROM sys.database_principals WHERE [type] = 'R' AND [name] = 'RSExecRole') BEGIN
+    CREATE ROLE [RSExecRole];
+END
+GRANT EXECUTE ON dbo.sp_add_category TO [RSExecRole];
+GRANT EXECUTE ON dbo.sp_add_job TO [RSExecRole];
+GRANT EXECUTE ON dbo.sp_add_jobschedule TO [RSExecRole];
+GRANT EXECUTE ON dbo.sp_add_jobserver TO [RSExecRole];
+GRANT EXECUTE ON dbo.sp_add_jobstep TO [RSExecRole];
+GRANT EXECUTE ON dbo.sp_delete_job TO [RSExecRole];
+GRANT EXECUTE ON dbo.sp_help_category TO [RSExecRole];
+GRANT EXECUTE ON dbo.sp_help_job TO [RSExecRole];
+GRANT EXECUTE ON dbo.sp_help_jobschedule TO [RSExecRole];
+GRANT EXECUTE ON dbo.sp_verify_job_identifiers TO [RSExecRole];
+GRANT SELECT ON dbo.syscategories TO [RSExecRole];
+GRANT SELECT ON dbo.sysjobs TO [RSExecRole];
+GO
+```
+
 ## Next steps
 
 [Moving the Report Server Databases to Another Computer &#40;SSRS Native Mode&#41;](../../reporting-services/report-server/moving-the-report-server-databases-to-another-computer-ssrs-native-mode.md)   
@@ -235,4 +262,4 @@ manager: "erikre"
 [Create a Native Mode Report Server Database  &#40;SSRS Configuration Manager&#41;](../../reporting-services/install-windows/ssrs-report-server-create-a-native-mode-report-server-database.md)   
 [Back Up and Restore Reporting Services Encryption Keys](../../reporting-services/install-windows/ssrs-encryption-keys-back-up-and-restore-encryption-keys.md)  
 
-More questions? [Try asking the Reporting Services forum](http://go.microsoft.com/fwlink/?LinkId=620231)
+More questions? [Try asking the Reporting Services forum](https://go.microsoft.com/fwlink/?LinkId=620231)

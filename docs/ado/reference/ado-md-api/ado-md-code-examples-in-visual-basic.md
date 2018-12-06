@@ -1,23 +1,20 @@
 ---
 title: "ADO MD Code Examples in Visual Basic | Microsoft Docs"
-ms.prod: "sql-non-specified"
-ms.technology:
-  - "drivers"
+ms.prod: sql
+ms.prod_service: connectivity
+ms.technology: connectivity
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 dev_langs: 
   - "VB"
 helpviewer_keywords: 
   - "ADO MD code examples, Visual Basic"
 ms.assetid: bfb52e8c-cb06-47a0-931c-03b8bdb1a05a
-caps.latest.revision: 9
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # ADO MD Code Examples in Visual Basic
 The following examples require Microsoft Visual Basic version 5.0 with Service Pack 3 or Visual Basic version 6.0.  

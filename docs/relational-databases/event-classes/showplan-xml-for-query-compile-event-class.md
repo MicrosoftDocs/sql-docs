@@ -2,27 +2,25 @@
 title: "Showplan XML for Query Compile Event Class | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
+ms.prod: sql
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: supportability
+ms.topic: conceptual
 helpviewer_keywords: 
   - "Showplan XML For Query Compile event class"
 ms.assetid: 48919fcb-3a22-43ca-a63c-b210cf2c32d5
-caps.latest.revision: 38
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: craigg
+monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Showplan XML for Query Compile Event Class
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   The Showplan XML For Query Compile event class occurs when [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] compiles an SQL statement. Include thisevent class to identify the Showplan operators on [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  The Showplan XML For Query Compile event class displays complete, compile time data, so traces that contain this event class can incur significant performance overhead. To minimize this, limit use of this event class to traces that monitor specific problems for brief periods of time.  
   
- The Showplan XML documents have a schema associated with them. This schema can be found at the [Microsoft Web Site](http://go.microsoft.com/fwlink/?LinkId=41740), or as part of your [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] installation.  
+ The Showplan XML documents have a schema associated with them. This schema can be found at the [Microsoft Web Site](https://go.microsoft.com/fwlink/?LinkId=41740), or as part of your [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] installation.  
   
 ## Showplan XML for Query Compile Event Class Data Columns  
   

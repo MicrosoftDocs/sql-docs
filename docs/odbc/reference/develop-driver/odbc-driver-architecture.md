@@ -2,20 +2,17 @@
 title: "ODBC Driver Architecture | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
+ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "drivers"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: connectivity
+ms.topic: conceptual
 helpviewer_keywords: 
   - "ODBC drivers [ODBC], architecture"
 ms.assetid: 21a62c7c-192e-4718-a16e-aa12b0de4419
-caps.latest.revision: 13
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # ODBC Driver Architecture
 Driver writers must be aware that the driver architecture can affect whether an application can use DBMS-specific SQL.  

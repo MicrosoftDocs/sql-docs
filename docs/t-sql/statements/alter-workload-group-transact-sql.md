@@ -1,13 +1,11 @@
 ---
 title: "ALTER WORKLOAD GROUP (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "01/19/2016"
-ms.prod: "sql-non-specified"
+ms.date: "04/23/2018"
+ms.prod: sql
+ms.prod_service: "sql-database"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: t-sql
 ms.topic: "language-reference"
 f1_keywords: 
   - "ALTER_WORKLOAD_GROUP_TSQL"
@@ -17,13 +15,12 @@ dev_langs:
 helpviewer_keywords: 
   - "ALTER WORKLOAD GROUP statement"
 ms.assetid: 957addce-feb0-4e54-893e-5faca3cd184c
-caps.latest.revision: 56
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
 ---
 # ALTER WORKLOAD GROUP (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Changes an existing Resource Governor workload group configuration, and optionally assigns it to a to a Resource Governor resource pool.  
   
@@ -32,7 +29,6 @@ manager: "jhubbard"
 ## Syntax  
   
 ```  
-  
 ALTER WORKLOAD GROUP { group_name | "default" }  
 [ WITH  
     ([ IMPORTANCE = { LOW | MEDIUM | HIGH } ]  
@@ -51,24 +47,22 @@ ALTER WORKLOAD GROUP { group_name | "default" }
  Is the name of an existing user-defined workload group or the Resource Governor default workload group.  
   
 > [!NOTE]  
->  Resource Governor creates the "default" and internal groups when [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is installed.  
+> Resource Governor creates the "default" and internal groups when [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is installed.  
   
  The option "default" must be enclosed by quotation marks ("") or brackets ([]) when used with ALTER WORKLOAD GROUP to avoid conflict with DEFAULT, which is a system reserved word. For more information, see [Database Identifiers](../../relational-databases/databases/database-identifiers.md).  
   
 > [!NOTE]  
->  Predefined workload groups and resource pools all use lowercase names, such as "default". This should be taken into account for servers that use case-sensitive collation. Servers with case-insensitive collation, such as SQL_Latin1_General_CP1_CI_AS, will treat "default" and "Default" as the same.  
+> Predefined workload groups and resource pools all use lowercase names, such as "default". This should be taken into account for servers that use case-sensitive collation. Servers with case-insensitive collation, such as SQL_Latin1_General_CP1_CI_AS, will treat "default" and "Default" as the same.  
   
  IMPORTANCE = { LOW | MEDIUM | HIGH }  
  Specifies the relative importance of a request in the workload group. Importance is one of the following:  
   
 -   LOW  
-  
 -   MEDIUM (default)  
-  
 -   HIGH  
   
 > [!NOTE]  
->  Internally each importance setting is stored as a number that is used for calculations.  
+> Internally each importance setting is stored as a number that is used for calculations.  
   
  IMPORTANCE is local to the resource pool; workload groups of different importance inside the same resource pool affect each other, but do not affect workload groups in another resource pool.  
   
@@ -76,7 +70,7 @@ ALTER WORKLOAD GROUP { group_name | "default" }
  Specifies the maximum amount of memory that a single request can take from the pool. This percentage is relative to the resource pool size specified by MAX_MEMORY_PERCENT.  
   
 > [!NOTE]  
->  The amount specified only refers to query execution grant memory.  
+> The amount specified only refers to query execution grant memory.  
   
  *value* must be 0 or a positive integer. The allowed range for *value* is from 0 through 100. The default setting for *value* is 25.  
   
@@ -99,13 +93,16 @@ ALTER WORKLOAD GROUP { group_name | "default" }
  Specifies the maximum amount of CPU time, in seconds, that a request can use. *value* must be 0 or a positive integer. The default setting for *value* is 0, which means unlimited.  
   
 > [!NOTE]  
->  Resource Governor will not prevent a request from continuing if the maximum time is exceeded. However, an event will be generated. For more information, see [CPU Threshold Exceeded Event Class](../../relational-databases/event-classes/cpu-threshold-exceeded-event-class.md).  
+> By default, Resource Governor will not prevent a request from continuing if the maximum time is exceeded. However, an event will be generated. For more information, see [CPU Threshold Exceeded Event Class](../../relational-databases/event-classes/cpu-threshold-exceeded-event-class.md). 
+
+> [!IMPORTANT]
+> Starting with [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 and [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3, and using [trace flag 2422](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md), Resource Governor will abort a request when the maximum time is exceeded.
   
  REQUEST_MEMORY_GRANT_TIMEOUT_SEC =*value*  
  Specifies the maximum time, in seconds, that a query can wait for memory grant (work buffer memory) to become available.  
   
 > [!NOTE]  
->  A query does not always fail when memory grant time-out is reached. A query will only fail if there are too many concurrent queries running. Otherwise, the query may only get the minimum memory grant, resulting in reduced query performance.  
+> A query does not always fail when memory grant time-out is reached. A query will only fail if there are too many concurrent queries running. Otherwise, the query may only get the minimum memory grant, resulting in reduced query performance.  
   
  *value* must be a positive integer. The default setting for *value*, 0, uses an internal calculation based on query cost to determine the maximum time.  
   
@@ -113,10 +110,10 @@ ALTER WORKLOAD GROUP { group_name | "default" }
  Specifies the maximum degree of parallelism (DOP) for parallel requests. *value* must be 0 or a positive integer, 1 though 255. When *value* is 0, the server chooses the max degree of parallelism. This is the default and recommended setting.  
   
 > [!NOTE]  
->  The actual value that the [!INCLUDE[ssDE](../../includes/ssde-md.md)] sets for MAX_DOP by might be less than the specified value. The final value is determined by the formula min(255, *number of CPUs)*.  
+> The actual value that the [!INCLUDE[ssDE](../../includes/ssde-md.md)] sets for MAX_DOP by might be less than the specified value. The final value is determined by the formula min(255, *number of CPUs)*.  
   
 > [!CAUTION]  
->  Changing MAX_DOP can adversely affect a server's performance. If you must change MAX_DOP, we recommend that it be set to a value that is less than or equal to the maximum number of hardware schedulers that are present in a single NUMA node. We recommend that you do not set MAX_DOP to a value greater than 8.  
+> Changing MAX_DOP can adversely affect a server's performance. If you must change MAX_DOP, we recommend that it be set to a value that is less than or equal to the maximum number of hardware schedulers that are present in a single NUMA node. We recommend that you do not set MAX_DOP to a value greater than 8.  
   
  MAX_DOP is handled as follows:  
   
@@ -139,7 +136,7 @@ ALTER WORKLOAD GROUP { group_name | "default" }
  The option "default" must be enclosed by quotation marks ("") or brackets ([]) when used with ALTER WORKLOAD GROUP to avoid conflict with DEFAULT, which is a system reserved word. For more information, see [Database Identifiers](../../relational-databases/databases/database-identifiers.md).  
   
 > [!NOTE]  
->  The option "default" is case-sensitive.  
+> The option "default" is case-sensitive.  
   
 ## Remarks  
  ALTER WORKLOAD GROUP is allowed on the default group.  
@@ -151,7 +148,7 @@ ALTER WORKLOAD GROUP { group_name | "default" }
 -   If you are changing MAX_DOP from 1 to 0 or a value greater than 1, executing DBCC FREEPROCCACHE is not required. However, serial plans cannot run in parallel, so clearing the respective cache will allow new plans to potentially be compiled using parallelism.  
   
 > [!CAUTION]  
->  Clearing cached plans from a resource pool that is associated with more than one workload group will affect all workload groups with the user-defined resource pool identified by *pool_name*.  
+> Clearing cached plans from a resource pool that is associated with more than one workload group will affect all workload groups with the user-defined resource pool identified by *pool_name*.  
   
  When you are executing DDL statements, we recommend that you be familiar with Resource Governor states. For more information, see [Resource Governor](../../relational-databases/resource-governor/resource-governor.md).  
   
@@ -167,7 +164,7 @@ ALTER WORKLOAD GROUP { group_name | "default" }
 ## Examples  
  The following example shows how to change the importance of requests in the default group from `MEDIUM` to `LOW`.  
   
-```  
+```sql  
 ALTER WORKLOAD GROUP "default"  
 WITH (IMPORTANCE = LOW);  
 GO  
@@ -177,7 +174,7 @@ GO
   
  The following example shows how to move a workload group from the pool that it is in to the default pool.  
   
-```  
+```sql  
 ALTER WORKLOAD GROUP adHoc  
 USING [default];  
 GO  

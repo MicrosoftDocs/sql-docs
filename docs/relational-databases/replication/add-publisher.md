@@ -2,39 +2,37 @@
 title: "Add Publisher | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
+ms.prod: sql
+ms.prod_service: "database-engine"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: replication
+ms.topic: conceptual
 f1_keywords: 
   - "sql13.rep.monitor.addpublisher.f1"
 helpviewer_keywords: 
   - "Add Publisher dialog box"
 ms.assetid: 4b57e298-655f-42c2-82bc-25cdad94a194
-caps.latest.revision: 23
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "MashaMSFT"
+ms.author: "mathoma"
+manager: craigg
 ---
 # Add Publisher
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   The **Add Publisher** dialog box allows you to add to one or more Publishers to the left pane of Replication Monitor. After adding a Publisher, selecting the Publisher in the left pane shows information on the Publisher in the right pane.  
   
 ## Options  
  **Add**  
  Click to select a type of Publisher to add, which launches the **Connect to Server** dialog box. The options are:  
   
--   **Add SQL Server Publisher…**  
+-   **Add SQL Server Publisher...**  
   
      Connect to the Publisher using the **Connect to Server** dialog box.  
   
--   **Add Oracle Publisher…**  
+-   **Add Oracle Publisher...**  
   
      Connect to the [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributor associated with the Oracle Publisher using the **Connect to Server** dialog box.  
   
--   **Specify a Distributor and Add Its Publishers…**  
+-   **Specify a Distributor and Add Its Publishers...**  
   
      Connect to the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributor associated with one or more Publishers using the **Connect to Server** dialog box.  
   

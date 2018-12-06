@@ -1,13 +1,11 @@
 ---
 title: "CREATE EVENT SESSION (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-non-specified"
+ms.date: "08/10/2017"
+ms.prod: sql
+ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: t-sql
 ms.topic: "language-reference"
 f1_keywords: 
   - "CREATE EVENT SESSION"
@@ -22,13 +20,12 @@ helpviewer_keywords:
   - "event sessions [SQL Server]"
   - "CREATE EVENT SESSION statement"
 ms.assetid: 67683027-2b0f-47aa-b223-604731af8b4d
-caps.latest.revision: 65
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
 ---
 # CREATE EVENT SESSION (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Creates an Extended Events session that identifies the source of the events, the event session targets, and the event session options.  
   
@@ -36,8 +33,7 @@ manager: "jhubbard"
   
 ## Syntax  
   
-```  
-  
+```    
 CREATE EVENT SESSION event_session_name  
 ON SERVER  
 {  
@@ -132,8 +128,8 @@ ON SERVER
   
  Actions appear in the sys.dm_xe_objects view as object_type 'action'.  
   
- WHERE <predicate_expression>  
- Specifies the predicate expression used to determine if an event should be processed. If <predicate_expression> is true, the event is processed further by the actions and targets for the session. If <predicate_expression> is false, the event is dropped by the session before being processed by the actions and targets for the session. Predicate expressions are limited to 3000 characters, which limits string arguments.  
+ WHERE \<predicate_expression> 
+ Specifies the predicate expression used to determine if an event should be processed. If \<predicate_expression> is true, the event is processed further by the actions and targets for the session. If \<predicate_expression> is false, the event is dropped by the session before being processed by the actions and targets for the session. Predicate expressions are limited to 3000 characters, which limits string arguments. 
   
  *event_field_name*  
  Is the name of the event field that identifies the predicate source.  
@@ -175,9 +171,9 @@ ON SERVER
  Sets a target parameter. Target parameters appear in the sys.dm_xe_object_columns view as column_type 'customizable' and object_name = *target_name*.  
   
 > [!IMPORTANT]  
->  If you are using the ring buffer target, we recommend that you set the max_memory target parameter to 2048 kilobytes (KB) to help avoid possible data truncation of the XML output. For more information about when to use the different target types, see [SQL Server Extended Events Targets](http://msdn.microsoft.com/library/e281684c-40d1-4cf9-a0d4-7ea1ecffa384).  
+>  If you are using the ring buffer target, we recommend that you set the max_memory target parameter to 2048 kilobytes (KB) to help avoid possible data truncation of the XML output. For more information about when to use the different target types, see [SQL Server Extended Events Targets](https://msdn.microsoft.com/library/e281684c-40d1-4cf9-a0d4-7ea1ecffa384).  
   
- WITH ( <event_session_options> [ ,...*n*] )  
+ WITH ( \<event_session_options> [ ,...*n*] ) 
  Specifies options to use with the event session.  
   
  MAX_MEMORY =*size* [ KB | **MB** ]  
@@ -229,7 +225,7 @@ ON SERVER
  Specifies whether or not to start this event session automatically when [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] starts.  
   
 > [!NOTE]  
->  If STARTUP_STATE = ON, the event session will only start if SQL Server is stopped and then restarted.  
+> If `STARTUP_STATE = ON`, the event session will only start if [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is stopped and then restarted.  
   
  ON  
  The event session is started at startup.  
@@ -238,15 +234,15 @@ ON SERVER
  The event session is not started at startup.  
   
 ## Remarks  
- The order of precedence for the logical operators is NOT (highest), followed by AND, followed by OR.  
+The order of precedence for the logical operators is `NOT` (highest), followed by `AND`, followed by `OR`.  
   
 ## Permissions  
- Requires the ALTER ANY EVENT SESSION permission.  
+Requires the `ALTER ANY EVENT SESSION` permission.  
   
 ## Examples  
  The following example shows how to create an event session named `test_session`. This example adds two events and uses the Event Tracing for Windows target.  
   
-```  
+```sql  
 IF EXISTS(SELECT * FROM sys.server_event_sessions WHERE name='test_session')  
     DROP EVENT session test_session ON SERVER;  
 GO  
@@ -268,3 +264,4 @@ GO
  [sys.dm_xe_object_columns &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-xe-object-columns-transact-sql.md)  
   
   
+

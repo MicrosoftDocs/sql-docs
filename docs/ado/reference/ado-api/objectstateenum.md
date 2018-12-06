@@ -1,24 +1,21 @@
 ---
 title: "ObjectStateEnum | Microsoft Docs"
-ms.prod: "sql-non-specified"
-ms.technology:
-  - "drivers"
+ms.prod: sql
+ms.prod_service: connectivity
+ms.technology: connectivity
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 apitype: "COM"
 f1_keywords: 
   - "ObjectStateEnum"
 helpviewer_keywords: 
   - "ObjectStateEnum enumeration [ADO]"
 ms.assetid: 32746558-097b-4749-989e-519aadf7e3f4
-caps.latest.revision: 11
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # ObjectStateEnum
 Specifies whether an object is open or closed, connecting to a data source, executing a command, or retrieving data.  

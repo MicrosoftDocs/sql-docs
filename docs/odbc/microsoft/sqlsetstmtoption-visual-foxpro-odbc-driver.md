@@ -2,20 +2,17 @@
 title: "SQLSetStmtOption (Visual FoxPro ODBC Driver) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
+ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "drivers"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: connectivity
+ms.topic: conceptual
 helpviewer_keywords: 
   - "SQLSetStmtOption function [ODBC], Visual FoxPro ODBC Driver"
 ms.assetid: 76b813e3-c7dc-4bb2-a710-d2aa9dcfdc36
-caps.latest.revision: 5
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # SQLSetStmtOption (Visual FoxPro ODBC Driver)
 > [!NOTE]  

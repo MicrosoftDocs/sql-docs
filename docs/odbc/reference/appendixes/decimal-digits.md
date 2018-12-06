@@ -2,23 +2,20 @@
 title: "Decimal Digits | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
+ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "drivers"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: connectivity
+ms.topic: conceptual
 helpviewer_keywords: 
   - "size of data types [ODBC]"
   - "decimal digits of data types [ODBC]"
   - "data types [ODBC], decimal digits"
   - "SQL data types [ODBC], column characteristics"
 ms.assetid: 07f3d1fc-b4ee-4693-b342-330b2231b6d0
-caps.latest.revision: 5
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # Decimal Digits
 The *decimal digits* of decimal and numeric data types is defined as the maximum number of digits to the right of the decimal point, or the scale of the data. For approximate floating-point number columns or parameters, the scale is undefined because the number of digits to the right of the decimal point is not fixed. For datetime or interval data that contains a seconds component, the decimal digits is defined as the number of digits to the right of the decimal point in the seconds component of the data.  
@@ -30,7 +27,7 @@ The *decimal digits* of decimal and numeric data types is defined as the maximum
 |SQL type|Decimal digits|  
 |--------------|--------------------|  
 |All character and binary types[a]|n/a|  
-|SQL_DECIMAL<br />SQL_NUMERIC|The defined number of digits to the right of the decimal point. For example, the scale of a column defined as NUMERIC(10,3) is 3. This can be a negative number to support storage of very large numbers without using exponential notation; for example, "12000" could be stored as "12" with a scale of –3.|  
+|SQL_DECIMAL<br />SQL_NUMERIC|The defined number of digits to the right of the decimal point. For example, the scale of a column defined as NUMERIC(10,3) is 3. This can be a negative number to support storage of very large numbers without using exponential notation; for example, "12000" could be stored as "12" with a scale of -3.|  
 |All exact numeric types other than SQL_DECIMAL and SQL_NUMERIC[a]|0|  
 |All approximate data types[a]|n/a|  
 |SQL_TYPE_DATE, and all interval types with no seconds component[a]|n/a|  

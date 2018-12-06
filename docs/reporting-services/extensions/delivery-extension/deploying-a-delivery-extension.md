@@ -1,26 +1,19 @@
 ---
 title: "Deploying a Delivery Extension | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/16/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "docset-sql-devref"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-applies_to: 
-  - "SQL Server 2016 Preview"
+ms.date: 03/16/2017
+ms.prod: reporting-services
+ms.prod_service: "reporting-services-native"
+ms.technology: extensions
+
+
+ms.topic: reference
 helpviewer_keywords: 
   - "delivery extensions [Reporting Services], deploying"
   - "Extension element"
   - "deploying [Reporting Services], extensions"
 ms.assetid: 4436ce48-397d-42c7-9b5d-2a267e2a1b2c
-caps.latest.revision: 45
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
+author: markingmyname
+ms.author: maghan
 ---
 # Deploying a Delivery Extension
   Delivery extensions supply their configuration information in the form of an XML configuration file. The XML file conforms to the XML schema defined for delivery extensions. Delivery extensions provide infrastructure for setting and modifying the configuration file.  
@@ -87,7 +80,7 @@ manager: "erikre"
     </CodeGroup>  
     ```  
   
-     URL membership is only one of many membership conditions you might choose for your delivery extension. For more information about code access security in [!INCLUDE[ssRS](../../../includes/ssrs-md.md)], see.[Secure Development &#40;Reporting Services&#41;](../../../reporting-services/extensions/secure-development/secure-development-reporting-services.md)  
+     URL membership is only one of many membership conditions you might choose for your delivery extension. For more information about code access security in [!INCLUDE[ssRS](../../../includes/ssrs.md)], see.[Secure Development &#40;Reporting Services&#41;](../../../reporting-services/extensions/secure-development/secure-development-reporting-services.md)  
    
 ## Verifying the Deployment  
  You can verify whether your delivery extension was deployed successfully to the report server by using the Web service <xref:ReportService2010.ReportingService2010.ListExtensions%2A> method. You can also open the web portal and verify that your extension is included in the list of available delivery extensions for a subscription. For more information about the web portal and subscriptions, see [Subscriptions and Delivery &#40;Reporting Services&#41;](../../../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md).  

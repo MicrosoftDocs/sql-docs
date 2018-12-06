@@ -2,24 +2,23 @@
 title: "Databases | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
+ms.prod: sql
+ms.prod_service: "database-engine"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: configuration
+ms.topic: conceptual
 helpviewer_keywords: 
   - "data warehouse [SQL Server]"
   - "OLTP databases [SQL Server]"
   - "databases [SQL Server], about databases"
 ms.assetid: 316eea58-81b8-4bf3-a1fc-801946740e94
-caps.latest.revision: 27
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: craigg
+monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Databases
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   A database in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is made up of a collection of tables that stores a specific set of structured data. A table contains a collection of rows, also referred to as records or tuples, and columns, also referred to as attributes. Each column in the table is designed to store a certain type of information, for example, dates, names, dollar amounts, and numbers.  
   
 ## Basic Information about Databases  
@@ -32,7 +31,7 @@ manager: "jhubbard"
  A user that has access to a database can be given permission to access the objects in the database. Though permissions can be granted to individual users, we recommend creating database roles, adding the database users to the roles, and then grant access permission to the roles. Granting permissions to roles instead of users makes it easier to keep permissions consistent and understandable as the number of users grow and continually change. For more information about roles permissions, see [CREATE ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-role-transact-sql.md) and [Principals &#40;Database Engine&#41;](../../relational-databases/security/authentication-access/principals-database-engine.md).  
   
 ## Working with Databases  
- Most people who work with databases use the [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] tool. The [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] tool has a graphical user interface for creating databases and the objects in the databases. [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] also has a query editor for interacting with databases by writing [!INCLUDE[tsql](../../includes/tsql-md.md)] statements. [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] can be installed from the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] installation disk, or downloaded from MSDN.  
+ Most people who work with databases use the [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] tool. The [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] tool has a graphical user interface for creating databases and the objects in the databases. [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] also has a query editor for interacting with databases by writing [!INCLUDE[tsql](../../includes/tsql-md.md)] statements. [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] can be installed from the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] installation disk, or downloaded from MSDN. For more information about [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] tool, see [SQL Server Management Studio (SSMS)](../../ssms/sql-server-management-studio-ssms.md).
   
 ## In This Section  
   

@@ -2,12 +2,10 @@
 title: "ALTER SERVICE (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
+ms.prod_service: "sql-database"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: t-sql
 ms.topic: "language-reference"
 f1_keywords: 
   - "ALTER SERVICE"
@@ -20,13 +18,12 @@ helpviewer_keywords:
   - "ALTER SERVICE statement"
   - "services [Service Broker], modifying"
 ms.assetid: 2b4608f7-bb2e-4246-aa29-b52c55995b3a
-caps.latest.revision: 31
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
 ---
 # ALTER SERVICE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Changes an existing service.  
   
@@ -49,7 +46,7 @@ ALTER SERVICE service_name
  *service_name*  
  Is the name of the service to change. Server, database, and schema names cannot be specified.  
   
- ON QUEUE [ *schema_name***.** ] *queue_name*  
+ ON QUEUE [ _schema_name_**.** ] *queue_name*  
  Specifies the new queue for this service. [!INCLUDE[ssSB](../../includes/sssb-md.md)] moves all messages for this service from the current queue to the new queue.  
   
  ADD CONTRACT *contract_name*  

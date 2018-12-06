@@ -2,13 +2,11 @@
 title: "Securing SQL Server | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/31/2017"
-ms.prod: "sql-server-2016"
+ms.prod: sql
+ms.prod_service: security
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: security
+ms.topic: conceptual
 f1_keywords: 
   - "Security [SQL Server]"
 helpviewer_keywords: 
@@ -18,15 +16,15 @@ helpviewer_keywords:
   - "security [SQL Server], planning"
   - "applications [SQL Server], security"
 ms.assetid: 4d93489e-e9bb-45b3-8354-21f58209965d
-caps.latest.revision: 31
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: VanMSFT
+ms.author: vanto
+manager: craigg
 ---
 # Securing SQL Server
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Securing [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] can be viewed as a series of steps, involving four areas: the platform, authentication, objects (including data), and applications that access the system. The following topics will guide you through creating and implementing an effective security plan.  
   
- You can find more information about [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] security at the [SQL Server](http://go.microsoft.com/fwlink/?LinkID=31629) Web site. This includes a best practice guide and a security checklist. This site also contains the latest service pack information and downloads.  
+ You can find more information about [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] security at the [SQL Server](https://go.microsoft.com/fwlink/?LinkID=31629) Web site. This includes a best practice guide and a security checklist. This site also contains the latest service pack information and downloads.  
   
 ## Platform and Network Security  
  The platform for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] includes the physical hardware and networking systems connecting clients to the database servers, and the binary files that are used to process database requests.  
@@ -74,7 +72,7 @@ manager: "jhubbard"
 |---------------------------|---------|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] program files|[File Locations for Default and Named Instances of SQL Server](../../sql-server/install/file-locations-for-default-and-named-instances-of-sql-server.md)|  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] service packs and upgrades provide enhanced security. To determine the latest available service pack available for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], see the [SQL Server](http://go.microsoft.com/fwlink/?LinkID=31629) Web site.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] service packs and upgrades provide enhanced security. To determine the latest available service pack available for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], see the [SQL Server](https://go.microsoft.com/fwlink/?LinkID=31629) Web site.  
   
  You can use the following script to determine the service pack installed on the system.  
   
@@ -84,7 +82,7 @@ GO
 ```  
   
 ## Principals and Database Object Security  
- Principals are the individuals, groups, and processes granted access to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. “Securables” are the server, database, and objects the database contains. Each has a set of permissions that can be configured to help reduce the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] surface area. The following table contains information about principals and securables.  
+ Principals are the individuals, groups, and processes granted access to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. "Securables" are the server, database, and objects the database contains. Each has a set of permissions that can be configured to help reduce the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] surface area. The following table contains information about principals and securables.  
   
 |For information about|See|  
 |---------------------------|---------|  
@@ -121,7 +119,7 @@ GO
   
 |For information about|See|  
 |---------------------------|---------|  
-|Connecting to, configuring, and controlling [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|[Use SQL Server Management Studio](http://msdn.microsoft.com/library/f289e978-14ca-46ef-9e61-e1fe5fd593be)|  
+|Connecting to, configuring, and controlling [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|[Use SQL Server Management Studio](https://msdn.microsoft.com/library/f289e978-14ca-46ef-9e61-e1fe5fd593be)|  
 |Connecting to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and running queries at the command prompt|[sqlcmd Utility](../../tools/sqlcmd-utility.md)|  
 |Network configuration and control for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|[SQL Server Configuration Manager](../../relational-databases/sql-server-configuration-manager.md)|  
 |Enabling and disabling features by using Policy-Based Management|[Administer Servers by Using Policy-Based Management](../../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md)|  
@@ -139,10 +137,9 @@ GO
 ## Related Content  
  [Security Considerations for a SQL Server Installation](../../sql-server/install/security-considerations-for-a-sql-server-installation.md)  
  [Security Center for SQL Server Database Engine and Azure SQL Database](../../relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database.md)  
-[SQL Server 2012 Security Best Practices - Operational and Administrative Tasks](http://download.microsoft.com/download/8/F/A/8FABACD7-803E-40FC-ADF8-355E7D218F4C/SQL_Server_2012_Security_Best_Practice_Whitepaper_Apr2012.docx)   
+[SQL Server 2012 Security Best Practices - Operational and Administrative Tasks](https://download.microsoft.com/download/8/F/A/8FABACD7-803E-40FC-ADF8-355E7D218F4C/SQL_Server_2012_Security_Best_Practice_Whitepaper_Apr2012.docx)   
 [SQL Server Security Blog](https://blogs.msdn.microsoft.com/sqlsecurity/)  
 [Security Best Practice and Label Security Whitepapers](https://blogs.msdn.microsoft.com/sqlsecurity/2012/03/06/security-best-practice-and-label-security-whitepapers/)  
-[Security Considerations for a SQL Server Installation](../../sql-server/install/security-considerations-for-a-sql-server-installation.md)  
 [Row-Level Security](../../relational-databases/security/row-level-security.md)   
 [Protecting Your SQL Server Intellectual Property](../../relational-databases/security/protecting-your-sql-server-intellectual-property.md)   
   

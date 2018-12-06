@@ -1,24 +1,22 @@
 ---
 title: "Manage FileTables | Microsoft Docs"
 ms.custom: ""
-ms.date: "06/02/2016"
-ms.prod: "sql-server-2016"
+ms.date: "08/23/2017"
+ms.prod: sql
+ms.prod_service: "database-engine"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-blob"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: filestream
+ms.topic: conceptual
 helpviewer_keywords: 
   - "FileTables [SQL Server], security"
   - "FileTables [SQL Server], managing access"
 ms.assetid: 93af982c-b4fe-4be0-8268-11f86dae27e1
-caps.latest.revision: 26
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "douglaslMS"
+ms.author: "douglasl"
+manager: craigg
 ---
 # Manage FileTables
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Describes common administrative tasks for managing FileTables.  
   
 ##  <a name="HowToEnumerate"></a> How To: Get a List of FileTables and Related Objects  
@@ -28,7 +26,7 @@ manager: "jhubbard"
   
 -   [sys.tables &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-tables-transact-sql.md) (Check the value of the **is_filetable** column.)  
   
-```tsql  
+```sql  
 SELECT * FROM sys.filetables;  
 GO  
   
@@ -38,10 +36,9 @@ GO
   
  To get a list of the system-defined objects that were created when the associated FileTables were created, query the catalog view [sys.filetable_system_defined_objects &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-filetable-system-defined-objects-transact-sql.md).  
   
-```tsql  
+```sql  
 SELECT object_id, OBJECT_NAME(object_id) AS 'Object Name'  
-    FROM sys.filetable_system_defined_objects  
-    WHERE object_id = filetable_object_id;  
+FROM sys.filetable_system_defined_objects;  
 GO  
 ```  
   
@@ -83,24 +80,24 @@ GO
  **To disable full non-transactional access**  
  Call the **ALTER DATABASE** statement and SET the value of **NON_TRANSACTED_ACCESS** to **READ_ONLY** or **OFF**.  
   
-```tsql  
+```sql  
 -- Disable write access.  
 ALTER DATABASE database_name  
-    SET FILESTREAM ( NON_TRANSACTED_ACCESS = READ_ONLY );  
+SET FILESTREAM ( NON_TRANSACTED_ACCESS = READ_ONLY );  
 GO  
   
 -- Disable non-transactional access.  
 ALTER DATABASE database_name  
-    SET FILESTREAM ( NON_TRANSACTED_ACCESS = OFF );  
+SET FILESTREAM ( NON_TRANSACTED_ACCESS = OFF );  
 GO  
 ```  
   
  **To re-enable full non-transactional access**  
  Call the **ALTER DATABASE** statement and SET the value of **NON_TRANSACTED_ACCESS** to **FULL**.  
   
-```tsql  
+```sql  
 ALTER DATABASE database_name  
-    SET FILESTREAM ( NON_TRANSACTED_ACCESS = FULL );  
+SET FILESTREAM ( NON_TRANSACTED_ACCESS = FULL );  
 GO  
 ```  
   
@@ -140,16 +137,16 @@ GO
  Call the ALTER TABLE statement with the **{ ENABLE | DISABLE } FILETABLE_NAMESPACE** option.  
   
  **To disable the FileTable namespace**  
- ```tsql  
+ ```sql  
 ALTER TABLE filetable_name  
-    DISABLE FILETABLE_NAMESPACE;  
+DISABLE FILETABLE_NAMESPACE;  
 GO  
 ```  
   
  **To re-enable the FileTable namespace**  
- ```tsql  
+ ```sql  
 ALTER TABLE filetable_name  
-    ENABLE FILETABLE_NAMESPACE;  
+ENABLE FILETABLE_NAMESPACE;  
 GO  
 ```  
   
@@ -162,7 +159,7 @@ GO
 ###  <a name="HowToListOpen"></a> How To: Get a List of Open File Handles Associated with a FileTable  
  Query the catalog view [sys.dm_filestream_non_transacted_handles &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-filestream-non-transacted-handles-transact-sql.md).  
   
-```tsql  
+```sql  
 SELECT * FROM sys.dm_filestream_non_transacted_handles;  
 GO  
 ```  
@@ -170,7 +167,7 @@ GO
 ###  <a name="HowToKill"></a> How To: Kill Open File Handles Associated with a FileTable  
  Call the stored procedure [sp_kill_filestream_non_transacted_handles &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/filestream-and-filetable-sp-kill-filestream-non-transacted-handles.md) with the appropriate arguments to kill all open file handles in the database or in the FileTable, or to kill a specific handle.  
   
-```  
+```sql  
 USE database_name;  
   
 -- Kill all open handles in all the filetables in the database.  
@@ -192,11 +189,11 @@ GO
  **To identify open files and the associated locks**  
  Join the **request_owner_id** field in the dynamic management view [sys.dm_tran_locks &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md) with the **fcb_id** field in [sys.dm_filestream_non_transacted_handles &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-filestream-non-transacted-handles-transact-sql.md). In some cases, the lock does not correspond to a single open file handle.  
   
-```tsql  
+```sql  
 SELECT opened_file_name  
-    FROM sys.dm_filestream_non_transacted_handles  
-    WHERE fcb_id IN  
-        ( SELECT request_owner_id FROM sys.dm_tran_locks );  
+FROM sys.dm_filestream_non_transacted_handles  
+WHERE fcb_id IN  
+    ( SELECT request_owner_id FROM sys.dm_tran_locks );  
 GO  
 ```  
   
@@ -218,7 +215,7 @@ GO
   
  Many administrative tools and operations, (including backup, log backup, and transactional replication) read transactionally consistent data by reading the transaction logs. At this time, they read any FILESTREAM data updated as part of a transaction. When non-transactional access is not enabled at the database level, these tools and operations work with full transactional consistency.  
   
- However, when full non-transactional access is enabled, then a FileTable could contain data that was updated more recently (through a non-transactional update) than the transaction that the tool or process is reading from the transaction log. This means that a “point in time” restore operation to a specific transaction may contain FILESTREAM data that is more recent than that transaction. This is the expected behavior when non-transactional updates are allowed on FileTables.  
+ However, when full non-transactional access is enabled, then a FileTable could contain data that was updated more recently (through a non-transactional update) than the transaction that the tool or process is reading from the transaction log. This means that a "point in time" restore operation to a specific transaction may contain FILESTREAM data that is more recent than that transaction. This is the expected behavior when non-transactional updates are allowed on FileTables.  
   
 ##  <a name="Monitor"></a> SQL Server Profiler and FileTables  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Profiler can capture the Windows File Open and File Close operations in trace output for files that are stored in a FileTable.  
@@ -232,5 +229,3 @@ GO
 ## See Also  
  [FileTable Compatibility with Other SQL Server Features](../../relational-databases/blob/filetable-compatibility-with-other-sql-server-features.md)   
  [FileTable DDL, Functions, Stored Procedures, and Views](../../relational-databases/blob/filetable-ddl-functions-stored-procedures-and-views.md)  
-  
-  

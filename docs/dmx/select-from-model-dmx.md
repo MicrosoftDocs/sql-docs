@@ -1,31 +1,17 @@
 ---
 title: "SELECT FROM &lt;model&gt; (DMX) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/02/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "SELECT"
-  - "FROM"
-dev_langs: 
-  - "DMX"
-helpviewer_keywords: 
-  - "empty prediction joins [DMX]"
-  - "SELECT FROM <model> statement"
-ms.assetid: dc5b9a01-e308-4ee8-84fc-ba4b991c60aa
-caps.latest.revision: 36
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
+ms.date: 06/07/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: dmx
+ms.topic: conceptual
+ms.author: owend
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
 ---
 # SELECT FROM &lt;model&gt; (DMX)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   Performs an empty prediction join, returning the most probable value or values for the specified columns. Only the content from the mining model is used to create the prediction.  
   

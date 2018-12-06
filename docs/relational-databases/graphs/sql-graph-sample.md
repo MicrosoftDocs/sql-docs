@@ -2,24 +2,23 @@
 title: SQL Graph Database Sample | Microsoft Docs
 description: A quick sample that will help you get started with the new syntax introduced in SQL graph database. 
 ms.date: "04/19/2017"
-ms.prod: "sql-server-2017"
+ms.prod: sql
+ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
-ms.suite: ""
+ms.custom: ""
 ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 helpviewer_keywords: 
   - "SQL graph"
   - "SQL graph, tsql reference"
 ms.assetid: 
-caps.latest.revision: 1
-author: "shkale-msft"
-ms.author: "shkale"
-manager: "jhubbard"
+author: shkale-msft
+ms.author: shkale
+manager: craigg
+monikerRange: "=azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Create a graph database and run some pattern matching queries using T-SQL
-[!INCLUDE[tsql-appliesto-ssvnxt-asdb-xxxx-xxx](../../includes/tsql-appliesto-ssvnxt-asdb-xxxx-xxx.md)]   
+[!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
 
 This sample provides a [!INCLUDE[tsql-md](../../includes/tsql-md.md)] script to create a graph database with nodes and edges and then use the new MATCH clause to match some patterns and traverse through the graph. This sample script will work on both Azure SQL Database and [!INCLUDE[sssqlv14](../../includes/sssqlv14-md.md)]  
  

@@ -2,13 +2,11 @@
 title: "The ODBC Cursor Library | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
+ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "drivers"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: connectivity
+ms.topic: conceptual
 helpviewer_keywords: 
   - "ODBC cursor library [ODBC], about cursor library"
   - "ODBC cursor library [ODBC]"
@@ -17,10 +15,9 @@ helpviewer_keywords:
   - "cursors [ODBC], cursor library"
   - "block cursors [ODBC]"
 ms.assetid: 32fb7df0-953a-4f68-b041-7d2852e45d0f
-caps.latest.revision: 11
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # The ODBC Cursor Library
 > [!IMPORTANT]  

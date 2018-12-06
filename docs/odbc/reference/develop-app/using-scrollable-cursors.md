@@ -2,21 +2,18 @@
 title: "Using Scrollable Cursors | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
+ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "drivers"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: connectivity
+ms.topic: conceptual
 helpviewer_keywords: 
   - "scrollable cursors [ODBC]"
   - "cursors [ODBC], scrollable"
 ms.assetid: c5d795ba-70b0-420f-a944-b1894061a755
-caps.latest.revision: 5
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # Using Scrollable Cursors
 Using a scrollable cursor requires these three steps:  

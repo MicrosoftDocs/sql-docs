@@ -1,27 +1,22 @@
 ---
 title: "Step 4: Connect resiliently to SQL with ADO.NET | Microsoft Docs"
 ms.custom: ""
-ms.date: "01/30/2017"
-ms.prod: "sql-non-specified"
+ms.date: "08/08/2017"
+ms.prod: sql
+ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "drivers"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: connectivity
+ms.topic: conceptual
 dev_langs: 
   - "CSharp"
 ms.assetid: 9b608b0b-6b38-42da-bb83-79df8c170cd7
-caps.latest.revision: 9
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # Step 4: Connect resiliently to SQL with ADO.NET
-[!INCLUDE[Driver_ADODotNet_Download](../../includes/driver_adodotnet_download.md)]
 
-
-- Previous article:&nbsp;&nbsp;&nbsp;[Step 3: Proof of concept connecting to SQL using ADO.NET](../../connect/ado-net/step-3-proof-of-concept-connecting-to-sql-using-ado-net.md)  
+- Previous article:&nbsp;&nbsp;&nbsp;[Step 3: Proof of concept connecting to SQL using ADO.NET](step-3-proof-of-concept-connecting-to-sql-using-ado-net.md)  
 
   
 This topic provides a C# code sample that demonstrates custom retry logic. The retry logic provides reliability. The retry logic is designed to gracefully process temporary errors or *transient faults* which tend to go away if the program waits several seconds and retries.  
@@ -29,16 +24,16 @@ This topic provides a C# code sample that demonstrates custom retry logic. The r
 Sources of transient faults include:  
   
 - A brief failure of the networking that supports the Internet.  
-- A cloud system might be load balancing its resources at the moment you query sent.  
+- A cloud system might be load balancing its resources at the moment your query was sent.  
   
   
 The ADO.NET classes for connecting to your local Microsoft SQL Server can also connect to Azure SQL Database. However, by themselves the ADO.NET classes cannot provide all the robustness and reliability necessary in production use. Your client program can encounter transient faults from which it should silently and gracefully recover and continue on its own.  
   
 ## Step 1: Identify transient errors  
   
-Your program must distinguish between transient errors versus persistent errors. Transient faults are error conditions that may clear up within a short period of time, such as transient network problems.  An example of a persistent error would be, if your program has a misspelling of the target database name - in this case, the "No such database found" error would persist, and has no chance of clearing up within a short period of time.  
+Your program must distinguish between transient errors versus persistent errors. Transient errors are error conditions that may clear up within a short period of time, such as transient network problems.  An example of a persistent error would be, if your program has a misspelling of the target database name - in this case, the "No such database found" error would persist, and has no chance of clearing up within a short period of time.  
   
-The list of error numbers that are categorized as transient faults is available at at [Error messages for SQL Database client applications](http://azure.microsoft.com/documentation/articles/sql-database-develop-error-messages/)  
+The list of error numbers that are categorized as transient faults is available at [Error messages for SQL Database client applications](https://docs.microsoft.com/azure/sql-database/sql-database-develop-error-messages/)  
   
 ## Step 2: Create and Run sample application  
   
@@ -268,7 +263,7 @@ There are a variety of ways you can simulate a transient error to test your retr
   
 The code sample includes:  
   
-- A small second class named **TestSqlException**, which a property named **Number**.  
+- A small second class named **TestSqlException**, with a property named **Number**.  
 - `//throw new TestSqlException(4060);` , which you can uncomment.  
   
 If you uncomment the throw statement, and recompile, the next run of **RetryAdo2.exe** outputs something similar to the following.  
@@ -307,7 +302,7 @@ To prove the code handles persistent errors correctly, rerun the preceding test 
   
 1. Temporarily add 40615 as another error number to **TransientErrorNumbers**, and recompile.  
 2. Set a breakpoint on the line: `new QC.SqlConnectionStringBuilder()`.  
-3. Use the *Edit and Continue* feature to purposely misspell the server name, a couple lines below.  
+3. Use the *Edit and Continue* feature to purposely misspell the server name, a couple of lines below.  
     - Let the program run and come back to your breakpoint.  
     - The error 40615 occurs.  
 4. Fix the misspelling.  
@@ -316,5 +311,4 @@ To prove the code handles persistent errors correctly, rerun the preceding test 
   
 ## Next Steps  
   
-To explore other best practicies and design guidelines, visit [Connecting to SQL Database: Links, Best Practices and Design Guidelines](http://azure.microsoft.com/documentation/articles/sql-database-connect-central-recommendations/)  
-
+To explore other best practicies and design guidelines, visit [Connecting to SQL Database: Links, Best Practices and Design Guidelines](https://azure.microsoft.com/documentation/articles/sql-database-connect-central-recommendations/)  

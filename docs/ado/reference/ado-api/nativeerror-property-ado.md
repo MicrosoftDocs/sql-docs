@@ -1,14 +1,12 @@
 ---
 title: "NativeError Property (ADO) | Microsoft Docs"
-ms.prod: "sql-non-specified"
-ms.technology:
-  - "drivers"
+ms.prod: sql
+ms.prod_service: connectivity
+ms.technology: connectivity
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 apitype: "COM"
 f1_keywords: 
   - "Error::GetNativeError"
@@ -17,10 +15,9 @@ f1_keywords:
 helpviewer_keywords: 
   - "NativeError property [ADO]"
 ms.assetid: b9b47e57-18a4-4186-aef5-5bd18d7b1d74
-caps.latest.revision: 11
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # NativeError Property (ADO)
 Indicates the provider-specific error code for a given [Error](../../../ado/reference/ado-api/error-object.md) object.  

@@ -2,12 +2,10 @@
 title: "SWITCHOFFSET (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "12/02/2015"
-ms.prod: "sql-non-specified"
+ms.prod: sql
+ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: t-sql
 ms.topic: "language-reference"
 f1_keywords: 
   - "SWITCHTZ"
@@ -23,13 +21,13 @@ helpviewer_keywords:
   - "date and time [SQL Server], SWITCHOFFSET"
   - "time zones [SQL Server]"
 ms.assetid: 32a48e36-0aa4-4260-9fe9-cae9197d16c5
-caps.latest.revision: 26
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # SWITCHOFFSET (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Returns a **datetimeoffset** value that is changed from the stored time zone offset to a specified new time zone offset.  
   
@@ -40,8 +38,6 @@ manager: "jhubbard"
 ## Syntax  
   
 ```  
--- Syntax for SQL Server, Azure SQL Database, Azure SQL Data Warehouse, Parallel Data Warehouse  
-  
 SWITCHOFFSET ( DATETIMEOFFSET, time_zone )   
 ```  
   
@@ -70,27 +66,6 @@ WHERE c1 > @dt OPTION (RECOMPILE);
 ```  
   
 ## Examples  
- The following example uses `SWITCHOFFSET` to display a different time zone offset than the value stored in the database.  
-  
-```  
-CREATE TABLE dbo.test   
-    (  
-    ColDatetimeoffset datetimeoffset  
-    );  
-GO  
-INSERT INTO dbo.test   
-VALUES ('1998-09-20 7:45:50.71345 -5:00');  
-GO  
-SELECT SWITCHOFFSET (ColDatetimeoffset, '-08:00')   
-FROM dbo.test;  
-GO  
---Returns: 1998-09-20 04:45:50.7134500 -08:00  
-SELECT ColDatetimeoffset  
-FROM dbo.test;  
---Returns: 1998-09-20 07:45:50.7134500 -05:00  
-```  
-  
-## Examples: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
  The following example uses `SWITCHOFFSET` to display a different time zone offset than the value stored in the database.  
   
 ```  

@@ -1,28 +1,21 @@
 ---
-title: "Step 4: Create Data Features using T-SQL  | Microsoft Docs"
-ms.custom: ""
-ms.date: "05/25/2017"
-ms.prod: "sql-server-2017"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "r-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to: 
-  - "SQL Server 2017"
-dev_langs: 
-  - "Python"
-  - "TSQL"
-ms.assetid: 
-caps.latest.revision: 2
-author: "jeannt"
-ms.author: "jeannt"
-manager: "jhubbard"
+title: Create data features using T-SQL functions (Python in SQL Server Machine Learning)   | Microsoft Docs
+description: Tutorial showing how to add calculations to stored procedures for use in Python machine learning models.
+ms.prod: sql
+ms.technology: machine-learning
+
+ms.date: 11/01/2018  
+ms.topic: tutorial
+author: HeidiSteen
+ms.author: heidist
+manager: cgronlun
 ---
-# Step 4: Create Data Features using T-SQL
+# Create Data Features using T-SQL
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 After data exploration, you have collected some insights from the data, and are ready to move on to *feature engineering*. This process of creating features from the raw data can be a critical step in advanced analytics modeling.
+
+This article is part of a tutorial, [In-database Python analytics for SQL developers](sqldev-in-database-python-for-sql-developers.md). 
 
 In this step, you'll learn how to create features from raw data by using a [!INCLUDE[tsql](../../includes/tsql-md.md)] function. You'll then call that function from a stored procedure to create a table that contains the feature values.
 
@@ -113,15 +106,12 @@ To add the computed value to a table that can be used for training the model, yo
 
 In the next step, you'll learn how to use these data features to create and train a machine learning model using Python.
 
-## Next Step
+## Next step
 
-[Step 5: Train and Save a Model using T-SQL](sqldev-py5-train-and-save-a-model-using-t-sql.md)
+[Train and save a Python model using T-SQL](sqldev-py5-train-and-save-a-model-using-t-sql.md)
 
-## Previous Step
+## Previous step
 
-[Step 3: Explore and Visualize the Data](sqldev-py3-explore-and-visualize-the-data.md)
+[Explore and visualize the data](sqldev-py3-explore-and-visualize-the-data.md)
 
-## See Also
-
-[Machine Learning Services with Python](../python/sql-server-python-services.md)
 

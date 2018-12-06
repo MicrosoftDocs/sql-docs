@@ -1,32 +1,17 @@
 ---
 title: "Authorizing access to objects and operations (Analysis Services) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.asvs.roledesignerdialog.general.f1"
-  - "sql13.asvs.roledesignerdialog.membership.f1"
-helpviewer_keywords: 
-  - "access rights [Analysis Services], users"
-  - "permissions [Analysis Services], users"
-  - "security [Analysis Services], user access"
-  - "user access rights [Analysis Services]"
-  - "granting permissions [Analysis Services], users"
-ms.assetid: af28524e-5eca-4dce-a050-da4f406ee1c7
-caps.latest.revision: 35
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: multidimensional-models
+ms.topic: conceptual
+ms.author: owend
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
 ---
 # Authorizing access to objects and operations (Analysis Services)
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   Non-administrative user access to cubes, dimensions, and mining models within an [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] database is granted through membership in one or more database roles. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] administrators create these database roles, granting Read or Read/Write permissions on [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] objects, and then assigning [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows users and groups to each role.  
   
  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] determines the effective permissions for a specific Windows user or group by combining the permissions that are associated with each database role to which the user or group belongs. As a result, if one database role does not give a user or group permission to view a dimension, measure, or attribute, but a different database role does give that user or group permission, the user or group will have permission to view the object.  

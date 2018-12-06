@@ -2,25 +2,23 @@
 title: "Create a Server Audit and Database Audit Specification | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
+ms.prod: sql
+ms.prod_service: security
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: security
+ms.topic: conceptual
 f1_keywords: 
   - "sql13.swb.sqlaudit.dbaudit.general.f1"
 helpviewer_keywords: 
   - "audits [SQL Server], creating database specification"
   - "database audit [SQL Server]"
 ms.assetid: 26ee85de-6e97-4318-b526-900924d96e62
-caps.latest.revision: 17
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: VanMSFT
+ms.author: vanto
+manager: craigg
 ---
 # Create a Server Audit and Database Audit Specification
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   This topic describes how to create a server audit and database audit specification in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../../includes/tsql-md.md)].  
   
  *Auditing* an instance of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] or a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] database involves tracking and logging events that occur on the system. The *SQL Server Audit* object collects a single instance of server- or database-level actions and groups of actions to monitor. The audit is at the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] instance level. You can have multiple audits per [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] instance. The *Database-Level Audit Specification* object belongs to an audit. You can create one database audit specification per SQL Server database per audit. For more information, see [SQL Server Audit &#40;Database Engine&#41;](../../../relational-databases/security/auditing/sql-server-audit-database-engine.md).  
@@ -62,7 +60,7 @@ manager: "jhubbard"
   
 1.  In Object Explorer, expand the **Security** folder.  
   
-2.  Right-click the **Audits** folder and select **New Audit…**. For more information, see [Create a Server Audit and Server Audit Specification](../../../relational-databases/security/auditing/create-a-server-audit-and-server-audit-specification.md).  
+2.  Right-click the **Audits** folder and select **New Audit...**. For more information, see [Create a Server Audit and Server Audit Specification](../../../relational-databases/security/auditing/create-a-server-audit-and-server-audit-specification.md).  
   
 3.  When you are finished selecting options, click **OK**.  
   
@@ -72,7 +70,7 @@ manager: "jhubbard"
   
 2.  Expand the **Security** folder.  
   
-3.  Right-click the **Database Audit Specifications** folder and select **New Database Audit Specification…**.  
+3.  Right-click the **Database Audit Specifications** folder and select **New Database Audit Specification...**.  
   
      The following options are available on the **Create Database Audit Specification** dialog box.  
   
@@ -91,13 +89,13 @@ manager: "jhubbard"
      **Object Name**  
      The name of the object to audit. This is only available for audit actions; it does not apply to audit groups.  
   
-     **Ellipsis (…)**  
+     **Ellipsis (...)**  
      Opens the **Select Objects** dialog to browse for and select an available object, based on the specified **Audit Action Type**.  
   
      **Principal Name**  
      The account to filter the audit by for the object being audited.  
   
-     **Ellipsis (…)**  
+     **Ellipsis (...)**  
      Opens the **Select Objects** dialog to browse for and select an available object, based on the specified **Object Name**.  
   
 4.  When you are finished selecting option, click **OK**.  

@@ -1,27 +1,17 @@
 ---
 title: "Using Nested Table Data as an Input for an Accuracy Chart | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Mining Accuracy Chart [Analysis Services], nested tables"
-  - "Mining Accuracy Chart [Analysis Services], input tables"
-  - "nested tables"
-  - "adding nested tables"
-ms.assetid: 162e0686-ada3-4dd3-9151-9589926e6613
-caps.latest.revision: 24
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
+ms.date: 05/08/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: data-mining
+ms.topic: conceptual
+ms.author: owend
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
 ---
 # Using Nested Table Data as an Input for an Accuracy Chart
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   When you test the accuracy of a mining model by using external data, if the mining model contains nested tables, the external data must also contain a case table and an associated nested table.  
   
  This topic describes how to work with nested tables used for model testing, how to map nested and case tables in the mode and in the external data, and how to apply a filter to a nested table.  
@@ -42,7 +32,7 @@ manager: "jhubbard"
   
 3.  In **Select data set to be used for accuracy chart**, select the option **Specify a different data set**.  
   
-4.  Click the browse button **(…)** to choose the external data set from a list of data source views on the current server.  
+4.  Click the browse button **(...)** to choose the external data set from a list of data source views on the current server.  
   
 5.  Click **Select Case Table**. In the **Select Table** dialog box, choose the table from the data source view that contains the case data, and then click **OK**.  
   

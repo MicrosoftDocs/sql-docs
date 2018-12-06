@@ -1,27 +1,17 @@
 ---
 title: "Make a Copy of a Mining Model | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/20/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "mining models [Analysis Services], copying"
-  - "mining models [Analysis Services], creating"
-  - "mining models [Analysis Services], how-to topics"
-  - "copying mining models"
-ms.assetid: 7975bb02-f188-49a0-b7de-5b9b216254ad
-caps.latest.revision: 12
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
+ms.date: 05/08/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: data-mining
+ms.topic: conceptual
+ms.author: owend
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
 ---
 # Make a Copy of a Mining Model
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   Creating a copy of a mining model is useful when you want to quickly create several mining models that are based on the same data. After you copy the model, you can then edit the new copy by changing parameters or adding a filter.  
   
  For example, if you have a Customers table that is linked to a table of purchases, you could create copies to generate separate mining models for each customer demographic, filtering on attributes such as age or region.  
@@ -36,7 +26,7 @@ manager: "jhubbard"
   
 3.  Select the model, and right-click to open the shortcut menu.  
   
-     –or–  
+     -or-  
   
      Select the model. On the **Mining Model** menu, select **New Mining Model**.  
   
@@ -46,7 +36,7 @@ manager: "jhubbard"
   
 1.  Select the mining model.  
   
-2.  In the **Properties** window, click the text box for the **Filter** property, and the click the build **(…)** button.  
+2.  In the **Properties** window, click the text box for the **Filter** property, and the click the build **(...)** button.  
   
 3.  Change the filter conditions.  
   

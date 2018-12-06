@@ -2,12 +2,10 @@
 title: "Index Properties F1 Help | Microsoft Docs"
 ms.custom: ""
 ms.date: "02/17/2017"
-ms.prod: "sql-server-2016"
+ms.prod: sql
+ms.prod_service: "table-view-index, sql-database"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-indexes"
-ms.tgt_pltfrm: ""
+ms.technology: table-view-index
 ms.topic: "reference"
 f1_keywords: 
   - "sql13.swb.indexproperties.filter.f1"
@@ -18,13 +16,13 @@ f1_keywords:
   - "sql13.swb.indexproperties.options.f1"
   - "sql13.swb.indexproperties.spatial.f1"
 ms.assetid: 45efd81a-3796-4b04-b0cc-f3deec94c733
-caps.latest.revision: 38
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Index Properties F1 Help
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
   The sections in this topic refer to various index properties that are available by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] dialogs.  
   
@@ -180,7 +178,7 @@ manager: "jhubbard"
 ### Bounding Box  
  The *bounding box* is the perimeter of the top-level grid of a geometric plane. The bounding-box parameters exist only in the geometry grid tessellation. These parameters are unavailable if the **Tessellation Scheme** is **Geography grid**.  
   
- The panel displays the **(***X-min***,***Y-min***)** and **(***X-max***,***Y-max***)** coordinates of the bounding box. There are no default coordinate values. Therefore, when you are creating a new spatial index on a **geometry** type column, you must specify the coordinate values.  
+ The panel displays the **(**_X-min_**,**_Y-min_**)** and **(**_X-max_**,**_Y-max_**)** coordinates of the bounding box. There are no default coordinate values. Therefore, when you are creating a new spatial index on a **geometry** type column, you must specify the coordinate values.  
   
  **X-min**  
  The X-coordinate of the lower-left corner of the bounding box.  

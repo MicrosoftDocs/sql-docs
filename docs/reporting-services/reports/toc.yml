@@ -1,0 +1,33 @@
+- name: Overview
+  href: reporting-services-reports-ssrs.md
+- name: Publishing Data Sources and Reports
+  href: publishing-data-sources-and-reports.md
+  items:
+  - name: Previewing Reports
+    href: previewing-reports.md
+  - name: Publishing Reports to a Report Server
+    href: publishing-reports-to-a-report-server.md
+  - name: Publish a Report to a SharePoint Library
+    href: publish-a-report-to-a-sharepoint-library.md
+  - name: Publish a Shared Data Source to a SharePoint Library
+    href: publish-a-shared-data-source-to-a-sharepoint-library.md
+- name: Report Definition Language
+  href: report-definition-language-ssrs.md
+- name: Find the Report Definition Schema Version
+  href: find-the-report-definition-schema-version-ssrs.md
+- name: Find Text, Numbers, or Dates in a Report
+  href: find-text-numbers-or-dates-in-a-report.md
+- name: Configure Execution Properties for a Report
+  href: configure-execution-properties-for-a-report-report-manager.md
+- name: Limit Report History
+  href: limit-report-history-report-manager.md
+- name: Open and Close a Report
+  href: open-and-close-a-report-report-manager.md
+- name: Upload a File or Report
+  href: upload-a-file-or-report-report-manager.md
+- name: Create a Linked Report
+  href: create-a-linked-report.md
+- name: Clickthrough Reports (SSRS)
+  href: clickthrough-reports-ssrs.md
+- name: View and Explore Native Mode Reports Using SharePoint Web Parts (SSRS)
+  href: view-and-explore-native-mode-reports-using-sharepoint-web-parts-ssrs.md

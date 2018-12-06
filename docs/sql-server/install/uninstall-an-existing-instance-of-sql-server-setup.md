@@ -2,14 +2,10 @@
 title: "Uninstall an Existing Instance of SQL Server (Setup) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/27/2017"
-ms.prod: "sql-server-2016"
+ms.prod: sql
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "setup-install"
-  - "setup-install"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: install
+ms.topic: conceptual
 helpviewer_keywords: 
   - "removing instances of SQL Server"
   - "uninstalling instances of SQL Server"
@@ -17,20 +13,20 @@ helpviewer_keywords:
   - "instances of SQL Server, uninstalling"
   - "uninstalling SQL Server"
 ms.assetid: 3c64b29d-61d7-4b86-961c-0de62261c6a1
-caps.latest.revision: 74
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
 ---
 # Uninstall an Existing Instance of SQL Server (Setup)
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
- > For content related to previous versions of SQL Server, see [Uninstall an Existing Instance of SQL Server (Setup)](https://msdn.microsoft.com/en-US/library/ms143412(SQL.120).aspx).
-
-  This article describes how to uninstall a stand-alone instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. By following the steps in this topic, you also prepare the system so that you can reinstall [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+  This article describes how to uninstall a stand-alone instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. By following the steps in this article, you also prepare the system so that you can reinstall [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
->**IMPORTANT!** To uninstall an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], you must be a local administrator with permission to log on as a service.  
+  >[!IMPORTANT]
+  > To uninstall an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], you must be a local administrator with permission to log on as a service.  
   
-> **NOTE:** To uninstall a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] failover cluster, use the Remove Node functionality provided by [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Setup to remove each node individually. For more information, see [Add or Remove Nodes in a SQL Server Failover Cluster &#40;Setup&#41;](../../sql-server/failover-clusters/install/add-or-remove-nodes-in-a-sql-server-failover-cluster-setup.md)  
+ > [!NOTE]
+ > To uninstall a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] failover cluster, use the Remove Node functionality provided by [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Setup to remove each node individually. For more information, see [Add or Remove Nodes in a SQL Server Failover Cluster &#40;Setup&#41;](../../sql-server/failover-clusters/install/add-or-remove-nodes-in-a-sql-server-failover-cluster-setup.md)  
   
  Note the following important scenarios before you uninstall [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:  
   
@@ -100,7 +96,7 @@ manager: "jhubbard"
   
 1.  If the uninstallation process does not complete successfully, attempt to fix the problem that caused the uninstallation to fail. The following articles can help you understand the cause of the failed uninstallation:  
   
-    -   [How to identify SQL Server 2008 setup issues in the setup log files](http://support.microsoft.com/kb/955396/en-us)  
+    -   [How to identify SQL Server 2008 setup issues in the setup log files](https://support.microsoft.com/kb/955396/en-us)  
   
     -   [View and Read SQL Server Setup Log Files](../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md)  
   

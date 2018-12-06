@@ -2,12 +2,10 @@
 title: "TEXTVALID (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
+ms.prod_service: "sql-database"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: t-sql
 ms.topic: "language-reference"
 f1_keywords: 
   - "TEXTVALID_TSQL"
@@ -22,13 +20,12 @@ helpviewer_keywords:
   - "text-pointer values"
   - "verifying text pointers"
 ms.assetid: 9411c349-b59b-4740-a270-92f91d81ad23
-caps.latest.revision: 29
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
 ---
 # Text and Image Functions - TEXTVALID (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   A **text**, **ntext**, or **image** function that checks whether a specific text pointer is valid.  
   
@@ -64,8 +61,8 @@ TEXTVALID ( 'table.column' ,text_ ptr )
   
 |Function or statement|Description|  
 |---------------------------|-----------------|  
-|PATINDEX**(**'*%pattern%**'***,** *expression***)**|Returns the character position of a specified character string in **text** and **ntext** columns.|  
-|DATALENGTH**(***expression***)**|Returns the length of data in **text**, **ntext**, and **image** columns.|  
+|PATINDEX**(**'_%pattern%_'**,** _expression_**)**|Returns the character position of a specified character string in **text** and **ntext** columns.|  
+|DATALENGTH**(**_expression_**)**|Returns the length of data in **text**, **ntext**, and **image** columns.|  
 |SET TEXTSIZE|Returns the limit, in bytes, of the **text**, **ntext**, or **image** data to be returned with a SELECT statement.|  
   
 ## Examples  
@@ -105,7 +102,7 @@ pub_id Valid (if 1) Text data
  [DATALENGTH &#40;Transact-SQL&#41;](../../t-sql/functions/datalength-transact-sql.md)   
  [PATINDEX &#40;Transact-SQL&#41;](../../t-sql/functions/patindex-transact-sql.md)   
  [SET TEXTSIZE &#40;Transact-SQL&#41;](../../t-sql/statements/set-textsize-transact-sql.md)   
- [Text and Image Functions &#40;Transact-SQL&#41;](http://msdn.microsoft.com/library/b9c70488-1bf5-4068-a003-e548ccbc5199)   
+ [Text and Image Functions &#40;Transact-SQL&#41;](https://msdn.microsoft.com/library/b9c70488-1bf5-4068-a003-e548ccbc5199)   
  [TEXTPTR &#40;Transact-SQL&#41;](../../t-sql/functions/text-and-image-functions-textptr-transact-sql.md)  
   
   

@@ -2,12 +2,10 @@
 title: "TOP (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/16/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
+ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: t-sql
 ms.topic: "language-reference"
 f1_keywords: 
   - "TOP_TSQL"
@@ -20,13 +18,13 @@ helpviewer_keywords:
   - "TOP clause, about TOP clause"
   - "queries [SQL Server], results"
 ms.assetid: da983c0a-06c5-4cf8-a6a4-7f9d66f34f2c
-caps.latest.revision: 60
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "douglaslMS"
+ms.author: "douglasl"
+manager: craigg
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # TOP (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Limits the rows returned in a query result set to a specified number of rows or percentage of rows in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. When TOP is used in conjunction with the ORDER BY clause, the result set is limited to the first *N* number of ordered rows; otherwise, it returns the first *N* number of rows in an undefined order. Use this clause to specify the number of rows returned from a SELECT statement or affected by an INSERT, UPDATE, MERGE, or DELETE statement.  
   
@@ -85,7 +83,7 @@ manager: "jhubbard"
   
  Use caution when specifying the TOP clause in a query that contains a UNION, UNION ALL, EXCEPT, or INTERSECT operator. It is possible to write a query that returns unexpected results because the order in which the TOP and ORDER BY clauses are logically processed is not always intuitive when these operators are used in a select operation. For example, given the following table and data, assume that you want to return the least expensive red car and the least expensive blue car. That is, the red sedan and the blue van.  
   
-```  
+```sql  
 CREATE TABLE dbo.Cars(Model varchar(15), Price money, Color varchar(10));  
 INSERT dbo.Cars VALUES  
     ('sedan', 10000, 'red'), ('convertible', 15000, 'blue'),   
@@ -94,7 +92,7 @@ INSERT dbo.Cars VALUES
   
  To achieve these results, you might write the following query.  
   
-```  
+```sql  
 SELECT TOP(1) Model, Color, Price  
 FROM dbo.Cars  
 WHERE Color = 'red'  
@@ -103,21 +101,21 @@ SELECT TOP(1) Model, Color, Price
 FROM dbo.Cars  
 WHERE Color = 'blue'  
 ORDER BY Price ASC;  
+GO    
 ```  
   
  Here is the result set.  
   
- `Model         Color      Price`  
-  
- `------------- ---------- -------`  
-  
- `sedan         red        10000.00`  
-  
- `convertible   blue       15000.00`  
+ ```
+ Model         Color      Price  
+ ------------- ---------- -------  
+ sedan         red        10000.00  
+ convertible   blue       15000.00
+ ```  
   
  The unexpected results are returned because the TOP clause is logically executed before the ORDER BY clause, which sorts the results of the operator (UNION ALL in this case). Thus, the previous query returns any one red car and any one blue car and then orders the result of that union by the price. The following example shows the correct method of writing this query to achieve the desired result.  
   
-```  
+```sql  
 SELECT Model, Color, Price  
 FROM (SELECT TOP(1) Model, Color, Price  
       FROM dbo.Cars  
@@ -129,19 +127,19 @@ FROM (SELECT TOP(1) Model, Color, Price
       FROM dbo.Cars  
       WHERE Color = 'blue'  
       ORDER BY Price ASC) AS b;  
+GO    
 ```  
   
  By using TOP and ORDER BY in a subselect operation, you ensure that the results of the ORDER BY clause is used applied to the TOP clause and not to sorting the result of the UNION operation.  
   
  Here is the result set.  
   
- `Model         Color      Price`  
-  
- `------------- ---------- -------`  
-  
- `sedan         red        10000.00`  
-  
- `van           blue        8000.00`  
+ ```
+ Model         Color      Price  
+ ------------- ---------- -------  
+ sedan         red        10000.00  
+ van           blue        8000.00
+ ```  
   
 ## Limitations and Restrictions  
  When TOP is used with INSERT, UPDATE, MERGE, or DELETE, the referenced rows are not arranged in any order and the ORDER BY clause can not be directly specified in these statements. If you need to use TOP to insert, delete, or modify rows in a meaningful chronological order, you must use TOP together with an ORDER BY clause that is specified in a subselect statement. See the Examples section that follows in this topic.  
@@ -164,7 +162,7 @@ FROM (SELECT TOP(1) Model, Color, Price
 #### A. Using TOP with a constant value  
  The following examples use a constant value to specify the number of employees that are returned in the query result set. In the first example, the first 10 undefined rows are returned because an ORDER BY clause is not used. In the second example, an ORDER BY clause is used to return the top 10 recently hired employees.  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 -- Select the first 10 random employees.  
@@ -175,33 +173,32 @@ GO
 SELECT TOP(10)JobTitle, HireDate  
 FROM HumanResources.Employee  
 ORDER BY HireDate DESC;  
-  
+GO  
 ```  
   
 #### B. Using TOP with a variable  
  The following example uses a variable to specify the number of employees that are returned in the query result set.  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 DECLARE @p AS int = 10;  
 SELECT TOP(@p)JobTitle, HireDate, VacationHours  
 FROM HumanResources.Employee  
-ORDER BY VacationHours DESC  
+ORDER BY VacationHours DESC;  
 GO  
-  
 ```  
   
 #### C. Specifying a percentage  
  The following example uses PERCENT to specify the number of employees that are returned in the query result set. There are 290 employees in the `HumanResources.Employee` table. Because 5 percent of 290 is a fractional value, the value is rounded up to the next whole number.  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 SELECT TOP(5)PERCENT JobTitle, HireDate  
 FROM HumanResources.Employee  
 ORDER BY HireDate DESC;  
-  
+GO    
 ```  
   
 ###  <a name="tie"></a> Including tie values  
@@ -209,10 +206,10 @@ ORDER BY HireDate DESC;
 #### A. Using WITH TIES to include rows that match the values in the last row  
  The following example obtains the top `10` percent of all employees with the highest salary and returns them in descending order according to their salary. Specifying `WITH TIES` makes sure that any employees that have salaries equal to the lowest salary returned (the last row) are also included in the result set, even if doing this exceeds `10` percent of employees.  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
-SELECT TOP(10)WITH TIES  
+SELECT TOP(10) PERCENT WITH TIES  
 pp.FirstName, pp.LastName, e.JobTitle, e.Gender, r.Rate  
 FROM Person.Person AS pp   
     INNER JOIN HumanResources.Employee AS e  
@@ -220,7 +217,7 @@ FROM Person.Person AS pp
     INNER JOIN HumanResources.EmployeePayHistory AS r  
         ON r.BusinessEntityID = e.BusinessEntityID  
 ORDER BY Rate DESC;  
-  
+GO    
 ```  
   
 ###  <a name="DML"></a> Limiting the rows affected by DELETE, INSERT, or UPDATE  
@@ -228,19 +225,18 @@ ORDER BY Rate DESC;
 #### A. Using TOP to limit the number of rows deleted  
  When a TOP (*n*) clause is used with DELETE, the delete operation is performed on an undefined selection of *n* number of rows. That is, the DELETE statement chooses any (*n*) number of rows that meet the criteria defined in the WHERE clause. The following example deletes `20` rows from the `PurchaseOrderDetail` table that have due dates that are earlier than July 1, 2002.  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 DELETE TOP (20)   
 FROM Purchasing.PurchaseOrderDetail  
 WHERE DueDate < '20020701';  
 GO  
-  
 ```  
   
  If you have to use TOP to delete rows in a meaningful chronological order, you must use TOP together with ORDER BY in a subselect statement. The following query deletes the 10 rows of the `PurchaseOrderDetail` table that have the earliest due dates. To ensure that only 10 rows are deleted, the column specified in the subselect statement (`PurchaseOrderID`) is the primary key of the table. Using a nonkey column in the subselect statement may result in the deletion of more than 10 rows if the specified column contains duplicate values.  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 DELETE FROM Purchasing.PurchaseOrderDetail  
@@ -254,7 +250,7 @@ GO
 #### B. Using TOP to limit the number of rows inserted  
  The following example creates the table `EmployeeSales` and inserts the name and year-to-date sales data for the top 5 employees from the table `HumanResources.Employee`. The INSERT statement chooses any 5 rows returned by the `SELECT` statement that meet the criteria defined in the WHERE clause.  The OUTPUT clause displays the rows that are inserted into the `EmployeeSales` table. Notice that the ORDER BY clause in the SELECT statement is not used to determine the top 5 employees.  
   
-```  
+```sql  
 USE AdventureWorks2012 ;  
 GO  
 IF OBJECT_ID ('dbo.EmployeeSales', 'U') IS NOT NULL  
@@ -275,12 +271,12 @@ INSERT TOP(5)INTO dbo.EmployeeSales
         ON sp.BusinessEntityID = c.BusinessEntityID  
     WHERE sp.SalesYTD > 250000.00  
     ORDER BY sp.SalesYTD DESC;  
-  
+GO    
 ```  
   
  If you have to use TOP to insert rows in a meaningful chronological order, you must use TOP together with ORDER BY in a subselect statement as shown in the following example. The OUTPUT clause displays the rows that are inserted into the `EmployeeSales` table. Notice that the top 5 employees are now inserted based on the results of the ORDER BY clause instead of undefined rows.  
   
-```  
+```sql  
 INSERT INTO dbo.EmployeeSales  
     OUTPUT inserted.EmployeeID, inserted.FirstName, inserted.LastName, inserted.YearlySales  
     SELECT TOP (5) sp.BusinessEntityID, c.LastName, c.FirstName, sp.SalesYTD   
@@ -289,13 +285,13 @@ INSERT INTO dbo.EmployeeSales
         ON sp.BusinessEntityID = c.BusinessEntityID  
     WHERE sp.SalesYTD > 250000.00  
     ORDER BY sp.SalesYTD DESC;  
-  
+GO    
 ```  
   
 #### C. Using TOP to limit the number of rows updated  
  The following example uses the TOP clause to update rows in a table. When a TOP (*n*) clause is used with UPDATE, the update operation is performed on an undefined number of rows. That is, the UPDATE statement chooses any (*n*) number of rows that meet the criteria defined in the WHERE clause. The following example assigns 10 customers from one salesperson to another.  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 UPDATE TOP (10) Sales.Store  
 SET SalesPersonID = 276  
@@ -305,7 +301,7 @@ GO
   
  If you have to use TOP to apply updates in a meaningful chronology, you must use TOP together with ORDER BY in a subselect statement. The following example updates the vacation hours of the 10 employees with the earliest hire dates.  
   
-```  
+```sql  
 UPDATE HumanResources.Employee  
 SET VacationHours = VacationHours + 8  
 FROM (SELECT TOP 10 BusinessEntityID FROM HumanResources.Employee  
@@ -319,7 +315,7 @@ GO
   
  Using **TOP** without specifying ties.  
   
-```  
+```sql  
 SELECT TOP (31) FirstName, LastName   
 FROM DimEmployee ORDER BY LastName;  
 ```  
@@ -328,7 +324,7 @@ FROM DimEmployee ORDER BY LastName;
   
  Using TOP, specifying WITH TIES.  
   
-```  
+```sql  
 SELECT TOP (31) WITH TIES FirstName, LastName   
 FROM DimEmployee ORDER BY LastName;  
 ```  
@@ -344,5 +340,4 @@ FROM DimEmployee ORDER BY LastName;
  [SET ROWCOUNT &#40;Transact-SQL&#41;](../../t-sql/statements/set-rowcount-transact-sql.md)   
  [MERGE &#40;Transact-SQL&#41;](../../t-sql/statements/merge-transact-sql.md)  
   
-  
-
+ 

@@ -1,0 +1,16 @@
+- name: Overview
+  href: views.md
+- name: Create Views
+  href: create-views.md
+- name: Create Indexed Views
+  href: create-indexed-views.md
+- name: Modify Views
+  href: modify-views.md
+- name: Modify Data Through a View
+  href: modify-data-through-a-view.md
+- name: Get Information About a View
+  href: get-information-about-a-view.md
+- name: Rename Views
+  href: rename-views.md
+- name: Delete Views
+  href: delete-views.md

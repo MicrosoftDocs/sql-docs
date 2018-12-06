@@ -1,13 +1,11 @@
 ---
 title: "UNION (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "07/24/2017"
-ms.prod: "sql-non-specified"
+ms.date: "08/07/2017"
+ms.prod: sql
+ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: t-sql
 ms.topic: "language-reference"
 f1_keywords: 
   - "UNION"
@@ -19,13 +17,13 @@ helpviewer_keywords:
   - "combining query results"
   - "UNION operator [SQL Server]"
 ms.assetid: 607c296f-8a6a-49bc-975a-b8d0c0914df7
-caps.latest.revision: 34
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "douglaslMS"
+ms.author: "douglasl"
+manager: craigg
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Set Operators - UNION (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Combines the results of two or more queries into a single result set that includes all the rows that belong to all queries in the union. The UNION operation is different from using joins that combine columns from two tables.  
   
@@ -40,8 +38,6 @@ manager: "jhubbard"
 ## Syntax  
   
 ```  
--- Syntax for SQL Server, Azure SQL Database, Azure SQL Data Warehouse, Parallel Data Warehouse  
-  
     { <query_specification> | ( <query_expression> ) }   
   UNION [ ALL ]   
   <query_specification | ( <query_expression> )   
@@ -50,7 +46,7 @@ manager: "jhubbard"
 ```  
   
 ## Arguments  
- \<query_specification> | ( <query_expression> )  
+\<query_specification> | ( \<query_expression> )
  Is a query specification or query expression that returns data to be combined with the data from another query specification or query expression. The definitions of the columns that are part of a UNION operation do not have to be the same, but they must be compatible through implicit conversion. When data types differ, the resulting data type is determined based on the rules for [data type precedence](../../t-sql/data-types/data-type-precedence-transact-sql.md). When the types are the same but differ in precision, scale, or length, the result is determined based on the same rules for combining expressions. For more information, see [Precision, Scale, and Length &#40;Transact-SQL&#41;](../../t-sql/data-types/precision-scale-and-length-transact-sql.md).  
   
  Columns of the **xml** data type must be equivalent. All columns must be either typed to an XML schema or untyped. If typed, they must be typed to the same XML schema collection.  

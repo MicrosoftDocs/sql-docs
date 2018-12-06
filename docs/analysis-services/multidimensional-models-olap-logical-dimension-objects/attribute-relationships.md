@@ -1,38 +1,17 @@
 ---
 title: "Attribute Relationships | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "docset-sql-devref"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-applies_to: 
-  - "SQL Server 2016 Preview"
-helpviewer_keywords: 
-  - "member properties [Analysis Services], attribute relationships"
-  - "security [Analysis Services], properties"
-  - "PROPERTIES keyword"
-  - "storage [Analysis Services], attribute relationships"
-  - "natural hierarchies [Analysis Services]"
-  - "dimensions [Analysis Services], member properties"
-  - "queries [MDX], attribute relationships"
-  - "user-defined hierarchies [Analysis Services]"
-  - "attributes [Analysis Services], relationships"
-  - "member properties [Analysis Services]"
-  - "members [Analysis Services], attribute relationships"
-  - "storing data [Analysis Services], attribute relationships"
-  - "relationships [Analysis Services], attributes"
-ms.assetid: 2491422a-4cf5-4b23-b6ab-289222b22ce8
-caps.latest.revision: 45
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: olap
+ms.topic: conceptual
+ms.author: owend
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
 ---
 # Attribute Relationships
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   In [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], attributes within a dimension are always related either directly or indirectly to the key attribute. When you define a dimension based on a star schema, which is where all dimension attributes are derived from the same relational table, an attribute relationship is automatically defined between the key attribute and each non-key attribute of the dimension. When you define a dimension based on a snowflake schema, which is where dimension attributes are derived from multiple related tables, an attribute relationship is automatically defined as follows:  
   
 -   Between the key attribute and each non-key attribute bound to columns in the main dimension table.  
@@ -79,7 +58,7 @@ manager: "erikre"
   
 -   The City attribute as an attribute relationship to the Customer attribute.  
   
- For navigating data in the cube, you can also create a user-defined hierarchy that does not represent a natural hierarchy in the data (which is called an *ad hoc* or *reporting* hierarchy). For example, you could create a user-defined hierarchy based on `{Age, Gender}`. Users do not see any difference in how the two hierarchies behave, although the natural hierarchy benefits from aggregating and indexing structures — hidden from the user — that account for the natural relationships in the source data.  
+ For navigating data in the cube, you can also create a user-defined hierarchy that does not represent a natural hierarchy in the data (which is called an *ad hoc* or *reporting* hierarchy). For example, you could create a user-defined hierarchy based on `{Age, Gender}`. Users do not see any difference in how the two hierarchies behave, although the natural hierarchy benefits from aggregating and indexing structures - hidden from the user - that account for the natural relationships in the source data.  
   
  The **SourceAttribute** property of a level determines which attribute is used to describe the level. The **KeyColumns** property on the attribute specifies the column in the data source view that supplies the members. The **NameColumn** property on the attribute can specify a different name column for the members.  
   

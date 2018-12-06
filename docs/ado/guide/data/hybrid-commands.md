@@ -1,23 +1,20 @@
 ---
 title: "Hybrid Commands | Microsoft Docs"
-ms.prod: "sql-non-specified"
-ms.technology:
-  - "drivers"
+ms.prod: sql
+ms.prod_service: connectivity
+ms.technology: connectivity
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "shape commands [ADO]"
   - "hybrid commands [ADO]"
   - "data shaping [ADO], hybrid commands"
 ms.assetid: e8ca40e8-459c-40e2-8dd3-3ec6d5ee7b51
-caps.latest.revision: 10
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # Hybrid Commands
 Hybrid commands are partially parameterized commands. For example:  

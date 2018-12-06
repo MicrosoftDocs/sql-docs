@@ -1,0 +1,11 @@
+### YamlMime:XRefMap
+sorted: true
+hrefUpdated: true
+references:
+- uid: System.Web.Services
+  commentId: N:System.Web.Services
+  href: https://msdn.microsoft.com/library/system.web.services.aspx
+  name: Services
+  name.vb: Services
+  fullName: System.Web.Services
+  fullName.vb: System.Web.Services

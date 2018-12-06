@@ -1,34 +1,17 @@
 ---
 title: "Understanding the DMX Select Statement | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/02/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "DMX"
-helpviewer_keywords: 
-  - "browsing mining model [Analysis Services]"
-  - "Data Mining Extensions [Analysis Services], statements"
-  - "DMX [Analysis Services], statements"
-  - "predictions [DMX]"
-  - "queries [DMX], Select statement"
-  - "SELECT statement [DMX]"
-  - "statements [DMX], SELECT statement"
-  - "copying mining models"
-ms.assetid: 61e97285-4a06-4434-9a40-38cde5af7c3f
-caps.latest.revision: 40
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
+ms.date: 06/07/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: dmx
+ms.topic: conceptual
+ms.author: owend
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
 ---
 # Understanding the DMX Select Statement
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   The [SELECT](../dmx/select-dmx.md) statement is the basis for most queries that you create with Data Mining Extensions (DMX) in [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. It can perform many different kinds of tasks, such as browsing and predicting against data mining models.  
   
@@ -44,7 +27,7 @@ manager: "erikre"
   
 -   Copy mining models.  
   
- Each of these tasks uses a different set of data, which we’ll call a *data domain*. You define the data domain in the **FROM** clause of the statement.  
+ Each of these tasks uses a different set of data, which we'll call a *data domain*. You define the data domain in the **FROM** clause of the statement.  
   
 -   You want to find objects in the data mining model itself, such as the rule that defines a set of data, or a formula used to make predictions.  
   
@@ -87,7 +70,7 @@ manager: "erikre"
 |SELECT DISTINCT FROM *\<model>*|Returns all the state values from the mining model for the specified column.<br /><br /> The data domain for this query type is the data mining model.<br /><br /> [SELECT DISTINCT FROM &#60;model &#62; &#40;DMX&#41;](../dmx/select-distinct-from-model-dmx.md)<br /><br /> [Content Queries &#40;Data Mining&#41;](../analysis-services/data-mining/content-queries-data-mining.md)|  
 |SELECT FROM *\<model>*.CONTENT|Returns content that describes the mining model.<br /><br /> The data domain for this query type is the content schema rowset.<br /><br /> [SELECT FROM &#60;model&#62;.CONTENT &#40;DMX&#41;](../dmx/select-from-model-content-dmx.md)<br /><br /> [Content Queries &#40;Data Mining&#41;](../analysis-services/data-mining/content-queries-data-mining.md)|  
 |SELECT FROM *\<model>*.DIMENSION_CONTENT|Returns content that describes the mining model.<br /><br /> The data domain for this query type is the content schema rowset.<br /><br /> [SELECT FROM &#60;model&#62;.DIMENSION_CONTENT &#40;DMX&#41;](../dmx/select-from-model-dimension-content-dmx.md)|  
-|SELECT FROM *\<model>*.PMML|Returns the Predictive Model Markup Language (PMML) representation of the mining model, for algorithms that support this functionality.<br /><br /> The domain for this query type is the PMML schema rowset.<br /><br /> [DMSCHEMA_MINING_MODEL_CONTENT_PMML Rowset](../analysis-services/schema-rowsets/data-mining/dmschema-mining-model-content-pmml-rowset.md)|  
+|SELECT FROM *\<model>*.PMML|Returns the Predictive Model Markup Language (PMML) representation of the mining model, for algorithms that support this functionality.<br /><br /> The domain for this query type is the PMML schema rowset.<br /><br /> [DMSCHEMA_MINING_MODEL_CONTENT_PMML Rowset](https://docs.microsoft.com/bi-reference/schema-rowsets/data-mining/dmschema-mining-model-content-pmml-rowset)|  
   
  [Back to Select Types](#Select_Types)  
   

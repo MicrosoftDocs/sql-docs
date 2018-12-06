@@ -1,13 +1,11 @@
 ---
 title: "CREATE XML INDEX (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/15/2017"
-ms.prod: "sql-non-specified"
+ms.date: "08/10/2017"
+ms.prod: sql
+ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: t-sql
 ms.topic: "language-reference"
 f1_keywords: 
   - "XML_TSQL"
@@ -27,13 +25,12 @@ helpviewer_keywords:
   - "index creation [SQL Server], XML indexes"
   - "XML indexes [SQL Server], creating"
 ms.assetid: c510cfbc-68be-4736-b3cc-dc5b7aa51f14
-caps.latest.revision: 38
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: craigg
 ---
 # CREATE XML INDEX (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Creates an XML index on a specified table. An index can be created before there is data in the table. XML indexes can be created on tables in another database by specifying a qualified database name.  
   
@@ -133,7 +130,7 @@ CREATE [ PRIMARY ] XML INDEX index_name
  *table_name*  
  Is the name of the table to be indexed.  
   
- **<xml_index_option> ::=**  
+ **\<xml_index_option> ::=** 
   
  Specifies the options to use when you create the index.  
   
@@ -249,7 +246,7 @@ CREATE [ PRIMARY ] XML INDEX index_name
 ### A. Creating a primary XML index  
  The following example creates a primary XML index on the `CatalogDescription` column in the `Production.ProductModel` table.  
   
-```tsql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 IF EXISTS (SELECT * FROM sys.indexes  
@@ -265,7 +262,7 @@ GO
 ### B. Creating a secondary XML index  
  The following example creates a secondary XML index on the `CatalogDescription` column in the `Production.ProductModel` table.  
   
-```tsql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 IF EXISTS (SELECT name FROM sys.indexes  
@@ -298,3 +295,4 @@ GO
  [XML Indexes &#40;SQL Server&#41;](../../relational-databases/xml/xml-indexes-sql-server.md)  
   
   
+

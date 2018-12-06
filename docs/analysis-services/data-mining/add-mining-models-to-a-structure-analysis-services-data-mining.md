@@ -1,33 +1,24 @@
 ---
 title: "Add Mining Models to a Structure (Analysis Services - Data Mining) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "mining structures [Analysis Services], creating"
-  - "mining models [Analysis Services], creating"
-  - "mining models [Analysis Services], modifying"
-ms.assetid: a175daa5-58ea-474c-a82f-9648c5155dc8
-caps.latest.revision: 16
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
+ms.date: 05/01/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: data-mining
+ms.topic: conceptual
+ms.author: owend
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
 ---
 # Add Mining Models to a Structure (Analysis Services - Data Mining)
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   A mining structure is intended to support multiple mining models. Therefore, after you finish the wizard, you can open the structure and add new mining models. Each time that you create a model, you can use a different algorithm, change the parameters, or apply filters to use a different subset of the data.  
   
 ## Adding New Mining Models  
  When you use the Data Mining Wizard to create a new mining model, by default you must always create a mining structure first. The wizard then gives you the option to add an initial mining model to the structure. However, you don't need to create a model right away. If you create the structure only, you do not need to make a decision about which column to use as the predictable attribute, or how to use the data in a particular model. Instead, you just set up the general data structure that you want to use in future, and later you can use [Data Mining Designer](../../analysis-services/data-mining/data-mining-designer.md) to add new mining models that are based on the structure.  
   
 > [!NOTE]  
->  In DMX, the CREATE MINING MODEL statement  begins with the mining model. That is, you define your choice of mining model, and [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] automatically generates the underlying structure. Later you can continue to add new mining models to that structure, by using the ALTER STRUCTURE… ADD MODEL statement.  
+>  In DMX, the CREATE MINING MODEL statement  begins with the mining model. That is, you define your choice of mining model, and [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] automatically generates the underlying structure. Later you can continue to add new mining models to that structure, by using the ALTER STRUCTURE... ADD MODEL statement.  
   
 ## Choosing an Algorithm  
  When you add a new model to an existing structure, the first thing you should do is select a data mining algorithm to use in that model. Choosing the algorithm is important because each algorithm performs a different type of analysis and has different requirements.  

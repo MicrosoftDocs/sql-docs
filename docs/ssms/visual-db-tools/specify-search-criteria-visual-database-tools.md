@@ -2,13 +2,11 @@
 title: "Specify Search Criteria (Visual Database Tools) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
+ms.prod_service: "sql-tools"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "tools-ssms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: ssms
+ms.topic: conceptual
 helpviewer_keywords: 
   - "Query Designer [SQL Server], Criteria pane"
   - "queries [Visual Database Tools]"
@@ -22,12 +20,13 @@ helpviewer_keywords:
   - "Visual Database Tools [SQL Server], queries"
   - "limiting rows returned"
 ms.assetid: 25fb4e31-6dbf-4cf6-8e47-0dd0998c836c
-caps.latest.revision: 3
 author: "stevestein"
 ms.author: "sstein"
-manager: "jhubbard"
+manager: craigg
+
 ---
 # Specify Search Criteria (Visual Database Tools)
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 You can use search criteria to restrict the number of rows returned by a query.  
   
 For details about the particular steps to creating search criteria, refer to the topics listed in the following table.  

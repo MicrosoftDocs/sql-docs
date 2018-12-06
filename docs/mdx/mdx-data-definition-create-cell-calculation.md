@@ -1,36 +1,17 @@
 ---
 title: "CREATE CELL CALCULATION Statement (MDX) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/02/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "CELL CALCULATION"
-  - "CREATE"
-  - "CALCULATION"
-  - "CELL"
-  - "CREATE_CELL_CALCULATION"
-  - "CREATE CELL"
-  - "CREATE CELL CALCULATION"
-dev_langs: 
-  - "kbMDX"
-helpviewer_keywords: 
-  - "calculations [Analysis Services], creating"
-  - "CREATE CELL CALCULATION statement"
-  - "cubes [Analysis Services], calculations"
-ms.assetid: 01ced1b3-ada1-4b55-b350-e4255c3cc679
-caps.latest.revision: 34
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
+ms.date: 06/04/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: mdx
+ms.topic: reference
+ms.author: owend
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
 ---
 # MDX Data Definition - CREATE CELL CALCULATION
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+
 
   Creates a calculation that evaluates a Multidimensional Expressions (MDX) expression over a specified set of tuples within a cube.  
   

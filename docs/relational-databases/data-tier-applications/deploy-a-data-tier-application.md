@@ -2,13 +2,10 @@
 title: "Deploy a Data-tier Application | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/31/2017"
-ms.prod: "sql-server-2016"
+ms.prod: sql
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
-  - "dbe-data-tier-apps"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "sql13.swb.deploydacwizard.introduction.f1"
   - "sql13.swb.deploydacwizard.deploydac.f1"
@@ -22,12 +19,12 @@ helpviewer_keywords:
   - "How to [DAC], deploy"
   - "wizard [DAC], deploy"
 ms.assetid: c117af35-aa53-44a5-8034-fa8715dc735f
-caps.latest.revision: 33
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: craigg
 ---
 # Deploy a Data-tier Application
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Deploy a data-tier application (DAC) from a DAC package to an existing instance of the database engine or Azure SQL Database  using a wizard or a PowerShell script. 
   
  The deployment process registers a DAC instance by storing the DAC definition in the **msdb** system database (**master** in [!INCLUDE[ssSDS](../../includes/sssds-md.md)]); creates a database, then populates that database with all the database objects defined in the DAC.  
@@ -62,7 +59,7 @@ Deploying a DAC with logins to [!INCLUDE[ssSDS](../../includes/sssds-md.md)] req
   
 1.  In **Object Explorer**, expand the node for the instance to which you want to deploy the DAC.  
   
-2.  Right-click the **Databases** node, then select **Deploy Data-tier Application…**  
+2.  Right-click the **Databases** node, then select **Deploy Data-tier Application...**  
   
 3.  Complete the wizard dialogs and click finish.
 More about some of the wizard pages below: 

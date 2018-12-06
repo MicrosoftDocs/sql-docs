@@ -2,23 +2,20 @@
 title: "Diagnostic Handling Rules | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
+ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "drivers"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: connectivity
+ms.topic: conceptual
 helpviewer_keywords: 
   - "diagnostic information [ODBC], SqlGetDiagField"
   - "SQLGetDiagField function [ODBC], diagnostic handling rules"
   - "SQLGetDiagRec function [ODBC], diagnostic handling rules"
   - "diagnostic information [ODBC], SqlGetDiagRec"
 ms.assetid: 74387c3a-d6b3-4c35-b209-b9612602b20a
-caps.latest.revision: 5
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # Diagnostic Handling Rules
 The following rules govern diagnostic handling in **SQLGetDiagRec** and **SQLGetDiagField**.  

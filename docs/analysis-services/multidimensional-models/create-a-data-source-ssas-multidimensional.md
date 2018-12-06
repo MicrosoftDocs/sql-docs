@@ -1,31 +1,17 @@
 ---
 title: "Create a Data Source (SSAS Multidimensional) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/16/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.asvs.sqlserverstudio.impersonationinfo.f1"
-  - "sql13.asvs.connectionmanager.f1"
-  - "sql13.asvs.datasourcedesigner.f1"
-helpviewer_keywords: 
-  - "impersonation [Analysis Services]"
-  - "data sources [Analysis Services], creating"
-  - "security [Analysis Services], data source connections"
-ms.assetid: 9fab8298-10dc-45a9-9a91-0c8e6d947468
-caps.latest.revision: 61
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: multidimensional-models
+ms.topic: conceptual
+ms.author: owend
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
 ---
 # Create a Data Source (SSAS Multidimensional)
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   In an [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] multidimensional model, a data source object represents a connection to the data source from which you are processing (or importing) data. A multidimensional model must contain at least one data source object, but you can add more to combine data from several data warehouses. Use the instructions in this topic to create a data source object for your model. For more information about setting properties on this object, see [Set Data Source Properties &#40;SSAS Multidimensional&#41;](../../analysis-services/multidimensional-models/set-data-source-properties-ssas-multidimensional.md).  
   
  This topic includes the following sections:  
@@ -76,7 +62,7 @@ manager: "erikre"
   
 3.  On the **Select how to define the connection** page, choose **Create a data source based on an existing or new connection** and then click **New** to open **Connection Manager**.  
   
-     New connections are created in Connection Manager. In Connection Manager, you select a provider and then specify the connection string properties used by that provider to connect to the underlying data. The exact information required depends upon the provider selected, but generally such information includes a server or service instance, information for logging on to the server or service instance, a database or file name, and other provider-specific settings. For the remainder of this procedure, we’ll assume a SQL Server database connection.  
+     New connections are created in Connection Manager. In Connection Manager, you select a provider and then specify the connection string properties used by that provider to connect to the underlying data. The exact information required depends upon the provider selected, but generally such information includes a server or service instance, information for logging on to the server or service instance, a database or file name, and other provider-specific settings. For the remainder of this procedure, we'll assume a SQL Server database connection.  
   
 4.  Select the [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework or native OLE DB provider to use for the connection.  
   

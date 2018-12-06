@@ -2,12 +2,9 @@
 title: "sys.dm_db_uncontained_entities (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: system-objects
 ms.topic: "language-reference"
 f1_keywords: 
   - "sys.dm_db_uncontained_entities"
@@ -19,21 +16,16 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.dm_db_uncontained_entities dynamic management view"
 ms.assetid: f417efd4-8c71-4f81-bc9c-af13bb4b88ad
-caps.latest.revision: 29
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: stevestein
+ms.author: sstein
+manager: craigg
 ---
 # sys.dm_db_uncontained_entities (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   Shows any uncontained objects used in the database. Uncontained objects are objects that cross the database boundary in a contained database. This view is accessible from both a contained database and a non-contained database. If sys.dm_db_uncontained_entities is empty, your database does not use any uncontained entities.  
   
  If a module crosses the database boundary more than once, only the first discovered crossing is reported.  
-  
-||  
-|-|  
-|**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] through [current version](http://go.microsoft.com/fwlink/p/?LinkId=299658)).|  
   
 ||||  
 |-|-|-|  
@@ -73,7 +65,7 @@ manager: "jhubbard"
 ## Examples  
  The following example creates a procedure named P1, and then queries `sys.dm_db_uncontained_entities`. The query reports that P1 uses **sys.endpoints** which is outside of the database.  
   
-```tsql  
+```sql  
 CREATE DATABASE Test;  
 GO  
   

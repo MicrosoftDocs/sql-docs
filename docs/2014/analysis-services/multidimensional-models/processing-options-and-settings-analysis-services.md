@@ -1,0 +1,65 @@
+---
+title: "Processing Options and Settings (Analysis Services) | Microsoft Docs"
+ms.custom: ""
+ms.date: "06/13/2017"
+ms.prod: "sql-server-2014"
+ms.reviewer: ""
+ms.technology: 
+  - "analysis-services"
+ms.topic: conceptual
+helpviewer_keywords: 
+  - "process data option [Analysis Services]"
+  - "processing objects [Analysis Services]"
+  - "unprocess option [Analysis Services]"
+  - "process full option [Analysis Services]"
+  - "process index option [Analysis Services]"
+  - "process structure option [Analysis Services]"
+  - "process incremental option [Analysis Services]"
+  - "process update option [Analysis Services]"
+  - "process clear structure option [Analysis Services]"
+  - "process default option [Analysis Services]"
+ms.assetid: 2e858c74-ad3e-45f1-8745-efe2c0c3a7fa
+author: minewiskan
+ms.author: owend
+manager: craigg
+---
+# Processing Options and Settings (Analysis Services)
+  When you process objects in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], you can select a processing option to control the type of processing that occurs for each object. Processing types differ from one object to another, and by changes that have occurred to the object since it was last processed. If you enable [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] to automatically select a processing method, it will use the method that returns the object to a fully processed state in the least time.  
+  
+ Processing settings let you control the objects that are processed, and the methods that are used to process those objects. Some processing settings are primarily used for batch processing jobs. For more information about batch processing, see [Batch Processing &#40;Analysis Services&#41;](batch-processing-analysis-services.md).  
+  
+> [!NOTE]  
+>  This topic applies to multidimensional and data mining solutions. For information about tabular solutions, see [Process Database, Table, or Partition](../tabular-models/process-database-table-or-partition-analysis-services.md).  
+  
+## Processing Options  
+ The following table describes the processing methods that are available in [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], and identifies the objects for which each method is supported.  
+  
+|Mode|Applies to|Description|  
+|----------|----------------|-----------------|  
+|**Process Default**|Cubes, databases, dimensions, measure groups, mining models, mining structures, and partitions.|Detects the process state of database objects, and performs processing necessary to deliver unprocessed or partially processed objects to a fully processed state. If you change a data binding, Process Default will do a Process Full on the affected object.|  
+|**Process Full**|Cubes, databases, dimensions, measure groups, mining models, mining structures, and partitions.|Processes an [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] object and all the objects that it contains. When Process Full is executed against an object that has already been processed, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] drops all data in the object, and then processes the object. This kind of processing is required when a structural change has been made to an object, for example, when an attribute hierarchy is added, deleted, or renamed.|  
+|**Process Clear**|Cubes, databases, dimensions, measure groups, mining models, mining structures, and partitions.|Drops the data in the object specified and any lower-level constituent objects. After the data is dropped, it is not reloaded.|  
+|**Process Data**|Dimensions, cubes, measure groups, and partitions.|Processes data only without building aggregations or indexes. If there is data is in the partitions, it will be dropped before re-populating the partition with source data.|  
+|**Process Add**|Dimensions, measure groups, and partitions<br /><br /> Note: Process Add is not available for dimension processing in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], but you can write XMLA script performs this action.|For dimensions, adds new members and updates dimension attribute captions and descriptions.<br /><br /> For measure groups and partitions, adds newly available fact data and process only to the relevant partitions.|  
+|**Process Update**|Dimensions|Forces a re-read of data and an update of dimension attributes. Flexible aggregations and indexes on related partitions will be dropped.|  
+|**Process Index**|Cubes, dimensions, measure groups, and partitions|Creates or rebuilds indexes and aggregations for all processed partitions. For unprocessed objects, this option generates an error.<br /><br /> Processing with this option is needed if you turn off Lazy Processing.|  
+|**Process Structure**|Cubes and mining structures|If the cube is unprocessed, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] will process, if it is necessary, all the cube's dimensions. After that, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] will create only cube definitions. If this option is applied to a mining structure, it populates the mining structure with source data. The difference between this option and the Process Full option is that this option does not iterate the processing down to the mining models themselves.|  
+|**Process Clear Structure**|Mining structures|Removes all training data from a mining structure.|  
+  
+## Processing Settings  
+ The following table describes the processing settings that are available for use when you create a process operation.  
+  
+|Processing Option|Description|  
+|-----------------------|-----------------|  
+|**Parallel**|Used for batch processing. This setting causes [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] to fork off processing tasks to run in parallel inside a single transaction. If there is a failure, the result is a roll-back of all changes. You can set the maximum number of parallel tasks explicitly, or let the server decide the optimal distribution. The Parallel option is useful for speeding up processing.|  
+|**Sequential (Transaction Mode)**|Controls the execution behavior of the processing job. When you process using **One Transaction**, all changes are committed after the processing job succeeds. This means that all [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] objects affected by a particular processing job remain available for queries until the commit process. This makes the objects temporarily unavailable. Using **Separate Transactions** causes all objects that are affected by a process in processing job to be taken unavailable for queries as soon as that process succeeds. The two available options are:<br /><br /> **One Transaction**. The processing job runs as a transaction. If all processes inside the processing job succeed, all changes by the processing job are committed. If one process fails, all changes by the processing job are rolled back. **One Transaction** is the default value.<br /><br /> **Separate Transactions**. Each process in the processing job runs as a stand-alone job. If one process fails, only that process is rolled back and the processing job continues. Each job commits all process changes at the end of the job.|  
+|**Writeback Table Option**|Controls how writeback tables are handled during processing. This option applies to writeback partitions in a cube, and uses the following options:<br /><br /> **Use Existing**. Uses the existing writeback table. This is default value.<br /><br /> **Create**. Creates a new writeback table and causes the process to fail if one already exists.<br /><br /> **Create Always**. Creates a new writeback table even if one already exists. An existing table is deleted and replaced.|  
+|**Process Affected Objects**|Controls the object scope of the processing job. An affected object is defined by object dependency. For example, partitions are dependent on the dimensions that determine aggregation, but dimensions are not dependent on partitions. You can use the following options:<br /><br /> **False**. The job processes the objects explicitly named in the job and all dependent objects. For example, if the processing job contains only dimensions, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] processes just those objects explicitly identified in the job. If the processing job contains partitions, partition processing automatically invokes processing of affected dimensions. **False** is the default setting.<br /><br /> **True**. The job processes the objects explicitly named in the job, all dependent objects, and all objects affected by the objects being processed without changing the state of the affected objects. For example, if the processing job contains only dimensions, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] also processes all partitions affected by the dimension processing for partitions that are currently in a processed state. Affected partitions that are currently in an unprocessed state are not processed. However, because partitions are dependent on dimensions, if the processing job contains only partitions, partition processing automatically invokes processing of affected dimensions, even when the dimension is currently in an unprocessed state.|  
+|**Dimension Key Errors**|Determines the action taken by [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] when errors occur during processing. When you select Use default error configuration, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] uses the error configuration that is set for each object being processed. If an object is set to use default configuration settings, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] uses the default settings that are listed for each option. When you select **Use custom error configuration**, you can select values for the following actions to control error-handling behavior:<br /><br /> **Key error action**. If a key value does not yet exist in a record, one of these actions is selected to occur:<br /><br /> **Convert to unknown**. The key is interpreted as an unknown member. This is the default setting.<br /><br /> **Discard record**. The record is discarded.|  
+||**Processing error limit**. Controls the number of errors processed by selecting one of these options:<br /><br /> **Ignore errors count**. This will enable processing to continue regardless of the number of errors. <br />**Stop on error**. With this option, you control two additional settings. **Number of errors** lets you limit processing to the occurrence of a specific number of errors. **On error action** lets you determine the action when **Number of errors** is reached. You can select **Stop processing**, which causes the processing job to fail and roll back any changes, or **Stop logging**, which enables processing to continue without logging errors. **Stop on error** is the default setting with **Number of errors** set to **0** and **On error action** set to **Stop processing**.|  
+||Specific error conditions. You can set the following options to control specific error-handling behavior:<br /><br /> **Key not found**. Occurs when a key value exists in a partition but does not exist in the corresponding dimension. The default setting is **Report and continue**. Other settings are **Ignore error** and **Report and stop**.<br /><br /> **Duplicate key**. Occurs when more than one key value exists in a dimension. The default setting is **Ignore error**. Other settings are **Report and continue** and **Report and stop**.<br /><br /> **Null key converted to unknown**. Occurs when a key value is null and the **Key error action** is set to **Convert to unknown**. The default setting is **Ignore error**. Other settings are **Report and continue** and **Report and stop**.<br /><br /> **Null key not allowed**. Occurs when **Key error action** is set to **Discard record**. The default setting is **Report and continue**. Other settings are **Ignore error** and **Report and stop**.|  
+  
+## See Also  
+ [Multidimensional Model Object Processing](processing-a-multidimensional-model-analysis-services.md)  
+  
+  

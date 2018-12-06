@@ -1,22 +1,17 @@
 ---
 title: "Report Server HTTP Log | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/16/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.date: 03/02/2018
+ms.prod: reporting-services
+ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
+ms.technology: report-server
+
+
+ms.topic: conceptual
 helpviewer_keywords: 
   - "HTTP [Reporting Services]"
 ms.assetid: 6cc433b7-165c-4b16-9034-79256dd6735f
-caps.latest.revision: 15
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
+author: markingmyname
+ms.author: maghan
 ---
 # Report Server HTTP Log
   The Report Server HTTP log file keeps a record of every HTTP request and response handled by the report server. Because request overflow and timeout errors do not reach the report server, they are not recorded in the log file.  
@@ -36,7 +31,7 @@ manager: "erikre"
 ## Configuration Settings for Report Server HTTP Log  
  To configure the Report Server HTTP log, use Notepad to modify the ReportingServicesService.exe.config file. The configuration file is located in the \Program Files\Microsoft SQL Server\MSSQL.n\Reporting Services\ReportServer\Bin folder.  
   
- To enable the HTTP server, you must add **http:4** to the RStrace section of the ReportingServicesService.exe.config file. All other HTTP log file entries are optional. The following example includes all settings so that you can paste the whole section over the RStrace section, and then delete the settings you do not need.  
+ To enable the HTTP server, you must add **http:4** to the RStrace section of the ReportingServicesService.exe.config file. All other HTTP log file entries are optional. The following example includes all settings so that you can paste the whole section over the RStrace section, and then delete the settings you do not need.
   
 ```  
    <RStrace>  
@@ -47,7 +42,7 @@ manager: "erikre"
          <add name="TraceListeners" value="debugwindow, file" />  
          <add name="TraceFileMode" value="unique" />  
          <add name="HttpTraceFileName" value="ReportServerService_HTTP_" />  
-         <add name="HttpTraceSwitches" value="date,time, clientip,username,serverip,serverport,host,method,uristem,uriquery,protocolstatus,bytesreceived,timetaken,protocolversion,useragent,cookiereceived,cookiesent,referrer" />  
+         <add name="HttpTraceSwitches" value="date,time,clientip,username,serverip,serverport,host,method,uristem,uriquery,protocolstatus,bytesreceived,timetaken,protocolversion,useragent,cookiereceived,cookiesent,referrer" />  
          <add name="Components" value="all:3,http:4" />  
    </RStrace>  
 ```  

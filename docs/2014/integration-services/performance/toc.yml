@@ -1,0 +1,32 @@
+- name: Monitoring for Package Executions and Other Operations
+  href: monitor-running-packages-and-other-operations.md
+- name: Active Operations Dialog Box
+  href: ../active-operations-dialog-box.md
+- name: Reports for the Integration Services Server
+  href: ../reports-for-the-integration-services-server.md
+- name: View Reports for the Integration Services Server
+  href: ../view-reports-for-the-integration-services-server.md
+- name: Viewing and Stopping Packages Running on the Integration Services Server
+  href: ../viewing-and-stopping-packages-running-on-the-integration-services-server.md
+- name: Integration Services (SSIS) Logging
+  href: integration-services-ssis-logging.md
+  items:
+  - name: Custom Messages for Logging
+    href: ../custom-messages-for-logging.md
+  - name: Configure SSIS Logs Dialog Box
+    href: ../configure-ssis-logs-dialog-box.md
+  - name: Configure Logging by Using a Saved Configuration File
+    href: ../configure-logging-by-using-a-saved-configuration-file.md
+  - name: Enable Package Logging in SQL Server Data Tools
+    href: ../enable-package-logging-in-sql-server-data-tools.md
+  - name: Enable Logging for Package Execution on the SSIS Server
+    href: ../enable-logging-for-package-execution-on-the-ssis-server.md
+- name: Performance Counters
+  href: performance-counters.md
+  items:
+  - name: Add a Log for Data Flow Performance Counters
+    href: ../add-a-log-for-data-flow-performance-counters.md
+- name: Analysis of Data Flow
+  href: ../analysis-of-data-flow.md
+- name: Data Flow Taps
+  href: ../data-flow-taps.md

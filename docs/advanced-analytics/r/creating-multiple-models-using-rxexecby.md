@@ -1,23 +1,20 @@
 ---
-title: "Creating multiple models using rxExecBy | Microsoft Docs"
-ms.custom: ""
-ms.date: "04/18/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "r-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-author: "jeannt"
-ms.author: "jeannt"
-manager: "jhubbard"
+title: Creating multiple models using rxExecBy (SQL Server Machine Learning) | Microsoft Docs
+ms.prod: sql
+ms.technology: machine-learning
+
+ms.date: 04/15/2018  
+ms.topic: conceptual
+author: HeidiSteen
+ms.author: heidist
+manager: cgronlun
 ---
 # Creating multiple models using rxExecBy
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 SQL Server 2017 CTP 2.0 includes a new function, **rxExecBy**, that supports parallel processing of multiple related models. Rather than train one very large model based on data from multiple similar entities, the data scientist can very quickly create many related models, each using data specific to a single entity.
 
-For example, suppose you are monitoring device failures, and capturing data for many different types of equipment. By using rxExecBy, you can provide a single large dataset as input, specify a column on which to stratify the dataset, such as device type, and then create multiple models models for individual devices.
+For example, suppose you are monitoring device failures, and capturing data for many different types of equipment. By using rxExecBy, you can provide a single large dataset as input, specify a column on which to stratify the dataset, such as device type, and then create multiple models for individual devices.
 
 This process has been termed "pleasingly parallel" processing, because it takes a task that was somewhat onerous for the data scientist, or at best tedious, and makes it a fast, simple operation.
 
@@ -25,7 +22,7 @@ Typical applications of this approach include forecasting for individual househo
 
 ## How rxExec Works
 
-The rxExecBy function in RevoScaleR is designed for for high-volume parallel processing over a large number of small data sets.
+The rxExecBy function in RevoScaleR is designed for high-volume parallel processing over a large number of small data sets.
 
 1. You call the rxExecBy function as part of your R code, and pass a dataset of unordered data.
 2. Specify the partition by which the data should be grouped and sorted.

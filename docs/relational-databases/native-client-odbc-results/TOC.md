@@ -1,7 +1,0 @@
-# [Processing Results (ODBC)](processing-results-odbc.md)
-# [Assigning Storage](assigning-storage.md)
-# [Autotranslation of Character Data](autotranslation-of-character-data.md)
-# [Data Type Usage](data-type-usage.md)
-# [Determining the Characteristics of a Result Set (ODBC)](determining-the-characteristics-of-a-result-set-odbc.md)
-# [Fetching Result Data](fetching-result-data.md)
-# [Mapping Data Types (ODBC)](mapping-data-types-odbc.md)

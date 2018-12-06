@@ -2,12 +2,10 @@
 title: "sys.dm_db_objects_disabled_on_compatibility_level_change (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/10/2016"
-ms.prod: "sql-non-specified"
+ms.prod: sql
+ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: system-objects
 ms.topic: "language-reference"
 f1_keywords: 
   - "dm_db_objects_disabled_on_compatibility_level_change"
@@ -19,25 +17,21 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.dm_db_objects_disabled_on_compatibility_level_change catalog view"
 ms.assetid: a5d70064-0330-48b9-b853-01eba50755d0
-caps.latest.revision: 16
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: stevestein
+ms.author: sstein
+manager: craigg
+monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Spatial Data - sys.dm_db_objects_disabled_on_compatibility_level_change
-[!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
   Lists the indexes and constraints that will be disabled as a result of changing compatibility level in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Indexes and constraints that contain persisted computed columns whose expressions use spatial UDTs will be disabled after upgrading or changing compatibility level. Use this dynamic management function to determine the impact of a change in compatibility level.  
-  
-||  
-|-|  
-|**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] through [current version](http://go.microsoft.com/fwlink/p/?LinkId=299658), [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].|  
   
  ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
-```tsql  
+```sql  
 sys.dm_db_objects_disabled_on_compatibility_level_change ( compatibility_level )   
 ```  
   
@@ -114,11 +108,11 @@ sys.dm_db_objects_disabled_on_compatibility_level_change ( compatibility_level )
 ### Behavior of the disabled objects  
  **Indexes**  
   
- If the clustered index is disabled, or if a non-clustered index is forced, the following error is raised: "The query processor is unable to produce a plan because the index '%.\*ls' on table or view '%.\*ls' is disabled." To re-enable these objects, rebuild the indexes after upgrade by calling **ALTER INDEX ON … REBUILD**.  
+ If the clustered index is disabled, or if a non-clustered index is forced, the following error is raised: "The query processor is unable to produce a plan because the index '%.\*ls' on table or view '%.\*ls' is disabled." To re-enable these objects, rebuild the indexes after upgrade by calling **ALTER INDEX ON ... REBUILD**.  
   
  **Heaps**  
   
- If a table with a disabled heap is used, the following error is raised. To re-enable these objects, rebuild after upgrade by calling **ALTER INDEX ALL ON … REBUILD**.  
+ If a table with a disabled heap is used, the following error is raised. To re-enable these objects, rebuild after upgrade by calling **ALTER INDEX ALL ON ... REBUILD**.  
   
 ```  
 // ErrorNumber: 8674  
@@ -135,7 +129,7 @@ sys.dm_db_objects_disabled_on_compatibility_level_change ( compatibility_level )
   
  **Check Constraints and Foreign Keys**  
   
- Disabled check constraints and foreign keys do not raise an error. However, the constraints are not enforced when rows are modified. To re-enable these objects, check the constraints after upgrading by calling **ALTER TABLE … CHECK CONSTRAINT**.  
+ Disabled check constraints and foreign keys do not raise an error. However, the constraints are not enforced when rows are modified. To re-enable these objects, check the constraints after upgrading by calling **ALTER TABLE ... CHECK CONSTRAINT**.  
   
  **Persisted Computed Columns**  
   
@@ -149,7 +143,7 @@ sys.dm_db_objects_disabled_on_compatibility_level_change ( compatibility_level )
 ## Example  
  The following example shows a query on **sys.dm_db_objects_disabled_on_compatibility_level_change** to find the objects impacted by changing the compatibility level to 120.  
   
-```tsql  
+```sql  
 SELECT * FROM sys.dm_db_objects_disabled_on_compatibility_level_change(120);  
 GO  
   

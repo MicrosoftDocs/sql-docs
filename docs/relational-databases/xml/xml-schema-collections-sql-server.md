@@ -2,13 +2,11 @@
 title: "XML Schema Collections (SQL Server) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
+ms.prod: sql
+ms.prod_service: "database-engine"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-xml"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: xml
+ms.topic: conceptual
 helpviewer_keywords: 
   - "XSD schemas [SQL Server]"
   - "xml_schema_namespace function"
@@ -21,12 +19,12 @@ helpviewer_keywords:
   - "XML schema collections [SQL Server]"
   - "schema collections [SQL Server], about XML schema collections"
 ms.assetid: 659d41aa-ccec-4554-804a-722a96ef25c2
-caps.latest.revision: 31
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "douglaslMS"
+ms.author: "douglasl"
+manager: craigg
 ---
 # XML Schema Collections (SQL Server)
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
   As described in the topic, [xml &#40;Transact-SQL&#41;](../../t-sql/xml/xml-transact-sql.md), SQL Server provides native storage of XML data through the **xml** data type. You can optionally associate XSD schemas with a variable or a column of **xml** type through an XML schema collection. The XML schema collection stores the imported XML schemas and is then used to do the following:  
   
 -   Validate XML instances  
@@ -67,7 +65,7 @@ manager: "jhubbard"
   
 ```  
 <?xml version="1.0"?>  
-<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
+<xsd:schema xmlns:xsd="https://www.w3.org/2001/XMLSchema"  
             targetNamespace="uri:Cust_Orders2"  
             xmlns="uri:Cust_Orders2" >  
   <xsd:attribute name="SomeAttribute" type="xsd:int" />  
@@ -189,11 +187,11 @@ SELECT XML_SCHEMA_NAMESPACE (N'dbo', N'myCollection')
  Individual XML schemas within the collection can be obtained as **xml** data type instances by specifying the target namespace as the third argument to **XML_SCHEMA_NAMESPACE()**. This is shown in the following example.  
   
 ### Example: Output a Specified Schema from an XML Schema Collection  
- The following statement outputs the XML schema with the target namespace "http://www.microsoft.com/books" from the XML schema collection "myCollection" within the relational schema, dbo.  
+ The following statement outputs the XML schema with the target namespace "https://www.microsoft.com/books" from the XML schema collection "myCollection" within the relational schema, dbo.  
   
 ```  
 SELECT XML_SCHEMA_NAMESPACE (N'dbo', N'myCollection',   
-N'http://www.microsoft.com/books')  
+N'https://www.microsoft.com/books')  
 ```  
   
 ### Querying XML Schemas  

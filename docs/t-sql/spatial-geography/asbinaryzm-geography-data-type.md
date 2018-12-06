@@ -2,12 +2,10 @@
 title: "AsBinaryZM (geography Data Type) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
+ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: t-sql
 ms.topic: "language-reference"
 f1_keywords: 
   - "AsBinaryZM"
@@ -18,13 +16,12 @@ helpviewer_keywords:
   - "AsBinaryZM, geography"
   - "AsBinaryZM"
 ms.assetid: 37246adb-814d-4113-9983-4d336de8182c
-caps.latest.revision: 7
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "douglaslMS"
+ms.author: "douglasl"
+manager: craigg
 ---
 # AsBinaryZM (geography Data Type)
-[!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
   Returns the Open Geospatial Consortium (OGC) Well-Known Binary (WKB) representation of a **geometry** instance augmented with any **Z** (elevation) and **M** (measure) values carried by the instance.  
   
@@ -44,7 +41,7 @@ manager: "jhubbard"
   
 ## Examples  
   
-```tsql  
+```sql  
 DECLARE @g1 GEOGRAPHY = 'Point(1 1 2 3)';  
   
 SELECT @g1.STAsBinary();  

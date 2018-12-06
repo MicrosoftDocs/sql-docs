@@ -2,22 +2,19 @@
 title: "MSSQLSERVER_21898 | Microsoft Docs"
 ms.custom: ""
 ms.date: "04/04/2017"
-ms.prod: "sql-server-2016"
+ms.prod: sql
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: supportability
 ms.topic: "language-reference"
 helpviewer_keywords: 
   - "21898 (Database Engine error)"
 ms.assetid: 02405b21-3d4e-4c2d-b4b3-d7b1ec05edb4
-caps.latest.revision: 6
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
 ---
 # MSSQLSERVER_21898
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   
 ## Details  
   
@@ -37,5 +34,5 @@ manager: "jhubbard"
 Execute stored procedure **sp_changedistpublisher** to change the distribution database for the new publisher to that used by the original publisher.  
   
 > [!NOTE]  
-> Running **sp_changedistpublisher** will address the problem if the wrong distribution database was entered when **sp_adddistpublisher** was run at the distributor for the publisher. However, if the remote publisher has existing publications from another publishing database that make use of the identified distribution database, this change is not appropriate. Replication using the named distribution database needs to be systematically removed and then reestablished using the original publisher’s distribution database in order for the new publisher to function as a suitable host.  
+> Running **sp_changedistpublisher** will address the problem if the wrong distribution database was entered when **sp_adddistpublisher** was run at the distributor for the publisher. However, if the remote publisher has existing publications from another publishing database that make use of the identified distribution database, this change is not appropriate. Replication using the named distribution database needs to be systematically removed and then reestablished using the original publisher's distribution database in order for the new publisher to function as a suitable host.  
   

@@ -2,13 +2,11 @@
 title: "Count Rows in a Table (Visual Database Tools) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
+ms.prod_service: "sql-tools"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "tools-ssms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: ssms
+ms.topic: conceptual
 helpviewer_keywords: 
   - "totals [SQL Server], row counts"
   - "row counts [SQL Server]"
@@ -17,12 +15,13 @@ helpviewer_keywords:
   - "number of values"
   - "counting rows"
 ms.assetid: dda4296a-1d16-4e77-8d6f-e295f6dd4e87
-caps.latest.revision: 4
 author: "stevestein"
 ms.author: "sstein"
-manager: "jhubbard"
+manager: craigg
+
 ---
 # Count Rows in a Table (Visual Database Tools)
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 You can count rows in a table to determine:  
   
 -   The total number of rows in a table, for example, a count of all the books in a `titles` table.  
@@ -41,7 +40,7 @@ The procedures for all three types of counts are similar.
   
 2.  Right-click the background of the Diagram pane, then choose **Add Group By** from the shortcut menu. The [Query and View Designer](../../ssms/visual-db-tools/query-and-view-designer-tools-visual-database-tools.md) adds a **Group By** column to the grid in the Criteria pane.  
   
-3.  Select **\&#42; (All Columns)** in the rectangle representing the table or table-valued object.  
+3.  Select **&#42; (All Columns)** in the rectangle representing the table or table-valued object.  
   
     The Query and View Designer automatically fills the term **Count** into the **Group By** column in the Criteria pane and assigns a column alias to the column you are summarizing. You can replace this automatically generated alias with a more meaningful one. For more details, see [Create Column Aliases &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/create-column-aliases-visual-database-tools.md).  
   
@@ -53,7 +52,7 @@ The procedures for all three types of counts are similar.
   
 2.  Right-click the background of the Diagram pane, then choose **Add Group By** from the shortcut menu. The Query and View Designer adds a **Group By** column to the grid in the Criteria pane.  
   
-3.  Select **\&#42;(All Columns)** in the rectangle representing the table or table-structured object.  
+3.  Select **&#42;(All Columns)** in the rectangle representing the table or table-structured object.  
   
     The Query and View Designer automatically fills the term **Count** into the **Group By** column in the Criteria pane and assigns a column alias to the column you are summarizing. To create a more useful column heading in query output, see [Create Column Aliases &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/create-column-aliases-visual-database-tools.md).  
   

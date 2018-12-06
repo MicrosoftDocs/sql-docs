@@ -1,21 +1,18 @@
 ---
 title: "Logging Activity | Microsoft Docs"
 ms.custom: ""
-ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
+ms.date: "03/26/2018"
+ms.prod: sql
+ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "drivers"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: connectivity
+ms.topic: conceptual
 helpviewer_keywords: 
   - "logging activity"
 ms.assetid: a777b3d9-2262-4e82-bc82-b62ad60d0e55
-caps.latest.revision: 32
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # Logging Activity
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -37,23 +34,23 @@ pdo_sqlsrv.log_severity = <number>
 |Value|Description|  
 |---------|---------------|  
 |0|Logging is disabled (is the default if nothing is defined).|  
-|-1|Specifies that errors, warnings, and notices will be logged.|  
-|1|Specifies that errors will be logged.|  
-|2|Specifies that warnings will be logged.|  
-|4|Specifies that notices will be logged.|  
+|-1|Specifies that errors, warnings, and notices are logged.|  
+|1|Specifies that errors are logged.|  
+|2|Specifies that warnings are logged.|  
+|4|Specifies that notices are logged.|  
   
-Logging information will be added to the phperrors.log file.  
+Logging information is added to the phperrors.log file.  
   
 PHP reads the configuration file on initialization and stores the data in a cache; it also provides an API to update these settings and use right away, and is written to the configuration file. This API enables application scripts to change the settings even after PHP initialization.  
   
 ## Logging Activity Using the SQLSRV Driver  
-To turn logging on, you can use the [sqlsrv_configure](../../connect/php/sqlsrv-configure.md) function or you can alter the php.ini file. You can log activity on initializations, connections, statements, or error functions. You can also specify whether to log errors, warnings, notices, or all three.  
+To turn on logging, you can use the [sqlsrv_configure](../../connect/php/sqlsrv-configure.md) function or you can alter the php.ini file. You can log activity on initializations, connections, statements, or error functions. You can also specify whether to log errors, warnings, notices, or all three.  
   
 > [!NOTE]  
 > You can configure the location of the log file in the php.ini file.  
   
 ### Turning Logging On  
-You can turn logging on by using the [sqlsrv_configure](../../connect/php/sqlsrv-configure.md) function to specify a value for the **LogSubsystems** setting. For example, the following line of code configures the driver to log activity on connections:  
+You can turn on logging by using the [sqlsrv_configure](../../connect/php/sqlsrv-configure.md) function to specify a value for the **LogSubsystems** setting. For example, the following line of code configures the driver to log activity on connections:  
   
 `sqlsrv_configure("LogSubsystems", SQLSRV_LOG_SYSTEM_CONN);`  
   
@@ -72,16 +69,16 @@ You can set more than one value at a time for the **LogSubsystems** setting by u
   
 `sqlsrv_configure("LogSubsystems", SQLSRV_LOG_SYSTEM_CONN | SQLSRV_LOG_SYSTEM_STMT);`  
   
-You can also turn logging on by specifying an integer value for the **LogSubsystems** setting in the php.ini file. For example, adding the following line to the `[sqlsrv]` section of the php.ini file will turn on logging of connection activity:  
+You can also turn on logging by specifying an integer value for the **LogSubsystems** setting in the php.ini file. For example, adding the following line to the `[sqlsrv]` section of the php.ini file turns on logging of connection activity:  
   
 `sqlsrv.LogSubsystems = 2`  
   
-By adding integer values together you can specify more than one option at a time. For example, adding the following line to the `[sqlsrv]` section of the php.ini file will turn on logging of connection and statement activity:  
+By adding integer values together, you can specify more than one option at a time. For example, adding the following line to the `[sqlsrv]` section of the php.ini file turns on logging of connection and statement activity:  
   
 `sqlsrv.LogSubsystems = 6`  
   
 ### Logging Errors, Warnings, and Notices  
-After turning logging on, you must specify what to log. You can log one or more of the following: errors, warnings, and notices. For example, the following line of code specifies that only warnings will be logged:  
+After turning logging on, you must specify what to log. You can log one or more of the following: errors, warnings, and notices. For example, the following line of code specifies that only warnings are logged:  
   
 `sqlsrv_configure("LogSeverity", SQLSRV_LOG_SEVERITY_WARNING);`  
   
@@ -92,30 +89,34 @@ The following table describes the constants that can be used as the value for th
   
 |Value (integer equivalent in parentheses)|Description|  
 |-----------------------------------------------|---------------|  
-|SQLSRV_LOG_SEVERITY_ALL (-1)|Specifies that errors, warnings, and notices will be logged.|  
-|SQLSRV_LOG_SEVERITY_ERROR (1)|Specifies that errors will be logged. This is the default.|  
-|SQLSRV_LOG_SEVERITY_WARNING (2)|Specifies that warnings will be logged.|  
-|SQLSRV_LOG_SEVERITY_NOTICE (4)|Specifies that notices will be logged.|  
+|SQLSRV_LOG_SEVERITY_ALL (-1)|Specifies that errors, warnings, and notices are logged.|  
+|SQLSRV_LOG_SEVERITY_ERROR (1)|Specifies that errors are logged. This is the default.|  
+|SQLSRV_LOG_SEVERITY_WARNING (2)|Specifies that warnings are logged.|  
+|SQLSRV_LOG_SEVERITY_NOTICE (4)|Specifies that notices are logged.|  
   
 You can set more than one value at a time for the **LogSeverity** setting by using the logical OR operator (|). For example, the following line of code specifies that errors and warnings should be logged:  
   
 `sqlsrv_configure("LogSeverity", SQLSRV_LOG_SEVERITY_ERROR | SQLSRV_LOG_SEVERITY_WARNING);`  
   
 > [!NOTE]  
-> Specifying a value for the **LogSeverity** setting does not turn logging on. You must turn logging on by specifying a value for the **LogSubsystems** setting, then specify the severity of what is logged by setting a value for **LogSeverity**.  
+> Specifying a value for the **LogSeverity** setting does not turn on logging. You must turn on logging by specifying a value for the **LogSubsystems** setting, then specify the severity of what is logged by setting a value for **LogSeverity**.  
   
 You can also specify a setting for the **LogSeverity** setting by using integer values in the php.ini file. For example, adding the following line to the `[sqlsrv]` section of the php.ini file enables logging of warnings only:  
   
 `sqlsrv.LogSeverity = 2`  
   
-By adding integer values together, you can specify more than one option at a time. For example, adding the following line to the `[sqlsrv]` section of the php.ini file will enable logging of errors and warnings:  
+By adding integer values together, you can specify more than one option at a time. For example, adding the following line to the `[sqlsrv]` section of the php.ini file enables logging of errors and warnings:  
   
 `sqlsrv.LogSeverity = 3`  
   
 ## See Also  
-[Programming Guide for PHP SQL Driver](../../connect/php/programming-guide-for-php-sql-driver.md)
-[Constants &#40;Microsoft Drivers for PHP for SQL Server&#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md)  
-[sqlsrv_configure](../../connect/php/sqlsrv-configure.md)  
-[sqlsrv_get_config](../../connect/php/sqlsrv-get-config.md)  
+[Programming Guide for the Microsoft Drivers for PHP for SQL Server](../../connect/php/programming-guide-for-php-sql-driver.md)
+
+[Constants &#40;Microsoft Drivers for PHP for SQL Server&#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md)
+
+[sqlsrv_configure](../../connect/php/sqlsrv-configure.md)
+
+[sqlsrv_get_config](../../connect/php/sqlsrv-get-config.md)
+
 [SQLSRV Driver API Reference](../../connect/php/sqlsrv-driver-api-reference.md)  
   

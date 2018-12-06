@@ -2,18 +2,15 @@
 title: "Asynchronous Execution (Notification Method) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
+ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "drivers"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: connectivity
+ms.topic: conceptual
 ms.assetid: e509dad9-5263-4a10-9a4e-03b84b66b6b3
-caps.latest.revision: 8
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # Asynchronous Execution (Notification Method)
 ODBC allows asynchronous execution of connection and statement operations. An application thread can call an ODBC function in asynchronous mode and the function can return before the operation is complete, allowing the application thread to perform other tasks. In the Windows 7 SDK, for asynchronous statement or connection operations, an application determined that the asynchronous operation was complete using the polling method. For more information, see [Asynchronous Execution (Polling Method)](../../../odbc/reference/develop-app/asynchronous-execution-polling-method.md). Beginning in the Windows 8 SDK, you can determine that an asynchronous operation is complete using the notification method.  
@@ -32,7 +29,7 @@ ODBC allows asynchronous execution of connection and statement operations. An ap
   
  Whenever the notification model is used, the polling model is disabled. Applications should not call the original function again. Call [SQLCompleteAsync Function](../../../odbc/reference/syntax/sqlcompleteasync-function.md) to complete the asynchronous operation. If an application calls the original function again before the asynchronous operation is complete, the call will return SQL_ERROR with SQLSTATE IM017 (Polling is disabled in Asynchronous Notification Mode).  
   
- When using the notification model, the application can call **SQLCancel** or **SQLCancelHandle** to cancel a statement or connection operation. If the cancel request is successful, ODBC will return SQL_SUCCESS. This message does not indicate that the function was actually canceled; it indicates that the cancel request was processed. Whether the function is actually canceled is driver-dependent and data source–dependent. When an operation is canceled, the Driver Manager will still signal the event. The Driver Manager returns SQL_ERROR in the return code buffer and the state is SQLSTATE HY008 (Operation canceled) to indicate the cancelation is successful. If the function completed its normal processing, the Driver Manager returns SQL_SUCCESS or SQL_SUCCESS_WITH_INFO.  
+ When using the notification model, the application can call **SQLCancel** or **SQLCancelHandle** to cancel a statement or connection operation. If the cancel request is successful, ODBC will return SQL_SUCCESS. This message does not indicate that the function was actually canceled; it indicates that the cancel request was processed. Whether the function is actually canceled is driver-dependent and data source-dependent. When an operation is canceled, the Driver Manager will still signal the event. The Driver Manager returns SQL_ERROR in the return code buffer and the state is SQLSTATE HY008 (Operation canceled) to indicate the cancelation is successful. If the function completed its normal processing, the Driver Manager returns SQL_SUCCESS or SQL_SUCCESS_WITH_INFO.  
   
 ### Downlevel Behavior  
  The ODBC Driver Manager version supporting this notification on complete is ODBC 3.81.  

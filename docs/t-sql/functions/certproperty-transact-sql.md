@@ -2,12 +2,10 @@
 title: "CERTPROPERTY (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/24/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
+ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: t-sql
 ms.topic: "language-reference"
 f1_keywords: 
   - "CERTPROPERTY"
@@ -19,13 +17,12 @@ helpviewer_keywords:
   - "schemas [SQL Server], names"
   - "CERTPROPERTY function"
 ms.assetid: 966c09aa-bc4e-45b0-ba53-c8381871f638
-caps.latest.revision: 22
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
 ---
 # CERTPROPERTY (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
 Returns the value of a specified certificate property.
   
@@ -43,42 +40,42 @@ CertProperty ( Cert_ID , '<PropertyName>' )
   
 ## Arguments  
 *Cert_ID*  
-Is the ID of the certificate. *Cert_ID* is an int.
+The certificate ID value, of data type int.
   
 *Expiry_Date*  
-Is the date of expiration of the certificate.
+The certificate expiration date.
   
 *Start_Date*  
-Is the date when the certificate becomes valid.
+The date when the certificate becomes valid.
   
 *Issuer_Name*  
-Is the issuer name of the certificate.
+The name of the certificate issuer.
   
 *Cert_Serial_Number*  
-Is the certificate serial number.
+The certificate serial number.
   
 *Subject*  
-Is the subject of the certificate.
+The certificate subject.
   
  *SID*  
-Is the SID of the certificate. This is also the SID of any login or user mapped to this certificate.
+The certificate SID. This is also the SID of any login or user mapped to this certificate.
   
 *String_SID*  
-Is the SID of the certificate as a character string. This is also the SID of any login or user mapped to the certificate.
+The SID of the certificate as a character string. This is also the SID of any login or user mapped to the certificate.
   
 ## Return types
-The property specification must be enclosed in single quotation marks.
+Single quotation marks must enclose the property specification.
   
-The return type depends on the property that is specified in the function call. All return values are wrapped in the return type of **sql_variant**.
+The return type depends on the property specified in the function call. The return type **sql_variant** wraps all return values.
 -   *Expiry_Date* and *Start_Date* return **datetime**.  
--   *Cert_Serial_Number*, *Issuer_Name*, *Subject*, and *String_SID* return **nvarchar**.  
+-   *Cert_Serial_Number*, *Issuer_Name*, *String_SID*, and *Subject* all return **nvarchar**.  
 -   *SID* returns **varbinary**.  
   
 ## Remarks  
-Information about certificates is visible in the [sys.certificates](../../relational-databases/system-catalog-views/sys-certificates-transact-sql.md) catalog view.
+See certificate information in the [sys.certificates](../../relational-databases/system-catalog-views/sys-certificates-transact-sql.md) catalog view.
   
 ## Permissions  
-Requires some permission on the certificate and that the caller has not been denied VIEW DEFINITION permission on the certificate.
+Requires appropriate permission(s) on the certificate, and requires that the caller has not been denied VIEW permission on the certificate. See [CREATE CERTIFICATE &#40;Transact-SQL&#41;](../../t-sql/statements/create-certificate-transact-sql.md) and [GRANT CERTIFICATE PERMISSIONS &#40;Transact-SQL&#41;](../../t-sql/statements/grant-certificate-permissions-transact-sql.md) for more information about certificate permissions.
   
 ## Examples  
 The following example returns the certificate subject.
@@ -87,7 +84,7 @@ The following example returns the certificate subject.
 -- First create a certificate.  
 CREATE CERTIFICATE Marketing19 WITH   
     START_DATE = '04/04/2004' ,  
-    EXPIRY_DATE = '07/07/2007' ,  
+    EXPIRY_DATE = '07/07/2040' ,  
     SUBJECT = 'Marketing Print Division';  
 GO  
   

@@ -1,0 +1,17 @@
+- name: Using Custom Assemblies with Reports
+  href: using-custom-assemblies-with-reports.md
+  items:
+  - name: Referencing Assemblies in an RDL File
+    href: referencing-assemblies-in-an-rdl-file.md
+  - name: Deploying a Custom Assembly
+    href: deploying-a-custom-assembly.md
+  - name: Using Strong-Named Custom Assemblies
+    href: using-strong-named-custom-assemblies.md
+  - name: Asserting Permissions in Custom Assemblies
+    href: asserting-permissions-in-custom-assemblies.md
+  - name: Accessing Custom Assemblies Through Expressions
+    href: accessing-custom-assemblies-through-expressions.md
+  - name: Initializing Custom Assembly Objects
+    href: initializing-custom-assembly-objects.md
+  - name: "How to: Debug Custom Assemblies"
+    href: how-to-debug-custom-assemblies.md

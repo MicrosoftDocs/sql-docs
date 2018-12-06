@@ -2,12 +2,10 @@
 title: "EXISTS (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/15/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
+ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: t-sql
 ms.topic: "language-reference"
 f1_keywords: 
   - "EXISTS_TSQL"
@@ -24,13 +22,13 @@ helpviewer_keywords:
   - "NOT EXISTS keyword"
   - "row existence testing [SQL Server]"
 ms.assetid: b6510a65-ac38-4296-a3d5-640db0c27631
-caps.latest.revision: 44
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "douglaslMS"
+ms.author: "douglasl"
+manager: craigg
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # EXISTS (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Specifies a subquery to test for the existence of rows.  
   
@@ -39,8 +37,6 @@ manager: "jhubbard"
 ## Syntax  
   
 ```  
--- Syntax for SQL Server, Azure SQL Database, Azure SQL Data Warehouse, Parallel Data Warehouse  
-  
 EXISTS ( subquery )  
 ```  
   
@@ -101,17 +97,15 @@ GO
   
  Here is the result set for either query.  
   
- `FirstName                                          LastName`  
+ ```
+FirstName                                          LastName
+-------------------------------------------------- ----------
+Barry                                              Johnson
+David                                              Johnson
+Willis                                             Johnson
   
- `-------------------------------------------------- ----------`  
-  
- `Barry                                              Johnson`  
-  
- `David                                              Johnson`  
-  
- `Willis                                             Johnson`  
-  
- `(3 row(s) affected)`  
+(3 row(s) affected)
+ ```  
   
 ### C. Comparing queries by using EXISTS and = ANY  
  The following example shows two queries to find stores whose name is the same name as a vendor. The first query uses `EXISTS` and the second uses `=``ANY`.  
@@ -199,193 +193,103 @@ GO
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- `FirstName                      LastName                       Title`  
-  
- `------------------------------ ------------------------------ ------------`  
-  
- `Syed                           Abbas                          Pacific Sales Manager`  
-  
- `Hazem                          Abolrous                       Quality Assurance Manager`  
-  
- `Humberto                       Acevedo                        Application Specialist`  
-  
- `Pilar                          Ackerman                       Shipping & Receiving Superviso`  
-  
- `François                       Ajenstat                       Database Administrator`  
-  
- `Amy                            Alberts                        European Sales Manager`  
-  
- `Sean                           Alexander                      Quality Assurance Technician`  
-  
- `Pamela                         Ansman-Wolfe                   Sales Representative`  
-  
- `Zainal                         Arifin                         Document Control Manager`  
-  
- `David                          Barber                         Assistant to CFO`  
-  
- `Paula                          Barreto de Mattos              Human Resources Manager`  
-  
- `Shai                           Bassli                         Facilities Manager`  
-  
- `Wanida                         Benshoof                       Marketing Assistant`  
-  
- `Karen                          Berg                           Application Specialist`  
-  
- `Karen                          Berge                          Document Control Assistant`  
-  
- `Andreas                        Berglund                       Quality Assurance Technician`  
-  
- `Matthias                       Berndt                         Shipping & Receiving Clerk`  
-  
- `Jo                             Berry                          Janitor`  
-  
- `Jimmy                          Bischoff                       Stocker`  
-  
- `Michael                        Blythe                         Sales Representative`  
-  
- `David                          Bradley                        Marketing Manager`  
-  
- `Kevin                          Brown                          Marketing Assistant`  
-  
- `David                          Campbell                       Sales Representative`  
-  
- `Jason                          Carlson                        Information Services Manager`  
-  
- `Fernando                       Caro                           Sales Representative`  
-  
- `Sean                           Chai                           Document Control Assistant`  
-  
- `Sootha                         Charncherngkha                 Quality Assurance Technician`  
-  
- `Hao                            Chen                           HR Administrative Assistant`  
-  
- `Kevin                          Chrisulis                      Network Administrator`  
-  
- `Pat                            Coleman                        Janitor`  
-  
- `Stephanie                      Conroy                         Network Manager`  
-  
- `Debra                          Core                           Application Specialist`  
-  
- `Ovidiu                         Crãcium                        Sr. Tool Designer`  
-  
- `Grant                          Culbertson                     HR Administrative Assistant`  
-  
- `Mary                           Dempsey                        Marketing Assistant`  
-  
- `Thierry                        D'Hers                         Tool Designer`  
-  
- `Terri                          Duffy                          VP Engineering`  
-  
- `Susan                          Eaton                          Stocker`  
-  
- `Terry                          Eminhizer                      Marketing Specialist`  
-  
- `Gail                           Erickson                       Design Engineer`  
-  
- `Janice                         Galvin                         Tool Designer`  
-  
- `Mary                           Gibson                         Marketing Specialist`  
-  
- `Jossef                         Goldberg                       Design Engineer`  
-  
- `Sariya                         Harnpadoungsataya              Marketing Specialist`  
-  
- `Mark                           Harrington                     Quality Assurance Technician`  
-  
- `Magnus                         Hedlund                        Facilities Assistant`  
-  
- `Shu                            Ito                            Sales Representative`  
-  
- `Stephen                        Jiang                          North American Sales Manager`  
-  
- `Willis                         Johnson                        Recruiter`  
-  
- `Brannon                        Jones                          Finance Manager`  
-  
- `Tengiz                         Kharatishvili                  Control Specialist`  
-  
- `Christian                      Kleinerman                     Maintenance Supervisor`  
-  
- `Vamsi                          Kuppa                          Shipping & Receiving Clerk`  
-  
- `David                          Liu                            Accounts Manager`  
-  
- `Vidur                          Luthra                         Recruiter`  
-  
- `Stuart                         Macrae                         Janitor`  
-  
- `Diane                          Margheim                       Research & Development Enginee`  
-  
- `Mindy                          Martin                         Benefits Specialist`  
-  
- `Gigi                           Matthew                        Research & Development Enginee`  
-  
- `Tete                           Mensa-Annan                    Sales Representative`  
-  
- `Ramesh                         Meyyappan                      Application Specialist`  
-  
- `Dylan                          Miller                         Research & Development Manager`  
-  
- `Linda                          Mitchell                       Sales Representative`  
-  
- `Barbara                        Moreland                       Accountant`  
-  
- `Laura                          Norman                         Chief Financial Officer`  
-  
- `Chris                          Norred                         Control Specialist`  
-  
- `Jae                            Pak                            Sales Representative`  
-  
- `Wanda                          Parks                          Janitor`  
-  
- `Deborah                        Poe                            Accounts Receivable Specialist`  
-  
- `Kim                            Ralls                          Stocker`  
-  
- `Tsvi                           Reiter                         Sales Representative`  
-  
- `Sharon                         Salavaria                      Design Engineer`  
-  
- `Ken                            Sanchez                        Chief Executive Officer`  
-  
- `José                           Saraiva                        Sales Representative`  
-  
- `Mike                           Seamans                        Accountant`  
-  
- `Ashvini                        Sharma                         Network Administrator`  
-  
- `Janet                          Sheperdigian                   Accounts Payable Specialist`  
-  
- `Candy                          Spoon                          Accounts Receivable Specialist`  
-  
- `Michael                        Sullivan                       Sr. Design Engineer`  
-  
- `Dragan                         Tomic                          Accounts Payable Specialist`  
-  
- `Lynn                           Tsoflias                       Sales Representative`  
-  
- `Rachel                         Valdez                         Sales Representative`  
-  
- `Garrett                        Vargar                         Sales Representative`  
-  
- `Ranjit                         Varkey Chudukatil              Sales Representative`  
-  
- `Bryan                          Walton                         Accounts Receivable Specialist`  
-  
- `Jian Shuo                      Wang                           Engineering Manager`  
-  
- `Brian                          Welcker                        VP Sales`  
-  
- `Jill                           Williams                       Marketing Specialist`  
-  
- `Dan                            Wilson                         Database Administrator`  
-  
- `John                           Wood                           Marketing Specialist`  
-  
- `Peng                           Wu                             Quality Assurance Supervisor`  
-  
- `(91 row(s) affected)`  
+ ```
+FirstName                      LastName                       Title
+------------------------------ ------------------------------ ------------
+Syed                           Abbas                          Pacific Sales Manager
+Hazem                          Abolrous                       Quality Assurance Manager
+Humberto                       Acevedo                        Application Specialist
+Pilar                          Ackerman                       Shipping & Receiving Superviso
+François                       Ajenstat                       Database Administrator
+Amy                            Alberts                        European Sales Manager
+Sean                           Alexander                      Quality Assurance Technician
+Pamela                         Ansman-Wolfe                   Sales Representative
+Zainal                         Arifin                         Document Control Manager
+David                          Barber                         Assistant to CFO
+Paula                          Barreto de Mattos              Human Resources Manager
+Shai                           Bassli                         Facilities Manager
+Wanida                         Benshoof                       Marketing Assistant
+Karen                          Berg                           Application Specialist
+Karen                          Berge                          Document Control Assistant
+Andreas                        Berglund                       Quality Assurance Technician
+Matthias                       Berndt                         Shipping & Receiving Clerk
+Jo                             Berry                          Janitor
+Jimmy                          Bischoff                       Stocker
+Michael                        Blythe                         Sales Representative
+David                          Bradley                        Marketing Manager
+Kevin                          Brown                          Marketing Assistant
+David                          Campbell                       Sales Representative
+Jason                          Carlson                        Information Services Manager
+Fernando                       Caro                           Sales Representative
+Sean                           Chai                           Document Control Assistant
+Sootha                         Charncherngkha                 Quality Assurance Technician
+Hao                            Chen                           HR Administrative Assistant
+Kevin                          Chrisulis                      Network Administrator
+Pat                            Coleman                        Janitor
+Stephanie                      Conroy                         Network Manager
+Debra                          Core                           Application Specialist
+Ovidiu                         Crãcium                        Sr. Tool Designer
+Grant                          Culbertson                     HR Administrative Assistant
+Mary                           Dempsey                        Marketing Assistant
+Thierry                        D'Hers                         Tool Designer
+Terri                          Duffy                          VP Engineering
+Susan                          Eaton                          Stocker
+Terry                          Eminhizer                      Marketing Specialist
+Gail                           Erickson                       Design Engineer
+Janice                         Galvin                         Tool Designer
+Mary                           Gibson                         Marketing Specialist
+Jossef                         Goldberg                       Design Engineer
+Sariya                         Harnpadoungsataya              Marketing Specialist
+Mark                           Harrington                     Quality Assurance Technician
+Magnus                         Hedlund                        Facilities Assistant
+Shu                            Ito                            Sales Representative
+Stephen                        Jiang                          North American Sales Manager
+Willis                         Johnson                        Recruiter
+Brannon                        Jones                          Finance Manager
+Tengiz                         Kharatishvili                  Control Specialist
+Christian                      Kleinerman                     Maintenance Supervisor
+Vamsi                          Kuppa                          Shipping & Receiving Clerk
+David                          Liu                            Accounts Manager
+Vidur                          Luthra                         Recruiter
+Stuart                         Macrae                         Janitor
+Diane                          Margheim                       Research & Development Enginee
+Mindy                          Martin                         Benefits Specialist
+Gigi                           Matthew                        Research & Development Enginee
+Tete                           Mensa-Annan                    Sales Representative
+Ramesh                         Meyyappan                      Application Specialist
+Dylan                          Miller                         Research & Development Manager
+Linda                          Mitchell                       Sales Representative
+Barbara                        Moreland                       Accountant
+Laura                          Norman                         Chief Financial Officer
+Chris                          Norred                         Control Specialist
+Jae                            Pak                            Sales Representative
+Wanda                          Parks                          Janitor
+Deborah                        Poe                            Accounts Receivable Specialist
+Kim                            Ralls                          Stocker
+Tsvi                           Reiter                         Sales Representative
+Sharon                         Salavaria                      Design Engineer
+Ken                            Sanchez                        Chief Executive Officer
+José                           Saraiva                        Sales Representative
+Mike                           Seamans                        Accountant
+Ashvini                        Sharma                         Network Administrator
+Janet                          Sheperdigian                   Accounts Payable Specialist
+Candy                          Spoon                          Accounts Receivable Specialist
+Michael                        Sullivan                       Sr. Design Engineer
+Dragan                         Tomic                          Accounts Payable Specialist
+Lynn                           Tsoflias                       Sales Representative
+Rachel                         Valdez                         Sales Representative
+Garrett                        Vargar                         Sales Representative
+Ranjit                         Varkey Chudukatil              Sales Representative
+Bryan                          Walton                         Accounts Receivable Specialist
+Jian Shuo                      Wang                           Engineering Manager
+Brian                          Welcker                        VP Sales
+Jill                           Williams                       Marketing Specialist
+Dan                            Wilson                         Database Administrator
+John                           Wood                           Marketing Specialist
+Peng                           Wu                             Quality Assurance Supervisor
+  
+(91 row(s) affected)
+ ```  
   
 ## Examples: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   

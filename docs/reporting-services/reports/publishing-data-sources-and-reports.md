@@ -1,24 +1,19 @@
 ---
 title: "Publishing Data Sources and Reports | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/07/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.date: 03/07/2017
+ms.prod: reporting-services
+ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
+ms.technology: reports
+
+
+ms.topic: conceptual
 helpviewer_keywords: 
   - "publishing data sources [Reporting Services]"
   - "publishing reports [Reporting Services]"
   - "data sources [Reporting Services], managing"
 ms.assetid: 3a740f8a-1060-4ec3-938b-2305b6887ebd
-caps.latest.revision: 13
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
+author: markingmyname
+ms.author: maghan
 ---
 # Publishing Data Sources and Reports
   Before publishing your report, you should preview the report to see how it will look when it is run. You can continue to refine the design until you are satisfied with the results.  

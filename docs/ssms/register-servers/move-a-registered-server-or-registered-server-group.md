@@ -2,13 +2,11 @@
 title: "Move a Registered Server or Registered Server Group | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/07/2017"
-ms.prod: "sql-server-2016"
+ms.prod: sql
+ms.prod_service: "sql-tools"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: ssms
+ms.topic: conceptual
 helpviewer_keywords: 
   - "moving registered server or server group"
   - "Registered Servers [SQL Server], server groups"
@@ -16,12 +14,12 @@ helpviewer_keywords:
   - "Registered Servers [SQL Server], moving server or server group"
   - "groups [SQL Server], server"
 ms.assetid: 4438ca98-3abe-4dea-a760-48a9dad63c2e
-caps.latest.revision: 20
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: craigg
 ---
 # Move a Registered Server or Registered Server Group
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
   This topic describes how to organize the servers in Registered Servers by moving a registered server or  server groups in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Server groups can contain registered servers, or other server groups. Both servers and server groups can be moved from one server group to another.  
   
 ##  <a name="SSMSProcedure"></a>  

@@ -1,13 +1,11 @@
 ---
 title: "Table Value Constructor (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/16/2017"
-ms.prod: "sql-non-specified"
+ms.date: "08/15/2017"
+ms.prod: sql
+ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: t-sql
 ms.topic: "language-reference"
 dev_langs: 
   - "TSQL"
@@ -17,13 +15,12 @@ helpviewer_keywords:
   - "row constructor [SQL Server]"
   - "table value constructor [SQL Server]"
 ms.assetid: e57cd31d-140e-422f-8178-2761c27b9deb
-caps.latest.revision: 14
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "douglaslMS"
+ms.author: "douglasl"
+manager: craigg
 ---
 # Table Value Constructor (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Specifies a set of row value expressions to be constructed into a table. The [!INCLUDE[tsql](../../includes/tsql-md.md)] table value constructor allows multiple rows of data to be specified in a single DML statement. The table value constructor can be specified in the VALUES clause of the INSERT statement, in the USING \<source table> clause of the MERGE statement, and in the definition of a derived table in the FROM clause.  
   
@@ -55,7 +52,7 @@ VALUES ( <row value expression list> ) [ ,...n ]
  Is a constant, a variable, or an expression. The expression cannot contain an EXECUTE statement.  
   
 ## Limitations and Restrictions  
- Table value constructors can be used in one of two ways: directly in the VALUES list of an INSERT … VALUES statement, or as a derived table anywhere that derived tables are allowed. The maximum number of rows that can be constructed by inserting rows directly in the VALUES list is 1000. Error 10738 is returned if the number of rows exceeds 1000 in that case. To insert more than 1000 rows, use one of the following methods:  
+ Table value constructors can be used in one of two ways: directly in the VALUES list of an INSERT ... VALUES statement, or as a derived table anywhere that derived tables are allowed. Error 10738 is returned if the number of rows exceeds the maximum. To insert more rows than the limit allows, use one of the following methods:  
   
 -   Create multiple INSERT statements  
   
@@ -140,7 +137,7 @@ SELECT * FROM Sales.MySalesReason;
 ```  
   
 ### C. Specifying multiple values as a derived table in a FROM clause  
- The following examples uses the table value constructor to specify multiple values in the FROM clause of a SELECT statement.  
+ The following examples use the table value constructor to specify multiple values in the FROM clause of a SELECT statement.  
   
 ```  
 SELECT a, b FROM (VALUES (1, 2), (3, 4), (5, 6), (7, 8), (9, 10) ) AS MyTable(a, b);  

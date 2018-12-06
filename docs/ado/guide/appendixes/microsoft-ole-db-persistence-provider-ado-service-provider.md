@@ -1,23 +1,20 @@
 ---
 title: "Microsoft OLE DB Persistence Provider (ADO Service Provider) | Microsoft Docs"
-ms.prod: "sql-non-specified"
-ms.technology:
-  - "drivers"
-ms.custom: "H1Hack27Feb2017"
-ms.date: "01/19/2017"
+ms.prod: sql
+ms.prod_service: connectivity
+ms.technology: connectivity
+ms.custom: ""
+ms.date: 11/08/2018
 ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords:
   - "providers [ADO], OLE DB persistence provider"
   - "persistence provider [ADO]"
   - "OLE DB persistence provider [ADO]"
 ms.assetid: e75ef0dc-2016-4fcc-8918-23311c0d4e02
-caps.latest.revision: 11
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # Microsoft OLE DB Persistence Provider Overview
 The Microsoft OLE DB Persistence Provider enables you to save a [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) object into a file, and later restore that **Recordset** object from the file. Schema information, data, and pending changes are preserved.
@@ -27,7 +24,7 @@ The Microsoft OLE DB Persistence Provider enables you to save a [Recordset](../.
 ## Provider Keyword
  To invoke this provider, specify the following keyword and value in the connection string.
 
-```
+```vb
 "Provider=MSPersist"
 ```
 

@@ -2,13 +2,11 @@
 title: "Duplicated Features | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
+ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "drivers"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: connectivity
+ms.topic: conceptual
 helpviewer_keywords: 
   - "duplicated functions [ODBC]"
   - "compatibility [ODBC], duplicated functions"
@@ -16,10 +14,9 @@ helpviewer_keywords:
   - "functions [ODBC], duplicated functions"
   - "backward compatibility [ODBC], duplicated functions"
 ms.assetid: 641b16bc-f791-46d8-b093-31736473fe3d
-caps.latest.revision: 6
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # Duplicated Features
 The following ODBC 2.*x* functions have been duplicated by ODBC 3.*x* functions. As a result, the ODBC 2.*x* functions are deprecated in ODBC 3.*x*. The ODBC 3.*x* functions are referred to as replacement functions.  

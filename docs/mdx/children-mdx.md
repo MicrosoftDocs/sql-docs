@@ -1,28 +1,17 @@
 ---
 title: "Children (MDX) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/02/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "CHILDREN"
-dev_langs: 
-  - "kbMDX"
-helpviewer_keywords: 
-  - "Children function"
-ms.assetid: ce2c3069-914c-44a3-8a4c-5cbd4fb71e4c
-caps.latest.revision: 34
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
+ms.date: 06/04/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: mdx
+ms.topic: reference
+ms.author: owend
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
 ---
 # Children (MDX)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+
 
   Returns the set of children of a specified member.  
   
@@ -61,7 +50,7 @@ FROM
   
 |Release|History|  
 |-------------|-------------|  
-|[!INCLUDE[ssBOL2005_R03](../includes/ssbol2005-r03-md.md)]|**Changed content:**<br /> — Updated syntax and arguments to improve clarity.<br /><br /> — Added updated examples.|  
+|[!INCLUDE[ssBOL2005_R03](../includes/ssbol2005-r03-md.md)]|**Changed content:**<br /> - Updated syntax and arguments to improve clarity.<br /><br /> - Added updated examples.|  
   
 ## See Also  
  [MDX Function Reference &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  

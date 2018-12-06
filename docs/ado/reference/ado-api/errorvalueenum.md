@@ -1,35 +1,32 @@
 ---
 title: "ErrorValueEnum | Microsoft Docs"
-ms.prod: "sql-non-specified"
-ms.technology:
-  - "drivers"
+ms.prod: sql
+ms.prod_service: connectivity
+ms.technology: connectivity
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 apitype: "COM"
 f1_keywords: 
   - "ErrorValueEnum"
 helpviewer_keywords: 
   - "ErrorValueEnum enumeration [ADO]"
 ms.assetid: 9469ba3a-5e4f-4a10-bbb8-a51a6c9660ea
-caps.latest.revision: 14
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # ErrorValueEnum
 Specifies the type of ADO run-time error.  
   
  Three forms of the error number are listed:  
   
--   Positive decimal—The low two bytes of the full number in decimal format. This number is displayed in the default Visual Basic error message dialog box. For example, Run-time error '3707'.  
+-   Positive decimal-The low two bytes of the full number in decimal format. This number is displayed in the default Visual Basic error message dialog box. For example, Run-time error '3707'.  
   
--   Negative decimal—The decimal translation of the full error number.  
+-   Negative decimal-The decimal translation of the full error number.  
   
--   Hexadecimal—The hexadecimal representation of the full error number. The Windows facility code is in the fourth digit. The facility code for ADO error numbers is *A*. For example: 0x800***A***0E7B.  
+-   Hexadecimal-The hexadecimal representation of the full error number. The Windows facility code is in the fourth digit. The facility code for ADO error numbers is *A*. For example: 0x800***A***0E7B.  
   
 > [!NOTE]
 >  OLE DB errors may be passed to your ADO application. Typically, these can be identified by a Windows facility code of *4*. For example, 0x800***4***.  

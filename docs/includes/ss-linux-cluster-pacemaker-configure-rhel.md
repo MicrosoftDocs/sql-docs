@@ -5,7 +5,7 @@
    sudo firewall-cmd --reload
    ```
 
-   > If the firewall doesn’t have a built-in high-availability configuration, open the following ports for Pacemaker.
+   > If the firewall doesn't have a built-in high-availability configuration, open the following ports for Pacemaker.
    >
    > * TCP: Ports 2224, 3121, 21064
    > * UDP: Port 5405
@@ -36,6 +36,7 @@
    sudo pcs cluster auth <node1> <node2> <node3> -u hacluster -p <password for hacluster>
    sudo pcs cluster setup --name <clusterName> <node1> <node2> <node3> 
    sudo pcs cluster start --all
+   sudo pcs cluster enable --all
    ```
    
    >[!NOTE]

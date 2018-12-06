@@ -2,23 +2,21 @@
 title: "Wildcard Components and Content Validation | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
+ms.prod: sql
+ms.prod_service: "database-engine"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-xml"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: xml
+ms.topic: conceptual
 helpviewer_keywords: 
   - "wildcard components [XML]"
   - "content validation [XML]"
 ms.assetid: ffa7d974-3645-446c-8425-f0b22b6b060a
-caps.latest.revision: 13
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "douglaslMS"
+ms.author: "douglasl"
+manager: craigg
 ---
 # Wildcard Components and Content Validation
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
   Wildcard components are used to increase flexibility in what is allowed to appear in a content model. These components are supported in the XSD language in the following ways:  
   
 -   Element wildcard components. These are represented by the **\<xsd:any>** element.  
@@ -40,8 +38,8 @@ manager: "jhubbard"
   
 ```  
 CREATE XML SCHEMA COLLECTION SC AS '  
-<schema xmlns="http://www.w3.org/2001/XMLSchema"   
-        targetNamespace="http://ns">  
+<schema xmlns="https://www.w3.org/2001/XMLSchema"   
+        targetNamespace="https://ns">  
    <element name="e" type="anyType"/>  
    <element name="a" type="byte"/>  
    <element name="b" type="string"/>  
@@ -53,7 +51,7 @@ GO
   
 ```  
 DECLARE @var XML(SC)  
-SET @var = '<e xmlns="http://ns"><a>1</a><b>data</b></e>'  
+SET @var = '<e xmlns="https://ns"><a>1</a><b>data</b></e>'  
 GO  
 ```  
   
@@ -61,7 +59,7 @@ GO
   
 ```  
 DECLARE @var XML(SC)  
-SET @var = '<e xmlns="http://ns"><a>1</a><c>Wrong</c><b>data</b></e>'  
+SET @var = '<e xmlns="https://ns"><a>1</a><c>Wrong</c><b>data</b></e>'  
 GO  
 ```  
   
@@ -69,7 +67,7 @@ GO
   
 ```  
 DECLARE @var XML(SC)  
-SET @var = '<e xmlns="http://ns"><a>Wrong</a><b>data</b></e>'  
+SET @var = '<e xmlns="https://ns"><a>Wrong</a><b>data</b></e>'  
 SELECT @var  
 GO  
 ```  

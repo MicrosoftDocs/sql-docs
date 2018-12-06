@@ -1,27 +1,17 @@
 ---
 title: "Microsoft Sequence Clustering Algorithm | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/02/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "clusters [Analysis Services]"
-  - "algorithms [data mining]"
-  - "sequence clustering algorithms [Analysis Services]"
-  - "sequence [Analysis Services]"
-ms.assetid: ae779a1f-0adb-4857-afbd-a15543dff299
-caps.latest.revision: 49
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
+ms.date: 05/08/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: data-mining
+ms.topic: conceptual
+ms.author: owend
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
 ---
 # Microsoft Sequence Clustering Algorithm
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   The [!INCLUDE[msCoName](../../includes/msconame-md.md)] Sequence Clustering algorithm is a unique algorithm that combines sequence analysis with clustering. You can use this algorithm to explore data that contains events that can be linked in a *sequence*. The algorithm finds the most common sequences, and performs clustering to find  sequences that are similar. The following examples illustrate the types of sequences that you might capture as data for machine learning, to provide insight about common problems or business scenarios:  
   
 -   Clickstreams or click paths generated when users navigate or browse a Web site  

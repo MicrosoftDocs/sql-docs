@@ -2,24 +2,23 @@
 title: "Join Dialog Box (Visual Database Tools) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
+ms.prod_service: "sql-tools"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "tools-ssms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: ssms
+ms.topic: conceptual
 f1_keywords: 
   - "vdt.ppg.joinline"
   - "vdtsql.chm:69638"
 ms.assetid: 0d9516bb-4ad3-4fcf-bb77-93474dea698f
-caps.latest.revision: 4
 author: "stevestein"
 ms.author: "sstein"
-manager: "jhubbard"
+manager: craigg
+
 ---
 # Join Dialog Box (Visual Database Tools)
-Use this dialog box to specify options for joining tables. To access this dialog, in the **Design** pane select a join line. Then in the **Properties** window click **Join Condition And Type**, and click the ellipses **(…)** that appear to the right of the property.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+Use this dialog box to specify options for joining tables. To access this dialog, in the **Design** pane select a join line. Then in the **Properties** window click **Join Condition And Type**, and click the ellipses **(...)** that appear to the right of the property.  
   
 By default, related tables are joined using an inner join that creates a result set based on rows containing matching information in the join columns. By setting options in the **Join** dialog box, you can specify a join based on a different operator, and you can specify an outer join.  
   
@@ -29,8 +28,8 @@ For more information about joining tables, see [Query with Joins &#40;Visual Dat
   
 |**Term**|**Definition**|  
 |------------|------------------|  
-|**Table**|The names of the tables or table-valued objects involved in the join. You cannot change the names of the tables here — this information is displayed for information only.|  
-|**Column**|The names of the columns used for joining the tables. The operator in the operator list specifies the relationship between the data in the columns. You cannot change the names of the columns here — this information is displayed for information only.|  
+|**Table**|The names of the tables or table-valued objects involved in the join. You cannot change the names of the tables here - this information is displayed for information only.|  
+|**Column**|The names of the columns used for joining the tables. The operator in the operator list specifies the relationship between the data in the columns. You cannot change the names of the columns here - this information is displayed for information only.|  
 |**Operator**|Specify the operator used to relate the join columns. To specify an operator other than equal (=), select it from the list. When you close the property page, the operator you selected will appear in the diamond graphic of the join line, as in the following:<br /><br />![Visual Database Tools icon](../../ssms/visual-db-tools/media/dv3wbii.gif "Visual Database Tools icon")|  
 |**All rows from <table1>**|Specify that all the rows from the left table appear in the output, even if there are no corresponding matches in the right table. Columns with no matching data in the right table appear as null. Choosing this option is equivalent to specifying LEFT OUTER JOIN in the SQL statement.|  
 |**All rows from <table2>**|Specify that all the rows from the right table appear in the output, even if there are no corresponding matches in the left table. Columns with no matching data in the left table appear as null. Choosing this option is equivalent to specifying RIGHT OUTER JOIN in the SQL statement.|  

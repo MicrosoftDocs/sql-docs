@@ -2,12 +2,10 @@
 title: "= (Equals) (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "12/06/2016"
-ms.prod: "sql-non-specified"
+ms.prod: sql
+ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: t-sql
 ms.topic: "language-reference"
 f1_keywords: 
   - "="
@@ -20,13 +18,13 @@ helpviewer_keywords:
   - "equals operator (=)"
   - "= (equals operator)"
 ms.assetid: 18885245-5f55-4831-8f0b-7f2a3e82e246
-caps.latest.revision: 40
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "douglaslMS"
+ms.author: "douglasl"
+manager: craigg
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # = (Equals) (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Compares the equality of two expressions (a comparison operator) in [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)].  
   
@@ -35,8 +33,6 @@ manager: "jhubbard"
 ## Syntax  
   
 ```  
--- Syntax for SQL Server, Azure SQL Database, Azure SQL Data Warehouse, Parallel Data Warehouse  
-  
 expression = expression  
 ```  
   
@@ -48,15 +44,15 @@ expression = expression
  Boolean  
   
 ## Remarks  
- When you compare two NULL expressions, the result depends on the `ANSI_NULLS` setting:  
+ When you compare using a NULL expression, the result depends on the `ANSI_NULLS` setting:  
   
--   If `ANSI_NULLS` is set to ON, the result is NULL, following the ANSI convention that a NULL (or unknown) value is not equal to another NULL or unknown value.  
+-   If `ANSI_NULLS` is set to ON, the result of any comparison with NULL is UNKNOWN, following the ANSI convention that NULL is an unknown value and cannot be compared with any other value, including other NULLs.  
   
--   If `ANSI_NULLS` is set to OFF, the result of NULL compared to NULL is TRUE.  
+-   If `ANSI_NULLS` is set to OFF, the result of comparing NULL to NULL is TRUE, and the result of comparing NULL to any other value is FALSE.  
 
 For more information, see [SET ANSI_NULLS &#40;Transact-SQL&#41;](../../t-sql/statements/set-ansi-nulls-transact-sql.md).
   
- Any sort of comparison of a NULL value (an unknown) to a non-NULL value always results in FALSE.  
+ A boolean expression resulting in UNKNOWN behaves similarly to FALSE in most, but not all cases. See [NULL and UNKNOWN &#40;Transact-SQL&#41;](../../t-sql/language-elements/null-and-unknown-transact-sql.md) and [NOT &#40;Transact-SQL&#41;](../../t-sql/language-elements/not-transact-sql.md) for more information.  
   
   
 ## Examples  
@@ -87,7 +83,7 @@ DepartmentID Name
 ```  
   
 ### B. Comparing NULL and non-NULL values  
- The following example uses the Equals (`=`) and Not Equal To (`<>`) comparison operators to make comparisons with `NULL` and nonnull values in a table. The example also shows that `IS NULL` is not affected by the `SET ANSI`_`NULLS` setting.  
+ The following example uses the Equals (`=`) and Not Equal To (`<>`) comparison operators to make comparisons with `NULL` and nonnull values in a table. The example also shows that `IS NULL` is not affected by the `SET ANSI_NULLS` setting.  
   
 ```  
 -- Create table t1 and insert 3 rows.  

@@ -1,0 +1,25 @@
+### YamlMime:XRefMap
+sorted: false
+hrefUpdated: true
+references:
+- uid: Microsoft.AnalysisServices.Cube.ScriptCacheProcessingMode*
+  commentId: P:Microsoft.AnalysisServices.Cube.ScriptCacheProcessingMode
+  href: https://msdn.microsoft.com/library/microsoft.analysisservices.cube.scriptcacheprocessingmode(v=sql.120).aspx
+  name: ScriptCacheProcessingMode*
+  name.vb: ScriptCacheProcessingMode*
+  fullName: Microsoft.AnalysisServices.Cube.ScriptCacheProcessingMode*
+  fullName.vb: Microsoft.AnalysisServices.Cube.ScriptCacheProcessingMode*
+- uid: Microsoft.AnalysisServices.Cube.ProcessingMode*
+  commentId: P:Microsoft.AnalysisServices.Cube.ProcessingMode*
+  href: https://msdn.microsoft.com/library/microsoft.analysisservices.cube.processingmode(v=sql.120).aspx
+  name: ProcessingMode*
+  name.vb: ProcessingMode*
+  fullName: Microsoft.AnalysisServices.Cube.ProcessingMode*
+  fullName.vb: Microsoft.AnalysisServices.Cube.ProcessingMode*
+- uid: Microsoft.AnalysisServices.Cube.StorageLocation*
+  commentId: P:Microsoft.AnalysisServices.Cube.StorageLocation
+  href: https://msdn.microsoft.com/library/microsoft.analysisservices.cube.scripterrorhandlingmode(v=SQL.130).aspx
+  name: StorageLocation
+  name.vb: StorageLocation
+  fullName: Cube.StorageLocation
+  fullName.vb: Cube.StorageLocation

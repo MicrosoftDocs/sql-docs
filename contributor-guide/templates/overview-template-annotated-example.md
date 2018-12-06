@@ -116,7 +116,7 @@ A SQL Database backup includes both local database backups and geo-redundant bac
 	Explains first component of the backup capabilities
 ------------------>
 
-For local backups, SQL Database uses SQL Server technology to create [full](https://msdn.microsoft.com/library/ms186289.aspx), [differential](https://msdn.microsoft.com/library/ms175526.aspx ), and [transaction log](https://msdn.microsoft.com/library/ms191429.aspx) backups. The transaction log backups happen every five minutes, which allows you to do a point-in-time restore to the same server that hosts the database. When you restore a database, the service figures out which full, differential, and transaction log backups need to be restored.
+For local backups, SQL Database uses SQL Server technology to create [full](../../docs/relational-databases/backup-restore/full-database-backups-sql-server.md), [differential](../../docs/relational-databases/backup-restore/differential-backups-sql-server.md) backups. The transaction log backups happen every five minutes, which allows you to do a point-in-time restore to the same server that hosts the database. When you restore a database, the service figures out which full, differential, and transaction log backups need to be restored.
 
 <!--------------- 
 	Explicit list of what to do with a local backup. "Use a ..." helps people to scan the topic and find the uses quickly.
@@ -156,7 +156,7 @@ SQL Database provides up to 200% of your maximum provisioned database storage as
 
 ## How often do backups happen?
 
-For local database backups, full database backups happen weekly, differential database backups happen hourly, and transaction log backups happen every five minutes. The first full backup is scheduled immediately after a database is created. It usually completes within 30 minutes, but it can take longer when the database is of a significant size. For example, the initial backup can take longer on a restored database or a database copy. After the first full backup, all further backups are scheduled automatically and managed silently in the background. The exact timing of full and [differential](https://msdn.microsoft.com/library/ms175526.aspx) database backups is determined as it balances the overall system workload. 
+For local database backups, full database backups happen weekly, differential database backups happen hourly, and transaction log backups happen every five minutes. The first full backup is scheduled immediately after a database is created. It usually completes within 30 minutes, but it can take longer when the database is of a significant size. For example, the initial backup can take longer on a restored database or a database copy. After the first full backup, all further backups are scheduled automatically and managed silently in the background. The exact timing of full and [differential](../../docs/relational-databases/backup-restore/differential-backups-sql-server.md) database backups is determined as it balances the overall system workload. 
 
 For geo-redundant backups, full and differential backups are copied according to the Azure Storage replication schedule.
 
@@ -236,6 +236,6 @@ GUIDELINES for Next Steps
 
 ## Next steps
 
-Database backups are an essential part of any business continuity and disaster recovery strategy because they protect your data from accidental corruption or deletion. To see how database backups into a broader strategy, see [Business continuity overview](sql-database-business-continuity.md).
+Database backups are an essential part of any business continuity and disaster recovery strategy because they protect your data from accidental corruption or deletion. To see how database backups fit into a broader strategy, see [Business continuity overview](sql-database-business-continuity.md).
 
 

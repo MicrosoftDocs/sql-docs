@@ -2,26 +2,26 @@
 title: "Supported Version and Edition Upgrades | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/27/2016"
-ms.prod: "sql-server-2016"
+ms.prod: sql
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "setup-install"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: install
+ms.topic: conceptual
 helpviewer_keywords: 
   - "components [SQL Server], adding to existing installations"
   - "versions [SQL Server], upgrading"
   - "upgrading SQL Server, upgrades supported"
   - "cross-language support"
 ms.assetid: 702359c4-6ca9-42a8-860c-a95a802898a1
-caps.latest.revision: 148
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
+author: MashaMSFT
+ms.author: mathoma
+monikerRange: ">=sql-server-2016||=sqlallproducts-allversions"
+manager: craigg
 ---
 # Supported Version and Edition Upgrades
-  You can upgrade from [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], and [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]. This topic lists the supported upgrade paths from these [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] versions, and the supported edition upgrades for [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)].  
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+  
+  You can upgrade from [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], and [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]. This article lists the supported upgrade paths from these [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] versions, and the supported edition upgrades for [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)].  
   
 ## Pre upgrade Checklist  
   
@@ -39,7 +39,7 @@ manager: "jhubbard"
   
 -   Cross-version instances of [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] are not supported. Version numbers of the [!INCLUDE[ssDE](../../includes/ssde-md.md)], [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], and [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] components must be the same in an instance of [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)].  
   
--   SQL Server 2016 is only available for 64-bit platforms. Cross-platform upgrade is not supported. You cannot upgrade a 32-bit instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to native 64-bit using [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Setup. However, you can back up or detach databases from a 32-bit instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], and then restore or attach them to a new instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (64-bit) if the databases are not published in replication. You must re-create any logins and other user objects in master, msdb, and model system databases.  
+-   [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] is only available for 64-bit platforms. Cross-platform upgrade is not supported. You cannot upgrade a 32-bit instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to native 64-bit using [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Setup. However, you can back up or detach databases from a 32-bit instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], and then restore or attach them to a new instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (64-bit) if the databases are not published in replication. You must re-create any logins and other user objects in master, msdb, and model system databases.  
   
 -   You cannot add new features during the upgrade of your existing instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. After you upgrade an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)], you can add features by using the [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Setup. For more information, see [Add Features to an Instance of SQL Server 2016 &#40;Setup&#41;](../../database-engine/install-windows/add-features-to-an-instance-of-sql-server-2016-setup.md).  
  
@@ -53,17 +53,15 @@ manager: "jhubbard"
  
 SQL Server 2016 supports upgrade from the following versions of SQL Server:
  
-- SQL Server 2008 SP4 or later
-- SQL Server 2008 R2 SP3 or later
-- SQL Server 2012 SP2 or later
-- SQL Server 2014 or later 
+- [!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)] SP4 or later
+- [!INCLUDE[ssKilimanjaro](../../includes/ssKilimanjaro-md.md)] SP3 or later
+- [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP2 or later
+- [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] or later 
  
-
-  
 > [!NOTE]  
->  To upgrade databases on [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] see [Support for 2005](#SupportFor2005).  
+> To upgrade databases on [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] see [Support for 2005](#SupportFor2005).  
   
- The table below lists the supported upgrade scenarios from earlier versions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)].  
+The table below lists the supported upgrade scenarios from earlier versions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)].  
   
 |Upgrade from|Supported upgrade path|  
 |------------------|----------------------------|  
@@ -100,10 +98,9 @@ SQL Server 2016 supports upgrade from the following versions of SQL Server:
 |[!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] Developer |[!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Enterprise | 
 
  \* Microsoft support to upgrade from release candidate software is specifically for customers who participated in the Technology Adoption Program (TAP). 
-
    
 ###  <a name="SupportFor2005"></a> [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Support for [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]  
- This section discusses [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] support for [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]. In [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)], you will be able to do the following:  
+This section discusses [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] support for [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]. In [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)], you will be able to do the following:  
   
 -   Attach a [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] database (mdf/ldf files) to [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] instance of database engine.  
   
@@ -111,9 +108,11 @@ SQL Server 2016 supports upgrade from the following versions of SQL Server:
   
 -   Back up a [!INCLUDE[ssASversion2005](../../includes/ssasversion2005-md.md)] cube and restoring on [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)].  
   
- When a [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] database is upgraded to [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)], the database compatibility level will be changed from 90 to 100. (In [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)], valid values for the database compatibility level are 100, 110, 120, and 130.) [ALTER DATABASE Compatibility Level &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md) discusses how the compatibility level change could affect [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] applications.  
+> [!NOTE]  
+> When a [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] database is upgraded to [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)], the database compatibility level will be changed from 90 to 100. 
+> In [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)], valid values for the database compatibility level are 100, 110, 120, and 130. [ALTER DATABASE Compatibility Level &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md) discusses how the compatibility level change could affect [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] applications.  
   
- Any scenarios not specified in the list above are not supported, including but not limited to the following:  
+Any scenarios not specified in the list above are not supported, including but not limited to the following:  
   
 -   Installing [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] and [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] on same computer (side by side).  
   
@@ -136,9 +135,9 @@ SQL Server 2016 supports upgrade from the following versions of SQL Server:
 -   Support for [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] third party custom Integration Services components, such as execute and upgrade.  
   
 ## [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Edition Upgrade  
- The following table lists the supported edition upgrade scenarios in [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)].  
+The following table lists the supported edition upgrade scenarios in [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)].  
   
- For step-by-step instructions on how to perform an edition upgrade, see [Upgrade to a Different Edition of SQL Server 2016 &#40;Setup&#41;](../../database-engine/install-windows/upgrade-to-a-different-edition-of-sql-server-setup.md).  
+For step-by-step instructions on how to perform an edition upgrade, see [Upgrade to a Different Edition of SQL Server 2016 &#40;Setup&#41;](../../database-engine/install-windows/upgrade-to-a-different-edition-of-sql-server-setup.md).  
   
 |Upgrade From|Upgrade To|  
 |------------------|----------------|  
@@ -149,7 +148,7 @@ SQL Server 2016 supports upgrade from the following versions of SQL Server:
 |[!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Web|[!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Enterprise (Server+CAL or Core License) <br/><br/> [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Standard|  
 |[!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Express*|[!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Enterprise (Server+CAL or Core License) <br/><br/> [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Developer <br/> <br/> [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Standard <br/> <br/> [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Web|  
   
- Additionally you can also perform an edition upgrade between [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Enterprise (Server+CAL license) and [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Enterprise (Core License):  
+Additionally you can also perform an edition upgrade between [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Enterprise (Server+CAL license) and [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Enterprise (Core License):  
   
 |Edition Upgrade From|Edition Upgrade To|  
 |--------------------------|------------------------|  
@@ -170,10 +169,8 @@ SQL Server 2016 supports upgrade from the following versions of SQL Server:
   
 ## See Also  
 
- [Editions and Supported Features for SQL Server 2016](../../sql-server/editions-and-supported-features-for-sql-server-2016.md)
- 
- [Hardware and Software Requirements for Installing SQL Server 2016](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)   
- 
- [Upgrade to SQL Server 2016](../../database-engine/install-windows/upgrade-sql-server.md)  
+[Editions and Supported Features for SQL Server 2016](../../sql-server/editions-and-supported-features-for-sql-server-2016.md)     
+[Hardware and Software Requirements for Installing SQL Server 2016](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)     
+[Upgrade to SQL Server 2016](../../database-engine/install-windows/upgrade-sql-server.md)    
   
   

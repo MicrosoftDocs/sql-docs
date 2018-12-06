@@ -1,29 +1,17 @@
 ---
 title: "PredictCaseLikelihood (DMX) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/02/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "PredictCaseLikelihood"
-dev_langs: 
-  - "DMX"
-helpviewer_keywords: 
-  - "PredictCaseLikelihood function"
-ms.assetid: b00180e5-b2eb-49e2-891d-e39fb378f50a
-caps.latest.revision: 39
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
+ms.date: 06/07/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: dmx
+ms.topic: conceptual
+ms.author: owend
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
 ---
 # PredictCaseLikelihood (DMX)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   This function returns the likelihood that an input case will fit in the existing model. Used only with clustering models.  
   
@@ -56,7 +44,7 @@ PredictCaseLikelihood([NORMALIZED|NONNORMALIZED])
   
 -   y = Marginal case likelihood, calculated as the log likelihood of the case based on counting the training cases  
   
--   Z = Exp( log(x) – Log(Y))  
+-   Z = Exp( log(x) - Log(Y))  
   
  Normalized = (z/ (1+z))  
   

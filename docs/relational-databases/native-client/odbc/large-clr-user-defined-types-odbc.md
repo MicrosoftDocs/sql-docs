@@ -2,23 +2,22 @@
 title: "Large CLR User-Defined Types (ODBC) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/17/2017"
-ms.prod: "sql-server-2016"
+ms.prod: sql
+ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "docset-sql-devref"
-ms.tgt_pltfrm: ""
+ms.technology: native-client
 ms.topic: "reference"
 helpviewer_keywords: 
   - "ODBC, large user-defined types"
   - "large user-defined types [ODBC]"
 ms.assetid: ddce337e-bb6e-4a30-b7cc-4969bb1520a9
-caps.latest.revision: 15
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: MightyPen
+ms.author: genemi
+manager: craigg
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Large CLR User-Defined Types (ODBC)
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../../includes/snac-deprecated.md)]
 
   This topic discusses the changes to ODBC in SQL Server Native Client to support large common language runtime (CLR) user-defined types (UDTs).  
@@ -163,7 +162,7 @@ manager: "jhubbard"
  This section discusses changes to SQL Server Native Client ODBC functions to support large CLR UDTs.  
   
 ### SQLBindCol  
- UDT result column values are converted from SQL to C datatypes as as described in the "Bindings and Conversions" section, earlier in this topic.  
+ UDT result column values are converted from SQL to C datatypes as described in the "Bindings and Conversions" section, earlier in this topic.  
   
 ### SQLBindParameter  
  The values required for UDTs are as follows:  
@@ -196,13 +195,13 @@ manager: "jhubbard"
 |SQL_SS_UDT<br /><br /> (length greater than 8,000 bytes)|SQL_SS_UDT|SQL_SS_LENGTH_UNLIMITED (0)|0|  
   
 ### SQLFetch  
- UDT result column values are converted from SQL to C datatypes as as described in the "Bindings and Conversions" section, earlier in this topic.  
+ UDT result column values are converted from SQL to C datatypes as described in the "Bindings and Conversions" section, earlier in this topic.  
   
 ### SQLFetchScroll  
- UDT result column values are converted from SQL to C datatypes as as described in the "Bindings and Conversions" section, earlier in this topic.  
+ UDT result column values are converted from SQL to C datatypes as described in the "Bindings and Conversions" section, earlier in this topic.  
   
 ### SQLGetData  
- UDT result column values are converted from SQL to C datatypes as as described in the "Bindings and Conversions" section, earlier in this topic.  
+ UDT result column values are converted from SQL to C datatypes as described in the "Bindings and Conversions" section, earlier in this topic.  
   
 ### SQLGetDescField  
  Descriptor fields available with the new types are described in the "Descriptor Fields for Parameters" and "Descriptor Fields for Results" sections, earlier in this topic.  
@@ -222,7 +221,7 @@ manager: "jhubbard"
  The values returned for UDTs are as described in the "Metadata Returned by SQLColumns and SQLProcedureColumns (Catalog Metadata)" section, earlier in this topic.  
   
 ### SQLPutData  
- UDT parameter values are converted from C to SQL datatypes as as described in the "Bindings and Conversions" section, earlier in this topic.  
+ UDT parameter values are converted from C to SQL datatypes as described in the "Bindings and Conversions" section, earlier in this topic.  
   
 ### SQLSetDescField  
  Descriptor field available with the new types are described in the "Descriptor Fields for Parameters" and "Descriptor Fields for Results" sections, earlier in this topic.  

@@ -1,0 +1,56 @@
+- name: SQL Server Native Client (OLE DB) Interfaces
+  href: sql-server-native-client-ole-db-interfaces.md
+- name: IBCPSession (OLE DB)
+  href: ibcpsession-ole-db.md
+- name: "IBCPSession::BCPColFmt (OLE DB)"
+  href: ibcpsession-bcpcolfmt-ole-db.md
+- name: "IBCPSession::BCPColumns (OLE DB)"
+  href: ibcpsession-bcpcolumns-ole-db.md
+- name: "IBCPSession::BCPControl (OLE DB)"
+  href: ibcpsession-bcpcontrol-ole-db.md
+- name: "IBCPSession::BCPDone (OLE DB)"
+  href: ibcpsession-bcpdone-ole-db.md
+- name: "IBCPSession::BCPExec (OLE DB)"
+  href: ibcpsession-bcpexec-ole-db.md
+- name: "IBCPSession::BCPInit (OLE DB)"
+  href: ibcpsession-bcpinit-ole-db.md
+- name: "IBCPSession::BCPReadFmt (OLE DB)"
+  href: ibcpsession-bcpreadfmt-ole-db.md
+- name: "IBCPSession::BCPWriteFmt (OLE DB)"
+  href: ibcpsession-bcpwritefmt-ole-db.md
+- name: IBCPSession2 (OLE DB)
+  href: ibcpsession2-ole-db.md
+- name: "IBCPSession2::BCPSetBulkMode"
+  href: ibcpsession2-bcpsetbulkmode.md
+- name: IColumnsRowset
+  href: icolumnsrowset.md
+- name: ICommand (OLE DB)
+  href: icommand-ole-db.md
+- name: ICommandWithParameters
+  href: icommandwithparameters.md
+- name: IDBProperties (OLE DB)
+  href: idbproperties-ole-db.md
+- name: IRowsetFastLoad (OLE DB)
+  href: irowsetfastload-ole-db.md
+- name: "IRowsetFastLoad::Commit (OLE DB)"
+  href: irowsetfastload-commit-ole-db.md
+- name: "IRowsetFastLoad::InsertRow (OLE DB)"
+  href: irowsetfastload-insertrow-ole-db.md
+- name: "ISQLServerErrorInfo::GetErrorInfo (OLE DB)"
+  href: isqlservererrorinfo-geterrorinfo-ole-db.md
+- name: "ISSAbort::Abort (OLE DB)"
+  href: issabort-abort-ole-db.md
+- name: ISSAsynchStatus (OLE DB)
+  href: issasynchstatus-ole-db.md
+- name: "ISSAsynchStatus::Abort (OLE DB)"
+  href: issasynchstatus-abort-ole-db.md
+- name: "ISSAsynchStatus::GetStatus (OLE DB)"
+  href: issasynchstatus-getstatus-ole-db.md
+- name: "ISSAsynchStatus::WaitForAsynchCompletion (OLE DB)"
+  href: issasynchstatus-waitforasynchcompletion-ole-db.md
+- name: ISSCommandWithParameters (OLE DB)
+  href: isscommandwithparameters-ole-db.md
+- name: "ISSCommandWithParameters::GetParameterProperties (OLE DB)"
+  href: isscommandwithparameters-getparameterproperties-ole-db.md
+- name: "ISSCommandWithParameters::SetParameterProperties (OLE DB)"
+  href: isscommandwithparameters-setparameterproperties-ole-db.md

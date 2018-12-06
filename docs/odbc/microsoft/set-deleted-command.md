@@ -2,20 +2,17 @@
 title: "SET DELETED Command | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
+ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "drivers"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: connectivity
+ms.topic: conceptual
 helpviewer_keywords: 
   - "SET DELETED command [ODBC]"
 ms.assetid: 6b5e0086-156d-471d-8e7f-6c5fa9686cd5
-caps.latest.revision: 5
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # SET DELETED Command
 Specifies whether records marked for deletion are processed and whether they are available for use in other commands.  

@@ -2,24 +2,23 @@
 title: "Create an Application Role | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
+ms.prod: sql
+ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: security
+ms.topic: conceptual
 f1_keywords: 
   - "sql13.swb.approle.general.f1"
 helpviewer_keywords: 
   - "application roles [SQL Server], creating"
 ms.assetid: 6b8da1f5-3d8e-4f88-b111-b915788b06f1
-caps.latest.revision: 27
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: VanMSFT
+ms.author: vanto
+manager: craigg
+monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Create an Application Role
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   This topic describes how to create an application role in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../../includes/tsql-md.md)]. Application roles restrict user access to a database except through specific applications. Application roles have no users, so the **Role Members** list is not displayed when **Application role** is selected.  
   
 > [!IMPORTANT]  
@@ -54,11 +53,11 @@ manager: "jhubbard"
   
 3.  Expand the **Roles** folder.  
   
-4.  Right-click the **Application Roles** folder and select **New Application Role…**.  
+4.  Right-click the **Application Roles** folder and select **New Application Role...**.  
   
-5.  In the **Application Role – New** dialog box, on the **General Page**, enter the new name of the new application role in the **Role name** box.  
+5.  In the **Application Role - New** dialog box, on the **General Page**, enter the new name of the new application role in the **Role name** box.  
   
-6.  In the **Default Schema** box, specify the schema that will own objects created by this role by entering the object names. Alternately, click the ellipsis **(…)** to open the **Locate Schema** dialog box.  
+6.  In the **Default Schema** box, specify the schema that will own objects created by this role by entering the object names. Alternately, click the ellipsis **(...)** to open the **Locate Schema** dialog box.  
   
 7.  In the **Password** box, enter a password for the new role. Enter that password again into the **Confirm Password** box.  
   
@@ -67,7 +66,7 @@ manager: "jhubbard"
 9. [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
 ### Additional Options  
- The **Application Role – New** dialog box also offers options on two additional pages: **Securables** and **Extended Properties**.  
+ The **Application Role - New** dialog box also offers options on two additional pages: **Securables** and **Extended Properties**.  
   
 -   The **Securables** page lists all possible securables and the permissions on those securables that can be granted to the login.  
   

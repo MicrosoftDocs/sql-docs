@@ -2,22 +2,19 @@
 title: "Using Block Cursors | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
+ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "drivers"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: connectivity
+ms.topic: conceptual
 helpviewer_keywords: 
   - "cursors [ODBC], block"
   - "block cursors [ODBC]"
   - "result sets [ODBC], block cursors"
 ms.assetid: 2aad7d6b-216e-47e7-b3cb-f95ad096f21a
-caps.latest.revision: 6
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # Using Block Cursors
 Support for block cursors is built into ODBC 3.*x*. **SQLFetch** can be used only for multirow fetches when called in ODBC 3.*x*; if an ODBC 2.*x* application calls **SQLFetch**, it will open only a single-row, forward-only cursor. When an ODBC 3.*x* application calls **SQLFetch** in an ODBC 2.*x* driver, it returns a single row unless the driver supports **SQLExtendedFetch**. For more information, see [Block Cursors, Scrollable Cursors, and Backward Compatibility](../../../odbc/reference/appendixes/block-cursors-scrollable-cursors-and-backward-compatibility.md) in Appendix G: Driver Guidelines for Backward Compatibility.  

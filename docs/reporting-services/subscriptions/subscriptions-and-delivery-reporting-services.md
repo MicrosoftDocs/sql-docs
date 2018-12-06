@@ -1,15 +1,12 @@
 ---
 title: "Subscriptions and Delivery (Reporting Services) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.date: 03/14/2017
+ms.prod: reporting-services
+ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
+ms.technology: subscriptions
+
+
+ms.topic: conceptual
 helpviewer_keywords: 
   - "subscriptions [Reporting Services], report distribution"
   - "reports [Reporting Services], distributing"
@@ -22,10 +19,8 @@ helpviewer_keywords:
   - "subscriptions [Reporting Services], about subscriptions"
   - "subscriptions [Reporting Services]"
 ms.assetid: be7ec052-28e2-4558-bc09-8479e5082926
-caps.latest.revision: 56
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
+author: markingmyname
+ms.author: maghan
 ---
 # Subscriptions and Delivery (Reporting Services)
   A [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] subscription is a configuration that delivers a report at a specific time or in response to an event, and in a file format that you specify. For example, every Wednesday, save the MonthlySales.rdl report as a Microsoft Word document to a file share. Subscriptions can be used to schedule and automate the delivery of a report and with a specific set of report parameter values.  
@@ -34,7 +29,7 @@ manager: "erikre"
   
  ![example ssrs subscription flow](../../reporting-services/subscriptions/media/ssrs-subscription-example-flow.png "example ssrs subscription flow")  
   
- Subscriptions are not available in every edition of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. For a list of features that are supported by the editions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], see [Features Supported by the Editions of SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md).  
+ Subscriptions are not available in every edition of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. For a list of features that are supported by the editions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], see [Editions and supported features of SQL Server 2017](../../sql-server/editions-and-components-of-sql-server-2017.md).  
   
  **In this topic:**  
   
@@ -101,7 +96,7 @@ manager: "erikre"
 |Requirement|Description|  
 |-----------------|-----------------|  
 |Permissions|You must have access to the report. Before you can subscribe to a report, you must have permission to view it.<br /><br /> For Native mode report servers, the following role assignments affect subscriptions:<br /><br /> -   The "Manage individual subscriptions" task allows users to create, modify, and delete subscriptions for a specific report. In the predefined roles, this task is part of Browser and Report Builder roles. Role assignments that include this task allow a user to manage only those subscriptions that he or she creates.<br />-   The "Manage all subscriptions" task allows users to access and modify all subscriptions. This task is required to create data-driven subscriptions. In predefined roles, only the Content Manager role includes this task.|  
-|Stored credentials|To create a subscription, the report must use stored credentials or no credentials to retrieve data at run time. You cannot subscribe to a report that is configured to use the impersonated or delegated credentials of the current user to connect to an external data source. The stored credentials can be a Windows account or a database user account. For more information, see [Specify Credential and Connection Information for Report Data Sources](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md)<br /><br /> You must have permission to view the report and create individual subscriptions. **Scheduled Events and Report Delivery** must be enabled on the report server. For more information, see [old_Create and Manage Subscriptions for Native Mode Report Servers](http://msdn.microsoft.com/en-us/7f46cbdb-5102-4941-bca2-5e0ff9012c6b).|  
+|Stored credentials|To create a subscription, the report must use stored credentials or no credentials to retrieve data at run time. You cannot subscribe to a report that is configured to use the impersonated or delegated credentials of the current user to connect to an external data source. The stored credentials can be a Windows account or a database user account. For more information, see [Specify Credential and Connection Information for Report Data Sources](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md)<br /><br /> You must have permission to view the report and create individual subscriptions. **Scheduled Events and Report Delivery** must be enabled on the report server. For more information, see [old_Create and Manage Subscriptions for Native Mode Report Servers](https://msdn.microsoft.com/7f46cbdb-5102-4941-bca2-5e0ff9012c6b).|  
 |User dependent values in a report|For standard subscriptions only, you can create subscriptions to reports that incorporate user account information in a filter or as text that appears on the report. In the report, the user account name is specified through a **User!UserID** expression that resolves to the current user. When you create a subscription, the user who creates the subscription is the considered the current user.|  
 |No model item security|You cannot subscribe to a Report Builder report that uses a model as a data source if the model contains model item security settings. Only reports that use model item security are included in this restriction.|  
 |Parameter values|If the report uses parameters, a parameter value must be specified with the report itself, or in the subscription you define. If default values have been defined in the report, you can set the parameter value to use the default.|  

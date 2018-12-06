@@ -1,30 +1,17 @@
 ---
 title: "Building Subcubes in MDX (MDX) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/13/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "queries [MDX], subcubes"
-  - "subcubes [MDX]"
-  - "filtered views [MDX]"
-  - "MDX [Analysis Services], subcubes"
-  - "Multidimensional Expressions [Analysis Services], subcubes"
-  - "CREATE SUBCUBE statement"
-ms.assetid: 5403a62b-99ac-4d83-b02a-89bf78bf0f46
-caps.latest.revision: 31
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: mdx
+ms.topic: conceptual
+ms.author: owend
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
 ---
 # Building Subcubes in MDX (MDX)
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
   A subcube is a subset of a cube on representing a filtered view of the underlying data. By limiting the cube to a subcube, you can improve query performance.  
   
  To define a subcube, you use the [CREATE SUBCUBE](../../../mdx/mdx-data-definition-create-subcube.md) statement, as described in this topic.  
@@ -53,7 +40,7 @@ CREATE SUBCUBE Subcube_Identifier AS Subcube_Expression
   
  Additionally, aggregate values within the subcube are visually totaled. For example, a subcube contains `USA`, `WA`, and `OR`. The aggregate value for `USA` will be the sum of `{WA,OR}` because `WA` and `OR` are the only states defined by the subcube. All other states will be ignored.  
   
- Also, explicit references to cells outside the subcube return cell values that are evaluated in the context of the whole cube. For example, you create a subcube that is limited to the current year. You then use the [ParallelPeriod](../../../mdx/parallelperiod-mdx.md) function to compare the current year to the previous year. The difference in values will be returned even though the previous year’s value lies outside the subcube.  
+ Also, explicit references to cells outside the subcube return cell values that are evaluated in the context of the whole cube. For example, you create a subcube that is limited to the current year. You then use the [ParallelPeriod](../../../mdx/parallelperiod-mdx.md) function to compare the current year to the previous year. The difference in values will be returned even though the previous year's value lies outside the subcube.  
   
  Finally, if the original context is not overwritten, set functions evaluated in a subselect are evaluated in the context of the subselect. If the context is overwritten, set functions are evaluated in the context of the whole cube.  
   

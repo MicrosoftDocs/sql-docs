@@ -2,13 +2,11 @@
 title: "Rules for Entering Search Values (Visual Database Tools) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
+ms.prod_service: "sql-tools"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "tools-ssms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: ssms
+ms.topic: conceptual
 helpviewer_keywords: 
   - "time [SQL Server], searches"
   - "date searches"
@@ -20,12 +18,13 @@ helpviewer_keywords:
   - "text value searches [SQL Server]"
   - "numeric value searches [SQL Server]"
 ms.assetid: 3c8134b7-83f4-41b4-99c8-e3949a685ff5
-caps.latest.revision: 4
 author: "stevestein"
 ms.author: "sstein"
-manager: "jhubbard"
+manager: craigg
+
 ---
 # Rules for Entering Search Values (Visual Database Tools)
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 This topic discusses the conventions you must use when entering the following types of literal values for a search condition:  
   
 -   Text values  

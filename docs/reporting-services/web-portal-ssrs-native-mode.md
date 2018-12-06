@@ -10,7 +10,7 @@ ms.assetid: 7349e626-6ed5-4d21-b05f-cf042ad9ad70
 author: markingmyname
 ms.author: maghan
 ---
-# The web portal or a report server (SSRS Native Mode)
+# The web portal of a report server (SSRS Native Mode)
 
 [!INCLUDE[ssrs-appliesto](../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../includes/ssrs-appliesto-pbirs.md)]
 

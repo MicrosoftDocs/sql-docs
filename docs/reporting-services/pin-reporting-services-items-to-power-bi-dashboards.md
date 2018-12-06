@@ -20,7 +20,7 @@ ms.author: maghan
 
 [!INCLUDE[ssrs-appliesto](../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../includes/ssrs-appliesto-pbirs.md)]
 
-  You can pin on-premises [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] paginated report items to a dashboard in the [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] service, as a new tile.   To pin, your administrator needs to first integrate your report server with Azure Active Directory and [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)].  
+  You can pin an on-premises [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] paginated report item to a dashboard in the [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] service, as a new tile.   To pin, your administrator needs to first integrate your report server with Azure Active Directory and [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)].  
   
  ![Power BI icon](../reporting-services/media/ssrs-powerbi-icon.png "rs_powerbi_icon")  
   

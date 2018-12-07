@@ -1,5 +1,5 @@
 ---
-title: "Tabular model solution deployment | Microsoft Docs"
+title: "Analysis Services tabular model solution deployment | Microsoft Docs"
 ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services

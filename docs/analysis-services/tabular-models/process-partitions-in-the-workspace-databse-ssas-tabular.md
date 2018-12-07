@@ -1,5 +1,5 @@
 ---
-title: "Process Partitions in the Workspace Databse | Microsoft Docs"
+title: "Process partitions in Analysis Services workspace database | Microsoft Docs"
 ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services

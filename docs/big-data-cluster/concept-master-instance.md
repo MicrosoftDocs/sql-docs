@@ -4,7 +4,7 @@ description: This article describes the master instance in a SQL Server 2019 big
 author: rothja 
 ms.author: jroth 
 manager: craigg
-ms.date: 11/06/2018
+ms.date: 12/07/2018
 ms.topic: conceptual
 ms.prod: sql
 ---
@@ -21,7 +21,7 @@ The SQL Server master instance provides an externally accessible TDS endpoint fo
 
 ## Scale-out query management
 
-The SQL Server master instance contains the scale-out query engine that is used to distribute queries across SQL Server instances on nodes in the [compute pool](concept-compute-pool.md). The scale-out query engine also provides access through Transact-SQL to all Hive tables in the cluster without any additional configuration. (Hive tables support is not in CTP 2.1)
+The SQL Server master instance contains the scale-out query engine that is used to distribute queries across SQL Server instances on nodes in the [compute pool](concept-compute-pool.md). The scale-out query engine also provides access through Transact-SQL to all Hive tables in the cluster without any additional configuration. (Hive tables support is not in CTP 2.2)
 
 ## Metadata and user databases
 

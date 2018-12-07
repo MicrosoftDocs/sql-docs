@@ -1,7 +1,8 @@
 ---
-title: Backup and restore a database using Azure Data Studio | Microsoft Docs
+title: Backup and restore a database
+titleSuffix: Azure Data Studio
 description: Learn how to backup and restore a database using Azure Data Studio
-ms.custom: "tools|sos"
+ms.custom: "seodec18"
 ms.date: "09/24/2018"
 ms.prod: sql
 ms.technology: azure-data-studio
@@ -12,7 +13,7 @@ ms.author: "sstein"
 manager: craigg
 ---
 
-# Backup and Restore using [!INCLUDE[name-sos](../includes/name-sos-short.md)]
+# Backup and Restore databases using [!INCLUDE[name-sos](../includes/name-sos-short.md)]
 
 In this tutorial, you learn how to use [!INCLUDE[name-sos](../includes/name-sos-short.md)] to:
 > [!div class="checklist"]

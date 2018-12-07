@@ -1,12 +1,14 @@
 ---
-title: Release notes for SQL Server 2019 big data clusters | Microsoft Docs
-description: This article describes the latest updates and known issues for SQL Server 2019 (preview) big data clusters. 
+title: Release notes
+titleSuffix: SQL Server 2019 big data clusters
+description: This article describes the latest updates and known issues for SQL Server 2019 big data clusters (preview). 
 author: rothja 
 ms.author: jroth 
 manager: craigg
-ms.date: 12/04/2018
+ms.date: 12/07/2018
 ms.topic: conceptual
 ms.prod: sql
+ms.custom: seodec18
 ---
 
 # Release notes for SQL Server 2019 big data clusters

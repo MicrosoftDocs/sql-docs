@@ -1,5 +1,5 @@
 ---
-title: "Tabular Models | Microsoft Docs"
+title: "Tabular Models in Analysis Services  | Microsoft Docs"
 ms.date: 09/17/2018
 ms.prod: sql
 ms.technology: analysis-services

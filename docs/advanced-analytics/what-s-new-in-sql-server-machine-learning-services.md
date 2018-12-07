@@ -4,7 +4,7 @@ description: New feature announcements for each release of SQL Server 2016 R Ser
 ms.prod: sql
 ms.technology: machine-learning
 
-ms.date: 12/04/2018  
+ms.date: 12/07/2018
 ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist

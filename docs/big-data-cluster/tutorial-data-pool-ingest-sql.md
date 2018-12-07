@@ -1,6 +1,6 @@
 ---
 title: Ingest data into a SQL Server data pool
-titlesuffix: SQL Server 2019 big data clusters
+titleSuffix: SQL Server 2019 big data clusters
 description: This tutorial demonstrates how to ingest data into the data pool of a SQL Server 2019 big data cluster (preview) with the sp_data_pool_table_insert_data stored procedure.
 author: rothja 
 ms.author: jroth 

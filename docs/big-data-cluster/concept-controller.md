@@ -1,12 +1,14 @@
 ---
-title: What is the SQL Server big data cluster controller? | Microsoft Docs
-description: This article describes the controller of a SQL Server 2019 big data cluster.
+title: What is the controller?
+titleSuffix: SQL Server 2019 big data clusters
+description: This article describes the controller of a SQL Server 2019 big data cluster (preview).
 author: mihaelablendea 
 ms.author: mihaelab 
 manager: craigg
-ms.date: 11/16/2018
+ms.date: 12/06/2018
 ms.topic: conceptual
 ms.prod: sql
+ms.custom: seodec18
 ---
 
 # What is the SQL Server big data cluster controller?

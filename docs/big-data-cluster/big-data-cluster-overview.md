@@ -1,6 +1,6 @@
 ---
 title: What are big data clusters?
-titlesuffix: SQL Server 2019 big data clusters
+titleSuffix: SQL Server 2019 big data clusters
 description: Learn about SQL Server 2019 big data clusters (preview) that run on Kubernetes and provide scale-out options for both relational and HDFS data. 
 author: rothja 
 ms.author: jroth 

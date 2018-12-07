@@ -1,6 +1,6 @@
 ---
 title: Cluster administration portal
-titlesuffix: SQL Server 2019 big data clusters
+titleSuffix: SQL Server 2019 big data clusters
 description: Learn how to use the cluster administration portal to monitor SQL Server 2019 big data clusters (preview).
 author: yualan
 ms.author: alayu

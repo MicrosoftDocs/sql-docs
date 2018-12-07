@@ -1,6 +1,6 @@
 ---
 title: Query external data in Oracle
-titlesuffix: SQL Server 2019 big data clusters
+titleSuffix: SQL Server 2019 big data clusters
 description: This tutorial demonstrates how to query Oracle data from a SQL Server 2019 big data cluster (preview). You create an external table over data in Oracle and then run a query.
 author: rothja 
 ms.author: jroth 

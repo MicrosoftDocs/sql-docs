@@ -1,6 +1,6 @@
 ---
 title: Configure Azure Kubernetes Service
-titlesuffix: SQL Server 2019 big data clusters
+titleSuffix: SQL Server 2019 big data clusters
 description: Learn how to configure Azure Kubernetes Service (AKS) for SQL Server 2019 big data cluster (preview) deployments.
 author: rothja 
 ms.author: jroth 

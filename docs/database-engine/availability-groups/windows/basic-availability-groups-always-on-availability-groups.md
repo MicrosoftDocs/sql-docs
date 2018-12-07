@@ -1,8 +1,7 @@
 ---
 title: "Basic availability groups for a single database"
-titleSuffix: SQL Server
 description: "Describes the differences between a regular and basic Always On availability group, as well as how to configure a basic availability group. "
-ms.custom: "seodec2018"
+ms.custom: "seodec18"
 ms.date: "02/01/2018"
 ms.prod: sql
 ms.reviewer: ""

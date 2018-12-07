@@ -1,8 +1,7 @@
 ---
 title: "Connect to an availability group listener"
 description: "Contains information about connecting to an Always On availability group listener, before and after failover."
-titleSuffix: SQL Server
-ms.custom: "seodec2018"
+ms.custom: "seodec18"
 ms.date: "05/17/2016"
 ms.prod: sql
 ms.reviewer: ""

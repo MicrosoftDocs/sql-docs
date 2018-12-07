@@ -1,8 +1,7 @@
 ---
 title: "Prerequisites, Restrictions, and Recommendations for availability groups"
 description: "A description of the prerequisites, restrictions and recommendations for deploying an Always On availability group."
-titleSuffix: SQL Server
-ms.custom: "seodec2018"
+ms.custom: "seodec18"
 ms.date: "06/05/2018"
 ms.prod: sql
 ms.reviewer: ""

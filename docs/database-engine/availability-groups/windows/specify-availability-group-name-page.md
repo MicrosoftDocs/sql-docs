@@ -1,7 +1,7 @@
 ---
 title: "Specify Availability Group Options Page (Availability Group Wizard) - SQL Server | Microsoft Docs"
 ms.description: "Describes the options found on the 'Specify Availability Group Name' page of the Availability Group Wizard within SQL Server Management Studio."
-ms.custom: seodec2018
+ms.custom: "seodec18"
 ms.date: "05/17/2016"
 ms.prod: sql
 ms.reviewer: ""

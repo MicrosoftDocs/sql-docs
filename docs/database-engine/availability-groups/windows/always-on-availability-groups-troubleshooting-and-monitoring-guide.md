@@ -1,8 +1,7 @@
 ---
 title: "A reference for monitoring and troubleshooting Always On availability groups"
-titleSuffix: SQL Server
-description: "This guide serves as a reference page to help you get started on monitoring Always On availability groups and troubleshooting some of the common issues in availability groups."
-ms.custom: "ag-guide, seodec2018"
+description: "This guide serves as a reference page to help you get started on monitoring and troubleshooting some of the common issues found with Always On availability groups."
+ms.custom: "ag-guide, seodec18"
 ms.date: "05/10/2016"
 ms.prod: sql
 ms.reviewer: ""

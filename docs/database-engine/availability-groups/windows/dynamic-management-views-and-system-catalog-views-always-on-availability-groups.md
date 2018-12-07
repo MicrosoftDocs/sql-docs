@@ -1,8 +1,7 @@
 ---
 title: "Dynamic management views and system catalog views for availability groups"
 description: "A collection of dynamic management and catalog views that can  help  you monitor and diagnose the health of an Always On availability group."
-titleSuffix: SQL Server
-ms.custom: "ag-guide, seodec2018"
+ms.custom: "ag-guide, seodec18"
 ms.date: "06/13/2017"
 ms.prod: sql
 ms.reviewer: ""

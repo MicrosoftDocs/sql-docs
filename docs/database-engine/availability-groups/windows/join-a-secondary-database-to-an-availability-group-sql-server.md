@@ -1,8 +1,7 @@
 ---
 title: "Join a secondary database to an availability group"
-description: "Steps to join a secondary database to an availability group using either Transact-SQL (T-SQL), PowerShell, or SQL Server Management Studio."
-titleSuffix: SQL Server
-ms.custom: "seodec2018"
+description: "Steps to join a secondary database to an Always On availability group using either Transact-SQL (T-SQL), PowerShell, or SQL Server Management Studio."
+ms.custom: "seodec18"
 ms.date: "05/17/2016"
 ms.prod: sql
 ms.reviewer: ""

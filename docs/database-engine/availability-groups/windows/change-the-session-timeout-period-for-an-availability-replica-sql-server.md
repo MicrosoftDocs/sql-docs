@@ -1,8 +1,7 @@
 ---
 title: "Change the session-timeout period for a replica within an availability group"
-titleSuffix: SQL Server
 description: "Describes how to configure the session-timeout period of a replica within an Always On availability group."
-ms.custom: seodec2018
+ms.custom: "seodec18"
 ms.date: "05/17/2016"
 ms.prod: sql
 ms.reviewer: ""

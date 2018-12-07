@@ -1,8 +1,7 @@
 ---
 title: "Add a database to an availability group with the 'Availability Group Wizard'"
-titleSuffix: SQL Server
 description: "Add a database to an Always On availability group using the 'Availability Group Wizard' within SQL Server Management Studio." 
-ms.custom: "seodec2018"
+ms.custom: "seodec18"
 ms.date: "05/17/2016"
 ms.prod: sql
 ms.reviewer: ""

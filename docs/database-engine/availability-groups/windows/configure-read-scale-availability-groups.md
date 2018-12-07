@@ -1,8 +1,7 @@
 ---
 title: "Configure read-scale for an availability group"
-titleSuffix: SQL Server
 description: "Configure your Always On availability group for read-scale workloads on Windows."
-ms.custom: "seodec2018"
+ms.custom: "seodec18"
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg

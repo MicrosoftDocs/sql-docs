@@ -1,7 +1,7 @@
 ---
 title: "Determine why changes aren't visible on secondary replica for an availability group - SQL Server"
 ms.description: "Troubleshoot to determine why changes occurring on a primary replica are not reflected on the secondary replica for an Always On availability group." 
-ms.custom: ag-guide,seodec2018 
+ms.custom: ag-guide,seodec18 
 ms.date: "06/13/2017"
 ms.prod: sql
 ms.reviewer: ""

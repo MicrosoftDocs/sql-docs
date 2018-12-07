@@ -1,8 +1,7 @@
 ---
 title: "Tools to monitor availability groups"
 description: "A reference for the various tools available to monitor the performance and health of Always On availability groups. "
-titleSuffix: SQL Server
-ms.custom: "seodec2018"
+ms.custom: "seodec18"
 ms.date: "06/08/2016"
 ms.prod: sql
 ms.reviewer: ""

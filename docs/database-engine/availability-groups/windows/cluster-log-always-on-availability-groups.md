@@ -1,8 +1,7 @@
 ---
 title: "Generate and analyze the CLUSTER.LOG for an availability group"
-titleSuffix: SQL Server
 description: "Describes how to generate and analyze the cluster log for an Always On availability group. "
-ms.custom: "ag-guide, seodec2018"
+ms.custom: "ag-guide, seodec18"
 ms.date: "06/14/2017"
 ms.prod: sql
 ms.reviewer: ""

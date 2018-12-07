@@ -1,8 +1,7 @@
 ---
-title: "Use read-scale with availability groups | Microsoft Docs"
+title: "Use read-scale with availability groups"
 description: "A description of how to achieve read-scale when using Always On availability groups. "
-titleSuffix: SQL Server
-ms.custom: "seodec2018"
+ms.custom: "seodec18"
 ms.date: "10/24/2017"
 ms.prod: sql
 ms.reviewer: ""

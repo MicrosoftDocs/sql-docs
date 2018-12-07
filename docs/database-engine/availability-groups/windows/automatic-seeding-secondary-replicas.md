@@ -1,9 +1,8 @@
 ---
 title: "Use automatic seeding to initialize a secondary replica for an availability group"
-titleSuffix: SQL Server
 description: "Use automatic seeding to initialize secondary replicas as part of an Always On availability group with SQL 2016 and greater."
 services: data-lake-analytics
-ms.custom: "seodec2018"
+ms.custom: "seodec18"
 ms.date: "11/27/2018"
 ms.prod: sql
 ms.reviewer: ""

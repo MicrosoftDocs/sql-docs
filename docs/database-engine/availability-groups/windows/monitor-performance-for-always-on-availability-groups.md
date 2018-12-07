@@ -1,8 +1,7 @@
 ---
 title: "Monitor performance for availability groups"
 description: "This article describes the synchronization process, shows you how to calculate some of the key metrics, and gives you the links to some of the common performance troubleshooting scenarios."
-ms.custom: "ag-guide, seodec2018"
-titleSuffix: SQL Server
+ms.custom: "ag-guide, seodec18"
 ms.date: "06/13/2017"
 ms.prod: sql
 ms.reviewer: ""

@@ -1,8 +1,7 @@
 ---
 title: "Configure a flexible automatic failover policy for an availability group"
 description: "A description of the various options available when deciding how flexible your failover policy should be for an Always On availability group. "
-titleSuffix: SQL Server
-ms.custom: "seodec2018"
+ms.custom: "seodec18"
 ms.date: "05/17/2016"
 ms.prod: sql
 ms.reviewer: ""
@@ -18,7 +17,7 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ---
-# Configure a flexible automatic failover policy for an availability group
+# Configure a flexible automatic failover policy for an Always On availability group
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   A flexible failover policy provides granular control over the conditions that cause [automatic failover](../../../database-engine/availability-groups/windows/failover-and-failover-modes-always-on-availability-groups.md) for an availability group. By changing the failure conditions that trigger an automatic failover and the frequency of health checks, you can increase or decrease the likelihood of an automatic failover to support your SLA for high availability.  
   

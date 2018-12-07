@@ -1,8 +1,7 @@
 ---
 title: "Types of client connections to replicas within an availability group"
-titleSuffix: SQL Server
 description: "Learn about the different types of connections clients can make to either the primary or secondary replica of an Always On availability group within SQL Server."
-ms.custom: "seodec2018"
+ms.custom: "seodec18"
 ms.date: "05/17/2016"
 ms.prod: sql
 ms.reviewer: ""
@@ -20,7 +19,7 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ---
-# Types of client connectionsb to replicas within an Always On availability group - SQL Server
+# Types of client connectionsb to replicas within an Always On availability group
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   In an Always On availability group, you can configure one or more availability replicas to allow read-only connections when running under the secondary role (that is, when running as a secondary replica). You can also configure each availability replica to allow or exclude read-only connections when running under the primary role (that is, when running as the primary replica).  
   

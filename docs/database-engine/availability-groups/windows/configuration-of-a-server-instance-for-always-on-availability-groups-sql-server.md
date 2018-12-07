@@ -1,7 +1,7 @@
 ---
 title: "Enable the availability group feature for a SQL Server instance"
 description: "Describes how to enable the Always On availability group feature for an instance of SQL Server."  
-ms.custom: seodec2018
+ms.custom: "seodec18"
 ms.date: "05/17/2016"
 ms.prod: sql
 ms.reviewer: ""

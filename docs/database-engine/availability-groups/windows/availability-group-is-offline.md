@@ -1,8 +1,7 @@
 ---
 title: "Availability group is offline"
-titleSuffix: SQL Server
 description: "Identify possible causes for why an Always On availability group is offline."
-ms.custom: "seodec2018"
+ms.custom: "seodec18"
 ms.date: "05/17/2016"
 ms.prod: sql
 ms.reviewer: ""

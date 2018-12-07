@@ -1,8 +1,7 @@
 ---
 title: "Always On availability groups: interoperability"
-titleSuffix: SQL Server
 description: "Describes the different features that can and cannot function alongside an Always On availability group."
-ms.custom: "seodec2018"
+ms.custom: "seodec18"
 ms.date: "04/20/2017"
 ms.prod: sql
 ms.reviewer: ""

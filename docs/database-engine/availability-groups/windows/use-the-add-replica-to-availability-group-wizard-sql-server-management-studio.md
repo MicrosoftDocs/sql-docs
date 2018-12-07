@@ -1,7 +1,7 @@
 ---
 title: "Add replica to an availability group using wizard in SSMS - SQL Server"
 ms.description: "Add a replica to an Always On availability group using the wizard found in SQL Server Management Studio."
-ms.custom: seodec18
+ms.custom: "seodec18"
 ms.date: "05/17/2016"
 ms.prod: sql
 ms.reviewer: ""

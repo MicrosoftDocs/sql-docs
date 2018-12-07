@@ -1,8 +1,7 @@
 ---
 title: "Getting Started with availability groups"
-description: "A checklist for configuring an Always On availability group."
-titleSuffix: SQL Server
-ms.custom: "seodec2018"
+description: "A checklist for the steps necessary to configure an Always On availability group."
+ms.custom: "seodec18"
 ms.date: "05/17/2016"
 ms.prod: sql
 ms.reviewer: ""

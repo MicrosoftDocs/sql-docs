@@ -1,8 +1,7 @@
 ---
 title: "Prepare a secondary database for an availability group"
 description: "A description for how to manually prepare a secondary database to join an Always On availability group."
-titleSuffix: SQL Server
-ms.custom: "seodec2018"
+ms.custom: "seodec18"
 ms.date: "07/25/2017"
 ms.prod: sql
 ms.reviewer: ""

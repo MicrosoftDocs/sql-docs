@@ -1,8 +1,7 @@
 ---
 title: "Combine failover clustering with availability groups"
-description: "Enhance your high availability and disaster recoverability by combining the features of a failover cluster and an Always On availability group."
-titleSuffix: SQL Server
-ms.custom: "seodec2018"
+description: "Enhance your high availability and disaster recoverability by combining the features of a SQL Server failover cluster instance and an Always On availability group."
+ms.custom: "seodec18"
 ms.date: "07/02/2017"
 ms.prod: sql
 ms.reviewer: ""

@@ -1,8 +1,7 @@
 ---
 title: "How to cluster the DTC service for an availability group"
-titleSuffix: SQL Server
 description: "Describes the requirements and steps for clustering the Microsoft Distributed Transaction Coordinator (DTC) service for an Always On availability group. "
-ms.custom: seodec2018
+ms.custom: "seodec18"
 ms.date: "08/30/2016"
 ms.prod: sql
 ms.reviewer: ""

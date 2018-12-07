@@ -1,8 +1,7 @@
 ---
 title: "Use automatic seeding to initialize an availability group"
-titleSuffix: SQL Server
 description: "Automatically create secondary replicas for every database in an Always On availability group using automatic seeding."
-ms.custom: "seodec2018"
+ms.custom: "seodec18"
 ms.date: "03/26/2018"
 ms.prod: sql
 ms.reviewer: ""

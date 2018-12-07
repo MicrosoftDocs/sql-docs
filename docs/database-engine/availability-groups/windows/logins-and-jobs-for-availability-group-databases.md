@@ -1,8 +1,7 @@
 ---
 title: "Manage logins for jobs using databases in an availability group"
 description: "A description for how to manage logins for jobs that use databases which participate in an Always On availability group."
-titleSuffix: SQL Server
-ms.custom: "seodec2018"
+ms.custom: "seodec18"
 ms.date: "05/17/2016"
 ms.prod: sql
 ms.reviewer: ""

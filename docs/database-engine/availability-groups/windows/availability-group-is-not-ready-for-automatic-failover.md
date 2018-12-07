@@ -1,8 +1,7 @@
 ---
 title: "Availability group is not ready for automatic failover"
-titleSuffix: SQL Server
-description: "Identify possible causes reasons why an Always On availability group is not ready for failover."
-ms.custom: "seodec2018"
+description: "Identify possible reasons why an Always On availability group is not ready for failover."
+ms.custom: "seodec18"
 ms.date: "05/17/2016"
 ms.prod: sql
 ms.reviewer: ""

@@ -1,8 +1,7 @@
 ---
 title: "Availability database is suspended for an availability group"
-titleSuffix: SQL Server
 description: "Identify possible causes for why a database in an Always On availability group might be suspended."
-ms.custom: "seodec2018"
+ms.custom: "seodec18"
 ms.date: "05/17/2016"
 ms.prod: sql
 ms.reviewer: ""

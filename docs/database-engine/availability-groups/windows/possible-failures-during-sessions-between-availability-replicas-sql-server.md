@@ -1,8 +1,7 @@
 ---
 title: "Determine possible reason for connectivity failures between availability replicas"
 description: "This topic describes the different possible reasons for a connection failure between replicas participating in an Always On availability group."
-titleSuffix: SQL Server
-ms.custom: "seodec2018"
+ms.custom: "seodec18"
 ms.date: "05/17/2016"
 ms.prod: sql
 ms.reviewer: ""

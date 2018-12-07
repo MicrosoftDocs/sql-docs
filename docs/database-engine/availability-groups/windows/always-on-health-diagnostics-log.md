@@ -1,8 +1,7 @@
 ---
 title: "SQL Server resource DLL health diagnostic logs for availability groups"
-titleSuffix: SQL Server 
-description: "Describes how the SQL Server resource DLL monitors the health of the Always On availability group.  "
-ms.custom: "ag-guide, seodec2018"
+description: "Describes how the SQL Server resource DLL monitors the health of the Always On availability group."
+ms.custom: "ag-guide, seodec18"
 ms.date: "06/13/2017"
 ms.prod: sql
 ms.reviewer: ""

@@ -1,8 +1,7 @@
 ---
 title: "Use Remote Blob Store (RBS) with availability groups"
 description: "A description of how to use the Remote Blob Store (RBS) with databases that are part of an Always On availability group. "
-titleSuffix: SQL Server
-ms.custom: "seodec2018"
+ms.custom: "seodec18"
 ms.date: "05/17/2016"
 ms.prod: sql
 ms.reviewer: ""

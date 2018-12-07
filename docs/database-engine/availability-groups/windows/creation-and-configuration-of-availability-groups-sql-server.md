@@ -1,8 +1,7 @@
 ---
 title: "Reference for the creation and configuration of availability groups"
 description: "A reference to links that help  you create and configure Always On availability groups."
-titleSuffix: SQL Server
-ms.custom: "seodec2018"
+ms.custom: "seodec18"
 ms.date: "05/17/2016"
 ms.prod: sql
 ms.reviewer: ""

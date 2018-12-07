@@ -1,8 +1,7 @@
 ---
 title: "Perform a planned manual failover of an availability group"
 description: "This topic describes how to perform a planned manual failover of an Always On availability group."
-titleSuffix: SQL Server
-ms.custom: "seodec2018"
+ms.custom: "seodec18"
 ms.date: "10/25/2017"
 ms.prod: sql
 ms.reviewer: ""

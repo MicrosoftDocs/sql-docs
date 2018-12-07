@@ -1,8 +1,7 @@
 ---
 title: "Configure replication with availability groups"
-titleSuffix: SQL Server
 description: "Configure replication with your Always On availability group." 
-ms.custom: "seodec2018"
+ms.custom: "seodec18"
 ms.date: "07/09/2018"
 ms.prod: sql
 ms.reviewer: ""

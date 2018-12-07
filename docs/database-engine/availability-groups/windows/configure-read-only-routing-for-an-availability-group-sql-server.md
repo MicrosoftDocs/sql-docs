@@ -1,8 +1,7 @@
 ---
 title: "Configure read-only routing for an availability group"
-titleSuffix: SQL Server
 description: "Automatically route all read-only traffic to a secondary replica using read-only routing for your Always On availability group - using Transact-SQL (T-SQL), or PowerShell."
-ms.custom: "seodec2018"
+ms.custom: "seodec18"
 ms.date: "08/14/2017"
 ms.prod: sql
 ms.reviewer: ""

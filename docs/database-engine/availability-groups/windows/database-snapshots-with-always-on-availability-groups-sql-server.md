@@ -1,8 +1,7 @@
 ---
 title: "Create a database snapshot for an availability group"
 description: "Describes how to create a database snapshot for a database within an Always On availability group on either the primary or secondary database."
-titleSuffix: SQL Server
-ms.custom: "seodec2018"
+ms.custom: "seodec18"
 ms.date: "05/17/2016"
 ms.prod: sql
 ms.reviewer: ""

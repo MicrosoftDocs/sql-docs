@@ -1,8 +1,7 @@
 ---
 title: "Configure distributed transactions for an availability group"
-titleSuffix: SQL Server
 description: "Describes how to configure distributed transactions for databases within an Always On availability group. "
-ms.custom: "seodec2018"
+ms.custom: "seodec18"
 ms.date: "05/22/2018"
 ms.prod: sql
 ms.reviewer: ""

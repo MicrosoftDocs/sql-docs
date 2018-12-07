@@ -1,8 +1,7 @@
 ---
 title: "Change the availability mode of a replica within an availability group"
-titleSuffix: SQL Server
 description: "A description for how to change the availability mode of an availability replica within an Always On availability group using either Transact-SQL (T-SQL), PowerShell, or SQL Server Management Studio."
-ms.custom: "seodec2018"
+ms.custom: "seodec18"
 ms.date: "05/17/2016"
 ms.prod: sql
 ms.reviewer: ""

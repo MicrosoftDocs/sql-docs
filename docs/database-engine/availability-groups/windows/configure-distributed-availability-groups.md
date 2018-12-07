@@ -1,8 +1,7 @@
 ---
 title: "Configure a distributed availability group"
-titleSuffix: SQL Server
-description: "Describes how to create a distributed availability group, which is an extra layer of protection in the event of a disaster. " 
-ms.custom: "seodec2018"
+description: "Describes how to create and configure a distributed Always On availability group. " 
+ms.custom: "seodec18"
 ms.date: "08/17/2017"
 ms.prod: sql
 ms.reviewer: ""

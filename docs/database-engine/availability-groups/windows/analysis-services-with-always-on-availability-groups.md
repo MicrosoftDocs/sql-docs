@@ -1,8 +1,7 @@
 ---
 title: "Analysis Services with availability groups"
-titleSuffix: SQL Server
 description: "If you are using Always On availability groups as your high availability solution, you can use a database in that group as a data source in an Analysis Services tabular or multidimensional solution."
-ms.custom: "seodec2018"
+ms.custom: "seodec18"
 ms.date: "05/17/2016"
 ms.prod: sql
 ms.reviewer: ""

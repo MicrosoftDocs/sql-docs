@@ -1,8 +1,7 @@
 ---
-title: "Offloading read-only workload to secondary replica of an availability group"
-titleSuffix: SQL Server
+title: "Offload read-only workload to secondary replica of an availability group"
 description: "Learn about offloading read-only queries and reports to a secondary replica of an Always On availability group on SQL Server."
-ms.custom: "seodec2018"
+ms.custom: "seodec18"
 ms.date: "06/06/2016"
 ms.prod: sql
 ms.reviewer: ""
@@ -20,7 +19,7 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ---
-# Offloading read-only workload to secondary replica of an Always On availability group
+# Offload read-only workload to secondary replica of an Always On availability group
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   The [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] active secondary capabilities include support for read-only access to one or more secondary replicas (*readable secondary replicas*). A readable secondary replica can be in either synchronous-commit availability mode, or asynchronous-commit availability mode. A readable secondary replica allows read-only access to all its secondary databases. However, readable secondary databases are not set to read-only. They are dynamic. A given secondary database changes as changes on the corresponding primary database are applied to the secondary database. For a typical secondary replica, the data, including durable memory optimized tables, in the secondary databases is in near real time. Furthermore, full-text indexes are synchronized with the secondary databases. In many circumstances, data latency between a primary database and the corresponding secondary database is only a few seconds.  

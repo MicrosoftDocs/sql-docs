@@ -1,8 +1,7 @@
 ---
 title: "Overview of PowerShell Cmdlets for availability groups"
 description: "A reference for the different PowerShell cmdlets available to manage Always On availability groups. "
-titleSuffix: SQL Server
-ms.custom: "seodec2018"
+ms.custom: "seodec18"
 ms.date: "08/30/2017"
 ms.prod: sql
 ms.reviewer: ""

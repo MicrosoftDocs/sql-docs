@@ -1,8 +1,7 @@
 ---
 title: "Availability replica does not have a healthy role for an availability group"
-titleSuffix: SQL Server
 description: "Identify possible causes for why a replica does not have a healthy role within an Always On availability group."
-ms.custom: "seodec2018"
+ms.custom: "seodec18"
 ms.date: "05/17/2016"
 ms.prod: sql
 ms.reviewer: ""

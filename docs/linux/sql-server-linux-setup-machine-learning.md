@@ -61,13 +61,17 @@ Install at the highest package level using the instructions in this article for 
 
 For each OS-specific set of installation instructions, *highest package level* is either **Example 1 - Full installation** for the full set of packages, or **Example 2 - Minimal installation** for the least number of packages required for a viable installation.
 
-1. For R integration, start with [MRO](#mro) because it is a prerequisite. R integration will not install unless MRO is already on the system.
+1. For R integration, start with [MRO](#mro) because it is a prerequisite. R integration will not install without it.
 
-2. Run install commands using the package managers and syntax for your operating system: [RedHat](#RHEL), [Ubuntu](#ubuntu), [SUSE](#SUSE).
+2. Run install commands using the package managers and syntax for your operating system: 
+
+   + [RedHat](#RHEL)
+   + [Ubuntu](#ubuntu)
+   + [SUSE](#SUSE)
 
 ## Prerequisites
 
-+ The Linux version must be [supported by SQL Server](sql-server-linux-release-notes-2019.md#supported-platforms), running on premises or in a Docker container. Supported versions include the following:
++ The Linux version must be [supported by SQL Server](sql-server-linux-release-notes-2019.md#supported-platforms), running on premises or in a Docker container. Supported versions include:
 
    + [Red Hat Enterprise Linux (RHEL)](quickstart-install-connect-red-hat.md)
 
@@ -77,7 +81,7 @@ For each OS-specific set of installation instructions, *highest package level* i
 
 + For R only, [Microsoft R Open](#mro) is required for mssql-mlsservices R packages. 
 
-+ You should have a tool for running T-SQL commands. This is necessary for post-install configuration and validation. We recommend [Azure Data Studio](https://docs.microsoft.com/sql/azure-data-studio/download?view=sql-server-2017#get-azure-data-studio-for-linux), a free download that runs on Linux.
++ You should have a tool for running T-SQL commands. A query editor is necessary for post-install configuration and validation. We recommend [Azure Data Studio](https://docs.microsoft.com/sql/azure-data-studio/download?view=sql-server-2017#get-azure-data-studio-for-linux), a free download that runs on Linux.
 
 <a name="mro"></a>
 
@@ -166,8 +170,8 @@ On an internet-connected device, packages are downloaded and installed independe
 | [microsoft-r-open*](#mro) | R | Open-source distribution of R, composed of three packages. |
 |mssql-mlservices-mlm-r  | R | *Full install*. Provides RevoScaleR, MicrosoftML, sqlRUtils, olapR, pre-trained models for image featurization and text sentiment analysis.| 
 |mssql-mlservices-packages-r  | R | *Minimum install*. Provides RevoScaleR, sqlRUtils, MicrosoftML, olapR. <br/>Excludes pre-trained models. | 
-|mssql-mlservices-mml-py  | CTP 2.0-2.1 only | Obsolete in CTP 2.2 due to Python package consolidation into mssql-mslservices-python. Provides revoscalepy, microsoftml. Excludes pre-trained models. | 
-|mssql-mlservices-mml-r  | CTP 2.0-2.1 only | Obsolete in CTP 2.2 due to R package consolidation into mssql-mslservices-python. Provides RevoScaleR, MicrosoftML, sqlRUtils, olapR. Excludes pre-trained models.  |
+|mssql-mlservices-mml-py  | CTP 2.0-2.1 only | Obsolete in CTP 2.2 due to Python package consolidation into mssql-mslservices-python. Provides revoscalepy. Excludes pre-trained models and microsoftml.| 
+|mssql-mlservices-mml-r  | CTP 2.0-2.1 only | Obsolete in CTP 2.2 due to R package consolidation into mssql-mslservices-python. Provides RevoScaleR, sqlRUtils, olapR. Excludes pre-trained models and MicrosoftML.  |
 
 <a name="RHEL"></a>
 
@@ -442,7 +446,7 @@ You can download packages from [https://packages.microsoft.com/](https://package
 
 #### Package list
 
-Depending on which extensions you want to use, download the packages necessary for a specific language. Exact filenames include platform information, but the file names below should be close enough for you to determine which files to get.
+Depending on which extensions you want to use, download the packages necessary for a specific language. Exact filenames include platform information in the suffix, but the file names below should be close enough for you to determine which files to get.
 
 ```
 # Core packages 

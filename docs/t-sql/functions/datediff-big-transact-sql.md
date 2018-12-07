@@ -83,7 +83,7 @@ Signed **bigint**
 Returns the count (as a signed bigint value) of the specified datepart boundaries crossed between the specified startdate and enddate.
 -   Each specific *datepart* and the abbreviations for that *datepart* will return the same value.  
   
-For a return value out of range for **bigint** (-9,223,372,036,854,775,808 to 9,223,372,036,854,775,807), `DATEDIFF_BIG` returns an error. For **millisecond**, the maximum difference between *enddate* and *startdate* is 24 days, 20 hours, 31 minutes and 23.647 seconds. For **second**, the maximum difference is 68 years.
+For a return value out of range for **bigint** (-9,223,372,036,854,775,808 to 9,223,372,036,854,775,807), `DATEDIFF_BIG` returns an error. For **nanosecond**, the maximum difference between *enddate* and *startdate* is approximately 292.27 years.
   
 If *startdate* and *enddate* are both assigned only a time value, and the *datepart* is not a time *datepart*, `DATEDIFF_BIG` returns 0.
   

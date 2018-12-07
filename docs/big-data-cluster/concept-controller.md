@@ -11,7 +11,7 @@ ms.prod: sql
 ms.custom: seodec18
 ---
 
-# What is the controller (SQL Server 2019 big data clusters)?
+# What is the controller on a SQL Server 2019 big data cluster?
 
 The controller hosts the core logic for deploying and managing a big data cluster. It takes care of all interactions with Kubernetes, SQL Server instances that are part of the cluster and other components like HDFS and Spark. 
 

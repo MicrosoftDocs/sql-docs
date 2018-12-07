@@ -1,17 +1,19 @@
 ---
-title: How to use notebooks in SQL Server 2019 preview | Microsoft Docs
-description:
+title: Run notebooks in Azure Data Studio
+titleSuffix: SQL Server 2019 big data clusters
+description: This article explains how to run Jupyter Notebooks in Azure Data Studio conneected to a SQL Server 2019 big data cluster.
 author: rothja 
 ms.author: jroth 
 manager: craigg
-ms.date: 11/06/2018
+ms.date: 12/06/2018
 ms.topic: conceptual
 ms.prod: sql
+ms.custom: seodec18
 ---
 
 # How to use notebooks in SQL Server 2019 preview
 
-This article describes how to launch Jupyter Notebooks on the cluster and start authoring your own Notebooks. It also shows how to submit jobs against the cluster.
+This article describes how to launch Jupyter Notebooks on a big data cluster and how to start authoring your own Notebooks. It also shows how to submit jobs against the cluster.
 
 ## Prerequisites
 

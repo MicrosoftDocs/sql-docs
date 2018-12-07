@@ -1,5 +1,6 @@
 ---
-title: Get started with SQL Server containers on Docker | Microsoft Docs
+title: Get started with SQL Server containers on Docker (running SQL Server on Linux)
+titleSuffix: SQL Server
 description: This quickstart shows how to use Docker to run the SQL Server 2017 and 2019 container images. You then create and query a database with sqlcmd.
 author: rothja
 ms.author: jroth
@@ -8,7 +9,7 @@ ms.date: 11/07/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.custom: "sql-linux"
+ms.custom: "sql-linux, seodec18"
 ms.prod_service: linux
 ms.assetid: 82737f18-f5d6-4dce-a255-688889fdde69
 moniker: ">= sql-server-linux-2017 || >= sql-server-2017 || =sqlallproducts-allversions"

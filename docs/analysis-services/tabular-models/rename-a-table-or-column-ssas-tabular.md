@@ -1,5 +1,5 @@
 ---
-title: "Rename a Table or Column | Microsoft Docs"
+title: "Rename an Analysis Services tabular model table or column | Microsoft Docs"
 ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services

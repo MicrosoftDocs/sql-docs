@@ -58,7 +58,7 @@ The Copy Database Wizard moves or copies databases and certain server objects ea
     
     -   Have data or log files stored in Microsoft Azure storage.
   
--   When using [FileTables](../../relational-databases/blob/filetables-sql-server.md), you can not use copy database wizard on the same server, because the wizard uses the same directory name.
+-   When using [FileTables](../../relational-databases/blob/filetables-sql-server.md), you can't use the Copy Database Wizard on the same server because the wizard uses the same directory name.
 
 -   A database cannot be moved or copied to an earlier version of SQL Server.
   

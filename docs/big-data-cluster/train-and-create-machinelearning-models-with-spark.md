@@ -14,7 +14,7 @@ ms.date: 10/10/2018
 # Train and Create machine learning models with Spark
 Spark in SQL Server big data cluster enables AI and machine learning. The example demonstrates how to training a machine learning model using Python in Spark (PySpark) using data stored in HDFS. 
 
-The example is a step by step guide with code snippets that can be used from an Azure Data Studio Notebook and each cell run one step at a time. For more information on how to connect with Spark from notebook refer [here] (notebooks-guidance.md)
+The example is a step by step guide with code snippets that can be used from an Azure Data Studio Notebook and each cell run one step at a time. For more information on how to connect with Spark from notebook refer [here](notebooks-guidance.md)
 
 In the example:
 

@@ -9,6 +9,7 @@ ms.technology:
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.rep.monitor.subscription.synchhistory.f1"
+  - "sql12.rep.monitor.subscription.downlevelsynchhistory.f1"
 ms.assetid: 85f666f6-14ee-4f19-b385-e5cc508aabe4
 author: MashaMSFT
 ms.author: mathoma

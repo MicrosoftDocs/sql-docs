@@ -476,6 +476,7 @@
     - name: Tools Reference
       items:
       - name: Replication Monitor
+        href: replication-monitor.md
         items:  
         - name: Add Publisher
           href: add-publisher.md

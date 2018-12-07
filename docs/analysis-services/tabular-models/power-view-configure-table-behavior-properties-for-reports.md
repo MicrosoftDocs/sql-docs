@@ -1,5 +1,5 @@
 ---
-title: "Configure Table Behavior Properties for Power View Reports | Microsoft Docs"
+title: "Configure Analysis Services table properties for Power View reports | Microsoft Docs"
 ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services

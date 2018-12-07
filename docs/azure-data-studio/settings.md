@@ -1,7 +1,8 @@
 ---
-title: Azure Data Studio User and Workspace Settings | Microsoft Docs
-description: How to modify Azure Data Studio User and Workspace Settings.
-ms.custom: "tools|sos"
+title: User and Workspace Settings
+titleSuffix: Azure Data Studio
+description: How to customize Azure Data Studio by modifying User and Workspace Settings.
+ms.custom: "seodec18"
 ms.date: "09/24/2018"
 ms.prod: sql
 ms.technology: azure-data-studio
@@ -11,7 +12,7 @@ author: "yualan"
 ms.author: "alayu"
 manager: craigg
 ---
-# User and Workspace Settings
+# Modify User and Workspace Settings
 
 It is easy to configure [!INCLUDE[name-sos](../includes/name-sos-short.md)] to your liking through settings. Nearly every part of [!INCLUDE[name-sos](../includes/name-sos-short.md)]'s editor, user interface, and functional behavior has options you can modify.
 

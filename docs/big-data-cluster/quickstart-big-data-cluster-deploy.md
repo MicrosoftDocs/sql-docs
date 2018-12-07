@@ -1,12 +1,14 @@
 ---
-title: Deploy SQL Server big data cluster | Microsoft Docs
-description:
+title: Deployment quickstart
+titleSuffix: SQL Server 2019 big data clusters
+description: Walkthrough a deployment of SQL Server 2019 big data clusters (preview) on Azure Kubernetes Service (AKS).
 author: rothja 
 ms.author: jroth 
 manager: craigg
 ms.date: 12/07/2018
 ms.topic: quickstart
 ms.prod: sql
+ms.custom: seodec18
 ---
 # Quickstart: Deploy SQL Server big data cluster on Azure Kubernetes Service (AKS)
 

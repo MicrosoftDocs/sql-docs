@@ -1,15 +1,17 @@
 ---
-title: Configure Minikube for SQL Server 2019 big data cluster deployments | Microsoft Docs
-description: Learn how to configure Minikube for SQL Server 2019 big data cluster (preview) deployments on a single machine.
+title: Configure minikube
+titleSuffix: SQL Server 2019 big data clusters
+description: Learn how to configure minikube for SQL Server 2019 big data cluster (preview) deployments on a single machine.
 author: rothja 
 ms.author: jroth 
 manager: craigg
 ms.date: 12/07/2018
 ms.topic: conceptual
 ms.prod: sql
+ms.custom: seodec18
 ---
 
-# Configure Minikube for SQL Server 2019 big data cluster deployments
+# Configure minikube for SQL Server 2019 big data cluster deployments
 
 This article describes how to configure **minikube** on a single machine for SQL Server 2019 big data cluster (preview) deployments. Minikube is a tool that makes it easy to run Kubernetes on a single machine like a laptop or a desktop. Minikube runs a single-node Kubernetes cluster inside a VM on your laptop for users looking to try out Kubernetes or develop with it day-to-day. 
 

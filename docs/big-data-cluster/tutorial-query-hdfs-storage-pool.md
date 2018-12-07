@@ -1,17 +1,19 @@
 ---
-title: How to Query HDFS in a SQL Server big data cluster | Microsoft Docs
+title: Query HDFS data in the storage pool
+titleSuffix: SQL Server 2019 big data clusters
 description: This tutorial demonstrates how to query HDFS data in a SQL Server 2019 big data cluster (preview). You create an external table over data in the storage pool and then run a query.
 author: rothja 
 ms.author: jroth 
 manager: craigg
-ms.date: 10/11/2018
+ms.date: 12/06/2018
 ms.topic: tutorial
 ms.prod: sql
+ms.custom: seodec18
 ---
 
 # Tutorial: Query HDFS in a SQL Server big data cluster
 
-This tutorial demonstrates how to Query HDFS data in a SQL Server 2019 big data cluster.
+This tutorial demonstrates how to Query HDFS data in a SQL Server 2019 big data cluster (preview).
 
 In this tutorial, you learn how to:
 

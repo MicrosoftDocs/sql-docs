@@ -1,5 +1,6 @@
 ---
-title: How to deploy an app on SQL Server big data cluster | Microsoft Docs
+title: How to deploy an app
+titleSuffix: SQL Server 2019 big data clusters
 description: Deploy a Python or R script as an application on SQL Server 2019 big data cluster (preview). 
 author: TheBharath 
 ms.author: bharaths  
@@ -7,6 +8,7 @@ manager: craigg
 ms.date: 12/07/2018
 ms.topic: conceptual
 ms.prod: sql
+ms.custom: seodec18
 ---
 
 # How to deploy an app on SQL Server 2019 big data cluster (preview)

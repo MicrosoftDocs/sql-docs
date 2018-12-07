@@ -79,7 +79,7 @@ For each OS-specific set of installation instructions, *highest package level* i
 
    + [Ubuntu](quickstart-install-connect-ubuntu.md)
 
-+ For R only, [Microsoft R Open](#mro) is required for mssql-mlsservices R packages. 
++ (R only) [Microsoft R Open](#mro) provides the base R distribution for the R feature in SQL Server
 
 + You should have a tool for running T-SQL commands. A query editor is necessary for post-install configuration and validation. We recommend [Azure Data Studio](https://docs.microsoft.com/sql/azure-data-studio/download?view=sql-server-2017#get-azure-data-studio-for-linux), a free download that runs on Linux.
 
@@ -157,7 +157,7 @@ zypper update
 
 ## Package list
 
-On an internet-connected device, packages are downloaded and installed independently of the database engine using the package installer for each operating system. The following table describes all available packages, but for internet-connected installs, you choose either *full* or *minimum* to get a specific combination of features.
+On an internet-connected device, packages are downloaded and installed independently of the database engine using the package installer for each operating system. The following table describes all available packages, but for R and Python, you specify packages that provide either the full feature installation or the minimimum feature installation.
 
 | Package name | Applies-to | Description |
 |--------------|----------|-------------|
@@ -177,7 +177,7 @@ On an internet-connected device, packages are downloaded and installed independe
 
 ## RHEL commands
 
-Install any *one* R feature package, plus any *one* Python feature package, and Java if you want that capability. A feature package includes a bundle of features (all or some). Dependent packages are included automatically when installing on an internet-connected device.
+You can install language support in whatever combination you require (single or multiple languages). For R and Python, there are two packages to choose from. One provides all available features, characterized as the *full installation*. The alternative choice excludes the pretrained machine learning models and is considered the *minimal installation*.
 
 > [!Tip]
 > If possible, run `yum clean all` to refresh packages on the system prior to installation.
@@ -199,8 +199,6 @@ sudo yum install mssql-server-extensibility-java
 
 Includes open-source R and Python, extensibility framework, microsoft-openmpi, core Revo* libraries and machine learning libraries for R and Python, and the Java extension. Excludes the pre-trained models.
 
-You can also install just one or two language features. The following packages are not dependent on each other.
-
 ```bash
 # Install as root or sudo
 # Minimum install of R, Python, Java extensions
@@ -214,7 +212,7 @@ sudo yum install mssql-server-extensibility-java
 
 ## Ubuntu commands
 
-Install any *one* R feature package, plus any *one* Python feature package, and Java if you want that capability. A feature package includes a bundle of features (all or some). Dependent packages are included automatically when installing on an internet-connected device.
+You can install language support in whatever combination you require (single or multiple languages). For R and Python, there are two packages to choose from. One provides all available features, characterized as the *full installation*. The alternative choice excludes the pretrained machine learning models and is considered the *minimal installation*.
 
 > [!Tip]
 > If possible, run `apt-get update` to refresh packages on the system prior to installation. Additionally, some docker images of Ubuntu might not have the https apt transport option. To install it, use `apt-get install apt-transport-https`.
@@ -246,8 +244,6 @@ sudo apt-get install mssql-server-extensibility-java
 
 Includes open-source R and Python, extensibility framework, microsoft-openmpi, core Revo* libraries and machine learning libraries for R and Python, and the Java extension. Excludes the pre-trained models. 
 
-You can also install just one or two language features. The following packages are not dependent on each other.
-
 ```bash
 # Install as root or sudo
 # Minimum install of R, Python, Java
@@ -261,7 +257,7 @@ sudo apt-get install mssql-server-extensibility-java
 
 ## SUSE commands
 
-Install any *one* R feature package, plus any *one* Python feature package, and Java if you want that capability. A feature package includes a bundle of features (all or some). Dependent packages are included automatically when installing on an internet-connected device.
+You can install language support in whatever combination you require (single or multiple languages). For R and Python, there are two packages to choose from. One provides all available features, characterized as the *full installation*. The alternative choice excludes the pretrained machine learning models and is considered the *minimal installation*.
 
 ### Example 1 -  Full installation 
 
@@ -279,8 +275,6 @@ sudo zypper install mssql-server-extensibility-java
 ### Example 2 - Minimum installation 
 
 Includes open-source R and Python, extensibility framework, microsoft-openmpi, core Revo* libraries and machine learning libraries for R and Python, and the Java extension. Excludes the pre-trained models. 
-
-You can also install just one or two language features. The following packages are not dependent on each other.
 
 ```bash
 # Install as root or sudo

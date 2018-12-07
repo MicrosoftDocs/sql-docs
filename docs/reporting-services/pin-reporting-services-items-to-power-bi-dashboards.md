@@ -4,7 +4,7 @@ ms.date: 12/05/2018
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
 ms.technology: reporting-services
-ms.description: You can pin on-premises Reporting Services paginated report items to a dashboard in the Power BI service, as a new tile.
+description: You can pin on-premises Reporting Services paginated report items to a dashboard in the Power BI service, as a new tile.
 ms.topic: conceptual
 helpviewer_keywords: 
   - "pbi"

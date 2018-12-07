@@ -1,5 +1,5 @@
 ---
-title: "Specify Mark as Date Table| Microsoft Docs"
+title: "Specify Mark as Date Table in Analysis Services tabular models| Microsoft Docs"
 ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services

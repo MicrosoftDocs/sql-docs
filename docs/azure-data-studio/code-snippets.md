@@ -1,7 +1,8 @@
 ---
-title: Create code snippets in Azure Data Studio | Microsoft Docs
+title: Create reusable code snippets
+titleSuffix: Azure Data Studio
 description: Learn how to create and use SQL code snippets in Azure Data Studio
-ms.custom: "tools|sos"
+ms.custom: "seodec18"
 ms.date: "09/24/2018"
 ms.reviewer: "alayu; sstein"
 ms.prod: sql

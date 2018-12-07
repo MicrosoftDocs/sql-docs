@@ -1,5 +1,5 @@
 ---
-title: "Create and Manage Partitions in the Workspace Database | Microsoft Docs"
+title: "Create and manage partitions in the Analysis Services workspace database | Microsoft Docs"
 ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services

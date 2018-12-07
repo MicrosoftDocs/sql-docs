@@ -1,7 +1,8 @@
 ---
-title: Extend the functionality of Azure Data Studio | Microsoft Docs
-description: Learn about extending Azure Data Studio
-ms.custom: "tools|sos"
+title: Adding additional functionality thru extensibility
+titleSuffix: Azure Data Studio
+description: Learn about the extensibility model and key extensibility areas for extending the functionality of Azure Data Studio
+ms.custom: "seodec18"
 ms.date: "09/24/2018"
 ms.reviewer: "alayu; sstein"
 ms.prod: sql

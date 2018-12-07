@@ -7,6 +7,14 @@ ms.prod_service: "database-engine"
 ms.reviewer: ""
 ms.technology: replication
 ms.topic: conceptual
+f1_keywords: 
+  - "sql13.rep.newpubwizard.pubproperties.agentsecurity.f1"
+  - "sql13.rep.newpubwizard.pubproperties.agentsecurity.f1"
+  - "sql13.rep.newpubwizard.pubproperties.filterrows.f1"
+  - "sql13.rep.newpubwizard.pubproperties.internetsynchronization.f1"
+  - "sql13.rep.newpubwizard.pubproperties.general.f1"
+  - "sql13.rep.newpubwizard.pubproperties.publicationaccesslist.f1"
+  - "sql13.rep.newpubwizard.pubproperties.snapshotformat.f1"
 helpviewer_keywords: 
   - "Publication Properties dialog box"
 ms.assetid: 66e845e9-1308-4288-9110-ad2f22f1fc58

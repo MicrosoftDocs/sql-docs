@@ -7,6 +7,11 @@ ms.prod_service: "database-engine"
 ms.reviewer: ""
 ms.technology: replication
 ms.topic: conceptual
+f1_keywords: 
+  - "sql13.rep.configdistwizard.distpubproperties.f1"
+  - "sql13.rep.configdistwizard.pubproperties.general.f1"
+  - "sql13.rep.configdistwizard.pubproperties.pubdb.f1"
+  - "sql13.rep.configdistwizard.pubproperties.subscribers.f1"
 ms.assetid: 98df1aea-0406-40bf-a917-4bd80464125c
 author: "MashaMSFT"
 ms.author: "mathoma"

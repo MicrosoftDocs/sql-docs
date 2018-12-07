@@ -1367,28 +1367,13 @@
             "redirect_document_id": true
         },
         {
-            "source_path": "docs/relational-database/replication/agents/index.md",
-            "redirect_url": "/sql/relational-database/replication/agents/replication-agents-overview",
-            "redirect_document_id": true
-        },
-        {
             "source_path": "docs/relational-database/replication/concepts/developer-s-guide-how-to-topics-replication.md",
-            "redirect_url": "/sql/relational-database/replication/concepts/replication-developer-documentation",
-            "redirect_document_id": true
-        },
-        {
-            "source_path": "docs/relational-database/replication/concepts/index.md",
             "redirect_url": "/sql/relational-database/replication/concepts/replication-developer-documentation",
             "redirect_document_id": true
         },
         {
             "source_path": "docs/relational-database/replication/merge/specify-the-processing-order-of-merge-articles.md",
             "redirect_url": "/sql/relational-database/replication/merge/specify-merge-replication-properties",
-            "redirect_document_id": true
-        },
-        {
-            "source_path": "docs/relational-database/replication/monitor/index.md",
-            "redirect_url": "/sql/relational-database/replication/monitor/monitoring-replication",
             "redirect_document_id": true
         },
         {
@@ -1422,11 +1407,6 @@
            "redirect_document_id": false
         },
         {
-           "source_path": "docs/relational-database/replication/non-sql/index.md",
-           "redirect_url": "/sql/relational-database/replication/non-sql/heterogeneous-database-replication",
-           "redirect_document_id": true
-        },
-        {
            "source_path": "docs/relational-database/replication/publish/compress-snapshot-files-sql-server-management-studio.md",
            "redirect_url": "/sql/relational-database/replication/snapshot-options",
            "redirect_document_id": true
@@ -1434,11 +1414,6 @@
         {
            "source_path": "docs/relational-database/replication/publish/create-updatable-subscription-to-transactional-publication.md",
            "redirect_url": "/sql/relational-database/replication/publish/create-an-updatable-subscription-to-a-transactional-publication",
-           "redirect_document_id": true
-        },
-        {
-           "source_path": "docs/relational-database/replication/publish/index.md",
-           "redirect_url": "/sql/relational-database/replication/publish/publish-data-and-database-objects",
            "redirect_document_id": true
         },
         {
@@ -1510,11 +1485,6 @@
            "source_path": "docs/relational-database/replication/security/security-overview-replication.md",
            "redirect_url": "/sql/relational-database/replication/security/view-and-modify-replication-security-settings",
            "redirect_document_id": false
-        },
-        {
-           "source_path": "docs/relational-database/replication/security/index.md",
-           "redirect_url": "/sql/relational-database/replication/security/view-and-modify-replication-security-settings",
-           "redirect_document_id": true
         },
         {
            "source_path": "docs/relational-database/replication/advanced-merge-replication-resolve-merge-replication-conflicts.md",
@@ -1635,12 +1605,7 @@
             "source_path": "docs/relational-database/replication/publish/specify-snapshot-format-sql-server-management-studio.md",
             "redirect_url": "/sql/relational-database/replication/snapshot-options",
             "redirect_document_id": true
-         },
-        {
-            "source_path": "docs/relational-database/replication/replication-monitor.md",
-            "redirect_url": "/sql/relational-database/replication/sql-server-replication",
-            "redirect_document_id": true
-         },
+        },
         {
            "source_path": "docs/relational-database/replication/tools-reference-replication.md",
            "redirect_url": "/sql/relational-database/replication/sql-server-replication",

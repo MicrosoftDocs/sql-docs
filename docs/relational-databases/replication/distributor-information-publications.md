@@ -9,6 +9,10 @@ ms.technology: replication
 ms.topic: conceptual
 f1_keywords: 
   - "sql13.rep.monitor.Distributor.Publications.f1"
+  - "sql13.rep.monitor.Distributor.commonjobs..f1"
+  - "sql13.rep.monitor.Distributor.SubscriptionSummary.merge.f1"
+  - "sql13.rep.monitor.Distributor.SubscriptionSummary.snapshot.f1"
+  - "sql13.rep.monitor.Distributor.SubscriptionSummary.tran.f1"
 ms.assetid: 1f499277-7f12-42ba-8cf4-52b683434944
 author: "MashaMSFT"
 ms.author: "mathoma"

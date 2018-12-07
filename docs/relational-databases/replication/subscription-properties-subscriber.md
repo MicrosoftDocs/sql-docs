@@ -7,6 +7,9 @@ ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
 ms.technology: replication
 ms.topic: conceptual
+f1_keywords: 
+  - "sql13.rep.newsubwizard.subproperties.publisher.f1"
+  - "sql13.rep.newsubwizard.subproperties.subscriber.f1"
 ms.assetid: db2be511-c76e-4f21-8be4-6a8c60a50d30
 author: "MashaMSFT"
 ms.author: "mathoma"

@@ -43,9 +43,7 @@ The Copy Database Wizard moves or copies databases and certain server objects ea
   
 -   Schedule when to move or copy the database(s).  
   
-## File Table Restrictions
-  When using File Table, you can not Use copy database wizard on same server, because "Same Directory name"
-  
+
 ##  <a name="Restrictions"></a> Limitations and restrictions  
   
 -   The Copy Database Wizard is not available in the Express edition.  
@@ -60,6 +58,8 @@ The Copy Database Wizard moves or copies databases and certain server objects ea
     
     -   Have data or log files stored in Microsoft Azure storage.
   
+-   When using [FileTables](../../relational-databases/blob/filetables-sql-server.md), you can not use copy database wizard on the same server, because the wizard uses the same directory name.
+
 -   A database cannot be moved or copied to an earlier version of SQL Server.
   
 -   If you select the **Move** option, the wizard deletes the source database automatically after moving the database. The Copy Database Wizard does not delete a source database if you select the **Copy** option.  In addition, selected server objects are copied rather than moved to the destination; the database is the only object that is actually moved.

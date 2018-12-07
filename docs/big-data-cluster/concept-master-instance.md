@@ -1,17 +1,19 @@
 ---
-title: What is the SQL Server big data clusters master instance? | Microsoft Docs
-description: This article describes the master instance in a SQL Server 2019 big data cluster.
+title: What is the master instance?
+titleSuffix: SQL Server 2019 big data clusters
+description: This article describes the SQL Server master instance in a SQL Server 2019 big data cluster (preview).
 author: rothja 
 ms.author: jroth 
 manager: craigg
-ms.date: 11/06/2018
+ms.date: 12/06/2018
 ms.topic: conceptual
 ms.prod: sql
+ms.custom: seodec18
 ---
 
-# What is the SQL Server big data cluster master instance?
+# What is the master instance in a SQL Server 2019 big data cluster?
 
-This article describes the role of the *SQL Server master instance* in a SQL Server 2019 big ata cluster. The master instance is a SQL Server instance running in a SQL Server big data cluster [control plane](big-data-cluster-overview.md#controlplane).
+This article describes the role of the *SQL Server master instance* in a SQL Server 2019 big data cluster. The master instance is a SQL Server instance running in a SQL Server big data cluster [control plane](big-data-cluster-overview.md#controlplane).
 
 The SQL Server master instance provides the following functionality:
 
@@ -38,7 +40,7 @@ You can also choose to add your own user databases to the SQL Server master inst
 
 SQL Server machine learning services is an add-on feature to the database engine, used for executing Java, R and Python code in SQL Server. This feature is based on the SQL Server extensibility framework, which isolates external processes from core engine processes, but fully integrates with the relational data as stored procedures, as T-SQL script containing R or Python statements, or as Java, R or Python code containing T-SQL.
 
-As part of a SQL Server big data cluster, machine learning services will be available on the SQL Serevr master instance by default. This means that once external script execution is enabled on the SQL Server master instance, it is going to be possible to execute Java, R and Python scripts using sp_execute_external_script.
+As part of a SQL Server big data cluster, machine learning services will be available on the SQL Server master instance by default. This means that once external script execution is enabled on the SQL Server master instance, it is going to be possible to execute Java, R and Python scripts using sp_execute_external_script.
 
 ### Advantages of machine learning services in a big data cluster
 

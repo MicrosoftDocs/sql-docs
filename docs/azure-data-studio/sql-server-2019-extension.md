@@ -1,7 +1,8 @@
 ---
-title: Azure Data Studio SQL Server 2019 extension (preview) | Microsoft Docs
+title: SQL Server 2019 extension (preview)
+titleSuffix: Azure Data Studio
 description: SQL Server 2019 Preview extension for Azure Data Studio
-ms.custom: "tools|sos"
+ms.custom: "seodec18"
 ms.date: "11/06/2018"
 ms.reviewer: "alayu; sstein"
 ms.prod: sql

@@ -1,5 +1,5 @@
 ﻿---
-title: "SQL Server 2017 Analysis Services backward compatibility  | Microsoft Docs"
+title: "SQL Server 2017 Analysis Services backward compatibility | Microsoft Docs"
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services

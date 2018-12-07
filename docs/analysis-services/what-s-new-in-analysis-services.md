@@ -1,5 +1,5 @@
 ---
-title: "What&#39;s New in Analysis Services | Microsoft Docs"
+title: "What's new in SQL Server 2016 Analysis Services | Microsoft Docs"
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services

@@ -1,6 +1,8 @@
 ---
-title: "Availability group is not ready for automatic failover | Microsoft Docs"
-ms.custom: ""
+title: "Availability group is not ready for automatic failover"
+titleSuffix: SQL Server
+description: "Identify possible causes reasons why an Always On availability group is not ready for failover."
+ms.custom: "seodec2018"
 ms.date: "05/17/2016"
 ms.prod: sql
 ms.reviewer: ""
@@ -15,7 +17,7 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ---
-# Availability group is not ready for automatic failover
+# Always On availability group is not ready for automatic failover
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
     
 ## Introduction  

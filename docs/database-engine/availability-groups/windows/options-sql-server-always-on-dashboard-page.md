@@ -1,6 +1,8 @@
 ---
 title: "Options (SQL Server Always On, Dashboard Page) | Microsoft Docs"
-ms.custom: ""
+description: "A description of the Options page found on the SQL Server Always On Dashboard."
+titleSuffix: SQL Server
+ms.custom: "seodec2018"
 ms.date: "05/17/2016"
 ms.prod: sql
 ms.reviewer: ""

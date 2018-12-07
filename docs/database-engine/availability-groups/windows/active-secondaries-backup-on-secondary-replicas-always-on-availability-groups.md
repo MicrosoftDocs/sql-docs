@@ -1,6 +1,8 @@
 ---
-title: "Active Secondaries Backup on Secondary Replicas-Always On Availability | Microsoft Docs"
-ms.custom: ""
+title: "Offloading supported backups to secondary replicas of an availability group"
+titleSuffix: SQL Server
+description: "Learn about the different supported back up types when offloading backups to a secondary replica of an Always On availability group hosted on a SQL Server."
+ms.custom: "seodec2018"
 ms.date: "09/01/2017"
 ms.prod: sql
 ms.reviewer: ""
@@ -19,7 +21,7 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ---
-# Active Secondaries: Backup on Secondary Replicas (Always On Availability Groups)
+# Offloading supported backups to secondary replicas of an availability group - SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   The [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] active secondary capabilities include support for performing backup operations on secondary replicas. Backup operations can put significant strain on I/O and CPU (with backup compression). Offloading backups to a synchronized or synchronizing secondary replica allows you to use the resources on server instance that hosts the primary replica for your tier-1 workloads.  

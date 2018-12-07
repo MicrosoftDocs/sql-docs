@@ -1,6 +1,8 @@
 ---
-title: "Always On Policies for Operational Issues - Always On Availability | Microsoft Docs"
-ms.custom: ""
+title: "Policy based management for operational Issues with availability groups"
+titleSuffix: SQL Server
+description: "The Always On availability groups health model evaluates a set of predefined policy based management (PBM) policies. You can use these for viewing the health of an availability group and its availability replicas and databases in SQL Server." 
+ms.custom: "seodec2018"
 ms.date: "05/17/2016"
 ms.prod: sql
 ms.reviewer: ""
@@ -17,21 +19,8 @@ manager: craigg
 # Always On Policies for Operational Issues - Always On Availability
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-  The [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] health model evaluates a set of predefined policy based management (PBM) policies. You can use theses for viewing the health of an availability group and its availability replicas and databases in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)].  
+  The Always On availability groups health model evaluates a set of predefined policy based management (PBM) policies. You can use these for viewing the health of an availability group and its availability replicas and databases in SQL Server.  
   
- **In this Topic:**  
-  
--   [Terms and Definitions](#TermsAndDefinitions)  
-  
--   [Predefined Policies and Issues](#Always OnPBM)  
-  
--   [Always On Dashboard](#Dashboard)  
-  
--   [Extending the Always On Health Model](#ExtendHealthModel)  
-  
--   [Related Tasks](#RelatedTasks)  
-  
--   [Related Content](#RelatedContent)  
   
 ##  <a name="TermsAndDefinitions"></a> Terms and Definitions  
  Always On predefined policies  

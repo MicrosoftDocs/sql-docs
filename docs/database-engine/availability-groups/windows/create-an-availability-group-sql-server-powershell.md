@@ -1,6 +1,8 @@
 ---
-title: "Create an Availability Group (SQL Server PowerShell) | Microsoft Docs"
-ms.custom: ""
+title: "Create an availability group using PowerShell"
+titleSuffix: SQL Server
+description: "Steps to creating an Always On availability group using PowerShell."
+ms.custom: "seodec2018"
 ms.date: "05/17/2016"
 ms.prod: sql
 ms.reviewer: ""
@@ -13,7 +15,7 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ---
-# Create an Availability Group (SQL Server PowerShell)
+# Create an Always On availability group using PowerShell
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   This topic describes how to use PowerShell cmdlets to create and configure an Always On availability group by using PowerShell in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. An *availability group* defines a set of user databases that will fail over as a single unit and a set of failover partners, known as *availability replicas*, which support failover.  
   

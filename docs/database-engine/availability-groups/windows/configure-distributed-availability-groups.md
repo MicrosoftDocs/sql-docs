@@ -1,6 +1,8 @@
 ---
-title: "Configure distributed availability group (Always On Availability Group) | Microsoft Docs"
-ms.custom: ""
+title: "Configure a distributed availability group"
+titleSuffix: SQL Server
+description: "Describes how to create a distributed availability group, which is an extra layer of protection in the event of a disaster. " 
+ms.custom: "seodec2018"
 ms.date: "08/17/2017"
 ms.prod: sql
 ms.reviewer: ""
@@ -11,7 +13,7 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ---
-# Configure distributed availability group  
+# Configure a distributed Always On availability group  
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 To create a distributed availability group, you must create an availability group and listener on each Windows Server Failover Cluster (WSFC). You then combine these availability groups into a distributed availability group. The following steps provide a basic example in Transact-SQL. This example does not cover all of the details of creating availability groups and listeners; instead, it focuses on highlighting the key requirements. 

@@ -1,6 +1,8 @@
 ---
-title: "Overview of Always On Availability Groups (SQL Server) | Microsoft Docs"
-ms.custom: ""
+title: "Overview of Always On Availability Groups"
+description: "An introduction to the concepts that are central for configuring and managing Always On availability groups." 
+titleSuffix: SQL Server
+ms.custom: "seodec2018"
 ms.date: "05/17/2016"
 ms.prod: sql
 ms.reviewer: ""

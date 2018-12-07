@@ -1,6 +1,8 @@
 ---
-title: "Always On Availability Groups ring buffers (SQL Server) | Microsoft Docs"
-ms.custom: "ag-guide"
+title: "Use ring buffers to obtain health information on availability groups"
+titleSuffix: SQL Server
+description: "Obtain certain diagnostics information about Always On availability groups using the SQL Server ring buffers."
+ms.custom: "ag-guide, seodec2018"
 ms.date: "06/13/2017"
 ms.prod: sql
 ms.reviewer: ""

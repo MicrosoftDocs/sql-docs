@@ -1,6 +1,8 @@
 ---
-title: "Availability replica is not joined | Microsoft Docs"
-ms.custom: ""
+title: "Availability replica is not joined to an availability group"
+titleSuffix: SQL Server
+description: "Identify possible reasons why a replica is not joined to an Always On availability group."
+ms.custom: "seodec2018"
 ms.date: "05/17/2016"
 ms.prod: sql
 ms.reviewer: ""
@@ -15,7 +17,7 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ---
-# Availability replica is not joined
+# Availability replica is not joined to an Always On availability group
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
     
 ## Introduction  

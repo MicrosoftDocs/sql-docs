@@ -1,6 +1,8 @@
 ---
-title: "Enable and Disable Always On Availability Groups (SQL Server) | Microsoft Docs"
-ms.custom: ""
+title: "Enable or Disable availability group feature"
+description: "Steps to either enable or disable the Always On availability group feature using Transact-SQL (T-SQL), PowerShell, or SQL Server Management Studio."
+titleSuffix: SQL Server
+ms.custom: "seodec2018"
 ms.date: "08/30/2017"
 ms.prod: sql
 ms.reviewer: ""

@@ -1,6 +1,8 @@
 ---
-title: "Configure Read-Only Access on an Availability Replica (SQL Server) | Microsoft Docs"
-ms.custom: ""
+title: "Configure read-only access to a secondary replica of an availability group"
+titleSuffix: SQL Server
+description: "Configure your secondary replica to allow only read access for your Always On availability group. "
+ms.custom: "seodec2018"
 ms.date: "05/17/2016"
 ms.prod: sql
 ms.reviewer: ""
@@ -17,7 +19,7 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ---
-# Configure Read-Only Access on an Availability Replica (SQL Server)
+# Configure read-only access to a secondary replica of an Always On availability group
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   By default both read-write and read-intent access are allowed to the primary replica and no connections are allowed to secondary replicas of an Always On availability group. This topic describes how to configure connection access on an availability replica of an Always On availability group in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)], or PowerShell.  
   

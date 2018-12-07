@@ -1,6 +1,8 @@
 ---
-title: "SQL Server Availability Group Lease Health Check Timeout | Microsoft Docs"
-ms.custom: ""
+title: "Mechanics of the the availability group lease health check timeout"
+titleSuffix: SQL Server 
+description: "Mechanics and guidelines for the lease, cluster, and health check times for Always On availability groups."
+ms.custom: "seodec2018"
 ms.date: "05/02/2018"
 ms.prod: sql
 ms.reviewer: ""
@@ -11,7 +13,7 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ---
-# Mechanics and guidelines of lease, cluster, and health check timeouts 
+# Mechanics and guidelines of lease, cluster, and health check timeouts for Always On availability groups 
 
 Differences in hardware, software, and cluster configurations as well as different application requirements for uptime and performance require specific configuration for lease, cluster, and health check timeout values. Certain applications and workloads require more aggressive monitoring to limit downtime following hard failures. Others require more tolerance for transient network issues and waits from high resource usage and are okay with slower failovers. 
 

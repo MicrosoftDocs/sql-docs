@@ -1,6 +1,8 @@
 ---
-title: "Always On Availability Groups wait types (SQL Server) | Microsoft Docs"
-ms.custom: "ag-guide"
+title: "Identify waits associated with availability groups"
+titleSuffix: SQL Server
+description: "Identify waits associated with Always On availability groups using Transact-SQL (T-SQL) and extended events."
+ms.custom: "ag-guide, seodec2018"
 ms.date: "06/13/2017"
 ms.prod: sql
 ms.reviewer: ""

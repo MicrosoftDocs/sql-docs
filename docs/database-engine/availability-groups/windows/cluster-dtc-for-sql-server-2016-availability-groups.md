@@ -1,6 +1,8 @@
 ---
-title: "Cluster DTC for SQL Server 2016 Availability Groups | Microsoft Docs"
-ms.custom: ""
+title: "How to cluster the DTC service for an availability group"
+titleSuffix: SQL Server
+description: "Describes the requirements and steps for clustering the Microsoft Distributed Transaction Coordinator (DTC) service for an Always On availability group. "
+ms.custom: seodec2018
 ms.date: "08/30/2016"
 ms.prod: sql
 ms.reviewer: ""
@@ -12,7 +14,7 @@ ms.author: mathoma
 manager: craigg
 monikerRange: ">=sql-server-2016||=sqlallproducts-allversions"
 ---
-# Cluster DTC for SQL Server 2016 Availability Groups
+# How to cluster the DTC service for an Always On availability group
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 

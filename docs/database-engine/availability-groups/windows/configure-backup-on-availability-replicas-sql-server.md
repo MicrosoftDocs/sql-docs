@@ -1,6 +1,8 @@
 ---
-title: "Configure Backup on Availability Replicas (SQL Server) | Microsoft Docs"
-ms.custom: ""
+title: "Configure backups on secondary replicas of an availability group"
+titleSuffix: SQL Server
+description: "Describes how to configure backups on secondary replicas of an Always On availability group using either Transact-SQL (T-SQL), PowerShell, or SQL Server Management Studio."
+ms.custom: "seodec2018"
 ms.date: "05/17/2016"
 ms.prod: sql
 ms.reviewer: ""
@@ -19,7 +21,7 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ---
-# Configure Backup on Availability Replicas (SQL Server)
+# Configure backups on secondary replicas of an Always On availability group
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   This topic describes how to configure backup on secondary replicas for an Always On availability group by using [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)], or PowerShell in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)].  
   

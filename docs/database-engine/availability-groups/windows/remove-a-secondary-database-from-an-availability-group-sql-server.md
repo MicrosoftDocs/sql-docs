@@ -1,6 +1,8 @@
 ---
-title: "Remove a Secondary Database from an Availability Group (SQL Server) | Microsoft Docs"
-ms.custom: ""
+title: "Remove a secondary database from an availability group"
+description: "Steps to remove a secondary database from an Always On availability group using either Transact-SQL (T-SQL), PowerShell, or SQL Server Management Studio."
+titleSuffix: SQL Server
+ms.custom: "seodec2018"
 ms.date: "05/17/2016"
 ms.prod: sql
 ms.reviewer: ""

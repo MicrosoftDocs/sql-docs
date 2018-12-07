@@ -1,6 +1,8 @@
 ---
-title: "Distributed availability groups (SQL Server) | Microsoft Docs"
-ms.custom: ""
+title: "What is a distributed availability groups"
+description: "A distributed availability group is a special type of availability group that spans two separate availability groups. The availability groups that participate in a distributed availability group do not need to be in the same location."
+titleSuffix: SQL Server
+ms.custom: "seodec2018"
 ms.date: "07/31/2018"
 ms.prod: sql
 ms.reviewer: ""

@@ -1,6 +1,8 @@
 ---
-title: "Maintaining an Always On Publication Database (SQL Server) | Microsoft Docs"
-ms.custom: ""
+title: "Manage a replicated Publication database as part of an availability group"
+description: "A description for how to manage and maintain a database that is acting as a publisher in a SQL replication and is also participating in an Always On availability group. "
+titleSuffix: SQL Server
+ms.custom: "seodec2018"
 ms.date: "05/17/2016"
 ms.prod: sql
 ms.reviewer: ""
@@ -14,7 +16,7 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ---
-# Maintaining an Always On Publication Database (SQL Server)
+# Manage a replicated Publication database as part of an Always On availability group
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   This topic discusses special considerations for maintaining a publication database when you use Always On availability groups.  

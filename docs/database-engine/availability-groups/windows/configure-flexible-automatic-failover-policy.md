@@ -1,6 +1,8 @@
 ---
-title: "Configure Flexible Automatic Failover Policy | Microsoft Docs"
-ms.custom: ""
+title: "Configure a flexible automatic failover policy for an availability group"
+titleSuffix: SQL Server
+description: "Describes how to configure a flexible failover policy for an Always On availability group using Transact-SQL (T-SQL), PowerShell, or SQL Server Management Studio."
+ms.custom: "seodec2018"
 ms.date: "05/17/2016"
 ms.prod: sql
 ms.reviewer: ""
@@ -16,7 +18,7 @@ ms.author: mathoma
 manager: craigg
 monikerRange: ">=sql-server-2016||=sqlallproducts-allversions"
 ---
-# Configure Flexible Automatic Failover Policy
+# Configure a flexibleautomatic failover policy for an availability group
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 

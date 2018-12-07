@@ -1,6 +1,8 @@
 ---
-title: "Monitor Availability Groups (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "Monitor availability groups using Transact-SQL (T-SQL)"
+description: "A description of how to monitor Always On availability groups using Transact-SQL (T-SQL)."
+titleSuffix: SQL Server
+ms.custom: "seodec2018"
 ms.date: "05/17/2016"
 ms.prod: sql
 ms.reviewer: ""

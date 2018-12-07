@@ -1,6 +1,8 @@
 ---
-title: "Connect to Existing Secondary Replicas Page | Microsoft Docs"
-ms.custom: ""
+title: "'Connect to Existing Secondary Replicas' Page for availability groups"
+titleSuffix: SQL Server
+description: "A description of the various options found on the 'Connect to Existing Secondary Replicas' page within the Availability Group wizard in SQL Server Management Studio."
+ms.custom: "seodec2018"
 ms.date: "05/17/2016"
 ms.prod: sql
 ms.reviewer: ""

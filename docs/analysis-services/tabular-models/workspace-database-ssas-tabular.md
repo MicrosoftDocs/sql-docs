@@ -1,5 +1,5 @@
 ---
-title: "Workspace database in SQL Server Data Tools| Microsoft Docs"
+title: "Analysis Services workspace database in SQL Server Data Tools| Microsoft Docs"
 ms.date: 09/17/2018
 ms.prod: sql
 ms.technology: analysis-services

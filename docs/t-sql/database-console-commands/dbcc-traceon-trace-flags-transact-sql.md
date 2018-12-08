@@ -25,7 +25,7 @@ manager: craigg
 # DBCC TRACEON - Trace Flags (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-Trace flags are used to temporarily set specific server characteristics or to switch off a particular behavior. For example, if trace flag 3205 is set when an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] starts, hardware compression for tape drivers is disabled. Trace flags are frequently used to diagnose performance issues or to debug stored procedures or complex computer systems.
+Trace flags are used to set specific server characteristics or to switch off a particular behavior. For example, trace flag 3226 is a commonly used startup trace flag which suppresses successful backup messages in the error log. Trace flags are frequently used to diagnose performance issues or to debug stored procedures or complex computer systems, but they may also be recommended by CSS to address behavior that is negatively impacting a specific workload.  All documented trace flags and those recommended by CSS are fully supported in a production environment when used as directed.  As with any configuration change in SQL Server, however, it is always best to thoroughly test the flag in a non-production environment before deploying.
   
 The following table lists and describes the trace flags that are available in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
  

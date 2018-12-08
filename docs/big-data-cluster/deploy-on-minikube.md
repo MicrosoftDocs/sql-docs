@@ -26,8 +26,6 @@ This article describes how to configure **minikube** on a single machine for SQL
 
 ## Install dependencies
 
-1. If not already installed, install git locally on [Windows](https://git-for-windows.github.io/), [Linux, or Mac](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git).
-
 1. Install [kubectl](https://kubernetes.io/docs/tasks/tools/install-kubectl/).
 
 1. Install Python 3:

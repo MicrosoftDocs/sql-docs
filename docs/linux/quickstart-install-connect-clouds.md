@@ -18,8 +18,8 @@ ms.assetid:
 
 In this quickstart, you will install SQL Server on Red Hat Enterprise Linux (RHEL), SUSE Linux Enterprise Server (SLES), or Ubuntu in the cloud of your choice. Go to [Provision a Linux SQL Server virtual machine in the Azure portal](https://docs.microsoft.com/azure/virtual-machines/linux/sql/provision-sql-server-linux-virtual-machine?toc=%2fsql%2flinux%2ftoc.json) to run SQL Server on Linux in Azure.
 
-    > [!NOTE]
-    > If you choose to run a paid edition of SQL Server then you need to bring your own license (BYOL)
+> [!NOTE]
+> If you choose to run a paid edition of SQL Server, then you need to bring your own license (BYOL).
 
 ## Amazon Web Services
 1.	Create a Linux AMI with at least 2 GB of memory from the marketplace 

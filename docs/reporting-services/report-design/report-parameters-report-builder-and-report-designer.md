@@ -29,7 +29,7 @@ ms.author: maggies
 ##  <a name="bkmk_Common_Uses_for_Parameters"></a> Common Uses for Parameters  
  Here are some of the most common ways to use parameters.  
   
- **Control Paginated and Mobile Report Data**  
+**Control Paginated and Mobile Report Data**  
   
 -   Filter paginated report data at the data source by writing dataset queries that contain variables.  
   
@@ -39,7 +39,7 @@ ms.author: maggies
   
 -   Enable users to specify values to customize the data in a paginated report. For example, provide two parameters for the start date and end date for sales data.  
   
- **Connect Related Reports**  
+**Connect Related Reports**  
   
 -   Use parameters to relate main reports to drillthrough reports, to subreports, and to linked reports. When you design a set of reports, you can design each report to answer certain questions. Each report can provide a different view or a different level of detail for related information. To provide a set of interrelated reports, create parameters for the related data on target reports.  
   
@@ -47,7 +47,7 @@ ms.author: maggies
   
 -   Customize sets of parameters for multiple users. Create two linked reports based on a sales report on the report server. One linked report uses predefined parameter values for sales persons and the second linked report uses predefined parameter values for sales managers. Both reports use the same report definition.  
   
- **Vary Report Presentation**  
+**Vary Report Presentation**  
   
 -   Send commands to a report server through a URL request, to customize the rendering of a report. For more information, see [URL Access &#40;SSRS&#41;](../../reporting-services/url-access-ssrs.md) and [Pass a Report Parameter Within a URL](../../reporting-services/pass-a-report-parameter-within-a-url.md).  
   
@@ -100,9 +100,9 @@ ms.author: maggies
   
  For more information, see [Dataset Query](#bkmk_Dataset_Parameters) in this topic.  
   
- **Create a parameter manually**  
+**Create a parameter manually**  
   
- Create a parameter manually from the Report Data pane. You can configure report parameters so that a user can interactively enter values to help customize the contents or appearance of a report. You can also configure report parameters so that a user cannot change preconfigured values.  
+Create a parameter manually from the Report Data pane. You can configure report parameters so that a user can interactively enter values to help customize the contents or appearance of a report. You can also configure report parameters so that a user cannot change preconfigured values.  
   
 > [!NOTE]  
 >  Because parameters are managed independently on the server, republishing a main report with new parameter settings does not overwrite the existing parameters settings on the report.  

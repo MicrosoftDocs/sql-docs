@@ -20,8 +20,8 @@ Initially designed by a private company, this is now a widespread semi-open form
 - A .DBF file for metadata  
   
 The base files names must match (e.g. *canada.shp* and *canada.dbf*). The metadata must include the field *NAME* with the value of the corresponding shape's name (key), to be used when populating the map with data.  
-  
-> **Note**: The two map files together, the SHP and the DBF, can be no bigger than 512 KB. If your map files are too big, use a tool like [https://mapshaper.org/](https://mapshaper.org/) to reduce their size.  
+
+The two map files together, the SHP and the DBF, can be no bigger than 512 KB. If your map files are too big, use a tool like [https://mapshaper.org/](https://mapshaper.org/) to reduce their size.  
   
 See how to [add custom maps to mobile reports](../../reporting-services/mobile-reports/add-a-custom-map-to-a-reporting-services-mobile-report.md).  
   

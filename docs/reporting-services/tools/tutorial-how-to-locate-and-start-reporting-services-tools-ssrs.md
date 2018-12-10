@@ -37,7 +37,7 @@ ms.author: maggies
 -   Manage encryption keys.  
 -   Configure unattended report processing and e-mail report delivery.  
   
- **Installation:** [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configuration Manager is installed when you install [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Native mode. For more information, see [Install Reporting Services Native Mode Report Server](assetid:///8f25e6dc-b753-400e-9e9a-50f4f35bf6c4).  
+**Installation:** [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configuration Manager is installed when you install [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Native mode. For more information, see [Install Reporting Services Native Mode Report Server](assetid:///8f25e6dc-b753-400e-9e9a-50f4f35bf6c4).  
   
 ### To start the Reporting Services Configuration Manager  
   

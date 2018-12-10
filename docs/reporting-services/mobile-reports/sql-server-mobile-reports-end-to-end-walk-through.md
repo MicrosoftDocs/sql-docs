@@ -277,7 +277,9 @@ To view your [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] re
   
     ![PBI_iPad_SSMRP_LeftNavBiggr](../../reporting-services/mobile-reports/media/pbi-ipad-ssmrp-leftnavbiggr.png)  
       
->**Tip**: Tap the options icon ![PBI_iPad_OptionsIcon](../../reporting-services/mobile-reports/media/pbi-ipad-optionsicon.png) anytime to go between your Reporting Services mobile reports in the Reporting Services web portal and your dashboards in the Power BI service.   
+> [!TIP]
+> Tap the options icon ![PBI_iPad_OptionsIcon](../../reporting-services/mobile-reports/media/pbi-ipad-optionsicon.png) anytime to go between your Reporting Services mobile reports in the Reporting Services web portal and your dashboards in the Power BI service.  
+
   
 ## View KPIs and mobile reports in the Power BI app  
   

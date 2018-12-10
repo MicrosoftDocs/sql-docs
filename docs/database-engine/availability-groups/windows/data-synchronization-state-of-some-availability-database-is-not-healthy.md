@@ -1,6 +1,7 @@
 ---
-title: "Data synchronization state of some availability database is not healthy | Microsoft Docs"
-ms.custom: ""
+title: "Data synchronization state of some availability database is not healthy"
+description: "Identify possible causes for why the data synchronization state of some database in an Always On availability group is not healthy."
+ms.custom: "seodec18"
 ms.date: "05/17/2016"
 ms.prod: sql
 ms.reviewer: ""

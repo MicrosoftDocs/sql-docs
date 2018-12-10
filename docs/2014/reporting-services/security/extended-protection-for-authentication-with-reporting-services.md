@@ -25,17 +25,17 @@ manager: craigg
 ## Reporting Services Extended Protection Overview  
  [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] supports and enforces extended protection that has been enabled in the operating system. If the operating system does not support extended protection or the feature in the operating system has not been enabled, the [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] extended protection feature will fail authentication. [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] Extended Protection also requires an SSL Certificate. For more information, see [Configure SSL Connections on a Native Mode Report Server](configure-ssl-connections-on-a-native-mode-report-server.md)  
   
-> [!IMPORTANT]  
+> [!IMPORTANT]
 >  By default, [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] does not enable Extended Protection. The feature can be enabled by modifying the `rsreportserver.config` configuration file or using WMI APIs to update the configuration file. [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)][!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] does not provide a user interface to modify or view extended protection settings. For more information, see the [configuration settings](#ConfigurationSettings) section in this topic.  
   
  Common issues that occur because of changes in extended protection settings or incorrectly configured settings are not be exposed with obvious error messages or dialog windows. Issues related to extended protection configuration and compatibility result in authentication failures and errors in the [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] trace logs.  
   
-> [!IMPORTANT]  
+> [!IMPORTANT]
 >  Some data access technologies may not support extended protection. A data access technology is used to connect to SQL Server data sources and to the [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] catalog database. Failure of a data access technology to support extended protection impacts [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] in the following ways:  
->   
+> 
 >  -   The SQL Server that runs the [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] catalog database cannot have extended protection enabled or the report server will not successfully connect to the catalog database and return authentication errors.  
 > -   SQL Servers that are used as [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] report data sources cannot have extended protection enabled or tries by the report server to connect to the report data source will fail and return authentication errors.  
->   
+> 
 >  The documentation for a data access technology should have information about support for extended protection.  
   
 ### Upgrade  

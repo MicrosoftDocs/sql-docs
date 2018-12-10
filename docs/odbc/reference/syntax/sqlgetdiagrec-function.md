@@ -33,14 +33,14 @@ manager: craigg
 ```  
   
 SQLRETURN SQLGetDiagRec(  
-     SQLSMALLINT     HandleType,  
-     SQLHANDLE       Handle,  
-     SQLSMALLINT     RecNumber,  
-     SQLCHAR *       SQLState,  
-     SQLINTEGER *    NativeErrorPtr,  
-     SQLCHAR *       MessageText,  
-     SQLSMALLINT     BufferLength,  
-     SQLSMALLINT *   TextLengthPtr);  
+     SQLSMALLINT     HandleType,  
+     SQLHANDLE       Handle,  
+     SQLSMALLINT     RecNumber,  
+     SQLCHAR *       SQLState,  
+     SQLINTEGER *    NativeErrorPtr,  
+     SQLCHAR *       MessageText,  
+     SQLSMALLINT     BufferLength,  
+     SQLSMALLINT *   TextLengthPtr);  
 ```  
   
 ## Arguments  

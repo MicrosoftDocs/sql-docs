@@ -168,7 +168,7 @@ tablediff
 |**2**|Table differences|  
   
 ## Remarks  
- The **tablediff** utility cannot be used with non-[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] servers.  
+ The **tablediff** utility cannot be used with non- [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] servers.  
   
  Tables with **sql_variant** data type columns are not supported.  
   

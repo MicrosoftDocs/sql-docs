@@ -71,7 +71,7 @@ GO
   
  The **in-doubt xact resolution** option is an advanced option. If you are using the **sp_configure** system stored procedure to change the setting, you can change **in-doubt xact resolution** only when **show advanced options** is set to 1. The setting takes effect immediately without a server restart.  
   
-> [!NOTE]  
+> [!NOTE]
 >  Consistent configuration of this option across all [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instances involved in any distributed transactions will help avoid data inconsistencies.  
   
 ## See Also  

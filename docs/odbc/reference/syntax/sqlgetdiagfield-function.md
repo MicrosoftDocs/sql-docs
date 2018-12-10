@@ -33,13 +33,13 @@ manager: craigg
 ```  
   
 SQLRETURN SQLGetDiagField(  
-     SQLSMALLINT     HandleType,  
-     SQLHANDLE       Handle,  
-     SQLSMALLINT     RecNumber,  
-     SQLSMALLINT     DiagIdentifier,  
-     SQLPOINTER      DiagInfoPtr,  
-     SQLSMALLINT     BufferLength,  
-     SQLSMALLINT *   StringLengthPtr);  
+     SQLSMALLINT     HandleType,  
+     SQLHANDLE       Handle,  
+     SQLSMALLINT     RecNumber,  
+     SQLSMALLINT     DiagIdentifier,  
+     SQLPOINTER      DiagInfoPtr,  
+     SQLSMALLINT     BufferLength,  
+     SQLSMALLINT *   StringLengthPtr);  
 ```  
   
 ## Arguments  
@@ -227,7 +227,7 @@ n-definition*|"CREATE DOMAIN"|SQL_DIAG_CREATE_DOMAIN|
   
 -   For all records that pertain to specific rows, records are sorted by the value in the SQL_DIAG_ROW_NUMBER field. All errors and warnings of the first row affected are listed, and then all errors and warnings of the next row affected, and so on.  
   
-> [!NOTE]  
+> [!NOTE]
 >  The ODBC 3*.x* Driver Manager does not order status records in the diagnostic queue if SQLSTATE 01S01 (Error in row) is returned by an ODBC 2*.x* driver or if SQLSTATE 01S01 (Error in row) is returned by an ODBC 3*.x* driver when **SQLExtendedFetch** is called or **SQLSetPos** is called on a cursor that has been positioned with **SQLExtendedFetch**.  
   
  Within each row, or for all those records that do not correspond to a row or for which the row number is unknown, or for all those records with a row number equal to SQL_NO_ROW_NUMBER, the first record listed is determined by using a set of sorting rules. After the first record, the order of the other records affecting a row is undefined. An application cannot assume that errors precede warnings after the first record. Applications should scan the complete diagnostic data structure to obtain complete information about an unsuccessful call to a function.  

@@ -129,7 +129,7 @@ GO
 > See the topic [Best Practices: Using In-Memory OLTP in a VM environment](../../database-engine/using-in-memory-oltp-in-a-vm-environment.md) for more information.  
   
 ##  <a name="bkmk_PageAllocFailure"></a> Resolve page allocation failures due to insufficient memory when sufficient memory is available  
- If you get the error message, "Disallowing page allocations for database '*\<databaseName>*' due to insufficient memory in the resource pool '*\<resourcePoolName>*'. See 'http://go.microsoft.com/fwlink/?LinkId=330673' for more information." in the error log when the available physical memory is sufficient to allocate the page, it may be due to a disabled Resource Governor. When the Resource Governor is disabled MEMORYBROKER_FOR_RESERVE induces artificial memory pressure.  
+ If you get the error message, "Disallowing page allocations for database '*\<databaseName>*' due to insufficient memory in the resource pool '*\<resourcePoolName>*'. See '<http://go.microsoft.com/fwlink/?LinkId=330673>' for more information." in the error log when the available physical memory is sufficient to allocate the page, it may be due to a disabled Resource Governor. When the Resource Governor is disabled MEMORYBROKER_FOR_RESERVE induces artificial memory pressure.  
   
  To resolve this you need to enable the Resource Governor.  
   

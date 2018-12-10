@@ -15,7 +15,7 @@ manager: craigg
 # What&#39;s New in Integration Services in SQL Server 2017
 This topic describes the features that have been added or updated in [!INCLUDE[ssSQLv14_md](../includes/sssqlv14-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)].
 
->   [!NOTE]
+> [!NOTE]
 > SQL Server 2017 also includes the features of SQL Server 2016 and the features added in SQL Server 2016 updates. For info about the new SSIS features in SQL Server 2016, see [What's New in Integration Services in SQL Server 2016](../integration-services/what-s-new-in-integration-services-in-sql-server-2016.md).
 
 ## Highlights of this release

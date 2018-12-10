@@ -19,9 +19,9 @@ manager: craigg
 |[!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)]|[!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] is installed on top of the [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Database Engine, and includes three databases: DQS_MAIN, DQS_PROJECTS, and DQS_STAGING_DATA. DQS_MAIN contains DQS stored procedures, the DQS engine, and published knowledge bases. DQS_PROJECTS contains the data quality project information. DQS_STAGING_DATA is the staging area where you can copy your source data to perform DQS operations, and then export your processed data.|  
 |[!INCLUDE[ssDQSClient](../../includes/ssdqsclient-md.md)]|[!INCLUDE[ssDQSClient](../../includes/ssdqsclient-md.md)] is a standalone application that enables you to connect to [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)], and provides you with a highly-intuitive graphical user interface to perform data-quality operations, and other administrative tasks related to DQS.|  
   
-> [!IMPORTANT]  
+> [!IMPORTANT]
 >  Apart from the above two DQS components, you can also:  
->   
+> 
 >  -   Use the DQS Cleansing Transformation in Integration Services that performs data cleansing within the Integration Services packaging process, and is automatically installed when you install Integration Services. For information about installing Integration Services, see [Install Integration Services](../../integration-services/install-windows/install-integration-services.md).  
 > -   Enable DQS integration in Master Data Services to use the DQS matching functionality in the Master Data Services Add-in for Excel. For more information, see [Enable Data Quality Services Integration with Master Data Services](../../master-data-services/install-windows/enable-data-quality-services-integration-with-master-data-services.md).  
   
@@ -44,7 +44,7 @@ manager: craigg
 |[!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)]|Memory (RAM):<br />-Minimum: 2 GB<br />-Recommended: 4 GB or more<br /><br /> [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Database Engine. For more information, see [About the SQL Server Database Engine](../../database-engine/sql-server-database-engine-overview.md).|  
 |[!INCLUDE[ssDQSClient](../../includes/ssdqsclient-md.md)]|.NET Framework 4.0 (installed during the [!INCLUDE[ssDQSClient](../../includes/ssdqsclient-md.md)] installation, if not already installed)<br /><br /> Internet Explorer 6.0 SP1 or later|  
   
-> [!IMPORTANT]  
+> [!IMPORTANT]
 >  -   [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] and [!INCLUDE[ssDQSClient](../../includes/ssdqsclient-md.md)] can be installed on the same computer, or different computers. Both the components can be installed independently of each other, and in any sequence. However, to use [!INCLUDE[ssDQSClient](../../includes/ssdqsclient-md.md)], you will need a [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] installed to connect to.  
 > -   You can connect to the [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] version of [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] using either the current or earlier version of [!INCLUDE[ssDQSClient](../../includes/ssdqsclient-md.md)] and DQS Cleansing Transformation. For information about upgrading your existing version of DQS to [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], see [Upgrade Data Quality Services](../../database-engine/install-windows/upgrade-data-quality-services.md).  
 > -   Although Microsoft Excel is not a prerequisite for installing Data Quality Client, Microsoft Excel 2003 or later must be installed on the Data Quality Client computer to perform various operations in the client application such as importing domain values from an excel file or mapping to the source data in an Excel file for knowledge discovery, cleansing, or matching activities.  

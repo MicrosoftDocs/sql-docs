@@ -256,7 +256,7 @@ Specifies a disk file or tape device, or a Microsoft Azure Blob storage service.
 > [!IMPORTANT]  
 > Starting with [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 CU2 through [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], you can only backup to a single device when backing up to URL. In order to backup to multiple devices when backing up to URL, you must use [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] and you must use Shared Access Signature (SAS) tokens. For examples creating a Shared Access Signature, see [SQL Server Backup to URL](../../relational-databases/backup-restore/sql-server-backup-to-url.md) and [Simplifying creation of SQL Credentials with Shared Access Signature (SAS) tokens on Azure Storage with Powershell](https://blogs.msdn.com/b/sqlcat/archive/2015/03/21/simplifying-creation-sql-credentials-with-shared-access-signature-sas-keys-on-azure-storage-containers-with-powershell.aspx).  
   
-**URL applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 CU2 through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]).  
+**URL applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ( [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 CU2 through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]).  
   
 A disk device does not have to exist before it is specified in a BACKUP statement. If the physical device exists and the INIT option is not specified in the BACKUP statement, the backup is appended to the device.  
  
@@ -294,11 +294,11 @@ Is a placeholder that indicates that a single BACKUP statement can contain up to
 Specifies options to be used with a backup operation.  
   
 CREDENTIAL  
-**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 CU2 through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]).  
+**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ( [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 CU2 through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]).  
 Used only when creating a backup to the Microsoft Azure Blob storage service.  
   
 FILE_SNAPSHOT
-**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]).
+**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ( [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]).
 
 Used to create an Azure snapshot of the database files when all of the SQL Server database files are stored using the Azure Blob storage service. For more information, see [SQL Server Data Files in Microsoft Azure](../../relational-databases/databases/sql-server-data-files-in-microsoft-azure.md). [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Snapshot Backup takes Azure snapshots of the database files (data and log files) at a consistent state. A consistent set of Azure snapshots make up a backup and are recorded in the backup file. The only difference between `BACKUP DATABASE TO URL WITH FILE_SNAPSHOT` and `BACKUP LOG TO URL WITH FILE_SNAPSHOT` is that the latter also truncates the transaction log while the former does not. With [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Snapshot Backup, after the initial full backup that is required by [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to establish the backup chain, only a single transaction log backup is required to restore a database to the point in time of the transaction log backup. Furthermore, only two transaction log backups are required to restore a database to a point in time between the time of the two transaction log backups.  
     

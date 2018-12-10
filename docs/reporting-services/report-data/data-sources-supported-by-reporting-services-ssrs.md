@@ -125,7 +125,7 @@ ms.author: maghan
 ## Reporting Services Data Processing Extensions  
  The following data processing extensions are automatically installed with [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] and [!INCLUDE[ss_dtbi](../../includes/ss-dtbi-md.md)]. For more information and to verify the installation, see [RSReportDesigner Configuration File](../../reporting-services/report-server/rsreportdesigner-configuration-file.md) and [RsReportServer.config Configuration File](../../reporting-services/report-server/rsreportserver-config-configuration-file.md).  
   
-> [!NOTE]  
+> [!NOTE]
 >  The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] data processing extension is not supported at this time.  
   
  For more information about data processing extensions supported by Report Builder, see [Data Connections, Data Sources, and Connection Strings in Report Builder](https://msdn.microsoft.com/library/7e103637-4371-43d7-821c-d269c2cc1b34) in the [Report Builder documentation](https://go.microsoft.com/fwlink/?LinkId=154494) on msdn.microsoft.com.  

@@ -1,6 +1,7 @@
 ---
-title: "Join a Secondary Database to an Availability Group (SQL Server) | Microsoft Docs"
-ms.custom: ""
+title: "Join a secondary database to an availability group"
+description: "Steps to join a secondary database to an Always On availability group using either Transact-SQL (T-SQL), PowerShell, or SQL Server Management Studio."
+ms.custom: "seodec18"
 ms.date: "05/17/2016"
 ms.prod: sql
 ms.reviewer: ""
@@ -19,7 +20,7 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ---
-# Join a Secondary Database to an Availability Group (SQL Server)
+# Join a secondary database to an Always On availability group
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   This topic explains how to join a secondary database to an Always On availability group by using [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)], or PowerShell in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. After you prepare a secondary database for a secondary replica, you need to join the database to the availability group as soon as possible. This will start data movement from the corresponding primary database to the secondary database.  
   

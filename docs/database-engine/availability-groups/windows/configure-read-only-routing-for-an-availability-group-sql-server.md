@@ -1,6 +1,7 @@
 ---
-title: "Configure Read-Only Routing for an Availability Group (SQL Server) | Microsoft Docs"
-ms.custom: ""
+title: "Configure read-only routing for an availability group"
+description: "Automatically route all read-only traffic to a secondary replica using read-only routing for your Always On availability group - using Transact-SQL (T-SQL), or PowerShell."
+ms.custom: "seodec18"
 ms.date: "08/14/2017"
 ms.prod: sql
 ms.reviewer: ""
@@ -18,7 +19,7 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ---
-# Configure Read-Only Routing for an Availability Group (SQL Server)
+# Configure read-only routing for an Always On availability group
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   To configure an Always On availability group to support read-only routing in [!INCLUDE[ssnoversion](../../../includes/ssnoversion-md.md)], you can use either [!INCLUDE[tsql](../../../includes/tsql-md.md)] or PowerShell. *Read-only routing* refers to the ability of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] to route qualifying read-only connection requests to an available Always On [readable secondary replica](../../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md) (that is, a replica that is configured to allow read-only workloads when running under the secondary role). To support read-only routing, the availability group must possess an [availability group listener](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md). Read-only clients must direct their connection requests to this listener, and the client's connection strings must specify the application intent as "read-only." That is, they must be *read-intent connection requests*.  
 

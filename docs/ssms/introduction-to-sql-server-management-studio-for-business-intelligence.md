@@ -20,7 +20,7 @@ manager: craigg
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 To access, configure, manage, and administer [!INCLUDE[ssASnoversion](../includes/ssasnoversion_md.md)], [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)], and [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)], use [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]. Although all three business intelligence technologies rely on [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)], the administrative tasks associated with each of these technologies are slightly different.  
   
-> [!NOTE]  
+> [!NOTE]
 > To create and modify [!INCLUDE[ssASnoversion](../includes/ssasnoversion_md.md)], [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)], and [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] solutions, use [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull_md.md)], not [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]. [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull_md.md)] is a development environment that is based on [!INCLUDE[msCoName](../includes/msconame_md.md)][!INCLUDE[vsprvs](../includes/vsprvs-md.md)].  
   
 ## Managing Analysis Services Solutions Using SQL Server Management Studio  
@@ -36,7 +36,7 @@ For more information about how to use [!INCLUDE[ssManStudioFull](../includes/ssm
 ## Managing Reporting Services Projects Using SQL Server Management Studio  
 Use SQL Server Management Studio to enable Reporting Services features, administer the server and databases, and manage roles and jobs.  
   
-You manage shared schedules by using the Shared Schedules folder, and manage report server databases (ReportServer, ReportServerTempdb). You also create a RSExecRole in the Master system database when you move a report server database to a new or different SQL Server Database Engine ([!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../includes/ssde_md.md)]). For more information about these tasks, see the following topics:  
+You manage shared schedules by using the Shared Schedules folder, and manage report server databases (ReportServer, ReportServerTempdb). You also create a RSExecRole in the Master system database when you move a report server database to a new or different SQL Server Database Engine ( [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../includes/ssde_md.md)]). For more information about these tasks, see the following topics:  
   
 -   [Management Studio How-to Topics](https://msdn.microsoft.com/60685458-9108-47bf-820a-5e7db454d408)  
   

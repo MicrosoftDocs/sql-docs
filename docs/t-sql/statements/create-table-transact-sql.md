@@ -384,10 +384,10 @@ column_name <data_type>
   
  ON {*partition_scheme* | *filegroup* | **"**default**"**} can also be specified in a PRIMARY KEY or UNIQUE constraint. These constraints create indexes. If *filegroup* is specified, the index is stored in the named filegroup. If **"**default**"** is specified, or if ON is not specified at all, the index is stored in the same filegroup as the table. If the PRIMARY KEY or UNIQUE constraint creates a clustered index, the data pages for the table are stored in the same filegroup as the index. If CLUSTERED is specified or the constraint otherwise creates a clustered index, and a *partition_scheme* is specified that differs from the *partition_scheme* or *filegroup* of the table definition, or vice-versa, only the constraint definition will be honored, and the other will be ignored.  
   
-> [!NOTE]  
+> [!NOTE]
 >  In this context, default is not a keyword. It is an identifier for the default filegroup and must be delimited, as in ON **"**default**"** or ON **[**default**]**. If **"**default**"** is specified, the QUOTED_IDENTIFIER option must be ON for the current session. This is the default setting. For more information, see [SET QUOTED_IDENTIFIER &#40;Transact-SQL&#41;](../../t-sql/statements/set-quoted-identifier-transact-sql.md).  
-  
-> [!NOTE]  
+> 
+> [!NOTE]
 >  After you create a partitioned table, consider setting the LOCK_ESCALATION option for the table to AUTO. This can improve concurrency by enabling locks to escalate to partition (HoBT) level instead of the table. For more information, see [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md).  
   
  TEXTIMAGE_ON { *filegroup*| **"**default**"** }  
@@ -395,12 +395,12 @@ column_name <data_type>
   
  TEXTIMAGE_ON is not allowed if there are no large value columns in the table. TEXTIMAGE_ON cannot be specified if *partition_scheme* is specified. If **"**default**"** is specified, or if TEXTIMAGE_ON is not specified at all, the large value columns are stored in the default filegroup. The storage of any large value column data specified in CREATE TABLE cannot be subsequently altered.  
 
-> [!NOTE]  
+> [!NOTE]
 > Varchar(max), nvarchar(max), varbinary(max), xml and large UDT values are stored directly in the data row, up to a limit of 8000 bytes and as long as the value can fit the record. If the value does not fit in the record, a pointer is sorted in-row and the rest is stored out of row in the LOB storage space. 0 is the default value.
- TEXTIMAGE_ON only changes the location of the "LOB storage space", it does not affect when data is stored in-row. Use large value types out of row option of sp_tableoption to store the entire LOB value out of the row. 
-
-
-> [!NOTE]  
+>  TEXTIMAGE_ON only changes the location of the "LOB storage space", it does not affect when data is stored in-row. Use large value types out of row option of sp_tableoption to store the entire LOB value out of the row. 
+> 
+> 
+> [!NOTE]
 >  In this context, default is not a keyword. It is an identifier for the default filegroup and must be delimited, as in TEXTIMAGE_ON **"**default**"** or TEXTIMAGE_ON **[**default**]**. If **"**default**"** is specified, the QUOTED_IDENTIFIER option must be ON for the current session. This is the default setting. For more information, see [SET QUOTED_IDENTIFIER &#40;Transact-SQL&#41;](../../t-sql/statements/set-quoted-identifier-transact-sql.md).  
   
  FILESTREAM_ON { *partition_scheme_name* | filegroup | **"**default**"** } 

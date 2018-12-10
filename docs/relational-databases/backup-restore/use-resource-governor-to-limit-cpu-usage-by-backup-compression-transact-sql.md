@@ -256,7 +256,7 @@ GO
  [&#91;Top&#93;](#Top)  
   
 ##  <a name="creating_compressed_backup"></a> Compressing Backups Using a Session with Limited CPU  
- To create a compressed backup in a session with a limited maximum CPU, log in as the user specified in your classifier function. In your backup command, either specify WITH COMPRESSION ([!INCLUDE[tsql](../../includes/tsql-md.md)]) or select **Compress backup** ([!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]). To create a compressed database backup, see [Create a Full Database Backup &#40;SQL Server&#41;](../../relational-databases/backup-restore/create-a-full-database-backup-sql-server.md).  
+ To create a compressed backup in a session with a limited maximum CPU, log in as the user specified in your classifier function. In your backup command, either specify WITH COMPRESSION ( [!INCLUDE[tsql](../../includes/tsql-md.md)]) or select **Compress backup** ( [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]). To create a compressed database backup, see [Create a Full Database Backup &#40;SQL Server&#41;](../../relational-databases/backup-restore/create-a-full-database-backup-sql-server.md).  
   
 ### Example C: Creating a Compressed Backup (Transact-SQL)  
  The following [BACKUP](../../t-sql/statements/backup-transact-sql.md) example creates a compressed full backup of the [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] database in a newly formatted backup file, `Z:\SQLServerBackups\AdvWorksData.bak`.  

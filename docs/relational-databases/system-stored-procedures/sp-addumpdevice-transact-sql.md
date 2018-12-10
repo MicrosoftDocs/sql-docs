@@ -23,7 +23,7 @@ manager: craigg
 # sp_addumpdevice (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
   
-**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [current version](https://go.microsoft.com/fwlink/p/?LinkId=299658)).  
+**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ( [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [current version](https://go.microsoft.com/fwlink/p/?LinkId=299658)).  
 
 Adds a backup device to an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   

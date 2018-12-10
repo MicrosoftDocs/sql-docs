@@ -1,6 +1,7 @@
 ---
-title: "Manually Prepare a Secondary Database for an Availability Group (SQL Server) | Microsoft Docs"
-ms.custom: ""
+title: "Prepare a secondary database for an availability group"
+description: "A description for how to manually prepare a secondary database to join an Always On availability group."
+ms.custom: "seodec18"
 ms.date: "07/25/2017"
 ms.prod: sql
 ms.reviewer: ""
@@ -19,7 +20,7 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ---
-# Manually prepare a database for an Availability Group (SQL Server)
+# Prepare a secondary database for an Always On availability group
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 This topic describes how to prepare a database for an Always On availability group in [!INCLUDE[ssnoversion](../../../includes/ssnoversion-md.md)] by using [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)], or PowerShell. Preparing a database requires two steps: 
 

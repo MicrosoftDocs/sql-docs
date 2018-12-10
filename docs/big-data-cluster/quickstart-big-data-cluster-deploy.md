@@ -41,20 +41,6 @@ Once you have the AKS cluster deployed, you can execute the below kubectl comman
 kubectl config view
 ```
 
-## Install mssqlctl CLI management tool
-
-Run below command to install **mssqlctl** tool on your client machine. The command works from both a Windows and a Linux client, but make sure you are running it from a cmd window that runs with administrative privileges on Windows or prefix it with `sudo` on Linux:
-
-```
-pip3 install --extra-index-url https://private-repo.microsoft.com/python/ctp-2.1 mssqlctl  
-```
-
-> [!IMPORTANT]
-> If you installed a previous release, you must delete the cluster *before* upgrading **mssqlctl** and installing the new release. For more information, see [Upgrading to a new release](deployment-guidance.md#upgrade).
-
-> [!TIP]
-> If **mssqlctl** does not install correctly, review the prerequisite steps in the article [Install mssqlctl](deployment-guidance.md#mssqlctl).
-
 ## Define environment variables
 
 Setting the environment variables required for deploying big data cluster slightly differs depending on whether you are using Windows or Linux/macOS client.  Choose the steps below depending on which operating system you are using.

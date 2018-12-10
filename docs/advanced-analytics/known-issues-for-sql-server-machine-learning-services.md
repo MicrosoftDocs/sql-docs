@@ -314,13 +314,11 @@ Not all data types that are supported in SQL can be used in R. As a workaround, 
 
 For more information, see [R libraries and data types](r/r-libraries-and-data-types.md).
 
-### Possible string corruption
+### Possible string corruption using unicode strings in varchar columns
 
-Any round trip of string data from [!INCLUDE[tsql](../includes/tsql-md.md)] to R and then to [!INCLUDE[tsql](../includes/tsql-md.md)] again can result in corruption. This is due to the different encodings used in R and in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], as well as the various collations and languages that are supported in R and [!INCLUDE[tsql](../includes/tsql-md.md)]. Any string in a non-ASCII encoding can potentially be handled incorrectly.
+Passing unicode data in varchar columns from [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] to R/Python can result in string corruption. This is due to the encoding for these unicode string in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] collations   may not match with the default UTF-8 encoding used in R/Python. 
 
-When you send string data to R, convert it to an ASCII representation, if possible.
-
-This limitation applies to data passed between SQL Server and Python as well. Multibyte characters should be passed as UTF-8 and stored as Unicode.
+To send any non-ASCII string data from [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] to R/Python, use UTF-8 encoding (available in [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]) or use nvarchar type for the same.
 
 ### Only one value of type `raw` can be returned from `sp_execute_external_script`
 

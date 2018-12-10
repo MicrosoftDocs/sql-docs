@@ -1,5 +1,6 @@
 ---
-title: Active Directory authentication for SQL Server on Linux | Microsoft Docs
+title: Active Directory authentication for SQL Server on Linux
+titleSuffix: SQL Server
 description: This article provides an overview of Active Directory Authentication for SQL Server on Linux.
 author: rothja
 ms.date: 02/23/2018
@@ -7,8 +8,7 @@ ms.author: jroth
 manager: craigg
 ms.topic: conceptual
 ms.prod: sql
-
-ms.custom: "sql-linux"
+ms.custom: "sql-linux, seodec18"
 ms.technology: linux
 helpviewer_keywords: 
   - "Linux, AAD authentication"

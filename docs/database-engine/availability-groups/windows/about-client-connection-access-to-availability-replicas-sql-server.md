@@ -19,7 +19,7 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ---
-# Types of client connectionsb to replicas within an Always On availability group
+# Types of client connections to replicas within an Always On availability group
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   In an Always On availability group, you can configure one or more availability replicas to allow read-only connections when running under the secondary role (that is, when running as a secondary replica). You can also configure each availability replica to allow or exclude read-only connections when running under the primary role (that is, when running as the primary replica).  
   

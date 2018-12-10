@@ -42,7 +42,7 @@ manager: craigg
   
 -   [Configure the Flexible Failover Policy to Control Conditions for Automatic Failover &#40;Always On Availability Groups&#41;](../../../database-engine/availability-groups/windows/configure-flexible-automatic-failover-policy.md)  
   
- ## Manage an availability group**  
+ ## Manage an availability group  
   
 -   [Configure Backup on Availability Replicas &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/configure-backup-on-availability-replicas-sql-server.md)  
   
@@ -86,11 +86,11 @@ manager: craigg
   
 -   [Resume an Availability Database &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/resume-an-availability-database-sql-server.md)  
   
-## Monitor an availability group**
+## Monitor an availability group
   
 -   [Monitoring of Availability Groups &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/monitoring-of-availability-groups-sql-server.md)  
   
- ## Support migrating availability groups to a new WSFC cluster (cross-cluster migration)**
+ ## Support migrating availability groups to a new WSFC cluster (cross-cluster migration)
   
 -   [Change the HADR Cluster Context of Server Instance &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/change-the-hadr-cluster-context-of-server-instance-sql-server.md)  
   

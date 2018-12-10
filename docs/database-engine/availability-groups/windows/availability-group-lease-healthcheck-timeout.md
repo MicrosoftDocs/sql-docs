@@ -1,5 +1,5 @@
 ---
-title: "Mechanics of the the availability group lease health check timeout"
+title: "Mechanics of the availability group lease health check timeout"
 description: "Mechanics and guidelines for the lease, cluster, and health check times for Always On availability groups."
 ms.custom: "seodec18"
 ms.date: "05/02/2018"

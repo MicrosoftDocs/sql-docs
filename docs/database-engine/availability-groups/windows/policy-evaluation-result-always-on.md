@@ -1,6 +1,7 @@
 ---
-title: "Policy Evaluation Result (Always On) | Microsoft Docs"
-ms.custom: ""
+title: "Policy Evaluation Result Page (Always On Dashboard) | Microsoft Docs"
+description: "A description of the 'Policy Evaluation Result Page' found within the 'Always On Dashboard' in SQL Server Management Studio."
+ms.custom: "seodec18"
 ms.date: "05/17/2016"
 ms.prod: sql
 ms.reviewer: ""
@@ -14,7 +15,7 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ---
-# Policy Evaluation Result (Always On)
+# Policy Evaluation Result Page (Always On Dashboard)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   Use the **Policy Evaluation Result** page of the Always On Dashboard to view any current policy issues.  

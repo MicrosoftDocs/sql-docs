@@ -1,5 +1,6 @@
 ---
-title: Install SQL Server 2019 big data tools | Microsoft Docs
+title: Install big data toolkit
+titleSuffix: SQL Server 2019 big data clusters
 description: Discover how to install tools used with SQL Server 2019 big data clusters (preview).
 author: rothja 
 ms.author: jroth 
@@ -7,6 +8,7 @@ manager: craigg
 ms.date: 12/04/2018
 ms.topic: conceptual
 ms.prod: sql
+ms.custom: seodec18
 ---
 
 # Install SQL Server 2019 big data tools
@@ -17,7 +19,7 @@ This article describes the client tools that should be installed for creating, m
 
 ## Big data cluster tools
 
-The following table lists common big data cluster tools and how to intall them:
+The following table lists common big data cluster tools and how to install them:
 
 | Tool | Description | Installation |
 |---|---|---|

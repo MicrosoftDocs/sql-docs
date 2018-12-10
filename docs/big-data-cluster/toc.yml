@@ -78,6 +78,8 @@
       href: export-model-with-spark-mleap.md
   - name: Manage SQL Server big data cluster
     items:
+    - name: Connect to a big data cluster
+      href: connect-to-big-data-cluster.md
     - name: Cluster administration portal
       href: cluster-admin-portal.md
     - name: Kubernetes troubleshooting

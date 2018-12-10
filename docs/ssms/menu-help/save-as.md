@@ -27,8 +27,8 @@ Locate the existing project folder from this drop-down menu. Selecting a folder 
 **File name**  
 Use this option to view the current file name, change the file name, or filter the files and folders that are displayed. To filter the files and folders that are displayed, enter a full or partial file name on which to filter. You can use the asterisk (`*`) as a wildcard.  
   
-> [!TIP]  
-> To display files on Web and network locations, enter a URL or network path in the **File name** box. For example, "https://mywebsite" displays the files available at the "mywebsite" Web location and "\\\myserver\myshare" displays the files available at the "myshare" location on "myserver".  
+> [!TIP]
+> To display files on Web and network locations, enter a URL or network path in the **File name** box. For example, "<https://mywebsite>" displays the files available at the "mywebsite" Web location and "\\\myserver\myshare" displays the files available at the "myshare" location on "myserver".  
   
 **Save as type**  
 Use this option to select a new file type for the selected item. The file types displayed include all available file types to which the selected item can be converted.  

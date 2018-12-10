@@ -28,7 +28,7 @@ manager: craigg
  **Summary**  
  In ODBC 3*.x*, the ODBC 2.0 function **SQLFreeEnv** has been replaced by **SQLFreeHandle**. For more information, see [SQLFreeHandle](../../../odbc/reference/syntax/sqlfreehandle-function.md).  
   
-> [!NOTE]  
+> [!NOTE]
 >  For more information about what the Driver Manager maps this function to when an ODBC 2*.x* application is working with an ODBC 3*.x* driver, see [Mapping Deprecated Functions](../../../odbc/reference/appendixes/mapping-deprecated-functions.md) in Appendix G: Driver Guidelines for Backward Compatibility.  
   
 ## See Also  

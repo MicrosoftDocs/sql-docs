@@ -33,9 +33,9 @@ manager: craigg
 ```  
   
 SQLRETURN SQLExecDirect(  
-     SQLHSTMT     StatementHandle,  
-     SQLCHAR *    StatementText,  
-     SQLINTEGER   TextLength);  
+     SQLHSTMT     StatementHandle,  
+     SQLCHAR *    StatementText,  
+     SQLINTEGER   TextLength);  
 ```  
   
 ## Arguments  

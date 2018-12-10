@@ -13,7 +13,7 @@ manager: cgronlun
 # olapR (R library in SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-**olapR** is a Microsoft library of R functions used for generating and validating MDX queries against a SQL Server Analysis Services OLAP cube. Functions do not support all MDX operations, but you can build queries that slice, dice, drilldown, rollup, and pivot on dimensions. 
+**olapR** is a Microsoft library of R functions used for MDX queries against a SQL Server Analysis Services OLAP cube. Functions do not support all MDX operations, but you can build queries that slice, dice, drilldown, rollup, and pivot on dimensions. 
 
 This package is not preloaded into an R session. Run the following command to load the library.
 

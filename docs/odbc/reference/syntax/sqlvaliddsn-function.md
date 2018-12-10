@@ -33,7 +33,7 @@ manager: craigg
 ```  
   
 BOOL SQLValidDSN(  
-     LPCSTR    lpszDSN);  
+     LPCSTR    lpszDSN);  
 ```  
   
 ## Arguments  

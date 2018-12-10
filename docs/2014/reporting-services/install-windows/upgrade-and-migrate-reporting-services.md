@@ -51,9 +51,9 @@ manager: craigg
 ##  <a name="bkmk_known_issues"></a> Known Upgrade Issues and Best Practices  
  For a detailed list of the supported editions and versions you can upgrade, see [Supported Version and Edition Upgrades](../../database-engine/install-windows/supported-version-and-edition-upgrades.md).  
   
-> [!TIP]  
+> [!TIP]
 >  For the latest information regarding issues with [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], see the following:  
->   
+> 
 >  -   [SQL Server 2014 Release Notes](http://go.microsoft.com/fwlink/?LinkID=296445).  
 > -   [SQL Server 2014 Reporting Services Tips, Tricks, and Troubleshooting](http://go.microsoft.com/fwlink/?LinkID=391254).  
 > -   Use [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Upgrade Advisor. For more information, see [Reporting Services Upgrade Issues &#40;Upgrade Advisor&#41;](../../../2014/sql-server/install/reporting-services-upgrade-issues-upgrade-advisor.md) and [How to: Install Upgrade Advisor](../../../2014/sql-server/install/how-to-install-upgrade-advisor.md).  

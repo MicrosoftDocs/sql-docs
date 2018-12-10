@@ -99,16 +99,16 @@ manager: craigg
   
 -   **Re-assess vote assignments post-failover.** You do not want to fail over into a cluster configuration that does not support a healthy quorum.  
   
-> [!IMPORTANT]  
+> [!IMPORTANT]
 >  When validating WSFC quorum vote configuration, the Always On Availability Group Wizard shows a warning if any of the following conditions are true:  
->   
+> 
 >  -   The cluster node that hosts the primary replica does not have a vote  
 > -   A secondary replica is configured for automatic failover and its cluster node does not have a vote.  
 > -   [KB2494036](https://support.microsoft.com/kb/2494036) is not installed on all cluster nodes that host availability replicas. This patch is required to add or remove votes for cluster nodes in multi-site deployments. However, in single-site deployments, it is usually not required and you may safely ignore the warning.  
-  
-> [!TIP]  
+> 
+> [!TIP]
 >  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] exposes several system dynamic management views (DMVs) that can help you manage settings related WSFC cluster configuration and node quorum voting.  
->   
+> 
 >  For more information, see:  [sys.dm_hadr_cluster](../../../relational-databases/system-dynamic-management-views/sys-dm-hadr-cluster-transact-sql.md), [sys.dm_hadr_cluster_members](../../../relational-databases/system-dynamic-management-views/sys-dm-hadr-cluster-members-transact-sql.md), [sys.dm_os_cluster_nodes](../../../relational-databases/system-dynamic-management-views/sys-dm-os-cluster-nodes-transact-sql.md), [sys.dm_hadr_cluster_networks](../../../relational-databases/system-dynamic-management-views/sys-dm-hadr-cluster-networks-transact-sql.md)  
   
 ##  <a name="RelatedTasks"></a> Related Tasks  

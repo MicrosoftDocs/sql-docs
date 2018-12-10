@@ -1,6 +1,7 @@
 ---
-title: "Configure SQL Server Instance for Always On Availability Groups | Microsoft Docs"
-ms.custom: ""
+title: "Enable the availability group feature for a SQL Server instance"
+description: "Describes how to enable the Always On availability group feature for an instance of SQL Server."  
+ms.custom: "seodec18"
 ms.date: "05/17/2016"
 ms.prod: sql
 ms.reviewer: ""
@@ -14,7 +15,7 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ---
-# Configuration of a Server Instance for Always On Availability Groups (SQL Server)
+# Enable the Always On availability group feature for a SQL Server instance
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   This topic contains information about the requirements for configuring an instance of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] to support [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)].  

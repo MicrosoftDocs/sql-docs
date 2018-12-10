@@ -28,7 +28,7 @@ manager: craigg
  **Summary**  
  **SQLSetConnectAttr** sets attributes that govern aspects of connections.  
   
-> [!NOTE]  
+> [!NOTE]
 >  For more information about what the Driver Manager maps this function to when an ODBC 3*.x* application is working with an ODBC 2*.x* driver, see [Mapping Replacement Functions for Backward Compatibility of Applications](../../../odbc/reference/develop-app/mapping-replacement-functions-for-backward-compatibility-of-applications.md).  
   
 ## Syntax  
@@ -36,10 +36,10 @@ manager: craigg
 ```  
   
 SQLRETURN SQLSetConnectAttr(  
-     SQLHDBC       ConnectionHandle,  
-     SQLINTEGER    Attribute,  
-     SQLPOINTER    ValuePtr,  
-     SQLINTEGER    StringLength);  
+     SQLHDBC       ConnectionHandle,  
+     SQLINTEGER    Attribute,  
+     SQLPOINTER    ValuePtr,  
+     SQLINTEGER    StringLength);  
 ```  
   
 ## Arguments  
@@ -113,9 +113,9 @@ SQLRETURN SQLSetConnectAttr(
   
  The currently defined attributes and the version of ODBC in which they were introduced are shown in the table later in this section; it is expected that more attributes will be defined to take advantage of different data sources. A range of attributes is reserved by ODBC; driver developers must reserve values for their own driver-specific use from Open Group.  
   
-> [!NOTE]  
+> [!NOTE]
 >  The ability to set statement attributes at the connection level by calling **SQLSetConnectAttr** has been deprecated in ODBC 3*.x*. ODBC 3*.x* applications should never set statement attributes at the connection level. ODBC 3*.x* statement attributes cannot be set at the connection level, with the exception of the SQL_ATTR_METADATA_ID and SQL_ATTR_ASYNC_ENABLE attributes, which are both connection attributes and statement attributes and can be set at either the connection level or the statement level.  
->   
+> 
 >  ODBC 3*.x* drivers need only support this functionality if they should work with ODBC 2*.x* applications that set ODBC 2*.x* statement options at the connection level. For more information, see [SQLSetConnectOption Mapping](../../../odbc/reference/appendixes/sqlsetconnectoption-mapping.md) in Appendix G: Driver Guidelines for Backward Compatibility.  
   
  An application can call **SQLSetConnectAttr** at any time between the time the connection is allocated and freed. All connection and statement attributes successfully set by the application for the connection persist until **SQLFreeHandle** is called on the connection. For example, if an application calls **SQLSetConnectAttr** before connecting to a data source, the attribute persists even if **SQLSetConnectAttr** fails in the driver when the application connects to the data source; if an application sets a driver-specific attribute, the attribute persists even if the application connects to a different driver on the connection.  

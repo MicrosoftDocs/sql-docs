@@ -44,7 +44,7 @@ ALTER DATABASE SCOPED CREDENTIAL credential_name WITH IDENTITY = 'identity_name'
   
  SECRET **='***secret***'**  
  Specifies the secret required for outgoing authentication. *secret* is required to import a file from Azure Blob storage. *secret* may be optional for other purposes.   
->  [!WARNING]
+> [!WARNING]
 >  The SAS key value might begin with a '?' (question mark). When you use the SAS key, you must remove the leading '?'. Otherwise your efforts might be blocked.    
   
 ## Remarks  

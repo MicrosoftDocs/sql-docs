@@ -33,9 +33,9 @@ manager: craigg
 ```  
   
 SQLRETURN SQLSetCursorName(  
-     SQLHSTMT      StatementHandle,  
-     SQLCHAR *     CursorName,  
-     SQLSMALLINT   NameLength);  
+     SQLHSTMT      StatementHandle,  
+     SQLCHAR *     CursorName,  
+     SQLSMALLINT   NameLength);  
 ```  
   
 ## Arguments  

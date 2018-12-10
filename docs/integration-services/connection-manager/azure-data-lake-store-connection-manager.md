@@ -23,7 +23,7 @@ A SQL Server Integration Services (SSIS) package can use the Azure Data Lake Sto
 
 The Azure Data Lake Store Connection Manager is a component of the [SQL Server Integration Services (SSIS) Feature Pack for Azure](../../integration-services/azure-feature-pack-for-integration-services-ssis.md).
 
->   [!NOTE]
+> [!NOTE]
 > To ensure that the Azure Data Lake Store Connection Manager and the components that use it - that is, the Data Lake Storage Gen1 source and the Data Lake Storage Gen1 destination - can connect to services, make sure you download the latest version of the Azure Feature Pack [here](https://www.microsoft.com/download/details.aspx?id=49492). 
  
 ## Configure the Azure Data Lake Store Connection Manager

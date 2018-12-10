@@ -138,7 +138,7 @@ manager: craigg
   
 -   /INSTANCEDIR="c:\Path" is supported  
   
-> [!NOTE]  
+> [!NOTE]
 >  -   The relational server values support the additional terminating backslash formats (backslash or two backslash characters) for the path.  
 > -   /PID, the value for this parameter should be enclosed in double quotation marks.  
   

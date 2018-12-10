@@ -61,11 +61,11 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   
  This sample connects to your computer's default [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] instance. To connect to a named instance, change the definition of the ODBC data source to specify the instance using the following format: server\namedinstance. By default, [!INCLUDE[ssExpress](../../../includes/ssexpress-md.md)] installs to a named instance.  
   
- Execute the first ([!INCLUDE[tsql](../../../includes/tsql-md.md)]) code listing to create tables that the sample will use.  
+ Execute the first ( [!INCLUDE[tsql](../../../includes/tsql-md.md)]) code listing to create tables that the sample will use.  
   
  Compile the second (C++) code listing with odbc32.lib and odbcbcp.lib. If you built with MSBuild.exe, copy Bcpfmt.fmt and Bcpodbc.bcp from the project directory into the directory with the .exe and then invoke the .exe.  
   
- Execute the third ([!INCLUDE[tsql](../../../includes/tsql-md.md)]) code listing to delete the tables that the sample used.  
+ Execute the third ( [!INCLUDE[tsql](../../../includes/tsql-md.md)]) code listing to delete the tables that the sample used.  
   
 ```  
 // compile with: odbc32.lib odbcbcp.lib  

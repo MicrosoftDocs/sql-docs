@@ -159,7 +159,7 @@ sp_changearticle [ [@publication= ] 'publication' ]
  See the Remarks section for the properties that, when changed, require that all existing subscriptions be reinitialized.  
   
  [ **@publisher**= ] **'***publisher***'**  
- Specifies a non-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Publisher. *publisher* is **sysname**, with a default of NULL.  
+ Specifies a non- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Publisher. *publisher* is **sysname**, with a default of NULL.  
   
 > [!NOTE]  
 >  *publisher* should not be used when changing article properties on a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Publisher.  
@@ -229,8 +229,8 @@ sp_changearticle [ [@publication= ] 'publication' ]
 |**func schema only**|**0x01**, **0x20**, **0x2000**, **0x400000**, **0x800000**, **0x2000000**, **0x8000000**, **0x10000000**, **0x20000000**, **0x40000000**, and **0x80000000**|**0x01**, **0x20**, **0x2000**, **0x400000**, **0x800000**, **0x2000000**, **0x8000000**, **0x10000000**, **0x20000000**, **0x40000000**, and **0x80000000**|  
 |**indexed view schema only**|**0x01**, **0x010**, **0x020**, **0x040**, **0x0100**, **0x2000**, **0x40000**, **0x100000**, **0x200000**, **0x400000**, **0x800000**, **0x2000000**, **0x8000000**, **0x40000000**, and **0x80000000**|**0x01**, **0x010**, **0x020**, **0x040**, **0x0100**, **0x2000**, **0x40000**, **0x100000**, **0x200000**, **0x400000**, **0x800000**, **0x2000000**, **0x8000000**, **0x40000000**, and **0x80000000**|  
   
-> [!NOTE]  
->  For queued updating publications, the *schema_option* value of **0x80** must be enabled. The supported *schema_option* values for non-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] publications are: **0x01**, **0x02**, **0x10**, **0x40**, **0x80**, **0x1000** and **0x4000**.  
+> [!NOTE]
+>  For queued updating publications, the *schema_option* value of **0x80** must be enabled. The supported *schema_option* values for non- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] publications are: **0x01**, **0x02**, **0x10**, **0x40**, **0x80**, **0x1000** and **0x4000**.  
   
 ## Example  
  [!code-sql[HowTo#sp_changetranarticle](../../relational-databases/replication/codesnippet/tsql/sp-changearticle-transac_1.sql)]  

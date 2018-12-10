@@ -201,9 +201,9 @@
         href: r/packages-installed-in-user-libraries.md
   - name: Data exploration and modeling
     items:
-    - name: R libraries and data types
+    - name: R-to-SQL data type conversions 
       href: r/r-libraries-and-data-types.md
-    - name: Python libraries and data types
+    - name: Python-to-SQL data type conversions 
       href: python/python-libraries-and-data-types.md
     - name: Predictive modeling with R
       href: r/data-exploration-and-predictive-modeling-with-r.md

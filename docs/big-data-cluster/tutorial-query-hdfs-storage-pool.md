@@ -36,7 +36,7 @@ In this tutorial, you learn how to:
 
 The storage pool contains web clickstream data in a CSV file stored in HDFS. Use the following steps to define an external table that can access the data in that file.
 
-1. In Azure Data Studio, connect to the SQL Server master instance of your big data cluster. For more information, see [Connect to the SQL Server master instance](deploy-big-data-tools.md#master).
+1. In Azure Data Studio, connect to the SQL Server master instance of your big data cluster. For more information, see [Connect to the SQL Server master instance](connect-to-big-data-cluster.md#master).
 
 2. Double-click on the connection in the **Servers** window to show the server dashboard for the SQL Server master instance. Select **New Query**.
 

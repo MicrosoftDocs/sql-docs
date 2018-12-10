@@ -26,7 +26,7 @@ You must have a SQL Server 2019 big data cluster configured. For more informatio
 The **mssqlctl-pre** command-line utility is provided to preview the Python and R application deployment feature. Use the following command to install the utility:
 
 ```cmd
-pip3 install --extra-index-url https://private-repo.microsoft.com/python/ctp-2.1 mssqlctlpre
+pip3 install --extra-index-url https://private-repo.microsoft.com/python/ctp-2.1 mssqlctl-cli
 ```
 
 ## Capabilities

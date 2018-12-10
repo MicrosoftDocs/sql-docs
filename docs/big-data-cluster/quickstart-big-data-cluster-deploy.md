@@ -27,9 +27,11 @@ If you would prefer to run a script to create your AKS cluster and install a big
 
 This quickstart requires that you have already configured an AKS cluster with a minimum version of v1.10. For more information, see the [deploy on AKS](deploy-on-aks.md) guide.
 
-On the computer you are using to run the commands to install the SQL Server big data cluster, install [kubectl](https://kubernetes.io/docs/tasks/tools/install-kubectl/). SQL Server big data cluster requires a minimum 1.10 version for Kubernetes, for both server and client (kubectl). To install kubectl, see [Install kubectl](https://kubernetes.io/docs/tasks/tools/install-kubectl/#install-kubectl). 
-
-To install the **mssqlctl** CLI tool to manage the SQL Server big data cluster on your client machine, you must first install [Python](https://www.python.org/downloads/) minimum version v3.0 and [pip3](https://pip.pypa.io/en/stable/installing/). `pip` is already installed if you are using a Python version of at least 3.4 downloaded from [python.org](https://www.python.org/).
+- [SQL Server 2019 big data tools](deploy-big-data-tools.md):
+   - **Azure Data Studio**
+   - **SQL Server 2019 extension**
+   - **kubectl**
+   - **mssqlctl**
 
 ## Verify AKS configuration
 

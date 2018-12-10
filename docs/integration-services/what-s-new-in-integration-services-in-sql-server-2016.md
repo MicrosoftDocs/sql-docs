@@ -174,7 +174,7 @@ The Incremental Package Deployment feature lets you deploy one or more packages 
   
 -   The Management Object Model (MOM) API  
   
- For more info, see [Deploy Integration Services (SSIS) Projects and Packages](../integration-services/packages/deploy-integration-services-ssis-projects-and-packages.md.  
+ For more info, see [Deploy Integration Services (SSIS) Projects and Packages](../integration-services/packages/deploy-integration-services-ssis-projects-and-packages.md).  
 
 ####  <a name="encrypted"></a> Support for Always Encrypted in the SSIS Catalog  
  SSIS already supports the Always Encrypted feature in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. For more info, see the following blog posts.  

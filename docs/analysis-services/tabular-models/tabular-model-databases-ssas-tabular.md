@@ -1,5 +1,5 @@
 ---
-title: "Tabular Model Databases | Microsoft Docs"
+title: "Analysis Services tabular model databases | Microsoft Docs"
 ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -29,8 +29,6 @@ manager: kfile
     
 ## See also  
  [Tabular Model Solutions](../../analysis-services/tabular-models/tabular-models-ssas.md)  
-  
- [Tabular Model Data Access](../../analysis-services/tabular-models/tabular-model-data-access.md)  
 
 [Move an Analysis Services Database](../../analysis-services/multidimensional-models/move-an-analysis-services-database.md)  
   

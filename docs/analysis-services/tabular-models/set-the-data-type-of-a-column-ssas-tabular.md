@@ -1,5 +1,5 @@
 ---
-title: "Set the Data Type of a Column | Microsoft Docs"
+title: "Column data type in an Analysis Services tabular model | Microsoft Docs"
 ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services

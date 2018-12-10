@@ -1,13 +1,14 @@
 ---
-title: Configure a SQL Server Availability Group for read-scale on Linux | Microsoft Docs
-description: 
+title: Configure a SQL Server Availability Group for read-scale on Linux
+titleSuffix: SQL Server
+description: Learn about configuring a SQL Server Always On Availability Group (AG) for read-scale workloads on Linux.
 author: MikeRayMSFT 
 ms.author: mikeray 
 manager: craigg
 ms.date: 02/14/2018
 ms.topic: conceptual
 ms.prod: sql
-ms.custom: "sql-linux"
+ms.custom: "sql-linux, seodec18"
 ms.technology: linux
 ms.assetid: 
 ---

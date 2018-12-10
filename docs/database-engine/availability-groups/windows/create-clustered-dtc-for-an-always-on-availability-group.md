@@ -1,6 +1,7 @@
 ---
-title: "Create Clustered DTC for an Always On Availability Group | Microsoft Docs"
-ms.custom: ""
+title: "Create Clustered DTC resource for an availability group"
+description: "This topic walks you through a complete configuration of a clustered DTC resource for a SQL Server Always On Availability Group."
+ms.custom: "seodec18"
 ms.date: "08/30/2016"
 ms.prod: sql
 ms.reviewer: ""
@@ -12,7 +13,7 @@ ms.author: mathoma
 manager: craigg
 monikerRange: ">=sql-server-2016||=sqlallproducts-allversions"
 ---
-# Create Clustered DTC for an Always On Availability Group
+# Create Clustered DTC resource for an Always On availability group
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 

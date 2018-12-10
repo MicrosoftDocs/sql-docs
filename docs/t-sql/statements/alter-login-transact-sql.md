@@ -1,7 +1,7 @@
 ---
 title: "ALTER LOGIN (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2018"
+ms.date: "12/06/2018"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
@@ -27,27 +27,8 @@ manager: craigg
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # ALTER LOGIN (Transact-SQL)
-::: moniker range=">=sql-server-2016||>=sql-server-linux-2017||=sqlallproducts-allversions"
-[!INCLUDE [tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
-::: moniker-end
 
-::: moniker range="=azuresqldb-current||=sqlallproducts-allversions"
-[!INCLUDE [tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
-::: moniker-end
-
-::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
-[!INCLUDE [tsql-appliesto-xxxxxx-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdbmi-xxxx-xxx-md.md)]
-::: moniker-end
-
-::: moniker range="=azure-sqldw-latest||=sqlallproducts-allversions"
-[!INCLUDE [tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md.md)]
-::: moniker-end
-
-::: moniker range=">=aps-pdw-2016||=sqlallproducts-allversions"
-[!INCLUDE [tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]
-::: moniker-end
-
-  Changes the properties of a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] login account.  
+Changes the properties of a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] login account.  
   
  ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
  

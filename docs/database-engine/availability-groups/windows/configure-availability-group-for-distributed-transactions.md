@@ -1,6 +1,7 @@
 ---
-title: "Configure availability group for distributed transactions | Microsoft Docs"
-ms.custom: ""
+title: "Configure distributed transactions for an availability group"
+description: "Describes how to configure distributed transactions for databases within an Always On availability group. "
+ms.custom: "seodec18"
 ms.date: "05/22/2018"
 ms.prod: sql
 ms.reviewer: ""
@@ -17,7 +18,7 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ---
-# Configure availability group for distributed transactions
+# Configure distributed transactions for an Always On availability group
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 [!INCLUDE[SQL2017](../../../includes/sssqlv14-md.md)] supports all distributed transactions including databases in an availability group. This article explains how to configure an availability group for distributed transactions  

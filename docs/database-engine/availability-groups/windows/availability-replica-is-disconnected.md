@@ -1,6 +1,7 @@
 ---
-title: "Availability replica is disconnected | Microsoft Docs"
-ms.custom: ""
+title: "Availability replica is disconnected in an availability group"
+description: "Identify possible causes for why a replica is disconnected within an Always On availability group."
+ms.custom: "seodec18"
 ms.date: "05/17/2016"
 ms.prod: sql
 ms.reviewer: ""
@@ -15,7 +16,7 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ---
-# Availability replica is disconnected
+# Availability replica is disconnected within an Always On availability group
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
     
 ## Introduction  

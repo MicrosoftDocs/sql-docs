@@ -1,5 +1,5 @@
 ---
-title: "Add sample data to a DirectQuery model in Design Mode | Microsoft Docs"
+title: "Add sample data to an Analysis Services DirectQuery model in design mode | Microsoft Docs"
 ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services

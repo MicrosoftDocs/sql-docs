@@ -166,7 +166,7 @@ Schema rowsets are described in two SQL Server Analysis Services protocols:
 |[DISCOVER_STORAGE_TABLE_COLUMN_SEGMENTS](https://msdn.microsoft.com/library/ee320710)|Returns information about the column segments used for storing data for in-memory tables.|  
 |[DISCOVER_STORAGE_TABLE_COLUMNS](https://msdn.microsoft.com/library/ee302101)|Contains information about the columns used for representing the columns of an in-memory table.|  
 |[DISCOVER_STORAGE_TABLES](https://msdn.microsoft.com/library/ee302014)|Returns statistics about in-memory tables available to the server.|  
-|[DISCOVER_TRACE_COLUMNS]()||  
+|[DISCOVER_TRACE_COLUMNS](https://msdn.microsoft.com/library/ee301342)||  
 |[DISCOVER_TRACE_DEFINITION_PROVIDERINFO](https://msdn.microsoft.com/library/ee301342)|Contains the DISCOVER_TRACE_COLUMNS schema rowset.|  
 |[DISCOVER_TRACE_EVENT_CATEGORIES](https://msdn.microsoft.com/library/ee320442)|Contains the DISCOVER_TRACE_EVENT_CATEGORIES schema rowset.|  
 |[DISCOVER_TRACES](https://msdn.microsoft.com/library/ee301643)|Contains the DISCOVER_TRACES schema rowset.|  

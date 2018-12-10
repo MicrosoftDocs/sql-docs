@@ -205,18 +205,20 @@
       href: r/r-libraries-and-data-types.md
     - name: Python-to-SQL data type conversions 
       href: python/python-libraries-and-data-types.md
-    - name: Predictive modeling with R
-      href: r/data-exploration-and-predictive-modeling-with-r.md
     - name: Load R objects using ODBC
       href: r/save-and-load-r-objects-from-sql-server-using-odbc.md
-    - name: Converting R code for use in Machine Learning Services
-      href: r/converting-r-code-for-use-in-sql-server.md
-    - name: Creating multiple models using rxExecBy
-      href: r/creating-multiple-models-using-rxexecby.md
     - name: Use data from OLAP cubes in R
       href: r/using-data-from-olap-cubes-in-r.md
     - name: How to create MDX queries using olapR
       href: r/how-to-create-mdx-queries-using-olapr.md
+    - name: Predictive modeling with R
+      href: r/data-exploration-and-predictive-modeling-with-r.md
+    - name: Create multiple models using rxExecBy
+      href: r/creating-multiple-models-using-rxexecby.md
+  - name: Deploy
+    items: 
+    - name: Convert R code for SQL Server
+      href: r/converting-r-code-for-use-in-sql-server.md
     - name: Create a stored procedure using sqlrutils
       href: r/how-to-create-a-stored-procedure-using-sqlrutils.md
   - name: Predictions
@@ -274,19 +276,19 @@
   items:
   - name: R packages
     items:
-    - name: olapR (SQL)
+    - name: olapR
       href: r/ref-r-olapr.md
-    - name: MicrosoftML (SQL)
+    - name: MicrosoftML
       href: r/ref-r-microsoftml.md
-    - name: RevoScaleR (SQL)
+    - name: RevoScaleR
       href: r/ref-r-revoscaler.md
-    - name: sqlrutils (SQL)
+    - name: sqlrutils
       href: r/ref-r-sqlrutils.md
   - name: Python packages
     items:
-    - name: microsoftml (SQL)
+    - name: microsoftml
       href: python/ref-py-microsoftml.md
-    - name: revoscalepy (SQL)
+    - name: revoscalepy
       href: python/ref-py-revoscalepy.md
 - name: Resources
   items:

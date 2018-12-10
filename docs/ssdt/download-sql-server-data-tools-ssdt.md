@@ -104,7 +104,8 @@ After completing the previous steps, the following can be done while offline:
 
 For available options, run `SSDT-Setup-ENU.exe /help`
 
-Note: If using a full version of Visual Studio 2017 rather than the shell (e.g. created above using `vs_setup.exe --NoWeb`) , create an offline folder for SSDT only (don't add SSDT to another Visual Studio 2017 offline layout).  The SSDT-Setup-ENU.exe is then be run from the layout folders created in the SSDT only layout.  (If you add the SSDT layout to an existing Visual Studio offline layout the necessary runtime (.exe) components are not created there):  This means that you will have a offline layout folder for Visual Studio 2017 e.g. C:\VS2017Layout and one for SSDT offline layout e.g. C:\SSDTLayout.
+> [!NOTE]
+> If using a full version of Visual Studio 2017, create an offline folder for SSDT only, and run `SSDT-Setup-ENU.exe` from this newly created folder (don't add SSDT to another Visual Studio 2017 offline layout). If you add the SSDT layout to an existing Visual Studio offline layout the necessary runtime (.exe) components are not created there.
 
 ## Supported SQL versions
   

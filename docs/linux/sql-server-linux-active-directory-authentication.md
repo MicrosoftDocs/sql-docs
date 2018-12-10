@@ -125,7 +125,7 @@ Use the following steps to join a [!INCLUDE[ssNoVersion](../includes/ssnoversion
 
 1. Join the domain
 
-   Once you've confirmed that your DNS is configured properly, before joinging the domain you'll want to insure that you're Linux server is synched with a domain controller on the network. The simplest way to do this is to run the following:
+   Once you've confirmed that your DNS is configured properly, before joining the domain you'll want to insure that you're Linux server is synched with a domain controller on the network. The simplest way to do this is to run the following:
       
    ```ntpdate 1.2.3.4```
    Where 1.2.3.4 is the IP of your domain controller. You should also set that to run every 10 minutes to keep the clocks synchronized using the following command:

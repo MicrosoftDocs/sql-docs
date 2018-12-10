@@ -81,7 +81,7 @@ The next step is to create a Spark streaming job that loads web clickstream data
 1. In the **Arguments** field, enter the following text, specifying the password to the SQL Server master instance in the `<your_password>` placeholder. 
 
    ```text
-   mssql-master-pool-0.service-master-pool 1433 sa <your_password> sales web_clickstreams_spark_results hdfs:///clickstream_data csv false
+   --server mssql-master-pool-0.service-master-pool --port 1433 --user sa --password <your_password> --database sales --table web_clickstreams_spark_results --source_dir hdfs:///clickstream_data --input_format csv --enable_checkpoint false --timeout 380000
    ```
 
    The following table describes each argument:
@@ -97,6 +97,7 @@ The next step is to create a Spark streaming job that loads web clickstream data
    | Source directory for streaming | This must be a full URI, such as "hdfs:///clickstream_data" |
    | input format | This can be "csv", "parquet", or "json" |
    | enable checkpoint | true or false |
+   | timeout | time to run the job for in milliseconds before exiting |
 
 1. Press **Submit** to submit the job.
 

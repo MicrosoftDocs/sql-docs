@@ -36,11 +36,11 @@ manager: craigg
   
 ###  <a name="Code_Example"></a> PowerShell script example  
   
-> [!IMPORTANT]  
+> [!IMPORTANT]
 >  If you are running PowerShell 2.0, you may have problems loading the Microsoft WindowsAzure.Storage.dll assembly. We recommend that you upgrade [Powershell](https://docs.microsoft.com/powershell/) to solve the issue. You may also use the following workaround for PowerShell 2.0:  
->   
+> 
 >  -   Create or modify the powershell.exe.config file to load .NET 2.0 and .NET 4.0 assemblies at runtime with the following:  
->   
+> 
 >     ```  
 >     \<?xml version="1.0"?>   
 >     <configuration>   
@@ -49,7 +49,7 @@ manager: craigg
 >             <supportedRuntime version="v2.0.50727"/>   
 >         </startup>   
 >     </configuration>  
->   
+> 
 >     ```  
   
  The following example script identifies blobs with active leases and then breaks them. The example also demonstrates how filter for release lease IDs.  

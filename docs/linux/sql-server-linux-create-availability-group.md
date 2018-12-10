@@ -66,7 +66,7 @@ sudo systemctl restart mssql-server
 
 An availability group uses TCP endpoints for communication. Under Linux, endpoints for an AG are only supported if certificates are used for authentication. This means that the certificate from one instance must be restored on all other instances that will be replicas participating in the same AG. The certificate process is required even for a configuration-only replica. 
 
-Creating endpoints and restoring certificates can only be done via Transact-SQL. You can use non-[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]-generated certificates as well. You will also need a process to manage and replace any certificates that expire.
+Creating endpoints and restoring certificates can only be done via Transact-SQL. You can use non- [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]-generated certificates as well. You will also need a process to manage and replace any certificates that expire.
 
 > [!IMPORTANT]
 > If you plan to use the [!INCLUDE[ssmanstudiofull-md](../includes/ssmanstudiofull-md.md)] wizard to create the AG, you still need to create and restore the certificates by using Transact-SQL on Linux.

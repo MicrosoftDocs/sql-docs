@@ -1,6 +1,7 @@
 ---
-title: "Always On Availability Groups extended events (SQL Server) | Microsoft Docs"
-ms.custom: "ag-guide"
+title: "Configure extended events for availability groups"
+description: "SQL Server defines extended events that are specific to Always On availability groups. You can monitor these extended events in a session to help with root-cause diagnosis when you troubleshoot an availability group."
+ms.custom: "ag-guide, seodec18"
 ms.date: "06/13/2017"
 ms.prod: sql
 ms.reviewer: ""
@@ -11,9 +12,9 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ---
-# Always On Availability Groups extended events
+# Configure extended events for Always On availability groups
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  SQL Server defines extended events that are specific to Always On Availability Groups. You can monitor these extended events in a session to help with root-cause diagnosis when you troubleshoot an availability group. You can view the availability group extended events using the following query:  
+  SQL Server defines extended events that are specific to Always On availability groups. You can monitor these extended events in a session to help with root-cause diagnosis when you troubleshoot an availability group. You can view the availability group extended events using the following query:  
   
 ```sql  
 SELECT * FROM sys.dm_xe_objects WHERE name LIKE '%hadr%'  

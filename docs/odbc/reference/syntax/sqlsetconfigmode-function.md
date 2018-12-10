@@ -33,7 +33,7 @@ manager: craigg
 ```  
   
 BOOL SQLSetConfigMode(  
-     UWORD     wConfigMode);  
+     UWORD     wConfigMode);  
 ```  
   
 ## Arguments  

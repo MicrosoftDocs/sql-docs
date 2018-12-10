@@ -121,7 +121,7 @@ When you select a feature in the funnel chart, the data at the bottom lists the 
 
 ![Always on Availability Group feature](../dma/media/Feature_AlwaysOnAvailability.png)
 
- 
+ 
 ### Azure SQL DB unsupported features report
 
 ![Azure SQL DB unsupported features report](../dma/media/AzureSQLDBUnsupportedFeaturesReport.png)

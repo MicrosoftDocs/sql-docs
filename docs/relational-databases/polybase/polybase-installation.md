@@ -36,12 +36,12 @@ To install a trial version of SQL Server, go to [SQL Server evaluations](https:/
 
 - MSVC++ 2012. 
 
-> [!NOTE]  
-
+> [!NOTE]
+> 
 > PolyBase can be installed on only one SQL Server instance per machine.
-
+> 
 > [!IMPORTANT]
->
+> 
 > To use the computation pushdown functionality against Hadoop, the target Hadoop cluster must have the core components of HDFS, YARN and MapReduce, with the job history server enabled. PolyBase submits the pushdown query via MapReduce and pulls status from the job history server. Without either component, the query fails.
   
 ## Single node or PolyBase scale-out group

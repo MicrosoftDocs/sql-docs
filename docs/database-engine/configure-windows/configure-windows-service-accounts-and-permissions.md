@@ -154,7 +154,7 @@ The following table lists the default service accounts used by setup when instal
 
 ####  <a name="Changing_Accounts"></a> Changing Account Properties
   
-> [!IMPORTANT]  
+> [!IMPORTANT]
 >  -   Always use [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tools such as [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager to change the account used by the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] or [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent services, or to change the password for the account. In addition to changing the account name, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager performs additional configuration such as updating the Windows local security store which protects the service master key for the [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Other tools such as the Windows Services Control Manager can change the account name but do not change all the required settings.  
 > -   For [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] instances that you deploy in a SharePoint farm, always use SharePoint Central Administration to change the server accounts for [!INCLUDE[ssGeminiMTS](../../includes/ssgeminimts-md.md)] applications and the [!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)]. Associated settings and permissions are updated to use the new account information when you use Central Administration.  
 > -   To change [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] options, use the Reporting Services Configuration Tool.  

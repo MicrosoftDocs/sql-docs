@@ -22,7 +22,7 @@ manager: craigg
 
   Adds a column to an existing table article that has been published. Allows the new column to be added to all publishers that publish this table, or just add the column to a specific publication that publishes the table. This stored procedure is executed at the Publisher on the publication database.  
   
-> [!IMPORTANT]  
+> [!IMPORTANT]
 >  This stored procedure has been deprecated and is being supported for backward-compatibility. It should only be used with [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] Publishers and [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] republishing Subscribers. This procedure should not be used on columns with data types that were introduced in [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] or higher.  
   
  ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  

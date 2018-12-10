@@ -28,7 +28,7 @@ This article describes how to install the **mssqlctl** tool on Windows or Linux.
 1. Install **mssqlctl** with the following command:
 
    ```bash
-   pip3 install --extra-index-url https://private-repo.microsoft.com/python/ctp-2.1 mssqlctl
+   pip3 install --extra-index-url https://private-repo.microsoft.com/python/ctp-2.2 mssqlctl
    ```
 
 ## <a id="linux"></a> Linux mssqlctl installation

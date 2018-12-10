@@ -838,7 +838,7 @@
         },
         {
             "source_path": "docs/advanced-analytics/r/operationalization-with-mrsdeploy.md",
-            "redirect_url": "/sql/advanced-analytics/operationalization-with-mrsdeploy",
+            "redirect_url": "/sql/advanced-analytics/r/converting-r-code-for-use-in-sql-server",
             "redirect_document_id": false
         },
         {
@@ -894,6 +894,11 @@
         {
             "source_path": "docs/advanced-analytics/r-services/differences-in-r-features-between-editions-of-sql-server.md",
             "redirect_url": "/sql/advanced-analytics/r/differences-in-r-features-between-editions-of-sql-server",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/advanced-analytics/operationalization-with-mrsdeploy.md",
+            "redirect_url": "/sql/advanced-analytics/r/converting-r-code-for-use-in-sql-server",
             "redirect_document_id": false
         },
         {

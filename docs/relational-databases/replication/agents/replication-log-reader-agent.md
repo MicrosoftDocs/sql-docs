@@ -126,8 +126,8 @@ logread [-?]
  **-MaxCmdsInTran** *number_of_commands*  
  Specifies the maximum number of statements grouped into a transaction as the Log Reader writes commands to the distribution database. Using this parameter allows the Log Reader Agent and Distribution Agent to divide large transactions (consisting of many commands) at the Publisher into several smaller transactions when applied at the Subscriber. Specifying this parameter can reduce contention at the Distributor and reduce latency between the Publisher and Subscriber. Because the original transaction is applied in smaller units, the Subscriber can access rows of a large logical Publisher transaction prior to the end of the original transaction, breaking strict transactional atomicity. The default is **0**, which preserves the transaction boundaries of the Publisher.  
   
-> [!NOTE]  
->  This parameter is ignored for non-[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] publications. For more information, see the section "Configuring the Transaction Set Job" in [Performance Tuning for Oracle Publishers](../../../relational-databases/replication/non-sql/performance-tuning-for-oracle-publishers.md).  
+> [!NOTE]
+>  This parameter is ignored for non- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] publications. For more information, see the section "Configuring the Transaction Set Job" in [Performance Tuning for Oracle Publishers](../../../relational-databases/replication/non-sql/performance-tuning-for-oracle-publishers.md).  
   
  **-MessageInterval** *message_interval*  
  Is the time interval used for history logging. A history event is logged when the **MessageInterval** value is reached after the last history event is logged.  

@@ -116,7 +116,7 @@ sp_addpublication_snapshot [ @publication= ] 'publication'
  Is the name of an existing Snapshot Agent job name if an existing job is being used. *snapshot_agent_name* is **nvarchar(100)** with a default value of NULL. This parameter is for internal use and should not be specified when creating a new publication. If *snapshot_agent_name* is specified, then *job_login* and *job_password* must be NULL.  
   
  [ **@publisher_security_mode**= ] *publisher_security_mode*  
- Is the security mode used by the agent when connecting to the Publisher. *publisher_security_mode* is **smallint**, with a default of 1. **0** specifies [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentication, and **1** specifies Windows Authentication. A value of **0** must be specified for non-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Publishers. [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)]  
+ Is the security mode used by the agent when connecting to the Publisher. *publisher_security_mode* is **smallint**, with a default of 1. **0** specifies [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentication, and **1** specifies Windows Authentication. A value of **0** must be specified for non- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Publishers. [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)]  
   
  [ **@publisher_login**= ] **'***publisher_login***'**  
  Is the login used when connecting to the Publisher. *publisher_login* is **sysname**, with a default of NULL. *publisher_login* must be specified when *publisher_security_mode* is **0**. If *publisher_login* is NULL and *publisher_security_mode* is **1**, then the account specified in *job_login* will be used when connecting to the Publisher.  
@@ -130,8 +130,8 @@ sp_addpublication_snapshot [ @publication= ] 'publication'
  [ **@job_login**= ] **'***job_login***'**  
  Is the login for the account under which the agent runs. On Azure SQL Database Managed Instance, use a SQL Server account. *job_login* is **nvarchar(257)**, with a default of NULL. This account is always used for agent connections to the Distributor. You must supply this parameter when creating a new Snapshot Agent job.  
   
-> [!NOTE]  
->  For non-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Publishers, this must be the same login specified in [sp_adddistpublisher &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql.md).  
+> [!NOTE]
+>  For non- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Publishers, this must be the same login specified in [sp_adddistpublisher &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql.md).  
   
  [ **@job_password**= ] **'***job_password***'**  
  Is the password for the Windows account under which the agent runs. *job_password* is **sysname**, with no default. You must supply this parameter when creating a new Snapshot Agent job.  
@@ -140,7 +140,7 @@ sp_addpublication_snapshot [ @publication= ] 'publication'
 >  Do not store authentication information in script files. To help improve security, we recommend that you provide login names and passwords at run time.  
   
  [ **@publisher**= ] **'***publisher***'**  
- Specifies a non-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Publisher. *publisher* is **sysname**, with a default of NULL.  
+ Specifies a non- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Publisher. *publisher* is **sysname**, with a default of NULL.  
   
 > [!NOTE]  
 >  *publisher* should not be used when creating a Snapshot Agent at a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Publisher.  

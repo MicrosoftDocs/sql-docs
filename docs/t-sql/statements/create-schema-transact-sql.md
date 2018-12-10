@@ -117,7 +117,7 @@ CREATE SCHEMA schema_name [ AUTHORIZATION owner_name ] [;]
   
  This behavior is necessary to allow users that are based on Windows groups to create and own objects. However it can result in the unintentional creation of schemas and users. To avoid implicitly creating users and schemas, whenever possible explicitly create database principals and assign a default schema. Or explicitly state an existing schema when creating objects in a database, using two or three-part object names.  
 
->  [!NOTE]
+> [!NOTE]
 >  The implicit creation of an Azure Active Directory user is not possible on [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]. Since creating an Azure AD user from external provider must check the users status in the AAD, creating the user will fail with error 2760: **The specified schema name "\<user_name@domain>" either does not exist or you do not have permission to use it.** And then error 2759: **CREATE SCHEMA failed due to previous errors.** To work around these errors, create the Azure AD user from external provider first and then rerun the statement creating the object.
  
   

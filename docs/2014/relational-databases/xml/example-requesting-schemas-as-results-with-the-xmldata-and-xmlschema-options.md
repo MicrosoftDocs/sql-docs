@@ -45,7 +45,7 @@ GO
 <row xmlns="x-schema:#Schema1" ProductModelID="119" Name="Bike Wash" />  
 ```  
   
-> [!NOTE]  
+> [!NOTE]
 >  The <`Schema`> is declared as a namespace. To avoid namespace collisions when multiple XML-Data schemas are requested in different FOR XML queries, the namespace identifier, `Schema1` in this example, changes with every query execution. The namespace identifier is made up of **Schema*n*** where ***n*** is an integer.  
   
  By specifying the `XMLSCHEMA` option, you can request the XSD schema for the result.  

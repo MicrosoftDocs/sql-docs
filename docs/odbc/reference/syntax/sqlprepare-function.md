@@ -33,9 +33,9 @@ manager: craigg
 ```  
   
 SQLRETURN SQLPrepare(  
-     SQLHSTMT      StatementHandle,  
-     SQLCHAR *     StatementText,  
-     SQLINTEGER    TextLength);  
+     SQLHSTMT      StatementHandle,  
+     SQLCHAR *     StatementText,  
+     SQLINTEGER    TextLength);  
 ```  
   
 ## Arguments  

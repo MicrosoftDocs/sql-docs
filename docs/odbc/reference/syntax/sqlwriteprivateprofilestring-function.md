@@ -33,10 +33,10 @@ manager: craigg
 ```  
   
 BOOL SQLWritePrivateProfileString(  
-     LPCSTR     lpszSection,  
-     LPCSTR     lpszEntry,  
-     LPCSTR     lpszString,  
-     LPCSTR     lpszFilename);  
+     LPCSTR     lpszSection,  
+     LPCSTR     lpszEntry,  
+     LPCSTR     lpszString,  
+     LPCSTR     lpszFilename);  
 ```  
   
 ## Arguments  

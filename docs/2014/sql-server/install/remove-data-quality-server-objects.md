@@ -14,7 +14,7 @@ manager: craigg
 # Remove Data Quality Server Objects
   Uninstalling [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] from an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], or completely removing an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] that has [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] does not delete some [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] objects, including the DQS databases. This implies that you do not lose your DQS data if you uninstall [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] using the SQL Server setup. You must manually delete these [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] objects after the uninstall process is complete.  
   
-> [!NOTE]  
+> [!NOTE]
 >  -   Before uninstalling [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)], consider backing up all your existing knowledge bases by exporting it to a .dqsb file, and use the file later to import all the knowledge bases back to a new [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] installation. Exporting and importing of all DQS knowledge bases can only be done by running DQSInstaller.exe with appropriate command line parameters from the command prompt. For more information, see [Export and Import DQS Knowledge Bases Using DQSInstaller.exe](../../data-quality-services/install-windows/export-and-import-dqs-knowledge-bases-using-dqsinstaller-exe.md).  
 > -   Before deleting the DQS databases, consider backing up the databases if you want to preserve it, and use it later for restoring the data. For information about doing so, see [Manage DQS Databases](../../../2014/data-quality-services/manage-dqs-databases.md).  
   

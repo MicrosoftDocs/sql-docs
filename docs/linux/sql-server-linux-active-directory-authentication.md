@@ -41,6 +41,8 @@ Before you configure AD Authentication, you need to:
   * [Red Hat Enterprise Linux](quickstart-install-connect-red-hat.md)
   * [SUSE Linux Enterprise Server](quickstart-install-connect-suse.md)
   * [Ubuntu](quickstart-install-connect-ubuntu.md)
+  
+The output of the hostname command on the Linux server should be the fully qualified domain name of the server, resolvable in DNS, and should be used for all service definitions, E.G: MSSQLSvc/**<fully qualified domain name of host machine>**:**<tcp port>**
 
 ## <a id="join"></a> Join [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] host to AD domain
 
@@ -50,7 +52,7 @@ Use the following steps to join a [!INCLUDE[ssNoVersion](../includes/ssnoversion
 
    ```bash
    # RHEL
-   sudo yum install realmd krb5-workstation
+   sudo yum install realmd krb5-workstation oddjob oddjob-mkhomedir sssd samba-common-tools ntpdate
 
    # SUSE
    sudo zypper install realmd krb5-client
@@ -68,21 +70,12 @@ Use the following steps to join a [!INCLUDE[ssNoVersion](../includes/ssnoversion
 
    - **Ubuntu**:
 
-      Edit the `/etc/network/interfaces` file so that your AD domain controller's IP address is listed as a dns-nameserver. For example: 
-
-      ```/etc/network/interfaces
-      <...>
-      # The primary network interface
-      auto eth0
-      iface eth0 inet dhcp
-      dns-nameservers **<AD domain controller IP address>**
-      dns-search **<AD domain name>**
-      ```
+      Insure there are no dns-nameservers or dns-search entries specified in `/etc/network/interfaces` if there are, remove them and restart networking.
 
       > [!NOTE]
       > The network interface (eth0) might differ for different machines. To find out which one you are using, run ifconfig and copy the interface that has an IP address and transmitted and received bytes.
 
-      After editing this file, restart the network service:
+      To restarting networking for just the eth0 interface, use the following example:
 
       ```bash
       sudo ifdown eth0 && sudo ifup eth0
@@ -96,19 +89,12 @@ Use the following steps to join a [!INCLUDE[ssNoVersion](../includes/ssnoversion
 
    - **RHEL**:
 
-     Edit the `/etc/sysconfig/network-scripts/ifcfg-eth0` file (or other interface config file as appropriate) so that your AD domain controller's IP address is listed as a DNS server:
-
-     ```/etc/sysconfig/network-scripts/ifcfg-eth0
-     <...>
-     PEERDNS=no
-     DNS1=**<AD domain controller IP address>**
-     ```
-
-     After editing this file, restart the network service:
-
-     ```bash
-     sudo systemctl restart network
-     ```
+     Insure there are no DNS1 DNS2 or PEERDNS entries specified in `/etc/sysconfig/network-scripts/ifcfg-eth*` files
+     After editing this file, restart the network service (eth0 specified in example):
+   
+      ```bash
+      sudo ifdown eth0 && sudo ifup eth0
+      ```
 
      Now check that your `/etc/resolv.conf` file contains a line like the following example:  
 
@@ -125,7 +111,7 @@ Use the following steps to join a [!INCLUDE[ssNoVersion](../includes/ssnoversion
      NETCONFIG_DNS_STATIC_SERVERS="**<AD domain controller IP address>**"
      ```
 
-     After editing this file, restart the network service:
+     After editing this file if changes had to be made, restart the network service:
 
      ```bash
      sudo systemctl restart network
@@ -139,7 +125,14 @@ Use the following steps to join a [!INCLUDE[ssNoVersion](../includes/ssnoversion
 
 1. Join the domain
 
-   Once you've confirmed that your DNS is configured properly, join the domain by running the following command. You must authenticate using an AD account that has sufficient privileges in AD to join a new machine to the domain.
+   Once you've confirmed that your DNS is configured properly, before joinging the domain you'll want to insure that you're Linux server is synched with a domain controller on the network. The simplest way to do this is to run the following:
+      
+   ```ntpdate 1.2.3.4```
+   Where 1.2.3.4 is the IP of your domain controller. You should also set that to run every 10 minutes to keep the clocks synchronized using the following command:
+```echo "*/10 * * * * /bin/ntpdate 1.2.3.4" |crontab```
+Where 1.2.3.4 is the IP of your domain controller.
+   
+  Now join the domain by running the following command. You must authenticate using an AD account that has sufficient privileges in AD to join a new machine to the domain.
 
    Specifically, this command creates a new computer account in AD, create the `/etc/krb5.keytab` host keytab file, and configure the domain in `/etc/sssd/sssd.conf`:
 
@@ -256,7 +249,7 @@ For more information, see the Red Hat documentation for [Discovering and Joining
    ktutil: list
 
    # Delete all entries by their slot number which are not the UPN one at a
-   # time.
+   # time. These include any names with host/ in them.
    # Warning: when an entry is deleted (e.g. slot 1), all values slide up by
    # one to take its place (e.g. the entry in slot 2 moves to slot 1 when slot
    # 1's entry is deleted)

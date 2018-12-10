@@ -29,10 +29,11 @@ This tutorial requires the SQL Server *TutorialDB*. To create the *TutorialDB* d
 
 - [Connect and query SQL Server using [!INCLUDE[name-sos-short](../includes/name-sos-short.md)]](quickstart-sql-server.md)
 
+This tutorial requires connecting to a SQL Server database. Azure SQL Database has automated backups, so Azure Data Studio does not perform Azure SQL Database backup and restore. For details, see [Learn about automatic SQL Database backups](https://docs.microsoft.com/azure/sql-database/sql-database-automated-backups).
 
 ## Backup a database
 
-1. Open the TutorialDB database dashboard (open the **SERVERS** sidebar (**CTRL+G**), expand **Databases**, right-click **TutorialDB**, and select **Manage**). 
+1. Open the TutorialDB database dashboard (open the **SERVERS** sidebar (**CTRL+G**), expand **Databases**, right-click **TutorialDB**, and select **Manage**).
 
 2. Open the **Backup database** dialog (click **Backup** on the **Tasks** widget).
 

@@ -17,13 +17,18 @@ This article describes how to connect to a SQL Server 2019 big data cluster (pre
 ## Prerequisites
 
 - A deployed [SQL Server 2019 big data cluster](deployment-guidance.md).
-- [SQL Server 2019 big data tools](deploy-big-data-tools.md).
+- [SQL Server 2019 big data tools](deploy-big-data-tools.md):
+   - Azure Data Studio
+   - SQL Server 2019 extension
+   - kubectl
 
 ## Connect to the cluster
 
 When you connect to a big data cluster, you have the option to connect to the SQL Server [master instance](concept-master-instance.md) or to the HDFS/Spark gateway. The following sections show how to connect to each.
 
 ## <a id="master"></a> Master instance
+
+The SQL Server master instance is a traditional SQL Server instance containing relational SQL Server databases. The following steps describe how to connect to the master instance using Azure Data Studio.
 
 1. From the command-line, find the IP of your master instance with the following command:
 
@@ -47,15 +52,20 @@ When you connect to a big data cluster, you have the option to connect to the SQ
 
 1. Enter a SQL login **User name** and **Password**.
 
-1. Change the **Database name** to the **high_value_data** database.
+   > [!TIP]
+   > By default, the user name is **SA** and, unless changed, the password corresponds to the **MSSQL_SA_PASSWORD** environment variable used during deployment.
+
+1. Change the target **Database name** to one of your relational databases.
 
    ![Connect to the master instance](./media/connect-to-big-data-cluster/connect-to-cluster.png)
 
 1. Press **Connect**, and the **Server Dashboard** should appear.
 
-## <a id="hdfs"></a> HDFS/Spark gateway
+## <a id="hdfs"></a> HDFS/Spark Gateway
 
-1. From the command-line, find the IP address of your HDFS/Spark gateway with one of the following commands.
+The **HDFS/Spark Gateway** enables you to connect in order to work with the HDFS storage pool and to run Spark jobs. The following steps describe how to connect with Azure Data Studio.
+
+1. From the command-line, find the IP address of your HDFS/Spark Gateway with one of the following commands.
    
    **AKS deployments:**
 
@@ -79,6 +89,11 @@ When you connect to a big data cluster, you have the option to connect to the SQ
 
    ![Connect to HDFS/Spark gateway](./media/connect-to-big-data-cluster/connect-to-cluster-hdfs-spark.png)
 
+   > [!TIP]
+   > By default, the user name is **root** and the password corresponds to the **KNOX_PASSWORD** environment variable used during deployment.
+
 1. Press **Connect**, and the **Server Dashboard** should appear.
 
 ## Next steps
+
+For more information about SQL Server 2019 big data clusters, see [What are SQL Server 2019 big data clusters](big-data-cluster-overview.md).

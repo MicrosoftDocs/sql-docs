@@ -5,7 +5,7 @@ description: Walkthrough a deployment of SQL Server 2019 big data clusters (prev
 author: rothja 
 ms.author: jroth 
 manager: craigg
-ms.date: 12/06/2018
+ms.date: 12/07/2018
 ms.topic: quickstart
 ms.prod: sql
 ms.custom: seodec18
@@ -44,7 +44,7 @@ kubectl config view
 Run below command to install **mssqlctl** tool on your client machine. The command works from both a Windows and a Linux client, but make sure you are running it from a cmd window that runs with administrative privileges on Windows or prefix it with `sudo` on Linux:
 
 ```
-pip3 install --extra-index-url https://private-repo.microsoft.com/python/ctp-2.1 mssqlctl  
+pip3 install --extra-index-url https://private-repo.microsoft.com/python/ctp-2.2 mssqlctl  
 ```
 
 > [!IMPORTANT]
@@ -62,7 +62,7 @@ Before continuing, note the following important guidelines:
 - In the [Command Window](https://docs.microsoft.com/visualstudio/ide/reference/command-window), quotes are included in the environment variables. If you use quotes to wrap a password, the quotes are included in the password.
 - In bash, quotes are not included in the variable. Our examples use double quotes `"`.
 - You can set the password environment variables to whatever you like, but make sure they are sufficiently complex and don't use the `!`, `&`, or `'` characters.
-- For the CTP 2.1 release, do not change the default ports.
+- For the CTP 2.2 release, do not change the default ports.
 - The `sa` account is a system administrator on the SQL Server Master instance that gets created during setup. After creating your SQL Server container, the `MSSQL_SA_PASSWORD` environment variable you specified is discoverable by running `echo $MSSQL_SA_PASSWORD` in the container. For security purposes, change your `sa` password as per best practices documented [here](https://docs.microsoft.com/sql/linux/quickstart-install-connect-docker?view=sql-server-2017#change-the-sa-password).
 
 Initialize the following environment variables.  They are required for deploying a big data cluster:
@@ -114,7 +114,7 @@ export DOCKER_PRIVATE_REGISTRY="1"
 
 ## Deploy a big data cluster
 
-To deploy a SQL Server 2019 CTP 2.1 big data cluster on your Kubernetes cluster, run the following command:
+To deploy a SQL Server 2019 CTP 2.2 big data cluster on your Kubernetes cluster, run the following command:
 
 ```bash
 mssqlctl create cluster <your-cluster-name>
@@ -141,7 +141,7 @@ kubectl describe pod <pod name> -n <your-cluster-name>
 
 ## Open the Cluster Administration Portal
 
-Once the Controller pod is running, you can use the Cluster Administration Portal to monitor the deployment. You can access the portal using the external IP address and port number for the `service-proxy-lb` (for example: **https://\<ip-address\>:30777**). Credentials for accessing the admin portal are the values of `CONTROLLER_USERNAME` and `CONTROLLER_PASSWORD` environment variables provided above.
+Once the Controller pod is running, you can use the Cluster Administration Portal to monitor the deployment. You can access the portal using the external IP address and port number for the `service-proxy-lb` (for example: **https://\<ip-address\>:30777/portal**). Credentials for accessing the admin portal are the values of `CONTROLLER_USERNAME` and `CONTROLLER_PASSWORD` environment variables provided above.
 
 You can get the IP address of the service-proxy-lb service by running this command in a bash or cmd window:
 
@@ -159,11 +159,11 @@ After the deployment script has completed successfully, you can obtain the IP ad
 Azure provides the Azure LoadBalancer service to AKS. Run following command in a cmd or bash window:
 
 ```bash
-kubectl get svc service-master-pool-lb -n <your-cluster-name>
+kubectl get svc endpoint-master-pool -n <your-cluster-name>
 kubectl get svc service-security-lb -n <your-cluster-name>
 ```
 
-Look for the **External-IP** value that is assigned to the services. Connect to the SQL Server master instance using the IP address for the `service-master-pool-lb` at port 31433 (Ex: **\<ip-address\>,31433**) and to the SQL Server big data cluster endpoint using the external-IP for the `service-security-lb` service.   That big data cluster end point is where you can interact with HDFS and submit Spark jobs through Knox.
+Look for the **External-IP** value that is assigned to the services. Connect to the SQL Server master instance using the IP address for the `endpoint-master-pool` at port 31433 (Ex: **\<ip-address\>,31433**) and to the SQL Server big data cluster endpoint using the external-IP for the `service-security-lb` service.   That big data cluster end point is where you can interact with HDFS and submit Spark jobs through Knox.
 
 ## Next steps
 

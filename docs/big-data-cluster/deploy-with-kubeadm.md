@@ -5,7 +5,7 @@ description: Learn how to configure Kubernetes on multiple Ubuntu 16.04 or 18.04
 author: rothja 
 ms.author: jroth 
 manager: craigg
-ms.date: 12/06/2018
+ms.date: 12/07/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.custom: seodec18
@@ -140,4 +140,4 @@ kubectl get nodes
 
 The steps in this article configured a Kubernetes cluster on multiple Ubuntu machines. The next step is to deploy SQL Server 2019 big data cluster. For instructions, see the following article:
 
-[Deploy SQL Server 2019 CTP 2.1 on Kubernetes](deployment-guidance.md#deploy)
+[Deploy SQL Server 2019 CTP 2.2 on Kubernetes](deployment-guidance.md#deploy)

@@ -7,13 +7,12 @@ ms.author: jejiang
 ms.reviewer: jroth
 ms.date: 12/06/2018
 ms.topic: conceptual
-ms.prod: sql
-ms.custom: seodec18
+ms.date: 12/07/2018
 ---
 
 # Submit Spark jobs on SQL Server big data clusters in Azure Data Studio
 
-One of the key scenarios for big data clusters is the ability to submit Spark jobs for SQL Server 2019 (CTP 2.1). The Spark job submission feature allows you to submit a local Jar or Py files with references to SQL Server 2019 big data cluster. It also enables you to execute a Jar or Py files, which are already located in the HDFS file system. 
+One of the key scenarios for big data clusters is the ability to submit Spark jobs for SQL Server 2019 preview. The Spark job submission feature allows you to submit a local Jar or Py files with references to SQL Server 2019 big data cluster. It also enables you to execute a Jar or Py files, which are already located in the HDFS file system. 
 
 ## Prerequisites
 

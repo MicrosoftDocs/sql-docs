@@ -1,6 +1,7 @@
 ---
-title: "Failover and Failover Modes (Always On Availability Groups) | Microsoft Docs"
-ms.custom: ""
+title: "Failover modes for availability groups"
+description: "A description of the different failover modes available for databases participating in an Always On availability group."
+ms.custom: "seodec18"
 ms.date: "05/17/2016"
 ms.prod: sql
 ms.reviewer: ""

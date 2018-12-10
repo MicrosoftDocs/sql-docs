@@ -5,7 +5,7 @@ description: Learn about how data persistence works in a SQL Server 2019 big dat
 author: rothja 
 ms.author: jroth 
 manager: craigg
-ms.date: 12/06/2018
+ms.date: 12/07/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.custom: seodec18
@@ -21,7 +21,7 @@ The way SQL Server big data cluster consumes these persistent volumes is by usin
 
 > [!NOTE]
 
-> For CTP 2.1, only `ReadWriteOnce` access mode for the whole cluster is supported.
+> For CTP 2.2, only `ReadWriteOnce` access mode for the whole cluster is supported.
 
 ## Deployment settings
 

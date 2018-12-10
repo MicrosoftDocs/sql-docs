@@ -113,7 +113,7 @@ For available options, run `SSDT-Setup-ENU.exe /help`
 |-------------------|--------------------|  
 Relational databases|  SQL Server 2005* - SQL Server 2017<br> (use SSDT 17.x or SSDT for Visual Studio 2017 to connect to [SQL Server on Linux](../linux/sql-server-linux-overview.md))<br /><br />Azure SQL Database<br /><br />Azure SQL Data Warehouse (supports queries only; database projects are not yet supported)<br /><br />  * SQL Server 2005 support is deprecated,<br /><br /> please move to an officially supported SQL version|
   |Analysis Services models<br /><br />Reporting Services reports | SQL Server 2008 - SQL Server 2017|
-  |Integration Services packages| SQL Server 2012 - SQL Server 2017    |
+  |Integration Services packages| SQL Server 2014 - SQL Server 2017    |
   
 ## DacFx
 SSDT for Visual Studio 2015, and SSDT for Visual Studio 2017 both use DacFx 17.4.1: [Download Data-Tier Application Framework (DacFx) 17.4.1](https://www.microsoft.com/download/details.aspx?id=56508).

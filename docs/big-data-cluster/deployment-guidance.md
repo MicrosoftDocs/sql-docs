@@ -35,7 +35,7 @@ If you already have a Kubernetes cluster that meets above prerequisites, then yo
 You can choose to deploy Kubernetes in any of three ways:
 
 | Deploy Kubernetes on: | Description | Link |
-|---|---|
+|---|---|---|
 | **Minikube** | A single-node Kubernetes cluster in a VM. | [Instructions](deploy-on-minikube.md) |
 | **Azure Kubernetes Services (AKS)** | A managed Kubernetes container service in Azure. | [Instructions](deploy-on-aks.md) |
 | **Multiple machines** | A Kubernetes cluster deployed on physical or virtual machines using **kubeadm** | [Instructions](deploy-with-kubeadm.md) |

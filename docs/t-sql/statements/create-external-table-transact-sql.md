@@ -251,8 +251,8 @@ The reason files and the data files both have the queryID associated with the CT
  Note, the login that creates the external data source must have permission to read and write to the external data source, located in Hadoop or Azure blob storage.  
 
 
- > [!IMPORTANT]  
-
+> [!IMPORTANT]
+> 
 >  The ALTER ANY EXTERNAL DATA SOURCE  permission grants any principal the ability to create and modify any external data source object, and therefore, it also grants the ability to access all database scoped credentials on the database. This permission must be considered as highly privileged, and therefore must be granted only to trusted principals in the system.
 
 ## Error Handling  

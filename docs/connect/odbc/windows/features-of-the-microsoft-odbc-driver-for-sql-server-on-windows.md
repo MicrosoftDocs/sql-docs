@@ -47,7 +47,7 @@ To ensure that applications remain connected to a Microsoft Azure SQL Database, 
 
 In [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client, the `-y0` option for `sqlcmd.exe` caused output to be truncated at 1 MB if the display width was 0.
   
-Beginning in the ODBC Driver 11 for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], there is no limit on the amount of data that can be retrieved in a single column when `-y0` is specified. `sqlcmd.exe` now streams columns as large as 2 GB ([!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] data type maximum).  
+Beginning in the ODBC Driver 11 for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], there is no limit on the amount of data that can be retrieved in a single column when `-y0` is specified. `sqlcmd.exe` now streams columns as large as 2 GB ( [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] data type maximum).  
   
 Another difference is that specifying both `-h` and `-y0` now produces an error reporting that the options are incompatible. `-h`, which specifies the number of rows to print between the column headings and has never been compatible with `-y0`, was ignored although no headers were printed.
   

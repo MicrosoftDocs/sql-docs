@@ -88,7 +88,7 @@ Enabling Always Encrypted for a database connection instructs the .NET Framework
 To enable Always Encrypted for a database connection, specify `Column Encryption Setting=Enabled` in the **Additional Properties** tab of the **Connect to Server** dialog.    
 To disable Always Encrypted for a database connection, specify `Column Encryption Setting=Disabled` or simply remove the setting of **Column Encryption Setting** from the **Additional Properties** tab of the **Connect to Server** dialog (its default value is **Disabled**).   
 
->  [!TIP] 
+> [!TIP]
 >  To toggle between Always Encrypted being enabled and disabled for an existing Query Editor window:   
 >  1.	Right-click anywhere in the Query Editor window.
 >  2.	Select **Connection** > **Change Connection ...**, 
@@ -128,7 +128,7 @@ To enable/disable Parameterization for Always Encrypted for future Query Editor 
 5.	Click **OK**.   
 
 If you execute a query in a Query Editor window that uses a database connection with Always Encrypted enabled, but parameterization is not enabled for the Query Editor window, you will be prompted to enable it.   
->   [!NOTE]   
+> [!NOTE]
 >   Parameterization for Always Encrypted works only in Query Editor windows that use database connections with Always Encrypted enabled (see [Enabling and disabling Always Encrypted for a database](#en-dis)). No Transact-SQL variables will be parameterized if the Query Editor window uses a database connection without Always Encrypted enabled.   
 
 #### How Parameterization for Always Encrypted works   
@@ -179,7 +179,7 @@ Another example below, shows two variables that meet pre-requisite conditions fo
  
 ![always-encrypted-error](../../../relational-databases/security/encryption/media/always-encrypted-error.png)
  
->   [!NOTE]
+> [!NOTE]
 >   As Always Encrypted supports a limited subset of type conversions, in many cases it is required that the data type of a Transact-SQL variable is the same as the type of the target database column, it targets. For example, assuming type of the `SSN` column in the `Patients` table is `char(11)`, the below query will fail, as the type of the `@SSN` variable, which is `nchar(11)`, does not match the type of the column.   
 
 ```sql
@@ -196,7 +196,7 @@ WHERE [SSN] = @SSN;
     encryption_algorithm_name = 'AEAD_AES_256_CBC_HMAC_SHA_256', column_encryption_key_name = 'CEK_Auto1', 
     column_encryption_key_database_name = 'Clinic') are incompatible in the equal to operator.
 
->   [!NOTE]
+> [!NOTE]
 >   Without parameterization, the entire query, including type conversions, is processed inside SQL Server/Azure SQL Database. With parameterization enabled, some type conversions are performed by .NET Framework inside SQL Server Management Studio. Due to differences between the .NET Framework type system and the SQL Server type system (e.g. different precision of some types, such as float), a query executed with parameterization enabled can produce different results than the query executed without parameterization enabled. 
 
 #### Permissions      

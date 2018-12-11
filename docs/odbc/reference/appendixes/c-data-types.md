@@ -70,7 +70,7 @@ struct tagDATE_STRUCT {
 struct tagTIME_STRUCT {  
    SQLUSMALLINT hour;  
    SQLUSMALLINT minute;  
-   SQLUSMALLINT second;  
+   SQLUSMALLINT second;  
 } TIME_STRUCT;[a]  
 ```  
   
@@ -82,7 +82,7 @@ struct tagTIME_STRUCT {
   
 ```  
 struct tagTIMESTAMP_STRUCT {  
-   SQLSMALLINT year;  
+   SQLSMALLINT year;  
    SQLUSMALLINT month;  
    SQLUSMALLINT day;  
    SQLUSMALLINT hour;  

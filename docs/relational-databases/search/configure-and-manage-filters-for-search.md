@@ -39,7 +39,7 @@ Binary documents can be stored in a single **varbinary(max)** or **image** colum
 EXEC sp_help_fulltext_system_components 'filter';   
 ```  
 ## Non-Microsoft filters
-Before you can use filters for non-[!INCLUDE[msCoName](../../includes/msconame-md.md)] formats, however, you must manually load them into the server instance. For information about installing additional filters, see [View or Change Registered Filters and Word Breakers](../../relational-databases/search/view-or-change-registered-filters-and-word-breakers.md).  
+Before you can use filters for non- [!INCLUDE[msCoName](../../includes/msconame-md.md)] formats, however, you must manually load them into the server instance. For information about installing additional filters, see [View or Change Registered Filters and Word Breakers](../../relational-databases/search/view-or-change-registered-filters-and-word-breakers.md).  
   
   
 ## See Also  

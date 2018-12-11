@@ -24,9 +24,9 @@ manager: kfile
   
 -   [View Data Refresh History &#40;Power Pivot for SharePoint&#41;](../../analysis-services/power-pivot-sharepoint/view-data-refresh-history-power-pivot-for-sharepoint.md)  
   
-> [!NOTE]  
+> [!NOTE]
 >  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] and SharePoint Server 2013 Excel Services use a different architecture for data refresh of [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] data models. The SharePoint 2013 supported architecture utilizes Excel Services as the primary component to load [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] data models. The previous data refresh architecture used relied on a server running [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] System Service and [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] in SharePoint mode to load data models. For more information, see the following:  
->   
+> 
 >  -   [Power Pivot Data Refresh with SharePoint 2013](../../analysis-services/power-pivot-sharepoint/power-pivot-data-refresh-with-sharepoint-2013.md)  
 > -   [Upgrade Workbooks and Scheduled Data Refresh &#40;SharePoint 2013&#41;](../../analysis-services/instances/install-windows/upgrade-workbooks-and-scheduled-data-refresh-sharepoint-2013.md)  
   

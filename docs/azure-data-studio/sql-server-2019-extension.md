@@ -29,9 +29,9 @@ To install the SQL Server 2019 extension (preview), download and install the ass
 
    |Platform|Download|Release date|Version
    |:---|:---|:---|:---|
-   |Windows|[.vsix](https://go.microsoft.com/fwlink/?linkid=2038184)|December 12, 2018 |0.9.1
-   |macOS|[.vsix](https://go.microsoft.com/fwlink/?linkid=2038178)|December 12, 2018 |0.9.1
-   |Linux|[.vsix](https://go.microsoft.com/fwlink/?linkid=2038246)|December 12, 2018 |0.9.1
+   |Windows|[.vsix](https://go.microsoft.com/fwlink/?linkid=2051167)|December 12, 2018 |0.9.1
+   |macOS|[.vsix](https://go.microsoft.com/fwlink/?linkid=2051166)|December 12, 2018 |0.9.1
+   |Linux|[.vsix](https://go.microsoft.com/fwlink/?linkid=2051165)|December 12, 2018 |0.9.1
 
 2. In Azure Data Studio choose **Install Extension from VSIX Package** from the **File** menu and select the downloaded .vsix file.
 3. Choose **Yes** when prompted to confirm installation and wait for the notification that the installation succeeded.
@@ -133,8 +133,6 @@ The Notebook viewer UI has moved into Azure Data Studio core. This improved perf
 - A new wizard to create external data sources from HDFS files/folders in SQL Server 2019 big data clusters has been added.
 - Support for mapping SQL Server and Oracle Views has been added to the existing Create External Data wizard.
 - Performance and reliability fixes for the existing wizard were added.
-
-
 
 
 

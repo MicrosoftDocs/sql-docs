@@ -3,7 +3,7 @@ title: Download and install
 titleSuffix: Azure Data Studio
 description: Download and Install Azure Data Studio for Windows, macOS, or Linux
 ms.custom: "seodec18"
-ms.date: "12/13/2018"
+ms.date: "12/14/2018"
 ms.prod: sql
 ms.technology: azure-data-studio
 ms.reviewer: "alayu; sstein"
@@ -23,20 +23,27 @@ Download and install the latest release, the *December Release*:
 
 |Platform|Download|Release date| Version |
 |:---|:---|:---|:---|
-|Windows|[Installer](https://go.microsoft.com/fwlink/?linkid=2038320)<br>[.zip](https://go.microsoft.com/fwlink/?linkid=2038323)|December 12, 2018 |1.3.8|
-|macOS|[.zip](https://go.microsoft.com/fwlink/?linkid=2038327)|December 12, 2018 |1.3.8|
-|Linux|[.deb](https://go.microsoft.com/fwlink/?linkid=2038405)<br>[.rpm](https://go.microsoft.com/fwlink/?linkid=2038401)<br>[.tar.gz](https://go.microsoft.com/fwlink/?linkid=2038332)|December 12, 2018 |1.3.8|
+|Windows|[User Installer (recommended)](https://go.microsoft.com/fwlink/?linkid=2038320)<br>[System Installer](https://go.microsoft.com/fwlink/?linkid=2038320)<br>[.zip](https://go.microsoft.com/fwlink/?linkid=2038323)|December 13, 2018 |1.3.9|
+|macOS|[.zip](https://go.microsoft.com/fwlink/?linkid=2038327)|December 13, 2018 |1.3.9|
+|Linux|[.deb](https://go.microsoft.com/fwlink/?linkid=2038405)<br>[.rpm](https://go.microsoft.com/fwlink/?linkid=2038401)<br>[.tar.gz](https://go.microsoft.com/fwlink/?linkid=2038332)|December 13, 2018 |1.3.9|
 
 For details about the latest release, see the [release notes](release-notes.md).
 
 ## Get Azure Data Studio for Windows
 
-This release of [!INCLUDE[name-sos](../includes/name-sos-short.md)] includes a standard Windows installer experience, and a .zip: 
+This release of [!INCLUDE[name-sos](../includes/name-sos-short.md)] includes a standard Windows installer experience, and a .zip:
 
-**Installer**
+**User Installer** (recommended)
 
-1. Download and run the [[!INCLUDE[name-sos](../includes/name-sos-short.md)] installer for Windows](https://go.microsoft.com/fwlink/?linkid=2038320).
-1. Start the [!INCLUDE[name-sos-short](../includes/name-sos-short.md)] app.
+The user installer is recommended because it does not require administrator privileges.
+
+1. Download and run the [[!INCLUDE[name-sos](../includes/name-sos-short.md)] *user* installer for Windows](https://go.microsoft.com/fwlink/?linkid=2038320).
+2. Start the [!INCLUDE[name-sos-short](../includes/name-sos-short.md)] app.
+
+**System Installer**
+
+1. Download and run the [[!INCLUDE[name-sos](../includes/name-sos-short.md)] *system* installer for Windows](https://go.microsoft.com/fwlink/?linkid=2038320).
+2. Start the [!INCLUDE[name-sos-short](../includes/name-sos-short.md)] app.
 
 
 **.zip file**

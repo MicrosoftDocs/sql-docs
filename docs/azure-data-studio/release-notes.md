@@ -3,7 +3,7 @@ title: Release notes and changelog
 titleSuffix: Azure Data Studio
 description: 'Azure Data Studio release notes'
 ms.custom: "seodec18"
-ms.date: "12/13/2018"
+ms.date: "12/14/2018"
 ms.prod: sql
 ms.technology: azure-data-studio
 ms.reviewer: "alayu; sstein"
@@ -19,9 +19,10 @@ manager: craigg
 
 ## December 2018 (December Release)
 
-release date: December 12, 2018  
-version: 1.3.8
+release date: December 13, 2018  
+version: 1.3.9
 
+- Added a new user installer for Windows. Unlike the existing system installer, the new user installer does not require administrator privileges. This also enables an easier upgrade experience for non administrators.
 - Azure Active Directory Authentication support
 - Data-Tier Application Wizard support in SQL Server Import extension
 - Update to the [SQL Server 2019 Preview extension](https://docs.microsoft.com/sql/azure-data-studio/sql-server-2019-extension?view=sql-server-ver15)

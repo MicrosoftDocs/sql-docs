@@ -24,7 +24,7 @@ version: 1.3.8
 
 - Azure Active Directory Authentication support
 - Data-Tier Application Wizard support in SQL Server Import extension
-- Update to the [SQL Server 2019 Preview extension](https://docs.microsoft.com/sql/azure-data-studio/sql-server-2019-extension?v ew=sql-server-ver15)
+- Update to the [SQL Server 2019 Preview extension](https://docs.microsoft.com/sql/azure-data-studio/sql-server-2019-extension?view=sql-server-ver15)
 - SQL Server Profiler improvements
 - Results Streaming for large queries
 - Community extensions: sp_executesql to sql and New Database

@@ -318,7 +318,7 @@ For more information, see [R libraries and data types](r/r-libraries-and-data-ty
 
 Passing unicode data in varchar columns from [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] to R/Python can result in string corruption. This is due to the encoding for these unicode string in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] collations   may not match with the default UTF-8 encoding used in R/Python. 
 
-To send any non-ASCII string data from [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] to R/Python, use UTF-8 encoding (available in [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]) or use nvarchar type for the same.
+To send any non-ASCII string data from [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] to R/Python, use UTF-8 encoding (available in [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]) or use nvarchar type for the same.
 
 ### Only one value of type `raw` can be returned from `sp_execute_external_script`
 

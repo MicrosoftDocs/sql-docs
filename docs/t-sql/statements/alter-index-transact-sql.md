@@ -1030,10 +1030,10 @@ REBUILD WITH
 ```  
   
 ### C. Reorganizing an index with LOB compaction  
- The following example reorganizes a single clustered index in the [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] database. Because the index contains a LOB data type in the leaf level, the statement also compacts all pages that contain the large object data. Note that specifying the WITH (LOB_COMPACTION) option is not required because the default value is ON.  
+ The following example reorganizes a single clustered index in the [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] database. Because the index contains a LOB data type in the leaf level, the statement also compacts all pages that contain the large object data. Note that specifying the WITH (LOB_COMPACTION = ON) option is not required because the default value is ON.  
   
 ```sql  
-ALTER INDEX PK_ProductPhoto_ProductPhotoID ON Production.ProductPhoto REORGANIZE WITH (LOB_COMPACTION);  
+ALTER INDEX PK_ProductPhoto_ProductPhotoID ON Production.ProductPhoto REORGANIZE WITH (LOB_COMPACTION = ON);  
 ```  
   
 ### D. Setting options on an index  

@@ -26,15 +26,7 @@ manager: craigg
 -   [Distributor Settings](distributor-settings.md)  
   
 -   [Distributor Information, Publications](distributor-information-publications.md)  
-  
--   [Distributor Information, Subscription Watch List &#40;Transactional Publication, SQL Server 2005 and Later&#41;](distributor-info-subscription-watch-list-transaction-pub-sql-2005.md)  
-  
--   [Distributor Information, Subscription Watch List &#40;Merge Publication, SQL Server 2005 and Later&#41;](distributor-info-subscription-watch-list-merge-pub-sql-2005.md)  
-  
--   [Distributor Information, Subscription Watch List &#40;Snapshot Publication, SQL Server 2005 and Later&#41;](distributor-info-subscription-watch-list-snapshot-pub-sql-2005.md)  
-  
--   [Distributor Information, Agents](distributor-information-agents.md)  
-  
+
 -   [Publisher Settings](publisher-settings.md)  
   
 -   [Publisher Information, Publications](publisher-information-publications.md)  
@@ -75,8 +67,6 @@ manager: craigg
   
 -   [Subscription, Synchronization History &#40;Merge Subscription, SQL Server 2005 and Later&#41;](subscription-synchronization-history.md)  
   
--   [Subscription, Synchronization History &#40;Merge Subscription, SQL Server 2000&#41;](subscription-synchronization-history-merge-subscription-sql-server-2000.md)  
-  
 -   [Subscription, Distributor to Subscriber History &#40;Snapshot Subscription&#41;](subscription-distributor-to-subscriber-history-snapshot-subscription.md)  
   
 -   [Log Reader Agent](log-reader-agent.md)  
@@ -92,6 +82,5 @@ manager: craigg
 ## See Also  
  [Start the Replication Monitor](monitor/start-the-replication-monitor.md)   
  [Monitoring Replication](monitoring-replication.md)   
- [Properties Reference &#40;Replication&#41;](properties-reference-replication.md)  
   
   

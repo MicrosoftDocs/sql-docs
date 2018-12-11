@@ -36,27 +36,32 @@ To install the SQL Server 2019 extension (preview), download and install the ass
 2. In Azure Data Studio choose **Install Extension from VSIX Package** from the **File** menu and select the downloaded .vsix file.
 3. Choose **Yes** when prompted to confirm installation and wait for the notification that the installation succeeded.
 4. Select **Reload** to enable the extension (only required the first time you install an extension).
-5. After reloading, the extension will install dependencies. You can see the progress in the Output window, and it could take several minutes.
-6. If you experience any notebook related issues upgrading from previous releases to this latest version, open the **Command Palette** and type "Reinstall notebook dependencies.". You might need to close existing python processes that are running and relaunch Azure Data Studio.
+
+After reloading, the extension will install dependencies. You can see the progress in the Output window, and it could take several minutes.
+
+If you experience any notebook related issues upgrading from previous releases to this latest version, open the **Command Palette** and type "Reinstall notebook dependencies". You might need to close existing python processes that are running and relaunch Azure Data Studio.
 
 
 ## Supported Features
 
-- SQL Server 2019 big data cluster support
-   - Connect to the SQL Server big data cluster endpoint shipped with [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)].
-   - Browse HDFS, upload, save, delete files and launch useful actions such as Analyze in Notebook for CSV files.
-   - Try the new Create External Table from CSV Files wizard in HDFS, which lets you create an external table in your SQL Server Master instance associated with the cluster. You can virtualize the data from the remote HDFS Data sources without moving the data.
-   - Submit Spark Jobs and view job status from the dashboard.
+**SQL Server 2019 big data cluster support**
 
-- Azure Data Studio Notebooks
-   - Create or open Notebooks using an integrated Notebook viewer. In this release the Notebook viewer supports connecting to local kernels and the SQL Server 2019 big data cluster only.
-   - You can also add a new connection from the “Attach To” dropdown. This lets you easily submit Notebooks to different clusters.
-   - You can now run local Python 3 jobs in a Notebook and submit jobs against a SQL Server 2019 big data cluster using Python, Scala and R. R support is new in this release.
-   - Use the PROSE Code Accelerator libraries in your Notebook to learn file format and data types for fast data preparation.
+- Connect to the SQL Server big data cluster endpoint shipped with [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)].
+- Browse HDFS, upload, save, delete files and launch useful actions such as Analyze in Notebook for CSV files.
+- Try the new Create External Table from CSV Files wizard in HDFS, which lets you create an external table in your SQL Server Master instance associated with the cluster. You can virtualize the data from the remote HDFS Data sources without moving the data.
+- Submit Spark Jobs and view job status from the dashboard.
 
-- SQL Server Polybase Create External Table Wizard
-   - Create an external table and its supporting metadata structures with an easy to use wizard. In this release, remote SQL Server and Oracle servers are supported.
-   - Launch Create External Table from CSV Files wizard in HDFS, which lets you create an external table in your SQL Server Master instance associated with the cluster. You can virtualize the data from the remote HDFS Data sources without ever needing to now move the data.
+**Azure Data Studio Notebooks**
+
+- Create or open Notebooks using an integrated Notebook viewer. In this release the Notebook viewer supports connecting to local kernels and the SQL Server 2019 big data cluster only.
+- You can also add a new connection from the “Attach To” dropdown. This lets you easily submit Notebooks to different clusters.
+- You can now run local Python 3 jobs in a Notebook and submit jobs against a SQL Server 2019 big data cluster using Python, Scala and R. R support is new in this release.
+- Use the PROSE Code Accelerator libraries in your Notebook to learn file format and data types for fast data preparation.
+
+**SQL Server Polybase Create External Table Wizard**
+
+- Create an external table and its supporting metadata structures with an easy to use wizard. In this release, remote SQL Server and Oracle servers are supported.
+- Launch Create External Table from CSV Files wizard in HDFS, which lets you create an external table in your SQL Server Master instance associated with the cluster. You can virtualize the data from the remote HDFS Data sources without ever needing to now move the data.
 
 
 ##  SQL Server 2019 Big Data Cluster support

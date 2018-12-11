@@ -53,7 +53,7 @@ SQLRETURN SQLSetPos(
   
  SQL_POSITION SQL_REFRESH SQL_UPDATE SQL_DELETE  
   
-> [!NOTE]  
+> [!NOTE]
 >  The SQL_ADD value for the *Operation* argument has been deprecated for ODBC 3*.x*. ODBC 3.*x* drivers will need to support SQL_ADD for backward compatibility. This functionality has been replaced by a call to **SQLBulkOperations** with an *Operation* of SQL_ADD. When an ODBC 3.*x* application works with an ODBC 2.*x* driver, the Driver Manager maps a call to **SQLBulkOperations** with an *Operation* of SQL_ADD to **SQLSetPos** with an *Operation* of SQL_ADD.  
   
  For more information, see "Comments."  
@@ -116,7 +116,7 @@ SQLRETURN SQLSetPos(
   
 ## Comments  
   
-> [!CAUTION]  
+> [!CAUTION]
 >  For information on the statement states that **SQLSetPos** can be called in and what it needs to do for compatibility with ODBC 2*.x* applications, see [Block Cursors, Scrollable Cursors, and Backward Compatibility](../../../odbc/reference/appendixes/block-cursors-scrollable-cursors-and-backward-compatibility.md).  
   
 ## RowNumber Argument  

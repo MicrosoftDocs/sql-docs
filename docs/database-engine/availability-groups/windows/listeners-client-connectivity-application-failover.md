@@ -1,6 +1,7 @@
 ---
-title: "Listeners, Client Connectivity, Application Failover | Microsoft Docs"
-ms.custom: ""
+title: "Connect to an availability group listener"
+description: "Contains information about connecting to an Always On availability group listener, before and after failover."
+ms.custom: "seodec18"
 ms.date: "05/17/2016"
 ms.prod: sql
 ms.reviewer: ""
@@ -18,7 +19,7 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ---
-# Listeners, Client Connectivity, Application Failover
+# Connect to an Always On availability group listener 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   This topic contains information about considerations for [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] client connectivity and application-failover functionality.  
   

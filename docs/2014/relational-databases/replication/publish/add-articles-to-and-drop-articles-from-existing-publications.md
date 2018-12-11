@@ -26,7 +26,7 @@ manager: craigg
 ## Adding Articles  
  Adding an article involves: adding the article to the publication; creating a new snapshot for the publication; synchronizing the subscription to apply the schema and data for the new article.  
   
-> [!NOTE]  
+> [!NOTE]
 >  If you add an article to a merge publication and an existing article depends on the new article, you must specify a processing order for both articles using the **@processing_order** parameter of [sp_addmergearticle](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql) and [sp_changemergearticle](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql). Consider the following scenario: you publish a table but you do not publish a function that the table references. If you do not publish the function, the table cannot be created at the Subscriber. When you add the function to the publication: specify a value of **1** for the **@processing_order** parameter of **sp_addmergearticle**; and specify a value of **2** for the **@processing_order** parameter of **sp_changemergearticle**, specifying the table name for the parameter **@article**. This processing order ensures that you create the function at the Subscriber before the table that depends on it. You can use different numbers for each article, as long as the number for the function is lower than the number for the table.  
   
 1.  Add one or more articles through one of the following methods:  

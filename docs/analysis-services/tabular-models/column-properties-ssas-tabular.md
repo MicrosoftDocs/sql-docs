@@ -14,7 +14,7 @@ manager: kfile
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
   This article describes tabular model column properties.  
   
->  [!NOTE]  
+> [!NOTE]
 >  Some properties are not supported in all compatibility levels.    
   
 ##  <a name="bkmk_properties"></a> Column properties  

@@ -20,7 +20,7 @@ manager: craigg
 ## December 2018 (December Release)
 
 release date: December 13, 2018  
-version: 1.3.9
+version: 1.3.8
 
 - Added a new user installer for Windows. Unlike the existing system installer, the new user installer does not require administrator privileges. This also enables an easier upgrade experience for non administrators.
 - Azure Active Directory Authentication support

@@ -7,9 +7,7 @@ ms.reviewer: ""
 ms.technology: 
   - "database-engine"
 ms.topic: conceptual
-f1_keywords: 
-  - "vsregularexpressionhelp"
-  - "vs.regularexpressionhelp"
+f1_keywords:
   - "vs.regularexpressionbuilder"
 helpviewer_keywords: 
   - "regular expressions [SQL Server Management Studio]"
@@ -130,5 +128,3 @@ manager: craigg
 ## See Also  
  [Search and Replace](search-and-replace.md)   
  [Search Text with Wildcards](search-text-with-wildcards.md)  
-  
-  

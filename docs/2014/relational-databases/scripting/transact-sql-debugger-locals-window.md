@@ -7,8 +7,6 @@ ms.reviewer: ""
 ms.technology: 
   - "database-engine"
 ms.topic: conceptual
-f1_keywords: 
-  - "vs.debug.locals"
 helpviewer_keywords: 
   - "Locals Window [Transact-SQL]"
 ms.assetid: 59bea640-7823-4b4d-832c-f384d83cca2f
@@ -49,5 +47,3 @@ manager: craigg
  [Call Stack Window](transact-sql-debugger-call-stack-window.md)   
  [QuickWatch Dialog Box](transact-sql-debugger-quickwatch-dialog-box.md)   
  [Expressions &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/expressions-transact-sql)  
-  
-  

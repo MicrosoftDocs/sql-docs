@@ -71,7 +71,7 @@ DROP SCHEMA schema_name
 CREATE SCHEMA Sprockets AUTHORIZATION Krishna   
     CREATE TABLE NineProngs (source int, cost int, partnumber int)  
     GRANT SELECT TO Anibal   
-    DENY SELECT TO Hung-Fu;  
+    DENY SELECT TO [Hung-Fu];  
 GO  
 ```  
   

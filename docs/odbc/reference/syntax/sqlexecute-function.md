@@ -33,7 +33,7 @@ manager: craigg
 ```  
   
 SQLRETURN SQLExecute(  
-     SQLHSTMT     StatementHandle);  
+     SQLHSTMT     StatementHandle);  
 ```  
   
 ## Arguments  

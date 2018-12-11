@@ -33,14 +33,14 @@ manager: craigg
 ```  
   
 BOOL SQLGetTranslator(  
-     HWND      hwndParent,  
-     LPSTR     lpszName,  
-     WORD      cbNameMax,  
-     WORD *    pcbNameOut,  
-     LPSTR     lpszPath,  
-     WORD      cbPathMax,  
-     WORD *    pcbPathOut,  
-     DWORD *   pvOption);  
+     HWND      hwndParent,  
+     LPSTR     lpszName,  
+     WORD      cbNameMax,  
+     WORD *    pcbNameOut,  
+     LPSTR     lpszPath,  
+     WORD      cbPathMax,  
+     WORD *    pcbPathOut,  
+     DWORD *   pvOption);  
 ```  
   
 ## Arguments  

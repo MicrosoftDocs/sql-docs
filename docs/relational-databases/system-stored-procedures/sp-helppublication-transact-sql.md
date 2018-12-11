@@ -41,7 +41,7 @@ sp_helppublication [ [ @publication = ] 'publication' ]
  Is a flag to indicate returning rows. *found*is **int** and an OUTPUT parameter, with a default of **23456**. **1** indicates the publication is found. **0** indicates the publication is not found.  
   
  [ **@publisher** = ] **'***publisher***'**  
- Specifies a non-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] publisher. *publisher* is sysname, with a default of NULL.  
+ Specifies a non- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] publisher. *publisher* is sysname, with a default of NULL.  
   
 > [!NOTE]  
 >  *publisher* should not be specified when requesting publication information from a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Publisher.  
@@ -113,7 +113,7 @@ sp_helppublication [ [ @publication = ] 'publication' ]
 ## Permissions  
  Only members of the sysadmin fixed server role at the Publisher or members of the db_owner fixed database role on the publication database or users in the publication access list (PAL) can execute sp_helppublication.  
   
- For a non-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Publisher, only members of the sysadmin fixed server role at the Distributor or members of the db_owner fixed database role on the distribution database or users in the PAL can execute sp_helppublication.  
+ For a non- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Publisher, only members of the sysadmin fixed server role at the Distributor or members of the db_owner fixed database role on the distribution database or users in the PAL can execute sp_helppublication.  
   
 ## See Also  
  [View and Modify Publication Properties](../../relational-databases/replication/publish/view-and-modify-publication-properties.md)   

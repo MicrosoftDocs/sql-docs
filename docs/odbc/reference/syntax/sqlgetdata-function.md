@@ -147,7 +147,7 @@ SQLRETURN SQLGetData(
   
  If the *TargetType* argument is an interval data type, the default interval leading precision (2) and the default interval seconds precision (6), as set in the SQL_DESC_DATETIME_INTERVAL_PRECISION and SQL_DESC_PRECISION fields of the ARD, respectively, are used for the data. If the *TargetType* argument is an SQL_C_NUMERIC data type, the default precision (driver-defined) and default scale (0), as set in the SQL_DESC_PRECISION and SQL_DESC_SCALE fields of the ARD, are used for the data. If any default precision or scale is not appropriate, the application should explicitly set the appropriate descriptor field by a call to **SQLSetDescField** or **SQLSetDescRec**. It can set the SQL_DESC_CONCISE_TYPE field to SQL_C_NUMERIC and call **SQLGetData** with a *TargetType* argument of SQL_ARD_TYPE, which will cause the precision and scale values in the descriptor fields to be used.  
   
-> [!NOTE]  
+> [!NOTE]
 >  In ODBC 2*.x*, applications set *TargetType* to SQL_C_DATE, SQL_C_TIME, or SQL_C_TIMESTAMP to indicate that \**TargetValuePtr* is a date, time, or timestamp structure. In ODBC 3*.x*, applications set *TargetType* to SQL_C_TYPE_DATE, SQL_C_TYPE_TIME, or SQL_C_TYPE_TIMESTAMP. The Driver Manager makes appropriate mappings if necessary, based on the application and driver version.  
   
 ## Retrieving Variable-Length Data in Parts  

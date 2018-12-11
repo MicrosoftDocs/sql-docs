@@ -23,7 +23,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
   For character data fields, optional terminating characters allow you to mark the end of each field in a data file with a *field terminator* and the end of each row with a *row terminator*. Terminating characters are one way to indicate to programs that read the data file where one field or row ends and another field or row begins.  
   
-> [!IMPORTANT]  
+> [!IMPORTANT]
 >  When you use native or Unicode native format, use length prefixes rather than field terminators. Native format data can conflict with terminators because a native-format data file is stored in the [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] internal binary data format.  
   
 ## Characters Supported As Terminators  

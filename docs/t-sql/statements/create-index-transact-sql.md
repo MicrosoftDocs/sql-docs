@@ -449,7 +449,7 @@ In backward compatible syntax, WITH DROP_EXISTING is equivalent to WITH DROP_EXI
 ONLINE = { ON | **OFF** }  
 Specifies whether underlying tables and associated indexes are available for queries and data modification during the index operation. The default is OFF.  
   
-> [!NOTE]  
+> [!NOTE]
 > Online index operations are not available in every edition of [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. For a list of features that are supported by the editions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], see [Editions and Supported Features for SQL Server 2016](../../sql-server/editions-and-supported-features-for-sql-server-2016.md).  
   
  ON  
@@ -532,7 +532,7 @@ MAXDOP = *max_degree_of_parallelism*
   
  For more information, see [Configure Parallel Index Operations](../../relational-databases/indexes/configure-parallel-index-operations.md).  
   
-> [!NOTE]  
+> [!NOTE]
 > Parallel index operations are not available in every edition of [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. For a list of features that are supported by the editions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], see [Editions and Supported Features for SQL Server 2016](../../sql-server/editions-and-supported-features-for-sql-server-2016.md) and [Editions and Supported Features for SQL Server 2017](../../sql-server/editions-and-components-of-sql-server-2017.md).  
   
  DATA_COMPRESSION  

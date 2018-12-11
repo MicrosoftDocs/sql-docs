@@ -65,7 +65,7 @@ sp_articlefilter [ @publication = ] 'publication'
  **1** specifies that changes to the article causes existing subscriptions to be reinitialized, and gives permission for the subscription reinitialization to occur.  
   
  [ **@publisher=** ] **'**_publisher_**'**  
- Specifies a non-[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Publisher. *publisher* is **sysname**, with a default of NULL.  
+ Specifies a non- [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Publisher. *publisher* is **sysname**, with a default of NULL.  
   
 > [!NOTE]  
 >  *publisher* should not be used with a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Publisher.  

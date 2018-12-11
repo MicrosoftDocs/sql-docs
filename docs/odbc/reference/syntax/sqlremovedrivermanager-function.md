@@ -33,7 +33,7 @@ manager: craigg
 ```  
   
 BOOL SQLRemoveDriverManager(  
-     LPDWORD     pdwUsageCount);  
+     LPDWORD     pdwUsageCount);  
 ```  
   
 ## Arguments  

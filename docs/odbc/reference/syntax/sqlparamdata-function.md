@@ -33,8 +33,8 @@ manager: craigg
 ```  
   
 SQLRETURN SQLParamData(  
-     SQLHSTMT       StatementHandle,  
-     SQLPOINTER *   ValuePtrPtr);  
+     SQLHSTMT       StatementHandle,  
+     SQLPOINTER *   ValuePtrPtr);  
 ```  
   
 ## Arguments  

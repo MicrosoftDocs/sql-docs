@@ -22,11 +22,11 @@ Creates an index file to display and access table records in a logical order.
 ```  
   
 INDEX ON eExpression TO IDXFileName | TAG TagName [OF CDXFileName]  
-   [FOR lExpression]  
-   [COMPACT]  
-   [ASCENDING | DESCENDING]  
-   [UNIQUE | CANDIDATE]  
-   [ADDITIVE]  
+   [FOR lExpression]  
+   [COMPACT]  
+   [ASCENDING | DESCENDING]  
+   [UNIQUE | CANDIDATE]  
+   [ADDITIVE]  
 ```  
   
 ## Arguments  

@@ -5,7 +5,7 @@ description: Deploy a Python or R script as an application on SQL Server 2019 bi
 author: TheBharath 
 ms.author: bharaths  
 manager: craigg
-ms.date: 12/07/2018
+ms.date: 12/11/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.custom: seodec18
@@ -26,7 +26,7 @@ You must have a SQL Server 2019 big data cluster configured. For more informatio
 The **mssqlctl-pre** command-line utility is provided to preview the Python and R application deployment feature. Use the following command to install the utility:
 
 ```cmd
-pip3 install --extra-index-url https://private-repo.microsoft.com/python/ctp-2.2 mssqlctl-cli
+pip install -r https://private-repo.microsoft.com/python/ctp-2.2/mssqlctlpre/mssqlctlpre.txt --trusted-host https://private-repo.microsoft.com
 ```
 
 ## Capabilities

@@ -156,7 +156,7 @@ The *August Public Preview* focuses on bug fixes, product stabilization, and fil
 - Fix [issue #2129](https://github.com/Microsoft/azuredatastudio/pull/2129): Save edit data scroll position when switching tabs.
 - Fix [issue #2152](https://github.com/Microsoft/azuredatastudio/issues/2152): Results Grid Row Indicator Zero Based.
 
-## Known Issues
+### Known Issues
 
 - [Issue #2371](https://github.com/Microsoft/azuredatastudio/issues/2371) Save As Excel Only Saves First Row of Data
 - [Issue #2150](https://github.com/Microsoft/azuredatastudio/issues/2150): Unable to connect on Ubuntu 16.04 to SQL in a container

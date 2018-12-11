@@ -67,8 +67,6 @@ manager: craigg
   
 -   [Subscription, Synchronization History &#40;Merge Subscription, SQL Server 2005 and Later&#41;](../../relational-databases/replication/subscription-synchronization-history.md)  
   
--   [Subscription, Synchronization History &#40;Merge Subscription, SQL Server 2000&#41;](../../relational-databases/replication/subscription-synchronization-history-merge-subscription-sql-server-2000.md)  
-  
 -   [Subscription, Distributor to Subscriber History &#40;Snapshot Subscription&#41;](../../relational-databases/replication/subscription-distributor-to-subscriber-history-snapshot-subscription.md)  
   
 -   [Log Reader Agent](../../relational-databases/replication/log-reader-agent.md)  
@@ -83,6 +81,6 @@ manager: craigg
   
 ## See Also  
  [Start the Replication Monitor](../../relational-databases/replication/monitor/start-the-replication-monitor.md)   
- [Monitoring Replication](../../relational-databases/replication/monitor/monitoring-replication-overview.md)   
+
   
   

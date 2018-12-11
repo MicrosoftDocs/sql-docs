@@ -3,7 +3,7 @@ title: Download and install
 titleSuffix: Azure Data Studio
 description: Download and Install Azure Data Studio for Windows, macOS, or Linux
 ms.custom: "seodec18"
-ms.date: "11/06/2018"
+ms.date: "12/13/2018"
 ms.prod: sql
 ms.technology: azure-data-studio
 ms.reviewer: "alayu; sstein"
@@ -16,16 +16,16 @@ manager: craigg
 
 [!INCLUDE[name-sos](../includes/name-sos.md)] runs on Windows, macOS, and Linux.
 
-Download and install the latest release, the *November Release*:
+Download and install the latest release, the *December Release*:
 
 > [!NOTE]
 > If you're updating from SQL Operations Studio and want to keep your settings, keyboard shortcuts, or code snippets, see [Move user settings](#move-user-settings).
 
 |Platform|Download|Release date| Version |
 |:---|:---|:---|:---|
-|Windows|[Installer](https://go.microsoft.com/fwlink/?linkid=2038320)<br>[.zip](https://go.microsoft.com/fwlink/?linkid=2038323)|November 6, 2018 |1.2.4|
-|macOS|[.zip](https://go.microsoft.com/fwlink/?linkid=2038327)|November 6, 2018 |1.2.4|
-|Linux|[.deb](https://go.microsoft.com/fwlink/?linkid=2038405)<br>[.rpm](https://go.microsoft.com/fwlink/?linkid=2038401)<br>[.tar.gz](https://go.microsoft.com/fwlink/?linkid=2038332)|November 6, 2018 |1.2.4|
+|Windows|[Installer](https://go.microsoft.com/fwlink/?linkid=2038320)<br>[.zip](https://go.microsoft.com/fwlink/?linkid=2038323)|December 12, 2018 |1.3.8|
+|macOS|[.zip](https://go.microsoft.com/fwlink/?linkid=2038327)|December 12, 2018 |1.3.8|
+|Linux|[.deb](https://go.microsoft.com/fwlink/?linkid=2038405)<br>[.rpm](https://go.microsoft.com/fwlink/?linkid=2038401)<br>[.tar.gz](https://go.microsoft.com/fwlink/?linkid=2038332)|December 12, 2018 |1.3.8|
 
 For details about the latest release, see the [release notes](release-notes.md).
 

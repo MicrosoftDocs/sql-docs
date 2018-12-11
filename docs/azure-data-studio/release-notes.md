@@ -3,7 +3,7 @@ title: Release notes and changelog
 titleSuffix: Azure Data Studio
 description: 'Azure Data Studio release notes'
 ms.custom: "seodec18"
-ms.date: "11/06/2018"
+ms.date: "12/13/2018"
 ms.prod: sql
 ms.technology: azure-data-studio
 ms.reviewer: "alayu; sstein"
@@ -14,7 +14,23 @@ manager: craigg
 ---
 # Azure Data Studio latest release notes and changelog
 
-**[Download the November Release!](download.md)**
+**[Download the December Release!](download.md)**
+
+
+## December 2018 (December Release)
+
+release date: December 12, 2018  
+version: 1.3.8
+
+- Azure Active Directory Authentication support
+- Data-Tier Application Wizard support in SQL Server Import extension
+- Update to the [SQL Server 2019 Preview extension](https://docs.microsoft.com/sql/azure-data-studio/sql-server-2019-extension?v ew=sql-server-ver15)
+- SQL Server Profiler improvements
+- Results Streaming for large queries
+- Community extensions: sp_executesql to sql and New Database
+- Resolved [bugs and issues](https://github.com/Microsoft/azuredatastudio/milestone/19?closed=1)
+
+For detailed information, see the [Change Log](https://github.com/Microsoft/azuredatastudio/blob/master/CHANGELOG.md), and [Releases](https://github.com/Microsoft/azuredatastudio/releases).
 
 ## November 2018 (November Release)
 
@@ -29,6 +45,7 @@ version: 1.2.4
 - Upgrade SQL Tools Service to .Net Core 2.2 Preview 3 (for eventual AAD support)
 
 ### Bug Fixes
+
 - Fix [issue #2933](https://github.com/Microsoft/azuredatastudio/issues/2933): Connection lost to Azure SQL DB
 - Fix [issue #2914](https://github.com/Microsoft/azuredatastudio/issues/2914): "Invalid argument" exception expanding OE database node
 - Fix [issue #2935](https://github.com/Microsoft/azuredatastudio/pull/2935): Display multi-line messages correctly in query results
@@ -38,8 +55,6 @@ version: 1.2.4
 - Fix [issue #3047](https://github.com/Microsoft/azuredatastudio/pull/3047): Add a command line interface for connecting to a SQL Server
 - Fix [issue #3031](https://github.com/Microsoft/azuredatastudio/pull/3031): Add query plan theme support
 - ...
-
-For detailed information, see the [Change Log](https://github.com/Microsoft/azuredatastudio/blob/master/CHANGELOG.md), and [Releases](https://github.com/Microsoft/azuredatastudio/releases).
 
 ## October 2018 (October Release)
 

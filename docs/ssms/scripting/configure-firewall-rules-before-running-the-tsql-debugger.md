@@ -9,7 +9,6 @@ ms.reviewer: ""
 ms.topic: conceptual
 f1_keywords: 
   - "vs.debug.error.sqlde_register_failed"
-  - "vs.debug.error.sqlde_accessdenied"
   - "vs.debug.error.sqlde_firewall.remotemachines"
 helpviewer_keywords: 
   - "Transact-SQL debugger, remote connections"
@@ -161,5 +160,3 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
  [Step Through Transact-SQL Code](../../relational-databases/scripting/step-through-transact-sql-code.md)   
  [Transact-SQL Debugger Information](../../relational-databases/scripting/transact-sql-debugger-information.md)   
  [Database Engine Query Editor &#40;SQL Server Management Studio&#41;](../../relational-databases/scripting/database-engine-query-editor-sql-server-management-studio.md)  
-  
-  

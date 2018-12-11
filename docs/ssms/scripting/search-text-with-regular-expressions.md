@@ -6,9 +6,7 @@ ms.prod: sql
 ms.technology: scripting
 ms.reviewer: ""
 ms.topic: conceptual
-f1_keywords: 
-  - "vsregularexpressionhelp"
-  - "vs.regularexpressionhelp"
+f1_keywords:
   - "vs.regularexpressionbuilder"
 helpviewer_keywords: 
   - "regular expressions [SQL Server Management Studio]"
@@ -131,5 +129,3 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 ## See Also  
  [Search and Replace](../../relational-databases/scripting/search-and-replace.md)   
  [Search Text with Wildcards](../../relational-databases/scripting/search-text-with-wildcards.md)  
-  
-  

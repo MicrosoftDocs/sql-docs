@@ -90,7 +90,7 @@ ALL_ERRORMSGS
  Displays an unlimited number of errors. All error messages are displayed by default. Specifying or omitting this option has no effect.  
     
 EXTENDED_LOGICAL_CHECKS  
- If the compatibility level is 100 ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]) or higher, performs logical consistency checks on an indexed view, XML indexes, and spatial indexes, where present.  
+ If the compatibility level is 100 ( [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]) or higher, performs logical consistency checks on an indexed view, XML indexes, and spatial indexes, where present.  
  For more information, see *Performing Logical Consistency Checks on Indexes* in the [Remarks](#remarks) section later in this topic.  
     
 NO_INFOMSGS  

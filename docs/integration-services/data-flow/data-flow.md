@@ -184,7 +184,7 @@ manager: craigg
  For more information, see [Error Handling in Data](../../integration-services/data-flow/error-handling-in-data.md).  
   
 ### Columns  
- Inputs, outputs, and error outputs are collections of columns. Each column is configurable and depending on the column type-input, output, or external-[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] provides different properties for the column. [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] provides three different ways of setting column properties: programmatically, by using component-specific dialog boxes, or by using the **Advanced Editor** dialog box.  
+ Inputs, outputs, and error outputs are collections of columns. Each column is configurable and depending on the column type-input, output, or external- [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] provides different properties for the column. [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] provides three different ways of setting column properties: programmatically, by using component-specific dialog boxes, or by using the **Advanced Editor** dialog box.  
   
 ## Paths  
  Paths connect data flow components. In [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer, you can view and modify the path properties, view the output metadata for the path start point, and attach data viewers to a path.  

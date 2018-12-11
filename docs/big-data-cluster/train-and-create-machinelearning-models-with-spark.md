@@ -105,7 +105,7 @@ print("train and test datasets saved to {} and {}".format(train_data_path, test_
 ```
 
 ## Step 5 - Put together a pipeline and build a model
-[Spark ML pipeline] ( https://spark.apache.org/docs/2.3.1/ml-pipeline.html ) allow to sequence all steps as a workflow and make it easier to experiment with various algorithms and their parameters. The following code first constructs the stages and then puts these stages together in Ml pipeline.  LogisticRegression is used to create the model.
+[Spark ML pipeline](https://spark.apache.org/docs/2.3.1/ml-pipeline.html) allow to sequence all steps as a workflow and make it easier to experiment with various algorithms and their parameters. The following code first constructs the stages and then puts these stages together in Ml pipeline.  LogisticRegression is used to create the model.
 
 ```python
 from pyspark.ml import Pipeline, PipelineModel

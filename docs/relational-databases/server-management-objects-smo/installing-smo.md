@@ -20,7 +20,7 @@ manager: craigg
 monikerRange: "=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 
-#Installing SMO
+# Installing SMO
 
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
 
@@ -35,7 +35,7 @@ This is a replacement for SharedManagementObjects.msi, which was previously rele
 >>[!Important]
 >>As mentioned on the [Files and Version Numbers](files-and-version-numbers.md) page, you should not install the SMO assemblies into the GAC. Doing so could cause issues with other applications which also use those versions of SMO (such as [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Studio).
 
-##Installing the Package
+## Installing the Package
 
 See [NuGet Quick Start - Use a Package](https://docs.microsoft.com/nuget/quickstart/use-a-package) for instructions and examples of installing and using a NuGet package. 
   

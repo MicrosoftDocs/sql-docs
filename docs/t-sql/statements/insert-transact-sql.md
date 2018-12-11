@@ -290,7 +290,7 @@ OUTPUT Clause
   
  Indicates the approximate number of rows of data in the binary data stream. For more information, see [BULK INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/bulk-insert-transact-sql.md).  
   
->  [!NOTE]
+> [!NOTE]
 >  A syntax error is raised if a column list is not provided.  
 
 ## Remarks  

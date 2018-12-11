@@ -60,7 +60,7 @@ manager: craigg
 |Availability Database Join State|[Secondary database is not joined](../../../database-engine/availability-groups/windows/secondary-database-is-not-joined.md).|Warning|Availability database|  
 |Availability Database Data Synchronization State|[Data synchronization state of availability database is not healthy](../../../database-engine/availability-groups/windows/data-synchronization-state-of-availability-database-is-not-healthy.md).|Warning|Availability database|  
   
-> [!IMPORTANT]  
+> [!IMPORTANT]
 >  **\*** For Always On policies, the category names are used as IDs. Changing the name of an Always On category would break its health-evaluation functionality. Therefore, do not modify the names of Always On categories.  
   
 ##  <a name="Dashboard"></a> Always On Dashboard  

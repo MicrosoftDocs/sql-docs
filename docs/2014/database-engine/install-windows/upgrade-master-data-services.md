@@ -22,7 +22,7 @@ manager: craigg
   
 -   [Upgrade with Restoring a Database from Backup](#restore)  
   
-> [!IMPORTANT]  
+> [!IMPORTANT]
 >  -   Upgrading from the [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] CTP1 release to the CTP2 release is not supported.  
 > -   Back up your database before performing any upgrade.  
 > -   The upgrade process recreates stored procedures and upgrades tables used by [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]. Any customizations you have made to either of these components may be lost.  

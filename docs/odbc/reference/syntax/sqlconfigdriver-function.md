@@ -35,13 +35,13 @@ manager: craigg
 ```  
   
 BOOL SQLConfigDriver(  
-     HWND     hwndParent,  
-     WORD     fRequest,  
-     LPCSTR   lpszDriver,  
-     LPCSTR   lpszArgs,  
-     LPSTR    lpszMsg,  
-     WORD     cbMsgMax,  
-     WORD *   pcbMsgOut);  
+     HWND     hwndParent,  
+     WORD     fRequest,  
+     LPCSTR   lpszDriver,  
+     LPCSTR   lpszArgs,  
+     LPSTR    lpszMsg,  
+     WORD     cbMsgMax,  
+     WORD *   pcbMsgOut);  
 ```  
   
 ## Arguments  

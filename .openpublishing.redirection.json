@@ -1612,11 +1612,6 @@
            "redirect_document_id": true
         },
         {
-           "source_path": "docs/relational-database/replication/replication-monitor-main-page.md",
-           "redirect_url": "/sql/relational-database/replication/sql-server-replication",
-           "redirect_document_id": true
-        },
-        {
            "source_path": "docs/relational-database/replication/distributor-information-agents.md",
            "redirect_url": "/sql/relational-database/replication/distributor-information-publications",
            "redirect_document_id": true

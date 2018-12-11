@@ -23,9 +23,9 @@ Download and install the latest release, the *December Release*:
 
 |Platform|Download|Release date| Version |
 |:---|:---|:---|:---|
-|Windows|[User Installer (recommended)](https://go.microsoft.com/fwlink/?linkid=2038320)<br>[System Installer](https://go.microsoft.com/fwlink/?linkid=2038320)<br>[.zip](https://go.microsoft.com/fwlink/?linkid=2038323)|December 13, 2018 |1.3.9|
-|macOS|[.zip](https://go.microsoft.com/fwlink/?linkid=2038327)|December 13, 2018 |1.3.9|
-|Linux|[.deb](https://go.microsoft.com/fwlink/?linkid=2038405)<br>[.rpm](https://go.microsoft.com/fwlink/?linkid=2038401)<br>[.tar.gz](https://go.microsoft.com/fwlink/?linkid=2038332)|December 13, 2018 |1.3.9|
+|Windows|[User Installer (recommended)](https://go.microsoft.com/fwlink/?linkid=2038320)<br>[System Installer](https://go.microsoft.com/fwlink/?linkid=2038320)<br>[.zip](https://go.microsoft.com/fwlink/?linkid=2038323)|December 13, 2018 |1.3.8|
+|macOS|[.zip](https://go.microsoft.com/fwlink/?linkid=2038327)|December 13, 2018 |1.3.8|
+|Linux|[.deb](https://go.microsoft.com/fwlink/?linkid=2038405)<br>[.rpm](https://go.microsoft.com/fwlink/?linkid=2038401)<br>[.tar.gz](https://go.microsoft.com/fwlink/?linkid=2038332)|December 13, 2018 |1.3.8|
 
 For details about the latest release, see the [release notes](release-notes.md).
 

@@ -4,7 +4,8 @@ ms.custom: ""
 ms.date: "03/08/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: replication
+ms.technology: 
+  - "replication"
 ms.topic: conceptual
 ms.assetid: 1a8e6bc7-433e-471d-b646-092dc80a2d1a
 author: MashaMSFT
@@ -311,6 +312,6 @@ GO
  The primary key of a memory-optimized table cannot be updated. To replicate a primary key update on a subscriber, modify the update stored procedure to deliver the update as a delete and insert pair.  
   
 ## See Also  
- [Replication Features and Tasks](replication-features-and-tasks.md)  
+ [SQL Server Replication](sql-server-replication.md)  
   
   

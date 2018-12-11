@@ -4,7 +4,8 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: replication
+ms.technology: 
+  - "replication"
 ms.topic: conceptual
 helpviewer_keywords: 
   - "transactional replication, propagation methods"
@@ -154,6 +155,6 @@ manager: craigg
   
 ## See Also  
  [Specify How Changes Are Propagated for Transactional Articles](../transactional/transactional-articles-specify-how-changes-are-propagated.md)   
- [Create, Modify, and Delete Publications and Articles &#40;Replication&#41;](create-modify-and-delete-publications-and-articles-replication.md)  
+ [Create a publication](create-a-publication.md)  
   
   

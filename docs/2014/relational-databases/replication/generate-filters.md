@@ -4,7 +4,8 @@ ms.custom: ""
 ms.date: "06/14/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: replication
+ms.technology: 
+  - "replication"
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.rep.newpubwizard.generatefilters.f1"

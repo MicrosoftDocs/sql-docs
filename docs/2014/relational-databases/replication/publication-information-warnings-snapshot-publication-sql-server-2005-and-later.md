@@ -4,7 +4,8 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: replication
+ms.technology: 
+  - "replication"
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.rep.monitor.publicationinfo.warningsandagents.snapshot.f1"
@@ -51,7 +52,7 @@ manager: craigg
   
 ## See Also  
  [Start the Replication Monitor](monitor/start-the-replication-monitor.md)   
- [View Information and Perform Tasks for a Publication &#40;Replication Monitor&#41;](monitor/view-information-and-perform-tasks-for-a-publication-replication-monitor.md)   
+ [View Information and Perform Tasks using Replication Monitor](monitor/view-information-and-perform-tasks-replication-monitor.md)   
  [Monitoring Replication](monitoring-replication.md)  
   
   

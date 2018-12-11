@@ -4,7 +4,8 @@ ms.custom: ""
 ms.date: "06/30/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: replication
+ms.technology: 
+  - "replication"
 ms.topic: conceptual
 helpviewer_keywords: 
   - "replication [SQL Server], distribution"
@@ -22,7 +23,7 @@ manager: craigg
 ##  <a name="BeforeYouBegin"></a> Before You Begin  
   
 ###  <a name="Security"></a> Security  
- For more information, see [Secure Deployment &#40;Replication&#41;](security/secure-deployment-replication.md).  
+ For more information, see [Secure Replication Deployment](security/view-and-modify-replication-security-settings.md).  
   
 ##  <a name="SSMSProcedure"></a> Using SQL Server Management Studio  
  Configure distribution using the New Publication Wizard or the Configure Distribution Wizard. After the Distributor is configured, view and modify properties in the **Distributor Properties - \<Distributor>** dialog box. Use the Configure Distribution Wizard if you want to configure a Distributor so that members of the **db_owner** fixed database roles can create publications, or because you want to configure a remote Distributor that is not a Publisher.  

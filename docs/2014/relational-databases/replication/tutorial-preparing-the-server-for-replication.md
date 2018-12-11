@@ -4,7 +4,8 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: replication
+ms.technology: 
+  - "replication"
 ms.topic: conceptual
 helpviewer_keywords: 
   - "replication [SQL Server], tutorials"
@@ -43,6 +44,6 @@ manager: craigg
   
 ## See Also  
  [Configure Distribution](configure-distribution.md)   
- [Security and Protection &#40;Replication&#41;](security/security-and-protection-replication.md)  
+ [SQL Server Replication Security](security/view-and-modify-replication-security-settings.md)  
   
   

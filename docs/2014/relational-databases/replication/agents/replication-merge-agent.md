@@ -4,7 +4,8 @@ ms.custom: ""
 ms.date: "10/29/2018"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: replication
+ms.technology: 
+  - "replication"
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Merge Agent, executables"
@@ -166,7 +167,7 @@ manager: craigg
  > [!NOTE]  
  >  A valid SSL certificate is defined with a fully qualified domain name of the SQL Server. In order for the agent to connect successfully when setting -EncryptionLevel to 2, create an alias on the local SQL Server. The 'Alias Name' parameter should be the server name and the 'Server' parameter should be set to the fully qualified name of the SQL Server.
   
- For more information, see [Security Overview &#40;Replication&#41;](../security/security-overview-replication.md).  
+ For more information, see [SQL Server Replication Security](../security/view-and-modify-replication-security-settings.md).  
   
  **-ExchangeType** [ **1**| **2**| **3**]  
  > [!WARNING]  
@@ -373,7 +374,7 @@ manager: craigg
 |**3**|Rowcount and binary checksum validation.|  
   
 > [!NOTE]  
->  Validation by using binary checksum or checksum can incorrectly report a failure if data types are different at the Subscriber than they are at the Publisher. For more information, see the section "Considerations for Data Validation" in [Validate Replicated Data](../validate-replicated-data.md).  
+>  Validation by using binary checksum or checksum can incorrectly report a failure if data types are different at the Subscriber than they are at the Publisher. For more information, see the section "Considerations for Data Validation" in [Validate Replicated Data](../validate-data-at-the-subscriber.md).  
   
  **-ValidateInterval** *validate_interval*  
  Is how often, in minutes, the subscription is validated in continuous mode. The default is **60** minutes.  

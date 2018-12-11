@@ -1,10 +1,11 @@
 ---
-title: "Add Publisher | Microsoft Docs"
+title: "SQL Server Replication 'Add Publisher' dialog box | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: replication
+ms.technology: 
+  - "replication"
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.rep.monitor.addpublisher.f1"
@@ -15,7 +16,7 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ---
-# Add Publisher
+# SQL Server Replication 'Add Publisher' dialog box 
   The **Add Publisher** dialog box allows you to add to one or more Publishers to the left pane of Replication Monitor. After adding a Publisher, selecting the Publisher in the left pane shows information on the Publisher in the right pane.  
   
 ## Options  

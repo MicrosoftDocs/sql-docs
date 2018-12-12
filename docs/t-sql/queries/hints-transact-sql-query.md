@@ -147,7 +147,7 @@ manager: craigg
   
  This query hint virtually disallows direct use of indexed views and indexes on indexed views in the query plan.  
   
- The indexed view is not expanded only if the view is directly referenced in the SELECT part of the query and WITH (NOEXPAND) or WITH (NOEXPAND, INDEX( *index_value* [ **,**_...n_ ] ) ) is specified. For more information about the query hint WITH (NOEXPAND), see [Hints - Table](../../t-sql/queries/hints-transact-sql-table.md).  
+ The indexed view is not expanded only if the view is directly referenced in the SELECT part of the query and WITH (NOEXPAND) or WITH (NOEXPAND, INDEX( *index_value* [ **,**_...n_ ] ) ) is specified. For more information about the query hint NOEXPAND, see [Using NOEXPAND](../../t-sql/queries/hints-transact-sql-table.md#using-noexpand).  
   
  Only the views in the SELECT part of statements, including those in INSERT, UPDATE, MERGE, and DELETE statements are affected by the hint.  
   

@@ -113,12 +113,13 @@ You can also view the "Cell Options" when you click on the options icon below â€
 
 ![image11](media/notebooks-guidance/image11.png)
 
+Now, choose the **Spark | R** in the dropdown for the kernels and in the cell type/paste in -
+
+![image12](media/notebooks-guidance/image12.png)
 
 ### Spark kernel | R language
 
 Choose the Spark | R in the dropdown for the kernels and in the cell type/paste in the code and click Run to see the following output.
-
-![image12](media/notebooks-guidance/image12.png)
 
 ![image13](media/notebooks-guidance/image13.png)
 

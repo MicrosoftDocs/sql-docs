@@ -51,6 +51,14 @@ The following sections provide known issues for SQL Server big data clusters in 
 
 - If a big data cluster deployment fails, the associated namespace is not removed. This could result in an orphaned namespace on the cluster. A workaround is to delete the namespace manually before deploying a cluster with the same name.
 
+#### Cluster administration portal
+
+The cluster administration portal does not display the endpoint for the SQL Server master instance. To find the IP address and port for the master instance, use the following kubectl command:
+
+```
+kubectl get svc endpoint-master-pool -n <your-cluster-name>
+```
+
 #### External tables
 
 - It is possible to create a data pool external table for a table that has unsupported column types. If you query the external table, you get a message similar to the following:

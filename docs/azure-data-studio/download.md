@@ -166,7 +166,7 @@ To check for latest updates, click the gear icon on the bottom left of the windo
 
 ## Upgrade from SQL Operations Studio
 
-If you are still using SQL Operations Studio, you need to upgrade to Azure Data Studio. SQL Operations Studio was the preview name, and preview version of Azure Data Studio. In September 2018, we changed the name to Azure Data Studio and released the General Availability (GA) version. Because SQL Operations Studio is no longer being updated or supported we ask all SQL Operations Studio users to download the latest version of Azure Data Studio to get the latest features, security updates, and fixes.
+If you are still using SQL Operations Studio, you need to upgrade to Azure Data Studio. SQL Operations Studio was the preview name, and preview version of Azure Data Studio. In September 2018, we changed the name to Azure Data Studio and released the General Availability (GA) version. Because SQL Operations Studio is no longer being updated or supported, we ask all SQL Operations Studio users to download the latest version of Azure Data Studio to get the latest features, security updates, and fixes.
  
 **When upgrading from the old preview, to the latest Azure Data Studio, you will lose your current settings and extensions. To move your settings, follow the instructions in the following **Move user settings** section.**
 

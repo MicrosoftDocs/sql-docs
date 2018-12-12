@@ -7,8 +7,6 @@ ms.reviewer: ""
 ms.technology: 
   - "database-engine"
 ms.topic: conceptual
-f1_keywords: 
-  - "VS.CommandWindow"
 helpviewer_keywords: 
   - "Command Window [Transact-SQL]"
 ms.assetid: e567ebf9-0793-451b-92c7-26193a02d9da
@@ -38,5 +36,3 @@ manager: craigg
   
 ## See Also  
  [Transact-SQL Debugger](transact-sql-debugger.md)  
-  
-  

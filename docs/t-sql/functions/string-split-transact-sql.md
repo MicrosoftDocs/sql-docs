@@ -147,12 +147,11 @@ WHERE 'clothing' IN (SELECT value FROM STRING_SPLIT(Tags, ','));
 Find products with two specified tags (clothing and road):  
   
 ```sql  
-  
 SELECT ProductId, Name, Tags  
 FROM Product  
 WHERE EXISTS (SELECT *  
     FROM STRING_SPLIT(Tags, ',')  
-    WHERE value IN ('clothing', 'road');  
+    WHERE value IN ('clothing', 'road'));  
 ```  
   
 ### E. Find rows by list of values  

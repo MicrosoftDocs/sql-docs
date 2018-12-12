@@ -1433,7 +1433,7 @@ CREATE TABLE dbo.mylogintable
 ```sql  
 CREATE TABLE dbo.EmployeePhoto  
     (  
-    EmployeeId int NOT NULL PRIMARY KEY,  
+     EmployeeId int NOT NULL PRIMARY KEY  
     ,Photo varbinary(max) FILESTREAM NULL  
     ,MyRowGuidColumn uniqueidentifier NOT NULL ROWGUIDCOL  
         UNIQUE DEFAULT NEWID()  

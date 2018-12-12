@@ -4,7 +4,7 @@ description: This tutorial shows how to use the mssql extension for VS Code. Thi
 author: rothja 
 ms.author: jroth 
 manager: craigg
-ms.date: 03/17/2017
+ms.date: 12/12/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
@@ -208,9 +208,7 @@ The following steps show how to connect to SQL Server with VS Code.
 
 ## View and save the result
 
-1. On the **View** menu, select **Toggle Editor Group Layout** to switch to vertical or horizontal split layout.
-
-   <img src="./media/sql-server-linux-develop-use-vscode/vscode-toggle-split.png" alt="Vertical split" style="width: 500px;" />
+1. On the **View** menu, select **Editor Layout**, and then click **Flip Layout** to switch to vertical or horizontal split layout.
 
 2. Click the **Results** and **Messages** panel header to collapse and expand the panel.
 

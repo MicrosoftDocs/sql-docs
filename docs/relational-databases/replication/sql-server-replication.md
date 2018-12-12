@@ -109,7 +109,7 @@ For backward compatibility information see, [Replication Backward Compatibility]
 -   [Control the Behavior of Triggers and Constraints During Synchronization &#40;Replication Transact-SQL Programming&#41;](control-behavior-of-triggers-and-constraints-in-synchronization.md)    
 -   [Implement a Custom Conflict Resolver for a Merge Article](implement-a-custom-conflict-resolver-for-a-merge-article.md)  
   
-## Administeration 
+## Administration 
   
 -   [Work with Replication Agent Profiles](agents/work-with-replication-agent-profiles.md)   
 -   [Validate Data at the Subscriber](validate-data-at-the-subscriber.md)    

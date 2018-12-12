@@ -1,7 +1,7 @@
 ---
 title: "Memory Management Architecture Guide | Microsoft Docs"
 ms.custom: ""
-ms.date: "06/08/2018"
+ms.date: "12/11/2018"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
@@ -98,6 +98,7 @@ This behavior is typically observed during the following operations:
 -  Backup operations that require large memory buffers.
 -  Tracing operations that have to store large input parameters.
 
+<a name="#changes-to-memory-management-starting-with-includesssql11includessssql11-mdmd"></a>
 ## Changes to "memory_to_reserve" starting with [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]
 In earlier versions of SQL Server ( [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)], [!INCLUDE[ssKatmai](../includes/ssKatmai-md.md)] and [!INCLUDE[ssKilimanjaro](../includes/ssKilimanjaro-md.md)]), the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] memory manager set aside a part of the process virtual address space (VAS) for use by the **Multi-Page Allocator (MPA)**, **CLR Allocator**, memory allocations for **thread stacks** in the SQL Server process, and **Direct Windows allocations (DWA)**. This part of the virtual address space is also known as "Mem-To-Leave" or "non-Buffer Pool" region.
 

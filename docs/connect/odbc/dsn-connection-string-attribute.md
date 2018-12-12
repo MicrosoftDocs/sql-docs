@@ -1,5 +1,5 @@
 ---
-title: "DSN and connection string keywords for the ODBC driver - SQL Server | Microsoft Docs
+title: "DSN and connection string keywords for the ODBC driver - SQL Server | Microsoft Docs"
 ms.custom: ""
 ms.date: 12/11/2018
 ms.prod: sql

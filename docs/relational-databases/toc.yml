@@ -109,7 +109,7 @@
     - name: Manage
       items: 
         - name: SQL Server Utility + 
-          href: ..relational-databases/manage/sql-server-utility-features-and-tasks.md
+          href: ../relational-databases/manage/sql-server-utility-features-and-tasks.md
         - name: Administer Multiple Servers Using Central Management Servers
           href: administer-multiple-servers-using-central-management-servers.md
         - name: Configuration Manager

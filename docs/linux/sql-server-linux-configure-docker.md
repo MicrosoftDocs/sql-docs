@@ -40,11 +40,11 @@ All of the documentation on SQL Server Linux container images point to Ubuntu-ba
 For example, the following command pulls the latest SQL Server 2019 preview container that uses RHEL:
 
 ```bash
-sudo docker pull mcr.microsoft.com/mssql/rhel/server:vNext-CTP2.0
+sudo docker pull mcr.microsoft.com/mssql/rhel/server:2019-CTP2.2
 ```
 
 ```PowerShell
-docker pull mcr.microsoft.com/mssql/rhel/server:vNext-CTP2.0
+docker pull mcr.microsoft.com/mssql/rhel/server:2019-CTP2.2
 ```
 
 ::: moniker-end

@@ -6,8 +6,6 @@ ms.prod: sql
 ms.technology: scripting
 ms.reviewer: ""
 ms.topic: conceptual
-f1_keywords: 
-  - "VS.CommandWindow"
 helpviewer_keywords: 
   - "Command Window [Transact-SQL]"
 ms.assetid: e567ebf9-0793-451b-92c7-26193a02d9da
@@ -39,5 +37,3 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   
 ## See Also  
  [Transact-SQL Debugger](../../relational-databases/scripting/transact-sql-debugger.md)  
-  
-  

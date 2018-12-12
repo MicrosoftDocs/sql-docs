@@ -202,7 +202,7 @@ Automatic seeding adds new extended events for tracking state change, failures, 
 For example, the following script creates an extended events session that captures events related to automatic seeding.
 
 ```sql
-CREATE EVENT SESSION [AG_autoseed] ON SERVER 
+CREATE EVENT SESSION [AlwaysOn_autoseed] ON SERVER 
     ADD EVENT sqlserver.hadr_automatic_seeding_state_transition,
     ADD EVENT sqlserver.hadr_automatic_seeding_timeout,
     ADD EVENT sqlserver.hadr_db_manager_seeding_request_msg,

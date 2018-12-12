@@ -1,18 +1,17 @@
 ---
-title: "Choosing Microsoft Reporting and Analysis Tools | Microsoft Docs"
-ms.custom: ""
-ms.date: "06/13/2017"
-ms.prod: "sql-server-2014"
-ms.reviewer: ""
-ms.technology: 
-  - "reporting-services-native"
-ms.topic: conceptual
-ms.assetid: d0e16108-7123-4788-87b3-05db962dbc94
+title: Microsoft Reporting and Analysis Tools | Microsoft Docs
 author: markingmyname
 ms.author: maghan
-manager: craigg
+manager: kfile
+ms.reviewer: ""
+ms.prod: sql-server-2014
+ms.technology: reporting-services-native
+ms.topic: conceptual
+ms.custom: seodec18
+ms.date: 12/10/2018
 ---
 # Choosing Microsoft Reporting and Analysis Tools
+
   The following table maps workloads for data analysis and reporting to the Microsoft BI tools that are best suited for those workloads.  
   
  The intent is to help you choose the tool that best meets your needs. For more information about a product, click the product link in the table.  
@@ -21,15 +20,15 @@ manager: craigg
   
 |Workloads|User|||BI Tools|||  
 |---------------|----------|-|-|--------------|-|-|  
-|||Excel|**SharePoint**|**SharePoint Online**|**Power BI for Office 365**|**SQL Server**|  
+|||**Excel**|**SharePoint**|**SharePoint Online**|**Power BI**|**SQL Server**|  
 |**Self-Service BI**|Analyst/End User||||||  
-|Easily discover, and access public and corporate data||[Power Query](http://go.microsoft.com/fwlink/p/?LinkId=391845)|||[Data Catalog](http://go.microsoft.com/fwlink/p/?LinkId=391855)<br /><br /> [Admin Center](http://go.microsoft.com/fwlink/p/?LinkId=391856)||  
-|Create powerful data models||[Power Pivot](http://go.microsoft.com/fwlink/p/?LinkId=391846)|||||  
-|Perform self-service predictive analytics||||||[Data Mining Add-Ins for Excel](http://msdn.microsoft.com/library/dn282385\(v=sql.120\).aspx)|  
+|Easily discover, and access public and corporate data||[Power Query](http://go.microsoft.com/fwlink/p/?LinkId=391845)||[Azure Data Catalog](https://azure.microsoft.com/services/data-catalog/)<br /><br />||  
+|Create powerful data models||[Power Pivot](https://support.office.com/article/power-pivot-overview-and-learning-f9001958-7901-4caa-ad80-028a6d2432ed?ui=en-US&rs=en-US&ad=US)|||[Power BI Desktop](https://powerbi.microsoft.com/documentation/powerbi-desktop-get-the-desktop/)||  
+|Perform self-service predictive analytics||||||[Data Mining Add-Ins for Excel](../analysis-services/data-mining-client-for-excel-sql-server-data-mining-add-ins.md)|  
 |Visualize and explore data||[Power View](http://go.microsoft.com/fwlink/p/?LinkId=391847)<br /><br /> [Power Map](http://go.microsoft.com/fwlink/p/?LinkId=391848)|||||  
-|Ask questions using natural language query|||||[Q & A](http://go.microsoft.com/fwlink/p/?LinkId=391857)||  
-|Access reports using mobile devices||||[HTML 5 (supports viewing <10MB files)](http://go.microsoft.com/fwlink/p/?LinkId=391853)|[HTML 5 (supports viewing <250MB)](http://go.microsoft.com/fwlink/p/?LinkId=391854)<br /><br /> [Power BI for Windows app](https://support.office.com/article/Power-BI-for-Windows-app-6e4145b4-e882-4134-a89c-66e54cc5c8eb?ui=en-US&rs=en-US&ad=US)<br /><br /> [iPad app for Power BI](http://support.powerbi.com/knowledgebase/articles/467172-get-started-with-the-ipad-app-for-power-bi-preview)||  
-|Collaborate and share|||[SharePoint Sites](http://go.microsoft.com/fwlink/p/?LinkId=391849)|[SharePoint Team Sites](http://go.microsoft.com/fwlink/p/?LinkId=391850)|[Power BI Sites](http://go.microsoft.com/fwlink/p/?LinkId=391852)||  
+|Ask questions using natural language query|||||[Q & A](https://docs.microsoft.com/power-bi/consumer/end-user-q-and-a)||  
+|Access reports using mobile devices||||[HTML 5 (supports viewing <10-MB files)](http://go.microsoft.com/fwlink/p/?LinkId=391853)|[HTML 5 (supports viewing <250 MB)](http://go.microsoft.com/fwlink/p/?LinkId=391854)<br /><br /> [Power BI mobile app on iOS devices](https://docs.microsoft.com/power-bi/consumer/mobile/mobile-iphone-app-get-started)<br /><br /> [Power BI mobile app on Android devices](https://docs.microsoft.com/power-bi/consumer/mobile/mobile-android-app-get-started) <br /><br />[Power BI mobile app for Windows 10](https://docs.microsoft.com/power-bi/consumer/mobile/mobile-windows-10-phone-app-get-started)||  
+|Collaborate and share|||[SharePoint Sites](http://go.microsoft.com/fwlink/p/?LinkId=391849)|[SharePoint Team Sites](http://go.microsoft.com/fwlink/p/?LinkId=391850)|[Power BI Sites](https://docs.microsoft.com/power-bi/service-how-to-collaborate-distribute-dashboards-reports)||  
 |**Corporate BI**|IT Pro||||||  
 |Create multi-dimensional/tabular corporate models||||||[Analysis Services](../analysis-services/analysis-services.md)|  
 |Create ad-hoc data visualizations|||[Power View for SharePoint](http://go.microsoft.com/fwlink/p/?LinkId=391858)||||  
@@ -40,6 +39,4 @@ manager: craigg
 |Perform self-service predictive analytics||||||[Data Mining Add-Ins for Excel](http://msdn.microsoft.com/library/dn282385\(v=sql.120\).aspx)|  
 |Use data mining algorithms||||||[Data Mining in Analysis Services](http://technet.microsoft.com/library/bb510516\(v=sql.120\).aspx)|  
   
- <sup>1</sup> Reporting Services has a number features that support delivering operational reports and custom reports, such as subscriptions and data alerts.  
-  
-  
+ <sup>1</sup> Reporting Services has a number of features that support delivering operational reports and custom reports, such as subscriptions and data alerts.

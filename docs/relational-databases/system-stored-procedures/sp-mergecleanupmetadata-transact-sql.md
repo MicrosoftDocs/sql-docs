@@ -45,10 +45,10 @@ sp_mergecleanupmetadata [ [ @publication = ] 'publication' ]
 ## Remarks  
  **sp_mergecleanupmetadata** should be used only in replication topologies that include servers running versions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] prior to [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] Service Pack 1. Topologies that include only [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] Service Pack 1 or later should use automatic retention based metadata cleanup. When running this stored procedure, be aware of the necessary and potentially large growth of the log file on the computer on which the stored procedure is running.  
   
-> [!CAUTION]  
+> [!CAUTION]
 >  After **sp_mergecleanupmetadata** is executed, by default, all subscriptions at the Subscribers of publications that have metadata stored in **MSmerge_genhistory**, **MSmerge_contents** and **MSmerge_tombstone** are marked for reinitialization, any pending changes at the Subscriber are lost, and the current snapshot is marked obsolete.  
-  
-> [!NOTE]  
+> 
+> [!NOTE]
 >  If there are multiple publications on a database, and any one of those publications uses an infinite publication retention period (**@retention**=**0**), running **sp_mergecleanupmetadata** does not clean up the merge replication change tracking metadata for the database. For this reason, use infinite publication retention with caution.  
   
  When executing this stored procedure, you can choose whether to reinitialize Subscribers by setting the **@reinitialize_subscriber** parameter to **TRUE** (the default) or **FALSE**. If **sp_mergecleanupmetadata** is executed with the **@reinitialize_subscriber** parameter set to **TRUE**, a snapshot is reapplied at the Subscriber even if the subscription was created without an initial snapshot (for example, if the snapshot data and schema were manually applied or already existed at the Subscriber). Setting the parameter to **FALSE** should be used with caution, because if the publication is not reinitialized, you must ensure that data at the Publisher and Subscriber is synchronized.  

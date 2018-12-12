@@ -77,7 +77,7 @@ This statement first deletes old player records from the `player` table. To save
 ```sql
 DELETE player  
 WHERE datemodified < @startOfYear  
-OUTPUT id, name, surname datemodifier, COMPRESS(info)   
+OUTPUT id, name, surname, datemodifier, COMPRESS(info)   
 INTO dbo.inactivePlayers ;  
 ```  
   

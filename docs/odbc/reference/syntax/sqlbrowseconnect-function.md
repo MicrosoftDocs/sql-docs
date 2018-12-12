@@ -33,12 +33,12 @@ manager: craigg
 ```  
   
 SQLRETURN SQLBrowseConnect(  
-     SQLHDBC         ConnectionHandle,  
-     SQLCHAR *       InConnectionString,  
-     SQLSMALLINT     StringLength1,  
-     SQLCHAR *       OutConnectionString,  
-     SQLSMALLINT     BufferLength,  
-     SQLSMALLINT *   StringLength2Ptr);  
+     SQLHDBC         ConnectionHandle,  
+     SQLCHAR *       InConnectionString,  
+     SQLSMALLINT     StringLength1,  
+     SQLCHAR *       OutConnectionString,  
+     SQLSMALLINT     BufferLength,  
+     SQLSMALLINT *   StringLength2Ptr);  
 ```  
   
 ## Arguments  

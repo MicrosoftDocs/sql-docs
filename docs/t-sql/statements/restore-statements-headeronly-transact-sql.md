@@ -78,10 +78,10 @@ FROM <backup_device>
 ## Result Sets  
  For each backup on a given device, the server sends a row of header information with the following columns:  
   
-> [!NOTE]  
+> [!NOTE]
 >  RESTORE HEADERONLY looks at all backup sets on the media. Therefore, producing this result set when using high-capacity tape drives can take some time. To get a quick look at the media without getting information about every backup set, use RESTORE LABELONLY or specify FILE **=** *backup_set_file_number*.  
-  
-> [!NOTE]  
+> 
+> [!NOTE]
 >  Due to the nature of [!INCLUDE[msCoName](../../includes/msconame-md.md)] Tape Format, it is possible for backup sets from other software programs to occupy space on the same media as [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] backup sets. The result set returned by RESTORE HEADERONLY includes a row for each of these other backup sets.  
   
 |Column name|Data type|Description for SQL Server backup sets|  

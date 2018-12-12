@@ -156,7 +156,7 @@ ORDER BY RANK DESC;
 GO  
 ```  
   
-> [!NOTE]  
+> [!NOTE]
 >  The LANGUAGE *language_term* paramete*r* is not required to use the *top_n_by_rank* parameter*.*  
   
 ## See Also  

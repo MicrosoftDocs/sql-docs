@@ -29,12 +29,12 @@ On Kubernetes, the deployment includes a SQL Server operator, the SQL Server con
 - [kubectl](https://kubernetes.io/docs/tasks/tools/install-kubectl/)
 - Access to the [sql-server-samples](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/high%20availability/Kubernetes/sample-manifest-files) GitHub repository
 
->[!NOTE]
->You can use any type of Kubernetes cluster. To create a Kubernetes cluster on Azure Kubernetes Service (AKS), see [Create an AKS cluster](https://docs.microsoft.com/azure/aks/create-cluster).
+> [!NOTE]
+> You can use any type of Kubernetes cluster. To create a Kubernetes cluster on Azure Kubernetes Service (AKS), see [Create an AKS cluster](https://docs.microsoft.com/azure/aks/create-cluster).
 > The following script creates a four-node Kubernetes cluster in Azure.
->```azure-cli
-az aks create --resource-group myResourceGroup --name myAKSCluster --node-count 4 --kubernetes-version 1.11.3 --generate-ssh-keys
->```
+> ```azure-cli
+> az aks create --resource-group myResourceGroup --name myAKSCluster --node-count 4 --kubernetes-version 1.11.3 --generate-ssh-keys
+> ```
 
 ## Deploy the operator, SQL Server containers, and load-balancing services
 

@@ -1,5 +1,5 @@
 ---
-title: "What&#39;s New in Analysis Services | Microsoft Docs"
+title: "What's new in SQL Server 2016 Analysis Services | Microsoft Docs"
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -167,10 +167,10 @@ At a minimum, an empty model will contain  the following JSON:
     }    
     ```    
     
-> [!WARNING]    
+> [!WARNING]
 > Avoid editing the JSON directly. Doing so can corrupt the model.    
- ### New elements in MS-CSDLBI 2.0 schema    
- The following elements have been added to the **TProperty** complex type defined in the [MS-CSDLBI] 2.0 schema:    
+>  ### New elements in MS-CSDLBI 2.0 schema    
+>  The following elements have been added to the **TProperty** complex type defined in the [MS-CSDLBI] 2.0 schema:    
     
 |Element|Definition|    
 |-------------|----------------|    

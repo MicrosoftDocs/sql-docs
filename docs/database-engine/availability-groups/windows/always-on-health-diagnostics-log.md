@@ -1,6 +1,7 @@
 ---
-title: "Always On Availability Groups health diagnostics log (SQL Server) | Microsoft Docs"
-ms.custom: "ag-guide"
+title: "SQL Server resource DLL health diagnostic logs for availability groups"
+description: "Describes how the SQL Server resource DLL monitors the health of the Always On availability group."
+ms.custom: "ag-guide, seodec18"
 ms.date: "06/13/2017"
 ms.prod: sql
 ms.reviewer: ""
@@ -11,7 +12,7 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ---
-# Always On Availability Groups health diagnostics log
+# SQL Server resource DLL health diagnostic logs for availability groups
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   To monitor the health of the primary availability replica, the SQL Server resource DLL run by the Windows Server Failover Clustering (WSFC) cluster uses a stored procedure in the SQL Server instance called [sp_server_diagnostics](~/relational-databases/system-stored-procedures/sp-server-diagnostics-transact-sql.md).  
   

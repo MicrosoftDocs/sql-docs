@@ -113,7 +113,7 @@ Look for dumps in the log directory in Linux. Check under the /var/opt/mssql/log
 For Core dumps 
    ```bash
    sudo ls /var/opt/mssql/log | grep .tar.gz2 
-   ```
+   ```
 
 For SQL dumps 
    ```bash

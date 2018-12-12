@@ -1,17 +1,19 @@
 ---
-title: How to Query HDFS in a SQL Server big data cluster | Microsoft Docs
+title: Query HDFS data in the storage pool
+titleSuffix: SQL Server 2019 big data clusters
 description: This tutorial demonstrates how to query HDFS data in a SQL Server 2019 big data cluster (preview). You create an external table over data in the storage pool and then run a query.
 author: rothja 
 ms.author: jroth 
 manager: craigg
-ms.date: 10/11/2018
+ms.date: 12/06/2018
 ms.topic: tutorial
 ms.prod: sql
+ms.custom: seodec18
 ---
 
 # Tutorial: Query HDFS in a SQL Server big data cluster
 
-This tutorial demonstrates how to Query HDFS data in a SQL Server 2019 big data cluster.
+This tutorial demonstrates how to Query HDFS data in a SQL Server 2019 big data cluster (preview).
 
 In this tutorial, you learn how to:
 
@@ -34,7 +36,7 @@ In this tutorial, you learn how to:
 
 The storage pool contains web clickstream data in a CSV file stored in HDFS. Use the following steps to define an external table that can access the data in that file.
 
-1. In Azure Data Studio, connect to the SQL Server master instance of your big data cluster. For more information, see [Connect to the SQL Server master instance](deploy-big-data-tools.md#master).
+1. In Azure Data Studio, connect to the SQL Server master instance of your big data cluster. For more information, see [Connect to the SQL Server master instance](connect-to-big-data-cluster.md#master).
 
 2. Double-click on the connection in the **Servers** window to show the server dashboard for the SQL Server master instance. Select **New Query**.
 

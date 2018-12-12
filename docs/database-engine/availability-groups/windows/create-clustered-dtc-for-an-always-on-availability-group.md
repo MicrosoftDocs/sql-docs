@@ -1,6 +1,7 @@
 ---
-title: "Create Clustered DTC for an Always On Availability Group | Microsoft Docs"
-ms.custom: ""
+title: "Create Clustered DTC resource for an availability group"
+description: "This topic walks you through a complete configuration of a clustered DTC resource for a SQL Server Always On Availability Group."
+ms.custom: "seodec18"
 ms.date: "08/30/2016"
 ms.prod: sql
 ms.reviewer: ""
@@ -12,7 +13,7 @@ ms.author: mathoma
 manager: craigg
 monikerRange: ">=sql-server-2016||=sqlallproducts-allversions"
 ---
-# Create Clustered DTC for an Always On Availability Group
+# Create Clustered DTC resource for an Always On availability group
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
@@ -314,17 +315,17 @@ GO
 ```
 
 > [!IMPORTANT]
-You cannot Enable DTC on an existing [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)].  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] will accept the following syntax for an existing Availability Group:  
->
+> You cannot Enable DTC on an existing [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)].  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] will accept the following syntax for an existing Availability Group:  
+> 
 > USE master;    
 > ALTER AVAILABILITY GROUP \<availability_group\>  
-SET (DTC_Support = Per_DB)  
->
->However, no configuration change will actually be made.  You can confirm the **dtc_support** configuration with the following T-SQL query:  
->
->SELECT name, dtc_support FROM sys.availability_groups  
->
->The only way to enable DTC support on an Availability Group is by creating an Availability Group using Transact-SQL.
+> SET (DTC_Support = Per_DB)  
+> 
+> However, no configuration change will actually be made.  You can confirm the **dtc_support** configuration with the following T-SQL query:  
+> 
+> SELECT name, dtc_support FROM sys.availability_groups  
+> 
+> The only way to enable DTC support on an Availability Group is by creating an Availability Group using Transact-SQL.
  
 ## <a name="ClusterDTC"></a>8.	Prepare cluster resources
 

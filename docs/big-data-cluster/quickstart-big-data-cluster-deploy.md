@@ -1,12 +1,14 @@
 ---
-title: Deploy SQL Server big data cluster | Microsoft Docs
-description:
+title: Deployment quickstart
+titleSuffix: SQL Server 2019 big data clusters
+description: Walkthrough a deployment of SQL Server 2019 big data clusters (preview) on Azure Kubernetes Service (AKS).
 author: rothja 
 ms.author: jroth 
 manager: craigg
 ms.date: 12/07/2018
 ms.topic: quickstart
 ms.prod: sql
+ms.custom: seodec18
 ---
 # Quickstart: Deploy SQL Server big data cluster on Azure Kubernetes Service (AKS)
 
@@ -25,9 +27,11 @@ If you would prefer to run a script to create your AKS cluster and install a big
 
 This quickstart requires that you have already configured an AKS cluster with a minimum version of v1.10. For more information, see the [deploy on AKS](deploy-on-aks.md) guide.
 
-On the computer you are using to run the commands to install the SQL Server big data cluster, install [kubectl](https://kubernetes.io/docs/tasks/tools/install-kubectl/). SQL Server big data cluster requires a minimum 1.10 version for Kubernetes, for both server and client (kubectl). To install kubectl, see [Install kubectl](https://kubernetes.io/docs/tasks/tools/install-kubectl/#install-kubectl). 
-
-To install the **mssqlctl** CLI tool to manage the SQL Server big data cluster on your client machine, you must first install [Python](https://www.python.org/downloads/) minimum version v3.0 and [pip3](https://pip.pypa.io/en/stable/installing/). `pip` is already installed if you are using a Python version of at least 3.4 downloaded from [python.org](https://www.python.org/).
+- [SQL Server 2019 big data tools](deploy-big-data-tools.md):
+   - **Azure Data Studio**
+   - **SQL Server 2019 extension**
+   - **kubectl**
+   - **mssqlctl**
 
 ## Verify AKS configuration
 
@@ -36,20 +40,6 @@ Once you have the AKS cluster deployed, you can execute the below kubectl comman
 ```bash
 kubectl config view
 ```
-
-## Install mssqlctl CLI management tool
-
-Run below command to install **mssqlctl** tool on your client machine. The command works from both a Windows and a Linux client, but make sure you are running it from a cmd window that runs with administrative privileges on Windows or prefix it with `sudo` on Linux:
-
-```
-pip3 install --extra-index-url https://private-repo.microsoft.com/python/ctp-2.2 mssqlctl  
-```
-
-> [!IMPORTANT]
-> If you installed a previous release, you must delete the cluster *before* upgrading **mssqlctl** and installing the new release. For more information, see [Upgrading to a new release](deployment-guidance.md#upgrade).
-
-> [!TIP]
-> If **mssqlctl** does not install correctly, review the prerequisite steps in the article [Install mssqlctl](deployment-guidance.md#mssqlctl).
 
 ## Define environment variables
 

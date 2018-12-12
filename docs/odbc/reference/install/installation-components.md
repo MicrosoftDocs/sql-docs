@@ -23,7 +23,7 @@ manager: craigg
   
  ![Relationship between installation components](../../../odbc/reference/install/media/pr29.gif "pr29")  
   
-> [!IMPORTANT]  
+> [!IMPORTANT]
 >  The Odbc.inf file that was used in ODBC 2.*x* to describe the files required by each ODBC component is not used in ODBC 3*.x*. Drivers that ship ODBC 3*.x* components do not need to create an Odbc.inf file. The removal of **SQLInstallDriver** and **SQLInstallODBC**, and the deprecation of **SQLInstallTranslator**, have rendered Odbc.inf unnecessary. The driver information that used to be in the Driver Keyword sections of Odbc.inf is now provided in the *lpszDriver* argument in **SQLInstallDriverEx**. The translator information that used to be in the [ODBC Translator] and Translator Specification sections of Odbc.inf is now provided in the *lpszTranslator* argument of **SQLInstallTranslatorEx**. These changes allow the ODBC Installer to be more portable across platforms.  
   
  For more information about these components, see the following topics at the end of this section.  

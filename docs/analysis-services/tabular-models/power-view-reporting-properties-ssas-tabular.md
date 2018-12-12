@@ -1,5 +1,5 @@
 ---
-title: "Power View reporting properties | Microsoft Docs"
+title: "Power View reporting properties in Analysis Services tabular | Microsoft Docs"
 ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services

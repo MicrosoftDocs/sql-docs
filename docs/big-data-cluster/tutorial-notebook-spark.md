@@ -1,12 +1,14 @@
 ---
-title: Run a sample notebook on a SQL Server 2019 big data cluster | Microsoft Docs
+title: Run a sample notebook | Microsoft Docs
+titleSuffix: SQL Server 2019 big data clusters
 description: This tutorial shows how you can load an run a sample Spark notebook on a SQL Server 2019 big data cluster (preview).
 author: rothja 
 ms.author: jroth 
 manager: craigg
-ms.date: 10/17/2018
+ms.date: 12/06/2018
 ms.topic: tutorial
 ms.prod: sql
+ms.custom: seodec18
 ---
 
 # Tutorial: Run a sample notebook on a SQL Server 2019 big data cluster
@@ -42,7 +44,7 @@ Use the following instructions to load the sample notebook file **spark-sql.ipyn
 
 The following steps show how to open the notebook file in Azure Data Studio:
 
-1. In Azure Data Studio, connect to the HDFS/Spark gateway of your big data cluster. For more information, see [Connect to the HDFS/Spark gateway](deploy-big-data-tools.md#hdfs).
+1. In Azure Data Studio, connect to the HDFS/Spark gateway of your big data cluster. For more information, see [Connect to the HDFS/Spark gateway](connect-to-big-data-cluster.md#hdfs).
 
 1. Double-click on the HDFS/Spark gateway connection in the **Servers** window. Then select **Open Notebook**.
 

@@ -5,7 +5,7 @@ description: This article explains how to run Jupyter Notebooks in Azure Data St
 author: rothja 
 ms.author: jroth 
 manager: craigg
-ms.date: 12/06/2018
+ms.date: 12/12/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.custom: seodec18

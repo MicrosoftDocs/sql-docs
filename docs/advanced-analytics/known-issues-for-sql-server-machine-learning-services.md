@@ -3,7 +3,7 @@ title: Known issues in Machine Learning Services | Microsoft Docs
 ms.prod: sql
 ms.technology: machine-learning
 
-ms.date: 04/15/2018  
+ms.date: 12/13/2018  
 ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
@@ -12,24 +12,33 @@ manager: cgronlun
 # Known issues in Machine Learning Services
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-This article describes known problems or limitations with machine learning components that are provided as an option in SQL Server 2016 and SQL Server 2017.
-
-The information here applies to all of the following, unless otherwise indicated:
-
-SQL Server 2016
-
-- R Services (In-Database)
-- Microsoft R Server (Standalone)
-
-SQL Server 2017
-
-- Machine Learning Services for R (In-Database)
-- Machine Learning Services for Python (In-Database)
-- Machine Learning Server (Standalone)
+This article describes known problems or limitations with machine learning components that are provided as an option in [SQL Server 2016 R Services](install/sql-r-services-windows-install.md) and [SQL Server 2017 Machine Learning Services with R and Python](install/sql-machine-learning-services-windows-install.md).
 
 ## Setup and configuration issues
 
 For a description of processes and common questions that are related to initial setup and configuration, see [Upgrade and installation FAQ](r/upgrade-and-installation-faq-sql-server-r-services.md). It contains information about upgrades, side-by-side installation, and installation of new R or Python components.
+
+### Inconsistent results in MKL computations due to missing environment variable
+
+**Applies to:** R_SERVER binaries 9.0, 9.1, 9.2 or 9.3.
+
+R_SERVER uses the Intel Math Kernal Library (MKL). For computations involving MKL, inconsistant results can occur if your system is missing an environment variable. 
+
+Set the environment variable `'MKL_CBWR'=AUTO` to ensure conditional numerical reproducibility in R_SERVER. This environment variable will be added in future installers of the R_SERVER component, curently installed by SQL Server, R Client, and Microsoft Machine Learning Server. For more information, see [Introduction to Conditional Numerical Reproducibility (CNR)](https://software.intel.com/articles/introduction-to-the-conditional-numerical-reproducibility-cnr).
+
+**Workaround**
+
+1. In Control Panel, click **System and Security** > **System** > **Advanced System Settings** > **Environment Variables**.
+
+2. Create a new User or System variable. 
+
+  + Set variable name to 'MKL_CBWR'.
+  + Set the 'Variable value' to 'AUTO'.
+
+3. Restart R_SERVER. On SQL Server, you can restart SQL Server Launchpad Service.
+
+> [!NOTE]
+> If you are running the SQL Server 2019 Preview on Linux, edit or create *.bash_profile* in your user home directory, adding the line `export MKL_CBWR="AUTO"`. Execute this file by typing `source .bash_profile` at a bash command prompt. Restart R_SERVER by typing `Sys.getenv()` at the R command prompt.
 
 ### R Script runtime error (SQL Server 2017 CU5-CU7 Regression)
 

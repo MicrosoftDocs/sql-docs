@@ -125,6 +125,19 @@ When installation is finished, see [Custom reports for SQL Server R Services](..
 For help with any errors or warnings, see [Upgrade and installation FAQ - Machine Learning Services](../r/upgrade-and-installation-faq-sql-server-r-services.md).
 ::: moniker-end
 
+## Set environment variables
+
+For R feature integration only, you should set the **MKL_CBWR** environment variable to [ensure consistent output](https://software.intel.com/articles/introduction-to-the-conditional-numerical-reproducibility-cnr) from Intel Math Kernal Library (MKL) calculations.
+
+1. In Control Panel, click **System and Security** > **System** > **Advanced System Settings** > **Environment Variables**.
+
+2. Create a new User or System variable. 
+
+  + Set variable name to `MKL_CBWR`.
+  + Set the variable value to `AUTO`.
+
+3. Restart the server.
+
 ### Default installation folders
 
 For R and Python development, it's common to have multiple versions on the same computer. As installed by SQL Server setup, the base distribution is installed in a folder associated with the SQL Server version that you used for setup.

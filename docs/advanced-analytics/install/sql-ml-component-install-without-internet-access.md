@@ -120,6 +120,19 @@ We recommend that you apply the latest cumulative update to both the database en
 
 5. Continue through the wizard, accepting the licensing terms for R and Python distributions. During installation, you are prompted to choose the folder location containing the updated CAB files.
 
+## Set environment variables
+
+For R feature integration only, you should set the **MKL_CBWR** environment variable to [ensure consistent output](https://software.intel.com/articles/introduction-to-the-conditional-numerical-reproducibility-cnr) from Intel Math Kernal Library (MKL) calculations.
+
+1. In Control Panel, click **System and Security** > **System** > **Advanced System Settings** > **Environment Variables**.
+
+2. Create a new User or System variable. 
+
+  + Set variable name to `MKL_CBWR`.
+  + Set the variable value to `AUTO`.
+
+This step requires a server restart. If you are about to enable script execution, you can hold off on the restart until all of the configuration work is done.
+
 ## Post-install configuration
 
 After installation is finished, restart the service and then configure the server to enable script execution:

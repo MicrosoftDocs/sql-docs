@@ -22,9 +22,9 @@ For a description of processes and common questions that are related to initial 
 
 **Applies to:** R_SERVER binaries 9.0, 9.1, 9.2 or 9.3.
 
-R_SERVER uses the Intel Math Kernal Library (MKL). For computations involving MKL, inconsistant results can occur if your system is missing an environment variable. 
+R_SERVER uses the Intel Math Kernel Library (MKL). For computations involving MKL, inconsistent results can occur if your system is missing an environment variable. 
 
-Set the environment variable `'MKL_CBWR'=AUTO` to ensure conditional numerical reproducibility in R_SERVER. This environment variable will be added in future installers of the R_SERVER component, curently installed by SQL Server, R Client, and Microsoft Machine Learning Server. For more information, see [Introduction to Conditional Numerical Reproducibility (CNR)](https://software.intel.com/articles/introduction-to-the-conditional-numerical-reproducibility-cnr).
+Set the environment variable `'MKL_CBWR'=AUTO` to ensure conditional numerical reproducibility in R_SERVER. This environment variable will be added in future installers of the R_SERVER component, currently installed by SQL Server, R Client, and Microsoft Machine Learning Server. For more information, see [Introduction to Conditional Numerical Reproducibility (CNR)](https://software.intel.com/articles/introduction-to-the-conditional-numerical-reproducibility-cnr).
 
 **Workaround**
 

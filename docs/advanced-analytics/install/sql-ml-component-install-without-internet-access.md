@@ -122,7 +122,7 @@ We recommend that you apply the latest cumulative update to both the database en
 
 ## Set environment variables
 
-For R feature integration only, you should set the **MKL_CBWR** environment variable to [ensure consistent output](https://software.intel.com/articles/introduction-to-the-conditional-numerical-reproducibility-cnr) from Intel Math Kernal Library (MKL) calculations.
+For R feature integration only, you should set the **MKL_CBWR** environment variable to [ensure consistent output](https://software.intel.com/articles/introduction-to-the-conditional-numerical-reproducibility-cnr) from Intel Math Kernel Library (MKL) calculations.
 
 1. In Control Panel, click **System and Security** > **System** > **Advanced System Settings** > **Environment Variables**.
 

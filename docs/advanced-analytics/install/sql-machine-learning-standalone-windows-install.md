@@ -35,7 +35,7 @@ If you installed a previous version, such as SQL Server 2016 R Server (Standalon
 
 As a general rule, we recommend that you treat standalone server and database engine instance-aware installations as mutually exclusive to avoid resource contention, but if you have sufficient resources, there is no prohibition against installing them both on the same physical computer.
 
-You can only have one standalone server on the computer: either SQL Server 2017 Machine Learning Server or SQL Server 2016 R Server (Standalone). You must manually uninstall one version before installing a different version.
+You can only have one standalone server on the computer: either SQL Server 2017 Machine Learning Server or SQL Server 2016 R Server (Standalone). Be sure to uninstall one version before adding a new one.
 
 ::: moniker range="=sql-server-2016"
 <a name="bkmk_ga_instalpatch"></a> 
@@ -127,7 +127,7 @@ For help with any errors or warnings, see [Upgrade and installation FAQ - Machin
 
 ## Set environment variables
 
-For R feature integration only, you should set the **MKL_CBWR** environment variable to [ensure consistent output](https://software.intel.com/articles/introduction-to-the-conditional-numerical-reproducibility-cnr) from Intel Math Kernal Library (MKL) calculations.
+For R feature integration only, you should set the **MKL_CBWR** environment variable to [ensure consistent output](https://software.intel.com/articles/introduction-to-the-conditional-numerical-reproducibility-cnr) from Intel Math Kernel Library (MKL) calculations.
 
 1. In Control Panel, click **System and Security** > **System** > **Advanced System Settings** > **Environment Variables**.
 
@@ -160,14 +160,14 @@ We recommend that you apply the latest cumulative update to both the database en
 
 On internet-connected devices, cumulative updates are typically applied through Windows Update, but you can also use the steps below for controlled updates. When you apply the update for the database engine, Setup pulls cumulative updates for any R or Python features you installed on the standalone server. 
 
-On disconnected servers, extra steps are required. You must obtain the cumulative update for the database engine as well as the CAB files for machine learning features. All files must be transfered to the isolated server and applied manually.
+On disconnected servers, extra steps are required. You must obtain the cumulative update for the database engine as well as the CAB files for machine learning features. All files must be transferred to the isolated server and applied manually.
 
 1. Start with a baseline instance. You can only apply cumulative updates to existing installations:
 
   + Machine Learning Server (Standalone) from SQL Server 2017 initial release
   + R Server (Standalone) from SQL Server 2016 initial release, SQL Server 2016 SP 1, or SQL Server 2016 SP 2
 
-2. On an internet connected device,go to the cumulative update list for your version of SQL Server.
+2. On an internet connected device, click the cumulative update link for your version of SQL Server.
 
   + [SQL Server 2017 updates](https://sqlserverupdates.com/sql-server-2017-updates/)
   + [SQL Server 2016 updates](https://sqlserverupdates.com/sql-server-2016-updates/)

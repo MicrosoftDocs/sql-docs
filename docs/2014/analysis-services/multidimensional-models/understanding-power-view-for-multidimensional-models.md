@@ -41,7 +41,7 @@ manager: craigg
   
  **Native support for DAX queries**  
   
- With this release, multidimensional models support DAX queries and functions in addition to more traditional MDX queries. Some DAX functions, such as PATH, are not applicable in multidimensional modeling. For a better understanding of DAX and how it compares to MDX, see [Data Analysis Expressions and MDX](http://msdn.microsoft.com/library/ff487170\(SQL.105\).aspx).  
+ With this release, multidimensional models support DAX queries and functions in addition to more traditional MDX queries. Some DAX functions, such as PATH, are not applicable in multidimensional modeling. For a better understanding of DAX and how it compares to MDX, see [Data Analysis Expressions and MDX](https://msdn.microsoft.com/library/ff487170\(SQL.105\).aspx).  
   
 ## Multidimensional to tabular object mapping  
  Analysis Services provides a tabular model metadata representation of a multidimensional model. Objects in a multidimensional model are represented as tabular objects in Power View and in CSDL out with BI annotations.  
@@ -220,7 +220,7 @@ manager: craigg
   
  The return CSDL out document represents the model as a namespace, containing entities, associations, and properties.  
   
- For more detailed information about CSDLBI annotations for tabular models, see [Technical Reference for BI Annotations to CSDL](https://docs.microsoft.com/bi-reference/csdl/technical-reference-for-bi-annotations-to-csdl) on MSDN, and [\[MS-CSDLBI\]: Conceptual Schema Definitions File Format with Business Intelligence Annotations](http://msdn.microsoft.com/library/jj161299\(SQL.105\).aspx).  
+ For more detailed information about CSDLBI annotations for tabular models, see [Technical Reference for BI Annotations to CSDL](https://docs.microsoft.com/bi-reference/csdl/technical-reference-for-bi-annotations-to-csdl) on MSDN, and [\[MS-CSDLBI\]: Conceptual Schema Definitions File Format with Business Intelligence Annotations](https://msdn.microsoft.com/library/jj161299\(SQL.105\).aspx).  
   
 ## Client Help on Office.com  
  The following articles are provided on Office.com to help users learn about how Multidimensional Model objects appear in Power View and how to create a sample report:  

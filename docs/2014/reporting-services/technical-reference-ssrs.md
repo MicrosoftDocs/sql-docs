@@ -48,7 +48,7 @@ manager: craigg
  [Reporting Services WMI Provider Library Reference &#40;SSRS&#41;](wmi-provider-library-reference/reporting-services-wmi-provider-library-reference-ssrs.md)  
   
 ## See Also  
- [TechNet wiki articles about Toubleshooting Reporting Services](http://go.microsoft.com/fwlink/?LinkID=209153)   
- [TechNet wiki artilces about Toubleshooting Reporting Services SharePoint mode](http://go.microsoft.com/fwlink/?LinkID=209158)  
+ [TechNet wiki articles about Toubleshooting Reporting Services](https://go.microsoft.com/fwlink/?LinkID=209153)   
+ [TechNet wiki artilces about Toubleshooting Reporting Services SharePoint mode](https://go.microsoft.com/fwlink/?LinkID=209158)  
   
   

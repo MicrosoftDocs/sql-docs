@@ -61,7 +61,7 @@ manager: craigg
 |1|2|123|17|  
 |2|19|0|20|  
   
- Although the addition of more columns makes the report look more complex, the additional detail can be very useful when you want to assess the cumulative cost of making the wrong prediction. To create sums on the diagonals or to compare the results for different combinations of rows, you can click the **Copy** button provided in the **Classification Matrix** tab and paste the report into Excel. Alternatively, you can use a client such as the Data Mining Client for Excel, which supports [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] and later versions, to create a classification report directly in Excel that includes both counts and percentages. For more information, see [SQL Server Data Mining](http://go.microsoft.com/fwlink/?LinkID=77733).  
+ Although the addition of more columns makes the report look more complex, the additional detail can be very useful when you want to assess the cumulative cost of making the wrong prediction. To create sums on the diagonals or to compare the results for different combinations of rows, you can click the **Copy** button provided in the **Classification Matrix** tab and paste the report into Excel. Alternatively, you can use a client such as the Data Mining Client for Excel, which supports [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] and later versions, to create a classification report directly in Excel that includes both counts and percentages. For more information, see [SQL Server Data Mining](https://go.microsoft.com/fwlink/?LinkID=77733).  
   
 ## Restrictions on the Classification Matrix  
  A classification matrix can be used only with discrete predictable attributes.  

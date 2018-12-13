@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "SQLServer:Availability Replica"
   - "Availability Groups [SQL Server], performance counters"
 ms.assetid: e402f996-c1fb-484a-b804-45c49972f2e0
-author: MikeRayMSFT
-ms.author: mikeray
+author: julieMSFT
+ms.author: jrasnick
 manager: craigg
 ---
 # SQL Server, Availability Replica

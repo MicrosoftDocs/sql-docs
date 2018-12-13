@@ -89,6 +89,6 @@ manager: craigg
  [Extract Data by Using the XML Source](xml-source.md)  
   
 ## Related Content  
- Curated Answer, [Create an XML Destination for an SSIS Package](http://go.microsoft.com/fwlink/?LinkId=321993), on curatedviews.cloudapp.net.  
+ Curated Answer, [Create an XML Destination for an SSIS Package](https://go.microsoft.com/fwlink/?LinkId=321993), on curatedviews.cloudapp.net.  
   
   

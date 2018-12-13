@@ -67,7 +67,7 @@ manager: craigg
 >   
 >  When you specify a file name extension, the enumerator also returns files that have the same extension with additional characters appended. (This is the same behavior as that of the **dir** command in the operating system, which also compares 8.3 file names for backward compatibility.) This behavior of the enumerator could cause unexpected results. For example, you want to enumerate only Excel 2003 files, and you specify "*.xls". However, the enumerator will also return Excel 2007 files because those files have the extension, ".xlsx".  
 >   
->  You can use an expression to specify the files to include in a collection, by expanding **Expressions** on the **Collection** page, selecting the **FileSpec** property, and then clicking the ellipsis button (...) to add the property expression. For more information about dynamically selecting specified files, see [SSIS-Dynamically set File Mask : FileSpec](http://go.microsoft.com/fwlink/?LinkId=238154)  
+>  You can use an expression to specify the files to include in a collection, by expanding **Expressions** on the **Collection** page, selecting the **FileSpec** property, and then clicking the ellipsis button (...) to add the property expression. For more information about dynamically selecting specified files, see [SSIS-Dynamically set File Mask : FileSpec](https://go.microsoft.com/fwlink/?LinkId=238154)  
   
  **Fully qualified**  
  Select to retrieve the fully qualified path of file names. If wildcard characters are specified in the Files option, then the fully-qualified paths that are returned match the filter.  
@@ -158,7 +158,7 @@ manager: craigg
   
  The XPath expression that applies to the XML file is the outer XPath operation, stored in the OuterXPathString property. If the XPath enumeration type is set to `ElementCollection`, the Foreach NodeList enumerator can apply an inner XPath expression, stored in the InnerXPathString property, to a collection of element.  
   
- To learn more about working with XML documents and data, see "[Employing XML in the .NET Framework](http://go.microsoft.com/fwlink/?LinkId=56214)" in the MSDN Library.  
+ To learn more about working with XML documents and data, see "[Employing XML in the .NET Framework](https://go.microsoft.com/fwlink/?LinkId=56214)" in the MSDN Library.  
   
  **DocumentSourceType**  
  Select the source type of the XML document. This property has the options listed in the following table.  
@@ -285,9 +285,9 @@ Specifies whether to search recursively within the specified directory.
   
 ## External Resources  
   
--   Blog entry, [SSIS For Each Node List Enumerator](http://go.microsoft.com/fwlink/?LinkId=220671), on bidn.com.  
+-   Blog entry, [SSIS For Each Node List Enumerator](https://go.microsoft.com/fwlink/?LinkId=220671), on bidn.com.  
   
--   Blog entry, [SSIS-Dynamically set File Mask : FileSpec](http://go.microsoft.com/fwlink/?LinkId=238154), on beyondrelational.com.  
+-   Blog entry, [SSIS-Dynamically set File Mask : FileSpec](https://go.microsoft.com/fwlink/?LinkId=238154), on beyondrelational.com.  
   
 ## See Also  
  [Integration Services Error and Message Reference](../../2014/integration-services/integration-services-error-and-message-reference.md)   

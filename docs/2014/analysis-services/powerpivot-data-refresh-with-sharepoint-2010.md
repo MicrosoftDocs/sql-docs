@@ -90,7 +90,7 @@ manager: craigg
   
 15. Click **OK**.  
   
- Audit logging of Store Service operations, which is useful for troubleshooting purposes, must be enabled before it is available. For more information about how to enable logging, see [Configure Secure Store Service (SharePoint 2010)](http://go.microsoft.com/fwlink/p/?LinkID=223294).  
+ Audit logging of Store Service operations, which is useful for troubleshooting purposes, must be enabled before it is available. For more information about how to enable logging, see [Configure Secure Store Service (SharePoint 2010)](https://go.microsoft.com/fwlink/p/?LinkID=223294).  
   
 ##  <a name="bkmk_creds"></a> Step 2: Turn off credential options that you do not want to support  
  PowerPivot data refresh provides three credential options in a data refresh schedule. When a workbook owner schedules data refresh, he or she chooses one of these options, thereby determining the account under which the data refresh job runs. As an administrator, you can determine which credential options are available to schedule owners.  
@@ -229,7 +229,7 @@ manager: craigg
   
  Be sure to try all of the credential options you plan to support. For example, if you configured the PowerPivot unattended data refresh account, verify that data refresh succeeds using that option. For more information about scheduling and viewing status information, see [Schedule a Data Refresh &#40;PowerPivot for SharePoint&#41;](schedule-a-data-refresh-powerpivot-for-sharepoint.md) and [View Data Refresh History &#40;PowerPivot for SharePoint&#41;](power-pivot-sharepoint/view-data-refresh-history-power-pivot-for-sharepoint.md).  
   
- If data refresh fails, refer to the [Troubleshooting PowerPivot Data Refresh](http://go.microsoft.com/fwlink/?LinkID=223279) page on the TechNet wiki for possible solutions.  
+ If data refresh fails, refer to the [Troubleshooting PowerPivot Data Refresh](https://go.microsoft.com/fwlink/?LinkID=223279) page on the TechNet wiki for possible solutions.  
   
 ##  <a name="bkmk_config"></a> Modify Configuration Settings for Data Refresh  
  Each PowerPivot service application has configuration settings that affect data refresh operations. This section explains how to modify those settings.  

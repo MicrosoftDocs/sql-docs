@@ -108,6 +108,6 @@ manager: craigg
  [Set the Properties of a Task or Container](../set-the-properties-of-a-task-or-container.md)  
   
 ## Related Content  
- Video, [Balanced Data Distributer](http://go.microsoft.com/fwlink/?LinkID=226278&clcid=0x409), on technet.microsoft.com.  
+ Video, [Balanced Data Distributer](https://go.microsoft.com/fwlink/?LinkID=226278&clcid=0x409), on technet.microsoft.com.  
   
   

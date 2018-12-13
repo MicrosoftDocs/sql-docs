@@ -38,8 +38,8 @@ manager: craigg
  When the operating system is not a domain controller, by default the Database Engine and Reporting Services will use the NTAUTHORITY\NETWORK SERVICE account, Integration Services will use the NTAUTHORITY\NETWORK SERVICE account, and the SQL Full text Filter Daemon Launcher will use the NTAUTHORITY\LOCAL SERVICE account.  
   
 ## See Also  
- [Installing PowerPivot for SharePoint](http://go.microsoft.com/fwlink/?LinkId=206906)   
- [Hardware and Software Requirements (PowerPivot for SharePoint](http://go.microsoft.com/fwlink/?LinkId=216823)   
+ [Installing PowerPivot for SharePoint](https://go.microsoft.com/fwlink/?LinkId=206906)   
+ [Hardware and Software Requirements (PowerPivot for SharePoint](https://go.microsoft.com/fwlink/?LinkId=216823)   
  [Feature Selection](../../../2014/sql-server/install/feature-selection.md)  
   
   

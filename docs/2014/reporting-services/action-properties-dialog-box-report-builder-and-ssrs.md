@@ -55,7 +55,7 @@ manager: craigg
   
  For a report published to a report server configured in SharePoint integrated mode, use a fully qualified URL including the file name extension (.rdl). For example, http://*\<SharePointservername>/\<site>*/Documents/Report1.rdl. Relative paths are not supported.  
   
- For more information, see [Specifying Paths to External Items &#40;Report Builder and SSRS&#41;](report-design/specifying-paths-to-external-items-report-builder-and-ssrs.md) in the [Report Builder documentation](http://go.microsoft.com/fwlink/?LinkId=154494) on msdn.microsoft.com.  
+ For more information, see [Specifying Paths to External Items &#40;Report Builder and SSRS&#41;](report-design/specifying-paths-to-external-items-report-builder-and-ssrs.md) in the [Report Builder documentation](https://go.microsoft.com/fwlink/?LinkId=154494) on msdn.microsoft.com.  
   
  **Use these parameters to run the report**  
  Add a list of parameters to pass to the drillthrough report. The parameter names must match the parameters defined for the target report. Use the **Add** and **Delete** buttons to add and remove parameters and use the up and down arrows to order the list of parameters.  

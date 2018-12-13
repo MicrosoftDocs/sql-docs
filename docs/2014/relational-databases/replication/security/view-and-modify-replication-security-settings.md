@@ -410,7 +410,7 @@ manager: craigg
 ##  <a name="RMOProcedure"></a> Using Replication Management Objects (RMO)  
   
 > [!IMPORTANT]  
->  When possible, prompt users to enter security credentials at runtime. If you must store credentials, use the [cryptographic services](http://go.microsoft.com/fwlink/?LinkId=34733) provided by the [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows .NET Framework.  
+>  When possible, prompt users to enter security credentials at runtime. If you must store credentials, use the [cryptographic services](https://go.microsoft.com/fwlink/?LinkId=34733) provided by the [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows .NET Framework.  
   
 #### To change all instances of a password stored on a replication server  
   
@@ -427,7 +427,7 @@ manager: craigg
     -   *password* - the new password value.  
   
         > [!IMPORTANT]  
-        >  When possible, prompt users to enter security credentials at runtime. If you must store credentials, use the [cryptographic services](http://go.microsoft.com/fwlink/?LinkId=34733) provided by the Windows .NET Framework.  
+        >  When possible, prompt users to enter security credentials at runtime. If you must store credentials, use the [cryptographic services](https://go.microsoft.com/fwlink/?LinkId=34733) provided by the Windows .NET Framework.  
   
         > [!NOTE]  
         >  Only a member of the `sysadmin` fixed server role can call this method.  

@@ -29,7 +29,7 @@ manager: craigg
  **Server Instance**  
  Displays the name of the server instance that will host the availability replica.  
   
- If a server instance that you to use to host a secondary replica is not listed by the **Availability Replicas** grid, click the **Add Replica** button. If you are configuring an availability group in a hybrid-IT environment (see [High Availability and Disaster Recovery for SQL Server in Windows Azure Virtual Machines](http://msdn.microsoft.com/library/windowsazure/jj870962.aspx)), you can click the **Add Azure Replica** button to create virtual machines with secondary replicas in Windows Azure.  
+ If a server instance that you to use to host a secondary replica is not listed by the **Availability Replicas** grid, click the **Add Replica** button. If you are configuring an availability group in a hybrid-IT environment (see [High Availability and Disaster Recovery for SQL Server in Windows Azure Virtual Machines](https://msdn.microsoft.com/library/windowsazure/jj870962.aspx)), you can click the **Add Azure Replica** button to create virtual machines with secondary replicas in Windows Azure.  
   
  **Initial Role**  
  Indicates the role that the new replica will initially perform: **Primary** or **Secondary**.  
@@ -60,7 +60,7 @@ manager: craigg
  Click to add a secondary replica to the availability group.  
   
  **Add Azure Replica**  
- Click to create a Windows Azure virtual machine that is running a secondary replica in the availability group. This option is applicable only for an availability group in hybrid IT that contains on-premise replicas. For more information, see [High Availability and Disaster Recovery for SQL Server in Windows Azure Virtual Machines](http://msdn.microsoft.com/library/windowsazure/jj870962.aspx).  
+ Click to create a Windows Azure virtual machine that is running a secondary replica in the availability group. This option is applicable only for an availability group in hybrid IT that contains on-premise replicas. For more information, see [High Availability and Disaster Recovery for SQL Server in Windows Azure Virtual Machines](https://msdn.microsoft.com/library/windowsazure/jj870962.aspx).  
   
  **Remove Replica**  
  Click to remove the selected secondary replica from the availability group.  

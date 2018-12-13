@@ -9,7 +9,7 @@
     href: supported-version-and-edition-upgrades.md
   - name: Prepare for upgrade by running Data Migration Assistant
     href: prepare-for-upgrade-by-running-data-migration-assistant.md
-  - name: Are you upgrading from SQL Server 2005?
+  - name: Upgrading from SQL 2005, 2008, or 2008 R2?
     href: are-you-upgrading-from-sql-server-2005.md
   - name: Upgrade Analysis Services
     href: upgrade-analysis-services.md

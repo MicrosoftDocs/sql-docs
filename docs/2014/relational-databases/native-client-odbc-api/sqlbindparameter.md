@@ -51,6 +51,6 @@ manager: craigg
   
 ## See Also  
  [ODBC API Implementation Details](odbc-api-implementation-details.md)   
- [SQLBindParameter Function](http://go.microsoft.com/fwlink/?LinkId=59328)  
+ [SQLBindParameter Function](https://go.microsoft.com/fwlink/?LinkId=59328)  
   
   

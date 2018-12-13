@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "lightweight query profiling"
   - "lightweight profiling"
 ms.assetid: 07f8f594-75b4-4591-8c29-d63811d7753e
-author: MikeRayMSFT
-ms.author: mikeray
+author: julieMSFT
+ms.author: jrasnick
 manager: craigg
 ---
 # Live Query Statistics

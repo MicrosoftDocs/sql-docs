@@ -7,18 +7,17 @@ ms.reviewer: ""
 ms.technology: 
   - "database-engine"
 ms.topic: conceptual
-f1_keywords: 
-  - "VS.ToolsOptionsPages.Text_Editor.XML.Formatting"
 ms.assetid: 97373178-d288-4127-af37-d9f5fe1b8607
 author: craigg-msft
 ms.author: craigg
 manager: craigg
 ---
 # Options (Text Editor - XML - Formatting Page)
-  This dialog box allows you to specify the formatting settings for the XML Editor. You can access the **Options** dialog box from the **Tools** menu.  
+
+This dialog box allows you to specify the formatting settings for the XML Editor. You can access the **Options** dialog box from the **Tools** menu.  
   
 > [!NOTE]  
->  These settings are available when you select the **Text Editor** folder, the **XML** folder, and then the **Formatting** option from the **Options** dialog box.  
+> These settings are available when you select the **Text Editor** folder, the **XML** folder, and then the **Formatting** option from the **Options** dialog box.  
   
 ## Attributes  
  **Preserve manual attribute formatting**  
@@ -60,5 +59,3 @@ manager: craigg
   
 ## See Also  
  [XML Editor &#40;SQL Server Management Studio&#41;](../ssms/sql-server-management-studio-ssms.md)  
-  
-  

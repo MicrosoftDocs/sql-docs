@@ -7,9 +7,6 @@ ms.prod_service: "sql-tools"
 ms.reviewer: ""
 ms.technology: ssms
 ms.topic: conceptual
-f1_keywords: 
-  - "vs.newproject"
-  - "vs.addnewproject"
 helpviewer_keywords: 
   - "projects [SQL Server Management Studio], creating"
 ms.assetid: 7897be19-365b-4b06-bcf0-8a669f67a673
@@ -21,7 +18,7 @@ manager: craigg
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 You can create one or more projects within an existing solution.  
   
-### To create a new project and add it to a solution  
+## Create a new project and add it to a solution  
   
 1.  In Solution Explorer, select the solution.  
   
@@ -92,7 +89,8 @@ You can create one or more projects within an existing solution.
   
 You can set a name for the script project, but the folder names are established by [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] and cannot be changed. You can configure the drive and path specification for the common set of folders by using the **Add New Project** dialog box. Right-click the solution icon in **Solution Explorer**, and then click **Add**. The default location for script project folders is: C:\Documents and Settings\\*username*\My Documents\SQL Server Management Studio\Projects\\.  
   
-## See Also  
+## See Also
+
 [Solution Explorer](../../ssms/solution/solution-explorer.md)  
 [Add an Existing Project to a Solution](../../ssms/solution/add-an-existing-project-to-a-solution.md)  
 [Add New Items to a Project](../../ssms/solution/add-new-items-to-a-project.md)  
@@ -100,4 +98,3 @@ You can set a name for the script project, but the folder names are established 
 [Change the Default Location for Projects](../../ssms/solution/change-the-default-location-for-projects.md)  
 [Remove or Delete an Item or Project](../../ssms/solution/remove-or-delete-an-item-or-project.md)  
 [Delete a Solution](../../ssms/solution/delete-a-solution.md)  
-  

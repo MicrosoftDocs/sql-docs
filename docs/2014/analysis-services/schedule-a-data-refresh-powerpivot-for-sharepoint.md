@@ -148,7 +148,7 @@ manager: craigg
   
  If you see a status message that is unexpected (for example, a refresh operation failed or was cancelled), you can investigate the problem by checking permissions and server availability.  
   
- Review the PowerPivot data refresh troubleshooting page on the TechNet WIKI for help on resolving data refresh problems. For more information see [Troubleshooting PowerPivot Data Refresh](http://go.microsoft.com/fwlink/?LinkId=251594).  
+ Review the PowerPivot data refresh troubleshooting page on the TechNet WIKI for help on resolving data refresh problems. For more information see [Troubleshooting PowerPivot Data Refresh](https://go.microsoft.com/fwlink/?LinkId=251594).  
   
 > [!NOTE]  
 >  SharePoint administrators can help you troubleshoot data refresh problems by viewing the consolidated data refresh reports in the PowerPivot Management Dashboard in Central Administration. For more information, see [PowerPivot Management Dashboard and Usage Data](power-pivot-sharepoint/power-pivot-management-dashboard-and-usage-data.md).  

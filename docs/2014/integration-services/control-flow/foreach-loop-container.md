@@ -93,7 +93,7 @@ manager: craigg
 -   <xref:Microsoft.SqlServer.Dts.Runtime.ForEachLoop>  
   
 ## Related Content  
- Blog entry, [SSIS For Each Node List Enumerator](http://go.microsoft.com/fwlink/?LinkId=220671), on bidn.com.  
+ Blog entry, [SSIS For Each Node List Enumerator](https://go.microsoft.com/fwlink/?LinkId=220671), on bidn.com.  
   
 ## See Also  
  [Control Flow](control-flow.md)   

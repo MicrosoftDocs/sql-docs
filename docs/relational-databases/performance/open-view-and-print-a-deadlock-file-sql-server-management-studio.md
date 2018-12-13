@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "opening deadlock files"
   - "printing deadlock files"
 ms.assetid: 5061b13f-2cb7-457a-b8d0-fbd437b510ab
-author: MikeRayMSFT
-ms.author: mikeray
+author: julieMSFT
+ms.author: jrasnick
 manager: craigg
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---

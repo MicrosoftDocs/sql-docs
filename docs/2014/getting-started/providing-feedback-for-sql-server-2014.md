@@ -31,7 +31,7 @@ manager: craigg
   
  You can find the [!INCLUDE[msCoName](../includes/msconame-md.md)] Connect [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] feedback page in many ways.  
   
--   Go to the [!INCLUDE[msCoName](../includes/msconame-md.md)] Connect [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] feedback [Web page](http://go.microsoft.com/fwlink/?linkid=34178).  
+-   Go to the [!INCLUDE[msCoName](../includes/msconame-md.md)] Connect [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] feedback [Web page](https://go.microsoft.com/fwlink/?linkid=34178).  
   
 -   On the Help toolbar of the [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], click the **Send Feedback** button, or select the **Community/Send Feedback** command.  
   

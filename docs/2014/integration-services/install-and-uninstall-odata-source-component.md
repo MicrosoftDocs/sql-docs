@@ -22,7 +22,7 @@ manager: craigg
   
 -   SQL Server Integration Services (to run packages outside Visual Studio)  
   
- To install the OData Source Component, download [SQL Server 2014 Feature Pack](http://go.microsoft.com/fwlink/p/?LinkId=391999) and run one of the following MSI files.  
+ To install the OData Source Component, download [SQL Server 2014 Feature Pack](https://go.microsoft.com/fwlink/p/?LinkId=391999) and run one of the following MSI files.  
   
 -   ODataSourceForSQLServer2014-amd64.msi for 64bit platforms  
   

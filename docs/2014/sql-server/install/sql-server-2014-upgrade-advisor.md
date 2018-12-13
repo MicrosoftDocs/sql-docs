@@ -15,7 +15,7 @@ manager: craigg
 # SQL Server 2014 Upgrade Advisor
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Upgrade Advisor analyzes the configuration of installed [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] components, and then generates a report of issues that you must address to assure a successful upgrade.  
   
- Get the Upgrade Advisor installation file (sqlua.msi) in the redist folder of the installation media, or as part of the [SQL 2014 Feature Pack download](http://www.microsoft.com/download/details.aspx?id=42295).  
+ Get the Upgrade Advisor installation file (sqlua.msi) in the redist folder of the installation media, or as part of the [SQL 2014 Feature Pack download](https://www.microsoft.com/download/details.aspx?id=42295).  
   
 |Topic|Description|  
 |-----------|-----------------|  

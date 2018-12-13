@@ -653,7 +653,7 @@
       - name: Extended events
         href: /sql/relational-databases/extended-events/
         homepage: /sql/relational-databases/extended-events/extended-events
-      - name: Graphs
+      - name: SQL Graph
         href: /sql/relational-databases/graphs/
         homepage: /sql/relational-databases/graphs/sql-graph-overview
       - name: Import and export

@@ -19,7 +19,7 @@ manager: craigg
   
  A key benefit of using [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] with [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] data sources is to leverage readable secondary replicas as a reporting data source while, at the same time the secondary replicas are providing a failover for a primary database.  
   
- For general information on [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)], see [AlwaysOn FAQ for SQL Server 2012 (http://msdn.microsoft.com/sqlserver/gg508768)](http://msdn.microsoft.com/sqlserver/gg508768).  
+ For general information on [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)], see [AlwaysOn FAQ for SQL Server 2012 (https://msdn.microsoft.com/sqlserver/gg508768)](https://msdn.microsoft.com/sqlserver/gg508768).  
   
    
   
@@ -30,7 +30,7 @@ manager: craigg
   
  The message occurs when you include one of the [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] properties in the [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] connection string, but the server does not recognize the property. The noted error message will be seen when you click the 'Test Connection' button in [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] user interfaces and when you preview the report if remote errors are enabled on the report servers.  
   
- For more information on the required hotfix, see [KB 2654347A hotfix introduces support for the AlwaysOn features from SQL Server 2012 to the .NET Framework 3.5 SP1](http://go.microsoft.com/fwlink/?LinkId=242896).  
+ For more information on the required hotfix, see [KB 2654347A hotfix introduces support for the AlwaysOn features from SQL Server 2012 to the .NET Framework 3.5 SP1](https://go.microsoft.com/fwlink/?LinkId=242896).  
   
  For information on other [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] requirements, see [Prerequisites, Restrictions, and Recommendations for AlwaysOn Availability Groups &#40;SQL Server&#41;](prereqs-restrictions-recommendations-always-on-availability.md).  
   
@@ -116,7 +116,7 @@ manager: craigg
   
 -   ReportServerTempDB  
   
- Native mode does not support or use the Alerting databases and related features. You configure native mode report servers in the [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] Configuration Manager. For SharePoint mode you configure the service application database name to be the name of the "client access point" you created as part of the SharePoint configuration. For more information on configuring SharePoint with [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)], see [Configure and manage SQL Server availability groups for SharePoint Server (http://go.microsoft.com/fwlink/?LinkId=245165)](http://go.microsoft.com/fwlink/?LinkId=245165).  
+ Native mode does not support or use the Alerting databases and related features. You configure native mode report servers in the [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] Configuration Manager. For SharePoint mode you configure the service application database name to be the name of the "client access point" you created as part of the SharePoint configuration. For more information on configuring SharePoint with [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)], see [Configure and manage SQL Server availability groups for SharePoint Server (https://go.microsoft.com/fwlink/?LinkId=245165)](https://go.microsoft.com/fwlink/?LinkId=245165).  
   
 > [!NOTE]
 >  SharePoint mode report servers use a synchronization process between the [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] service application databases and the SharePoint content databases. It is important to maintain the report server databases and content databases together. You should consider configuring them in the same availability groups so they failover and recover as a set. Consider the following scenario:  

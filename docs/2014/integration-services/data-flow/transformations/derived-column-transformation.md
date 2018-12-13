@@ -69,8 +69,8 @@ manager: craigg
 -   [Derive Column Values by Using the Derived Column Transformation](derived-column-transformation.md)  
   
 ## Related Content  
- Technical article, [SSIS Expression Examples](http://go.microsoft.com/fwlink/?LinkId=220761), on social.technet.microsoft.com  
+ Technical article, [SSIS Expression Examples](https://go.microsoft.com/fwlink/?LinkId=220761), on social.technet.microsoft.com  
   
- Curated Answer, [How to Split Column Data using SSIS](http://go.microsoft.com/fwlink/?LinkId=321995), on curatedviews.cloudapp.net.  
+ Curated Answer, [How to Split Column Data using SSIS](https://go.microsoft.com/fwlink/?LinkId=321995), on curatedviews.cloudapp.net.  
   
   

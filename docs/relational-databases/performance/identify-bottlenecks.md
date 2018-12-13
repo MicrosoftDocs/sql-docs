@@ -19,8 +19,8 @@ helpviewer_keywords:
   - "bottlenecks [SQL Server]"
   - "identifying bottlenecks [SQL Server]"
 ms.assetid: db079e65-ee80-4105-aec9-f8230d0d6635
-author: MikeRayMSFT
-ms.author: mikeray
+author: julieMSFT
+ms.author: jrasnick
 manager: craigg
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---

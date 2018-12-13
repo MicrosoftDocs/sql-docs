@@ -6,8 +6,7 @@ ms.prod: sql
 ms.technology: scripting
 ms.reviewer: ""
 ms.topic: conceptual
-f1_keywords: 
-  - "vs.wildcards"
+f1_keywords:
   - "vswildcardsbuilder"
 helpviewer_keywords: 
   - "searches [SQL Server Management Studio], wildcards"
@@ -42,5 +41,3 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 ## See Also  
  [Search and Replace](../../relational-databases/scripting/search-and-replace.md)   
  [Search Text with Regular Expressions](../../relational-databases/scripting/search-text-with-regular-expressions.md)  
-  
-  

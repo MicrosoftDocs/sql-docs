@@ -120,6 +120,9 @@ FROM Product
 |2|LL Headset|bike|  
 |3|HL Mountain Frame|bike|  
 |3|HL Mountain Frame|mountain|  
+
+  >[!NOTE]
+  > The order of the output may vary as the order is _not_ guaranteed to match the order of the substrings in the input string.
   
 ### C. Aggregation by values  
 Users must create a report that shows the number of products per each tag, ordered by number of products, and to filter only the tags with more than two products.  

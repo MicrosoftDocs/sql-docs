@@ -12,8 +12,8 @@ helpviewer_keywords:
   - "plan guides [SQL Server], enabling"
   - "disabling plan guides"
 ms.assetid: b00ab550-5308-4cb8-8330-483cd1d25654
-author: MikeRayMSFT
-ms.author: mikeray
+author: julieMSFT
+ms.author: jrasnick
 manager: craigg
 ---
 # Enable or Disable a Plan Guide

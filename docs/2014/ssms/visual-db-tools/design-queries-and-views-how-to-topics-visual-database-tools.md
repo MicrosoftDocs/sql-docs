@@ -7,7 +7,7 @@ ms.reviewer: ""
 ms.technology: ssms
 ms.topic: conceptual
 f1_keywords: 
-  - "??? vs.solutionexplorer.file.query"
+  - "vs.solutionexplorer.file.query"
 helpviewer_keywords: 
   - "queries [Visual Database Tools]"
   - "View Designer, about View Designer"
@@ -55,5 +55,3 @@ manager: craigg
 ## Related Sections  
  [Design Tables &#40;Visual Database Tools&#41;](design-tables-visual-database-tools.md)  
  Detailed steps for designing and maintaining database structure through tables, columns, keys, indexes, stored procedures, and more.  
-  
-  

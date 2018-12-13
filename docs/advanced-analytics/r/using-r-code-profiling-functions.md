@@ -15,7 +15,7 @@ manager: cgronlun
 
 In addition to using SQL Server resources and tools to monitor R script execution, you can use performance tools provided by other R packages to get more information about internal function calls. 
 
-> [!TIP
+> [!TIP]
 > This article provides basic resources to get you started. For expert guidance, we recommend the *Performance* section in ["Advanced R" by Hadley Wickham](https://adv-r.had.co.nz).
 
 ## Using RPROF

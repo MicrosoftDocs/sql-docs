@@ -1,6 +1,6 @@
 ---
 title: Java language extension in SQL Server 2019 | Microsoft Docs
-description: Run Java code on SQL Server 2019 using the Java language extension.
+description: Install, configure, and validate the Java language extension on SQL Server 2019 for both Linux and Windows systems.
 ms.prod: sql
 ms.technology: machine-learning
 

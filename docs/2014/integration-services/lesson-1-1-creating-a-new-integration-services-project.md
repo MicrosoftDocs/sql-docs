@@ -19,7 +19,7 @@ manager: craigg
 > [!NOTE]  
 >  This tutorial requires Microsoft SQL Server Data Tools.  
 >   
->  For more information on installing the SQL Server Data Tools see [SQL Server Data Tools Download](http://msdn.microsoft.com/data/hh297027).  
+>  For more information on installing the SQL Server Data Tools see [SQL Server Data Tools Download](https://msdn.microsoft.com/data/hh297027).  
   
 ### To create a new Integration Services project  
   

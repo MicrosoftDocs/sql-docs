@@ -54,7 +54,7 @@ manager: craigg
 -   [Deploy Projects to Integration Services Server](../deploy-projects-to-integration-services-server.md)  
   
 ## Related Content  
- Blog entry, [Thoughts on Branching Strategies for SSIS Projects](http://go.microsoft.com/fwlink/?LinkId=245739), on mattmasson.com.  
+ Blog entry, [Thoughts on Branching Strategies for SSIS Projects](https://go.microsoft.com/fwlink/?LinkId=245739), on mattmasson.com.  
   
 ## See Also  
  [dtexec Utility](dtexec-utility.md)  

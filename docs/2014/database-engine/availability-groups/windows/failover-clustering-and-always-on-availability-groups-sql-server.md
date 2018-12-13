@@ -43,7 +43,7 @@ manager: craigg
 ### Cross-Cluster Migration of AlwaysOn Availability Groups for OS Upgrade  
  Beginning with [!INCLUDE[ssSQL11SP1](../../../includes/sssql11sp1-md.md)], [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] supports cross-cluster migration of availability groups for deployments to a new Windows Server Failover Clustering (WSFC) cluster. A cross-cluster migration moves one availability group or a batch of availability groups to the new, destination WSFC cluster with minimal downtime. The cross-cluster migration process enables you to maintain your service level agreements (SLAs) when upgrading to a [!INCLUDE[win8srv](../../../includes/win8srv-md.md)] cluster. [!INCLUDE[ssSQL11SP1](../../../includes/sssql11sp1-md.md)] (or a later version) must be installed and enabled for AlwaysOn on the destination WSFC cluster. The success of a cross-cluster migration depends on thorough planning and preparation of the destination WSFC cluster.  
   
- For more information, see [Cross-Cluster Migration of AlwaysOn Availability Groups for OS Upgrade](http://msdn.microsoft.com/library/jj873730.aspx).  
+ For more information, see [Cross-Cluster Migration of AlwaysOn Availability Groups for OS Upgrade](https://msdn.microsoft.com/library/jj873730.aspx).  
   
 ##  <a name="SQLServerFC"></a> [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Failover Cluster Instances (FCIs) and Availability Groups  
  You can set up a second layer of failover at the server-instance level by implementing [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] failover clustering together with the WSFC cluster. An availability replica can be hosted by either a standalone instance of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] or an FCI instance. Only one FCI partner can host a replica for a given availability group. When an availability replica is running on an FCI, the possible owners list for the availability group will contain only the active FCI node.  
@@ -70,7 +70,7 @@ manager: craigg
  **Failover policy settings for the availability group apply to all replicas, whether it is hosted in a standalone instance or an FCI instance.  
   
 > [!NOTE]  
->  For more information about **Number of nodes** within Failover Clustering and **AlwaysOn Availability Groups** for different editions of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], see [Features Supported by the Editions of SQL Server 2012](http://go.microsoft.com/fwlink/?linkid=232473) (http://go.microsoft.com/fwlink/?linkid=232473).  
+>  For more information about **Number of nodes** within Failover Clustering and **AlwaysOn Availability Groups** for different editions of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], see [Features Supported by the Editions of SQL Server 2012](https://go.microsoft.com/fwlink/?linkid=232473) (https://go.microsoft.com/fwlink/?linkid=232473).  
   
 ### Considerations for hosting an Availability Replica on an FCI  
   
@@ -106,19 +106,19 @@ manager: craigg
   
 -   **Blogs:**  
   
-     [Configure Windows Failover Clustering for SQL Server (Availability Group or FCI) with Limited Security](http://blogs.msdn.com/b/sqlalwayson/archive/2012/06/05/configure-windows-failover-clustering-for-sql-server-availability-group-or-fci-with-limited-security.aspx)  
+     [Configure Windows Failover Clustering for SQL Server (Availability Group or FCI) with Limited Security](https://blogs.msdn.com/b/sqlalwayson/archive/2012/06/05/configure-windows-failover-clustering-for-sql-server-availability-group-or-fci-with-limited-security.aspx)  
   
-     [SQL Server AlwaysOn Team Blogs: The official SQL Server AlwaysOn Team Blog](http://blogs.msdn.com/b/sqlalwayson/)  
+     [SQL Server AlwaysOn Team Blogs: The official SQL Server AlwaysOn Team Blog](https://blogs.msdn.com/b/sqlalwayson/)  
   
-     [CSS SQL Server Engineers Blogs](http://blogs.msdn.com/b/psssql/)  
+     [CSS SQL Server Engineers Blogs](https://blogs.msdn.com/b/psssql/)  
   
 -   **Whitepapers:**  
   
-     [AlwaysOn Architecture Guide: Building a High Availability and Disaster Recovery Solution by Using Failover Cluster Instances and Availability Groups](http://msdn.microsoft.com/library/jj215886.aspx)  
+     [AlwaysOn Architecture Guide: Building a High Availability and Disaster Recovery Solution by Using Failover Cluster Instances and Availability Groups](https://msdn.microsoft.com/library/jj215886.aspx)  
   
-     [Microsoft SQL Server AlwaysOn Solutions Guide for High Availability and Disaster Recovery](http://go.microsoft.com/fwlink/?LinkId=227600)  
+     [Microsoft SQL Server AlwaysOn Solutions Guide for High Availability and Disaster Recovery](https://go.microsoft.com/fwlink/?LinkId=227600)  
   
-     [Microsoft White Papers for SQL Server 2012](http://msdn.microsoft.com/library/hh403491.aspx)  
+     [Microsoft White Papers for SQL Server 2012](https://msdn.microsoft.com/library/hh403491.aspx)  
   
      [SQL Server Customer Advisory Team Whitepapers](http://sqlcat.com/)  
   

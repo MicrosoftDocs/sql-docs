@@ -21,7 +21,7 @@ manager: craigg
   You can monitor the performance of [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] by using [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] or Performance Monitor, an application sometimes referred to as **PerfMon**. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] lets you create and manage traces and analyze and replay trace results. Performance Monitor reports on server status, as indexed through certain counters, which are discussed in the next section.  
   
 > [!NOTE]  
->  For more information about monitoring, see the [SQL Server 2008 R2 Operations Guide](http://go.microsoft.com/fwlink/?LinkID=225539).  
+>  For more information about monitoring, see the [SQL Server 2008 R2 Operations Guide](https://go.microsoft.com/fwlink/?LinkID=225539).  
   
 ## In This Section  
  Follow these links to learn more about monitoring.  

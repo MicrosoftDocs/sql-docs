@@ -198,7 +198,7 @@ NATURAL PREDICTION JOIN
  The predicted sales volume is higher than the current range of sales for Tuesday, and the probability of the prediction is very high. However, you might want to create multiple predictions by using a batch process to test a variety of hypotheses on the model.  
   
 > [!NOTE]  
->  The Data Mining Add-Ins for Excel 2007 provide logistic regression wizards that make it easy to answer complex questions, such as how many Level Two Operators would be needed to improve service grade to a target level for a specific shift. The data mining add-ins are a free download, and include wizards that are based on the neural network and/or logistic regression algorithms. For more information, see the [Data Mining Add-ins for Office 2007](http://go.microsoft.com/fwlink/?LinkID=117790) Web site.  
+>  The Data Mining Add-Ins for Excel 2007 provide logistic regression wizards that make it easy to answer complex questions, such as how many Level Two Operators would be needed to improve service grade to a target level for a specific shift. The data mining add-ins are a free download, and include wizards that are based on the neural network and/or logistic regression algorithms. For more information, see the [Data Mining Add-ins for Office 2007](https://go.microsoft.com/fwlink/?LinkID=117790) Web site.  
   
 ## List of Prediction Functions  
  All [!INCLUDE[msCoName](../../includes/msconame-md.md)] algorithms support a common set of functions. There are no prediction functions that are specific to the [!INCLUDE[msCoName](../../includes/msconame-md.md)] Neural Network algorithm; however, the algorithm supports the functions that are listed in the following table.  

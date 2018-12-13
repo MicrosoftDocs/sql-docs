@@ -206,7 +206,7 @@ manager: craigg
 -   [View Log Entries in the Log Events Window](../view-log-entries-in-the-log-events-window.md)  
   
 ## Related Content  
- [DTLoggedExec Tool for Full and Detail Logging (CodePlex Project)](http://go.microsoft.com/fwlink/?LinkId=150579)  
+ [DTLoggedExec Tool for Full and Detail Logging (CodePlex Project)](https://go.microsoft.com/fwlink/?LinkId=150579)  
   
 ## See Also  
  [View Log Entries in the Log Events Window](../view-log-entries-in-the-log-events-window.md)  

@@ -57,7 +57,7 @@ manager: craigg
 -   Your Windows Azure publishing profile.  
   
     > [!CAUTION]  
-    >  SQL Server currently supports publishing profile version 2.0. To download the supported version of the publishing profile, see [Download Publishing Profile 2.0](http://go.microsoft.com/fwlink/?LinkId=396421).  
+    >  SQL Server currently supports publishing profile version 2.0. To download the supported version of the publishing profile, see [Download Publishing Profile 2.0](https://go.microsoft.com/fwlink/?LinkId=396421).  
   
 -   The management certificate uploaded to your Windows Azure subscription.  
   
@@ -79,7 +79,7 @@ manager: craigg
   
 -   Credentials with Backup operator privileges on the database you plan to deploy, from the source instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- For more information about running SQL Server in Windows Azure virtual machines, see [Getting Ready to Migrate to SQL Server in Windows Azure Virtual Machines](http://msdn.microsoft.com/library/dn133142.aspx).  
+ For more information about running SQL Server in Windows Azure virtual machines, see [Getting Ready to Migrate to SQL Server in Windows Azure Virtual Machines](https://msdn.microsoft.com/library/dn133142.aspx).  
   
  On computers running Windows Server operating systems, you must use the following configuration settings to run this wizard:  
   
@@ -117,9 +117,9 @@ manager: craigg
 ###  <a name="filestream"></a> Considerations for Deploying a FILESTREAM-enabled Database to an Azure VM  
  Note the following guidelines and restrictions when deploying databases that have BLOBS stored in FILESTREAM objects:  
   
--   The deployment feature cannot deploy a FILESTREAM-enabled database into a new VM. If FILESTREAM is not enabled in the VM before you run the wizard, the database restore operation will fail and the wizard operation will not be able to complete successfully. To successfully deploy a database that uses FILESTREAM, enable FILESTREAM in the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] on the host VM before launching the wizard. For more information, see [FILESTREAM (SQL Server)](http://msdn.microsoft.com/library/gg471497.aspx).  
+-   The deployment feature cannot deploy a FILESTREAM-enabled database into a new VM. If FILESTREAM is not enabled in the VM before you run the wizard, the database restore operation will fail and the wizard operation will not be able to complete successfully. To successfully deploy a database that uses FILESTREAM, enable FILESTREAM in the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] on the host VM before launching the wizard. For more information, see [FILESTREAM (SQL Server)](https://msdn.microsoft.com/library/gg471497.aspx).  
   
--   If your database utilizes In-Memory OLTP, you can deploy the database to an Azure VM without any modifications to the database. For more information, see [In-Memory OLTP (In-Memory Optimization)](http://msdn.microsoft.com/library/dn133186\(SQL.120\).aspx).  
+-   If your database utilizes In-Memory OLTP, you can deploy the database to an Azure VM without any modifications to the database. For more information, see [In-Memory OLTP (In-Memory Optimization)](https://msdn.microsoft.com/library/dn133186\(SQL.120\).aspx).  
   
 ###  <a name="geography"></a> Considerations for Geographic Distribution of Assets  
  Note that the following assets must be located in the same geographic region:  
@@ -251,7 +251,7 @@ manager: craigg
  [Export a Data-tier Application](../data-tier-applications/export-a-data-tier-application.md)   
  [Import a BACPAC File to Create a New User Database](../data-tier-applications/import-a-bacpac-file-to-create-a-new-user-database.md)   
  [Azure SQL Database Backup and Restore](https://msdn.microsoft.com/library/azure/jj650016.aspx)   
- [SQL Server Deployment in Windows Azure Virtual Machines](http://msdn.microsoft.com/library/dn133141.aspx)   
- [Getting Ready to Migrate to SQL Server in Windows Azure Virtual Machines](http://msdn.microsoft.com/library/dn133142.aspx)  
+ [SQL Server Deployment in Windows Azure Virtual Machines](https://msdn.microsoft.com/library/dn133141.aspx)   
+ [Getting Ready to Migrate to SQL Server in Windows Azure Virtual Machines](https://msdn.microsoft.com/library/dn133142.aspx)  
   
   

@@ -47,7 +47,7 @@ manager: craigg
 ### Code  
   
 ```  
-<MergePartitions xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">  
+<MergePartitions xmlns="https://schemas.microsoft.com/analysisservices/2003/engine">  
   <Sources>  
     <Source>  
       <DatabaseID>Adventure Works DW Multidimensional 2012</DatabaseID>  

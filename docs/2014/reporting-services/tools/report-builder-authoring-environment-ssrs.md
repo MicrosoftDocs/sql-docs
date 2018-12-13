@@ -36,7 +36,7 @@ manager: craigg
   
 -   Save your report and related items s to a SharePoint library, a report server, or your local computer.  
   
- Report Builder and Report Designer share many features. For more information about Report Builder, see [Report Builder documentation](http://go.microsoft.com/fwlink/?LinkId=154494) on msdn.microsoft.com.  
+ Report Builder and Report Designer share many features. For more information about Report Builder, see [Report Builder documentation](https://go.microsoft.com/fwlink/?LinkId=154494) on msdn.microsoft.com.  
   
 ## See Also  
  [Configure Report Builder Access](../report-server/configure-report-builder-access.md)   

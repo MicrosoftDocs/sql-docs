@@ -107,7 +107,7 @@ manager: craigg
 -   [Sort Data for the Merge and Merge Join Transformations](transformations/sort-data-for-the-merge-and-merge-join-transformations.md)  
   
 ## Related Content  
- Wiki article, [SSIS with Oracle Connectors](http://go.microsoft.com/fwlink/?LinkId=220670), on social.technet.microsoft.com.  
+ Wiki article, [SSIS with Oracle Connectors](https://go.microsoft.com/fwlink/?LinkId=220670), on social.technet.microsoft.com.  
   
 ## See Also  
  [OLE DB Destination](ole-db-destination.md)   

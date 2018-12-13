@@ -96,7 +96,7 @@ manager: craigg
   
 -   [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssASversion2005](../includes/ssasversion2005-md.md)], [!INCLUDE[ssASversion10](../includes/ssasversion10-md.md)], [!INCLUDE[ssASCurrent](../includes/ssascurrent-md.md)], or [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]  
   
--   The [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)] database. By default, the sample databases are not installed, to enhance security. To install official sample databases for [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], visit the [Microsoft SQL Sample Databases](http://go.microsoft.com/fwlink/?LinkId=88417) page and select the databases that you want to install..  
+-   The [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)] database. By default, the sample databases are not installed, to enhance security. To install official sample databases for [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], visit the [Microsoft SQL Sample Databases](https://go.microsoft.com/fwlink/?LinkId=88417) page and select the databases that you want to install..  
   
 > [!NOTE]  
 >  When you review tutorials, we recommend that you add **Next topic** and **Previous topic** buttons to the document viewer toolbar.  

@@ -148,7 +148,7 @@ End Class
   
 3.  Browse to the location where you installed the [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] Report Samples project.  
   
-     The download the report samples, go to [AdventureWorks 2012 Report Samples](http://go.microsoft.com/fwlink/?LinkId=404153)  
+     The download the report samples, go to [AdventureWorks 2012 Report Samples](https://go.microsoft.com/fwlink/?LinkId=404153)  
   
 4.  Select the Sales Order Detail.rdl file and click the **Add** button.  
   

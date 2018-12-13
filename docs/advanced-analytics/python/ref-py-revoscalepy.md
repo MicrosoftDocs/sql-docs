@@ -41,9 +41,9 @@ The **revoscalepy** module is based on Python 3.5 and available only when you in
 
 This section lists the functions by category to give you an idea of how each one is used. You can also use the [table of contents](https://docs.microsoft.com/machine-learning-server/python-reference/introducing-python-package-reference) to find functions in alphabetical order.
 
-## 1- Data sources and compute contexts
+## 1-Data source and compute
 
-**revoscalepy** includes functions for creating data sources and setting the location, or context, of where computations are performed. Functions relevant to SQL Server scenarios are listed in the table below.
+**revoscalepy** includes functions for creating data sources and setting the location, or *compute context*, of where computations are performed. Functions relevant to SQL Server scenarios are listed in the table below.
 
 SQL Server and Python use different data types in some cases. For a list of mappings between SQL and Python data types, see [Python-to-SQL data types](python-libraries-and-data-types.md).
 
@@ -57,7 +57,7 @@ SQL Server and Python use different data types in some cases. For a list of mapp
 > [!TIP]
 > If you are new to the idea of data sources or compute contexts, we recommend that you start with [distributed computing](https://docs.microsoft.com/machine-learning-server/r/how-to-revoscaler-distributed-computing) in the Microsoft Machine Learning Server documentation.
 
-## 2-Data manipulation (ETL) functions
+## 2-Data manipulation (ETL)
 
 | Function | Description |
 |----------|-------------|

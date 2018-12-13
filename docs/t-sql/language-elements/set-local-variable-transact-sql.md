@@ -65,7 +65,7 @@ SET @local_variable {+= | -= | *= | /= | %= | &= | ^= | |= } expression
 ```  
   
 ## Arguments  
- **@** *local_variable*  
+ **@** _local_variable_  
  Is the name of a variable of any type except **cursor**, **text**, **ntext**, **image**, or **table**. Variable names must start with one at sign (**@**). Variable names must comply with the rules for [identifiers](../../relational-databases/databases/database-identifiers.md).  
   
  *property_name*  
@@ -80,10 +80,10 @@ SET @local_variable {+= | -= | *= | /= | %= | &= | ^= | |= } expression
  { **.** | **::** }  
  Specifies a method of a CLR user-define type. For an instance (non-static) method, use  a period (**.**). For a static method, use two colons (**::**). To invoke a method, property, or field of a CLR user-defined type, you must have EXECUTE permission on the type.  
   
- *method_name* **(** *argument* [ **,**... *n* ] **)**  
+ _method_name_ **(** _argument_ [ **,**... *n* ] **)**  
  Is a method of a user-defined type that takes one or more arguments to modify the state of an instance of a type. Static methods must be public.  
   
- **@** *SQLCLR_local_variable*  
+ **@** _SQLCLR_local_variable_  
  Is a variable whose type is located in an assembly. For more information, see [Common Language Runtime &#40;CLR&#41; Integration Programming Concepts](../../relational-databases/clr-integration/common-language-runtime-clr-integration-programming-concepts.md).  
   
  *mutator_method*  
@@ -172,7 +172,7 @@ SET @local_variable {+= | -= | *= | /= | %= | &= | ^= | |= } expression
   
  Variables can be used only in expressions, not instead of object names or keywords. To construct dynamic [!INCLUDE[tsql](../../includes/tsql-md.md)] statements, use EXECUTE.  
   
- The syntax rules for SET **@***cursor_variable* do not include the LOCAL and GLOBAL keywords. When the SET **@***cursor_variable* = CURSOR... syntax is used, the cursor is created as GLOBAL or LOCAL, depending on the setting of the default to local cursor database option.  
+ The syntax rules for SET **@**_cursor_variable_ do not include the LOCAL and GLOBAL keywords. When the SET **@**_cursor_variable_ = CURSOR... syntax is used, the cursor is created as GLOBAL or LOCAL, depending on the setting of the default to local cursor database option.  
   
  Cursor variables are always local, even if they reference a global cursor. When a cursor variable references a global cursor, the cursor has both a global and a local cursor reference. For more information, see Example C.  
   
@@ -183,7 +183,7 @@ SET @local_variable {+= | -= | *= | /= | %= | &= | ^= | |= } expression
  Do not use a variable in a SELECT statement to concatenate values (that is, to compute aggregate values). Unexpected query results may occur. This is because all expressions in the SELECT list (including assignments) are not guaranteed to be executed exactly once for each output row. For more information, see [this KB article](https://support.microsoft.com/kb/287515).  
   
 ## Permissions  
- Requires membership in the public role. All users can use SET **@***local_variable*.  
+ Requires membership in the public role. All users can use SET **@**_local_variable_.  
   
 ## Examples  
   

@@ -15,6 +15,6 @@ manager: craigg
 ---
 # NS$&lt;service name&gt; Properties (Advanced Tab)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
-  [!INCLUDE[ssNS](../../includes/ssns-md.md)] is implemented as a service named in the format **NS$***<user_configured name>*. If custom properties are defined, they appear on this tab, with their values. This tab may have no properties listed.  
+  [!INCLUDE[ssNS](../../includes/ssns-md.md)] is implemented as a service named in the format **NS$**_<user_configured name>_. If custom properties are defined, they appear on this tab, with their values. This tab may have no properties listed.  
   
   

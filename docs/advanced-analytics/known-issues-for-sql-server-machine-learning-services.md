@@ -452,7 +452,7 @@ go
 Beginning with SQL Server 2017 CU2, the following message might appear even if Python code otherwise runs successfully:
 
 > *STDERR message(s) from external script:*
-> **~PYTHON_SERVICES\lib\site-packages\revoscalepy\utils\RxTelemetryLogger*
+> *~PYTHON_SERVICES\lib\site-packages\revoscalepy\utils\RxTelemetryLogger*
 > *SyntaxWarning: telemetry_state is used prior to global declaration*
 
 

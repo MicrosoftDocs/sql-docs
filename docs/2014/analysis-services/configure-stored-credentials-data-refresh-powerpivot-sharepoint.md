@@ -29,7 +29,7 @@ manager: craigg
   
  [Configure a predefined account for accessing external or third-party data sources](#config3rd)  
   
- If you have problems configuring or using data refresh, refer to the [Troubleshooting PowerPivot Data Refresh](http://go.microsoft.com/fwlink/?LinkID=223279) page on the TechNet wiki for possible solutions.  
+ If you have problems configuring or using data refresh, refer to the [Troubleshooting PowerPivot Data Refresh](https://go.microsoft.com/fwlink/?LinkID=223279) page on the TechNet wiki for possible solutions.  
   
 ##  <a name="configAny"></a> Configure any Windows account for data refresh  
  When a SharePoint user defines a data refresh schedule, he or she must specify the user identity under which data refresh is performed. Options include selecting the PowerPivot unattended data refresh account, entering his or her Windows domain user account, or entering some other Windows user account that is valid for data refresh purposes. The steps in this section are for the last option: specifying some other Windows account.  
@@ -132,7 +132,7 @@ manager: craigg
   
  If an error occurs, you can click **Configure schedule** in the data refresh history page to try different credentials. You might also need to inspect the data source connection information in the original workbook to view the connection string that is used during data refresh. The connection string will provide information about the server location and database that you can use to troubleshoot the problem.  
   
- For more information about troubleshooting, see [Troubleshooting PowerPivot Data Refresh](http://go.microsoft.com/fwlink/p/?LinkID=223279) on the TechNet Wiki.  
+ For more information about troubleshooting, see [Troubleshooting PowerPivot Data Refresh](https://go.microsoft.com/fwlink/p/?LinkID=223279) on the TechNet Wiki.  
   
 ##  <a name="config3rd"></a> Configure a predefined account for accessing external or third-party data sources  
  Database servers often come with their own authentication methods. If you have a PowerPivot workbook that requires database credentials to access an external data source during data refresh, you can create a target application ID for the credentials, and then specify the target application in the Data Sources section of the schedule data refresh page.  

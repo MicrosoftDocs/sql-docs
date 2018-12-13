@@ -15,7 +15,7 @@ ms.author: douglasl
 manager: craigg
 ---
 # Task 2: Adding Domain Values Manually
-  In this task, you add a value for the **Country** domain manually. See [Change Domain Values](http://msdn.microsoft.com/library/hh510408.aspx) topic for more details about the fields on this page.  
+  In this task, you add a value for the **Country** domain manually. See [Change Domain Values](https://msdn.microsoft.com/library/hh510408.aspx) topic for more details about the fields on this page.  
   
 1.  Click **Country** domain in the **Domain list**.  
   

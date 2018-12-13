@@ -145,9 +145,9 @@ manager: craigg
   
 -   **Blogs:**  
   
-     [SQL Server Always On Team Blogs: The official SQL Server AlwaysOn Team Blog](http://blogs.msdn.com/b/sqlalwayson/)  
+     [SQL Server Always On Team Blogs: The official SQL Server AlwaysOn Team Blog](https://blogs.msdn.com/b/sqlalwayson/)  
   
-     [CSS SQL Server Engineers Blogs](http://blogs.msdn.com/b/psssql/)  
+     [CSS SQL Server Engineers Blogs](https://blogs.msdn.com/b/psssql/)  
   
 -   **Videos:**  
   
@@ -157,7 +157,7 @@ manager: craigg
   
 -   **Whitepapers:**  
   
-     [Microsoft SQL Server Always On Solutions Guide for High Availability and Disaster Recovery](http://go.microsoft.com/fwlink/?LinkId=227600)  
+     [Microsoft SQL Server Always On Solutions Guide for High Availability and Disaster Recovery](https://go.microsoft.com/fwlink/?LinkId=227600)  
   
   
   

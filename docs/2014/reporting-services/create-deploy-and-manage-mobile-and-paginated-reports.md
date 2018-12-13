@@ -61,6 +61,6 @@ manager: craigg
  ![Folder icon](media/hlp-16folder.gif "Folder icon") [Feature Reference &#40;Reporting Services&#41;](feature-reference-reporting-services.md)  
   
 ## See Also  
- [SQL Server Resource Center](http://go.microsoft.com/fwlink/?linkID=219676)  
+ [SQL Server Resource Center](https://go.microsoft.com/fwlink/?linkID=219676)  
   
   

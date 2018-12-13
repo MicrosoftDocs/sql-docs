@@ -41,6 +41,6 @@ manager: craigg
   
 ## See Also  
  [Creating a SQL Server Native Client OLE DB Provider Application](creating-a-sql-server-native-client-ole-db-provider-application.md)   
- [Properties (OLE DB)](http://go.microsoft.com/fwlink/?LinkId=112207)  
+ [Properties (OLE DB)](https://go.microsoft.com/fwlink/?LinkId=112207)  
   
   

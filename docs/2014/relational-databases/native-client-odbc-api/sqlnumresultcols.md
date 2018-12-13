@@ -23,7 +23,7 @@ manager: craigg
  Improvements in the database engine starting with [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] allow SQLNumResultCols to obtain more accurate descriptions of the expected results. These more accurate results may differ from the values returned by SQLNumResultCols in previous versions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. For more information, see [Metadata Discovery](../native-client/features/metadata-discovery.md).  
   
 ## See Also  
- [SQLNumResultCols Function](http://go.microsoft.com/fwlink/?LinkId=59359)   
+ [SQLNumResultCols Function](https://go.microsoft.com/fwlink/?LinkId=59359)   
  [ODBC API Implementation Details](odbc-api-implementation-details.md)  
   
   

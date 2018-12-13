@@ -38,8 +38,8 @@ manager: craigg
 ## Corrective Action  
  The [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] server collation property cannot be changed. You will not be able to complete an upgrade of [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. You will need to migrate your [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] installation to a new server which is using a compatible server collation. For more information, see the following:  
   
--   [Upgrade and Migrate Reporting Services](http://go.microsoft.com/fwlink/?LinkId=233227)  
+-   [Upgrade and Migrate Reporting Services](https://go.microsoft.com/fwlink/?LinkId=233227)  
   
--   [Selecting a SQL Server Collation](http://go.microsoft.com/fwlink/?LinkId=233226)  
+-   [Selecting a SQL Server Collation](https://go.microsoft.com/fwlink/?LinkId=233226)  
   
   

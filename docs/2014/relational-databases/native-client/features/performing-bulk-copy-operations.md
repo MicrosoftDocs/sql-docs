@@ -109,6 +109,6 @@ manager: craigg
  [Bulk Import and Export of Data &#40;SQL Server&#41;](../../import-export/bulk-import-and-export-of-data-sql-server.md)   
  [IRowsetFastLoad &#40;OLE DB&#41;](../../native-client-ole-db-interfaces/irowsetfastload-ole-db.md)   
  [IBCPSession &#40;OLE DB&#41;](../../native-client-ole-db-interfaces/ibcpsession-ole-db.md)   
- [Optimizing Bulk Import Performance](http://msdn.microsoft.com/library/ms190421\(SQL.105\).aspx)  
+ [Optimizing Bulk Import Performance](https://msdn.microsoft.com/library/ms190421\(SQL.105\).aspx)  
   
   

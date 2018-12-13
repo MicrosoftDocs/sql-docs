@@ -31,7 +31,7 @@ manager: craigg
   
 -   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] [!INCLUDE[ssMDSXLS](../includes/ssmdsxls-md.md)], which you use to manage data and create new entities and attributes.  
   
- For a summary of MDS resources, see the [SQL Server Master Data Services Portal](http://go.microsoft.com/fwlink/?LinkID=214272).  
+ For a summary of MDS resources, see the [SQL Server Master Data Services Portal](https://go.microsoft.com/fwlink/?LinkID=214272).  
   
 |||  
 |-|-|  

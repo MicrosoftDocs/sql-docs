@@ -21,8 +21,8 @@ helpviewer_keywords:
   - "monitoring performance [SQL Server], memory usage"
   - "server performance [SQL Server], memory"
 ms.assetid: 1aee3933-a11c-4b87-91b7-32f5ea38c87f
-author: MikeRayMSFT
-ms.author: mikeray
+author: julieMSFT
+ms.author: jrasnick
 manager: craigg
 ---
 # Monitor Memory Usage

@@ -28,7 +28,7 @@ The **RevoScaleR** library is distributed in multiple Microsoft products, but us
 
 ## Versions and platforms
 
-The **RevoScaleR** library is based on on R 3.4.3 and available only when you install one of the following Microsoft products or downloads:
+The **RevoScaleR** library is based on R 3.4.3 and available only when you install one of the following Microsoft products or downloads:
 
 + [SQL Server 2016 R Services](../install/sql-r-services-windows-install.md)
 + [SQL Server 2017 Machine Learning Services](../install/sql-machine-learning-services-windows-install.md)

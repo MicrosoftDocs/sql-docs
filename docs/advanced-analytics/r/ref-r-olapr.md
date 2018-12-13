@@ -49,6 +49,6 @@ You can use this library on connections to an Analysis Services OLAP cube on all
 Although this package is distributed in multiple products, the reference documentation is published to one location only, in the R reference section of the Microsoft Machine Learning Server product documentation site: [olapR function reference](https://docs.microsoft.com/machine-learning-server/r-reference/olapr/olapr).
 
 
-## See Also
+## See agilso
 
 [R tutorials](../tutorials/sql-server-r-tutorials.md)

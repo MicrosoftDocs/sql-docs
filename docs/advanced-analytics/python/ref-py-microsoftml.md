@@ -130,7 +130,7 @@ from revoscalepy.functions.RxSummary import rx_summary
 from revoscalepy.etl.RxImport import rx_import_datasource
 ```
 
-## See Also
+## See also
 
 + [Python tutorials](../tutorials/sql-server-python-tutorials.md)
 + [Tutorial: Embed Python code in T-SQL](../tutorials/run-python-using-t-sql.md)

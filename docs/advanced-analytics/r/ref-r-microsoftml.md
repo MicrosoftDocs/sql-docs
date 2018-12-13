@@ -23,7 +23,7 @@ The **MicrosoftML** library is distributed in multiple Microsoft products, but u
 
 ## Versions and platforms
 
-The **MicrosoftML** library is based on on R 3.4.3 and available only when you install one of the following Microsoft products or downloads:
+The **MicrosoftML** library is based on R 3.4.3 and available only when you install one of the following Microsoft products or downloads:
 
 + [SQL Server 2016 R Services](../install/sql-r-services-windows-install.md)
 + [SQL Server 2017 Machine Learning Services](../install/sql-machine-learning-services-windows-install.md)
@@ -145,7 +145,7 @@ library(RevoScaleR);
 logisticRegression(args);
 ```
 
-## See Also
+## See also
 
 + [R tutorials](../tutorials/sql-server-r-tutorials.md)
 + [Learn to use compute contexts](../tutorials/deepdive-data-science-deep-dive-using-the-revoscaler-packages.md)

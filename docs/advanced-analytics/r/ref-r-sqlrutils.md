@@ -46,7 +46,7 @@ The following section provides an overview of the functions that you can call fr
 |[OutputParameter](https://docs.microsoft.com/machine-learning-server/r-reference/sqlrutils/outputparameter) | Generates an intermediate data object that is needed if your R function returns a list. The *OutputParameter* object stores the name and data type of a single member of the list, assuming that member is **not** a data frame. |
 |[registerStoredProcedure](https://docs.microsoft.com/machine-learning-server/r-reference/sqlrutils/registerstoredprocedure) | Register the stored procedure with a database.|
 |[setInputDataQuery](https://docs.microsoft.com/machine-learning-server/r-reference/sqlrutils/setinputdataquery)| Assign a query to an input data parameter of the stored procedure.| 
-|[setInputParameterValue](https://docs.microsoft.com/machine-learning-server/r-reference/sqlrutils/setinputparametervalue)| Assign a value to the an input parameter of the stored procedure.| 
+|[setInputParameterValue](https://docs.microsoft.com/machine-learning-server/r-reference/sqlrutils/setinputparametervalue)| Assign a value to an input parameter of the stored procedure.| 
 |[StoredProcedure](https://docs.microsoft.com/machine-learning-server/r-reference/sqlrutils/storedprocedure)| A stored procedure object.|
 
 
@@ -99,7 +99,7 @@ The stored procedure object typically does not have any data or values associate
 > [!NOTE]
 > The *executeStoredProcedure* function requires an ODBC 3.8 provider, such as ODBC Driver 13 for SQL Server.  
 
-## See Also
+## See also
 
 [How to create a stored procedure using sqlrutils](how-to-create-a-stored-procedure-using-sqlrutils.md)
 

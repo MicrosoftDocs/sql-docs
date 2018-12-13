@@ -1,5 +1,5 @@
 ---
-title: Microsoft Business Intelligence (BI) tools for analysis and reporting | Microsoft Docs
+title: Microsoft Business Intelligence tools for analysis and reporting | Microsoft Docs
 author: markingmyname
 ms.author: maghan
 manager: kfile

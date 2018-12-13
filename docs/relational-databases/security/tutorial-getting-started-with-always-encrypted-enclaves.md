@@ -69,7 +69,7 @@ In this step, you will configure the HGS computer to run Host Guardian Service s
 3. After the computer reboots again, sign in with your admin account (which is now also a Domain Admin), open an elevated Windows PowerShell console, and configure host key attestation for your HGS instance. 
 
    ```powershell
-   Initialize-HgsAttestation -HgsServiceName 'hgs' -TrustHostKey  
+   Initialize-HgsAttestation -HgsServiceName 'hgs' -TrustHostKey -https
    ```
 
 4. Find the IP address of the HGS computer by running the following command. Save this IP address for later steps.

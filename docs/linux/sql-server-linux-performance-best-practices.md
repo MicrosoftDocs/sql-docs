@@ -89,7 +89,7 @@ sysctl -w vm.max_map_count=262144
 
 ### Disable last accessed date/time on file systems for SQL Server data and log files
 
-Use the **noatime** attribute with any file system that is used to store SQL Server data and log files. Refer to your Linux documentation on how to set this attribute. This only controls whether last access time stamps are updated when SQL touches a file. The performance improvement from this is somewhat marginal, and you'd loose the ability to see the dates/times that files where written, which is useful for forensics.
+Use the **noatime** attribute with any file system that is used to store SQL Server data and log files. Refer to your Linux documentation on how to set this attribute. This only controls whether last access time stamps are updated when SQL touches a file. The performance improvement from this is somewhat marginal unless you have databases broken up into many hundreds of files and disabling it also removes the ability to check when a file was last accessed which can be useful for investigations.
 
 ### Leave Transparent Huge Pages (THP) enabled
 
@@ -107,12 +107,14 @@ If you are running SQL Server on Linux in a virtual machine, ensure you select o
 For best performance you will want to configure Linux to use the No-op disk scheduler as virtual machines include their own disk scheduler behind the curtains and two disk schedulers working in tandem will dramatically reduce performance.
 
 ### Virtual Machines and disk format
-It is usually best to do the initial virtual machine setup using a raw, non-growing disk type as you'll generally get better performance out of a fixed raw format than you would out of one that is not raw but can be grown. This is how the virtual machine disks are setup, and nothing to do with the partitions you install on them.
+It is usually best to do the initial virtual machine setup using a raw, non-growing disk type as you'll generally get better performance out of a fixed raw format than you would out of one that is not raw but can be grown. This is how the virtual machine disks are setup, and nothing to do with the partitions you install on them. It would be best to defer to the virtual machine vendors documentation to determine which disk format will give you the best performance, as the difference can be noticable.
 
 ### Dedicate your server/virtual machine to just serve SQL server.
-If you try to configure alternate services on the same machine that is housing SQL server the memory limits won't apply in all circumstances and you'll eventually have issues running the system out of memory. Not to mention the added overhead of having to track down CPU hogs that might not be related to your database.
+If you try to configure alternate services on the same machine that is housing SQL server the memory limits won't apply in all circumstances and you'll eventually have issues running the system out of memory due to other processes. Not to mention the added overhead of having to track down CPU hogs that might not be related to your database.
 For these reasons it's best to dedicate a server/virtual machine to just the task of running SQL server and nothing else.
 
+### Separate out your data and transaction log files to different disks.
+If you put your data files on one disk (say sdc), and your transaction logs on another disk (say sde), you'll get better disk performance because the operating system will get the full bandwidth of two disks to read/write to the database vs the bandwidth of just one.
 
 ## Next steps
 

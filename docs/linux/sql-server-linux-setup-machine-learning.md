@@ -308,9 +308,9 @@ Additional configuration is primarily through the [mssql-conf tool](sql-server-l
 
 3. For R feature integration only, set the **MKL_CBWR** environment variable to [ensure consistent output](https://software.intel.com/articles/introduction-to-the-conditional-numerical-reproducibility-cnr) from Intel Math Kernel Library (MKL) calculations.
 
-  Edit or create a file named **.bash_profile** in your user home directory, adding he line `export MKL_CBWR="AUTO"` to the file.
+  + Edit or create a file named **.bash_profile** in your user home directory, adding the line `export MKL_CBWR="AUTO"` to the file.
 
-  Execute this file by typing `source .bash_profile` at a bash command prompt.
+  + Execute this file by typing `source .bash_profile` at a bash command prompt.
 
 4. Restart the SQL Server Launchpad service and the database engine instance. 
 

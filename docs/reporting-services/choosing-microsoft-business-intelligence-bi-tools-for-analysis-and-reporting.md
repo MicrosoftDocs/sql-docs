@@ -10,7 +10,7 @@ ms.topic: conceptual
 ms.custom: seodec18
 ms.date: 12/10/2018
 ---
-# Choosing Microsoft Business Intelligence (BI) tools for analysis and reporting
+# Microsoft Business Intelligence (BI) tools for analysis and reporting
 
 Choosing the right business intelligence tool can be overwhelming. Learn about the different Microsoft offerings and find the one that best fits your needs.
 

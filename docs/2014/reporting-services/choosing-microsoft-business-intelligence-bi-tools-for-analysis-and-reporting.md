@@ -10,7 +10,7 @@ ms.topic: conceptual
 ms.custom: seodec18
 ms.date: 12/10/2018
 ---
-# Choosing Microsoft Reporting and Analysis Tools
+# Microsoft Reporting and Analysis Tools
 
   The following table maps workloads for data analysis and reporting to the Microsoft BI tools that are best suited for those workloads.  
   

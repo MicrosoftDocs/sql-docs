@@ -11,8 +11,8 @@ helpviewer_keywords:
   - "JobSteps object"
   - "SQLAgent:JobSteps"
 ms.assetid: 44f9983c-1753-4fe0-8475-973aa2460b3a
-author: MikeRayMSFT
-ms.author: mikeray
+author: julieMSFT
+ms.author: jrasnick
 manager: craigg
 ---
 # SQL Server Agent, JobSteps Object

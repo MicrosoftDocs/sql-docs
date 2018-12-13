@@ -58,7 +58,7 @@ manager: craigg
  `SQLPutData` supports large CLR user-defined types (UDTs). For more information, see [Large CLR User-Defined Types &#40;ODBC&#41;](../native-client/odbc/large-clr-user-defined-types-odbc.md).  
   
 ## See Also  
- [SQLPutData Function](http://go.microsoft.com/fwlink/?LinkId=59365)   
+ [SQLPutData Function](https://go.microsoft.com/fwlink/?LinkId=59365)   
  [ODBC API Implementation Details](odbc-api-implementation-details.md)  
   
   

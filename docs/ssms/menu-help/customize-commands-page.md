@@ -9,7 +9,6 @@ ms.technology: ssms
 ms.topic: conceptual
 f1_keywords: 
   - "sql13.swb.vs.customizecom.f1"
-  - "vs.customize.commands"
 ms.assetid: c8965f2c-51d9-437d-a6f3-8ac2075ede6b
 author: "stevestein"
 ms.author: "sstein"
@@ -37,4 +36,3 @@ Displays the **Keyboard** page of the **Options** dialog box so you can specify 
   
 ## See Also  
 [Customize Menus and Shortcut Keys](../../ssms/customize-menus-and-shortcut-keys.md)  
-  

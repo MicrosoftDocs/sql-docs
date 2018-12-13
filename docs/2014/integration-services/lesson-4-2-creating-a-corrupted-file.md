@@ -22,7 +22,7 @@ manager: craigg
   
      The sample data is included with the SSIS Lesson packages. To download the sample data and the lesson packages, do the following.  
   
-    1.  Navigate to [Integration Services Product Samples](http://go.microsoft.com/fwlink/?LinkID=267527).  
+    1.  Navigate to [Integration Services Product Samples](https://go.microsoft.com/fwlink/?LinkID=267527).  
   
     2.  Click the **DOWNLOADS** tab.  
   

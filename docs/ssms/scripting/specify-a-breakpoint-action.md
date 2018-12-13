@@ -6,8 +6,6 @@ ms.prod: sql
 ms.technology: scripting
 ms.reviewer: ""
 ms.topic: conceptual
-f1_keywords: 
-  - "vs.debug.breakpt.action"
 helpviewer_keywords: 
   - "Transact-SQL debugger, breakpoint action"
   - "Transact-SQL debugger, breakpoint when hit action"
@@ -65,5 +63,3 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 ## See Also  
  [Specify a Breakpoint Condition](../../relational-databases/scripting/specify-a-breakpoint-condition.md)   
  [Specify a Hit Count](../../relational-databases/scripting/specify-a-hit-count.md)  
-  
-  

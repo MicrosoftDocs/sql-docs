@@ -50,7 +50,7 @@ manager: craigg
 |-------------|-------------------------------------------------------|-------------------------------------------|----------------|  
 |Memory-optimized tables|Yes|Yes|No <sup>1</sup>|  
 |[Memory-Optimized Table Variables](../../database-engine/memory-optimized-table-variables.md)|Yes|Yes|No|  
-|[Natively Compiled Stored Procedures](http://msdn.microsoft.com/library/dn133184.aspx)|You cannot use the EXECUTE statement to execute any stored procedure from a natively compiled stored procedure.|Yes|No <sup>1</sup>|  
+|[Natively Compiled Stored Procedures](https://msdn.microsoft.com/library/dn133184.aspx)|You cannot use the EXECUTE statement to execute any stored procedure from a natively compiled stored procedure.|Yes|No <sup>1</sup>|  
   
  <sup>1</sup> You cannot access a memory-optimized table or natively compiled stored procedure from the context connection (the connection from [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] when executing a CLR module). You can, however, create and open another connection from which you can access memory-optimized tables and natively compiled stored procedures. For more information, see [Regular vs. Context Connections](../clr-integration/data-access/context-connections-vs-regular-connections.md).  
   

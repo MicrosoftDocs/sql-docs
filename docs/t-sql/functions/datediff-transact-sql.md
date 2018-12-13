@@ -235,12 +235,11 @@ GO
 ### I. Finding difference between startdate and enddate as date parts strings
 
 ```sql
-DECLARE @date1 DATETIME, @date2 DATETIME
-DECLARE @result VARCHAR(100)
+DECLARE @date1 DATETIME, @date2 DATETIME, @result VARCHAR(100)
 DECLARE @years INT, @months INT, @days INT, @hours INT, @minutes INT, @seconds INT, @milliseconds INT
 
 SET @date1 = '1900-01-01 00:00:00.000'
-SET @date2 = '2018-12-12 07:08:00.000'
+SET @date2 = '2018-12-12 07:08:01.123'
 
 SELECT @years = DATEDIFF(yy, @date1, @date2)
 IF DATEADD(yy, -@years, @date2) < @date1 
@@ -290,7 +289,7 @@ SELECT @result
 [!INCLUDE[ssResult](../../includes/ssresult-md.md)] 
 
 ```
-118 years, 11 months, 11 days, 7 hours, 8 minutes and 0 seconds
+118 years, 11 months, 11 days, 7 hours, 8 minutes and 1.123 seconds
 ```
   
 ## Examples: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  

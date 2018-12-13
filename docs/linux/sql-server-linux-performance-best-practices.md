@@ -39,7 +39,7 @@ The following recommendations are optional configuration settings that you may e
 
 - **Set a memory limit with mssql-conf**
 
-   In order to ensure there is enough free physical memory for the Linux Operating System, the SQL Server process uses only 80% of the physical RAM by default. For some systems which large amount of physical RAM, 20% might be a significant number. For example, on a system with 1 TB of RAM, the default setting would leave around 200 GB of RAM unused. In this situation, you might want to configure the memory limit to a higher value. See the documentation on the **mssql-conf** tool and the [memory.memorylimitmb](sql-server-linux-configure-mssql-conf.md#memorylimit) setting that controls the memory visible to SQL Server (in units of MB).
+   In order to ensure there is enough free physical memory for the Linux Operating System, the SQL Server process uses only 80% of the physical RAM by default. For some systems which large amount of physical RAM, 20% might be a significant number. For example, on a system with 1 TB of RAM, the default setting would leave around 200 GB of RAM unused. In this situation, you might want to configure the memory limit to a higher value. See the documentation on the **mssql-conf** tool and the [memory.memorylimitmb](sql-server-linux-configure-mssql-conf.md#memorylimit) setting that controls the memory visible to SQL Server (in units of MB). Bare in mind that SQL server on Linux does require overhead to run the emulation environment for SQL, and this can be anything from upwards of 4G on older releases to 2G+ in the latest updates, so it's generally recommended to tune the memory limit more based on how much free memory is available, rather then expected amounts.
 
    When changing this setting, be careful not to set this value too high. If you do not leave enough memory, you could experience problems with the Linux Operating System and other Linux applications.
 
@@ -53,7 +53,7 @@ These are the recommended Linux Operating System settings related to high perfor
 
 
 > [!Note]
-> For Red Hat Enterprise Linux (RHEL) users, the throughput-performance profile will configure these settings automatically (except for C-States).
+> For Red Hat Enterprise Linux (RHEL) users, the throughput-performance profile will configure these settings automatically (except for C-States). It is not recmmended to configure C-States in a virtual environment, as most virtual environments that don't ignore it outright will only reduce resources to the VM based on this.
 
 The following table provides recommendations for CPU settings:
 
@@ -89,7 +89,7 @@ sysctl -w vm.max_map_count=262144
 
 ### Disable last accessed date/time on file systems for SQL Server data and log files
 
-Use the **noatime** attribute with any file system that is used to store SQL Server data and log files. Refer to your Linux documentation on how to set this attribute.
+Use the **noatime** attribute with any file system that is used to store SQL Server data and log files. Refer to your Linux documentation on how to set this attribute. This only controls whether last access time stamps are updated when SQL touches a file. The performance improvement from this is somewhat marginal, and you'd loose the ability to see the dates/times that files where written, which is useful for forensics.
 
 ### Leave Transparent Huge Pages (THP) enabled
 
@@ -97,11 +97,22 @@ Most Linux installations should have this option on by default. We recommend for
 
 ### swapfile
 
-Ensure you have a properly configured swapfile to avoid any out of memory issues. Consult your Linux documentation for how to create and properly size a swapfile.
+Ensure you have a properly configured swapfile to avoid any out of memory issues. Consult your Linux documentation for how to create and properly size a swapfile. It is generally recommended to have a swap file 1.5x to 2.0x the amount of memory on the system.
 
-### Virtual Machines and Dynamic Memory
+### Virtual Machines and Dynamic Memory/CPU
 
-If you are running SQL Server on Linux in a virtual machine, ensure you select options to fix the amount of memory reserved for the virtual machine. Do not use features like Hyper-V Dynamic Memory.
+If you are running SQL Server on Linux in a virtual machine, ensure you select options to fix the amount of memory reserved for the virtual machine. Do not use features like Hyper-V Dynamic Memory. CPU hot plugging will also cause SQL server to crash, this is by design because for performance reasons SQL maps out the Numa nodes in a system and hot plugging will dynamically change that. 
+
+### Virtual Machines and disk schedulers.
+For best performance you will want to configure Linux to use the No-op disk scheduler as virtual machines include their own disk scheduler behind the curtains and two disk schedulers working in tandem will dramatically reduce performance.
+
+### Virtual Machines and disk format
+It is usually best to do the initial virtual machine setup using a raw, non-growing disk type as you'll generally get better performance out of a fixed raw format than you would out of one that is not raw but can be grown. This is how the virtual machine disks are setup, and nothing to do with the partitions you install on them.
+
+### Dedicate your server/virtual machine to just serve SQL server.
+If you try to configure alternate services on the same machine that is housing SQL server the memory limits won't apply in all circumstances and you'll eventually have issues running the system out of memory. Not to mention the added overhead of having to track down CPU hogs that might not be related to your database.
+For these reasons it's best to dedicate a server/virtual machine to just the task of running SQL server and nothing else.
+
 
 ## Next steps
 

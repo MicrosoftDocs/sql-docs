@@ -1,5 +1,5 @@
 ---
-title: revoscalepy Python package in SQL Server Machine Learning | Microsoft Docs
+title: revoscalepy Python package in SQL Server Machine Learning
 description: Introduction to the revoscalepy module in SQL Server 2017 Machine Learning Services with Python.
 ms.prod: sql
 ms.technology: machine-learning
@@ -52,7 +52,7 @@ SQL Server and Python use different data types in some cases. For a list of mapp
 | [RxInSqlServer](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rxinsqlserver) |  Create a SQL Server compute context object to push computations to a remote instance. Several **revoscalepy** functions take compute context as an argument. For a context-switch example, see [Create a model using revoscalepy](../tutorials/use-python-revoscalepy-to-create-model.md).|
 | [RxSqlServerData](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rxsqlserverdata) | Create a data object based on a SQL Server query or table. |
 | [RxOdbcData](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rxodbcdata)| Create a data source based on an ODBC connection. |
-| [RxXdfData](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rxxdfdata) | Create a data source based on a local XDF file. XDF files are often used to offload in-memory data to disk. |
+| [RxXdfData](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rxxdfdata) | Create a data source based on a local XDF file. XDF files are often used to offload in-memory data to disk. An XDF file can be useful when working with more data than can be transferred from the database in one batch, or more data than can fit in memory. For example, if you regularly move large amounts of data from a database to a local workstation, rather than query the database repeatedly for each R operation, you can use the XDF file as a kind of cache to save the data locally and then work with it in your R workspace. |
 
 > [!TIP]
 > If you are new to the idea of data sources or compute contexts, we recommend that you start with [distributed computing](https://docs.microsoft.com/machine-learning-server/r/how-to-revoscaler-distributed-computing) in the Microsoft Machine Learning Server documentation.
@@ -61,8 +61,8 @@ SQL Server and Python use different data types in some cases. For a list of mapp
 
 | Function | Description |
 |----------|-------------|
-|[rx_import](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-import.md) | Import data into an .xdf file or data frame.|
-|[rx_data_step](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-data-step.md) | Transform data from an input data set to an output data set.|
+|[rx_import](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-import) | Import data into an .xdf file or data frame.|
+|[rx_data_step](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-data-step) | Transform data from an input data set to an output data set.|
 
 <a name="bkmk_algorithms"></a>
 
@@ -70,15 +70,14 @@ SQL Server and Python use different data types in some cases. For a list of mapp
 
 | Function| Description|
 | ------- | ---------- |
-|[rx_btrees](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-btrees.md) | Fit stochastic gradient boosted decision trees|
-|[rx_dforest](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-dforest.md) | Fit classification and regression decision forests|
-|[rx_dtree](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-dtree.md) | Fit classification and regression trees |
-|[rx_lin_mod](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-lin-mod.md) | Create a linear regression model|
-|[rx_logit](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-logit.md) | Create a logistic regression model|
-|[rx_summary](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-summary.md) | Produce univariate summaries of objects in revoscalepy.|
+|[rx_btrees](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-btrees) | Fit stochastic gradient boosted decision trees|
+|[rx_dforest](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-dforest) | Fit classification and regression decision forests|
+|[rx_dtree](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-dtree) | Fit classification and regression trees |
+|[rx_lin_mod](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-lin-mod) | Create a linear regression model|
+|[rx_logit](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-logit) | Create a logistic regression model|
+|[rx_summary](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-summary) | Produce univariate summaries of objects in revoscalepy.|
 
 You should also review the functions in [microsoftml](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/microsoftml-package) for additional approaches.
-
 
 <a name="ml-scoring"></a>
 
@@ -86,10 +85,10 @@ You should also review the functions in [microsoftml](https://docs.microsoft.com
 
 | Function| Description|
 | ------- | ---------- |
-| [rx_predict](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-predict.md) | Generate predictions from a trained model|) | Generates predictions from a trained model and can be used for realtime scoring. |
-|[rx_predict_default](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-predict-default.md) | Compute predicted values and residuals using rx_lin_mod and rx_logit objects. |
-|[rx_predict_rx_dforest](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-predict-rx-dforest.md) | Calculate predicted or fitted values for a data set from an rx_dforest or rx_btrees object. |
-|[rx_predict_rx_dtree](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-predict-rx-dtree.md) | Calculate predicted or fitted values for a data set from an rx_dtree object. |
+| [rx_predict](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-predict) | Generate predictions from a trained model|) | Generates predictions from a trained model and can be used for realtime scoring. |
+|[rx_predict_default](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-predict-default) | Compute predicted values and residuals using rx_lin_mod and rx_logit objects. |
+|[rx_predict_rx_dforest](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-predict-rx-dforest) | Calculate predicted or fitted values for a data set from an rx_dforest or rx_btrees object. |
+|[rx_predict_rx_dtree](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-predict-rx-dtree) | Calculate predicted or fitted values for a data set from an rx_dtree object. |
 
 ## How to work with revoscalepy
 

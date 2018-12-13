@@ -43,7 +43,7 @@ manager: craigg
 1.  Paste the following syntax into an MDX query window, replacing the ConnectionID, SessionID, or SPID placeholder with a valid value copied from the previous step.  
   
     ```  
-    <Cancel xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">  
+    <Cancel xmlns="https://schemas.microsoft.com/analysisservices/2003/engine">  
   
        <ConnectionID>111</ConnectionID>  
        <SessionID>222</SessionID>  

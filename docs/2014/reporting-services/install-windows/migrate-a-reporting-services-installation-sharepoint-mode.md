@@ -25,11 +25,11 @@ manager: craigg
   
  For more information on upgrading SharePoint 2013, see the following:  
   
--   [Overview of the upgrade process to SharePoint 2013](http://go.microsoft.com/fwlink/p/?LinkId=256688).  
+-   [Overview of the upgrade process to SharePoint 2013](https://go.microsoft.com/fwlink/p/?LinkId=256688).  
   
--   [Upgrade databases from SharePoint 2010 to SharePoint 2013](http://go.microsoft.com/fwlink/p/?LinkId=256690).  
+-   [Upgrade databases from SharePoint 2010 to SharePoint 2013](https://go.microsoft.com/fwlink/p/?LinkId=256690).  
   
--   [Move content databases in SharePoint 2013](http://technet.microsoft.com/library/cc262792.aspx).  
+-   [Move content databases in SharePoint 2013](https://technet.microsoft.com/library/cc262792.aspx).  
   
  
   
@@ -43,7 +43,7 @@ manager: craigg
   
 -   **[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] RSS scripts:** The Scripts can migrate content and resources between Native mode and SharePoint mode report servers. For more information, see [Sample Reporting Services rs.exe Script to Migrate Content between Report Servers](../tools/sample-reporting-services-rs-exe-script-to-copy-content-between-report-servers.md) and [Reporting Services RS.exe script that migrates content from one report server to another](http://azuresql.codeplex.com/releases/view/115207).  
   
--   **Reporting Services Migration Tool:** The tool can copy your report items from a native mode server to a SharePoint mode server. For more information, see [Reporting Services Migration Tool](http://www.microsoft.com/download/details.aspx?id=29560).  
+-   **Reporting Services Migration Tool:** The tool can copy your report items from a native mode server to a SharePoint mode server. For more information, see [Reporting Services Migration Tool](https://www.microsoft.com/download/details.aspx?id=29560).  
   
 ###  <a name="bkmk_full_migration"></a> Full Migration  
  **Full Migration:** If you are migrating SharePoint content databases along with the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] catalog databases to a new farm you can follow a series of backup and restore options summarized in this topic. In some cases you will need to use a different tool for the restore phase than you used for the backup phase. For example you can use [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configuration Manager to backup encryption keys from a previous version of [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] but you need to use SharePoint Central administration or PowerShell to restore the encryption keys to a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint mode installation.  
@@ -67,7 +67,7 @@ manager: craigg
 ||Objects|Method|Notes|  
 |-|-------------|------------|-----------|  
 |**1**|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] encryption keys.|**Rskeymgmt.exe** or [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configuration Manager. See [Back Up and Restore Reporting Services Encryption Keys](../../reporting-services/install-windows/ssrs-encryption-keys-back-up-and-restore-encryption-keys.md).|The noted tools can used for the backup but for the restore operation you will use the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] service application management pages or PowerShell.|  
-|**2**|SharePoint content databases.||Backup the database and detach it.<br /><br /> See the section "Database attach upgrade " in [Determine upgrade approach (SharePoint Server 2010) (http://technet.microsoft.com/library/cc263447.aspx)](http://technet.microsoft.com/library/cc263447.aspx).|  
+|**2**|SharePoint content databases.||Backup the database and detach it.<br /><br /> See the section "Database attach upgrade " in [Determine upgrade approach (SharePoint Server 2010) (https://technet.microsoft.com/library/cc263447.aspx)](https://technet.microsoft.com/library/cc263447.aspx).|  
 |**3**|SQL Server database that is the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]catalog database.|SQL Server database backup and restore<br /><br /> or<br /><br /> SQL Server database detach and attach.||  
 |**4**|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] configuration files.|Simple file copy.|You only need to copy rsreportserver.config if you have made customizations to the file. Example of the default location of the files: C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\15\WebServices\Reporting<br /><br /> Rsreportserver.config<br /><br /> Rssvrpolicy.config<br /><br /> Web.config for the Report Server ASP.NET application.<br /><br /> Machine.config for ASP.NET.|  
   
@@ -78,7 +78,7 @@ manager: craigg
   
 ||Objects|Method|Notes|  
 |-|-------------|------------|-----------|  
-|**1**|Restore SharePoint Content databases to the new farm.|SharePoint "Database attach upgrade" Method.|Basic Steps:<br /><br /> 1) Restore the database on the new server.<br /><br /> 2) Attach the content database to a web application by indicating the URL.<br /><br /> 3) Get-SPWebapplication lists all web applications and the URLs.<br /><br /> See the section "Database attach upgrade " in [Determine upgrade approach (SharePoint Server 2010) (http://technet.microsoft.com/library/cc263447.aspx)](http://technet.microsoft.com/library/cc263447.aspx)and [Attach databases and upgrade to SharePoint Server 2010 (http://technet.microsoft.com/library/cc263299.aspx)](http://technet.microsoft.com/library/cc263299.aspx).|  
+|**1**|Restore SharePoint Content databases to the new farm.|SharePoint "Database attach upgrade" Method.|Basic Steps:<br /><br /> 1) Restore the database on the new server.<br /><br /> 2) Attach the content database to a web application by indicating the URL.<br /><br /> 3) Get-SPWebapplication lists all web applications and the URLs.<br /><br /> See the section "Database attach upgrade " in [Determine upgrade approach (SharePoint Server 2010) (https://technet.microsoft.com/library/cc263447.aspx)](https://technet.microsoft.com/library/cc263447.aspx)and [Attach databases and upgrade to SharePoint Server 2010 (https://technet.microsoft.com/library/cc263299.aspx)](https://technet.microsoft.com/library/cc263299.aspx).|  
 |**2**|Restore the SQL database that is the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] catalog database (ReportServer).|SQL Database backup and restore.<br /><br /> **or**<br /><br /> SQL Server database attached and detach.|The first time the database is used, [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] will update the database schema as needed so it will work with the [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] environment.|  
 |**3**|Create a new [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] service application.|SharePoint Central administration.|When you create the new service application, configure it to use the report server database you copied over.<br /><br /> For more information on using SharePoint Central Administration, see the "Step 3: Create a Reporting Services Service Application" section in [Install Reporting Services SharePoint Mode for SharePoint 2013](../../../2014/sql-server/install/install-reporting-services-sharepoint-mode-for-sharepoint-2013.md).<br /><br /> For examples using PowerShell, see the section "To create a Reporting Services Service Application using PowerShell" in [Reporting Services SharePoint Service and Service Applications](../../../2014/reporting-services/reporting-services-sharepoint-service-and-service-applications.md).|  
 |**4**|Restore [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] configuration files.|Simple file copy.|Example of the default location of the files: C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\15\WebServices\Reporting.|  
@@ -100,7 +100,7 @@ manager: craigg
   
 3.  If you have an Unattended Execution account (UEA) and windows authentication, make a note of the credentials so you can use them for the restore process.  
   
-4.  For more information, see [Back up service applications in SharePoint 2013](http://technet.microsoft.com/library/ee428318.aspx).  
+4.  For more information, see [Back up service applications in SharePoint 2013](https://technet.microsoft.com/library/ee428318.aspx).  
   
 ### Restore Operations  
   
@@ -112,13 +112,13 @@ manager: craigg
   
 3.  Configure the UEA and windows credentials on the service application.  
   
-4.  For more information, see [Restore service applications in SharePoint 2013](http://technet.microsoft.com/library/ee428305.aspx).  
+4.  For more information, see [Restore service applications in SharePoint 2013](https://technet.microsoft.com/library/ee428305.aspx).  
   
 ##  <a name="bkmk_additional_resources"></a> Additional Resources  
   
--   [Get started with upgrades to SharePoint 2013 (http://technet.microsoft.com/library/ee833948.aspx)](http://technet.microsoft.com/library/ee833948.aspx).  
+-   [Get started with upgrades to SharePoint 2013 (https://technet.microsoft.com/library/ee833948.aspx)](https://technet.microsoft.com/library/ee833948.aspx).  
   
--   [Overview of the upgrade process to SharePoint 2013 (http://technet.microsoft.com/library/cc262483.aspx)](http://technet.microsoft.com/library/cc262483.aspx).  
+-   [Overview of the upgrade process to SharePoint 2013 (https://technet.microsoft.com/library/cc262483.aspx)](https://technet.microsoft.com/library/cc262483.aspx).  
   
 ## See Also  
  [Upgrade and Migrate Reporting Services](../../reporting-services/install-windows/upgrade-and-migrate-reporting-services.md)   

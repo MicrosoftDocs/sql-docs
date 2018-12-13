@@ -81,7 +81,7 @@ manager: craigg
   
  A user-defined policy can use any of the available PBM facets, including those used by the AlwaysOn predefined policies (see [Predefined Policies and Issues](#AlwaysOnPBM), earlier in this topic). The Server facet provides the following properties for monitoring [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] health: (`IsHadrEnabled` and `HadrManagerStatus`). The Server facet also provides properties the following policies for monitoring the WSFC cluster configuration: `ClusterQuorumType`, and `ClusterQuorumState`.  
   
- For more information, see [The AlwaysOn Health Model Part 2 -- Extending the Health Model](http://blogs.msdn.com/b/sqlalwayson/archive/2012/02/13/extending-the-alwayson-health-model.aspx) (a SQL Server AlwaysOn Team blog).  
+ For more information, see [The AlwaysOn Health Model Part 2 -- Extending the Health Model](https://blogs.msdn.com/b/sqlalwayson/archive/2012/02/13/extending-the-alwayson-health-model.aspx) (a SQL Server AlwaysOn Team blog).  
   
 ##  <a name="RelatedTasks"></a> Related Tasks  
   
@@ -99,11 +99,11 @@ manager: craigg
   
 ##  <a name="RelatedContent"></a> Related Content  
   
--   [The AlwaysOn Health Model Part 1 -- Health Model Architecture](http://blogs.msdn.com/b/sqlalwayson/archive/2012/02/13/extending-the-alwayson-health-model.aspx)  
+-   [The AlwaysOn Health Model Part 1 -- Health Model Architecture](https://blogs.msdn.com/b/sqlalwayson/archive/2012/02/13/extending-the-alwayson-health-model.aspx)  
   
--   [The AlwaysOn Health Model Part 2 -- Extending the Health Model](http://blogs.msdn.com/b/sqlalwayson/archive/2012/02/13/extending-the-alwayson-health-model.aspx)  
+-   [The AlwaysOn Health Model Part 2 -- Extending the Health Model](https://blogs.msdn.com/b/sqlalwayson/archive/2012/02/13/extending-the-alwayson-health-model.aspx)  
   
--   [Microsoft SQL Server AlwaysOn Solutions Guide for High Availability and Disaster Recovery](http://go.microsoft.com/fwlink/?LinkId=227600)  
+-   [Microsoft SQL Server AlwaysOn Solutions Guide for High Availability and Disaster Recovery](https://go.microsoft.com/fwlink/?LinkId=227600)  
   
 ## See Also  
  [AlwaysOn Availability Groups (SQL Server)](always-on-availability-groups-sql-server.md)   

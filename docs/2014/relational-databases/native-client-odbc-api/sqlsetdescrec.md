@@ -52,7 +52,7 @@ manager: craigg
  `SQLSetDescRec` supports large CLR user-defined types (UDTs). For more information, see [Large CLR User-Defined Types &#40;ODBC&#41;](../native-client/odbc/large-clr-user-defined-types-odbc.md).  
   
 ## See Also  
- [SQLSetDescRec](http://go.microsoft.com/fwlink/?LinkId=80704)   
+ [SQLSetDescRec](https://go.microsoft.com/fwlink/?LinkId=80704)   
  [ODBC API Implementation Details](odbc-api-implementation-details.md)  
   
   

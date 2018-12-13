@@ -68,7 +68,7 @@ manager: craigg
  By setting the **Keep Unique Rows** property, you can designate one or more columns that should always repeat, even if there are duplicate instances, whenever you add that column to the report canvas. Calculated values associated with the row will now be allocated based on each individual row rather than rolled up to single row. When choosing columns for the  **Keep Unique Rows** property, choose those containing unique or nearly unique values.  
   
 > [!NOTE]  
->  Because the columns the end user selects can affect the grouping, which changes the filter context for expression calculations, model designers must take care to create measures that return the correct results. For more information, see [Power View FAQ](http://go.microsoft.com/fwlink/?LinkId=220674).  
+>  Because the columns the end user selects can affect the grouping, which changes the filter context for expression calculations, model designers must take care to create measures that return the correct results. For more information, see [Power View FAQ](https://go.microsoft.com/fwlink/?LinkId=220674).  
   
 ## Setting a default label  
  This property specifies a label that appears in the navigation strip of a tile report. When used with a default image, the default label appears under the image. Without an image, the default label appears by itself. When choosing a default label, pick the column that conveys the most information about the row (for example, a name).  

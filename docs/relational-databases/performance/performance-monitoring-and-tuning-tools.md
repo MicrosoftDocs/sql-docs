@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "performance [SQL Server], monitoring tools"
   - "server performance [SQL Server], tools"
 ms.assetid: 31529dfe-68e7-49f7-b3c2-39fcecf33a95
-author: MikeRayMSFT
-ms.author: mikeray
+author: julieMSFT
+ms.author: jrasnick
 manager: craigg
 ---
 # Performance Monitoring and Tuning Tools

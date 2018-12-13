@@ -200,7 +200,7 @@ manager: craigg
   
  Typically the key column is a numeric or text identifier that should not be used for analysis, only for tracking records. The exceptions are time series keys and sequence keys.  
   
- **Nested table keys** are used only when you get data from an external data source that has been defined as an [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] data source view. For more information about nested tables, see [http://msdn.microsoft.com/library/ms175659.aspx](http://msdn.microsoft.com/library/ms175659.aspx):  
+ **Nested table keys** are used only when you get data from an external data source that has been defined as an [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] data source view. For more information about nested tables, see [https://msdn.microsoft.com/library/ms175659.aspx](https://msdn.microsoft.com/library/ms175659.aspx):  
   
  This content type can be used with the following data types: `Date`, `Double`, `Long`, and `Text`.  
   

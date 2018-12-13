@@ -17,8 +17,8 @@ helpviewer_keywords:
   - "performance (SQL Database)"
   - "database performance (SQL Database)"
 ms.assetid: 301204b2-140d-4495-98ed-021a9b5025f5
-author: "CarlRabeler"
-ms.author: "carlrab"
+author: julieMSFT
+ms.author: jrasnick
 manager: craigg
 ---
 # Performance Center for SQL Server Database Engine and Azure SQL Database

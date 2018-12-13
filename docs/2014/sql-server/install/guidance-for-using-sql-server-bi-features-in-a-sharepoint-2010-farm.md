@@ -33,7 +33,7 @@ manager: craigg
   
 -   Reporting Services includes an add-in for SharePoint products. Supported configurations for the add-in and report server are available at a more granular level than what is indicated here. For more information, see [Supported Combinations of SharePoint and Reporting Services Server and Add-in &#40;SQL Server 2014&#41;](../../reporting-services/install-windows/supported-combinations-of-sharepoint-and-reporting-services-server.md).  
   
--   SharePoint developer tools only support a SharePoint standalone configuration.  For more information, see the SharePoint documentation: [Requirements for Developing SharePoint Solutions](http://msdn.microsoft.com/library/ee231582.aspx).  
+-   SharePoint developer tools only support a SharePoint standalone configuration.  For more information, see the SharePoint documentation: [Requirements for Developing SharePoint Solutions](https://msdn.microsoft.com/library/ee231582.aspx).  
   
 ##  <a name="bkmk_vers"></a> SharePoint Editions and BI Feature support  
  Some [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Business Intelligence features are only supported on specific editions of SharePoint products.  
@@ -43,7 +43,7 @@ manager: craigg
 |[!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)], a feature of [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Add-in for [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[SPS2010](../../includes/sps2010-md.md)] Enterprise Edition.<br /><br /> [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Data Alerts.<br /><br /> [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)].|[!INCLUDE[SPS2010](../../includes/sps2010-md.md)] Enterprise Edition.|  
 |General [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] report viewing and   feature integration with SharePoint.|[!INCLUDE[SPS2010](../../includes/sps2010-md.md)] Standard and Enterprise Editions.<br /><br /> [!INCLUDE[SPF2010](../../includes/spf2010-md.md)].|  
   
- For more information, see [Features Supported by the Editions of SQL Server 2012](http://go.microsoft.com/fwlink/?linkid=232473).  
+ For more information, see [Features Supported by the Editions of SQL Server 2012](https://go.microsoft.com/fwlink/?linkid=232473).  
   
 ##  <a name="bkmk_sp1"></a> SharePoint 2010 Service Pack 1 (SP1)  
  It is recommended you update your SharePoint 2010 installation to SharePoint 2010 Service Pack 1 (SP1). SharePoint SP1 is required in the following cases:  
@@ -55,16 +55,16 @@ manager: craigg
  One of the primary reasons SP1 is required for SharePoint installations running with [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] is the database engine feature **sp_dboption**, that was deprecated in a previous release, is discontinued in the [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] release. For more information, see [Discontinued Database Engine Functionality in SQL Server 2014](../../database-engine/discontinued-database-engine-functionality-in-sql-server-2016.md)  
   
 ### SharePoint 2010 SP1 Installation Guidance  
- [Download SharePoint Server 2010 SP1](http://go.microsoft.com/fwlink/?LinkID=219697) and apply it on all servers in the farm.  
+ [Download SharePoint Server 2010 SP1](https://go.microsoft.com/fwlink/?LinkID=219697) and apply it on all servers in the farm.  
   
 > [!NOTE]  
->  On an existing farm, you will need to use one of the following **additional** steps to complete the SharePoint SP1 upgrade. For more information, see [Known issues when you install Office 2010 SP1 and SharePoint 2010 SP1](http://support.microsoft.com/kb/2532126) and [Description of SharePoint Server 2010 SP1](http://support.microsoft.com/kb/2460045):  
+>  On an existing farm, you will need to use one of the following **additional** steps to complete the SharePoint SP1 upgrade. For more information, see [Known issues when you install Office 2010 SP1 and SharePoint 2010 SP1](https://support.microsoft.com/kb/2532126) and [Description of SharePoint Server 2010 SP1](https://support.microsoft.com/kb/2460045):  
   
 -   **SharePoint Products Configuration Wizard:** Run the wizard to complete the SP1 upgrade and configuration.  
   
 -   **Complete the upgrade with psconfig:** Run the command `psconfig -upgrade` to complete the SP1 upgrade  
   
- For more information, see the "upgrade" section of [(SharePoint Server 2010)](http://technet.microsoft.com/library/cc263093.aspx) and [Resource center: Updates for SharePoint 2010 Products](http://technet.microsoft.com/sharepoint/ff800847.aspx)  
+ For more information, see the "upgrade" section of [(SharePoint Server 2010)](https://technet.microsoft.com/library/cc263093.aspx) and [Resource center: Updates for SharePoint 2010 Products](https://technet.microsoft.com/sharepoint/ff800847.aspx)  
   
 ## SharePoint Installation with SQL Server BI Features  
   
@@ -99,7 +99,7 @@ manager: craigg
  ![GMNI_SetupUI_DoNotConfigureMOSS](../../../2014/sql-server/install/media/gmni-setupui-donotconfiguremoss.gif "GMNI_SetupUI_DoNotConfigureMOSS")  
   
 ## See Also  
- [Installation and Deployment for SharePoint Server 2010](http://technet.microsoft.com/sharepoint/ee518643.aspx)   
- [Multiple Servers for a three-tier farm (SharePoint Server 2010)](http://go.microsoft.com/fwlink/?linkID=219834)  
+ [Installation and Deployment for SharePoint Server 2010](https://technet.microsoft.com/sharepoint/ee518643.aspx)   
+ [Multiple Servers for a three-tier farm (SharePoint Server 2010)](https://go.microsoft.com/fwlink/?linkID=219834)  
   
   

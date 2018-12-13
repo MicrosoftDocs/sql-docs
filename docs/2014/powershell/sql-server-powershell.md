@@ -21,7 +21,7 @@ manager: craigg
   
 -   A set of cmdlets, which are commands used in Windows PowerShell scripts to specify a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] action. The [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] cmdlets support actions such as running a **sqlcmd** script containing [!INCLUDE[tsql](../includes/tsql-md.md)] or XQuery statements.  
   
- To learn about Windows PowerShell, see the [Windows PowerShell Getting Started Guide](http://msdn.microsoft.com/library/hh857337.aspx).  
+ To learn about Windows PowerShell, see the [Windows PowerShell Getting Started Guide](https://msdn.microsoft.com/library/hh857337.aspx).  
   
 ## SQL Server Versions  
  The [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] PowerShell components can be used to manage instances of [!INCLUDE[ssVersion2000](../includes/ssversion2000-md.md)] or later. Instances of [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] must be running SP2 or later. Instances of [!INCLUDE[ssVersion2000](../includes/ssversion2000-md.md)] must be running SP4 or later. When the [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] PowerShell components are used with earlier versions of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], they are limited to the functionality available in those versions.  

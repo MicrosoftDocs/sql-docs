@@ -39,13 +39,13 @@ manager: craigg
  The following Microsoft applications support native connections to multidimensional data.  
   
 ### Excel  
- Analysis Services multidimensional data is often presented using pivot tables and pivot chart controls in an Excel workbook. PivotTables are suited to multidimensional data because the hierarchies, aggregations, and navigational constructs in the model pair well with the data summary features of a PivotTable. An Analysis Services OLE DB data provider is included in an Excel installation to make setting up data connections easier. For more information, see [Connect to or import data from SQL Server Analysis Services](http://go.microsoft.com/fwlink/?linkID=215150).  
+ Analysis Services multidimensional data is often presented using pivot tables and pivot chart controls in an Excel workbook. PivotTables are suited to multidimensional data because the hierarchies, aggregations, and navigational constructs in the model pair well with the data summary features of a PivotTable. An Analysis Services OLE DB data provider is included in an Excel installation to make setting up data connections easier. For more information, see [Connect to or import data from SQL Server Analysis Services](https://go.microsoft.com/fwlink/?linkID=215150).  
   
 ### Reporting Services Reports  
  You can use Report Builder or Report Designer to create reports that consume Analysis Services databases that contain analytical data. Both Report Builder and Report Designer include an MDX query designer that you can use to type or design MDX statements that retrieve data from an available data source. For more information, see [Data Sources Supported by Reporting Services &#40;SSRS&#41;](../../../reporting-services/create-deploy-and-manage-mobile-and-paginated-reports.md) and [Analysis Services Connection Type for MDX &#40;SSRS&#41;](../../../reporting-services/report-data/analysis-services-connection-type-for-mdx-ssrs.md).  
   
 ### PerformancePoint Dashboards  
- PerformancePoint Dashboards are used to create scorecards in SharePoint that communicate business performance against predefined measures. PerformancePoint includes support for data connections to Analysis Services multidimensional data. For more information, [Create an Analysis Services data connection (PerformancePoint Services)](http://go.microsoft.com/fwlink/?linkid=232471).  
+ PerformancePoint Dashboards are used to create scorecards in SharePoint that communicate business performance against predefined measures. PerformancePoint includes support for data connections to Analysis Services multidimensional data. For more information, [Create an Analysis Services data connection (PerformancePoint Services)](https://go.microsoft.com/fwlink/?linkid=232471).  
   
 ### SQL Server Data Tools  
  Model and report designers use SQL Server Data Tools to build solutions that include multidimensional models. Deploying the solution to an Analysis Services instance is what creates the database that you subsequently connect to from Excel, Reporting Services, and other business intelligence client applications.  

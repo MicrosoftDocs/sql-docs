@@ -34,7 +34,7 @@ manager: craigg
 ## Use Windows PowerShell to list MySubscriptions  
  ![PowerShell related content](../media/rs-powershellicon.jpg "PowerShell related content")  
   
- The following PowerShell script will return the list of subscriptions and subscription properties for the current user. For more information, see [ReportingService2010.ListMySubscriptions Method](http://technet.microsoft.com/library/reportservice2010.reportingservice2010.listmysubscriptions.aspx).  
+ The following PowerShell script will return the list of subscriptions and subscription properties for the current user. For more information, see [ReportingService2010.ListMySubscriptions Method](https://technet.microsoft.com/library/reportservice2010.reportingservice2010.listmysubscriptions.aspx).  
   
 ```  
 #server -  all subscriptions of the current user at the given server or site  

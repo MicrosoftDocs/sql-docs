@@ -34,7 +34,7 @@ manager: craigg
   
  When you process the model, the model does not reread the data from the data source, but instead gets the summary of the data from the mining structure. Using the cube that was created, together with the cached index and case data has been cached, the server creates independent threads to train the models.  
   
- For more information about the editions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] that support Parallel Model Processing, see [Features Supported by the Editions of SQL Server 2012](http://go.microsoft.com/fwlink/?linkid=232473) (http://go.microsoft.com/fwlink/?linkid=232473).  
+ For more information about the editions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] that support Parallel Model Processing, see [Features Supported by the Editions of SQL Server 2012](https://go.microsoft.com/fwlink/?linkid=232473) (https://go.microsoft.com/fwlink/?linkid=232473).  
   
 ##  <a name="bkmk_ProcessStructures"></a> Processing Mining Structures  
  A mining structure can be processed together with all dependent models, or separately. Processing a mining structure separately from models can be useful when some models are expected to take a long time to process and you want to defer that operation.  

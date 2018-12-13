@@ -21,7 +21,7 @@ ms.date: "08/10/2017"
   
 -   [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]  
   
--   [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] (Requires more steps, see [You cannot use SQL Server 2005 to host Report Server 2014 Databases](http://support.microsoft.com/kb/2796721).  
+-   [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] (Requires more steps, see [You cannot use SQL Server 2005 to host Report Server 2014 Databases](https://support.microsoft.com/kb/2796721).  
   
 ||  
 |-|  

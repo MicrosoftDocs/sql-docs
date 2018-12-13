@@ -59,7 +59,7 @@ manager: craigg
     9. Click OK to close the Internet Options dialog box.  
   
 ##  <a name="installdb"></a> Install a database server  
- This topic assumes your farm topology is based on the one described in the article [Multiple servers for a three-tier farm](http://go.microsoft.com/fwlink/?LinkId=182771). If you already have a farm that is operational, skip ahead to [Install PowerPivot for SharePoint](#installppapp).  
+ This topic assumes your farm topology is based on the one described in the article [Multiple servers for a three-tier farm](https://go.microsoft.com/fwlink/?LinkId=182771). If you already have a farm that is operational, skip ahead to [Install PowerPivot for SharePoint](#installppapp).  
   
  If you are just getting started with your topology, begin by installing a SQL Server Database Engine. These instructions result in a database server that can be accessed by the SharePoint servers in your farm.  
   
@@ -124,7 +124,7 @@ manager: craigg
   
  Use the following instructions in SharePoint 2010 documentation to install and configure a SharePoint 2010 farm that includes two web servers and an application server:  
   
- [Multiple servers for a three-tier farm (SharePoint Server 2010)](http://go.microsoft.com/fwlink/?LinkId=182771)  
+ [Multiple servers for a three-tier farm (SharePoint Server 2010)](https://go.microsoft.com/fwlink/?LinkId=182771)  
   
  When asked to specify a database server, specify the database server you installed earlier.  
   
@@ -194,7 +194,7 @@ manager: craigg
   
  To verify PowerPivot data access on the server, do the following:  
   
-1.  [Download](http://go.microsoft.com/fwlink/?LinkID=219108) the Picnic data sample that accompanies a Reporting Services tutorial. You will use the sample workbook in this download to verify PowerPivot data access. Extract the files.  
+1.  [Download](https://go.microsoft.com/fwlink/?LinkID=219108) the Picnic data sample that accompanies a Reporting Services tutorial. You will use the sample workbook in this download to verify PowerPivot data access. Extract the files.  
   
 2.  Upload a PowerPivot workbook to PowerPivot Gallery or any SharePoint library.  
   
@@ -259,7 +259,7 @@ manager: craigg
  A PowerPivot service application is created using default properties and values. You can modify configuration settings for individual service applications to change the methodology by which requests are allocated, set server timeouts, change the thresholds for query response report events, or specify how long usage data is retained. For more information about configuration in Central Administration or about using PowerPivot features in SharePoint Web applications, see [PowerPivot Server Administration and Configuration in Central Administration](../../analysis-services/power-pivot-sharepoint/power-pivot-server-administration-and-configuration-in-central-administration.md).  
   
 ## See Also  
- [Features Supported by the Editions of SQL Server 2012](http://go.microsoft.com/fwlink/?linkid=232473)   
+ [Features Supported by the Editions of SQL Server 2012](https://go.microsoft.com/fwlink/?linkid=232473)   
  [Install PowerPivot for SharePoint 2010](../../../2014/sql-server/install/install-powerpivot-for-sharepoint-2010.md)   
  [Deployment Checklist: Scale-out by adding PowerPivot Servers to a SharePoint 2010 farm](../../../2014/sql-server/install/deployment-checklist-scale-out-adding-powerpivot-servers-sharepoint-2010-farm.md)  
   

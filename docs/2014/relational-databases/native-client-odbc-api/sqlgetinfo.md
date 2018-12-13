@@ -202,7 +202,7 @@ manager: craigg
 |SQL_USER_NAME|The current username.|  
   
 ## See Also  
- [SQLGetInfo Function](http://go.microsoft.com/fwlink/?LinkId=59354)   
+ [SQLGetInfo Function](https://go.microsoft.com/fwlink/?LinkId=59354)   
  [ODBC API Implementation Details](odbc-api-implementation-details.md)  
   
   

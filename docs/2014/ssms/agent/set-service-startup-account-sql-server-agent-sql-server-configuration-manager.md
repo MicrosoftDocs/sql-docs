@@ -69,7 +69,7 @@ manager: craigg
   
 7.  In the **SQL Server Agent***(server_name)* **Properties** dialog box, in the **Log On** tab, select one of the following options under **Log on as**:  
   
-    -   **Built-in account**: select this option if your jobs require resources from the local server only. For information about how to choose a Windows built-in account type, see [Selecting an Account for SQL Server Agent Service.](http://msdn.microsoft.com/library/ms191543.aspx)  
+    -   **Built-in account**: select this option if your jobs require resources from the local server only. For information about how to choose a Windows built-in account type, see [Selecting an Account for SQL Server Agent Service.](https://msdn.microsoft.com/library/ms191543.aspx)  
   
         > [!IMPORTANT]  
         >  The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent service does not support the **Local Service** account in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  

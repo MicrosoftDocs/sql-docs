@@ -536,10 +536,11 @@ To run the **SSIS Server Maintenance Job**, SSIS creates the SQL Server login **
   
 2.  In [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], expand the local server, and then expand **Integration Services Catalogs**.  
   
-3.  Right-click on **SSISDB**, and then select **Database Upgrade** to launch the SSISDB Upgrade Wizard.  
+3.  Right-click on **SSISDB**, and then select **Database Upgrade** to launch the SSISDB Upgrade Wizard
   
      ![Launch the SSISDB upgrade wizard](../../integration-services/service/media/ssisdb-upgrade-wizard-1.png "Launch the SSISDB upgrade wizard")  
-  
+     or launch the SSISDB Upgrade Wizard by executing C:\Program Files\Microsoft SQL Server\140\DTS\Binn\ISDBUpgradeWizard.exe with elevated permissions on the local server.
+
 4.  On the **Select Instance** page, select a SQL Server instance on the local server.  
   
     > [!IMPORTANT]  

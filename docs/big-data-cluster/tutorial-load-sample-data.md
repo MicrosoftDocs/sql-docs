@@ -38,7 +38,7 @@ The following steps describe how to use a Windows client to load the sample data
 1. Open a new Windows command prompt.
 
    > [!IMPORTANT]
-   > Do not use Windows PowerShell for these steps, or the script will fail because it will use the PowerShell version of **curl**.
+   > Do not use Windows PowerShell for these steps. In PowerShell, the script will fail as it will use the PowerShell version of **curl**.
 
 1. Use **curl** to download the bootstrap script for the sample data.
 

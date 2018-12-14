@@ -10,8 +10,8 @@ helpviewer_keywords:
   - "Resource Governor, overview"
   - "Resource Governor"
 ms.assetid: 2bc89b66-e801-45ba-b30d-8ed197052212
-author: MikeRayMSFT
-ms.author: mikeray
+author: julieMSFT
+ms.author: jrasnick
 manager: craigg
 ---
 # Resource Governor

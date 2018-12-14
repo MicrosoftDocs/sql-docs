@@ -59,8 +59,7 @@ The part of *startdate* and *enddate* that specifies the type of boundary crosse
 |---|---|
 |**year**|**yy, yyyy**|  
 |**quarter**|**qq, q**|  
-|**month**|**mm, m**|  
-|**dayofyear**|**dy, y**|  
+|**month**|**mm, m**||**dayofyear**|**dy, y**|  
 |**day**|**dd, d**|  
 |**week**|**wk, ww**|  
 |**hour**|**hh**|  
@@ -87,13 +86,12 @@ See *startdate*.
   
 ## Return Type  
  **int**  
-  
 ## Return Value  
   
--   Each specific *datepart* and the abbreviations for that *datepart* will return the same value.  
+Each specific *datepart* and the abbreviations for that *datepart* will return the same value.  
   
-For a return value out of range for **int** (-2,147,483,648 to +2,147,483,647), `DATEDIFF` returns an error.  For **millisecond**, the maximum difference between *startdate* and *enddate* is 24 days, 20 hours, 31 minutes and 23.647 seconds. For **second**, the maximum difference is 68 years, 19 days, 3 hours, 14 minutes and 7 seconds.
-  
+For a return value out of range for **int** (-2,147,483,648 to +2,147,483,647), `DATEDIFF` returns an error. For **millisecond**, the maximum difference between *startdate* and *enddate* is 24 days, 20 hours, 31 minutes and 23.647 seconds. For **second**, the maximum difference is 68 years, 19 days, 3 hours, 14 minutes and 7 seconds.
+
 If *startdate* and *enddate* are both assigned only a time value, and the *datepart* is not a time *datepart*, `DATEDIFF` returns 0.
   
 `DATEDIFF` does not use a time zone offset component of *startdate* or *enddate* to calculate the return value.
@@ -125,7 +123,9 @@ Use `DATEDIFF` in the `SELECT <list>`, `WHERE`, `HAVING`, `GROUP BY` and `ORDER 
   
 `DATEDIFF` implicitly casts string literals as a **datetime2** type. This means that `DATEDIFF` does not support the format YDM when the date is passed as a string. You must explicitly cast the string to a **datetime** or **smalldatetime** type to use the YDM format.
   
-Specifying SET DATEFIRST has no effect on `DATEDIFF`. `DATEDIFF` always uses Sunday as the first day of the week to ensure the function operates in a deterministic way.
+Specifying `SET DATEFIRST` has no effect on `DATEDIFF`. `DATEDIFF` always uses Sunday as the first day of the week to ensure the function operates in a deterministic way.
+
+`DATEDIFF` may overflow with a precision of **minute** or higher if the difference between *enddate* and *startdate* returns a value that is out of range for **int**.
   
 ## Examples  
 These examples use different types of expressions as arguments for the *startdate* and *enddate* parameters.

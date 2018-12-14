@@ -1,5 +1,5 @@
 ---
-title: Set up a data science client for R development on SQL Server | Microsoft Docs
+title: Set up a data science client for R development - SQL Server Machine Learning Services
 description: Install local R libraries and tools on a development workstation for remote connections to SQL Server.
 ms.prod: sql
 ms.technology: machine-learning
@@ -95,7 +95,7 @@ If your code requires packages that are not installed by default with SQL Server
 
 ## 5 - Test connections
 
- As a verification step, use **RGUI** and RevoScaleR to confirm connectivity to the remote server. SQL Server must be enabled for [remote connections](https://docs.microsoft.com/sql/database-engine/configure-windows/view-or-configure-remote-server-connection-options-sql-server.md) and you must have permissions, including a user login and a database to connect to. 
+ As a verification step, use **RGUI** and RevoScaleR to confirm connectivity to the remote server. SQL Server must be enabled for [remote connections](https://docs.microsoft.com/sql/database-engine/configure-windows/view-or-configure-remote-server-connection-options-sql-server) and you must have permissions, including a user login and a database to connect to. 
 
 The following steps assume the demo database, [NYCTaxi_Sample](../tutorials/demo-data-nyctaxi-in-sql.md), and Windows authentication.
 

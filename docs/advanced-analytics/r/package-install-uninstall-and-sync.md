@@ -1,5 +1,6 @@
 ---
-title: R package synchronization for SQL Server | Microsoft Docs
+title: R package synchronization from the file system - SQL Server Machine Learning Services
+description: Update R libraries on SQL Server with newer versions installed on the file system.
 ms.prod: sql
 ms.technology: machine-learning
 

@@ -1,6 +1,6 @@
 ---
-title: R and Python Machine Learning Services in SQL Server | Microsoft Docs
-description: R in SQL Server and Python in SQL Server, integrating with relational data for data science and statistical modeling, machine learning models, predictive analytics, data visualization and more.
+title: R language and Python feature integration - SQL Server Machine Learning Services
+description: R language and Python features in SQL Server, integrating with relational data for data science and statistical modeling, machine learning models, predictive analytics, data visualization and more.
 ms.prod: sql
 ms.technology: machine-learning
 

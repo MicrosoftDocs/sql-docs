@@ -1,6 +1,6 @@
 ---
-title: Install SQL Server 2016 R Services (In-Database) | Microsoft Docs
-description: R in SQL Server is available when you install SQL Server 2016 R Services on Windows.
+title: Install SQL Server 2016 R Services (In-Database) - SQL Server Machine Learning
+description: Add R programming language support to a database engine on SQL Server 2016 R Services on Windows.
 ms.prod: sql
 ms.technology: machine-learning
   

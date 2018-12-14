@@ -36,7 +36,7 @@ The following table lists common big data cluster tools and how to install them:
 
 <sup>2</sup> You must be using Azure CLI version 2.0.4 or later. Run `az --version` to find the version if needed.
 
-<sup>3</sup> If you are running on Windows 10, **curl** is already in your PATH. For other versions of Windows, download **curl** using the link and place it in your PATH.
+<sup>3</sup> If you are running on Windows 10, **curl** is already in your PATH when running from a cmd prompt. For other versions of Windows, download **curl** using the link and place it in your PATH.
 
 ## Which tools are required?
 

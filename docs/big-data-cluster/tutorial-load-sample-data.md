@@ -24,8 +24,6 @@ This tutorial explains how to use a script to load sample data into a SQL Server
 - [Big data tools](deploy-big-data-tools.md)
    - **mssqlctl**
    - **kubectl**
-   - **Azure Data Studio**
-   - **SQL Server 2019 extension**
    - **sqlcmd**
    - **curl**
 
@@ -37,15 +35,20 @@ The following steps use a bootstrap script to download a SQL Server database bac
 
 The following steps describe how to use a Windows client to load the sample data into your big data cluster.
 
-1. In Windows Powershell, use **curl** to download the bootstrap script.
+1. Open a new Windows command prompt.
 
-   ```PowerShell
+   > [!IMPORTANT]
+   > Do not use Windows PowerShell for these steps, or the script will fail because it will use the PowerShell version of **curl**.
+
+1. Use **curl** to download the bootstrap script for the sample data.
+
+   ```cmd
    curl -o bootstrap-sample-db.cmd "https://raw.githubusercontent.com/Microsoft/sql-server-samples/master/samples/features/sql-big-data-cluster/bootstrap-sample-db.cmd"
    ```
 
 1. Download the **bootstrap-sample-db.sql** Transact-SQL script. This script is called by the bootstrap script.
 
-   ```PowerShell
+   ```cmd
    curl -o bootstrap-sample-db.sql "https://raw.githubusercontent.com/Microsoft/sql-server-samples/master/samples/features/sql-big-data-cluster/bootstrap-sample-db.sql"
    ```
 
@@ -64,7 +67,7 @@ The following steps describe how to use a Windows client to load the sample data
 
 1. Run the bootstrap script.
 
-   ```PowerShell
+   ```cmd
    .\bootstrap-sample-db.cmd <CLUSTER_NAMESPACE> <SQL_MASTER_IP> <SQL_MASTER_SA_PASSWORD> <KNOX_IP> <KNOX_PASSWORD>
    ```
 

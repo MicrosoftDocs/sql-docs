@@ -20,11 +20,11 @@ This tutorial demonstrates how to load and run a notebook in Azure Data Studio o
 
 ## <a id="prereqs"></a> Prerequisites
 
-- [Loaded sample data in your big data cluster](tutorial-load-sample-data.md)
 - [Big data tools](deploy-big-data-tools.md)
    - **kubectl**
    - **Azure Data Studio**
    - **SQL Server 2019 extension**
+- [Load sample data into your big data cluster](tutorial-load-sample-data.md)
 
 ## Download the sample notebook file
 

@@ -25,11 +25,11 @@ In this tutorial, you learn how to:
 
 ## <a id="prereqs"></a> Prerequisites
 
-- [Loaded sample data in your big data cluster](tutorial-load-sample-data.md)
 - [Big data tools](deploy-big-data-tools.md)
    - **kubectl**
    - **Azure Data Studio**
    - **SQL Server 2019 extension**
+- [Load sample data into your big data cluster](tutorial-load-sample-data.md)
 
 ## Create an Oracle table
 

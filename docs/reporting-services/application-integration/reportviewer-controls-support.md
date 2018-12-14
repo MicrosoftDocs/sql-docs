@@ -18,8 +18,7 @@ ms.date: 12/14/2018
 
 We plan to release updates for the **Report Viewer control** on an as needed basis. Starting with the current version of Report Viewer, there's no version patching and all fixes are rolled-forward. There's technical support for the current version of Report Viewer only.  The current version is always in the **Security and Critical Updates** servicing phase. When running the current version of the Report Viewer control, you receive both Security and Critical Updates.
 
->[!Note]
->This support statement means that if you encounter a code defect that warrants a critical update, you must have the latest version installed to receive a fix. We will provide at least 12 months advance notice of deprecation of any features.  Older versions of the Report Viewer are maintained and available through nuget.
+If you encounter a code defect that needs a critical update, you must have the latest version installed to receive a fix. There's 12 months advance notice when deprecating any features.  Older versions of the Report Viewer are maintained and available through [NuGet](https://www.nuget.org/).
 
 For a version history of the Report Viewer control, see the following links:
 

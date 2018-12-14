@@ -59,7 +59,8 @@ The part of *startdate* and *enddate* that specifies the type of boundary crosse
 |---|---|
 |**year**|**yy, yyyy**|  
 |**quarter**|**qq, q**|  
-|**month**|**mm, m**||**dayofyear**|**dy, y**|  
+|**month**|**mm, m**|
+|**dayofyear**|**dy, y**|  
 |**day**|**dd, d**|  
 |**week**|**wk, ww**|  
 |**hour**|**hh**|  

@@ -78,6 +78,8 @@ The next step is to create a Spark streaming job that loads web clickstream data
    /jar/mssql-spark-lib-assembly-1.0.jar
    ```
 
+1. In the **Main Class** field, enter `FileStreaming`.
+
 1. In the **Arguments** field, enter the following text, specifying the password to the SQL Server master instance in the `<your_password>` placeholder. 
 
    ```text
@@ -111,7 +113,7 @@ The following steps show that the Spark streaming job loaded the data from HDFS 
 
    ![Spark job history](media/tutorial-data-pool-ingest-spark/spark-task-history.png)
 
-1. Return to the SQL Server master instance query window that you opened at the beginning of this tutorial..
+1. Return to the SQL Server master instance query window that you opened at the beginning of this tutorial.
 
 1. Run the following query to inspect the ingested data.
 

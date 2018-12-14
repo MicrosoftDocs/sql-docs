@@ -1,5 +1,5 @@
 ---
-title: Extensions for SQL Server Reporting Services (SSRS)
+title: Extensions
 author: markingmyname
 ms.author: maghan
 manager: kfile

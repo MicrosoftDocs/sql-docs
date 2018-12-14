@@ -1,5 +1,5 @@
 ---
-title: Extensions (SSRS)
+title: Extensions
 author: markingmyname
 ms.author: maghan
 manager: kfile

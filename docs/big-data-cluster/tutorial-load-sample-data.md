@@ -11,3 +11,99 @@ ms.prod: sql
 ms.custom: seodec18
 ---
 
+# Tutorial: Load sample data into a SQL Server 2019 big data cluster
+
+This tutorial explains how to use a script to load sample data into a SQL Server 2019 big data cluster (preview). Many of the other tutorials in the documentation use this sample data.
+
+> [!TIP]
+> You can find additional samples for SQL Server 2019 big data cluster (preview) in the [sql-server-samples](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/sql-big-data-cluster) GitHub repository. They are located in the **sql-server-samples/samples/features/sql-big-data-cluster/** path.
+
+## Prerequisites
+
+- [A deployed big data cluster](deployment-guidance.md)
+- [Big data tools](deploy-big-data-tools.md)
+   - **mssqlctl**
+   - **kubectl**
+   - **Azure Data Studio**
+   - **SQL Server 2019 extension**
+   - **sqlcmd**
+   - **curl**
+
+## <a id="sampledata"></a> Load sample data
+
+The following steps use a bootstrap script to download a SQL Server database backup and load the data into your big data cluster. For ease of use, these steps have been broken out into [Windows](#windows) and [Linux](#linux) sections.
+
+## <a id="windows"></a> Windows
+
+The following steps describe how to use a Windows client to load the sample data into your big data cluster.
+
+1. In Windows Powershell, use **curl** to download the bootstrap script.
+
+   ```PowerShell
+   curl -o bootstrap-sample-db.cmd "https://raw.githubusercontent.com/Microsoft/sql-server-samples/master/samples/features/sql-big-data-cluster/bootstrap-sample-db.cmd"
+   ```
+
+1. Download the **bootstrap-sample-db.sql** Transact-SQL script. This script is called by the bootstrap script.
+
+   ```PowerShell
+   curl -o bootstrap-sample-db.sql "https://raw.githubusercontent.com/Microsoft/sql-server-samples/master/samples/features/sql-big-data-cluster/bootstrap-sample-db.sql"
+   ```
+
+1. The bootstrap script requires the following positional parameters for your big data cluster:
+
+   | Parameter | Description |
+   |---|---|
+   | <CLUSTER_NAMESPACE> | The name you gave your big data cluster. |
+   | <SQL_MASTER_IP> | The IP address of your master instance. |
+   | <SQL_MASTER_SA_PASSWORD> | The SA password for the master instance. |
+   | <KNOX_IP> | The IP address of the HDFS/Spark Gateway. |
+   | <KNOX_PASSWORD> | The password for the HDFS/Spark Gateway. |
+
+   > [!TIP]
+   > Use [kubectl](cluster-troubleshooting-commands.md) to find the IP addresses for the SQL Server master instance and Knox. Run `kubectl get svc -n <your-cluster-name>` and look at the EXTERNAL-IP addresses for the master instance (**endpoint-master-pool**) and Knox (**service-security-lb** or **service-security-nodeport**).
+
+1. Run the bootstrap script.
+
+   ```PowerShell
+   .\bootstrap-sample-db.cmd <CLUSTER_NAMESPACE> <SQL_MASTER_IP> <SQL_MASTER_SA_PASSWORD> <KNOX_IP> <KNOX_PASSWORD>
+   ```
+
+## <a id="linux"></a> Linux
+
+The following steps describe how to use a Linux client to load the sample data into your big data cluster.
+
+1. Download the bootstrap script, and assign executable permissions to it.
+
+   ```bash
+   curl -o bootstrap-sample-db.sh "https://raw.githubusercontent.com/Microsoft/sql-server-samples/master/samples/features/sql-big-data-cluster/bootstrap-sample-db.sh"
+   chmod +x bootstrap-sample-db.sh
+   ```
+
+1. Download the **bootstrap-sample-db.sql** Transact-SQL script. This script is called by the bootstrap script.
+
+   ```bash
+   curl -o bootstrap-sample-db.sql "https://raw.githubusercontent.com/Microsoft/sql-server-samples/master/samples/features/sql-big-data-cluster/bootstrap-sample-db.sql"
+   ```
+
+1. The bootstrap script requires the following positional parameters for your big data cluster:
+
+   | Parameter | Description |
+   |---|---|
+   | <CLUSTER_NAMESPACE> | The name you gave your big data cluster. |
+   | <SQL_MASTER_IP> | The IP address of your master instance. |
+   | <SQL_MASTER_SA_PASSWORD> | The SA password for the master instance. |
+   | <KNOX_IP> | The IP address of the HDFS/Spark Gateway. |
+   | <KNOX_PASSWORD> | The password for the HDFS/Spark Gateway. |
+
+   > [!TIP]
+   > Use [kubectl](cluster-troubleshooting-commands.md) to find the IP addresses for the SQL Server master instance and Knox. Run `kubectl get svc -n <your-cluster-name>` and look at the EXTERNAL-IP addresses for the master instance (**endpoint-master-pool**) and Knox (**service-security-lb** or **service-security-nodeport**).
+
+1. Run the bootstrap script.
+
+   ```bash
+   ./bootstrap-sample-db.sh <CLUSTER_NAMESPACE> <SQL_MASTER_IP> <SQL_MASTER_SA_PASSWORD> <KNOX_IP> <KNOX_PASSWORD>
+   ```
+
+## Next steps
+
+After the bootstrap script runs, your big data cluster has the sample databases and HDFS data. To start exploring this data and big data clusters, see the [Tutorials](tutorial-query-hdfs-storage-pool.md) in this section.

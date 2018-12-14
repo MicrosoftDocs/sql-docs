@@ -12,10 +12,10 @@
       href: deployment-guidance.md
     - name: Deployment targets
       items:
-      - name: Deploy on Minikube
-        href: deploy-on-minikube.md
       - name: Deploy on AKS
         href: deploy-on-aks.md
+      - name: Deploy on Minikube
+        href: deploy-on-minikube.md
       - name: Deploy with Kubeadm
         href: deploy-with-kubeadm.md
     - name: Install tools

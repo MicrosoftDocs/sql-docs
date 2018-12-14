@@ -1,5 +1,5 @@
 ---
-title: Discontinued functionality for SSRS in SQL Server 2016 | Microsoft Docs
+title: Discontinued functionality
 author: markingmyname
 ms.author: maghan
 manager: kfile
@@ -12,7 +12,7 @@ ms.custom: seodec18
 ms.date: 12/13/2018
 ---
 
-# Discontinued functionality for SSRS in SQL Server 2016
+# Discontinued Functionality in SQL Server Reporting Services (SSRS)
 
 [!INCLUDE [ssrs-appliesto](../includes/ssrs-appliesto.md)] [!INCLUDE [ssrs-appliesto-2016](../includes/ssrs-appliesto-2016.md)] [!INCLUDE [ssrs-appliesto-not-2017](../includes/ssrs-appliesto-not-2017.md)] [!INCLUDE [ssrs-appliesto-not-pbirs](../includes/ssrs-appliesto-not-pbirs.md)]
 

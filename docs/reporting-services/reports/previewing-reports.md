@@ -1,17 +1,17 @@
 ---
-title: SQL Server Reporting Services (SSRS) Preview Reports | Microsoft Docs
+title: Preview Reports
 author: markingmyname
 ms.author: maghan
 manager: kfile
 ms.reviewer: ""
 ms.prod: reporting-services
-ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: reports
 ms.topic: conceptual
 ms.custom: seodec18
-ms.date: 12/13/2018
+ms.date: 12/14/2018
 ---
-# SQL Server Reporting Services (SSRS) - Preview Reports
+# Preview Reports in SQL Server Reporting Services (SSRS)
 
   When you design a [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] report, you may want to view it before publishing it to a production environment. You can do this in several ways: by switching to Preview mode in Report Designer, by using the preview window in Report Designer, and by publishing the report to a report server in a test environment.  
   
@@ -39,7 +39,7 @@ ms.date: 12/13/2018
   
  If you wish to preview a particular report that is not the start item for the project, select a configuration that builds the report but does not deploy it (for example, the DebugLocal configuration), right-click the report, and then click **Run**. You must choose a configuration that does not deploy the report; otherwise, the report will be published to the report server instead of displayed locally in a preview window.  
   
-## Publishing to a Test Server
+## Publish to a Test Server
 
  You can also test reports by publishing them to a test server, browse to the report  and preview. Publishing a report to a test server is the same as publishing to a production server. For information about publishing a report, see [Publishing Reports to a Report Server](../../reporting-services/reports/publishing-reports-to-a-report-server.md).  
   

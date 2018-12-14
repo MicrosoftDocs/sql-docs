@@ -1,5 +1,5 @@
 ---
-title: Extensions for SQL Server Reporting Services (SSRS) | Microsoft Docs
+title: Extensions for SQL Server Reporting Services (SSRS)
 author: markingmyname
 ms.author: maghan
 manager: kfile

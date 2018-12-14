@@ -1,5 +1,5 @@
 ---
-title: Microsoft Reporting and Analysis Tools | Microsoft Docs
+title: Analysis and reporting with Microsoft business intelligence (BI) tools
 author: markingmyname
 ms.author: maghan
 manager: kfile
@@ -8,9 +8,9 @@ ms.prod: sql-server-2014
 ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.custom: seodec18
-ms.date: 12/10/2018
+ms.date: 12/14/2018
 ---
-# Microsoft Reporting and Analysis Tools
+# Analysis and reporting with Microsoft business intelligence (BI) tools
 
   The following table maps workloads for data analysis and reporting to the Microsoft BI tools that are best suited for those workloads.  
   

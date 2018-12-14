@@ -24,7 +24,7 @@ The following table lists common big data cluster tools and how to install them:
 | Tool | Required | Description | Installation |
 |---|---|---|---|
 | **mssqlctl** | Yes | Command-line tool for installing and managing a big data cluster. | [Install](deploy-install-mssqlctl.md) |
-| **kubectl**<sup>1</sup> | Yes | Command-line tool for monitoring the underlying Kuberentes cluster ([More info](https://kubernetes.io/docs/tasks/tools/install-kubectl/)). | [Install](https://kubernetes.io/docs/tasks/tools/install-kubectl/#install-kubectl) |
+| **kubectl**<sup>1</sup> | Yes | Command-line tool for monitoring the underlying Kuberentes cluster ([More info](https://kubernetes.io/docs/tasks/tools/install-kubectl/)). | [Windows](https://kubernetes.io/docs/tasks/tools/install-kubectl/#install-with-powershell-from-psgallery) \| [Linux](https://kubernetes.io/docs/tasks/tools/install-kubectl/#install-kubectl-binary-using-native-package-management) |
 | **Azure Data Studio** | Yes | Cross-platform graphical tool for querying SQL Server ([More info](https://docs.microsoft.com/sql/azure-data-studio/what-is?view=sql-server-ver15)). | [Install](../azure-data-studio/download.md) |
 | **SQL Server 2019 extension** | Yes | Extension for Azure Data Studio that supports connecting to the big data cluster. Also provides a Data Virtualization wizard. | [Install](../azure-data-studio/sql-server-2019-extension.md) |
 | **Azure CLI**<sup>2</sup> | For AKS | Modern command-line interface for managing Azure services. Used with AKS big data cluster deployments ([More info](https://docs.microsoft.com/cli/azure/?view=azure-cli-latest)). | [Install](https://docs.microsoft.com/cli/azure/install-azure-cli?view=azure-cli-latest) |

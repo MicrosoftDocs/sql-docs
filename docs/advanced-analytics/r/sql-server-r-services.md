@@ -1,5 +1,5 @@
 ---
-title: R Services in SQL Server 2016 | Microsoft Docs
+title: R Services in SQL Server 2016 - SQL Server Machine Learning Services
 description: R in SQL Server for integrated R tasks on relational data, including data science and statistical modeling, predictive analytics, data visualization and more.
 ms.prod: sql
 ms.technology: machine-learning

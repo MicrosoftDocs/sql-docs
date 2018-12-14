@@ -1,5 +1,5 @@
 ---
-title: Java language extension in SQL Server 2019 | Microsoft Docs
+title: Java language extension in SQL Server 2019 - SQL Server Machine Learning Services
 description: Install, configure, and validate the Java language extension on SQL Server 2019 for both Linux and Windows systems.
 ms.prod: sql
 ms.technology: machine-learning

@@ -167,7 +167,7 @@
         }, 
         {
             "source_path": "docs/advanced-analytics/python/new-components-in-sql-server-to-support-python-integration.md",
-            "redirect_url": "/sql/advanced-analytics/concepts/extension-py",
+            "redirect_url": "/sql/advanced-analytics/concepts/extension-python",
             "redirect_document_id": false
         }, 
         {
@@ -297,7 +297,12 @@
         },
         {
             "source_path": "docs/advanced-analytics/r/index.md",
-            "redirect_url": "/sql/advanced-analytics/what-is-sql-server-machine-learning",
+            "redirect_url": "/sql/advanced-analytics/index",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/advanced-analytics/tutorials/index.md",
+            "redirect_url": "/sql/advanced-analytics/index",
             "redirect_document_id": false
         },
         {
@@ -943,7 +948,7 @@
         },
         {
             "source_path": "docs/advanced-analytics/r-services/index.md",
-            "redirect_url": "/sql/advanced-analytics/r/index",
+            "redirect_url": "/sql/advanced-analytics/index",
             "redirect_document_id": false
         },
         {
@@ -1253,7 +1258,7 @@
         },
         {
             "source_path": "docs/advanced-analytics/r-services/sql-server-r-services-features-and-tasks.md",
-            "redirect_url": "/sql/advanced-analytics/r/sql-server-r-services-features-and-tasks",
+            "redirect_url": "/sql/advanced-analytics/index",
             "redirect_document_id": false
         },
         {
@@ -1263,7 +1268,7 @@
         },
         {
             "source_path": "docs/advanced-analytics/r-services/sql-server-r-services-tutorials.md",
-            "redirect_url": "/sql/advanced-analytics/tutorials/machine learning-services-tutorials",
+            "redirect_url": "/sql/advanced-analytics/tutorials/machine-learning-services-tutorials",
             "redirect_document_id": false
         },
         {
@@ -1273,7 +1278,7 @@
         },
         {
             "source_path": "docs/advanced-analytics/r-services/in-database-advanced-analytics-for-sql-developers-tutorial.md",
-            "redirect_url": "/sql/advanced-analytics/tutorials/sqldev-in-database-advanced-analytics-for-sql-developers",
+            "redirect_url": "/sql/advanced-analytics/tutorials/sqldev-in-database-r-for-sql-developers",
             "redirect_document_id": false
         },
         {
@@ -1348,7 +1353,7 @@
         },
         {
             "source_path": "docs/advanced-analytics/r-services/working-with-r-data-types.md",
-            "redirect_url": "/sql/advanced-analytics/r/working-with-r-data-types",
+            "redirect_url": "/sql/advanced-analytics/r/r-libraries-and-data-types",
             "redirect_document_id": false
         },
         {

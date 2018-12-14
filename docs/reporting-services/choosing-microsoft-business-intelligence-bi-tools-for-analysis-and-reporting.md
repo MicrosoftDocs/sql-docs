@@ -4,8 +4,8 @@ author: markingmyname
 ms.author: maghan
 manager: kfile
 ms.reviewer: ""
-ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod: reporting-services, sql-server
+ms.prod_service: reporting-services-native, reporting-services-sharepoint 
 ms.topic: conceptual
 ms.custom: seodec18
 ms.date: 12/14/2018

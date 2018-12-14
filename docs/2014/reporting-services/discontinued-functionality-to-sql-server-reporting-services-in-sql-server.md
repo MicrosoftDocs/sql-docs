@@ -5,7 +5,8 @@ ms.author: maghan
 manager: kfile
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: reporting-services-native
+ms.prod: reporting-services-2014, sql-server-2014
+ms.prod_service: reporting-services-native, reporting-services-sharepoint 
 ms.topic: conceptual
 ms.custom: seodec18
 ms.date: 12/14/2018

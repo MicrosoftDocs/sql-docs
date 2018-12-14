@@ -7,7 +7,7 @@ ms.reviewer: ""
 ms.prod: "sql-server-2014"
 ms.technology: reporting-services-native
 ms.topic: conceptual
-ms.custom: "seodec18"
+ms.custom: seodec18
 ms.date: 12/14/2018
 ---
 

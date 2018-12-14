@@ -7,8 +7,8 @@ ms.prod: "sql-server-2014"
 ms.reviewer: ""
 ms.technology: reporting-services-native
 ms.topic: conceptual
-ms.custom: "seodec18"
-ms.date: 12/13/2018
+ms.custom: seodec18
+ms.date: 12/14/2018
 ---
 
 # Discontinued Functionality in SQL Server Reporting Services (SSRS)

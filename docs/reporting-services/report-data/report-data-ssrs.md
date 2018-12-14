@@ -9,7 +9,7 @@ ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-data
 ms.topic: conceptual
 ms.custom: seodec18
-ms.date: 12/13/2018
+ms.date: 12/14/2018
 ---
 
 # Report Data in SQL Server Reporting Services (SSRS)

@@ -1,5 +1,5 @@
 ---
-title: Get R and Python package information on SQL Server Machine Learning| Microsoft Docs
+title: Get R and Python package information - SQL Server Machine Learning Services
 description: Determine R and Python package version, verify installation, and get a list of installed packages on SQL Server R Services or Machine Learning Services.
 ms.custom: ""
 ms.prod: sql

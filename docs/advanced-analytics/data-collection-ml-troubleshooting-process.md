@@ -1,5 +1,5 @@
 ---
-title: Troubleshoot data collection for machine learning - SQL Server
+title: Troubleshoot data collection for machine learning - SQL Server Machine Learning Services
 ms.prod: sql
 ms.technology: machine-learning
 

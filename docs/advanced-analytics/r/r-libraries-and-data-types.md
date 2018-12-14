@@ -1,5 +1,5 @@
 ---
-title: R-to-SQL data type conversions in SQL Server Machine Learning | Microsoft Docs
+title: R-to-SQL data type conversions - SQL Server Machine Learning Services
 description: Review the implicit and explicit data type converstions between R and SQL Server in data science and machine learning solutions.
 ms.prod: sql
 ms.technology: machine-learning

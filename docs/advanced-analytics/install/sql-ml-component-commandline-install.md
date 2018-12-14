@@ -1,5 +1,6 @@
 ---
-title: Command-prompt installation of SQL Server machine learning R and Python components | Microsoft Docs
+title: Command-prompt installation of R and Python components - SQL Server Machine Learning
+description: Run SQL Server command line setup to add R language and Python integration to a SQL Server database engine instance.
 ms.prod: sql
 ms.technology: machine-learning
 

@@ -1,5 +1,5 @@
 ---
-title: olapR R function library in SQL Server Machine Learning | Microsoft Docs
+title: olapR R function library - SQL Server Machine Learning Services
 description: Introduction to the olapR function library in SQL Server 2016 R Services and SQL Server 2017 Machine Learning Services with R.
 ms.prod: sql
 ms.technology: machine-learning

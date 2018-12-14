@@ -1,6 +1,6 @@
 ---
-title: Monitor SQL Server Machine Learning Services using dynamic management views (DMVs) | Microsoft Docs
-description: Use dynamic management views (DMVs) to monitor SQL Server Machine Learning Services.
+title: Monitor R and Python script execution using dynamic management views (DMVs) - SQL Server Machine Learning
+description: Use dynamic management views (DMVs) to monitor R and Python external script execution in SQL Server Machine Learning Services.
 ms.prod: sql
 ms.technology: machine-learning
 

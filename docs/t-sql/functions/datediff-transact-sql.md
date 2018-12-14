@@ -1,7 +1,7 @@
 ---
 title: "DATEDIFF (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "07/29/2017"
+ms.date: "12/13/2018"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
@@ -90,7 +90,7 @@ See *startdate*.
   
 ## Return Value  
   
--   Each specific *datepart* and the abbreviations for that *datepart* will return the same value.  
+Each specific *datepart* and the abbreviations for that *datepart* will return the same value.  
   
 For a return value out of range for **int** (-2,147,483,648 to +2,147,483,647), `DATEDIFF` returns an error.  For **millisecond**, the maximum difference between *startdate* and *enddate* is 24 days, 20 hours, 31 minutes and 23.647 seconds. For **second**, the maximum difference is 68 years, 19 days, 3 hours, 14 minutes and 7 seconds.
   
@@ -100,12 +100,12 @@ If *startdate* and *enddate* are both assigned only a time value, and the *datep
   
 Because [smalldatetime](../../t-sql/data-types/smalldatetime-transact-sql.md) is accurate only to the minute, seconds and milliseconds are always set to 0 in the return value when *startdate* or *enddate* have a **smalldatetime** value.
   
-If only a time value is assigned to a date data type variable, `DATEDIFF` sets the value of the missing date part to the default value: 1900-01-01. If only a date value is assigned to a variable of a time or date data type, `DATEDIFF` sets the value of the missing time part to the default value: 00:00:00. If either *startdate* or *enddate* have only a time part and the other only a date part, `DATEDIFF` sets the missing time and date parts to the default values.
+If only a time value is assigned to a date data type variable, `DATEDIFF` sets the value of the missing date part to the default value: `1900-01-01`. If only a date value is assigned to a variable of a time or date data type, `DATEDIFF` sets the value of the missing time part to the default value: `00:00:00`. If either *startdate* or *enddate* have only a time part and the other only a date part, `DATEDIFF` sets the missing time and date parts to the default values.
   
 If *startdate* and *enddate* have different date data types, and one has more time parts or fractional seconds precision than the other, `DATEDIFF` sets the missing parts of the other to 0.
   
 ## datepart boundaries  
-The following statements have the same *startdate* and the same *enddate* values. Those dates are adjacent and they differ in time by .0000001 second. The difference between the *startdate* and *enddate* in each statement crosses one calendar or time boundary of its *datepart*. Each statement returns 1. If *startdate* and *enddate* have different year values but they have the same calendar week values, `DATEDIFF` will return 0 for *datepart* **week**.
+The following statements have the same *startdate* and the same *enddate* values. Those dates are adjacent and they differ in time by one microsecond (.0000001 second). The difference between the *startdate* and *enddate* in each statement crosses one calendar or time boundary of its *datepart*. Each statement returns 1. If *startdate* and *enddate* have different year values but they have the same calendar week values, `DATEDIFF` will return 0 for *datepart* **week**.
   
 ```sql
 SELECT DATEDIFF(year,        '2005-12-31 23:59:59.9999999', '2006-01-01 00:00:00.0000000');
@@ -121,11 +121,13 @@ SELECT DATEDIFF(millisecond, '2005-12-31 23:59:59.9999999', '2006-01-01 00:00:00
 ```
   
 ## Remarks  
-Use `DATEDIFF` in the SELECT <list>, WHERE, HAVING, GROUP BY and ORDER BY clauses.
+Use `DATEDIFF` in the `SELECT <list>`, `WHERE`, `HAVING`, `GROUP BY` and `ORDER BY` clauses.
   
 `DATEDIFF` implicitly casts string literals as a **datetime2** type. This means that `DATEDIFF` does not support the format YDM when the date is passed as a string. You must explicitly cast the string to a **datetime** or **smalldatetime** type to use the YDM format.
   
-Specifying SET DATEFIRST has no effect on `DATEDIFF`. `DATEDIFF` always uses Sunday as the first day of the week to ensure the function operates in a deterministic way.
+Specifying `SET DATEFIRST` has no effect on `DATEDIFF`. `DATEDIFF` always uses Sunday as the first day of the week to ensure the function operates in a deterministic way.
+
+`DATEDIFF` may overflow with a precision of **minute** or higher if the difference between *enddate* and *startdate* returns a value that is out of range for **int**.
   
 ## Examples  
 These examples use different types of expressions as arguments for the *startdate* and *enddate* parameters.
@@ -279,7 +281,7 @@ SELECT @result= ISNULL(CAST(NULLIF(@years,0) AS VARCHAR(10)) + ' years,','')
      + ISNULL(' ' + CAST(NULLIF(@hours,0) AS VARCHAR(10)) + ' hours,','')
      + ISNULL(' ' + CAST(@minutes AS VARCHAR(10)) + ' minutes and','')
      + ISNULL(' ' + CAST(@seconds AS VARCHAR(10)) 
-          + CASE WHEN CAST(@milliseconds AS VARCHAR(10)) > 0 THEN '.' + CAST(@milliseconds AS VARCHAR(10)) 
+          + CASE WHEN @milliseconds > 0 THEN '.' + CAST(@milliseconds AS VARCHAR(10)) 
                ELSE '' END 
           + ' seconds','')
 

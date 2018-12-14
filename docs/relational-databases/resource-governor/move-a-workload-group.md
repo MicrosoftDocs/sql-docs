@@ -12,8 +12,8 @@ helpviewer_keywords:
   - "workload groups [SQL Server], move"
   - "Resource Governor, workload group move"
 ms.assetid: f2068636-6e53-486a-a6fc-c12de2a38424
-author: MikeRayMSFT
-ms.author: mikeray
+author: julieMSFT
+ms.author: jrasnick
 manager: craigg
 ---
 # Move a Workload Group

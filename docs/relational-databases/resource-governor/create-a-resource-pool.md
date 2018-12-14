@@ -10,8 +10,8 @@ helpviewer_keywords:
   - "resource pools [SQL Server], create"
   - "Resource Governor, resource pool create"
 ms.assetid: 44dd0567-a4c8-4c72-89ff-e76f6ddef344
-author: MikeRayMSFT
-ms.author: mikeray
+author: julieMSFT
+ms.author: jrasnick
 manager: craigg
 ---
 # Create a Resource Pool

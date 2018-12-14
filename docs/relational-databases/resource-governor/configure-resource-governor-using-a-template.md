@@ -9,8 +9,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "Resource Governor, templates"
 ms.assetid: f342dec2-d1d6-483e-b44e-98eb7d168b5e
-author: MikeRayMSFT
-ms.author: mikeray
+author: julieMSFT
+ms.author: jrasnick
 manager: craigg
 ---
 # Configure Resource Governor Using a Template

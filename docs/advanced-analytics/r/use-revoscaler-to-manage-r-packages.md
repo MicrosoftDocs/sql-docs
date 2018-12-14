@@ -1,5 +1,5 @@
 ---
-title: How to use RevoScaleR functions to find or install R packages on SQL Server | Microsoft Docs
+title: How to use RevoScaleR functions to find or install R packages - SQL Server Machine Learning Services
 ms.prod: sql
 ms.technology: machine-learning
 

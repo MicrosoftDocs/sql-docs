@@ -24,7 +24,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
 You can find more information about Extended Events at:
 
 - [Quick Start: Extended events in SQL Server](../../relational-databases/extended-events/quick-start-extended-events-in-sql-server.md)
-- Blogs: [SQL Server Extended Events](https://blogs.msdn.com/b/extended_events/)
+- Blogs: [SQL Server Extended Events](https://social.msdn.microsoft.com/search/en-US?rq=site%3Ablogs.msdn.microsoft.com%2Fnav&rn=nav&ral=1&query=Extended+Events)
 
   
 ## Benefits of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Extended Events  

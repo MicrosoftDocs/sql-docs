@@ -1,11 +1,10 @@
 ---
-title: "SQL Server Replication Distributor Properties | Microsoft Docs"
+title: "Distributor Properties | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "replication"
+ms.technology: replication
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.rep.configdistwizard.distdbproperties.f1"

@@ -1,11 +1,10 @@
 ---
-title: "Monitoring (Replication) | Microsoft Docs"
+title: "Monitoring Replication | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "replication"
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords: 
   - "monitoring performance [SQL Server replication], about monitoring replication"

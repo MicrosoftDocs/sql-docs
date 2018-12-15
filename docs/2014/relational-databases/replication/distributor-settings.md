@@ -1,11 +1,10 @@
 ---
-title: "SQL Server Replication 'Distributor Settings' dialog box | Microsoft Docs"
+title: "'Distributor Settings' dialog box | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "replication"
+ms.technology: replication
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.rep.monitor.DistributorSettings.f1"

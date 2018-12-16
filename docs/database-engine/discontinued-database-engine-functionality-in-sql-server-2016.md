@@ -51,10 +51,10 @@ manager: craigg
 ## Previous Versions  
   
 -   [Discontinued Database Engine Functionality in SQL Server 2014](../2014/database-engine/discontinued-full-text-search-features-in-sql-server-2014.md)  
+
+-   [Discontinued Database Engine Functionality in SQL Server 2012](../2014/database-engine/discontinued-full-text-search-features-in-sql-server-2014.md#discontinued-features-in-includesssql11includessssql11-mdmd) 
   
--   [Discontinued Database Engine Functionality in SQL Server 2012](discontinued-database-engine-functionality-in-sql-server-2016.md) 
-  
--   [Discontinued Database Engine Functionality in SQL Server 2008](discontinued-database-engine-functionality-in-sql-server-2016.md)
+-   [Discontinued Database Engine Functionality in SQL Server 2008](../2014/database-engine/discontinued-full-text-search-features-in-sql-server-2014.md#discontinued-features-in-sql-server-2008-r2)
   
 ## See Also  
  [Deprecated Database Engine Features in SQL Server 2016](../database-engine/deprecated-database-engine-features-in-sql-server-2016.md)   

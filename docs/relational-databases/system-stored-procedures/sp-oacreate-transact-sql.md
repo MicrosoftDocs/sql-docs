@@ -35,7 +35,7 @@ sp_OACreate { progid | clsid } , objecttoken OUTPUT [ , context ]
   
 ## Arguments  
  *progid*  
- Is the programmatic identifier (ProgID) of the OLE object to create. This character string describes the class of the OLE object and has the form: **'***OLEComponent***.***Object***'**  
+ Is the programmatic identifier (ProgID) of the OLE object to create. This character string describes the class of the OLE object and has the form: **'**_OLEComponent_**.**_Object_**'**  
   
  *OLEComponent* is the component name of the OLE Automation server, and *Object* is the name of the OLE object. The specified OLE object must be valid and must support the **IDispatch** interface.  
   

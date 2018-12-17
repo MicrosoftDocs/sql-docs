@@ -35,5 +35,5 @@ ms.date: 12/14/2018
   
 ## Next steps
 
- [Dataset Fields Collection &#40;Report Builder and SSRS&#41;](../../reporting-services/report-data/dataset-fields-collection-report-builder-and-ssrs.md)
- [Grouping Pane](../../reporting-services/tools/grouping-pane.md)
+ - [Dataset Fields Collection &#40;Report Builder and SSRS&#41;](../../reporting-services/report-data/dataset-fields-collection-report-builder-and-ssrs.md)
+ - [Grouping Pane](../../reporting-services/tools/grouping-pane.md)

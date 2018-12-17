@@ -51,7 +51,7 @@ ms.date: 12/14/2018
   
 ## Next steps
 
- [Print Reports &#40;Report Builder and SSRS&#41;](../report-builder/print-reports-report-builder-and-ssrs.md)
- [Print a Report &#40;Report Builder and SSRS&#41;](../report-builder/print-a-report-report-builder-and-ssrs.md)
- [Publish Reports](../publish-reports.md)   
- [Using Custom Assemblies with Reports](../custom-assemblies/using-custom-assemblies-with-reports.md)
+ - [Print Reports &#40;Report Builder and SSRS&#41;](../report-builder/print-reports-report-builder-and-ssrs.md)
+ - [Print a Report &#40;Report Builder and SSRS&#41;](../report-builder/print-a-report-report-builder-and-ssrs.md)
+ - [Publish Reports](../publish-reports.md)
+ - [Using Custom Assemblies with Reports](../custom-assemblies/using-custom-assemblies-with-reports.md)

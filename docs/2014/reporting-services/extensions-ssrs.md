@@ -35,7 +35,7 @@ ms.date: 12/14/2018
   
 - Iterate through the rowset and retrieve data.  
   
- Some extensions can also perform the following tasks:  
+Some extensions can also perform the following tasks:  
   
 - Analyze a query and return a list of parameter names used in the query.  
   

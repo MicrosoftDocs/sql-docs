@@ -51,6 +51,6 @@ ms.date: 12/14/2018
   
 ## Next steps
 
- [What's New &#40;Reporting Services&#41;](what-s-new-reporting-services.md)
- [Behavior Changes to SQL Server Reporting Services  in SQL Server 2014](behavior-changes-to-sql-server-reporting-services-in-sql-server-2016.md)
- [Deprecated Features in SQL Server Reporting Services in SQL Server 2014](deprecated-features-in-sql-server-reporting-services-ssrs.md)
+ - [What's New &#40;Reporting Services&#41;](what-s-new-reporting-services.md)
+ - [Behavior Changes to SQL Server Reporting Services  in SQL Server 2014](behavior-changes-to-sql-server-reporting-services-in-sql-server-2016.md)
+ - [Deprecated Features in SQL Server Reporting Services in SQL Server 2014](deprecated-features-in-sql-server-reporting-services-ssrs.md)

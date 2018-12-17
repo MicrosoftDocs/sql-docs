@@ -20,7 +20,7 @@ The packages that you will create in this [!INCLUDE[ssISnoversion](../includes/s
 > [!NOTE]  
 > This tutorial requires Microsoft SQL Server Data Tools.  
 >   
-> For more information on installing the SQL Server Data Tools see [SQL Server Data Tools Download](https://msdn.microsoft.com/data/hh297027).  
+> For more information on installing the SQL Server Data Tools see [SQL Server Data Tools Download](https://docs.microsoft.com/it-it/sql/ssdt/download-sql-server-data-tools-ssdt?view=sql-server-2017).  
   
 ### To create a new Integration Services project  
   

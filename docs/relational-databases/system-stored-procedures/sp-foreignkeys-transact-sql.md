@@ -65,7 +65,7 @@ sp_foreignkeys [ @table_server = ] 'table_server'
  None  
   
 ## Result Sets  
- Various DBMS products support three-part naming for tables (*catalog***.**_schema_**.***table*), which is represented in the result set.  
+ Various DBMS products support three-part naming for tables (_catalog_**.**_schema_**.**_table_), which is represented in the result set.  
   
 |Column name|Data type|Description|  
 |-----------------|---------------|-----------------|  

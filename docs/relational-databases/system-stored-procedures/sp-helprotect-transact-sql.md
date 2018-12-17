@@ -43,7 +43,7 @@ sp_helprotect [ [ @name = ] 'object_statement' ]
   
 ## Arguments  
  [ **@name =** ] **'**_object_statement_**'**  
- Is the name of the object in the current database, or a statement, that has the permissions to report. *object_statement* is **nvarchar(776)**, with a default of NULL, which returns all object and statement permissions. If the value is an object (table, view, stored procedure, or extended stored procedure), it must be a valid object in the current database. The object name can include an owner qualifier in the form *owner***.***object*.  
+ Is the name of the object in the current database, or a statement, that has the permissions to report. *object_statement* is **nvarchar(776)**, with a default of NULL, which returns all object and statement permissions. If the value is an object (table, view, stored procedure, or extended stored procedure), it must be a valid object in the current database. The object name can include an owner qualifier in the form _owner_**.**_object_.  
   
  If *object_statement* is a statement, it can be a CREATE statement.  
   

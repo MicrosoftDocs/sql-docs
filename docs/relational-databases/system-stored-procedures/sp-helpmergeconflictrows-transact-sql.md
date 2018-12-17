@@ -40,7 +40,7 @@ sp_helpmergeconflictrows [ [ @publication = ] 'publication' ]
  Is the name of the publication. *publication* is **sysname**, with a default of **%**. If the publication is specified, all conflicts qualified by the publication are returned. For example, if the **MSmerge_conflict_Customers** table has conflict rows for the **WA** and the **CA** publications, passing in a publication name **CA** retrieves conflicts that pertain to the **CA** publication.  
   
  [ **@conflict_table=**] **'**_conflict_table_**'**  
- Is the name of the conflict table. *conflict_table* is **sysname**, with no default. In [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] and later versions, conflict tables are named using the format names with **MSmerge_conflict_*publication*_*article***, with one table for each published article.  
+ Is the name of the conflict table. *conflict_table* is **sysname**, with no default. In [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] and later versions, conflict tables are named using the format names with **MSmerge_conflict\__publication\_article_**, with one table for each published article.  
   
  [ **@publisher=**] **'**_publisher_**'**  
  Is the name of the Publisher. *publisher* is **sysname**, with a default of NULL.  

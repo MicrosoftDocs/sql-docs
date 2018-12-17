@@ -103,7 +103,7 @@ manager: craigg
  [Using the Register Data-tier Application Wizard](#UsingRegisterDACWizard)  
   
 ### Validating Objects  
- **Checking**  *SchemaName* **.** *ObjectName* **.** - Displays a progress bar as the wizard verifies the dependencies of the retrieved objects, and verifies that they are all valid objects for a DAC. _SchemaName_**.**_ObjectName_ identify which object is currently being verified.  
+ **Checking**  _SchemaName_ **.** _ObjectName_ **.** - Displays a progress bar as the wizard verifies the dependencies of the retrieved objects, and verifies that they are all valid objects for a DAC. _SchemaName_**.**_ObjectName_ identify which object is currently being verified.  
   
  **< Previous** - Returns you to the **Set Properties** page to change your entries.  
   

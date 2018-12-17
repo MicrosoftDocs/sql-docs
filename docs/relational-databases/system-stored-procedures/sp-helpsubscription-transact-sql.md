@@ -84,9 +84,9 @@ sp_helpsubscription [ [ @publication = ] 'publication' ]
 |**dts_package_location**|**int**|Location of the DTS package, if one is assigned to the subscription. If there is a package, a value of **0** specifies the package location at the **distributor**. A value of **1** specifies the **subscriber**.|  
 |**subscriber_security_mode**|**smallint**|Is the security mode at the Subscriber, where **1** means Windows Authentication, and **0** means [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentication.|  
 |**subscriber_login**|**sysname**|Is the login name at the Subscriber.|  
-|**subscriber_password**||Actual Subscriber password is never returned. The result is masked by a "**\*\*\*\*\*\***" string.|  
+|**subscriber_password**||Actual Subscriber password is never returned. The result is masked by a "**&#42;&#42;&#42;&#42;&#42;&#42;**" string.|  
 |**job_login**|**sysname**|Name of the Windows account under which the Distribution Agent runs.|  
-|**job_password**||Actual job password is never returned. The result is masked by a "**\*\*\*\*\*\***" string.|  
+|**job_password**||Actual job password is never returned. The result is masked by a "**&#42;&#42;&#42;&#42;&#42;&#42;**" string.|  
 |**distrib_agent_name**|**nvarchar(100)**|Name of the agent job that synchronizes the subscription.|  
 |**subscriber_type**|**tinyint**|Type of Subscriber, which can be one of the following:<br /><br /> **0** = SQL Server Subscriber<br /><br /> **1** = ODBC data source server<br /><br /> **2** = Microsoft JET database (deprecated)<br /><br /> **3** = OLE DB provider|  
 |**subscriber_provider**|**sysname**|Unique programmatic identifier (PROGID) with which the OLE DB provider for the non-SQL Server data source is registered.|  

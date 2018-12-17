@@ -192,30 +192,12 @@
       - name: Java
         href: /sql/advanced-analytics/java/
         homepage: /sql/advanced-analytics/java/extension-java
-      - name: R
-        href: /sql/advanced-analytics/r/
-        homepage: /sql/advanced-analytics/r/architecture-overview-sql-server-r
-      - name: Python
-        href: /sql/advanced-analytics/python/
-        homepage: /sql/advanced-analytics/python/sql-server-python-services
       - name: Install
         href: /sql/advanced-analytics/install/
         homepage: /sql/advanced-analytics/install/sql-machine-learning-services-windows-install.md
-      - name: Learn
+      - name: Tutorials
         href: /sql/advanced-analytics/tutorials/
         homepage: /sql/advanced-analytics/tutorials/machine-learning-services-tutorials  
-      - name: Python
-        href: /sql/advanced-analytics/python/
-        homepage: /sql/advanced-analytics/python/dmvs-for-python
-    - name: R
-      href: /sql/advanced-analytics/r/
-      homepage: /sql/advanced-analytics/r/architecture-overview-sql-server-r
-    - name: Install and configure
-      href: /sql/advanced-analytics/install/
-      homepage: /sql/advanced-analytics/install/sql-machine-learning-services-windows-install.md
-    - name: Tutorials
-      href: /sql/advanced-analytics/tutorials/
-      homepage: /sql/advanced-analytics/tutorials/machine-learning-services-tutorials
     - name: SQL Server
       href: /sql/sql-server/
       homepage: /sql/sql-server/sql-server-technical-documentation

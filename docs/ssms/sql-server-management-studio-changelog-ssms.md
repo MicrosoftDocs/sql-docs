@@ -51,7 +51,7 @@ This section lists what's new in SSMS 18.0 preview 6. For a complete changelog s
   - Fixed an issue where trying to script a spatial index with GEOMETRY_AUTO_GRID/GEOGRAPHY_AUTO_GRID on an Azure SQL Database was throwing an error.
 
 - **SMO**
-  - Azure database connections in SMO are not multi-thread safe.
+  - Fixed an issue where an application written using SMO would encounter an error if it tried to enumerate databases from the same server on multiple threads even though it uses separate SqlConnection instances on each thread.
 
 - **Data Classification**
   - Fixed an issue when saving classifications in the data classification pane while there are another data classification panes open on other databases.
@@ -73,6 +73,11 @@ This section lists what's new in SSMS 18.0 preview 6. For a complete changelog s
 
 - **ShowPlan**
   - New mem grant operator properties display incorrectly when there is more than one thread.
+
+### Known issues
+
+- Double-clicking on a .sql file launches SSMS, but does not open the actual script.
+  - Workaround: drag and drop the .sql file onto the SSMS editor.
 
 ## SSMS 18.0 preview - cumulative changelog through preview 6
 
@@ -126,7 +131,7 @@ If there is no *preview 5* or *preview 6* label it indicates the change appeared
   - Improved support for multi-monitor systems by making sure that more and more dialogs and windows pop up on the expected monitor.
   - Exposed the 'backup checksum default' server configuration in the new Database Settings page of the Server Properties Dialog. For details, see https://feedback.azure.com/forums/908035-sql-server/suggestions/34634974
   - [New in Preview 5] Exposed "maximum size for error log files" under "Configure SQL Server Error Logs". For details, see  https://feedback.azure.com/forums/908035/suggestions/33624115 
-  - [New in Preview 6] Added "Migrate to Azure" under Tools menu.
+  - [New in Preview 6] Added "Migrate to Azure" under Tools menu – We have integrated [Database Migration Assistant](https/aka.ms/get-dma) and [Azure Database Migration Service](https://aka.ms/get-dms) to provide quick and easy access to help accelerate your migrations to Azure.
   - [New in Preview 6] Previous version of SSMS 18.0 (< Preview 6) had the "Available Databases" key shortcut bound to **CTRL+ALT+J**. In Preview 6 and later, the key binding has been restored to **CTRL+U**, like it was in SSMS 17.x.
   - [New in Preview 6] Added logic to prompt the user to commit open transactions when "Change connection" is used.
 
@@ -204,11 +209,14 @@ If there is no *preview 5* or *preview 6* label it indicates the change appeared
 
 - **Connection dialog**
   - Enabled the removal of usernames from previous username list by pressing the DEL key (For details, see https://feedback.azure.com/forums/908035/suggestions/32897632)
+
 - **XEvent**
   - Added two columns "action_name" and "class_type_desc" that show action ID and class type fields as readable strings.
   - Removed the event XEvent Viewer cap of 1,000,000 events.
+
 - **External Tables**
   - Added support for Rejected_Row_Location in template, SMO, intellisense, and property grid
+
 - **SSMS Options**
   - Fixed an issue where "**Tools | Options | SQL Server Object Explorer** | Commands" page was not resizing properly.
   - SSMS will now by default disable automatic download of DTD in XMLA editor -- XMLA script editor (which uses the xml language service) will by default now prevent automatically downloading the DTD for potentially malicious xmla files.  This is controlled by turning off the “Automatically download DTDs and Schemas” setting in Tools->Options->Environment->Text Editor->XML->Miscellaneous.  
@@ -259,7 +267,7 @@ If there is no *preview 5* or *preview 6* label it indicates the change appeared
 
 - **SMO**
   - Fixed an issue where SMO/ServerConnection did not SqlCredential-based connections correctly. For details, see https://feedback.azure.com/forums/908035-sql-server/suggestions/33698941
-  - [New in Preview 6] Azure database connections in SMO are not multi-thread safe.
+  - [New in Preview 6] Fixed an issue where an application written using SMO would encounter an error if it tried to enumerate databases from the same server on multiple threads even though it uses separate SqlConnection instances on each thread.
 
 - **AS**
   - Fixed an issue where the "Advanced Settings" to the AS Xevent UI was clipped
@@ -373,8 +381,6 @@ The following features are no longer available in SSMS:
 
 - Double-clicking on a .sql file launches SSMS, but does not open the actual script.
   - Workaround: drag and drop the .sql file onto the SSMS editor.
-
-##########################################################
 
 
 ## SSMS 17.9.1 (latest GA release)

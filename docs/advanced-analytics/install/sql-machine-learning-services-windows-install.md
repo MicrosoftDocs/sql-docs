@@ -96,6 +96,19 @@ For local installations, you must run Setup as an administrator. If you install 
 
 7. After setup is complete, if you are instructed to restart the computer, do so now. It is important to read the message from the Installation Wizard when you have finished with Setup. For more information, see [View and Read SQL Server Setup Log Files](https://docs.microsoft.com/sql/database-engine/install-windows/view-and-read-sql-server-setup-log-files).
 
+## Set environment variables
+
+For R feature integration only, you should set the **MKL_CBWR** environment variable to [ensure consistent output](https://software.intel.com/articles/introduction-to-the-conditional-numerical-reproducibility-cnr) from Intel Math Kernel Library (MKL) calculations.
+
+1. In Control Panel, click **System and Security** > **System** > **Advanced System Settings** > **Environment Variables**.
+
+2. Create a new User or System variable. 
+
+  + Set variable name to `MKL_CBWR`
+  + Set the variable value to `AUTO`
+
+This step requires a server restart. If you are about to enable script execution, you can hold off on the restart until all of the configuration work is done.
+
 <a name="bkmk_enableFeature"></a>
 
 ## Enable script execution

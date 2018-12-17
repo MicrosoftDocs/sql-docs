@@ -27,7 +27,7 @@ version: 1.3.8
 - Data-Tier Application Wizard support in SQL Server Import extension
 - Update to the [SQL Server 2019 Preview extension](https://docs.microsoft.com/sql/azure-data-studio/sql-server-2019-extension?view=sql-server-ver15)
 - SQL Server Profiler improvements
-- Results Streaming for large queries
+- Results Streaming for large queries (preview)
 - Community extensions: sp_executesql to sql and New Database
 - Resolved [bugs and issues](https://github.com/Microsoft/azuredatastudio/milestone/19?closed=1)
 

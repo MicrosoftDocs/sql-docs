@@ -23,9 +23,9 @@ Download and install the latest release, the *December Release*:
 
 |Platform|Download|Release date| Version |
 |:---|:---|:---|:---|
-|Windows|[User Installer (recommended)](https://go.microsoft.com/fwlink/?linkid=2038320)<br>[System Installer](https://go.microsoft.com/fwlink/?linkid=2038320)<br>[.zip](https://go.microsoft.com/fwlink/?linkid=2038323)|December 18, 2018 |1.3.8|
-|macOS|[.zip](https://go.microsoft.com/fwlink/?linkid=2038327)|December 18, 2018 |1.3.8|
-|Linux|[.deb](https://go.microsoft.com/fwlink/?linkid=2038405)<br>[.rpm](https://go.microsoft.com/fwlink/?linkid=2038401)<br>[.tar.gz](https://go.microsoft.com/fwlink/?linkid=2038332)|December 18, 2018 |1.3.8|
+|Windows|[User Installer (recommended)](https://go.microsoft.com/fwlink/?linkid=2049972)<br>[System Installer](https://go.microsoft.com/fwlink/?linkid=2049975)<br>[.zip](https://go.microsoft.com/fwlink/?linkid=2050146)|December 18, 2018 |1.3.8|
+|macOS|[.zip](https://go.microsoft.com/fwlink/?linkid=2049981)|December 18, 2018 |1.3.8|
+|Linux|[.deb](https://go.microsoft.com/fwlink/?linkid=2050157)<br>[.rpm](https://go.microsoft.com/fwlink/?linkid=2049989)<br>[.tar.gz](https://go.microsoft.com/fwlink/?linkid=2049986)|December 18, 2018 |1.3.8|
 
 For details about the latest release, see the [release notes](release-notes.md).
 
@@ -37,25 +37,25 @@ This release of [!INCLUDE[name-sos](../includes/name-sos-short.md)] includes a s
 
 The user installer is recommended because it does not require administrator privileges, which simplifies both installs and upgrades.
 
-1. Download and run the [[!INCLUDE[name-sos](../includes/name-sos-short.md)] *user* installer for Windows](https://go.microsoft.com/fwlink/?linkid=2038320).
+1. Download and run the [[!INCLUDE[name-sos](../includes/name-sos-short.md)] *user* installer for Windows](https://go.microsoft.com/fwlink/?linkid=20383204997220).
 2. Start the [!INCLUDE[name-sos-short](../includes/name-sos-short.md)] app.
 
 **System Installer**
 
-1. Download and run the [[!INCLUDE[name-sos](../includes/name-sos-short.md)] *system* installer for Windows](https://go.microsoft.com/fwlink/?linkid=2038320).
+1. Download and run the [[!INCLUDE[name-sos](../includes/name-sos-short.md)] *system* installer for Windows](https://go.microsoft.com/fwlink/?linkid=2049975).
 2. Start the [!INCLUDE[name-sos-short](../includes/name-sos-short.md)] app.
 
 
 **.zip file**
 
-1. Download [[!INCLUDE[name-sos](../includes/name-sos-short.md)] .zip for Windows](https://go.microsoft.com/fwlink/?linkid=2038323).
+1. Download [[!INCLUDE[name-sos](../includes/name-sos-short.md)] .zip for Windows](https://go.microsoft.com/fwlink/?linkid=2050146).
 2. Browse to the downloaded file and extract it.
 3. Run `\azuredatastudio-windows\azuredatastudio.exe`
 
 
 ## Get Azure Data Studio for macOS
 
-1. Download [[!INCLUDE[name-sos](../includes/name-sos-short.md)] for macOS](https://go.microsoft.com/fwlink/?linkid=2038327).
+1. Download [[!INCLUDE[name-sos](../includes/name-sos-short.md)] for macOS](https://go.microsoft.com/fwlink/?linkid=2049981).
 2. To expand the contents of the zip, double-click it.
 3. To make [!INCLUDE[name-sos](../includes/name-sos-short.md)] available in the *Launchpad*, drag *Azure Data Studio.app* to the *Applications* folder.
 
@@ -63,9 +63,9 @@ The user installer is recommended because it does not require administrator priv
 ## Get Azure Data Studio for Linux
 
 1. Download [!INCLUDE[name-sos](../includes/name-sos-short.md)] for Linux by using one of the installers or the tar.gz archive:
-    - [.deb](https://go.microsoft.com/fwlink/?linkid=2038405)
-    - [.rpm](https://go.microsoft.com/fwlink/?linkid=2038401)
-    - [.tar.gz](https://go.microsoft.com/fwlink/?linkid=2038332)
+    - [.deb](https://go.microsoft.com/fwlink/?linkid=2050157)
+    - [.rpm](https://go.microsoft.com/fwlink/?linkid=2049989)
+    - [.tar.gz](https://go.microsoft.com/fwlink/?linkid=2049986)
 1. To extract the file and launch [!INCLUDE[name-sos](../includes/name-sos-short.md)], open a new Terminal window and type the following commands:
 
    **Debian Installation:**
@@ -166,9 +166,9 @@ To check for latest updates, click the gear icon on the bottom left of the windo
 
 ## Upgrade from SQL Operations Studio
 
-If you are still using SQL Operations Studio, you need to upgrade to Azure Data Studio. SQL Operations Studio was the preview name, and preview version of Azure Data Studio. In September 2018, we changed the name to Azure Data Studio and released the General Availability (GA) version. Because SQL Operations Studio is no longer being updated or supported, we ask all SQL Operations Studio users to download the latest version of Azure Data Studio to get the latest features, security updates, and fixes.
+If you are still using SQL Operations Studio, you need to upgrade to Azure Data Studio. SQL Operations Studio was the preview name and preview version of Azure Data Studio. In September 2018, we [changed the name to Azure Data Studio](https://cloudblogs.microsoft.com/sqlserver/2018/09/25/azure-data-studio-for-sql-server/) and released the General Availability (GA) version. Because SQL Operations Studio is no longer being updated or supported, we ask all SQL Operations Studio users to download the latest version of Azure Data Studio to get the latest features, security updates, and fixes.
  
-When upgrading from the old preview, to the latest Azure Data Studio, you will lose your current settings and extensions. To move your settings, follow the instructions in the following *Move user settings* section:
+When upgrading from the old preview to the latest Azure Data Studio, you will lose your current settings and extensions. To move your settings, follow the instructions in the following *Move user settings* section:
 
 
 ## Move user settings

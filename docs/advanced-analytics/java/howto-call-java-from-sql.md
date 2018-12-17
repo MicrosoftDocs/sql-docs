@@ -1,5 +1,5 @@
 ---
-title: How to call Java from SQL | Microsoft Docs
+title: How to call Java from SQL - SQL Server Machine Learning Services
 description: Learn how to call Java classes from SQL Server stored procedures using the Java programming language extension in SQL Server 2019.
 ms.prod: sql
 ms.technology: machine-learning

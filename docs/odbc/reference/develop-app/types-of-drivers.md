@@ -21,7 +21,7 @@ manager: craigg
 ODBC drivers can be classified as follows:  
   
 -   **32-bit ODBC 2.**  
-     ***x* Driver** A 32-bit driver that:  
+     **_x_ Driver** A 32-bit driver that:  
   
     -   Exports only ODBC 2*.x* functions.  
   

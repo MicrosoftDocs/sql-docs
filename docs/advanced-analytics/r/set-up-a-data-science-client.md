@@ -4,7 +4,7 @@ description: Install local R libraries and tools on a development workstation fo
 ms.prod: sql
 ms.technology: machine-learning
 
-ms.date: 11/12/2018  
+ms.date: 12/17/2018  
 ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
@@ -45,9 +45,12 @@ Microsoft's R packages are available in multiple products and services. On a loc
 
 2. In the installation wizard, accept or change default installation path, accept or change the components list, and accept the Microsoft R Client license terms.
 
-When installation is finished, a welcome screen introduces you to the product and documentation.
+  When installation is finished, a welcome screen introduces you to the product and documentation.
 
-In R Client, R processing is capped at two threads and in-memory data. For scalable processing using multiple cores and large data sets, you can shift execution (referred to as *compute context*) to the data sets and computational power of a remote SQL Server instance. This is the recommended approach for client integration with a production SQL Server instance. 
+3. Create an MKL_CBWR system environment variable to ensure consistent output on Intel Math Kernel Library (MKL) calculations.
+
+  + In Control Panel, click **System and Security** > **System** > **Advanced System Settings** > **Environment Variables**.
+  + Create a new System variable named **MKL_CBWR**, with a value set to **AUTO**.
 
 ## 2 - Locate executables
 
@@ -55,7 +58,7 @@ Locate and list the contents of the installation folder to confirm that R.exe, R
 
 1. In File Explorer, open the C:\Program Files\Microsoft\R Client\R_SERVER\bin folder to confirm the location of R.exe.
 
-2. Open the x64 subfolder to confirm **RGUI**.
+2. Open the x64 subfolder to confirm **RGUI**. You will use this tool in the next step.
 
 3. Open C:\Program Files\Microsoft\R Client\R_SERVER\library to review the list of packages installed with R Client, including RevoScaleR, MicrosoftML, and others.
 
@@ -78,6 +81,8 @@ When you install R with SQL Server, you get the same R tools that are standard t
 
 
 ## 4 - Get SQL permissions
+
+In R Client, R processing is capped at two threads and in-memory data. For scalable processing using multiple cores and large data sets, you can shift execution (referred to as *compute context*) to the data sets and computational power of a remote SQL Server instance. This is the recommended approach for client integration with a production SQL Server instance, and you will need permissions and connection information to make it work.
 
 To connect to an instance of SQL Server to run scripts and upload data, you must have a valid login on the database server. You can use either a SQL login or integrated Windows authentication. We generally recommend that you use Windows integrated authentication, but using the SQL login is simpler for some scenarios, particularly when your script contains connection strings to external data.
 

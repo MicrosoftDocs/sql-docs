@@ -42,7 +42,7 @@ sp_OAMethod objecttoken , methodname
  *methodname*  
  Is the method name of the OLE object to call.  
   
- *returnvalue*  **OUTPUT**  
+ _returnvalue_  **OUTPUT**  
  Is the return value of the method of the OLE object. If specified, it must be a local variable of the appropriate data type.  
   
  If the method returns a single value, either specify a local variable for *returnvalue*, which returns the method return value in the local variable, or do not specify *returnvalue*, which returns the method return value to the client as a single-column, single-row result set.  

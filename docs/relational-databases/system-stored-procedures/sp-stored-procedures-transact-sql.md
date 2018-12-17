@@ -52,7 +52,7 @@ sp_stored_procedures [ [ @sp_name = ] 'name' ]
 -   The **dbo** schema in the current database.  
   
  [ **@qualifier =** ] **'**_qualifier_**'**  
- Is the name of the procedure qualifier. *qualifier* is **sysname**, with a default of NULL. Various DBMS products support three-part naming for tables in the form (*qualifier***.**_schema_**.***name*. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], *qualifier* represents the database name. In some products, it represents the server name of the database environment of the table.  
+ Is the name of the procedure qualifier. *qualifier* is **sysname**, with a default of NULL. Various DBMS products support three-part naming for tables in the form (_qualifier_**.**_schema_**.**_name_. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], *qualifier* represents the database name. In some products, it represents the server name of the database environment of the table.  
   
  [ **@fUsePattern =** ] **'**_fUsePattern_**'**  
  Determines whether the underscore (_), percent (%), or brackets [ ]) are interpreted as wildcard characters. *fUsePattern* is **bit**, with a default of 1.  

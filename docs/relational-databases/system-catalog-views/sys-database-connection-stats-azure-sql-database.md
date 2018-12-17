@@ -36,8 +36,8 @@ monikerRange: "= azuresqldb-current || = sqlallproducts-allversions"
 |**success_count**|**int**|Number of successful connections.|  
 |**total_failure_count**|**int**|Total number of failed connections. This is the sum of **connection_failure_count**, **terminated_connection_count**, and **throttled_connection_count**, and does not include deadlock events.|  
 |**connection_failure_count**|**int**|Number of login failures.|  
-|**terminated_connection_count**|**int**|***Only applicable for [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] v11.***<br /><br /> Number of terminated connections.|  
-|**throttled_connection_count**|**int**|***Only applicable for [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] v11.***<br /><br /> Number of throttled connections.|  
+|**terminated_connection_count**|**int**|**_Only applicable for [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] v11._**<br /><br /> Number of terminated connections.|  
+|**throttled_connection_count**|**int**|**_Only applicable for [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] v11._**<br /><br /> Number of throttled connections.|  
   
 ## Remarks  
   

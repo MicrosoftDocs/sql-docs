@@ -39,7 +39,7 @@ sp_settriggerorder [ @triggername = ] '[ triggerschema. ] triggername'
   
 ## Arguments  
  [ **@triggername=** ] **'**[ _triggerschema_**.**] _triggername_**'**  
- Is the name of the trigger and the schema to which it belongs, if applicable, whose order is to be set or changed. [*triggerschema***.**]*triggername* is **sysname**. If the name does not correspond to a trigger or if the name corresponds to an INSTEAD OF trigger, the procedure returns an error. *triggerschema* cannot be specified for DDL or logon triggers.  
+ Is the name of the trigger and the schema to which it belongs, if applicable, whose order is to be set or changed. [_triggerschema_**.**]*triggername* is **sysname**. If the name does not correspond to a trigger or if the name corresponds to an INSTEAD OF trigger, the procedure returns an error. *triggerschema* cannot be specified for DDL or logon triggers.  
   
  [ **@order=** ] **'**_value_**'**  
  Is the setting for the new order of the trigger. *value* is **varchar(10)** and it can be any one of the following values.  

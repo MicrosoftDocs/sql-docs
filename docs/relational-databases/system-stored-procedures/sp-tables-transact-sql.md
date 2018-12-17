@@ -52,7 +52,7 @@ sp_tables [ [ @table_name = ] 'name' ]
  In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], if the current user owns a table with the specified name, the columns of that table are returned. If the owner is not specified and the current user does not own a table with the specified name, this procedure looks for a table with the specified name owned by the database owner. If one exists, the columns of that table are returned.  
   
  [ **@table_qualifier=** ] **'**_qualifier_**'**  
- Is the name of the table qualifier. *qualifier* is **sysname**, with a default of NULL. Various DBMS products support three-part naming for tables (*qualifier***.**_owner_**.***name*). In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], this column represents the database name. In some products, it represents the server name of the table's database environment.  
+ Is the name of the table qualifier. *qualifier* is **sysname**, with a default of NULL. Various DBMS products support three-part naming for tables (_qualifier_**.**_owner_**.**_name_). In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], this column represents the database name. In some products, it represents the server name of the table's database environment.  
   
  [ **,** [ **@table_type=** ] **"'**_type_**'**, **'**type**'"** ]  
  Is a list of values, separated by commas, that gives information about all tables of the table types that are specified. These include **TABLE**, **SYSTEMTABLE**, and **VIEW**. *type* is **varchar(100)**, with a default of NULL.  

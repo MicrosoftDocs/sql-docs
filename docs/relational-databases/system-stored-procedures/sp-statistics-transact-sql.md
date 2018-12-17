@@ -50,7 +50,7 @@ sp_statistics [ @table_name = ] 'table_name'
  In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], if the current user owns a table with the specified name, the indexes of that table are returned. If *owner* is not specified and the current user does not own a table with the specified *name*, this procedure looks for a table with the specified *name* owned by the database owner. If one exists, the indexes of that table are returned.  
   
  [ **@table_qualifier=** ] **'**_qualifier_**'**  
- Is the name of the table qualifier. *qualifier* is **sysname**, with a default of NULL. Various DBMS products support three-part naming for tables (*qualifier***.**_owner_**.***name*). In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], this parameter represents the database name. In some products, it represents the server name of the table's database environment.  
+ Is the name of the table qualifier. *qualifier* is **sysname**, with a default of NULL. Various DBMS products support three-part naming for tables (_qualifier_**.**_owner_**.**_name_). In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], this parameter represents the database name. In some products, it represents the server name of the table's database environment.  
   
  [ **@index_name=** ] **'**_index_name_**'**  
  Is the index name. *index_name* is **sysname**, with a default of %. Wildcard pattern matching is supported.  

@@ -31,48 +31,48 @@ Preview 6 is our latest public preview of SSMS 18.0. For the latest General Avai
 This section lists what's new in SSMS 18.0 preview 6. For a complete changelog since SSMS 17.9.1, see [SSMS 18.0 preview - cumulative changelog through preview 6](#ssms-180-preview---cumulative-changelog-through-preview-6).
 
 - **SSMS**
-  - [New in Preview 6] Added "Migrate to Azure" under Tools menu.
-  - [New in Preview 6] Previous version of SSMS 18.0 (< Preview 6) had the "Available Databases" key shortcut bound to **CTRL+ALT+J**. In Preview 6 and later, the key binding has been restored to **CTRL+U**, like it was in SSMS 17.x.
-  - [New in Preview 6] Added logic to prompt the user to commit open transactions when "Change connection" is used.
+  - Added "Migrate to Azure" under Tools menu.
+  - Previous version of SSMS 18.0 (< Preview 6) had the "Available Databases" key shortcut bound to **CTRL+ALT+J**. In Preview 6 and later, the key binding has been restored to **CTRL+U**, like it was in SSMS 17.x.
+  - Added logic to prompt the user to commit open transactions when "Change connection" is used.
 
 - **SSIS**
-  - [New in Preview 6] When you use SQL Agent of MI by SSMS, you can configure parameter and connection manager in SSIS agent job step.
+  - When you use SQL Agent of MI by SSMS, you can configure parameter and connection manager in SSIS agent job step.
 
 
 ### Bug fixes
 
 - **SSMS Editor**
-  - [New in Preview 6] New TRANSLATE function now recognized by intellisense. For details, see https://feedback.azure.com/forums/908035-sql-server/suggestions/32898430.
-  - [New in Preview 6] Improved intellisense on FORMAT built-in function. For details, see https://feedback.azure.com/forums/908035-sql-server/suggestions/32898676.
-  - [New in Preview 6] LAG and LEAD are now recognized as built-in functions. For details, see https://feedback.azure.com/forums/908035-sql-server/suggestions/32898757.
-  - [New in Preview 6] Fixed an issue where intellisense was giving a warning when using "ALTER TABLE...ADD CONSTRAINT...WITH(ONLINE=ON)"
+  - New TRANSLATE function now recognized by intellisense. For details, see https://feedback.azure.com/forums/908035-sql-server/suggestions/32898430.
+  - Improved intellisense on FORMAT built-in function. For details, see https://feedback.azure.com/forums/908035-sql-server/suggestions/32898676.
+  - LAG and LEAD are now recognized as built-in functions. For details, see https://feedback.azure.com/forums/908035-sql-server/suggestions/32898757.
+  - Fixed an issue where intellisense was giving a warning when using "ALTER TABLE...ADD CONSTRAINT...WITH(ONLINE=ON)"
 
 - **Object Scripting**
-  - [New in Preview 6] Fixed an issue where trying to script a spatial index with GEOMETRY_AUTO_GRID/GEOGRAPHY_AUTO_GRID on an Azure SQL Database was throwing an error.
+  - Fixed an issue where trying to script a spatial index with GEOMETRY_AUTO_GRID/GEOGRAPHY_AUTO_GRID on an Azure SQL Database was throwing an error.
 
 - **SMO**
-  - [New in Preview 6] Azure database connections in SMO are not multi-thread safe.
+  - Azure database connections in SMO are not multi-thread safe.
 
-- **Data Classification** 
-  - [New in Preview 6] Fixed an issue when saving classifications in the data classification pane while there are another data classification panes open on other databases.
+- **Data Classification**
+  - Fixed an issue when saving classifications in the data classification pane while there are another data classification panes open on other databases.
 
 - **Azure SQL Database**
-  - [New in Preview 6] Enabled the Statistics properties sub menu option under menu Statistics in Azure, since it has been fully supported for quite some time now.
+  - Enabled the Statistics properties sub menu option under menu Statistics in Azure, since it has been fully supported for quite some time now.
 
 - **Query Data Store**
-  - [New in Preview 6] Fixed an issue where a "DocumentFrame (SQLEditors)" exception could be thrown.
-  - [New in Preview 6] Fixed an issue when trying to set a custom time interval in the build-in Query Store reports the user was not able to select AM or PM on the start/end interval.
+  - Fixed an issue where a "DocumentFrame (SQLEditors)" exception could be thrown.
+  - Fixed an issue when trying to set a custom time interval in the build-in Query Store reports the user was not able to select AM or PM on the start/end interval.
 
 - **Copy Database Wizard**
-  - [New in Preview 6] Generate scripts/Transfer/Copy Database Wizard try to create a table with an in memory table doesn't force ansi_padding on.
-  - [New in Preview 6] Transfer Database task/Copy Database Wizard broken on SQL Server 2017 and SQL Server 2019.
-  - [New in Preview 6] Generate scripts/Transfer/Copy Database Wizard script table creation before creation of associated external data source.
+  - Generate scripts/Transfer/Copy Database Wizard try to create a table with an in memory table doesn't force ansi_padding on.
+  - Transfer Database task/Copy Database Wizard broken on SQL Server 2017 and SQL Server 2019.
+  - Generate scripts/Transfer/Copy Database Wizard script table creation before creation of associated external data source.
 
 - **Profiler**
-  - [New in Preview 6] Added "Aggregate Table Rewrite Query" event to Profiler events.
+  - Added "Aggregate Table Rewrite Query" event to Profiler events.
 
 - **ShowPlan**
-  - [New in Preview 6] New mem grant operator properties display incorrectly when there is more than one thread.
+  - New mem grant operator properties display incorrectly when there is more than one thread.
 
 ## SSMS 18.0 preview - cumulative changelog through preview 6
 

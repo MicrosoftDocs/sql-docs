@@ -1,5 +1,5 @@
 ---
-title: R scripting errors in SQL Server Machine Learning and R Services | Microsoft Docs
+title: R scripting errors and troubleshooting - SQL Server Machine Learning Services
 ms.prod: sql
 ms.technology: machine-learning
 

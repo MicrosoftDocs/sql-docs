@@ -7,8 +7,8 @@ ms.reviewer: ""
 ms.technology: performance
 ms.topic: conceptual
 ms.assetid: 2131f796-6359-4f9e-9047-da0b3d4dedaf
-author: MikeRayMSFT
-ms.author: mikeray
+author: julieMSFT
+ms.author: jrasnick
 manager: craigg
 ---
 # Attach Query Hints to a Plan Guide

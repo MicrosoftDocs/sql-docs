@@ -33,7 +33,7 @@ Watch a demonstration of viewing reports on an iPad.
   
 -   For a native mode report server, install [!INCLUDE[ssSQL11SP1long](../includes/sssql11sp1long-md.md)] or later.  
   
-     [!INCLUDE[ssSQL11SP1long](../includes/sssql11sp1long-md.md)] is available for download from the [Microsoft Download Center](http://www.microsoft.com/download/details.aspx?id=35575).  
+     [!INCLUDE[ssSQL11SP1long](../includes/sssql11sp1long-md.md)] is available for download from the [Microsoft Download Center](https://www.microsoft.com/download/details.aspx?id=35575).  
   
 -   For a SharePoint mode report server, install [!INCLUDE[ssSQL11SP1long](../includes/sssql11sp1long-md.md)] or later of the [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] add-in for SharePoint products.  
   
@@ -125,14 +125,14 @@ Watch a demonstration of viewing reports on an iPad.
   
  For more information on Microsoft Business Intelligence and Mobile devices, see the following:  
   
--   [Overview of mobile devices and SharePoint 2013](http://technet.microsoft.com/library/fp161351\(v=office.15\).aspx) (http://technet.microsoft.com/library/fp161351(v=office.15).aspx).  
+-   [Overview of mobile devices and SharePoint 2013](https://technet.microsoft.com/library/fp161351\(v=office.15\).aspx) (https://technet.microsoft.com/library/fp161351(v=office.15).aspx).  
   
--   [Supported mobile device browsers in SharePoint 2013](http://technet.microsoft.com/library/fp161353\(v=office.15\).aspx) (http://technet.microsoft.com/library/fp161353(v=office.15).aspx).  
+-   [Supported mobile device browsers in SharePoint 2013](https://technet.microsoft.com/library/fp161353\(v=office.15\).aspx) (https://technet.microsoft.com/library/fp161353(v=office.15).aspx).  
   
--   [Viewing reports and scorecards on Apple iPad devices (SharePoint Server 2010)](http://technet.microsoft.com/library/hh697482.aspx) (http://technet.microsoft.com/library/hh697482.aspx).  
+-   [Viewing reports and scorecards on Apple iPad devices (SharePoint Server 2010)](https://technet.microsoft.com/library/hh697482.aspx) (https://technet.microsoft.com/library/hh697482.aspx).  
   
--   [Viewing Reporting Services Reports on an iPad (video)](http://technet.microsoft.com/sqlserver/jj873792.aspx) (http://technet.microsoft.com/sqlserver/jj873792.aspx).  
+-   [Viewing Reporting Services Reports on an iPad (video)](https://technet.microsoft.com/sqlserver/jj873792.aspx) (https://technet.microsoft.com/sqlserver/jj873792.aspx).  
   
--   [Viewing Reporting Services Reports on a Microsoft Surface RT Device (video)](http://technet.microsoft.com/sqlserver/dn146017)  
+-   [Viewing Reporting Services Reports on a Microsoft Surface RT Device (video)](https://technet.microsoft.com/sqlserver/dn146017)  
   
   

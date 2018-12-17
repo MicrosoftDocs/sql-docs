@@ -176,7 +176,7 @@ snapshot [ -?]
  \- **MaxNetworkOptimization** [ **0**| **1**]  
  Is if irrelevant deletes are sent to the Subscriber. Irrelevant deletes are DELETE commands that are sent to Subscribers for rows that do not belong to the Subscriber's partition. Irrelevant deletes do not affect data integrity or convergence, but they can result in unnecessary network traffic. The default value of **MaxNetworkOptimization** is **0**. Setting **MaxNetworkOptimization** to **1** minimizing the chances of irrelevant deletes thereby reducing network traffic and maximizing network optimization. Setting this parameter to **1** can also increase the storage of metadata and cause performance to degrade at the Publisher if multiple levels of join filters and complex subset filters are present. You should carefully assess your replication topology and set **MaxNetworkOptimization** to **1** only if network traffic from irrelevant deletes is unacceptably high.  
   
-> [!NOTE]  
+> [!NOTE]
 >  Setting this parameter to **1** is useful only when the synchronization optimization option of the merge publication is set to **true** (the **@keep_partition_changes** parameter of [sp_addmergepublication &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md)).  
   
  **-Output** *output_path_and_file_name*  

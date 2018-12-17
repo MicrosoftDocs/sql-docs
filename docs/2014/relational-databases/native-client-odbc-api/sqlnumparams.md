@@ -17,7 +17,7 @@ manager: craigg
  For more information, see [Metadata Discovery](../native-client/features/metadata-discovery.md).  
   
 ## See Also  
- [SQLNumParams Function](http://go.microsoft.com/fwlink/?LinkId=58404)   
+ [SQLNumParams Function](https://go.microsoft.com/fwlink/?LinkId=58404)   
  [ODBC API Implementation Details](odbc-api-implementation-details.md)  
   
   

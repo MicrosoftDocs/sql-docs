@@ -23,7 +23,7 @@ manager: craigg
 # Usage Scenarios and Examples for Common Language Runtime (CLR) Integration
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] includes sample applications, package samples, and numerous coding samples that you can use to learn about the programmability features of common language runtime (CLR) integration.  
   
- For complete Visual Studio projects implementing these samples and additional materials, visit [Microsoft SQL Server Community Projects & Samples on CodePlex](http://go.microsoft.com/fwlink/?LinkID=193935).  
+ For complete Visual Studio projects implementing these samples and additional materials, visit [Microsoft SQL Server Community Projects & Samples on CodePlex](https://go.microsoft.com/fwlink/?LinkID=193935).  
   
 |Name|Description|  
 |----------|-----------------|  

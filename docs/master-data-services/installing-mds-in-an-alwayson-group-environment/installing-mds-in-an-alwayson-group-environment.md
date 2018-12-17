@@ -247,7 +247,7 @@ there is something you should check". For example, figure 7 shows a
 being busy on other tasks temporarily, and you may ignore it. You
 should check the online document for each warning and error message
 for more details. See Figure 7.
- 
+ 
     ![Validate Configuration Wizard, Validating page](media/Fig6_ValidationTests.png)
 
     Figure 6
@@ -540,7 +540,7 @@ lists other options.
     asynchronous replica. This is to verify that failover happens
     correctly without issues.
 
- The AlwaysOn setup is completed.
+ The AlwaysOn setup is completed.
 
 For more information about AlwaysOn Availability Group, see [SQL Server
 2016 AlwaysOn Availability Group](https://docs.microsoft.com/sql/database-engine/availability-groups/windows/always-on-availability-groups-sql-server).

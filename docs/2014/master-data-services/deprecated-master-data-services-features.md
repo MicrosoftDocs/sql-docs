@@ -17,7 +17,7 @@ manager: craigg
 ## Staging Process  
  The staging process that was used in [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] is no longer available in the [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] web application; however it is still available in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)].  
   
- Staging errors from the [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] staging process are no longer displayed in the UI. Error codes that are populated during the staging process are still available in the staging tables, and can be found here: [http://msdn.microsoft.com/library/ff487022.aspx](http://msdn.microsoft.com/library/ff487022.aspx).  
+ Staging errors from the [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] staging process are no longer displayed in the UI. Error codes that are populated during the staging process are still available in the staging tables, and can be found here: [https://msdn.microsoft.com/library/ff487022.aspx](https://msdn.microsoft.com/library/ff487022.aspx).  
   
  The staging tables (tblStgMember, tblStgMemberAttribute, and tblStgRelationship) are still available in the database. The stored procedure used to initiate the staging process (mdm.udpStagingSweep) is still available in the database.  
   

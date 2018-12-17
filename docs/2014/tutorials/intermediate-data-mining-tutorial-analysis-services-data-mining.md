@@ -65,7 +65,7 @@ manager: craigg
   
 -   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] with the [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)] database.  
   
- By default, the sample databases are not installed, to enhance security. To install the official databases for [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], visit the [Microsoft SQL Sample Databases](http://go.microsoft.com/fwlink/?LinkId=88417) page and select the appropriate version of the sample database.  
+ By default, the sample databases are not installed, to enhance security. To install the official databases for [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], visit the [Microsoft SQL Sample Databases](https://go.microsoft.com/fwlink/?LinkId=88417) page and select the appropriate version of the sample database.  
   
 ## See Also  
  [Basic Data Mining Tutorial](../../2014/tutorials/basic-data-mining-tutorial.md)   

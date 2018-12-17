@@ -28,7 +28,7 @@ manager: craigg
  This topic explains the implementation of the algorithm, describes how to customize the behavior of the algorithm for different tasks, and provides links to additional information about querying decision tree models.  
   
 ## Implementation of the Decision Trees Algorithm  
- The Microsoft Decision Trees algorithm applies the Bayesian approach to learning causal interaction models by obtaining approximate posterior distributions for the models. For a detailed explanation of this approach, see the paper on the Microsoft Research site, by [Structure and Parameter Learning](http://go.microsoft.com/fwlink/?LinkId=237640&clcid=0x409).  
+ The Microsoft Decision Trees algorithm applies the Bayesian approach to learning causal interaction models by obtaining approximate posterior distributions for the models. For a detailed explanation of this approach, see the paper on the Microsoft Research site, by [Structure and Parameter Learning](https://go.microsoft.com/fwlink/?LinkId=237640&clcid=0x409).  
   
  The methodology for assessing the information value of the *priors* needed for learning is based on the assumption of *likelihood equivalence*. This assumption says that data should not help to discriminate network structures that otherwise represent the same assertions of conditional independence. Each case is assumed to have a single Bayesian prior network and a single measure of confidence for that network.  
   
@@ -52,7 +52,7 @@ manager: craigg
   
  When the predictable attribute is a continuous numeric data type, feature selection is applied to the outputs as well, to reduce the possible number of outcomes and build the model faster. You can change the threshold for feature selection and thereby increase or decrease the number of possible values by setting the MAXIMUM_OUTPUT_ATTRIBUTES parameter.  
   
- For a more detained explanation about how the [!INCLUDE[msCoName](../../includes/msconame-md.md)] Decision Trees algorithm works with discrete predictable columns, see [Learning Bayesian Networks: The Combination of Knowledge and Statistical Data](http://go.microsoft.com/fwlink/?LinkId=45963). For more information about how the [!INCLUDE[msCoName](../../includes/msconame-md.md)] Decision Trees algorithm works with a continuous predictable column, see the appendix of [Autoregressive Tree Models for Time-Series Analysis](http://go.microsoft.com/fwlink/?LinkId=45966).  
+ For a more detained explanation about how the [!INCLUDE[msCoName](../../includes/msconame-md.md)] Decision Trees algorithm works with discrete predictable columns, see [Learning Bayesian Networks: The Combination of Knowledge and Statistical Data](https://go.microsoft.com/fwlink/?LinkId=45963). For more information about how the [!INCLUDE[msCoName](../../includes/msconame-md.md)] Decision Trees algorithm works with a continuous predictable column, see the appendix of [Autoregressive Tree Models for Time-Series Analysis](https://go.microsoft.com/fwlink/?LinkId=45966).  
   
 ### Scoring Methods and Feature Selection  
  The Microsoft Decision Trees algorithm offers three formulas for scoring information gain: Shannon's entropy, Bayesian network with K2 prior, and Bayesian network with a uniform Dirichlet distribution of priors. All three methods are well established in the data mining field. We recommend that you experiment with different parameters and scoring methods to determine which provides the best results. For more information about these scoring methods, see [Feature Selection](../../sql-server/install/feature-selection.md).  
@@ -88,13 +88,13 @@ manager: craigg
 -   Restrict the number of discrete values for any attribute to 10 or less. You might try grouping values in different ways in different models.  
   
     > [!NOTE]  
-    >  You can use the data exploration tools available in  [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] to visualize the distribution of values in your data and group your values appropriately before beginning data mining. For more information, see [Data Profiling Task and Viewer](../../integration-services/control-flow/data-profiling-task-and-viewer.md). You can also use the [Data Mining Add-ins for Excel 2007](http://www.microsoft.com/downloads/details.aspx?FamilyID=7C76E8DF-8674-4C3B-A99B-55B17F3C4C51), to explore, group and relabel data in Microsoft Excel.  
+    >  You can use the data exploration tools available in  [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] to visualize the distribution of values in your data and group your values appropriately before beginning data mining. For more information, see [Data Profiling Task and Viewer](../../integration-services/control-flow/data-profiling-task-and-viewer.md). You can also use the [Data Mining Add-ins for Excel 2007](https://www.microsoft.com/downloads/details.aspx?FamilyID=7C76E8DF-8674-4C3B-A99B-55B17F3C4C51), to explore, group and relabel data in Microsoft Excel.  
   
 ## Customizing the Decision Trees Algorithm  
  The [!INCLUDE[msCoName](../../includes/msconame-md.md)] Decision Trees algorithm supports parameters that affect the performance and accuracy of the resulting mining model. You can also set modeling flags on the mining model columns or mining structure columns to control the way that data is processed.  
   
 > [!NOTE]  
->  The Microsoft Decision Trees algorithm is available in all editions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]; however, some advanced parameters for customizing the behavior of the Microsoft Decision Trees algorithm are available for use only in specific editions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. For a list of features that are supported by the editions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], see [Features Supported by the Editions of SQL Server 2012](http://go.microsoft.com/fwlink/?linkid=232473) (http://go.microsoft.com/fwlink/?linkid=232473).  
+>  The Microsoft Decision Trees algorithm is available in all editions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]; however, some advanced parameters for customizing the behavior of the Microsoft Decision Trees algorithm are available for use only in specific editions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. For a list of features that are supported by the editions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], see [Features Supported by the Editions of SQL Server 2012](https://go.microsoft.com/fwlink/?linkid=232473) (https://go.microsoft.com/fwlink/?linkid=232473).  
   
 ### Setting Algorithm Parameters  
  The following table describes the parameters that you can use with the [!INCLUDE[msCoName](../../includes/msconame-md.md)] Decision Trees algorithm.  

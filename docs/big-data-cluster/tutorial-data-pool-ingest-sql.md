@@ -27,17 +27,17 @@ In this tutorial, you learn how to:
 
 ## <a id="prereqs"></a> Prerequisites
 
-* [Deploy a big data cluster on Kubernetes](deployment-guidance.md).
-* [Install Azure Data Studio and the SQL Server 2019 extension](deploy-big-data-tools.md).
-* [Load sample data into the cluster](#sampledata).
-
-[!INCLUDE [Load sample data](../includes/big-data-cluster-load-sample-data.md)]
+- [Big data tools](deploy-big-data-tools.md)
+   - **kubectl**
+   - **Azure Data Studio**
+   - **SQL Server 2019 extension**
+- [Load sample data into your big data cluster](tutorial-load-sample-data.md)
 
 ## Create an external table in the data pool
 
 The following steps create an external table in the data pool named **web_clickstream_clicks_data_pool**. This table can then be used as a location for ingesting data into the big data cluster.
 
-1. In Azure Data Studio, connect to the SQL Server master instance of your big data cluster. For more information, see [Connect to the SQL Server master instance](deploy-big-data-tools.md#master).
+1. In Azure Data Studio, connect to the SQL Server master instance of your big data cluster. For more information, see [Connect to the SQL Server master instance](connect-to-big-data-cluster.md#master).
 
 1. Double-click on the connection in the **Servers** window to show the server dashboard for the SQL Server master instance. Select **New Query**.
 

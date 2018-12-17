@@ -1,6 +1,6 @@
 ---
-title: CAB downloads for SQL Server cumulative updates | Microsoft Docs
-description: CAB downloads for SQL Server 2017 Machine Learning Services and SQL Server 2016 R Services.
+title: CAB downloads for SQL Server cumulative updates -SQL Server Machine Learning
+description: R and Python CAB and package downloads for SQL Server 2017 Machine Learning Services and SQL Server 2016 R Services.
 ms.prod: sql
 ms.technology: machine-learning
   

@@ -1,6 +1,6 @@
 ---
-title: R and Python Machine Learning Services in SQL Server | Microsoft Docs
-description: R in SQL Server and Python in SQL Server, integrating with relational data for data science and statistical modeling, machine learning models, predictive analytics, data visualization and more.
+title: R language and Python feature integration - SQL Server Machine Learning Services
+description: R language and Python features in SQL Server, integrating with relational data for data science and statistical modeling, machine learning models, predictive analytics, data visualization and more.
 ms.prod: sql
 ms.technology: machine-learning
 
@@ -132,7 +132,7 @@ Portability of your custom R and Python code is addressed through package distri
 
 Free clients that include our R and Python interpreters are [Microsoft R Client](https://docs.microsoft.com/machine-learning-server/r-client/what-is-microsoft-r-client) and the [Python libraries](https://docs.microsoft.com/machine-learning-server/install/python-libraries-interpreter).
 
-On Azure, Microsoft's R and Python packages and interpreters are also available on Azure Machine Learning, and Azure services like [HDInsight](https://docs.microsoft.com/machine-learning-server/install/machine-learning-server-on-azure-hdinsight), and [Azure virtual machines](https://docs.microsoft.com/machine-learning-server/install/machine-learning-server-azure-vm-on-linux). The [Data Science Virtual Machine](https://azure.microsoft.com/services/virtual-machines/data-science-virtual-machines/) includes a fully equipped development workstation with tools from multiple vendors as well as the libraries and interpreters from Microsoft.
+On Azure, Microsoft's R and Python packages and interpreters are also available on Azure Machine Learning, and Azure services like [HDInsight](https://docs.microsoft.com/azure/hdinsight/r-server/r-server-overview), and [Azure virtual machines](https://docs.microsoft.com/machine-learning-server/install/machine-learning-server-azure-vm-on-linux). The [Data Science Virtual Machine](https://azure.microsoft.com/services/virtual-machines/data-science-virtual-machines/) includes a fully equipped development workstation with tools from multiple vendors as well as the libraries and interpreters from Microsoft.
 
 ## See also
 

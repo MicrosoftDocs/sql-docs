@@ -37,11 +37,11 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   
  This sample connects to your computer's default [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance. To connect to a named instance, change the definition of the ODBC data source to specify the instance using the following format: server\namedinstance. By default, [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] installs to a named instance.  
   
- Execute the first ([!INCLUDE[tsql](../../includes/tsql-md.md)]) code listing to create the stored procedure used by this sample.  
+ Execute the first ( [!INCLUDE[tsql](../../includes/tsql-md.md)]) code listing to create the stored procedure used by this sample.  
   
  Compile the second (C++) code listing with odbc32.lib. Then, execute the program.  
   
- Execute the third ([!INCLUDE[tsql](../../includes/tsql-md.md)]) code listing to delete the stored procedure used by this sample.  
+ Execute the third ( [!INCLUDE[tsql](../../includes/tsql-md.md)]) code listing to delete the stored procedure used by this sample.  
   
 ### Code  
   

@@ -10,8 +10,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "Query Store, best practices"
 ms.assetid: 5b13b5ac-1e4c-45e7-bda7-ebebe2784551
-author: MikeRayMSFT
-ms.author: mikeray
+author: julieMSFT
+ms.author: jrasnick
 manager: craigg
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
@@ -153,7 +153,7 @@ Navigate to the Query Store sub-folder under the database node in Object Explore
 |Query Wait Statistics|Analyze wait categories that are most active in a database, and which queries contribute most to the selected wait category.<br />Use this view to analyze wait statistics and identify queries that may be impacting user experience across your applications.<br /><br />**Applies to:** Starting with [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] v18.0 and [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]|  
 |Tracked Queries|Track the execution of the most important queries in real time. Typically, you use this view when you have queries with forced plans and you want to make sure that query performance is stable.|
   
-> [!TIP]  
+> [!TIP]
 > For a detailed description how to use [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] to identify the top resource consuming queries and fix those that regressed due to the change of a plan choice, see [Query Store @Azure Blogs](https://azure.microsoft.com/blog/query-store-a-flight-data-recorder-for-your-database/).  
   
  When you identify a query with sub-optimal performance, your action depends on the nature of the problem.  
@@ -162,7 +162,7 @@ Navigate to the Query Store sub-folder under the database node in Object Explore
   
      ![query-store-force-plan](../../relational-databases/performance/media/query-store-force-plan.png "query-store-force-plan")  
 
-> [!NOTE]  
+> [!NOTE]
 > The above graphic may feature different shapes for specific query plans, with the following meanings for each possible status:<br />  
 > |Shape|Meaning|  
 > |-------------------|-------------|

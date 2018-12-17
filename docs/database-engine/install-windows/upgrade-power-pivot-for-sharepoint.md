@@ -245,7 +245,7 @@ Get-PowerPivotSystemService
  Verify the **CurrentSolutionVersion**. [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] is version 13.0.\<major build>.\<minor build>  
   
 ### Verify the version of the Analysis Services Windows Service  
- If you upgraded only some of your [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] servers in a SharePoint 2010 farm, the instance of [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] on un-upgraded servers will be older than the version expected in the farm. You will need to upgrade all of your servers to the same version in order for them to be usable. Use one of the following methods to verify the version of the SQL Server Analysis Services ([!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]) Windows service on each computer.  
+ If you upgraded only some of your [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] servers in a SharePoint 2010 farm, the instance of [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] on un-upgraded servers will be older than the version expected in the farm. You will need to upgrade all of your servers to the same version in order for them to be usable. Use one of the following methods to verify the version of the SQL Server Analysis Services ( [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]) Windows service on each computer.  
   
  **Windows File Explorer**:  
   

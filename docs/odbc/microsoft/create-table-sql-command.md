@@ -24,19 +24,19 @@ Creates a table having the specified fields.
 ```  
   
 CREATE TABLE | DBF TableName1 [NAME LongTableName] [FREE]  
-   (FieldName1FieldType [(nFieldWidth [, nPrecision])]  
-      [NULL | NOT NULL]   
-      [CHECK lExpression1 [ERROR cMessageText1]]  
-      [DEFAULT eExpression1]  
-      [PRIMARY KEY | UNIQUE]  
-      [REFERENCES TableName2 [TAG TagName1]]  
-      [NOCPTRANS]  
-   [, FieldName2 ...]  
-      [, PRIMARY KEY eExpression2 TAG TagName2  
-      |, UNIQUE eExpression3 TAG TagName3]  
-      [, FOREIGN KEY eExpression4 TAG TagName4 [NODUP]  
-            REFERENCES TableName3 [TAG TagName5]]  
-      [, CHECK lExpression2 [ERROR cMessageText2]])  
+   (FieldName1FieldType [(nFieldWidth [, nPrecision])]  
+      [NULL | NOT NULL]   
+      [CHECK lExpression1 [ERROR cMessageText1]]  
+      [DEFAULT eExpression1]  
+      [PRIMARY KEY | UNIQUE]  
+      [REFERENCES TableName2 [TAG TagName1]]  
+      [NOCPTRANS]  
+   [, FieldName2 ...]  
+      [, PRIMARY KEY eExpression2 TAG TagName2  
+      |, UNIQUE eExpression3 TAG TagName3]  
+      [, FOREIGN KEY eExpression4 TAG TagName4 [NODUP]  
+            REFERENCES TableName3 [TAG TagName5]]  
+      [, CHECK lExpression2 [ERROR cMessageText2]])  
 | FROM ARRAY ArrayName  
 ```  
   

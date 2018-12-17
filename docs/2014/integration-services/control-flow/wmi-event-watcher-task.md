@@ -32,7 +32,7 @@ manager: craigg
 -   [WMI Data Reader Task](wmi-data-reader-task.md)  
   
 ## WQL Queries  
- WQL is a dialect of SQL with extensions to support WMI event notification and other WMI-specific features. For more information about WQL, see the Windows Management Instrumentation documentation in the [MSDN Library](http://go.microsoft.com/fwlink/?linkid=62553).  
+ WQL is a dialect of SQL with extensions to support WMI event notification and other WMI-specific features. For more information about WQL, see the Windows Management Instrumentation documentation in the [MSDN Library](https://go.microsoft.com/fwlink/?linkid=62553).  
   
 > [!NOTE]  
 >  WMI classes vary between versions of Windows.  

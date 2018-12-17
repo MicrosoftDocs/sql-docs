@@ -60,7 +60,7 @@ manager: craigg
  [Use an Expression in a Data Flow Component](../use-an-expression-in-a-data-flow-component.md)  
   
 ## Related Content  
- Technical article, [SSIS Expression Examples](http://go.microsoft.com/fwlink/?LinkId=220761), on social.technet.microsoft.com  
+ Technical article, [SSIS Expression Examples](https://go.microsoft.com/fwlink/?LinkId=220761), on social.technet.microsoft.com  
   
 ## See Also  
  [SQL Server Integration Services](../sql-server-integration-services.md)  

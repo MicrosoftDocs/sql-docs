@@ -23,10 +23,10 @@ manager: craigg
   
  After the mirror database is prepared (see [Prepare a Mirror Database for Mirroring &#40;SQL Server&#41;](../../database-engine/database-mirroring/prepare-a-mirror-database-for-mirroring-sql-server.md)), you can establish a database mirroring session. The principal, mirror, and witness server instances must be separate server instances, which should be on separate host systems.  
   
-> [!IMPORTANT]  
+> [!IMPORTANT]
 >  We recommend that you configure database mirroring during off-peak hours because configuring mirroring can impact performance.  
-  
-> [!NOTE]  
+> 
+> [!NOTE]
 >  A given server instance can participate in multiple concurrent database mirroring sessions with the same or different partners. A server instance can be a partner in some sessions and a witness in other sessions. The mirror server instance must be running the same edition of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] as the principal server instance. Database mirroring is not available in every edition of [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. For a list of features that are supported by the editions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], see [Features Supported by the Editions of SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md). Also, we strongly recommend that they run on comparable systems that can handle identical workloads.  
   
 ### To establish a database mirroring session  

@@ -41,7 +41,7 @@ sp_helparticlecolumns [ @publication = ] 'publication'
  Is the name of the article that has its columns returned. *article* is **sysname**, with no default.  
   
  [ **@publisher**= ] **'***publisher***'**  
- Specifies a non-[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Publisher. *publisher* is **sysname**, with a default of NULL.  
+ Specifies a non- [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Publisher. *publisher* is **sysname**, with a default of NULL.  
   
 > [!NOTE]  
 >  *publisher* should not be specified when the requested article is published by a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Publisher.  

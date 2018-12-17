@@ -298,9 +298,12 @@ ON *partition_scheme_name* **( *column_name* )**
  ON **"**default**"**  
  **Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] and [!INCLUDE[ssCurrent](../../includes/sssdsfull-md.md)].  
   
- Creates the specified index on the default filegroup.  
+ Creates the specified index on the same filegroup or partition scheme as the table or view.  
   
- The term default, in this context, is not a keyword. It is an identifier for the default filegroup and must be delimited, as in ON **"**default**"** or ON **[**default**]**. If "default" is specified, the QUOTED_IDENTIFIER option must be ON for the current session. This is the default setting. For more information, see [SET QUOTED_IDENTIFIER &#40;Transact-SQL&#41;](../../t-sql/statements/set-quoted-identifier-transact-sql.md).  
+ The term default, in this context, is not a keyword. It is an identifier for the default filegroup and must be delimited, as in ON **"**default**"** or ON **[**default**]**. If "default" is specified, the QUOTED_IDENTIFIER option must be ON for the current session. This is the default setting. For more information, see [SET QUOTED_IDENTIFIER &#40;Transact-SQL&#41;](../../t-sql/statements/set-quoted-identifier-transact-sql.md).
+ 
+> [!NOTE]  
+> "default" does not indicate the database default filegroup in the context of CREATE INDEX. This differs from CREATE TABLE, where "default" locates the table on the database default filegroup.
   
  [ FILESTREAM_ON { *filestream_filegroup_name* | *partition_scheme_name* | "NULL" } ]  
  **Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
@@ -449,7 +452,7 @@ In backward compatible syntax, WITH DROP_EXISTING is equivalent to WITH DROP_EXI
 ONLINE = { ON | **OFF** }  
 Specifies whether underlying tables and associated indexes are available for queries and data modification during the index operation. The default is OFF.  
   
-> [!NOTE]  
+> [!NOTE]
 > Online index operations are not available in every edition of [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. For a list of features that are supported by the editions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], see [Editions and Supported Features for SQL Server 2016](../../sql-server/editions-and-supported-features-for-sql-server-2016.md).  
   
  ON  
@@ -532,7 +535,7 @@ MAXDOP = *max_degree_of_parallelism*
   
  For more information, see [Configure Parallel Index Operations](../../relational-databases/indexes/configure-parallel-index-operations.md).  
   
-> [!NOTE]  
+> [!NOTE]
 > Parallel index operations are not available in every edition of [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. For a list of features that are supported by the editions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], see [Editions and Supported Features for SQL Server 2016](../../sql-server/editions-and-supported-features-for-sql-server-2016.md) and [Editions and Supported Features for SQL Server 2017](../../sql-server/editions-and-components-of-sql-server-2017.md).  
   
  DATA_COMPRESSION  

@@ -18,7 +18,7 @@ manager: craigg
   
  This section explains how the CSDLBI representation maps to [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] data models (both tabular and multidimensional), along with examples of each model type.  
   
- Examples used to illustrate these concepts are taken from the AdventureWorks sample database, available on Codeplex. For more information about the samples, see [Adventure Works Samples for SQL Server](http://go.microsoft.com/fwlink/?linkID=220093).  
+ Examples used to illustrate these concepts are taken from the AdventureWorks sample database, available on Codeplex. For more information about the samples, see [Adventure Works Samples for SQL Server](https://go.microsoft.com/fwlink/?linkID=220093).  
   
 ## Structure of a Tabular Model in CSDLBI  
  A CSDLBI document that describes a report model and its data begins with the xsd statement, followed by the definition of a model.  

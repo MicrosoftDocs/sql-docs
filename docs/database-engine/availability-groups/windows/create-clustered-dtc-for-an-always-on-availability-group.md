@@ -315,17 +315,17 @@ GO
 ```
 
 > [!IMPORTANT]
-You cannot Enable DTC on an existing [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)].  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] will accept the following syntax for an existing Availability Group:  
->
+> You cannot Enable DTC on an existing [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)].  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] will accept the following syntax for an existing Availability Group:  
+> 
 > USE master;    
 > ALTER AVAILABILITY GROUP \<availability_group\>  
-SET (DTC_Support = Per_DB)  
->
->However, no configuration change will actually be made.  You can confirm the **dtc_support** configuration with the following T-SQL query:  
->
->SELECT name, dtc_support FROM sys.availability_groups  
->
->The only way to enable DTC support on an Availability Group is by creating an Availability Group using Transact-SQL.
+> SET (DTC_Support = Per_DB)  
+> 
+> However, no configuration change will actually be made.  You can confirm the **dtc_support** configuration with the following T-SQL query:  
+> 
+> SELECT name, dtc_support FROM sys.availability_groups  
+> 
+> The only way to enable DTC support on an Availability Group is by creating an Availability Group using Transact-SQL.
  
 ## <a name="ClusterDTC"></a>8.	Prepare cluster resources
 

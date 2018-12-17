@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "SQLServer:Databases"
   - "Availability Groups [SQL Server], performance counters"
 ms.assetid: a7f9e7d4-fff4-4c72-8b3e-3f18dffc8919
-author: MikeRayMSFT
-ms.author: mikeray
+author: julieMSFT
+ms.author: jrasnick
 manager: craigg
 ---
 # SQL Server, Databases Object

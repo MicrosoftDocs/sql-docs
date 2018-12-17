@@ -112,7 +112,7 @@ DataSource=http://mySAPNetWeaverBIServer:8000/sap/bw/xml/soap/xmla
 ##  <a name="Remarks"></a> Remarks  
  Not all report delivery modes are supported by this data provider. Delivering reports through data-driven subscriptions is not supported for this data processing extension. For more information, see [Use an External Data Source for Subscriber Data &#40;Data-Driven Subscription&#41;](../subscriptions/use-an-external-data-source-for-subscriber-data-data-driven-subscription.md).  
   
- For more information, see [Using SQL Server 2008 Reporting Services with SAP NetWeaver Business Intelligence](http://go.microsoft.com/fwlink/?LinkId=167352).  
+ For more information, see [Using SQL Server 2008 Reporting Services with SAP NetWeaver Business Intelligence](https://go.microsoft.com/fwlink/?LinkId=167352).  
   
   
   

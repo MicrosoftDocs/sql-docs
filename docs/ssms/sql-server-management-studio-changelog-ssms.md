@@ -31,7 +31,7 @@ Preview 6 is our latest public preview of SSMS 18.0. For the latest General Avai
 This section lists what's new in SSMS 18.0 preview 6. For a complete changelog since SSMS 17.9.1, see [SSMS 18.0 preview - cumulative changelog through preview 6](#ssms-180-preview---cumulative-changelog-through-preview-6).
 
 - **SSMS**
-  - Added "Migrate to Azure" under Tools menu.
+  - Added "Migrate to Azure" under Tools menu – We have integrated [Database Migration Assistant](https/aka.ms/get-dma) and [Azure Database Migration Service](https://aka.ms/get-dms) to provide quick and easy access to help accelerate your migrations to Azure.
   - Previous version of SSMS 18.0 (< Preview 6) had the "Available Databases" key shortcut bound to **CTRL+ALT+J**. In Preview 6 and later, the key binding has been restored to **CTRL+U**, like it was in SSMS 17.x.
   - Added logic to prompt the user to commit open transactions when "Change connection" is used.
 

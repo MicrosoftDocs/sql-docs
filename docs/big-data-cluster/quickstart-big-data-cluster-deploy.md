@@ -58,11 +58,7 @@ Use the following steps to run the deployment script. This script will create an
    ```
 
    > [!NOTE]
-   > If you have both python3 and python2 on your client machine and in the path, you will have to run the command using python3:
-   >
-   > ```
-   > python3 deploy-sql-big-data-aks.py
-   > ```
+   > If you have both python3 and python2 on your client machine and in the path, you have to run the command using python3: `python3 deploy-sql-big-data-aks.py`.
 
 1. When prompted, enter the following information:
 

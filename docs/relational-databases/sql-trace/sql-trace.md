@@ -77,7 +77,7 @@ SQL Trace uses data columns in the trace output to describe events that are retu
 |**ClientProcessID***|9|The ID assigned by the host computer to the process where the client application is running. This data column is populated if the client process ID is provided by the client.|  
 |**ColumnPermissions**|44|Indicates whether a column permission was set. You can parse the statement text to determine which permissions were applied to which columns.|  
 |**CPU**|18|The amount of CPU time (in milliseconds) that is used by the event.|  
-|**Database ID***|3|The ID of the database specified by the USE *database_name* statement, or the ID of the default database if no USE *database_name*statement has been issued for a given instance. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] displays the name of the database if the **ServerName** data column is captured in the trace and the server is available. Determine the value for a database by using the DB_ID function.|  
+|**Database ID**_|3|The ID of the database specified by the USE _database_name* statement, or the ID of the default database if no USE *database_name*statement has been issued for a given instance. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] displays the name of the database if the **ServerName** data column is captured in the trace and the server is available. Determine the value for a database by using the DB_ID function.|  
 |**DatabaseName**|35|The name of the database in which the user statement is running.|  
 |**DBUserName***|40|The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] user name of the client.|  
 |**Duration**|13|The duration (in microseconds) of the event.<br /><br /> The server reports the duration of an event in microseconds (one millionth, or 10<sup>-6</sup>, of a second) and the amount of CPU time used by the event in milliseconds (one thousandth, or 10<sup>-3</sup>, of a second). The [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] graphical user interface displays the **Duration** column in milliseconds by default, but when a trace is saved to either a file or a database table, the **Duration** column value is written in microseconds.|  
@@ -106,7 +106,7 @@ SQL Trace uses data columns in the trace output to describe events that are retu
 |**ObjectID**|22|The system-assigned ID of the object.|  
 |**ObjectID2**|56|The ID of the related object or entity, if available.|  
 |**ObjectName**|34|The name of the object that is referenced.|  
-|**ObjectType***\*|28|The value representing the type of the object involved in the event. This value corresponds to the **type** column in **sysobjects**.|  
+|**ObjectType**_\_|28|The value representing the type of the object involved in the event. This value corresponds to the **type** column in **sysobjects**.|  
 |**Offset**|61|The starting offset of the statement within the stored procedure or batch.|  
 |**OwnerID**|58|For lock events only. The type of the object that owns a lock.|  
 |**OwnerName**|37|The database user name of the object owner.|  

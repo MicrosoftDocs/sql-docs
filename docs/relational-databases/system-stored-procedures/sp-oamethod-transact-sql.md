@@ -59,12 +59,12 @@ sp_OAMethod objecttoken , methodname
   
 -   The method returns an array as an output parameter.  
   
- [ *@parametername***=** ] *parameter*[ **OUTPUT** ]  
+ [ _@parametername_**=** ] *parameter*[ **OUTPUT** ]  
  Is a method parameter. If specified, *parameter* must be a value of the appropriate data type.  
   
  To obtain the return value of an output parameter, *parameter* must be a local variable of the appropriate data type, and **OUTPUT** must be specified. If a constant parameter is specified, or if **OUTPUT** is not specified, any return value from an output parameter is ignored.  
   
- If specified, *parametername* must be the name of the [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] named parameter. Note that **@***parametername*is not a [!INCLUDE[tsql](../../includes/tsql-md.md)] local variable. The at sign (**@**) is removed, and *parametername*is passed to the OLE object as the parameter name. All named parameters must be specified after all positional parameters are specified.  
+ If specified, *parametername* must be the name of the [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] named parameter. Note that **@**_parametername_is not a [!INCLUDE[tsql](../../includes/tsql-md.md)] local variable. The at sign (**@**) is removed, and *parametername*is passed to the OLE object as the parameter name. All named parameters must be specified after all positional parameters are specified.  
   
  *n*  
  Is a placeholder indicating that multiple parameters can be specified.  

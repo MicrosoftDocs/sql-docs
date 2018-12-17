@@ -129,14 +129,14 @@ manager: craigg
   
  If the **-P** option is followed by more than one argument, an error message is generated and the program exits.  
   
- **-S** [*protocol*:]*server*[**\\***instance_name*][**,***port*]  
+ **-S** [*protocol*:]*server*[**\\**_instance_name_][**,**_port_]  
  Specifies the instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] to which to connect. It sets the `sqlcmd` scripting variable SQLCMDSERVER.  
   
- Specify *server_name* to connect to the default instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] on that server computer. Specify *server_name* [ **\\***instance_name* ] to connect to a named instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] on that server computer. If no server computer is specified, `sqlcmd` connects to the default instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] on the local computer. This option is required when you execute `sqlcmd` from a remote computer on the network.  
+ Specify *server_name* to connect to the default instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] on that server computer. Specify *server_name* [ **\\**_instance_name_ ] to connect to a named instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] on that server computer. If no server computer is specified, `sqlcmd` connects to the default instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] on the local computer. This option is required when you execute `sqlcmd` from a remote computer on the network.  
   
  *protocol* can be `tcp` (TCP/IP), `lpc` (shared memory), or `np` (named pipes).  
   
- If you do not specify a *server_name* [ **\\***instance_name* ] when you start `sqlcmd`, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] checks for and uses the SQLCMDSERVER environment variable.  
+ If you do not specify a *server_name* [ **\\**_instance_name_ ] when you start `sqlcmd`, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] checks for and uses the SQLCMDSERVER environment variable.  
   
 > [!NOTE]  
 >  The OSQLSERVER environment variable has been kept for backward compatibility. The SQLCMDSERVER environment variable takes precedence over the OSQLSERVER environment variable; this means that `sqlcmd` and **osql** can be used next to each other without interference and that old scripts will continue to work.  
@@ -162,7 +162,7 @@ manager: craigg
  `sqlcmd -U someuser -P s0mep@ssword -Z a_new_p@a$$w0rd`  
   
  **Input/Output Options**  
-  **-f** *codepage* | **i:***codepage*[**,o:***codepage*] | **o:***codepage*[**,i:***codepage*]  
+  **-f** *codepage* | **i:**_codepage_[**,o:**_codepage_] | **o:**_codepage_[**,i:**_codepage_]  
  Specifies the input and output code pages. The codepage number is a numeric value that specifies an installed Windows code page.  
   
  Code-page conversion rules:  
@@ -177,7 +177,7 @@ manager: craigg
   
  Enter `chcp` at the command prompt to verify the code page of Cmd.exe.  
   
- **-i** *input_file*[**,***input_file2*...]  
+ **-i** *input_file*[**,**_input_file2_...]  
  Identifies the file that contains a batch of SQL statements or stored procedures. Multiple files may be specified that will be read and processed in order. Do not use any spaces between file names. `sqlcmd` will first check to see whether all the specified files exist. If one or more files do not exist, `sqlcmd` will exit. The -i and the -Q/-q options are mutually exclusive.  
   
  Path examples:  
@@ -190,7 +190,7 @@ manager: craigg
   
  File paths that contain spaces must be enclosed in quotation marks.  
   
- This option may be used more than once: **-i***input_file* **-I***I input_file.*  
+ This option may be used more than once: **-i**_input_file_ **-I***I input_file.*  
   
  **-o** *output_file*  
  Identifies the file that receives output from `sqlcmd`.  
@@ -260,7 +260,7 @@ manager: craigg
 >  The actual time out value may vary from the specified *time_out* value by several seconds.  
   
  **-vvar =**  *value*[ **var =** *value*...]  
- Creates a `sqlcmd`scripting variable that can be used in a `sqlcmd` script. Enclose the value in quotation marks if the value contains spaces. You can specify multiple ***var***=**"*`values`*"** values. If there are errors in any of the values specified, `sqlcmd` generates an error message and then exits.  
+ Creates a `sqlcmd`scripting variable that can be used in a `sqlcmd` script. Enclose the value in quotation marks if the value contains spaces. You can specify multiple **_var_**=**"*`values`*"** values. If there are errors in any of the values specified, `sqlcmd` generates an error message and then exits.  
   
  `sqlcmd -v MyVar1=something MyVar2="some thing"`  
   
@@ -525,7 +525,7 @@ manager: craigg
   
  **Output Commands**  
   **:Error**   
- ***\<***  *filename*  ***>|* STDERR|STDOUT**  
+ **_\<_**  *filename*  **_>|_ STDERR|STDOUT**  
  Redirect all error output to the file specified by *file name*, to **stderr** or to **stdout**. The **Error** command can appear multiple times in a script. By default, error output is sent to **stderr**.  
   
  *file name*  
@@ -619,7 +619,7 @@ manager: craigg
  **:Serverlist**  
  Lists the locally configured servers and the names of the servers broadcasting on the network.  
   
- **:Connect**  *server_name*[**\\***instance_name*] [-l *timeout*] [-U *user_name* [-P *password*]]  
+ **:Connect**  *server_name*[**\\**_instance_name_] [-l *timeout*] [-U *user_name* [-P *password*]]  
  Connects to an instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Also closes the current connection.  
   
  Time-out options:  

@@ -128,8 +128,8 @@ For R feature integration only, you should set the **MKL_CBWR** environment vari
 
 2. Create a new User or System variable. 
 
-  + Set variable name to `MKL_CBWR`.
-  + Set the variable value to `AUTO`.
+  + Set variable name to `MKL_CBWR`
+  + Set the variable value to `AUTO`
 
 This step requires a server restart. If you are about to enable script execution, you can hold off on the restart until all of the configuration work is done.
 

@@ -194,7 +194,7 @@
         homepage: /sql/advanced-analytics/java/extension-java
       - name: Install
         href: /sql/advanced-analytics/install/
-        homepage: /sql/advanced-analytics/install/sql-machine-learning-services-windows-install.md
+        homepage: /sql/advanced-analytics/install/sql-machine-learning-services-windows-install
       - name: Tutorials
         href: /sql/advanced-analytics/tutorials/
         homepage: /sql/advanced-analytics/tutorials/machine-learning-services-tutorials  

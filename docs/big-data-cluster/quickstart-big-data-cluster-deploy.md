@@ -5,7 +5,7 @@ description: Walkthrough a deployment of SQL Server 2019 big data clusters (prev
 author: rothja 
 ms.author: jroth 
 manager: craigg
-ms.date: 12/07/2018
+ms.date: 12/17/2018
 ms.topic: quickstart
 ms.prod: sql
 ms.custom: seodec18
@@ -81,6 +81,9 @@ Use the following steps to run the deployment script. This script will create an
 
    > [!IMPORTANT]
    > It is not recommended to use machine sizes with less than 32 GB of RAM or less than 100 GB of storage each. You should also specify at least three worker nodes for AKS. This is a minimum configuration for testing both the deployment and functionality of big data clusters.
+
+   > [!NOTE]
+   > The `sa` account is a system administrator on the SQL Server master instance that gets created during setup. After creating deployment, the `MSSQL_SA_PASSWORD` environment variable is discoverable by running `echo $MSSQL_SA_PASSWORD` in the master instance container. For security purposes, change your `sa` password on the master instance after deployment. For more information, see [Change the SA password](../linux/quickstart-install-connect-docker.md#change-the-sa-password).
 
 1. The script will start by creating an AKS cluster using the parameters you specified. This step takes several minutes.
 

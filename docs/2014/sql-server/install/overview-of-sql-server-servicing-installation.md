@@ -30,7 +30,7 @@ manager: craigg
 ## Requirements and Known Issues  
  The recommended disk space requirements are approximately 2.5 times the size of the package to install, download, and extract the package. After installing a service pack, you can remove the downloaded package. Any temporary files are removed automatically.  
   
- **Review the known issues:** For more information about the known issues for the current release, see the corresponding release notes topic here: [SQL Server Release Notes](http://msdn.microsoft.com/f617a0af-92dd-47aa-82c3-f51b1346bcd8).  
+ **Review the known issues:** For more information about the known issues for the current release, see the corresponding release notes topic here: [SQL Server Release Notes](https://msdn.microsoft.com/f617a0af-92dd-47aa-82c3-f51b1346bcd8).  
   
 ## Installation Overview  
  This section discusses the [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] installation for cumulative updates and service packs, including how to do the following:  

@@ -1,6 +1,7 @@
 ---
-title: "Availability Replica Properties (General Page) | Microsoft Docs"
-ms.custom: ""
+title: "Availability replica properties (General Page) for availability groups"
+description: "A description of the various properties found on the 'General' page of the 'Availability Replica Properties' page in SQL Server Management Studio."
+ms.custom: "seodec18"
 ms.date: "05/17/2016"
 ms.prod: sql
 ms.reviewer: ""
@@ -13,7 +14,7 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ---
-# Availability Replica Properties (General Page)
+# Availability replica properties (General Page) for Always On availability groups
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Use this dialog box to viewthe properties of an availability replica.  
   

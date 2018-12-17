@@ -23,8 +23,8 @@ helpviewer_keywords:
   - "reports [SQL Server], tuning"
   - "viewing tuning output"
 ms.assetid: 47f9d9a7-80b0-416d-9d9a-9e265bc190dc
-author: MikeRayMSFT
-ms.author: mikeray
+author: julieMSFT
+ms.author: jrasnick
 manager: craigg
 ---
 # View and Work with the Output from the Database Engine Tuning Advisor

@@ -52,7 +52,7 @@ manager: craigg
  To specify your own additional properties, you must manually edit the MDX query in Query mode.  
   
 > [!NOTE]  
->  For more information about MDX and general information about the MDX query designer, see "MDX Query Editor (Analysis Services - Multidimensional Data)" in [SQL Server Books Online](http://go.microsoft.com/fwlink/?linkid=98335). However, for a report to display data from an MDX query, you must build the query by using the MDX query designer that comes with Report Builder. Importing an .mdx query from a file is not supported.  
+>  For more information about MDX and general information about the MDX query designer, see "MDX Query Editor (Analysis Services - Multidimensional Data)" in [SQL Server Books Online](https://go.microsoft.com/fwlink/?linkid=98335). However, for a report to display data from an MDX query, you must build the query by using the MDX query designer that comes with Report Builder. Importing an .mdx query from a file is not supported.  
   
 ### Graphical MDX Query Designer Toolbar in Design Mode  
  The query designer toolbar provides buttons to help you design MDX queries using the graphical interface. The following table lists the buttons and their functions.  

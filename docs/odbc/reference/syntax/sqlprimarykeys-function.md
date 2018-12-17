@@ -33,13 +33,13 @@ manager: craigg
 ```  
   
 SQLRETURN SQLPrimaryKeys(  
-     SQLHSTMT       StatementHandle,  
-     SQLCHAR *      CatalogName,  
-     SQLSMALLINT    NameLength1,  
-     SQLCHAR *      SchemaName,  
-     SQLSMALLINT    NameLength2,  
-     SQLCHAR *      TableName,  
-     SQLSMALLINT    NameLength3);  
+     SQLHSTMT       StatementHandle,  
+     SQLCHAR *      CatalogName,  
+     SQLSMALLINT    NameLength1,  
+     SQLCHAR *      SchemaName,  
+     SQLSMALLINT    NameLength2,  
+     SQLCHAR *      TableName,  
+     SQLSMALLINT    NameLength3);  
 ```  
   
 ## Arguments  

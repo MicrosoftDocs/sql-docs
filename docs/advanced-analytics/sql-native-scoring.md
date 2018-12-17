@@ -1,5 +1,5 @@
 ---
-title: Native scoring in SQL Server machine learning | Microsoft Docs
+title: Native scoring using PREDICT T-SQL statement - SQL Server Machine Learning Services
 description: Generate predictions using the PREDICT T-SQL function, scoring dta inputs against a pre-trained model written in R or Python on SQL Server.
 ms.prod: sql
 ms.technology: machine-learning

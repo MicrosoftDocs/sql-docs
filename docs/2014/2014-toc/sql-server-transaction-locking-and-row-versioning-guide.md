@@ -55,9 +55,9 @@ manager: craigg
 -   Transaction management features that enforce transaction atomicity and consistency. After a transaction has started, it must be successfully completed (committed), or the [!INCLUDE[ssDE](../includes/ssde-md.md)] undoes all of the data modifications made since the transaction started. This operation is referred to as rolling back a transaction because it returns the data to the state it was prior to those changes.  
   
 ### Controlling Transactions  
- Applications control transactions mainly by specifying when a transaction starts and ends. This can be specified by using either [!INCLUDE[tsql](../includes/tsql-md.md)] statements or database application programming interface (API) functions. The system must also be able to correctly handle errors that terminate a transaction before it completes. For more information, see [Transaction Statements &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/transactions-transact-sql), [Transactions in ODBC](http://technet.microsoft.com/library/ms131281.aspx) and [Transactions in SQL Server Native Client (OLEDB)](http://msdn.microsoft.com/library/ms130918.aspx).  
+ Applications control transactions mainly by specifying when a transaction starts and ends. This can be specified by using either [!INCLUDE[tsql](../includes/tsql-md.md)] statements or database application programming interface (API) functions. The system must also be able to correctly handle errors that terminate a transaction before it completes. For more information, see [Transaction Statements &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/transactions-transact-sql), [Transactions in ODBC](https://technet.microsoft.com/library/ms131281.aspx) and [Transactions in SQL Server Native Client (OLEDB)](https://msdn.microsoft.com/library/ms130918.aspx).  
   
- By default, transactions are managed at the connection level. When a transaction is started on a connection, all [!INCLUDE[tsql](../includes/tsql-md.md)] statements executed on that connection are part of the transaction until the transaction ends. However, under a multiple active result set (MARS) session, a [!INCLUDE[tsql](../includes/tsql-md.md)] explicit or implicit transaction becomes a batch-scoped transaction that is managed at the batch level. When the batch completes, if the batch-scoped transaction is not committed or rolled back, it is automatically rolled back by [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. For more information, see [Multiple Active Result Sets (MARS) in SQL Server](http://msdn.microsoft.com/library/ms345109(v=SQL.90).aspx).  
+ By default, transactions are managed at the connection level. When a transaction is started on a connection, all [!INCLUDE[tsql](../includes/tsql-md.md)] statements executed on that connection are part of the transaction until the transaction ends. However, under a multiple active result set (MARS) session, a [!INCLUDE[tsql](../includes/tsql-md.md)] explicit or implicit transaction becomes a batch-scoped transaction that is managed at the batch level. When the batch completes, if the batch-scoped transaction is not committed or rolled back, it is automatically rolled back by [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. For more information, see [Multiple Active Result Sets (MARS) in SQL Server](https://msdn.microsoft.com/library/ms345109(v=SQL.90).aspx).  
   
 #### Starting Transactions  
  Using API functions and [!INCLUDE[tsql](../includes/tsql-md.md)] statements, you can start transactions in an instance of the [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] as explicit, autocommit, or implicit transactions.  
@@ -647,7 +647,7 @@ INSERT mytable VALUES ('Dan');
   
 -   **Parallel query execution-related resources** Coordinator, producer, or consumer threads associated with an exchange port may block each other causing a deadlock usually when including at least one other process that is not a part of the parallel query. Also, when a parallel query starts execution, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] determines the degree of parallelism, or the number of worker threads, based upon the current workload. If the system workload unexpectedly changes, for example, where new queries start running on the server or the system runs out of worker threads, then a deadlock could occur.  
   
--   **Multiple Active Result Sets (MARS) resources**. These resources are used to control interleaving of multiple active requests under MARS. For more information, see [Multiple Active Result Sets (MARS) in SQL Server](http://msdn.microsoft.com/library/ms345109(v=SQL.90).aspx).  
+-   **Multiple Active Result Sets (MARS) resources**. These resources are used to control interleaving of multiple active requests under MARS. For more information, see [Multiple Active Result Sets (MARS) in SQL Server](https://msdn.microsoft.com/library/ms345109(v=SQL.90).aspx).  
   
     -   **User resource**. When a thread is waiting for a resource that is potentially controlled by a user application, the resource is considered to be an external or user resource and is treated like a lock.  
   
@@ -1854,8 +1854,8 @@ GO
  ![Arrow icon used with Back to Top link](media/uparrow16x16.gif "Arrow icon used with Back to Top link") [In This Guide](#Top)  
   
 ## See Also  
- [SQL Server 2005 Row Versioning-Based Transaction Isolation](http://msdn.microsoft.com/library/ms345124(v=sql.90).aspx)   
- [Overhead of Row Versioning](http://blogs.msdn.com/b/sqlserverstorageengine/archive/2008/03/30/overhead-of-row-versioning.aspx)   
- [How to create an autonomous transaction in SQL Server 2008](http://blogs.msdn.com/b/sqlprogrammability/archive/2008/08/22/how-to-create-an-autonomous-transaction-in-sql-server-2008.aspx)  
+ [SQL Server 2005 Row Versioning-Based Transaction Isolation](https://msdn.microsoft.com/library/ms345124(v=sql.90).aspx)   
+ [Overhead of Row Versioning](https://blogs.msdn.com/b/sqlserverstorageengine/archive/2008/03/30/overhead-of-row-versioning.aspx)   
+ [How to create an autonomous transaction in SQL Server 2008](https://blogs.msdn.com/b/sqlprogrammability/archive/2008/08/22/how-to-create-an-autonomous-transaction-in-sql-server-2008.aspx)  
   
   

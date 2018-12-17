@@ -19,8 +19,8 @@ helpviewer_keywords:
   - "Profiler [SQL Server Profiler], plan guides"
   - "query-to-plan guide matching [SQL Server]"
 ms.assetid: 7018dbf0-1a1a-411a-88af-327bedf9cfbd
-author: MikeRayMSFT
-ms.author: mikeray
+author: julieMSFT
+ms.author: jrasnick
 manager: craigg
 ---
 # Use SQL Server Profiler to Create and Test Plan Guides

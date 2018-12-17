@@ -5,7 +5,7 @@ description: Learn how to configure minikube for SQL Server 2019 big data cluste
 author: rothja 
 ms.author: jroth 
 manager: craigg
-ms.date: 12/06/2018
+ms.date: 12/11/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.custom: seodec18
@@ -17,7 +17,7 @@ This article describes how to configure **minikube** on a single machine for SQL
 
 ## Prerequisites
 
-- To run a Minikube cluster for SQL Server 2019 CTP 2.1 in a SQL big data cluster configuration, it is recommended that your machine have at least 32 GB of RAM.
+- To run a Minikube cluster for SQL Server 2019 (preview) for big data clusters, it is recommended that your machine have at least 32 GB of RAM.
 
    > [!TIP] 
    > If the machine has only the minimum recommended memory, then configure the deployment of the cluster to have only 1 compute pool instance, 1 data pool instance, and 1 storage pool instance. This configuration should only be used for evaluation environments where the durability and availability of the data is unimportant. See the [deployment documentation](deployment-guidance.md#define-environment-variables) for more information on the environment variables to set to configure the number of replicas for data pools, compute pools, and storage pools.
@@ -25,8 +25,6 @@ This article describes how to configure **minikube** on a single machine for SQL
 - VT-x or AMD-v virtualization must be enabled in your computer's BIOS.
 
 ## Install dependencies
-
-1. If not already installed, install git locally on [Windows](https://git-for-windows.github.io/), [Linux, or Mac](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git).
 
 1. Install [kubectl](https://kubernetes.io/docs/tasks/tools/install-kubectl/).
 
@@ -41,7 +39,7 @@ This article describes how to configure **minikube** on a single machine for SQL
 
 ## Install Minikube
 
-Install Minikube according to the instructions for the [v0.28.2 release](https://github.com/kubernetes/minikube/releases/tag/v0.28.2). The SQL Server 2019 CTP 2.1 big data cluster only works with version v0.24.1 and up.
+Install Minikube according to the instructions for the [v0.28.2 release](https://github.com/kubernetes/minikube/releases/tag/v0.28.2). The SQL Server 2019 big data cluster (preview) only works with version v0.24.1 and up.
 
 ## Create a Minikube cluster
 
@@ -71,4 +69,4 @@ Set-VM -Name minikube -CheckpointType Disabled -AutomaticCheckpointsEnabled $fal
 
 The steps in this article configured a Minikube cluster. The next step is to deploy SQL Server 2019 big data cluster. For instructions, see the following article:
 
-[Deploy SQL Server 2019 CTP 2.1 on Kubernetes](deployment-guidance.md#deploy)
+[Deploy SQL Server 2019 big data clusters on Kubernetes](deployment-guidance.md#deploy)

@@ -33,12 +33,12 @@ manager: craigg
 ```  
   
 BOOL SQLReadFileDSN(  
-     LPCSTR   lpszFileName,  
-     LPCSTR   lpszAppName,  
-     LPCSTR   lpszKeyName,  
-     LPSTR    lpszString,  
-     WORD     cbString,  
-     WORD *   pcbString);  
+     LPCSTR   lpszFileName,  
+     LPCSTR   lpszAppName,  
+     LPCSTR   lpszKeyName,  
+     LPSTR    lpszString,  
+     WORD     cbString,  
+     WORD *   pcbString);  
 ```  
   
 ## Arguments  

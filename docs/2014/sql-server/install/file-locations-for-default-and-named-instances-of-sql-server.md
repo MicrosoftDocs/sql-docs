@@ -120,7 +120,7 @@ manager: craigg
   
  Customers who choose to use the USESYSDB upgrade functionality in the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Installation Wizard (Setup UI mode) can easily lead themselves into a situation where the product gets installed into a recursive folder structure. For example, \<*SQLProgramFiles*>\MSSQL12\MSSQL\MSSQL10_50\MSSQL\Data\\. Instead, to use the USESYSDB feature, set an installation path for the SQL Data Files feature instead of the [!INCLUDE[ssDE](../../includes/ssde-md.md)] feature.  
   
-> [!NOTE]  
+> [!NOTE]
 >  Data files are always expected to be found in a child directory named Data. For example, specify C:\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL12.\<InstanceName>\ to specify the root path to the data directory of the system databases during upgrade when data files are found under C:\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL12.\<InstanceName>\MSSQL\Data.  
   
 ## See Also  

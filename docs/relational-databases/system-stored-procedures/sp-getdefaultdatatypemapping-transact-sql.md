@@ -20,7 +20,7 @@ manager: craigg
 # sp_getdefaultdatatypemapping (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Returns information on the default mapping for the specified data type between [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and a non-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database management system (DBMS). This stored procedure is executed at the Distributor on any database.  
+  Returns information on the default mapping for the specified data type between [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and a non- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database management system (DBMS). This stored procedure is executed at the Distributor on any database.  
   
  ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -111,7 +111,7 @@ sp_getdefaultdatatypemapping [ @source_dbms = ] 'source_dbms'
  **0** (success) or **1** (failure)  
   
 ## Remarks  
- **sp_getdefaultdatatypemapping** is used in all types of replication between [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and a non-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] DBMS.  
+ **sp_getdefaultdatatypemapping** is used in all types of replication between [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and a non- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] DBMS.  
   
  **sp_getdefaultdatatypemapping** returns the default destination data type that is the closest match to the specified source data type.  
   

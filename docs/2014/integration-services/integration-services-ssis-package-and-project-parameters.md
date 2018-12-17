@@ -96,6 +96,6 @@ manager: craigg
  [Set Parameter Values After the Project Is Deployed](../../2014/integration-services/set-parameter-values-after-the-project-is-deployed.md)  
   
 ## Related Content  
- Blog entry, [SSIS Quick Tip: Required Parameters](http://go.microsoft.com/fwlink/?LinkId=239781), on mattmasson.com.  
+ Blog entry, [SSIS Quick Tip: Required Parameters](https://go.microsoft.com/fwlink/?LinkId=239781), on mattmasson.com.  
   
   

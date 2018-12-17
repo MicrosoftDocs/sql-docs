@@ -1,6 +1,7 @@
 ---
-title: "Always On Availability Groups policies (SQL Server) | Microsoft Docs"
-ms.custom: "ag-guide"
+title: "Evaluate health of the availability group using group policies"
+description: "Learn how to view the group system policies that the Always On dashboard uses to provide information about the availability group health."
+ms.custom: "ag-guide, seodec18"
 ms.date: "06/13/2017"
 ms.prod: sql
 ms.reviewer: ""
@@ -11,9 +12,9 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ---
-# Always On Availability Groups policies
+# Evaluate health of the Always On availability group using group policies
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  The Always On Availability Groups system policies are used by the Always On Dashboard to provide information on the availability group health to the user. They are very useful for initial troubleshooting of an availability group's operational issues. These policies can be extended and used to customize the Always On Dashboard, or run instantly to report the desired health information.  
+  The Always On availability groups system policies are used by the Always On Dashboard to provide information on the availability group health to the user. They are very useful for initial troubleshooting of an availability group's operational issues. These policies can be extended and used to customize the Always On Dashboard, or run instantly to report the desired health information.  
   
  There are 14 system policies for availability groups. For detailed information on each policy, see [Always On policies for operational issues with Always On Availability Groups (SQL Server)](always-on-policies-for-operational-issues-always-on-availability.md).  
   

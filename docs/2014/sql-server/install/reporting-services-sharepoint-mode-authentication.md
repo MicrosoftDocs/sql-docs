@@ -25,9 +25,9 @@ manager: craigg
   
 -   The **SSRS Application Pool Account Password:** option will be disabled if the application pool account does not require a password. For example, "NT Authority\NetworkSerivce". If the application pool account does require a password, you cannot continue with upgrade until you type the correct password.  
   
- For more information, see [Upgrade and Migrate Reporting Services](http://go.microsoft.com/fwlink/?LinkID=245628) (http://go.microsoft.com/fwlink/?LinkID=245628).  
+ For more information, see [Upgrade and Migrate Reporting Services](https://go.microsoft.com/fwlink/?LinkID=245628) (https://go.microsoft.com/fwlink/?LinkID=245628).  
   
 ## See Also  
- [Upgrade and Migrate Reporting Services](http://go.microsoft.com/fwlink/?LinkID=245628)  
+ [Upgrade and Migrate Reporting Services](https://go.microsoft.com/fwlink/?LinkID=245628)  
   
   

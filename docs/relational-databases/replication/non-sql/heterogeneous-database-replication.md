@@ -47,7 +47,7 @@ manager: craigg
  For more information, see [Oracle Publishing Overview](../../../relational-databases/replication/non-sql/oracle-publishing-overview.md).  
   
 ## Publishing Data to Non-SQL Server Subscribers  
- The following non-[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] databases are supported as Subscribers to snapshot and transactional publications:  
+ The following non- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] databases are supported as Subscribers to snapshot and transactional publications:  
   
 -   Oracle for all platforms that Oracle supports.  
   

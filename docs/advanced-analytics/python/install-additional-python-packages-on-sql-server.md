@@ -1,6 +1,6 @@
 ---
-title: Install new Python packages on SQL Server Machine Learning | Microsoft Docs
-description: Add new Python packages to SQL Server 2017 Machine Learning Services (In-Database), and Machine Learning Server (Standalone)
+title: Install new Python language packages -  SQL Server Machine Learning
+description: Add new Python packages to SQL Server 2017 Machine Learning Services (In-Database), and Machine Learning Server (Standalone).
 ms.prod: sql
 ms.technology: machine-learning
 
@@ -21,7 +21,7 @@ For more information about package location and installation paths, see [Get R o
 
 + [SQL Server 2017 Machine Learning Services (In-Database)](../install/sql-machine-learning-services-windows-install.md) with the Python language option. 
 
-+ Packages must be Python 3.5 compliant and run on Windows. 
++ Packages must be Python 3.5-compliant and run on Windows. 
 
 + Administrative access to the server is required to install packages.
 
@@ -40,13 +40,6 @@ For this example, we assume that you want to install a new package directly on t
 Package installation is per instance. If you have multiple instances of Machine Learning Services, you must add the package to each one.
 
 The package installed in this example is [CNTK](https://docs.microsoft.com/cognitive-toolkit/), a framework for deep learning from Microsoft that supports customization, training, and sharing of different types of neural networks.
-
-> [!TIP]
-> Need help configuring your Python tools? See these blogs:
-> 
-> [Getting Started with Python Web Services using Machine Learning Server](https://blogs.msdn.microsoft.com/mlserver/2017/12/13/getting-started-with-python-web-services-using-machine-learning-server/)
-> 
-> [David Crook: Microsoft Cognitive Toolkit + VS Code](https://dacrook.com/cntk-vs-code-awesome/)
 
 ### Step 1. Download the Windows version of the Python package
 

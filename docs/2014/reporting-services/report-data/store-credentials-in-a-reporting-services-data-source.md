@@ -37,11 +37,11 @@ manager: craigg
 ##  <a name="bkmk_top"></a> Security policy requirements for stored credentials  
  ![as_powerpivot_refresh_sss_set_key](../../analysis-services/media/as-powerpivot-refresh-sss-set-key.gif "as_powerpivot_refresh_sss_set_key") It is required that the account you use for stored credentials, is configured for one of the following security policies on the report server. It is recommended you select the policy with the minimum level of permissions you require for your environment.  
   
-1.  **Allow log on locally**. For more information, see [Allow log on locally](http://technet.microsoft.com/library/cc756809\(v=WS.10\).aspx).  
+1.  **Allow log on locally**. For more information, see [Allow log on locally](https://technet.microsoft.com/library/cc756809\(v=WS.10\).aspx).  
   
-2.  **Log on as a batch job**. For more information, see [Log on as a batch job](http://technet.microsoft.com/library/cc755659\(v=ws.10\).aspx).  
+2.  **Log on as a batch job**. For more information, see [Log on as a batch job](https://technet.microsoft.com/library/cc755659\(v=ws.10\).aspx).  
   
-3.  For general information on policies, see [Edit security settings on a Group Policy object](http://technet.microsoft.com/library/cc736516\(v=ws.10\).aspx).  
+3.  For general information on policies, see [Edit security settings on a Group Policy object](https://technet.microsoft.com/library/cc736516\(v=ws.10\).aspx).  
   
 ##  <a name="bkmk_stored_credentials_data_source_native"></a> Configure stored credentials for a report-specific data source (Native mode)  
   

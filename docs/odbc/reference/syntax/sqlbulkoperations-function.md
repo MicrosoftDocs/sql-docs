@@ -33,8 +33,8 @@ manager: craigg
 ```  
   
 SQLRETURN SQLBulkOperations(  
-     SQLHSTMT       StatementHandle,  
-     SQLUSMALLINT   Operation);  
+     SQLHSTMT       StatementHandle,  
+     SQLUSMALLINT   Operation);  
 ```  
   
 ## Arguments  

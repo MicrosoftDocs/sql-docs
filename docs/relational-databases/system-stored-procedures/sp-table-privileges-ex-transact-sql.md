@@ -75,7 +75,7 @@ sp_table_privileges_ex [ @table_server = ] 'table_server'
  Requires SELECT permission on the schema.  
   
 ## Examples  
- The following example returns privilege information about tables with names that start with `Product` in the [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] database from the specified linked server `Seattle1`. ([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is assumed as the linked server).  
+ The following example returns privilege information about tables with names that start with `Product` in the [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] database from the specified linked server `Seattle1`. ( [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is assumed as the linked server).  
   
 ```  
 EXEC sp_table_privileges_ex @table_server = 'Seattle1',   

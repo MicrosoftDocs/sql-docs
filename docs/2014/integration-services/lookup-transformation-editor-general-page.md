@@ -43,7 +43,7 @@ manager: craigg
  When you select any other option in the **Specify how to handle rows with no matching entries** list box, the rows are handled as errors. The **Error** option on the **Error Output** page is available.  
   
 ## External Resources  
- Blog entry, [Lookup cache modes](http://go.microsoft.com/fwlink/?LinkId=219518) on blogs.msdn.com  
+ Blog entry, [Lookup cache modes](https://go.microsoft.com/fwlink/?LinkId=219518) on blogs.msdn.com  
   
 ## See Also  
  [Cache Connection Manager](connection-manager/cache-connection-manager.md)   

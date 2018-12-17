@@ -30,16 +30,16 @@ manager: "erikre"
 ## Before Upgrading Integration Services  
  We recommended that you run Upgrade Advisor before you upgrade to [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Upgrade Advisor reports issues that you might encounter if you migrate existing [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] packages to the new package format that [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] uses.  
   
-> [!NOTE]  
+> [!NOTE]
 >  Support for migrating or running Data Transformation Services (DTS) packages has been discontinued in SQL Server 2012. The following DTS functionality has been discontinued.  
->   
+> 
 >  -   DTS runtime  
 > -   DTS API  
 > -   Package Migration Wizard for migrating DTS packages to the next version of [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]  
 > -   Support for DTS package maintenance in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]  
 > -   Execute DTS 2000 Package task  
 > -   Upgrade Advisor scan of DTS packages.  
->   
+> 
 >  For information about other discontinued features, see [Discontinued Integration Services Functionality in SQL Server 2016](https://msdn.microsoft.com/library/5ee40ceb-37b9-47a9-b90d-ce1de74b10f7).  
   
 ## Upgrading Integration Services  

@@ -9,8 +9,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "plan guides [SQL Server], deleting"
 ms.assetid: aa4d3188-6927-43de-a3e3-90fc16eeaca7
-author: MikeRayMSFT
-ms.author: mikeray
+author: julieMSFT
+ms.author: jrasnick
 manager: craigg
 ---
 # Delete a Plan Guide

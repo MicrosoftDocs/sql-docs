@@ -219,7 +219,7 @@ dta -d AdventureWorks2012 ...
      
   
  **-if** _workload_file_  
- Specifies the path and name of the workload file to use as input for tuning. The file must be in one of these formats: .trc (SQL Server Profiler trace file), .sql (SQL file), or .log ([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] trace file). Either one workload file or one workload table must be specified.  
+ Specifies the path and name of the workload file to use as input for tuning. The file must be in one of these formats: .trc (SQL Server Profiler trace file), .sql (SQL file), or .log ( [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] trace file). Either one workload file or one workload table must be specified.  
   
  **-it** _workload_trace_table_name_  
  Specifies the name of a table containing the workload trace for tuning. The name is specified in the format: [*database_name*]**.**[*owner_name*]**.**_table_name_.  

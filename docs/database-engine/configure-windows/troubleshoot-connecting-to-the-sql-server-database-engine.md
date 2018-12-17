@@ -58,8 +58,8 @@ First you must gather basic information about the database engine.
     2.  In the Log Viewer, click the **Filter** button on the toolbar. In the **Message contains text** box, type **server is listening on**, click **Apply filter**, and then click **OK**.
     3.  A message similar to **Server is listening on [ 'any' \<ipv4> 1433]** should be listed. This message indicates that this instance of SQL Server is listening on all the IP addresses on this computer (for IP version 4) and is listening to TCP port 1433. (TCP port 1433 is usually the port used by the Database Engine. Only one instance of SQL Server can use a port, so if there is more than one instance of SQL Server installed, some instances must use other port numbers.) Make a note of the port number used by the instance of [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] that you are trying to connect to. 
 
-    >    [!NOTE] 
-    >    IP address 127.0.0.1 is probably listed. It is called the loopback adapter address and can only be connected to from processes on the same computer. It can be useful for troubleshooting, but you can't use it to connect from another computer.
+    > [!NOTE] 
+    > IP address 127.0.0.1 is probably listed. It is called the loopback adapter address and can only be connected to from processes on the same computer. It can be useful for troubleshooting, but you can't use it to connect from another computer.
 
 ## Enable Protocols
 

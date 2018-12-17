@@ -237,7 +237,7 @@ Migrating a cluster that uses Availability Groups with standalone replicas is si
 
 ### [!INCLUDE[sshadrc-md](../../../includes/sshadrc-md.md)]
 
--   **Database** **mirroring** **endpoint**
+-   **Database mirroring endpoint**
 
     From a SQL perspective, the database mirroring endpoint will migrate to the new [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] instance along with the system tables. Prior to migration, ensure that the appropriate rules are applied in firewalls and that no other process is listening on the same port.
 
@@ -251,17 +251,17 @@ Migrating a cluster that uses Availability Groups with standalone replicas is si
 
 ### Replication
 
--   **Remote** **distributors,** **publishers,** **subscribers**
+-   **Remote distributors, publishers, subscribers**
 
     The relationship between a distributor and publisher relies only on the VNN of the machines hosting the two, which will properly resolve to the new machine. The [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent jobs will also properly migrate with the system tables, so the various replication agents will be able to continue execution as usual. We do require prior to migration that any Windows accounts running the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent itself or any [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent job have the same permissions in the target environment. Communication with both the publisher and the subscribers will execute as usual.
 
--   **Snapshot** **folder**
+-   **Snapshot folder**
 
     Prior to migration we require that any network shares used by any [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] features be accessible by machines in the target environment with the same permissions as the original environment. You will have to ensure this is true prior to migration.
 
 ### Service broker
 
--   **Service** **broker** **endpoint**
+-   **Service broker endpoint**
 
     From a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] perspective, there are no concerns with the endpoint. Prior to migration, you will have to ensure that no process is already listening on the same port and that no firewall rule is blocking that port, or that there is a firewall rule specifically allowing the port.
 
@@ -273,7 +273,7 @@ Migrating a cluster that uses Availability Groups with standalone replicas is si
 
     Routes depend on the virtual network name of the target, which for both machine names and SQL FCI network names will properly resolve to the correct machines in the new environment. Any other VNN referenced must also be redirected to the new machine.
 
--   **Remote** **service** **bindings**
+-   **Remote service bindings**
 
     Remote service bindings will function as intended after migration, as any user using the remote service binding will properly migrate.
 
@@ -283,7 +283,7 @@ Migrating a cluster that uses Availability Groups with standalone replicas is si
 
     Jobs will be properly migrated along with the system databases. Any user running either a SQL Agent job or the SQL Agent itself will have the same permissions on the target machine as specified in the prerequisites.
 
--   **Alerts and** **operators**
+-   **Alerts and operators**
 
     Alerts and operators will be properly migrated with the system databases.
 

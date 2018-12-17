@@ -58,8 +58,8 @@ With a few exceptions, cross-database transactions are not supported. The follow
   
 - Keyset and dynamic cursors on queries accessing memory-optimized tables. These cursors are degraded to static and read-only.  
   
-- Using **MERGE INTO** *target*, where *target* is a memory-optimized table, is unsupported.
-    - **MERGE USING** *source* is supported for memory-optimized tables.  
+- Using **MERGE INTO** _target_, where *target* is a memory-optimized table, is unsupported.
+    - **MERGE USING** _source_ is supported for memory-optimized tables.  
   
 - The ROWVERSION (TIMESTAMP) data type is not supported. For more information, see [FROM &#40;Transact-SQL&#41;](../../t-sql/queries/from-transact-sql.md).
   

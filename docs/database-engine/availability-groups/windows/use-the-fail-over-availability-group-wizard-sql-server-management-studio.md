@@ -145,7 +145,7 @@ manager: craigg
 |Value|Description|  
 |-----------|-----------------|  
 |**No data loss**|This secondary replica currently supports planned failover. This value occurs only when a synchronous-commit mode secondary replica is currently synchronized with the primary replica.|  
-|**Data loss, Warnings(** *#* **)**|This secondary replica currently supports forced failover (with possible data loss). This value occurs whenever the secondary replica is not synchronized with the primary replica. Click the data-loss warnings link for information about the possible data loss.|  
+|**Data loss, Warnings(** _#_ **)**|This secondary replica currently supports forced failover (with possible data loss). This value occurs whenever the secondary replica is not synchronized with the primary replica. Click the data-loss warnings link for information about the possible data loss.|  
   
  **Refresh**  
  Click to update the grid.  

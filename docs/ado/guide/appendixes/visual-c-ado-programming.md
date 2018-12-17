@@ -59,7 +59,7 @@ objectPtr->PutProperty(value);      // set property value
 variable = objectPtr->GetProperty;  // get property value  
 ```
   
- The compiler will generate the appropriate **Get***-*, **Put**-, or **PutRef**_Property_ call based on what alternative syntax is declared and whether the property is being read or written.  
+ The compiler will generate the appropriate **Get**-, **Put**-, or **PutRef**_Property_ call based on what alternative syntax is declared and whether the property is being read or written.  
   
  The **__declspec(property...)** compiler directive can only declare **get**, **put**, or **get** and **put** alternative syntax for a function. Read-only operations only have a **get** declaration; write-only operations only have a **put** declaration; operations that are both read and write have both **get** and **put** declarations.  
   

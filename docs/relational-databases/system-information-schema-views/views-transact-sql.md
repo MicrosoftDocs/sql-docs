@@ -26,12 +26,12 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 
   Returns one row for views that can be accessed by the current user in the current database.  
   
- To retrieve information from these views, specify the fully qualified name of **INFORMATION_SCHEMA.***view_name*.  
+ To retrieve information from these views, specify the fully qualified name of **INFORMATION_SCHEMA.**_view_name_.  
   
 |Column name|Data type|Description|  
 |-----------------|---------------|-----------------|  
 |**TABLE_CATALOG**|**nvarchar(**128**)**|View qualifier.|  
-|**TABLE_SCHEMA**|**nvarchar(**128**)**|Name of schema that contains the view.<br /><br /> **\*\* Important \*\*** Do not use INFORMATION_SCHEMA views to determine the schema of an object. The only reliable way to find the schema of a object is to query the sys.objects catalog view.|  
+|**TABLE_SCHEMA**|**nvarchar(**128**)**|Name of schema that contains the view.<br /><br /> **&#42;&#42; Important &#42;&#42;** Do not use INFORMATION_SCHEMA views to determine the schema of an object. The only reliable way to find the schema of a object is to query the sys.objects catalog view.|  
 |**TABLE_NAME**|**nvarchar(**128**)**|View name.|  
 |**VIEW_DEFINITION**|**nvarchar(**4000**)**|If the length of definition is larger than **nvarchar(**4000**)**, this column is NULL. Otherwise, this column is the view definition text.|  
 |**CHECK_OPTION**|**varchar(**7**)**|Type of WITH CHECK OPTION. Is CASCADE if the original view was created by using the WITH CHECK OPTION. Otherwise, NONE is returned.|  

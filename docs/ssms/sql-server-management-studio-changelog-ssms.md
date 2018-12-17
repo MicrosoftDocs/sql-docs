@@ -131,7 +131,7 @@ If there is no *preview 5* or *preview 6* label it indicates the change appeared
   - Improved support for multi-monitor systems by making sure that more and more dialogs and windows pop up on the expected monitor.
   - Exposed the 'backup checksum default' server configuration in the new Database Settings page of the Server Properties Dialog. For details, see https://feedback.azure.com/forums/908035-sql-server/suggestions/34634974
   - [New in Preview 5] Exposed "maximum size for error log files" under "Configure SQL Server Error Logs". For details, see  https://feedback.azure.com/forums/908035/suggestions/33624115 
-  - [New in Preview 6] Added "Migrate to Azure" under Tools menu – We have integrated [Database Migration Assistant](https/aka.ms/get-dma) and [Azure Database Migration Service](https://aka.ms/get-dms) to provide quick and easy access to help accelerate your migrations to Azure.
+  - [New in Preview 6] Added "Migrate to Azure" under Tools menu – We have integrated [Database Migration Assistant](https://aka.ms/get-dma) and [Azure Database Migration Service](https://aka.ms/get-dms) to provide quick and easy access to help accelerate your migrations to Azure.
   - [New in Preview 6] Previous version of SSMS 18.0 (< Preview 6) had the "Available Databases" key shortcut bound to **CTRL+ALT+J**. In Preview 6 and later, the key binding has been restored to **CTRL+U**, like it was in SSMS 17.x.
   - [New in Preview 6] Added logic to prompt the user to commit open transactions when "Change connection" is used.
 

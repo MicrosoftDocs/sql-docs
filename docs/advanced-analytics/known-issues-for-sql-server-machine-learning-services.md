@@ -24,7 +24,7 @@ For a description of processes and common questions that are related to initial 
 
 R_SERVER uses the Intel Math Kernel Library (MKL). For computations involving MKL, inconsistent results can occur if your system is missing an environment variable. 
 
-Set the environment variable `'MKL_CBWR'=AUTO` to ensure conditional numerical reproducibility in R_SERVER. This environment variable will be added in future installers of the R_SERVER component, currently installed by SQL Server, R Client, and Microsoft Machine Learning Server. For more information, see [Introduction to Conditional Numerical Reproducibility (CNR)](https://software.intel.com/articles/introduction-to-the-conditional-numerical-reproducibility-cnr).
+Set the environment variable `'MKL_CBWR'=AUTO` to ensure conditional numerical reproducibility in R_SERVER. For more information, see [Introduction to Conditional Numerical Reproducibility (CNR)](https://software.intel.com/articles/introduction-to-the-conditional-numerical-reproducibility-cnr).
 
 **Workaround**
 
@@ -384,8 +384,6 @@ Using a transform to change a variable's data type is not supported when repeate
 ### 17. Limited support for rxExec
 
 In SQL Server 2016, the `rxExec` function that's provided by the RevoScaleR package can be used only in single-threaded mode.
-
-Parallelism for `rxExec` across multiple processes is planned for a future release.
 
 ### 18. Increase the maximum parameter size to support rxGetVarInfo
 

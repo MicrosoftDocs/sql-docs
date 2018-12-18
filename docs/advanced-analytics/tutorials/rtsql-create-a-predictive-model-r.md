@@ -1,5 +1,5 @@
 ---
-title: Quickstart to create a predictive model using R in SQL Server Machine Learning| Microsoft Docs
+title: Quickstart to create a predictive model using R - SQL Server Machine Learning
 description: In this quickstart, learn how to build a model in R using SQL Server data to plot predictions.
 ms.prod: sql
 ms.technology: machine-learning

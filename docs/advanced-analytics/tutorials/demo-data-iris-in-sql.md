@@ -1,5 +1,5 @@
 ---
-title: Iris demo data set for Python and R tutorials in SQL Server  | Microsoft Docs
+title: Iris demo data set for Python and R tutorials - SQL Server Machine Learning
 Description: Create a database containing the Iris dataset and a table for storing models. This dataset is used in exercises showing how to wrap R language or Python code in a SQL Server stored procedure.
 ms.prod: sql
 ms.technology: machine-learning

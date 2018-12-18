@@ -15,8 +15,6 @@ manager: cgronlun
 
 Multiple issues can prevent Launchpad from starting, including configuration problems or changes, or missing network protocols. This article provides troubleshooting guidance for many issues. For any we missed, you can post questions to the [Machine Learning Server forum](https://social.msdn.microsoft.com/Forums/en-US/home?category=MicrosoftR).
 
-**Applies to:** SQL Server 2016 R Services, SQL Server 2017 Machine Learning Services
-
 ## Determine whether Launchpad is running
 
 1. Open the **Services** panel (Services.msc). Or, from the command line, type **SQLServerManager13.msc** or **SQLServerManager14.msc** to open [SQL Server Configuration Manager](https://docs.microsoft.com/sql/relational-databases/sql-server-configuration-manager).
@@ -126,7 +124,7 @@ If you have installed and then enabled machine learning, but you get this error 
 
     a. Review the launcher's .config file and ensure that the working directory is valid.
 
-    b. Ensure that the Windows group that's used by Launchpad can connect to the SQL Server instance, as described in the [previous section](#bkmk_LaunchpadTS).
+    b. Ensure that the Windows group that's used by Launchpad can connect to the SQL Server instance.
 
     c. If you change any of the service properties, restart the Launchpad service.
 

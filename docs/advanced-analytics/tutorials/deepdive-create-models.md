@@ -1,5 +1,6 @@
 ---
-title: Create R models (SQL Server and RevoScaleR tutorial) | Microsoft Docs
+title: Create R models RevoScaleR tutorial - SQL Server Machine Learning
+description: Tutorial walkthrough on how to build a model using the R language on SQL Server.
 ms.prod: sql
 ms.technology: machine-learning
 

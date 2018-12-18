@@ -1,5 +1,5 @@
 ---
-title: Quickstart to predict and plot from model using R in SQL Server Machine Learning | Microsoft Docs
+title: Quickstart to predict and plot from model using R - SQL Server Machine Learning
 description: In this quickstart, learn about scoring using a prebuilt model in R and SQL Server data.
 ms.prod: sql
 ms.technology: machine-learning

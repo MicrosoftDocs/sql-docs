@@ -1,5 +1,5 @@
 ---
-title: Lesson 2 Create data features using T-SQL functions (R in SQL Server Machine Learning)   | Microsoft Docs
+title: Lesson 2 Create data features using R and T-SQL functions - SQL Server Machine Learning
 description: Tutorial showing how to add calculations to stored procedures for use in R machine learning models.
 ms.prod: sql
 ms.technology: machine-learning

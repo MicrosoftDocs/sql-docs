@@ -49,7 +49,7 @@ For local installations, you must run Setup as an administrator. If you install 
   
 2. On the **Installation** tab, select **New SQL Server stand-alone installation or add features to an existing installation**.
 
-   ![Install Machine Learning Services in-database](media/2017setup-installation-page-mlsvcs.PNG)
+   ![New SQL Server stand-along installation](media/2017setup-installation-page-mlsvcs.PNG)
    
 3. On the **Feature Selection** page, select these options:
   
@@ -221,7 +221,7 @@ On disconnected servers, extra steps are required. For more information, see [In
 
 4. Run Setup. Accept the licensing terms, and on the Feature selection page, review the features for which cumulative updates are applied. You should see every feature installed for the current instance, including machine learning features. Setup downloads the CAB files necessary to update all features.
 
-  ![](media/cumulative-update-feature-selection.png)
+  ![Summary of installed features](media/cumulative-update-feature-selection.png)
 
 5. Continue through the wizard, accepting the licensing terms for R and Python distributions. 
 

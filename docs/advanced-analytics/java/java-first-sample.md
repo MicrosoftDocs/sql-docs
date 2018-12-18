@@ -1,5 +1,5 @@
 ---
-title: Java language extension in SQL Server 2019 - SQL Server Machine Learning Services
+title: Java sample and tutorial for SQL Server 2019 - SQL Server Machine Learning Services
 description: Run Java sample code on SQL Server 2019 to learn steps for using the Java language extension with SQL Server data.
 ms.prod: sql
 ms.technology: machine-learning

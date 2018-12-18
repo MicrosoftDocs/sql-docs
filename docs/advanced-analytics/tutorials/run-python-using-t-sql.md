@@ -1,5 +1,5 @@
 ---
-title: Run Python using T-SQL on SQL Server | Microsoft Docs
+title: Run Python using T-SQL stored procedures - SQL Server Machine Learning
 description: Learn the basics for running Python code using T-SQL and stored procedures on a SQL Server database engine instance for which Python integration is enabled.
 ms.prod: sql
 ms.technology: machine-learning
@@ -10,7 +10,7 @@ author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
 ---
-# Run Python using T-SQL
+# Run Python using T-SQL stored procedures on SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 This article explains how you can run Python code in SQL Server 2017. It walks you through the basics of moving data between SQL Server and Python: requirements, data structures, inputs, and outputs. It also explains how to wrap well-formed Python code in a stored procedure [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) to build, train, and use machine learning models in SQL Server.

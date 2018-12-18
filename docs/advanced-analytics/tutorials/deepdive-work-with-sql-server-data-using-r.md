@@ -1,5 +1,6 @@
 ---
-title: Create a database and permissions (SQL Server and RevoScaleR tutorial) | Microsoft Docs
+title: Create a database and permissions for RevoScaleR tutorials - SQL Server Machine Learning
+description: Tutorial walkthrough on how to create a SQL Server database for R tutorials..
 ms.prod: sql
 ms.technology: machine-learning
 

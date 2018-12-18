@@ -63,7 +63,7 @@ Locate and list the contents of the installation folder to confirm that R.exe, R
 3. Open C:\Program Files\Microsoft\R Client\R_SERVER\library to review the list of packages installed with R Client, including RevoScaleR, MicrosoftML, and others.
 
 
-<a name="r-tool"></a>
+<a name="R-tools"></a>
  
 ## 3 - Start RGUI
 

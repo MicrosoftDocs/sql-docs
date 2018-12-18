@@ -1,5 +1,5 @@
 ---
-title: "Common sub expression explained in Analytics Platform System | Microsoft Docs"
+title: "Common subexpression explained in Analytics Platform System | Microsoft Docs"
 description: "Displays example query improvement that was introduced in Analytics Platform System CU7.3"
 author: "mzaman1" 
 manager: "craigg"	  
@@ -11,9 +11,9 @@ ms.author: "murshedz"
 ms.reviewer: "martinle"
 monikerRange: ">= aps-pdw-2016-au7 || = sqlallproducts-allversions"
 ---
-# Common sub expression elimination explained
+# Common subexpression elimination explained
 
-APS CU7.3 improves query performance with common sub-expression elimination in SQL query optimizer. The improvement improves queries in two ways. The first benefit is the ability to identify and eliminate such expressions help reduce SQL compilation time. The second and more important benefit is data movement operations for these redundant sub-expressions are eliminated thus execution time for queries becomes faster.
+APS CU7.3 improves query performance with common subexpression elimination in SQL query optimizer. The improvement improves queries in two ways. The first benefit is the ability to identify and eliminate such expressions help reduce SQL compilation time. The second and more important benefit is data movement operations for these redundant subexpressions are eliminated thus execution time for queries becomes faster.
 
 ```sql
 select top 100 asceding.rnk, i1.i_product_name best_performing, i2.i_product_name worst_performing
@@ -49,14 +49,14 @@ select top 100 asceding.rnk, i1.i_product_name best_performing, i2.i_product_nam
   order by asceding.rnk
   ;
 ```
-Consider the above query from TPC-DS benchmark tools.  In the above query, the sub query is the same but the order by clause with rank() over function is sorted in two different ways. Previous to CU7.3, this sub query will get evaluated and executed twice, once for ascending order and once for descending order, incurring two data movement operations. After installing APS CU7.3, the sub query part will get evaluated once thus reducing data movement and finishing the query faster.
+Consider the above query from TPC-DS benchmark tools.  In the above query, the subquery is the same but the order by clause with rank() over function is sorted in two different ways. Previous to CU7.3, this subquery will get evaluated and executed twice, once for ascending order and once for descending order, incurring two data movement operations. After installing APS CU7.3, the subquery part will get evaluated once thus reducing data movement and finishing the query faster.
 
-We have introduced a [feature switch](appliance-feature-switch.md) called 'OptimizeCommonSubExpressions' that will allow you test this even after you upgrade to APS CU7.3. The feature is on by default but can be turned off. 
+We have introduced a [feature switch](appliance-feature-switch.md) called 'OptimizeCommonSubExpressions' that will allow you test the feature even after you upgrade to APS CU7.3. The feature is on by default but can be turned off. 
 
 > [!NOTE] 
 > Changes to feature switch values require a service restart.
 
-You can try this out by creating the following tables in your test environment and seeing the explain plan for the above mentioned query. 
+You can try the sample query by creating the following tables in your test environment and evaluating the explain plan for the above mentioned query. 
 
 ```sql
 CREATE TABLE [dbo].[store_sales] (
@@ -112,6 +112,6 @@ CREATE TABLE [dbo].[item] (
 )
 WITH (CLUSTERED INDEX ( [i_item_sk] ASC ), DISTRIBUTION = REPLICATE);
 ```
-If you take a look at the explain plan of the query, you will see that before CU7.3 (or when the feature switch is off) the query has 17 total number of operations and after CU7.3 (or with the feature switch turned on) the same query shows 9 total number of operations. If you just count the data movement operations you will see that the previous plan has 4 move operations vs. 2 move operations in the new plan. The new query optimizer was able to reduce 2 data movement operations by reusing the temp table it already created with the new plan thus reducing query runtime. 
+If you take a look at the explain plan of the query, you will see that before CU7.3 (or when the feature switch is off) the query has 17 total number of operations and after CU7.3 (or with the feature switch turned on) the same query shows 9 total number of operations. If you just count the data movement operations, you will see that the previous plan has four move operations vs. two move operations in the new plan. The new query optimizer was able to reduce two data movement operations by reusing the temp table it already created with the new plan thus reducing query runtime. 
 
 

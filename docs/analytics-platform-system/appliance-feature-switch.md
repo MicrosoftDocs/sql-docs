@@ -26,7 +26,7 @@ Controls the auto statistics feature. This feature switch is set to true by defa
 Allows you to pick maxdop settings greater than 1 for insert/select operations. Options for this setting are 0, 1, 2 and 4, with default being 1.
 
 ##OptimizeCommonSubExpressions
-Improves query performance by eliminating data movement for common sub-expression in SQL query optimizer. Detailed explanation of this feature can be found [here](common-sub-expression-elimination.md).
+Improves query performance by eliminating data movement for common subexpression in SQL query optimizer. Detailed explanation of this feature can be found [here](common-sub-expression-elimination.md).
 
 ## UseCatalogQueries
 Using catalog objects for some metadata calls instead of using SMO has shown performance improvement. Set to true by default in CU7.1, this switch controls that behavior. 

@@ -50,7 +50,7 @@ This walkthrough requires several R libraries that are not installed by default 
 
 In your R environment, copy the following lines and execute the code in a Console window (Rgui or an IDE). Some packages also install required packages. In all, about 32 packages are installed. You must have an internet connection to complete this step.
     
-  ```r
+  ```R
   # Install required R libraries, if they are not already installed.
   if (!('ggmap' %in% rownames(installed.packages()))){install.packages('ggmap')}
   if (!('mapproj' %in% rownames(installed.packages()))){install.packages('mapproj')}

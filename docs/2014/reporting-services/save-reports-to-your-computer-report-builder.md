@@ -17,7 +17,7 @@ manager: craigg
   
 ### To save a report  
   
-1.  From the Report Builder button, click **Save**. The **Save As***\<Report Item>* dialog box opens.  
+1.  From the Report Builder button, click **Save**. The **Save As**_\<Report Item>_ dialog box opens.  
   
     > [!NOTE]  
     >  If you are resaving a report, it is automatically resaved to its previous location. Use the **Save As** option to change location.  
@@ -30,7 +30,7 @@ manager: craigg
   
 ### To save a report as a different name  
   
-1.  From the Report Builder button, click **Save As**. The **Save As***\<Report Item>* dialog box opens.  
+1.  From the Report Builder button, click **Save As**. The **Save As**_\<Report Item>_ dialog box opens.  
   
 2.  Browse to the location on your computer where you want to save the report.  
   

@@ -23,8 +23,6 @@ The process includes multiple steps:
 4.  Create a classification function to identify external script requests.
 5.  Verify that the new external resource pool is capturing R or Python jobs from the specified clients or accounts.
 
-**Applies to:** [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] [!INCLUDE[rsql-productname-md](../../includes/rsql-productname-md.md)] and [!INCLUDE[sscurrent-md](../../includes/sscurrent-md.md)] [!INCLUDE[rsql-productnamenew-md](../../includes/rsql-productnamenew-md.md)]
-
 ##  <a name="bkmk_ReviewStatus"></a> Review the status of existing resource pools
   
 1.  Use a statement such as the following to check the resources allocated to the default pool for the server.

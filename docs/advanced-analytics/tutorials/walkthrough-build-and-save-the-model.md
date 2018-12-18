@@ -1,5 +1,6 @@
 ---
-title: Build an R model and save to SQL Server (walkthrough) | Microsoft Docs
+title: Build an R model and save to SQL Server (walkthrough) - SQL Server Machine Learning
+description: Tutorial showing how to build an R language model used for SQL Server in-database analytics.
 ms.prod: sql
 ms.technology: machine-learning
 

@@ -1,5 +1,5 @@
 ---
-title: Tutorial on creating, training and scoring partition-based models in R (SQL Server Machine Learning Services) | Microsoft Docs
+title: Tutorial on creating, training and scoring partition-based models in R - SQL Server Machine Learning Services
 description: Learn how to model, train, and use partitioned data that is created dynamically when using the partition-based modeling capabilites of SQL Server machine learning.
 ms.custom: sqlseattle
 ms.prod: sql

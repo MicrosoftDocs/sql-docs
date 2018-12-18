@@ -53,7 +53,7 @@ sp_update_schedule
  [ **@schedule_id =** ] *schedule_id*  
  The identifier of the schedule to modify. *schedule_id* is **int**, with no default. Either *schedule_id* or *schedule_name* must be specified.  
   
- [ **@name =** ]  **'***schedule_name***'**  
+ [ **@name =** ]  **'**_schedule_name_**'**  
  The name of the schedule to modify. *schedule_name*is **sysname**, with no default. Either *schedule_id* or *schedule_name* must be specified.  
   
  [ **@new_name**= ] *new_name*  
@@ -129,7 +129,7 @@ sp_update_schedule
  [ **@active_end_time =** ] *active_end_time*  
  The time on any day between *active_start_date* and *active_end_date* to end execution of a job. *active_end_time*is **int**, with a default of **235959**, which indicates 11:59:59 P.M. on a 24-hour clock, and must be entered using the form HHMMSS.  
   
- [ **@owner_login_name**= ] **'***owner_login_name***'**]  
+ [ **@owner_login_name**= ] **'**_owner_login_name_**'**]  
  The name of the server principal that owns the schedule. *owner_login_name* is **sysname**, with a default of NULL, which indicates that the schedule is owned by the creator.  
   
  [ **@automatic_post =**] *automatic_post*  

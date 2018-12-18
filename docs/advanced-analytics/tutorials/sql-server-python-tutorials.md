@@ -1,5 +1,6 @@
 ---
-title: SQL Server Python tutorials | Microsoft Docs
+title: SQL Server Python tutorial overview - SQL Server Machine Learning
+description: Introduction to the Python tutorials for SQL Server in-database analytics.
 ms.prod: sql
 ms.technology: machine-learning
 
@@ -19,8 +20,6 @@ This article provides a list of tutorials and samples that demonstrate the use o
 + How to wrap Python code in a stored procedure
 + Optimizing Python code for a SQL production environment
 + Real-world scenarios for embedding machine learning in applications
-
-For information about requirements and setup, see [Prerequisites](#bkmk_Prerequisites).
 
 ## <a name="bkmk_pythontutorials"></a>Python tutorials
 

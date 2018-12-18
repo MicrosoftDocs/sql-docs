@@ -60,8 +60,10 @@
         href: deploy-install-mssqlctl.md
   - name: Data virtualization
     items:
-    - name: Virtualize external data
+    - name: Virtualize relational data
       href: ../relational-databases/polybase/data-virtualization.md?toc=%2fsql%2fbig-data-cluster%2ftoc.json
+    - name: Virtualize CSV data
+      href: ../relational-databases/polybase/data-virtualization-csv.md?toc=%2fsql%2fbig-data-cluster%2ftoc.json
   - name: Data ingestion
     items:
     - name: Load data with curl

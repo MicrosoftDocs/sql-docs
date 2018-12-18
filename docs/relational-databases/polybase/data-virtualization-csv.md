@@ -17,7 +17,7 @@ SQL Server 2019 also allows the ability to virtualize data from a CSV file in HD
 
 ## Launch the External Table wizard
 
-Connect to the HDFS root using the IP address. Expand the elements in the object explorer, Then select one of the CSV from which you would like to virtualize the data into an existing SQL Server instance. Right-click on the file and select **Create External Table From CSV File** from the context menu. This launches the Virtualize Data wizard. You can also launch the Virtualize Data wizard from the command palette by typing Ctrl+Shift+P (in Windows) and Cmd+Shift+P (in Mac).
+Connect to the HDFS root using the IP address. Expand the elements in the object explorer, Then select one of the CSV from which you would like to virtualize the data into an existing SQL Server instance. Right-click on the file and select **Create External Table From CSV File** from the context menu. You can also create external tables from CSV files fom a folder in HDFS if the files under the folder follow the same schema. This would allow the virtualization of the data at a folder level without the need to process individual files and get a joined result set over the combined data. This launches the Virtualize Data wizard. You can also launch the Virtualize Data wizard from the command palette by typing Ctrl+Shift+P (in Windows) and Cmd+Shift+P (in Mac).
 
 ![Virtualize data wizard](media/data-virtualization/csv-virtualize-data-wizard.png)
 ## Connect to a SQL Server Master Instance

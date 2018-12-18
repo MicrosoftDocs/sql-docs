@@ -1,6 +1,6 @@
 ---
 title: Virtualize external data in SQL Server 2019 CTP 2.0 | Microsoft Docs
-description:
+description: This page details the steps for using the Create external table wizard for a CSV file
 author: Abiola
 ms.author: aboke
 manager: craigg
@@ -20,9 +20,10 @@ SQL Server 2019 also allows the ability to virtualize data from a CSV file in HD
 Connect to the HDFS root using the IP address. Expand the elements in the object explorer, Then select one of the CSV from which you would like to virtualize the data into an existing SQL Server instance. Right-click on the file and select **Create External Table From CSV File** from the context menu. You can also create external tables from CSV files fom a folder in HDFS if the files under the folder follow the same schema. This would allow the virtualization of the data at a folder level without the need to process individual files and get a joined result set over the combined data. This launches the Virtualize Data wizard. You can also launch the Virtualize Data wizard from the command palette by typing Ctrl+Shift+P (in Windows) and Cmd+Shift+P (in Mac).
 
 ![Virtualize data wizard](media/data-virtualization/csv-virtualize-data-wizard.png)
+
 ## Connect to a SQL Server Master Instance
 
-Here you can specify which SQL Master Instance you will connect too using the IP, Port, and Credential information. SAved connection can be access via the **Active SQL Server connections** drop down box. 
+Here you can specify which SQL Master Instance you will connect too using the IP, Port, and Credential information. Previously saved connections can be access via the **Active SQL Server connections** drop down box. 
 > [!NOTE]
 >If you are using a saved connection the other fields will be blocked
 
@@ -55,7 +56,7 @@ In the next window, you will be able to Modify the columns of the external table
 
 ## Summary
 
-This step provides a summary of your selections. It provides the SQL Master Instance and Proposed External table information.. In this step, you have the option to **"Generate Script"** which will script out in T-SQL the syntax to create the external data source or **Create** which will create the External Data Source object.
+This step provides a summary of your selections. It provides the SQL Master Instance and Proposed External table information. In this step, you have the option to **"Generate Script"** which will script out in T-SQL the syntax to create the external data source or **Create** which will create the External Data Source object.
 
 ![Summary screen](media/data-virtualization/csv-virtualize-data-summary.png)
 

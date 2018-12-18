@@ -1,6 +1,6 @@
 ---
 title: Virtualize external data in SQL Server 2019 CTP 2.0 | Microsoft Docs
-description:
+description: This page details the steps for using the Create external table wizard for relational Data sources
 author: Abiola
 ms.author: aboke
 manager: craigg

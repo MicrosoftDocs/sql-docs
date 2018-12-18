@@ -49,7 +49,7 @@ For local installations, you must run Setup as an administrator. If you install 
   
 2. On the **Installation** tab, select **New SQL Server stand-alone installation or add features to an existing installation**.
 
-   ![New SQL Server stand-along installation](media/2017setup-installation-page-mlsvcs.PNG)
+   ![New SQL Server stand-alone installation](media/2017setup-installation-page-mlsvcs.PNG)
    
 3. On the **Feature Selection** page, select these options:
   

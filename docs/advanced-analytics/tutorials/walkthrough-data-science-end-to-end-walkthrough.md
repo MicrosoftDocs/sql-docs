@@ -1,5 +1,6 @@
 ---
-title: Tutorial for data scientists using R and SQL Server | Microsoft Docs
+title: Tutorial for data scientists using R language - SQL Server Machine Learning
+description: Tutorial showing how to create an end-to-end R solution for in-database analytics.
 ms.prod: sql
 ms.technology: machine-learning
 

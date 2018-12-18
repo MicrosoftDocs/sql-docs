@@ -1,5 +1,5 @@
 ---
-title: Quickstart showing R functions with SQL Server data (SQL Server Machine Learning) | Microsoft Docs
+title: Quickstart showing R functions with SQL Server data - SQL Server Machine Learning
 description: In this quickstart, learn how to write an R function that uses SQL Server data.
 ms.prod: sql
 ms.technology: machine-learning

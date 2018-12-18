@@ -1,5 +1,6 @@
 ---
-title: SQL Server Machine Learning Services Tutorials | Microsoft Docs
+title: SQL Server R and Python tutorials - SQL Server Machine Learning
+description: Introduction and overview of R and Python tutorials for SQL Server machine learning.
 ms.prod: sql
 ms.technology: machine-learning
 

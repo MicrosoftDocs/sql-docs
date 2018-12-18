@@ -36,13 +36,13 @@ sp_procoption [ @ProcName = ] 'procedure'
 ```  
   
 ## Arguments  
- [ **@ProcName =** ] **'***procedure***'**  
+ [ **@ProcName =** ] **'**_procedure_**'**  
  Is the name of the procedure for which to set an option. *procedure* is **nvarchar(776)**, with no default.  
   
- [ **@OptionName =** ] **'***option***'**  
+ [ **@OptionName =** ] **'**_option_**'**  
  Is the name of the option to set. The only value for *option* is **startup**.  
   
- [ **@OptionValue =** ] **'***value***'**  
+ [ **@OptionValue =** ] **'**_value_**'**  
  Is whether to set the option on (**true** or **on**) or off (**false** or **off**). *value* is **varchar(12)**, with no default.  
   
 ## Return Code Values  

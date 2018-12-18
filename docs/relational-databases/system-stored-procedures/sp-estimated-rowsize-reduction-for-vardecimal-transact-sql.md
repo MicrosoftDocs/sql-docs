@@ -41,7 +41,7 @@ sp_estimated_rowsize_reduction_for_vardecimal [ [ @table_name = ] 'table'] [;]
 ```  
   
 ## Arguments  
- [ **@table=** ] **'***table***'**  
+ [ **@table=** ] **'**_table_**'**  
  Is the three part name of the table for which the storage format is to be changed. *table* is **nvarchar(776)**.  
   
 ## Return Code Values  

@@ -116,7 +116,7 @@ We recommend that you apply the latest cumulative update to both the database en
 
 6. Run Setup. Accept the licensing terms, and on the Feature selection page, review the features for which cumulative updates are applied. You should see every feature installed for the current instance, including machine learning features.
 
-  ![](media/cumulative-update-feature-selection.png)
+  ![Select features from the feature tree](media/cumulative-update-feature-selection.png "feature list")
 
 5. Continue through the wizard, accepting the licensing terms for R and Python distributions. During installation, you are prompted to choose the folder location containing the updated CAB files.
 

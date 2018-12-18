@@ -46,7 +46,7 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ]
  *permission*  
  Specifies a permission that can be granted on an endpoint. For a list of the permissions, see the Remarks section later in this topic.  
   
- ON ENDPOINT **::***endpoint_name*  
+ ON ENDPOINT **::**_endpoint_name_  
  Specifies the endpoint on which the permission is being granted. The scope qualifier (**::**) is required.  
   
  { FROM | TO } \<server_principal> 

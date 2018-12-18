@@ -57,7 +57,7 @@ When the same user executes multiple external scripts concurrently, all the sess
 
 The number of worker accounts that you can support, and the number of concurrent sessions that any single user can run, is limited only by server resources. Typically, memory is the first bottleneck that you will encounter when using the R runtime.
 
-The resources that can be used by Python or R scripts are governed by SQL Server. We recommend that you monitor resource usage using SQL Server DMVs, or look at performance counters on the associated Windows job object, and adjust server memory use accordingly. If you have SQL Server Enterprise Edition, you can allocate resources used for running external scripts by configuring an [external resource pool](how-to-create-a-resource-pool-for-r.md).
+The resources that can be used by Python or R scripts are governed by SQL Server. We recommend that you monitor resource usage using SQL Server DMVs, or look at performance counters on the associated Windows job object, and adjust server memory use accordingly. If you have SQL Server Enterprise Edition, you can allocate resources used for running external scripts by configuring an [external resource pool](how-to-create-a-resource-pool.md).
 
 ## See also
 

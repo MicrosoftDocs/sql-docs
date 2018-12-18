@@ -40,20 +40,20 @@ Key differences between R and Python support on SQL Server versus equivalent lan
 
 Start here to learn how to run R or Python from T-SQL and how to operationalize your R and Python code for a SQL production environment.
 
-+ [Python: Run Python using T-SQL](tutorials/run-python-using-t-sql.md)
-+ [R: Hello World in R and SQL](tutorials/rtsql-using-r-code-in-transact-sql-quickstart.md)
-+ [R: Handle inputs and outputs](tutorials/rtsql-working-with-inputs-and-outputs.md)
-+ [R: Handle data types and objects](tutorials/rtsql-r-and-sql-data-types-and-data-objects.md)
-+ [R: Using R functions](tutorials/rtsql-using-r-functions-with-sql-server-data.md)
-+ [R: Create a predictive model](tutorials/rtsql-create-a-predictive-model-r.md)
-+ [R: Predict and plot from model](tutorials/rtsql-predict-and-plot-from-model.md)
++ [Python: Run Python using T-SQL](run-python-using-t-sql.md)
++ [R: Hello World in R and SQL](rtsql-using-r-code-in-transact-sql-quickstart.md)
++ [R: Handle inputs and outputs](rtsql-working-with-inputs-and-outputs.md)
++ [R: Handle data types and objects](rtsql-r-and-sql-data-types-and-data-objects.md)
++ [R: Using R functions](rtsql-using-r-functions-with-sql-server-data.md)
++ [R: Create a predictive model](rtsql-create-a-predictive-model-r.md)
++ [R: Predict and plot from model](rtsql-predict-and-plot-from-model.md)
 
 ## Tutorials
 
 Build on your first experience with R and Python and T-SQL by taking a closer look at the Microsoft packages and more specialized operations such as shifting from local to remote compute contexts.
 
-+ [Python tutorials](../tutorials/sql-server-python-tutorials.md)
-+ [R tutorials](../tutorials/sql-server-r-tutorials.md)
++ [Python tutorials](sql-server-python-tutorials.md)
++ [R tutorials](sql-server-r-tutorials.md)
 
 <a name ="bkmk_samples"></a>
 

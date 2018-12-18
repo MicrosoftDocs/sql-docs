@@ -58,7 +58,7 @@ manager: craigg
   
 2.  Right-click **SQL Server Agent**, and then click **Properties**.  
   
-3.  In the **SQL Server Agent Properties***server_name* dialog box, under **Select a page**, select **Connection**, and  
+3.  In the **SQL Server Agent Properties**_server_name_ dialog box, under **Select a page**, select **Connection**, and  
   
 4.  In the **Alias local host server** box, type the alias of the server to which [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Agent should connect.  
   

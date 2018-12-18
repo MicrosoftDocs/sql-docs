@@ -37,7 +37,7 @@ This release of [!INCLUDE[name-sos](../includes/name-sos-short.md)] includes a s
 
 The user installer is recommended because it does not require administrator privileges, which simplifies both installs and upgrades.
 
-1. Download and run the [[!INCLUDE[name-sos](../includes/name-sos-short.md)] *user* installer for Windows](https://go.microsoft.com/fwlink/?linkid=20383204997220).
+1. Download and run the [[!INCLUDE[name-sos](../includes/name-sos-short.md)] *user* installer for Windows](https://go.microsoft.com/fwlink/?linkid=2049972).
 2. Start the [!INCLUDE[name-sos-short](../includes/name-sos-short.md)] app.
 
 **System Installer**

@@ -14,6 +14,16 @@ ms.reviewer: "martinle"
 See what's new in the latest Appliance Updates for Microsoft Analytics Platform System (APS). APS is a scale-out on-premises appliance that hosts MPP SQL Server Parallel Data Warehouse. 
 
 ::: moniker range=">= aps-pdw-2016-au7 || = sqlallproducts-allversions"
+<a name="h2-aps-cu7.3"></a>
+## APS CU7.3
+Release date - December 2018
+
+### Common sub-expression elimination
+APS CU7.3 improves query performance with common sub-expression elimination in SQL query optimizer. The improvement improves queries in two ways. The first benefit is the ability to identify and eliminate such expressions help reduce SQL compilation time. The second and more important benefit is data movement operations for these redundant sub-expressions are eliminated thus execution time for queries becomes faster. Detailed explanation of this feature can be found [here](common-sub-expression-elimination.md).
+
+### APS Informatica connector for Informatica 10.2.0 published
+We have released a new version of Informatica connectors for APS that works with Informatica version 10.2.0. The new connectors can be downloaded from [download site](https://www.microsoft.com/download/details.aspx?id=57472).
+
 <a name="h2-aps-cu7.2"></a>
 ## APS CU7.2
 Release date - October 2018

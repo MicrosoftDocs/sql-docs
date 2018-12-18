@@ -1,5 +1,5 @@
 ---
-title: Use Python with revoscalepy to create a model in SQL Server | Microsoft Docs
+title: Use Python with revoscalepy to create a model - SQL Server Machine Learning
 description: Write Python script using revoscalepy functions to create data science models that run remotely in SQL Server.
 ms.prod: sql
 ms.technology: machine-learning

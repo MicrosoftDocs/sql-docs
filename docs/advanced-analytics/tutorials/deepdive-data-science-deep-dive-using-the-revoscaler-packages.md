@@ -1,6 +1,6 @@
 ---
-title: RevoScaleR deep dive into functions used with SQL Server Machine Learning | Microsoft Docs
-description: In this tutorial, learn how to call RevoScaleR function in SQL Server Machine Learning with R supported enabled.
+title: RevoScaleR function deep-dive tutorial- SQL Server Machine Learning
+description: In this tutorial, learn how to call RevoScaleR functions using SQL Server Machine Learning R integration.
 ms.prod: sql
 ms.technology: machine-learning
 
@@ -61,19 +61,6 @@ Recall that **RevoScaleR** is required on both local and remote computers. You c
 + Extract a subset of data and save it as an XDF file for re-use in analysis on your local workstation.
 + Get new data for scoring, by opening an ODBC connection to the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database. Scoring is done on the local workstation.
 + Create a custom R function and run it in the server compute context to perform a simulation.
-
-## Target audience
-
-This tutorial is intended for data scientists or for people who are already somewhat familiar with R, and with data science tasks such as summaries and model creation. However, all the code is provided, so even if you are new to R, you can run the code and follow along, assuming you have the required server and client environments.
-
-You should also be comfortable with [!INCLUDE[tsql](../../includes/tsql-md.md)] syntax and know how to access a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database using tools such as these:
-
-+ [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 
-+ Database tools in Visual Studio 
-+ The free [mssql extension for Visual Studio Code](https://docs.microsoft.com/sql/linux/sql-server-linux-develop-use-vscode).
-  
-> [!TIP]
-> Save your R workspace between lessons, so that you can easily pick up where you left off.
 
 ## Next steps
 

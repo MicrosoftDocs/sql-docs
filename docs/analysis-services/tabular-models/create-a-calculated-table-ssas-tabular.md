@@ -27,7 +27,7 @@ There is one CalculatedTableColumn for each column returned by the expression, w
   
 2.  Switch to the Data View. You can't create a calculated table in Diagram View.  
   
-3.  Select **Table** > **New calculated table**.  
+3.  Select **Table** > **New calculated table**.
   
 4.  Type or paste  a DAX expression (see below for some ideas).  
   
@@ -36,7 +36,11 @@ There is one CalculatedTableColumn for each column returned by the expression, w
 6.  Create relationships to other tables in the model. See [Create a Relationship Between Two Tables](../../analysis-services/tabular-models/create-a-relationship-between-two-tables-ssas-tabular.md) if you need help with this step.  
   
 7.  Reference the table in calculations or expressions in your model or use **Analyze in Excel** for ad hoc data exploration.  
-  
+
+
+### Limitations
+ Calculated table cannot be the first table in a tabular model. The options to create a calculated table is hidden until another table exist. You can work around this by first creating a dummy table using a dummy connection.
+
 ### Replicate a role-playing dimension  
  In the Formula bar, enter a DAX formula that gets a copy of another table. After the calculated table is populated, give it a descriptive name and then set up a relationship that uses the foreign key specific to the role. For example, in the Adventure Works database, you might create a calculated table for Due Date and use the DueDateKey as the basis of a relationship to the fact table.  
   

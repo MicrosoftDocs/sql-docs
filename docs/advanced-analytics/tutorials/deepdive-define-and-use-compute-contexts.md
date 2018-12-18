@@ -1,5 +1,6 @@
 ---
-title: Define and use compute contexts (SQL Server and RevoScaleR tutorial) | Microsoft Docs
+title: Define and use RevoScaleR compute contexts - SQL Server Machine Learning
+description: Tutorial walkthrough on how to define a compute context using the R language on SQL Server.
 ms.prod: sql
 ms.technology: machine-learning
 

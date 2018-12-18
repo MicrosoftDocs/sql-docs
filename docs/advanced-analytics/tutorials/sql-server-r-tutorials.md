@@ -13,7 +13,7 @@ manager: cgronlun
 # SQL Server R language tutorials
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-This article lists the r language tutorials for in-database analytics on SQL Server 2016 R Services and SQL Server 2017 Machine Learning Services. 
+This article describes the R language tutorials for in-database analytics on [SQL Server 2016 R Services](../install/sql-r-services-windows-install.md) or [SQL Server 2017 Machine Learning Services](../install/sql-machine-learning-services-windows-install.md).
 
 + Learn how to wrap and run R code in stored procedures.
 + Serialize and save r-based models to SQL Server databases.
@@ -42,6 +42,6 @@ This article lists the r language tutorials for in-database analytics on SQL Ser
 
 ## See also
 
-+ [Rextension to SQL Server](../concepts/extension-r.md)
-+ [Python tutorials for SQL Server](sql-server-python-tutorials.md)
++ [R extension to SQL Server](../concepts/extension-r.md)
++ [SQL Server Machine Learning Services tutorials](machine-learning-services-tutorials.md)
 

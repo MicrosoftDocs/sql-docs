@@ -10,20 +10,20 @@ author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
 ---
-# R and Python tutorials for SQL Server Machine Learning Services
+# SQL Server Machine Learning tutorials in R and Python
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-This article provides a comprehensive list of the tutorials, demos, and sample applications that demonstrate the machine learning features of SQL Server 2016 or SQL Server 2017. 
+This article provides a comprehensive list of tutorials and code samples demonstrating the machine learning features of [SQL Server 2016 R Services](../install/sql-r-services-windows-install.md) or [SQL Server 2017 Machine Learning Services](../install/sql-machine-learning-services-windows-install.md). 
 
-+ Quickstarts use built-in data or no data so that you can explore R and Python integration with least effort.
++ Quickstarts use built-in data or no data for fast exploration with least effort.
 + Tutorials go deeper with more tasks, larger datasets, and longer explanations.
 + Samples and solutions are for developers who prefer to start with code, working backwards to concepts and lessons to fill in knowledge gaps.
 
 You'll learn how to use R and Python libraries with resident relational data in the same operational context, how to use SQL Server stored procedures for running and deploying custom code, and how to call the Microsoft R and Python libraries for high-performance data science and machine learning tasks.
 
-As a first step, review the keys concepts driving Microsoft's support for R and Python integration with relational databases on SQL Server.
+As a first step, review foundational concepts backing Microsoft's R and Python integration with SQL Server.
 
-## Key concepts
+## Concepts
 
 In-database analytics refers to native support for R and Python on SQL Server when you install SQL Server Machine Learning Services or SQL Server 2016 R Services (R only) as an add-on to the database engine. R and Python integration includes base open-source distributions, plus Microsoft-specific libraries for high performance analytics.
 

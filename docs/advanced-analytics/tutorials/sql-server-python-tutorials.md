@@ -13,7 +13,7 @@ manager: cgronlun
 # SQL Server Python tutorials
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-This article lists the Python tutorials for in-database analytics on SQL Server 2017. 
+This article describes the Python tutorials for in-database analytics on [SQL Server 2017 Machine Learning Services](../install/sql-machine-learning-services-windows-install.md). 
 
 + Learn how to wrap and run Python code in stored procedures.
 + Serialize and save Python-based models to SQL Server databases.
@@ -45,4 +45,4 @@ These samples and demos provided by the SQL Server development team highlight wa
 ## See also
 
 + [Python extension to SQL Server](../concepts/extension-python.md)
-+ [R tutorials for SQL Server](sql-server-r-tutorials.md)
++ [SQL Server Machine Learning Services tutorials](machine-learning-services-tutorials.md)

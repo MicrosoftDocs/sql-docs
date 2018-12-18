@@ -40,7 +40,7 @@ GRANT { permission  [ ,...n ] }
  *permission*  
  Specifies a permission that can be granted on an asymmetric key. Listed below.  
   
- ON ASYMMETRIC KEY **::***asymmetric_key_name*  
+ ON ASYMMETRIC KEY **::**_asymmetric_key_name_  
  Specifies the asymmetric key on which the permission is being granted. The scope qualifier "::" is required.  
   
  *database_principal*  

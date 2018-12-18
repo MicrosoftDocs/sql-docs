@@ -30,7 +30,7 @@ manager: craigg
   
     -   ADO, OLE DB, and ODBC applications should use the ODBC timestamp, date, and time escape clauses of:  
   
-         **{ ts'**yyyy**-***mm***-***dd**hh***:***mm***:***ss*[**.***fff*] **'}** such as: **{ ts'**1998**-**09**-**24 10**:**02**:**20**' }**  
+         **{ ts'**yyyy**-**_mm_**-***dd**hh**_:_**mm**_:_**ss*[**.**_fff_] **'}** such as: **{ ts'**1998**-**09**-**24 10**:**02**:**20**' }**  
   
          **{ d'** *yyyy* **-** *mm* **-** *dd* **'}** such as: **{ d'**1998**-**09**-**24**'}**  
   

@@ -37,26 +37,26 @@ sp_helpsubscription [ [ @publication = ] 'publication' ]
 ```  
   
 ## Arguments  
- [ **@publication =** ] **'***publication***'**  
+ [ **@publication =** ] **'**_publication_**'**  
  Is the name of the associated publication. *publication* is **sysname**, with a default of **%**, which returns all subscription information for this server.  
   
- [ **@article=** ] **'***article***'**  
+ [ **@article=** ] **'**_article_**'**  
  Is the name of the article. *article* is **sysname**, with a default of **%**, which returns all subscription information for the selected publications and Subscribers. If **all**, only one entry is returned for the full subscription on a publication.  
   
- [ **@subscriber=** ] **'***subscriber***'**  
+ [ **@subscriber=** ] **'**_subscriber_**'**  
  Is the name of the Subscriber on which to obtain subscription information. *subscriber* is **sysname**, with a default of **%**, which returns all subscription information for the selected publications and articles.  
   
- [ **@destination_db=** ] **'***destination_db***'**  
+ [ **@destination_db=** ] **'**_destination_db_**'**  
  Is the name of the destination database. *destination_db* is **sysname**, with a default of **%**.  
   
- [ **@found=** ] **'***found***'**OUTPUT  
+ [ **@found=** ] **'**_found_**'**OUTPUT  
  Is a flag to indicate returning rows. *found*is **int** and an OUTPUT parameter, with a default of 23456.  
   
  **1** indicates the publication is found.  
   
  **0** indicates the publication is not found.  
   
- [ **@publisher**= ] **'***publisher***'**  
+ [ **@publisher**= ] **'**_publisher_**'**  
  Is the name of the Publisher. *publisher* is **sysname**, and defaults to the name of the current server.  
   
 > [!NOTE]  
@@ -84,9 +84,9 @@ sp_helpsubscription [ [ @publication = ] 'publication' ]
 |**dts_package_location**|**int**|Location of the DTS package, if one is assigned to the subscription. If there is a package, a value of **0** specifies the package location at the **distributor**. A value of **1** specifies the **subscriber**.|  
 |**subscriber_security_mode**|**smallint**|Is the security mode at the Subscriber, where **1** means Windows Authentication, and **0** means [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentication.|  
 |**subscriber_login**|**sysname**|Is the login name at the Subscriber.|  
-|**subscriber_password**||Actual Subscriber password is never returned. The result is masked by a "**\*\*\*\*\*\***" string.|  
+|**subscriber_password**||Actual Subscriber password is never returned. The result is masked by a "**&#42;&#42;&#42;&#42;&#42;&#42;**" string.|  
 |**job_login**|**sysname**|Name of the Windows account under which the Distribution Agent runs.|  
-|**job_password**||Actual job password is never returned. The result is masked by a "**\*\*\*\*\*\***" string.|  
+|**job_password**||Actual job password is never returned. The result is masked by a "**&#42;&#42;&#42;&#42;&#42;&#42;**" string.|  
 |**distrib_agent_name**|**nvarchar(100)**|Name of the agent job that synchronizes the subscription.|  
 |**subscriber_type**|**tinyint**|Type of Subscriber, which can be one of the following:<br /><br /> **0** = SQL Server Subscriber<br /><br /> **1** = ODBC data source server<br /><br /> **2** = Microsoft JET database (deprecated)<br /><br /> **3** = OLE DB provider|  
 |**subscriber_provider**|**sysname**|Unique programmatic identifier (PROGID) with which the OLE DB provider for the non-SQL Server data source is registered.|  

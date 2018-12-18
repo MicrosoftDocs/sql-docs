@@ -26,7 +26,7 @@ manager: craigg
   
 ## Options  
  **Fill Color**  
- Click the color button to select a fill color for the rectangle. Click the **Expression***(fx)* button to edit the expression, which can be a hexadecimal value for the RGB color or one of the predefined color names that are provided in the **Expression** dialog box. To see a list of predefined colors, in the **Item** pane, select **Web**. The color names listed in the **Title** pane can be typed into the expression text pane. Do not use an equal sign (=) or quotation marks ("") when typing the color name.  
+ Click the color button to select a fill color for the rectangle. Click the **Expression**_(fx)_ button to edit the expression, which can be a hexadecimal value for the RGB color or one of the predefined color names that are provided in the **Expression** dialog box. To see a list of predefined colors, in the **Item** pane, select **Web**. The color names listed in the **Title** pane can be typed into the expression text pane. Do not use an equal sign (=) or quotation marks ("") when typing the color name.  
   
  **Select the image source**  
  Indicate where the image is stored so that when the report is rendered, the report processor can display it.  

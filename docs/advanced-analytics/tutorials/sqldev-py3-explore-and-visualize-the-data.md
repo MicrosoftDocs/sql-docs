@@ -1,5 +1,5 @@
 ---
-title: Lesson 1 Explore and visualize data using Python and T-SQL (SQL Server Machine Learning) | Microsoft Docs
+title: Lesson 1 Explore and visualize data using Python and T-SQL - SQL Server Machine Learning
 description: Tutorial showing how to embed Python in SQL Server stored procedures and T-SQL functions 
 ms.prod: sql
 ms.technology: machine-learning

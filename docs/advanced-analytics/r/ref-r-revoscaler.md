@@ -50,7 +50,7 @@ SQL Server and R use different data types in some cases. For a list of mappings 
 
 | Function| Description|
 | ------- | ---------- |
-| [RxInSqlServerData](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxinqlserverdata) |  Create a SQL Server compute context object to push computations to a remote instance. Several **RevoScaleR** functions take compute context as an argument. |
+| [RxInSqlServerData](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxinsqlserverdata) |  Create a SQL Server compute context object to push computations to a remote instance. Several **RevoScaleR** functions take compute context as an argument. |
 [rxGetComputeContext / rxSetComputeContext](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxsetcomputecontext) | Get or set the active compute context. |
 | [RxSqlServerData](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxsqlserverdata) | Create a data object based on a SQL Server query or table. |
 | [RxOdbcData](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxodbcdata) | Create a data source based on an ODBC connection. |
@@ -121,7 +121,7 @@ After you have created a data source object, you can use the object to load data
 |[rxGlm](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxglm) <sup>*</sup> |Fits a generalized linear model to data. | 
 |[rxCovCor](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxcovcor) <sup>*</sup> |Calculate the covariance, correlation, or sum of squares / cross-product matrix for a set of variables. | 
 |[rxDTree](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxdtree) <sup>*</sup> |Fits a classification or regression tree to data. | 
-|[rxBTrees]https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/(rxbtrees) <sup>*</sup> |Fits a classification or regression decision forest to data using a stochastic gradient boosting algorithm. | 
+|[rxBTrees](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxbtrees) <sup>*</sup> |Fits a classification or regression decision forest to data using a stochastic gradient boosting algorithm. | 
 |[rxDForest](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxdforest) <sup>*</sup> |Fits a classification or regression decision forest to data. | 
 |[rxPredict](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxPredict) <sup>*</sup> |Calculates predictions for fitted models. Output must be an XDF data source. | 
 |[rxKmeans](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxkmeans) <sup>*</sup> |Performs k-means clustering. | 

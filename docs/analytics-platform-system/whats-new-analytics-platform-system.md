@@ -31,7 +31,7 @@ Release date - October 2018
 ### Support for TLS 1.2
 APS CU7.2 supports TLS 1.2. Client machine to APS and APS intra-node communication can now be set to communicate only over TLS1.2. Tools like SSDT, SSIS, and Dwloader installed on client machines that are set to communicate only over TLS 1.2 can now connect to APS using TLS 1.2. By default, APS will support all TLS (1.0, 1.1 and 1.2) versions for backward compatibility. If you wish to set your APS appliance to strictly use TLS 1.2, you can do so by changing registry settings. 
 
-For more information,see [configuring TLS1.2 on APS](configure-tls12-aps.md).
+For more information, see [configuring TLS1.2 on APS](configure-tls12-aps.md).
 
 ### Hadoop encryption zone support for PolyBase
 PolyBase now can communicate to Hadoop encryption zones. See APS configuration changes that are needed in [configure Hadoop security](polybase-configure-hadoop-security.md#encryptionzone).

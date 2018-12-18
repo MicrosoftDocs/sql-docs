@@ -167,7 +167,7 @@ If there is no *preview 5* or *preview 6* label it indicates the change appeared
   - [New in Preview 5] Added a new Query Wait Statistics report.
 
 - **Data Masking**
-  - [New in Preview 5, Add2018114] Added Static Data Masking. Static Data Masking is a data protection tool that allows users to create a copy of their SQL database and mask sensitive data on the copy. The feature will prove useful for those who share their production database with nonproduction users such as dev/test team or analytics team. For more information, head to https://azure.microsoft.com/blog/static-data-masking-preview/.
+  - [New in Preview 5, Add2018114] Added Static Data Masking. Static Data Masking is a data protection tool that allows users to create a copy of their SQL database and mask sensitive data on the copy. The feature will prove useful for those who share their production database with nonproduction users such as dev/test team or analytics team. For more information, see [Static Data Masking for Azure SQL Database and SQL Server](https://azure.microsoft.com/blog/static-data-masking-preview/).
 
 - **Always On**
   - Rehash RTO (estimated recovery time)  and RPO (estimated data loss) in SSMS Always on Dashboard. Documentation is being updated at https://docs.microsoft.com/sql/database-engine/availability-groups/windows/monitor-performance-for-always-on-availability-groups

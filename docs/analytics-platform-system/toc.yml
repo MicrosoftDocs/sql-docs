@@ -41,7 +41,7 @@
     href: configure-auto-statistics.md
   - name: Monitoring active queries
     href: monitoring-active-queries.md
-  - name: Common sub expression elimination
+  - name: Common subexpression elimination
     href: common-sub-expression-elimination.md
 - name: Load
   items:

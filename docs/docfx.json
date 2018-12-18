@@ -73,6 +73,7 @@
 
     "overwrite": [],
     "externalReference": [],
+    "markdigEngineName": "markdig",
 
     "globalMetadata": {
       "layout": "Conceptual",

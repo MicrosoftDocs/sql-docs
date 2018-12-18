@@ -103,7 +103,7 @@
 
       "titleSuffix": {
         "2014/analysis-services/**/*.md": "SQL Server 2014 Analysis Services",
-        "2014/reporting-services/**/*.md": "SQL Server Reporting Services (SSRS)",
+        "2014/reporting-services/**/*.md": "SQL Server 2014 Reporting Services",
         "2014/database-engine/availability-groups/**/*.md": "SQL Server Always On",
         "2014/relational-database/replication/**/*.md": "SQL Server Replication",
         "2014/sql-server/failover-clusters/**/*.md": "SQL Server Always On",

@@ -88,7 +88,7 @@ For this exercise, you use the credit card fraud data again. In this scenario, y
 
     **Results**
     
-    ```
+    ```R
     rxGetVarInfo(data = localDS)
     Var 1: gender, Type: factor, no factor levels available
     Var 2: cardholder, Type: factor, no factor levels available

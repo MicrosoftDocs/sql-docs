@@ -80,7 +80,7 @@ rxGetVarInfo(sqlOutScoreDS2)
 
 **Results**
 
-```
+```R
 Var 1: ccFraudLogitScore, Type: numeric
 Var 2: state, Type: character
 Var 3: gender, Type: character

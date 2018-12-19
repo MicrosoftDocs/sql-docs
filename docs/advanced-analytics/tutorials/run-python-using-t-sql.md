@@ -65,7 +65,7 @@ To verify that **revoscalepy** is available, run a script that includes [rx_summ
 
 Because rx_summary returns an object of type `class revoscalepy.functions.RxSummary.RxSummaryResults`, which contains multiple elements, you can use pandas to extract just the data frame in a tabular format.
 
-```SQL
+```sql
 EXEC sp_execute_external_script @language = N'Python', 
 @script = N'
 import os

@@ -106,7 +106,7 @@ The following example demonstrates how data is transformed when making the round
 
 The query gets a series of values from a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] table, and uses the stored procedure  [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) to output the values using the R runtime.
 
-```SQL
+```sql
 CREATE TABLE MyTable (    
  c1 int,    
  c2 varchar(10),    

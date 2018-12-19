@@ -99,7 +99,7 @@ First, check for the new files in the [mxlibs folder](#file-location). Next, run
 
 2. Paste in the following R script at the command prompt.
 
-    ```r
+    ```R
     # Create the data
     CustomerReviews <- data.frame(Review = c(
     "I really did not like the taste of it",
@@ -121,7 +121,7 @@ First, check for the new files in the [mxlibs folder](#file-location). Next, run
 
 3. Press Enter to view the sentiment scores. Output should be as follows:
 
-    ```
+    ```R
     > sentimentScores
                                             Review SentimentScore
     1           I really did not like the taste of it      0.4617899
@@ -163,7 +163,7 @@ First, check for the new files in the [mxlibs folder](#file-location). Next, run
 
 3. Press Enter to print the scores. Output should be as follows:
 
-    ```
+    ```python
     >>> print(sentiment_scores)
                                                 review    scores         eval
     0            I really did not like the taste of it  0.461790         BLAH

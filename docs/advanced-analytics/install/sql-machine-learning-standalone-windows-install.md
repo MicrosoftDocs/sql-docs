@@ -156,7 +156,7 @@ The following table lists the paths for R and Python distributions created by Mi
 
 <a name="apply-cu"></a>
 
-## Apply cumulatve updates
+## Apply updates
 
 We recommend that you apply the latest cumulative update to both the database engine and machine learning components. Cumulative updates are installed through the Setup program. 
 

@@ -1,5 +1,6 @@
 ---
-title: Transform data using R (SQL Server and RevoScaleR tutorial) | Microsoft Docs
+title: Transform data using RevoScaleR rxDataStep - SQL Server Machine Learning
+description: Tutorial walkthrough on how to transform data using the R language on SQL Server.
 ms.prod: sql
 ms.technology: machine-learning
 

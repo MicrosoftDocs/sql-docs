@@ -1,5 +1,6 @@
 ---
-title: Create data features using R and SQL Server (walkthrough) | Microsoft Docs
+title: Create data features using R and SQL Server functions - SQL Server Machine Learning
+description: Tutorial showing how to create data features using SQL Server functions for in-database analytics.
 ms.prod: sql
 ms.technology: machine-learning
 

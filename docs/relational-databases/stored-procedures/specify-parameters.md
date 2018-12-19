@@ -163,7 +163,7 @@ GO
  Execute `usp_GetList` to return a list of [!INCLUDE[ssSampleDBCoShort](../../includes/sssampledbcoshort-md.md)] products (Bikes) that cost less than $700. The OUTPUT parameters **\@cost** and **\@compareprices** are used with control-of-flow language to return a message in the **Messages** window.  
   
 > [!NOTE]  
->  The OUTPUT variable must be defined during the procedure creation and also during the use of the variable. The parameter name and variable name do not have to match. However, the data type and parameter positioning must match (unless **\@listprice=** *variable* is used).  
+>  The OUTPUT variable must be defined during the procedure creation and also during the use of the variable. The parameter name and variable name do not have to match. However, the data type and parameter positioning must match (unless **\@listprice=** _variable_ is used).  
   
 ```  
 DECLARE @ComparePrice money, @Cost money ;  

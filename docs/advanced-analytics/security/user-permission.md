@@ -1,6 +1,6 @@
 ---
-title: Give users permission to SQL Server Machine Learning Services | Microsoft Docs
-description: How to give users permission to SQL Server Machine Learning Services.
+title: Grant database permissions for R and Python script execution - SQL Server Machine Learning Services
+description: How to grant database user permissions for R and Python script execution on SQL Server Machine Learning Services.
 ms.prod: sql
 ms.technology: machine-learning
 

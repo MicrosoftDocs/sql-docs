@@ -28,7 +28,7 @@ To download SQL Server 2017 Reporting Services, go to the  **[Microsoft Download
 ::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions"
 ## SQL Server 2019 preview Reporting Services
 
-[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] Reporting Services isn't available for CTP 2.1. Install the current version, [SQL Server 2017 Reporting Services](install-windows/install-reporting-services.md).
+[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] Reporting Services isn't available for CTP 2.2. Install the current version, [SQL Server 2017 Reporting Services](install-windows/install-reporting-services.md).
 ::: moniker-end
 
 ::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"

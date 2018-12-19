@@ -17,16 +17,7 @@ In this quickstart, you learn key concepts by running a "Hello World" R script i
 
 ## Prerequisites
 
-This exercise requires access to an instance of SQL Server with one of the following already installed:
-
-+ [SQL Server 2017 Machine Learning Services](../install/sql-machine-learning-services-windows-install.md), with the R language installed
-+ [SQL Server 2016 R Services](../install/sql-r-services-windows-install.md)
-
-  Your SQL Server instance can be in an Azure virtual machine or on-premises. Just be aware that the external scripting feature is disabled by default, so you might need to [enable external scripting](../install/sql-machine-learning-services-windows-install.md#bkmk_enableFeature) and verify that **SQL Server Launchpad service** is running before you start.
-
-+ A tool for running SQL queries. You can connect to the SQL Database and run the R scripts any database management or query tool, as long as it can connect to a SQL Database, and run a T-SQL query or stored procedure. This quickstart uses [SQL Server Management Studio (SSMS)](https://docs.microsoft.com/sql/ssms/sql-server-management-studio-ssms).
-
-To verify that everything is installed and configured properly, see [Quickstart: Verify R exists in SQL Server](rtsql-verify-r-exists.md).
+A previous quickstart, [Verify R exists in SQL Server](rtsql-verify-r-exists.md), provides information and links for setting up the R environment required for this quickstart.
 
 ## Basic R interaction
 

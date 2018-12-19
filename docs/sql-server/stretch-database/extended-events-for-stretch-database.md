@@ -6,8 +6,8 @@ ms.prod: sql
 ms.reviewer: ""
 ms.topic: conceptual
 ms.assetid: 70485e74-2e25-4e7e-be6c-9dd1780a42e3
-author: MikeRayMSFT
-ms.author: mikeray
+author: douglaslMS
+ms.author: douglasl
 manager: craigg
 ---
 # Extended Events for Stretch Database

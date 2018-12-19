@@ -54,7 +54,7 @@ EXEC sp_execute_external_script
 
 + Many datasets, small and large, are included with the R runtime. To get a list of datasets installed with R,  type `library(help="datasets")` from an R command prompt.
 
-## Create a generalized linear model
+## Create a model
 
 The car speed data contains two columns, both numeric, horsepower (`hp`) and weight (`wt`). From this data, you will create a generalized linear model (GLM) that estimates the probability that a vehicle has been fitted with a manual transmission.
 
@@ -81,7 +81,7 @@ GO
 + The first argument to rxLinMod is the *formula* parameter, which defines distance as dependent on speed.
 + The input data is stored in the variable `CarsData`, which is populated by the SQL query. If you don't assign a specific name to your input data, the default variable name would be _InputDataSet_.
 
-## Create a table for storing the model
+## Create a table for the model
 
 Next, store the model so you can retrain or use it for prediction. The output of an R package that creates a model is usually a **binary object**. Therefore, the table where you store the model must provide a column of **varbinary** type.
 

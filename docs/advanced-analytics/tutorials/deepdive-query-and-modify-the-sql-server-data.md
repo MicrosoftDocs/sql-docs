@@ -35,7 +35,7 @@ rxGetVarInfo(data = sqlFraudDS)
 
 **Results**
 
-```
+```R
 Var 1: custID, Type: integer
 Var 2: gender, Type: integer
 Var 3: state, Type: integer
@@ -109,7 +109,7 @@ Mapping the column to abbreviations before using it as a factor actually improve
 
     **Results**
     
-    ```
+    ```R
     Var 1: custID, Type: integer
     Var 2: gender  2 factor levels: Male Female
     Var 3: state   51 factor levels: AK AL AR AZ CA ... VT WA WI WV WY

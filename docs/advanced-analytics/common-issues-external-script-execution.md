@@ -61,7 +61,7 @@ If you installed SQL Server as a database administrator or you are a database ow
 
 To correct the problem, in SQL Server Management Studio, a security administrator can modify the SQL login or Windows user account by running the following script:
 
-```SQL
+```sql
 GRANT EXECUTE ANY EXTERNAL SCRIPT TO <username>
 ```
 
@@ -164,7 +164,7 @@ This error can happen in many ways:
 
 To determine the location of the R package library that's used by the instance, open SQL Server Management Studio (or any other database query tool), connect to the instance, and then run the following stored procedure:
 
-```SQL
+```sql
 EXEC sp_execute_external_script @language = N'R',  
 @script = N' print(normalizePath(R.home())); print(.libPaths());'; 
 ```

@@ -68,7 +68,7 @@ For local installations, you must run Setup as an administrator. If you install 
 
     - R and Python are both selected by default. You can deselect either language, but we recommend that you install at least one of the supported languages.
 
-     ![Install Machine Learning Server Standalone](media/2017setup-features-page-mlsvr-rpy.png "Start installation of Machine Learning Server Standalone")
+     ![Choose R or Python features](media/2017setup-features-page-mlsvr-rpy.png "Start installation of Machine Learning Server Standalone")
     
     All other options should be ignored. 
     

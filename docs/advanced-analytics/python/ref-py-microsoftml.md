@@ -124,7 +124,7 @@ The **microsoftml** package for Python is installed by default, but unlike **rev
 
 As a first step, import the **microsoftml** package, and import **revoscalepy** if you need to use remote compute contexts or related connectivity or data source objects. Then, reference the individual functions you need.
 
-```Python
+```python
 from microsoftml.modules.logistic_regression.rx_logistic_regression import rx_logistic_regression
 from revoscalepy.functions.RxSummary import rx_summary
 from revoscalepy.etl.RxImport import rx_import_datasource

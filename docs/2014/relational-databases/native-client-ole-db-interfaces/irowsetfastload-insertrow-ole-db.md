@@ -39,7 +39,7 @@ pData
  The handle of the accessor defining the row data for bulk copy. The accessor referenced is a row accessor, binding consumer-owned memory containing data values.  
   
  *pData*[in]  
- A pointer to the consumer-owned memory containing data values. For more information, see [DBBINDING Structures](http://go.microsoft.com/fwlink/?LinkId=65955).  
+ A pointer to the consumer-owned memory containing data values. For more information, see [DBBINDING Structures](https://go.microsoft.com/fwlink/?LinkId=65955).  
   
 ## Return Code Values  
  S_OK  

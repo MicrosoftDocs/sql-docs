@@ -1,5 +1,5 @@
 ---
-title: Set up a data science client for Python development on SQL Server Machine Learning | Microsoft Docs
+title: Set up a data science client for Python development - SQL Server Machine Learning
 description: Set up a Python local environment (Jupyter Notebook or PyCharm) for remote connections to SQL Server Machine Learning Services with Python.
 ms.prod: sql
 ms.technology: machine-learning
@@ -80,7 +80,7 @@ On systems having multiple versions of Python, remember to use this particular P
 > [!Note] 
 > The installation script does not modify the PATH environment variable on your computer, which means that the new python interpreter and modules you just installed are not automatically available to other tools you might have. For help on linking the Python interpreter and libraries to tools, see [Install an IDE](#install-ide).
 
-<a name="python-tool"></a>
+<a name="python-tools"></a>
 
 ## 3 - Open Jupyter Notebooks
 

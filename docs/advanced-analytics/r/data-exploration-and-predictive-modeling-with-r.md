@@ -1,5 +1,5 @@
 ---
-title: Data exploration and predictive modeling with R in SQL Server Machine Learning | Microsoft Docs
+title: Data exploration and predictive modeling with R - SQL Server Machine Learning Services
 ms.prod: sql
 ms.technology: machine-learning
 
@@ -57,7 +57,7 @@ In addition to the proprietary R libraries included with Microsoft Machine Learn
   
      For more information about these packages and how to use them, see [What is RevoScaleR](https://msdn.microsoft.com/microsoft-r/scaler-user-guide-introduction) and [Get started with RevoPemaR](https://msdn.microsoft.com/microsoft-r/pemar-getting-started). 
 
-+ **MicrosoftML** contains a collection of highly optimized machine learning algorithms and data transformations from the Microsoft Data Science team. Many of the algorithms are also used in Azure Machine Learning. For more information, see [Using the MicrosoftML Package](../../advanced-analytics/using-the-microsoftml-package.md).
++ **MicrosoftML** contains a collection of highly optimized machine learning algorithms and data transformations from the Microsoft Data Science team. Many of the algorithms are also used in Azure Machine Learning. For more information, see [MicrosoftML in SQL Server](ref-r-microsoftml.md).
 
 ### R Development Tools
 
@@ -98,4 +98,4 @@ Typically the deployment process begins with cleaning up your script to eliminat
 
 [Comparison of Base R and ScaleR Functions](https://msdn.microsoft.com/microsoft-r/scaler/compare-base-r-scaler-functions)
 
-[ScaleR Functions for Working with SQL Server](../../advanced-analytics/r/scaler-functions-for-working-with-sql-server-data.md)
+[RevoScaleR library in SQL Server](ref-r-revoscaler.md)

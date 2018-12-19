@@ -27,7 +27,7 @@ manager: craigg
 > [!NOTE]  
 >  You should not implement <xref:Microsoft.ReportingServices.DataProcessing.IDbCommandAnalysis> if your custom data processing extension does not support parameters.  
   
- For a sample **Command** class implementation, see [SQL Server Reporting Services Product Samples](http://go.microsoft.com/fwlink/?LinkId=177889).  
+ For a sample **Command** class implementation, see [SQL Server Reporting Services Product Samples](https://go.microsoft.com/fwlink/?LinkId=177889).  
   
 ## See Also  
  [Reporting Services Extensions](../reporting-services-extensions.md)   

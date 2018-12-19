@@ -55,7 +55,7 @@ sp_changesubscriber [ @subscriber= ] 'subscriber'
  Is the name of the Subscriber on which to change the options. *subscriber* is **sysname**, with no default.  
   
  [ **@type=**] *type*  
- Is the Subscriber type. *type* is **tinyint**, with a default of NULL. **0** indicates a [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Subscriber. **1** specifies a non-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] or other ODBC data source server Subscriber.  
+ Is the Subscriber type. *type* is **tinyint**, with a default of NULL. **0** indicates a [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Subscriber. **1** specifies a non- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] or other ODBC data source server Subscriber.  
   
  [ **@login=**] **'***login***'**  
  Is the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentication login ID. *login* is **sysname**, with a default of NULL.  
@@ -140,7 +140,7 @@ sp_changesubscriber [ @subscriber= ] 'subscriber'
 |**1**|Windows Authentication|  
   
  [ **@publisher**= ] **'***publisher***'**  
- Specifies a non-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Publisher. *publisher* is **sysname**, with a default of NULL.  
+ Specifies a non- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Publisher. *publisher* is **sysname**, with a default of NULL.  
   
 > [!NOTE]  
 >  *publisher* should not be used when changing article properties on a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Publisher.  

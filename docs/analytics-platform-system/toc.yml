@@ -1,6 +1,8 @@
 - name: What's new in APS
   href: whats-new-analytics-platform-system.md
   items:
+  - name: APS CU7.3
+    href: whats-new-analytics-platform-system.md#h2-aps-cu7.3
   - name: APS CU7.2
     href: whats-new-analytics-platform-system.md#h2-aps-cu7.2
   - name: APS CU7.1
@@ -41,6 +43,8 @@
     href: configure-auto-statistics.md
   - name: Monitoring active queries
     href: monitoring-active-queries.md
+  - name: Common subexpression elimination
+    href: common-sub-expression-elimination.md
 - name: Load
   items:
   - name: Overview

@@ -1,5 +1,5 @@
 ---
-title: Upgrade R and Python components in SQL Server instances (Machine Learning Services) | Microsoft Docs
+title: Upgrade R and Python components - SQL Server Machine Learning Services
 description: Upgrade R and Python in SQL Server 2016 Services or SQL Server 2017 Machine Learning Services using sqlbindr.exe to bind to Machine Learning Server.
 ms.prod: sql
 ms.technology: machine-learning
@@ -281,7 +281,7 @@ You might have added other open-source or third-party packages to your package l
 |*bind*| Upgrades the specified SQL database instance to the latest version of R Server and ensures the instance automatically gets future upgrades of R Server|
 |*unbind*|Uninstalls the latest version of R Server from the specified SQL database instance and prevents future R Server upgrades from affecting the instance|
 
-<a name="sqlbinder-error-codes"><a/>
+<a name="sqlbindr-error-codes"><a/>
 
 ## Binding errors
 

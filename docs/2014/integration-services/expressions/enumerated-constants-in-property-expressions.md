@@ -574,7 +574,7 @@ manager: craigg
 |Failure|1|  
 |Completion|2|  
   
- `IsolationLevel` property-Set by the .NET Framework `IsolationLevel` enumeration. For more information, see the .NET Framework Class Library in the [MSDN Library](http://go.microsoft.com/fwlink?LinkId=17313).  
+ `IsolationLevel` property-Set by the .NET Framework `IsolationLevel` enumeration. For more information, see the .NET Framework Class Library in the [MSDN Library](https://go.microsoft.com/fwlink?LinkId=17313).  
   
  `LoggingMode` property-Set by using values from the `DTSLoggingMode` enumeration.  
   

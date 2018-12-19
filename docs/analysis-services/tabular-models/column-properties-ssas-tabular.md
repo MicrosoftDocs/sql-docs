@@ -1,5 +1,5 @@
 ---
-title: "Column properties | Microsoft Docs"
+title: "Column properties in Analysis Services tabular models | Microsoft Docs"
 ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -14,7 +14,7 @@ manager: kfile
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
   This article describes tabular model column properties.  
   
->  [!NOTE]  
+> [!NOTE]
 >  Some properties are not supported in all compatibility levels.    
   
 ##  <a name="bkmk_properties"></a> Column properties  

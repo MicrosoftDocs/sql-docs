@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "performance counters [SQL Server], database mirroring"
   - "Database Mirroring object"
 ms.assetid: a27b51ee-7637-4525-9424-bcc16947dc13
-author: MikeRayMSFT
-ms.author: mikeray
+author: julieMSFT
+ms.author: jrasnick
 manager: craigg
 ---
 # SQL Server, Database Mirroring Object

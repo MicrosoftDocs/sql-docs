@@ -1,5 +1,5 @@
 ---
-title: Quickstart for working with inputs and outputs in R (SQL Server Machine Learning) | Microsoft Docs
+title: Quickstart for working with inputs and outputs in R - SQL Server Machine Learning
 description: In this quickstart for R script in SQL Server, learn how to structure inputs and outputs to the sp_execute_external_script system stored procedure.
 ms.prod: sql
 ms.technology: machine-learning
@@ -45,7 +45,7 @@ For now, let's look at just the default input and output variables of sp_execute
 
     **Results**
 
-    ![Contents of the RTestData table](./media/sql-database-connect-query-r/select-rtestdata.png)
+    ![Contents of the RTestData table](./media/select-rtestdata.png)
 
 2. You can get the data from the table as input to your R script. Run the statement below. It gets the data from the table, makes a round trip through the R runtime, and returns the values with the column name *NewColName*.
 
@@ -61,9 +61,9 @@ For now, let's look at just the default input and output variables of sp_execute
 
     **Results**
 
-    ![Output from R script that returns data from a table](./media/sql-database-connect-query-r/r-output-rtestdata.png)
+    ![Output from R script that returns data from a table](./media/r-output-rtestdata.png)
 
-3. Let's change the name of the input or output variables. The script above used the default input and output variable names, _InputDataSet_ and _OutputDataSet_. To define the input data associated with  _InputDatSet_, you use the *@input_data_1* variable.
+3. Let's change the name of the input or output variables. The script above used the default input and output variable names, _InputDataSet_ and _OutputDataSet_. To define the input data associated with _InputDatSet_, you use the *@input_data_1* variable.
 
     In this script, the names of the output and input variables for the stored procedure have been changed to *SQL_out* and *SQL_in*:
 
@@ -98,7 +98,7 @@ For now, let's look at just the default input and output variables of sp_execute
 
     **Results**
 
-    ![Query results using @script as input](./media/sql-database-connect-query-r/r-data-generated-output.png)
+    ![Query results using @script as input](./media/r-data-generated-output.png)
 
 
 

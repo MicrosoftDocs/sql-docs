@@ -1,6 +1,7 @@
 ---
-title: "Configure Replication for Always On Availability Groups (SQL Server) | Microsoft Docs"
-ms.custom: ""
+title: "Configure replication with availability groups"
+description: "Configure replication with your Always On availability group." 
+ms.custom: "seodec18"
 ms.date: "07/09/2018"
 ms.prod: sql
 ms.reviewer: ""
@@ -15,7 +16,7 @@ ms.author: mathoma
 manager: craigg
 monikerRange: ">=sql-server-2016||=sqlallproducts-allversions"
 ---
-# Configure Replication for Always On Availability Groups (SQL Server)
+# Configure replication with Always On availability groups
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 

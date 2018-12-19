@@ -44,17 +44,17 @@ manager: craigg
   
  **SQL Server Web Sites**  
   
--   [SQL Server on Microsoft.com](http://go.microsoft.com/fwlink/?linkid=8504)  
+-   [SQL Server on Microsoft.com](https://go.microsoft.com/fwlink/?linkid=8504)  
   
--   [SQL Server Resource Center](http://go.microsoft.com/fwlink/?linkid=218841)  
+-   [SQL Server Resource Center](https://go.microsoft.com/fwlink/?linkid=218841)  
   
--   [SQL Server TechCenter](http://go.microsoft.com/fwlink/?linkid=28107)  
+-   [SQL Server TechCenter](https://go.microsoft.com/fwlink/?linkid=28107)  
   
--   [SQL Server Developer Center](http://go.microsoft.com/fwlink/?LinkId=42457)  
+-   [SQL Server Developer Center](https://go.microsoft.com/fwlink/?LinkId=42457)  
   
--   [Data Platform Developer Center](http://go.microsoft.com/fwlink/?LinkId=17386)  
+-   [Data Platform Developer Center](https://go.microsoft.com/fwlink/?LinkId=17386)  
   
--   [XML Developer Center](http://go.microsoft.com/fwlink/?LinkId=42458)  
+-   [XML Developer Center](https://go.microsoft.com/fwlink/?LinkId=42458)  
   
 ## See Also  
  [SQL Server Configuration Manager Help](../tools/configuration-manager/sql-server-configuration-manager-help.md)  

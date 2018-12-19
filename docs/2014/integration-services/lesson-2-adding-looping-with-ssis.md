@@ -41,7 +41,7 @@ manager: craigg
  In this lesson, you will not modify the data flow, only the control flow.  
   
 > [!IMPORTANT]  
->  This tutorial requires the **AdventureWorksDW2012** sample database. For more information about how to install and deploy **AdventureWorksDW2012**, see [Reporting Services Product Samples on CodePlex](http://go.microsoft.com/fwlink/p/?LinkID=526910).  
+>  This tutorial requires the **AdventureWorksDW2012** sample database. For more information about how to install and deploy **AdventureWorksDW2012**, see [Reporting Services Product Samples on CodePlex](https://go.microsoft.com/fwlink/p/?LinkID=526910).  
   
 ## Lesson Tasks  
  This lesson contains the following tasks:  

@@ -78,7 +78,7 @@ sp_add_alert [ @name = ] 'name'
  [ **@include_event_description_in =** ] *include_event_description_in*  
  Is whether the description of the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] error should be included as part of the notification message. *include_event_description_in*is **tinyint**, with a default of **5** (e-mail and **net send**), and can have one or more of these values combined with an **OR** logical operator.  
   
-> [!IMPORTANT]  
+> [!IMPORTANT]
 >  The Pager and **net send** options will be removed from [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent in a future version of [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Avoid using these features in new development work, and plan to modify applications that currently use these features.  
   
 |Value|Description|  

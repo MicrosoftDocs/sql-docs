@@ -33,11 +33,11 @@ manager: craigg
 ```  
   
 SQLRETURN SQLSetDescField(  
-     SQLHDESC      DescriptorHandle,  
-     SQLSMALLINT   RecNumber,  
-     SQLSMALLINT   FieldIdentifier,  
-     SQLPOINTER    ValuePtr,  
-     SQLINTEGER    BufferLength);  
+     SQLHDESC      DescriptorHandle,  
+     SQLSMALLINT   RecNumber,  
+     SQLSMALLINT   FieldIdentifier,  
+     SQLPOINTER    ValuePtr,  
+     SQLINTEGER    BufferLength);  
 ```  
   
 ## Arguments  

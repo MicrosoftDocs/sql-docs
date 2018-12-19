@@ -16,8 +16,18 @@
             "redirect_document_id": false
         }, 
         {
+            "source_path": "docs/advanced-analytics/r/scaler-functions-for-working-with-sql-server-data.md",
+            "redirect_url": "/sql/advanced-analytics/r/ref-r-revoscaler",
+            "redirect_document_id": false
+        },
+        {
             "source_path": "docs/advanced-analytics/tutorials/deepdive-create-a-simple-simulation.md",
             "redirect_url": "/sql/advanced-analytics/tutorials/r-tutorial-custom-r-functions",
+            "redirect_document_id": true
+        }, 
+        {
+            "source_path": "docs/advanced-analytics/python/what-is-revoscalepy.md",
+            "redirect_url": "/sql/advanced-analytics/python/ref-py-revoscalepy",
             "redirect_document_id": true
         }, 
         {
@@ -81,8 +91,23 @@
             "redirect_document_id": true
         },
         {
+            "source_path": "docs/advanced-analytics/r/generating-an-r-stored-procedure-for-r-code-using-the-sqlrutils-package.md",
+            "redirect_url": "/sql/advanced-analytics/r/ref-r-sqlrutils",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "docs/advanced-analytics/r/revoscaler-overview.md",
+            "redirect_url": "/sql/advanced-analytics/r/ref-r-revoscaler",
+            "redirect_document_id": true
+        },
+        {
             "source_path": "docs/advanced-analytics/python/machine-learning-services-python-reference.md",
-            "redirect_url": "/sql/advanced-analytics/r/machine-learning-services-r-reference",
+            "redirect_url": "/sql/advanced-analytics/python/ref-py-revoscalepy",
+            "redirect_document_id": false
+        }, 
+        {
+            "source_path": "docs/advanced-analytics/r/machine-learning-services-r-reference.md",
+            "redirect_url": "/sql/advanced-analytics/r/ref-r-revoscaler",
             "redirect_document_id": false
         }, 
         {
@@ -142,7 +167,7 @@
         }, 
         {
             "source_path": "docs/advanced-analytics/python/new-components-in-sql-server-to-support-python-integration.md",
-            "redirect_url": "/sql/advanced-analytics/concepts/extension-py",
+            "redirect_url": "/sql/advanced-analytics/concepts/extension-python",
             "redirect_document_id": false
         }, 
         {
@@ -272,7 +297,12 @@
         },
         {
             "source_path": "docs/advanced-analytics/r/index.md",
-            "redirect_url": "/sql/advanced-analytics/what-is-sql-server-machine-learning",
+            "redirect_url": "/sql/advanced-analytics/index",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/advanced-analytics/tutorials/index.md",
+            "redirect_url": "/sql/advanced-analytics/index",
             "redirect_document_id": false
         },
         {
@@ -813,7 +843,7 @@
         },
         {
             "source_path": "docs/advanced-analytics/r/operationalization-with-mrsdeploy.md",
-            "redirect_url": "/sql/advanced-analytics/operationalization-with-mrsdeploy",
+            "redirect_url": "/sql/advanced-analytics/r/converting-r-code-for-use-in-sql-server",
             "redirect_document_id": false
         },
         {
@@ -872,6 +902,11 @@
             "redirect_document_id": false
         },
         {
+            "source_path": "docs/advanced-analytics/operationalization-with-mrsdeploy.md",
+            "redirect_url": "/sql/advanced-analytics/r/converting-r-code-for-use-in-sql-server",
+            "redirect_document_id": false
+        },
+        {
             "source_path": "docs/advanced-analytics/r-services/dmvs-for-sql-server-r-services.md",
             "redirect_url": "/sql/advanced-analytics/r/dmvs-for-sql-server-r-services",
             "redirect_document_id": false
@@ -883,7 +918,7 @@
         },
         {
             "source_path": "docs/advanced-analytics/r-services/generating-an-r-stored-procedure-for-r-code-using-the-sqlrutils-package.md",
-            "redirect_url": "/sql/advanced-analytics/r/generating-an-r-stored-procedure-for-r-code-using-the-sqlrutils-package",
+            "redirect_url": "/sql/advanced-analytics/r/ref-r-sqlrutils",
             "redirect_document_id": false
         },
         {
@@ -913,7 +948,7 @@
         },
         {
             "source_path": "docs/advanced-analytics/r-services/index.md",
-            "redirect_url": "/sql/advanced-analytics/r/index",
+            "redirect_url": "/sql/advanced-analytics/index",
             "redirect_document_id": false
         },
         {
@@ -1223,7 +1258,7 @@
         },
         {
             "source_path": "docs/advanced-analytics/r-services/sql-server-r-services-features-and-tasks.md",
-            "redirect_url": "/sql/advanced-analytics/r/sql-server-r-services-features-and-tasks",
+            "redirect_url": "/sql/advanced-analytics/index",
             "redirect_document_id": false
         },
         {
@@ -1233,7 +1268,7 @@
         },
         {
             "source_path": "docs/advanced-analytics/r-services/sql-server-r-services-tutorials.md",
-            "redirect_url": "/sql/advanced-analytics/tutorials/machine learning-services-tutorials",
+            "redirect_url": "/sql/advanced-analytics/tutorials/machine-learning-services-tutorials",
             "redirect_document_id": false
         },
         {
@@ -1243,7 +1278,7 @@
         },
         {
             "source_path": "docs/advanced-analytics/r-services/in-database-advanced-analytics-for-sql-developers-tutorial.md",
-            "redirect_url": "/sql/advanced-analytics/tutorials/sqldev-in-database-advanced-analytics-for-sql-developers",
+            "redirect_url": "/sql/advanced-analytics/tutorials/sqldev-in-database-r-for-sql-developers",
             "redirect_document_id": false
         },
         {
@@ -1303,8 +1338,13 @@
         },
         {
             "source_path": "docs/advanced-analytics/r-services/using-the-microsoftml-package-with-sql-server-r-services.md",
-            "redirect_url": "/sql/advanced-analytics/using-the-microsoftml-package",
+            "redirect_url": "/sql/advanced-analytics/python/ref-py-microsoftml",
             "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/advanced-analytics/using-the-microsoftml-package.md",
+            "redirect_url": "/sql/advanced-analytics/python/ref-py-microsoftml",
+            "redirect_document_id": true
         },
         {
             "source_path": "docs/advanced-analytics/r-services/what-s-new-in-sql-server-r-services.md",
@@ -1313,7 +1353,7 @@
         },
         {
             "source_path": "docs/advanced-analytics/r-services/working-with-r-data-types.md",
-            "redirect_url": "/sql/advanced-analytics/r/working-with-r-data-types",
+            "redirect_url": "/sql/advanced-analytics/r/r-libraries-and-data-types",
             "redirect_document_id": false
         },
         {

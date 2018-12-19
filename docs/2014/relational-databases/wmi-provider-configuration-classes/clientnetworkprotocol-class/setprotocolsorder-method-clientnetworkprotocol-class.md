@@ -49,7 +49,7 @@ ProtocolOrderList
 ## Remarks  
   
 ## See Also  
- [Configure Client Protocols](http://technet.microsoft.com/library/ms181035.aspx)   
- [Configuring Client Network Protocols and Net-Libraries](http://technet.microsoft.com/library/ms181035.aspx)  
+ [Configure Client Protocols](https://technet.microsoft.com/library/ms181035.aspx)   
+ [Configuring Client Network Protocols and Net-Libraries](https://technet.microsoft.com/library/ms181035.aspx)  
   
   

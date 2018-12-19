@@ -40,32 +40,32 @@ sp_foreignkeys [ @table_server = ] 'table_server'
 ```  
   
 ## Arguments  
- [ **@table_server =** ] **'***table_server***'**  
+ [ **@table_server =** ] **'**_table_server_**'**  
  Is the name of the linked server for which to return table information. *table_server* is **sysname**, with no default.  
   
- [ **@pktab_name =** ] **'***pktab_name***'**  
+ [ **@pktab_name =** ] **'**_pktab_name_**'**  
  Is the name of the table with a primary key. *pktab_name* is **sysname**, with a default of NULL.  
   
- [ **@pktab_schema =** ] **'***pktab_schema***'**  
+ [ **@pktab_schema =** ] **'**_pktab_schema_**'**  
  Is the name of the schema with a primary key. *pktab_schema*is **sysname**, with a default of NULL. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], this contains the owner name.  
   
- [ **@pktab_catalog =** ] **'***pktab_catalog***'**  
+ [ **@pktab_catalog =** ] **'**_pktab_catalog_**'**  
  Is the name of the catalog with a primary key. *pktab_catalog*is **sysname**, with a default of NULL. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], this contains the database name.  
   
- [ **@fktab_name =** ] **'***fktab_name***'**  
+ [ **@fktab_name =** ] **'**_fktab_name_**'**  
  Is the name of the table with a foreign key. *fktab_name*is **sysname**, with a default of NULL.  
   
- [ **@fktab_schema =** ] **'***fktab_schema***'**  
+ [ **@fktab_schema =** ] **'**_fktab_schema_**'**  
  Is the name of the schema with a foreign key. *fktab_schema*is **sysname**, with a default of NULL.  
   
- [ **@fktab_catalog =** ] **'***fktab_catalog***'**  
+ [ **@fktab_catalog =** ] **'**_fktab_catalog_**'**  
  Is the name of the catalog with a foreign key. *fktab_catalog*is **sysname**, with a default of NULL.  
   
 ## Return Code Values  
  None  
   
 ## Result Sets  
- Various DBMS products support three-part naming for tables (*catalog***.***schema***.***table*), which is represented in the result set.  
+ Various DBMS products support three-part naming for tables (_catalog_**.**_schema_**.**_table_), which is represented in the result set.  
   
 |Column name|Data type|Description|  
 |-----------------|---------------|-----------------|  

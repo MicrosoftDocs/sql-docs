@@ -201,20 +201,24 @@
         href: r/packages-installed-in-user-libraries.md
   - name: Data exploration and modeling
     items:
-    - name: R libraries and data types
+    - name: R-to-SQL data type conversions 
       href: r/r-libraries-and-data-types.md
-    - name: Python libraries and data types
+    - name: Python-to-SQL data type conversions 
       href: python/python-libraries-and-data-types.md
-    - name: Predictive modeling with R
-      href: r/data-exploration-and-predictive-modeling-with-r.md
     - name: Load R objects using ODBC
       href: r/save-and-load-r-objects-from-sql-server-using-odbc.md
-    - name: Converting R code for use in Machine Learning Services
-      href: r/converting-r-code-for-use-in-sql-server.md
-    - name: Creating multiple models using rxExecBy
-      href: r/creating-multiple-models-using-rxexecby.md
     - name: Use data from OLAP cubes in R
       href: r/using-data-from-olap-cubes-in-r.md
+    - name: How to create MDX queries using olapR
+      href: r/how-to-create-mdx-queries-using-olapr.md
+    - name: Predictive modeling with R
+      href: r/data-exploration-and-predictive-modeling-with-r.md
+    - name: Create multiple models using rxExecBy
+      href: r/creating-multiple-models-using-rxexecby.md
+  - name: Deploy
+    items: 
+    - name: Convert R code for SQL Server
+      href: r/converting-r-code-for-use-in-sql-server.md
     - name: Create a stored procedure using sqlrutils
       href: r/how-to-create-a-stored-procedure-using-sqlrutils.md
   - name: Predictions
@@ -268,25 +272,24 @@
     - name: R code profiling functions
       href: r/using-r-code-profiling-functions.md
 - name: Reference
-  href: r/machine-learning-services-r-reference.md
+  href: 
   items:
   - name: R packages
-    href: r/machine-learning-services-r-reference.md
     items:
-    - name: olapR in SQL
-      href: r/how-to-create-mdx-queries-using-olapr.md
-    - name: MicrosoftML in SQL
-      href: using-the-microsoftml-package.md
-    - name: RevoScaleR in SQL
-      href: r/revoscaler-overview.md
-    - name: RevoScaleR function list for SQL Server data
-      href: r/scaler-functions-for-working-with-sql-server-data.md
-    - name: sqlrutils in SQL
-      href: r/generating-an-r-stored-procedure-for-r-code-using-the-sqlrutils-package.md
+    - name: RevoScaleR
+      href: r/ref-r-revoscaler.md
+    - name: MicrosoftML
+      href: r/ref-r-microsoftml.md
+    - name: olapR
+      href: r/ref-r-olapr.md
+    - name: sqlrutils
+      href: r/ref-r-sqlrutils.md
   - name: Python packages
     items:
-    - name: revoscalepy in SQL
-      href: python/what-is-revoscalepy.md
+    - name: revoscalepy
+      href: python/ref-py-revoscalepy.md
+    - name: microsoftml
+      href: python/ref-py-microsoftml.md
 - name: Resources
   items:
   - name: Release notes

@@ -93,11 +93,11 @@ manager: craigg
   
 |Source|Description|  
 |------------|-----------------|  
-|Oracle Source|The Oracle source is the source component of the [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Connector for Oracle by Attunity. The [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Connector for Oracle by Attunity also includes a connection manager and a destination. For more information, see the download page, [Microsoft Connectors for Oracle and Teradata by Attunity](http://go.microsoft.com/fwlink/?LinkId=254963).|  
-|SAP BI Source|The SAP BI source is the source component of the [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Connector for SAP BI. The [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Connector for SAP BI also includes a connection manager and a destination. For more information, see the download page, [Microsoft SQL Server 2008 Feature Pack](http://go.microsoft.com/fwlink/?LinkId=110393).|  
-|Teradata Source|The Teradata source is the source component of the [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Connector for Teradata by Attunity. The [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Connector for Teradata by Attunity also includes a connection manager and a destination. For more information, see the download page, [Microsoft Connectors for Oracle and Teradata by Attunity](http://go.microsoft.com/fwlink/?LinkId=254963).|  
+|Oracle Source|The Oracle source is the source component of the [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Connector for Oracle by Attunity. The [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Connector for Oracle by Attunity also includes a connection manager and a destination. For more information, see the download page, [Microsoft Connectors for Oracle and Teradata by Attunity](https://go.microsoft.com/fwlink/?LinkId=254963).|  
+|SAP BI Source|The SAP BI source is the source component of the [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Connector for SAP BI. The [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Connector for SAP BI also includes a connection manager and a destination. For more information, see the download page, [Microsoft SQL Server 2008 Feature Pack](https://go.microsoft.com/fwlink/?LinkId=110393).|  
+|Teradata Source|The Teradata source is the source component of the [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Connector for Teradata by Attunity. The [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Connector for Teradata by Attunity also includes a connection manager and a destination. For more information, see the download page, [Microsoft Connectors for Oracle and Teradata by Attunity](https://go.microsoft.com/fwlink/?LinkId=254963).|  
   
- For a demonstration on how to leverage the performance gains of the [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Connector for Oracle by Attunity, see [Performance of Microsoft Connector for Oracle by Attunity (SQL Server Video)](http://go.microsoft.com/fwlink/?LinkID=210369).  
+ For a demonstration on how to leverage the performance gains of the [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Connector for Oracle by Attunity, see [Performance of Microsoft Connector for Oracle by Attunity (SQL Server Video)](https://go.microsoft.com/fwlink/?LinkID=210369).  
   
 ## Transformations  
  The capabilities of transformations vary broadly. Transformations can perform tasks such as updating, summarizing, cleaning, merging, and distributing data. You can modify values in columns, look up values in tables, clean data, and aggregate column values.  
@@ -154,11 +154,11 @@ manager: craigg
   
 |Source|Description|  
 |------------|-----------------|  
-|Oracle Destination|The Oracle destination is the destination component of the [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Connector for Oracle by Attunity. The [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Connector for Oracle by Attunity also includes a connection manager and a source. For more information, see the download page, [Microsoft Connectors for Oracle and Teradata by Attunity](http://go.microsoft.com/fwlink/?LinkId=254963).|  
-|SAP BI Destination|The SAP BI destination is the destination component of the [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Connector for SAP BI. The [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Connector for SAP BI also includes a connection manager and a source. For more information, see the download page, [Microsoft SQL Server 2008 Feature Pack](http://go.microsoft.com/fwlink/?LinkId=110393).|  
-|Teradata Destination|The Teradata destination is the destination component of the [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Connector for Teradata by Attunity. The [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Connector for Teradata by Attunity also includes a connection manager and a source. For more information, see the download page, [Microsoft Connectors for Oracle and Teradata by Attunity](http://go.microsoft.com/fwlink/?LinkId=254963).|  
+|Oracle Destination|The Oracle destination is the destination component of the [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Connector for Oracle by Attunity. The [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Connector for Oracle by Attunity also includes a connection manager and a source. For more information, see the download page, [Microsoft Connectors for Oracle and Teradata by Attunity](https://go.microsoft.com/fwlink/?LinkId=254963).|  
+|SAP BI Destination|The SAP BI destination is the destination component of the [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Connector for SAP BI. The [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Connector for SAP BI also includes a connection manager and a source. For more information, see the download page, [Microsoft SQL Server 2008 Feature Pack](https://go.microsoft.com/fwlink/?LinkId=110393).|  
+|Teradata Destination|The Teradata destination is the destination component of the [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Connector for Teradata by Attunity. The [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Connector for Teradata by Attunity also includes a connection manager and a source. For more information, see the download page, [Microsoft Connectors for Oracle and Teradata by Attunity](https://go.microsoft.com/fwlink/?LinkId=254963).|  
   
- For a demonstration on how to leverage the performance gains of the [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Connector for Oracle by Attunity, see [Performance of Microsoft Connector for Oracle by Attunity (SQL Server Video)](http://go.microsoft.com/fwlink/?LinkID=210369).  
+ For a demonstration on how to leverage the performance gains of the [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Connector for Oracle by Attunity, see [Performance of Microsoft Connector for Oracle by Attunity (SQL Server Video)](https://go.microsoft.com/fwlink/?LinkID=210369).  
   
 ## Connection Managers  
  Many data flow components connect to data sources, and you must add the connection managers that the components require to the package before the component can be configured correctly. You can add the connection managers as you construct the data flow, or before you start to construct the data flow. For more information, see [Integration Services &#40;SSIS&#41; Connections](../connection-manager/integration-services-ssis-connections.md) and [Create Connection Managers](../create-connection-managers.md).  
@@ -183,7 +183,7 @@ manager: craigg
  For more information, see [Error Handling in Data](error-handling-in-data.md).  
   
 ### Columns  
- Inputs, outputs, and error outputs are collections of columns. Each column is configurable and depending on the column type-input, output, or external-[!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] provides different properties for the column. [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] provides three different ways of setting column properties: programmatically, by using component-specific dialog boxes, or by using the **Advanced Editor** dialog box.  
+ Inputs, outputs, and error outputs are collections of columns. Each column is configurable and depending on the column type-input, output, or external- [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] provides different properties for the column. [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] provides three different ways of setting column properties: programmatically, by using component-specific dialog boxes, or by using the **Advanced Editor** dialog box.  
   
 ## Paths  
  Paths connect data flow components. In [!INCLUDE[ssIS](../../../includes/ssis-md.md)] Designer, you can view and modify the path properties, view the output metadata for the path start point, and attach data viewers to a path.  
@@ -210,8 +210,8 @@ manager: craigg
 -   [Connect Components in a Data Flow](connect-components-in-a-data-flow.md)  
   
 ## Related Content  
- Video, [Performance of Microsoft Connector for Oracle by Attunity (SQL Server Video)](http://go.microsoft.com/fwlink/?LinkID=210369), on technet.microsoft.com.  
+ Video, [Performance of Microsoft Connector for Oracle by Attunity (SQL Server Video)](https://go.microsoft.com/fwlink/?LinkID=210369), on technet.microsoft.com.  
   
- Curated Answer, [How to Create a Dynamic Connection String in SSIS](http://go.microsoft.com/fwlink/?LinkId=321994), on curatedviews.cloudapp.net.  
+ Curated Answer, [How to Create a Dynamic Connection String in SSIS](https://go.microsoft.com/fwlink/?LinkId=321994), on curatedviews.cloudapp.net.  
   
   

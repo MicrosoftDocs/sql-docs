@@ -63,6 +63,7 @@ ALTER AVAILABILITY GROUP group_name
   | FAILURE_CONDITION_LEVEL  = { 1 | 2 | 3 | 4 | 5 }   
   | HEALTH_CHECK_TIMEOUT = milliseconds  
   | DB_FAILOVER  = { ON | OFF }   
+  | DTC_SUPPORT  = { PER_DB | NONE }  
   | REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT = { integer }
   
 <server_instance> ::=   
@@ -87,7 +88,7 @@ ALTER AVAILABILITY GROUP group_name
      | PRIMARY_ROLE ( {   
             [ ALLOW_CONNECTIONS = { READ_WRITE | ALL } ]   
         [,] [ READ_ONLY_ROUTING_LIST = { ( '<server_instance>' [ ,...n ] ) | NONE } ]  
-        [,] [ READ_WRITE_ROUTING_URL = { ( '<server_instance>' ) ] 
+        [,] [ READ_WRITE_ROUTING_URL = { ( '<server_instance>' ) ] 
      } )  
      | SESSION_TIMEOUT = integer
   
@@ -217,6 +218,11 @@ ALTER AVAILABILITY GROUP group_name
  
  For more information regarding this setting, see [Database Level Health Detection Option](../../database-engine/availability-groups/windows/sql-server-always-on-database-health-detection-failover-option.md) 
 
+DTC_SUPPORT  **=** { PER_DB | NONE }  
+Specifies whether distributed transactions are enabled for this Availability Group. Distributed transactions are only supported for availability group databases beginning in [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], and cross-database transactions are only supported beginning in [!INCLUDE[ssSQL16](../../includes/sssql15-md.md)] SP2. `PER_DB` creates the availability group with support for these transactions and will automatically promote cross-database transactions involving database(s) in the Availability Group into distributed transactions. `NONE` prevents the automatic promotion of cross-database transactions to distributed transactions and does not register the database with a stable RMID in DTC. Distributed transactions are not prevented when the `NONE` setting is used, but database failover and automatic recovery may not succeed under some circumstances. For more information, see [Cross-Database Transactions and Distributed Transactions for Always On Availability Groups and Database Mirroring &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/transactions-always-on-availability-and-database-mirroring.md). 
+ 
+> [!NOTE]
+> Support for changing the DTC_SUPPORT setting of an Availability Group was introduced in [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] Service Pack 2. This option cannot be used with earlier versions. To change this setting in earlier versions of [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)], you must DROP and CREATE the availability group again.
  
  REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT   
  Introduced in SQL Server 2017. Used to set a minimum number of synchronous secondary replicas required to commit before the primary commits a transaction. Guarantees that SQL Server transactions will wait until the transaction logs are updated on the minimum number of secondary replicas. The default is 0 which gives the same behavior as SQL Server 2016. The minimum value is 0. The maximum value is the number of replicas minus 1. This option relates to replicas in synchronous commit mode. When replicas are in synchronous commit mode, writes on the primary replica wait until writes on the secondary synchronous replicas are committed to the replica database transaction log. If a SQL Server that hosts a secondary synchronous replica stops responding, the SQL Server that hosts the primary replica will mark that secondary replica as NOT SYNCHRONIZED and proceed. When the unresponsive database comes back online it will be in a "not synced" state and the replica will be marked as unhealthy until the primary can make it synchronous again. This setting guarantees that the primary replica will not proceed until the minimum number of replicas have committed each transaction. If the minimum number of replicas is not available then commits on the primary will fail. For cluster type `EXTERNAL` the setting is changed when the availability group is added to a cluster resource. See [High availability and data protection for availability group configurations](../../linux/sql-server-linux-availability-group-ha.md).
@@ -448,11 +454,11 @@ Initiates a manual failover of the availability group without data loss to the s
  ADD LISTENER **'**_dns\_name_**'(** \<add_listener_option> **)**  
  Defines a new availability group listener for this availability group. Supported only on the primary replica.  
   
-> [!IMPORTANT]  
+> [!IMPORTANT]
 >  Before you create your first listener, we strongly recommend that you read [Create or Configure an Availability Group Listener &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/create-or-configure-an-availability-group-listener-sql-server.md).  
->   
+> 
 >  After you create a listener for a given availability group, we strongly recommend that you do the following:  
->   
+> 
 >  -   Ask your network administrator to reserve the listener's IP address for its exclusive use.  
 > -   Give the listener's DNS host name to application developers to use in connection strings when requesting client connections to this availability group.  
   

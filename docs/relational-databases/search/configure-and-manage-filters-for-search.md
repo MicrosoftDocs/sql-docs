@@ -34,12 +34,16 @@ Binary documents can be stored in a single **varbinary(max)** or **image** colum
 
 ## Installed filters 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] installs its own XML and HTML filters. In addition, any filters for [!INCLUDE[msCoName](../../includes/msconame-md.md)] proprietary formats (.doc, .xdoc, .ppt, and so on) that are already installed on the operating system are also loaded by  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. To identify the filters that are currently loaded on an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], use the [sp_help_fulltext_system_components](../../relational-databases/system-stored-procedures/sp-help-fulltext-system-components-transact-sql.md) stored procedure, as follows:  
-  
+
 ```sql
 EXEC sp_help_fulltext_system_components 'filter';   
 ```  
+
+> [!NOTE]
+> Even with the latest version of the Office Filter Pack that provides .xlsx support, SQL Server does not support Strict Open XML Spreadsheets.  No error will be returned, SQL Server will simply fail to index the contents of any Strict Open XML Spreadsheets.
+
 ## Non-Microsoft filters
-Before you can use filters for non-[!INCLUDE[msCoName](../../includes/msconame-md.md)] formats, however, you must manually load them into the server instance. For information about installing additional filters, see [View or Change Registered Filters and Word Breakers](../../relational-databases/search/view-or-change-registered-filters-and-word-breakers.md).  
+Before you can use filters for non- [!INCLUDE[msCoName](../../includes/msconame-md.md)] formats, however, you must manually load them into the server instance. For information about installing additional filters, see [View or Change Registered Filters and Word Breakers](../../relational-databases/search/view-or-change-registered-filters-and-word-breakers.md).  
   
   
 ## See Also  

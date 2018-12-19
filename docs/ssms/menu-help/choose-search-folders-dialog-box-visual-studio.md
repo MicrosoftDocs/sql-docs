@@ -7,8 +7,6 @@ ms.prod_service: "sql-tools"
 ms.reviewer: ""
 ms.technology: ssms
 ms.topic: conceptual
-f1_keywords: 
-  - "vs.lookin"
 ms.assetid: 2eaba888-68b2-4bc1-8f62-e96e710c3db9
 author: "stevestein"
 ms.author: "sstein"
@@ -52,4 +50,3 @@ Lists folders added from the **Folders list**. These folders will be included in
   
 **Apply**  
 Save the set of search folders listed in **Selected folders** list as a named folder set. This folder set then can be chosen in the **Look in** field on all tabs of the **Find and Replace** window. Closes the Choose Search Folders dialog box.  
-  

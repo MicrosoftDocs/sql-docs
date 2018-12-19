@@ -28,7 +28,7 @@ manager: craigg
  **Summary**  
  **SQLSetConnectAttr** sets attributes that govern aspects of connections.  
   
-> [!NOTE]  
+> [!NOTE]
 >  For more information about what the Driver Manager maps this function to when an ODBC 3*.x* application is working with an ODBC 2*.x* driver, see [Mapping Replacement Functions for Backward Compatibility of Applications](../../../odbc/reference/develop-app/mapping-replacement-functions-for-backward-compatibility-of-applications.md).  
   
 ## Syntax  
@@ -36,10 +36,10 @@ manager: craigg
 ```  
   
 SQLRETURN SQLSetConnectAttr(  
-     SQLHDBC       ConnectionHandle,  
-     SQLINTEGER    Attribute,  
-     SQLPOINTER    ValuePtr,  
-     SQLINTEGER    StringLength);  
+     SQLHDBC       ConnectionHandle,  
+     SQLINTEGER    Attribute,  
+     SQLPOINTER    ValuePtr,  
+     SQLINTEGER    StringLength);  
 ```  
   
 ## Arguments  
@@ -113,9 +113,9 @@ SQLRETURN SQLSetConnectAttr(
   
  The currently defined attributes and the version of ODBC in which they were introduced are shown in the table later in this section; it is expected that more attributes will be defined to take advantage of different data sources. A range of attributes is reserved by ODBC; driver developers must reserve values for their own driver-specific use from Open Group.  
   
-> [!NOTE]  
+> [!NOTE]
 >  The ability to set statement attributes at the connection level by calling **SQLSetConnectAttr** has been deprecated in ODBC 3*.x*. ODBC 3*.x* applications should never set statement attributes at the connection level. ODBC 3*.x* statement attributes cannot be set at the connection level, with the exception of the SQL_ATTR_METADATA_ID and SQL_ATTR_ASYNC_ENABLE attributes, which are both connection attributes and statement attributes and can be set at either the connection level or the statement level.  
->   
+> 
 >  ODBC 3*.x* drivers need only support this functionality if they should work with ODBC 2*.x* applications that set ODBC 2*.x* statement options at the connection level. For more information, see [SQLSetConnectOption Mapping](../../../odbc/reference/appendixes/sqlsetconnectoption-mapping.md) in Appendix G: Driver Guidelines for Backward Compatibility.  
   
  An application can call **SQLSetConnectAttr** at any time between the time the connection is allocated and freed. All connection and statement attributes successfully set by the application for the connection persist until **SQLFreeHandle** is called on the connection. For example, if an application calls **SQLSetConnectAttr** before connecting to a data source, the attribute persists even if **SQLSetConnectAttr** fails in the driver when the application connects to the data source; if an application sets a driver-specific attribute, the attribute persists even if the application connects to a different driver on the connection.  
@@ -174,7 +174,7 @@ SQLRETURN SQLSetConnectAttr(
 |SQL_ATTR_AUTOCOMMIT (ODBC 1.0)|A SQLUINTEGER value that specifies whether to use autocommit or manual-commit mode:<br /><br /> SQL_AUTOCOMMIT_OFF = The driver uses manual-commit mode, and the application must explicitly commit or roll back transactions with **SQLEndTran**.<br /><br /> SQL_AUTOCOMMIT_ON = The driver uses autocommit mode. Each statement is committed immediately after it is executed. This is the default. Any open transactions on the connection are committed when SQL_ATTR_AUTOCOMMIT is set to SQL_AUTOCOMMIT_ON to change from manual-commit mode to autocommit mode.<br /><br /> For more information, see [Commit Mode](../../../odbc/reference/develop-app/commit-mode.md). **Important:**  Some data sources delete the access plans and close the cursors for all statements on a connection each time a statement is committed; autocommit mode can cause this to happen after each nonquery statement is executed or when the cursor is closed for a query. For more information, see the SQL_CURSOR_COMMIT_BEHAVIOR and SQL_CURSOR_ROLLBACK_BEHAVIOR information types in [SQLGetInfo](../../../odbc/reference/syntax/sqlgetinfo-function.md) and [Effect of Transactions on Cursors and Prepared Statements](../../../odbc/reference/develop-app/effect-of-transactions-on-cursors-and-prepared-statements.md). <br /><br /> When a batch is executed in autocommit mode, two things are possible. The entire batch can be treated as an autocommitable unit, or each statement in a batch is treated as an autocommitable unit. Certain data sources can support both these behaviors and may provide a way of choosing one or the other. It is driver-defined whether a batch is treated as an autocommitable unit or whether each individual statement within the batch is autocommitable.|  
 |SQL_ATTR_CONNECTION_DEAD<br /><br /> (ODBC 3.5)|A read-only SQLUINTEGER value that indicates the state of the connection. If SQL_CD_TRUE, the connection has been lost. If SQL_CD_FALSE, the connection is still active.|  
 |SQL_ATTR_CONNECTION_TIMEOUT (ODBC 3.0)|An SQLUINTEGER value corresponding to the number of seconds to wait for any request on the connection to complete before returning to the application. The driver should return SQLSTATE HYT00 (Timeout expired) anytime that it is possible to time out in a situation not associated with query execution or login.<br /><br /> If *ValuePtr* is equal to 0 (the default), there is no timeout.|  
-|SQL_ATTR_CURRENT_CATALOG (ODBC 2.0)|A character string containing the name of the catalog to be used by the data source. For example, in SQL Server, the catalog is a database, so the driver sends a **USE** *database* statement to the data source, where *database* is the database specified in \**ValuePtr*. For a single-tier driver, the catalog might be a directory, so the driver changes its current directory to the directory specified in **ValuePtr*.|  
+|SQL_ATTR_CURRENT_CATALOG (ODBC 2.0)|A character string containing the name of the catalog to be used by the data source. For example, in SQL Server, the catalog is a database, so the driver sends a **USE** _database_ statement to the data source, where *database* is the database specified in \**ValuePtr*. For a single-tier driver, the catalog might be a directory, so the driver changes its current directory to the directory specified in **ValuePtr*.|  
 |SQL_ATTR_DBC_INFO_TOKEN (ODBC 3.8|A SQLPOINTER value used to set back the connection info token into the DBC handle when [SQLRateConnection](../../../odbc/reference/syntax/sqlrateconnection-function.md)'s (\**pRating*) parameter is not equal to 100.<br /><br /> SQL_ATTR_DBC_INFO_TOKEN is set-only. It is not possible to use **SQLGetConnectAttr** or **SQLGetConnectOption** to retrieve this value. The Driver Manager's **SQLSetConnectAttr** will not accept SQL_ATTR_DBC_INFO_TOKEN, since an application should not set this attribute.<br /><br /> If a driver returns SQL_ERROR after setting SQL_ATTR_DBC_INFO_TOKEN, the connection just obtained from the pool will be freed. The Driver Manager will then try to obtain another connection from the pool. See [Developing Connection-Pool Awareness in an ODBC Driver](../../../odbc/reference/develop-driver/developing-connection-pool-awareness-in-an-odbc-driver.md) for more information.|  
 |SQL_ATTR_ENLIST_IN_DTC (ODBC 3.0)|A SQLPOINTER value that specifies whether to use the ODBC driver in distributed transactions coordinated by Microsoft Component Services.<br /><br /> Pass a DTC OLE transaction object that specifies the transaction to export to SQL Server, or SQL_DTC_DONE to end the connection's DTC association.<br /><br /> The client calls the Microsoft Distributed Transaction Coordinator (MS DTC) OLE ITransactionDispenser::BeginTransaction method to begin an MS DTC transaction and create an MS DTC transaction object that represents the transaction. The application then calls SQLSetConnectAttr with the SQL_ATTR_ENLIST_IN_DTC option to associate the transaction object with the ODBC connection. All related database activity will be performed under the protection of the MS DTC transaction. The application calls SQLSetConnectAttr with SQL_DTC_DONE to end the connection's DTC association. For more information, see the MS DTC documentation.|  
 |SQL_ATTR_LOGIN_TIMEOUT (ODBC 1.0)|An SQLUINTEGER value corresponding to the number of seconds to wait for a login request to complete before returning to the application. The default is driver-dependent. If *ValuePtr* is 0, the timeout is disabled and a connection attempt will wait indefinitely.<br /><br /> If the specified timeout exceeds the maximum login timeout in the data source, the driver substitutes that value and returns SQLSTATE 01S02 (Option value changed).|  

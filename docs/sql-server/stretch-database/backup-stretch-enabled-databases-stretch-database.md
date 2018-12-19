@@ -10,8 +10,8 @@ helpviewer_keywords:
   - "Stretch Database, backing up"
   - "backups (Stretch Database)"
 ms.assetid: 18f0dff0-d8ce-4bee-a935-76ed6dfb3208
-author: MikeRayMSFT
-ms.author: mikeray
+author: douglaslMS
+ms.author: douglasl
 manager: craigg
 ---
 # Backup Stretch-enabled databases (Stretch Database)

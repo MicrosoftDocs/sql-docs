@@ -1,5 +1,5 @@
 ---
-title: SQL Server machine learning and programming extensions documentation | Microsoft Docs
+title: R and Python machine learning and programming extensions documentation - SQL Server Machine Learning
 description: R and Python in SQL Server, with built-in data science modeling and machine learning algorithms for enterprise data analysis at scale.
 ms.prod: sql
 ms.technology: machine-learning
@@ -64,6 +64,6 @@ Learn how to use R and Python external libraries and languages on resident, rela
 | [RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) | R | Distributed and parallel processing for R tasks: data transformation, exploration, visualization, statistical and predictive analytics. |
 | [MicrosoftML](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/microsoftml-package) | R | Functions based on Microsoft's AI algorithms, adapted for R. |
 | [olapR](https://docs.microsoft.com/machine-learning-server/r-reference/olapr/olapr) | R | Imports data from OLAP cube.s |
-| [sqlRUtils]() | R | Helper functions for encapsulating R and T-SQL. |
+| [sqlRUtils](https://docs.microsoft.com/machine-learning-server/r-reference/sqlrutils/sqlrutils) | R | Helper functions for encapsulating R and T-SQL. |
 [revoscalepy](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/revoscalepy-package) | Python | Distributed and parallel processing for Python tasks: data transformation, exploration, visualization, statistical and predictive analytics.  | 
 | [microsoftml](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/microsoftml-package) | Python | Functions based on Microsoft's AI algorithms, adapted for Python.  |

@@ -65,7 +65,7 @@ Follow these steps to create a connection profile and connect to a SQL Server.
    
 1. Press **Ctrl**+**Shift**+**P** or **F1** to open the **Command Palette**. 
    
-1. Type **sql** to display the mssql commands, or type *sqlcon*, and then select **MS SQL: Connect** from the dropdown.
+1. Type *sql* to display the mssql commands, or type *sqlcon*, and then select **MS SQL: Connect** from the dropdown.
    
    ![mssql commands](./media/sql-server-linux-develop-use-vscode/vscode-commands.png)   
    
@@ -91,7 +91,7 @@ Follow these steps to create a connection profile and connect to a SQL Server.
       
    1. **Save Password**: Press **Enter** to select **Yes** and save the password. Select **No** to be prompted for the password each time the connection profile is used. 
       
-   1. **Profile Name** (optional): Type a name for the connection profile, such as **localhost profile**. 
+   1. **Profile Name** (optional): Type a name for the connection profile, such as *localhost profile*. 
    
    After you select **Enter**, VS Code creates the connection profile and connects to the SQL Server. 
    
@@ -104,7 +104,7 @@ Follow these steps to create a connection profile and connect to a SQL Server.
    
 ## Create a SQL database
 
-1. In the new SQL file that you started earlier, type **sql** to display a list of editable code snippets. 
+1. In the new SQL file that you started earlier, type *sql* to display a list of editable code snippets. 
 
   ![SQL snippets](./media/sql-server-linux-develop-use-vscode/vscode-sql-snippets.png)   
    
@@ -235,7 +235,7 @@ If you need to save and run SQL scripts later, for administration or a larger de
 
 ## Next steps
 
-If you're new to T-SQL, see [Tutorial: Writing Transact-SQL statements] and the [Transact-SQL Reference (Database Engine)].
+If you're new to T-SQL, see [Tutorial: Write Transact-SQL statements] and the [Transact-SQL Reference (Database Engine)].
 
 For more information on using or contributing to the mssql extension, see the [mssql extension project wiki].
 
@@ -247,7 +247,7 @@ For more information on using VS Code, see the [Visual Studio Code documentation
 [Manage connection profiles]:https://github.com/Microsoft/vscode-mssql/wiki/manage-connection-profiles
 [connection troubleshooting recommendations]:./sql-server-linux-troubleshooting-guide.md#connection
 [Customize shortcuts]:https://github.com/Microsoft/vscode-mssql/wiki/customize-shortcuts
-[Tutorial: Writing Transact-SQL statements]:https://docs.microsoft.com/sql/t-sql/tutorial-writing-transact-sql-statements
+[Tutorial: Write Transact-SQL statements]:https://docs.microsoft.com/sql/t-sql/tutorial-writing-transact-sql-statements
 [Transact-SQL Reference (Database Engine)]:https://docs.microsoft.com/sql/t-sql/language-reference
 [Visual Studio Code documentation]:https://code.visualstudio.com/docs
 [Windows 10 Universal C Runtime]:https://github.com/Microsoft/vscode-mssql/wiki/windows10-universal-c-runtime-requirement

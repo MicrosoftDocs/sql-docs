@@ -24,20 +24,6 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
   This topic describes how to create a schema in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../../includes/tsql-md.md)].  
   
- **In This Topic**  
-  
--   **Before you begin:**  
-  
-     [Limitations and Restrictions](#Restrictions)  
-  
-     [Security](#Security)  
-  
--   **To create a schema, using:**  
-  
-     [SQL Server Management Studio](#SSMSProcedure)  
-  
-     [Transact-SQL](#TsqlProcedure)  
-  
 ##  <a name="BeforeYouBegin"></a> Before You Begin  
   
 ###  <a name="Restrictions"></a> Limitations and Restrictions  
@@ -76,6 +62,9 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 -   The **Permissions** page lists all possible securables and the permissions on those securables that can be granted to the login.  
   
 -   The **Extended properties** page allows you to add custom properties to database users.  
+
+> [!NOTE]
+> A dialog box will not appear if you are creating a Schema using SSMS against an **Azure SQL Database** or an **Azure SQL Data Warehouse**. You will need to run the Create Schema Template T-SQL Statement that is generated.
   
 ##  <a name="TsqlProcedure"></a> Using Transact-SQL  
   

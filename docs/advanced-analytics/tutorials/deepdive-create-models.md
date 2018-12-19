@@ -45,7 +45,7 @@ Therefore, you can run standard R commands against the model just as if it had b
 
 **Results**
 
-```
+```R
 Linear Regression Results for: balance ~ gender + creditLineData: sqlFraudDS (RxSqlServerData Data Source)
 Dependent variable(s): balance
 Total independent variables: 4 (Including number dropped: 1)
@@ -91,7 +91,7 @@ Keep the compute context as is. You'll also continue to use the same data source
   
 **Partial results**
 
-```
+```R
 Logistic Regression Results for: fraudRisk ~ state + gender + cardholder + balance + numTrans + numIntlTrans + creditLine
 Data: sqlFraudDS (RxSqlServerData Data Source)
 Dependent variable(s): fraudRisk

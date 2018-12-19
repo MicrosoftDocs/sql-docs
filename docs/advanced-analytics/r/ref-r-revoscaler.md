@@ -50,7 +50,7 @@ SQL Server and R use different data types in some cases. For a list of mappings 
 
 | Function| Description|
 | ------- | ---------- |
-| [RxInSqlServerData](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxinsqlserverdata) |  Create a SQL Server compute context object to push computations to a remote instance. Several **RevoScaleR** functions take compute context as an argument. |
+| [RxInSqlServer](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxinsqlserver) |  Create a SQL Server compute context object to push computations to a remote instance. Several **RevoScaleR** functions take compute context as an argument. |
 [rxGetComputeContext / rxSetComputeContext](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxsetcomputecontext) | Get or set the active compute context. |
 | [RxSqlServerData](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxsqlserverdata) | Create a data object based on a SQL Server query or table. |
 | [RxOdbcData](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxodbcdata) | Create a data source based on an ODBC connection. |

@@ -57,7 +57,7 @@ For example, the following results are the times from a single test. The main ti
 
 **Sample timings**
 
-```
+```text
 Running IntCol Test. Using airlineWithIntCol table.
 run 1 took 3.66 seconds
 run 2 took 3.44 seconds

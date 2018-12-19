@@ -82,7 +82,7 @@ sp_help_jobschedule { [ @job_id = ] job_id | [ @job_name = ] 'job_name' }
 |**schedule_uid**|**uniqueidentifier**|Identifier for the schedule.|  
 |**job_count**|**int**|Count of jobs returned.|  
   
-> **NOTE:**  **sp_help_jobschedule** returns values from the **dbo.sysjobschedules** and **dbo.sysschedules** system tables in **msdb**. **sysjobschedules** updates every 20 minutes. This might affect the values that are returned by this stored procedure.  
+> **NOTE:  sp_help_jobschedule** returns values from the **dbo.sysjobschedules** and **dbo.sysschedules** system tables in **msdb**. **sysjobschedules** updates every 20 minutes. This might affect the values that are returned by this stored procedure.  
   
 ## Remarks  
  The parameters of **sp_help_jobschedule** can be used only in certain combinations. If *schedule_id* is specified, neither *job_id* nor *job_name* can be specified. Otherwise, the *job_id* or *job_name* parameters can be used with *schedule_name*.  

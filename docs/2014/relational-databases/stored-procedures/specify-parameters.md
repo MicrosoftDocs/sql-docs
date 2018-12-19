@@ -57,7 +57,7 @@ GO
  Explicitly naming the parameters and assigning the appropriate values to each parameter in a procedure call allows the parameters to be supplied in any order. For example, if the procedure **my_proc** expects three parameters named **\@first**, **\@second**, and **\@third**, the values passed to the procedure can be assigned to the parameter names, such as: `EXECUTE my_proc @second = 2, @first = 1, @third = 3;`  
   
 > [!NOTE]
->  If one parameter value is supplied in the form **/@parameter =**_value_, all subsequent parameters must be supplied in this manner. If the parameter values are not passed in the form **\@parameter =**_value_, the values must be supplied in the identical order (left to right) as the parameters are listed in the CREATE PROCEDURE statement.  
+>  If one parameter value is supplied in the form **\@parameter =**_value_, all subsequent parameters must be supplied in this manner. If the parameter values are not passed in the form **\@parameter =**_value_, the values must be supplied in the identical order (left to right) as the parameters are listed in the CREATE PROCEDURE statement.  
 > 
 > [!WARNING]
 >  Any parameter passed in the form **\@parameter =**_value_ with the parameter misspelled, will cause [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to generate an error and prevent procedure execution.  
@@ -161,7 +161,7 @@ GO
  Execute `usp_GetList` to return a list of [!INCLUDE[ssSampleDBCoShort](../../includes/sssampledbcoshort-md.md)] products (Bikes) that cost less than $700. The OUTPUT parameters **\@cost** and **\@compareprices** are used with control-of-flow language to return a message in the **Messages** window.  
   
 > [!NOTE]  
->  The OUTPUT variable must be defined during the procedure creation and also during the use of the variable. The parameter name and variable name do not have to match. However, the data type and parameter positioning must match (unless **\@listprice=** *variable* is used).  
+>  The OUTPUT variable must be defined during the procedure creation and also during the use of the variable. The parameter name and variable name do not have to match. However, the data type and parameter positioning must match (unless **\@listprice=** _variable_ is used).  
   
 ```  
 DECLARE @ComparePrice money, @Cost money ;  

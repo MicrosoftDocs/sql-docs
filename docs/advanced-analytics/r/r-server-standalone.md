@@ -31,7 +31,7 @@ SQL Server 2016 is R only. SQL Server 2017 supports R and Python. The following 
 | R tools | R console windows and command prompts are standard tools in an R distribution. Find them at \Program files\Microsoft SQL Server\140\R_SERVER\bin\x64. |
 | R Samples and scripts |  Open-source R and RevoScaleR packages include built-in data sets so that you can create and run script using pre-installed data. Look for them at \Program files\Microsoft SQL Server\140\R_SERVER\library\datasets and \library\RevoScaleR. |
 | Python packages | [**revoscalepy**](../python/ref-py-revoscalepy.md) is the primary library for scalable Python with functions for data manipulation, transformation, visualization, and analysis. <br/>[**microsoftml**](../python/ref-py-microsoftml.md) adds machine learning algorithms to create custom models for text analysis, image analysis, and sentiment analysis.  |
-| Python tools | The built-in Python command line tool is useful for ad hoc testing and tasks. Find the tool at \Program files\Microsoft SQL Server\140\PYTHON_SERVER\python.exe. |
+| Python tools | The built-in Python command-line tool is useful for ad hoc testing and tasks. Find the tool at \Program files\Microsoft SQL Server\140\PYTHON_SERVER\python.exe. |
 | Anaconda | Anaconda is an open-source distribution of Python and essential packages. |
 | Python samples and scripts | As with R, Python includes built-in data sets  and scripts. Find the revoscalepy data at \Program files\Microsoft SQL Server\140\PYTHON_SERVER\lib\site-packages\revoscalepy\data\sample-data. |
 | Pre-trained models in R and Python | Pre-trained models are created for specific use cases and maintained by the data science engineering team at Microsoft. You can use the pre-trained models as-is to score positive-negative sentiment in text, or detect features in images, using new data inputs that you provide. Pre-trained models are supported and usable on a standalone server, but you cannot install them through SQL Server Setup. For more information, see [Install pretrained machine learning models on SQL Server](../install/sql-pretrained-models-install.md). |
@@ -80,13 +80,13 @@ Standalone servers can use the [operationalization](https://docs.microsoft.com//
 
 ## How to apply cumulative updates
 
-If you installed and then operationalized a [standalone R_SERVER or PYTHON_SERVER](../install/sql-machine-learning-standalone-windows-install.md) using SQL Server Setup, you can apply SQL Server cumulative updates to pick up specific fixes and enhancments.
+If you installed and then operationalized a [standalone R_SERVER or PYTHON_SERVER](../install/sql-machine-learning-standalone-windows-install.md) using SQL Server Setup, you can apply SQL Server cumulative updates to pick up specific fixes and enhancements.
 
-The first cumulative update affecting standalone servers starts with [SQL Server 2017 Cumulative Update 13](https://support.microsoft.com//help/4466404/cumulative-update-13-for-sql-server-2017). Servers behind a firewall with no internet connection can be updated using a [CAB file download](../install/sql-ml-cab-downloads.md).
+The first cumulative update affecting a standalone server starts with [SQL Server 2017 Cumulative Update 13](https://support.microsoft.com//help/4466404/cumulative-update-13-for-sql-server-2017). Servers behind a firewall with no internet connection can be updated using a [CAB file download](../install/sql-ml-cab-downloads.md).
 
 1. Determine whether a standalone server is installed by checking the [installation path](../install/sql-machine-learning-standalone-windows-install.md#install-path) for program files.
 
-2. Backup the **AppSettings.json** file. If you did not operationalize your server to run as web or compute nodes, you can skip this step.
+2. Back up the **AppSettings.json** file. If you did not operationalize your server to run as web or compute nodes, you can skip this step.
 
 3. Stop any R/Python processes.
  

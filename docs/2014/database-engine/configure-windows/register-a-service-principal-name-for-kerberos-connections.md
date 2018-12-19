@@ -65,7 +65,7 @@ SELECT auth_scheme FROM sys.dm_exec_connections WHERE session_id = @@spid ;
   
  **Named instance**  
   
--   *MSSQLSvc/FQDN*:[*port***|***instancename*], where:  
+-   *MSSQLSvc/FQDN*:[*port**_|_**instancename*], where:  
   
     -   *MSSQLSvc* is the service that is being registered.  
   
@@ -77,7 +77,7 @@ SELECT auth_scheme FROM sys.dm_exec_connections WHERE session_id = @@spid ;
   
  **Default instance**  
   
--   *MSSQLSvc/FQDN*:*port***|***MSSQLSvc/FQDN*, where:  
+-   *MSSQLSvc/FQDN*:*port**_|_**MSSQLSvc/FQDN*, where:  
   
     -   *MSSQLSvc* is the service that is being registered.  
   

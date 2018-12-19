@@ -72,7 +72,7 @@ manager: craigg
   
 7.  Click **Close**.  
   
-8.  On the **File** menu, select **Save***table_name*.  
+8.  On the **File** menu, select **Save**_table_name_.  
   
 #### To modify the properties of an index in Object Explorer  
   

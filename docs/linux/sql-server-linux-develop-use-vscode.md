@@ -241,7 +241,7 @@ For more information on using or contributing to the mssql extension, see the [m
 
 For more information on using VS Code, see the [Visual Studio Code documentation](https://code.visualstudio.com/docs).
 
-[**mssql** extension for VS Code]:https://aka.ms/mssql-marketplace
+[mssql extension for VS Code]:https://aka.ms/mssql-marketplace
 [Download and install VS Code]:https://code.visualstudio.com/Download
 [.Net Core instructions]:https://www.microsoft.com/net/core
 [Manage connection profiles]:https://github.com/Microsoft/vscode-mssql/wiki/manage-connection-profiles

@@ -29,10 +29,10 @@ This article describes limitations and known issues for the [!INCLUDE[SQL Server
 - Install on Linux for [Red Hat Enterprise Server](../linux/quickstart-install-connect-red-hat.md), [SUSE Linux Enterprise Server](../linux/quickstart-install-connect-suse.md), and [Ubuntu](../linux/quickstart-install-connect-ubuntu.md).
 - [Run on SQL Server 2019 on Docker](../linux/quickstart-install-connect-docker.md).
 
-## CTP 2.2 (December 2018)
-[!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] CTP 2.2 is the latest public release of [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)].
+## CTP 2.3 (January 2018)
+[!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] CTP 2.3 is the latest public release of [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)].
 
-[!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] CTP 2.2 is available only as Evaluation Edition. No other editions are available. Support for CTP 2.2 is described in `license_Eval.rtf` with your installation media.
+[!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] CTP 2.3 is available only as Evaluation Edition. No other editions are available. Support for CTP 2.3 is described in `license_Eval.rtf` with your installation media.
 
 Limited support may be found at one of the following locations:
 
@@ -112,41 +112,6 @@ Limited support may be found at one of the following locations:
 - **Workaround**: To enable rich computations, run `DBCC traceon(127,-1)`. For details, see  [Enable rich computations](../relational-databases/security/encryption/configure-always-encrypted-enclaves.md#configure-a-secure-enclave).
 
 - **Applies to**: [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] CTP 2.2, CTP 2.1, 2.0.
-
-## CTP 2.1 (October 2018)
-
-[!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] CTP 2.1 is the previous public release of [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)].
-
-### UDF Inlining
-
-- **Issue and customer impact**: There are corner case scenarios where nested calls to user defined functions inline do not correctly validate security.
-  
-- **Workaround**: Disable UDF inlining for such UDFs using the `INLINE = OFF` setting.
-
-- **Applies to**: SQL Server 2019 CTP 2.1
-
-### SQL Server Integration Service - Fuzzy Lookup Transformation
-
-- **Issue / customer impact**: The Fuzzy Lookup Transformation would fail with following error if it's set to reuse index:
-
-  `The specified delimiters do not match the delimiters used to build the pre-existing match index "...". This error occurs when the delimiters used to tokenize fields do not match. This can have unknown effects on the matching behavior or results.`
-
-- **Workaround**: N/A
-
-- **More information**: N/A  
-
-- **Applies To**: [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] CTP2.1
-
-### Lightweight query profiling infrastructure
-
-- **Issue and customer impact**: Executing the command `ALTER DATABASE SCOPED CONFIGURATION SET LIGHTWEIGHT_QUERY_PROFILING = ON` returns a syntax error. Any scenarios that depend on executing this command will fail.
-
-  > [!NOTE]
-  > Currently, the lightweight query profiling infrastructure (LWP) cannot be controlled at the individual database level, and remains enabled for all databases by default. For more information on LWP, see [What's New in SQL Server 2019](../sql-server/what-s-new-in-sql-server-ver15.md).
-
-- **Workaround**: No workaround for [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] CTPs.
-
-- **Applies to**: [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] CTP 2.1 and CTP 2.0.
 
 [!INCLUDE[get-help-options-msft-only](../includes/paragraph-content/get-help-options.md)]
 

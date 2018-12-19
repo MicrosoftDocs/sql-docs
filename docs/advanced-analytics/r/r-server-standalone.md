@@ -4,7 +4,7 @@ description: Overview introduction to standalone R Server and Machine Learning S
 ms.prod: sql
 ms.technology: machine-learning
 
-ms.date: 10/01/2018  
+ms.date: 12/18/2018  
 ms.topic: overview
 author: HeidiSteen
 ms.author: heidist
@@ -75,6 +75,32 @@ Choose the best language for the task. R is best for statistical computations th
 ### Step 4: Operationalize your solution
 
 Standalone servers can use the [operationalization](https://docs.microsoft.com//machine-learning-server/what-is-operationalization) functionality of the non-SQL-branded [Microsoft Machine Learning Server](https://docs.microsoft.com/machine-learning-server/what-is-machine-learning-server). You can configure a standalone server for operationalization, which gives you these benefits: deploy and host your code as web services, run diagnostics, test web service capacity.
+
+<a name="apply-cu-standalone"></a>
+
+## How to apply cumulative updates
+
+If you installed and then operationalized a [standalone R_SERVER or PYTHON_SERVER](../install/sql-machine-learning-standalone-windows-install.md) using SQL Server Setup, you can apply SQL Server cumulative updates to pick up specific fixes and enhancments.
+
+The first cumulative update affecting standalone servers starts with [SQL Server 2017 Cumulative Update 13](https://support.microsoft.com//help/4466404/cumulative-update-13-for-sql-server-2017). Servers behind a firewall with no internet connection can be updated using a [CAB file download](../install/sql-ml-cab-downloads.md).
+
+1. Determine whether a standalone server is installed by checking the [installation path](../install/sql-machine-learning-standalone-windows-install.md#install-path) for program files.
+
+2. Backup the **AppSettings.json** file. If you did not operationalize your server to run as web or compute nodes, you can skip this step.
+
+3. Stop any R/Python processes.
+ 
+4. Apply CU13 by executing a CAB file on an offline server, or using the links on the [Cumulative Update 13](https://support.microsoft.com/help/4466404/cumulative-update-13-for-sql-server-2017) page a server having an internet connection.
+ 
+5. Check the **AppSettings.json** file under "C:\Program Files\Microsoft SQL Server\140\R_SERVER\o16n\Microsoft.RServer.ComputeNode" to verify the addition of a **ScorerParameters** section.
+
+  ```json
+  "ScorerParameters": {
+  "MMLNativePath": "C:\\Program Files\\Microsoft SQL Server\\140\\R_SERVER\\library\\MicrosoftML\\mxLibs\\x64\\",
+  "MMLResourcePath": "C:\\Program Files\\Microsoft SQL Server\\140\\R_SERVER\\library\\MicrosoftML\\mxLibs\\x64\\"
+  ```
+
+6. Resume server operations. Recall that R_SERVER and PYTHON_SERVER run as background processes when an R or Python session is started. You can run any R or Python code to verify the server is operational.
 
 ## See also
 

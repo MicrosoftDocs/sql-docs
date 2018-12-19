@@ -36,9 +36,9 @@ Release  |Component | Download link  | Issues addressed |
 ---------|----------|----------------|------------------|
 **[SQL Server 2017 CU13](https://support.microsoft.com/help/4466404)** |  |  |  |
 | | Microsoft R Open     | [SRO_3.3.3.300_1033.cab](https://go.microsoft.com/fwlink/?LinkId=863894)| No change from previous versions. |
-| | R Server      |[SRS_9.2.0.1300_1033.cab](https://go.microsoft.com/fwlink/?LinkId=2038263&clcid=1033)| Contains a fix for upgrading an [operationalized standalone R Server](https://docs.microsoft.com/machine-learning-server/what-is-operationalization), as installed through SQL Server Setup. |
+| | R Server      |[SRS_9.2.0.1300_1033.cab](https://go.microsoft.com/fwlink/?LinkId=2038263&clcid=1033)| Contains a fix for upgrading an [operationalized standalone R Server](https://docs.microsoft.com/machine-learning-server/what-is-operationalization), as installed through SQL Server Setup. Use the CU13 CABs and follow [these instructions](../r/r-server-standalone.md) to upgrade a standalone server. |
 | | Microsoft Python Open     | [SPO_9.2.0.24_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851502)| No change from previous versions. |
-| | Python Server    |[SPS_9.2.0.1300_1033.cab](https://go.microsoft.com/fwlink/?LinkId=2038197&clcid=1033)| Contains a fix for upgrading an [operationalized standalone Python Server](https://docs.microsoft.com/machine-learning-server/what-is-operationalization), as installed through SQL Server Setup. |
+| | Python Server    |[SPS_9.2.0.1300_1033.cab](https://go.microsoft.com/fwlink/?LinkId=2038197&clcid=1033)| Contains a fix for upgrading an [operationalized standalone Python Server](https://docs.microsoft.com/machine-learning-server/what-is-operationalization), as installed through SQL Server Setup. Use the CU13 CABs and follow [these instructions](../r/r-server-standalone.md) to upgrade a standalone server.|
 **[SQL Server 2017 CU10](https://support.microsoft.com/help/4342123)-[CU11](https://support.microsoft.com/help/4462262)-[CU12](https://support.microsoft.com/help/4464082)** |  |  |  |
 | | Microsoft R Open     | [SRO_3.3.3.300_1033.cab](https://go.microsoft.com/fwlink/?LinkId=863894)| No change from previous versions. |
 | | R Server      |[SRS_9.2.0.1000_1033.cab](https://go.microsoft.com/fwlink/?LinkId=2006287&clcid=1033)| Minor fixes.|

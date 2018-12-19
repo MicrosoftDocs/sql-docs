@@ -51,6 +51,8 @@
   items:
   - name: R
     items:
+    - name: Verify R exists in SQL Server
+      href: tutorials/rtsql-verify-r-exists.md
     - name: Hello World in R and SQL
       href: tutorials/rtsql-using-r-code-in-transact-sql-quickstart.md
     - name: Handle inputs and outputs

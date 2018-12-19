@@ -60,6 +60,60 @@ If you get any errors from this query, rule out any installation issues. Post-in
 Depending on your environment, you might need to enable the R worker accounts to connect to SQL Server, install additional network libraries, enable remote code execution, or restart the instance after everything is configured. For more information, see
 [R Services Installation and Upgrade FAQ](../r/upgrade-and-installation-faq-sql-server-r-services.md)
 
+## Check R version
+
+If you would like to see which version of R is installed in your SQL Server instance, do the following:
+
+1. Run the script below on your SQL database.
+
+    ```SQL
+    EXECUTE sp_execute_external_script
+    @language =N'R',
+    @script=N'print(version)';
+    GO
+    ```
+
+2. The R `print` function returns the version to the **Messages** window. In the example output below, you can see that SQL Server in this case have R version 3.3.3 installed.
+
+    **Results**
+
+    ```text
+    platform       x86_64-w64-mingw32          
+    arch           x86_64                      
+    os             mingw32                     
+    system         x86_64, mingw32             
+    status                                     
+    major          3                           
+    minor          3.3                         
+    year           2017                        
+    month          03                          
+    day            06                          
+    svn rev        72310                       
+    language       R                           
+    version.string R version 3.3.3 (2017-03-06)
+    nickname       Another Canoe               
+    ```
+
+## List R packages
+
+Microsoft provides a number of R packages pre-installed with Machine Learning Services in your SQL Server instance. To see a list of which R packages are installed, including version, dependencies, license, and library path information, follow the steps below.
+
+1. Run the script below on your SQL Server instance.
+
+    ```SQL
+    EXECUTE sp_execute_external_script @language = N'R'
+    , @script = N'
+    OutputDataSet <- data.frame(installed.packages()[,c("Package", "Version", "Depends", "License", "LibPath")]);'
+    WITH result sets((Package NVARCHAR(255), Version NVARCHAR(100), Depends NVARCHAR(4000)
+        , License NVARCHAR(1000), LibPath NVARCHAR(2000)));
+    ```
+
+2. The output is from `installed.packages()` in R and returned as a result set.
+
+    **Results**
+
+    ![Installed packages in R](./media/rsql-installed-packages.png)
+
 ## Next steps
 
 Now that you have confirmed your instance is ready to work with R, take a closer look at a basic R interaction.

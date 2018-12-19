@@ -11,8 +11,8 @@ helpviewer_keywords:
   - "limitations (Stretch Database)"
   - "blocking issues (Stretch Database)"
 ms.assetid: 2b1fbec1-7859-44fc-8417-724fc57a59c0
-author: MikeRayMSFT
-ms.author: mikeray
+author: douglaslMS
+ms.author: douglasl
 manager: craigg
 ---
 # Limitations for Stretch Database

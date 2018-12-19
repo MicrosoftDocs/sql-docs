@@ -4,7 +4,7 @@ description: Introduction to the Python tutorials for SQL Server in-database ana
 ms.prod: sql
 ms.technology: machine-learning
 
-ms.date: 04/15/2018  
+ms.date: 12/18/2018  
 ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
@@ -13,44 +13,36 @@ manager: cgronlun
 # SQL Server Python tutorials
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-This article provides a list of tutorials and samples that demonstrate the use of Python with SQL Server 2017. Through these samples and demos, you will learn:
+This article describes the Python tutorials for in-database analytics on [SQL Server 2017 Machine Learning Services](../install/sql-machine-learning-services-windows-install.md). 
 
-+ How to run Python from T-SQL
-+ What are remote and local compute contexts, and how you can execute Python code using the SQL Server computer
-+ How to wrap Python code in a stored procedure
-+ Optimizing Python code for a SQL production environment
-+ Real-world scenarios for embedding machine learning in applications
++ Learn how to wrap and run Python code in stored procedures.
++ Serialize and save Python-based models to SQL Server databases.
++ Learn about remote and local compute contexts, and when to use them.
++ Explore the Microsoft Python modules for data science and machine learning tasks.
 
-## <a name="bkmk_pythontutorials"></a>Python tutorials
+<a name="bkmk_pythontutorials"></a>
 
-+ [Running Python in T-SQL](run-python-using-t-sql.md)
+## Python quickstarts and tutorials
 
-   Learn the basics of how to call Python in T-SQL, using the extensibility mechanism pioneered in SQL Server 2016.
+| Link | Description |
+|------|-------------|
+| [Quickstart: Running Python in T-SQL](run-python-using-t-sql.md) | Learn the basics of how to call Python in T-SQL. |
+| [Tutorial: Train and score your first model](train-score-using-python-in-tsql.md) | Explains the mechanics of embedding Python code in a stored procedure, providing inputs, and stored procedure execution. |
+| [Tutorial: Create a model using revoscalepy](use-python-revoscalepy-to-create-model.md) | Demonstrates how to run code from a remote Python terminal, using SQL Server compute context. You should be somewhat familiar with Python tools and environments. Sample code is provided that creates a model using **rxLinMod**, from the new **revoscalepy** library. |
+| [Tutorial: Learn in-Database Python analytics for SQL developers](sqldev-in-database-python-for-sql-developers.md) | This end-to-end walkthrough demonstrates the process of building a complete Python solution using T-SQL stored procedures. All Python code is included.|
 
-+ [Create a machine learning model in Python using revoscalepy](use-python-revoscalepy-to-create-model.md)
+<a name ="bkmk_samples"></a>
 
-   This lesson demonstrates how you can run code from a remote Python terminal, using SQL Server compute context. You should be somewhat familiar with Python tools and environments. Sample code is provided that creates a model using **rxLinMod**, from the new **revoscalepy** library. 
-
-+ [In-Database Python analytics for SQL developers](sqldev-in-database-python-for-sql-developers.md)
-
-    This end-to-end walkthrough demonstrates the process of building a complete Python solution using T-SQL stored procedures. All Python code is included.
-
-
-## Python samples
+## Code samples
 
 These samples and demos provided by the SQL Server development team highlight ways that you can use embedded analytics in real-world applications.
 
-+ [Build a predictive model using Python and SQL Server](https://microsoft.github.io/sql-ml-tutorials/python/rentalprediction/)
-
-  Learn how a ski rental business might use machine learning to predict future rentals, which helps the business plan and staff to meet future demand.
-
-  > [!TIP]
-  > Now includes native scoring from Python models!
-
-+ [Perform customer clustering using Python and SQL Server](https://microsoft.github.io/sql-ml-tutorials/python/customerclustering/)
-
-    Learn how to use the Kmeans algorithm to perform unsupervised clustering of customers.
+| Link | Description |
+|------|-------------|
+| [Build a predictive model using Python and SQL Server](https://microsoft.github.io/sql-ml-tutorials/python/rentalprediction/) | Learn how a ski rental business might use machine learning to predict future rentals, which helps the business plan and staff to meet future demand. |
+| [Perform customer clustering using Python and SQL Server](https://microsoft.github.io/sql-ml-tutorials/python/customerclustering/) | Learn how to use the Kmeans algorithm to perform unsupervised clustering of customers. |
 
 ## See also
 
-[R tutorials for SQL Server](sql-server-r-tutorials.md)
++ [Python extension to SQL Server](../concepts/extension-python.md)
++ [SQL Server Machine Learning Services tutorials](machine-learning-services-tutorials.md)

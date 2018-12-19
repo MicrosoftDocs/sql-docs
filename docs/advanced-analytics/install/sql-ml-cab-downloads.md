@@ -4,7 +4,7 @@ description: R and Python CAB and package downloads for SQL Server 2017 Machine 
 ms.prod: sql
 ms.technology: machine-learning
   
-ms.date: 12/17/2018
+ms.date: 12/18/2018
 ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
@@ -15,7 +15,9 @@ manager: cgronlun
 
 SQL Server instances that are configured for in-database analytics include R and Python features. These features ship in CAB files, installed and serviced through SQL Server Setup. On internet-connected devices, CAB updates are typically applied through Windows Update. On disconnected servers, CAB files must be downloaded and applied manually. 
 
-This article provides download links to CAB files for each cumulative update. Links are provided for both SQL Server 2017 Machine Learning Services (R and Python), as well as SQL Server 2016 R Services. For more information about offline installs, see [Install SQL Server machine learning components without internet access](sql-ml-component-install-without-internet-access.md#apply-cu).
+This article provides download links to CAB files for each cumulative update. Links are provided for both SQL Server 2017 Machine Learning Services (R and Python), as well as SQL Server 2016 R Services. CAB files provide updates for standalone R_SERVER and PYTHON_SERVER starting in SQL Server 2017 CU13.
+
+For more information about offline installs, see [Install SQL Server machine learning components without internet access](sql-ml-component-install-without-internet-access.md#apply-cu).
 
 ## Prerequisites
 
@@ -32,6 +34,11 @@ CAB files are listed in reverse chronological order. When you download the CAB f
 
 Release  |Component | Download link  | Issues addressed | 
 ---------|----------|----------------|------------------|
+**[SQL Server 2017 CU13](https://support.microsoft.com/help/4466404)** |  |  |  |
+| | Microsoft R Open     | [SRO_3.3.3.300_1033.cab](https://go.microsoft.com/fwlink/?LinkId=863894)| No change from previous versions. |
+| | R Server      |[SRS_9.2.0.1300_1033.cab](https://go.microsoft.com/fwlink/?LinkId=2038263&clcid=1033)| Contains a fix for upgrading an [operationalized standalone R Server](https://docs.microsoft.com/machine-learning-server/what-is-operationalization), as installed through SQL Server Setup. |
+| | Microsoft Python Open     | [SPO_9.2.0.24_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851502)| No change from previous versions. |
+| | Python Server    |[SPS_9.2.0.1300_1033.cab](https://go.microsoft.com/fwlink/?LinkId=2038197&clcid=1033)| Contains a fix for upgrading an [operationalized standalone Python Server](https://docs.microsoft.com/machine-learning-server/what-is-operationalization), as installed through SQL Server Setup. |
 **[SQL Server 2017 CU10](https://support.microsoft.com/help/4342123)-[CU11](https://support.microsoft.com/help/4462262)-[CU12](https://support.microsoft.com/help/4464082)** |  |  |  |
 | | Microsoft R Open     | [SRO_3.3.3.300_1033.cab](https://go.microsoft.com/fwlink/?LinkId=863894)| No change from previous versions. |
 | | R Server      |[SRS_9.2.0.1000_1033.cab](https://go.microsoft.com/fwlink/?LinkId=2006287&clcid=1033)| Minor fixes.|

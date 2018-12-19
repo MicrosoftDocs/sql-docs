@@ -63,8 +63,8 @@
       href: tutorials/rtsql-using-r-functions-with-sql-server-data.md
     - name: Create a predictive model
       href: tutorials/rtsql-create-a-predictive-model-r.md
-    - name: Predict and plot from model
-      href: tutorials/rtsql-predict-and-plot-from-model.md
+    - name: Predict from model
+      href: tutorials/rtsql-predict-from-model.md
   - name: Python
     items:
     - name: Run Python using T-SQL

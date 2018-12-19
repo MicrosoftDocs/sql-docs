@@ -1,5 +1,5 @@
 ---
-title: Create data features using T-SQL functions (Python in SQL Server Machine Learning)   | Microsoft Docs
+title: Create data features using T-SQL functions and Python - SQL Server Machine Learning
 description: Tutorial showing how to add calculations to stored procedures for use in Python machine learning models.
 ms.prod: sql
 ms.technology: machine-learning

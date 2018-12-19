@@ -58,14 +58,14 @@ Remember, everything inside the `@script` argument must be valid R code.
 
 The following exercise runs another simple R scripts.
 
-    ```sql
-    EXEC sp_execute_external_script
-      @language =N'R',
-      @script=N'OutputDataSet<-InputDataSet',
-      @input_data_1 =N'SELECT 1 AS hello'
-      WITH RESULT SETS (([Hello World] int));
-    GO
-    ```
+```sql
+EXEC sp_execute_external_script
+  @language =N'R',
+  @script=N'OutputDataSet<-InputDataSet',
+  @input_data_1 =N'SELECT 1 AS hello'
+  WITH RESULT SETS (([Hello World] int));
+GO
+```
 
 Inputs to this stored procedure include:
 

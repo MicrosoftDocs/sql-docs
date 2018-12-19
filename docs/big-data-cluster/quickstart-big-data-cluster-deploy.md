@@ -142,7 +142,7 @@ Open a new command window to use **kubectl** during the deployment process.
 > [!TIP]
 > For more details about how to monitor and troubleshoot a deployment, see the [deployment troubleshooting](deployment-guidance.md#troubleshoot) section of the deployment guidance article.
 
-## Use the Cluster Administration Portal
+### Use the Cluster Administration Portal
 
 Once the Controller pod is running, you can also use the Cluster Administration Portal to monitor the deployment. You can access the portal using the external IP address and port number for the `service-proxy-lb` (for example: **https://\<ip-address\>:30777/portal**). The credentials used to log into the portal match the values for **Controller user** and **Password** that you specified in the deployment script.
 

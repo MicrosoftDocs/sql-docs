@@ -41,12 +41,12 @@ sp_help_jobschedule { [ @job_id = ] job_id | [ @job_name = ] 'job_name' }
  [ **@job_id=** ] *job_id*  
  The job identification number. *job_id*is **uniqueidentifier**, with a default of NULL.  
   
- [ **@job_name=** ] **'***job_name***'**  
+ [ **@job_name=** ] **'**_job_name_**'**  
  The name of the job. *job_name*is **sysname**, with a default of NULL.  
   
 > **NOTE:** Either *job_id* or *job_name* must be specified, but both cannot be specified.  
   
- [ **@schedule_name=** ] **'***schedule_name***'**  
+ [ **@schedule_name=** ] **'**_schedule_name_**'**  
  The name of the schedule item for the job. *schedule_name*is **sysname**, with a default of NULL.  
   
  [ **@schedule_id=** ] *schedule_id*  

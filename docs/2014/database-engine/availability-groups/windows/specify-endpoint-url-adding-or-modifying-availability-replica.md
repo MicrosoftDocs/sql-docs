@@ -33,7 +33,7 @@ manager: craigg
 ##  <a name="SyntaxOfURL"></a> Syntax for an Endpoint URL  
  The syntax for an endpoint URL is of the form:  
   
- TCP**://***\<system-address>***:***\<port>*  
+ TCP**://***\<system-address>**_:_**\<port>*  
   
  where  
   
@@ -41,7 +41,7 @@ manager: craigg
   
     -   Because the nodes of Windows Server Failover Clustering (WSFC) cluster are the same domain, you can use the name of the computer system; for example, `SYSTEM46`.  
   
-    -   To use an IP address, it must be unique in your environment. We recommend that you use an IP address only if it is static. The IP address can be IP Version 4 (IPv4) or IP Version 6 (IPv6). An IPv6 address must be enclosed within square brackets, for example: **[***<IPv6_address>***]**.  
+    -   To use an IP address, it must be unique in your environment. We recommend that you use an IP address only if it is static. The IP address can be IP Version 4 (IPv4) or IP Version 6 (IPv6). An IPv6 address must be enclosed within square brackets, for example: **[**_<IPv6_address>_**]**.  
   
          To learn the IP address of a system, at the Windows command prompt, enter the **ipconfig** command.  
   

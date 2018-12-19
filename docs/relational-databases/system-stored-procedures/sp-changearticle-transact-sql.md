@@ -38,16 +38,16 @@ sp_changearticle [ [@publication= ] 'publication' ]
 ```  
   
 ## Arguments  
- [ **@publication=**] **'***publication***'**  
+ [ **@publication=**] **'**_publication_**'**  
  Is the name of the publication that contains the article. *publication* is **sysname**, with a default of NULL.  
   
- [ **@article=**] **'***article***'**  
+ [ **@article=**] **'**_article_**'**  
  Is the name of the article whose property is to be changed. *article* is **sysname**, with a default of NULL.  
   
- [ **@property=**] **'***property***'**  
+ [ **@property=**] **'**_property_**'**  
  Is an article property to change. *property* is **nvarchar(100)**.  
   
- [ **@value=**] **'***value***'**  
+ [ **@value=**] **'**_value_**'**  
  Is the new value of the article property. *value* is **nvarchar(255)**.  
   
  This table describes the properties of articles and the values for those properties.  
@@ -149,7 +149,7 @@ sp_changearticle [ [@publication= ] 'publication' ]
   
  See the Remarks section for the properties that, when changed, require the generation of a new snapshot.  
   
- [ **@force_reinit_subscription=]***force_reinit_subscription*  
+ [ **@force_reinit_subscription=]**_force_reinit_subscription_  
  Acknowledges that the action taken by this stored procedure may require existing subscriptions to be reinitialized. *force_reinit_subscription* is a **bit** with a default of **0**.  
   
  **0** specifies that changes to the article do not cause the subscription to be reinitialized. If the stored procedure detects that the change would require existing subscriptions to be reinitialized, an error occurs and no changes are made.  
@@ -158,7 +158,7 @@ sp_changearticle [ [@publication= ] 'publication' ]
   
  See the Remarks section for the properties that, when changed, require that all existing subscriptions be reinitialized.  
   
- [ **@publisher**= ] **'***publisher***'**  
+ [ **@publisher**= ] **'**_publisher_**'**  
  Specifies a non- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Publisher. *publisher* is **sysname**, with a default of NULL.  
   
 > [!NOTE]  

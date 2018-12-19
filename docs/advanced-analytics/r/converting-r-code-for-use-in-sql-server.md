@@ -69,7 +69,7 @@ How much you change your code depends on whether you intend to submit the R code
 
     For example, the following scalar input `@model_name` contains the model name, which is also output in its own column in the results:
 
-    ```SQL
+    ```sql
     EXEC sp_execute_external_script @model_name="DefaultModel" OUTPUT, @language=N'R', @script=N'R code here'
     ``` 
 

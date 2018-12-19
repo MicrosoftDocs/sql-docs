@@ -17,7 +17,7 @@ manager: cgronlun
 
 This package is not preloaded into an R session. Run the following command to load the library.
 
-```r
+```R
 library(olapR)
 ```
 

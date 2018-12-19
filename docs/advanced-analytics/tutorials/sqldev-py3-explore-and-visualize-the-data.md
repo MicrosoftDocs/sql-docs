@@ -72,7 +72,7 @@ The stored procedure returns a serialized Python `figure` object as a stream of 
     - The Python script is fairly simple: **matplotlib** `figure` objects are used to make the histogram and scatter plot, and these objects are then serialized using the `pickle` library.
     - The Python graphics object is serialized to a **pandas** DataFrame for output.
   
-    ```SQL
+    ```sql
     DROP PROCEDURE IF EXISTS PyPlotMatplotlib;
     GO
 
@@ -130,13 +130,13 @@ The stored procedure returns a serialized Python `figure` object as a stream of 
 
 2. Now run the stored procedure with no arguments to generate a plot from the data hard-coded as the input query.
 
-    ```
+    ```sql
     EXEC [dbo].[PyPlotMatplotlib]
     ```
 
 3. The results should be something like this:
   
-	```
+	```sql
     plot
     0xFFD8FFE000104A4649...
 	0xFFD8FFE000104A4649...

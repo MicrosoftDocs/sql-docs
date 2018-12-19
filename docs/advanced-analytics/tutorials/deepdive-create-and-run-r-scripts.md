@@ -58,7 +58,7 @@ To see how a compute context works, generate summary statistics on the sqlFraudD
 
 **Results**
 
-```
+```R
 Summary Statistics Results for: ~gender + balance + numTrans + numIntlTrans + creditLine
 Data: sqlFraudDS (RxSqlServerData Data Source)
 Number of valid observations: 10000

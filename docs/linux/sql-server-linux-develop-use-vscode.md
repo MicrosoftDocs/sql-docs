@@ -34,7 +34,7 @@ The [**mssql** extension for VS Code] enables you to connect to SQL Server, quer
 
 1. Select **View** > **Command Palette**, or press **Ctrl**+**Shift**+**P** or **F1** to open the **Command Palette** in VS Code. 
    
-1. Select **Extensions: Install Extensions** from the dropdown. 
+1. In the **Command Palette**, select **Extensions: Install Extensions** from the dropdown. 
    
 1. In the **Extensions** pane, type *mssql*.
    
@@ -42,18 +42,17 @@ The [**mssql** extension for VS Code] enables you to connect to SQL Server, quer
    
    ![Install the mssql extension](./media/sql-server-linux-develop-use-vscode/vscode-extension.png)   
    
-1. After the extension installs, select **Reload** to complete the installation. The extension is now enabled. 
-   
+1. After the installation completes, select **Reload** to enable the extension. 
 
 ## Create or open a SQL file
 
 The **mssql** extension enables mssql commands and T-SQL IntelliSense in the code editor when the language mode is set to **SQL**.
 
-1. Select **File** > **New File** or press **Ctrl**+**N**. Visual Studio Code opens a new **Plain Text** file by default. 
+1. Select **File** > **New File** or press **Ctrl**+**N**. Visual Studio Code opens a new Plain Text file by default. 
 
 1. Select **Plain Text** on the lower status bar, or press **Ctrl**+**K** > **M**, and select **SQL** from the languages dropdown. 
    
-   <img src="./media/sql-server-linux-develop-use-vscode/vscode-language-mode.png" alt="SQL language mode" style="width: 500px;" />
+   ![SQL language mode](./media/sql-server-linux-develop-use-vscode/vscode-language-mode.png)   
    
 If you open an existing file that has a *.sql* file extension, the language mode is automatically set to SQL.  
 
@@ -61,27 +60,28 @@ If you open an existing file that has a *.sql* file extension, the language mode
 
 Follow these steps to create a connection profile and connect to a SQL Server.
 
-> [!Tip] 
+> [!TIP] 
 > You can also create and edit connection profiles in the User Settings file (*settings.json*). To open the settings file, select **File** > **Preferences** > **Settings**. For more information, see [Manage connection profiles].
    
-1. Select **View** > **Command Palette**, or press **Ctrl**+**Shift**+**P** or **F1**, to open the **Command Palette**. 
+1. Select **View** > **Command Palette**, or press **Ctrl**+**Shift**+**P** or **F1** to open the **Command Palette**. 
    
-1. Type **sql** to display the mssql commands.
+1. Type **sql** to display the mssql commands, or type *sqlcon*, and then select **MS SQL: Connect** from the dropdown.
    
-   <img src="./media/sql-server-linux-develop-use-vscode/vscode-commands.png" alt="mssql commands" style="width: 500px;" />
+   ![mssql commands](./media/sql-server-linux-develop-use-vscode/vscode-commands.png)   
    
-1. Select **MS SQL: Connect**, or simply type *sqlcon*.
-   
-1. Select **Create Connection Profile** to create a connection profile for your SQL Server.
+   >[!NOTE]
+   >A SQL file, such as the empty SQL file you created, must have focus in the code editor before you can execute the mssql commands. 
+
+1. Select **Create Connection Profile** to create a new connection profile for your SQL Server.
    
 1. Follow the prompts to specify the connection properties for the new connection profile. After specifying each value, press **Enter** to continue. 
    
    1. **Server name or ADO connection string**: Specify the SQL Server instance name. Use **localhost** to connect to a SQL Server instance on your local machine. To connect to a remote SQL Server, enter the name of the target SQL Server, or its IP address. If you need to specify a port, use a comma to separate it from the name. For example, for a local server running on port 1401, enter **localhost,1401**. 
       
       >[!NOTE]
-      > You can also enter the ADO connection string for your database here, press **Enter**, optionally name the connection profile, and press **Enter** again. The connection and profile are created. 
+      >You can also enter the ADO connection string for your database here, press **Enter**, optionally name the connection profile, and press **Enter** again. The connection and profile are created. 
       
-   1. **Database name** (optional): The database that you want to use. For creating a new database, don't specify a database, and press **Enter** to continue. 
+   1. **Database name** (optional): The database that you want to use. To create a new database, don't specify a database name, and press **Enter** to continue. 
       
    1. **Authentication Type**: Press **Enter** to select **SQL Login**. 
       
@@ -100,13 +100,13 @@ Follow these steps to create a connection profile and connect to a SQL Server.
    
 1. Verify your connection in the lower status bar.
    
-   <img src="./media/sql-server-linux-develop-use-vscode/vscode-connection-status.png" alt="Connection status" style="width: 500px;" />
+  ![Connection status](./media/sql-server-linux-develop-use-vscode/vscode-connection-status.png)   
    
 ## Create a SQL database
 
 1. In the new SQL file that you started earlier, type **sql** to display a list of editable code snippets. 
 
-   <img src="./media/sql-server-linux-develop-use-vscode/vscode-sql-snippets.png" alt="SQL snippets" style="width: 500px;" />
+  ![SQL snippets](./media/sql-server-linux-develop-use-vscode/vscode-sql-snippets.png)   
    
 1. Select **sqlCreateDatabase**.
    
@@ -128,7 +128,7 @@ Follow these steps to create a connection profile and connect to a SQL Server.
    
 1. Press **Ctrl**+**Shift**+**E** to execute the Transact-SQL commands. View the results in the query window.
    
-   <img src="./media/sql-server-linux-develop-use-vscode/vscode-create-database-messages.png" alt="create database messages" style="width: 500px;" />
+  ![Create database messages](./media/sql-server-linux-develop-use-vscode/vscode-create-database-messages.png)   
    
    > [!TIP]
    > You can customize shortcut key bindings for the mssql extension commands. See [Customize shortcuts].
@@ -139,17 +139,17 @@ Follow these steps to create a connection profile and connect to a SQL Server.
    
 1. Select **View** > **Command Palette**, or press **Ctrl**+**Shift**+**P** or **F1** to open the **Command Palette**. 
    
-1. Type *sql* to display the SQL commands, or type *sqluse* for the **MS SQL:Use Database** command.
+1. Type *sql* to display the mssql commands, or type *sqluse*, and then select the **MS SQL:Use Database** command.
    
-1. Select **MS SQL:Use Database**, and then select the new **TutorialDB** database. 
+1. Select the new **TutorialDB** database. 
    
-   <img src="./media/sql-server-linux-develop-use-vscode/vscode-use-database.png" alt="use database" style="width: 500px;" />
+   ![Use database](./media/sql-server-linux-develop-use-vscode/vscode-use-database.png)   
    
 1. In the code editor, type *sql* to display the snippets, select **sqlCreateTable**, and then press **Enter**.
    
 1. In the snippet, type *Employees* for the table name and *dbo* for the schema name.
    
-1. Create the columns as shown in the snippet. 
+1. Create the columns as shown in the following code:
    
    ```sql
    -- Create a new table called 'Employees' in schema 'dbo'
@@ -193,11 +193,11 @@ Follow these steps to create a connection profile and connect to a SQL Server.
    
    > [!TIP]
    > While you type, use T-SQL IntelliSense to help complete the statements.
-   > <img src="./media/sql-server-linux-develop-use-vscode/vscode-intellisense.png" alt="TSQL IntelliSense" style="width: 500px;" />
+   >![T-SQL IntelliSense](./media/sql-server-linux-develop-use-vscode/vscode-intellisense.png)   
    
 1. Press **Ctrl**+**Shift**+**E** to execute the commands. The two result sets display in the **Results** window. 
    
-   <img src="./media/sql-server-linux-develop-use-vscode/vscode-result-grid.png" alt="Results" style="width: 300px;" />
+   ![Results](./media/sql-server-linux-develop-use-vscode/vscode-result-grid.png)   
 
 ## View and save the result
    
@@ -205,33 +205,33 @@ Follow these steps to create a connection profile and connect to a SQL Server.
    
 1. Select the **Results** and **Messages** panel headers to collapse and expand the panels.
    
-   <img src="./media/sql-server-linux-develop-use-vscode/vscode-toggle-messages-pannel.png" alt="Toggle Messages" style="width: 500px;" />
+   ![Toggle headers](./media/sql-server-linux-develop-use-vscode/vscode-toggle-messages-pannel.png)   
    
    > [!TIP]
    > You can customize the default behavior of the mssql extension. See [Customize extension options].
    
 1. Select the maximize grid icon on the second result grid to zoom in to those results.
    
-   <img src="./media/sql-server-linux-develop-use-vscode/vscode-maximize-grid.png" alt="Maximize grid" style="width: 500px;" />
+   ![Maximize grid](./media/sql-server-linux-develop-use-vscode/vscode-maximize-grid.png)   
    
    > [!NOTE]
    > The maximize icon displays when your T-SQL script produces two or more result grids.
    
 1. Open the grid context menu by right-clicking on the grid. 
    
-   <img src="./media/sql-server-linux-develop-use-vscode/vscode-grid-context-menu.png" alt="Context menu" style="width: 500px;" />
+   ![Context menu](./media/sql-server-linux-develop-use-vscode/vscode-grid-context-menu.png)   
    
 1. Select **Select All**.
    
 1. Open the grid context menu again and select **Save as JSON** to save the result to a *.json* file.
    
-1. Specify a file name for the JSON file. For this tutorial, type *employees.json*.
+1. Specify a file name for the JSON file. 
    
 1. Verify that the JSON file saves and opens in VS Code.
    
-   <img src="./media/sql-server-linux-develop-use-vscode/vscode-save-as-json.png" alt="Save as Json" style="width: 500px;" />
+   ![Save as JSON](./media/sql-server-linux-develop-use-vscode/vscode-save-as-json.png)   
 
-If you need to save and run scripts later, for administration or a larger development project, save the scripts with a *.sql* extension.
+If you need to save and run SQL scripts later, for administration or a larger development project, save the scripts with a *.sql* extension.
 
 ## Next steps
 

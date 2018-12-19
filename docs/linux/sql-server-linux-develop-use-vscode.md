@@ -30,7 +30,7 @@ Visual Studio Code is a graphical code editor for Linux, macOS, and Windows that
 
 ## Install the mssql extension
 
-The [**mssql** extension for VS Code] enables you to connect to SQL Server, query with Transact-SQL (T-SQL), and view the results.
+The [**mssql** extension for VS Code] lets you connect to a SQL Server, query with Transact-SQL (T-SQL), and view the results.
 
 1. Select **View** > **Command Palette**, or press **Ctrl**+**Shift**+**P** or **F1** to open the **Command Palette** in VS Code. 
    

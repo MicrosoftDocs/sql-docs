@@ -78,7 +78,7 @@ Use the following steps to run the deployment script. This script will create an
    | **Controller user** | Username for the controller user (default: **admin**). |
 
    > [!IMPORTANT]
-   > Each persistent volume claim in the cluster requires an attached disk. Currently, big data cluster requires 21 persistent volume claims. When choosing an Azure virtual machine size and number of nodes, make sure that total number of disks that can be attached across the nodes is greater than or equal to 21. For example, the Standard_L4s machines supports 16 attached disks, so three nodes means that 48 disks can be attached.
+   > Each persistent volume claim in the cluster requires an attached disk. Currently, big data cluster requires 21 persistent volume claims. When choosing an Azure virtual machine size and number of nodes, make sure that total number of disks that can be attached across the nodes is greater than or equal to 21. For example, the [Standard_L4s](https://docs.microsoft.com/azure/virtual-machines/windows/sizes-storage#ls-series) machine size supports 16 attached disks, so three nodes means that 48 disks can be attached.
 
    > [!NOTE]
    > The `sa` account is a system administrator on the SQL Server master instance that gets created during setup. After creating deployment, the `MSSQL_SA_PASSWORD` environment variable is discoverable by running `echo $MSSQL_SA_PASSWORD` in the master instance container. For security purposes, change your `sa` password on the master instance after deployment. For more information, see [Change the SA password](../linux/quickstart-install-connect-docker.md#sapassword).
@@ -182,10 +182,7 @@ The SQL Server master instance is a traditional SQL Server instance containing r
 
 1. Type the IP address of the SQL Server master instance in **Server name** (for example: **\<IP Address\>,31433**).
 
-1. Enter a SQL login **User name** and **Password**.
-
-   > [!TIP]
-   > By default, the user name is **SA** and, unless changed, the password corresponds to the **MSSQL_SA_PASSWORD** environment variable used during deployment.
+1. Enter a SQL login **User name** (`SA`) and **Password** (the password you entered in the deployment script).
 
 1. Change the target **Database name** to one of your relational databases.
 
@@ -212,15 +209,11 @@ The **HDFS/Spark gateway** enables you to connect in order to work with the HDFS
 
 1. Type the IP address of the big data cluster in **Server name** (do not specify a port).
 
-1. Enter `root` for the **User** and specify the **Password** to your big data cluster.
+1. Enter `root` for the **User** and specify the **Password** to your big data cluster that you entered in the deployment script.
 
    ![Connect to HDFS/Spark gateway](./media/quickstart-big-data-cluster-deploy/connect-to-cluster-hdfs-spark.png)
 
-   > [!TIP]
-   > By default, the user name is **root** and the password corresponds to the **KNOX_PASSWORD** environment variable used during deployment.
-
 1. Press **Connect**, and the **Server Dashboard** should appear.
-
 
 ## Clean up
 

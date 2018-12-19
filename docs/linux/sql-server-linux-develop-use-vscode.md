@@ -15,7 +15,7 @@ ms.custom: "sql-linux"
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-This article shows how to use the **mssql** extension for Visual Studio Code (VS Code) to develop SQL Server databases in Linux.
+This article shows how to use the *mssql* extension for Visual Studio Code (VS Code) to develop SQL Server databases in Linux.
 
 ## Install and start VS Code
 
@@ -30,15 +30,15 @@ Visual Studio Code is a graphical code editor for Linux, macOS, and Windows that
 
 ## Install the mssql extension
 
-The [**mssql** extension for VS Code] lets you connect to a SQL Server, query with Transact-SQL (T-SQL), and view the results.
+The [mssql extension for VS Code] lets you connect to a SQL Server, query with Transact-SQL (T-SQL), and view the results.
 
-1. Select **View** > **Command Palette**, or press **Ctrl**+**Shift**+**P** or **F1** to open the **Command Palette** in VS Code. 
+1. In VS Code, select **View** > **Command Palette**, or press **Ctrl**+**Shift**+**P**, or press **F1** to open the **Command Palette**. 
    
 1. In the **Command Palette**, select **Extensions: Install Extensions** from the dropdown. 
    
 1. In the **Extensions** pane, type *mssql*.
    
-1. Select **SQL Server (mssql)**, and then select **Install**. 
+1. Select the **SQL Server (mssql)** extension, and then select **Install**. 
    
    ![Install the mssql extension](./media/sql-server-linux-develop-use-vscode/vscode-extension.png)   
    
@@ -46,7 +46,7 @@ The [**mssql** extension for VS Code] lets you connect to a SQL Server, query wi
 
 ## Create or open a SQL file
 
-The **mssql** extension enables mssql commands and T-SQL IntelliSense in the code editor when the language mode is set to **SQL**.
+The mssql extension enables mssql commands and T-SQL IntelliSense in the code editor when the language mode is set to **SQL**.
 
 1. Select **File** > **New File** or press **Ctrl**+**N**. Visual Studio Code opens a new Plain Text file by default. 
 
@@ -63,7 +63,7 @@ Follow these steps to create a connection profile and connect to a SQL Server.
 > [!TIP] 
 > You can also create and edit connection profiles in the User Settings file (*settings.json*). To open the settings file, select **File** > **Preferences** > **Settings**. For more information, see [Manage connection profiles].
    
-1. Select **View** > **Command Palette**, or press **Ctrl**+**Shift**+**P** or **F1** to open the **Command Palette**. 
+1. Press **Ctrl**+**Shift**+**P** or **F1** to open the **Command Palette**. 
    
 1. Type **sql** to display the mssql commands, or type *sqlcon*, and then select **MS SQL: Connect** from the dropdown.
    
@@ -74,12 +74,12 @@ Follow these steps to create a connection profile and connect to a SQL Server.
 
 1. Select **Create Connection Profile** to create a new connection profile for your SQL Server.
    
-1. Follow the prompts to specify the connection properties for the new connection profile. After specifying each value, press **Enter** to continue. 
+1. Follow the prompts to specify the properties for the new connection profile. After specifying each value, press **Enter** to continue. 
    
-   1. **Server name or ADO connection string**: Specify the SQL Server instance name. Use **localhost** to connect to a SQL Server instance on your local machine. To connect to a remote SQL Server, enter the name of the target SQL Server, or its IP address. If you need to specify a port, use a comma to separate it from the name. For example, for a local server running on port 1401, enter **localhost,1401**. 
+   1. **Server name or ADO connection string**: Specify the SQL Server instance name. Use *localhost* to connect to a SQL Server instance on your local machine. To connect to a remote SQL Server, enter the name of the target SQL Server, or its IP address. If you need to specify a port, use a comma to separate it from the name. For example, for a local server running on port 1401, enter *localhost,1401*. 
       
       >[!NOTE]
-      >You can also enter the ADO connection string for your database here, press **Enter**, optionally name the connection profile, and press **Enter** again. The connection and profile are created. 
+      >You can also enter the ADO connection string for your database here, press **Enter**, optionally name the connection profile, and press **Enter** again to connect and create the profile. 
       
    1. **Database name** (optional): The database that you want to use. To create a new database, don't specify a database name, and press **Enter** to continue. 
       
@@ -89,7 +89,7 @@ Follow these steps to create a connection profile and connect to a SQL Server.
       
    1. **Password**: Enter the password for the specified user.
       
-   1. **Save Password**: Press **Enter** to select **Yes** and save the password. Select **No** to be prompted for the password each time the connection profile is used. |
+   1. **Save Password**: Press **Enter** to select **Yes** and save the password. Select **No** to be prompted for the password each time the connection profile is used. 
       
    1. **Profile Name** (optional): Type a name for the connection profile, such as **localhost profile**. 
    
@@ -130,14 +130,14 @@ Follow these steps to create a connection profile and connect to a SQL Server.
    
   ![Create database messages](./media/sql-server-linux-develop-use-vscode/vscode-create-database-messages.png)   
    
-   > [!TIP]
-   > You can customize shortcut key bindings for the mssql extension commands. See [Customize shortcuts].
+> [!TIP]
+> You can customize the shortcut keys for the mssql commands. See [Customize shortcuts].
 
 ## Create a table
 
 1. Delete the contents of the code editor window.
    
-1. Select **View** > **Command Palette**, or press **Ctrl**+**Shift**+**P** or **F1** to open the **Command Palette**. 
+1. Press **Ctrl**+**Shift**+**P** or **F1** to open the **Command Palette**. 
    
 1. Type *sql* to display the mssql commands, or type *sqluse*, and then select the **MS SQL:Use Database** command.
    

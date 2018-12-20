@@ -51,6 +51,8 @@
   items:
   - name: R
     items:
+    - name: Verify R exists in SQL Server
+      href: tutorials/rtsql-verify-r-exists.md
     - name: Hello World in R and SQL
       href: tutorials/rtsql-using-r-code-in-transact-sql-quickstart.md
     - name: Handle inputs and outputs
@@ -61,8 +63,8 @@
       href: tutorials/rtsql-using-r-functions-with-sql-server-data.md
     - name: Create a predictive model
       href: tutorials/rtsql-create-a-predictive-model-r.md
-    - name: Predict and plot from model
-      href: tutorials/rtsql-predict-and-plot-from-model.md
+    - name: Predict from model
+      href: tutorials/rtsql-predict-from-model.md
   - name: Python
     items:
     - name: Run Python using T-SQL

@@ -21,15 +21,9 @@ monikerRange: ">=sql-server-ver15||=sqlallproducts-allversions"
 - Install on Linux for [Red Hat Enterprise Server](../linux/quickstart-install-connect-red-hat.md), [SUSE Linux Enterprise Server](../linux/quickstart-install-connect-suse.md), and [Ubuntu](../linux/quickstart-install-connect-ubuntu.md).
 - [Run on SQL Server 2019 on Docker](../linux/quickstart-install-connect-docker.md).
 
-## CTP 2.2
+## CTP 2.3
 
-Community technology preview (CTP) 2.2 is the latest public release of [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]. This release includes improvements from previous CTP releases to fix bugs, improve security, and optimize performance. In addition, the following features are added or enhanced for [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] CTP 2.2.
-
-- [Big data clusters](#bigdatacluster)
-  - Use SparkR from Azure Data Studio on a big data cluster
-
-- [Database engine](#databaseengine)
-  - Use UTF-8 character encoding with SQL Server Replication.
+Community technology preview (CTP) 2.3 is the latest public release of [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]. This release includes improvements from previous CTP releases to fix bugs, improve security, and optimize performance. <!--In addition, the following features are added or enhanced for [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] CTP 2.3.-->
 
 ## Previous CTPs
 
@@ -41,7 +35,8 @@ Earlier CTP releases added or enhanced the following features for [!INCLUDE[sql-
   - Run Advanced analytics and machine learning with Spark (CTP 2.0)
   - Use Spark streaming to data to SQL data pools (CTP 2.0)
   - Use Azure Data Studio to run Query books that provide a notebook experience (CTP 2.0)
-  - Deploy Python and R apps (CTP 2.1)
+  - Use SparkR from Azure Data Studio on a big data cluster (CTP 2.2)
+  - Deploy Python and R apps (CTP 2.2)
 
 - [Database engine](#databaseengine)
   - UTF-8 support (CTP 2.0)
@@ -63,7 +58,6 @@ Earlier CTP releases added or enhanced the following features for [!INCLUDE[sql-
   - New `sys.dm_db_page_info` system function returns page information (CTP 2.0)
   - Intelligent query processing adds scalar UDF inlining (CTP 2.1)
   - Truncation error message improved to include table and column names, and truncated value (CTP 2.1)
-  - UTF-8 collations support in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] setup (CTP 2.1)
   - Use derived table or view aliases in graph match queries (CTP 2.1)
   - Improved diagnostic data for stats blocking (CTP 2.1)
   - Hybrid Buffer Pool (CTP 2.1)
@@ -423,6 +417,5 @@ As of CTP 2.2, [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] does not 
 - [SQL Server 2019 Release Notes](sql-server-ver15-release-notes.md)
 
 - [Microsoft SQL Server 2019: Technical white paper](https://info.microsoft.com/rs/157-GQE-382/images/EN-US-CNTNT-white-paper-DBMod-Microsoft-SQL-Server-2019-Technical-white-paper.pdf)<br />Published in September 2018. Applies to Microsoft SQL Server 2019 CTP 2.0 for Windows, Linux, and Docker containers.
-
 
 [!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]

@@ -61,7 +61,7 @@ manager: craigg
 -   [Set the Properties of a Precedence Constraint](../../2014/integration-services/set-the-properties-of-a-precedence-constraint.md)  
   
 ## External Resources  
- Technical article, [SSIS Expression Examples](http://go.microsoft.com/fwlink/?LinkId=220761), on social.technet.microsoft.com  
+ Technical article, [SSIS Expression Examples](https://go.microsoft.com/fwlink/?LinkId=220761), on social.technet.microsoft.com  
   
 ## See Also  
  [Multiple Precedence Constraints](../../2014/integration-services/multiple-precedence-constraints.md)   

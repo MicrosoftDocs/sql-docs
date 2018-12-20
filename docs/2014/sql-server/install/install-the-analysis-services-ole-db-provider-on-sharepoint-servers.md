@@ -106,7 +106,7 @@ manager: craigg
   
 #### Download the MSOLAP.5 provider from the [!INCLUDE[ssSQL11SP1](../../includes/sssql11sp1-md.md)] Feature Pack.  
   
-1.  Browse to [Microsoft® SQL Server® 2012 SP1 Feature Pack](http://www.microsoft.com/download/details.aspx?id=35580)  
+1.  Browse to [Microsoft® SQL Server® 2012 SP1 Feature Pack](https://www.microsoft.com/download/details.aspx?id=35580)  
   
 2.  Click **Install Instructions**.  
   
@@ -114,7 +114,7 @@ manager: craigg
   
 4.  On the **Feature Selection** page, select **Analysis Services OLE DB Provider for SQL Server**. Unselect the other components and complete the installation. For more information on spPowerPivot.msi, see [Install or Uninstall the PowerPivot for SharePoint Add-in &#40;SharePoint 2013&#41;](../../analysis-services/instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2013.md).  
   
-5.  Register MSOLAP.5 as a trusted provider with SharePoint Excel Services. For more information, see [Add MSOLAP.5 as a Trusted Data Provider in Excel Services](http://technet.microsoft.com/library/hh758436.aspx).  
+5.  Register MSOLAP.5 as a trusted provider with SharePoint Excel Services. For more information, see [Add MSOLAP.5 as a Trusted Data Provider in Excel Services](https://technet.microsoft.com/library/hh758436.aspx).  
   
   
 ##  <a name="bkmk_kj"></a> Install the SQL Server 2008 R2 OLE DB Provider to host earlier version workbooks  
@@ -122,7 +122,7 @@ manager: craigg
   
 #### Step 1: Download and install the client library  
   
-1.  On the [SQL Server 2008 R2 Feature Pack page](http://go.microsoft.com/fwlink/?LinkId=159570), find Microsoft Analysis Services OLE DB Provider for Microsoft SQL Server 2008 R2.  
+1.  On the [SQL Server 2008 R2 Feature Pack page](https://go.microsoft.com/fwlink/?LinkId=159570), find Microsoft Analysis Services OLE DB Provider for Microsoft SQL Server 2008 R2.  
   
 2.  Download the x64 Package of the `SQLServer2008_ASOLEDB10.msi` installation program. Although the file name contains SQLServer2008, it is the correct file for the SQL Server 2008 R2 version of the provider.  
   

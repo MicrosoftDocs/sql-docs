@@ -43,7 +43,7 @@ manager: craigg
   
 5.  Click **Add** to add a color. Select a color from the drop-down list or select Expression and specify a hex value for a specific color, such as ff6600 for "Orange".  
   
-     For more information about hex values, see [Color Table](http://go.microsoft.com/fwlink/?linkid=9258) on MSDN.  
+     For more information about hex values, see [Color Table](https://go.microsoft.com/fwlink/?linkid=9258) on MSDN.  
   
 6.  Click **Add** to add more colors to the palette.  
   

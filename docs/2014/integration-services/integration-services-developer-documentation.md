@@ -76,7 +76,7 @@ manager: craigg
   
 ## External Resources  
   
--   CodePlex samples, [Integration Services Product Samples](http://go.microsoft.com/fwlink/?LinkID=131204), on www.codeplex.com/MSFTISProdSamples  
+-   CodePlex samples, [Integration Services Product Samples](https://go.microsoft.com/fwlink/?LinkID=131204), on www.codeplex.com/MSFTISProdSamples  
   
 ## See Also  
  [SQL Server Integration Services](sql-server-integration-services.md)  

@@ -86,7 +86,7 @@ manager: craigg
      The REFERENCES permission is needed on an object to create a FUNCTION or VIEW with the `WITH SCHEMABINDING` clause that references that object.  
   
 ## Chart of SQL Server Permissions  
- For a poster sized chart of all [!INCLUDE[ssDE](../../includes/ssde-md.md)] permissions in pdf format, see [http://go.microsoft.com/fwlink/?LinkId=229142](http://go.microsoft.com/fwlink/?LinkId=229142).  
+ For a poster sized chart of all [!INCLUDE[ssDE](../../includes/ssde-md.md)] permissions in pdf format, see [https://go.microsoft.com/fwlink/?LinkId=229142](https://go.microsoft.com/fwlink/?LinkId=229142).  
   
 ##  <a name="_securables"></a> Permissions Applicable to Specific Securables  
  The following table lists major classes of permissions and the kinds of securables to which they may be applied.  

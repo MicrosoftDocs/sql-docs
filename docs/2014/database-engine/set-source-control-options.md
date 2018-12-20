@@ -77,7 +77,7 @@ manager: craigg
      Selecting one of these roles causes the appropriate source control options to be selected automatically.  
   
      **Keep items checked out when checking in**  
-     Specifies that when you check in items to update the source control store, the items should remain checked out to you. If you want to change this option for a specific check-in, click the **Options** arrow in the **Check in** dialog box, and then clear the **Keep****checked out** check box.  
+     Specifies that when you check in items to update the source control store, the items should remain checked out to you. If you want to change this option for a specific check-in, click the **Options** arrow in the **Check in** dialog box, and then clear the **Keep checked out** check box.  
   
      **Checked-in items**  
      Displays a list of options that specify how [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] should behave when you attempt to edit an item that is not checked out. The following tables describe the available options.  

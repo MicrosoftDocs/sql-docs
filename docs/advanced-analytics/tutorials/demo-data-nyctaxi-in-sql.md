@@ -1,5 +1,5 @@
 ---
-title: Download NYC Taxi demo data and scripts for embedded R and Python (SQL Server Machine Learning) | Microsoft Docs
+title: Download NYC Taxi demo data and scripts for embedded R and Python - SQL Server Machine Learning
 description: Instructions for downloading New York City taxi sample data and creating a database. Data is used in SQL Server Python and R language tutorials showing how to embed script in SQL Server stored procedures and T-SQL functions.
 ms.prod: sql
 ms.technology: machine-learning
@@ -13,7 +13,7 @@ manager: cgronlun
 # NYC Taxi demo data for SQL Server Python and R tutorials
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-This article explains how to set up a sample database consisting of public data from the [New York City Taxi and Limousine Commission](https://www.nyc.gov/html/tlc/html/about/trip_record_data.shtml). This data is used in several R and Python tutorials for in-database analytics on SQL Server. To make the sample code run quicker, we created a representative 1% sampling of the data. On your system, the database backup file is slightly over 90 MB, providing 1.7 million rows in the primary data table.
+This article explains how to set up a sample database consisting of public data from the [New York City Taxi and Limousine Commission](http://www.nyc.gov/html/tlc/html/about/trip_record_data.shtml). This data is used in several R and Python tutorials for in-database analytics on SQL Server. To make the sample code run quicker, we created a representative 1% sampling of the data. On your system, the database backup file is slightly over 90 MB, providing 1.7 million rows in the primary data table.
 
 To complete this exercise, you should have [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms?view=sql-server-2017) or another tool that can restore a database backup file and run T-SQL queries.
 
@@ -83,7 +83,7 @@ The database contains 1.7 million rows.
 
 3. Within the database is a **nyctaxi_sample** table that contains the data set. The table has been optimized for set-based calculations with the addition of a [columnstore index](../../relational-databases/indexes/columnstore-indexes-overview.md). Run this statement to generate a quick summary on the table.
 
-    ```SQL
+    ```sql
     SELECT DISTINCT [passenger_count]
         , ROUND (SUM ([fare_amount]),0) as TotalFares
         , ROUND (AVG ([fare_amount]),0) as AvgFares

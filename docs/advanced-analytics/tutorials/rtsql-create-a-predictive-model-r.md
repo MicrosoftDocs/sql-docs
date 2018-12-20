@@ -1,5 +1,5 @@
 ---
-title: Quickstart to create a predictive model using R in SQL Server Machine Learning| Microsoft Docs
+title: Quickstart to create a predictive model using R - SQL Server Machine Learning
 description: In this quickstart, learn how to build a model in R using SQL Server data to plot predictions.
 ms.prod: sql
 ms.technology: machine-learning
@@ -94,7 +94,7 @@ EXEC generate_linear_model;
 
 Note that if you run this code a second time, you get this error:
 
-```
+```sql
 Violation of PRIMARY KEY constraint...Cannot insert duplicate key in object dbo.stopping_distance_models
 ```
 

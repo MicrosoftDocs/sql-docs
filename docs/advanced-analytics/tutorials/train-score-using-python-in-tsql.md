@@ -1,5 +1,5 @@
 ---
-title: Python models in SQL Server for training and predictions using stored procedures | Microsoft Docs
+title: Python models for training and predictions using stored procedures - SQL Server Machine Learning
 description: Embed Python code in SQL Server stored procedures to create, train, and use a Python model with the classic Iris data set. Save a trained model to SQL Server, and then use it to generate predicted outcomes.
 ms.prod: sql
 ms.technology: machine-learning

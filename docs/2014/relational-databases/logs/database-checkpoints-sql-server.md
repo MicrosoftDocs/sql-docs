@@ -128,7 +128,7 @@ manager: craigg
   
 ##  <a name="RelatedContent"></a> Related Content  
   
--   [Transaction Log Physical Architecture](http://technet.microsoft.com/library/ms179355.aspx) (in [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] Books Oline)  
+-   [Transaction Log Physical Architecture](https://technet.microsoft.com/library/ms179355.aspx) (in [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] Books Oline)  
   
   
 ## See Also  

@@ -1,5 +1,5 @@
 ---
-title: Manage and integrate machine learning workloads in SQL Server | Microsoft Docs
+title: Manage and integrate machine learning workloads - SQL Server Machine Learning Services
 description: As a SQL Server DBA, review the administrative tasks for deploying a machine learning R and Python subsystem on a database engine instance.
 ms.prod: sql
 ms.technology: machine-learning

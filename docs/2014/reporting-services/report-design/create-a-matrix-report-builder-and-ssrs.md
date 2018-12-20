@@ -19,7 +19,7 @@ manager: craigg
   
  To quickly get started with matrices, see [Tutorial: Creating a Matrix Report &#40;Report Builder&#41;](../tutorial-creating-a-matrix-report-report-builder.md).  
   
- The [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] sample reports include a number of reports that use matrices. You can learn about matrices by exploring the report definition of a sample report in Report Builder or Report Designer or by previewing the rendered report in Report Builder or Report Designer. For more information about downloading the sample reports, see [(SSRS) Reporting Services Samples](http://go.microsoft.com/fwlink/?LinkID=198283).  
+ The [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] sample reports include a number of reports that use matrices. You can learn about matrices by exploring the report definition of a sample report in Report Builder or Report Designer or by previewing the rendered report in Report Builder or Report Designer. For more information about downloading the sample reports, see [(SSRS) Reporting Services Samples](https://go.microsoft.com/fwlink/?LinkID=198283).  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  

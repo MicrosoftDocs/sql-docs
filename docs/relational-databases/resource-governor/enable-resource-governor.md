@@ -9,8 +9,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "Resource Governor, enabling"
 ms.assetid: 4d17af53-cf11-4ce4-aab4-deda94a49836
-author: MikeRayMSFT
-ms.author: mikeray
+author: julieMSFT
+ms.author: jrasnick
 manager: craigg
 ---
 # Enable Resource Governor

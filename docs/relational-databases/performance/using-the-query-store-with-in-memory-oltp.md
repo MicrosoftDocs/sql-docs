@@ -10,8 +10,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "Query Store, in-memory"
 ms.assetid: aae5ae6d-7c90-4661-a1c5-df704319888a
-author: MikeRayMSFT
-ms.author: mikeray
+author: julieMSFT
+ms.author: jrasnick
 manager: craigg
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---

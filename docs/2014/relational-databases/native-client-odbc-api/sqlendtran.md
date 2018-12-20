@@ -20,6 +20,6 @@ manager: craigg
   
 ## See Also  
  [ODBC API Implementation Details](odbc-api-implementation-details.md)   
- [SQLEndTran Function](http://go.microsoft.com/fwlink/?LinkId=59342)  
+ [SQLEndTran Function](https://go.microsoft.com/fwlink/?LinkId=59342)  
   
   

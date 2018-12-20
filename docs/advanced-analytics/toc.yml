@@ -276,20 +276,20 @@
   items:
   - name: R packages
     items:
-    - name: olapR
-      href: r/ref-r-olapr.md
-    - name: MicrosoftML
-      href: r/ref-r-microsoftml.md
     - name: RevoScaleR
       href: r/ref-r-revoscaler.md
+    - name: MicrosoftML
+      href: r/ref-r-microsoftml.md
+    - name: olapR
+      href: r/ref-r-olapr.md
     - name: sqlrutils
       href: r/ref-r-sqlrutils.md
   - name: Python packages
     items:
-    - name: microsoftml
-      href: python/ref-py-microsoftml.md
     - name: revoscalepy
       href: python/ref-py-revoscalepy.md
+    - name: microsoftml
+      href: python/ref-py-microsoftml.md
 - name: Resources
   items:
   - name: Release notes

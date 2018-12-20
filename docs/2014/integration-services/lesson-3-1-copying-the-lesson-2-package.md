@@ -46,7 +46,7 @@ manager: craigg
   
      To download all of the lesson packages for this tutorial, do the following.  
   
-    1.  Navigate to [Integration Services Product Samples](http://go.microsoft.com/fwlink/?LinkId=275027)  
+    1.  Navigate to [Integration Services Product Samples](https://go.microsoft.com/fwlink/?LinkId=275027)  
   
     2.  Click the **DOWNLOADS** tab.  
   

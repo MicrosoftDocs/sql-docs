@@ -10,8 +10,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "SQLServer:LogPool FreePool"
 ms.assetid: 8ffd569b-045f-4c3f-a473-4a491d6a1d80
-author: MikeRayMSFT
-ms.author: mikeray
+author: julieMSFT
+ms.author: jrasnick
 manager: craigg
 ---
 # SQL Server, LogPool FreePool Object

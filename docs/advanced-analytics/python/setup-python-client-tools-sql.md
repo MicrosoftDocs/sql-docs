@@ -1,5 +1,5 @@
 ---
-title: Set up a data science client for Python development on SQL Server Machine Learning | Microsoft Docs
+title: Set up a data science client for Python development - SQL Server Machine Learning
 description: Set up a Python local environment (Jupyter Notebook or PyCharm) for remote connections to SQL Server Machine Learning Services with Python.
 ms.prod: sql
 ms.technology: machine-learning
@@ -80,7 +80,7 @@ On systems having multiple versions of Python, remember to use this particular P
 > [!Note] 
 > The installation script does not modify the PATH environment variable on your computer, which means that the new python interpreter and modules you just installed are not automatically available to other tools you might have. For help on linking the Python interpreter and libraries to tools, see [Install an IDE](#install-ide).
 
-<a name="python-tool"></a>
+<a name="python-tools"></a>
 
 ## 3 - Open Jupyter Notebooks
 
@@ -106,7 +106,7 @@ Anaconda includes Jupyter Notebooks. As a next step, create a notebook and run s
 
 4. Enter a more complex series of statements. This example generates summary statistics using [rx_summary](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-summary) over a local data set. Other functions get the location of the sample data and create a data source object for a local .xdf file.
 
-  ```Python
+  ```python
   import os
   from revoscalepy import rx_summary
   from revoscalepy import RxXdfData
@@ -147,7 +147,7 @@ If you have permissions to create a database on the remote server, you can run t
 
 ### 1 - Create the irissql database remotely
 
-```Python
+```python
 import pyodbc
 
 # creating a new db to load Iris sample in
@@ -164,7 +164,7 @@ print("Database created")
 
 ### 2 - Import Iris sample from SkLearn
 
-```Python
+```python
 from sklearn import datasets
 import pandas as pd
 
@@ -175,7 +175,7 @@ df = pd.DataFrame(iris.data, columns=iris.feature_names)
 
 ### 3 - Use Revoscalepy APIs to create a table and load the Iris data
 
-```Python
+```python
 from revoscalepy import RxSqlServerData, rx_data_step
 
 # Example of using RX APIs to load data into SQL table. You can also do this with pyodbc
@@ -248,9 +248,20 @@ The following screenshot shows the input and scatter plot output.
 
 <a name="install-ide"></a>
 
-## 7 - Link tools to python.exe
+## 7 - Start Python from tools
 
 Because developers frequently work with multiple versions of Python, setup does not add Python to your PATH. To use the Python executable and libraries installed by setup, link your IDE to **Python.exe** at the path that also provides **revoscalepy** and **microsoftml**. 
+
+### Command line
+
+When you run **Python.exe** from C:\Program Files\Microsoft\PyForMLS (or whatever location you specified for the Python client library installation), you have access to the full Anaconda distribution plus the Microsoft Python modules, **revoscalepy** and **microsoftml**.
+
+1. Go to C:\Program Files\Microsoft\PyForMLS and double-click **Python.exe**.
+2. Open interactive help: `help()`
+3. Type the name of a module at the help prompt: `help> revoscalepy`. Help returns the name, package contents, version, and file location.
+4. Return version and package information at the **help>** prompt: `revoscalepy`. Press Enter a few times to exit help.
+5. Import a module: `import revoscalepy`
+
 
 ### Jupyter Notebooks
 

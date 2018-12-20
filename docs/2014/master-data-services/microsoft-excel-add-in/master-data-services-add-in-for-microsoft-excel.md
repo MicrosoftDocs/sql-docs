@@ -21,7 +21,7 @@ manager: craigg
  In the [!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)], you can use Data Quality Services (DQS) to match data before loading it into MDS. This helps to prevent duplicate data in MDS.  
   
 > [!IMPORTANT]  
->  You can continue using the [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 version of Master Data Services Add-In for Excel after upgrading Master Data Services and Data Quality Services to [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] CTP2. However, any earlier version of the Master Data Services Add-In for Excel will not work after upgrading to SQL Server 2014 CTP2. You can download the [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 version of Master Data Services Add-In for Excel from [here](http://go.microsoft.com/fwlink/?LinkId=328664).  
+>  You can continue using the [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 version of Master Data Services Add-In for Excel after upgrading Master Data Services and Data Quality Services to [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] CTP2. However, any earlier version of the Master Data Services Add-In for Excel will not work after upgrading to SQL Server 2014 CTP2. You can download the [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 version of Master Data Services Add-In for Excel from [here](https://go.microsoft.com/fwlink/?LinkId=328664).  
   
 ## Terms  
  When working with the Add-in, you may encounter the following terms.  

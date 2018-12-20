@@ -3,12 +3,12 @@ title: "SQL Server documentation include files | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/15/2018"
 ms.prod: sql
-ms.prod_service: "sql-tools"
 ms.reviewer: ""
 ms.technology:
-author: "MashaMSFT"
-ms.author: "mathoma"
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
+ms.topic: conceptual
 monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions"
 ---
 

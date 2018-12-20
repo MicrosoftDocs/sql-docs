@@ -4,83 +4,92 @@ description: In this quickstart, learn how to build a model in R using SQL Serve
 ms.prod: sql
 ms.technology: machine-learning
 
-ms.date: 07/15/2018  
+ms.date: 12/20/2018  
 ms.topic: quickstart
-author: HeidiSteen
-ms.author: heidist
+author: dphansen
+ms.author: davidph
 manager: cgronlun
 ---
 # Quickstart: Create a predictive model using R in SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-In this quickstart, you'll learn how to train a model using R, and then save the model to a table in SQL Server. The model is a simple regression model that predicts the stopping distance of a car based on speed. You'll use the `cars` dataset included with R, because it is small and easy to understand.
+In this quickstart, you'll learn how to train a model using R, and then save the model to a table in SQL Server. The model is a simple generalized linear model (GLM) that predicts probability that a vehicle has been fitted with a manual transmission. You'll use the `mtcars` dataset included with R.
 
 ## Prerequisites
 
-A previous quickstart, [Hello World in R and SQL](rtsql-using-r-code-in-transact-sql-quickstart.md), provides information and links for setting up the R environment required for this quickstart.
+A previous quickstart, [Verify R exists in SQL Server](rtsql-verify-r-exists.md), provides information and links for setting up the R environment required for this quickstart.
 
 ## Create the source data
 
 First, create a table to save the training data.
 
 ```sql
-CREATE TABLE CarSpeed ([speed] int not null, [distance] int not null)
-INSERT INTO CarSpeed
+CREATE TABLE dbo.MTCars(
+    mpg decimal(10, 1) NOT NULL,
+    cyl int NOT NULL,
+    disp decimal(10, 1) NOT NULL,
+    hp int NOT NULL,
+    drat decimal(10, 2) NOT NULL,
+    wt decimal(10, 3) NOT NULL,
+    qsec decimal(10, 2) NOT NULL,
+    vs int NOT NULL,
+    am int NOT NULL,
+    gear int NOT NULL,
+    carb int NOT NULL
+);
+```
+
+Next, insert the data from the build in dataset `mtcars`.
+
+```SQL
+INSERT INTO dbo.MTCars
 EXEC sp_execute_external_script
         @language = N'R'
-        , @script = N'car_speed <- cars;'
+        , @script = N'MTCars <- mtcars;'
         , @input_data_1 = N''
-        , @output_data_1_name = N'car_speed'
+        , @output_data_1_name = N'MTCars';
 ```
 
 + Some people like to use temporary tables, but be aware that some R clients disconnect sessions between batches.
 
 + Many datasets, small and large, are included with the R runtime. To get a list of datasets installed with R,  type `library(help="datasets")` from an R command prompt.
 
-## Create a regression model
+## Create a model
 
-The car speed data contains two columns, both numeric, `dist` and`speed`. There are multiple observations of some speeds. From this data, you will create a linear regression model that describes some relationship between car speed and the distance required to stop a car.
+The car speed data contains two columns, both numeric, horsepower (`hp`) and weight (`wt`). From this data, you will create a generalized linear model (GLM) that estimates the probability that a vehicle has been fitted with a manual transmission.
 
-The requirements of a linear model are simple:
-
-+ Define a formula that describes the relationship between the dependent variable `speed` and the independent variable `distance`
-
-+ Provide input data to use in training the model
-
-> [!TIP]
-> If you need a refresher on linear models, we recommend this tutorial, which describes the process of fitting a model using rxLinMod: [Fitting Linear Models](https://docs.microsoft.com/r-server/r/how-to-revoscaler-linear-model)
-
-To actually build the model, you define the formula inside your R code, and pass the data as an input parameter.
+To build the model, you define the formula inside your R code, and pass the data as an input parameter.
 
 ```sql
-DROP PROCEDURE IF EXISTS generate_linear_model;
+DROP PROCEDURE IF EXISTS generate_GLM;
 GO
-CREATE PROCEDURE generate_linear_model
+CREATE PROCEDURE generate_GLM
 AS
 BEGIN
     EXEC sp_execute_external_script
     @language = N'R'
-    , @script = N'lrmodel <- rxLinMod(formula = distance ~ speed, data = CarsData);
-        trained_model <- data.frame(payload = as.raw(serialize(lrmodel, connection=NULL)));'
-    , @input_data_1 = N'SELECT [speed], [distance] FROM CarSpeed'
-    , @input_data_1_name = N'CarsData'
+    , @script = N'carsModel <- glm(formula = am ~ hp + wt, data = MTCarsData, family = binomial);
+        trained_model <- data.frame(payload = as.raw(serialize(carsModel, connection=NULL)));'
+    , @input_data_1 = N'SELECT hp, wt, am FROM MTCars'
+    , @input_data_1_name = N'MTCarsData'
     , @output_data_1_name = N'trained_model'
-    WITH RESULT SETS ((model varbinary(max)));
+    WITH RESULT SETS ((model VARBINARY(max)));
 END;
 GO
 ```
 
-+ The first argument to rxLinMod is the *formula* parameter, which defines distance as dependent on speed.
-+ The input data is stored in the variable `CarsData`, which is populated by the SQL query. If you don't assign a specific name to your input data, the default variable name would be _InputDataSet_.
++ The first argument to `glm` is the *formula* parameter, which defines `am` as dependent on `hp + wt`.
++ The input data is stored in the variable `MTCarsData`, which is populated by the SQL query. If you don't assign a specific name to your input data, the default variable name would be _InputDataSet_.
 
-## Create a table for storing the model
+## Create a table for the model
 
-Next, store the model so you can retrain or use it for prediction. The output of an R package that creates a model is usually a **binary object**. Therefore, the table where you store the model must provide a column of **varbinary** type.
+Next, store the model so you can retrain or use it for prediction. The output of an R package that creates a model is usually a **binary object**. Therefore, the table where you store the model must provide a column of **varbinary(max)** type.
 
 ```sql
-CREATE TABLE stopping_distance_models (
-	model_name varchar(30) not null default('default model') primary key,
-	model varbinary(max) not null);
+CREATE TABLE GLM_models (
+    model_name varchar(30) not null default('default model') primary key,
+    model varbinary(max) not null
+);
 ```
 
 ## Save the model
@@ -88,8 +97,8 @@ CREATE TABLE stopping_distance_models (
 To save the model, run the following Transact-SQL statement to call the stored procedure, generate the model, and save it to a table.
 
 ```sql
-INSERT INTO stopping_distance_models (model)
-EXEC generate_linear_model;
+INSERT INTO GLM_models(model)
+EXEC generate_GLM;
 ```
 
 Note that if you run this code a second time, you get this error:
@@ -101,49 +110,10 @@ Violation of PRIMARY KEY constraint...Cannot insert duplicate key in object dbo.
 One option for avoiding this error is to update the name for each new model. For example, you could change the name to something more descriptive, and include the model type, the day you created it, and so forth.
 
 ```sql
-UPDATE stopping_distance_models
-SET model_name = 'rxLinMod ' + format(getdate(), 'yyyy.MM.HH.mm', 'en-gb')
+UPDATE GLM_models
+SET model_name = 'GLM_' + format(getdate(), 'yyyy.MM.HH.mm', 'en-gb')
 WHERE model_name = 'default model'
 ```
-
-## Output additional variables
-
-Generally, the output of R from the stored procedure [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) is limited to a single data frame. (This limitation might be removed in future.)
-
-However, you can return outputs of other types, such as scalars, in addition to the data frame.
-
-For example, suppose you want to train a model but immediately view a table of coefficients from the model. You could create the table of coefficients as the main result set, and output the trained model in a SQL variable. You could immediately re-use the model by calling the variable, or you could save the model to a table as shown here.
-
-```sql
-DECLARE @model varbinary(max), @modelname varchar(30)
-EXEC sp_execute_external_script
-    @language = N'R'
-    , @script = N'
-        speedmodel <- rxLinMod(distance ~ speed, CarsData)
-        modelbin <- serialize(speedmodel, NULL)
-        OutputDataSet <- data.frame(coefficients(speedmodel));'
-    , @input_data_1 = N'SELECT [speed], [distance] FROM CarSpeed'
-    , @input_data_1_name = N'CarsData'
-    , @params = N'@modelbin varbinary(max) OUTPUT'
-    , @modelbin = @model OUTPUT
-    WITH RESULT SETS (([Coefficient] float not null));
-
--- Save the generated model
-INSERT INTO [dbo].[stopping_distance_models] (model_name, model)
-VALUES ('latest model', @model)
-```
-
-**Results**
-
-![rslq_basictut_coefficients](media/rslq-basictut-coefficients.PNG)
-
-### Summary
-
-Remember these rules for working with SQL parameters and R variables in `sp_execute_external_script`:
-
-+ All SQL parameters mapped to R script must be listed by name in the _\@params_ argument.
-+ To output one of these parameters, add the OUTPUT keyword in the _\@params_ list.
-+ After listing the mapped parameters, provide the mapping, line by line, of SQL parameters to R variables, immediately after the _\@params_ list.
 
 ## Next steps
 

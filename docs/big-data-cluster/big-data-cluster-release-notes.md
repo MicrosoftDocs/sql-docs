@@ -29,7 +29,6 @@ The following sections describe the new features and known issues for big data c
 
 ### What's in the CTP 2.2 release?
 
-- Use SparkR from Azure Data Studio on a big data cluster.
 - Cluster Admin Portal accessed with `/portal` (**https://\<ip-address\>:30777/portal**).
 - Master pool service name changed from `service-master-pool-lb` and `service-master-pool-nodeport` to `endpoint-master-pool`.
 - New version of **mssqlctl** and updated images.

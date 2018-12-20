@@ -4,10 +4,10 @@ description: In this quickstart, learn how to write an R function that uses SQL 
 ms.prod: sql
 ms.technology: machine-learning
 
-ms.date: 10/08/2018  
+ms.date: 12/14/2018  
 ms.topic: quickstart
-author: HeidiSteen
-ms.author: heidist
+author: dphansen
+ms.author: davidph
 manager: cgronlun
 ---
 # Quickstart: Using R functions with SQL Server data
@@ -19,7 +19,7 @@ In this quickstart, you'll embed R mathematical and utility functions in a SQL S
 
 ## Prerequisites
 
-A previous quickstart, [Hello World in R and SQL](rtsql-using-r-code-in-transact-sql-quickstart.md), provides information and links for setting up the R environment required for this quickstart.
+A previous quickstart, [Verify R exists in SQL Server](rtsql-verify-r-exists.md), provides information and links for setting up the R environment required for this quickstart.
 
 ## Create a stored procedure to generate random numbers
 

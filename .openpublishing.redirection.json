@@ -61,6 +61,11 @@
             "redirect_document_id": false
         }, 
         {
+            "source_path": "docs/advanced-analytics/tutorials/rtsql-predict-and-plot-from-model.md",
+            "redirect_url": "/sql/advanced-analytics/tutorials/rtsql-predict-from-model",
+            "redirect_document_id": false
+        }, 
+        {
             "source_path": "docs/advanced-analytics/tutorials/sqldev-py2-import-data-to-sql-server-using-powershell.md",
             "redirect_url": "/sql/advanced-analytics/tutorials/demo-data-nyctaxi-in-sql",
             "redirect_document_id": false

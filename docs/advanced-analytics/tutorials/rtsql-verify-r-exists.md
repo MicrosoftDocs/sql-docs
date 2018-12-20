@@ -33,38 +33,13 @@ This exercise requires access to an instance of SQL Server with one of the follo
 
 + A tool for running SQL queries. You can connect to the SQL Database and run the R scripts any database management or query tool, as long as it can connect to a SQL Database, and run a T-SQL query or stored procedure. This quickstart uses [SQL Server Management Studio (SSMS)](https://docs.microsoft.com/sql/ssms/sql-server-management-studio-ssms).
 
-
 ## Verify R exists
 
-You can confirm that Machine Learning Services (with R) is enabled for your SQL Server instance. Follow the steps below.
+You can confirm that Machine Learning Services (with R) is enabled for your SQL Server instance and which version of R is installed. Follow the steps below.
 
 1. Open SQL Server Management Studio and connect to your SQL Server instance.
 
-1. Run the code below. 
-
-    ```sql
-    EXECUTE sp_execute_external_script
-    @language =N'R',
-    @script=N'print(31 + 11)';
-    GO
-    ```
-    If all is well, you should see a result message like this one.
-
-    ```text
-    STDOUT message(s) from external script: 
-    42
-    ```
-
-If you get any errors from this query, rule out any installation issues. Post-install configuration is required to enable use of external code libraries. See [Install SQL Server 2017 Machine Learning Services](../install/sql-machine-learning-services-windows-install.md) or [Install SQL Server 2016 R Services](../install/sql-r-services-windows-install.md).Likewise, make sure that the Launchpad service is running. 
-
-Depending on your environment, you might need to enable the R worker accounts to connect to SQL Server, install additional network libraries, enable remote code execution, or restart the instance after everything is configured. For more information, see
-[R Services Installation and Upgrade FAQ](../r/upgrade-and-installation-faq-sql-server-r-services.md)
-
-## Check R version
-
-If you would like to see which version of R is installed in your SQL Server instance, do the following:
-
-1. Run the script below on your SQL database.
+2. Run the code below. 
 
     ```SQL
     EXECUTE sp_execute_external_script
@@ -73,7 +48,7 @@ If you would like to see which version of R is installed in your SQL Server inst
     GO
     ```
 
-2. The R `print` function returns the version to the **Messages** window. In the example output below, you can see that SQL Server in this case have R version 3.3.3 installed.
+3. The R `print` function returns the version to the **Messages** window. In the example output below, you can see that SQL Server in this case have R version 3.3.3 installed.
 
     **Results**
 
@@ -93,6 +68,10 @@ If you would like to see which version of R is installed in your SQL Server inst
     version.string R version 3.3.3 (2017-03-06)
     nickname       Another Canoe               
     ```
+
+If you get any errors from this query, rule out any installation issues. Post-install configuration is required to enable use of external code libraries. See [Install SQL Server 2017 Machine Learning Services](../install/sql-machine-learning-services-windows-install.md) or [Install SQL Server 2016 R Services](../install/sql-r-services-windows-install.md). Likewise, make sure that the Launchpad service is running.
+
+Depending on your environment, you might need to enable the R worker accounts to connect to SQL Server, install additional network libraries, enable remote code execution, or restart the instance after everything is configured. For more information, see [R Services Installation and Upgrade FAQ](../r/upgrade-and-installation-faq-sql-server-r-services.md).
 
 ## List R packages
 

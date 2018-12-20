@@ -69,7 +69,7 @@ This section walks you through each part.
     
    If you want to manually create a specific directory for sharing, you can add a line like the following:
 
-    ```
+    ```R
     dir.create(sqlShareDir, recursive = TRUE)
     ```
 

@@ -6,6 +6,7 @@ ms.prod: sql
 ms.reviewer: ""
 ms.technology: performance
 ms.topic: conceptual
+helpviewer_keywords: 
   - "query plans [SQL Server]"
   - "execution plans [SQL Server]"
   - "query profiling"

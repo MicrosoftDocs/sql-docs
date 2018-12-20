@@ -171,7 +171,7 @@ On disconnected servers, extra steps are required. You must obtain the cumulativ
 
 2. Close any open R or Python sessions and stop any processes still running on the system.
 
-3. If you enabled operationalization to run as web nodes and compute nodes for web service deployments, back up the **AppSettings.json** file. 
+3. If you enabled operationalization to run as web nodes and compute nodes for web service deployments, back up the **AppSettings.json** file as a precaution. Applying SQL Server 2017 CU13 or later revises this file, so you might want a backup copy to preserve the original version.
 
 4. On an internet connected device, click the cumulative update link for your version of SQL Server.
 

@@ -4,7 +4,7 @@ description: "C/C++ using ODBC retrieves the SQL Server numeric data type by usi
 editor: ""
 ms.prod: sql
 ms.technology:
-ms.devlang: "C++"
+ms.devlang: cpp
 ms.topic: conceptual
 ms.custom: ""
 ms.date: "07/13/2017"

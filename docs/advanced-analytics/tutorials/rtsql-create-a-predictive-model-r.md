@@ -94,7 +94,7 @@ EXEC generate_linear_model;
 
 Note that if you run this code a second time, you get this error:
 
-```
+```sql
 Violation of PRIMARY KEY constraint...Cannot insert duplicate key in object dbo.stopping_distance_models
 ```
 

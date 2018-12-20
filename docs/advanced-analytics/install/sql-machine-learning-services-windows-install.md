@@ -122,7 +122,7 @@ This step requires a server restart. If you are about to enable script execution
   
 2. Connect to the instance where you installed Machine Learning Services, click **New Query** to open a query window, and run the following command:
 
-   ```SQL
+   ```sql
    sp_configure
    ```
 
@@ -130,7 +130,7 @@ This step requires a server restart. If you are about to enable script execution
     
 3.  To enable the external scripting feature, run the following statement:
     
-    ```SQL
+    ```sql
     EXEC sp_configure  'external scripts enabled', 1
     RECONFIGURE WITH OVERRIDE
     ```
@@ -153,7 +153,7 @@ Use the following steps to verify that all components used to launch external sc
 
 1. In SQL Server Management Studio, open a new query window, and run the following command:
     
-    ```SQL
+    ```sql
     EXEC sp_configure  'external scripts enabled'
     ```
 
@@ -167,7 +167,7 @@ Use the following steps to verify that all components used to launch external sc
     
     + For R
     
-    ```SQL
+    ```sql
     EXEC sp_execute_external_script  @language =N'R',
     @script=N'
 	OutputDataSet <- InputDataSet;
@@ -179,7 +179,7 @@ Use the following steps to verify that all components used to launch external sc
 
     + For Python
     
-    ```SQL
+    ```sql
     EXEC sp_execute_external_script  @language =N'Python',
     @script=N'
 	OutputDataSet = InputDataSet;

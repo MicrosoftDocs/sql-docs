@@ -63,7 +63,7 @@ To enable your Windows credentials to be passed securely from a script that's in
 
 2. Run the following script. Be sure to edit the user group name, if you changed the default, and the computer and instance names.
 
-    ```SQL
+    ```sql
     USE [master]
     GO
     

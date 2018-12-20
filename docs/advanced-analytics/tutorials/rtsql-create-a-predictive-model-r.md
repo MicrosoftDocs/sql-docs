@@ -4,7 +4,7 @@ description: In this quickstart, learn how to build a model in R using SQL Serve
 ms.prod: sql
 ms.technology: machine-learning
 
-ms.date: 12/18/2018  
+ms.date: 12/20/2018  
 ms.topic: quickstart
 author: dphansen
 ms.author: davidph

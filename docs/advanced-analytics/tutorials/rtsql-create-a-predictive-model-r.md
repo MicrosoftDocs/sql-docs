@@ -78,12 +78,12 @@ END;
 GO
 ```
 
-+ The first argument to rxLinMod is the *formula* parameter, which defines distance as dependent on speed.
-+ The input data is stored in the variable `CarsData`, which is populated by the SQL query. If you don't assign a specific name to your input data, the default variable name would be _InputDataSet_.
++ The first argument to `glm` is the *formula* parameter, which defines `am` as dependent on `hp + wt`.
++ The input data is stored in the variable `MTCarsData`, which is populated by the SQL query. If you don't assign a specific name to your input data, the default variable name would be _InputDataSet_.
 
 ## Create a table for the model
 
-Next, store the model so you can retrain or use it for prediction. The output of an R package that creates a model is usually a **binary object**. Therefore, the table where you store the model must provide a column of **varbinary** type.
+Next, store the model so you can retrain or use it for prediction. The output of an R package that creates a model is usually a **binary object**. Therefore, the table where you store the model must provide a column of **varbinary(max)** type.
 
 ```sql
 CREATE TABLE GLM_models (

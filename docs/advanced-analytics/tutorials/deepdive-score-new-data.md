@@ -117,11 +117,11 @@ After the new table has been created, compute and display a histogram of the 10,
     ```R
     minMaxVals <- rxImport(sqlMinMax)
     minMaxVals <- as.vector(unlist(minMaxVals))
-  
     ```
-     **Results**
+
+    **Results**
      
-    ``` 
+    ```R
     > minMaxVals
      
     [1] -23.970256   9.786345

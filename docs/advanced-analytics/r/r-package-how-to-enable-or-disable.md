@@ -58,7 +58,7 @@ To enable or disable package management on SQL Server, use the command-line util
 
     You can also run a query on sys.database_principals such as the following:
 
-    ```SQL
+    ```sql
     SELECT pr.principal_id, pr.name, pr.type_desc,   
         pr.authentication_type_desc, pe.state_desc,   
         pe.permission_name, s.name + '.' + o.name AS ObjectName  

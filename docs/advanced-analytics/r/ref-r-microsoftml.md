@@ -139,7 +139,7 @@ The **MicrosoftML** package for R is installed "out-of-the-box" in SQL Server 20
 
 The package is not loaded by default. As a first step, load the **MicrosoftML** package, and then load **RevoScaleR** if you need to use remote compute contexts or related connectivity or data source objects. Then, reference the individual functions you need.
 
-```r
+```R
 library(microsoftml);
 library(RevoScaleR);
 logisticRegression(args);

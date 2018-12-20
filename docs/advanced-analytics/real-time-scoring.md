@@ -173,7 +173,7 @@ You call sp\_rxPredict as you would any other stored procedure. In the current r
 
 Because the binary format is the same that is used by the PREDICT function, you can use the models and data table from the preceding example.
 
-```SQL
+```sql
 DECLARE @irismodel varbinary(max)
 SELECT @irismodel = [native_model_object] from [ml_models]
 WHERE model_name = 'iris.dtree' 

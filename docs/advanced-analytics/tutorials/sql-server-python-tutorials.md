@@ -1,6 +1,6 @@
 ---
-title: SQL Server Python tutorial overview - SQL Server Machine Learning
-description: Introduction to the Python tutorials for SQL Server in-database analytics.
+title: SQL Server 2017 Python tutorial overview - SQL Server Machine Learning
+description: Introduction to the Python tutorials for SQL Server 2017 in-database analytics.
 ms.prod: sql
 ms.technology: machine-learning
 
@@ -10,7 +10,7 @@ author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
 ---
-# SQL Server Python tutorials
+# SQL Server 2017 Python tutorials
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 This article describes the Python tutorials for in-database analytics on [SQL Server 2017 Machine Learning Services](../install/sql-machine-learning-services-windows-install.md). 

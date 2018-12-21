@@ -38,7 +38,7 @@ manager: craigg
     > [!NOTE]  
     >  You might have both 32 bit and 64 bit options available.  
   
-2.  In **SQL Server Configuration Manager**, expand **SQL Server Network Configuration**, and then click **Protocols for** *\<InstanceName>*.  
+2.  In **SQL Server Configuration Manager**, expand **SQL Server Network Configuration**, and then click **Protocols for** _\<InstanceName>_.  
   
      The default instance (an unnamed instance) is listed as **MSSQLSERVER**. If you installed a named instance, the name you provided is listed. [!INCLUDE[ssExpressEd11](../includes/ssexpressed11-md.md)] installs as **SQLEXPRESS**, unless you changed the name during setup.  
   

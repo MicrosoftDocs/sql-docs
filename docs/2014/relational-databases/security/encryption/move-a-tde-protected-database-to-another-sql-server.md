@@ -246,7 +246,7 @@ manager: craigg
      **Remove**  
      Removes the selected file from the **Databases to attach** grid.  
   
-     **"** *<database_name>* **" database details**  
+     **"** _<database_name>_ **" database details**  
      Displays the names of the files to be attached. To verify or change the pathname of a file, click the **Browse** button (**...**).  
   
     > [!NOTE]  

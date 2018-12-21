@@ -28,7 +28,7 @@ manager: craigg
 ## Creating a Non-XML Format File  
  To use a **bcp** command to create a format file, specify the **format** argument and use **nul** instead of a data-file path. The **format** option also requires the **-f** option, such as:  
   
- **bcp** *table_or_view* **format** nul **-f***format_file_name*  
+ **bcp** _table_or_view_ **format** nul **-f***format_file_name*  
   
 > [!NOTE]  
 >  To distinguish a non-XML format file, we recommend that you use .fmt as the file name extension, for example, MyTable.fmt.  
@@ -55,7 +55,7 @@ manager: craigg
   
 |Qualifiers|Description|  
 |----------------|-----------------|  
-|**formatnul-f** *format_file*|Specifies the non-XML format file.|  
+|**formatnul-f** _format_file_|Specifies the non-XML format file.|  
 |**-n**|Specifies native data types.|  
 |**-T**|Specifies that the **bcp** utility connects to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] with a trusted connection using integrated security. If **-T** is not specified, you must specify **-U** and **-P** to successfully log in.|  
   
@@ -85,7 +85,7 @@ bcp AdventureWorks2012.HumanResources.Department format nul -T -n -f Department-
   
 |Qualifiers|Description|  
 |----------------|-----------------|  
-|**formatnul-f** *format_file*|Specifies a non-XML format file.|  
+|**formatnul-f** _format_file_|Specifies a non-XML format file.|  
 |**-c**|Specifies character data.|  
 |**-T**|Specifies that the **bcp** utility connects to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] with a trusted connection using integrated security. If **-T** is not specified, you must specify **-U** and **-P** to successfully log in.|  
   
@@ -129,7 +129,7 @@ bcp AdventureWorks2012.HumanResources.Department format nul -T -w -f Department-
 ## Creating an XML Format File  
  To use a **bcp** command to create a format file, specify the **format** argument and use **nul** instead of a data-file path. The **format** option always requires the **-f** option, and to create an XML format file, you must also specify the **-x** option, such as:  
   
- **bcp** *table_or_view* **format nul-f** *format_file_name* **-x**  
+ **bcp** _table_or_view_ **format nul-f** _format_file_name_ **-x**  
   
 > [!NOTE]  
 >  To distinguish an XML format file, we recommend that you use .xml as the file name extension, for example, MyTable.xml.  
@@ -155,7 +155,7 @@ bcp AdventureWorks2012.HumanResources.Department format nul -T -w -f Department-
   
 |Qualifiers|Description|  
 |----------------|-----------------|  
-|**formatnul-f** *format_file* **-x**|Specifies the XML format file.|  
+|**formatnul-f** _format_file_ **-x**|Specifies the XML format file.|  
 |**-c**|Specifies character data.|  
 |**-t** `,`|Specifies a comma (**,**) as the field terminator.<br /><br /> Note: If the data file uses the default field terminator (`\t`), the **-t** switch is unnecessary.|  
 |**-T**|Specifies that the **bcp** utility connects to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] with a trusted connection using integrated security. If **-T** is not specified, you must specify **-U** and **-P** to successfully log in.|  
@@ -195,7 +195,7 @@ bcp AdventureWorks2012.HumanResources.Department format nul -c -x -f Department-
   
 |Qualifiers|Description|  
 |----------------|-----------------|  
-|**formatnul-f** *format_file* **-x**|Specifies the XML format file.|  
+|**formatnul-f** _format_file_ **-x**|Specifies the XML format file.|  
 |**-n**|Specifies native data types.|  
 |**-T**|Specifies that the **bcp** utility connects to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] with a trusted connection using integrated security. If **-T** is not specified, you must specify **-U** and **-P** to successfully log in.|  
   

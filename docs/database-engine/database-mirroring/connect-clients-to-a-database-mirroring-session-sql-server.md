@@ -163,7 +163,7 @@ Server=123.34.45.56,4724;
   
  The retry time is calculated using the following formula:  
   
- *RetryTime* **=** *PreviousRetryTime* **+(** 0.08 **\**__LoginTimeout__*)**  
+ _RetryTime_ **=** _PreviousRetryTime_ **+(** 0.08 **&#42;**_LoginTimeout_**)**  
   
  Where *PreviousRetryTime* is initially 0.  
   
@@ -171,10 +171,10 @@ Server=123.34.45.56,4724;
   
 |Round|*RetryTime* calculation|Retry time per attempt|  
 |-----------|-----------------------------|----------------------------|  
-|1|0 **+(**0.08 **\**_ 15_*)**|1.2 seconds|  
-|2|1.2 **+(**0.08 **\**_ 15_*)**|2.4 seconds|  
-|3|2.4 **+(**0.08 **\**_ 15_*)**|3.6 seconds|  
-|4|3.6 **+(**0.08 **\**_ 15_*)**|4.8 seconds|  
+|1|0 **+(**0.08 **&#42;** 15**)**|1.2 seconds|  
+|2|1.2 **+(**0.08 **&#42;** 15**)**|2.4 seconds|  
+|3|2.4 **+(**0.08 **&#42;** 15**)**|3.6 seconds|  
+|4|3.6 **+(**0.08 **&#42;** 15**)**|4.8 seconds|  
   
  The following figure illustrates these retry times for successive connection attempts, each of which times out.  
   

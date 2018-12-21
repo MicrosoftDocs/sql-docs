@@ -93,11 +93,11 @@ The following tables list the [!INCLUDE[tsql](../../includes/tsql-md.md)] date a
 |Function|Syntax|Return value|Return data type|Determinism|  
 |---|---|---|---|---|
 |[DATEFROMPARTS](../../t-sql/functions/datefromparts-transact-sql.md)|DATEFROMPARTS  ( *year*, *month*, *day* )|Returns a **date** value for the specified year, month, and day.|**date**|Deterministic|  
-|[DATETIME2FROMPARTS](../../t-sql/functions/datetime2fromparts-transact-sql.md)|DATETIME2FROMPARTS  ( *year*, *month*, *day*, *hour*, *minute*, *seconds*, *fractions*, *precision*)|Returns a **datetime2** value for the specified date and time, with the specified precision.|**datetime2(** *precision* **)**|Deterministic|  
+|[DATETIME2FROMPARTS](../../t-sql/functions/datetime2fromparts-transact-sql.md)|DATETIME2FROMPARTS  ( *year*, *month*, *day*, *hour*, *minute*, *seconds*, *fractions*, *precision*)|Returns a **datetime2** value for the specified date and time, with the specified precision.|**datetime2(** _precision_ **)**|Deterministic|  
 |[DATETIMEFROMPARTS](../../t-sql/functions/datetimefromparts-transact-sql.md)|DATETIMEFROMPARTS  ( *year*, *month*, *day*, *hour*, *minute*, *seconds*, *milliseconds*)|Returns a **datetime** value for the specified date and time.|**datetime**|Deterministic|  
-|[DATETIMEOFFSETFROMPARTS](../../t-sql/functions/datetimeoffsetfromparts-transact-sql.md)|DATETIMEOFFSETFROMPARTS  ( *year*, *month*, *day*, *hour*, *minute*, *seconds*, *fractions*, *hour_offset*, *minute_offset*, *precision*)|Returns a **datetimeoffset** value for the specified date and time, with the specified offsets and precision.|**datetimeoffset(** *precision* **)**|Deterministic|  
+|[DATETIMEOFFSETFROMPARTS](../../t-sql/functions/datetimeoffsetfromparts-transact-sql.md)|DATETIMEOFFSETFROMPARTS  ( *year*, *month*, *day*, *hour*, *minute*, *seconds*, *fractions*, *hour_offset*, *minute_offset*, *precision*)|Returns a **datetimeoffset** value for the specified date and time, with the specified offsets and precision.|**datetimeoffset(** _precision_ **)**|Deterministic|  
 |[SMALLDATETIMEFROMPARTS](../../t-sql/functions/smalldatetimefromparts-transact-sql.md)|SMALLDATETIMEFROMPARTS  ( *year*, *month*, *day*, *hour*, *minute* )|Returns a **smalldatetime** value for the specified date and time.|**smalldatetime**|Deterministic|  
-|[TIMEFROMPARTS](../../t-sql/functions/timefromparts-transact-sql.md)|TIMEFROMPARTS  ( *hour*, *minute*, *seconds*, *fractions*, *precision* )|Returns a **time** value for the specified time, with the specified precision.|**time(** *precision* **)**|Deterministic|  
+|[TIMEFROMPARTS](../../t-sql/functions/timefromparts-transact-sql.md)|TIMEFROMPARTS  ( *hour*, *minute*, *seconds*, *fractions*, *precision* )|Returns a **time** value for the specified time, with the specified precision.|**time(** _precision_ **)**|Deterministic|  
   
 ###  <a name="GetDateandTimeDifference"></a> Functions That Return Date and Time Difference Values
   

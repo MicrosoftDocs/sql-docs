@@ -224,7 +224,7 @@ manager: craigg
   
 -   <a name="VA_Desc"></a> **Virtual Accounts**  
   
-     Virtual accounts (beginning with Windows Server 2008 R2 and Windows 7) are *managed local accounts* that provide the following features to simplify service administration. The virtual account is auto-managed, and the virtual account can access the network in a domain environment. If the default value is used for the service accounts during [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] setup, a virtual account using the instance name as the service name is used, in the format **NT SERVICE\\**_\<SERVICENAME>_. Services that run as virtual accounts access network resources by using the credentials of the computer account in the format *<domain_name>**_\\_**<computer_name>**_$_*.  When specifying a virtual account to start [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], leave the password blank. If the virtual account fails to register the Service Principal Name (SPN), register the SPN manually. For more information on registering a SPN manually, see [Manual SPN Registration](register-a-service-principal-name-for-kerberos-connections.md#Manual).  
+     Virtual accounts (beginning with Windows Server 2008 R2 and Windows 7) are *managed local accounts* that provide the following features to simplify service administration. The virtual account is auto-managed, and the virtual account can access the network in a domain environment. If the default value is used for the service accounts during [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] setup, a virtual account using the instance name as the service name is used, in the format **NT SERVICE\\**_\<SERVICENAME>_. Services that run as virtual accounts access network resources by using the credentials of the computer account in the format _<domain_name>_**\\**_<computer_name>_**$**.  When specifying a virtual account to start [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], leave the password blank. If the virtual account fails to register the Service Principal Name (SPN), register the SPN manually. For more information on registering a SPN manually, see [Manual SPN Registration](register-a-service-principal-name-for-kerberos-connections.md#Manual).  
   
     > [!NOTE]  
     >  Virtual accounts cannot be used for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Failover Cluster Instance, because the virtual account would not have the same SID on each node of the cluster.  
@@ -453,7 +453,7 @@ manager: craigg
  When databases are installed to a network share, the service account must have access to the file location of the user and tempdb databases. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Setup cannot provision access to a network share. The user must provision access to a tempdb location for the service account before running setup. The user must provision access to the user database location before creating the database.  
   
 > [!NOTE]  
->  Virtual accounts cannot be authenticated to a remote location. All virtual accounts use the permission of machine account. Provision the machine account in the format *<domain_name>**_\\_**<computer_name>**_$_*.  
+>  Virtual accounts cannot be authenticated to a remote location. All virtual accounts use the permission of machine account. Provision the machine account in the format _<domain_name>_**\\**_<computer_name>_**$**.  
   
 ###  <a name="Review_additional_considerations"></a> Reviewing Additional Considerations  
  The following table shows the permissions that are required for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] services to provide additional functionality.  
@@ -618,7 +618,7 @@ manager: craigg
   
  <a name="Network_Service"></a> **Network Service Account**  
   
- The Network Service account is a built-in account that has more access to resources and objects than members of the Users group. Services that run as the Network Service account access network resources by using the credentials of the computer account in the format *<domain_name>**_\\_**<computer_name>**_$_*. The actual name of the account is **NT AUTHORITY\NETWORK SERVICE**.  
+ The Network Service account is a built-in account that has more access to resources and objects than members of the Users group. Services that run as the Network Service account access network resources by using the credentials of the computer account in the format _<domain_name>_**\\**_<computer_name>_**$**. The actual name of the account is **NT AUTHORITY\NETWORK SERVICE**.  
   
  <a name="Local_System"></a> **Local System Account**  
   

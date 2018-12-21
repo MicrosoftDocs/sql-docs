@@ -39,7 +39,7 @@ manager: craigg
   
  For each registered database, the following information is displayed:  
   
- *<Database_name>* **(** *\<Status>* **,** *<PRINCIPAL_SERVER>* **->** *<MIRROR_SERVER>* **)**  
+ _<Database_name>_ **(** _\<Status>_ **,** _<PRINCIPAL_SERVER>_ **->** _<MIRROR_SERVER>_ **)**  
   
  *<Database_name>*  
  The name of a mirrored database that is registered with the Database Mirroring Monitor.  
@@ -60,7 +60,7 @@ manager: craigg
   
  *<SYSTEM_NAME>*[**\\**_<instance_name>_]  
   
- where *<SYSTEM_NAME>* is the name of the system on which the server instance resides. For a non-default server instance, the instance name is also displayed: *<SYSTEM_NAME>**_\\_**<instance_name>*.  
+ where *<SYSTEM_NAME>* is the name of the system on which the server instance resides. For a non-default server instance, the instance name is also displayed: _<SYSTEM_NAME>_**\\**_<instance_name>_.  
   
  *<MIRROR_SERVER>*  
  The name of the partner that is currently the mirror server instance. The format is the same as for the principal server.  

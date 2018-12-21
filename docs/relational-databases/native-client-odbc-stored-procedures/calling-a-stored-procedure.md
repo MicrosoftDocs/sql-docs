@@ -44,7 +44,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   
  If the procedure does not have any parameters, the procedure can fail. If a procedure is called without parentheses, the driver does not send any parameter values. For example:  
   
- {**call** *procedure_name*}  
+ {**call** _procedure_name_}  
   
  Literals can be specified for input and input/output parameters in procedure calls. For example, the procedure InsertOrder has five input parameters. The following call to InsertOrder omits the first parameter, provides a literal for the second parameter, and uses a parameter marker for the third, fourth, and fifth parameters. (Parameters are numbered sequentially, beginning with a value of 1.)  
   

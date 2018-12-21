@@ -52,7 +52,7 @@ manager: craigg
   
 5.  In the **Job Properties -**_job_name_ dialog box, under **Select a page**, select **Steps**.  
   
-6.  Click **Edit** to open the **Job Step Properties -***job_step_name* dialog box. For more information on the available options in this dialog box, see [Job Step Properties: New Job Step &#40;General Page&#41;](../../integration-services/general-page-of-integration-services-designers-options.md) and [Job Step Properties: New Job Step &#40;Advanced Page&#41;](job-step-properties-new-job-step-advanced-page.md).  
+6.  Click **Edit** to open the **Job Step Properties -**_job_step_name_ dialog box. For more information on the available options in this dialog box, see [Job Step Properties: New Job Step &#40;General Page&#41;](../../integration-services/general-page-of-integration-services-designers-options.md) and [Job Step Properties: New Job Step &#40;Advanced Page&#41;](job-step-properties-new-job-step-advanced-page.md).  
   
 7.  When finished, click **OK**.  
   

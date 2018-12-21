@@ -63,7 +63,7 @@ manager: craigg
   
      The syntax for a server network address is as follows:  
   
-     TCP**://**\<*system-address>***:**\<*port>*  
+     TCP<strong>://</strong>\<*system-address>*<strong>:</strong>\<*port>*  
   
      where \<*system-address>* is a string that unambiguously identifies the destination computer system, and \<*port>* is the port number used by the mirroring endpoint of the partner server instance. For more information, see [Specify a Server Network Address &#40;Database Mirroring&#41;](specify-a-server-network-address-database-mirroring.md).  
   

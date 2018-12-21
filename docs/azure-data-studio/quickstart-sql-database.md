@@ -22,7 +22,7 @@ To complete this quickstart, you need [!INCLUDE[name-sos](../includes/name-sos-s
 
 - [Install [!INCLUDE[name-sos](../includes/name-sos-short.md)]](download.md)
 
-If you don't have Azure SQL server installed, complete one of the following Azure SQL Database quickstarts. Remember the fully qualified server name and sign in credentials for later steps:
+If you don't have an Azure SQL server, complete one of the following Azure SQL Database quickstarts. Remember the fully qualified server name and sign in credentials for later steps:
 
 - [Create DB - Portal](https://docs.microsoft.com/azure/sql-database/sql-database-get-started-portal)
 - [Create DB - CLI](https://docs.microsoft.com/azure/sql-database/sql-database-get-started-cli)

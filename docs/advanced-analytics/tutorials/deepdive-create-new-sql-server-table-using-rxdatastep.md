@@ -52,7 +52,7 @@ The XDF format is an XML standard developed for high-dimensional data and is the
 
 **Results**
 
-```
+```R
 Var 1: ArrDelay, Type: integer, Low/High: (-86, 1490)
 Var 2: CRSDepTime, Type: numeric, Storage: float32, Low/High: (0.0167, 23.9833)
 Var 3: DayOfWeek 7 factor levels: Monday Tuesday Wednesday Thursday Friday Saturday Sunday

@@ -30,7 +30,7 @@ This step uses a stored procedure to save a trained model to SQL Server. Creatin
 
 Run the following T-SQL code in a query windows in Management Studio to create the stored procedure.
 
-```tsql
+```sql
 USE [NYCTaxi_Sample]
 GO
 

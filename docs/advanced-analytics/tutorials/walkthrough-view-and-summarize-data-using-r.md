@@ -134,7 +134,7 @@ In this section, you'll try out several of the functions provided in [!INCLUDE[r
 
     **Results**
     
-    ```
+    ```R
     Var 1: tipped, Type: integer
     Var 2: fare_amount, Type: numeric
     Var 3: passenger_count, Type: integer

@@ -26,7 +26,7 @@ In general, the *rprof* function works by writing out the call stack to a file, 
 
 To use R profiling in your code, you call this function and specify its parameters, including the name of the location of the log file that will be written. Profiling can be turned on and off in your code. The following syntax illustrates basic usage: 
 
-```r
+```R
 # Specify profiling output file.
 varOutputFile <- "C:/TEMP/run001.log")
 Rprof(varOutputFile)

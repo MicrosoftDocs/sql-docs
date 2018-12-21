@@ -42,7 +42,7 @@ This tutorial requires a database for storing data and code. If you are not an a
   
 **Windows user**
   
-```SQL
+```sql
  -- Create server user based on Windows account
 USE master
 GO
@@ -56,7 +56,7 @@ CREATE USER [<user_name>] FOR LOGIN [<DOMAIN>\<user_name>] WITH DEFAULT_SCHEMA=[
 
 **SQL login**
 
-```SQL
+```sql
 -- Create new SQL login
 USE master
 GO
@@ -74,7 +74,7 @@ This tutorial demonstrates R script and DDL operations, including creating and d
 
 This example assumes a SQL login (DDUser01), but if you created a Windows login, use that instead.
 
-```SQL
+```sql
 USE RevoDeepDive
 GO
 

@@ -122,10 +122,10 @@ manager: craigg
   
 |Platform|Estimating fdhost.exe memory requirements in MB-*F*<sup>1</sup>|Formula for calculating max server memory-*M*<sup>2</sup>|  
 |--------------|---------------------------------------------------------------------|---------------------------------------------------------------|  
-|x86|*F* **=** *Number of crawl ranges* **\*** 50|*M* **=minimum(** *T* **,** 2000**)-*`F`*-** 500|  
-|x64|*F* **=** *Number of crawl ranges* **\*** 10 **\*** 8|*M* **=** *T* **-** *F* **-** 500|  
+|x86|*F* **=** *Number of crawl ranges* **\**_ 50|_M* **=minimum(** *T* **,** 2000**)-*`F`*-** 500|  
+|x64|*F* **=** *Number of crawl ranges* **\**_ 10 _*\*** 8|*M* **=** *T* **-** *F* **-** 500|  
   
- <sup>1</sup> If multiple full populations are in progress, calculate the fdhost.exe memory requirements of each separately, as *F1*, *F2*, and so forth. Then calculate *M* as *T***-** sigma**(***F*i**)**.  
+ <sup>1</sup> If multiple full populations are in progress, calculate the fdhost.exe memory requirements of each separately, as *F1*, *F2*, and so forth. Then calculate *M* as *T***-** sigma**(**_F_i**)**.  
   
  <sup>2</sup> 500 MB is an estimate of the memory required by other processes in the system. If the system is doing additional work, increase this value accordingly.  
   

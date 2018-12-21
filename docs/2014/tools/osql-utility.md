@@ -87,8 +87,8 @@ C:\>osql
  **-E**  
  Uses a trusted connection instead of requesting a password.  
   
- **-S** *server_name*[ **\\***instance_name*]  
- Specifies the instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] to connect to. Specify *server_name* to connect to the default instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] on that server. Specify *server_name***\\***instance_name* to connect to a named instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] on that server. If no server is specified, **osql** connects to the default instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] on the local computer. This option is required when executing **osql** from a remote computer on the network.  
+ **-S** *server_name*[ **\\**_instance_name_]  
+ Specifies the instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] to connect to. Specify *server_name* to connect to the default instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] on that server. Specify *server_name**_\\_**instance_name* to connect to a named instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] on that server. If no server is specified, **osql** connects to the default instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] on the local computer. This option is required when executing **osql** from a remote computer on the network.  
   
  **-H** *wksta_name*  
  Is a workstation name. The workstation name is stored in **sysprocesses.hostname** and is displayed by **sp_who**. If this option is not specified, the current computer name is assumed.  
@@ -247,7 +247,7 @@ osql -E -i titles.qry -o titles.res
 > [!IMPORTANT]  
 >  When possible, use the **-E**option (trusted connection).  
   
- When using **osql** interactively, you can read an operating-system file into the command buffer with **:r***file_name*. This sends the SQL script in *file_name* directly to the server as a single batch.  
+ When using **osql** interactively, you can read an operating-system file into the command buffer with **:r**_file_name_. This sends the SQL script in *file_name* directly to the server as a single batch.  
   
 > [!NOTE]  
 >  When using **osql**, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] treats the batch separator GO, if it appears in a SQL script file, as a syntax error.  

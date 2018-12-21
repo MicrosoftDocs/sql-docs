@@ -67,7 +67,7 @@ manager: craigg
   
 8.  Click **Close**.  
   
-9. On the **File** menu, select **Save***table_name*.  
+9. On the **File** menu, select **Save**_table_name_.  
   
 #### To move an existing index to a different filegroup in Object Explorer  
   

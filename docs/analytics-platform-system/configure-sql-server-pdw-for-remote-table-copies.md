@@ -19,7 +19,7 @@ This topic describes one of the configuration steps for configuring remote table
 ## Before You Begin  
 In order to configure SQL Server PDW to use remote table copy, you must:  
   
--   Have a Analytics Platform System administrator account with the ability to log directly into the ***appliance_domain*-AD01** and ***appliance_domain*-AD02** nodes.  
+-   Have a Analytics Platform System administrator account with the ability to log directly into the ***appliance_domain*-AD01** and **_appliance_domain_-AD02** nodes.  
   
 -   Know the host name or IP name of the destination server.  
   

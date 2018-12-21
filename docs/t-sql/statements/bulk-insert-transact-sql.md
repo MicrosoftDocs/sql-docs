@@ -114,7 +114,7 @@ FROM 'data/orders.dat'
 WITH ( DATA_SOURCE = 'MyAzureBlobStorageAccount');
 ```
 
- BATCHSIZE **=***batch_size*  
+ BATCHSIZE **=**_batch_size_  
  Specifies the number of rows in a batch. Each batch is copied to the server as one transaction. If this fails, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] commits or rolls back the transaction for every batch. By default, all data in the specified data file is one batch. For information about performance considerations, see "Remarks," later in this topic.  
   
  CHECK_CONSTRAINTS  
@@ -130,7 +130,7 @@ WITH ( DATA_SOURCE = 'MyAzureBlobStorageAccount');
 > [!NOTE]  
 >  The MAXERRORS option does not apply to constraint checking.  
   
- CODEPAGE **=** { **'**ACP**'** | **'**OEM**'** | **'**RAW**'** | **'***code_page***'** }  
+ CODEPAGE **=** { **'**ACP**'** | **'**OEM**'** | **'**RAW**'** | **'**_code_page_**'** }  
  Specifies the code page of the data in the data file. CODEPAGE is relevant only if the data contains **char**, **varchar**, or **text** columns with character values greater than **127** or less than **32**.  
 
 ```sql
@@ -162,7 +162,7 @@ WITH ( CODEPAGE=65001 ); -- UTF-8 encoding
 |**widechar**|Unicode characters.<br /><br /> For more information, see [Use Unicode Character Format to Import or Export Data &#40;SQL Server&#41;](../../relational-databases/import-export/use-unicode-character-format-to-import-or-export-data-sql-server.md).|  
 |**widenative**|Native (database) data types, except in **char**, **varchar**, and **text** columns, in which data is stored as Unicode. Create the **widenative** data file by bulk importing data from [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] using the **bcp** utility.<br /><br /> The **widenative** value offers a higher performance alternative to **widechar**. If the data file contains [!INCLUDE[vcpransi](../../includes/vcpransi-md.md)] extended characters, specify **widenative**.<br /><br /> For more information, see [Use Unicode Native Format to Import or Export Data &#40;SQL Server&#41;](../../relational-databases/import-export/use-unicode-native-format-to-import-or-export-data-sql-server.md).|  
   
-  ERRORFILE **='***file_name***'**  
+  ERRORFILE **='**_file_name_**'**  
  Specifies the file used to collect rows that have formatting errors and cannot be converted to an OLE DB rowset. These rows are copied into this error file from the data file "as is."  
   
  The error file is created when the command is executed. An error occurs if the file already exists. Additionally, a control file that has the extension .ERROR.txt is created. This references each row in the error file and provides error diagnostics. As soon as the errors have been corrected, the data can be loaded.   
@@ -173,7 +173,7 @@ Beginning with [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)], the `erro
 **Applies to:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.
 Is a named external data source pointing to the Azure Blob storage location of the error file that will contain errors found during the import. The external data source must be created using the `TYPE = BLOB_STORAGE` option added in [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1. For more information, see [CREATE EXTERNAL DATA SOURCE](../../t-sql/statements/create-external-data-source-transact-sql.md).
  
- FIRSTROW **=***first_row*  
+ FIRSTROW **=**_first_row_  
  Specifies the number of the first row to load. The default is the first row in the specified data file. FIRSTROW is 1-based.  
   
 > [!NOTE]  
@@ -199,7 +199,7 @@ Is a named external data source pointing to the Azure Blob storage location of t
  KILOBYTES_PER_BATCH **=** *kilobytes_per_batch*  
  Specifies the approximate number of kilobytes (KB) of data per batch as *kilobytes_per_batch*. By default, KILOBYTES_PER_BATCH is unknown. For information about performance considerations, see "Remarks," later in this topic.  
   
- LASTROW**=***last_row*  
+ LASTROW**=**_last_row_  
  Specifies the number of the last row to load. The default is 0, which indicates the last row in the specified data file.  
   
  MAXERRORS **=** *max_errors*  
@@ -214,7 +214,7 @@ Is a named external data source pointing to the Azure Blob storage location of t
  *n*  
  Is a placeholder that indicates that multiple columns can be specified.  
   
- ROWS_PER_BATCH **=***rows_per_batch*  
+ ROWS_PER_BATCH **=**_rows_per_batch_  
  Indicates the approximate number of rows of data in the data file.  
   
  By default, all the data in the data file is sent to the server as a single transaction, and the number of rows in the batch is unknown to the query optimizer. If you specify ROWS_PER_BATCH (with a value > 0) the server uses this value to optimize the bulk-import operation. The value specified for ROWS_PER_BATCH should approximately the same as the actual number of rows. For information about performance considerations, see "Remarks," later in this topic.  
@@ -241,7 +241,7 @@ FIELDQUOTE **=** 'field_quote'
 **Applies to:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.   
 Specifies a character that will be used as the quote character in the CSV file. If not specified, the quote character (") will be used as the quote character as defined in the [RFC 4180](https://tools.ietf.org/html/rfc4180) standard.
   
- FORMATFILE **='***format_file_path***'**  
+ FORMATFILE **='**_format_file_path_**'**  
  Specifies the full path of a format file. A format file describes the data file that contains stored responses created by using the **bcp** utility on the same table or view. The format file should be used if:  
   
 -   The data file contains greater or fewer columns than the table or view.  
@@ -255,10 +255,10 @@ Specifies a character that will be used as the quote character in the CSV file. 
 **Applies to:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.   
 Beginning with [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1, the format_file_path can be in Azure blob storage.
 
- FIELDTERMINATOR **='***field_terminator***'**  
+ FIELDTERMINATOR **='**_field_terminator_**'**  
  Specifies the field terminator to be used for **char** and **widechar** data files. The default field terminator is \t (tab character). For more information, see [Specify Field and Row Terminators &#40;SQL Server&#41;](../../relational-databases/import-export/specify-field-and-row-terminators-sql-server.md).  
 
- ROWTERMINATOR **='***row_terminator***'**  
+ ROWTERMINATOR **='**_row_terminator_**'**  
  Specifies the row terminator to be used for **char** and **widechar** data files. The default row terminator is **\r\n** (newline character).  For more information, see [Specify Field and Row Terminators &#40;SQL Server&#41;](../../relational-databases/import-export/specify-field-and-row-terminators-sql-server.md).  
 
   

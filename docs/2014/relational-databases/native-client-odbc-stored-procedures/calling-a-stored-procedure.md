@@ -27,7 +27,7 @@ manager: craigg
   
  The ODBC CALL escape sequence for calling a procedure is:  
   
- {[**?=**]**call***procedure_name*[([*parameter*][**,**[*parameter*]]...)]}  
+ {[**?=**]**call**_procedure_name_[([*parameter*][**,**[*parameter*]]...)]}  
   
  where *procedure_name* specifies the name of a procedure and *parameter* specifies a procedure parameter. Named parameters are only supported in statements using the ODBC CALL escape sequence.  
   
@@ -35,7 +35,7 @@ manager: craigg
   
  Input and input/output parameters can be omitted from procedure calls. If a procedure is called with parentheses but without any parameters, the driver instructs the data source to use the default value for the first parameter. For example:  
   
- {**call** *procedure_name***( )**}  
+ {**call** _procedure_name_**( )**}  
   
  If the procedure does not have any parameters, the procedure can fail. If a procedure is called without parentheses, the driver does not send any parameter values. For example:  
   

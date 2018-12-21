@@ -149,7 +149,7 @@ manager: craigg
  Type the e-mail address that will be used for replies to e-mail messages sent from this account. The reply e-mail is optional. For example, replies to an account for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent may go to the database administrator, danw@Adventure-Works.com.  
   
  **Server name**  
- Type the name or IP address of the SMTP server the account uses to send e-mail. Typically this is in a format similar to **smtp.***<your_company>***.com**. For help with this, consult your mail administrator.  
+ Type the name or IP address of the SMTP server the account uses to send e-mail. Typically this is in a format similar to **smtp.**_<your_company>_**.com**. For help with this, consult your mail administrator.  
   
  **Port number**  
  Type the port number of the SMTP server for this account. Most SMTP servers use port 25.  

@@ -57,7 +57,7 @@ manager: craigg
   
 4.  Right-click the operator that you want to enable or disable and select **Properties**, then click the **General** tab.  
   
-5.  In the *operator_name***Properties** dialog box, select or clear the **Enabled** check box.  
+5.  In the _operator_name_**Properties** dialog box, select or clear the **Enabled** check box.  
   
 6.  Click **OK**.  
   

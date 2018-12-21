@@ -132,7 +132,7 @@ CURRENT
   
 Designates that the current database in use should be altered.  
   
-MODIFY NAME **=***new_database_name*  
+MODIFY NAME **=**_new_database_name_  
 Renames the database with the name specified as *new_database_name*.  
   
 COLLATE *collation_name*  
@@ -372,7 +372,7 @@ CURRENT
 
 Designates that the current database in use should be altered.  
   
-MODIFY NAME **=***new_database_name*  
+MODIFY NAME **=**_new_database_name_  
 
 Renames the database with the name specified as *new_database_name*. The following example changes the name of a database `db1` to `db2`:   
 

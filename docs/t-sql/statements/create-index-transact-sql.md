@@ -695,7 +695,7 @@ INSERT INTO t1 VALUES (1, 0);
   
 -   New index options can only be specified by using WITH (**_option\_name_ = ON | OFF**).  
 -   Options cannot be specified by using both the backward compatible and new syntax in the same statement. For example, specifying WITH (**DROP_EXISTING, ONLINE = ON**) causes the statement to fail.  
--   When you create an XML index, the options must be specified by using WITH (***option_name*= ON | OFF**).  
+-   When you create an XML index, the options must be specified by using WITH (**_option_name_= ON | OFF**).  
   
 ## DROP_EXISTING Clause  
  You can use the DROP_EXISTING clause to rebuild the index, add or drop columns, modify options, modify column sort order, or change the partition scheme or filegroup.  

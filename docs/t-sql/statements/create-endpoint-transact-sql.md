@@ -139,7 +139,7 @@ FOR DATABASE_MIRRORING (
   
  The following arguments apply only to the TCP protocol option.  
   
- LISTENER_PORT **=***listenerPort*  
+ LISTENER_PORT **=**_listenerPort_  
  Specifies the port number listened to for connections by the service broker TCP/IP protocol. By convention, 4022 is used but any number between 1024 and 32767 is valid.  
   
  LISTENER_IP **=** ALL | **(***4-part-ip* **)** | **(** "*ip_address_v6*" **)**  
@@ -225,7 +225,7 @@ FOR DATABASE_MIRRORING (
  DISABLED  
  Discards messages for services located elsewhere. This is the default.  
   
- MESSAGE_FORWARD_SIZE **=***forward_size*  
+ MESSAGE_FORWARD_SIZE **=**_forward_size_  
  Specifies the maximum amount of storage in megabytes to allocate for the endpoint to use when storing messages that are to be forwarded.  
   
  **DATABASE_MIRRORING Options**  

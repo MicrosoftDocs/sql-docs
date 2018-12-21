@@ -170,10 +170,10 @@ manager: craigg
   
 1.  Click **Search**.  
   
-2.  In the **Add Objects** dialog box, select one of the following options: **Specific objects...**, **All objects of the types...**, or **The server***server_name*. [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
+2.  In the **Add Objects** dialog box, select one of the following options: **Specific objects...**, **All objects of the types...**, or **The server**_server_name_. [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
     > [!NOTE]  
-    >  Selecting **The server***server_name* automatically fills the upper grid with all of that servers' securable objects.  
+    >  Selecting **The server**_server_name_ automatically fills the upper grid with all of that servers' securable objects.  
   
 3.  If you select **Specific objects...**:  
   

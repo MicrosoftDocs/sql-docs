@@ -209,7 +209,7 @@ manager: craigg
   
         1.  If you select **Generate a text file report**, select either **Create a new file** or **Append to file**.  
   
-        2.  Depending on the selection above, enter the name and full path of the new file or file to be appended by entering the information in the **Folder** or **File name** boxes. Alternately, click on the ellipsis **(...)** and select the path to the folder or file name from the **Locate Folder -***server_name* or **Locate Database Files -***server_name* dialog boxes.  
+        2.  Depending on the selection above, enter the name and full path of the new file or file to be appended by entering the information in the **Folder** or **File name** boxes. Alternately, click on the ellipsis **(...)** and select the path to the folder or file name from the **Locate Folder -**_server_name_ or **Locate Database Files -***server_name* dialog boxes.  
   
         3.  If you select **Send report to an email recipient**, on the **Agent operator** list, select the recipient of the emailed report.  
   

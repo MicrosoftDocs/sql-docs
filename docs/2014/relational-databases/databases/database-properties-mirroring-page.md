@@ -41,7 +41,7 @@ manager: craigg
   
  The server network address has the following basic syntax:  
   
- TCP**://***fully_qualified_domain_name***:***port*  
+ TCP**://**_fully_qualified_domain_name_**:**_port_  
   
  where  
   

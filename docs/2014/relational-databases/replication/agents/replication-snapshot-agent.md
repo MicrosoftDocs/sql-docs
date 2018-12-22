@@ -190,7 +190,7 @@ manager: craigg
 |**2**|All error messages and progress report messages are printed, which is useful for debugging.|  
 
  **-PrefetchTables** [ **0**| **1**]  
- Optional parameter that specifies if the table objects will be prefetched and cached.  The default behavior is to prefetch certain table properties using SMO component based on an internal calculation.  This parameter can be helpful in scenarions where SMO prefetch operation takes considerable longer to run. If this parameter is not used, this decision is made at runtime based on the percentage of tables that are added as articles to the publication.  
+ Optional parameter that specifies if the table objects will be prefetched and cached.  The default behavior is to prefetch certain table properties using SMO component based on an internal calculation.  This parameter can be helpful in scenario where SMO prefetch operation takes considerable longer to run. If this parameter is not used, this decision is made at runtime based on the percentage of tables that are added as articles to the publication.  
   
 |OutputVerboseLevel value|Description|  
 |------------------------------|-----------------|  

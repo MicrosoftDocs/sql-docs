@@ -1353,7 +1353,8 @@
         href: ./server-properties/olap-properties.md
       - name: Security Properties
         href: ./server-properties/security-properties.md
-      - name: Thread Pool Properties    
+      - name: Thread Pool Properties 
+        href: ./server-properties/thread-pool-properties.md   
     - name: Monitor Analysis Services
       items:
       - name: Monitoring tools

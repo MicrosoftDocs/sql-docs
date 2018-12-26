@@ -1457,7 +1457,7 @@
     - name: Multidimensional model programming
       href: ./multidimensional-models/multidimensional-model-programming.md
     - name: Analysis Management Objects (AMO)
-      href: https://docs.microsoft.com/bi-reference/amo/amo-classes-introduction   
+      href: https://docs.microsoft.com/bi-reference/amo/developing-with-analysis-management-objects-amo   
     - name: Analysis Services Scripting Language (ASSL)
       href: ./multidimensional-models/scripting-language-assl/assl-objects-and-object-characteristics.md
     - name: XML for Analysis (XMLA)

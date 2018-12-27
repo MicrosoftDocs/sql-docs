@@ -29,12 +29,12 @@ manager: craigg
  
 |Column name|Data type|Description|  
 |-----------------|---------------|-----------------|  
-|name|**nvarchar(60)**|The name of package. The description is exposed from the package itself. Is not nullable.|  
+|name|**nvarchar(256)**|The name of package. The description is exposed from the package itself. Is not nullable.|  
 |guid|**uniqueidentifier**|The GUID that identifies the package. Is not nullable.|  
-|description|**nvarchar(256)**|The package description. descriptionis set by the package author and is not nullable.|  
+|description|**nvarchar(3072)**|The package description. descriptionis set by the package author and is not nullable.|  
 |capabilities|**int**|Bitmap describing the capabilities of this package. Is nullable.|  
 |capabilities_desc|**nvarchar(256)**|A list of all the capabilities possible for this package. Is nullable.|  
-|module_guid|**uniqueidentifier**|The GUID of the module that exposes this package. Is not nullable.|  
+|module_guid|**nvarchar(60)**|The GUID of the module that exposes this package. Is not nullable.|  
 |module_address|**varbinary(8)**|The base address where the module containing the package is loaded. A single module may expose several packages. Is not nullable.|  
   
 ## Permissions  

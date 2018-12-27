@@ -31,17 +31,17 @@ manager: craigg
   
 |Column name|Data type|Description|  
 |-----------------|---------------|-----------------|  
-|name|**nvarchar(60)**|The name of the column. name is unique within the object. Is not nullable.|  
+|name|**nvarchar(256)**|The name of the column. name is unique within the object. Is not nullable.|  
 |column_id|**int**|The identifier of the column. column_id is unique within the object when used with column_type. Is not nullable.|  
-|object_name|**nvarchar(60)**|The name of the object to which this column belongs. There is a many-to-one relationship with sys.dm_xe_objects.id. Is not nullable.|  
+|object_name|**nvarchar(256)**|The name of the object to which this column belongs. There is a many-to-one relationship with sys.dm_xe_objects.id. Is not nullable.|  
 |object_package_guid|**uniqueidentifier**|The GUID of the package that contains the object. Is not nullable.|  
-|type_name|**nvarchar(60)**|The name of the type for this column. Is not nullable.|  
+|type_name|**nvarchar(256)**|The name of the type for this column. Is not nullable.|  
 |type_package_guid|**uniqueidentifier**|The GUID of the package that contains the column data type. Is not nullable.|  
 |column_type|**nvarchar(60)**|Indicates how this column is used. Is not nullable. column_type can be one of the following:<br /><br /> readonly. The column contains a static value that cannot be changed.<br /><br /> data. The column contains run-time data exposed by the object.<br /><br /> customizable. The column contains a value that can be changed.<br /><br /> Note: Changing this value can modify the behavior of the object.|  
 |column_value|**nvarchar(256)**|Displays static values associated with the object column. Is nullable.|  
 |capabilities|**int**|A bitmap describing the capabilities of the column. Is nullable.|  
-|capabilities_desc|**nvarchar(256)**|A description of this object column's capabilities. This value can be one of the following:<br /><br /> Mandatory. The value must be set when binding the parent object to an event session.<br /><br /> NULL|  
-|description|**nvarchar(256)**|The description of this object column. Is nullable.|  
+|capabilities_desc|**nvarchar(256)**|A description of this object column's capabilities. This value can be one of the following:<br /><br /> Mandatory. The value must be set when binding the parent object to an event session.<br /><br /> Is nullable.|  
+|description|**nvarchar(3072)**|The description of this object column. Is nullable.|  
   
 ## Permissions  
  Requires VIEW SERVER STATE permission on the server.  

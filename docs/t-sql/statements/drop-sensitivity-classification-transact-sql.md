@@ -58,7 +58,7 @@ Is the name of the database column from which to remove the classification. Curr
 
 ## Permissions  
 
-Requires ALTER ANY SENSITIVITY CLASSIFICATION permission. The ALTER ANY SENSITIVITY CLASSIFACTION is implied by the database permission ALTER, or by the server permission CONTROL SERVER.
+Requires ALTER ANY SENSITIVITY CLASSIFICATION permission. The ALTER ANY SENSITIVITY CLASSIFICATION is implied by the database permission ALTER, or by the server permission CONTROL SERVER.
 
 
 ## Examples  

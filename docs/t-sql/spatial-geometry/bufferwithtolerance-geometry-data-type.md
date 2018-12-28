@@ -75,7 +75,7 @@ Returns a geometric object that represents the union of all point values whose d
   
  A negative buffer removes all points within the given distance of the boundary of the **geometry** instance.  
   
- The error between the theorectical and computed buffer is max(tolerance, extents \* 1.E-7) where tolerance is the value of the *tolerance* parameter. For more information on extents, see [geometry Data Type Method Reference](https://msdn.microsoft.com/library/d88e632b-6b2f-4466-a15f-9fbef1a347a7).  
+ The error between the theoretical and computed buffer is max(tolerance, extents \* 1.E-7) where tolerance is the value of the *tolerance* parameter. For more information on extents, see [geometry Data Type Method Reference](https://msdn.microsoft.com/library/d88e632b-6b2f-4466-a15f-9fbef1a347a7).  
   
 ## Examples  
  The following example creates a `Point` instance and uses `BufferWithTolerance()` to obtain a rough buffer around it.  

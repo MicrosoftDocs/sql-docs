@@ -126,7 +126,7 @@ DBCC FREEPROCCACHE can be cancelled during execution.
   
 ## Limitations and Restrictions for [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
 DBCC FREEPROCCACHE can not run within a transaction.
-DBCC FREEPROCCAHCE is not supported in an EXPLAIN statement.
+DBCC FREEPROCCACHE is not supported in an EXPLAIN statement.
   
 ## Metadata for [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
 A new row is added to the sys.pdw_exec_requests system view when DBCC FREEPROCCACHE is run.

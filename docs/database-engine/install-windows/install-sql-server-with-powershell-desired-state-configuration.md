@@ -1,6 +1,6 @@
 ---
 title: "Install SQL Server with PowerShell Desired State Configuration | Microsoft Docs"
-description: "Learn how to install SQL Server using PowerShell Desired State Configuration (DSC)."
+description: "Learn how to install SQL Server by using PowerShell Desired State Configuration (DSC)."
 ms.custom: ""
 ms.date: "10/26/2018"
 ms.devlang: PowerShell
@@ -15,17 +15,22 @@ monikerRange: ">=sql-server-2016||=sqlallproducts-allversions"
 
 # Install SQL Server with PowerShell Desired State Configuration
 
-How many times have you clicked through the SQL Server installation interface just clicking the same old buttons, entering the same old information, not giving it much of a second thought? Then the installation finishes and the realization of "I forgot to specify the DBA group in the sysadmin role" hits. Now you have to spend precious time dropping into single-user mode, adding the appropriate users or groups, bringing SQL back up in multi-user mode, and testing. What's worse is now the confidence of the entire installation is shaken. "What else did I forget?" I for one have been in that situation more than once.
+How many times have you gone through the SQL Server installation interface just by selecting the same old buttons, entering the same old information, and not giving it a second thought? Then the installation finishes, and the realization of "I forgot to specify the DBA group in the **sysadmin** role" hits. Now you have to spend precious time:
+* Dropping into single-user mode.
+* Adding the appropriate users or groups.
+* Bringing SQL back up in multiuser mode.
+* Testing. 
+What's worse is now the confidence of the entire installation is shaken. "What else did I forget?" you might ask yourself.
 
-Enter [PowerShell Desired State Configuration (DSC)](https://docs.microsoft.com/powershell/dsc/overview). Using DSC I can build one configuration template that can be reused over hundreds and thousands of servers. Depending on the build, I may have to tweak a few of the setup parameters, however that's not a big deal because I can still keep all of the standard settings in place. The beautiful thing is it eliminates the possibility that will forget to enter an important parameter after spending a sleepless night caring for my kids.
+Read about [PowerShell Desired State Configuration (DSC)](https://docs.microsoft.com/powershell/dsc/overview). By using DSC, you can build one configuration template that can be reused over hundreds and thousands of servers. Depending on the build, you might have to tweak a few of the setup parameters. But that's not a big issue because you can still keep all of the standard settings in place. It eliminates the possibility that you'll forget to enter an important parameter.
 
-In this article, I will explore the initial setup of a standalone instance of SQL Server 2017 on Windows Server 2016 using the SqlServerDsc DSC resource. Some prior knowledge of DSC will be helpful as I will not explore the how DSC works.
+In this article, we explore the initial setup of a standalone instance of SQL Server 2017 on Windows Server 2016 by using the **SqlServerDsc** DSC resource. Some prior knowledge of DSC is helpful as we won't explore how DSC works.
 
 The following items are required for this walkthrough:
 
-- A machine running Windows Server 2016
-- SQL Server 2017 installation media
-- The SqlServerDsc DSC resource (version 10.0.0.0 is the current release at the time of this writing)
+- A machine running Windows Server 2016.
+- SQL Server 2017 installation media.
+- The SqlServerDsc DSC resource (version 10.0.0.0 is the current release at the time of this writing).
 
 ## Prerequisites
 

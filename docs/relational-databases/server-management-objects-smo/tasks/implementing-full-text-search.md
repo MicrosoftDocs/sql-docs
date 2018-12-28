@@ -68,7 +68,7 @@ Public Class A
       Dim fti As FullTextIndex = Nothing  
       fti = New FullTextIndex(tb)  
   
-      ' Define a FullTextIndexColumn object variable by supplying the parent index and column name arguements in the constructor.  
+      ' Define a FullTextIndexColumn object variable by supplying the parent index and column name arguments in the constructor.  
       Dim ftic As FullTextIndexColumn = Nothing  
       ftic = New FullTextIndexColumn(fti, "Name")  
   
@@ -128,7 +128,7 @@ public class A {
       FullTextIndex fti = default(FullTextIndex);  
       fti = new FullTextIndex(tb);  
   
-      // Define a FullTextIndexColumn object variable by supplying the parent index and column name arguements in the constructor.  
+      // Define a FullTextIndexColumn object variable by supplying the parent index and column name arguments in the constructor.  
       FullTextIndexColumn ftic = default(FullTextIndexColumn);  
       ftic = new FullTextIndexColumn(fti, "Name");  
   

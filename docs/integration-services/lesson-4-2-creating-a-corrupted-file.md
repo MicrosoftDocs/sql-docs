@@ -16,7 +16,7 @@ manager: craigg
 
 To demonstrate the configuration and handling of transformation errors, you'll need a sample flat file that when processed causes a component to fail.  
   
-In this task, you'll create a copy of an existing sample flat file. You'll then open the file in Notepad and edit the **CurrencyID** column to contain an erroneous value, which will fail the lookup. When the corrupted file is processed, the lookup failure will cause the Currency Key Lookup transformation to fail and therefore fail the rest of the package. After you have created the corrupted sample file, you will run the package to view the package failure.  
+In this task, you'll create a copy of an existing sample flat file. You'll then open the file in Notepad and edit the **CurrencyID** column to contain an erroneous value, which will fail the lookup. When the corrupted file is processed, the lookup failure will cause the Currency Key Lookup transformation to fail and therefore fail the rest of the package. After you've created the corrupted sample file, you'll run the package to view the package failure.  
   
 ## Create a corrupted sample flat file  
   

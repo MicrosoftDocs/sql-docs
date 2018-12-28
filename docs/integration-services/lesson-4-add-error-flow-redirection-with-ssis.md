@@ -13,13 +13,13 @@ ms.author: "douglasl"
 manager: craigg
 ---
 # Lesson 4: Add Error Flow Redirection with SSIS
-To handle errors that may occur in the transformation process, [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] gives you the ability to decide on a per-component and per-column basis how to handle data that cannot be transformed. You can choose to ignore a failure in certain columns, redirect the entire failed row, or just fail the component. By default, all components in [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] are configured to fail when errors occur. The failed component in turn causes the package to fail and processing then stops.  
+To handle errors that may occur in the transformation process, [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] lets you decide on a per-component and per-column basis how to handle data that can't be transformed. You can choose to ignore a failure in certain columns, redirect the entire failed row, or just fail the component. By default, all components in [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] are configured to fail when errors occur. The failed component in turn causes the package to fail and processing then stops.  
   
-Rather than letting failures stop package execution, you can configure and handle potential processing errors as they occur within the transformation. You can ignore failures, to ensure your package runs successfully, or you can redirect the failed row to another processing path where the data and the error can be persisted, examined, or reprocessed at a later time.  
+Rather than letting failures stop package execution, you can configure and handle potential processing errors as they occur within the transformation. You can ignore failures altogether so your package always runs successfully. Alternatively, you can redirect the failed row to another processing path where the data and the error can then be persisted, examined, or reprocessed.  
   
-In this lesson, you'll create a copy of the package that you developed in [Lesson 3: Add logging with SSIS](../integration-services/lesson-3-add-logging-with-ssis.md). Working with this new package, you'll create a corrupted version of one of the sample data files. The corrupted file will force a processing error to occur when you run the package.  
+In this lesson, you'll create a copy of the package that you developed in [Lesson 3: Add logging with SSIS](../integration-services/lesson-3-add-logging-with-ssis.md). Working with this new package, you'll create a corrupted version of one of the sample data files. The corrupted file will cause a processing error to occur when you run the package.  
   
-To handle the error data, you'll add and configure a Flat File destination that writes to a file any rows that fail to locate a lookup value in the Lookup Currency Key transformation.  
+To handle the error data, you'll add and configure a Flat File destination that writes any rows that fail the Lookup Currency Key lookup to an error output file.  
   
 Before the error data is written to the file, you'll include a Script component that gets error descriptions. You'll then reconfigure the Lookup Currency Key transformation to redirect any data that could not be processed to the Script transformation.  
   

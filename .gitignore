@@ -7,3 +7,9 @@ _themes.MSDN.Modern/
 _themes.VS.Modern/
 
 .openpublishing.buildcore.ps1
+
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json

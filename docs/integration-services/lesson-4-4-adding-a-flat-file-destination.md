@@ -1,7 +1,7 @@
 ---
-title: "Step 4: Adding a Flat File Destination | Microsoft Docs"
+title: "Step 4: Add a Flat File destination | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/01/2017"
+ms.date: "12/27/2018"
 ms.prod: sql
 ms.prod_service: "integration-services"
 ms.reviewer: ""
@@ -12,10 +12,11 @@ author: "douglaslMS"
 ms.author: "douglasl"
 manager: craigg
 ---
-# Lesson 4-4 - Adding a Flat File Destination
-The error output of the Lookup Currency Key transformation redirects to the Script transformation any data rows that failed the lookup operation. To enhance information about the errors that occurred, the Script transformation runs a script that gets the description of errors.  
+# Lesson 4-4 - Add a Flat File destination
+
+The error output of the Lookup Currency Key transformation redirects any data rows that failed the lookup to the Script transformation operation. To provide more information about the errors that occurred, the Script transformation runs a script that gets each error description.  
   
-In this task, you will save all this information about the failed rows to a delimited file for later processing. To save the failed rows, you must add and configure a Flat File connection manager for the text file that will contain the error data and a Flat File destination. By setting properties on the Flat File connection manager that the Flat File destination uses, you can specify how the Flat File destination formats and writes the text file. For more information, see [Flat File Connection Manager](../integration-services/connection-manager/flat-file-connection-manager.md) and [Flat File Destination](../integration-services/data-flow/flat-file-destination.md).  
+In this task, you'll save all this information about the failed rows to a delimited file for later processing. To save the failed rows, you'll add and configure a Flat File connection manager for the text file that will contain the error data and a Flat File destination. By setting properties on the Flat File connection manager that the Flat File destination uses, you can specify how the Flat File destination formats and writes the text file. For more information, see [Flat File Connection Manager](../integration-services/connection-manager/flat-file-connection-manager.md) and [Flat File Destination](../integration-services/data-flow/flat-file-destination.md).  
   
 ### To add and configure a Flat File destination  
   

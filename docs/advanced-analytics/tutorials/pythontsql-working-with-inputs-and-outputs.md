@@ -45,7 +45,7 @@ SELECT * FROM PythonTestData
 
 **Results**
 
-![Contents of the PythonTestData table](./media/select-pythonestdata.png)
+![Contents of the PythonTestData table](./media/select-pythontestdata.png)
 
 ## Inputs and outputs
 

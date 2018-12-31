@@ -69,7 +69,7 @@
     items:
     - name: Verify Python exists in SQL Server 
       href: tutorials/pythontsql-verify-python-exists.md
-    - name: "Hello world" Python script in SQL Server 
+    - name: Hello world Python script in SQL Server 
       href: tutorials/pythontsql-using-python-code-in-transact-sql.md
     - name: Handle inputs and outputs
       href: tutorials/pythontsql-working-with-inputs-and-outputs.md

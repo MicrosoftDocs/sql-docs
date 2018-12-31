@@ -40,7 +40,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
 3.  The start and end point have the same X and Y coordinates.  
   
     > [!NOTE]  
-    >  Z and M values are ignored.  
+    > Z and M values are ignored.  
   
 The following example shows accepted **CurvePolygon** instances.  
   
@@ -166,7 +166,7 @@ IF @g2.STIsValid() = 1
 SELECT @g1.STIsValid() AS G1, @g2.STIsValid() AS G2;  
 ```  
   
- Both @g1 and @g2 use the same exterior bounding ring: a circle with a radius of 5 and they both use a square for an interior ring.  However, the instance @g1 is valid, but the instance @g2 is invalid.  The reason that @g2 is invalid is that the interior ring splits the interior space bounded by the exterior ring into four separate regions.  The following drawing shows what occurred:  
+ Both `@g1` and `@g2` use the same exterior bounding ring: a circle with a radius of 5 and they both use a square for an interior ring.  However, the instance `@g1` is valid, but the instance `@g2` is invalid. The reason that @g2 is invalid is that the interior ring splits the interior space bounded by the exterior ring into four separate regions. The following drawing shows what occurred:  
   
 ## See Also  
  [Polygon](../../relational-databases/spatial/polygon.md)   

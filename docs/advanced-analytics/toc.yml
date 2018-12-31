@@ -67,8 +67,16 @@
       href: tutorials/rtsql-predict-from-model.md
   - name: Python
     items:
-    - name: Run Python using T-SQL
-      href: tutorials/run-python-using-t-sql.md
+    - name: Verify Python exists in SQL Server 
+      href: tutorials/pythontsql-verify-python-exists.md
+    - name: "Hello world" Python script in SQL Server 
+      href: tutorials/pythontsql-using-python-code-in-transact-sql.md
+    - name: Handle inputs and outputs
+      href: tutorials/pythontsql-working-with-inputs-and-outputs.md
+    - name: Python data structures in SQL Server
+      href: tutorials/pythontsql-python-data-structures-in-sql-server.md
+    - name: Train and use your first model
+      href: tutorials/train-score-using-python-in-tsql.md 
 - name: Tutorials
   href: tutorials/machine-learning-services-tutorials.md
   items:
@@ -83,8 +91,6 @@
   - name: Python
     href: tutorials/sql-server-python-tutorials.md
     items:
-    - name: Train and use your first model
-      href: tutorials/train-score-using-python-in-tsql.md 
     - name: Create a Python model using revoscalepy
       href: tutorials/use-python-revoscalepy-to-create-model.md  
     - name: Learn in-database analytics

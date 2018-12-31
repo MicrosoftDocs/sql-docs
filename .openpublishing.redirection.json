@@ -71,6 +71,11 @@
             "redirect_document_id": false
         }, 
         {
+            "source_path": "docs/advanced-analytics/tutorials/run-python-using-t-sql.md",
+            "redirect_url": "/sql/advanced-analytics/tutorials/pythontsql-run-python-using-t-sql",
+            "redirect_document_id": false
+        }, 
+        {
             "source_path": "docs/advanced-analytics/r/configuration-sql-server-r-services.md",
             "redirect_url": "/sql/advanced-analytics/r/managing-and-monitoring-r-solutions",
             "redirect_document_id": false

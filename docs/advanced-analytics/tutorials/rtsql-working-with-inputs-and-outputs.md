@@ -13,7 +13,13 @@ manager: cgronlun
 # Quickstart: Handle inputs and outputs using R in SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
+This quickstart shows how to handle inputs and outputs when using R in SQL Server Machine Learning Services or R Services.
+
 When you want to run R code in SQL Server, you must wrap R script in a stored procedure. You can write one, or pass R script to [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md). This system stored procedure is used to start the R runtime in the context of SQL Server, which passes data to R, manages R user sessions securely, and returns any results to the client.
+
+By default, [sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql) accepts a single input dataset, which typically you supply in the form of a valid SQL query. Other types of input can be passed as SQL variables.
+
+The stored procedure returns a single R data frame as output, but you can also output scalars and models as variables. For example, you can output a trained model as a binary variable and pass that to a T-SQL INSERT statement, to write that model to a table. You can also generate plots (in binary format) or scalars (individual values, such as the date and time, the time elapsed to train the model, and so forth).
 
 ## Prerequisites
 
@@ -43,11 +49,7 @@ SELECT * FROM RTestData
 
 ## Inputs and outputs
 
-By default, [sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql) accepts a single input dataset, which typically you supply in the form of a valid SQL query. Other types of input can be passed as SQL variables.
-
-The stored procedure returns a single R data frame as output, but you can also output scalars and models as variables. For example, you can output a trained model as a binary variable and pass that to a T-SQL INSERT statement, to write that model to a table. You can also generate plots (in binary format) or scalars (individual values, such as the date and time, the time elapsed to train the model, and so forth).
-
-For now, let's look at just the default input and output variables of sp_execute_external_script: `InputDataSet` and `OutputDataSet`.
+Let's look at the default input and output variables of sp_execute_external_script: `InputDataSet` and `OutputDataSet`.
 
 1. You can get the data from the table as input to your R script. Run the statement below. It gets the data from the table, makes a round trip through the R runtime, and returns the values with the column name *NewColName*.
 
@@ -73,7 +75,7 @@ For now, let's look at just the default input and output variables of sp_execute
     EXECUTE sp_execute_external_script
       @language = N'R'
       , @script = N' SQL_out <- SQL_in;'
-      , @input_data_1 = N' SELECT 12 as Col;'
+      , @input_data_1 = N'SELECT 12 as Col;'
       , @input_data_1_name  = N'SQL_in'
       , @output_data_1_name =  N'SQL_out'
       WITH RESULT SETS (([NewColName] INT NOT NULL));
@@ -85,7 +87,7 @@ For now, let's look at just the default input and output variables of sp_execute
 
     Only one input dataset can be passed as a parameter, and you can return only one dataset. However, you can call other datasets from inside your R code and you can return outputs of other types in addition to the dataset. You can also add the OUTPUT keyword to any parameter to have it returned with the results. 
 
-    The `WITH RESULT SETS` statement defines the schema for the data which is used in SQL Database. You need to provide SQL compatible data types for each column you return from R. You can use the schema definition to provide new column names too as you do not need to use the column names from the R data frame.
+    The `WITH RESULT SETS` statement defines the schema for the data which is used in SQL Server. You need to provide SQL compatible data types for each column you return from R. You can use the schema definition to provide new column names too as you do not need to use the column names from the R data frame.
 
 3. You can also generate values using the R script and leave the input query string in _@input_data_1_ blank.
 
@@ -102,7 +104,7 @@ For now, let's look at just the default input and output variables of sp_execute
 
     ![Query results using @script as input](./media/r-data-generated-output.png)
 
-# Next steps
+## Next steps
 
 Examine some of the problems that you might encounter when passing data between R and SQL Server, such as implicit conversions and differences in tabular data between R and SQL.
 

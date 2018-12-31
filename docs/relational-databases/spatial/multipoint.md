@@ -36,7 +36,7 @@ DECLARE @g geometry;
 SET @g = geometry::STMPointFromText('MULTIPOINT((2 3), (7 8 9.5))', 23);  
 ```  
   
-### #xample C.
+### Example C.
 The following example uses the method `STGeometryN()` to retrieve a description of the first point in the collection.  
   
 ```sql  

@@ -241,7 +241,7 @@ Views are treated just like tables. Use a `SELECT` statement to access a view.
 The following statement creates a stored procedure name `pr_Names`, accepts an input parameter named `@VarPrice` of data type `money`. The stored procedure prints the statement `Products less than` concatenated with the input parameter that is changed from the `money` data type into a `varchar(10)` character data type. Then, the procedure executes a `SELECT` statement on the view, passing the input parameter as part of the `WHERE` clause. This returns all products that cost less than the input parameter value.  
   
   ```sql  
-  CREATE PROCEDURE pr_Names @VarPrice money  --here @VarPrice is being Declared with money as datatype
+  CREATE PROCEDURE pr_Names @VarPrice money
      AS  
      BEGIN  
         -- The print statement returns text to the user  

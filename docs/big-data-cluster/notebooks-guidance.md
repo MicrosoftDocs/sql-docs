@@ -36,7 +36,7 @@ In Azure Data Studio (preview), press F1, and click **New Connection** and you
 
 ## Browse HDFS
 
-Once you connect, you will be able to browse your HDFS folder. WebHDFS is started when the deployment is completed, and you will be able to **Refresh**, add **New Directory**, **Upload** files, and **Delete**.
+Once you connect, you will be able to browse your HDFS folder. SQL Server starts WebHDFS is started when the deployment is completed. With WebHDFS, you can **Refresh**, add **New Directory**, **Upload** files, and **Delete**.
 
 ![image2](media/notebooks-guidance/image2.png)
 
@@ -61,9 +61,9 @@ There are multiple ways to launch a new notebook.
 
   ![image5](media/notebooks-guidance/image5.png)
 
-This opens an unsaved `Notebook-0.ipynb` file.
+  A new file named `Notebook-0.ipynb` opens.
 
-![image6](media/notebooks-guidance/image6.png)
+  ![image6](media/notebooks-guidance/image6.png)
 
 When you open the notebook from the command pallet, the notebook opens as `Untitled-0.ipynb`.
 
@@ -73,17 +73,17 @@ The Notebook Installation supports PySpark and Spark, Spark Magic kernels, which
 
 ![image7](media/notebooks-guidance/image7.png)
 
-When you select one of these kernels, we will install that kernel in the virtual environment and you can start writing code in the supported language.
+When you select one of these kernels, the installation configures that kernel in the virtual environment and you can start writing code in the supported language.
 
 |Kernel|Description
 |:-----|:-----
-|PySpark3 and PySpark Kernel|For writing Python code using Spark compute from the cluster.
-|Spark Kernel|For writing Scala and R code using Spark compute from the cluster.
-|Python Kernel|For writing Python code for local development.
+|PySpark3 and PySpark Kernel| Write Python code using Spark compute from the cluster.
+|Spark Kernel|Write Scala and R code using Spark compute from the cluster.
+|Python Kernel|Write Python code for local development.
 
-`Attach to` provides the context for the Kernel to attach. When you are connected to the SQL Server big data cluster end point the default `Attach to` is that end point of the cluster.
+`Attach to` provides the context for the Kernel to attach. When you are connected to the SQL Server big data cluster end point, the default `Attach to` is that end point of the cluster.
 
-When you are not connected to the SQL Server big data cluster end point the default Kernel is Python and `Attach to` is `localhost`.
+When you are not connected to the SQL Server big data cluster end point, the default Kernel is Python and `Attach to` is `localhost`.
 
 ## Hello world in different contexts
 
@@ -115,7 +115,7 @@ You can also view the "Cell Options" when you click on the options icon below �
 
 ### Spark kernel | R language
 
-Choose the Spark | R in the dropdown for the kernels and in the cell type/paste in the code and click Run to see the following output.
+Choose the Spark | R in the dropdown for the kernels. In the cell, type or paste in the code. Click **Run** to see the following output.
 
 ![image13](media/notebooks-guidance/image13.png)
 
@@ -131,7 +131,7 @@ Add a new text cell by clicking the **+Text** command in the toolbar.
 
 ![image15](media/notebooks-guidance/image15.png)
 
-Double click inside the text cell to change to edit view 
+Double-click inside the text cell to change to edit view 
 
 ![image16](media/notebooks-guidance/image16.png)
 
@@ -143,7 +143,7 @@ Now type markdown and you will see the preview at the same time
 
 ![image18](media/notebooks-guidance/image18.png)
 
-Click **Run** and you should see the Spark Application being started and this will create the Spark session as **spark** and will define the **HelloWorld** object.
+Click **Run**. The Spark application starts creates the Spark session as **spark** and defines the **HelloWorld** object.
 
 The Notebook should look similar to the following image.
 

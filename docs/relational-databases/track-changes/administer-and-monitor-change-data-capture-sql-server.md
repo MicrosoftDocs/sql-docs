@@ -1,6 +1,6 @@
 ---
 title: "Administer and Monitor Change Data Capture (SQL Server) | Microsoft Docs"
-ms.date: "03/14/2017"
+ms.date: "01/02/2019"
 ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
@@ -16,7 +16,7 @@ ms.author: jroth
 manager: craigg
 ---
 # Administer and Monitor Change Data Capture (SQL Server)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
   This topic describes how to administer and monitor change data capture.  
   
 ##  <a name="Capture"></a> Capture Job  

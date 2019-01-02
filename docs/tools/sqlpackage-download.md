@@ -71,7 +71,7 @@ This release of sqlpackage includes a standard Windows installer experience, and
    **Debian:**
 
    ```bash
-   sudo apt-get install libuwind8
+   sudo apt-get install libunwind8
    ```
 
    **Redhat:**

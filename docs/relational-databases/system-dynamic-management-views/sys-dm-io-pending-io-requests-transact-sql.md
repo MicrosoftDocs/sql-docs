@@ -33,14 +33,15 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 |Column name|Data type|Description|  
 |-----------------|---------------|-----------------|  
 |**io_completion_request_address**|**varbinary(8)**|Memory address of the IO request. Is not nullable.|  
-|**io_type**|**varchar(7)**|Type of pending I/O request. Is not nullable.|  
+|**io_type**|**nvarchar(60)**|Type of pending I/O request. Is not nullable.|  
+|**io_pending_ms_ticks**|**bigint**|Internal use only. Is not nullable.| 
 |**io_pending**|**int**|Indicates whether the I/O request is pending or has been completed by Windows. An I/O request can still be pending even when Windows has completed the request, but [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] has not yet performed a context switch in which it would process the I/O request and remove it from this list. Is not nullable.|  
 |**io_completion_routine_address**|**varbinary(8)**|Internal function to call when the I/O request is completed. Is nullable.|  
 |**io_user_data_address**|**varbinary(8)**|Internal use only. Is nullable.|  
 |**scheduler_address**|**varbinary(8)**|Scheduler on which this I/O request was issued. The I/O request will appear on the pending I/O list of the scheduler. For more information, see [sys.dm_os_schedulers &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-schedulers-transact-sql.md). Is not nullable.|  
 |**io_handle**|**varbinary(8)**|File handle of the file that is used in the I/O request. Is nullable.|  
 |**io_offset**|**bigint**|Offset of the I/O request. Is not nullable.|  
-|**io_pending_ms_ticks**|**int**|Internal use only. Is not nullable.|  
+|**io_handle_path**|**nvarchar(256)**| Path of file that is used in the I/O request. Is nullable.|
 |**pdw_node_id**|**int**|**Applies to**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> The identifier for the node that this distribution is on.|  
   
 ## Permissions  

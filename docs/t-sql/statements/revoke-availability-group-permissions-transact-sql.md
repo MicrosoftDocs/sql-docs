@@ -96,7 +96,7 @@ REVOKE [ GRANT OPTION FOR ] permission  [ ,...n ]
 |VIEW DEFINITION|CONTROL|VIEW ANY DEFINITION|  
   
 ## Permissions  
- Requires CONTROL permission on the availability group or ALTER ANY AVAILABILTIY GROUP permission on the server.  
+ Requires CONTROL permission on the availability group or ALTER ANY AVAILABILITY GROUP permission on the server.  
   
 ## Examples  
   

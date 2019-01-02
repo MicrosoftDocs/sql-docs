@@ -86,7 +86,7 @@ DENY permission  [ ,...n ] ON AVAILABILITY GROUP :: availability_group_name
 |VIEW DEFINITION|CONTROL|VIEW ANY DEFINITION|  
   
 ## Permissions  
- Requires CONTROL permission on the availability group or ALTER ANY AVAILABILTIY GROUP permission on the server.  
+ Requires CONTROL permission on the availability group or ALTER ANY AVAILABILITY GROUP permission on the server.  
   
 ## Examples  
   

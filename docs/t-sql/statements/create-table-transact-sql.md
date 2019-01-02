@@ -923,7 +923,7 @@ DATA_COMPRESSION = PAGE ON PARTITIONS (3, 5)
   
  MEMORY_OPTIMIZED  
    
-**Applies to**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]. Azure SQL Database Managed Instance does not support memory optiimized tables. 
+**Applies to**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]. Azure SQL Database Managed Instance does not support memory optimized tables. 
   
  The value  ON indicates that the table is memory optimized. Memory-optimized tables are part of the In-Memory OLTP feature, which is used to optimized the performance of transaction processing. To get started with In-Memory OLTP see [Quick Start 1: In-Memory OLTP Technologies for Faster Transact-SQL Performance](../../relational-databases/in-memory-oltp/survey-of-initial-areas-in-in-memory-oltp.md). For more in-depth information about memory-optimized tables see [Memory-Optimized Tables](../../relational-databases/in-memory-oltp/memory-optimized-tables.md).  
   
@@ -1224,7 +1224,7 @@ SELECT * FROM tempdb.sys.database_files
 |CLR user-defined type|Nullability is determined according to the column definition.|  
 |System-supplied data type|If the system-supplied data type has only one option, it takes precedence. **timestamp** data types must be NOT NULL. When any session settings are set ON by using SET:<br />**ANSI_NULL_DFLT_ON** = ON, NULL is assigned.  <br />**ANSI_NULL_DFLT_OFF** = ON, NOT NULL is assigned.<br /><br /> When any database settings are configured by using ALTER DATABASE:<br />**ANSI_NULL_DEFAULT_ON** = ON, NULL is assigned.  <br />**ANSI_NULL_DEFAULT_OFF** = ON, NOT NULL is assigned.<br /><br /> To view the database setting for ANSI_NULL_DEFAULT, use the **sys.databases** catalog view|  
   
- When neither of the ANSI_NULL_DFLT options is set for the session and the database is set to the default (ANSI_NULL_DEFAULTis OFF), the default of NOT NULL is assigned.  
+ When neither of the ANSI_NULL_DFLT options is set for the session and the database is set to the default (ANSI_NULL_DEFAULT is OFF), the default of NOT NULL is assigned.  
   
  If the column is a computed column, its nullability is always automatically determined by the [!INCLUDE[ssDE](../../includes/ssde-md.md)]. To find out the nullability of this type of column, use the COLUMNPROPERTY function with the **AllowsNull** property.  
   

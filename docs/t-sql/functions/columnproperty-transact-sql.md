@@ -55,7 +55,7 @@ For the *id* argument, the *property* argument specifies the information type th
 |**IsCursorType**|Procedure parameter is of type CURSOR.|1: TRUE<br /><br /> 0: FALSE<br /><br /> NULL: invalid input.|  
 |**IsDeterministic**|Column is deterministic. This property applies only to computed columns and view columns.|1: TRUE<br /><br /> 0: FALSE<br /><br /> NULL: invalid input. Not a computed column or view column.|  
 |**IsFulltextIndexed**|Column is registered for full-text indexing.|1: TRUE<br /><br /> 0: FALSE<br /><br /> NULL: invalid input.|  
-|**IsHidden**|Is column value sysem-generated. Corresponds to **sys.columns.is_hidden**|**Applies to**: [!INCLUDE[ssCurrentLong](../../includes/sscurrent-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> 0: Not hidden<br /><br /> 1: Hidden|  
+|**IsHidden**|Is column value system-generated. Corresponds to **sys.columns.is_hidden**|**Applies to**: [!INCLUDE[ssCurrentLong](../../includes/sscurrent-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> 0: Not hidden<br /><br /> 1: Hidden|  
 |**IsIdentity**|Column uses the IDENTITY property.|1: TRUE<br /><br /> 0: FALSE<br /><br /> NULL: invalid input.|  
 |**IsIdNotForRepl**|Column checks for the IDENTITY_INSERT setting.|1: TRUE<br /><br /> 0: FALSE<br /><br /> NULL: invalid input.|  
 |**IsIndexable**|Column can be indexed.|1: TRUE<br /><br /> 0: FALSE<br /><br /> NULL: invalid input.|  

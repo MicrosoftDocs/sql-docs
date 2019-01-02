@@ -69,7 +69,7 @@ To use any code example that is provided, you will have to choose the programmin
 ```VBNET
 'Declare a DataType object variable and define the data type in the constructor.
 Dim dt As DataType
-'For the decimal data type the following two arguements specify precision, and scale.
+'For the decimal data type the following two arguments specify precision, and scale.
 dt = New DataType(SqlDataType.Decimal, 10, 2)
 ``` 
   
@@ -83,7 +83,7 @@ dt = New DataType(SqlDataType.Decimal, 10, 2)
 {   
 //Declare a DataType object variable and define the data type in the constructor.   
 DataType dt;   
-//For the decimal data type the following two arguements specify precision, and scale.   
+//For the decimal data type the following two arguments specify precision, and scale.   
 dt = new DataType(SqlDataType.Decimal, 10, 2);   
 }  
 ```  

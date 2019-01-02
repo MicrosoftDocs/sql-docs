@@ -1,6 +1,6 @@
 ---
 title: Use the Visual Studio Code mssql extension for SQL Server on Linux | Microsoft Docs
-description: Use the mssql extension for VS Code to edit and run Transact-SQL scripts for SQL Server on Linux.
+description: Use the mssql extension for Visual Studio Code to edit and run Transact-SQL scripts for SQL Server on Linux.
 author: rothja 
 ms.author: jroth 
 manager: craigg
@@ -15,24 +15,24 @@ ms.custom: "sql-linux"
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-This article shows how to use the *mssql* extension for Visual Studio Code (VS Code) to develop SQL Server databases in Linux.
+This article shows how to use the *mssql* extension for Visual Studio Code to develop SQL Server databases in Linux.
 
-## Install and start VS Code
+## Install and start Visual Studio Code
 
 Visual Studio Code is a graphical code editor for Linux, macOS, and Windows that supports extensions. 
 
-1. [Download and install VS Code] on your machine.
+1. [Download and install Visual Studio Code] on your machine.
    
-1. Start VS Code.
+1. Start Visual Studio Code.
    
    >[!NOTE]
-   >If VS Code does not start when you are connected through an xrdp remote desktop session, see [VS Code not working on Ubuntu when connected using XRDP](https://github.com/Microsoft/vscode/issues/3451).
+   >If Visual Studio Code does not start when you are connected through an xrdp remote desktop session, see [VS Code not working on Ubuntu when connected using XRDP](https://github.com/Microsoft/vscode/issues/3451).
 
 ## Install the mssql extension
 
-The [mssql extension for VS Code] lets you connect to a SQL Server, query with Transact-SQL (T-SQL), and view the results.
+The [mssql extension for Visual Studio Code] lets you connect to a SQL Server, query with Transact-SQL (T-SQL), and view the results.
 
-1. In VS Code, select **View** > **Command Palette**, or press **Ctrl**+**Shift**+**P**, or press **F1** to open the **Command Palette**. 
+1. In Visual Studio Code, select **View** > **Command Palette**, or press **Ctrl**+**Shift**+**P**, or press **F1** to open the **Command Palette**. 
    
 1. In the **Command Palette**, select **Extensions: Install Extensions** from the dropdown. 
    
@@ -93,10 +93,10 @@ Follow these steps to create a connection profile and connect to a SQL Server.
       
    1. **Profile Name** (optional): Type a name for the connection profile, such as *localhost profile*. 
    
-   After you select **Enter**, VS Code creates the connection profile and connects to the SQL Server. 
+   After you select **Enter**, Visual Studio Code creates the connection profile and connects to the SQL Server. 
    
    > [!TIP]
-   > If the connection fails, try to diagnose the problem from the error message in the **Output** panel in VS Code. To open the **Output** panel, select **View** > **Output**. Also review the [connection troubleshooting recommendations].
+   > If the connection fails, try to diagnose the problem from the error message in the **Output** panel in Visual Studio Code. To open the **Output** panel, select **View** > **Output**. Also review the [connection troubleshooting recommendations].
    
 1. Verify your connection in the lower status bar.
    
@@ -227,7 +227,7 @@ Follow these steps to create a connection profile and connect to a SQL Server.
    
 1. Specify a file name for the JSON file. 
    
-1. Verify that the JSON file saves and opens in VS Code.
+1. Verify that the JSON file saves and opens in Visual Studio Code.
    
    ![Save as JSON](./media/sql-server-linux-develop-use-vscode/vscode-save-as-json.png)   
 
@@ -239,10 +239,10 @@ If you're new to T-SQL, see [Tutorial: Write Transact-SQL statements] and the [T
 
 For more information on using or contributing to the mssql extension, see the [mssql extension project wiki].
 
-For more information on using VS Code, see the [Visual Studio Code documentation](https://code.visualstudio.com/docs).
+For more information on using Visual Studio Code, see the [Visual Studio Code documentation](https://code.visualstudio.com/docs).
 
-[mssql extension for VS Code]:https://aka.ms/mssql-marketplace
-[Download and install VS Code]:https://code.visualstudio.com/Download
+[mssql extension for Visual Studio Code]:https://aka.ms/mssql-marketplace
+[Download and install Visual Studio Code]:https://code.visualstudio.com/Download
 [.Net Core instructions]:https://www.microsoft.com/net/core
 [Manage connection profiles]:https://github.com/Microsoft/vscode-mssql/wiki/manage-connection-profiles
 [connection troubleshooting recommendations]:./sql-server-linux-troubleshooting-guide.md#connection

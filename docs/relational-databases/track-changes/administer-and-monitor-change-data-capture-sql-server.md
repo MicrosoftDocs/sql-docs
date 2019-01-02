@@ -40,11 +40,11 @@ The `maxscans` parameter specifies the maximum number of scan cycles that are at
 
 The `continuous` parameter controls whether `sp_cdc_scan` relinquishes control in after either draining the log or executing the maximum number of scan cycles (one-shot mode). It also controls whether `sp_cdc_scan` continues to run until explicitly stopped (continuous mode).  
   
-##### One Shot Mode
+##### One-shot Mode
 
 In one-shot mode, the capture job requests `sp_cdc_scan` to perform up to `maxtrans` scans to try to drain the log and return. Any transactions in addition to `maxtrans` that are present in the log will be processed in later scans.  
   
- One shot mode is used in controlled tests, where the volume of transactions to be processed is known, and there are advantages to the fact that the job closes automatically on when it is finished. One shot mode is not recommended for production use. This is because t relies on the job schedule to manage how frequently the scan cycle is run.  
+ One-shot mode is used in controlled tests, where the volume of transactions to be processed is known, and there are advantages to the fact that the job closes automatically on when it is finished. One-shot mode is not recommended for production use. This is because t relies on the job schedule to manage how frequently the scan cycle is run.  
   
  When running in one-shot mode, you can compute an upper bound on expected throughput of the capture job, expressed in transactions per second by using the following computation:  
   
@@ -166,7 +166,7 @@ The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] data collector let
     GO  
     ```  
   
-3. In [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], expand **Management**, and then expand **Data Collection**. Right click **CDC Performance Data Collector**, and then click **Start Data Collection Set**.  
+3. In [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], expand **Management**, and then expand **Data Collection**. Right-click **CDC Performance Data Collector**, and then click **Start Data Collection Set**.  
   
 4. In the data warehouse you configured in step 1, locate the table custom_snapshots.cdc_log_scan_data. This table provides a historical snapshot of data from log scan sessions. This data can be used to analyze latency, throughput, and other performance measures over time.  
   

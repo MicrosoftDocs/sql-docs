@@ -88,7 +88,7 @@ GRANT permission  [ ,...n ] ON AVAILABILITY GROUP :: availability_group_name
  For a chart of all [!INCLUDE[ssDE](../../includes/ssde-md.md)] permissions, see [Database Engine Permission Poster](https://aka.ms/sql-permissions-poster).  
   
 ## Permissions  
- Requires CONTROL permission on the availability group or ALTER ANY AVAILABILTIY GROUP permission on the server.  
+ Requires CONTROL permission on the availability group or ALTER ANY AVAILABILITY GROUP permission on the server.  
   
 ## Examples  
   

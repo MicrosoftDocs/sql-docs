@@ -15,7 +15,7 @@ monikerRange: ">=sql-server-2016||=sqlallproducts-allversions"
 
 # Install SQL Server with PowerShell Desired State Configuration
 
-Have you ever gone through the SQL Server installation interface just by selecting the same buttons, entering the same information, and not giving it a second thought? Then the installation finishes, but you forgot to specify the DBA group in the **sysadmin** role? Now you must do these things:
+Have you ever gone through the SQL Server installation interface just by selecting the same buttons, entering the same information, and not giving it a second thought? The installation finished, but you forgot to specify the DBA group in the **sysadmin** role? Then you had to do these things:
 * Drop into single-user mode.
 * Add the appropriate users or groups.
 * Bring SQL back up in multiuser mode.

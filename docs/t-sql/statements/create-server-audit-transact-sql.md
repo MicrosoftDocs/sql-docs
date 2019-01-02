@@ -154,7 +154,7 @@ Forces the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
 ## Examples  
   
 ### A. Creating a server audit with a file target  
- The following example creates a server audit called `HIPPA_Audit` with a binary file as the target and no options.  
+ The following example creates a server audit called `HIPAA_Audit` with a binary file as the target and no options.  
   
 ```sql  
 CREATE SERVER AUDIT HIPAA_Audit  
@@ -162,7 +162,7 @@ CREATE SERVER AUDIT HIPAA_Audit
 ```  
   
 ### B. Creating a server audit with a Windows Application log target with options  
- The following example creates a server audit called `HIPPA_Audit` with the target set for the Windows Application log. The queue is written every second and shuts down the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] engine on failure.  
+ The following example creates a server audit called `HIPAA_Audit` with the target set for the Windows Application log. The queue is written every second and shuts down the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] engine on failure.  
   
 ```sql  
 CREATE SERVER AUDIT HIPAA_Audit  

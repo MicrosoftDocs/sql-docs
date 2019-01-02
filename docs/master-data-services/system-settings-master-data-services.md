@@ -122,6 +122,11 @@ manager: craigg
 |Configuration Manager Setting|System Setting|Description|  
 |-----------------------------------|--------------------|-----------------|  
 ||**SecurityMemberProcessInterval**|In the [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] **User and Group Permissions** functional area, the frequency, in seconds, that user and group permissions set on the **Hierarchy Members** tab are applied. The default value is **3600** seconds (60 minutes).|  
+
+##  <a name="Performance"></a> Performance Settings  
+|Configuration Manager Setting|System Setting|Description|  
+|-----------------------------------|--------------------|-----------------|  
+|**Enable performance improvement setting**|**PerformanceImprovementEnable**|We default to enable this setting (**Set to 1**) that load permission related page will have a good performance. But in this situation create/modify entities, attributes, users, or groups will have a low performance. To avoid this, you can disable this setting (**Set to 0**). After change this setting. You must run command "**EXEC [mdm].[udpPerformanceToggleSwitch];**" to make sure that the view and data is correct.|  
   
  For more information, see [Immediately Apply Member Permissions &#40;Master Data Services&#41;](../master-data-services/immediately-apply-member-permissions-master-data-services.md).  
   

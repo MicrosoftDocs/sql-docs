@@ -161,7 +161,7 @@ FROM DATABASE_SNAPSHOT = database_snapshot_name
    } = { 'physical_backup_device_name' |  
       @physical_backup_device_name_var }   
 }   
-Note: URL is the format used to specify the location and the file name for the Microsoft Azure Blob. Although Microsoft Azure storage is a service, the implementation is similar to disk and tape to allow for a consistent and seemless restore experince for all the three devices.  
+Note: URL is the format used to specify the location and the file name for the Microsoft Azure Blob. Although Microsoft Azure storage is a service, the implementation is similar to disk and tape to allow for a consistent and seamless restore experience for all the three devices.  
 <files_or_filegroups>::=   
 {   
    FILE = { logical_file_name_in_backup | @logical_file_name_in_backup_var }   

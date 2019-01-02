@@ -1,7 +1,7 @@
 ---
 title: "ORDER BY Clause (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/13/2017"
+ms.date: "12/24/2018"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
@@ -92,7 +92,14 @@ ORDER BY order_by_expression
   
  Multiple sort columns can be specified. Column names must be unique. The sequence of the sort columns in the ORDER BY clause defines the organization of the sorted result set. That is, the result set is sorted by the first column and then that ordered list is sorted by the second column, and so on.  
   
- The column names referenced in the ORDER BY clause must correspond to either a column in the select list or to a column defined in a table specified in the FROM clause without any ambiguities.  
+ The column names referenced in the ORDER BY clause must correspond to either a column or column alias in the select list or to a column defined in a table specified in the FROM clause without any ambiguities. If the ORDER BY clause references a column alias from the select list, the column alias must be used standalone, and not as a part of some expression in ORDER BY clause, for example:
+ 
+```sql
+SELECT SCHEMA_NAME(schema_id) AS SchemaName FROM sys.objects 
+ORDER BY SchemaName; -- correct 
+SELECT SCHEMA_NAME(schema_id) AS SchemaName FROM sys.objects 
+ORDER BY SchemaName + ''; -- wrong
+```
   
  COLLATE *collation_name*  
  Specifies that the ORDER BY operation should be performed according to the collation specified in *collation_name*, and not according to the collation of the column as defined in the table or view. *collation_name* can be either a Windows collation name or a SQL collation name. For more information, see [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md). COLLATE is applicable only for columns of  type **char**, **varchar**, **nchar**, and **nvarchar**.  
@@ -182,7 +189,7 @@ ORDER BY order_by_expression
   
  See the example "Running multiple queries in a single transaction" in the Examples section later in this topic.  
   
- If consistent execution plans are important in your paging solution, consider using the OPTIMIZE FOR query hint for the OFFSET and FETCH parameters. See "Specifying expressions for OFFSET and FETCH values" in the Examples section later in this topic. For more information about OPTIMZE FOR, see [Query Hints &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-query.md).  
+ If consistent execution plans are important in your paging solution, consider using the OPTIMIZE FOR query hint for the OFFSET and FETCH parameters. See "Specifying expressions for OFFSET and FETCH values" in the Examples section later in this topic. For more information about OPTIMIZE FOR, see [Query Hints &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-query.md).  
   
 ## Examples  
   

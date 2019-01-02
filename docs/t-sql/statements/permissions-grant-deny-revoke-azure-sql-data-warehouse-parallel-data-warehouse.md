@@ -231,7 +231,7 @@ REVOKE
   
 -   UPDATE  
   
--   REFRENCES  
+-   REFERENCES  
   
  For a definition of each type of permission, see [Permissions (Database Engine)](https://msdn.microsoft.com/library/ms191291.aspx).  
   

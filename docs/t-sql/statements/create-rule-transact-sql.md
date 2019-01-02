@@ -78,7 +78,7 @@ AS condition_expression
   
  To get a report on a rule, use **sp_help**. To display the text of a rule, execute **sp_helptext** with the rule name as the parameter. To rename a rule, use **sp_rename**.  
   
- A rule must be dropped by using DROP RULE before a new one with the same name is created, and the rule must be unbound byusing **sp_unbindrule** before it is dropped. To unbind a rule from a column, use **sp_unbindrule**.  
+ A rule must be dropped by using DROP RULE before a new one with the same name is created, and the rule must be unbound by using **sp_unbindrule** before it is dropped. To unbind a rule from a column, use **sp_unbindrule**.  
   
  You can bind a new rule to a column or data type without unbinding the previous one; the new rule overrides the previous one. Rules bound to columns always take precedence over rules bound to alias data types. Binding a rule to a column replaces a rule already bound to the alias data type of that column. But binding a rule to a data type does not replace a rule bound to a column of that alias data type. The following table shows the precedence in effect when rules are bound to columns and to alias data types on which rules already exist.  
   

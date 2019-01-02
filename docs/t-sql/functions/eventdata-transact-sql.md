@@ -17,7 +17,7 @@ dev_langs:
 helpviewer_keywords: 
   - "server instance event data [SQL Server]"
   - "event notifications [SQL Server], event status"
-  - "events [SQL Server], status infromation"
+  - "events [SQL Server], status information"
   - "EVENTDATA function"
   - "status information [SQL Server], events"
   - "DDL triggers, returning event data"

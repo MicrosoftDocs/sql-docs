@@ -59,8 +59,9 @@ This release of sqlpackage includes a standard Windows installer experience, and
    ```bash
    cd ~
    mkdir sqlpackage
-   unzip ~/Downloads/sqlpackage-linux-<version string>.zip ~/sqlpackage 
-   echo 'export PATH="$PATH:~/sqlpackage"' >> ~/.bashrc
+   unzip ~/Downloads/sqlpackage-linux-<version string>.zip -d ~/sqlpackage 
+   echo "export PATH=\"\$PATH:$HOME/sqlpackage\"" >> ~/.bashrc
+   chmod a+x ~/sqlpackage/sqlpackage
    source ~/.bashrc
    sqlpackage
    ```

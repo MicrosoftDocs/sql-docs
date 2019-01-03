@@ -140,7 +140,7 @@ END CATCH;
   
 -   When the session is ended by a system administrator by using the KILL statement.  
   
- The following types of errors are not handled by a CATCH block when they occur at the same level of execution as the TRY...CATCH construct:  
+The following types of errors are not handled by a CATCH block when they occur at the same level of execution as the TRY...CATCH construct:  
   
 -   Compile errors, such as syntax errors, that prevent a batch from running.  
   

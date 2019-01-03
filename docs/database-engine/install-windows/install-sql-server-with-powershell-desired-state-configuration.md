@@ -15,7 +15,7 @@ monikerRange: ">=sql-server-2016||=sqlallproducts-allversions"
 
 # Install SQL Server with PowerShell Desired State Configuration
 
-Have you ever gone through the SQL Server installation interface just by selecting the same buttons, entering the same information, and not giving it a second thought? The installation finished, but you forgot to specify the DBA group in the **sysadmin** role? Then you had to do these things:
+Have you ever gone through the SQL Server installation interface just by selecting the same buttons, entering the same information, and not giving it a second thought? The installation finished, but you forgot to specify the DBA group in the **sysadmin** role. Then you had to do these things:
 * Drop into single-user mode.
 * Add the appropriate users or groups.
 * Bring SQL back up in multiuser mode.
@@ -109,7 +109,7 @@ The **SqlSetup** resource is used to tell DSC how to install SQL Server. The par
 
 A full list and description of the parameters available on **SqlSetup** are available on the [SqlServerDsc GitHub repository](https://github.com/PowerShell/SqlServerDsc/tree/master#sqlsetup).
 
-The **SqlSetup** resource installs only SQL and **doesn't** maintain the settings that are applied. An example is if the **SQLSysAdminAccounts** are specified at installation time, and an admin adds or removes sign-ins to or from the **sysadmin** role. That addition or removal doesn't affect the **SqlSetup** resource. If you want DSC to enforce the membership of the **sysadmin** role, use the [SqlServerRole](https://github.com/PowerShell/SqlServerDsc/tree/master#sqlserverrole) resource.
+The **SqlSetup** resource installs only SQL and **doesn't** maintain the settings that are applied. An example is if the **SQLSysAdminAccounts** are specified at installation time. An admin might add or remove sign-ins to or from the **sysadmin** role. But the **SqlSetup** resource wouldn't be affected. If you want DSC to enforce the membership of the **sysadmin** role, use the [SqlServerRole](https://github.com/PowerShell/SqlServerDsc/tree/master#sqlserverrole) resource.
 
 #### Finish configuration
 
@@ -154,7 +154,7 @@ Run the configuration function:
 SQLInstall
 ```
 
-A directory called **SQLInstall** is created in the working directory. It contains a file called **localhost.mof**. Examine the contents of the MOF. It shows the compiled DSC configuration.
+A directory called **SQLInstall** is created in the working directory. It contains a file called **localhost.mof**. Examine the contents of the MOF, which shows the compiled DSC configuration.
 
 ### Deploy the configuration
 

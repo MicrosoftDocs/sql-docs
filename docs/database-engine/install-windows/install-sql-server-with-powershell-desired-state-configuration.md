@@ -23,9 +23,9 @@ Have you ever gone through the SQL Server installation interface just by selecti
 
 What's worse is now the confidence of the entire installation is shaken. "What else did I forget?" you might ask yourself.
 
-Read about [PowerShell Desired State Configuration (DSC)](https://docs.microsoft.com/powershell/dsc/overview). By using DSC, you can build one configuration template that can be reused over hundreds and thousands of servers. Depending on the build, you might have to tweak a few of the setup parameters. But that's not a big issue because you can still keep all of the standard settings in place. It eliminates the possibility that you'll forget to enter an important parameter.
+Read about [PowerShell Desired State Configuration (DSC)](https://docs.microsoft.com/powershell/dsc/overview). By using DSC, you build one configuration template that you can reuse over hundreds and thousands of servers. Depending on the build, you might have to tweak a few of the setup parameters. But that's not a significant issue because you can keep all of the standard settings in place. It eliminates the possibility that you'll forget to enter an important parameter.
 
-In this article, we explore the initial setup of a standalone instance of SQL Server 2017 on Windows Server 2016 by using the **SqlServerDsc** DSC resource. Some prior knowledge of DSC is helpful as we won't explore how DSC works.
+This article explores the initial setup of a standalone instance of SQL Server 2017 on Windows Server 2016 by using the **SqlServerDsc** DSC resource. Some prior knowledge of DSC is helpful as we won't explore how DSC works.
 
 The following items are required for this walkthrough:
 
@@ -85,7 +85,7 @@ Import-DscResource -ModuleName SqlServerDsc
 
 #### .NET Framework
 
-SQL Server relies on the .NET Framework. So we need to ensure it's installed before we install SQL Server. The **WindowsFeature** resource is used to install the **Net-Framework-45-Core** Windows feature:
+SQL Server relies on the .NET Framework. So we need to make sure it's installed before we install SQL Server. The **WindowsFeature** resource is used to install the **Net-Framework-45-Core** Windows feature:
 
 ```PowerShell
 WindowsFeature 'NetFramework45'
@@ -107,7 +107,7 @@ The **SqlSetup** resource is used to tell DSC how to install SQL Server. The par
 > [!NOTE]
 > We don't recommend this configuration in a high-security environment.
 
-A full list and description of the parameters available on **SqlSetup** are available on the [SqlServerDsc GitHub respository](https://github.com/PowerShell/SqlServerDsc/tree/master#sqlsetup).
+A full list and description of the parameters available on **SqlSetup** are available on the [SqlServerDsc GitHub repository](https://github.com/PowerShell/SqlServerDsc/tree/master#sqlsetup).
 
 The **SqlSetup** resource installs only SQL and **doesn't** maintain the settings that are applied. An example is if the **SQLSysAdminAccounts** are specified at installation time, and an admin adds or removes sign-ins to or from the **sysadmin** role. That addition or removal doesn't affect the **SqlSetup** resource. If you want DSC to enforce the membership of the **sysadmin** role, use the [SqlServerRole](https://github.com/PowerShell/SqlServerDsc/tree/master#sqlserverrole) resource.
 

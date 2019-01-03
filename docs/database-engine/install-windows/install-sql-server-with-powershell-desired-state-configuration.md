@@ -18,7 +18,7 @@ monikerRange: ">=sql-server-2016||=sqlallproducts-allversions"
 Have you ever gone through the SQL Server installation interface just by selecting the same buttons, entering the same information, and not giving it a second thought? The installation finished, but you forgot to specify the DBA group in the **sysadmin** role. Then you had to do these things:
 * Drop into single-user mode.
 * Add the appropriate users or groups.
-* Bring SQL back up in multiuser mode.
+* Bring SQL Server back up in multiuser mode.
 * Test. 
 
 What's worse is now the confidence of the entire installation is shaken. "What else did I forget?" you might ask yourself.
@@ -109,7 +109,7 @@ The **SqlSetup** resource is used to tell DSC how to install SQL Server. The par
 
 A full list and description of the parameters available on **SqlSetup** are available on the [SqlServerDsc GitHub repository](https://github.com/PowerShell/SqlServerDsc/tree/master#sqlsetup).
 
-The **SqlSetup** resource installs only SQL and **doesn't** maintain the settings that are applied. An example is if the **SQLSysAdminAccounts** are specified at installation time. An admin might add or remove sign-ins to or from the **sysadmin** role. But the **SqlSetup** resource wouldn't be affected. If you want DSC to enforce the membership of the **sysadmin** role, use the [SqlServerRole](https://github.com/PowerShell/SqlServerDsc/tree/master#sqlserverrole) resource.
+The **SqlSetup** resource installs only SQL Server and **doesn't** maintain the settings that are applied. An example is if the **SQLSysAdminAccounts** are specified at installation time. An admin might add or remove sign-ins to or from the **sysadmin** role. But the **SqlSetup** resource won't be affected. If you want DSC to enforce the membership of the **sysadmin** role, use the [SqlServerRole](https://github.com/PowerShell/SqlServerDsc/tree/master#sqlserverrole) resource.
 
 #### Finish configuration
 
@@ -142,7 +142,7 @@ Configuration SQLInstall
 
 ### Compile the configuration
 
-Dot-source the configuration script:
+Dot source the configuration script:
 
 ```PowerShell
 . .\SQLInstallConfiguration.ps1

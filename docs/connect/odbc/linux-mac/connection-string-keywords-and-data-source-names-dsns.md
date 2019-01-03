@@ -47,7 +47,7 @@ Server = [protocol:]server[,port]
 #  
 ```  
 
-You can optionally specify the protocol and port to connect to the server. For example, **Server=tcp:***servername***,12345**. Note that the only protocol supported by the Linux and macOS drivers is `tcp`.
+You can optionally specify the protocol and port to connect to the server. For example, **Server=tcp:**_servername_**,12345**. Note that the only protocol supported by the Linux and macOS drivers is `tcp`.
 
 To connect to a named instance on a static port, use <b>Server=</b>*servername*,**port_number**. Connecting to a dynamic port is not supported.  
 

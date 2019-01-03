@@ -117,7 +117,7 @@ manager: craigg
   
 |Setting|XML Element|Description|Allowed Values|Required|  
 |-------------|-----------------|-----------------|--------------------|--------------|  
-|Target instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (the test server)|`<Server>`|Specifies the name of the server and instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to connect to.|*server_name*[\\*instance_name*]<br /><br /> You cannot use "`localhost`" or "`.`" to represent the local host.|No, if the server name is already specified by using the **-s***target server* parameter with the **replay** option of the administration tool.|  
+|Target instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (the test server)|`<Server>`|Specifies the name of the server and instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to connect to.|*server_name*[\\*instance_name*]<br /><br /> You cannot use "`localhost`" or "`.`" to represent the local host.|No, if the server name is already specified by using the **-s**_target server_ parameter with the **replay** option of the administration tool.|  
 |Sequencing mode|`<SequencingMode>`|Specifies the mode that is used for event scheduling.|`synchronization` &#124; `stress`|No. By default, the value is `stress`.|  
 |Stress scale granularity|`<StressScaleGranularity>`|Specifies whether all connections on the Service Profile Identifier (SPID) should be scaled together (SPID) or independently (Connection) under stress mode.|SPID &#124; Connection|Yes. By default, the value is `SPID`.|  
 |Connect time scale|`<ConnectTimeScale>`|Is used to scale the connect time in stress mode.|An integer between `1` and `100`.|No. By default, the value is `100`.|  

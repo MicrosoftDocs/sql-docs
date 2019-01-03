@@ -41,16 +41,16 @@ sp_articleview [ @publication = ] 'publication'
 ```  
   
 ## Arguments  
- [ **@publication=**] **'***publication***'**  
+ [ **@publication=**] **'**_publication_**'**  
  Is the name of the publication that contains the article. *publication* is **sysname**, with no default.  
   
- [ **@article=**] **'***article***'**  
+ [ **@article=**] **'**_article_**'**  
  Is the name of the article. *article* is **sysname**, with no default.  
   
- [ **@view_name=**] **'***view_name***'**  
+ [ **@view_name=**] **'**_view_name_**'**  
  Is the name of the view that defines the published article. *view_name* is **nvarchar(386)**, with a default of NULL.  
   
- [ **@filter_clause=**] **'***filter_clause***'**  
+ [ **@filter_clause=**] **'**_filter_clause_**'**  
  Is a restriction (WHERE) clause that defines a horizontal filter. When entering the restriction clause, omit the WHERE keyword. *filter_clause* is **ntext**, with a default of NULL.  
   
  [ **@change_active =** ] *change_active*  
@@ -70,7 +70,7 @@ sp_articleview [ @publication = ] 'publication'
   
  **1** specifies that changes to the article causes existing subscription to be reinitialized, and gives permission for the subscription reinitialization to occur.  
   
- [ **@publisher**= ] **'***publisher***'**  
+ [ **@publisher**= ] **'**_publisher_**'**  
  Specifies a non- [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] publisher. *publisher* is **sysname**, with a default of NULL.  
   
 > [!NOTE]  

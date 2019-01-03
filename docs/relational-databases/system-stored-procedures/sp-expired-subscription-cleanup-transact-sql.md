@@ -32,7 +32,7 @@ sp_expired_subscription_cleanup [ [ @publisher = ] 'publisher' ]
 ```  
   
 ## Arguments  
- [ **@publisher=** ] **'***publisher***'**  
+ [ **@publisher=** ] **'**_publisher_**'**  
  Is the name of a non- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] publisher. *publication* is **sysname**, with a default value of NULL. You should not specify this parameter for a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Publisher.  
   
 ## Return Code Values  

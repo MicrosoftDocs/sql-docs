@@ -19,7 +19,7 @@ manager: craigg
   
 ## Before You Begin  
   
-## Limitations and Restrictions  
+### Limitations and Restrictions  
   
 - When the master key is restored, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] decrypts all the keys that are encrypted with the currently active master key, and then encrypts these keys with the restored master key. This resource-intensive operation should be scheduled during a period of low demand. If the current database master key is not open or cannot be opened, or if any of the keys that are encrypted by it cannot be decrypted, the restore operation fails.  
   

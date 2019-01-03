@@ -31,7 +31,7 @@ The following items are required for this walkthrough:
 
 - A machine that runs Windows Server 2016.
 - SQL Server 2017 installation media.
-- The **SqlServerDsc** DSC resource. Version 10.0.0.0 is the current release.
+- The **SqlServerDsc** DSC resource.
 
 ## Prerequisites
 

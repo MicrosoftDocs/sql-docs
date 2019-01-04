@@ -10,16 +10,16 @@ ms.topic: conceptual
 ms.date: 01/04/2018
 ---
 
-# Submit Spark jobs on SQL Server big data clusters
+# Submit Spark jobs on SQL Server big data clusters in IntelliJ
 
-One of the key scenarios for big data clusters is the ability to submit Spark jobs. The Spark job submission feature allows you to submit a local Jar or Py files with references to SQL Server 2019 big data cluster. It also enables you to execute a Jar or Py files, which are already located in the HDFS file system. 
+One of the key scenarios for big data clusters is the ability to submit Spark jobs. The Spark job submission feature allows you to submit a local Jar or Py files with references to SQL big data cluster. It also enables you to execute a Jar or Py files, which are already located in the HDFS file system. 
 
 ## Prerequisites
 
 - SQL Big Data cluster.
 - Oracle Java Development Kit. You can install it from the [Oracle website](https://aka.ms/azure-jdks).
 - IntelliJ IDEA. You can install it from the [JetBrains website](https://www.jetbrains.com/idea/download/).
-- Azure Toolkit for IntelliJ. For installation instructions, see [Install Azure Toolkit for IntelliJ](https://docs.microsoft.com/azure/azure-toolkit-for-intellij-installation).
+- Azure Toolkit for IntelliJ extension. For installation instructions, see [Install Azure Toolkit for IntelliJ](https://docs.microsoft.com/azure/azure-toolkit-for-intellij-installation).
 
 ## Link SQL big data cluster
 1. If you are using self-signed certificate, please disable SSL certification validation from **Tools** menu, select **Azure**, **Experimental**, then **Disable SSL Certificate Validation**.
@@ -39,7 +39,7 @@ One of the key scenarios for big data clusters is the ability to submit Spark jo
 
 ## Submit application to SQL big data cluster
 
-1. Set up the configuration in **Run/Debug Configurations** window, click +->**Azure On Spark**, select tab **Remotely Run in Cluster**, set the parameters as following, then click OK.
+1. Set up the configuration in **Run/Debug Configurations** window, click +->**Aris On Spark**, select tab **Remotely Run in Cluster**, set the parameters as following, then click OK.
 
     ![Interactive Console Add Config Entry](./media/spark-submit-job-intellij-tool-plugin/interactive-console-add-config-entry.png)
 

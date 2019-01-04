@@ -96,9 +96,9 @@
       href: notebooks-how-to-manage.md
   - name: Spark jobs
     items:
-    - name: Submit Spark jobs
+    - name: Submit Spark jobs in Azure Data Studio
       href: spark-submit-job.md
-    - name: Submit Spark jobs use Azure Toolkit in IntelliJ
+    - name: Submit Spark jobs in IntelliJ
       href: spark-submit-job-intellij-tool-plugin.md
     - name: Use extended Spark History Server
       href: spark-history-server.md

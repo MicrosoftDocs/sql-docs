@@ -62,7 +62,7 @@
         }, 
         {
             "source_path": "docs/advanced-analytics/tutorials/rtsql-predict-and-plot-from-model.md",
-            "redirect_url": "/sql/advanced-analytics/tutorials/quickstart-r-predict-from-model",
+            "redirect_url": "/sql/advanced-analytics/tutorials/rtsql-predict-from-model",
             "redirect_document_id": true
         }, 
         {
@@ -77,7 +77,7 @@
         }, 
         {
             "source_path": "docs/advanced-analytics/tutorials/rtsql-create-a-predictive-model-r.md",
-            "redirect_url": "/sql/advanced-analytics/tutorials/rtsql-predict-from-model",
+            "redirect_url": "/sql/advanced-analytics/tutorials/quickstart-r-create-predictive-model",
             "redirect_document_id": true
         }, 
         {

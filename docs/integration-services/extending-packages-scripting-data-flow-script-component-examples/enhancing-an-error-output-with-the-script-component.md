@@ -70,7 +70,7 @@ Public Class ScriptMain      ' VB
 
         If componentMetaData130 IsNot Nothing Then
 
-            If Row.ErrorColumn = 0
+            If 0 = Row.ErrorColumn Then
                 ' 0 means no specific column is identified by ErrorColumn, this time.
                 Row.ColumnName = "Check the row for a violation of a foreign key constraint."
             Else

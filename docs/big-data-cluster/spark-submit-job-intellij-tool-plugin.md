@@ -24,18 +24,18 @@ One of the key scenarios for big data clusters is the ability to submit Spark jo
 ## Link SQL big data cluster
 1. If you are using self-signed certificate, please disable SSL certification validation from **Tools** menu, select **Azure**, **Experimental**, then **Disable SSL Certificate Validation**.
 
-    ![link Aris cluster - disable SSL](./media/spark-submit-job-intellij-tool-plugin/link-ariscluster-disableSSL.png)
+    ![link Big Data cluster - disable SSL](./media/spark-submit-job-intellij-tool-plugin/link-ariscluster-disableSSL.png)
 
 2. Open Azure Explorer from **View** menu, select **Tool Windows**, and then select **Azure Explorer**.
-3. Right click on **SQL Big Data Cluster**, select **Link SQL Big Data Cluster**. Enter the **Host**, **User Name** and **Password**, then click **OK**.
+3. Right click on **SQL Big Data Cluster**, select **Link SQL Big Data Cluster**. Enter the **Host**, **User Name**, and **Password**, then click **OK**.
 
-    ![link Aris cluster - dialog](./media/spark-submit-job-intellij-tool-plugin/link-ariscluster-dialog.png)
+    ![link Big Data cluster - dialog](./media/spark-submit-job-intellij-tool-plugin/link-ariscluster-dialog.png)
 
 4. When pops the untrusted server's certificate dialog, click **Accept**. You can manage the certificate later, see [Server Certificates](https://www.jetbrains.com/help/idea/settings-tools-server-certificates.html).
 
-5. The linked cluster lists under **SQL Big Data Cluster**. You could monitor spark job by openning the spark history UI and Yarn UI, you could also unlink, by right clicking on the cluster.
+5. The linked cluster lists under **SQL Big Data Cluster**. You could monitor spark job by opening the spark history UI and Yarn UI, you could also unlink, by right clicking on the cluster.
 
-    ![link Aris cluster - context menu](./media/spark-submit-job-intellij-tool-plugin/link-ariscluster-contextmenu.png)
+    ![link Big Data cluster - context menu](./media/spark-submit-job-intellij-tool-plugin/link-ariscluster-contextmenu.png)
 
 ## Submit application to SQL big data cluster
 
@@ -43,7 +43,7 @@ One of the key scenarios for big data clusters is the ability to submit Spark jo
 
     ![Interactive Console Add Config Entry](./media/spark-submit-job-intellij-tool-plugin/interactive-console-add-config-entry.png)
 
-    ![link Aris cluster - config](./media/spark-submit-job-intellij-tool-plugin/link-ariscluster-config.png)
+    ![link Big Data cluster - config](./media/spark-submit-job-intellij-tool-plugin/link-ariscluster-config.png)
 
     * For **Spark clusters (Linux only)**, select the SQL Big Data cluster on which you want to run your application.
 
@@ -68,7 +68,7 @@ One of the key scenarios for big data clusters is the ability to submit Spark jo
     
 2. Click **SparkJobRun** to submit your project to the selected cluster. The **Remote Spark Job in Cluster** tab displays the job execution progress at the bottom. You can stop the application by clicking the red button.  
 
-    ![link Aris cluster - run](./media/spark-submit-job-intellij-tool-plugin/link-ariscluster-run.png)
+    ![link Big Data cluster - run](./media/spark-submit-job-intellij-tool-plugin/link-ariscluster-run.png)
 
 ## Next steps
 For more information on SQL Server big data cluster and related scenarios, see [What is SQL Server big data cluster](big-data-cluster-overview.md)?

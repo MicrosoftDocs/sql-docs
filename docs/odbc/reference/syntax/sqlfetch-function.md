@@ -33,7 +33,7 @@ manager: craigg
 ```  
   
 SQLRETURN SQLFetch(  
-     SQLHSTMT     StatementHandle);  
+     SQLHSTMT     StatementHandle);  
 ```  
   
 ## Arguments  
@@ -92,7 +92,7 @@ SQLRETURN SQLFetch(
 ## Positioning the Cursor  
  When the result set is created, the cursor is positioned before the start of the result set. **SQLFetch** fetches the next rowset. It is equivalent to calling **SQLFetchScroll** with *FetchOrientation* set to SQL_FETCH_NEXT. For more information about cursors, see [Cursors](../../../odbc/reference/develop-app/cursors.md) and [Block Cursors](../../../odbc/reference/develop-app/block-cursors.md).  
   
- The SQL_ATTR_ROW_ARRAY_SIZE statement attribute specifies the number of rows in the rowset. If the rowset being fetched by **SQLFetch** overlaps the end of the result set, **SQLFetch** returns a partial rowset. That is, if S + R – 1 is greater than L, where S is the starting row of the rowset being fetched, R is the rowset size, and L is the last row in the result set, then only the first L – S + 1 rows of the rowset are valid. The remaining rows are empty and have a status of SQL_ROW_NOROW.  
+ The SQL_ATTR_ROW_ARRAY_SIZE statement attribute specifies the number of rows in the rowset. If the rowset being fetched by **SQLFetch** overlaps the end of the result set, **SQLFetch** returns a partial rowset. That is, if S + R - 1 is greater than L, where S is the starting row of the rowset being fetched, R is the rowset size, and L is the last row in the result set, then only the first L - S + 1 rows of the rowset are valid. The remaining rows are empty and have a status of SQL_ROW_NOROW.  
   
  After **SQLFetch** returns, the current row is the first row of the rowset.  
   
@@ -101,8 +101,8 @@ SQLRETURN SQLFetch(
 |Condition|First row of new rowset|  
 |---------------|-----------------------------|  
 |Before start|1|  
-|*CurrRowsetStart* \<= *LastResultRow – RowsetSize*[1]|*CurrRowsetStart* + *RowsetSize*[2]|  
-|*CurrRowsetStart* > *LastResultRow – RowsetSize*[1]|After end|  
+|*CurrRowsetStart* \<= *LastResultRow - RowsetSize*[1]|*CurrRowsetStart* + *RowsetSize*[2]|  
+|*CurrRowsetStart* > *LastResultRow - RowsetSize*[1]|After end|  
 |After end|After end|  
   
  [1]   If the rowset size is changed between fetches, this is the rowset size that was used with the previous fetch.  

@@ -21,7 +21,7 @@ manager: craigg
   
  The following table describes the mapping between parameters and descriptor fields.  
   
-|Parameter|Related attribute for non–table-valued parameter types, including table-valued parameter columns|Related attribute for table-valued parameters|  
+|Parameter|Related attribute for non-table-valued parameter types, including table-valued parameter columns|Related attribute for table-valued parameters|  
 |---------------|--------------------------------------------------------------------------------------------------------|----------------------------------------------------|  
 |*Type*|SQL_DESC_TYPE|SQL_SS_TABLE|  
 |*SubType*|Ignored|For records of type SQL_DATETIME or SQL_INTERVAL, set this to SQL_DESC_DATETIME_INTERVAL_CODE.|  
@@ -52,7 +52,7 @@ manager: craigg
  `SQLSetDescRec` supports large CLR user-defined types (UDTs). For more information, see [Large CLR User-Defined Types &#40;ODBC&#41;](../native-client/odbc/large-clr-user-defined-types-odbc.md).  
   
 ## See Also  
- [SQLSetDescRec](http://go.microsoft.com/fwlink/?LinkId=80704)   
+ [SQLSetDescRec](https://go.microsoft.com/fwlink/?LinkId=80704)   
  [ODBC API Implementation Details](odbc-api-implementation-details.md)  
   
   

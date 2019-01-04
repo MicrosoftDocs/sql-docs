@@ -69,7 +69,7 @@ If instead **mdy** was specified, then the same '01-03-2018' string would mean _
 
 And if **ymd** was specified, there is no guarantee of what the output would be. The numeric value of '2018' is too large to be a day.
 <!--
-The preceding claim of "no guarantee" might be incorrect, in the minds of the SQL query engine Developer team??
+The preceding claim of "no guarantee" might be incorrect, in the minds of the SQL query engine Developer team?
 -->
 
 #### Specific countries
@@ -131,7 +131,7 @@ Starting with SQL Server 2005 and its compatibility level of 90, implicit date c
 
 #### Unicode
 
-<!-- The next live sentence needs an explanatory example!  N'??'.
+<!-- The next live sentence needs an explanatory example!  N'somethingHere?'.
 -->
 Conversion of non-Unicode character data between collations is also considered nondeterministic.
 

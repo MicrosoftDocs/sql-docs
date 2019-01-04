@@ -5,8 +5,7 @@ ms.date: "06/15/2018"
 ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
-ms.technology: 
-  - "replication"
+ms.technology: replication
 ms.topic: "language-reference"
 f1_keywords: 
   - "sp_adddistpublisher"
@@ -50,7 +49,7 @@ sp_adddistpublisher [ @publisher= ] 'publisher'
  Is the name of the distribution database. *distributor_db* is **sysname**, with no default. This parameter is used by replication agents to connect to the Publisher.  
   
  [ **@security_mode=**] *security_mode*  
- Is the implemented security mode. This parameter is only used by replication agents to connect to the Publisher for queued updating subscriptions or with a non-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Publisher. *security_mode* is **int**, and can be one of these values.  
+ Is the implemented security mode. This parameter is only used by replication agents to connect to the Publisher for queued updating subscriptions or with a non- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Publisher. *security_mode* is **int**, and can be one of these values.  
   
 |Value|Description|  
 |-----------|-----------------|  

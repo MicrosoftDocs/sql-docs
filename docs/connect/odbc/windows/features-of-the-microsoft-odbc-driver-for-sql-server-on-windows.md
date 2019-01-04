@@ -30,9 +30,9 @@ The ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]
   
 This release of the ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] contains the following new features:  
   
-### bcp.exe –l option for specifying a login timeout
+### bcp.exe -l option for specifying a login timeout
  
-The –l option specifies the number of seconds before a `bcp.exe` login to [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] times out when you try to connect to a server. The default login timeout is 15 seconds. The login timeout must be a number between 0 and 65534. If the value supplied is not numeric or does not fall into that range, `bcp.exe` generates an error message. A value of 0 specifies an infinite timeout. A login timeout of less than (approximately) 10 seconds is not reliable.  
+The -l option specifies the number of seconds before a `bcp.exe` login to [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] times out when you try to connect to a server. The default login timeout is 15 seconds. The login timeout must be a number between 0 and 65534. If the value supplied is not numeric or does not fall into that range, `bcp.exe` generates an error message. A value of 0 specifies an infinite timeout. A login timeout of less than (approximately) 10 seconds is not reliable.  
   
 ### Driver-Aware Connection Pooling  
 The ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] supports [Driver-Aware Connection Pooling](https://msdn.microsoft.com/library/hh405031(VS.85).aspx). For more information, see [Driver-Aware Connection Pooling in the ODBC Driver for SQL Server](../../../connect/odbc/windows/driver-aware-connection-pooling-in-the-odbc-driver-for-sql-server.md).  
@@ -47,7 +47,7 @@ To ensure that applications remain connected to a Microsoft Azure SQL Database, 
 
 In [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client, the `-y0` option for `sqlcmd.exe` caused output to be truncated at 1 MB if the display width was 0.
   
-Beginning in the ODBC Driver 11 for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], there is no limit on the amount of data that can be retrieved in a single column when `–y0` is specified. `sqlcmd.exe` now streams columns as large as 2 GB ([!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] data type maximum).  
+Beginning in the ODBC Driver 11 for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], there is no limit on the amount of data that can be retrieved in a single column when `-y0` is specified. `sqlcmd.exe` now streams columns as large as 2 GB ( [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] data type maximum).  
   
 Another difference is that specifying both `-h` and `-y0` now produces an error reporting that the options are incompatible. `-h`, which specifies the number of rows to print between the column headings and has never been compatible with `-y0`, was ignored although no headers were printed.
   

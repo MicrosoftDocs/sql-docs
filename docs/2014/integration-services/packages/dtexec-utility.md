@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "integration-services"
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 7b6867fa-1039-49b3-90fb-85b84678a612
 author: douglaslMS
@@ -169,7 +168,7 @@ dtexec /option [value] [/option [value]]...
   
      You can use the **/ConfigFile** option to load additional configurations at run time that you did not specify at design time. However, you cannot use the **/ConfigFile** option to replace configured values that you also specified at design time. To understand how package configurations are applied, see [Package Configurations](../package-configurations.md).  
   
--   **/Conn[ection]** *id_or_name;connection_string [[;id_or_name;connection_string]…]*:   
+-   **/Conn[ection]** *id_or_name;connection_string [[;id_or_name;connection_string]...]*:   
                   Optional. Specifies that the connection manager with the specified name or GUID is located in the package, and specifies a connection string.  
   
      This option requires that both parameters be specified: the connection manager name or GUID must be provided in the *id_or_name* argument, and a valid connection string must be specified in the *connection_string* argument. For more information, see [Integration Services &#40;SSIS&#41; Connections](../connection-manager/integration-services-ssis-connections.md).  
@@ -227,7 +226,7 @@ dtexec /option [value] [/option [value]]...
 -   **/De[crypt]**  *password*: Optional. Sets the decryption password that is used when you load a package with password encryption.  
   
 -   **/Dump** *error code*:  
-                  Optional Creates the debug dump files, .mdmp and .tmp, when one or more specified events occur while the package is running. The *error code* argument specifies the type of event code—error, warning, or information—that will trigger the system to create the debug dump files. To specify multiple event codes, separate each *error code* argument by a semi-colon (;). Do not include quotes with the *error code* argument.  
+                  Optional Creates the debug dump files, .mdmp and .tmp, when one or more specified events occur while the package is running. The *error code* argument specifies the type of event code-error, warning, or information-that will trigger the system to create the debug dump files. To specify multiple event codes, separate each *error code* argument by a semi-colon (;). Do not include quotes with the *error code* argument.  
   
      The following example generates the debug dump files when the DTS_E_CANNOTACQUIRECONNECTIONFROMCONNECTIONMANAGER error occurs.  
   
@@ -664,6 +663,6 @@ dtexec /isserver "\SSISDB\MyFolder\MyProject\MyPackage.dtsx" /server "."
  [Run a Package in SQL Server Data Tools](../run-a-package-in-sql-server-data-tools.md)  
   
 ## Related Content  
- Blog entry, [Exit Codes, DTEXEC, and SSIS Catalog](http://go.microsoft.com/fwlink/?LinkId=251523), on www.mattmasson.com.  
+ Blog entry, [Exit Codes, DTEXEC, and SSIS Catalog](https://go.microsoft.com/fwlink/?LinkId=251523), on www.mattmasson.com.  
   
   

@@ -148,10 +148,10 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
   
 ## Related Content  
   
--   Technical article, [Understanding Integration Services Package Configurations](http://go.microsoft.com/fwlink/?LinkId=165643), on msdn.microsoft.com  
+-   Technical article, [Understanding Integration Services Package Configurations](https://go.microsoft.com/fwlink/?LinkId=165643), on msdn.microsoft.com  
   
--   Blog entry, [Creating packages in code – Package Configurations](http://go.microsoft.com/fwlink/?LinkId=217663), on www.sqlis.com.  
+-   Blog entry, [Creating packages in code - Package Configurations](https://go.microsoft.com/fwlink/?LinkId=217663), on www.sqlis.com.  
   
--   Blog entry, [API Sample – Programmatically add a configuration file to a package](http://go.microsoft.com/fwlink/?LinkId=217664), on blogs.msdn.com.  
+-   Blog entry, [API Sample - Programmatically add a configuration file to a package](https://go.microsoft.com/fwlink/?LinkId=217664), on blogs.msdn.com.  
   
   

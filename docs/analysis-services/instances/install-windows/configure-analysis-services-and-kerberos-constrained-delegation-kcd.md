@@ -143,9 +143,9 @@ manager: kfile
   
     1.  On the Office Online Server, open a PowerShell window with administrative privileges and run the following command  
   
-    2.  `New-OfficeWebAppsExcelBIServer –ServerId <AS instance name>`  
+    2.  `New-OfficeWebAppsExcelBIServer -ServerId <AS instance name>`  
   
-    3.  Sample: `New-OfficeWebAppsExcelBIServer –ServerId "MTGQLSERVER-13\POWERPIVOT"`  
+    3.  Sample: `New-OfficeWebAppsExcelBIServer -ServerId "MTGQLSERVER-13\POWERPIVOT"`  
   
 3.  **Configure Active Directory** to allow the Office Online Server computer account to impersonate users to the SharePoint service account. So, set delegation property on principal running the Application Pool for SharePoint Web Services, on the Office Online Server: The PowerShell commands in this section require the Active Directory (AD) PowerShell objects.  
   
@@ -165,7 +165,7 @@ manager: kfile
     2.  To verify the propery was set correctly  
   
     3.  ```  
-        Get-ADUser svcSharePoint –Properties PrincipalsAllowedToDelegateToAccount  
+        Get-ADUser svcSharePoint -Properties PrincipalsAllowedToDelegateToAccount  
         ```  
   
 4.  **Configure constrained delegation** settings on the Office Online Server account to the Analysis Services Power Pivot instance. This should be the machine account that Office Online Server is running on. On the Office Online Service account, we want to make sure the following are set.  
@@ -193,7 +193,7 @@ manager: kfile
   
 4.  Run the PowerPivot Configuration wizard. See [Power Pivot Configuration Tools](../../../analysis-services/power-pivot-sharepoint/power-pivot-configuration-tools.md).  
   
-5.  Connect  SharePoint to the Office Online Server.    ??Configure_xlwac_on_SPO.ps1 ??  
+5. Connect SharePoint to the Office Online Server. (Configure_xlwac_on_SPO.ps1)
   
 6.  Configure SharePoint Authentication providers for Kerberos. **This is needed for scenario 1**. For more information, see [Plan for Kerberos authentication in SharePoint 2013](https://technet.microsoft.com/library/ee806870.aspx).  
   

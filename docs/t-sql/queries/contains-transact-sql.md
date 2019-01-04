@@ -100,9 +100,9 @@ CONTAINS (
 <custom_proximity_term> ::=   
   NEAR (   
      {  
-        { <simple_term> | <prefix_term> } [ ,…n ]  
+        { <simple_term> | <prefix_term> } [ ,...n ]  
      |  
-        ( { <simple_term> | <prefix_term> } [ ,…n ] )   
+        ( { <simple_term> | <prefix_term> } [ ,...n ] )   
       [, <maximum_distance> [, <match_order> ] ]  
      }  
        )   
@@ -287,10 +287,10 @@ CONTAINS(column_name, 'NEAR((AA,BB,CC),5)')
  \<match_order> takes one of the following values:  
   
  **TRUE**  
- Enforces the specified order within terms. For example, `NEAR(A,B)` would match only `A … B`.  
+ Enforces the specified order within terms. For example, `NEAR(A,B)` would match only `A ... B`.  
   
  **FALSE**  
- Ignores the specified order. For example,  `NEAR(A,B)` would match both `A … B` and `B … A`.  
+ Ignores the specified order. For example,  `NEAR(A,B)` would match both `A ... B` and `B ... A`.  
   
  This is the default.  
   

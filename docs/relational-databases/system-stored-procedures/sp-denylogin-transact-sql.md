@@ -37,7 +37,7 @@ sp_denylogin [ @loginame = ] 'login'
 ```  
   
 ## Arguments  
- [ **@loginame =** ] **'***login* **'**  
+ [ **@loginame =** ] **'**_login_ **'**  
  Is the name of a Windows user or group. *login* is **sysname**, with no default.  
   
 ## Return Code Values  

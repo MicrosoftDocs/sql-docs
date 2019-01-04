@@ -53,8 +53,11 @@ manager: craigg
 10. Now open the web.config file from *drive*:\Program Files\Microsoft SQL Server\130\Master Data Services\WebApplication.  
   
 11. Find the string `<security mode="Message">` and change it to `<security mode="Transport">`.  
-  
-12. Save and close the file. If you get an error, it could be because you have UAC enabled. For more information, see [Turn off User Account Control](https://technet.microsoft.com/library/cc709691\(WS.10\).aspx). Users should now be able to use HTTPS to access the site.  
+
+12. Change `<serviceMetadata httpGetEnable="true" httpsGetEnabled="false">` to `<serviceMetadata httpGetEnable="false" httpsGetEnabled="true">` to prevent issues that may appear in the Silverlight client.
+
+13. Save and close the file. If you get an error, it could be because you have UAC enabled. For more information, see [Turn off User Account Control](http://technet.microsoft.com/library/cc709691\(WS.10\).aspx). Users should now be able to use HTTPS to access the site.  
+
   
 ## See Also  
  [Create a Master Data Manager Web Application &#40;Master Data Services&#41;](../../master-data-services/install-windows/create-a-master-data-manager-web-application-master-data-services.md)  

@@ -23,7 +23,7 @@ manager: "craigg"
 Below are some of the common performance scenarios encountered after migrating to [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Platform and how to resolve them. These include scenarios that are specific to [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] to [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] migration (older versions to newer versions), as well as foreign platform (such as Oracle, DB2, MySQL and Sybase) to [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] migration.
 
 ## <a name="CEUpgrade"></a> Query regressions due to change in CE version
-​
+ 
 **Applies to:** [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] to [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] migration.
 
 When migrating from an older version of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] to [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] or newer, and upgrading the [database compatibility level](../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md) to the latest available, a workload may be exposed to the risk of performance regression.
@@ -102,7 +102,7 @@ Some examples of non-SARGable predicates:
 3. Reason out the usefulness of the following constructs:
   -   Functions being used as predicates;
   -   Wildcard searches;
-  -   Complex expressions based on columnar data – evaluate the need to instead create persisted computed columns, which can be indexed;
+  -   Complex expressions based on columnar data - evaluate the need to instead create persisted computed columns, which can be indexed;
 
 > [!NOTE] 
 > All of the above can be done programmatically.

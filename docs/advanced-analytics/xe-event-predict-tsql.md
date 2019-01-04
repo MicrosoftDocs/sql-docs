@@ -1,5 +1,5 @@
 ---
-title: Extended events for monitoring PREDICT statements | Microsoft Docs
+title: Extended events for monitoring PREDICT statements - SQL Server Machine Learning Services
 ms.prod: sql
 ms.technology: machine-learning
 

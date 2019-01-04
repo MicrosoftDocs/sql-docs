@@ -4,8 +4,7 @@ description: Shows you how to create a SQL Server Integration Services (SSIS) pa
 documentationcenter: NA
 ms.prod: sql
 ms.prod_service: "integration-services"
-ms.technology: "integration-services"
-ms.devlang: NA
+ms.technology: integration-services
 ms.topic: conceptual
 ms.custom: loading
 ms.date: 08/09/2018

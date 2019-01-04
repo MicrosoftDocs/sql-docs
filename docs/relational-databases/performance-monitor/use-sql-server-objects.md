@@ -5,7 +5,7 @@ ms.date: "03/17/2016"
 ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
-s.technology: performance
+ms.technology: performance
 ms.topic: conceptual
 helpviewer_keywords: 
   - "server performance [SQL Server], objects for monitoring"
@@ -28,8 +28,8 @@ helpviewer_keywords:
   - "counters [SQL Server]"
   - "performance counters [SQL Server], listed"
 ms.assetid: bcd731b1-3c4e-4086-b58a-af7a3af904ad
-author: MikeRayMSFT
-ms.author: mikeray
+author: julieMSFT
+ms.author: jrasnick
 manager: craigg
 ---
 # Use SQL Server Objects

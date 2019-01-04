@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "integration-services"
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords: 
   - "tasks [Integration Services], precedence constraints"
@@ -90,7 +89,7 @@ manager: craigg
      This topic provides information on how to set the default behavior for precedence constraints, and how to connect executables using the default precedence constraints, see.  
   
 ## Related Content  
- Technical article, [SSIS Expression Examples](http://go.microsoft.com/fwlink/?LinkId=220761), on social.technet.microsoft.com  
+ Technical article, [SSIS Expression Examples](https://go.microsoft.com/fwlink/?LinkId=220761), on social.technet.microsoft.com  
   
 ## See Also  
  [Add Expressions to Precedence Constraints](../add-expressions-to-precedence-constraints.md)   

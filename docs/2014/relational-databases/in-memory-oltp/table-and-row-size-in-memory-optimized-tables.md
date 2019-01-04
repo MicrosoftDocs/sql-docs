@@ -34,7 +34,7 @@ Memory-optimized table, consisting of indexes and rows.
  The in-memory size of a table, in bytes, is computed as follows:  
   
 ```  
-[table size] = [size of index 1] + … + [size of index n] + ([row size] * [row count])  
+[table size] = [size of index 1] + ... + [size of index n] + ([row size] * [row count])  
 ```  
   
  The size of a hash index is fixed at table creation time and depends on the actual bucket count. The bucket_count specified with the index specification is rounded up to the nearest power of 2 to obtain the [actual bucket count]. For example, if the specified bucket_count is 100000, the [actual bucket count] for the index is 131072.  
@@ -107,7 +107,7 @@ Memory-optimized table, consisting of indexes and rows.
   
 -   Second bucket: (John, Paris), (Jane, Prague)  
   
- An end timestamp ∞ (infinity) indicates that this is the currently valid version of the row. The row has not been updated or deleted since this row version was written.  
+ An end timestamp ??? (infinity) indicates that this is the currently valid version of the row. The row has not been updated or deleted since this row version was written.  
   
  For a time greater than 200, the table contains the following rows:  
   
@@ -190,7 +190,7 @@ GO
   
     -   Nearest multiple of 8 is 24.  
   
-    -   Total padding is 24 – 22 = 2 bytes.  
+    -   Total padding is 24 - 22 = 2 bytes.  
   
 -   There are no fixed-length deep type columns (Fixed-length deep type columns: 0.).  
   

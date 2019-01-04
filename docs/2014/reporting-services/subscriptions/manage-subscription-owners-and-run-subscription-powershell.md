@@ -42,17 +42,17 @@ manager: craigg
 ### Permissions  
  This section summarizes the permission levels required to use each of the methods for both Native and SharePoint mode [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]. The scripts in this topic use the following [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] methods:  
   
--   [ReportingService2010.ListSubscriptions Method](http://technet.microsoft.com/library/reportservice2010.reportingservice2010.listsubscriptions.aspx)  
+-   [ReportingService2010.ListSubscriptions Method](https://technet.microsoft.com/library/reportservice2010.reportingservice2010.listsubscriptions.aspx)  
   
--   [ReportingService2010.ChangeSubscriptionOwner Method](http://technet.microsoft.com/library/reportservice2010.reportingservice2010.changesubscriptionowner.aspx)  
+-   [ReportingService2010.ChangeSubscriptionOwner Method](https://technet.microsoft.com/library/reportservice2010.reportingservice2010.changesubscriptionowner.aspx)  
   
--   [ReportingService2010.ListChildren](http://technet.microsoft.com/library/reportservice2010.reportingservice2010.listchildren.aspx)  
+-   [ReportingService2010.ListChildren](https://technet.microsoft.com/library/reportservice2010.reportingservice2010.listchildren.aspx)  
   
--   The method [ReportingService2010.FireEvent](http://technet.microsoft.com/library/reportservice2010.reportingservice2010.fireevent.aspx) is only used in the last script to trigger a specific subscription to run. If you do not plan to use that script you can ignore the permission requirements for the FireEvent method.  
+-   The method [ReportingService2010.FireEvent](https://technet.microsoft.com/library/reportservice2010.reportingservice2010.fireevent.aspx) is only used in the last script to trigger a specific subscription to run. If you do not plan to use that script you can ignore the permission requirements for the FireEvent method.  
   
  **Native mode:**  
   
--   List Subscriptions: ( HYPERLINK "http://technet.microsoft.com/library/microsoft.reportingservices.interfaces.reportoperation.aspx" ReadSubscription on the report AND the user is the subscription owner) OR ReadAnySubscription  
+-   List Subscriptions: ( HYPERLINK "https://technet.microsoft.com/library/microsoft.reportingservices.interfaces.reportoperation.aspx" ReadSubscription on the report AND the user is the subscription owner) OR ReadAnySubscription  
   
 -   Change Subscriptions: The user must be a member of the BUILTIN\Administrators group  
   
@@ -62,7 +62,7 @@ manager: craigg
   
  **SharePoint mode:**  
   
--   List Subscriptions: ManageAlerts OR ( HYPERLINK "http://technet.microsoft.com/library/microsoft.sharepoint.spbasepermissions.aspx" CreateAlerts on the report AND the user is the subscription owner and the subscription is a timed subscription).  
+-   List Subscriptions: ManageAlerts OR ( HYPERLINK "https://technet.microsoft.com/library/microsoft.sharepoint.spbasepermissions.aspx" CreateAlerts on the report AND the user is the subscription owner and the subscription is a timed subscription).  
   
 -   Change Subscriptions: ManageWeb  
   
@@ -128,7 +128,7 @@ $subscriptions | select Path, report, Description, Owner, SubscriptionID, lastex
 ```  
   
 > [!TIP]  
->  To verify site URLS in SharePoint mode, use the SharePoint cmdlet **Get-SPSite**. For more information, see [Get-SPSite](http://technet.microsoft.com/library/ff607950\(v=office.15\).aspx).  
+>  To verify site URLS in SharePoint mode, use the SharePoint cmdlet **Get-SPSite**. For more information, see [Get-SPSite](https://technet.microsoft.com/library/ff607950\(v=office.15\).aspx).  
   
 ##  <a name="bkmk_list_all_one_user"></a> Script: List all subscriptions owned by a specific user  
  This script lists all of the subscriptions owned by a specific user. You can use this script to test your connection or to verify the report path and subscription id for use in the other scripts. This script is useful when someone in your organization leaves and you want to verify what subscriptions they owned so you can change the owner or delete the subscription.  

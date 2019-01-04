@@ -38,15 +38,15 @@ manager: craigg
     > [!IMPORTANT]  
     >  As soon as the database is detached, [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] can no longer help you obtain the database location.  
   
-3.  Right-click the database and select **Detach…**  
+3.  Right-click the database and select **Detach...**  
   
 4.  Assign a password to the database to be detached, and then click **OK** to execute the detach command.  
   
 5.  Locate the **Databases** folder in the left or right pane of [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)].  
   
-6.  Right-click the **Databases** folder and select **Attach…**  
+6.  Right-click the **Databases** folder and select **Attach...**  
   
-7.  In the **folder** text box, type the original location of the database folder. Alternatively, you can use the browse button (**…**) to locate the database folder.  
+7.  In the **folder** text box, type the original location of the database folder. Alternatively, you can use the browse button (**...**) to locate the database folder.  
   
 8.  Select the read/write mode for the database.  
   
@@ -131,7 +131,7 @@ manager: craigg
   
 4.  Copy the following script template for XMLA:  
   
- `<Detach xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">`  
+ `<Detach xmlns="https://schemas.microsoft.com/analysisservices/2003/engine">`  
   
  `<Object>`  
   
@@ -149,11 +149,11 @@ manager: craigg
   
 3.  Copy the following script template for XMLA in a new XMLA tab  
   
- `<Attach xmlns="http://schemas.microsoft.com/analysisservices/2003` `/engine` `">`  
+ `<Attach xmlns="https://schemas.microsoft.com/analysisservices/2003` `/engine` `">`  
   
  `<Folder>%dbFolder%</Folder>`  
   
- `<ReadWriteMode xmlns="http://schemas.microsoft.com/analysisservices/2008/engine/100">%ReadOnlyMode%</ReadWriteMode>`  
+ `<ReadWriteMode xmlns="https://schemas.microsoft.com/analysisservices/2008/engine/100">%ReadOnlyMode%</ReadWriteMode>`  
   
  `</Attach>`  
   

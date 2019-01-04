@@ -5,7 +5,6 @@ ms.date: "07/17/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
 ms.technology: 
-  - "database-engine"
 ms.topic: conceptual
 helpviewer_keywords: 
   - "contained database, modifications to DBs"

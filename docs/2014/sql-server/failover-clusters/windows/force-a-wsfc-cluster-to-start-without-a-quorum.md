@@ -37,7 +37,7 @@ manager: craigg
   
 1.  Open a Failover Cluster Manager and connect to the desired cluster node to force online.  
   
-2.  In the **Actions** pane, click **Force Cluster Start**, and then click **Yes – Force my cluster to start**.  
+2.  In the **Actions** pane, click **Force Cluster Start**, and then click **Yes - Force my cluster to start**.  
   
 3.  In the left pane, in the **Failover Cluster Manager** tree, click the cluster name.  
   
@@ -53,9 +53,9 @@ manager: craigg
   
 3.  Use `Stop-ClusterNode` to make sure that the cluster service is stopped.  
   
-4.  Use `Start-ClusterNode` with `–FixQuorum` to force the cluster service to start.  
+4.  Use `Start-ClusterNode` with `-FixQuorum` to force the cluster service to start.  
   
-5.  Use `Get-ClusterNode` with `–Propery NodeWieght = 1` to set the value the guarantees that the node is a voting member of the quorum.  
+5.  Use `Get-ClusterNode` with `-Propery NodeWieght = 1` to set the value the guarantees that the node is a voting member of the quorum.  
   
 6.  Output the cluster node properties in a readable format.  
   
@@ -66,8 +66,8 @@ manager: craigg
 Import-Module FailoverClusters  
   
 $node = "AlwaysOnSrv02"  
-Stop-ClusterNode –Name $node  
-Start-ClusterNode –Name $node -FixQuorum  
+Stop-ClusterNode -Name $node  
+Start-ClusterNode -Name $node -FixQuorum  
   
 (Get-ClusterNode $node).NodeWeight = 1  
   
@@ -116,13 +116,13 @@ net.exe start clussvc /forcequorum
   
 ##  <a name="RelatedContent"></a> Related Content  
   
--   [View Events and Logs for a Failover Cluster](http://technet.microsoft.com/en-us/library/cc772342\(WS.10\).aspx)  
+-   [View Events and Logs for a Failover Cluster](https://technet.microsoft.com/en-us/library/cc772342\(WS.10\).aspx)  
   
--   [Get-ClusterLog Failover Cluster Cmdlet](http://technet.microsoft.com/library/ee461045.aspx)  
+-   [Get-ClusterLog Failover Cluster Cmdlet](https://technet.microsoft.com/library/ee461045.aspx)  
   
 ## See Also  
  [WSFC Disaster Recovery through Forced Quorum &#40;SQL Server&#41;](wsfc-disaster-recovery-through-forced-quorum-sql-server.md)   
  [Configure Cluster Quorum NodeWeight Settings](configure-cluster-quorum-nodeweight-settings.md)   
- [Failover Cluster Cmdlets in Windows PowerShell Listed by Task Focus](http://technet.microsoft.com/library/ee619761\(WS.10\).aspx)  
+ [Failover Cluster Cmdlets in Windows PowerShell Listed by Task Focus](https://technet.microsoft.com/library/ee619761\(WS.10\).aspx)  
   
   

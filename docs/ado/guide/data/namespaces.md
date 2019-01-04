@@ -32,7 +32,7 @@ The XML persistence format in ADO uses the following four namespaces.
 > [!IMPORTANT]
 >  The ID for the schema tag must be "RowsetSchema," and the namespace used to refer to the schema of the current rowset must point to "#RowsetSchema."  
   
- Note that the prefix of the namespace — the part between the colon and the equal sign — is arbitrary.  
+ Note that the prefix of the namespace - the part between the colon and the equal sign - is arbitrary.  
   
 ```  
 xmlns:rs="urn:schemas-microsoft-com:rowset"  

@@ -4,7 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology:
+ms.technology: configuration
 ms.topic: conceptual
 ms.assetid: 614f07b5-f221-4013-9f8d-22964cf42270
 author: MikeRayMSFT
@@ -20,8 +20,8 @@ manager: craigg
   
  For more information about mitigating specific resource health issues identified by a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] UCP, see the following topics:  
   
--   [How to identify your SQL Server version and edition](http://go.microsoft.com/fwlink/?LinkID=178504)  
+-   [How to identify your SQL Server version and edition](https://go.microsoft.com/fwlink/?LinkID=178504)  
   
--   [Troubleshooting Performance Problems in SQL Server 2008](http://go.microsoft.com/fwlink/?LinkId=151354)  
+-   [Troubleshooting Performance Problems in SQL Server 2008](https://go.microsoft.com/fwlink/?LinkId=151354)  
   
   

@@ -27,7 +27,7 @@ The procedures in this task show you how to create and modify the Foreach Loop c
   
 After you have made these modifications to the package, when the package is run, the Foreach Loop Container will iterate through the collection of files in the Sample Data folder. Each time a file is found that matches the criteria, the Foreach Loop Container will populate the user-defined variable with the file name, map the user-defined variable to the **ConnectionString** property of the Sample Currency Data Flat File connection manager, and then run the data flow against that file. Therefore, in each iteration of the Foreach Loop the Data Flow task will consume a different flat file.  
   
-> [!NOTE]  
+> [!NOTE]
 > Because [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] separates control flow from data flow, any looping that you add to the control flow will not require modification to the data flow. Therefore, the data flow that you created in Lesson 1 does not have to be changed.  
   
 ### To add a Foreach Loop container  
@@ -68,7 +68,7 @@ After you have made these modifications to the package, when the package is run,
   
 1.  Click **Variable Mappings**.  
   
-2.  On the **Variable Mappings** page, in the **Variable** column, click the empty cell and select **\<New Variable…>**.  
+2.  On the **Variable Mappings** page, in the **Variable** column, click the empty cell and select **\<New Variable...>**.  
   
 3.  In the **Add Variable** dialog box, for **Name**, type **varFileName**.  
   

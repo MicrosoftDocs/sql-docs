@@ -46,13 +46,13 @@ manager: craigg
   
 1.  In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager, in the console pane, expand **SQL Server  Network Configuration**.  
   
-2.  In the console pane, click **Protocols for** *\<instance name>*.  
+2.  In the console pane, click **Protocols for** _\<instance name>_.  
   
 3.  In the details pane, right-click the protocol you want to change, and then click **Enable** or **Disable**.  
   
 4.  In the console pane, click **SQL Server Services**.  
   
-5.  In the details pane, right-click **SQL Server (***\<instance name>***)**, and then click **Restart**, to stop and restart the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] service.  
+5.  In the details pane, right-click **SQL Server (**_\<instance name>_**)**, and then click **Restart**, to stop and restart the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] service.  
   
 ##  <a name="PowerShellProcedure"></a> Using SQL Server PowerShell  
   

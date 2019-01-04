@@ -1,6 +1,7 @@
 ---
-title: "Configure Flexible Automatic Failover Policy | Microsoft Docs"
-ms.custom: ""
+title: "Configure a flexible automatic failover policy for an availability group"
+description: "Describes how to configure a flexible failover policy for an Always On availability group using Transact-SQL (T-SQL), PowerShell, or SQL Server Management Studio."
+ms.custom: "seodec18"
 ms.date: "05/17/2016"
 ms.prod: sql
 ms.reviewer: ""
@@ -16,7 +17,7 @@ ms.author: mathoma
 manager: craigg
 monikerRange: ">=sql-server-2016||=sqlallproducts-allversions"
 ---
-# Configure Flexible Automatic Failover Policy
+# Configure a flexible automatic failover policy for an Always On availability group
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
@@ -80,7 +81,7 @@ monikerRange: ">=sql-server-2016||=sqlallproducts-allversions"
   
          The relationship of these integer values to the failure condition levels is as follows:  
   
-        |[!INCLUDE[tsql](../../../includes/tsql-md.md)] Value|Level|Automatic Is Failover Initiated When…|  
+        |[!INCLUDE[tsql](../../../includes/tsql-md.md)] Value|Level|Automatic Is Failover Initiated When...|  
         |------------------------------|-----------|-------------------------------------------|  
         |1|One|On server down. The SQL Server service stops because of a failover or restart.|  
         |2|Two|On server unresponsive. Any condition of lower value is satisfied, the SQL Server service is connected to the cluster and the health check timeout threshold is exceeded, or the current primary replica is in a failed state.|  
@@ -108,7 +109,7 @@ monikerRange: ">=sql-server-2016||=sqlallproducts-allversions"
   
     -   To set the failover condition level, use the **FailureConditionLevel***level* parameter, where, *level* is one of the following values:  
   
-        |Value|Level|Automatic Is Failover Initiated When…|  
+        |Value|Level|Automatic Is Failover Initiated When...|  
         |-----------|-----------|-------------------------------------------|  
         |**OnServerDown**|One|On server down. The SQL Server service stops because of a failover or restart.|  
         |**OnServerUnresponsive**|Two|On server unresponsive. Any condition of lower value is satisfied, the SQL Server service is connected to the cluster and the health check timeout threshold is exceeded, or the current primary replica is in a failed state.|  

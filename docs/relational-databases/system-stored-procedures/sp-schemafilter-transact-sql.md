@@ -5,8 +5,7 @@ ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
-ms.technology: 
-  - "replication"
+ms.technology: replication
 ms.topic: "language-reference"
 f1_keywords: 
   - "sp_schemafilter_TSQL"
@@ -36,7 +35,7 @@ sp_schemafilter [ @publisher = ] 'publisher'
   
 ## Arguments  
  [**@publisher** = ] **'***publisher***'**  
- Is the name of the non-[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Publisher. *publisher* is **sysname**, with no default.  
+ Is the name of the non- [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Publisher. *publisher* is **sysname**, with no default.  
   
  [**@schema** = ] **'***schema***'**  
  Is the name of the schema. *schema* is **sysname**, with a default value of NULL.  

@@ -1,17 +1,17 @@
 ---
 title: "Develop with the REST APIs for Reporting Services| Microsoft Docs"
 ms.description: "The REST API provides programmatic access to the objects in a SQL Server 2017 Reporting Services report server catalog."
-ms.date: 05/25/2018
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
 ms.technology: developer
-
-
 ms.topic: conceptual
-author: markingmyname
-ms.author: maghan
-monikerRange: ">= sql-server-2017 || = sqlallproducts-allversions"
+ms.custom: seodec18
+ms.date: 12/12/2018
 ---
+
 # Develop with the REST APIs for Reporting Services
 
 [!INCLUDE [ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2017-and-later](../../includes/ssrs-appliesto-2017-and-later.md)] [!INCLUDE [ssrs-appliesto-not-pbirs](../../includes/ssrs-appliesto-not-pbirs.md)]
@@ -51,7 +51,7 @@ A REST API request/response pair can be separated into five components:
 
 ## API documentation
 
-A modern REST API calls for modern API documentation. The REST API is built on the OpenAPI specification (a.k.a. the swagger specification) and documentation is available on [SwaggerHub](https://app.swaggerhub.com/api/microsoft-rs/SSRS/2.0). Beyond documenting the API, SwaggerHub helps generate a client library in the language of choice – JavaScript, TypeScript, C#, Java, Python, Ruby, and more.
+A modern REST API calls for modern API documentation. The REST API is built on the OpenAPI specification (a.k.a. the swagger specification) and documentation is available on [SwaggerHub](https://app.swaggerhub.com/api/microsoft-rs/SSRS/2.0). Beyond documenting the API, SwaggerHub helps generate a client library in the language of choice - JavaScript, TypeScript, C#, Java, Python, Ruby, and more.
 
 ## Testing API calls
 

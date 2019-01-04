@@ -53,7 +53,7 @@ manager: craigg
   
          Set **Value** to the name of a field in the report dataset. For more information, see [Add a Data-Bound Image &#40;Report Builder and SSRS&#41;](add-a-data-bound-image-report-builder-and-ssrs.md).  
   
-         For **MIMEType**, or file format, select the appropriate MIME type for the image—for example, .bmp.  
+         For **MIMEType**, or file format, select the appropriate MIME type for the image-for example, .bmp.  
   
         > [!NOTE]  
         >  MIMEType applies only if the **Source** property is set to **Database**. If the **Source** property is set to **External** or **Embedded**, the value of **MIMEType** is ignored.  

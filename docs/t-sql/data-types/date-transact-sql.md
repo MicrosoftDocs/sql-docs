@@ -60,7 +60,7 @@ The following tables show the valid string literal formats for the **date** data
 |------------------|-----------------|  
 |mon [dd][,] yyyy<br /><br /> mon dd[,] [yy]yy<br /><br /> mon yyyy [dd]<br /><br /> [dd] mon[,] yyyy<br /><br /> dd mon[,][yy]yy<br /><br /> dd [yy]yy mon<br /><br /> [dd] yyyy mon<br /><br /> yyyy mon [dd]<br /><br /> yyyy [dd] mon|**mon** represents the full month name or the month abbreviation given in the current language. Commas are optional and capitalization is ignored.<br /><br /> To avoid ambiguity, use four-digit years.<br /><br /> If the day is missing, the first day of the month is supplied.|  
   
-|ISO 8601|Descripton|  
+|ISO 8601|Description|  
 |--------------|----------------|  
 |YYYY-MM-DD<br /><br /> YYYYMMDD|Same as the SQL standard. This is the only format that is defined as an international standard.|  
   
@@ -74,10 +74,10 @@ The following tables show the valid string literal formats for the **date** data
   
 |W3C XML format|Description|  
 |--------------------|-----------------|  
-|yyyy-mm-ddTZD|Specifically supported for XML/SOAP usage.<br /><br /> TZD is the time zone designator (Z or +hh:mm or -hh:mm):<br /><br /> -   hh:mm represents the time zone offset. hh is two digits, ranging from 0 to 14, that represent the number of hours in the time zone offset.<br />-   MM is two digits, ranging from 0 to 59, that represent the number of additional minutes in the time zone offset.<br />-   + (plus) or – (minus) the mandatory sign of the time zone offset. This indicates that the time zone offset is added or subtracted from the Coordinated Universal Times (UTC) time to obtain the local time. The valid range of time zone offset is from -14:00 to +14:00.|  
+|yyyy-mm-ddTZD|Specifically supported for XML/SOAP usage.<br /><br /> TZD is the time zone designator (Z or +hh:mm or -hh:mm):<br /><br /> -   hh:mm represents the time zone offset. hh is two digits, ranging from 0 to 14, that represent the number of hours in the time zone offset.<br />-   MM is two digits, ranging from 0 to 59, that represent the number of additional minutes in the time zone offset.<br />-   + (plus) or - (minus) the mandatory sign of the time zone offset. This indicates that the time zone offset is added or subtracted from the Coordinated Universal Times (UTC) time to obtain the local time. The valid range of time zone offset is from -14:00 to +14:00.|  
   
 ## ANSI and ISO 8601 compliance  
-**date** complies with the ANSI SQL standard definition for the Gregorian calendar: "NOTE 85 - Datetime data types will allow dates in the Gregorian format to be stored in the date range 0001–01–01 CE through 9999–12–31 CE."
+**date** complies with the ANSI SQL standard definition for the Gregorian calendar: "NOTE 85 - Datetime data types will allow dates in the Gregorian format to be stored in the date range 0001-01-01 CE through 9999-12-31 CE."
   
 The default string literal format, which is used for down-level clients, complies with the SQL standard form which is defined as YYYY-MM-DD. This format is the same as the ISO 8601 definition for DATE.
   

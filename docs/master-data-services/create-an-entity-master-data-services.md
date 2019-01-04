@@ -5,8 +5,7 @@ ms.date: "03/01/2017"
 ms.prod: sql
 ms.prod_service: "mds"
 ms.reviewer: ""
-ms.technology: 
-  - "master-data-services"
+ms.technology: master-data-services
 ms.topic: conceptual
 helpviewer_keywords: 
   - "entities [Master Data Services], creating"
@@ -49,8 +48,8 @@ manager: craigg
   
     > [!TIP]  
     >  Use the model name as part of the staging table name, for example *Modelname_Entityname*. This makes the tables easier to find in the database. For more information about the staging tables, see [Overview: Importing Data from Tables &#40;Master Data Services&#41;](../master-data-services/overview-importing-data-from-tables-master-data-services.md).
-    > [!TIP]  
-    >  If using the default naming for Staging tables, MDS will automatically append identifiers (e.g. _1, _2) to the staging table names if an entity with same name exists in another Model.
+    > [!TIP]
+    > If using the default naming for Staging tables, MDS will automatically append identifiers (e.g. _1, _2) to the staging table names if an entity with same name exists in another Model.
   
 7.  For the **Transaction Log Type** field, choose the transaction log type in the drop-down list.  
   

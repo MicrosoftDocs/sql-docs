@@ -69,7 +69,7 @@ manager: craigg
  For DMX OPENQUERY statements, local cubes, and mining models, the credentials of the current user will be used even if you choose the service account option. The service account option is not supported for out-of-line bindings.  
   
 > [!NOTE]  
->  Errors can occur when processing a data mining model from a cube if the service account does not have administrator permissions on the Analysis Services instance. For more information, see [Mining Structure: Issue while Processing when DataSource is OLAP Cube](http://go.microsoft.com/fwlink/?LinkId=251610).  
+>  Errors can occur when processing a data mining model from a cube if the service account does not have administrator permissions on the Analysis Services instance. For more information, see [Mining Structure: Issue while Processing when DataSource is OLAP Cube](https://go.microsoft.com/fwlink/?LinkId=251610).  
   
  **Use the credentials of the current user**  
  Select this option to have the [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] object use the security credentials of the current user for out-of-line bindings, DMX OPENQUERY, local cubes, and mining models.  
@@ -81,7 +81,7 @@ manager: craigg
  **Default** or **Inherit**  
  The dialog box uses **Default** for the impersonation options set at the database level and **Inherit** for impersonation options set at the data source level.  
   
- **Data Sources – Inherit Option**  
+ **Data Sources - Inherit Option**  
   
  At the data source level, **Inherit** specifies that [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] should use the impersonation option of the parent object. In a multidimensional model, the parent object is the [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] database. Choosing the **Inherit** option lets you centrally manage the impersonation settings for this and other data sources that are part of the same database. For this option to be meaningful, choose a specific Windows user name and password at the database level. Otherwise, the combination of **Inherit** on the data source and **Default** on the database are equivalent to using service account option.  
   
@@ -95,7 +95,7 @@ manager: craigg
   
  For more information about default settings at the database level, see [Set Multidimensional Database Properties &#40;Analysis Services&#41;](set-multidimensional-database-properties-analysis-services.md).  
   
- **Databases – Default option**  
+ **Databases - Default option**  
   
  For tabular databases, **Default** means use the service account.  
   

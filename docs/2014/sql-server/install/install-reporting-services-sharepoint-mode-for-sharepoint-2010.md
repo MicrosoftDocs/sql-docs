@@ -85,7 +85,7 @@ manager: craigg
   
 9. Select the following on the **Feature Selection** page:  
   
-    -   **Reporting Services – SharePoint**  
+    -   **Reporting Services - SharePoint**  
   
     -   **Reporting Services add-in for SharePoint 2010 products**. ![note](../../../2014/reporting-services/media/rs-fyinote.png "note")The installation wizard option for installing the add-in is new with the [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] release.  
   
@@ -244,7 +244,7 @@ manager: craigg
   
 ## See Also  
  [PowerShell cmdlets for Reporting Services SharePoint Mode](../../../2014/reporting-services/powershell-cmdlets-for-reporting-services-sharepoint-mode.md)   
- [Features Supported by the Editions of SQL Server 2012](http://go.microsoft.com/fwlink/?linkid=232473)   
+ [Features Supported by the Editions of SQL Server 2012](https://go.microsoft.com/fwlink/?linkid=232473)   
  [Reporting Services SharePoint Service and Service Applications](../../../2014/reporting-services/reporting-services-sharepoint-service-and-service-applications.md)  
   
   

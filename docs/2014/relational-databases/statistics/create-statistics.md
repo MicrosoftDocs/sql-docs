@@ -61,7 +61,7 @@ manager: craigg
   
 3.  Click the plus sign to expand the table in which you want to create a new statistic.  
   
-4.  Right-click the **Statistics** folder and select **New Statistics…**.  
+4.  Right-click the **Statistics** folder and select **New Statistics...**.  
   
      The following properties show on the **General** page in the **New Statistics on Table***table_name* dialog box.  
   

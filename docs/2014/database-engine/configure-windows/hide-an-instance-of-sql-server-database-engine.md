@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "08/19/2015"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "database-engine"
+ms.technology: configuration
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Database Engine [SQL Server], hiding instances"
@@ -40,6 +39,6 @@ manager: craigg
 ## See Also  
  [Server Network Configuration](server-network-configuration.md)   
  [Description of SQL Virtual Server client connections](https://support.microsoft.com/kb/273673)   
- [How to assign a static port to a SQL Server named instance - and avoid a common pitfall](http://blogs.msdn.com/b/arvindsh/archive/2012/09/08/how-to-assign-a-static-port-to-a-sql-server-named-instance-and-avoid-a-common-pitfall.aspx)  
+ [How to assign a static port to a SQL Server named instance - and avoid a common pitfall](https://blogs.msdn.com/b/arvindsh/archive/2012/09/08/how-to-assign-a-static-port-to-a-sql-server-named-instance-and-avoid-a-common-pitfall.aspx)  
   
   

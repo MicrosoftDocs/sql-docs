@@ -4,9 +4,7 @@ ms.custom: ""
 ms.date: "03/08/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "docset-sql-devref"
-  - "integration-services"
+ms.technology: integration-services
 ms.topic: "reference"
 dev_langs: 
   - "VB"
@@ -83,7 +81,7 @@ manager: craigg
   
          -or-  
   
-    -   Click the ellipsis (**…**) button next to the property field, and in the **Select variables** dialog box, select the `ExcelFile` variable.  
+    -   Click the ellipsis (**...**) button next to the property field, and in the **Select variables** dialog box, select the `ExcelFile` variable.  
   
 3.  Click **ReadWriteVariables** and enter the property value using one of the following methods:  
   
@@ -91,7 +89,7 @@ manager: craigg
   
          -or-  
   
-    -   Click the ellipsis (**…**) button next to the property field, and in the **Select variables** dialog box, select the `ExcelFileExists` variable.  
+    -   Click the ellipsis (**...**) button next to the property field, and in the **Select variables** dialog box, select the `ExcelFileExists` variable.  
   
 4.  Click **Edit Script** to open the script editor.  
   
@@ -153,7 +151,7 @@ public class ScriptMain
   
          -or-  
   
-    -   Click the ellipsis (**…**) button next to the property field, and in the **Select variables** dialog box, select the `ExcelTable` and `ExcelFile` variables.  
+    -   Click the ellipsis (**...**) button next to the property field, and in the **Select variables** dialog box, select the `ExcelTable` and `ExcelFile` variables.  
   
 3.  Click **ReadWriteVariables** and enter the property value using one of the following methods:  
   
@@ -161,7 +159,7 @@ public class ScriptMain
   
          -or-  
   
-    -   Click the ellipsis (**…**) button next to the property field, and in the **Select variables** dialog box, select the `ExcelTableExists` variable.  
+    -   Click the ellipsis (**...**) button next to the property field, and in the **Select variables** dialog box, select the `ExcelTableExists` variable.  
   
 4.  Click **Edit Script** to open the script editor.  
   
@@ -260,7 +258,7 @@ public class ScriptMain
   
          -or-  
   
-    -   Click the ellipsis (**…**) button next to the property field, and in the **Select variables** dialog box, select the ExcelFolder variable.  
+    -   Click the ellipsis (**...**) button next to the property field, and in the **Select variables** dialog box, select the ExcelFolder variable.  
   
 3.  Click **ReadWriteVariables** and enter the property value using one of the following methods:  
   
@@ -268,7 +266,7 @@ public class ScriptMain
   
          -or-  
   
-    -   Click the ellipsis (**…**) button next to the property field, and in the **Select variables** dialog box, select the ExcelFiles variable.  
+    -   Click the ellipsis (**...**) button next to the property field, and in the **Select variables** dialog box, select the ExcelFiles variable.  
   
 4.  Click **Edit Script** to open the script editor.  
   
@@ -335,7 +333,7 @@ public class ScriptMain
   
          -or-  
   
-    -   Click the ellipsis (**…**) button next to the property field, and in the **Select variables** dialog box, select the ExcelFile variable.  
+    -   Click the ellipsis (**...**) button next to the property field, and in the **Select variables** dialog box, select the ExcelFile variable.  
   
 3.  Click **ReadWriteVariables** and enter the property value using one of the following methods:  
   
@@ -343,7 +341,7 @@ public class ScriptMain
   
          -or-  
   
-    -   Click the ellipsis (**…**) button next to the property field, and in the **Select variables** dialog box, select the ExcelTablesvariable.  
+    -   Click the ellipsis (**...**) button next to the property field, and in the **Select variables** dialog box, select the ExcelTablesvariable.  
   
 4.  Click **Edit Script** to open the script editor.  
   
@@ -448,7 +446,7 @@ public class ScriptMain
   
          -or-  
   
-    -   Click the ellipsis (**…**) button next to the property field, and in the **Select variables** dialog box, selecting the variables.  
+    -   Click the ellipsis (**...**) button next to the property field, and in the **Select variables** dialog box, selecting the variables.  
   
 5.  Click **Edit Script** to open the script editor.  
   
@@ -537,7 +535,7 @@ public class ScriptMain
 }  
 ```  
   
-![Integration Services icon (small)](../media/dts-16.gif "Integration Services icon (small)")  **Stay Up to Date with Integration Services**<br /> For the latest downloads, articles, samples, and videos from Microsoft, as well as selected solutions from the community, visit the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] page on MSDN:<br /><br /> [Visit the Integration Services page on MSDN](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> For automatic notification of these updates, subscribe to the RSS feeds available on the page.  
+![Integration Services icon (small)](../media/dts-16.gif "Integration Services icon (small)")  **Stay Up to Date with Integration Services**<br /> For the latest downloads, articles, samples, and videos from Microsoft, as well as selected solutions from the community, visit the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] page on MSDN:<br /><br /> [Visit the Integration Services page on MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> For automatic notification of these updates, subscribe to the RSS feeds available on the page.  
   
 ## See Also  
  [Excel Connection Manager](../connection-manager/excel-connection-manager.md)   

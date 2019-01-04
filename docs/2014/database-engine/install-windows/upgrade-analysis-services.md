@@ -4,7 +4,7 @@ ms.custom: ""
 ms.date: "05/24/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: install
+ms.technology: 
 ms.topic: conceptual
 helpviewer_keywords: 
   - "upgrading databases"
@@ -27,7 +27,7 @@ manager: craigg
 ## Known Upgrade Issues  
  Before upgrading to [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], review the following:  
   
--   [SQL Server 2014 Release Notes](http://go.microsoft.com/fwlink/?LinkID=296445).  
+-   [SQL Server 2014 Release Notes](https://go.microsoft.com/fwlink/?LinkID=296445).  
   
 -   To learn which [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] features and functionality have been discontinued, deprecated, or changed see [Analysis Services Backward Compatibility](../../analysis-services/analysis-services-backward-compatibility.md).  
   

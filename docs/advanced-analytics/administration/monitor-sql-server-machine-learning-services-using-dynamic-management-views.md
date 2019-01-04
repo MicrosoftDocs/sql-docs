@@ -1,6 +1,6 @@
 ---
-title: Monitor SQL Server Machine Learning Services using dynamic management views (DMVs) | Microsoft Docs
-description: Use dynamic management views (DMVs) to monitor SQL Server Machine Learning Services.
+title: Monitor R and Python script execution using dynamic management views (DMVs) - SQL Server Machine Learning
+description: Use dynamic management views (DMVs) to monitor R and Python external script execution in SQL Server Machine Learning Services.
 ms.prod: sql
 ms.technology: machine-learning
 
@@ -53,7 +53,7 @@ View the Machine Learning Services installation setting and configuration option
 
 Run the query below to get this output. For more information on the views and functions used, see [sys.dm_server_registry](../../relational-databases/system-dynamic-management-views/sys-dm-server-registry-transact-sql.md), [sys.configurations](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md), and [SERVERPROPERTY](../../t-sql/functions/serverproperty-transact-sql.md).
 
-```SQL
+```sql
 SELECT CAST(SERVERPROPERTY('IsAdvancedAnalyticsInstalled') AS INT) AS IsMLServicesInstalled
     , CAST(value_in_use AS INT) AS ExternalScriptsEnabled
     , COALESCE(SIGN(SUSER_ID(CONCAT (
@@ -88,7 +88,7 @@ View the active sessions running external scripts.
 
 Run the query below to get this output. For more information on the dynamic management views used, see [sys.dm_exec_requests](../../relational-databases/system-dynamic-management-views/sys-dm-external-script-requests.md), [sys.dm_external_script_requests](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md), and [sys.dm_exec_sessions](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sessions-transact-sql.md).
 
-```SQL
+```sql
 SELECT r.session_id, r.blocking_session_id, r.status, DB_NAME(s.database_id) AS database_name
     , s.login_name, r.wait_time, r.wait_type, r.last_wait_type, r.total_elapsed_time, r.cpu_time
     , r.reads, r.logical_reads, r.writes, er.language, er.degree_of_parallelism, er.external_user_name
@@ -128,7 +128,7 @@ View the execution statistics for the external runtime for R and Python. Only st
 
 Run the query below to get this output. For more information on the dynamic management view used, see  [sys.dm_external_script_execution_stats](../../relational-databases/system-dynamic-management-views/sys-dm-external-script-execution-stats.md). The query only returns functions that have been executed more than once.
 
-```SQL
+```sql
 SELECT language, counter_name, counter_value
 FROM sys.dm_external_script_execution_stats
 WHERE counter_value > 0
@@ -151,7 +151,7 @@ View the performance counters related to the execution of external scripts.
 
 Run the query below to get this output. For more information on the dynamic management view used, see  [sys.dm_os_performance_counters](../../relational-databases/system-dynamic-management-views/sys-dm-os-performance-counters-transact-sql.md).
 
-```SQL
+```sql
 SELECT counter_name, cntr_value
 FROM sys.dm_os_performance_counters 
 WHERE object_name LIKE '%External Scripts%'
@@ -177,7 +177,7 @@ View information about the memory used by the OS, SQL Server, and the external p
 
 Run the query below to get this output. For more information on the dynamic management views used, see [sys.dm_resource_governor_external_resource_pools](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-external-resource-pools.md) and [sys.dm_os_sys_info](../../relational-databases/system-dynamic-management-views/sys-dm-os-sys-info-transact-sql.md).
 
-```SQL
+```sql
 SELECT physical_memory_kb, committed_kb
     , (SELECT SUM(peak_memory_kb)
         FROM sys.dm_resource_governor_external_resource_pools AS ep
@@ -201,7 +201,7 @@ View information about the maximum memory configuration in percentage of SQL Ser
 
 Run the query below to get this output. For more information on the views used, see [sys.configurations](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md) and [sys.dm_resource_governor_external_resource_pools](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-external-resource-pools.md).
 
-```SQL
+```sql
 SELECT 'SQL Server' AS name
     , CASE CAST(c.value AS BIGINT)
         WHEN 2147483647 THEN 100
@@ -229,7 +229,7 @@ In [SQL Server Resource Governor](../../relational-databases/resource-governor/r
 
 Run the query below to get this output. For more information on the dynamic management views used, see  [sys.dm_resource_governor_resource_pools](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-resource-pools-transact-sql.md) and [sys.dm_resource_governor_external_resource_pools](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-external-resource-pools.md).
 
-```SQL
+```sql
 SELECT CONCAT ('SQL Server - ', p.name) AS pool_name
     , p.total_cpu_usage_ms, p.read_io_completed_total, p.write_io_completed_total
 FROM sys.dm_resource_governor_resource_pools AS p
@@ -260,7 +260,7 @@ View the R packages installed in SQL Server Machine Learning Services.
 
 Run the query below to get this output. The query use an R script to determine R packages installed with SQL Server.
 
-```SQL
+```sql
 EXEC sp_execute_external_script @language = N'R'
 , @script = N'
 OutputDataSet <- data.frame(installed.packages()[,c("Package", "Version", "Depends", "License", "LibPath")]);'
@@ -286,7 +286,7 @@ View the Python packages installed in SQL Server Machine Learning Services.
 
 Run the query below to get this output. The query use an Python script to determine the Python packages installed with SQL Server.
 
-```SQL
+```sql
 EXEC sp_execute_external_script @language = N'Python'
 , @script = N'
 import pip

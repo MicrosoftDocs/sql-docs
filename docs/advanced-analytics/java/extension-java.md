@@ -1,10 +1,10 @@
 ---
-title: Java language extension in SQL Server 2019 | Microsoft Docs
-description: Run Java code on SQL Server 2019 using the Java language extension.
+title: Java language extension in SQL Server 2019 - SQL Server Machine Learning Services
+description: Install, configure, and validate the Java language extension on SQL Server 2019 for both Linux and Windows systems.
 ms.prod: sql
 ms.technology: machine-learning
 
-ms.date: 10/12/2018  
+ms.date: 12/07/2018
 ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
@@ -14,7 +14,7 @@ monikerRange: ">=sql-server-ver15||=sqlallproducts-allversions"
 
 # Java language extension in SQL Server 2019 
 
-Starting in SQL Server 2019, you can run custom Java code in the [extensibility framework](../concepts/extensibility-framework.md) as an add-on to the database engine instance. 
+Starting in SQL Server 2019 preview on both Windows and Linux, you can run custom Java code in the [extensibility framework](../concepts/extensibility-framework.md) as an add-on to the database engine instance. 
 
 The extensibility framework is an architecture for executing external code: Java (starting in SQL Server 2019), [Python (starting in SQL Server 2017)](../concepts/extension-python.md), and [R (starting in SQL Server 2016)](../concepts/extension-r.md). Code execution is isolated from core engine processes, but fully integrated with SQL Server query execution. This means that you can push data from any SQL Server query to the external runtime, and consume or persist results back in SQL Server.
 
@@ -22,7 +22,7 @@ As with any programming language extension, the system stored procedure [sp_exec
 
 ## Prerequisites
 
-A SQL Server 2019 is required. Earlier versions do not have Java integration. 
+A SQL Server 2019 preview instance is required. Earlier versions do not have Java integration. 
 
 Java version requirements vary across Windows and Linux. The Java Runtime Environment (JRE) is the minimum requirement, but JDKs are useful if you need the Java compiler or development packages. Because the JDK is all inclusive, if you install the JDK, the JRE is not necessary.
 
@@ -42,7 +42,7 @@ On Windows, we recommend installing the JDK under the default /Program Files/ fo
 
 ## Install on Linux
 
-You can install the [database engine and the Java extension together](../../linux/sql-server-linux-setup-machine-learning.md#chained-installation), or add Java support to an existing instance. The following examples add the Java extension to an existing installation.  
+You can install the [database engine and the Java extension together](../../linux/sql-server-linux-setup-machine-learning.md#install-all), or add Java support to an existing instance. The following examples add the Java extension to an existing installation.  
 
 ```bash
 # RedHat install commands
@@ -61,6 +61,29 @@ After completing installation, your next step is [Configure external script exec
 
 > [!Note]
 > On an internet-connected device, package dependencies are downloaded and installed as part of the main package installation. For more details, including offline setup, see [Install SQL Server Machine Learning on Linux](../../linux/sql-server-linux-setup-machine-learning.md).
+
+### Grant permissions on Linux
+
+To provide SQL Server with permissions to execute the Java classes, you need to set permissions.
+
+To grant read and execute access to jar files or class files, run the following **chmod** command on each class or jar file. We recommend putting your class files in a jar when you work with SQL Server. For help creating a jar, see [How to create a jar file](#create-jar).
+
+```cmd
+chmod ug+rx <MyJarFile.jar>
+```
+You also need to give mssql_satellite permissions on the directory or jar file to read/execute.
+
+* If you are calling class files from SQL Server, mssql_satellite will need read/execute permissions on *every* directory in the folder hierarchy, from root down to the direct parent.
+
+* If you are calling a jar file from SQL Server, it is enough to run the command on the jar file itself.
+
+```cmd
+chown mssql_satellite:mssql_satellite <directory>
+```
+
+```cmd
+chown mssql_satellite:mssql_satellite <MyJarFile.jar>
+```
 
 <a name="install-on-windows"></a>
 
@@ -94,38 +117,32 @@ JAVA_HOME is an environment variable that specifies the location of the Java int
 
 <a name="perms-nonwindows"></a>
 
-### Grant permissions to Java executables
+### Grant access to non-default JDK folder (Windows only)
 
-By default, the account under which external processes run does not have access to JRE or JDK files. In this section, run the following PowerShell script to grant permissions to allow access.
+You can skip this step if you installed the JDK/JRE in the default folder. 
 
-1. Find and copy the location of the JDK or JRE installation. For example, it might be C:\Program Files\Java\jdk-10.0.2.
+For a non-default folder installation, run the **icacls** commands from an *elevated* line to grant access to the **SQLRUsergroup** and SQL Server service accounts (in **ALL_APPLICATION_PACKAGES**) for accessing the JVM and the Java classpath. The commands will recursively grant access to all files and folders under the given directory path.
 
-2. Open PowerShell with administrator rights. If you are unfamiliar with this task, see [this article](https://www.top-password.com/blog/5-ways-to-run-powershell-as-administrator-in-windows-10/) for tips.
+#### SQLRUserGroup permissions
 
-3. Run the following script to grant **SQLRUserGroup** permissions to the Java executables. 
+For a named instance,  append the instance name to SQLRUsergroup (for example, `SQLRUsergroupINSTANCENAME`).
 
-  **SQLRUserGroup** specifies the permissions under which external processes run. By default, members of this group have permission to the R and Python program files installed by SQL Server, but not Java. To run Java executables, you must give **SQLRUserGroup** permission to do so.
+```cmd
+icacls "<PATH TO CLASS or JAR FILES>" /grant "SQLRUsergroup":(OI)(CI)RX /T
+```
 
-   ```powershell
-   $Acl = Get-Acl "<YOUR PATH TO JDK / CLASSPATH>"
-   $Ar = New-Object  system.security.accesscontrol.filesystemaccessrule("SQLRUsergroup","FullControl","Allow")
-   $Acl.SetAccessRule($Ar)
-   Set-Acl "<YOUR PATH TO JDK / CLASSPATH>" $Acl 
-   ```
-4. Run the following script to grant **ALL APPLICATION PACKAGES** permissions as well. 
+#### AppContainer permissions
 
-  In SQL Server 2019, containers replace worker accounts as the isolation mechanism, with processes running inside containers, under the identity of Launchpad service account, which is member the **SQLRUserGroup**. For more information, see [Differences in a SQL Server 2019 install](../install/sql-machine-learning-services-ver15.md).
+```cmd
+icacls "PATH to JDK/JRE" /grant "ALL APPLICATION PACKAGES":(OI)(CI)RX /T
+```
 
-   ```powershell
-   $Acl = Get-Acl "<YOUR PATH TO JDK / CLASSPATH>" 
-   $Ar = New-Object  system.security.accesscontrol.filesystemaccessrule("ALL APPLICATION PACKAGES","FullControl","Allow") 
-   $Acl.SetAccessRule($Ar) 
-   Set-Acl "<YOUR PATH TO JDK / CLASSPATH>" $Acl 
-   ```
+### Add the JRE path to JAVA_HOME
+You also need to add the path to the JRE in the JAVA_HOME system environment variable. If you only have a JRE installed, you can provide the JRE folder path. However, if you have a JDK installed, you will need to provide the full path to the JVM, in the JRE folder under JDK, like this: "C:\Program Files\Java\jdk1.8.0_191\jre\bin\server".
 
-5. Repeat the previous two steps on any Java classpath folders containing the .class or .jar files that you want to run on SQL Server. For example, if you keep your compiled programs in a path like C:\JavaPrograms\my-app, grant **SQLRUserGroup** and **ALL APPLICATION PACKAGES** permission on the folder so that the programs can be loaded.
+To create a system variable, use Control Panel > System and Security > System to access **Advanced System Properties**. Click **Environment Variables** and then create a new system variable for JAVA_HOME.
 
-  Be sure to grant permissions on the full path, starting at the root folder. Permission on just the containing folder won't be sufficient for loading your code.
+![Environment variable for Java Home](../media/java/env-variable-java-home.png "Setup for Java")
 
 <a name="configure-script-execution"></a>
 
@@ -158,6 +175,18 @@ If you are already familiar with Machine Learning Services, the authorization an
 * Streaming using the sp_execute_external_script parameter @r_rowsPerRead is not supported in this CTP.
 
 * Partitioning using the sp_execute_external_script parameter @input_data_1_partition_by_columns is not supported in this CTP.
+
+<a name="create-jar"></a>
+
+## How to create a jar file from class files
+
+Navigate to the folder containing your class file and run this command:
+
+```cmd
+jar -cf <MyJar.jar> *.class
+```
+
+Make sure the path to **jar.exe** is part of the system path variable. Alternatively, specify the full path to jar which can be found under /bin in the JDK folder: `C:\Users\MyUser\Desktop\jdk-10.0.2\bin\jar -cf <MyJar.jar> *.class`
 
 ## Next steps
 

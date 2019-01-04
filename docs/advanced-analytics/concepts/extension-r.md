@@ -1,6 +1,6 @@
 ---
-title: R extension in SQL Server | Microsoft Docs
-description: Learn about R code execution and built-in R libraries in SQL Server.
+title: R programming language extension - SQL Server Machine Learning
+description: Learn about R code execution and built-in R libraries in SQL Server 2016 R Services or SQL Server 2017 Machine Learning Services.
 ms.prod: sql
 ms.technology: machine-learning
 
@@ -10,10 +10,10 @@ author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
 ---
-# R extension in SQL Server
+# R language extension in SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-The R extension is part of the SQL Server Machine Learning Services add-on to the relational database engine. It adds an R execution environment, base R distribution with standard libraries and tools, and the Microsoft R libraries: [RevoScaleR](../r/revoscaler-overview.md) for analytics at scale, [MicrosoftML](../using-the-microsoftml-package.md) for machine learning algorithms, and other libraries for accessing data or R code in SQL Server.
+The R extension is part of the SQL Server Machine Learning Services add-on to the relational database engine. It adds an R execution environment, base R distribution with standard libraries and tools, and the Microsoft R libraries: [RevoScaleR](../r/ref-r-revoscaler.md) for analytics at scale, [MicrosoftML](../r/ref-r-microsoftml.md) for machine learning algorithms, and other libraries for accessing data or R code in SQL Server.
 
 R integration is available in SQL Server starting in SQL Server 2016, with [R Services](../r/sql-server-r-services.md), and continuing forward as part of [SQL Server Machine Learning Services](../what-is-sql-server-machine-learning.md).
 
@@ -30,7 +30,7 @@ R packages added by Microsoft for parallel and distributed workloads include the
 | Library | Description |
 |---------|-------------|
 | [**RevoScaleR**](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) | Supports data source objects and data exploration, manipulation, transformation, and visualization. It supports creation of remote compute contexts, as well as a various scalable machine learning models, such as **rxLinMod**. The APIs have been optimized to analyze data sets that are too big to fit in memory and to perform computations distributed over several cores or processors. The RevoScaleR package also supports the XDF file format for faster movement and storage of data used for analysis. The XDF format uses columnar storage, is portable, and can be used to load and then manipulate data from various sources, including text, SPSS, or an ODBC connection. |
-| [**MicrosoftML**](https://docs.microsoft.com/r-server/r/concept-what-is-the-microsoftml-package) | Contains machine learning algorithms that have been optimized for speed and accuracy, as well as in-line transformations for working with text and images. For more information, see [Using the MicrosoftML package with SQL Server](https://docs.microsoft.com/sql/advanced-analytics/using-the-microsoftml-package). | 
+| [**MicrosoftML**](https://docs.microsoft.com/r-server/r/concept-what-is-the-microsoftml-package) | Contains machine learning algorithms that have been optimized for speed and accuracy, as well as in-line transformations for working with text and images. For more information, see [MicrosoftML in SQL Server](../r/ref-r-microsoftml.md). | 
 
 ## Using R in SQL Server
 

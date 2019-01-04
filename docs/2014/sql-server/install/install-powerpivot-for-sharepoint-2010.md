@@ -37,7 +37,7 @@ manager: craigg
   
 6.  The [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] instance name must be available. You cannot have an existing [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] named instance on the computer on which you are installing PowerPivot for SharePoint.  
   
-7.  The [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] instance cannot be part of a SQL Server Failover Cluster. Use high availability features of the SharePoint Product. For example, Excel Services manages load balancing of PowerPivot for SharePoint servers. For more information, see [Manage Excel Services data model settings (SharePoint Server 2013)](http://technet.microsoft.com/library/jj219780.aspx) (http://technet.microsoft.com/library/jj219780.aspx).  
+7.  The [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] instance cannot be part of a SQL Server Failover Cluster. Use high availability features of the SharePoint Product. For example, Excel Services manages load balancing of PowerPivot for SharePoint servers. For more information, see [Manage Excel Services data model settings (SharePoint Server 2013)](https://technet.microsoft.com/library/jj219780.aspx) (https://technet.microsoft.com/library/jj219780.aspx).  
   
 8.  If you are installing [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] on an existing farm, you must have one or more SharePoint web applications that are configured for classic mode authentication. [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] data access will only work if the web application supports classic mode authentication. For more information about classic mode requirements, see [PowerPivot Authentication and Authorization](../../analysis-services/power-pivot-sharepoint/power-pivot-authentication-and-authorization.md).  
   
@@ -131,7 +131,7 @@ manager: craigg
 -   The [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] version of MSOLAP is included in SQL Server Setup, therefore explicitly installing the [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] version of MSOLAP is only required if your application server is not a PowerPivot application server.  
   
     > [!NOTE]  
-    >  The Excel Calculation Services application server also needs an instance of the file **Microsoft.AnalysisServices.Xmla.dll** in the global assembly. To install the .dll on the application server, install [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Select the "Management Tools – Complete" on the **Feature Selection** page of the SQL Server Setup wizard.  
+    >  The Excel Calculation Services application server also needs an instance of the file **Microsoft.AnalysisServices.Xmla.dll** in the global assembly. To install the .dll on the application server, install [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Select the "Management Tools - Complete" on the **Feature Selection** page of the SQL Server Setup wizard.  
   
 -   If you want the application server to support older [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] workbooks, you need to install the SQL Server 2008 R2 version of MSOLAP.  
   

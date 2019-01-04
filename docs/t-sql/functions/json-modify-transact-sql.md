@@ -73,9 +73,9 @@ JSON_MODIFY escapes all special characters in the new value if the type of the v
 |Existing value|Path exists|Lax mode|Strict mode|  
 |--------------------|-----------------|--------------|-----------------|  
 |Not NULL|Yes|Update the existing value.|Update the existing value.|  
-|Not NULL|No|Try to create a new key:value pair on the specified path.<br /><br /> This may fail. For example, if you specify the path `$.user.setting.theme`, JSON_MODIFY does not insert the key `theme` if the `$.user` or `$.user.settings` objects do not exist, or if settings is an array or a scalar value.|Error – INVALID_PROPERTY|  
+|Not NULL|No|Try to create a new key:value pair on the specified path.<br /><br /> This may fail. For example, if you specify the path `$.user.setting.theme`, JSON_MODIFY does not insert the key `theme` if the `$.user` or `$.user.settings` objects do not exist, or if settings is an array or a scalar value.|Error - INVALID_PROPERTY|  
 |NULL|Yes|Delete the existing property.|Set the existing value to null.|  
-|NULL|No|No action. The first argument is returned as the result.|Error – INVALID_PROPERTY|  
+|NULL|No|No action. The first argument is returned as the result.|Error - INVALID_PROPERTY|  
   
  In lax mode, JSON_MODIFY tries to create a new key:value pair, but in some cases it might fail.  
   

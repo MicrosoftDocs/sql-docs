@@ -1,5 +1,5 @@
 ---
-title: Machine learning lifecycle and the team process | Microsoft Docs
+title: Machine learning lifecycle and the team process - SQL Server Machine Learning Services
 ms.prod: sql
 ms.technology: machine-learning
 

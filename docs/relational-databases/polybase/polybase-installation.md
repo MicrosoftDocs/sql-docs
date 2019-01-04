@@ -36,12 +36,12 @@ To install a trial version of SQL Server, go to [SQL Server evaluations](https:/
 
 - MSVC++ 2012. 
 
-> [!NOTE]  
-
+> [!NOTE]
+> 
 > PolyBase can be installed on only one SQL Server instance per machine.
-
+> 
 > [!IMPORTANT]
->
+> 
 > To use the computation pushdown functionality against Hadoop, the target Hadoop cluster must have the core components of HDFS, YARN and MapReduce, with the job history server enabled. PolyBase submits the pushdown query via MapReduce and pulls status from the job history server. Without either component, the query fails.
   
 ## Single node or PolyBase scale-out group
@@ -174,11 +174,11 @@ SELECT SERVERPROPERTY ('IsPolyBaseInstalled') AS IsPolyBaseInstalled;
 
 SQL Server PolyBase setup creates the following firewall rules on the machine:  
    
-- SQL Server PolyBase – Database Engine - \<SQLServerInstanceName> (TCP-In)  
+- SQL Server PolyBase - Database Engine - \<SQLServerInstanceName> (TCP-In)  
    
-- SQL Server PolyBase – PolyBase Services - \<SQLServerInstanceName> (TCP-In)  
+- SQL Server PolyBase - PolyBase Services - \<SQLServerInstanceName> (TCP-In)  
 
-- SQL Server PolyBase – SQL Browser - (UDP-In)  
+- SQL Server PolyBase - SQL Browser - (UDP-In)  
    
 At installation, if you use the SQL Server instance as part of a PolyBase scale-out group, these rules are enabled. The firewall opens to allow incoming connections. They're allowed for the SQL Server Database Engine, SQL Server PolyBase Engine, SQL Server PolyBase Data Movement service, and the SQL browser. If the firewall service on the machine isn't running during installation, SQL Server setup fails to enable these rules. In that case, start the firewall service on the machine and enable these rules post-installation.  
    

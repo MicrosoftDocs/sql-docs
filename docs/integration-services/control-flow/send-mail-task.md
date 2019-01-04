@@ -96,7 +96,7 @@ manager: craigg
   
 ### Options  
  **SMTPConnection**  
- Select an SMTP connection manager in the list, or click **\<New connection…>** to create a new connection manager.  
+ Select an SMTP connection manager in the list, or click **\<New connection...>** to create a new connection manager.  
   
 > [!IMPORTANT]  
 >  The SMTP connection manager supports only anonymous authentication and Windows Authentication. It does not support basic authentication.  
@@ -140,17 +140,17 @@ manager: craigg
   
 #### MessageSourceType = Direct Input  
  **MessageSource**  
- Type the message text or click the browse button (…) and then type the message in the **Message source** dialog box.  
+ Type the message text or click the browse button (...) and then type the message in the **Message source** dialog box.  
   
 #### MessageSourceType = File connection  
  **MessageSource**  
- Select a File connection manager in the list or click \<**New connection…**> to create a new connection manager.  
+ Select a File connection manager in the list or click \<**New connection...**> to create a new connection manager.  
   
  **Related Topics:** [File Connection Manager](../../integration-services/connection-manager/file-connection-manager.md), [File Connection Manager Editor](../../integration-services/connection-manager/file-connection-manager-editor.md)  
   
 #### MessageSourceType = Variable  
  **MessageSource**  
- Select a variable in the list or click \<**New variable…**> to create a new variable.  
+ Select a variable in the list or click \<**New variable...**> to create a new variable.  
   
  **Related Topics:** [Integration Services &#40;SSIS&#41; Variables](../../integration-services/integration-services-ssis-variables.md), [Add Variable](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
   

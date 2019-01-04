@@ -36,9 +36,9 @@ manager: craigg
 ```  
   
 SQLRETURN SQLEndTran(  
-     SQLSMALLINT   HandleType,  
-     SQLHANDLE     Handle,  
-     SQLSMALLINT   CompletionType);  
+     SQLSMALLINT   HandleType,  
+     SQLHANDLE     Handle,  
+     SQLSMALLINT   CompletionType);  
 ```  
   
 ## Arguments  

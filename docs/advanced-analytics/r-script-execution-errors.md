@@ -1,5 +1,5 @@
 ---
-title: R scripting errors in SQL Server Machine Learning and R Services | Microsoft Docs
+title: R scripting errors and troubleshooting - SQL Server Machine Learning Services
 ms.prod: sql
 ms.technology: machine-learning
 
@@ -34,7 +34,7 @@ If the R runtime is functioning but your script returns errors, we recommend tha
 We also recommend that you review and slightly rewrite the script to correct any problems with data types that might arise when you move data between R and the database engine. For more information, see [R libraries and data types](r/r-libraries-and-data-types.md).
 
 Additionally, you can use the sqlrutils package to bundle your R script in a format that is more easily consumed as a stored procedure. For more information, see:
-* [Generate a stored procedure for R code by using the sqlrutils package](r/generating-an-r-stored-procedure-for-r-code-using-the-sqlrutils-package.md)
+* [sqlrutils package](r/ref-r-sqlrutils.md)
 * [Create a stored procedure by using sqlrutils](r/how-to-create-a-stored-procedure-using-sqlrutils.md)
 
 ## Script returns inconsistent results
@@ -63,7 +63,7 @@ To enable your Windows credentials to be passed securely from a script that's in
 
 2. Run the following script. Be sure to edit the user group name, if you changed the default, and the computer and instance names.
 
-    ```SQL
+    ```sql
     USE [master]
     GO
     

@@ -21,7 +21,7 @@ ms.author: "sstein"
 manager: craigg
 ---
 # Delete a Data-tier Application
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   You can delete a data-tier application by using either the Delete Data-tier Application wizard or a Windows PowerShell script. You can specify whether the associated database is retained, detached, or dropped.  
   
 -   **Before you begin:**  [Limitations and Restrictions](#LimitationsRestrictions), [Permissions](#Permissions)  
@@ -61,7 +61,7 @@ manager: craigg
   
 3.  Expand the **Data-tier Applications** node.  
   
-4.  Right-click the DAC to be deleted, and then select **Delete Data-tier Application…**  
+4.  Right-click the DAC to be deleted, and then select **Delete Data-tier Application...**  
   
 5.  Complete the wizard dialogs:  
   

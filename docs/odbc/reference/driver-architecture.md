@@ -22,9 +22,9 @@ Driver architecture falls into two categories, depending on which software proce
   
 -   **DBMS-Based Drivers** The driver accesses the physical data through a separate database engine. In this case the driver processes only ODBC calls; it passes SQL statements to the database engine for processing. For example, Oracle drivers are DBMS-based drivers because Oracle has a stand-alone database engine the driver uses. Where the database engine resides is immaterial. It can reside on the same machine as the driver or a different machine on the network; it might even be accessed through a gateway.  
   
- Driver architecture is generally interesting only to driver writers; that is, driver architecture generally makes no difference to the application. However, the architecture can affect whether an application can use DBMS-specific SQL. For example, Microsoft Access provides a stand-alone database engine. If a Microsoft Access driver is DBMS-based — it accesses the data through this engine — the application can pass Microsoft Access–SQL statements to the engine for processing.  
+ Driver architecture is generally interesting only to driver writers; that is, driver architecture generally makes no difference to the application. However, the architecture can affect whether an application can use DBMS-specific SQL. For example, Microsoft Access provides a stand-alone database engine. If a Microsoft Access driver is DBMS-based - it accesses the data through this engine - the application can pass Microsoft Access-SQL statements to the engine for processing.  
   
- However, if the driver is file-based — that is, it contains a proprietary engine that accesses the Microsoft® Access .mdb file directly — any attempts to pass Microsoft Access–specific SQL statements to the engine are likely to result in syntax errors. The reason is that the proprietary engine is likely to implement only ODBC SQL.  
+ However, if the driver is file-based - that is, it contains a proprietary engine that accesses the Microsoft® Access .mdb file directly - any attempts to pass Microsoft Access-specific SQL statements to the engine are likely to result in syntax errors. The reason is that the proprietary engine is likely to implement only ODBC SQL.  
   
  This section contains the following topics.  
   

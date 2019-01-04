@@ -45,7 +45,7 @@ manager: craigg
   
 -   When the clustered index is disabled or enabled and the nonclustered index is disabled, the clustered index action has the following results on the disabled nonclustered index.  
   
-    |Clustered Index Action|Disabled Nonclustered Index …|  
+    |Clustered Index Action|Disabled Nonclustered Index ...|  
     |----------------------------|-----------------------------------|  
     |ALTER INDEX REBUILD.|Remains disabled.|  
     |ALTER INDEX ALL REBUILD.|Is rebuilt and enabled.|  

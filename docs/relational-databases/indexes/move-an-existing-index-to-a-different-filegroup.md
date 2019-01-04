@@ -70,7 +70,7 @@ manager: craigg
   
 8.  Click **Close**.  
   
-9. On the **File** menu, select **Save***table_name*.  
+9. On the **File** menu, select **Save**_table_name_.  
   
 #### To move an existing index to a different filegroup in Object Explorer  
   
@@ -96,7 +96,7 @@ manager: craigg
   
 8.  Click **OK**.  
   
- The following information is available on the **Storage** page of the **Index Properties –** *index_name* dialog box:  
+ The following information is available on the **Storage** page of the **Index Properties -** _index_name_ dialog box:  
   
  **Filegroup**  
  Stores the index in the specified filegroup. The list only displays standard (row) filegroups. The default list selection is the PRIMARY filegroup of the database.  

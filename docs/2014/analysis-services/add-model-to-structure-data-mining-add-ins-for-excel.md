@@ -53,7 +53,7 @@ manager: craigg
   
     -   **Do not use**. Indicates that the data should not be used in the model, even if present in the structure.  
   
-7.  Click the browse **(…)** button to open the **Set Column Model Flags** dialog box.  
+7.  Click the browse **(...)** button to open the **Set Column Model Flags** dialog box.  
   
      Take a minute to verify that the usage of each data column is appropriate for the model. This is an important step for preventing errors when you try to process the model.  
   

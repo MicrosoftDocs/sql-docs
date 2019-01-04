@@ -4,7 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology:
+ms.technology: security
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Best Practices [Database Engine]"
@@ -32,8 +32,8 @@ manager: craigg
 ## For More Information  
  [MSSQLSERVER_833](../errors-events/mssqlserver-833-database-engine-error.md)  
   
- [Microsoft Knowledge Base article 897284](http://go.microsoft.com/fwlink/?linkid=117743)  
+ [Microsoft Knowledge Base article 897284](https://go.microsoft.com/fwlink/?linkid=117743)  
   
- [SQL Server I/O Basics, Chapter 2](http://go.microsoft.com/fwlink/?LinkId=69370)  
+ [SQL Server I/O Basics, Chapter 2](https://go.microsoft.com/fwlink/?LinkId=69370)  
   
   

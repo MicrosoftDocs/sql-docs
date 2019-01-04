@@ -21,7 +21,7 @@ ms.author: "sstein"
 manager: craigg
 ---
 # Register a Database As a DAC
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   Use either the **Register Data-tier Application Wizard** or a Windows PowerShell script to build a data-tier application (DAC) definition that describes the objects in an existing database, and register the DAC definition in the **msdb** system database (**master** in [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]).  
   
 -   **Before you begin:**  [Limitations and Restrictions](#LimitationsRestrictions), [Permissions](#Permissions)  
@@ -29,7 +29,7 @@ manager: craigg
 -   **To upgrade a DAC, using:**  [The Register Data-tier Application Wizard](#UsingRegisterDACWizard), [PowerShell](#RegisterDACPowerShell)  
   
 ## Before You Begin  
- The registration process creates a DAC definition that defines the objects in the database. The combination of the DAC definition and the database form a DAC instance. If you register a database as a DAC on a managed instance of the Database Engine, the registered DAC will be incorporated into the SQL Server Utility the next time the utility collection set is sent from the instance to the Utility Control Point. The DAC will then be present in the **Deployed Data-tier Applications** node of the [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] **Utility Explorer** and reported in the **Deployed Data-tier Applications** details page.  
+ The registration process creates a DAC definition that defines the objects in the database. The combination of the DAC definition and the database form a DAC instance. If you register a database as a DAC on an instance of the Database Engine, the registered DAC will be incorporated into the SQL Server Utility the next time the utility collection set is sent from the instance to the Utility Control Point. The DAC will then be present in the **Deployed Data-tier Applications** node of the [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] **Utility Explorer** and reported in the **Deployed Data-tier Applications** details page.  
   
 ###  <a name="LimitationsRestrictions"></a> Limitations and Restrictions  
  DAC registration can only be performed on a database in [!INCLUDE[ssSDS](../../includes/sssds-md.md)], or [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Service Pack 4 (SP4) or later. DAC registration cannot be performed if a DAC is already registered for the database. For example, if the database was created by deploying a DAC, you cannot run the **Register Data-tier Application Wizard**.  
@@ -46,7 +46,7 @@ manager: craigg
   
 2.  Expand the **Databases** node.  
   
-3.  Right-click the database to be registered, point to **Tasks**, and then select **Register As Data-tier Application…**  
+3.  Right-click the database to be registered, point to **Tasks**, and then select **Register As Data-tier Application...**  
   
 4.  Complete the wizard dialogs:  
   
@@ -103,7 +103,7 @@ manager: craigg
  [Using the Register Data-tier Application Wizard](#UsingRegisterDACWizard)  
   
 ### Validating Objects  
- **Checking**  *SchemaName* **.** *ObjectName* **.** - Displays a progress bar as the wizard verifies the dependencies of the retrieved objects, and verifies that they are all valid objects for a DAC. *SchemaName***.***ObjectName* identify which object is currently being verified.  
+ **Checking**  _SchemaName_ **.** _ObjectName_ **.** - Displays a progress bar as the wizard verifies the dependencies of the retrieved objects, and verifies that they are all valid objects for a DAC. _SchemaName_**.**_ObjectName_ identify which object is currently being verified.  
   
  **< Previous** - Returns you to the **Set Properties** page to change your entries.  
   

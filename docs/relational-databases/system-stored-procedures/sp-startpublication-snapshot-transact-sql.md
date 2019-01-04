@@ -5,8 +5,7 @@ ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
-ms.technology: 
-  - "replication"
+ms.technology: replication
 ms.topic: "language-reference"
 f1_keywords: 
   - "sp_startpublication_snapshot"
@@ -38,7 +37,7 @@ sp_startpublication_snapshot [ @publication = ] 'publication'
  Is the name of the publication. *publication* is **sysname**, with no default.  
   
  [ **@publisher=** ] **'***publisher***'**  
- Is the name of a non-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Publisher. *publisher* is **sysname**, with a default value of NULL. You should not specify this parameter for a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Publisher.  
+ Is the name of a non- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Publisher. *publisher* is **sysname**, with a default value of NULL. You should not specify this parameter for a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Publisher.  
   
 ## Return Code Values  
  **0** (success) or **1** (failure)  
@@ -46,7 +45,7 @@ sp_startpublication_snapshot [ @publication = ] 'publication'
 ## Remarks  
  **sp_startpublication_snapshot** is used with all types of replication.  
   
- For a non-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Publisher, this stored procedure is executed at the Distributor on the distribution database.  
+ For a non- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Publisher, this stored procedure is executed at the Distributor on the distribution database.  
   
 ## Permissions  
  Only members of the **sysadmin** fixed server role or **db_owner** fixed database role can execute **sp_startpublication_snapshot**.  

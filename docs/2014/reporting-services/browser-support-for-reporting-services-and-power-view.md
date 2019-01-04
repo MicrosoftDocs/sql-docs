@@ -51,11 +51,11 @@ manager: craigg
   
 -   The table applies to SharePoint 2010 and SharePoint 2013.  
   
--   For more information on the SharePoint 2013 browser support, see [Plan browser support in SharePoint 2013](http://technet.microsoft.com//library/cc263526\(office.15\).aspx) (http://technet.microsoft.com/library/cc263526(office.15).aspx).  
+-   For more information on the SharePoint 2013 browser support, see [Plan browser support in SharePoint 2013](https://technet.microsoft.com//library/cc263526\(office.15\).aspx) (https://technet.microsoft.com/library/cc263526(office.15).aspx).  
   
--   For more information on the SharePoint 2010 browser support, see [Plan browser support (SharePoint Server 2010)](http://technet.microsoft.com/library/cc263526\(office.14\).aspx) (http://technet.microsoft.com/library/cc263526(office.14).aspx).  
+-   For more information on the SharePoint 2010 browser support, see [Plan browser support (SharePoint Server 2010)](https://technet.microsoft.com/library/cc263526\(office.14\).aspx) (https://technet.microsoft.com/library/cc263526(office.14).aspx).  
   
-|**Browser**|**Windows 8 and 8.1**|**Windows 7**|**Windows Server 2012 and 2012 R2**|**Windows Server 2008 R2**|**Windows Server 2008**|**Mac OS X 10.6 – 10.9**|  
+|**Browser**|**Windows 8 and 8.1**|**Windows 7**|**Windows Server 2012 and 2012 R2**|**Windows Server 2008 R2**|**Windows Server 2008**|**Mac OS X 10.6 - 10.9**|  
 |-----------------|---------------------------|-------------------|-----------------------------------------|--------------------------------|-----------------------------|------------------------------|  
 |**Internet Explorer 11 (for the desktop)**|32-bit, 64-bit|32-bit, 64-bit|32-bit, 64-bit|32-bit, 64-bit|Not supported|Not supported|  
 |**Internet Explorer 10 (for the desktop)**|32-bit, 64-bit|32-bit, 64-bit|32-bit, 64-bit|32-bit, 64-bit|Not supported|Not supported|  
@@ -73,9 +73,9 @@ manager: craigg
 ###  <a name="bkmk_powerview_on_ExcelServices"></a> Power View on Excel Services or the Excel Web App on SharePoint Online  
  The following table summarizes the supported browser versions for [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] when a user opens an Excel 2013 workbook with Power View sheets on a SharePoint Server that is running Excel Services:  
   
--   For more information on the SharePoint 2013 browser support, see [Plan browser support in SharePoint 2013](http://technet.microsoft.com/library/cc263526\(office.15\).aspx) (http://technet.microsoft.com/library/cc263526(office.15).aspx).  
+-   For more information on the SharePoint 2013 browser support, see [Plan browser support in SharePoint 2013](https://technet.microsoft.com/library/cc263526\(office.15\).aspx) (https://technet.microsoft.com/library/cc263526(office.15).aspx).  
   
-|**Browser**|**Windows 8 and 8.1**|**Windows 7**|**Windows Server 2012 and 2012 R2**|**Windows Server 2008 R2**|**Windows Server 2008**|**Mac OS X 10.6 – 10.9**|  
+|**Browser**|**Windows 8 and 8.1**|**Windows 7**|**Windows Server 2012 and 2012 R2**|**Windows Server 2008 R2**|**Windows Server 2008**|**Mac OS X 10.6 - 10.9**|  
 |-----------------|---------------------------|-------------------|-----------------------------------------|--------------------------------|-----------------------------|------------------------------|  
 |**Internet Explorer 11 (for the desktop)**|32-bit, 64-bit|32-bit, 64-bit|32-bit, 64-bit|32-bit, 64-bit|Not supported|Not supported|  
 |**Internet Explorer 10 (for the desktop)**|32-bit, 64-bit|32-bit, 64-bit|32-bit, 64-bit|32-bit, 64-bit|Not supported|Not supported|  
@@ -100,7 +100,7 @@ manager: craigg
 ##  <a name="bkmk_reportviewer"></a> Browser Requirements for Viewing Reports  
  The following is the current list of browsers and features supported with the report viewer. The report viewer supports viewing reports from [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] report manager and SharePoint libraries.  
   
-|**Browser**|**Windows 8 and 8.1**|**Windows 7**|**Windows Server 2012 and 2012 R2**|**Windows Server 2008 R2**|**Windows Server 2008**|**Mac OS X 10.6 – 10.9**|**iOS 6 -7 for iPad**|  
+|**Browser**|**Windows 8 and 8.1**|**Windows 7**|**Windows Server 2012 and 2012 R2**|**Windows Server 2008 R2**|**Windows Server 2008**|**Mac OS X 10.6 - 10.9**|**iOS 6 -7 for iPad**|  
 |-----------------|---------------------------|-------------------|-----------------------------------------|--------------------------------|-----------------------------|------------------------------|----------------------------|  
 |**Internet Explorer 11 (for the desktop)**|32-bit, 64-bit|32-bit, 64-bit|32-bit, 64-bit|Not supported|Not supported|Not supported|Not supported|  
 |**Internet Explorer 10 (for the desktop)**|32-bit, 64-bit|32-bit, 64-bit|32-bit, 64-bit|Not supported|Not supported|Not supported|Not supported|  
@@ -119,7 +119,7 @@ manager: craigg
   
 -   For more information, see [View Reporting Services Reports on Microsoft Surface Devices and  Apple iOS Devices](../../2014/reporting-services/view-reporting-services-reports-surface-ios-devices.md).  
   
- **Note** If you are accessing a report server from a Macintosh computer, we recommend that you use Safari. If you are using a SharePoint product that is integrated with [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)], see [Plan browser support (Windows SharePoint Services)](http://go.microsoft.com/fwlink/?LinkId=183583).  
+ **Note** If you are accessing a report server from a Macintosh computer, we recommend that you use Safari. If you are using a SharePoint product that is integrated with [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)], see [Plan browser support (Windows SharePoint Services)](https://go.microsoft.com/fwlink/?LinkId=183583).  
   
 ### URL Access for Viewing Reports  
  To view reports directly, rather than viewing them through Report Manager, you can use URL Access to link to the report and the report viewer. URL access supports a variety of browsers.  
@@ -163,7 +163,7 @@ manager: craigg
   
 |||||||||  
 |-|-|-|-|-|-|-|-|  
-|**Browser**|**Windows 8** and **Windows 8.1**|**Windows 7**|**Windows Server 2012** and **2012 R2**|**Windows Server 2008** and **2008 R2**|**Windows Server 2003**|**Mac OS X 10.6 – 10.9**|**Notes**|  
+|**Browser**|**Windows 8** and **Windows 8.1**|**Windows 7**|**Windows Server 2012** and **2012 R2**|**Windows Server 2008** and **2008 R2**|**Windows Server 2003**|**Mac OS X 10.6 - 10.9**|**Notes**|  
 |**Internet Explorer 11 (for the desktop**|Yes|Yes|Yes|Not supported|Not supported|Not supported|Internet Explorer supports the complete set of ReportViewer features.|  
 |**Internet Explorer 10 (for the desktop)**|Yes|Yes|Yes|Not supported|Not supported|Not supported|Internet Explorer supports the complete set of ReportViewer features.|  
 |**Internet Explorer 9**|Not supported|Yes|Not supported|Yes|Yes|Yes|Internet Explorer supports the complete set of ReportViewer features.|  
@@ -185,9 +185,9 @@ manager: craigg
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">  
 ```  
   
- For more information on compatibility modes in Internet Explorer, see [Defining Document Compatibility](http://go.microsoft.com/fwlink/?LinkId=180380) (http://go.microsoft.com/fwlink/?LinkId=180380).  
+ For more information on compatibility modes in Internet Explorer, see [Defining Document Compatibility](https://go.microsoft.com/fwlink/?LinkId=180380) (https://go.microsoft.com/fwlink/?LinkId=180380).  
   
- For more information on using the ReportViewer controls, see [Deploying Reports and ReportViewer Controls](http://msdn.microsoft.com/library/ms251723.aspx) (http://msdn.microsoft.com/library/ms251723.aspx).  
+ For more information on using the ReportViewer controls, see [Deploying Reports and ReportViewer Controls](https://msdn.microsoft.com/library/ms251723.aspx) (https://msdn.microsoft.com/library/ms251723.aspx).  
   
 ## See Also  
  [Reporting Services Tools](tools/reporting-services-tools.md)   

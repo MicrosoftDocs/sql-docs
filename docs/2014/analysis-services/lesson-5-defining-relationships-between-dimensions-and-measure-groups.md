@@ -18,12 +18,12 @@ manager: craigg
  For more information, see [Dimension Relationships](multidimensional-models-olap-logical-cube-objects/dimension-relationships.md).  
   
 > [!NOTE]  
->  Completed projects for all of the lessons in this tutorial are available online. You can jump ahead to any lesson by using the completed project from the previous lesson as a starting point. [Click here](http://go.microsoft.com/fwlink/?LinkID=221866) to download the sample projects that go with this tutorial.  
+>  Completed projects for all of the lessons in this tutorial are available online. You can jump ahead to any lesson by using the completed project from the previous lesson as a starting point. [Click here](https://go.microsoft.com/fwlink/?LinkID=221866) to download the sample projects that go with this tutorial.  
   
  This lesson contains the following tasks:  
   
  [Defining a Referenced Relationship](lesson-5-1-defining-a-referenced-relationship.md)  
- In this task, you learn to link a dimension to a fact table indirectly through a dimension that is linked directly through a primary key–foreign key relationship.  
+ In this task, you learn to link a dimension to a fact table indirectly through a dimension that is linked directly through a primary key-foreign key relationship.  
   
  [Defining a Fact Relationship](lesson-5-2-defining-a-fact-relationship.md)  
  In this task, you learn to define a dimension based on data in the fact table, and to define the dimension relationship as a fact relationship.  

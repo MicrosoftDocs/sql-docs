@@ -1,5 +1,5 @@
 ---
-title: Lesson 4 Predict potential outcomes using R models (SQL Server Machine Learning) | Microsoft Docs
+title: Lesson 4 Predict potential outcomes using R models - SQL Server Machine Learning
 description: Tutorial showing how to operationalize embedded R script in SQL Server stored procedures with T-SQL functions 
 ms.prod: sql
 ms.technology: machine-learning
@@ -27,7 +27,7 @@ First, let's see how scoring works in general.
 
 The stored procedure **RxPredict** illustrates the basic syntax for wrapping a RevoScaleR rxPredict call in a stored procedure.
 
-```SQL
+```sql
 CREATE PROCEDURE [dbo].[RxPredict] (@model varchar(250), @inquery nvarchar(max))
 AS 
 BEGIN 
@@ -65,7 +65,7 @@ A more common scenario is to generate predictions for multiple observations in b
 
 1.  Start by getting a smaller set of input data to work with. This query creates a "top 10" list of trips with passenger count and other features needed to make a prediction.
   
-    ```SQL
+    ```sql
     SELECT TOP 10 a.passenger_count AS passenger_count, a.trip_time_in_secs AS trip_time_in_secs, a.trip_distance AS trip_distance, a.dropoff_datetime AS dropoff_datetime, dbo.fnCalculateDistance(pickup_latitude, pickup_longitude, dropoff_latitude,dropoff_longitude) AS direct_distance
     
     FROM (SELECT medallion, hack_license, pickup_datetime, passenger_count,trip_time_in_secs,trip_distance, dropoff_datetime, pickup_latitude, pickup_longitude, dropoff_latitude, dropoff_longitude FROM nyctaxi_sample)a
@@ -81,7 +81,7 @@ A more common scenario is to generate predictions for multiple observations in b
 
     **Sample results**
     
-    ```
+    ```sql
     passenger_count   trip_time_in_secs    trip_distance  dropoff_datetime   direct_distance
     1  283 0.7 2013-03-27 14:54:50.000   0.5427964547
     1  289 0.7 2013-02-24 12:55:29.000   0.3797099614
@@ -90,7 +90,7 @@ A more common scenario is to generate predictions for multiple observations in b
 
 2. Create a stored procedure called **RxPredictBatchOutput** in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)].
 
-    ```SQL
+    ```sql
     CREATE PROCEDURE [dbo].[RxPredictBatchOutput] (@model varchar(250), @inquery nvarchar(max))
     AS
     BEGIN
@@ -113,7 +113,7 @@ A more common scenario is to generate predictions for multiple observations in b
 
 3.  Provide the query text in a variable and pass it as a parameter to the stored procedure:
 
-    ```SQL
+    ```sql
     -- Define the input data
     DECLARE @query_string nvarchar(max)
     SET @query_string='SELECT TOP 10 a.passenger_count as passenger_count, a.trip_time_in_secs AS trip_time_in_secs, a.trip_distance AS trip_distance, a.dropoff_datetime AS dropoff_datetime, dbo.fnCalculateDistance(pickup_latitude, pickup_longitude, dropoff_latitude,dropoff_longitude) AS direct_distance FROM  (SELECT medallion, hack_license, pickup_datetime, passenger_count,trip_time_in_secs,trip_distance, dropoff_datetime, pickup_latitude, pickup_longitude, dropoff_latitude, dropoff_longitude FROM nyctaxi_sample  )a   LEFT OUTER JOIN (SELECT medallion, hack_license, pickup_datetime FROM nyctaxi_sample TABLESAMPLE (70 percent) REPEATABLE (98052))b ON a.medallion=b.medallion AND a.hack_license=b.hack_license AND a.pickup_datetime=b.pickup_datetime WHERE b.medallion is null'
@@ -139,7 +139,7 @@ If you call the stored procedure from an external application, make sure that th
 
 1. Create a stored procedure **RxPredictSingleRow**.
   
-    ```SQL
+    ```sql
     CREATE PROCEDURE [dbo].[RxPredictSingleRow] @model varchar(50), @passenger_count int = 0, @trip_distance float = 0, @trip_time_in_secs int = 0, @pickup_latitude float = 0, @pickup_longitude float = 0, @dropoff_latitude float = 0, @dropoff_longitude float = 0
     AS
     BEGIN
@@ -164,7 +164,7 @@ If you call the stored procedure from an external application, make sure that th
   
     Open a new **Query** window, and call the stored procedure, providing values for each of the parameters. The parameters represent feature columns used by the model and are required.
 
-    ```SQL
+    ```sql
     EXEC [dbo].[RxPredictSingleRow] @model = 'RxTrainLogit_model',
     @passenger_count = 1,
     @trip_distance = 2.5,
@@ -177,7 +177,7 @@ If you call the stored procedure from an external application, make sure that th
 
     Or, use this shorter form supported for [parameters to a stored procedure](https://docs.microsoft.com/sql/relational-databases/stored-procedures/specify-parameters):
   
-    ```SQL
+    ```sql
     EXEC [dbo].[RxPredictSingleRow] 'RxTrainLogit_model', 1, 2.5, 631, 40.763958,-73.973373, 40.782139,-73.977303
     ```
 

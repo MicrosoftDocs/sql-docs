@@ -1,5 +1,5 @@
 ---
-title: "Hide or freeze columns | Microsoft Docs"
+title: "Hide or freeze columns in Analysis Services tabular models | Microsoft Docs"
 ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services

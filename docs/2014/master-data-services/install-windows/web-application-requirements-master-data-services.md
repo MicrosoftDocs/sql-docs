@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "database-engine"
+ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: 9455d3cf-c1b7-4d48-8aff-7dc636ed5dc3
 author: leolimsft
@@ -32,7 +31,7 @@ manager: craigg
  For a full list of the Windows operating systems that are supported for your edition of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], see [Hardware and Software Requirements for Installing SQL Server 2014](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md).  
   
 ### Microsoft Silverlight  
- To work in the [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] web application, Silverlight 5 must be installed on the client computer. If you do not have the required version of Silverlight, you will be prompted to install it when you navigate to an area of the web application that requires it. You can install Silverlight 5 from [here](http://go.microsoft.com/fwlink/?LinkId=243096).  
+ To work in the [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] web application, Silverlight 5 must be installed on the client computer. If you do not have the required version of Silverlight, you will be prompted to install it when you navigate to an area of the web application that requires it. You can install Silverlight 5 from [here](https://go.microsoft.com/fwlink/?LinkId=243096).  
   
 ### Role and Role Services (Windows Server 2008 or Windows Server 2008 R2, Windows 7 operating systems)  
  On Windows Server 2008 R2, you can use **Server Manager**, which is available in the Microsoft Management Console (MMC), to install the **Web Server (IIS)** role and the following required role services.  
@@ -79,7 +78,7 @@ manager: craigg
 |Type|Description|  
 |----------|-----------------|  
 |Windows account|You must log on to the web server computer with a Windows account that has permission to configure Windows roles, role services, and features, and to create and manage application pools, web sites, and web applications in IIS on the local computer.|  
-|Service account|When you create the [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] web application in [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)], you must specify an identity for the application pool that the application runs in. This account can be different from the service account that was specified when the [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] database was created.<br /><br /> This identity must be a domain user account, and it is added to the mds_exec database role in the [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] database for database access. For more information, see [Database Logins, Users, and Roles &#40;Master Data Services&#41;](../database-logins-users-and-roles-master-data-services.md). This account is also added to a [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] Windows group, **MDS_ServiceAccounts**, which is granted permission to the temporary compilation directory, **MDSTempDir**, in the file system. For more information, see [Folder and File Permissions &#40;Master Data Services&#41;](../folder-and-file-permissions-master-data-services.md).<br /><br /> The application pool account needs the VIEW SERVER STATE permission, to avoid server errors. For example, the MDS Validate Version command fails with a server error. For more information, see [MDS Validate Version command fails with a server error in SQL Server 2012 and SQL Server 2014](http://go.microsoft.com/fwlink/p/?LinkId=526304)|  
+|Service account|When you create the [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] web application in [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)], you must specify an identity for the application pool that the application runs in. This account can be different from the service account that was specified when the [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] database was created.<br /><br /> This identity must be a domain user account, and it is added to the mds_exec database role in the [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] database for database access. For more information, see [Database Logins, Users, and Roles &#40;Master Data Services&#41;](../database-logins-users-and-roles-master-data-services.md). This account is also added to a [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] Windows group, **MDS_ServiceAccounts**, which is granted permission to the temporary compilation directory, **MDSTempDir**, in the file system. For more information, see [Folder and File Permissions &#40;Master Data Services&#41;](../folder-and-file-permissions-master-data-services.md).<br /><br /> The application pool account needs the VIEW SERVER STATE permission, to avoid server errors. For example, the MDS Validate Version command fails with a server error. For more information, see [MDS Validate Version command fails with a server error in SQL Server 2012 and SQL Server 2014](https://go.microsoft.com/fwlink/p/?LinkId=526304)|  
   
 ## See Also  
  [Install Master Data Services](install-master-data-services.md)   

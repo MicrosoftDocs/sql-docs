@@ -71,7 +71,7 @@ ms.author: maghan
   
     -   From a command prompt, type the following command to return a list of TCP ports that are being used:  
   
-         `netstat –anp tcp`  
+         `netstat -anp tcp`  
   
     -   Review the Microsoft Support article, [Information about TCP/IP port assignments](https://support.microsoft.com/kb/174904), to read about TCP port assignments and the differences between Well Known Ports (0 through 1023), Registered Ports (1024 through 49151), and Dynamic or Private Ports (49152 through 65535).  
   
@@ -87,17 +87,17 @@ ms.author: maghan
   
 10. Test the URL by clicking the link in the **URLs** section of page. Note that the report server database must be created and configured before you can test the URL. For instructions, see [Create a Native Mode Report Server Database  &#40;SSRS Configuration Manager&#41;](../../reporting-services/install-windows/ssrs-report-server-create-a-native-mode-report-server-database.md).  
 
-> [!NOTE]  
+> [!NOTE]
 >  If you have existing SSL Bindings and URL Reservations and you want to change the SSL Binding, for example use a different certificate or hostheader, then it is recommended you complete the following steps in order:  
->   
+> 
 >  1.  First remove all URL Reservations.  
 > 2.  Then remove all SSL Bindings.  
 > 3.  Then recreate the URLs and the SSL bindings.  
->   
+> 
 >  The previous steps can be completed using [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configuration Manager.  
->   
+> 
 >  Microsoft Windows supports one binding for each IP address to Port combination. If you configure a report server to use a specific hostheader value and the certificate on the Port to IP address combination is also issued to a different hostheader value, you will see in your browser, a warning indicating the certificate does not match the URL that is being used.  
->   
+> 
 >  To correct the issue, delete all bindings and then create new bindings with unique settings or configure the Reporting Services URL registrations with wildcards.
   
 ### To create a URL reservation for the [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)]  

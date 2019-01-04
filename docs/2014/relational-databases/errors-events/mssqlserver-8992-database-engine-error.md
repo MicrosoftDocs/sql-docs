@@ -69,6 +69,6 @@ manager: craigg
  Do not make manual updates to system tables. SQL Server does not support any manual changes to system databases. If you update a system table in a SQL Server database, two events (event ID 17659 and event ID 3859) are logged. For more information, see KB article 2688307, "Event ID 17659 and event ID 3859 are logged when you update system tables in a SQL Server database".  
   
 ## See Also  
- [Event ID 17659 and event ID 3859 are logged when you update system tables in a SQL Server database](http://support.microsoft.com/kb/2688307/EN-US)  
+ [Event ID 17659 and event ID 3859 are logged when you update system tables in a SQL Server database](https://support.microsoft.com/kb/2688307/EN-US)  
   
   

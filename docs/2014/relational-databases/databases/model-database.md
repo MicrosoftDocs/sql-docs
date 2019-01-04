@@ -5,7 +5,6 @@ ms.date: "10/02/2015"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
 ms.technology: 
-  - "database-engine"
 ms.topic: conceptual
 helpviewer_keywords: 
   - "template databases [SQL Server]"

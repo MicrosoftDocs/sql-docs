@@ -63,7 +63,7 @@ manager: craigg
  Preview results by using the **Preview Query Results** dialog box. This option displays up to 200 rows.  
   
 ## External Resources  
- Blog entry, [Lookup cache modes](http://go.microsoft.com/fwlink/?LinkId=219518) on blogs.msdn.com  
+ Blog entry, [Lookup cache modes](https://go.microsoft.com/fwlink/?LinkId=219518) on blogs.msdn.com  
   
 ## See Also  
  [Lookup Transformation Editor &#40;General Page&#41;](general-page-of-integration-services-designers-options.md)   

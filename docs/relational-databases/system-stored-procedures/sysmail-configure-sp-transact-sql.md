@@ -36,13 +36,13 @@ sysmail_configure_sp [ [ @parameter_name = ] 'parameter_name' ]
 ```  
   
 ## Arguments  
- [**@parameter_name** = ] **'***parameter_name***'**  
+ [**@parameter_name** = ] **'**_parameter_name_**'**  
  The name of the parameter to change.  
   
- [**@parameter_value** = ] **'***parameter_value***'**  
+ [**@parameter_value** = ] **'**_parameter_value_**'**  
  The new value of the parameter.  
   
- [**@description** = ] **'***description***'**  
+ [**@description** = ] **'**_description_**'**  
  A description of the parameter.  
   
 ## Return Code Values  

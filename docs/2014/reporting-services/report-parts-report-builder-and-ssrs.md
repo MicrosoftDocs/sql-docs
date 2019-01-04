@@ -21,7 +21,7 @@ manager: craigg
   
  The report part that you add to your report maintains a relationship to the instance of the report part on the site or server by means of a unique ID. After you add report parts from a site or server to a report, you can modify them, independent of the original report part on the site or server. You can accept updates that others have made to the report part on the site or server, and you can save the modified report part back to the site or server, either adding a new report part or writing over the original, if you have sufficient permissions.  
   
- To quickly get started with report parts, see the videos [Report Builder 3 Report Parts in SQL Server 2008 R2](http://technet.microsoft.com/edge/Video/ff711300) and [How Do I: Create Reusable Report Parts with SQL Server Report Builder](http://technet.microsoft.com/sqlserver/ff634166.aspx).  
+ To quickly get started with report parts, see the videos [Report Builder 3 Report Parts in SQL Server 2008 R2](https://technet.microsoft.com/edge/Video/ff711300) and [How Do I: Create Reusable Report Parts with SQL Server Report Builder](https://technet.microsoft.com/sqlserver/ff634166.aspx).  
   
 ##  <a name="ComponentWorkflow"></a> Life Cycle of a Report Part  
  ![rs_ComponentCreation](media/rs-componentcreation.gif "rs_ComponentCreation")  
@@ -91,7 +91,7 @@ manager: craigg
  You can view the search results either as thumbnails or as a list, and sort the search results by name, created and modified dates, and creator. For more information, see [Browse for Report Parts and Set a Default Folder &#40;Report Builder and SSRS&#41;](report-design/browse-for-report-parts-and-set-a-default-folder-report-builder-and-ssrs.md).  
   
 ### What Comes with a Report Part  
- When you add a report part to your report, you are also adding everything it must have to work. For example, any object that displays data is dependent on a dataset – a query and a connection to a data source. It may also have one or more parameters. All of the items it is dependent on are its *dependencies*, and all of them, or pointers to them, are included with the report part when you add it to your report. The dataset and parameters are listed in the Report Data pane of your report.  
+ When you add a report part to your report, you are also adding everything it must have to work. For example, any object that displays data is dependent on a dataset - a query and a connection to a data source. It may also have one or more parameters. All of the items it is dependent on are its *dependencies*, and all of them, or pointers to them, are included with the report part when you add it to your report. The dataset and parameters are listed in the Report Data pane of your report.  
   
  The dataset for the report part may be embedded in the report part, or it may be a separate, shared dataset that the report part points to. If it is embedded in the report part, you may be able to modify it. If it is a shared dataset, it is a separate object that you would need permissions for. For more information about shared and embedded datasets, see [Add Data to a Report &#40;Report Builder and SSRS&#41;](report-data/report-datasets-ssrs.md).  
   
@@ -146,7 +146,7 @@ manager: craigg
  [Report Parts and Datasets in Report Builder](report-data/report-parts-and-datasets-in-report-builder.md)   
  [Troubleshoot Report Parts &#40;Report Builder and SSRS&#41;](../../2014/reporting-services/troubleshoot-report-parts-report-builder-and-ssrs.md)   
  [Managing Report Parts](report-design/managing-report-parts.md)   
- [Report Builder 3 Report Parts in SQL Server 2008 R2 (video)](http://technet.microsoft.com/edge/Video/ff711300)   
- [How Do I: Create Reusable Report Parts with SQL Server Report Builder (video)](http://technet.microsoft.com/sqlserver/ff634166.aspx)  
+ [Report Builder 3 Report Parts in SQL Server 2008 R2 (video)](https://technet.microsoft.com/edge/Video/ff711300)   
+ [How Do I: Create Reusable Report Parts with SQL Server Report Builder (video)](https://technet.microsoft.com/sqlserver/ff634166.aspx)  
   
   

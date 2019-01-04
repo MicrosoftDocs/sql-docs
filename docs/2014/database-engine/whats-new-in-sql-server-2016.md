@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "06/22/2016"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "database-engine"
+ms.technology: release-landing
 ms.topic: conceptual
 helpviewer_keywords: 
   - "what's new [SQL Server Database Engine]"
@@ -29,7 +28,7 @@ manager: craigg
   
   
 ###  <a name="AzureVM"></a> Host a SQL Server Database in a Windows Azure Virtual Machine  
- Use the [Deploy a SQL Server Database to a Windows Azure Virtual Machine](http://msdn.microsoft.com/library/dn195938\(v=sql.120\).aspx) Wizard to host a database from an instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] in a Windows Azure Virtual Machine.  
+ Use the [Deploy a SQL Server Database to a Windows Azure Virtual Machine](https://msdn.microsoft.com/library/dn195938\(v=sql.120\).aspx) Wizard to host a database from an instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] in a Windows Azure Virtual Machine.  
   
   
 ###  <a name="Backup"></a> Backup and Restore Enhancements  
@@ -95,7 +94,7 @@ manager: craigg
   
 -   **Archival data compression**  
   
-     ALTER INDEX … REBUILD has a new COLUMNSTORE_ARCHIVE data compression option that further compresses the specified partitions of a columnstore index. Use this for archival, or for other situations that require a smaller data storage size and can afford more time for storage and retrieval. For more information, see [ALTER INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-index-transact-sql).  
+     ALTER INDEX ... REBUILD has a new COLUMNSTORE_ARCHIVE data compression option that further compresses the specified partitions of a columnstore index. Use this for archival, or for other situations that require a smaller data storage size and can afford more time for storage and retrieval. For more information, see [ALTER INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-index-transact-sql).  
    
   
 ###  <a name="Buffer"></a> Buffer Pool Extension  
@@ -124,8 +123,8 @@ manager: craigg
 ### Inline specification of CLUSTERED and NONCLUSTERED  
  Inline specification of `CLUSTERED` and `NONCLUSTERED` indexes is now allowed for disk-based tables. Creating a table with inline indexes is equivalent to issuing a create table followed by corresponding `CREATE INDEX` statements. Included columns and filter conditions are not supported with inline indexes.  
   
-### SELECT … INTO  
- The `SELECT … INTO` statement is improved and can now operate in parallel. The database compatibility level must be at least 110.  
+### SELECT ... INTO  
+ The `SELECT ... INTO` statement is improved and can now operate in parallel. The database compatibility level must be at least 110.  
   
 ### [!INCLUDE[tsql](../includes/tsql-md.md)] Enhancements for In-Memory OLTP  
  For information about the [!INCLUDE[tsql](../includes/tsql-md.md)] changes to support In-Memory OLTP, see [Transact-SQL Support for In-Memory OLTP](../relational-databases/in-memory-oltp/transact-sql-support-for-in-memory-oltp.md).  

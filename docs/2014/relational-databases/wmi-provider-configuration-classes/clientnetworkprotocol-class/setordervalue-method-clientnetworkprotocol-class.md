@@ -4,9 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "database-engine"
-  - "docset-sql-devref"
+ms.technology: wmi
 ms.topic: "reference"
 api_name: 
   - "SetOrderValue Method (ClientNetworkProtocol Class)"
@@ -51,6 +49,6 @@ OrderValue
 ## Remarks  
   
 ## See Also  
- [Client Protocols Properties (Order Tab)](http://technet.microsoft.com/library/ms187884.aspx)  
+ [Client Protocols Properties (Order Tab)](https://technet.microsoft.com/library/ms187884.aspx)  
   
   

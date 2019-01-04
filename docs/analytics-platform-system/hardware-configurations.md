@@ -44,7 +44,7 @@ This diagram shows a 3 rack HP appliance that contains 20 Compute nodes.
   
 ![HPE appliance with 20 Compute nodes](media/scale-out-hpe.png "HPE appliance with 20 Compute nodes")  
   
-### Scale Out Example – DELL, Quanta  
+### Scale Out Example - DELL, Quanta  
 This diagram shows a 3 rack DELL or Quanta appliance that contains 21 Compute nodes.  
   
 ![Dell appliance with 21 Compute nodes](media/scale-out-dell.png "Dell appliance with 21 Compute nodes")  

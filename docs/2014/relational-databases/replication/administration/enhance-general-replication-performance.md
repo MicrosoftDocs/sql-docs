@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "03/08/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "replication"
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords: 
   - "publications [SQL Server replication], design and performance"
@@ -147,11 +146,11 @@ manager: craigg
   
 -   Reduce the verbose levels of replication agents except during initial testing, monitoring, or debugging.  
   
-     Reduce the **–HistoryVerboseLevel** parameter and the **–OutputVerboseLevel** parameter of the Distribution Agents or Merge Agents. This reduces the number of new rows inserted to track agent history and output. Instead, previous history messages with the same status are updated to the new history information. Increase the verbose levels for testing, monitoring, and debugging so that you have as much information about agent activity as possible.  
+     Reduce the **-HistoryVerboseLevel** parameter and the **-OutputVerboseLevel** parameter of the Distribution Agents or Merge Agents. This reduces the number of new rows inserted to track agent history and output. Instead, previous history messages with the same status are updated to the new history information. Increase the verbose levels for testing, monitoring, and debugging so that you have as much information about agent activity as possible.  
   
--   Use the **–MaxBCPThreads** parameter of the Snapshot Agent, Merge Agent, and Distribution Agent (the number of threads specified should not exceed the number of processors on the computer). This parameter specifies the number of bulk copy operations that can be performed in parallel when the snapshot is created and applied.  
+-   Use the **-MaxBCPThreads** parameter of the Snapshot Agent, Merge Agent, and Distribution Agent (the number of threads specified should not exceed the number of processors on the computer). This parameter specifies the number of bulk copy operations that can be performed in parallel when the snapshot is created and applied.  
   
--   Use the **–UseInprocLoader** parameter of the Distribution Agent and the Merge Agent (this parameter cannot be used if published tables include XML columns). This parameter causes the agent to use the BULK INSERT command when the snapshot is applied.  
+-   Use the **-UseInprocLoader** parameter of the Distribution Agent and the Merge Agent (this parameter cannot be used if published tables include XML columns). This parameter causes the agent to use the BULK INSERT command when the snapshot is applied.  
   
  Agent parameters can be specified in agent profiles and on the command line. For more information, see:  
   

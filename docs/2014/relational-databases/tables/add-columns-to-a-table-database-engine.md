@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "database-engine"
+ms.technology: table-view-index
 ms.topic: conceptual
 helpviewer_keywords: 
   - "inserting columns"
@@ -63,7 +62,7 @@ manager: craigg
     > [!NOTE]  
     >  The default values for your column properties are added when you create a new column, but you can change them in the **Column Properties** tab.  
   
-6.  When you are finished adding columns, from the **File** menu, choose **Save***table name*.  
+6.  When you are finished adding columns, from the **File** menu, choose **Save**_table name_.  
   
 ##  <a name="TsqlProcedure"></a> Using Transact-SQL  
   

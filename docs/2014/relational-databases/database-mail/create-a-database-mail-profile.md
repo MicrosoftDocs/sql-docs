@@ -5,7 +5,6 @@ ms.date: "03/08/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
 ms.technology: 
-  - "database-engine"
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Database Mail [SQL Server], public profiles"
@@ -47,7 +46,7 @@ manager: craigg
   
 -   On the **Manage Profiles and Accounts** page, select **Create a new profile** option, and click **Next**.  
   
--   On the **New Profile** page, specifiy the Profile name, Description and add accounts to be included in the profile, and click **Next**.  
+-   On the **New Profile** page, specify the Profile name, Description and add accounts to be included in the profile, and click **Next**.  
   
 -   On the **Complete the Wizard** page, review the actions to be performed and click **Finish** to complete creating the new profile.  
   

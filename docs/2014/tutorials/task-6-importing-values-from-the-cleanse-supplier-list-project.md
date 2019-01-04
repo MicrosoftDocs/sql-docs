@@ -15,7 +15,7 @@ ms.author: douglasl
 manager: craigg
 ---
 # Task 6: Importing Values from the Cleanse Supplier List Project
-  In this task, you import the data quality knowledge gathered during the cleansing process. See [Importing Cleansing Project Values into a Domain](http://msdn.microsoft.com/library/hh479581.aspx) topic for more details. You also export the knowledge base into a DQS file before publishing the updated **Suppliers** knowledge base.  
+  In this task, you import the data quality knowledge gathered during the cleansing process. See [Importing Cleansing Project Values into a Domain](https://msdn.microsoft.com/library/hh479581.aspx) topic for more details. You also export the knowledge base into a DQS file before publishing the updated **Suppliers** knowledge base.  
   
 1.  In the main page of **DQS Client**, click **right-arrow** next to **Suppliers** under **Recent Knowledge Bases** and click **Domain Management**.  
   
@@ -53,7 +53,7 @@ manager: craigg
   
 10. Navigate to the Tutorial folder, type **Suppliers.dqs** for the **file name**, and click **Save**. You can use this DQS file to create a new knowledge base based on it.  
   
-11. Click **OK** to close the **Export Knowledge Base – Suppliers** message box.  
+11. Click **OK** to close the **Export Knowledge Base - Suppliers** message box.  
   
 12. Click **Finish** to finish the activity.  
   

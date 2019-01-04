@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "10/29/2018"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "replication"
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Merge Agent, executables"
@@ -58,7 +57,7 @@ manager: craigg
 [-InternetLogininternet_login]  
 [-InternetPasswordinternet_password]  
 [-InternetProxyLogininternet_proxy_login]  
-[–InternetProxyPasswordinternet_proxy_password]  
+[-InternetProxyPasswordinternet_proxy_password]  
 [-InternetProxyServerinternet_proxy_server]  
 [-InternetSecurityMode [0|1]]  
 [-InternetTimeoutinternet_timeout]  
@@ -237,7 +236,7 @@ manager: craigg
  **-InternetProxyLogin**  *internet_proxy_login*  
  Specifies the login name used when connecting to a proxy server, defined in *internet_proxy_server*, that requires authentication.  
   
- **–InternetProxyPassword**  *internet_proxy_password*  
+ **-InternetProxyPassword**  *internet_proxy_password*  
  Specifies the password used when connecting to a proxy server, defined in *internet_proxy_server*, that requires authentication.  
   
  **-InternetProxyServer**  *internet_proxy_server*  

@@ -42,7 +42,7 @@ This section includes Help topics for [!INCLUDE[ssNoVersion](../../includes/ssno
 |[Project Settings (Migration)](https://msdn.microsoft.com/4caebc9c-8680-4b99-a8fa-89c43161c95d)|Use the Migration page of the **Project Settings** dialog box to specify the migration batch size, table locking, constraint checking, insertion trigger firing, identity and null value handling, and how to handle dates that are out of the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] range.|  
 |[Project Settings (Type Mapping)](https://msdn.microsoft.com/b87b9683-abed-4677-8c50-18bdba704655)|Use the Type Mapping page of the **Project Settings** dialog box to specify the default type mappings for all databases and database objects in the SSMA project.|  
 |[Project Settings (SQL Azure)](https://msdn.microsoft.com/bbb8a204-d0e4-4f0b-9709-271feb1f136e)|Use the SQL Azure page of the **Project Settings** dialog box to specify the database suffix and also the heartbeat timeout interval.|  
-|[Save Metadata &#40;AcessToSQL&#41;](../../ssma/access/save-metadata-acesstosql.md)|The **Save Metadata** dialog box appears when you save a project that is missing metadata.|  
+|[Save Metadata &#40;AccessToSQL&#41;](../../ssma/access/save-metadata-accesstosql.md)|The **Save Metadata** dialog box appears when you save a project that is missing metadata.|  
   
 ## See also  
 [Getting Started with SQL Server Migration Assistant for Access &#40;AccessToSQL&#41;](../../ssma/access/getting-started-with-sql-server-migration-assistant-for-access-accesstosql.md)  

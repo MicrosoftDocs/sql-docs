@@ -30,7 +30,7 @@ manager: craigg
 ## Requirements and Known Issues  
  The recommended disk space requirements are approximately 2.5 times the size of the package to install, download, and extract the package. After installing a service pack, you can remove the downloaded package. Any temporary files are removed automatically.  
   
- **Review the known issues:** For more information about the known issues for the current release, see the corresponding release notes topic here: [SQL Server Release Notes](http://msdn.microsoft.com/f617a0af-92dd-47aa-82c3-f51b1346bcd8).  
+ **Review the known issues:** For more information about the known issues for the current release, see the corresponding release notes topic here: [SQL Server Release Notes](https://msdn.microsoft.com/f617a0af-92dd-47aa-82c3-f51b1346bcd8).  
   
 ## Installation Overview  
  This section discusses the [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] installation for cumulative updates and service packs, including how to do the following:  
@@ -44,14 +44,14 @@ manager: craigg
 ### Prepare for a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Update Installation  
  We strongly recommend that you do the following before you install [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] updates:  
   
--   **Back up your [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] system databases** — Before you install [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] updates, back up the `master`, `msdb`, and `model` databases. Installing a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] update changes these databases, making them incompatible with earlier versions of [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Backups of these databases are required if you decide to reinstall [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] without these updates.  
+-   **Back up your [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] system databases** - Before you install [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] updates, back up the `master`, `msdb`, and `model` databases. Installing a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] update changes these databases, making them incompatible with earlier versions of [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Backups of these databases are required if you decide to reinstall [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] without these updates.  
   
      It is also prudent to back up your user databases.  
   
     > [!IMPORTANT]  
     >  When you apply updates to instances of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] that participate in a replication topology, you must back up your replicated databases together with your system databases before you apply the update.  
   
--   **Back up your [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] databases, configuration file, and repository** — Before you update an instance of [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], you should back up the following:  
+-   **Back up your [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] databases, configuration file, and repository** - Before you update an instance of [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], you should back up the following:  
   
     -   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] databases. By default, these are installed to C:\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSAS12.\<InstanceID>\OLAP\Data\\. For WOW installation, the default path is C:\ProgramFiles (x86)\ [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSAS12.\<InstanceID>\OLAP\Data\\.  
   
@@ -62,9 +62,9 @@ manager: craigg
     > [!NOTE]  
     >  Failure to back up your [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] databases, configuration file, and repository will prevent you from reverting an updated instance of [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] to the earlier version.  
   
--   **Verify that the system databases have sufficient free space** — If the autogrow option is not selected for the `master` and `msdb` system databases, these databases each must have at least 500 KB of free space. To verify that the databases have sufficient space, run the `sp_spaceused` system stored procedure on the `master` and `msdb` databases. If the unallocated space in either database is less than 500 KB, increase the size of the database.  
+-   **Verify that the system databases have sufficient free space** - If the autogrow option is not selected for the `master` and `msdb` system databases, these databases each must have at least 500 KB of free space. To verify that the databases have sufficient space, run the `sp_spaceused` system stored procedure on the `master` and `msdb` databases. If the unallocated space in either database is less than 500 KB, increase the size of the database.  
   
--   **Stop Services and Applications** — To avoid a possible restart of the system, stop all applications and services that make connections to the instances of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] that are being upgraded, before installing [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] updates. These include [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. For more information, see [Start, Stop, Pause, Resume, Restart the Database Engine, SQL Server Agent, or SQL Server Browser Service](../../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md).  
+-   **Stop Services and Applications** - To avoid a possible restart of the system, stop all applications and services that make connections to the instances of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] that are being upgraded, before installing [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] updates. These include [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. For more information, see [Start, Stop, Pause, Resume, Restart the Database Engine, SQL Server Agent, or SQL Server Browser Service](../../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md).  
   
     > [!NOTE]  
     >  You cannot stop services in a failover cluster environment. For more information, see the failover cluster installation section later in this topic.  

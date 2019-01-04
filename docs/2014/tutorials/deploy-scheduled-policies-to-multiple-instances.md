@@ -66,7 +66,7 @@ manager: craigg
     > [!NOTE]  
     >  If you right-click **Local Server Groups** or the Central Management Server itself, the policies will be deployed to all managed servers. If you right-click a specific server group, the policies will only be deployed to servers in that group. If you right-click a specific registered server, the policies will only be deployed to that server.  
   
-3.  Next to **Files to import**, click the ellipsis button (**…**).  
+3.  Next to **Files to import**, click the ellipsis button (**...**).  
   
 4.  In the **Select Policy** dialog box, browse to the folder location where you saved the scheduled policies. For this example, browse to the location **C:\Scheduled_BP_Policies**.  
   

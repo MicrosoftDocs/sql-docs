@@ -95,7 +95,7 @@ manager: craigg
   
      Group accounts (local or domain) and other built-in accounts (like Everyone) are not accepted.  
   
-8.  Optionally, click the ellipsis (…) button to change the shared feature directory path.  
+8.  Optionally, click the ellipsis (...) button to change the shared feature directory path.  
   
     1.  On 32-bit computers, the default installation path is **C:\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\\**  
   

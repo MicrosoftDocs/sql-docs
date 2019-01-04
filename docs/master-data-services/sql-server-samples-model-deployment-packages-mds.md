@@ -5,8 +5,7 @@ ms.date: "07/28/2017"
 ms.prod: sql
 ms.prod_service: "mds"
 ms.reviewer: ""
-ms.technology: 
-  - "master-data-services"
+ms.technology: master-data-services
 ms.topic: conceptual
 keywords: 
   - "master data services"
@@ -24,26 +23,26 @@ manager: craigg
   
  For instructions on how to deploy the sample model packages, see [Deploying Sample Models and Data](../master-data-services/master-data-services-installation-and-configuration.md#deploySample). You deploy the sample model packages by using the [MDSModelDeploy tool](../master-data-services/deploy-a-model-deployment-package-by-using-mdsmodeldeploy.md).  
   
-> [!IMPORTANT]  
+> [!IMPORTANT]
 >  **Sample Updates in [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]**  
->   
+> 
 >  The sample packages were updated to support the following new capabilities.  
->   
+> 
 >  -   Show Many-to-Many Relationships.  
->   
+> 
 >      For more information, see [M2M Relationship in Sample Model](../master-data-services/show-many-to-many-relationships-in-derived-hierarchies-master-data-services.md#M2MSample).  
-
+> 
 > -   Constrain Allowed Values for Domain-based Attributes.  
->   
+> 
 >      For more information, see [Create a Domain-Based Attribute &#40;Master Data Services&#41;](../master-data-services/create-a-domain-based-attribute-master-data-services.md).  
 > -   Require Approval for Entity Changes.  
->   
+> 
 >      For more information, see [Approval Required &#40;Master Data Services&#41;](../master-data-services/approval-required-master-data-services.md).  
 > -   Use Not and Else Operators in Business Rules  
->   
+> 
 >      For more information, see [Business Rule Examples](../master-data-services/business-rule-examples-master-data-services.md).  
 > -   Implement Custom Index  
->   
+> 
 >      For more information, see [Custom Index &#40;Master Data Services&#41;](../master-data-services/custom-index-master-data-services.md).  
  
 

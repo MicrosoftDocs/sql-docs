@@ -7,8 +7,8 @@ ms.reviewer: ""
 ms.technology: performance
 ms.topic: conceptual
 ms.assetid: e8f1b16b-ea40-4e12-886c-967ebda4e6e4
-author: MikeRayMSFT
-ms.author: mikeray
+author: julieMSFT
+ms.author: jrasnick
 manager: craigg
 ---
 # Monitor SQL Server Components
@@ -62,8 +62,9 @@ For more information about Windows Server or Windows tools, see the Windows docu
 -   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] Graphical Showplan  
 -   [System Stored procedures](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)
 -   [Database Console Commands (DBCC)](../../t-sql/database-console-commands/dbcc-transact-sql.md)  
--   [Dynamic management views and functions](../../relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)  
--   [Trace flags](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 
+-   [Dynamic Management Views and Functions](../../relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
+-   [Functions](../../t-sql/functions/functions.md)   
+-   [Trace flags](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)   
 
 > [!IMPORTANT]
 > SQL Trace and [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] are deprecated. The *Microsoft.SqlServer.Management.Trace* namespace that contains the Microsoft SQL Server Trace and Replay objects are also deprecated. 

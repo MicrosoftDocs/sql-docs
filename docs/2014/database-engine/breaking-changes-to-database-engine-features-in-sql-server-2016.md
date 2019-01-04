@@ -1,11 +1,10 @@
 ---
 title: "Breaking Changes to Database Engine Features in SQL Server 2014 | Microsoft Docs"
 ms.custom: ""
-ms.date: "06/13/2017"
+ms.date: "11/27/2018"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "database-engine"
+ms.technology: release-landing
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Database Engine [SQL Server], what's new"
@@ -16,7 +15,7 @@ ms.author: mikeray
 manager: craigg
 ---
 # Breaking Changes to Database Engine Features in SQL Server 2014
-  This topic describes breaking changes in the [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)][!INCLUDE[ssDE](../includes/ssde-md.md)] and earlier versions of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. These changes might break applications, scripts, or functionalities that are based on earlier versions of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. You might encounter these issues when you upgrade. For more information, see [Use Upgrade Advisor to Prepare for Upgrades](../sql-server/install/use-upgrade-advisor-to-prepare-for-upgrades.md).  
+  This topic describes breaking changes in the [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] [!INCLUDE[ssDE](../includes/ssde-md.md)] and earlier versions of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. These changes might break applications, scripts, or functionalities that are based on earlier versions of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. You might encounter these issues when you upgrade. For more information, see [Use Upgrade Advisor to Prepare for Upgrades](../sql-server/install/use-upgrade-advisor-to-prepare-for-upgrades.md).  
   
 ##  <a name="SQL14"></a> Breaking Changes in [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]  
  No new issues.  
@@ -128,7 +127,7 @@ manager: craigg
  32-bit Address Windowing Extensions (AWE) support is discontinued. This might result in slower performance on 32-bit operating systems. For installations using large amounts of memory, migrate to a 64-bit operating system.  
   
 ### XQuery Functions Are Surrogate-Aware  
- The W3C recommendation for XQuery functions and operators requires them to count a surrogate pair that represents a high-range Unicode character as a single glyph in UTF-16 encoding. However, in versions of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] prior to [!INCLUDE[ssSQL11](../includes/sssql11-md.md)], string functions did not recognize surrogate pairs as a single character. Some string operations – such as string length calculations and substring extractions – returned incorrect results. [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] now fully supports UTF-16 and the correct handling of surrogate pairs.  
+ The W3C recommendation for XQuery functions and operators requires them to count a surrogate pair that represents a high-range Unicode character as a single glyph in UTF-16 encoding. However, in versions of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] prior to [!INCLUDE[ssSQL11](../includes/sssql11-md.md)], string functions did not recognize surrogate pairs as a single character. Some string operations - such as string length calculations and substring extractions - returned incorrect results. [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] now fully supports UTF-16 and the correct handling of surrogate pairs.  
   
  The XML data type in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] only allows well-formed surrogate pairs. However, some functions can still return undefined or unexpected results in certain circumstances, since it is possible to pass invalid or partial surrogate pairs to XQuery functions as string values. Consider the following methods for generating string values when using XQuery in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]:  
   
@@ -202,7 +201,7 @@ manager: craigg
 |Feature|Description|  
 |-------------|-----------------|  
 |CLR Assemblies|When a database is upgraded to [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)], the `Microsoft.SqlServer.Types` assembly to support new data types is automatically installed. Upgrade Advisor rules detect any user type or assemblies with conflicting names. The Upgrade Advisor will advise renaming of any conflicting assembly, and either renaming any conflicting type, or using two-part names in the code to refer to that preexisting user type.<br /><br /> If a database upgrade detects a user assembly with a conflicting name, it will automatically rename that assembly and put the database into suspect mode.<br /><br /> If a user type with conflicting name exists during the upgrade, no special steps are taken. After the upgrade, both the old user type, and the new system type, will exist. The user type will be available only through two-part names.|  
-|CLR Assemblies|[!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] installs .NET Framework 3.5 SP1, which updates libraries in the Global Assembly Cache (GAC). If you have unsupported libraries registered in a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] database, your [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] application may stop working after upgrading to [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)]. This is because servicing or upgrading libraries in the GAC does not update assemblies inside [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. If an assembly exists both in a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] database and in the GAC, the two copies of the assembly must exactly match. If they do not match, an error will occur when the assembly is used by [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] CLR integration. For more information, see [Supported .NET Framework Libraries](../relational-databases/clr-integration/database-objects/supported-net-framework-libraries.md).<br /><br /> After upgrading your database, service or upgrade the copy of the assembly inside your [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] databases with the ALTER ASSEMBLY statement. For more information, see [Knowledge Base article 949080](http://go.microsoft.com/fwlink/?LinkId=154563).<br /><br /> To detect whether you are using any unsupported .NET framework library in your application, run the following query in your database.<br /><br /> `SELECT name FROM sys.assemblies WHERE clr_name LIKE '%publickeytoken=b03f5f7f11d50a3a,%';`|  
+|CLR Assemblies|[!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] installs .NET Framework 3.5 SP1, which updates libraries in the Global Assembly Cache (GAC). If you have unsupported libraries registered in a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] database, your [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] application may stop working after upgrading to [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)]. This is because servicing or upgrading libraries in the GAC does not update assemblies inside [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. If an assembly exists both in a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] database and in the GAC, the two copies of the assembly must exactly match. If they do not match, an error will occur when the assembly is used by [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] CLR integration. For more information, see [Supported .NET Framework Libraries](../relational-databases/clr-integration/database-objects/supported-net-framework-libraries.md).<br /><br /> After upgrading your database, service or upgrade the copy of the assembly inside your [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] databases with the ALTER ASSEMBLY statement. For more information, see [Knowledge Base article 949080](https://go.microsoft.com/fwlink/?LinkId=154563).<br /><br /> To detect whether you are using any unsupported .NET framework library in your application, run the following query in your database.<br /><br /> `SELECT name FROM sys.assemblies WHERE clr_name LIKE '%publickeytoken=b03f5f7f11d50a3a,%';`|  
 |CLR Routines|Using impersonation inside CLR user-defined functions, user-defined aggregates, or user-defined types (UDTs) may cause your application to fail with error 6522 after upgrading to [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)]. The following scenarios succeed in [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] but fail in [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)]. Resolutions are provided for each scenario.<br /><br /> A CLR user-defined function, user-defined aggregate, or UDT method that uses impersonation has a parameter of type `nvarchar(max)`, `varchar(max)`, `varbinary(max)`, `ntext`, `text`, `image`, or a large UDT, and does not have the **DataAccessKind.Read** attribute on the method. To resolve this issue, add the **DataAccessKind.Read** attribute on the method, recompile the assembly, and re-deploy the routine and the assembly.<br /><br /> A CLR table-valued function that has an **Init** method that performs impersonation. To resolve this issue add the **DataAccessKind.Read** attribute on the method, recompile the assembly, and re-deploy the routine and the assembly.<br /><br /> A CLR table-valued function that has a **FillRow** method that performs impersonation. To resolve this issue, remove impersonation from the **FillRow** method. Do not access external resources by using the **FillRow** method. Instead, access external resources from the **Init** method.|  
   
 ### Dynamic Management Views  
@@ -255,15 +254,16 @@ manager: craigg
 |Connecting from [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Native Client using SSL|When connecting with [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Native Client, applications that use "SERVER=shortname; FORCE ENCRYPTION=true" with certificate whose Subjects specify Fully Qualified Domain Names (FQDN's) have connected in the past due to relaxed validation. SQL Server 2008 R2 enhances security by enforcing FQDN subjects for certificates. Applications that rely upon relaxed validation must take one of the following actions:<br /><br /> Use the FQDN in the connection string.<br /><br /> -This option does not require recompiling the application if the SERVER keyword of the connection string is configured outside the application.<br /><br /> -This option does not work for applications that have their connection strings hardcoded.<br /><br /> -This option does not work for applications that use Database Mirroring since the mirrored server replies with a simple name.|  
 ||Add an alias for the shortname to map to the FQDN.<br /><br /> -This option works even for applications that have their connection strings hardcoded.<br /><br /> -This option does not work for applications that use Database Mirroring since the providers don't look up aliases for received failover partner names.|  
 ||Have a certificate issued for shortname.<br /><br /> -This option works for all applications.|  
-  
-##  <a name="Yukon"></a> Breaking Changes in SQL Server 2005  
- For a list of breaking changes introduced in [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)], see [Breaking Changes to Database Engine Features in SQL Server 2005](breaking-changes-to-database-engine-features-in-sql-server-2016.md).  
-  
+
+## <a name="Yukon"></a> Breaking Changes in SQL Server 2005  
+
+[!INCLUDE[Archived documentation for very old versions of SQL Server](../includes/paragraph-content/previous-versions-archive-documentation-sql-server.md)]
+
 ## See Also  
  [Deprecated Database Engine Features in SQL Server 2014](deprecated-database-engine-features-in-sql-server-2016.md)   
  [Behavior Changes to Database Engine Features in SQL Server 2014](../../2014/database-engine/behavior-changes-to-database-engine-features-in-sql-server-2014.md)   
  [Discontinued Database Engine Functionality in SQL Server 2014](discontinued-database-engine-functionality-in-sql-server-2016.md)   
  [SQL Server Database Engine Backward Compatibility](sql-server-database-engine-backward-compatibility.md)   
  [ALTER DATABASE Compatibility Level &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-compatibility-level)  
-  
+ [Breaking Changes to Management Tools Features in SQL Server 2014](breaking-changes-to-management-tools-features-in-sql-server-2014.md?view=sql-server-2014)  
   

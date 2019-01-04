@@ -1,7 +1,8 @@
 ---
-title: Azure Data Studio SQL Server 2019 extension (preview) | Microsoft Docs
+title: SQL Server 2019 extension (preview)
+titleSuffix: Azure Data Studio
 description: SQL Server 2019 Preview extension for Azure Data Studio
-ms.custom: "tools|sos"
+ms.custom: "seodec18"
 ms.date: "11/06/2018"
 ms.reviewer: "alayu; sstein"
 ms.prod: sql
@@ -14,7 +15,7 @@ monikerRange: ">=sql-server-ver15||=sqlallproducts-allversions"
 ---
 # SQL Server 2019 extension (preview)
 
-The SQL Server 2019 extension (preview) provides preview support for new features and tools shipping in support of [!INCLUDE[sql-server-2019](..\includes\sssqlv15-md.md)]. This includes preview support for [SQL Server 2019 big data clusters](../big-data-cluster/big-data-cluster-overview.md), an integrated [notebook experience](../big-data-cluster/notebooks-guidance.md), a PolyBase [Create External Table wizard](../relational-databases/polybase/data-virtualization.md?toc=%2fsql%2fbig-data-cluster%2ftoc.json), and [Azure Resource Explorer](azure-resource-explorer.md).
+The SQL Server 2019 extension (preview) provides preview support for new features and tools shipping in support of [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]. This includes preview support for [SQL Server 2019 big data clusters](../big-data-cluster/big-data-cluster-overview.md), an integrated [notebook experience](../big-data-cluster/notebooks-guidance.md), a PolyBase [Create External Table wizard](../relational-databases/polybase/data-virtualization.md?toc=%2fsql%2fbig-data-cluster%2ftoc.json), and [Azure Resource Explorer](azure-resource-explorer.md).
 
 ## Install the SQL Server 2019 extension (preview)
 
@@ -35,6 +36,8 @@ To install the SQL Server 2019 extension (preview), download and install the ass
 1. Select **Reload** to enable the extension (only required the first time you install an extension).
 
 1. After reloading, the extension will install dependencies. You can see the progress in the Output window, and it could take several minutes.
+
+1. After the dependencies finish installing, close and reopen Azure Data Studio. The **SQL Server big data cluster** connection type is not available until you restart Azure Data Studio.
 
 ## Release Notes (v0.8.0)
 *Notebooks*:

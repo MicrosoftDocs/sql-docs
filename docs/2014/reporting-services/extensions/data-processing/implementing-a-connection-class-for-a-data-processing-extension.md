@@ -42,7 +42,7 @@ manager: craigg
 > [!NOTE]  
 >  Implementing <xref:Microsoft.ReportingServices.DataProcessing.IDbConnectionExtension> implicitly requires you to implement the members of the <xref:Microsoft.ReportingServices.DataProcessing.IDbConnection> and <xref:Microsoft.ReportingServices.Interfaces.IExtension> interfaces.  
 >   
->  For a sample **Connection** class implementation, see [SQL Server Reporting Services Product Samples](http://go.microsoft.com/fwlink/?LinkId=177889).  
+>  For a sample **Connection** class implementation, see [SQL Server Reporting Services Product Samples](https://go.microsoft.com/fwlink/?LinkId=177889).  
   
 ## See Also  
  [Reporting Services Extensions](../reporting-services-extensions.md)   

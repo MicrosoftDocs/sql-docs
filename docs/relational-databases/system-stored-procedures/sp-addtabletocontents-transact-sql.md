@@ -5,8 +5,7 @@ ms.date: "03/04/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
-ms.technology: 
-  - "replication"
+ms.technology: replication
 ms.topic: "language-reference"
 f1_keywords: 
   - "sp_addtabletocontents_TSQL"
@@ -35,13 +34,13 @@ sp_addtabletocontents [ @table_name = ] 'table_name'
 ```  
   
 ## Arguments  
- [ **@table_name=**] **'***table_name***'**  
+ [ **@table_name=**] **'**_table_name_**'**  
  Is the name of the table. *table_name* is **sysname**, with no default.  
   
- [ **@owner_name=**] **'***owner_name***'**  
+ [ **@owner_name=**] **'**_owner_name_**'**  
  Is the name of the owner of the table. *owner_name* is **sysname**, with a default of NULL.  
   
- [ **@filter_clause=** ] **'***filter_clause***'**  
+ [ **@filter_clause=** ] **'**_filter_clause_**'**  
  Specifies a filter clause that controls which rows of the newly-loaded data should be added to the merge tracking tables. *filter_clause* is **nvarchar(4000)**, with a default value of NULL. If *filter_clause* is **null**, all bulk loaded rows are added.  
   
 ## Return Code Values  

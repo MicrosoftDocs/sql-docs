@@ -32,7 +32,7 @@ manager: craigg
 |**column_id**|**int**|ID of the columnstore column starting with 1. The first column has ID = 1, the second column has ID = 2, etc.|  
 |**dictionary_id**|**int**|There can be two kinds of dictionaries, global and local, associated with a column segment. A dictionary_id of 0 represents the global dictionary that is shared across all column segments (one for each row group) for that column.|  
 |**version**|**int**|Version of the dictionary format.|  
-|**type**|**int**|Dictionary type:<br /><br /> 1 – Hash dictionary containing **int** values<br /><br /> 2 – Not used<br /><br /> 3 – Hash dictionary containing string values<br /><br /> 4 – Hash dictionary containing **float** values<br /><br /> For more information about dictionaries, see [Columnstore Indexes Guide](~/relational-databases/indexes/columnstore-indexes-overview.md).|  
+|**type**|**int**|Dictionary type:<br /><br /> 1 - Hash dictionary containing **int** values<br /><br /> 2 - Not used<br /><br /> 3 - Hash dictionary containing string values<br /><br /> 4 - Hash dictionary containing **float** values<br /><br /> For more information about dictionaries, see [Columnstore Indexes Guide](~/relational-databases/indexes/columnstore-indexes-overview.md).|  
 |**last_id**|**int**|The last data ID in the dictionary.|  
 |**entry_count**|**bigint**|Number of entries in the dictionary.|  
 |**on_disc_size**|**bigint**|Size of dictionary in bytes.|  

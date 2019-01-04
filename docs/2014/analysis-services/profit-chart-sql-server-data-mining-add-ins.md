@@ -58,7 +58,7 @@ manager: craigg
   
 5.  Enter the cost information required by the wizard: the fixed cost, individual cost, the population, and the revenue expected.  
   
-6.  Optionally, you can enter a graduated series of costs (click the browse **(…)** button). For example, a mailing might become cheaper as you increase the number of items that are sent, so you can enter a different cost depending on the number of items, and the wizard will automatically adjust the costs for each sample size.  
+6.  Optionally, you can enter a graduated series of costs (click the browse **(...)** button). For example, a mailing might become cheaper as you increase the number of items that are sent, so you can enter a different cost depending on the number of items, and the wizard will automatically adjust the costs for each sample size.  
   
 7.  The wizard creates a chart that includes the cost-benefit analysis for the model.  
   

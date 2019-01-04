@@ -153,7 +153,7 @@ A connection manager can be created at the package level or at the project level
   
     -   Click the connection manager type to add to the package.  
   
-         —or—  
+         -or-  
   
     -   If the type that you want to add is not listed, click **New Connection** to open the **Add SSIS Connection Manager** dialog box, select a connection manager type, and then click **OK**.  
   

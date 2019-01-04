@@ -52,7 +52,7 @@ manager: craigg
 |`ValueColumn`|Identifies the column that provides the value of the attribute. If the `NameColumn` element of the attribute is specified, the same `DataItem` values are used as default values for the `ValueColumn` element. If the `NameColumn` element of the attribute is not specified and the `KeyColumns` collection of the attribute contains a single `KeyColumn` element representing a key column with a string data type, the same `DataItem` values are used as default values for the `ValueColumn` element.|  
   
 > [!NOTE]  
->  For more information about how to set values for the `KeyColumn` property when you are working with null values and other data integrity issues, see [Handling Data Integrity Issues in Analysis Services 2005](http://go.microsoft.com/fwlink/?LinkId=81891).  
+>  For more information about how to set values for the `KeyColumn` property when you are working with null values and other data integrity issues, see [Handling Data Integrity Issues in Analysis Services 2005](https://go.microsoft.com/fwlink/?LinkId=81891).  
   
 > [!NOTE]  
 >  The default member on an attribute is used to evaluate expressions when a member from the hierarchy is not explicitly included in a query. The default member for an attribute is specified by the `DefaultMember` property on the attribute. Whenever a hierarchy from a dimension is included in a query, all the default members from attributes corresponding to levels in the hierarchy are ignored. If no hierarchy of a dimension is included in a query, then default members are used for all the attributes in the dimension. For more information on default members, see [Define a Default Member](attribute-properties-define-a-default-member.md).  

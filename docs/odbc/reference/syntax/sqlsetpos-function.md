@@ -53,7 +53,7 @@ SQLRETURN SQLSetPos(
   
  SQL_POSITION SQL_REFRESH SQL_UPDATE SQL_DELETE  
   
-> [!NOTE]  
+> [!NOTE]
 >  The SQL_ADD value for the *Operation* argument has been deprecated for ODBC 3*.x*. ODBC 3.*x* drivers will need to support SQL_ADD for backward compatibility. This functionality has been replaced by a call to **SQLBulkOperations** with an *Operation* of SQL_ADD. When an ODBC 3.*x* application works with an ODBC 2.*x* driver, the Driver Manager maps a call to **SQLBulkOperations** with an *Operation* of SQL_ADD to **SQLSetPos** with an *Operation* of SQL_ADD.  
   
  For more information, see "Comments."  
@@ -102,7 +102,7 @@ SQLRETURN SQLSetPos(
 |HY010|Function sequence error|(DM) An asynchronously executing function was called for the connection handle that is associated with the *StatementHandle*. This asynchronous function was still executing when the SQLSetPos function was called.<br /><br /> (DM) The specified *StatementHandle* was not in an executed state. The function was called without first calling **SQLExecDirect**, **SQLExecute**, or a catalog function.<br /><br /> (DM) An asynchronously executing function (not this one) was called for the *StatementHandle* and was still executing when this function was called.<br /><br /> (DM) **SQLExecute**, **SQLExecDirect**, **SQLBulkOperations**, or **SQLSetPos** was called for the *StatementHandle* and returned SQL_NEED_DATA. This function was called before data was sent for all data-at-execution parameters or columns.<br /><br /> (DM) The driver was an ODBC 2.*x* driver, and **SQLSetPos** was called for a *StatementHandle* after **SQLFetch** was called.|  
 |HY011|Attribute cannot be set now|(DM) The driver was an ODBC 2.*x* driver; the SQL_ATTR_ROW_STATUS_PTR statement attribute was set; then **SQLSetPos** was called before **SQLFetch**, **SQLFetchScroll**, or **SQLExtendedFetch** was called.|  
 |HY013|Memory management error|The function call could not be processed because the underlying memory objects could not be accessed, possibly because of low memory conditions.|  
-|HY090|Invalid string or buffer length|The *Operation* argument was SQL_UPDATE, a data value was a null pointer, and the column length value was not 0, SQL_DATA_AT_EXEC, SQL_COLUMN_IGNORE, SQL_NULL_DATA, or less than or equal to SQL_LEN_DATA_AT_EXEC_OFFSET.<br /><br /> The *Operation* argument was SQL_UPDATE; a data value was not a null pointer; the C data type was SQL_C_BINARY or SQL_C_CHAR; and the column length value was less than 0 but not equal to SQL_DATA_AT_EXEC, SQL_COLUMN_IGNORE, SQL_NTS, or SQL_NULL_DATA, or less than or equal to SQL_LEN_DATA_AT_EXEC_OFFSET.<br /><br /> The value in a length/indicator buffer was SQL_DATA_AT_EXEC; the SQL type was either SQL_LONGVARCHAR, SQL_LONGVARBINARY, or a long data source–specific data type; and the SQL_NEED_LONG_DATA_LEN information type in **SQLGetInfo** was "Y".|  
+|HY090|Invalid string or buffer length|The *Operation* argument was SQL_UPDATE, a data value was a null pointer, and the column length value was not 0, SQL_DATA_AT_EXEC, SQL_COLUMN_IGNORE, SQL_NULL_DATA, or less than or equal to SQL_LEN_DATA_AT_EXEC_OFFSET.<br /><br /> The *Operation* argument was SQL_UPDATE; a data value was not a null pointer; the C data type was SQL_C_BINARY or SQL_C_CHAR; and the column length value was less than 0 but not equal to SQL_DATA_AT_EXEC, SQL_COLUMN_IGNORE, SQL_NTS, or SQL_NULL_DATA, or less than or equal to SQL_LEN_DATA_AT_EXEC_OFFSET.<br /><br /> The value in a length/indicator buffer was SQL_DATA_AT_EXEC; the SQL type was either SQL_LONGVARCHAR, SQL_LONGVARBINARY, or a long data source-specific data type; and the SQL_NEED_LONG_DATA_LEN information type in **SQLGetInfo** was "Y".|  
 |HY092|Invalid attribute identifier|(DM) The value specified for the *Operation* argument was invalid.<br /><br /> (DM) The value specified for the *LockType* argument was invalid.<br /><br /> The *Operation* argument was SQL_UPDATE or SQL_DELETE, and the SQL_ATTR_CONCURRENCY statement attribute was SQL_ATTR_CONCUR_READ_ONLY.|  
 |HY107|Row value out of range|The value specified for the argument *RowNumber* was greater than the number of rows in the rowset.|  
 |HY109|Invalid cursor position|The cursor associated with the *StatementHandle* was defined as forward-only, so the cursor could not be positioned within the rowset. See the description for the SQL_ATTR_CURSOR_TYPE attribute in **SQLSetStmtAttr**.<br /><br /> The *Operation* argument was SQL_UPDATE, SQL_DELETE, or SQL_REFRESH, and the row identified by the *RowNumber* argument had been deleted or had not been fetched.<br /><br /> (DM) The *RowNumber* argument was 0, and the *Operation* argument was SQL_POSITION.<br /><br /> **SQLSetPos** was called after **SQLBulkOperations** was called and before **SQLFetchScroll** or **SQLFetch** was called.|  
@@ -116,7 +116,7 @@ SQLRETURN SQLSetPos(
   
 ## Comments  
   
-> [!CAUTION]  
+> [!CAUTION]
 >  For information on the statement states that **SQLSetPos** can be called in and what it needs to do for compatibility with ODBC 2*.x* applications, see [Block Cursors, Scrollable Cursors, and Backward Compatibility](../../../odbc/reference/appendixes/block-cursors-scrollable-cursors-and-backward-compatibility.md).  
   
 ## RowNumber Argument  
@@ -220,7 +220,7 @@ SQLRETURN SQLSetPos(
   
     -   For data-at-execution columns, the application places an application-defined value, such as the column number, in the *\*TargetValuePtr* buffer. The value can be used later to identify the column.  
   
-         The application places the result of the SQL_LEN_DATA_AT_EXEC(*length*) macro in the **StrLen_or_IndPtr* buffer. If the SQL data type of the column is SQL_LONGVARBINARY, SQL_LONGVARCHAR, or a long data source–specific data type and the driver returns "Y" for the SQL_NEED_LONG_DATA_LEN information type in **SQLGetInfo**, *length* is the number of bytes of data to be sent for the parameter; otherwise, it must be a non-negative value and is ignored.  
+         The application places the result of the SQL_LEN_DATA_AT_EXEC(*length*) macro in the **StrLen_or_IndPtr* buffer. If the SQL data type of the column is SQL_LONGVARBINARY, SQL_LONGVARCHAR, or a long data source-specific data type and the driver returns "Y" for the SQL_NEED_LONG_DATA_LEN information type in **SQLGetInfo**, *length* is the number of bytes of data to be sent for the parameter; otherwise, it must be a non-negative value and is ignored.  
   
 2.  Calls **SQLSetPos** with the *Operation* argument set to SQL_UPDATE to update the row of data.  
   
@@ -239,7 +239,7 @@ SQLRETURN SQLSetPos(
     > [!NOTE]  
     >  Data-at-execution columns are columns in a rowset for which data will be sent with **SQLPutData** when a row is updated with **SQLSetPos**. They are bound with **SQLBindCol**. The value returned by **SQLParamData** is the address of the row in the **TargetValuePtr* buffer that is being processed.  
   
-4.  Calls **SQLPutData** one or more times to send data for the column. More than one call is needed if all the data values cannot be returned in the *\*TargetValuePtr* buffer specified in **SQLPutData**; multiple calls to **SQLPutData** for the same column are allowed only when sending character C data to a column with a character, binary, or data source–specific data type or when sending binary C data to a column with a character, binary, or data source–specific data type.  
+4.  Calls **SQLPutData** one or more times to send data for the column. More than one call is needed if all the data values cannot be returned in the *\*TargetValuePtr* buffer specified in **SQLPutData**; multiple calls to **SQLPutData** for the same column are allowed only when sending character C data to a column with a character, binary, or data source-specific data type or when sending binary C data to a column with a character, binary, or data source-specific data type.  
   
 5.  Calls **SQLParamData** again to signal that all data has been sent for the column.  
   

@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "03/09/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "replication"
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords: 
   - "administering replication, frequently asked questions"
@@ -179,7 +178,7 @@ manager: craigg
  First drop the article from the publication using [sp_droparticle](/sql/relational-databases/system-stored-procedures/sp-droparticle-transact-sql), [sp_dropmergearticle](/sql/relational-databases/system-stored-procedures/sp-dropmergearticle-transact-sql), or the **Publication Properties - \<Publication>** dialog box, and then drop it from the database using `DROP <Object>`. You cannot drop articles from snapshot or transactional publications after subscriptions have been added; you must drop the subscriptions first. For more information, see [Add Articles to and Drop Articles from Existing Publications](../publish/add-articles-to-and-drop-articles-from-existing-publications.md).  
   
 ### How do I add or drop columns on a published table?  
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] supports a wide variety of schema changes on published objects, including adding and dropping columns. For example, execute ALTER TABLE … DROP COLUMN at the Publisher, and the statement is replicated to Subscribers and then executed to drop the column. Subscribers running versions of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] prior to [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] support adding and dropping columns through the stored procedures [sp_repladdcolumn](/sql/relational-databases/system-stored-procedures/sp-repladdcolumn-transact-sql) and [sp_repldropcolumn](/sql/relational-databases/system-stored-procedures/sp-repldropcolumn-transact-sql). For more information, see [Make Schema Changes on Publication Databases](../publish/make-schema-changes-on-publication-databases.md).  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] supports a wide variety of schema changes on published objects, including adding and dropping columns. For example, execute ALTER TABLE ... DROP COLUMN at the Publisher, and the statement is replicated to Subscribers and then executed to drop the column. Subscribers running versions of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] prior to [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] support adding and dropping columns through the stored procedures [sp_repladdcolumn](/sql/relational-databases/system-stored-procedures/sp-repladdcolumn-transact-sql) and [sp_repldropcolumn](/sql/relational-databases/system-stored-procedures/sp-repldropcolumn-transact-sql). For more information, see [Make Schema Changes on Publication Databases](../publish/make-schema-changes-on-publication-databases.md).  
   
 ## Replication Maintenance  
   

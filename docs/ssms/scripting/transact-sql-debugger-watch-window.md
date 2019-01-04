@@ -6,8 +6,6 @@ ms.prod: sql
 ms.technology: scripting
 ms.reviewer: ""
 ms.topic: conceptual
-f1_keywords: 
-  - "vs.debug.watch"
 helpviewer_keywords: 
   - "Watch Window [Transact-SQL]"
 ms.assetid: 23f3baa4-14c2-4262-92f7-3f43fcfa0436
@@ -60,5 +58,3 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
  [Call Stack Window](../../relational-databases/scripting/transact-sql-debugger-call-stack-window.md)   
  [QuickWatch Dialog Box](../../relational-databases/scripting/transact-sql-debugger-quickwatch-dialog-box.md)   
  [Expressions &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)  
-  
-  

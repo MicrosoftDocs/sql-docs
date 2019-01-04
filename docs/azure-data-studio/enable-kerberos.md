@@ -1,7 +1,8 @@
 ---
-title: Use Active Directory Authentication (Kerberos) when connecting with Azure Data Studio | Microsoft Docs
+title: Use Active Directory Authentication (Kerberos)
+titleSuffix: Azure Data Studio
 description: Learn how to enable Kerberos to use Active Directory Authentication for Azure Data Studio
-ms.custom: "tools|sos"
+ms.custom: "seodec18"
 ms.date: "09/24/2018"
 ms.prod: sql
 ms.technology: azure-data-studio
@@ -119,7 +120,7 @@ sudo realm join contoso.com -U 'user@CONTOSO.COM' -v
 
 ### macOS
 
-- Join your macOS to the Active Directory Domain Controller by [following these steps](https://support.apple.com/kb/PH26282?viewlocale=en_US&locale=en_US).
+- Join your macOS to the Active Directory Domain Controller by following these steps:
 
 
 

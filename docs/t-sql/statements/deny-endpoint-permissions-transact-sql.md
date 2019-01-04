@@ -46,7 +46,7 @@ DENY permission  [ ,...n ] ON ENDPOINT :: endpoint_name
  *permission*  
  Specifies a permission that can be denied on an endpoint. For a list of the permissions, see the Remarks section later in this topic.  
   
- ON ENDPOINT **::***endpoint_name*  
+ ON ENDPOINT **::**_endpoint_name_  
  Specifies the endpoint on which the permission is being denied. The scope qualifier (**::**) is required.  
   
  TO \<server_principal>  

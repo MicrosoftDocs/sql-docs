@@ -1,5 +1,5 @@
 ---
-title: SQL Server Configuration (R Services) | Microsoft Docs
+title: SQL Server Configuration (R Services) - SQL Server Machine Learning Services
 ms.prod: sql
 ms.technology: machine-learning
 
@@ -136,7 +136,7 @@ Systems with _hardware NUMA_ have more than one system bus, each serving a small
 
 You can run the following query to find the number of memory nodes available to SQL Server:
 
-```SQL
+```sql
 SELECT DISTINCT memory_node_id
 FROM sys.dm_os_memory_clerks
 ```
@@ -225,7 +225,7 @@ However, depending on the algorithm you use, some models can be quite large, esp
 
 ## Articles in this series
 
-[Performance tuning for R – introduction](../r/sql-server-r-services-performance-tuning.md)
+[Performance tuning for R - introduction](../r/sql-server-r-services-performance-tuning.md)
 
 [Performance tuning for R - SQL Server configuration](../r/sql-server-configuration-r-services.md)
 

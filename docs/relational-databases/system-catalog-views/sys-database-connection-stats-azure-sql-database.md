@@ -36,8 +36,8 @@ monikerRange: "= azuresqldb-current || = sqlallproducts-allversions"
 |**success_count**|**int**|Number of successful connections.|  
 |**total_failure_count**|**int**|Total number of failed connections. This is the sum of **connection_failure_count**, **terminated_connection_count**, and **throttled_connection_count**, and does not include deadlock events.|  
 |**connection_failure_count**|**int**|Number of login failures.|  
-|**terminated_connection_count**|**int**|***Only applicable for [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] v11.***<br /><br /> Number of terminated connections.|  
-|**throttled_connection_count**|**int**|***Only applicable for [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] v11.***<br /><br /> Number of throttled connections.|  
+|**terminated_connection_count**|**int**|**_Only applicable for [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] v11._**<br /><br /> Number of terminated connections.|  
+|**throttled_connection_count**|**int**|**_Only applicable for [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] v11._**<br /><br /> Number of throttled connections.|  
   
 ## Remarks  
   
@@ -51,7 +51,7 @@ monikerRange: "= azuresqldb-current || = sqlallproducts-allversions"
 |`Database1`|`2012-02-05 11:00:00`|`2012-02-05 11:05:00`|`0`|`7`|`7`|`0`|`0`|  
   
 ### Interval start_time and end_time  
- An event is included in an aggregation interval when the event occurs *on* or *after***start_time** and *before***end_time** for that interval. For example, an event occurring exactly at `2012-10-30 19:25:00.0000000` would be included only in the second interval shown below:  
+ An event is included in an aggregation interval when the event occurs *on* or _after_**start_time** and _before_**end_time** for that interval. For example, an event occurring exactly at `2012-10-30 19:25:00.0000000` would be included only in the second interval shown below:  
   
 ```  
   

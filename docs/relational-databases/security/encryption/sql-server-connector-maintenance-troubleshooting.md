@@ -142,7 +142,7 @@ In summary, here are the steps:
   
 * Backup the vault key (using the Backup-AzureKeyVaultKey Powershell cmdlet).  
 * In the case of vault failure, create a new vault in the same geographic region*. The user creating this should be in the same default directory as the service principal setup for SQL Server.  
-* Restore the key to the new vault (using the Restore-AzureKeyVaultKey Powershell cmdlet – this restores the key using the same name as before). If there is already a key with the same name, the restore will fail.  
+* Restore the key to the new vault (using the Restore-AzureKeyVaultKey Powershell cmdlet - this restores the key using the same name as before). If there is already a key with the same name, the restore will fail.  
 * Grant permissions to the SQL Server service principal to use this new vault.  
 * Modify the SQL Server credential used by the Database Engine to reflect the new vault name (if needed).  
   
@@ -237,7 +237,7 @@ Error code  |Symbol  |Description
   
 If you don't see your error code in this table, here are some other reasons the error may be happening:   
   
--   You may not have Internet access and cannot access your Azure Key Vault – please check your Internet connection.  
+-   You may not have Internet access and cannot access your Azure Key Vault - please check your Internet connection.  
   
 -   The Azure Key Vault service may be down. Please try again at another time.  
   

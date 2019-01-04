@@ -5,8 +5,7 @@ ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
-ms.technology: 
-  - "replication"
+ms.technology: replication
 ms.topic: "language-reference"
 f1_keywords: 
   - "sp_setdefaultdatatypemapping"
@@ -21,7 +20,7 @@ manager: craigg
 # sp_setdefaultdatatypemapping (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Marks an existing data type mapping between [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and a non-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database management system (DBMS) as the default. This stored procedure is executed at the Distributor on any database.  
+  Marks an existing data type mapping between [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and a non- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database management system (DBMS) as the default. This stored procedure is executed at the Distributor on any database.  
   
  ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -124,7 +123,7 @@ sp_setdefaultdatatypemapping [ [ @mapping_id = ] mapping_id ]
  **0** (success) or **1** (failure)  
   
 ## Remarks  
- **sp_setdefaultdatatypemapping** is used in all types of replication between [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and a non-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] DBMS.  
+ **sp_setdefaultdatatypemapping** is used in all types of replication between [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and a non- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] DBMS.  
   
  The default data type mappings apply to all replication topologies that include the specified DBMS.  
   

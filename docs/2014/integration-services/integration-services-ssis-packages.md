@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "06/14/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "integration-services"
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords: 
   - "SQL Server Integration Services packages, about packages"
@@ -110,8 +109,8 @@ manager: craigg
   
 ## Related Content  
   
--   [Implementing SQL Server Integration Services with Microsoft Dynamics Mobile](http://msdn.microsoft.com/library/cc563950)  
+-   [Implementing SQL Server Integration Services with Microsoft Dynamics Mobile](https://msdn.microsoft.com/library/cc563950)  
   
--   [How to: Configure SQL Server Integration Services Package for Microsoft Dynamics AX](http://msdn.microsoft.com/library/bb986852)  
+-   [How to: Configure SQL Server Integration Services Package for Microsoft Dynamics AX](https://msdn.microsoft.com/library/bb986852)  
   
   

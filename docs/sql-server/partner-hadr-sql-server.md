@@ -2,13 +2,10 @@
 title: SQL Server high availability and disaster recovery partners | Microsoft Docs
 description: Lists of third-party partners with solutions to monitor Server.
 services: sql-server
-documentationcenter: NA
-ms.devlang: NA
 ms.topic: conceptual
 ms.custom: ""
 ms.date: 09/17/2017    
 ms.prod: sql
-ms.prod_service: "database-engine"
 ms.author: mikeray
 author: MikeRayMSFT
 manager: craigg
@@ -18,7 +15,7 @@ manager: craigg
 To provide high availability and disaster recovery for your SQL Server services, choose from a wide variety of industry-leading tools.  This article highlights Microsoft partner companies with high availability and disaster recovery solutions supporting Microsoft SQL Server.
 
 ## High availability and disaster recovery partners
-<!--|![PartnerShortName][1] |**PartnerShortName**<br>PartnerShortName Brief description of the type of products that partner provides. <br><br>List of supported versions of SQL Server, OS, OS platforms/distros  Server 2005 SP4 – SQL Server 2016 on Windows |[Datasheet][PartnerShortName_datasheet]<br>[Marketplace][PartnerShortName_marketplace]<br>[Website][PartnerShortName_website]<br>[Twitter][PartnerShortName_twitter]<br>[Video][PartnerShortName_youtube]|[![veem_video](./media/partner-hadr-sql-server/PartnerShortName_video.png)](https://www.youtube.com/channel/**************)
+<!--|![PartnerShortName][1] |**PartnerShortName**<br>PartnerShortName Brief description of the type of products that partner provides. <br><br>List of supported versions of SQL Server, OS, OS platforms/distros  Server 2005 SP4 - SQL Server 2016 on Windows |[Datasheet][PartnerShortName_datasheet]<br>[Marketplace][PartnerShortName_marketplace]<br>[Website][PartnerShortName_website]<br>[Twitter][PartnerShortName_twitter]<br>[Video][PartnerShortName_youtube]|[![veem_video](./media/partner-hadr-sql-server/PartnerShortName_video.png)](https://www.youtube.com/channel/**************)
 -->
 
 | Partner | Description | Links | 
@@ -30,7 +27,7 @@ To provide high availability and disaster recovery for your SQL Server services,
 |![NEC][7]|**NEC**<br>ExpressCluster is a comprehensive and fully automated high-availability and disaster recovery solution against all major failures including hardware, software, network, and site failures for SQL Server and associated applications running on physical or virtual machines in on-premises or cloud environments.<br><br>Microsoft SQL Server: 2005 or later; all editions |[Website][necec_website]<br>[Datasheet][necec_datasheet]<br>[Video][necec_youtube]<br>[Download][necec_download]|
 |![Portworx][6] |**Portworx**<br>Portworx is the solution for stateful containers running in production. With Portworx, users can manage any database or stateful service on any infrastructure using any container scheduler, including Kubernetes, Mesosphere DC/OS, and Docker Swarm. Portworx solves the five most common problems DevOps teams encounter when running containerized databases and other stateful services in production: persistence, high availability, data automation, support for multiple data stores and infrastructure, and security.<br><br>SQL Server 2017 on Docker |[Website][portworx_website]<br>[Documentation][portworx_docs]<br>[Video][portworx_youtube]|
 |![SIOS][8] |**SIOS**<br>SIOS Technology delivers cost-efficient high availability and disaster recovery solutions for SQL Server on Windows or Linux. SIOS SANless clustering eliminates the need for a shared storage SAN, giving you complete flexibility to protect your most important applications in physical, virtual, cloud, and hybrid cloud configurations in single and multi-site environments.<br><br>Add SIOS DataKeeper to your Windows Server Failover Clustering environment to create a SANless volume resource that replaces traditional shared storage making it easy to run WSFC in Azure.<br><br>SIOS Protection Suite is a fully flexible clustering solution that protects critical Linux applications such as SQL Server, SAP, HANA, Oracle, and many others.|[Website][sios_website]<br>[Datasheet][sios_datasheet]<br>[Twitter][sios_twitter]<br>[Marketplace][sios_marketplace]<br>[Video][sios_youtube]|
-|![Veeam][1] |**Veeam**<br>Veeam Backup & Replication is a powerful, easy-to-use, and affordable backup and availability solution. It provides fast, flexible, and reliable recovery of virtualized applications and data, bringing VM (virtual machine) backup and replication together in a single software solution. Veeam Backup & Replication delivers award-winning support for VMware vSphere and Microsoft Hyper-V virtual environments.<br><br>SQL Server 2005 SP4 – SQL Server 2016 on Windows |[Website][veeam_website]<br>[Datasheet][veeam_datasheet]<br>[Twitter][veeam_twitter]<br>[Video][veeam_youtube]|
+|![Veeam][1] |**Veeam**<br>Veeam Backup & Replication is a powerful, easy-to-use, and affordable backup and availability solution. It provides fast, flexible, and reliable recovery of virtualized applications and data, bringing VM (virtual machine) backup and replication together in a single software solution. Veeam Backup & Replication delivers award-winning support for VMware vSphere and Microsoft Hyper-V virtual environments.<br><br>SQL Server 2005 SP4 - SQL Server 2016 on Windows |[Website][veeam_website]<br>[Datasheet][veeam_datasheet]<br>[Twitter][veeam_twitter]<br>[Video][veeam_youtube]|
 
 ## Next steps
 To learn more about additional partners, see [monitoring][mon_partners], [management partners][management_partners], and [development partners][dev_partners].

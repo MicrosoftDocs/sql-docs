@@ -4,7 +4,7 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
+ms.technology:
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.swb.registerdacwizard.registerdac.f1"
@@ -46,7 +46,7 @@ manager: craigg
   
 2.  Expand the **Databases** node.  
   
-3.  Right-click the database to be registered, point to **Tasks**, and then select **Register As Data-tier Application…**  
+3.  Right-click the database to be registered, point to **Tasks**, and then select **Register As Data-tier Application...**  
   
 4.  Complete the wizard dialogs:  
   

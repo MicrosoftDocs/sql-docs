@@ -28,7 +28,7 @@ manager: craigg
   
  ![ODBC Driver for Oracle app&#47;driver architecture](../../odbc/microsoft/media/orcdrvsdkarch.gif "OrcDrvSDKArch")  
   
- The ODBC Driver for Oracle complies with API Conformance Level 1 and SQL Conformance Level Core. It also supports some functions in API Conformance Level 2 and most of the grammar in the Core and Extended SQL conformance levels. The driver is ODBC 2.5 compliant and supports 32-bit systems. Oracle 7.3x is supported fully; Oracle8 has limited support. The ODBC Driver for Oracle does not support any of the new Oracle8 data types — Unicode data types, BLOBs, CLOBs, and so on — nor does it support Oracle's new Relational Object Model. For more information about supported data types, see [Supported Data Types](../../odbc/microsoft/supported-data-types-odbc-driver-for-oracle.md) in this guide.  
+ The ODBC Driver for Oracle complies with API Conformance Level 1 and SQL Conformance Level Core. It also supports some functions in API Conformance Level 2 and most of the grammar in the Core and Extended SQL conformance levels. The driver is ODBC 2.5 compliant and supports 32-bit systems. Oracle 7.3x is supported fully; Oracle8 has limited support. The ODBC Driver for Oracle does not support any of the new Oracle8 data types - Unicode data types, BLOBs, CLOBs, and so on - nor does it support Oracle's new Relational Object Model. For more information about supported data types, see [Supported Data Types](../../odbc/microsoft/supported-data-types-odbc-driver-for-oracle.md) in this guide.  
   
  To access Oracle data, the following components are required:  
   

@@ -4,7 +4,7 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: native-client
+ms.technology: 
 ms.topic: "reference"
 helpviewer_keywords: 
   - "conversions [OLE DB]"
@@ -22,7 +22,7 @@ manager: craigg
   
 -   The format of `datetime` and `datetimeoffset` strings is:  
   
-     *yyyy*-*mm*-*dd*[ *hh*:*mm*:*ss*[.*9999999*][ ± *hh*:*mm*]]  
+     *yyyy*-*mm*-*dd*[ *hh*:*mm*:*ss*[.*9999999*][ ?? *hh*:*mm*]]  
   
 -   The format of `time` strings is:  
   

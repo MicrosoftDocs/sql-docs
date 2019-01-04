@@ -4,7 +4,7 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology:
+ms.technology: security
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Best Practices [Database Engine]"
@@ -19,8 +19,8 @@ manager: craigg
 ## Best Practices Recommendations  
  Review the following [!INCLUDE[msCoName](../../includes/msconame-md.md)] Knowledge Base articles for more information about how to troubleshoot this error:  
   
--   [Microsoft Knowledge Base article 311081](http://go.microsoft.com/fwlink/?linkid=117744)  
+-   [Microsoft Knowledge Base article 311081](https://go.microsoft.com/fwlink/?linkid=117744)  
   
--   [Microsoft Knowledge Base article 885688](http://go.microsoft.com/fwlink/?linkid=117745)  
+-   [Microsoft Knowledge Base article 885688](https://go.microsoft.com/fwlink/?linkid=117745)  
   
   

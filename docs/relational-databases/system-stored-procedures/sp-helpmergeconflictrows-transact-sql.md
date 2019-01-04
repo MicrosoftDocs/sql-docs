@@ -5,8 +5,7 @@ ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
-ms.technology: 
-  - "replication"
+ms.technology: replication
 ms.topic: "language-reference"
 f1_keywords: 
   - "sp_helpmergeconflictrows_TSQL"
@@ -37,16 +36,16 @@ sp_helpmergeconflictrows [ [ @publication = ] 'publication' ]
 ```  
   
 ## Arguments  
- [ **@publication=**] **'***publication***'**  
+ [ **@publication=**] **'**_publication_**'**  
  Is the name of the publication. *publication* is **sysname**, with a default of **%**. If the publication is specified, all conflicts qualified by the publication are returned. For example, if the **MSmerge_conflict_Customers** table has conflict rows for the **WA** and the **CA** publications, passing in a publication name **CA** retrieves conflicts that pertain to the **CA** publication.  
   
- [ **@conflict_table=**] **'***conflict_table***'**  
- Is the name of the conflict table. *conflict_table* is **sysname**, with no default. In [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] and later versions, conflict tables are named using the format names with **MSmerge_conflict_*publication*_*article***, with one table for each published article.  
+ [ **@conflict_table=**] **'**_conflict_table_**'**  
+ Is the name of the conflict table. *conflict_table* is **sysname**, with no default. In [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] and later versions, conflict tables are named using the format names with **MSmerge_conflict\__publication\_article_**, with one table for each published article.  
   
- [ **@publisher=**] **'***publisher***'**  
+ [ **@publisher=**] **'**_publisher_**'**  
  Is the name of the Publisher. *publisher* is **sysname**, with a default of NULL.  
   
- [ **@publisher_db=**] **'***publisher_db***'**  
+ [ **@publisher_db=**] **'**_publisher_db_**'**  
  Is the name of the publisher database.*publisher_db* is **sysname**, with a default of NULL.  
   
  [ **@logical_record_conflicts=** ] *logical_record_conflicts*  

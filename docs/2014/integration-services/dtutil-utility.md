@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "integration-services"
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords: 
   - "verifying packages"
@@ -259,7 +258,7 @@ dtutil /FILE srcPackage.dtsx /SIGN FILE;destpkg.dtsx;1767832648918a9d989fdac9819
 > [!NOTE]  
 >  The hash used in this example is not a real hash.  
   
- For more information, see the CertMgr section in [Signing and Checking Code with Authenticode](http://go.microsoft.com/fwlink/?LinkId=78100).  
+ For more information, see the CertMgr section in [Signing and Checking Code with Authenticode](https://go.microsoft.com/fwlink/?LinkId=78100).  
   
 ### Encrypt Examples  
  The following sample encrypts the file-based PackageToEncrypt.dtsx to the file-based EncryptedPackage.dts using full package encryption, with a password. The password that is used for the encryption is *EncPswd*.  

@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "database-engine"
+ms.technology: tools-other
 ms.topic: conceptual
 helpviewer_keywords: 
   - "command prompt utilities [SQL Server], sqlservr"
@@ -37,7 +36,7 @@ manager: craigg
 ```  
   
 ## Arguments  
- **-s** *instance_name*  
+ **-s** _instance_name_  
  Specifies the instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] to connect to. If no named instance is specified, **sqlservr** starts the default instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
 > [!IMPORTANT]  
@@ -49,16 +48,16 @@ manager: craigg
 > [!NOTE]  
 >  When you use this option, you cannot stop [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] by using [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Service Manager or the **net stop** command, and if you log off the computer, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] is stopped.)  
   
- **-d** *master_path*  
+ **-d** _master_path_  
  Indicates the fully qualified path for the **master** database file. There are no spaces between **-d** and *master_path*. If you do not provide this option, the existing registry parameters are used.  
   
  **-f**  
  Starts an instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] with minimal configuration. This is useful if the setting of a configuration value (for example, over-committing memory) has prevented the server from starting.  
   
- **-e** *error_log_path*  
+ **-e** _error_log_path_  
  Indicates the fully qualified path for the error log file. If not specified, the default location is *\<Drive>*:\Program Files\Microsoft SQL Server\MSSQL\Log\Errorlog for the default instance and *\<Drive>*:\Program Files\Microsoft SQL Server\MSSQL$*instance_name*\Log\Errorlog for a named instance. There are no spaces between **-e** and *error_log_path*.  
   
- **-l** *master_log_path*  
+ **-l** _master_log_path_  
  Indicates the fully qualified path for the **master** database transaction log file. There are no spaces between **-l** and *master_log_path*.  
   
  **-m**  
@@ -67,7 +66,7 @@ manager: craigg
  **-n**  
  Allows you to start a named instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Without the **-s** parameter set, the default instance attempts to start. You must switch to the appropriate BINN directory for the instance at a command prompt before starting **sqlservr.exe**. For example, if Instance1 were to use \mssql$Instance1 for its binaries, the user must be in the \mssql$Instance1\binn directory to start **sqlservr.exe -s instance1**. If you start an instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] with the **-n** option, it is advisable to use the **-e** option too, or [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] events are not logged.  
   
- **-T** *trace#*  
+ **-T** _trace#_  
  Indicates that an instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] should be started with a specified trace flag (*trace#*) in effect. Trace flags are used to start the server with nonstandard behavior. For more information, see [Trace Flags &#40;Transact-SQL&#41;](/sql/t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql).  
   
 > [!IMPORTANT]  
@@ -79,7 +78,7 @@ manager: craigg
  **-x**  
  Disables the keeping of CPU time and cache-hit ratio statistics. Allows maximum performance.  
   
- **-g** *memory_to_reserve*  
+ **-g** _memory_to_reserve_  
  Specifies an integer number of megabytes (MB) of memory that [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] leaves available for memory allocations within the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] process, but outside the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] memory pool. The memory outside of the memory pool is the area used by [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] for loading items such as extended procedure `.dll` files, the OLE DB providers referenced by distributed queries, and automation objects referenced in [!INCLUDE[tsql](../includes/tsql-md.md)] statements. The default is 256 MB.  
   
  Use of this option may help tune memory allocation, but only when physical memory exceeds the configured limit set by the operating system on virtual memory available to applications. Use of this option may be appropriate in large memory configurations in which the memory usage requirements of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] are atypical and the virtual address space of the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] process is totally in use. Incorrect use of this option can lead to conditions under which an instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] may not start or may encounter run-time errors.  

@@ -15,7 +15,7 @@ ms.author: douglasl
 manager: craigg
 ---
 # Task 7: Creating a Composite Domain
-  In this task, you create a composite domain, **Address Validation**, which comprises **Address Line**, **City**, **State**, and **Zip** domains. A composite domain lets you define a cross-domain rule that involves multiple domains in a rule. There are other advantages to a composite domain such as being able to parse a field value into multiple domains.  For example, a value for a Full Name field can be parsed into separate First Name, Middle Name, and Last Name domains. In this tutorial, you only define a cross-domain rule. See [Managing a Composite Domain](http://msdn.microsoft.com/library/hh510399.aspx) for more details.  
+  In this task, you create a composite domain, **Address Validation**, which comprises **Address Line**, **City**, **State**, and **Zip** domains. A composite domain lets you define a cross-domain rule that involves multiple domains in a rule. There are other advantages to a composite domain such as being able to parse a field value into multiple domains.  For example, a value for a Full Name field can be parsed into separate First Name, Middle Name, and Last Name domains. In this tutorial, you only define a cross-domain rule. See [Managing a Composite Domain](https://msdn.microsoft.com/library/hh510399.aspx) for more details.  
   
 1.  In the left pane, click **Create a composite domain** button on the toolbar.  
   

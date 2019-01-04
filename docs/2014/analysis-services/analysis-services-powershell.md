@@ -37,7 +37,7 @@ For more information about syntax and examples, see [Analysis Services PowerShel
 ##  <a name="bkmk_prereq"></a> Prerequisites  
  Windows PowerShell 2.0 must be installed. It is installed by default on newer versions of the Windows operating systems. For more information, see [Install Windows PowerShell 2.0](https://msdn.microsoft.com/library/ff637750.aspx)
 
-<!-- ff637750.aspx above is linked to by:  (http://go.microsoft.com/fwlink/?LinkId=227613). -->
+<!-- ff637750.aspx above is linked to by:  (https://go.microsoft.com/fwlink/?LinkId=227613). -->
   
  You must install a SQL Server feature that includes the SQL Server PowerShell (SQLPS) module and client libraries. The easiest way to do this is by installing SQL Server Management Studio, which includes the PowerShell feature and client libraries automatically. The SQL Server PowerShell (SQLPS) module contains the PowerShell providers and cmdlets for all SQL Server features, including the SQLASCmdlets module and SQLAS provider used for navigating the Analysis Services object hierarchy.  
   
@@ -53,7 +53,7 @@ For more information about syntax and examples, see [Analysis Services PowerShel
 |Context|PowerShell Feature Availability|  
 |-------------|-------------------------------------|  
 |Multidimensional instances and databases|Supported for local and remote administration.<br /><br /> Merge-partition requires a local connection.|  
-|Tabular instances and databases|Supported for local and remote administration.<br /><br /> For more information, see an August 2011 blog about [Manage Tabular Models Using PowerShell](http://go.microsoft.com/fwlink/?linkID=227685).|  
+|Tabular instances and databases|Supported for local and remote administration.<br /><br /> For more information, see an August 2011 blog about [Manage Tabular Models Using PowerShell](https://go.microsoft.com/fwlink/?linkID=227685).|  
 |PowerPivot for SharePoint instances and databases|Limited support. You can use HTTP connections and the SQLAS provider to view instance and database information.<br /><br /> However, using the cmdlets is not supported. You must not use Analysis Services PowerShell to backup and restore in-memory PowerPivot database, nor should you add or remove roles, process data, or run arbitrary XMLA script.<br /><br /> For configuration purposes, PowerPivot for SharePoint has built-in PowerShell support that is provided separately. For more information, see [PowerShell Reference for PowerPivot for SharePoint](/sql/analysis-services/powershell/powershell-reference-for-power-pivot-for-sharepoint).|  
 |Native connections to local cubes<br /><br /> "Data Source=c:\backup\test.cub"|Not supported.|  
 |HTTP connections to BI semantic model (.bism) connection files in SharePoint<br /><br /> "Data Source=http://server/shared_docs/name.bism"|Not supported.|  
@@ -65,11 +65,11 @@ For more information about syntax and examples, see [Analysis Services PowerShel
   
  Connections to Analysis Services are characterized as either native connections or HTTP connections. A native connection is a direct connection from a client application to the server. In a PowerShell session, the PowerShell client uses the OLE DB provider for Analysis Services to connect directly to an Analysis Services instance. A native connection is always made using Windows integrated security, where Analysis Services PowerShell executes as the current user. Analysis Services does not support impersonation. If you want to perform an operation as a specific user, you must start the PowerShell session as that user.  
   
- HTTP connections are made indirectly through IIS, allowing for additional authentication options, such as Basic authentication, to connect to an Analysis Services instance. Because IIS supports impersonation, you can provide a connection string that includes credentials IIS will use to impersonate when making a connection. To provide credentials, you can use the –Credential parameter.  
+ HTTP connections are made indirectly through IIS, allowing for additional authentication options, such as Basic authentication, to connect to an Analysis Services instance. Because IIS supports impersonation, you can provide a connection string that includes credentials IIS will use to impersonate when making a connection. To provide credentials, you can use the -Credential parameter.  
   
- **Using the –Credential Parameter in PowerShell**  
+ **Using the -Credential Parameter in PowerShell**  
   
- The –Credential parameter takes a PSCredential object that specifies a user name and password. In Analysis Services PowerShell, the –Credential parameter is available for cmdlets that make a connection request to Analysis Services, as opposed to cmdlets that run within the context of an existing connection. Cmdlets that make a connection request include Invoke-ASCmd, Backup-ASDatabase, and Restore-ASDatabase. For these cmdlets, the –Credential parameter can be used, assuming the following criteria are met:  
+ The -Credential parameter takes a PSCredential object that specifies a user name and password. In Analysis Services PowerShell, the -Credential parameter is available for cmdlets that make a connection request to Analysis Services, as opposed to cmdlets that run within the context of an existing connection. Cmdlets that make a connection request include Invoke-ASCmd, Backup-ASDatabase, and Restore-ASDatabase. For these cmdlets, the -Credential parameter can be used, assuming the following criteria are met:  
   
 1.  The server is configured for HTTP access, which means that IIS handles the connection, reads the user name and password, and impersonates that user identity when connecting to Analysis Services. For more information, see [Configure HTTP Access to Analysis Services on Internet Information Services &#40;IIS&#41; 8.0](instances/configure-http-access-to-analysis-services-on-iis-8-0.md).  
   
@@ -81,10 +81,10 @@ For more information about syntax and examples, see [Analysis Services PowerShel
   
 ```  
 PS SQLSERVER:\SQLAS\HTTP_DS> $cred = Get-credential adventureworks\dbadmin  
-PS SQLSERVER:\SQLAS\HTTP_DS> Invoke-ASCmd –Inputfile:"c:\discoverconnections.xmla" –Credential:$cred  
+PS SQLSERVER:\SQLAS\HTTP_DS> Invoke-ASCmd -Inputfile:"c:\discoverconnections.xmla" -Credential:$cred  
 ```  
   
- When using Basic authentication, you should always use HTTPS with SSL so that username and passwords are sent over an encrypted connection. For more information, see [Configure Secure Sockets Layer in IIS 7.0](http://go.microsoft.com/fwlink/?linkID=184299) and [Configure Basic Authentication (IIS 7)](http://go.microsoft.com/fwlink/?LinkId=230776).  
+ When using Basic authentication, you should always use HTTPS with SSL so that username and passwords are sent over an encrypted connection. For more information, see [Configure Secure Sockets Layer in IIS 7.0](https://go.microsoft.com/fwlink/?linkID=184299) and [Configure Basic Authentication (IIS 7)](https://go.microsoft.com/fwlink/?LinkId=230776).  
   
  Remember that credentials, queries, and commands that you provide in PowerShell are passed unchanged to the transport layer. Including sensitive content in your scripts increases the risk of a malicious injection attack.  
   
@@ -132,7 +132,7 @@ PS SQLSERVER:\SQLAS\Localhost\default> Remove-Variable -Name pwd
     Import-module "sqlps"  
     ```  
   
-     Alternatively, use `import-module "sqlps" –disablenamechecking` to suppress the warning about unapproved verb names.  
+     Alternatively, use `import-module "sqlps" -disablenamechecking` to suppress the warning about unapproved verb names.  
   
 -   To load just the task-specific Analysis Services cmdlets, without the Analysis Services provider or the Invoke-ASCmd cmdlet, you can load the SQLASCmdlets module as an independent operation.  
   
@@ -240,28 +240,28 @@ Restart-service mssqlserverolapservice
 2.  `Get-command` returns a list of the eleven Analysis Services PowerShell cmdlets:  
   
     ```  
-    get-command –module SQLASCmdlets  
+    get-command -module SQLASCmdlets  
     ```  
   
 3.  `Get-member` returns properties or methods of a service or process.  
   
     ```  
-    Get-service mssqlserverolapservice | get-member –type Property  
+    Get-service mssqlserverolapservice | get-member -type Property  
     ```  
   
     ```  
-    Get-service mssqlserverolapservice | get-member –type Method  
+    Get-service mssqlserverolapservice | get-member -type Method  
     ```  
   
     ```  
-    Get-process msmdsrv | get-member –type Property  
+    Get-process msmdsrv | get-member -type Property  
     ```  
   
 4.  `Get-member` can also be used to return properties or methods of an object (for example, AMO methods on the server object) using the SQLAS provider to specify the server instance.  
   
     ```  
     PS SQLSERVER:\sqlas\localhost\default > $serverObj = New-Object Microsoft.AnalysisServices.Server  
-    PS SQLSERVER:\sqlas\localhost\default > $serverObj = | get-member –type Method  
+    PS SQLSERVER:\sqlas\localhost\default > $serverObj = | get-member -type Method  
     ```  
   
 5.  `Get-PSdrive` returns a list of the providers that are currently installed. If you imported the SQLPS module, you will see the `SQLServer` provider in the list (SQLAS is part of the SQLServer provider and never appears separately in the list):  
@@ -272,7 +272,7 @@ Restart-service mssqlserverolapservice
   
 ## See Also  
  [Install SQL Server PowerShell](../database-engine/install-windows/install-sql-server-powershell.md)   
- [Manage Tabular Models Using PowerShell (blog)](http://go.microsoft.com/fwlink/?linkID=227685)   
+ [Manage Tabular Models Using PowerShell (blog)](https://go.microsoft.com/fwlink/?linkID=227685)   
  [Configure HTTP Access to Analysis Services on Internet Information Services &#40;IIS&#41; 8.0](instances/configure-http-access-to-analysis-services-on-iis-8-0.md)  
   
   

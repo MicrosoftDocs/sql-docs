@@ -1,6 +1,7 @@
 ---
-title: "Configure availability group for distributed transactions | Microsoft Docs"
-ms.custom: ""
+title: "Configure distributed transactions for an availability group"
+description: "Describes how to configure distributed transactions for databases within an Always On availability group. "
+ms.custom: "seodec18"
 ms.date: "05/22/2018"
 ms.prod: sql
 ms.reviewer: ""
@@ -17,7 +18,7 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ---
-# Configure availability group for distributed transactions
+# Configure distributed transactions for an Always On availability group
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 [!INCLUDE[SQL2017](../../../includes/sssqlv14-md.md)] supports all distributed transactions including databases in an availability group. This article explains how to configure an availability group for distributed transactions  
@@ -186,4 +187,4 @@ For more information about resolving in-doubt transactions, see [Resolve Transac
 
 [Supporting XA Transactions](https://technet.microsoft.com/library/cc753563(v=ws.10).aspx)
 
-[How It Works: Session/SPID (–2) for DTC Transactions](https://blogs.msdn.microsoft.com/bobsql/2016/08/04/how-it-works-sessionspid-2-for-dtc-transactions/)
+[How It Works: Session/SPID (-2) for DTC Transactions](https://blogs.msdn.microsoft.com/bobsql/2016/08/04/how-it-works-sessionspid-2-for-dtc-transactions/)

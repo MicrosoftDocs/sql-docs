@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "07/17/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "database-engine"
+ms.technology: configuration
 ms.topic: conceptual
 helpviewer_keywords: 
   - "contained database, collations"
@@ -101,12 +100,12 @@ JOIN #T2
 CREATE FUNCTION f(@x INT) RETURNS INT  
 AS BEGIN   
       DECLARE @I INT = 1  
-      DECLARE @İ INT = 2  
+      DECLARE @?? INT = 2  
       RETURN @x * @i  
 END;  
 ```  
   
- This is a rather peculiar function. In a case-sensitive collation, the @i in the return clause cannot bind to either @I or @İ. In a case-insensitive Latin1_General collation, @i binds to @I, and the function returns 1. But in a case-insensitive Turkish collation, @i binds to @İ, and the function returns 2. This can wreak havoc on a database that moves between instances with different collations.  
+ This is a rather peculiar function. In a case-sensitive collation, the @i in the return clause cannot bind to either @I or @??. In a case-insensitive Latin1_General collation, @i binds to @I, and the function returns 1. But in a case-insensitive Turkish collation, @i binds to @??, and the function returns 2. This can wreak havoc on a database that moves between instances with different collations.  
   
 ## Contained Databases  
  Since a design objective of contained databases is to make them self-contained, the dependence on the instance and `tempdb` collations must be severed. To do this, contained databases introduce the concept of the catalog collation. The catalog collation is used for system metadata and transient objects. Details are provided below.  

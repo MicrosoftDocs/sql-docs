@@ -33,7 +33,7 @@ manager: craigg
 ```  
   
 BOOL SQLGetConfigMode(  
-     UWORD *   pwConfigMode);  
+     UWORD *   pwConfigMode);  
 ```  
   
 ## Arguments  

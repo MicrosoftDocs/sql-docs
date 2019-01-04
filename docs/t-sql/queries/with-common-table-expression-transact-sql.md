@@ -138,7 +138,7 @@ Is a valid identifier for the common table expression. *expression_name* must be
   
 -   Tables on remote servers may be referenced in the CTE. If the remote server is referenced in the recursive member of the CTE, a spool is created for each remote table so the tables can be repeatedly accessed locally. If it is a CTE query, Index Spool/Lazy Spools is displayed in the query plan and will have the additional WITH STACK predicate. This is one way to confirm proper recursion.  
   
--   Analytic and aggregate functions in the recursive part of the CTE are applied to the set for the current recursion level and not to the set for the CTE. Functions like ROW_NUMBER operate only on the subset of data passed to them by the current recursion level and not the entire set of data pased to the recursive part of the CTE. For more information, see example K. Using analytical functions in a recursive CTE that follows.  
+-   Analytic and aggregate functions in the recursive part of the CTE are applied to the set for the current recursion level and not to the set for the CTE. Functions like ROW_NUMBER operate only on the subset of data passed to them by the current recursion level and not the entire set of data passed to the recursive part of the CTE. For more information, see example K. Using analytical functions in a recursive CTE that follows.  
   
 ## Features and Limitations of Common Table Expressions in [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
  The current implementation of CTEs in [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] have the following features and limitations:  

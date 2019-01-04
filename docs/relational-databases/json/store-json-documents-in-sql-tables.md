@@ -53,7 +53,7 @@ SELECT TOP 100 JSON_VALUE(log, '$.severity'), AVG( CAST( JSON_VALUE(log,'$.durat
 
 It's a powerful advantage that you can use *any* T-SQL function and query clause to query JSON documents. SQL Server and SQL Database don't introduce any constraints in the queries that you can use to analyze JSON documents. You can extract values from a JSON document with the `JSON_VALUE` function and use it in the query like any other value.
 
-This ability to use rich T-SQL query syntax is the key difference between SQL Server and SQL Database and classic NoSQL databases – in Transact-SQL you probably have any function that you need to process JSON data.
+This ability to use rich T-SQL query syntax is the key difference between SQL Server and SQL Database and classic NoSQL databases - in Transact-SQL you probably have any function that you need to process JSON data.
 
 ## Indexes
 
@@ -102,7 +102,7 @@ The preceding example uses a sequence object to assign values to the `_id` colum
 
 ## Frequently changing documents & memory-optimized tables
 
-If you expect a large number of update, insert, and delete operations in your collections, you can store your JSON documents in memory-optimized tables. Memory-optimized JSON collections always keep data in-memory, so there is no storage I/O overhead. Additionally, memory optimized JSON collections are completely lock-free – that is, actions on documents do not block any other operation.
+If you expect a large number of update, insert, and delete operations in your collections, you can store your JSON documents in memory-optimized tables. Memory-optimized JSON collections always keep data in-memory, so there is no storage I/O overhead. Additionally, memory optimized JSON collections are completely lock-free - that is, actions on documents do not block any other operation.
 
 The only thing that you have to do convert a classic collection to a memory-optimized collection is to specify the **with (memory_optimized=on)** option after the table definition, as shown in the following example. Then you have a memory-optimized version of the JSON collection.
 
@@ -155,10 +155,6 @@ Native JSON functions in SQL Server and SQL Database enable you to process JSON 
 
 ## Learn more about JSON in SQL Server and Azure SQL Database  
   
-### Microsoft blog posts  
-  
-For specific solutions, use cases, and recommendations, see these [blog posts](https://blogs.msdn.com/b/sqlserverstorageengine/archive/tags/json/) about the built-in JSON support in SQL Server and Azure SQL Database.  
-
 ### Microsoft videos
 
 For a visual introduction to the built-in JSON support in SQL Server and Azure SQL Database, see the following videos:

@@ -291,7 +291,7 @@ In SQL Server 2016:
 You can make your Transact-SQL scripts more robust against a possible transaction error by adding *retry logic* to your scripts. Retry logic is more likely to help when UPDATE and DELETE calls are frequent, or if the memory-optimized table is referenced by a foreign key in another table. For details, see:
 
 - [Transactions with Memory-Optimized Tables](../../relational-databases/in-memory-oltp/transactions-with-memory-optimized-tables.md)
-- [Transaction dependency limits with memory optimized tables – Error 41839](https://blogs.msdn.microsoft.com/sqlcat/2016/07/11/transaction-dependency-limits-with-memory-optimized-tables-error-41839/)
+- [Transaction dependency limits with memory optimized tables - Error 41839](https://blogs.msdn.microsoft.com/sqlcat/2016/07/11/transaction-dependency-limits-with-memory-optimized-tables-error-41839/)
 
 
 

@@ -45,7 +45,7 @@ Expand to show properties for **Name** and **Description**.
 Shows the name of the selected check constraint. To change the name of this constraint, type the text directly in the property field.  
   
 **Description**  
-Describing this check constraint. You can edit the description by typing into the property field or you can click the ellipsis button (**…**) that appears to the right of the property field and edit the description in the **Description Property** dialog box.  
+Describing this check constraint. You can edit the description by typing into the property field or you can click the ellipsis button (**...**) that appears to the right of the property field and edit the description in the **Description Property** dialog box.  
   
 **Table Designer Category**  
 Expand to show properties for **Check Existing Data on Creation or Re-enabling**, **Enforce For Inserts And Updates**, and **Enforce Replication**.  

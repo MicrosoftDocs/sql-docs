@@ -38,19 +38,19 @@ sp_table_privileges_ex [ @table_server = ] 'table_server'
 ```  
   
 ## Arguments  
- [ **@table_server =** ] **'***table_server***'**  
+ [ **@table_server =** ] **'**_table_server_**'**  
  Is the name of the linked server for which to return information. *table_server* is **sysname**, with no default.  
   
- [ **@table_name =** ] **'***table_name***'**]  
+ [ **@table_name =** ] **'**_table_name_**'**]  
  Is the name of the table for which to provide table privilege information. *table_name* is **sysname**, with a default of NULL.  
   
- [ **@table_schema =** ] **'***table_schema***'**  
+ [ **@table_schema =** ] **'**_table_schema_**'**  
  Is the table schema. This in some DBMS environments is the table owner. *table_schema* is **sysname**, with a default of NULL.  
   
- [ **@table_catalog =** ] **'***table_catalog***'**  
+ [ **@table_catalog =** ] **'**_table_catalog_**'**  
  Is the name of the database in which the specified *table_name* resides. *table_catalog* is **sysname**, with a default of NULL.  
   
- [ **@fUsePattern =**] **'***fUsePattern***'**  
+ [ **@fUsePattern =**] **'**_fUsePattern_**'**  
  Determines whether the characters '_', '%', '[', and ']' are interpreted as wildcard characters. Valid values are 0 (pattern matching is off) and 1 (pattern matching is on). *fUsePattern* is **bit**, with a default of 1.  
   
 ## Return Code Values  
@@ -60,7 +60,7 @@ sp_table_privileges_ex [ @table_server = ] 'table_server'
   
 |Column name|Data type|Description|  
 |-----------------|---------------|-----------------|  
-|**TABLE_CAT**|**sysname**|Table qualifier name. Various DBMS products support three-part naming for tables (*qualifier***.***owner***.***name*). In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], this column represents the database name. In some products, it represents the server name of the table's database environment. This field can be NULL.|  
+|**TABLE_CAT**|**sysname**|Table qualifier name. Various DBMS products support three-part naming for tables (_qualifier_**.**_owner_**.**_name_). In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], this column represents the database name. In some products, it represents the server name of the table's database environment. This field can be NULL.|  
 |**TABLE_SCHEM**|**sysname**|Table owner name. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], this column represents the name of the database user who created the table. This field always returns a value.|  
 |**TABLE_NAME**|**sysname**|Table name. This field always returns a value.|  
 |**GRANTOR**|**sysname**|Database username that has granted permissions on this **TABLE_NAME** to the listed **GRANTEE**. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], this column is always the same as the **TABLE_OWNER**. This field always returns a value. Also, the GRANTOR column may be either the database owner (**TABLE_OWNER**) or a user to whom the database owner granted permission by using the WITH GRANT OPTION clause in the GRANT statement.|  
@@ -75,7 +75,7 @@ sp_table_privileges_ex [ @table_server = ] 'table_server'
  Requires SELECT permission on the schema.  
   
 ## Examples  
- The following example returns privilege information about tables with names that start with `Product` in the [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] database from the specified linked server `Seattle1`. ([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is assumed as the linked server).  
+ The following example returns privilege information about tables with names that start with `Product` in the [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] database from the specified linked server `Seattle1`. ( [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is assumed as the linked server).  
   
 ```  
 EXEC sp_table_privileges_ex @table_server = 'Seattle1',   

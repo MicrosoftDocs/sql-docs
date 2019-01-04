@@ -1,13 +1,14 @@
 ---
-title: Configure RHEL Cluster for SQL Server Availability Group | Microsoft Docs
-description: 
+title: Configure RHEL Cluster for SQL Server Availability Group
+titleSuffix: SQL Server
+description: Learn about availability group clusters when running Red Hat Enterprise Linux (RHEL)
 author: MikeRayMSFT 
 ms.author: mikeray 
 manager: craigg
 ms.date: 06/14/2017
 ms.topic: conceptual
 ms.prod: sql
-ms.custom: "sql-linux"
+ms.custom: "sql-linux, seodec18"
 ms.technology: linux
 ms.assetid: b7102919-878b-4c08-a8c3-8500b7b42397
 ---
@@ -82,7 +83,7 @@ Each node in the cluster must have an appropriate subscription for RHEL and the 
    sudo subscription-manager repos --enable=rhel-ha-for-rhel-7-server-rpms
    ```
 
-For more information, see [Pacemaker – The Open Source, High Availability Cluster](https://www.opensourcerers.org/pacemaker-the-open-source-high-availability-cluster/). 
+For more information, see [Pacemaker - The Open Source, High Availability Cluster](https://www.opensourcerers.org/pacemaker-the-open-source-high-availability-cluster/). 
 
 After you have configured the subscription, complete the following steps to configure Pacemaker:
 

@@ -279,7 +279,7 @@ At this point both instances of SQL Server are configured to run with the databa
    sudo yum install pacemaker pcs fence-agents-all resource-agents
    ```
 
-   ​
+    
 
 2. Set the password for the default user that is created when installing Pacemaker and Corosync packages. Use the same password on both nodes. 
 
@@ -287,7 +287,7 @@ At this point both instances of SQL Server are configured to run with the databa
    sudo passwd hacluster
    ```
 
-   ​
+    
 
 3. Enable and start `pcsd` service and Pacemaker. This will allow nodes to rejoin the cluster after the reboot. Run the following command on both nodes.
 
@@ -308,8 +308,8 @@ At this point both instances of SQL Server are configured to run with the databa
 1. On one of the nodes, create the cluster.
 
    ```bash
-   sudo pcs cluster auth <nodeName1 nodeName2 …> -u hacluster
-   sudo pcs cluster setup --name <clusterName> <nodeName1 nodeName2 …>
+   sudo pcs cluster auth <nodeName1 nodeName2 ...> -u hacluster
+   sudo pcs cluster setup --name <clusterName> <nodeName1 nodeName2 ...>
    sudo pcs cluster start --all
    ```
 
@@ -364,7 +364,7 @@ At this point both instances of SQL Server are configured to run with the databa
    sudo pcs status 
    ```
 
-   The following examples shows the results when Pacemaker has succesfully started a clustered instance of SQL Server. 
+   The following examples shows the results when Pacemaker has successfully started a clustered instance of SQL Server. 
 
    ```
    fs     (ocf::heartbeat:Filesystem):    Started sqlfcivm1

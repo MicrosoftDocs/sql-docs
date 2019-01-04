@@ -44,7 +44,7 @@ DENY permission  [ ,...n ]
  *permission*  
  Specifies a permission that can be denied on a database scoped credential. Listed below.  
   
- ON DATABASE SCOPED CREDENTIAL **::***credential_name*  
+ ON DATABASE SCOPED CREDENTIAL **::**_credential_name_  
  Specifies the database scoped credential on which the permission is being denied. The scope qualifier "::" is required.  
   
  *database_principal*  

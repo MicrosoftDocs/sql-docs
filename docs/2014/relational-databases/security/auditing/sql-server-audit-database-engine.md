@@ -55,7 +55,7 @@ manager: craigg
 > [!IMPORTANT]  
 >  Any authenticated user can read and write to the Windows Application event log. The Application event log requires lower permissions than the Windows Security event log and is less secure than the Windows Security event log.  
   
- Writing to the Windows Security log requires the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] service account to be added to the **Generate security audits** policy. By default, the Local System, Local Service, and Network Service are part of this policy. This setting can be configured by using the security policy snap-in (secpol.msc). Additionally, the **Audit object access** security policy must be enabled for both **Success** and **Failure**. This setting can be configured by using the security policy snap-in (secpol.msc). In [!INCLUDE[wiprlhext](../../../includes/wiprlhext-md.md)] or Windows Server 2008, you can set the more granular **application generated** policy from the command line by using the audit policy program (`AuditPol.exe)`. For more information about the steps to enable writing to the Windows Security log, see [Write SQL Server Audit Events to the Security Log](write-sql-server-audit-events-to-the-security-log.md). For more information about the Auditpol.exe program, see Knowledge Base article 921469, [How to use Group Policy to configure detailed security auditing](http://support.microsoft.com/kb/921469/). The Windows event logs are global to the Windows operating system. For more information about the Windows event logs, see [Event Viewer Overview](http://go.microsoft.com/fwlink/?LinkId=101455). If you need more precise permissions on the audit, use the binary file target.  
+ Writing to the Windows Security log requires the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] service account to be added to the **Generate security audits** policy. By default, the Local System, Local Service, and Network Service are part of this policy. This setting can be configured by using the security policy snap-in (secpol.msc). Additionally, the **Audit object access** security policy must be enabled for both **Success** and **Failure**. This setting can be configured by using the security policy snap-in (secpol.msc). In [!INCLUDE[wiprlhext](../../../includes/wiprlhext-md.md)] or Windows Server 2008, you can set the more granular **application generated** policy from the command line by using the audit policy program (`AuditPol.exe)`. For more information about the steps to enable writing to the Windows Security log, see [Write SQL Server Audit Events to the Security Log](write-sql-server-audit-events-to-the-security-log.md). For more information about the Auditpol.exe program, see Knowledge Base article 921469, [How to use Group Policy to configure detailed security auditing](https://support.microsoft.com/kb/921469/). The Windows event logs are global to the Windows operating system. For more information about the Windows event logs, see [Event Viewer Overview](https://go.microsoft.com/fwlink/?LinkId=101455). If you need more precise permissions on the audit, use the binary file target.  
   
  When you are saving audit information to a file, to help prevent tampering, you can restrict access to the file location in the following ways:  
   
@@ -71,9 +71,9 @@ manager: craigg
   
  If an Audit Administrator copies the file to a different location (for archive purposes, and so on), the ACLs on the new location should be reduced to the following permissions:  
   
--   Audit Administrator – Read / Write  
+-   Audit Administrator - Read / Write  
   
--   Audit Reader – Read  
+-   Audit Reader - Read  
   
  We recommend that you generate audit reports from a separate instance of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], such as an instance of [!INCLUDE[ssExpress](../../../includes/ssexpress-md.md)], to which only Audit Administrators or Audit Readers have access. By using a separate instance of the [!INCLUDE[ssDE](../../../includes/ssde-md.md)] for reporting, you can help prevent unauthorized users from obtaining access to the audit record.  
   
@@ -99,9 +99,9 @@ manager: craigg
  For more information, see [Create a Server Audit and Server Audit Specification](create-a-server-audit-and-server-audit-specification.md) and [Create a Server Audit and Database Audit Specification](create-a-server-audit-and-database-audit-specification.md).  
   
 ## Considerations  
- In the case of a failure during audit initiation, the server will not start. In this case, the server can be started by using the **–f** option at the command line.  
+ In the case of a failure during audit initiation, the server will not start. In this case, the server can be started by using the **-f** option at the command line.  
   
- When an audit failure causes the server to shut down or not to start because ON_FAILURE=SHUTDOWN is specified for the audit, the MSG_AUDIT_FORCED_SHUTDOWN event will be written to the log. Because the shutdown will occur on the first encounter of this setting, the event will be written one time. This event is written after the failure message for the audit causing the shutdown. An administrator can bypass audit-induced shutdowns by starting [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] in Single User mode using the **–m** flag. If you start in Single User mode, you will downgrade any audit where ON_FAILURE=SHUTDOWN is specified to run in that session as ON_FAILURE=CONTINUE. When [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] is started by using the **–m** flag, the MSG_AUDIT_SHUTDOWN_BYPASSED message will be written to the error log.  
+ When an audit failure causes the server to shut down or not to start because ON_FAILURE=SHUTDOWN is specified for the audit, the MSG_AUDIT_FORCED_SHUTDOWN event will be written to the log. Because the shutdown will occur on the first encounter of this setting, the event will be written one time. This event is written after the failure message for the audit causing the shutdown. An administrator can bypass audit-induced shutdowns by starting [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] in Single User mode using the **-m** flag. If you start in Single User mode, you will downgrade any audit where ON_FAILURE=SHUTDOWN is specified to run in that session as ON_FAILURE=CONTINUE. When [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] is started by using the **-m** flag, the MSG_AUDIT_SHUTDOWN_BYPASSED message will be written to the error log.  
   
  For more information about service startup options, see [Database Engine Service Startup Options](../../../database-engine/configure-windows/database-engine-service-startup-options.md).  
   
@@ -207,7 +207,7 @@ manager: craigg
  [DDL Triggers](../../triggers/ddl-triggers.md)  
  Explains how you can use Data Definition Language (DDL) triggers to track changes to your databases.  
   
- [Microsoft TechNet: SQL Server TechCenter: SQL Server 2005 Security and Protection](http://go.microsoft.com/fwlink/?LinkId=101152)  
+ [Microsoft TechNet: SQL Server TechCenter: SQL Server 2005 Security and Protection](https://go.microsoft.com/fwlink/?LinkId=101152)  
  Provides up-to-date information about [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] security.  
   
 ## See Also  

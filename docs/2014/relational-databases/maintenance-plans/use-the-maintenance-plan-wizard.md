@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "database-engine"
+ms.technology: supportability
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.ag.maintwiz.planprop.f1"
@@ -145,7 +144,7 @@ manager: craigg
     > [!NOTE]  
     >  The tasks you select here will determine which pages you will need to complete after the **Select Maintenance Task Order** page below.  
   
-8.  On the **Select Maintenance Task Order** page, select a task and click either **Move Up…** or **Move Down…** to change its order of execution. When finished, or if you are satisfied with the current order of tasks, click **Next**.  
+8.  On the **Select Maintenance Task Order** page, select a task and click either **Move Up...** or **Move Down...** to change its order of execution. When finished, or if you are satisfied with the current order of tasks, click **Next**.  
   
     > [!NOTE]  
     >  If you selected **Separate schedules for each task** on the **Select Plan Properties** page above, you will not be able to change the order of the maintenance tasks on this page.  
@@ -204,7 +203,7 @@ manager: craigg
   
 #### Define the Index Tasks  
   
-1.  On the **Define Reorganize Index Task** page, select the server or servers where you'll be moving index pages into a more efficient search order. This task uses the `ALTER INDEX … REORGANIZE` statement. For more information, see [ALTER INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-index-transact-sql). When complete, click **Next**.  
+1.  On the **Define Reorganize Index Task** page, select the server or servers where you'll be moving index pages into a more efficient search order. This task uses the `ALTER INDEX ... REORGANIZE` statement. For more information, see [ALTER INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-index-transact-sql). When complete, click **Next**.  
   
      The following options are available on this page.  
   
@@ -218,9 +217,9 @@ manager: craigg
      Specify the tables or indexes affected by this task. Not available when **Tables and Views** is selected in the Object box.  
   
      **Compact large objects** check box  
-     Deallocate space for tables and views when possible. This option uses `ALTER INDEX … LOB_COMPACTION = ON`.  
+     Deallocate space for tables and views when possible. This option uses `ALTER INDEX ... LOB_COMPACTION = ON`.  
   
-2.  On the **Define Rebuild Index Task** page, select the database or databases where you'll be re-creating multiple indexes. This task uses the `ALTER INDEX … REBUILD PARTITION` statement. For more information, see [ALTER INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-index-transact-sql).) When complete, click **Next**.  
+2.  On the **Define Rebuild Index Task** page, select the database or databases where you'll be re-creating multiple indexes. This task uses the `ALTER INDEX ... REBUILD PARTITION` statement. For more information, see [ALTER INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-index-transact-sql).) When complete, click **Next**.  
   
      The following options are available on this page.  
   
@@ -402,7 +401,7 @@ manager: craigg
     |**Compress backup**|Click to compress the backup, regardless of the server-level default.<br /><br /> **\*\* Important \*\*** By default, compression significantly increases CPU usage, and the additional CPU consumed by the compression process might adversely affect concurrent operations. Therefore, you might want to create low-priority compressed backups in a session whose CPU usage is limited by the Resource Governor. For more information, see [Use Resource Governor to Limit CPU Usage by Backup Compression &#40;Transact-SQL&#41;](../backup-restore/use-resource-governor-to-limit-cpu-usage-by-backup-compression-transact-sql.md).|  
     |**Do not compress backup**|Click to create an uncompressed backup, regardless of the server-level default.|  
   
-2.  On the **Define Backup Database (Differential) Task** page, select the database or databases on which to run a partial backup. See the definition list in step 16, above, for more information about the available options on this page. This task uses the `BACKUP DATABASE … WITH DIFFERENTIAL` statement. For more information, see [BACKUP &#40;Transact-SQL&#41;](/sql/t-sql/statements/backup-transact-sql).  When finished, click **Next**.  
+2.  On the **Define Backup Database (Differential) Task** page, select the database or databases on which to run a partial backup. See the definition list in step 16, above, for more information about the available options on this page. This task uses the `BACKUP DATABASE ... WITH DIFFERENTIAL` statement. For more information, see [BACKUP &#40;Transact-SQL&#41;](/sql/t-sql/statements/backup-transact-sql).  When finished, click **Next**.  
   
 3.  On the **Define Backup Database (Transaction Log) Task** page, select the database or databases on which to run a backup for a transaction log. See the definition list in step 16, above, for more information about the available options on this page. This task uses the `BACKUP LOG` statement. For more information, see [BACKUP &#40;Transact-SQL&#41;](/sql/t-sql/statements/backup-transact-sql). When finished, click **Next**.  
   

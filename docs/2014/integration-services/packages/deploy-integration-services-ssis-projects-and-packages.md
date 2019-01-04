@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "integration-services"
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: bea8ce8d-cf63-4257-840a-fc9adceade8c
 author: douglaslMS
@@ -55,7 +54,7 @@ manager: craigg
 -   [Deploy Projects to Integration Services Server](../deploy-projects-to-integration-services-server.md)  
   
 ## Related Content  
- Blog entry, [Thoughts on Branching Strategies for SSIS Projects](http://go.microsoft.com/fwlink/?LinkId=245739), on mattmasson.com.  
+ Blog entry, [Thoughts on Branching Strategies for SSIS Projects](https://go.microsoft.com/fwlink/?LinkId=245739), on mattmasson.com.  
   
 ## See Also  
  [dtexec Utility](dtexec-utility.md)  

@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "integration-services"
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 459e3995-2116-4f15-aaa2-32f26113869c
 author: douglaslMS
@@ -21,11 +20,11 @@ manager: craigg
   
 1.  In the **Connection Managers** pane, right-click **Sample Flat File Source Data**, and select **Properties**.  
   
-2.  In the Properties window, for **Expressions**, click in the empty cell, and then click the ellipsis button **(…)**.  
+2.  In the Properties window, for **Expressions**, click in the empty cell, and then click the ellipsis button **(...)**.  
   
 3.  In the **Property Expressions Editor** dialog box, in the **Property** column, type or select `ConnectionString`.  
   
-4.  In the **Expression** column, click the ellipsis button **(…)** to open the **Expression Builder** dialog box.  
+4.  In the **Expression** column, click the ellipsis button **(...)** to open the **Expression Builder** dialog box.  
   
 5.  In the **Expression Builder** dialog box, expand the **Variables** node.  
   

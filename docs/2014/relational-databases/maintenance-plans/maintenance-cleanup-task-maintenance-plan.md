@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "database-engine"
+ms.technology: supportability
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.swb.maint.cleanup.f1"
@@ -72,7 +71,7 @@ manager: craigg
  **Select or enter a server name**  
  Select a server to connect to when performing this task.  
   
- **…**  
+ **...**  
  Select to view the list of available servers.  
   
  **Enter information to log on to the server**  

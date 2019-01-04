@@ -18,10 +18,10 @@ manager: craigg
 ## Options  
  From the drop-down boxes:  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance name — Select the instance name for the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] failover cluster.  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance name - Select the instance name for the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] failover cluster.  
   
--   Name of this node — This field is pre-populated with the computer name where the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Setup program is running.  
+-   Name of this node - This field is pre-populated with the computer name where the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Setup program is running.  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Failover Cluster Network Name — This field is not pre-populated. Specify the network name for the new [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] failover cluster instance. This is the name that identifies the failover cluster instance on the network.  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Failover Cluster Network Name - This field is not pre-populated. Specify the network name for the new [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] failover cluster instance. This is the name that identifies the failover cluster instance on the network.  
   
   

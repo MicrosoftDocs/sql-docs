@@ -23,7 +23,7 @@ manager: craigg
 |----------|----------------|  
 |**Name**|Type the name of the calculated member.|  
 |**Parent Hierarchy**|Select the hierarchy in which to create the calculated member.|  
-|**Parent Member**|This option is enabled if you select a parent hierarchy (other than the `Measures` dimension) that has more than one level. Click the ellipsis (**…**) button to select a parent member. The parent member determines the location of the calculated member in the dimension structure.|  
+|**Parent Member**|This option is enabled if you select a parent hierarchy (other than the `Measures` dimension) that has more than one level. Click the ellipsis (**...**) button to select a parent member. The parent member determines the location of the calculated member in the dimension structure.|  
 |**Expression**|Type the MDX expression that will be used.|  
 |**Check**|Click **Check** to test the MDX expression defined in **Expression**.|  
 |**Metadata**|Displays metadata for the current [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] object that can be included in the MDX expression defined in **Expression**.<br /><br /> You can copy the MDX syntax for the selected item by right-clicking the item and selecting **Copy**, or by dragging the selected item to **Expression**.|  

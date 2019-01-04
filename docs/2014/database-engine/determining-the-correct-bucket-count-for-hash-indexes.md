@@ -20,7 +20,7 @@ manager: craigg
   
  One hash table is allocated for each hash index on a memory-optimized table. The size of the hash table allocated for an index is specified by the `BUCKET_COUNT` parameter in [CREATE TABLE &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-table-transact-sql) or [CREATE TYPE &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-type-transact-sql). The bucket count will internally be rounded up to the next power of two. For example, specifying a bucket count of 300,000 will result in an actual bucket count of 524,288.  
   
- For links to an article and video on bucket count, see [How to determine the right bucket count for hash indexes (In-Memory OLTP)](http://go.microsoft.com/fwlink/p/?LinkId=525853).  
+ For links to an article and video on bucket count, see [How to determine the right bucket count for hash indexes (In-Memory OLTP)](https://go.microsoft.com/fwlink/p/?LinkId=525853).  
   
 ## Recommendations  
  In most cases the bucket count should be between 1 and 2 times the number of distinct values in the index key. If the index key contains a lot of duplicate values, on average there are more than 10 rows for each index key value, use a nonclustered index instead  
@@ -135,7 +135,7 @@ GO
   
 -   IX_OrderSequence: 0 percent of the buckets are empty, which is too low. In addition, the average chain length is 8. As the values in this index are unique, this means on average 8 values are mapped to each bucket. The bucket count should be increased. As the index key has 262,144 unique values, the bucket count should be at least 262,144. If future growth is expected, the number should be higher.  
   
--   Primary key index (PK__SalesOrder…): 36 percent of the buckets are empty, which is good. In addition the average chain length is 1, which is also good. No change needed.  
+-   Primary key index (PK__SalesOrder...): 36 percent of the buckets are empty, which is good. In addition the average chain length is 1, which is also good. No change needed.  
   
  For more information on troubleshooting issues with your memory-optimized hash indexes, see [Troubleshooting Common Performance Problems with Memory-Optimized Hash Indexes](../../2014/database-engine/troubleshooting-common-performance-problems-with-memory-optimized-hash-indexes.md).  
   

@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "database-engine"
+ms.technology: table-view-index
 ms.topic: conceptual
 f1_keywords: 
   - "vdtsql.chm:65538"
@@ -77,7 +76,7 @@ manager: craigg
      Verify all existing data in the table before the constraint was created or re-enabled, against the constraint.  
   
      **Tables and Columns Specifications Category**  
-     Expand to show which columns from which tables act as the foreign key and primary (or unique) key in the relationship. To edit or define these values, click the ellipsis button (**…**) to the right of the property field.  
+     Expand to show which columns from which tables act as the foreign key and primary (or unique) key in the relationship. To edit or define these values, click the ellipsis button (**...**) to the right of the property field.  
   
      **Foreign Key Base Table**  
      Shows which table contains the column acting as a foreign key in the selected relationship.  

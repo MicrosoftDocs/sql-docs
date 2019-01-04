@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "database-engine"
+ms.technology: supportability
 ms.topic: conceptual
 topic_type: 
   - "apiref"
@@ -21,7 +20,7 @@ manager: craigg
   
  When the Showplan XML event class is included in a trace, the amount of overhead will significantly impede performance. Showplan XML stores a query plan that is created when the query is optimized. To minimize the overhead incurred, limit use of this event class to traces that monitor specific problems for brief periods of time.  
   
- The Showplan XML documents have a schema associated with them. This schema can be found at the [Microsoft Web Site](http://go.microsoft.com/fwlink/?LinkId=41740), or as part of your [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] installation.  
+ The Showplan XML documents have a schema associated with them. This schema can be found at the [Microsoft Web Site](https://go.microsoft.com/fwlink/?LinkId=41740), or as part of your [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] installation.  
   
 ## Showplan XML Event Class Data Columns  
   

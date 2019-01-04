@@ -100,7 +100,7 @@ You can browse the errorlog files with any UTF-16 compatible tool like 'vim' or 
 If you prefer, you can also convert the files to UTF-8 to read them with 'more' or 'less' with the following command:
    
    ```bash
-   sudo iconv –f UTF-16LE –t UTF-8 <errorlog> -o <output errorlog file>
+   sudo iconv -f UTF-16LE -t UTF-8 <errorlog> -o <output errorlog file>
    ```
 ## Extended events
 
@@ -113,7 +113,7 @@ Look for dumps in the log directory in Linux. Check under the /var/opt/mssql/log
 For Core dumps 
    ```bash
    sudo ls /var/opt/mssql/log | grep .tar.gz2 
-   ```
+   ```
 
 For SQL dumps 
    ```bash

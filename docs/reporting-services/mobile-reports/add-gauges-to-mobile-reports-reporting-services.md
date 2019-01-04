@@ -11,7 +11,7 @@ author: maggiesMSFT
 ms.author: maggies
 ---
 # Add gauges to mobile reports | Reporting Services
-Gauges are the most basic and widely used visuals in mobile reports. They display a single value in a dataset – just the value, or the value compared to a goal.
+Gauges are the most basic and widely used visuals in mobile reports. They display a single value in a dataset - just the value, or the value compared to a goal.
 
 ![PBI_SSMRP_Gauges](../../reporting-services/mobile-reports/media/pbi-ssmrp-gauges.png)  
   

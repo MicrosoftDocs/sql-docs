@@ -4,7 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology:
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords: 
   - "removing joins"
@@ -21,7 +21,7 @@ manager: craigg
 > [!NOTE]  
 >  Removing a join from a query does not alter the underlying relationship in the database.  
   
- If two joined tables are part of your query and you remove all join conditions between them, the resulting query becomes the product of both tables — that is, it becomes a CROSS JOIN.  
+ If two joined tables are part of your query and you remove all join conditions between them, the resulting query becomes the product of both tables - that is, it becomes a CROSS JOIN.  
   
 ### To remove a join  
   

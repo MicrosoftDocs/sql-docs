@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "database-engine"
+ms.technology: configuration
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Virtual Memory Manager"
@@ -29,7 +28,7 @@ manager: craigg
  The default setting for **min server memory** is 0, and the default setting for **max server memory** is 2147483647 MB. By default, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] can change its memory requirements dynamically based on available system resources.  
   
 > [!NOTE]  
->  Setting **max server memory** to the minimum value can severely reduce [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] performance and even prevent it from starting. If you cannot start [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] after changing this option, start it using the **–f** startup option and reset **max server memory** to its previous value. For more information, see [Database Engine Service Startup Options](database-engine-service-startup-options.md).  
+>  Setting **max server memory** to the minimum value can severely reduce [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] performance and even prevent it from starting. If you cannot start [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] after changing this option, start it using the **-f** startup option and reset **max server memory** to its previous value. For more information, see [Database Engine Service Startup Options](database-engine-service-startup-options.md).  
   
  When [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is using memory dynamically, it queries the system periodically to determine the amount of free memory. Maintaining this free memory prevents the operating system (OS) from paging. If less memory is free, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] releases memory to the OS. If more memory is free, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] may allocate more memory. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] adds memory only when its workload requires more memory; a server at rest does not increase the size of its virtual address space.  
   
@@ -129,9 +128,9 @@ manager: craigg
 |-|-------------|-------------|  
 |Conventional memory|Up to process virtual address space limit in all [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] editions:<br /><br /> 2 GB<br /><br /> 3 GB with **/3gb** boot parameter*<br /><br /> 4 GB on WOW64\*\*|Up to process virtual address space limit in all [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] editions:<br /><br /> 8 TB on x64 architecture|  
   
- ***/3gb** is an operating-system boot parameter. For more information, visit the [MSDN Library](http://go.microsoft.com/fwlink/?LinkID=10257&clcid=0x409).  
+ ***/3gb** is an operating-system boot parameter. For more information, visit the [MSDN Library](https://go.microsoft.com/fwlink/?LinkID=10257&clcid=0x409).  
   
- **WOW64 (Windows on Windows 64) is a mode in which 32-bit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] runs on a 64-bit operating system. For more information, visit the [MSDN Library](http://go.microsoft.com/fwlink/?LinkID=10257&clcid=0x409).  
+ **WOW64 (Windows on Windows 64) is a mode in which 32-bit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] runs on a 64-bit operating system. For more information, visit the [MSDN Library](https://go.microsoft.com/fwlink/?LinkID=10257&clcid=0x409).  
   
 ## Examples  
   

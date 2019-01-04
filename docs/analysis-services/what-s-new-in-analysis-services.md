@@ -1,5 +1,5 @@
 ---
-title: "What&#39;s New in Analysis Services | Microsoft Docs"
+title: "What's new in SQL Server 2016 Analysis Services | Microsoft Docs"
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -43,10 +43,6 @@ In order to take full advantage of all the enhancements in this release, be sure
 - [Download SQL Server Management Studio (SSMS)](http://msdn.microsoft.com/library/mt238290.aspx)   
 
 If you have a custom AMO-dependent application, you might need to install an updated version of AMO. For instructions, see [Install Analysis Services data providers &#40;AMO, ADOMD.NET, MSOLAP&#41;](../analysis-services/instances/install-windows/install-analysis-services-data-providers-amo-adomd-net-msolap.md).    
-
- #### TechNet Virtual Labs: SQL Server 2016 Analysis Services
-Learn better by doing? Follow along step-by-step with the [What's New in SQL Server 2016 Analysis Services Virtual Lab](http://vlabs.holsystems.com/vlabs/technet?eng=VLabs&auth=none&src=vlabs&altadd=true&labid=23110&lod=true).
-In this lab, you'll create and monitor Extended Events (xEvents), upgrade a tabular project to compatibility level 1200, work with Visual Studio configurations, implement new calculation capabilities, implement new table relationship capabilities, configure display folders, manage model translations, work with the new Tabular Model Scripting Language (TMSL), work with PowerShell, and try out new DirectQuery mode capabilities.
 
 ## Modeling    
 ### Improved modeling performance for tabular 1200 models    
@@ -171,10 +167,10 @@ At a minimum, an empty model will contain  the following JSON:
     }    
     ```    
     
-> [!WARNING]    
+> [!WARNING]
 > Avoid editing the JSON directly. Doing so can corrupt the model.    
- ### New elements in MS-CSDLBI 2.0 schema    
- The following elements have been added to the **TProperty** complex type defined in the [MS-CSDLBI] 2.0 schema:    
+>  ### New elements in MS-CSDLBI 2.0 schema    
+>  The following elements have been added to the **TProperty** complex type defined in the [MS-CSDLBI] 2.0 schema:    
     
 |Element|Definition|    
 |-------------|----------------|    

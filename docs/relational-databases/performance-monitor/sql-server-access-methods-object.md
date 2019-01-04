@@ -5,14 +5,14 @@ ms.date: "03/20/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
-s.technology: performance
+ms.technology: performance
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Access Methods object"
   - "SQLServer:Access Methods"
 ms.assetid: 27558585-e780-48bb-a042-30d664662ebc
-author: MikeRayMSFT
-ms.author: mikeray
+author: julieMSFT
+ms.author: jrasnick
 manager: craigg
 ---
 # SQL Server, Access Methods Object

@@ -165,7 +165,7 @@ The following query is used to illustrate an Adaptive Join example:
 SELECT [fo].[Order Key], [si].[Lead Time Days], [fo].[Quantity]
 FROM [Fact].[Order] AS [fo]
 INNER JOIN [Dimension].[Stock Item] AS [si]
-       ON [fo].[Stock Item Key] = [si].[Stock Item Key]
+       ON [fo].[Stock Item Key] = [si].[Stock Item Key]
 WHERE [fo].[Quantity] = 360;
 ```
 
@@ -176,7 +176,7 @@ The query returns 336 rows. Enabling [Live Query Statistics](../../relational-d
 In the plan, we see the following:
 1. We have a columnstore index scan used to provide rows for the hash join build phase.
 1. We have the new Adaptive Join operator. This operator defines a threshold that is used to decide when to switch to a Nested Loops plan. For our example, the threshold is 78 rows. Anything with &gt;= 78 rows will use a Hash Join. If less than the threshold, a Nested Loops Join will be used.
-1. Since we return 336 rows, we are exceeding the threshold and so the second branch represents the probe phase of a standard Hash Join operation. Notice that Live Query Statistics shows rows flowing through the operators – in this case "672 of 672".
+1. Since we return 336 rows, we are exceeding the threshold and so the second branch represents the probe phase of a standard Hash Join operation. Notice that Live Query Statistics shows rows flowing through the operators - in this case "672 of 672".
 1. And the last branch is our Clustered Index Seek for use by the nested loop join had the threshold not been exceeded. Notice that we see "0 of 336" rows displayed (the branch is unused).
  Now contrast the plan with the same query, but this time for a *Quantity* value that only has one row in the table:
  
@@ -184,7 +184,7 @@ In the plan, we see the following:
 SELECT [fo].[Order Key], [si].[Lead Time Days], [fo].[Quantity]
 FROM [Fact].[Order] AS [fo]
 INNER JOIN [Dimension].[Stock Item] AS [si]
-       ON [fo].[Stock Item Key] = [si].[Stock Item Key]
+       ON [fo].[Stock Item Key] = [si].[Stock Item Key]
 WHERE [fo].[Quantity] = 361;
 ```
 The query returns one row. Enabling Live Query Statistics we see the following plan:
@@ -223,7 +223,7 @@ A few conditions make a logical join eligible for a batch mode Adaptive Join:
 - The database compatibility level is 140.
 - The query is a SELECT statement (data modification statements are currently ineligible).
 - The join is eligible to be executed both by an indexed Nested Loops Join or a Hash Join physical algorithm.
-- The Hash Join uses batch mode – either through the presence of a Columnstore index in the query overall or a Columnstore indexed table being referenced directly by the join.
+- The Hash Join uses batch mode - either through the presence of a Columnstore index in the query overall or a Columnstore indexed table being referenced directly by the join.
 - The generated alternative solutions of the Nested Loops Join and Hash Join should have the same first child (outer reference).
 
 ### Adaptive joins and nested loop efficiency
@@ -270,7 +270,7 @@ Interleaved execution changes the unidirectional boundary between the optimizati
 MSTVFs have a fixed cardinality guess of 100 starting with [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], and 1 for earlier [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] versions. Interleaved execution helps workload performance issues that are due to these fixed cardinality estimates associated with MSTVFs. For more information on MSTVFs, see [Create User-defined Functions (Database Engine)](../../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md#TVF).
 
 The following image depicts a [Live Query Statistics](../../relational-databases/performance/live-query-statistics.md) output, a subset of an overall execution plan that shows the impact of fixed cardinality estimates from MSTVFs. You can see the actual row flow vs. estimated rows. There are three noteworthy areas of the plan (flow is from right to left):
-1. The MSTVF Table Scan has a fixed estimate of 100 rows. For this example, however, there are 527,597 rows flowing through this MSTVF Table Scan, as seen in Live Query Statistics via the *527597 of 100* actual of estimated – so the fixed estimate is significantly skewed.
+1. The MSTVF Table Scan has a fixed estimate of 100 rows. For this example, however, there are 527,597 rows flowing through this MSTVF Table Scan, as seen in Live Query Statistics via the *527597 of 100* actual of estimated - so the fixed estimate is significantly skewed.
 1. For the Nested Loops operation, only 100 rows are assumed to be returned by the outer side of the join. Given the high number of rows actually being returned by the MSTVF, you are likely better off with a different join algorithm altogether.
 1. For the Hash Match operation, notice the small warning symbol, which in this case is indicating a spill to disk.
 

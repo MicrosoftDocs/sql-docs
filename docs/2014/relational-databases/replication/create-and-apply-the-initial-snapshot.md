@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "replication"
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords: 
   - "snapshots [SQL Server replication], creating"
@@ -142,7 +141,7 @@ manager: craigg
  The Snapshot Agent generates snapshots after a publication is created. You can generate these snapshots programmatically by using Replication Management Objects (RMO) and direct managed code access to replication agent functionalities. The objects you use depend on the type of replication. The Snapshot Agent can be started synchronously using the <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent> object or asynchronously using the agent job. After the initial snapshot has been generated, it is transferred to and applied at the Subscriber when the subscription is first synchronized. You will need to rerun the agent whenever the existing snapshot no longer contains valid, up-to-date data. For more information, see [Maintain Publications](publish/maintain-publications.md).  
   
 > [!IMPORTANT]  
->  When possible, prompt users to enter security credentials at runtime. If you must store credentials, use the [cryptographic services](http://go.microsoft.com/fwlink/?LinkId=34733) provided by the [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows .NET Framework.  
+>  When possible, prompt users to enter security credentials at runtime. If you must store credentials, use the [cryptographic services](https://go.microsoft.com/fwlink/?LinkId=34733) provided by the [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows .NET Framework.  
   
 #### To generate the initial snapshot for a snapshot or transactional publication by starting the Snapshot Agent job (asynchronous)  
   

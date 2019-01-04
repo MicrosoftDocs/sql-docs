@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "master-data-services"
+ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: cdc4daca-3dff-46d8-b7f0-57f7826dd61a
 author: leolimsft
@@ -44,7 +43,7 @@ manager: craigg
 |---------------------|-----------------|  
 |**is required**|The selected attribute **is required**, which means it cannot be null or blank.<br /><br /> This action is valid for text, number, date, and link values.|  
 |**is not valid**|The selected attribute **is not valid**.<br /><br /> This action is valid for text, number, date, and link values.|  
-|**must contain the pattern**|The selected attribute **must contain the pattern** that is specified. Use .NET Framework regular expressions to specify the pattern.<br /><br /> For more information about regular expressions, see [Regular Expression Language Elements](http://go.microsoft.com/fwlink/?LinkId=164401) in the MSDN Library.<br /><br /> This action is valid for text and link values.|  
+|**must contain the pattern**|The selected attribute **must contain the pattern** that is specified. Use .NET Framework regular expressions to specify the pattern.<br /><br /> For more information about regular expressions, see [Regular Expression Language Elements](https://go.microsoft.com/fwlink/?LinkId=164401) in the MSDN Library.<br /><br /> This action is valid for text and link values.|  
 |**must be unique**|The selected attribute **must be unique** independently or in combination with defined attributes.<br /><br /> **Best Practice:** Combine this action with a mandatory condition to ensure validity of index fields in subscribing systems.<br /><br /> This action is valid for text, number, date, and link values.|  
 |**must have one of the following values**|The selected attribute **must have one of the values** specified in a list.<br /><br /> This action is valid for text values.|  
 |**must be greater than**|The selected attribute **must be greater than** a specific attribute, a specific attribute value, or blank.<br /><br /> This action is valid for text, number, and date values.|  
@@ -61,7 +60,7 @@ manager: craigg
   
 |Action Name|Description|  
 |-----------------|-----------------|  
-|**start workflow**|Initiates an external workflow. The data that caused this action to occur is passed to the workflow. For more information, see [SharePoint Workflow Integration with Master Data Services](http://msdn.microsoft.com/library/gg690195.aspx).<br /><br /> This action is valid for text, number, date, and link values.|  
+|**start workflow**|Initiates an external workflow. The data that caused this action to occur is passed to the workflow. For more information, see [SharePoint Workflow Integration with Master Data Services](https://msdn.microsoft.com/library/gg690195.aspx).<br /><br /> This action is valid for text, number, date, and link values.|  
   
 ## See Also  
  [Business Rule Conditions &#40;Master Data Services&#41;](business-rule-conditions-master-data-services.md)   

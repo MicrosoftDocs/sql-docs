@@ -4,7 +4,7 @@ description: Quickstart for R script in SQL Server. Learn the basics of calling 
 ms.prod: sql
 ms.technology: machine-learning
 
-ms.date: 11/27/2018  
+ms.date: 01/04/2019
 ms.topic: quickstart
 author: dphansen
 ms.author: davidph

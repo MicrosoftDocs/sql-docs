@@ -4,7 +4,7 @@ description: In this quickstart for Python script in SQL Server, learn how use d
 ms.prod: sql
 ms.technology: machine-learning
 
-ms.date: 12/31/2018  
+ms.date: 01/04/2019  
 ms.topic: quickstart
 author: dphansen
 ms.author: davidph

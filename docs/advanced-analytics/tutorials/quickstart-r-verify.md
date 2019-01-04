@@ -4,7 +4,7 @@ description: Quickstart for verifying that R and Machine Learning Services exist
 ms.prod: sql
 ms.technology: machine-learning
 
-ms.date: 12/14/2018  
+ms.date: 01/04/2019  
 ms.topic: quickstart
 author: dphansen
 ms.author: davidph

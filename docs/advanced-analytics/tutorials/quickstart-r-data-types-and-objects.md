@@ -4,10 +4,10 @@ description: In this quickstart, learn how to work with data types and data obje
 ms.prod: sql
 ms.technology: machine-learning
 
-ms.date: 07/15/2018  
+ms.date: 01/04/2019
 ms.topic: quickstart
-author: HeidiSteen
-ms.author: heidist
+author: dphansen
+ms.author: davidph
 manager: cgronlun
 ---
 # Quickstart: Handle data types and objects using R in SQL Server

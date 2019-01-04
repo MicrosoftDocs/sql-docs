@@ -1,16 +1,16 @@
 ---
-title: Quickstart showing R functions with SQL Server data - SQL Server Machine Learning
-description: In this quickstart, learn how to write an R function that uses SQL Server data.
+title: Quickstart showing R functions- SQL Server Machine Learning
+description: In this quickstart, learn how to write an R function for advanced statistical computation.
 ms.prod: sql
 ms.technology: machine-learning
 
-ms.date: 12/14/2018  
+ms.date: 01/04/2019  
 ms.topic: quickstart
 author: dphansen
 ms.author: davidph
 manager: cgronlun
 ---
-# Quickstart: Using R functions with SQL Server data
+# Quickstart: Using R functions
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 If you completed the previous quickstarts, you're familiar with basic operations and ready for something more complex, such as statistical functions. Advanced statistical functions that are complicated to implement in T-SQL can be done in R with only a single line of code.

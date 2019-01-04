@@ -4,7 +4,7 @@ description: In this quickstart, learn about scoring using a prebuilt model in R
 ms.prod: sql
 ms.technology: machine-learning
 
-ms.date: 12/19/2018  
+ms.date: 01/04/2019
 ms.topic: quickstart
 author: dphansen
 ms.author: davidph

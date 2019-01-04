@@ -4,13 +4,13 @@ description: In this quickstart for Python script in SQL Server, learn how to st
 ms.prod: sql
 ms.technology: machine-learning
 
-ms.date: 12/31/2018  
+ms.date: 01/04/2019  
 ms.topic: quickstart
 author: dphansen
 ms.author: davidph
 manager: cgronlun
 ---
-# Quickstart: Python data structures in SQL Server
+# Quickstart: Handle inputs and outputs using Python in SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 This quickstart shows how to handle inputs and outputs when using Python in SQL Server Machine Learning Services.

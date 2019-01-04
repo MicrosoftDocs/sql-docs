@@ -98,6 +98,8 @@
     items:
     - name: Submit Spark jobs
       href: spark-submit-job.md
+    - name: Submit Spark jobs use Azure Toolkit in IntelliJ
+      href: spark-submit-job-intellij-tool-plugin.md
     - name: Use extended Spark History Server
       href: spark-history-server.md
 - name: Resources

@@ -17,7 +17,7 @@ In this quickstart, you'll learn how to train a model using R, and then save the
 
 ## Prerequisites
 
-A previous quickstart, [Verify R exists in SQL Server](rtsql-verify-r-exists.md), provides information and links for setting up the R environment required for this quickstart.
+A previous quickstart, [Verify R exists in SQL Server](quickstart-r-verify.md), provides information and links for setting up the R environment required for this quickstart.
 
 ## Create the source data
 
@@ -120,4 +120,4 @@ WHERE model_name = 'default model'
 Now that you have a model, in the final quickstart, you'll learn how to generate predictions from it and plot the results.
 
 > [!div class="nextstepaction"]
-> [Quickstart: Predict and plot from model](../tutorials/rtsql-predict-and-plot-from-model.md)
+> [Quickstart: Predict and plot from model](quickstart-r-predict-from-model.md)

@@ -23,7 +23,7 @@ The stored procedure returns a single R data frame as output, but you can also o
 
 ## Prerequisites
 
-A previous quickstart, [Verify R exists in SQL Server](rtsql-verify-r-exists.md), provides information and links for setting up the R environment required for this quickstart.
+A previous quickstart, [Verify R exists in SQL Server](quickstart-r-verify.md), provides information and links for setting up the R environment required for this quickstart.
 
 ## Create the source data
 
@@ -109,4 +109,4 @@ Let's look at the default input and output variables of sp_execute_external_scri
 Examine some of the problems that you might encounter when passing data between R and SQL Server, such as implicit conversions and differences in tabular data between R and SQL.
 
 > [!div class="nextstepaction"]
-> [Quickstart: Handle data types and objects](../tutorials/rtsql-r-and-sql-data-types-and-data-objects.md)
+> [Quickstart: Handle data types and objects](quickstart-r-data-types-and-objects.md)

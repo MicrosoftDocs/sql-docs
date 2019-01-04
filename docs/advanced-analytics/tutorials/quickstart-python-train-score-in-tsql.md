@@ -24,7 +24,7 @@ By completing this tutorial, you will learn:
 
 ## Prerequisites
 
-A previous quickstart, [Verify Python exists in SQL Server](pythontsql-verify-python-exists.md), provides information and links for setting up the Python environment required for this quickstart.
+A previous quickstart, [Verify Python exists in SQL Server](quickstart-python-verify.md), provides information and links for setting up the Python environment required for this quickstart.
 
 The sample data used in this exercise is the [**irissql**](demo-data-iris-in-sql.md) database.
 

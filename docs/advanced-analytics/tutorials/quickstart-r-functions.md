@@ -19,7 +19,7 @@ In this quickstart, you'll embed R mathematical and utility functions in a SQL S
 
 ## Prerequisites
 
-A previous quickstart, [Verify R exists in SQL Server](rtsql-verify-r-exists.md), provides information and links for setting up the R environment required for this quickstart.
+A previous quickstart, [Verify R exists in SQL Server](quickstart-r-verify.md), provides information and links for setting up the R environment required for this quickstart.
 
 ## Create a stored procedure to generate random numbers
 
@@ -99,4 +99,4 @@ For an example, see this tutorial: [Create Data Features](../tutorials/walkthrou
 Next, you'll build a predictive model using R in SQL Server.
 
 > [!div class="nextstepaction"]
-> [Quickstart: Create a predictive model](rtsql-create-a-predictive-model-r.md)
+> [Quickstart: Create a predictive model](quickstart-r-create-predictive-model.md)

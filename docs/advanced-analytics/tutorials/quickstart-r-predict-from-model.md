@@ -17,7 +17,7 @@ In this quickstart, use the model you created in the previous quickstart to scor
 
 ## Prerequisites
 
-This quickstart is an extension of [Create a predictive model](rtsql-create-a-predictive-model-r.md).
+This quickstart is an extension of [Create a predictive model](quickstart-r-create-predictive-model.md).
 
 ## Create the table of new data
 

@@ -17,7 +17,7 @@ In this quickstart, you learn key concepts by running a "Hello World" Python scr
 
 ## Prerequisites
 
-A previous quickstart, [Verify Python exists in SQL Server](pythontsql-verify-python-exists.md), provides information and links for setting up the Python environment required for this quickstart.
+A previous quickstart, [Verify Python exists in SQL Server](quickstart-python-verify.md), provides information and links for setting up the Python environment required for this quickstart.
 
 ## Basic Python interaction
 
@@ -93,4 +93,4 @@ Inputs to this stored procedure include:
 Now that you have run a couple of simple Python scripts, take a closer look at structuring inputs and outputs.
 
 > [!div class="nextstepaction"]
-> [Quickstart: Handle inputs and outputs](pythontsql-working-with-inputs-and-outputs.md)
+> [Quickstart: Handle inputs and outputs](quickstart-python-run-using-t-sql.md)

@@ -23,7 +23,7 @@ The stored procedure returns a single Python [pandas](https://pandas.pydata.org/
 
 ## Prerequisites
 
-A previous quickstart, [Verify Python exists in SQL Server](pythontsql-verify-python-exists.md), provides information and links for setting up the Python environment required for this quickstart.
+A previous quickstart, [Verify Python exists in SQL Server](quickstart-python-verify.md), provides information and links for setting up the Python environment required for this quickstart.
 
 ## Create the source data
 
@@ -111,4 +111,4 @@ Let's look at the default input and output variables of sp_execute_external_scri
 Examine some of the problems that you might encounter when passing tabular data between Python and SQL Server.
 
 > [!div class="nextstepaction"]
-> [Quickstart: Python data structures in SQL Server](../tutorials/pythontsql-python-data-structures-in-sql-server.md)
+> [Quickstart: Python data structures in SQL Server](quickstart-python-data-structures.md)

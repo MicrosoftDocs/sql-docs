@@ -17,7 +17,7 @@ In this quickstart, you learn key concepts by running a "Hello World" R script i
 
 ## Prerequisites
 
-A previous quickstart, [Verify R exists in SQL Server](rtsql-verify-r-exists.md), provides information and links for setting up the R environment required for this quickstart.
+A previous quickstart, [Verify R exists in SQL Server](quickstart-r-verify.md), provides information and links for setting up the R environment required for this quickstart.
 
 ## Basic R interaction
 
@@ -85,4 +85,4 @@ Inputs to this stored procedure include:
 Now that you have run a couple of simple R scripts, take a closer look at structuring inputs and outputs.
 
 > [!div class="nextstepaction"]
-> [Quickstart: Handle inputs and outputs](rtsql-working-with-inputs-and-outputs.md)
+> [Quickstart: Handle inputs and outputs](quickstart-r-inputs-and-outputs.md)

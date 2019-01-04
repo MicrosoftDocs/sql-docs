@@ -25,7 +25,7 @@ How would you expose the single result of a calculation as a data frame, if a da
 
 ## Prerequisites
 
-A previous quickstart, [Verify Python exists in SQL Server](pythontsql-verify-python-exists.md), provides information and links for setting up the Python environment required for this quickstart.
+A previous quickstart, [Verify Python exists in SQL Server](quickstart-python-verify.md), provides information and links for setting up the Python environment required for this quickstart.
 
 ## Scalar value as a series
 
@@ -195,4 +195,4 @@ Let's see how conversion to a data.frame works with our two series containing th
 Next, you'll build a predictive model using Python in SQL Server.
 
 > [!div class="nextstepaction"]
-> [Create, train, and use a Python model with stored procedures in SQL Server](../tutorials/train-score-using-python-in-tsql.md)
+> [Create, train, and use a Python model with stored procedures in SQL Server](quickstart-python-train-score-in-tsql.md)

@@ -24,7 +24,7 @@ Common issues to know up front include:
 
 ## Prerequisites
 
-A previous quickstart, [Hello World in R and SQL](rtsql-using-r-code-in-transact-sql-quickstart.md), provides information and links for setting up the R environment required for this quickstart.
+A previous quickstart, [Verify R exists in SQL Server](quickstart-r-verify.md), provides information and links for setting up the R environment required for this quickstart.
 
 ## Always return a data frame
 
@@ -278,4 +278,4 @@ For information about the performance impact of run-time conversion of strings t
 In the next quickstart, you'll learn how to apply R functions to SQL Server data.
 
 > [!div class="nextstepaction"]
-> [Quickstart: Use R functions with SQL Server data](rtsql-using-r-functions-with-sql-server-data.md)
+> [Quickstart: Use R functions with SQL Server data](quickstart-r-functions.md)

@@ -171,7 +171,7 @@ SQLDUMPEREDUMPFLAGS
  The time-out value in milliseconds for the SQLDumper utility to generate a dump in case of a SQL Server failure. The default value is 0, which means there is no time limit to complete the dump. For more information, see [SQL Server Dumper Utility Knowledgebase article](https://go.microsoft.com/fwlink/?LinkId=206173).  
   
  FAILURECONDITIONLEVEL = { 'failure_condition_level' | DEFAULT }  
- Tthe conditions under which the SQL Server failover cluster instance should failover  or restart. The default value is 3, which means that the SQL Server resource will failover or restart on critical server errors. For more information about this and other failure condition levels, see [Configure FailureConditionLevel Property Settings](../../sql-server/failover-clusters/windows/configure-failureconditionlevel-property-settings.md).  
+ The conditions under which the SQL Server failover cluster instance should failover  or restart. The default value is 3, which means that the SQL Server resource will failover or restart on critical server errors. For more information about this and other failure condition levels, see [Configure FailureConditionLevel Property Settings](../../sql-server/failover-clusters/windows/configure-failureconditionlevel-property-settings.md).  
   
  HEALTHCHECKTIMEOUT = { 'health_check_time-out' | DEFAULT }  
  The time-out value for how long the SQL Server Database Engine resource DLL should wait for the server health information before it considers the instance of SQL Server as unresponsive. The time-out value is expressed in milliseconds. The default is 60000 milliseconds (60 seconds).  
@@ -190,7 +190,7 @@ SQLDUMPEREDUMPFLAGS
  To identify the destination cluster, specify one of the following values:  
   
  *windows_cluster*  
- The netwirj name of a WSFC. You can specify either the short name or the full domain name. To find the target IP address of a short name, ALTER SERVER CONFIGURATION uses DNS resolution. Under some situations, a short name could cause confusion, and DNS could return the wrong IP address. Therefore, we recommend that you specify the full domain name.  
+ The network name of a WSFC. You can specify either the short name or the full domain name. To find the target IP address of a short name, ALTER SERVER CONFIGURATION uses DNS resolution. Under some situations, a short name could cause confusion, and DNS could return the wrong IP address. Therefore, we recommend that you specify the full domain name.  
   
   > [!NOTE] 
   > A cross-cluster migration using this setting is no longer supported. To perform a cross-cluster migration, use a Distributed Availability Group or some other method such as log shipping. 
@@ -234,7 +234,7 @@ SQLDUMPEREDUMPFLAGS
 > [!WARNING]
 > There are known issues with the behavior of the ALTER SERVER CONFIGURATION statement with the SOFT NUMA option and SQL Server Agent.  The following is the recommended sequence of operations:  
 > 1) Stop the instance of SQL Server Agent.  
-> 2) Execute your ALTER SERVER CONFGURATION  SOFT NUMA option.  
+> 2) Execute your ALTER SERVER CONFIGURATION  SOFT NUMA option.  
 > 3) Re-start the SQL Server instance.  
 > 4) Start the instance of SQL Server Agent.  
   
@@ -249,7 +249,7 @@ SQLDUMPEREDUMPFLAGS
 ## Permissions  
  Requires ALTER SETTINGS permissions for the process affinity option. ALTER SETTINGS and VIEW SERVER STATE permissions for the diagnostic log and failover cluster property options, and CONTROL SERVER permission for the HADR cluster context option.  
   
- Requires ALTER SERVER STATE permission for the buffer pool entension option.  
+ Requires ALTER SERVER STATE permission for the buffer pool extension option.  
   
  The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssDE](../../includes/ssde-md.md)] resource DLL runs under the Local System account. Therefore, the Local System account must have read and write access to the specified path in the Diagnostic Log option.  
   

@@ -130,7 +130,7 @@ Having converted our scalar math results to a tabular structure, we still need t
     WITH RESULT SETS (( ResultValue float ))
     ```
 
-2. Note that the index values aren't output, even if you use the index to get specific values from the data.frame.
+2. The result is shown below. Even if you use the index to get specific values from the data.frame, the index values aren't part of the output.
 
     **Results**
 

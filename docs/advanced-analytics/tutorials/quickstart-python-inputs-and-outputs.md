@@ -81,7 +81,7 @@ Let's look at the default input and output variables of sp_execute_external_scri
       WITH RESULT SETS (([NewColName] INT NOT NULL));
     ```
 
-    Note that Python is case-sensitive, so the case of the input and output variables in `@input_data_1_name` and `@output_data_1_name` have to match the ones in the Python code in `@script`.
+    The case of the input and output variables in `@input_data_1_name` and `@output_data_1_name` have to match the case of the ones in the Python code in `@script`, as Python is case-sensitive.
 
     Also, the order of the parameters is important. You must specify the required parameters *@input_data_1* and *@output_data_1* first, in order to use the optional parameters *@input_data_1_name* and *@output_data_1_name*.
 

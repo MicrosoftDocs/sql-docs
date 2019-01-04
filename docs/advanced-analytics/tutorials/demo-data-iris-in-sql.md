@@ -19,7 +19,7 @@ To complete this exercise, you should have [SQL Server Management Studio](https:
 
 Tutorials and quickstarts using this data set include the following:
 
-+  [Use a Python model in SQL Server for training and scoring](train-score-using-python-in-tsql.md)
++  [Quickstart: Create, train, and use a Python model with stored procedures in SQL Server](quickstart-python-train-score-in-tsql.md)
 
 ## Create the database
 
@@ -149,6 +149,6 @@ As a validation step, run a query to confirm the data was uploaded.
 
 ## Next steps
 
-In the following lesson, you will create a machine learning model and save it to a table, and then use the model to generate predicted outcomes.
+In the following quickstart, you will create a machine learning model and save it to a table, and then use the model to generate predicted outcomes.
 
-+ [Use a Python model in SQL Server for training and scoring](train-score-using-python-in-tsql.md)
++ [Quickstart: Create, train, and use a Python model with stored procedures in SQL Server](quickstart-python-train-score-in-tsql.md)

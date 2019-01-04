@@ -432,7 +432,7 @@ featureFlags:
                                 </a>
                             </li> 
                             <li>
-                                <a href="/sql/relational-databases/statistics/statistics?view=sql-server-2017/">
+                                <a href="/sql/relational-databases/statistics/statistics?view=sql-server-2017">
                                     <div class="cardSize">
                                         <div class="cardPadding">
                                             <div class="card">

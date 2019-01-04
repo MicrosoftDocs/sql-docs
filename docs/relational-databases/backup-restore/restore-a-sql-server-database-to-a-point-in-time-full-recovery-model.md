@@ -133,7 +133,7 @@ manager: craigg
   
  The recovery point is the latest transaction commit that occurred at or before the **datetime** value that is specified by *time*.  
   
- To restore only the modifications that were made before a specific point in time, specify WITH STOPAT **=** *time* for each backup you restore. This makes sure that you do not go past the target time.  
+ To restore only the modifications that were made before a specific point in time, specify WITH STOPAT **=** _time_ for each backup you restore. This makes sure that you do not go past the target time.  
   
  **To restore a database to a point in time**  
   

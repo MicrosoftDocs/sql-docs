@@ -26,7 +26,7 @@ The **userlist** section pertains to the **connect** section with the same secti
 ## Syntax  
  A user access entry is of the form:  
   
- *userName* **=**   
+ _userName_ **=**   
  **_accessRights_**  
   
 |Part|Description|  

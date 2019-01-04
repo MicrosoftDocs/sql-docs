@@ -95,7 +95,7 @@ Read-only routing is available in [!INCLUDE[sssql15](../../../includes/sssql15-m
   
     -   To configure read-only routing for the secondary role, in the ADD REPLICA or MODIFY REPLICA WITH clause, specify the SECONDARY_ROLE option, as follows:  
   
-         SECONDARY_ROLE **(** READ_ONLY_ROUTING_URL **='**TCP**://***system-address**_:_**port**_')_*  
+         SECONDARY_ROLE **(** READ_ONLY_ROUTING_URL **='**TCP**://**_system-address_**:**_port_**')**  
   
          The parameters of the read-only routing URL are as follows:  
   

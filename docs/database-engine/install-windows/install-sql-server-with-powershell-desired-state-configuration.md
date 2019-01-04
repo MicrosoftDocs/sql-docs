@@ -169,7 +169,7 @@ To start the DSC deployment of SQL Server, call the **Start-DscConfiguration** c
 Start-DscConfiguration -Path C:\SQLInstall -Wait -Force -Verbose
 ```
 
-As the configuration applies, the verbose output shows you what's happening. As long as no errors, red text, are thrown, when **Operation 'Invoke CimMethod' complete** displays on the screen, SQL Server should be installed.
+As the configuration applies, the verbose output shows you what's happening. As long as no errors (red text) are thrown, when **Operation 'Invoke CimMethod' complete** appears on the screen, SQL Server should be installed.
 
 ## Validate installation
 

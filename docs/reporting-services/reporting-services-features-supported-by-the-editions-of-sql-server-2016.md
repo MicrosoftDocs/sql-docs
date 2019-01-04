@@ -1,5 +1,5 @@
 ---
-title: Reporting Services features supported by the editions of SQL Server
+title: SQL Server Reporting Services features supported by its editions
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: reporting-services
@@ -9,11 +9,11 @@ ms.author: maghan
 ms.date: 11/01/2018
 ---
 
-# Reporting Services features supported by the editions of SQL Server
+# SQL Server Reporting Services features supported by its editions
 
 [!INCLUDE[ssrs-appliesto](../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../includes/ssrs-appliesto-pbirs.md)]
 
-This topic provides details of the Reporting Services features supported by the different editions of SQL Server. SQL Server Evaluation edition is available for a 180-day trial period.  
+This topic provides details of the SQL Server Reporting Services (SSRS) features supported by the different editions of SQL Server. SQL Server Evaluation edition is available for a 180-day trial period.  
   
  For the latest SQL Server release notes, see [SQL Server 2017 Release Notes](../sql-server/sql-server-2017-release-notes.md). For the latest information on what's new, see [What's new in SQL Server Reporting Services (SSRS)](~/reporting-services/what-s-new-in-sql-server-reporting-services-ssrs.md).
 
@@ -23,13 +23,13 @@ This topic provides details of the Reporting Services features supported by the 
 >
 > ![Azure Virtual Machine small](../analysis-services/media/azure-virtual-machine-small.png) **[Spin up a Virtual Machine with SQL Server 2017 already installed](https://azure.microsoft.com/services/virtual-machines/sql-server/?wt.mc_id=sqL16_vm)**    
 
-For features supported by Evaluation and Developer editions, see the SQL Server Enterprise Edition column.
+For features supported by the Evaluation and Developer editions, see the SQL Server Enterprise edition column in the following table.
 
 ##  <a name="SSRS"></a> SQL Server Reporting Services  
   
 |Feature name|Enterprise|Standard|Web|Express with advanced services|Developer|  
 |------------------|---------|------------------------------------|------------------------|-------------|---------------|  
-|Mobile reports and KPIs|Yes||||Yes|  
+|Mobile reports and analytics|Yes||||Yes|  
 |Supported catalog database [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] edition|Standard or higher|Standard or higher|Web|Express|Standard or higher|  
 |Supported data source [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] edition|All   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] editions|All [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] editions|Web|Express|All [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] editions|  
 |Report server|Yes|Yes|Yes|Yes|Yes|  
@@ -50,12 +50,12 @@ For features supported by Evaluation and Developer editions, see the SQL Server 
 |Report history, execution snapshots, and caching|Yes|Yes|||Yes|  
 |SharePoint integration|Yes|Yes|||Yes|  
 |Remote and non-SQL data source support<sup>1</sup>|Yes|Yes|||Yes|  
-|Data source, delivery and rendering, and RDCE extensibility|Yes|Yes|||Yes|  
+|Data source, delivery, and rendering and RDCE extensibility|Yes|Yes|||Yes|  
 |Custom branding|Yes||||Yes|  
 |Data-driven report subscription|Yes||||Yes|  
 |Scale-out deployment (web farms)|Yes||||Yes|  
 |Alerting<sup>2</sup> (SSRS 2016) |Yes||||Yes|  
-| Power view<sup>2</sup> (SSRS 2016) |Yes||||Yes| 
+|Power view<sup>2</sup> (SSRS 2016) |Yes||||Yes| 
 |Comments<sup>3</sup> |Yes|Yes|Yes|Yes|Yes|  
 
  <sup>1</sup> For more information on supported data sources in SQL Server Reporting Services (SSRS), see [Data sources supported by Reporting Services &#40;SSRS&#41;](../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md).  
@@ -97,4 +97,4 @@ The following software client applications are available on the Microsoft Downlo
 Read about [Features supported by the editions of SQL Server 2017](~/sql-server/editions-and-components-of-sql-server-2017.md).  
 [Plan a SQL Server installation](../sql-server/install/planning-a-sql-server-installation.md). 
 
-More questions? [Try asking the SQL Server Reporting Services forum](https://go.microsoft.com/fwlink/?LinkId=620231).
+More questions? Try asking the [SQL Server Reporting Services forum](https://go.microsoft.com/fwlink/?LinkId=620231).

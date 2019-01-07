@@ -4,7 +4,7 @@ description: In this quickstart, learn about scoring using a prebuilt model in R
 ms.prod: sql
 ms.technology: machine-learning
 
-ms.date: 12/19/2018  
+ms.date: 01/04/2019
 ms.topic: quickstart
 author: dphansen
 ms.author: davidph
@@ -17,7 +17,7 @@ In this quickstart, use the model you created in the previous quickstart to scor
 
 ## Prerequisites
 
-This quickstart is an extension of [Create a predictive model](rtsql-create-a-predictive-model-r.md).
+This quickstart is an extension of [Create a predictive model](quickstart-r-create-predictive-model.md).
 
 ## Create the table of new data
 

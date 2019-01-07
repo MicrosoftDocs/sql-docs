@@ -14,7 +14,7 @@ manager: craigg
 ---
 # Lesson 4-1 - Copy the Lesson 3 package
 
-In this task, you'll create a copy of the Lesson 3.dtsx package from Lesson 3. Alternatively, if you did not complete lesson 3, you can add the completed lesson 3 package that is included with the tutorial to the project, and then make a copy of it to work with. You'll use this new copy throughout the rest of Lesson 4.  
+In this task, you'll create a copy of the Lesson 3.dtsx package from Lesson 3. If you did not complete lesson 3, you can add the completed lesson 3 package that is included with the tutorial to the project, and then make a copy of it to work with. You'll use this new copy throughout the rest of Lesson 4.  
   
 ## Create the Lesson 4 package  
   
@@ -24,19 +24,19 @@ Use this procedure if you're copying the completed Lesson 3.  To copy the sample
 
 2.  On the **File** menu, select **Open** > **Project/Solution**, select the **SSIS Tutorial** folder and select **Open**, and then double-click **SSIS Tutorial.sln**.
 
-3.  In Solution Explorer, right-click **Lesson 3.dtsx**, and then select **Copy**.
+3.  In **Solution Explorer**, right-click **Lesson 3.dtsx**, and then select **Copy**.
 
-4.  In Solution Explorer, right-click **SSIS Packages**, and then select **Paste**.
+4.  In **Solution Explorer**, right-click **SSIS Packages**, and then select **Paste**.
 
-    By default, the copied package will be named Lesson 4.dtsx.
+    By default, the name of the copied package is Lesson 4.dtsx.
 
-5.  In Solution Explorer, double-click **Lesson 4.dtsx** to open the package
+5.  In **Solution Explorer**, double-click **Lesson 4.dtsx** to open the package
 
 6.  Right-click anywhere in the background of the **Control Flow** design surface and select **Properties**.
 
 7.  In the **Properties** window, change the **Name** property to **Lesson 4**.
 
-8.  Select the box for the **ID** property, select the dropdown arrow, and then select **\<Generate New ID>**.
+8.  Select the box for the **ID** property, select the drop-down arrow, and then select **\<Generate New ID>**.
 
 ## Add the completed Lesson 3 package
 

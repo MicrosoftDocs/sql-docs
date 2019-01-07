@@ -61,7 +61,7 @@ The quickstart in the previous section runs the free Developer edition of SQL Se
 
 - The Developer container image can be configured to run the production editions as well. Use the following steps to run production editions:
 
-Review the requirements and run procedures in the [quickstart](quickstart-install-connect-docker.md) and you must specify your production edition with the **MSSQL_PID** environment variable. The following example shows how to run the latest SQL Server 2017 container image for the Enterprise Edition:
+Review the requirements and run procedures in the [quickstart](quickstart-install-connect-docker.md). You must specify your production edition with the **MSSQL_PID** environment variable. The following example shows how to run the latest SQL Server 2017 container image for the Enterprise Edition:
 
       ```bash
       docker run --name sqlenterprise \

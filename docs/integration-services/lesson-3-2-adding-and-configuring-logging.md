@@ -1,7 +1,7 @@
 ---
 title: "Step 2: Add and configure Logging | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/26/2018"
+ms.date: "01/04/2019"
 ms.prod: sql
 ms.prod_service: "integration-services"
 ms.reviewer: ""
@@ -12,7 +12,7 @@ author: "douglaslMS"
 ms.author: "douglasl"
 manager: craigg
 ---
-# Lesson 3-2 - Add and configure Logging
+# Lesson 3-2: Add and configure Logging
 
 In this task, you'll enable logging for the data flow in the Lesson 3.dtsx package. Then, you'll configure a Text File log provider to log the PipelineExecutionPlan and PipelineExecuteTrees events. The Text Files log provider creates logs that are easy to view and transport. The simplicity of these log files makes these files useful during the basic testing phase of a package. You can also view the log entries in the **Log Events** window of [!INCLUDE[ssIS](../includes/ssis-md.md)] Designer.  
   
@@ -20,7 +20,7 @@ In this task, you'll enable logging for the data flow in the Lesson 3.dtsx packa
   
 1.  On the **SSIS** menu, select **Logging**.  
   
-2.  In the **Configure SSIS Logs** dialog, in the **Containers** pane, make sure that the topmost object, which represents the Lesson 3 package, is selected.  
+2.  In the **Configure SSIS Logs** dialog, in the **Containers** pane, make sure that the default selection is the topmost object, which represents the Lesson 3 package.  
   
 3.  On the **Providers and Logs** tab, in the **Provider type** box, select **SSIS log provider for Text files**, and then select **Add**.  
   
@@ -30,7 +30,7 @@ In this task, you'll enable logging for the data flow in the Lesson 3.dtsx packa
   
 5.  Optionally, modify the **Description**.  
   
-6.  In the **Configuration** column, select **<New Connection>** to specify the destination to which the log information is written.  
+6.  In the **Configuration** column, select **\<New Connection>** to specify where SSIS will write log information.  
   
     In the **File Connection Manager Editor** dialog box, for **Usage type**, select **Create file**, and then select **Browse**. By default, the **Select File** dialog opens the project folder, but you can save log information to any location.  
   
@@ -41,7 +41,7 @@ In this task, you'll enable logging for the data flow in the Lesson 3.dtsx packa
 9. In the **Containers** pane, expand all nodes of the package container hierarchy, and then clear all check boxes, including the **Extract Sample Currency Data** check box. Now select the check box for **Extract Sample Currency Data** to get only the events for this node.  
   
     > [!NOTE]  
-    > If the state of the **Extract Sample Currency Data** check box is dimmed instead of selected, the task uses the log settings of the parent container and you cannot enable the log events that are specific to the task. To resolve this instance, clear the parent check box.
+    > If the state of the **Extract Sample Currency Data** check box appears dimmed instead of selected, the task uses the log settings of the parent container and you cannot enable the log events that are specific to the task. To resolve this instance, clear the parent check box.
   
 10. On the **Details** tab, in the **Events** column, select the **PipelineExecutionPlan** and **PipelineExecutionTrees** events.  
   

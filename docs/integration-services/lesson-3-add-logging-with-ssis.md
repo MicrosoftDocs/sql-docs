@@ -1,7 +1,7 @@
 ---
 title: "Lesson 3: Add Logging with SSIS | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/26/2018"
+ms.date: "01/04/2019"
 ms.prod: sql
 ms.prod_service: "integration-services"
 ms.reviewer: ""
@@ -12,10 +12,11 @@ author: "douglaslMS"
 ms.author: "douglasl"
 manager: craigg
 ---
-# Lesson 3: Add Logging with SSIS
-[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] includes logging features that let you troubleshoot and monitor package execution by providing a trace of task and container events. The logging features are flexible, and can be enabled at the package level or on individual tasks and containers within the package. You select which events you want to log, and create multiple logs against a single package.  
+# Lesson 3: Add logging with SSIS
+
+[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] includes logging features that let you troubleshoot and monitor package execution by providing a trace of task and container events. The logging features are flexible. You can enable logging at the package level or on individual tasks and containers within the package. You select which events you want to log, and create multiple logs against a single package.  
   
-Logging is provided by a log provider. Each log provider can write logging information to different formats and destination types. [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] provides the following log providers:  
+Logging providers create the logs. Each log provider can write logging information to different formats and destination types. [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] provides the following log providers:  
   
 -   Text file  
   
@@ -27,7 +28,7 @@ Logging is provided by a log provider. Each log provider can write logging infor
   
 -   XML file  
   
-In this lesson, you'll create a copy of the package that you created in [Lesson 2: Add Looping with SSIS](../integration-services/lesson-2-adding-looping-with-ssis.md). Working with this new package, you'll then add and configure logging to monitor specific events during package execution. If you have not completed any of the previous lessons, you can also copy the completed Lesson 2 package that is included with the tutorial.  
+In this lesson, you'll create a copy of the package that you created in [Lesson 2: Add Looping with SSIS](../integration-services/lesson-2-adding-looping-with-ssis.md). Working with this new package, you'll then add and configure logging to monitor specific events during package execution. If you have not completed either of the previous lessons, you can also copy the completed Lesson 2 package included with the tutorial.  
 
 ## Prerequisites
 

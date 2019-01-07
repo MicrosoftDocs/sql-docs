@@ -1,5 +1,5 @@
 ---
-title: "Create a Report Server Database  (SSRS Configuration Manager) | Microsoft Docs"
+title: "Create a report server database, SSRS Configuration Manager | Microsoft Docs"
 author: markingmyname
 ms.author: maghan
 manager: kfile
@@ -10,15 +10,15 @@ ms.custom: seodec18
 ms.date: 12/12/2018
 ---
 
-# Create a Report Server Database
+# Create a report server database 
 
 [!INCLUDE [ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE [ssrs-appliesto-2016-and-later](../../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../../includes/ssrs-appliesto-pbirs.md)] [!INCLUDE[ssrs-appliesto-sharepoint-2013-2016i](../../includes/ssrs-appliesto-sharepoint-2013-2016.md)]
 
 [!INCLUDE [ssrs-previous-versions](../../includes/ssrs-previous-versions.md)]
 
-[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] **Native mode** uses two [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] relational databases to store report server metadata and objects. One database is used for primary storage, and the second one stores temporary data. The databases are created together and bound by name. With a default [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance, the databases are named **reportserver** and **reportservertempdb**. Collectively, the two databases are referred to as the "report server database" or "report server catalog".
+SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] **Native mode** uses two [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] relational databases to store report server metadata and objects. One database is used for primary storage, and the second one stores temporary data. The databases are created together and bound by name. With a default [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance, the databases are named **reportserver** and **reportservertempdb**. Collectively, the two databases are called the **report server database** or **report server catalog**.
 
-[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] **SharePoint mode** includes a third database that is used for data alerting metadata. The three databases are created for each [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] service application and the database names by default include a guid that represents the service application. The following are example names of the three SharePoint mode databases:
+SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] **SharePoint mode** includes a third database that's used for data alerting metadata. The three databases are created for each SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] service application. The database names by default include a GUID that represents the service application. The following are example names of the three SharePoint mode databases:
 
 - ReportingService_90a9f37075544f22953c4a62e4a9f370  
   
@@ -27,12 +27,12 @@ ms.date: 12/12/2018
 - ReportingService_90a9f37075544f22953c4a62e4a9f370_Alerting  
   
 > [!IMPORTANT]  
-> Do not write applications that run queries against the report server database. The report server database is not a public schema. The table structure might change from one release to the next. If you write an application that requires access to the report server database, always use the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] APIs to access the report server database.  
-> The exception to this are the execution log views. For more information, see [Report Server ExecutionLog and the ExecutionLog3 View](../../reporting-services/report-server/report-server-executionlog-and-the-executionlog3-view.md)  
+> Don't write applications that run queries against the report server database. The report server database isn't a public schema. The table structure might change from one release to the next. If you write an application that requires access to the report server database, always use the SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] APIs to access the report server database.  
+> Execution log views are exceptions to this rule. For more information, see [Report Server ExecutionLog and the ExecutionLog3 View](../../reporting-services/report-server/report-server-executionlog-and-the-executionlog3-view.md).  
   
-## Ways to Create the Report Server Database
+## Ways to create the report server database
 
- **Native Mode:** You can create the Native mode report server database in the following ways:  
+ **Native mode:** You can create the Native mode report server database in the following ways:  
   
 - Automatically: Use SQL Server Setup Wizard, if you choose the default configuration installation option. In the SQL Server Installation Wizard, this is the **Install and configure** in the Report Server Installation Options page. If you chose the **Install only** option, you must use the Reporting Services Configuration Manager to create the database.  
   

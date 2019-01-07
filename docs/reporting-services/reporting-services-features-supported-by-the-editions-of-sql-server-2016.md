@@ -13,15 +13,15 @@ ms.date: 11/01/2018
 
 [!INCLUDE[ssrs-appliesto](../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../includes/ssrs-appliesto-pbirs.md)]
 
-This topic provides details of the SQL Server Reporting Services (SSRS) features supported by the different editions of SQL Server. SQL Server Evaluation edition is available for a 180-day trial period.  
+This topic provides details of the SQL Server Reporting Services (SSRS) features that the different editions of SQL Server support. SQL Server Evaluation edition is available for a 180-day trial period.  
   
  For the latest SQL Server release notes, see [SQL Server 2017 Release Notes](../sql-server/sql-server-2017-release-notes.md). For the latest information on what's new, see [What's new in SQL Server Reporting Services (SSRS)](~/reporting-services/what-s-new-in-sql-server-reporting-services-ssrs.md).
 
  ## Try SQL Server 2017
 
-> [![Download SQL Server 2017](../analysis-services/media/download.png)](https://go.microsoft.com/fwlink/?LinkID=829477): **[Download SQL Server 2017 from the Evaluation Center](https://go.microsoft.com/fwlink/?LinkID=829477)**.    
+> [![Download SQL Server 2017](../analysis-services/media/download.png)](https://go.microsoft.com/fwlink/?LinkID=829477) **[Download SQL Server 2017 from the Evaluation Center](https://go.microsoft.com/fwlink/?LinkID=829477)**    
 >
-> ![Azure Virtual Machine small](../analysis-services/media/azure-virtual-machine-small.png): **[Spin up a Virtual Machine with SQL Server 2017 already installed](https://azure.microsoft.com/services/virtual-machines/sql-server/?wt.mc_id=sqL16_vm)**.    
+> ![Azure Virtual Machine small](../analysis-services/media/azure-virtual-machine-small.png) **[Spin up a Virtual Machine with SQL Server 2017 already installed](https://azure.microsoft.com/services/virtual-machines/sql-server/?wt.mc_id=sqL16_vm)**    
 
 For features supported by the Evaluation and Developer editions, see the SQL Server Enterprise edition column in the following table.
 
@@ -60,17 +60,17 @@ For features supported by the Evaluation and Developer editions, see the SQL Ser
 
  <sup>1</sup> For more information on supported data sources in SQL Server Reporting Services (SSRS), see [Data sources supported by Reporting Services &#40;SSRS&#41;](../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md).  
   
- <sup>2</sup> Requires SQL Server Reporting Services 2016 in SharePoint mode. For more information, see [Install SQL Server Reporting Services in SharePoint mode](../reporting-services/install-windows/install-reporting-services-sharepoint-mode.md). Starting in SQL Server Reporting Services 2017, integration with SharePoint is no longer available. 
+ <sup>2</sup> Requires SQL Server 2016 Reporting Services in SharePoint mode. For more information, see [Install SQL Server Reporting Services in SharePoint mode](../reporting-services/install-windows/install-reporting-services-sharepoint-mode.md). Starting in SQL Server 2017 Reporting Services, integration with SharePoint is no longer available. 
 
-<sup>3</sup> Only in Power BI Report Server and SQL Server Reporting Services 2017 and later.
+<sup>3</sup> Only in Power BI Report Server and SQL Server 2017 Reporting Services and later.
 
 > [!NOTE]
 > SQL Server Express with Tools and SQL Server Express don't support SQL Server Reporting Services.
   
-## Report server database edition requirements
+## Database edition requirements for the report server
  When you create a report server database, not all editions of SQL Server [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] can be used to host the database. The following table shows you which editions of the [!INCLUDE[ssDE](../includes/ssde-md.md)] you can use for specific editions of SQL Server [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)].  
   
-|For this edition of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Reporting Services|Use this edition of the Database Engine instance to host the database.|  
+|For this edition of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Reporting Services,|Use this edition of the Database Engine instance to host the database.|  
 |----------------------------------------------------------------------|---------------------------------------------------------------------------|  
 |Enterprise|Enterprise or Standard editions (local or remote)|  
 |Standard|Enterprise or Standard editions (local or remote)|  

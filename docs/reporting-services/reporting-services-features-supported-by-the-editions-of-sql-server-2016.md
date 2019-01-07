@@ -19,15 +19,15 @@ This topic provides details of the SQL Server Reporting Services (SSRS) features
 
  ## Try SQL Server 2017
 
-> [![Download SQL Server 2017](../analysis-services/media/download.png)](https://go.microsoft.com/fwlink/?LinkID=829477) **[Download SQL Server 2017 from the Evaluation Center](https://go.microsoft.com/fwlink/?LinkID=829477)**    
+> [![Download SQL Server 2017](../analysis-services/media/download.png)](https://go.microsoft.com/fwlink/?LinkID=829477): **[Download SQL Server 2017 from the Evaluation Center](https://go.microsoft.com/fwlink/?LinkID=829477)**.    
 >
-> ![Azure Virtual Machine small](../analysis-services/media/azure-virtual-machine-small.png) **[Spin up a Virtual Machine with SQL Server 2017 already installed](https://azure.microsoft.com/services/virtual-machines/sql-server/?wt.mc_id=sqL16_vm)**    
+> ![Azure Virtual Machine small](../analysis-services/media/azure-virtual-machine-small.png): **[Spin up a Virtual Machine with SQL Server 2017 already installed](https://azure.microsoft.com/services/virtual-machines/sql-server/?wt.mc_id=sqL16_vm)**.    
 
 For features supported by the Evaluation and Developer editions, see the SQL Server Enterprise edition column in the following table.
 
 ##  <a name="SSRS"></a> SQL Server Reporting Services  
   
-|Feature name|Enterprise|Standard|Web|Express with advanced services|Developer|  
+|Feature name|Enterprise|Standard|Web|Express with Advanced Services|Developer|  
 |------------------|---------|------------------------------------|------------------------|-------------|---------------|  
 |Mobile reports and analytics|Yes||||Yes|  
 |Supported catalog database [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] edition|Standard or higher|Standard or higher|Web|Express|Standard or higher|  
@@ -67,10 +67,10 @@ For features supported by the Evaluation and Developer editions, see the SQL Ser
 > [!NOTE]
 > SQL Server Express with Tools and SQL Server Express don't support SQL Server Reporting Services.
   
-## Report Server Database Server edition requirements
- When you create a report server database, not all editions of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] can be used to host the database. The following table shows you which editions of the [!INCLUDE[ssDE](../includes/ssde-md.md)] you can use for specific editions of [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)].  
+## Report server database edition requirements
+ When you create a report server database, not all editions of SQL Server [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] can be used to host the database. The following table shows you which editions of the [!INCLUDE[ssDE](../includes/ssde-md.md)] you can use for specific editions of SQL Server [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)].  
   
-|For this edition of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Reporting Services|Use this edition of the Database Engine instance to host the database|  
+|For this edition of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Reporting Services|Use this edition of the Database Engine instance to host the database.|  
 |----------------------------------------------------------------------|---------------------------------------------------------------------------|  
 |Enterprise|Enterprise or Standard editions (local or remote)|  
 |Standard|Enterprise or Standard editions (local or remote)|  
@@ -79,22 +79,23 @@ For features supported by the Evaluation and Developer editions, see the SQL Ser
 |Evaluation|Evaluation|  
   
 ##  <a name="BIC"></a> Business intelligence clients  
-The following software client applications are available on the Microsoft Download center. They help you create business intelligence documents that run on a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] instance. When you host these documents in a server environment, use an edition of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] that supports that document type. The following table identifies which [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] edition contains the server features required to host the documents created in these client applications.  
+The following software client applications are available on the Microsoft Download Center. They help you create business intelligence documents that run on a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] instance. When you host these documents in a server environment, use an edition of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] that supports that document type. The following table identifies which [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] edition contains the server features required to host the documents created in these client applications.  
   
 |Tool name|Enterprise|Standard|Web|Express with Advanced Services|Developer|  
 |---------------|----------------|--------------|------------------------|-------------|---------------|  
-|[!INCLUDE[ssRBnoversion](../includes/ssrbnoversion.md)] (.rdl and .rds)|Yes|Yes|Yes|Yes|Yes|  
-|[!INCLUDE[SS_MobileReptPub_Long](../includes/ss-mobilereptpub-long.md)] (.rsmobile)|Yes||||Yes|  
-|Power BI apps for mobile devices (iOS, Windows 10, Android) (.rsmobile)|Yes||||Yes|  
+|[!INCLUDE[ssRBnoversion](../includes/ssrbnoversion.md)], **.rdl** and **.rds**|Yes|Yes|Yes|Yes|Yes|  
+|[!INCLUDE[SS_MobileReptPub_Long](../includes/ss-mobilereptpub-long.md)], **.rsmobile**|Yes||||Yes|  
+|Power BI apps for mobile devices (iOS, Windows 10, and Android), **.rsmobile**|Yes||||Yes|  
   
 > [!NOTE]  
-> * The preceding table identifies the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] editions that are required to enable these client tools; however these tools can access data hosted on any edition of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
-> * [!INCLUDE[SS_MobileReptPub_Long](../includes/ss-mobilereptpub-long.md)] is the single point for creation of mobile reports. Connect to a [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] server to access data sources and create reports. Then publish them to the [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] server for others in the organization to access, either on the server or on mobile devices. You can also use [!INCLUDE[SS_MobileReptPub_Long](../includes/ss-mobilereptpub-long.md)] stand alone with local data sources.  
-> * Whether you use [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)] on-premises, [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] in the cloud, or both as your report delivery solution you only need one mobile app to access dashboards and mobile reports on mobile devices. The [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] apps are available for download from the Windows, iOS, or Android app stores.  
+> * The preceding table identifies the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] editions that are required to enable these client tools. However, these tools can access data hosted on any edition of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
+> * [!INCLUDE[SS_MobileReptPub_Long](../includes/ss-mobilereptpub-long.md)] is the single point for creation of mobile reports. Connect to a SQL Server [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] server to access data sources and create reports. Then publish them to the SQL Server [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] server for others in the organization to access, either on the server or on mobile devices. You can also use [!INCLUDE[SS_MobileReptPub_Long](../includes/ss-mobilereptpub-long.md)] stand alone with local data sources.  
+> * Whether you use [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)] on-premises, [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] in the cloud, or both as your report delivery solution, you only need one mobile app to access dashboards and mobile reports on mobile devices. The [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] apps are available for download from the Windows, iOS, or Android app stores.  
 
 ## Next steps
 
-Read about [Features supported by the editions of SQL Server 2017](~/sql-server/editions-and-components-of-sql-server-2017.md).  
-[Plan a SQL Server installation](../sql-server/install/planning-a-sql-server-installation.md). 
+* Read about [Features supported by the editions of SQL Server 2017](~/sql-server/editions-and-components-of-sql-server-2017.md). 
 
-More questions? Try asking the [SQL Server Reporting Services forum](https://go.microsoft.com/fwlink/?LinkId=620231).
+* [Plan a SQL Server installation](../sql-server/install/planning-a-sql-server-installation.md).
+
+* More questions? Ask the [SQL Server Reporting Services forum](https://go.microsoft.com/fwlink/?LinkId=620231).

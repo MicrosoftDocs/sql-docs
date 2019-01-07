@@ -4,7 +4,7 @@ description: This article contains the release notes and supported features for 
 author: rothja 
 ms.author: jroth 
 manager: craigg
-ms.date: 10/29/2018
+ms.date: 12/18/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.custom: "sql-linux"

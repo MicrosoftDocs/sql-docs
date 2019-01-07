@@ -15,7 +15,7 @@ dev_langs:
 helpviewer_keywords: 
   - "backwhack"
   - "backslash"
-  - "excape character"
+  - "escape character"
   - "hack character"
   - "\\ (backslash)"
   - "backslant"

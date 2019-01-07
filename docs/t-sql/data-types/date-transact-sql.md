@@ -60,7 +60,7 @@ The following tables show the valid string literal formats for the **date** data
 |------------------|-----------------|  
 |mon [dd][,] yyyy<br /><br /> mon dd[,] [yy]yy<br /><br /> mon yyyy [dd]<br /><br /> [dd] mon[,] yyyy<br /><br /> dd mon[,][yy]yy<br /><br /> dd [yy]yy mon<br /><br /> [dd] yyyy mon<br /><br /> yyyy mon [dd]<br /><br /> yyyy [dd] mon|**mon** represents the full month name or the month abbreviation given in the current language. Commas are optional and capitalization is ignored.<br /><br /> To avoid ambiguity, use four-digit years.<br /><br /> If the day is missing, the first day of the month is supplied.|  
   
-|ISO 8601|Descripton|  
+|ISO 8601|Description|  
 |--------------|----------------|  
 |YYYY-MM-DD<br /><br /> YYYYMMDD|Same as the SQL standard. This is the only format that is defined as an international standard.|  
   

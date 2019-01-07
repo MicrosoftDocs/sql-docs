@@ -59,7 +59,7 @@ manager: craigg
  **-**  
  **-Command-** specifies that the `sqlps` utility read the input from the standard input.  
   
- *script_block* [ **-args***argument_array* ]  
+ *script_block* [ **-args**_argument_array_ ]  
  Specifies a block of PowerShell commands to run, the block must be enclosed in braces: {}. *Script_block* can only be specified when the `sqlps` utility is called from either **PowerShell** or another `sqlps` utility session. The *argument_array* is an array of PowerShell variables containing the arguments for the PowerShell commands in the *script_block*.  
   
  *string* [ *command_parameters* ]  

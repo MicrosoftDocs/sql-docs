@@ -1,5 +1,5 @@
 ---
-title: microsoftml Python package in SQL Server Machine Learning
+title: microsoftml Python package - SQL Server Machine Learning Services
 description: Introduces the Microsoft machine learning algorithms and models for Python, as related to SQL Server machine learning workloads.
 ms.prod: sql
 ms.technology: machine-learning
@@ -49,13 +49,13 @@ This section lists the functions by category to give you an idea of how each one
 
 | Function | Description |
 |----------|-------------|
-|[microsoftml.rx_ensemble](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/rx-ensemble.md) | Train an ensemble of models. |
-|[microsoftml.rx_fast_forest](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/rx-fast-forest.md)  | Random Forest. |
-|[microsoftml.rx_fast_linear](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/rx-fast-linear.md) | Linear Model. with Stochastic Dual Coordinate Ascent. |
-|[microsoftml.rx_fast_trees](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/rx-fast-trees.md) | Boosted Trees. |
-|[microsoftml.rx_logistic_regression](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/rx-logistic-regression.md) | Logistic Regression. |
-|[microsoftml.rx_neural_network](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/rx-neural-network.md) | Neural Network. |
-|[microsoftml.rx_oneclass_svm](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/rx-oneclass-svm.md) | Anomaly Detection. |
+|[microsoftml.rx_ensemble](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/rx-ensemble) | Train an ensemble of models. |
+|[microsoftml.rx_fast_forest](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/rx-fast-forest)  | Random Forest. |
+|[microsoftml.rx_fast_linear](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/rx-fast-linear) | Linear Model. with Stochastic Dual Coordinate Ascent. |
+|[microsoftml.rx_fast_trees](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/rx-fast-trees) | Boosted Trees. |
+|[microsoftml.rx_logistic_regression](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/rx-logistic-regression) | Logistic Regression. |
+|[microsoftml.rx_neural_network](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/rx-neural-network) | Neural Network. |
+|[microsoftml.rx_oneclass_svm](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/rx-oneclass-svm) | Anomaly Detection. |
 
 <a name="ml-transforms"></a>
 
@@ -65,48 +65,48 @@ This section lists the functions by category to give you an idea of how each one
 
 | Function | Description |
 |----------|-------------|
-|[microsoftml.categorical](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/categorical.md) | Converts a text column into categories. |
-|[microsoftml.categorical_hash](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/categorical-hash.md) | Hashes and converts a text column into categories. |
+|[microsoftml.categorical](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/categorical) | Converts a text column into categories. |
+|[microsoftml.categorical_hash](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/categorical-hash) | Hashes and converts a text column into categories. |
 
 ### Schema manipulation
 
 | Function | Description |
 |----------|-------------|
-|[microsoftml.concat](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/concat.md) | Concatenates multiple columns into a single vector. |
-|[microsoftml.drop_columns](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/drop-columns.md) | Drops columns from a dataset. |
-|[microsoftml.select_columns](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/select-columns.md) | Retains columns of a dataset. |
+|[microsoftml.concat](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/concat) | Concatenates multiple columns into a single vector. |
+|[microsoftml.drop_columns](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/drop-columns) | Drops columns from a dataset. |
+|[microsoftml.select_columns](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/select-columns) | Retains columns of a dataset. |
 
 
 ### Variable selection
 
 | Function | Description |
 |----------|-------------|
-|[microsoftml.count_select](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/count-select.md) |Feature selection based on counts. |
-|[microsoftml.mutualinformation_select](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/mutualinformation-select.md) | Feature selection based on mutual information. |
+|[microsoftml.count_select](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/count-select) |Feature selection based on counts. |
+|[microsoftml.mutualinformation_select](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/mutualinformation-select) | Feature selection based on mutual information. |
 
 
 ### Text analytics
 
 | Function | Description |
 |----------|-------------|
-|[microsoftml.featurize_text](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/featurize-text.md) | Converts text columns into numerical features. |
-|[microsoftml.get_sentiment](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/get-sentiment.md) | Sentiment analysis. |
+|[microsoftml.featurize_text](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/featurize-text) | Converts text columns into numerical features. |
+|[microsoftml.get_sentiment](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/get-sentiment) | Sentiment analysis. |
 
 
 ### Image analytics 
 
 | Function | Description |
 |----------|-------------|
-|[microsoftml.load_image](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/load-image.md) | Loads an image. |
-|[microsoftml.resize_image](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/resize-image.md) | Resizes an Image. |
-|[microsoftml.extract_pixels](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/extract-pixels.md) | Extracts pixels from an image. |
-|[microsoftml.featurize_image](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/featurize-image.md) | Converts an image into features. |
+|[microsoftml.load_image](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/load-image) | Loads an image. |
+|[microsoftml.resize_image](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/resize-image) | Resizes an Image. |
+|[microsoftml.extract_pixels](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/extract-pixels) | Extracts pixels from an image. |
+|[microsoftml.featurize_image](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/featurize-image) | Converts an image into features. |
 
 ### Featurization functions
 
 | Function | Description |
 |----------|-------------|
-|[microsoftml.rx_featurize](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/rx-featurize.md) | Data transformation for data sources |
+|[microsoftml.rx_featurize](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/rx-featurize) | Data transformation for data sources |
 
 <a name="ml-scoring"></a>
 
@@ -114,7 +114,7 @@ This section lists the functions by category to give you an idea of how each one
 
 | Function | Description |
 |----------|-------------|
-|[microsoftml.rx_predict](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/rx-predict.md) | Scores using a Microsoft machine learning model |
+|[microsoftml.rx_predict](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/rx-predict) | Scores using a Microsoft machine learning model |
 
 ## How to call microsoftml
 
@@ -124,7 +124,7 @@ The **microsoftml** package for Python is installed by default, but unlike **rev
 
 As a first step, import the **microsoftml** package, and import **revoscalepy** if you need to use remote compute contexts or related connectivity or data source objects. Then, reference the individual functions you need.
 
-```Python
+```python
 from microsoftml.modules.logistic_regression.rx_logistic_regression import rx_logistic_regression
 from revoscalepy.functions.RxSummary import rx_summary
 from revoscalepy.etl.RxImport import rx_import_datasource

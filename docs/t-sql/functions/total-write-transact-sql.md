@@ -16,7 +16,7 @@ helpviewer_keywords:
   - "write activity since last started [SQL Server]"
   - "number of disk writes"
   - "@@TOTAL_WRITE function"
-  - "disks [SQL Server], numbr of disk writes"
+  - "disks [SQL Server], number of disk writes"
   - "total write [SQL Server]"
 ms.assetid: cd528126-51ee-4aa4-a21f-f32ce5c80fac
 author: MashaMSFT

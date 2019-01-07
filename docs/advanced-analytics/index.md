@@ -1,5 +1,5 @@
 ---
-title: SQL Server machine learning and programming extensions documentation | Microsoft Docs
+title: R and Python machine learning and programming extensions documentation - SQL Server Machine Learning
 description: R and Python in SQL Server, with built-in data science modeling and machine learning algorithms for enterprise data analysis at scale.
 ms.prod: sql
 ms.technology: machine-learning

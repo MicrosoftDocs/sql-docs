@@ -1,16 +1,16 @@
 ---
-title: Microsoft Business Intelligence (BI) tools for analysis and reporting | Microsoft Docs
+title: Analysis and reporting with Microsoft business intelligence (BI) tools
 author: markingmyname
 ms.author: maghan
 manager: kfile
 ms.reviewer: ""
-ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod: reporting-services, sql-server
+ms.prod_service: reporting-services-native, reporting-services-sharepoint 
 ms.topic: conceptual
 ms.custom: seodec18
-ms.date: 12/10/2018
+ms.date: 12/14/2018
 ---
-# Choosing Microsoft Business Intelligence (BI) tools for analysis and reporting
+# Analysis and reporting with Microsoft business intelligence (BI) tools
 
 Choosing the right business intelligence tool can be overwhelming. Learn about the different Microsoft offerings and find the one that best fits your needs.
 

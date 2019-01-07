@@ -1,5 +1,6 @@
 ---
-title: Create BI Workflows with R | Microsoft Docs
+title: Create business intelligence (BI) Workflows with R - SQL Server Machine Learning Services
+description: Integration scenarios combining business intelligence (BI) and R language support in SQL Server and SQL Server Integration Services (SSIS).
 ms.prod: sql
 ms.technology: machine-learning
 

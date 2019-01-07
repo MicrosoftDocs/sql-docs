@@ -9,8 +9,8 @@ helpviewer_keywords:
   - "Stretch Database, disabling"
   - "disabling Stretch Database"
 ms.assetid: c1bbb24e-47e3-46aa-b786-fcadf9fb65ce
-author: MikeRayMSFT
-ms.author: mikeray
+author: douglaslMS
+ms.author: douglasl
 manager: craigg
 ---
 # Disable Stretch Database and bring back remote data

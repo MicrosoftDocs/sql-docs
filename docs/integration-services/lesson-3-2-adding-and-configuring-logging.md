@@ -20,17 +20,17 @@ In this task, you'll enable logging for the data flow in the Lesson 3.dtsx packa
   
 1.  On the **SSIS** menu, select **Logging**.  
   
-2.  In the **Configure SSIS Logs** dialog, in the **Containers** pane, make sure that the default selection is the topmost object, which represents the Lesson 3 package.  
+2.  In the **Configure SSIS Logs** dialog, in the **Containers** pane, make sure the topmost object is selected. This object represents the Lesson 3 package.
   
 3.  On the **Providers and Logs** tab, in the **Provider type** box, select **SSIS log provider for Text files**, and then select **Add**.  
   
-    Integration Services adds a new Text File log provider to the package with the default name **SSIS log provider for text files**. You can now configure the new log provider.  
+    Integration Services adds a new Text File log provider to the package, with the default name **SSIS log provider for text files**. You can now configure the new log provider.  
   
 4.  In the **Name** column, enter **Lesson 3 Log File**.  
   
 5.  Optionally, modify the **Description**.  
   
-6.  In the **Configuration** column, select **\<New Connection>** to specify where SSIS will write log information.  
+6.  In the **Configuration** column, select **\<New Connection>** to specify where [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] will write log information.  
   
     In the **File Connection Manager Editor** dialog box, for **Usage type**, select **Create file**, and then select **Browse**. By default, the **Select File** dialog opens the project folder, but you can save log information to any location.  
   
@@ -49,7 +49,7 @@ In this task, you'll enable logging for the data flow in the Lesson 3.dtsx packa
   
 12. Select **Basic** to hide the information categories.  
   
-13. On the **Provider and Logs** tab, in the **Name** column, select **Lesson 3 Log File**. After you have created a log provider for your package, you can optionally deselect it to temporarily turn off logging, without having to delete and re-create a log provider.  
+13. On the **Provider and Logs** tab, in the **Name** column, select **Lesson 3 Log File**. After you have created a log provider for your package, you can optionally deselect it to turn off logging, without having to delete and re-create a log provider.  
   
 14. Select **OK**.  
   

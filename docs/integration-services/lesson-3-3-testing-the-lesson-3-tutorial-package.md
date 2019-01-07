@@ -39,7 +39,7 @@ Before you test the package, verify the control and data flows in the Lesson 3 p
   
 -   Using Notepad or any other text editor, open the TutorialLog.log file.  
   
--   A complete description of the information generated for the **PipelineExecutionPlan** and **PipelineExecutionTrees** events is beyond the scope of this tutorial.  In the log file, you can see that the first line lists the information fields specified in the **Details** tab of the **Configure SSIS Logs** dialog box. You can also see that SSIS logged the two events that you selected, **PipelineExecutionPlan** and **PipelineExecutionTrees**, for each iteration of the Foreach Loop.  
+-   A complete description of the information generated for the **PipelineExecutionPlan** and **PipelineExecutionTrees** events is beyond the scope of this tutorial.  In the log file, you can see that the first line lists the information fields specified in the **Details** tab of the **Configure SSIS Logs** dialog box. You can also see that [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] logged the two events that you selected, **PipelineExecutionPlan** and **PipelineExecutionTrees**, for each iteration of the Foreach Loop.  
   
 ## Next lesson  
 [Lesson 4: Add Error Flow redirection with SSIS](../integration-services/lesson-4-add-error-flow-redirection-with-ssis.md)  

@@ -1,5 +1,5 @@
 ---
-title: Upgrade R and Python components in SQL Server instances (Machine Learning Services) | Microsoft Docs
+title: Upgrade R and Python components - SQL Server Machine Learning Services
 description: Upgrade R and Python in SQL Server 2016 Services or SQL Server 2017 Machine Learning Services using sqlbindr.exe to bind to Machine Learning Server.
 ms.prod: sql
 ms.technology: machine-learning
@@ -104,7 +104,7 @@ Microsoft Machine Learning Setup detects the existing features and SQL Server ve
 
 1. Check the version of R base and RevoScaleR packages to confirm the existing versions are lower than what you plan to replace them with. For SQL Server 2016 R Services, R Base package is 3.2.2 and RevoScaleR is 8.0.3.
 
-    ```SQL
+    ```sql
     EXECUTE sp_execute_external_script
     @language=N'R'
     ,@script = N'str(OutputDataSet);
@@ -134,7 +134,7 @@ Microsoft Machine Learning Setup detects the existing features and SQL Server ve
 
    On the right, select the checkbox next to the instance name. If no instances are listed, you have an incompatible combination. If you do not select an instance, a new standalone installation of Machine Learning Server is created, and the SQL Server libraries are unchanged. If you can't select an instance, it might not be at [SP1 CU3](https://support.microsoft.com/help/4019916/cumulative-update-3-for-sql-server-2016-sp1). 
 
-    ![Microsoft Machine Learning Server setup wizard](media/mls-931-installer-mssql13.png)
+    ![Configure installation step](media/mls-931-installer-mssql13.png)
 
 1. On the **License agreement** page, select **I accept these terms** to accept the licensing terms for Machine Learning Server. 
 
@@ -154,7 +154,7 @@ If upgrade fails, check [SqlBindR error codes](#sqlbindr-error-codes) for more i
 
 Recheck the version of R and RevoScaleR to confirm you have newer versions. Use the R console distributed with the R packages in your database engine instance to get package information:
 
-```SQL
+```sql
 EXECUTE sp_execute_external_script
 @language=N'R'
 ,@script = N'str(OutputDataSet);
@@ -281,7 +281,7 @@ You might have added other open-source or third-party packages to your package l
 |*bind*| Upgrades the specified SQL database instance to the latest version of R Server and ensures the instance automatically gets future upgrades of R Server|
 |*unbind*|Uninstalls the latest version of R Server from the specified SQL database instance and prevents future R Server upgrades from affecting the instance|
 
-<a name="sqlbinder-error-codes"><a/>
+<a name="sqlbindr-error-codes"><a/>
 
 ## Binding errors
 

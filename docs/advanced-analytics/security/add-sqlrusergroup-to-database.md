@@ -1,5 +1,5 @@
 ---
-title: Add SQLRUserGroup as a database user (SQL Server Machine Learning) | Microsoft Docs
+title: Add SQLRUserGroup as a database user - SQL Server Machine Learning Services
 description: For loopback connections using implied authentication, add SQLRUserGroup as a database user so that a worker account can log in to the server, for identity conversion back to the calling user.
 ms.prod: sql
 ms.technology: machine-learning

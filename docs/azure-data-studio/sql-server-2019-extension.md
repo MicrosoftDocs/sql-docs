@@ -37,6 +37,8 @@ To install the SQL Server 2019 extension (preview), download and install the ass
 
 1. After reloading, the extension will install dependencies. You can see the progress in the Output window, and it could take several minutes.
 
+1. After the dependencies finish installing, close and reopen Azure Data Studio. The **SQL Server big data cluster** connection type is not available until you restart Azure Data Studio.
+
 ## Release Notes (v0.8.0)
 *Notebooks*:
 * Adding cells before / after existing cells is now supported by clicking the "More Actions" cell button

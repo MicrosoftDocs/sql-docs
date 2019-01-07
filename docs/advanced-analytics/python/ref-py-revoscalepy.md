@@ -1,5 +1,5 @@
 ---
-title: revoscalepy Python package in SQL Server Machine Learning
+title: revoscalepy Python package - SQL Server Machine Learning Services
 description: Introduction to the revoscalepy module in SQL Server 2017 Machine Learning Services with Python.
 ms.prod: sql
 ms.technology: machine-learning
@@ -106,7 +106,7 @@ The Python functions for [microsoftml](ref-py-microsoftml.md) are integrated wit
 
 The following example shows the syntax for importing modules in your Python code. You  can then reference the individual functions you need.
 
-```Python
+```python
 from microsoftml.modules.logistic_regression.rx_logistic_regression import rx_logistic_regression
 from revoscalepy.functions.RxSummary import rx_summary
 from revoscalepy.etl.RxImport import rx_import_datasource

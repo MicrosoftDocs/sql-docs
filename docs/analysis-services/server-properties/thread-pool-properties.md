@@ -17,22 +17,6 @@ manager: kfile
   
  Each instance of [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] maintains its own set of thread pools. There are differences in how tabular and multidimensional instances use thread pools. For example, only multidimensional instances use the **IOProcess** thread pool. As such, the **PerNumaNode** property, described in this article, is not meaningful for Tabular instances. In the [Property Reference](#bkmk_propref) section below, mode requirements are called out for each property.
   
- This article contains the following sections:  
-  
--   [Thread Management in Analysis Services](#bkmk_threadarch)  
-  
--   [Thread Pool Property Reference](#bkmk_propref)  
-  
--   [Set GroupAffinity to affinitize threads to processors in a processor group](#bkmk_groupaffinity)  
-  
--   [Set PerNumaNode to affinitize IO threads to processors in a NUMA node](#bkmk_pernumanode)  
-  
--   [Determine current thread pool settings](#bkmk_currentsettings)  
-  
--   [Dependent or Related Properties](#bkmk_related)  
-  
--   [About MSMDSRV.INI](#bkmk_msmdrsrvini)  
-  
 > [!NOTE]  
 >  Tabular deployment on NUMA systems is out of scope for this topic. Although tabular solutions can be successfully deployed on NUMA systems, the performance characteristics of the in-memory database technology used by tabular models may show limited benefits on a highly scaled up architectures. For more information, see [Analysis Services Case Study: Using Tabular Models in Large-scale Commercial Solutions](http://msdn.microsoft.com/library/dn751533.aspx) and [Hardware Sizing a Tabular Solution](http://go.microsoft.com/fwlink/?LinkId=330359).  
   

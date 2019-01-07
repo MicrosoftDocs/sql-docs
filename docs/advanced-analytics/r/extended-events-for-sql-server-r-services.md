@@ -1,5 +1,5 @@
 ---
-title: Extended events for SQL Server Machine Learning Services | Microsoft Docs
+title: Extended events for monitoring R and Python processes - SQL Server Machine Learning Services
 ms.prod: sql
 ms.technology: machine-learning
 
@@ -20,7 +20,7 @@ SQL Server provides a set of extended events to use in troubleshooting operation
 
 To view a list of events related to SQL Server, run the following query from [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].
 
-```SQL
+```sql
 SELECT o.name AS event_name, o.description
 FROM sys.dm_xe_objects o
 JOIN sys.dm_xe_packages p

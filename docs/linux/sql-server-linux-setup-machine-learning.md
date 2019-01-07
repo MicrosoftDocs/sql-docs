@@ -25,7 +25,7 @@ The package list has changed over the last several CTP releases, resulting in fe
 
 ### 1. Confirm package installation
 
-You might want to check for the existance of a previous installation as a first step. The following files indicate an existing installation: checkinstallextensibility.sh, exthost, launchpad.
+You might want to check for the existence of a previous installation as a first step. The following files indicate an existing installation: checkinstallextensibility.sh, exthost, launchpad.
 
 ```bash
 ls /opt/microsoft/mssql/bin
@@ -35,9 +35,9 @@ ls /opt/microsoft/mssql/bin
 
 Uninstall at the lowest package level. Any upstream package dependent on a lower-level package is automatically uninstalled.
 
-   + For R integration, remove **microsoft-r-open***
-   + For Python integration, remove **mssql-mlservices-python**
-   + For Java integration, remove **mssql-server-extensibility-java**
+  + For R integration, remove **microsoft-r-open***
+  + For Python integration, remove **mssql-mlservices-python**
+  + For Java integration, remove **mssql-server-extensibility-java**
 
 Commands for removing packages appear in the following table.
 
@@ -157,7 +157,7 @@ zypper update
 
 ## Package list
 
-On an internet-connected device, packages are downloaded and installed independently of the database engine using the package installer for each operating system. The following table describes all available packages, but for R and Python, you specify packages that provide either the full feature installation or the minimimum feature installation.
+On an internet-connected device, packages are downloaded and installed independently of the database engine using the package installer for each operating system. The following table describes all available packages, but for R and Python, you specify packages that provide either the full feature installation or the minimum feature installation.
 
 | Package name | Applies-to | Description |
 |--------------|----------|-------------|
@@ -306,7 +306,13 @@ Additional configuration is primarily through the [mssql-conf tool](sql-server-l
 
   An alternative workflow is that if you have not yet accepted the SQL Server database engine licensing agreement, setup detects the mssql-mlservices packages and prompts for EULA acceptance when `mssql-conf setup` is run. For more information about EULA parameters, see [Configure SQL Server with the mssql-conf tool](sql-server-linux-configure-mssql-conf.md#mlservices-eula).
 
-3. Restart the SQL Server Launchpad service and the database engine instance.
+3. For R feature integration only, set the **MKL_CBWR** environment variable to [ensure consistent output](https://software.intel.com/articles/introduction-to-the-conditional-numerical-reproducibility-cnr) from Intel Math Kernel Library (MKL) calculations.
+
+  + Edit or create a file named **.bash_profile** in your user home directory, adding the line `export MKL_CBWR="AUTO"` to the file.
+
+  + Execute this file by typing `source .bash_profile` at a bash command prompt.
+
+4. Restart the SQL Server Launchpad service and the database engine instance. 
 
   ```bash
   systemctl restart mssql-launchpadd
@@ -314,12 +320,14 @@ Additional configuration is primarily through the [mssql-conf tool](sql-server-l
   systemctl restart mssql-server.service
   ```
 
-4. Enable external script execution using Azure Data Studio or another tool like SQL Server Management Studio (Windows only) that runs Transact-SQL. 
+5. Enable external script execution using Azure Data Studio or another tool like SQL Server Management Studio (Windows only) that runs Transact-SQL. 
 
   ```bash
   EXEC sp_configure 'external scripts enabled', 1 
   RECONFIGURE WITH OVERRIDE 
   ```
+
+6. Restart the Launchpad service again.
 
 ## Verify installation
 

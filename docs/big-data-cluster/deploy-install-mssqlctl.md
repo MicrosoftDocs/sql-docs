@@ -4,7 +4,7 @@ description: Learn how to install the mssqlctl tool for installing and managing 
 author: rothja 
 ms.author: jroth 
 manager: craigg
-ms.date: 12/04/2018
+ms.date: 12/13/2018
 ms.topic: conceptual
 ms.prod: sql
 ---
@@ -23,9 +23,11 @@ This article describes how to install the **mssqlctl** tool on Windows or Linux.
 1. On a Windows client, download the necessary Python package from [https://www.python.org/downloads/](https://www.python.org/downloads/). For python3.5.3 and later, pip3 is also installed when you install Python. 
 
    > [!TIP] 
-   > When installing Python3, select to add Python to your path. If you do not, you can later find where pip3 is located and manually add it to your path.
+   > When installing Python3, select to add Python to your **PATH**. If you do not, you can later find where pip3 is located and manually add it to your **PATH**.
 
-1. Install **mssqlctl** with the following command:
+1. Open a new Windows PowerShell session so that it gets the latest path with Python in it.
+
+2. Install **mssqlctl** with the following command:
 
    ```bash
    pip3 install --extra-index-url https://private-repo.microsoft.com/python/ctp-2.2 mssqlctl

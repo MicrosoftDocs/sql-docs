@@ -99,7 +99,7 @@ These steps show you how to choose which events are collected and whether the ev
 4.  To stop saving local copies of events, set the value of **TraceLoggerEnabled** to **false**. To start saving local copies again, set the value to **true**.
 5.  To stop sending events to Microsoft, set the value of **AppInsightsLoggerEnabled** to **false**. To start sending events to Microsoft again, set the value to **true**.
 
-DEA is governed by the [Microsoft Privacy Statement](https://privacy.microsoft.com/privacystatement​).
+DEA is governed by the [Microsoft Privacy Statement](https://go.microsoft.com/fwlink/?LinkId=521839​).
 
 ## Next steps
 

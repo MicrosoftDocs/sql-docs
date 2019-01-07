@@ -1,7 +1,7 @@
 ---
 title: "CREATE SERVER AUDIT (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "09/07/2018"
+ms.date: "01/07/2019"
 ms.prod: sql
 ms.prod_service: "sql-database"
 ms.reviewer: ""

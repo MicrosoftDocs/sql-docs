@@ -3,7 +3,7 @@ title: Support for Report Viewer current branch versions
 uthor: markingmyname
 ms.author: maghan
 manager: kfile
-ms.reviewer: ""
+ms.reviewer: jonhp
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native, reporting-services-sharepoint
 ms.technology: application-integration

@@ -30,7 +30,7 @@ manager: craigg
 ## Remarks  
  Job schedules can now be managed independently of jobs. To remove a schedule from a job, use **sp_detach_schedule**. To delete a schedule, use **sp_delete_schedule**.  
   
-> **NOTE:**  **sp_delete_jobschedule** does not support schedules that are attached to multiple jobs. If an existing script calls **sp_delete_jobschedule** to remove a schedule that is attached to more than one job, the procedure returns an error.  
+> **NOTE:  sp_delete_jobschedule** does not support schedules that are attached to multiple jobs. If an existing script calls **sp_delete_jobschedule** to remove a schedule that is attached to more than one job, the procedure returns an error.  
   
 ## Permissions  
  By default, members of the **sysadmin** fixed server role can execute this stored procedure. Other users must be granted one of the following [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent fixed database roles in the **msdb** database:  

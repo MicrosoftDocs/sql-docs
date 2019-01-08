@@ -46,10 +46,10 @@ DENY permission [ ,...n ] ON
  *permission*  
  Is the name of a permission. The valid mappings of permissions to securables are described in the "Remarks" section, later in this topic.  
   
- ON FULLTEXT CATALOG **::***full-text_catalog_name*  
+ ON FULLTEXT CATALOG **::**_full-text_catalog_name_  
  Specifies the full-text catalog on which the permission is being denied. The scope qualifier **::** is required.  
   
- ON FULLTEXT STOPLIST **::***full-text_stoplist_name*  
+ ON FULLTEXT STOPLIST **::**_full-text_stoplist_name_  
  Specifies the full-text stoplist on which the permission is being denied. The scope qualifier **::** is required.  
   
  *database_principal*  

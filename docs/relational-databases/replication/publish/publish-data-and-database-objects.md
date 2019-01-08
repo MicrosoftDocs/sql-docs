@@ -51,8 +51,8 @@ manager: craigg
 |---------------------|--------------------------------------------------------|-----------------------|  
 |Tables|X|X|  
 |Partitioned Tables|X|X|  
-|Stored Procedures - Definition ([!INCLUDE[tsql](../../../includes/tsql-md.md)] and CLR)|X|X|  
-|Stored Procedures - Execution ([!INCLUDE[tsql](../../../includes/tsql-md.md)] and CLR)|X|no|  
+|Stored Procedures – Definition ([!INCLUDE[tsql](../../../includes/tsql-md.md)] and CLR)|X|X|  
+|Stored Procedures – Execution ([!INCLUDE[tsql](../../../includes/tsql-md.md)] and CLR)|X|no|  
 |Views|X|X|  
 |Indexed Views|X|X|  
 |Indexed Views as Tables|X|no|  
@@ -65,36 +65,22 @@ manager: craigg
 ## Creating Publications  
  To create a publication, you supply the following information:  
   
--   The Distributor.  
-  
--   The location of the snapshot files.  
-  
--   The publication database.  
-  
--   The type of publication to create (snapshot, transactional, transactional with updatable subscriptions, or merge).  
-  
--   The data and database objects (articles) to include in the publication.  
-  
--   Static row filters and column filters for all types of publications, and parameterized row filters and join filters for merge publications.  
-  
--   The Snapshot Agent schedule.  
-  
--   Accounts under which the following agents will run: the Snapshot Agent for all publications; the Log Reader Agent for all transactional publications; the Queue Reader Agent for transactional publications that allow updating subscriptions.  
-  
+-   The Distributor.    
+-   The location of the snapshot files.    
+-   The publication database.    
+-   The type of publication to create (snapshot, transactional, transactional with updatable subscriptions, or merge).    
+-   The data and database objects (articles) to include in the publication.   
+-   Static row filters and column filters for all types of publications, and parameterized row filters and join filters for merge publications.   
+-   The Snapshot Agent schedule.    
+-   Accounts under which the following agents will run: the Snapshot Agent for all publications; the Log Reader Agent for all transactional publications; the Queue Reader Agent for transactional publications that allow updating subscriptions.    
 -   A name and description for the publication.  
   
- For information about how to work with publications, see the following topics:  
-  
--   [Create a Publication](../../../relational-databases/replication/publish/create-a-publication.md)  
-  
--   [Define an Article](../../../relational-databases/replication/publish/define-an-article.md)  
-  
--   [View and Modify Publication Properties](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md)  
-  
--   [View and Modify Article Properties](../../../relational-databases/replication/publish/view-and-modify-article-properties.md)  
-  
--   [Delete a Publication](../../../relational-databases/replication/publish/delete-a-publication.md)  
-  
+ For information about how to work with publications, see the following topics:    
+-   [Create a Publication](../../../relational-databases/replication/publish/create-a-publication.md)    
+-   [Define an Article](../../../relational-databases/replication/publish/define-an-article.md)    
+-   [View and Modify Publication Properties](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md)    
+-   [View and Modify Article Properties](../../../relational-databases/replication/publish/view-and-modify-article-properties.md)    
+-   [Delete a Publication](../../../relational-databases/replication/publish/delete-a-publication.md)    
 -   [Delete an Article](../../../relational-databases/replication/publish/delete-an-article.md)  
   
 > [!NOTE]  
@@ -103,12 +89,9 @@ manager: craigg
 ## Publishing Tables  
  The most commonly published object is a table. The following links provide additional information about areas related to publishing tables:  
   
--   [Filter Published Data](../../../relational-databases/replication/publish/filter-published-data.md)  
-  
--   [Article Options for Transactional Replication](../../../relational-databases/replication/transactional/article-options-for-transactional-replication.md)  
-  
--   [Article Options for Merge Replication](../../../relational-databases/replication/merge/article-options-for-merge-replication.md)  
-  
+-   [Filter Published Data](../../../relational-databases/replication/publish/filter-published-data.md)    
+-   [Article Options for Transactional Replication](../../../relational-databases/replication/transactional/article-options-for-transactional-replication.md)
+-   [Article Options for Merge Replication](../../../relational-databases/replication/merge/article-options-for-merge-replication.md)    
 -   [Replicate Identity Columns](../../../relational-databases/replication/publish/replicate-identity-columns.md)  
   
  When publishing a table for replication, you can specify which schema objects should be copied to the Subscriber, such as declared referential integrity (primary key constraints, reference constraints, unique constraints), indexes, user DML triggers (DDL triggers cannot be replicated), extended properties, and collation. Extended properties are replicated only in the initial synchronization between the Publisher and the Subscriber. If you add or modify an extended property after the initial synchronization, the change is not replicated.  
@@ -193,7 +176,7 @@ manager: craigg
   
 -   For articles in publications that use character mode snapshots (which are used for non-[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Subscribers and [!INCLUDE[ssEW](../../../includes/ssew-md.md)] Subscribers): by default, the owner is left blank. The owner defaults to the owner associated with the account used by the Distribution Agent or Merge Agent to connect to the Subscriber.  
   
- The object owner can be changed through the **Article Properties - \<***Article***>** dialog box and through the following stored procedures: **sp_addarticle**, **sp_addmergearticle**, **sp_changearticle**, and **sp_changemergearticle**. For more information, see [View and Modify Publication Properties](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md), [Define an Article](../../../relational-databases/replication/publish/define-an-article.md), and [View and Modify Article Properties](../../../relational-databases/replication/publish/view-and-modify-article-properties.md).  
+ The object owner can be changed through the **Article Properties - \<**_Article_**>** dialog box and through the following stored procedures: **sp_addarticle**, **sp_addmergearticle**, **sp_changearticle**, and **sp_changemergearticle**. For more information, see [View and Modify Publication Properties](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md), [Define an Article](../../../relational-databases/replication/publish/define-an-article.md), and [View and Modify Article Properties](../../../relational-databases/replication/publish/view-and-modify-article-properties.md).  
   
 ### Publishing Data to Subscribers Running Previous Versions of SQL Server  
   

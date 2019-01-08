@@ -76,7 +76,7 @@ manager: craigg
  The Windows account or [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] account used for the connection to the Subscriber must at minimum be a member of the **db_owner** fixed database role in the subscription database.  
   
 ## See Also  
- [Manage Logins and Passwords in Replication](security/manage-logins-and-passwords-in-replication.md)   
+ [Manage Logins and Passwords in Replication](security/identity-and-access-control-replication.md#manage-logins-and-passwords-in-replication)   
  [Replication Agent Security Model](security/replication-agent-security-model.md)   
  [Replication Agents Overview](agents/replication-agents-overview.md)   
  [Replication Security Best Practices](security/replication-security-best-practices.md)   

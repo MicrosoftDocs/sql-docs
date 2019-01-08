@@ -79,7 +79,7 @@ column_name <data_type>
  *column_name*  
  Is the name of the column to be altered, added, or dropped. *column_name* can consist of 1 through 128 characters. For new columns, created with a timestamp data type, *column_name* can be omitted. If no *column_name* is specified for a **timestamp** data type column, the name **timestamp** is used.  
   
- [ *type_schema_name***.** ] *type_name*  
+ [ _type_schema_name_**.** ] *type_name*  
  Is the data type for the column that is added and the schema to which it belongs.  
   
  *type_name* can be:  

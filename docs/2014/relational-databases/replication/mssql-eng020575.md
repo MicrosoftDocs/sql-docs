@@ -27,7 +27,7 @@ manager: craigg
 |Message Text|Subscriber '%s' subscription to article '%s' in publication '%s' passed data validation.|  
   
 ## Explanation  
- The data at the Subscriber was validated against the data at the Publisher, and the data matched; therefore validation passed. For more information about validation, see [Validate Replicated Data](validate-replicated-data.md).  
+ The data at the Subscriber was validated against the data at the Publisher, and the data matched; therefore validation passed. For more information about validation, see [Validate Replicated Data](validate-data-at-the-subscriber.md).  
   
 ## See Also  
  [Errors and Events Reference &#40;Replication&#41;](errors-and-events-reference-replication.md)  

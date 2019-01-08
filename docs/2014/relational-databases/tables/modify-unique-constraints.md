@@ -57,7 +57,7 @@ manager: craigg
     |Set the clustered option|In the grid under **Table Designer**, select **Create As Clustered** and from the dropdown choose Yes to create a clustered index and No to create a non-clustered one. Only one clustered index can exist per table. If a clustered index already exists in this table, you must clear this setting on the original index.|  
     |Define a fill factor|In the grid under **Table Designer**, expand the **Fill Specification** category and type an integer from 0 to 100 in the **Fill Factor** box.|  
   
-5.  On the **File** menu, click **Save***table name*.  
+5.  On the **File** menu, click **Save**_table name_.  
   
 ##  <a name="TsqlProcedure"></a> **To modify a unique constraint**  
   

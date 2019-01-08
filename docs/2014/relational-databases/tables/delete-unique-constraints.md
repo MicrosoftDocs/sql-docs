@@ -59,7 +59,7 @@ manager: craigg
   
 4.  Click **Delete**.  
   
-5.  On the **File** menu, click **Save** *table name*.  
+5.  On the **File** menu, click **Save** _table name_.  
   
 ##  <a name="TsqlProcedure"></a> Using Transact-SQL  
   

@@ -60,9 +60,9 @@ manager: craigg
   
     -   **Run on demand only**  
   
-    -   **\<Define Schedule...>**  
+    -   **\<Define Schedule…>**  
   
-2.  If you select **\<Define Schedule...>**, specify a schedule in the **Job Schedule Properties** dialog box, and then click **OK**.  
+2.  If you select **\<Define Schedule…>**, specify a schedule in the **Job Schedule Properties** dialog box, and then click **OK**.  
   
 3.  Complete the wizard.  
   

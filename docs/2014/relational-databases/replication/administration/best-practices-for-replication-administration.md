@@ -115,7 +115,7 @@ manager: craigg
 ## Validate data periodically  
  Validation is not required by replication, but it is recommended to run validation periodically for transactional replication and merge replication. Validation allows you to verify that data at the Subscriber matches data at the Publisher. Successful validation indicates that at that point in time all changes from the Publisher have been replicated to the Subscriber (and from the Subscriber to the Publisher if updates are supported at the Subscriber) and that the two databases are in sync.  
   
- It is recommended that validation be performed according to the backup schedule of the publication database. For example, if the publication database has a full backup once per week, validation could be run once per week after the backup completes. For more information, see [Validate Replicated Data](../validate-replicated-data.md).  
+ It is recommended that validation be performed according to the backup schedule of the publication database. For example, if the publication database has a full backup once per week, validation could be run once per week after the backup completes. For more information, see [Validate Replicated Data](../validate-data-at-the-subscriber.md).  
   
 ## Use agent profiles to change agent parameters if necessary  
  Agent profiles provide a convenient method of setting replication agent parameters. Parameters can also be specified on the agent command line, but it is typically more appropriate to use a predefined agent profile or to create a new profile if you need to change the value of a parameter. For example, if you are using merge replication and a Subscriber moves from a broadband connection to a dialup connection, consider using the **slow link** profile for the Merge Agent; this profile uses a set of parameters that are better suited to the slower communications link. For more information, see [Replication Agent Profiles](../agents/replication-agent-profiles.md).  
@@ -142,6 +142,6 @@ manager: craigg
  For more information, see [Make Schema Changes on Publication Databases](../publish/make-schema-changes-on-publication-databases.md).  
   
 ## See Also  
- [Administration &#40;Replication&#41;](administration-replication.md)  
+ [Replication Administration FAQ](frequently-asked-questions-for-replication-administrators.md)  
   
   

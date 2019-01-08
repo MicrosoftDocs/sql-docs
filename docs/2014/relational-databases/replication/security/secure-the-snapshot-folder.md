@@ -48,7 +48,7 @@ manager: craigg
  [Alternate Snapshot Folder Locations](../alternate-snapshot-folder-locations.md)   
  [Initialize a Subscription with a Snapshot](../initialize-a-subscription-with-a-snapshot.md)   
  [Replication Security Best Practices](replication-security-best-practices.md)   
- [Security and Protection &#40;Replication&#41;](security-and-protection-replication.md)   
+ [SQL Server Replication Security](view-and-modify-replication-security-settings.md)   
  [Transfer Snapshots Through FTP](../transfer-snapshots-through-ftp.md)  
   
   

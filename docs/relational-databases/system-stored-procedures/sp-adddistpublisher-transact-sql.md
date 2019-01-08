@@ -42,10 +42,10 @@ sp_adddistpublisher [ @publisher= ] 'publisher'
 ```  
   
 ## Arguments  
- [ **@publisher=**] **'***publisher***'**  
+ [ **@publisher=**] **'**_publisher_**'**  
  Is the Publisher name. *publisher* is **sysname**, with no default.  
   
- [ **@distribution_db=**] **'***distribution_db***'**  
+ [ **@distribution_db=**] **'**_distribution_db_**'**  
  Is the name of the distribution database. *distributor_db* is **sysname**, with no default. This parameter is used by replication agents to connect to the Publisher.  
   
  [ **@security_mode=**] *security_mode*  
@@ -56,26 +56,26 @@ sp_adddistpublisher [ @publisher= ] 'publisher'
 |**0**|Replication agents at the Distributor use [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentication to connect to the Publisher.|  
 |**1** (default)|Replication agents at the Distributor use Windows Authentication to connect to the Publisher.|  
   
- [ **@login=**] **'***login***'**  
+ [ **@login=**] **'**_login_**'**  
  Is the login. This parameter is required if *security_mode* is **0**. *login* is **sysname**, with a default of NULL. This parameter is used by replication agents to connect to the Publisher.  
   
- [ **@password=**] **'***password***'**]  
+ [ **@password=**] **'**_password_**'**]  
  Is the password. *password* is **sysname**, with a default of NULL. This parameter is used by replication agents to connect to the Publisher.  
   
 > [!IMPORTANT]  
 >  Do not use a blank password. Use a strong password.  
   
- [ **@working_directory=**] **'***working_directory***'**  
+ [ **@working_directory=**] **'**_working_directory_**'**  
  Is the name of the working directory used to store data and schema files for the publication. *working_directory* is **nvarchar(255)**, and defaults to the ReplData folder for this instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], for example `C:\Program Files\Microsoft SQL Server\MSSQL\MSSQ.1\ReplData`. The name should be specified in UNC format.  
 
  For Azure SQL Database, use `\\<storage_account>.file.core.windows.net\<share>`.
 
- [ **@storage_connection_string =**] **'***storage_connection_string***'**  
+ [ **@storage_connection_string =**] **'**_storage_connection_string_**'**  
  Is required for SQL Database. Use the access key from Azure Portal under storage > settings.
 
  > [!INCLUDE[Azure SQL Database link](../../includes/azure-sql-db-repl-for-more-information.md)]
 
- [ **@trusted=**] **'***trusted***'**  
+ [ **@trusted=**] **'**_trusted_**'**  
  This parameter has been deprecated and is provided for backward compatibility only. *trusted* is **nvarchar(5)**, and setting it to anything but **false** will result in an error.  
   
  [ **@encrypted_password=**] *encrypted_password*  
@@ -89,7 +89,7 @@ sp_adddistpublisher [ @publisher= ] 'publisher'
 |**0** (default)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database.|  
 |**1**|Database other than [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
   
- [ **@publisher_type**= ] **'***publisher_type***'**  
+ [ **@publisher_type**= ] **'**_publisher_type_**'**  
  Specifies the Publisher type when the Publisher is not [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. *publisher_type* is sysname, and can be one of the following values.  
   
 |Value|Description|  

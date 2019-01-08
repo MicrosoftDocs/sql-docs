@@ -69,7 +69,7 @@ manager: craigg
 |System tables|sys.database_principal_aliases|Use roles instead of aliases.|  
 |Transact-SQL|`RAISERROR` in the format `RAISERROR integer 'string'` is discontinued.|Rewrite the statement using the current **RAISERROR(...)** syntax.|  
 |Transact-SQL syntax|`COMPUTE / COMPUTE BY`|Use `ROLLUP`|  
-|Transact-SQL syntax|Use of **\*=** and **=\***|Use ANSI join syntax. For more information, see [FROM (Transact-SQL).](https://msdn.microsoft.com/library/ms177634\(SQL.105\).aspx)|  
+|Transact-SQL syntax|Use of **\*=** and **=&#42;**|Use ANSI join syntax. For more information, see [FROM (Transact-SQL).](https://msdn.microsoft.com/library/ms177634\(SQL.105\).aspx)|  
 |XEvents|databases_data_file_size_changed, databases_log_file_size_changed<br /><br /> eventdatabases_log_file_used_size_changed<br /><br /> locks_lock_timeouts_greater_than_0<br /><br /> locks_lock_timeouts|Replaced by database_file_size_change event, database_file_size_change<br /><br /> database_file_size_change event<br /><br /> lock_timeout_greater_than_0<br /><br /> lock_timeout|  
   
  **Additional XEvent changes**  

@@ -68,7 +68,7 @@ COUNT_BIG (ALL *expression*) evaluates *expression* for each row in a group, and
   
 COUNT_BIG (DISTINCT *expression*) evaluates *expression* for each row in a group, and returns the number of unique, nonnull values.
   
-COUNT_BIG is a deterministic function when used ***without*** the OVER and ORDER BY clauses. COUNT_BIG is nondeterministic when used ***with*** the OVER and ORDER BY clauses. See [Deterministic and Nondeterministic Functions](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md) for more information.
+COUNT_BIG is a deterministic function when used **_without_** the OVER and ORDER BY clauses. COUNT_BIG is nondeterministic when used **_with_** the OVER and ORDER BY clauses. See [Deterministic and Nondeterministic Functions](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md) for more information.
   
 ## Examples  
 See [COUNT &#40;Transact-SQL&#41;](../../t-sql/functions/count-transact-sql.md) for examples.

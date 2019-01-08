@@ -25,7 +25,7 @@ manager: craigg
   
 1.  In [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], open your existing or new Report Server project.  
   
-2.  On the **Project** menu, click **Properties**. The *\<project>***Property Pages** dialog box opens.  
+2.  On the **Project** menu, click **Properties**. The _\<project>_**Property Pages** dialog box opens.  
   
 3.  Choose the **Configuration** you use to publish to a SharePoint site.  
   

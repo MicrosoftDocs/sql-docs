@@ -33,6 +33,6 @@ manager: craigg
   
 ## See Also  
  [Create a Publication from an Oracle Database](publish/create-a-publication-from-an-oracle-database.md)   
- [Properties Reference &#40;Replication&#41;](properties-reference-replication.md)  
+
   
   

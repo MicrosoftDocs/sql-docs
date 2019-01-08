@@ -79,7 +79,7 @@ manager: craigg
   
  The following topics provide information on security:  
   
--   [Security and Protection &#40;Replication&#41;](../../../relational-databases/replication/security/security-and-protection-replication.md)  
+-   [View and modify replication security settings](../../../relational-databases/replication/security/view-and-modify-replication-security-settings.md)  
   
 -   [Security Center for SQL Server Database Engine and Azure SQL Database](../../../relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database.md)  
   

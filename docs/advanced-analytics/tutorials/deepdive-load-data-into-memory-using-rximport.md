@@ -1,5 +1,6 @@
 ---
-title: Load data into memory using rxImport (SQL Server and RevoScaleR tutorial) | Microsoft Docs
+title: Load data into memory using RevoScaleR rxImport - SQL Server Machine Learning
+description: Tutorial walkthrough on how to load data using the R language on SQL Server.
 ms.prod: sql
 ms.technology: machine-learning
 
@@ -55,7 +56,7 @@ You've decided that you want to examine only the high risk individuals in more d
 
 **Results**
 
-```
+```R
 ccFraudLogitScore   state gender cardholder balance numTrans numIntlTrans creditLine ccFraudProb1
 9.786345    SD   Male  Principal   23456       25            5 75   0.99994382
 9.433040    FL Female  Principal   20629       24           28 75   0.99992003

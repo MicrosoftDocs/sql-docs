@@ -59,7 +59,7 @@ SHUTDOWN [ WITH NOWAIT ]
   
 -   By using [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager.  
   
--   By running **net stop mssqlserver** from a command prompt for a default instance, or by running **net stop mssql$***instancename* from a command prompt for a named instance.  
+-   By running **net stop mssqlserver** from a command prompt for a default instance, or by running **net stop mssql$**_instancename_ from a command prompt for a named instance.  
   
 -   By using Services in Control Panel.  
   

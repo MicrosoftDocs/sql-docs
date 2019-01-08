@@ -4,7 +4,7 @@ description: Use the sqlrutils function library in SQL Server 2016 R Services an
 ms.prod: sql
 ms.technology: machine-learning
 
-ms.date: 04/15/2018  
+ms.date: 12/15/2018  
 ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist

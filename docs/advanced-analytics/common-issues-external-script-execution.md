@@ -15,8 +15,6 @@ manager: cgronlun
 
 Multiple issues can prevent Launchpad from starting, including configuration problems or changes, or missing network protocols. This article provides troubleshooting guidance for many issues. For any we missed, you can post questions to the [Machine Learning Server forum](https://social.msdn.microsoft.com/Forums/en-US/home?category=MicrosoftR).
 
-**Applies to:** SQL Server 2016 R Services, SQL Server 2017 Machine Learning Services
-
 ## Determine whether Launchpad is running
 
 1. Open the **Services** panel (Services.msc). Or, from the command line, type **SQLServerManager13.msc** or **SQLServerManager14.msc** to open [SQL Server Configuration Manager](https://docs.microsoft.com/sql/relational-databases/sql-server-configuration-manager).
@@ -63,7 +61,7 @@ If you installed SQL Server as a database administrator or you are a database ow
 
 To correct the problem, in SQL Server Management Studio, a security administrator can modify the SQL login or Windows user account by running the following script:
 
-```SQL
+```sql
 GRANT EXECUTE ANY EXTERNAL SCRIPT TO <username>
 ```
 
@@ -126,7 +124,7 @@ If you have installed and then enabled machine learning, but you get this error 
 
     a. Review the launcher's .config file and ensure that the working directory is valid.
 
-    b. Ensure that the Windows group that's used by Launchpad can connect to the SQL Server instance, as described in the [previous section](#bkmk_LaunchpadTS).
+    b. Ensure that the Windows group that's used by Launchpad can connect to the SQL Server instance.
 
     c. If you change any of the service properties, restart the Launchpad service.
 
@@ -166,7 +164,7 @@ This error can happen in many ways:
 
 To determine the location of the R package library that's used by the instance, open SQL Server Management Studio (or any other database query tool), connect to the instance, and then run the following stored procedure:
 
-```SQL
+```sql
 EXEC sp_execute_external_script @language = N'R',  
 @script = N' print(normalizePath(R.home())); print(.libPaths());'; 
 ```

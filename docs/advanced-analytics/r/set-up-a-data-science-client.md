@@ -63,7 +63,7 @@ Locate and list the contents of the installation folder to confirm that R.exe, R
 3. Open C:\Program Files\Microsoft\R Client\R_SERVER\library to review the list of packages installed with R Client, including RevoScaleR, MicrosoftML, and others.
 
 
-<a name="r-tool"></a>
+<a name="R-tools"></a>
  
 ## 3 - Start RGUI
 
@@ -110,7 +110,7 @@ The following steps assume the demo database, [NYCTaxi_Sample](../tutorials/demo
 
 3. Enter demo script that executes on the remote server. You must modify the following sample script to include a valid name for a remote SQL Server instance. This session begins as a local session, but the **rxSummary** function executes on the remote SQL Server instance.
 
-  ```r
+  ```R
   # Define a connection. Replace server with a valid server name.
   connStr <- "Driver=SQL Server;Server=<your-server-name>;Database=NYCTaxi_Sample;Trusted_Connection=true"
   
@@ -128,7 +128,7 @@ The following steps assume the demo database, [NYCTaxi_Sample](../tutorials/demo
 
   This script connects to a database on the remote server, provides a query, creates a compute context `cc` instruction for remote code execution, then provides the RevoScaleR function **rxSummary** to return a statistical summary of the query results.
 
-  ```r
+  ```R
     Call:
   rxSummary(formula = ~., data = RxSqlServerData(sqlQuery = sampleQuery, 
       connectionString = connStr), computeContext = cc)
@@ -143,7 +143,7 @@ The following steps assume the demo database, [NYCTaxi_Sample](../tutorials/demo
 
 4. Get and set the compute context. Once you set a compute context, it remains in effect for the duration of the session. If you aren't sure whether computation is local or remote, run the following command to find out. Results that specify a connection string indicate a remote compute context.
 
-  ```r
+  ```R
   # Return the current compute context.
   rxGetComputeContext()
 
@@ -160,7 +160,7 @@ The following steps assume the demo database, [NYCTaxi_Sample](../tutorials/demo
 
 5. Return information about variables in the data source, including name and type.
 
-  ```r
+  ```R
   rxGetVarInfo(data = inDataSource)
   ```
   Results include 23 variables.
@@ -168,7 +168,7 @@ The following steps assume the demo database, [NYCTaxi_Sample](../tutorials/demo
 
 6. Generate a scatter plot to explore whether there are dependencies between two variables. 
 
-  ```r
+  ```R
   # Set the connection string. Substitute a valid server name for the placeholder.
   connStr <- "Driver=SQL Server;Server=<your database name>;Database=NYCTaxi_Sample;Trusted_Connection=true"
 

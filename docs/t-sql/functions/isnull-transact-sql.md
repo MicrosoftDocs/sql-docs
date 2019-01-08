@@ -45,7 +45,7 @@ ISNULL ( check_expression , replacement_value )
  Is the [expression](../../t-sql/language-elements/expressions-transact-sql.md) to be checked for NULL. *check_expression* can be of any type.  
   
  *replacement_value*  
- Is the expression to be returned if *check_expression* is NULL. *replacement_value* must be of a type that is implicitly convertible to the type of *check_expresssion*.  
+ Is the expression to be returned if *check_expression* is NULL. *replacement_value* must be of a type that is implicitly convertible to the type of *check_expression*.  
   
 ## Return Types  
  Returns the same type as *check_expression*. If a literal NULL is provided as *check_expression*, returns the datatype of the *replacement_value*. If a literal NULL is provided as *check_expression* and no *replacement_value* is provided, returns an **int**.  

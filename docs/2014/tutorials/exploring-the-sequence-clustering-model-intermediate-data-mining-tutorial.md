@@ -173,7 +173,7 @@ manager: craigg
   
 1.  In the **Cluster Discrimination** tab, for **Cluster 1**, select `Pacific Cluster`.  
   
-     By default, the selection for **Cluster 2** changes to **Complement of Pacific****Cluster**.  
+     By default, the selection for **Cluster 2** changes to **Complement of Pacific Cluster**.  
   
      The top attribute that distinguishes `Pacific Cluster` from all other cases is the region. Region is such a strong attribute for clustering that it obscures other attributes. To avoid this effect, try comparing several of the smaller clusters to each other. When you do so, the list of attributes changes and might include more transitions between models.  
   

@@ -75,58 +75,58 @@ tablediff
  [ **-?** ]  
  Returns the list of supported parameters.  
   
- **-sourceserver** *source_server_name*[**\\**_instance\_name_]  
- Is the name of the source server. Specify *source_server_name* for the default instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Specify *source_server_name***\\***instance_name* for a named instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
+ **-sourceserver** _source_server_name_[**\\**_instance\_name_]  
+ Is the name of the source server. Specify *source_server_name* for the default instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Specify _source_server_name_**\\**_instance_name_ for a named instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
- **-sourcedatabase** *source_database*  
+ **-sourcedatabase** _source_database_  
  Is the name of the source database.  
   
- **-sourcetable** *source_table_name*  
+ **-sourcetable** _source_table_name_  
  Is the name of the source table being checked.  
   
- **-sourceschema** *source_schema_name*  
+ **-sourceschema** _source_schema_name_  
  The schema owner of the source table. By default, the table owner is assumed to be dbo.  
   
- **-sourcepassword** *source_password*  
+ **-sourcepassword** _source_password_  
  Is the password for the login used to connect to the source server using [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Authentication.  
   
 > [!IMPORTANT]  
 >  When possible, supply security credentials at runtime. If you must store credentials in a script file, you should secure the file to prevent unauthorized access.  
   
- **-sourceuser** *source_login*  
+ **-sourceuser** _source_login_  
  Is the login used to connect to the source server using [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Authentication. If *source_login* is not supplied, then Windows Authentication is used when connecting to the source server. [!INCLUDE[ssNoteWinAuthentication](../includes/ssnotewinauthentication-md.md)]  
   
  **-sourcelocked**  
  The source table is locked during the comparison using the TABLOCK and HOLDLOCK table hints.  
   
- **-destinationserver** *destination_server_name*[**\\***instance_name*]  
- Is the name of the destination server. Specify *destination_server_name* for the default instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Specify *destination_server_name***\\***instance_name* for a named instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
+ **-destinationserver** _destination_server_name_[**\\**_instance_name_]  
+ Is the name of the destination server. Specify *destination_server_name* for the default instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Specify _destination_server_name_**\\**_instance_name_ for a named instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
- **-destinationdatabase** *subscription_database*  
+ **-destinationdatabase** _subscription_database_  
  Is the name of the destination database.  
   
- **-destinationtable** *destination_table*  
+ **-destinationtable** _destination_table_  
  Is the name of the destination table.  
   
- **-destinationschema** *destination_schema_name*  
+ **-destinationschema** _destination_schema_name_  
  The schema owner of the destination table. By default, the table owner is assumed to be dbo.  
   
- **-destinationpassword** *destination_password*  
+ **-destinationpassword** _destination_password_  
  Is the password for the login used to connect to the destination server using [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Authentication.  
   
 > [!IMPORTANT]  
 >  When possible, supply security credentials at runtime. If you must store credentials in a script file, you should secure the file to prevent unauthorized access.  
   
- **-destinationuser** *destination_login*  
+ **-destinationuser** _destination_login_  
  Is the login used to connect to the destination server using [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Authentication. If *destination_login* is not supplied, then Windows Authentication is used when connecting to the server. [!INCLUDE[ssNoteWinAuthentication](../includes/ssnotewinauthentication-md.md)]  
   
  **-destinationlocked**  
  The destination table is locked during the comparison using the TABLOCK and HOLDLOCK table hints.  
   
- **-b** *large_object_bytes*  
+ **-b** _large_object_bytes_  
  Is the number of bytes to compare for large object data type columns, which includes: **text**, **ntext**, **image**, **varchar(max)**, **nvarchar(max)** and **varbinary(max)**. *large_object_bytes* defaults to the size of the column. Any data above *large_object_bytes* will not be compared.  
   
- **-bf**  *number_of_statements*  
+ **-bf**  _number_of_statements_  
  Is the number of [!INCLUDE[tsql](../includes/tsql-md.md)] statements to write to the current [!INCLUDE[tsql](../includes/tsql-md.md)] script file when the **-f** option is used. When the number of [!INCLUDE[tsql](../includes/tsql-md.md)] statements exceeds *number_of_statements*, a new [!INCLUDE[tsql](../includes/tsql-md.md)] script file is created.  
   
  **-c**  
@@ -135,28 +135,28 @@ tablediff
  **-dt**  
  Drop the result table specified by *table_name*, if the table already exists.  
   
- **-et** *table_name*  
+ **-et** _table_name_  
  Specifies the name of the result table to create. If this table already exists, **-DT** must be used or the operation will fail.  
   
  **-f** [ *file_name* ]  
  Generates a [!INCLUDE[tsql](../includes/tsql-md.md)] script to bring the table at the destination server into convergence with the table at the source server. You can optionally specify a name and path for the generated [!INCLUDE[tsql](../includes/tsql-md.md)] script file. If *file_name* is not specified, the [!INCLUDE[tsql](../includes/tsql-md.md)] script file is generated in the directory where the utility runs.  
   
- **-o** *output_file_name*  
+ **-o** _output_file_name_  
  Is the full name and path of the output file.  
   
  **-q**  
  Perform a fast comparison by only comparing row counts and schema.  
   
- **-rc** *number_of_retries*  
+ **-rc** _number_of_retries_  
  Number of times that the utility retries a failed operation.  
   
- **-ri**  *retry_interval*  
+ **-ri**  _retry_interval_  
  Interval, in seconds, to wait between retries.  
   
  **-strict**  
  Source and destination schema are strictly compared.  
   
- **-t** *connection_timeouts*  
+ **-t** _connection_timeouts_  
  Sets the connection timeout period, in seconds, for connections to the source server and destination server.  
   
 ## Return Value  

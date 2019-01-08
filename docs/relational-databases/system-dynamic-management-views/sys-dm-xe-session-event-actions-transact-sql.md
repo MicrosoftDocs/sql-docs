@@ -29,9 +29,9 @@ manager: craigg
 |Column name|Data type|Description|  
 |-----------------|---------------|-----------------|  
 |event_session_address|**varbinary(8)**|The memory address of the event session. Is not nullable.|  
-|action_name|**nvarchar(60)**|The name of the action. Is not nullable.|  
+|action_name|**nvarchar(256)**|The name of the action. Is not nullable.|  
 |action_package_guid|**uniqueidentifier**|The GUID for the package that contains the action. Is not nullable.|  
-|event_name|**nvarchar(60)**|The name of the event that the action is bound to. Is not nullable.|  
+|event_name|**nvarchar(256)**|The name of the event that the action is bound to. Is not nullable.|  
 |event_package_guid|**uniqueidentifier**|The GUID for the package that contains the event. Is not nullable.|  
   
 ## Permissions  
@@ -42,14 +42,8 @@ manager: craigg
 |From|To|Relationship|  
 |----------|--------|------------------|  
 |sys.dm_xe_session_event_actions.event_session_address|sys.dm_xe_sessions.address|Many-to-one|  
-|sys.dm_xe_session_event_actions.action_name<br /><br /> sys.dm_xe_session_event_actions.action_package_guid|sys.dm_xe_objects.name<br /><br /> sys.dm_xe_session_events.event_package_guid|Many-to-one|  
-|sys.dm_xe_session_event_actions.event_name<br /><br /> sys.dm_xe_session_event_actions.event_package_guid|sys.dm_xe_objects.name<br /><br /> sys.dm_xe_objects.package_guid|Many-to-one|  
-  
-## Change History  
-  
-|Updated content|  
-|---------------------|  
-|Updated "Relationship Cardinalities" table with the correct dynamic management view names and column names.|  
+|sys.dm_xe_session_event_actions.action_name,<br /><br /> sys.dm_xe_session_event_actions.action_package_guid|sys.dm_xe_objects.name,<br /><br /> sys.dm_xe_session_events.event_package_guid|Many-to-one|  
+|sys.dm_xe_session_event_actions.event_name,<br /><br /> sys.dm_xe_session_event_actions.event_package_guid|sys.dm_xe_objects.name,<br /><br /> sys.dm_xe_objects.package_guid|Many-to-one|  
   
 ## See Also  
  [Dynamic Management Views and Functions &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)  

@@ -40,10 +40,10 @@ The following qualifiers specify that an empty field in the data file retains it
 |Command|Qualifier|Qualifier type|  
 |-------------|---------------|--------------------|  
 |bcp|-k|Switch|  
-|BULK INSERT|KEEPNULLS**\***|Argument|  
+|BULK INSERT|KEEPNULLS\*|Argument|  
 |INSERT ... SELECT * FROM OPENROWSET(BULK...)|N/A|N/A|  
   
-**\*** For [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md), if default values are not available, the table column must be defined to allow null values. 
+\* For [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md), if default values are not available, the table column must be defined to allow null values. 
   
 > [!NOTE]
 > These qualifiers disable checking of DEFAULT definitions on a table by these bulk-import commands.  However, for any concurrent INSERT statements, DEFAULT definitions are expected.

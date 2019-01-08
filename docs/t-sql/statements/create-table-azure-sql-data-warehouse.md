@@ -318,7 +318,7 @@ For more information, see these articles:
   
  Local temporary tables have the following limitations and restrictions:  
   
--   They are visible only to the current session. [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] drops them automatically at the end of the session. To drop them explicitlt, use the DROP TABLE statement.   
+-   They are visible only to the current session. [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] drops them automatically at the end of the session. To drop them explicitly, use the DROP TABLE statement.   
 -   They cannot be renamed. 
 -   They cannot have partitions or views.  
 -   Their permissions cannot be changed. `GRANT`, `DENY`, and `REVOKE` statements cannot be used with local temporary tables.   

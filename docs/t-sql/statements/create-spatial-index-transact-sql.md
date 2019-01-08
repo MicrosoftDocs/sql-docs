@@ -108,12 +108,12 @@ CREATE SPATIAL INDEX index_name
   
 <named_bb_coordinate> ::= { XMIN = xmin | YMIN = ymin | XMAX = xmax | YMAX=ymax }  
   
-<tesselation_grid> ::=  
+<tessellation_grid> ::=  
 {   
     GRIDS = ( { <grid_level> [ ,...n ] | <grid_size>, <grid_size>, <grid_size>, <grid_size>  }   
         )  
 }  
-<tesseallation_cells_per_object> ::=  
+<tessellation_cells_per_object> ::=  
 {   
    CELLS_PER_OBJECT = n   
 }  

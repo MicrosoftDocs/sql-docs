@@ -1,7 +1,7 @@
 ---
 title: "SQL Server Migration Assistant | Microsoft Docs"
 ms.custom: ""
-ms.date: "09/30/2017"
+ms.date: "01/04/2019"
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: ssma
@@ -36,9 +36,10 @@ The following target versions are supported for SSMA.
 - SQL Server 2012
 - SQL Server 2014
 - SQL Server 2016
+- SQL Server 2017 on Windows and Linux
+- SQL Server 2019 on Windows and Linux
 - Azure SQL Database
-- SQL Server 2017 on Windows and Linux (Preview)
-- **Azure SQL Data Warehouse
+- Azure SQL Data Warehouse**
 
 ** This target is supported only by SSMA for Oracle.
  
@@ -75,7 +76,7 @@ Unless otherwise noted, the example companies, organizations, products, domain n
   
 Microsoft may have patents, patent applications, trademarks, copyrights, or other intellectual property rights covering subject matter in this documentation. Except as expressly provided in any written license agreement from Microsoft, the furnishing of this documentation does not give you any license to these patents, trademarks, copyrights, or other intellectual property.  
   
-© 2017 Microsoft Corporation. All rights reserved.  
+© 2019 Microsoft Corporation. All rights reserved.  
   
 Microsoft, Windows, Windows NT, Windows Server, Active Directory, ActiveX, BackOffice, bCentral, BizTalk, DirectX, Excel, Hotmail, IntelliSense, J/Direct, Jscript, Microsoft Press, MSDN, MS-DOS, Outlook, PivotChart, PivotTable, PowerPoint, SharePoint, SQL Server, Visual Basic, Visual C#, Visual C++, Visual FoxPro, Visual InterDev, Visual J#, Visual J++, Visual SourceSafe, Visual Studio, Win32, Win32s, Windows Mobile, Windows Server System, and WinFX are either registered trademarks or trademarks of Microsoft Corporation in the United States and/or other countries/regions.  
   

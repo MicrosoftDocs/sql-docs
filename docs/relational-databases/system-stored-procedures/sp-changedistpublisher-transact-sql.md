@@ -35,16 +35,16 @@ sp_changedistpublisher [ @publisher = ] 'publisher'
 ```  
   
 ## Arguments  
- [ **@publisher=** ] **'***publisher***'**  
+ [ **@publisher=** ] **'**_publisher_**'**  
  Is the Publisher name. *publisher* is **sysname**, with no default.  
   
- [ **@property=** ] **'***property***'**  
+ [ **@property=** ] **'**_property_**'**  
  Is a property to change for the given Publisher. *property* is **sysname** and can be one of these values.  
   
- [ **@value=** ] **'***value***'**  
+ [ **@value=** ] **'**_value_**'**  
  Is the value for the given property. *value* is **nvarchar(255)**, with a default of NULL.  
   
- [ **@storage_connection_string =**] **'***storage_connection_string***'**  
+ [ **@storage_connection_string =**] **'**_storage_connection_string_**'**  
  Is required for SQL Database managed instance, should match the access key for the Azure SQL Database storage volume. 
 
 

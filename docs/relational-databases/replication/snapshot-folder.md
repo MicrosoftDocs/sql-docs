@@ -28,7 +28,7 @@ manager: craigg
 >  [!INCLUDE[msCoName](../../includes/msconame-md.md)] recommends that you use a network share as a snapshot folder location. Local paths (those starting with a drive letter, such as C:\\) are not accessible to agents on other computers.  
   
 ## See Also  
- [Alternate Snapshot Folder Locations](../../relational-databases/replication/alternate-snapshot-folder-locations.md)   
+ [Modify snapshot options](../../relational-databases/replication/snapshot-options.md)   
  [Configure Distribution](../../relational-databases/replication/configure-distribution.md)   
  [Configure Publishing and Distribution](../../relational-databases/replication/configure-publishing-and-distribution.md)   
  [View and Modify Distributor and Publisher Properties](../../relational-databases/replication/view-and-modify-distributor-and-publisher-properties.md)   

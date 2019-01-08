@@ -34,7 +34,7 @@ sp_batch_params [ [ @tsqlbatch = ] 'tsqlbatch' ]
 ```  
   
 ## Arguments  
- [ **@tsqlbatch =**] **'***tsqlbatch***'**  
+ [ **@tsqlbatch =**] **'**_tsqlbatch_**'**  
  Is a Unicode string that contains a [!INCLUDE[tsql](../../includes/tsql-md.md)] statement or batch for which parameter information is that you want. *tsqlbatch* is **nvarchar(max)** or implicitly convertible to **nvarchar(max)**.  
   
 ## Return Code Values  

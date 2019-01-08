@@ -16,16 +16,11 @@ manager: craigg
 # Run Replication Maintenance Jobs (SQL Server Management Studio)
   Replication uses the following maintenance jobs:  
   
--   **Reinitialize subscriptions having data validation failures**  
-  
--   **Agent history clean up: distribution**  
-  
--   **Replication monitoring refresher for distribution.**  
-  
--   **Replication agents checkup**  
-  
--   **Distribution clean up: distribution**  
-  
+-   **Reinitialize subscriptions having data validation failures**
+-   **Agent history clean up: distribution**
+-   **Replication monitoring refresher for distribution.**
+-   **Replication agents checkup**
+-   **Distribution clean up: distribution**
 -   **Expired subscription clean up**  
   
  Start and stop these jobs from the **Jobs** folder in [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] and from the **Agents** tab in Replication Monitor. For information about starting Replication Monitor, see [Start the Replication Monitor](../monitor/start-the-replication-monitor.md). View and modify properties for each job in the **Job Properties - \<Job>** dialog box, which is available from the same folder and tab.  
@@ -68,7 +63,7 @@ manager: craigg
   
 ## See Also  
  [Start and Stop a Replication Agent &#40;SQL Server Management Studio&#41;](../agents/start-and-stop-a-replication-agent-sql-server-management-studio.md)   
- [View Information and Perform Tasks for a Publisher &#40;Replication Monitor&#41;](../monitor/view-information-and-perform-tasks-for-a-publisher-replication-monitor.md)   
+ [View Information and Perform Tasks using Replication Monitor](../monitor/view-information-and-perform-tasks-replication-monitor.md)   
  [Replication Agent Administration](../agents/replication-agent-administration.md)  
   
   

@@ -60,7 +60,7 @@ manager: craigg
   
 5.  Indicate whether the data is persisted by choosing **Yes** or **No** from the drop-down for the **Is Persisted** child property.  
   
-6.  On the **File** menu, click **Save***table name*.  
+6.  On the **File** menu, click **Save**_table name_.  
   
 #### To add a computed column definition to an existing column  
   

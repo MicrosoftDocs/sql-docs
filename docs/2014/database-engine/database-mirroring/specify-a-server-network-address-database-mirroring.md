@@ -26,7 +26,7 @@ manager: craigg
 ##  <a name="Syntax"></a> Syntax for a Server Network Address  
  The syntax for a server network address is of the form:  
   
- TCP**://***\<system-address>***:***\<port>*  
+ TCP<strong>://</strong>*\<system-address>*<strong>:<strong>*\<port>* 
   
  where  
   
@@ -34,15 +34,15 @@ manager: craigg
   
     -   If the systems are the same domain, you can use the name of the computer system; for example, `SYSTEM46`.  
   
-    -   To use an IP address, it must be unique in your environment. We recommend that you use an IP address only if it is static. The IP address can be IP Version 4 (IPv4) or IP Version 6 (IPv6). An IPv6 address must be enclosed within square brackets, for example: **[***<IPv6_address>***]**.  
+    -   To use an IP address, it must be unique in your environment. We recommend that you use an IP address only if it is static. The IP address can be IP Version 4 (IPv4) or IP Version 6 (IPv6). An IPv6 address must be enclosed within square brackets, for example: **[**_<IPv6_address>_**]**.  
   
          To learn the IP address of a system, at the Windows command prompt, enter the **ipconfig** command.  
   
     -   The fully qualified domain name is guaranteed to work. This is a locally defined address string that different forms in different places. Often, but not always, a fully qualified domain name is a compound name that includes the computer name and a series of period-separated domain segments of the form:  
   
-         *computer_name* **.** *domain_segment*[...**.***domain_segment*]  
+         _computer_name_ **.** _domain_segment_[...**.**_domain_segment_]  
   
-         where *computer_name i*s the network name of the computer running the server instance, and *domain_segment*[...**.***domain_segment*] is the remaining domain information of the server; for example: `localinfo.corp.Adventure-Works.com`.  
+         where *computer_name i*s the network name of the computer running the server instance, and *domain_segment*[...**.**_domain_segment_] is the remaining domain information of the server; for example: `localinfo.corp.Adventure-Works.com`.  
   
          The content and number of domain segments are determined within the company or organization. If you do not know the fully qualified domain name for your server, see your system administrator.  
   
@@ -102,7 +102,7 @@ ALTER DATABASE AdventureWorks SET PARTNER ='tcp://[2001:4898:23:1002:20f:1fff:fe
   
  To form the fully qualified domain name, concatenate the values of*<host_name>* and *<Primary_Dns_Suffix>* as follows:  
   
- *<host_name>* **.** *<Primary_Dns_Suffix>*  
+ _<host_name>_ **.** _<Primary_Dns_Suffix>_  
   
  For example, the IP configuration  
   

@@ -128,7 +128,7 @@ manager: craigg
   
 2.  On the **Start** menu, point to **All Programs**, point to [!INCLUDE[ssCurrentUI](../../../includes/sscurrentui-md.md)], point to **Configuration Tools**, and  click **SQL Server Configuration Manager**.  
   
-3.  In **SQL Server Configuration Manager**, click **SQL Server Services**, right-click SQL Server (**\<***instance name***>)**, where **\<***instance name***>** is the name of a local server instance for which you want to enable Always On Availability Groups, and click **Properties.**  
+3.  In **SQL Server Configuration Manager**, click **SQL Server Services**, right-click SQL Server (**\<**_instance name_**>)**, where **\<**_instance name_**>** is the name of a local server instance for which you want to enable Always On Availability Groups, and click **Properties.**  
   
 4.  Select the **Always On High Availability** tab.  
   
@@ -192,7 +192,7 @@ Enable-SqlAlwaysOn -Path SQLSERVER:\SQL\Computer\Instance
   
 2.  On the **Start** menu, point to **All Programs**, point to [!INCLUDE[ssCurrentUI](../../../includes/sscurrentui-md.md)], point to **Configuration Tools**, and click **SQL Server Configuration Manager**.  
   
-3.  In **SQL Server Configuration Manager**, click **SQL Server Services**, right-click SQL Server (**\<***instance name***>)**, where **\<***instance name***>** is the name of a local server instance for which you want to disable Always On Availability Groups, and click **Properties**.  
+3.  In **SQL Server Configuration Manager**, click **SQL Server Services**, right-click SQL Server (**\<**_instance name_**>)**, where **\<**_instance name_**>** is the name of a local server instance for which you want to disable Always On Availability Groups, and click **Properties**.  
   
 4.  On the**Always On High Availability**tab, deselect the **Enable Always On Availability Groups** check box, and click **OK**.  
   

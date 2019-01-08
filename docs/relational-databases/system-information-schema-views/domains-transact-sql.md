@@ -31,7 +31,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
 |Column name|Data type|Description|  
 |-----------------|---------------|-----------------|  
 |**DOMAIN_CATALOG**|**nvarchar(**128**)**|Database in which the alias data type exists.|  
-|**DOMAIN_SCHEMA**|**nvarchar(**128**)**|Name of the schema that contains the alias data type.<br /><br /> **\*\* Important \*\*** Do not use INFORMATION_SCHEMA views to determine the schema of a data type. The only reliable way to find the schema of a type is to use the TYPEPROPERTY function.|  
+|**DOMAIN_SCHEMA**|**nvarchar(**128**)**|Name of the schema that contains the alias data type.<br /><br /> **&#42;&#42; Important &#42;&#42;** Do not use INFORMATION_SCHEMA views to determine the schema of a data type. The only reliable way to find the schema of a type is to use the TYPEPROPERTY function.|  
 |**DOMAIN_NAME**|**sysname**|Alias data type.|  
 |**DATA_TYPE**|**sysname**|System-supplied data type.|  
 |**CHARACTER_MAXIMUM_LENGTH**|**int**|Maximum length, in characters, for binary data, character data, or text and image data.<br /><br /> -1 for **xml** and large-value type data. Otherwise, NULL is returned. For more information, see [Data Types &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md).|  

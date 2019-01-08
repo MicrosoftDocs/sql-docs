@@ -62,7 +62,7 @@ manager: craigg
 > [!IMPORTANT]  
 >  While the context switch to the database user is active, any attempt to access resources outside of the database will cause the statement to fail. This includes USE *database* statements, distributed queries, and queries that reference another database that uses three- or four-part identifiers.  
   
- **'** *name* **'**  
+ **'** _name_ **'**  
  Is a valid user or login name. *name* must be a member of the **sysadmin** fixed server role, or exist as a principal in [sys.database_principals](../../relational-databases/system-catalog-views/sys-database-principals-transact-sql.md) or [sys.server_principals](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md), respectively.  
   
  *name* can be specified as a local variable.  
@@ -79,7 +79,7 @@ manager: craigg
  COOKIE INTO **@**_varbinary_variable_  
  Specifies the execution context can only be reverted back to the previous context if the calling REVERT WITH COOKIE statement contains the correct **@**_varbinary_variable_ value. The [!INCLUDE[ssDE](../../includes/ssde-md.md)] passes the cookie to **@**_varbinary_variable_. The **COOKIE INTO** option can only be used at the adhoc level.  
   
- **@** *varbinary_variable* is **varbinary(8000)**.  
+ **@** _varbinary_variable_ is **varbinary(8000)**.  
   
 > [!NOTE]  
 >  The cookie **OUTPUT** parameter for is currently documented as **varbinary(8000)** which is the correct maximum length. However the current implementation returns **varbinary(100)**. Applications should reserve **varbinary(8000)** so that the application continues to operate correctly if the cookie return size increases in a future release.  

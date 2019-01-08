@@ -63,7 +63,7 @@ manager: craigg
   
 5.  Click **Close**.  
   
-6.  On the **File** menu, click **Save***table name*.  
+6.  On the **File** menu, click **Save**_table name_.  
   
 ##  <a name="TsqlProcedure"></a> Using Transact-SQL  
  **To modify a check constraint**  

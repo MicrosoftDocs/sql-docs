@@ -176,7 +176,7 @@ manager: craigg
   
 -   For articles in publications that use character mode snapshots (which are used for non-[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Subscribers and [!INCLUDE[ssEW](../../../includes/ssew-md.md)] Subscribers): by default, the owner is left blank. The owner defaults to the owner associated with the account used by the Distribution Agent or Merge Agent to connect to the Subscriber.  
   
- The object owner can be changed through the **Article Properties - \<***Article***>** dialog box and through the following stored procedures: **sp_addarticle**, **sp_addmergearticle**, **sp_changearticle**, and **sp_changemergearticle**. For more information, see [View and Modify Publication Properties](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md), [Define an Article](../../../relational-databases/replication/publish/define-an-article.md), and [View and Modify Article Properties](../../../relational-databases/replication/publish/view-and-modify-article-properties.md).  
+ The object owner can be changed through the **Article Properties - \<**_Article_**>** dialog box and through the following stored procedures: **sp_addarticle**, **sp_addmergearticle**, **sp_changearticle**, and **sp_changemergearticle**. For more information, see [View and Modify Publication Properties](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md), [Define an Article](../../../relational-databases/replication/publish/define-an-article.md), and [View and Modify Article Properties](../../../relational-databases/replication/publish/view-and-modify-article-properties.md).  
   
 ### Publishing Data to Subscribers Running Previous Versions of SQL Server  
   

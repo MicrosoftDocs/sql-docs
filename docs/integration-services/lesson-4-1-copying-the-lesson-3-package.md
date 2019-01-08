@@ -51,6 +51,6 @@ Use this procedure if you're copying the completed Lesson 3.  To copy the sample
 5.  Copy and paste the Lesson 3 package as described in steps 3-8 in the previous section.
 
   
-## Next task in lesson  
+## Go to next task  
 [Step 2: Create a corrupted file](../integration-services/lesson-4-2-creating-a-corrupted-file.md)  
   

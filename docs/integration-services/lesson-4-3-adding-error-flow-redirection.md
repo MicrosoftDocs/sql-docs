@@ -89,7 +89,7 @@ By default the two extra columns in an [!INCLUDE[ssISnoversion](../includes/ssis
   
 13. Select **OK** to close the **Script Transformation Editor** dialog.  
   
-## Next task in lesson
+## Go to next task
 [Step 4: Add a Flat File destination](../integration-services/lesson-4-4-adding-a-flat-file-destination.md)  
   
   

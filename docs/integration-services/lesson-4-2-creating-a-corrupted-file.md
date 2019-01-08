@@ -50,7 +50,7 @@ In this task, you'll create a copy of an existing sample flat file. You'll then 
     > [!NOTE]  
     > The number 27 is the ID of the component. This value is assigned when you build the data flow, and the value in your package may be different.  
   
-## Next task in lesson  
+## Go to next task  
 [Step 3: Add error flow redirection](../integration-services/lesson-4-3-adding-error-flow-redirection.md)  
   
   

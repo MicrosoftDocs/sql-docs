@@ -12,7 +12,7 @@ author: "douglaslMS"
 ms.author: "douglasl"
 manager: craigg
 ---
-# Lesson 4-5: Test the Lesson 4 tutorial package
+# Lesson 4-5: Test the Lesson 4 package
 
 At run time, the corrupted file **Currency_BAD.txt** will fail to generate a match within the Currency Key Lookup transformation. Because you configured the error output of Currency Key Lookup to redirect failed rows to the new Failed Rows destination, the component doesn't fail, and the package runs successfully. [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] writes all failed error rows to **ErrorOutput.txt**.  
   

@@ -29,8 +29,8 @@ manager: craigg
 ```  
   
 sp_helptracertokens [ @publication = ] 'publication'   
-    [ , [ @publisher = ] 'publisher' ]   
-    [ , [ @publisher_db = ] 'publisher_db' ]  
+     , [ @publisher = ] 'publisher'    
+     , [ @publisher_db = ] 'publisher_db'   
 ```  
   
 ## Arguments  

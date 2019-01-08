@@ -12,6 +12,8 @@
     href: using-the-winforms-reportviewer-control.md
   - name: Report Viewer control data collection
     href: integrating-reporting-services-using-reportviewer-controls-data-collection.md
+  - name: Report Viewer support
+    href: reportviewer-controls-support.md
   - name: Report Viewer controls changelog
     href: changelog.md
 - name: Integrating Reporting Services directly

@@ -68,8 +68,8 @@ manager: craigg
 |Log Reader Agent|**\<Publisher>-\<PublicationDatabase>-\<integer>**|  
 |Merge Agent for pull subscriptions|**\<Publisher>-\<PublicationDatabase>-\<Publication>-\<Subscriber>-\<SubscriptionDatabase>-\<integer>**|  
 |Merge Agent for push subscriptions|**\<Publisher>-\<PublicationDatabase>-\<Publication>-\<Subscriber>-\<integer>**|  
-|Distribution Agent for push subscriptions|**\<Publisher>-\<PublicationDatabase>-\<Publication>-\<Subscriber>-\<integer>***|  
-|Distribution Agent for pull subscriptions|**\<Publisher>-\<PublicationDatabase>-\<Publication>-\<Subscriber>-\<SubscriptionDatabase>-\<GUID>***\*|  
+|Distribution Agent for push subscriptions|**\<Publisher>-\<PublicationDatabase>-\<Publication>-\<Subscriber>-\<integer>**|  
+|Distribution Agent for pull subscriptions|**\<Publisher>-\<PublicationDatabase>-\<Publication>-\<Subscriber>-\<SubscriptionDatabase>-\<GUID>**|  
 |Distribution Agent for push subscriptions to non-SQL Server Subscribers|**\<Publisher>-\<PublicationDatabase>-\<Publication>-\<Subscriber>-\<integer>**|  
 |Queue Reader Agent|**[\<Distributor>].\<integer>**|  
   

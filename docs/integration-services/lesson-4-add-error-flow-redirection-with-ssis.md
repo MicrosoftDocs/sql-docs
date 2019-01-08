@@ -26,19 +26,9 @@ Before [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] writes error d
   
 ## Prerequisites
 
-This tutorial uses a set of example packages and a sample database.
-
-* To download all of the lesson packages for this tutorial:
-
-    1.  Navigate to [Integration Services product samples](https://go.microsoft.com/fwlink/?LinkId=275027).
-
-    2.  Select the **DOWNLOADS** tab.
-
-    3.  Select the SQL2012.Integration_Services.Create_Simple_ETL_Tutorial.Sample.zip file.
-
-* To install and deploy the **AdventureWorksDW2012** sample database, see [Reporting Services product samples on CodePlex](https://go.microsoft.com/fwlink/p/?LinkID=526910).
-
-  
+> [!NOTE]
+> If you haven't already, see the [Lesson 1 prerequisites](../integration-services/lesson-1-create-a-project-and-basic-package-with-ssis.md#prerequisites).
+ 
 ## Lesson task
 This lesson contains the following tasks:  
   

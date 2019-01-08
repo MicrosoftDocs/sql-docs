@@ -1,7 +1,7 @@
 ---
 title: "Lesson 4: Add Error Flow Redirection with SSIS | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/27/2018"
+ms.date: "01/07/2019"
 ms.prod: sql
 ms.prod_service: "integration-services"
 ms.reviewer: ""

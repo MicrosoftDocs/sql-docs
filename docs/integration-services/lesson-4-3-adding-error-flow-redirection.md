@@ -1,7 +1,7 @@
 ---
 title: "Step 3: Add error flow redirection | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/27/2018"
+ms.date: "01/07/2019"
 ms.prod: sql
 ms.prod_service: "integration-services"
 ms.reviewer: ""
@@ -12,13 +12,13 @@ author: "douglaslMS"
 ms.author: "douglasl"
 manager: craigg
 ---
-# Lesson 4-3 - Add error flow redirection
+# Lesson 4-3: Add error flow redirection
 
 In the previous task, the Lookup Currency Key transformation cannot generate a match when the transformation tries to process the corrupted sample flat file, which produces an error. Because the transformation uses the default settings for error output, any error causes the transformation to fail. When the transformation fails, the rest of the package also fails.  
   
-Rather than permitting the transformation to fail, you can configure the component to redirect the failed row to another processing path by using the error output. Using a separate error processing path provides additional options. For instance, you could clean the data and then reprocess the failed row. Or, you could save the failed row along with its error information for later verification and reprocessing.  
+Rather than permitting the transformation to fail, you can configure the component to redirect the failed row to another processing path by using the error output. Using a separate error processing path provides more options. For instance, you could clean the data and then reprocess the failed row. Or, you could save the failed row along with its error information for later verification and reprocessing.  
   
-In this task, you'll configure the Lookup Currency Key transformation to redirect any rows that fail to the error output. In the error branch of the data flow, these rows will be written to a file.  
+In this task, you'll configure the Lookup Currency Key transformation to redirect any rows that fail to the error output. In the error branch of the data flow, [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] writes these rows to a file.  
   
 By default the two extra columns in an [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] error output, **ErrorCode** and **ErrorColumn**, contain only a numeric error code and the ID of the column in which the error occurred. In this task, before the package writes the failed rows to the file, you'll use a Script component to access the [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] API and get a description of the error.  
   
@@ -42,7 +42,7 @@ By default the two extra columns in an [!INCLUDE[ssISnoversion](../includes/ssis
   
 8.  On the **Inputs and Outputs** page, expand **Output 0**, select **Output Columns**, and then select **Add Column**.  
   
-9. In the **Name** property, enter **ErrorDescription** and set the **DataType** property to **Unicode string [DT_WSTR]**.  
+9. In the **Name** property, enter *ErrorDescription* and set the **DataType** property to **Unicode string [DT_WSTR]**.  
   
 10. On the **Script** page, verify that the **LocaleID** property is set to **English (United States)**.
   

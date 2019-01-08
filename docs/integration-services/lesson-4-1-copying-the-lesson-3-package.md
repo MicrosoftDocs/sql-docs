@@ -1,7 +1,7 @@
 ---
 title: "Step 1: Copy the Lesson 3 package | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/27/2018"
+ms.date: "01/07/2019"
 ms.prod: sql
 ms.prod_service: "integration-services"
 ms.reviewer: ""
@@ -12,7 +12,7 @@ author: "douglaslMS"
 ms.author: "douglasl"
 manager: craigg
 ---
-# Lesson 4-1 - Copy the Lesson 3 package
+# Lesson 4-1: Copy the Lesson 3 package
 
 In this task, you'll create a copy of the Lesson 3.dtsx package from Lesson 3. If you did not complete lesson 3, you can add the completed lesson 3 package that is included with the tutorial to the project, and then make a copy of it to work with. You'll use this new copy throughout the rest of Lesson 4.  
   
@@ -28,7 +28,7 @@ Use this procedure if you're copying the completed Lesson 3.  To copy the sample
 
 4.  In **Solution Explorer**, right-click **SSIS Packages**, and then select **Paste**.
 
-    By default, the name of the copied package is Lesson 4.dtsx.
+    By default, the name of the copied package is **Lesson 4.dtsx**.
 
 5.  In **Solution Explorer**, double-click **Lesson 4.dtsx** to open the package
 
@@ -42,13 +42,13 @@ Use this procedure if you're copying the completed Lesson 3.  To copy the sample
 
 1.  Open [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Data Tools and open the SSIS Tutorial project.
 
-2.  In Solution Explorer, right-click **SSIS Packages** and select **Add Existing Package**.
+2.  In **Solution Explorer**, right-click **SSIS Packages** and select **Add Existing Package**.
 
 3.  In the **Add Copy of Existing Package** dialog, in **Package location**, select **File system**.
 
 4.  Select the browse **(...)** button, navigate to **Lesson 3.dtsx** on your machine, and then select **Open**.
 
-5.  Copy and paste the Lesson 3 package as described in steps 3-8 in the previous procedure.
+5.  Copy and paste the Lesson 3 package as described in steps 3-8 in the previous section.
 
   
 ## Next task in lesson  

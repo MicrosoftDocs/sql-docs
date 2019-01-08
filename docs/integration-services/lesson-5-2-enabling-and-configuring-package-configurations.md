@@ -1,7 +1,7 @@
 ---
-title: "Step 2: Enabling and Configuring Package Configurations | Microsoft Docs"
+title: "Step 2: Enable and configure package configurations | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/01/2017"
+ms.date: "01/08/2019"
 ms.prod: sql
 ms.prod_service: "integration-services"
 ms.reviewer: ""
@@ -12,7 +12,8 @@ author: "douglaslMS"
 ms.author: "douglasl"
 manager: craigg
 ---
-# Lesson 5-2 - Enabling and Configuring Package Configurations
+# Lesson 5-2: Enable and configure package configurations
+
 In this task, you will convert the project to the Package Deployment Model and enable package configurations using the Package Configuration Wizard. You will use this wizard to generate an XML configuration file that contains configuration settings for the **Directory** property of the Foreach Loop container. The value of the Directory property is supplied by a new package-level variable that you can update at run time. Additionally, you will populate a new sample data folder to use during testing.  
   
 ### To create a new package-level variable mapped to the Directory property  
@@ -99,6 +100,6 @@ In this task, you will convert the project to the Package Deployment Model and e
   
 3.  In the **New Sample Data** folder, paste the copied files.  
   
-## Next Task in Lesson  
-[Step 3: Modifying the Directory Property Configuration Value](../integration-services/lesson-5-3-modifying-the-directory-property-configuration-value.md)  
+## Go to next task  
+[Step 3: Modify the directory property configuration value](../integration-services/lesson-5-3-modifying-the-directory-property-configuration-value.md)  
   

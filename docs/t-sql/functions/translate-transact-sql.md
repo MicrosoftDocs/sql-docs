@@ -44,7 +44,7 @@ Returns a character expression of the same data type as `inputString` where char
 
 ## Remarks   
 
-`TRANSLATE` will return an error if *characters* and *translations* expressions have different lengths. `TRANSLATE` will return NULL if any of the arguements are NULL.  
+`TRANSLATE` will return an error if *characters* and *translations* expressions have different lengths. `TRANSLATE` will return NULL if any of the arguments are NULL.  
 
 The behavior of the `TRANSLATE` function is similar to using multiple [REPLACE](../../t-sql/functions/replace-transact-sql.md) functions. `TRANSLATE` does not, however, replace a character more than once. This is dissimilar to multiple `REPLACE` functions, as each use would replace all relevant characters. 
 

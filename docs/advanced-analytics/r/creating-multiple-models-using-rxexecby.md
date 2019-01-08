@@ -47,7 +47,7 @@ Transformation or analysis: `rxCovCor`
 
 The following example demonstrates how to create multiple models using the Airline dataset, which is partitioned on the [DayOfWeek] column. The user-defined function, `delayFunc`, is applied to each of the partitions by calling rxExecBy. The function creates separate models for Mondays, Tuesdays, and so forth.
 
-```SQL
+```sql
 EXEC sp_execute_external_script
 @language = N'R'
 , @script = N'

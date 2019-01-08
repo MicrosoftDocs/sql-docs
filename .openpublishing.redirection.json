@@ -61,10 +61,55 @@
             "redirect_document_id": false
         }, 
         {
+            "source_path": "docs/advanced-analytics/tutorials/rtsql-predict-and-plot-from-model.md",
+            "redirect_url": "/sql/advanced-analytics/tutorials/rtsql-predict-from-model",
+            "redirect_document_id": true
+        }, 
+        {
             "source_path": "docs/advanced-analytics/tutorials/sqldev-py2-import-data-to-sql-server-using-powershell.md",
             "redirect_url": "/sql/advanced-analytics/tutorials/demo-data-nyctaxi-in-sql",
             "redirect_document_id": false
         }, 
+        {
+            "source_path": "docs/advanced-analytics/tutorials/run-python-using-t-sql.md",
+            "redirect_url": "/sql/advanced-analytics/tutorials/quickstart-python-run-using-t-sql",
+            "redirect_document_id": true
+        }, 
+        {
+            "source_path": "docs/advanced-analytics/tutorials/rtsql-create-a-predictive-model-r.md",
+            "redirect_url": "/sql/advanced-analytics/tutorials/quickstart-r-create-predictive-model",
+            "redirect_document_id": true
+        }, 
+        {
+            "source_path": "docs/advanced-analytics/tutorials/rtsql-predict-from-model.md",
+            "redirect_url": "/sql/advanced-analytics/tutorials/quickstart-r-predict-from-model",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "docs/advanced-analytics/tutorials/rtsql-r-and-sql-data-types-and-data-objects.md",
+            "redirect_url": "/sql/advanced-analytics/tutorials/quickstart-r-data-types-and-objects",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "docs/advanced-analytics/tutorials/rtsql-using-r-code-in-transact-sql-quickstart.md",
+            "redirect_url": "/sql/advanced-analytics/tutorials/quickstart-r-run-using-tsql",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "docs/advanced-analytics/tutorials/rtsql-using-r-functions-with-sql-server-data.md",
+            "redirect_url": "/sql/advanced-analytics/tutorials/quickstart-r-functions",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "docs/advanced-analytics/tutorials/rtsql-verify-r-exists.md",
+            "redirect_url": "/sql/advanced-analytics/tutorials/quickstart-r-verify",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "docs/advanced-analytics/tutorials/rtsql-working-with-inputs-and-outputs.md",
+            "redirect_url": "/sql/advanced-analytics/tutorials/quickstart-r-inputs-and-outputs",
+            "redirect_document_id": true
+        },
         {
             "source_path": "docs/advanced-analytics/r/configuration-sql-server-r-services.md",
             "redirect_url": "/sql/advanced-analytics/r/managing-and-monitoring-r-solutions",

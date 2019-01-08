@@ -1,5 +1,5 @@
 ---
-title: Download NYC Taxi demo data and scripts for embedded R and Python (SQL Server Machine Learning) | Microsoft Docs
+title: Download NYC Taxi demo data and scripts for embedded R and Python - SQL Server Machine Learning
 description: Instructions for downloading New York City taxi sample data and creating a database. Data is used in SQL Server Python and R language tutorials showing how to embed script in SQL Server stored procedures and T-SQL functions.
 ms.prod: sql
 ms.technology: machine-learning
@@ -83,7 +83,7 @@ The database contains 1.7 million rows.
 
 3. Within the database is a **nyctaxi_sample** table that contains the data set. The table has been optimized for set-based calculations with the addition of a [columnstore index](../../relational-databases/indexes/columnstore-indexes-overview.md). Run this statement to generate a quick summary on the table.
 
-    ```SQL
+    ```sql
     SELECT DISTINCT [passenger_count]
         , ROUND (SUM ([fare_amount]),0) as TotalFares
         , ROUND (AVG ([fare_amount]),0) as AvgFares

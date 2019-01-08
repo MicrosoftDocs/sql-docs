@@ -1,13 +1,13 @@
 ---
-title: Quickstart about R and SQL data types and objects (SQL Server Machine Learning) | Microsoft Docs
+title: Quickstart about R and SQL data types and objects - SQL Server Machine Learning
 description: In this quickstart, learn how to work with data types and data objects in R and SQL Server.
 ms.prod: sql
 ms.technology: machine-learning
 
-ms.date: 07/15/2018  
+ms.date: 01/04/2019
 ms.topic: quickstart
-author: HeidiSteen
-ms.author: heidist
+author: dphansen
+ms.author: davidph
 manager: cgronlun
 ---
 # Quickstart: Handle data types and objects using R in SQL Server
@@ -24,7 +24,7 @@ Common issues to know up front include:
 
 ## Prerequisites
 
-A previous quickstart, [Hello World in R and SQL](rtsql-using-r-code-in-transact-sql-quickstart.md), provides information and links for setting up the R environment required for this quickstart.
+A previous quickstart, [Verify R exists in SQL Server](quickstart-r-verify.md), provides information and links for setting up the R environment required for this quickstart.
 
 ## Always return a data frame
 
@@ -87,7 +87,7 @@ Now, review the text in **Messages** to see why the output is different.
 
 **Results - Example 1**
 
-```
+```sql
 STDOUT message(s) from external script:
 'data.frame':	3 obs. of  1 variable:
 $ mytextvariable: Factor w/ 3 levels " ","hello","world": 2 1 3
@@ -95,7 +95,7 @@ $ mytextvariable: Factor w/ 3 levels " ","hello","world": 2 1 3
 
 **Results - Example 2**
 
-```
+```sql
 STDOUT message(s) from external script:
 'data.frame':	1 obs. of  3 variables:
 $ c..hello..: Factor w/ 1 level "hello": 1
@@ -103,7 +103,7 @@ $ X...      : Factor w/ 1 level " ": 1
 $ c..world..: Factor w/ 1 level "world": 1
 ```
 
-As you can see, a slight change in R syntax had a big effect on the schema of the results. We won't go into why, but the differences in R data types are explained in details in the *Data Structures* section in ["Advanced R" by Hadley Wickham](https://adv-r.had.co.nz).
+As you can see, a slight change in R syntax had a big effect on the schema of the results. We won't go into why, but the differences in R data types are explained in details in the *Data Structures* section in ["Advanced R" by Hadley Wickham](http://adv-r.had.co.nz).
 
 For now, just be aware that you need to check the expected results when coercing R objects into data frames.
 
@@ -250,7 +250,7 @@ After you get the query working, review the results of the `str` function to see
 
 **Results**
 
-```
+```sql
 STDOUT message(s) from external script: 'data.frame':    37 obs. of  3 variables:
 STDOUT message(s) from external script: $ ReportingDate: POSIXct, format: "2010-12-24 23:00:00" "2010-12-24 23:00:00"
 STDOUT message(s) from external script: $ ProductSeries: Factor w/ 1 levels "M200 Europe",..: 1 1 1 1 1 1 1 1 1 1
@@ -278,4 +278,4 @@ For information about the performance impact of run-time conversion of strings t
 In the next quickstart, you'll learn how to apply R functions to SQL Server data.
 
 > [!div class="nextstepaction"]
-> [Quickstart: Use R functions with SQL Server data](rtsql-using-r-functions-with-sql-server-data.md)
+> [Quickstart: Use R functions with SQL Server data](quickstart-r-functions.md)

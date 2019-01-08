@@ -1,23 +1,21 @@
 ---
-title: Python models in SQL Server for training and predictions using stored procedures | Microsoft Docs
+title: Quickstart for Python models for training and predictions using stored procedures - SQL Server Machine Learning
 description: Embed Python code in SQL Server stored procedures to create, train, and use a Python model with the classic Iris data set. Save a trained model to SQL Server, and then use it to generate predicted outcomes.
 ms.prod: sql
 ms.technology: machine-learning
 
-ms.date: 10/23/2018  
+ms.date: 01/04/2019  
 ms.topic: tutorial
-author: HeidiSteen
-ms.author: heidist
+author: dphansen
+ms.author: davidph
 manager: cgronlun
 ---
-# Create, train, and use a Python model with stored procedures in SQL Server
+# Quickstart: Create, train, and use a Python model with stored procedures in SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-This exercise demonstrates Python integration with SQL Server when you add the [Machine Learning Services](../install/sql-machine-learning-services-windows-install.md) feature to a database engine instance. On such an instance, you can wrap Python code inside a [stored procedure](../../relational-databases/stored-procedures/stored-procedures-database-engine.md) to operationalize your script for production workloads. The ability to embed code in a stored procedure has tangible benefits in how you design, test, and manage data science and machine learning tasks. It makes your script and models accessible to any application that can connect to SQL Server.
+In this quickstart using Python, you will create and execute two stored procedures. The first one uses the classic Iris flower data set and generates a Naïve Bayes model to predict an Iris species based on flower characteristics. The second procedure is for scoring. It calls the model generated in the first procedure to output a set of predictions. By placing code in a stored procedure, operations are contained, reusable, and callable by other stored procedures and client applications. 
 
-In this Python exercise, you will create and execute two stored procedures. The first one uses the classic Iris flower data set and generates a Naïve Bayes model to predict an Iris species based on flower characteristics. The second procedure is for scoring. It calls the model generated in the first procedure to output a set of predictions. By placing code in a stored procedure, operations are contained, reusable, and callable by other stored procedures and client applications. 
-
-By completing this tutorial, you will learn:
+By completing this quickstart, you will learn:
 
 > [!div class="checklist"]
 > * How to embed Python code in a stored procedure
@@ -26,9 +24,9 @@ By completing this tutorial, you will learn:
 
 ## Prerequisites
 
-Sample data used in this exercise is the [**irissql**](demo-data-iris-in-sql.md) database.
+A previous quickstart, [Verify Python exists in SQL Server](quickstart-python-verify.md), provides information and links for setting up the Python environment required for this quickstart.
 
-You also need a T-SQL editor, such as [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms?view=sql-server-2017).
+The sample data used in this exercise is the [**irissql**](demo-data-iris-in-sql.md) database.
 
 ## Create a stored procedure that generates models
 
@@ -60,7 +58,7 @@ A common pattern in SQL Server development is to organize programmable operation
     import pickle
     from sklearn.naive_bayes import GaussianNB
     GNB = GaussianNB()
-    trained_model = pickle.dumps(GNB.fit(iris_data[[0,1,2,3]], iris_data[[4]]))
+    trained_model = pickle.dumps(GNB.fit(iris_data[[0,1,2,3]], iris_data[[4]].values.ravel()))
     '
     , @input_data_1 = N'select "Sepal.Length", "Sepal.Width", "Petal.Length", "Petal.Width", "SpeciesId" from iris_data'
     , @input_data_1_name = N'iris_data'
@@ -85,22 +83,24 @@ In this step, execute the procedure to run the embedded code, creating a trained
     ```sql
     DECLARE @model varbinary(max);
     DECLARE @new_model_name varchar(50)
-    SET @new_model_name = 'Naive Bayes '
-    SELECT @new_model_name 
+    SET @new_model_name = 'Naive Bayes'
     EXEC generate_iris_model @model OUTPUT;
     DELETE iris_models WHERE model_name = @new_model_name;
     INSERT INTO iris_models (model_name, model) values(@new_model_name, @model);
     GO
     ```
 
-2. View the results in the output area. The script includes a SELECT statement showing that the model exists. Another way to return a list of models is `SELECT * FROM iris_models` in **irissql**.
+2. Verify that the model was inserted Another way to return a list of models is
+
+    ```sql
+    SELECT * FROM dbo.iris_models
+    ```
 
     **Results**
 
-    |   | (no column name |
+    | model_name  | model |
     |---|-----------------|
-    | 1 | Naive Bayes     | 
-
+    | Naive Bayes | 0x800363736B6C6561726E2E6E616976655F62617965730A... | 
 
 ## Create and execute a stored procedure for generating predictions
 

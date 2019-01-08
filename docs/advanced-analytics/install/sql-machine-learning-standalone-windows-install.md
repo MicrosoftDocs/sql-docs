@@ -68,7 +68,7 @@ For local installations, you must run Setup as an administrator. If you install 
 
     - R and Python are both selected by default. You can deselect either language, but we recommend that you install at least one of the supported languages.
 
-     ![Install Machine Learning Server Standalone](media/2017setup-features-page-mlsvr-rpy.png "Start installation of Machine Learning Server Standalone")
+     ![Choose R or Python features](media/2017setup-features-page-mlsvr-rpy.png "Start installation of Machine Learning Server Standalone")
     
     All other options should be ignored. 
     
@@ -138,6 +138,8 @@ For R feature integration only, you should set the **MKL_CBWR** environment vari
 
 3. Restart the server.
 
+<a name="install-path"></a>
+
 ### Default installation folders
 
 For R and Python development, it's common to have multiple versions on the same computer. As installed by SQL Server setup, the base distribution is installed in a folder associated with the SQL Server version that you used for setup.
@@ -158,7 +160,7 @@ The following table lists the paths for R and Python distributions created by Mi
 
 We recommend that you apply the latest cumulative update to both the database engine and machine learning components. Cumulative updates are installed through the Setup program. 
 
-On internet-connected devices, cumulative updates are typically applied through Windows Update, but you can also use the steps below for controlled updates. When you apply the update for the database engine, Setup pulls cumulative updates for any R or Python features you installed on the standalone server. 
+On internet-connected devices, you can download a self-extracting executable. Applying an update for the database engine automatically pulls in cumulative updates for existing R and Python features. 
 
 On disconnected servers, extra steps are required. You must obtain the cumulative update for the database engine as well as the CAB files for machine learning features. All files must be transferred to the isolated server and applied manually.
 
@@ -167,16 +169,20 @@ On disconnected servers, extra steps are required. You must obtain the cumulativ
   + Machine Learning Server (Standalone) from SQL Server 2017 initial release
   + R Server (Standalone) from SQL Server 2016 initial release, SQL Server 2016 SP 1, or SQL Server 2016 SP 2
 
-2. On an internet connected device, click the cumulative update link for your version of SQL Server.
+2. Close any open R or Python sessions and stop any processes still running on the system.
+
+3. If you enabled operationalization to run as web nodes and compute nodes for web service deployments, back up the **AppSettings.json** file as a precaution. Applying SQL Server 2017 CU13 or later revises this file, so you might want a backup copy to preserve the original version.
+
+4. On an internet connected device, click the cumulative update link for your version of SQL Server.
 
   + [SQL Server 2017 updates](https://sqlserverupdates.com/sql-server-2017-updates/)
   + [SQL Server 2016 updates](https://sqlserverupdates.com/sql-server-2016-updates/)
 
-3. Download the latest cumulative update. It is an executable file.
+5. Download the latest cumulative update. It is an executable file.
 
-4. On an internet-connected device, double-click the .exe to run Setup and step through the wizard to accept licensing terms, review affected features, and monitor progress until completion.
+6. On an internet-connected device, double-click the .exe to run Setup and step through the wizard to accept licensing terms, review affected features, and monitor progress until completion.
 
-5. On a server with no internet connectivity:
+7. On a server with no internet connectivity:
 
    + Get corresponding CAB files for R and Python. For download links, see [CAB downloads for cumulative updates on SQL Server in-database analytics instances](sql-ml-cab-downloads.md).
 
@@ -184,7 +190,7 @@ On disconnected servers, extra steps are required. You must obtain the cumulativ
 
    + Double-click the .exe to run Setup. When installing a cumulate update on a server with no internet connectivity, you are prompted to select the location of the .cab files for R and Python.
 
-6. Post-install, on a server for which you have enabled operationalization with web nodes and compute nodes, edit **appsettings.json**, adding an "MMLResourcePath" entry, directly under "MMLNativePath":
+8. Post-install, on a server for which you have enabled operationalization with web nodes and compute nodes, edit **AppSettings.json**, adding an "MMLResourcePath" entry, directly under "MMLNativePath":
 
     ```json
     "ScorerParameters": {
@@ -193,7 +199,7 @@ On disconnected servers, extra steps are required. You must obtain the cumulativ
     }
     ```
 
-7. [Run the admin CLI utility](https://docs.microsoft.com/machine-learning-server/operationalize/configure-admin-cli-launch) to restart the web and compute nodes. For steps and syntax, see [Monitor, start, and stop web and compute nodes](https://docs.microsoft.com/machine-learning-server/operationalize/configure-admin-cli-stop-start).
+9. [Run the admin CLI utility](https://docs.microsoft.com/machine-learning-server/operationalize/configure-admin-cli-launch) to restart the web and compute nodes. For steps and syntax, see [Monitor, start, and stop web and compute nodes](https://docs.microsoft.com/machine-learning-server/operationalize/configure-admin-cli-stop-start).
 
 ## Development tools
 

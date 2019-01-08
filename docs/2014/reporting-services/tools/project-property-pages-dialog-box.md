@@ -17,7 +17,7 @@ ms.author: maghan
 manager: craigg
 ---
 # Project Property Pages Dialog Box
-  Use the project property pages to configure deployment properties for a Report Server project. To open this dialog box, from the **Project** menu, click *\<Report Project Name>***Properties**.  
+  Use the project property pages to configure deployment properties for a Report Server project. To open this dialog box, from the **Project** menu, click _\<Report Project Name>_**Properties**.  
   
  After you define configuration properties, you can select a configuration from the **Solution Configurations** drop-down list on the toolbar.  
   

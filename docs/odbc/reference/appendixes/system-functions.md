@@ -27,5 +27,5 @@ The following table lists system functions that are included in the ODBC scalar 
 |Function|Description|  
 |--------------|-----------------|  
 |**DATABASE( )**  (ODBC 1.0)|Returns the name of the database corresponding to the connection handle. (The name of the database is also available by calling **SQLGetConnectOption** with the SQL_CURRENT_QUALIFIER connection option.)|  
-|**IFNULL(** *exp*,*value***)**  (ODBC 1.0)|If *exp* is null, *value* is returned. If *exp* is not null, *exp* is returned. The possible data type or types of *value* must be compatible with the data type of *exp*.|  
+|**IFNULL(** _exp_,_value_**)**  (ODBC 1.0)|If *exp* is null, *value* is returned. If *exp* is not null, *exp* is returned. The possible data type or types of *value* must be compatible with the data type of *exp*.|  
 |**USER( )**  (ODBC 1.0)|Returns the user name in the DBMS. (The user name is also available by way of **SQLGetInfo** by specifying the information type: SQL_USER_NAME.) This can be different than the login name.|

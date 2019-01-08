@@ -35,13 +35,13 @@ sp_droppullsubscription [ @publisher= ] 'publisher'
 ```  
   
 ## Arguments  
- [ **@publisher=** ] **'***publisher***'**  
+ [ **@publisher=** ] **'**_publisher_**'**  
  Is the remote server name. *publisher* is **sysname**, with no default. If **all**, the subscription is dropped at all the Publishers.  
   
- [ **@publisher_db=** ] **'***publisher_db***'**  
+ [ **@publisher_db=** ] **'**_publisher_db_**'**  
  Is the name of the Publisher database. *publisher_db* is **sysname**, with no default. **all** means all the Publisher databases.  
   
- [ **@publication=** ] **'***publication***'**  
+ [ **@publication=** ] **'**_publication_**'**  
  Is the publication name. *publication* is **sysname**, with no default. If **all**, the subscription is dropped to all the publications.  
   
  [ **@reserved=** ] *reserved*  

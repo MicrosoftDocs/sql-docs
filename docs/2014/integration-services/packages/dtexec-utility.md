@@ -151,24 +151,24 @@ dtexec /option [value] [/option [value]]...
 -   **/Ca[llerInfo]**:   
                   Optional. Specifies additional information for a package execution. When you run a package using SQL Server Agent, agent sets this argument to indicate that the package execution is invoked by SQL Server Agent. This parameter is ignored when the `dtexec` utility is run from the command line.  
   
--   **/CheckF[ile]** *filespec*:   
+-   **/CheckF[ile]** _filespec_:   
                   Optional. Sets the `CheckpointFileName` property on the package to the path and file spemandcified in *filespec*. This file is used when the package restarts. If this option is specified and no value is supplied for the file name, the `CheckpointFileName` for the package is set to an empty string. If this option is not specified, the values in the package are retained.  
   
--   **/CheckP[ointing]** *{on\off}*:   
+-   **/CheckP[ointing]** _{on\off}_:   
                   Optional. Sets a value that determines whether the package will use checkpoints during package execution. The value **on** specifies that a failed package is to be rerun. When the failed package is rerun, the run-time engine uses the checkpoint file to restart the package from the point of failure.  
   
      The default value is on if the option is declared without a value. Package execution will fail if the value is set to on and the checkpoint file cannot be found. If this option is not specified, the value set in the package is retained. For more information, see [Restart Packages by Using Checkpoints](restart-packages-by-using-checkpoints.md).  
   
      The **/CheckPointing on** option of dtexec is equivalent to setting the `SaveCheckpoints` property of the package to True, and the `CheckpointUsage` property to Always.  
   
--   **/Com[mandFile]** *filespec*:   
+-   **/Com[mandFile]** _filespec_:   
                   (Optional). Specifies the command options that run with `dtexec`. The file specified in *filespec* is opened and options from the file are read until EOF is found in the file. *filespec* is a text file. The *filespec* argument specifies the file name and path of the command file to associate with the execution of the package.  
   
--   **/Conf[igFile]** *filespec*: Optional. Specifies a configuration file to extract values from. Using this option, you can set a run-time configuration that differs from the configuration that was specified at design time for the package. You can store different configuration settings in an XML configuration file and then load the settings before package execution by using the **/ConfigFile** option.  
+-   **/Conf[igFile]** _filespec_: Optional. Specifies a configuration file to extract values from. Using this option, you can set a run-time configuration that differs from the configuration that was specified at design time for the package. You can store different configuration settings in an XML configuration file and then load the settings before package execution by using the **/ConfigFile** option.  
   
      You can use the **/ConfigFile** option to load additional configurations at run time that you did not specify at design time. However, you cannot use the **/ConfigFile** option to replace configured values that you also specified at design time. To understand how package configurations are applied, see [Package Configurations](../package-configurations.md).  
   
--   **/Conn[ection]** *id_or_name;connection_string [[;id_or_name;connection_string]...]*:   
+-   **/Conn[ection]** _id_or_name;connection_string [[;id_or_name;connection_string]...]_:   
                   Optional. Specifies that the connection manager with the specified name or GUID is located in the package, and specifies a connection string.  
   
      This option requires that both parameters be specified: the connection manager name or GUID must be provided in the *id_or_name* argument, and a valid connection string must be specified in the *connection_string* argument. For more information, see [Integration Services &#40;SSIS&#41; Connections](../connection-manager/integration-services-ssis-connections.md).  
@@ -216,16 +216,16 @@ dtexec /option [value] [/option [value]]...
   
      For examples of the **/ConsoleLog** option, see the **Remarks** section.  
   
--   **/D[ts]** *package_path*:   
+-   **/D[ts]** _package_path_:   
                   Optional. Loads a package from the SSIS Package Store. Packages that are stored in the SSIS Package Store, are deployed using the legacy package deployment model. To run packages that are deployed to the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] server using the project deployment model, use the `/ISServer` option. For more information about the package and project deployment models, see [Deployment of Projects and Packages](deploy-integration-services-ssis-projects-and-packages.md).  
   
      The *package_path* argument specifies the relative path of the [!INCLUDE[ssIS](../../includes/ssis-md.md)] package, starting at the root of the SSIS Package Store, and includes the name of the [!INCLUDE[ssIS](../../includes/ssis-md.md)] package. If the path or file name specified in the *package_path* argument contains a space, you must put quotation marks around the *package_path* argument.  
   
      The `/DTS` option cannot be used together with the `/File` or `/SQL` option. If multiple options are specified, `dtexec` fails.  
   
--   **/De[crypt]**  *password*: Optional. Sets the decryption password that is used when you load a package with password encryption.  
+-   **/De[crypt]**  _password_: Optional. Sets the decryption password that is used when you load a package with password encryption.  
   
--   **/Dump** *error code*:  
+-   **/Dump** _error code_:  
                   Optional Creates the debug dump files, .mdmp and .tmp, when one or more specified events occur while the package is running. The *error code* argument specifies the type of event code-error, warning, or information-that will trigger the system to create the debug dump files. To specify multiple event codes, separate each *error code* argument by a semi-colon (;). Do not include quotes with the *error code* argument.  
   
      The following example generates the debug dump files when the DTS_E_CANNOTACQUIRECONNECTIONFROMCONNECTIONMANAGER error occurs.  
@@ -268,7 +268,7 @@ dtexec /option [value] [/option [value]]...
   
      This parameter is used by SQL Server Agent.  
   
--   **/F[ile]** *filespec*:   
+-   **/F[ile]** _filespec_:   
                   Optional. Loads a package that is saved in the file system. Packages that are saved in the file system, are deployed using the legacy package deployment model. To run packages that are deployed to the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] server using the project deployment model, use the `/ISServer` option. For more information about the package and project deployment models, see [Deployment of Projects and Packages](deploy-integration-services-ssis-projects-and-packages.md)  
   
      The *filespec* argument specifies the path and file name of the package. You can specify the path as either a Universal Naming Convention (UNC) path or a local path. If the path or file name specified in the *filespec* argument contains a space, you must put quotation marks around the *filespec* argument.  
@@ -294,7 +294,7 @@ dtexec /option [value] [/option [value]]...
   
      This parameter is used by SQL Server Agent.  
   
--   **/L[ogger]** *classid_orprogid;configstring*:  
+-   **/L[ogger]** _classid_orprogid;configstring_:  
                   Optional. Associates one or more log providers with the execution of an [!INCLUDE[ssIS](../../includes/ssis-md.md)] package. The *classid_orprogid* parameter specifies the log provider, and can be specified as a class GUID. The *configstring* is the string that is used to configure the log provider.  
   
      The following list shows the available log providers:  
@@ -329,13 +329,13 @@ dtexec /option [value] [/option [value]]...
   
         -   ClassID: {AFED6884-619C-484F-9A09-F42D56E1A7EA}  
   
--   **/M[axConcurrent]** *concurrent_executables*:  
+-   **/M[axConcurrent]** _concurrent_executables_:  
                   Optional. Specifies the number of executable files that the package can run concurrently. The value specified must be either a non-negative integer, or -1. A value of -1 means that [!INCLUDE[ssIS](../../includes/ssis-md.md)] will allow a maximum number of concurrently running executables that is equal to the total number of processors on the computer executing the package, plus two.  
   
--   **/Pack[age]** *PackageName*:  
+-   **/Pack[age]** _PackageName_:  
                   Optional. Specifies the package that is executed. This parameter is used primarily when you execute the package from [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)].  
   
--   **/P[assword]** *password*:  
+-   **/P[assword]** _password_:  
                   Optional. Allows the retrieval of a package that is protected by [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentication. This option is used together with the **/User** option. If the **/Password** option is omitted and the **/User** option is used, a blank password is used. The *password* value may be quoted.  
   
     > [!IMPORTANT]  
@@ -365,13 +365,13 @@ dtexec /option [value] [/option [value]]...
     /parameter CM.SourceServer.ServerName;.  
     ```  
   
--   **/Proj[ect]** *ProjectFile*:  
+-   **/Proj[ect]** _ProjectFile_:  
                   Optional. Specifies the project from which to retrieve the package that is executed. The *ProjectFile* argument specifies the .ispac file name. This parameter is used primarily when you execute the package from [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)].  
   
--   **/Rem** *comment*:  
+-   **/Rem** _comment_:  
                   Optional. Includes comments on the command prompt or in command files. The argument is optional. The value of *comment* is a string that must be enclosed in quotation marks, or contain no white space. If no argument is specified, a blank line is inserted. *comment* values are discarded during the command sourcing phase.  
   
--   **/Rep[orting]** *level* [*;event_guid_or_name*[*;event_guid_or_name*[...]]: Optional. Specifies what types of messages to report. The available reporting options for *level* are as follows:  
+-   **/Rep[orting]** _level_ [*;event_guid_or_name*[*;event_guid_or_name*[...]]: Optional. Specifies what types of messages to report. The available reporting options for *level* are as follows:  
   
      **N** No reporting.  
   
@@ -428,7 +428,7 @@ dtexec /option [value] [/option [value]]...
   
      The `/Ser[ver]` option is required when the `/ISServer` option is specified.  
   
--   **/SQ[L]** *package_path*:  
+-   **/SQ[L]** _package_path_:  
                   Loads a package that is stored in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], in `msdb` database. Packages that are stored in the `msdb` database, are deployed using the package deployment model. To run packages that are deployed to the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] server using the project deployment model, use the `/ISServer` option. For more information about the package and project deployment models, see [Deployment of Projects and Packages](deploy-integration-services-ssis-projects-and-packages.md).  
   
      The *package_path* argument specifies the name of the package to retrieve. If folders are included in the path, they are terminated with backslashes ("\\"). The *package_path* value can be quoted. If the path or file name specified in the *package_path* argument contains a space, you must put quotation marks around the *package_path* argument.  
@@ -448,7 +448,7 @@ dtexec /option [value] [/option [value]]...
   
 -   **/Su[m]**: Optional. Shows an incremental counter that contains the number of rows that will be received by the next component.  
   
--   **/U[ser]** *user_name*:  
+-   **/U[ser]** _user_name_:  
                   Optional. Allows the retrieval of a package that is protected by [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentication. This option is used only when the `/SQL` option is specified. The *user_name* value can be quoted.  
   
     > [!IMPORTANT]  
@@ -457,7 +457,7 @@ dtexec /option [value] [/option [value]]...
 -   **/Va[lidate]**:  
                   Optional. Stops the execution of the package after the validatation phase, without actually running the package. During validation, use of the **/WarnAsError** option causes `dtexec` to treat a warning as an error; therefore the package fails if a warning occurs during validation.  
   
--   **/VerifyB[uild]** *major*[*;minor*[*;build*]]: Optional. Verifies the build number of a package against the build numbers that were specified during the verification phase in the *major*, *minor*, and *build* arguments. If a mismatch occurs, the package will not execute.  
+-   **/VerifyB[uild]** _major_[*;minor*[*;build*]]: Optional. Verifies the build number of a package against the build numbers that were specified during the verification phase in the *major*, *minor*, and *build* arguments. If a mismatch occurs, the package will not execute.  
   
      The values are long integers. The argument can have one of three forms, with a value for *major* always required:  
   
@@ -467,7 +467,7 @@ dtexec /option [value] [/option [value]]...
   
     -   *major*; *minor*; *build*  
   
--   **/VerifyP[ackageID]** *packageID*:  
+-   **/VerifyP[ackageID]** _packageID_:  
                   Optional. Verifies the GUID of the package to be executed by comparing it to the value specified in the *package_id* argument.  
   
 -   **/VerifyS[igned]**:  
@@ -479,9 +479,9 @@ dtexec /option [value] [/option [value]]...
     > [!NOTE]  
     >  The optional **BlockedSignatureStates** registry value can specify a setting that is more restrictive than the digital signature option set in [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] or at the `dtexec` command line. In this situation, the more restrictive registry setting overrides the other settings.  
   
--   **/VerifyV[ersionID]** *versionID*: Optional. Verifies the version GUID of a package to be executed by comparing it to the value specified in the *version_id* argument during package Validation Phase.  
+-   **/VerifyV[ersionID]** _versionID_: Optional. Verifies the version GUID of a package to be executed by comparing it to the value specified in the *version_id* argument during package Validation Phase.  
   
--   **/VLog** *[Filespec]*: Optional. Writes all Integration Services package events to the log providers that were enabled when the package was designed. To have Integration Services enable a log provider for text files and write log events to a specified text file, include a path and file name as the *Filespec* parameter.  
+-   **/VLog** _[Filespec]_: Optional. Writes all Integration Services package events to the log providers that were enabled when the package was designed. To have Integration Services enable a log provider for text files and write log events to a specified text file, include a path and file name as the *Filespec* parameter.  
   
      If you do not include the *Filespec* parameter, Integration Services will not enable a log provider for text files. Integration Services will only write log events to the log providers that were enabled when the package was designed.  
   

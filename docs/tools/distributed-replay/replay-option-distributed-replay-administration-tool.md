@@ -30,12 +30,12 @@ dreplay replay [-m controller] -d controller_working_dir [-o]
 ```  
   
 #### Parameters  
- **-m** *controller*  
+ **-m** _controller_  
  Specifies the computer name of the controller. You can use "`localhost`" or "`.`" to refer to the local computer.  
   
  If the **-m** parameter is not specified, the local computer is used.  
   
- **-d** *controller_working_dir*  
+ **-d** _controller_working_dir_  
  Specifies the directory on the controller where the intermediate file will be stored. The **-d** parameter is required.  
   
  The following requirements apply:  
@@ -53,7 +53,7 @@ dreplay replay [-m controller] -d controller_working_dir [-o]
   
  When the **-o** parameter is not specified, the result trace file is not generated. The console output returns summary information at the end of replay, but no other replay statistics are available.  
   
- **-s** *target_server*  
+ **-s** _target_server_  
  Specifies the target instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] that the distributed workload should be replayed against. You must specify this parameter in the format **server_name[\instance name]**.  
   
  You cannot use "`localhost`" or "`.`" as the target server.  
@@ -62,18 +62,18 @@ dreplay replay [-m controller] -d controller_working_dir [-o]
   
  If the **-s** parameter is used, the `<Server>` element in the `<ReplayOptions>` section of the replay configuration file will be ignored.  
   
- **-w** *clients*  
+ **-w** _clients_  
  This required parameter is a comma-separated list (without spaces) that specifies the computer names of clients that should participate in the distributed replay. IP addresses are not allowed. Be aware that the clients must already be registered with the controller.  
   
 > [!NOTE]  
 >  Each client registers with the controller that is specified in the client configuration file when the client service starts.  
   
- **-c** *config_file*  
+ **-c** _config_file_  
  Is the full path of the replay configuration file; used to specify the location when it is stored in a different location.  
   
  The **-c** parameter is not required if you want to use the default values of the replay configuration file, `DReplay.exe.replay.config`.  
   
- **-f** *status_interval*  
+ **-f** _status_interval_  
  Specifies the frequency (in seconds) at which to display the status.  
   
  If **-f** is not specified, the default interval is 30 seconds.  

@@ -49,7 +49,7 @@ manager: craigg
   
 3.  Right-click the **Maintenance Plans** folder and select **New Maintenance Plan**.  
   
-4.  In the **New Maintenance Plan** dialog box, in the **Name** box, type a name for the plan and click **OK**. This opens the  Toolbox and the *maintenance_plan_name* **[Design]** surface with the **Subplan_1** subplan created in the main grid.  
+4.  In the **New Maintenance Plan** dialog box, in the **Name** box, type a name for the plan and click **OK**. This opens the  Toolbox and the _maintenance_plan_name_ **[Design]** surface with the **Subplan_1** subplan created in the main grid.  
   
      The following options are available in the design space's header.  
   
@@ -209,7 +209,7 @@ manager: craigg
   
         1.  If you select **Generate a text file report**, select either **Create a new file** or **Append to file**.  
   
-        2.  Depending on the selection above, enter the name and full path of the new file or file to be appended by entering the information in the **Folder** or **File name** boxes. Alternately, click on the ellipsis **(...)** and select the path to the folder or file name from the **Locate Folder -***server_name* or **Locate Database Files -***server_name* dialog boxes.  
+        2.  Depending on the selection above, enter the name and full path of the new file or file to be appended by entering the information in the **Folder** or **File name** boxes. Alternately, click on the ellipsis **(...)** and select the path to the folder or file name from the **Locate Folder -**_server_name_ or **Locate Database Files -**_server_name_ dialog boxes.  
   
         3.  If you select **Send report to an email recipient**, on the **Agent operator** list, select the recipient of the emailed report.  
   
@@ -224,7 +224,7 @@ manager: craigg
   
 12. To view the results in the log file viewer, in **Object Explorer**, right-click either the **Maintenance Plans** folder or the specific maintenance plan and select **View History**.  
   
-     The following options are available on the **Log File Viewer -***server_name* dialog box.  
+     The following options are available on the **Log File Viewer -**_server_name_ dialog box.  
   
      **Load Log**  
      Open a dialog box where you can specify a log file to load.  

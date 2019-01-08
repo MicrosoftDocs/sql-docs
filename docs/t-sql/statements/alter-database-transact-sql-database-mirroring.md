@@ -83,7 +83,7 @@ SELECT role_desc, state_desc FROM sys.database_mirroring_endpoints
 > [!NOTE]  
 >  Only one \<partner_option> is permitted per SET PARTNER clause.  
   
- **'** *partner_server* **'**  
+ **'** _partner_server_ **'**  
  Specifies the server network address of an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to act as a failover partner in a new database mirroring session. Each session requires two partners: one starts as the principal server, and the other starts as the mirror server. We recommend that these partners reside on different computers.  
   
  This option is specified one time per session on each partner. Initiating a database mirroring session requires two ALTER DATABASE *database* SET PARTNER **='**_partner_server_**'** statements. Their order is significant. First, connect to the mirror server, and specify the principal server instance as *partner_server* (SET PARTNER **='**_principal_server_**'**). Second, connect to the principal server, and specify the mirror server instance as *partner_server* (SET PARTNER **='**_mirror_server_**'**); this starts a database mirroring session between these two partners. For more information, see [Setting Up Database Mirroring &#40;SQL Server&#41;](../../database-engine/database-mirroring/setting-up-database-mirroring-sql-server.md).  
@@ -189,7 +189,7 @@ SELECT role_desc, state_desc FROM sys.database_mirroring_endpoints
 > [!NOTE]  
 >  Only one \<witness_option> is permitted per SET WITNESS clause.  
   
- **'** *witness_server* **'**  
+ **'** _witness_server_ **'**  
  Specifies an instance of the [!INCLUDE[ssDE](../../includes/ssde-md.md)] to act as the witness server for a database mirroring session. You can specify SET WITNESS statements only on the principal server.  
   
  In a SET WITNESS **='**_witness_server_**'** statement, the syntax of *witness_server* is the same as the syntax of *partner_server*.  

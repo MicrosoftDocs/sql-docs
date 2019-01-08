@@ -3,7 +3,7 @@ title: Release notes and changelog
 titleSuffix: Azure Data Studio
 description: 'Azure Data Studio release notes'
 ms.custom: "seodec18"
-ms.date: "12/19/2018"
+ms.date: "01/10/2019"
 ms.prod: sql
 ms.technology: azure-data-studio
 ms.reviewer: "alayu; sstein"
@@ -14,22 +14,23 @@ manager: craigg
 ---
 # Azure Data Studio latest release notes and changelog
 
-**[Download the December Release!](download.md)**
+**[Download the January Release!](download.md)**
 
 
-## December 2018 (December Release)
+## January 2019 (January Release)
 
-release date: December 18, 2018  
+release date: January 09, 2019  
 version: 1.3.8
 
 - Added a new user installer for Windows. Unlike the existing system installer, the new user installer does not require administrator privileges. This also enables an easier upgrade experience for non administrators.
-- Azure Active Directory Authentication support
-- Data-Tier Application Wizard support in SQL Server Import extension
+- Azure Active Directory Authentication support.
+- Announcing Idera SQL DM Performance Insights (Preview).
+- Data-Tier Application Wizard support in SQL Server Import extension.
 - Update to the [SQL Server 2019 Preview extension](https://docs.microsoft.com/sql/azure-data-studio/sql-server-2019-extension?view=sql-server-ver15)
-- SQL Server Profiler improvements
-- Results Streaming for large queries (preview)
-- Community extensions: sp_executesql to sql and New Database
-- Resolved [bugs and issues](https://github.com/Microsoft/azuredatastudio/milestone/19?closed=1)
+- SQL Server Profiler improvements.
+- Results Streaming for large queries (preview).
+- Community extensions: sp_executesql to sql and New Database.
+- Resolved [bugs and issues](https://github.com/Microsoft/azuredatastudio/milestone/19?closed=1).
 
 For detailed information, see the [Change Log](https://github.com/Microsoft/azuredatastudio/blob/master/CHANGELOG.md), and [Releases](https://github.com/Microsoft/azuredatastudio/releases).
 

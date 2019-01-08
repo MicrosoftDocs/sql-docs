@@ -107,7 +107,7 @@ monikerRange: ">=sql-server-2016||=sqlallproducts-allversions"
   
 2.  When adding an availability replica to an availability group, use the **New-SqlAvailabilityGroup** cmdlet. When modifying an existing availability replica, use the **Set-SqlAvailabilityGroup** cmdlet.  
   
-    -   To set the failover condition level, use the **FailureConditionLevel***level* parameter, where, *level* is one of the following values:  
+    -   To set the failover condition level, use the **FailureConditionLevel**_level_ parameter, where, *level* is one of the following values:  
   
         |Value|Level|Automatic Is Failover Initiated When...|  
         |-----------|-----------|-------------------------------------------|  
@@ -127,7 +127,7 @@ monikerRange: ">=sql-server-2016||=sqlallproducts-allversions"
         -FailureConditionLevel OnServerDown  
         ```  
   
-    -   To set the health check timeout threshold, use the **HealthCheckTimeout***n* parameter, where, *n* is an integer from 15000 milliseconds (15 seconds) to 4294967295 milliseconds. The default value is 30000 milliseconds (30 seconds).  
+    -   To set the health check timeout threshold, use the **HealthCheckTimeout**_n_ parameter, where, *n* is an integer from 15000 milliseconds (15 seconds) to 4294967295 milliseconds. The default value is 30000 milliseconds (30 seconds).  
   
          For example, the following command changes the health-check timeout threshold of an existing availability group, `AG1`, to 120,000 milliseconds (two minutes).  
   

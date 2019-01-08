@@ -153,7 +153,7 @@ GO
   
 2.  When adding an availability replica to an availability group, use the **New-SqlAvailabilityReplica** cmdlet. When modifying an existing availability replica, use the **Set-SqlAvailabilityReplica** cmdlet. The relevant parameters are as follows:  
   
-    -   To configure connection access for the secondary role, specify the **ConnectionModeInSecondaryRole***secondary_role_keyword* parameter, where *secondary_role_keyword* equals one of the following values:  
+    -   To configure connection access for the secondary role, specify the **ConnectionModeInSecondaryRole**_secondary_role_keyword_ parameter, where *secondary_role_keyword* equals one of the following values:  
   
          **AllowNoConnections**  
          No direct connections are allowed to the databases in the secondary replica and the databases are not available for read access. This is the default setting.  
@@ -164,7 +164,7 @@ GO
          **AllowAllConnections**  
          All connections are allowed to the databases in the secondary replica for read-only access.  
   
-    -   To configure connection access for the primary role, specify **ConnectionModeInPrimaryRole***primary_role_keyword*, where *primary_role_keyword* equals one of the following values:  
+    -   To configure connection access for the primary role, specify **ConnectionModeInPrimaryRole**_primary_role_keyword_, where *primary_role_keyword* equals one of the following values:  
   
          **AllowReadWriteConnections**  
          Connections where the Application Intent connection property is set to ReadOnly are disallowed. When the Application Intent property is set to ReadWrite or the Application Intent connection property is not set, the connection is allowed. For more information about Application Intent connection property, see [Using Connection String Keywords with SQL Server Native Client](../../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md).  

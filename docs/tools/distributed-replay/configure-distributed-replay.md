@@ -117,7 +117,7 @@ manager: craigg
   
 |Setting|XML Element|Description|Allowed Values|Required|  
 |-------------|-----------------|-----------------|--------------------|--------------|  
-|Target instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (the test server)|`<Server>`|Specifies the name of the server and instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to connect to.|*server_name*[\\*instance_name*]<br /><br /> You cannot use "`localhost`" or "`.`" to represent the local host.|No, if the server name is already specified by using the **-s***target server* parameter with the **replay** option of the administration tool.|  
+|Target instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (the test server)|`<Server>`|Specifies the name of the server and instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to connect to.|*server_name*[\\*instance_name*]<br /><br /> You cannot use "`localhost`" or "`.`" to represent the local host.|No, if the server name is already specified by using the **-s**_target server_ parameter with the **replay** option of the administration tool.|  
 |Sequencing mode|`<SequencingMode>`|Specifies the mode that is used for event scheduling.|`synchronization` &#124; `stress`|No. By default, the value is `stress`.|  
 |Stress scale granularity|`<StressScaleGranularity>`|Specifies whether all connections on the Service Profile Identifier (SPID) should be scaled together (SPID) or independently (Connection) under stress mode.|SPID &#124; Connection|Yes. By default, the value is `SPID`.|  
 |Connect time scale|`<ConnectTimeScale>`|Is used to scale the connect time in stress mode.|An integer between `1` and `100`.|No. By default, the value is `100`.|  
@@ -161,7 +161,7 @@ manager: craigg
 
 ### Possible Issue When Running With Synchronization Sequencing Mode
  You may encounter a symptom in which the replay functionality appears to "stall", or replays events very slowly. This phenomenon can occur if the trace being replayed relies on data and/or events that do not exist in the restored target database. 
- 
+ 
  One example is a captured workload that uses WAITFOR, such as in Service Broker's WAITFOR RECEIVE statement. When using the synchronization sequencing mode, batches are replayed serially. If an INSERT occurs against the source database after the database backup, but before the replay capture trace is started, the WAITFOR RECEIVE issued during replay may have to wait the entire duration of the WAITFOR. Events set to be replayed after the WAITFOR RECEIVE will be stalled. This can result in the Batch Requests/sec performance monitor counter for the replay database target dropping to zero until the WAITFOR completes. 
  
  If you need to use synchronization mode and wish to avoid this behavior, you must do the following:

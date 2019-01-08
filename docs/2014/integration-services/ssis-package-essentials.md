@@ -43,7 +43,7 @@ manager: craigg
   
 ## Related Content  
   
-1.  Video, [Creating a Basic Package (SQL Server Video)](http://go.microsoft.com/fwlink/?LinkId=131023), on MSDN.Microsoft.com  
+1.  Video, [Creating a Basic Package (SQL Server Video)](https://go.microsoft.com/fwlink/?LinkId=131023), on MSDN.Microsoft.com  
   
 ## See Also  
  [Integration Services &#40;SSIS&#41; Packages](../../2014/integration-services/integration-services-ssis-packages.md)   

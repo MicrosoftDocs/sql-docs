@@ -74,7 +74,7 @@ SELECT @g.STUnion(@h).ToString();
  SELECT @g.STUnion(@h).ToString();
  ```  
   
-### C. Producing a triagonal hole from a union of a CurvePolygon and a traigonal hole.  
+### C. Producing a triagonal hole from a union of a CurvePolygon and a triagonal hole.  
  The following example produces a triagonal hole from the union of a `CurvePolygon` with a `Polygon` instance.  
   
 ```

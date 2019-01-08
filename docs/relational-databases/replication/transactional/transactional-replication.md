@@ -66,5 +66,15 @@ manager: craigg
   
 ##  <a name="DistributionAgent"></a> Distribution Agent  
  The Distribution Agent runs at the Distributor for push subscriptions and at the Subscriber for pull subscriptions. The agent moves transactions from the distribution database to the Subscriber. If a subscription is marked for validation, the Distribution Agent also checks whether data at the Publisher and Subscriber match.  
+
+## Publication types 
+Transactional replication offers four publication types:  
+  
+|Publication Type|Description|  
+|----------------------|-----------------|  
+|Standard transactional publication|Appropriate for topologies in which all data at the Subscriber is read-only (transactional replication does not enforce this at the Subscriber).<br /><br /> Standard transactional publications are created by default when using Transact-SQL or Replication Management Objects (RMO). When using the New Publication Wizard, they are created by selecting **Transactional publication** on the **Publication Type** page.<br /><br /> For more information about creating publications, see [Publish Data and Database Objects](../../../relational-databases/replication/publish/publish-data-and-database-objects.md).|  
+|Transactional publication with updatable subscriptions|The characteristics of this publication type are:<br /><br /> -Each location has identical data, with one Publisher and one Subscriber. <br /> -It is possible to update rows at the Subscriber<br /> -This topology is best suited for server environments requiring high availability and read scalability.<br /><br />For more information, see [Updatable Subscriptions](../../../relational-databases/replication/transactional/updatable-subscriptions-for-transactional-replication.md).|  
+|Peer-to-peer topology|The characteristics of this publication type are:<br /> - Each location has identical data and acts as both a Publisher and Subscriber.<br /> - The same row can be changed only at one location at a time.<br /> - Supports [conflict detection](../../../relational-databases/replication/transactional/peer-to-peer-conflict-detection-in-peer-to-peer-replication.md)  <br />- This topology is best suited for server environments requiring high availability and read scalability.<br /><br />For more information, see [Peer-to-Peer Transactional Replication](../../../relational-databases/replication/transactional/peer-to-peer-transactional-replication.md).|  
+|Bidirectional transactional replication|The characteristics of this publication type are:<br />Bidirectional replication is similar to Peer-to-Peer replication, however, it does not provide conflict resolution. Additionally, bidirectional replication is limited to 2 servers. <br /><br /> For more information, see [Bidirectional Transactional Replication](../../../relational-databases/replication/transactional/bidirectional-transactional-replication.md) |  
   
   

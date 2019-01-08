@@ -42,16 +42,16 @@ sp_changearticlecolumndatatype [ @publication= ] 'publication'
 ```  
   
 ## Arguments  
- [ **@publication=** ] **'***publication***'**  
+ [ **@publication=** ] **'**_publication_**'**  
  Is the name of the Oracle publication. *publication* is **sysname**, with no default.  
   
- [ **@article =** ] **'***article***'**  
+ [ **@article =** ] **'**_article_**'**  
  Is the name of the article. *article* is **sysname**, with no default.  
   
- [ **@column**= ] **'***column***'**  
+ [ **@column**= ] **'**_column_**'**  
  Is the name of the column for which to change the data type mapping. *column* is **sysname**, with no default.  
   
- [ **@type** = ] **'***type***'**  
+ [ **@type** = ] **'**_type_**'**  
  Is the name of the [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] data type in the destination column. *type* is **sysname**, with a default of NULL.  
   
  [ **@length** = ] *length*  
@@ -60,8 +60,8 @@ sp_changearticlecolumndatatype [ @publication= ] 'publication'
  [ **@precision**= ] *precision*  
  Is the precision of the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] data type in the destination column. *precision* is **bigint**, with a default of NULL.  
   
- [ **@publisher**= ] **'***publisher***'**  
- Specifies a non-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] publisher. *publisher* is **sysname**, with a default of NULL.  
+ [ **@publisher**= ] **'**_publisher_**'**  
+ Specifies a non- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] publisher. *publisher* is **sysname**, with a default of NULL.  
   
 ## Return Code Values  
  **0** (success) or **1** (failure)  

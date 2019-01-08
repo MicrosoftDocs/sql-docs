@@ -24,12 +24,12 @@ ms.author: maghan
   
  All query parameters can have corresponding report parameters. You pass a query parameter to a report by passing the corresponding report parameter. For more information, see [Build a Query in the Relational Query Designer &#40;Report Builder and SSRS&#41;](../reporting-services/report-data/build-a-query-in-the-relational-query-designer-report-builder-and-ssrs.md).  
   
-> [!IMPORTANT]  
+> [!IMPORTANT]
 >  Report parameters are case-sensitive.  
-  
-> [!NOTE]  
+> 
+> [!NOTE]
 >  Report parameters are case-sensitive and utilize the following special characters:  
->   
+> 
 >  -   Any space characters in the URL string are replaced with the characters "%20," according to URL encoding standards.  
 > -   A space character in the parameter portion of the URL is replaced with a plus character (+).  
 > -   A semicolon in any portion of the string is replaced with the characters "%3A."  

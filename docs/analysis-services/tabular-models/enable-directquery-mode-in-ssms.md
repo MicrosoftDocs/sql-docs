@@ -1,5 +1,5 @@
 ---
-title: "Enable DirectQuery mode in SSMS | Microsoft Docs"
+title: "Enable in Analysis Services DirectQuery mode in SSMS | Microsoft Docs"
 ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services

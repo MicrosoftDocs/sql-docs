@@ -1,10 +1,10 @@
 ---
-title: How to call Java from SQL | Microsoft Docs
+title: How to call Java from SQL - SQL Server Machine Learning Services
 description: Learn how to call Java classes from SQL Server stored procedures using the Java programming language extension in SQL Server 2019.
 ms.prod: sql
 ms.technology: machine-learning
 
-ms.date: 09/24/2018  
+ms.date: 12/07/2018
 ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
@@ -12,7 +12,7 @@ manager: cgronlun
 monikerRange: ">=sql-server-ver15||=sqlallproducts-allversions"
 ---
 
-# How to call Java from SQL Server 2019
+# How to call Java from SQL Server 2019 preview
 
 When using the [Java language extension](extension-java.md), the [sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql) system stored procedure is the interface used to call the Java runtime. Permissions on the database apply to Java code execution.
 
@@ -29,7 +29,7 @@ This article explains implementation details for Java classes and methods that e
 * "params" is used to pass parameters to a Java class. Calling a method that requires arguments is not supported, which makes parameters the only way to pass argument values to your method. 
 
 > [!Note]
-> This note restates supported and unsupported operations specific to Java in CTP 2.0.
+> This note restates supported and unsupported operations specific to Java in CTP 2.x.
 > * On the stored procedure, input parameters are supported. Output parameters are not.
 > * Streaming using the sp_execute_external_script parameter **@r_rowsPerRead** is not supported.
 > * Partitioning using **@input_data_1_partition_by_columns** is not supported.
@@ -37,7 +37,7 @@ This article explains implementation details for Java classes and methods that e
 
 ## Call sp_execute_external_script
 
-The [sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql) system stored procedure is the interface used to call the Java runtime. The following example shows an sp_execute_external_script using the Java extension, and parameters for specifying path, script, and your custom code.
+Applicable to both Windows and Linux, the [sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql) system stored procedure is the interface used to call the Java runtime. The following example shows an sp_execute_external_script using the Java extension, and parameters for specifying path, script, and your custom code.
 
 ```sql
 DECLARE @myClassPath nvarchar(30)
@@ -148,6 +148,8 @@ This NullMap must be populated with the expected number of columns and rows you 
 ```java
 public static boolean[][] outputNullMap
 ```
+<a name="create-external-library"></a>
+
 
 ## Next steps
 

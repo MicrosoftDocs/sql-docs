@@ -45,7 +45,7 @@ The *partition_by_clause* divides the FROM clause result set into partitions, to
 **float(53)**
   
 ## Remarks  
-`CUME_DIST` returns a range of values greater tnan 0 and less than or equal to 1. Tie values always evaluate to the same cumulative distribution value. `CUME_DIST` includes NULL values by default and treats these values as the lowest possible values.
+`CUME_DIST` returns a range of values greater than 0 and less than or equal to 1. Tie values always evaluate to the same cumulative distribution value. `CUME_DIST` includes NULL values by default and treats these values as the lowest possible values.
   
 `CUME_DIST` is nondeterministic. See [Deterministic and Nondeterministic Functions](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md) for more information.
   

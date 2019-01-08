@@ -181,19 +181,19 @@ sp_addpushsubscription_agent [ @publication= ] 'publication'
  Is the name of the Publisher. *publisher* is **sysname**, with a default value of NULL.  
   
  [ **@subscriber_provider=** ] **'***subscriber_provider***'**  
- Is the unique programmatic identifier (PROGID) with which the OLE DB provider for the non-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] data source is registered. *subscriber_provider* is **sysname**, with default value of NULL. *subscriber_provider* must be unique for the OLE DB provider installed on the Distributor. *subscriber_provider* is only supported for non-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Subscribers.  
+ Is the unique programmatic identifier (PROGID) with which the OLE DB provider for the non- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] data source is registered. *subscriber_provider* is **sysname**, with default value of NULL. *subscriber_provider* must be unique for the OLE DB provider installed on the Distributor. *subscriber_provider* is only supported for non- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Subscribers.  
   
  [ **@subscriber_datasrc=** ] **'***subscriber_datasrc***'**  
- Is the name of the data source as understood by the OLE DB provider. *subscriber_datasrc* is **nvarchar(4000)**, with a default value of NULL. *subscriber_datasrc* is passed as the DBPROP_INIT_DATASOURCE property to initialize the OLE DB provider. *subscriber_datasrc* is only supported for non-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Subscribers.  
+ Is the name of the data source as understood by the OLE DB provider. *subscriber_datasrc* is **nvarchar(4000)**, with a default value of NULL. *subscriber_datasrc* is passed as the DBPROP_INIT_DATASOURCE property to initialize the OLE DB provider. *subscriber_datasrc* is only supported for non- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Subscribers.  
   
  [ **@subscriber_location=** ] **'***subscriber_location***'**  
- Is the location of the database as understood by the OLE DB provider. *subscriber_location* is **nvarchar(4000)**, with a default value of NULL. *subscriber_location* is passed as the DBPROP_INIT_LOCATION property to initialize the OLE DB provider. *subscriber_location* is only supported for non-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Subscribers.  
+ Is the location of the database as understood by the OLE DB provider. *subscriber_location* is **nvarchar(4000)**, with a default value of NULL. *subscriber_location* is passed as the DBPROP_INIT_LOCATION property to initialize the OLE DB provider. *subscriber_location* is only supported for non- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Subscribers.  
   
  [ **@subscriber_provider_string=** ] **'***subscriber_provider_string***'**  
- Is the OLE DB provider-specific connection string that identifies the data source. *subscriber_provider_string* is **nvarchar(4000)**, with a default value of NULL. *subscriber_provider_string* is passed to IDataInitialize or set as the DBPROP_INIT_PROVIDERSTRING property to initialize the OLE DB provider. *subscriber_provider_string* is only supported for non-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Subscribers.  
+ Is the OLE DB provider-specific connection string that identifies the data source. *subscriber_provider_string* is **nvarchar(4000)**, with a default value of NULL. *subscriber_provider_string* is passed to IDataInitialize or set as the DBPROP_INIT_PROVIDERSTRING property to initialize the OLE DB provider. *subscriber_provider_string* is only supported for non- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Subscribers.  
   
  [ **@subscriber_catalog=** ] **'***subscriber_catalog***'**  
- Is the catalog to be used when making a connection to the OLE DB provider. *subscriber_catalog* is **sysname**, with default value of NULL. *subscriber_catalog* is passed as the DBPROP_INIT_CATALOG property to initialize the OLE DB provider. *subscriber_catalog* is only supported for non-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Subscribers.  
+ Is the catalog to be used when making a connection to the OLE DB provider. *subscriber_catalog* is **sysname**, with default value of NULL. *subscriber_catalog* is passed as the DBPROP_INIT_CATALOG property to initialize the OLE DB provider. *subscriber_catalog* is only supported for non- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Subscribers.  
   
 ## Return Code Values  
  **0** (success) or **1** (failure)  

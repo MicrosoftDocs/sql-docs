@@ -42,7 +42,7 @@ Learn how to configure transactional replication to replicate data between fully
 Learn how to configure merge replication to exchange data between a server and one or more clients that are only occasionally connected.  
   
 ## See also  
-[Security and protection for replication](../../relational-databases/replication/security/security-and-protection-replication.md) 
+[View and modify replication security settings](../../relational-databases/replication/security/view-and-modify-replication-security-settings.md) 
 
 [Transactional replication overview](https://docs.microsoft.com/sql/relational-databases/replication/transactional/transactional-replication) 
 

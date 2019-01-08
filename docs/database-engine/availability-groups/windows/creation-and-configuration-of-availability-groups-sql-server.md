@@ -1,6 +1,7 @@
 ---
-title: "Creation and Configuration of Availability Groups (SQL Server) | Microsoft Docs"
-ms.custom: ""
+title: "Reference for the creation and configuration of availability groups"
+description: "A reference to links that help  you create and configure Always On availability groups."
+ms.custom: "seodec18"
 ms.date: "05/17/2016"
 ms.prod: sql
 ms.reviewer: ""
@@ -15,7 +16,7 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ---
-# Creation and Configuration of Availability Groups (SQL Server)
+# Reference for the creation and configuration of Always On availability groups
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   The topics in this section explain how to deploy a [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] implementation on instances of [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] that reside on different Windows Server Failover Clustering (WSFC) nodes within a single WSFC failover cluster.  
   

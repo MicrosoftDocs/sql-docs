@@ -1,7 +1,8 @@
 ---
-title: Azure Data Studio release notes| Microsoft Docs
+title: Release notes and changelog
+titleSuffix: Azure Data Studio
 description: 'Azure Data Studio release notes'
-ms.custom: "tools|sos"
+ms.custom: "seodec18"
 ms.date: "11/06/2018"
 ms.prod: sql
 ms.technology: azure-data-studio
@@ -11,7 +12,7 @@ author: "stevestein"
 ms.author: "sstein"
 manager: craigg
 ---
-# Azure Data Studio release notes
+# Azure Data Studio latest release notes and changelog
 
 **[Download the November Release!](download.md)**
 

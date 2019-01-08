@@ -49,14 +49,6 @@ manager: craigg
 ## Permissions  
  Requires VIEW SERVER STATE permission on the server.  
   
-## Change History  
-  
-|Updated content|  
-|---------------------|  
-|Corrected the data type for the name and the blocked_event_fire_time columns.|  
-|Removed the buffer_size and total_buffers columns.|  
-|Added the total_regular_buffers,regular_buffer_size, total_large_buffers, large_buffer_size and total_buffer_size columns.|  
-  
 ## See Also  
  [Dynamic Management Views and Functions &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)  
   

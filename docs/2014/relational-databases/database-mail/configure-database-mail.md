@@ -388,7 +388,7 @@ manager: craigg
 
   
 ###  <a name="TestEmail"></a> Send Test E-Mail Page  
- Use the **Send Test E-Mail from***<instance_name>* page to send an e-mail message using the specified Database Mail profile. Only members of the **sysadmin** fixed server role can send test e-mail using this page.  
+ Use the **Send Test E-Mail from**_<instance_name>_ page to send an e-mail message using the specified Database Mail profile. Only members of the **sysadmin** fixed server role can send test e-mail using this page.  
   
  **Database Mail Profile**  
  Select a Database Mail profile from the list. This is a required field. If no profiles are shown, there are no profiles or you do not have permission to a profile. Use the **Database Mail Configuration Wizard** to create and configure profiles. If no profiles are listed, use the Database Mail Configuration Wizard to create a profile for your use.  
@@ -408,7 +408,7 @@ manager: craigg
  The **mailitem_id** of the test e-mail message.  
   
  **Troubleshoot**  
- Click to open Books Online to the [Troubleshooting Database Mail](http://msdn.microsoft.com/library/ms188663.aspx)topic.  
+ Click to open Books Online to the [Troubleshooting Database Mail](https://msdn.microsoft.com/library/ms188663.aspx)topic.  
   
 
   

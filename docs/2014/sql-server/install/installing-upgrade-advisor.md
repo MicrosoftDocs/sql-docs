@@ -25,7 +25,7 @@ manager: craigg
   
 -   In the **redist** folder of the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] product media.  
   
--   As part of the [SQL 2014 Feature Pack download](http://www.microsoft.com/download/details.aspx?id=42295).  
+-   As part of the [SQL 2014 Feature Pack download](https://www.microsoft.com/download/details.aspx?id=42295).  
   
 ## Uninstalling Upgrade Advisor  
  You can uninstall Upgrade Advisor by using **Add or Remove Programs**. The command prompt syntax also supports removal/uninstall.  

@@ -50,19 +50,19 @@ GRANT permission  [ ,...n ] ON
  *permission*  
  Specifies a permission that can be granted on a Service Broker securable.  Listed below.  
   
- CONTRACT **::***contract_name*  
+ CONTRACT **::**_contract_name_  
  Specifies the contract on which the permission is being granted. The scope  qualifier "::" is required.  
   
- MESSAGE TYPE **::***message_type_name*  
+ MESSAGE TYPE **::**_message_type_name_  
  Specifies the message type on which the permission is being granted. The scope qualifier "::" is required.  
   
- REMOTE SERVICE BINDING **::***remote_binding_name*  
+ REMOTE SERVICE BINDING **::**_remote_binding_name_  
  Specifies the remote service binding on which the permission is being granted. The scope qualifier "::" is required.  
   
- ROUTE **::***route_name*  
+ ROUTE **::**_route_name_  
  Specifies the route on which the permission is being granted. The scope qualifier "::" is required.  
   
- SERVICE **::***service_name*  
+ SERVICE **::**_service_name_  
  Specifies the service on which the permission is being granted. The scope qualifier "::" is required.  
   
  *database_principal*  

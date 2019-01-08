@@ -49,7 +49,7 @@ STGeomFromText ( 'geometry_tagged_text' , SRID )
  This method will throw a **FormatException** if the input is not well-formatted.  
   
 ## Examples  
- The following example uses `STGeomeFromText()` to create a `geometry` instance.  
+ The following example uses `STGeomFromText()` to create a `geometry` instance.  
   
 ```  
 DECLARE @g geometry;  

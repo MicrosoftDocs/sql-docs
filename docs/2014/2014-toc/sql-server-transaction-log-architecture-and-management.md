@@ -119,7 +119,7 @@ manager: craigg
 ## Additional Reading  
  We recommend the following articles and books for additional information about the transaction log.  
   
- [Understanding Logging and Recovery in SQL Server by Paul Randall](http://technet.microsoft.com/magazine/2009.02.logging.aspx)  
+ [Understanding Logging and Recovery in SQL Server by Paul Randall](https://technet.microsoft.com/magazine/2009.02.logging.aspx)  
   
  [SQL Server Transaction Log Management by Tony Davis and Gail Shaw](http://www.simple-talk.com/books/sql-books/sql-server-transaction-log-management-by-tony-davis-and-gail-shaw/)  
   

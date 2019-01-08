@@ -22,7 +22,7 @@ manager: kfile
 |Property|Default Setting|Description|  
 |--------------|---------------------|-----------------|  
 |Build / Deployment Server Edition|The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] edition used to develop the project|Specifies the edition of the server to which projects will finally be deployed. When working with multiple developers on a project, developers need to understand the server edition to know which features to incorporate into the [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] project.|  
-|Build / Deployment Server Edition|The version used to develop the projects|Specifies the version of the server to which projects will finally be deployed.|  
+|Build / Deployment Server Version|The version used to develop the projects|Specifies the version of the server to which projects will finally be deployed.|  
 |Build / Outputs|/bin|The relative path for the output of the project build process|  
 |Build / Remove Passwords|True|Specifies whether known passwords will be removed from connection strings that are written to the output directory during the build process. Passwords are removed to increase security. If passwords are removed, they will need to be provided when the deployed project is processed in order for [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] to access the source data.|  
 |Debugging / Start Object|\<Currently Active Object>|Determines that object that will be started when you start debugging.|  

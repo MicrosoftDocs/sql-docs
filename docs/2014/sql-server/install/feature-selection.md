@@ -39,8 +39,8 @@ manager: craigg
 |[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] includes the tools for creating and managing online analytical processing (OLAP) and data mining applications.|  
 |[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Native|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Native mode includes server and client components for creating, managing, and deploying tabular, matrix, graphical, and free-form reports. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] is also an extensible platform that you can use to develop report applications.|  
   
-> [!IMPORTANT]  
->  1.  Setup does not configure load-balancing and single-URL addressing for multiple nodes in a [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] scale-out deployment. To complete a scale-out deployment, you must use Windows Server, [!INCLUDE[msCoName](../../includes/msconame-md.md)] Application Center, or third-party cluster management software. For more information about setting up Web farm deployment, see [Configuring Reporting Services for Scale-Out Deployment](http://go.microsoft.com/fwlink/?LinkId=199448) (http://go.microsoft.com/fwlink/?LinkId=199448).  
+> [!IMPORTANT]
+>  1.  Setup does not configure load-balancing and single-URL addressing for multiple nodes in a [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] scale-out deployment. To complete a scale-out deployment, you must use Windows Server, [!INCLUDE[msCoName](../../includes/msconame-md.md)] Application Center, or third-party cluster management software. For more information about setting up Web farm deployment, see [Configuring Reporting Services for Scale-Out Deployment](https://go.microsoft.com/fwlink/?LinkId=199448) (https://go.microsoft.com/fwlink/?LinkId=199448).  
 > 2.  For browser requirements of [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] components, see [Planning for Reporting Services and Power View Browser Support &#40;Reporting Services 2014&#41;](../../../2014/reporting-services/browser-support-for-reporting-services-and-power-view.md).  
 > 3.  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] is not supported in side-by-side configurations on the 64-bit platform and on the 32-bit subsystem (WOW64) of a 64-bit server at the same time.  
   
@@ -82,7 +82,7 @@ manager: craigg
 -   Create more free space on the specified drive by moving other files or applications.  
   
 ## Installing AdventureWorks Sample Databases  
- By default, sample databases and sample code are not installed as part of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Setup. For more information about installing sample databases and sample code, see the [Microsoft SQL Server Community Projects & Samples](http://go.microsoft.com/fwlink/?LinkId=87843) (http://go.microsoft.com/fwlink/?LinkId=87843).  
+ By default, sample databases and sample code are not installed as part of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Setup. For more information about installing sample databases and sample code, see the [Microsoft SQL Server Community Projects & Samples](https://go.microsoft.com/fwlink/?LinkId=87843) (https://go.microsoft.com/fwlink/?LinkId=87843).  
   
  Additional information about samples is available after [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] has been installed. From the **Start** menu, click **All Programs**, click **[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]**, click **Documentation and Tutorials**, and then click **[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Samples Overview**.  
   

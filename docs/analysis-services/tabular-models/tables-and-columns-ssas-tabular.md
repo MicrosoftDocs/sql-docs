@@ -1,5 +1,5 @@
 ---
-title: "Tables and Columns | Microsoft Docs"
+title: "Analysis Services tabular model tables and columns | Microsoft Docs"
 ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services

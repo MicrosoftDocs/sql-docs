@@ -1,7 +1,8 @@
 ---
-title: Download and install Azure Data Studio | Microsoft Docs
-description: 'Download and Install Azure Data Studio for Windows, macOS, or Linux'
-ms.custom: "tools|sos"
+title: Download and install
+titleSuffix: Azure Data Studio
+description: Download and Install Azure Data Studio for Windows, macOS, or Linux
+ms.custom: "seodec18"
 ms.date: "11/06/2018"
 ms.prod: sql
 ms.technology: azure-data-studio

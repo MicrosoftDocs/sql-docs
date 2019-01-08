@@ -24,20 +24,22 @@ manager: craigg
 # Advanced Merge Replication - Conflict Detection and Resolution
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   When a Publisher and a Subscriber are connected and synchronization occurs, the Merge Agent detects if there are any conflicts. If conflicts are detected, the Merge Agent uses a conflict resolver (which is specified when an article is added to a publication) to determine which data is accepted and propagated to other sites.  
+
+ Merge replication offers a variety of methods to detect and resolve conflicts. For most applications, the default method is appropriate:  
+  
+-   If a conflict occurs between a Publisher and a Subscriber, the Publisher change is kept and the Subscriber change is discarded.   
+-   If a conflict occurs between two Subscribers using client subscriptions (the default type for pull subscriptions), the change from the first Subscriber to synchronize with the Publisher is kept, and the change from the second Subscriber is discarded. For information about specifying client and server subscriptions, see [Specify a Merge Subscription Type and Conflict Resolution Priority &#40;SQL Server Management Studio&#41;](../../../relational-databases/replication/specify-a-merge-subscription-type-and-conflict-resolution-priority.md).   
+-   If a conflict occurs between two Subscribers using server subscriptions (the default type for push subscriptions), the change from the Subscriber with the highest priority value is kept, and the change from the second Subscriber is discarded. If the priority values are equal, the change from the first Subscriber to synchronize with the Publisher is kept.  
   
 > [!NOTE]  
 >  Although a Subscriber synchronizes with the Publisher, conflicts typically occur between updates that are made at different Subscribers, instead of updates being made at a Subscriber and at the Publisher.  
   
- The behavior of conflict detection and resolution depends on the following options, which are described in this topic:  
-  
--   Whether you specify column-level tracking, row-level tracking, or logical record-level tracking.  
-  
+ The behavior of conflict detection and resolution depends on the following options, which are described in this topic:    
+-   Whether you specify column-level tracking, row-level tracking, or logical record-level tracking.    
 -   Whether you specify the default priority-based resolution mechanism or specify an article resolver. An article resolver can be:  
   
-    -   A *business logic handler* written in managed code.  
-  
-    -   A COM-based *custom resolver*.  
-  
+    -   A *business logic handler* written in managed code.   
+    -   A COM-based *custom resolver*.    
     -   A COM-based resolver supplied by [!INCLUDE[msCoName](../../../includes/msconame-md.md)].  
   
      If the default resolution mechanism is used, behavior is further determined by the type of subscription used: client or server.  
@@ -45,18 +47,33 @@ manager: craigg
 ## Conflict Detection  
  Whether a data change qualifies as a conflict or not depends on the type of conflict tracking you set for an article:  
   
--   If you select column-level conflict tracking, it is considered a conflict if changes are made to the same column in the same row at more than one replication node.  
-  
--   If you select row-level tracking, it is considered a conflict if changes are made to any columns in the same row at more than one replication node (the columns affected in the corresponding rows need not be the same).  
-  
+-   If you select column-level conflict tracking, it is considered a conflict if changes are made to the same column in the same row at more than one replication node.    
+-   If you select row-level tracking, it is considered a conflict if changes are made to any columns in the same row at more than one replication node (the columns affected in the corresponding rows need not be the same).    
 -   If you select logical record-level tracking, it is considered a conflict if changes are made to any row in the same logical record at more than one replication node (the columns affected in the corresponding rows need not be the same).  
   
  For more information, see [Detecting and Resolving Conflicts in Logical Records](../../../relational-databases/replication/merge/advanced-merge-replication-conflict-resolving-in-logical-record.md).  
   
- To specify the conflict tracking and resolution level for an article, see [Specify the Conflict Tracking and Resolution Level for Merge Articles](../../../relational-databases/replication/publish/specify-the-conflict-tracking-and-resolution-level-for-merge-articles.md).  
+ To specify the conflict tracking and resolution level for an article, see [Specify merge replication properties](../../../relational-databases/replication/merge/specify-merge-replication-properties.md).  
   
 ## Conflict Resolution  
  After a conflict is detected, the Merge Agent launches the selected conflict resolver and uses the resolver to determine the conflict winner. The winning row is applied at the Publisher and Subscriber, and the data from the losing row is written to a conflict table. Conflicts are resolved immediately after the resolver executes, unless you select to resolve conflicts interactively.  
+
+Resolve Merge Replication Conflicts
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  When a Publisher and a Subscriber are connected and synchronization occurs, the Merge Agent detects if there are any conflicts. If conflicts are detected, the Merge Agent uses a conflict resolver to determine which data will be accepted and propagated to other sites.  
+  
+> [!NOTE]  
+>  Although a Subscriber synchronizes with the Publisher, conflicts typically occur between updates made at different Subscribers rather than updates made at a Subscriber and at the Publisher.  
+  
+ Merge replication offers a variety of methods to detect and resolve conflicts. For most applications, the default method is appropriate:  
+  
+-   If a conflict occurs between a Publisher and a Subscriber, the Publisher change is kept and the Subscriber change is discarded.  
+  
+-   If a conflict occurs between two Subscribers using client subscriptions (the default type for pull subscriptions), the change from the first Subscriber to synchronize with the Publisher is kept, and the change from the second Subscriber is discarded. For information about specifying client and server subscriptions, see [Specify a Merge Subscription Type and Conflict Resolution Priority &#40;SQL Server Management Studio&#41;](../../../relational-databases/replication/specify-a-merge-subscription-type-and-conflict-resolution-priority.md).  
+  
+-   If a conflict occurs between two Subscribers using server subscriptions (the default type for push subscriptions), the change from the Subscriber with the highest priority value is kept, and the change from the second Subscriber is discarded. If the priority values are equal, the change from the first Subscriber to synchronize with the Publisher is kept.  
+  
+ For more information about conflict detection and resolution for merge replication, see [Advanced Merge Replication Conflict Detection and Resolution](../../../relational-databases/replication/merge/advanced-merge-replication-conflict-detection-and-resolution.md).  
   
 ### Resolver Types  
  In merge replication, conflict resolution takes place at the article level. For publications composed of several articles, you can have different conflict resolvers serving different articles, or the same conflict resolver serving one article, several articles, or all the articles comprising a publication.  

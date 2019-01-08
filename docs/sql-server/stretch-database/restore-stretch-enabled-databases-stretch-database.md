@@ -6,8 +6,8 @@ ms.prod: sql
 ms.reviewer: ""
 ms.topic: conceptual
 ms.assetid: cebc1f6d-d5ea-460d-ae60-d047d29c2723
-author: MikeRayMSFT
-ms.author: mikeray
+author: douglaslMS
+ms.author: douglasl
 manager: craigg
 ---
 # Restore Stretch-enabled databases (Stretch Database)

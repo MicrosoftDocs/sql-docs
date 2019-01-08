@@ -75,7 +75,7 @@ SQLRETURN SQLGetCursorName(
 |IM001|Driver does not support this function|(DM) The driver associated with the *StatementHandle* does not support the function.|  
   
 ## Comments  
- Cursor names are used only in positioned update and delete statements (for example, **UPDATE** *table-name* ...**WHERE CURRENT OF** *cursor-name*). For more information, see [Positioned Update and Delete Statements](../../../odbc/reference/develop-app/positioned-update-and-delete-statements.md). If the application does not call **SQLSetCursorName** to define a cursor name, the driver generates a name. This name begins with the letters SQL_CUR.  
+ Cursor names are used only in positioned update and delete statements (for example, **UPDATE** _table-name_ ...**WHERE CURRENT OF** _cursor-name_). For more information, see [Positioned Update and Delete Statements](../../../odbc/reference/develop-app/positioned-update-and-delete-statements.md). If the application does not call **SQLSetCursorName** to define a cursor name, the driver generates a name. This name begins with the letters SQL_CUR.  
   
 > [!NOTE]
 >  In ODBC 2*.x*, when there was no open cursor and no name had been set by a call to **SQLSetCursorName**, a call to **SQLGetCursorName** returned SQLSTATE HY015 (No cursor name available). In ODBC 3*.x*, this is no longer true; regardless of when **SQLGetCursorName** is called, the driver returns the cursor name.  

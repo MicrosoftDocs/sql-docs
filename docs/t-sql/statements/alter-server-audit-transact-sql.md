@@ -145,7 +145,7 @@ Forces the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
 ## Examples  
   
 ### A. Changing a server audit name  
- The following example changes the name of the server audit `HIPPA_Audit` to `HIPAA_Audit_Old`.  
+ The following example changes the name of the server audit `HIPAA_Audit` to `HIPAA_Audit_Old`.  
   
 ```  
 USE master  
@@ -162,7 +162,7 @@ GO
 ```  
   
 ### B. Changing a server audit target  
- The following example changes the server audit called `HIPPA_Audit` to a file target.  
+ The following example changes the server audit called `HIPAA_Audit` to a file target.  
   
 ```  
 USE master  

@@ -809,7 +809,7 @@ Either disables system versioning of a table or enables system versioning of a t
 HISTORY_RETENTION_PERIOD = { **INFINITE** | number {DAY | DAYS | WEEK |  WEEKS | MONTH | MONTHS | YEAR | YEARS} }
 **Applies to**:  [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
 
-Specifies finite or infinte retention  for historical data in temporal table. If omitted, infinite retention is assumed.
+Specifies finite or infinite retention  for historical data in temporal table. If omitted, infinite retention is assumed.
   
  SET **(** LOCK_ESCALATION = { AUTO | TABLE | DISABLE } **)**  
  **Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ( [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]) and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  

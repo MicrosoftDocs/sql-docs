@@ -540,7 +540,7 @@ GO
 ```  
   
 #### E. Using the WITH common_table_expression clause  
- The following example updates the `PerAssemnblyQty` value for all parts and components that are used directly or indirectly to create the `ProductAssemblyID 800`. The common table expression returns a hierarchical list of parts that are used directly to build `ProductAssemblyID 800` and parts that are used to build those components, and so on. Only the rows returned by the common table expression are modified.  
+ The following example updates the `PerAssemblyQty` value for all parts and components that are used directly or indirectly to create the `ProductAssemblyID 800`. The common table expression returns a hierarchical list of parts that are used directly to build `ProductAssemblyID 800` and parts that are used to build those components, and so on. Only the rows returned by the common table expression are modified.  
   
 ```sql  
 USE AdventureWorks2012;  

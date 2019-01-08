@@ -59,7 +59,7 @@ objectPtr->PutProperty(value);      // set property value
 variable = objectPtr->GetProperty;  // get property value  
 ```
   
- The compiler will generate the appropriate **Get**-, **Put**-, or **PutRef**_Property_ call based on what alternative syntax is declared and whether the property is being read or written.  
+ The compiler will generate the appropriate **Get**_-_, **Put**-, or **PutRef**_Property_ call based on what alternative syntax is declared and whether the property is being read or written.  
   
  The **__declspec(property...)** compiler directive can only declare **get**, **put**, or **get** and **put** alternative syntax for a function. Read-only operations only have a **get** declaration; write-only operations only have a **put** declaration; operations that are both read and write have both **get** and **put** declarations.  
   
@@ -68,7 +68,8 @@ variable = objectPtr->GetProperty;  // get property value
  For example, the **Command** object **ActiveConnection** property is declared with an alternative syntax for **Get**_ActiveConnection_ and **PutRef**_ActiveConnection_. The **PutRef**- syntax is a good choice because in practice, you will typically want to put an open **Connection** object (that is, a **Connection** object pointer) in this property. On the other hand, the **Recordset** object has **Get**-, **Put**-, and **PutRef**_ActiveConnection_ operations, but no alternative syntax.  
   
 ## Collections, the GetItem Method, and the Item Property  
- ADO defines several collections, including **Fields**, **Parameters**, **Properties**, and **Errors**. In Visual C++, the **GetItem(**_index_**)** method returns a member of the collection. *Index* is a **Variant**, the value of which is either a numeric index of the member in the collection, or a string containing the name of the member.  
+
+ ADO defines several collections, including **Fields**, **Parameters**, **Properties**, and **Errors**. In Visual C++, the **GetItem(_index_)** method returns a member of the collection. *Index* is a **Variant**, the value of which is either a numeric index of the member in the collection, or a string containing the name of the member.  
   
  The **__declspec(property...)** compiler directive declares the **Item** property as an alternative syntax to each collection's fundamental **GetItem()** method. The alternative syntax uses square brackets and looks similar to an array reference. In general, the two forms look like the following:  
   
@@ -78,7 +79,7 @@ variable = objectPtr->GetProperty;  // get property value
 collectionPtr->Item[index];  
 ```
   
- For example, assign a value to a field of a **Recordset** object, named **_rs_**, derived from the **authors** table of the **pubs** database. Use the **Item()** property to access the third **Field** of the **Recordset** object **Fields** collection (collections are indexed from zero; assume the third field is named **_au_fname_**). Then call the **Value()** method on the **Field** object to assign a string value.  
+ For example, assign a value to a field of a **Recordset** object, named **_rs_**, derived from the **authors** table of the **pubs** database. Use the **Item()** property to access the third **Field** of the **Recordset** object **Fields** collection (collections are indexed from zero; assume the third field is named **_au\_fname_**). Then call the **Value()** method on the **Field** object to assign a string value.  
   
  This can be expressed in Visual Basic in the following four ways (the last two forms are unique to Visual Basic; other languages do not have equivalents):  
   

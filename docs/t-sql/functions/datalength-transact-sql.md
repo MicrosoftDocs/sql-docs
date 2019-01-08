@@ -52,9 +52,6 @@ An [expression](../../t-sql/language-elements/expressions-transact-sql.md) of an
 - **nvarchar**
 - **text**
 - **varbinary**
-
-and
-
 - **varchar**
 
 data types, because these data types can store variable-length data.

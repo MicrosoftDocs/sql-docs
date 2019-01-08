@@ -1,5 +1,5 @@
 ---
-title: RevoScaleR R function library in SQL Server Machine Learning
+title: RevoScaleR R function library - SQL Server Machine Learning Services
 description: Introduction to the RevoScaleR function library in SQL Server 2016 R Services and SQL Server 2017 Machine Learning Services with R.
 ms.prod: sql
 ms.technology: machine-learning
@@ -50,8 +50,8 @@ SQL Server and R use different data types in some cases. For a list of mappings 
 
 | Function| Description|
 | ------- | ---------- |
-| [RxInSqlServerData](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxinqlserverdata) |  Create a SQL Server compute context object to push computations to a remote instance. Several **RevoScaleR** functions take compute context as an argument. |
-[rxGetComputeContext and rxSetComputeContext](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxgetcomputecontext) | Get or set the active compute context. |
+| [RxInSqlServer](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxinsqlserver) |  Create a SQL Server compute context object to push computations to a remote instance. Several **RevoScaleR** functions take compute context as an argument. |
+[rxGetComputeContext / rxSetComputeContext](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxsetcomputecontext) | Get or set the active compute context. |
 | [RxSqlServerData](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxsqlserverdata) | Create a data object based on a SQL Server query or table. |
 | [RxOdbcData](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxodbcdata) | Create a data source based on an ODBC connection. |
 | [RxXdfData](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxxdfdata) | Create a data source based on a local XDF file. XDF files are often used to offload in-memory data to disk. An XDF file can be useful when working with more data than can be transferred from the database in one batch, or more data than can fit in memory. For example, if you regularly move large amounts of data from a database to a local workstation, rather than query the database repeatedly for each R operation, you can use the XDF file as a kind of cache to save the data locally and then work with it in your R workspace.|
@@ -121,7 +121,7 @@ After you have created a data source object, you can use the object to load data
 |[rxGlm](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxglm) <sup>*</sup> |Fits a generalized linear model to data. | 
 |[rxCovCor](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxcovcor) <sup>*</sup> |Calculate the covariance, correlation, or sum of squares / cross-product matrix for a set of variables. | 
 |[rxDTree](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxdtree) <sup>*</sup> |Fits a classification or regression tree to data. | 
-|[rxBTrees]https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/(rxbtrees) <sup>*</sup> |Fits a classification or regression decision forest to data using a stochastic gradient boosting algorithm. | 
+|[rxBTrees](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxbtrees) <sup>*</sup> |Fits a classification or regression decision forest to data using a stochastic gradient boosting algorithm. | 
 |[rxDForest](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxdforest) <sup>*</sup> |Fits a classification or regression decision forest to data. | 
 |[rxPredict](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxPredict) <sup>*</sup> |Calculates predictions for fitted models. Output must be an XDF data source. | 
 |[rxKmeans](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxkmeans) <sup>*</sup> |Performs k-means clustering. | 

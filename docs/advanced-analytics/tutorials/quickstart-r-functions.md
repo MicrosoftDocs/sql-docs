@@ -1,16 +1,16 @@
 ---
-title: Quickstart showing R functions with SQL Server data (SQL Server Machine Learning) | Microsoft Docs
-description: In this quickstart, learn how to write an R function that uses SQL Server data.
+title: Quickstart showing R functions- SQL Server Machine Learning
+description: In this quickstart, learn how to write an R function for advanced statistical computation.
 ms.prod: sql
 ms.technology: machine-learning
 
-ms.date: 10/08/2018  
+ms.date: 01/04/2019  
 ms.topic: quickstart
-author: HeidiSteen
-ms.author: heidist
+author: dphansen
+ms.author: davidph
 manager: cgronlun
 ---
-# Quickstart: Using R functions with SQL Server data
+# Quickstart: Using R functions
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 If you completed the previous quickstarts, you're familiar with basic operations and ready for something more complex, such as statistical functions. Advanced statistical functions that are complicated to implement in T-SQL can be done in R with only a single line of code.
@@ -19,7 +19,7 @@ In this quickstart, you'll embed R mathematical and utility functions in a SQL S
 
 ## Prerequisites
 
-A previous quickstart, [Hello World in R and SQL](rtsql-using-r-code-in-transact-sql-quickstart.md), provides information and links for setting up the R environment required for this quickstart.
+A previous quickstart, [Verify R exists in SQL Server](quickstart-r-verify.md), provides information and links for setting up the R environment required for this quickstart.
 
 ## Create a stored procedure to generate random numbers
 
@@ -99,4 +99,4 @@ For an example, see this tutorial: [Create Data Features](../tutorials/walkthrou
 Next, you'll build a predictive model using R in SQL Server.
 
 > [!div class="nextstepaction"]
-> [Quickstart: Create a predictive model](rtsql-create-a-predictive-model-r.md)
+> [Quickstart: Create a predictive model](quickstart-r-create-predictive-model.md)

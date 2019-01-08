@@ -19,8 +19,8 @@ helpviewer_keywords:
   - "Stretch Database, wizard"
   - "Enable Database for Stretch Wizard"
 ms.assetid: 855dd9fc-f80c-4dbc-bf46-55a9736bfe15
-author: MikeRayMSFT
-ms.author: mikeray
+author: douglaslMS
+ms.author: douglasl
 manager: craigg
 ---
 # Get started by running the Enable Database for Stretch Wizard

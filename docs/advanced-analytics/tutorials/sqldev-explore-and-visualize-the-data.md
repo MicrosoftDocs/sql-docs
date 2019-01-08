@@ -1,6 +1,6 @@
 ---
-title: Lesson 1 Explore and visualize data using R and T-SQL (SQL Server Machine Learning) | Microsoft Docs
-description: Tutorial showing how to embed R in SQL Server stored procedures and T-SQL functions 
+title: Lesson 1 Explore and visualize data using R and T-SQL - SQL Server Machine Learning
+description: Tutorial showing how to explore and visualize SQL Server data using R functions.
 ms.prod: sql
 ms.technology: machine-learning
 
@@ -62,7 +62,7 @@ To create the plot, use [rxHistogram](https://docs.microsoft.com/machine-learnin
 
 2. Paste in the following script to create a stored procedure that plots the histogram. This example is named **RPlotRxHistogram*.
 
-    ```SQL
+    ```sql
     CREATE PROCEDURE [dbo].[RxPlotHistogram]
     AS
     BEGIN
@@ -103,7 +103,7 @@ The stored procedure returns the image as a stream of varbinary data, which obvi
   
 1.  In [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], run the following statement:
   
-    ```SQL
+    ```sql
     EXEC [dbo].[RxPlotHistogram]
     ```
   
@@ -114,7 +114,7 @@ The stored procedure returns the image as a stream of varbinary data, which obvi
   
 2.  Open a PowerShell command prompt and run the following command, providing the appropriate instance name, database name, username, and credentials as arguments. For those using Windows identities, you can replace **-U** and **-P** with **-T**.
   
-     ```text
+     ```powershell
      bcp "exec RxPlotHistogram" queryout "plot.jpg" -S <SQL Server instance name> -d  NYCTaxi_Sample  -U <user name> -P <password> -T
      ```
 
@@ -129,7 +129,7 @@ The stored procedure returns the image as a stream of varbinary data, which obvi
   
     -   Type **Y** if you want to save the output parameters for later reuse.
   
-    ```
+    ```powershell
     Enter the file storage type of field plot [varbinary(max)]: 
     Enter prefix-length of field plot [8]: 0
     Enter length of field plot [0]:
@@ -141,7 +141,7 @@ The stored procedure returns the image as a stream of varbinary data, which obvi
   
     **Results**
     
-    ```
+    ```powershell
     Starting copy...
     1 rows copied.
     Network packet size (bytes): 4096
@@ -165,7 +165,7 @@ This stored procedure uses the **Hist** function to create the histogram, export
 
 2. Paste in the following script to create a stored procedure that plots the histogram. This example is named **RPlotHist** .
   
-    ```SQL
+    ```sql
     CREATE PROCEDURE [dbo].[RPlotHist]  
     AS  
     BEGIN  
@@ -239,13 +239,13 @@ This stored procedure uses the **Hist** function to create the histogram, export
 
 Run the following statement to export binary plot data to JPEG and PDF file formats.
 
-```SQL
+```sql
 EXEC RPlotHist
 ```
 
 **Results**
     
-```
+```sql
 STDOUT message(s) from external script:
 [1] Creating output plot files:[1] C:\temp\plots\rHistogram_Tipped_18887f6265d4.jpg[1] 
 

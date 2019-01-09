@@ -36,9 +36,9 @@ In this task, you save all this information about the failed rows to a delimited
   
 8.  In the **Flat File Connection Manager Editor** dialog box, select **Browse**, and locate the folder in which to store the file.  
   
-9. In the **Open** dialog, for **File name**, enter *ErrorOutput.txt*, and then select **Open**.  
+9. In the **Open** dialog box, for **File name**, enter *ErrorOutput.txt*, and then select **Open**.  
   
-10. In the **Flat File Connection Manager Editor** dialog, verify that **Locale** is **English (United States)** and **Code page** is **1252 (ANSI-Latin I)**.  
+10. In the **Flat File Connection Manager Editor** dialog box, verify that **Locale** is **English (United States)** and **Code page** is **1252 (ANSI-Latin I)**.  
   
 11. In the options pane, select **Columns**.  
   

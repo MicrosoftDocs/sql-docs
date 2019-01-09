@@ -44,7 +44,7 @@ Use this procedure if you're copying the completed Lesson 3.  To copy the sample
 
 2.  In **Solution Explorer**, right-click **SSIS Packages** and select **Add Existing Package**.
 
-3.  In the **Add Copy of Existing Package** dialog, in **Package location**, select **File system**.
+3.  In the **Add Copy of Existing Package** dialog box, in **Package location**, select **File system**.
 
 4.  Select the browse **(...)** button, navigate to **Lesson 3.dtsx** on your machine, and then select **Open**.
 

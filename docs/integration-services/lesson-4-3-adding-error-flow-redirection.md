@@ -26,19 +26,19 @@ By default the two extra columns in an [!INCLUDE[ssISnoversion](../includes/ssis
   
 1.  In the **SSIS Toolbox**, expand **Common**, and then drag **Script Component** onto the design surface of the **Data Flow** tab. Place **Script** to the right of the **Lookup Currency Key** transformation.  
   
-2.  In the **Select Script Component Type** dialog, select **Transformation**, and select **OK**.  
+2.  In the **Select Script Component Type** dialog box, select **Transformation**, and select **OK**.  
   
 3.  To connect the two components, select the **Lookup Currency Key** transformation and then drag its red arrow onto the new **Script** transformation.  
   
     The red arrow represents the error output of the **Lookup Currency Key** transformation. By using the red arrow to connect the transformation to the Script component, you redirect any processing errors to the Script component, which processes the errors and sends them to the destination.  
   
-4.  In the **Configure Error Output** dialog, in the **Error** column, select **Redirect row**, and then select **OK**.  
+4.  In the **Configure Error Output** dialog box, in the **Error** column, select **Redirect row**, and then select **OK**.  
   
 5.  On the **Data Flow** design surface, select the name **Script Component** in the new **ScriptComponent**, and change that name to **Get Error Description**.  
   
 6.  Double-click the **Get Error Description** transformation.  
   
-7.  In the **Script Transformation Editor** dialog, on the **Input Columns** page, select the **ErrorCode** column.  
+7.  In the **Script Transformation Editor** dialog box, on the **Input Columns** page, select the **ErrorCode** column.  
   
 8.  On the **Inputs and Outputs** page, expand **Output 0**, select **Output Columns**, and then select **Add Column**.  
   
@@ -87,7 +87,7 @@ By default the two extra columns in an [!INCLUDE[ssISnoversion](../includes/ssis
   
 12. On the **Build** menu, select **Build Solution** to build the script and save your changes, and then close VSTA.  
   
-13. Select **OK** to close the **Script Transformation Editor** dialog.  
+13. Select **OK** to close the **Script Transformation Editor** dialog box.  
   
 ## Go to next task
 [Step 4: Add a Flat File destination](../integration-services/lesson-4-4-adding-a-flat-file-destination.md)  

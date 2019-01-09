@@ -1,7 +1,7 @@
 ---
 title: Transparent Data Encryption (TDE) | Microsoft Docs
 ms.custom: ""
-ms.date: "03/09/2017"
+ms.date: "01/08/2019"
 ms.prod: sql
 ms.technology: security
 ms.topic: conceptual
@@ -45,7 +45,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   
  **Information applicable to [!INCLUDE[ssSDS](../../../includes/sssds-md.md)]**  
   
- When using TDE with [!INCLUDE[sqldbesa](../../../includes/sqldbesa-md.md)] V12 the server-level certificate stored in the master database is automatically created for you by [!INCLUDE[ssSDS](../../../includes/sssds-md.md)]. To move a TDE database on [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] you must decrypt the database, move the database, and then re-enable TDE on the destination [!INCLUDE[ssSDS](../../../includes/sssds-md.md)]. For step-by-step instructions for TDE on [!INCLUDE[ssSDS](../../../includes/sssds-md.md)], see [Transparent Data Encryption with Azure SQL Database](../../../relational-databases/security/encryption/transparent-data-encryption-azure-sql.md).  
+ When using TDE with [!INCLUDE[sqldbesa](../../../includes/sqldbesa-md.md)] V12, the server-level certificate stored in the master database is automatically created for you by [!INCLUDE[ssSDS](../../../includes/sssds-md.md)]. To move a TDE database on [!INCLUDE[ssSDS](../../../includes/sssds-md.md)], you do not have to decrypt the database for the move operation. For more information on utilizing TDE with [!INCLUDE[ssSDS](../../../includes/sssds-md.md)], see [Transparent Data Encryption with Azure SQL Database](../../../relational-databases/security/encryption/transparent-data-encryption-azure-sql.md).  
   
  **Information applicable to [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]**  
   

@@ -14,7 +14,7 @@ manager: craigg
 ---
 # Lesson 3: Add logging with SSIS
 
-[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] includes logging features that let you troubleshoot and monitor package execution by providing a trace of task and container events. The logging features are flexible. You can enable logging at the package level or on individual tasks and containers within the package. You select which events you want to log, and create multiple logs against a single package.  
+[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] includes logging features that let you troubleshoot and monitor package execution by providing a trace of task and container events. The logging features are flexible. You can enable logging at the package level, or on individual tasks or containers within the package. You select which events you want to log, and create multiple logs against a single package.  
   
 Log providers create the logs. Each log provider can write logging information to different formats and destination types. [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] provides the following log providers:  
   
@@ -28,7 +28,7 @@ Log providers create the logs. Each log provider can write logging information t
   
 -   XML file  
   
-In this lesson, you create a copy of the package that you created in [Lesson 2: Add Looping with SSIS](../integration-services/lesson-2-adding-looping-with-ssis.md). Working with this new package, you then add and configure logging to monitor specific events during package execution. If you have not completed either of the previous lessons, you can also copy the completed Lesson 2 package included with the tutorial.  
+In this lesson, you create a copy of the package that you created in [Lesson 2: Add Looping with SSIS](../integration-services/lesson-2-adding-looping-with-ssis.md). Working with this new package, you then add and configure logging to monitor specific events during package execution. If you haven't completed either of the previous lessons, you can also copy the completed Lesson 2 package included with the tutorial.  
 
 > [!NOTE]
 > If you haven't already, see the [Lesson 1 prerequisites](../integration-services/lesson-1-create-a-project-and-basic-package-with-ssis.md#prerequisites).

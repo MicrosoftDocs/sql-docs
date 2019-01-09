@@ -1,6 +1,6 @@
 ---
 title: "What's new in SQL Server 2019 | Microsoft Docs"
-ms.date: 12/07/2018
+ms.date: 01/09/2019
 ms.prod: "sql-server-2018"
 ms.reviewer: ""
 ms.technology: release-landing
@@ -33,7 +33,7 @@ Community technology preview (CTP) 2.2 is the latest public release of [!INCLUDE
 
 ## Previous CTPs
 
-Earlier CTP releases added or enhanced the following features for [!INCLUDE[sql-server-2019](..\includes\sssqlv15-md.md)].
+Earlier CTP releases added or enhanced the following features for [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)].
 
 - [Big data clusters](#bigdatacluster) 
   - Deploy a Big Data cluster with SQL and Spark Linux containers on Kubernetes (CTP 2.0)

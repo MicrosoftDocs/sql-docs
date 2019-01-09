@@ -16,7 +16,7 @@ ms.author: "douglasl"
 manager: craigg
 ---
 # Azure Data Lake Store Destination
-  The **Azure Data Lake Store Destination** component enables an SSIS package to write data to an Azure Data Lake Store. The supported file formats are: Text, Avro and ORC. 
+  The **Azure Data Lake Store Destination** component enables an SSIS package to write data to an Azure Data Lake Store. The supported file formats are: Text, Avro, and ORC. 
   
  The **Azure Data Lake Store Destination** is a component of the [SQL Server Integration Services (SSIS) Feature Pack for Azure](../../integration-services/azure-feature-pack-for-integration-services-ssis.md).
  
@@ -28,7 +28,7 @@ manager: craigg
 
 2.  For the **Azure Data Lake Store connection manager** field, specify an existing Azure Data Lake Store Connection Manager or create a new one that refers to an Azure Data Lake Store service.  
   
-    1.  For the **File Path** field, specify the file name you want to write data to. If this file already exist, its content will be overwritten.  
+    1.  For the **File Path** field, specify the file name you want to write data to. If this file already exists, its contents are overwritten.  
   
     2.  For the **File format** field, specify the file format you want to use.  
   

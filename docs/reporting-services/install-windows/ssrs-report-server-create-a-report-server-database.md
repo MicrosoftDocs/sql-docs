@@ -65,7 +65,7 @@ ms.date: 12/12/2018
   
 ## Database Server Edition Requirements
 
- When creating a report server database, be aware that not all editions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] can be used to host the database. For more information, see [Report Server Database Server Edition Requirements](../reporting-services-features-supported-by-the-editions-of-sql-server-2016.md#report-server-database-server-edition-requirements) of [Reporting Services Features Supported by the Editions of SQL Server 2017](../reporting-services-features-supported-by-the-editions-of-sql-server-2016.md).  
+ When creating a report server database, be aware that not all editions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] can be used to host the database. For more information, see [Report Server Database Server Edition Requirements](../reporting-services-features-supported-by-the-editions-of-sql-server-2016.md#report-server-database-server-edition-requirements)(../reporting-services-features-supported-by-the-editions-of-sql-server-2016.md#report-server-database-server-edition-requirements) of [Reporting Services Features Supported by the Editions of SQL Server 2017](../reporting-services-features-supported-by-the-editions-of-sql-server-2016.md).  
 
 ## Next steps
 

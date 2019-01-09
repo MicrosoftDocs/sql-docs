@@ -37,7 +37,7 @@ manager: craigg
 ::: moniker range=">= sql-server-ver15"
 ## Prerequisite for ORC format
 
-Before you can use the ORC file format, you have to install the Java Runtime Environment with version 1.7.51  or higher for the appropriate platform.
+Before you can use the ORC file format, you have to install the Java Runtime Environment (JRE) with version 1.7.51  or higher for the appropriate platform.
 
 Both the Zulu and the Oracle JRE are supported.
 -   [Zulu JRE](https://www.azul.com/downloads/zulu/zulu-windows/)

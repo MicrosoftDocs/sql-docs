@@ -77,20 +77,20 @@ SET ANSI_NULLS ON affects a comparison only if one of the operands of the compar
   
 For a script to work as intended, regardless of the ANSI_NULLS database option or the setting of SET ANSI_NULLS, use IS NULL and IS NOT NULL in comparisons that might contain null values.  
   
-SET ANSI_NULLS should be set to ON for executing distributed queries.  
+ANSI_NULLS should be set to ON for executing distributed queries.  
   
-SET ANSI_NULLS must also be ON when you are creating or changing indexes on computed columns or indexed views. If SET ANSI_NULLS is OFF, any CREATE, UPDATE, INSERT, and DELETE statements on tables with indexes on computed columns or indexed views will fail. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] returns an error that lists all SET options that violate the required values. Also, when you execute a SELECT statement, if SET ANSI_NULLS is OFF, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ignores the index values on computed columns or views and resolve the select operation as if there were no such indexes on the tables or views.  
+ANSI_NULLS must also be ON when you are creating or changing indexes on computed columns or indexed views. If SET ANSI_NULLS is OFF, any CREATE, UPDATE, INSERT, and DELETE statements on tables with indexes on computed columns or indexed views will fail. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] returns an error that lists all SET options that violate the required values. Also, when you execute a SELECT statement, if SET ANSI_NULLS is OFF, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ignores the index values on computed columns or views and resolve the select operation as if there were no such indexes on the tables or views.  
   
 > [!NOTE]  
 > ANSI_NULLS is one of seven SET options that must be set to required values when dealing with indexes on computed columns or indexed views. The options `ANSI_PADDING`, `ANSI_WARNINGS`, `ARITHABORT`, `QUOTED_IDENTIFIER`, and `CONCAT_NULL_YIELDS_NULL` must also be set to ON, and `NUMERIC_ROUNDABORT` must be set to OFF.  
   
  The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC driver and [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB Provider for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] automatically set ANSI_NULLS to ON when connecting. This setting can be configured in ODBC data sources, in ODBC connection attributes, or in OLE DB connection properties that are set in the application before connecting to an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. The default for SET ANSI_NULLS is OFF.  
   
- When SET ANSI_DEFAULTS is ON, SET ANSI_NULLS is enabled.  
+When ANSI_DEFAULTS is ON, ANSI_NULLS is enabled.  
   
- The setting of SET ANSI_NULLS is set at execute or run time and not at parse time.  
+The setting of ANSI_NULLS is defined at execute or run time and not at parse time.  
   
- To view the current setting for this setting, run the following query:
+To view the current setting for this setting, run the following query:
   
 ```sql  
 DECLARE @ANSI_NULLS VARCHAR(3) = 'OFF';  

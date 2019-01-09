@@ -67,7 +67,7 @@ For features supported by the Evaluation and Developer editions, see the SQL Ser
 > [!NOTE]
 > SQL Server Express with Tools and SQL Server Express don't support SQL Server Reporting Services.
   
-## Database edition requirements for the report server
+## Edition requirements for the report server database
  When you create a report server database, not all editions of SQL Server [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] can be used to host the database. The following table shows you which editions of the [!INCLUDE[ssDE](../includes/ssde-md.md)] you can use for specific editions of SQL Server [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)].  
   
 |For this edition of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Reporting Services,|Use this edition of the Database Engine instance to host the database.|  

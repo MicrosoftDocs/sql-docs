@@ -10,4 +10,4 @@
  ms.custom: include file
 ---
 
-For content related to previous versions of SQL Server Reporting Services, see [SQL Server 2014 Reporting Services](../reporting-services/create-deploy-and-manage-mobile-and-paginated-reports.md).
+For content related to previous versions of SQL Server Reporting Services (SSRS), see [SQL Server 2014 Reporting Services](../reporting-services/create-deploy-and-manage-mobile-and-paginated-reports.md).

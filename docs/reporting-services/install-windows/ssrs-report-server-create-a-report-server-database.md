@@ -20,7 +20,7 @@ SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] native 
 
 The databases are created together and bound by name. With a default [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance, the databases are named **reportserver** and **reportservertempdb**. Collectively, the two databases are called the **report server database** or **report server catalog**.
 
-SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] **SharePoint mode** includes a third database that's used for data alerting metadata. The three databases are created for each SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] service application. The database names by default include a GUID that represents the service application. The following are example names of the three SharePoint mode databases:
+SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] **SharePoint mode** includes a third database that's used for data alerting metadata. The three databases are created for each SSRS service application. The database names by default include a GUID that represents the service application. The following are example names of the three SharePoint mode databases:
 
 - ReportingService_90a9f37075544f22953c4a62e4a9f370  
   
@@ -43,9 +43,9 @@ SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] **Share
 - **Manual**. Use SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configuration Manager. Create the report server database manually if you use a remote [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] to host the database. For more information, see [Create a Native Mode Report Server Database](../../reporting-services/install-windows/ssrs-report-server-create-a-native-mode-report-server-database.md).  
   
 ### SharePoint mode 
-The **Report Server Installation Options** page has only one option for SharePoint mode, **Install Only**. This option installs all the SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] files and the SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] shared service. The next step is to create at least one SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] service application in one of the following ways:  
+The **Report Server Installation Options** page has only one option for SharePoint mode, **Install Only**. This option installs all the SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] files and the SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] shared service. The next step is to create at least one SSRS service application in one of the following ways:  
   
-- Go to Central Administration in SharePoint Server to create a SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] service application. For more information, see the **Service Application** section of [Install the first Report Server in SharePoint mode](../../reporting-services/install-windows/install-the-first-report-server-in-sharepoint-mode.md#bkmk_create_serrviceapplication).  
+- Go to Central Administration in SharePoint Server to create an SSRS service application. For more information, see the **create a service application** section of [Install the first Report Server in SharePoint mode](../../reporting-services/install-windows/install-the-first-report-server-in-sharepoint-mode.md#bkmk_create_serrviceapplication).  
   
 - Use SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] PowerShell cmdlets to create a service application and the report server databases. For more information, see the sample for creating service applications in the topic [PowerShell cmdlets for Reporting Services SharePoint mode](../../reporting-services/report-server-sharepoint/powershell-cmdlets-for-reporting-services-sharepoint-mode.md).  
   
@@ -63,7 +63,7 @@ The **Report Server Installation Options** page has only one option for SharePoi
   
 - [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]  
   
- If you create the report server database on a remote computer, configure the connection to use a domain user account or a service account that has network access. If you use a remote [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance, consider which credentials the report server should use to connect to the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance. For more information, see [Configure a Report Server Database Connection &#40;SSRS Configuration Manager&#41;](../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md).  
+If you create the report server database on a remote computer, configure the connection to use a domain user account or a service account that has network access. If you use a remote [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance, consider which credentials the report server should use to connect to the instance. For more information, see [Configure a Report Server Database Connection &#40;SSRS Configuration Manager&#41;](../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md).  
   
 > [!IMPORTANT]  
 > The report server and the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance hosting the report server database can be in different domains. For internet deployment, it's common practice to use a server that's behind a firewall. 

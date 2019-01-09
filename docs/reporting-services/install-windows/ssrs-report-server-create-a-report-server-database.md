@@ -40,7 +40,7 @@ SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] **Share
   
 - **Automatic**. Use the SQL Server setup wizard if you choose the default configuration option for installation. In the SQL Server Installation Wizard, this option is **Install and configure** on the **Report Server Installation Options** page. If you choose the **Install only** option, you must use SQL Server Reporting Services Configuration Manager to create the database.  
   
-- **Manual**. Use SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configuration Manager. You must create the report server database manually if you use a remote [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] to host the database. For more information, see [Create a Native Mode Report Server Database](../../reporting-services/install-windows/ssrs-report-server-create-a-native-mode-report-server-database.md).  
+- **Manual**. Use SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configuration Manager. Create the report server database manually if you use a remote [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] to host the database. For more information, see [Create a Native Mode Report Server Database](../../reporting-services/install-windows/ssrs-report-server-create-a-native-mode-report-server-database.md).  
   
 ### SharePoint mode 
 The **Report Server Installation Options** page has only one option for SharePoint mode, **Install Only**. This option installs all the SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] files and the SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] shared service. The next step is to create at least one SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] service application in one of the following ways:  
@@ -63,7 +63,7 @@ The **Report Server Installation Options** page has only one option for SharePoi
   
 - [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]  
   
- Creating the report server database on a remote computer requires that you configure the connection to use a domain user account or a service account that has network access. If you use a remote [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance, consider which credentials the report server should use to connect to the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance. For more information, see [Configure a Report Server Database Connection &#40;SSRS Configuration Manager&#41;](../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md).  
+ If you create the report server database on a remote computer, configure the connection to use a domain user account or a service account that has network access. If you use a remote [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance, consider which credentials the report server should use to connect to the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance. For more information, see [Configure a Report Server Database Connection &#40;SSRS Configuration Manager&#41;](../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md).  
   
 > [!IMPORTANT]  
 > The report server and the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance hosting the report server database can be in different domains. For internet deployment, it's common practice to use a server that's behind a firewall. 
@@ -72,7 +72,7 @@ The **Report Server Installation Options** page has only one option for SharePoi
   
 ## Edition requirements for a database server 
 
- When you create a report server database, be aware that not all editions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] can be used to host the database. For more information, see the [Edition requirements for the report server database](../reporting-services-features-supported-by-the-editions-of-sql-server-2016.md#edition-requirements-for-the-report-server-database) section of [SQL Server Reporting Services features supported by its editions](../reporting-services-features-supported-by-the-editions-of-sql-server-2016.md).  
+ When you create a report server database, not all editions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] can be used to host the database. For more information, see [Edition requirements for the report server database](../reporting-services-features-supported-by-the-editions-of-sql-server-2016.md#edition-requirements-for-the-report-server-database) in [SQL Server Reporting Services features supported by its editions](../reporting-services-features-supported-by-the-editions-of-sql-server-2016.md).  
 
 ## Next steps
 

@@ -13,7 +13,7 @@ ms.date: 11/01/2018
 
 [!INCLUDE[ssrs-appliesto](../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../includes/ssrs-appliesto-pbirs.md)]
 
-This topic provides details of the SQL Server Reporting Services (SSRS) features that the different editions of SQL Server support. SQL Server Evaluation edition is available for a 180-day trial period.  
+This topic explains the SQL Server Reporting Services (SSRS) features supported by the different editions of SQL Server. SQL Server Evaluation edition is available for a 180-day trial period.  
   
  For the latest SQL Server release notes, see [SQL Server 2017 Release Notes](../sql-server/sql-server-2017-release-notes.md). For the latest information on what's new, see [What's new in SQL Server Reporting Services (SSRS)](~/reporting-services/what-s-new-in-sql-server-reporting-services-ssrs.md).
 

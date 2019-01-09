@@ -103,7 +103,7 @@ manager: craigg
  **Page Locks Allowed**  
  Specifies whether page-level locking is allowed on this index. Allowing or disallowing page-level locking affects database performance.  
   
- **Re-compute**  **Statistics**  
+ **Re-compute  Statistics**  
  Specifies whether to compute new statistics when the index is created. Recomputing statistics slows the building of indexes but usually improves query performance.  
   
  **Row Locks Allowed**  

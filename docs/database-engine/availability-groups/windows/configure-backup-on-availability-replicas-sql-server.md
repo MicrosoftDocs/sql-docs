@@ -127,7 +127,7 @@ manager: craigg
   
 2.  Optionally, configure the backup priority of each availability replica that you are adding or modifying. This priority is used by the server instance that hosts the primary replica to decide which replica should service an automated backup request on a database in the availability group (the replica with highest priority is chosen). This priority can be any number between 0 and 100, inclusive. A priority of 0 indicates that the replica should not be considered as a candidate for servicing backup requests.  The default setting is 50.  
   
-     When adding an availability replica to an availability group, use the **New-SqlAvailabilityReplica** cmdlet. When modifying an existing availability replica, use the **Set-SqlAvailabilityReplica** cmdlet. In either case, specify the **BackupPriority***n* parameter, where *n* is a value from 0 to 100.  
+     When adding an availability replica to an availability group, use the **New-SqlAvailabilityReplica** cmdlet. When modifying an existing availability replica, use the **Set-SqlAvailabilityReplica** cmdlet. In either case, specify the **BackupPriority**_n_ parameter, where *n* is a value from 0 to 100.  
   
      For example, the following command sets the backup priority of the availability replica `MyReplica` to **60**.  
   

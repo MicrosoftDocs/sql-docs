@@ -72,7 +72,7 @@ manager: craigg
   
     -   For merge replication, it can be more efficient to use business logic handlers. For more information, see [Execute Business Logic During Merge Synchronization](../../../relational-databases/replication/merge/execute-business-logic-during-merge-synchronization.md).  
   
-     If you use triggers to maintain referential integrity in tables published for merge replication, specify the processing order of tables to reduce the number of retries required for the Merge Agent. For more information, see [Specify the Processing Order of Merge Articles](../../../relational-databases/replication/merge/specify-the-processing-order-of-merge-articles.md).  
+     If you use triggers to maintain referential integrity in tables published for merge replication, specify the processing order of tables to reduce the number of retries required for the Merge Agent. For more information, see [Specify merge replication options](../../../relational-databases/replication/merge/specify-merge-replication-properties.md).  
   
 -   Limit the use of Large Object (LOB) data types.  
   
@@ -112,7 +112,7 @@ manager: craigg
   
      When large amounts of changes need to be sent to Subscribers, reinitializing them with a new snapshot might be faster than using replication to move the individual changes. For more information, see [Reinitialize Subscriptions](../../../relational-databases/replication/reinitialize-subscriptions.md).  
   
-     For transactional replication, Replication Monitor displays on the **Undistributed Commands** tab information about: the number of transactions in the distribution database that have not yet been distributed to a Subscriber; and the estimated time for distributing these transactions. For more information, see [View Information and Perform Tasks for the Agents Associated With a Subscription &#40;Replication Monitor&#41;](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-subscription-agents.md).  
+     For transactional replication, Replication Monitor displays on the **Undistributed Commands** tab information about: the number of transactions in the distribution database that have not yet been distributed to a Subscriber; and the estimated time for distributing these transactions. For more information, see [View information and perform tasks using Replication Monitor](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-replication-monitor.md).  
   
 ## Snapshot Considerations  
   
@@ -138,8 +138,7 @@ manager: craigg
   
      Compressing snapshot files in the alternate snapshot folder can reduce snapshot disk storage requirements and make it easier to transfer snapshot files on removable media.  
   
-     Compressed snapshots can, in some cases, improve the performance of transferring snapshot files across the network. However, compressing the snapshot requires additional processing by the Snapshot Agent when generating the snapshot files, and by the Distribution Agent or Merge Agent when applying the snapshot files. This may slow down snapshot generation and increase the time it takes to apply a snapshot in some cases. Additionally, compressed snapshots cannot be resumed if a network failure occurs; therefore they are not suitable for unreliable networks. Consider these tradeoffs carefully when using compressed snapshots across a network. For more information, see [Alternate Snapshot Folder Locations](../../../relational-databases/replication/alternate-snapshot-folder-locations.md) and [Compressed Snapshots](../../../relational-databases/replication/compressed-snapshots.md).  
-  
+     Compressed snapshots can, in some cases, improve the performance of transferring snapshot files across the network. However, compressing the snapshot requires additional processing by the Snapshot Agent when generating the snapshot files, and by the Distribution Agent or Merge Agent when applying the snapshot files. This may slow down snapshot generation and increase the time it takes to apply a snapshot in some cases. Additionally, compressed snapshots cannot be resumed if a network failure occurs; therefore they are not suitable for unreliable networks. Consider these tradeoffs carefully when using compressed snapshots across a network. For more information, see [Modify snapshot options](../../../relational-databases/replication/snapshot-options.md). 
 -   Consider initializing a subscription manually.  
   
      In some scenarios, such as those involving large initial datasets, it is preferable to initialize a subscription using a method other than a snapshot. For more information, see [Initialize a Transactional Subscription Without a Snapshot](../../../relational-databases/replication/initialize-a-transactional-subscription-without-a-snapshot.md).  
@@ -148,11 +147,11 @@ manager: craigg
   
 -   Reduce the verbose levels of replication agents except during initial testing, monitoring, or debugging.  
   
-     Reduce the **-HistoryVerboseLevel** parameter and the **-OutputVerboseLevel** parameter of the Distribution Agents or Merge Agents. This reduces the number of new rows inserted to track agent history and output. Instead, previous history messages with the same status are updated to the new history information. Increase the verbose levels for testing, monitoring, and debugging so that you have as much information about agent activity as possible.  
+     Reduce the **–HistoryVerboseLevel** parameter and the **–OutputVerboseLevel** parameter of the Distribution Agents or Merge Agents. This reduces the number of new rows inserted to track agent history and output. Instead, previous history messages with the same status are updated to the new history information. Increase the verbose levels for testing, monitoring, and debugging so that you have as much information about agent activity as possible.  
   
--   Use the **-MaxBCPThreads** parameter of the Snapshot Agent, Merge Agent, and Distribution Agent (the number of threads specified should not exceed the number of processors on the computer). This parameter specifies the number of bulk copy operations that can be performed in parallel when the snapshot is created and applied.  
+-   Use the **–MaxBCPThreads** parameter of the Snapshot Agent, Merge Agent, and Distribution Agent (the number of threads specified should not exceed the number of processors on the computer). This parameter specifies the number of bulk copy operations that can be performed in parallel when the snapshot is created and applied.  
   
--   Use the **-UseInprocLoader** parameter of the Distribution Agent and the Merge Agent (this parameter cannot be used if published tables include XML columns). This parameter causes the agent to use the BULK INSERT command when the snapshot is applied.  
+-   Use the **–UseInprocLoader** parameter of the Distribution Agent and the Merge Agent (this parameter cannot be used if published tables include XML columns). This parameter causes the agent to use the BULK INSERT command when the snapshot is applied.  
   
  Agent parameters can be specified in agent profiles and on the command line. For more information, see:  
   

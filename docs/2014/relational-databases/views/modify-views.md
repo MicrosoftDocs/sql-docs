@@ -64,7 +64,7 @@ manager: craigg
   
     3.  Right-click the title bar of the table you wish to remove and select **Remove**.  
   
-4.  On the **File** menu, click **Save***view name*.  
+4.  On the **File** menu, click **Save**_view name_.  
   
 ##  <a name="TsqlProcedure"></a> Using Transact-SQL  
   

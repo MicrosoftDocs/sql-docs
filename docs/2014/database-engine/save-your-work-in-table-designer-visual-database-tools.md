@@ -22,7 +22,7 @@ manager: craigg
   
 1.  Click anywhere in the Table Designer.  
   
-2.  From the **File** menu, choose **Save***tablename*.  
+2.  From the **File** menu, choose **Save**_tablename_.  
   
 3.  In the **Save** dialog box, click **Yes** to update the database.  
   

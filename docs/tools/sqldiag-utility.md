@@ -80,16 +80,16 @@ sqldiag
  **/?**  
  Displays usage information.  
   
- **/I** *configuration_file*  
+ **/I** _configuration_file_  
  Sets the configuration file for **SQLdiag** to use. By default, **/I** is set to SQLDiag.Xml.  
   
- **/O** *output_folder_path*  
+ **/O** _output_folder_path_  
  Redirects **SQLdiag** output to the specified folder. If the **/O** option is not specified, **SQLdiag** output is written to a subfolder named SQLDIAG under the **SQLdiag** startup folder. If the SQLDIAG folder does not exist, **SQLdiag** attempts to create it.  
   
 > [!NOTE]  
 >  The output folder location is relative to the support folder location that can be specified with **/P**. To set an entirely different location for the output folder, specify the full directory path for **/O**.  
   
- **/P** *support_folder_path*  
+ **/P** _support_folder_path_  
  Sets the support folder path. By default, **/P** is set to the folder where the **SQLdiag** executable resides. The support folder contains **SQLdiag** support files, such as the XML configuration file, Transact-SQL scripts, and other files that the utility uses during diagnostics collection. If you use this option to specify an alternate support files path, **SQLdiag** will automatically copy the support files it requires to the specified folder if they do not already exist.  
   
 > [!NOTE]  
@@ -97,7 +97,7 @@ sqldiag
 >   
 >  **SQLDIAG /P %cd%**  
   
- **/N** *output_folder_management_option*  
+ **/N** _output_folder_management_option_  
  Sets whether **SQLdiag** overwrites or renames the output folder when it starts up. Available options:  
   
  1 = Overwrites the output folder (default)  
@@ -107,12 +107,12 @@ sqldiag
 > [!NOTE]  
 >  **SQLdiag** does not append output to the current output folder when it starts up. It can only overwrite the default output folder (option 1) or rename the folder (option 2), and then it writes output to the new default output folder named SQLDIAG.  
   
- **/M** *machine1* [ *machine2**machineN*] | *@machinelistfile*  
+ **/M** _machine1_ [ *machine2* *machineN*] | *@machinelistfile*  
  Overrides the machines specified in the configuration file. By default the configuration file is SQLDiag.Xml, or is set with the **/I** parameter. When specifying more than one machine, separate each machine name with a space.  
   
  Using *@machinelistfile* specifies a machine list filename to be stored in the configuration file.  
   
- **/C** *file_compression_type*  
+ **/C** _file_compression_type_  
  Sets the type of file compression used on the **SQLdiag** output folder files. Available options:  
   
  0 = none (default)  
@@ -147,7 +147,7 @@ sqldiag
   
  Note that **SQLdiag** uses the local time on the computer where the utility is running.  
   
- **/A**  *SQLdiag_application_name*  
+ **/A**  _SQLdiag_application_name_  
  Enables running multiple instances of the **SQLdiag** utility against the same [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] instance.  
   
  Each *SQLdiag_application_name* identifies a different instance of **SQLdiag**. No relationship exists between a *SQLdiag_application_name* instance and a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] instance name.  
@@ -156,11 +156,11 @@ sqldiag
   
  For example:  
   
- **SQLDIAG START /A**  *SQLdiag_application_name*  
+ **SQLDIAG START /A**  _SQLdiag_application_name_  
   
  It can also be used with the **/R** option to register a specific instance of **SQLdiag** as a service. For example:  
   
- **SQLDIAG /R /A** *SQLdiag_application_name*  
+ **SQLDIAG /R /A** _SQLdiag_application_name_  
   
 > [!NOTE]  
 >  **SQLdiag** automatically prefixes DIAG$ to the instance name specified for *SQLdiag_application_name*. This provides a sensible service name if you register **SQLdiag** as a service.  
@@ -196,7 +196,7 @@ sqldiag
   
  You can also use the **net start** command to start the service:  
   
- **net**  **start SQLDIAG**  
+ **net  start SQLDIAG**  
   
  **/U**  
  Unregisters **SQLdiag** as a service.  
@@ -223,7 +223,7 @@ sqldiag
   
  Only the **/A** argument, which specifies a named instance of **SQLdiag**, can be used with **START**, **STOP**, or **STOP_ABORT** to control a specific instance of the **SQLdiag** service. For example:  
   
- **SQLDIAG START /A** *SQLdiag_application_name*  
+ **SQLDIAG START /A** _SQLdiag_application_name_  
   
 ## Security Requirements  
  Unless **SQLdiag** is run in generic mode (by specifying the **/G** command line argument), the user who runs **SQLdiag** must be a member of the Windows **Administrators** group and a member of the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] **sysadmin** fixed server role. By default, **SQLdiag** connects to [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] by using Windows Authentication, but it also supports [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Authentication.  

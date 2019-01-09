@@ -16,21 +16,21 @@ manager: craigg
 
 In the previous task, the Lookup Currency Key transformation cannot generate a match when the transformation tries to process the corrupted sample flat file, which produces an error. Because the transformation uses the default settings for error output, any error causes the transformation to fail. When the transformation fails, the rest of the package also fails.  
   
-Rather than permitting the transformation to fail, you can configure the component to redirect the failed row to another processing path by using the error output. Using a separate error processing path provides more options. For instance, you could clean the data and then reprocess the failed row. Or, you could save the failed row along with its error information for later verification and reprocessing.  
+Rather than permitting the transformation to fail, you can configure the component to redirect the failed row to another processing path, by using the error output. Using a separate error processing path provides more options. For instance, you could clean the data and then reprocess the failed row. Or, you could save the failed row along with its error information for later verification and reprocessing.  
   
-In this task, you'll configure the Lookup Currency Key transformation to redirect any rows that fail to the error output. In the error branch of the data flow, [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] writes these rows to a file.  
+In this task, you configure the Lookup Currency Key transformation to redirect any rows that fail to the error output. In the error branch of the data flow, [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] writes these rows to a file.  
   
-By default the two extra columns in an [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] error output, **ErrorCode** and **ErrorColumn**, contain only a numeric error code and the ID of the column in which the error occurred. In this task, before the package writes the failed rows to the file, you'll use a Script component to access the [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] API and get a description of the error.  
+By default the two extra columns in an [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] error output, **ErrorCode** and **ErrorColumn**, contain only a numeric error code and the ID of the column in which the error occurred. In this task, before the package writes the failed rows to the file, you use a Script component to access the [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] API and get a description of the error.  
   
 ## Configure an error output  
   
 1.  In the **SSIS Toolbox**, expand **Common**, and then drag **Script Component** onto the design surface of the **Data Flow** tab. Place **Script** to the right of the **Lookup Currency Key** transformation.  
   
-2.  In the **Select Script Component Type** dialog, select **Transformation**, and selecty **OK**.  
+2.  In the **Select Script Component Type** dialog, select **Transformation**, and select **OK**.  
   
-3.  Select the **Lookup Currency Key** transformation and then drag its red arrow onto the new **Script** transformation to connect the two components.  
+3.  To connect the two components, select the **Lookup Currency Key** transformation and then drag its red arrow onto the new **Script** transformation.  
   
-    The red arrow represents the error output of the **Lookup Currency Key** transformation. By using the red arrow to connect the transformation to the Script component, you can redirect any processing errors to the Script component, which then processes the errors and sends them to the destination.  
+    The red arrow represents the error output of the **Lookup Currency Key** transformation. By using the red arrow to connect the transformation to the Script component, you redirect any processing errors to the Script component, which processes the errors and sends them to the destination.  
   
 4.  In the **Configure Error Output** dialog, in the **Error** column, select **Redirect row**, and then select **OK**.  
   
@@ -46,7 +46,7 @@ By default the two extra columns in an [!INCLUDE[ssISnoversion](../includes/ssis
   
 10. On the **Script** page, verify that the **LocaleID** property is set to **English (United States)**.
   
-11. Select **Edit Script** to open [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] Tools for Applications (VSTA). In the **Input0_ProcessInputRow** method, enter or paste the following code.  
+11. Select **Edit Script** to open [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] Tools for Applications (VSTA). In the **Input0_ProcessInputRow** method, enter or paste the following code:  
   
     [Visual Basic]  
   
@@ -61,7 +61,7 @@ By default the two extra columns in an [!INCLUDE[ssISnoversion](../includes/ssis
     Row.ErrorDescription = this.ComponentMetaData.GetErrorDescription(Row.ErrorCode);  
     ```  
   
-    The completed subroutine will look like the following code.  
+    The completed subroutine looks like the following code:  
   
     [Visual Basic]  
   

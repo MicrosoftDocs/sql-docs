@@ -14,7 +14,7 @@ manager: craigg
 ---
 # Lesson 4-1: Copy the Lesson 3 package
 
-In this task, you'll create a copy of the Lesson 3.dtsx package from Lesson 3. If you did not complete lesson 3, you can add the completed lesson 3 package that is included with the tutorial to the project, and then make a copy of it to work with. You'll use this new copy throughout the rest of Lesson 4.  
+In this task, you create a copy of the Lesson 3.dtsx package from Lesson 3. If you did not complete lesson 3, you can add the completed lesson 3 package that is included with the tutorial to the project, and then make a copy of it to work with. You use this new copy throughout the rest of Lesson 4.  
   
 ## Create the Lesson 4 package  
   

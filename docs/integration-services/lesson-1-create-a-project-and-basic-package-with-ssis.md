@@ -26,18 +26,18 @@ This tutorial relies on Microsoft SQL Server Data Tools, a set of example packag
   
 * To download all of the lesson packages for this tutorial:
 
-    1.  Navigate to [Integration Services product samples](https://go.microsoft.com/fwlink/?LinkId=275027).
+    1.  Navigate to [Integration Services tutorial files](https://www.microsoft.com/en-us/download/details.aspx?id=56827).
 
-    2.  Select the **DOWNLOADS** tab.
+    2.  Select the **DOWNLOAD** button.
 
-    3.  Select the SQL2012.Integration_Services.Create_Simple_ETL_Tutorial.Sample.zip file.
+    3.  Select the **Creating a Simple ETL Package.zip** file, then select **Next**.
 
-    4.  After the file downloads, unzip its contents to a local directory.
+    4.  After the file downloads, unzip its contents to a local directory.  
 
-* To install and deploy the **AdventureWorksDW2012** sample database, see [Reporting Services product samples on CodePlex](https://go.microsoft.com/fwlink/p/?LinkID=526910).
+* To install and deploy the **AdventureWorksDW2012** sample database, see [Install and configure AdventureWorks sample database - SQL](../samples/adventureworks-install-configure.md).
   
 ## Look at the source data
-For this tutorial, the source data is a set of historical currency data in a flat file named SampleCurrencyData.txt. The source data has the following four columns: the average rate of the currency, a currency key, a date key, and the end-of-day rate.  
+For this tutorial, the source data is a set of historical currency data in a flat file named **SampleCurrencyData.txt**. The source data has the following four columns: the average rate of the currency, a currency key, a date key, and the end-of-day rate.  
   
 Here is an example of the source data in the SampleCurrencyData.txt file:  
   

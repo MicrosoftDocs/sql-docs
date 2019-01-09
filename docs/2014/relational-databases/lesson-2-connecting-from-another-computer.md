@@ -38,7 +38,7 @@ manager: craigg
     > [!NOTE]  
     >  You might have both 32 bit and 64 bit options available.  
   
-2.  In **SQL Server Configuration Manager**, expand **SQL Server Network Configuration**, and then click **Protocols for** *\<InstanceName>*.  
+2.  In **SQL Server Configuration Manager**, expand **SQL Server Network Configuration**, and then click **Protocols for** _\<InstanceName>_.  
   
      The default instance (an unnamed instance) is listed as **MSSQLSERVER**. If you installed a named instance, the name you provided is listed. [!INCLUDE[ssExpressEd11](../includes/ssexpressed11-md.md)] installs as **SQLEXPRESS**, unless you changed the name during setup.  
   
@@ -106,7 +106,7 @@ manager: craigg
   
 2.  In the **Connect to Server** dialog box, confirm **Database Engine** in the **Server type** box.  
   
-3.  In the **Server name** box, type **tcp:** to specify the protocol, followed by the computer name, a comma, and the port number. To connect to the default instance, the port 1433 is implied and can be omitted; therefore, type **tcp:***<computer_name>*. In our example for a named instance, type **tcp:***<computer_name>***,49172**.  
+3.  In the **Server name** box, type **tcp:** to specify the protocol, followed by the computer name, a comma, and the port number. To connect to the default instance, the port 1433 is implied and can be omitted; therefore, type **tcp:**_<computer_name>_. In our example for a named instance, type **tcp:**_<computer_name>_**,49172**.  
   
     > [!NOTE]  
     >  If you omit **tcp:** from the **Server name** box, then the client will attempt all protocols that are enabled, in the order specified in the client configuration.  

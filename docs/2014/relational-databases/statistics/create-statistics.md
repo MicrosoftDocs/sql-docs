@@ -63,7 +63,7 @@ manager: craigg
   
 4.  Right-click the **Statistics** folder and select **New Statistics...**.  
   
-     The following properties show on the **General** page in the **New Statistics on Table***table_name* dialog box.  
+     The following properties show on the **General** page in the **New Statistics on Table**_table_name_ dialog box.  
   
      **Table Name**  
      Displays the name of the table described by the statistics.  
@@ -107,12 +107,12 @@ manager: craigg
      **Update statistics for these columns**  
      Check to update the statistics when the dialog box is closed.  
   
-     The following property shows on the **Filter** page in the **New Statistics on Table***table_name* dialog box.  
+     The following property shows on the **Filter** page in the **New Statistics on Table**_table_name_ dialog box.  
   
      **Filter Expression**  
      Defines which data rows to include in the filtered statistics. For example, `Production.ProductSubcategoryID IN ( 1,2,3 )`  
   
-5.  In the **New Statistics on Table***table_name* dialog box, on the **General** page, click **Add**.  
+5.  In the **New Statistics on Table**_table_name_ dialog box, on the **General** page, click **Add**.  
   
      The following properties show in the **Select Columns** dialog box. This information is read-only.  
   
@@ -133,7 +133,7 @@ manager: craigg
   
 6.  In the **Select Columns** dialog box, select the check box or check boxes of each column for which you want to create a statistic and then click **OK**.  
   
-7.  In the **New Statistics on Table***table_name* dialog box, click **OK**.  
+7.  In the **New Statistics on Table**_table_name_ dialog box, click **OK**.  
   
 ##  <a name="TsqlProcedure"></a> Using Transact-SQL  
   

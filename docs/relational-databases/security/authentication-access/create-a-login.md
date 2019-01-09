@@ -129,7 +129,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
  The **User Mapping** page lists all possible databases and the database role memberships on those databases that can be applied to the login. The databases selected determine the role memberships that are available for the login. The following options are available on this page:  
   
  **Users mapped to this login**  
- Select the databases that this login can access. When you select a database, its valid database roles are displayed in the **Database role membership for:** *database_name* pane.  
+ Select the databases that this login can access. When you select a database, its valid database roles are displayed in the **Database role membership for:** _database_name_ pane.  
   
  **Map**  
  Allow the login to access the databases listed below.  
@@ -143,10 +143,10 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
  **Default Schema**  
  Specifies the default schema of the user. When a user is first created, its default schema is **dbo**. It is possible to specify a default schema that does not yet exist. You cannot specify a default schema for a user that is mapped to a Windows group, a certificate, or an asymmetric key.  
   
- **Guest account enabled for:**  *database_name*  
+ **Guest account enabled for:**  _database_name_  
  Read-only attribute indicating whether the Guest account is enabled on the selected database. Use the **Status** page of the **Login Properties** dialog box of the Guest account to enable or disable the Guest account.  
   
- **Database role membership for:**  *database_name*  
+ **Database role membership for:**  _database_name_  
  Select the roles for the user in the specified database. All users are members of the **public** role in every database and cannot be removed. For more information about database roles, see [Database-Level Roles](../../../relational-databases/security/authentication-access/database-level-roles.md).  
   
 ### Securables  

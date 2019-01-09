@@ -87,7 +87,7 @@ manager: craigg
   
 1.  If the **Agent Profiles** dialog box displays profiles for more than one agent, select an agent.  
   
-2.  Click the properties button (**...**) next to a profile.  
+2.  Click the properties button (**…**) next to a profile.  
   
 3.  View the parameters and values in the **\<ProfileName> Profile Properties** dialog box.  
   

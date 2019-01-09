@@ -1,7 +1,7 @@
 ---
-title: "Step 5: Adding and Configuring the Flat File Source | Microsoft Docs"
+title: "Step 5: Add and configure the Flat File source | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/01/2017"
+ms.date: "01/03/2019"
 ms.prod: sql
 ms.prod_service: "integration-services"
 ms.reviewer: ""
@@ -12,37 +12,37 @@ author: "douglaslMS"
 ms.author: "douglasl"
 manager: craigg
 ---
-# Lesson 1-5 - Adding and Configuring the Flat File Source
-In this task, you will add and configure a Flat File source to your package. A Flat File source is a data flow component that uses metadata defined by a Flat File connection manager to specify the format and structure of the data to be extracted from the flat file by a transform process. The Flat File source can be configured to extract data from a single flat file by using the file format definition provided by the Flat File connection manager.  
+# Lesson 1-5: Add and configure the Flat File source
+In this task, you add and configure a Flat File source to your package. A Flat File source is a data flow component that uses metadata defined by a Flat File connection manager. This metadata specifies the format and structure of the data to be extracted from the flat file by a transform process. The Flat File source extracts data from a single flat file, using the format definitions in the Flat File connection manager.  
   
-For this tutorial, you will configure the Flat File source to use the **Sample Flat File Source Data** connection manager that you previously created.  
+For this task, you configure the Flat File source to use the **Sample Flat File Source Data** connection manager that you previously created.  
   
-### To add a Flat File Source component  
+## Add a Flat File source component  
   
-1.  Open the **Data Flow** designer, either by double-clicking the **Extract Sample Currency Data** data flow task or by clicking the **Data Flow tab**.  
+1.  To open the **Data Flow** designer, either double-click on the **Extract Sample Currency Data** data flow task, or select the **Data Flow** tab.  
   
 2.  In the **SSIS Toolbox**, expand **OtherSources**, and then drag a **Flat File Source** onto the design surface of the **Data Flow** tab.  
   
-3.  On the **Data Flow** design surface, right-click the newly added **Flat File Source**, click **Rename**, and change the name to **Extract Sample Currency Data**.  
+3.  On the **Data Flow** design surface, right-click the newly added **Flat File Source**, select **Rename**, and change the name to **Extract Sample Currency Data**.  
   
-4.  Double-click the Flat File source to open the Flat File Source Editor dialog box.  
+4.  Double-click the Flat File source to open the **Flat File Source Editor** dialog.  
   
-5.  In the **Flat file connection manager** box, select **Sample Flat File Source Data**.  
+5.  In the **Flat file connection manager** field, select **Sample Flat File Source Data**.  
   
-6.  Click **Columns** and verify that the names of the columns are correct.  
+6.  Select **Columns** and verify that the names of the columns are correct.  
   
-7.  Click **OK**.  
+7.  Select **OK**.  
   
-8.  Right-click the Flat File source and click **Properties**.  
+8.  Right-click the Flat File source and select **Properties**.  
   
-9. In the Properties window, verify that the **LocaleID** property is set to **English (United States)**.  
+9. In the **Properties** window, verify that the **LocaleID** property is set to **English (United States)**.  
   
-## Next Task in Lesson  
-[Step 6: Adding and Configuring the Lookup Transformations](../integration-services/lesson-1-6-adding-and-configuring-the-lookup-transformations.md)  
+## Go to next task
+[Step 6: Add and configure the Lookup transformations](../integration-services/lesson-1-6-adding-and-configuring-the-lookup-transformations.md)  
   
-## See Also  
-[Flat File Source](../integration-services/data-flow/flat-file-source.md)  
-[Flat File Connection Manager Editor &#40;General Page&#41;](../integration-services/connection-manager/flat-file-connection-manager-editor-general-page.md)  
+## See also  
+[Flat File source](../integration-services/data-flow/flat-file-source.md)  
+[Flat File Connection Manager](../integration-services/connection-manager/flat-file-connection-manager.md)  
   
   
   

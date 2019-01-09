@@ -35,7 +35,7 @@ monikerRange: "=azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allver
 ## Where is the documentation for Service Broker?  
  The reference documentation for [!INCLUDE[ssSB](../../includes/sssb-md.md)] is included in the [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] documentation. This reference documentation includes the following sections:  
   
--   [Data Definition Language &#40;DDL&#41; Statements &#40;Transact-SQL&#41;](~/mdx/mdx-data-definition-statements-mdx.md) for CREATE, ALTER, and DROP statements  
+-   [Data Definition Language &#40;DDL&#41; Statements &#40;Transact-SQL&#41;](../../t-sql/statements/statements.md) for CREATE, ALTER, and DROP statements  
   
 -   [Service Broker Statements](../../t-sql/statements/service-broker-statements.md)  
   

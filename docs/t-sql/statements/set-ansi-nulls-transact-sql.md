@@ -33,7 +33,7 @@ monikerRange: ">=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallpr
   Specifies ISO compliant behavior of the Equals (=) and Not Equal To (<>) comparison operators when they are used with null values in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
 > [!IMPORTANT]  
->  In a future version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], ANSI_NULLS will be ON and any applications that explicitly set the option to OFF will generate an error. Avoid using this feature in new development work, and plan to modify applications that currently use this feature.
+> In a future version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], ANSI_NULLS will be ON and any applications that explicitly set the option to OFF will generate an error. Avoid using this feature in new development work, and plan to modify applications that currently use this feature.
   
  ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
 
@@ -99,10 +99,10 @@ SELECT @ANSI_NULLS AS ANSI_NULLS;
 ```  
   
 ## Permissions  
- Requires membership in the public role.  
+ Requires membership in the **public** role.  
   
 ## Examples  
- The following example uses the Equals (`=`) and Not Equal To (`<>`) comparison operators to make comparisons with `NULL` and nonnull values in a table. The example also shows that `IS NULL` is not affected by the `SET ANSI_NULLS` setting.  
+ The following example uses the Equals (`=`) and Not Equal To (`<>`) comparison operators to make comparisons with `NULL` and non-null values in a table. The example also shows that `IS NULL` is not affected by the `SET ANSI_NULLS` setting.  
   
 ```sql  
 -- Create table t1 and insert values.  
@@ -126,9 +126,12 @@ WHERE a <> @varname;
 SELECT a   
 FROM t1   
 WHERE a IS NULL;  
-GO  
-  
--- SET ANSI_NULLS to ON and test.  
+GO 
+```
+
+Now set ANSI_NULLS to ON and test.
+
+```sql
 PRINT 'Testing ANSI_NULLS ON';  
 SET ANSI_NULLS ON;  
 GO  
@@ -147,8 +150,11 @@ SELECT a
 FROM t1   
 WHERE a IS NULL;  
 GO  
-  
--- SET ANSI_NULLS to OFF and test.  
+```
+
+Now set ANSI_NULLS to OFF and test.  
+
+```sql
 PRINT 'Testing SET ANSI_NULLS OFF';  
 SET ANSI_NULLS OFF;  
 GO  

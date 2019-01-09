@@ -148,4 +148,8 @@ The following sections provide common questions and answers for SQL Server runni
 
    We do not support changing the ownership of SQL Server directory and files from the default installation. The mssql account and group is specifically used for SQL Server and has no interactive login access.
 
+1. **How do I verify that SQL server is properly licensed?**
+   SQL server for Linux won't start if it's not licensed properly. To confirm what license is installed you can connect to SQL and run the following SQL query:
+   'select @@version'
+
 [!INCLUDE[Get Help Options](../includes/paragraph-content/get-help-options.md)]

@@ -71,9 +71,9 @@ The default for SET ANSI_PADDING is ON. The [!INCLUDE[ssNoVersion](../../include
   
  The SET ANSI_PADDING setting does not affect the **nchar**, **nvarchar**, **ntext**, **text**, **image**, **varbinary(max)**, **varchar(max)**, and **nvarchar(max)** data types. They always display the SET ANSI_PADDING ON behavior. This means trailing spaces and zeros are not trimmed.  
   
-When SET ANSI_DEFAULTS is ON, SET ANSI_PADDING is enabled.  
+When ANSI_DEFAULTS is ON, ANSI_PADDING is enabled.  
   
-The setting of SET ANSI_PADDING is set at execute or run time and not at parse time.  
+The setting of ANSI_PADDING is defined at execute or run time and not at parse time.  
   
 To view the current setting for this setting, run the following query.  
   

@@ -9,7 +9,7 @@ ms.prod_service: reporting-services-native, reporting-services-sharepoint
 ms.technology: application-integration
 ms.topic: reference
 ms.custom: ""
-ms.date: 01/11/2019
+ms.date: 01/09/2019
 ---
 
 # Support for Report Viewer current branch versions

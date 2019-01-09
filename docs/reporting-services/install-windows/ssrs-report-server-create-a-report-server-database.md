@@ -7,7 +7,7 @@ ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.topic: conceptual
 ms.custom: seodec18
-ms.date: 12/12/2018
+ms.date: 12/15/2018
 ---
 
 # Create a Report Server Database

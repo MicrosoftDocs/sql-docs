@@ -1,5 +1,5 @@
 ---
-title: "Step 2: Add and configure Logging | Microsoft Docs"
+title: "Step 2: Add and configure logging | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/04/2019"
 ms.prod: sql
@@ -12,9 +12,9 @@ author: "douglaslMS"
 ms.author: "douglasl"
 manager: craigg
 ---
-# Lesson 3-2: Add and configure Logging
+# Lesson 3-2: Add and configure logging
 
-In this task, you'll enable logging for the data flow in the Lesson 3.dtsx package. Then, you'll configure a Text File log provider to log the PipelineExecutionPlan and PipelineExecuteTrees events. The Text Files log provider creates logs that are easy to view and transport. The simplicity of these log files makes these files useful during the basic testing phase of a package. You can also view the log entries in the **Log Events** window of [!INCLUDE[ssIS](../includes/ssis-md.md)] Designer.  
+In this task, you enable logging for the data flow in the Lesson 3.dtsx package. Then, you configure a Text File log provider to log the PipelineExecutionPlan and PipelineExecuteTrees events. The Text Files log provider creates logs that are easy to view and transport. The simplicity of these log files makes these files useful during the basic testing phase of a package. You can also view the log entries in the **Log Events** window of [!INCLUDE[ssIS](../includes/ssis-md.md)] Designer.  
   
 ## Add logging to the package  
   
@@ -30,7 +30,7 @@ In this task, you'll enable logging for the data flow in the Lesson 3.dtsx packa
   
 5.  Optionally, modify the **Description**.  
   
-6.  In the **Configuration** column, select **\<New Connection>** to specify where [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] will write log information.  
+6.  In the **Configuration** column, select **\<New Connection>** to specify where [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] writes log information.  
   
     In the **File Connection Manager Editor** dialog box, for **Usage type**, select **Create file**, and then select **Browse**. By default, the **Select File** dialog opens the project folder, but you can save log information to any location.  
   
@@ -45,7 +45,7 @@ In this task, you'll enable logging for the data flow in the Lesson 3.dtsx packa
   
 10. On the **Details** tab, in the **Events** column, select the **PipelineExecutionPlan** and **PipelineExecutionTrees** events.  
   
-11. Select **Advanced** to review the details that the log provider will write to the log for each event. By default, all information categories are automatically selected for the events you specify.  
+11. Select **Advanced** to review the details that the log provider writes to the log for each event. By default, all information categories are automatically selected for the events you specify.  
   
 12. Select **Basic** to hide the information categories.  
   
@@ -53,6 +53,6 @@ In this task, you'll enable logging for the data flow in the Lesson 3.dtsx packa
   
 14. Select **OK**.  
   
-## Next lesson task  
-[Step 3: Testing the Lesson 3 Tutorial Package](../integration-services/lesson-3-3-testing-the-lesson-3-tutorial-package.md)  
+## Go to next task  
+[Step 3: Test the Lesson 3 package](../integration-services/lesson-3-3-testing-the-lesson-3-tutorial-package.md)  
   

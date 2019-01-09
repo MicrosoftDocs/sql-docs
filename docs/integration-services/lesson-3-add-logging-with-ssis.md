@@ -16,7 +16,7 @@ manager: craigg
 
 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] includes logging features that let you troubleshoot and monitor package execution by providing a trace of task and container events. The logging features are flexible. You can enable logging at the package level or on individual tasks and containers within the package. You select which events you want to log, and create multiple logs against a single package.  
   
-Logging providers create the logs. Each log provider can write logging information to different formats and destination types. [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] provides the following log providers:  
+Log providers create the logs. Each log provider can write logging information to different formats and destination types. [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] provides the following log providers:  
   
 -   Text file  
   
@@ -28,30 +28,19 @@ Logging providers create the logs. Each log provider can write logging informati
   
 -   XML file  
   
-In this lesson, you'll create a copy of the package that you created in [Lesson 2: Add Looping with SSIS](../integration-services/lesson-2-adding-looping-with-ssis.md). Working with this new package, you'll then add and configure logging to monitor specific events during package execution. If you have not completed either of the previous lessons, you can also copy the completed Lesson 2 package included with the tutorial.  
+In this lesson, you create a copy of the package that you created in [Lesson 2: Add Looping with SSIS](../integration-services/lesson-2-adding-looping-with-ssis.md). Working with this new package, you then add and configure logging to monitor specific events during package execution. If you have not completed either of the previous lessons, you can also copy the completed Lesson 2 package included with the tutorial.  
 
-## Prerequisites
-
-This tutorial uses a set of example packages and a sample database.
-
-* To download all of the lesson packages for this tutorial:
-
-    1.  Navigate to [Integration Services product samples](https://go.microsoft.com/fwlink/?LinkId=275027)
-
-    2.  Select the **DOWNLOADS** tab.
-
-    3.  Select the SQL2012.Integration_Services.Create_Simple_ETL_Tutorial.Sample.zip file.
-
-* To install and deploy the **AdventureWorksDW2012** sample database, see [Reporting Services product samples on CodePlex](https://go.microsoft.com/fwlink/p/?LinkID=526910).
+> [!NOTE]
+> If you haven't already, see the [Lesson 1 prerequisites](../integration-services/lesson-1-create-a-project-and-basic-package-with-ssis.md#prerequisites).
 
 ## Lesson tasks  
 This lesson contains the following tasks:  
   
 -   [Step 1: Copy the Lesson 2 package](../integration-services/lesson-3-1-copying-the-lesson-2-package.md)  
   
--   [Step 2: Add and configure Logging](../integration-services/lesson-3-2-adding-and-configuring-logging.md)  
+-   [Step 2: Add and configure logging](../integration-services/lesson-3-2-adding-and-configuring-logging.md)  
   
--   [Step 3: Test the Lesson 3 tutorial package](../integration-services/lesson-3-3-testing-the-lesson-3-tutorial-package.md)  
+-   [Step 3: Test the Lesson 3 package](../integration-services/lesson-3-3-testing-the-lesson-3-tutorial-package.md)  
   
 ## Start the lesson  
 [Step 1: Copy the Lesson 2 package](../integration-services/lesson-3-1-copying-the-lesson-2-package.md)  

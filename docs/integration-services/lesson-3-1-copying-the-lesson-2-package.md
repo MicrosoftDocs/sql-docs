@@ -14,7 +14,7 @@ manager: craigg
 ---
 # Lesson 3-1: Copy the Lesson 2 package
 
-In this task, you'll create a copy of the Lesson 2.dtsx package from Lesson 2. If you didn't complete Lesson 2, you can add the completed lesson 2 package included with this tutorial to the project, and then copy it instead. You'll use this new copy throughout the rest of Lesson 3.
+In this task, you create a copy of the Lesson 2.dtsx package from Lesson 2. If you didn't complete Lesson 2, you can add the completed lesson 2 package included with this tutorial to the project, and then copy it instead. You use this new copy throughout the rest of Lesson 3.
 
 ## Create the Lesson 3 package
 
@@ -50,6 +50,6 @@ Use this procedure if you're copying the completed Lesson 2.  To copy the sample
 
 5.  Copy and paste the Lesson 3 package as described in steps 3-8 in the previous section.  
   
-## Next task in lesson  
-[Step 2: Add and configure Logging](../integration-services/lesson-3-2-adding-and-configuring-logging.md)  
+## Go to next task
+[Step 2: Add and configure logging](../integration-services/lesson-3-2-adding-and-configuring-logging.md)  
   

@@ -1,7 +1,7 @@
 ---
 title: "SQLSetConnectAttr | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/11/2018"
+ms.date: 01/09/2019
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
@@ -17,6 +17,7 @@ manager: craigg
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # SQLSetConnectAttr
+
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
@@ -29,7 +30,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] introduced support for a new transaction isolation attribute, SQL_COPT_SS_TXN_ISOLATION. Setting SQL_COPT_SS_TXN_ISOLATION to SQL_TXN_SS_SNAPSHOT indicates that the transaction will take place under the snapshot isolation level.  
   
 > [!NOTE]  
->  SQL_ATTR_TXN_ISOLATION can be used to set all other isolation levels except for SQL_TXN_SS_SNAPSHOT. If you want to use snapshot isolation, you must set SQL_TXN_SS_SNAPSHOT through SQL_COPT_SS_TXN_ISOLATION. However, you can retrieve the isolation level by using either SQL_ATTR_TXN_ISOLATION or SQL_COPT_SS_TXN_ISOLATION.  
+> SQL_ATTR_TXN_ISOLATION can be used to set all other isolation levels except for SQL_TXN_SS_SNAPSHOT. If you want to use snapshot isolation, you must set SQL_TXN_SS_SNAPSHOT through SQL_COPT_SS_TXN_ISOLATION. However, you can retrieve the isolation level by using either SQL_ATTR_TXN_ISOLATION or SQL_COPT_SS_TXN_ISOLATION.  
   
  Promoting ODBC statement attributes to connection attributes can have unintended consequences. Statement attributes that request server cursors for result set processing can be promoted to the connection. For example, setting the ODBC statement attribute SQL_ATTR_CONCURRENCY to a value more restrictive than the default SQL_CONCUR_READ_ONLY directs the driver to use dynamic cursors for all statements submitted on the connection. Executing an ODBC catalog function on a statement on the connection returns SQL_SUCCESS_WITH_INFO and a diagnostic record indicating that the cursor behavior has been changed to read-only. Attempting to execute a Transact-SQL SELECT statement containing a COMPUTE clause on the same connection fails.  
   
@@ -187,7 +188,7 @@ SQLSetConnectAttr(hdbc, SQL_COPT_SS_APPLICATION_INTENT, TEXT("Readonly"), SQL_NT
 |SQL_IS_OFF|Default. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentication is used to validate user identifier and password on login.|  
 |SQL_IS_ON|Windows Authentication Mode is used to validate a user's access rights to the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 
-< name="sqlcoptssmarsenabled"></a>
+<a name="sqlcoptssmarsenabled"></a>
 ## SQL_COPT_SS_MARS_ENABLED  
  This attribute enables or disables Multiple Active Result Sets (MARS). By default, MARS is disabled. This attribute should be set before making a connection to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Once the connection [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is opened, MARS will remain enabled or disabled for the life of the connection.  
   
@@ -309,7 +310,8 @@ SQLSetConnectAttr(hdbc, SQL_COPT_SS_MULTISUBNET_FAILOVER, SQL_IS_ON, SQL_IS_INTE
   
  For more information about snapshot isolation, see [Working with Snapshot Isolation](../../relational-databases/native-client/features/working-with-snapshot-isolation.md).  
   
-## SQL_COPT_SS_USE_PROC_FOR_PREP  
+## SQL_COPT_SS_USE_PROC_FOR_PREP
+
  This attribute is no longer supported.  
 
 <a name="sqlcoptssuserdata"></a>
@@ -327,7 +329,8 @@ SQLSetConnectAttr(hdbc, SQL_COPT_SS_MULTISUBNET_FAILOVER, SQL_IS_ON, SQL_IS_INTE
 |SQL_WARN_YES|Generate warnings when data loss is encountered during codepage conversion.|  
 |SQL_WARN_NO|(Default) Do not generate warnings when data loss is encountered during codepage conversion.|  
   
-## SQLSetConnectAttr Support for Service Principal Names (SPNs)  
+## SQLSetConnectAttr Support for Service Principal Names (SPNs)
+
  SQLSetConnectAttr can be used to set the value of the new connection attributes SQL_COPT_SS_SERVER_SPN and SQL_COPT_SS_FAILOVER_PARTNER_SPN. These attributes cannot be set when a connection is open; if you attempt to set these attributes when a connection is open, error HY011 is returned with the message "Operation invalid at this time". (SQLSetConnectOption can also be used to set these values.)  
   
  For more information about SPNs, see [Service Principal Names &#40;SPNs&#41; in Client Connections &#40;ODBC&#41;](../../relational-databases/native-client/odbc/service-principal-names-spns-in-client-connections-odbc.md).  
@@ -338,7 +341,8 @@ SQLSetConnectAttr(hdbc, SQL_COPT_SS_MULTISUBNET_FAILOVER, SQL_IS_ON, SQL_IS_INTE
   
  For more information about SQL_COPT_SS_CONNECTION_DEAD, see [SQLGetConnectAttr](../../relational-databases/native-client-odbc-api/sqlgetconnectattr.md) and [Connecting to a Data Source &#40;ODBC&#41;](../../relational-databases/native-client-odbc-communication/connecting-to-a-data-source-odbc.md).  
   
-## Example  
+## Example
+
  This example logs performance data.  
   
 ```  
@@ -382,7 +386,8 @@ SQLSetConnectAttr(hDbc, SQL_COPT_SS_PERF_DATA,
 // Continue on...  
 ```  
   
-## See Also  
+## See Also
+
  [SQLSetConnectAttr Function](https://go.microsoft.com/fwlink/?LinkId=59368)   
  [ODBC API Implementation Details](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)   
  [Bulk Copy Functions](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/sql-server-driver-extensions-bulk-copy-functions.md)   

@@ -1,7 +1,7 @@
 ---
 title: "Azure Data Lake Store Destination | Microsoft Docs"
 ms.custom: ""
-ms.date: 01/09/2019
+ms.date: 01/10/2019
 ms.prod: sql
 ms.prod_service: "integration-services"
 ms.reviewer: ""
@@ -37,35 +37,3 @@ manager: craigg
        If the file format is ORC, you need to install the Java Runtime Environment (JRE) for the appropriate platform.
   
 3.  After specifying the connection information, switch to the **Columns** page to map source columns to destination columns for the SSIS data flow.  
-
-## Prerequisite for ORC format
-
-Before you can use the ORC file format, you have to install the Java Runtime Environment (JRE) with version 1.7.51  or higher for the appropriate platform.
-
-Both the Zulu and the Oracle JRE are supported.
--   [Zulu JRE](https://www.azul.com/downloads/zulu/zulu-windows/)
--   [Oracle JRE](https://www.oracle.com/technetwork/java/javase/downloads/jre8-downloads-2133155.html)
-
-### Set up the Zulu JRE
-
-1. Download and extract the Zulu OpenJDK installation zip package.
-
-2.	From the Command Prompt, run `sysdm.cpl`.
-
-3. On the **Advanced** tab, select **Environment Variables**.
-
-4. Under the **System variables** section, select **New**.
-
-5. Enter `JAVA_HOME` for the **Variable name**.
-
-6. Select **Browse Directory**, navigate to the Zulu OpenJDK installation folder, and select the `jre` subfolder. Then select OK. The variable value is populated automatically.
-
-7. Select **OK** to close the **New System Variable** dialog box.
-
-8. Select **OK** to close the Environment Variables dialog box.
-
-### Set up the Oracle JRE
-
-1. Download and run the Oracle JRE exe installer.
-
-1. Follow the installer instructions to complete setup.

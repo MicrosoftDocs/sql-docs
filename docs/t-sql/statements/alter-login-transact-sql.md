@@ -203,22 +203,29 @@ ALTER LOGIN Mary5 ENABLE;
 ```sql  
 ALTER LOGIN Mary5 WITH PASSWORD = '<enterStrongPasswordHere>';  
 ```  
+
+### C. Changing the password of a login when logged in as the login 
+ If you are attempting to change the password of the login that you're currently logged in with and you do not have the `ALTER ANY LOGIN` permission you must specify the `OLD_PASSWORD` option.    
   
-### C. Changing the name of a login  
+```sql  
+ALTER LOGIN Mary5 WITH PASSWORD = '<enterStrongPasswordHere>' OLD_PASSWORD = '<oldWeakPasswordHere>';  
+```  
+
+### D. Changing the name of a login  
  The following example changes the name of login `Mary5` to `John2`.  
   
 ```sql  
 ALTER LOGIN Mary5 WITH NAME = John2;  
 ```  
   
-### D. Mapping a login to a credential  
+### E. Mapping a login to a credential  
  The following example maps the login `John2` to the credential `Custodian04`.  
   
 ```sql  
 ALTER LOGIN John2 WITH CREDENTIAL = Custodian04;  
 ```  
   
-### E. Mapping a login to an Extensible Key Management credential  
+### F. Mapping a login to an Extensible Key Management credential  
  The following example maps the login `Mary5` to the EKM credential `EKMProvider1`.  
   
   

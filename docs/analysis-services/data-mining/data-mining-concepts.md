@@ -1,6 +1,6 @@
 ---
 title: "Data Mining Concepts | Microsoft Docs"
-ms.date: 05/01/2018
+ms.date: 01/09/2019
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: data-mining
@@ -12,6 +12,10 @@ manager: kfile
 ---
 # Data Mining Concepts
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+
+> [!IMPORTANT]
+> Data mining is deprecated in SQL Server Analysis Services 2017. Documentation is not updated for deprecated features. To learn more, see [Analysis Services backward compatibility (SQL 2017)](../analysis-services-backward-compatibility-sql2017.md).
+
   Data mining is the process of discovering actionable information from large sets of data. Data mining uses mathematical analysis to derive patterns and trends that exist in data. Typically, these patterns cannot be discovered by traditional data exploration because the relationships are too complex or because there is too much data.  
   
  These patterns and trends can be collected and defined as a *data mining model*. Mining models can be applied to specific scenarios, such as:  

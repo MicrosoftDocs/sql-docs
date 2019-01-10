@@ -119,7 +119,7 @@ The following table describes the columns returned in the result set when the HI
 |RANGE_ROWS|Estimated number of rows whose column value falls within a histogram step, excluding the upper bound.|  
 |EQ_ROWS|Estimated number of rows whose column value equals the upper bound of the histogram step.|  
 |DISTINCT_RANGE_ROWS|Estimated number of rows with a distinct column value within a histogram step, excluding the upper bound.|  
-|AVG_RANGE_ROWS|Average number of rows with duplicate column values within a histogram step, excluding the upper bound (RANGE_ROWS / DISTINCT_RANGE_ROWS for DISTINCT_RANGE_ROWS > 0).| 
+|AVG_RANGE_ROWS|Average number of rows with duplicate column values within a histogram step, excluding the upper bound. When DISTINCT_RANGE_ROWS is greater than 0, AVG_RANGE_ROWS is calculated by dividing RANGE_ROWS by DISTINCT_RANGE_ROWS. When DISTINCT_RANGE_ROWS is 0, AVG_RANGE_ROWS returns 1 for the histogram step.| 
   
 ## <a name="Remarks"></a> Remarks 
 

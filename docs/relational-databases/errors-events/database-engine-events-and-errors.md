@@ -1,7 +1,7 @@
 ---
 title: "Database Engine Events and Errors | Microsoft Docs"
 ms.custom: ""
-ms.date: "06/27/2018"
+ms.date: 01/09/2019
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: supportability
@@ -11,12 +11,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ---
-
 # Database Engine Errors
-The table contains error message numbers and the description, which is the text of the error message from the sys.messages catalog view. 
 
+The table contains error message numbers and the description, which is the text of the error message from the sys.messages catalog view.
 
 ## Errors -2 to 999
+
 | Error| Severity | Event Logged | Description|
 | :------ | :------| :------| :----------------------------- |
 |	[-2](mssqlserver-neg2-database-engine-error.md)	|		|		|	Timeout expired. The timeout period elapsed prior to completion of the operation or the server is not responding. (Microsoft SQL Server, Error: -2).	|
@@ -2652,7 +2652,7 @@ The table contains error message numbers and the description, which is the text 
 |	5904	|	17	|	Yes	|	Unable to issue checkpoint: there are not enough locks available. Background checkpoint process will remain suspended until locks are available. To free up locks, list transactions and their locks, and terminate transactions with the highest number of locks.	|
 |	&nbsp;	|	&nbsp;	|&nbsp;		|	&nbsp;	|
 
-# Errors 6000 to 6999
+## Errors 6000 to 6999
 
 | Error| Severity | Event Logged | Description|
 | :------ | :------| :------| :----------------------------- |
@@ -5352,7 +5352,7 @@ The table contains error message numbers and the description, which is the text 
 |	13409	|	10	|	No	|	Collation '%ls' will be removed in a future version of SQL Server. Avoid using this collation in new development work, and plan to modify applications that currently use it.	|
 |	&nbsp;	|	&nbsp;	|&nbsp;		|	&nbsp;	|
 
-# Errors 14,000 to 14,999
+## Errors 14,000 to 14,999
 
 | Error| Severity | Event Logged | Description|
 | :------ | :------| :------| :----------------------------- |
@@ -9059,12 +9059,7 @@ The table contains error message numbers and the description, which is the text 
 |	[41399](mssqlserver-41399-database-engine-error.md)	|		|		|	The sort operation is too complex. Consult SQL Server Books Online for more information.	|
 |	&nbsp;	|	&nbsp;	|&nbsp;		|	&nbsp;	|
 
-
-
-
 ## See Also
-[Understanding Database Engine Errors](../../relational-databases/errors-events/understanding-database-engine-errors.md)  
-[Cause and Resolution of Database Engine Errors](https://msdn.microsoft.com/library/cbfbea15-9277-498f-b772-75b4cb06f408)  
 
-  
-  
+[Understanding Database Engine Errors](../../relational-databases/errors-events/understanding-database-engine-errors.md)
+[Cause and Resolution of Database Engine Errors](https://msdn.microsoft.com/library/cbfbea15-9277-498f-b772-75b4cb06f408)

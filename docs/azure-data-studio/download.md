@@ -14,7 +14,11 @@ manager: craigg
 ---
 # Download and install Azure Data Studio
 
+  > [!div class="nextstepaction"]
+  > [Please share your feedback about the SQL Docs Table of Contents!](https://aka.ms/sqldocsurvey)
+
 [!INCLUDE[name-sos](../includes/name-sos.md)] runs on Windows, macOS, and Linux.
+
 
 Download and install the latest release, the *January Release*:
 

@@ -24,6 +24,9 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 # sp_executesql (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
+  > [!div class="nextstepaction"]
+  > [Please share your feedback about the SQL Docs Table of Contents!](https://aka.ms/sqldocsurvey)
+
   Executes a [!INCLUDE[tsql](../../includes/tsql-md.md)] statement or batch that can be reused many times, or one that has been built dynamically. The [!INCLUDE[tsql](../../includes/tsql-md.md)] statement or batch can contain embedded parameters.  
   
 > [!IMPORTANT]  

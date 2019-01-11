@@ -48,7 +48,8 @@ The Performance dashboard is divided into the following sections and sub-reports
   -  Missing Indexes
 
 > [!NOTE]
-> Internally, the Performance Dashboard uses [Execution](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md]), [I\/O](../../relational-databases/system-dynamic-management-views/i-o-related-dynamic-management-views-and-functions-transact-sql.md), and [Index](../../relational-databases/system-dynamic-management-views/index-related-dynamic-management-views-and-functions-transact-sql.md) Related Dynamic Management Views and Functions.
+> Internally, the Performance Dashboard uses [Execution](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md]), [I\/O](../../relational-databases/system-dynamic-management-views/i-o-related-dynamic-management-views-and-functions-transact-sql.md), 
+> and [Index](../../relational-databases/system-dynamic-management-views/index-related-dynamic-management-views-and-functions-transact-sql.md) related Dynamic Management Views (DMVs) and Functions (DMFs).
 
 ## To view the Performance Dashboard 
   
@@ -61,7 +62,7 @@ The Performance Dashboard will appear as a new tab. Below is an example where a 
 ![Performance Dashboard main screen](../../relational-databases/performance/media/perf_dashboard.png "Performance Dashboard main screen")  
   
 ## Remarks
-The **Missing Indexes** report shows potential indexes that the query optimizer identified during query compilation. However, these recommendations should not be taken at face value. Microsoft recommends that only the indexes with a score greater than 100,000 should be evaluated for creation, as those have the highest anticipated improvement for user queries. 
+The **Missing Indexes** report shows potential missing indexes that the query optimizer identified during query compilation. However, these recommendations should not be taken at face value. Microsoft recommends that indexes with a score greater than 100,000 should be evaluated for creation, as those have the highest anticipated improvement for user queries. 
 
 > [!TIP]
 > Always evaluate if a new index suggestion is comparable to an existing index in the same table, where the same practical results can be achieved simply by changing an existing index instead of creating a new index. For example, given a new suggested index on columns C1, C2 and C3, first evaluate if there is an existing index over columns C1 and C2. If so, then it may be preferable to simply add column C3 to the existing index (preserving the order of pre-existing columns) to avoid creating a new index.
@@ -69,7 +70,7 @@ The **Missing Indexes** report shows potential indexes that the query optimizer 
 
 The **Waits** report filter out all idle and sleep waits. For more information about waits, see [sys.dm_os_wait_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md) and [SQL Server 2005 Performance Tuning Using Waits and Queues](http://download.microsoft.com/download/4/7/a/47a548b9-249e-484c-abd7-29f31282b04d/performance_tuning_waits_queues.doc).
 
-The **Expensive Queries** reports are reset when [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] restarts. Starting with [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], detailed information about expensive queries can be found in the Query Store. 
+The **Expensive Queries** reports are reset when [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] restarts because the data in the underlying DMVs is cleared. Starting with [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], detailed information about expensive queries can be found in the Query Store. 
 
 > [!NOTE]
 > The Performance Dashboard was first released as a standalone download for [SQL Server 2005](http://www.microsoft.com/download/details.aspx?id=22602), and later updated for [SQL Server 2012](https://www.microsoft.com/en-us/download/details.aspx?id=29063).

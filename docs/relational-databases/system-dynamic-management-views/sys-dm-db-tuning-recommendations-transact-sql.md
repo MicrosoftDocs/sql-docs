@@ -56,6 +56,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversio
  Information returned by `sys.dm_db_tuning_recommendations` is updated when database engine identifies potential query performance regression, and is not persisted. Recommendations are kept only until [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is restarted. Database administrators should periodically make backup copies of the tuning recommendation if they want to keep it after server recycling. 
 
  `currentValue` field in the `state` column might have the following values:
+ 
  | Status | Description |
  |--------|-------------|
  | `Active` | Recommendation is active and not yet applied. User can take recommendation script and execute it manually. |

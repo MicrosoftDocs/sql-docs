@@ -48,7 +48,7 @@ The Performance dashboard is divided into the following sections and sub-reports
   -  Missing Indexes
 
 > [!NOTE]
-> Internally, the Performance Dashboard uses [Execution](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md]), [I/O](../../relational-databases/system-dynamic-management-views/i-o-related-dynamic-management-views-and-functions-transact-sql.md), and [Index](../../relational-databases/system-dynamic-management-views/index-related-dynamic-management-views-and-functions-transact-sql.md) Related Dynamic Management Views and Functions.
+> Internally, the Performance Dashboard uses [Execution](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md]), [I\/O](../../relational-databases/system-dynamic-management-views/i-o-related-dynamic-management-views-and-functions-transact-sql.md), and [Index](../../relational-databases/system-dynamic-management-views/index-related-dynamic-management-views-and-functions-transact-sql.md) Related Dynamic Management Views and Functions.
 
 ## To view the Performance Dashboard 
   

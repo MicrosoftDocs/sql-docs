@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "piecemeal restores [SQL Server]"
   - "restoring [SQL Server], piecemeal restore scenario"
 ms.assetid: 208f55e0-0762-4cfb-85c4-d36a76ea0f5b
-author: MikeRayMSFT
-ms.author: mikeray
+author: mashamsft
+ms.author: mathoma
 manager: craigg
 ---
 # Piecemeal Restores (SQL Server)

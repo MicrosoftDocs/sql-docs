@@ -154,40 +154,27 @@ manager: craigg
   
 8.  Restart the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] Service.  
 
+### Event logged when permissions are missing
 
-> [!NOTE]  
->  If the service account of SQL Server Agent didn't has the Integration Services DCOM **[Launch and Activation Permissions]** permission, system event log will be logged the following event while SQL Server Agent execute the SSIS package jobs.
+If the service account of SQL Server Agent didn't has the Integration Services DCOM **[Launch and Activation Permissions]** permission, system event log will be logged the following event while SQL Server Agent execute the SSIS package jobs.
 
+```
 Log Name: System
-
- Source: **Microsoft-Windows-DistributedCOM**
- 
- Date: 1/9/2019 5:42:13 PM
- 
- Event ID: **10016**
- 
- Task Category: None
- 
- Level: Error
- 
- Keywords: Classic
- 
- User: NT SERVICE\SQLSERVERAGENT
- 
- Computer: testmachine
- 
- Description:
- 
- The application-specific permission settings do not grant Local Activation permission for the COM Server application with CLSID
- 
- {xxxxxxxxxxxxxxxxxxxxxxxxxxxxx}
- 
- and APPID
- 
- {xxxxxxxxxxxxxxxxxxxxxxxxxxxxx}
- 
- to the user NT SERVICE\SQLSERVERAGENT SID (S-1-5-80-344959196-2060754871-2302487193-2804545603-1466107430) from address LocalHost (Using LRPC) running in the application container Unavailable SID (Unavailable). This security permission can be modified using the Component Services administrative tool.
-
+Source: **Microsoft-Windows-DistributedCOM**
+Date: 1/9/2019 5:42:13 PM
+Event ID: **10016**
+Task Category: None
+Level: Error
+Keywords: Classic
+User: NT SERVICE\SQLSERVERAGENT
+Computer: testmachine
+Description:
+The application-specific permission settings do not grant Local Activation permission for the COM Server application with CLSID
+{xxxxxxxxxxxxxxxxxxxxxxxxxxxxx}
+and APPID
+{xxxxxxxxxxxxxxxxxxxxxxxxxxxxx}
+to the user NT SERVICE\SQLSERVERAGENT SID (S-1-5-80-344959196-2060754871-2302487193-2804545603-1466107430) from address LocalHost (Using LRPC) running in the application container Unavailable SID (Unavailable). This security permission can be modified using the Component Services administrative tool.
+```
 
 ## Configure the service
  

@@ -156,7 +156,7 @@ manager: craigg
 
 ### Event logged when permissions are missing
 
-If the service account of SQL Server Agent didn't has the Integration Services DCOM **[Launch and Activation Permissions]** permission, system event log will be logged the following event while SQL Server Agent execute the SSIS package jobs.
+If the service account of the SQL Server Agent doesn't have the Integration Services DCOM **[Launch and Activation Permissions]** permission, the following event is added to the system event logs when the SQL Server Agent executes the SSIS package jobs:
 
 ```
 Log Name: System

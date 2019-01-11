@@ -163,15 +163,14 @@ INNER JOIN sys.query_store_plan AS sp ON sp.query_id = dtr.query_id
 	AND sp.plan_id = dtr.recommendedPlanId
 INNER JOIN sys.query_store_query AS qsq ON qsq.query_id = rp.query_id
 INNER JOIN sys.query_store_query_text AS qsqt ON qsqt.query_text_id = qsq.query_text_id;
-GO
 ```
 
 For more information about JSON functions that can be used to query values in the recommendation view, see [JSON Support](../../relational-databases/json/index.md) in [!INCLUDE[ssde_md](../../includes/ssde_md.md)].
   
 ## Permissions  
 
-On [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], requires `VIEW SERVER STATE` permission.   
-On [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], requires the `VIEW DATABASE STATE` permission in the database.   
+Requires `VIEW SERVER STATE` permission in [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)].   
+Requires the `VIEW DATABASE STATE` permission for the database in [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].   
 
 ## See Also  
  [Automatic Tuning](../../relational-databases/automatic-tuning/automatic-tuning.md)   

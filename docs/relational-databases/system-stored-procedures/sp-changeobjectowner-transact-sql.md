@@ -40,10 +40,10 @@ sp_changeobjectowner [ @objname = ] 'object' , [ @newowner = ] 'owner'
 ```  
   
 ## Arguments  
- [ **@objname =** ] **'***object***'**  
- Is the name of an existing table, view, user-defined function, or stored procedure in the current database. *object* is an **nvarchar(776)**, with no default. *object* can be qualified with the owner of the existing object, in the form *existing_owner***.***object* if the schema and its owner have the same name.  
+ [ **@objname =** ] **'**_object_**'**  
+ Is the name of an existing table, view, user-defined function, or stored procedure in the current database. *object* is an **nvarchar(776)**, with no default. *object* can be qualified with the owner of the existing object, in the form _existing_owner_**.**_object_ if the schema and its owner have the same name.  
   
- [ **@newowner=**] **'***owner* **'**  
+ [ **@newowner=**] **'**_owner_ **'**  
  Is the name of the security account that will be the new owner of the object. *owner* is **sysname**, with no default. *owner* must be a valid database user, server role, [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows login, or Windows group with access to the current database. If the new owner is a Windows user or Windows group for which there is no corresponding database-level principal, a database user will be created.  
   
 ## Return Code Values  

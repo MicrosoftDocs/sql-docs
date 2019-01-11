@@ -75,6 +75,6 @@ manager: craigg
 ## See Also  
  [Create a Publication](../../relational-databases/replication/publish/create-a-publication.md)   
  [Publish Data and Database Objects](../../relational-databases/replication/publish/publish-data-and-database-objects.md)   
- [Properties Reference &#40;Replication&#41;](../../relational-databases/replication/properties-reference-replication.md)  
+
   
   

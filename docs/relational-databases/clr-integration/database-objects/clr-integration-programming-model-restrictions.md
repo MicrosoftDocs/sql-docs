@@ -32,9 +32,9 @@ manager: craigg
   
 -   The assembly is one of the supported assemblies. For more information, see [Supported .NET Framework Libraries](../../../relational-databases/clr-integration/database-objects/supported-net-framework-libraries.md).  
   
--   You are using **CREATE ASSEMBLY FROM***\<location>,* and all the referenced assemblies and their dependencies are available in *\<location>*.  
+-   You are using **CREATE ASSEMBLY FROM**_\<location>,_ and all the referenced assemblies and their dependencies are available in *\<location>*.  
   
--   You are using **CREATE ASSEMBLY FROM***\<bytes ...>,* and all the references are specified via space separated bytes.  
+-   You are using **CREATE ASSEMBLY FROM**_\<bytes ...>,_ and all the references are specified via space separated bytes.  
   
 ### EXTERNAL_ACCESS  
  All **EXTERNAL_ACCESS** assemblies must meet the following criteria:  

@@ -38,7 +38,7 @@ Expression instance of SequenceType[Occurrence indicator]
   
  If the **?** occurrence indicator is not specified, `sequence of` returns True only when the `Expression` type matches the `Type` specified and `Expression` returns a singleton.  
   
- **Note** The plus symbol (**+**) and the asterisk (**\***) occurrence indicators are not supported in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
+ **Note** The plus symbol (**+**) and the asterisk (**&#42;**) occurrence indicators are not supported in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
  The following examples illustrate the use of the**instance of** XQuery operator.  
   

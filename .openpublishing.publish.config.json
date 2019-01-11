@@ -15,7 +15,8 @@
       "type_mapping": {
         "Conceptual": "Content",
         "ManagedReference": "Content",
-        "RestApi": "Content"
+        "RestApi": "Content",
+        "LandingData": "Content"
       },
       "build_entry_point": "docs",
       "template_folder": "_themes",
@@ -48,6 +49,10 @@
     }
   ],
   "branch_target_mapping": {
+    "release-sqlseattle": [
+      "Publish",
+      "PDF"
+    ],
     "live": [
       "Publish",
       "PDF"

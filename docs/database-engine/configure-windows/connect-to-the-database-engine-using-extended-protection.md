@@ -81,7 +81,7 @@ manager: craigg
   
 1.  On the **Start** menu, choose **All Programs**, point to **Microsoft SQL Server** and then click **SQL Server Configuration Manager**.  
   
-2.  Expand **SQL Server Network Configuration**, and then right-click **Protocols for** *\<*InstanceName*>*, and then click **Properties**.  
+2.  Expand **SQL Server Network Configuration**, and then right-click **Protocols for** _\<_InstanceName*>*, and then click **Properties**.  
   
 3.  For both channel binding and service binding, on the **Advanced** tab, set **Extended Protection** to the appropriate setting.  
   

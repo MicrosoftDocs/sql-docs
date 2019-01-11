@@ -29,12 +29,12 @@ dreplay preprocess [-m controller] -i input_trace_file
 ```  
   
 #### Parameters  
- **-m** *controller*  
+ **-m** _controller_  
  Specifies the computer name of the controller. You can use "`localhost`" or "`.`" to refer to the local computer.  
   
  If the **-m** parameter is not specified, the local computer is used.  
   
- **-i** *input_trace_file*  
+ **-i** _input_trace_file_  
  Specifies the full path of the input trace file on the controller, such as `D:\Mytrace.trc`. The **-i** parameter is required.  
   
  If there are rollover files in the same directory, they will be loaded and used automatically. The files must follow the file rollover naming convention, for example: `Mytrace.trc`, `Mytrace_1.trc`, `Mytrace_2.trc`, `Mytrace_3.trc`, ... `Mytrace_n.trc`.  
@@ -42,7 +42,7 @@ dreplay preprocess [-m controller] -i input_trace_file
 > [!NOTE]  
 >  If you are using the administration tool on a different computer than the controller, you will need to copy the input trace files to the controller so that a local path can be used for this parameter.  
   
- **-d** *controller_working_dir*  
+ **-d** _controller_working_dir_  
  Specifies the directory on the controller where the intermediate file will be stored. The **-d** parameter is required.  
   
  The following requirements apply:  
@@ -55,14 +55,14 @@ dreplay preprocess [-m controller] -i input_trace_file
   
 -   UNC paths are not supported.  
   
- **-c** *config_file*  
+ **-c** _config_file_  
  Is the full path of the preprocess configuration file; used to specify the location of the preprocess configuration file when stored in a different location. This parameter can be a UNC path, or can reside locally on the computer where you run the administration tool.  
   
  The **-c** parameter is not required if no filtering is needed, or if you do not want to modify the maximum idle time.  
   
  Without the **-c** parameter, the default preprocess configuration file, `DReplay.exe.preprocess.config`, is used.  
   
- **-f** *status_interval*  
+ **-f** _status_interval_  
  Specifies the frequency (in seconds) at which to display status messages.  
   
  If **-f** is not specified, the default interval is 30 seconds.  

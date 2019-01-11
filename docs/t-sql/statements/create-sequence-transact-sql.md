@@ -50,52 +50,48 @@ CREATE SEQUENCE [schema_name . ] sequence_name
 ```  
   
 ## Arguments  
- *sequence_name*  
- Specifies the unique name by which the sequence is known in the database. Type is **sysname**.  
+*sequence_name*  
+Specifies the unique name by which the sequence is known in the database. Type is **sysname**.  
   
- [ built_in_integer_type | user-defined_integer_type  
- A sequence can be defined as any integer type. The following types are allowed.  
+[ built_in_integer_type | user-defined_integer_type  
+A sequence can be defined as any integer type. The following types are allowed.  
   
 -   **tinyint** - Range 0 to 255  
-  
 -   **smallint** - Range -32,768 to 32,767  
-  
 -   **int** - Range -2,147,483,648 to 2,147,483,647  
-  
 -   **bigint** - Range -9,223,372,036,854,775,808 to 9,223,372,036,854,775,807  
-  
 -   **decimal** and **numeric** with a scale of 0.  
-  
 -   Any user-defined data type (alias type) that is based on one of the allowed types.  
   
- If no data type is provided, the **bigint** data type is used as the default.  
+If no data type is provided, the **bigint** data type is used as the default.  
   
- START WITH \<constant>  
- The first value returned by the sequence object. The **START** value must be a value less than or equal to the maximum and greater than or equal to the minimum value of the sequence object. The default start value for a new sequence object is the minimum value for an ascending sequence object and the maximum value for a descending sequence object.  
+START WITH \<constant>  
+The first value returned by the sequence object. The **START** value must be a value less than or equal to the maximum and greater than or equal to the minimum value of the sequence object. The default start value for a new sequence object is the minimum value for an ascending sequence object and the maximum value for a descending sequence object.  
   
- INCREMENT BY \<constant>  
- Value used to increment (or decrement if negative) the value of the sequence object for each call to the **NEXT VALUE FOR** function. If the increment is a negative value, the sequence object is descending; otherwise, it is ascending. The increment cannot be 0. The default increment for a new sequence object is 1.  
+INCREMENT BY \<constant>  
+Value used to increment (or decrement if negative) the value of the sequence object for each call to the **NEXT VALUE FOR** function. If the increment is a negative value, the sequence object is descending; otherwise, it is ascending. The increment cannot be 0. The default increment for a new sequence object is 1.  
   
- [ MINVALUE \<constant> | **NO MINVALUE** ]  
- Specifies the bounds for the sequence object. The default minimum value for a new sequence object is the minimum value of the data type of the sequence object. This is zero for the **tinyint** data type and a negative number for all other data types.  
+[ MINVALUE \<constant> | **NO MINVALUE** ]  
+Specifies the bounds for the sequence object. The default minimum value for a new sequence object is the minimum value of the data type of the sequence object. This is zero for the **tinyint** data type and a negative number for all other data types.  
   
- [ MAXVALUE \<constant> | **NO MAXVALUE**  
- Specifies the bounds for the sequence object. The default maximum value for a new sequence object is the maximum value of the data type of the sequence object.  
+[ MAXVALUE \<constant> | **NO MAXVALUE**  
+Specifies the bounds for the sequence object. The default maximum value for a new sequence object is the maximum value of the data type of the sequence object.  
   
- [ CYCLE | **NO CYCLE** ]  
- Property that specifies whether the sequence object should restart from the minimum value (or maximum for descending sequence objects) or throw an exception when its minimum or maximum value is exceeded. The default cycle option for new sequence objects is NO CYCLE.  
+[ CYCLE | **NO CYCLE** ]  
+Property that specifies whether the sequence object should restart from the minimum value (or maximum for descending sequence objects) or throw an exception when its minimum or maximum value is exceeded. The default cycle option for new sequence objects is NO CYCLE.  
   
- Note that cycling restarts from the minimum or maximum value, not from the start value.  
+> [!NOTE]
+> Cycling a SEQUENCE restarts from the minimum or maximum value, not from the start value.  
   
- [ **CACHE** [\<constant> ] | NO CACHE ]  
- Increases performance for applications that use sequence objects by minimizing the number of disk IOs that are required to generate sequence numbers. Defaults to CACHE.  
+[ **CACHE** [\<constant> ] | NO CACHE ]  
+Increases performance for applications that use sequence objects by minimizing the number of disk IOs that are required to generate sequence numbers. Defaults to CACHE.  
   
- For example, if a cache size of 50 is chosen, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] does not keep 50 individual values cached. It only caches the current value and the number of values left in the cache. This means that the amount of memory required to store the cache is always two instances of the data type of the sequence object.  
+For example, if a cache size of 50 is chosen, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] does not keep 50 individual values cached. It only caches the current value and the number of values left in the cache. This means that the amount of memory required to store the cache is always two instances of the data type of the sequence object.  
   
 > [!NOTE]  
 > If the cache option is enabled without specifying a cache size, the Database Engine will select a size. However, users should not rely upon the selection being consistent. [!INCLUDE[msCoName](../../includes/msconame-md.md)] might change the method of calculating the cache size without notice.  
   
- When created with the **CACHE** option, an unexpected shutdown (such as a power failure) may result in the loss of sequence numbers remaining in the cache.  
+When created with the **CACHE** option, an unexpected shutdown (such as a power failure) may result in the loss of sequence numbers remaining in the cache.  
   
 ## General Remarks  
  Sequence numbers are generated outside the scope of the current transaction. They are consumed whether the transaction using the sequence number is committed or rolled back.  

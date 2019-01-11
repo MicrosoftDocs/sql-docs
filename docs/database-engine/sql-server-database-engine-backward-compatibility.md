@@ -22,7 +22,7 @@ manager: craigg
   Topics in the backward compatibility section describe changes in behavior between versions of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].
 
 > [!div class="nextstepaction"]
-> [Please share your feedback for the table of contents in SQL Docs!](https://forms.office.com/Pages/ResponsePage.aspx?id=v4j5cvGGr0GRqy180BHbR7y_maOEfTBMj0E3nehXKj9UQ1BTTVRQN0tZOVlFTFBGMlpWNEVOQjJHRS4u)  
+> [Please share your feedback about the SQL Docs Table of Contents!](https://aka.ms/sqldocsurvey)  
   
 |Topic|Description|  
 |-----------|-----------------|  

@@ -23,7 +23,7 @@ manager: craigg
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
 > [!div class="nextstepaction"]
-> [Please share your feedback for the table of contents in SQL Docs!](https://forms.office.com/Pages/ResponsePage.aspx?id=v4j5cvGGr0GRqy180BHbR7y_maOEfTBMj0E3nehXKj9UQ1BTTVRQN0tZOVlFTFBGMlpWNEVOQjJHRS4u)
+> [Please share your feedback about the SQL Docs Table of Contents!](https://aka.ms/sqldocsurvey)
 
 
 Returns a value formatted with the specified format and optional culture in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Use the FORMAT function for locale-aware formatting of date/time and number values as strings. For general data type conversions, use CAST or CONVERT.  

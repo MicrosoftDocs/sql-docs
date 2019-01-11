@@ -17,7 +17,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 > [!div class="nextstepaction"]
-> [Please share your feedback for the table of contents in SQL Docs!](https://forms.office.com/Pages/ResponsePage.aspx?id=v4j5cvGGr0GRqy180BHbR7y_maOEfTBMj0E3nehXKj9UQ1BTTVRQN0tZOVlFTFBGMlpWNEVOQjJHRS4u)
+> [Please share your feedback about the SQL Docs Table of Contents!](https://aka.ms/sqldocsurvey)
 
 This section contains the features and tasks associated with Microsoft SQL relational databases, database objects, data types, and the mechanisms used to work with or manage data. This information is common to most versions of the [!INCLUDE[ssdenoversion_md](../includes/ssdenoversion_md.md)]. Individual topics may indicate that some features are limited to some platforms. For information on a specific platform, see the following links: 
   

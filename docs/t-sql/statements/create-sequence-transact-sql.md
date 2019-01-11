@@ -93,7 +93,7 @@ CREATE SEQUENCE [schema_name . ] sequence_name
  For example, if a cache size of 50 is chosen, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] does not keep 50 individual values cached. It only caches the current value and the number of values left in the cache. This means that the amount of memory required to store the cache is always two instances of the data type of the sequence object.  
   
 > [!NOTE]  
->  If the cache option is enabled without specifying a cache size, the Database Engine will select a size. However, users should not rely upon the selection being consistent. [!INCLUDE[msCoName](../../includes/msconame-md.md)] might change the method of calculating the cache size without notice.  
+> If the cache option is enabled without specifying a cache size, the Database Engine will select a size. However, users should not rely upon the selection being consistent. [!INCLUDE[msCoName](../../includes/msconame-md.md)] might change the method of calculating the cache size without notice.  
   
  When created with the **CACHE** option, an unexpected shutdown (such as a power failure) may result in the loss of sequence numbers remaining in the cache.  
   
@@ -161,7 +161,7 @@ CREATE SEQUENCE [schema_name . ] sequence_name
   
  The following example grants the user AdventureWorks\Larry permission to create sequences in the Test schema.  
   
-```  
+```sql  
 GRANT CREATE SEQUENCE ON SCHEMA::Test TO [AdventureWorks\Larry]  
 ```  
   
@@ -179,7 +179,7 @@ GRANT CREATE SEQUENCE ON SCHEMA::Test TO [AdventureWorks\Larry]
   
  To create the Test schema, execute the following statement.  
   
-```  
+```sql  
 CREATE SCHEMA Test ;  
 GO  
 ```  
@@ -187,7 +187,7 @@ GO
 ### A. Creating a sequence that increases by 1  
  In the following example, Thierry creates a sequence named CountBy1 that increases by one every time that it is used.  
   
-```  
+```sql  
 CREATE SEQUENCE Test.CountBy1  
     START WITH 1  
     INCREMENT BY 1 ;  
@@ -197,7 +197,7 @@ GO
 ### B. Creating a sequence that decreases by 1  
  The following example starts at 0 and counts into negative numbers by one every time it is used.  
   
-```  
+```sql  
 CREATE SEQUENCE Test.CountByNeg1  
     START WITH 0  
     INCREMENT BY -1 ;  
@@ -207,7 +207,7 @@ GO
 ### C. Creating a sequence that increases by 5  
  The following example creates a sequence that increases by 5 every time it is used.  
   
-```  
+```sql  
 CREATE SEQUENCE Test.CountBy1  
     START WITH 5  
     INCREMENT BY 5 ;  
@@ -217,7 +217,7 @@ GO
 ### D. Creating a sequence that starts with a designated number  
  After importing a table, Thierry notices that the highest ID number used is 24,328. Thierry needs a sequence that will generate numbers starting at 24,329. The following code creates a sequence that starts with 24,329 and increments by 1.  
   
-```  
+```sql  
 CREATE SEQUENCE Test.ID_Seq  
     START WITH 24329  
     INCREMENT BY 1 ;  
@@ -227,13 +227,13 @@ GO
 ### E. Creating a sequence using default values  
  The following example creates a sequence using the default values.  
   
-```  
+```sql  
 CREATE SEQUENCE Test.TestSequence ;  
 ```  
   
  Execute the following statement to view the properties of the sequence.  
   
-```  
+```sql  
 SELECT * FROM sys.sequences WHERE name = 'TestSequence' ;  
 ```  
   
@@ -252,15 +252,15 @@ SELECT * FROM sys.sequences WHERE name = 'TestSequence' ;
 ### F. Creating a sequence with a specific data type  
  The following example creates a sequence using the **smallint** data type, with a range from -32,768 to 32,767.  
   
-```  
-CREATE SEQUENCE SmallSeq  
+```sql  
+CREATE SEQUENCE SmallSeq 
     AS smallint ;  
 ```  
   
 ### G. Creating a sequence using all arguments  
  The following example creates a sequence named DecSeq using the **decimal** data type, having a range from 0 to 255. The sequence starts with 125 and increments by 25 every time that a number is generated. Because the sequence is configured to cycle when the value exceeds the maximum value of 200, the sequence restarts at the minimum value of 100.  
   
-```  
+```sql  
 CREATE SEQUENCE Test.DecSeq  
     AS decimal(3,0)   
     START WITH 125  
@@ -274,7 +274,7 @@ CREATE SEQUENCE Test.DecSeq
   
  Execute the following statement to see the first value; the `START WITH` option of 125.  
   
-```  
+```sql  
 SELECT NEXT VALUE FOR Test.DecSeq;  
 ```  
   
@@ -284,7 +284,7 @@ SELECT NEXT VALUE FOR Test.DecSeq;
   
  Execute the following code to confirm the cache size and see the current value.  
   
-```  
+```sql  
 SELECT cache_size, current_value   
 FROM sys.sequences  
 WHERE name = 'DecSeq' ;  

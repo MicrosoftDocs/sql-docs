@@ -1,6 +1,6 @@
 ---
 title: "Data Mining (SSAS) | Microsoft Docs"
-ms.date: 05/01/2018
+ms.date: 01/09/2019
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: data-mining
@@ -12,6 +12,10 @@ manager: kfile
 ---
 # Data Mining (SSAS)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+
+> [!IMPORTANT]
+> Data mining is deprecated in SQL Server Analysis Services 2017. Documentation is not updated for deprecated features. To learn more, see [Analysis Services backward compatibility (SQL 2017)](../analysis-services-backward-compatibility-sql2017.md).
+
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] has been a leader in predictive analytics since the 2000 release, by providing data mining in [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. The combination of [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], and [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Data Mining provides an integrated platform for predictive analytics that encompasses data cleansing and preparation, machine learning, and reporting. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Data Mining includes multiple standard algorithms, including EM and K-means clustering models, neural networks, logistic regression and linear regression, decision trees, and naive bayes classifiers. All models have integrated visualizations to help you develop, refine, and evaluate your models.  Integrating data mining into business intelligence solution helps you make intelligent decisions about complex problems.  
   
 ## Benefits of Data Mining  

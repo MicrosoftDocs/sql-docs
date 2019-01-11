@@ -8,6 +8,7 @@ manager: craigg
 ms.date: 12/10/2018
 ms.topic: conceptual
 ms.prod: sql
+ms.technology: big-data-cluster
 ---
 
 # Connect to a SQL Server big data cluster with Azure Data Studio
@@ -24,7 +25,7 @@ This article describes how to connect to a SQL Server 2019 big data cluster (pre
 
 ## Connect to the cluster
 
-When you connect to a big data cluster, you have the option to connect to the SQL Server [master instance](concept-master-instance.md) or to the HDFS/Spark gateway. The following sections show how to connect to each.
+When you connect to a big data cluster, you have the option to connect to the SQL Server master instance or to the HDFS/Spark gateway. The following sections show how to connect to each.
 
 ## <a id="master"></a> Master instance
 
@@ -74,6 +75,9 @@ The **HDFS/Spark gateway** enables you to connect in order to work with the HDFS
 1. In Azure Data Studio, press **F1** > **New Connection**.
 
 1. In **Connection type**, select **SQL Server big data cluster**.
+
+   > [!TIP]
+   > If you do not see the **SQL Server big data cluster** connection type, make sure you have installed the [SQL Server 2019 extension](../azure-data-studio/sql-server-2019-extension.md) and that you restarted Azure Data Studio after the extension completed installing.
 
 1. Type the IP address of the big data cluster in **Server name** (do not specify a port).
 

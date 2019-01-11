@@ -47,14 +47,11 @@ The Performance dashboard is divided into the following sections and sub-reports
   -  Databases
   -  Missing Indexes
 
-> [!NOTE]
-> Internally, the Performance Dashboard uses [Execution](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md]) related Dynamic Management Views (DMVs) and Functions (DMFs).    
-
 ## To view the Performance Dashboard 
   
 To view the Performance Dashboard, by right-click on the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance name in Object Explorer, select **Reports**, **Standard Reports**, and click on **Performance Dashboard**.  
   
-![Live Query Stats button on toolbar](../../relational-databases/performance/media/perf_dashboard_ssms.png "Performance Dashboard in menu")  
+![Performance Dashboard in menu](../../relational-databases/performance/media/perf_dashboard_ssms.png "Performance Dashboard in menu")  
   
 The Performance Dashboard will appear as a new tab. Below is an example where a CPU bottleneck is clearly present:  
   

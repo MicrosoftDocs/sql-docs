@@ -1,7 +1,7 @@
 ---
 title: "Step 1: Copying the Lesson 5 Package | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/01/2017"
+ms.date: "01/11/2019"
 ms.prod: sql
 ms.prod_service: "integration-services"
 ms.reviewer: ""
@@ -13,7 +13,7 @@ ms.author: "douglasl"
 manager: craigg
 ---
 # Lesson 6-1 - Copying the Lesson 5 Package
-In this task, you will create a copy of the Lesson 5.dtsx package that you created in Lesson 5. Alternatively, you can add the completed lesson 5 package that is included with the tutorial to the project, and then copy it instead. You will use this new copy throughout the rest of Lesson 6.  
+In this task, you create a copy of the Lesson 5.dtsx package that you created in Lesson 5. Alternatively, you can add the completed lesson 5 package that is included with the tutorial to the project, and then copy it instead. You use this new copy throughout the rest of Lesson 6.  
   
 ### To copy the Lesson 5 package  
   
@@ -57,6 +57,6 @@ In this task, you will create a copy of the Lesson 5.dtsx package that you creat
   
     After copying the Lesson 5 package, if you currently have the packages from the previous lessons in your solution, right-click each package from lessons 1-5 and click Exclude From Project. When done you should have only Lesson 6.dtsx in your solution.  
   
-## Next Task in Lesson  
-[Step 2: Converting the Project to the Project Deployment Model](../integration-services/lesson-6-2-converting-the-project-to-the-project-deployment-model.md)  
+## Go to next task
+[Step 2: Convert the project to the Project Deployment Model](../integration-services/lesson-6-2-converting-the-project-to-the-project-deployment-model.md)  
   

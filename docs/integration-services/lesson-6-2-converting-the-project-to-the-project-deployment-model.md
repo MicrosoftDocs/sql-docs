@@ -1,7 +1,7 @@
 ---
 title: "Step 2: Converting the Project to the Project Deployment Model | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/01/2017"
+ms.date: "01/11/2019"
 ms.prod: sql
 ms.prod_service: "integration-services"
 ms.reviewer: ""
@@ -13,7 +13,7 @@ ms.author: "douglasl"
 manager: craigg
 ---
 # Lesson 6-2 - Converting the Project to the Project Deployment Model
-In this task, you will use the Integration Services Project Conversion Wizard to convert the project to the Project Deployment Model.  
+In this task, you use the Integration Services Project Conversion Wizard to convert the project to the Project Deployment Model.  
   
 ### Converting the Project to the Project Deployment Model  
   
@@ -45,8 +45,8 @@ In this task, you will use the Integration Services Project Conversion Wizard to
   
 13. Click the Parameters Tab and verify that the package now contains a parameter for VarFolderName and that the value is the same path specified for the New Sample Data folder from the Lesson 5 configuration file.  
   
-## Next Task in Lesson  
-[Step 3: Testing the Lesson 6 Package](../integration-services/lesson-6-3-testing-the-lesson-6-package.md)  
+## Go to next task
+[Step 3: Test the Lesson 6 package](../integration-services/lesson-6-3-testing-the-lesson-6-package.md)  
   
   
   

@@ -1,7 +1,7 @@
 ---
 title: "Step 4: Deploying the Lesson 6 Package | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/01/2017"
+ms.date: "01/11/2019"
 ms.prod: sql
 ms.prod_service: "integration-services"
 ms.reviewer: ""
@@ -13,9 +13,9 @@ ms.author: "douglasl"
 manager: craigg
 ---
 # Lesson 6-4 - Deploying the Lesson 6 Package
-Deploying the package involves adding the package to the SSISDB catalog in Integration Services on an instance of SQL Server. In this lesson you will add the Lesson 6 package to the SSISDB catalog, set the parameter, and execute the package. For this lesson you will use SQL Server Management Studio to add the Lesson 6 package to the SSISDB catalog, and deploy the package. After deploying the package you will modify the parameter to point to a new location then execute the package.  
+Deploying the package involves adding the package to the SSISDB catalog in Integration Services on an instance of SQL Server. In this lesson you add the Lesson 6 package to the SSISDB catalog, set the parameter, and execute the package. For this lesson you use SQL Server Management Studio to add the Lesson 6 package to the SSISDB catalog, and deploy the package. After deploying the package you modify the parameter to point to a new location then execute the package.  
   
-In this lesson you will:  
+In this lesson you:  
   
 -   Add the package to the SSISDB catalog in the SSIS node in SQL Server.  
   
@@ -69,7 +69,7 @@ In this lesson you will:
   
 12. When the conversion completes, click Close.  
   
-When you close the Integration Services Project Conversion Wizard, SSIS displays the Integration Services Deployment Wizard. You will use this wizard now to deploy the Lesson 6 package.  
+When you close the Integration Services Project Conversion Wizard, SSIS displays the Integration Services Deployment Wizard. You use this wizard now to deploy the Lesson 6 package.  
   
 1.  On the Integration Services Deployment Wizard Introduction page, review the steps for deploying the project, then click Next.  
   
@@ -112,6 +112,4 @@ Before continuing create a new sample data folder, name it Sample Data Two, and 
 3.  On the message dialog box click Yes to open Overview Report.  
   
 The Overview report for the package is displayed showing the name of the package and a status summary. The Execution Overview section shows the result from each task in the package and the Parameters Used section shows the names and values of all parameters used in the package execution, including VarFolderName.  
-  
-  
   

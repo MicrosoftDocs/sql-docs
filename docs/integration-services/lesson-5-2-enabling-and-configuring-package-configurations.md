@@ -41,7 +41,7 @@ In this task, you convert the project to the Package Deployment Model and enable
   
 10. In the **Expression** box, select the ellipsis button **(...)**.  
   
-11. In the **Expression Builder**, expand the **Variables** folder, and drag the variable **User::varFolderName** to the **Expression** box.  
+11. In the **Expression Builder**, expand the **Variables and Parameters** folder, and drag the variable **User::varFolderName** to the **Expression** box.  
   
 12. Select **OK** to exit the **Expression Builder**.  
   

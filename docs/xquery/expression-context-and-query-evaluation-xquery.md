@@ -79,7 +79,7 @@ manager: craigg
     ```  
     -- DROP XML SCHEMA COLLECTION SC  
     -- go  
-    CREATE XML SCHEMA COLLECTION SC AS '<schema xmlns="https://www.w3.org/2001/XMLSchema"   
+    CREATE XML SCHEMA COLLECTION SC AS '<schema xmlns="http://www.w3.org/2001/XMLSchema"   
     targetNamespace="myNS" xmlns:ns="myNS"  
     xmlns:s="https://schemas.microsoft.com/sqlserver/2004/sqltypes">  
           <import namespace="https://schemas.microsoft.com/sqlserver/2004/sqltypes"/>  
@@ -127,7 +127,7 @@ manager: craigg
     ```  
     DROP XML SCHEMA COLLECTION SC  
     go  
-    CREATE XML SCHEMA COLLECTION SC AS '<schema xmlns="https://www.w3.org/2001/XMLSchema"   
+    CREATE XML SCHEMA COLLECTION SC AS '<schema xmlns="http://www.w3.org/2001/XMLSchema"   
     targetNamespace="myNS" xmlns:ns="myNS"  
     xmlns:s="https://schemas.microsoft.com/sqlserver/2004/sqltypes">  
           <import namespace="https://schemas.microsoft.com/sqlserver/2004/sqltypes"/>  

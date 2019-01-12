@@ -42,7 +42,7 @@ fn:expanded-QName($paramURI as xs:string?, $paramLocal as xs:string?) as xs:QNam
   
 -   Conversion from xs:QName type to any other type is not supported in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Because of this, the **expanded-QName()** function cannot be used in XML construction. For example, when you are constructing a node, such as `<e> expanded-QName(...) </e>`, the value has to be untyped. This would require that you convert the xs:QName type value returned by `expanded-QName()` to xdt:untypedAtomic. However, this is not supported. A solution is provided in an example later in this topic.  
   
--   You can modify or compare the existing QName type values. For example, `/root[1]/e[1] eq expanded-QName("https://nsURI" "myNS")` compares the value of the element, <`e`>, with the QName returned by the **expanded-QName()** function.  
+-   You can modify or compare the existing QName type values. For example, `/root[1]/e[1] eq expanded-QName("http://nsURI" "myNS")` compares the value of the element, <`e`>, with the QName returned by the **expanded-QName()** function.  
   
 ## Examples  
  This topic provides XQuery examples against XML instances that are stored in various **xml** type columns in the [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] database.  
@@ -64,8 +64,8 @@ fn:expanded-QName($paramURI as xs:string?, $paramLocal as xs:string?) as xs:QNam
 -- go  
 -- Create XML schema collection  
 CREATE XML SCHEMA COLLECTION SC AS N'  
-<schema xmlns="https://www.w3.org/2001/XMLSchema"  
-    xmlns:xs="https://www.w3.org/2001/XMLSchema"   
+<schema xmlns="http://www.w3.org/2001/XMLSchema"  
+    xmlns:xs="http://www.w3.org/2001/XMLSchema"   
     targetNamespace="QNameXSD"   
       xmlns:xqo="QNameXSD" elementFormDefault="qualified">  
       <element name="Root" type="xqo:rootType" />  
@@ -137,7 +137,7 @@ go
 -- DROP XML SCHEMA COLLECTION SC  
 -- go  
 CREATE XML SCHEMA COLLECTION SC AS '  
-<schema xmlns="https://www.w3.org/2001/XMLSchema">  
+<schema xmlns="http://www.w3.org/2001/XMLSchema">  
       <element name="root" type="QName" nillable="true"/>  
 </schema>'  
 go  
@@ -156,7 +156,7 @@ FROM T
   
 ```  
 update T SET xmlCol.modify('  
-insert <root>{expanded-QName("https://ns","someLocalName")}</root> as last into / ')  
+insert <root>{expanded-QName("http://ns","someLocalName")}</root> as last into / ')  
 go  
 ```  
   
@@ -168,7 +168,7 @@ insert <root xsi:nil="true"/> as last into / ')
 go  
 -- now replace the nil value with another QName.  
 update T SET xmlCol.modify('  
-replace value of /root[last()] with expanded-QName("https://ns","someLocalName") ')  
+replace value of /root[last()] with expanded-QName("http://ns","someLocalName") ')  
 go  
  -- verify   
 SELECT * FROM T  
@@ -179,7 +179,7 @@ go
   
  `<root xmlns:a="https://someURI">a:b</root>`  
   
- `<root xmlns:xsi="https://www.w3.org/2001/XMLSchema-instance" xmlns:p1="https://ns">p1:someLocalName</root>`  
+ `<root xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:p1="http://ns">p1:someLocalName</root>`  
   
  You can compare the QName value, as shown in the following query. The query returns only the <`root`> elements whose values match the QName type value returned by the **expanded-QName()** function.  
   
@@ -187,7 +187,7 @@ go
 SELECT xmlCol.query('  
     for $i in /root  
     return  
-       if ($i eq expanded-QName("https://ns","someLocalName") ) then  
+       if ($i eq expanded-QName("http://ns","someLocalName") ) then  
           $i  
        else  
           ()')  

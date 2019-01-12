@@ -55,7 +55,7 @@ manager: craigg
 ###  <a name="SummaryTsqlStatements"></a> Summary of Tasks and Corresponding Transact-SQL Statements  
  The following table lists the basic tasks involved in creating and configuring an availability group and indicates which [!INCLUDE[tsql](../../../includes/tsql-md.md)] statements to use for these tasks. The [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] tasks must be performed in the sequence in which they are presented in the table.  
   
-|Task|Transact-SQL Statement(s)|Where to Perform Task**\***|  
+|Task|Transact-SQL Statement(s)|Where to Perform Task**&#42;**|  
 |----------|----------------------------------|---------------------------------|  
 |Create database mirroring endpoint (once per [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] instance)|[CREATE ENDPOINT](../../../t-sql/statements/create-endpoint-transact-sql.md) *endpointName* ... FOR DATABASE_MIRRORING|Execute on each server instance that lacks database mirroring endpoint.|  
 |Create availability group|[CREATE AVAILABILITY GROUP](../../../t-sql/statements/create-availability-group-transact-sql.md)|Execute on the server instance that is to host the initial primary replica.|  

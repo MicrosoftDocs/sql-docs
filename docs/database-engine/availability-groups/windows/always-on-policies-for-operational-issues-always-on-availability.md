@@ -43,7 +43,7 @@ manager: craigg
 ##  <a name="Always OnPBM"></a> Predefined Policies and Issues  
  The following table summarizes the predefined policies.  
   
-|Policy name|Issue|Category**\***|Facet|  
+|Policy name|Issue|Category**&#42;**|Facet|  
 |-----------------|-----------|--------------------|-----------|  
 |WSFC Cluster State|[WSFC cluster service is offline](../../../database-engine/availability-groups/windows/wsfc-cluster-service-is-offline.md).|Critical|Instance of SQL Server|  
 |Availability Group Online State|[Availability group is offline](../../../database-engine/availability-groups/windows/availability-group-is-offline.md).|Critical|Availability group|  
@@ -61,7 +61,7 @@ manager: craigg
 |Availability Database Data Synchronization State|[Data synchronization state of availability database is not healthy](../../../database-engine/availability-groups/windows/data-synchronization-state-of-availability-database-is-not-healthy.md).|Warning|Availability database|  
   
 > [!IMPORTANT]
->  **\*** For Always On policies, the category names are used as IDs. Changing the name of an Always On category would break its health-evaluation functionality. Therefore, do not modify the names of Always On categories.  
+>  **&#42;** For Always On policies, the category names are used as IDs. Changing the name of an Always On category would break its health-evaluation functionality. Therefore, do not modify the names of Always On categories.  
   
 ##  <a name="Dashboard"></a> Always On Dashboard  
  The Always On Dashboard gives you an at-a-glance view of the health of an availability group. The Always On Dashboard includes the following features:  

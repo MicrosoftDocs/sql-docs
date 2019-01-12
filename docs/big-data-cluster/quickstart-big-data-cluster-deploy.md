@@ -8,6 +8,7 @@ manager: craigg
 ms.date: 12/17/2018
 ms.topic: quickstart
 ms.prod: sql
+ms.technology: big-data-cluster
 ms.custom: seodec18
 ---
 # Quickstart: Deploy SQL Server big data cluster on Azure Kubernetes Service (AKS)

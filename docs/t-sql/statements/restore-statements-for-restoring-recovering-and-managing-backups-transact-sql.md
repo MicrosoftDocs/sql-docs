@@ -19,8 +19,8 @@ helpviewer_keywords:
   - "file restores [SQL Server], RESTORE statement"
   - "transaction log backups [SQL Server], RESTORE statement"
 ms.assetid: fb29a151-f312-4f85-b857-5deeca0de8ce
-author: CarlRabeler
-ms.author: carlrab
+author: mashamsft
+ms.author: mathoma
 manager: craigg
 monikerRange: "=azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017"
 ---

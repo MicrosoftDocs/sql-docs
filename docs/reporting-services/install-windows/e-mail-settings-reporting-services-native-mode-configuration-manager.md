@@ -178,7 +178,7 @@ The connection between the report server and a local SMTP server or forwarder is
 
 3. Select the server to install Internet Information Server (IIS) onto and select **Next**.
 
-4. Select **Next** on the *Server Roles** page.
+4. Select **Next** on the *Server Roles* page.
      
 5. On the *Features* page, select **SMTP Server** and then select **Next**.
 

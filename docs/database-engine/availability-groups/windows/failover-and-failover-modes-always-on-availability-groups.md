@@ -78,9 +78,9 @@ manager: craigg
 |-|-------------------------------|---------------------------------------------------------|------------------------------------------------------------|  
 |Automatic failover|No|No|Yes|  
 |Planned manual failover|No|Yes|Yes|  
-|Forced failover|Yes|Yes|Yes**\***|  
+|Forced failover|Yes|Yes|Yes**&#42;**|  
   
- **\***If you issue a forced failover command on a synchronized secondary replica, the secondary replica behaves the same as for a manual failover.  
+ **&#42;**If you issue a forced failover command on a synchronized secondary replica, the secondary replica behaves the same as for a manual failover.  
   
  The amount of time that the database is unavailable during a failover depends on the type of failover and its cause.  
   

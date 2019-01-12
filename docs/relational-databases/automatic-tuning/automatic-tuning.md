@@ -117,24 +117,21 @@ Use the following query to obtain a script that fixes the issue and additional i
 SELECT reason, score,
       script = JSON_VALUE(details, '$.implementationDetails.script'),
       planForceDetails.*,
-      estimated_gain = (regressedPlanExecutionCount+recommendedPlanExecutionCount)
-                  *(regressedPlanCpuTimeAverage-recommendedPlanCpuTimeAverage)/1000000,
-      error_prone = IIF(regressedPlanErrorCount>recommendedPlanErrorCount, 'YES','NO')
+      estimated_gain = (regressedPlanExecutionCount + recommendedPlanExecutionCount)
+                  * (regressedPlanCpuTimeAverage - recommendedPlanCpuTimeAverage)/1000000,
+      error_prone = IIF(regressedPlanErrorCount > recommendedPlanErrorCount, 'YES','NO')
 FROM sys.dm_db_tuning_recommendations
-  CROSS APPLY OPENJSON (Details, '$.planForceDetails')
+CROSS APPLY OPENJSON (Details, '$.planForceDetails')
     WITH (  [query_id] int '$.queryId',
-            [current plan_id] int '$.regressedPlanId',
-            [recommended plan_id] int '$.recommendedPlanId',
-
+            regressedPlanId int '$.regressedPlanId',
+            recommendedPlanId int '$.recommendedPlanId',
             regressedPlanErrorCount int,
             recommendedPlanErrorCount int,
-
             regressedPlanExecutionCount int,
             regressedPlanCpuTimeAverage float,
             recommendedPlanExecutionCount int,
             recommendedPlanCpuTimeAverage float
-
-          ) as planForceDetails;
+          ) AS planForceDetails;
 ```
 
 [!INCLUDE[ssresult-md](../../includes/ssresult-md.md)]     
@@ -180,7 +177,7 @@ Actions required to create necessary indexes in [!INCLUDE[ssazure_md](../../incl
 
 ### Alternative - manual index management
 
-Without automatic index management, user would need to manually query [sys.dm_db_missing_index_details &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-missing-index-details-transact-sql.md) view to find indexes that might improve performance, create indexes using the details provided in this view, and manually monitor performance of the query. In order to find the indexes that should be dropped, users should monitor operational usage statistics of the indexes to find rarely used indexes.
+Without automatic index management, user would need to manually query [sys.dm_db_missing_index_details &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-missing-index-details-transact-sql.md) view or use the Performance Dashboard report in [!INCLUDE[ssManStudio](../../includes/ssManStudio-md.md)] to find indexes that might improve performance, create indexes using the details provided in this view, and manually monitor performance of the query. In order to find the indexes that should be dropped, users should monitor operational usage statistics of the indexes to find rarely used indexes.
 
 [!INCLUDE[ssazure_md](../../includes/ssazure_md.md)] simplifies this process. [!INCLUDE[ssazure_md](../../includes/ssazure_md.md)] analyzes your workload, identifies the queries that could be executed faster with a new index, and identifies unused or duplicated indexes. Find more information about identification of indexes that should be changed at [Find index recommendations in Azure portal](https://docs.microsoft.com/azure/sql-database/sql-database-advisor-portal).
 

@@ -8,6 +8,7 @@ manager: craigg
 ms.date: 12/10/2018
 ms.topic: conceptual
 ms.prod: sql
+ms.technology: big-data-cluster
 ---
 
 # Connect to a SQL Server big data cluster with Azure Data Studio

@@ -71,7 +71,7 @@ manager: craigg
     > [!NOTE]  
     >  When an availability group is removed that has published member databases, or a published database is removed from an availability group, all copies of the published databases will be left in the recovering state. If restored, each will appear as a published database. Only one copy should be retained with publication metadata. To disable replication for a published database copy, first remove all subscriptions and publications from the database.  
   
-     Run **sp_dropsubscription** to remove publication subscriptions. Make sure to set the parameter *@ignore_distributributor* to 1 to preserve the metadata for the active publishing database at the distributor.  
+     Run **sp_dropsubscription** to remove publication subscriptions. Make sure to set the parameter *@ignore_distributor* to 1 to preserve the metadata for the active publishing database at the distributor.  
   
     ```  
     USE MyDBName;  

@@ -82,7 +82,7 @@ manager: craigg
   
 -   Appendix H: Analysis of the Unique Particle Attribution Constraint (non-normative)  
   
- To see the document, visit [https://www.w3.org/TR/xmlschema-1](https://go.microsoft.com/fwlink/?linkid=48881).  
+ To see the document, visit [http://www.w3.org/TR/xmlschema-1](https://go.microsoft.com/fwlink/?linkid=48881).  
   
 ## See Also  
  [XML Schema Collections &#40;SQL Server&#41;](../../relational-databases/xml/xml-schema-collections-sql-server.md)  

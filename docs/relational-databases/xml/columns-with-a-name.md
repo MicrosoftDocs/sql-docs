@@ -151,7 +151,7 @@ FOR XML PATH, ELEMENTS XSINIL
  This is the result:  
   
 ```  
-<row xmlns:xsi="https://www.w3.org/2001/XMLSchema-instance"   
+<row xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"   
       EmpID="1">  
   <EmpName>  
     <First>Gustavo</First>  

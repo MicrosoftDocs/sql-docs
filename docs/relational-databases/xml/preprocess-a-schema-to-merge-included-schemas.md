@@ -189,7 +189,7 @@ public class XmlSchemaIncludeNormalizer
 ### books_common.xsd  
   
 ```  
-<xsd:schema xmlns:xsd="https://www.w3.org/2001/XMLSchema"  
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
      xmlns="bookstore-schema"  
      elementFormDefault="qualified" >  
   <xsd:element name="publisher" type="xsd:string"/>  
@@ -199,7 +199,7 @@ public class XmlSchemaIncludeNormalizer
 ### books.xsd  
   
 ```  
-<xsd:schema xmlns:xsd="https://www.w3.org/2001/XMLSchema"  
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
      xmlns="bookstore-schema"  
      elementFormDefault="qualified"  
      targetNamespace="bookstore-schema">  

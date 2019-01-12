@@ -29,7 +29,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
  For example, consider this XSD schema:  
   
 ```  
-<xsd:schema xmlns:xsd="https://www.w3.org/2001/XMLSchema"  
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
             xmlns:sql="urn:schemas-microsoft-com:mapping-schema">  
 <xsd:element name="ROOT" sql:is-constant="1">  
 <xsd:complexType>  

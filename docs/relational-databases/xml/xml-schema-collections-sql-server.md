@@ -65,7 +65,7 @@ manager: craigg
   
 ```  
 <?xml version="1.0"?>  
-<xsd:schema xmlns:xsd="https://www.w3.org/2001/XMLSchema"  
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
             targetNamespace="uri:Cust_Orders2"  
             xmlns="uri:Cust_Orders2" >  
   <xsd:attribute name="SomeAttribute" type="xsd:int" />  

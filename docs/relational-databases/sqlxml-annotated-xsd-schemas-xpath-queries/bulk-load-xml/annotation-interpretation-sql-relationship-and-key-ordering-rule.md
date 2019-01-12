@@ -24,7 +24,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
  Consider the following XSD schema, in which the one-to-many relationship between **\<Customer>** and **\<Order>** elements (one customer can place many orders) is specified by using the **\<sql:relationship>** element:  
   
 ```  
-<xsd:schema xmlns:xsd="https://www.w3.org/2001/XMLSchema"<>   
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"<>   
             xmlns:sql="urn:schemas-microsoft-com:mapping-schema">  
 <xsd:annotation>  
   <xsd:appinfo>  

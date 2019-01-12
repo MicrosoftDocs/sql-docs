@@ -122,7 +122,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
 3.  Copy the following XSD schema and paste it into Notepad. Save it as ConcurrencySampleSchema.xml:  
   
     ```  
-    <xsd:schema xmlns:xsd="https://www.w3.org/2001/XMLSchema"  
+    <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
                 xmlns:sql="urn:schemas-microsoft-com:mapping-schema">  
       <xsd:element name="Customer" sql:relation="Customer" >  
        <xsd:complexType>  

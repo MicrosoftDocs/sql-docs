@@ -32,7 +32,7 @@ FOR XML PATH, ELEMENTS XSINIL
  The following shows the result. Note that if XSINIL is not specified, the <`Middle`> element will be absent.  
   
 ```  
-<row xmlns:xsi="https://www.w3.org/2001/XMLSchema-instance" EmpID="1">  
+<row xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" EmpID="1">  
   <EmpName>  
     <First>Gustavo</First>  
     <Middle xsi:nil="true" />  

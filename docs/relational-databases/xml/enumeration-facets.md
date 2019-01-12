@@ -23,7 +23,7 @@ manager: craigg
   
 ```  
 CREATE XML SCHEMA COLLECTION MySampleCollection AS '  
-<schema xmlns="https://www.w3.org/2001/XMLSchema" targetNamespace="https://ns" xmlns:ns="https://ns">  
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://ns" xmlns:ns="http://ns">  
     <simpleType name="MyST">  
        <restriction base="string">  
           <pattern value="[a-z]*"/>  

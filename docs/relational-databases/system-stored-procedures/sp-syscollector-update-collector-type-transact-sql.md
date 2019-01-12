@@ -70,7 +70,7 @@ EXEC sp_syscollector_update_collector_type
 @collector_type_uid = '302E93D1-3424-4BE7-AA8E-84813ECF2419',  
 @name = 'Generic T-SQL Query Collector Type',  
 @parameter_schema = '<?xml version="1.0" encoding="utf-8"?>  
-<xs:schema xmlns:xs="https://www.w3.org/2001/XMLSchema" targetNamespace="DataCollectorType">  
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="DataCollectorType">  
   <xs:element name="TSQLQueryCollector">  
 <xs:complexType>  
   <xs:sequence>  

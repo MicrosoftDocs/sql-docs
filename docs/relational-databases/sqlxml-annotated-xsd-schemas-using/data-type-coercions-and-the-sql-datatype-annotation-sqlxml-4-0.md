@@ -98,7 +98,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
  This example shows how an XSD **date** type that is specified by using the **xsd:type** attribute in the schema affects the resulting XML document. The schema provides an XML view of the Sales.SalesOrderHeader table in the AdventureWorks database.  
   
 ```  
-<xsd:schema xmlns:xsd="https://www.w3.org/2001/XMLSchema"   
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"   
             xmlns:sql="urn:schemas-microsoft-com:mapping-schema">  
   <xsd:element name="Order" sql:relation="Sales.SalesOrderHeader">  
      <xsd:complexType>  

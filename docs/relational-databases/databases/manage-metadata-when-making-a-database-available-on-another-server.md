@@ -106,7 +106,7 @@ manager: craigg
   
   
 ##  <a name="cross_database_queries"></a> Cross-Database Queries  
- The DB_CHAINING and TRUSTWORTHY database options are OFF by default. If either of these are set to ON for the original database, you may have to enable them on the database on the destination server instance. For more information, see [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md).  
+ The DB_CHAINING and TRUSTWORTHY database options are OFF by default. If either of these are set to ON for the original database, you may have to enable them on the database on the destination server instance. For more information, see [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md).  
   
  Attach-and-detach operations disable cross-database ownership chaining for the database. For information about how to enable chaining, see [cross db ownership chaining Server Configuration Option](../../database-engine/configure-windows/cross-db-ownership-chaining-server-configuration-option.md).  
   

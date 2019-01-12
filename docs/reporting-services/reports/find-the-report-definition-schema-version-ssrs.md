@@ -69,7 +69,7 @@ A report definition file specifies the RDL namespace for the version of the repo
     ```  
     <xsd:schema   
     targetNamespace="https://schemas.microsoft.com/sqlserver/reporting/2009/01/reportdefinition"   
-    xmlns:xsd="https://www.w3.org/2001/XMLSchema"   
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema"   
     xmlns="https://schemas.microsoft.com/sqlserver/reporting/2009/01/reportdefinition"   
     elementFormDefault="qualified">  
     ```  

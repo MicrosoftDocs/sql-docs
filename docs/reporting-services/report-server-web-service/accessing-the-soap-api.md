@@ -51,7 +51,7 @@ https://server/reportserver/ReportService2010.asmx?wsdl
 |*reportserver*|The name of the folder that contains the XML Web service. This is configured during setup.|  
 |*\<endpoint name>.asmx*|The name of the web service endpoint.|  
   
- For more information about the WSDL format, see the World Wide Web Consortium (W3C) WSDL specification at https://www.w3.org/TR/wsdl.  
+ For more information about the WSDL format, see the World Wide Web Consortium (W3C) WSDL specification at http://www.w3.org/TR/wsdl.  
   
 ## See Also  
  [Building Applications Using the Web Service and the .NET Framework](../../reporting-services/report-server-web-service/net-framework/building-applications-using-the-web-service-and-the-net-framework.md)   

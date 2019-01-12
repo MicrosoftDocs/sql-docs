@@ -24,7 +24,7 @@ XSLT can be applied to the generated XML to transform it into another format. Un
   
 ```  
 <?xml version="1.0" encoding="ISO-8859-1"?>  
-<html xmlns:xsl="https://www.w3.org/TR/WD-xsl">  
+<html xmlns:xsl="http://www.w3.org/TR/WD-xsl">  
 <body STYLE="font-family:Arial, helvetica, sans-serif; font-size:12pt; background-color:white">  
 <table border="1" style="table-layout:fixed" width="600">  
   <col width="200"></col>  

@@ -20,7 +20,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
 
 The **Intelligent query processing** feature family includes features with broad impact that improve the performance of existing workloads with minimal implementation effort.
 
-![Intelligent Query Processing Features](./media/3_IQPFeatureFamily.png)
+![Intelligent Query Processing Features](./media/3_IQPFeatureFamily2.png)
 
 ## Adaptive Query Processing
 

@@ -14,6 +14,9 @@ manager: craigg
 # AdventureWorks Installation and configuration
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
+  > [!div class="nextstepaction"]
+  > [Please share your feedback about the SQL Docs Table of Contents!](https://aka.ms/sqldocsurvey)
+
 AdventureWorks download links and installation instructions. 
 
 ## Prerequisites

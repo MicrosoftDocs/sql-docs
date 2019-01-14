@@ -91,13 +91,15 @@ The following table lists the valid values for `graph_type` column
 
 `sys.columns` also stores information about implicit columns created in node or edge tables. Following information can be retrieved from sys.columns, however, users cannot select these columns from a node or edge table. 
 
-Implicit columns in a node table  
+Implicit columns in a node table
+
 |Column Name	|Data Type	|is_hidden	|Comment  |
 |---  |---|---|---  |
 |graph_id_\<hex_string>	|BIGINT	|1	|internal `graph_id` column  |
 |$node_id_\<hex_string>	|NVARCHAR	|0	|External node `node_id` column  |
 
-Implicit columns in an edge table  
+Implicit columns in an edge table
+
 |Column Name	|Data Type	|is_hidden	|Comment  |
 |---  |---|---|---  |
 |graph_id_\<hex_string>	|BIGINT	|1	|internal `graph_id` column  |

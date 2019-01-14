@@ -32,11 +32,11 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   
     -   ADO, OLE DB, and ODBC applications should use the ODBC timestamp, date, and time escape clauses of:  
   
-         **{ ts'**yyyy**-**_mm_**-_**dd**hh_**:**_mm_**:**_ss_[**.**_fff_] **'}** such as: **{ ts'**1998**-**09**-**24 10**:**02**:**20**' }**  
+         **{ ts'** _yyyy_ **-** _mm_ **-** _dd_ _hh_ **:** _mm_ **:** _ss_ [**.**_fff_] **'}** such as: **{ ts'1998-09-24 10:02:20'}**  
   
-         **{ d'** *yyyy* **-** *mm* **-** *dd* **'}** such as: **{ d'**1998**-**09**-**24**'}**  
+         **{ d'** _yyyy_ **-** _mm_ **-** _dd_ **'}** such as: **{ d'1998-09-24'}**
   
-         **{ t'** *hh* **:** *mm* **:** *ss* **'}** such as: **{ t'**10:02:20**'}**  
+         **{ t'** _hh_ **:** _mm_ **:** _ss_ **'}** such as: **{ t'10:02:20'}**  
   
     -   Applications that use other APIs, or [!INCLUDE[tsql](../../includes/tsql-md.md)] scripts, stored procedures, and triggers, should use the unseparated numeric strings. For example, *yyyymmdd* as 19980924.  
   

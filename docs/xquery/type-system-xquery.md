@@ -30,9 +30,9 @@ manager: craigg
 
   XQuery is a strongly-typed language for schema types and a weakly-typed language for untyped data. The predefined types of XQuery include the following:  
   
--   Built-in types of XML schema in the **https://www.w3.org/2001/XMLSchema** namespace.  
+-   Built-in types of XML schema in the **http://www.w3.org/2001/XMLSchema** namespace.  
   
--   Types defined in the **https://www.w3.org/2004/07/xpath-datatypes** namespace.  
+-   Types defined in the **http://www.w3.org/2004/07/xpath-datatypes** namespace.  
   
  This topic also describes the following:  
   
@@ -59,7 +59,7 @@ WHERE ProductModelID=7
  This typing information is provided by the XML schema collection associated with the column.  
   
 ## Types Defined in XPath Data Types Namespace  
- The types defined in the **https://www.w3.org/2004/07/xpath-datatypes** namespace have a predefined prefix of **xdt**. The following applies to these types:  
+ The types defined in the **http://www.w3.org/2004/07/xpath-datatypes** namespace have a predefined prefix of **xdt**. The following applies to these types:  
   
 -   You cannot use these types when you are creating an XML schema collection. These types are used in the XQuery type system and are used for [XQuery and Static Typing](../xquery/xquery-and-static-typing.md). You can cast to the atomic types, for example, **xdt:untypedAtomic**, in the **xdt** namespace.  
   
@@ -104,7 +104,7 @@ SELECT @x.query( '/a[1] instance of element()')
   
 ```  
 CREATE XML SCHEMA COLLECTION SC AS N'  
-<schema xmlns="https://www.w3.org/2001/XMLSchema">  
+<schema xmlns="http://www.w3.org/2001/XMLSchema">  
       <element name="root" type="integer"/>  
 </schema>'  
 GO  

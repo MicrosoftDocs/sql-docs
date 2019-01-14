@@ -10,7 +10,6 @@ ms.date: 10/26/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ---
-
 # PolyBase configuration and security for Hadoop
 
 This article provides a reference for various configuration settings that affect APS PolyBase connectivity to Hadoop. For a walkthrough on what is PolyBase, see [What is PolyBase](configure-polybase-connectivity-to-external-data.md).
@@ -115,7 +114,7 @@ Note that we added the property mapreduce.application.classpath. In CDH 5.x, you
 <?xml version="1.0"?>
 <?xml-stylesheet type="text/xsl" href="configuration.xsl"?>
 <!-- Put site-specific property overrides in this file. -->
-<configuration xmlns:xi="https://www.w3.org/2001/XInclude">
+<configuration xmlns:xi="http://www.w3.org/2001/XInclude">
    <property>
      <name>mapred.min.split.size</name>
        <value>1073741824</value>

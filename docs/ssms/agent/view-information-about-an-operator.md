@@ -67,7 +67,7 @@ For details about the permissions of these roles, see [SQL Server Agent Fixed Da
   
 4.  Right-click the operator that you want to view and select **Properties**.  
   
-    For more information on the available options contained in the *operator_name***Properties** dialog box, see:  
+    For more information on the available options contained in the _operator_name_**Properties** dialog box, see:  
   
     -   [Operator Properties - New Operator &#40;General Page&#41;](../../ssms/agent/operator-properties-new-operator-general-page.md)  
   

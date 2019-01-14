@@ -78,7 +78,7 @@ DEFAULT <xml_namespace_uri>
   
 -   The XML namespace prefix `xmlns` cannot be declared.  
   
--   The XML namespace prefix `xml` cannot be overridden with a namespace, other than the namespaces URI `'https://www.w3.org/XML/1998/namespace'`, and this URI that cannot be assigned a different prefix.  
+-   The XML namespace prefix `xml` cannot be overridden with a namespace, other than the namespaces URI `'http://www.w3.org/XML/1998/namespace'`, and this URI that cannot be assigned a different prefix.  
   
 -   The XML namespace prefix `xsi` cannot be redeclared when the ELEMENTS XSINIL directive is being used on the query.  
   

@@ -23,8 +23,8 @@ manager: craigg
   
 ```  
 CREATE XML SCHEMA COLLECTION SC AS '  
-<schema xmlns="https://www.w3.org/2001/XMLSchema" targetNamespace="https://ns" xmlns:ns="https://ns"  
-xmlns:ns1="https://ns1">  
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://ns" xmlns:ns="http://ns"  
+xmlns:ns1="http://ns1">  
   
     <complexType name="myComplexTypeA" mixed="true">  
         <sequence>  

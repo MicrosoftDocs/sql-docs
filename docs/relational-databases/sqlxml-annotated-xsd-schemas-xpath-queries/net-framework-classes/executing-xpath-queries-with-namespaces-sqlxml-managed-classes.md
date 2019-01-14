@@ -36,7 +36,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
  In SQLXML 4.0, specify this XPath query with a namespace prefix. An example is **x:Contact**, where **x** is the namespace prefix. Consider the following XSD schema:  
   
 ```  
-<schema xmlns="https://www.w3.org/2001/XMLSchema"  
+<schema xmlns="http://www.w3.org/2001/XMLSchema"  
             xmlns:sql="urn:schemas-microsoft-com:mapping-schema"  
             xmlns:con="urn:myschema:Contacts"  
             targetNamespace="urn:myschema:Contacts">  

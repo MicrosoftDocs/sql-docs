@@ -92,10 +92,10 @@ QTA is a session-based feature that stores session state in the `msqta` schema o
 
        ![New database upgrade settings window](../../relational-databases/performance/media/qta-new-session-settings.png "New database upgrade settings window")
 
-        > [!IMPORTANT]
-        > The proposed *Max Size* is an arbitrary value that may be suited for a short timed workload.   
-        > However, keep in mind that it may be insufficient to hold information on the baseline and post-database upgrade workloads for very intensive workloads, namely when many different plans may be generated.   
-        > If you antecipate this will be the case, enter a higher value that is appropriate.
+       > [!IMPORTANT]
+       > The proposed *Max Size* is an arbitrary value that may be suited for a short timed workload.   
+       > However, keep in mind that it may be insufficient to hold information on the baseline and post-database upgrade workloads for very intensive workloads, namely when many different plans may be generated.   
+       > If you antecipate this will be the case, enter a higher value that is appropriate.
 
 4.  The **Tuning** window concludes the session configuration, and instructs on next steps to open and proceed with the session. Once complete, click **Finish**.
 

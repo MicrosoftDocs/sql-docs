@@ -37,7 +37,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
  XPath has three data types: **string**, **number**, and **boolean**. The **number** data type is always an IEEE 754 double-precision floating-point. The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**float(53)** data type is the closest to XPath **number**. However, **float(53)** is not exactly IEEE 754. For example, neither NaN (Not-a-Number) nor infinity is used. Attempting to convert a nonnumeric string to **number** and trying to divide by zero results in an error.  
   
 ## XPath Conversions  
- When you use an XPath query such as `OrderDetail[@UnitPrice > "10.0"]`, implicit and explicit data type conversions can change the meaning of the query in subtle ways. Therefore, it is important to understand how XPath data types are implemented. The XPath language specification, XML Path Language (XPath) version 1.0 W3C Proposed Recommendation 8 October 1999, can be found at the W3C Web site at https://www.w3.org/TR/1999/PR-xpath-19991008.html.  
+ When you use an XPath query such as `OrderDetail[@UnitPrice > "10.0"]`, implicit and explicit data type conversions can change the meaning of the query in subtle ways. Therefore, it is important to understand how XPath data types are implemented. The XPath language specification, XML Path Language (XPath) version 1.0 W3C Proposed Recommendation 8 October 1999, can be found at the W3C Web site at http://www.w3.org/TR/1999/PR-xpath-19991008.html.  
   
  XPath operators are divided into four categories:  
   

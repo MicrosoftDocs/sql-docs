@@ -57,7 +57,7 @@ FOR XML RAW, ELEMENTS XSINIL ;
  This is the partial result:  
   
 ```  
-<row xmlns:xsi="https://www.w3.org/2001/XMLSchema-instance">  
+<row xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">  
   <ProductID>1</ProductID>  
   <Name>Adjustable Race</Name>  
   <Color xsi:nil="true" />  

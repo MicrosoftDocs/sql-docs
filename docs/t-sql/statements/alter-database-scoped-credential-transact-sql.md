@@ -16,7 +16,7 @@ helpviewer_keywords:
 ms.assetid: 966b75b5-ca87-4203-8bf9-95c4e00cb0b5
 author: VanMSFT
 ms.author: vanto
-anager: craigg
+manager: craigg
 monikerRange: "= azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions"
 ---
 # ALTER DATABASE SCOPED CREDENTIAL (Transact-SQL)

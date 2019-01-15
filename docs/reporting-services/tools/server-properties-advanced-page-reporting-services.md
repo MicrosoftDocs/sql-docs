@@ -6,7 +6,7 @@ ms.prod: reporting-services
 ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
 ms.technology: tools
 ms.topic: conceptual
-ms.date: 08/16/2018
+ms.date: 01/15/2019
 ---
 
 # Server Properties (Advanced Page) - Reporting Services
@@ -115,6 +115,9 @@ A comma-separated list of headers that the server will expose to clients. The de
 **AccessControlMaxAge**
 Specifies the number of seconds the results of the preflight request can be cached. The default value is 600 (10 minutes).
 
+**AllowedResourceExtensionsForUpload** ***(Power BI Report Server only)***
+Sets extensions that are allowed to be uploaded to the report server to avoid uploads of files like “*.exe” or “*.bin”
+
 **EditSessionCacheLimit**  
 Specifies the number of data cache entries that can be active in a report edit session. The default number is 5.  
 
@@ -150,6 +153,9 @@ Set for how long you want the schedule refresh to time out. *Default is 120.*
 
 **ShowDownloadMenu** 
 Enables the client tools download menu. *Default is true.*
+
+**SupportedHyperlinkSchemes** ***(Power BI Report Server only)***
+Sets the scheme of Hyperlink actions that can be set. If someone wants to avoid javascript injection attacks they can remove the “javascript” scheme to prevent a report author from injecting something like javascript:eval(“window.location = ‘https://evilwebsite.com’;”)
 
 **TimeInitialDelaySeconds**
 Set for how long you want the initial time to be delayed in seconds. *Default is 60.*

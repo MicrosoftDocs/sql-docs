@@ -201,7 +201,7 @@ QTA is a session-based feature that stores session state in the `msqta` schema o
     > Instead, search for plan guides using the [sys.plan_guides](../../relational-databases/system-catalog-views/sys-plan-guides-transact-sql.md) system table, and delete manually using [sp_control_plan_guide](../../relational-databases/system-stored-procedures/sp-control-plan-guide-transact-sql.md).  
   
 ## Permissions  
-Requires membership of **db_owner** role membership.
+Requires membership of **db_owner** role.
   
 ## See Also  
  [Compatibility Levels and SQL Server Upgrades](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md#compatibility-levels-and-sql-server-upgrades)    

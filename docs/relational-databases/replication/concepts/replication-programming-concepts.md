@@ -5,8 +5,7 @@ ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
-ms.technology: 
-
+ms.technology: replication
 ms.topic: "reference"
 helpviewer_keywords: 
   - "replication [SQL Server], planning"

@@ -30,6 +30,7 @@ The following step-by-step instructions help you use the Data Migration Assistan
     - [.NET Framework](https://www.microsoft.com/download/details.aspx?id=30653) v4.5 or above.
     - [SSMS](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms) 17.0 or above.
     - [PowerBI desktop](https://docs.microsoft.com/power-bi/desktop-get-the-desktop).
+    - [Azure PowerShell Modules](https://docs.microsoft.com/powershell/azure/install-az-ps?view=azps-1.0.0)
 - Download and extract:
     - The [DMA Reports Power BI template](https://msdnshared.blob.core.windows.net/media/2018/04/PowerBI-Reports1.zip).
     - The [LoadWarehouse script](https://msdnshared.blob.core.windows.net/media/2018/10/LoadWarehouse.zip).

@@ -22,6 +22,10 @@ ms.author: "douglasl"
 manager: craigg
 ---
 # Install Integration Services
+
+  > [!div class="nextstepaction"]
+  > [Please share your feedback about the SQL Docs Table of Contents!](https://aka.ms/sqldocsurvey)
+
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provides a single Setup program to install any or all of its components, including [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. Use Setup to install [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] with or without other [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] components on a single computer.    
     
  This article highlights important considerations that you should know before you install [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. Information in this article helps you evaluate the installation options so that your selections that result in a successful installation.    

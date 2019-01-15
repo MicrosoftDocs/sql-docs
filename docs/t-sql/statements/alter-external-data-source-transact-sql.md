@@ -41,11 +41,9 @@ ALTER EXTERNAL DATA SOURCE data_source_name SET
 -- Modify an external data source pointing to Azure Blob storage
 -- Applies to: SQL Server (starting with 2017)
 ALTER EXTERNAL DATA SOURCE data_source_name
-    WITH (
-        TYPE = BLOB_STORAGE,
+    SET
         LOCATION = 'https://storage_account_name.blob.core.windows.net'
-        [, CREDENTIAL = credential_name ]
-    )  
+        [, CREDENTIAL = credential_name ] 
 ```  
   
 ## Arguments  

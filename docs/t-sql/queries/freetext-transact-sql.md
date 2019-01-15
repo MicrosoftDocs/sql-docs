@@ -68,7 +68,7 @@ FREETEXT ( { column_name | (column_list) | * }
   
  *freetext_string* is **nvarchar**. An implicit conversion occurs when another character data type is used as input. Large string data types nvarchar(max) and varchar(max) cannot be used. In the following example, the `@SearchWord` variable, which is defined as `varchar(30)`, causes an implicit conversion in the `FREETEXT` predicate.  
   
-```  
+```sql  
   
 USE AdventureWorks2012;  
 GO  
@@ -82,7 +82,7 @@ WHERE FREETEXT(Description, @SearchWord);
   
  Because "parameter sniffing" does not work across conversion, use **nvarchar** for better performance. In the example, declare `@SearchWord` as `nvarchar(30)`.  
   
-```  
+```sql  
   
 USE AdventureWorks2012;  
 GO  
@@ -128,7 +128,7 @@ Full-text queries using FREETEXT are less precise than those full-text queries u
 ### A. Using FREETEXT to search for words containing specified character values  
  The following example searches for all documents containing the words related to vital, safety, components.  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 SELECT Title  
@@ -140,7 +140,7 @@ GO
 ### B. Using FREETEXT with variables  
  The following example uses a variable instead of a specific search term.  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 DECLARE @SearchWord nvarchar(30);  

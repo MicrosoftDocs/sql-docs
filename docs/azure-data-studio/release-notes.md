@@ -3,7 +3,7 @@ title: Release notes and changelog
 titleSuffix: Azure Data Studio
 description: 'Azure Data Studio release notes'
 ms.custom: "seodec18"
-ms.date: "11/06/2018"
+ms.date: "01/10/2019"
 ms.prod: sql
 ms.technology: azure-data-studio
 ms.reviewer: "alayu; sstein"
@@ -14,7 +14,25 @@ manager: craigg
 ---
 # Azure Data Studio latest release notes and changelog
 
-**[Download the November Release!](download.md)**
+**[Download the January Release!](download.md)**
+
+
+## January 2019 (January Release)
+
+release date: January 09, 2019  
+version: 1.3.8
+
+- Added a new user installer for Windows. Unlike the existing system installer, the new user installer does not require administrator privileges. This also enables an easier upgrade experience for non administrators.
+- Azure Active Directory Authentication support.
+- Announcing Idera SQL DM Performance Insights (Preview).
+- Data-Tier Application Wizard support in SQL Server Import extension.
+- Update to the [SQL Server 2019 Preview extension](https://docs.microsoft.com/sql/azure-data-studio/sql-server-2019-extension?view=sql-server-ver15)
+- SQL Server Profiler improvements.
+- Results Streaming for large queries (preview).
+- Community extensions: sp_executesql to sql and New Database.
+- Resolved [bugs and issues](https://github.com/Microsoft/azuredatastudio/milestone/19?closed=1).
+
+For detailed information, see the [Change Log](https://github.com/Microsoft/azuredatastudio/blob/master/CHANGELOG.md), and [Releases](https://github.com/Microsoft/azuredatastudio/releases).
 
 ## November 2018 (November Release)
 
@@ -29,6 +47,7 @@ version: 1.2.4
 - Upgrade SQL Tools Service to .Net Core 2.2 Preview 3 (for eventual AAD support)
 
 ### Bug Fixes
+
 - Fix [issue #2933](https://github.com/Microsoft/azuredatastudio/issues/2933): Connection lost to Azure SQL DB
 - Fix [issue #2914](https://github.com/Microsoft/azuredatastudio/issues/2914): "Invalid argument" exception expanding OE database node
 - Fix [issue #2935](https://github.com/Microsoft/azuredatastudio/pull/2935): Display multi-line messages correctly in query results
@@ -38,8 +57,6 @@ version: 1.2.4
 - Fix [issue #3047](https://github.com/Microsoft/azuredatastudio/pull/3047): Add a command line interface for connecting to a SQL Server
 - Fix [issue #3031](https://github.com/Microsoft/azuredatastudio/pull/3031): Add query plan theme support
 - ...
-
-For detailed information, see the [Change Log](https://github.com/Microsoft/azuredatastudio/blob/master/CHANGELOG.md), and [Releases](https://github.com/Microsoft/azuredatastudio/releases).
 
 ## October 2018 (October Release)
 
@@ -140,7 +157,7 @@ The *August Public Preview* focuses on bug fixes, product stabilization, and fil
 - Fix [issue #2129](https://github.com/Microsoft/azuredatastudio/pull/2129): Save edit data scroll position when switching tabs.
 - Fix [issue #2152](https://github.com/Microsoft/azuredatastudio/issues/2152): Results Grid Row Indicator Zero Based.
 
-## Known Issues
+### Known Issues
 
 - [Issue #2371](https://github.com/Microsoft/azuredatastudio/issues/2371) Save As Excel Only Saves First Row of Data
 - [Issue #2150](https://github.com/Microsoft/azuredatastudio/issues/2150): Unable to connect on Ubuntu 16.04 to SQL in a container

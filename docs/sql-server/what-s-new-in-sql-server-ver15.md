@@ -1,6 +1,6 @@
 ---
 title: "What's new in SQL Server 2019 | Microsoft Docs"
-ms.date: 12/07/2018
+ms.date: 01/09/2019
 ms.prod: "sql-server-2018"
 ms.reviewer: ""
 ms.technology: release-landing
@@ -13,6 +13,9 @@ monikerRange: ">=sql-server-ver15||=sqlallproducts-allversions"
 # What's new in SQL Server 2019
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
+
+  > [!div class="nextstepaction"]
+  > [Please share your feedback about the SQL Docs Table of Contents!](https://aka.ms/sqldocsurvey)
 
 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] builds on previous releases to grow SQL Server as a platform that gives you choices of development languages, data types, on-premises or cloud, and operating systems. This article summarizes what is new for SQL Server 2019. For more information and known issues, see the [SQL Server 2019 Release Notes](sql-server-ver15-release-notes.md).
 
@@ -33,7 +36,7 @@ Community technology preview (CTP) 2.2 is the latest public release of [!INCLUDE
 
 ## Previous CTPs
 
-Earlier CTP releases added or enhanced the following features for [!INCLUDE[sql-server-2019](..\includes\sssqlv15-md.md)].
+Earlier CTP releases added or enhanced the following features for [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)].
 
 - [Big data clusters](#bigdatacluster) 
   - Deploy a Big Data cluster with SQL and Spark Linux containers on Kubernetes (CTP 2.0)

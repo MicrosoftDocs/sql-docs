@@ -50,10 +50,10 @@ manager: craigg
   
 ## See Also  
  [Create a Publication](../../relational-databases/replication/publish/create-a-publication.md)   
- [Create an Updatable Subscription to a Transactional Publication](publish/create-updatable-subscription-to-transactional-publication.md)   
+ [Create an Updatable Subscription to a Transactional Publication](publish/create-an-updatable-subscription-to-a-transactional-publication.md)   
  [View and Modify Distributor and Publisher Properties](../../relational-databases/replication/view-and-modify-distributor-and-publisher-properties.md)   
  [View and Modify Publication Properties](../../relational-databases/replication/publish/view-and-modify-publication-properties.md)   
- [Manage Logins and Passwords in Replication](../../relational-databases/replication/security/manage-logins-and-passwords-in-replication.md)   
+ [Identity access and control for Replication](../../relational-databases/replication/security/identity-and-access-control-replication.md)   
  [Publish Data and Database Objects](../../relational-databases/replication/publish/publish-data-and-database-objects.md)   
  [Replication Agents Overview](../../relational-databases/replication/agents/replication-agents-overview.md)  
   

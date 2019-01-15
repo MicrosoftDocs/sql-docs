@@ -33,7 +33,7 @@ manager: craigg
 ## Logon account recommendations  
  In a failover cluster, all instances of Analysis Services should be configured to use a Windows domain user account. Assign the same account to all instances. See [How to Cluster Analysis Services](https://msdn.microsoft.com/library/dn736073.aspx) for details.  
   
- Standalone instances should use the default virtual account, **NT Service\MSSQLServerOLAPService** for the default instance, or **NT Service\MSOLAP$***instance-name* for a named instance. This recommendation applies to Analysis Services instances in all server modes, assuming Windows Server 2008 R2 and later for the operating system, and SQL Server 2012 and later for Analysis Services.  
+ Standalone instances should use the default virtual account, **NT Service\MSSQLServerOLAPService** for the default instance, or **NT Service\MSOLAP$**_instance-name_ for a named instance. This recommendation applies to Analysis Services instances in all server modes, assuming Windows Server 2008 R2 and later for the operating system, and SQL Server 2012 and later for Analysis Services.  
   
 ## Granting permissions to Analysis Services  
  This section explains the permissions that Analysis Services requires for local, internal operations, such as starting the executable, reading the configuration file, and loading databases from the data directory. If instead you're looking for guidance on setting permissions for external data access and interoperability with other services and applications, see [Granting additional permissions for specific server operations](#bkmk_tasks) further on in this topic.  

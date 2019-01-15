@@ -8,6 +8,7 @@ manager: craigg
 ms.date: 12/06/2018
 ms.topic: conceptual
 ms.prod: sql
+ms.technology: big-data-cluster
 ms.custom: seodec18
 ---
 # Restore a database into the SQL Server 2019 big data cluster master instance

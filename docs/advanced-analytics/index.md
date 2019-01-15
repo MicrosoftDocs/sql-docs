@@ -4,16 +4,18 @@ description: R and Python in SQL Server, with built-in data science modeling and
 ms.prod: sql
 ms.technology: machine-learning
 
-ms.date: 09/10/2018  
+ms.date: 01/09/2019
 ms.topic: overview
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
 monikerRange: ">=sql-server-2016||=sqlallproducts-allversions"
 ---
+# SQL Server Machine Learning
 
 ::: moniker range="=sql-server-ver15||=sqlallproducts-allversions"
-# SQL Server Machine Learning and Programming Extensions Documentation
+
+## SQL Server Machine Learning and Programming Extensions Documentation
 
 Learn how to use R and Python external libraries and languages on resident, relational data with our quickstarts, tutorials, and how-to articles. R and Python libraries in [SQL Server machine learning](what-is-sql-server-machine-learning.md) include base distributions, data science models, machine learning algorithms, and functions for conducting high-performance analytics at scale, without having to transfer data across the network. 
 
@@ -27,7 +29,8 @@ In SQL Server 2019, Java code execution uses the same extensibility framework as
 ::: moniker-end
 
 ::: moniker range="=sql-server-2016||=sql-server-2017"
-# SQL Server Machine Learning R and Python Documentation
+
+## SQL Server Machine Learning R and Python Documentation
 
 Learn how to use R and Python external libraries and languages on resident, relational data with our quickstarts, tutorials, and how-to articles. R and Python libraries in [SQL Server machine learning](what-is-sql-server-machine-learning.md) include base distributions, data science models, machine learning algorithms, and functions for conducting high-performance analytics at scale, without having to transfer data across the network. 
 

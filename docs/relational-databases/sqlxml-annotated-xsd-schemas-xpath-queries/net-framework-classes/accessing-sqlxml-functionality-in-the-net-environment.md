@@ -74,7 +74,7 @@ class Test
 1.  Save this XSD schema (MySchema.xml) in a folder:  
   
     ```  
-    <xsd:schema xmlns:xsd="https://www.w3.org/2001/XMLSchema"  
+    <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
                 xmlns:sql="urn:schemas-microsoft-com:mapping-schema">  
       <xsd:element name="Con" sql:relation="Person.Contact" >  
        <xsd:complexType>  

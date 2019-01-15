@@ -31,6 +31,6 @@ manager: craigg
 2.  Run sqlmonitor.exe.  
   
 ## See Also  
- [Monitoring Replication](../../../relational-databases/replication/monitor/monitoring-replication-overview.md)  
+ [Monitoring Replication](../../../relational-databases/replication/monitor/monitoring-replication.md)  
   
   

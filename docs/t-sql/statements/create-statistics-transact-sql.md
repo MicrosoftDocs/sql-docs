@@ -163,7 +163,7 @@ CREATE STATISTICS statistics_name
  
  **Applies to**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] (starting with [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 CU4) through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] (starting with [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU1).    
   
- STATS_STREAM **=***stats_stream*  
+ STATS_STREAM **=**_stats_stream_  
  [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
  NORECOMPUTE  

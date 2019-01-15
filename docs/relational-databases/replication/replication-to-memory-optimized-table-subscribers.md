@@ -84,7 +84,5 @@ manager: craigg
   
 -   ANSI_PADDING must be ON.  
   
-## See Also  
- [Replication Features and Tasks](../../relational-databases/replication/replication-features-and-tasks.md)  
   
   

@@ -2,7 +2,7 @@
 title: "ALTER DATABASE SET Options (Transact-SQL) | Microsoft Docs"
 description: Learn about how to set database options such as automatic tuning, encryption, query store in a SQL Server and Azure SQL Database
 ms.custom: ""
-ms.date: "10/02/2018"
+ms.date: "1/10/2019"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
@@ -698,10 +698,13 @@ ON
 Enables the query store.  
   
 OFF  
-Disables the query store. This is the default value.   
+Disables the query store. This is the default value.
   
 CLEAR  
-Remove the contents of the query store.  
+Remove the contents of the query store.
+
+> [!NOTE]  
+> For Azure SQL Data Warehouse, you must execute `ALTER DATABASE SET QUERY_STORE` from the user database. Executing the statement from another data warehouse instance is not supported.
   
 OPERATION_MODE  
 Describes the operation mode of the query store. Valid values are READ_ONLY and READ_WRITE. In READ_WRITE mode, the query store collects and persists query plan and runtime execution statistics information. In READ_ONLY mode, information can be read from the query store, but new information is not added. If the maximum allocated space of the query store has been exhausted, the query store will change is operation mode to READ_ONLY.  

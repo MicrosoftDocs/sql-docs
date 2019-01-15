@@ -44,7 +44,7 @@ manager: craigg
   
 ## See Also  
  [Errors and Events Reference &#40;Replication&#41;](errors-and-events-reference-replication.md)   
- [Manage Logins and Passwords in Replication](security/manage-logins-and-passwords-in-replication.md)   
+ [Manage Logins and Passwords in Replication](security/identity-and-access-control-replication.md#manage-logins-and-passwords-in-replication)   
  [SQL Server Configuration Manager](../sql-server-configuration-manager.md)  
   
   

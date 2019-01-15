@@ -46,7 +46,7 @@ DENY permission  [ ,...n ] ON AVAILABILITY GROUP :: availability_group_name
  *permission*  
  Specifies a permission that can be denied on an availability group. For a list of the permissions, see the Remarks section later in this topic.  
   
- ON AVAILABILITY GROUP **::***availability_group_name*  
+ ON AVAILABILITY GROUP **::**_availability_group_name_  
  Specifies the availability group on which the permission is being denied. The scope qualifier (**::**) is required.  
   
  TO \<server_principal>  

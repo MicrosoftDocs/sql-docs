@@ -34,10 +34,10 @@ sp_changeqreader_agent [ [ @job_login = ] 'job_login' ]
 ```  
   
 ## Arguments  
- [ **@job_login**= ] **'***job_login***'**  
+ [ **@job_login**= ] **'**_job_login_**'**  
  Is the login for the [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows account under which the agent runs. *job_login* is **nvarchar(257)**, with a default of NULL.  
   
- [ **@job_password**= ] **'***job_password***'**  
+ [ **@job_password**= ] **'**_job_password_**'**  
  Is the password for the Windows account under which the agent runs. *job_password* is **sysname**, with a default of NULL.  
   
  [ **@frompublisher=** ] *frompublisher*  

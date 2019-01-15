@@ -42,7 +42,7 @@ manager: craigg
  Modifications made by concurrent transactions must be isolated from the modifications made by any other concurrent transactions. A transaction either recognizes data in the state it was in before another concurrent transaction modified it, or it recognizes the data after the second transaction has completed, but it does not recognize an intermediate state. This is referred to as serializability because it results in the ability to reload the starting data and replay a series of transactions to end up with the data in the same state it was in after the original transactions were performed.  
   
  Durability  
- After a fully durable transaction has completed, its effects are permanently in place in the system. The modifications persist even in the event of a system failure. [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]and later enable delayed durable transactions. Delayed durable transactions commit before the transaction log record is persisted to disk. For more information on delayed transaction durability see the topic [Transaction Durability](../relational-databases/logs/control-transaction-durability.md).  
+ After a fully durable transaction has completed, its effects are permanently in place in the system. The modifications persist even in the event of a system failure. [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] and later enable delayed durable transactions. Delayed durable transactions commit before the transaction log record is persisted to disk. For more information on delayed transaction durability see the topic [Transaction Durability](../relational-databases/logs/control-transaction-durability.md).  
   
  SQL programmers are responsible for starting and ending transactions at points that enforce the logical consistency of the data. The programmer must define the sequence of data modifications that leave the data in a consistent state relative to the organization's business rules. The programmer includes these modification statements in a single transaction so that the [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] can enforce the physical integrity of the transaction.  
   
@@ -146,7 +146,7 @@ GO
   
  In the following example, the third `INSERT` statement generates a run-time duplicate primary key error. The first two `INSERT` statements are successful and committed, so they remain after the run-time error.  
   
-```  
+```sql  
 CREATE TABLE TestBatch (Cola INT PRIMARY KEY, Colb CHAR(3));  
 GO  
 INSERT INTO TestBatch VALUES (1, 'aaa');  

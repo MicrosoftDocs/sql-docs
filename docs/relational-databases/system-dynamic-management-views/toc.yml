@@ -277,7 +277,7 @@
     href: sys-dm-db-missing-index-groups-transact-sql.md
   - name: sys.dm_db_missing_index_group_stats
     href: sys-dm-db-missing-index-group-stats-transact-sql.md
-- name: I O
+- name: I/O
   href: i-o-related-dynamic-management-views-and-functions-transact-sql.md
   items:
   - name: sys.dm_io_backup_tapes

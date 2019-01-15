@@ -28,7 +28,7 @@ manager: craigg
  Enter the password for the Windows account.  
   
 ## See Also  
- [Manage Logins and Passwords in Replication](security/manage-logins-and-passwords-in-replication.md)   
+ [Manage Logins and Passwords in Replication](security/identity-and-access-control-replication.md#manage-logins-and-passwords-in-replication)   
  [Replication Agent Security Model](security/replication-agent-security-model.md)   
  [Replication Agents Overview](agents/replication-agents-overview.md)   
  [Replication Security Best Practices](security/replication-security-best-practices.md)  

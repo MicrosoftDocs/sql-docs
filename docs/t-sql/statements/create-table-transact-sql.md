@@ -52,7 +52,7 @@ manager: craigg
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
 > [!div class="nextstepaction"]
-> [Please help improve SQL Server docs!](https://80s3ignv.optimalworkshop.com/optimalsort/36yyw5kq-0)
+> [Please share your feedback about the SQL Docs Table of Contents!](https://aka.ms/sqldocsurvey)
 
 Creates a new table in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
   
@@ -976,7 +976,7 @@ Column and table indexes can be specified as part of the CREATE TABLE statement.
   
  Prefix local temporary table names with single number sign (#*table_name*), and prefix global temporary table names with a double number sign (##*table_name*).  
   
- SQL statements reference the temporary table by using the value specified for *table_name* in the CREATE TABLE statement, for example####:  
+ SQL statements reference the temporary table by using the value specified for *table_name* in the CREATE TABLE statement, for example:  
   
 ```sql  
 CREATE TABLE #MyTempTable (cola INT PRIMARY KEY);  
@@ -985,6 +985,8 @@ INSERT INTO #MyTempTable VALUES (1);
 ```  
   
  If more than one temporary table is created inside a single stored procedure or batch, they must have different names.  
+ 
+ If you include a *schema_name* when you create or access a temporary table, it is ignored.  All temporary tables are created in the dbo schema.
   
  If a local temporary table is created in a stored procedure or application that can be executed at the same time by several users, the [!INCLUDE[ssDE](../../includes/ssde-md.md)] must be able to distinguish the tables created by the different users. The [!INCLUDE[ssDE](../../includes/ssde-md.md)] does this by internally appending a numeric suffix to each local temporary table name. The full name of a temporary table as stored in the **sysobjects** table in **tempdb** is made up of the table name specified in the CREATE TABLE statement and the system-generated numeric suffix. To allow for the suffix, *table_name* specified for a local temporary name cannot exceed 116 characters.  
   

@@ -36,13 +36,13 @@ sp_changepublication [ [ @publication = ] 'publication' ]
 ```  
   
 ## Arguments  
- [ **@publication =** ] **'***publication***'**  
+ [ **@publication =** ] **'**_publication_**'**  
  Is the name of the publication. *publication* is **sysname**, with a default of NULL.  
   
- [ **@property =** ] **'***property***'**  
+ [ **@property =** ] **'**_property_**'**  
  Is the publication property to change. *property* is **nvarchar(255)**.  
   
- [ **@value =** ] **'***value***'**  
+ [ **@value =** ] **'**_value_**'**  
  Is the new property value. *value* is **nvarchar(255)**, with a default of NULL.  
   
  This table describes the properties of the publication that can be changed and restrictions on the values for those properties.  
@@ -124,7 +124,7 @@ See the Remarks section for the properties that, when changed, require the gener
   - **0** specifies that changes to the article do not cause the subscription to be reinitialized. If the stored procedure detects that the change would require existing subscriptions to be reinitialized, an error occurs and no changes are made.  
   - **1** specifies that changes to the article cause the existing subscription to be reinitialized, and gives permission for the subscription reinitialization to occur.  
   
-[ **@publisher** = ] **'***publisher***'**  
+[ **@publisher** = ] **'**_publisher_**'**  
  Specifies a non- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Publisher. *publisher* is **sysname**, with a default of NULL.  
   
   > [!NOTE]  

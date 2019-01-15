@@ -43,8 +43,8 @@ helpviewer_keywords:
   - "stripe sets [SQL Server]"
   - "cross-platform backups"
 ms.assetid: 89a4658a-62f1-4289-8982-f072229720a1
-author: CarlRabeler
-ms.author: carlrab
+author: mashamsft
+ms.author: mathoma
 manager: craigg
 monikerRange: ">=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||>=aps-pdw-2016||=sqlallproducts-allversions"
 ---
@@ -368,7 +368,7 @@ Specifies the free-form text describing the backup set. The string can have a ma
 NAME **=** { *backup_set_name* | **@**_backup\_set\_var_ }  
 Specifies the name of the backup set. Names can have a maximum of 128 characters. If NAME is not specified, it is blank.  
   
-{ EXPIREDATE **='**_date_**'** | RETAINDAYS **=** *days* }  
+{ EXPIREDATE **='**_date_**'** | RETAINDAYS **=** _days_ }  
 Specifies when the backup set for this backup can be overwritten. If these options are both used, RETAINDAYS takes precedence over EXPIREDATE.  
   
 If neither option is specified, the expiration date is determined by the **mediaretention** configuration setting. For more information, see [Server Configuration Options &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md).   
@@ -520,7 +520,7 @@ Beginning with [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], has no effec
   
 **Monitoring Options**  
   
-STATS [ **=** *percentage* ]  
+STATS [ **=** _percentage_ ]  
 Displays a message each time another *percentage* completes, and is used to gauge progress. If *percentage* is omitted, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] displays a message after each 10 percent is completed.  
   
 The STATS option reports the percentage complete as of the threshold for reporting the next interval. This is at approximately the specified percentage; for example, with STATS=10, if the amount completed is 40 percent, the option might display 43 percent. For large backup sets, this is not a problem, because the percentage complete moves very slowly between completed I/O calls.  
@@ -566,14 +566,14 @@ These options are only used with `BACKUP LOG`.
 > [!NOTE]  
 > If you do not want to take log backups, use the simple recovery model. For more information, see [Recovery Models &#40;SQL Server&#41;](../../relational-databases/backup-restore/recovery-models-sql-server.md).  
   
-{ NORECOVERY | STANDBY **=** *undo_file_name* }  
+{ NORECOVERY | STANDBY **=** _undo_file_name_ }  
   NORECOVERY 
 
 Backs up the tail of the log and leaves the database in the RESTORING state. NORECOVERY is useful when failing over to a secondary database or when saving the tail of the log before a RESTORE operation.  
   
 To perform a best-effort log backup that skips log truncation and then take the database into the RESTORING state atomically, use the `NO_TRUNCATE` and `NORECOVERY` options together.  
   
-STANDBY **=** *standby_file_name* 
+STANDBY **=** _standby_file_name_ 
 
 Backs up the tail of the log and leaves the database in a read-only and STANDBY state. The STANDBY clause writes standby data (performing rollback, but with the option of further restores). Using the STANDBY option is equivalent to BACKUP LOG WITH NORECOVERY followed by a RESTORE WITH STANDBY.  
   
@@ -1117,7 +1117,7 @@ Has no effect. This option is accepted by the version for compatibility with pre
   
 **Monitoring Options**  
   
-STATS [ **=** *percentage* ]  
+STATS [ **=** _percentage_ ]  
 Displays a message each time another *percentage* completes, and is used to gauge progress. If *percentage* is omitted, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] displays a message after each 10 percent is completed.  
   
 The STATS option reports the percentage complete as of the threshold for reporting the next interval. This is at approximately the specified percentage; for example, with STATS=10, if the amount completed is 40 percent, the option might display 43 percent. For large backup sets, this is not a problem, because the percentage complete moves very slowly between completed I/O calls.  

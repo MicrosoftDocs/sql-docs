@@ -687,7 +687,7 @@
         items:
         - name: Administration
           href: /sql/relational-databases/replication/administration/
-          homepage: /sql/relational-databases/replication/administration/administration-replication
+          homepage: /sql/relational-databases/replication/administration/frequently-asked-questions-for-replication-administrators
         - name: Agents
           href: /sql/relational-databases/replication/agents/
           homepage: /sql/relational-databases/replication/agents/replication-agents
@@ -737,7 +737,7 @@
       - name: Service Broker
         href: /sql/relational-databases/service-broker/
         homepage: /sql/relational-databases/service-broker/event-notifications
-      - name: Spatial
+      - name: Spatial data
         href: /sql/relational-databases/spatial/
         homepage: /sql/relational-databases/spatial/spatial-data-sql-server
       - name: SQL Trace

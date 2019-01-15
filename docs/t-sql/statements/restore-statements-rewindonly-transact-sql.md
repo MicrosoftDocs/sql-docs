@@ -20,8 +20,8 @@ helpviewer_keywords:
   - "rewinding backup devices"
   - "RESTORE REWINDONLY statement"
 ms.assetid: 7f825b40-2264-4608-9809-590d0f09d882
-author: CarlRabeler
-ms.author: carlrab
+author: mashamsft
+ms.author: mathoma
 manager: craigg
 ---
 # RESTORE Statements - REWINDONLY (Transact-SQL)

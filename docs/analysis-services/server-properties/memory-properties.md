@@ -1,6 +1,6 @@
 ---
 title: "Analysis Services Memory Properties | Microsoft Docs"
-ms.date: 10/03/2018
+ms.date: 01/15/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: 
@@ -52,7 +52,14 @@ The following properties apply to both tabular and multidimensional modes unless
  Specifies a memory threshold after which the instance aggressively terminates active user sessions to reduce memory usage. All terminated sessions will receive an error about being canceled by memory pressure. The default value, zero (0), means the **HardMemoryLimit** will be set to a midway value between **TotalMemoryLimit** and the total physical memory of the system; if the physical memory of the system is larger than the virtual address space of the process, then virtual address space will be used instead to calculate **HardMemoryLimit**.  
 
 **QueryMemoryLimit**   
-Azure Analysis Services only. An advanced property to control how much memory can be used by temporary results during a query. Applies only to DAX measures and queries. MDX queries against Multidimensional mode servers do not use this limit. It does not account for general memory allocations used by the query. Specified in percentage. The default value of 0 means no limit is specified.
+Azure Analysis Services only. An advanced property to control how much memory can be used by temporary results during a query. Applies only to DAX measures and queries. It does not account for general memory allocations used by the query. Specified in percentage, the default value is determined by your plan. 
+
+|Plan  |Default  |
+|---------|---------|
+|D1     |   80      |
+|All other plans     |    20     |
+
+This is property can be changed. Setting a value of 0 means no limit is specified.
 
  **VirtualMemoryLimit**  
   An advanced property that you should not change, except under the guidance of [!INCLUDE[msCoName](../../includes/msconame-md.md)] support.  

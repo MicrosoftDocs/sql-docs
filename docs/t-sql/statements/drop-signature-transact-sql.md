@@ -20,9 +20,9 @@ helpviewer_keywords:
   - "signatures [SQL Server]"
   - "digital signatures [SQL Server]"
 ms.assetid: 8a1fd8c5-0e75-4b2f-9d3c-c296bed56cc7
-author: CarlRabeler
-ms.author: carlrab
-manager: craigg
+author: VanMSFT
+ms.author: vanto
+anager: craigg
 ---
 # DROP SIGNATURE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

@@ -17,9 +17,9 @@ helpviewer_keywords:
   - "database permissions [SQL Server], granting"
   - "GRANT statement, databases"
 ms.assetid: 499e5ed6-945c-4791-ab45-68dec0b9c289
-author: CarlRabeler
-ms.author: carlrab
-manager: craigg
+author: VanMSFT
+ms.author: vanto
+anager: craigg
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # GRANT Database Permissions (Transact-SQL)

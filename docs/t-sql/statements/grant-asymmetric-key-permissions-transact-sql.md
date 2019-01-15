@@ -15,9 +15,9 @@ helpviewer_keywords:
   - "asymmetric keys [SQL Server], permissions"
   - "GRANT statement, asymmetric keys"
 ms.assetid: a70e2ee6-59b0-4543-b883-e9cbae6199be
-author: CarlRabeler
-ms.author: carlrab
-manager: craigg
+author: VanMSFT
+ms.author: vanto
+anager: craigg
 ---
 # GRANT Asymmetric Key Permissions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

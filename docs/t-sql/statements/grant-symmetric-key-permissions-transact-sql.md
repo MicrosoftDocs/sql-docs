@@ -17,8 +17,8 @@ helpviewer_keywords:
   - "cryptography [SQL Server], symmetric keys"
   - "granting permissions [SQL Server], symmetric keys"
 ms.assetid: 5c61557f-67ae-4e55-b86d-713575b27cea
-author: CarlRabeler
-ms.author: carlrab
+author: VanMSFT
+ms.author: vanto
 manager: craigg
 ---
 # GRANT Symmetric Key Permissions (Transact-SQL)

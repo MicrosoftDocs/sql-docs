@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "GRANT statement, types"
   - "type permissions [SQL Server]"
 ms.assetid: 14bd2fb3-1446-49c0-be87-c6a670317ed0
-author: CarlRabeler
-ms.author: carlrab
+author: VanMSFT
+ms.author: vanto
 manager: craigg
 ---
 # GRANT Type Permissions (Transact-SQL)

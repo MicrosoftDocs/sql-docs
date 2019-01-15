@@ -23,8 +23,8 @@ helpviewer_keywords:
   - "transferring Database Master Keys"
   - "RESTORE MASTER KEY statement"
 ms.assetid: 70ceb951-31a2-4fc4-a0c1-e6c18eeb3ae7
-author: CarlRabeler
-ms.author: carlrab
+author: VanMSFT
+ms.author: vanto
 manager: craigg
 ---
 # RESTORE MASTER KEY (Transact-SQL)

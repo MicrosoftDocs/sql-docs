@@ -14,9 +14,9 @@ helpviewer_keywords:
   - "ALTER DATABASE SCOPED CREDENTIAL statement"
   - "credentials [SQL Server], ALTER DATABASE SCOPED CREDENTIAL statement"
 ms.assetid: 966b75b5-ca87-4203-8bf9-95c4e00cb0b5
-author: CarlRabeler
-ms.author: carlrab
-manager: craigg
+author: VanMSFT
+ms.author: vanto
+anager: craigg
 monikerRange: "= azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions"
 ---
 # ALTER DATABASE SCOPED CREDENTIAL (Transact-SQL)

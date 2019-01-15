@@ -15,8 +15,8 @@ dev_langs:
 helpviewer_keywords: 
   - "CREATE SERVER AUDIT SPECIFICATION statement"
 ms.assetid: db77fa77-fedb-40ac-83e6-06343063e518
-author: CarlRabeler
-ms.author: carlrab
+author: VanMSFT
+ms.author: vanto
 manager: craigg
 ---
 # CREATE SERVER AUDIT SPECIFICATION (Transact-SQL)

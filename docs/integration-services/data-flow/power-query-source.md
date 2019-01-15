@@ -22,7 +22,7 @@ This article describes how to configure the properties of the Power Query Source
 > [!NOTE]
 > For the current preview release, to facilitate quick feedback-gathering and frequent feature enhancements, Power Query Source can only be used in SQL Server Data Tools (SSDT) and Azure-SSIS Integration Runtime (IR) in Azure Data Factory (ADF). You can download the latest SSDT that supports the Power Query Source from [here](https://docs.microsoft.com/sql/ssdt/download-sql-server-data-tools-ssdt?view=sql-server-2017). To provision Azure-SSIS IR, see [Provision SSIS in ADF](https://docs.microsoft.com/azure/data-factory/tutorial-deploy-ssis-packages-azure) article.
 
-## Configure Power Query Source
+## Configure the Power Query Source
 
 To open **Power Query Source Editor** in SSDT, drag & drop **Power Query Source** from SSIS Toolbox onto the data flow designer and double-click on it.  
 
@@ -44,7 +44,7 @@ Finally, on **Columns** tab, you can edit the output column info.
 
 ![PQ Source Columns Tab](media/power-query-source/pq-source-columns-tab.png)
 
-### Create Power Query Connection Manager
+## Configure the Power Query Connection Manager
 
 When designing your data flow with Power Query Source on SSDT, you can create a new Power Query Connection Manager in the following ways:
 1.	Indirectly create it on **Connection Managers** tab of Power Query Source after selecting **Add**/**Detect Data Source** button and selecting **<New connection...>** from the dropdown menu as described above.

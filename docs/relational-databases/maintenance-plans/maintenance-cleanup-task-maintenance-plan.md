@@ -49,7 +49,7 @@ manager: craigg
  Path and name of the folder containing the files to be deleted.  
   
  **File extension**  
- Provide the file extension of the files to be deleted.  
+ Provide the file extension of the file to be deleted, without any other characters before and after it (e.g. BAK or TRN). 
   
  **Include first-level subfolders**  
  Delete files with the extension specified for **File extension** from first-level subfolders under **Folder**.  

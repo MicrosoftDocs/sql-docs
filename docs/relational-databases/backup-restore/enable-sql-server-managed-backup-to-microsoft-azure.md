@@ -48,11 +48,11 @@ manager: craigg
     $context = New-AzureStorageContext -StorageAccountName managedbackupstorage -StorageAccountKey (Get-AzureStorageKey -StorageAccountName managedbackupstorage).Primary   
     New-AzureStorageContainerSASToken -Name backupcontainer -Permission rwdl -ExpiryTime (Get-Date).AddYears(1) -FullUri -Context $context  
     ```  
-    In case of AzureRM, use the following command:
+    For Azure, use the following command:
        ```powershell
-    Connect-AzureRmAccount
-    Set-AzureRmContext -SubscriptionId "YOURSUBSCRIPTIONID"
-    $StorageAccountKey = (Get-AzureRmStorageAccountKey -ResourceGroupName YOURRESOURCEGROUPFORTHESTORAGE -Name managedbackupstorage)[0].Value
+    Connect-AzAccount
+    Set-AzContext -SubscriptionId "YOURSUBSCRIPTIONID"
+    $StorageAccountKey = (Get-AzStorageAccountKey -ResourceGroupName YOURRESOURCEGROUPFORTHESTORAGE -Name managedbackupstorage)[0].Value
     $context = New-AzureStorageContext -StorageAccountName managedbackupstorage -StorageAccountKey $StorageAccountKey 
     New-AzureStorageContainerSASToken -Name backupcontainer -Permission rwdl -ExpiryTime (Get-Date).AddYears(1) -FullUri -Context $context
    ```  

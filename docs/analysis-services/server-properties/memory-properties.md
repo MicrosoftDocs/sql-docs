@@ -59,7 +59,7 @@ Azure Analysis Services only. An advanced property to control how much memory ca
 |D1     |   80      |
 |All other plans     |    20     |
 
-This is property can be changed. Setting a value of 0 means no limit is specified.
+This property can be changed. Setting a value of 0 means no limit is specified.
 
  **VirtualMemoryLimit**  
   An advanced property that you should not change, except under the guidance of [!INCLUDE[msCoName](../../includes/msconame-md.md)] support.  

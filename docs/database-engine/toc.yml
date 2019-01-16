@@ -19,18 +19,20 @@
   - name: Breaking changes in SQL Server 2016
     href: breaking-changes-to-database-engine-features-in-sql-server-2016.md
 - name: Install
-  href: ../database-engine/install-windows/installation-for-sql-server-2016.md
+  href: ../database-engine/install-windows/toc.yml
 - name: Configure
-  href: ../database-engine/configure-windows/configure-database-engine-instances-sql-server.md
+  href: ../database-engine/configure-windows/toc.yml
 - name: Business Continuity
   href: sql-server-business-continuity-dr.md
   items:
   - name: Availability groups
-    href: ../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md
+    href: availability-groups/windows/toc.yml
   - name: Database mirroring
-    href: ../database-engine/database-mirroring/the-database-mirroring-endpoint-sql-server.md
+    href: database-mirroring/toc.yml
   - name: Log shipping
-    href: ../database-engine/log-shipping/about-log-shipping-sql-server.md
+    href: log-shipping/toc.yml
+  - name: Failover Cluster Instance
+    href: ../sql-server/failover-clusters/toc.yml
 - name: Concepts
   items:
   - name: Blob + 

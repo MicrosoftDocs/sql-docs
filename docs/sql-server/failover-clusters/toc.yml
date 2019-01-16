@@ -1,32 +1,74 @@
-- name: High Availability Solutions
-  href: high-availability-solutions-sql-server.md
-- name: "Automatic Page Repair (Availability Groups: Database Mirroring)"
-  href: automatic-page-repair-availability-groups-database-mirroring.md
-- name: Management of Logins and Jobs After Role Switching
-  href: management-of-logins-and-jobs-after-role-switching-sql-server.md
-- name: Troubleshoot Orphaned Users
-  href: troubleshoot-orphaned-users-sql-server.md
-- name: Failover Cluster Installation
-  href: install/sql-server-failover-cluster-installation.md
-- name: Windows Server Failover Clustering (WSFC) with SQL Server
+- name: Overview
   href: windows/windows-server-failover-clustering-wsfc-with-sql-server.md
+
+
+- name: How-to
   items:
-  - name: WSFC Quorum Modes and Voting Configuration
-    href: windows/wsfc-quorum-modes-and-voting-configuration-sql-server.md
+    - name: Deployment
+      items:
+        - name: Before you install
+          href: install/before-installing-failover-clustering.md
+        - name: Installation
+          href: install/sql-server-failover-cluster-installation.md
+        - name: Create a cluster
+          href: install/create-a-new-sql-server-failover-cluster-setup.md
+        - name: Install client tools on a failover cluster
+          href: install-client-tools-on-a-sql-server-failover-cluster.md
+        - name: Add or remove nodes
+          href: install/add-or-remove-nodes-in-a-sql-server-failover-cluster-setup.md
+        - name: Remove a failover cluster (setup)
+          href: install/remove-a-sql-server-failover-cluster-instance-setup.md
+        - name: Rename a failover cluster
+          href: install/rename-a-sql-server-failover-cluster-instance.md
+    - name: Administration
+      items:
+        - name: View Cluster Quorum NodeWeight Settings
+          href: windows/view-cluster-quorum-nodeweight-settings.md
+        - name: Configure Cluster Quorum NodeWeight Settings
+          href: windows/configure-cluster-quorum-nodeweight-settings.md
+        - name: WSFC Disaster Recovery through Forced Quorum
+          href: windows/wsfc-disaster-recovery-through-forced-quorum-sql-server.md
+        - name: Force a WSFC Cluster to Start Without a Quorum
+          href: windows/force-a-wsfc-cluster-to-start-without-a-quorum.md
+        - name: Failover Cluster Troubleshooting
+          href: windows/failover-cluster-troubleshooting.md
+        - name: Troubleshoot Orphaned Users
+          href: troubleshoot-orphaned-users-sql-server.md
+
+
+
+- name: Concepts
+  items:
+    - name: Administration
+      items:
+        - name: Automatic Page Repair 
+          href: automatic-page-repair-availability-groups-database-mirroring.md
+        - name: Management of Logins and Jobs After Role Switching
+          href: management-of-logins-and-jobs-after-role-switching-sql-server.md
+        - name: WSFC Quorum Modes and Voting Configuration
+          href: windows/wsfc-quorum-modes-and-voting-configuration-sql-server.md
+
+
+
+- name: High Availability Solutions
+  href: 
+
+
+- name: 
+  href: 
+- name: Failover Cluster Installation
+  href: 
+- name: Windows Server Failover Clustering (WSFC) with SQL Server
+  href: 
+  items:
+
     items:
-    - name: View Cluster Quorum NodeWeight Settings
-      href: windows/view-cluster-quorum-nodeweight-settings.md
-    - name: Configure Cluster Quorum NodeWeight Settings
-      href: windows/configure-cluster-quorum-nodeweight-settings.md
-  - name: WSFC Disaster Recovery through Forced Quorum
-    href: windows/wsfc-disaster-recovery-through-forced-quorum-sql-server.md
-    items:
-    - name: Force a WSFC Cluster to Start Without a Quorum
-      href: windows/force-a-wsfc-cluster-to-start-without-a-quorum.md
+
+
+
   - name: SQL Server Multi-Subnet Clustering
     href: windows/sql-server-multi-subnet-clustering-sql-server.md
-  - name: Failover Cluster Troubleshooting
-    href: windows/failover-cluster-troubleshooting.md
+
 - name: Always On Failover Cluster Instances
   href: windows/always-on-failover-cluster-instances-sql-server.md
   items:

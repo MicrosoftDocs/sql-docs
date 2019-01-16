@@ -3,7 +3,7 @@ title: Release notes and changelog
 titleSuffix: Azure Data Studio
 description: 'Azure Data Studio release notes'
 ms.custom: "seodec18"
-ms.date: "01/10/2019"
+ms.date: "01/16/2019"
 ms.prod: sql
 ms.technology: azure-data-studio
 ms.reviewer: "alayu; sstein"
@@ -15,6 +15,14 @@ manager: craigg
 # Azure Data Studio latest release notes and changelog
 
 **[Download the January Release!](download.md)**
+
+
+## January Hotfix 2019 (January Hotfix Release)
+
+release date: January 16, 2019  
+version: 1.3.9
+
+Version 1.3.9 fixes issues discovered in 1.3.8. For details, see [January Hotfix Release](https://github.com/Microsoft/azuredatastudio/milestone/24?closed=1).
 
 
 ## January 2019 (January Release)

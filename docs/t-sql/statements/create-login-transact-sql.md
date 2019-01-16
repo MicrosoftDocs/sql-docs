@@ -24,8 +24,8 @@ helpviewer_keywords:
   - "re-hashing passwords"
   - "certificates [SQL Server], logins"
 ms.assetid: eb737149-7c92-4552-946b-91085d8b1b01
-author: CarlRabeler
-ms.author: carlrab
+author: VanMSFT
+ms.author: vanto
 manager: craigg
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---

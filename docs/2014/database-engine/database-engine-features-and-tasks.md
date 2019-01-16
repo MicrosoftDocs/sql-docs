@@ -25,7 +25,7 @@ manager: craigg
   
  [Database Engine Cross-Instance Features](../../2014/database-engine/database-engine-cross-instance-features.md)  
   
- [High Availability Solutions &#40;SQL Server&#41;](../sql-server/failover-clusters/high-availability-solutions-sql-server.md)  
+ [High Availability Solutions &#40;SQL Server&#41;](../database-engine/sql-server-business-continuity-dr.md)  
   
  [Security Center for SQL Server Database Engine and Azure SQL Database](../relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database.md)  
   

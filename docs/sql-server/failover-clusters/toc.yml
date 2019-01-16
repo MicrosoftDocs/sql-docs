@@ -14,7 +14,7 @@
         - name: Create a cluster
           href: install/create-a-new-sql-server-failover-cluster-setup.md
         - name: Install client tools on a failover cluster
-          href: install-client-tools-on-a-sql-server-failover-cluster.md
+          href: install/install-client-tools-on-a-sql-server-failover-cluster.md
         - name: Add or remove nodes
           href: install/add-or-remove-nodes-in-a-sql-server-failover-cluster-setup.md
         - name: Remove a failover cluster (setup)

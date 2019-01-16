@@ -64,7 +64,7 @@ The following features are installed when you select **[!INCLUDE[ssNoVersion](..
 ## See also  
  [Editions and supported features of SQL Server 2017](~/sql-server/editions-and-components-of-sql-server-2017.md)   
  [Planning a SQL Server Installation](../../sql-server/install/planning-a-sql-server-installation.md)   
- [High Availability Solutions &#40;SQL Server&#41;](../../sql-server/failover-clusters/high-availability-solutions-sql-server.md)   
+ [High Availability Solutions &#40;SQL Server&#41;](../../database-engine/sql-server-business-continuity-dr.md)   
  [Upgrade SQL Server Using the Installation Wizard &#40;Setup&#41;](../../database-engine/install-windows/upgrade-sql-server-using-the-installation-wizard-setup.md)  
   
   

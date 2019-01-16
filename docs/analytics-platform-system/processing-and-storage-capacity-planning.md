@@ -80,14 +80,14 @@ This table estimates that you could load and store up to 6 petabytes of uncompre
 |----------|--------------|------------------------------------------|----------------------------------|------------------------------------------|------------------------------------------------|-----------------|-----------------------------------------------------|  
 |HPE|1 TB|16 TB|8|128 TB|320 TB|7|2,240 TB|  
 |HPE|2 TB|32 TB|8|256 TB|640 TB|7|4,480 TB|  
-|HPE|3 TB|48 TB|8|384 TB|960 TB|7|6,720 TB|  
+|HPE|4 TB|64 TB|8|512 TB|1280 TB|7|8,960 TB|  
 |DELL|1 TB|16 TB|9|144 TB|360 TB|6|2,160 TB|  
 |DELL|2 TB|32 TB|9|288 TB|720 TB|6|4,320 TB|  
-|DELL|3 TB|48 TB|9|432 TB|1080 TB|6|6,480 TB|  
+|DELL|4 TB|64 TB|9|576 TB|1440 TB|6|8,640 TB|   
   
 Explanation:  
   
--   **Drive size** is 1, 2, or 3 TB for each Hardware vendor.  
+-   **Drive size** is 1, 2, or 4 TB for each Hardware vendor.  
   
 -   **Physical data storage per Compute node** = (Drive size) * (16 disks per Compute node). The mirrored disks are not included since they are for redundancy.  
   

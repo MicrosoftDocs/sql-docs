@@ -1,7 +1,7 @@
 ---
 title: "Trace Flags (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: 01/09/2019
+ms.date: 01/15/2019
 ms.prod: sql
 ms.prod_service: "sql-database"
 ms.reviewer: ""
@@ -139,6 +139,7 @@ The following table lists and describes the trace flags that are available in [!
 |**9488**|<a name="9488"></a>Sets the fixed estimation for Table Valued Functions to the default of 1 (corresponding to the default under the query optimizer cardinality estimation model of [!INCLUDE[ssKilimanjaro](../../includes/ssKilimanjaro-md.md)] and earlier versions), when using the query optimizer cardinality estimation model of [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] versions.<br /><br />**Scope**: global or session or query|
 |**9495**|Disables parallelism during insertion for INSERT...SELECT operations and it applies to both user and temporary tables. For more information, see [Microsoft Support article](https://support.microsoft.com/kb/3180087)<br /><br />**Scope**: global or session| 
 |**9567**|Enables compression of the data stream for Always On Availability Groups during automatic seeding. Compression can significantly reduce the transfer time during automatic seeding and will increase the load on the processor. For more information, see [Automatically initialize Always On availability group](../../database-engine/availability-groups/windows/automatically-initialize-always-on-availability-group.md) and [Tune compression for availability group](../../database-engine/availability-groups/windows/tune-compression-for-availability-group.md).<br /><br />**Scope**: global or session|
+|**9571**|Disables Availability Groups Auto seeding to the default database path. For more information see [Disk Layout](../../database-engine/availability-groups/windows/automatic-seeding-secondary-replicas.md).<br /><br />**Scope**: global or session| 
 |**9591**|Disables log block compression in Always On Availability Groups. Log block compression is the default behavior used with both synchronous and asynchronous replicas in [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] and [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]. In [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], compression is only used with asynchronous replica. <br /><br />**Scope**: global or session|
 |**9592**|Enables log stream compression for synchronous availability groups. This feature is disabled by default on synchronous availability groups because compression adds latency. For more information, see [Tune compression for availability group](../../database-engine/availability-groups/windows/tune-compression-for-availability-group.md).<br /><br />**Scope**: global or session| 
 |**9929**|Reduces the In-Memory checkpoint files to 1 MB each. For more information, see this [Microsoft Support article](https://support.microsoft.com/kb/3147012).<br /><br />**Scope**: global only|  

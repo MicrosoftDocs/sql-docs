@@ -121,7 +121,7 @@
   items:
     - name: Database Mirroring Security Wizard
       href: start-the-configuring-database-mirroring-security-wizard.md
-          items:
+      items:
         - name: Include Witness Server 
           href: include-witness-server-configure-database-mirroring-security-wizard.md
         - name: Choose Servers to Configure 

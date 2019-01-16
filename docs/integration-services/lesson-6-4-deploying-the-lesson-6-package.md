@@ -35,7 +35,7 @@ In this task, you:
   
 4.  If there are no catalogs listed under **Integration Services Catalogs**, then add the SSISDB catalog.  
   
-5.  To Add the SSISDB catalog, right-click **Integration Services Catalogs** and select **Create Catalog**.  
+5.  To add the SSISDB catalog, right-click **Integration Services Catalogs** and select **Create Catalog**.  
   
 6.  On the **Create Catalog** dialog box, select **Enable CLR Integration**.  
   
@@ -49,7 +49,7 @@ In this task, you:
   
 2.  In the **Create Folder** dialog box, enter SSIS Tutorial in the Folder name box, and select **OK**.  
   
-3.  Expand the SSIS Tutorial** folder, right-click **Projects**, and select **Import Packages**.  
+3.  Expand the **SSIS Tutorial** folder, right-click **Projects**, and select **Import Packages**.  
   
 4.  On the **Integration Services Project Conversion Wizard** **Introduction** page, select **Next**.  
   
@@ -83,7 +83,7 @@ When you close the Integration Services Project Conversion Wizard, SSIS displays
   
 6.  Expand **Integration Services Catalogs** then expand **SSISDB**. Continue to expand the tree under **SSIS Tutorial** until you have completely expanded the project. You should see **Lesson 6.dtsx** under the **Packages** node of the **SSIS Tutorial Deployment** node.  
   
-7.  To verify that the package is complete, right-click **Lesson 6.dtsx** and select **Configure**. On the **Configure** dialog box, select Parameters, and verify that there is an entry with **Lesson 6.dtsx** as the **Container**, **VarFolderName** as the **Name**, and the path to **New Sample Data** as the value, then select **Close**.  
+7.  To verify that the package is complete, right-click **Lesson 6.dtsx** and select **Configure**. On the **Configure** dialog box, select **Parameters**, and verify that there is an entry with **Lesson 6.dtsx** as the **Container**, **VarFolderName** as the **Name**, and the path to **New Sample Data** as the value, and then select **Close**.  
   
 ## Create and populate a new sample data folder  
   

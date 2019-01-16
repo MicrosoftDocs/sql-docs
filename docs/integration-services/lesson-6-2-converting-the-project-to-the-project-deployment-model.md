@@ -26,7 +26,7 @@ In this task, you use the Integration Services Project Conversion Wizard to conv
   
 5.  On the **Update Execute Package Task** page, select **Next**.  
   
-6.  On the **Select Configurations** page, make sure the **Lesson 6.dtsx package** is selected in the **Configurations** list, then select **Next**.  
+6.  On the **Select Configurations** page, make sure the **Lesson 6.dtsx** package is selected in the **Configurations** list, then select **Next**.  
   
 7.  On the **Create Parameters** page, make sure the **Lesson 6.dtsx** package is selected.  Verify the **Scope** is **Package** in the **Configuration Properties** list, and then select **Next**.  
   

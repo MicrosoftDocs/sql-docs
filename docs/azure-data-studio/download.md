@@ -22,7 +22,7 @@ manager: craigg
 
 Download and install the latest release, the *January Hotfix Release*:
 
-Version 1.3.9 fixes issues discovered in 1.3.8. For details, see [January Hotfix Release](https://github.com/Microsoft/azuredatastudio/milestone/24?closed=1).
+Version 1.3.9 fixes a few issues discovered in 1.3.8. For details, see [January Hotfix Release](https://github.com/Microsoft/azuredatastudio/milestone/24?closed=1).
 
 > [!NOTE]
 > If you're updating from SQL Operations Studio and want to keep your settings, keyboard shortcuts, or code snippets, see [Move user settings](#move-user-settings).

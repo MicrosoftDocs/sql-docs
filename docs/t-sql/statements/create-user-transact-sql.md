@@ -26,8 +26,8 @@ helpviewer_keywords:
   - "users [SQL Server], adding"
   - "users [SQL Server]"
 ms.assetid: 01de7476-4b25-4d58-85b7-1118fe64aa80
-author: CarlRabeler
-ms.author: carlrab
+author: VanMSFT
+ms.author: vanto
 manager: craigg
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---

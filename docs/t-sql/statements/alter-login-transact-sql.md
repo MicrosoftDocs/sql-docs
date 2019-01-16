@@ -21,8 +21,8 @@ helpviewer_keywords:
   - "names [SQL Server], logins"
   - "modifying login accounts"
 ms.assetid: e247b84e-c99e-4af8-8b50-57586e1cb1c5
-author: CarlRabeler
-ms.author: carlrab
+author: VanMSFT
+ms.author: vanto
 manager: craigg
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---

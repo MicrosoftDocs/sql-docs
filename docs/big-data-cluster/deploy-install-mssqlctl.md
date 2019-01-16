@@ -58,9 +58,9 @@ On Linux, you must install Python 3.5 and then upgrade pip. The following exampl
    ```bash
    pip3 install --extra-index-url https://private-repo.microsoft.com/python/ctp-2.2 mssqlctl --user
    ```
-
-   > 
-   > [!NOTE] The `--user` switch installs mssqlctl to the Python user install directory. This is typically `~/.local/bin` on Linux. Either add this directory to your path or navigate to the user install directory and run `./mssqlctl` from there.
+   
+   > [!NOTE]
+   > The `--user` switch installs mssqlctl to the Python user install directory. This is typically `~/.local/bin` on Linux. Either add this directory to your path or navigate to the user install directory and run `./mssqlctl` from there.
    
 ## Next steps
 

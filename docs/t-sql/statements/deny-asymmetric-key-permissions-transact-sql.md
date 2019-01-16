@@ -17,8 +17,8 @@ helpviewer_keywords:
   - "DENY statement, asymmetric keys"
   - "cryptography [SQL Server], asymmetric keys"
 ms.assetid: dd7d8cd5-536b-460c-ab5b-cb4752bbdfaa
-author: CarlRabeler
-ms.author: carlrab
+author: VanMSFT
+ms.author: vanto
 manager: craigg
 ---
 # DENY Asymmetric Key Permissions (Transact-SQL)

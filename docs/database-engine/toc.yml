@@ -26,11 +26,11 @@
   href: sql-server-business-continuity-dr.md
   items:
   - name: Availability groups
-    href: availability-groups/windows/toc.yml
+    href: ../availability-groups/windows/toc.yml
   - name: Database mirroring
-    href: database-mirroring/toc.yml
+    href: ../database-mirroring/toc.yml
   - name: Log shipping
-    href: log-shipping/toc.yml
+    href: ../log-shipping/toc.yml
   - name: Failover Cluster Instance
     href: ../sql-server/failover-clusters/toc.yml
 - name: Concepts

@@ -1,7 +1,8 @@
 - name: Overview
   href: windows/windows-server-failover-clustering-wsfc-with-sql-server.md
-
-
+  items:
+    - name: Always On Failover Cluster Instances
+      href: windows/always-on-failover-cluster-instances-sql-server.md
 - name: How-to
   items:
     - name: Deployment
@@ -20,6 +21,17 @@
           href: install/remove-a-sql-server-failover-cluster-instance-setup.md
         - name: Rename a failover cluster
           href: install/rename-a-sql-server-failover-cluster-instance.md
+        - name: Configure HealthCheckTimeout Property Settings
+          href: windows/configure-healthchecktimeout-property-settings.md
+        - name: Configure FailureConditionLevel Property Settings
+          href: windows/configure-failureconditionlevel-property-settings.md
+        - name: Upgrade a SQL Server Failover Cluster Instance
+          href: windows/upgrade-a-sql-server-failover-cluster-instance.md
+          items:
+            - name: Upgrade a SQL Server Failover Cluster Instance (Setup)
+              href: windows/upgrade-a-sql-server-failover-cluster-instance-setup.md
+            - name: Upgrade a SQL Server Failover Cluster Instance (Windows Server 2008/2008 R2/2012)
+              href: windows/upgrade-sql-server-failover-cluster-instance-2008-2012.md
     - name: Administration
       items:
         - name: View Cluster Quorum NodeWeight Settings
@@ -34,66 +46,31 @@
           href: windows/failover-cluster-troubleshooting.md
         - name: Troubleshoot Orphaned Users
           href: troubleshoot-orphaned-users-sql-server.md
-
-
-
+        - name: View and Read Failover Cluster Instance Diagnostics Log
+          href: windows/view-and-read-failover-cluster-instance-diagnostics-log.md
+        - name: Failover Cluster Instance Administration and Maintenance
+          href: windows/failover-cluster-instance-administration-and-maintenance.md
+          items:
+            - name: Add Dependencies to a SQL Server Resource
+              href: windows/add-dependencies-to-a-sql-server-resource.md
+            - name: Recover from Failover Cluster Instance Failure
+              href: windows/recover-from-failover-cluster-instance-failure.md
+            - name: Change the IP Address of a Failover Cluster Instance
+              href: windows/change-the-ip-address-of-a-failover-cluster-instance.md
 - name: Concepts
   items:
+    - name: Configuration
+      items: 
+        - name: WSFC Quorum Modes and Voting Configuration
+          href: windows/wsfc-quorum-modes-and-voting-configuration-sql-server.md
+        - name: SQL Server Multi-Subnet Clustering
+          href: windows/sql-server-multi-subnet-clustering-sql-server.md
+        - name: Failover Policy for Failover Cluster Instances
+          href: windows/failover-policy-for-failover-cluster-instances.md
     - name: Administration
       items:
         - name: Automatic Page Repair 
           href: automatic-page-repair-availability-groups-database-mirroring.md
         - name: Management of Logins and Jobs After Role Switching
           href: management-of-logins-and-jobs-after-role-switching-sql-server.md
-        - name: WSFC Quorum Modes and Voting Configuration
-          href: windows/wsfc-quorum-modes-and-voting-configuration-sql-server.md
 
-
-
-- name: High Availability Solutions
-  href: 
-
-
-- name: 
-  href: 
-- name: Failover Cluster Installation
-  href: 
-- name: Windows Server Failover Clustering (WSFC) with SQL Server
-  href: 
-  items:
-
-    items:
-
-
-
-  - name: SQL Server Multi-Subnet Clustering
-    href: windows/sql-server-multi-subnet-clustering-sql-server.md
-
-- name: Always On Failover Cluster Instances
-  href: windows/always-on-failover-cluster-instances-sql-server.md
-  items:
-  - name: Failover Policy for Failover Cluster Instances
-    href: windows/failover-policy-for-failover-cluster-instances.md
-    items:
-    - name: Configure HealthCheckTimeout Property Settings
-      href: windows/configure-healthchecktimeout-property-settings.md
-    - name: Configure FailureConditionLevel Property Settings
-      href: windows/configure-failureconditionlevel-property-settings.md
-    - name: View and Read Failover Cluster Instance Diagnostics Log
-      href: windows/view-and-read-failover-cluster-instance-diagnostics-log.md
-  - name: Failover Cluster Instance Administration and Maintenance
-    href: windows/failover-cluster-instance-administration-and-maintenance.md
-    items:
-    - name: Add Dependencies to a SQL Server Resource
-      href: windows/add-dependencies-to-a-sql-server-resource.md
-    - name: Recover from Failover Cluster Instance Failure
-      href: windows/recover-from-failover-cluster-instance-failure.md
-    - name: Change the IP Address of a Failover Cluster Instance
-      href: windows/change-the-ip-address-of-a-failover-cluster-instance.md
-  - name: Upgrade a SQL Server Failover Cluster Instance
-    href: windows/upgrade-a-sql-server-failover-cluster-instance.md
-    items:
-    - name: Upgrade a SQL Server Failover Cluster Instance (Setup)
-      href: windows/upgrade-a-sql-server-failover-cluster-instance-setup.md
-    - name: Upgrade a SQL Server Failover Cluster Instance (Windows Server 2008/2008 R2/2012)
-      href: windows/upgrade-sql-server-failover-cluster-instance-2008-2012.md

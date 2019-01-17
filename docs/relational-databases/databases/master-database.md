@@ -39,7 +39,7 @@ For information about how to move the **master** data and log files, see [Move S
 The following table lists the default value for each database option in the **master** database for SQL Server and Azure SQL Database Managed Instance and whether the option can be modified. To view the current settings for these options, use the [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) catalog view.  
   
 > [!IMPORTANT]
-> For Azure SQL Database logical server, the user has no control over these databse options.
+> For Azure SQL Database logical server, the user has no control over these database options.
 
 |Database option|Default value|Can be modified|  
 |---------------------|-------------------|---------------------|  

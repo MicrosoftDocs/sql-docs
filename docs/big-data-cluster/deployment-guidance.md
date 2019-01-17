@@ -243,7 +243,7 @@ kubectl get svc -n <your-cluster-name>
 
 Currently, the only way to upgrade a big data cluster to a new release is to manually remove and recreate the cluster. Each release has a unique version of **mssqlctl** that is not compatible with the previous version. Also, if an older cluster had to download an image on a new node, the latest image might not be compatible with the older images on the cluster. To upgrade to the latest release, use the following steps:
 
-1. Before deleting the old cluster, back up the data on the SQL Server master instance and on HDFS. For the SQL Server master instance, you can use [SQL Server backup and restore](data-ingestion-restore-databse.md). For HDFS, you [can copy the data out with **curl**](data-ingestion-curl.md).
+1. Before deleting the old cluster, back up the data on the SQL Server master instance and on HDFS. For the SQL Server master instance, you can use [SQL Server backup and restore](data-ingestion-restore-database.md). For HDFS, you [can copy the data out with **curl**](data-ingestion-curl.md).
 
 1. Delete the old cluster with the `mssqlctl delete cluster` command.
 

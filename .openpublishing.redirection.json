@@ -13779,20 +13779,6 @@
             "source_path": "docs/analysis-services/tabular-models/process-partitions-in-the-workspace-databse-ssas-tabular.md",
             "redirect_url": "/sql/analysis-services/tabular-models/process-partitions-in-the-workspace-database-ssas-tabular",
             "redirect_document_id": true
-        },
-        {
-            "source_path": "docs/big-data-cluster/data-ingestion-restore-databse.md",
-            "redirect_url": "/sql/big-data-cluster/data-ingestion-restore-database",
-            "redirect_document_id": true
-        },
-        {
-            "source_path": "docs/2014/analysis-services/tabular-models/process-partitions-in-the-workspace-databse-ssas-tabular.md",
-            "redirect_url": "/sql/analysis-services/tabular-models/process-partitions-in-the-workspace-database-ssas-tabular?view=sql-server-2014",
-            "redirect_document_id": true
-        },
-        {
-            "source_path": "docs/analysis-services/tabular-models/process-partitions-in-the-workspace-databse-ssas-tabular.md",
-            "redirect_url": "/sql/analysis-services/tabular-models/process-partitions-in-the-workspace-database-ssas-tabular",
-            "redirect_document_id": true}
+        }
     ]
 }

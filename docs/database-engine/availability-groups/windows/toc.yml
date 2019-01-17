@@ -1,8 +1,8 @@
 - name: Overview
   href: overview-of-always-on-availability-groups-sql-server.md
   items:
-  - name: Interoperability
-    href: always-on-availability-groups-interoperability-sql-server.md
+  - name: Availability modes
+    href: availability-modes-always-on-availability-groups.md
   - name: Technology and capabilities
     href: always-on-availability-groups-sql-server.md
   - name: Prerequisites, restrictions, and recommendations
@@ -24,87 +24,8 @@
       href: create-an-availability-group-sql-server-powershell.md
     - name: Azure virtual machines
       href: https://docs.microsoft.com/azure/virtual-machines/windows/sql/virtual-machines-windows-portal-sql-availability-group-overview
-  - name: Listener
-    href: create-or-configure-an-availability-group-listener-sql-server.md
-- name: Concepts
+- name: How-to
   items:
-  - name: Automatic seeding for secondary replicas
-    href: automatic-seeding-secondary-replicas.md
-  - name: Availability group policies
-    href: always-on-policies-for-operational-issues-always-on-availability.md
-  - name: Availability modes
-    href: availability-modes-always-on-availability-groups.md
-  - name: Backup on secondary
-    href: active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md
-  - name: Basic availability groups
-    href: basic-availability-groups-always-on-availability-groups.md
-  - name: Client connection
-    href: about-client-connection-access-to-availability-replicas-sql-server.md
-  - name: Client connectivity
-    href: always-on-client-connectivity-sql-server.md
-  - name: Distributed availability groups
-    href: distributed-availability-groups.md
-  - name: Domain independent availability groups
-    href: domain-independent-availability-groups.md
-  - name: Enhanced Database Failover 
-    href: enhanced-database-failover.md
-    items:
-    - name: Database health detection
-      href: sql-server-always-on-database-health-detection-failover-option.md
-  - name: Failover clustering and availability groups
-    href: failover-clustering-and-always-on-availability-groups-sql-server.md
-  - name: Failover and failover modes
-    href: failover-and-failover-modes-always-on-availability-groups.md
-  - name: Flexible failover policy for automatic failover
-    href: flexible-automatic-failover-policy-availability-group.md
-  - name: Lease, cluster, and health check timeouts
-    href: availability-group-lease-healthcheck-timeout.md
-  - name: Listeners, clients, and failover
-    href: listeners-client-connectivity-application-failover.md
-  - name: Logins and jobs
-    href: logins-and-jobs-for-availability-group-databases.md
-  - name: Possible failures during sessions between replicas
-    href: possible-failures-during-sessions-between-availability-replicas-sql-server.md
-  - name: Read-scale only
-    href: read-scale-availability-groups.md
-  - name: Readable secondary
-    href: active-secondaries-readable-secondary-replicas-always-on-availability-groups.md
-  - name: Interoperability with other features
-    items:
-    - name: Replication, CT, & CDC
-      items:
-      - name: Configure replication
-        href: configure-replication-for-always-on-availability-groups-sql-server.md
-      - name: Publication database
-        href: maintaining-an-always-on-publication-database-sql-server.md
-      - name: Subscribers
-        href: replication-subscribers-and-always-on-availability-groups-sql-server.md
-      - name: Change tracking and change data capture
-        href: replicate-track-change-data-capture-always-on-availability.md
-    - name: Contained databases
-      href: contained-databases-with-always-on-availability-groups-sql-server.md
-    - name: Database snapshots
-      href: database-snapshots-with-always-on-availability-groups-sql-server.md
-    - name: Distributed transactions
-      href: transactions-always-on-availability-and-database-mirroring.md
-      items:
-      - name: Cluster DTC
-        href: cluster-dtc-for-sql-server-2016-availability-groups.md
-    - name: Encrypted databases
-      href: encrypted-databases-with-always-on-availability-groups-sql-server.md
-    - name: Failover cluster instances
-      href: analysis-services-with-always-on-availability-groups.md
-    - name: FILESTREAM and FileTable
-      href: filestream-and-filetable-with-always-on-availability-groups-sql-server.md
-    - name: Migrating from log shipping
-      href: prereqs-migrating-log-shipping-to-always-on-availability-groups.md
-    - name: Remote blob store (RBS)
-      href: remote-blob-store-rbs-and-always-on-availability-groups-sql-server.md
-    - name: Reporting Services
-      href: reporting-services-with-always-on-availability-groups-sql-server.md
-    - name: Service Broker
-      href: service-broker-with-always-on-availability-groups-sql-server.md
-- name: How-to guides
   href: administration-of-an-availability-group-sql-server.md
   items:
   - name: Configure availability group
@@ -213,14 +134,93 @@
       href: upgrading-always-on-availability-group-replica-instances.md
     - name: View health with policies
       href: use-always-on-policies-to-view-the-health-of-an-availability-group-sql-server.md
-- name: References
+- name: Concepts
   items:
-  - name: PowerShell Cmdlets
-    href: overview-of-powershell-cmdlets-for-always-on-availability-groups-sql-server.md
-  - name: Transact-SQL
-    href: transact-sql-statements-for-always-on-availability-groups.md
-- name: Resources
-  items:
+    - name: Configuration
+      items:
+        - name: Automatic seeding for secondary replicas
+          href: automatic-seeding-secondary-replicas.md
+        - name: Basic availability groups
+          href: basic-availability-groups-always-on-availability-groups.md
+        - name: Distributed availability groups
+          href: distributed-availability-groups.md
+        - name: Domain independent availability groups
+          href: domain-independent-availability-groups.md
+        - name: Failover clustering and availability groups
+          href: failover-clustering-and-always-on-availability-groups-sql-server.md
+        - name: Failover and failover modes
+          href: failover-and-failover-modes-always-on-availability-groups.md
+        - name: Flexible failover policy for automatic failover
+          href: flexible-automatic-failover-policy-availability-group.md
+        - name: Read-scale only
+          href: read-scale-availability-groups.md
+    - name: Administration
+      items: 
+        - name: Backup on Secondary Replica
+          href: active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md
+        - name: Readable secondary
+          href: active-secondaries-readable-secondary-replicas-always-on-availability-groups.md
+        - name: Enhanced Database Failover 
+          href: enhanced-database-failover.md
+        - name: Database health detection
+          href: sql-server-always-on-database-health-detection-failover-option.md
+        - name: Lease, cluster, and health check timeouts
+          href: availability-group-lease-healthcheck-timeout.md
+        - name: Logins and jobs
+          href: logins-and-jobs-for-availability-group-databases.md
+        - name: Possible failures during sessions between replicas
+          href: possible-failures-during-sessions-between-availability-replicas-sql-server.md
+    - name: Connectivity
+      items:
+        - name: Client connection
+          href: about-client-connection-access-to-availability-replicas-sql-server.md
+        - name: Client connectivity
+          href: always-on-client-connectivity-sql-server.md
+        - name: Listeners, clients, and failover
+          href: listeners-client-connectivity-application-failover.md
+      - name: Interoperability with other features
+    items:
+    - name: Replication, CT, & CDC
+      href: replicate-track-change-data-capture-always-on-availability.md
+      items:
+      - name: Configure replication
+        href: configure-replication-for-always-on-availability-groups-sql-server.md
+      - name: Publication database
+        href: maintaining-an-always-on-publication-database-sql-server.md
+      - name: Subscribers
+        href: replication-subscribers-and-always-on-availability-groups-sql-server.md
+    - name: Contained databases
+      href: contained-databases-with-always-on-availability-groups-sql-server.md
+    - name: Database snapshots
+      href: database-snapshots-with-always-on-availability-groups-sql-server.md
+    - name: Distributed transactions
+      href: transactions-always-on-availability-and-database-mirroring.md
+      items:
+      - name: Cluster DTC
+        href: cluster-dtc-for-sql-server-2016-availability-groups.md
+    - name: Encrypted databases
+      href: encrypted-databases-with-always-on-availability-groups-sql-server.md
+    - name: Failover cluster instances
+      href: analysis-services-with-always-on-availability-groups.md
+    - name: FILESTREAM and FileTable
+      href: filestream-and-filetable-with-always-on-availability-groups-sql-server.md
+    - name: Migrating from log shipping
+      href: prereqs-migrating-log-shipping-to-always-on-availability-groups.md
+    - name: Remote blob store (RBS)
+      href: remote-blob-store-rbs-and-always-on-availability-groups-sql-server.md
+    - name: Reporting Services
+      href: reporting-services-with-always-on-availability-groups-sql-server.md
+    - name: Service Broker
+      href: service-broker-with-always-on-availability-groups-sql-server.md
+
+
+
+- name: Reference
+  items: 
+    - name: PowerShell Cmdlets
+      href: overview-of-powershell-cmdlets-for-always-on-availability-groups-sql-server.md
+    - name: Transact-SQL
+      href: transact-sql-statements-for-always-on-availability-groups.md
   - name: Dialogs and Wizards
     items:
     - name: Add IP Address Dialog Box
@@ -263,6 +263,7 @@
     - name: "Availability Group Properties: New Availability Group (Backup Preferences Page)"
       href: availability-group-properties-new-availability-group-backup-preferences-page.md
   - name: Policies
+    href: always-on-policies-for-operational-issues-always-on-availability.md
     items:
     - name: Availability database is suspended
       href: availability-database-is-suspended.md

@@ -1,233 +1,305 @@
-- name: Always On Availability Groups
-  href: always-on-availability-groups-sql-server.md
-- name: Prerequisites, Restrictions, and Recommendations for AlwaysOn Availability Groups
-  href: prereqs-restrictions-recommendations-always-on-availability.md
-- name: Failover Clustering and AlwaysOn Availability Groups
-  href: failover-clustering-and-always-on-availability-groups-sql-server.md
-- name: Getting Started with AlwaysOn Availability Groups (SQL Server)
-  href: getting-started-with-always-on-availability-groups-sql-server.md
-- name: Overview of AlwaysOn Availability Groups
+
+- name: Overview
   href: overview-of-always-on-availability-groups-sql-server.md
+  items: 
+    - name: Prerequisites, Restrictions, and Recommendations for AlwaysOn Availability Groups
+      href: prereqs-restrictions-recommendations-always-on-availability.md
+    - name: Availability Modes
+      href: availability-modes-always-on-availability-groups.md
+- name: Quickstart
   items:
-  - name: Availability Modes
-    href: availability-modes-always-on-availability-groups.md
-    items:
-    - name: Change the Availability Mode of an Availability Replica
-      href: change-the-availability-mode-of-an-availability-replica-sql-server.md
-  - name: Failover and Failover Modes
-    href: failover-and-failover-modes-always-on-availability-groups.md
-  - name: Change the Failover Mode of an Availability Replica
-    href: change-the-failover-mode-of-an-availability-replica-sql-server.md
-  - name: Flexible Failover Policy for Automatic Failover of an Availability Group
-    href: flexible-automatic-failover-policy-availability-group.md
-  - name: Configure the Flexible Failover Policy to Control Conditions for Automatic Failover
-    href: configure-flexible-automatic-failover-policy.md
-  - name: Possible Failures During Sessions Between Availability Replicas (SQL Server)
-    href: possible-failures-during-sessions-between-availability-replicas-sql-server.md
-  - name: "Active Secondaries: Backup on Secondary Replicas"
-    href: active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md
-  - name: Configure Backup on Availability Replicas
-    href: configure-backup-on-availability-replicas-sql-server.md
-  - name: "Active Secondaries: Readable Secondary Replicas"
-    href: active-secondaries-readable-secondary-replicas-always-on-availability-groups.md
-  - name: About Client Connection Access to Availability Replicas
-    href: about-client-connection-access-to-availability-replicas-sql-server.md
-  - name: Configure Read-Only Access on an Availability Replica
-    href: configure-read-only-access-on-an-availability-replica-sql-server.md
-  - name: Availability Group Listeners, Client Connectivity, and Application Failover
-    href: ../../listeners-client-connectivity-application-failover.md
-  - name: Always On Client Connectivity
-    href: always-on-client-connectivity-sql-server.md
-  - name: Create or Configure an Availability Group Listener
-    href: create-or-configure-an-availability-group-listener-sql-server.md
-  - name: Add IP Address Dialog Box
-    href: add-ip-address-dialog-box-sql-server-management-studio.md
-  - name: Configure Read-Only Routing for an Availability Group
-    href: configure-read-only-routing-for-an-availability-group-sql-server.md
-  - name: Remove Availability Group Listener
-    href: remove-an-availability-group-listener-sql-server.md
-  - name: Overview of Transact-SQL Statements for AlwaysOn Availability Groups
-    href: transact-sql-statements-for-always-on-availability-groups.md
-  - name: Overview of PowerShell Cmdlets for AlwaysOn Availability Groups
-    href: overview-of-powershell-cmdlets-for-always-on-availability-groups-sql-server.md
-- name: Configuration of a Server Instance for Always On Availability Groups
-  href: configuration-of-a-server-instance-for-always-on-availability-groups-sql-server.md
+    - name: Getting starrted
+      href: getting-started-with-always-on-availability-groups-sql-server.md
+    - name: Create availability group
+      items:
+        - name: Wizard
+          href: use-the-availability-group-wizard-sql-server-management-studio.md
+        - name: Dialog box
+          href: use-the-new-availability-group-dialog-box-sql-server-management-studio.md
+        - name: Transact-SQL
+          href: create-an-availability-group-transact-sql.md
+        - name: PowerShell
+          href: create-an-availability-group-sql-server-powershell.md
+        - name: Azure virtual machines
+          href: https://docs.microsoft.com/azure/virtual-machines/windows/sql/virtual-machines-windows-portal-sql-availability-group-overview
+- name: How-to 
+  items: 
+    - name: Configuration
+      href: creation-and-configuration-of-availability-groups-sql-server.md
+      items:
+        - name: Enable and Disable AlwaysOn Availability Groups
+          href: enable-and-disable-always-on-availability-groups-sql-server.md
+        - name: Create an endpoint for AlwaysOn Availability Groups (PowerShell)
+          href: database-mirroring-always-on-availability-groups-powershell.md
+        - name: Specify the Endpoint URL When Adding or Modifying an Availability Replica
+          href: specify-endpoint-url-adding-or-modifying-availability-replica.md
+        - name: Join a Secondary Replica to an Availability Group
+          href: join-a-secondary-replica-to-an-availability-group-sql-server.md
+        - name: Start Data Movement on an AlwaysOn Secondary Database
+          href: start-data-movement-on-an-always-on-secondary-database-sql-server.md
+        - name: Manually Prepare a Secondary Database for an Availability Group
+          href: manually-prepare-a-secondary-database-for-an-availability-group-sql-server.md
+        - name: Join a Secondary Database to an Availability Group
+          href: join-a-secondary-database-to-an-availability-group-sql-server.md
+        - name: Add a Secondary Replica to an Availability Group
+          href: add-a-secondary-replica-to-an-availability-group-sql-server.md
+        - name: Use the Add Replica to Availability Group Wizard
+          href: use-the-add-replica-to-availability-group-wizard-sql-server-management-studio.md
+        - name: Use the Add Azure Replica Wizard
+          href: use-the-add-azure-replica-wizard-sql-server.md
+        - name: Add a Database to an Availability Group
+          href: availability-group-add-a-database.md
+        - name: Use the Add Database to Availability Group Wizard
+          href: availability-group-add-database-to-group-wizard.md
+        - name: Create or Configure an Availability Group Listener
+          href: create-or-configure-an-availability-group-listener-sql-server.md
+        - name: Configure Read-Only Routing for an Availability Group
+          href: configure-read-only-routing-for-an-availability-group-sql-server.md
+        - name: Remove a Secondary Database from an Availability Group (SQL Server)
+          href: remove-a-secondary-database-from-an-availability-group-sql-server.md
+        - name: Remove a Primary Database from an Availability Group
+          href: remove-a-primary-database-from-an-availability-group-sql-server.md
+        - name: Remove a Secondary Replica from an Availability Group
+          href: remove-a-secondary-replica-from-an-availability-group-sql-server.md
+        - name: Remove an Availability Group
+          href: remove-an-availability-group-sql-server.md
+        - name: Remove Availability Group Listener
+          href: remove-an-availability-group-listener-sql-server.md
+        - name: Troubleshoot AlwaysOn Availability Groups Configuration
+          href: troubleshoot-always-on-availability-groups-configuration-sql-server.md          
+    - name: Administration
+      items: 
+       - name: Perform a Planned Manual Failover of an Availability Group
+         href: perform-a-planned-manual-failover-of-an-availability-group-sql-server.md
+       - name: Perform a Forced Manual Failover of an Availability Group
+         href: perform-a-forced-manual-failover-of-an-availability-group-sql-server.md
+       - name: Use the Fail Over Availability Group Wizard
+         href: use-the-fail-over-availability-group-wizard-sql-server-management-studio.md
+       - name: Change the Availability Mode of an Availability Replica
+         href: change-the-availability-mode-of-an-availability-replica-sql-server.md
+       - name: Change the Failover Mode of an Availability Replica
+         href: change-the-failover-mode-of-an-availability-replica-sql-server.md
+       - name: Configure the Flexible Failover Policy to Control Conditions for Automatic Failover
+         href: configure-flexible-automatic-failover-policy.md
+       - name: Configure Backup on Availability Replicas
+         href: configure-backup-on-availability-replicas-sql-server.md
+       - name: Configure Read-Only Access on an Availability Replica
+         href: configure-read-only-access-on-an-availability-replica-sql-server.md
+       - name: Suspend an Availability Database
+         href: suspend-an-availability-database-sql-server.md
+       - name: Resume an Availability Database
+         href: resume-an-availability-database-sql-server.md
+       - name: Change the Session-Timeout Period for an Availability Replica
+         href: change-the-session-timeout-period-for-an-availability-replica-sql-server.md
+       - name: Take an Availability Group Offline
+         href: ../../take-an-availability-group-offline-sql-server.md
+       - name: Change the HADR Cluster Context of Server Instance
+         href: change-the-hadr-cluster-context-of-server-instance-sql-server.md
+       - name: Troubleshoot a Failed Add-File Operation (AlwaysOn Availability Groups)
+         href: troubleshoot-a-failed-add-file-operation-always-on-availability-groups.md
+    - name: Monitoring 
+        href: monitoring-of-availability-groups-sql-server.md
+        items:
+          - name: Monitor Availability Groups (T-SQL)
+            href: monitor-availability-groups-transact-sql.md
+          - name: Use the Object Explorer Details to Monitor Availability Groups 
+            href: use-object-explorer-details-to-monitor-availability-groups.md
+          - name: View Availability Group Properties
+            href: view-availability-group-properties-sql-server.md
+          - name: View Availability Replica Properties
+            href: view-availability-replica-properties-sql-server.md
+          - name: View Availability Group Listener Properties
+            href: view-availability-group-listener-properties-sql-server.md  
+- name: Concepts
   items:
-  - name: Enable and Disable AlwaysOn Availability Groups
-    href: enable-and-disable-always-on-availability-groups-sql-server.md
-  - name: Create a Database Mirroring Endpoint for AlwaysOn Availability Groups (SQL Server PowerShell)
-    href: database-mirroring-always-on-availability-groups-powershell.md
-  - name: Troubleshoot AlwaysOn Availability Groups Configuration
-    href: troubleshoot-always-on-availability-groups-configuration-sql-server.md
-- name: Creation and Configuration of Availability Groups
-  href: creation-and-configuration-of-availability-groups-sql-server.md
-  items:
-  - name: Use the Availability Group Wizard
-    href: use-the-availability-group-wizard-sql-server-management-studio.md
-  - name: Specify Availability Group Name Page (New Availability Group Wizard-Add Database Wizard)
-    href: specify-availability-group-name-page.md
-  - name: Select Databases Page (New Availability Group Wizard/Add Database Wizard)
-    href: select-databases-page-new-availability-group-wizard-and-add-database-wizard.md
-  - name: "Specify Replicas Page (New Availability Group Wizard: Add Replica Wizard)"
-    href: specify-replicas-page-new-availability-group-wizard-add-replica-wizard.md
-  - name: Select Initial Data Synchronization Page (AlwaysOn Availability Group Wizards)
-    href: select-initial-data-synchronization-page-always-on-availability-group-wizards.md
-  - name: Validation Page (AlwaysOn Availability Group Wizards)
-    href: validation-page-always-on-availability-group-wizards.md
-  - name: Summary Page (AlwaysOn Availability Group Wizards)
-    href: summary-page-always-on-availability-group-wizards.md
-  - name: Progress Page (AlwaysOn Availability Group Wizards)
-    href: progress-page-always-on-availability-group-wizards.md
-  - name: Results Page (AlwaysOn Availability Group Wizards)
-    href: results-page-always-on-availability-group-wizards.md
-  - name: Use the New Availability Group Dialog Box
-    href: use-the-new-availability-group-dialog-box-sql-server-management-studio.md
-  - name: Create an Availability Group (Transact-SQL)
-    href: create-an-availability-group-transact-sql.md
-  - name: Create an Availability Group (SQL Server PowerShell)
-    href: create-an-availability-group-sql-server-powershell.md
-  - name: Specify the Endpoint URL When Adding or Modifying an Availability Replica
-    href: specify-endpoint-url-adding-or-modifying-availability-replica.md
-  - name: Join a Secondary Replica to an Availability Group
-    href: join-a-secondary-replica-to-an-availability-group-sql-server.md
-  - name: Start Data Movement on an AlwaysOn Secondary Database
-    href: start-data-movement-on-an-always-on-secondary-database-sql-server.md
-  - name: Manually Prepare a Secondary Database for an Availability Group
-    href: manually-prepare-a-secondary-database-for-an-availability-group-sql-server.md
-  - name: Join a Secondary Database to an Availability Group
-    href: join-a-secondary-database-to-an-availability-group-sql-server.md
-  - name: Management of Logins and Jobs for the Databases of an Availability Group
-    href: ../../logins-and-jobs-for-availability-group-databases.md
-- name: Administration of an Availability Group
-  href: administration-of-an-availability-group-sql-server.md
-  items:
-  - name: Perform a Planned Manual Failover of an Availability Group
-    href: perform-a-planned-manual-failover-of-an-availability-group-sql-server.md
-  - name: Perform a Forced Manual Failover of an Availability Group
-    href: perform-a-forced-manual-failover-of-an-availability-group-sql-server.md
-  - name: Use the Fail Over Availability Group Wizard
-    href: use-the-fail-over-availability-group-wizard-sql-server-management-studio.md
-  - name: Add a Database to an Availability Group
-    href: availability-group-add-a-database.md
-  - name: Use the Add Database to Availability Group Wizard
-    href: availability-group-add-database-to-group-wizard.md
-- name: Connect to Existing Secondary Replicas Page (Add Replica Wizard and Add Databases Wizard)
-  href: connect-to-existing-secondary-replicas-page.md
-  items:
-  - name: Suspend an Availability Database
-    href: suspend-an-availability-database-sql-server.md
-  - name: Resume an Availability Database
-    href: resume-an-availability-database-sql-server.md
-  - name: Remove a Secondary Database from an Availability Group (SQL Server)
-    href: remove-a-secondary-database-from-an-availability-group-sql-server.md
-  - name: Remove a Primary Database from an Availability Group
-    href: remove-a-primary-database-from-an-availability-group-sql-server.md
-  - name: Add a Secondary Replica to an Availability Group
-    href: add-a-secondary-replica-to-an-availability-group-sql-server.md
-  - name: Use the Add Replica to Availability Group Wizard
-    href: use-the-add-replica-to-availability-group-wizard-sql-server-management-studio.md
-  - name: Use the Add Azure Replica Wizard
-    href: use-the-add-azure-replica-wizard-sql-server.md
-  - name: Change the Session-Timeout Period for an Availability Replica
-    href: change-the-session-timeout-period-for-an-availability-replica-sql-server.md
-  - name: Remove a Secondary Replica from an Availability Group
-    href: remove-a-secondary-replica-from-an-availability-group-sql-server.md
-  - name: Remove an Availability Group
-    href: remove-an-availability-group-sql-server.md
-  - name: Take an Availability Group Offline
-    href: ../../take-an-availability-group-offline-sql-server.md
-  - name: Change the HADR Cluster Context of Server Instance
-    href: change-the-hadr-cluster-context-of-server-instance-sql-server.md
-  - name: Troubleshoot a Failed Add-File Operation (AlwaysOn Availability Groups)
-    href: troubleshoot-a-failed-add-file-operation-always-on-availability-groups.md
-- name: Upgrade and Update of Availability Group Servers with Minimal Downtime and Data Loss
-  href: upgrading-always-on-availability-group-replica-instances.md
-- name: Always On Policies for Operational Issues with Always On Availability Groups
-  href: always-on-policies-for-operational-issues-always-on-availability.md
-  items:
-  - name: Use AlwaysOn Policies to View the Health of an Availability Group
-    href: use-always-on-policies-to-view-the-health-of-an-availability-group-sql-server.md
-  - name: Use the AlwaysOn Dashboard (SQL Server Management Studio)
-    href: use-the-always-on-dashboard-sql-server-management-studio.md
-  - name: Options (SQL Server AlwaysOn, Dashboard Page)
-    href: options-sql-server-always-on-dashboard-page.md
-  - name: Policy Evaluation Result (AlwaysOn)
-    href: policy-evaluation-result-always-on.md
-  - name: WSFC cluster service is offline
-    href: wsfc-cluster-service-is-offline.md
-  - name: Availability group is offline
-    href: availability-group-is-offline.md
-  - name: Availability group is not ready for automatic failover
-    href: availability-group-is-not-ready-for-automatic-failover.md
-  - name: Some availability replicas are not synchronizing data
-    href: some-availability-replicas-are-not-synchronizing-data.md
-  - name: Some synchronous replicas are not synchronized
-    href: some-synchronous-replicas-are-not-synchronized.md
-  - name: Some availability replicas do not have a healthy role
-    href: some-availability-replicas-do-not-have-a-healthy-role.md
-  - name: Some availability replicas are disconnected
-    href: some-availability-replicas-are-disconnected.md
-  - name: Availability replica does not have a healthy role
-    href: availability-replica-does-not-have-a-healthy-role.md
-  - name: Availability replica is disconnected
-    href: availability-replica-is-disconnected.md
-  - name: Data synchronization state of availability database is not healthy
-    href: data-synchronization-state-of-availability-database-is-not-healthy.md
-  - name: Availability replica is not joined
-    href: availability-replica-is-not-joined.md
-  - name: Availability database is suspended
-    href: availability-database-is-suspended.md
-  - name: Secondary database is not joined
-    href: secondary-database-is-not-joined.md
-  - name: Data synchronization state of some availability database is not healthy
-    href: data-synchronization-state-of-some-availability-database-is-not-healthy.md
-- name: Monitoring of Availability Groups
-  href: monitoring-of-availability-groups-sql-server.md
-  items:
-  - name: Monitor Availability Groups (Transact-SQL)
-    href: monitor-availability-groups-transact-sql.md
-  - name: Use the Object Explorer Details to Monitor Availability Groups (SQL Server Management Studio)
-    href: use-object-explorer-details-to-monitor-availability-groups.md
-  - name: View Availability Group Properties
-    href: view-availability-group-properties-sql-server.md
-  - name: Availability Group Properties and New Availability Group (General Page)
-    href: availability-group-properties-new-availability-group-general-page.md
-  - name: "Availability Group Properties: New Availability Group (Backup Preferences Page)"
-    href: availability-group-properties-new-availability-group-backup-preferences-page.md
-  - name: View Availability Replica Properties
-    href: view-availability-replica-properties-sql-server.md
-  - name: Availability Replica Properties (General Page)
-    href: availability-replica-properties-general-page.md
-  - name: View Availability Group Listener Properties
-    href: view-availability-group-listener-properties-sql-server.md
-- name: "Always On Availability Groups: Interoperability"
-  href: always-on-availability-groups-interoperability-sql-server.md
-  items:
-  - name: Contained Databases with Always On Availability Groups
-    href: contained-databases-with-always-on-availability-groups-sql-server.md
-  - name: Cross-Database Transactions Not Supported For Database Mirroring or AlwaysOn Availability Groups
-    href: transactions-always-on-availability-and-database-mirroring.md
-  - name: Database Snapshots with AlwaysOn Availability Groups
-    href: database-snapshots-with-always-on-availability-groups-sql-server.md
-  - name: Encrypted Databases with AlwaysOn Availability Groups
-    href: encrypted-databases-with-always-on-availability-groups-sql-server.md
-  - name: FILESTREAM and FileTable with AlwaysOn Availability Groups
-    href: filestream-and-filetable-with-always-on-availability-groups-sql-server.md
-  - name: Prerequisites for Migrating from Log Shipping to AlwaysOn Availability Groups (SQL Server)
-    href: prereqs-migrating-log-shipping-to-always-on-availability-groups.md
-  - name: Remote Blob Store (RBS) and AlwaysOn Availability Groups
-    href: remote-blob-store-rbs-and-always-on-availability-groups-sql-server.md
-  - name: Configure Replication for Always On Availability Groups
-    href: configure-replication-for-always-on-availability-groups-sql-server.md
-  - name: Maintaining an AlwaysOn Publication Database
-    href: maintaining-an-always-on-publication-database-sql-server.md
-  - name: Replication Subscribers and AlwaysOn Availability Groups
-    href: replication-subscribers-and-always-on-availability-groups-sql-server.md
-  - name: Replication, Change Tracking, Change Data Capture, and AlwaysOn Availability Groups
-    href: replicate-track-change-data-capture-always-on-availability.md
-  - name: Analysis Services with Always On Availability Groups
-    href: analysis-services-with-always-on-availability-groups.md
-  - name: Reporting Services with AlwaysOn Availability Groups
-    href: reporting-services-with-always-on-availability-groups-sql-server.md
-  - name: Service Broker with AlwaysOn Availability Groups
-    href: service-broker-with-always-on-availability-groups-sql-server.md
+    - name: Configuration
+      items: 
+        - name: Failover Clustering and AlwaysOn Availability Groups
+          href: failover-clustering-and-always-on-availability-groups-sql-server.md
+        - name: Failover and Failover Modes
+          href: failover-and-failover-modes-always-on-availability-groups.md
+        - name: Flexible Failover Policy for Automatic Failover of an Availability Group
+          href: flexible-automatic-failover-policy-availability-group.md
+         - name: Management of Logins and Jobs for the Databases of an Availability Group
+          href: ../../logins-and-jobs-for-availability-group-databases.md
+    - name: Administration
+      href: administration-of-an-availability-group-sql-server.md
+      items: 
+        - name: Possible Failures During Sessions Between Availability Replicas (SQL Server)
+          href: possible-failures-during-sessions-between-availability-replicas-sql-server.md
+        - name: Backup on Secondary Replicas
+          href: active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md
+        - name: Readable Secondary Replicas
+          href: active-secondaries-readable-secondary-replicas-always-on-availability-groups.md
+        - name: Upgrade and Update of Availability Group Servers with Minimal Downtime and Data Loss
+          href: upgrading-always-on-availability-group-replica-instances.md
+    - name: Connectivity 
+      items: 
+       - name: Client connection
+         href: about-client-connection-access-to-availability-replicas-sql-server.md
+       - name: Client connectivity
+         href: ../../listeners-client-connectivity-application-failover.md
+       - name: Always On Client Connectivity
+         href: always-on-client-connectivity-sql-server.md
+    - name: Interoperability
+      href: always-on-availability-groups-interoperability-sql-server.md
+      items:
+        - name: Contained Databases with Always On Availability Groups
+          href: contained-databases-with-always-on-availability-groups-sql-server.md
+        - name: Cross-Database Transactions Not Supported For Database Mirroring or AlwaysOn Availability Groups
+          href: transactions-always-on-availability-and-database-mirroring.md
+        - name: Database Snapshots with AlwaysOn Availability Groups
+          href: database-snapshots-with-always-on-availability-groups-sql-server.md
+        - name: Encrypted Databases with AlwaysOn Availability Groups
+          href: encrypted-databases-with-always-on-availability-groups-sql-server.md
+        - name: FILESTREAM and FileTable with AlwaysOn Availability Groups
+          href: filestream-and-filetable-with-always-on-availability-groups-sql-server.md
+        - name: Prerequisites for Migrating from Log Shipping to AlwaysOn Availability Groups (SQL Server)
+          href: prereqs-migrating-log-shipping-to-always-on-availability-groups.md
+        - name: Remote Blob Store (RBS) and AlwaysOn Availability Groups
+          href: remote-blob-store-rbs-and-always-on-availability-groups-sql-server.md
+        - name: Configure Replication for Always On Availability Groups
+          href: configure-replication-for-always-on-availability-groups-sql-server.md
+        - name: Maintaining an AlwaysOn Publication Database
+          href: maintaining-an-always-on-publication-database-sql-server.md
+        - name: Replication Subscribers and AlwaysOn Availability Groups
+          href: replication-subscribers-and-always-on-availability-groups-sql-server.md
+        - name: Replication, Change Tracking, Change Data Capture, and AlwaysOn Availability Groups
+          href: replicate-track-change-data-capture-always-on-availability.md
+        - name: Analysis Services with Always On Availability Groups
+          href: analysis-services-with-always-on-availability-groups.md
+        - name: Reporting Services with AlwaysOn Availability Groups
+          href: reporting-services-with-always-on-availability-groups-sql-server.md
+        - name: Service Broker with AlwaysOn Availability Groups
+          href: service-broker-with-always-on-availability-groups-sql-server.md
+- name: Reference
+  items: 
+    - name: Overview of Transact-SQL Statements for AlwaysOn Availability Groups
+      href: transact-sql-statements-for-always-on-availability-groups.md
+    - name: Overview of PowerShell Cmdlets for AlwaysOn Availability Groups
+      href: overview-of-powershell-cmdlets-for-always-on-availability-groups-sql-server.md
+    - name: Availability Group Wizard
+      items: 
+        - name: Add IP Address Dialog Box
+          href: add-ip-address-dialog-box-sql-server-management-studio.md
+        - name: Specify Availability Group Name Page (New Availability Group Wizard-Add Database Wizard)
+          href: specify-availability-group-name-page.md
+        - name: Select Databases Page (New Availability Group Wizard/Add Database Wizard)
+          href: select-databases-page-new-availability-group-wizard-and-add-database-wizard.md
+        - name: "Specify Replicas Page (New Availability Group Wizard: Add Replica Wizard)"
+          href: specify-replicas-page-new-availability-group-wizard-add-replica-wizard.md
+        - name: Select Initial Data Synchronization Page (AlwaysOn Availability Group Wizards)
+          href: select-initial-data-synchronization-page-always-on-availability-group-wizards.md
+        - name: Validation Page (AlwaysOn Availability Group Wizards)
+          href: validation-page-always-on-availability-group-wizards.md
+        - name: Summary Page (AlwaysOn Availability Group Wizards)
+          href: summary-page-always-on-availability-group-wizards.md
+        - name: Progress Page (AlwaysOn Availability Group Wizards)
+          href: progress-page-always-on-availability-group-wizards.md
+        - name: Results Page (AlwaysOn Availability Group Wizards)
+          href: results-page-always-on-availability-group-wizards.md
+        - name: Use the New Availability Group Dialog Box
+          href: use-the-new-availability-group-dialog-box-sql-server-management-studio.md
+        - name: Connect to Existing Secondary Replicas Page (Add Replica Wizard and Add Databases Wizard)
+          href: connect-to-existing-secondary-replicas-page.md
+    - name: Availability group policies
+      href: always-on-policies-for-operational-issues-always-on-availability.md
+      items:
+        - name: Use AlwaysOn Policies to View the Health of an Availability Group
+          href: use-always-on-policies-to-view-the-health-of-an-availability-group-sql-server.md
+        - name: Use the AlwaysOn Dashboard (SQL Server Management Studio)
+          href: use-the-always-on-dashboard-sql-server-management-studio.md
+        - name: Options (SQL Server AlwaysOn, Dashboard Page)
+          href: options-sql-server-always-on-dashboard-page.md
+        - name: Policy Evaluation Result (AlwaysOn)
+          href: policy-evaluation-result-always-on.md
+        - name: WSFC cluster service is offline
+          href: wsfc-cluster-service-is-offline.md
+        - name: Availability group is offline
+          href: availability-group-is-offline.md
+        - name: Availability group is not ready for automatic failover
+          href: availability-group-is-not-ready-for-automatic-failover.md
+        - name: Some availability replicas are not synchronizing data
+          href: some-availability-replicas-are-not-synchronizing-data.md
+        - name: Some synchronous replicas are not synchronized
+          href: some-synchronous-replicas-are-not-synchronized.md
+        - name: Some availability replicas do not have a healthy role
+          href: some-availability-replicas-do-not-have-a-healthy-role.md
+        - name: Some availability replicas are disconnected
+          href: some-availability-replicas-are-disconnected.md
+        - name: Availability replica does not have a healthy role
+          href: availability-replica-does-not-have-a-healthy-role.md
+        - name: Availability replica is disconnected
+          href: availability-replica-is-disconnected.md
+        - name: Data synchronization state of availability database is not healthy
+          href: data-synchronization-state-of-availability-database-is-not-healthy.md
+        - name: Availability replica is not joined
+          href: availability-replica-is-not-joined.md
+        - name: Availability database is suspended
+          href: availability-database-is-suspended.md
+        - name: Secondary database is not joined
+          href: secondary-database-is-not-joined.md
+        - name: Data synchronization state of some availability database is not healthy
+          href: data-synchronization-state-of-some-availability-database-is-not-healthy.md
+    - name: Availability Group Properties
+      href: availability-group-properties-new-availability-group-general-page.md
+      items:
+        - name: Availability Replica Properties (General Page)
+          href: availability-replica-properties-general-page.md
+        - name: "Availability Group Properties: New Availability Group (Backup Preferences Page)"
+          href: availability-group-properties-new-availability-group-backup-preferences-page.md
+      
+      
+      
+      
+      
+      
+      - name: Getting Started with AlwaysOn Availability Groups (SQL Server)
+        href: 
+      - name: Overview of AlwaysOn Availability Groups
+        
+        items:
+      
+          items:
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      - name: Creation and Configuration of Availability Groups
+        href: 
+        items:
+      
+        
+        
+       
+      - name: Administration of an Availability Group
+        href: 
+        items:
+      
+      
+      - 
+        items:
+        
+        
+        
+       
+      
+      
+      
+     
+

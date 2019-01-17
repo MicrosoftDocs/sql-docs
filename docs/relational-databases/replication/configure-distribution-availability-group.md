@@ -1,7 +1,7 @@
 ---
 title: "Configure SQL Server distribution database in availability group | Microsoft Docs"
 ms.custom: ""
-ms.date: "11/13/2018"
+ms.date: "01/16/2019"
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: replication
@@ -28,7 +28,9 @@ This article explains how to set up a SQL Server replication distribution databa
 SQL Server 2017 CU6 and SQL Server 2016 SP2-CU3 introduces support for replication distribution database in an AG through the following mechanisms:
 
 - The distribution database AG needs to have a listener. When the publisher adds the distributor, it uses the listener name as the distributor name.
-- The replication jobs are created with the listener name as the distributor name.
+- The replication jobs are created with the listener name as the distributor name. Replication snapshot, log reader and distribution agent (push subscription) jobs created on the distribution server gets created on all secondary replicas of the AG for Distribution DB.
+ >[!NOTE]
+ >Distribution agent jobs for pull susbcriptions are created on the subscriber server and not on the distribution server. 
 - A new job monitors the state (primary or secondary in AG) of the distribution databases and disables or enables the replication jobs based on the distribution databases state.
 
 After a distribution database in the AG is configured based on the steps described below, replication configuration and run time jobs can run properly before and after distribution database AG failover.

@@ -22,17 +22,17 @@
   href: ../database-engine/install-windows/toc.yml
 - name: Configure
   href: ../database-engine/configure-windows/toc.yml
-- name: Business Continuity
+- name: Business continuity
   href: sql-server-business-continuity-dr.md
   items:
   - name: Availability groups
     href: availability-groups/windows/toc.yml
+  - name: Failover Cluster Instance
+    href: ../sql-server/failover-clusters/toc.yml
   - name: Database mirroring
     href: database-mirroring/toc.yml
   - name: Log shipping
     href: log-shipping/toc.yml
-  - name: Failover Cluster Instance
-    href: ../sql-server/failover-clusters/toc.yml
 - name: Concepts
   items:
   - name: Blob + 

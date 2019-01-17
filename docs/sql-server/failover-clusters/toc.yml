@@ -17,27 +17,33 @@
           href: install/install-client-tools-on-a-sql-server-failover-cluster.md
         - name: Add or remove nodes
           href: install/add-or-remove-nodes-in-a-sql-server-failover-cluster-setup.md
-        - name: Remove a failover cluster (setup)
+        - name: Remove a Failover Cluster 
           href: install/remove-a-sql-server-failover-cluster-instance-setup.md
+        - name: Upgrade a Failover Cluster Instance
+          href: windows/upgrade-a-sql-server-failover-cluster-instance.md
+          items:
+            - name: Upgrade a SQL Server Failover Cluster Instance 
+              href: windows/upgrade-a-sql-server-failover-cluster-instance-setup.md
+            - name: Upgrade a SQL Server Failover Cluster Instance (Windows Server 2008/2008 R2/2012)
+              href: windows/upgrade-sql-server-failover-cluster-instance-2008-2012.md
+    - name: Configuration
+      items:
         - name: Rename a failover cluster
           href: install/rename-a-sql-server-failover-cluster-instance.md
+        - name: Add Dependencies to a SQL Server Resource
+          href: windows/add-dependencies-to-a-sql-server-resource.md
+        - name: Configure Cluster Quorum NodeWeight Settings
+          href: windows/configure-cluster-quorum-nodeweight-settings.md
+        - name: Change the IP Address of a Failover Cluster Instance
+          href: windows/change-the-ip-address-of-a-failover-cluster-instance.md
         - name: Configure HealthCheckTimeout Property Settings
           href: windows/configure-healthchecktimeout-property-settings.md
         - name: Configure FailureConditionLevel Property Settings
           href: windows/configure-failureconditionlevel-property-settings.md
-        - name: Upgrade a SQL Server Failover Cluster Instance
-          href: windows/upgrade-a-sql-server-failover-cluster-instance.md
-          items:
-            - name: Upgrade a SQL Server Failover Cluster Instance (Setup)
-              href: windows/upgrade-a-sql-server-failover-cluster-instance-setup.md
-            - name: Upgrade a SQL Server Failover Cluster Instance (Windows Server 2008/2008 R2/2012)
-              href: windows/upgrade-sql-server-failover-cluster-instance-2008-2012.md
     - name: Administration
       items:
         - name: View Cluster Quorum NodeWeight Settings
           href: windows/view-cluster-quorum-nodeweight-settings.md
-        - name: Configure Cluster Quorum NodeWeight Settings
-          href: windows/configure-cluster-quorum-nodeweight-settings.md
         - name: WSFC Disaster Recovery through Forced Quorum
           href: windows/wsfc-disaster-recovery-through-forced-quorum-sql-server.md
         - name: Force a WSFC Cluster to Start Without a Quorum
@@ -50,13 +56,8 @@
           href: windows/view-and-read-failover-cluster-instance-diagnostics-log.md
         - name: Failover Cluster Instance Administration and Maintenance
           href: windows/failover-cluster-instance-administration-and-maintenance.md
-          items:
-            - name: Add Dependencies to a SQL Server Resource
-              href: windows/add-dependencies-to-a-sql-server-resource.md
-            - name: Recover from Failover Cluster Instance Failure
-              href: windows/recover-from-failover-cluster-instance-failure.md
-            - name: Change the IP Address of a Failover Cluster Instance
-              href: windows/change-the-ip-address-of-a-failover-cluster-instance.md
+        - name: Recover from Failover Cluster Instance Failure
+          href: windows/recover-from-failover-cluster-instance-failure.md
 - name: Concepts
   items:
     - name: Configuration

@@ -1,4 +1,3 @@
-
 - name: Overview
   href: database-mirroring-sql-server.md
   items: 
@@ -8,6 +7,8 @@
       href: mirroring-states-sql-server.md
     - name: Database Mirroring Operating Modes
       href: database-mirroring-operating-modes.md
+    - name: Database Mirroring Witness
+      href: database-mirroring-witness.md
 - name: How-to 
   items:
     - name: Configuration
@@ -20,7 +21,7 @@
               href: prepare-a-mirror-database-for-mirroring-sql-server.md
             - name: Set up an encrypted Mirror Database
               href: set-up-an-encrypted-mirror-database.md
-            - name: Set up a Mirror Database to use the Trustworthy Property (Transact-SQL)
+            - name: Set up a Mirror Database to use the Trustworthy Property 
               href: set-up-a-mirror-database-to-use-the-trustworthy-property-transact-sql.md
             - name: Specify a server network address
               href: specify-a-server-network-address-database-mirroring.md
@@ -31,6 +32,10 @@
                   href: example-setting-up-database-mirroring-using-windows-authentication-transact-sql.md
                 - name: "Example: Setting Up Database Mirroring Using Certificates (Transact-SQL)"
                   href: example-setting-up-database-mirroring-using-certificates-transact-sql.md
+             - name: Upgrading Mirrored Instances
+               href: upgrading-mirrored-instances.md
+             - name: Remove Database Mirroring 
+               href: remove-database-mirroring-sql-server.md
         - name: Witness
           items:
             - name: Add a witness using Windows authentication 
@@ -39,28 +44,28 @@
               href: add-or-replace-a-database-mirroring-witness-sql-server-management-studio.md
             - name: Remove the witness
               href: remove-the-witness-from-a-database-mirroring-session-sql-server.md
-        - name: Upgrading Mirrored Instances
-          href: upgrading-mirrored-instances.md
-        - name: Remove Database Mirroring 
-          href: remove-database-mirroring-sql-server.md
     - name: Administration
       items:
+        - name: View the state of a Mirrored Database 
+          href: view-the-state-of-a-mirrored-database-sql-server-management-studio.md
+        - name: Pause or resume Database Mirroring 
+          href: pause-or-resume-a-database-mirroring-session-sql-server.md
+        - name: Connect clients
+          href: connect-clients-to-a-database-mirroring-session-sql-server.md
         - name: Use Warning thresholds and alerts on Mirroring performance metrics
           href: use-warning-thresholds-and-alerts-on-mirroring-performance-metrics-sql-server.md
         - name: Change transaction safety 
           href: change-transaction-safety-in-a-database-mirroring-session-transact-sql.md
-        - name: Estimate interruption of service during role switching
+        - name: Estimate interruption during role switching
           href: estimate-the-interruption-of-service-during-role-switching-database-mirroring.md
-        - name: Manually Fail Over 
+        - name: Manually fail over (T-SQL)
           href: manually-fail-over-a-database-mirroring-session-transact-sql.md
-        - name: Manually Fail Over a Database Mirroring Session (SQL Server Management Studio)
+        - name: Manually fail over (SSMS)
           href: manually-fail-over-a-database-mirroring-session-sql-server-management-studio.md
         - name: Force service to fail over
           href: force-service-in-a-database-mirroring-session-transact-sql.md
         - name: Troubleshoot Database Mirroring Configuration
           href: troubleshoot-database-mirroring-configuration-sql-server.md
-        - name: Pause or Resume a Database Mirroring Session 
-          href: pause-or-resume-a-database-mirroring-session-sql-server.md
     - name: Security
       items: 
         - name: Set Up Login Accounts for Database Mirroring or Always On Availability Groups
@@ -78,7 +83,7 @@
               href: database-mirroring-use-certificates-for-inbound-connections.md
 - name: Concepts
   items: 
-    - name: Interoperability and Coexistence"
+    - name: Interoperability and Coexistence
       href: database-mirroring-interoperability-and-coexistence-sql-server.md
       items:
         - name: Database Mirroring and SQL Server Failover Cluster Instances
@@ -95,8 +100,6 @@
       items: 
         - name: Monitoring Database Mirroring
           href: monitoring-database-mirroring-sql-server.md
-        - name: View the state of a Mirrored Database 
-          href: view-the-state-of-a-mirrored-database-sql-server-management-studio.md
         - name: Role Switching 
           href: role-switching-during-a-database-mirroring-session-sql-server.md
         - name: "Quorum: How a Witness Affects Database Availability"
@@ -105,8 +108,6 @@
           href: database-mirroring-witness.md
         - name: Possible cause of failures
           href: possible-failures-during-database-mirroring.md
-        - name: Client connectivity
-          href: connect-clients-to-a-database-mirroring-session-sql-server.md
         - name: Pausing and resuming Database Mirroring
           href: pausing-and-resuming-database-mirroring-sql-server.md
         - name: Removing Database Mirroring

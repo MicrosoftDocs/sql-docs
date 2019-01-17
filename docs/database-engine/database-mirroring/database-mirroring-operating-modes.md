@@ -67,7 +67,7 @@ manager: craigg
  High-performance mode can be useful in a disaster-recovery scenario in which the principal and mirror servers are separated by a significant distance and where you do not want small errors to impact the principal server.  
   
 > [!NOTE]  
->  Log shipping can be a supplement to database mirroring and is a favorable alternative to asynchronous database mirroring. For information about the advantages of log shipping, see [High Availability Solutions &#40;SQL Server&#41;](../../database-engine/sql-server-business-continuity-dr.md). For information on using log shipping with database mirroring, see [Database Mirroring and Log Shipping &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-and-log-shipping-sql-server.md).  
+>  Log shipping can be a supplement to database mirroring and is a favorable alternative to asynchronous database mirroring. For information about the advantages of log shipping, see [High Availability Solutions &#40;SQL Server&#41;](../../sql-server/failover-clusters/high-availability-solutions-sql-server.md). For information on using log shipping with database mirroring, see [Database Mirroring and Log Shipping &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-and-log-shipping-sql-server.md).  
   
 ###  <a name="WitnessImpactOnHighPerf"></a> The Impact of a Witness on High-Performance Mode  
  If you use Transact-SQL to configure high-performance mode, whenever the SAFETY property is set to OFF, we strongly recommend that the WITNESS property also be set to OFF. A witness can coexist with high-performance mode, but the witness provides no benefit and introduces risk.  

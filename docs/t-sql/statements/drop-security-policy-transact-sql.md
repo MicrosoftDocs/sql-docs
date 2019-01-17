@@ -17,8 +17,8 @@ dev_langs:
 helpviewer_keywords: 
   - "DROP SECURITY POLICY statement"
 ms.assetid: 5bd3393d-2fa5-4db0-a69a-a1a72d638e9d
-author: CarlRabeler
-ms.author: carlrab
+author: VanMSFT
+ms.author: vanto
 manager: craigg
 ---
 # DROP SECURITY POLICY (Transact-SQL)

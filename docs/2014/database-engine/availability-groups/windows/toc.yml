@@ -98,18 +98,18 @@
        - name: Troubleshoot a Failed Add-File Operation (AlwaysOn Availability Groups)
          href: troubleshoot-a-failed-add-file-operation-always-on-availability-groups.md
     - name: Monitoring 
-        href: monitoring-of-availability-groups-sql-server.md
-        items:
-          - name: Monitor Availability Groups (T-SQL)
-            href: monitor-availability-groups-transact-sql.md
-          - name: Use the Object Explorer Details to Monitor Availability Groups 
-            href: use-object-explorer-details-to-monitor-availability-groups.md
-          - name: View Availability Group Properties
-            href: view-availability-group-properties-sql-server.md
-          - name: View Availability Replica Properties
-            href: view-availability-replica-properties-sql-server.md
-          - name: View Availability Group Listener Properties
-            href: view-availability-group-listener-properties-sql-server.md  
+      href: monitoring-of-availability-groups-sql-server.md
+      items:
+        - name: Monitor Availability Groups (T-SQL)
+          href: monitor-availability-groups-transact-sql.md
+        - name: Use the Object Explorer Details to Monitor Availability Groups 
+          href: use-object-explorer-details-to-monitor-availability-groups.md
+        - name: View Availability Group Properties
+          href: view-availability-group-properties-sql-server.md
+        - name: View Availability Replica Properties
+          href: view-availability-replica-properties-sql-server.md
+        - name: View Availability Group Listener Properties
+          href: view-availability-group-listener-properties-sql-server.md  
 - name: Concepts
   items:
     - name: Configuration

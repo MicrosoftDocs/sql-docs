@@ -120,7 +120,7 @@
           href: failover-and-failover-modes-always-on-availability-groups.md
         - name: Flexible Failover Policy for Automatic Failover of an Availability Group
           href: flexible-automatic-failover-policy-availability-group.md
-         - name: Management of Logins and Jobs for the Databases of an Availability Group
+        - name: Management of Logins and Jobs for the Databases of an Availability Group
           href: ../../logins-and-jobs-for-availability-group-databases.md
     - name: Administration
       href: administration-of-an-availability-group-sql-server.md

@@ -55,7 +55,7 @@ manager: craigg
   
 -   Failover Clustering: As part of the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] AlwaysOn offering, AlwaysOn Failover Cluster Instances leverages Windows Server Failover Clustering (WSFC) functionality to provide local high availability through redundancy at the server-instance level-a failover cluster instance (FCI). For more information, see [AlwaysOn Failover Cluster Instances (SQL Server)](../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md).  
   
--   Integration with AlwaysOn: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provides several options for creating high availability for a server or database, including AlwaysOn. For more information, see [High Availability Solutions &#40;SQL Server&#41;](../../database-engine/sql-server-business-continuity-dr.md).  
+-   Integration with AlwaysOn: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provides several options for creating high availability for a server or database, including AlwaysOn. For more information, see [High Availability Solutions &#40;SQL Server&#41;](../../sql-server/failover-clusters/high-availability-solutions-sql-server.md).  
   
 -   Log shipping: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Log shipping allows you to automatically send transaction log backups from a primary database on a primary server instance to one or more secondary databases on separate secondary server instances. For more information, see [About Log Shipping &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md).  
   

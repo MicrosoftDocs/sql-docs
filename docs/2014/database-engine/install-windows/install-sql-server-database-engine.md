@@ -56,7 +56,7 @@ manager: craigg
  [Features Supported by the Editions of SQL Server 2014](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)   
  [Editions and Components of SQL Server 2014](../../sql-server/editions-and-components-of-sql-server-2016.md)   
  [Planning a SQL Server Installation](../../sql-server/install/planning-a-sql-server-installation.md)   
- [High Availability Solutions &#40;SQL Server&#41;](../../database-engine/sql-server-business-continuity-dr.md)   
+ [High Availability Solutions &#40;SQL Server&#41;](../../sql-server/failover-clusters/high-availability-solutions-sql-server.md)   
  [Upgrade to SQL Server 2014 Using the Installation Wizard &#40;Setup&#41;](upgrade-sql-server-using-the-installation-wizard-setup.md)  
   
   

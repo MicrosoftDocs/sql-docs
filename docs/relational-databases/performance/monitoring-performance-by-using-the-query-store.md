@@ -38,14 +38,14 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
   
 2.  In the **Database Properties** dialog box, select the **Query Store** page.  
   
-3.  In the **Operation Mode (Requested)** box, select **On**.  
+3.  In the **Operation Mode (Requested)** box, select **Read Write**.  
   
 #### Use Transact-SQL Statements  
   
 Use the **ALTER DATABASE** statement to enable the query store. For example:  
   
 ```sql  
-ALTER DATABASE AdventureWorks2012 SET QUERY_STORE = ON;  
+ALTER DATABASE AdventureWorks2012 SET QUERY_STORE (OPERATION_MODE = READ_WRITE); 
 ```  
   
 For more syntax options related to the query store, see [ALTER DATABASE SET Options &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md).  

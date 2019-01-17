@@ -5,12 +5,12 @@
     href: always-on-availability-groups-interoperability-sql-server.md
   - name: Technology and capabilities
     href: always-on-availability-groups-sql-server.md
+  - name: Prerequisites, restrictions, and recommendations
+    href: prereqs-restrictions-recommendations-always-on-availability.md
 - name: Quickstart
   items:
   - name: Getting started
     href: getting-started-with-always-on-availability-groups-sql-server.md
-  - name: Prerequisites, restrictions, and recommendations
-    href: prereqs-restrictions-recommendations-always-on-availability.md
   - name: Creation and configuration
     href: creation-and-configuration-of-availability-groups-sql-server.md
     items:

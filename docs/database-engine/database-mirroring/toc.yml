@@ -32,10 +32,10 @@
                   href: example-setting-up-database-mirroring-using-windows-authentication-transact-sql.md
                 - name: "Example: Setting Up Database Mirroring Using Certificates (Transact-SQL)"
                   href: example-setting-up-database-mirroring-using-certificates-transact-sql.md
-             - name: Upgrading Mirrored Instances
-               href: upgrading-mirrored-instances.md
-             - name: Remove Database Mirroring 
-               href: remove-database-mirroring-sql-server.md
+            - name: Upgrading Mirrored Instances
+              href: upgrading-mirrored-instances.md
+            - name: Remove Database Mirroring 
+              href: remove-database-mirroring-sql-server.md
         - name: Witness
           items:
             - name: Add a witness using Windows authentication 

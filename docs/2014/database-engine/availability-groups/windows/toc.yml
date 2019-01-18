@@ -178,30 +178,6 @@
       href: transact-sql-statements-for-always-on-availability-groups.md
     - name: Overview of PowerShell Cmdlets for AlwaysOn Availability Groups
       href: overview-of-powershell-cmdlets-for-always-on-availability-groups-sql-server.md
-    - name: Availability Group Wizard
-      items: 
-        - name: Add IP Address Dialog Box
-          href: add-ip-address-dialog-box-sql-server-management-studio.md
-        - name: Specify Availability Group Name Page 
-          href: specify-availability-group-name-page.md
-        - name: Select Databases Page 
-          href: select-databases-page-new-availability-group-wizard-and-add-database-wizard.md
-        - name: Specify Replicas Page 
-          href: specify-replicas-page-new-availability-group-wizard-add-replica-wizard.md
-        - name: Select Initial Data Synchronization Page 
-          href: select-initial-data-synchronization-page-always-on-availability-group-wizards.md
-        - name: Validation Page 
-          href: validation-page-always-on-availability-group-wizards.md
-        - name: Summary Page 
-          href: summary-page-always-on-availability-group-wizards.md
-        - name: Progress Page 
-          href: progress-page-always-on-availability-group-wizards.md
-        - name: Results Page 
-          href: results-page-always-on-availability-group-wizards.md
-        - name: Use the New Availability Group Dialog Box
-          href: use-the-new-availability-group-dialog-box-sql-server-management-studio.md
-        - name: Connect to Existing Secondary Replicas Page (Add Replica Wizard and Add Databases Wizard)
-          href: connect-to-existing-secondary-replicas-page.md
     - name: Availability group policies
       href: always-on-policies-for-operational-issues-always-on-availability.md
       items:
@@ -248,3 +224,27 @@
           href: availability-replica-properties-general-page.md
         - name: "Availability Group Properties: New Availability Group (Backup Preferences Page)"
           href: availability-group-properties-new-availability-group-backup-preferences-page.md
+    - name: Availability Group Wizard
+      items: 
+        - name: Add IP Address Dialog Box
+          href: add-ip-address-dialog-box-sql-server-management-studio.md
+        - name: Specify Availability Group Name Page 
+          href: specify-availability-group-name-page.md
+        - name: Select Databases Page 
+          href: select-databases-page-new-availability-group-wizard-and-add-database-wizard.md
+        - name: Specify Replicas Page 
+          href: specify-replicas-page-new-availability-group-wizard-add-replica-wizard.md
+        - name: Select Initial Data Synchronization Page 
+          href: select-initial-data-synchronization-page-always-on-availability-group-wizards.md
+        - name: Validation Page 
+          href: validation-page-always-on-availability-group-wizards.md
+        - name: Summary Page 
+          href: summary-page-always-on-availability-group-wizards.md
+        - name: Progress Page 
+          href: progress-page-always-on-availability-group-wizards.md
+        - name: Results Page 
+          href: results-page-always-on-availability-group-wizards.md
+        - name: Use the New Availability Group Dialog Box
+          href: use-the-new-availability-group-dialog-box-sql-server-management-studio.md
+        - name: Connect to Existing Secondary Replicas Page (Add Replica Wizard and Add Databases Wizard)
+          href: connect-to-existing-secondary-replicas-page.md

@@ -61,7 +61,7 @@ SSL/TLS certificates are widely used to secure access to SQL Server. With earlie
 
 5. If installing for a single node, choose **Browse** and select certificate file. Then skip to step 8.
 
-6. If installing a certificate for each node, choose **Next** to list possible owner nodes. Possible owners for the current SQL Server FCI are pre-selected.
+6. If installing a certificate for each node, select **Next** to list possible owner nodes. Possible owners for the current SQL Server FCI are pre-selected.
 
 7. Choose **Next** to select the certificate to be imported.
 **
@@ -74,7 +74,7 @@ SSL/TLS certificates are widely used to secure access to SQL Server. With earlie
 
 ##  <a name="provision-always-on-cert"></a>To install a certificate in an Always On configuration  
   
-1. In SQL Server Configuration Manager, in the console pane, expand **SQL Server Network Configuration**. 
+1. In SQL Server Configuration Manager, in the console pane, expand **SQL Server Network Configuration**.
   
 2. Right-click **Protocols for** *<instance Name>*, and then select **Properties**.  
   
@@ -82,9 +82,9 @@ SSL/TLS certificates are widely used to secure access to SQL Server. With earlie
   
 4. Choose the certificate type and select **Next** to select from the list of known Availability Groups.  
 
-5. Click **Next** to select certificates for each replica node. Certificates should have a file name that matches the netbios name of the nodes.
+5. Select **Next** to choose certificates for each replica node. Certificates should have a file name that matches the netbios name of the nodes.
 
-6. Click **Next** to import the certificate on each node.
+6. Select **Next** to import the certificate on each node.
 
 
 > [!NOTE]

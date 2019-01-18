@@ -39,7 +39,7 @@ The Microsoft JDBC Driver for SQL Server has been tested against major applicati
   
 ## Community
 
-[Feedback and Additional JDBC Driver Information](finding-additional-jdbc-driver-information.md)  
+[Feedback and Finding Additional JDBC Driver Information](finding-additional-jdbc-driver-information.md)  
   
 ## Download
 

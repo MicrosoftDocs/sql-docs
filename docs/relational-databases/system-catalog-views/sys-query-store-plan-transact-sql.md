@@ -52,10 +52,13 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
 |**avg_compile_duration**|**float**|Plan compilation statistics.|  
 |**last_compile_duration**|**bigint**|Plan compilation statistics.|  
 |**plan_forcing_type**|**int**|Plan forcing type.<br /><br />
-0: NONE - No plan forcing<br /><br />
-1: MANUAL - Plan forced by user<br /><br />
-2: AUTO - Plan forced by automatic tuning|
-|**plan_forcing_type_desc**|**nvarchar(60)**|User's description of the plan forced.|
+0: NONE<br /><br />
+1: MANUAL<br /><br />
+2: AUTO|
+|**plan_forcing_type_desc**|**nvarchar(60)**|Text description of plan_forcing_type.<br /><br />
+NONE: No plan forcing<br /><br />
+MANUAL: Plan forced by user<br /><br />
+AUTO: Plan forced by automatic tuning|
 
 ## Plan forcing limitations
 Query Store has a mechanism to enforce Query Optimizer to use certain execution plan. 

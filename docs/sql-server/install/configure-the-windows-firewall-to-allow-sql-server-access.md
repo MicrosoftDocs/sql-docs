@@ -96,6 +96,8 @@ Configure the Windows Firewall settings with either **Microsoft Management Conso
     -   [How to use the "netsh advfirewall firewall" context instead of the "netsh firewall" context to control Windows Firewall behavior in Windows Server 2008 and in Windows Vista](https://support.microsoft.com/kb/947709)  
   
     -   [The "netsh firewall" command together with the "profile=all" parameter does not configure the public profile on a Windows Vista-based computer](https://support.microsoft.com/kb/947213)  
+    
+- **For Linux**: On Linux, you also need to open the ports associated with the services you need access to. Different distributions of Linux and different firewalls have their own procedures. For two examples, see [SQL Server on Red Hat](https://review.docs.microsoft.com/sql/linux/quickstart-install-connect-red-hat?view=sqlallproducts-allversions), and [SQL Server on SUSE](https://review.docs.microsoft.com/sql/linux/quickstart-install-connect-suse?view=sqlallproducts-allversions). 
   
 ## Ports Used By [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
  The following tables can help you identify the ports being used by [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  

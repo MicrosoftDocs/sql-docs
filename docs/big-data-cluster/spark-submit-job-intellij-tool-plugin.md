@@ -1,7 +1,7 @@
 ---
-title: Run Spark jobs in Azure Toolkit for IntelliJ
-titleSuffix: SQL Server 2019 big data clusters
-description: Submit Spark jobs on SQL Server big data clusters in Azure Toolkit for IntelliJ.
+title: Run Spark jobs in Azure Toolkit for IntelliJ on SQL Server Big Data Cluster
+titleSuffix: SQL Server Big Data Clusters
+description: Submit Spark jobs on SQL Server Big Data Clusters in Azure Toolkit for IntelliJ.
 author: jejiang
 ms.author: jejiang
 ms.reviewer: jroth
@@ -10,45 +10,45 @@ ms.topic: conceptual
 ms.date: 01/04/2018
 ---
 
-# Submit Spark jobs on SQL Server big data clusters in IntelliJ
+# Submit Spark jobs on SQL Server Big Data Clusters in IntelliJ
 
-One of the key scenarios for big data clusters is the ability to submit Spark jobs. The Spark job submission feature allows you to submit a local Jar or Py files with references to SQL big data cluster. It also enables you to execute a Jar or Py files, which are already located in the HDFS file system. 
+One of the key scenarios for SQL Server Big Data Clusters is the ability to submit Spark jobs. The Spark job submission feature allows you to submit a local Jar or Py files with references to SQL Server Big Data Clusters. It also enables you to execute a Jar or Py files, which are already located in the HDFS file system. 
 
 ## Prerequisites
 
-- SQL Big Data cluster.
+- SQL Server Big Data Cluster.
 - Oracle Java Development Kit. You can install it from the [Oracle website](https://aka.ms/azure-jdks).
 - IntelliJ IDEA. You can install it from the [JetBrains website](https://www.jetbrains.com/idea/download/).
 - Azure Toolkit for IntelliJ extension. For installation instructions, see [Install Azure Toolkit for IntelliJ](https://docs.microsoft.com/azure/azure-toolkit-for-intellij-installation).
 
-## Link SQL big data cluster
+## Link SQL Server Big Data Cluster
 1. Open the IntelliJ IDEA tool.
 
 2. If you are using self-signed certificate, please disable SSL certification validation from **Tools** menu, select **Azure**, **Experimental**, then **Disable SSL Certificate Validation**.
 
-    ![link Big Data cluster - disable SSL](./media/spark-submit-job-intellij-tool-plugin/link-ariscluster-disableSSL.png)
+    ![link SQL Server Big Data Cluster - disable SSL](./media/spark-submit-job-intellij-tool-plugin/link-ariscluster-disableSSL.png)
 
 3. Open Azure Explorer from **View** menu, select **Tool Windows**, and then select **Azure Explorer**.
-4. Right click on **SQL Big Data Cluster**, select **Link SQL Big Data Cluster**. Enter the **Host**, **User Name**, and **Password**, then click **OK**.
+4. Right click on **SQL Server Big Data Cluster**, select **Link SQL Server Big Data Cluster**. Enter the **Server**, **User Name**, and **Password**, then click **OK**.
 
     ![link Big Data cluster - dialog](./media/spark-submit-job-intellij-tool-plugin/link-ariscluster-dialog.png)
 
 5. When the untrusted server's certificate dialog appears, click **Accept**. You can manage the certificate later, see [Server Certificates](https://www.jetbrains.com/help/idea/settings-tools-server-certificates.html).
 
-6. The linked cluster lists under **SQL Big Data Cluster**. You could monitor spark job by opening the spark history UI and Yarn UI, you could also unlink, by right clicking on the cluster.
+6. The linked cluster lists under **SQL Server Big Data Cluster**. You could monitor spark job by opening the spark history UI and Yarn UI, you could also unlink, by right clicking on the cluster.
 
     ![link Big Data cluster - context menu](./media/spark-submit-job-intellij-tool-plugin/link-ariscluster-contextmenu.png)
 
-## Submit application to SQL big data cluster
-After link a SQL big data cluster, you can submit application to it.
+## Submit application to SQL Server Big Data Cluster
+After link a SQL Server Big Data Cluster, you can submit application to it.
 
-1. Set up the configuration in **Run/Debug Configurations** window, click +->**Aris On Spark**, select tab **Remotely Run in Cluster**, set the parameters as following, then click OK.
+1. Set up the configuration in **Run/Debug Configurations** window, click +->**Apache Spark on SQL Server**, select tab **Remotely Run in Cluster**, set the parameters as following, then click OK.
 
     ![Interactive Console Add Config Entry](./media/spark-submit-job-intellij-tool-plugin/interactive-console-add-config-entry.png)
 
     ![link Big Data cluster - config](./media/spark-submit-job-intellij-tool-plugin/link-ariscluster-config.png)
 
-    * For **Spark clusters (Linux only)**, select the SQL Big Data cluster on which you want to run your application.
+    * For **Spark clusters (Linux only)**, select the cluster on which you want to run your application.
 
     * Select an artifact from the IntelliJ project, or select one from the hard drive.
 
@@ -74,4 +74,4 @@ After link a SQL big data cluster, you can submit application to it.
     ![link Big Data cluster - run](./media/spark-submit-job-intellij-tool-plugin/link-ariscluster-run.png)
 
 ## Next steps
-For more information on SQL Server big data cluster and related scenarios, see [What is SQL Server big data cluster](big-data-cluster-overview.md)?
+For more information on SQL Server Big Data Cluster and related scenarios, see [What are SQL Server 2019 big data clusters](big-data-cluster-overview.md)?

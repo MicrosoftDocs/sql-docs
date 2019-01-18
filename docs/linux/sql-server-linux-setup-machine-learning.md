@@ -4,7 +4,7 @@ description: This article describes how to install SQL Server Machine Learning S
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.date: 12/07/2018
+ms.date: 01/18/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.custom: "sql-linux"
@@ -71,7 +71,7 @@ For each OS-specific set of installation instructions, *highest package level* i
 
 ## Prerequisites
 
-+ The Linux version must be [supported by SQL Server](sql-server-linux-release-notes-2019.md#supported-platforms), running on premises or in a Docker container. Supported versions include:
++ The Linux version must be [supported by SQL Server](sql-server-linux-release-notes-2019.md#supported-platforms), except for the Docker Engine. Supported versions include:
 
    + [Red Hat Enterprise Linux (RHEL)](quickstart-install-connect-red-hat.md)
 

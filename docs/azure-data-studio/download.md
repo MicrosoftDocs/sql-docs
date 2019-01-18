@@ -85,7 +85,7 @@ The user installer is recommended because it does not require administrator priv
    **rpm Installation:**
    ```bash
    cd ~
-   yum install ./Downloads/azuredatastudio-linux-<version string>.rpm
+   yum localinstall ./Downloads/azuredatastudio-linux-<version string>.rpm
 
    azuredatastudio
    ```

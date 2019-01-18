@@ -153,7 +153,7 @@
     items:
     - name: Create a Python model using revoscalepy
       href: tutorials/use-python-revoscalepy-to-create-model.md  
-    - name: SQL for Python developers
+    - name: Python for SQL developers
       href: tutorials/sqldev-in-database-python-for-sql-developers.md
       items:
       - name: 1 - Data exploration

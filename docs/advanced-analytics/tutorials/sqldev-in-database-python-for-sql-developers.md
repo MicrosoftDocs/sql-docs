@@ -10,10 +10,10 @@ author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
 ---
-# Tutorial: In-Database Python analytics for SQL developers
+# Tutorial: Python data analytics for SQL developers
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-In this tutorial for SQL programmers, learn about Python integration by building and deploying a Python-based machine learning solution using a [NYCTaxi_sample](demo-data-nyctaxi-in-sql.md) database on SQL Server. You'll use T-SQL, SQL Server Management Studio, and a database engine instance with [Machine Learning Services](../../install/sql-machine-learning-services-windows-install) and Python language support.
+In this tutorial for SQL programmers, learn about Python integration by building and deploying a Python-based machine learning solution using a [NYCTaxi_sample](demo-data-nyctaxi-in-sql.md) database on SQL Server. You'll use T-SQL, SQL Server Management Studio, and a database engine instance with [Machine Learning Services](../install/sql-machine-learning-services-windows-install.md) and Python language support.
 
 This tutorial introduces you to Python functions used in a data modeling workflow. Steps include data exploration, building and training a binary classification model, and model deployment. You'll use sample data from the New York City Taxi and Limosine Commission, and the model you will build predicts whether a trip is likely to result in a tip based on the time of day, distance travelled, and pick-up location. 
 

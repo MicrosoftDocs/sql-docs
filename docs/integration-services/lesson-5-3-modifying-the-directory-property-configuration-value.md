@@ -30,7 +30,7 @@ In this task, you modify the configuration setting, stored in the **SSISTutorial
       </DTSConfigurationHeading>
       <Configuration ConfiguredType="Property" 
           Path="\Package.Variables[User::varFolderName].Properties[Value]" ValueType="String">
-        <ConfiguredValue></ConfiguredValue>
+        <ConfiguredValue>C:\New Sample Data</ConfiguredValue>
       </Configuration>
     </DTSConfiguration>  
     ```

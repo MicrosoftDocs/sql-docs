@@ -178,40 +178,40 @@
           href: always-on-client-connectivity-sql-server.md
         - name: Listeners, clients, and failover
           href: listeners-client-connectivity-application-failover.md
-      - name: Interoperability with other features
-        items:
-          - name: Replication, CT, & CDC
-            href: replicate-track-change-data-capture-always-on-availability.md
-            items:
-              - name: Configure replication
-                href: configure-replication-for-always-on-availability-groups-sql-server.md
-              - name: Publication database
-                href: maintaining-an-always-on-publication-database-sql-server.md
-              - name: Subscribers
-                href: replication-subscribers-and-always-on-availability-groups-sql-server.md
-          - name: Contained databases
-            href: contained-databases-with-always-on-availability-groups-sql-server.md
-          - name: Database snapshots
-            href: database-snapshots-with-always-on-availability-groups-sql-server.md
-          - name: Distributed transactions
-            href: transactions-always-on-availability-and-database-mirroring.md
-            items:
-              - name: Cluster DTC
-                href: cluster-dtc-for-sql-server-2016-availability-groups.md
-          - name: Encrypted databases
-            href: encrypted-databases-with-always-on-availability-groups-sql-server.md
-          - name: Failover cluster instances
-            href: analysis-services-with-always-on-availability-groups.md
-          - name: FILESTREAM and FileTable
-            href: filestream-and-filetable-with-always-on-availability-groups-sql-server.md
-          - name: Migrating from log shipping
-            href: prereqs-migrating-log-shipping-to-always-on-availability-groups.md
-          - name: Remote blob store (RBS)
-            href: remote-blob-store-rbs-and-always-on-availability-groups-sql-server.md
-          - name: Reporting Services
-            href: reporting-services-with-always-on-availability-groups-sql-server.md
-          - name: Service Broker
-            href: service-broker-with-always-on-availability-groups-sql-server.md
+    - name: Interoperability with other features
+      items:
+        - name: Replication, CT, & CDC
+          href: replicate-track-change-data-capture-always-on-availability.md
+          items:
+            - name: Configure replication
+              href: configure-replication-for-always-on-availability-groups-sql-server.md
+            - name: Publication database
+              href: maintaining-an-always-on-publication-database-sql-server.md
+            - name: Subscribers
+              href: replication-subscribers-and-always-on-availability-groups-sql-server.md
+        - name: Contained databases
+          href: contained-databases-with-always-on-availability-groups-sql-server.md
+        - name: Database snapshots
+          href: database-snapshots-with-always-on-availability-groups-sql-server.md
+        - name: Distributed transactions
+          href: transactions-always-on-availability-and-database-mirroring.md
+          items:
+            - name: Cluster DTC
+              href: cluster-dtc-for-sql-server-2016-availability-groups.md
+        - name: Encrypted databases
+          href: encrypted-databases-with-always-on-availability-groups-sql-server.md
+        - name: Failover cluster instances
+          href: analysis-services-with-always-on-availability-groups.md
+        - name: FILESTREAM and FileTable
+          href: filestream-and-filetable-with-always-on-availability-groups-sql-server.md
+        - name: Migrating from log shipping
+          href: prereqs-migrating-log-shipping-to-always-on-availability-groups.md
+        - name: Remote blob store (RBS)
+          href: remote-blob-store-rbs-and-always-on-availability-groups-sql-server.md
+        - name: Reporting Services
+          href: reporting-services-with-always-on-availability-groups-sql-server.md
+        - name: Service Broker
+          href: service-broker-with-always-on-availability-groups-sql-server.md
 - name: Reference
   items: 
     - name: PowerShell Cmdlets

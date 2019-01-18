@@ -182,21 +182,21 @@
       items: 
         - name: Add IP Address Dialog Box
           href: add-ip-address-dialog-box-sql-server-management-studio.md
-        - name: Specify Availability Group Name Page (New Availability Group Wizard-Add Database Wizard)
+        - name: Specify Availability Group Name Page 
           href: specify-availability-group-name-page.md
-        - name: Select Databases Page (New Availability Group Wizard/Add Database Wizard)
+        - name: Select Databases Page 
           href: select-databases-page-new-availability-group-wizard-and-add-database-wizard.md
-        - name: "Specify Replicas Page (New Availability Group Wizard: Add Replica Wizard)"
+        - name: Specify Replicas Page 
           href: specify-replicas-page-new-availability-group-wizard-add-replica-wizard.md
-        - name: Select Initial Data Synchronization Page (AlwaysOn Availability Group Wizards)
+        - name: Select Initial Data Synchronization Page 
           href: select-initial-data-synchronization-page-always-on-availability-group-wizards.md
-        - name: Validation Page (AlwaysOn Availability Group Wizards)
+        - name: Validation Page 
           href: validation-page-always-on-availability-group-wizards.md
-        - name: Summary Page (AlwaysOn Availability Group Wizards)
+        - name: Summary Page 
           href: summary-page-always-on-availability-group-wizards.md
-        - name: Progress Page (AlwaysOn Availability Group Wizards)
+        - name: Progress Page 
           href: progress-page-always-on-availability-group-wizards.md
-        - name: Results Page (AlwaysOn Availability Group Wizards)
+        - name: Results Page 
           href: results-page-always-on-availability-group-wizards.md
         - name: Use the New Availability Group Dialog Box
           href: use-the-new-availability-group-dialog-box-sql-server-management-studio.md

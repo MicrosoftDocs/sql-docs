@@ -218,105 +218,105 @@
       href: overview-of-powershell-cmdlets-for-always-on-availability-groups-sql-server.md
     - name: Transact-SQL
       href: transact-sql-statements-for-always-on-availability-groups.md
-  - name: Dialogs and Wizards
-    items:
-    - name: Add IP Address Dialog Box
-      href: add-ip-address-dialog-box-sql-server-management-studio.md
-    - name: Configure Read-Only Routing for an Availability Group
-      href: configure-read-only-routing-for-an-availability-group-sql-server.md
-    - name: Remove Availability Group Listener
-      href: remove-an-availability-group-listener-sql-server.md
-    - name: Specify Availability Group Options Page (New Availability Group Wizard/Add Database Wizard)
-      href: specify-availability-group-name-page.md
-    - name: Select Databases Page (New Availability Group Wizard and Add Database Wizard)
-      href: select-databases-page-new-availability-group-wizard-and-add-database-wizard.md
-    - name: "Specify Replicas Page (New Availability Group Wizard: Add Replica Wizard)"
-      href: specify-replicas-page-new-availability-group-wizard-add-replica-wizard.md
-    - name: Enter Passwords Page (Add Replica Wizard)
-      href: enter-passwords-page-add-replica-wizard.md
-    - name: Select Initial Data Synchronization Page (Always On Availability Group Wizards)
-      href: select-initial-data-synchronization-page-always-on-availability-group-wizards.md
-    - name: Validation Page (Always On Availability Group Wizards)
-      href: validation-page-always-on-availability-group-wizards.md
-    - name: Summary Page (Always On Availability Group Wizards)
-      href: summary-page-always-on-availability-group-wizards.md
-    - name: Progress Page (Always On Availability Group Wizards)
-      href: progress-page-always-on-availability-group-wizards.md
-    - name: Results Page (Always On Availability Group Wizards)
-      href: results-page-always-on-availability-group-wizards.md
-    - name: Availability Group - Connect Existing Secondary Replicas Page
-      href: connect-to-existing-secondary-replicas-page.md
-  - name: Use the Always On Dashboard (SQL Server Management Studio)
-    href: use-the-always-on-dashboard-sql-server-management-studio.md
-    items:
-    - name: Options (SQL Server Always On, Dashboard Page)
-      href: options-sql-server-always-on-dashboard-page.md
-    - name: Policy Evaluation Result (Always On)
-      href: policy-evaluation-result-always-on.md
-    - name: Availability Replica Properties (General Page)
-      href: availability-replica-properties-general-page.md
-    - name: "Availability Group Properties: New Availability Group (General Page)"
-      href: availability-group-properties-new-availability-group-general-page.md
-    - name: "Availability Group Properties: New Availability Group (Backup Preferences Page)"
-      href: availability-group-properties-new-availability-group-backup-preferences-page.md
-  - name: Policies
-    href: always-on-policies-for-operational-issues-always-on-availability.md
-    items:
-    - name: Availability database is suspended
-      href: availability-database-is-suspended.md
-    - name: Availability group is offline
-      href: availability-group-is-offline.md
-    - name: Availability group is not ready for automatic failover
-      href: availability-group-is-not-ready-for-automatic-failover.md
-    - name: Availability replica does not have a healthy role
-      href: availability-replica-does-not-have-a-healthy-role.md
-    - name: Availability replica is disconnected
-      href: availability-replica-is-disconnected.md
-    - name: Availability replica is not joined
-      href: availability-replica-is-not-joined.md
-    - name: Data synchronization state of availability database is not healthy
-      href: data-synchronization-state-of-availability-database-is-not-healthy.md
-    - name: Data synchronization state of some availability database is not healthy
-      href: data-synchronization-state-of-some-availability-database-is-not-healthy.md
-    - name: Secondary database is not joined
-      href: secondary-database-is-not-joined.md
-    - name: Some availability replicas are disconnected
-      href: some-availability-replicas-are-disconnected.md
-    - name: Some availability replicas are not synchronizing data
-      href: some-availability-replicas-are-not-synchronizing-data.md
-    - name: Some availability replicas do not have a healthy role
-      href: some-availability-replicas-do-not-have-a-healthy-role.md
-    - name: Some synchronous replicas are not synchronized
-      href: some-synchronous-replicas-are-not-synchronized.md
-    - name: WSFC cluster service is offline
-      href: wsfc-cluster-service-is-offline.md
-  - name: Troubleshooting and monitoring guide
-    href: always-on-availability-groups-troubleshooting-and-monitoring-guide.md
-    items:
-    - name: Monitor performance for availability groups
-      href: monitor-performance-for-always-on-availability-groups.md
-    - name: "Troubleshoot: Availability group exceeded RPO"
-      href: troubleshoot-availability-group-exceeded-rpo.md
-    - name: "Troubleshoot: Availability group exceeded RTO"
-      href: troubleshoot-availability-group-exceeded-rto.md
-    - name: "Troubleshoot: Changes on primary not reflected on secondary replica"
-      href: troubleshoot-primary-changes-not-reflected-on-secondary.md
-    - name: Useful tools for troubleshooting
-      href: useful-tools-for-troubleshooting.md
+    - name: Dialogs and Wizards
       items:
-      - name: Extended events
-        href: always-on-extended-events.md
-      - name: Health diagnostics log
-        href: always-on-health-diagnostics-log.md
-      - name: Policies
-        href: always-on-policies.md
-      - name: Ring buffers
-        href: always-on-ring-buffers.md
-      - name: Wait types
-        href: always-on-wait-types.md
-      - name: CLUSTER.LOG
-        href: cluster-log-always-on-availability-groups.md
-      - name: Dynamic management and system catalog views
-        href: dynamic-management-views-and-system-catalog-views-always-on-availability-groups.md
-      - name: SQL Server error log
-        href: sql-server-error-log-always-on-availability-groups.md
+      - name: Add IP Address Dialog Box
+        href: add-ip-address-dialog-box-sql-server-management-studio.md
+      - name: Configure Read-Only Routing for an Availability Group
+        href: configure-read-only-routing-for-an-availability-group-sql-server.md
+      - name: Remove Availability Group Listener
+        href: remove-an-availability-group-listener-sql-server.md
+      - name: Specify Availability Group Options Page (New Availability Group Wizard/Add Database Wizard)
+        href: specify-availability-group-name-page.md
+      - name: Select Databases Page (New Availability Group Wizard and Add Database Wizard)
+        href: select-databases-page-new-availability-group-wizard-and-add-database-wizard.md
+      - name: "Specify Replicas Page (New Availability Group Wizard: Add Replica Wizard)"
+        href: specify-replicas-page-new-availability-group-wizard-add-replica-wizard.md
+      - name: Enter Passwords Page (Add Replica Wizard)
+        href: enter-passwords-page-add-replica-wizard.md
+      - name: Select Initial Data Synchronization Page (Always On Availability Group Wizards)
+        href: select-initial-data-synchronization-page-always-on-availability-group-wizards.md
+      - name: Validation Page (Always On Availability Group Wizards)
+        href: validation-page-always-on-availability-group-wizards.md
+      - name: Summary Page (Always On Availability Group Wizards)
+        href: summary-page-always-on-availability-group-wizards.md
+      - name: Progress Page (Always On Availability Group Wizards)
+        href: progress-page-always-on-availability-group-wizards.md
+      - name: Results Page (Always On Availability Group Wizards)
+        href: results-page-always-on-availability-group-wizards.md
+      - name: Availability Group - Connect Existing Secondary Replicas Page
+        href: connect-to-existing-secondary-replicas-page.md
+    - name: Use the Always On Dashboard (SQL Server Management Studio)
+      href: use-the-always-on-dashboard-sql-server-management-studio.md
+      items:
+      - name: Options (SQL Server Always On, Dashboard Page)
+        href: options-sql-server-always-on-dashboard-page.md
+      - name: Policy Evaluation Result (Always On)
+        href: policy-evaluation-result-always-on.md
+      - name: Availability Replica Properties (General Page)
+        href: availability-replica-properties-general-page.md
+      - name: "Availability Group Properties: New Availability Group (General Page)"
+        href: availability-group-properties-new-availability-group-general-page.md
+      - name: "Availability Group Properties: New Availability Group (Backup Preferences Page)"
+        href: availability-group-properties-new-availability-group-backup-preferences-page.md
+    - name: Policies
+      href: always-on-policies-for-operational-issues-always-on-availability.md
+      items:
+      - name: Availability database is suspended
+        href: availability-database-is-suspended.md
+      - name: Availability group is offline
+        href: availability-group-is-offline.md
+      - name: Availability group is not ready for automatic failover
+        href: availability-group-is-not-ready-for-automatic-failover.md
+      - name: Availability replica does not have a healthy role
+        href: availability-replica-does-not-have-a-healthy-role.md
+      - name: Availability replica is disconnected
+        href: availability-replica-is-disconnected.md
+      - name: Availability replica is not joined
+        href: availability-replica-is-not-joined.md
+      - name: Data synchronization state of availability database is not healthy
+        href: data-synchronization-state-of-availability-database-is-not-healthy.md
+      - name: Data synchronization state of some availability database is not healthy
+        href: data-synchronization-state-of-some-availability-database-is-not-healthy.md
+      - name: Secondary database is not joined
+        href: secondary-database-is-not-joined.md
+      - name: Some availability replicas are disconnected
+        href: some-availability-replicas-are-disconnected.md
+      - name: Some availability replicas are not synchronizing data
+        href: some-availability-replicas-are-not-synchronizing-data.md
+      - name: Some availability replicas do not have a healthy role
+        href: some-availability-replicas-do-not-have-a-healthy-role.md
+      - name: Some synchronous replicas are not synchronized
+        href: some-synchronous-replicas-are-not-synchronized.md
+      - name: WSFC cluster service is offline
+        href: wsfc-cluster-service-is-offline.md
+    - name: Troubleshooting and monitoring guide
+      href: always-on-availability-groups-troubleshooting-and-monitoring-guide.md
+      items:
+      - name: Monitor performance for availability groups
+        href: monitor-performance-for-always-on-availability-groups.md
+      - name: "Troubleshoot: Availability group exceeded RPO"
+        href: troubleshoot-availability-group-exceeded-rpo.md
+      - name: "Troubleshoot: Availability group exceeded RTO"
+        href: troubleshoot-availability-group-exceeded-rto.md
+      - name: "Troubleshoot: Changes on primary not reflected on secondary replica"
+        href: troubleshoot-primary-changes-not-reflected-on-secondary.md
+      - name: Useful tools for troubleshooting
+        href: useful-tools-for-troubleshooting.md
+        items:
+        - name: Extended events
+          href: always-on-extended-events.md
+        - name: Health diagnostics log
+          href: always-on-health-diagnostics-log.md
+        - name: Policies
+          href: always-on-policies.md
+        - name: Ring buffers
+          href: always-on-ring-buffers.md
+        - name: Wait types
+          href: always-on-wait-types.md
+        - name: CLUSTER.LOG
+          href: cluster-log-always-on-availability-groups.md
+        - name: Dynamic management and system catalog views
+          href: dynamic-management-views-and-system-catalog-views-always-on-availability-groups.md
+        - name: SQL Server error log
+          href: sql-server-error-log-always-on-availability-groups.md

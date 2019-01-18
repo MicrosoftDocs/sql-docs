@@ -2,24 +2,16 @@
 title: "Enable Resource Governor | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/04/2017"
-ms.prod: "sql-non-specified"
-ms.prod_service: "database-engine"
-ms.service: ""
-ms.component: "resource-governor"
+ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: performance
+ms.topic: conceptual
 helpviewer_keywords: 
   - "Resource Governor, enabling"
 ms.assetid: 4d17af53-cf11-4ce4-aab4-deda94a49836
-caps.latest.revision: 12
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-ms.workload: "Inactive"
+author: julieMSFT
+ms.author: jrasnick
+manager: craigg
 ---
 # Enable Resource Governor
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

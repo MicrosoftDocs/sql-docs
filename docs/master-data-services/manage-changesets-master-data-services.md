@@ -2,24 +2,20 @@
 title: "Manage Changesets (Master Data Services) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "mds"
-ms.service: ""
-ms.component: "non-specific"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "master-data-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: master-data-services
+ms.topic: conceptual
 ms.assetid: cc74d46d-7566-45d8-9b51-2cfc262f6abe
-caps.latest.revision: 11
-author: "smartysanthosh"
-ms.author: "nagavo"
-manager: "craigg"
-ms.workload: "Inactive"
+author: leolimsft
+ms.author: lle
+manager: craigg
 ---
 # Manage Changesets (Master Data Services)
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
   In [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] you can manage all changes by model and version.  
   
 ## Prerequisites  

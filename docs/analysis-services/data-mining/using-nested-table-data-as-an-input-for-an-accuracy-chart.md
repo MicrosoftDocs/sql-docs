@@ -1,29 +1,14 @@
 ---
 title: "Using Nested Table Data as an Input for an Accuracy Chart | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: analysis-services
-ms.prod_service: "analysis-services"
-ms.service: ""
-ms.component: ""
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
-  
-ms.component: data-mining
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Mining Accuracy Chart [Analysis Services], nested tables"
-  - "Mining Accuracy Chart [Analysis Services], input tables"
-  - "nested tables"
-  - "adding nested tables"
-ms.assetid: 162e0686-ada3-4dd3-9151-9589926e6613
-caps.latest.revision: 24
-author: "Minewiskan"
-ms.author: "owend"
-manager: "kfile"
-ms.workload: "Inactive"
+ms.date: 05/08/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: data-mining
+ms.topic: conceptual
+ms.author: owend
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
 ---
 # Using Nested Table Data as an Input for an Accuracy Chart
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -47,7 +32,7 @@ ms.workload: "Inactive"
   
 3.  In **Select data set to be used for accuracy chart**, select the option **Specify a different data set**.  
   
-4.  Click the browse button **(…)** to choose the external data set from a list of data source views on the current server.  
+4.  Click the browse button **(...)** to choose the external data set from a list of data source views on the current server.  
   
 5.  Click **Select Case Table**. In the **Select Table** dialog box, choose the table from the data source view that contains the case data, and then click **OK**.  
   

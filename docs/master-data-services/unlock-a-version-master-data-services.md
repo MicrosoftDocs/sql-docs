@@ -2,27 +2,23 @@
 title: "Unlock a Version (Master Data Services) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "mds"
-ms.service: ""
-ms.component: "non-specific"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "master-data-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: master-data-services
+ms.topic: conceptual
 helpviewer_keywords: 
   - "unlocking versions [Master Data Services]"
   - "versions [Master Data Services], unlocking"
 ms.assetid: b4cf4404-40f3-46fb-801d-cbf80a95448c
-caps.latest.revision: 6
-author: "smartysanthosh"
-ms.author: "nagavo"
-manager: "craigg"
-ms.workload: "Inactive"
+author: leolimsft
+ms.author: lle
+manager: craigg
 ---
 # Unlock a Version (Master Data Services)
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
   In [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], unlock a version of a model to enable changes to the model's members and their attributes.  
   
 ## Prerequisites  

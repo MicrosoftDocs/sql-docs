@@ -2,24 +2,16 @@
 title: "Disable Resource Governor | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/04/2017"
-ms.prod: "sql-non-specified"
-ms.prod_service: "database-engine"
-ms.service: ""
-ms.component: "resource-governor"
+ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: performance
+ms.topic: conceptual
 helpviewer_keywords: 
   - "Resource Governor, disabling"
 ms.assetid: 2c2d2db0-34a5-4f50-b783-17693e3ce3f1
-caps.latest.revision: 7
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-ms.workload: "Inactive"
+author: julieMSFT
+ms.author: jrasnick
+manager: craigg
 ---
 # Disable Resource Governor
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

@@ -2,16 +2,11 @@
 title: "Web Synchronization for Merge Replication | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "database-engine"
-ms.service: ""
-ms.component: "replication"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: replication
+ms.topic: conceptual
 helpviewer_keywords: 
   - "merge replication synchronization [SQL Server replication]"
   - "Internet [SQL Server replication], synchronization"
@@ -20,11 +15,9 @@ helpviewer_keywords:
   - "Web synchronization, about"
   - "Web synchronization"
 ms.assetid: 84785aba-b2c1-4821-9e9d-a363c73dcb37
-caps.latest.revision: 45
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-ms.workload: "Inactive"
+author: "MashaMSFT"
+ms.author: "mathoma"
+manager: craigg
 ---
 # Web Synchronization for Merge Replication
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

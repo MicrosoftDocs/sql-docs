@@ -2,29 +2,27 @@
 title: "Modify a SQL Server Agent Proxy | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "sql-tools"
-ms.service: ""
-ms.component: "ssms-agent"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "tools-ssms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: ssms
+ms.topic: conceptual
 helpviewer_keywords: 
   - "proxies [SQL Server Agent], modifying"
   - "modifying SQL Server Agent proxy"
 ms.assetid: 6e1dfbaa-8089-4813-940c-d5a2e13d8552
-caps.latest.revision: 5
 author: "stevestein"
 ms.author: "sstein"
-manager: "jhubbard"
-ms.workload: "Inactive"
+manager: craigg
+monikerRange: "= azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Modify a SQL Server Agent Proxy
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-This topic describes how to modify a [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent proxy in [!INCLUDE[ssCurrent](../../includes/sscurrent_md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] or [!INCLUDE[tsql](../../includes/tsql_md.md)].  
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+
+> [!IMPORTANT]  
+> On [Azure SQL Database Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance), most, but not all SQL Server Agent features are currently supported. See [Azure SQL Database Managed Instance T-SQL differences from SQL Server](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent) for details.
+
+This topic describes how to modify a [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent proxy in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
 **In This Topic**  
   
@@ -44,9 +42,9 @@ This topic describes how to modify a [!INCLUDE[msCoName](../../includes/msconame
   
 ### <a name="Restrictions"></a>Limitations and Restrictions  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent proxies use credentials to store information about Windows user accounts. The user specified in the credential must have "Log on as a batch job" permission on the computer on which [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] is running.  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent proxies use credentials to store information about Windows user accounts. The user specified in the credential must have "Log on as a batch job" permission on the computer on which [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is running.  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent checks subsystem access for a proxy and gives access to the proxy each time the job step runs. If the proxy no longer has access to the subsystem, the job step fails. Otherwise, [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent impersonates the user that is specified in the proxy and runs the job step.  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent checks subsystem access for a proxy and gives access to the proxy each time the job step runs. If the proxy no longer has access to the subsystem, the job step fails. Otherwise, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent impersonates the user that is specified in the proxy and runs the job step.  
   
 -   If the login for the user has access to the proxy, or the user belongs to any role with access to the proxy, the user can use the proxy in a job step.  
   
@@ -57,9 +55,9 @@ Only members of the **sysadmin** fixed server role can create, modify, or delete
   
 ## <a name="SSMSProcedure"></a>Using SQL Server Management Studio  
   
-#### To modify a [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent proxy  
+#### To modify a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent proxy  
   
-1.  In **Object Explorer**, click the plus sign to expand the server that contains the [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent proxy account that you want to modify.  
+1.  In **Object Explorer**, click the plus sign to expand the server that contains the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent proxy account that you want to modify.  
   
 2.  Click the plus sign to expand **SQL Server Agent**.  
   
@@ -69,13 +67,13 @@ Only members of the **sysadmin** fixed server role can create, modify, or delete
   
 5.  Right-click the proxy account you want to modify and select **Properties**.  
   
-6.  In the *proxy_name***Proxy Account Properties** dialog box, make changes to the proxy account as necessary. For more information on the options in this dialog box, see [Create a SQL Server Agent Proxy](../../ssms/agent/create-a-sql-server-agent-proxy.md).  
+6.  In the _proxy\_name_**Proxy Account Properties** dialog box, make changes to the proxy account as necessary. For more information on the options in this dialog box, see [Create a SQL Server Agent Proxy](../../ssms/agent/create-a-sql-server-agent-proxy.md).  
   
 7.  When finished, click **OK**.  
   
 ## <a name="TsqlProcedure"></a>Using Transact-SQL  
   
-#### To modify a [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent proxy  
+#### To modify a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent proxy  
   
 1.  In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../../includes/ssde_md.md)].  
   
@@ -93,5 +91,5 @@ Only members of the **sysadmin** fixed server role can create, modify, or delete
     GO  
     ```  
   
-For more information, see [sp_update_proxy (Transact-SQL)](http://msdn.microsoft.com/en-us/864fd0e6-9d61-4f07-92ef-145318d2f881).  
+For more information, see [sp_update_proxy (Transact-SQL)](https://msdn.microsoft.com/864fd0e6-9d61-4f07-92ef-145318d2f881).  
   

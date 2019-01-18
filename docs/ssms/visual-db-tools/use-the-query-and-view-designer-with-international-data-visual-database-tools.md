@@ -2,16 +2,11 @@
 title: "Use the Query and View Designer with International Data | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "sql-tools"
-ms.service: ""
-ms.component: "ssms-visual-db"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "tools-ssms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: ssms
+ms.topic: conceptual
 helpviewer_keywords: 
   - "Visual Database Tools [SQL Server], international data"
   - "queries [SQL Server], international data"
@@ -25,11 +20,10 @@ helpviewer_keywords:
   - "SQL pane [Visual Database Tools]"
   - "multiple language support [SQL Server], Query and View Designer"
 ms.assetid: 4b51c56f-f902-4e72-b919-e36127369b63
-caps.latest.revision: 5
 author: "stevestein"
 ms.author: "sstein"
-manager: "jhubbard"
-ms.workload: "Inactive"
+manager: craigg
+
 ---
 # Use the Query and View Designer with International Data (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

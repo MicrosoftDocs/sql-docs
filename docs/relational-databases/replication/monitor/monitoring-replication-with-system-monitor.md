@@ -2,26 +2,19 @@
 title: "Monitoring Replication with System Monitor | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "database-engine"
-ms.service: ""
-ms.component: "replication"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: replication
+ms.topic: conceptual
 helpviewer_keywords: 
   - "monitoring performance [SQL Server replication], System Monitor"
   - "System Monitor [SQL Server], replication"
   - "performance counters [SQL Server replication]"
 ms.assetid: 8cd3a270-0328-4bfd-bf23-b1d759cc120c
-caps.latest.revision: 30
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-ms.workload: "Inactive"
+author: "MashaMSFT"
+ms.author: "mathoma"
+manager: craigg
 ---
 # Monitoring Replication with System Monitor
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

@@ -2,27 +2,20 @@
 title: "getNumericFunctions Method (SQLServerDatabaseMetaData) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
-ms.prod_service: "drivers"
-ms.service: ""
-ms.component: "jdbc"
+ms.prod: sql
+ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "drivers"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: connectivity
+ms.topic: conceptual
 apiname: 
   - "SQLServerDatabaseMetaData.getNumericFunctions"
 apilocation: 
   - "sqljdbc.jar"
 apitype: "Assembly"
 ms.assetid: 8d1c3848-bdb7-452a-862f-6421e1a7ce8b
-caps.latest.revision: 8
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
-ms.workload: "Inactive"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # getNumericFunctions Method (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

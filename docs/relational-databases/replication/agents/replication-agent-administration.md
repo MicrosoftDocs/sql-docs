@@ -2,16 +2,11 @@
 title: "Replication Agent Administration | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/24/2016"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "database-engine"
-ms.service: ""
-ms.component: "replication"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: replication
+ms.topic: conceptual
 helpviewer_keywords: 
   - "Snapshot Agent, administering"
   - "Log Reader Agent, administering"
@@ -25,11 +20,9 @@ helpviewer_keywords:
   - "replication [SQL Server], administering"
   - "independent agents [SQL Server replication]"
 ms.assetid: f27186b8-b1b2-4da0-8b2b-91f632c2ab7e
-caps.latest.revision: 48
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-ms.workload: "Inactive"
+author: "MashaMSFT"
+ms.author: "mathoma"
+manager: craigg
 ---
 # Replication Agent Administration
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -72,7 +65,7 @@ ms.workload: "Inactive"
   
     -   Queue Reader Agent  
   
-     Access information and tasks associated with these agents through the **Agents** tab. For more information, see [View Information and Perform Tasks for the Agents Associated With a Publication &#40;Replication Monitor&#41;](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-publication-agents.md).  
+     Access information and tasks associated with these agents through the **Agents** tab. For more information, see View information and perform tasks using Replication Monitor](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-replication-monitor.md).  
   
 -   The following agents are associated with subscriptions in Replication Monitor:  
   
@@ -80,7 +73,7 @@ ms.workload: "Inactive"
   
     -   Merge Agent  
   
-     Access information and tasks associated with these agents through the following tabs: **Subscription Watch List** (available for each Publisher) or the **All Subscriptions** tab (available for each publication). For more information, see [View Information and Perform Tasks for the Agents Associated With a Subscription &#40;Replication Monitor&#41;](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-subscription-agents.md).  
+     Access information and tasks associated with these agents through the following tabs: **Subscription Watch List** (available for each Publisher) or the **All Subscriptions** tab (available for each publication). For more information, see [View information and perform tasks using Replication Monitor](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-replication-monitor.md).  
   
 ## Independent and Shared Agents  
  An independent agent is an agent that services one subscription. A shared agent services multiple subscriptions; if multiple subscriptions using the same shared agent need to synchronize, by default they wait in a queue, and the shared agent services them one at a time. Latency is reduced when using independent agents because the agent is ready whenever the subscription needs to be synchronized. Merge replication always uses independent agents, and transactional replication uses independent agents by default for publications created in the New Publication Wizard (in previous versions of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], transactional replication used shared agents by default).  
@@ -91,13 +84,13 @@ ms.workload: "Inactive"
 |Clean up job|Description|Default schedule|  
 |------------------|-----------------|----------------------|  
 |Agent History Clean Up: Distribution|Removes replication agent history from the distribution database.|Runs every ten minutes|  
-|Distribution Clean Up: Distribution|Removes replicated transactions from the distribution database. Deactivates subscriptions that have not been synchronized within the maximum distribution retention period.|Runs every ten minutes|  
-|Expired Subscription Clean Up|Detects and removes expired subscriptions from publication databases.|Runs every day at 1:00 A.M.|  
+|Distribution Clean Up: Distribution|Removes replicated transactions from the distribution database. |Runs every ten minutes|  
+|Expired Subscription Clean Up|Detects and removes expired subscriptions from publication databases. On the distributor, deactivates subscriptions that have not been synchronized within the maximum distribution retention period.|Runs every day at 1:00 A.M.| 
 |Reinitialize Subscriptions Having Data Validation Failures|Detects all subscriptions that have data validation failures and marks them for reinitialization. The next time the Merge Agent or Distribution Agent runs, a new snapshot will be applied at the Subscribers.|No default schedule (not enabled by default).|  
 |Replication Agents Checkup|Detects replication agents that are not actively logging history. It writes to the [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows event log if a job step fails.|Runs every ten minutes.|  
 |Replication monitoring refresher for distribution|Refreshes cached queries used by Replication Monitor..|Runs continuously.|  
   
 ## See Also  
- [Monitoring Replication](../../../relational-databases/replication/monitor/monitoring-replication-overview.md)  
+ [Monitoring Replication](../../../relational-databases/replication/monitor/monitoring-replication.md)  
   
   

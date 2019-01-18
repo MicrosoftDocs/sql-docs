@@ -2,25 +2,14 @@
 title: "Connect to Sybase (SybaseToSQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
-ms.prod_service: "sql-tools"
-ms.service: ""
-ms.component: "ssma-sybase"
+ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "sql-ssma"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to: 
-  - "Azure SQL Database"
-  - "SQL Server"
+ms.technology: ssma
+ms.topic: conceptual
 ms.assetid: 524f95ef-10bd-497c-84ca-c06a0ae794fb
-caps.latest.revision: 4
 author: "Shamikg"
 ms.author: "Shamikg"
-manager: "jhubbard"
-ms.workload: "Inactive"
+manager: craigg
 ---
 # Connect to Sybase (SybaseToSQL)
 Use the **Connect to Sybase** dialog box to connect to the Sybase Adaptive Server Enterprise (ASE) instance that you want to migrate.  

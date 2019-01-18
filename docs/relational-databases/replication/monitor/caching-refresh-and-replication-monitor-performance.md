@@ -2,16 +2,11 @@
 title: "Caching, Refresh, and Replication Monitor Performance | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "database-engine"
-ms.service: ""
-ms.component: "replication"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: replication
+ms.topic: conceptual
 helpviewer_keywords: 
   - "monitoring performance [SQL Server replication], Replication Monitor"
   - "cache [SQL Server], replication"
@@ -19,11 +14,9 @@ helpviewer_keywords:
   - "refreshing data"
   - "Replication Monitor, refreshing"
 ms.assetid: a2d8b666-ed41-4f86-b2b8-c8e118416ab7
-caps.latest.revision: 12
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-ms.workload: "Inactive"
+author: "MashaMSFT"
+ms.author: "mathoma"
+manager: craigg
 ---
 # Caching, Refresh, and Replication Monitor Performance
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -57,6 +50,6 @@ ms.workload: "Inactive"
   
 ## See Also  
  [Run Replication Maintenance Jobs &#40;SQL Server Management Studio&#41;](../../../relational-databases/replication/administration/run-replication-maintenance-jobs-sql-server-management-studio.md)   
- [Monitoring Replication](../../../relational-databases/replication/monitor/monitoring-replication-overview.md)  
+ [Monitoring Replication](../../../relational-databases/replication/monitor/monitoring-replication.md)  
   
   

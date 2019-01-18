@@ -2,16 +2,11 @@
 title: "sqlservr Application | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "sql-tools"
-ms.service: ""
-ms.component: "sqlservr"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: tools-other
+ms.topic: conceptual
 helpviewer_keywords: 
   - "command prompt utilities [SQL Server], sqlservr"
   - "command prompt [SQL Server], pausing/resuming instance of SQL Server"
@@ -25,11 +20,9 @@ helpviewer_keywords:
   - "command prompt [SQL Server], starting instance of SQL Server"
   - "continuing instance of SQL Server"
 ms.assetid: 60e8ef0a-0851-41cf-a6d8-cca1e04cbcdb
-caps.latest.revision: 39
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-ms.workload: "Inactive"
+author: "stevestein"
+ms.author: "sstein"
+manager: craigg
 ---
 # sqlservr Application
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -98,7 +91,7 @@ sqlservr [-sinstance_name] [-c] [-dmaster_path] [-f]
   
 -   "Failed Virtual Allocate Bytes: FAIL_VIRTUAL_COMMIT \<size>"  
   
- These messages may indicate that [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] is trying to free parts of the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] memory pool in order to find space for items such as extended stored procedure .dll files or automation objects. In this case, consider increasing the amount of memory reserved by the **-g**``switch.  
+ These messages may indicate that [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] is trying to free parts of the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] memory pool in order to find space for items such as extended stored procedure .dll files or automation objects. In this case, consider increasing the amount of memory reserved by the **-g** switch.  
   
  Using a value lower than the default increases the amount of memory available to the buffer pool and thread stacks; this may, in turn, provide some performance benefit to memory-intensive workloads in systems that do not use many extended stored procedures, distributed queries, or automation objects.  
   
@@ -106,7 +99,7 @@ sqlservr [-sinstance_name] [-c] [-dmaster_path] [-f]
  In most cases, the sqlservr.exe program is only used for troubleshooting or major maintenance. When [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] is started from the command prompt with sqlservr.exe, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] does not start as a service, so you cannot stop [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] using **net** commands. Users can connect to [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], but [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] tools show the status of the service, so [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Configuration Manager correctly indicates that the service is stopped. [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] can connect to the server, but it also indicates that the service is stopped.  
   
 ## Compatibility Support  
- The **-h**  parameter is not supported in [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]. This parameter was used in earlier versions of 32-bit instances of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] to reserve virtual memory address space for Hot Add memory metadata when AWE is enabled. For more information, see [Discontinued SQL Server Features in SQL Server 2016](http://msdn.microsoft.com/library/0678bfbc-5d3f-44f4-89c0-13e8e52404da).  
+ The **-h**  parameter is not supported in [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]. This parameter was used in earlier versions of 32-bit instances of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] to reserve virtual memory address space for Hot Add memory metadata when AWE is enabled. For more information, see [Discontinued SQL Server Features in SQL Server 2016](https://msdn.microsoft.com/library/0678bfbc-5d3f-44f4-89c0-13e8e52404da).  
   
 ## See Also  
  [Database Engine Service Startup Options](../database-engine/configure-windows/database-engine-service-startup-options.md)  

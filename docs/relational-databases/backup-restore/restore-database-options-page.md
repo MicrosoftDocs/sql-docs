@@ -2,24 +2,17 @@
 title: "Restore Database (Options Page) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-non-specified"
-ms.prod_service: "database-engine"
-ms.service: ""
-ms.component: "backup-restore"
+ms.prod: sql
+ms.prod_service: backup-restore
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "dbe-backup-restore"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: backup-restore
+ms.topic: conceptual
 f1_keywords: 
   - "sql13.swb.restoredb.options.f1"
 ms.assetid: 9a75d48b-c25f-40f3-8ea1-32cfa8211754
-caps.latest.revision: 68
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-ms.workload: "On Demand"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ---
 # Restore Database (Options Page)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -40,7 +33,7 @@ ms.workload: "On Demand"
  To modify aspects of the behavior of the restore operation, use the options of the **Restore options** panel.  
   
  **Overwrite the existing database [WITH REPLACE]**  
- The restore operation will overwrite the files of any database that is currently using the database name that you are specifying in the **Restore to**field on the [General](../../relational-databases/backup-restore/restore-database-general-page.md) page of the **Restore Database** dialog box. The files of the existing database will be overwritten even if you are restoring backups from a different database to the existing database name. Selecting this option is equivalent to using the REPLACE option in a [RESTORE](../../t-sql/statements/restore-statements-arguments-transact-sql.md) statement ([!INCLUDE[tsql](../../includes/tsql-md.md)]).  
+ The restore operation will overwrite the files of any database that is currently using the database name that you are specifying in the **Restore to**field on the [General](../../relational-databases/backup-restore/restore-database-general-page.md) page of the **Restore Database** dialog box. The files of the existing database will be overwritten even if you are restoring backups from a different database to the existing database name. Selecting this option is equivalent to using the REPLACE option in a [RESTORE](../../t-sql/statements/restore-statements-arguments-transact-sql.md) statement ( [!INCLUDE[tsql](../../includes/tsql-md.md)]).  
   
 > [!CAUTION]  
 >  Use this option only after careful consideration. For more information, see [RESTORE Arguments &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-arguments-transact-sql.md).  
@@ -63,7 +56,7 @@ ms.workload: "On Demand"
  To determine the state of the database after the store operation, you must select one of the options of the **Recovery state** panel.  
   
  **RESTORE WITH RECOVERY**  
- Recovers the database after restoring the final backup checked in the **Backup sets to restore**grid on the [General page](../../relational-databases/backup-restore/restore-database-general-page.md). This is the default option and is equivalent to specifying WITH RECOVERY in a [RESTORE](../../t-sql/statements/restore-statements-arguments-transact-sql.md) statement ([!INCLUDE[tsql](../../includes/tsql-md.md)]).  
+ Recovers the database after restoring the final backup checked in the **Backup sets to restore**grid on the [General page](../../relational-databases/backup-restore/restore-database-general-page.md). This is the default option and is equivalent to specifying WITH RECOVERY in a [RESTORE](../../t-sql/statements/restore-statements-arguments-transact-sql.md) statement ( [!INCLUDE[tsql](../../includes/tsql-md.md)]).  
   
 > [!NOTE]  
 >  Under the full recovery model or bulk-logged recovery model, choose this option only if you are restoring all the log files now.  

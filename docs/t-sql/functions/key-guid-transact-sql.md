@@ -2,15 +2,10 @@
 title: "KEY_GUID (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.service: ""
-ms.component: "t-sql|functions"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: t-sql
 ms.topic: "language-reference"
 f1_keywords: 
   - "Key_GUID_TSQL"
@@ -22,11 +17,9 @@ helpviewer_keywords:
   - "KEY_GUID function"
   - "GUIDs [SQL Server]"
 ms.assetid: 9246c7b2-7098-42c4-a222-cbf30267c46a
-caps.latest.revision: 20
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "craigg"
-ms.workload: "Inactive"
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
 ---
 # KEY_GUID (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

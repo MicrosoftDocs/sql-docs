@@ -2,16 +2,11 @@
 title: "Supported Query Types (Visual Database Tools) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "sql-tools"
-ms.service: ""
-ms.component: "ssms-visual-db"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "tools-ssms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: ssms
+ms.topic: conceptual
 helpviewer_keywords: 
   - "Delete query"
   - "queries [SQL Server], types"
@@ -25,11 +20,10 @@ helpviewer_keywords:
   - "Diagram pane [Visual Database Tools]"
   - "View Designer, query types"
 ms.assetid: 72b9116c-c128-4078-a78d-257a2955a3f6
-caps.latest.revision: 4
 author: "stevestein"
 ms.author: "sstein"
-manager: "jhubbard"
-ms.workload: "Inactive"
+manager: craigg
+
 ---
 # Supported Query Types (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -41,7 +35,7 @@ You can create the following types of queries in the Diagram and Criteria panes 
   
 -   **Insert Values** Creates a new row and inserts values into specified columns. This type of query creates an SQL INSERT INTO...VALUES statement.  
   
--   **Update query** Changes the values of individual columns in one or more existing rows in a table. This type of query creates an SQL UPDATE…SET statement.  
+-   **Update query** Changes the values of individual columns in one or more existing rows in a table. This type of query creates an SQL UPDATE...SET statement.  
   
 -   **Delete query** Removes one or more rows from a table. This type of query creates an SQL DELETE statement.  
   

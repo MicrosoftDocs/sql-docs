@@ -2,15 +2,10 @@
 title: "STIsSimple (geometry Data Type) | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/03/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.service: ""
-ms.component: "t-sql|spatial-geography"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: t-sql
 ms.topic: "language-reference"
 f1_keywords: 
   - "STIsSimple_TSQL"
@@ -20,11 +15,9 @@ dev_langs:
 helpviewer_keywords: 
   - "STIsSimple (geometry Data Type)"
 ms.assetid: da8f45d4-4f9c-405d-b883-760eb5344a71
-caps.latest.revision: 20
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-ms.workload: "Inactive"
+author: "douglaslMS"
+ms.author: "douglasl"
+manager: craigg
 ---
 # STIsSimple (geometry Data Type)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]

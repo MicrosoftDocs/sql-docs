@@ -2,24 +2,17 @@
 title: "SAP BW Connection Manager | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "integration-services"
-ms.service: ""
-ms.component: "connection-manager"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: integration-services
+ms.topic: conceptual
 ms.assetid: 06b166a1-a9df-48ea-a0e8-9b8d6979c0a1
-caps.latest.revision: 10
 f1_keywords: 
   - "sql13.dts.designer.sapbwconnectionmanager.f1"
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
-ms.workload: "Inactive"
+manager: craigg
 ---
 # SAP BW Connection Manager
   The SAP BW connection manager is the connection manager component of the [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector 1.1 for SAP BW. Thus, the SAP BW connection manager provides the connectivity to an SAP Netweaver BW version 7 system that the source and destination components of the [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector 1.1 for SAP BW need. (The SAP BW source and destination that are part of the [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector 1.1 for SAP BW package are the only [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] components that use the SAP BW connection manager.)  
@@ -47,7 +40,7 @@ ms.workload: "Inactive"
   
  If you do not know all the values that are required to configure the connection manager, you might have to ask your SAP administrator.  
   
- For a walkthrough that demonstrates how to configure and use the SAP BW connection manager, source, and destination, see the white paper, [Using SQL Server 2008 Integration Services with SAP BI 7.0](http://go.microsoft.com/fwlink/?LinkID=137090). This white paper also shows how to configure the required objects in SAP BW.  
+ For a walkthrough that demonstrates how to configure and use the SAP BW connection manager, source, and destination, see the white paper, [Using SQL Server 2008 Integration Services with SAP BI 7.0](https://go.microsoft.com/fwlink/?LinkID=137090). This white paper also shows how to configure the required objects in SAP BW.  
   
 ### Using the SSIS Designer to Configure the Source  
  For more information about the properties of the SAP BW connection manager that you can set in [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer, click the following topic:  
@@ -70,7 +63,7 @@ ms.workload: "Inactive"
   
     -   Double-click the SAP BW connection manager.  
   
-         —or—  
+         -or-  
   
     -   Right-click the SAP BW connection manager, and then select **Edit**.  
   

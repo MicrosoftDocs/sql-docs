@@ -2,24 +2,16 @@
 title: "MSSQLSERVER_10536 | Microsoft Docs"
 ms.custom: ""
 ms.date: "04/04/2017"
-ms.prod: "sql-non-specified"
-ms.prod_service: "database-engine"
-ms.service: ""
-ms.component: "errors-events"
+ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: supportability
 ms.topic: "language-reference"
 helpviewer_keywords: 
   - "10536 (Database Engine error)"
 ms.assetid: 9f97b41f-0ef8-4ad2-aec0-906a5d7522ba
-caps.latest.revision: 9
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "craigg"
-ms.workload: "Inactive"
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
 ---
 # MSSQLSERVER_10536
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

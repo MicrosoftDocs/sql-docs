@@ -2,16 +2,11 @@
 title: "Reorganize and Rebuild Indexes | Microsoft Docs"
 ms.custom: ""
 ms.date: "11/24/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
-ms.service: ""
-ms.component: "indexes"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "dbe-indexes"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: table-view-index
+ms.topic: conceptual
 f1_keywords: 
   - "sql13.swb.index.rebuild.f1"
   - "sql13.swb.indexproperties.fragmentation.f1"
@@ -33,27 +28,29 @@ helpviewer_keywords:
   - "LOB data [SQL Server], defragmenting"
   - "clustered indexes, defragmenting"
 ms.assetid: a28c684a-c4e9-4b24-a7ae-e248808b31e9
-caps.latest.revision: 70
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-ms.workload: "Active"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Reorganize and Rebuild Indexes
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
- > For content related to previous versions of SQL Server, see [Reorganize and Rebuild Indexes](https://msdn.microsoft.com/en-US/library/ms189858(SQL.120).aspx).
+  > [!div class="nextstepaction"]
+  > [Please share your feedback about the SQL Docs Table of Contents!](https://aka.ms/sqldocsurvey)
 
-  This topic describes how to reorganize or rebuild a fragmented index in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)]. The [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] automatically modifies indexes whenever insert, update, or delete operations are made to the underlying data. Over time these modifications can cause the information in the index to become scattered in the database (fragmented). Fragmentation exists when indexes have pages in which the logical ordering, based on the key value, does not match the physical ordering inside the data file. Heavily fragmented indexes can degrade query performance and cause your application to respond slowly, especially scan operations.  
+This topic describes how to reorganize or rebuild a fragmented index in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)]. The [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] automatically modifies indexes whenever insert, update, or delete operations are made to the underlying data. Over time these modifications can cause the information in the index to become scattered in the database (fragmented). Fragmentation exists when indexes have pages in which the logical ordering, based on the key value, does not match the physical ordering inside the data file. Heavily fragmented indexes can degrade query performance and cause your application to respond slowly, especially scan operations.  
   
- You can remedy index fragmentation by reorganizing or rebuilding an index. For partitioned indexes built on a partition scheme, you can use either of these methods on a complete index or a single partition of an index. Rebuilding an index drops and re-creates the index. This removes fragmentation, reclaims disk space by compacting the pages based on the specified or existing fill factor setting, and reorders the index rows in contiguous pages. When `ALL` is specified, all indexes on the table are dropped and rebuilt in a single transaction. Reorganizing an index uses minimal system resources. It defragments the leaf level of clustered and nonclustered indexes on tables and views by physically reordering the leaf-level pages to match the logical, left to right, order of the leaf nodes. Reorganizing also compacts the index pages. Compaction is based on the existing fill factor value.  
+You can remedy index fragmentation by reorganizing or rebuilding an index. For partitioned indexes built on a partition scheme, you can use either of these methods on a complete index or a single partition of an index.    
+Rebuilding an index drops and re-creates the index. This removes fragmentation, reclaims disk space by compacting the pages based on the specified or existing fill factor setting, and reorders the index rows in contiguous pages. When `ALL` is specified, all indexes on the table are dropped and rebuilt in a single transaction.   
+Reorganizing an index uses minimal system resources. It defragments the leaf level of clustered and nonclustered indexes on tables and views by physically reordering the leaf-level pages to match the logical, left to right, order of the leaf nodes. Reorganizing also compacts the index pages. Compaction is based on the existing fill factor value.  
    
 ##  <a name="BeforeYouBegin"></a> Before You Begin  
   
 ###  <a name="Fragmentation"></a> Detecting Fragmentation  
- The first step in deciding which defragmentation method to use is to analyze the index to determine the degree of fragmentation. By using the system function [sys.dm_db_index_physical_stats](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql.md), you can detect fragmentation in a specific index, all indexes on a table or indexed view, all indexes in a database, or all indexes in all databases. For partitioned indexes, **sys.dm_db_index_physical_stats** also provides fragmentation information for each partition.  
+The first step in deciding which defragmentation method to use is to analyze the index to determine the degree of fragmentation. By using the system function [sys.dm_db_index_physical_stats](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql.md), you can detect fragmentation in a specific index, all indexes on a table or indexed view, all indexes in a database, or all indexes in all databases. For partitioned indexes, **sys.dm_db_index_physical_stats** also provides fragmentation information for each partition.  
   
- The result set returned by the **sys.dm_db_index_physical_stats** function includes the following columns.  
+The result set returned by the **sys.dm_db_index_physical_stats** function includes the following columns.  
   
 |Column|Description|  
 |------------|-----------------|  
@@ -61,7 +58,7 @@ ms.workload: "Active"
 |**fragment_count**|The number of fragments (physically consecutive leaf pages) in the index.|  
 |**avg_fragment_size_in_pages**|Average number of pages in one fragment in an index.|  
   
- After the degree of fragmentation is known, use the following table to determine the best method to correct the fragmentation.  
+After the degree of fragmentation is known, use the following table to determine the best method to correct the fragmentation.  
   
 |**avg_fragmentation_in_percent** value|Corrective statement|  
 |-----------------------------------------------|--------------------------|  
@@ -70,38 +67,41 @@ ms.workload: "Active"
   
 <sup>1</sup> Rebuilding an index can be executed online or offline. Reorganizing an index is always executed online. To achieve availability similar to the reorganize option, you should rebuild indexes online.  
   
- These values provide a rough guideline for determining the point at which you should switch between `ALTER INDEX REORGANIZE` and `ALTER INDEX REBUILD`. However, the actual values may vary from case to case. It is important that you experiment to determine the best threshold for your environment. Very low levels of fragmentation (less than 5 percent) should not be addressed by either of these commands because the benefit from removing such a small amount of fragmentation is almost always vastly outweighed by the cost of reorganizing or rebuilding the index. For more information about `ALTER INDEX REORGANIZE` and `ALTER INDEX REBUILD`, refer to [ALTER INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md).   
+These values provide a rough guideline for determining the point at which you should switch between `ALTER INDEX REORGANIZE` and `ALTER INDEX REBUILD`. However, the actual values may vary from case to case. It is important that you experiment to determine the best threshold for your environment.    
+Very low levels of fragmentation (less than 5 percent) should typically not be addressed by either of these commands, because the benefit from removing such a small amount of fragmentation is almost always vastly outweighed by the cost of reorganizing or rebuilding the index. For more information about `ALTER INDEX REORGANIZE` and `ALTER INDEX REBUILD`, refer to [ALTER INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md).   
   
 > [!NOTE]
-> In general, fragmentation on small indexes is often not controllable. The pages of small indexes are sometimes stored on mixed extents. Mixed extents are shared by up to eight objects, so the fragmentation in a small index might not be reduced after reorganizing or rebuilding the index.
+> Rebuilding or reorganizing small indexes often does not reduce fragmentation. The pages of small indexes are sometimes stored on mixed extents. Mixed extents are shared by up to eight objects, so the fragmentation in a small index might not be reduced after reorganizing or rebuilding it.  
   
 ### <a name="Restrictions"></a> Limitations and Restrictions  
   
--   Indexes with more than 128 extents are rebuilt in two separate phases: logical and physical. In the logical phase, the existing allocation units used by the index are marked for deallocation, the data rows are copied and sorted, then moved to new allocation units created to store the rebuilt index. In the physical phase, the allocation units previously marked for deallocation are physically dropped in short transactions that happen in the background, and do not require many locks. For more information about extents, refer to the [Pages and Extents Architecture Guide](../../relational-databases/pages-and-extents-architecture-guide.md). 
+Indexes with more than 128 extents are rebuilt in two separate phases: logical and physical. In the logical phase, the existing allocation units used by the index are marked for deallocation, the data rows are copied and sorted, then moved to new allocation units created to store the rebuilt index. In the physical phase, the allocation units previously marked for deallocation are physically dropped in short transactions that happen in the background, and do not require many locks. For more information about extents, refer to the [Pages and Extents Architecture Guide](../../relational-databases/pages-and-extents-architecture-guide.md). 
   
--   Index options cannot be specified when reorganizing an index.  
+The `ALTER INDEX REORGANIZE` statement requires the data file containing the index to have space available, because the operation can only allocate temporary work pages on the same file, not another file within the filegroup. So although the filegroup might have free pages available, the user can still encounter error 1105: `Could not allocate space for object '###' in database '###' because the '###' filegroup is full. Create disk space by deleting unneeded files, dropping objects in the filegroup, adding additional files to the filegroup, or setting autogrowth on for existing files in the filegroup.`
   
--   The `ALTER INDEX REORGANIZE` statement requires the data file containing the index to have space available, because the operation can only allocate temporary work pages on the same file, not another file within the filegroup. So although the filegroup might have free pages available, the user can still encounter error 1105: `Could not allocate space for object '###' in database '###' because the '###' filegroup is full. Create disk space by deleting unneeded files, dropping objects in the filegroup, adding additional files to the filegroup, or setting autogrowth on for existing files in the filegroup.`
-  
--   Creating and rebuilding nonaligned indexes on a table with more than 1,000 partitions is possible, but is not recommended. Doing so may cause degraded performance or excessive memory consumption during these operations.
+Creating and rebuilding non-aligned indexes on a table with more than 1,000 partitions is possible, but is not recommended. Doing so may cause degraded performance or excessive memory consumption during these operations.
+
+An index cannot be reorganized or rebuilt if the filegroup in which it is located is offline or set to read-only. When the keyword `ALL` is specified and one or more indexes are in an offline or read-only filegroup, the statement fails.
   
 > [!IMPORTANT]
-> Starting with [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], statistics are not created by scanning all the rows in the table when a partitioned index is created or rebuilt. Instead, the query optimizer uses the default sampling algorithm to generate statistics. To obtain statistics on partitioned indexes by scanning all the rows in the table, use `CREATE STATISTICS` or `UPDATE STATISTICS` with the `FULLSCAN` clause.
+> When an index is created or rebuilt in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], statistics are created or updated by scanning all the rows in the table.
+> 
+> However, starting with [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], statistics are not created or updated by scanning all the rows in the table when a partitioned index is created or rebuilt. Instead, the query optimizer uses the default sampling algorithm to generate these statistics. To obtain statistics on partitioned indexes by scanning all the rows in the table, use `CREATE STATISTICS` or `UPDATE STATISTICS` with the `FULLSCAN` clause.  
   
 ### <a name="Security"></a> Security  
   
 #### <a name="Permissions"></a> Permissions  
- Requires ALTER permission on the table or view. User must be a member of the **sysadmin** fixed server role or the **db_ddladmin** and **db_owner** fixed database roles.  
+Requires ALTER permission on the table or view. User must be a member of the **sysadmin** fixed server role or the **db_ddladmin** and **db_owner** fixed database roles.  
   
 ## <a name="SSMSProcedureFrag"></a> Check index fragmentation using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]  
   
 #### To check the fragmentation of an index  
   
-1.  In Object Explorer, Expand the database that contains the table on which you want to check an index’s fragmentation.  
+1.  In Object Explorer, Expand the database that contains the table on which you want to check an index's fragmentation.  
   
 2.  Expand the **Tables** folder.  
   
-3.  Expand the table on which you want to check an index’s fragmentation.  
+3.  Expand the table on which you want to check an index's fragmentation.  
   
 4.  Expand the **Indexes** folder.  
   
@@ -188,7 +188,7 @@ ms.workload: "Active"
     (6 row(s) affected)  
     ```  
   
- For more information, see [sys.dm_db_index_physical_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql.md).  
+For more information, see [sys.dm_db_index_physical_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql.md).  
   
 ##  <a name="SSMSProcedureReorg"></a> Remove fragmentation using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]  
   
@@ -303,16 +303,16 @@ ms.workload: "Active"
   
      [!code-sql[IndexDDL#AlterIndex2](../../relational-databases/indexes/codesnippet/tsql/reorganize-and-rebuild-i_2.sql)]  
   
- For more information, see [ALTER INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md).  
+For more information, see [ALTER INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md).  
  
-#### Automatic index and statistics management
+### Automatic index and statistics management
 
-Leverage solutions such as [Adaptive Index Defrag](http://github.com/Microsoft/tigertoolbox/tree/master/AdaptiveIndexDefrag) to automatically manage index defragmentation and statistics updates for one or more databases. This procedure automatically chooses whether to rebuild or reorganize an index according to its fragmentation level, amongst other parameters, and update statistics with a linear threshold.
+Leverage solutions such as [Adaptive Index Defrag](https://github.com/Microsoft/tigertoolbox/tree/master/AdaptiveIndexDefrag) to automatically manage index defragmentation and statistics updates for one or more databases. This procedure automatically chooses whether to rebuild or reorganize an index according to its fragmentation level, amongst other parameters, and update statistics with a linear threshold.
   
 ## See Also  
   [SQL Server Index Design Guide](../../relational-databases/sql-server-index-design-guide.md)   
   [ALTER INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md)   
-  [Adaptive Index Defrag](http://github.com/Microsoft/tigertoolbox/tree/master/AdaptiveIndexDefrag)   
+  [Adaptive Index Defrag](https://github.com/Microsoft/tigertoolbox/tree/master/AdaptiveIndexDefrag)   
   [CREATE STATISTICS &#40;Transact-SQL&#41;](../../t-sql/statements/create-statistics-transact-sql.md)   
   [UPDATE STATISTICS &#40;Transact-SQL&#41;](../../t-sql/statements/update-statistics-transact-sql.md)   
   

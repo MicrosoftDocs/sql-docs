@@ -2,27 +2,23 @@
 title: "Change Tracking (Master Data Services) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/15/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "mds"
-ms.service: ""
-ms.component: "non-specific"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "master-data-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: master-data-services
+ms.topic: conceptual
 helpviewer_keywords: 
   - "change tracking [SQL Server]"
 ms.assetid: 5e879c65-0d38-454f-9a20-62a6e72c89f7
-caps.latest.revision: 7
-author: "smartysanthosh"
-ms.author: "nagavo"
-manager: "craigg"
-ms.workload: "Inactive"
+author: leolimsft
+ms.author: lle
+manager: craigg
 ---
 # Change Tracking (Master Data Services)
-  In [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], you can use change tracking groups to take action when an attribute value changes. Use change tracking when you don’t know what the new value will be, but instead want to know if any change occurred.  
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
+  In [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], you can use change tracking groups to take action when an attribute value changes. Use change tracking when you don't know what the new value will be, but instead want to know if any change occurred.  
   
 ## Configuring Change Tracking  
  To configure change tracking, you add an attribute to a change tracking group. The group can contain one or many attributes. Then, you create a business rule to define the action that is taken when any of the attributes in the group change.  

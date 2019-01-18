@@ -2,15 +2,10 @@
 title: "sys.messages (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/10/2016"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "database-engine"
-ms.service: ""
-ms.component: "system-catalog-views"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: system-objects
 ms.topic: "language-reference"
 f1_keywords: 
   - "messages_TSQL"
@@ -24,11 +19,9 @@ helpviewer_keywords:
   - "sys.messages catalog view"
   - "error numbers [SQL Server]"
 ms.assetid: 8c16ecdf-68f4-4a2a-b594-086e3344e58a
-caps.latest.revision: 38
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "craigg"
-ms.workload: "On Demand"
+author: stevestein
+ms.author: sstein
+manager: craigg
 ---
 # Messages (for errors) Catalog Views - sys.messages
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,8 +42,8 @@ ms.workload: "On Demand"
 ## See Also  
  [THROW &#40;Transact-SQL&#41;](../../t-sql/language-elements/throw-transact-sql.md)   
  [Catalog Views &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
- [Messages &#40;for Errors&#41; Catalog Views &#40;Transact-SQL&#41;](http://msdn.microsoft.com/library/8ac78c53-7b97-41b3-9cbd-5f97c179f1f2)   
- [Exception Message Box Programming](http://msdn.microsoft.com/library/0b1ba514-6959-4e69-bfd2-3cf3c1ac4b9c)   
+ [Messages &#40;for Errors&#41; Catalog Views &#40;Transact-SQL&#41;](https://msdn.microsoft.com/library/8ac78c53-7b97-41b3-9cbd-5f97c179f1f2)   
+ [Exception Message Box Programming](https://msdn.microsoft.com/library/0b1ba514-6959-4e69-bfd2-3cf3c1ac4b9c)   
  [Error Messages](../../relational-databases/native-client-odbc-error-messages/error-messages.md)   
  [Database Engine Events and Errors](../../relational-databases/errors-events/database-engine-events-and-errors.md)  
   

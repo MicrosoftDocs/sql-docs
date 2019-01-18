@@ -2,29 +2,20 @@
 title: "sp_helppublication_snapshot (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "database-engine"
-ms.service: ""
-ms.component: "system-stored-procedures"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
+ms.technology: replication
 ms.topic: "language-reference"
-applies_to: 
-  - "SQL Server"
 f1_keywords: 
   - "sp_helppublication_snapshot"
   - "sp_helppublication_snapshot_TSQL"
 helpviewer_keywords: 
   - "sp_helppublication_snapshot"
 ms.assetid: 97b4a7ae-40a5-4328-88f1-ff5d105bbb34
-caps.latest.revision: 19
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "craigg"
-ms.workload: "Inactive"
+author: stevestein
+ms.author: sstein
+manager: craigg
 ---
 # sp_helppublication_snapshot (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,7 +37,7 @@ sp_helppublication_snapshot [ @publication = ] 'publication'
  Is the name of the publication. *publication* is **sysname**, with no default.  
   
  [ **@publisher =** ] **'***publisher***'**  
- Specifies a non-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] publisher. *publisher* is **sysname**, with a default of NULL.  
+ Specifies a non- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] publisher. *publisher* is **sysname**, with a default of NULL.  
   
 > [!NOTE]  
 >  *publisher* should not be used when adding an article to a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Publisher.  

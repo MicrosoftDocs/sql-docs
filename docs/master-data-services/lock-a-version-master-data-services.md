@@ -2,27 +2,23 @@
 title: "Lock a Version (Master Data Services) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "mds"
-ms.service: ""
-ms.component: "non-specific"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "master-data-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: master-data-services
+ms.topic: conceptual
 helpviewer_keywords: 
   - "versions [Master Data Services], locking"
   - "locking versions [Master Data Services]"
 ms.assetid: 7bb62a84-12d8-4b29-9b6e-6aa25410618e
-caps.latest.revision: 7
-author: "smartysanthosh"
-ms.author: "nagavo"
-manager: "craigg"
-ms.workload: "Inactive"
+author: leolimsft
+ms.author: lle
+manager: craigg
 ---
 # Lock a Version (Master Data Services)
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
   In [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], lock a version of a model to prevent changes to the model's members and their attributes.  
   
 > [!NOTE]  

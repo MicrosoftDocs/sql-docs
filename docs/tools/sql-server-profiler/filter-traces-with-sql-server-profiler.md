@@ -2,16 +2,11 @@
 title: "Filter Traces with SQL Server Profiler | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "sql-tools"
-ms.service: ""
-ms.component: "sql-server-profiler"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: profiler
+ms.topic: conceptual
 helpviewer_keywords: 
   - "Profiler [SQL Server Profiler], filters"
   - "filters [SQL Server], events"
@@ -20,11 +15,9 @@ helpviewer_keywords:
   - "filters [SQL Server], traces"
   - "traces [SQL Server], filters"
 ms.assetid: 34577136-a0ed-4822-94de-4a0d5f98265f
-caps.latest.revision: 22
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-ms.workload: "Inactive"
+author: "stevestein"
+ms.author: "sstein"
+manager: craigg
 ---
 # Filter Traces with SQL Server Profiler
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

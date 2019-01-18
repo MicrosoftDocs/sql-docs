@@ -1,24 +1,17 @@
 ---
-title: "Track Appliance Alerts (Analytics Platform System)"
-author: "barbkess" 
-ms.author: "barbkess"
-manager: "jhubbard"	  
-ms.prod: "analytics-platform-system"
-ms.prod_service: "mpp-data-warehouse"
-ms.service: ""
-ms.component:
-ms.technology: "mpp-data-warehouse"
-ms.custom: ""
-ms.date: 01/05/2017
-ms.reviewer: na
-ms.suite: "sql"
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: 631345d9-4967-461a-8922-e5f8fd33f48f
-caps.latest.revision: 14
-
+title: Track appliance alerts - Analytics Platform System | Microsoft Docs
+description: Track appliance alerts in Analytics Platform System.
+author: mzaman1 
+manager: craigg
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
 ---
-# Track Appliance Alerts
+
+# Track appliance alerts in Analytics Platform System
 This topic explains how to use the Admin Console and system views to track alerts in a SQL Server PDW appliance.  
   
 ## To Track Appliance Alerts  
@@ -27,7 +20,7 @@ SQL Server PDW creates alerts for hardware and software issues that need attenti
 SQL Server PDW logs alerts in the [sys.dm_pdw_component_health_alerts](../relational-databases/system-dynamic-management-views/sys-dm-pdw-component-health-alerts-transact-sql.md) DMV. The system retains a limit of 10,000 alerts and deletes the oldest alert first when the limit is exceeded.  
   
 ### View Alerts by Using the Admin Console  
-There is an **Alerts** tab for the PDW region, the HDI region, and for the fabric region of the appliance. After failover occurs, the failover event is included in the number of alerts on the page. There is a page for the PDW region, the HDI region, and for the fabric region of the appliance. Each Health page has a tab. To learn more about an alert, click the **Health** page, the **Alerts** tab, and then click an alert.  
+There is an **Alerts** tab for the PDW region and for the fabric region of the appliance. After failover occurs, the failover event is included in the number of alerts on the page. There is a page for the PDW region and for the fabric region of the appliance. Each Health page has a tab. To learn more about an alert, click the **Health** page, the **Alerts** tab, and then click an alert.  
   
 ![PDW Admin Console Alerts](./media/track-appliance-alerts/SQL_Server_PDW_AdminConsole_AlertsV2.png "SQL_Server_PDW_AdminConsole_AlertsV2")  
   

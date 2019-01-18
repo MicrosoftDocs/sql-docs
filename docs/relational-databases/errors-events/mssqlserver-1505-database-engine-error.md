@@ -2,24 +2,16 @@
 title: "MSSQLSERVER_1505 | Microsoft Docs"
 ms.custom: ""
 ms.date: "04/04/2017"
-ms.prod: "sql-non-specified"
-ms.prod_service: "database-engine"
-ms.service: ""
-ms.component: "errors-events"
+ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: supportability
 ms.topic: "language-reference"
 helpviewer_keywords: 
   - "1505 (Database Engine error)"
 ms.assetid: ef4df75d-0f36-4c8b-b36c-e427f65f91ca
-caps.latest.revision: 14
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "craigg"
-ms.workload: "Inactive"
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
 ---
 # MSSQLSERVER_1505
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -33,7 +25,7 @@ ms.workload: "Inactive"
 |Event Source|MSSQLSERVER|  
 |Component|SQLEngine|  
 |Symbolic Name|DUP_KEY|  
-|Message Text|CREATE UNIQUE INDEX terminated because a duplicate key was found for object name '%.*ls' and index name '%.\*ls'.  The duplicate key value is %ls.|  
+|Message Text|CREATE UNIQUE INDEX terminated because a duplicate key was found for object name '%.\*ls' and index name '%.\*ls'.  The duplicate key value is %ls.|  
   
 ## Explanation  
 This error occurs when you attempt to create a unique index and more than one row in the table contains the specified duplicate value. A unique index is created when you create an index and specify the UNIQUE keyword, or when you create a UNIQUE constraint. The table cannot contain any rows that have duplicate values in the columns defined in the index or constraint.  
@@ -62,7 +54,7 @@ Consider the following solutions.
   
 -   Select columns that are defined as NOT NULL when you choose columns for a unique index or constraint. This eliminates the possibility of a uniqueness violation caused when more than one row contains NULL in the key values.  
   
--   If the duplicate values are the result of data entry errors, manually correct the data and then create the index or constraint. For information about removing duplicate rows in a table, see Knowledge Base article 139444: [How to remove duplicate rows from a table in SQL Server](http://support.microsoft.com/kb/139444).  
+-   If the duplicate values are the result of data entry errors, manually correct the data and then create the index or constraint. For information about removing duplicate rows in a table, see Knowledge Base article 139444: [How to remove duplicate rows from a table in SQL Server](https://support.microsoft.com/kb/139444).  
   
 ## See Also  
 [CREATE INDEX &#40;Transact-SQL&#41;](~/t-sql/statements/create-index-transact-sql.md)  

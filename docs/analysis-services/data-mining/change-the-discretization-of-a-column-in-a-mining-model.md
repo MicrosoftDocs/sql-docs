@@ -1,33 +1,18 @@
 ---
 title: "Change the Discretization of a Column in a Mining Model | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: analysis-services
-ms.prod_service: "analysis-services"
-ms.service: ""
-ms.component: ""
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
-  
-ms.component: data-mining
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "discretization [Analysis Services]"
-  - "mining structures [Analysis Services], how-to topics"
-  - "discretized columns [data mining]"
-  - "bucketing problems [Analysis Services]"
-ms.assetid: 3c49862b-595d-4fa4-b890-e2e1bde1d74f
-caps.latest.revision: 14
-author: "Minewiskan"
-ms.author: "owend"
-manager: "kfile"
-ms.workload: "Inactive"
+ms.date: 05/01/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: data-mining
+ms.topic: conceptual
+ms.author: owend
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
 ---
 # Change the Discretization of a Column in a Mining Model
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] automatically discretizes values—that is to say, it bins data in numeric column—in certain scenarios. For example, if your data contains continuous numeric data and you create a decision tree model, each column of continuous data will be automatically binned, depending on the distribution of the data. If you want to control how the data is discretized, you must change the properties on the mining structure column that control how the data is used in the model.  
+  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] automatically discretizes values-that is to say, it bins data in numeric column-in certain scenarios. For example, if your data contains continuous numeric data and you create a decision tree model, each column of continuous data will be automatically binned, depending on the distribution of the data. If you want to control how the data is discretized, you must change the properties on the mining structure column that control how the data is used in the model.  
   
  For general information about how to set the properties in a mining model, see [Mining Model Columns](../../analysis-services/data-mining/mining-model-columns.md).  
   

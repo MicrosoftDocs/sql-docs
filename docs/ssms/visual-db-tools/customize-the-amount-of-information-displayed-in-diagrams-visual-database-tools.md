@@ -2,27 +2,21 @@
 title: "Customize the Amount of Information Displayed in Diagrams | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "sql-tools"
-ms.service: ""
-ms.component: "ssms-visual-db"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "tools-ssms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: ssms
+ms.topic: conceptual
 helpviewer_keywords: 
   - "database diagrams [SQL Server], information displayed"
   - "table views in database diagrams [SQL Server]"
   - "customizing database diagram information [SQL Server]"
   - "custom table views [SQL Server]"
 ms.assetid: 31bb6772-7974-4329-bca0-c16d5875483d
-caps.latest.revision: 4
 author: "stevestein"
 ms.author: "sstein"
-manager: "jhubbard"
-ms.workload: "Inactive"
+manager: craigg
+
 ---
 # Customize the Amount of Information Displayed in Diagrams (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

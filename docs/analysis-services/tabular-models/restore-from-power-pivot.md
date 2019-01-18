@@ -1,34 +1,21 @@
 ---
-title: "Restore from Power Pivot | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: analysis-services
-ms.prod_service: "analysis-services, azure-analysis-services"
-ms.service: ""
-ms.component: ""
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
-  
-ms.component: multidimensional-tabular
-ms.component: data-mining
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql11.asvs.ssmsimbi.RestoreFromPP.f1"
-ms.assetid: 232ac8ed-77fe-47d8-acd3-59bc2fdfdf48
-caps.latest.revision: 8
-author: "Minewiskan"
-ms.author: "owend"
-manager: "kfile"
-ms.workload: "Inactive"
+title: "Restore from Power Pivot in Analysis Services | Microsoft Docs"
+ms.date: 05/07/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: tabular-models
+ms.topic: conceptual
+ms.author: owend
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
 ---
 # Restore from Power Pivot
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
   You can use the Restore from [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] feature in SQL Server Management Studio to create a new Tabular model database on an Analysis Services instance (running in Tabular mode), or restore to an existing database from a [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] workbook (.xlsx).  
   
 > [!NOTE]  
->  The Import from [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] project template in SQL Server Data Tools provides similar functionality. For more information, see [Import from Power Pivot &#40;SSAS Tabular&#41;](../../analysis-services/tabular-models/import-from-power-pivot-ssas-tabular.md).  
+>  The Import from [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] project template in SQL Server Data Tools provides similar functionality. For more information, see [Import from Power Pivot](../../analysis-services/tabular-models/import-from-power-pivot-ssas-tabular.md).  
   
  When using Restore from [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)], keep the following in mind:  
   
@@ -36,7 +23,7 @@ ms.workload: "Inactive"
   
 -   The Analysis Services instance service account must have Read permissions on the workbook file you are restoring from.  
   
--   By default, when you restore a database from [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)], the Tabular model database Data Source Impersonation Info property is set to Default, which specifies the Analysis Services instance service account. It is recommended you change the impersonation credentials to a Windows user account in Database Properties. For more information, see [Impersonation &#40;SSAS Tabular&#41;](../../analysis-services/tabular-models/impersonation-ssas-tabular.md).  
+-   By default, when you restore a database from [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)], the Tabular model database Data Source Impersonation Info property is set to Default, which specifies the Analysis Services instance service account. It is recommended you change the impersonation credentials to a Windows user account in Database Properties. For more information, see [Impersonation](../../analysis-services/tabular-models/impersonation-ssas-tabular.md).  
   
 -   Data in the [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] data model will be copied into an existing or new Tabular model database on the Analysis Services instance. If your [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] workbook contains linked tables, they will be recreated as a table without a data source, similar to a table created using Paste To New table.  
   
@@ -53,7 +40,7 @@ ms.workload: "Inactive"
 5.  In **Options**, leave **Include security information** checked. When restoring from a [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] workbook, this setting does not apply.  
   
 ## See Also  
- [Tabular Model Databases &#40;SSAS Tabular&#41;](../../analysis-services/tabular-models/tabular-model-databases-ssas-tabular.md)   
- [Import from Power Pivot &#40;SSAS Tabular&#41;](../../analysis-services/tabular-models/import-from-power-pivot-ssas-tabular.md)  
+ [Tabular Model Databases](../../analysis-services/tabular-models/tabular-model-databases-ssas-tabular.md)   
+ [Import from Power Pivot](../../analysis-services/tabular-models/import-from-power-pivot-ssas-tabular.md)  
   
   

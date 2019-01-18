@@ -2,15 +2,10 @@
 title: "distinct-values Function (XQuery) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/09/2017"
-ms.prod: "sql-non-specified"
-ms.prod_service: "sql-non-specified"
-ms.service: ""
-ms.component: "xquery"
+ms.prod: sql
+ms.prod_service: sql
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: xml
 ms.topic: "language-reference"
 dev_langs: 
   - "XML"
@@ -18,11 +13,9 @@ helpviewer_keywords:
   - "distinct-values function"
   - "fn:distinct-values function"
 ms.assetid: f4c2bb53-2bec-4f1a-9c00-cf997fb7ae5b
-caps.latest.revision: 26
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-ms.workload: "Inactive"
+author: "rothja"
+ms.author: "jroth"
+manager: craigg
 ---
 # Functions on Sequences - distinct-values
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

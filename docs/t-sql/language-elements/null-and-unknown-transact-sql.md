@@ -2,24 +2,17 @@
 title: "NULL and UNKNOWN (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"
-ms.prod: "sql-non-specified"
-ms.prod_service: "database-engine, pdw, sql-database"
-ms.service: ""
-ms.component: "t-sql|language-elements"
+ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: t-sql
 ms.topic: "language-reference"
 dev_langs: 
   - "TSQL"
 ms.assetid: 9d491846-4730-4740-a680-77c69fae4a58
-caps.latest.revision: 5
-author: "barbkess"
-ms.author: "barbkess"
-manager: "jhubbard"
-ms.workload: "On Demand"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # NULL and UNKNOWN (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-pdw-md.md)]

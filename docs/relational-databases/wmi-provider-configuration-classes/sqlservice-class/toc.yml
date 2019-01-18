@@ -1,0 +1,48 @@
+- name: AcceptPause Property (SqlService Class)
+  href: acceptpause-property-sqlservice-class.md
+- name: AcceptStop Property (SqlService Class)
+  href: acceptstop-property-sqlservice-class.md
+- name: AdvancedProperties Property (SqlService Class)
+  href: advancedproperties-property-sqlservice-class.md
+- name: BinaryPath Property (SqlService Class )
+  href: binarypath-property-sqlservice-class.md
+- name: Clustered Property (SqlService Class)
+  href: clustered-property-sqlservice-class.md
+- name: Dependencies Property (SqlService Class)
+  href: dependencies-property-sqlservice-class.md
+- name: Description Property (SqlService Class)
+  href: description-property-sqlservice-class.md
+- name: DisplayName Property (SqlService Class)
+  href: displayname-property-sqlservice-class.md
+- name: ErrorControl Property (SqlService Class)
+  href: errorcontrol-property-sqlservice-class.md
+- name: ExitCode Property (SqlService Class)
+  href: exitcode-property-sqlservice-class.md
+- name: HostName Property (SqlService Class)
+  href: hostname-property-sqlservice-class.md
+- name: PauseService Method (SqlService Class)
+  href: pauseservice-method-sqlservice-class.md
+- name: ProcessId Class (SqlService Class)
+  href: processid-class-sqlservice-class.md
+- name: ResumeService Method (SqlService Class)
+  href: resumeservice-method-sqlservice-class.md
+- name: ServiceName Property (SqlService Class)
+  href: servicename-property-sqlservice-class.md
+- name: SetServiceAccount Method (SqlService Class)
+  href: setserviceaccount-method-sqlservice-class.md
+- name: SetServiceAccountPassword Method (SqlService Class)
+  href: setserviceaccountpassword-method-sqlservice-class.md
+- name: SetStartMode Method (SqlService Class)
+  href: setstartmode-method-sqlservice-class.md
+- name: SqlService Class
+  href: sqlservice-class.md
+- name: SqlServiceType Property (SqlService Class)
+  href: sqlservicetype-property-sqlservice-class.md
+- name: StartMode Property (SqlService Class)
+  href: startmode-property-sqlservice-class.md
+- name: StartService Method (SqlService Class)
+  href: startservice-method-sqlservice-class.md
+- name: State Property (SqlService Class)
+  href: state-property-sqlservice-class.md
+- name: StopService Method (SqlService Class)
+  href: stopservice-method-sqlservice-class.md

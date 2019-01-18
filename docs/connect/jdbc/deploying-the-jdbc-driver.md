@@ -2,29 +2,22 @@
 title: "Deploying the JDBC Driver | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
-ms.prod_service: "drivers"
-ms.service: ""
-ms.component: "jdbc"
+ms.prod: sql
+ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "drivers"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: connectivity
+ms.topic: conceptual
 ms.assetid: 3ad3508d-d9b1-47fb-a63b-21cdc3ed44e0
-caps.latest.revision: 26
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
-ms.workload: "On Demand"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # Deploying the JDBC Driver
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-  When you deploy an application that depends on the [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)], you must redistribute the JDBC driver together with your application. Unlike Windows Data Access Components (Windows DAC), which is a component of the Windows operating system, the JDBC driver is considered to be a component of [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)].  
+  When you deploy an application that depends on the [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)], you must redistribute the JDBC driver together with your application. Unlike Windows Data Access Components (Windows DAC), which is a component of the Windows operating system, the JDBC driver is considered to be a component of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- There are two approaches to deploying the JDBC driver with your application. One is to include the JDBC driver files as part of your own custom installation package. The second approach involves using the JDBC installation package provided by Microsoft, which you can download from the [Microsoft JDBC Driver for SQL Server Developer Center](http://go.microsoft.com/fwlink/?LinkId=70166).  
+ There are two approaches to deploying the JDBC driver with your application. One is to include the JDBC driver files as part of your own custom installation package. The second approach involves using the JDBC installation package provided by Microsoft, which you can download from the [Microsoft JDBC Driver for SQL Server Developer Center](https://go.microsoft.com/fwlink/?LinkId=70166).  
   
  The following sections discuss how to use the JDBC installation package on Windows and UNIX operating systems.  
   
@@ -52,7 +45,7 @@ ms.workload: "On Demand"
   
  To unpack the tar file, move it to the directory where you want the driver installed and type the following command:  
   
- `tar –xf sqljdbc_<version>_<language>.tar`  
+ `tar -xf sqljdbc_<version>_<language>.tar`  
   
 ## See Also  
  [Overview of the JDBC Driver](../../connect/jdbc/overview-of-the-jdbc-driver.md)  

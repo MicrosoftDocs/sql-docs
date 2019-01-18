@@ -2,16 +2,11 @@
 title: "Choose an Authentication Mode | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-non-specified"
-ms.prod_service: "database-engine"
-ms.service: ""
-ms.component: "security"
+ms.prod: sql
+ms.prod_service: security
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: security
+ms.topic: conceptual
 f1_keywords: 
   - "sql13.ins.instwizard.authenticationmode.f1"
   - "sql13.swb.passwordexpired.f1"
@@ -28,11 +23,9 @@ helpviewer_keywords:
   - "SQL authentication mode"
   - "Password Expired dialog box"
 ms.assetid: ff7a6a48-3d38-4209-aa0f-7d6c0a8c64ef
-caps.latest.revision: 45
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "craigg"
-ms.workload: "Active"
+author: VanMSFT
+ms.author: vanto
+manager: craigg
 ---
 # Choose an Authentication Mode
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

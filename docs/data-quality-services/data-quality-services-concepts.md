@@ -2,24 +2,20 @@
 title: "Data Quality Services Concepts | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/01/2012"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "data-quality-services"
-ms.service: ""
-ms.component: "data-quality-services"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "data-quality-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: data-quality-services
+ms.topic: conceptual
 ms.assetid: 837c71ee-48fa-4044-8744-2be9119aaa04
-caps.latest.revision: 17
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-ms.workload: "Inactive"
+author: "douglaslMS"
+ms.author: "douglasl"
+manager: craigg
 ---
 # Data Quality Services Concepts
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
   This topic provides a brief summary of [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) concepts in knowledge management, data quality projects, and data quality administration.  
   
 ##  <a name="Knowledge"></a> Knowledge Management Concepts  
@@ -27,7 +23,7 @@ ms.workload: "Inactive"
   
  **Knowledge Discovery**  
   
- Knowledge discovery is a computer-assisted process that analyzes samples of your organization’s data to build knowledge about the data. Once you have the results of the analysis, you can validate and enhance the knowledge, and then apply it to perform data cleansing, matching, and profiling. For more information, see [DQS Knowledge Bases and Domains](../data-quality-services/dqs-knowledge-bases-and-domains.md).  
+ Knowledge discovery is a computer-assisted process that analyzes samples of your organization's data to build knowledge about the data. Once you have the results of the analysis, you can validate and enhance the knowledge, and then apply it to perform data cleansing, matching, and profiling. For more information, see [DQS Knowledge Bases and Domains](../data-quality-services/dqs-knowledge-bases-and-domains.md).  
   
  **Domain Management**  
   

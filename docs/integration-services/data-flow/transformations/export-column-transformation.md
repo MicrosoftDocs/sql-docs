@@ -2,16 +2,11 @@
 title: "Export Column Transformation | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "integration-services"
-ms.service: ""
-ms.component: "data-flow"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: integration-services
+ms.topic: conceptual
 f1_keywords: 
   - "sql13.dts.designer.exportcolumntrans.f1"
   - "sql13.dts.designer.fileextractortransformation.columns.f1"
@@ -24,11 +19,9 @@ helpviewer_keywords:
   - "inserting data"
   - "truncate options [Integration Services]"
 ms.assetid: 678d2dfc-e40c-4fbb-b2cc-42fffc44478a
-caps.latest.revision: 45
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
-ms.workload: "Inactive"
+manager: craigg
 ---
 # Export Column Transformation
   The Export Column transformation reads data in a data flow and inserts the data into a file. For example, if the data flow contains product information, such as a picture of each product, you could use the Export Column transformation to save the images to files.  
@@ -67,7 +60,7 @@ ms.workload: "Inactive"
   
  The **Advanced Editor** dialog box reflects the properties that can be set programmatically. For more information about the properties that you can set in the **Advanced Editor** dialog box or programmatically, click one of the following topics:  
   
--   [Common Properties](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
+-   [Common Properties](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
 -   [Transformation Custom Properties](../../../integration-services/data-flow/transformations/transformation-custom-properties.md)  
   

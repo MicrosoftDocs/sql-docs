@@ -5,12 +5,7 @@ ms.date: "03/14/2017"
 ms.prod: ""
 ms.prod_service: "sql-database"
 ms.reviewer: ""
-ms.service: "sql-database"
-ms.component: "dmv's"
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: system-objects
 ms.topic: "language-reference"
 f1_keywords: 
   - "dm_db_wait_stats_TSQL"
@@ -23,11 +18,10 @@ helpviewer_keywords:
   - "sys.dm_db_wait_stats dynamic management view"
   - "dm_db_wait_stats"
 ms.assetid: 00abd0a5-bae0-4d71-b173-f7a14cddf795
-caps.latest.revision: 15
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-ms.workload: "Inactive"
+author: stevestein
+ms.author: sstein
+manager: craigg
+monikerRange: "= azuresqldb-current || = sqlallproducts-allversions"
 ---
 # sys.dm_db_wait_stats (Azure SQL Database)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]

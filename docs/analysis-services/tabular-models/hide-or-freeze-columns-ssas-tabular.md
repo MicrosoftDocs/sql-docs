@@ -1,39 +1,26 @@
 ---
-title: "Hide or Freeze Columns (SSAS Tabular) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: analysis-services
-ms.prod_service: "analysis-services, azure-analysis-services"
-ms.service: ""
-ms.component: ""
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
-  
-ms.component: multidimensional-tabular
-ms.component: data-mining
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.asvs.bidtoolset.hideunhidecolumnsdb.f1"
-ms.assetid: 5407aee5-6a07-4559-a2ba-2ca00a242f02
-caps.latest.revision: 10
-author: "Minewiskan"
-ms.author: "owend"
-manager: "kfile"
-ms.workload: "Inactive"
+title: "Hide or freeze columns in Analysis Services tabular models | Microsoft Docs"
+ms.date: 05/07/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: tabular-models
+ms.topic: conceptual
+ms.author: owend
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
 ---
-# Hide or Freeze Columns (SSAS Tabular)
+# Hide or freeze columns 
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
   In the model designer, if there are columns that you don't want to display in a table, you can temporarily hide them. Hiding a column gives you more room on the screen to add new columns or to work with only relevant columns of data. You can hide and unhide columns from the **Column** menu in the model designer, and from the right-click menu available from each column header. To keep an area of a model visible while you scroll to another area of the model, you can lock specific columns in one area by freezing them.  
   
 > [!IMPORTANT]  
->  The ability to hide columns is not intended to be used for data security, only to simplify and shorten the list of columns visible in the model designer or reports. To secure data, you can define security roles. Roles can limit viewable metadata and data to only those objects defined in the role. For more information, see [Roles &#40;SSAS Tabular&#41;](../../analysis-services/tabular-models/roles-ssas-tabular.md).  
+>  The ability to hide columns is not intended to be used for data security, only to simplify and shorten the list of columns visible in the model designer or reports. To secure data, you can define security roles. Roles can limit viewable metadata and data to only those objects defined in the role. For more information, see [Roles](../../analysis-services/tabular-models/roles-ssas-tabular.md).  
   
  When you hide a column, you have the option to hide the column while you are working in the model designer or in reports. If you hide all columns, the entire table appears blank in the model designer.  
   
 > [!NOTE]  
->  If you have many columns to hide, you can create a perspective instead of hiding and unhiding columns. A perspective is a custom view of the data that makes it easier to work with subset of related data. For more information, see [Create and Manage Perspectives &#40;SSAS Tabular&#41;](../../analysis-services/tabular-models/create-and-manage-perspectives-ssas-tabular.md)  
+>  If you have many columns to hide, you can create a perspective instead of hiding and unhiding columns. A perspective is a custom view of the data that makes it easier to work with subset of related data. For more information, see [Create and Manage Perspectives](../../analysis-services/tabular-models/create-and-manage-perspectives-ssas-tabular.md)  
   
 ### To hide an individual column  
   
@@ -63,8 +50,8 @@ ms.workload: "Inactive"
     >  When a column(s) is frozen, it is moved to left (or front) of the table in the designer. Unfreezing the column does not move it back to its original location.  
   
 ## See Also  
- [Tables and Columns &#40;SSAS Tabular&#41;](../../analysis-services/tabular-models/tables-and-columns-ssas-tabular.md)   
- [Perspectives &#40;SSAS Tabular&#41;](../../analysis-services/tabular-models/perspectives-ssas-tabular.md)   
- [Roles &#40;SSAS Tabular&#41;](../../analysis-services/tabular-models/roles-ssas-tabular.md)  
+ [Tables and Columns](../../analysis-services/tabular-models/tables-and-columns-ssas-tabular.md)   
+ [Perspectives](../../analysis-services/tabular-models/perspectives-ssas-tabular.md)   
+ [Roles](../../analysis-services/tabular-models/roles-ssas-tabular.md)  
   
   

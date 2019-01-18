@@ -1,30 +1,14 @@
 ---
 title: "TopCount (DMX) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/02/2016"
-ms.prod: analysis-services
-ms.prod_service: "analysis-services"
-ms.service: ""
-ms.component: ""
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
-  
-ms.component: data-mining
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "TOPCOUNT"
-dev_langs: 
-  - "DMX"
-helpviewer_keywords: 
-  - "TopCount function"
-ms.assetid: cbe031c9-4ff0-45df-9810-ebaebacf161d
-caps.latest.revision: 40
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-ms.workload: "Inactive"
+ms.date: 06/07/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: dmx
+ms.topic: conceptual
+ms.author: owend
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
 ---
 # TopCount (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -52,7 +36,7 @@ TopCount(<table expression>, <rank expression>, <count>)
  However, there are situations where you might still need to use TopCount. For example, DMX does not support the **TOP** qualifier in a sub-select statement. The [PredictHistogram &#40;DMX&#41;](../dmx/predicthistogram-dmx.md) function also does not support the addition of **TOP**.  
   
 ## Examples  
- The following examples are prediction queries against the Association model that you build by using the [Basic Data Mining Tutorial](http://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c). The queries return the same results, but the first example uses TopCount, and the second example uses the Predict function.  
+ The following examples are prediction queries against the Association model that you build by using the [Basic Data Mining Tutorial](https://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c). The queries return the same results, but the first example uses TopCount, and the second example uses the Predict function.  
   
  To understand how TopCount works, it may be helpful to first execute a prediction query that returns only the nested table.  
   
@@ -107,9 +91,9 @@ NATURAL PREDICTION JOIN
   
 |Model|$SUPPORT|$PROBABILITY|$ADJUSTEDPROBABILITY|  
 |-----------|--------------|------------------|--------------------------|  
-|Sport-100|4334|0.29…|0.25…|  
-|Water Bottle|2866|0.19…|0.17…|  
-|Patch kit|2113|0.14…|0.13…|  
+|Sport-100|4334|0.29...|0.25...|  
+|Water Bottle|2866|0.19...|0.17...|  
+|Patch kit|2113|0.14...|0.13...|  
   
  However, this type of query might affect performance in a production setting. This is because the query returns a set of all predictions from the algorithm, sorts these predictions, and returns the top 3.  
   

@@ -2,22 +2,15 @@
 title: "catalog.worker_agents (SSISDB Database) | Microsoft Docs"
 ms.custom: ""
 ms.date: "12/16/2016"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "integration-services"
-ms.service: ""
-ms.component: "system-views"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: integration-services
+ms.topic: conceptual
 ms.assetid: 0bd0d827-e2f1-44fe-aa90-6bf922d68d16
-caps.latest.revision: 3
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
-ms.workload: "Inactive"
+manager: craigg
 ---
 # catalog.worker_agents (SSISDB Database)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]

@@ -1,0 +1,8 @@
+- name: Overview
+  href: event-notifications.md
+- name: Implement
+  href: implement-event-notifications.md
+- name: Configure Dialog Security
+  href: configure-dialog-security-for-event-notifications.md
+- name: Get Information
+  href: get-information-about-event-notifications.md

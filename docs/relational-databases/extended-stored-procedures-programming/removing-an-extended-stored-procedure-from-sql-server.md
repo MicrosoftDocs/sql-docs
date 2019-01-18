@@ -2,15 +2,11 @@
 title: "Removing an Extended Stored Procedure from SQL Server | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "database-engine"
-ms.service: ""
-ms.component: "extended-stored-procedures"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: 
 
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 
   - "deleting extended stored procedures"
@@ -18,11 +14,9 @@ helpviewer_keywords:
   - "extended stored procedures [SQL Server], removing"
   - "dropping extended stored procedures"
 ms.assetid: 7827e574-3f59-4279-9a9b-532582e041cb
-caps.latest.revision: 37
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-ms.workload: "Inactive"
+author: "rothja"
+ms.author: "jroth"
+manager: craigg
 ---
 # Removing an Extended Stored Procedure from SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

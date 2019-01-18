@@ -1,25 +1,14 @@
 ---
 title: "Data types supported in Analysis Services tabular models | Microsoft Docs"
-ms.custom: ""
-ms.date: "10/16/2017"
-ms.prod: analysis-services
-ms.prod_service: "analysis-services, azure-analysis-services"
-ms.service: ""
-ms.component: ""
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
-  
-ms.component: multidimensional-tabular
-ms.component: data-mining
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-ms.assetid: 92993f7b-7243-4aec-906d-0b0379798242
-caps.latest.revision: 16
-author: "Minewiskan"
-ms.author: "owend"
-manager: "kfile"
-ms.workload: "Inactive"
+ms.date: 05/07/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: tabular-models
+ms.topic: conceptual
+ms.author: owend
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
 ---
 # Data types supported in tabular models
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -64,7 +53,7 @@ When you import data or use a value in a formula, even if the original data sour
 >  You cannot import from a **varchar(max)** column that contains a string length of more than 131,072 characters.  
   
 ### Table data type  
- In addition, DAX uses a *table* data type. This data type is used by DAX in many functions, such as aggregations and time intelligence calculations. Some functions require a reference to a table; other functions return a table that can then be used as input to other functions. In some functions that require a table as input, you can specify an expression that evaluates to a table; for some functions, a reference to a base table is required. For information about the requirements of specific functions, see [DAX Function Reference](http://msdn.microsoft.com/en-us/4dbb28a1-dd1a-4fca-bcd5-e90f74864a7b).  
+ In addition, DAX uses a *table* data type. This data type is used by DAX in many functions, such as aggregations and time intelligence calculations. Some functions require a reference to a table; other functions return a table that can then be used as input to other functions. In some functions that require a table as input, you can specify an expression that evaluates to a table; for some functions, a reference to a base table is required. For information about the requirements of specific functions, see [DAX Function Reference](http://msdn.microsoft.com/4dbb28a1-dd1a-4fca-bcd5-e90f74864a7b).  
   
 ##  <a name="bkmk_implicit"></a> Implicit and explicit data type conversion in DAX Formulas
   
@@ -72,7 +61,7 @@ When you import data or use a value in a formula, even if the original data sour
   
  If the data in the column that you specify as an argument is incompatible with the data type required by the function, DAX in many cases returns an error. However, wherever possible DAX attempts to implicitly convert the data to the required data type. For example:  
   
--   You can type a number, for example “123”, as a string. DAX parses the string and attempt to specify it as a number data type.  
+-   You can type a number, for example "123", as a string. DAX parses the string and attempt to specify it as a number data type.  
   
 -   You can add TRUE + 1 and get the result 2, because TRUE is implicitly converted to the number 1 and the operation 1+1 is performed.  
   
@@ -162,5 +151,5 @@ Only a limited set of mixed data-type combinations for comparison operations is 
 |BLANK OR BLANK|BLANK|Error|  
 |BLANK AND BLANK|BLANK|Error|  
   
- For details on how a particular function or operator handles blanks, see the individual topics for each DAX function, in the section, [DAX Function Reference](http://msdn.microsoft.com/en-us/4dbb28a1-dd1a-4fca-bcd5-e90f74864a7b).  
+ For details on how a particular function or operator handles blanks, see the individual topics for each DAX function, in the section, [DAX Function Reference](http://msdn.microsoft.com/4dbb28a1-dd1a-4fca-bcd5-e90f74864a7b).  
   

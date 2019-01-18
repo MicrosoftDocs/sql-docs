@@ -2,22 +2,15 @@
 title: "High Availability Support | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "integration-services"
-ms.service: ""
-ms.component: "change-data-capture"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: integration-services
+ms.topic: conceptual
 ms.assetid: 2e0f6d3f-0536-46d9-8630-835e199515bf
-caps.latest.revision: 5
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
-ms.workload: "Inactive"
+manager: craigg
 ---
 # High Availability Support
   The CDC Service for Oracle is designed for high availability. The following features provide part of the high availability support:  

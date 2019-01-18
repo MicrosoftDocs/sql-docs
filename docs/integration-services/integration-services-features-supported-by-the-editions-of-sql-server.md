@@ -2,22 +2,15 @@
 title: "Integration Services Features Supported by the Editions of SQL Server | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/26/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "integration-services"
-ms.service: ""
-ms.component: "non-specific"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: integration-services
+ms.topic: conceptual
 ms.assetid: e5018225-68bb-4f34-ae4a-ead79d8ad13a
-caps.latest.revision: 15
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
-ms.workload: "On Demand"
+manager: craigg
 ---
 # Integration Services features supported by the editions of SQL Server
  This topic provides details about the features of SQL Server Integration Services (SSIS) supported by the different editions of [!INCLUDE[ssNoVersion_md](../includes/ssnoversion-md.md)].  

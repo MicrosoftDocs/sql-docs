@@ -2,15 +2,10 @@
 title: "STMPolyFromWKB (geography Data Type) | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/30/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.service: ""
-ms.component: "t-sql|spatial-geography"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: t-sql
 ms.topic: "language-reference"
 f1_keywords: 
   - "STMPolyFromWKB (geography Data Type)"
@@ -20,11 +15,9 @@ dev_langs:
 helpviewer_keywords: 
   - "STMPolyFromWKB method"
 ms.assetid: c4d0e649-0abb-4343-a3f0-3a702c8bbbdb
-caps.latest.revision: 14
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-ms.workload: "Inactive"
+author: "douglaslMS"
+ms.author: "douglasl"
+manager: craigg
 ---
 # STMPolyFromWKB (geography Data Type)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

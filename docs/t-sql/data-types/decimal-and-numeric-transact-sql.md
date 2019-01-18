@@ -2,15 +2,10 @@
 title: "decimal and numeric (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "7/23/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
-ms.service: ""
-ms.component: "t-sql|data-types"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: t-sql
 ms.topic: "language-reference"
 f1_keywords: 
   - "decimal"
@@ -25,20 +20,22 @@ helpviewer_keywords:
   - "numeric data type"
   - "numeric data type, about numeric data type"
 ms.assetid: 9d862a90-e6b7-4692-8605-92358dccccdf
-caps.latest.revision: 40
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "craigg"
-ms.workload: "Active"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # decimal and numeric (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
+> [!div class="nextstepaction"]
+> [Please share your feedback about the SQL Docs Table of Contents!](https://aka.ms/sqldocsurvey)
+
 Numeric data types that have fixed precision and scale. Decimal and numeric are synonyms and can be used interchangeably.
   
 ## Arguments  
-**decimal**[ **(***p*[ **,***s*] **)**] and **numeric**[ **(***p*[ **,***s*] **)**]  
-Fixed precision and scale numbers. When maximum precision is used, valid values are from - 10^38 +1 through 10^38 - 1. The ISO synonyms for **decimal** are **dec** and **dec(***p*, *s***)**. **numeric** is functionally equivalent to **decimal**.
+**decimal**[ **(**_p_[ **,**_s_] **)**] and **numeric**[ **(**_p_[ **,**_s_] **)**]  
+Fixed precision and scale numbers. When maximum precision is used, valid values are from - 10^38 +1 through 10^38 - 1. The ISO synonyms for **decimal** are **dec** and **dec(**_p_, _s_**)**. **numeric** is functionally equivalent to **decimal**.
   
 p (precision)  
 The maximum total number of decimal digits that will be stored, both to the left and to the right of the decimal point. The precision must be a value from 1 through the maximum precision of 38. The default precision is 18.
@@ -47,7 +44,7 @@ The maximum total number of decimal digits that will be stored, both to the left
 >  Informatica only supports 16 significant digits, regardless of the precision and scale specified.  
   
 *s* (scale)  
-The number of decimal digits that will be stored to the right of the decimal point. This number is subtracted from *p* to determine the maximum number of digits to the left of the decimal point. The maximum number of decimal digits that can be stored to the right of the decimal point. Scale must be a value from 0 through *p*. Scale can be specified only if precision is specified. The default scale is 0; therefore, 0 <= *s* \<= *p*. Maximum storage sizes vary, based on the precision.
+The number of decimal digits that will be stored to the right of the decimal point. This number is subtracted from *p* to determine the maximum number of digits to the left of the decimal point. Scale must be a value from 0 through *p*. Scale can be specified only if precision is specified. The default scale is 0; therefore, 0 <= *s* \<= *p*. Maximum storage sizes vary, based on the precision.
   
 |Precision|Storage bytes|  
 |---|---|

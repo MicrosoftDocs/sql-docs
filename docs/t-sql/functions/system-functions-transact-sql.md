@@ -2,15 +2,10 @@
 title: "System Functions (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/10/2016"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "sql-database"
-ms.service: ""
-ms.component: "t-sql|functions"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: t-sql
 ms.topic: "language-reference"
 dev_langs: 
   - "TSQL"
@@ -18,11 +13,9 @@ helpviewer_keywords:
   - "system functions [SQL Server]"
   - "functions [SQL Server], system"
 ms.assetid: 9cd7618d-6bd5-4f26-9351-87219b44775f
-caps.latest.revision: 39
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "craigg"
-ms.workload: "On Demand"
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
 ---
 # System Functions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]

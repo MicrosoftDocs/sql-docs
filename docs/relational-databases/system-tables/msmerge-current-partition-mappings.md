@@ -2,18 +2,11 @@
 title: "MSmerge_current_partition_mappings | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/04/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "database-engine"
-ms.service: ""
-ms.component: "system-tables"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
+ms.technology: replication
 ms.topic: "language-reference"
-applies_to: 
-  - "SQL Server"
 f1_keywords: 
   - "MSmerge_current_partition_mappings"
   - "MSmerge_current_partition_mappings_TSQL"
@@ -22,11 +15,9 @@ dev_langs:
 helpviewer_keywords: 
   - "MSmerge_current_partition_mappings system table"
 ms.assetid: a3088840-5a30-40f5-8e8a-aa03afc4905f
-caps.latest.revision: 21
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "craigg"
-ms.workload: "Inactive"
+author: stevestein
+ms.author: sstein
+manager: craigg
 ---
 # MSmerge_current_partition_mappings
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -38,7 +29,7 @@ ms.workload: "Inactive"
 |**publication_number**|**smallint**|The publication number, which is stored in **sysmergepublications**.|  
 |**tablenick**|**int**|The nickname of the published table.|  
 |**rowguid**|**uniqueidentifier**|The row identifier for the given row.|  
-|**partition_id**|**int**|The ID of the partition to which the row belongs. The value is –1 if the row change is relevant to all Subscribers.|  
+|**partition_id**|**int**|The ID of the partition to which the row belongs. The value is -1 if the row change is relevant to all Subscribers.|  
   
 ## See Also  
  [Replication Tables &#40;Transact-SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   

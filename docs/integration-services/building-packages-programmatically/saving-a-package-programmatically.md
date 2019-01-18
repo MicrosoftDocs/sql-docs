@@ -2,27 +2,18 @@
 title: "Saving a Package Programmatically | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "integration-services"
-ms.service: ""
-ms.component: "building-packages-programmatically"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-
-ms.tgt_pltfrm: ""
+ms.technology: integration-services 
 ms.topic: "reference"
-applies_to: 
-  - "SQL Server 2016 Preview"
 helpviewer_keywords: 
   - "programmatically saving a package"
   - "saving a package programmatically"
 ms.assetid: 4204f817-d5df-475a-9338-d7f01305d566
-caps.latest.revision: 17
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
-ms.workload: "Inactive"
+manager: craigg
 ---
 # Saving a Package Programmatically
   After building a new package programmatically, or modifying an existing one, you usually want to save your changes.  

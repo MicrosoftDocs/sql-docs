@@ -1,31 +1,22 @@
 ---
 title: "Modify a Reporting Services Configuration File (RSreportserver.config) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/15/2017"
+ms.date: 03/15/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
-ms.service: ""
-ms.component: "report-server"
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
+ms.technology: report-server
 
 
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 ms.assetid: 958ef51f-2699-4cb2-a92e-3b4322e36a30
-caps.latest.revision: 9
-author: "markingmyname"
-ms.author: "maghan"
-manager: "kfile"
-ms.workload: "On Demand"
+author: markingmyname
+ms.author: maghan
 ---
 # Modify a Reporting Services Configuration File (RSreportserver.config)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] stores application settings in a set of configuration files. Setup creates the configuration files for each report server instance you install. Within each file, values are either set during installation or when you use tools and applications to configure a server for operation. In some cases, you must modify a file directly to add or configure advanced settings. Configuration settings are specified as either XML elements or attributes. If you understand XML and configuration files, you can use a text or code editor to modify user-definable settings.  
   
  Some configuration settings can be set only through a tool. Settings that contain encrypted values must be modified through the Reporting Services Configuration tool, the Setup program, or the **rsconfig** command line utility. You must be a member of the local Administrators group to run these tools.'  
   
-> [!IMPORTANT]  
+> [!IMPORTANT]
 >  Use caution when modifying configuration files. If you modify a setting that is reserved for internal use, you may disable your installation. Generally, modifying configuration settings is not recommended unless you are trying to solve a specific problem. For more information about which settings are safe to change, see [RsReportServer.config Configuration File](../../reporting-services/report-server/rsreportserver-config-configuration-file.md) or [RSReportDesigner Configuration File](../../reporting-services/report-server/rsreportdesigner-configuration-file.md). For more information about configuration files, see the [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] product documentation.  
   
  In this topic:  

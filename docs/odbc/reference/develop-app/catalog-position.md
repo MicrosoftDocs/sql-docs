@@ -2,26 +2,19 @@
 title: "Catalog Position | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
-ms.prod_service: "drivers"
-ms.service: ""
-ms.component: "odbc"
+ms.prod: sql
+ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "drivers"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: connectivity
+ms.topic: conceptual
 helpviewer_keywords: 
   - "SQL statements [ODBC], interoperability"
   - "interoperability of SQL statements [ODBC], catalog position"
   - "catalog position [ODBC]"
 ms.assetid: 5bc5f64b-c75a-43d2-8745-102ec7a49000
-caps.latest.revision: 9
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
-ms.workload: "Inactive"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # Catalog Position
 The position of a catalog name in an identifier and how it is separated from the rest of the identifier varies from data source to data source. For example, in an Xbase data source, the catalog name is a directory and, in Microsoft® Windows®, is separated from the table name (which is a file name) by a backslash (\\). The following illustration demonstrates this condition.  

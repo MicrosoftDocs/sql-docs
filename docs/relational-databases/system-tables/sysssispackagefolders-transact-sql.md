@@ -2,15 +2,10 @@
 title: "sysssispackagefolders (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/10/2016"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "database-engine"
-ms.service: ""
-ms.component: "system-tables"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: system-objects
 ms.topic: "language-reference"
 f1_keywords: 
   - "sysdtspackagefolders90"
@@ -20,11 +15,9 @@ dev_langs:
 helpviewer_keywords: 
   - "sysssispackagefolders system table"
 ms.assetid: ddc4833f-27bf-4610-b739-d257961d17ac
-caps.latest.revision: 22
-author: "spelluru"
-ms.author: "spelluru"
-manager: "erikre"
-ms.workload: "Inactive"
+author: "douglasl"
+ms.author: "douglasl"
+manager: craigg
 ---
 # sysssispackagefolders (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

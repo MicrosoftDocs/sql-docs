@@ -1,33 +1,14 @@
 ---
 title: "MDX Query Fundamentals (Analysis Services) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/13/2017"
-ms.prod: analysis-services
-ms.prod_service: "analysis-services"
-ms.service: ""
-ms.component: ""
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
-  
-ms.component: multidimensional-tabular
-ms.component: data-mining
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "statements [MDX]"
-  - "Multidimensional Expressions [Analysis Services], statements"
-  - "Multidimensional Expressions [Analysis Services], queries"
-  - "MDX [Analysis Services], statements"
-  - "MDX queries [Analysis Services]"
-  - "MDX [Analysis Services], queries"
-  - "queries [MDX]"
-ms.assetid: a560383b-bb58-472e-95f5-65d03d8ea08b
-caps.latest.revision: 31
-author: "Minewiskan"
-ms.author: "owend"
-manager: "kfile"
-ms.workload: "On Demand"
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: mdx
+ms.topic: conceptual
+ms.author: owend
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
 ---
 # MDX Query Fundamentals (Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
@@ -35,8 +16,6 @@ ms.workload: "On Demand"
   
  The following topics describe MDX queries and the cellsets they produce, and provide more detailed information about basic MDX syntax.  
   
-> [!NOTE]  
->  For more information about performance issues related to MDX queries and calculations, see the section “Writing Efficient MDX” in the [SQL Server 2005 Analysis Services Performance Guide](http://go.microsoft.com/fwlink/?LinkId=81621).  
   
 ## In This Section  
   

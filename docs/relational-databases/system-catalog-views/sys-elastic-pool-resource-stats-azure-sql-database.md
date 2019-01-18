@@ -1,19 +1,12 @@
 ---
 title: "sys.elastic_pool_resource_stats (Azure SQL Database) | Microsoft Docs"
 ms.custom: ""
-ms.date: "09/30/2016"
+ms.date: "09/13/2018"
 ms.prod: ""
 ms.prod_service: "sql-database"
 ms.reviewer: ""
-ms.service: "sql-database"
-ms.component: "system-catalog-views"
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: system-objects
 ms.topic: "reference"
-applies_to: 
-  - "Azure SQL Database"
 f1_keywords: 
   - "sys.elastic_pool_resource_stats catalog view"
 helpviewer_keywords: 
@@ -22,11 +15,10 @@ helpviewer_keywords:
   - "elastic_pool_resource_stats_TSQL"
   - "elastic_pool_resource_stats"
 ms.assetid: f242c1bd-3cc8-4c8b-8aaf-c79b6a8a0329
-caps.latest.revision: 18
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-ms.workload: "Inactive"
+author: "stevestein"
+ms.author: "sstein"
+manager: craigg
+monikerRange: "= azuresqldb-current || = sqlallproducts-allversions"
 ---
 # sys.elastic_pool_resource_stats (Azure SQL Database)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -49,7 +41,8 @@ ms.workload: "Inactive"
 |**max_worker_percent**|**decimal(5,2)**|Maximum concurrent workers (requests) in percentage based on the limit of the pool.|  
 |**max_session_percent**|**decimal(5,2)**|Maximum concurrent sessions in percentage based on the limit of the pool.|  
 |**elastic_pool_dtu_limit**|**int**|Current max elastic pool DTU setting for this elastic pool during this interval.|  
-|**elastic_pool_storage_limit_mb**|**bigint**|Current max elastic pool storage limit setting for this elastic pool in megabytes during this interval.|  
+|**elastic_pool_storage_limit_mb**|**bigint**|Current max elastic pool storage limit setting for this elastic pool in megabytes during this interval.|
+|**avg_allocated_storage_percent**|**decimal(5,2)**|The percentage of data space allocated by all databases in the elastic pool.  This is the ratio of data space allocated to data max size for the elastic pool.  For more information see: [File space management in SQL DB](https://docs.microsoft.com/azure/sql-database/sql-database-file-space-management)|  
   
 ## Remarks  
  This view exists in the master database of the logical server. You must be connected to the master database to query **sys.elastic_pool_resource_stats**.  

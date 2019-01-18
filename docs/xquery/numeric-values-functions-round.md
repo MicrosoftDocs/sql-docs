@@ -2,29 +2,20 @@
 title: "round Function (XQuery) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/03/2017"
-ms.prod: "sql-non-specified"
-ms.prod_service: "sql-non-specified"
-ms.service: ""
-ms.component: "xquery"
+ms.prod: sql
+ms.prod_service: sql
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: xml
 ms.topic: "language-reference"
-applies_to: 
-  - "SQL Server"
 dev_langs: 
   - "XML"
 helpviewer_keywords: 
   - "fn:round function"
   - "round function [XQuery]"
 ms.assetid: 320b572f-bd5b-4055-95a6-dec5718c0041
-caps.latest.revision: 29
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-ms.workload: "Inactive"
+author: "rothja"
+ms.author: "jroth"
+manager: craigg
 ---
 # Numeric Values Functions - round
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]

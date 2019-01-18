@@ -2,16 +2,11 @@
 title: "Use XML Data in Applications | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "database-engine"
-ms.service: ""
-ms.component: "xml"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "dbe-xml"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: xml
+ms.topic: conceptual
 helpviewer_keywords: 
   - "parameters [XML in SQL Server]"
   - "XML [SQL Server], ADO"
@@ -28,11 +23,9 @@ helpviewer_keywords:
   - "xml data type [SQL Server], ADO.NET"
   - "XML [SQL Server], SQL Server Native Client"
 ms.assetid: 5dabf7e0-c6df-451d-a070-4661f84607fd
-caps.latest.revision: 26
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-ms.workload: "Inactive"
+author: "douglaslMS"
+ms.author: "douglasl"
+manager: craigg
 ---
 # Use XML Data in Applications
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -118,7 +111,7 @@ Set objConn = Nothing
 ```  
 Row 1  
   
-<StoreSurvey xmlns="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/StoreSurvey">  
+<StoreSurvey xmlns="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/StoreSurvey">  
   <AnnualSales>1500000</AnnualSales>  
   <AnnualRevenue>150000</AnnualRevenue>  
   <BankName>Primary International</BankName>  
@@ -133,7 +126,7 @@ Row 1
   
 Row 2  
   
-<StoreSurvey xmlns="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/StoreSurvey">  
+<StoreSurvey xmlns="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/StoreSurvey">  
   <AnnualSales>300000</AnnualSales>  
   <AnnualRevenue>30000</AnnualRevenue>  
   <BankName>United Security</BankName>  

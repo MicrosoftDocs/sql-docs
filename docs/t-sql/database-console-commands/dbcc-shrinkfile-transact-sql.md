@@ -2,15 +2,10 @@
 title: "DBCC SHRINKFILE (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "11/14/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "sql-database"
-ms.service: ""
-ms.component: "t-sql|database-console-commands"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: t-sql
 ms.topic: "language-reference"
 f1_keywords: 
   - "SHRINKFILE"
@@ -32,11 +27,9 @@ helpviewer_keywords:
   - "reducing database size"
   - "DBCC SHRINKFILE statement"
 ms.assetid: e02b2318-bee9-4d84-a61f-2fddcf268c9f
-caps.latest.revision: 87
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-ms.workload: "Active"
+author: uc-msft
+ms.author: umajay
+manager: craigg
 ---
 # DBCC SHRINKFILE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -76,7 +69,8 @@ This option is not supported for FILESTREAM filegroup containers.
 If *target_size* is specified, DBCC SHRINKFILE tries to shrink the file to the specified size. Used pages in the part of the file to be freed are relocated to available free space in the part of the file retained. For example, if there is a 10-MB data file, a DBCC SHRINKFILE operations with a *target_size* of 8 causes all used pages in the last 2 MB of the file to be reallocated into any unallocated pages in the first 8 MB of the file. DBCC SHRINKFILE does not shrink a file past the size needed to store the data in the file. For example, if 7 MB of a 10-MB data file is used, a DBCC SHRINKFILE statement with a *target_size* of 6 shrinks the file to only 7 MB, not 6 MB.
   
 EMPTYFILE  
-Migrates all data from the specified file to other files in the **same filegroup**. In other words, EmptyFile will migrate the data from the specified file to other files in the same filegroup. Emptyfile assures you that no new data will be added to the file.The file can be removed by using the [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql.md) statement.
+Migrates all data from the specified file to other files in the **same filegroup**. In other words, EmptyFile will migrate the data from the specified file to other files in the same filegroup. Emptyfile assures you that no new data will be added to the file, despite this file not being marked as read only.The file can be removed by using the [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql.md) statement. If the file size is altered using [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql.md) statement, the read only flag is reset and data can be added.
+
 For FILESTREAM filegroup containers, the file cannot be removed using ALTER DATABASE until the FILESTREAM Garbage Collector has run and deleted all the unnecessary filegroup container files that EMPTYFILE has copied to another container. For more information, see [sp_filestream_force_garbage_collection &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/filestream-and-filetable-sp-filestream-force-garbage-collection.md)
   
 > [!NOTE]  
@@ -109,7 +103,7 @@ The following table describes the columns in the result set.
 ## Remarks  
 DBCC SHRINKFILE applies to the files in the current database. For more information about how to change the current database, see [USE &#40;Transact-SQL&#41;](../../t-sql/language-elements/use-transact-sql.md).
   
-DBCC SHRINKFILE operations can be stopped at any point in the process, and any completed work is retained.
+DBCC SHRINKFILE operations can be stopped at any point in the process, and any completed work is retained. If the EMPTYFILE parameter is used on a file and the operation is cancelled, the file will not be marked to prevent additional data from being added.
   
 When a DBCC SHRINKFILE operation fails, an error is raised.
   

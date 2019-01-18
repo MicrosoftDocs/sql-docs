@@ -1,17 +1,12 @@
 ---
 title: "Append Method (ADOX Users) | Microsoft Docs"
-ms.prod: "sql-non-specified"
-ms.prod_service: "drivers"
-ms.service: ""
-ms.component: "ado"
-ms.technology:
-  - "drivers"
+ms.prod: sql
+ms.prod_service: connectivity
+ms.technology: connectivity
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 apitype: "COM"
 f1_keywords: 
   - "Users::raw_Append"
@@ -19,11 +14,9 @@ f1_keywords:
 helpviewer_keywords: 
   - "Append method [ADOX]"
 ms.assetid: b80bc5d5-78ca-4f75-956b-2ac658029cc7
-caps.latest.revision: 12
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
-ms.workload: "Inactive"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # Append Method (ADOX Users)
 Adds a new [User](../../../ado/reference/adox-api/user-object-adox.md) object to the [Users](../../../ado/reference/adox-api/users-collection-adox.md) collection.  

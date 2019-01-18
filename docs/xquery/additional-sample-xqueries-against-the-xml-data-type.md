@@ -2,29 +2,20 @@
 title: "Additional Sample XQueries Against the xml Data Type | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/16/2017"
-ms.prod: "sql-non-specified"
-ms.prod_service: "sql-non-specified"
-ms.service: ""
-ms.component: "xquery"
+ms.prod: sql
+ms.prod_service: sql
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: xml
 ms.topic: "language-reference"
-applies_to: 
-  - "SQL Server"
 dev_langs: 
   - "XML"
 helpviewer_keywords: 
   - "XQuery, samples"
   - "sample applications [XQuery]"
 ms.assetid: 2af66304-c021-427c-b3b3-e000ec0896cd
-caps.latest.revision: 22
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
-ms.workload: "Inactive"
+manager: craigg
 ---
 # Additional Sample XQueries Against the xml Data Type
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]

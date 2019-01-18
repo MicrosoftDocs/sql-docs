@@ -2,27 +2,20 @@
 title: "PDO::__construct | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
-ms.prod_service: "drivers"
-ms.service: ""
-ms.component: "php"
+ms.prod: sql
+ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "drivers"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: connectivity
+ms.topic: conceptual
 ms.assetid: 3ee53aff-6fe4-44cd-a15b-51770c98c712
-caps.latest.revision: 18
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
-ms.workload: "Inactive"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # PDO::__construct
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-Creates a connection to a [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] database.  
+Creates a connection to a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database.  
   
 ## Syntax  
   
@@ -32,13 +25,13 @@ PDO::__construct($dsn [,$username [,$password [,$driver_options ]]] )
 ```  
   
 #### Parameters  
-*$dsn*: A string that contains the prefix name (always `sqlsrv`), a colon, and the Server keyword. For example `"sqlsrv:server=(local)"`. You can optionally specify other connection keywords. See [Connection Options](../../connect/php/connection-options.md) for a description of the Server keyword and the other connection keywords. The entire *$dsn* is in quotation marks, so each connection keyword should not be individually quoted.  
+*$dsn*: A string that contains the prefix name (always `sqlsrv`), a colon, and the Server keyword. For example, `"sqlsrv:server=(local)"`. You can optionally specify other connection keywords. See [Connection Options](../../connect/php/connection-options.md) for a description of the Server keyword and the other connection keywords. The entire *$dsn* is in quotation marks, so each connection keyword should not be individually quoted.  
   
-*$username*: Optional. A string that contains the user's name. To connect using [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Authentication, specify the login ID. To connect using Windows Authentication, specify `""`.  
+*$username*: Optional. A string that contains the user's name. To connect using [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentication, specify the login ID. To connect using Windows Authentication, specify `""`.  
   
-*$password*: Optional. A string that contains the user's password. To connect using [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Authentication, specify the password. To connect using Windows Authentication, specify `""`.  
+*$password*: Optional. A string that contains the user's password. To connect using [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentication, specify the password. To connect using Windows Authentication, specify `""`.  
   
-*$driver_options*: Optional. You can specify PDO Driver Manager attributes, and [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] specific driver attributes -- PDO::SQLSRV_ATTR_ENCODING, PDO::SQLSRV_ATTR_DIRECT_QUERY. An invalid attribute will not generate an exception. Invalid attributes generate exceptions when specified with [PDO::setAttribute](../../connect/php/pdo-setattribute.md).  
+*$driver_options*: Optional. You can specify PDO Driver Manager attributes, and [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] specific driver attributes -- PDO::SQLSRV_ATTR_ENCODING, PDO::SQLSRV_ATTR_DIRECT_QUERY. An invalid attribute does not generate an exception. Invalid attributes generate exceptions when specified with [PDO::setAttribute](../../connect/php/pdo-setattribute.md).  
   
 ## Return Value  
 Returns a PDO object. If failure, returns a PDOException object.  
@@ -49,9 +42,9 @@ PDOException
 ## Remarks  
 You can close a connection object by setting the instance to null.  
   
-After a connection, PDO::errorCode will display 01000 instead of 00000.  
+After a connection, PDO::errorCode displays 01000 instead of 00000.  
   
-If PDO::__construct fails for any reason, an exception will be thrown, even if PDO::ATTR_ERRMODE is set to PDO::ERRMODE_SILENT.  
+If PDO::__construct fails for any reason, an exception is thrown, even if PDO::ATTR_ERRMODE is set to PDO::ERRMODE_SILENT.  
   
 Support for PDO was added in version 2.0 of the [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)].  
   
@@ -89,6 +82,7 @@ This example shows how to connect to a server, specifying the database later.
 ```  
   
 ## See Also  
-[PDO Class](../../connect/php/pdo-class.md)  
-[PDO](http://go.microsoft.com/fwlink/?LinkID=187441)  
+[PDO Class](../../connect/php/pdo-class.md)
+
+[PDO](https://php.net/manual/book.pdo.php)  
   

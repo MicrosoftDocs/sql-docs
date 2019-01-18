@@ -2,15 +2,10 @@
 title: "ATAN (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/24/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
-ms.service: ""
-ms.component: "t-sql|functions"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: t-sql
 ms.topic: "language-reference"
 f1_keywords: 
   - "ATAN_TSQL"
@@ -22,16 +17,15 @@ helpviewer_keywords:
   - "ATAN function"
   - "tangent"
 ms.assetid: 6d3dd28e-4fa6-40ba-94cf-b33c0ff614ec
-caps.latest.revision: 25
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "craigg"
-ms.workload: "Inactive"
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # ATAN (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-Returns the angle in radians whose tangent is a specified **float** expression. This is also called arctangent.
+A function that returns the angle, in radians, whose tangent is a specified **float** expression. This is also called arctangent.
   
 ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -43,13 +37,13 @@ ATAN ( float_expression )
   
 ## Arguments  
 *float_expression*  
-Is an [expression](../../t-sql/language-elements/expressions-transact-sql.md) of the type **float** or of a type that can be implicitly converted to **float**.
+An [expression](../../t-sql/language-elements/expressions-transact-sql.md) of either type **float** or of a type that implicitly convert to **float**.
   
 ## Return types
 **float**
   
 ## Examples  
-The following example takes a **float** expression and returns the ATAN of the specified angle.
+This example takes a **float** expression and returns the ATAN of the specified angle.
   
 ```sql
 SELECT 'The ATAN of -45.01 is: ' + CONVERT(varchar, ATAN(-45.01))  
@@ -91,7 +85,7 @@ The ATAN of 197.1099392 is: 1.56572
 ```  
   
 ## Examples: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
-The following example takes a **float** expression and returns the arctangent of the specified angle.
+This example takes a **float** expression and returns the arctangent of the specified angle.
   
 ```sql
 SELECT ATAN(45.87) AS atanCalc1,  

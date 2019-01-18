@@ -1,0 +1,42 @@
+- name: Object Explorer
+  href: object-explorer.md
+- name: Add Steps to a SQL Server Agent Master Job
+  href: add-steps-to-a-sql-server-agent-master-job.md
+- name: Manage Objects by Using Object Explorer
+  href: manage-objects-by-using-object-explorer.md
+- name: Use Custom Reports with Object Explorer Node Properties
+  href: use-custom-reports-with-object-explorer-node-properties.md
+- name: Object Dependencies
+  href: object-dependencies.md
+- name: Hide System Objects in Object Explorer
+  href: hide-system-objects-in-object-explorer.md
+- name: Object Explorer Details Pane
+  href: object-explorer-details-pane.md
+- name: Open and Configure Object Explorer
+  href: open-and-configure-object-explorer.md
+- name: Connect to an Instance From Object Explorer
+  href: connect-to-an-instance-from-object-explorer.md
+- name: Name Not Found Dialog Box
+  href: name-not-found-dialog-box.md
+- name: Browse for Objects (Object Explorer)
+  href: browse-for-objects-object-explorer.md
+- name: Select Object Types (Object Explorer)
+  href: select-object-types-object-explorer.md
+- name: Select Objects (Object Explorer)
+  href: select-objects-object-explorer.md
+- name: Options (SQL Server Object Explorer - Scripting Page)
+  href: options-sql-server-object-explorer-scripting-page.md
+- name: Filter Settings (Object Explorer and Utility Explorer)
+  href: filter-settings-object-explorer-and-utility-explorer.md
+- name: Delete Objects
+  href: delete-objects.md
+- name: Add a Custom Report to Management Studio
+  href: add-a-custom-report-to-management-studio.md
+- name: Custom Reports in Management Studio
+  href: custom-reports-in-management-studio.md
+- name: Add Objects
+  href: add-objects.md
+- name: Options (SQL Server Object Explorer - Commands)
+  href: options-sql-server-object-explorer-commands.md
+- name: Unsuppress Run Custom Report Warnings
+  href: unsuppress-run-custom-report-warnings.md

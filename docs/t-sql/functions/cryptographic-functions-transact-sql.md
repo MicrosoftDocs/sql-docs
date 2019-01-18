@@ -2,15 +2,10 @@
 title: "Cryptographic Functions (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/24/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.service: ""
-ms.component: "t-sql|functions"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: t-sql
 ms.topic: "language-reference"
 dev_langs: 
   - "TSQL"
@@ -22,16 +17,14 @@ helpviewer_keywords:
   - "security functions"
   - "encryption [SQL Server], functions"
 ms.assetid: 0be5626b-5a25-4d8c-9f44-7abbfccf816c
-caps.latest.revision: 16
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "craigg"
-ms.workload: "On Demand"
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
 ---
 # Cryptographic functions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-The following functions support encryption, decryption, digital signing, and the validation of digital signatures.
+These functions support digital signing, digital signature validation, encryption, and decryption.
   
 ## Symmetric encryption and decryption
   
@@ -48,7 +41,7 @@ The following functions support encryption, decryption, digital signing, and the
 |||  
 |-|-|  
 |[ENCRYPTBYASYMKEY](../../t-sql/functions/encryptbyasymkey-transact-sql.md)|[DECRYPTBYASYMKEY](../../t-sql/functions/decryptbyasymkey-transact-sql.md)|  
-|[ENCRYPTBYCert](../../t-sql/functions/encryptbycert-transact-sql.md)|[DECRYPTBYCERT](../../t-sql/functions/decryptbycert-transact-sql.md)|  
+|[ENCRYPTBYCERT](../../t-sql/functions/encryptbycert-transact-sql.md)|[DECRYPTBYCERT](../../t-sql/functions/decryptbycert-transact-sql.md)|  
 |[ASYMKEYPROPERTY](../../t-sql/functions/asymkeyproperty-transact-sql.md)|[ASYMKEY_ID](../../t-sql/functions/asymkey-id-transact-sql.md)|  
   
 ## Signing and signature verification
@@ -59,7 +52,7 @@ The following functions support encryption, decryption, digital signing, and the
 |[SIGNBYCERT](../../t-sql/functions/signbycert-transact-sql.md)|[VERIGYSIGNEDBYCERT](../../t-sql/functions/verifysignedbycert-transact-sql.md)|  
 |[IS_OBJECTSIGNED](../../t-sql/functions/is-objectsigned-transact-sql.md)||  
   
-## Symmetric decryption with automatic key handling
+## Symmetric decryption, with automatic key handling
   
 |||  
 |-|-|  
@@ -71,7 +64,7 @@ The following functions support encryption, decryption, digital signing, and the
 |-|-|  
 |[HASHBYTES](../../t-sql/functions/hashbytes-transact-sql.md)||  
   
-## Copying certificates
+## Certificate copying
   
 |||  
 |-|-|  

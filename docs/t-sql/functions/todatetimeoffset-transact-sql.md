@@ -2,15 +2,10 @@
 title: "TODATETIMEOFFSET (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/13/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
-ms.service: ""
-ms.component: "t-sql|functions"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: t-sql
 ms.topic: "language-reference"
 f1_keywords: 
   - "TO_DATETIMEOFFSET_TSQL"
@@ -26,11 +21,10 @@ helpviewer_keywords:
   - "functions [SQL Server], date and time"
   - "time [SQL Server], functions"
 ms.assetid: b5fafc08-efd4-4a3b-a0b3-068981a0a685
-caps.latest.revision: 37
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "craigg"
-ms.workload: "Active"
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # TODATETIMEOFFSET (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -53,7 +47,7 @@ TODATETIMEOFFSET ( expression , time_zone )
 >  The expression cannot be of type **text**, **ntext**, or **image** because these types cannot be implicitly converted to **varchar** or **nvarchar**.  
   
  *time_zone*  
- Is an expression that represents the time zone offset in minutes (if an integer), for example -120, or hours and minutes (if a string), for example ‘+13.00’. The range is +14 to -14 (in hours). The expression is interpreted in local time for the specified time_zone.  
+ Is an expression that represents the time zone offset in minutes (if an integer), for example -120, or hours and minutes (if a string), for example '+13:00'. The range is +14 to -14 (in hours). The expression is interpreted in local time for the specified time_zone.  
   
 > [!NOTE]  
 >  If expression is a character string, it must be in the format {+|-}TZH:THM.  

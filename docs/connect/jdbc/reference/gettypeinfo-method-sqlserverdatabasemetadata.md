@@ -2,27 +2,20 @@
 title: "getTypeInfo Method (SQLServerDatabaseMetaData) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
-ms.prod_service: "drivers"
-ms.service: ""
-ms.component: "jdbc"
+ms.prod: sql
+ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "drivers"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: connectivity
+ms.topic: conceptual
 apiname: 
   - "SQLServerDatabaseMetaData.getTypeInfo"
 apilocation: 
   - "sqljdbc.jar"
 apitype: "Assembly"
 ms.assetid: 23208f01-c1bf-4235-b29c-9051d3df59a3
-caps.latest.revision: 21
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
-ms.workload: "Inactive"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # getTypeInfo Method (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -68,13 +61,13 @@ public java.sql.ResultSet getTypeInfo()
 |SQL_DATETIME_SUB|**int**|Not supported by the JDBC driver.|  
 |NUM_PREC_RADIX|**int**|The number of bits or digits for calculating the maximum number that a column can hold.|  
 |INTERVAL_PRECISION|**smallint**|The value of interval leading precision.|  
-|USERTYPE|**smallint**|The **usertype** value from the **systypes** table. For more information, see [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] Books Online.|  
+|USERTYPE|**smallint**|The **usertype** value from the **systypes** table. For more information, see [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Books Online.|  
   
 > [!NOTE]  
->  For more information about the data returned by the getTypeInfo method, see "sp_datatype_info (Transact-SQL)" in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] Books Online.  
+>  For more information about the data returned by the getTypeInfo method, see "sp_datatype_info (Transact-SQL)" in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Books Online.  
   
 ## Example  
- The following example demonstrates how to use the getTypeInfo method to return information about the data types used in a [!INCLUDE[ssVersion2005](../../../includes/ssversion2005_md.md)] (or later) database.  
+ The following example demonstrates how to use the getTypeInfo method to return information about the data types used in a [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] (or later) database.  
   
 ```  
 public static void executeGetTypeInfo(Connection con) {  

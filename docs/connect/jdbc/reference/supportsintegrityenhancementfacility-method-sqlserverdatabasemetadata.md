@@ -2,27 +2,20 @@
 title: "supportsIntegrityEnhancementFacility Method | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
-ms.prod_service: "drivers"
-ms.service: ""
-ms.component: "jdbc"
+ms.prod: sql
+ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "drivers"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: connectivity
+ms.topic: conceptual
 apiname: 
   - "SQLServerDatabaseMetaData.supportsIntegrityEnhancementFacility"
 apilocation: 
   - "sqljdbc.jar"
 apitype: "Assembly"
 ms.assetid: edee084b-9a8c-4167-9e13-66fc3ed1ecaa
-caps.latest.revision: 6
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
-ms.workload: "Inactive"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # supportsIntegrityEnhancementFacility Method (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

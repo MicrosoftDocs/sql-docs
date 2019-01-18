@@ -2,15 +2,10 @@
 title: "REVOKE Assembly Permissions (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/26/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "sql-database"
-ms.service: ""
-ms.component: "t-sql|statements"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: t-sql
 ms.topic: "language-reference"
 dev_langs: 
   - "TSQL"
@@ -18,11 +13,9 @@ helpviewer_keywords:
   - "REVOKE statement, assemblies"
   - "assemblies [CLR integration], permissions"
 ms.assetid: f88e9da1-2c0b-4bdd-9ec5-44467707cb46
-caps.latest.revision: 29
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "craigg"
-ms.workload: "Inactive"
+author: VanMSFT
+ms.author: vanto
+manager: craigg
 ---
 # REVOKE Assembly Permissions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -52,7 +45,7 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ]
  *permission*  
  Specifies a permission that can be revoked on an assembly. Listed below.  
   
- ON ASSEMBLY **::***assembly_name*  
+ ON ASSEMBLY **::**_assembly_name_  
  Specifies the assembly on which the permission is being revoked. The scope qualifier **::** is required.  
   
  *database_principal*  

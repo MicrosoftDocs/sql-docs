@@ -2,26 +2,19 @@
 title: "Example: Piecemeal Restore of Database (Full Recovery Model) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-non-specified"
-ms.prod_service: "database-engine"
-ms.service: ""
-ms.component: "backup-restore"
+ms.prod: sql
+ms.prod_service: backup-restore
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "dbe-backup-restore"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: backup-restore
+ms.topic: conceptual
 helpviewer_keywords: 
   - "full recovery model [SQL Server], RESTORE example"
   - "piecemeal restores [SQL Server], full recovery model"
   - "restore sequences [SQL Server], piecemeal"
 ms.assetid: 0a84892d-2f7a-4e77-b2d0-d68b95595210
-caps.latest.revision: 30
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-ms.workload: "Inactive"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ---
 # Example: Piecemeal Restore of Database (Full Recovery Model)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

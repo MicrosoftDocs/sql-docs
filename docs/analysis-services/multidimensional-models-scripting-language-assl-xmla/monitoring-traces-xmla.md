@@ -1,41 +1,23 @@
 ---
 title: "Monitoring Traces (XMLA) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: analysis-services
-ms.prod_service: "analysis-services"
-ms.service: ""
-ms.component: ""
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
-  
-
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-applies_to: 
-  - "SQL Server 2016 Preview"
-helpviewer_keywords: 
-  - "XML for Analysis, traces"
-  - "XMLA, traces"
-  - "monitoring traces [XMLA]"
-  - "traces [Analysis Services]"
-ms.assetid: cdbfb984-18bd-4c4e-8fb7-d64ce298ed35
-caps.latest.revision: 13
-author: "Minewiskan"
-ms.author: "owend"
-manager: "kfile"
-ms.workload: "Inactive"
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: xmla
+ms.topic: conceptual
+ms.author: owend
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
 ---
 # Monitoring Traces (XMLA)
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-  You can use the [Subscribe](../../analysis-services/xmla/xml-elements-commands/subscribe-element-xmla.md) command in XML for Analysis (XMLA) to monitor an existing trace defined on an instance of [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. The **Subscribe** command returns the results of a trace as a rowset.  
+  You can use the [Subscribe](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/subscribe-element-xmla) command in XML for Analysis (XMLA) to monitor an existing trace defined on an instance of [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. The **Subscribe** command returns the results of a trace as a rowset.  
   
 ## Specifying a Trace  
- The [Object](../../analysis-services/xmla/xml-elements-properties/object-element-xmla.md) property of the **Subscribe** command must contain an object reference to either an [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] instance or a trace on an [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] instance. If the **Object** property is not specified, or a trace identifier is not specified in the **Object** property, the **Subscribe** command monitors the default session trace for the explicit session specified in the SOAP header for the command.  
+ The [Object](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/object-element-xmla) property of the **Subscribe** command must contain an object reference to either an [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] instance or a trace on an [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] instance. If the **Object** property is not specified, or a trace identifier is not specified in the **Object** property, the **Subscribe** command monitors the default session trace for the explicit session specified in the SOAP header for the command.  
   
 ## Returning Results  
- The **Subscribe** command returns a rowset containing the trace events captured by the specified trace. The **Subscribe** command returns trace results until the command is canceled by the [Cancel](../../analysis-services/xmla/xml-elements-commands/cancel-element-xmla.md) command.  
+ The **Subscribe** command returns a rowset containing the trace events captured by the specified trace. The **Subscribe** command returns trace results until the command is canceled by the [Cancel](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/cancel-element-xmla) command.  
   
  The rowset contains the columns listed in the following table.  
   

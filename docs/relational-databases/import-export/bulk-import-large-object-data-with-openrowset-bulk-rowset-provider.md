@@ -2,16 +2,11 @@
 title: "Bulk Import Large-Object Data with OPENROWSET Bulk Rowset Provider | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "database-engine"
-ms.service: ""
-ms.component: "import-export"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "dbe-bulk-import-export"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: data-movement
+ms.topic: conceptual
 helpviewer_keywords: 
   - "SINGLE_NCLOB option"
   - "bulk rowset providers [SQL Server]"
@@ -22,11 +17,9 @@ helpviewer_keywords:
   - "large data, bulk imports"
   - "SINGLE_BLOB option"
 ms.assetid: 171cdd5c-1e47-4bd7-b99a-4f0fd4e10526
-caps.latest.revision: 16
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-ms.workload: "Inactive"
+author: "douglaslMS"
+ms.author: "douglasl"
+manager: craigg
 ---
 # Bulk Import Large-Object Data with OPENROWSET Bulk Rowset Provider
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

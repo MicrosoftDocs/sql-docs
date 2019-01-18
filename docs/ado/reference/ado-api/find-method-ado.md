@@ -1,17 +1,12 @@
 ---
 title: "Find Method (ADO) | Microsoft Docs"
-ms.prod: "sql-non-specified"
-ms.prod_service: "drivers"
-ms.service: ""
-ms.component: "ado"
-ms.technology:
-  - "drivers"
+ms.prod: sql
+ms.prod_service: connectivity
+ms.technology: connectivity
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 apitype: "COM"
 f1_keywords: 
   - "Recordset15::raw_Find"
@@ -19,11 +14,9 @@ f1_keywords:
 helpviewer_keywords: 
   - "Find method [ADO]"
 ms.assetid: 55c9810a-d8ca-46c2-a9dc-80e7ee7aa188
-caps.latest.revision: 12
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
-ms.workload: "On Demand"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # Find Method (ADO)
 Searches a [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) for the row that satisfies the specified criteria. Optionally, the direction of the search, starting row, and offset from the starting row may be specified. If the criteria is met, the current row position is set on the found record; otherwise, the position is set to the end (or start) of the **Recordset**.  

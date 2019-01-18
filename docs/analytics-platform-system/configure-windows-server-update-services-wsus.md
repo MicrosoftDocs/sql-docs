@@ -1,27 +1,20 @@
 ---
-title: "Configure Windows Server Update Services (WSUS) (Analytics Platform System)"
-author: "barbkess" 
-ms.author: "barbkess"
-manager: "jhubbard"	  
-ms.prod: "analytics-platform-system"
-ms.prod_service: "mpp-data-warehouse"
-ms.service: ""
-ms.component:
-ms.technology: "mpp-data-warehouse"
-ms.custom: ""
-ms.date: 01/05/2017
-ms.reviewer: na
-ms.suite: "sql"
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: a10b2884-468e-41ef-bd59-8df894381254
-caps.latest.revision: 41
-
+title: Configure WSUS - Analytics Platform System | Microsoft Docs
+description: These instructions walk you through the steps for using the Windows Server Update Services (WSUS) Configuration Wizard to configure WSUS for Analytics Platform System.   
+author: mzaman1 
+manager: craigg
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
 ---
-# Configure Windows Server Update Services (WSUS)
+
+# Configure Windows Server Update Services (WSUS) in Analytics Platform System
 These instructions walk you through the steps for using the Windows Server Update Services (WSUS) Configuration Wizard to configure WSUS for Analytics Platform System. You need to configure WSUS before you can apply software updates to the appliance. WSUS is already installed on the VMM virtual machine of the appliance.  
   
-For more information about configuring WSUS, see the [WSUS Step-by-Step Installation Guide](http://go.microsoft.com/fwlink/?LinkId=202417) on the WSUS website. After configuring WSUS, see [Download and Apply Microsoft Updates &#40;Analytics Platform System&#41;](download-and-apply-microsoft-updates.md) to initiate an update.  
+For more information about configuring WSUS, see the [WSUS Step-by-Step Installation Guide](https://go.microsoft.com/fwlink/?LinkId=202417) on the WSUS website. After configuring WSUS, see [Download and Apply Microsoft Updates &#40;Analytics Platform System&#41;](download-and-apply-microsoft-updates.md) to initiate an update.  
   
 > [!WARNING]  
 > If you encounter any errors during this configuration process, stop and contact support for assistance. Do not ignore errors or continue in the process after errors are received.  
@@ -57,7 +50,7 @@ To configure WSUS, you need to:
   
     1.  In the **Server Manager Dashboard**, on the **Tools** menu, click **Windows Server Update Services**.  
   
-    2.  In the left pane of the **Update Services** window, click to expand the Virtual Machine Management node server (***appliance_domain*-VMM**), and then click **Options**.  
+    2.  In the left pane of the **Update Services** window, click to expand the Virtual Machine Management node server (**_appliance_domain_-VMM**), and then click **Options**.  
   
     3.  In the **Options** pane, click **WSUS Server Configuration Wizard** to launch the configuration wizard.  
   
@@ -81,7 +74,7 @@ To configure WSUS, you need to:
   
 4.  Choose the upstream server.  
   
-    On the **Choose Upstream Server** page of the WSUS configuration wizard, you will select how WSUS on the Virtual Machine Management node will connect to an upstream server to obtain software updates. Your two choices are to synchronize the upstream server with [Microsoft Update](http://go.microsoft.com/fwlink/?LinkId=133349) or to synchronize updates with another Windows Server Update Services server.  
+    On the **Choose Upstream Server** page of the WSUS configuration wizard, you will select how WSUS on the Virtual Machine Management node will connect to an upstream server to obtain software updates. Your two choices are to synchronize the upstream server with [Microsoft Update](https://go.microsoft.com/fwlink/?LinkId=133349) or to synchronize updates with another Windows Server Update Services server.  
   
     #### To update by using Microsoft Update  
   
@@ -144,7 +137,7 @@ To configure WSUS, you need to:
   
     Unselect all selected updates.  
   
-    Select **SQL Server 2014**, **Windows Server 2012 R2**, and **System Center 2012 R2 - Virtual Machine Manager**, and then click **Next**.  
+    Select **Windows Server 2012 R2**, and **System Center 2012 R2 - Virtual Machine Manager**, and then click **Next**.  
   
 9. Choose classifications.  
   
@@ -183,7 +176,7 @@ After configuring WSUS for Analytics Platform System, the next step is to group 
   
     ![Add a computer group.](./media/configure-windows-server-update-services-wsus/SQL_Server_PDW_WSUSAddComputerGroup.png "SQL_Server_PDW_WSUSAddComputerGroup")  
   
-2.  Enter the name “APS” for the computer group, and then click **Add**.  
+2.  Enter the name "APS" for the computer group, and then click **Add**.  
   
     ![Enter name for your new computer group.](./media/configure-windows-server-update-services-wsus/SQL_Server_PDW_WSUSSpecifyGroupName.png "SQL_Server_PDW_WSUSSpecifyGroupName")  
   

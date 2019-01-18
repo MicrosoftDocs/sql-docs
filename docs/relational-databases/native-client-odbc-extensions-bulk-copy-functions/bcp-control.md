@@ -2,15 +2,10 @@
 title: "bcp_control | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
-ms.service: ""
-ms.component: "native-client-odbc-extensions-bulk-copy-functions"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: native-client
 ms.topic: "reference"
 apiname: 
   - "bcp_control"
@@ -20,11 +15,10 @@ apitype: "DLLExport"
 helpviewer_keywords: 
   - "bcp_control function"
 ms.assetid: 32187282-1385-4c52-9134-09f061eb44f5
-caps.latest.revision: 60
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-ms.workload: "Inactive"
+author: MightyPen
+ms.author: genemi
+manager: craigg
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # bcp_control
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -72,7 +66,7 @@ RETCODE bcp_control (
  BCPFILE_RAW: data in the file is in the code page of the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  BCPFILEFMT  
- The version number of the data file format. This can be 80 ([!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]), 90 ([!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]), 100 ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] or [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]), 110 ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]), or 120 ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]). 120 is the default. This is useful for exporting and importing data in formats that were supported by earlier version of the server. For example, to import data that was obtained from a text column in a [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] server into a **varchar(max)** column in a [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] or later server, you should specify 80. Similarly, if you specify 80 when exporting data from a **varchar(max)** column, it will be saved just like text columns are saved in the [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] format, and can be imported into a text column of a [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] server.  
+ The version number of the data file format. This can be 80 ( [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]), 90 ( [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]), 100 ( [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] or [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]), 110 ( [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]), or 120 ( [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]). 120 is the default. This is useful for exporting and importing data in formats that were supported by earlier version of the server. For example, to import data that was obtained from a text column in a [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] server into a **varchar(max)** column in a [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] or later server, you should specify 80. Similarly, if you specify 80 when exporting data from a **varchar(max)** column, it will be saved just like text columns are saved in the [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] format, and can be imported into a text column of a [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] server.  
   
  BCPFIRST  
  Is the first row of data to file or table to copy. The default is 1; a value less than 1 resets this option to its default.  
@@ -115,7 +109,7 @@ RETCODE bcp_control (
  Is the number of errors allowed before the bulk copy operation fails. The default is 10; a value less than 1 resets this option to its default. Bulk copy imposes a maximum of 65,535 errors. An attempt to set this option to a value larger than 65,535 results in the option being set to 65,535.  
   
  BCPODBC  
- When TRUE, specifies that **datetime** and **smalldatetime** values saved in character format will use the ODBC timestamp escape sequence prefix and suffix. The BCPODBC option only applies to BCP_OUT.  
+ When TRUE, specifies that **datetime** and **smalldatetime** values saved in character format will use the ODBC timestamp escape sequence prefix and suffix. The BCPODBC option only applies to DB_OUT.  
   
  When FALSE, a **datetime** value representing January 1, 1997 is converted to the character string: 1997-01-01 00:00:00.000. When TRUE, the same **datetime** value is represented as: {ts '1997-01-01 00:00:00.000'}.  
   

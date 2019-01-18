@@ -2,16 +2,11 @@
 title: "Customize Menus and Shortcut Keys | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "sql-tools"
-ms.service: ""
-ms.component: "ssms"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "tools-ssms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: ssms
+ms.topic: conceptual
 helpviewer_keywords: 
   - "SQL Server Management Studio [SQL Server], shortcuts"
   - "keyboard shortcuts [SQL Server Management Studio]"
@@ -23,11 +18,9 @@ helpviewer_keywords:
   - "customizing menus [SQL Server]"
   - "accelerator keys"
 ms.assetid: fb4edf3c-71b6-4645-b1d1-ddfdd69f0d7b
-caps.latest.revision: 5
 author: "stevestein"
 ms.author: "sstein"
-manager: "jhubbard"
-ms.workload: "On Demand"
+manager: craigg
 ---
 # Customize Menus and Shortcut Keys
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -161,7 +154,7 @@ Keyboard accelerators for stored procedures using the Ctrl key can be created fr
 6.  In the **Customize** dialog box, click **Close**.  
   
 > [!NOTE]  
-> Some commands are available only when [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull_md.md)] is displaying relevant content. If no commands on the menu are available, the menu item will not be available.  
+> Some commands are available only when [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] is displaying relevant content. If no commands on the menu are available, the menu item will not be available.  
   
 ## See Also  
 [Features in SQL Server Management Studio](../ssms/features-in-sql-server-management-studio.md)  

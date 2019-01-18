@@ -3,24 +3,19 @@ title: Configure multiple-subnet Always On Availability Groups and failover clus
 description: 
 author: MikeRayMSFT 
 ms.author: mikeray 
-manager: jhubbard
+manager: craigg
 ms.date: 12/1/2017
-ms.topic: article
-ms.prod: "sql-non-specified"
-ms.prod_service: "database-engine"
-ms.service: ""
-ms.component: "sql-linux"
-ms.suite: "sql"
-ms.custom: ""
-ms.technology: database-engine
-ms.workload: "On Demand"
+ms.topic: conceptual
+ms.prod: sql
+ms.custom: "sql-linux"
+ms.technology: linux
 ---
 
 # Configure multiple-subnet Always On Availability Groups and failover cluster instances
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-When an Always On Availability Group (AG) or failover cluster instance (FCI) spans more than one site, each site usually has its own networking. This often means that each site has its own IP addressing. For example, Site A’s addresses start with 192.168.1.*x* and Site B’s addresses start with 192.168.2.*x*, where *x* is the part of the IP address that is unique to the server. Without some sort of routing in place at the networking layer, these servers will not be able to communicate with each other. There are two ways to handle this scenario: set up a network that bridges the two different subnets, known as a VLAN, or configure routing between the subnets.
+When an Always On Availability Group (AG) or failover cluster instance (FCI) spans more than one site, each site usually has its own networking. This often means that each site has its own IP addressing. For example, Site A's addresses start with 192.168.1.*x* and Site B's addresses start with 192.168.2.*x*, where *x* is the part of the IP address that is unique to the server. Without some sort of routing in place at the networking layer, these servers will not be able to communicate with each other. There are two ways to handle this scenario: set up a network that bridges the two different subnets, known as a VLAN, or configure routing between the subnets.
 
 ## VLAN-based solution
  
@@ -54,7 +49,7 @@ In the Windows world, a Windows Server Failover Cluster (WSFC) natively supports
 
     Where *filename* is the name you want to call the CIB.
 
-2.  Edit the file that was generated. Look for the `<resources>` section. You will see the various resources that were created for the AG or FCI. Find the one associated with the IP address. Add a `<instance attributes>` section with the information for the second IP address either above or below the existing one, but before `<operations>`. It will look something like the following syntax:
+2.  Edit the file that was generated. Look for the `<resources>` section. You will see the various resources that were created for the AG or FCI. Find the one associated with the IP address. Add a `<instance attributes>` section with the information for the second IP address either above or below the existing one, but before `<operations>`. It is similar to the following syntax:
 
     ```xml
     <instance attributes id="<NameForAttribute>" score="<Score>">
@@ -66,7 +61,7 @@ In the Windows world, a Windows Server Failover Cluster (WSFC) natively supports
     </instance attributes>
     ```
     
-    where *NameForAttribute* is the unique name for this attribute, *Score* is the number assigned to the attribute, which must be higher than the primary subnet’s, *RuleName* is the name of the rule, *ExpressionName* is the name of the expression, *NodeNameInSubnet2* is the name of the node in the other subnet, *NameForSecondIP* is the name associated with the second IP address, *IPAddress* is the IP address for the second subnet, *NameForSecondIPNetmask* is the name associated with the netmask, and *Netmask* is the netmask for the second subnet.
+    where *NameForAttribute* is the unique name for this attribute, *Score* is the number assigned to the attribute, which must be higher than the primary subnet's, *RuleName* is the name of the rule, *ExpressionName* is the name of the expression, *NodeNameInSubnet2* is the name of the node in the other subnet, *NameForSecondIP* is the name associated with the second IP address, *IPAddress* is the IP address for the second subnet, *NameForSecondIPNetmask* is the name associated with the netmask, and *Netmask* is the netmask for the second subnet.
     
     The following shows an example.
     

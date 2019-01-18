@@ -2,16 +2,10 @@
 title: "Rename a Computer that Hosts a Stand-Alone Instance of SQL Server | Microsoft Docs"
 ms.custom: ""
 ms.date: "09/08/2017"
-ms.prod: "sql-non-specified"
-ms.prod_service: "database-engine"
-ms.service: ""
-ms.component: "install-windows"
+ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "setup-install"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: install
+ms.topic: conceptual
 helpviewer_keywords: 
   - "remote login errors [SQL Server]"
   - "standalone computer names [SQL Server]"
@@ -22,13 +16,15 @@ helpviewer_keywords:
   - "deleting remote logins"
   - "dropping remote logins"
 ms.assetid: bbaf1445-b8a2-4ebf-babe-17d8cf20b037
-caps.latest.revision: 31
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
+author: MashaMSFT
+ms.author: mathoma
+monikerRange: ">=sql-server-2016||=sqlallproducts-allversions"
+manager: craigg
 ---
 # Rename a Computer that Hosts a Stand-Alone Instance of SQL Server
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
 When you change the name of the computer that is running [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], the new name is recognized during [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] startup. You do not have to run Setup again to reset the computer name. Instead, use the following steps to update system metadata that is stored in sys.servers and reported by the system function @@SERVERNAME. Update system metadata to reflect computer name changes for remote connections and applications that use @@SERVERNAME, or that query the server name from sys.servers.  
   
 The following steps cannot be used to rename an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. They can be used only to rename the part of the instance name that corresponds to the computer name. For example, you can change a computer named MB1 that hosts an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] named Instance1 to another name, such as MB2. However, the instance part of the name, Instance1, will remain unchanged. In this example, the \\\\*ComputerName*\\*InstanceName* would be changed from \\\MB1\Instance1 to \\\MB2\Instance1.  
@@ -109,7 +105,7 @@ The following steps cannot be used to rename an instance of [!INCLUDE[ssNoVersio
   
  **Linked Server Configurations** - Linked server configurations will be affected by the computer renaming operation. Use **sp_addlinkedserver** or **sp_setnetname** to update computer name references. For more information, see the [sp_addlinkedserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md) or [sp_setnetname &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-setnetname-transact-sql.md).  
   
- **Client Alias Names** - Client aliases that use named pipes will be affected by the computer renaming operation. For example, if an alias "PROD_SRVR" was created to point to SRVR1 and uses the named pipes protocol, the pipe name will look like `\\SRVR1\pipe\sql\query`. After the computer is renamed, the path of the named pipe will no longer be valid and. For more information about named pipes, see the [Creating a Valid Connection String Using Named Pipes](http://go.microsoft.com/fwlink/?LinkId=111063).  
+ **Client Alias Names** - Client aliases that use named pipes will be affected by the computer renaming operation. For example, if an alias "PROD_SRVR" was created to point to SRVR1 and uses the named pipes protocol, the pipe name will look like `\\SRVR1\pipe\sql\query`. After the computer is renamed, the path of the named pipe will no longer be valid and. For more information about named pipes, see the [Creating a Valid Connection String Using Named Pipes](https://go.microsoft.com/fwlink/?LinkId=111063).  
   
 ## See also  
  [Install SQL Server](../../database-engine/install-windows/install-sql-server.md)  

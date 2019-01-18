@@ -2,28 +2,21 @@
 title: "Lock:Escalation Event Class | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-non-specified"
-ms.prod_service: "database-engine, sql-database"
-ms.service: ""
-ms.component: "event-classes"
+ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: supportability
+ms.topic: conceptual
 helpviewer_keywords: 
   - "Escalation event class"
   - "lock escalation [SQL Server], event class"
 ms.assetid: d253b44c-7600-4afa-a3a7-03cc937c6a4b
-caps.latest.revision: 47
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-ms.workload: "Inactive"
+author: "stevestein"
+ms.author: "sstein"
+manager: craigg
+monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Lock:Escalation Event Class
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   The **Lock:Escalation** event class indicates that a finer-grained lock has been converted to a coarser-grained lock; for example, a row lock that is converted to an object lock. The escalation event class is Event ID 60.  
   
 ## Lock:Escalation Event Class Data Columns  
@@ -75,7 +68,7 @@ EXEC sp_trace_setevent @TraceID, 60, 22, 1; -- 22 = ObjectID
 EXEC sp_trace_setevent @TraceID, 60, 25, 1; -- 25 = IntegerData  
 EXEC sp_trace_setevent @TraceID, 60, 55, 1; -- 25 = IntegerData2  
 EXEC sp_trace_setevent @TraceID, 60, 57, 1; -- 57 = Type  
--- Set any filter  byusing sp_trace_setfilter.  
+-- Set any filter  by using sp_trace_setfilter.  
 -- Start the trace.  
 EXEC sp_trace_setstatus @TraceID, 1;  
 GO  

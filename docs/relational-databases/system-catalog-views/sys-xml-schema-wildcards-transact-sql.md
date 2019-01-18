@@ -2,15 +2,10 @@
 title: "sys.xml_schema_wildcards (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/10/2016"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "database-engine"
-ms.service: ""
-ms.component: "system-catalog-views"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: system-objects
 ms.topic: "language-reference"
 f1_keywords: 
   - "sys.xml_schema_wildcards"
@@ -22,11 +17,9 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.xml_schema_wildcards catalog view"
 ms.assetid: 7cedfe9a-e99e-4777-8a28-98674b6e5cff
-caps.latest.revision: 30
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
-ms.workload: "Inactive"
+manager: craigg
 ---
 # sys.xml_schema_wildcards (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

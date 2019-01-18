@@ -1,31 +1,22 @@
 ---
 title: "ConnectionPoolSize Property (WMI MSReportServer_ConfigurationSetting) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
+ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
-ms.service: ""
-ms.component: "wmi-provider-library-reference"
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
+ms.technology: wmi-provider-library-reference
 
 
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 apiname: 
   - "ConnectionPoolSize"
 apilocation: 
   - "reportingservices.mof"
-apitype: "MOFDef"
+apitype: MOFDef
 helpviewer_keywords: 
   - "ConnectionPoolSize property"
 ms.assetid: b80c8e5d-b725-4fe4-aec6-02fb18ec4434
-caps.latest.revision: 17
-author: "markingmyname"
-ms.author: "maghan"
-manager: "kfile"
-ms.workload: "Inactive"
+author: markingmyname
+ms.author: maghan
 ---
 # ConfigurationSetting Property - ConnectionPoolSize
   The connection pool size used by the report server to communicate with the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance that hosts the report server database. Read-only.  

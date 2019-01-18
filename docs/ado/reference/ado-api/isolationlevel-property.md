@@ -1,28 +1,21 @@
 ---
 title: "IsolationLevel Property | Microsoft Docs"
-ms.prod: "sql-non-specified"
-ms.prod_service: "drivers"
-ms.service: ""
-ms.component: "ado"
-ms.technology:
-  - "drivers"
+ms.prod: sql
+ms.prod_service: connectivity
+ms.technology: connectivity
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 apitype: "COM"
 f1_keywords: 
   - "Connection15::IsolationLevel"
 helpviewer_keywords: 
   - "IsolationLevel property"
 ms.assetid: ea84e4b2-fbf2-4eef-b9ce-796b22e21800
-caps.latest.revision: 11
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
-ms.workload: "Inactive"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # IsolationLevel Property
 Indicates the level of isolation for a [Connection](../../../ado/reference/ado-api/connection-object-ado.md) object.  

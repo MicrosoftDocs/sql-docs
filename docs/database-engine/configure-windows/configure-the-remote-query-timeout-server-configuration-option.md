@@ -2,25 +2,18 @@
 title: "Configure the remote query timeout Server Configuration Option | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/08/2017"
-ms.prod: "sql-non-specified"
-ms.prod_service: "database-engine"
-ms.service: ""
-ms.component: "configure-windows"
+ms.prod: sql
+ms.prod_service: high-availability
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: configuration
+ms.topic: conceptual
 helpviewer_keywords: 
   - "time limit for remote queries [SQL Server]"
   - "remote query timeout option"
 ms.assetid: 888c8448-933b-41e3-8aa1-c206bc0cdb78
-caps.latest.revision: 26
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-ms.workload: "Active"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ---
 # Configure the remote query timeout Server Configuration Option
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

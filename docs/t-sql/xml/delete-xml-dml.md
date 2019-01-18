@@ -2,15 +2,10 @@
 title: "delete (XML DML) | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/26/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.service: ""
-ms.component: "t-sql|xml"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: t-sql
 ms.topic: "language-reference"
 dev_langs: 
   - "TSQL"
@@ -20,11 +15,9 @@ helpviewer_keywords:
   - "delete statement [XML DML]"
   - "deleting nodes"
 ms.assetid: b22c93a4-b84d-4356-af4c-6013322a4b71
-caps.latest.revision: 28
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
-ms.workload: "On Demand"
+manager: craigg
 ---
 # delete (XML DML)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -141,7 +134,7 @@ from T
 --1) insert <Location 1000/>. Note: <Root> must be singleton in the query  
 update T  
 set Instructions.modify('  
-  declare namespace MI="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";  
+  declare namespace MI="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";  
   insert <MI:Location LocationID="1000"  LaborHours="1000" >  
            These are manu steps at location 1000.   
            <MI:step>New step1 instructions</MI:step>  
@@ -158,7 +151,7 @@ from T
 -- delete an attribute  
 update T  
 set Instructions.modify('  
-  declare namespace MI="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";  
+  declare namespace MI="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";  
   delete(/MI:root/MI:Location[@LocationID=1000]/@LaborHours)   
 ')  
 go  
@@ -167,7 +160,7 @@ from T
 -- delete text in <location>  
 update T  
 set Instructions.modify('  
-  declare namespace MI="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";  
+  declare namespace MI="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";  
   delete(/MI:root/MI:Location[@LocationID=1000]/text())   
 ')  
 go  
@@ -176,7 +169,7 @@ from T
 -- delete 2nd manu step at location 1000  
 update T  
 set Instructions.modify('  
-  declare namespace MI="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";  
+  declare namespace MI="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";  
   delete(/MI:root/MI:Location[@LocationID=1000]/MI:step[2])   
 ')  
 go  

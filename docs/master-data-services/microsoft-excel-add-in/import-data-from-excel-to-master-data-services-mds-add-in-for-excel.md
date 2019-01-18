@@ -1,28 +1,24 @@
 ---
 title: "Import Data from Excel to Master Data Services (MDS Add-in for Excel) | Microsoft Docs"
-ms.custom: ""
+ms.custom: microsoft-excel-add-in
 ms.date: "03/01/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "mds"
-ms.service: ""
-ms.component: "microsoft-excel-add-in"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "master-data-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: master-data-services
+ms.topic: conceptual
 ms.assetid: 89fce454-a816-4b33-a26a-d1b9741d269b
-caps.latest.revision: 10
-author: "smartysanthosh"
-ms.author: "nagavo"
-manager: "craigg"
-ms.workload: "Inactive"
+author: leolimsft
+ms.author: lle
+manager: craigg
 ---
 # Import Data from Excel to Master Data Services (MDS Add-in for Excel)
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
   In the [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)], publish data to the MDS repository when you are finished working in Excel and want to save your changes so other users have access to them.  
   
-> [!NOTE]  
+> [!NOTE]
 >  -   When you publish changes, comments on MDS-managed cells are deleted.  
 > -   A formula is not supported in an MDS-managed cell. A formula in an MDS-managed cell is handled as a text value.  
   

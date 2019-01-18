@@ -2,26 +2,19 @@
 title: "View or Configure Remote Server Connection Options (SQL Server) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-non-specified"
-ms.prod_service: "database-engine"
-ms.service: ""
-ms.component: "configure-windows"
+ms.prod: sql
+ms.prod_service: high-availability
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: configuration
+ms.topic: conceptual
 helpviewer_keywords: 
   - "remote servers [SQL Server], connection options"
   - "servers [SQL Server], remote"
   - "connections [SQL Server], remote servers"
 ms.assetid: 356d3e6b-8514-4bd2-a683-9de147949b2b
-caps.latest.revision: 25
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-ms.workload: "On Demand"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ---
 # View or Configure Remote Server Connection Options (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -54,7 +47,7 @@ ms.workload: "On Demand"
   
 1.  In Object Explorer, right-click a server, and then click **Properties**.  
   
-2.  In the **SQL Server Properties - \<***server_name***>** dialog box, click **Connections**.  
+2.  In the **SQL Server Properties - \<**_server_name_**>** dialog box, click **Connections**.  
   
 3.  On the **Connections** page, review the **Remote server connections** settings, and modify them if necessary.  
   

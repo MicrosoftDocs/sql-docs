@@ -3,36 +3,30 @@ title: Configure log shipping for SQL Server on Linux | Microsoft Docs
 description: This tutorial shows a basic example of how to replicate a SQL Server instance on Linux to a secondary instance using log shipping.
 author: meet-bhagdev 
 ms.author: meetb 
-manager: jhubbard
+manager: craigg
 ms.date: 04/19/2017
-ms.topic: article
-ms.prod: "sql-non-specified"
-ms.prod_service: "database-engine"
-ms.service: ""
-ms.component: sql-linux
-ms.suite: "sql"
-ms.custom: ""
-ms.technology: database-engine
-ms.assetid: 
-ms.workload: "Inactive"
+ms.topic: conceptual
+ms.prod: sql
+ms.custom: "sql-linux"
+ms.technology: linux
 ---
 # Get started with Log Shipping on Linux
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 SQL Server Log shipping is a HA configuration where a database from a primary server is replicated onto one or more secondary servers. In a nutshell, a backup of the source database is restored onto the secondary server. Then the primary server creates transaction log backups periodically, and the secondary servers restore them, updating the secondary copy of the database. 
 
   ![Logshipping](https://preview.ibb.co/hr5Ri5/logshipping.png)
 
 
-As described in the picture above, a log shipping session involves the following steps:
+As described in the this picture, a log shipping session involves the following steps:
 
 - Backing up the transaction log file on the primary SQL Server instance
 - Copying the transaction log backup file across the network to one or more secondary SQL Server instances
 - Restoring the transaction log backup file on the secondary SQL Server instances
 
 ## Prerequisites
-- [Install SQL Server Agent on Linux](https://docs.microsoft.com/en-us/sql/linux/sql-server-linux-setup-sql-agent)
+- [Install SQL Server Agent on Linux](https://docs.microsoft.com/sql/linux/sql-server-linux-setup-sql-agent)
 
 ## Setup a network share for Log Shipping using CIFS 
 

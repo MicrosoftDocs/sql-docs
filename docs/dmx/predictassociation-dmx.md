@@ -1,30 +1,14 @@
 ---
 title: "PredictAssociation (DMX) | Microsoft Docs"
-ms.custom: ""
-ms.date: "09/14/2016"
-ms.prod: analysis-services
-ms.prod_service: "analysis-services"
-ms.service: ""
-ms.component: ""
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
-  
-ms.component: data-mining
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "PredictAssociation"
-dev_langs: 
-  - "DMX"
-helpviewer_keywords: 
-  - "PredictAssociation function"
-ms.assetid: 33eb66b5-84c6-449f-aaae-316345bc4ad5
-caps.latest.revision: 33
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-ms.workload: "Inactive"
+ms.date: 06/07/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: dmx
+ms.topic: conceptual
+ms.author: owend
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
 ---
 # PredictAssociation (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]

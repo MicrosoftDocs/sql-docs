@@ -2,24 +2,20 @@
 title: "Data Cleansing | Microsoft Docs"
 ms.custom: ""
 ms.date: "10/01/2012"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "data-quality-services"
-ms.service: ""
-ms.component: "data-quality-services"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "data-quality-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: data-quality-services
+ms.topic: conceptual
 ms.assetid: e67136cc-f8c6-4cb3-ba0b-c966c636256c
-caps.latest.revision: 31
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-ms.workload: "On Demand"
+author: "douglaslMS"
+ms.author: "douglasl"
+manager: craigg
 ---
 # Data Cleansing
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
   Data cleansing is the process of analyzing the quality of data in a data source, manually approving/rejecting the suggestions by the system, and thereby making changes to the data. Data cleansing in [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) includes a computer-assisted process that analyzes how data conforms to the knowledge in a knowledge base, and an interactive process that enables the data steward to review and modify computer-assisted process results to ensure that the data cleansing is exactly as they want to be done.  
   
  The data steward can also perform data cleansing in the Integration Services packaging process. In this case, the data steward would use the [!INCLUDE[ssDQSCleansingLong](../includes/ssdqscleansinglong-md.md)] that automatically performs data cleansing using an existing knowledge base. For more information, see [DQS Cleansing Transformation](../integration-services/data-flow/transformations/dqs-cleansing-transformation.md).  
@@ -30,7 +26,7 @@ ms.workload: "On Demand"
   
 -   Provides two-step process to cleanse the data: *computer-assisted* and *interactive*. The computer-assisted process uses the knowledge in a DQS knowledge base to automatically process the data, and suggest replacements/corrections. The next step, interactive, allows the data steward to approve, reject, or modify the changes proposed by the DQS during the computer-assisted cleansing.  
   
--   Standardizes and enriches customer data by using domain values, domain rules, and reference data. For example, standardize term usage by changing “St.” to “Street”, enrich data by filling in missing elements by changing “1 Microsoft way Redmond 98006” to “1 Microsoft Way, Redmond, WA 98006”.  
+-   Standardizes and enriches customer data by using domain values, domain rules, and reference data. For example, standardize term usage by changing "St." to "Street", enrich data by filling in missing elements by changing "1 Microsoft way Redmond 98006" to "1 Microsoft Way, Redmond, WA 98006".  
   
 -   Provides a simple, intuitive, and consistent wizard-like interface to the user to navigate data and inspect errors amongst a very large set of data.  
   
@@ -89,7 +85,7 @@ ms.workload: "On Demand"
  ![Data Cleansing in Data Quality Client](../data-quality-services/media/dqs-cleansingindqsclient.gif "Data Cleansing in Data Quality Client")  
   
 ##  <a name="Leading"></a> Leading Value Correction  
- Leading value correction applies to domain values that have synonyms, and the user wants to use one of the synonym values as the leading value instead of others for the consistent representation of the value. For example, “New York”, “NYC”, and “big apple” are synonyms, and the user wants to use “New York” as the leading value instead of “NYC” and “Big Apple”. DQS supports leading value correction during the cleansing process to help you standardize your data. The leading value correction is done only if the domain was enabled for the same when it was created. By default, all domains are enabled for leading value correction unless you cleared the **Use Leading Values** check box while creating a domain. For more information about this check box, see [Set Domain Properties](../data-quality-services/set-domain-properties.md).  
+ Leading value correction applies to domain values that have synonyms, and the user wants to use one of the synonym values as the leading value instead of others for the consistent representation of the value. For example, "New York", "NYC", and "big apple" are synonyms, and the user wants to use "New York" as the leading value instead of "NYC" and "Big Apple". DQS supports leading value correction during the cleansing process to help you standardize your data. The leading value correction is done only if the domain was enabled for the same when it was created. By default, all domains are enabled for leading value correction unless you cleared the **Use Leading Values** check box while creating a domain. For more information about this check box, see [Set Domain Properties](../data-quality-services/set-domain-properties.md).  
   
 ##  <a name="Standardize"></a> Standardize Cleansed Data  
  You can choose whether to export the cleansed data in the standardized format based on the output format defined for domains. While creating a domain, you can select the formatting that will be applied when the data values in the domain are output. For more information about specifying output formats for a domain, see the **Format Output to** list in [Set Domain Properties](../data-quality-services/set-domain-properties.md).  

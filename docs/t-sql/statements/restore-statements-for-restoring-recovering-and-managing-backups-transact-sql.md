@@ -1,16 +1,11 @@
 ---
 title: "RESTORE Statements for Restoring, Recovering, Managing Backups (T-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/17/2017"
-ms.prod: "sql-non-specified"
+ms.date: "03/30/2018"
+ms.prod: sql
 ms.prod_service: "sql-database"
-ms.service: ""
-ms.component: "t-sql|statements"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: t-sql
 ms.topic: "language-reference"
 dev_langs: 
   - "TSQL"
@@ -24,14 +19,13 @@ helpviewer_keywords:
   - "file restores [SQL Server], RESTORE statement"
   - "transaction log backups [SQL Server], RESTORE statement"
 ms.assetid: fb29a151-f312-4f85-b857-5deeca0de8ce
-caps.latest.revision: 15
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-ms.workload: "On Demand"
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+monikerRange: "=azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017"
 ---
 # RESTORE Statements for Restoring, Recovering, and Managing Backups (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdbmi-xxxx-xxx-md.md )]
 
   This section describes the RESTORE statements for backups. In addition to the main RESTORE {DATABASE | LOG} statement for restoring and recovering backups, a number of auxiliary RESTORE statements help you manage your backups and plan your restore sequences. The auxiliary RESTORE commands include: RESTORE FILELISTONLY, RESTORE HEADERONLY, RESTORE LABELONLY, RESTORE REWINDONLY, and RESTORE VERIFYONLY.  
   

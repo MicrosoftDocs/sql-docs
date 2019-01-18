@@ -2,16 +2,11 @@
 title: "Upgrade Analysis Services | Microsoft Docs"
 ms.custom: ""
 ms.date: "09/12/2017"
-ms.prod: "sql-non-specified"
-ms.prod_service: "database-engine"
-ms.service: ""
-ms.component: "install-windows"
+ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: 
   
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "upgrading databases"
   - "databases [Analysis Services], upgrading"
@@ -23,13 +18,15 @@ helpviewer_keywords:
   - "installing Analysis Services, upgrading"
   - "SSAS, upgrading"
 ms.assetid: a131d329-386e-4470-aaa9-ffcde4e5ec0c
-caps.latest.revision: 79
 author: "Minewiskan"
 ms.author: "owend"
+monikerRange: ">=sql-server-2016||=sqlallproducts-allversions"
 manager: "erikre"
 ---
 # Upgrade Analysis Services
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+  
   Analysis Services instances can be upgraded to a SQL Server version of the same server mode to take advantage of features introduced in the current release, as described in [What's new in Analysis Services](../../analysis-services/what-s-new-in-analysis-services.md).  
   
  You can upgrade each instance in-place, independently of other instances running on the same hardware. However, most administrators choose to install a new instance of the new version for application testing before transferring production workloads onto the new server. But for development or test servers, an in-place upgrade might be more convenient.  
@@ -73,7 +70,7 @@ manager: "erikre"
   
  Tabular and multidimensional databases follow different version paths. It's coincidental that both multidimensional and tabular models have similar numbered compatibility levels.  Modes will advance at different rates if feature changes impact only one of them.  
   
- For background purposes, the following table summarizes the compatibility levels, but you should review the detail topics to understand what each level provides.  
+ For background purposes, the following table summarizes the compatibility levels, but you should review the detail articles to understand what each level provides.  
   
 ||||  
 |-|-|-|  

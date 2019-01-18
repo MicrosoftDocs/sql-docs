@@ -2,25 +2,14 @@
 title: "Global Settings (Editor) (SybaseToSQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
-ms.prod_service: "sql-tools"
-ms.service: ""
-ms.component: "ssma-sybase"
+ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "sql-ssma"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to: 
-  - "Azure SQL Database"
-  - "SQL Server"
+ms.technology: ssma
+ms.topic: conceptual
 ms.assetid: 0bc0d5e8-b092-413e-a0ee-7ef2c516d324
-caps.latest.revision: 3
 author: "Shamikg"
 ms.author: "Shamikg"
-manager: "jhubbard"
-ms.workload: "Inactive"
+manager: craigg
 ---
 # Global Settings (Editor) (SybaseToSQL)
 Use the Editor page of the **Global Settings** dialog box to specify settings for code editor windows.  

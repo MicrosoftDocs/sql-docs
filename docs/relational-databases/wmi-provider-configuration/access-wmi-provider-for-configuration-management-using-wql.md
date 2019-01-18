@@ -2,15 +2,10 @@
 title: "Access WMI Provider for Configuration Management using WQL | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "database-engine"
-ms.service: ""
-ms.component: "wmi"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-
-ms.tgt_pltfrm: ""
+ms.technology: wmi
 ms.topic: "reference"
 helpviewer_keywords: 
   - "query language [WMI]"
@@ -18,11 +13,9 @@ helpviewer_keywords:
   - "WQL [WMI]"
   - "WMI Provider for Configuration Management, WQL"
 ms.assetid: 26499530-d93b-452b-bbe4-217ef1d11e68
-caps.latest.revision: 16
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-ms.workload: "Inactive"
+author: "CarlRabeler"
+ms.author: "carlrab"
+manager: craigg
 ---
 # Access WMI Provider for Configuration Management using WQL
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

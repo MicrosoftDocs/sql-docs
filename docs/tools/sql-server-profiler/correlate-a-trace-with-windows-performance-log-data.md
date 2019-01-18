@@ -2,16 +2,11 @@
 title: "Correlate a Trace with Windows Performance Log Data | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/12/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "sql-tools"
-ms.service: ""
-ms.component: "sql-server-profiler"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: profiler
+ms.topic: conceptual
 helpviewer_keywords: 
   - "correlating trace with log data"
   - "logs [SQL Server], traces"
@@ -19,11 +14,9 @@ helpviewer_keywords:
   - "traces [SQL Server], logs"
   - "SQL Server Profiler, correlating trace with log data"
 ms.assetid: 1e4412c8-d27c-4aae-9b35-214128d1d00a
-caps.latest.revision: 10
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-ms.workload: "Inactive"
+author: "stevestein"
+ms.author: "sstein"
+manager: craigg
 ---
 # Correlate a trace with Windows Performance Log data
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

@@ -2,15 +2,10 @@
 title: "ALTER XML SCHEMA COLLECTION (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "sql-database"
-ms.service: ""
-ms.component: "t-sql|statements"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: t-sql
 ms.topic: "language-reference"
 f1_keywords: 
   - "ALTER_XML_SCHEMA_COLLECTION_TSQL"
@@ -31,11 +26,9 @@ helpviewer_keywords:
   - "schema collections [SQL Server], modifying"
   - "multiple schema namespaces"
 ms.assetid: e311c425-742a-4b0d-b847-8b974bf66d53
-caps.latest.revision: 23
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
-ms.workload: "Inactive"
+manager: craigg
 ---
 # ALTER XML SCHEMA COLLECTION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -64,25 +57,25 @@ ALTER XML SCHEMA COLLECTION [ relational_schema. ]sql_identifier ADD 'Schema Com
 ## Remarks  
  Use the ALTER XML SCHEMA COLLECTION to add new XML schemas whose namespaces are not already in the XML schema collection, or add new components to existing namespaces in the collection.  
   
- The following example adds a new \<element> to the existing namespace `http://MySchema/test_xml_schema` in the collection `MyColl`.  
+ The following example adds a new \<element> to the existing namespace `https://MySchema/test_xml_schema` in the collection `MyColl`.  
   
 ```  
 -- First create an XML schema collection.  
 CREATE XML SCHEMA COLLECTION MyColl AS '  
    <schema   
     xmlns="http://www.w3.org/2001/XMLSchema"   
-    targetNamespace="http://MySchema/test_xml_schema">  
+    targetNamespace="https://MySchema/test_xml_schema">  
       <element name="root" type="string"/>   
   </schema>'  
 -- Modify the collection.   
 ALTER XML SCHEMA COLLECTION MyColl ADD '  
   <schema xmlns="http://www.w3.org/2001/XMLSchema"   
-         targetNamespace="http://MySchema/test_xml_schema">   
+         targetNamespace="https://MySchema/test_xml_schema">   
      <element name="anotherElement" type="byte"/>   
  </schema>';  
 ```  
   
- `ALTER XML SCHEMA` adds element `<anotherElement>` to the previously defined namespace `http://MySchema/test_xml_schema`.  
+ `ALTER XML SCHEMA` adds element `<anotherElement>` to the previously defined namespace `https://MySchema/test_xml_schema`.  
   
  Note that if some of the components you want to add in the collection reference components that are already in the same collection, you must use `<import namespace="referenced_component_namespace" />`. However, it is not valid to use the current schema namespace in `<xsd:import>`, and therefore components from the same target namespace as the current schema namespace are automatically imported.  
   
@@ -106,8 +99,8 @@ USE SampleDB;
 GO  
 CREATE XML SCHEMA COLLECTION ManuInstructionsSchemaCollection AS  
 N'<?xml version="1.0" encoding="UTF-16"?>  
-<xsd:schema targetNamespace="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions"   
-   xmlns          ="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions"   
+<xsd:schema targetNamespace="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions"   
+   xmlns          ="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions"   
    elementFormDefault="qualified"   
    attributeFormDefault="unqualified"  
    xmlns:xsd="http://www.w3.org/2001/XMLSchema" >  
@@ -201,8 +194,8 @@ CREATE XML SCHEMA COLLECTION N'
   
 ```  
 CREATE XML SCHEMA COLLECTION ProductDescriptionSchemaCollection AS   
-'<xsd:schema targetNamespace="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelWarrAndMain"  
-    xmlns="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelWarrAndMain"   
+'<xsd:schema targetNamespace="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelWarrAndMain"  
+    xmlns="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelWarrAndMain"   
     elementFormDefault="qualified"   
     xmlns:xsd="http://www.w3.org/2001/XMLSchema" >  
     <xsd:element name="Warranty"  >  
@@ -214,14 +207,14 @@ CREATE XML SCHEMA COLLECTION ProductDescriptionSchemaCollection AS
         </xsd:complexType>  
     </xsd:element>  
 </xsd:schema>  
- <xs:schema targetNamespace="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription"   
-    xmlns="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription"   
+ <xs:schema targetNamespace="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription"   
+    xmlns="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription"   
     elementFormDefault="qualified"   
-    xmlns:mstns="http://tempuri.org/XMLSchema.xsd"   
+    xmlns:mstns="https://tempuri.org/XMLSchema.xsd"   
     xmlns:xs="http://www.w3.org/2001/XMLSchema"  
-    xmlns:wm="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelWarrAndMain" >  
+    xmlns:wm="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelWarrAndMain" >  
     <xs:import   
-namespace="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelWarrAndMain" />  
+namespace="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelWarrAndMain" />  
     <xs:element name="ProductDescription" type="ProductDescription" />  
         <xs:complexType name="ProductDescription">  
             <xs:sequence>  

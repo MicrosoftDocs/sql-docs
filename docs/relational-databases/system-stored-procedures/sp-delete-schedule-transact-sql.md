@@ -2,15 +2,10 @@
 title: "sp_delete_schedule (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/09/2016"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "database-engine"
-ms.service: ""
-ms.component: "system-stored-procedures"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: system-objects
 ms.topic: "language-reference"
 f1_keywords: 
   - "sp_delete_schedule"
@@ -20,11 +15,9 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_delete_schedule"
 ms.assetid: 18b2c985-47b8-49c8-82d1-8a4af3d7d33a
-caps.latest.revision: 33
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-ms.workload: "Inactive"
+author: "stevestein"
+ms.author: "sstein"
+manager: craigg
 ---
 # sp_delete_schedule (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,7 +40,7 @@ sp_delete_schedule { [ @schedule_id = ] schedule_id | [ @schedule_name = ] 'sche
   
 > **NOTE:** Either *schedule_id* or *schedule_name* must be specified, but both cannot be specified.  
   
- [ **@schedule_name=** ] **'***schedule_name***'**  
+ [ **@schedule_name=** ] **'**_schedule_name_**'**  
  The name of the schedule to delete. *schedule_name* is **sysname**, with a default of NULL.  
   
 > **NOTE:** Either *schedule_id* or *schedule_name* must be specified, but both cannot be specified.  
@@ -75,7 +68,7 @@ sp_delete_schedule { [ @schedule_id = ] schedule_id | [ @schedule_name = ] 'sche
   
  Note that the job owner can attach a job to a schedule and detach a job from a schedule without also having to be the schedule owner. However, a schedule cannot be deleted if the detach would leave it with no jobs, unless the caller is the schedule owner.  
   
- For details about the permissions of these roles, see [SQL Server Agent Fixed Database Roles](http://msdn.microsoft.com/library/719ce56b-d6b2-414a-88a8-f43b725ebc79).  
+ For details about the permissions of these roles, see [SQL Server Agent Fixed Database Roles](../../ssms/agent/sql-server-agent-fixed-database-roles.md).  
   
  Only members of the **sysadmin** role can delete a job schedule that is owned by another user.  
   
@@ -107,7 +100,7 @@ GO
 ```  
   
 ## See Also  
- [Implement Jobs](http://msdn.microsoft.com/library/69e06724-25c7-4fb3-8a5b-3d4596f21756)   
+ [Implement Jobs](../../ssms/agent/implement-jobs.md)   
  [sp_add_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md)  
   
   

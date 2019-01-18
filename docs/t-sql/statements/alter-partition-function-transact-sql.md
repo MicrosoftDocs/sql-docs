@@ -2,15 +2,10 @@
 title: "ALTER PARTITION FUNCTION (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.service: ""
-ms.component: "t-sql|statements"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: t-sql
 ms.topic: "language-reference"
 f1_keywords: 
   - "ALTER PARTITION FUNCTION"
@@ -28,11 +23,9 @@ helpviewer_keywords:
   - "partition functions [SQL Server], modifying"
   - "partitioned tables [SQL Server], merging"
 ms.assetid: 70866dac-0a8f-4235-8108-51547949ada4
-caps.latest.revision: 43
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "craigg"
-ms.workload: "On Demand"
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
 ---
 # ALTER PARTITION FUNCTION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -64,7 +57,7 @@ ALTER PARTITION FUNCTION partition_function_name()
   
  A filegroup must exist online and be marked by the partition scheme that uses the partition function as NEXT USED to hold the new partition. Filegroups are allocated to partitions in a CREATE PARTITION SCHEME statement. If a CREATE PARTITION SCHEME statement allocates more filegroups than necessary (fewer partitions are created in the CREATE PARTITION FUNCTION statement than filegroups to hold them), then there are unassigned filegroups, and one of them is marked NEXT USED by the partition scheme. This filegroup will hold the new partition. If there are no filegroups marked NEXT USED by the partition scheme, you must use ALTER PARTITION SCHEME to either add a filegroup, or designate an existing one, to hold the new partition. A filegroup that already holds partitions can be designated to hold additional partitions. Because a partition function can participate in more than one partition scheme, all the partition schemes that use the partition function to which you are adding partitions must have a NEXT USED filegroup. Otherwise, ALTER PARTITION FUNCTION fails with an error that displays the partition scheme or schemes that lack a NEXT USED filegroup.  
   
- If you create all the partitions in the same filegroup, that filegroup is initially assigned to be the NEXT USED filegroup automatically. However, after a split operation is performed, there is no longer a designated NEXT USED filegroup. You must explicitly assign the filegroup to be the NEXT USED filegroup by using ALTER PARITION SCHEME or a subsequent split operation will fail.  
+ If you create all the partitions in the same filegroup, that filegroup is initially assigned to be the NEXT USED filegroup automatically. However, after a split operation is performed, there is no longer a designated NEXT USED filegroup. You must explicitly assign the filegroup to be the NEXT USED filegroup by using ALTER PARTITION SCHEME or a subsequent split operation will fail.  
   
 > [!NOTE]  
 >  Limitations with columnstore index: Only empty partitions can be split in when a columnstore index exists on the table. You will need to drop or disable the columnstore index before performing this operation  
@@ -94,7 +87,7 @@ ALTER PARTITION FUNCTION partition_function_name()
   
 -   Perform a sequence of ALTER PARTITION FUNCTION statements.  
   
- All filegroups that are affected by ALTER PARITITION FUNCTION must be online.  
+ All filegroups that are affected by ALTER PARTITION FUNCTION must be online.  
   
  ALTER PARTITION FUNCTION fails when there is a disabled clustered index on any tables that use the partition function.  
   

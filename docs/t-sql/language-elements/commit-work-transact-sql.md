@@ -2,15 +2,10 @@
 title: "COMMIT WORK (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/10/2016"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.service: ""
-ms.component: "t-sql|language-elements"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: t-sql
 ms.topic: "language-reference"
 f1_keywords: 
   - "COMMIT_WORK_TSQL"
@@ -25,11 +20,9 @@ helpviewer_keywords:
   - "marking end of transactions [SQL Server]"
   - "COMMIT WORK statement"
 ms.assetid: 4de76f33-399e-4912-a617-6eb6c560a058
-caps.latest.revision: 27
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-ms.workload: "On Demand"
+author: "douglaslMS"
+ms.author: "douglasl"
+manager: craigg
 ---
 # COMMIT WORK (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

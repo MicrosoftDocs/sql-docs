@@ -2,25 +2,17 @@
 title: "Change Resource Pool Settings | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/17/2016"
-ms.prod: "sql-non-specified"
-ms.prod_service: "database-engine"
-ms.service: ""
-ms.component: "resource-governor"
+ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: performance
+ms.topic: conceptual
 helpviewer_keywords: 
   - "Resource Governor, resource pool alter"
   - "resource pools [SQL Server], alter"
 ms.assetid: 49438285-a011-4dac-bd4f-f35cd90fda61
-caps.latest.revision: 15
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-ms.workload: "Inactive"
+author: julieMSFT
+ms.author: jrasnick
+manager: craigg
 ---
 # Change Resource Pool Settings
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

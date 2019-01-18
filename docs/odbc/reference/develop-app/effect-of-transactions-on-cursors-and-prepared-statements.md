@@ -2,16 +2,11 @@
 title: "Effect of Transactions on Cursors and Prepared Statements | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
-ms.prod_service: "drivers"
-ms.service: ""
-ms.component: "odbc"
+ms.prod: sql
+ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "drivers"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: connectivity
+ms.topic: conceptual
 helpviewer_keywords: 
   - "rolling back transactions [ODBC]"
   - "committing transactions [ODBC]"
@@ -20,11 +15,9 @@ helpviewer_keywords:
   - "prepared statements [ODBC]"
   - "transactions [ODBC], cursors"
 ms.assetid: 523e22a2-7b53-4c25-97c1-ef0284aec76e
-caps.latest.revision: 6
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
-ms.workload: "Inactive"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # Effect of Transactions on Cursors and Prepared Statements
 Committing or rolling back a transaction has the following effect on cursors and access plans:  

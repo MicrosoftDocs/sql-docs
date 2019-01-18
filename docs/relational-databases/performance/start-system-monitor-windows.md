@@ -2,26 +2,18 @@
 title: "Start System Monitor (Windows) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-non-specified"
-ms.prod_service: "database-engine"
-ms.service: ""
-ms.component: "performance"
+ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: performance
+ms.topic: conceptual
 helpviewer_keywords: 
   - "System Monitor [SQL Server], starting"
   - "starting Windows System Monitor"
   - "Windows System Monitor [SQL Server], starting"
 ms.assetid: 5e51bb79-5737-470b-9c47-fac330c001c5
-caps.latest.revision: 17
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-ms.workload: "On Demand"
+author: julieMSFT
+ms.author: jrasnick
+manager: craigg
 ---
 # Start System Monitor (Windows)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

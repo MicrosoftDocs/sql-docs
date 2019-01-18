@@ -2,15 +2,10 @@
 title: "query() Method (xml Data Type) | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/26/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "sql-database"
-ms.service: ""
-ms.component: "t-sql|xml"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: t-sql
 ms.topic: "language-reference"
 dev_langs: 
   - "TSQL"
@@ -18,11 +13,9 @@ helpviewer_keywords:
   - "query method"
   - "query() method"
 ms.assetid: f48f6f7b-219f-463a-bf36-bc10f21afaeb
-caps.latest.revision: 28
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
-ms.workload: "Active"
+manager: craigg
 ---
 # query() Method (xml Data Type)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -75,13 +68,13 @@ SELECT @myDoc.query('/Root/ProductDescription/Features')
   
 ```  
 SELECT CatalogDescription.query('  
-declare namespace PD="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription";  
+declare namespace PD="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription";  
 <Product ProductModelID="{ /PD:ProductDescription[1]/@ProductModelID }" />  
 ') as Result  
 FROM Production.ProductModel  
 where CatalogDescription.exist('  
-declare namespace PD="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription";  
-declare namespace wm="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelWarrAndMain";  
+declare namespace PD="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription";  
+declare namespace wm="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelWarrAndMain";  
      /PD:ProductDescription/PD:Features/wm:Warranty ') = 1  
 ```  
   
@@ -104,15 +97,16 @@ declare namespace wm="http://schemas.microsoft.com/sqlserver/2004/07/adventure-w
  Note that the query() and exist() methods both declare the PD prefix. In these cases, you can use WITH XMLNAMESPACES to first define the prefixes and use it in the query.  
   
 ```  
-WITH XMLNAMESPACES (  
-   'http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription' AS PD,  
-   'http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelWarrAndMain' AS wm)  
-SELECT CatalogDescription.query('  
-<Product ProductModelID="{ /PD:ProductDescription[1]/@ProductModelID }" />  
-') as Result  
+WITH XMLNAMESPACES 
+(  
+   'https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription' AS PD,  
+   'https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelWarrAndMain' AS WM
+)  
+SELECT CatalogDescription.query('<Product ProductModelID="{ /PD:ProductDescription[1]/@ProductModelID }" />')
+       AS Result  
 FROM Production.ProductModel  
-where CatalogDescription.exist('  
-     /PD:ProductDescription/PD:Features/wm:Warranty ') = 1  
+WHERE CatalogDescription.exist('/PD:ProductDescription/PD:Features/WM:Warranty ') = 1;
+
 ```  
   
 ## See Also  

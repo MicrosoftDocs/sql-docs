@@ -2,27 +2,20 @@
 title: "rowUpdated Method (SQLServerResultSet) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
-ms.prod_service: "drivers"
-ms.service: ""
-ms.component: "jdbc"
+ms.prod: sql
+ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "drivers"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: connectivity
+ms.topic: conceptual
 apiname: 
   - "SQLServerResultSet.rowUpdated"
 apilocation: 
   - "sqljdbc.jar"
 apitype: "Assembly"
 ms.assetid: 29303550-294e-4d43-b892-312b42e21271
-caps.latest.revision: 8
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
-ms.workload: "Inactive"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # rowUpdated Method (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -48,7 +41,7 @@ public boolean rowUpdated()
  The value that is returned depends on whether or not the result set can detect updates.  
   
 > [!NOTE]  
->  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] does not detect updated rows for any cursor type.  
+>  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] does not detect updated rows for any cursor type.  
   
 ## See Also  
  [SQLServerResultSet Members](../../../connect/jdbc/reference/sqlserverresultset-members.md)   

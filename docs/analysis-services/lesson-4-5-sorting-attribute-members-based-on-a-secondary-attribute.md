@@ -1,25 +1,14 @@
 ---
 title: "Sorting Attribute Members Based on a Secondary Attribute | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/07/2017"
-ms.prod: analysis-services
-ms.prod_service: "analysis-services"
-ms.service: ""
-ms.component: ""
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
-  
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
-applies_to: 
-  - "SQL Server 2016"
-ms.assetid: 67dacf68-9ab7-4524-8698-844d0f6e6c6d
-caps.latest.revision: 18
-author: "Minewiskan"
-ms.author: "owend"
-manager: "kfile"
-ms.workload: "On Demand"
+ms.date: 05/08/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: multidimensional-models
+ms.topic: tutorial
+ms.author: owend
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
 ---
 # Lesson 4-5 - Sorting Attribute Members Based on a Secondary Attribute
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -27,7 +16,7 @@ In Lesson 3, you learned how to sort attribute members based on either their nam
   
 Attribute relationships define the relationships or dependencies between attributes. In a dimension that is based on a single relational table, all attributes are typically related to each other through the key attribute. This is because all the attributes for a dimension provide information about the members linked by the key attribute of the dimension to the facts in the fact table for each related measure group. In a dimension that is based on multiple tables, attributes are typically linked based on the join key between the tables. If the underlying data supports it, related attributes can be used to specify a sort order. For example, you might create a new attribute that provides the sort logic for a related attribute.  
   
-Dimension Designer lets you define additional relationships between attributes or change the default relationships to increase performance. The main constraint when you create an attribute relationship is to make sure that the attribute referred to has no more than one value for any member in the attribute to which it is related. When you define a relationship between two attributes, you can define the relationship as rigid or flexible, based on whether the relationships between members will change over time. For example, an employee might move to a different sales region, but a city will not move to a different state. If a relationship is defined as rigid, attribute aggregations are not recalculated every time the dimension is incrementally processed. However, if the relationship between members does change, the dimension must be fully processed. For more information, see [Attribute Relationships](../analysis-services/multidimensional-models-olap-logical-dimension-objects/attribute-relationships.md), [Define Attribute Relationships](../analysis-services/multidimensional-models/attribute-relationships-define.md), [Configure Attribute Relationship Properties](../analysis-services/multidimensional-models/attribute-relationships-configure-attribute-properties.md), and [Specifying Attribute Relationships Between Attributes in a User-Defined Hierarchy](../analysis-services/4-6-specifying-attribute-relationships-in-user-defined-hierarchy.md).  
+Dimension Designer lets you define additional relationships between attributes or change the default relationships to increase performance. The main constraint when you create an attribute relationship is to make sure that the attribute referred to has no more than one value for any member in the attribute to which it is related. When you define a relationship between two attributes, you can define the relationship as rigid or flexible, based on whether the relationships between members will change over time. For example, an employee might move to a different sales region, but a city will not move to a different state. If a relationship is defined as rigid, attribute aggregations are not recalculated every time the dimension is incrementally processed. However, if the relationship between members does change, the dimension must be fully processed. For more information, see [Attribute Relationships](../analysis-services/multidimensional-models-olap-logical-dimension-objects/attribute-relationships.md), [Define Attribute Relationships](../analysis-services/multidimensional-models/attribute-relationships-define.md), [Configure Attribute Relationship Properties](../analysis-services/multidimensional-models/attribute-relationships-configure-attribute-properties.md), and [Specifying Attribute Relationships Between Attributes in a User-Defined Hierarchy](../analysis-services/lesson-4-6-specifying-attribute-relationships-in-user-defined-hierarchy.md).  
   
 In the tasks in this topic, you will define a new attribute in the **Date** dimension based on an existing column in the underlying dimension table. You will use this new attribute to sort calendar month members chronologically instead of alphabetically. You will also define a new attribute in the **Customer** dimension based on the named calculation that you will use to sort the **Commute Distance** attribute members. In the tasks in the next topic, you will learn to use attribute relationships to increase query performance.  
   
@@ -123,7 +112,7 @@ In the tasks in this topic, you will define a new attribute in the **Date** dime
     ![Re-sorted Commute Distance attribute hierarchy](../analysis-services/media/l4-memberproperties-5.gif "Re-sorted Commute Distance attribute hierarchy")  
   
 ## Next Task in Lesson  
-[Specifying Attribute Relationships Between Attributes in a User-Defined Hierarchy](../analysis-services/4-6-specifying-attribute-relationships-in-user-defined-hierarchy.md)  
+[Specifying Attribute Relationships Between Attributes in a User-Defined Hierarchy](../analysis-services/lesson-4-6-specifying-attribute-relationships-in-user-defined-hierarchy.md)  
   
   
   

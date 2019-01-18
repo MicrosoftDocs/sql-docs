@@ -2,15 +2,10 @@
 title: "xp_enumgroups (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "database-engine"
-ms.service: ""
-ms.component: "system-stored-procedures"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: system-objects
 ms.topic: "language-reference"
 f1_keywords: 
   - "xp_enumgroups_TSQL"
@@ -20,11 +15,9 @@ dev_langs:
 helpviewer_keywords: 
   - "xp_enumgroups"
 ms.assetid: 0bd3ed36-e260-469c-a5ff-b033fb9ea59d
-caps.latest.revision: 23
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "craigg"
-ms.workload: "Inactive"
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
 ---
 # xp_enumgroups (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

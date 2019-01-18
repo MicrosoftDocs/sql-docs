@@ -1,25 +1,18 @@
 ---
 title: "Data Shaping Overview | Microsoft Docs"
-ms.prod: "sql-non-specified"
-ms.prod_service: "drivers"
-ms.service: ""
-ms.component: "ado"
-ms.technology:
-  - "drivers"
+ms.prod: sql
+ms.prod_service: connectivity
+ms.technology: connectivity
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "data shaping [ADO], overview"
 ms.assetid: 4cb5fd29-4e56-46ac-ae48-a6771c321c0c
-caps.latest.revision: 10
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
-ms.workload: "Inactive"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # Data Shaping Overview
 *Data shaping* means building hierarchical relationships between two or more logical entities in a query. The hierarchy can be seen in parent-child relationships between a record of one [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md), and one or more records (also known as a chapter) of another **Recordset**. In a parent-child relationship, the parent **Recordset** contains the child **Recordset**. An example of such a hierarchical relationship is customers and orders. For every customer in a database, there can be zero or more orders. The hierarchical relationship can be recursive, meaning that grandchild records can be nested in a child record. In principle, a hierarchical record can be nested to any depth. In practice, ADO limits the recursion to a maximum of 512 **Recordset**s.  

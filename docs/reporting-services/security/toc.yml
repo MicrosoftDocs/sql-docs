@@ -1,0 +1,70 @@
+- name: Overview
+  href: reporting-services-security-and-protection.md
+- name: Extended Protection for Authentication with Reporting Services
+  href: extended-protection-for-authentication-with-reporting-services.md
+- name: Authentication with the Report Server
+  href: authentication-with-the-report-server.md
+  items:
+  - name: Configure Windows Authentication on the Report Server
+    href: configure-windows-authentication-on-the-report-server.md
+  - name: Configure Basic Authentication on the Report Server
+    href: configure-basic-authentication-on-the-report-server.md
+  - name: Configure Custom or Forms Authentication on the Report Server
+    href: configure-custom-or-forms-authentication-on-the-report-server.md
+  - name: Configure the Web Portal to Pass Custom Authentication Cookies
+    href: configure-the-web-portal-to-pass-custom-authentication-cookies.md
+- name: Roles and Permissions
+  href: roles-and-permissions-reporting-services.md
+  items:
+  - name: Grant User Access to a Report Server
+    href: grant-user-access-to-a-report-server.md
+  - name: Granting Permissions on a Native Mode Report Server
+    href: granting-permissions-on-a-native-mode-report-server.md
+    items:
+    - name: Securable Items
+      href: securable-items.md
+    - name: Tasks and Permissions
+      href: tasks-and-permissions.md
+    - name: Tasks and Permissions - Item-Level Tasks
+      href: tasks-and-permissions-item-level-tasks.md
+    - name: Tasks and Permissions - System-Level Tasks
+      href: tasks-and-permissions-system-level-tasks.md
+    - name: Create and Manage Role Assignments
+      href: create-and-manage-role-assignments.md
+    - name: Secure Folders
+      href: secure-folders.md
+    - name: Secure Reports and Resources
+      href: secure-reports-and-resources.md
+    - name: Secure Shared Data Source Items
+      href: secure-shared-data-source-items.md
+    - name: Secure Shared Dataset Items
+      href: secure-shared-dataset-items.md
+    - name: Secure My Reports
+      href: secure-my-reports.md
+    - name: Create the RSExecRole
+      href: create-the-rsexecrole.md
+    - name: Role Definitions
+      href: role-definitions.md
+    - name: Role Definitions - Create, Delete, or Modify
+      href: role-definitions-create-delete-or-modify.md
+    - name: Role Definitions - Predefined Roles
+      href: role-definitions-predefined-roles.md
+    - name: Role Assignments
+      href: role-assignments.md
+    - name: Role Assignments - Modify or Delete
+      href: role-assignments-modify-or-delete.md
+  - name: Granting Permissions on Report Server Items on a SharePoint Site
+    href: granting-permissions-on-report-server-items-on-a-sharepoint-site.md
+    items:
+    - name: Use Built-in Security in Windows SharePoint Services for Report Server Items
+      href: use-built-in-security-in-windows-sharepoint-services-for-report-server-items.md
+    - name: Compare Roles and Tasks in Reporting Services to SharePoint Groups and Permissions
+      href: reporting-services-roles-tasks-vs-sharepoint-groups-permissions.md
+    - name: SharePoint Site and List Permission Reference for Report Server Items
+      href: sharepoint-site-and-list-permission-reference-for-report-server-items.md
+    - name: Set Permissions for Report Server Operations in a SharePoint Web Application
+      href: set-permissions-for-report-server-operations-in-a-sharepoint-web-application.md
+    - name: Set Permissions for Report Server Items on a SharePoint Site
+      href: set-permissions-for-report-server-items-on-a-sharepoint-site.md
+- name: Configure SSL Connections on a Native Mode Report Server
+  href: configure-ssl-connections-on-a-native-mode-report-server.md

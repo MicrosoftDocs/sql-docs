@@ -2,27 +2,20 @@
 title: "Back Up Database Task (Maintenance Plan) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "database-engine"
-ms.service: ""
-ms.component: "maintenance-plans"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: supportability
+ms.topic: conceptual
 f1_keywords: 
   - "sql13.swb.maint.maintplanproperties.logbackup.f1"
   - "sql13.swb.maint.backup.f1"
 helpviewer_keywords: 
   - "Back Up Database Task dialog box"
 ms.assetid: ed1ef012-fa14-4ba5-bafe-d1527ba065b3
-caps.latest.revision: 52
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-ms.workload: "On Demand"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ---
 # Options in the Back Up Database Task for Maintenance Plan
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

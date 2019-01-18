@@ -1,26 +1,15 @@
 ---
 title: "Global Settings (Editor) (MySQLToSQL) | Microsoft Docs"
-ms.prod: "sql-non-specified"
-ms.prod_service: "sql-tools"
-ms.service: ""
-ms.component: "ssma-mysql"
+ms.prod: sql
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "sql-ssma"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to: 
-  - "Azure SQL Database"
-  - "SQL Server"
+ms.technology: ssma
+ms.topic: conceptual
 ms.assetid: 1ac003b5-493a-49a5-be2b-fedbc6e2cc11
-caps.latest.revision: 3
 author: "Shamikg"
 ms.author: "Shamikg"
-manager: "jhubbard"
-ms.workload: "Inactive"
+manager: craigg
 ---
 # Global Settings (Editor) (MySQLToSQL)
 Use the Editor page of the **Global Settings** dialog box to specify settings for code editor windows.  

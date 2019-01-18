@@ -2,45 +2,41 @@
 title: "Configure SQL Server on a Server Core Installation | Microsoft Docs"
 ms.custom: ""
 ms.date: "09/05/2017"
-ms.prod: "sql-non-specified"
-ms.prod_service: "database-engine"
-ms.service: ""
-ms.component: "install-windows"
+ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "setup-install"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: install
+ms.topic: conceptual
 helpviewer_keywords: 
   - "IsHadrEnabled server property"
   - "Server Core Installation [SQL Server]"
 ms.assetid: ed6e5e94-4b8d-422a-a17e-61b05a4df903
-caps.latest.revision: 14
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
+author: MashaMSFT
+ms.author: mathoma
+monikerRange: ">=sql-server-2016||=sqlallproducts-allversions"
+manager: craigg
 ---
 # Configure SQL Server on a Server Core Installation
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-This topic covers details about configuring [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] on a Server Core installation.  
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
+This article covers details about configuring [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] on a Server Core installation.  
 
 ##  <a name="BKMK_ConfigureWindows"></a> Configure and Manage Server Core on Windows Server  
-The section provides references to the topics that help configure and manage a Server Core installation.  
+The section provides references to the articles that help configure and manage a Server Core installation.  
   
 Not all features of [!INCLUDE[ssNoVersion](../../includes/ssNoVersion-md.md)] are supported in Server Core mode.  Some of these features can be installed on a client computer or a different server that is not running Server Core, and connected to the Database Engine services installed on Server Core.  
   
-For more information about configuring and managing a Server Core installation remotely, see the following topics:  
+For more information about configuring and managing a Server Core installation remotely, see the following articles:  
   
-- [Install Server Core](http://technet.microsoft.com/windows-server-docs/get-started/getting-started-with-server-core)  
+- [Install Server Core](https://technet.microsoft.com/windows-server-docs/get-started/getting-started-with-server-core)  
   
-- [Configure a Server Core installation of Windows Server 2016 with Sconfig.cmd](http://docs.microsoft.com/windows-server/get-started/sconfig-on-ws2016)  
+- [Configure a Server Core installation of Windows Server 2016 with Sconfig.cmd](https://docs.microsoft.com/windows-server/get-started/sconfig-on-ws2016)  
   
-- [Install Server Roles and Features on a Server Core Server Windows Server 2012 R2](http://technet.microsoft.com/library/jj574158(v=ws.11).aspx)
+- [Install Server Roles and Features on a Server Core Server Windows Server 2012 R2](https://technet.microsoft.com/library/jj574158(v=ws.11).aspx)
   
-- [Managing a Server Core installation: Overview](http://go.microsoft.com/fwlink/?LinkId=245962)  
+- [Managing a Server Core installation: Overview](https://go.microsoft.com/fwlink/?LinkId=245962)  
   
-- [Administering a Server Core installation](http://go.microsoft.com/fwlink/?LinkId=245963)
+- [Administering a Server Core installation](https://go.microsoft.com/fwlink/?LinkId=245963)
   
 ##  <a name="BKMK_InstallSQLUpdates"></a> Install [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Updates  
 This section provides information about installing updates for [!INCLUDE[ssNoVersion](../../includes/ssNoVersion-md.md)] on a Windows Server Core machine. We recommend that customers evaluate and install latest [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] updates in a timely manner to make sure that systems are up-to-date with the most recent security updates. For more information about installing [!INCLUDE[ssNoVersion](../../includes/ssNoVersion-md.md)] on a Windows Server Core machine, see [Install SQL Server on Server Core](../../database-engine/install-windows/install-sql-server-on-server-core.md).  
@@ -61,7 +57,7 @@ After Setup finds the latest versions of the applicable updates, it downloads an
 Specify the UpdateEnabled, and UpdateSource parameters to include the latest product updates with the main product installation. Refer the following example to enable product updates during the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Setup:  
   
 ```  
-Setup.exe /qs /ACTION=Install /FEATURES=SQLEngine,Replication /INSTANCENAME=MSSQLSERVER /SQLSVCACCOUNT="\<DomainName\UserName>" /SQLSVCPASSWORD="<StrongPassword>" /SQLSYSADMINACCOUNTS="\<DomainName\UserName>" /AGTSVCACCOUNT="NT AUTHORITY\Network Service" /UpdateEnabled=True /UpdateSource=”<SourcePath>” /IACCEPTSQLSERVERLICENSETERMS  
+Setup.exe /qs /ACTION=Install /FEATURES=SQLEngine /INSTANCENAME=MSSQLSERVER /SQLSVCACCOUNT="<DomainName\UserName>" /SQLSVCPASSWORD="<StrongPassword>" /SQLSYSADMINACCOUNTS="<DomainName\UserName>" /AGTSVCACCOUNT="NT AUTHORITY\Network Service" /UpdateEnabled=True /UpdateSource="<SourcePath>" /IACCEPTSQLSERVERLICENSETERMS  
 ```  
   
 ###  <a name="bkmk_alreadyInstall"></a> Installing Updates for [!INCLUDE[ssNoVersion](../../includes/ssNoVersion-md.md)] After It Has Been Installed  
@@ -118,7 +114,7 @@ These steps are meant to be performed on a PC running the client edition of Wind
   
 10. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager saves your change. Then, you must manually restart the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] service. This enables you to choose a restart time that is best for your business requirements. When the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] service restarts, AlwaysOn will be enabled, and the IsHadrEnabled server property will be set to 1.  
   
-> [!NOTE]  
+> [!NOTE]
 >  -   You must have the appropriate user rights or you must have been delegated the appropriate authority on the target computer to connect to that computer.  
 > -   The name of the computer that you are managing appears in parentheses next to Computer Management in the console tree.  
   
@@ -224,10 +220,10 @@ $Tcp
 ##  <a name="BKMK_troubleshoot"></a> Use troubleshooting tools  
  You can use [SQLdiag Utility](../../tools/sqldiag-utility.md) to collect logs and data files from [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and other types of servers, and use it to monitor your servers over time or troubleshoot specific problems with your servers. SQLdiag is intended to expedite and simplify diagnostic information gathering for Microsoft Customer Support Services.  
   
- You can launch the utility on the administrator command prompt on the Server Core, using the syntax specified in the topic: [SQLdiag Utility](../../tools/sqldiag-utility.md).  
+ You can launch the utility on the administrator command prompt on the Server Core, using the syntax specified in the article: [SQLdiag Utility](../../tools/sqldiag-utility.md).  
   
 ## See Also  
  [Install SQL Server on Server Core](../../database-engine/install-windows/install-sql-server-on-server-core.md)   
- [Installation How-to Topics](http://msdn.microsoft.com/library/59de41e7-557f-462a-8914-53ec35496baa)  
+ [Installation How-to articles](https://msdn.microsoft.com/library/59de41e7-557f-462a-8914-53ec35496baa)  
   
   

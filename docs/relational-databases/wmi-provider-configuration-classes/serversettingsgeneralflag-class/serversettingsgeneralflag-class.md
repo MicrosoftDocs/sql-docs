@@ -2,15 +2,11 @@
 title: "ServerSettingsGeneralFlag Class | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "database-engine"
-ms.service: ""
-ms.component: "wmi"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: 
 
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 apiname: 
   - "ServerSettingsGeneralFlag Class"
@@ -20,11 +16,9 @@ apitype: "MOFDef"
 helpviewer_keywords: 
   - "ServerSettingsGeneralFlag class"
 ms.assetid: 5676030b-bb84-4ac0-b68b-edb345a3a152
-caps.latest.revision: 32
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-ms.workload: "Inactive"
+author: "CarlRabeler"
+ms.author: "carlrab"
+manager: craigg
 ---
 # ServerSettingsGeneralFlag Class
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -37,6 +31,6 @@ ms.workload: "Inactive"
 -   View and modify the flag value.  
   
 ## See Also  
- [Configuring Server Network Protocols and Net-Libraries](http://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  
+ [Configuring Server Network Protocols and Net-Libraries](https://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  
   
   

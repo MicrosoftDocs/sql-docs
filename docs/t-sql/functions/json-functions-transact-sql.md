@@ -2,24 +2,18 @@
 title: "JSON Functions (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/17/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.service: ""
-ms.component: "t-sql|functions"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "dbe-json"
-ms.tgt_pltfrm: ""
+ms.technology: t-sql
 ms.topic: "language-reference"
 helpviewer_keywords: 
   - "JSON functions"
 ms.assetid: ec97d451-06af-44a3-8304-305d410cfc8e
-caps.latest.revision: 8
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "craigg"
-ms.workload: "On Demand"
+author: "jovanpop-msft"
+ms.author: "jovanpop"
+ms.reviewer: douglasl
+manager: craigg
 ---
 # JSON Functions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]

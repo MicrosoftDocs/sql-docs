@@ -2,16 +2,11 @@
 title: "Simulating Positioned Update and Delete Statements | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
-ms.prod_service: "drivers"
-ms.service: ""
-ms.component: "odbc"
+ms.prod: sql
+ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "drivers"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: connectivity
+ms.topic: conceptual
 helpviewer_keywords: 
   - "positioned deletes [ODBC]"
   - "data updates [ODBC], positioned update or delete"
@@ -19,11 +14,9 @@ helpviewer_keywords:
   - "positioned updates [ODBC]"
   - "updating data [ODBC], positioned update or delete"
 ms.assetid: b24ed59f-f25b-4646-a135-5f3596abc1a4
-caps.latest.revision: 5
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
-ms.workload: "Inactive"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # Simulating Positioned Update and Delete Statements
 If the data source does not support positioned update and delete statements, the driver can simulate these. For example, the ODBC cursor library simulates positioned update and delete statements. The general strategy for simulating positioned update and delete statements is to convert positioned statements to searched ones. This is done by replacing the **WHERE CURRENT OF** clause with a searched **WHERE** clause that identifies the current row.  

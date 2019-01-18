@@ -2,25 +2,18 @@
 title: "SQL Server, User Settable Object | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "database-engine"
-ms.service: ""
-ms.component: "performance-monitor"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: performance
+ms.topic: conceptual
 helpviewer_keywords: 
   - "User Settable object"
   - "SQLServer:User Settable"
 ms.assetid: 633de3ef-533c-4f0c-9c7b-c105129d8e94
-caps.latest.revision: 22
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-ms.workload: "Inactive"
+author: julieMSFT
+ms.author: jrasnick
+manager: craigg
 ---
 # SQL Server, User Settable Object
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -44,7 +37,7 @@ ms.workload: "Inactive"
 |**User counter 1**|Defined using **sp_user_counter1**.|  
 |**User counter 2**|Defined using **sp_user_counter2**.|  
 |**User counter 3**|Defined using **sp_user_counter3**.|  
-|…||  
+|...||  
 |**User counter 10**|Defined using **sp_user_counter10**.|  
   
  To make use of the user counter stored procedures, execute them from your own application with a single integer parameter representing the new value for the counter. For example, to set **User counter 1** to the value 10, execute this Transact-SQL statement:  

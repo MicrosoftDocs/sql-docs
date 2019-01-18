@@ -6,17 +6,14 @@ ms.author: lle
 ms.reviewer: douglasl
 manager: craigg
 ms.date: 10/02/2017
-ms.topic: article
-ms.prod: "sql-non-specified"
-ms.prod_service: "database-engine"
-ms.service: ""
-ms.component: sql-linux
-ms.suite: "sql"
-ms.custom: ""
-ms.technology: database-engine
-ms.workload: "Inactive"
+ms.topic: conceptual
+ms.prod: sql
+ms.custom: "sql-linux"
+ms.technology: linux
 ---
 # Configure SQL Server Integration Services on Linux with ssis-conf
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 You run the `ssis-conf` configuration script when you install SQL Server Integration Services (SSIS) for Red Hat Enterprise Linux and Ubuntu. For more info about installing SSIS, see [Install SQL Server Integration Services (SSIS) on Linux](sql-server-linux-setup-ssis.md).
 
@@ -83,7 +80,7 @@ Enter the 25-character product key:
 
 The `telemetry` command determines whether SSIS sends feedback to Microsoft.
 
-For free editions (that is, Express, Developer, and Evaluation editions), the telemetry service is always enabled. If you have a free edition, you can’t use the `telemetry` command to disable telemetry.
+For free editions (that is, Express, Developer, and Evaluation editions), the telemetry service is always enabled. If you have a free edition, you can't use the `telemetry` command to disable telemetry.
 
 Enter the following command: `$ sudo /opt/ssis/bin/ssis-conf telemetry`.
 
@@ -138,3 +135,9 @@ enabled = Y
                        
 lcid = 2052
 ```
+
+## Related content about SSIS on Linux
+-   [Extract, transform, and load data on Linux with SSIS](sql-server-linux-migrate-ssis.md)
+-   [Install SQL Server Integration Services (SSIS) on Linux](sql-server-linux-setup-ssis.md)
+-   [Limitations and known issues for SSIS on Linux](sql-server-linux-ssis-known-issues.md)
+-   [Schedule SQL Server Integration Services package execution on Linux with cron](sql-server-linux-schedule-ssis-packages.md)

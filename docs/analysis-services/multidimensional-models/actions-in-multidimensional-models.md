@@ -1,30 +1,14 @@
 ---
 title: "Actions in Multidimensional Models | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/03/2017"
-ms.prod: analysis-services
-ms.prod_service: "analysis-services"
-ms.service: ""
-ms.component: ""
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
-  
-ms.component: multidimensional-tabular
-ms.component: data-mining
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "actions [Analysis Services], creating"
-  - "report actions [Analysis Services]"
-  - "drillthrough actions [Analysis Services]"
-  - "cubes [Analysis Services], actions"
-ms.assetid: b9fee2b9-05a5-4077-848d-d8457326dc27
-caps.latest.revision: 20
-author: "Minewiskan"
-ms.author: "owend"
-manager: "kfile"
-ms.workload: "Inactive"
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: multidimensional-models
+ms.topic: conceptual
+ms.author: owend
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
 ---
 # Actions in Multidimensional Models
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -84,7 +68,7 @@ ms.workload: "Inactive"
 |**Caption is MDX**|Specify **True** if the caption is MDX or **False** if it is not.|  
   
 > [!NOTE]  
->  You must use Analysis Services Scripting Language (ASSL) or Analysis Management Objects (AMO) to define HTML and Command Line action types. For more information, see [Action Element &#40;ASSL&#41;](../../analysis-services/scripting/objects/action-element-assl.md), [Type Element &#40;Action&#41; &#40;ASSL&#41;](../../analysis-services/scripting/properties/type-element-action-assl.md), and [Programming AMO OLAP Advanced Objects](../../analysis-services/multidimensional-models/analysis-management-objects/programming-amo-olap-advanced-objects.md).  
+>  You must use Analysis Services Scripting Language (ASSL) or Analysis Management Objects (AMO) to define HTML and Command Line action types. For more information, see [Action Element &#40;ASSL&#41;](https://docs.microsoft.com/bi-reference/assl/objects/action-element-assl), [Type Element &#40;Action&#41; &#40;ASSL&#41;](https://docs.microsoft.com/bi-reference/assl/properties/type-element-action-assl), and [Programming AMO OLAP Advanced Objects](https://docs.microsoft.com/bi-reference/amo/programming-amo-olap-advanced-objects).  
   
 ## Creating a Reporting Action  
  The report server responds to URL-based requests for reports. To create a reporting action, on the **Cube** menu, click **New Reporting Action**. The following options are specific to a reporting action.  

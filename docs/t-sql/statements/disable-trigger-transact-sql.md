@@ -2,15 +2,10 @@
 title: "DISABLE TRIGGER (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "05/10/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.service: ""
-ms.component: "t-sql|statements"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: t-sql
 ms.topic: "language-reference"
 f1_keywords: 
   - "DISABLE_TSQL"
@@ -26,11 +21,9 @@ helpviewer_keywords:
   - "triggers [SQL Server], disabling"
   - "disabling triggers"
 ms.assetid: e6529f06-e442-437e-a7bf-41790bc092c5
-caps.latest.revision: 45
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "craigg"
-ms.workload: "Active"
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
 ---
 # DISABLE TRIGGER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

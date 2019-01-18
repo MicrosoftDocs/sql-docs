@@ -1,29 +1,18 @@
 ---
 title: "Working with SSMA for MySQL Console (MySQLToSQL) | Microsoft Docs"
-ms.prod: "sql-non-specified"
-ms.prod_service: "sql-tools"
-ms.service: ""
-ms.component: "ssma-mysql"
+ms.prod: sql
 ms.custom: ""
 ms.date: "08/15/2017"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "sql-ssma"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to: 
-  - "Azure SQL Database"
-  - "SQL Server"
+ms.technology: ssma
+ms.topic: conceptual
 ms.assetid: 240aaad1-d65d-4dea-b60b-315cb1ac733d
-caps.latest.revision: 19
 author: "Shamikg"
 ms.author: "Shamikg"
-manager: "jhubbard"
-ms.workload: "Inactive"
+manager: craigg
 ---
 # Working with SSMA for MySQL Console (MySQLToSQL)
-[!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Migration Assistant (SSMA) for MySQL is now accessible through a console application at command line. The script files form the input to the application for executing the commands. As a console application, SSMA enables script-level interfacing, reduces the migration cycle, and scales the migration effort.  
+[!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Migration Assistant (SSMA) for MySQL is now accessible through a console application at command line. The script files form the input to the application for executing the commands. As a console application, SSMA enables script-level interfacing, reduces the migration cycle, and scales the migration effort.  
   
 This section explains the procedure to migrate the MySQL database using the SSMA Console application.  
   
@@ -44,5 +33,5 @@ Topics covered in this section include:
 |[Troubleshooting &#40;MySQLToSQL&#41;](../../ssma/mysql/troubleshooting-mysqltosql.md)|Provides brief information about fixing migration issues.|  
   
 ## See Also  
-[Getting Started with SSMA for MySQL Console](http://msdn.microsoft.com/en-us/218d502c-059f-4d48-9aea-61e553d74303)  
+[Getting Started with SSMA for MySQL Console](getting-started-with-ssma-for-mysql-console-mysqltosql.md)  
   

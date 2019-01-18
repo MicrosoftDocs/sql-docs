@@ -2,16 +2,11 @@
 title: "Multiple Results | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
-ms.prod_service: "drivers"
-ms.service: ""
-ms.component: "odbc"
+ms.prod: sql
+ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "drivers"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: connectivity
+ms.topic: conceptual
 helpviewer_keywords: 
   - "SQLMoreResults function [ODBC], multiple results"
   - "row counts [ODBC]"
@@ -19,16 +14,14 @@ helpviewer_keywords:
   - "result sets [ODBC], multiple results"
   - "SQLGetInfo function [ODBC], multiple results"
 ms.assetid: a3c32e4b-8fe7-4a33-ae39-ae664001f315
-caps.latest.revision: 5
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
-ms.workload: "Inactive"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # Multiple Results
 A *result* is something returned by the data source after a statement is executed. ODBC has two types of results: result sets and row counts. *Row counts* are the number of rows affected by an update, delete, or insert statement. Batches, described in [Batches of SQL Statements](../../../odbc/reference/develop-app/batches-of-sql-statements.md), can generate multiple results.  
   
- The following table lists the **SQLGetInfo** options an application uses to determine whether a data source returns multiple results for each different type of batch. In particular, a data source can return a single row count for the entire batch of statements or individual row counts for each statement in the batch. In the case of a result set–generating statement executed with an array of parameters, the data source can return a single result set for all sets of parameters or individual result sets for each set of parameters.  
+ The following table lists the **SQLGetInfo** options an application uses to determine whether a data source returns multiple results for each different type of batch. In particular, a data source can return a single row count for the entire batch of statements or individual row counts for each statement in the batch. In the case of a result set-generating statement executed with an array of parameters, the data source can return a single result set for all sets of parameters or individual result sets for each set of parameters.  
   
 |Batch type|Row counts|Result sets|  
 |----------------|----------------|-----------------|  
@@ -36,9 +29,9 @@ A *result* is something returned by the data source after a statement is execute
 |Procedure|SQL_BATCH_ROW_COUNT[a]|--[b]|  
 |Arrays of parameters|SQL_PARAM_ARRAYS_ROW_COUNTS|SQL_PARAM_ARRAYS_SELECTS|  
   
- [a]   Row count–generating statements in a batch may be supported, yet the return of the row counts not supported. The SQL_BATCH_SUPPORT option in **SQLGetInfo** indicates whether row count–generating statements are allowed in batches; the SQL_BATCH_ROW_COUNTS option indicates whether these row counts are returned to the application.  
+ [a]   Row count-generating statements in a batch may be supported, yet the return of the row counts not supported. The SQL_BATCH_SUPPORT option in **SQLGetInfo** indicates whether row count-generating statements are allowed in batches; the SQL_BATCH_ROW_COUNTS option indicates whether these row counts are returned to the application.  
   
- [b]   Explicit batches and procedures always return multiple result sets when they include multiple result set–generating statements.  
+ [b]   Explicit batches and procedures always return multiple result sets when they include multiple result set-generating statements.  
   
 > [!NOTE]  
 >  The SQL_MULT_RESULT_SETS option introduced in ODBC 1.0 provides only general information about whether multiple result sets can be returned. In particular, it is set to "Y" if the SQL_BS_SELECT_EXPLICIT or SQL_BS_SELECT_PROC bits are returned for SQL_BATCH_SUPPORT or if SQL_PAS_BATCH is returned for SQL_PARAM_ARRAYS_SELECT.  

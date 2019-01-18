@@ -2,24 +2,16 @@
 title: "MSSQLSERVER_10502 | Microsoft Docs"
 ms.custom: ""
 ms.date: "04/04/2017"
-ms.prod: "sql-non-specified"
-ms.prod_service: "database-engine"
-ms.service: ""
-ms.component: "errors-events"
+ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: supportability
 ms.topic: "language-reference"
 helpviewer_keywords: 
   - "10502 (Database Engine error)"
 ms.assetid: 26d9b64d-4299-4b55-92d0-0a32a3688c0a
-caps.latest.revision: 9
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "craigg"
-ms.workload: "Inactive"
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
 ---
 # MSSQLSERVER_10502
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

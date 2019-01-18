@@ -1,0 +1,1 @@
+You can create and modify report definitions \(.rdl\) in Report Builder and in Report Designer in SQL Server Data Tools. Each authoring environment provides different ways to create, open, and save reports and related items. For more information, see **Designing Reports in Report Designer and Report Builder \(SSRS\)** on the Web at microsoft.com.

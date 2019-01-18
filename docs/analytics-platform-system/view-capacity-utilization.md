@@ -1,28 +1,21 @@
 ---
-title: "View Capacity Utilization (Analytics Platform System)"
-author: "barbkess" 
-ms.author: "barbkess"
-manager: "jhubbard"	  
-ms.prod: "analytics-platform-system"
-ms.prod_service: "mpp-data-warehouse"
-ms.service: ""
-ms.component:
-ms.technology: "mpp-data-warehouse"
-ms.custom: ""
-ms.date: 01/05/2017
-ms.reviewer: na
-ms.suite: "sql"
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: 373633ca-c5af-4618-88e8-58ca84e8e5f4
-caps.latest.revision: 9
-
+title: View capacity utilization in Analytics Platform System | Microsoft Docs
+description: View capacity utilization in Analytics Platform System.
+author: mzaman1 
+manager: craigg
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
 ---
-# View Capacity Utilization
+
+# View Capacity Utilization in Analytics Platform System
 This topic explains how to view capacity utilization in the SQL Server PDW appliance.  
   
 ## To View Capacity Utilization By Using Admin Console  
-To view the space used, open the Admin Console, and click the **Storage** tab. There is a **Storage** tab for both the PDW region and the HDI region.  
+To view the space used, open the Admin Console, and click the **Storage** tab. There is a **Storage** tab for the PDW region.  
   
 ![PDW Admin Console Storage](./media/view-capacity-utilization/SQL_Server_PDW_AdminConsol_StorageV2.png "SQL_Server_PDW_AdminConsol_StorageV2")  
   

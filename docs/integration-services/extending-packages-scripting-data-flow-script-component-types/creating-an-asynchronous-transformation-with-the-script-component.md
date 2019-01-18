@@ -2,18 +2,11 @@
 title: "Creating an Asynchronous Transformation with the Script Component | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/17/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "integration-services"
-ms.service: ""
-ms.component: "extending-packages-scripting-data-flow-script-component-types"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-
-ms.tgt_pltfrm: ""
+ms.technology: integration-services
 ms.topic: "reference"
-applies_to: 
-  - "SQL Server 2016 Preview"
 dev_langs: 
   - "VB"
 helpviewer_keywords: 
@@ -21,11 +14,9 @@ helpviewer_keywords:
   - "transformation components [Integration Services]"
   - "Script component [Integration Services], transformation components"
 ms.assetid: 0d814404-21e4-4a68-894c-96fa47ab25ae
-caps.latest.revision: 63
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
-ms.workload: "On Demand"
+manager: craigg
 ---
 # Creating an Asynchronous Transformation with the Script Component
   You use a transformation component in the data flow of an [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] package to modify and analyze data as it passes from source to destination. A transformation with synchronous outputs processes each input row as it passes through the component. A transformation with asynchronous outputs may wait to complete its processing until the transformation has received all input rows, or the transformation may output certain rows before it has received all input rows. This topic discusses an asynchronous transformation. If your processing requires a synchronous transformation, see [Creating a Synchronous Transformation with the Script Component](../../integration-services/extending-packages-scripting-data-flow-script-component-types/creating-a-synchronous-transformation-with-the-script-component.md). For more information about the differences between synchronous and asynchronous components, see [Understanding Synchronous and Asynchronous Transformations](../../integration-services/understanding-synchronous-and-asynchronous-transformations.md).  
@@ -43,7 +34,7 @@ ms.workload: "On Demand"
  To select the script language that the Script component will use, you set the **ScriptLanguage** property on the **Script** page of the **Script Transformation Editor** dialog box.  
   
 > [!NOTE]  
->  To set the default scripting language for the Script component, use the **Scripting language** option on the **General** page of the **Options** dialog box. For more information, see [General Page](https://msdn.microsoft.com/library/ms189436(v=sql.110).aspx).  
+>  To set the default scripting language for the Script component, use the **Scripting language** option on the **General** page of the **Options** dialog box. For more information, see [General Page](../general-page-of-integration-services-designers-options.md).  
   
  A data flow transformation component has one input and supports one or more outputs. Configuring the input and outputs of your component is one of the steps that you must complete in metadata design mode, by using the **Script Transformation Editor**, before you write your custom script.  
   
@@ -74,7 +65,7 @@ ms.workload: "On Demand"
 ### Adding Variables  
  If there are any existing variables whose values you want to use in your script, you can add them in the ReadOnlyVariables and ReadWriteVariables property fields on the **Script** page of the **Script Transformation Editor**.  
   
- When you add multiple variables in the property fields, separate the variable names by commas. You can also select multiple variables by clicking the ellipsis (**…**) button next to the **ReadOnlyVariables** and **ReadWriteVariables** property fields, and then selecting the variables in the **Select variables** dialog box.  
+ When you add multiple variables in the property fields, separate the variable names by commas. You can also select multiple variables by clicking the ellipsis (**...**) button next to the **ReadOnlyVariables** and **ReadWriteVariables** property fields, and then selecting the variables in the **Select variables** dialog box.  
   
  For general information about how to use variables with the Script component, see [Using Variables in the Script Component](../../integration-services/extending-packages-scripting/data-flow-script-component/using-variables-in-the-script-component.md).  
   

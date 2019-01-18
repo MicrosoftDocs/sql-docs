@@ -1,29 +1,18 @@
 ---
 title: "Connecting to SQL Server (MySQLToSQL) | Microsoft Docs"
-ms.prod: "sql-non-specified"
-ms.prod_service: "sql-tools"
-ms.service: ""
-ms.component: "ssma-mysql"
+ms.prod: sql
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "sql-ssma"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to: 
-  - "Azure SQL Database"
-  - "SQL Server"
+ms.technology: ssma
+ms.topic: conceptual
 helpviewer_keywords: 
   - "connecting to SQL Server 2008, SQL Server permission"
   - "connecting to SQL Server 2008, synchronization"
 ms.assetid: 08233267-693e-46e6-9ca3-3a3dfd3d2be7
-caps.latest.revision: 18
 author: "Shamikg"
 ms.author: "Shamikg"
-manager: "jhubbard"
-ms.workload: "On Demand"
+manager: craigg
 ---
 # Connecting to SQL Server (MySQLToSQL)
 To migrate MySQL databases to SQL Server, you must connect to the target instance of SQL Server. When you connect, SSMA obtains metadata about all the databases in the instance of SQL Server and displays database metadata in the SQL Server Metadata Explorer. SSMA stores information of the instance of SQL Server you are connected to, but does not store passwords.  
@@ -35,7 +24,7 @@ Metadata about the instance of SQL Server is not automatically synchronized. Ins
 ## Required SQL Server Permissions  
 The account that is used to connect to SQL Server requires different permissions depending on the actions that the account performs:  
   
--   To convert MySQL objects to [!INCLUDE[tsql](../../includes/tsql_md.md)] syntax, to update metadata from SQL Server, or to save converted syntax to scripts, the account must have permission to log on to the instance of SQL Server.  
+-   To convert MySQL objects to [!INCLUDE[tsql](../../includes/tsql-md.md)] syntax, to update metadata from SQL Server, or to save converted syntax to scripts, the account must have permission to log on to the instance of SQL Server.  
   
 -   To load database objects into SQL Server, the minimum permission requirement is membership in the **db_owner** database role in the target database.  
   
@@ -73,28 +62,28 @@ When you define the connection properties, you also specify the database where o
   
 It is allowed to connect/reconnect to higher versions of SQL Server.  
   
-1.  You will be able to connect to [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2008 or [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2012 or [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2014 or [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2016 when the project created is [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2005.  
+1.  You will be able to connect to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2008 or [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2012 or [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2014 or [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016 when the project created is [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2005.  
   
-2.  You will be able to connect to [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2012 or [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2014 or [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2016 when the project created is [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2008 but it is not allowed to connect to lower versions i.e. [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2005.  
+2.  You will be able to connect to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2012 or [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2014 or [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016 when the project created is [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2008 but it is not allowed to connect to lower versions i.e. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2005.  
   
-3.  You will be able to connect to [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2012 or [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2014 or [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2016 when the project created is [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2012.  
+3.  You will be able to connect to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2012 or [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2014 or [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016 when the project created is [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2012.  
   
-4.  You will be able to connect to only [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2014 or [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2016 when the project created is [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2014.  
+4.  You will be able to connect to only [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2014 or [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016 when the project created is [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2014.  
   
-5.  Higher version compatibility is not valid for “SQL Azure”.  
+5.  Higher version compatibility is not valid for "SQL Azure".  
   
 ||||||||  
 |-|-|-|-|-|-|-|  
-|**PROJECT TYPE Vs TARGET SERVER VERSION**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2005<br /> (Version: 9.x)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2008<br /> (Version: 10.x)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2012<br />(Version:11.x)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2014<br />(Version:12.x)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2016<br />(Version:13.x)|SQL Azure|  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2005|Yes|Yes|Yes|Yes|Yes||  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2008||Yes|Yes|Yes|Yes||  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2012|||Yes|Yes|Yes||  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]2014||||Yes|Yes||  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]2016|||||Yes||  
+|**PROJECT TYPE Vs TARGET SERVER VERSION**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2005<br /> (Version: 9.x)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2008<br /> (Version: 10.x)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2012<br />(Version:11.x)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2014<br />(Version:12.x)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016<br />(Version:13.x)|SQL Azure|  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2005|Yes|Yes|Yes|Yes|Yes||  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2008||Yes|Yes|Yes|Yes||  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2012|||Yes|Yes|Yes||  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2014||||Yes|Yes||  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2016|||||Yes||  
 |SQL Azure||||||Yes|  
   
 > [!IMPORTANT]  
-> Conversion of the database objects is carried out as per the project type but not as per the version of the [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] connected to. In case of [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2005 project, Conversion is carried out as per [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2005 even though you are connected to a higher version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] (SQL Server 2008/SQL Server 2012/SQL Server 2014/SQL Server 2016).  
+> Conversion of the database objects is carried out as per the project type but not as per the version of the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] connected to. In case of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2005 project, Conversion is carried out as per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2005 even though you are connected to a higher version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (SQL Server 2008/SQL Server 2012/SQL Server 2014/SQL Server 2016).  
   
 ## Synchronizing SQL Server Metadata  
 Metadata about SQL Server databases is not automatically updated. The metadata in SQL Server Metadata Explorer is a snapshot of the metadata when you first connected to SQL Server, or the last time that you manually updated metadata. You can manually update metadata for all databases, or for any single database or database object.  

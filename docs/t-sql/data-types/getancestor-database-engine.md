@@ -2,15 +2,10 @@
 title: "GetAncestor (Database Engine) | Microsoft Docs"
 ms.custom: ""
 ms.date: "7/22/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.service: ""
-ms.component: "t-sql|data-types"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: t-sql
 ms.topic: "language-reference"
 f1_keywords: 
   - "GetAncestor_TSQL"
@@ -20,11 +15,9 @@ dev_langs:
 helpviewer_keywords: 
   - "GetAncestor [Database Engine]"
 ms.assetid: b96a986f-d5e4-4034-8013-de7974594ee9
-caps.latest.revision: 26
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "craigg"
-ms.workload: "On Demand"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ---
 # GetAncestor (Database Engine)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -120,7 +113,7 @@ this.GetAncestor(1)
   
 ## See also
 [IsDescendantOf &#40;Database Engine&#41;](../../t-sql/data-types/isdescendantof-database-engine.md)  
-[hierarchyid Data Type Method Reference](http://msdn.microsoft.com/library/01a050f5-7580-4d5f-807c-7f11423cbb06)  
+[hierarchyid Data Type Method Reference](https://msdn.microsoft.com/library/01a050f5-7580-4d5f-807c-7f11423cbb06)  
 [Hierarchical Data &#40;SQL Server&#41;](../../relational-databases/hierarchical-data-sql-server.md)  
 [hierarchyid &#40;Transact-SQL&#41;](../../t-sql/data-types/hierarchyid-data-type-method-reference.md)
   

@@ -2,15 +2,10 @@
 title: "GRANT Service Broker Permissions (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/10/2016"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "sql-database"
-ms.service: ""
-ms.component: "t-sql|statements"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: t-sql
 ms.topic: "language-reference"
 dev_langs: 
   - "TSQL"
@@ -23,11 +18,9 @@ helpviewer_keywords:
   - "message types [Service Broker], permissions"
   - "contracts [Service Broker], permissions"
 ms.assetid: c5579976-97c4-4123-be0c-d0b98a9e38fb
-caps.latest.revision: 17
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-ms.workload: "Inactive"
+author: VanMSFT
+ms.author: vanto
+manager: craigg
 ---
 # GRANT Service Broker Permissions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -57,19 +50,19 @@ GRANT permission  [ ,...n ] ON
  *permission*  
  Specifies a permission that can be granted on a Service Broker securable.  Listed below.  
   
- CONTRACT **::***contract_name*  
+ CONTRACT **::**_contract_name_  
  Specifies the contract on which the permission is being granted. The scope  qualifier "::" is required.  
   
- MESSAGE TYPE **::***message_type_name*  
+ MESSAGE TYPE **::**_message_type_name_  
  Specifies the message type on which the permission is being granted. The scope qualifier "::" is required.  
   
- REMOTE SERVICE BINDING **::***remote_binding_name*  
+ REMOTE SERVICE BINDING **::**_remote_binding_name_  
  Specifies the remote service binding on which the permission is being granted. The scope qualifier "::" is required.  
   
- ROUTE **::***route_name*  
+ ROUTE **::**_route_name_  
  Specifies the route on which the permission is being granted. The scope qualifier "::" is required.  
   
- SERVICE **::***service_name*  
+ SERVICE **::**_service_name_  
  Specifies the service on which the permission is being granted. The scope qualifier "::" is required.  
   
  *database_principal*  

@@ -1,24 +1,17 @@
 ---
-title: "tempdb Database (SQL Server PDW)"
-author: "barbkess" 
-ms.author: "barbkess"
-manager: "jhubbard"	  
-ms.prod: "analytics-platform-system"
-ms.prod_service: "mpp-data-warehouse"
-ms.service: ""
-ms.component:
-ms.technology: "mpp-data-warehouse"
-ms.custom: ""
-ms.date: 01/13/2017
-ms.reviewer: na
-ms.suite: "sql"
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: 5840033d-2dc6-4576-8a5f-067e2a58b170
-caps.latest.revision: 22
-ms.workload: "not set"
+title: Tempdb database - Parallel Data Warehouse | Microsoft Docs
+description: Tempdb database in Parallel Data Warehouse.
+author: mzaman1 
+manager: craigg
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
 ---
-# tempdb Database
+
+# tempdb database in Parallel Data Warehouse
 **tempdb** is a SQL Server PDW system database that stores local temporary tables for user databases. Temporary tables are often used to improve query performance. For example, you can use a temporary table to modularize a script, and reuse computed data.  
   
 For more information about system databases, see [System Databases](system-databases.md).  

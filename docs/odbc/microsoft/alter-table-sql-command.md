@@ -2,24 +2,17 @@
 title: "ALTER TABLE - SQL Command | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
-ms.prod_service: "drivers"
-ms.service: ""
-ms.component: "odbc"
+ms.prod: sql
+ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "drivers"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: connectivity
+ms.topic: conceptual
 helpviewer_keywords: 
   - "alter table [ODBC]"
 ms.assetid: 3a01a291-f4d9-43bc-a725-5a95546ff364
-caps.latest.revision: 8
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
-ms.workload: "Inactive"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # ALTER TABLE - SQL Command
 Programmatically modifies the structure of a table.  
@@ -29,36 +22,36 @@ Programmatically modifies the structure of a table.
 ```  
   
 ALTER TABLE TableName1  
-   ADD | ALTER [COLUMN] FieldName1  
-      FieldType [(nFieldWidth [, nPrecision])]  
-      [NULL | NOT NULL]  
-      [CHECK lExpression1 [ERROR cMessageText1]]  
-      [DEFAULT eExpression1]  
-      [PRIMARY KEY | UNIQUE]  
-      [REFERENCES TableName2 [TAG TagName1]]  
-      [NOCPTRANS]  
+   ADD | ALTER [COLUMN] FieldName1  
+      FieldType [(nFieldWidth [, nPrecision])]  
+      [NULL | NOT NULL]  
+      [CHECK lExpression1 [ERROR cMessageText1]]  
+      [DEFAULT eExpression1]  
+      [PRIMARY KEY | UNIQUE]  
+      [REFERENCES TableName2 [TAG TagName1]]  
+      [NOCPTRANS]  
  - Or -  
 ALTER TABLE TableName1  
-   ALTER [COLUMN] FieldName2  
-      [NULL | NOT NULL]  
-      [SET DEFAULT eExpression2]  
-      [SET CHECK lExpression2 [ERROR cMessageText2]]  
-      [DROP DEFAULT]  
-      [DROP CHECK]  
+   ALTER [COLUMN] FieldName2  
+      [NULL | NOT NULL]  
+      [SET DEFAULT eExpression2]  
+      [SET CHECK lExpression2 [ERROR cMessageText2]]  
+      [DROP DEFAULT]  
+      [DROP CHECK]  
  - Or -  
 ALTER TABLE TableName1  
-   [DROP [COLUMN] FieldName3]  
-   [SET CHECK lExpression3 [ERROR cMessageText3]]  
-   [DROP CHECK]  
-   [ADD PRIMARY KEY eExpression3 TAG TagName2]  
-   [DROP PRIMARY KEY]  
-   [ADD UNIQUE eExpression4 [TAG TagName3]]  
-   [DROP UNIQUE TAG TagName4]  
-   [ADD FOREIGN KEY [eExpression5] TAG TagName4  
-      REFERENCES TableName2 [TAG TagName5]]  
-   [DROP FOREIGN KEY TAG TagName6 [SAVE]]  
-   [RENAME COLUMN FieldName4 TO FieldName5]  
-   [NOVALIDATE]  
+   [DROP [COLUMN] FieldName3]  
+   [SET CHECK lExpression3 [ERROR cMessageText3]]  
+   [DROP CHECK]  
+   [ADD PRIMARY KEY eExpression3 TAG TagName2]  
+   [DROP PRIMARY KEY]  
+   [ADD UNIQUE eExpression4 [TAG TagName3]]  
+   [DROP UNIQUE TAG TagName4]  
+   [ADD FOREIGN KEY [eExpression5] TAG TagName4  
+      REFERENCES TableName2 [TAG TagName5]]  
+   [DROP FOREIGN KEY TAG TagName6 [SAVE]]  
+   [RENAME COLUMN FieldName4 TO FieldName5]  
+   [NOVALIDATE]  
 ```  
   
 ## Arguments  

@@ -2,29 +2,25 @@
 title: "Delete Users or Groups (Master Data Services) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "mds"
-ms.service: ""
-ms.component: "non-specific"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "master-data-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: master-data-services
+ms.topic: conceptual
 helpviewer_keywords: 
   - "deleting groups [Master Data Services]"
   - "groups [Master Data Services], deleting"
   - "users [Master Data Services], deleting"
   - "deleting users [Master Data Services]"
 ms.assetid: 0bbf9d2c-b826-48bb-8aa9-9905db6e717f
-caps.latest.revision: 7
-author: "smartysanthosh"
-ms.author: "nagavo"
-manager: "craigg"
-ms.workload: "Inactive"
+author: leolimsft
+ms.author: lle
+manager: craigg
 ---
 # Delete Users or Groups (Master Data Services)
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
   Delete users or groups when you no longer want them to access [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)].  
   
  Note the following behavior when deleting users and groups:  

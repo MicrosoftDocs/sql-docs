@@ -2,26 +2,19 @@
 title: "Data Profiling Task and Viewer | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "integration-services"
-ms.service: ""
-ms.component: "control-flow"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: integration-services
+ms.topic: conceptual
 helpviewer_keywords: 
   - "Data Profiling task [Integration Services], about data profiling"
   - "data profiling"
   - "profiling data"
 ms.assetid: 756840e3-aa09-45cd-9951-1a17af4b5925
-caps.latest.revision: 33
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
-ms.workload: "On Demand"
+manager: craigg
 ---
 # Data Profiling Task and Viewer
   The Data Profiling task provides data profiling functionality inside the process of extracting, transforming, and loading data. By using the Data Profiling task, you can achieve the following benefits:  
@@ -50,7 +43,7 @@ ms.workload: "On Demand"
   
 -   The distribution of values in the City column.  
   
--   The strength of the functional dependency of the State column on the Zip column—that is, the state should always be the same for a given zip value.  
+-   The strength of the functional dependency of the State column on the Zip column-that is, the state should always be the same for a given zip value.  
   
  The statistics that a data profile provides gives you the information that you need in order to effectively minimize the quality issues that might occur from using the source data.  
   
@@ -71,6 +64,6 @@ ms.workload: "On Demand"
  The Data Profiling task does not have built-in features that allow you to use conditional logic to connect this task to downstream tasks based on the profile output. However, you can easily add this logic, with a small amount of programming, in a Script task. For example, the Script task could perform an XPath query against the output file of the Data Profiling task. The query could determine whether the percentage of null values in a particular column exceeds a certain threshold. If the percentage exceeds the threshold, you could interrupt the package and resolve the problem in the source data before continuing. For more information, see [Incorporate a Data Profiling Task in Package Workflow](../../integration-services/control-flow/incorporate-a-data-profiling-task-in-package-workflow.md).  
   
 ## Related Content  
- [Data Profiler Schema](http://go.microsoft.com/fwlink/?LinkId=251524)  
+ [Data Profiler Schema](https://go.microsoft.com/fwlink/?LinkId=251524)  
   
   

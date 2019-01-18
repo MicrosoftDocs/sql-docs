@@ -1,0 +1,32 @@
+- name: Samples Overview
+  href: sql-samples-where-are.md
+- name: All Github Samples + 
+  href: https://github.com/Microsoft/sql-server-samples/tree/master/samples
+- name: AdventureWorks
+  items:
+  - name: Install and configure
+    href: adventureworks-install-configure.md
+- name: Wide World Importers
+  items:
+  - name: Overview
+    href: wide-world-importers-what-is.md
+  - name: OLTP
+    items:
+    - name: Database catalog
+      href: wide-world-importers-oltp-database-catalog.md
+    - name: Install and configure
+      href: wide-world-importers-oltp-install-configure.md
+    - name: SQL Server features
+      href: wide-world-importers-oltp-use-of-sql-server-features.md
+  - name: Data Warehouse
+    items:
+    - name: Database catalog
+      href: wide-world-importers-dw-database-catalog.md
+    - name: Install and configure
+      href: wide-world-importers-dw-install-configure.md
+    - name: SQL Server features
+      href: wide-world-importers-dw-use-of-sql-server-features.md
+  - name: Generate data
+    href: wide-world-importers-generate-data.md
+  - name: ETL workflow
+    href: wide-world-importers-perform-etl.md

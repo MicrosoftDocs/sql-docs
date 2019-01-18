@@ -2,25 +2,18 @@
 title: "catalog.validate_package (SSISDB Database) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "integration-services"
-ms.service: ""
-ms.component: "system-stored-procedures"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
+ms.technology: integration-services
 ms.topic: "language-reference"
 helpviewer_keywords: 
   - "validate_package stored procedure [Integration Services]"
   - "catalog.validate_package stored procedure [Integration Services]"
 ms.assetid: 0dc03df1-b793-408f-af4c-c11188729abf
-caps.latest.revision: 24
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
-ms.workload: "Inactive"
+manager: craigg
 ---
 # catalog.validate_package (SSISDB Database)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]

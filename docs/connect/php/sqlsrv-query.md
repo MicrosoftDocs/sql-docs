@@ -1,17 +1,12 @@
 ---
 title: "sqlsrv_query | Microsoft Docs"
 ms.custom: ""
-ms.date: "10/24/2017"
-ms.prod: "sql-non-specified"
-ms.prod_service: "drivers"
-ms.service: ""
-ms.component: "php"
+ms.date: "08/01/2018"
+ms.prod: sql
+ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "drivers"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: connectivity
+ms.topic: conceptual
 apiname: 
   - "sqlsrv_query"
 apitype: "NA"
@@ -20,11 +15,9 @@ helpviewer_keywords:
   - "executing queries"
   - "API Reference, sqlsrv_query"
 ms.assetid: 9fa7c4c8-4da8-4299-9893-f61815055aa3
-caps.latest.revision: 46
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
-ms.workload: "On Demand"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # sqlsrv_query
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -81,7 +74,7 @@ The **sqlsrv_query** function is well-suited for one-time queries and should be 
 For more information, see [How to: Retrieve Output Parameters Using the SQLSRV Driver](../../connect/php/how-to-retrieve-output-parameters-using-the-sqlsrv-driver.md).  
   
 ## Example  
-In the following example, a single row is inserted into the *Sales.SalesOrderDetail* table of the AdventureWorks database. The example assumes that SQL Server and the [AdventureWorks](http://go.microsoft.com/fwlink/?LinkID=67739) database are installed on the local computer. All output is written to the console when the example is run from the command line.  
+In the following example, a single row is inserted into the *Sales.SalesOrderDetail* table of the AdventureWorks database. The example assumes that SQL Server and the [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) database are installed on the local computer. All output is written to the console when the example is run from the command line.  
   
 > [!NOTE]  
 > Although the following example uses an INSERT statement to demonstrate the use of **sqlsrv_query** for a one-time statement execution, the concept applies to any Transact-SQL statement.  
@@ -128,7 +121,7 @@ sqlsrv_close($conn);
 ```  
   
 ## Example  
-The following example updates a field in the *Sales.SalesOrderDetail* table of the AdventureWorks database. The example assumes that SQL Server and the [AdventureWorks](http://go.microsoft.com/fwlink/?LinkID=67739) database are installed on the local computer. All output is written to the console when the example is run from the command line.  
+The following example updates a field in the *Sales.SalesOrderDetail* table of the AdventureWorks database. The example assumes that SQL Server and the [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) database are installed on the local computer. All output is written to the console when the example is run from the command line.  
   
 ```  
 <?php  
@@ -164,7 +157,7 @@ sqlsrv_close($conn);
 ```  
   
 > [!NOTE]
-> It is recommended to use strings as inputs when binding values to a [decimal or numeric column](https://docs.microsoft.com/en-us/sql/t-sql/data-types/decimal-and-numeric-transact-sql) to ensure precision and accuracy as PHP has limited precision for [floating point numbers](http://php.net/manual/en/language.types.float.php).
+> It is recommended to use strings as inputs when binding values to a [decimal or numeric column](https://docs.microsoft.com/sql/t-sql/data-types/decimal-and-numeric-transact-sql) to ensure precision and accuracy as PHP has limited precision for [floating point numbers](https://php.net/manual/en/language.types.float.php). The same applies to bigint columns, especially when the values are outside the range of an [integer](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md).
 
 ## Example  
 This code sample shows how to bind a decimal value as an input parameter.  
@@ -190,11 +183,73 @@ sqlsrv_close($conn);
 ?>
 ```
 
+## Example
+This code sample shows how to create a table of [sql_variant](https://docs.microsoft.com/sql/t-sql/data-types/sql-variant-transact-sql) types and fetch the inserted data.
+
+```
+<?php
+$server = 'serverName';
+$dbName = 'databaseName';
+$uid = 'yourUserName';
+$pwd = 'yourPassword';
+
+$options = array("Database"=>$dbName, "UID"=>$uid, "PWD"=>$pwd);
+$conn = sqlsrv_connect($server, $options);
+if($conn === false) {
+    die(print_r(sqlsrv_errors(), true));
+}
+
+$tableName = 'testTable';
+$query = "CREATE TABLE $tableName ([c1_int] sql_variant, [c2_varchar] sql_variant)";
+
+$stmt = sqlsrv_query($conn, $query);
+if($stmt === false) {
+    die(print_r(sqlsrv_errors(), true));
+}
+sqlsrv_free_stmt($stmt);
+
+$query = "INSERT INTO [$tableName] (c1_int, c2_varchar) VALUES (1, 'test_data')";
+$stmt = sqlsrv_query($conn, $query);
+if($stmt === false) {
+    die(print_r(sqlsrv_errors(), true));
+}
+sqlsrv_free_stmt($stmt);
+
+$query = "SELECT * FROM $tableName";
+$stmt = sqlsrv_query($conn, $query);
+
+if(sqlsrv_fetch($stmt) === false) {
+    die(print_r(sqlsrv_errors(), true));
+}
+
+$col1 = sqlsrv_get_field($stmt, 0);
+echo "First field:  $col1 \n";
+
+$col2 = sqlsrv_get_field($stmt, 1);
+echo "Second field:  $col2 \n";
+
+sqlsrv_free_stmt($stmt);
+sqlsrv_close($conn);
+
+?>
+```
+
+The expected output would be:
+
+```
+First field:  1
+Second field:  test_data
+```
 
 ## See Also  
 [SQLSRV Driver API Reference](../../connect/php/sqlsrv-driver-api-reference.md)  
+
 [How to: Perform Parameterized Queries](../../connect/php/how-to-perform-parameterized-queries.md)  
+
 [About Code Examples in the Documentation](../../connect/php/about-code-examples-in-the-documentation.md)  
+
 [How to: Send Data as a Stream](../../connect/php/how-to-send-data-as-a-stream.md)  
+
 [Using Directional Parameters](../../connect/php/using-directional-parameters.md)  
+
   

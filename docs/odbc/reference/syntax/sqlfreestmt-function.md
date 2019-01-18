@@ -2,16 +2,11 @@
 title: "SQLFreeStmt Function | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
-ms.prod_service: "drivers"
-ms.service: ""
-ms.component: "odbc"
+ms.prod: sql
+ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "drivers"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: connectivity
+ms.topic: conceptual
 apiname: 
   - "SQLFreeStmt"
 apilocation: 
@@ -22,11 +17,9 @@ f1_keywords:
 helpviewer_keywords: 
   - "SQLFreeStmt function [ODBC]"
 ms.assetid: 03408162-8b63-4470-90c4-e6c7d8d33892
-caps.latest.revision: 16
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
-ms.workload: "Inactive"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # SQLFreeStmt Function
 **Conformance**  
@@ -40,8 +33,8 @@ ms.workload: "Inactive"
 ```  
   
 SQLRETURN SQLFreeStmt(  
-     SQLHSTMT       StatementHandle,  
-     SQLUSMALLINT   Option);  
+     SQLHSTMT       StatementHandle,  
+     SQLUSMALLINT   Option);  
 ```  
   
 ## Arguments  

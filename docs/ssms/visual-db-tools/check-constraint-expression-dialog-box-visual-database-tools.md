@@ -2,24 +2,18 @@
 title: "Check Constraint Expression Dialog Box (Visual Database Tools) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "sql-tools"
-ms.service: ""
-ms.component: "ssms-visual-db"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "tools-ssms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: ssms
+ms.topic: conceptual
 f1_keywords: 
   - "vdt.dlgbox.checkconstraintexpression"
 ms.assetid: beb6ce43-3913-4d66-8826-8e885335b790
-caps.latest.revision: 5
 author: "stevestein"
 ms.author: "sstein"
-manager: "jhubbard"
-ms.workload: "Inactive"
+manager: craigg
+
 ---
 # Check Constraint Expression Dialog Box (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -68,6 +62,6 @@ The SQL syntax is made up of the following parameters:
 |NOT|Negates any Boolean expression (which can include keywords, such as LIKE, NULL, BETWEEN, IN, and EXISTS).<br /><br />When more than one logical operator is used in a statement, NOT is processed first. You can change the order of execution by using parentheses.|  
   
 ## See Also  
-[Unique Constraints and Check Constraints](http://msdn.microsoft.com/en-us/637098af-2567-48f8-90f4-b41df059833e)  
-[Create Unique Constraints](http://msdn.microsoft.com/en-us/a86f9d6f-f242-43be-b65d-b3435b71b62a)  
+[Unique Constraints and Check Constraints](../../relational-databases/tables/unique-constraints-and-check-constraints.md)  
+[Create Unique Constraints](../../relational-databases/tables/create-unique-constraints.md)  
   

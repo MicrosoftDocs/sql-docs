@@ -1,16 +1,11 @@
 ---
 title: "sys.dm_exec_query_stats (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "01/04/2018"
-ms.prod: "sql-non-specified"
+ms.date: "12/18/2018"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.service: ""
-ms.component: "dmv's"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: system-objects
 ms.topic: "language-reference"
 f1_keywords: 
   - "dm_exec_query_stats_TSQL"
@@ -22,11 +17,10 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.dm_exec_query_stats dynamic management view"
 ms.assetid: eb7b58b8-3508-4114-97c2-d877bcb12964
-caps.latest.revision: 64
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-ms.workload: "Active"
+author: stevestein
+ms.author: sstein
+manager: craigg
+monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.dm_exec_query_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -58,7 +52,7 @@ ms.workload: "Active"
 |**min_physical_reads**|**bigint**|Minimum number of physical reads that this plan has ever performed during a single execution.<br /><br /> Will always be 0 querying a memory-optimized table.|  
 |**max_physical_reads**|**bigint**|Maximum number of physical reads that this plan has ever performed during a single execution.<br /><br /> Will always be 0 querying a memory-optimized table.|  
 |**total_logical_writes**|**bigint**|Total number of logical writes performed by executions of this plan since it was compiled.<br /><br /> Will always be 0 querying a memory-optimized table.|  
-|**last_logical_writes**|**bigint**|Number of the number of buffer pool pages dirtied the last time the plan was executed. If a page is already dirty (modified) no writes are counted.<br /><br /> Will always be 0 querying a memory-optimized table.|  
+|**last_logical_writes**|**bigint**|Number of buffer pool pages dirtied during the most recently completed execution of the plan.<br /><br />After a page is read, the page becomes dirty only the first time it is modified. When a page becomes dirty, this number is incremented. Subsequent modifications of an already dirty page do not affect this number.<br /><br />This number will always be 0 when querying a memory-optimized table.|  
 |**min_logical_writes**|**bigint**|Minimum number of logical writes that this plan has ever performed during a single execution.<br /><br /> Will always be 0 querying a memory-optimized table.|  
 |**max_logical_writes**|**bigint**|Maximum number of logical writes that this plan has ever performed during a single execution.<br /><br /> Will always be 0 querying a memory-optimized table.|  
 |**total_logical_reads**|**bigint**|Total number of logical reads performed by executions of this plan since it was compiled.<br /><br /> Will always be 0 querying a memory-optimized table.|  
@@ -105,23 +99,28 @@ ms.workload: "Active"
 |**last_used_threads**|**bigint**|The number of used parallel threads when this plan executed last time. It will always be 0 for querying a memory-optimized table.<br /><br /> **Applies to**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].|  
 |**min_used_threads**|**bigint**|The minimum number of used parallel threads this plan ever used during one execution. It will always be 0 for querying a memory-optimized table.<br /><br /> **Applies to**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].|  
 |**max_used_threads**|**bigint**|The maximum number of used parallel threads this plan ever used during one execution. It will always be 0 for querying a memory-optimized table.<br /><br /> **Applies to**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].|  
+|**total_columnstore_segment_reads**|**bigint**|The total sum of columnstore segments read by the query. Cannot be null.<br /><br /> **Applies to**: Starting with [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 and [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|    
+|**last_columnstore_segment_reads**|**bigint**|The number of columnstore segments read by the last execution of the query. Cannot be null.<br /><br /> **Applies to**: Starting with [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 and [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|    
+|**min_columnstore_segment_reads**|**bigint**|The minimum number of columnstore segments ever read by the query during one execution. Cannot be null.<br /><br /> **Applies to**: Starting with [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 and [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|    
+|**max_columnstore_segment_reads**|**bigint**|The maximum number of columnstore segments ever read by the query during one execution. Cannot be null.<br /><br /> **Applies to**: Starting with [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 and [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|    
+|**total_columnstore_segment_skips**|**bigint**|The total sum of columnstore segments skipped by the query. Cannot be null.<br /><br /> **Applies to**: Starting with [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 and [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|    
+|**last_columnstore_segment_skips**|**bigint**|The number of columnstore segments skipped by the last execution of the query. Cannot be null.<br /><br /> **Applies to**: Starting with [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 and [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|    
+|**min_columnstore_segment_skips**|**bigint**|The minimum number of columnstore segments ever skipped by the query during one execution. Cannot be null.<br /><br /> **Applies to**: Starting with [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 and [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|    
+|**max_columnstore_segment_skips**|**bigint**|The maximum number of columnstore segments ever skipped by the query during one execution. Cannot be null.<br /><br /> **Applies to**: Starting with [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 and [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|
+|**total_spills**|**bigint**|The total number of pages spilled by execution of this query since it was compiled.<br /><br /> **Applies to**: Starting with [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 and [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|  
+|**last_spills**|**bigint**|The number of pages spilled the last time the query was executed.<br /><br /> **Applies to**: Starting with [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 and [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|  
+|**min_spills**|**bigint**|The minimum number of pages that this query has ever spilled during a single execution.<br /><br /> **Applies to**: Starting with [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 and [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|  
+|**max_spills**|**bigint**|The maximum number of pages that this query has ever spilled during a single execution.<br /><br /> **Applies to**: Starting with [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 and [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|  
 |**pdw_node_id**|**int**|The identifier for the node that this distribution is on.<br /><br /> **Applies to**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]| 
-|**total_columnstore_segment_reads**|**bigint**|The total sum of columnstore segments read by the query. Cannot be null.<br /><br /> **Applies to**: Starting with [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|    
-|**last_columnstore_segment_reads**|**bigint**|The number of columnstore segments read by the last execution of the query. Cannot be null.<br /><br /> **Applies to**: Starting with [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|    
-|**min_columnstore_segment_reads**|**bigint**|The minimum number of columnstore segments ever read by the query during one execution. Cannot be null.<br /><br /> **Applies to**: Starting with [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|    
-|**max_columnstore_segment_reads**|**bigint**|The maximum number of columnstore segments ever read by the query during one execution. Cannot be null.<br /><br /> **Applies to**: Starting with [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|    
-|**total_columnstore_segment_skips**|**bigint**|The total sum of columnstore segments skipped by the query. Cannot be null.<br /><br /> **Applies to**: Starting with [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|    
-|**last_columnstore_segment_skips**|**bigint**|The number of columnstore segments skipped by the last execution of the query. Cannot be null.<br /><br /> **Applies to**: Starting with [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|    
-|**min_columnstore_segment_skips**|**bigint**|The minimum number of columnstore segments ever skipped by the query during one execution. Cannot be null.<br /><br /> **Applies to**: Starting with [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|    
-|**max_columnstore_segment_skips**|**bigint**|The maximum number of columnstore segments ever skipped by the query during one execution. Cannot be null.<br /><br /> **Applies to**: Starting with [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|
-  
+
 > [!NOTE]
 > <sup>1</sup> For natively compiled stored procedures when statistics collection is enabled, worker time is collected in milliseconds. If the query executes in less than one millisecond, the value will be 0.  
   
 ## Permissions  
+
 On [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], requires `VIEW SERVER STATE` permission.   
-On [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] Premium Tiers, requires the `VIEW DATABASE STATE` permission in the database. On [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] Standard and Basic Tiers, requires the  **Server admin** or an **Azure Active Directory admin** account.
-  
+On [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], requires the `VIEW DATABASE STATE` permission in the database.   
+   
 ## Remarks  
  Statistics in the view are updated when a query is completed.  
   
@@ -131,8 +130,6 @@ On [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] Premium Tiers, requires the 
  The following example returns information about the top five queries ranked by average CPU time. This example aggregates the queries according to their query hash so that logically equivalent queries are grouped by their cumulative resource consumption.  
   
 ```sql  
-USE AdventureWorks2012;  
-GO  
 SELECT TOP 5 query_stats.query_hash AS "Query Hash",   
     SUM(query_stats.total_worker_time) / SUM(query_stats.execution_count) AS "Avg CPU Time",  
     MIN(query_stats.statement_text) AS "Statement Text"  
@@ -170,11 +167,12 @@ ORDER BY qs.execution_count DESC;
 ```  
   
 ## See also  
- 
- [Execution Related Dynamic Management Views and Functions &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)   
- [sys.dm_exec_sql_text &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md)   
- [sys.dm_exec_query_plan &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-transact-sql.md)  
-  
+[Execution Related Dynamic Management Views and Functions &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)    
+[sys.dm_exec_sql_text &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md)    
+[sys.dm_exec_query_plan &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-transact-sql.md)    
+[sys.dm_exec_procedure_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-procedure-stats-transact-sql.md)     
+[sys.dm_exec_trigger_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-trigger-stats-transact-sql.md)     
+[sys.dm_exec_cached_plans &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cached-plans-transact-sql.md)    
   
 
 

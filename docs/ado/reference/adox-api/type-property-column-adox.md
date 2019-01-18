@@ -1,17 +1,12 @@
 ---
 title: "Type Property (Column) (ADOX) | Microsoft Docs"
-ms.prod: "sql-non-specified"
-ms.prod_service: "drivers"
-ms.service: ""
-ms.component: "ado"
-ms.technology:
-  - "drivers"
+ms.prod: sql
+ms.prod_service: connectivity
+ms.technology: connectivity
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 apitype: "COM"
 f1_keywords: 
   - "_Column::Type"
@@ -22,11 +17,9 @@ f1_keywords:
 helpviewer_keywords: 
   - "Type property [ADOX]"
 ms.assetid: 5c6718b6-f728-478a-8afb-5d17b0a91d1f
-caps.latest.revision: 11
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
-ms.workload: "Inactive"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # Type Property (Column) (ADOX)
 Indicates the data type of a column.  

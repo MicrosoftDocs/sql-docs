@@ -1,18 +1,12 @@
 ---
 title: "Add, Change, or Delete a Map or Map Layer (Report Builder and SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
+ms.date: 05/24/2018
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
-ms.service: ""
-ms.component: "report-design"
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
+ms.technology: report-design
 
 
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "sql13.rtp.rptdesigner.maplayerproperties.general.f1"
   - "10526"
@@ -31,11 +25,8 @@ f1_keywords:
   - "10527"
   - "sql13.rtp.rptdesigner.shared.layervisibility.f1"
 ms.assetid: 6e89815e-187e-45bf-bf63-3d5c4a246360
-caps.latest.revision: 15
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "kfile"
-ms.workload: "Inactive"
+author: maggiesMSFT
+ms.author: maggies
 ---
 # Add, Change, or Delete a Map or Map Layer (Report Builder and SSRS)
   A map is a collection of layers. When you add a map to a [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] paginated report, you define the first layer. You can create additional layers by using the map layer wizard.  
@@ -119,9 +110,9 @@ ms.workload: "Inactive"
   
 1.  Select **General** on the **Map Point Properties** dialog box to change label, tooltip, and marker type options for the following map elements:  
   
-    -   All dynamic or embedded points on a point layer. Color rules, size rules, and marker type rules for points override these options. To override options for a specific embedded point, use the [Map Embedded Point Properties Dialog Box, Marker](http://msdn.microsoft.com/library/3c5eb1c5-d40a-424f-aa7c-43b112f42dec) page.  
+    -   All dynamic or embedded points on a point layer. Color rules, size rules, and marker type rules for points override these options. To override options for a specific embedded point, use the [Map Embedded Point Properties Dialog Box, Marker](https://msdn.microsoft.com/library/3c5eb1c5-d40a-424f-aa7c-43b112f42dec) page.  
   
-    -   The center point for all dynamic or embedded polygons on a polygon layer. Color rules, size rules, and marker type rules for center points override these options. To override options for a specific center point, use the [Map Embedded Point Properties Dialog Box, Marker](http://msdn.microsoft.com/library/3c5eb1c5-d40a-424f-aa7c-43b112f42dec) page.  
+    -   The center point for all dynamic or embedded polygons on a polygon layer. Color rules, size rules, and marker type rules for center points override these options. To override options for a specific center point, use the [Map Embedded Point Properties Dialog Box, Marker](https://msdn.microsoft.com/library/3c5eb1c5-d40a-424f-aa7c-43b112f42dec) page.  
   
 ##  <a name="Embedded"></a> To specify embedded data as a source of spatial data  
   
@@ -151,7 +142,7 @@ ms.workload: "Inactive"
 4.  In **File name**, type the location of an ESRI Shapefile, or click **Browse** to select an ESRI Shapefile.  
   
     > [!NOTE]  
-    >  If the Shapefile is on your local computer, the spatial data is embedded in the report definition. To retrieve the data dynamically when the report is processed, you must upload the ESRI .shp file and its .dbf support file to the report server. For more information, see " How to: Upload a File or Report (Report Manager)" in the [Reporting Services documentation](http://go.microsoft.com/fwlink/?linkid=121312) in SQL Server Books Online.  
+    >  If the Shapefile is on your local computer, the spatial data is embedded in the report definition. To retrieve the data dynamically when the report is processed, you must upload the ESRI .shp file and its .dbf support file to the report server. For more information, see [Upload a File or Report](../reports/upload-a-file-or-report-report-manager.md).  
   
 5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
@@ -176,7 +167,7 @@ ms.workload: "Inactive"
 2.  On the toolbar, click the **Add Layer** button, and from the drop-down list, click **Tile Layer**.  
   
     > [!NOTE]  
-    >  For more information about the use of Bing map tiles in your report, see [Additional Terms of Use](http://go.microsoft.com/fwlink/?LinkId=151371).  
+    >  For more information about the use of Bing map tiles in your report, see [Additional Terms of Use](https://go.microsoft.com/fwlink/?LinkId=151371).  
   
 3.  Right-click the tile layer in the Map pane, and then click **Tile Properties**.  
   

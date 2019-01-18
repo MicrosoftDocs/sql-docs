@@ -1,34 +1,14 @@
 ---
 title: "PredictTimeSeries (DMX) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/02/2016"
-ms.prod: analysis-services
-ms.prod_service: "analysis-services"
-ms.service: ""
-ms.component: ""
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
-  
-ms.component: data-mining
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "PredictTimeSeries"
-dev_langs: 
-  - "DMX"
-helpviewer_keywords: 
-  - "time series algorithms [Analysis Services]"
-  - "time series [Analysis Services]"
-  - "EXTEND_MODEL_CASES parameter"
-  - "REPLACE_MODEL_CASES parameter"
-  - "PredictTimeSeries function"
-ms.assetid: 85c596be-a7f4-499b-8d36-7e67c2647b6c
-caps.latest.revision: 56
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-ms.workload: "Inactive"
+ms.date: 06/07/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: dmx
+ms.topic: conceptual
+ms.author: owend
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
 ---
 # PredictTimeSeries (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -99,7 +79,7 @@ PredictTimeSeries(<scalar column reference>, n-start, n-end, REPLACE_MODEL_CASES
   
 -   The third example shows how to use the EXTEND_MODEL_CASES parameter to update a mining model with fresh data.  
   
- To learn more about working with time series models, see the data mining tutorial, [Lesson 2: Building a Forecasting Scenario &#40;Intermediate Data Mining Tutorial&#41;](http://msdn.microsoft.com/library/9a988156-c900-4c22-97fa-f6b0c1aea9e2) and [Time Series Prediction DMX Tutorial](http://msdn.microsoft.com/library/38ea7c03-4754-4e71-896a-f68cc2c98ce2).  
+ To learn more about working with time series models, see the data mining tutorial, [Lesson 2: Building a Forecasting Scenario &#40;Intermediate Data Mining Tutorial&#41;](https://msdn.microsoft.com/library/9a988156-c900-4c22-97fa-f6b0c1aea9e2) and [Time Series Prediction DMX Tutorial](https://msdn.microsoft.com/library/38ea7c03-4754-4e71-896a-f68cc2c98ce2).  
   
 > [!NOTE]  
 >  You might obtain different results from your model; the results of the examples below are provided only to illustrate the result format.  
@@ -133,7 +113,7 @@ OR [Model Region] = 'M200 Pacific'
 ### Example 2: Adding New Data and Using REPLACE_MODEL_CASES  
  Suppose you find that the data was incorrect for a particular region, and want to use the patterns in the model, but to adjust the predictions to match the new data. Or, you might find that another region has more reliable trends and you want to apply the most reliable model to data from a different region.  
   
- In such scenarios, you can use the REPLACE_MODEL_CASES parameter and specify a new set of data to use as historical data. That way, the projections will be based on the patterns in the specified model, but will continue smoothly from the end of the new data points. For a complete walkthrough of this scenario, see [Advanced Time Series Predictions &#40;Intermediate Data Mining Tutorial&#41;](http://msdn.microsoft.com/library/b614ebdb-07ca-44af-a0ff-893364bd4b71).  
+ In such scenarios, you can use the REPLACE_MODEL_CASES parameter and specify a new set of data to use as historical data. That way, the projections will be based on the patterns in the specified model, but will continue smoothly from the end of the new data points. For a complete walkthrough of this scenario, see [Advanced Time Series Predictions &#40;Intermediate Data Mining Tutorial&#41;](https://msdn.microsoft.com/library/b614ebdb-07ca-44af-a0ff-893364bd4b71).  
   
  The following PREDICTION JOIN query illustrates the syntax for replacing data and making new predictions. For the replacement data, the example retrieves the value of the Amount and Quantity columns and multiplies each by two:  
   
@@ -208,7 +188,7 @@ WHERE ([Model Region] = 'M200 Europe'
   
 -   Returns new predictions for the remaining three time slices based on the newly expanded model.  
   
- The following table lists the results of the Example 2 query. Notice that the first two values returned for M200 Europe are exactly the same as the new values that you provided. This behavior is by design; if you want to start predictions after the end of the new data, you must specify a starting and ending time step. For an example of how to do this, see [Lesson 5: Extending the Time Series Model](http://msdn.microsoft.com/library/7aad4946-c903-4e25-88b9-b087c20cb67d).  
+ The following table lists the results of the Example 2 query. Notice that the first two values returned for M200 Europe are exactly the same as the new values that you provided. This behavior is by design; if you want to start predictions after the end of the new data, you must specify a starting and ending time step. For an example of how to do this, see [Lesson 5: Extending the Time Series Model](https://msdn.microsoft.com/library/7aad4946-c903-4e25-88b9-b087c20cb67d).  
   
  Also, notice that you did not supply new data for the Pacific region. Therefore, [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] returns new predictions for all five time slices.  
   

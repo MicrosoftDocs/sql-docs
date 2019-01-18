@@ -2,15 +2,10 @@
 title: "ISSAbort::Abort (OLE DB) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
-ms.service: ""
-ms.component: "native-client-ole-db-interfaces"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: native-client
 ms.topic: "reference"
 apiname: 
   - "ISSAbort::Abort (OLE DB)"
@@ -18,11 +13,10 @@ apitype: "COM"
 helpviewer_keywords: 
   - "Abort method"
 ms.assetid: a5bca169-694b-4895-84ac-e8fba491e479
-caps.latest.revision: 17
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-ms.workload: "Inactive"
+author: MightyPen
+ms.author: genemi
+manager: craigg
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # ISSAbort::Abort (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -63,7 +57,7 @@ HRESULT Abort(void);
  The batch was not canceled.  
   
  E_FAIL  
- A provider specific error occurred; for detailed information, use the [ISQLServerErrorInfo](http://msdn.microsoft.com/library/a8323b5c-686a-4235-a8d2-bda43617b3a1) interface.  
+ A provider specific error occurred; for detailed information, use the [ISQLServerErrorInfo](https://msdn.microsoft.com/library/a8323b5c-686a-4235-a8d2-bda43617b3a1) interface.  
   
  E_UNEXPECTED  
  The call to the method was unexpected. For example, the object is in a zombie state because **ISSAbort::Abort** has already been called.  
@@ -72,6 +66,6 @@ HRESULT Abort(void);
  Out of memory error.  
   
 ## See Also  
- [ISSAbort &#40;OLE DB&#41;](http://msdn.microsoft.com/library/7c4df482-4a83-4da0-802b-3637b507693a)  
+ [ISSAbort &#40;OLE DB&#41;](https://msdn.microsoft.com/library/7c4df482-4a83-4da0-802b-3637b507693a)  
   
   

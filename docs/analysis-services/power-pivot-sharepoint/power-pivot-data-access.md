@@ -1,25 +1,14 @@
 ---
 title: "Power Pivot Data Access | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: analysis-services
-ms.prod_service: "analysis-services"
-ms.service: ""
-ms.component: ""
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
-  
-ms.component: multidimensional-tabular
-ms.component: data-mining
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-ms.assetid: 83dc82da-91fb-4e47-91a8-0e0db67339b8
-caps.latest.revision: 8
-author: "Minewiskan"
-ms.author: "owend"
-manager: "kfile"
-ms.workload: "Inactive"
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: ppvt-sharepoint
+ms.topic: conceptual
+ms.author: owend
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
 ---
 # Power Pivot Data Access
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -46,6 +35,6 @@ ms.workload: "Inactive"
   
 ## See Also  
  [Connect to Analysis Services](../../analysis-services/instances/connect-to-analysis-services.md)   
- [Tabular Model Data Access](../../analysis-services/tabular-models/tabular-model-data-access.md)  
+
   
   

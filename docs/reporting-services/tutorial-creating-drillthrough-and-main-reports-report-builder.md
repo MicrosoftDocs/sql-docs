@@ -1,37 +1,26 @@
 ---
 title: "Tutorial: Creating Drillthrough and Main Reports (Report Builder) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
+ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
-ms.service: ""
-ms.component: "reporting-services"
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
+ms.technology: reporting-services
 
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
-applies_to: 
-  - "SQL Server 2016"
+ms.topic: conceptual
 ms.assetid: 7168c8d3-cef5-4c4a-a0bf-fff1ac5b8b71
-caps.latest.revision: 14
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "kfile"
-ms.workload: "On Demand"
+author: maggiesMSFT
+ms.author: maggies
 ---
 # Tutorial: Creating Drillthrough and Main Reports (Report Builder)
 This tutorial teaches you how to create two kinds of [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] paginated reports: a drillthrough report and a main report. The sample sales data used in these reports is retrieved from an Analysis Services cube. 
 
-The following illustration shows the reports you will create, and shows how the field value, Games and Toys, in the main report displays in the drillthrough report’s title. The data in the drillthrough report pertains to the Games and Toys product category.  
+The following illustration shows the reports you will create, and shows how the field value, Games and Toys, in the main report displays in the drillthrough report's title. The data in the drillthrough report pertains to the Games and Toys product category.  
   
 ![rs_DrillthroughCubeTutorial](../reporting-services/media/rs-drillthroughcubetutorial.gif "rs_DrillthroughCubeTutorial")  
    
 Estimated time to complete this tutorial: 30 minutes.  
   
 ## Requirements  
-This tutorial requires access to the Contoso Sales cube for both the drillthrough and the main reports. This dataset comprises the ContosoDW data warehouse and the Contoso_Retail online analytical processing (OLAP) database. The reports you will create in this tutorial retrieve report data from the Contoso Sales cube. The Contoso_Retail OLAP database can be downloaded from [Microsoft Download Center](http://go.microsoft.com/fwlink/?LinkID=191575). You need only download the file ContosoBIdemoABF.exe. It contains the OLAP database.  
+This tutorial requires access to the Contoso Sales cube for both the drillthrough and the main reports. This dataset comprises the ContosoDW data warehouse and the Contoso_Retail online analytical processing (OLAP) database. The reports you will create in this tutorial retrieve report data from the Contoso Sales cube. The Contoso_Retail OLAP database can be downloaded from [Microsoft Download Center](https://go.microsoft.com/fwlink/?LinkID=191575). You need only download the file ContosoBIdemoABF.exe. It contains the OLAP database.  
   
 The other file, ContosoBIdemoBAK.exe, is for the ContosoDW data warehouse, which is not used in this tutorial.  
   
@@ -107,7 +96,7 @@ In a report, you can use a shared dataset that has a predefined query, or you ca
   
 #### To create query filters  
   
-1.  On the **Design a query** page, in the Metadata pane, click the button **(…)**.  
+1.  On the **Design a query** page, in the Metadata pane, click the button **(...)**.  
   
 2.  In the **Cube Selection** dialog box, click Sales, and then click **OK**.  
   
@@ -115,7 +104,7 @@ In a report, you can use a shared dataset that has a predefined query, or you ca
     > If you do not want to build the MDX query manually, click the ![Switch to Design mode](../reporting-services/media/rsqdicon-designmode.gif "Switch to Design mode") icon, toggle the query designer to Query mode, paste the completed MDX to the query designer, and then proceed to step 6 in [To create the dataset](#DSkip).  
   
     ```  
-    SELECT NON EMPTY { [Measures].[Sales Amount], [Measures].[Sales Return Amount] } ON COLUMNS, NON EMPTY { ([Channel].[Channel Name].[Channel Name].ALLMEMBERS * [Product].[Product Category Name].[Product Category Name].ALLMEMBERS * [Product].[Product Subcategory Name].[Product Subcategory Name].ALLMEMBERS ) } DIMENSION PROPERTIES MEMBER_CAPTION, MEMBER_UNIQUE_NAME ON ROWS FROM ( SELECT ( { [Date].[Calendar Year].&[2009] } ) ON COLUMNS FROM ( SELECT ( { [Sales Territory].[Sales Territory Group].&[North America] } ) ON COLUMNS FROM ( SELECT ( STRTOSET(@ProductProductCategoryName, CONSTRAINED) ) ON COLUMNS FROM ( SELECT ( { [Channel].[Channel Name].&[2], [Channel].[Channel Name].&[4] } ) ON COLUMNS FROM [Sales])))) WHERE ( [Sales Territory].[Sales Territory Group].&[North America], [Date].[Calendar Year].&[2009] ) CELL PROPERTIES VALUE, BACK_COLOR, FORE_COLOR, FORMATTED_VALUE, FORMAT_STRING, FONT_NAME, FONT_SIZE, FONT_FLAGS  
+    SELECT NON EMPTY { [Measures].[Sales Amount], [Measures].[Sales Return Amount] } ON COLUMNS, NON EMPTY { ([Channel].[Channel Name].[Channel Name].ALLMEMBERS * [Product].[Product Category Name].[Product Category Name].ALLMEMBERS * [Product].[Product Subcategory Name].[Product Subcategory Name].ALLMEMBERS ) } DIMENSION PROPERTIES MEMBER_CAPTION, MEMBER_UNIQUE_NAME ON ROWS FROM ( SELECT ( { [Date].[Calendar Year].&[2009] } ) ON COLUMNS FROM ( SELECT ( { [Sales Territory].[Sales Territory Group].&[North America] } ) ON COLUMNS FROM ( SELECT ( STRTOSET(\@ProductProductCategoryName, CONSTRAINED) ) ON COLUMNS FROM ( SELECT ( { [Channel].[Channel Name].&[2], [Channel].[Channel Name].&[4] } ) ON COLUMNS FROM [Sales])))) WHERE ( [Sales Territory].[Sales Territory Group].&[North America], [Date].[Calendar Year].&[2009] ) CELL PROPERTIES VALUE, BACK_COLOR, FORE_COLOR, FORMATTED_VALUE, FORMAT_STRING, FONT_NAME, FONT_SIZE, FONT_FLAGS  
     ```  
   
 3.  In the Measure Group pane, expand Channel, and then drag Channel Name to the **Hierarchy** column in the filter pane.  
@@ -292,10 +281,10 @@ By default parameters are visible, which is not appropriate for this report. You
   
 1.  In the Report Data pane, expand **Parameters**.  
   
-2.  Right-click @ProductProductCategoryName, and then click **Parameter Properties**.  
+2.  Right-click \@ProductProductCategoryName, and then click **Parameter Properties**.  
   
     > [!NOTE]  
-    > The @ character next to the name indicates that this is a parameter.  
+    > The \@ character next to the name indicates that this is a parameter.  
   
 3.  On the **General** tab, click **Hidden**.  
   
@@ -398,7 +387,7 @@ Next, create an embedded dataset. To do so, you will use the query designer to c
   
 #### To create query filters  
   
-1.  On the **Design a query** page, in the Metadata pane, in the cube section, click the ellipsis **(…)**.  
+1.  On the **Design a query** page, in the Metadata pane, in the cube section, click the ellipsis **(...)**.  
   
 2.  In the **Cube Selection** dialog box, click Sales, and then click **OK**.  
   
@@ -406,7 +395,7 @@ Next, create an embedded dataset. To do so, you will use the query designer to c
     > If you do not want to build the MDX query manually, click the ![Switch to Design mode](../reporting-services/media/rsqdicon-designmode.gif "Switch to Design mode") icon, toggle the query designer to Query mode, paste the completed MDX to the query designer, and then proceed to step 5 in [To create the dataset](#MSkip).  
   
     ```  
-    WITH MEMBER [Measures].[Net QTY] AS [Measures].[Sales Quantity] -[Measures].[Sales Return Quantity] MEMBER [Measures].[Net Sales] AS [Measures].[Sales Amount] - [Measures].[Sales Return Amount] SELECT NON EMPTY { [Measures].[Net QTY], [Measures].[Net Sales] } ON COLUMNS, NON EMPTY { ([Channel].[Channel Name].[Channel Name].ALLMEMBERS * [Product].[Product Category Name].[Product Category Name].ALLMEMBERS ) } DIMENSION PROPERTIES MEMBER_CAPTION, MEMBER_UNIQUE_NAME ON ROWS FROM ( SELECT ( { [Date].[Calendar Year].&[2009] } ) ON COLUMNS FROM ( SELECT ( STRTOSET(@ProductProductCategoryName, CONSTRAINED) ) ON COLUMNS FROM ( SELECT ( { [Sales Territory].[Sales Territory Group].&[North America] } ) ON COLUMNS FROM ( SELECT ( { [Channel].[Channel Name].&[2], [Channel].[Channel Name].&[4] } ) ON COLUMNS FROM [Sales])))) WHERE ( [Sales Territory].[Sales Territory Group].&[North America], [Date].[Calendar Year].&[2009] ) CELL PROPERTIES VALUE, BACK_COLOR, FORE_COLOR, FORMATTED_VALUE, FORMAT_STRING, FONT_NAME, FONT_SIZE, FONT_FLAGSQuery text: Code.  
+    WITH MEMBER [Measures].[Net QTY] AS [Measures].[Sales Quantity] -[Measures].[Sales Return Quantity] MEMBER [Measures].[Net Sales] AS [Measures].[Sales Amount] - [Measures].[Sales Return Amount] SELECT NON EMPTY { [Measures].[Net QTY], [Measures].[Net Sales] } ON COLUMNS, NON EMPTY { ([Channel].[Channel Name].[Channel Name].ALLMEMBERS * [Product].[Product Category Name].[Product Category Name].ALLMEMBERS ) } DIMENSION PROPERTIES MEMBER_CAPTION, MEMBER_UNIQUE_NAME ON ROWS FROM ( SELECT ( { [Date].[Calendar Year].&[2009] } ) ON COLUMNS FROM ( SELECT ( STRTOSET(\@ProductProductCategoryName, CONSTRAINED) ) ON COLUMNS FROM ( SELECT ( { [Sales Territory].[Sales Territory Group].&[North America] } ) ON COLUMNS FROM ( SELECT ( { [Channel].[Channel Name].&[2], [Channel].[Channel Name].&[4] } ) ON COLUMNS FROM [Sales])))) WHERE ( [Sales Territory].[Sales Territory Group].&[North America], [Date].[Calendar Year].&[2009] ) CELL PROPERTIES VALUE, BACK_COLOR, FORE_COLOR, FORMATTED_VALUE, FORMAT_STRING, FONT_NAME, FONT_SIZE, FONT_FLAGSQuery text: Code.  
     ```  
   
 3.  In the Measure Group pane, expand Channel, and then drag Channel Name to the **Hierarchy** column in the filter pane.  

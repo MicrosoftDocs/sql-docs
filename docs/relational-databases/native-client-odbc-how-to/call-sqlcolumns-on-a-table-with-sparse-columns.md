@@ -2,22 +2,17 @@
 title: "Call SQLColumns on a Table with Sparse Columns | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/16/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
-ms.service: ""
-ms.component: "native-client-odbc-how-to"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-
-ms.tgt_pltfrm: ""
+ms.technology: native-client
+yms.tgt_pltfrm: ""
 ms.topic: "reference"
 ms.assetid: afd35e13-2370-43c2-9cbc-f8da6248c39c
-caps.latest.revision: 7
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-ms.workload: "Inactive"
+author: MightyPen
+ms.author: genemi
+manager: craigg
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Call SQLColumns on a Table with Sparse Columns
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -36,7 +31,7 @@ ms.workload: "Inactive"
   
  Compile with /EHsc /D, "UNICODE", and odbc32.lib.  
   
- The second ([!INCLUDE[tsql](../../includes/tsql-md.md)]) code listing deletes the table created by this sample.  
+ The second ( [!INCLUDE[tsql](../../includes/tsql-md.md)]) code listing deletes the table created by this sample.  
   
 ```  
 // compile with: /EHsc /D "UNICODE" odbc32.lib  

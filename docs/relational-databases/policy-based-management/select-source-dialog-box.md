@@ -2,24 +2,17 @@
 title: "Select Source Dialog Box | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "database-engine"
-ms.service: ""
-ms.component: "performance-monitor"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: security
+ms.topic: conceptual
 f1_keywords: 
   - "sql13.swb.dmf.selectsource.f1"
 ms.assetid: d664c2e5-dd0c-4da8-b27d-aa4ee4fc0ffd
-caps.latest.revision: 16
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-ms.workload: "Inactive"
+author: VanMSFT
+ms.author: vanto
+manager: craigg
 ---
 # Select Source Dialog Box
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

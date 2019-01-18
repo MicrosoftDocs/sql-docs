@@ -2,16 +2,10 @@
 title: "sys.dm_exec_valid_use_hints (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "11/17/2016"
-ms.prod: "sql-non-specified"
-ms.prod_service: "database-engine"
-ms.service: ""
-ms.component: "dmv's"
+ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: system-objects
+ms.topic: conceptual
 f1_keywords: 
   - "sys.dm_exec_valid_use_hints"
   - "sys.dm_exec_valid_use_hints_TSQL"
@@ -22,16 +16,14 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.dm_exec_valid_use_hints management view"
 ms.assetid: 65d50589-39c2-4046-92b6-0c4587d8c593
-caps.latest.revision: 5
 author: "pmasl"
 ms.author: "pelopes"
-manager: "jhubbard"
-ms.workload: "Inactive"
+manager: craigg
 ---
 # sys.dm_exec_valid_use_hints (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
-Returns [USE HINT](../../t-sql/queries/hints-transact-sql-query.md) supported hint names. It lists one hint name per row.  
+Returns [USE HINT](../../t-sql/queries/hints-transact-sql-query.md#use_hint) supported hint names. It lists one hint name per row.  
   
 Use this DMV to see the list of all supported hints under the USE HINT notation.  
   
@@ -39,7 +31,7 @@ Use this DMV to see the list of all supported hints under the USE HINT notation.
 |-----------------|---------------|-----------------|  
 |name|**sysname**|The name of the hint.|
 
-See [Query Hints](../../t-sql/queries/hints-transact-sql-query.md) for descriptions of each hint.
+See [Query Hints](../../t-sql/queries/hints-transact-sql-query.md#use_hint) for descriptions of each hint.
 
 Introduced in [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] SP1.
   

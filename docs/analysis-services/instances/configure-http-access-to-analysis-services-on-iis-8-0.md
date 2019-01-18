@@ -1,25 +1,14 @@
 ---
 title: "Configure HTTP Access to Analysis Services on IIS 8.0 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/07/2017"
-ms.prod: analysis-services
-ms.prod_service: "analysis-services"
-ms.service: ""
-ms.component: ""
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
-  
-ms.component: multidimensional-tabular
-ms.component: data-mining
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-ms.assetid: cf2e2c84-0a69-4cdd-90a1-fb4021936513
-caps.latest.revision: 27
-author: "Minewiskan"
-ms.author: "owend"
-manager: "kfile"
-ms.workload: "On Demand"
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom:
+ms.topic: conceptual
+ms.author: owend
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
 ---
 # Configure HTTP Access to Analysis Services on IIS 8.0
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -40,22 +29,6 @@ ms.workload: "On Demand"
  Setting up HTTP access is a post-installation task. Analysis Services must be installed before you can configure it for HTTP access. As the Analysis Services administrator, you will need to grant permissions to Windows accounts before HTTP access is possible. Additionally, it is a best practice to validate your installation first, ensuring that it is fully operational before configuring the server any further. After HTTP access is configured, you can use both the HTTP endpoint and the regular network name of the server over TCP/IP. Setting up HTTP access does not invalidate other approaches for data access.  
   
  As you move forward with MSMDPUMP configuration, remember there are two connections to consider: client-to-IIS, IIS-to-SSAS. The instructions in this article are about IIS-to-SSAS. Your client application might require additional configuration before it can connect to IIS. Decisions such as whether to use SSL, or how to configure bindings, are out of scope for this article. See [Web Server (IIS)](http://technet.microsoft.com/library/hh831725.aspx) for more information about IIS.  
-  
- This topic includes the following sections:  
-  
--   [Overview](#bkmk_overview)  
-  
--   [Prerequisites](#bkmk_prereq)  
-  
--   [Copy the MSMDPUMP.dll to a folder on the Web server](#bkmk_copy)  
-  
--   [Create an application pool and virtual directory in IIS](#bkmk_appPool)  
-  
--   [Configure IIS authentication and add the extension](#bkmk_auth)  
-  
--   [Edit the MSMDPUMP.INI file to set the target server](#bkmk_edit)  
-  
--   [Test your configuration](#bkmk_test)  
   
 ##  <a name="bkmk_overview"></a> Overview  
  MSMDPUMP is an ISAPI extension that loads into IIS and provides redirection to a local or remote Analysis Services instance. By configuring this ISAPI extension, you create an HTTP endpoint to an Analysis Services instance.  
@@ -188,7 +161,7 @@ ms.workload: "On Demand"
   
  You can also use Anonymous authentication in a production environment if your users do not have Windows user accounts, but follow best practices by locking down permissions on the host system, as called out in this article: [Enable Anonymous Authentication (IIS 7)](http://technet.microsoft.com/library/cc731244\(v=ws.10\).aspx). Be sure that authentication is set on the virtual directory, and not on the parent web site, to further reduce the level of account access.  
   
- When Anonymous is enabled, any user connection to the HTTP endpoint is allowed to connect as the anonymous user. You won’t be able to audit individual user connections, nor use the user identity to select data from a model. As you can see, using Anonymous impacts everything from model design, to data refresh and access. However, if users do not have a Windows user login to start with, using the Anonymous account might be your only option.  
+ When Anonymous is enabled, any user connection to the HTTP endpoint is allowed to connect as the anonymous user. You won't be able to audit individual user connections, nor use the user identity to select data from a model. As you can see, using Anonymous impacts everything from model design, to data refresh and access. However, if users do not have a Windows user login to start with, using the Anonymous account might be your only option.  
   
 #### Set the authentication type and add a script map  
   
@@ -209,7 +182,7 @@ ms.workload: "On Demand"
   
 5.  Disable **Anonymous Authentication** if you are using Windows or Basic authentication. When Anonymous authentication is enabled, IIS will always use it first, even if other authentication methods are enabled.  
   
-     Under Anonymous authentication, the pump (msmdpump.dll) runs as the user account you established for anonymous user. There is no distinction between the user connecting to IIS and the user connecting to Analysis Services. By default, IIS uses the IUSR account, but you can change it to a domain user account that has network permissions. You’ll need this capability if IIS and Analysis Services are on different computers.  
+     Under Anonymous authentication, the pump (msmdpump.dll) runs as the user account you established for anonymous user. There is no distinction between the user connecting to IIS and the user connecting to Analysis Services. By default, IIS uses the IUSR account, but you can change it to a domain user account that has network permissions. You'll need this capability if IIS and Analysis Services are on different computers.  
   
      For instructions on how to configure credentials for Anonymous authentication, see [Anonymous Authentication](http://www.iis.net/configreference/system.webserver/security/authentication/anonymousauthentication).  
   
@@ -310,7 +283,7 @@ ms.workload: "On Demand"
   
  `Data Source=https://<servername>/olap/msmdpump.dll; Initial Catalog=AdventureWorksDW2012; Integrated Security=Basic; User ID=XXXX; Password=XXXXX;`  
   
- For more information about setting up the connection programmatically, see [Establishing Secure Connections in ADOMD.NET](../../analysis-services/multidimensional-models-adomd-net-client/connections-in-adomd-net-establishing-secure-connections.md).  
+ For more information about setting up the connection programmatically, see [Establishing Secure Connections in ADOMD.NET](https://docs.microsoft.com/bi-reference/adomd/multidimensional-models-adomd-net-client/connections-in-adomd-net-establishing-secure-connections).  
   
  As a final step, be sure to follow-up with more rigorous testing by using a client computer that runs in the network environment from which the connections will originate.  
   

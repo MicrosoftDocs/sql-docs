@@ -2,15 +2,10 @@
 title: "sp_batch_params (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "database-engine"
-ms.service: ""
-ms.component: "system-stored-procedures"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: system-objects
 ms.topic: "language-reference"
 f1_keywords: 
   - "sp_batch_params"
@@ -20,11 +15,9 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_batch_params"
 ms.assetid: 7b92fe9e-e755-4b7a-8a15-822c58a813d3
-caps.latest.revision: 20
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "craigg"
-ms.workload: "Inactive"
+author: "stevestein"
+ms.author: "sstein"
+manager: craigg
 ---
 # sp_batch_params (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,7 +34,7 @@ sp_batch_params [ [ @tsqlbatch = ] 'tsqlbatch' ]
 ```  
   
 ## Arguments  
- [ **@tsqlbatch =**] **'***tsqlbatch***'**  
+ [ **@tsqlbatch =**] **'**_tsqlbatch_**'**  
  Is a Unicode string that contains a [!INCLUDE[tsql](../../includes/tsql-md.md)] statement or batch for which parameter information is that you want. *tsqlbatch* is **nvarchar(max)** or implicitly convertible to **nvarchar(max)**.  
   
 ## Return Code Values  
@@ -82,7 +75,7 @@ EXECUTE sp_batch_params @SQLString;
   
 ## See Also  
  [Running Stored Procedures](../../relational-databases/native-client-odbc-stored-procedures/running-stored-procedures.md)   
- [Running Stored Procedures How-to Topics &#40;ODBC&#41;](http://msdn.microsoft.com/library/c2220182-a23d-4475-b353-77a77ab613d6)   
+ [Running Stored Procedures How-to Topics &#40;ODBC&#41;](https://msdn.microsoft.com/library/c2220182-a23d-4475-b353-77a77ab613d6)   
  [Running Stored Procedures &#40;OLE DB&#41;](../../relational-databases/native-client/ole-db/stored-procedures-running.md)  
   
   

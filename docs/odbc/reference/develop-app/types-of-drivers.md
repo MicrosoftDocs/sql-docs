@@ -2,33 +2,26 @@
 title: "Types of Drivers | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
-ms.prod_service: "drivers"
-ms.service: ""
-ms.component: "odbc"
+ms.prod: sql
+ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "drivers"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: connectivity
+ms.topic: conceptual
 helpviewer_keywords: 
   - "driver compatibility issues [ODBC]"
   - "ODBC drivers [ODBC], backward compatibility"
   - "backward compatibility [ODBC], application and driver compatibility"
   - "compatibility [ODBC], application and driver compatibility"
 ms.assetid: 864c53c1-b68a-48b6-b6bc-5ecb520bb9dc
-caps.latest.revision: 7
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
-ms.workload: "Inactive"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # Types of Drivers
 ODBC drivers can be classified as follows:  
   
 -   **32-bit ODBC 2.**  
-     ***x* Driver** A 32-bit driver that:  
+     **_x_ Driver** A 32-bit driver that:  
   
     -   Exports only ODBC 2*.x* functions.  
   

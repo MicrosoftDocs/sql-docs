@@ -2,24 +2,17 @@
 title: "Data Streaming Destination | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "integration-services"
-ms.service: ""
-ms.component: "data-flow"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: integration-services
+ms.topic: conceptual
 f1_keywords: 
   - "SQL11.DTS.DESIGNER.DATASTREAMINGDEST.F1"
 ms.assetid: 640e6a19-49ae-4ee8-ac07-008370158f0e
-caps.latest.revision: 10
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
-ms.workload: "Inactive"
+manager: craigg
 ---
 # Data Streaming Destination
   The **Data Streaming Destination** is a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] (SSIS) destination component that lets the **OLE DB Provider for SSIS** consume output of an SSIS package as a tabular result set. You can create a linked server that uses the OLE DB Provider for SSIS and then run a SQL query on the linked server to display data returned by the SSIS package.  
@@ -55,7 +48,7 @@ SELECT * FROM OPENQUERY([Default Linked Server for Integration Services], N'Fold
   
  The Admin Center lets you publish views in a SQL Server database. As a result, you can use the SSIS Package Publish Wizard to publish an SSIS package as a SQL view. Then you can select the view to be included in the OData feed in the Power BI Admin Center. A data steward can consume the feed from the SSIS package by using the Power Query Add-in for Excel.  
   
- For a detailed walkthrough, see [Publish SSIS Packages as OData Feed Sources](http://go.microsoft.com/fwlink/?LinkID=317367).  
+ For a detailed walkthrough, see [Publish SSIS Packages as OData Feed Sources](https://go.microsoft.com/fwlink/?LinkID=317367).  
   
 ## In This Section  
   
@@ -82,6 +75,6 @@ SELECT * FROM OPENQUERY([Default Linked Server for Integration Services], N'Fold
  Similar to the Input Columns tab, you can change names of output columns in this tab. In the tree view to the left, expand **Data Streaming Destination Input** and then expand **Input Columns**. Click the input column name and change the name of the output column name in the right pane.  
   
 ## See Also  
- [Publish SSIS Packages as OData Feed Sources](http://go.microsoft.com/fwlink/?LinkID=317367)  
+ [Publish SSIS Packages as OData Feed Sources](https://go.microsoft.com/fwlink/?LinkID=317367)  
   
   

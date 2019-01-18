@@ -2,16 +2,11 @@
 title: "OLE DB Source | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "integration-services"
-ms.service: ""
-ms.component: "data-flow"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: integration-services
+ms.topic: conceptual
 f1_keywords: 
   - "sql13.dts.designer.oledbsource.f1"
   - "sql13.dts.designer.oledbsourceadapter.connection.f1"
@@ -21,11 +16,9 @@ helpviewer_keywords:
   - "sources [Integration Services], OLE DB"
   - "OLE DB source [Integration Services]"
 ms.assetid: f87cc5f6-b078-40f3-9d87-7a65e13e4c86
-caps.latest.revision: 69
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
-ms.workload: "On Demand"
+manager: craigg
 ---
 # OLE DB Source
   The OLE DB source extracts data from a variety of OLE DB-compliant relational databases by using a database table, a view, or an SQL command. For example, the OLE DB source can extract data from tables in [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office Access or [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] databases.  
@@ -85,7 +78,7 @@ ms.workload: "On Demand"
   
  `EXEC uspGetWhereUsedProductID ?, ?`  
   
- The stored procedure expects the variables, `@StartProductID` and `@CheckDate`, to provide parameter values. The order in which the parameters appear in the **Mappings** list is irrelevant. The only requirement is that the parameter names match the variable names in the stored procedure, including the @ sign.  
+ The stored procedure expects the variables, `@StartProductID` and `@CheckDate`, to provide parameter values. The order in which the parameters appear in the **Mappings** list is irrelevant. The only requirement is that the parameter names match the variable names in the stored procedure, including the \@ sign.  
   
 ### Mapping Parameters to Variables  
  The parameters are mapped to variables that provide the parameter values at run time. The variables are typically user-defined variables, although you can also use the system variables that [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] provides. If you use user-defined variables, make sure that you set the data type to a type that is compatible with the data type of the column that the mapped parameter references. For more information, see [Integration Services &#40;SSIS&#41; Variables](../../integration-services/integration-services-ssis-variables.md).  
@@ -98,7 +91,7 @@ ms.workload: "On Demand"
   
  The **Advanced Editor** dialog box reflects the properties that can be set programmatically. For more information about the properties that you can set in the **Advanced Editor** dialog box or programmatically, click one of the following topics:  
   
--   [Common Properties](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
+-   [Common Properties](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
 -   [OLE DB Custom Properties](../../integration-services/data-flow/ole-db-custom-properties.md)  
   
@@ -113,7 +106,7 @@ ms.workload: "On Demand"
 -   [Sort Data for the Merge and Merge Join Transformations](../../integration-services/data-flow/transformations/sort-data-for-the-merge-and-merge-join-transformations.md)  
   
 ## Related Content  
- Wiki article, [SSIS with Oracle Connectors](http://go.microsoft.com/fwlink/?LinkId=220670), on social.technet.microsoft.com.  
+ Wiki article, [SSIS with Oracle Connectors](https://go.microsoft.com/fwlink/?LinkId=220670), on social.technet.microsoft.com.  
   
 ## OLE DB Source Editor (Connection Manager Page)
   Use the **Connection Manager** page of the **OLE DB Source Editor** dialog box to select the OLE DB connection manager for the source. This page also lets you select a table or view from the database.  
@@ -147,7 +140,7 @@ ms.workload: "On Demand"
 |Option|Description|  
 |------------|-----------------|  
 |Table or view|Retrieve data from a table or view in the OLE DB data source.|  
-|Table name or view name variable|Specify the table or view name in a variable.<br /><br /> **Related information:** [Use Variables in Packages](http://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787)|  
+|Table name or view name variable|Specify the table or view name in a variable.<br /><br /> **Related information:** [Use Variables in Packages](https://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787)|  
 |SQL command|Retrieve data from the OLE DB data source by using a SQL query.|  
 |SQL command from variable|Specify the SQL query text in a variable.|  
   

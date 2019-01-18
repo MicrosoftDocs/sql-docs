@@ -2,15 +2,10 @@
 title: "SET IDENTITY_INSERT (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/10/2016"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.service: ""
-ms.component: "t-sql|statements"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: t-sql
 ms.topic: "language-reference"
 f1_keywords: 
   - "SET IDENTITY_INSERT"
@@ -25,16 +20,17 @@ helpviewer_keywords:
   - "identity values [SQL Server], explicit values"
   - "identity columns [SQL Server], explicit values"
 ms.assetid: a5dd49f2-45c7-44a8-b182-e0a5e5c373ee
-caps.latest.revision: 26
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "craigg"
-ms.workload: "Active"
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
 ---
 # SET IDENTITY_INSERT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Allows explicit values to be inserted into the identity column of a table.  
+> [!div class="nextstepaction"]
+> [Please share your feedback about the SQL Docs Table of Contents!](https://aka.ms/sqldocsurvey)
+
+Allows explicit values to be inserted into the identity column of a table.  
 
  ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -42,7 +38,7 @@ ms.workload: "Active"
   
 ```  
   
-SET IDENTITY_INSERT [ database_name . [ schema_name ] . ] table { ON | OFF }  
+SET IDENTITY_INSERT [ [ database_name . ] schema_name . ] table_name { ON | OFF }  
 ```  
   
 ## Arguments  
@@ -52,7 +48,7 @@ SET IDENTITY_INSERT [ database_name . [ schema_name ] . ] table { ON | OFF }
  *schema_name*  
  Is the name of the schema to which the table belongs.  
   
- *table*  
+ *table_name*  
  Is the name of a table with an identity column.  
   
 ## Remarks  

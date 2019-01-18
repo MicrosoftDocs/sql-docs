@@ -1,0 +1,16 @@
+- name: Client Architecture Requirements for Analysis Services Development
+  href: client-architecture-requirements-for-analysis-services-development.md
+- name: Data Types in Analysis Services
+  href: data-types-in-analysis-services.md
+- name: Local Cubes (Analysis Services - Multidimensional Data)
+  href: local-cubes-analysis-services-multidimensional-data.md
+- name: Maximum Capacity Specifications (Analysis Services)
+  href: maximum-capacity-specifications-analysis-services.md
+- name: Object Naming Rules (Analysis Services)
+  href: object-naming-rules-analysis-services.md
+- name: OLAP Engine Server Components
+  href: olap-engine-server-components.md
+- name: Understanding Microsoft OLAP Architecture
+  href: understanding-microsoft-olap-architecture.md
+- name: Understanding Microsoft OLAP Physical Architecture
+  href: understanding-microsoft-olap-physical-architecture.md

@@ -2,16 +2,11 @@
 title: "Raw File Destination | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "integration-services"
-ms.service: ""
-ms.component: "data-flow"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: integration-services
+ms.topic: conceptual
 f1_keywords: 
   - "sql13.dts.designer.rawfiledest.f1"
   - "sql13.dts.designer.rawfiledestinationconnectionmanager.f1"
@@ -23,11 +18,9 @@ helpviewer_keywords:
   - "writing raw data"
   - "Raw File destination"
 ms.assetid: d311b458-aefc-4b4d-b1a1-4c0ebbb34214
-caps.latest.revision: 59
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
-ms.workload: "Inactive"
+manager: craigg
 ---
 # Raw File Destination
   The Raw File destination writes raw data to a file. Because the format of the data is native to the destination, the data requires no translation and little parsing. This means that the Raw File destination can write data more quickly than other destinations such as the Flat File and the OLE DB destinations.  
@@ -92,7 +85,7 @@ ms.workload: "Inactive"
   
 -   1300, productE  
   
- The new data is appended to the end of the raw file, and the sorted keys (PK) are out of order. In addition, the append operation didn’t change the file metadata (sort information). If you read the file by using the Raw File source, the component indicates that the file is still sorted on PK even though the data in the file is no longer in the correct order.  
+ The new data is appended to the end of the raw file, and the sorted keys (PK) are out of order. In addition, the append operation didn't change the file metadata (sort information). If you read the file by using the Raw File source, the component indicates that the file is still sorted on PK even though the data in the file is no longer in the correct order.  
   
  To keep the sorted keys in the correct order while appending data, you can design the package data flow as follows:  
   
@@ -106,7 +99,7 @@ ms.workload: "Inactive"
   
 5.  Write to RawFile2 by using the Raw File destination.  
   
-     RawFile1 is locked because it’s being read from, in the data flow.  
+     RawFile1 is locked because it's being read from, in the data flow.  
   
 6.  Replace RawFile1 with RawFile2.  
   
@@ -126,7 +119,7 @@ ms.workload: "Inactive"
   
  The **Advanced Editor** dialog box reflects the properties that can be set programmatically. For more information about the properties that you can set in the **Advanced Editor** dialog box or programmatically, click one of the following topics:  
   
--   [Common Properties](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
+-   [Common Properties](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
 -   [Raw File Custom Properties](../../integration-services/data-flow/raw-file-custom-properties.md)  
   
@@ -134,7 +127,7 @@ ms.workload: "Inactive"
  For information about how to set properties of the component, see [Set the Properties of a Data Flow Component](../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md).  
   
 ## Related Content  
- Blog entry, [Raw Files Are Awesome](http://www.sqlservercentral.com/blogs/stratesql/archive/2011/1/1/31-days-of-ssis-_1320_-raw-files-are-awesome-_2800_1_2F00_31_2900_.aspx), on sqlservercentral.com.  
+ Blog entry, [Raw Files Are Awesome](https://www.sqlservercentral.com/blogs/stratesql/archive/2011/1/1/31-days-of-ssis-_1320_-raw-files-are-awesome-_2800_1_2F00_31_2900_.aspx), on sqlservercentral.com.  
   
 ## Raw File Destination Editor (Connection Manager Page)
   Use the Raw File Destination Editor to configure the Raw File destination to write raw data to a file.  

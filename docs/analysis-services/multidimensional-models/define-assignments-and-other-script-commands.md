@@ -1,34 +1,18 @@
 ---
 title: "Define Assignments and Other Script Commands | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: analysis-services
-ms.prod_service: "analysis-services"
-ms.service: ""
-ms.component: ""
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
-  
-ms.component: multidimensional-tabular
-ms.component: data-mining
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "empty scripts [Analysis Services]"
-  - "calculations [Analysis Services], scripts"
-  - "MDX [Analysis Services], scripts"
-  - "scripts [Analysis Services], calculations"
-ms.assetid: f28b9b22-3dc7-4a45-b4eb-2d023f2c94b8
-caps.latest.revision: 29
-author: "Minewiskan"
-ms.author: "owend"
-manager: "kfile"
-ms.workload: "Inactive"
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: multidimensional-models
+ms.topic: conceptual
+ms.author: owend
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
 ---
 # Define Assignments and Other Script Commands
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-  On the **Calculations** tab of Cube Designer, click the **New ScriptCommand** icon on the toolbar to create an empty script. When you create a new script, it initially is displayed with a blank title in the **Script Organizer** pane of the Calculations tab. The characters you type in the Calculation Expressions pane will be visible as the name of the item in **Script Organizer**. Therefore, you may want to type a commented name on the first line to more easily identify the script in the **Script Organizer** pane. For more information, see [Introduction to MDX Scripting in Microsoft SQL Server 2005](http://go.microsoft.com/fwlink/?LinkId=81892). For more information about performance issues related to MDX queries and calculations, see the section “Writing Efficient MDX” in the [SQL Server 2005 Analysis Services Performance Guide](http://go.microsoft.com/fwlink/?LinkId=81621).  
+  On the **Calculations** tab of Cube Designer, click the **New ScriptCommand** icon on the toolbar to create an empty script. When you create a new script, it initially is displayed with a blank title in the **Script Organizer** pane of the Calculations tab. The characters you type in the Calculation Expressions pane will be visible as the name of the item in **Script Organizer**. Therefore, you may want to type a commented name on the first line to more easily identify the script in the **Script Organizer** pane. For more information, see [Introduction to MDX Scripting in Microsoft SQL Server 2005](http://go.microsoft.com/fwlink/?LinkId=81892).  
   
 > [!IMPORTANT]  
 >  When you initially switch to the **Calculations** tab of Cube Designer, the **Script Organizer** pane contains a single script with a CALCULATE command. The CALCULATE command controls the aggregation of the cells in the cube and should be edited only if you intend to manually specify how the cube is to be aggregated.  

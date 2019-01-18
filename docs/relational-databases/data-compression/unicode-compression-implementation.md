@@ -2,25 +2,19 @@
 title: "Unicode Compression Implementation | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.service: ""
-ms.component: "compression"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "dbe-data-compression"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: performance
+ms.topic: conceptual
 helpviewer_keywords: 
   - "Unicode data compression"
   - "compression [SQL Server], Unicode data"
 ms.assetid: 44e69e60-9b35-43fe-b9c7-8cf34eaea62a
-caps.latest.revision: 7
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-ms.workload: "Inactive"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Unicode Compression Implementation
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -34,7 +28,7 @@ ms.workload: "Inactive"
 >  Unicode compression is not supported for **nvarchar(max)** data even if it is stored in row. However, this data type can still benefit from page compression.  
   
 ## Upgrading from Earlier Versions of SQL Server  
- When a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database is upgraded to [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], Unicode compression–related changes are not made to any database object, compressed or uncompressed. After the database is upgraded, objects are affected as follows:  
+ When a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database is upgraded to [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], Unicode compression-related changes are not made to any database object, compressed or uncompressed. After the database is upgraded, objects are affected as follows:  
   
 -   If the object is not compressed, no changes are made and the object continues to function as it did previously.  
   

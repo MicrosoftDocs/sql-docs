@@ -2,15 +2,10 @@
 title: "RESTORE MASTER KEY (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "sql-database"
-ms.service: ""
-ms.component: "t-sql|statements"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: t-sql
 ms.topic: "language-reference"
 f1_keywords: 
   - "RESTORE_MASTER_KEY_TSQL"
@@ -28,11 +23,9 @@ helpviewer_keywords:
   - "transferring Database Master Keys"
   - "RESTORE MASTER KEY statement"
 ms.assetid: 70ceb951-31a2-4fc4-a0c1-e6c18eeb3ae7
-caps.latest.revision: 23
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "craigg"
-ms.workload: "On Demand"
+author: VanMSFT
+ms.author: vanto
+manager: craigg
 ---
 # RESTORE MASTER KEY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

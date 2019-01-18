@@ -1,25 +1,14 @@
 ---
 title: "Create a Report Data Source | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: analysis-services
-ms.prod_service: "analysis-services"
-ms.service: ""
-ms.component: ""
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
-  
-ms.component: multidimensional-tabular
-ms.component: data-mining
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-ms.assetid: bd6662c7-ffbe-479d-8944-3dc858340998
-caps.latest.revision: 8
-author: "Minewiskan"
-ms.author: "owend"
-manager: "kfile"
-ms.workload: "Inactive"
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: multidimensional-models
+ms.topic: conceptual
+ms.author: owend
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
 ---
 # Create a Report Data Source
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -55,14 +44,14 @@ ms.workload: "Inactive"
   
 5.  In **Connection String**, specify the Analysis Services server name, database name, cube name, and any optional settings.  
   
-     Connection String: `Data source=<servername>;initial catalog=<multidimensionaldatabasename>-ee;cube='<cubename>’`  
+     Connection String: `Data source=<servername>;initial catalog=<multidimensionaldatabasename>-ee;cube='<cubename>'`  
   
     > [!NOTE]  
     >  If there is more than one cube, you must specify a cube name.  
   
-     (Optional) Cubes can have perspectives that provide users a select view where only certain dimensions and/or measure groups are visible in the client. To specify a perspective, enter the perspective name as a value to the Cube property: `Data source=<servername>;initial catalog=<multidimensionaldatabasename>-ee;cube='<perspectivename>’`  
+     (Optional) Cubes can have perspectives that provide users a select view where only certain dimensions and/or measure groups are visible in the client. To specify a perspective, enter the perspective name as a value to the Cube property: `Data source=<servername>;initial catalog=<multidimensionaldatabasename>-ee;cube='<perspectivename>'`  
   
-     (Optional) Cubes can have metadata and data translations specified for various languages within the model. In order to see the translations (data and metadata) you need to add the “Locale Identifier” property to the connection string: `Data source=<servername>;initial catalog=<multidimensionaldatabasename>-ee;cube='<cubename>’; Locale Identifier=<identifier number>`  
+     (Optional) Cubes can have metadata and data translations specified for various languages within the model. In order to see the translations (data and metadata) you need to add the "Locale Identifier" property to the connection string: `Data source=<servername>;initial catalog=<multidimensionaldatabasename>-ee;cube='<cubename>'; Locale Identifier=<identifier number>`  
   
 6.  In **Credentials**, specify how the report server obtains credentials to access the external data source.  
   

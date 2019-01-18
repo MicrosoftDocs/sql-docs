@@ -1,24 +1,17 @@
 ---
-title: "Data type conversion rules for dwloader"
-author: "barbkess" 
-ms.author: "barbkess"
-manager: "jhubbard"	  
-ms.prod: "analytics-platform-system"
-ms.prod_service: "mpp-data-warehouse"
-ms.service: ""
-ms.component:
-ms.suite: "sql"
-ms.custom: ""
-ms.technology: "mpp-data-warehouse"
-description: "This topic describes the input data formats and implicit data type conversions that dwloader Command-Line Loader supports when it loads data into PDW."
-ms.date: "10/20/2016"
-ms.topic: "article"
-ms.assetid: 79c48520-b08b-4b15-a943-a551cc90a2c4
-caps.latest.revision: 30
-
+title: Dwloader data type conversion rules - Parallel Data Warehouse | Microsoft Docs
+description: This topic describes the input data formats and implicit data type conversions that dwloader Command-Line Loader supports when it loads data into Parallel Data Warehouse (PDW)."
+author: mzaman1 
+manager: craigg
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
 ---
 
-# Data type conversion rules for dwloader
+# Data type conversion rules for dwloader - Parallel Data Warehouse
 This topic describes the input data formats and implicit data type conversions that [dwloader Command-Line Loader](dwloader.md) supports when it loads data into PDW. The implicit data conversions occur when the input data does not match the data type in the SQL Server PDW target table. Use this information when designing your loading process to ensure your data will load successfully into SQL Server PDW.  
    
   
@@ -105,7 +98,7 @@ Dwloader supports the following data formats for the input data that it is loadi
   
 Details:  
   
--   To separate month, day and year values, you can use ' – ', ' / ', or ' . '. For simplicity, the table uses only the ' – ' separator.  
+-   To separate month, day and year values, you can use ' - ', ' / ', or ' . '. For simplicity, the table uses only the ' - ' separator.  
   
 -   To specify the month as text use three or more characters. Months with 1 or 2 characters will be interpreted as a number.  
   
@@ -131,7 +124,7 @@ The following table defines the default format and rules for loading literal val
 |Decimal literal|fffnn.fffn<br /><br />Example: 1234.5678|A value larger than 1 or less than 0 is converted to 1. For example, the values 123.45 and -123.45 are converted to 1.|  
   
 ### decimal Data Type  
-The following table defines the rules for loading literal values into a column of type **decimal** (*p,s*). Data conversion rules are the same as for SQL Server. For more information, see [Data Type Conversion (Database Engine)](http://go.microsoft.com/fwlink/?LinkId=202128) on MSDN.  
+The following table defines the rules for loading literal values into a column of type **decimal** (*p,s*). Data conversion rules are the same as for SQL Server. For more information, see [Data Type Conversion (Database Engine)](https://go.microsoft.com/fwlink/?LinkId=202128) on MSDN.  
   
 |Input Data Type|Input Data Examples|  
 |-------------------|-----------------------|  

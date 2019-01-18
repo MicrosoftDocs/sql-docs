@@ -2,16 +2,10 @@
 title: "Add or Remove Nodes in a SQL Server Failover Cluster (Setup) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-non-specified"
-ms.prod_service: "database-engine"
-ms.service: ""
-ms.component: "failover-clusters"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "setup-install"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.prod: sql
+ms.technology: install
+ms.topic: conceptual
 helpviewer_keywords: 
   - "adding nodes"
   - "nodes [Faillover Clustering], removing"
@@ -21,11 +15,9 @@ helpviewer_keywords:
   - "cluster maintenance [SQL Server]"
   - "removing nodes"
 ms.assetid: fe20dca9-a4c1-4d32-813d-42f1782dfdd3
-caps.latest.revision: 49
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-ms.workload: "On Demand"
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
 ---
 # Add or Remove Nodes in a SQL Server Failover Cluster (Setup)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -68,7 +60,7 @@ ms.workload: "On Demand"
   
 8.  On the Cluster Node Configuration page, use the drop-down box to specify the name of the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] failover cluster instance that will be modified during this Setup operation.  
   
-9. On the Server Configuration — Service Accounts page, specify login accounts for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] services. The actual services that are configured on this page depend on the features you selected to install. For failover cluster installations, account name and startup type information will be pre-populated on this page based on settings provided for the active node. You must provide passwords for each account. For more information, see [Server Configuration - Service Accounts](http://msdn.microsoft.com/library/c283702d-ab20-4bfa-9272-f0c53c31cb9f) and [Configure Windows Service Accounts and Permissions](../../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md).  
+9. On the Server Configuration - Service Accounts page, specify login accounts for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] services. The actual services that are configured on this page depend on the features you selected to install. For failover cluster installations, account name and startup type information will be pre-populated on this page based on settings provided for the active node. You must provide passwords for each account. For more information, see [Server Configuration - Service Accounts](https://msdn.microsoft.com/library/c283702d-ab20-4bfa-9272-f0c53c31cb9f) and [Configure Windows Service Accounts and Permissions](../../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md).  
   
      **Security Note** [!INCLUDE[ssNoteStrongPass](../../../includes/ssnotestrongpass-md.md)]  
   

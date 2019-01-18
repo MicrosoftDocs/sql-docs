@@ -2,16 +2,10 @@
 title: "Create Statistics | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-non-specified"
-ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
-ms.service: ""
-ms.component: "statistics"
+ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "dbe-statistics"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: performance
+ms.topic: conceptual
 f1_keywords: 
   - "sql13.swb.stat.properties.f1"
   - "sql13.swb.statistics.filter.f1"
@@ -21,11 +15,10 @@ helpviewer_keywords:
   - "creating statistics"
   - "statistics [SQL Server], creating"
 ms.assetid: 95a455fb-664d-4c95-851e-c6b62d7ebe04
-caps.latest.revision: 9
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-ms.workload: "Inactive"
+author: julieMSFT
+ms.author: jrasnick
+manager: craigg
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Create Statistics
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -70,9 +63,9 @@ ms.workload: "Inactive"
   
 3.  Click the plus sign to expand the table in which you want to create a new statistic.  
   
-4.  Right-click the **Statistics** folder and select **New Statistics…**.  
+4.  Right-click the **Statistics** folder and select **New Statistics...**.  
   
-     The following properties show on the **General** page in the **New Statistics on Table***table_name* dialog box.  
+     The following properties show on the **General** page in the **New Statistics on Table**_table\_name_ dialog box.  
   
      **Table Name**  
      Displays the name of the table described by the statistics.  
@@ -116,12 +109,12 @@ ms.workload: "Inactive"
      **Update statistics for these columns**  
      Check to update the statistics when the dialog box is closed.  
   
-     The following property shows on the **Filter** page in the **New Statistics on Table***table_name* dialog box.  
+     The following property shows on the **Filter** page in the **New Statistics on Table**_table\_name_ dialog box.  
   
      **Filter Expression**  
      Defines which data rows to include in the filtered statistics. For example, `Production.ProductSubcategoryID IN ( 1,2,3 )`  
   
-5.  In the **New Statistics on Table***table_name* dialog box, on the **General** page, click **Add**.  
+5.  In the **New Statistics on Table**_table\_name_ dialog box, on the **General** page, click **Add**.  
   
      The following properties show in the **Select Columns** dialog box. This information is read-only.  
   
@@ -142,7 +135,7 @@ ms.workload: "Inactive"
   
 6.  In the **Select Columns** dialog box, select the check box or check boxes of each column for which you want to create a statistic and then click **OK**.  
   
-7.  In the **New Statistics on Table***table_name* dialog box, click **OK**.  
+7.  In the **New Statistics on Table**_table\_name_ dialog box, click **OK**.  
   
 ##  <a name="TsqlProcedure"></a> Using Transact-SQL  
   

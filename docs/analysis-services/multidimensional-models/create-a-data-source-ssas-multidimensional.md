@@ -1,33 +1,14 @@
 ---
 title: "Create a Data Source (SSAS Multidimensional) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/16/2017"
-ms.prod: analysis-services
-ms.prod_service: "analysis-services"
-ms.service: ""
-ms.component: ""
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
-  
-ms.component: multidimensional-tabular
-ms.component: data-mining
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.asvs.sqlserverstudio.impersonationinfo.f1"
-  - "sql13.asvs.connectionmanager.f1"
-  - "sql13.asvs.datasourcedesigner.f1"
-helpviewer_keywords: 
-  - "impersonation [Analysis Services]"
-  - "data sources [Analysis Services], creating"
-  - "security [Analysis Services], data source connections"
-ms.assetid: 9fab8298-10dc-45a9-9a91-0c8e6d947468
-caps.latest.revision: 61
-author: "Minewiskan"
-ms.author: "owend"
-manager: "kfile"
-ms.workload: "On Demand"
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: multidimensional-models
+ms.topic: conceptual
+ms.author: owend
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
 ---
 # Create a Data Source (SSAS Multidimensional)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -81,7 +62,7 @@ ms.workload: "On Demand"
   
 3.  On the **Select how to define the connection** page, choose **Create a data source based on an existing or new connection** and then click **New** to open **Connection Manager**.  
   
-     New connections are created in Connection Manager. In Connection Manager, you select a provider and then specify the connection string properties used by that provider to connect to the underlying data. The exact information required depends upon the provider selected, but generally such information includes a server or service instance, information for logging on to the server or service instance, a database or file name, and other provider-specific settings. For the remainder of this procedure, we’ll assume a SQL Server database connection.  
+     New connections are created in Connection Manager. In Connection Manager, you select a provider and then specify the connection string properties used by that provider to connect to the underlying data. The exact information required depends upon the provider selected, but generally such information includes a server or service instance, information for logging on to the server or service instance, a database or file name, and other provider-specific settings. For the remainder of this procedure, we'll assume a SQL Server database connection.  
   
 4.  Select the [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework or native OLE DB provider to use for the connection.  
   

@@ -2,29 +2,22 @@
 title: "Appendix B: ODBC State Transition Tables | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
-ms.prod_service: "drivers"
-ms.service: ""
-ms.component: "odbc"
+ms.prod: sql
+ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "drivers"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: connectivity
+ms.topic: conceptual
 helpviewer_keywords: 
   - "state transitions [ODBC]"
   - "transitioning states [ODBC], about state transitions"
   - "state transitions [ODBC], about state transitions"
 ms.assetid: 15088dbe-896f-4296-b397-02bb3d0ac0fb
-caps.latest.revision: 8
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
-ms.workload: "Inactive"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # Appendix B: ODBC State Transition Tables
-The tables in this appendix show how ODBC functions cause transitions of the environment, connection, statement, and descriptor states. The state of the environment, connection, statement, or descriptor usually dictates when functions that use the corresponding type of handle (environment, connection, statement, or descriptor) can be called. The environment, connection, statement, and descriptor states overlap roughly as shown in the following illustrations. For example, the exact overlap of connection states C5 and C6 and statement states S1 through S12 is data source–dependent, since transactions begin at different times on different data sources, and descriptor state D1i (implicitly allocated descriptor) depends on the state of the statement with which the descriptor is associated, while state D1e (explicitly allocated descriptor) is independent of the state of any statement. For a description of each state, see [Environment Transitions](../../../odbc/reference/appendixes/environment-transitions.md), [Connection Transitions](../../../odbc/reference/appendixes/connection-transitions.md), [Statement Transitions](../../../odbc/reference/appendixes/statement-transitions.md), and [Descriptor Transitions](../../../odbc/reference/appendixes/descriptor-transitions.md), later in this appendix.  
+The tables in this appendix show how ODBC functions cause transitions of the environment, connection, statement, and descriptor states. The state of the environment, connection, statement, or descriptor usually dictates when functions that use the corresponding type of handle (environment, connection, statement, or descriptor) can be called. The environment, connection, statement, and descriptor states overlap roughly as shown in the following illustrations. For example, the exact overlap of connection states C5 and C6 and statement states S1 through S12 is data source-dependent, since transactions begin at different times on different data sources, and descriptor state D1i (implicitly allocated descriptor) depends on the state of the statement with which the descriptor is associated, while state D1e (explicitly allocated descriptor) is independent of the state of any statement. For a description of each state, see [Environment Transitions](../../../odbc/reference/appendixes/environment-transitions.md), [Connection Transitions](../../../odbc/reference/appendixes/connection-transitions.md), [Statement Transitions](../../../odbc/reference/appendixes/statement-transitions.md), and [Descriptor Transitions](../../../odbc/reference/appendixes/descriptor-transitions.md), later in this appendix.  
   
  The environment and connection states overlap as follows:  
   
@@ -44,17 +37,18 @@ The tables in this appendix show how ODBC functions cause transitions of the env
   
  Each entry in a transition table can be one of the following values:  
   
--   **--** —The state is unchanged after executing the function.  
+-   **--** -The state is unchanged after executing the function.  
   
 -   **E**  
-     ***n*** , **C*n***, **S*n***, or **D*n*** — The environment, connection, statement, or descriptor state moves to the specified state.  
+
+     **_n_** , **C_n_**, **S_n_**, or **D_n_** - The environment, connection, statement, or descriptor state moves to the specified state.  
+ 
+-   **(IH)** - An invalid handle was passed to the function. If the handle was a null handle or was a valid handle of the wrong type - for example, a connection handle was passed when a statement handle was required - the function returns SQL_INVALID_HANDLE; otherwise the behavior is undefined and probably fatal. This error is shown only when it is the only possible outcome of calling the function in the specified state. This error does not change the state and is always detected by the Driver Manager, as indicated by the parentheses.  
   
--   **(IH)** — An invalid handle was passed to the function. If the handle was a null handle or was a valid handle of the wrong type — for example, a connection handle was passed when a statement handle was required — the function returns SQL_INVALID_HANDLE; otherwise the behavior is undefined and probably fatal. This error is shown only when it is the only possible outcome of calling the function in the specified state. This error does not change the state and is always detected by the Driver Manager, as indicated by the parentheses.  
-  
--   **NS** — Next State. The statement transition is the same as if the statement had not gone through the asynchronous states. For example, suppose a statement that creates a result set enters state S11 from state S1 because **SQLExecDirect** returned SQL_STILL_EXECUTING. The NS notation in state S11 means that the transitions for the statement are the same as those for a statement in state S1 that creates a result set. If **SQLExecDirect** returns an error, the statement remains in state S1; if it succeeds, the statement moves to state S5; if it needs data, the statement moves to state S8; and if it is still executing, it remains in state S11.  
-  
--   ***XXXXX***  or **(*XXXXX*)** — An SQLSTATE that is related to the transition table; SQLSTATEs detected by the Driver Manager are enclosed in parentheses. The function returned SQL_ERROR and the specified SQLSTATE, but the state does not change. For example, if **SQLExecute** is called before **SQLPrepare**, it returns SQLSTATE HY010 (Function sequence error).  
-  
+-   **NS** - Next State. The statement transition is the same as if the statement had not gone through the asynchronous states. For example, suppose a statement that creates a result set enters state S11 from state S1 because **SQLExecDirect** returned SQL_STILL_EXECUTING. The NS notation in state S11 means that the transitions for the statement are the same as those for a statement in state S1 that creates a result set. If **SQLExecDirect** returns an error, the statement remains in state S1; if it succeeds, the statement moves to state S5; if it needs data, the statement moves to state S8; and if it is still executing, it remains in state S11.  
+
+-   **_XXXXX_**  or **(*XXXXX*)** - An SQLSTATE that is related to the transition table; SQLSTATEs detected by the Driver Manager are enclosed in parentheses. The function returned SQL_ERROR and the specified SQLSTATE, but the state does not change. For example, if **SQLExecute** is called before **SQLPrepare**, it returns SQLSTATE HY010 (Function sequence error).  
+
 > [!NOTE]  
 >  The tables do not show errors unrelated to the transition tables that do not change the state. For example, when **SQLAllocHandle** is called in environment state E1 and returns SQLSTATE HY001 (Memory allocation error), the environment remains in state E1; this is not shown in the environment transition table for **SQLAllocHandle**.  
   

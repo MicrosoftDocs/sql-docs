@@ -2,27 +2,20 @@
 title: "View the Definition of a Stored Procedure | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-non-specified"
-ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
-ms.service: ""
-ms.component: "stored-procedures"
+ms.prod: sql
+ms.technology: stored-procedures
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "dbe-stored-Procs"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "stored procedures [SQL Server], viewing"
   - "definition of stored procedure"
   - "viewing stored procedures"
   - "displaying stored procedures"
 ms.assetid: 93318587-a0c5-4788-946f-3b5dc8372ea9
-caps.latest.revision: 29
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-ms.workload: "Active"
+author: "stevestein"
+ms.author: "sstein"
+manager: craigg
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # View the Definition of a Stored Procedure
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

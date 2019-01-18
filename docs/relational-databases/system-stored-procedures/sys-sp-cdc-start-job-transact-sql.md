@@ -2,15 +2,10 @@
 title: "sys.sp_cdc_start_job (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "database-engine"
-ms.service: ""
-ms.component: "system-stored-procedures"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: system-objects
 ms.topic: "language-reference"
 f1_keywords: 
   - "sp_cdc_start_job"
@@ -22,11 +17,9 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_cdc_start_job"
 ms.assetid: cf443a67-7705-4799-9f39-0e3a6a8a0708
-caps.latest.revision: 16
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "craigg"
-ms.workload: "Inactive"
+author: rothja
+ms.author: jroth
+manager: craigg
 ---
 # sys.sp_cdc_start_job (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,7 +36,7 @@ sys.sp_cdc_start_job [ [ @job_type = ] 'job_type' ]
 ```  
   
 ## Arguments  
- [ [ **@job_type=** ] **'***job_type***'** ]  
+ [ [ **@job_type=** ] **'**_job_type_**'** ]  
  Type of job to add. *job_type* is **nvarchar(20)** with a default of **capture**. Valid inputs are **capture** and **cleanup**.  
   
 ## Return Code Values  

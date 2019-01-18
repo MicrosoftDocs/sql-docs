@@ -1,16 +1,11 @@
 ---
 title: "CREATE INDEX (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/21/2017"
-ms.prod: "sql-non-specified"
+ms.date: "09/26/2018"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
-ms.service: ""
-ms.component: "t-sql|statements"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: t-sql
 ms.topic: "language-reference"
 f1_keywords: 
   - "CREATE INDEX"
@@ -56,14 +51,16 @@ helpviewer_keywords:
   - "secondary indexes [SQL Server]"
   - "XML indexes [SQL Server], creating"
 ms.assetid: d2297805-412b-47b5-aeeb-53388349a5b9
-caps.latest.revision: 223
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "craigg"
-ms.workload: "Active"
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # CREATE INDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+
+> [!div class="nextstepaction"]
+> [Please share your feedback about the SQL Docs Table of Contents!](https://aka.ms/sqldocsurvey)
 
 Creates a relational index on a table or view. Also called a rowstore index because it is either a clustered or nonclustered B-tree index. You can create a rowstore index before there is data in the table. Use a rowstore index to improve query performance, especially when the queries select from specific columns or require values to be sorted in a particular order.  
   
@@ -105,10 +102,10 @@ CREATE UNIQUE INDEX i1 ON t1 (col1 DESC, col2 ASC, col3 DESC);
 ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
-  
+
+### Syntax for SQL Server and Azure SQL Database
+
 ```  
--- Syntax for SQL Server and Azure SQL Database
-  
 CREATE [ UNIQUE ] [ CLUSTERED | NONCLUSTERED ] INDEX index_name   
     ON <object> ( column [ ASC | DESC ] [ ,...n ] )   
     [ INCLUDE ( column_name [ ,...n ] ) ]  
@@ -139,6 +136,8 @@ CREATE [ UNIQUE ] [ CLUSTERED | NONCLUSTERED ] INDEX index_name
   | STATISTICS_INCREMENTAL = { ON | OFF }  
   | DROP_EXISTING = { ON | OFF }  
   | ONLINE = { ON | OFF }  
+  | RESUMABLE = {ON | OF }
+  | MAX_DURATION = <time> [MINUTES]
   | ALLOW_ROW_LOCKS = { ON | OFF }  
   | ALLOW_PAGE_LOCKS = { ON | OFF }  
   | MAXDOP = max_degree_of_parallelism  
@@ -164,14 +163,16 @@ CREATE [ UNIQUE ] [ CLUSTERED | NONCLUSTERED ] INDEX index_name
   
 <range> ::=   
 <partition_number_expression> TO <partition_number_expression>  
-  
-Backward Compatible Relational Index
+```
+
+### Backward Compatible Relational Index
 
 > [!IMPORTANT]
 > The backward compatible relational index syntax structure will be removed in a future version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. 
 > Avoid using this syntax structure in new development work, and plan to modify applications that currently use the feature. 
 > Use the syntax structure specified in <relational_index_option> instead.  
-  
+
+```  
 CREATE [ UNIQUE ] [ CLUSTERED | NONCLUSTERED ] INDEX index_name   
     ON <object> ( column_name [ ASC | DESC ] [ ,...n ] )   
     [ WITH <backward_compatible_index_option> [ ,...n ] ]  
@@ -193,10 +194,9 @@ CREATE [ UNIQUE ] [ CLUSTERED | NONCLUSTERED ] INDEX index_name
   | DROP_EXISTING   
 }  
 ```  
-
+### Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
   
 ```  
--- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
   
 CREATE [ CLUSTERED | NONCLUSTERED ] INDEX index_name   
     ON [ database_name . [ schema ] . | schema . ] table_name   
@@ -240,7 +240,7 @@ Creates an index that specifies the logical ordering of a table. With a nonclust
  *column*  
  Is the column or columns on which the index is based. Specify two or more column names to create a composite index on the combined values in the specified columns. List the columns to be included in the composite index, in sort-priority order, inside the parentheses after *table_or_view_name*.  
   
- Up to 32 columns can be combined into a single composite index key. All the columns in a composite index key must be in the same table or view. The maximum allowable size of the combined index values is 900 bytes for a clustered index, or 1,700 for a nonclustered index. The limits are 16 columns and 900 bytes for versions before [!INCLUDE[ssSDS](../../includes/sssds-md.md)] V12 and [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)].  
+ Up to 32 columns can be combined into a single composite index key. All the columns in a composite index key must be in the same table or view. The maximum allowable size of the combined index values is 900 bytes for a clustered index, or 1,700 for a nonclustered index. The limits are 16 columns and 900 bytes for versions before [!INCLUDE[ssSDS](../../includes/sssds-md.md)] and [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)].  
   
  Columns that are of the large object (LOB) data types **ntext**, **text**, **varchar(max)**, **nvarchar(max)**, **varbinary(max)**, **xml**, or **image** cannot be specified as key columns for an index. Also, a view definition cannot include **ntext**, **text**, or **image** columns, even if they are not referenced in the CREATE INDEX statement.  
   
@@ -249,7 +249,7 @@ Creates an index that specifies the logical ordering of a table. With a nonclust
  [ **ASC** | DESC ]  
  Determines the ascending or descending sort direction for the particular index column. The default is ASC.  
   
- INCLUDE **(***column* [ **,**... *n* ] **)**  
+ INCLUDE **(**_column_ [ **,**... *n* ] **)**  
  Specifies the non-key columns to be added to the leaf level of the nonclustered index. The nonclustered index can be unique or non-unique.  
   
  Column names cannot be repeated in the INCLUDE list and cannot be used simultaneously as both key and non-key columns. Nonclustered indexes always contain the clustered index columns if a clustered index is defined on the table. For more information, see [Create Indexes with Included Columns](../../relational-databases/indexes/create-indexes-with-included-columns.md).  
@@ -275,7 +275,7 @@ Creates an index that specifies the logical ordering of a table. With a nonclust
   
  Filtered indexes do not apply to XML indexes and full-text indexes. For UNIQUE indexes, only the selected rows must have unique index values. Filtered indexes do not allow the IGNORE_DUP_KEY option.  
   
-ON *partition_scheme_name* **( *column_name* )**  
+ON _partition_scheme_name_ **( *column_name* )**  
 **Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
   
  Specifies the partition scheme that defines the filegroups onto which the partitions of a partitioned index will be mapped. The partition scheme must exist within the database by executing either [CREATE PARTITION SCHEME](../../t-sql/statements/create-partition-scheme-transact-sql.md) or [ALTER PARTITION SCHEME](../../t-sql/statements/alter-partition-scheme-transact-sql.md). *column_name* specifies the column against which a partitioned index will be partitioned. This column must match the data type, length, and precision of the argument of the partition function that *partition_scheme_name* is using. *column_name* is not restricted to the columns in the index definition. Any column in the base table can be specified, except when partitioning a UNIQUE index, *column_name* must be chosen from among those used as the unique key. This restriction allows the [!INCLUDE[ssDE](../../includes/ssde-md.md)] to verify uniqueness of key values within a single partition only.  
@@ -298,16 +298,19 @@ ON *partition_scheme_name* **( *column_name* )**
  ON **"**default**"**  
  **Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] and [!INCLUDE[ssCurrent](../../includes/sssdsfull-md.md)].  
   
- Creates the specified index on the default filegroup.  
+ Creates the specified index on the same filegroup or partition scheme as the table or view.  
   
- The term default, in this context, is not a keyword. It is an identifier for the default filegroup and must be delimited, as in ON **"**default**"** or ON **[**default**]**. If "default" is specified, the QUOTED_IDENTIFIER option must be ON for the current session. This is the default setting. For more information, see [SET QUOTED_IDENTIFIER &#40;Transact-SQL&#41;](../../t-sql/statements/set-quoted-identifier-transact-sql.md).  
+ The term default, in this context, is not a keyword. It is an identifier for the default filegroup and must be delimited, as in ON **"**default**"** or ON **[**default**]**. If "default" is specified, the QUOTED_IDENTIFIER option must be ON for the current session. This is the default setting. For more information, see [SET QUOTED_IDENTIFIER &#40;Transact-SQL&#41;](../../t-sql/statements/set-quoted-identifier-transact-sql.md).
+ 
+> [!NOTE]  
+> "default" does not indicate the database default filegroup in the context of CREATE INDEX. This differs from CREATE TABLE, where "default" locates the table on the database default filegroup.
   
  [ FILESTREAM_ON { *filestream_filegroup_name* | *partition_scheme_name* | "NULL" } ]  
  **Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
  Specifies the placement of FILESTREAM data for the table when a clustered index is created. The FILESTREAM_ON clause allows FILESTREAM data to be moved to a different FILESTREAM filegroup or partition scheme.  
   
- *filestream_filegroup_name* is the name of a FILESTREAM filegroup. The filegroup must have one file defined for the filegroup by using a [CREATE DATABASE](../../t-sql/statements/create-database-sql-server-transact-sql.md) or [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql.md) statement; otherwise, an error is raised.  
+ *filestream_filegroup_name* is the name of a FILESTREAM filegroup. The filegroup must have one file defined for the filegroup by using a [CREATE DATABASE](../../t-sql/statements/create-database-transact-sql.md?&tabs=sqlserver) or [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql.md) statement; otherwise, an error is raised.  
   
  If the table is partitioned, the FILESTREAM_ON clause must be included and must specify a partition scheme of FILESTREAM filegroups that uses the same partition function and partition columns as the partition scheme for the table. Otherwise, an error is raised.  
   
@@ -334,9 +337,9 @@ ON *partition_scheme_name* **( *column_name* )**
   
  Beginning with [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], the object can be a table stored with a clustered columnstore index.  
   
- [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] supports the three-part name format *database_name***.**[*schema_name*]**.***object_name* when the *database_name* is the current database or the *database_name* is tempdb and the *object_name* starts with #.  
+ [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] supports the three-part name format _database\_name_**.**[*schema_name*]**.**_object\_name_ when the *database_name* is the current database or the *database_name* is tempdb and the *object_name* starts with #.  
   
- **\<relational_index_option>::=**  
+ **\<relational_index_option\>::=**  
   
  Specifies the options to use when you create the index.  
   
@@ -355,7 +358,7 @@ ON *partition_scheme_name* **( *column_name* )**
   
  In backward compatible syntax, WITH PAD_INDEX is equivalent to WITH PAD_INDEX = ON.  
   
- FILLFACTOR **=***fillfactor*  
+ FILLFACTOR **=**_fillfactor_  
  **Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
   
  Specifies a percentage that indicates how full the [!INCLUDE[ssDE](../../includes/ssde-md.md)] should make the leaf level of each index page during index creation or rebuild. *fillfactor* must be an integer value from 1 to 100. If *fillfactor* is 100, the [!INCLUDE[ssDE](../../includes/ssde-md.md)] creates indexes with leaf pages filled to capacity.  
@@ -449,7 +452,7 @@ In backward compatible syntax, WITH DROP_EXISTING is equivalent to WITH DROP_EXI
 ONLINE = { ON | **OFF** }  
 Specifies whether underlying tables and associated indexes are available for queries and data modification during the index operation. The default is OFF.  
   
-> [!NOTE]  
+> [!NOTE]
 > Online index operations are not available in every edition of [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. For a list of features that are supported by the editions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], see [Editions and Supported Features for SQL Server 2016](../../sql-server/editions-and-supported-features-for-sql-server-2016.md).  
   
  ON  
@@ -459,7 +462,28 @@ Specifies whether underlying tables and associated indexes are available for que
  Table locks are applied for the duration of the index operation. An offline index operation that creates, rebuilds, or drops a clustered index, or rebuilds or drops a nonclustered index, acquires a Schema modification (Sch-M) lock on the table. This prevents all user access to the underlying table for the duration of the operation. An offline index operation that creates a nonclustered index acquires a Shared (S) lock on the table. This prevents updates to the underlying table but allows read operations, such as SELECT statements.  
   
  For more information, see [How Online Index Operations Work](../../relational-databases/indexes/how-online-index-operations-work.md).  
-  
+ 
+RESUMABLE **=** { ON | **OFF**}
+
+**Applies to**: [!INCLUDE[ssSDS](../../includes/sssds-md.md)] and [!INCLUDE[ssNoVersion](../../includes/sssqlv15-md.md)] as a public preview feature
+
+ Specifies whether an online index operation is resumable.
+
+ ON
+Index operation is resumable.
+
+ OFF
+Index operation is not resumable.
+
+MAX_DURATION **=** _time_ [**MINUTES**] used with **RESUMABLE = ON** (requires **ONLINE = ON**).
+ 
+**Applies to**: [!INCLUDE[ssSDS](../../includes/sssds-md.md)] and [!INCLUDE[ssNoVersion](../../includes/sssqlv15-md.md)] as a public preview feature
+
+Indicates time (an integer value specified in minutes) that a resumable online index operation is executed before being paused. 
+
+> [!WARNING]
+>  For more detailed information about index operations that can be performed online, see [Guidelines for Online Index Operations](../../relational-databases/indexes/guidelines-for-online-index-operations.md).
+
  Indexes, including indexes on global temp tables, can be created online with the following exceptions:  
   
 -   XML index  
@@ -511,7 +535,7 @@ MAXDOP = *max_degree_of_parallelism*
   
  For more information, see [Configure Parallel Index Operations](../../relational-databases/indexes/configure-parallel-index-operations.md).  
   
-> [!NOTE]  
+> [!NOTE]
 > Parallel index operations are not available in every edition of [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. For a list of features that are supported by the editions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], see [Editions and Supported Features for SQL Server 2016](../../sql-server/editions-and-supported-features-for-sql-server-2016.md) and [Editions and Supported Features for SQL Server 2017](../../sql-server/editions-and-components-of-sql-server-2017.md).  
   
  DATA_COMPRESSION  
@@ -625,7 +649,7 @@ DATA_COMPRESSION = PAGE ON PARTITIONS (3, 5)
  For information about XML indexes see, [CREATE XML INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-xml-index-transact-sql.md) and [XML Indexes &#40;SQL Server&#41;](../../relational-databases/xml/xml-indexes-sql-server.md).  
   
 ## Index Key Size  
- The maximum size for an index key is 900 bytes for a clustered index and 1,700 bytes for a nonclustered index. (Before [!INCLUDE[ssSDS](../../includes/sssds-md.md)] V12 and [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] the limit was always 900 bytes.) Indexes on **varchar** columns that exceed the byte limit can be created if the existing data in the columns do not exceed the limit at the time the index is created; however, subsequent insert or update actions on the columns that cause the total size to be greater than the limit will fail. The index key of a clustered index cannot contain **varchar** columns that have existing data in the ROW_OVERFLOW_DATA allocation unit. If a clustered index is created on a **varchar** column and the existing data is in the IN_ROW_DATA allocation unit, subsequent insert or update actions on the column that would push the data off-row will fail.  
+ The maximum size for an index key is 900 bytes for a clustered index and 1,700 bytes for a nonclustered index. (Before [!INCLUDE[ssSDS](../../includes/sssds-md.md)] and [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] the limit was always 900 bytes.) Indexes on **varchar** columns that exceed the byte limit can be created if the existing data in the columns do not exceed the limit at the time the index is created; however, subsequent insert or update actions on the columns that cause the total size to be greater than the limit will fail. The index key of a clustered index cannot contain **varchar** columns that have existing data in the ROW_OVERFLOW_DATA allocation unit. If a clustered index is created on a **varchar** column and the existing data is in the IN_ROW_DATA allocation unit, subsequent insert or update actions on the column that would push the data off-row will fail.  
   
  Nonclustered indexes can include non-key columns in the leaf level of the index. These columns are not considered by the [!INCLUDE[ssDE](../../includes/ssde-md.md)] when calculating the index key size . For more information, see [Create Indexes with Included Columns](../../relational-databases/indexes/create-indexes-with-included-columns.md).  
   
@@ -646,7 +670,7 @@ DATA_COMPRESSION = PAGE ON PARTITIONS (3, 5)
   
  Computed columns derived from **image**, **ntext**, **text**, **varchar(max)**, **nvarchar(max)**, **varbinary(max)**, and **xml** data types can be indexed either as a key or included non-key column as long as the computed column data type is allowable as an index key column or non-key column. For example, you cannot create a primary XML index on a computed **xml** column. If the index key size exceeds 900 bytes, a warning message is displayed.  
   
- Creating an index on a computed column may cause the failure of an insert or update operation that previously worked. Such a failure may take place when the computed column results in arithmetic error. For example, in the following table, although computed column `c` results in an arithmetic error, the `INSERT` statement works.  
+ Creating an index on a computed column may cause the failure of an insert or update operation that previously worked. Such a failure may take place when the computed column results in arithmetic error. For example, in the following table, although computed column `c` results in an arithmetic error, the INSERT statement works.  
   
 ```sql  
 CREATE TABLE t1 (a int, b int, c AS a/b);  
@@ -669,9 +693,9 @@ INSERT INTO t1 VALUES (1, 0);
 ## Specifying Index Options  
  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] introduced new index options and also modifies the way in which options are specified. In backward compatible syntax, WITH *option_name* is equivalent to WITH **(** \<option_name> **= ON )**. When you set index options, the following rules apply: 
   
--   New index options can only be specified by using WITH (***option_name* = ON | OFF**).  
+-   New index options can only be specified by using WITH (**_option\_name_ = ON | OFF**).  
 -   Options cannot be specified by using both the backward compatible and new syntax in the same statement. For example, specifying WITH (**DROP_EXISTING, ONLINE = ON**) causes the statement to fail.  
--   When you create an XML index, the options must be specified by using WITH (***option_name*= ON | OFF**).  
+-   When you create an XML index, the options must be specified by using WITH (**_option_name_= ON | OFF**).  
   
 ## DROP_EXISTING Clause  
  You can use the DROP_EXISTING clause to rebuild the index, add or drop columns, modify options, modify column sort order, or change the partition scheme or filegroup.  
@@ -694,7 +718,44 @@ INSERT INTO t1 VALUES (1, 0);
 -   Online operations can be performed on partitioned indexes and indexes that contain persisted computed columns, or included columns.  
   
  For more information, see [Perform Index Operations Online](../../relational-databases/indexes/perform-index-operations-online.md).  
-  
+ 
+### <a name="resumable-indexes"></a>Resumable index operations
+
+**Applies to**: [!INCLUDE[ssSDS](../../includes/sssds-md.md)] and [!INCLUDE[ssNoVersion](../../includes/sssqlv15-md.md)] as a public preview feature
+
+The following guidelines apply for resumable index operations:
+
+- Online index create is specified as resumable using the RESUMABLE = ON option. 
+- The RESUMABLE option is not persisted in the metadata for a given index and applies only to the duration of a current DDL statement. Therefore, the RESUMABLE = ON clause must be specified explicitly to enable resumability.
+- MAX_DURATION option is only supported for RESUMABLE = ON option. 
+-  MAX_DURATION for RESUMABLE option specifies the time interval for an index being built. Once this time is used the index build is either paused or it completes its execution. User decides when a build for a paused index can be resumed. The **time** in minutes for MAX_DURATION must be greater than 0 minutes and less or equal one week (7 * 24 * 60 = 10080 minutes). Having a long pause for an index operation may impact the DML performance on a specific table as well as the database disk capacity since both indexes the original one and the newly created one require disk space and need to be updated during DML operations. If MAX_DURATION option is omitted, the index operation will continue until its completion or until a failure occurs. 
+- To pause immediately the index operation, you can stop (Ctrl-C) the ongoing command, execute the [ALTER INDEX](alter-index-transact-sql.md) PAUSE command, or execute the KILL `<session_id>` command. Once the command is paused, it can be resumed using [ALTER INDEX](alter-index-transact-sql.md) command. 
+- Re-executing the original CREATE INDEX statement for resumable index, automatically resumes a paused index create operation.
+- The SORT_IN_TEMPDB=ON option is not supported for resumable index. 
+- The DDL command with RESUMABLE=ON cannot be executed inside an explicit transaction (cannot be part of begin TRAN ... COMMIT block).
+- To resume/abort an index create/rebuild, use the [ALTER INDEX](alter-index-transact-sql.md) T-SQL syntax
+
+> [!NOTE]
+> The DDL command runs until it completes, pauses or fails. In case the command pauses, an error will be issued indicating that the operation was paused and that the index creation did not complete. More information about the current index status can be obtained from [sys.index_resumable_operations](../../relational-databases/system-catalog-views/sys-index-resumable-operations.md). As before in case of a failure an error will be issued as well. 
+
+To indicate that an index create is executed as resumable operation and to check its current execution state, see [sys.index_resumable_operations](../../relational-databases/system-catalog-views/sys-index-resumable-operations.md). 
+
+**Resources**
+The following resources are required for resumable online index create operation
+- Additional space required to keep the index being built, including the time when index is being paused
+- Additional log throughput during the sorting phase. The overall log space usage for resumable index is less compared to regular online index create and allows log truncation during this operation.
+- A DDL state preventing any DDL modification
+  -	Ghost cleanup is blocked on the in-build index for the duration of the operation both while paused and while the operation is running.
+
+**Current functional limitations**
+
+The following functionality is disabled for resumable index create operations
+- After a resumable online index create operation is paused, the initial value of MAXDOP cannot be changed
+- Create an index that contains 
+ - Computed or TIMESTAMP column(s) as key columns
+ - LOB column as included column for resumable index create
+ - Filtered index
+ 
 ## Row and Page Locks Options  
  When ALLOW_ROW_LOCKS = ON and ALLOW_PAGE_LOCK = ON, row-, page-, and table-level locks are allowed when accessing the index. The [!INCLUDE[ssDE](../../includes/ssde-md.md)] chooses the appropriate lock and can escalate the lock from a row or page lock to a table lock.  
   
@@ -981,11 +1042,57 @@ WITH (DATA_COMPRESSION = PAGE ON PARTITIONS(1),
     DATA_COMPRESSION = ROW ON PARTITIONS (2 TO 4 ) ) ;  
 GO  
 ```  
-  
+### M. Create, resume, pause, and abort resumable index operations
+
+**Applies to**: [!INCLUDE[ssSDS](../../includes/sssds-md.md)] and [!INCLUDE[ssNoVersion](../../includes/sssqlv15-md.md)] as a public preview feature
+
+```sql
+-- Execute a resumable online index create statement with MAXDOP=1
+CREATE  INDEX test_idx1 on test_table (col1) WITH (ONLINE=ON, MAXDOP=1, RESUMABLE=ON)  
+
+-- Executing the same command again (see above) after an index operation was paused, resumes automatically the index create operation.
+
+-- Execute a resumable online index creates operation with MAX_DURATION set to 240 minutes. After the time expires, the resumable index create operation is paused.
+CREATE INDEX test_idx2 on test_table (col2) WITH (ONLINE=ON, RESUMABLE=ON, MAX_DURATION=240)   
+
+-- Pause a running resumable online index creation 
+ALTER INDEX test_idx1 on test_table PAUSE   
+ALTER INDEX test_idx2 on test_table PAUSE   
+
+-- Resume a paused online index creation 
+ALTER INDEX test_idx1 on test_table RESUME   
+ALTER INDEX test_idx2 on test_table RESUME   
+
+-- Abort resumable index create operation which is running or paused
+ALTER INDEX test_idx1 on test_table ABORT 
+ALTER INDEX test_idx2 on test_table ABORT 
+```
+
 ## Examples: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### M. Basic syntax  
-  
+### N. Basic syntax  
+  ### Create, resume, pause, and abort resumable index operations
+
+**Applies to**: [!INCLUDE[ssSDS](../../includes/sssds-md.md)] and [!INCLUDE[ssNoVersion](../../includes/sssqlv15-md.md)] as a public preview feature
+
+```sql
+-- Execute a resumable online index create statement with MAXDOP=1
+CREATE  INDEX test_idx on test_table WITH (ONLINE=ON, MAXDOP=1, RESUMABLE=ON)  
+
+-- Executing the same command again (see above) after an index operation was paused, resumes automatically the index create operation.
+
+-- Execute a resumable online index creates operation with MAX_DURATION set to 240 minutes. After the time expires, the resumable index create operation is paused.
+CREATE INDEX test_idx on test_table  WITH (ONLINE=ON, RESUMABLE=ON, MAX_DURATION=240)   
+
+-- Pause a running resumable online index creation 
+ALTER INDEX test_idx on test_table PAUSE   
+
+-- Resume a paused online index creation 
+ALTER INDEX test_idx on test_table RESUME   
+
+-- Abort resumable index create operation which is running or paused
+ALTER INDEX test_idx on test_table ABORT 
+
 ```sql  
 CREATE INDEX IX_VendorID   
     ON ProductVendor (VendorID);  
@@ -995,7 +1102,7 @@ CREATE INDEX IX_VendorID
     ON Purchasing..ProductVendor (VendorID);  
 ```  
   
-### N. Create a non-clustered index on a table in the current database  
+### O. Create a non-clustered index on a table in the current database  
  The following example creates a non-clustered index on the `VendorID` column of the `ProductVendor` table.  
   
 ```sql  
@@ -1003,7 +1110,7 @@ CREATE INDEX IX_ProductVendor_VendorID
     ON ProductVendor (VendorID);   
 ```  
   
-### O. Create a clustered index on a table in another database  
+### P. Create a clustered index on a table in another database  
  The following example creates a non-clustered index on the `VendorID` column of the `ProductVendor` table in the `Purchasing` database.  
   
 ```sql  
@@ -1030,4 +1137,3 @@ CREATE CLUSTERED INDEX IX_ProductVendor_VendorID
  [sys.xml_indexes &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-xml-indexes-transact-sql.md)   
  [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)  
  
-

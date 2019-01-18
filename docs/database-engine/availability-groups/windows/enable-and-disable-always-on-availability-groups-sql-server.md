@@ -1,30 +1,23 @@
 ---
-title: "Enable and Disable Always On Availability Groups (SQL Server) | Microsoft Docs"
-ms.custom: ""
+title: "Enable or Disable availability group feature"
+description: "Steps to either enable or disable the Always On availability group feature using Transact-SQL (T-SQL), PowerShell, or SQL Server Management Studio."
+ms.custom: "seodec18"
 ms.date: "08/30/2017"
-ms.prod: "sql-non-specified"
-ms.prod_service: "database-engine"
-ms.service: ""
-ms.component: "availability-groups"
+ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: high-availability
+ms.topic: conceptual
 helpviewer_keywords: 
   - "Availability Groups [SQL Server], server instance"
   - "Availability Groups [SQL Server], deploying"
   - "Availability Groups [SQL Server], disabling"
   - "Availability Groups [SQL Server], enabling"
 ms.assetid: 7c326958-5ae9-4761-9c57-905972276a8f
-caps.latest.revision: 60
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-ms.workload: "On Demand"
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
 ---
-# Enable and Disable Always On Availability Groups (SQL Server)
+# Enable or Disable Always On availability group feature
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   Enabling [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] is a prerequisite for a server instance to use availability groups. Before you can create and configure any availability group, the [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] feature must have been enabled on the each instance of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] that will host an availability replica for one or more availability groups.  
@@ -135,7 +128,7 @@ ms.workload: "On Demand"
   
 2.  On the **Start** menu, point to **All Programs**, point to [!INCLUDE[ssCurrentUI](../../../includes/sscurrentui-md.md)], point to **Configuration Tools**, and  click **SQL Server Configuration Manager**.  
   
-3.  In **SQL Server Configuration Manager**, click **SQL Server Services**, right-click SQL Server (**\<***instance name***>)**, where **\<***instance name***>** is the name of a local server instance for which you want to enable Always On Availability Groups, and click **Properties.**  
+3.  In **SQL Server Configuration Manager**, click **SQL Server Services**, right-click SQL Server (**\<**_instance name_**>)**, where **\<**_instance name_**>** is the name of a local server instance for which you want to enable Always On Availability Groups, and click **Properties.**  
   
 4.  Select the **Always On High Availability** tab.  
   
@@ -199,7 +192,7 @@ Enable-SqlAlwaysOn -Path SQLSERVER:\SQL\Computer\Instance
   
 2.  On the **Start** menu, point to **All Programs**, point to [!INCLUDE[ssCurrentUI](../../../includes/sscurrentui-md.md)], point to **Configuration Tools**, and click **SQL Server Configuration Manager**.  
   
-3.  In **SQL Server Configuration Manager**, click **SQL Server Services**, right-click SQL Server (**\<***instance name***>)**, where **\<***instance name***>** is the name of a local server instance for which you want to disable Always On Availability Groups, and click **Properties**.  
+3.  In **SQL Server Configuration Manager**, click **SQL Server Services**, right-click SQL Server (**\<**_instance name_**>)**, where **\<**_instance name_**>** is the name of a local server instance for which you want to disable Always On Availability Groups, and click **Properties**.  
   
 4.  On the**Always On High Availability**tab, deselect the **Enable Always On Availability Groups** check box, and click **OK**.  
   
@@ -210,7 +203,7 @@ Enable-SqlAlwaysOn -Path SQLSERVER:\SQL\Computer\Instance
 ###  <a name="PScmd3Procedure"></a> Using SQL Server PowerShell  
  **To disable Always On**  
   
-1.  Change directory (**cd**) to a currently-enabled server instance that that you want to disenable for Always On Availability Groups.  
+1.  Change directory (**cd**) to a currently-enabled server instance that you want to disenable for Always On Availability Groups.  
   
 2.  Use the **Disable-SqlAlwaysOn** cmdlet to enable Always On Availability Groups.  
   

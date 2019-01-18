@@ -2,24 +2,20 @@
 title: "Open Integration Services Projects in Data Quality Client | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "data-quality-services"
-ms.service: ""
-ms.component: "data-quality-services"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "data-quality-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: data-quality-services
+ms.topic: conceptual
 ms.assetid: a8bad2f1-8fb0-4d14-a978-11a5720e62d6
-caps.latest.revision: 9
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-ms.workload: "Inactive"
+author: "douglaslMS"
+ms.author: "douglasl"
+manager: craigg
 ---
 # Open Integration Services Projects in Data Quality Client
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
   The DQs Cleansing component in Integration Services enables you to run a cleansing project in batch mode. However, at times you might want to review the cleansing results in an Integration Services package similar to how you can review the cleansing results in the **Manage and View Results** tab of a cleansing activity in a data quality project in DQS. DQS enables you to open Integration Services projects in [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] just like any other data quality project from the **Open project** screen, and have an interactive cleansing experience of the cleansing results in an Integration Services project.  
   
 ##  <a name="BeforeYouBegin"></a> Before You Begin  
@@ -49,7 +45,7 @@ ms.workload: "Inactive"
   
 3.  In the **Open project** screen, you can identify an Integration Services project in either of the following ways:  
   
-    1.  **Project Name**: Integration Services projects are listed using the following naming terminology: “Package.DQS Cleansing_*\<DATE>**\<TIME>*_{GUID}.” Every time you successfully run the same package in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], a new project is listed in the **Open project** screen.  
+    1.  **Project Name**: Integration Services projects are listed using the following naming terminology: "Package.DQS Cleansing_*\<DATE>\<TIME>*_{GUID}." Every time you successfully run the same package in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], a new project is listed in the **Open project** screen.  
   
     2.  **Project Type**: Integration Services projects have **SSIS** as the project type in the **Open project** screen.  
   

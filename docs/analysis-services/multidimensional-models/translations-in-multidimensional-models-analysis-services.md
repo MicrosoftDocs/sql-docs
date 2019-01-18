@@ -1,27 +1,14 @@
 ---
 title: "Translations in Multidimensional Models (Analysis Services) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/04/2017"
-ms.prod: analysis-services
-ms.prod_service: "analysis-services"
-ms.service: ""
-ms.component: ""
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
-  
-ms.component: multidimensional-tabular
-ms.component: data-mining
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.asvs.dimensiondesigner.deletelanguagefirm.f1"
-ms.assetid: 5521f8ef-b10a-4861-9df7-1e43e0a1fb3f
-caps.latest.revision: 11
-author: "Minewiskan"
-ms.author: "owend"
-manager: "kfile"
-ms.workload: "Inactive"
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: multidimensional-models
+ms.topic: conceptual
+ms.author: owend
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
 ---
 # Translations in Multidimensional Models (Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -42,7 +29,7 @@ ms.workload: "Inactive"
   
 4.  Right-click any field and select **Explore Data**. You will see English, Spanish, and French translations of each member.  
   
- Formats for date, time, and currency are not implemented through translations. To dynamically provide culturally specific formats based on the client's locale, use the Currency Conversion Wizard and **FormatString** property. See [Currency Conversions &#40;Analysis Services&#41;](../../analysis-services/currency-conversions-analysis-services.md) and [FormatString Element &#40;ASSL&#41;](../../analysis-services/scripting/properties/formatstring-element-assl.md) for details.  
+ Formats for date, time, and currency are not implemented through translations. To dynamically provide culturally specific formats based on the client's locale, use the Currency Conversion Wizard and **FormatString** property. See [Currency Conversions &#40;Analysis Services&#41;](../../analysis-services/currency-conversions-analysis-services.md) and [FormatString Element &#40;ASSL&#41;](https://docs.microsoft.com/bi-reference/assl/properties/formatstring-element-assl) for details.  
   
  [Lesson 9: Defining Perspectives and Translations](../../analysis-services/lesson-9-defining-perspectives-and-translations.md) in the Analysis Services Tutorial will walk you through the steps for creating and testing translations.  
   

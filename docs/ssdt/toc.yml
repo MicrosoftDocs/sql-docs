@@ -1,0 +1,192 @@
+- name: SQL Server Data Tools (SSDT)
+  href: sql-server-data-tools.md
+- name: Download SSDT
+  href: download-sql-server-data-tools-ssdt.md
+- name: Changelog for SSDT
+  href: changelog-for-sql-server-data-tools-ssdt.md
+- name: Data-Tier Application Framework - License Terms
+  href: data-tier-application-framework-license-terms.md
+- name: Previous releases of SSDT and SSDT-BI
+  href: previous-releases-of-sql-server-data-tools-ssdt-and-ssdt-bi.md
+- name: Azure Active Directory support
+  href: azure-active-directory.md
+- name: SQL Server Tools
+  href: sql-server-tools.md
+- name: License Terms - SSDT
+  href: sql-server-data-tools-license-terms.md
+- name: License Terms - SSDT (VS 2017)
+  href: sql-server-data-tools-license-terms-vs2017.md
+- name: Project-Oriented Offline Database Development
+  href: project-oriented-offline-database-development.md
+  items:
+  - name: Import into a Database Project
+    href: import-into-a-database-project.md
+  - name: Add Database Reference Dialog Box
+    href: add-database-reference-dialog-box.md
+  - name: Check for Updates Dialog Box
+    href: check-for-updates-dialog-box.md
+  - name: Database Project Settings
+    href: database-project-settings.md
+  - name: "How to: Browse Objects in a SQL Server Database Project"
+    href: how-to-browse-objects-in-a-sql-server-database-project.md
+  - name: Data Tools Operations Window
+    href: data-tools-operations-window.md
+  - name: Transact-SQL Editor Options
+    href: transact-sql-editor-options.md
+  - name: "How to: Create a New Database Project"
+    href: how-to-create-a-new-database-project.md
+  - name: "How to: Use Schema Compare to Compare Different Database Definitions"
+    href: how-to-use-schema-compare-to-compare-different-database-definitions.md
+  - name: "How to: Build and Deploy to a Local Database"
+    href: how-to-build-and-deploy-to-a-local-database.md
+  - name: "How to: Use Microsoft SQL Server 2012 Objects in Your Project"
+    href: how-to-use-microsoft-sql-server-2012-objects-in-your-project.md
+  - name: "How to: Work with CLR Database Objects"
+    href: how-to-work-with-clr-database-objects.md
+  - name: "How to: Create a Snapshot of a Project"
+    href: how-to-create-a-snapshot-of-a-project.md
+  - name: "How to: Change Target Platform and Publish a Database Project"
+    href: how-to-change-target-platform-and-publish-a-database-project.md
+  - name: "How to: Convert a Visual Studio 2010 Database Projects to SQL Server Database Projects and Retarget to a Different Platform"
+    href: how-to-convert-visual-studio-2010-database-projects-to-ssql-server-projects.md
+  - name: "How to: Specify Predeployment or Postdeployment Scripts"
+    href: how-to-specify-predeployment-or-postdeployment-scripts.md
+- name: Project-Oriented Database Development using Command-Line Tools
+  href: project-oriented-database-development-using-command-line-tools.md
+  items:
+  - name: SqlPackage.exe
+    href: ../tools/sqlpackage.md
+  - name: Using MSDeploy with dbSqlPackage Provider
+    href: using-msdeploy-with-dbsqlpackage-provider.md
+- name: Connected Database Development
+  href: connected-database-development.md
+  items:
+  - name: "How to: Connect to a Database and Browse Existing Objects"
+    href: how-to-connect-to-a-database-and-browse-existing-objects.md
+  - name: "How to: Create Database Objects Using Table Designer"
+    href: how-to-create-database-objects-using-table-designer.md
+  - name: "How to: Update a Connected Database with Power Buffer"
+    href: how-to-update-a-connected-database-with-power-buffer.md
+  - name: Filter and Sort Dialog Box
+    href: filter-and-sort-dialog-box.md
+  - name: "How to: Create New Database Objects Using Queries"
+    href: how-to-create-new-database-objects-using-queries.md
+  - name: "How to: Edit an Existing Table using Queries"
+    href: how-to-edit-an-existing-table-using-queries.md
+  - name: "How to: View and Edit Data in a Table"
+    href: how-to-view-and-edit-data-in-a-table.md
+  - name: "How to: Delete Objects and Resolve Dependencies"
+    href: how-to-delete-objects-and-resolve-dependencies.md
+  - name: "How to: Clone an Existing Database"
+    href: how-to-clone-an-existing-database.md
+  - name: Extract, Publish, and Register .dacpac Files
+    href: extract-publish-and-register-dacpac-files.md
+- name: Compare and Synchronize Data in One or More Tables with Data in a Reference Database
+  href: compare-and-synchronize-data-in-tables-with-data-in-reference-database.md
+  items:
+  - name: "How to: Compare and Synchronize the Data of Two Databases"
+    href: how-to-compare-and-synchronize-the-data-of-two-databases.md
+  - name: "How to: View Data Differences"
+    href: how-to-view-data-differences.md
+  - name: Use Transact-SQL Editor to Edit and Execute Scripts
+    href: use-transact-sql-editor-to-edit-and-execute-scripts.md
+  - name: "How to: Outline and Add Snippets to Transact-SQL Script"
+    href: how-to-outline-and-add-snippets-to-transact-sql-script.md
+  - name: "How to: Navigate Between Scripts"
+    href: how-to-navigate-between-scripts.md
+  - name: "How to: Use Rename and Refactoring to Make Changes to your Database Objects"
+    href: how-to-use-rename-and-refactoring-to-make-changes-to-your-database-objects.md
+  - name: "How to: Execute a Partial Query"
+    href: how-to-execute-a-partial-query.md
+  - name: "How to: Debug Stored Procedures"
+    href: how-to-debug-stored-procedures.md
+  - name: Analyze Script Performance
+    href: analyze-script-performance.md
+- name: Manage Tables, Relationships, and Fix Errors
+  href: manage-tables-relationships-and-fix-errors.md
+  items:
+  - name: "How to: Use the Table Designer to Manage Tables and Relationships"
+    href: how-to-use-the-table-designer-to-manage-tables-and-relationships.md
+  - name: "How to: Fix Errors"
+    href: how-to-fix-errors.md
+- name: Verifying Database Code by Using SQL Server Unit Tests
+  href: verifying-database-code-by-using-sql-server-unit-tests.md
+  items:
+  - name: "Walkthrough: Creating and Running a SQL Server Unit Test"
+    href: walkthrough-creating-and-running-a-sql-server-unit-test.md
+  - name: Creating and Defining SQL Server Unit Tests
+    href: creating-and-defining-sql-server-unit-tests.md
+    items:
+    - name: Scripts in SQL Server Unit Tests
+      href: scripts-in-sql-server-unit-tests.md
+    - name: SQL Server Unit Test Files
+      href: sql-server-unit-test-files.md
+    - name: Using Test Conditions in SQL Server Unit Tests
+      href: using-test-conditions-in-sql-server-unit-tests.md
+    - name: Using Transact-SQL Assertions in SQL Server Unit Tests
+      href: using-transact-sql-assertions-in-sql-server-unit-tests.md
+    - name: "How to: Create a Test Project for SQL Server Database Unit Testing"
+      href: how-to-create-a-test-project-for-sql-server-database-unit-testing.md
+    - name: "How to: Create an Empty SQL Server Unit Test"
+      href: how-to-create-an-empty-sql-server-unit-test.md
+    - name: "How to: Create SQL Server Unit Tests for Functions, Triggers, and Stored Procedures"
+      href: how-to-create-unit-tests-for-functions-triggers-stored-procedures.md
+    - name: "How to: Add Test Conditions to SQL Server Unit Tests"
+      href: how-to-add-test-conditions-to-sql-server-unit-tests.md
+    - name: "How to: Open a SQL Server Unit Test to Edit"
+      href: how-to-open-a-sql-server-unit-test-to-edit.md
+    - name: "How to: Write a SQL Server Unit Test that Runs within the Scope of a Single Transaction"
+      href: how-to-write-sql-server-unit-test-that-runs-in-single-transaction-scope.md
+    - name: "How to: Configure SQL Server Unit Test Execution"
+      href: how-to-configure-sql-server-unit-test-execution.md
+    - name: Overview of Connection Strings and Permissions
+      href: overview-of-connection-strings-and-permissions.md
+    - name: Keyboard Shortcuts for SQL Server Unit Test Designer
+      href: keyboard-shortcuts-for-sql-server-unit-test-designer.md
+  - name: Running SQL Server Unit Tests
+    href: running-sql-server-unit-tests.md
+    items:
+    - name: "How to: Debug Database Objects"
+      href: how-to-debug-database-objects.md
+    - name: "How to: Run SQL Server Unit Tests from Team Foundation Build"
+      href: how-to-run-sql-server-unit-tests-from-team-foundation-build.md
+    - name: "How to: Run SQL Server Unit Tests"
+      href: how-to-run-sql-server-unit-tests.md
+    - name: Interpreting SQL Server Unit Test Results
+      href: interpreting-sql-server-unit-test-results.md
+  - name: Upgrade an Older Test Project Containing Database Unit Tests
+    href: upgrade-an-older-test-project-containing-database-unit-tests.md
+  - name: Custom Test Conditions  for SQL Server Unit Tests
+    href: custom-test-conditions-for-sql-server-unit-tests.md
+    items:
+    - name: "How to: Create Test Conditions for the SQL Server Unit Test Designer"
+      href: how-to-create-test-conditions-for-the-sql-server-unit-test-designer.md
+    - name: "Walkthrough: Using a Custom Test Condition to Verify the Results of a Stored Procedure"
+      href: walkthrough-use-custom-test-condition-to-verify-stored-procedure-results.md
+    - name: "How to: Upgrade a Visual Studio 2010 Custom Test Condition from a Previous Release to SQL Server Data Tools"
+      href: how-to-upgrade-visual-studio-2010-custom-test-condition-to-ssdt.md
+  - name: Troubleshooting SQL Server Database Unit Testing Issues
+    href: troubleshooting-sql-server-database-unit-testing-issues.md
+- name: Extending the Database Features
+  href: extending-the-database-features.md
+  items:
+  - name: Customize Database Build and Deployment by Using Build and Deployment Contributors
+    href: use-deployment-contributors-to-customize-database-build-and-deployment.md
+    items:
+    - name: "Walkthrough: Extend Database Project Build to Generate Model Statistics"
+      href: walkthrough-extend-database-project-build-to-generate-model-statistics.md
+    - name: "Walkthrough: Extend Database Project Deployment to Analyze the Deployment Plan"
+      href: walkthrough-extend-database-project-deployment-to-analyze-the-deployment-plan.md
+    - name: "Walkthrough: Extend Database Project Deployment to Modify the Deployment Plan"
+      href: walkthrough-extend-database-project-deployment-to-modify-the-deployment-plan.md
+  - name: Overview of Extensibility for Database Code Analysis Rules
+    href: overview-of-extensibility-for-database-code-analysis-rules.md
+    items:
+    - name: Walkthrough Authoring a Custom Static Code Analysis Rule Assembly for SQL Server
+      href: walkthrough-author-custom-static-code-analysis-rule-assembly.md
+  - name: "How to: Install and Manage Feature Extensions"
+    href: how-to-install-and-manage-feature-extensions.md
+- name: Required Permissions for SQL Server Data Tools
+  href: required-permissions-for-sql-server-data-tools.md
+- name: DAC Framework Compatibility
+  href: dac-framework-compatibility.md

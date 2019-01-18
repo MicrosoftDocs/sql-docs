@@ -2,26 +2,18 @@
 title: "View Resource Governor Properties | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/18/2016"
-ms.prod: "sql-non-specified"
-ms.prod_service: "database-engine"
-ms.service: ""
-ms.component: "resource-governor"
+ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: performance
+ms.topic: conceptual
 f1_keywords: 
   - "sql13.swb.rg.properties.f1"
 helpviewer_keywords: 
   - "Resource Governor, properties"
 ms.assetid: de3510df-f792-4a9d-80fa-f198fd36cdc8
-caps.latest.revision: 28
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-ms.workload: "Inactive"
+author: julieMSFT
+ms.author: jrasnick
+manager: craigg
 ---
 # View Resource Governor Properties
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -73,7 +65,7 @@ ms.workload: "Inactive"
  Enable or disable Resource Governor by selecting or clearing the check box.  
   
  **Resource pools**  
- Create or change resource pool and external resource pool configuration by using the grid that is provided. This grid is populated with information for the predefined internal and default pools. Select a pool to work with by clicking the first column in the row for the pool. To create a new resource pool, click the row that is prefixed by the asterisk (**\***).  
+ Create or change resource pool and external resource pool configuration by using the grid that is provided. This grid is populated with information for the predefined internal and default pools. Select a pool to work with by clicking the first column in the row for the pool. To create a new resource pool, click the row that is prefixed by the asterisk (**&#42;**).  
   
  **Name**  
  Specify the name of the resource pool.  
@@ -93,7 +85,7 @@ ms.workload: "Inactive"
  For more information, see [CREATE RESOURCE POOL &#40;Transact-SQL&#41;](../../t-sql/statements/create-resource-pool-transact-sql.md) and [CREATE EXTERNAL RESOURCE POOL &#40;Transact-SQL&#41;](../../t-sql/statements/create-external-resource-pool-transact-sql.md).  
   
  **Workload groups for resource pool**  
- Create or change the workload group configuration by using the grid that is provided. This grid is populated with information for the predefined internal and default groups. Select a group to work with by clicking the first column in the row for the pool. To create a new workload group, click the row that is prefixed by the asterisk (**\***).  
+ Create or change the workload group configuration by using the grid that is provided. This grid is populated with information for the predefined internal and default groups. Select a group to work with by clicking the first column in the row for the pool. To create a new workload group, click the row that is prefixed by the asterisk (**&#42;**).  
   
  **Name**  
  Specify the name of the workload group.  

@@ -1,28 +1,22 @@
 ---
 title: "How Query Store Collects Data | Microsoft Docs"
 ms.custom: ""
-ms.date: "09/13/2016"
-ms.prod: "sql-non-specified"
+ms.date: "11/29/2018"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.service: ""
-ms.component: "performance"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: performance
+ms.topic: conceptual
 helpviewer_keywords: 
   - "Query Store, data collection"
 ms.assetid: 8d5eec36-0013-480a-9c11-183e162e4c8e
-caps.latest.revision: 10
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-ms.workload: "Inactive"
+author: julieMSFT
+ms.author: jrasnick
+manager: craigg
+monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # How Query Store Collects Data
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
 
   Query Store works as a **flight data recorder** constantly collecting compile and runtime information related to the queries and plans. Query related data is persisted in the internal tables and presented to users through a set of views.  
   
@@ -30,19 +24,18 @@ ms.workload: "Inactive"
  The following diagram shows Query Store views and their logical relationships, with compile time information presented as blue entities:  
   
  ![query-store-process-2views](../../relational-databases/performance/media/query-store-process-2views.png "query-store-process-2views")  
-  
- **View Descriptions**  
+**View Descriptions**  
   
 |View|Description|  
 |----------|-----------------|  
 |**sys.query_store_query_text**|Presents unique query texts executed against the database. Comments and spaces before and after the query text are ignored. Comments and spaces inside text are not ignored. Every statement in the batch generates a separate query text entry.|  
 |**sys.query_context_settings**|Presents unique combinations of plan affecting settings under which queries are executed. The same query text executed with different plan affecting settings produces separate query entry in the Query Store because `context_settings_id` is part of the query key.|  
-|**sys.query_store_query**|Query entries that are tracked and forced separately in the Query Store. A single query text can produce multiple query entries if it is executed under different context settings or if it is executed outside vs. inside of different [!INCLUDE[tsql](../../includes/tsql-md.md)] modules (stored procedures, triggers, etc.).|  
+|**sys.query_store_query**|Query entries that are tracked and forced separately in the Query Store. A single query text can produce multiple query entries if it's executed under different context settings or if it's executed outside vs. inside of different [!INCLUDE[tsql](../../includes/tsql-md.md)] modules (stored procedures, triggers, etc.).|  
 |**sys.query_store_plan**|Presents estimated plan for the query with the compile time statistics. Stored plan is equivalent to one that you would get by using `SET SHOWPLAN_XML ON`.|  
 |**sys.query_store_runtime_stats_interval**|Query Store divides time into automatically generated time windows (intervals) and stores aggregated statistics on that interval for every executed plan. The size of the interval is controlled by the configuration option Statistics Collection Interval (in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]) or `INTERVAL_LENGTH_MINUTES` using [ALTER DATABASE SET Options &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md).|  
 |**sys.query_store_runtime_stats**|Aggregated runtime statistics for executed plans. All captured metrics are expressed in form of 4 statistic functions: Average, Minimum, Maximum, and Standard Deviation.|  
   
- For additional details on Query Store views, see the **Related Views, Functions, and Procedures** section of [Monitoring Performance By Using the Query Store](monitoring-performance-by-using-the-query-store.md).  
+ For more information on Query Store views, see the **Related Views, Functions, and Procedures** section of [Monitoring Performance By Using the Query Store](monitoring-performance-by-using-the-query-store.md).  
   
 ## Query Processing  
  Query store interacts with the query processing pipeline at the following key points:  
@@ -63,10 +56,10 @@ ms.workload: "Inactive"
   
  ![query-store-process-3plan](../../relational-databases/performance/media/query-store-process-3.png "query-store-process-3plan")  
   
- In case of a system crash, Query Store can lose runtime data up to amount defined with `DATA_FLUSH_INTERVAL_SECONDS`. The default value of 900 seconds (15 minutes) is an optimal balance between query capture performance and data availability.  
-In case of memory pressure, runtime statistics can be flushed to disk earlier than defined with `DATA_FLUSH_INTERVAL_SECONDS`.  
+ If the system crashes, Query Store can lose runtime data up to amount defined with `DATA_FLUSH_INTERVAL_SECONDS`. The default value of 900 seconds (15 minutes) is an optimal balance between query capture performance and data availability.  
+If the system is under memory pressure, runtime statistics can be flushed to disk earlier than defined with `DATA_FLUSH_INTERVAL_SECONDS`.  
 During the read of the Query Store data in-memory and on-disk data are unified transparently.
-In case of session termination or client application restart/crash query statistics won’t be recorded.  
+If a session is terminated or the client application restarts or crashes, query statistics won't be recorded.  
   
  ![query-store-process-4planinfo](../../relational-databases/performance/media/query-store-process-4planinfo.png "query-store-process-4planinfo")    
 

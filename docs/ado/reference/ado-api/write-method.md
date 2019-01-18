@@ -1,17 +1,12 @@
 ---
 title: "Write Method | Microsoft Docs"
-ms.prod: "sql-non-specified"
-ms.prod_service: "drivers"
-ms.service: ""
-ms.component: "ado"
-ms.technology:
-  - "drivers"
+ms.prod: sql
+ms.prod_service: connectivity
+ms.technology: connectivity
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 apitype: "COM"
 f1_keywords: 
   - "_Stream::raw_Write"
@@ -19,11 +14,9 @@ f1_keywords:
 helpviewer_keywords: 
   - "Write method [ADO]"
 ms.assetid: 02982e6a-ac5f-4af2-b82e-ce12534b84b2
-caps.latest.revision: 12
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
-ms.workload: "Inactive"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # Write Method
 Writes binary data to a [Stream](../../../ado/reference/ado-api/stream-object-ado.md) object.  

@@ -2,18 +2,11 @@
 title: "sp_changesubscription (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "10/28/2015"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "database-engine"
-ms.service: ""
-ms.component: "system-stored-procedures"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
+ms.technology: replication
 ms.topic: "language-reference"
-applies_to: 
-  - "SQL Server"
 f1_keywords: 
   - "changesubscription"
   - "sp_changesubscription"
@@ -22,11 +15,9 @@ f1_keywords:
 helpviewer_keywords: 
   - "sp_changesubscription"
 ms.assetid: f9d91fe3-47cf-4915-b6bf-14c9c3d8a029
-caps.latest.revision: 40
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "craigg"
-ms.workload: "Inactive"
+author: stevestein
+ms.author: sstein
+manager: craigg
 ---
 # sp_changesubscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -52,22 +43,22 @@ sp_changesubscription [ @publication = ] 'publication'
 ```  
   
 ## Arguments  
- [ **@publication**= ] **'***publication***'**  
+ [ **@publication**= ] **'**_publication_**'**  
  Is the name of the publication to change. *publication*is **sysname**, with no default  
   
- [ **@article** = ] **'***article***'**  
+ [ **@article** = ] **'**_article_**'**  
  Is the name of the article to change. *article* is **sysname**, with no default.  
   
- [ **@subscriber** = ] **'***subscriber***'**  
+ [ **@subscriber** = ] **'**_subscriber_**'**  
  Is the name of the Subscriber. *subscriber* is **sysname**, with no default.  
   
- [ **@destination_db** = ] **'***destination_db***'**  
+ [ **@destination_db** = ] **'**_destination_db_**'**  
  Is the name of the subscription database. *destination_db* is **sysname**, with no default.  
   
- [ **@property=**] **'***property***'**  
+ [ **@property=**] **'**_property_**'**  
  Is the property to change for the given subscription. *property* is **nvarchar(30)**, and can be one of the values in the table.  
   
- [ **@value=**] **'***value***'**  
+ [ **@value=**] **'**_value_**'**  
  Is the new value for the specified *property*. *value* is **nvarchar(4000)**, and can be one of the values in the table.  
   
 |Property|Value|Description|  
@@ -88,8 +79,8 @@ sp_changesubscription [ @publication = ] 'publication'
 ||**3**|OLE DB provider|  
 |**memory_optimized**|**bit**|Indicates that  the subscription supports memory optimized tables. *memory_optimized* is **bit**, where 1 equals true (the subscription supports memory optimized tables).|  
   
- [ **@publisher =** ] **'***publisher***'**  
- Specifies a non-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Publisher. *publisher* is **sysname**, with a default of NULL.  
+ [ **@publisher =** ] **'**_publisher_**'**  
+ Specifies a non- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Publisher. *publisher* is **sysname**, with a default of NULL.  
   
 > [!NOTE]  
 >  *publisher* should not be specified for a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Publisher.  

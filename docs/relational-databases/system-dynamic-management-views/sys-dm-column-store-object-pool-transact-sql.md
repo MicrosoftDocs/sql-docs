@@ -2,24 +2,18 @@
 title: "sys.dm_column_store_object_pool (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/17/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.service: ""
-ms.component: "dmv's"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: system-objects
 ms.topic: "language-reference"
 dev_langs: 
   - "TSQL"
 ms.assetid: a8a58ca7-0a7d-4786-bfd9-e8894bd345dd
-caps.latest.revision: 12
-author: "barbkess"
-ms.author: "barbkess"
-manager: "jhubbard"
-ms.workload: "Inactive"
+author: stevestein
+ms.author: sstein
+manager: craigg
+monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.dm_column_store_object_pool (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -35,15 +29,15 @@ ms.workload: "Inactive"
 |`column_id`|`int`|ID of the columnstore column. This is NULL for DELETE_BITMAP.| 
 |`row_group_id`|`int`|ID of the rowgroup.|
 |`object_type`|`smallint`|1 = COLUMN_SEGMENT<br /><br /> 2 = COLUMN_SEGMENT_PRIMARY_DICTIONARY<br /><br /> 3 = COLUMN_SEGMENT_SECONDARY_DICTIONARY<br /><br /> 4 = COLUMN_SEGMENT_BULKINSERT_DICTIONARY<br /><br /> 5 = COLUMN_SEGMENT_DELETE_BITMAP|  
-|`object_type_desc`|`nvarchar(60)`|COLUMN_SEGMENT – A column segment. `object_id` is the segment ID. A segment stores all the values for one column within one rowgroup. For example, if a table has 10 columns, there are 10 column segments per rowgroup. <br /><br /> COLUMN_SEGMENT_PRIMARY_DICTIONARY – A global dictionary that contains lookup information for all of the column segments in the table.<br /><br /> COLUMN_SEGMENT_SECONDARY_DICTIONARY - A local dictionary associated with one column.<br /><br /> COLUMN_SEGMENT_BULKINSERT_DICTIONARY – Another representation of the global dictionary. This provides an inverse look up of value to dictionary_id. Used for creating compressed segments as part of Tuple Mover or Bulk Load.<br /><br /> COLUMN_SEGMENT_DELETE_BITMAP – A bitmap that tracks segment deletes. There is one delete bitmap per partition.|  
+|`object_type_desc`|`nvarchar(60)`|COLUMN_SEGMENT - A column segment. `object_id` is the segment ID. A segment stores all the values for one column within one rowgroup. For example, if a table has 10 columns, there are 10 column segments per rowgroup. <br /><br /> COLUMN_SEGMENT_PRIMARY_DICTIONARY - A global dictionary that contains lookup information for all of the column segments in the table.<br /><br /> COLUMN_SEGMENT_SECONDARY_DICTIONARY - A local dictionary associated with one column.<br /><br /> COLUMN_SEGMENT_BULKINSERT_DICTIONARY - Another representation of the global dictionary. This provides an inverse look up of value to dictionary_id. Used for creating compressed segments as part of Tuple Mover or Bulk Load.<br /><br /> COLUMN_SEGMENT_DELETE_BITMAP - A bitmap that tracks segment deletes. There is one delete bitmap per partition.|  
 |`access_count`|`int`|Number of read or write accesses to this object.|  
 |`memory_used_in_bytes`|`bigint`|Memory used by this object in the object pool.|  
 |`object_load_time`|`datetime`|Clock-time for when object_id was brought into the object pool.|  
   
 ## Permissions  
-On [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], requires `VIEW SERVER STATE` permission.   
-On [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] Premium Tiers, requires the `VIEW DATABASE STATE` permission in the database. On [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] Standard and Basic Tiers, requires the  **Server admin** or an **Azure Active Directory admin** account.  
 
+On [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], requires `VIEW SERVER STATE` permission.   
+On [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], requires the `VIEW DATABASE STATE` permission in the database.   
  
 ## See Also  
   

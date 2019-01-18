@@ -5,19 +5,13 @@ ms.date: "06/10/2016"
 ms.prod: ""
 ms.prod_service: "sql-database"
 ms.reviewer: ""
-ms.service: "sql-database"
-ms.component: "dmv's"
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: system-objects
 ms.topic: "language-reference"
 ms.assetid: 0e6adc54-4d97-4ef0-bf4f-b4538d69f136
-caps.latest.revision: 8
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
-ms.workload: "Inactive"
+author: MightyPen
+ms.author: genemi
+manager: craigg
+monikerRange: "= azuresqldb-current || = sqlallproducts-allversions"
 ---
 # sys.dm_xe_database_session_object_columns (Azure SQL Database)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]

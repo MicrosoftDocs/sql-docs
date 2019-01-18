@@ -1,32 +1,17 @@
 ---
 title: "IS (MDX) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/02/2016"
-ms.prod: analysis-services
-ms.prod_service: "analysis-services"
-ms.service: ""
-ms.component: ""
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
-  
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "IS"
-dev_langs: 
-  - "kbMDX"
-helpviewer_keywords: 
-  - "IS operator"
-ms.assetid: dc8c0b91-3bb1-49e5-8d70-57545baaa8e0
-caps.latest.revision: 29
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-ms.workload: "Inactive"
+ms.date: 06/04/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: mdx
+ms.topic: reference
+ms.author: owend
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
 ---
 # IS (MDX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
 
   Performs a logical comparison on two object expressions.  
   

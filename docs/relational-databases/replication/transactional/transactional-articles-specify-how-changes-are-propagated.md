@@ -2,24 +2,17 @@
 title: "Specify How Changes Are Propagated for Transactional Articles | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "database-engine"
-ms.service: ""
-ms.component: "replication"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: replication
+ms.topic: conceptual
 helpviewer_keywords: 
   - "transactional replication, propagation methods"
 ms.assetid: a10c5001-22cc-4667-8f0b-3d0818dca2e9
-caps.latest.revision: 48
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-ms.workload: "Inactive"
+author: "MashaMSFT"
+ms.author: "mathoma"
+manager: craigg
 ---
 # Transactional Articles - Specify How Changes Are Propagated
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -46,7 +39,7 @@ ms.workload: "Inactive"
   
 -   **sp_MSdel_\<** *tablename* **>**, which handles deletes.  
   
- The **\<***tablename***>** used in the procedure depends on how the article was added to the publication and whether the subscription database contains a table of the same name with a different owner.  
+ The **\<**_tablename_**>** used in the procedure depends on how the article was added to the publication and whether the subscription database contains a table of the same name with a different owner.  
   
  Any of these procedures can be replaced with a custom procedure that you specify when adding an article to a publication. Custom procedures are used if an application requires custom logic, such as inserting data into an audit table when a row is updated at a Subscriber. For more information about specifying custom stored procedures, see the how to topics listed above.  
   

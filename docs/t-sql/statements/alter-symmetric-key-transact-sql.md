@@ -2,15 +2,10 @@
 title: "ALTER SYMMETRIC KEY (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.service: ""
-ms.component: "t-sql|statements"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: t-sql
 ms.topic: "language-reference"
 f1_keywords: 
   - "ALTER SYMMETRIC KEY"
@@ -24,11 +19,9 @@ helpviewer_keywords:
   - "cryptography [SQL Server], symmetric keys"
   - "ALTER SYMMETRIC KEY statement"
 ms.assetid: d3c776a4-7d71-4e6f-84fc-1db47400c465
-caps.latest.revision: 44
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "craigg"
-ms.workload: "Inactive"
+author: VanMSFT
+ms.author: vanto
+manager: craigg
 ---
 # ALTER SYMMETRIC KEY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -70,7 +63,7 @@ ALTER SYMMETRIC KEY Key_name <alter_option>
  CERTIFICATE *Certificate_name*  
  Specifies the certificate that is used to encrypt the symmetric key. This certificate must already exist in the database.  
   
- PASSWORD **='***password***'**  
+ PASSWORD **='**_password_**'**  
  Specifies the password that is used to encrypt the symmetric key. *password* must meet the Windows password policy requirements of the computer that is running the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  SYMMETRIC KEY *Symmetric_Key_Name*  

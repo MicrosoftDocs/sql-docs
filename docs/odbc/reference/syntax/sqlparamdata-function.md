@@ -2,16 +2,11 @@
 title: "SQLParamData Function | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
-ms.prod_service: "drivers"
-ms.service: ""
-ms.component: "odbc"
+ms.prod: sql
+ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "drivers"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: connectivity
+ms.topic: conceptual
 apiname: 
   - "SQLParamData"
 apilocation: 
@@ -22,11 +17,9 @@ f1_keywords:
 helpviewer_keywords: 
   - "SQLParamData function [ODBC]"
 ms.assetid: 68fe010d-9539-4e5b-a260-c8d32423b1db
-caps.latest.revision: 26
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
-ms.workload: "Inactive"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # SQLParamData Function
 **Conformance**  
@@ -40,8 +33,8 @@ ms.workload: "Inactive"
 ```  
   
 SQLRETURN SQLParamData(  
-     SQLHSTMT       StatementHandle,  
-     SQLPOINTER *   ValuePtrPtr);  
+     SQLHSTMT       StatementHandle,  
+     SQLPOINTER *   ValuePtrPtr);  
 ```  
   
 ## Arguments  
@@ -62,7 +55,7 @@ SQLRETURN SQLParamData(
 |01000|General warning|Driver-specific informational message. (Function returns SQL_SUCCESS_WITH_INFO.)|  
 |07006|Restricted data type attribute violation|The data value identified by the *ValueType* argument in **SQLBindParameter** for the bound parameter could not be converted to the data type identified by the *ParameterType* argument in **SQLBindParameter**.<br /><br /> The data value returned for a parameter bound as SQL_PARAM_INPUT_OUTPUT or SQL_PARAM_OUTPUT could not be converted to the data type identified by the *ValueType* argument in **SQLBindParameter**.<br /><br /> (If the data values for one or more rows could not be converted, but one or more rows were successfully returned, this function returns SQL_SUCCESS_WITH_INFO.)|  
 |08S01|Communication link failure|The communication link between the driver and the data source to which the driver was connected failed before the function completed processing.|  
-|22026|String data, length mismatch|The SQL_NEED_LONG_DATA_LEN information type in **SQLGetInfo** was "Y", and less data was sent for a long parameter (the data type was SQL_LONGVARCHAR, SQL_LONGVARBINARY, or a long data source–specific data type) than was specified with the *StrLen_or_IndPtr* argument in **SQLBindParameter**.<br /><br /> The SQL_NEED_LONG_DATA_LEN information type in **SQLGetInfo** was "Y", and less data was sent for a long column (the data type was SQL_LONGVARCHAR, SQL_LONGVARBINARY, or a long data source–specific data type) than was specified in the length buffer corresponding to a column in a row of data that was added or updated with **SQLBulkOperations** or updated with **SQLSetPos**.|  
+|22026|String data, length mismatch|The SQL_NEED_LONG_DATA_LEN information type in **SQLGetInfo** was "Y", and less data was sent for a long parameter (the data type was SQL_LONGVARCHAR, SQL_LONGVARBINARY, or a long data source-specific data type) than was specified with the *StrLen_or_IndPtr* argument in **SQLBindParameter**.<br /><br /> The SQL_NEED_LONG_DATA_LEN information type in **SQLGetInfo** was "Y", and less data was sent for a long column (the data type was SQL_LONGVARCHAR, SQL_LONGVARBINARY, or a long data source-specific data type) than was specified in the length buffer corresponding to a column in a row of data that was added or updated with **SQLBulkOperations** or updated with **SQLSetPos**.|  
 |40001|Serialization failure|The transaction was rolled back because of a resource deadlock with another transaction.|  
 |40003|Statement completion unknown|The associated connection failed during the execution of this function, and the state of the transaction cannot be determined.|  
 |HY000|General error|An error occurred for which there was no specific SQLSTATE and for which no implementation-specific SQLSTATE was defined. The error message returned by **SQLGetDiagRec** in the *\*MessageText* buffer describes the error and its cause.|  
@@ -83,7 +76,7 @@ SQLRETURN SQLParamData(
   
  When an application calls **SQLExecute**, **SQLExecDirect**, **SQLBulkOperations**, or **SQLSetPos**, the driver returns SQL_NEED_DATA if it needs data-at-execution data. An application then calls **SQLParamData** to determine which data to send. If the driver requires parameter data, the driver returns in the *\*ValuePtrPtr* output buffer the value that the application put in the rowset buffer. The application can use this value to determine which parameter data the driver is requesting. If the driver requires column data, the driver returns in the *\*ValuePtrPtr* buffer the address that the column was originally bound to, as follows:  
   
- *Bound Address* + *Binding Offset* + ((*Row Number* – 1) x *Element Size*)  
+ *Bound Address* + *Binding Offset* + ((*Row Number* - 1) x *Element Size*)  
   
  where the variables are defined as indicated in the following table.  
   

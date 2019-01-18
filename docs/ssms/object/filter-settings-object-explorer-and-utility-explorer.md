@@ -2,25 +2,18 @@
 title: "Filter Settings (Object Explorer and Utility Explorer) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "sql-tools"
-ms.service: ""
-ms.component: "ssms-objects"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "tools-ssms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: ssms
+ms.topic: conceptual
 f1_keywords: 
   - "sql13.swb.common.filtersettings.f1"
   - "sql13.ag.job.filtersettings.f1"
 ms.assetid: 4aab04bc-e1ab-4d4b-ab74-b287fc805bc2
-caps.latest.revision: 4
 author: "stevestein"
 ms.author: "sstein"
-manager: "jhubbard"
-ms.workload: "Inactive"
+manager: craigg
 ---
 # Filter Settings (Object Explorer and Utility Explorer)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -77,5 +70,5 @@ Removes all current filter settings.
   
 ## See Also  
 [Use SQL Server Management Studio](../../ssms/use-sql-server-management-studio.md)  
-[Overview of SQL Server Utility](http://msdn.microsoft.com/en-us/6e6cbd25-6b1c-4e21-9ade-4584e243fd8f)  
+[Overview of SQL Server Utility](../../relational-databases/manage/sql-server-utility-features-and-tasks.md)  
   

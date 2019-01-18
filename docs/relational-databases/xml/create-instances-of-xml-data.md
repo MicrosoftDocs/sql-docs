@@ -2,16 +2,11 @@
 title: "Create Instances of XML Data | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/16/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "database-engine"
-ms.service: ""
-ms.component: "xml"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "dbe-xml"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: xml
+ms.topic: conceptual
 helpviewer_keywords: 
   - "type casting string instances [XML in SQL Server]"
   - "XML [SQL Server], typed"
@@ -22,11 +17,9 @@ helpviewer_keywords:
   - "XML [SQL Server], generating instances"
   - "white space [XML in SQL Server]"
 ms.assetid: dbd6c06f-db6e-44a7-855a-6a55bf374907
-caps.latest.revision: 40
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-ms.workload: "On Demand"
+author: "douglaslMS"
+ms.author: "douglasl"
+manager: craigg
 ---
 # Create Instances of XML Data
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -63,7 +56,7 @@ from OpenRowset(BULK 'filename.xml', SINGLE_BLOB) R(x)
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] internally represents XML in an efficient binary representation that uses UTF-16 encoding. User-provided encoding is not preserved, but is considered during the parse process.  
   
 ### Type Casting CLR user-defined types  
- If a CLR user-defined type has an XML Serialization, instances of that type can be explicitly cast to an XML datatype. For more details about the XML serialization of a CLR user-defined typed, see [XML Serialization from CLR Database Objects](http://msdn.microsoft.com/library/ac84339b-9384-4710-bebc-01607864a344).  
+ If a CLR user-defined type has an XML Serialization, instances of that type can be explicitly cast to an XML datatype. For more details about the XML serialization of a CLR user-defined typed, see [XML Serialization from CLR Database Objects](https://msdn.microsoft.com/library/ac84339b-9384-4710-bebc-01607864a344).  
   
 ### White Space Handling in Typed XML  
  In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], white space inside element content is considered insignificant if it occurs inside a sequence of white-space-only character data delimited by markup, such as begin or end tags, and is not entitized. (CDATA sections are ignored.) This handling of white space handling is different from how white space is described in the XML 1.0 specification published by the World Wide Web Consortium (W3C). This is because the XML parser in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] recognizes only a limited number of DTD subsets, as defined in XML 1.0. For more information about the limited DTD subsets supported in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], see [CAST and CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md).  

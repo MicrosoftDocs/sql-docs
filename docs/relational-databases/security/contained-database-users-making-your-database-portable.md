@@ -1,31 +1,25 @@
 ---
 title: "Contained Database Users - Making Your Database Portable | Microsoft Docs"
 ms.custom: ""
-ms.date: "08/17/2016"
-ms.prod: "sql-non-specified"
+ms.date: "03/05/2018"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
-ms.service: ""
-ms.component: "security"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: security
+ms.topic: conceptual
 helpviewer_keywords: 
   - "contained database, users"
   - "user [SQL Server], about contained database users"
 ms.assetid: e57519bb-e7f4-459b-ba2f-fd42865ca91d
-caps.latest.revision: 33
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "craigg"
-ms.workload: "On Demand"
+author: VanMSFT
+ms.author: vanto
+manager: craigg
+monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Contained Database Users - Making Your Database Portable
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
-  Use contained database users to authenticate [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and [!INCLUDE[ssSDS](../../includes/sssds-md.md)] connections at the database level. A contained database is a database that is isolated from other databases and from the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]/[!INCLUDE[ssSDS](../../includes/sssds-md.md)] (and the master database) that hosts the database. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] supports contained database users for both Windows and [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] authentication. When using [!INCLUDE[ssSDS](../../includes/sssds-md.md)], combine contained database users with database level firewall rules. This topic reviews the differences and benefits of using the contained database model compared to traditional login/user model and Windows or server-level firewall rules. Specific scenarios, manageability or application business logic may still require use of traditional login/user model and server-level firewall rules.  
+  Use contained database users to authenticate [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and [!INCLUDE[ssSDS](../../includes/sssds-md.md)] connections at the database level. A contained database is a database that is isolated from other databases and from the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]/ [!INCLUDE[ssSDS](../../includes/sssds-md.md)] (and the master database) that hosts the database. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] supports contained database users for both Windows and [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] authentication. When using [!INCLUDE[ssSDS](../../includes/sssds-md.md)], combine contained database users with database level firewall rules. This topic reviews the differences and benefits of using the contained database model compared to traditional login/user model and Windows or server-level firewall rules. Specific scenarios, manageability or application business logic may still require use of traditional login/user model and server-level firewall rules.  
   
 > [!NOTE]  
 >  As [!INCLUDE[msCoName](../../includes/msconame-md.md)] evolves the [!INCLUDE[ssSDS](../../includes/sssds-md.md)] service and moves towards higher guaranteed SLAs you may be required to switch to the contained database user model and database-scoped firewall rules to attain the higher availability SLA and higher max login rates for a given database. [!INCLUDE[msCoName](../../includes/msconame-md.md)] encourage you to consider such changes today.  
@@ -51,13 +45,13 @@ ms.workload: "On Demand"
  Windows firewall rules apply to all connections and have the same effects on logins (traditional model connections) and contained database users. For more information about the Windows firewall, see [Configure a Windows Firewall for Database Engine Access](../../database-engine/configure-windows/configure-a-windows-firewall-for-database-engine-access.md).  
   
 ### [!INCLUDE[ssSDS](../../includes/sssds-md.md)] Firewalls  
- [!INCLUDE[ssSDS](../../includes/sssds-md.md)] allows separate firewall rules for sever level connections (logins) and for database level connections (contained database users). When connecting to a user database, first database firewall rules are checked. If there is no rule that allows access to the database, the server level firewall rules are checked, which requires access to the logical server master database. Database level firewall rules combined with contained database users can eliminate necessity to access master database of the server during connection providing improved connection scalability.  
+ [!INCLUDE[ssSDS](../../includes/sssds-md.md)] allows separate firewall rules for server level connections (logins) and for database level connections (contained database users). When connecting to a user database, first database firewall rules are checked. If there is no rule that allows access to the database, the server level firewall rules are checked, which requires access to the logical server master database. Database level firewall rules combined with contained database users can eliminate necessity to access master database of the server during connection providing improved connection scalability.  
   
  For more information about [!INCLUDE[ssSDS](../../includes/sssds-md.md)] firewall rules, see the following topics:  
   
--   [Azure SQL Database Firewall](http://msdn.microsoft.com/library/azure/ee621782.aspx)  
+-   [Azure SQL Database Firewall](https://msdn.microsoft.com/library/azure/ee621782.aspx)  
   
--   [How to: Configure Firewall Settings (Azure SQL Database)](http://msdn.microsoft.com/library/azure/jj553530.aspx)  
+-   [How to: Configure Firewall Settings (Azure SQL Database)](https://msdn.microsoft.com/library/azure/jj553530.aspx)  
   
 -   [sp_set_firewall_rule &#40;Azure SQL Database&#41;](../../relational-databases/system-stored-procedures/sp-set-firewall-rule-azure-sql-database.md)  
   

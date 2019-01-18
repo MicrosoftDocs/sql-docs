@@ -1,27 +1,20 @@
 ---
 title: "Status Property Example (Field) (VB) | Microsoft Docs"
-ms.prod: "sql-non-specified"
-ms.prod_service: "drivers"
-ms.service: ""
-ms.component: "ado"
-ms.technology:
-  - "drivers"
+ms.prod: sql
+ms.prod_service: connectivity
+ms.technology: connectivity
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 dev_langs: 
   - "VB"
 helpviewer_keywords: 
   - "Status property [ADO Field], Visual Basic example"
 ms.assetid: fdd09b60-39c7-44be-8008-e891a031f80e
-caps.latest.revision: 10
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
-ms.workload: "Inactive"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # Status Property Example (Field) (VB)
 The following example opens a document from a read/write folder using the [Internet Publishing Provider](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md). The [Status](../../../ado/reference/ado-api/status-property-ado-field.md) property of a [Field](../../../ado/reference/ado-api/field-object.md) object of the [Record](../../../ado/reference/ado-api/record-object-ado.md) will first be set to **adFieldPendingInsert**, then be updated to **adFieldOk**.  
@@ -39,7 +32,7 @@ Sub Main()
    Dim strCnxn As String  
   
    Set Cnxn = New ADODB.Connection  
-   strCnxn = "url=http://MyServer/"  
+   strCnxn = "url=https://MyServer/"  
    Cnxn.Open strCnxn  
   
    Set File = New ADODB.Record  

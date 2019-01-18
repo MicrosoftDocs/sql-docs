@@ -5,21 +5,14 @@ ms.date: "07/14/2017"
 ms.prod: ""
 ms.prod_service: "sql-data-warehouse, pdw"
 ms.reviewer: ""
-ms.service: "sql-data-warehouse"
-ms.component: "t-sql|statements"
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 dev_langs: 
   - "TSQL"
 ms.assetid: ea21c73c-40e8-4c54-83d4-46ca36b2cf73
-caps.latest.revision: 59
-author: "barbkess"
-ms.author: "barbkess"
-manager: "jhubbard"
-ms.workload: "On Demand"
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+monikerRange: ">= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions"
 ---
 # CREATE TABLE (Azure SQL Data Warehouse)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -107,7 +100,7 @@ CREATE TABLE [ database_name . [ schema_name ] . | schema_name. ] table_name
 ### <a name="ColumnOptions"></a> Column options
 
  `COLLATE` *Windows_collation_name*  
- Specifies the collation for the expression. The collation must be one of the Windows collations supported by [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. For a list of Windows collations supported by [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], see [Windows Collation Name (Transact-SQL)](http://msdn.microsoft.com/library/ms188046\(v=sql11\)/).  
+ Specifies the collation for the expression. The collation must be one of the Windows collations supported by [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. For a list of Windows collations supported by [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], see [Windows Collation Name (Transact-SQL)](windows-collation-name-transact-sql.md)/).  
   
  `NULL` | `NOT NULL`  
  Specifies whether `NULL` values are allowed in the column. The default is `NULL`.  
@@ -118,7 +111,7 @@ CREATE TABLE [ database_name . [ schema_name ] . | schema_name. ] table_name
  | Argument | Explanation |
  | -------- | ----------- |
  | *constraint_name* | The optional name for the constraint. The constraint name is unique within the database. The name can be re-used in other databases. |
- | *constant_expression* | The default value for the column. The expression must be a literal value or a  a constant. For example, these constant expressions are allowed: `'CA'`, `4`. These are not allowed: `2+3`, `CURRENT_TIMESTAMP`. |
+ | *constant_expression* | The default value for the column. The expression must be a literal value or a constant. For example, these constant expressions are allowed: `'CA'`, `4`. These are not allowed: `2+3`, `CURRENT_TIMESTAMP`. |
   
 
 ### <a name="TableOptions"></a> Table structure options
@@ -166,7 +159,7 @@ Creates one or more table partitions. These are horizontal table slices that all
 ### <a name="DataTypes"></a> Data types
 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] supports the most commonly used data types. Below is a list of the supported data types along with their details and storage bytes. To better understand data types and how to use them, see [ Data types for tables in SQL Data Warehouse](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-tables-data-types).
 
-For a table of data type conversions, see the Implicit Conversions section, of [CAST and CONVERT (Transact-SQL)](http://msdn.microsoft.com/library/ms187928/).
+For a table of data type conversions, see the Implicit Conversions section, of [CAST and CONVERT (Transact-SQL)](https://msdn.microsoft.com/library/ms187928/).
 
 `datetimeoffset` [ ( *n* ) ]  
  The default value for *n* is 7.  
@@ -292,7 +285,7 @@ Each user-defined table is divided into multiple smaller tables which are stored
  
 Each distribution contains all table partitions. For example, if there are 60 distributions and four table partitions, there will be 320 partitions. If the table is a clustered columnstore index, there will be one columnstore index per partition which means you will have 320 columnstore indexes.
 
-We recommend using fewer table partitions to ensure each columnstore index has enough rows to take advantage of the benefits of columnstore indexes. For further guidance, see [Partitioning tables in SQL Data Warehouse](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-tables-partition/) and [Indexing tables in SQL Data Warehouse](https://azure.microsoft.com/en-us/documentation/articles/sql-data-warehouse-tables-index/)  
+We recommend using fewer table partitions to ensure each columnstore index has enough rows to take advantage of the benefits of columnstore indexes. For further guidance, see [Partitioning tables in SQL Data Warehouse](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-tables-partition/) and [Indexing tables in SQL Data Warehouse](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-tables-index/)  
 
   
  ### Rowstore table (heap or clustered index)  
@@ -305,7 +298,7 @@ To change a rowstore table to a columnstore table, drop all existing indexes on 
 
 For more information, see these articles:
 - [Columnstore indexes versioned feature summary](https://msdn.microsoft.com/library/dn934994/)
-- [Indexing tables in SQL Data Warehouse](https://azure.microsoft.com/en-us/documentation/articles/sql-data-warehouse-tables-index/)
+- [Indexing tables in SQL Data Warehouse](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-tables-index/)
 - [Columnstore Indexes Guide](~/relational-databases/indexes/columnstore-indexes-overview.md) 
  
 <a name="LimitationsRestrictions"></a>  
@@ -325,7 +318,7 @@ For more information, see these articles:
   
  Local temporary tables have the following limitations and restrictions:  
   
--   They are visible only to the current session. [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] drops them automatically at the end of the session. To drop them explicitlt, use the DROP TABLE statement.   
+-   They are visible only to the current session. [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] drops them automatically at the end of the session. To drop them explicitly, use the DROP TABLE statement.   
 -   They cannot be renamed. 
 -   They cannot have partitions or views.  
 -   Their permissions cannot be changed. `GRANT`, `DENY`, and `REVOKE` statements cannot be used with local temporary tables.   

@@ -2,25 +2,18 @@
 title: "Add or Change a Property Expression | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "integration-services"
-ms.service: ""
-ms.component: "expressions"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: integration-services
+ms.topic: conceptual
 helpviewer_keywords: 
   - "expressions [Integration Services], creating"
   - "expressions [Integration Services], property expressions"
 ms.assetid: cb5da499-065f-4fa6-9f6d-5bc5f385241e
-caps.latest.revision: 28
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
-ms.workload: "Inactive"
+manager: craigg
 ---
 # Add or Change a Property Expression
   You can create property expressions for packages, tasks, Foreach Loop containers, For Loop containers, Sequence containers, event handlers, package and project level connection managers, and log providers.  
@@ -39,15 +32,15 @@ ms.workload: "Inactive"
   
     -   Right-click the item and then click **Properties**.  
   
-3.  Click in the **Expressions** box and then click the ellipsis (…).  
+3.  Click in the **Expressions** box and then click the ellipsis (...).  
   
 4.  In the **Property Expressions Editor**, select a property in the **Property** list, and then do one of the following:  
   
     -   Type or change the property expression directly in the **Expression** column, and then click **OK**.  
   
-         —or—  
+         -or-  
   
-    -   Click the ellipsis (…) in the expression row of the property to open the **Expression Builder**.  
+    -   Click the ellipsis (...) in the expression row of the property to open the **Expression Builder**.  
   
 5.  (Optional) In the **Expression Builder**, do any of the following tasks:  
   

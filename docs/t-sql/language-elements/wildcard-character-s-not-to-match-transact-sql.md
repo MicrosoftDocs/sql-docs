@@ -2,19 +2,11 @@
 title: "[^] (Wildcard - Character(s) Not to Match) (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "12/06/2016"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.service: ""
-ms.component: "t-sql|language-elements"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: t-sql
 ms.topic: "language-reference"
-applies_to: 
-  - "Azure SQL Database"
-  - "SQL Server (starting with 2008)"
 f1_keywords: 
   - "wildcard"
   - "[^]_TSQL"
@@ -26,11 +18,9 @@ helpviewer_keywords:
   - "wildcard characters [SQL Server]"
   - "[^] (wildcard - character(s) not to match)"
 ms.assetid: b970038f-f4e7-4a5d-96f6-51e3248c6aef
-caps.latest.revision: 36
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-ms.workload: "On Demand"
+author: "douglaslMS"
+ms.author: "douglasl"
+manager: craigg
 ---
 
 # \[^\] (Wildcard - Character(s) Not to Match) (Transact-SQL)

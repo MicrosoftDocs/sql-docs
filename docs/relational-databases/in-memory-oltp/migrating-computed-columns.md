@@ -2,22 +2,16 @@
 title: "Migrating Computed Columns | Microsoft Docs"
 ms.custom: ""
 ms.date: "12/16/2016"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.service: ""
-ms.component: "in-memory-oltp"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine-imoltp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: in-memory-oltp
+ms.topic: conceptual
 ms.assetid: 64a9eade-22c3-4a9d-ab50-956219e08df1
-caps.latest.revision: 7
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
-ms.workload: "Inactive"
+author: MightyPen
+ms.author: genemi
+manager: craigg
+monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Migrating Computed Columns
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

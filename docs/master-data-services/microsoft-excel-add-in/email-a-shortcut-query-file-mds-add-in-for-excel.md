@@ -1,26 +1,22 @@
 ---
 title: "Email a Shortcut Query File (MDS Add-in for Excel) | Microsoft Docs"
-ms.custom: ""
+ms.custom: microsoft-excel-add-in
 ms.date: "03/01/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "mds"
-ms.service: ""
-ms.component: "microsoft-excel-add-in"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "master-data-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: master-data-services
+ms.topic: conceptual
 ms.assetid: 5d46f20a-b04a-45c7-82af-02a2baaabbd7
-caps.latest.revision: 7
-author: "smartysanthosh"
-ms.author: "nagavo"
-manager: "craigg"
-ms.workload: "Inactive"
+author: leolimsft
+ms.author: lle
+manager: craigg
 ---
 # Email a Shortcut Query File (MDS Add-in for Excel)
-  In the [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)], email a shortcut query file to someone when you want to ensure they’re working with the same data that you are. You should share queries rather than saving the worksheet and emailing it.  
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
+  In the [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)], email a shortcut query file to someone when you want to ensure they're working with the same data that you are. You should share queries rather than saving the worksheet and emailing it.  
   
 ## Prerequisites  
  To perform this procedure:  

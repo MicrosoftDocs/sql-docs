@@ -2,15 +2,10 @@
 title: "SEND (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/26/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "sql-database"
-ms.service: ""
-ms.component: "t-sql|statements"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: t-sql
 ms.topic: "language-reference"
 f1_keywords: 
   - "SEND_ON_CONVERSATION_TSQL"
@@ -27,11 +22,9 @@ helpviewer_keywords:
   - "messages [Service Broker], sending"
   - "sending messages"
 ms.assetid: b6e66aeb-1714-4c2b-b7c2-d386d77b0d46
-caps.latest.revision: 32
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "craigg"
-ms.workload: "Inactive"
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
 ---
 # SEND (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -128,17 +121,17 @@ SET @OrderMsg = < construct message as appropriate for the application > ;
   
 BEGIN DIALOG @dialog_handle1  
 FROM SERVICE [//InitiatorDB/InitiatorService]  
-TO SERVICE '//TargetDB1/TargetService’  
+TO SERVICE '//TargetDB1/TargetService'  
 ON CONTRACT [//AllDBs/OrderProcessing] ;  
   
 BEGIN DIALOG @dialog_handle2  
 FROM SERVICE [//InitiatorDB/InitiatorService]  
-TO SERVICE '//TargetDB2/TargetService’  
+TO SERVICE '//TargetDB2/TargetService'  
 ON CONTRACT [//AllDBs/OrderProcessing] ;  
   
 BEGIN DIALOG @dialog_handle3  
 FROM SERVICE [//InitiatorDB/InitiatorService]  
-TO SERVICE '//TargetDB3/TargetService’  
+TO SERVICE '//TargetDB3/TargetService'  
 ON CONTRACT [//AllDBs/OrderProcessing] ;  
   
 SEND ON CONVERSATION (@dialog_handle1, @dialog_handle2, @dialog_handle3)  

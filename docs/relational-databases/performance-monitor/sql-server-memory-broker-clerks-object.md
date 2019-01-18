@@ -2,24 +2,17 @@
 title: "SQL Server, Memory Broker Clerks Object | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "database-engine"
-ms.service: ""
-ms.component: "performance-monitor"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: performance
+ms.topic: conceptual
 helpviewer_keywords: 
   - "SQLServer:Memory Broker Clerks"
 ms.assetid: 47b9c236-66a3-4c42-97ee-da5555bdc046
-caps.latest.revision: 4
-author: "dagiro"
-ms.author: "v-dagir"
-manager: "jhubbard"
-ms.workload: "Inactive"
+author: julieMSFT
+ms.author: jrasnick
+manager: craigg
 ---
 # SQL Server, Memory Broker Clerks Object
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -30,7 +23,7 @@ This following table describes the SQL Server **Memory Broker Clerks** performan
 |**SQL Server Memory Broker Clerks counters**|Description|  
 |-------------|-----------------|  
 |**Internal benefit**|The internal value of memory for entry count pressure, in ms per page per ms, multiplied by 10 billion and truncated to an integer.|
-|**Memory broker clerk size**|The size of the the clerk, in pages.|
+|**Memory broker clerk size**|The size of the clerk, in pages.|
 |**Periodic evictions (pages)**|The number of pages evicted from the broker clerk by last periodic eviction.|
 |**Pressure evictions (pages/sec)**|TThe number of pages per second evicted from the broker clerk by memory pressure.|
 |**Simulation benefit**|The value of memory to the clerk, in ms per page per ms, multiplied by 10 billion and truncated to an integer.|

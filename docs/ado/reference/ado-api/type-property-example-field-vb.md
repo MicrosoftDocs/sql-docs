@@ -1,27 +1,20 @@
 ---
 title: "Type Property Example (Field) (VB) | Microsoft Docs"
-ms.prod: "sql-non-specified"
-ms.prod_service: "drivers"
-ms.service: ""
-ms.component: "ado"
-ms.technology:
-  - "drivers"
+ms.prod: sql
+ms.prod_service: connectivity
+ms.technology: connectivity
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 dev_langs: 
   - "VB"
 helpviewer_keywords: 
   - "Type property [field] [ADO], Visual Basic example"
 ms.assetid: accb72f5-a3bd-4a7e-92b6-6da0783b4b75
-caps.latest.revision: 10
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
-ms.workload: "Inactive"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # Type Property Example (Field) (VB)
 This example demonstrates the [Type](../../../ado/reference/ado-api/type-property-ado.md) property by displaying the name of the constant that corresponds to the value of the [Type](../../../ado/reference/ado-api/type-property-ado.md) property of all the [Field](../../../ado/reference/ado-api/field-object.md) objects in the ***Employees*** table. The FieldType function is required for this procedure to run.  

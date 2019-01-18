@@ -2,24 +2,17 @@
 title: "Configure Distribution Wizard | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "database-engine"
-ms.service: ""
-ms.component: "replication"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: replication
+ms.topic: conceptual
 helpviewer_keywords: 
   - "Configure Distribution Wizard"
 ms.assetid: f7d97977-0e2b-40c6-a4ce-2d5bc32a91a7
-caps.latest.revision: 22
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-ms.workload: "Inactive"
+author: "MashaMSFT"
+ms.author: "mathoma"
+manager: craigg
 ---
 # Configure Distribution Wizard
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -38,6 +31,6 @@ ms.workload: "Inactive"
 ## See Also  
  [Configure Distribution](../../relational-databases/replication/configure-distribution.md)   
  [Configure Publishing and Distribution](../../relational-databases/replication/configure-publishing-and-distribution.md)   
- [Properties Reference &#40;Replication&#41;](../../relational-databases/replication/properties-reference-replication.md)  
+
   
   

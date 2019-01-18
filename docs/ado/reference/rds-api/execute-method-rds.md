@@ -1,32 +1,25 @@
 ---
 title: "Execute Method (RDS) | Microsoft Docs"
-ms.prod: "sql-non-specified"
-ms.prod_service: "drivers"
-ms.service: ""
-ms.component: "ado"
-ms.technology:
-  - "drivers"
+ms.prod: sql
+ms.prod_service: connectivity
+ms.technology: connectivity
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 apitype: "COM"
 helpviewer_keywords: 
   - "Execute method [ADO]"
 ms.assetid: 2d9c30e9-ab5b-4920-91b8-48454c2fb5d8
-caps.latest.revision: 20
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
-ms.workload: "Inactive"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # Execute Method (RDS)
 Executes the request and creates an ADO recordset for use in ADO 2.5 and later.  
   
 > [!IMPORTANT]
->  Beginning with Windows 8 and Windows Server 2012, RDS server components are no longer included in the Windows operating system (see Windows 8 and [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/en-us/download/details.aspx?id=27416) for more detail). RDS client components will be removed in a future version of Windows. Avoid using this feature in new development work, and plan to modify applications that currently use this feature. Applications that use RDS should migrate to [WCF Data Service](http://go.microsoft.com/fwlink/?LinkId=199565).  
+>  Beginning with Windows 8 and Windows Server 2012, RDS server components are no longer included in the Windows operating system (see Windows 8 and [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) for more detail). RDS client components will be removed in a future version of Windows. Avoid using this feature in new development work, and plan to modify applications that currently use this feature. Applications that use RDS should migrate to [WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565).  
   
 ## Syntax  
   
@@ -43,7 +36,7 @@ object.Execute(ConnectionString As String, HandlerString As String, QueryString 
  A two-part string that identifies the handler to be used with this execution. The string contains two parts. The first part contains the name (ProgID) of the handler to be used. The second part contains arguments to be passed to the handler. The details of how the arguments string is interpreted are specific to each handler. The two parts are separated by the first instance of a comma in the string. The arguments string can contain additional commas. The arguments are optional.  
   
  *QueryString*  
- A command in the command language supported by the OLE DB provider identified in the connection string. For SQL-based providers, *QueryString* might contain a Transact-SQL command statement, but for non-SQL providers (for example, MSDataShape) this may not be a [!INCLUDE[tsql](../../../includes/tsql_md.md)] query statement.  
+ A command in the command language supported by the OLE DB provider identified in the connection string. For SQL-based providers, *QueryString* might contain a Transact-SQL command statement, but for non-SQL providers (for example, MSDataShape) this may not be a [!INCLUDE[tsql](../../../includes/tsql-md.md)] query statement.  
   
  If a handler is being used, the handler can alter or replace the value specified here. For example, the handler typically replaces *QueryString* with a query string from its .ini file. By default, the Msdfmap.ini file is used.  
   

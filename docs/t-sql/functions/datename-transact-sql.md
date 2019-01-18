@@ -2,15 +2,10 @@
 title: "DATENAME (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/29/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
-ms.service: ""
-ms.component: "t-sql|functions"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: t-sql
 ms.topic: "language-reference"
 f1_keywords: 
   - "DATENAME_TSQL"
@@ -27,18 +22,17 @@ helpviewer_keywords:
   - "comparing dates times [SQL Server]"
   - "dates [SQL Server], dateparts"
 ms.assetid: 11855b56-c554-495d-aad4-ba446990153b
-caps.latest.revision: 59
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "craigg"
-ms.workload: "Active"
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # DATENAME (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-Returns a character string that represents the specified *datepart* of the specified *date*
-  
-For an overview of all [!INCLUDE[tsql](../../includes/tsql-md.md)] date and time data types and functions, see [Date and Time Data Types and Functions &#40;Transact-SQL&#41;](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md).
+This function returns a character string representing the specified *datepart* of the specified *date*.
+
+See [Date and Time Data Types and Functions &#40;Transact-SQL&#41;](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md) for an overview of all [!INCLUDE[tsql](../../includes/tsql-md.md)] date and time data types and functions.
   
 ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -50,7 +44,10 @@ DATENAME ( datepart , date )
   
 ## Arguments  
 *datepart*  
-Is the part of the *date* to return. The following table lists all valid *datepart* arguments. User-defined variable equivalents are not valid.
+The specific part of the *date* argument that `DATENAME` will return. This table lists all valid *datepart* arguments.
+
+> [!NOTE]
+> `DATENAME` does not accept user-defined variable equivalents for the *datepart* arguments.
   
 |*datepart*|Abbreviations|  
 |---|---|
@@ -71,8 +68,17 @@ Is the part of the *date* to return. The following table lists all valid *datepa
 |**ISO_WEEK**|**ISOWK, ISOWW**|  
   
 *date*  
-Is an expression that can be resolved to a **time**, **date**, **smalldatetime**, **datetime**, **datetime2**, or **datetimeoffset** value. *date* can be an expression, column expression, user-defined variable, or string literal.  
-To avoid ambiguity, use four-digit years. For information about two-digit years, see [Configure the two digit year cutoff Server Configuration Option](../../database-engine/configure-windows/configure-the-two-digit-year-cutoff-server-configuration-option.md).
+
+An expression that can resolve to one of the following data types: 
+
++ **date**
++ **datetime**
++ **datetimeoffset**
++ **datetime2** 
++ **smalldatetime**
++ **time**
+
+For *date*, `DATENAME` will accept a column expression, expression, string literal, or user-defined variable. Use four-digit years to avoid ambiguity issues. See [Configure the two digit year cutoff Server Configuration Option](../../database-engine/configure-windows/configure-the-two-digit-year-cutoff-server-configuration-option.md) for information about two-digit years.
   
 ## Return Type  
 **nvarchar**
@@ -81,20 +87,20 @@ To avoid ambiguity, use four-digit years. For information about two-digit years,
   
 -   Each *datepart* and its abbreviations return the same value.  
   
-The return value depends on the language environment set by using [SET LANGUAGE](../../t-sql/statements/set-language-transact-sql.md) and by the [Configure the default language Server Configuration Option](../../database-engine/configure-windows/configure-the-default-language-server-configuration-option.md) of the login. The return value is dependant on [SET DATEFORMAT](../../t-sql/statements/set-dateformat-transact-sql.md) if *date* is a string literal of some formats. SET DATEFORMAT does not affect the return value when the date is a column expression of a date or time data type.
+The return value depends on the language environment set by using [SET LANGUAGE](../../t-sql/statements/set-language-transact-sql.md), and by the [Configure the default language Server Configuration Option](../../database-engine/configure-windows/configure-the-default-language-server-configuration-option.md) of the login. The return value depends on [SET DATEFORMAT](../../t-sql/statements/set-dateformat-transact-sql.md) if *date* is a string literal of some formats. SET DATEFORMAT does not change the return value when the date is a column expression of a date or time data type.
   
-When the *date* parameter has a **date** data type argument, the return value depends on the setting specified by using [SET DATEFIRST](../../t-sql/statements/set-datefirst-transact-sql.md).
+When the *date* parameter has a **date** data type argument, the return value depends on the setting specified by [SET DATEFIRST](../../t-sql/statements/set-datefirst-transact-sql.md).
   
 ## TZoffset datepart Argument  
-If *datepart* argument is **TZoffset** (**tz**) and the *date* argument has no time zone offset, 0 is returned.
+If the *datepart* argument is **TZoffset** (**tz**) and the *date* argument has no time zone offset, `DATEADD` returns 0.
   
 ## smalldatetime date Argument  
-When *date* is [smalldatetime](../../t-sql/data-types/smalldatetime-transact-sql.md), seconds are returned as 00.
+When *date* is [smalldatetime](../../t-sql/data-types/smalldatetime-transact-sql.md), `DATENAME` returns seconds as 00.
   
 ## Default Returned for a datepart That Is Not in the date Argument  
-If the data type of the *date* argument does not have the specified *datepart*, the default for that *datepart* will be returned only when a literal is specified for *date*.
+If the data type of the *date* argument does not have the specified *datepart*, `DATENAME` will return the default for that *datepart* only if the *date* argument has a literal .
   
-For example, the default year-month-day for any **date** data type is 1900-01-01. The following statement has date part arguments for *datepart*, a time argument for *date*, and returns `1900, January, 1, 1, Monday`.
+For example, the default year-month-day for any **date** data type is 1900-01-01. This statement has date part arguments for *datepart*, a time argument for *date*, and `DATENAME` returns `1900, January, 1, 1, Monday`.
   
 ```sql
 SELECT DATENAME(year, '12:10:30.123')  
@@ -104,7 +110,7 @@ SELECT DATENAME(year, '12:10:30.123')
     ,DATENAME(weekday, '12:10:30.123');  
 ```  
   
-If *date* is specified as a variable or table column and the data type for that variable or column does not have the specified *datepart*, error 9810 is returned. The following code example fails because the date part year is not a valid for the **time** data type that is declared for the variable *@t*.
+If *date* is specified as a variable or table column, and the data type for that variable or column does not have the specified *datepart*, `DATENAME` will return error 9810. In this example, variable *@t* has a **time** data type. The example fails because the date part year is invalid for the **time** data type:
   
 ```sql
 DECLARE @t time = '12:10:30.123';   
@@ -112,12 +118,19 @@ SELECT DATENAME(year, @t);
 ```  
   
 ## Remarks  
-DATENAME can be used in the select list, WHERE, HAVING, GROUP BY, and ORDER BY clauses.
+
+Use `DATENAME` in the following clauses:
+
++ GROUP BY
++ HAVING
++ ORDER BY
++ SELECT \<list>
++ WHERE
   
-In [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], DATENAME implicitly casts string literals as a **datetime2** type. This means that DATENAME does not support the format YDM when the date is passed as a string. You must explicitly cast the string to a **datetime** or **smalldatetime** type to use the YDM format.
+In [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], DATENAME implicitly casts string literals as a **datetime2** type. In other words, `DATENAME` does not support the format YDM when the date is passed as a string. You must explicitly cast the string to a **datetime** or **smalldatetime** type to use the YDM format.
   
 ## Examples  
-The following example returns the date parts for the specified date.
+This example returns the date parts for the specified date. Substitute a *datepart* value from the table for the `datepart` argument in the SELECT statement:
   
 `SELECT DATENAME(datepart,'2007-10-30 12:15:32.1234567 +05:10');`
   
@@ -143,7 +156,7 @@ The following example returns the date parts for the specified date.
   
 [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]
 
-The following example returns the date parts for the specified date.
+This example returns the date parts for the specified date. Substitute a *datepart* value from the table for the `datepart` argument in the SELECT statement:
   
 ```sql
 SELECT DATENAME(datepart,'2007-10-30 12:15:32.1234567 +05:10');  

@@ -2,15 +2,10 @@
 title: "sp_xml_removedocument (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "database-engine"
-ms.service: ""
-ms.component: "system-stored-procedures"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: system-objects
 ms.topic: "language-reference"
 f1_keywords: 
   - "sp_xml_removedocument_TSQL"
@@ -20,14 +15,12 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_xml_removedocument"
 ms.assetid: f9dca50a-8baf-4170-90bc-e72783ce5b73
-caps.latest.revision: 18
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "craigg"
-ms.workload: "Inactive"
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ---
 # sp_xml_removedocument (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Removes the internal representation of the XML document specified by the document handle and invalidates the document handle.  
   
@@ -60,10 +53,11 @@ sp_xml_removedocument hdoc
 EXEC sp_xml_removedocument @hdoc;  
 ```  
   
-## See Also  
- [System Stored Procedures &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
- [XML Stored Procedures &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/xml-stored-procedures-transact-sql.md)   
- [sp_xml_preparedocument &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-xml-preparedocument-transact-sql.md)   
- [OPENXML &#40;Transact-SQL&#41;](../../t-sql/functions/openxml-transact-sql.md)  
+## See Also      
+ <br>[System Stored Procedures (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)
+ <br>[XML Stored Procedures (Transact-SQL)](../../relational-databases/system-stored-procedures/xml-stored-procedures-transact-sql.md)
+ <br>[sys.dm_exec_xml_handles (Transact-SQL)](../system-dynamic-management-views/sys-dm-exec-xml-handles-transact-sql.md)
+ <br>[sp_xml_preparedocument(Transact-SQL)](../../relational-databases/system-stored-procedures/sp-xml-preparedocument-transact-sql.md)
+ <br>[OPENXML (Transact-SQL)](../../t-sql/functions/openxml-transact-sql.md)
   
   

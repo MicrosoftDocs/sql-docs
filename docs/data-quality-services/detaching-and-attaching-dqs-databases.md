@@ -2,24 +2,20 @@
 title: "Detaching and Attaching DQS Databases | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "data-quality-services"
-ms.service: ""
-ms.component: "data-quality-services"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "data-quality-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: data-quality-services
+ms.topic: conceptual
 ms.assetid: 830e33bc-dd15-4f8e-a4ac-d8634b78fe45
-caps.latest.revision: 9
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-ms.workload: "Inactive"
+author: "douglaslMS"
+ms.author: "douglasl"
+manager: craigg
 ---
 # Detaching and Attaching DQS Databases
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
   This topic describes how to detach and attach the DQS databases.  
   
 ##  <a name="BeforeYouBegin"></a> Before You Begin  
@@ -73,7 +69,7 @@ ms.workload: "Inactive"
     C:\Program Files\Microsoft SQL Server\MSSQL12.MSSQLSERVER\MSSQL\DATA\DQS_MAIN.mdf  
     ```  
   
-5.  The **database details** (lower) pane displays the names of the files to be attached. To verify or change the pathname of a file, click the **Browse** button (…).  
+5.  The **database details** (lower) pane displays the names of the files to be attached. To verify or change the pathname of a file, click the **Browse** button (...).  
   
 6.  Click **OK** to attach the DQS_MAIN database.  
   

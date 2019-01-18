@@ -2,16 +2,11 @@
 title: "Transaction Isolation Levels | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
-ms.prod_service: "drivers"
-ms.service: ""
-ms.component: "odbc"
+ms.prod: sql
+ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "drivers"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: connectivity
+ms.topic: conceptual
 helpviewer_keywords: 
   - "dirty reads [ODBC]"
   - "isolation levels [ODBC]"
@@ -24,11 +19,9 @@ helpviewer_keywords:
   - "repeatable reads [ODBC]"
   - "transactions [ODBC], isolation"
 ms.assetid: 0d638d55-ffd0-48fb-834b-406f466214d4
-caps.latest.revision: 6
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
-ms.workload: "On Demand"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # Transaction Isolation Levels
 *Transaction isolation levels* are a measure of the extent to which transaction isolation succeeds. In particular, transaction isolation levels are defined by the presence or absence of the following phenomena:  

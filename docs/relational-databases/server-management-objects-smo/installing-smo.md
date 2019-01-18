@@ -2,31 +2,27 @@
 title: "Installing SMO | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/06/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
 ms.prod_service: "database-engine"
-ms.component: "smo"
 ms.technology: 
 
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 
   - "installing SMO"
   - "SMO [SQL Server], installing"
   - "SQL Server Management Objects, installing"
 ms.assetid: 140e9971-4940-4866-89b9-5cec938e2a16
-caps.latest.revision: 46
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: craigg
 
-ms.workload: "On Demand"
+monikerRange: "=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 
-#Installing SMO
+# Installing SMO
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
 
 This page provides information on how to install SMO for use by applications and the system requirements to use SMO.
 
@@ -39,11 +35,12 @@ This is a replacement for SharedManagementObjects.msi, which was previously rele
 >>[!Important]
 >>As mentioned on the [Files and Version Numbers](files-and-version-numbers.md) page, you should not install the SMO assemblies into the GAC. Doing so could cause issues with other applications which also use those versions of SMO (such as [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Studio).
 
-##Installing the Package
+## Installing the Package
 
-See [NuGet Quick Start - Use a Package](https://docs.microsoft.com/en-us/nuget/quickstart/use-a-package) for instructions and examples of installing and using a NuGet package. 
+See [NuGet Quick Start - Use a Package](https://docs.microsoft.com/nuget/quickstart/use-a-package) for instructions and examples of installing and using a NuGet package. 
   
 ## System Requirements
   
- SMO requires [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 4.0 to run, so any applications using it must ensure that client machines have that version or higher installed.
+ SMO requires [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 4.0 to run, so any applications using it must ensure that client machines have that version or higher installed. Some native binaries installed with the NetFx SMO libraries also require the VC 2013 runtime to be installed; that runtime is not included in the package. You can download the redist appropriate to your 
+target architecture from https://www.microsoft.com/download/details.aspx?id=40784
   

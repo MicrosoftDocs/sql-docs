@@ -1,31 +1,25 @@
 ---
 title: "Synchronize Method (RDS) | Microsoft Docs"
-ms.technology:
-  - "drivers"
+ms.technology: connectivity
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: 
-ms.suite: sql
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.component: reference
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.prod: sql  
+ms.prod_service: connectivity
+ms.topic: conceptual
 apitype: "COM"
 helpviewer_keywords: 
   - "Synchronize method [ADO]"
 ms.assetid: 7af42866-7db2-4174-8251-388a2cf741f2
-caps.latest.revision: 16
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
-ms.workload: "Inactive"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # Synchronize Method (RDS)
 Synchronize the given Recordset with the database specified by the connection string for use in ADO 2.5 and later.  
   
 > [!IMPORTANT]
->  Beginning with Windows 8 and Windows Server 2012, RDS server components are no longer included in the Windows operating system (see Windows 8 and [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/en-us/download/details.aspx?id=27416) for more detail). RDS client components will be removed in a future version of Windows. Avoid using this feature in new development work, and plan to modify applications that currently use this feature. Applications that use RDS should migrate to [WCF Data Service](http://go.microsoft.com/fwlink/?LinkId=199565).  
+>  Beginning with Windows 8 and Windows Server 2012, RDS server components are no longer included in the Windows operating system (see Windows 8 and [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) for more detail). RDS client components will be removed in a future version of Windows. Avoid using this feature in new development work, and plan to modify applications that currently use this feature. Applications that use RDS should migrate to [WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565).  
   
 ## Syntax  
   

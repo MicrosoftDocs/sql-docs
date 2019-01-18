@@ -1,28 +1,21 @@
 ---
-title: "Prereqs Migrating Log Shipping to Always On Availability Groups | Microsoft Docs"
-ms.custom: ""
+title: "Prerequisites to convert log shipping to availability groups"
+description: "A description of the prerequisites necessary to convert log shipping to an Always On availability group."
+ms.custom: "seodec18"
 ms.date: "05/17/2016"
-ms.prod: "sql-non-specified"
-ms.prod_service: "database-engine"
-ms.service: ""
-ms.component: "availability-groups"
+ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: high-availability
+ms.topic: conceptual
 helpviewer_keywords: 
   - "log shipping [SQL Server], AlwaysOn Availability Groups"
   - "Availability Groups [SQL Server], interoperability"
 ms.assetid: 2738ce65-205e-4682-92d8-dc7e37c58b2b
-caps.latest.revision: 24
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-ms.workload: "Inactive"
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
 ---
-# Prereqs Migrating Log Shipping to Always On Availability Groups
+# Prerequisites to convert log shipping to Always On availability groups
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   This topic describes the prerequisites for converting a log shipping primary database along with one or more of its secondary databases to an Always On primary database and secondary database(s).  
@@ -70,7 +63,7 @@ ms.workload: "Inactive"
   
  **For more information:**  
   
- [Converting a logshipping configuration to Availability Group](https://blogs.msdn.microsoft.com/sqlalwayson/2012/01/09/converting-a-logshipping-configuration-to-availability-group/) (a SQL Server blog)  
+ [Converting a log shipping configuration to Availability Group](https://blogs.msdn.microsoft.com/sqlalwayson/2012/01/09/converting-a-logshipping-configuration-to-availability-group/) (a SQL Server blog)  
   
 ##  <a name="RelatedTasks"></a> Related Tasks  
  **Log shipping**  
@@ -103,15 +96,15 @@ ms.workload: "Inactive"
   
      [SQL Server Always On Team Blogs: The official SQL Server Always On Team Blog](https://blogs.msdn.microsoft.com/sqlalwayson/)  
   
-     [CSS SQL Server Engineers Blogs](http://blogs.msdn.com/b/psssql/)  
+     [CSS SQL Server Engineers Blogs](https://blogs.msdn.com/b/psssql/)  
   
 -   **Whitepapers:**  
   
-     [Migration Guide: Migrating to Always On Availability Groups from Prior Deployments Combining Database Mirroring and Log Shipping](http://msdn.microsoft.com/library/jj635217)  
+     [Migration Guide: Migrating to Always On Availability Groups from Prior Deployments Combining Database Mirroring and Log Shipping](https://msdn.microsoft.com/library/jj635217)  
   
-     [Microsoft White Papers for SQL Server 2012](http://msdn.microsoft.com/library/hh403491.aspx)  
+     [Microsoft White Papers for SQL Server 2012](https://msdn.microsoft.com/library/hh403491.aspx)  
   
-     [SQL Server Customer Advisory Team Whitepapers](http://sqlcat.com/)  
+     [SQL Server Customer Advisory Team Whitepapers](https://sqlcat.com/)  
   
 ## See Also  
  [About Log Shipping &#40;SQL Server&#41;](../../../database-engine/log-shipping/about-log-shipping-sql-server.md)   

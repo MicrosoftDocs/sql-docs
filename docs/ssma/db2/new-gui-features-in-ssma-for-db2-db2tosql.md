@@ -1,26 +1,15 @@
 ---
 title: "New GUI features in SSMA for DB2 (DB2ToSQL) | Microsoft Docs"
-ms.prod: "sql-non-specified"
-ms.prod_service: "sql-tools"
-ms.service: ""
-ms.component: "ssma-db2"
+ms.prod: sql
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "sql-ssma"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to: 
-  - "Azure SQL Database"
-  - "SQL Server"
+ms.technology: ssma
+ms.topic: conceptual
 ms.assetid: a8ed33e9-185a-492d-a4cf-2fded1aa5c70
-caps.latest.revision: 4
 author: "Shamikg"
 ms.author: "Shamikg"
-manager: "jhubbard"
-ms.workload: "Inactive"
+manager: craigg
 ---
 # New GUI features in SSMA for DB2 (DB2ToSQL)
 This chapter describes new features of SSMA User Interface.  

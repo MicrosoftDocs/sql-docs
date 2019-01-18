@@ -2,15 +2,10 @@
 title: "BufferWithTolerance (geography Data Type) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.service: ""
-ms.component: "t-sql|spatial-geography"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: t-sql
 ms.topic: "language-reference"
 f1_keywords: 
   - "BufferWithTolerance_TSQL"
@@ -20,11 +15,9 @@ dev_langs:
 helpviewer_keywords: 
   - "BefferWithTolerance method"
 ms.assetid: f1783e6b-0f17-464f-b1c7-1c3f7d8aa042
-caps.latest.revision: 20
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-ms.workload: "Inactive"
+author: "douglaslMS"
+ms.author: "douglasl"
+manager: craigg
 ---
 # BufferWithTolerance (geography Data Type)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -44,7 +37,7 @@ ms.workload: "Inactive"
  *distance*  
  Is a **float** expression specifying the distance from the **geography** instance around which to calculate the buffer.  
   
- The maximum distance of the buffer cannot exceed 0.999 \* *π*  * minorAxis \* minorAxis / majorAxis (~0.999 \* 1/2 Earth’s circumference) or the full globe.  
+ The maximum distance of the buffer cannot exceed 0.999 \* *π*  * minorAxis \* minorAxis / majorAxis (~0.999 \* 1/2 Earth's circumference) or the full globe.  
   
  *tolerance*  
  Is a **float** expression specifying the tolerance of the buffer distance.  
@@ -70,9 +63,9 @@ ms.workload: "Inactive"
   
  This method will throw an **ArgumentException** in **FullGlobe** instances where the distance of the buffer exceeds the following limitation:  
   
- 0.999 \* *π* * minorAxis \* minorAxis / majorAxis (~0.999 \* 1/2 Earth’s circumference)  
+ 0.999 \* *π* * minorAxis \* minorAxis / majorAxis (~0.999 \* 1/2 Earth's circumference)  
   
- The error between the theorectical and computed buffer is max(tolerance, extents \* 1.E-7) where tolerance is the value of the *tolerance* parameter. For more information on extents, see [geography Data Type Method Reference](http://msdn.microsoft.com/library/028e6137-7128-4c74-90a7-f7bdd2d79f5e).  
+ The error between the theoretical and computed buffer is max(tolerance, extents \* 1.E-7) where tolerance is the value of the *tolerance* parameter. For more information on extents, see [geography Data Type Method Reference](https://msdn.microsoft.com/library/028e6137-7128-4c74-90a7-f7bdd2d79f5e).  
   
  This method is not precise.  
   

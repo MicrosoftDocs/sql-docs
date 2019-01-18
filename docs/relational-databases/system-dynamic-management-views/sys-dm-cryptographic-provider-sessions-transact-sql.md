@@ -2,15 +2,9 @@
 title: "sys.dm_cryptographic_provider_sessions (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/10/2016"
-ms.prod: "sql-non-specified"
-ms.prod_service: "database-engine"
-ms.service: ""
-ms.component: "dmv's"
+ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: system-objects
 ms.topic: "language-reference"
 f1_keywords: 
   - "sys.dm_cryptographic_provider_sessions"
@@ -22,11 +16,9 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.dm_cryptographic_provider_sessions dynamic management function"
 ms.assetid: 9a4de02b-1a07-4850-979a-0861fddb7f9d
-caps.latest.revision: 13
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-ms.workload: "Inactive"
+author: stevestein
+ms.author: sstein
+manager: craigg
 ---
 # sys.dm_cryptographic_provider_sessions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

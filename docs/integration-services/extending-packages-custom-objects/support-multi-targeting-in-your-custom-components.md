@@ -2,24 +2,15 @@
 title: "Support multi-targeting in your custom components | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/17/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "integration-services"
-ms.service: ""
-ms.component: "extending-packages-custom-objects"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to: 
-  - "SQL Server (starting with 2016)"
+ms.technology: integration-services
+ms.topic: conceptual
 ms.assetid: ec611374-16bf-4a56-8fd9-45d3ddd7befc
-caps.latest.revision: 6
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
-ms.workload: "Inactive"
+manager: craigg
 ---
 # Support multi-targeting in your custom components
  You can now use SSIS Designer in SQL Server Data Tools (SSDT) to create, maintain, and run packages that target SQL Server 2016, SQL Server 2014, or SQL Server 2012. To get SSDT for Visual Studio 2015, see [Download Latest SQL Server Data Tools](../../ssdt/download-sql-server-data-tools-ssdt.md). 
@@ -99,7 +90,7 @@ public override void PerformDowngrade(int pipelineVersion, DTSTargetServerVersio
 
 **Error message.** Unable to cast COM object of type 'System.__ComObject' to interface type 'Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100'. This operation failed because the QueryInterface call on the COM component for the interface with IID '{BE8C48A3-155B-4810-BA5C-BDF68A659E9E}' failed due to the following error: No such interface supported (Exception from HRESULT: 0x80004002 (E_NOINTERFACE)). (Microsoft.SqlServer.DTSPipelineWrap).
 
-**Solution.** If your custom extension references SSIS interop assemblies such as Microsoft.SqlServer.DTSPipelineWrap or Microsoft.SqlServer.DTSRuntimeWrap, set the value of the **Embed Interop Types** property to **False".
+**Solution.** If your custom extension references SSIS interop assemblies such as Microsoft.SqlServer.DTSPipelineWrap or Microsoft.SqlServer.DTSRuntimeWrap, set the value of the **Embed Interop Types** property to **False**.
 
 ![Embed Interop Types](../../integration-services/extending-packages-custom-objects/media/embed-interop-types.png)
 

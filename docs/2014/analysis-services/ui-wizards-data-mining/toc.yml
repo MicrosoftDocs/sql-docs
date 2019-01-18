@@ -1,0 +1,45 @@
+- name: UI Wizards for Data Mining Analysis
+  href: ui-wizards-data-mining.md
+- name: Data Mining Wizards
+  href: ../data-mining-wizards.md
+- name: Data Mining Wizard F1 Help
+  href: ../data-mining-wizard-f1-help-analysis-services-data-mining.md
+  items:
+  - name: Select the Definition Method (Data Mining Wizard)
+    href: ../select-the-definition-method-data-mining-wizard.md
+  - name: Create the Data Mining Structure (Data Mining Wizard)
+    href: ../create-the-data-mining-structure-data-mining-wizard.md
+  - name: Select Data Source View (Data Mining Wizard)
+    href: ../select-data-source-view-data-mining-wizard.md
+  - name: Browse Data Source View (Data Mining Wizard)
+    href: ../browse-data-source-view-data-mining-wizard.md
+  - name: Specify Table Types (Data Mining Wizard)
+    href: ../specify-table-types-data-mining-wizard.md
+  - name: Specify the Training Data (Data Mining Wizard)
+    href: ../specify-the-training-data-data-mining-wizard.md
+  - name: Specify Column Content and Data Type (Data Mining Wizard)
+    href: ../specify-column-content-and-data-type-data-mining-wizard.md
+  - name: Create Testing Set
+    href: ../create-testing-set-data-mining-wizard.md
+  - name: Suggest Related Columns (Data Mining Wizard)
+    href: ../suggest-related-columns-data-mining-wizard.md
+  - name: Select the Source Cube Dimension (Data Mining Wizard)
+    href: ../select-the-source-cube-dimension-data-mining-wizard.md
+  - name: Select the Case Key (Data Mining Wizard)
+    href: ../select-the-case-key-data-mining-wizard.md
+  - name: Select Case Level Columns (Data Mining Wizard)
+    href: ../select-case-level-columns-data-mining-wizard.md
+  - name: Specify Mining Model Column Usage (Data Mining Wizard)
+    href: ../specify-mining-model-column-usage-data-mining-wizard.md
+  - name: Select a Measure Group Dimension (Add New Nested Table Wizard)
+    href: ../select-a-measure-group-dimension-add-new-nested-table-wizard.md
+  - name: Select Nested Table Key (Add New Nested Table Wizard)
+    href: ../select-nested-table-key-add-new-nested-table-wizard.md
+  - name: Select Nested Table Columns (Add New Nested Table Wizard)
+    href: ../select-nested-table-columns-add-new-nested-table-wizard.md
+  - name: Specify the Column's Content and Data Type (Data Mining Wizard)
+    href: ../specify-the-column-s-content-and-data-type-data-mining-wizard.md
+  - name: Slice Source Cube (Data Mining Wizard)
+    href: ../slice-source-cube-data-mining-wizard.md
+  - name: Completing the Wizard (Data Mining Wizard)
+    href: ../completing-the-wizard-data-mining-wizard.md

@@ -1,32 +1,14 @@
 ---
 title: "Create an Analysis Services Project (SSDT) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: analysis-services
-ms.prod_service: "analysis-services"
-ms.service: ""
-ms.component: ""
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
-  
-ms.component: multidimensional-tabular
-ms.component: data-mining
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "templates [Analysis Services]"
-  - "templates [Analysis Services], projects"
-  - "projects [Analysis Services], creating"
-  - "projects [Analysis Services], Business Intelligence Development Studio"
-  - "Business Intelligence Development Studio, defining projects [Analysis Services]"
-  - "items [Analysis Services]"
-ms.assetid: d00913b0-cd6d-4de0-a1e7-4ce86fcc078d
-caps.latest.revision: 37
-author: "Minewiskan"
-ms.author: "owend"
-manager: "kfile"
-ms.workload: "On Demand"
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: multidimensional-models
+ms.topic: conceptual
+ms.author: owend
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
 ---
 # Create an Analysis Services Project (SSDT)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -63,7 +45,7 @@ ms.workload: "On Demand"
   
 5.  To add the new project to the existing solution, in the **Solution** drop-down list, select **Add to Solution**.  
   
-     —or—  
+     -or-  
   
      To create a new solution, in the **Solution** drop-down list, select **Create new Solution**. To create a new folder for the new solution, select **Create directory for solution**. In **Solution Name**, type the name of the new solution.  
   

@@ -2,24 +2,17 @@
 title: "SAP BW Destination Editor (Error Output Page) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "integration-services"
-ms.service: ""
-ms.component: "data-flow"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: integration-services
+ms.topic: conceptual
 f1_keywords: 
   - "sql13.dts.designer.sapbwdestination.erroroutput.f1"
 ms.assetid: a543d811-0bd2-4890-a0d3-f5fdcd4524b8
-caps.latest.revision: 10
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
-ms.workload: "Inactive"
+manager: craigg
 ---
 # SAP BW Destination Editor (Error Output Page)
   Use the **Error Output** page of the **SAP BW Destination Editor** to specify error handling options.  

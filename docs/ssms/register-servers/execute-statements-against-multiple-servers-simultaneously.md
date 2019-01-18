@@ -2,26 +2,19 @@
 title: "Execute Statements Against Multiple Servers Simultaneously | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/18/2016"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "sql-tools"
-ms.service: ""
-ms.component: "ssms-registration"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: ssms
+ms.topic: conceptual
 helpviewer_keywords: 
   - "multiserver queries"
   - "executing queries against multiple servers"
   - "queries [SQL Server], multiserver"
 ms.assetid: 197760f3-0a06-43de-8162-69c27d3fbe56
-caps.latest.revision: 21
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-ms.workload: "On Demand"
+author: "stevestein"
+ms.author: "sstein"
+manager: craigg
 ---
 # Execute Statements Against Multiple Servers Simultaneously
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

@@ -2,15 +2,10 @@
 title: "SELECT (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "10/24/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
-ms.service: ""
-ms.component: "t-sql|queries"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: t-sql
 ms.topic: "language-reference"
 f1_keywords: 
   - "SELECT_TSQL"
@@ -27,11 +22,10 @@ helpviewer_keywords:
   - "row retrieval [SQL Server]"
   - "queries [SQL Server], results"
 ms.assetid: dc85caea-54d1-49af-b166-f3aa2f3a93d0
-caps.latest.revision: 51
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-ms.workload: "Active"
+author: "douglaslMS"
+ms.author: "douglasl"
+manager: craigg
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # SELECT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -172,7 +166,7 @@ FROM DimEmployee
 ORDER BY LastName;  
 ```  
   
- This example returns only the rows for `DimEmployee` that have an `EndDate` that is not NULL and a `MaritalStatus` of ‘M’ (married).  
+ This example returns only the rows for `DimEmployee` that have an `EndDate` that is not NULL and a `MaritalStatus` of 'M' (married).  
   
 ```sql  
 SELECT FirstName, LastName, StartDate AS FirstDay  

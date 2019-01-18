@@ -1,27 +1,20 @@
 ---
 title: "Create Method Example (VC++) | Microsoft Docs"
-ms.prod: "sql-non-specified"
-ms.prod_service: "drivers"
-ms.service: ""
-ms.component: "ado"
-ms.technology:
-  - "drivers"
+ms.prod: sql
+ms.prod_service: connectivity
+ms.technology: connectivity
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 dev_langs: 
   - "C++"
 helpviewer_keywords: 
   - "Create method [ADOX], VC++ example"
 ms.assetid: 57fcb0eb-5d40-4ad4-996d-380732de8a3d
-caps.latest.revision: 10
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
-ms.workload: "Inactive"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # Create Method Example (VC++)
 The following code shows how to create a new Microsoft Jet database with the [Create](../../../ado/reference/adox-api/create-method-adox.md) method.  

@@ -2,16 +2,11 @@
 title: "Set Index Options | Microsoft Docs"
 ms.custom: ""
 ms.date: "02/17/2017"
-ms.prod: "sql-non-specified"
-ms.prod_service: "database-engine, sql-database"
-ms.service: ""
-ms.component: "indexes"
+ms.prod: sql
+ms.prod_service: "table-view-index, sql-database"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "dbe-indexes"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: table-view-index
+ms.topic: conceptual
 helpviewer_keywords: 
   - "ALLOW_ROW_LOCKS option"
   - "SORT_IN_TEMPDB option"
@@ -26,11 +21,10 @@ helpviewer_keywords:
   - "ALLOW_PAGE_LOCKS option"
   - "ONLINE"
 ms.assetid: 7969af33-e94c-41f7-ab89-9d9a2747cd5c
-caps.latest.revision: 44
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-ms.workload: "Inactive"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Set Index Options
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -68,11 +62,11 @@ ms.workload: "Inactive"
   
 #### To modify the properties of an index in Table Designer  
   
-1.  In Object Explorer, click the plus sign to expand the database that contains the table on which you want to modify an index’s properties.  
+1.  In Object Explorer, click the plus sign to expand the database that contains the table on which you want to modify an index's properties.  
   
 2.  Click the plus sign to expand the **Tables** folder.  
   
-3.  Right-click the table on which you want to modify an index’s properties and select **Design**.  
+3.  Right-click the table on which you want to modify an index's properties and select **Design**.  
   
 4.  On the **Table Designer** menu, click **Indexes/Keys**.  
   
@@ -82,15 +76,15 @@ ms.workload: "Inactive"
   
 7.  Click **Close**.  
   
-8.  On the **File** menu, select **Save***table_name*.  
+8.  On the **File** menu, select **Save**_table_name_.  
   
 #### To modify the properties of an index in Object Explorer  
   
-1.  In Object Explorer, click the plus sign to expand the database that contains the table on which you want to modify an index’s properties.  
+1.  In Object Explorer, click the plus sign to expand the database that contains the table on which you want to modify an index's properties.  
   
 2.  Click the plus sign to expand the **Tables** folder.  
   
-3.  Click the plus sign to expand the table on which you want to modify an index’s properties.  
+3.  Click the plus sign to expand the table on which you want to modify an index's properties.  
   
 4.  Click the plus sign to expand the **Indexes** folder.  
   
@@ -100,7 +94,7 @@ ms.workload: "Inactive"
   
 7.  Change the settings of any and all properties to customize the index.  
   
-8.  To add, remove, or change the position of an index column, select the **General** page from the **Index Properties -** *index_name* dialog box. For more information, see [Index Properties F1 Help](../../relational-databases/indexes/index-properties-f1-help.md)  
+8.  To add, remove, or change the position of an index column, select the **General** page from the **Index Properties -** _index_name_ dialog box. For more information, see [Index Properties F1 Help](../../relational-databases/indexes/index-properties-f1-help.md)  
   
 ##  <a name="TsqlProcedure"></a> Using Transact-SQL  
   

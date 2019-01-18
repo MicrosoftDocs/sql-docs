@@ -2,16 +2,11 @@
 title: "Managing Data Sources | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
-ms.prod_service: "drivers"
-ms.service: ""
-ms.component: "odbc"
+ms.prod: sql
+ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "drivers"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: connectivity
+ms.topic: conceptual
 helpviewer_keywords: 
   - "deleting data sources [ODBC], ODBC data source administrator"
   - "data sources [ODBC], ODBC data source administrator"
@@ -19,11 +14,9 @@ helpviewer_keywords:
   - "removing data sources [ODBC], ODBC data source administrator"
   - "ODBC data source administrator [ODBC], data source management"
 ms.assetid: 67cc4945-4850-4eb4-8da6-b835ddaeca4c
-caps.latest.revision: 11
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
-ms.workload: "On Demand"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # Managing Data Sources
 After you have installed an ODBC driver from the driver's setup program, you can define one or more data sources for it. The data source name (DSN) should provide a unique description of the data; for example, *Payroll* or *Accounts Payable*. The user and system data sources that are defined for all currently installed drivers are listed in the **User DSN** or **System DSN** tabs of the **ODBC Data Source Administrator** dialog box. The file data sources in a given directory are listed in the **File DSN** tab; the directory to be shown is entered in the **Look in** box in the **File DSN** tab.  

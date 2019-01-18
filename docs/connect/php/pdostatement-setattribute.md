@@ -2,22 +2,15 @@
 title: "PDOStatement::setAttribute | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/13/2017"
-ms.prod: "sql-non-specified"
-ms.prod_service: "drivers"
-ms.service: ""
-ms.component: "php"
+ms.prod: sql
+ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "drivers"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: connectivity
+ms.topic: conceptual
 ms.assetid: 329d9b5e-1c5d-40b0-9127-1051d0646fc7
-caps.latest.revision: 20
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
-ms.workload: "Inactive"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # PDOStatement::setAttribute
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -69,6 +62,7 @@ echo $stmt->getAttribute( constant( "PDO::SQLSRV_ATTR_QUERY_TIMEOUT" ) );
 ```  
   
 ## See Also  
-[PDOStatement Class](../../connect/php/pdostatement-class.md)  
-[PDO](http://go.microsoft.com/fwlink/?LinkID=187441)  
+[PDOStatement Class](../../connect/php/pdostatement-class.md)
+
+[PDO](https://php.net/manual/book.pdo.php)  
   

@@ -1,29 +1,18 @@
 ---
 title: "Project Settings (Conversion) (DB2ToSQL) | Microsoft Docs"
-ms.prod: "sql-non-specified"
-ms.prod_service: "sql-tools"
-ms.service: ""
-ms.component: "ssma-db2"
+ms.prod: sql
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "sql-ssma"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to: 
-  - "Azure SQL Database"
-  - "SQL Server"
+ms.technology: ssma
+ms.topic: conceptual
 ms.assetid: 538c93cf-c5bb-43d5-b758-186d9fb00c19
-caps.latest.revision: 8
 author: "Shamikg"
 ms.author: "Shamikg"
-manager: "jhubbard"
-ms.workload: "Inactive"
+manager: craigg
 ---
 # Project Settings (Conversion) (DB2ToSQL)
-The Conversion page of the **Project Settings** dialog box contains settings that customize how SSMA converts DB2 syntax to [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] syntax.  
+The Conversion page of the **Project Settings** dialog box contains settings that customize how SSMA converts DB2 syntax to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] syntax.  
   
 The Conversion pane is available in the **Project Settings** and **Default Project Settings** dialog boxes:  
   
@@ -51,7 +40,7 @@ When SSMA converts ROWNUM expressions, it converts the expression into a TOP cla
   
 `WHERE ROWNUM < expression and Field1 >= 2`  
   
-The following example shows the resulting [!INCLUDE[tsql](../../includes/tsql_md.md)]:  
+The following example shows the resulting [!INCLUDE[tsql](../../includes/tsql-md.md)]:  
   
 `DELETE TOP (expression-1)`  
   
@@ -74,9 +63,9 @@ When you select a conversion mode in the **Mode** box, SSMA applies the followin
 ### Default Schema Mapping  
 This setting specifies how DB2 schemas are mapped to SQL Server schemas. Two options are available in this setting:  
   
-1.  **Schema to database:** In this mode DB2 schema ‘sch1’ will be mapped by default to ‘dbo’ SQL Server schema in SQL Server database ‘sch1’.  
+1.  **Schema to database:** In this mode DB2 schema 'sch1' will be mapped by default to 'dbo' SQL Server schema in SQL Server database 'sch1'.  
   
-2.  **Schema to schema:**In this mode DB2 schema ‘sch1’ will be mapped by default to ‘sch1’ SQL Server schema in default SQL Server database provided in the connection dialog.  
+2.  **Schema to schema:**In this mode DB2 schema 'sch1' will be mapped by default to 'sch1' SQL Server schema in default SQL Server database provided in the connection dialog.  
   
 When you select a conversion mode in the **Mode** box, SSMA applies the following setting:  
   
@@ -86,17 +75,17 @@ When you select a conversion mode in the **Mode** box, SSMA applies the followin
   
 -   If you select **Using INSERT, UPDATE, DELETE statement**, SSMA converts MERGER statement into INSERT, UPDATE, DELETE statements.  
   
--   If you select **Using MERGE statement**, SSMA converts MERGER statement into MERGE statement in [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)].  
+-   If you select **Using MERGE statement**, SSMA converts MERGER statement into MERGE statement in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 > [!WARNING]  
-> This project setting option is available only in [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2008, [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2012, [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2014.  
+> This project setting option is available only in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2008, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2012, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2014.  
   
 When you select a conversion mode in the **Mode** box, SSMA applies the following setting:  
   
 **Default/Optimistic/Full Mode:** Using MERGE statement  
   
 ### Convert calls to subprograms that use default arguments  
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] functions do not support the omission of parameters in the function call. Also, [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] functions and procedures do not support expressions as default parameter values.  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] functions do not support the omission of parameters in the function call. Also, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] functions and procedures do not support expressions as default parameter values.  
   
 -   If you select **Yes** and a function call omits parameters, SSMA will insert the keyword **default** into the function and call in the correct position. Then, it will mark the call with a warning.  
   
@@ -111,7 +100,7 @@ If your COUNT functions are likely to return values larger than 2,147,483,647, w
   
 -   If you select **Yes**, SSMA will convert all uses of COUNT to COUNT_BIG.  
   
--   If you select **No**, the functions will remain as COUNT. [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] will return an error if the function returns a value larger than 2<sup>31</sup>-1.  
+-   If you select **No**, the functions will remain as COUNT. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] will return an error if the function returns a value larger than 2<sup>31</sup>-1.  
   
 When you select a conversion mode in the **Mode** box, SSMA applies the following setting:  
   
@@ -133,9 +122,9 @@ When you select a conversion mode in the **Mode** box, SSMA applies the followin
 **Full Mode:** Yes  
   
 ### Convert foreign keys with SET NULL referential action on column that is NOT NULL  
-DB2 allows creating foreign key constraints, where a SET NULL action could not possibly be performed because NULLs are not permitted in the referenced column. [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] does not allow such foreign key configuration.  
+DB2 allows creating foreign key constraints, where a SET NULL action could not possibly be performed because NULLs are not permitted in the referenced column. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] does not allow such foreign key configuration.  
   
--   If you select **Yes**, SSMA will generate referential actions as in DB2, but you will need to make manual changes before loading the constraint to [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]. For example, you can choose NO ACTION instead of SET NULL.  
+-   If you select **Yes**, SSMA will generate referential actions as in DB2, but you will need to make manual changes before loading the constraint to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. For example, you can choose NO ACTION instead of SET NULL.  
   
 -   If you select **No**, the constraint will be marked as an error.  
   
@@ -144,7 +133,7 @@ When you select a conversion mode in the **Mode** box, SSMA applies the followin
 **Default/Optimistic/Full Mode:** No  
   
 ### Convert function calls to procedure calls  
-Some DB2 functions are defined as autonomous transactions or contain statements that would not be valid in [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]. In these cases, SSMA creates a procedure and a function that is a wrapper for the procedure. The converted function calls the implementing procedure.  
+Some DB2 functions are defined as autonomous transactions or contain statements that would not be valid in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. In these cases, SSMA creates a procedure and a function that is a wrapper for the procedure. The converted function calls the implementing procedure.  
   
 SSMA can convert calls to the wrapper function into calls to the procedure. This creates more readable code and can improve performance. However, the context does not always allow it; for example, you cannot replace a function call in SELECT list with a procedure call. SSMA has a few options to cover the common cases:  
   
@@ -182,7 +171,7 @@ When you select a conversion mode in the **Mode** box, SSMA applies the followin
 **Default/Optimistic/Full Mode:** Yes  
   
 ### Convert OPEN-FOR statements for REF CURSOR OUT parameters  
-In DB2, the OPEN-FOR statement can be used to return a result set to a subprogram's OUT parameter of type REF CURSOR. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], stored procedures directly return the results of SELECT statements.  
+In DB2, the OPEN-FOR statement can be used to return a result set to a subprogram's OUT parameter of type REF CURSOR. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], stored procedures directly return the results of SELECT statements.  
   
 SSMA can convert many OPEN-FOR statements into SELECT statements.  
   
@@ -206,9 +195,9 @@ When you select a conversion mode in the **Mode** box, SSMA applies the followin
 **Default/Optimistic/Full Mode:** Yes  
   
 ### Convert SUBSTR function calls to SUBSTRING function calls  
-SSMA can convert DB2 SUBSTR function calls into [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] **substring** function calls, depending on the number of parameters. If SSMA cannot convert a SUBSTR function call, or the number of parameters is not supported, SSMA will convert the SUBSTR function call into a custom SSMA function call.  
+SSMA can convert DB2 SUBSTR function calls into [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **substring** function calls, depending on the number of parameters. If SSMA cannot convert a SUBSTR function call, or the number of parameters is not supported, SSMA will convert the SUBSTR function call into a custom SSMA function call.  
   
--   If you select **Yes**, SSMA will convert SUBSTR function calls that use three parameters into [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] **substring**. Other SUBSTR functions will be converted to call the custom SSMA function.  
+-   If you select **Yes**, SSMA will convert SUBSTR function calls that use three parameters into [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **substring**. Other SUBSTR functions will be converted to call the custom SSMA function.  
   
 -   If you select **No**, SSMA will convert the SUBSTR function call into a custom SSMA function call.  
   
@@ -221,16 +210,16 @@ When you select a conversion mode in the **Mode** box, SSMA applies the followin
 ### Convert subtypes  
 SSMA can convert PL/SQL subtypes in two ways:  
   
--   If you select **Yes**, SSMA will create [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] user-defined type from a subtype and use it for each variable of this subtype.  
+-   If you select **Yes**, SSMA will create [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] user-defined type from a subtype and use it for each variable of this subtype.  
   
--   If you select **No**, SSMA will substitute all source declarations of the subtype with the underlying type and convert the result as usual. In this case, no additional types are created in [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]  
+-   If you select **No**, SSMA will substitute all source declarations of the subtype with the underlying type and convert the result as usual. In this case, no additional types are created in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
   
 When you select a conversion mode in the **Mode** box, SSMA applies the following setting:  
   
 **Default/Optimistic/Full Mode:** No  
   
 ### Convert synonyms  
-Synonyms for the following DB2 objects can be migrated to [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]:  
+Synonyms for the following DB2 objects can be migrated to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:  
   
 -   Tables and object tables  
   
@@ -252,7 +241,7 @@ Synonyms for the following DB2 objects can be replaced by direct references to t
   
 Other synonyms cannot be migrated. SSMA will generate error messages for the synonym and all references that use the synonym.  
   
--   If you select **Yes**, SSMA will create [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] synonyms and direct object references according to the previous lists.  
+-   If you select **Yes**, SSMA will create [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] synonyms and direct object references according to the previous lists.  
   
 -   If you select **No**, SSMA will create direct object references for all synonyms listed here.  
   
@@ -276,21 +265,21 @@ When you select a conversion mode in the **Mode** box, SSMA applies the followin
 ### Convert transaction processing statements  
 SSMA can convert DB2 transaction processing statements:  
   
--   If you select **Yes**, SSMA converts DB2 transaction processing statements to [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] statements.  
+-   If you select **Yes**, SSMA converts DB2 transaction processing statements to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] statements.  
   
 -   If you select **No**, SSMA marks the transaction processing statements as conversion errors.  
   
 > [!NOTE]  
-> DB2 opens transactions implicitly. To emulate this behavior on [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], you must add BEGIN TRANSACTION statements manually where you want your transactions to start. Alternatively, you can execute the SET IMPLICIT_TRANSACTIONS ON command at the beginning of your session. SSMA adds SET IMPLICIT_TRANSACTIONS ON automatically when converting subroutines with autonomous transactions.  
+> DB2 opens transactions implicitly. To emulate this behavior on [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], you must add BEGIN TRANSACTION statements manually where you want your transactions to start. Alternatively, you can execute the SET IMPLICIT_TRANSACTIONS ON command at the beginning of your session. SSMA adds SET IMPLICIT_TRANSACTIONS ON automatically when converting subroutines with autonomous transactions.  
   
 When you select a conversion mode in the **Mode** box, SSMA applies the following setting:  
   
 **Default/Optimistic/Full Mode:** Yes  
   
 ### Emulate DB2 null behavior in ORDER BY clauses  
-NULL values are ordered differently in [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] and DB2:  
+NULL values are ordered differently in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and DB2:  
   
--   In [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], NULL values are the lowest values in an ordered list. In an ascending list, NULL values will appear first.  
+-   In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], NULL values are the lowest values in an ordered list. In an ascending list, NULL values will appear first.  
   
 -   In DB2, NULL values are the highest values in an ordered list. By default, NULL values appear last in an ascending-order list.  
   
@@ -309,11 +298,11 @@ When you select a conversion mode in the **Mode** box, SSMA applies the followin
 **Full Mode:** Yes  
   
 ### Emulate row count exceptions in SELECT  
-If a SELECT statement with an INTO clause does not return any rows, DB2 raises a NO_DATA_FOUND exception. If the statement returns two or more rows, the TOO_MANY_ROWS exception is raised. The converted statement in [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] does not raise any exception if the row count is different from one.  
+If a SELECT statement with an INTO clause does not return any rows, DB2 raises a NO_DATA_FOUND exception. If the statement returns two or more rows, the TOO_MANY_ROWS exception is raised. The converted statement in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] does not raise any exception if the row count is different from one.  
   
--   If you select **Yes**, SSMA adds call to sysdb procedure db_error_exact_one_row_check after each SELECT statement. This procedure emulates the NO_DATA_FOUND and TOO_MANY_ROWS exceptions. This is the default and it allows reproducing DB2 behavior as close as possible. You should always choose **Yes** if the source code has exception handlers that process these errors. Note that if the SELECT statement occurs inside a user-defined function, this module will be converted to a stored procedure, because executing stored procedures and raising exceptions is not compatible with [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] function context.  
+-   If you select **Yes**, SSMA adds call to sysdb procedure db_error_exact_one_row_check after each SELECT statement. This procedure emulates the NO_DATA_FOUND and TOO_MANY_ROWS exceptions. This is the default and it allows reproducing DB2 behavior as close as possible. You should always choose **Yes** if the source code has exception handlers that process these errors. Note that if the SELECT statement occurs inside a user-defined function, this module will be converted to a stored procedure, because executing stored procedures and raising exceptions is not compatible with [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] function context.  
   
--   If you select **No**, no exceptions will be generated. That can be useful when SSMA converts a user-defined function and you want it to remain a function in [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]  
+-   If you select **No**, no exceptions will be generated. That can be useful when SSMA converts a user-defined function and you want it to remain a function in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
   
 When you select a conversion mode in the **Mode** box, SSMA applies the following setting:  
   
@@ -330,9 +319,9 @@ When you select a conversion mode in the **Mode** box, SSMA applies the followin
 **Default/Optimistic/Full Mode:** Error  
   
 ### Generate ROWID column  
-When SSMA creates tables in [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], it can create a ROWID column. When data is migrated, each row obtains a new UNIQUEIDENTIFIER value generated by the newid() function.  
+When SSMA creates tables in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], it can create a ROWID column. When data is migrated, each row obtains a new UNIQUEIDENTIFIER value generated by the newid() function.  
   
--   If you select **Yes**, the ROWID column is created on all tables and [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] generates GUIDs as you insert values. Always choose **Yes** if you are planning to use the SSMA Tester.  
+-   If you select **Yes**, the ROWID column is created on all tables and [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] generates GUIDs as you insert values. Always choose **Yes** if you are planning to use the SSMA Tester.  
   
 -   If you select **No**, ROWID columns are not added to tables.  
   
@@ -348,7 +337,7 @@ When you select a conversion mode in the **Mode** box, SSMA applies the followin
 **Full Mode:** Yes  
   
 ### Generate unique index on ROWID column  
-Specifies whether SSMA generates unique index column on the ROWID generated column or not. If the option is set to “YES”, unique index is generated and if it is set to “NO”, unique index is not generated on the ROWID column.  
+Specifies whether SSMA generates unique index column on the ROWID generated column or not. If the option is set to "YES", unique index is generated and if it is set to "NO", unique index is not generated on the ROWID column.  
   
 When you select a conversion mode in the **Mode** box, SSMA applies the following setting:  
   
@@ -366,9 +355,9 @@ When you select a conversion mode in the **Mode** box, SSMA applies the followin
 **Default/Optimistic/Full Mode:** Inline  
   
 ### Use ISNULL in string concatenation  
-DB2 and [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] return different results when string concatenations include NULL values. DB2 treats the NULL value like an empty character set. [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] returns NULL.  
+DB2 and [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] return different results when string concatenations include NULL values. DB2 treats the NULL value like an empty character set. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] returns NULL.  
   
--   If you select **Yes**, SSMA replaces the DB2 concatenation character (||) with the [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] concatenation character (+). SSMA also checks the expressions on both sides of the concatenation for NULL values.  
+-   If you select **Yes**, SSMA replaces the DB2 concatenation character (||) with the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] concatenation character (+). SSMA also checks the expressions on both sides of the concatenation for NULL values.  
   
 -   If you select **No**, SSMA replaces the concatenation characters, but does not check for NULL values.  
   
@@ -404,7 +393,7 @@ When you select a conversion mode in the **Mode** box, SSMA applies the followin
   
 -   If you select **Yes**, SSMA converts the TO_CHAR(date, format) into native convert function when possible.  
   
--   If you select **No**, SSMA converts the TO_CHAR(date, format) into TO_CHAR_DATE or TO_CHAR_DATE_LS (It is defined by “Convert TO_CHAR(date, format)” options).  
+-   If you select **No**, SSMA converts the TO_CHAR(date, format) into TO_CHAR_DATE or TO_CHAR_DATE_LS (It is defined by "Convert TO_CHAR(date, format)" options).  
   
 When you select a conversion mode in the **Mode** box, SSMA applies the following setting:  
   
@@ -426,9 +415,9 @@ When you select a conversion mode in the **Mode** box, SSMA applies the followin
 ## RETURNING Clause Conversion  
   
 ### Convert RETURNING clause in DELETE statement to OUTPUT  
-DB2 provides a RETURNING clause as a way to immediately obtain deleted values. [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] provides that functionality with the OUTPUT clause.  
+DB2 provides a RETURNING clause as a way to immediately obtain deleted values. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provides that functionality with the OUTPUT clause.  
   
--   If you select **Yes**, SSMA will convert RETURNING clauses in DELETE statements to OUTPUT clauses. Because triggers on a table can change values, the returned value might be different in [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] than it was in DB2.  
+-   If you select **Yes**, SSMA will convert RETURNING clauses in DELETE statements to OUTPUT clauses. Because triggers on a table can change values, the returned value might be different in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] than it was in DB2.  
   
 -   If you select **No**, SSMA will generate a SELECT statement before DELETE statements to retrieve returned values.  
   
@@ -437,9 +426,9 @@ When you select a conversion mode in the **Mode** box, SSMA applies the followin
 **Default/Optimistic/Full Mode:** Yes  
   
 ### Convert RETURNING clause in INSERT statement to OUTPUT  
-DB2 provides a RETURNING clause as a way to immediately obtain inserted values. [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] provides that functionality with the OUTPUT clause.  
+DB2 provides a RETURNING clause as a way to immediately obtain inserted values. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provides that functionality with the OUTPUT clause.  
   
--   If you select **Yes**, SSMA will convert a RETURNING clause in an INSERT statement to OUTPUT. Because triggers on a table can change values, the returned value might be different in [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] than it was in DB2.  
+-   If you select **Yes**, SSMA will convert a RETURNING clause in an INSERT statement to OUTPUT. Because triggers on a table can change values, the returned value might be different in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] than it was in DB2.  
   
 -   If you select **No**, SSMA emulates DB2 functionality by inserting and then selecting values from a reference table.  
   
@@ -448,9 +437,9 @@ When you select a conversion mode in the **Mode** box, SSMA applies the followin
 **Default/Optimistic/Full Mode:** Yes  
   
 ### Convert RETURNING clause in UPDATE statement to OUTPUT  
-DB2 provides a RETURNING clause as a way to immediately obtain updated values. [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] provides that functionality with the OUTPUT clause.  
+DB2 provides a RETURNING clause as a way to immediately obtain updated values. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provides that functionality with the OUTPUT clause.  
   
--   If you select **Yes**, SSMA will convert RETURNING clauses in UPDATE statements to OUTPUT clauses. Because triggers on a table can change values, the returned value might be different in [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] than it was in DB2.  
+-   If you select **Yes**, SSMA will convert RETURNING clauses in UPDATE statements to OUTPUT clauses. Because triggers on a table can change values, the returned value might be different in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] than it was in DB2.  
   
 -   If you select **No**, SSMA will generate SELECT statements after UPDATE statements to retrieve returning values.  
   

@@ -1,27 +1,20 @@
 ---
 title: "GetString Method Example (VC++) | Microsoft Docs"
-ms.prod: "sql-non-specified"
-ms.prod_service: "drivers"
-ms.service: ""
-ms.component: "ado"
-ms.technology:
-  - "drivers"
+ms.prod: sql
+ms.prod_service: connectivity
+ms.technology: connectivity
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 dev_langs: 
   - "C++"
 helpviewer_keywords: 
   - "GetString method [ADO], VC++ example"
 ms.assetid: 4daa93aa-9727-4d1c-886a-e9d22017a1ea
-caps.latest.revision: 15
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
-ms.workload: "Inactive"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # GetString Method Example (VC++)
 This example demonstrates the [GetString](../../../ado/reference/ado-api/getstring-method-ado.md) method.  

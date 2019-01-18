@@ -2,24 +2,20 @@
 title: "Data Quality Client Application | Microsoft Docs"
 ms.custom: ""
 ms.date: "10/01/2012"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "data-quality-services"
-ms.service: ""
-ms.component: "data-quality-services"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "data-quality-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: data-quality-services
+ms.topic: conceptual
 ms.assetid: 25d1547e-4113-4b34-a9f8-8897db1acf16
-caps.latest.revision: 15
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-ms.workload: "On Demand"
+author: "douglaslMS"
+ms.author: "douglasl"
+manager: craigg
 ---
 # Data Quality Client Application
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
   The [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] application enables you to perform data quality operations using a standalone tool. This application enables you to create knowledge bases, create and run data quality projects, and perform administrative tasks.  
   
  Data stewards, data experts, or IT professionals who are responsible for managing data assets and maintaining high standards of data quality can use the client application in any of three roles: a DQS KB Operator who can edit and execute a data quality project; a DQS KB Editor who can perform project functions, and create and edit a knowledge base; and a DQS Administrator who can perform project and knowledge base functions and administer the system. For more information, see [DQS Security](../data-quality-services/dqs-security.md).  

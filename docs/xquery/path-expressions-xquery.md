@@ -2,18 +2,11 @@
 title: "Path Expressions (XQuery) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/17/2017"
-ms.prod: "sql-non-specified"
-ms.prod_service: "sql-non-specified"
-ms.service: ""
-ms.component: "xquery"
+ms.prod: sql
+ms.prod_service: sql
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: xml
 ms.topic: "language-reference"
-applies_to: 
-  - "SQL Server"
 dev_langs: 
   - "XML"
 helpviewer_keywords: 
@@ -21,11 +14,9 @@ helpviewer_keywords:
   - "path expressions [XQuery]"
   - "expressions [XQuery], path"
 ms.assetid: b93fa36c-bf69-46b9-b137-f597d66fd0c0
-caps.latest.revision: 27
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-ms.workload: "Inactive"
+author: "rothja"
+ms.author: "jroth"
+manager: craigg
 ---
 # Path Expressions (XQuery)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]

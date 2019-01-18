@@ -1,24 +1,18 @@
 ---
-title: "Automatically initialize Always On availability group | Microsoft Docs"
-ms.custom: ""
-ms.date: "08/23/2017"
-ms.prod: "sql-non-specified"
-ms.prod_service: "database-engine"
-ms.service: ""
-ms.component: "availability-groups"
+title: "Use automatic seeding to initialize an availability group"
+description: "Automatically create secondary replicas for every database in an Always On availability group using automatic seeding."
+ms.custom: "seodec18"
+ms.date: "03/26/2018"
+ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: high-availability
+ms.topic: conceptual
 ms.assetid: 67c6a601-677a-402b-b3d1-8c65494e9e96
-caps.latest.revision: 18
-author: "MikeRayMSFT"
-ms.author: "v-saume"
-manager: "jhubbard"
+author: MashaMSFT
+ms.author: "mathoma"
+manager: craigg
 ---
-# Automatically initialize Always On Availability group
+# Use automatic seeding to initialize an Always On availability group
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 SQL Server 2016 introduced automatic seeding of availability groups. When you create an availability group with automatic seeding, SQL Server automatically creates the secondary replicas for every database in the group. You no longer have to manually back up and restore secondary replicas. To enable automatic seeding, create the availability group with T-SQL or use the latest version of SQL Server Management Studio.
@@ -166,6 +160,12 @@ On the primary replica, query `sys.dm_hadr_physical_seeding_stats` DMV to see th
 SELECT * FROM sys.dm_hadr_physical_seeding_stats;
 ```
 
+The two columns *total_disk_io_wait_time_ms* and the *total_network_wait_time_ms* can be used to determinte performance bottleneck in the Automatic seeding process. The two columns are also present in the *hadr_physical_seeding_progress* extended event.
+
+**total_disk_io_wait_time_ms** represents the time spent by the backup/restore thread while waiting on the disk. This value is cummulative since the start of the seeding operation. If the disks are not ready for reading or writing the backup stream, the backup/restore thread transitions into a sleep state and wakes up every one second to check if the disk is ready.
+		
+**total_network_wait_time_ms** is interpreted diffrently for the Primary and the Secondary replica. At the primary replica this counter represents the network flow control time. On the secondary replica this represents the time the restore thread is waiting for a message to be availabile for writing to the disk.
+
 ### Diagnose database initialization using automatic seeding in the error log
 
 When you add a database to an availability group configured for automatic seeding, SQL Server performs a VDI backup over the availability group endpoint. Review the SQL Server error log for information on when the backup completed and the secondary was synchronized.
@@ -189,7 +189,7 @@ CREATE EVENT SESSION [AlwaysOn_autoseed] ON SERVER
     ADD EVENT sqlserver.hadr_physical_seeding_restore_state_change,
     ADD EVENT sqlserver.hadr_physical_seeding_submit_callback
     ADD TARGET package0.event_file(
-        SET filename=N’autoseed.xel’,
+        SET filename=N'autoseed.xel',
             max_file_size=(5),
             max_rollover_files=(4)
         )
@@ -281,5 +281,5 @@ Before adding a database to an availability group with automatic seeding, evalua
 
 [CREATE AVAILABILITY GROUP (Transact-SQL)](../../../t-sql/statements/create-availability-group-transact-sql.md)
 
-[AlwaysOn Availability Groups Troubleshooting and Monitoring Guide](http://technet.microsoft.com/library/dn135328.aspx)
+[AlwaysOn Availability Groups Troubleshooting and Monitoring Guide](https://technet.microsoft.com/library/dn135328.aspx)
 

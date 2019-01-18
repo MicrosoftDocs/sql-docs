@@ -1,26 +1,14 @@
 ---
 title: "Apply Prediction Functions to a Model | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/02/2016"
-ms.prod: analysis-services
-ms.prod_service: "analysis-services"
-ms.service: ""
-ms.component: ""
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
-  
-ms.component: data-mining
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Mining Model Prediction [Analysis Services], selecting mining models"
-ms.assetid: cf9a97e2-c249-441b-af12-c977c1a91c44
-caps.latest.revision: 17
-author: "Minewiskan"
-ms.author: "owend"
-manager: "kfile"
-ms.workload: "Inactive"
+ms.date: 05/01/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: data-mining
+ms.topic: conceptual
+ms.author: owend
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
 ---
 # Apply Prediction Functions to a Model
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -126,7 +114,7 @@ ms.workload: "Inactive"
     |----------------|--------------|-------------|-------------|  
     |0|Cluster 8|954|953.948638926372|  
   
- If you want to add other clauses elsewhere in the statement—for example, if you want to add a WHERE clause—you cannot add it by using the grid; you must switch to DMX view first.  
+ If you want to add other clauses elsewhere in the statement-for example, if you want to add a WHERE clause-you cannot add it by using the grid; you must switch to DMX view first.  
   
 ## See Also  
  [Data Mining Queries](../../analysis-services/data-mining/data-mining-queries.md)  

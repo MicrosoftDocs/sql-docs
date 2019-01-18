@@ -1,25 +1,14 @@
 ---
 title: "Power Pivot Data Refresh with SharePoint 2013 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: analysis-services
-ms.prod_service: "analysis-services"
-ms.service: ""
-ms.component: ""
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
-  
-ms.component: multidimensional-tabular
-ms.component: data-mining
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-ms.assetid: 34f03407-2ec4-4554-b16b-bc9a6c161815
-caps.latest.revision: 15
-author: "Minewiskan"
-ms.author: "owend"
-manager: "kfile"
-ms.workload: "On Demand"
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: ppvt-sharepoint
+ms.topic: conceptual
+ms.author: owend
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
 ---
 # Power Pivot Data Refresh with SharePoint 2013
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -67,8 +56,8 @@ ms.workload: "On Demand"
 ##  <a name="bkmk_interactive_refresh"></a> Interactive Data Refresh  
  Interactive, or manual data refresh in SharePoint Server 2013 Excel Services can refresh data models with data from the original data source. Interactive data refresh is available after you configure an Excel Services application by registering an [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] server, running in SharePoint mode. For more information, see [Manage Excel Services data model settings (SharePoint Server 2013)](http://technet.microsoft.com/library/jj219780.aspx) (http://technet.microsoft.com/library/jj219780.aspx).  
   
-> [!NOTE]  
->  Interactive data refresh is only available for workbooks that created in Excel 2013. If you try to refresh an Excel 2010 workbook, Excel Services displays an error message similar to “[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] Operation Failed: The Workbook was created in an older version of Excel and [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] cannot be refreshed until the file is upgraded”. For more information on upgrading workbooks, see [Upgrade Workbooks and Scheduled Data Refresh &#40;SharePoint 2013&#41;](../../analysis-services/instances/install-windows/upgrade-workbooks-and-scheduled-data-refresh-sharepoint-2013.md).  
+> [!NOTE]
+>  Interactive data refresh is only available for workbooks that created in Excel 2013. If you try to refresh an Excel 2010 workbook, Excel Services displays an error message similar to " [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] Operation Failed: The Workbook was created in an older version of Excel and [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] cannot be refreshed until the file is upgraded". For more information on upgrading workbooks, see [Upgrade Workbooks and Scheduled Data Refresh &#40;SharePoint 2013&#41;](../../analysis-services/instances/install-windows/upgrade-workbooks-and-scheduled-data-refresh-sharepoint-2013.md).  
   
  **Interactive refresh key point of interest:**  
   
@@ -95,7 +84,7 @@ ms.workload: "On Demand"
 ###  <a name="bkmk_windows_auth_interactive_data_refresh"></a> Windows Authentication with Workbook Data Connections and Interactive Data Refresh  
  Excel Services sends the Analysis Services server a process command that instructs the server to impersonate a user account. To obtain system rights sufficient to perform the user impersonation-delegation process, the Analysis Services service account, requires **Act as part of the operating system** privilege on the local server. The Analysis Services server also needs to be able to delegate the user's credentials to data sources. The query result is sent to Excel Services.  
   
- Typical user experience: When a customer selects “Refresh All Connections” in an Excel 2013 workbook that contains a [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] model, they see an error message similar to the following:  
+ Typical user experience: When a customer selects "Refresh All Connections" in an Excel 2013 workbook that contains a [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] model, they see an error message similar to the following:  
   
 -   **External Data Refresh Failed:** An error occurred while working on the Data Model in the workbook. Please try again. We are unable to refresh one or more data connections in this workbook.  
   
@@ -117,7 +106,7 @@ ms.workload: "On Demand"
   
 1.  On the Analysis Services Server running in SharePoint mode, Add the Analysis Services service account to the "Act as part of the operating system" privilege:  
   
-    1.  Run “`secpol.msc`”  
+    1.  Run "`secpol.msc`"  
   
     2.  Click **Local Security Policy**, then click **Local policies**, and then click **User rights assignment**.  
   
@@ -187,7 +176,7 @@ ms.workload: "On Demand"
 |||Scheduled data refresh request management for timer jobs and configuration pages. The service manages requests to read data in and out of the service application database and trigger data refresh with Excel Services.|  
 |||Usage processing and related timer job.|  
 |**(4)**|Excel Calculation Services|Responsible for loading the data models.|  
-|**(5)**|Secure Store Service|If the authentication settings in the workbook are configured to **Use the authenticated user’s account** or **None**, the credentials stored in the Secure Store target application ID are used for data refresh. For more information, see the [Additional Authentication Considerations](#datarefresh_additional_authentication) section in this topic.|  
+|**(5)**|Secure Store Service|If the authentication settings in the workbook are configured to **Use the authenticated user's account** or **None**, the credentials stored in the Secure Store target application ID are used for data refresh. For more information, see the [Additional Authentication Considerations](#datarefresh_additional_authentication) section in this topic.|  
 |**(6)**|[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] data refresh timer Job|Instructs the [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] system service to connect with Excel Services for refreshing data models.|  
   
  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] requires appropriate data providers and client libraries so that the [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] server in SharePoint mode can access data sources.  
@@ -200,11 +189,11 @@ ms.workload: "On Demand"
   
 1.  In SharePoint Central Administration, click **[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] Management Dashboard** in the **General application settings** group.  
   
-2.  At the bottom of the dashboard, see the **Data Refresh – Recent Activity** and **Data Refresh – Recent Failures**.  
+2.  At the bottom of the dashboard, see the **Data Refresh - Recent Activity** and **Data Refresh - Recent Failures**.  
   
 3.  For more information on usage data and how to enable it, see [Power Pivot Management Dashboard and Usage Data](../../analysis-services/power-pivot-sharepoint/power-pivot-management-dashboard-and-usage-data.md).  
   
- **Diagnostic log data:** You can view SharePoint diagnostic log data related to data refresh. First, verify the configuration of diagnostic logging for the **[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] Service** in SharePoint Central Administration **Monitoring** page. You may need to increase the level of logging for the “least critical event” to log. For example, temporarily set the value to **Verbose** and then rerun data refresh operations.  
+ **Diagnostic log data:** You can view SharePoint diagnostic log data related to data refresh. First, verify the configuration of diagnostic logging for the **[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] Service** in SharePoint Central Administration **Monitoring** page. You may need to increase the level of logging for the "least critical event" to log. For example, temporarily set the value to **Verbose** and then rerun data refresh operations.  
   
  The log entries contain:  
   
@@ -217,7 +206,7 @@ ms.workload: "On Demand"
 ##  <a name="datarefresh_additional_authentication"></a> Additional Authentication Considerations  
  The settings in the **Excel Services Authentication Settings** dialog in Excel 2013, determine the Windows identity that Excel Services and [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] use for data refresh.  
   
--   **Use the authenticated user’s account**: Excel Services performs data refresh under the identity of the currently logged-in user.  
+-   **Use the authenticated user's account**: Excel Services performs data refresh under the identity of the currently logged-in user.  
   
 -   **Use a stored account**: Assumes a SharePoint Secure Store Service application ID, which Excel Services uses to retrieve the user name and password to authenticate data refresh authentication.  
   
@@ -231,7 +220,7 @@ ms.workload: "On Demand"
   
 3.  In the **Workbook connections dialog**, select the connection and click **Properties**.  
   
-4.  In the **Connection properties** dialog, click **Definition**, and then click the **Authentication Settings…** button.  
+4.  In the **Connection properties** dialog, click **Definition**, and then click the **Authentication Settings...** button.  
   
  ![excel services authentication settings](../../analysis-services/power-pivot-sharepoint/media/as-authentication-settings-4-ecs-in-excel2013.gif "excel services authentication settings")  
   
@@ -240,7 +229,7 @@ ms.workload: "On Demand"
 ##  <a name="bkmk_moreinformation"></a> More Information  
  [Troubleshooting Power Pivot Data Refresh](http://social.technet.microsoft.com/wiki/contents/articles/3870.troubleshooting-powerpivot-data-refresh.aspx).  
   
- [Excel Services in SharePoint 2013](http://msdn.microsoft.com/library/sharepoint/jj164076\(v=office.15\)) (http://msdn.microsoft.com/library/sharepoint/jj164076(v=office.15).  
+ [Excel Services in SharePoint 2013](http://msdn.microsoft.com/library/sharepoint/jj164076\(v=office.15\)) (<http://msdn.microsoft.com/library/sharepoint/jj164076(v=office.15>).  
   
 ## See Also  
  [Install Analysis Services in Power Pivot Mode](../../analysis-services/instances/install-windows/install-analysis-services-in-power-pivot-mode.md)  

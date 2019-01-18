@@ -2,16 +2,11 @@
 title: "Data Length, Buffer Length, and Truncation | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
-ms.prod_service: "drivers"
-ms.service: ""
-ms.component: "odbc"
+ms.prod: sql
+ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "drivers"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: connectivity
+ms.topic: conceptual
 helpviewer_keywords: 
   - "data buffers [ODBC], length"
   - "data length [ODBC]"
@@ -19,11 +14,9 @@ helpviewer_keywords:
   - "length of data buffers [ODBC]"
   - "buffers [ODBC], length"
 ms.assetid: 2825c6e7-b9ff-42fe-84fc-7fb39728ac5d
-caps.latest.revision: 6
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
-ms.workload: "Inactive"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # Data Length, Buffer Length, and Truncation
 The *data length* is the byte length of the data as it would be stored in the application's data buffer, not as it is stored in the data source. This distinction is important because the data is often stored in different types in the data buffer than in the data source. So for data being sent to the data source, this is the byte length of the data before conversion to the data source's type. For data being retrieved from the data source, this is the byte length of the data after conversion to the data buffer's type and before any truncation is done.  

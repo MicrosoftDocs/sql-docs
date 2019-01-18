@@ -1,28 +1,21 @@
 ---
 title: "ExecuteOptionEnum | Microsoft Docs"
-ms.prod: "sql-non-specified"
-ms.prod_service: "drivers"
-ms.service: ""
-ms.component: "ado"
-ms.technology:
-  - "drivers"
+ms.prod: sql
+ms.prod_service: connectivity
+ms.technology: connectivity
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 apitype: "COM"
 f1_keywords: 
   - "ExecuteOptionEnum"
 helpviewer_keywords: 
   - "ExecuteOptionEnum enumeration [ADO]"
 ms.assetid: 68bfa83a-5df4-4bef-8736-0f88ae8c29ea
-caps.latest.revision: 11
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
-ms.workload: "Inactive"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # ExecuteOptionEnum
 Specifies how a provider should execute a command.  

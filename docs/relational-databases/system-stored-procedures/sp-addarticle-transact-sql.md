@@ -2,29 +2,20 @@
 title: "sp_addarticle (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "10/28/2015"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "database-engine"
-ms.service: ""
-ms.component: "system-stored-procedures"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
+ms.technology: replication
 ms.topic: "language-reference"
-applies_to: 
-  - "SQL Server"
 f1_keywords: 
   - "sp_addarticle"
   - "sp_addarticle_TSQL"
 helpviewer_keywords: 
   - "sp_addarticle"
 ms.assetid: 0483a157-e403-4fdb-b943-23c1b487bef0
-caps.latest.revision: 108
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "craigg"
-ms.workload: "On Demand"
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
 ---
 # sp_addarticle (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -72,28 +63,28 @@ sp_addarticle [ @publication = ] 'publication'
 ```  
   
 ## Arguments  
- [ **@publication =** ] **'***publication***'**  
+ [ **@publication =** ] **'**_publication_**'**  
  Is the name of the publication that contains the article. The name must be unique in the database. *publication* is **sysname**, with no default.  
   
- [ **@article =** ] **'***article***'**  
+ [ **@article =** ] **'**_article_**'**  
  Is the name of the article. The name must be unique within the publication. *article* is **sysname**, with no default.  
   
- [ **@source_table =** ] **'***source_table***'**  
+ [ **@source_table =** ] **'**_source_table_**'**  
  This parameter has been deprecated; use *source_object* instead.  
   
  *This parameter is not supported for Oracle Publishers.*  
   
- [ **@destination_table =** ] **'***destination_table***'**  
+ [ **@destination_table =** ] **'**_destination_table_**'**  
  Is the name of the destination (subscription) table, if different from *source_table*or the stored procedure. *destination_table* is **sysname**, with a default of NULL, which means that *source_table* equals *destination_table**.*  
   
- [ **@vertical_partition =** ] **'***vertical_partition***'**  
+ [ **@vertical_partition =** ] **'**_vertical_partition_**'**  
  Enables and disables column filtering on a table article. *vertical_partition* is **nchar(5)**, with a default of FALSE.  
   
  **false** indicates there is no vertical filtering and publishes all columns.  
   
  **true** clears all columns except the declared primary key, nullable columns with no default, and unique key columns. Columns are added using [sp_articlecolumn](../../relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql.md).  
   
- [ **@type =** ] **'***type***'**  
+ [ **@type =** ] **'**_type_**'**  
  Is the type of article. *type* is **sysname**, and can be one of the following values.  
   
 |Value|Description|  
@@ -114,57 +105,57 @@ sp_addarticle [ @publication = ] 'publication'
 |**serializable proc exec**|Replicates the execution of the stored procedure only if it is executed within the context of a serializable transaction. Not supported for Oracle Publishers.<br /><br /> The procedure also must be executed inside an explicit transaction for the procedure execution to be replicated.|  
 |**view schema only**|View with schema only. Not supported for Oracle Publishers. When using this option, you must also publish the base table.|  
   
- [ **@filter =** ] **'***filter***'**  
+ [ **@filter =** ] **'**_filter_**'**  
  Is the stored procedure (created with FOR REPLICATION) used to filter the table horizontally. *filter* is **nvarchar(386)**, with a default of NULL. [sp_articleview](../../relational-databases/system-stored-procedures/sp-articleview-transact-sql.md) and [sp_articlefilter](../../relational-databases/system-stored-procedures/sp-articlefilter-transact-sql.md) must be executed manually to create the view and filter stored procedure. If not NULL, the filter procedure is not created (assumes the stored procedure is created manually).  
   
- [ **@sync_object =** ] **'***sync_object***'**  
+ [ **@sync_object =** ] **'**_sync_object_**'**  
  Is the name of the table or view used for producing the data file used to represent the snapshot for this article. *sync_object* is **nvarchar(386)**, with a default of NULL. If NULL, [sp_articleview](../../relational-databases/system-stored-procedures/sp-articleview-transact-sql.md) is called to automatically create the view used to generate the output file. This occurs after adding any columns with [sp_articlecolumn](../../relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql.md). If not NULL, a view is not created (assumes the view is manually created).  
   
- [ **@ins_cmd =** ] **'***ins_cmd***'**  
+ [ **@ins_cmd =** ] **'**_ins_cmd_**'**  
  Is the replication command type used when replicating inserts for this article. *ins_cmd* is **nvarchar(255)**, and can be one of the following values.  
   
 |Value|Description|  
 |-----------|-----------------|  
 |**NONE**|No action is taken.|  
-|**CALL sp_MSins_**<br /> ***table***  (default)<br /><br /> -or-<br /><br /> **CALL custom_stored_procedure_name**|Calls a stored procedure to be executed at the Subscriber. To use this method of replication, use *schema_option* to specify automatic creation of the stored procedure, or create the specified stored procedure in the destination database of each Subscriber of the article. *custom_stored_procedure* is the name of a user-created stored procedure. **sp_MSins_*table*** contains the name of the destination table in place of the *_table* part of the parameter. When *destination_owner* is specified, it is prepended to the destination table name. For example, for the **ProductCategory** table owned by the **Production** schema at the Subscriber, the parameter would be `CALL sp_MSins_ProductionProductCategory`. For an article in a peer-to-peer replication topology, *_table* is appended with a GUID value. Specifying *custom_stored_procedure* is not supported for updating subscribers.|  
+|**CALL sp_MSins_**<br /> **_table_**  (default)<br /><br /> -or-<br /><br /> **CALL custom_stored_procedure_name**|Calls a stored procedure to be executed at the Subscriber. To use this method of replication, use *schema_option* to specify automatic creation of the stored procedure, or create the specified stored procedure in the destination database of each Subscriber of the article. *custom_stored_procedure* is the name of a user-created stored procedure. <strong>sp_MSins_*table*</strong> contains the name of the destination table in place of the *_table* part of the parameter. When *destination_owner* is specified, it is prepended to the destination table name. For example, for the **ProductCategory** table owned by the **Production** schema at the Subscriber, the parameter would be `CALL sp_MSins_ProductionProductCategory`. For an article in a peer-to-peer replication topology, *_table* is appended with a GUID value. Specifying *custom_stored_procedure* is not supported for updating subscribers.|  
 |**SQL** or NULL|Replicates an INSERT statement. The INSERT statement is provided values for all columns published in the article. This command is replicated on inserts:<br /><br /> `INSERT INTO <table name> VALUES (c1value, c2value, c3value, ..., cnvalue)`|  
   
  For more information, see [Specify How Changes Are Propagated for Transactional Articles](../../relational-databases/replication/transactional/transactional-articles-specify-how-changes-are-propagated.md).  
   
- [ **@del_cmd =**] **'***del_cmd***'**  
+ [ **@del_cmd =**] **'**_del_cmd_**'**  
  Is the replication command type used when replicating deletes for this article. *del_cmd* is **nvarchar(255)**, and can be one of the following values.  
   
 |Value|Description|  
 |-----------|-----------------|  
 |**NONE**|No action is taken.|  
-|**CALLsp_MSdel_**<br /> ***table***  (default)<br /><br /> -or-<br /><br /> **CALL custom_stored_procedure_name**|Calls a stored procedure to be executed at the Subscriber. To use this method of replication, use *schema_option* to specify automatic creation of the stored procedure, or create the specified stored procedure in the destination database of each Subscriber of the article. *custom_stored_procedure* is the name of a user-created stored procedure. **sp_MSdel_*table*** contains the name of the destination table in place of the *_table* part of the parameter. When *destination_owner* is specified, it is prepended to the destination table name. For example, for the **ProductCategory** table owned by the **Production** schema at the Subscriber, the parameter would be `CALL sp_MSdel_ProductionProductCategory`. For an article in a peer-to-peer replication topology, *_table* is appended with a GUID value. Specifying *custom_stored_procedure* is not supported for updating subscribers.|  
-|**XCALL sp_MSdel_**<br /> ***table***<br /><br /> -or-<br /><br /> **XCALL custom_stored_procedure_name**|Calls a stored procedure taking XCALL style parameters. To use this method of replication, use *schema_option* to specify automatic creation of the stored procedure, or create the specified stored procedure in the destination database of each Subscriber of the article. Specifying a user-created stored procedure is not allowed for updating subscribers.|  
+|**CALLsp_MSdel_**<br /> **_table_**  (default)<br /><br /> -or-<br /><br /> **CALL custom_stored_procedure_name**|Calls a stored procedure to be executed at the Subscriber. To use this method of replication, use *schema_option* to specify automatic creation of the stored procedure, or create the specified stored procedure in the destination database of each Subscriber of the article. *custom_stored_procedure* is the name of a user-created stored procedure. <strong>sp_MSdel_*table*</strong> contains the name of the destination table in place of the *_table* part of the parameter. When *destination_owner* is specified, it is prepended to the destination table name. For example, for the **ProductCategory** table owned by the **Production** schema at the Subscriber, the parameter would be `CALL sp_MSdel_ProductionProductCategory`. For an article in a peer-to-peer replication topology, *_table* is appended with a GUID value. Specifying *custom_stored_procedure* is not supported for updating subscribers.|  
+|**XCALL sp_MSdel_**<br /> **_table_**<br /><br /> -or-<br /><br /> **XCALL custom_stored_procedure_name**|Calls a stored procedure taking XCALL style parameters. To use this method of replication, use *schema_option* to specify automatic creation of the stored procedure, or create the specified stored procedure in the destination database of each Subscriber of the article. Specifying a user-created stored procedure is not allowed for updating subscribers.|  
 |**SQL** or NULL|Replicates a DELETE statement. The DELETE statement is provided all primary key column values. This command is replicated on deletes:<br /><br /> `DELETE FROM <table name> WHERE pkc1 = pkc1value AND pkc2 = pkc2value AND pkcn = pkcnvalue`|  
   
  For more information, see [Specify How Changes Are Propagated for Transactional Articles](../../relational-databases/replication/transactional/transactional-articles-specify-how-changes-are-propagated.md).  
   
- [ **@upd_cmd =**] **'***upd_cmd***'**  
+ [ **@upd_cmd =**] **'**_upd_cmd_**'**  
  Is the replication command type used when replicating updates for this article. *upd_cmd* is **nvarchar(255)**, and can be one of the following values.  
   
 |Value|Description|  
 |-----------|-----------------|  
 |**NONE**|No action is taken.|  
-|**CALL sp_MSupd_**<br /> ***table***<br /><br /> -or-<br /><br /> **CALL custom_stored_procedure_name**|Calls a stored procedure to be executed at the Subscriber. To use this method of replication, use *schema_option* to specify automatic creation of the stored procedure, or create the specified stored procedure in the destination database of each Subscriber of the article.|  
-|**MCALL sp_MSupd_**<br /> ***table***<br /><br /> -or-<br /><br /> **MCALL custom_stored_procedure_name**|Calls a stored procedure taking MCALL style parameters. To use this method of replication, use *schema_option* to specify automatic creation of the stored procedure, or create the specified stored procedure in the destination database of each Subscriber of the article. *custom_stored_procedure* is the name of a user-created stored procedure. **sp_MSupd_*table*** contains the name of the destination table in place of the *_table* part of the parameter. When *destination_owner* is specified, it is prepended to the destination table name. For example, for the **ProductCategory** table owned by the **Production** schema at the Subscriber, the parameter would be `MCALL sp_MSupd_ProductionProductCategory`. For an article in a peer-to-peer replication topology, *_table* is appended with a GUID value. Specifying a user-created stored procedure is not allowed for updating subscribers.|  
-|**SCALL sp_MSupd_**<br /> ***table***  (default)<br /><br /> -or-<br /><br /> **SCALL custom_stored_procedure_name**|Calls a stored procedure taking SCALL style parameters. To use this method of replication, use *schema_option* to specify automatic creation of the stored procedure, or create the specified stored procedure in the destination database of each Subscriber of the article. *custom_stored_procedure* is the name of a user-created stored procedure. **sp_MSupd_*table*** contains the name of the destination table in place of the *_table* part of the parameter. When *destination_owner* is specified, it is prepended to the destination table name. For example, for the **ProductCategory** table owned by the **Production** schema at the Subscriber, the parameter would be `SCALL sp_MSupd_ProductionProductCategory`. For an article in a peer-to-peer replication topology, *_table* is appended with a GUID value. Specifying a user-created stored procedure is not allowed for updating subscribers.|  
-|**XCALL sp_MSupd_**<br /> ***table***<br /><br /> -or-<br /><br /> **XCALL custom_stored_procedure_name**|Calls a stored procedure taking XCALL style parameters. To use this method of replication, use *schema_option* to specify automatic creation of the stored procedure, or create the specified stored procedure in the destination database of each Subscriber of the article. Specifying a user-created stored procedure is not allowed for updating subscribers.|  
+|**CALL sp_MSupd_**<br /> **_table_**<br /><br /> -or-<br /><br /> **CALL custom_stored_procedure_name**|Calls a stored procedure to be executed at the Subscriber. To use this method of replication, use *schema_option* to specify automatic creation of the stored procedure, or create the specified stored procedure in the destination database of each Subscriber of the article.|  
+|**MCALL sp_MSupd_**<br /> **_table_**<br /><br /> -or-<br /><br /> **MCALL custom_stored_procedure_name**|Calls a stored procedure taking MCALL style parameters. To use this method of replication, use *schema_option* to specify automatic creation of the stored procedure, or create the specified stored procedure in the destination database of each Subscriber of the article. *custom_stored_procedure* is the name of a user-created stored procedure. <strong>sp_MSupd_*table*</strong> contains the name of the destination table in place of the *_table* part of the parameter. When *destination_owner* is specified, it is prepended to the destination table name. For example, for the **ProductCategory** table owned by the **Production** schema at the Subscriber, the parameter would be `MCALL sp_MSupd_ProductionProductCategory`. For an article in a peer-to-peer replication topology, *_table* is appended with a GUID value. Specifying a user-created stored procedure is not allowed for updating subscribers.|  
+|**SCALL sp_MSupd_**<br /> **_table_**  (default)<br /><br /> -or-<br /><br /> **SCALL custom_stored_procedure_name**|Calls a stored procedure taking SCALL style parameters. To use this method of replication, use *schema_option* to specify automatic creation of the stored procedure, or create the specified stored procedure in the destination database of each Subscriber of the article. *custom_stored_procedure* is the name of a user-created stored procedure. <strong>sp_MSupd_*table*</strong> contains the name of the destination table in place of the *_table* part of the parameter. When *destination_owner* is specified, it is prepended to the destination table name. For example, for the **ProductCategory** table owned by the **Production** schema at the Subscriber, the parameter would be `SCALL sp_MSupd_ProductionProductCategory`. For an article in a peer-to-peer replication topology, *_table* is appended with a GUID value. Specifying a user-created stored procedure is not allowed for updating subscribers.|  
+|**XCALL sp_MSupd_**<br /> **_table_**<br /><br /> -or-<br /><br /> **XCALL custom_stored_procedure_name**|Calls a stored procedure taking XCALL style parameters. To use this method of replication, use *schema_option* to specify automatic creation of the stored procedure, or create the specified stored procedure in the destination database of each Subscriber of the article. Specifying a user-created stored procedure is not allowed for updating subscribers.|  
 |**SQL** or NULL|Replicates an UPDATE statement. The UPDATE statement is provided on all column values and the primary key column values. This command is replicated on updates:<br /><br /> `UPDATE <table name> SET c1 = c1value, SET c2 = c2value, SET cn = cnvalue WHERE pkc1 = pkc1value AND pkc2 = pkc2value AND pkcn = pkcnvalue`|  
   
 > [!NOTE]  
 >  The CALL, MCALL, SCALL, and XCALL syntax vary the amount of data propagated to the subscriber. The CALL syntax passes all values for all inserted and deleted columns. The SCALL syntax passes values only for affected columns. The XCALL syntax passes values for all columns, whether changed or not, including the previous value of the column. For more information, see [Specify How Changes Are Propagated for Transactional Articles](../../relational-databases/replication/transactional/transactional-articles-specify-how-changes-are-propagated.md).  
   
- [ **@creation_script =**] **'***creation_script***'**  
+ [ **@creation_script =**] **'**_creation_script_**'**  
  Is the path and name of an optional article schema script used to create the article in the subscription database. *creation_script* is **nvarchar(255)**, with a default of NULL.  
   
- [ **@description =**] **'***description***'**  
+ [ **@description =**] **'**_description_**'**  
  Is a descriptive entry for the article. *description* is **nvarchar(255)**, with a default of NULL.  
   
- [ **@pre_creation_cmd =**] **'***pre_creation_cmd***'**  
+ [ **@pre_creation_cmd =**] **'**_pre_creation_cmd_**'**  
  Specifies what the system should do if it detects an existing object of the same name at the subscriber when applying the snapshot for this article. *pre_creation_cmd* is **nvarchar(10)**, and can be one of the following values.  
   
 |Value|Description|  
@@ -174,7 +165,7 @@ sp_addarticle [ @publication = ] 'publication'
 |**drop** (default)|Drops the destination table.|  
 |**truncate**|Truncates the destination table. Is not valid for ODBC or OLE DB Subscribers.|  
   
- [ **@filter_clause=**] **'***filter_clause***'**  
+ [ **@filter_clause=**] **'**_filter_clause_**'**  
  Is a restriction (WHERE) clause that defines a horizontal filter. When entering the restriction clause, omit the keyword WHERE. *filter_clause* is **ntext**, with a default of NULL. For more information, see [Filter Published Data](../../relational-databases/replication/publish/filter-published-data.md).  
   
  [ **@schema_option =**] *schema_option*  
@@ -221,7 +212,7 @@ sp_addarticle [ @publication = ] 'publication'
 |**0x100000000**|Use this option to replicate the FILESTREAM attribute if it is specified on **varbinary(max)** columns. Do not specify this option if you are replicating tables to [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Subscribers. Replicating tables that have FILESTREAM columns to [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] Subscribers is not supported, regardless of how this schema option is set.<br /><br /> See related option **0x800000000**.|  
 |**0x200000000**|Converts date and time data types (**date**, **time**, **datetimeoffset**, and **datetime2**) introduced in [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] to data types that are supported on earlier versions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |**0x400000000**|Replicates the compression option for data and indexes. For more information, see [Data Compression](../../relational-databases/data-compression/data-compression.md).|  
-|**0x800000000**|Set this option to store FILESTREAM data on its own filegroup at the Subscriber. If this option is not set, FILESTREAM data is stored on the default filegroup. Replication does not create filegroups; therefore, if you set this option, you must create the filegroup before you apply the snapshot at the Subscriber. For more information about how to create objects before you apply the snapshot, see [Execute Scripts Before and After the Snapshot Is Applied](../../relational-databases/replication/execute-scripts-before-and-after-the-snapshot-is-applied.md).<br /><br /> See related option **0x100000000**.|  
+|**0x800000000**|Set this option to store FILESTREAM data on its own filegroup at the Subscriber. If this option is not set, FILESTREAM data is stored on the default filegroup. Replication does not create filegroups; therefore, if you set this option, you must create the filegroup before you apply the snapshot at the Subscriber. For more information about how to create objects before you apply the snapshot, see [Execute Scripts Before and After the Snapshot Is Applied](../../relational-databases/replication/snapshot-options.md#execute-scripts-before-and-after-snapshot-is-applied).<br /><br /> See related option **0x100000000**.|  
 |**0x1000000000**|Converts common language runtime (CLR) user-defined types (UDTs) that are larger than 8000 bytes to **varbinary(max)** so that columns of type UDT can be replicated to Subscribers that are running [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)].|  
 |**0x2000000000**|Converts the **hierarchyid** data type to **varbinary(max)** so that columns of type **hierarchyid** can be replicated to Subscribers that are running [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]. For more information about how to use **hierarchyid** columns in replicated tables, see [hierarchyid &#40;Transact-SQL&#41;](../../t-sql/data-types/hierarchyid-data-type-method-reference.md).|  
 |**0x4000000000**|Replicates any filtered indexes on the table. For more information about filtered indexes, see [Create Filtered Indexes](../../relational-databases/indexes/create-filtered-indexes.md).|  
@@ -236,7 +227,7 @@ sp_addarticle [ @publication = ] 'publication'
   
  Not all *schema_option* values are valid for every type of replication and article type. The **Valid Schema Options** table in the Remarks section shows the valid schema options that can be chosen based upon the combination of the article type and the replication type.  
   
- [ **@destination_owner =**] **'***destination_owner***'**  
+ [ **@destination_owner =**] **'**_destination_owner_**'**  
  Is the name of the owner of the destination object. *destination_owner* is **sysname**, with a default of NULL. When *destination_owner* is not specified, the owner is specified automatically based on the following rules:  
   
 |Condition|Destination object owner|  
@@ -245,7 +236,7 @@ sp_addarticle [ @publication = ] 'publication'
 |Published from a non-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Publisher.|Defaults to the owner of the destination database.|  
 |Publication uses character-mode bulk copy to generate the initial snapshot, which supports non-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Subscribers.|Not assigned.|  
   
- To support non-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Subscribers, *destination_owner* must be NULL.  
+ To support non- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Subscribers, *destination_owner* must be NULL.  
   
  [ **@status=**] *status*  
  Specifies if the article is active and additional options for how changes are propagated. *status* is **tinyint**, and can be the [| (Bitwise OR)](../../t-sql/language-elements/bitwise-or-transact-sql.md) product of one or more of these values.  
@@ -260,22 +251,22 @@ sp_addarticle [ @publication = ] 'publication'
   
  For example, an active article using parameterized statements would have a value of 17 in this column. A value of **0** means that the article is inactive and no additional properties are defined.  
   
- [ **@source_owner =**] **'***source_owner***'**  
+ [ **@source_owner =**] **'**_source_owner_**'**  
  Is the owner of the source object. *source_owner* is **sysname**, with a default of NULL. *source_owner* must be specified for Oracle Publishers.  
   
- [ **@sync_object_owner =**] **'***sync_object_owner***'**  
+ [ **@sync_object_owner =**] **'**_sync_object_owner_**'**  
  Is the owner of the view that defines the published article. *sync_object_owner* is **sysname**, with a default of NULL.  
   
- [ **@filter_owner =**] **'***filter_owner***'**  
+ [ **@filter_owner =**] **'**_filter_owner_**'**  
  Is the owner of the filter. *filter_owner* is **sysname**, with a default of NULL.  
   
- [ **@source_object =**] **'***source_object***'**  
+ [ **@source_object =**] **'**_source_object_**'**  
  Is the database object to be published. *source_object* is **sysname**, with a default of NULL. If *source_table* is NULL, *source_object* cannot be NULL.*source_object* should be used instead of *source_table*. For more information about the types of objects that can be published using snapshot or transactional replication, see [Publish Data and Database Objects](../../relational-databases/replication/publish/publish-data-and-database-objects.md).  
   
- [ **@artid =** ] *article_ID* **OUTPUT**  
+ [ **@artid =** ] _article_ID_ **OUTPUT**  
  Is the article ID of the new article. *article_ID* is **int** with a default of NULL, and it is an OUTPUT parameter.  
   
- [ **@auto_identity_range =** ] **'***auto_identity_range***'**  
+ [ **@auto_identity_range =** ] **'**_auto_identity_range_**'**  
  Enables and disables automatic identity range handling on a publication at the time it is created. *auto_identity_range* is **nvarchar(5)**, and can be one of the following values:  
   
 |Value|Description|  
@@ -329,13 +320,13 @@ sp_addarticle [ @publication = ] 'publication'
   
  For more information, see [Replicate Identity Columns](../../relational-databases/replication/publish/replicate-identity-columns.md).  
   
- [ **@publisher =** ] **'***publisher***'**  
- Specifies a non-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Publisher. *publisher* is **sysname**, with a default of NULL.  
+ [ **@publisher =** ] **'**_publisher_**'**  
+ Specifies a non- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Publisher. *publisher* is **sysname**, with a default of NULL.  
   
 > [!NOTE]  
 >  *publisher* should not be used when adding an article to a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Publisher.  
   
- [ **@fire_triggers_on_snapshot =** ] **'***fire_triggers_on_snapshot***'**  
+ [ **@fire_triggers_on_snapshot =** ] **'**_fire_triggers_on_snapshot_**'**  
  Is if replicated user triggers are executed when the initial snapshot is applied. *fire_triggers_on_snapshot* is **nvarchar(5)**, with a default of FALSE. **true** means that user triggers on a replicated table are executed when the snapshot is applied. In order for triggers to be replicated, the bitmask value of *schema_option* must include the value **0x100**.  
   
 ## Return Code Values  
@@ -395,8 +386,8 @@ sp_addarticle [ @publication = ] 'publication'
 |**serializable proc exec**|**0x01**|**0x01**|  
 |**view schema only**|**0x01**|**0x01**|  
   
-> [!NOTE]  
->  If a publication is enabled for queued updating, a *schema_option* value of **0x80** is added to the default value shown in the table. The default *schema_option* for a non-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] publication is **0x050D3**.  
+> [!NOTE]
+>  If a publication is enabled for queued updating, a *schema_option* value of **0x80** is added to the default value shown in the table. The default *schema_option* for a non- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] publication is **0x050D3**.  
   
 ## Valid Schema Options  
  This table describes the allowable values of *schema_option* based upon the replication type (shown across the top) and the article type (shown down the first column).  
@@ -418,8 +409,8 @@ sp_addarticle [ @publication = ] 'publication'
 |**func schema only**|**0x01**, **0x20**, **0x2000**, **0x400000**, **0x800000**, **0x2000000**, **0x8000000**, **0x10000000**, **0x20000000**, **0x40000000**, and **0x80000000**|**0x01**, **0x20**, **0x2000**, **0x400000**, **0x800000**, **0x2000000**, **0x8000000**, **0x10000000**, **0x20000000**, **0x40000000**, and **0x80000000**|  
 |**indexed view schema only**|**0x01**, **0x010**, **0x020**, **0x040**, **0x0100**, **0x2000**, **0x40000**, **0x100000**, **0x200000**, **0x400000**, **0x800000**, **0x2000000**, **0x8000000**, **0x40000000**, and **0x80000000**|**0x01**, **0x010**, **0x020**, **0x040**, **0x0100**, **0x2000**, **0x40000**, **0x100000**, **0x200000**, **0x400000**, **0x800000**, **0x2000000**, **0x8000000**, **0x40000000**, and **0x80000000**|  
   
-> [!NOTE]  
->  For queued updating publications, the *schema_option* values of **0x8000** and **0x80** must be enabled. The supported *schema_option* values for non-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] publications are: **0x01**, **0x02**, **0x10**, **0x40**, **0x80**, **0x1000**, **0x4000** and **0X8000**.  
+> [!NOTE]
+>  For queued updating publications, the *schema_option* values of **0x8000** and **0x80** must be enabled. The supported *schema_option* values for non- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] publications are: **0x01**, **0x02**, **0x10**, **0x40**, **0x80**, **0x1000**, **0x4000** and **0X8000**.  
   
 ## Example  
  [!code-sql[HowTo#sp_AddTranArticle](../../relational-databases/replication/codesnippet/tsql/sp-addarticle-transact-sql_1.sql)]  

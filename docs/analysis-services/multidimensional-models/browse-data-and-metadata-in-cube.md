@@ -1,25 +1,14 @@
 ---
 title: "Browse data and metadata in Cube | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: analysis-services
-ms.prod_service: "analysis-services"
-ms.service: ""
-ms.component: ""
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
-  
-ms.component: multidimensional-tabular
-ms.component: data-mining
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-ms.assetid: 5faf2a9d-df39-465f-9c81-a00d5cd63f5a
-caps.latest.revision: 8
-author: "Minewiskan"
-ms.author: "owend"
-manager: "kfile"
-ms.workload: "Inactive"
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: multidimensional-models
+ms.topic: conceptual
+ms.author: owend
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
 ---
 # Browse data and metadata in Cube
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -27,7 +16,7 @@ ms.workload: "Inactive"
   
  Before you browse a cube, you must process it and the reconnect to it. After you process it, open the **Browser** tab of Cube Designer. Click the Reconnect button on the toolbar to refresh the connection.  
   
- The **Browser** tab has three panes — the Metadata pane, the Filter pane, and the Data pane. Use the Metadata pane to examine the structure of the cube in tree format. Use the Filter pane at the top of the **Browser** tab to define any subcube you want to browse. Use the Data pane to view the result set and drill down through dimension hierarchies.  
+ The **Browser** tab has three panes - the Metadata pane, the Filter pane, and the Data pane. Use the Metadata pane to examine the structure of the cube in tree format. Use the Filter pane at the top of the **Browser** tab to define any subcube you want to browse. Use the Data pane to view the result set and drill down through dimension hierarchies.  
   
 ## Setting up the Browser  
  To prepare to browse a cube, you can specify a perspective or translation that you want to use. You add measures and dimensions to the Data pane and specify any filters in the Filter pane.  

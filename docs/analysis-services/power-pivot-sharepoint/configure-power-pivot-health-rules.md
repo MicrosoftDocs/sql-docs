@@ -1,25 +1,14 @@
 ---
 title: "Configure Power Pivot Health Rules | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: analysis-services
-ms.prod_service: "analysis-services"
-ms.service: ""
-ms.component: ""
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
-  
-ms.component: multidimensional-tabular
-ms.component: data-mining
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-ms.assetid: a01e63e6-97dc-43e5-ad12-ae6580afc606
-caps.latest.revision: 19
-author: "Minewiskan"
-ms.author: "owend"
-manager: "kfile"
-ms.workload: "Inactive"
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: ppvt-sharepoint
+ms.topic: conceptual
+ms.author: owend
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
 ---
 # Configure Power Pivot Health Rules
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -33,10 +22,10 @@ ms.workload: "Inactive"
 |-|  
 |**[!INCLUDE[applies](../../includes/applies-md.md)]**  SharePoint 2013 &#124; SharePoint 2010|  
   
- **Note:** Health rule settings are configured separately for the SQL Server Analysis Services instance and the [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] service application. Use the instructions in this topic to configure health rules for each service. For a SharePoint 2013 deployment, [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] only uses the service application. Therefore [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] installs different sets of health rules for different versions of SharePoint. See the “version” column in the topic [Health Rules Reference &#40;Power Pivot for SharePoint&#41;](../../analysis-services/power-pivot-sharepoint/health-rules-reference-power-pivot-for-sharepoint.md), or you can run the following Windows PowerShell command to see the installed rules.  
+ **Note:** Health rule settings are configured separately for the SQL Server Analysis Services instance and the [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] service application. Use the instructions in this topic to configure health rules for each service. For a SharePoint 2013 deployment, [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] only uses the service application. Therefore [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] installs different sets of health rules for different versions of SharePoint. See the "version" column in the topic [Health Rules Reference &#40;Power Pivot for SharePoint&#41;](../../analysis-services/power-pivot-sharepoint/health-rules-reference-power-pivot-for-sharepoint.md), or you can run the following Windows PowerShell command to see the installed rules.  
   
 ```  
-Get-SPHealthAnalysisRule | select name, enabled, summary | where {$_.summary -like “*power*”}  | format-table -property * -autosize | out-default  
+Get-SPHealthAnalysisRule | select name, enabled, summary | where {$_.summary -like "*power*"}  | format-table -property * -autosize | out-default  
 ```  
   
  **In this topic:**  

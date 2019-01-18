@@ -2,15 +2,10 @@
 title: "sys.fn_virtualservernodes (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "database-engine, pdw"
-ms.service: ""
-ms.component: "system-functions"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: system-objects
 ms.topic: "language-reference"
 f1_keywords: 
   - "fn_virtualservernodes"
@@ -25,18 +20,17 @@ helpviewer_keywords:
   - "fn_virtualservernodes function"
   - "sys.fn_virtualservernodes function"
 ms.assetid: 257f3b8d-93c0-4444-87f1-ea211bd8cad0
-caps.latest.revision: 25
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-ms.workload: "Inactive"
+author: "rothja"
+ms.author: "jroth"
+manager: craigg
+monikerRange: ">=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.fn_virtualservernodes (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-pdw-md.md)]
 
   Returns a list of failover clustered instance nodes on which an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] can run. This information is useful in failover clustering environments.  
   
-> [!IMPORTANT]  
+> [!IMPORTANT]
 >  This [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] system function is included for backward compatibility. We recommend that you use [sys.dm_os_cluster_nodes &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-cluster-nodes-transact-sql.md) instead.  
   
  ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  

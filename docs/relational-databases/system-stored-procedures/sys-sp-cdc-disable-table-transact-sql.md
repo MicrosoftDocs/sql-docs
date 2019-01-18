@@ -2,15 +2,10 @@
 title: "sys.sp_cdc_disable_table (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/15/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "database-engine"
-ms.service: ""
-ms.component: "system-stored-procedures"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: system-objects
 ms.topic: "language-reference"
 f1_keywords: 
   - "sys.sp_cdc_disable_table"
@@ -24,11 +19,9 @@ helpviewer_keywords:
   - "sys.sp_cdc_disable_table"
   - "change data capture [SQL Server], disabling tables"
 ms.assetid: da2156c0-504e-4d76-b9a0-4448becf9bda
-caps.latest.revision: 27
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "craigg"
-ms.workload: "Inactive"
+author: rothja
+ms.author: jroth
+manager: craigg
 ---
 # sys.sp_cdc_disable_table (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,17 +41,17 @@ sys.sp_cdc_disable_table
 ```  
   
 ## Arguments  
- [ **@source_schema=** ] **'***source_schema***'**  
+ [ **@source_schema=** ] **'**_source\_schema_**'**  
  Is the name of the schema in which the source table is contained. *source_schema* is **sysname**, with no default, and cannot be NULL.  
   
  *source_schema* must exist in the current database.  
   
- [ **@source_name=** ] **'***source_name***'**  
+ [ **@source_name=** ] **'**_source\_name_**'**  
  Is the name of the source table from which change data capture is to be disabled. *source_name* is **sysname**, with no default, and cannot be NULL.  
   
  *source_name* must exist in the current database.  
   
- [ **@capture_instance=** ] **'***capture_instance***'** | **'**all**'**  
+ [ **@capture_instance=** ] **'**_capture\_instance_**'** | **'**all**'**  
  Is the name of the capture instance to disable for the specified source table. *capture_instance* is **sysname** and cannot be NULL.  
   
  When 'all' is specified, all capture instances defined for *source_name* are disabled.  

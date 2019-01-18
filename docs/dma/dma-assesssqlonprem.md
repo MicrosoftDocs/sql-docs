@@ -1,29 +1,24 @@
 ---
 title: "Perform a SQL Server migration assessment (Data Migration Assistant) | Microsoft Docs"
+description: Learn how to use Data Migration Assistant to assess an on-premises SQL Server before migrating to another SQL Server or to Azure SQL Database
 ms.custom: ""
-ms.date: "10/04/2017"
-ms.prod: "sql-non-specified"
+ms.date: "10/20/2018"
+ms.prod: sql
 ms.prod_service: "dma"
-ms.service: ""
-ms.component:
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "sql-dma"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: dma
+ms.topic: conceptual
 keywords: ""
 helpviewer_keywords: 
   - "Data Migration Assistant, Assess"
 ms.assetid: ""
-caps.latest.revision: ""
-author: "HJToland3"
-ms.author: "jtoland"
-manager: "craigg"
-ms.workload: "Inactive"
+author: pochiraju
+ms.author: rajpo
+manager: craigg
 ---
 
-# Perform a SQL Server migration assessment
+# Perform a SQL Server migration assessment with Data Migration Assistant
+
 The following step-by-step instructions help you perform your first assessment for migrating to on-premises SQL Server, SQL Server running on an Azure VM, or Azure SQL Database, by using Data Migration Assistant.
 
 ## Create an assessment
@@ -33,11 +28,7 @@ The following step-by-step instructions help you perform your first assessment f
 
 2.  Set the source and target server type.
 
-    If you are upgrading your on-premises SQL Server instance to a modern
-    on-premises SQL Server instance or to SQL Server hosted on an Azure VM, set the
-    source and target server type to **SQL Server**. If you are migrating
-    to Azure SQL Database, instead set the target server type to **Azure
-    SQL Database**.
+    If you're upgrading your on-premises SQL Server instance to a modern on-premises SQL Server instance or to SQL Server hosted on an Azure VM, set the source and target server type to **SQL Server**. If you're migrating to Azure SQL Database, instead set the target server type to **Azure SQL Database**.
 
 3.  Click **Create**.
 
@@ -49,22 +40,16 @@ The following step-by-step instructions help you perform your first assessment f
 
 2. Select the report type.
 
-   When you are assessing your source SQL Server instance for migrating to
-    on-premises SQL Server or to SQL Server hosted on Azure VM targets,
-    you can choose one or both of the following assessment report types:
+   When you're assessing your source SQL Server instance for migrating to on-premises SQL Server or to SQL Server hosted on Azure VM targets, you can choose one or both of the following assessment report types:
 
     -   **Compatibility Issues**
-
-    -   **New features’ recommendation**
+    -   **New features' recommendation**
 
     ![Select an assessment report type for SQL Server target](../dma/media/AssessmentTypes.png)
 
-   When you are assessing your source SQL Server instance for migrating to Azure SQL
-    Database, you can choose one or both of the following
-    assessment report types:
+   When assessing your source SQL Server instance for migrating to Azure SQL Database, you can choose one or both of the following assessment report types:
 
     -   **Check database compatibility**
-
     -   **Check feature parity**
 
     ![Select assessment report type for SQL Database target](../dma/media/AssessmentTypes_Azure.png)
@@ -73,16 +58,12 @@ The following step-by-step instructions help you perform your first assessment f
 
 1.  Select **Add Sources** to open the connection flyout menu.
 
-2.  Enter the SQL server instance name, choose the Authentication type, set
-    the correct connection properties, and then select **Connect**.
+2.  Enter the SQL server instance name, choose the Authentication type, set the correct connection properties, and then select **Connect**.
 
 3.  Select the databases to assess, and then select **Add**.
 
     > [!NOTE] 
-    > You can remove multiple databases by selecting
-    > them while holding the Shift or Ctrl key, and then
-    > clicking **Remove Sources**. You can also add databases from multiple
-    > SQL Server instances by using the **Add Sources** button.
+    > You can remove multiple databases by selecting them while holding the Shift or Ctrl key, and then clicking **Remove Sources**. You can also add databases from multiple SQL Server instances by using the **Add Sources** button.
 
 4.  Click **Next** to start the assessment.
 
@@ -90,23 +71,19 @@ The following step-by-step instructions help you perform your first assessment f
 
 ## View results
 
-The duration of the assessment depends on the number of databases added and the schema size of each database. Results are displayed for each database as soon as they are available.
+The duration of the assessment depends on the number of databases added and the schema size of each database. Results are displayed for each database as soon as they're available.
 
-1.  Select the database that has completed the assessment, and then switch
-    between **Compatibility issues** and **Feature recommendations**
-    by using the switcher.
+1.  Select the database that has completed the assessment, and then switch between **Compatibility issues** and **Feature recommendations** by using the switcher.
 
-2.  Review the compatibility issues across all compatibility levels
-    supported by the target SQL Server version that you selected on the **Options**
-    page.
+2.  Review the compatibility issues across all compatibility levels supported by the target SQL Server version that you selected on the **Options** page.
 
-You can review compatibility issues by analyzing the affected object and its details for every issue identified under **Breaking changes**, **Behavior changes**, and **Deprecated features**.
+You can review compatibility issues by analyzing the affected object, its details, and potentially a fix for every issue identified under **Breaking changes**, **Behavior changes**, and **Deprecated features**.
 
 ![View assessment results](../dma/media/ReviewResults.png)
 
 Similarly, you can review feature recommendation across **Performance**, **Storage**, and **Security** areas.
 
-Feature recommendations cover a variety of features such as In-Memory OLTP and Columnstore, Stretch Database, Always Encrypted, Dynamic Data Masking, and Transparent Data Encryption.
+Feature recommendations cover a variety of features such as In-Memory OLTP, Columnstore, Stretch Database, Always Encrypted, Dynamic Data Masking, and Transparent Data Encryption.
 
 ![View feature recommendations](../dma/media/FeatureRecommendations.png)
 

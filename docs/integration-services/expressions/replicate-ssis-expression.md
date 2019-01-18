@@ -2,24 +2,17 @@
 title: "REPLICATE (SSIS Expression) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "integration-services"
-ms.service: ""
-ms.component: "expressions"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: integration-services
+ms.topic: conceptual
 helpviewer_keywords: 
   - "REPLICATE function"
 ms.assetid: e7a37b93-6d1d-42d5-9a65-de1790abf6a5
-caps.latest.revision: 34
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
-ms.workload: "Inactive"
+manager: craigg
 ---
 # REPLICATE (SSIS Expression)
   Returns a character expression that is replicated a number of times. The *times* argument must evaluate to an integer.  

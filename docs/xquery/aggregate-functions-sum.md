@@ -2,29 +2,20 @@
 title: "sum Function (XQuery) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/09/2017"
-ms.prod: "sql-non-specified"
-ms.prod_service: "sql-non-specified"
-ms.service: ""
-ms.component: "xquery"
+ms.prod: sql
+ms.prod_service: sql
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: xml
 ms.topic: "language-reference"
-applies_to: 
-  - "SQL Server"
 dev_langs: 
   - "XML"
 helpviewer_keywords: 
   - "sum function [XQuery]"
   - "fn:sum function"
 ms.assetid: 12288f37-b54c-4237-b75e-eedc5fe8f96d
-caps.latest.revision: 29
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-ms.workload: "Inactive"
+author: "rothja"
+ms.author: "jroth"
+manager: craigg
 ---
 # Aggregate Functions - sum
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -59,7 +50,7 @@ fn:sum($arg as xdt:anyAtomicType*) as xdt:anyAtomicType
   
 ```  
 SELECT Instructions.query('         
-   declare namespace AWMI="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";         
+   declare namespace AWMI="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";         
   <ProductModel PMID= "{ sql:column("Production.ProductModel.ProductModelID") }"         
   ProductModelName = "{ sql:column("Production.ProductModel.Name") }" >         
    <TotalLaborHrs>         
@@ -89,7 +80,7 @@ WHERE Instructions is not NULL
 SELECT ProductModelID,         
         Name,         
         Instructions.value('declare namespace   
-      AWMI="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";         
+      AWMI="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";         
     sum(//AWMI:Location/@LaborHours)', 'float') as TotalLaborHours         
 FROM Production.ProductModel         
 WHERE Instructions is not NULL          
@@ -119,7 +110,7 @@ ProductModelID Name                 TotalLaborHours
   
 -   Sequences that mix types across base type boundaries are not supported.  
   
--   The sum((xs:double(“INF”), xs:double(“-INF”))) raises a domain error.  
+-   The sum((xs:double("INF"), xs:double("-INF"))) raises a domain error.  
   
 ## See Also  
  [XQuery Functions against the xml Data Type](../xquery/xquery-functions-against-the-xml-data-type.md)  

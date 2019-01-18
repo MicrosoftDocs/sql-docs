@@ -1,30 +1,14 @@
 ---
 title: "Filters for Mining Models (Analysis Services - Data Mining) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/20/2017"
-ms.prod: analysis-services
-ms.prod_service: "analysis-services"
-ms.service: ""
-ms.component: ""
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
-  
-ms.component: data-mining
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "attributes [data mining]"
-  - "filter syntax [data mining]"
-  - "models [Analysis Services], filtering"
-  - "filters [data mining]"
-  - "filtering data [Analysis Services]"
-ms.assetid: 0f29c19c-4be3-4bc7-ab60-f4130a10d59c
-caps.latest.revision: 27
-author: "Minewiskan"
-ms.author: "owend"
-manager: "kfile"
-ms.workload: "Inactive"
+ms.date: 05/08/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: data-mining
+ms.topic: conceptual
+ms.author: owend
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
 ---
 # Filters for Mining Models (Analysis Services - Data Mining)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -64,14 +48,14 @@ ms.workload: "Inactive"
 ### Creating Filters on Nested Tables  
  If the data source view contains nested tables, you can use the second filter dialog box to build conditions on the rows in the nested tables.  
   
- For example, if your case table is related to customers, and the nested table shows the products that a customer has purchased, you can create a filter for customers who have purchased particular items by using the following syntax in the nested table filter: `[ProductName]=’Water Bottle’ OR ProductName=’Water Bottle Cage'`.  
+ For example, if your case table is related to customers, and the nested table shows the products that a customer has purchased, you can create a filter for customers who have purchased particular items by using the following syntax in the nested table filter: `[ProductName]='Water Bottle' OR ProductName='Water Bottle Cage'`.  
   
- You can also filter on the existence of a particular value in the nested table by using the **EXISTS** or **NOT EXISTS** keywords and a subquery. This lets you create conditions such as `EXISTS (SELECT * FROM Products WHERE ProductName=’Water Bottle’)`. The `EXISTS SELECT(<subquery>)` returns **true** if the nested table contains at least one row that includes the value, `Water Bottle`.  
+ You can also filter on the existence of a particular value in the nested table by using the **EXISTS** or **NOT EXISTS** keywords and a subquery. This lets you create conditions such as `EXISTS (SELECT * FROM Products WHERE ProductName='Water Bottle')`. The `EXISTS SELECT(<subquery>)` returns **true** if the nested table contains at least one row that includes the value, `Water Bottle`.  
   
- You can combine conditions on the case table with conditions on the nested table. For example, the following syntax includes a condition on the case table (`Age > 30` ), a subquery on the nested table (`EXISTS (SELECT * FROM Products)`), and multiple conditions on the nested table (`WHERE ProductName=’Milk’  AND Quantity>2`) ).  
+ You can combine conditions on the case table with conditions on the nested table. For example, the following syntax includes a condition on the case table (`Age > 30` ), a subquery on the nested table (`EXISTS (SELECT * FROM Products)`), and multiple conditions on the nested table (`WHERE ProductName='Milk'  AND Quantity>2`) ).  
   
 ```  
-(Age > 30 AND EXISTS (SELECT * FROM Products WHERE ProductName=’Milk’  AND Quantity>2) )  
+(Age > 30 AND EXISTS (SELECT * FROM Products WHERE ProductName='Milk'  AND Quantity>2) )  
 ```  
   
  When you have finished building the filter, the filter text is evaluated by [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], translated to a DMX expression, and then saved with the model.  
@@ -103,7 +87,7 @@ ms.workload: "Inactive"
 ### How can I save a filter?  
  The filter expression is saved as a script that is stored with the associated mining model or nested table. If you delete the filter text, it can only be restored by manually re-creating the filter expression. Therefore, if you create complex filter expressions, you should create a backup copy of the filter text.  
   
-### Why can’t I see any effects from the filter?  
+### Why can't I see any effects from the filter?  
  Whenever you change or add a filter expression, you must reprocess the structure and model before you can view the effects of the filter.  
   
 ### Why do I see filtered attributes in prediction query results?  

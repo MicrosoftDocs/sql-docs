@@ -1,0 +1,30 @@
+- name: Overview
+  href: sql-trace.md
+- name: Create and Run Traces Using Transact-SQL Stored Procedures
+  href: create-and-run-traces-using-transact-sql-stored-procedures.md
+- name: Create Manual Traces using Stored Procedures
+  href: create-manual-traces-using-stored-procedures.md
+- name: Save Trace Results to a File
+  href: save-trace-results-to-a-file.md
+- name: Improve Access to Trace Data
+  href: improve-access-to-trace-data.md
+- name: Create a Trace (Transact-SQL)
+  href: create-a-trace-transact-sql.md
+- name: Set a Trace Filter (Transact-SQL)
+  href: set-a-trace-filter-transact-sql.md
+- name: Modify an Existing Trace (Transact-SQL)
+  href: modify-an-existing-trace-transact-sql.md
+- name: View a Saved Trace (Transact-SQL)
+  href: view-a-saved-trace-transact-sql.md
+- name: View Filter Information (Transact-SQL)
+  href: view-filter-information-transact-sql.md
+- name: Delete a Trace (Transact-SQL)
+  href: delete-a-trace-transact-sql.md
+- name: Optimize SQL Trace
+  href: optimize-sql-trace.md
+- name: Filter a Trace
+  href: filter-a-trace.md
+- name: Limit Trace File and Table Sizes
+  href: limit-trace-file-and-table-sizes.md
+- name: Schedule Traces
+  href: schedule-traces.md

@@ -1,27 +1,19 @@
 ---
 title: "Data Alert Manager for Alerting Administrators | Microsoft Docs"
-ms.custom: ""
-ms.date: "07/02/2017"
+ms.date: 07/02/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
-ms.service: ""
-ms.component: "reporting-services"
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
+ms.technology: reporting-services
 
 
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "managing, alerts"
   - "managing, data alerts"
 ms.assetid: 32fd968f-1c0c-4ba8-851c-8a3b5e1fbbf2
-caps.latest.revision: 22
-author: "markingmyname"
-ms.author: "maghan"
-manager: "kfile"
-ms.workload: "Inactive"
+author: markingmyname
+ms.author: maghan
+monikerRange: ">=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions"
 ---
 # Data Alert Manager for Alerting Administrators
 
@@ -83,4 +75,4 @@ SQL Server Reporting Services provides Data Alert Manager for SharePoint alertin
 
 [Reporting Services Data Alerts](../reporting-services/reporting-services-data-alerts.md)  
 
-More questions? [Try asking the Reporting Services forum](http://go.microsoft.com/fwlink/?LinkId=620231)
+More questions? [Try asking the Reporting Services forum](https://go.microsoft.com/fwlink/?LinkId=620231)

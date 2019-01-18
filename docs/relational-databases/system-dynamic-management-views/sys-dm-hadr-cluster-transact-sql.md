@@ -2,15 +2,9 @@
 title: "sys.dm_hadr_cluster (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/10/2016"
-ms.prod: "sql-non-specified"
-ms.prod_service: "database-engine"
-ms.service: ""
-ms.component: "dmv's"
+ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: system-objects
 ms.topic: "language-reference"
 f1_keywords: 
   - "sys.dm_hadr_cluster"
@@ -24,11 +18,9 @@ helpviewer_keywords:
   - "sys.dm_hadr_cluster catalog view"
   - "Availability Groups [SQL Server], WSFC clusters"
 ms.assetid: 13ce70e4-9d43-4a80-a826-099e6213bf85
-caps.latest.revision: 20
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-ms.workload: "Inactive"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ---
 # sys.dm_hadr_cluster (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]

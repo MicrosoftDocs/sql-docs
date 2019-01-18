@@ -2,25 +2,18 @@
 title: "Revert a Database to a Database Snapshot | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/09/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "database-engine"
-ms.service: ""
-ms.component: "databases"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "database snapshots [SQL Server], reverting to"
   - "reverting databases"
 ms.assetid: 8f74dd31-c9ca-4537-8760-0c7648f0787d
-caps.latest.revision: 58
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-ms.workload: "On Demand"
+author: "stevestein"
+ms.author: "sstein"
+manager: craigg
 ---
 # Revert a Database to a Database Snapshot
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -41,7 +34,7 @@ ms.workload: "On Demand"
 ###  <a name="Restrictions"></a> Limitations and Restrictions  
  Reverting is unsupported under the following conditions:  
   
--   The database must currently have only one database snapshot, to which you plan to revert.  
+-   There are multiple snapshots for the database. For reverting, there must only be one snapshot for the database, to which you plan to revert.  
   
 -   Any read-only or compressed filegroups exist in the database.  
   
@@ -49,7 +42,7 @@ ms.workload: "On Demand"
   
  Before reverting a database, consider the following limitations:  
   
--   Reverting is not intended for media recovery. . A database snapshot is an incomplete copy of the database files, so if either the database or the database snapshot is corrupted, reverting from a snapshot is likely to be impossible. Furthermore, even when it is possible, reverting in the event of corruption is unlikely to correct the problem. Therefore, taking regular backups and testing your restore plan are essential to protect a database. For more information, see [Back Up and Restore of SQL Server Databases](../../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md).  
+-   Reverting is not intended for media recovery. A database snapshot is an incomplete copy of the database files, so if either the database or the database snapshot is corrupted, reverting from a snapshot is likely to be impossible. Furthermore, even when it is possible, reverting in the event of corruption is unlikely to correct the problem. Therefore, taking regular backups and testing your restore plan are essential to protect a database. For more information, see [Back Up and Restore of SQL Server Databases](../../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md).  
   
     > [!NOTE]  
     >  If you need to be able to restore the source database to the point in time at which you created a database snapshot, use the full recovery model and implement a backup policy that enables you to do that.  
@@ -102,7 +95,7 @@ ms.workload: "On Demand"
   
      A revert operation requires RESTORE DATABASE permissions on the source database. To revert the database, use the following Transact-SQL statement:  
   
-     RESTORE DATABASE *database_name* FROM DATABASE_SNAPSHOT **=***database_snapshot_name*  
+     RESTORE DATABASE *database_name* FROM DATABASE_SNAPSHOT **=**_database_snapshot_name_  
   
      Where *database_name* is the source database and *database_snapshot_name* is the name of the snapshot to which you want to revert the database. Notice that in this statement, you must specify a snapshot name rather than a backup device.  
   

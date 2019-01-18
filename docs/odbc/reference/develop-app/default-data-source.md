@@ -2,16 +2,11 @@
 title: "Default Data Source | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
-ms.prod_service: "drivers"
-ms.service: ""
-ms.component: "odbc"
+ms.prod: sql
+ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "drivers"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: connectivity
+ms.topic: conceptual
 helpviewer_keywords: 
   - "data sources [ODBC], connection functions"
   - "connecting to data source [ODBC], default data source"
@@ -24,11 +19,9 @@ helpviewer_keywords:
   - "connection functions [ODBC]"
   - "ODBC drivers [ODBC], connection functions"
 ms.assetid: dd473cc6-f051-4aa0-ab14-3dd1b37fe99e
-caps.latest.revision: 5
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
-ms.workload: "Inactive"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # Default Data Source
 The driver may select a data source, called the default data source, in certain cases where the application does not explicitly specify one:  

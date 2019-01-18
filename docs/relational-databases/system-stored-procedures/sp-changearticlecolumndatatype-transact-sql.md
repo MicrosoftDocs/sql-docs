@@ -2,29 +2,20 @@
 title: "sp_changearticlecolumndatatype (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "database-engine"
-ms.service: ""
-ms.component: "system-stored-procedures"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
+ms.technology: replication
 ms.topic: "language-reference"
-applies_to: 
-  - "SQL Server"
 f1_keywords: 
   - "sp_changearticlecolumndatatype"
   - "sp_changearticlecolumndatatype_TSQL"
 helpviewer_keywords: 
   - "sp_changearticlecolumndatatype"
 ms.assetid: 0db80e08-fb77-4d0c-aa41-455b13ffa9b4
-caps.latest.revision: 30
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "craigg"
-ms.workload: "Inactive"
+author: stevestein
+ms.author: sstein
+manager: craigg
 ---
 # sp_changearticlecolumndatatype (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -51,16 +42,16 @@ sp_changearticlecolumndatatype [ @publication= ] 'publication'
 ```  
   
 ## Arguments  
- [ **@publication=** ] **'***publication***'**  
+ [ **@publication=** ] **'**_publication_**'**  
  Is the name of the Oracle publication. *publication* is **sysname**, with no default.  
   
- [ **@article =** ] **'***article***'**  
+ [ **@article =** ] **'**_article_**'**  
  Is the name of the article. *article* is **sysname**, with no default.  
   
- [ **@column**= ] **'***column***'**  
+ [ **@column**= ] **'**_column_**'**  
  Is the name of the column for which to change the data type mapping. *column* is **sysname**, with no default.  
   
- [ **@type** = ] **'***type***'**  
+ [ **@type** = ] **'**_type_**'**  
  Is the name of the [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] data type in the destination column. *type* is **sysname**, with a default of NULL.  
   
  [ **@length** = ] *length*  
@@ -69,8 +60,8 @@ sp_changearticlecolumndatatype [ @publication= ] 'publication'
  [ **@precision**= ] *precision*  
  Is the precision of the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] data type in the destination column. *precision* is **bigint**, with a default of NULL.  
   
- [ **@publisher**= ] **'***publisher***'**  
- Specifies a non-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] publisher. *publisher* is **sysname**, with a default of NULL.  
+ [ **@publisher**= ] **'**_publisher_**'**  
+ Specifies a non- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] publisher. *publisher* is **sysname**, with a default of NULL.  
   
 ## Return Code Values  
  **0** (success) or **1** (failure)  

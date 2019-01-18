@@ -2,16 +2,11 @@
 title: "SQLInstallTranslatorEx Function | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
-ms.prod_service: "drivers"
-ms.service: ""
-ms.component: "odbc"
+ms.prod: sql
+ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "drivers"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: connectivity
+ms.topic: conceptual
 apiname: 
   - "SQLInstallTranslatorEx"
 apilocation: 
@@ -22,11 +17,9 @@ f1_keywords:
 helpviewer_keywords: 
   - "SQLInstallTranslatorEx function [ODBC]"
 ms.assetid: a0630602-53c1-4db0-98ce-70d160aedf8d
-caps.latest.revision: 16
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
-ms.workload: "Inactive"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # SQLInstallTranslatorEx Function
 **Conformance**  
@@ -42,13 +35,13 @@ ms.workload: "Inactive"
 ```  
   
 BOOL SQLInstallTranslatorEx(  
-     LPCSTR    lpszTranslator,  
-     LPCSTR    lpszPathIn,  
-     LPSTR     lpszPathOut,  
-     WORD      cbPathOutMax,  
-     WORD *    pcbPathOut,  
-     WORD      fRequest,  
-     LPDWORD   lpdwUsageCount);  
+     LPCSTR    lpszTranslator,  
+     LPCSTR    lpszPathIn,  
+     LPSTR     lpszPathOut,  
+     WORD      cbPathOutMax,  
+     WORD *    pcbPathOut,  
+     WORD      fRequest,  
+     LPDWORD   lpdwUsageCount);  
 ```  
   
 ## Arguments  

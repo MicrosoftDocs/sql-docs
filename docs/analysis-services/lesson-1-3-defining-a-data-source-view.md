@@ -1,28 +1,18 @@
 ---
 title: "Defining a Data Source View | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: analysis-services
-ms.prod_service: "analysis-services"
-ms.service: ""
-ms.component: ""
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
-  
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
-applies_to: 
-  - "SQL Server 2016"
-ms.assetid: af00938a-5a06-4fae-b2fc-f3fb0ca3cea5
-caps.latest.revision: 28
-author: "Minewiskan"
-ms.author: "owend"
-manager: "kfile"
-ms.workload: "On Demand"
+ms.date: 05/08/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: multidimensional-models
+ms.topic: tutorial
+ms.author: owend
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
 ---
 # Lesson 1-3 - Defining a Data Source View
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
 After you define the data sources that you will use in an [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] project, the next step is generally to define a data source view for the project. A data source view is a single, unified view of the metadata from the specified tables and views that the data source defines in the project. Storing the metadata in the data source view enables you to work with the metadata during development without an open connection to any underlying data source. For more information, see [Data Source Views in Multidimensional Models](../analysis-services/multidimensional-models/data-source-views-in-multidimensional-models.md).  
   
 In the following task, you define a data source view that includes five tables from the **AdventureWorksDW2012** data source.  

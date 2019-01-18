@@ -1,26 +1,19 @@
 ---
 title: "ADO Objects and Interfaces | Microsoft Docs"
-ms.prod: "sql-non-specified"
-ms.prod_service: "drivers"
-ms.service: ""
-ms.component: "ado"
-ms.technology:
-  - "drivers"
+ms.prod: sql
+ms.prod_service: connectivity
+ms.technology: connectivity
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "ADO, objects and interfaces"
   - "objects [ADO]"
 ms.assetid: d0b7e254-c89f-4406-b846-a060ef038c30
-caps.latest.revision: 14
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
-ms.workload: "Inactive"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # ADO Objects and Interfaces
 The relationships between these objects are represented in the [ADO Object Model](../../../ado/reference/ado-api/ado-object-model.md).  

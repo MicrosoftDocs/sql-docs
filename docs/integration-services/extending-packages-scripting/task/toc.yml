@@ -1,0 +1,18 @@
+- name: Extending the Package with the Script Task
+  href: extending-the-package-with-the-script-task.md
+- name: Configuring the Script Task in the Script Task Editor
+  href: configuring-the-script-task-in-the-script-task-editor.md
+- name: Coding and Debugging the Script Task
+  href: coding-and-debugging-the-script-task.md
+- name: Using Variables in the Script Task
+  href: using-variables-in-the-script-task.md
+- name: Connecting to Data Sources in the Script Task
+  href: connecting-to-data-sources-in-the-script-task.md
+- name: Raising Events in the Script Task
+  href: raising-events-in-the-script-task.md
+- name: Logging in the Script Task
+  href: logging-in-the-script-task.md
+- name: Returning Results from the Script Task
+  href: returning-results-from-the-script-task.md
+- name: Script Task Examples
+  href: ../../extending-packages-scripting-task-examples/script-task-examples.md

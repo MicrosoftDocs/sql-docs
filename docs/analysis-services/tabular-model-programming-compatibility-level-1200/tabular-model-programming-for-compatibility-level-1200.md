@@ -1,24 +1,14 @@
 ---
-title: "Tabular Model Programming for Compatibility Level 1200 | Microsoft Docs"
-ms.custom: ""
-ms.date: "05/30/2017"
-ms.prod: analysis-services
-ms.prod_service: "analysis-services, azure-analysis-services"
-ms.service: ""
-ms.component: ""
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
-  
-
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-ms.assetid: d343f693-c800-42fe-bb4f-2c38a10919f1
-caps.latest.revision: 15
-author: "Minewiskan"
-ms.author: "owend"
-manager: "kfile"
-ms.workload: "On Demand"
+title: "Analysis Services tabular model programming for compatibility level 1200 | Microsoft Docs"
+ms.date: 05/07/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: tabular-models
+ms.topic: reference
+ms.author: owend
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
 ---
 # Tabular Model Programming for Compatibility Level 1200 and higher
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -31,14 +21,14 @@ Upgrading an existing Tabular solution is recommended but not required. Existing
  New Tabular models will require different code and script, summarized below.  
   
 ## Object Model Definitions as Tabular Metadata Constructs  
- The Tabular Object Model for 1200 or higher models is exposed in JSON through the [Tabular Model Scripting Language](../../analysis-services/tabular-model-scripting-language-tmsl-reference.md) and through the AMO data definition language through a new namespace, [Microsoft.AnalysisServices.Tabular](http://msdn.microsoft.com/library/microsoft.analysisservices.tabular.aspx)
+ The Tabular Object Model for 1200 or higher models is exposed in JSON through the [Tabular Model Scripting Language](https://docs.microsoft.com/bi-reference/tmsl/tabular-model-scripting-language-tmsl-reference) and through the AMO data definition language through a new namespace, [Microsoft.AnalysisServices.Tabular](http://msdn.microsoft.com/library/microsoft.analysisservices.tabular.aspx)
 
 ## Script for Tabular Models and Databases  
  TMSL is a JSON scripting language for Tabular models, with support for create, read, update, an delete operations. You can refresh data via TMSL and invoke database operations for attach, detatch, backup, restore, and synchronize.  
   
  AMO PowerShell accepts TMSL script as input.  
   
- See [Tabular Model Scripting Language &#40;TMSL&#41; Reference](../../analysis-services/tabular-model-scripting-language-tmsl-reference.md) and [Analysis Services PowerShell Reference](../../analysis-services/powershell/analysis-services-powershell-reference.md) for more information.  
+ See [Tabular Model Scripting Language &#40;TMSL&#41; Reference](https://docs.microsoft.com/bi-reference/tmsl/tabular-model-scripting-language-tmsl-reference) and [Analysis Services PowerShell Reference](../../analysis-services/powershell/analysis-services-powershell-reference.md) for more information.  
   
 ## Query Languages  
  DAX and MDX are supported for all Tabular models.  
@@ -55,7 +45,7 @@ Upgrading an existing Tabular solution is recommended but not required. Existing
 ## See Also  
  [Analysis Services Developer Documentation](../../analysis-services/analysis-services-developer-documentation.md)   
  [Tabular Model Programming for Compatibility Levels 1050 through 1103](../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/tabular-model-programming-for-compatibility-levels-1050-through-1103.md)   
- [Technical Reference &#40;SSAS&#41;](../../analysis-services/powershell/technical-reference-ssas.md)[Upgrade Analysis Services](../../database-engine/install-windows/upgrade-analysis-services.md)  
+ [Technical Reference ](../../analysis-services/powershell/technical-reference-ssas.md)[Upgrade Analysis Services](../../database-engine/install-windows/upgrade-analysis-services.md)  
  [Compatibility levels of Tabular models and databases](../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/tabular-model-programming-for-compatibility-levels-1050-through-1103.md)  
   
   

@@ -2,29 +2,20 @@
 title: "Parsing Non-Standard Text File Formats with the Script Component | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/17/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "integration-services"
-ms.service: ""
-ms.component: "extending-packages-scripting-data-flow-script-component-examples"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-
-ms.tgt_pltfrm: ""
+ms.technology: integration-services
 ms.topic: "reference"
-applies_to: 
-  - "SQL Server 2016 Preview"
 helpviewer_keywords: 
   - "text file reading [Integration Services]"
   - "Script component [Integration Services], non-standard text file formats"
   - "transformations [Integration Services], components"
   - "Script component [Integration Services], examples"
 ms.assetid: 1fda034d-09e4-4647-9a9f-e8d508c2cc8f
-caps.latest.revision: 36
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
-ms.workload: "Inactive"
+manager: craigg
 ---
 # Parsing Non-Standard Text File Formats with the Script Component
   When your source data is arranged in a non-standard format, you may find it more convenient to consolidate all your parsing logic in a single script than to chain together multiple [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] transformations to achieve the same result.  

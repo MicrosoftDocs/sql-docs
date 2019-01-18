@@ -2,29 +2,20 @@
 title: "sp_changepublication_snapshot (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "database-engine"
-ms.service: ""
-ms.component: "system-stored-procedures"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
+ms.technology: replication
 ms.topic: "language-reference"
-applies_to: 
-  - "SQL Server"
 f1_keywords: 
   - "sp_changepublication_snapshot_TSQL"
   - "sp_changepublication_snapshot"
 helpviewer_keywords: 
   - "sp_changepublication_snapshot"
 ms.assetid: 518a4618-3592-4edc-8425-cbc33cdff891
-caps.latest.revision: 23
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "craigg"
-ms.workload: "Inactive"
+author: stevestein
+ms.author: sstein
+manager: craigg
 ---
 # sp_changepublication_snapshot (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -132,7 +123,7 @@ sp_changepublication_snapshot [ @publication= ] 'publication'
  Is the name of an existing Snapshot Agent job name if an existing job is being used. *snapshot_agent_name* is **nvarchar(100)** with a default value of NULL.  
   
  [ **@publisher_security_mode =** ] *publisher_security_mode*  
- Is the security mode used by the agent when connecting to the Publisher. *publisher_security_mode* is **smallint**, with a default of NULL. **0** specifies [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentication, and **1** specifies Windows Authentication. A value of **0** must be specified for non-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Publishers.  
+ Is the security mode used by the agent when connecting to the Publisher. *publisher_security_mode* is **smallint**, with a default of NULL. **0** specifies [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentication, and **1** specifies Windows Authentication. A value of **0** must be specified for non- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Publishers.  
   
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)]  
@@ -147,7 +138,7 @@ sp_changepublication_snapshot [ @publication= ] 'publication'
 >  Do not use a blank password. Use a strong password. When possible, prompt users to enter security credentials at runtime. If you must store credentials in a script file, you must secure the file to prevent unauthorized access.  
   
  [ **@job_login** = ] **'***job_login***'**  
- Is the login for the Windows account under which the agent runs. *job_login* is **nvarchar(257)**, with a default of NULL. This Windows account is always used for agent connections to the Distributor. You must supply this parameter when creating a new Snapshot Agent job. This cannot be changed for a non-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] publisher.  
+ Is the login for the Windows account under which the agent runs. *job_login* is **nvarchar(257)**, with a default of NULL. This Windows account is always used for agent connections to the Distributor. You must supply this parameter when creating a new Snapshot Agent job. This cannot be changed for a non- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] publisher.  
   
  [ **@job_password =** ] **'***job_password***'**  
  Is the password for the Windows account under which the agent runs. *job_password* is **sysname**, with a default of NULL. You must supply this parameter when creating a new Snapshot Agent job.  
@@ -156,7 +147,7 @@ sp_changepublication_snapshot [ @publication= ] 'publication'
 >  When possible, prompt users to enter security credentials at runtime. If you must store credentials in a script file, you must secure the file to prevent unauthorized access.  
   
  [ **@publisher =** ] **'***publisher***'**  
- Specifies a non-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] publisher. *publisher* is **sysname**, with a default of NULL.  
+ Specifies a non- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] publisher. *publisher* is **sysname**, with a default of NULL.  
   
 > [!NOTE]  
 >  *publisher* should not be used when creating a Snapshot Agent at a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Publisher.  

@@ -2,25 +2,19 @@
 title: "SQL Server Integration Services Properties (Service Tab) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "sql-tools"
-ms.service: ""
-ms.component: "configuration-manager"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: configuration
+ms.topic: conceptual
 ms.assetid: 37f0acd9-c96f-48fd-9b53-2ca0097af242
-caps.latest.revision: 16
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-ms.workload: "Inactive"
+author: "stevestein"
+ms.author: "sstein"
+monikerRange: ">=sql-server-2016||=sqlallproducts-allversions"
+manager: craigg
 ---
 # SQL Server Integration Services Properties (Service Tab)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
   Use the **Service**tab on the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] **Properties** dialog box to view or specify the following options.  
   
 ## Options  
@@ -55,6 +49,6 @@ ms.workload: "Inactive"
 -   Disabled: This service cannot be started.  
   
  **State**  
- Indicates whether this service is running, stopped, or disabled. "**…**" indicates a state change is pending.  
+ Indicates whether this service is running, stopped, or disabled. "**...**" indicates a state change is pending.  
   
   

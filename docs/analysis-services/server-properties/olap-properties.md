@@ -1,111 +1,18 @@
 ---
-title: "OLAP Properties | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: analysis-services
-ms.prod_service: "analysis-services"
-ms.service: ""
-ms.component: ""
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
-  
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-helpviewer_keywords: 
-  - "AggregationPerfLog property"
-  - "DefaultPageSizeForProp property"
-  - "UseSinglePassForDimSecurityAutoExist property"
-  - "DeepCompressValue property"
-  - "CacheRowsetRows property"
-  - "Income property"
-  - "AggregationNewAlgo property"
-  - "MemoryAdjustFactor property"
-  - "DimensionLatencyAccuracy property"
-  - "InitialBonus property"
-  - "DefaultPageSizeForDataHeader property"
-  - "MaxCPUUsage property"
-  - "DistinctBuffer property"
-  - "PartitionLatencyAccuracy property"
-  - "MaxRetries property"
-  - "UseDataCacheRegistryMultiplyKey property"
-  - "ConvertDeletedToUnknown property"
-  - "DatabaseConnectionPoolMax property"
-  - "DataFileInitEnabled property"
-  - "DefaultPageSizeForHash property"
-  - "MaxRolapOrConditions property"
-  - "UseDataCacheFreeLastPageMemory property"
-  - "OLAP [Analysis Services], properties"
-  - "MapHandleAlgorithm property"
-  - "IndexBuildEnabled property"
-  - "MaxObjectsInParallel property"
-  - "IgnoreNullRolapRows property"
-  - "DimensionPropertyCacheSize property"
-  - "DefaultRefreshInterval property"
-  - "CheckDistinctRecordSortOrder property"
-  - "BufferMemoryLimit property"
-  - "EnableTableGrouping property"
-  - "ExpressNonEmptyUseEnabled property"
-  - "CopyLinkedDataCacheAndRegistry property"
-  - "UseDataSlice property"
-  - "MemoryLimitErrorEnabled property"
-  - "Enabled property"
-  - "EnableRolapOptimization property"
-  - "DatabaseConnectionPoolTimeout property"
-  - "UseDataCacheRegistryHashTable property"
-  - "AggregationsBuildEnabled property"
-  - "Tax property"
-  - "DatabaseConnectionPoolGeneralTimeout property"
-  - "DefaultPageSizeForString property"
-  - "DatabaseConnectionPoolConnectTimeout property"
-  - "MinimumBalance property"
-  - "OptimizeSchema property"
-  - "UseCalculationCacheRegistry property"
-  - "MaxTableDepth property"
-  - "DataSliceInitEnabled property"
-  - "PrefetchLowerGranularities property"
-  - "UseVBANet property"
-  - "BufferRecordLimit property"
-  - "DefaultPageSizeForIndexHeader property"
-  - "MaximumBalance property"
-  - "CalculationCacheRegistryMaxIterations property"
-  - "DefaultDrillthroughMaxRows property"
-  - "IndexBuildThreshold property"
-  - "UseDataCacheRegistry property"
-  - "MemoryAdjustConst property"
-  - "ApplyIntersect property"
-  - "IndexFileInitEnabled property"
-  - "CacheRowsetToDisk property"
-  - "DataCacheRegistryMaxIterations property"
-  - "AllowSEFiltering property"
-  - "ForceMultiPass property"
-  - "ApplySubtract property"
-  - "IndexUseEnabled property"
-  - "AggregationsUseEnabled property"
-  - "DataPlacementOptimization property"
-  - "UseMaterializedIterators property"
-  - "CacheRecordLimit property"
-  - "ROLAPDimensionProcessingEffort property"
-  - "DefaultPageSizeForIndex property"
-  - "EnableRolapDimQueryTableGrouping property"
-  - "DimensionPropertyKeyCache property"
-  - "SleepIntervalSecs property"
-  - "DefaultPageSizeForData property"
-  - "MapFormatMask property"
-  - "CalculationEvaluationPolicy property"
-  - "AggregationMemoryLimitMin property"
-  - "RecordsReportGranularity property"
-  - "MemoryLimit property"
-  - "AggregationMemoryLimitMax property"
-ms.assetid: 06eb0d78-96c0-42ff-b759-f4c794597c8d
-caps.latest.revision: 18
-author: "Minewiskan"
-ms.author: "owend"
-manager: "kfile"
-ms.workload: "Inactive"
+title: "Analysis Services OLAP Properties | Microsoft Docs"
+ms.date: 06/07/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: 
+ms.topic: conceptual
+ms.author: owend
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
 ---
 # OLAP Properties
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] supports the OLAP server properties listed in the following tables. For more information about additional server properties and how to set them, see [Server Properties in Analysis Services](../../analysis-services/server-properties/server-properties-in-analysis-services.md).  
   
  **Applies to:** Multidimensional server mode only  
@@ -332,12 +239,13 @@ ms.workload: "Inactive"
   
 -   Affects all databases on the server. **DimensionPropertyCachesize** is a server-wide property. Changing this property affects all databases running on the current instance.  
   
- Approach for estimating dimension cache requirements:  
+Approach for estimating dimension cache requirements:  
   
 1.  Start by increasing the size by a large number to determine whether there is a benefit to increasing the dimension cache size. For example, you might want to double the default value as an initial step.  
   
 2.  If a performance improvement is evident, incrementally reduce the value until you reach a balance between performance and memory utilization.  
-  
+
+
  **ExpressNonEmptyUseEnabled**  
  An advanced property that you should not change, except under the guidance of [!INCLUDE[msCoName](../../includes/msconame-md.md)] support.  
   

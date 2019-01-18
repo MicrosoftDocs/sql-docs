@@ -2,29 +2,20 @@
 title: "string-length Function (XQuery) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-non-specified"
-ms.prod_service: "sql-non-specified"
-ms.service: ""
-ms.component: "xquery"
+ms.prod: sql
+ms.prod_service: sql
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: xml
 ms.topic: "language-reference"
-applies_to: 
-  - "SQL Server"
 dev_langs: 
   - "XML"
 helpviewer_keywords: 
   - "string-length function"
   - "fn:string-length function"
 ms.assetid: 7cd69c8b-cf2c-478c-b9a3-e0e14e1aa8aa
-caps.latest.revision: 46
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-ms.workload: "Inactive"
+author: "rothja"
+ms.author: "jroth"
+manager: craigg
 ---
 # Functions on String Values - string-length
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -68,7 +59,7 @@ SELECT @x.query('/ROOT[string-length()=5]');
  For products whose summary description is greater than 50 characters, the following query retrieves the product ID, the length of the summary description, and the summary itself, the <`Summary`> element.  
   
 ```  
-WITH XMLNAMESPACES ('http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription' as pd)  
+WITH XMLNAMESPACES ('https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription' as pd)  
 SELECT CatalogDescription.query('  
       <Prod ProductID= "{ /pd:ProductDescription[1]/@ProductModelID }" >  
        <LongSummary SummaryLength =   
@@ -109,8 +100,8 @@ Result
   
 ```  
 WITH XMLNAMESPACES (  
-'http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription' AS pd,  
-'http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelWarrAndMain' AS wm)  
+'https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription' AS pd,  
+'https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelWarrAndMain' AS wm)  
   
 SELECT CatalogDescription.query('  
       for   $ProdDesc in /pd:ProductDescription,  
@@ -143,7 +134,7 @@ Result
 <Prod ProductModelID="19">  
   <ShortFeature FeatureDescLength="15">  
     <wm:Warranty   
-       xmlns:wm="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelWarrAndMain">  
+       xmlns:wm="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelWarrAndMain">  
       <wm:WarrantyPeriod>3 years</wm:WarrantyPeriod>  
       <wm:Description>parts and labor</wm:Description>  
     </wm:Warranty>  

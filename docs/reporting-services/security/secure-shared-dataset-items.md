@@ -1,24 +1,15 @@
 ---
 title: "Secure Shared Dataset Items | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
+ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
-ms.service: ""
-ms.component: "security"
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
+ms.technology: security
 
 
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 ms.assetid: 08e6d8b5-d88c-4ed2-9c05-55c757e00014
-caps.latest.revision: 6
-author: "markingmyname"
-ms.author: "maghan"
-manager: "kfile"
-ms.workload: "Inactive"
+author: markingmyname
+ms.author: maghan
 ---
 # Secure Shared Dataset Items
   On a report server, shared dataset items can be used by multiple reports. You can secure shared datasets to control the degree of access that users have. By default, only users who are members of the **Administrators** built-in group can view shared datasets, modify properties, enable caching, create cache refresh plans, and delete the items. All other users must have role assignments created for them that allow access to a shared dataset.  

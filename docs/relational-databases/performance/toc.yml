@@ -1,0 +1,176 @@
+- name: Performance Center for SQL Server Database Engine and Azure SQL Database
+  href: performance-center-for-sql-server-database-engine-and-azure-sql-database.md
+- name: Automatic Tuning
+  href: ../automatic-tuning/automatic-tuning.md
+- name: Configuring Storage Spaces with a NVDIMM-N write-back cache
+  href: configuring-storage-spaces-with-a-nvdimm-n-write-back-cache.md
+- name: Execution Plans
+  href: execution-plans.md
+  items:
+  - name: Query Profiling Infrastructure
+    href: query-profiling-infrastructure.md
+  - name: Display and Save Execution Plans
+    href: display-and-save-execution-plans.md
+    items:
+    - name: Display the Estimated Execution Plan
+      href: display-the-estimated-execution-plan.md
+    - name: Display an Actual Execution Plan
+      href: display-an-actual-execution-plan.md
+    - name: Save an Execution Plan in XML Format
+      href: save-an-execution-plan-in-xml-format.md
+  - name: Compare and Analyze Execution Plans
+    href: compare-and-analyze-execution-plans.md
+    items:
+    - name: Compare Execution Plans
+      href: compare-execution-plans.md
+    - name: Analyze an Actual Execution Plan
+      href: analyze-an-actual-execution-plan.md
+  - name: Plan Guides
+    href: plan-guides.md
+    items:
+    - name: Create a New Plan Guide
+      href: create-a-new-plan-guide.md
+    - name: Create a Plan Guide for Parameterized Queries
+      href: create-a-plan-guide-for-parameterized-queries.md
+    - name: Specify Query Parameterization Behavior by Using Plan Guides
+      href: specify-query-parameterization-behavior-by-using-plan-guides.md
+    - name: Apply a Fixed Query Plan to a Plan Guide
+      href: apply-a-fixed-query-plan-to-a-plan-guide.md
+    - name: Attach Query Hints to a Plan Guide
+      href: attach-query-hints-to-a-plan-guide.md
+    - name: View Plan Guide Properties
+      href: view-plan-guide-properties.md
+    - name: Use SQL Server Profiler to Create and Test Plan Guides
+      href: use-sql-server-profiler-to-create-and-test-plan-guides.md
+    - name: Validate Plan Guides After Upgrade
+      href: validate-plan-guides-after-upgrade.md
+    - name: Delete a Plan Guide
+      href: delete-a-plan-guide.md
+    - name: Enable or Disable a Plan Guide
+      href: enable-or-disable-a-plan-guide.md
+- name: Intelligent Query Processing
+  href: intelligent-query-processing.md
+  items:
+  - name: Adaptive Query Processing
+    href: adaptive-query-processing.md
+  - name: Scalar User-defined function inlining
+    href: ../user-defined-functions/scalar-udf-inlining.md
+- name: Monitor and Tune for Performance
+  href: monitor-and-tune-for-performance.md
+  items:
+  - name: Monitor SQL Server Components
+    href: monitor-sql-server-components.md
+    items:
+    - name: Activity Monitor
+      href: ../performance-monitor/activity-monitor.md
+    - name: Dynamic management views and functions
+      href: ../system-dynamic-management-views/system-dynamic-management-views.md
+    - name: Extended events
+      href: ../extended-events/extended-events.md
+    - name: SQL Server Profiler
+      href: ../../tools/sql-server-profiler/sql-server-profiler.md
+    - name: SQL Trace
+      href: ../sql-trace/sql-trace.md
+  - name: Performance Monitoring and Tuning Tools
+    href: performance-monitoring-and-tuning-tools.md
+    items:
+    - name: Live Query Statistics
+      href: live-query-statistics.md
+    - name: Database Tuning Advisor
+      href: database-engine-tuning-advisor.md
+      items:
+      - name: Start and Use the Database Engine Tuning Advisor
+        href: start-and-use-the-database-engine-tuning-advisor.md
+      - name: Reduce the Production Server Tuning Load
+        href: reduce-the-production-server-tuning-load.md
+        items:
+        - name: Considerations for Using Test Servers
+          href: considerations-for-using-test-servers.md
+      - name: View and Work with the Output from the Database Engine Tuning Advisor
+        href: view-and-work-with-the-output-from-the-database-engine-tuning-advisor.md
+      - name: Columnstore index recommendations in Database Engine Tuning Advisor (DTA)
+        href: columnstore-index-recommendations-in-database-engine-tuning-advisor-dta.md
+      - name: Tuning Database using workload from Query Store
+        href: tuning-database-using-workload-from-query-store.md
+      - name: Performance Improvements using Database Engine Tuning Advisor (DTA) recommendations
+        href: performance-improvements-using-dta-recommendations.md
+    - name: Performance Dashboard
+      href: performance-dashboard.md
+  - name: Upgrading Databases by using the Query Tuning Assistant
+    href: upgrade-dbcompat-using-qta.md
+  - name: Monitoring Performance by Using the Query Store
+    href: monitoring-performance-by-using-the-query-store.md
+    items:
+    - name: Using the Query Store with In-Memory OLTP
+      href: using-the-query-store-with-in-memory-oltp.md
+    - name: Best Practice with the Query Store
+      href: best-practice-with-the-query-store.md
+    - name: Query Store Usage Scenarios
+      href: query-store-usage-scenarios.md
+    - name: How Query Store Collects Data
+      href: how-query-store-collects-data.md
+  - name: Establish a Performance Baseline
+    href: establish-a-performance-baseline.md
+  - name: Isolate Performance Problems
+    href: isolate-performance-problems.md
+  - name: Identify Bottlenecks
+    href: identify-bottlenecks.md
+  - name: Use DMVs to determine use and performance of views
+    href: use-dmvs-determine-usage-performance-views.md
+  - name: Server Performance and Activity Monitoring
+    href: server-performance-and-activity-monitoring.md
+    items:
+    - name: Start System Monitor (Windows)
+      href: start-system-monitor-windows.md
+    - name: Set Up a SQL Server Database Alert (Windows)
+      href: set-up-a-sql-server-database-alert-windows.md
+    - name: View the Windows Application Log (Windows)
+      href: view-the-windows-application-log-windows-10.md
+    - name: View the SQL Server Error Log (SQL Server Management Studio)
+      href: view-the-sql-server-error-log-sql-server-management-studio.md
+    - name: Save Deadlock Graphs (SQL Server Profiler)
+      href: save-deadlock-graphs-sql-server-profiler.md
+    - name: Open, View, and Print a Deadlock File (SQL Server Management Studio)
+      href: open-view-and-print-a-deadlock-file-sql-server-management-studio.md
+    - name: Save Showplan XML Events Separately (SQL Server Profiler)
+      href: save-showplan-xml-events-separately-sql-server-profiler.md
+    - name: Save Showplan XML Statistics Profile Events Separately (SQL Server Profiler)
+      href: save-showplan-xml-statistics-profile-events-separately-sql-server-profiler.md
+    - name: Use the system_health Session
+      href: ../extended-events/use-the-system-health-session.md
+  - name: Monitor Resource Usage (System Monitor)
+    href: ../performance-monitor/monitor-resource-usage-system-monitor.md
+- name: Internals and Architecture
+  href: ../sql-server-guides.md
+  items:
+  - name: Cardinality Estimation
+    href: cardinality-estimation-sql-server.md
+  - name: Cursors
+    href: ../cursors.md
+  - name: Ghost record cleanup process
+    href: ../ghost-record-cleanup-process-guide.md
+  - name: Index Architecture and Design
+    href: ../sql-server-index-design-guide.md
+  - name: Joins
+    href: joins.md
+  - name: Memory Management Architecture
+    href: ../memory-management-architecture-guide.md
+    items:
+      - name: Reading pages
+        href: ../reading-pages.md
+      - name: Writing pages
+        href: ../writing-pages.md
+  - name: Pages and Extents Architecture
+    href: ../pages-and-extents-architecture-guide.md
+  - name: Query Processing Architecture
+    href: ../query-processing-architecture-guide.md
+  - name: Showplan Logical and Physical Operators Reference
+    href: ../showplan-logical-and-physical-operators-reference.md
+  - name: Subqueries
+    href: subqueries.md
+  - name: Thread and Task Architecture
+    href: ../thread-and-task-architecture-guide.md
+  - name: Transaction Log Architecture and Management
+    href: ../sql-server-transaction-log-architecture-and-management-guide.md
+  - name: Transaction Locking and Row Versioning
+    href: ../sql-server-transaction-locking-and-row-versioning-guide.md

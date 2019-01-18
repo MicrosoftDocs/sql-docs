@@ -2,26 +2,19 @@
 title: "Elements Used in SQL Statements | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
-ms.prod_service: "drivers"
-ms.service: ""
-ms.component: "odbc"
+ms.prod: sql
+ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "drivers"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: connectivity
+ms.topic: conceptual
 helpviewer_keywords: 
   - "SQL statements [ODBC], elements supported"
   - "minimum SQL syntax supported [ODBC]"
   - "ODBC drivers [ODBC], minimum SQL syntax supported"
 ms.assetid: 85777525-1555-4731-8309-63a464c6b43a
-caps.latest.revision: 6
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
-ms.workload: "Inactive"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # Elements Used in SQL Statements
 The following elements are used in the SQL statements listed previously.  
@@ -53,9 +46,9 @@ The following elements are used in the SQL statements listed previously.
   
  *dynamic-parameter* ::= ?  
   
- *expression* ::= term &#124; expression {+&#124;–} term  
+ *expression* ::= term &#124; expression {+&#124;-} term  
   
- *factor* ::= [*+*&#124;*–*]*primary*  
+ *factor* ::= [*+*&#124;*-*]*primary*  
   
  *insert-value* ::=  
   

@@ -1,28 +1,19 @@
 ---
 title: "Scripting and PowerShell with Reporting Services | Microsoft Docs"
-ms.custom: ""
-ms.date: "09/14/2015"
+ms.date: 09/14/2015
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
-ms.service: ""
-ms.component: "tools"
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
+ms.technology: tools
 
 
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "scripts [Reporting Services]"
   - "Reporting Services, scripting"
   - "scripting [Reporting Services]"
 ms.assetid: 1ac2646d-ed5a-4436-b18f-2150c33f3d87
-caps.latest.revision: 18
-author: "markingmyname"
-ms.author: "maghan"
-manager: "kfile"
-ms.workload: "On Demand"
+author: markingmyname
+ms.author: maghan
 ---
 # Scripting and PowerShell with Reporting Services
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] supports a wide range of development and management scenarios through script, including the rs.exe command line utility, PowerShell cmdlets for SharePoint mode report servers, and leveraging the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] object model from PowerShell for both Native and SharePoint mode.  
@@ -55,16 +46,16 @@ ms.workload: "On Demand"
   
 -   [Use PowerShell to Change and List Reporting Services Subscription Owners and Run a Subscription](../../reporting-services/subscriptions/manage-subscription-owners-and-run-subscription-powershell.md).  
   
--   [Use PowerShell to Create an Azure VM With a Native Mode Report Server](http://msdn.microsoft.com/library/azure/dn449661.aspx).  
+-   [Use PowerShell to Create an Azure VM With a Native Mode Report Server](https://msdn.microsoft.com/library/azure/dn449661.aspx).  
   
--   See the section “Access the WMI classes using PowerShell” in [Access the Reporting Services WMI Provider](../../reporting-services/tools/access-the-reporting-services-wmi-provider.md).  
+-   See the section "Access the WMI classes using PowerShell" in [Access the Reporting Services WMI Provider](../../reporting-services/tools/access-the-reporting-services-wmi-provider.md).  
   
 
 ## RS.exe scripting samples  
   
 -   [Sample Reporting Services rs.exe Script to Copy Content between Report Servers](../../reporting-services/tools/sample-reporting-services-rs-exe-script-to-copy-content-between-report-servers.md).  
   
--   For additional script, application, and extension examples, see [SQL Server Reporting Services Product Samples](http://go.microsoft.com/fwlink/?LinkId=177889).  
+-   For additional script, application, and extension examples, see [SQL Server Reporting Services Product Samples](https://go.microsoft.com/fwlink/?LinkId=177889).  
   
 ## See Also  
  [RS.exe Utility &#40;SSRS&#41;](../../reporting-services/tools/rs-exe-utility-ssrs.md)   

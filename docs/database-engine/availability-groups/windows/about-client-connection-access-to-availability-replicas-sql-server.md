@@ -1,17 +1,12 @@
 ---
-title: "About Client Connection Access to Availability Replicas (SQL Server) | Microsoft Docs"
-ms.custom: ""
+title: "Types of client connections to replicas within an availability group"
+description: "Learn about the different types of connections clients can make to either the primary or secondary replica of an Always On availability group within SQL Server."
+ms.custom: "seodec18"
 ms.date: "05/17/2016"
-ms.prod: "sql-non-specified"
-ms.prod_service: "database-engine"
-ms.service: ""
-ms.component: "availability-groups"
+ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: high-availability
+ms.topic: conceptual
 helpviewer_keywords: 
   - "Availability Groups [SQL Server], availability replicas"
   - "Availability Groups [SQL Server], readable secondary replicas"
@@ -20,13 +15,11 @@ helpviewer_keywords:
   - "Availability Groups [SQL Server], client connectivity"
   - "Availability Groups [SQL Server], active secondary replicas"
 ms.assetid: 29027e46-43e4-4b45-b650-c4cdeacdf552
-caps.latest.revision: 16
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-ms.workload: "On Demand"
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
 ---
-# About Client Connection Access to Availability Replicas (SQL Server)
+# Types of client connections to replicas within an Always On availability group
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   In an Always On availability group, you can configure one or more availability replicas to allow read-only connections when running under the secondary role (that is, when running as a secondary replica). You can also configure each availability replica to allow or exclude read-only connections when running under the primary role (that is, when running as the primary replica).  
   
@@ -36,18 +29,6 @@ ms.workload: "On Demand"
   
 > [!NOTE]  
 >  For information about the availability group listener, which handles client connection requests, see [Availability Group Listeners, Client Connectivity, and Application Failover &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md).  
-  
- **In This Topic:**  
-  
--   [Types of Connection Access Supported by the Secondary Role](#ConnectAccessForSecondary)  
-  
--   [Types of Connection Access Supported by the Primary Role](#ConnectAccessForPrimary)  
-  
--   [How the Connection Access Configuration Affects Client Connectivity](#HowConnectionAccessAffectsConnectivity)  
-  
--   [Related Tasks](#RelatedTasks)  
-  
--   [Related Content](#RelatedContent)  
   
 ##  <a name="ConnectAccessForSecondary"></a> Types of Connection Access Supported by the Secondary Role  
  The secondary role supports three alternatives for client connections, as follows:  
@@ -121,7 +102,7 @@ ms.workload: "On Demand"
   
 ##  <a name="RelatedContent"></a> Related Content  
   
--   [Microsoft SQL Server Always On Solutions Guide for High Availability and Disaster Recovery](http://go.microsoft.com/fwlink/?LinkId=227600)  
+-   [Microsoft SQL Server Always On Solutions Guide for High Availability and Disaster Recovery](https://go.microsoft.com/fwlink/?LinkId=227600)  
   
 -   [SQL Server Always On Team Blog: The official SQL Server Always On Team Blog](https://blogs.msdn.microsoft.com/sqlalwayson/)  
   

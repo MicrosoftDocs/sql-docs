@@ -1,28 +1,21 @@
 ---
 title: "StreamWriteEnum | Microsoft Docs"
-ms.prod: "sql-non-specified"
-ms.prod_service: "drivers"
-ms.service: ""
-ms.component: "ado"
-ms.technology:
-  - "drivers"
+ms.prod: sql
+ms.prod_service: connectivity
+ms.technology: connectivity
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 apitype: "COM"
 f1_keywords: 
   - "StreamWriteEnum"
 helpviewer_keywords: 
   - "StreamWriteEnum enumeration [ADO]"
 ms.assetid: bdbf3405-a0bd-4f02-85d4-e3fe8da3f3f7
-caps.latest.revision: 11
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
-ms.workload: "Inactive"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # StreamWriteEnum
 Specifies whether a line separator is appended to the string written to a [Stream](../../../ado/reference/ado-api/stream-object-ado.md) object.  

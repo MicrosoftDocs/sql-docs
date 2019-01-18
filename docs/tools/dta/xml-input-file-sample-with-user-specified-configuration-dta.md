@@ -2,26 +2,19 @@
 title: "XML Input File Sample with User-specified Configuration (DTA) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "sql-tools"
-ms.service: ""
-ms.component: "dta"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: tools-other
+ms.topic: conceptual
 dev_langs: 
   - "XML"
 helpviewer_keywords: 
   - "sample applications [DTA]"
 ms.assetid: b29c9716-e5c3-4003-9efb-3ade2197b630
-caps.latest.revision: 21
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-ms.workload: "Inactive"
+author: "stevestein"
+ms.author: "sstein"
+manager: craigg
 ---
 # XML Input File Sample with User-specified Configuration (DTA)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -33,7 +26,7 @@ ms.workload: "Inactive"
   
 ```  
 <?xml version="1.0" encoding="utf-16" ?>  
-<DTAXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://schemas.microsoft.com/sqlserver/2004/07/dta">  
+<DTAXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="https://schemas.microsoft.com/sqlserver/2004/07/dta">  
   <DTAInput>  
     <Server>  
       <Name>MyServerName</Name>  

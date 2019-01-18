@@ -2,16 +2,11 @@
 title: "WMI Data Reader Task | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "integration-services"
-ms.service: ""
-ms.component: "control-flow"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: integration-services
+ms.topic: conceptual
 f1_keywords: 
   - "sql13.dts.designer.wmidatareadertask.f1"
   - "sql13.dts.designer.wmidatareadertask.general.f1"
@@ -20,11 +15,9 @@ helpviewer_keywords:
   - "WQL [Integration Services]"
   - "WMI Data Reader task [Integration Services]"
 ms.assetid: dae57067-0275-4ac3-8f34-1b9d169f1112
-caps.latest.revision: 49
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
-ms.workload: "Inactive"
+manager: craigg
 ---
 # WMI Data Reader Task
   The WMI Data Reader task runs queries using the Windows Management Instrumentation (WMI) Query Language that returns information from WMI about a computer system. You can use the WMI Data Reader task for the following purposes:  
@@ -52,7 +45,7 @@ ms.workload: "Inactive"
  The WMI Data Reader task uses a WMI connection manager to connect to the server from which it reads WMI information. For more information, see [WMI Connection Manager](../../integration-services/connection-manager/wmi-connection-manager.md).  
   
 ## WQL Query  
- WQL is a dialect of SQL with extensions to support WMI event notification and other WMI-specific features. For more information about WQL, see the Windows Management Instrumentation documentation in the [MSDN Library](http://go.microsoft.com/fwlink/?linkid=7022).  
+ WQL is a dialect of SQL with extensions to support WMI event notification and other WMI-specific features. For more information about WQL, see the Windows Management Instrumentation documentation in the [MSDN Library](https://go.microsoft.com/fwlink/?linkid=7022).  
   
 > [!NOTE]  
 >  WMI classes vary between versions of Windows.  
@@ -97,12 +90,12 @@ Select * FROM Win32_QuickFixEngineering
 ## Related Tasks  
  For more information about how to set these properties in [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer, click the following topic:  
   
--   [Set the Properties of a Task or Container](http://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
+-   [Set the Properties of a Task or Container](https://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
   
 ## WMI Data Reader Task Editor (General Page)
   Use the **General** page of the **WMI Data Reader Task Editor** dialog box to name and describe the WMI Data Reader task.  
   
-  For more information about WMI Query Language (WQL), see the Windows Management Instrumentation topic, [Querying with WQL](http://go.microsoft.com/fwlink/?LinkId=79045), in the MSDN Library.  
+  For more information about WMI Query Language (WQL), see the Windows Management Instrumentation topic, [Querying with WQL](https://go.microsoft.com/fwlink/?LinkId=79045), in the MSDN Library.  
   
 ### Options  
  **Name**  
@@ -117,11 +110,11 @@ Select * FROM Win32_QuickFixEngineering
 ## WMI Data Reader Task Editor (WMI Options Page)
   Use the **WMI Options** page of the **WMI Data Reader Task Editor** dialog box to specify the source of the Windows Management Instrumentation Query Language (WQL) query and the destination of the query result.  
   
- For more information about WMI Query Language (WQL), see the Windows Management Instrumentation topic, [Querying with WQL](http://go.microsoft.com/fwlink/?LinkId=79045), in the MSDN Library.  
+ For more information about WMI Query Language (WQL), see the Windows Management Instrumentation topic, [Querying with WQL](https://go.microsoft.com/fwlink/?LinkId=79045), in the MSDN Library.  
   
 ### Static Options  
  **WMIConnectionName**  
- Select a WMI connection manager in the list, or click \<**New WMI Connection…**> to create a new connection manager.  
+ Select a WMI connection manager in the list, or click \<**New WMI Connection...**> to create a new connection manager.  
   
  **Related Topics:** [WMI Connection Manager](../../integration-services/connection-manager/wmi-connection-manager.md), [WMI Connection Manager Editor](../../integration-services/connection-manager/wmi-connection-manager-editor.md)  
   
@@ -152,7 +145,7 @@ Select * FROM Win32_QuickFixEngineering
   
 #### WQLQuerySourceType = Direct input  
  **WQLQuerySource**  
- Provide a query, or click the ellipsis (…) and enter a query using the **WQL Query** dialog box.  
+ Provide a query, or click the ellipsis (...) and enter a query using the **WQL Query** dialog box.  
   
 #### WQLQuerySourceType = File connection  
  **WQLQuerySource**  
@@ -164,7 +157,7 @@ Select * FROM Win32_QuickFixEngineering
  **WQLQuerySource**  
  Select a variable in the list, or click \<**New variable...**> to create a new variable.  
   
- **Related Topics:** [Integration Services &#40;SSIS&#41; Variables](../../integration-services/integration-services-ssis-variables.md), [Add Variable](http://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
+ **Related Topics:** [Integration Services &#40;SSIS&#41; Variables](../../integration-services/integration-services-ssis-variables.md), [Add Variable](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
   
 ### DestinationType Dynamic Options  
   
@@ -178,7 +171,7 @@ Select * FROM Win32_QuickFixEngineering
  **Destination**  
  Select a variable in the list, or click \<**New variable...**> to create a new variable.  
   
- **Related Topics:** [Integration Services &#40;SSIS&#41; Variables](../../integration-services/integration-services-ssis-variables.md), [Add Variable](http://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
+ **Related Topics:** [Integration Services &#40;SSIS&#41; Variables](../../integration-services/integration-services-ssis-variables.md), [Add Variable](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
   
 ## See Also  
  [Integration Services Tasks](../../integration-services/control-flow/integration-services-tasks.md)   

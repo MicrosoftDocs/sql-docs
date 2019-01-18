@@ -2,29 +2,23 @@
 title: "FILESTREAM (SQL Server) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/11/2018"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "database-engine"
-ms.service: ""
-ms.component: "blob"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "dbe-blob"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: filestream
+ms.topic: conceptual
 helpviewer_keywords: 
   - "FILESTREAM [SQL Server]"
   - "FILESTREAM [SQL Server], about"
   - "FILESTREAM [SQL Server], overview"
 ms.assetid: 9a5a8166-bcbe-4680-916c-26276253eafa
-caps.latest.revision: 13
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-ms.workload: "On Demand"
+author: "douglaslMS"
+ms.author: "douglasl"
+monikerRange: ">=sql-server-2016||=sqlallproducts-allversions||=azuresqldb-mi-current"
+manager: craigg
 ---
 # FILESTREAM (SQL Server)
-[!INCLUDE[tsql-appliesto-sslinux-only](../../includes/tsql-appliesto-sswindows-only.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 FILESTREAM enables [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-based applications to store unstructured data, such as documents and images, on the file system. Applications can leverage the rich streaming APIs and performance of the file system and at the same time maintain transactional consistency between the unstructured data and corresponding structured data.  
   
@@ -165,3 +159,7 @@ Creating memory mapped views (memory mapped I/O) by using a FILESTREAM handle is
 ## Related Content
 
 [FILESTREAM Compatibility with Other SQL Server Features](../../relational-databases/blob/filestream-compatibility-with-other-sql-server-features.md)
+<br>[Filestream and FileTable Dynamic Management Views (Transact-SQL)](../system-dynamic-management-views/filestream-and-filetable-dynamic-management-views-transact-sql.md)
+<br>[Filestream and FileTable Catalog Views (Transact-SQL)](../system-catalog-views/filestream-and-filetable-catalog-views-transact-sql.md)
+<br>[Filestream and FileTable System Stored Procedures (Transact-SQL)](../system-stored-procedures/filestream-and-filetable-system-stored-procedures.md)
+

@@ -2,16 +2,10 @@
 title: "OLE Automation Result Sets | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-non-specified"
-ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
-ms.service: ""
-ms.component: "stored-procedures"
+ms.prod: sql
+ms.technology: stored-procedures
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "dbe-ole"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "data types [SQL Server], OLE Automation"
   - "two-dimensional arrays"
@@ -20,11 +14,10 @@ helpviewer_keywords:
   - "OLE Automation [SQL Server], result sets"
   - "arrays [SQL Server]"
 ms.assetid: b2f99e33-2303-427c-94b9-9d55f8e2a6ab
-caps.latest.revision: 21
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-ms.workload: "Inactive"
+author: "stevestein"
+ms.author: "sstein"
+manager: craigg
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # OLE Automation Result Sets
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

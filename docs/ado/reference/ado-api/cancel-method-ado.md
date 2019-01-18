@@ -1,17 +1,12 @@
 ---
 title: "Cancel Method (ADO) | Microsoft Docs"
-ms.prod: "sql-non-specified"
-ms.prod_service: "drivers"
-ms.service: ""
-ms.component: "ado"
-ms.technology:
-  - "drivers"
+ms.prod: sql
+ms.prod_service: connectivity
+ms.technology: connectivity
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 apitype: "COM"
 f1_keywords: 
   - "Recordset20::Cancel"
@@ -22,11 +17,9 @@ f1_keywords:
 helpviewer_keywords: 
   - "Cancel method [ADO]"
 ms.assetid: e0db4e15-6787-41e2-8f13-9e9b524d620a
-caps.latest.revision: 13
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
-ms.workload: "Inactive"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # Cancel Method (ADO)
 Cancels execution of a pending asynchronous method call.  

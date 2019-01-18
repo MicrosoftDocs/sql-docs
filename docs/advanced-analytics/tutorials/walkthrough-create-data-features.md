@@ -1,39 +1,36 @@
 ---
-title: "Create data features using R and SQL (walkthrough) | Microsoft Docs"
-ms.custom: ""
-ms.date: "08/23/2017"
-ms.reviewer: 
-ms.suite: sql
-ms.prod: machine-learning-services
-ms.prod_service: machine-learning-services
-ms.component: 
-ms.technology: 
-  
-ms.tgt_pltfrm: ""
-ms.topic: "tutorial"
-applies_to: 
-  - "SQL Server 2016"
-dev_langs: 
-  - "R"
-ms.assetid: 4981d4eb-0874-4fe9-82e1-edf99890e27a
-caps.latest.revision: 21
-author: "jeannt"
-ms.author: "jeannt"
-manager: "jhubbard"
-ms.workload: "Inactive"
+title: Create data features using R and SQL Server functions - SQL Server Machine Learning
+description: Tutorial showing how to create data features using SQL Server functions for in-database analytics.
+ms.prod: sql
+ms.technology: machine-learning
+
+ms.date: 11/26/2018  
+ms.topic: tutorial
+author: HeidiSteen
+ms.author: heidist
+manager: cgronlun
 ---
-# Create data features using R and SQL (walkthrough)
+# Create data features using R and SQL Server (walkthrough)
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 Data engineering is an important part of machine learning. Data often requires transformation before you can use it for predictive modeling. If the data does not have the features you need, you can engineer them from existing values.
 
 For this modeling task, rather than using the raw latitude and longitude values of the pickup and drop-off location, you'd like to have the distance in miles between the two locations. To create this feature, you compute the direct linear distance between two points, by using the [haversine formula](https://en.wikipedia.org/wiki/Haversine_formula).
 
-In this step, we compare two different methods for creating a feature from data:
+In this step, learn two different methods for creating a feature from data:
 
-- Using a custom R function
-- Using a custom T-SQL function in [!INCLUDE[tsql](../../includes/tsql-md.md)]
+> [!div class="checklist"]
+> * Using a custom R function
+> * Using a custom T-SQL function in [!INCLUDE[tsql](../../includes/tsql-md.md)]
 
 The goal is to create a new [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] set of data that includes the original columns plus the new numeric feature, *direct_distance*.
+
+## Prerequisites
+
+This step assumes an ongoing R session based on previous steps in this walkthrough. It uses the connection strings and data source objects created in those steps. The following tools and packages are used to run the script.
+
++ Rgui.exe to run R commands
++ Management Studio to run T-SQL
 
 ## Featurization using R
 
@@ -47,7 +44,7 @@ First, let's do it the way R users are accustomed to: get the data onto your lap
     bigQuery <- "SELECT tipped, fare_amount, passenger_count,trip_time_in_secs,trip_distance, pickup_datetime, dropoff_datetime,  pickup_latitude, pickup_longitude,  dropoff_latitude, dropoff_longitude FROM nyctaxi_sample";
     ```
 
-2. Create a new SQL Server data source using the query.
+2. Create a new data source object using the query.
 
     ```R
     featureDataSource <- RxSqlServerData(sqlQuery = bigQuery,colClasses = c(pickup_longitude = "numeric", pickup_latitude = "numeric", dropoff_longitude = "numeric", dropoff_latitude = "numeric", passenger_count  = "numeric", trip_distance  = "numeric", trip_time_in_secs  = "numeric", direct_distance  = "numeric"), connectionString = connStr);
@@ -79,8 +76,8 @@ First, let's do it the way R users are accustomed to: get the data onto your lap
     }
     ```
   
-    + The first line defines a new environment. In R, an environment can be used to encapsulate name spaces in packages and such.  You can use the `search()` function to view the environments in your workspace. To view the objects in a specific environment, type `ls(<envname>)`.
-    + The lines beginning with `$env.ComputeDistance` contain the code that defines the haversine formula, which calculates the *great-circle distance* between two points on a sphere.
+    + The first line defines a new environment. In R, an environment can be used to encapsulate name spaces in packages and such. You can use the `search()` function to view the environments in your workspace. To view the objects in a specific environment, type `ls(<envname>)`.
+    + The lines beginning with `$env.ComputeDist` contain the code that defines the haversine formula, which calculates the *great-circle distance* between two points on a sphere.
 
 4. Having defined the function, you apply it to the data to create a new feature column, *direct_distance*. but before you run the transformation, change the compute context to local.
 
@@ -93,7 +90,7 @@ First, let's do it the way R users are accustomed to: get the data onto your lap
     ```R
     start.time <- proc.time();
   
-    changed_ds <- rxDataStep(inData = featureEngineeringQuery,
+    changed_ds <- rxDataStep(inData = featureDataSource,
     transforms = list(direct_distance=ComputeDist(pickup_longitude,pickup_latitude, dropoff_longitude, dropoff_latitude),
     tipped = "tipped", fare_amount = "fare_amount", passenger_count = "passenger_count",
     trip_time_in_secs = "trip_time_in_secs",  trip_distance="trip_distance",
@@ -122,11 +119,13 @@ First, let's do it the way R users are accustomed to: get the data onto your lap
 
 ## Featurization using Transact-SQL
 
-Now, create a custom SQL function, *ComputeDist*, to accomplish the same task as the custom R function.
+In this exercise, learn how to accomplish the same task using SQL functions instead of custom R functions. 
 
-1. Define a new custom SQL function, named *fnCalculateDistance*. The code for this user-defined SQL function is provided as part of the PowerShell script you ran to create and configure the database.  The function should already exist in your database.
+Switch to [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms) or another query editor to run the T-SQL script.
 
-    If it does not exist, use SQL Server Management Studio to generate the function in the same database where the taxi data is stored.
+1. Use a SQL function, named *fnCalculateDistance*. The function should already exist in the NYCTaxi_Sample database. In Object Explorer, verify the function exists by navigating this path: Databases > NYCTaxi_Sample > Programmability > Functions > Scalar-valued Functions >  dbo.fnCalculateDistance.
+
+  If the function does not exist, use SQL Server Management Studio to generate the function in the NYCTaxi_Sample database.
 
     ```sql
     CREATE FUNCTION [dbo].[fnCalculateDistance] (@Lat1 float, @Long1 float, @Lat2 float, @Long2 float)
@@ -151,25 +150,29 @@ Now, create a custom SQL function, *ComputeDist*, to accomplish the same task as
     END
     ```
 
-2. Run the following [!INCLUDE[tsql](../../includes/tsql-md.md)] statement from any application that supports [!INCLUDE[tsql](../../includes/tsql-md.md)], just to see how the function works.
+2. In Management Studio, in a new query window, run the following [!INCLUDE[tsql](../../includes/tsql-md.md)] statement from any application that supports [!INCLUDE[tsql](../../includes/tsql-md.md)] to see how the function works.
 
     ```sql
+    USE nyctaxi_sample
+    GO
+
     SELECT tipped, fare_amount, passenger_count,trip_time_in_secs,trip_distance, pickup_datetime, dropoff_datetime,
-    dbo.fnCalculateDistance(pickup_latitude, pickup_longitude,  dropoff_latitude, dropoff_longitude) as direct_distance,
-    pickup_latitude, pickup_longitude,  dropoff_latitude, dropoff_longitude
+    dbo.fnCalculateDistance(pickup_latitude, pickup_longitude, dropoff_latitude, dropoff_longitude) as direct_distance, pickup_latitude, pickup_longitude,  dropoff_latitude, dropoff_longitude 
     FROM nyctaxi_sample
     ```
-3. Having defined this function, it would be easy to create the features you want by using SQL and then insert the values directly into a new table:
+3. To insert values directly into a new table (you have to create it first), you can add an **INTO** clause specifying the table name.
 
-    ```
-    SELECT tipped, fare_amount, passenger_count,trip_time_in_secs,trip_distance, pickup_datetime, dropoff_datetime,
-    dbo.fnCalculateDistance(pickup_latitude, pickup_longitude,  dropoff_latitude, dropoff_longitude) as direct_distance,
-    pickup_latitude, pickup_longitude,  dropoff_latitude, dropoff_longitude
+    ```sql
+    USE nyctaxi_sample
+    GO
+
+    SELECT tipped, fare_amount, passenger_count, trip_time_in_secs, trip_distance, pickup_datetime, dropoff_datetime,
+    dbo.fnCalculateDistance(pickup_latitude, pickup_longitude, dropoff_latitude, dropoff_longitude) as direct_distance, pickup_latitude, pickup_longitude, dropoff_latitude, dropoff_longitude
     INTO NewFeatureTable
     FROM nyctaxi_sample
     ```
 
-4. However, let's see how to call the custom SQL function from R code. First, store the SQL featurization query in an R variable.
+4. You can also call the SQL function from R code. Switch back to Rgui and store the SQL featurization query in an R variable.
 
     ```R
     featureEngineeringQuery = "SELECT tipped, fare_amount, passenger_count,
@@ -188,9 +191,9 @@ Now, create a custom SQL function, *ComputeDist*, to accomplish the same task as
     ```R
     featureDataSource = RxSqlServerData(sqlQuery = featureEngineeringQuery,
       colClasses = c(pickup_longitude = "numeric", pickup_latitude = "numeric",
-             dropoff_longitude = "numeric", dropoff_latitude = "numeric",
-             passenger_count  = "numeric", trip_distance  = "numeric",
-              trip_time_in_secs  = "numeric", direct_distance  = "numeric"),
+        dropoff_longitude = "numeric", dropoff_latitude = "numeric",
+        passenger_count  = "numeric", trip_distance  = "numeric",
+        trip_time_in_secs  = "numeric", direct_distance  = "numeric"),
       connectionString = connStr)
     ```
   
@@ -200,9 +203,9 @@ Now, create a custom SQL function, *ComputeDist*, to accomplish the same task as
     rxGetVarInfo(data = featureDataSource)
     ```
 
-    *Results*
+    **Results**
 
-    ```
+    ```R
     Var 1: tipped, Type: integer
     Var 2: fare_amount, Type: numeric
     Var 3: passenger_count, Type: numeric
@@ -241,11 +244,8 @@ Your times might vary significantly, depending on your network speed, and your h
 > [!TIP]
 > Very often, feature engineering using [!INCLUDE[tsql](../../includes/tsql-md.md)] will be faster than R. For example, T-SQL includes fast windowing and ranking functions that can be applied to common data science calculations such as rolling moving averages and *n*-tiles. Choose the most efficient method based on your data and task.
 
-## Next lesson
+## Next steps
 
-[Build an R model and save to SQL](walkthrough-build-and-save-the-model.md)
-
-## Previous lesson
-
-[View and summarize data using R](walkthrough-view-and-summarize-data-using-r.md)
+> [!div class="nextstepaction"]
+> [Build an R model and save to SQL](walkthrough-build-and-save-the-model.md)
 

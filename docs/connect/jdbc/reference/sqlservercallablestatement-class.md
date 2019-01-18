@@ -2,22 +2,15 @@
 title: "SQLServerCallableStatement Class | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
-ms.prod_service: "drivers"
-ms.service: ""
-ms.component: "jdbc"
+ms.prod: sql
+ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "drivers"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: connectivity
+ms.topic: conceptual
 ms.assetid: 30710a63-c05d-47d9-9cf9-c087a1c76373
-caps.latest.revision: 20
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
-ms.workload: "Inactive"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # SQLServerCallableStatement Class
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -44,7 +37,7 @@ public final class SQLServerCallableStatement
   
  When one of the SQLServerCallableStatement set methods is called for a type, if that type conflicts with the type specified with [registerOutParameter](../../../connect/jdbc/reference/registeroutparameter-method-sqlservercallablestatement.md), the type specified by the last SQLServerCallableStatement set method is used. However, this may cause incompatible data type conversion errors. If a SQLServerCallableStatement set method is not called, the type specified with the first [registerOutParameter](../../../connect/jdbc/reference/registeroutparameter-method-sqlservercallablestatement.md) call is used.  
   
- The [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] JDBC Driver 3.0 is compliant with the JDBC 4.0 recommendation that a result set and update counts must be retrieved before retrieving OUT parameters. If OUT parameters are retrieved before the result set and update counts have been completely processed, any result sets and update counts that have not been processed are lost.  
+ The [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] JDBC Driver 3.0 is compliant with the JDBC 4.0 recommendation that a result set and update counts must be retrieved before retrieving OUT parameters. If OUT parameters are retrieved before the result set and update counts have been completely processed, any result sets and update counts that have not been processed are lost.  
   
 ## See Also  
  [SQLServerCallableStatement Members](../../../connect/jdbc/reference/sqlservercallablestatement-members.md)   

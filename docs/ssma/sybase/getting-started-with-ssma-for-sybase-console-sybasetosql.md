@@ -2,29 +2,18 @@
 title: "Getting Started with the SSMA for Sybase Console (SybaseToSQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "09/30/2017"
-ms.prod: "sql-non-specified"
-ms.prod_service: "sql-tools"
-ms.service: ""
-ms.component: "ssma-sybase"
+ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "sql-ssma"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to: 
-  - "Azure SQL Database"
-  - "SQL Server"
+ms.technology: ssma
+ms.topic: conceptual
 helpviewer_keywords: 
   - "Sybase Console,Launching SSMA Console"
   - "Sybase Console,Output Conventions"
   - "Sybase Console,Procedure for Using Console"
 ms.assetid: 43219dbe-bcfa-427d-9242-f07b1455f15f
-caps.latest.revision: 22
 author: "Shamikg"
 ms.author: "Shamikg"
-manager: "jhubbard"
-ms.workload: "Inactive"
+manager: craigg
 ---
 # Getting Started with the SSMA for Sybase Console (SybaseToSQL)
 This section describes the procedure for launching and getting started with the SSMA for Sybase console application. Also listed herein are the conventions used in a typical SSMA Console output window.  
@@ -51,9 +40,9 @@ After the console is successfully launched on your Windows system, you can use t
   
 Additional features:  
   
-1.  [Specify a password](http://msdn.microsoft.com/en-us/9b6a70f9-6840-4140-a059-bb7bd7ccc67c) and export/import it to other Window computers.  
+1.  [Specify a password](managing-passwords-sybasetosql.md) and export/import it to other Window computers.  
   
-2.  [Generate reports](http://msdn.microsoft.com/en-us/19278f6a-6d58-4867-9d71-c6228040466e) to view the detailed xml output reports for assessment/conversion and data migration. You can also generate detailed error reports for refresh and synchronization commands.  
+2.  [Generate reports](generating-reports-sybasetosql.md) to view the detailed xml output reports for assessment/conversion and data migration. You can also generate detailed error reports for refresh and synchronization commands.  
   
 ## SSMA Console output conventions  
 Upon executing the SSMA script commands and options, the console program displays the results and messages (information, error, etc.) to the user on the console or, if necessary, redirects to an xml output file. Each type of message in the output is signified by a unique color. For example, the text message in white color denotes script file commands; the one in green color represents a prompt for user-input, and so on.  

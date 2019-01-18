@@ -2,15 +2,10 @@
 title: "Client-side and Server-side Formatting (SQLXML 4.0) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/16/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.service: ""
-ms.component: "sqlxml"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "dbe-xml"
-ms.tgt_pltfrm: ""
+ms.technology: xml
 ms.topic: "reference"
 helpviewer_keywords: 
   - "formats [SQLXML]"
@@ -18,11 +13,10 @@ helpviewer_keywords:
   - "XML formatting [SQLXML]"
   - "SQLXML, formats"
 ms.assetid: eb61e595-f44c-44b8-9d62-e4effce55685
-caps.latest.revision: 13
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
-ms.workload: "Inactive"
+manager: craigg
+monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Client-side and Server-side Formatting (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

@@ -2,24 +2,17 @@
 title: "The &lt;xsd:redefine&gt; Element | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "database-engine"
-ms.service: ""
-ms.component: "xml"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "dbe-xml"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: xml
+ms.topic: conceptual
 helpviewer_keywords: 
   - "xsd:redefine element"
 ms.assetid: 5f3e9b65-f10e-4db2-a62c-b270ac11d04e
-caps.latest.revision: 14
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-ms.workload: "Inactive"
+author: "douglaslMS"
+ms.author: "douglasl"
+manager: craigg
 ---
 # The &lt;xsd:redefine&gt; Element
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

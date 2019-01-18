@@ -2,16 +2,11 @@
 title: "Estimate the Size of a Heap | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
-ms.service: ""
-ms.component: "databases"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: supportability
+ms.topic: conceptual
 helpviewer_keywords: 
   - "disk space [SQL Server], indexes"
   - "estimating heap size"
@@ -19,11 +14,10 @@ helpviewer_keywords:
   - "space [SQL Server], indexes"
   - "heaps"
 ms.assetid: 81fd5ec9-ce0f-4c2c-8ba0-6c483cea6c75
-caps.latest.revision: 28
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-ms.workload: "On Demand"
+author: "stevestein"
+ms.author: "sstein"
+manager: craigg
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Estimate the Size of a Heap
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -31,23 +25,23 @@ ms.workload: "On Demand"
   
 1.  Specify the number of rows that will be present in the table:  
   
-     ***Num_Rows***  = number of rows in the table  
+     **_Num_Rows_**  = number of rows in the table  
   
 2.  Specify the number of fixed-length and variable-length columns and calculate the space that is required for their storage:  
   
      Calculate the space that each of these groups of columns occupies within the data row. The size of a column depends on the data type and length specification.  
   
-     ***Num_Cols***  = total number of columns (fixed-length and variable-length)  
+     **_Num_Cols_**  = total number of columns (fixed-length and variable-length)  
   
-     ***Fixed_Data_Size***  = total byte size of all fixed-length columns  
+     **_Fixed_Data_Size_**  = total byte size of all fixed-length columns  
   
-     ***Num_Variable_Cols***  = number of variable-length columns  
+     **_Num_Variable_Cols_**  = number of variable-length columns  
   
-     ***Max_Var_Size***  = maximum total byte size of all variable-length columns  
+     **_Max_Var_Size_**  = maximum total byte size of all variable-length columns  
   
 3.  Part of the row, known as the null bitmap, is reserved to manage column nullability. Calculate its size:  
   
-     ***Null_Bitmap***  = 2 + ((***Num_Cols*** + 7) / 8)  
+     **_Null_Bitmap_**  = 2 + ((**_Num_Cols_** + 7) / 8)  
   
      Only the integer part of this expression should be used. Discard any remainder.  
   
@@ -55,36 +49,36 @@ ms.workload: "On Demand"
   
      If there are variable-length columns in the table, determine how much space is used to store the columns within the row:  
   
-     ***Variable_Data_Size***  = 2 + (***Num_Variable_Cols*** x 2) + ***Max_Var_Size***  
+     **_Variable_Data_Size_**  = 2 + (**_Num_Variable_Cols_** x 2) + **_Max_Var_Size_**  
   
-     The bytes added to ***Max_Var_Size*** are for tracking each variable-length column. This formula assumes that all variable-length columns are 100 percent full. If you anticipate that a smaller percentage of the variable-length column storage space will be used, you can adjust the ***Max_Var_Size*** value by that percentage to yield a more accurate estimate of the overall table size.  
+     The bytes added to **_Max_Var_Size_** are for tracking each variable-length column. This formula assumes that all variable-length columns are 100 percent full. If you anticipate that a smaller percentage of the variable-length column storage space will be used, you can adjust the **_Max_Var_Size_** value by that percentage to yield a more accurate estimate of the overall table size.  
   
     > [!NOTE]  
-    >  You can combine **varchar**, **nvarchar**, **varbinary**, or **sql_variant** columns that cause the total defined table width to exceed 8,060 bytes. The length of each one of these columns must still fall within the limit of 8,000 bytes for a **varchar**, **nvarchar,****varbinary**, or **sql_variant** column. However, their combined widths may exceed the 8,060 byte limit in a table.  
+    >  You can combine **varchar**, **nvarchar**, **varbinary**, or **sql_variant** columns that cause the total defined table width to exceed 8,060 bytes. The length of each one of these columns must still fall within the limit of 8,000 bytes for a **varchar**, **nvarchar, varbinary**, or **sql_variant** column. However, their combined widths may exceed the 8,060 byte limit in a table.  
   
-     If there are no variable-length columns, set ***Variable_Data_Size*** to 0.  
+     If there are no variable-length columns, set **_Variable_Data_Size_** to 0.  
   
 5.  Calculate the total row size:  
   
-     ***Row_Size***  = ***Fixed_Data_Size*** + ***Variable_Data_Size*** + ***Null_Bitmap*** + 4  
+     **_Row_Size_**  = **_Fixed_Data_Size_** + **_Variable_Data_Size_** + **_Null_Bitmap_** + 4  
   
      The value 4 in the formula is the row header overhead of the data row.  
   
 6.  Calculate the number of rows per page (8096 free bytes per page):  
   
-     ***Rows_Per_Page***  = 8096 / (***Row_Size*** + 2)  
+     **_Rows_Per_Page_**  = 8096 / (**_Row_Size_** + 2)  
   
      Because rows do not span pages, the number of rows per page should be rounded down to the nearest whole row. The value 2 in the formula is for the row's entry in the slot array of the page.  
   
 7.  Calculate the number of pages required to store all the rows:  
   
-     ***Num_Pages***  = ***Num_Rows*** / ***Rows_Per_Page***  
+     **_Num_Pages_**  = **_Num_Rows_** / **_Rows_Per_Page_**  
   
      The number of pages estimated should be rounded up to the nearest whole page.  
   
 8.  Calculate the amount of space that is required to store the data in the heap (8192 total bytes per page):  
   
-     Heap size (bytes) = 8192 x ***Num_Pages***  
+     Heap size (bytes) = 8192 x **_Num_Pages_**  
   
  This calculation does not consider the following:  
   

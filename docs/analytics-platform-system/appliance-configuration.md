@@ -1,24 +1,17 @@
 ---
-title: "Appliance Configuration (Analytics Platform System)"
-author: "barbkess" 
-ms.author: "barbkess"
-manager: "jhubbard"	  
-ms.prod: "analytics-platform-system"
-ms.prod_service: "mpp-data-warehouse"
-ms.service: ""
-ms.component:
-ms.technology: "mpp-data-warehouse"
-ms.custom: ""
-ms.date: 01/05/2017
-ms.reviewer: na
-ms.suite: "sql"
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: 064e7485-7026-4acf-8084-f5d30757d177
-caps.latest.revision: 43
-
+title: Configuration checklists - Analytics Platform System | Microsoft Docs
+description: Provides checklists for the tasks required to configure Analytics Platform System for your own environment. These configuration tasks are necessary before you can use the appliance.  
+author: mzaman1 
+manager: craigg
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
 ---
-# Appliance Configuration
+
+# Appliance configuration checklists for Analytics Platform System
 Provides checklists for the tasks required to configure Analytics Platform System for your own environment. These configuration tasks are necessary before you can use the appliance.  
   
 > [!WARNING]  
@@ -59,7 +52,8 @@ Use **Configuration Manager** to perform the following configuration tasks.
 |Change the password for the **sa** logon|SQL Server PDW has a system administrator logon named **sa**. The **sa** logon has all privileges. It can grant, deny, or revoke any permission. It can also see all system views.<br /><br />For more information, see [Password Reset &#40;Analytics Platform System&#41;](password-reset.md).|  
 |Set the appliance time zone|Set the time (local or other desired time) for all appliance nodes.<br /><br />For more information, see [Appliance Time Zone Configuration &#40;Analytics Platform System&#41;](appliance-time-zone-configuration.md).|  
 |Specify externally facing network settings for the SQL Server PDW appliance|[Appliance Network Configuration &#40;Analytics Platform System&#41;](appliance-network-configuration.md)|  
-|Import a security certificate for the Admin Console|A certificate can provide Secure Sockets Layer (SSL) connections over HTTPS to the [Monitor the Appliance by Using the Admin Console &#40;Analytics Platform System&#41;](monitor-the-appliance-by-using-the-admin-console.md). By default, the **Admin Console** includes a self-signed certificate that provides privacy, but not server authentication. This certificate also returns an error in Internet Explorer stating: “There is a problem with this website's security certificate” when the user connects. Although this connection encrypts in-flight data between the client and the server, the connection is still at risk from attackers.<br /><br />SQL Server PDW administrators should immediately acquire a certificate that chains to a trusted certificate authority recognized by clients, in order to have a secure connection and remove the error that Internet Explorer reports. This requires a fully qualified domain name that maps the Control node’s virtual IP Address (recommended) or a certificate name that matches the value that users type into their browser address bars to access the Admin Console.<br /><br />Use the **Configuration Manager** to add or remove trusted certificates. Directly using the Microsoft Windows HTTP Services Certificate Configuration Tool (`winHttpCertCfg.exe`) to manage certificates is unsupported.<br /><br />For more information, see [PDW Certificate Provisioning &#40;Analytics Platform System&#41;](pdw-certificate-provisioning.md).|  
+|Import a security certificate for the Admin Console|A certificate can provide Secure Sockets Layer (SSL) connections over HTTPS to the [Monitor the Appliance by Using the Admin Console &#40;Analytics Platform System&#41;](monitor-the-appliance-by-using-the-admin-console.md). By default, the **Admin Console** includes a self-signed certificate that provides privacy, but not server authentication. This certificate also returns an error in Internet Explorer stating: "There is a problem with this website's security certificate" when the user connects. Although this connection encrypts in-flight data between the client and the server, the connection is still at risk from attackers.<br /><br />SQL Server PDW administrators should immediately acquire a certificate that chains to a trusted certificate authority recognized by clients, in order to have a secure connection and remove the error that Internet Explorer reports. This requires a fully qualified domain name that maps the Control node's virtual IP Address (recommended) or a certificate name that matches the value that users type into their browser address bars to access the Admin Console.<br /><br />Use the **Configuration Manager** to add or remove trusted certificates. Directly using the Microsoft Windows HTTP Services Certificate Configuration Tool (`winHttpCertCfg.exe`) to manage certificates is unsupported.<br /><br />For more information, see [PDW Certificate Provisioning &#40;Analytics Platform System&#41;](pdw-certificate-provisioning.md).|
+|Feature Switch|Displays information about feature switches that are introduced in Analytics Platform System AU7. Use this page to update or enable/disable features and settings in Analytics Platform System. Changing feature switch values requires a service restart.<br /><br />For more information, see [PDW feature switch &#40;Analytics Platform System&#41;](appliance-feature-switch.md).|
 |Enable or disable Windows Firewall rules that allow or prevent access to specific ports on the SQL Server PDW appliance.|Your IHV will configure and enable the firewall rules that are necessary for the appliance to operate properly. In most cases you will not enable or disable firewall rules.<br /><br />For more information, see [PDW Firewall Configuration &#40;Analytics Platform System&#41;](pdw-firewall-configuration.md).|  
 |Start and stop the SQL Server PDW appliance|Stops or starts the SQL Server PDW appliance. For more information, see [PDW Services Status &#40;Analytics Platform System&#41;](pdw-services-status.md).|  
 |Review Instant File Initialization options using the **Privileges** dialog box|Instant File Initialization is a SQL Server feature that allows data file operations to run more quickly. It is enabled on SQL Server PDW only if the Network Service account has been granted the SE_MANAGE_VOLUME_NAME privilege. It is turned off by default.<br /><br />For more information, see [Instant File Initialization Configuration &#40;Analytics Platform System&#41;](instant-file-initialization-configuration.md).|  

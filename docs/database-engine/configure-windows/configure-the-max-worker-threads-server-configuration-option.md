@@ -2,25 +2,18 @@
 title: "Configure the max worker threads Server Configuration Option | Microsoft Docs"
 ms.custom: ""
 ms.date: "11/23/2017"
-ms.prod: "sql-non-specified"
-ms.prod_service: "database-engine"
-ms.service: ""
-ms.component: "configure-windows"
+ms.prod: sql
+ms.prod_service: high-availability
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: configuration
+ms.topic: conceptual
 helpviewer_keywords: 
   - "worker threads [SQL Server]"
   - "max worker threads option"
 ms.assetid: abeadfa4-a14d-469a-bacf-75812e48fac1
-caps.latest.revision: 36
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-ms.workload: "On Demand"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ---
 # Configure the max worker threads Server Configuration Option
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -53,7 +46,7 @@ ms.workload: "On Demand"
   
 ###  <a name="Recommendations"></a> Recommendations  
   
--   This option is an advanced option and should be changed only by an experienced database administrator or certified [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] technician. If you suspect that there is a performance problem, it is probably not the availability of worker threads. The cause is more likely something like I/O that is causing the worker threads to wait. It is best to find the root cause of a performance issue before you change the max worker threads setting.  
+-   This option is an advanced option and should be changed only by an experienced database administrator or certified [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] professional. If you suspect that there is a performance problem, it is probably not the availability of worker threads. The cause is more likely something like I/O that is causing the worker threads to wait. It is best to find the root cause of a performance issue before you change the max worker threads setting.  
   
 -   Thread pooling helps optimize performance when large numbers of clients are connected to the server. Usually, a separate operating system thread is created for each query request. However, with hundreds of connections to the server, using one thread per query request can consume large amounts of system resources. The **max worker threads** option enables [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to create a pool of worker threads to service a larger number of query requests, which improves performance.  
   
@@ -74,7 +67,7 @@ ms.workload: "On Demand"
     |Number of CPUs|32-bit computer|64-bit computer|  
     |------------|------------|------------| 
     |\<= 4 processors|256|512|
-    |\> 4 processors|256 + ((logical CPU's - 4) * 8)|512 + ((logical CPU’s - 4) * 8)| 
+    |\> 4 processors|256 + ((logical CPU's - 4) * 8)|512 + ((logical CPU's - 4) * 16)| 
   
     > [!NOTE]  
     > [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] can no longer be installed on a 32-bit operating system. 32-bit computer values are listed for the assistance of customers running [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] and earlier.   We recommend 1024 as the maximum number of worker threads for an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] that is running on a 32-bit computer.  

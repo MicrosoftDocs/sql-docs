@@ -5,19 +5,13 @@ ms.date: "03/06/2017"
 ms.prod: ""
 ms.prod_service: "sql-database"
 ms.reviewer: ""
-ms.service: "sql-database"
-ms.component: "dmv's"
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: system-objects
 ms.topic: "language-reference"
 ms.assetid: 33ea5179-16bb-4abd-96cc-9bc696e80987
-caps.latest.revision: 7
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
-ms.workload: "Inactive"
+author: MightyPen
+ms.author: genemi
+manager: craigg
+monikerRange: "= azuresqldb-current || = sqlallproducts-allversions"
 ---
 # sys.dm_xe_database_sessions (Azure SQL Database)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -39,7 +33,7 @@ ms.workload: "Inactive"
  Requires VIEW DATABASE STATE permission.  
   
 ### Relationship Cardinalities  
-As of 2015-07-13, 'sys.dm_xe_objects' is one of these XEvents DMVs that do Not contain '_database' in their name. Not a typo or error in the following table's right-side column. The name is the same in Microsoft SQL Server and Azure SQL Database. GeneMi.  
+As of 2015-07-13, 'sys.dm_xe_objects' is one of these XEvents DMVs that do Not contain '_database' in their name. Not a typo or error in the following table's right-side column. The name is the same in Microsoft SQL Server and Azure SQL Database.  
   
 |From|To|Relationship|  
 |--------|------|----------------|  
@@ -47,7 +41,7 @@ As of 2015-07-13, 'sys.dm_xe_objects' is one of these XEvents DMVs that do Not c
 |sys.dm_xe_database_session_events.event_package_guid, sys.dm_xe_database_session_events.event_name|sys.dm_xe_objects.name, sys.dm_xe_objects.package_guid|Many-to-one|  
   
 ## See Also  
-[Extended events in Azure SQL Database](http://azure.microsoft.com/documentation/articles/sql-database-xevent-db-diff-from-svr/)  
+[Extended events in Azure SQL Database](https://azure.microsoft.com/documentation/articles/sql-database-xevent-db-diff-from-svr/)  
 [Extended Events](../../relational-databases/extended-events/extended-events.md)  
   
  

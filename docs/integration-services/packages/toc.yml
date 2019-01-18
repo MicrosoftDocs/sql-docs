@@ -1,0 +1,17 @@
+- name: Deploy Integration Services (SSIS) Projects and Packages
+  href: deploy-integration-services-ssis-projects-and-packages.md
+- name: Legacy Package Deployment (SSIS)
+  href: legacy-package-deployment-ssis.md
+- name: Run Integration Services (SSIS) Packages
+  href: run-integration-services-ssis-packages.md
+  items:
+  - name: Execute Package Utility (dtexecui)
+    href: execute-package-utility-dtexecui-ui-reference.md
+  - name: dtexec Utility
+    href: dtexec-utility.md
+  - name: Restart Packages by Using Checkpoints
+    href: restart-packages-by-using-checkpoints.md
+  - name: SQL Server Agent Jobs for Packages
+    href: sql-server-agent-jobs-for-packages.md
+  - name: Load-Balancing Packages on Remote Servers by Using SQL Server Agent
+    href: load-balancing-packages-on-remote-servers-by-using-sql-server-agent.md

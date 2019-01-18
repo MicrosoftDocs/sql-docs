@@ -2,27 +2,21 @@
 title: "Primary and Foreign Key Constraints | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/25/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.service: ""
-ms.component: "tables"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "dbe-tables"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: table-view-index
+ms.topic: conceptual
 helpviewer_keywords: 
   - "foreign keys [SQL Server], cascading referential integrity"
   - "FOREIGN KEY constraints"
   - "foreign keys [SQL Server]"
   - "foreign keys [SQL Server], about foreign key constraints"
 ms.assetid: 31fbcc9f-2dc5-4bf9-aa50-ed70ec7b5bcd
-caps.latest.revision: 20
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-ms.workload: "Active"
+author: stevestein
+ms.author: sstein
+manager: craigg
+monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Primary and Foreign Key Constraints
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]

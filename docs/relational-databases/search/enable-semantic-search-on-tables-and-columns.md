@@ -2,24 +2,17 @@
 title: "Enable Semantic Search on Tables and Columns | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-non-specified"
-ms.prod_service: "database-engine, sql-database"
-ms.service: ""
-ms.component: "search"
+ms.prod: sql
+ms.prod_service: "search, sql-database"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "dbe-search"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: search
+ms.topic: conceptual
 helpviewer_keywords: 
   - "semantic search [SQL Server], enabling"
 ms.assetid: 895d220c-6749-4954-9dd3-2ea4c6a321ff
-caps.latest.revision: 22
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-ms.workload: "Inactive"
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ---
 # Enable Semantic Search on Tables and Columns
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -47,7 +40,7 @@ ms.workload: "Inactive"
   
 -   You can specify any document type that is supported for full-text indexing for **varbinary(max)** columns. For more information, see [How To: Determine Which Document Types Can Be Indexed](#doctypes) in this topic.  
   
--   Semantic indexing creates two types of indexes for the columns that you select – an index of key phrases, and an index of document similarity. You cannot select only one type of index or the other when you enable semantic indexing. However you can query these two indexes independently. For more information, see [Find Key Phrases in Documents with Semantic Search](../../relational-databases/search/find-key-phrases-in-documents-with-semantic-search.md) and [Find Similar and Related Documents with Semantic Search](../../relational-databases/search/find-similar-and-related-documents-with-semantic-search.md).  
+-   Semantic indexing creates two types of indexes for the columns that you select - an index of key phrases, and an index of document similarity. You cannot select only one type of index or the other when you enable semantic indexing. However you can query these two indexes independently. For more information, see [Find Key Phrases in Documents with Semantic Search](../../relational-databases/search/find-key-phrases-in-documents-with-semantic-search.md) and [Find Similar and Related Documents with Semantic Search](../../relational-databases/search/find-similar-and-related-documents-with-semantic-search.md).  
   
 -   If you do not explicitly specify an LCID for a semantic index, then only the primary language and its associated language statistics are used for semantic indexing.  
   
@@ -146,7 +139,7 @@ GO
 ```  
   
 ### Add a semantic index by using SQL Server Management Studio  
- You can change the columns that are enabled for semantic and full-text indexing on the **Full-Text Index Columns** page of the **Full-Text Index Properties** dialog box. For more information, see [Manage Full-Text Indexes](http://msdn.microsoft.com/library/28ff17dc-172b-4ac4-853f-990b5dc02fd1).  
+ You can change the columns that are enabled for semantic and full-text indexing on the **Full-Text Index Columns** page of the **Full-Text Index Properties** dialog box. For more information, see [Manage Full-Text Indexes](https://msdn.microsoft.com/library/28ff17dc-172b-4ac4-853f-990b5dc02fd1).  
 
 ## Alter a semantic index
   
@@ -160,7 +153,7 @@ GO
 You can drop semantic indexing when you alter an existing full-text index with the **ALTER FULLTEXT INDEX** statement. You can also drop semantic indexing by using various dialog boxes in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
  ### Drop a semantic index by using Transact-SQL  
-To drop semantic indexing only from a column or columns, call the **ALTER FULLTEXT INDEX** statement with the **ALTER COLUMN***column_name***DROP STATISTICAL_SEMANTICS** option. You can drop the indexing from multiple columns in a single **ALTER** statement.  
+To drop semantic indexing only from a column or columns, call the **ALTER FULLTEXT INDEX** statement with the **ALTER COLUMN**_column\_name_**DROP STATISTICAL_SEMANTICS** option. You can drop the indexing from multiple columns in a single **ALTER** statement.  
   
 ```sql  
 USE database_name  
@@ -172,7 +165,7 @@ ALTER FULLTEXT INDEX
 GO  
 ```  
   
-To drop both full-text and semantic indexing from a column, call the **ALTER FULLTEXT INDEX** statement with the **ALTER COLUMN***column_name***DROP** option.  
+To drop both full-text and semantic indexing from a column, call the **ALTER FULLTEXT INDEX** statement with the **ALTER COLUMN**_column\_name_**DROP** option.  
   
 ```sql  
 USE database_name  
@@ -185,7 +178,7 @@ GO
 ```  
   
  ### Drop a semantic index by using SQL Server Management Studio  
- You can change the columns that are enabled for semantic and full-text indexing on the **Full-Text Index Columns** page of the **Full-Text Index Properties** dialog box. For more information, see [Manage Full-Text Indexes](http://msdn.microsoft.com/library/28ff17dc-172b-4ac4-853f-990b5dc02fd1).  
+ You can change the columns that are enabled for semantic and full-text indexing on the **Full-Text Index Columns** page of the **Full-Text Index Properties** dialog box. For more information, see [Manage Full-Text Indexes](https://msdn.microsoft.com/library/28ff17dc-172b-4ac4-853f-990b5dc02fd1).  
   
 ###  <a name="dropreq"></a> Requirements and restrictions for dropping a semantic index  
   

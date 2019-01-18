@@ -2,16 +2,11 @@
 title: "File Restores (Full Recovery Model) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-non-specified"
-ms.prod_service: "database-engine"
-ms.service: ""
-ms.component: "backup-restore"
+ms.prod: sql
+ms.prod_service: backup-restore
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "dbe-backup-restore"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: backup-restore
+ms.topic: conceptual
 helpviewer_keywords: 
   - "file restores [SQL Server]"
   - "full recovery model [SQL Server], performing restores"
@@ -22,11 +17,9 @@ helpviewer_keywords:
   - "Transact-SQL restore sequence"
   - "file restores [SQL Server], Transact-SQL restore sequence"
 ms.assetid: d2236a2a-4cf1-4c3f-b542-f73f6096e15c
-caps.latest.revision: 42
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-ms.workload: "Inactive"
+author: mashamsft
+ms.author: mathoma
+manager: craigg
 ---
 # File Restores (Full Recovery Model)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

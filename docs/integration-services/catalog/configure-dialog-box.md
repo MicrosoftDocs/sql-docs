@@ -2,26 +2,19 @@
 title: "Configure Dialog Box | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "integration-services"
-ms.service: ""
-ms.component: "service"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: integration-services
+ms.topic: conceptual
 f1_keywords: 
   - "sql13.dts.designer.configure.f1"
   - "sql13.SSIS.SSMS.ISPROJECTPROP.REFERENCES.F1"
   - "sql13.SSIS.SSMS.ISPROJECTPROP.PARAMETERS.F1"
 ms.assetid: 10183c8d-b1be-420f-972a-96ea97d4f4d8
-caps.latest.revision: 11
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
-ms.workload: "Inactive"
+manager: craigg
 ---
 # Configure Dialog Box
   Use the **Configure** dialog box to configure parameters, connection managers, and references to environments, for packages and projects.  
@@ -38,7 +31,7 @@ ms.workload: "Inactive"
   
 1.  In [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], connect to the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] server.  
   
-     You’re connecting to the instance of the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] that hosts the SSISDB database.  
+     You're connecting to the instance of the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] that hosts the SSISDB database.  
   
 2.  In Object Explorer, expand the tree to display the **Integration Services Catalogs** node.  
   
@@ -81,7 +74,7 @@ ms.workload: "Inactive"
 ##  <a name="references"></a> Set the options on the References page  
  Use the **References** page to add and remove references to environments, and to access environment properties.  
   
- An environment specifies runtime values for packages contained in the projects you’ve deployed to [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] server.  
+ An environment specifies runtime values for packages contained in the projects you've deployed to [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] server.  
   
  **Environment**  
  Lists the environment.  

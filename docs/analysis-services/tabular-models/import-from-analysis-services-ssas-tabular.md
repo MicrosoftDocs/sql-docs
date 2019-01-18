@@ -1,29 +1,18 @@
 ---
-title: "Import from Analysis Services (SSAS Tabular) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: analysis-services
-ms.prod_service: "analysis-services, azure-analysis-services"
-ms.service: ""
-ms.component: ""
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
-  
-ms.component: multidimensional-tabular
-ms.component: data-mining
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-ms.assetid: b9a21b23-3a06-4ef8-bc06-9c79cdc54870
-caps.latest.revision: 19
-author: "Minewiskan"
-ms.author: "owend"
-manager: "kfile"
-ms.workload: "On Demand"
+title: "Import from Analysis Services | Microsoft Docs"
+ms.date: 05/07/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: tabular-models
+ms.topic: conceptual
+ms.author: owend
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
 ---
-# Import from Analysis Services (SSAS Tabular)
+# Import from Analysis Services 
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
-  This topic describes how to create a new tabular model project by importing the metadata from an existing tabular model by using the Import from Server project template in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
+  This article describes how to create a new tabular model project by importing the metadata from an existing tabular model by using the Import from Server project template in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
   
 ## Create a new model by importing metadata from an existing model in Analysis Services  
  You can use the Import from Server project template to create a new tabular model project by copying the metadata from an existing tabular model on an Analysis Services server. The new project will be created with the same data source connections, tables, relationships, measures, KPIs, roles, hierarchies, perspectives, and partitions as the model it was imported from. The data, however, is not copied from the existing model to the new model workspace. Once the import process has completed, and the new model project created, you must run a Process All to load the data from the data sources into the new model project workspace database.  
@@ -41,6 +30,6 @@ ms.workload: "On Demand"
 5.  In **Database Name**, select the tabular model database that contains the model metadata you want to import, and then click **OK**.  
   
 ## See Also  
- [Project Properties &#40;SSAS Tabular&#41;](../../analysis-services/tabular-models/project-properties-ssas-tabular.md)  
+ [Project properties](../../analysis-services/tabular-models/project-properties-ssas-tabular.md)  
   
   

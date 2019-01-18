@@ -2,28 +2,21 @@
 title: "sp_polybase_join_group | Microsoft Docs"
 ms.custom: ""
 ms.date: "05/24/2016"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "database-engine"
-ms.service: ""
-ms.component: "system-stored-procedures"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: system-objects
+ms.topic: conceptual
 f1_keywords: 
   - "sp_polybase_join_group"
 helpviewer_keywords: 
   - "PolyBase"
 ms.assetid: 48066431-fed2-4a8a-85af-ac704689e183
-caps.latest.revision: 12
-author: "CarlRabeler"
-ms.author: "carlrab"
-manager: "jhubbard"
-ms.workload: "Inactive"
+author: rothja
+ms.author: jroth
+manager: craigg
 ---
-# PolyBase stored procedures - sp_polybase_join_group
+# sp_polybase_join_group (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   Adds a SQL Server instance as a compute node to a PolyBase group for scale-out computation.  

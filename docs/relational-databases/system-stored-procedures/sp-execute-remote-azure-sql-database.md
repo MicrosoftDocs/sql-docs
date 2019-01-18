@@ -5,13 +5,8 @@ ms.date: "02/01/2017"
 ms.prod: ""
 ms.prod_service: "sql-database"
 ms.reviewer: ""
-ms.service: "sql-database"
-ms.component: "system-stored-procedures"
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: system-objects
+ms.topic: conceptual
 f1_keywords: 
   - "sp_execute_remote"
   - "sp_execute_remote_TSQL"
@@ -19,11 +14,10 @@ helpviewer_keywords:
   - "remote execution"
   - "queries, remote execution"
 ms.assetid: ca89aa4c-c4c1-4c46-8515-a6754667b3e5
-caps.latest.revision: 17
 author: "CarlRabeler"
 ms.author: "carlrab"
-manager: "jhubbard"
-ms.workload: "Inactive"
+manager: craigg
+monikerRange: "= azuresqldb-current || = sqlallproducts-allversions"
 ---
 # sp_execute_remote (Azure SQL Database)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -46,22 +40,22 @@ sp_execute_remote [ @data_source_name = ] datasourcename
 ```  
   
 ## Arguments  
- [ @data_source_name = ] *datasourcename*  
+ [ \@data_source_name = ] *datasourcename*  
  Identifies the external data source where the statement is executed. See [CREATE EXTERNAL DATA SOURCE &#40;Transact-SQL&#41;](../../t-sql/statements/create-external-data-source-transact-sql.md). The external data source can be of type "RDBMS" or "SHARD_MAP_MANAGER".  
   
- [ @stmt= ] *statement*  
- Is a Unicode string that contains a [!INCLUDE[tsql](../../includes/tsql-md.md)] statement or batch. @stmt must be either a Unicode constant or a Unicode variable. More complex Unicode expressions, such as concatenating two strings with the + operator, are not allowed. Character constants are not allowed. If a Unicode constant is specified, it must be prefixed with an **N**. For example, the Unicode constant **N'sp_who'** is valid, but the character constant **'sp_who'** is not. The size of the string is limited only by available database server memory. On 64-bit servers, the size of the string is limited to 2 GB, the maximum size of **nvarchar(max)**.  
+ [ \@stmt= ] *statement*  
+ Is a Unicode string that contains a [!INCLUDE[tsql](../../includes/tsql-md.md)] statement or batch. \@stmt must be either a Unicode constant or a Unicode variable. More complex Unicode expressions, such as concatenating two strings with the + operator, are not allowed. Character constants are not allowed. If a Unicode constant is specified, it must be prefixed with an **N**. For example, the Unicode constant **N'sp_who'** is valid, but the character constant **'sp_who'** is not. The size of the string is limited only by available database server memory. On 64-bit servers, the size of the string is limited to 2 GB, the maximum size of **nvarchar(max)**.  
   
 > [!NOTE]  
->  @stmt can contain parameters having the same form as a variable name, for example: `N'SELECT * FROM HumanResources.Employee WHERE EmployeeID = @IDParameter'`  
+>  \@stmt can contain parameters having the same form as a variable name, for example: `N'SELECT * FROM HumanResources.Employee WHERE EmployeeID = @IDParameter'`  
   
- Each parameter included in @stmt must have a corresponding entry in both the @params parameter definition list and the parameter values list.  
+ Each parameter included in \@stmt must have a corresponding entry in both the \@params parameter definition list and the parameter values list.  
   
- [ @params= ] N'@*parameter_name**data_type* [ ,... *n* ] '  
- Is one string that contains the definitions of all parameters that have been embedded in @stmt. The string must be either a Unicode constant or a Unicode variable. Each parameter definition consists of a parameter name and a data type. *n* is a placeholder that indicates additional parameter definitions. Every parameter specified in @stmtmust be defined in @params. If the [!INCLUDE[tsql](../../includes/tsql-md.md)] statement or batch in @stmt does not contain parameters, @params is not required. The default value for this parameter is NULL.  
+ [ \@params= ] N'\@*parameter_name**data_type* [ ,... *n* ] '  
+ Is one string that contains the definitions of all parameters that have been embedded in \@stmt. The string must be either a Unicode constant or a Unicode variable. Each parameter definition consists of a parameter name and a data type. *n* is a placeholder that indicates additional parameter definitions. Every parameter specified in \@stmtmust be defined in \@params. If the [!INCLUDE[tsql](../../includes/tsql-md.md)] statement or batch in \@stmt does not contain parameters, \@params is not required. The default value for this parameter is NULL.  
   
- [ @param1= ] '*value1*'  
- Is a value for the first parameter that is defined in the parameter string. The value can be a Unicode constant or a Unicode variable. There must be a parameter value supplied for every parameter included in @stmt. The values are not required when the [!INCLUDE[tsql](../../includes/tsql-md.md)] statement or batch in @stmt has no parameters.  
+ [ \@param1= ] '*value1*'  
+ Is a value for the first parameter that is defined in the parameter string. The value can be a Unicode constant or a Unicode variable. There must be a parameter value supplied for every parameter included in \@stmt. The values are not required when the [!INCLUDE[tsql](../../includes/tsql-md.md)] statement or batch in \@stmt has no parameters.  
   
  *n*  
  Is a placeholder for the values of additional parameters. Values can only be constants or variables. Values cannot be more complex expressions such as functions, or expressions built by using operators.  
@@ -78,7 +72,7 @@ sp_execute_remote [ @data_source_name = ] datasourcename
 ## Remarks  
  `sp_execute_remote` parameters must be entered in the specific order as described in the syntax section above. If the parameters are entered out of order, an error message will occur.  
   
- `sp_execute_remote` has the same behavior as [EXECUTE &#40;Transact-SQL&#41;](../../t-sql/language-elements/execute-transact-sql.md) with regard to batches and the scope of names. The Transact-SQL statement or batch in the sp_execute_remote *@stmt* parameter is not compiled until the sp_execute_remote statement is executed.  
+ `sp_execute_remote` has the same behavior as [EXECUTE &#40;Transact-SQL&#41;](../../t-sql/language-elements/execute-transact-sql.md) with regard to batches and the scope of names. The Transact-SQL statement or batch in the sp_execute_remote *\@stmt* parameter is not compiled until the sp_execute_remote statement is executed.  
   
  `sp_execute_remote` adds an additional column to the result set named '$ShardName' that contains the name of the remote database that produced the row.  
   

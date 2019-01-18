@@ -2,16 +2,11 @@
 title: "SQLPutData Function | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
-ms.prod_service: "drivers"
-ms.service: ""
-ms.component: "odbc"
+ms.prod: sql
+ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "drivers"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: connectivity
+ms.topic: conceptual
 apiname: 
   - "SQLPutData"
 apilocation: 
@@ -22,18 +17,16 @@ f1_keywords:
 helpviewer_keywords: 
   - "SQLPutData function [ODBC]"
 ms.assetid: 9a60f004-1477-4c54-a20c-7378e1116713
-caps.latest.revision: 28
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
-ms.workload: "Inactive"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # SQLPutData Function
 **Conformance**  
  Version Introduced: ODBC 1.0 Standards Compliance: ISO 92  
   
  **Summary**  
- **SQLPutData** allows an application to send data for a parameter or column to the driver at statement execution time. This function can be used to send character or binary data values in parts to a column with a character, binary, or data source–specific data type (for example, parameters of the SQL_LONGVARBINARY or SQL_LONGVARCHAR types). **SQLPutData** supports binding to a Unicode C data type, even if the underlying driver does not support Unicode data.  
+ **SQLPutData** allows an application to send data for a parameter or column to the driver at statement execution time. This function can be used to send character or binary data values in parts to a column with a character, binary, or data source-specific data type (for example, parameters of the SQL_LONGVARBINARY or SQL_LONGVARCHAR types). **SQLPutData** supports binding to a Unicode C data type, even if the underlying driver does not support Unicode data.  
   
 ## Syntax  
   
@@ -76,7 +69,7 @@ SQLRETURN SQLPutData(
 |07006|Restricted data type  attribute violation|The data value identified by the *ValueType* argument in **SQLBindParameter** for the bound parameter could not be converted to the data type identified by the *ParameterType* argument in **SQLBindParameter**.|  
 |07S01|Invalid use of default parameter|A parameter value, set with **SQLBindParameter**, was SQL_DEFAULT_PARAM, and the corresponding parameter did not have a default value.|  
 |08S01|Communication link failure|The communication link between the driver and the data source to which the driver was connected failed before the function completed processing.|  
-|22001|String data, right truncation|The assignment of a character or binary value to a column resulted in the truncation of nonblank (character) or non-null (binary) characters or bytes.<br /><br /> The SQL_NEED_LONG_DATA_LEN information type in **SQLGetInfo** was "Y", and more data was sent for a long parameter (the data type was SQL_LONGVARCHAR, SQL_LONGVARBINARY, or a long data source–specific data type) than was specified with the *StrLen_or_IndPtr* argument in **SQLBindParameter**.<br /><br /> The SQL_NEED_LONG_DATA_LEN information type in **SQLGetInfo** was "Y", and more data was sent for a long column (the data type was SQL_LONGVARCHAR, SQL_LONGVARBINARY, or a long data source–specific data type) than was specified in the length buffer corresponding to a column in a row of data that was added or updated with **SQLBulkOperations** or updated with **SQLSetPos**.|  
+|22001|String data, right truncation|The assignment of a character or binary value to a column resulted in the truncation of nonblank (character) or non-null (binary) characters or bytes.<br /><br /> The SQL_NEED_LONG_DATA_LEN information type in **SQLGetInfo** was "Y", and more data was sent for a long parameter (the data type was SQL_LONGVARCHAR, SQL_LONGVARBINARY, or a long data source-specific data type) than was specified with the *StrLen_or_IndPtr* argument in **SQLBindParameter**.<br /><br /> The SQL_NEED_LONG_DATA_LEN information type in **SQLGetInfo** was "Y", and more data was sent for a long column (the data type was SQL_LONGVARCHAR, SQL_LONGVARBINARY, or a long data source-specific data type) than was specified in the length buffer corresponding to a column in a row of data that was added or updated with **SQLBulkOperations** or updated with **SQLSetPos**.|  
 |22003|Numeric value out of range|The data sent for a bound numeric parameter or column caused the whole (as opposed to fractional) part of the number to be truncated when assigned to the associated table column.<br /><br /> Returning a numeric value (as numeric or string) for one or more input/output or output parameters would have caused the whole (as opposed to fractional) part of the number to be truncated.|  
 |22007|Invalid datetime format|The data sent for a parameter or column that was bound to a date, time, or timestamp structure was, respectively, an invalid date, time, or timestamp.<br /><br /> An input/output or output parameter was bound to a date, time, or timestamp C structure, and a value in the returned parameter was, respectively, an invalid date, time, or timestamp. (Function returns SQL_SUCCESS_WITH_INFO.)|  
 |22008|Datetime field overflow|A datetime expression computed for an input/output or output parameter resulted in a date, time, or timestamp C structure that was invalid.|  
@@ -89,7 +82,7 @@ SQLRETURN SQLPutData(
 |HY009|Invalid use of null pointer|(DM) The argument *DataPtr* was a null pointer, and the argument *StrLen_or_Ind* was not 0, SQL_DEFAULT_PARAM, or SQL_NULL_DATA.|  
 |HY010|Function sequence error|(DM) The previous function call was not a call to **SQLPutData** or **SQLParamData**.<br /><br /> (DM) An asynchronously executing function was called for the connection handle that is associated with the *StatementHandle*. This asynchronous function was still executing when the SQLPutData function was called.<br /><br /> (DM) **SQLExecute**, **SQLExecDirect**, or **SQLMoreResults** was called for the *StatementHandle* and returned SQL_PARAM_DATA_AVAILABLE. This function was called before data was retrieved for all streamed parameters.<br /><br /> (DM) An asynchronously executing function (not this one) was called for the *StatementHandle* and was still executing when this function was called.|  
 |HY013|Memory management error|The function call could not be processed because the underlying memory objects could not be accessed, possibly because of low memory conditions.|  
-|HY019|Non-character and non-binary data sent in pieces|**SQLPutData** was called more than once for a parameter or column, and it was not being used to send character C data to a column with a character, binary, or data source–specific data type or to send binary C data to a column with a character, binary, or data source–specific data type.|  
+|HY019|Non-character and non-binary data sent in pieces|**SQLPutData** was called more than once for a parameter or column, and it was not being used to send character C data to a column with a character, binary, or data source-specific data type or to send binary C data to a column with a character, binary, or data source-specific data type.|  
 |HY020|Attempt to concatenate a null value|**SQLPutData** was called more than once since the call that returned SQL_NEED_DATA, and in one of those calls, the *StrLen_or_Ind* argument contained SQL_NULL_DATA or SQL_DEFAULT_PARAM.|  
 |HY090|Invalid string or buffer length|The argument *DataPtr* was not a null pointer, and the argument *StrLen_or_Ind* was less than 0 but not equal to SQL_NTS or SQL_NULL_DATA.|  
 |HY117|Connection is suspended due to unknown transaction state. Only disconnect and read-only functions are allowed.|(DM) For more information about suspended state, see [SQLEndTran Function](../../../odbc/reference/syntax/sqlendtran-function.md).|  
@@ -110,7 +103,7 @@ SQLRETURN SQLPutData(
  For more information on how data-at-execution parameter data is passed at statement execution time, see "Passing Parameter Values" in [SQLBindParameter](../../../odbc/reference/syntax/sqlbindparameter-function.md) and [Sending Long Data](../../../odbc/reference/develop-app/sending-long-data.md). For more information on how data-at-execution column data is updated or added, see the section "Using SQLSetPos" in [SQLSetPos](../../../odbc/reference/syntax/sqlsetpos-function.md), "Performing Bulk Updates Using Bookmarks" in [SQLBulkOperations](../../../odbc/reference/syntax/sqlbulkoperations-function.md), and [Long Data and SQLSetPos and SQLBulkOperations](../../../odbc/reference/develop-app/long-data-and-sqlsetpos-and-sqlbulkoperations.md).  
   
 > [!NOTE]  
->  An application can use **SQLPutData** to send data in parts only when sending character C data to a column with a character, binary, or data source–specific data type or when sending binary C data to a column with a character, binary, or data source–specific data type. If **SQLPutData** is called more than once under any other conditions, it returns SQL_ERROR and SQLSTATE HY019 (Non-character and non-binary data sent in pieces).  
+>  An application can use **SQLPutData** to send data in parts only when sending character C data to a column with a character, binary, or data source-specific data type or when sending binary C data to a column with a character, binary, or data source-specific data type. If **SQLPutData** is called more than once under any other conditions, it returns SQL_ERROR and SQLSTATE HY019 (Non-character and non-binary data sent in pieces).  
   
 ## Example  
  The following sample assumes a data source name called Test. The associated database should have a table that you can create, as follows:  

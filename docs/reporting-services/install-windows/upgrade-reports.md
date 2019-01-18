@@ -1,18 +1,11 @@
 ---
-title: "Upgrade Reports | Microsoft Docs"
-ms.custom: ""
-ms.date: "05/30/2017"
+title: "Upgrade Reports (SSRS) | Microsoft Docs"
+ms.date: 06/04/2018
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
-ms.service: ""
-ms.component: "install-windows"
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
 
 
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "reports [Reporting Services], upgrading"
   - "published reports [Reporting Services], upgrades"
@@ -23,28 +16,23 @@ helpviewer_keywords:
   - "report definition files [Reporting Services]"
   - ".rdl files"
 ms.assetid: a1a10c67-7462-4562-9b07-a8822188a161
-caps.latest.revision: 70
-author: "markingmyname"
-ms.author: "maghan"
-manager: "kfile"
-ms.workload: "On Demand"
+author: markingmyname
+ms.author: maghan
 ---
 
-# Upgrade Reports
+# Upgrade Reports (SSRS)
 
 [!INCLUDE[ssrs-appliesto-sql2016-preview](../../includes/ssrs-appliesto-sql2016-preview.md)]
 
-  Report definition (.rdl) files are automatically upgraded in the following ways:  
+Report definition (.rdl) files are automatically upgraded in the following ways:  
   
--   When you open a report in Report Designer in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], the report definition is upgraded to the currently supported RDL schema. When you specify a [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], or [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] report server in the project properties, the report definition is saved in a schema that is compatible with the target server.  
+-   When you open a paginated report in Report Designer in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], the report definition is upgraded to the currently supported RDL schema. When you specify a [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], or [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] report server in the project properties, the report definition is saved in a schema that is compatible with the target server.  
   
 -   When you upgrade a [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] installation to a [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] installation, existing reports and snapshots that have been published to a report server are compiled and automatically upgraded to the new schema the first time they are processed. If a report cannot be automatically upgraded, the report is processed using the backward-compatibility mode. The report definition remains in the original schema.  
   
- Reports are not upgraded when you upload a report definition file directly to the report server or SharePoint site. Upgrading a report definition in [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] is the only way to upgrade the .rdl file.  
-  
  After a report is upgraded locally or on the report server, you might notice additional errors, warnings, and messages. This is the result of changes to the internal report object model and processing components, which cause messages to appear when underlying problems in the report are detected. For more information, see [Reporting Services Backward Compatibility](../../reporting-services/reporting-services-backward-compatibility.md).  
   
- For more information about new features for [!INCLUDE[ssRSCurrent](../what-s-new-in-sql-server-reporting-services-ssrs.md).  
+ For more information about new features for [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)], see [What's new in SQL Server Reporting Services (SSRS)](../what-s-new-in-sql-server-reporting-services-ssrs.md).  
 
 ##  <a name="bkmk_versionsupported"></a> Versions Supported by Upgrade  
  Reports that were created in any previous version of [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] can be upgraded. This includes the following versions:  
@@ -109,7 +97,7 @@ ms.workload: "On Demand"
  For information about identifying the current RDL namespace for a report server, [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)], or a report, see [Find the Report Definition Schema Version &#40;SSRS&#41;](../../reporting-services/reports/find-the-report-definition-schema-version-ssrs.md).  
   
 ### Upgrading Reports on a Report Server  
- The first time a [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], or [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] report runs on a report server that has been upgraded to a [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] report server, the report is automatically upgraded to the current report definition namespace supported by the report server. The report could have existed on the report server before the upgrade, or the report could have been uploaded via Report Manager or published to the report server from Report Designer in [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], or [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)].  
+ The first time a [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], or [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] report runs on a report server that has been upgraded to a [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] report server, the report is automatically upgraded to the current report definition namespace supported by the report server. The report could have existed on the report server before the upgrade, or the report could have been uploaded via the web portal or published to the report server from Report Designer in [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], or [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)].  
   
  The following table lists the upgrade action that is performed by the report server for specific types of CRIs in a report.  
   
@@ -151,4 +139,4 @@ ms.workload: "On Demand"
 [Custom Report Items](../../reporting-services/custom-report-items/custom-report-items.md)   
 [Upgrade a Report Server Database](../../reporting-services/install-windows/upgrade-a-report-server-database.md)  
 
-More questions? [Try asking the Reporting Services forum](http://go.microsoft.com/fwlink/?LinkId=620231)
+More questions? [Try asking the Reporting Services forum](https://go.microsoft.com/fwlink/?LinkId=620231)

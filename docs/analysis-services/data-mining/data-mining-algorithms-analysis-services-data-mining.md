@@ -1,35 +1,14 @@
 ---
 title: "Data Mining Algorithms (Analysis Services - Data Mining) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/02/2016"
-ms.prod: analysis-services
-ms.prod_service: "analysis-services"
-ms.service: ""
-ms.component: ""
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
-  
-ms.component: data-mining
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "segmentation algorithms [Analysis Services]"
-  - "clustering [Data Mining]"
-  - "learning algorithms"
-  - "data mining [Analysis Services], models"
-  - "algorithms [data mining]"
-  - "mining models [Analysis Services], algorithms"
-  - "inductive learning"
-  - "mining models [Analysis Services], creating"
-  - "data mining [Analysis Services], algorithms"
-  - "machine learning algorithms [Analysis Services]"
-ms.assetid: ed1fc83b-b98c-437e-bf53-4ff001b92d64
-caps.latest.revision: 74
-author: "Minewiskan"
-ms.author: "owend"
-manager: "kfile"
-ms.workload: "On Demand"
+ms.date: 05/01/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: data-mining
+ms.topic: conceptual
+ms.author: owend
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
 ---
 # Data Mining Algorithms (Analysis Services - Data Mining)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]

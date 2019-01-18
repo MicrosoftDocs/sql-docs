@@ -2,15 +2,10 @@
 title: "WAITFOR (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/15/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.service: ""
-ms.component: "t-sql|language-elements"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: t-sql
 ms.topic: "language-reference"
 f1_keywords: 
   - "WAITFOR"
@@ -29,11 +24,9 @@ helpviewer_keywords:
   - "WAITFOR statement"
   - "timing executions"
 ms.assetid: 8e896e73-af27-4cae-a725-7a156733f3bd
-caps.latest.revision: 40
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-ms.workload: "Active"
+author: "douglaslMS"
+ms.author: "douglasl"
+manager: craigg
 ---
 # WAITFOR (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -60,13 +53,13 @@ WAITFOR
  Is the specified period of time that must pass, up to a maximum of 24 hours, before execution of a batch, stored procedure, or transaction proceeds.  
   
  '*time_to_pass*'  
- Is the period of time to wait. *time_to_pass* can be specified in one of the acceptable formats for **datetime** data, or it can be specified as a local variable. Dates cannot be specified; therefore, the date part of the **datetime** value is not allowed.  
+ Is the period of time to wait. *time_to_pass* can be specified in one of the acceptable formats for **datetime** data, or it can be specified as a local variable. Dates cannot be specified; therefore, the date part of the **datetime** value is not allowed. This is formatted as hh:mm[[:ss].mss].
   
  TIME  
  Is the specified time when the batch, stored procedure, or transaction runs.  
   
  '*time_to_execute*'  
- Is the time at which the WAITFOR statement finishes. *time_to_execute* can be specified in one of the acceptable formats for **datetime** data, or it can be specified as a local variable. Dates cannot be specified; therefore, the date part of the **datetime** value is not allowed.  
+ Is the time at which the WAITFOR statement finishes. *time_to_execute* can be specified in one of the acceptable formats for **datetime** data, or it can be specified as a local variable. Dates cannot be specified; therefore, the date part of the **datetime** value is not allowed. This is formatted as hh:mm[[:ss].mss] and can optionally include the date of 1900-01-01.
   
  *receive_statement*  
  Is a valid RECEIVE statement.  

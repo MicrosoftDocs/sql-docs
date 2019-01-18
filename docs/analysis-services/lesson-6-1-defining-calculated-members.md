@@ -1,28 +1,18 @@
 ---
 title: "Defining Calculated Members | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/04/2017"
-ms.prod: analysis-services
-ms.prod_service: "analysis-services"
-ms.service: ""
-ms.component: ""
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
-  
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
-applies_to: 
-  - "SQL Server 2016"
-ms.assetid: 07f13e1c-0b20-4f9e-ad62-c438983f2785
-caps.latest.revision: 14
-author: "Minewiskan"
-ms.author: "owend"
-manager: "kfile"
-ms.workload: "On Demand"
+ms.date: 05/08/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: multidimensional-models
+ms.topic: tutorial
+ms.author: owend
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
 ---
 # Lesson 6-1 - Defining Calculated Members
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
 Calculated members are members of a dimension or a measure group that are defined based on a combination of cube data, arithmetic operators, numbers, and functions. For example, you can create a calculated member that calculates the sum of two physical measures in the cube. Calculated member definitions are stored in cubes, but their values are calculated at query time.  
   
 To create a calculated member, use the **New Calculated Member** command on the **Calculations** tab of Cube Designer. You can create a calculated member within any dimension, including the measures dimension. You can also place a calculated member within a display folder in the **Calculation Properties** dialog box. For more information, see [Calculations](../analysis-services/multidimensional-models-olap-logical-cube-objects/calculations.md), [Calculations in Multidimensional Models](../analysis-services/multidimensional-models/calculations-in-multidimensional-models.md), and [Create Calculated Members](../analysis-services/multidimensional-models/create-calculated-members.md).  

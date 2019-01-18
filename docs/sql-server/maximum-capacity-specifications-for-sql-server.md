@@ -1,17 +1,11 @@
 ---
 title: "Maximum Capacity Specifications for SQL Server | Microsoft Docs"
 ms.date: "11/6/2017"
-ms.prod: "sql-non-specified"
-ms.prod_service: "database-engine"
-ms.service: ""
-ms.component: "sql-non-specified"
+ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
 ms.custom: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: install
+ms.topic: conceptual
 helpviewer_keywords: 
   - "objects [SQL Server]"
   - "number capacity specifications [SQL Server]"
@@ -24,15 +18,12 @@ helpviewer_keywords:
   - "objects [SQL Server], capacity specifications"
   - "Database Engine [SQL Server], capacity specifications"
 ms.assetid: 13e95046-0e76-4604-b561-d1a74dd824d7
-caps.latest.revision: 88
 author: "MikeRayMSFT"
 ms.author: "mikeray"
-manager: "jhubbard"
-ms.workload: "Active"
+manager: craigg
 ---
 # Maximum Capacity Specifications for SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
- > For content related to previous versions of SQL Server, see [Maximum Capacity Specifications for SQL Server](https://msdn.microsoft.com/en-US/library/ms143432(SQL.120).aspx).
 
   The following tables specify maximum sizes and numbers of various objects defined in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] components. To navigate to the table for a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] technology, click on its link:  
   
@@ -122,7 +113,7 @@ ms.workload: "Active"
 |Log files per database||1|  
 |Volumes per computer||3|  
   
- *The maximum number of managed instances of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] supported by [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Utility may vary based on the hardware configuration of the server. For getting started information, see [SQL Server Utility Features and Tasks](https://msdn.microsoft.com/library/ee210548.aspx). [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Utility control point is not available in every edition of [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]. For a list of features that are supported by the editions of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], see [Features Supported by the Editions of SQL Server 2016](https://msdn.microsoft.com/library/cc645993.aspx).    
+ *The maximum number of managed instances of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] supported by [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Utility may vary based on the hardware configuration of the server. For getting started information, see [SQL Server Utility Features and Tasks](../relational-databases/manage/sql-server-utility-features-and-tasks.md). [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Utility control point is not available in every edition of [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]. For a list of features that are supported by the editions of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], see [Features Supported by the Editions of SQL Server 2016](https://msdn.microsoft.com/library/cc645993.aspx).    
   
 ##  <a name="DAC"></a> [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Data-tier Application Objects  
  Maximum sizes and numbers of various objects that were tested in the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] data-tier applications (DAC).  

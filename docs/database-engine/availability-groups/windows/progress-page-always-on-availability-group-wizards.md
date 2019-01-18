@@ -1,28 +1,21 @@
 ---
-title: "Progress Page (Always On Availability Group Wizards) | Microsoft Docs"
-ms.custom: ""
+title: "Progress Page (Always On Availability Group Wizards)"
+description: "A description of the options found on the 'Progress Page' of the Always On Availability Group Wizard' within SQL Server Management Studio."
+ms.custom: "seodec18"
 ms.date: "05/17/2016"
-ms.prod: "sql-non-specified"
-ms.prod_service: "database-engine"
-ms.service: ""
-ms.component: "availability-groups"
+ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: high-availability
+ms.topic: conceptual
 f1_keywords: 
   - "sql13.swb.failoverwizard.progress.f1"
   - "sql13.swb.adddatabasewizard.progress.f1"
   - "sql13.swb.addreplicawizard.progress.f1"
   - "sql13.swb.newagwizard.progress.f1"
 ms.assetid: bd3b0306-8384-4120-a1c9-03825f0ae26a
-caps.latest.revision: 13
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-ms.workload: "Inactive"
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
 ---
 # Progress Page (Always On Availability Group Wizards)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

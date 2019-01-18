@@ -1,33 +1,24 @@
 ---
 title: "Project Property Pages Dialog Box | Microsoft Docs"
-ms.custom: ""
-ms.date: "05/30/2017"
+ms.date: 05/30/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
-ms.service: ""
-ms.component: "tools"
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
+ms.technology: tools
 
 
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
+ms.topic: reference
 f1_keywords: 
   - "sql13.rpt.rptdesigner.projectpropertypages.general.f1"
 helpviewer_keywords: 
   - "Project Property Pages dialog box"
 ms.assetid: 209d9e22-37fc-418f-8739-83adcf447d3f
-caps.latest.revision: 35
-author: "markingmyname"
-ms.author: "maghan"
-manager: "kfile"
-ms.workload: "Inactive"
+author: markingmyname
+ms.author: maghan
 ---
 
 # Project Property Pages Dialog Box
 
-  Use the project property pages to configure deployment properties for a Report Server project. To open this dialog box, from the **Project** menu, click *\<Report Project Name>***Properties**.  
+  Use the project property pages to configure deployment properties for a Report Server project. To open this dialog box, from the **Project** menu, click _\<Report Project Name>_**Properties**.  
   
  After you define configuration properties, you can select a configuration from the **Solution Configurations** drop-down list on the toolbar.  
 
@@ -60,7 +51,7 @@ ms.workload: "Inactive"
  Select **True** to overwrite the data source on the server with the data source in the project when the reports are published. Select **False** to leave the existing data source on the server.  
   
  **TargetServerVersion**  
- Select either the appropriate version of [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] or select **Detect Version** to automatically determine the version installed on the server identified by the **TargetServer URL** property. The default value is **SQL Server 2016**.  
+ Select either the appropriate version of [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] or select **Detect Version** to automatically determine the version installed on the server identified by the **TargetServer URL** property. The default value is **SQL Server 2017**.  
   
  **TargetDataSourceFolder**  
  The name of the folder in which to store the published shared data sources. If you do not specify a folder, the data source is published to the same folder as the report. If the folder does not exist on the report server, Report Designer creates the folder when the reports are published.  
@@ -88,9 +79,9 @@ ms.workload: "Inactive"
 
 ## Next steps
 
-[Publish Reports](http://msdn.microsoft.com/library/ef5a514e-e818-4041-a8b0-15835f9a046b)   
+[Publish Reports](https://msdn.microsoft.com/library/ef5a514e-e818-4041-a8b0-15835f9a046b)   
 [Publish a Report to a SharePoint Library](../../reporting-services/reports/publish-a-report-to-a-sharepoint-library.md)   
 [Set Deployment Properties &#40;Reporting Services&#41;](../../reporting-services/tools/set-deployment-properties-reporting-services.md)   
 [Report Designer F1 Help](../../reporting-services/tools/report-designer-f1-help.md)  
 
-More questions? [Try asking the Reporting Services forum](http://go.microsoft.com/fwlink/?LinkId=620231)
+More questions? [Try asking the Reporting Services forum](https://go.microsoft.com/fwlink/?LinkId=620231)

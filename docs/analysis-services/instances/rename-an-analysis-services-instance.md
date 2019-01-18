@@ -1,30 +1,14 @@
 ---
 title: "Rename an Analysis Services Instance | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: analysis-services
-ms.prod_service: "analysis-services"
-ms.service: ""
-ms.component: ""
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
-  
-ms.component: multidimensional-tabular
-ms.component: data-mining
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "instances of Analysis Services, renaming"
-  - "renaming instances of Analysis Services"
-  - "names [Analysis Services], renaming instances"
-  - "names [Analysis Services]"
-ms.assetid: 87494741-4a2e-4fed-8061-418fd1e111c3
-caps.latest.revision: 53
-author: "Minewiskan"
-ms.author: "owend"
-manager: "kfile"
-ms.workload: "Inactive"
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom:
+ms.topic: conceptual
+ms.author: owend
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
 ---
 # Rename an Analysis Services Instance
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -62,7 +46,7 @@ ms.workload: "Inactive"
   
      Updating a database login or file permissions will be necessary if you used a virtual account to provision the service. Virtual accounts are based on the instance name, so if you rename the instance, the virtual account is also updated at the same time. This means that any previous logins or permissions that you created for the previous instance are no longer valid.  
   
-     The following example provides an illustration. Suppose you installed a tabular mode server as an instance named “Tabular” using the default virtual account, resulting in the following configuration:  
+     The following example provides an illustration. Suppose you installed a tabular mode server as an instance named "Tabular" using the default virtual account, resulting in the following configuration:  
   
     1.  Instance name = \<server>\TABULAR  
   
@@ -70,7 +54,7 @@ ms.workload: "Inactive"
   
     3.  Virtual account = NT Service\ MSOLAP$TABULAR  
   
-     Now suppose you rename the instance to “TAB2”. As a result of the name change, your configuration would now look like the following:  
+     Now suppose you rename the instance to "TAB2". As a result of the name change, your configuration would now look like the following:  
   
     1.  Instance name = \<server>\TAB2  
   
@@ -78,6 +62,6 @@ ms.workload: "Inactive"
   
     3.  Virtual account = NT Service\ MSOLAP$TAB2  
   
-     As you can see, database and file permissions that were previously granted to “NT Service\ MSOLAP$TABULAR” are no longer valid. To ensure that tasks and operations performed by the service run as before, you would now need to grant new database and file permissions to “NT Service\ MSOLAP$TAB2”.  
+     As you can see, database and file permissions that were previously granted to "NT Service\ MSOLAP$TABULAR" are no longer valid. To ensure that tasks and operations performed by the service run as before, you would now need to grant new database and file permissions to "NT Service\ MSOLAP$TAB2".  
   
   

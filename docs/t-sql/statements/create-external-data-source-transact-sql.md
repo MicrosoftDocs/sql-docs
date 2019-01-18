@@ -1,16 +1,11 @@
 ---
 title: "CREATE EXTERNAL DATA SOURCE (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "09/06/2017"
-ms.prod: "sql-non-specified"
+ms.date: "11/12/2018"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
-ms.service: ""
-ms.component: "t-sql|statements"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: t-sql
 ms.topic: "language-reference"
 f1_keywords: 
   - "CREATE EXTERNAL DATA SOURCE"
@@ -21,20 +16,18 @@ helpviewer_keywords:
   - "External"
   - "External, data source"
   - "PolyBase, create data source"
-ms.assetid: 75d8a220-0f4d-4d91-8ba4-9d852b945509
-caps.latest.revision: 58
-author: "barbkess"
-ms.author: "barbkess"
-manager: "jhubbard"
-ms.workload: "On Demand"
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # CREATE EXTERNAL DATA SOURCE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
 
-  Creates an external data source for PolyBase, Elastic Database queries, or Azure Blob storage. Depending on the scenario, the syntax differs significantly. A data source created for PolyBase cannot be used for Elastic Database queries.  Similarly, a data source created for Elastic Database queries cannot be used for PolyBase, etc. 
+  Creates an external data source for PolyBase, or Elastic Database queries. Depending on the scenario, the syntax differs significantly. An external data source created for PolyBase cannot be used for Elastic Database queries.  Similarly, an external data source created for Elastic Database queries cannot be used for PolyBase, etc. 
   
 > [!NOTE]  
->  PolyBase is supported only on SQL Server 2016, Azure SQL Data Warehouse, and Parallel Data Warehouse. Elastic Database queries are supported only on Azure SQL Database v12 or later.  
+>  PolyBase is supported only on SQL Server 2016 (or higher), Azure SQL Data Warehouse, and Parallel Data Warehouse. Elastic Database queries are supported only on Azure SQL Database v12 or later.  
   
  For PolyBase scenarios, the external data source is either a Hadoop File System (HDFS), an Azure storage blob container, or Azure Data Lake Store. For more information, see [Get started with PolyBase](../../relational-databases/polybase/get-started-with-polybase.md).  
   
@@ -59,10 +52,10 @@ CREATE EXTERNAL DATA SOURCE data_source_name
 [;]  
   
 -- PolyBase only: Azure Storage Blob as data source   
--- (on SQL Server 2016 and Azure SQL Data Warehouse)  
+-- (on SQL Server 2016)  
 CREATE EXTERNAL DATA SOURCE data_source_name  
     WITH (   
-        TYPE = HADOOP,  
+        TYPE = BLOB_STORAGE,  
         LOCATION = 'wasb[s]://container@account_name.blob.core.windows.net'
         [, CREDENTIAL = credential_name ]
     )  
@@ -77,23 +70,37 @@ WITH (
     CREDENTIAL = AzureStorageCredential
 );
 
+-- PolyBase only: Azure Data Lake Store Gen 2
+-- (on Azure SQL Data Warehouse)
+CREATE EXTERNAL DATA SOURCE ABFS 
+WITH
+(
+              TYPE=HADOOP,
+              LOCATION='abfs://<container>@<AzureDataLake account_name>.dfs.core.windows.net',
+              CREDENTIAL=ABFS_Credemt
+);
+GO
+
+
 -- PolyBase only: Hadoop cluster as data source
 -- (on Parallel Data Warehouse)
 CREATE EXTERNAL DATA SOURCE data_source_name
     WITH ( 
         TYPE = HADOOP, 
         LOCATION = 'hdfs://NameNode_URI[:port]'
-        [, JOB_TRACKER_LOCATION = 'JobTracker_URI[:port]' ]
+        [, RESOURCE_MANAGER_LOCATION = 'ResourceManager_URI[:port]' ]
+        [, CREDENTIAL = credential_name]
     )
 [;]
 
--- PolyBase only: Azure Storage Blob as data source 
--- (on Parallel Data Warehouse)
-CREATE EXTERNAL DATA SOURCE data_source_name
-    WITH ( 
-        TYPE = HADOOP,
+-- PolyBase only: Azure Storage Blob as data source   
+-- (on Parallel Data Warehouse)  
+CREATE EXTERNAL DATA SOURCE data_source_name  
+    WITH (   
+        TYPE = HADOOP,  
         LOCATION = 'wasb[s]://container@account_name.blob.core.windows.net'
-    )
+        [, CREDENTIAL = credential_name ]
+    )  
 [;]
   
 -- Elastic Database query only: a shard map manager as data source   
@@ -146,7 +153,7 @@ Example: `LOCATION = 'hdfs://10.10.10.10:8020'`
 For Azure blob storage with Hadoop, specifies the URI for connecting to Azure blob storage.  
 `LOCATION = 'wasb[s]://container@account_name.blob.core.windows.net'`  
 wasb[s]: Specifies the protocol for Azure blob storage. The [s] is optional and specifies a secure SSL connection; data sent from SQL Server is securely encrypted through the SSL protocol. We strongly recommend using 'wasbs' instead of 'wasb'. Note that the location can use asv[s] instead of wasb[s]. The asv[s] syntax is deprecated and will be removed in a future release.  
-container: Specifies the name of the Azure blob storage container. To specify the root container of a domain’s storage account, use the domain name instead of the container name. Root containers are read-only, so data cannot be written back to the container.  
+container: Specifies the name of the Azure blob storage container. To specify the root container of a domain's storage account, use the domain name instead of the container name. Root containers are read-only, so data cannot be written back to the container.  
 account_name: The fully qualified domain name (FQDN) of the Azure storage account.  
 Example: `LOCATION = 'wasbs://dailylogs@myaccount.blob.core.windows.net/'`
 
@@ -196,16 +203,32 @@ CREATE EXTERNAL DATA SOURCE MyElasticDBQueryDataSrc WITH
 For a step-by-step tutorial on RDBMS, see [Getting started with cross-database queries (vertical partitioning)](https://azure.microsoft.com/documentation/articles/sql-database-elastic-query-getting-started-vertical/).  
 
 **BLOB_STORAGE**   
-For bulk operations only, `LOCATION` must be valid the URL to Azure Blob storage and container. Do not put **/**, file name, or shared access signature parameters at the end of the `LOCATION` URL.   
-The credential used, must be created using `SHARED ACCESS SIGNATURE` as the identity. For more information on shared access signatures, see [Using Shared Access Signatures (SAS)](https://docs.microsoft.com/azure/storage/storage-dotnet-shared-access-signature-part-1). For an example of accessing blob storage, see example F of [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md). 
+This type is used for bulk operations only, `LOCATION` must be valid the URL to Azure Blob storage and container. Do not put **/**, file name, or shared access signature parameters at the end of the `LOCATION` URL. `CREDENTIAL` is required if the blob object is not public. For example: 
+```sql
+CREATE EXTERNAL DATA SOURCE MyAzureBlobStorage
+WITH (	TYPE = BLOB_STORAGE, 
+		LOCATION = 'https://****************.blob.core.windows.net/invoices', 
+		CREDENTIAL= MyAzureBlobStorageCredential	--> CREDENTIAL is not required if a blob has public access!
+);
+```
+The credential used, must be created using `SHARED ACCESS SIGNATURE` as the identity, should not have the leading `?` in SAS token, must have at least read permission on the file that should be loaded (for example `srt=o&sp=r`), and the expiration period should be valid (all dates are in UTC time). For example:
+```sql
+CREATE DATABASE SCOPED CREDENTIAL MyAzureBlobStorageCredential 
+ WITH IDENTITY = 'SHARED ACCESS SIGNATURE',
+ SECRET = '******srt=sco&sp=rwac&se=2017-02-01T00:55:34Z&st=2016-12-29T16:55:34Z***************';
+```
+
+For more information on shared access signatures, see [Using Shared Access Signatures (SAS)](https://docs.microsoft.com/azure/storage/storage-dotnet-shared-access-signature-part-1). For an example of accessing blob storage, see example F of [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md). 
+>[!NOTE] 
+>To load from Azure Blob storage into SQL DW or Parallel Data Warehouse, the Secret must be the Azure Storage Key.
 
   
  RESOURCE_MANAGER_LOCATION = '*ResourceManager_URI*[:*port*]'  
- Specifies the Hadoop resource manager location. When specified, the query optimizer can make a cost-based decision to pre-process data for a PolyBase query by using Hadoop’s computation capabilities with MapReduce. Called predicate pushdown, this can significantly reduce the volume of data transferred between Hadoop and SQL, and therefore improve query performance.  
+ Specifies the Hadoop resource manager location. When specified, the query optimizer can make a cost-based decision to pre-process data for a PolyBase query by using Hadoop's computation capabilities with MapReduce. Called predicate pushdown, this can significantly reduce the volume of data transferred between Hadoop and SQL, and therefore improve query performance.  
   
  When this is not specified, pushing compute to Hadoop is disabled for PolyBase queries.  
  
-If the port is not specified, the default value is determined using the current setting for ‘hadoop connectivity’ configuration.
+If the port is not specified, the default value is determined using the current setting for 'hadoop connectivity' configuration.
 
 |Hadoop Connectivity|Default Resource Manager Port|
 |-------------------|-----------------------------|
@@ -367,7 +390,7 @@ SECRET = '<azure_storage_account_key>';
 
 -- Create an external data source with CREDENTIAL option.
 CREATE EXTERNAL DATA SOURCE MyAzureStorage WITH (
-    TYPE = HADOOP, 
+    TYPE = BLOB_STORAGE, 
     LOCATION = 'wasbs://dailylogs@myaccount.blob.core.windows.net/',
     CREDENTIAL = AzureStorageCredential
 );
@@ -417,7 +440,7 @@ WITH (
 ## Examples: Azure SQL Data Warehouse
 
 ### G. Create external data source to reference Azure Data Lake Store
-Azure Data lake Store connectivity is based on your ADLS URI and your Azure Acitve directory Application's service principle. Documentation for creating this application can be found at[Data lake store authentication using Active Directory](https://docs.microsoft.com/en-us/azure/data-lake-store/data-lake-store-authenticate-using-active-directory).
+Azure Data lake Store connectivity is based on your ADLS URI and your Azure Active directory Application's service principle. Documentation for creating this application can be found at[Data lake store authentication using Active Directory](https://docs.microsoft.com/azure/data-lake-store/data-lake-store-authenticate-using-active-directory).
 
 ```sql
 -- If you do not have a Master Key on your DW you will need to create one.
@@ -466,8 +489,12 @@ CREATE EXTERNAL DATA SOURCE MyAzureStorage WITH (
 ## Examples: Bulk Operations   
 ### J. Create an external data source for bulk operations retrieving data from Azure Blob storage.   
 **Applies to:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)].   
-Use the following data source for bulk operations using [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) or [OPENROWSET](../../t-sql/functions/openrowset-transact-sql.md). The credential used, must be created using `SHARED ACCESS SIGNATURE` as the identity. For more information on shared access signatures, see [Using Shared Access Signatures (SAS)](https://docs.microsoft.com/azure/storage/storage-dotnet-shared-access-signature-part-1).   
+Use the following data source for bulk operations using [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) or [OPENROWSET](../../t-sql/functions/openrowset-transact-sql.md). The credential used, must be created using `SHARED ACCESS SIGNATURE` as the identity, should not have the leading `?` in SAS token, must have at least read permission on the file that should be loaded (for example `srt=o&sp=r`), and the expiration period should be valid (all dates are in UTC time). For more information on shared access signatures, see [Using Shared Access Signatures (SAS)](https://docs.microsoft.com/azure/storage/storage-dotnet-shared-access-signature-part-1).   
 ```sql
+CREATE DATABASE SCOPED CREDENTIAL AccessAzureInvoices 
+ WITH IDENTITY = 'SHARED ACCESS SIGNATURE',
+ SECRET = '(REMOVE ? FROM THE BEGINNING)******srt=sco&sp=rwac&se=2017-02-01T00:55:34Z&st=2016-12-29T16:55:34Z***************';
+
 CREATE EXTERNAL DATA SOURCE MyAzureInvoices
     WITH  (
         TYPE = BLOB_STORAGE,
@@ -475,7 +502,7 @@ CREATE EXTERNAL DATA SOURCE MyAzureInvoices
 		CREDENTIAL = AccessAzureInvoices
     );   
 ```   
-To see this example in use, see [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md).
+To see this example in use, see [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md#f-importing-data-from-a-file-in-azure-blob-storage).
   
 ## See Also
 [ALTER EXTERNAL DATA SOURCE (Transact-SQL)](../../t-sql/statements/alter-external-data-source-transact-sql.md)  

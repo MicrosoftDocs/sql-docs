@@ -2,24 +2,17 @@
 title: "Configure Dialog Security for Event Notifications | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/09/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "database-engine"
-ms.service: ""
-ms.component: "service-broker"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: security
+ms.topic: conceptual
 helpviewer_keywords: 
   - "event notifications [SQL Server], security"
 ms.assetid: 12afbc84-2d2a-4452-935e-e1c70e8c53c1
-caps.latest.revision: 23
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-ms.workload: "Inactive"
+author: VanMSFT
+ms.author: vanto
+manager: craigg
 ---
 # Configure Dialog Security for Event Notifications
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -55,7 +48,7 @@ ms.workload: "Inactive"
 |Source server|Target server|  
 |-------------------|-------------------|  
 |[Create a certificate](../../t-sql/statements/create-certificate-transact-sql.md) from the backup file of the target certificate, specifying the target database user as the owner.|Create a certificate from the backup file of the source certificate, specifying the source database user as the owner.|  
-|[Grant permission](../../t-sql/statements/grant-transact-sql.md) to create the event notification to the source database user. For more information about this permission, see [CREATE EVENT NOTIFICATION &#40;Transact-SQL&#41;](../../t-sql/statements/create-event-notification-transact-sql.md).|Grant REFERENCES permission to the target database user on the existing event notifications [!INCLUDE[ssSB](../../includes/sssb-md.md)] contract: `http://schemas.microsoft.com/SQL/Notifications/PostEventNotification`.|  
+|[Grant permission](../../t-sql/statements/grant-transact-sql.md) to create the event notification to the source database user. For more information about this permission, see [CREATE EVENT NOTIFICATION &#40;Transact-SQL&#41;](../../t-sql/statements/create-event-notification-transact-sql.md).|Grant REFERENCES permission to the target database user on the existing event notifications [!INCLUDE[ssSB](../../includes/sssb-md.md)] contract: `https://schemas.microsoft.com/SQL/Notifications/PostEventNotification`.|  
 |[Create a remote service binding](../../t-sql/statements/create-remote-service-binding-transact-sql.md) to the target service and specify the credentials of the target database user. The remote service binding guarantees that the public key in the certificate owned by the source database user will authenticate messages that are sent to the target server.|[Grant](../../t-sql/statements/grant-transact-sql.md) CREATE QUEUE, CREATE SERVICE, and CREATE SCHEMA permissions to the target database user.|  
 ||If not already connected to the database as the target database user, do so now.|  
 ||[Create a queue](../../t-sql/statements/create-queue-transact-sql.md) to receive the event notification messages and [create a service](../../t-sql/statements/create-service-transact-sql.md) to deliver the messages.|  
@@ -68,7 +61,7 @@ ms.workload: "Inactive"
   
 |Source server|Target server|  
 |-------------------|-------------------|  
-|[Create a route](../../t-sql/statements/create-route-transact-sql.md) to the target service, and specify the service broker identifier of the target database and the agreed-upon TCP port number.|Create a route to the source service, and specify the service broker identifier of the source database and the agreed-upon TCP port number. To specify the source service, use the following supplied service: `http://schemas.microsoft.com/SQL/Notifications/EventNotificationService`.|  
+|[Create a route](../../t-sql/statements/create-route-transact-sql.md) to the target service, and specify the service broker identifier of the target database and the agreed-upon TCP port number.|Create a route to the source service, and specify the service broker identifier of the source database and the agreed-upon TCP port number. To specify the source service, use the following supplied service: `https://schemas.microsoft.com/SQL/Notifications/EventNotificationService`.|  
 |Switch to the **master** database to configure server-level authentication.|Switch to the **master** database to configure server-level authentication.|  
 |If no master key exists for the **master** database, [create a master key](../../t-sql/statements/create-master-key-transact-sql.md).|If no master key exists for the **master** database, create a master key.|  
 |[Create a certificate](../../t-sql/statements/create-certificate-transact-sql.md) that authenticates the database.|Create a certificate that authenticates the database.|  

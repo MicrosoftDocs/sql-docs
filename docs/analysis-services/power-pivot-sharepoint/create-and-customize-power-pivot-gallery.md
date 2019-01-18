@@ -1,25 +1,14 @@
 ---
 title: "Create and Customize Power Pivot Gallery | Microsoft Docs"
-ms.custom: ""
-ms.date: "08/31/2015"
-ms.prod: analysis-services
-ms.prod_service: "analysis-services"
-ms.service: ""
-ms.component: ""
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
-  
-ms.component: multidimensional-tabular
-ms.component: data-mining
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-ms.assetid: b5cd35e0-3d8f-4784-9172-93d60c730321
-caps.latest.revision: 17
-author: "Minewiskan"
-ms.author: "owend"
-manager: "kfile"
-ms.workload: "Inactive"
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: ppvt-sharepoint
+ms.topic: conceptual
+ms.author: owend
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
 ---
 # Create and Customize Power Pivot Gallery
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -126,7 +115,7 @@ ms.workload: "Inactive"
   
  ![as_powerpivot_refresh_manage_reresh](../../analysis-services/power-pivot-sharepoint/media/as-powerpivot-refresh-manage-reresh.gif "as_powerpivot_refresh_manage_reresh")  
   
- Workbook owners or authors must have **Contribute** permission to schedule data refresh on a workbook. Users with Contribute permissions can open and edit the workbook’s data refresh configuration page to specify the credentials and schedule information used to refresh the data.  
+ Workbook owners or authors must have **Contribute** permission to schedule data refresh on a workbook. Users with Contribute permissions can open and edit the workbook's data refresh configuration page to specify the credentials and schedule information used to refresh the data.  
   
  So, users that only have **View** or **Read** permission levels, will not be able to access the refresh button. The refresh button is visible but disabled. For more information, see [User permissions and permission levels in SharePoint 2013](http://technet.microsoft.com/library/cc721640.aspx).  
   

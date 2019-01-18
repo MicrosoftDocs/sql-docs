@@ -1,23 +1,14 @@
 ---
 title: "Add navigators to Reporting Services mobile reports | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
+ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
-ms.service: ""
-ms.component: "mobile-reports"
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
+ms.technology: mobile-reports
 
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 ms.assetid: e141f50e-49a9-46c6-983c-f656013aa07c
-caps.latest.revision: 12
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "kfile"
-ms.workload: "Inactive"
+author: maggiesMSFT
+ms.author: maggies
 ---
 # Add navigators to Reporting Services mobile reports
 In [!INCLUDE[SS_MobileReptPub_Long](../../includes/ss-mobilereptpub-long.md)], you add *navigators* to filter the data in visualizations by time or by selection. 

@@ -2,15 +2,10 @@
 title: "replace value of (XML DML) | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/26/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.service: ""
-ms.component: "t-sql|xml"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: t-sql
 ms.topic: "language-reference"
 dev_langs: 
   - "TSQL"
@@ -21,11 +16,9 @@ helpviewer_keywords:
   - "updating node values"
   - "replace value of XML DML statement"
 ms.assetid: c310f6df-7adf-493b-b56b-8e3143b13ae7
-caps.latest.revision: 28
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
-ms.workload: "On Demand"
+manager: craigg
 ---
 # replace value of (XML DML)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -42,7 +35,7 @@ with Expression2
   
 ## Arguments  
  *Expression1*  
- Identifies a node whose value is to be updated. It must identify only a single node. That is, *Expression1* must be a statical singleton. If the XML is typed, the type of the node must be a simple type. If multiple nodes are selected, an error is raised. If *Expression1* returns an empty sequence, no value replacement occurs and no errors are returned. *Expression1* must return a single element that has simply typed content (list or atomic types), a text node, or an attribute node. *Expression1* cannot be a union type, a complex type, a processing instruction, a document node, or a comment node. If it is, an error is returned.  
+ Identifies a node whose value is to be updated. It must identify only a single node. That is, *Expression1* must be a static singleton. If the XML is typed, the type of the node must be a simple type. If multiple nodes are selected, an error is raised. If *Expression1* returns an empty sequence, no value replacement occurs and no errors are returned. *Expression1* must return a single element that has simply typed content (list or atomic types), a text node, or an attribute node. *Expression1* cannot be a union type, a complex type, a processing instruction, a document node, or a comment node. If it is, an error is returned.  
   
  *Expression2*  
  Identifies the new value of the node. This can be an expression that returns a simply typed node, because **data()** will be used implicitly. If the value is a list of values, the **update** statement replaces the old value with the list. In modifying a typed XML instance, *Expression2* must be the same type or a subtype of *Expression*1. Otherwise, an error is returned. In modifying an untyped XML instance, *Expression2* must be an expression that can be atomized. Otherwise, an error is returned.  
@@ -159,7 +152,7 @@ go
 --insert a new location - <Location 1000/>.   
 update T  
 set Instructions.modify('  
-  declare namespace MI="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";  
+  declare namespace MI="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";  
 insert <MI:Location LocationID="1000"  LaborHours="1000"  LotSize="1000" >  
            <MI:step>Do something using <MI:tool>hammer</MI:tool></MI:step>  
          </MI:Location>  
@@ -173,7 +166,7 @@ go
 -- Now replace manu. tool in location 1000  
 update T  
 set Instructions.modify('  
-  declare namespace MI="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";  
+  declare namespace MI="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";  
   replace value of (/MI:root/MI:Location/MI:step/MI:tool)[1]   
   with   "screwdriver"  
 ')  
@@ -183,7 +176,7 @@ from T
 -- Now replace value of lot size  
 update T  
 set Instructions.modify('  
-  declare namespace MI="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";  
+  declare namespace MI="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";  
   replace value of (/MI:root/MI:Location/@LotSize)[1]   
   with   500 cast as xs:decimal ?  
 ')  

@@ -2,26 +2,19 @@
 title: "Expressions Page | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "integration-services"
-ms.service: ""
-ms.component: "expressions"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: integration-services
+ms.topic: conceptual
 f1_keywords: 
   - "sql13.dts.designer.expressionspage.f1"
 helpviewer_keywords: 
   - "Expressions Page dialog box"
 ms.assetid: c9016ec6-11c1-4ebd-b2a7-0fa6631fd9e4
-caps.latest.revision: 17
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
-ms.workload: "Inactive"
+manager: craigg
 ---
 # Expressions Page
   Use the **Expressions** page to edit property expressions and to access the **Property Expressions Editor** and **Property Expression Builder** dialog boxes.  
@@ -31,7 +24,7 @@ ms.workload: "Inactive"
  To learn more about writing expressions and using property expressions, see [Integration Services &#40;SSIS&#41; Expressions](../../integration-services/expressions/integration-services-ssis-expressions.md) and [Use Property Expressions in Packages](../../integration-services/expressions/use-property-expressions-in-packages.md).  
   
 ## Options  
- **Expressions (…)**  
+ **Expressions (...)**  
  Click the ellipsis to open the **Property Expressions Editor** dialog box. For more information, see [Property Expressions Editor](../../integration-services/expressions/property-expressions-editor.md).  
   
  **\<property name>**  

@@ -1,24 +1,17 @@
 ---
 title: "Targets for Extended Events in SQL Server | Microsoft Docs"
 ms.custom: ""
-ms.date: "06/12/2017"
-ms.prod: "sql-non-specified"
+ms.date: "09/07/2018"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.service: ""
-ms.component: "extended-events"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-  - "xevents"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: xevents
+ms.topic: conceptual
 ms.assetid: 47c64144-4432-4778-93b5-00496749665b
-caps.latest.revision: 2
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
-ms.workload: "Inactive"
+author: MightyPen
+ms.author: genemi
+manager: craigg
+monikerRange: "=azuresqldb-current||=azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017"
 ---
 # Targets for Extended Events in SQL Server
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -85,6 +78,10 @@ SQL Server extended events can inter-operate with Event Tracing for Windows (ETW
 
 This ETW target processes *synchronously* the data it receives, whereas most targets process *asynchronously*.
 
+> [!NOTE]
+> Azure SQL Database does not support the `etw_classic_sync_target target`.
+
+<!-- After OPS Versioning is live, the above !NOTE could be converted into a "3colon ZONE".  GeneMi = MightyPen. -->
 
 <a name="h2_target_event_counter"></a>
 
@@ -147,6 +144,15 @@ The **event_file** target writes event session output from buffer to a disk file
 
 
 - The file name you choose is used by the system as a prefix to which a date-time based long integer is appended, followed by the .xel extension.
+
+::: moniker range="= azuresqldb-current || = azuresqldb-mi-current || = sqlallproducts-allversions"
+
+> [!NOTE]
+> Azure SQL Database only supports storing `xel` files on Azure blob storage. 
+>
+> For an **event_file** code example particular to SQL Database (and to SQL Database Managed Instance), see [Event File target code for extended events in SQL Database](https://docs.microsoft.com/azure/sql-database/sql-database-xevent-code-event-file).
+
+::: moniker-end
 
 
 #### CREATE EVENT SESSION with **event_file** target

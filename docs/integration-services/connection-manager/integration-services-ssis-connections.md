@@ -2,16 +2,11 @@
 title: "Integration Services (SSIS) Connections | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "integration-services"
-ms.service: ""
-ms.component: "connection-manager"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: integration-services
+ms.topic: conceptual
 f1_keywords: 
   - "sql13.asvs.connectionmanager.f1"
   - "sql13.dts.designer.adddtsconnection.f1"
@@ -26,11 +21,9 @@ helpviewer_keywords:
   - "connections [Integration Services]"
   - "SQL Server Integration Services packages, connections"
 ms.assetid: 72f5afa3-d636-410b-9e81-2ffa27772a8c
-caps.latest.revision: 92
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
-ms.workload: "Active"
+manager: craigg
 ---
 # Integration Services (SSIS) Connections
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] packages use connections to perform different tasks and to implement [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] features:  
@@ -111,9 +104,9 @@ A connection manager can be created at the package level or at the project level
   
 |Type|Description|Topic|  
 |----------|-----------------|-----------|  
-|ORACLE|Connects to an Oracle \<version info\> server.|The Oracle connection manager is the connection manager component of the [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector for Oracle by Attunity. The [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector for Oracle by Attunity also includes a source and a destination. For more information, see the download page, [Microsoft Connectors for Oracle and Teradata by Attunity](http://go.microsoft.com/fwlink/?LinkId=251526).|  
-|SAPBI|Connects to an SAP NetWeaver BI version 7 system.|The SAP BI connection manager is the connection manager component of the [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector for SAP BI. The [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector for SAP BI also includes a source and a destination. For more information, see the download page, [Microsoft SQL Server 2008 Feature Pack](http://go.microsoft.com/fwlink/?LinkId=262016).|  
-|TERADATA|Connects to a Teradata \<version info\> server.|The Teradata connection manager is the connection manager component of the [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector for Teradata by Attunity. The [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector for Teradata by Attunity also includes a source and a destination. For more information, see the download page, [Microsoft Connectors for Oracle and Teradata by Attunity](http://go.microsoft.com/fwlink/?LinkId=251526).|  
+|ORACLE|Connects to an Oracle \<version info\> server.|The Oracle connection manager is the connection manager component of the [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector for Oracle by Attunity. The [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector for Oracle by Attunity also includes a source and a destination. For more information, see the download page, [Microsoft Connectors for Oracle and Teradata by Attunity](https://go.microsoft.com/fwlink/?LinkId=251526).|  
+|SAPBI|Connects to an SAP NetWeaver BI version 7 system.|The SAP BI connection manager is the connection manager component of the [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector for SAP BI. The [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector for SAP BI also includes a source and a destination. For more information, see the download page, [Microsoft SQL Server 2008 Feature Pack](https://go.microsoft.com/fwlink/?LinkId=262016).|  
+|TERADATA|Connects to a Teradata \<version info\> server.|The Teradata connection manager is the connection manager component of the [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector for Teradata by Attunity. The [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector for Teradata by Attunity also includes a source and a destination. For more information, see the download page, [Microsoft Connectors for Oracle and Teradata by Attunity](https://go.microsoft.com/fwlink/?LinkId=251526).|  
   
 ### Custom Connection Managers  
  You can also write custom connection managers. For more information, see [Developing a Custom Connection Manager](../../integration-services/extending-packages-custom-objects/connection-manager/developing-a-custom-connection-manager.md).  
@@ -160,7 +153,7 @@ A connection manager can be created at the package level or at the project level
   
     -   Click the connection manager type to add to the package.  
   
-         —or—  
+         -or-  
   
     -   If the type that you want to add is not listed, click **New Connection** to open the **Add SSIS Connection Manager** dialog box, select a connection manager type, and then click **OK**.  
   
@@ -227,7 +220,7 @@ A connection manager can be created at the package level or at the project level
 4.  Optionally, right-click the connection manager in the **Solution Explorer** window under **Connection Managers** node (or) in the **Connection Managers** tab of the **SSIS Designer** window, click **Rename**, and then modify the default name of the connection manager.  
   
     > [!NOTE]  
-    >  In the **Connection Managers** tab of the **SSIS Designer** window, you won’t be able to overwrite the **(project)** prefix from the connection manager name. This is by design.  
+    >  In the **Connection Managers** tab of the **SSIS Designer** window, you won't be able to overwrite the **(project)** prefix from the connection manager name. This is by design.  
 
 ### Add SSIS Connection Manager dialog box
 Use the **Add SSIS Connection Manager** dialog box to select the type of connection to add to a package.  
@@ -245,7 +238,7 @@ Use the **Add SSIS Connection Manager** dialog box to select the type of connect
   
 1.  In the **Connection Managers** area, right-click the connection manager that you want to create a parameter for and then click **Parameterize**.  
   
-2.  Configure the parameter settings in the **Parameterize** dialog box. For more information, see [Parameterize Dialog Box](http://msdn.microsoft.com/library/fac02b6d-d247-447a-8940-e8700c7ac350).  
+2.  Configure the parameter settings in the **Parameterize** dialog box. For more information, see [Parameterize Dialog Box](https://msdn.microsoft.com/library/fac02b6d-d247-447a-8940-e8700c7ac350).  
 
 ## Delete a connection manager 
 ###  <a name="DeletePackageLevel"></a> Delete a connection manager from a package  
@@ -335,14 +328,14 @@ All connection managers can be configured using the **Properties** window.
 
 ## Related Content  
   
--   Video, [Leverage Microsoft Attunity Connector for Oracle to enhance Package Performance](http://technet.microsoft.com/sqlserver/gg598963.aspx), on technet.microsoft.com  
+-   Video, [Leverage Microsoft Attunity Connector for Oracle to enhance Package Performance](https://technet.microsoft.com/sqlserver/gg598963.aspx), on technet.microsoft.com  
   
--   Wiki articles, [SSIS Connectivity](http://social.technet.microsoft.com/wiki/contents/articles/sql-server-integration-services-ssis.aspx#Connectivity), on social.technet.microsoft.com  
+-   Wiki articles, [SSIS Connectivity](https://social.technet.microsoft.com/wiki/contents/articles/sql-server-integration-services-ssis.aspx#Connectivity), on social.technet.microsoft.com  
   
--   Blog entry, [Connecting to MySQL from SSIS](http://go.microsoft.com/fwlink/?LinkId=217669), on blogs.msdn.com.  
+-   Blog entry, [Connecting to MySQL from SSIS](https://go.microsoft.com/fwlink/?LinkId=217669), on blogs.msdn.com.  
   
--   Technical article, [Extracting and Loading SharePoint Data in SQL Server Integration Services](http://go.microsoft.com/fwlink/?LinkId=247826), on msdn.microsoft.com.  
+-   Technical article, [Extracting and Loading SharePoint Data in SQL Server Integration Services](https://go.microsoft.com/fwlink/?LinkId=247826), on msdn.microsoft.com.  
   
--   Technical article, [You get "DTS_E_CANNOTACQUIRECONNECTIONFROMCONNECTIONMANAGER" error message when using Oracle connection manager in SSIS](http://go.microsoft.com/fwlink/?LinkId=233696), on support.microsoft.com.  
+-   Technical article, [You get "DTS_E_CANNOTACQUIRECONNECTIONFROMCONNECTIONMANAGER" error message when using Oracle connection manager in SSIS](https://go.microsoft.com/fwlink/?LinkId=233696), on support.microsoft.com.  
   
   

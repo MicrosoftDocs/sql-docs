@@ -1,28 +1,18 @@
 ---
 title: "Modifying the Customer Dimension | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/04/2017"
-ms.prod: analysis-services
-ms.prod_service: "analysis-services"
-ms.service: ""
-ms.component: ""
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
-  
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
-applies_to: 
-  - "SQL Server 2016"
-ms.assetid: 5b5aed99-1760-4bc7-b248-52ecb0b97ebc
-caps.latest.revision: 22
-author: "Minewiskan"
-ms.author: "owend"
-manager: "kfile"
-ms.workload: "On Demand"
+ms.date: 05/08/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: multidimensional-models
+ms.topic: tutorial
+ms.author: owend
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
 ---
 # Lesson 3-2 - Modifying the Customer Dimension
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
 There are many different ways that you can increase the usability and functionality of the dimensions in a cube. In the tasks in this topic, you modify the Customer dimension.  
   
 ## Renaming Attributes  
@@ -36,11 +26,11 @@ You can change attribute names with the **Dimension Structure** tab of Dimension
   
 3.  Change the names of the following attributes in the same manner:  
   
-    -   **English Education** attribute — change to **Education**  
+    -   **English Education** attribute - change to **Education**  
   
-    -   **English Occupation** attribute — change to **Occupation**  
+    -   **English Occupation** attribute - change to **Occupation**  
   
-    -   **State Province Name** attribute — change to **State-Province**  
+    -   **State Province Name** attribute - change to **State-Province**  
   
 4.  On the **File** menu, click **Save All**.  
   
@@ -110,7 +100,7 @@ After you have created a named calculation in the data source view, you can use 
   
 4.  In the **Name** property field, type **Full Name**.  
   
-5.  Click in the **NameColumn** property field at the bottom, and then click the browse (**…**) button to open the **Name Column** dialog box.  
+5.  Click in the **NameColumn** property field at the bottom, and then click the browse (**...**) button to open the **Name Column** dialog box.  
   
 6.  Select **FullName** at the bottom of the **Source column** list, and then click **OK**.  
   

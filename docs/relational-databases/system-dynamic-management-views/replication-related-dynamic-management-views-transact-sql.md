@@ -2,15 +2,9 @@
 title: "Replication Related Dynamic Management Views (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/15/2017"
-ms.prod: "sql-non-specified"
-ms.prod_service: "database-engine"
-ms.service: ""
-ms.component: "dmv's"
+ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: system-objects
 ms.topic: "language-reference"
 dev_langs: 
   - "TSQL"
@@ -18,11 +12,9 @@ helpviewer_keywords:
   - "dynamic management objects [SQL Server], replication"
   - "replication dynamic management objects [SQL Server]"
 ms.assetid: 2bf5e145-3c4c-4fb6-afa0-197342dba038
-caps.latest.revision: 11
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-ms.workload: "Inactive"
+author: stevestein
+ms.author: sstein
+manager: craigg
 ---
 # Replication Related Dynamic Management Views (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]

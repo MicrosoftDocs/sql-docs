@@ -1,29 +1,18 @@
 ---
 title: "Getting Started with SSMA for MySQL Console (MySQLToSQL) | Microsoft Docs"
-ms.prod: "sql-non-specified"
-ms.prod_service: "sql-tools"
-ms.service: ""
-ms.component: "ssma-mysql"
+ms.prod: sql
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "sql-ssma"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to: 
-  - "Azure SQL Database"
-  - "SQL Server"
+ms.technology: ssma
+ms.topic: conceptual
 helpviewer_keywords: 
   - "MySQL Console, launching console"
   - "MySQL Console, output conventions"
 ms.assetid: 218d502c-059f-4d48-9aea-61e553d74303
-caps.latest.revision: 23
 author: "Shamikg"
 ms.author: "Shamikg"
-manager: "jhubbard"
-ms.workload: "Inactive"
+manager: craigg
 ---
 # Getting Started with SSMA for MySQL Console (MySQLToSQL)
 This section describes the procedure to launch and get started with the MySQL console application. Also listed, herein, are the conventions used in a typical SSMA Console output window.  
@@ -50,9 +39,9 @@ After the console is successfully launched on your Windows system, you could use
   
 Additional features:  
   
-1.  [Securing Password](http://msdn.microsoft.com/en-us/4ffbc587-ea3f-49ad-bc42-a654f672325e) and export/ import it onto other Window machines  
+1.  [Securing Password](managing-passwords-mysqltosql.md) and export/ import it onto other Window machines  
   
-2.  [Generate Reports](http://msdn.microsoft.com/en-us/1c0202e8-546d-4cb3-a37f-1d2e35d53839) to view the detailed xml output reports for assessment /conversion and data migration. Detailed error reports can also be generated for refresh and synchronization commands.  
+2.  [Generate Reports](generating-reports-mysqltosql.md) to view the detailed xml output reports for assessment /conversion and data migration. Detailed error reports can also be generated for refresh and synchronization commands.  
   
 ## SSMA Console Output Conventions  
 Upon executing the SSMA script commands and options, the console program displays the results and messages (information, error, etc.) to the user on the console or if required, redirects to an xml output file. Each type of message in the output is signified by a unique color. For example, the text message in white color denotes script file commands; the one in green color represents a prompt for user-input, and so on.  
@@ -71,5 +60,5 @@ Color-interpretation of the console output in the following table:
 |Cyan|Start, Finish and Result of an operation|  
   
 ## See Also  
-[Installing SSMA for MySQL](http://msdn.microsoft.com/en-us/e89b45bd-59c1-4d23-8bd7-3dafc1947448)  
+[Installing SSMA for MySQL](installing-ssma-for-mysql-mysqltosql.md)  
   

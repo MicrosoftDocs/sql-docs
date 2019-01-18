@@ -2,15 +2,10 @@
 title: "CURRENT_USER (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/24/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
-ms.service: ""
-ms.component: "t-sql|functions"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: t-sql
 ms.topic: "language-reference"
 f1_keywords: 
   - "CURRENT_USER"
@@ -24,16 +19,15 @@ helpviewer_keywords:
   - "CURRENT_USER"
   - "users [SQL Server], names"
 ms.assetid: 29248949-325b-4063-9f55-5a445fb35c6e
-caps.latest.revision: 43
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "craigg"
-ms.workload: "Active"
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # CURRENT_USER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-Returns the name of the current user. This function is equivalent to USER_NAME().
+This function returns the name of the current user. This function is equivalent to `USER_NAME()`.
   
 ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -47,14 +41,14 @@ CURRENT_USER
 **sysname**
   
 ## Remarks  
-CURRENT_USER returns the name of the current security context. If CURRENT_USER is executed after a call to EXECUTE AS switches context, CURRENT_USER will return the name of the impersonated context. If a Windows principal accessed the database by way of membership in a group, the name of the Windows principal will be returned instead of the name of the group.
+`CURRENT_USER` returns the name of the current security context. If `CURRENT_USER` executes after a call to `EXECUTE AS` switches context, `CURRENT_USER` will return the name of the impersonated context. If a Windows principal accessed the database by way of membership in a group, `CURRENT_USER` will return the name of the Windows principal instead of the group name.
   
-To return the login of the current user, see [SUSER_NAME &#40;Transact-SQL&#41;](../../t-sql/functions/suser-name-transact-sql.md) and [SYSTEM_USER &#40;Transact-SQL&#41;](../../t-sql/functions/system-user-transact-sql.md).
+See [SUSER_NAME &#40;Transact-SQL&#41;](../../t-sql/functions/suser-name-transact-sql.md) and [SYSTEM_USER &#40;Transact-SQL&#41;](../../t-sql/functions/system-user-transact-sql.md) to learn about how to return the login of the current user.
   
 ## Examples  
   
 ### A. Using CURRENT_USER to return the current user name  
-The following example returns the name of the current user.
+This example returns the name of the current user.
   
 ```sql
 SELECT CURRENT_USER;  
@@ -62,7 +56,7 @@ GO
 ```  
   
 ### B. Using CURRENT_USER as a DEFAULT constraint  
-The following example creates a table that uses `CURRENT_USER` as a `DEFAULT` constraint for the `order_person` column on a sales row.
+This example creates a table that uses `CURRENT_USER` as a `DEFAULT` constraint, for the `order_person` column, on a sales row.
   
 ```sql
 USE AdventureWorks2012;  
@@ -83,7 +77,7 @@ order_person char(30) NOT NULL DEFAULT CURRENT_USER
 GO  
 ```  
   
-The following code inserts a record in the table. The user that is executing these statements is named `Wanida`.
+This example inserts a record in the table. The user named `Wanida` executes these statements.
   
 ```sql
 INSERT orders22 (cust_id, order_amt)  
@@ -93,7 +87,7 @@ SET NOCOUNT OFF;
 GO  
 ```  
   
-The following query selects all information from the `orders22` table.
+This query selects all information from the `orders22` table.
   
 ```sql
 SELECT * FROM orders22;  
@@ -111,7 +105,7 @@ order_id    cust_id     order_date           order_amt    order_person
 ```
   
 ### C. Using CURRENT_USER from an impersonated context  
-In the following example, user `Wanida` executes the following [!INCLUDE[tsql](../../includes/tsql-md.md)] code.
+In this example, user `Wanida` executes the following [!INCLUDE[tsql](../../includes/tsql-md.md)] code to impersonate user 'Arnalfo'.
   
 ```sql
 SELECT CURRENT_USER;  

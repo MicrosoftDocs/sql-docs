@@ -1,17 +1,11 @@
 ---
 title: "sys.dm_db_log_info (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "08/16/2017"
-ms.prod: "sql-non-specified"
-ms.prod_service: "database-engine"
-ms.service: ""
-ms.component: "dmv's"
+ms.date: "04/24/2018"
+ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: system-objects
+ms.topic: conceptual
 f1_keywords: 
   - "sys.dm_db_log_info"
   - "sys.dm_db_log_info_TSQL"
@@ -22,14 +16,13 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.dm_db_log_info dynamic management view"
 ms.assetid: f6b40060-c17d-472f-b0a3-3b350275d487
-caps.latest.revision: 4
 author: "savjani"
 ms.author: "pariks"
 manager: "ajayj"
-ms.workload: "Inactive"
+monikerRange: ">=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.dm_db_log_info (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-2016sp2-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-2016sp2-asdb-xxxx-xxx-md.md)]
 
 Returns [virtual log file (VLF)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch) information of the transaction log. Note all transaction log files are combined in the table output. Each row in the output represents a VLF in the transaction log and provides information relevant to that VLF in the log.
 
@@ -37,7 +30,8 @@ Returns [virtual log file (VLF)](../../relational-databases/sql-server-transacti
   
 ```  
 sys.dm_db_log_info ( database_id )  
-```  
+``` 
+
 ## Arguments  
  *database_id* | NULL | DEFAULT  
  Is the ID of the database. *database_id* is **int**. Valid inputs are the ID number of a database, NULL, or DEFAULT. The default is NULL. NULL and DEFAULT are equivalent values in the context of current database.
@@ -60,12 +54,13 @@ sys.dm_db_log_info ( database_id )
 |vlf_parity|**tinyint** |Parity of [virtual log file (VLF)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch).Used internally to determine the end of log within a VLF.|
 |vlf_first_lsn|**nvarchar(48)** |[Log sequence number (LSN)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#Logical_Arch) of the first log record in the [virtual log file (VLF)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch).|
 |vlf_create_lsn|**nvarchar(48)** |[Log sequence number (LSN)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#Logical_Arch) of the log record that created the [virtual log file (VLF)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch).|
+|vlf_encryptor_thumbprint|**varbinary(20)**| **Applies to:** [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] <br><br> Shows the thumbprint of the encryptor of the VLF if the VLF is encrypted using [Transparent Data Encryption](../../relational-databases/security/encryption/transparent-data-encryption.md), otherwise NULL. |
 
 ## Remarks
- The `sys.dm_db_log_info` dynamic management function replaces the `DBCC LOGINFO` statement. 
+The `sys.dm_db_log_info` dynamic management function replaces the `DBCC LOGINFO` statement.    
  
 ## Permissions  
- Requires the `VIEW DATABASE STATE` permission in the database.  
+Requires the `VIEW DATABASE STATE` permission in the database.  
   
 ## Examples  
   
@@ -80,19 +75,33 @@ GROUP BY [name]
 HAVING COUNT(l.database_id) > 100
 ```
 
-### B. Determing the status of last `VLF` in transaction log before shrinking the log file
+### B. Determing the position of the last `VLF` in transaction log before shrinking the log file
 
-The following query can be used to determine the status of last VLF before running shrinkfile on transaction log to determine if transaction log can shrink.
+The following query can be used to determine the position of the last active VLF before running shrinkfile on transaction log to determine if transaction log can shrink.
 
 ```sql
 USE AdventureWorks2016
 GO
 
-SELECT TOP 1 DB_NAME(database_id) AS "Database Name", file_id, vlf_size_mb, vlf_sequence_number, vlf_active, vlf_status
-FROM sys.dm_db_log_info(DEFAULT)
-ORDER BY vlf_sequence_number DESC
+;WITH cte_vlf AS (
+SELECT ROW_NUMBER() OVER(ORDER BY vlf_begin_offset) AS vlfid, DB_NAME(database_id) AS [Database Name], vlf_sequence_number, vlf_active, vlf_begin_offset, vlf_size_mb
+	FROM sys.dm_db_log_info(DEFAULT)),
+cte_vlf_cnt AS (SELECT [Database Name], COUNT(vlf_sequence_number) AS vlf_count,
+	(SELECT COUNT(vlf_sequence_number) FROM cte_vlf WHERE vlf_active = 0) AS vlf_count_inactive,
+	(SELECT COUNT(vlf_sequence_number) FROM cte_vlf WHERE vlf_active = 1) AS vlf_count_active,
+	(SELECT MIN(vlfid) FROM cte_vlf WHERE vlf_active = 1) AS ordinal_min_vlf_active,
+	(SELECT MIN(vlf_sequence_number) FROM cte_vlf WHERE vlf_active = 1) AS min_vlf_active,
+	(SELECT MAX(vlfid) FROM cte_vlf WHERE vlf_active = 1) AS ordinal_max_vlf_active,
+	(SELECT MAX(vlf_sequence_number) FROM cte_vlf WHERE vlf_active = 1) AS max_vlf_active
+	FROM cte_vlf
+	GROUP BY [Database Name])
+SELECT [Database Name], vlf_count, min_vlf_active, ordinal_min_vlf_active, max_vlf_active, ordinal_max_vlf_active,
+((ordinal_min_vlf_active-1)*100.00/vlf_count) AS free_log_pct_before_active_log,
+((ordinal_max_vlf_active-(ordinal_min_vlf_active-1))*100.00/vlf_count) AS active_log_pct,
+((vlf_count-ordinal_max_vlf_active)*100.00/vlf_count) AS free_log_pct_after_active_log
+FROM cte_vlf_cnt
+GO
 ```
-
 
 ## See Also  
 [Dynamic Management Views and Functions &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   

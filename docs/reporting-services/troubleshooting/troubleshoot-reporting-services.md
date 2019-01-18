@@ -1,24 +1,16 @@
 ---
 title: "Troubleshoot Reporting Services | Microsoft Docs"
-ms.custom: ""
-ms.date: "05/25/2016"
+ms.date: 01/17/2018
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
-ms.service: ""
-ms.component: "troubleshooting"
-ms.reviewer: ""
-ms.suite: "pro-bi"
+ms.technology: troubleshooting
 ms.technology:
 
 
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 ms.assetid: 6eeed553-512d-4603-9b14-0492a9d052b5
-caps.latest.revision: 14
-author: "markingmyname"
-ms.author: "maghan"
-manager: "kfile"
-ms.workload: "Inactive"
+author: markingmyname
+ms.author: maghan
 ---
 # Troubleshoot Reporting Services
   The topics in this section help identify and troubleshoot issues with [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
@@ -45,5 +37,10 @@ ms.workload: "Inactive"
 +  [Cause and Resolution of Reporting Services Errors](../../reporting-services/troubleshooting/cause-and-resolution-of-reporting-services-errors.md)  
 
 ## See Also  
- [Reporting Services Log Files and Sources](../../reporting-services/report-server/reporting-services-log-files-and-sources.md)   
- [Turn on Reporting Services events for the SharePoint trace log &#40;ULS&#41;](../../reporting-services/report-server/turn-on-reporting-services-events-for-the-sharepoint-trace-log-uls.md)  
+
+-  [Reporting Services Log Files and Sources](../../reporting-services/report-server/reporting-services-log-files-and-sources.md)   
+-   [Turn on Reporting Services events for the SharePoint trace log &#40;ULS&#41;](../../reporting-services/report-server/turn-on-reporting-services-events-for-the-sharepoint-trace-log-uls.md)  
+-  [SQL Server Reporting Services](https://stackoverflow.com/questions/tagged/reporting-services) on Stack Overflow  
+-  Log an issue or suggestion at [Microsoft SQL Server UserVoice](https://feedback.azure.com/forums/908035-sql-server).  
+
+

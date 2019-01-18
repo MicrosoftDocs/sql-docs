@@ -2,27 +2,20 @@
 title: "Open the Query and View Designer (Visual Database Tools) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "sql-tools"
-ms.service: ""
-ms.component: "ssms-visual-db"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "tools-ssms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: ssms
+ms.topic: conceptual
 helpviewer_keywords: 
   - "opening View Designer"
   - "View Designer, opening"
   - "Query Designer [SQL Server], opening"
   - "opening Query Designer"
 ms.assetid: b473f258-d53c-41c0-9ad9-528a2ff141f4
-caps.latest.revision: 4
 author: "stevestein"
 ms.author: "sstein"
-manager: "jhubbard"
-ms.workload: "On Demand"
+manager: craigg
 ---
 # Open the Query and View Designer (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -30,7 +23,7 @@ The Query and View Designer opens when you open the definition of a view, show t
   
 -   The Diagram pane presents a graphic display of the tables or table-valued objects you have selected from the data connection. It also shows any join relationships among them.  
   
--   The Criteria pane allows you to specify query options — such as which data columns to display, how to order the results, and what rows to select — by entering your choices into a spreadsheet-like grid.  
+-   The Criteria pane allows you to specify query options - such as which data columns to display, how to order the results, and what rows to select - by entering your choices into a spreadsheet-like grid.  
   
 -   You can use the SQL pane to create your own SQL statement, or you can use the Criteria pane and Diagram pane to create the statement, in which case the SQL statements will be created in the SQL pane. As you build your query, the SQL pane automatically updates and reformats to be easily read.  
   

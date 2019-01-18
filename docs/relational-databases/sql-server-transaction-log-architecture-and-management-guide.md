@@ -2,16 +2,11 @@
 title: "SQL Server Transaction Log Architecture and Management Guide | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/05/2018"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
-ms.service: ""
-ms.component: "relational-databases-misc"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "transaction log architecture guide"
   - "guide, transaction log architecture"
@@ -19,12 +14,14 @@ helpviewer_keywords:
   - "transaction log guidance"
   - "vlfs"
   - "virtual log files"
+  - "virtual log size"
+  - "vlf size"
+  - "transaction log internals"
 ms.assetid: 88b22f65-ee01-459c-8800-bcf052df958a
-caps.latest.revision: 3
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-ms.workload: "On Demand"
+author: "rothja"
+ms.author: "jroth"
+manager: craigg
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # SQL Server Transaction Log Architecture and Management Guide
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -73,18 +70,21 @@ The [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] divides each phys
 > [!NOTE]
 > Virtual log file (VLF) creation follows this method:
 > -	If the next growth is less than 1/8 of current log physical size, then create 1 VLF that covers the growth size (Starting with [!INCLUDE[ssSQL14](../includes/sssql14-md.md)])
-> -	If growth is less than 64MB, create 4 VLFs that cover the growth size (e.g. for 1 MB growth, create four 256KB VLFs)
-> -	If growth is from 64MB up to 1GB, create 8 VLFs that cover the growth size (e.g. for 512MB growth, create eight 64MB VLFs)
-> -	If growth is larger than 1GB, create 16 VLFs that cover the growth size (e.g. for 8 GB growth, create sixteen 512MB VLFs)
+> - If the next growth is more than 1/8 of the current log size, then use the pre-2014 method:
+>    -	If growth is less than 64MB, create 4 VLFs that cover the growth size (e.g. for 1 MB growth, create four 256KB VLFs)
+>    -	If growth is from 64MB up to 1GB, create 8 VLFs that cover the growth size (e.g. for 512MB growth, create eight 64MB VLFs)
+>    -	If growth is larger than 1GB, create 16 VLFs that cover the growth size (e.g. for 8 GB growth, create sixteen 512MB VLFs)
 
-If the log files grow to a large size because of many small increments, they will have many virtual log files. **This can slow down database startup and also log backup and restore operations.** We recommend that you assign log files a *size* value close to the final size required, and also have a relatively large *growth_increment* value. See the tip below to determine the optimal VLF distribution for the current transaction log size.
+If the log files grow to a large size in many small increments, they will have many virtual log files. **This can slow down database startup and also log backup and restore operations.** Conversely, if the log files are set to a large size with few or just one increment, they will have few very large virtual log files. For more information on properly estimating the **required size** and **autogrow** setting of a transaction log, refer to the *Recommendations* section of [Manage the size of the transaction log file](../relational-databases/logs/manage-the-size-of-the-transaction-log-file.md#Recommendations).
+
+We recommend that you assign log files a *size* value close to the final size required, using the required increments to achieve optimal VLF distribution, and also have a relatively large *growth_increment* value. See the tip below to determine the optimal VLF distribution for the current transaction log size. 
  - The *size* value, as set by the `SIZE` argument of `ALTER DATABASE` is the initial size for the log file.
- - The *growth_increment* value, as set by the `FILEGROWTH` argument of `ALTER DATABASE`, is the amount of space added to the file every time new space is required. 
+ - The *growth_increment* value (also referred as the autogrow value), as set by the `FILEGROWTH` argument of `ALTER DATABASE`, is the amount of space added to the file every time new space is required. 
  
 For more information on `FILEGROWTH` and `SIZE` arguments of `ALTER DATABASE`, see [ALTER DATABASE &#40;Transact-SQL&#41; File and Filegroup Options](../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md).
 
 > [!TIP]
-> To determine the optimal VLF distribution for the current transaction log size of all databases in a given instance, see this [script](http://github.com/Microsoft/tigertoolbox/tree/master/Fixing-VLFs).
+> To determine the optimal VLF distribution for the current transaction log size of all databases in a given instance, and the required growth increments to achieve the required size, see this [script](https://github.com/Microsoft/tigertoolbox/tree/master/Fixing-VLFs).
   
  The transaction log is a wrap-around file. For example, consider a database with one physical log file divided into four VLFs. When the database is created, the logical log file begins at the start of the physical log file. New log records are added at the end of the logical log and expand toward the end of the physical log. Log truncation frees any virtual logs whose records all appear in front of the minimum recovery log sequence number (MinLSN). The *MinLSN* is the log sequence number of the oldest log record that is required for a successful database-wide rollback. The transaction log in the example database would look similar to the one in the following illustration.  
   
@@ -128,7 +128,7 @@ For more information on `FILEGROWTH` and `SIZE` arguments of `ALTER DATABASE`, s
   
  To understand how the write-ahead log works, it is important for you to know how modified data is written to disk. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] maintains a buffer cache into which it reads data pages when data must be retrieved. When a page is modified in the buffer cache, it is not immediately written back to disk; instead, the page is marked as *dirty*. A data page can have more than one logical write made before it is physically written to disk. For each logical write, a transaction log record is inserted in the log cache that records the modification. The log records must be written to disk before the associated dirty page is removed from the buffer cache and written to disk. The checkpoint process periodically scans the buffer cache for buffers with pages from a specified database and writes all dirty pages to disk. Checkpoints save time during a later recovery by creating a point at which all dirty pages are guaranteed to have been written to disk.  
   
- Writing a modified data page from the buffer cache to disk is called flushing the page. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] has logic that prevents a dirty page from being flushed before the associated log record is written. Log records are written to disk when the transactions are committed.  
+ Writing a modified data page from the buffer cache to disk is called flushing the page. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] has logic that prevents a dirty page from being flushed before the associated log record is written. Log records are written to disk when the log buffers are flushed.  This happens whenever a transaction commits or the log buffers become full.  
   
 ##  <a name="Backups"></a> Transaction Log Backups  
  This section presents concepts about how to back up and restore (apply) transaction logs. Under the full and bulk-logged recovery models, taking routine backups of transaction logs (*log backups*) is necessary for recovering data. You can back up the log while any full backup is running. For more information about recovery models, see [Back Up and Restore of SQL Server Databases](../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md).  
@@ -137,12 +137,12 @@ For more information on `FILEGROWTH` and `SIZE` arguments of `ALTER DATABASE`, s
   
 > [!IMPORTANT]
 > We recommend taking frequent enough log backups to support your business requirements, specifically your tolerance for work loss such as might be caused by a damaged log storage. 
-> The appropriate frequency for taking log backups depends on your tolerance for work-loss exposure balanced by how many log backups you can store, manage, and, potentially, restore. Think about the required [RTO](http://wikipedia.org/wiki/Recovery_time_objective) and [RPO](http://wikipedia.org/wiki/Recovery_point_objective) when implementing your recovery strategy, and specifically the log backup cadence.
+> The appropriate frequency for taking log backups depends on your tolerance for work-loss exposure balanced by how many log backups you can store, manage, and, potentially, restore. Think about the required [RTO](https://wikipedia.org/wiki/Recovery_time_objective) and [RPO](https://wikipedia.org/wiki/Recovery_point_objective) when implementing your recovery strategy, and specifically the log backup cadence.
 > Taking a log backup every 15 to 30 minutes might be enough. If your business requires that you minimize work-loss exposure, consider taking log backups more frequently. More frequent log backups have the added advantage of increasing the frequency of log truncation, resulting in smaller log files.  
   
 > [!IMPORTANT]
 > To limit the number of log backups that you need to restore, it is essential to routinely back up your data. For example, you might schedule a weekly full database backup and daily differential database backups.  
-> Again, think about the required [RTO](http://wikipedia.org/wiki/Recovery_time_objective) and [RPO](http://wikipedia.org/wiki/Recovery_point_objective) when implementing your recovery strategy, and specifically the full and differential database backup cadence.
+> Again, think about the required [RTO](https://wikipedia.org/wiki/Recovery_time_objective) and [RPO](https://wikipedia.org/wiki/Recovery_point_objective) when implementing your recovery strategy, and specifically the full and differential database backup cadence.
 
 For more information about transaction log backups, see [Transaction Log Backups &#40;SQL Server&#41;](../relational-databases/backup-restore/transaction-log-backups-sql-server.md).
   
@@ -243,9 +243,11 @@ We recommend the following articles and books for additional information about t
 [The Transaction Log &#40;SQL Server&#41;](../relational-databases/logs/the-transaction-log-sql-server.md)    
 [Manage the size of the transaction log file](../relational-databases/logs/manage-the-size-of-the-transaction-log-file.md)   
 [Transaction Log Backups &#40;SQL Server&#41;](../relational-databases/backup-restore/transaction-log-backups-sql-server.md)   
-[sys.dm_db_log_info &#40;Transact-SQL&#41;](../relational-databases/system-dynamic-management-views/sys-dm-db-log-info-transact-sql.md)  
+[Database Checkpoints &#40;SQL Server&#41;](../relational-databases/logs/database-checkpoints-sql-server.md)   
+[Configure the recovery interval Server Configuration Option](../database-engine/configure-windows/configure-the-recovery-interval-server-configuration-option.md)    
+[sys.dm_db_log_info &#40;Transact-SQL&#41;](../relational-databases/system-dynamic-management-views/sys-dm-db-log-info-transact-sql.md)   
 [sys.dm_db_log_space_usage &#40;Transact-SQL&#41;](../relational-databases/system-dynamic-management-views/sys-dm-db-log-space-usage-transact-sql.md)    
-[Understanding Logging and Recovery in SQL Server by Paul Randal](http://technet.microsoft.com/magazine/2009.02.logging.aspx)    
-[SQL Server Transaction Log Management by Tony Davis and Gail Shaw](http://www.simple-talk.com/books/sql-books/sql-server-transaction-log-management-by-tony-davis-and-gail-shaw/)  
+[Understanding Logging and Recovery in SQL Server by Paul Randal](https://technet.microsoft.com/magazine/2009.02.logging.aspx)    
+[SQL Server Transaction Log Management by Tony Davis and Gail Shaw](https://www.simple-talk.com/books/sql-books/sql-server-transaction-log-management-by-tony-davis-and-gail-shaw/)  
   
   

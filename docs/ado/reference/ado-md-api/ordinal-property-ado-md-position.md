@@ -1,17 +1,12 @@
 ---
 title: "Ordinal Property (ADO MD Position) | Microsoft Docs"
-ms.prod: "sql-non-specified"
-ms.prod_service: "drivers"
-ms.service: ""
-ms.component: "ado"
-ms.technology:
-  - "drivers"
+ms.prod: sql
+ms.prod_service: connectivity
+ms.technology: connectivity
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 apitype: "COM"
 f1_keywords: 
   - "Position::Ordinal"
@@ -19,11 +14,9 @@ f1_keywords:
 helpviewer_keywords: 
   - "Ordinal property [ADO MD]"
 ms.assetid: 6efe8b5d-a2d5-43a9-a5ea-f9244f8d4ec9
-caps.latest.revision: 13
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
-ms.workload: "Inactive"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # Ordinal Property (ADO MD Position)
 Uniquely identifies a [position](../../../ado/reference/ado-md-api/position-object-ado-md.md) along an axis.  

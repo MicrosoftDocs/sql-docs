@@ -2,27 +2,20 @@
 title: "Update Statistics Task | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/04/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "integration-services"
-ms.service: ""
-ms.component: "control-flow"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: integration-services
+ms.topic: conceptual
 f1_keywords: 
   - "sql13.dts.designer.updatestatisticstask.f1"
 helpviewer_keywords: 
   - "updating statistics"
   - "Update Statistics task [Integration Services]"
 ms.assetid: 0247483b-f092-4511-8fa8-3610108bd1bc
-caps.latest.revision: 45
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
-ms.workload: "Inactive"
+manager: craigg
 ---
 # Update Statistics Task
   The Update Statistics task updates information about the distribution of key values for one or more statistics groups (collections) in the specified table or indexed view. For more information, see [Statistics](../../relational-databases/statistics/statistics.md).  
@@ -54,7 +47,7 @@ ms.workload: "Inactive"
 ## Related Tasks  
  For more information about how to set these properties in [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer, click the following topic:  
   
--   [Set the Properties of a Task or Container](http://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
+-   [Set the Properties of a Task or Container](https://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
   
 ## See Also  
  [Integration Services Tasks](../../integration-services/control-flow/integration-services-tasks.md)   

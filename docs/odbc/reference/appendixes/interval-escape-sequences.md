@@ -2,26 +2,19 @@
 title: "Interval Escape Sequences | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
-ms.prod_service: "drivers"
-ms.service: ""
-ms.component: "odbc"
+ms.prod: sql
+ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "drivers"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: connectivity
+ms.topic: conceptual
 helpviewer_keywords: 
   - "interval literals [ODBC]"
   - "escape sequences [ODBC], interval"
   - "ODBC escape sequences [ODBC], interval"
 ms.assetid: 303e8dab-8f13-4fa5-857f-15cc1f75bdd6
-caps.latest.revision: 6
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
-ms.workload: "Inactive"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # Interval Escape Sequences
 ODBC uses escape sequences for interval literals. The syntax of this escape sequence is as follows:  

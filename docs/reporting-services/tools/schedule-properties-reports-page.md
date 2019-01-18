@@ -1,26 +1,17 @@
 ---
 title: "Schedule Properties (Reports Page) | Microsoft Docs"
-ms.custom: ""
-ms.date: "06/30/2016"
+ms.date: 06/30/2016
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
-ms.service: ""
-ms.component: "tools"
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
+ms.technology: tools
 
 
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "sql13.swb.reportserver.scheduleproperties.reports.f1"
 ms.assetid: 7db728bd-4b08-43ef-a49a-e8dcdd37cf89
-caps.latest.revision: 23
-author: "markingmyname"
-ms.author: "maghan"
-manager: "kfile"
-ms.workload: "Inactive"
+author: markingmyname
+ms.author: maghan
 ---
 # Schedule Properties (Reports Page)
   Use the [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] schedule properties page in [!INCLUDE[ssManStudioFull_md](../../includes/ssmanstudiofull-md.md)] to view a list of all reports that use the specific shared schedule. Schedules can be used to refresh report snapshots, generate report history, trigger a subscription, or expire a cached copy of the report. To find out how the schedule is used, view the property and subscription information of the report.  
@@ -37,7 +28,7 @@ ms.workload: "Inactive"
   You can also manage shared schedules from the **Site Settings** of the [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] Web Portal.
   
 > [!NOTE]  
->  This feature is not available in every edition of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. For a list of features that are supported by the editions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], see [Features Supported by the edition of SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md).  
+>  This feature is not available in every edition of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. For a list of features that are supported by the editions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], see [Editions and supported features of SQL Server 2017](../../sql-server/editions-and-components-of-sql-server-2017.md).  
   
 ## Options  
  **Folder**  
@@ -51,7 +42,7 @@ ms.workload: "Inactive"
  [Schedules](../../reporting-services/subscriptions/schedules.md)   
  [Report Server in Management Studio F1 Help](../../reporting-services/tools/report-server-in-management-studio-f1-help.md)   
  [Connect to a Report Server in Management Studio](../../reporting-services/tools/connect-to-a-report-server-in-management-studio.md)   
- [Configure General Properties for a Report (Report Manager)](http://msdn.microsoft.com/en-us/10b941b2-28e6-4408-9ee4-acebc63c8496)  
+ [Configure General Properties for a Report (Report Manager)](https://msdn.microsoft.com/10b941b2-28e6-4408-9ee4-acebc63c8496)  
   
   
 

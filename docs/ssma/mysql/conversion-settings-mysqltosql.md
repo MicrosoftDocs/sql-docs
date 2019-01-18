@@ -1,29 +1,18 @@
 ---
 title: "Conversion Settings (MySQLToSQL) | Microsoft Docs"
-ms.prod: "sql-non-specified"
-ms.prod_service: "sql-tools"
-ms.service: ""
-ms.component: "ssma-mysql"
+ms.prod: sql
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "sql-ssma"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to: 
-  - "Azure SQL Database"
-  - "SQL Server"
+ms.technology: ssma
+ms.topic: conceptual
 ms.assetid: f551cf6e-1575-4206-9cca-975b5b43a6b8
-caps.latest.revision: 10
 author: "Shamikg"
 ms.author: "Shamikg"
-manager: "jhubbard"
-ms.workload: "Inactive"
+manager: craigg
 ---
 # Conversion Settings (MySQLToSQL)
-The **‘Settings’** tab allows the user to set node level settings. The tab will be available at the following Metabase nodes:  
+The **'Settings'** tab allows the user to set node level settings. The tab will be available at the following Metabase nodes:  
   
 -   Database Node  
   
@@ -50,7 +39,7 @@ These settings will be available based on the type of Metabase node. For example
   
 1.  **Function Conversion Setting:**  
   
-    1.  This tab contains **‘Force function conversion’** option. The option can have one of the following four values:  
+    1.  This tab contains **'Force function conversion'** option. The option can have one of the following four values:  
   
         -   Convert according to project settings [inherited]  
   
@@ -66,7 +55,7 @@ These settings will be available based on the type of Metabase node. For example
   
 2.  **Table Conversion Setting:**  
   
-    1.  This tab contains **‘Suppress ROWID auxiliary column generation’** option. The option can have one of the following four values:  
+    1.  This tab contains **'Suppress ROWID auxiliary column generation'** option. The option can have one of the following four values:  
   
         -   Convert according to project settings [inherited]  
   
@@ -76,10 +65,10 @@ These settings will be available based on the type of Metabase node. For example
   
         -   Convert according to project settings  
   
-    2.  If **‘Yes’**, this setting prohibits creation of ROWID auxiliary column creation on target tables.  
+    2.  If **'Yes'**, this setting prohibits creation of ROWID auxiliary column creation on target tables.  
   
     3.  The settings made by the user are saved in cascaded preferences file on clicking **Apply** button.  
   
 ## See Also  
-[Project Settings (Conversion) (MySQL to SQL)](http://msdn.microsoft.com/en-us/7ad5fe44-6445-4ba8-a457-5af792631f11)  
+[Project Settings (Conversion) (MySQL to SQL)](https://msdn.microsoft.com/7ad5fe44-6445-4ba8-a457-5af792631f11)  
   

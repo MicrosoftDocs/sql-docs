@@ -1,33 +1,14 @@
 ---
 title: "Understanding Pass Order and Solve Order (MDX) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: analysis-services
-ms.prod_service: "analysis-services"
-ms.service: ""
-ms.component: ""
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
-  
-ms.component: multidimensional-tabular
-ms.component: data-mining
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "evaluation order [MDX]"
-  - "calculation order [MDX]"
-  - "SOLVE_ORDER property"
-  - "queries [MDX], solve orders"
-  - "solve orders [MDX]"
-  - "pass orders [MDX]"
-  - "expressions [MDX], solve orders"
-ms.assetid: 7ed7d4ee-4644-4c5d-99a4-c4b429d0203c
-caps.latest.revision: 34
-author: "Minewiskan"
-ms.author: "owend"
-manager: "kfile"
-ms.workload: "Inactive"
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: mdx
+ms.topic: conceptual
+ms.author: owend
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
 ---
 # MDX Data Manipulation - Understanding Pass Order and Solve Order
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
@@ -74,7 +55,7 @@ ms.workload: "Inactive"
 > [!NOTE]  
 >  You can run these MDX queries against the Adventure Works sample multidimensional database. You can download the [AdventureWorks Multidimensional Models SQL Server 2012](http://msftdbprodsamples.codeplex.com/releases/view/55330) sample from the codeplex site.  
   
-### Query 1—Differences in Income and Expenses  
+### Query 1-Differences in Income and Expenses  
  For the first MDX query, calculate the difference in sales and costs for each year by constructing a simple MDX query similar to the following example:  
   
 ```  
@@ -99,7 +80,7 @@ FROM [Adventure Works]
 |**CY 2008**|$9,770,899.74|$5,721,205.24|  
 |**Year Difference**|($20,160.56)|$2,878.06|  
   
-### Query 2—Percentage of Income after Expenses  
+### Query 2-Percentage of Income after Expenses  
  For the second query, calculate the percentage of income after expenses for each year using the following MDX query:  
   
 ```  
@@ -127,7 +108,7 @@ FROM [Adventure Works]
   
  The difference in result sets between the first query and the second query comes from the difference in placement of the calculated member. In the first query, the calculated member is part of the ROWS axis, not the COLUMNS axis shown in the second query. This difference in placement becomes important in the next query, which combines the two calculated members in a single MDX query.  
   
-### Query 3—Combined Year Difference and Net Income Calculations  
+### Query 3-Combined Year Difference and Net Income Calculations  
  In this final query combining both of the previous examples into a single MDX query, solve order becomes important because of the calculations on both columns and rows. To make sure that the calculations occur in the correct sequence, define the sequence in which the calculations occur by using the **SOLVE_ORDER** keyword.  
   
  The **SOLVE_ORDER** keyword specifies the solve order of calculated members in an MDX query or a **CREATE MEMBER** command. The integer values used with the **SOLVE_ORDER** keyword are relative, do not need to start at zero, and do not need to be consecutive. The value simply tells MDX to calculate a member based on values derived from calculating members with a higher value. If a calculated member is defined without the **SOLVE_ORDER** keyword, the default value of that calculated member is zero.  

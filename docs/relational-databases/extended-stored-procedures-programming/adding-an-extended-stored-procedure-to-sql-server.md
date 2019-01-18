@@ -2,26 +2,20 @@
 title: "Adding an Extended Stored Procedure to SQL Server | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "database-engine"
-ms.service: ""
-ms.component: "extended-stored-procedures"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: 
 
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 
   - "extended stored procedures [SQL Server], adding"
   - "adding extended stored procedures"
   - "collations [SQL Server], extended stored procedures"
 ms.assetid: 10f1bb74-3b43-4efd-b7ab-7a85a8600a50
-caps.latest.revision: 39
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-ms.workload: "On Demand"
+author: "rothja"
+ms.author: "jroth"
+manager: craigg
 ---
 # Adding an Extended Stored Procedure to SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

@@ -2,15 +2,10 @@
 title: "OPENQUERY (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/16/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "sql-database"
-ms.service: ""
-ms.component: "t-sql|functions"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: t-sql
 ms.topic: "language-reference"
 f1_keywords: 
   - "OPENQUERY_TSQL"
@@ -25,11 +20,9 @@ helpviewer_keywords:
   - "pass-through queries [SQL Server]"
   - "INSERT statement [SQL Server], OPENQUERY function"
 ms.assetid: b805e976-f025-4be1-bcb0-3a57b0c57717
-caps.latest.revision: 42
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "craigg"
-ms.workload: "Active"
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
 ---
 # OPENQUERY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

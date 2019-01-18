@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8" ?> 
+<testSuite 
+    name="DatabaseDDLTest" projectPath="/Microsoft/SqlServer/Snippets/TSQL/DatabaseDDL"
+    xmlns="https://schemas.microsoft.com/sqlserver/2004/07/UXTestSpec"
+    managementDatabaseConnectionString="data source=SqlSampTest;initial catalog=UXTest;integrated security=SSPI;persist security info=False"
+    testDatabaseConnectionString="data source=localhost;initial catalog=AdventureWorks;integrated security=SSPI;persist security info=False"
+    rootDirectory="\\sunbeam\Yukon_CodeSnippets\TSQL\DatabaseDDL"
+    testOwner="gaile">
+    <tsqlTestCase name="CreateDatabase" component="DatabaseDDLSnippets" rootDirectory="SQL">
+        <testFile path="CreateDatabase.sql" />
+	    <cleanupFile path = "CreateDatabaseCleanup.sql"/>
+    </tsqlTestCase>
+    <tsqlTestCase name="AlterDatabase" component="DatabaseDDLSnippets" rootDirectory="SQL">
+        <testFile path="AlterDatabase.sql" />
+        <cleanupFile path = "AlterDatabaseCleanup.sql"/>
+    </tsqlTestCase>
+</testSuite>
+

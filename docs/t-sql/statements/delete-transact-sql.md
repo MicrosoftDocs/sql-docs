@@ -2,15 +2,10 @@
 title: "DELETE (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "05/10/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
-ms.service: ""
-ms.component: "t-sql|statements"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: t-sql
 ms.topic: "language-reference"
 f1_keywords: 
   - "DELETE"
@@ -28,11 +23,10 @@ helpviewer_keywords:
   - "row removal [SQL Server], DELETE statement"
   - "deleting data"
 ms.assetid: ed6b2105-0f35-408f-ba51-e36ade7ad5b2
-caps.latest.revision: 78
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "craigg"
-ms.workload: "Active"
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # DELETE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -95,7 +89,7 @@ DELETE FROM [database_name . [ schema ] . | schema. ] table_name
   
  Common table expressions can also be used with the SELECT, INSERT, UPDATE, and CREATE VIEW statements. For more information, see [WITH common_table_expression &#40;Transact-SQL&#41;](../../t-sql/queries/with-common-table-expression-transact-sql.md).  
   
- TOP **(***expression***)** [ PERCENT ]  
+ TOP **(**_expression_**)** [ PERCENT ]  
  Specifies the number or percent of random rows that will be deleted. *expression* can be either a number or a percent of the rows. The rows referenced in the TOP expression used with INSERT, UPDATE, or DELETE are not arranged in any order. For more information, see [TOP &#40;Transact-SQL&#41;](../../t-sql/queries/top-transact-sql.md).  
   
  FROM  
@@ -115,7 +109,7 @@ DELETE FROM [database_name . [ schema ] . | schema. ] table_name
  *schema_name*  
  The name of the schema to which the table or view belongs.  
   
- *table_or view_name*  
+ *table_or_view_name*  
  The name of the table or view from which the rows are to be removed.  
   
  A table variable, within its scope, also can be used as a table source in a DELETE statement.  
@@ -173,7 +167,7 @@ DELETE FROM [database_name . [ schema ] . | schema. ] table_name
  Use the @@ROWCOUNT function to return the number of deleted rows to the client application. For more information, see [@@ROWCOUNT &#40;Transact-SQL&#41;](../../t-sql/functions/rowcount-transact-sql.md).  
   
 ## Error Handling  
- You can implement error handling for the DELETE statement by specifying the statement in a TRY…CATCH construct.  
+ You can implement error handling for the DELETE statement by specifying the statement in a TRY...CATCH construct.  
   
  The DELETE statement may fail if it violates a trigger or tries to remove a row referenced by data in another table with a FOREIGN KEY constraint. If the DELETE removes multiple rows, and any one of the removed rows violates a trigger or constraint, the statement is canceled, an error is returned, and no rows are removed.  
   
@@ -232,7 +226,7 @@ DELETE FROM [database_name . [ schema ] . | schema. ] table_name
 #### A. Using DELETE with no WHERE clause  
  The following example deletes all rows from the `SalesPersonQuotaHistory` table in the [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] database because a WHERE clause is not used to limit the number of rows deleted.  
   
-```  
+```sql
 DELETE FROM Sales.SalesPersonQuotaHistory;  
 GO  
 ```  
@@ -243,7 +237,7 @@ GO
 #### B. Using the WHERE clause to delete a set of rows  
  The following example deletes all rows from the `ProductCostHistory` table in the [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] database in which the value in the `StandardCost` column is more than `1000.00`.  
   
-```    
+```sql
 DELETE FROM Production.ProductCostHistory  
 WHERE StandardCost > 1000.00;  
 GO  
@@ -251,7 +245,7 @@ GO
   
  The following example shows a more complex WHERE clause. The WHERE clause defines two conditions that must be met to determine the rows to delete. The value in the `StandardCost` column must be between `12.00` and `14.00` and the value in the column `SellEndDate` must be null. The example also prints the value from the **@@ROWCOUNT** function to return the number of deleted rows.  
   
-```  
+```sql
 DELETE Production.ProductCostHistory  
 WHERE StandardCost BETWEEN 12.00 AND 14.00  
       AND EndDate IS NULL;  
@@ -261,7 +255,7 @@ PRINT 'Number of rows deleted is ' + CAST(@@ROWCOUNT as char(3));
 #### C. Using a cursor to determine the row to delete  
  The following example deletes a single row from the `EmployeePayHistory` table in the [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] database using a cursor named `my_cursor`. The delete operation affects only the single row currently fetched from the cursor.  
   
-```  
+```sql
 DECLARE complex_cursor CURSOR FOR  
     SELECT a.BusinessEntityID  
     FROM HumanResources.EmployeePayHistory AS a  
@@ -281,7 +275,7 @@ GO
 #### D. Using joins and subqueries to data in one table to delete rows in another table  
  The following examples show two ways to delete rows in one table based on data in another table. In both examples, rows from the `SalesPersonQuotaHistory` table in the [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] database are deleted based on the year-to-date sales stored in the `SalesPerson` table. The first `DELETE` statement shows the ISO-compatible subquery solution, and the second `DELETE` statement shows the [!INCLUDE[tsql](../../includes/tsql-md.md)] FROM extension to join the two tables.  
   
-```  
+```sql
 -- SQL-2003 Standard subquery  
   
 DELETE FROM Sales.SalesPersonQuotaHistory   
@@ -292,7 +286,7 @@ WHERE BusinessEntityID IN
 GO  
 ```  
   
-```  
+```sql
 -- Transact-SQL extension  
   
 DELETE FROM Sales.SalesPersonQuotaHistory   
@@ -303,7 +297,7 @@ WHERE sp.SalesYTD > 2500000.00;
 GO  
 ```  
   
-```  
+```sql
 -- No need to mention target table more than once.  
   
 DELETE spqh  
@@ -317,7 +311,7 @@ DELETE spqh
 #### E. Using TOP to limit the number of rows deleted  
  When a TOP (*n*) clause is used with DELETE, the delete operation is performed on a random selection of *n* number of rows. The following example deletes `20` random rows from the `PurchaseOrderDetail` table in the [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] database that have due dates that are earlier than July 1, 2006.  
   
-```  
+```sql
 DELETE TOP (20)   
 FROM Purchasing.PurchaseOrderDetail  
 WHERE DueDate < '20020701';  
@@ -326,7 +320,7 @@ GO
   
  If you have to use TOP to delete rows in a meaningful chronological order, you must use TOP together with ORDER BY in a subselect statement. The following query deletes the 10 rows of the `PurchaseOrderDetail` table that have the earliest due dates. To ensure that only 10 rows are deleted, the column specified in the subselect statement (`PurchaseOrderID`) is the primary key of the table. Using a nonkey column in the subselect statement may result in the deletion of more than 10 rows if the specified column contains duplicate values.  
   
-```  
+```sql
 DELETE FROM Purchasing.PurchaseOrderDetail  
 WHERE PurchaseOrderDetailID IN  
    (SELECT TOP 10 PurchaseOrderDetailID   
@@ -343,7 +337,7 @@ GO
 #### F. Deleting data from a remote table by using a linked server  
  The following example deletes rows from a remote table. The example begins by creating a link to the remote data source by using [sp_addlinkedserver](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md). The linked server name, `MyLinkServer`, is then specified as part of the four-part object name in the form *server.catalog.schema.object*.  
   
-```  
+```sql
 USE master;  
 GO  
 -- Create a link to the remote data source.   
@@ -357,7 +351,7 @@ EXEC sp_addlinkedserver @server = N'MyLinkServer',
 GO  
 ```  
   
-```  
+```sql
 -- Specify the remote data source using a four-part name   
 -- in the form linked_server.catalog.schema.object.  
   
@@ -369,7 +363,7 @@ GO
 #### G. Deleting data from a remote table by using the OPENQUERY function  
  The following example deletes rows from a remote table by specifying the [OPENQUERY](../../t-sql/functions/openquery-transact-sql.md) rowset function. The linked server name created in the previous example is used in this example.  
   
-```  
+```sql
 DELETE OPENQUERY (MyLinkServer, 'SELECT Name, GroupName 
 FROM AdventureWorks2012.HumanResources.Department  
 WHERE DepartmentID = 18');  
@@ -379,7 +373,7 @@ GO
 #### H. Deleting data from a remote table by using the OPENDATASOURCE function  
  The following example deletes rows from a remote table by specifying the [OPENDATASOURCE](../../t-sql/functions/opendatasource-transact-sql.md) rowset function. Specify a valid server name for the data source by using the format *server_name* or *server_name\instance_name*.  
   
-```  
+```sql
 DELETE FROM OPENDATASOURCE('SQLNCLI',  
     'Data Source= <server_name>; Integrated Security=SSPI')  
     .AdventureWorks2012.HumanResources.Department   
@@ -391,7 +385,7 @@ WHERE DepartmentID = 17;'
 #### I. Using DELETE with the OUTPUT clause  
  The following example shows how to save the results of a `DELETE` statement to a table variable in the [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] database.  
   
-```  
+```sql
 DELETE Sales.ShoppingCartItem  
 OUTPUT DELETED.*   
 WHERE ShoppingCartID = 20621;  
@@ -406,7 +400,7 @@ GO
 #### J. Using OUTPUT with <from_table_name> in a DELETE statement  
  The following example deletes rows in the `ProductProductPhoto` table in the [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] database based on search criteria defined in the `FROM` clause of the `DELETE` statement. The `OUTPUT` clause returns columns from the table being deleted, `DELETED.ProductID`, `DELETED.ProductPhotoID`, and columns from the `Product` table. This is used in the `FROM` clause to specify the rows to delete.  
   
-```  
+```sql
 DECLARE @MyTableVar table (  
     ProductID int NOT NULL,   
     ProductName nvarchar(50)NOT NULL,  
@@ -436,14 +430,14 @@ GO
 ### K. Delete all rows from a table  
  The following example deletes all rows from the `Table1` table because a WHERE clause is not used to limit the number of rows deleted.  
   
-```  
+```sql
 DELETE FROM Table1;  
 ```  
   
 ### L. DELETE a set of rows from a table  
  The following example deletes all rows from the  `Table1` table that have a value greater than 1000.00 in the  `StandardCost` column.  
   
-```  
+```sql
 DELETE FROM Table1  
 WHERE StandardCost > 1000.00;  
 ```  
@@ -451,16 +445,16 @@ WHERE StandardCost > 1000.00;
 ### M. Using LABEL with a DELETE statement  
  The following example uses a label with the DELETE statement.  
   
-```  
+```sql
 DELETE FROM Table1  
 OPTION ( LABEL = N'label1' );  
   
 ```  
   
 ### N. Using a label and a query hint with the DELETE statement  
- This query shows the basic syntax for using a query join hint with the DELETE statement. For more information on join hints and how to use the OPTION clause, see [OPTION (SQL Server PDW)](http://msdn.microsoft.com/en-us/72bbce98-305b-42fa-a19f-d89620621ecc).  
+ This query shows the basic syntax for using a query join hint with the DELETE statement. For more information on join hints and how to use the OPTION clause, see [OPTION (SQL Server PDW)](https://msdn.microsoft.com/72bbce98-305b-42fa-a19f-d89620621ecc).  
   
-```  
+```sql
 -- Uses AdventureWorks  
   
 DELETE FROM dbo.FactInternetSales  

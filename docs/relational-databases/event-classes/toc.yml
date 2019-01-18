@@ -1,0 +1,400 @@
+- name: Overview
+  href: sql-server-event-class-reference.md
+- name: Broker Event Category
+  href: broker-event-category.md
+  items:
+  - name: "Broker:Activation Event Class"
+    href: broker-activation-event-class.md
+  - name: "Broker:Conversation Event Class"
+    href: broker-conversation-event-class.md
+  - name: "Broker:Conversation Group Event Class"
+    href: broker-conversation-group-event-class.md
+  - name: "Broker:Connection Event Class"
+    href: broker-connection-event-class.md
+  - name: "Broker:Corrupted Message Event Class"
+    href: broker-corrupted-message-event-class.md
+  - name: "Broker:Forwarded Message Sent Event Class"
+    href: broker-forwarded-message-sent-event-class.md
+  - name: "Broker:Forwarded Message Dropped Event Class"
+    href: broker-forwarded-message-dropped-event-class.md
+  - name: "Broker:Message Classify Event Class"
+    href: broker-message-classify-event-class.md
+  - name: "Broker:Message Undeliverable Event Class"
+    href: broker-message-drop-event-class.md
+  - name: "Broker:Remote Message Ack Event Class"
+    href: broker-remote-message-ack-event-class.md
+- name: Cursors Event Category
+  href: cursors-event-category.md
+  items:
+  - name: CursorClose Event Class
+    href: cursorclose-event-class.md
+  - name: CursorExecute Event Class
+    href: cursorexecute-event-class.md
+  - name: CursorImplicitConversion Event Class
+    href: cursorimplicitconversion-event-class.md
+  - name: CursorOpen Event Class
+    href: cursoropen-event-class.md
+  - name: CursorPrepare Event Class
+    href: cursorprepare-event-class.md
+  - name: CursorRecompile Event Class
+    href: cursorrecompile-event-class.md
+  - name: CursorUnprepare Event Class
+    href: cursorunprepare-event-class.md
+- name: CLR Event Category
+  href: clr-event-category.md
+- name: Database Event Category
+  href: database-event-category.md
+  items:
+  - name: Data File Auto Grow Event Class
+    href: data-file-auto-grow-event-class.md
+  - name: Data File Auto Shrink Event Class
+    href: data-file-auto-shrink-event-class.md
+  - name: Database Mirroring Connection Event Class
+    href: database-mirroring-connection-event-class.md
+  - name: Database Mirroring State Change Event Class
+    href: database-mirroring-state-change-event-class.md
+  - name: Log File Auto Grow Event Class
+    href: log-file-auto-grow-event-class.md
+  - name: Log File Auto Shrink Event Class
+    href: log-file-auto-shrink-event-class.md
+- name: Deprecation Event Category
+  href: deprecation-event-category.md
+  items:
+  - name: Deprecation Announcement Event Class
+    href: deprecation-announcement-event-class.md
+  - name: Deprecation Final Support Event Class
+    href: deprecation-final-support-event-class.md
+- name: Errors and Warnings Event Category (Database Engine)
+  href: errors-and-warnings-event-category-database-engine.md
+  items:
+  - name: Attention Event Class
+    href: attention-event-class.md
+  - name: Background Job Error Event Class
+    href: background-job-error-event-class.md
+  - name: Bitmap Warning Event Class
+    href: bitmap-warning-event-class.md
+  - name: Blocked Process Report Event Class
+    href: blocked-process-report-event-class.md
+  - name: CPU Threshold Exceeded Event Class
+    href: cpu-threshold-exceeded-event-class.md
+  - name: Database Suspect Data Page Event Class
+    href: database-suspect-data-page-event-class.md
+  - name: ErrorLog Event Class
+    href: errorlog-event-class.md
+  - name: EventLog Event Class
+    href: eventlog-event-class.md
+  - name: Exception Event Class
+    href: exception-event-class.md
+  - name: Exchange Spill Event Class
+    href: exchange-spill-event-class.md
+  - name: Execution Warnings Event Class
+    href: execution-warnings-event-class.md
+  - name: Hash Warning Event Class
+    href: hash-warning-event-class.md
+  - name: Missing Column Statistics Event Class
+    href: missing-column-statistics-event-class.md
+  - name: Missing Join Predicate Event Class
+    href: missing-join-predicate-event-class.md
+  - name: Sort Warnings Event Class
+    href: sort-warnings-event-class.md
+  - name: User Error Message Event Class
+    href: user-error-message-event-class.md
+- name: Full Text Event Category
+  href: full-text-event-category.md
+  items:
+  - name: "FT:Crawl Aborted Event Class"
+    href: ft-crawl-aborted-event-class.md
+  - name: "FT:Crawl Started Event Class"
+    href: ft-crawl-started-event-class.md
+  - name: "FT:Crawl Stopped Event Class"
+    href: ft-crawl-stopped-event-class.md
+- name: Locks Event Category
+  href: locks-event-category.md
+  items:
+  - name: Deadlock Graph Event Class
+    href: deadlock-graph-event-class.md
+  - name: "Lock:Acquired Event Class"
+    href: lock-acquired-event-class.md
+  - name: "Lock:Cancel Event Class"
+    href: lock-cancel-event-class.md
+  - name: "Lock:Deadlock Chain Event Class"
+    href: lock-deadlock-chain-event-class.md
+  - name: "Lock:Deadlock Event Class"
+    href: lock-deadlock-event-class.md
+  - name: "Lock:Escalation Event Class"
+    href: lock-escalation-event-class.md
+  - name: "Lock:Released Event Class"
+    href: lock-released-event-class.md
+  - name: "Lock:Timeout (timeout > 0) Event Class"
+    href: lock-timeout-timeout-0-event-class.md
+  - name: "Lock:Timeout Event Class"
+    href: lock-timeout-event-class.md
+- name: Objects Event Category
+  href: objects-event-category.md
+  items:
+  - name: "Object:Altered Event Class"
+    href: object-altered-event-class.md
+  - name: "Object:Created Event Class"
+    href: object-created-event-class.md
+  - name: "Object:Deleted Event Class"
+    href: object-deleted-event-class.md
+- name: OLEDB Event Category
+  href: oledb-event-category.md
+  items:
+  - name: OLEDB Call Event Class
+    href: oledb-call-event-class.md
+  - name: OLEDB DataRead Event Class
+    href: oledb-dataread-event-class.md
+  - name: OLEDB Errors Event Class
+    href: oledb-errors-event-class.md
+  - name: OLEDB Provider Information Event Class
+    href: oledb-provider-information-event-class.md
+  - name: OLEDB QueryInterface Event Class
+    href: oledb-queryinterface-event-class.md
+- name: Performance Event Category
+  href: performance-event-category.md
+  items:
+  - name: Auto Stats Event Class
+    href: auto-stats-event-class.md
+  - name: Degree of Parallelism (7.0 Insert) Event Class
+    href: degree-of-parallelism-7-0-insert-event-class.md
+  - name: Performance Statistics Event Class
+    href: performance-statistics-event-class.md
+  - name: Showplan All Event Class
+    href: showplan-all-event-class.md
+  - name: Showplan All for Query Compile Event Class
+    href: showplan-all-for-query-compile-event-class.md
+  - name: Showplan Statistics Profile Event Class
+    href: showplan-statistics-profile-event-class.md
+  - name: Showplan Text Event Class
+    href: showplan-text-event-class.md
+  - name: Showplan Text (Unencoded) Event Class
+    href: showplan-text-unencoded-event-class.md
+  - name: Showplan XML Event Class
+    href: showplan-xml-event-class.md
+  - name: Showplan XML for Query Compile Event Class
+    href: showplan-xml-for-query-compile-event-class.md
+  - name: Showplan XML Statistics Profile Event Class
+    href: showplan-xml-statistics-profile-event-class.md
+  - name: "SQL:FullTextQuery Event Class"
+    href: sql-fulltextquery-event-class.md
+  - name: Plan Guide Successful Event Class
+    href: plan-guide-successful-event-class.md
+  - name: Plan Guide Unsuccessful Event Class
+    href: plan-guide-unsuccessful-event-class.md
+- name: Progress Report Event Category
+  href: progress-report-event-category.md
+  items:
+  - name: "Progress Report: Online Index Operation Event Class"
+    href: progress-report-online-index-operation-event-class.md
+- name: Query Notifications Event Category
+  href: query-notifications-event-category.md
+  items:
+  - name: "QN:Dynamics Event Class"
+    href: qn-dynamics-event-class.md
+  - name: "QN:Parameter Table Event Class"
+    href: qn-parameter-table-event-class.md
+  - name: "QN:Subscription Event Class"
+    href: qn-subscription-event-class.md
+  - name: "QN:Template Event Class"
+    href: qn-template-event-class.md
+- name: Scans Event Category
+  href: scans-event-category.md
+  items:
+  - name: "Scan:Started Event Class"
+    href: scan-started-event-class.md
+  - name: "Scan:Stopped Event Class"
+    href: scan-stopped-event-class.md
+- name: Security Audit Event Category (SQL Server Profiler)
+  href: security-audit-event-category-sql-server-profiler.md
+  items:
+  - name: Audit Add DB User Event Class
+    href: audit-add-db-user-event-class.md
+  - name: Audit Add Login to Server Role Event Class
+    href: audit-add-login-to-server-role-event-class.md
+  - name: Audit Add Member to DB Role Event Class
+    href: audit-add-member-to-db-role-event-class.md
+  - name: Audit Add Role Event Class
+    href: audit-add-role-event-class.md
+  - name: Audit Addlogin Event Class
+    href: audit-addlogin-event-class.md
+  - name: Audit App Role Change Password Event Class
+    href: audit-app-role-change-password-event-class.md
+  - name: Audit Backup and Restore Event Class
+    href: audit-backup-and-restore-event-class.md
+  - name: Audit Broker Conversation Event Class
+    href: audit-broker-conversation-event-class.md
+  - name: Audit Broker Login Event Class
+    href: audit-broker-login-event-class.md
+  - name: Audit Change Audit Event Class
+    href: audit-change-audit-event-class.md
+  - name: Audit Change Database Owner Event Class
+    href: audit-change-database-owner-event-class.md
+  - name: Audit Database Management Event Class
+    href: audit-database-management-event-class.md
+  - name: Audit Database Mirroring Login Event Class
+    href: audit-database-mirroring-login-event-class.md
+  - name: Audit Database Object Access Event Class
+    href: audit-database-object-access-event-class.md
+  - name: Audit Database Object GDR Event Class
+    href: audit-database-object-gdr-event-class.md
+  - name: Audit Database Object Management Event Class
+    href: audit-database-object-management-event-class.md
+  - name: Audit Database Object Take Ownership Event Class
+    href: audit-database-object-take-ownership-event-class.md
+  - name: Audit Database Operation Event Class
+    href: audit-database-operation-event-class.md
+  - name: Audit Database Principal Impersonation Event Class
+    href: audit-database-principal-impersonation-event-class.md
+  - name: Audit Database Principal Management Event Class
+    href: audit-database-principal-management-event-class.md
+  - name: Audit Database Scope GDR Event Class
+    href: audit-database-scope-gdr-event-class.md
+  - name: Audit DBCC Event Class
+    href: audit-dbcc-event-class.md
+  - name: Audit Fulltext Event Class
+    href: audit-fulltext-event-class.md
+  - name: Audit Login Change Password Event Class
+    href: audit-login-change-password-event-class.md
+  - name: Audit Login Change Property Event Class
+    href: audit-login-change-property-event-class.md
+  - name: Audit Login Event Class
+    href: audit-login-event-class.md
+  - name: Audit Login Failed Event Class
+    href: audit-login-failed-event-class.md
+  - name: Audit Login GDR Event Class
+    href: audit-login-gdr-event-class.md
+  - name: Audit Logout Event Class
+    href: audit-logout-event-class.md
+  - name: Audit Object Derived Permission Event Class
+    href: audit-object-derived-permission-event-class.md
+  - name: Audit Schema Object Access Event Class
+    href: audit-schema-object-access-event-class.md
+  - name: Audit Schema Object GDR Event Class
+    href: audit-schema-object-gdr-event-class.md
+  - name: Audit Schema Object Management Event Class
+    href: audit-schema-object-management-event-class.md
+  - name: Audit Schema Object Take Ownership Event Class
+    href: audit-schema-object-take-ownership-event-class.md
+  - name: Audit Server Alter Trace Event Class
+    href: audit-server-alter-trace-event-class.md
+  - name: Audit Server Object GDR Event Class
+    href: audit-server-object-gdr-event-class.md
+  - name: Audit Server Object Management Event Class
+    href: audit-server-object-management-event-class.md
+  - name: Audit Server Object Take Ownership Event Class
+    href: audit-server-object-take-ownership-event-class.md
+  - name: Audit Server Operation Event Class
+    href: audit-server-operation-event-class.md
+  - name: Audit Server Principal Impersonation Event Class
+    href: audit-server-principal-impersonation-event-class.md
+  - name: Audit Server Principal Management Event Class
+    href: audit-server-principal-management-event-class.md
+  - name: Audit Server Scope GDR Event Class
+    href: audit-server-scope-gdr-event-class.md
+  - name: Audit Server Starts and Stops Event Class
+    href: audit-server-starts-and-stops-event-class.md
+  - name: Audit Statement Permission Event Class
+    href: audit-statement-permission-event-class.md
+- name: Server Event Category
+  href: server-event-category.md
+  items:
+  - name: Mount Tape Event Class
+    href: mount-tape-event-class.md
+  - name: Server Memory Change Event Class
+    href: server-memory-change-event-class.md
+  - name: Trace File Close Event Class
+    href: trace-file-close-event-class.md
+- name: Sessions Event Category
+  href: sessions-event-category.md
+  items:
+  - name: ExistingConnection Event Class
+    href: existingconnection-event-class.md
+- name: Stored Procedures Event Category
+  href: stored-procedures-event-category.md
+  items:
+  - name: "PreConnect:Completed Event Class"
+    href: preconnect-completed-event-class.md
+  - name: "PreConnect:Starting Event Class"
+    href: preconnect-starting-event-class.md
+  - name: "RPC:Completed Event Class"
+    href: rpc-completed-event-class.md
+  - name: RPC Output Parameter Event Class
+    href: rpc-output-parameter-event-class.md
+  - name: "RPC:Starting Event Class"
+    href: rpc-starting-event-class.md
+  - name: "SP:CacheHit Event Class"
+    href: sp-cachehit-event-class.md
+  - name: "SP:CacheInsert Event Class"
+    href: sp-cacheinsert-event-class.md
+  - name: "SP:CacheMiss Event Class"
+    href: sp-cachemiss-event-class.md
+  - name: "SP:CacheRemove Event Class"
+    href: sp-cacheremove-event-class.md
+  - name: "SP:Completed Event Class"
+    href: sp-completed-event-class.md
+  - name: "SP:Recompile Event Class"
+    href: sp-recompile-event-class.md
+  - name: "SP:Starting Event Class"
+    href: sp-starting-event-class.md
+  - name: "SP:StmtCompleted Event Class"
+    href: sp-stmtcompleted-event-class.md
+  - name: "SP:StmtStarting Event Class"
+    href: sp-stmtstarting-event-class.md
+- name: Transactions Event Category
+  href: transactions-event-category.md
+  items:
+  - name: DTCTransaction Event Class
+    href: dtctransaction-event-class.md
+  - name: SQLTransaction Event Class
+    href: sqltransaction-event-class.md
+  - name: "TM: Begin Tran Completed Event Class"
+    href: tm-begin-tran-completed-event-class.md
+  - name: "TM: Begin Tran Starting Event Class"
+    href: tm-begin-tran-starting-event-class.md
+  - name: "TM: Commit Tran Completed Event Class"
+    href: tm-commit-tran-completed-event-class.md
+  - name: "TM: Commit Tran Starting Event Class"
+    href: tm-commit-tran-starting-event-class.md
+  - name: "TM: Promote Tran Completed Event Class"
+    href: tm-promote-tran-completed-event-class.md
+  - name: "TM: Promote Tran Starting Event Class"
+    href: tm-promote-tran-starting-event-class.md
+  - name: "TM: Rollback Tran Completed Event Class"
+    href: tm-rollback-tran-completed-event-class.md
+  - name: "TM: Rollback Tran Starting Event Class"
+    href: tm-rollback-tran-starting-event-class.md
+  - name: "TM: Save Tran Completed Event Class"
+    href: tm-save-tran-completed-event-class.md
+  - name: "TM: Save Tran Starting Event Class"
+    href: tm-save-tran-starting-event-class.md
+  - name: TransactionLog Event Class
+    href: transactionlog-event-class.md
+- name: TSQL Event Category
+  href: tsql-event-category.md
+  items:
+  - name: Exec Prepared SQL Event Class
+    href: exec-prepared-sql-event-class.md
+  - name: Prepare SQL Event Class
+    href: prepare-sql-event-class.md
+  - name: "SQL:BatchCompleted Event Class"
+    href: sql-batchcompleted-event-class.md
+  - name: "SQL:BatchStarting Event Class"
+    href: sql-batchstarting-event-class.md
+  - name: "SQL:StmtCompleted Event Class"
+    href: sql-stmtcompleted-event-class.md
+  - name: "SQL:StmtRecompile Event Class"
+    href: sql-stmtrecompile-event-class.md
+  - name: "SQL:StmtStarting Event Class"
+    href: sql-stmtstarting-event-class.md
+  - name: Unprepare SQL Event Class
+    href: unprepare-sql-event-class.md
+  - name: XQuery Static Type Event Class
+    href: xquery-static-type-event-class.md
+- name: User-Configurable Event Category
+  href: user-configurable-event-category.md
+  items:
+  - name: User-Configurable Event Class
+    href: user-configurable-event-class.md
+- name: ObjectType Trace Event Column
+  href: objecttype-trace-event-column.md

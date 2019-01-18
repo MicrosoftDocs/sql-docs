@@ -2,15 +2,10 @@
 title: "ENCRYPTBYKEY (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.service: ""
-ms.component: "t-sql|functions"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: t-sql
 ms.topic: "language-reference"
 f1_keywords: 
   - "ENCRYPTBYKEY_TSQL"
@@ -23,11 +18,9 @@ helpviewer_keywords:
   - "symmetric keys [SQL Server], ENCRYPTBYKEY function"
   - "ENCRYPTBYKEY function"
 ms.assetid: 0e11f8c5-f79d-46c1-ab11-b68ef05d6787
-caps.latest.revision: 44
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "craigg"
-ms.workload: "On Demand"
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
 ---
 # ENCRYPTBYKEY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -71,6 +64,8 @@ EncryptByKey ( key_GUID , { 'cleartext' | @cleartext }
  **varbinary** with a maximum size of 8,000 bytes.  
   
  Returns NULL if the key is not open, if the key does not exist, or if the key is a deprecated RC4 key and the database is not in compatibility level 110 or higher.  
+ 
+ Returns NULL if the *cleartext* value is NULL.
   
 ## Remarks  
  EncryptByKey uses a symmetric key. This key must be open. If the symmetric key is already open in the current session, you do not have to open it again in the context of the query.  
@@ -127,7 +122,7 @@ GO
 USE AdventureWorks2012;  
   
 -- Create a column in which to store the encrypted data.  
-ALTER TABLE Sales.CreditCard.   
+ALTER TABLE Sales.CreditCard   
     ADD CardNumber_Encrypted varbinary(128);   
 GO  
   

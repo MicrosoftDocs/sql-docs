@@ -2,15 +2,10 @@
 title: "DBCC SQLPERF (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/07/2018"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "sql-database"
-ms.service: ""
-ms.component: "t-sql|database-console-commands"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: t-sql
 ms.topic: "language-reference"
 f1_keywords: 
   - "SQLPERF"
@@ -25,18 +20,16 @@ helpviewer_keywords:
   - "space [SQL Server], transaction logs"
   - "DBCC SQLPERF statement"
 ms.assetid: ec9225ce-e20f-4b03-8b3a-7bcad8a649df
-caps.latest.revision: 43
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-ms.workload: "Active"
+author: uc-msft
+ms.author: umajay
+manager: craigg
 ---
 # DBCC SQLPERF (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
 Provides transaction log space usage statistics for all databases. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] it can also be used to reset wait and latch statistics.
   
-**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]), [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] ([Preview in some regions](http://azure.microsoft.com/documentation/articles/sql-database-preview-whats-new/?WT.mc_id=TSQL_GetItTag))
+**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ( [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]), [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] ([Preview in some regions](https://azure.microsoft.com/documentation/articles/sql-database-preview-whats-new/?WT.mc_id=TSQL_GetItTag))
   
  ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -86,7 +79,7 @@ The transaction log records each transaction made in a database. For more inform
 ## Permissions  
 On [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to run `DBCC SQLPERF(LOGSPACE)` requires `VIEW SERVER STATE` permission on the server. To reset wait and latch statistics requires `ALTER SERVER STATE` permission on the server.
   
-On [!INCLUDE[ssSDS](../../includes/sssds-md.md)] Premium Tiers requires the `VIEW DATABASE STATE` permission in the database. On [!INCLUDE[ssSDS](../../includes/sssds-md.md)] Standard and Basic Tiers requires the [!INCLUDE[ssSDS](../../includes/sssds-md.md)] admin account. Reset wait and latch statistics are not supported.
+On [!INCLUDE[ssSDS](../../includes/sssds-md.md)] Premium and Business Critical tiers requires the `VIEW DATABASE STATE` permission in the database. On [!INCLUDE[ssSDS](../../includes/sssds-md.md)] Standard, Basic, and General Purpose tiers requires the [!INCLUDE[ssSDS](../../includes/sssds-md.md)] admin account. Reset wait and latch statistics are not supported.
   
 ## Examples  
   

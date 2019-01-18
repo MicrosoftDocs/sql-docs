@@ -2,16 +2,11 @@
 title: "Connect to SQL Server with Proxy Server-SQL Server Config Manager | Microsoft Docs"
 ms.custom: ""
 ms.date: "12/15/2016"
-ms.prod: "sql-non-specified"
-ms.prod_service: "database-engine"
-ms.service: ""
-ms.component: "configure-windows"
+ms.prod: sql
+ms.prod_service: high-availability
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: configuration
+ms.topic: conceptual
 helpviewer_keywords: 
   - "Remote WinSock"
   - "RWS"
@@ -21,11 +16,9 @@ helpviewer_keywords:
   - "Microsoft Proxy Server [SQL Server]"
   - "local address tables [SQL Server]"
 ms.assetid: 39714de0-2a1f-4179-9091-5c3fa4612545
-caps.latest.revision: 22
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-ms.workload: "Inactive"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ---
 # Connect to SQL Server Through a Proxy Server (SQL Server Configuration Manager)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -40,7 +33,7 @@ ms.workload: "Inactive"
   
 2.  In your proxy server define the local address table (LAT) for the proxy server so that the listening node address is outside the range of LAT entries. For more information, see your proxy server documentation.  
   
->  [!NOTE]
+> [!NOTE]
 >  This topic applies to on-premises [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]. For connection issues related to [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], see [Troubleshoot connection issues to Azure SQL Database](https://docs.microsoft.com/azure/sql-database/sql-database-troubleshoot-common-connection-issues).  
 
 

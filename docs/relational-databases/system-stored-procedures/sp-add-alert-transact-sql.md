@@ -2,15 +2,10 @@
 title: "sp_add_alert (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "database-engine"
-ms.service: ""
-ms.component: "system-stored-procedures"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: system-objects
 ms.topic: "language-reference"
 f1_keywords: 
   - "sp_add_alert"
@@ -20,11 +15,9 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_add_alert"
 ms.assetid: d9b41853-e22d-4813-a79f-57efb4511f09
-caps.latest.revision: 40
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-ms.workload: "Inactive"
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
 ---
 # sp_add_alert (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -55,7 +48,7 @@ sp_add_alert [ @name = ] 'name'
 ```  
   
 ## Arguments  
- [ **@name =** ] **'***name***'**  
+ [ **@name =** ] **'**_name_**'**  
  The name of the alert. The name appears in the e-mail or pager message sent in response to the alert. It must be unique and can contain the percent (**%**) character. *name* is **sysname**, with no default.  
   
  [ **@message_id =** ] *message_id*  
@@ -79,13 +72,13 @@ sp_add_alert [ @name = ] 'name'
   
  By setting this value, it is possible to prevent, for example, unwanted e-mail messages from being sent when an alert repeatedly occurs in a short period of time.  
   
- [ **@notification_message =** ] **'***notification_message***'**  
+ [ **@notification_message =** ] **'**_notification_message_**'**  
  Is an optional additional message sent to the operator as part of the e-mail, **net send**, or pager notification. *notification_message* is **nvarchar(512)**, with a default of NULL. Specifying *notification_message* is useful for adding special notes such as remedial procedures.  
   
  [ **@include_event_description_in =** ] *include_event_description_in*  
  Is whether the description of the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] error should be included as part of the notification message. *include_event_description_in*is **tinyint**, with a default of **5** (e-mail and **net send**), and can have one or more of these values combined with an **OR** logical operator.  
   
-> [!IMPORTANT]  
+> [!IMPORTANT]
 >  The Pager and **net send** options will be removed from [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent in a future version of [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Avoid using these features in new development work, and plan to modify applications that currently use these features.  
   
 |Value|Description|  
@@ -95,16 +88,16 @@ sp_add_alert [ @name = ] 'name'
 |**2**|Pager|  
 |**4**|**net send**|  
   
- [ **@database_name =** ] **'***database***'**  
+ [ **@database_name =** ] **'**_database_**'**  
  The database in which the error must occur for the alert to fire. If *database*is not supplied, the alert fires regardless of where the error occurred. *database* is **sysname**. Names that are enclosed in brackets ([ ]) are not allowed. The default value is NULL.  
   
- [ **@event_description_keyword =** ] **'***event_description_keyword_pattern***'**  
+ [ **@event_description_keyword =** ] **'**_event_description_keyword_pattern_**'**  
  The sequence of characters that the description of the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] error must be like. [!INCLUDE[tsql](../../includes/tsql-md.md)] LIKE expression pattern-matching characters can be used. *event_description_keyword_pattern* is **nvarchar(100)**, with a default of NULL. This parameter is useful for filtering object names (for example, **%customer_table%**).  
   
  [ **@job_id =** ] *job_id*  
  The job identification number of the job to run in response to this alert. *job_id* is **uniqueidentifier**, with a default of NULL.  
   
- [ **@job_name =** ] **'***job_name***'**  
+ [ **@job_name =** ] **'**_job_name_**'**  
  The name of the job to be executed in response to this alert. *job_name*is **sysname**, with a default of NULL.  
   
 > [!NOTE]  
@@ -113,7 +106,7 @@ sp_add_alert [ @name = ] 'name'
  [ **@raise_snmp_trap =** ] *raise_snmp_trap*  
  Not implemented in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] version 7.0. *raise_snmp_trap* is **tinyint**, with a default of 0.  
   
- [ **@performance_condition =** ] **'***performance_condition***'**  
+ [ **@performance_condition =** ] **'**_performance_condition_**'**  
  Is a value expressed in the format '*itemcomparatorvalue*'. *performance_condition* is **nvarchar(512)** with a default of NULL, and consists of these elements.  
   
 |Format element|Description|  
@@ -122,13 +115,13 @@ sp_add_alert [ @name = ] 'name'
 |*Comparator*|One of these operators: >, <, or =|  
 |*Value*|Numeric value of the counter|  
   
- [ **@category_name =** ] **'***category***'**  
+ [ **@category_name =** ] **'**_category_**'**  
  The name of the alert category. *category* is **sysname**, with a default of NULL.  
   
- [ **@wmi_namespace**= ] **'***wmi_namespace***'**  
+ [ **@wmi_namespace**= ] **'**_wmi_namespace_**'**  
  The WMI namespace to query for events. *wmi_namespace* is **sysname**, with a default of NULL. Only namespaces on the local server are supported.  
   
- [ **@wmi_query**= ] **'***wmi_query***'**  
+ [ **@wmi_query**= ] **'**_wmi_query_**'**  
  The query that specifies the WMI event for the alert. *wmi_query* is **nvarchar(512)**, with a default of NULL.  
   
 ## Return Code Values  

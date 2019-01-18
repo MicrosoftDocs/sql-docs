@@ -2,15 +2,10 @@
 title: "@@PACK_SENT (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "09/18/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "sql-database"
-ms.service: ""
-ms.component: "t-sql|functions"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: t-sql
 ms.topic: "language-reference"
 f1_keywords: 
   - "@@PACK_SENT"
@@ -20,16 +15,14 @@ dev_langs:
 helpviewer_keywords: 
   - "number of output packets written"
   - "@@PACK_SENT function"
-  - "packets [SQL Server], ouput"
+  - "packets [SQL Server], output"
   - "networking [SQL Server], output packets"
   - "connections [SQL Server], packets"
   - "output packets written to network [SQL Server]"
 ms.assetid: 8a322162-24c9-48e9-bfa4-c060e4e11dba
-caps.latest.revision: 23
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "craigg"
-ms.workload: "Inactive"
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
 ---
 # &#x40;&#x40;PACK_SENT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,7 +33,7 @@ ms.workload: "Inactive"
   
 ## Syntax  
   
-```  
+```sql
 @@PACK_SENT  
 ```  
   
@@ -53,7 +46,7 @@ ms.workload: "Inactive"
 ## Examples  
  The following example shows the usage of `@@PACK_SENT`.  
   
-```  
+```sql
 SELECT @@PACK_SENT AS 'Pack Sent';  
 ```  
   

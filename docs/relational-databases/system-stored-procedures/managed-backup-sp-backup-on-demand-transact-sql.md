@@ -2,15 +2,10 @@
 title: "managed_backup.sp_backup_on_demand (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/10/2016"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "database-engine"
-ms.service: ""
-ms.component: "system-stored-procedures"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: system-objects
 ms.topic: "language-reference"
 f1_keywords: 
   - "smart_admin.sp_backup_on_demand"
@@ -23,11 +18,9 @@ helpviewer_keywords:
   - "smart_admin.sp_backup_on_demand"
   - "sp_backup_on_demand"
 ms.assetid: 638f809f-27fa-4c44-a549-9cf37ecc920c
-caps.latest.revision: 13
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-ms.workload: "Inactive"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ---
 # managed_backup.sp_backup_on_demand (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -66,7 +59,7 @@ EXEC managed_backup.sp_backup_on_demand
  Requires membership in **db_backupoperator** database role, with **ALTER ANY CREDENTIAL** permissions, and **EXECUTE** permissions on **sp_delete_backuphistory**stored procedure.  
   
 ## Examples  
- The following example makes a database backup request for the database ‘TestDB’. This database has [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] enabled.  
+ The following example makes a database backup request for the database 'TestDB'. This database has [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] enabled.  
   
 ```  
 Use MSDB  

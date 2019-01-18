@@ -1,29 +1,14 @@
 ---
 title: "Set Impersonation Options (SSAS - Multidimensional) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/13/2017"
-ms.prod: analysis-services
-ms.prod_service: "analysis-services"
-ms.service: ""
-ms.component: ""
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
-  
-ms.component: multidimensional-tabular
-ms.component: data-mining
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.asvs.sqlserverstudio.impersonationinfo.f1"
-helpviewer_keywords: 
-  - "Impersonation Information dialog box"
-ms.assetid: 8e127f72-ef23-44ad-81e6-3dd58981770e
-caps.latest.revision: 27
-author: "Minewiskan"
-ms.author: "owend"
-manager: "kfile"
-ms.workload: "On Demand"
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: multidimensional-models
+ms.topic: conceptual
+ms.author: owend
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
 ---
 # Set Impersonation Options (SSAS - Multidimensional)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -85,7 +70,7 @@ ms.workload: "On Demand"
  **Default** or **Inherit**  
  The dialog box uses **Default** for the impersonation options set at the database level and **Inherit** for impersonation options set at the data source level.  
   
- **Data Sources – Inherit Option**  
+ **Data Sources - Inherit Option**  
   
  At the data source level, **Inherit** specifies that [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] should use the impersonation option of the parent object. In a multidimensional model, the parent object is the [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] database. Choosing the **Inherit** option lets you centrally manage the impersonation settings for this and other data sources that are part of the same database. For this option to be meaningful, choose a specific Windows user name and password at the database level. Otherwise, the combination of **Inherit** on the data source and **Default** on the database are equivalent to using service account option.  
   
@@ -99,7 +84,7 @@ ms.workload: "On Demand"
   
  For more information about default settings at the database level, see [Set Multidimensional Database Properties &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/set-multidimensional-database-properties-analysis-services.md).  
   
- **Databases – Default option**  
+ **Databases - Default option**  
 
  For multidimensional databases, **Default** means use the service account, and current user for data mining operations.  
   

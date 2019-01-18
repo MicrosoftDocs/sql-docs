@@ -1,16 +1,11 @@
 ---
 title: "CREATE EXTERNAL FILE FORMAT (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/08/2017"
-ms.prod: "sql-non-specified"
+ms.date: "2/20/2018"
+ms.prod: sql
 ms.prod_service: "sql-data-warehouse, pdw, sql-database"
-ms.service: ""
-ms.component: "t-sql|statements"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: t-sql
 ms.topic: "language-reference"
 f1_keywords: 
   - "CREATE EXTERNAL FILE FORMAT"
@@ -22,20 +17,19 @@ helpviewer_keywords:
   - "External, file format"
   - "PolyBase, external file format"
 ms.assetid: abd5ec8c-1a0e-4d38-a374-8ce3401bc60c
-caps.latest.revision: 25
-author: "barbkess"
-ms.author: "barbkess"
-manager: "jhubbard"
-ms.workload: "On Demand"
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+monikerRange: ">=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # CREATE EXTERNAL FILE FORMAT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-pdw-md.md)]
 
-  Creates a PolyBase external file format definition for external data stored in Hadoop, Azure blob storage, or Azure Data Lake Store. Creating an external file format is a prerequisite for creating a PolyBase external table. By creating an external file format, you specify the actual layout of the data referenced by an external table.  
+  Creates an External File Format object defining external data stored in Hadoop, Azure Blob Storage, or Azure Data Lake Store. Creating an external file format is a prerequisite for creating an External Table. By creating an External File Format, you specify the actual layout of the data referenced by an external table.  
   
  PolyBase supports the following file formats:
   
--   Delimited text  
+-   Delimited Text  
   
 -   Hive RCFile  
   
@@ -43,7 +37,7 @@ ms.workload: "On Demand"
   
 -   Parquet  
   
- To create an external table, see [CREATE EXTERNAL TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-external-table-transact-sql.md).
+To create an External Table, see [CREATE EXTERNAL TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-external-table-transact-sql.md).
   
  ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -92,7 +86,8 @@ WITH (
 <format_options> ::=  
 {  
     FIELD_TERMINATOR = field_terminator  
-    | STRING_DELIMITER = string_delimiter  
+    | STRING_DELIMITER = string_delimiter 
+    | First_Row = integer -- ONLY AVAILABLE SQL DW
     | DATE_FORMAT = datetime_format  
     | USE_TYPE_DEFAULT = { TRUE | FALSE } 
     | Encoding = {'UTF8' | 'UTF16'} 
@@ -103,29 +98,29 @@ WITH (
  *file_format_name*  
  Specifies a name for the external file format.
   
- FORMAT_TYPE
+ FORMAT_TYPE = [ PARQUET | ORC | RCFILE | PARQUET]
  Specifies the format of the external data.
   
- PARQUET
- Specifies a Parquet  format.
+   -   PARQUET
+   Specifies a Parquet format.
   
- ORC  
- Specifies an Optimized Row Columnar (ORC) format. This option requires Hive version 0.11 or higher on the external Hadoop cluster. In Hadoop, the ORC file format offers better compression and performance than the RCFILE file format.
+   -   ORC  
+   Specifies an Optimized Row Columnar (ORC) format. This option requires Hive version 0.11 or higher on the external Hadoop cluster. In Hadoop, the ORC file format offers better compression and performance than the RCFILE file format.
+
+   -   RCFILE (in combination with SERDE_METHOD = *SERDE_method*)
+   Specifies a Record Columnar file format (RcFile). This option requires you to specify a Hive Serializer and Deserializer (SerDe) method. This requirement is the same if you use Hive/HiveQL in Hadoop to query RC files. Note, the SerDe method is case-sensitive.
+
+   Examples of specifying RCFile with the two SerDe methods that PolyBase supports.
+
+    -   FORMAT_TYPE = RCFILE, SERDE_METHOD = 'org.apache.hadoop.hive.serde2.columnar.LazyBinaryColumnarSerDe'
+
+    -   FORMAT_TYPE = RCFILE, SERDE_METHOD = 'org.apache.hadoop.hive.serde2.columnar.ColumnarSerDe'
+
+   -   DELIMITEDTEXT
+   Specifies a text format with column delimiters, also called field terminators.
   
- RCFILE (in combination with SERDE_METHOD = *SERDE_method*)
- Specifies a Record Columnar file format (RcFile). This option requires you to specify a Hive Serializer and Deserializer (SerDe) method. This requirement is the same if you use Hive/HiveQL in Hadoop to query RC files. Note, the SerDe method is case-sensitive.
-  
- Examples of specifying RCFile with the two SerDe methods that PolyBase supports.
-  
--   FORMAT_TYPE = RCFILE, SERDE_METHOD = 'org.apache.hadoop.hive.serde2.columnar.LazyBinaryColumnarSerDe'
-  
--   FORMAT_TYPE = RCFILE, SERDE_METHOD = 'org.apache.hadoop.hive.serde2.columnar.ColumnarSerDe'
-  
- DELIMITEDTEXT
- Specifies a text format with column delimiters, also called field terminators.
-  
- FIELD_TERMINATOR = *field_terminator*
- Applies only to delimited text files. The field terminator specifies one or more characters that mark the end of each field (column) in the text-delimited file. The default is the pipe character ꞌ|ꞌ. For guaranteed support, we recommend using one or more ascii characters.
+ FIELD_TERMINATOR = *field_terminator*  
+Applies only to delimited text files. The field terminator specifies one or more characters that mark the end of each field (column) in the text-delimited file. The default is the pipe character ꞌ|ꞌ. For guaranteed support, we recommend using one or more ascii characters.
   
   
  Examples:  
@@ -139,7 +134,7 @@ WITH (
 -   FIELD_TERMINATOR = '~|~'  
   
  STRING_DELIMITER = *string_delimiter*  
- Specifies the field terminator for data of type string in the text-delimited file. The string delimiter is one or more characters in length and is enclosed with single quotes. The default is the empty string "". For guaranteed support, we recommend using one or more ascii characters.
+Specifies the field terminator for data of type string in the text-delimited file. The string delimiter is one or more characters in length and is enclosed with single quotes. The default is the empty string "". For guaranteed support, we recommend using one or more ascii characters.
  
   
  Examples:  
@@ -153,13 +148,16 @@ WITH (
 -   STRING_DELIMITER = ꞌ,ꞌ  
   
 -   STRING_DELIMITER = '0x7E0x7E'  -- Two tildes (for example, ~~)
-  
- DATE\_FORMAT = *datetime_format*
- Specifies a custom format for all date and time data that might appear in a delimited text file. If the source file uses default datetime formats, this option is not necessary. Only one custom datetime format is allowed per file. You cannot specify multiple custom datetime formats per file. However, you can use multiple datetime formats, if each one is the default format for its respective data type in the external table definition.
+ 
+ FIRST_ROW = *First_row_int*  
+Specifies the row number that is read first in all files during a PolyBase load. This parameter can take values 1-15. If the value is set to two, the first row in every file (header row) is skipped when the data is loaded. Rows are skipped based on the existence of row terminators (/r/n, /r, /n). When this option is used for export, rows are added to the data to make sure the file can be read with no data loss. If the value is set to >2, the first row exported is the Column names of the external table.
 
-PolyBase only uses the custom date format for importing the data. It does not use the custom format for writing data to an external file.
+ DATE\_FORMAT = *datetime_format*  
+Specifies a custom format for all date and time data that might appear in a delimited text file. If the source file uses default datetime formats, this option isn't necessary. Only one custom datetime format is allowed per file. You can't specify more than one custom datetime formats per file. However, you can use more than one datetime formats if each one is the default format for its respective data type in the external table definition.
 
- When DATE_FORMAT is not specified or is the empty string, PolyBase uses the following default formats:
+PolyBase only uses the custom date format for importing the data. It doesn't use the custom format for writing data to an external file.
+
+ When DATE_FORMAT isn't specified or is the empty string, PolyBase uses the following default formats:
   
 -   DateTime: 'yyyy-MM-dd HH:mm:ss'  
   
@@ -173,15 +171,15 @@ PolyBase only uses the custom date format for importing the data. It does not us
   
 -   Time: 'HH:mm:ss'  
   
- **Example date formats** are in the following table.  
+**Example date formats** are in the following table:
   
- Notes about the table:  
+Notes about the table:  
   
--   Year, month, and day can have a variety of formats and orders. The table shows only the **ymd** format. Month can have 1 or 2 digits, or 3 characters. Day can have 1 or 2 digits. Year can have 2 or 4 digits.
+-   Year, month, and day can have a variety of formats and orders. The table shows only the **ymd** format. Month can have one or two digits, or three characters. Day can have one or two digits. Year can have two or four digits.
   
--   Milliseconds (fffffff) is not required.
+-   Milliseconds (fffffff) are not required.
   
--   Am, pm (tt) is not required. The default is AM.
+-   Am, pm (tt) isn't required. The default is AM.
   
 |Date Type|Example|Description|  
 |---------------|-------------|-----------------|  
@@ -190,7 +188,7 @@ PolyBase only uses the custom date format for importing the data. It does not us
 |SmallDateTime|DATE_FORMAT =  'yyyy-MM-dd HH:mm'|In addition to year, month, and day, this date format includes 00-23 hours, 00-59 minutes.|  
 |SmallDateTime|DATE_FORMAT =  'yyyy-MM-dd hh:mmtt'|In addition to year, month, and day, this date format includes 00-11 hours, 00-59 minutes, no seconds, and AM, am, PM, or pm.|  
 |Date|DATE_FORMAT =  'yyyy-MM-dd'|Year, month, and day. No time element is included.|  
-|Date|DATE_FORMAT = 'yyyy-MMM-dd'|Year, month, and day. When month is specified with 3 M’s, the input value is one or the strings Jan, Feb, Mar, Apr, May, Jun, Jul, Aug, Sep, Oct, Nov, or Dec.|  
+|Date|DATE_FORMAT = 'yyyy-MMM-dd'|Year, month, and day. When month is specified with 3 M's, the input value is one or the strings Jan, Feb, Mar, Apr, May, Jun, Jul, Aug, Sep, Oct, Nov, or Dec.|  
 |DateTime2|DATE_FORMAT = 'yyyy-MM-dd HH:mm:ss.fffffff'|In addition to year, month, and day, this date format includes 00-23 hours, 00-59 minutes, 00-59 seconds, and 7 digits for milliseconds.|  
 |DateTime2|DATE_FORMAT = 'yyyy-MM-dd hh:mm:ss.ffffffftt'|In addition to year, month, and day, this date format includes 00-11 hours, 00-59 minutes, 00-59 seconds, 7 digits for milliseconds, and AM, am, PM, or pm.|  
 |DateTimeOffset|DATE_FORMAT = 'yyyy-MM-dd HH:mm:ss.fffffff zzz'|In addition to year, month, and day, this date format includes 00-23 hours, 00-59 minutes, 00-59 seconds, and 7 digits for milliseconds, and the timezone offset which you put in the input file as `{+&#124;-}HH:ss`. For example, since Los Angeles time without daylight savings is 8 hours behind UTC, a value of -08:00 in the input file specifies the timezone for Los Angeles.|  
@@ -216,11 +214,11 @@ PolyBase only uses the custom date format for importing the data. It does not us
   
  Details:  
   
--   To separate month, day and year values, you can use ' – ', ' / ', or ' . '. For simplicity, the table uses only the ' – ' separator.
+-   To separate month, day and year values, you can use '-', '/', or '.'. For simplicity, the table uses only the ' - ' separator.
   
--   To specify the month as text, use three or more characters. Months with 1 or 2 characters are interpreted as a number.
+-   To specify the month as text, use three or more characters. Months with one or two characters are interpreted as a number.
   
--   To separate time values, use the ' : ' symbol.
+-   To separate time values, use the ':' symbol.
   
 -   Letters enclosed in square brackets are optional.
   
@@ -228,10 +226,10 @@ PolyBase only uses the custom date format for importing the data. It does not us
   
 -   The letters 'zzz' designate the time zone offset for the system's current time zone in the format {+|-}HH:ss].
   
- USE_TYPE_DEFAULT = { TRUE | **FALSE** }
+ USE_TYPE_DEFAULT = { TRUE | **FALSE** }  
  Specifies how to handle missing values in delimited text files when PolyBase retrieves data from the text file.
   
- TRUE
+ TRUE  
  When retrieving data from the text file, store each missing value by using the default value for the data type of the corresponding column in the external table definition. For example, replace a missing value with:  
   
 -   0 if the column is defined as a numeric column.
@@ -240,15 +238,15 @@ PolyBase only uses the custom date format for importing the data. It does not us
   
 -   1900-01-01 if the column is a date column.
   
- FALSE
+ FALSE  
  Store all missing values as NULL. Any NULL values that are stored by using the word NULL in the delimited text file are imported as the string 'NULL'.
   
-   Encoding = {'UTF8' | 'UTF16'}
- In Azure SQL Data Warehouse, PolyBase can read UTF8 and UTF16-LE encoded delimited text files. In SQL Server and PDW, PolyBase does not support reading UTF16 encoded files.
+   Encoding = {'UTF8' | 'UTF16'}  
+ In Azure SQL Data Warehouse, PolyBase can read UTF8 and UTF16-LE encoded delimited text files. In SQL Server and PDW, PolyBase doesn't support reading UTF16 encoded files.
   
- DATA_COMPRESSION = *data_compression_method*
- Specifies the data compression method for the external data. When DATA_COMPRESSION is not specified, the default is uncompressed data.
- In order to work properly, Gzip compressed files must have the ".gz" file extension.
+ DATA_COMPRESSION = *data_compression_method*  
+ Specifies the data compression method for the external data. When DATA_COMPRESSION isn't specified, the default is uncompressed data.
+ To work properly, Gzip compressed files must have the ".gz" file extension.
  
  The DELIMITEDTEXT format type supports these compression methods:
   
@@ -266,7 +264,7 @@ PolyBase only uses the custom date format for importing the data. It does not us
   
 -   DATA COMPRESSION = 'org.apache.hadoop.io.compress.SnappyCodec'
   
- The PARQUET file format type supports the folliwing compression methods:
+ The PARQUET file format type supports the following compression methods:
   
 -   DATA COMPRESSION = 'org.apache.hadoop.io.compress.GzipCodec'
   
@@ -284,7 +282,7 @@ PolyBase only uses the custom date format for importing the data. It does not us
   
 ## Limitations and Restrictions
   
- The row delimiter in delimited-text files must be supported by Hadoop’s LineRecordReader. That is, it must be either '\r', '\n', or '\r\n'. These delimiters are not user-configurable.
+ The row delimiter in delimited-text files must be supported by Hadoop's LineRecordReader. That is, it must be either '\r', '\n', or '\r\n'. These delimiters are not user-configurable.
   
  The combinations of supported SerDe methods with RCFiles, and the supported data compression methods are listed previously in this article. Not all combinations are supported.
   
@@ -300,12 +298,12 @@ PolyBase only uses the custom date format for importing the data. It does not us
 ## Performance
  Using compressed files always comes with the tradeoff between transferring less data between the external data source and SQL Server while increasing the CPU usage to compress and decompress the data.
   
- Gzip compressed text files are not splittable. To improve performance for Gzip compressed text files, we recommend generating multiple files that are all stored in the same directory within the external data source. This allows PolyBase to read and decompress the data faster by using multiple reader and decompression processes. The ideal number of compressed files is the maximum number of data reader processes per compute node. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], the maximum number of data reader processes is 8 per node in the current release. In [!INCLUDE[ssSDW](../../includes/sssdw-md.md)], the maximum number of data reader processes per node varies by SLO. See [Azure SQL Data Warehouse loading patterns and strategies](https://blogs.msdn.microsoft.com/sqlcat/2016/02/06/azure-sql-data-warehouse-loading-patterns-and-strategies/) for details.  
+ Gzip compressed text files are not splittable. To improve performance for Gzip compressed text files, we recommend generating multiple files that are all stored in the same directory within the external data source. This file structure allows PolyBase to read and decompress the data faster by using multiple reader and decompression processes. The ideal number of compressed files is the maximum number of data reader processes per compute node. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], the maximum number of data reader processes is 8 per node except Azure SQL Data Warehouse Gen2 which is 20 readers per node. In [!INCLUDE[ssSDW](../../includes/sssdw-md.md)], the maximum number of data reader processes per node varies by SLO. See [Azure SQL Data Warehouse loading patterns and strategies](https://blogs.msdn.microsoft.com/sqlcat/2017/05/17/azure-sql-data-warehouse-loading-patterns-and-strategies/) for details.  
   
 ## Examples  
   
 ### A. Create a DELIMITEDTEXT external file format  
- This example creates an external file format named *textdelimited1* for a text-delimited file. The options listed for FORMAT\_OPTIONS specify that the fields in the file should be separated using a pipe character '|'. The text file is also compressed with the Gzip codec. If DATA\_COMPRESSION is not specified, the text file is uncompressed.
+ This example creates an external file format named *textdelimited1* for a text-delimited file. The options listed for FORMAT\_OPTIONS specify that the fields in the file should be separated using a pipe character '|'. The text file is also compressed with the Gzip codec. If DATA\_COMPRESSION isn't specified, the text file is uncompressed.
   
  For a delimited text file, the data compression method can either be the default Codec, 'org.apache.hadoop.io.compress.DefaultCodec', or the Gzip Codec, 'org.apache.hadoop.io.compress.GzipCodec'.
   
@@ -321,7 +319,7 @@ WITH (
 ```  
   
 ### B. Create an RCFile external file format  
- This example creates an external file format for a RCFile that uses the serialization/deserialization method org.apache.hadoop.hive.serde2.columnar.LazyBinaryColumnarSerDe. It also specifies to use the Default Codec for the data compression method. If DATA_COMPRESSION is not specified, the default is no compression.
+ This example creates an external file format for a RCFile that uses the serialization/deserialization method org.apache.hadoop.hive.serde2.columnar.LazyBinaryColumnarSerDe. It also specifies to use the Default Codec for the data compression method. If DATA_COMPRESSION isn't specified, the default is no compression.
   
 ```  
 CREATE EXTERNAL FILE FORMAT rcfile1  
@@ -333,7 +331,7 @@ WITH (
 ```  
   
 ### C. Create an ORC external file format  
- This example creates an external file format for an ORC file that compresses the data with the org.apache.io.compress.SnappyCodec data compression method. If DATA_COMPRESSION is not specified, the default is no compression.
+ This example creates an external file format for an ORC file that compresses the data with the org.apache.io.compress.SnappyCodec data compression method. If DATA_COMPRESSION isn't specified, the default is no compression.
   
 ```  
 CREATE EXTERNAL FILE FORMAT orcfile1  
@@ -344,7 +342,7 @@ WITH (
 ```  
   
 ### D. Create a PARQUET external file format  
- This example creates an external file format for a Parquet file that compresses the data with the org.apache.io.compress.SnappyCodec data compression method. If DATA_COMPRESSION is not specified, the default is no compression.  
+ This example creates an external file format for a Parquet file that compresses the data with the org.apache.io.compress.SnappyCodec data compression method. If DATA_COMPRESSION isn't specified, the default is no compression.  
   
 ```  
 CREATE EXTERNAL FILE FORMAT parquetfile1  
@@ -353,7 +351,20 @@ WITH (
     DATA_COMPRESSION = 'org.apache.hadoop.io.compress.SnappyCodec'  
 );  
 ```  
+### E. Create a Delimited Text File Skipping Header Row (Azure SQL DW Only)
+ This example creates an external file format for CSV file with a single header row. 
   
+```  
+CREATE EXTERNAL FILE FORMAT skipHeader_CSV
+WITH (FORMAT_TYPE = DELIMITEDTEXT,
+      FORMAT_OPTIONS(
+          FIELD_TERMINATOR = ',',
+          STRING_DELIMITER = '"',
+          FIRST_ROW = 2, 
+          USE_TYPE_DEFAULT = True)
+)
+```   
+
 ## See Also
  [CREATE EXTERNAL DATA SOURCE &#40;Transact-SQL&#41;](../../t-sql/statements/create-external-data-source-transact-sql.md)   
  [CREATE EXTERNAL TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-external-table-transact-sql.md)   

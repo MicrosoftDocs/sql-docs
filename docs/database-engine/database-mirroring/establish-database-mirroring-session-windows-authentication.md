@@ -2,24 +2,17 @@
 title: "Establish Database Mirroring Session - Windows Authentication | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-non-specified"
-ms.prod_service: "database-engine"
-ms.service: ""
-ms.component: "database-mirroring"
+ms.prod: sql
+ms.prod_service: high-availability
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: high-availability
+ms.topic: conceptual
 helpviewer_keywords: 
   - "database mirroring [SQL Server], sessions"
 ms.assetid: 7cb418d6-dce1-4a0d-830e-9c5ccfe3bd72
-caps.latest.revision: 58
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-ms.workload: "On Demand"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ---
 # Establish Database Mirroring Session - Windows Authentication
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -29,7 +22,7 @@ ms.workload: "On Demand"
   
  To establish a database mirroring session and to modify the properties of database mirroring for a database, use the **Mirroring** page of the **Database Properties** dialog box.Before you use the **Mirroring** page to configure database mirroring, ensure that the following requirements have been met:  
   
--   The principal and mirror server instances must be running the same edition of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]—either Standard or Enterprise. Also, we strongly recommend that they run on comparable systems that can handle identical workloads.  
+-   The principal and mirror server instances must be running the same edition of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-either Standard or Enterprise. Also, we strongly recommend that they run on comparable systems that can handle identical workloads.  
   
     > [!NOTE]  
     >  A witness server instance is not available in every edition of [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. For a list of features that are supported by the editions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], see [Features Supported by the Editions of SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md).  
@@ -64,7 +57,7 @@ ms.workload: "On Demand"
     |------------|--------------|-----------------|  
     |**High performance (asynchronous)**|Null (if exists, not used but the session requires a quorum)|To maximize performance, the mirror database always lags somewhat behind the principal database, never quite catching up. However, the gap between the databases is typically small. The loss of a partner has the following effect:<br /><br /> If the mirror server instance becomes unavailable, the principal continues.<br /><br /> If the principal server instance becomes unavailable, the mirror stops; but if the session has no witness (as recommended) or the witness is connected to the mirror server, the mirror server is accessible as a warm standby; the database owner can force service to the mirror server instance (with possible data loss).<br /><br /> <br /><br /> For more information, see [Role Switching During a Database Mirroring Session &#40;SQL Server&#41;](../../database-engine/database-mirroring/role-switching-during-a-database-mirroring-session-sql-server.md).|  
     |**High safety without automatic failover (synchronous)**|No|All committed transactions are guaranteed to be written to disk on the mirror server.<br /><br /> Manual failover is possible when the partners are connected to each other and the database is synchronized.<br /><br /> The loss of a partner has the following effect:<br /><br /> If the mirror server instance becomes unavailable, the principal continues.<br /><br /> If the principal server instance becomes unavailable, the mirror stops but is accessible as a warm standby; the database owner can force service to the mirror server instance (with possible data loss).<br /><br /> <br /><br /> For more information, see [Role Switching During a Database Mirroring Session &#40;SQL Server&#41;](../../database-engine/database-mirroring/role-switching-during-a-database-mirroring-session-sql-server.md).|  
-    |**High safety with automatic failover (synchronous)**|Yes (required)|All committed transactions are guaranteed to be written to disk on the mirror server.<br /><br /> Availability is maximized by including a witness server instance to support automatic failover. Note that you can select the **High safety with automatic failover (synchronous)** option only if you have first specified a witness server address.<br /><br /> Manual failover is possible when the partners are connected to each other and the database is synchronized.<br /><br /> In the presence of a witness, the loss of a partner has the following effect:<br /><br /> If the principal server instance becomes unavailable, automatic failover occurs. The mirror server instance switches to the role of principal, and it offers its database as the principal database.<br /><br /> If the mirror server instance becomes unavailable, the principal continues.<br /><br /> <br /><br /> For more information, see [Role Switching During a Database Mirroring Session &#40;SQL Server&#41;](../../database-engine/database-mirroring/role-switching-during-a-database-mirroring-session-sql-server.md).<br /><br /> **\*\* Important \*\*** If the witness becomes disconnected, the partners must be connected to each other for the database to be available. For more information, see [Quorum: How a Witness Affects Database Availability &#40;Database Mirroring&#41;](../../database-engine/database-mirroring/quorum-how-a-witness-affects-database-availability-database-mirroring.md).|  
+    |**High safety with automatic failover (synchronous)**|Yes (required)|All committed transactions are guaranteed to be written to disk on the mirror server.<br /><br /> Availability is maximized by including a witness server instance to support automatic failover. Note that you can select the **High safety with automatic failover (synchronous)** option only if you have first specified a witness server address.<br /><br /> Manual failover is possible when the partners are connected to each other and the database is synchronized.<br /><br /> In the presence of a witness, the loss of a partner has the following effect:<br /><br /> If the principal server instance becomes unavailable, automatic failover occurs. The mirror server instance switches to the role of principal, and it offers its database as the principal database.<br /><br /> If the mirror server instance becomes unavailable, the principal continues.<br /><br /> <br /><br /> For more information, see [Role Switching During a Database Mirroring Session &#40;SQL Server&#41;](../../database-engine/database-mirroring/role-switching-during-a-database-mirroring-session-sql-server.md).<br /><br /> **&#42;&#42; Important &#42;&#42;** If the witness becomes disconnected, the partners must be connected to each other for the database to be available. For more information, see [Quorum: How a Witness Affects Database Availability &#40;Database Mirroring&#41;](../../database-engine/database-mirroring/quorum-how-a-witness-affects-database-availability-database-mirroring.md).|  
   
 7.  When all of the following conditions exist, click **Start Mirroring** to begin mirroring:  
   

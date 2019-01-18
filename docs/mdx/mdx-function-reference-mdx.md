@@ -1,44 +1,19 @@
 ---
 title: "MDX Function Reference (MDX) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/02/2016"
-ms.prod: analysis-services
-ms.prod_service: "analysis-services"
-ms.service: ""
-ms.component: ""
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
-  
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "kbMDX"
-helpviewer_keywords: 
-  - "member functions [MDX]"
-  - "level functions [MDX]"
-  - "MDX [Analysis Services], functions"
-  - "array functions"
-  - "string functions"
-  - "Multidimensional Expressions [Analysis Services], functions"
-  - "hierarchy functions [MDX]"
-  - "numeric functions [MDX]"
-  - "tuple functions"
-  - "subcube functions [MDX]"
-  - "functions [MDX]"
-  - "logical functions [MDX]"
-  - "set functions [MDX]"
-ms.assetid: e363722a-3e5b-40a9-a0b5-399dd2d93f6d
-caps.latest.revision: 36
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-ms.workload: "On Demand"
+ms.date: 06/04/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: mdx
+ms.topic: reference
+ms.author: owend
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
 ---
 # MDX Function Reference (MDX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
-  [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] provides for the use of functions in Multidimensional Expressions (MDX) syntax. Functions can be used in any valid MDX statement, and are frequently used in queries, custom rollup definitions, and other calculations. This section provides information about the MDX functions included with [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)].  
+
+  Analysis Services provides for the use of functions in Multidimensional Expressions (MDX) syntax. Functions can be used in any valid MDX statement, and are frequently used in queries, custom rollup definitions, and other calculations. This section provides information about the MDX functions.  
   
  You can use the following tables to find functions by their category of return value, or you can select a function by name from the alphabetical list in the table of contents.  
   
@@ -97,7 +72,7 @@ ms.workload: "On Demand"
 |[ParallelPeriod &#40;MDX&#41;](../mdx/parallelperiod-mdx.md)|Returns a member from a prior period in the same relative position as a specified member.|  
 |[Parent &#40;MDX&#41;](../mdx/parent-mdx.md)|Returns the parent of a member.|  
 |[PrevMember &#40;MDX&#41;](../mdx/prevmember-mdx.md)|Returns the previous member in the level that contains a specified member.|  
-|[StrToMember &#40;MDX&#41;](../mdx/strtomember-mdx.md)|Returns the member specified by an MDX–formatted string.|  
+|[StrToMember &#40;MDX&#41;](../mdx/strtomember-mdx.md)|Returns the member specified by an MDX-formatted string.|  
 |[UnknownMember &#40;MDX&#41;](../mdx/unknownmember-mdx.md)|Returns the unknown member associated with a level or member.|  
 |[ValidMeasure &#40;MDX&#41;](../mdx/validmeasure-mdx.md)|Returns a valid measure in a virtual cube by forcing inapplicable dimensions to their top level.|  
   
@@ -136,7 +111,7 @@ ms.workload: "On Demand"
 |[StddevP &#40;MDX&#41;](../mdx/stddevp-mdx.md)|Alias for [StdevP &#40;MDX&#41;](../mdx/stdevp-mdx.md).|  
 |[Stdev &#40;MDX&#41;](../mdx/stdev-mdx.md)|Returns the sample standard deviation of a numeric expression evaluated over a set, using the unbiased population formula.|  
 |[StdevP &#40;MDX&#41;](../mdx/stdevp-mdx.md)|Returns the population standard deviation of a numeric expression evaluated over a set, using the biased population formula.|  
-|[StrToValue &#40;MDX&#41;](../mdx/strtovalue-mdx.md)|Returns the value specified by an MDX–formatted string.|  
+|[StrToValue &#40;MDX&#41;](../mdx/strtovalue-mdx.md)|Returns the value specified by an MDX-formatted string.|  
 |[Sum &#40;MDX&#41;](../mdx/sum-mdx.md)|Returns the sum of a numeric expression evaluated over a set.|  
 |[Value &#40;MDX&#41;](../mdx/value-mdx.md)|Returns the value of a measure.|  
 |[Var &#40;MDX&#41;](../mdx/var-mdx.md)|Returns the sample variance of a numeric expression evaluated over a set, using the unbiased population formula.|  
@@ -180,14 +155,14 @@ ms.workload: "On Demand"
 |[LastPeriods &#40;MDX&#41;](../mdx/lastperiods-mdx.md)|Returns a set of members up to and including a specified member.|  
 |[Members &#40;Set&#41; &#40;MDX&#41;](../mdx/members-set-mdx.md)|Returns the set of members in a dimension, level, or hierarchy.|  
 |[Mtd &#40;MDX&#41;](../mdx/mtd-mdx.md)|Returns a set of sibling members from the same level as a given member, starting with the first sibling and ending with the given member, as constrained by the Year level in the Time dimension.|  
-|[NameToSet &#40;MDX&#41;](../mdx/nametoset-mdx.md)|Returns a set that contains the member specified by an MDX–formatted string.|  
+|[NameToSet &#40;MDX&#41;](../mdx/nametoset-mdx.md)|Returns a set that contains the member specified by an MDX-formatted string.|  
 |[NonEmptyCrossjoin &#40;MDX&#41;](../mdx/nonemptycrossjoin-mdx.md)|Returns the cross product of one or more sets as a set, excluding empty tuples and tuples without associated fact table data.|  
 |[Order &#40;MDX&#41;](../mdx/order-mdx.md)|Arranges members of a specified set, optionally preserving or breaking the hierarchy.|  
 |[PeriodsToDate &#40;MDX&#41;](../mdx/periodstodate-mdx.md)|Returns a set of sibling members from the same level as a given member, starting with the first sibling and ending with the given member, as constrained by a specified level in the Time dimension.|  
 |[Qtd &#40;MDX&#41;](../mdx/qtd-mdx.md)|Returns a set of sibling members from the same level as a given member, starting with the first sibling and ending with the given member, as constrained by the *Quarter* level in the Time dimension.|  
 |[Siblings &#40;MDX&#41;](../mdx/siblings-mdx.md)|Returns the siblings of a specified member, including the member itself.|  
 |[StripCalculatedMembers &#40;MDX&#41;](../mdx/stripcalculatedmembers-mdx.md)|Returns a set generated by removing calculated members from a specified set.|  
-|[StrToSet &#40;MDX&#41;](../mdx/strtoset-mdx.md)|Returns the set specified by an MDX–formatted string.|  
+|[StrToSet &#40;MDX&#41;](../mdx/strtoset-mdx.md)|Returns the set specified by an MDX-formatted string.|  
 |[Subset &#40;MDX&#41;](../mdx/subset-mdx.md)|Returns a subset of tuples from a specified set.|  
 |[Tail &#40;MDX&#41;](../mdx/tail-mdx.md)|Returns a subset from the end of a set.|  
 |[ToggleDrillState &#40;MDX&#41;](../mdx/toggledrillstate-mdx.md)|Toggles the drill state of members.|  
@@ -209,11 +184,11 @@ ms.workload: "On Demand"
 |[Generate &#40;MDX&#41;](../mdx/generate-mdx.md)|Applies a set to each member of another set, and then joins the resulting sets by union. Alternatively, this function returns a concatenated string created by evaluating a string expression over a set.|  
 |[IIf &#40;MDX&#41;](../mdx/iif-mdx.md)|Returns one of two values determined by a logical test.|  
 |[LookupCube &#40;MDX&#41;](../mdx/lookupcube-mdx.md)|Returns the value of an MDX expression evaluated over another specified cube in the same database.|  
-|[MemberToStr &#40;MDX&#41;](../mdx/membertostr-mdx.md)|Returns an MDX–formatted string that corresponds to a specified member.|  
+|[MemberToStr &#40;MDX&#41;](../mdx/membertostr-mdx.md)|Returns an MDX-formatted string that corresponds to a specified member.|  
 |[Name &#40;MDX&#41;](../mdx/name-mdx.md)|Returns the name of a dimension, hierarchy, level, or member.|  
 |[Properties &#40;MDX&#41;](../mdx/properties-mdx.md)|Returns a string, or a strongly-typed value, that contains a member property value.|  
 |[SetToStr &#40;MDX&#41;](../mdx/settostr-mdx.md)|Returns an MDX-formatted string of that corresponds to a specified set.|  
-|[TupleToStr &#40;MDX&#41;](../mdx/tupletostr-mdx.md)|Returns an MDX–formatted string that corresponds to specified tuple.|  
+|[TupleToStr &#40;MDX&#41;](../mdx/tupletostr-mdx.md)|Returns an MDX-formatted string that corresponds to specified tuple.|  
 |[UniqueName &#40;MDX&#41;](../mdx/uniquename-mdx.md)|Returns the unique name of a specified dimension, hierarchy, level, or member.|  
 |[UserName &#40;MDX&#41;](../mdx/username-mdx.md)|Returns the domain name and user name of the current connection.|  
   
@@ -231,7 +206,7 @@ ms.workload: "On Demand"
 |[Current &#40;MDX&#41;](../mdx/current-mdx.md)|Returns the current tuple from a set during iteration.|  
 |[Item &#40;Tuple&#41; &#40;MDX&#41;](../mdx/item-tuple-mdx.md)|Returns a tuple from a set.|  
 |[Root &#40;MDX&#41;](../mdx/root-mdx.md)|Returns a tuple that consists of the **All** members from each attribute hierarchy in a cube, dimension, or tuple.|  
-|[StrToTuple &#40;MDX&#41;](../mdx/strtotuple-mdx.md)|Returns the tuple specified by an MDX–formatted string.|  
+|[StrToTuple &#40;MDX&#41;](../mdx/strtotuple-mdx.md)|Returns the tuple specified by an MDX-formatted string.|  
   
 ## Other Functions  
   

@@ -2,16 +2,11 @@
 title: "Cursor Library Operations | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
-ms.prod_service: "drivers"
-ms.service: ""
-ms.component: "odbc"
+ms.prod: sql
+ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "drivers"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: connectivity
+ms.topic: conceptual
 helpviewer_keywords: 
   - "ODBC cursor library [ODBC], backward compatibility"
   - "compatibility [ODBC], cursor library"
@@ -20,11 +15,9 @@ helpviewer_keywords:
   - "backward compatibility [ODBC], cursor library"
   - "cursor library [ODBC], backward compatibility"
 ms.assetid: 04d514b1-dc4d-4b84-bf35-60f4657ef1f6
-caps.latest.revision: 8
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
-ms.workload: "Inactive"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # Cursor Library Operations
 > [!IMPORTANT]  

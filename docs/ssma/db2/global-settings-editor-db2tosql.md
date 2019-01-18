@@ -1,26 +1,15 @@
 ---
 title: "Global Settings (Editor) (DB2ToSQL) | Microsoft Docs"
-ms.prod: "sql-non-specified"
-ms.prod_service: "sql-tools"
-ms.service: ""
-ms.component: "ssma-db2"
+ms.prod: sql
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "sql-ssma"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to: 
-  - "Azure SQL Database"
-  - "SQL Server"
+ms.technology: ssma
+ms.topic: conceptual
 ms.assetid: a5029bcb-7d5d-44a0-ae28-0efd10d2a714
-caps.latest.revision: 3
 author: "Shamikg"
 ms.author: "Shamikg"
-manager: "jhubbard"
-ms.workload: "Inactive"
+manager: craigg
 ---
 # Global Settings (Editor) (DB2ToSQL)
 Use the Editor page of the **Global Settings** dialog box to specify settings for code editor windows.  

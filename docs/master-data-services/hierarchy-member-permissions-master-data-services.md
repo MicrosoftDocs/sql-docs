@@ -2,27 +2,23 @@
 title: "Hierarchy Member Permissions (Master Data Services) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "mds"
-ms.service: ""
-ms.component: "non-specific"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "master-data-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: master-data-services
+ms.topic: conceptual
 helpviewer_keywords: 
   - "members [Master Data Services], permissions"
   - "permissions [Master Data Services], members"
 ms.assetid: b3880eed-1bf6-4f65-ab23-b08c194cc858
-caps.latest.revision: 11
-author: "smartysanthosh"
-ms.author: "nagavo"
-manager: "craigg"
-ms.workload: "Inactive"
+author: leolimsft
+ms.author: lle
+manager: craigg
 ---
 # Hierarchy Member Permissions (Master Data Services)
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
   Hierarchy member permissions are optional and should be used only when you want a user to have limited access to specific members. If you do not assign permissions on the **Hierarchy Members** tab, then the user's permissions are based solely on the permissions assigned on the **Models** tab.  
   
  Hierarchy member permissions are assigned in the [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] user interface (UI), in the **User and Group Permissions** functional area on the **Hierarchy Members** tab. These permissions determine which members a user can access in the **Explorer** functional area of the UI.  
@@ -62,7 +58,7 @@ ms.workload: "Inactive"
 -   If one hierarchy node is assigned any combination of **Create**/**Read**/**Update**/**Delete** permissions and another node is assigned **Deny** permissions, access to the members in the node is denied.  
   
 ## External Resources  
- Blog post, [Security Improvements](http://go.microsoft.com/fwlink/p/?LinkId=615376), on msdn.com.  
+ Blog post, [Security Improvements](https://go.microsoft.com/fwlink/p/?LinkId=615376), on msdn.com.  
   
 ## See Also  
  [Assign Hierarchy Member Permissions &#40;Master Data Services&#41;](../master-data-services/assign-hierarchy-member-permissions-master-data-services.md)   

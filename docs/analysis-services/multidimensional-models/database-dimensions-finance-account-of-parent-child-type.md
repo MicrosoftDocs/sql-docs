@@ -1,30 +1,14 @@
 ---
 title: "Create a Finance Account of parent-child type Dimension | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: analysis-services
-ms.prod_service: "analysis-services"
-ms.service: ""
-ms.component: ""
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
-  
-ms.component: multidimensional-tabular
-ms.component: data-mining
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "dimensions [Analysis Services], account"
-  - "account dimensions [Analysis Services]"
-  - "adding account intelligence"
-  - "account intelligence [Analysis Services]"
-ms.assetid: 2ba74e81-5b4b-407e-acdf-deb2f6accf0a
-caps.latest.revision: 15
-author: "Minewiskan"
-ms.author: "owend"
-manager: "kfile"
-ms.workload: "Inactive"
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: multidimensional-models
+ms.topic: conceptual
+ms.author: owend
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
 ---
 # Database Dimensions - Finance Account of parent-child type
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -37,21 +21,21 @@ ms.workload: "Inactive"
 ## Dimension Structure  
  An account dimension contains, at least, two attributes:  
   
--   A key attribute—an attribute that identifies individual accounts in the dimension table for the account dimension.  
+-   A key attribute-an attribute that identifies individual accounts in the dimension table for the account dimension.  
   
--   An account attribute—a parent attribute that describes how accounts are hierarchically arranged in the account dimension.  
+-   An account attribute-a parent attribute that describes how accounts are hierarchically arranged in the account dimension.  
   
      To identify an attribute as an account attribute, set the **Type** property of the attribute to **Account** and the **Usage** property to **Parent**.  
   
  Account dimensions can optionally contain the following attributes:  
   
--   An account type attribute—an attribute that defines the account type for each account in the dimension. The member names of the account type attribute map to the account types defined for the [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] database or project, and indicate the aggregation function used by [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] for those accounts. You can also use unary operators or custom rollup formulas to determine aggregation behavior for account attributes, but account types let you to easily apply consistent behavior to a chart of accounts without requiring changes to the underlying relational database.  
+-   An account type attribute-an attribute that defines the account type for each account in the dimension. The member names of the account type attribute map to the account types defined for the [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] database or project, and indicate the aggregation function used by [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] for those accounts. You can also use unary operators or custom rollup formulas to determine aggregation behavior for account attributes, but account types let you to easily apply consistent behavior to a chart of accounts without requiring changes to the underlying relational database.  
   
      To identify an account type attribute, set the **Type** property of the attribute to **AccountType**.  
   
--   An account name attribute—an attribute that is used for reporting purposes. You identify an account name attribute by setting the **Type** property of the attribute to **AccountName**.  
+-   An account name attribute-an attribute that is used for reporting purposes. You identify an account name attribute by setting the **Type** property of the attribute to **AccountName**.  
   
--   An account number attribute—an attribute that is used for reporting purposes. You identify an account number attribute by setting the **Type** property of the attribute to **AccountNumber**.  
+-   An account number attribute-an attribute that is used for reporting purposes. You identify an account number attribute by setting the **Type** property of the attribute to **AccountNumber**.  
   
  For more information about attribute types, see [Configure Attribute Types](../../analysis-services/multidimensional-models/attribute-properties-configure-attribute-types.md).  
   

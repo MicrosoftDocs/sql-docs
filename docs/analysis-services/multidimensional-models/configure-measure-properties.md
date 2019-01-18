@@ -1,62 +1,20 @@
 ---
 title: "Configure Measure Properties | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/03/2017"
-ms.prod: analysis-services
-ms.prod_service: "analysis-services"
-ms.service: ""
-ms.component: ""
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
-  
-ms.component: multidimensional-tabular
-ms.component: data-mining
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "additivity [Analysis Services]"
-  - "ID property"
-  - "ErrorConfiguration property"
-  - "AggregateFunction property"
-  - "DisplayFolder property"
-  - "IgnoreUnrelatedDimensions property"
-  - "FormatString property"
-  - "Description property"
-  - "semiadditive"
-  - "properties [Analysis Services], measure groups"
-  - "aggregate functions [Analysis Services]"
-  - "DataType property"
-  - "ProcessingMode property"
-  - "MeasureExpression property"
-  - "AggregationPrefix property"
-  - "Visible property"
-  - "properties [Analysis Services], measures"
-  - "StorageLocation property"
-  - "StorageMode property"
-  - "formats [Analysis Services], measures"
-  - "Source property"
-  - "aggregations [Analysis Services], measures"
-  - "measures [Analysis Services], properties"
-  - "nonadditive [Analysis Services]"
-  - "Name property"
-  - "measures [Analysis Services], display formats"
-  - "ProcessingPriority property"
-  - "measure groups [Analysis Services], properties"
-  - "Type property"
-  - "ProactiveCaching property"
-ms.assetid: e9031078-c4f5-4986-b0c9-4d064b622ab7
-caps.latest.revision: 50
-author: "Minewiskan"
-ms.author: "owend"
-manager: "kfile"
-ms.workload: "Inactive"
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: multidimensional-models
+ms.topic: conceptual
+ms.author: owend
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
 ---
 # Configure Measure Properties
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   Measures have properties that enable you to define how the measures function and to control how the measures appear to users.  
   
- You can set properties in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] when creating or editing a cube or measure. You can also set them programmatically, using MDX or AMO. See [Create Measures and Measure Groups in Multidimensional Models](../../analysis-services/multidimensional-models/create-measures-and-measure-groups-in-multidimensional-models.md) or [CREATE MEMBER Statement &#40;MDX&#41;](../../mdx/mdx-data-definition-create-member.md) or [Programming AMO OLAP Basic Objects](../../analysis-services/multidimensional-models/analysis-management-objects/programming-amo-olap-basic-objects.md) for details.  
+ You can set properties in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] when creating or editing a cube or measure. You can also set them programmatically, using MDX or AMO. See [Create Measures and Measure Groups in Multidimensional Models](../../analysis-services/multidimensional-models/create-measures-and-measure-groups-in-multidimensional-models.md) or [CREATE MEMBER Statement &#40;MDX&#41;](../../mdx/mdx-data-definition-create-member.md) or [Programming AMO OLAP Basic Objects](https://docs.microsoft.com/bi-reference/amo/programming-amo-olap-basic-objects) for details.  
   
 ## Measure Properties  
  Measures inherit certain properties from the measure group of which they are a member, unless those properties are overridden at the measure level. Measure properties determine how a measure is aggregated, its data type, the name that is displayed to the user, the display folder in which the measure will appear, its format string, any measure expression, the underlying source column, and its visibility to users.  

@@ -1,31 +1,20 @@
 ---
 title: "Determine the Server Mode of an Analysis Services Instance | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/03/2017"
-ms.prod: analysis-services
-ms.prod_service: "analysis-services"
-ms.service: ""
-ms.component: ""
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
-  
-ms.component: multidimensional-tabular
-ms.component: data-mining
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-ms.assetid: 9e556fb1-ca37-4f06-8f8f-f187cb0fdb37
-caps.latest.revision: 32
-author: "Minewiskan"
-ms.author: "owend"
-manager: "kfile"
-ms.workload: "On Demand"
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom:
+ms.topic: conceptual
+ms.author: owend
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
 ---
 # Determine the Server Mode of an Analysis Services Instance
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   Analysis Services can be installed in one of three server modes: Multidimensional and Data Mining (default), [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint, and Tabular. The server mode of an Analysis Services instance is determined during setup when you choose options for installing the server.  
   
- The server mode determines the type of solution that you create and deploy. If you did not install the server software and you want to know in which mode the server was installed, you can use the information in this topic to determine the mode. For more information about feature availability in a specific mode, see [Comparing Tabular and Multidimensional Solutions &#40;SSAS&#41;](../../analysis-services/comparing-tabular-and-multidimensional-solutions-ssas.md).  
+ The server mode determines the type of solution that you create and deploy. If you did not install the server software and you want to know in which mode the server was installed, you can use the information in this topic to determine the mode. For more information about feature availability in a specific mode, see [Comparing Tabular and Multidimensional Solutions ](../../analysis-services/comparing-tabular-and-multidimensional-solutions-ssas.md).  
   
  If you do not want to use the server mode that you installed, you must uninstall and then reinstall the software, choosing the mode that you prefer. Alternatively, you can install an additional instance of Analysis Services on the same computer so that you have multiple instances running different modes.  
   
@@ -41,7 +30,7 @@ ms.workload: "On Demand"
 >  Do not change the value of the **DeploymentMode** property. Changing the property manually after the server is installed is not supported.  
   
 ## About the DeploymentMode Property  
- **DeploymentMode** property determines the operational context of an Analysis Services server instance. This property is referred to as ‘server mode’ in dialog boxes, messages, and documentation. This property is initialized by Setup based on how you install Analysis Services. This property should be considered internal only, always using the value specified by Setup.  
+ **DeploymentMode** property determines the operational context of an Analysis Services server instance. This property is referred to as 'server mode' in dialog boxes, messages, and documentation. This property is initialized by Setup based on how you install Analysis Services. This property should be considered internal only, always using the value specified by Setup.  
   
  Valid values for this property include the following:  
   
@@ -56,10 +45,10 @@ ms.workload: "On Demand"
 ## See Also  
  [Install Analysis Services](../../analysis-services/instances/install-windows/install-analysis-services.md)   
  [Install Analysis Services in Multidimensional and Data Mining Mode](http://msdn.microsoft.com/library/8a1f33e8-2bd6-4fb8-bd46-c86f2a067f60)   
- [Power Pivot for SharePoint 2010 Installation](http://msdn.microsoft.com/en-us/8d47dde7-c941-4280-a934-e2fe3f9a938f)   
+ [Power Pivot for SharePoint 2010 Installation](http://msdn.microsoft.com/8d47dde7-c941-4280-a934-e2fe3f9a938f)   
  [Connect to Analysis Services](../../analysis-services/instances/connect-to-analysis-services.md)   
- [Tabular Model Solutions &#40;SSAS Tabular&#41;](../../analysis-services/tabular-models/tabular-model-solutions-ssas-tabular.md)   
- [Multidimensional Model Solutions &#40;SSAS&#41;](../../analysis-services/multidimensional-models/multidimensional-model-solutions-ssas.md)   
+ [Tabular Model Solutions](../../analysis-services/tabular-models/tabular-models-ssas.md)   
+ [Multidimensional Model Solutions ](../../analysis-services/multidimensional-models/multidimensional-model-solutions-ssas.md)   
  [Mining Models &#40;Analysis Services - Data Mining&#41;](../../analysis-services/data-mining/mining-models-analysis-services-data-mining.md)  
   
   

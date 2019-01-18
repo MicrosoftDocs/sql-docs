@@ -1,18 +1,12 @@
 ---
 title: "Data Alert Designer | Microsoft Docs"
-ms.custom: ""
-ms.date: "07/02/2017"
+ms.date: 07/02/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
-ms.service: ""
-ms.component: "reporting-services"
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
+ms.technology: reporting-services
 
 
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "editing, data alerts"
   - "updating, data alerts"
@@ -21,11 +15,9 @@ helpviewer_keywords:
   - "creating, data alerts"
   - "creating, alerts"
 ms.assetid: b2018116-cf1a-4e54-b29c-39e0ca2bda77
-caps.latest.revision: 22
-author: "markingmyname"
-ms.author: "maghan"
-manager: "kfile"
-ms.workload: "Inactive"
+author: markingmyname
+ms.author: maghan
+monikerRange: ">=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions"
 ---
 # Data Alert Designer
 
@@ -86,9 +78,9 @@ You create and edit data alert definitions in Data Alert Designer. An alert defi
 ### Rules and Clauses  
  The scope of data changes and the in the alert rules define the data changes that trigger the alert. The scope of the data changes are as follow:  
   
--   **Any data has**—at least one value in the data satisfies the rules that the condition specifies.  
+-   **Any data has**-at least one value in the data satisfies the rules that the condition specifies.  
   
--   **No data has**—no value in the data satisfied the rules that the condition specifies.  
+-   **No data has**-no value in the data satisfied the rules that the condition specifies.  
   
  A rule contains zero, one, or many clauses. Multiple rules are combined by the AND logical operator. A rule can include multiple clause combined by the OR operator if the column has the string data type. The following shows basic rules that use only one clause, multiple rules combined by using the AND operator, multiple rules that with one or more OR clauses.  
   
@@ -157,13 +149,13 @@ You create and edit data alert definitions in Data Alert Designer. An alert defi
 ### Schedule Settings  
  The schedule that you define for the data alert defines the recurrence pattern for sending the data alert message and when to start and stop sending the alert messages. The patterns are: once, minute, daily, and weekly. Although an alert has only one schedule you can create complex recurrence patterns that meet most business needs by using these intervals. The following are examples of common recurrence patterns to use in schedules:  
   
--   **Daily every 10 day(s)** — sends alerts once a day, every 10 days.  
+-   **Daily every 10 day(s)** - sends alerts once a day, every 10 days.  
   
--   **Weekly every 2 week(s) on Monday** — sends alerts every two weeks on Mondays only.  
+-   **Weekly every 2 week(s) on Monday** - sends alerts every two weeks on Mondays only.  
   
--   **Hourly every 12 hour(s)** — sends alerts every 12 hours.  
+-   **Hourly every 12 hour(s)** - sends alerts every 12 hours.  
   
--   **Minute every 30 minute(s)** — sends alerts every 30 minutes.  
+-   **Minute every 30 minute(s)** - sends alerts every 30 minutes.  
   
  The recurrence pattern specifies when the alert is sent. If the rules are met during the interval that the pattern specifies, the alert is not sent until the end of the interval.  
   
@@ -182,7 +174,7 @@ You create and edit data alert definitions in Data Alert Designer. An alert defi
  For more information about how the email is generated, see [Reporting Services Data Alerts](../reporting-services/reporting-services-data-alerts.md).  
   
 ##  <a name="CreateAlert"></a> Create a Data Alert Definition  
- If you are granted the SharePoint View Items and Create Alerts permissions you can create a data alert definition for any report that you have permission to view as long as the report uses stored credentials or no credentials. You run the report from a SharePoint library. The data that is available for you to use in Data Alert Designer comes from the report. If the report is parameterized, you might need to run the report using different parameter values to ensure the data that that you are interested in appears in the report. After the report is open, you click the **New Data Alert** option on the **Actions** menu on the report toolbar to open Data Alert Designer. The following picture shows you how to open Data Alert Designer.  
+ If you are granted the SharePoint View Items and Create Alerts permissions you can create a data alert definition for any report that you have permission to view as long as the report uses stored credentials or no credentials. You run the report from a SharePoint library. The data that is available for you to use in Data Alert Designer comes from the report. If the report is parameterized, you might need to run the report using different parameter values to ensure the data that you are interested in appears in the report. After the report is open, you click the **New Data Alert** option on the **Actions** menu on the report toolbar to open Data Alert Designer. The following picture shows you how to open Data Alert Designer.  
   
  ![Open Alert Designer from SharePoint library](../reporting-services/media/rs-openalertdesigneriw.gif "Open Alert Designer from SharePoint library")  
   
@@ -220,4 +212,4 @@ You create and edit data alert definitions in Data Alert Designer. An alert defi
 [Reporting Services Data Alerts](../reporting-services/reporting-services-data-alerts.md)   
 [Data Alert Manager for Alerting Administrators](../reporting-services/data-alert-manager-for-alerting-administrators.md)  
 
-More questions? [Try asking the Reporting Services forum](http://go.microsoft.com/fwlink/?LinkId=620231)
+More questions? [Try asking the Reporting Services forum](https://go.microsoft.com/fwlink/?LinkId=620231)

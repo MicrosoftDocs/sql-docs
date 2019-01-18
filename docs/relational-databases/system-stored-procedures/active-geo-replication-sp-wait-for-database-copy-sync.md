@@ -5,12 +5,7 @@ ms.date: "03/03/2017"
 ms.prod: ""
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
-ms.service: "sql-database"
-ms.component: "system-stored-procedures"
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: system-objects
 ms.topic: "language-reference"
 f1_keywords: 
   - "sp_wait_for_database_copy_sync_TSQL"
@@ -20,11 +15,10 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_wait_for_database_copy_sync"
 ms.assetid: 7068da7f-cb74-47f2-b064-eb076a0d3885
-caps.latest.revision: 13
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-ms.workload: "Inactive"
+author: "stevestein"
+ms.author: "sstein"
+manager: craigg
+monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Active Geo-Replication - sp_wait_for_database_copy_sync
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]

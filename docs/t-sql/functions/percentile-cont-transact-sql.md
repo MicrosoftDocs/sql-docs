@@ -2,15 +2,10 @@
 title: "PERCENTILE_CONT (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "10/20/2015"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
-ms.service: ""
-ms.component: "t-sql|functions"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: t-sql
 ms.topic: "language-reference"
 f1_keywords: 
   - "PERCENTILE_CONT_TSQL"
@@ -21,11 +16,10 @@ helpviewer_keywords:
   - "analytic functions, PERCENTILE_CONT"
   - "PERCENTILE_CONT function"
 ms.assetid: d019419e-5297-4994-97d5-e9c8fc61bbf4
-caps.latest.revision: 24
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "craigg"
-ms.workload: "On Demand"
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # PERCENTILE_CONT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]

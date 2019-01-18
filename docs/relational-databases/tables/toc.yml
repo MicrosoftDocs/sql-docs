@@ -1,0 +1,143 @@
+- name: Overview
+  href: tables.md
+- name: Create Tables (Database Engine)
+  href: create-tables-database-engine.md
+- name: Delete Tables (Database Engine)
+  href: delete-tables-database-engine.md
+- name: Duplicate Tables
+  href: duplicate-tables.md
+- name: Rename Tables (Database Engine)
+  href: rename-tables-database-engine.md
+- name: View the Table Definition
+  href: view-the-table-definition.md
+  items:
+  - name: Table Properties - SSMS
+    href: table-properties-ssms.md
+  - name: Column Properties (General Page)
+    href: column-properties-general-page.md
+- name: View the Dependencies of a Table
+  href: view-the-dependencies-of-a-table.md
+- name: Add Columns to a Table (Database Engine)
+  href: add-columns-to-a-table-database-engine.md
+- name: Delete Columns from a Table
+  href: delete-columns-from-a-table.md
+- name: Rename Columns (Database Engine)
+  href: rename-columns-database-engine.md
+- name: Copy Columns from One Table to Another (Database Engine)
+  href: copy-columns-from-one-table-to-another-database-engine.md
+- name: Modify Columns (Database Engine)
+  href: modify-columns-database-engine.md
+- name: Change Column Order in a Table
+  href: change-column-order-in-a-table.md
+- name: Specify Computed Columns in a Table
+  href: specify-computed-columns-in-a-table.md
+- name: Specify Default Values for Columns
+  href: specify-default-values-for-columns.md
+- name: Use Sparse Columns
+  href: use-sparse-columns.md
+- name: Use Column Sets
+  href: use-column-sets.md
+- name: Use Table-Valued Parameters (Database Engine)
+  href: use-table-valued-parameters-database-engine.md
+- name: Edge constraints
+  href: graph-edge-constraints.md
+  items:
+  - name: Create
+    href: create-edge-constraints.md
+  - name: Delete
+    href: delete-edge-constraint.md
+  - name: Modify
+    href: modify-edge-constraint.md
+  - name: View 
+    href: view-edge-constraint-properties.md
+- name: Primary and foreign key constraints
+  href: primary-and-foreign-key-constraints.md
+  items:
+  - name: Create Primary Keys
+    href: create-primary-keys.md
+  - name: Modify Primary Keys
+    href: modify-primary-keys.md
+  - name: Delete Primary Keys
+    href: delete-primary-keys.md
+  - name: Create Foreign Key Relationships
+    href: create-foreign-key-relationships.md
+  - name: Modify Foreign Key Relationships
+    href: modify-foreign-key-relationships.md
+  - name: Delete Foreign Key Relationships
+    href: delete-foreign-key-relationships.md
+  - name: View Foreign Key Properties
+    href: view-foreign-key-properties.md
+  - name: Disable Foreign Key Constraints for Replication
+    href: disable-foreign-key-constraints-for-replication.md
+  - name: Disable Foreign Key Constraints with INSERT and UPDATE Statements
+    href: disable-foreign-key-constraints-with-insert-and-update-statements.md
+- name: Unique Constraints and Check Constraints
+  href: unique-constraints-and-check-constraints.md
+  items:
+  - name: Create Unique Constraints
+    href: create-unique-constraints.md
+  - name: Modify Unique Constraints
+    href: modify-unique-constraints.md
+  - name: Delete Unique Constraints
+    href: delete-unique-constraints.md
+  - name: Create Check Constraints
+    href: create-check-constraints.md
+  - name: Modify Check Constraints
+    href: modify-check-constraints.md
+  - name: Delete Check Constraints
+    href: delete-check-constraints.md
+  - name: Disable Check Constraints for Replication
+    href: disable-check-constraints-for-replication.md
+  - name: Disable Check Constraints with INSERT and UPDATE Statements
+    href: disable-check-constraints-with-insert-and-update-statements.md
+- name: Table Column Properties (SQL Server Management Studio)
+  href: table-column-properties-sql-server-management-studio.md
+- name: Temporal Tables
+  href: temporal-tables.md
+  items:
+  - name: Getting Started with System-Versioned Temporal Tables
+    href: getting-started-with-system-versioned-temporal-tables.md
+    items:
+    - name: Creating a System-Versioned Temporal Table
+      href: creating-a-system-versioned-temporal-table.md
+    - name: Modifying Data in a System-Versioned Temporal Table
+      href: modifying-data-in-a-system-versioned-temporal-table.md
+    - name: Querying Data in a System-Versioned Temporal Table
+      href: querying-data-in-a-system-versioned-temporal-table.md
+    - name: Changing the Schema of a System-Versioned Temporal Table
+      href: changing-the-schema-of-a-system-versioned-temporal-table.md
+    - name: Stopping System-Versioning on a System-Versioned Temporal Table
+      href: stopping-system-versioning-on-a-system-versioned-temporal-table.md
+  - name: Temporal Table Usage Scenarios
+    href: temporal-table-usage-scenarios.md
+  - name: Temporal Table System Consistency Checks
+    href: temporal-table-system-consistency-checks.md
+  - name: Partitioning with Temporal Tables
+    href: partitioning-with-temporal-tables.md
+  - name: Temporal Table Considerations and Limitations
+    href: temporal-table-considerations-and-limitations.md
+  - name: Temporal Table Security
+    href: temporal-table-security.md
+  - name: Manage Retention of Historical Data in System-Versioned Temporal Tables
+    href: manage-retention-of-historical-data-in-system-versioned-temporal-tables.md
+  - name: System-Versioned Temporal Tables with Memory-Optimized Tables
+    href: system-versioned-temporal-tables-with-memory-optimized-tables.md
+    items:
+    - name: Creating a Memory-Optimized System-Versioned Temporal Table
+      href: creating-a-memory-optimized-system-versioned-temporal-table.md
+    - name: Working with Memory-Optimized System-Versioned Temporal Tables
+      href: working-with-memory-optimized-system-versioned-temporal-tables.md
+    - name: Monitoring Memory-Optimized System-Versioned Temporal Tables
+      href: monitoring-memory-optimized-system-versioned-temporal-tables.md
+    - name: Performance Considerations with Memory-Optimized System-Versioned Temporal Tables
+      href: memory-optimized-system-versioned-temporal-tables-performance.md
+  - name: Temporal Table Metadata Views and Functions
+    href: temporal-table-metadata-views-and-functions.md
+- name: "Tutorial: Using the hierarchyid Data Type"
+  href: tutorial-using-the-hierarchyid-data-type.md
+  items:
+  - name: "Lesson 1: Converting a Table to a Hierarchical Structure"
+    href: lesson-1-converting-a-table-to-a-hierarchical-structure.md
+  - name: "Lesson 2: Creating and Managing Data in a Hierarchical Table"
+    href: lesson-2-creating-and-managing-data-in-a-hierarchical-table.md
+

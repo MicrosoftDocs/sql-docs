@@ -3,15 +3,10 @@ title: "sys.database_automatic_tuning_options (Transact-SQL) | Microsoft Docs"
 description: Learn how to view automatic tuning options on a SQL Database
 ms.custom: ""
 ms.date: "07/20/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.service: ""
-ms.component: "system-catalog-views"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: system-objects
 ms.topic: "language-reference"
 f1_keywords: 
   - "database_automatic_tuning_options_tsql"
@@ -24,11 +19,10 @@ helpviewer_keywords:
   - "database_automatic_tuning_options catalog view"
   - "sys.database_automatic_tuning_options catalog view"
 ms.assetid: 16b47d55-8019-41ff-ad34-1e0112178067
-caps.latest.revision: 24
 author: "jovanpop-msft"
 ms.author: "jovanpop"
-manager: "jhubbard"
-ms.workload: "Inactive"
+manager: craigg
+monikerRange: "=azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.database\_automatic\_tuning_options (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]

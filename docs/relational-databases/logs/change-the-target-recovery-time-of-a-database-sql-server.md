@@ -2,22 +2,15 @@
 title: "Change the Target Recovery Time of a Database (SQL Server) | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/24/2016"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "database-engine"
-ms.service: ""
-ms.component: "logs"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: supportability
+ms.topic: conceptual
 ms.assetid: e466419a-d8a4-48f7-8d97-13a903ad6b15
-caps.latest.revision: 16
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-ms.workload: "Inactive"
+author: "MashaMSFT"
+ms.author: "mathoma"
+manager: craigg
 ---
 # Change the Target Recovery Time of a Database (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -60,7 +53,7 @@ ms.workload: "Inactive"
   
 2.  Use the following [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql-set-options.md)statement, as follows:  
   
-     TARGET_RECOVERY_TIME **=***target_recovery_time* { SECONDS | MINUTES }  
+     TARGET_RECOVERY_TIME **=**_target_recovery_time_ { SECONDS | MINUTES }  
   
      *target_recovery_time*  
      Beginning with [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)], the default value is 1 minute. When greater than 0 (the default for older versions), specifies the upper-bound on the recovery time for the specified database in the event of a crash.  

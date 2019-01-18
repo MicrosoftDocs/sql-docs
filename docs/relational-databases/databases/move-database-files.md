@@ -2,16 +2,11 @@
 title: "Move Database Files | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "database-engine"
-ms.service: ""
-ms.component: "databases"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "disaster recovery [SQL Server], moving database files"
   - "files [SQL Server], moving"
@@ -27,11 +22,9 @@ helpviewer_keywords:
   - "planned database relocations [SQL Server]"
   - "databases [SQL Server], moving"
 ms.assetid: 89f01b10-5fae-4ed8-b0fb-a4b9f540fd28
-caps.latest.revision: 34
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-ms.workload: "Active"
+author: "stevestein"
+ms.author: "sstein"
+manager: craigg
 ---
 # Move Database Files
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

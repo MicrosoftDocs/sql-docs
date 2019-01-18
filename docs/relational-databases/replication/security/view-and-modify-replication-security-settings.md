@@ -2,16 +2,11 @@
 title: "View and Modify Replication Security Settings | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/16/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "database-engine"
-ms.service: ""
-ms.component: "replication"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: replication
+ms.topic: conceptual
 helpviewer_keywords: 
   - "modifying replication security settings"
   - "replication [SQL Server], security"
@@ -19,11 +14,9 @@ helpviewer_keywords:
   - "viewing replication security settings"
   - "security [SQL Server replication], modifying settings"
 ms.assetid: 67d79532-1482-4de1-ac9f-4a23d162c85e
-caps.latest.revision: 47
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-ms.workload: "Inactive"
+author: "MashaMSFT"
+ms.author: "mathoma"
+manager: craigg
 ---
 # View and Modify Replication Security Settings
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -418,7 +411,7 @@ ms.workload: "Inactive"
 ##  <a name="RMOProcedure"></a> Using Replication Management Objects (RMO)  
   
 > [!IMPORTANT]  
->  When possible, prompt users to enter security credentials at runtime. If you must store credentials, use the [cryptographic services](http://go.microsoft.com/fwlink/?LinkId=34733) provided by the [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows .NET Framework.  
+>  When possible, prompt users to enter security credentials at runtime. If you must store credentials, use the [cryptographic services](https://go.microsoft.com/fwlink/?LinkId=34733) provided by the [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows .NET Framework.  
   
 #### To change all instances of a password stored on a replication server  
   
@@ -435,7 +428,7 @@ ms.workload: "Inactive"
     -   *password* - the new password value.  
   
         > [!IMPORTANT]  
-        >  When possible, prompt users to enter security credentials at runtime. If you must store credentials, use the [cryptographic services](http://go.microsoft.com/fwlink/?LinkId=34733) provided by the Windows .NET Framework.  
+        >  When possible, prompt users to enter security credentials at runtime. If you must store credentials, use the [cryptographic services](https://go.microsoft.com/fwlink/?LinkId=34733) provided by the Windows .NET Framework.  
   
         > [!NOTE]  
         >  Only a member of the **sysadmin** fixed server role can call this method.  
@@ -575,10 +568,10 @@ ms.workload: "Inactive"
 ## See Also  
  [Replication Management Objects Concepts](../../../relational-databases/replication/concepts/replication-management-objects-concepts.md)   
  [Upgrade Replication Scripts &#40;Replication Transact-SQL Programming&#41;](../../../relational-databases/replication/administration/upgrade-replication-scripts-replication-transact-sql-programming.md)   
- [Manage Logins and Passwords in Replication](../../../relational-databases/replication/security/manage-logins-and-passwords-in-replication.md)   
+ [Identity and access control for replication](../../../relational-databases/replication/security/identity-and-access-control-replication.md)   
  [Replication Agent Security Model](../../../relational-databases/replication/security/replication-agent-security-model.md)   
  [Replication Security Best Practices](../../../relational-databases/replication/security/replication-security-best-practices.md)   
- [Security and Protection &#40;Replication&#41;](../../../relational-databases/replication/security/security-and-protection-replication.md)   
+ [View and modify replication security settings](../../../relational-databases/replication/security/view-and-modify-replication-security-settings.md)   
  [Replication System Stored Procedures Concepts](../../../relational-databases/replication/concepts/replication-system-stored-procedures-concepts.md)  
   
   

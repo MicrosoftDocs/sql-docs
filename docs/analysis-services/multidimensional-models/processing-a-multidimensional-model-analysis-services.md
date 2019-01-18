@@ -1,36 +1,14 @@
 ---
-title: "Processing a multidimensional model (Analysis Services) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/04/2017"
-ms.prod: analysis-services
-ms.prod_service: "analysis-services"
-ms.service: ""
-ms.component: ""
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
-  
-ms.component: multidimensional-tabular
-ms.component: data-mining
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "online mode [Analysis Services]"
-  - "processing objects [Analysis Services]"
-  - "partitions [Analysis Services], processing"
-  - "jobs [Analysis Services]"
-  - "objects [Analysis Services], processing"
-  - "reprocessing objects"
-  - "impact analysis [Analysis Services]"
-  - "dimensions [Analysis Services], processing"
-  - "project mode [Analysis Services]"
-  - "cubes [Analysis Services], processing"
-ms.assetid: 625aa5a6-aa09-4bac-be8a-778fa81c5a61
-caps.latest.revision: 52
-author: "Minewiskan"
-ms.author: "owend"
-manager: "kfile"
-ms.workload: "Inactive"
+title: "Processing an Analysis Services  multidimensional model | Microsoft Docs"
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: multidimensional-models
+ms.topic: conceptual
+ms.author: owend
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
 ---
 # Processing a multidimensional model (Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]

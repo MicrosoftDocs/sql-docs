@@ -1,28 +1,14 @@
 ---
 title: "Specifying the Contents of a Query Axis (MDX) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: analysis-services
-ms.prod_service: "analysis-services"
-ms.service: ""
-ms.component: ""
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
-  
-ms.component: multidimensional-tabular
-ms.component: data-mining
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "cellsets [MDX]"
-  - "query axis [MDX]"
-ms.assetid: c745ade0-738e-4a98-a3f0-3eabfd3eeba2
-caps.latest.revision: 31
-author: "Minewiskan"
-ms.author: "owend"
-manager: "kfile"
-ms.workload: "On Demand"
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: mdx
+ms.topic: conceptual
+ms.author: owend
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
 ---
 # MDX Query and Slicer Axes - Specify the Contents of a Query Axis
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
@@ -76,7 +62,7 @@ FROM [Adventure Works]
   
 ```  
   
- The NON EMPTY keyword, used before the set definition, is an easy way to remove all empty tuples from an axis. For example, in the examples we’ve seen so far there is no data in the cube from August 2004 onwards. To remove all rows from the cellset that have no data in any column, simply add NON EMPTY before the set on the Rows axis definition as follows:  
+ The NON EMPTY keyword, used before the set definition, is an easy way to remove all empty tuples from an axis. For example, in the examples we've seen so far there is no data in the cube from August 2004 onwards. To remove all rows from the cellset that have no data in any column, simply add NON EMPTY before the set on the Rows axis definition as follows:  
   
 ```  
 SELECT {[Measures].[Internet Sales Amount]} ON COLUMNS,  

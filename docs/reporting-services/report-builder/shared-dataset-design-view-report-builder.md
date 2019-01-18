@@ -1,24 +1,15 @@
 ---
 title: "Shared Dataset Design View (Report Builder) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/17/2017"
+ms.date: 03/17/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
-ms.service: ""
-ms.component: "report-builder"
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
+ms.technology: report-builder
 
 
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 ms.assetid: 47c502da-d163-45d9-bf04-0849e5ba7929
-caps.latest.revision: 10
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "kfile"
-ms.workload: "Inactive"
+author: maggiesMSFT
+ms.author: maggies
 ---
 # Shared Dataset Design View (Report Builder)
   In a report, a dataset represents report data that is returned from running a query on an external data source. Shared datasets are published on a report server and can be used by multiple reports. You can  create datasets to share with others. In the Shared Dataset Design window,  you select a shared data source, specify properties for the shared dataset, and create a query in the query designer.  
@@ -36,7 +27,7 @@ ms.workload: "Inactive"
 > [!NOTE]  
 >  A shared dataset must be based on a shared data source. If the data source you need isn't available, you need to create one on the report server. For more information, see [Create, Modify, and Delete Shared Data Sources &#40;SSRS&#41;](../../reporting-services/report-data/create-modify-and-delete-shared-data-sources-ssrs.md) .  
   
- For more information, see [Data Connections, Data Sources, and Connection Strings in Report Builder](http://msdn.microsoft.com/library/7e103637-4371-43d7-821c-d269c2cc1b34).  
+ For more information, see [Data Connections, Data Sources, and Connection Strings in Report Builder](https://msdn.microsoft.com/library/7e103637-4371-43d7-821c-d269c2cc1b34).  
   
 ### Dataset  
  Use the **Set Options** button to set shared dataset properties. These include the following:  

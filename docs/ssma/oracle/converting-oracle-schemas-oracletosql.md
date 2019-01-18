@@ -1,31 +1,23 @@
 ---
 title: "Converting Oracle Schemas (OracleToSQL) | Microsoft Docs"
-ms.prod: "sql-non-specified"
-ms.prod_service: "sql-tools"
-ms.service: ""
-ms.component: "ssma-oracle"
+ms.prod: sql
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "sql-ssma"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: ssma
+ms.topic: conceptual
 helpviewer_keywords: 
   - "Conversion Results"
 ms.assetid: e021182d-31da-443d-b110-937f5db27272
-caps.latest.revision: 14
 author: "Shamikg"
 ms.author: "Shamikg"
 manager: "v-thobro"
-ms.workload: "On Demand"
 ---
 # Converting Oracle Schemas (OracleToSQL)
-After you have connected to Oracle, connected to [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], and set project and data mapping options, you can convert Oracle database objects to [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] database objects.  
+After you have connected to Oracle, connected to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], and set project and data mapping options, you can convert Oracle database objects to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database objects.  
   
 ## The Conversion Process  
-Converting database objects takes the object definitions from Oracle, converts them to similar [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] objects, and then loads this information into the SSMA metadata. It does not load the information into the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]. You can then view the objects and their properties by using the [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Metadata Explorer.  
+Converting database objects takes the object definitions from Oracle, converts them to similar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] objects, and then loads this information into the SSMA metadata. It does not load the information into the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. You can then view the objects and their properties by using the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Metadata Explorer.  
   
 During the conversion, SSMA prints output messages to the Output pane and error messages to the Error List pane. Use the output and error information to determine whether you have to modify your Oracle databases or your conversion process to obtain the desired conversion results.  
   
@@ -33,13 +25,13 @@ During the conversion, SSMA prints output messages to the Output pane and error 
 Before converting objects, review the project conversion options in the **Project Settings** dialog box. By using this dialog box, you can set how SSMA converts functions and global variables. For more information, see [Project Settings &#40;Conversion&#41; &#40;OracleToSQL&#41;](../../ssma/oracle/project-settings-conversion-oracletosql.md).  
   
 ## Conversion Results  
-The following table shows which Oracle objects are converted, and the resulting [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] objects:  
+The following table shows which Oracle objects are converted, and the resulting [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] objects:  
   
 |||  
 |-|-|  
 |Oracle Objects|Resulting SQL Server Objects|  
-|Functions|If the function can be directly converted to [!INCLUDE[tsql](../../includes/tsql_md.md)], SSMA creates a function.<br /><br />In some cases, the function must be converted to a stored procedure. In this case, SSMA creates a stored procedure and a function that calls the stored procedure.|  
-|Procedures|If the procedure can be directly converted to [!INCLUDE[tsql](../../includes/tsql_md.md)], SSMA creates a stored procedure.<br /><br />In some cases a stored procedure must be called in an autonomous transaction. In this case, SSMA creates two stored procedures: one that implements the procedure, and another that is used for calling the implementing stored procedure.|  
+|Functions|If the function can be directly converted to [!INCLUDE[tsql](../../includes/tsql-md.md)], SSMA creates a function.<br /><br />In some cases, the function must be converted to a stored procedure. In this case, SSMA creates a stored procedure and a function that calls the stored procedure.|  
+|Procedures|If the procedure can be directly converted to [!INCLUDE[tsql](../../includes/tsql-md.md)], SSMA creates a stored procedure.<br /><br />In some cases a stored procedure must be called in an autonomous transaction. In this case, SSMA creates two stored procedures: one that implements the procedure, and another that is used for calling the implementing stored procedure.|  
 |Packages|SSMA creates a set of stored procedures and functions that are unified by similar object names.|  
 |Sequences|SSMA creates sequence objects (SQL Server 2012 or SQL Server 2014) or emulates Oracle sequences.|  
 |Tables with dependent objects such as indexes and triggers|SSMA creates tables with dependent objects.|  
@@ -113,10 +105,10 @@ For each item that could not be converted, you have to determine what you want t
   
 -   You can modify the object in the Oracle database to remove or revise problematic code. To load the updated code into SSMA, you will have to update the metadata. For more information, see [Connecting to Oracle Database &#40;OracleToSQL&#41;](../../ssma/oracle/connecting-to-oracle-database-oracletosql.md).  
   
--   You can exclude the object from migration. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Metadata Explorer and Oracle Metadata Explorer, clear the check box next to the item before loading the objects into [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] and migrating data from Oracle.  
+-   You can exclude the object from migration. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Metadata Explorer and Oracle Metadata Explorer, clear the check box next to the item before loading the objects into [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and migrating data from Oracle.  
   
 ## Next Step  
-The next step in the migration process is to [Load the converted objects into SQL Server](http://msdn.microsoft.com/en-us/a8ae33b2-1883-4785-922b-ea0e31c0b37a).  
+The next step in the migration process is to [Load the converted objects into SQL Server](loading-converted-database-objects-into-sql-server-oracletosql.md).  
   
 ## See Also  
 [Migrating Oracle Databases to SQL Server &#40;OracleToSQL&#41;](../../ssma/oracle/migrating-oracle-databases-to-sql-server-oracletosql.md)  

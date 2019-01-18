@@ -2,15 +2,10 @@
 title: "FILE_ID (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "sql-database"
-ms.service: ""
-ms.component: "t-sql|functions"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: t-sql
 ms.topic: "language-reference"
 f1_keywords: 
   - "FILE_ID"
@@ -25,16 +20,14 @@ helpviewer_keywords:
   - "identification numbers [SQL Server], files"
   - "file names [SQL Server], FILE_ID"
 ms.assetid: 6a7382cf-a360-4d62-b9d2-5d747f56f076
-caps.latest.revision: 34
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "craigg"
-ms.workload: "Inactive"
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
 ---
 # FILE_ID (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Returns the file identification (ID) number for the given logical file name in the current database.  
+For the given logical name for a component file of the current database, this function returns the file identification (ID) number.  
   
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Use [FILE_IDEX](../../t-sql/functions/file-idex-transact-sql.md) instead.  
@@ -44,25 +37,26 @@ ms.workload: "Inactive"
 ## Syntax  
   
 ```  
-  
 FILE_ID ( file_name )  
 ```  
   
 ## Arguments  
- *file_name*  
- Is an expression of type **sysname** that represents the name of the file for which to return the file ID.  
+*file_name*  
+An expression of type **sysname**, representing the logical name of the file whose file ID value `FILE_ID` will return.  
   
 ## Return Types  
- **smallint**  
+**smallint**  
   
 ## Remarks  
- *file_name* corresponds to the logical file name displayed in the name column in the sys.master_files or sys.database_files catalog views.  
+*file_name* corresponds to the logical file name displayed in the name column of the sys.master_files or sys.database_files catalog views.  
+
+`FILE_ID` returns `NULL` if *file_name* does not correspond to the logical name of a component file of the current database.
   
- In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], the file identification number assigned to full-text catalogs is greater than 32767. Because the return type of the FILE_ID function is **smallint**, this function cannot be used for full-text files. Use [FILE_IDEX](../../t-sql/functions/file-idex-transact-sql.md) instead.  
+In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], the file identification number assigned to full-text catalogs exceeds 32767. Because the `FILE_ID` function has a **smallint** return type, `FILE_ID` will not support full-text files. Use [FILE_IDEX](../../t-sql/functions/file-idex-transact-sql.md) instead.  
   
 ## Examples  
- The following example returns the file ID for the `AdventureWorks_Data` file.  
-  
+This example returns the file ID value for the `AdventureWorks_Data` file, a component file of the `ADVENTUREWORKS2012` database.  
+
 ```sql  
 USE AdventureWorks2012;  
 GO  

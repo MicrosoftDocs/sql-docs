@@ -2,24 +2,17 @@
 title: "Enable the Lock Pages in Memory Option (Windows) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-non-specified"
-ms.prod_service: "database-engine"
-ms.service: ""
-ms.component: "configure-windows"
+ms.prod: sql
+ms.prod_service: high-availability
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: configuration
+ms.topic: conceptual
 helpviewer_keywords: 
   - "Lock Pages in Memory option"
 ms.assetid: cd581fbc-4747-439e-87f9-2f18e39c5bb9
-caps.latest.revision: 35
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-ms.workload: "Active"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ---
 # Enable the Lock Pages in Memory Option (Windows)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -44,11 +37,11 @@ ms.workload: "Active"
   
 5.  In the pane, double-click **Lock pages in memory**.  
   
-6.  In the **Local Security Setting – Lock pages in memory** dialog box, click **Add User or Group**.  
+6.  In the **Local Security Setting - Lock pages in memory** dialog box, click **Add User or Group**.  
   
-7.  In the **Select Users, Service Accounts, or Groups** dialog box, add an account with privileges to run sqlservr.exe.  
+7.  In the **Select Users, Service Accounts, or Groups** dialog box, select the SQL Server Service account.  
   
-8.  Restart the SQL Server Data Engine service for this setting to take effect.
+8.  Restart the SQL Server Service for this setting to take effect.
   
 ## See Also  
  [Server Memory Server Configuration Options](../../database-engine/configure-windows/server-memory-server-configuration-options.md)  

@@ -2,24 +2,20 @@
 title: "Validation (Master Data Services) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "mds"
-ms.service: ""
-ms.component: "non-specific"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "master-data-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: master-data-services
+ms.topic: conceptual
 ms.assetid: 98eb49e7-b190-4a21-8316-08c07cde14ed
-caps.latest.revision: 12
-author: "smartysanthosh"
-ms.author: "nagavo"
-manager: "craigg"
-ms.workload: "Inactive"
+author: leolimsft
+ms.author: lle
+manager: craigg
 ---
 # Validation (Master Data Services)
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
   In [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], data is validated to ensure its accuracy. Some validation occurs automatically, and other validation is based on business rules that are created by administrators.  
   
 ## When Data Validation Occurs  
@@ -28,7 +24,7 @@ ms.workload: "Inactive"
 |Validation Type|Standards Determined by|When it Occurs|Displayed in the MasterData Manager web UI as|Displayed in the Add-in for Excel as|Is Data Saved to the MDS Repository?|  
 |---------------------|-----------------------------|--------------------|---------------------------------------------------|-------------------------------------------|------------------------------------------|  
 |Business rule validation|An MDS administrator|Automatically when a user adds or edits data.<br /><br /> Manually when a user applies business rules.<br /><br /> Manually when an administrator in the **Version Management** functional area of the [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] web application validates a version against business rules.|Validation Errors|ValidationStatus|Yes|  
-|Data type and content validation|An MDS administrator, when creating model objects (for example, an attribute’s length or data type)|Automatically when a user adds or edits data|Input Errors|InputStatus|No|  
+|Data type and content validation|An MDS administrator, when creating model objects (for example, an attribute's length or data type)|Automatically when a user adds or edits data|Input Errors|InputStatus|No|  
 |Data type and content validation|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] or [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]|Automatically when a user adds or edits data|Input Errors|InputStatus|No|  
   
 ## Related Tasks  

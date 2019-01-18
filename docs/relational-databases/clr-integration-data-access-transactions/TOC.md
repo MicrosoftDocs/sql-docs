@@ -1,5 +1,0 @@
-# [CLR Integration and Transactions](clr-integration-and-transactions.md)
-# [Accessing the Current Transaction](accessing-the-current-transaction.md)
-# [Transaction Lifetimes](transaction-lifetimes.md)
-# [Transaction Promotion](transaction-promotion.md)
-# [Using System.Transactions](using-system-transactions.md)

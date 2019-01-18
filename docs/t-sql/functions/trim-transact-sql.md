@@ -2,16 +2,11 @@
 title: "TRIM (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/20/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.service: ""
-ms.component: "t-sql|functions"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: t-sql
+ms.topic: conceptual
 f1_keywords: 
   - "TRIM"
   - "TRIM_TSQL"
@@ -20,14 +15,16 @@ dev_langs:
 helpviewer_keywords: 
   - "TRIM function"
 ms.assetid: a00245aa-32c7-4ad4-a0d1-64f3d6841153
-caps.latest.revision: 4
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "craigg"
-ms.workload: "Active"
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+monikerRange: "=azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # TRIM (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
+
+> [!div class="nextstepaction"]
+> [Please share your feedback about the SQL Docs Table of Contents!](https://aka.ms/sqldocsurvey)
 
 Removes the space character `char(32)` or other specified characters from the start or end of a string.  
  
@@ -75,7 +72,10 @@ SELECT TRIM( '.,! ' FROM  '#     test    .') AS Result;
 
 
 ## See Also
-[String Functions (Transact-SQL)](../../t-sql/functions/string-functions-transact-sql.md)   
-[LTRIM (Transact-SQL)](../../t-sql/functions/ltrim-transact-sql.md)   
-[RTRIM (Transact-SQL)](../../t-sql/functions/rtrim-transact-sql.md)   
-[REPLACE (Transact-SQL)](../../t-sql/functions/replace-transact-sql.md)   
+ [LEFT &#40;Transact-SQL&#41;](../../t-sql/functions/left-transact-sql.md)  
+ [LTRIM &#40;Transact-SQL&#41;](../../t-sql/functions/ltrim-transact-sql.md)  
+ [RIGHT &#40;Transact-SQL&#41;](../../t-sql/functions/right-transact-sql.md)  
+ [RTRIM &#40;Transact-SQL&#41;](../../t-sql/functions/rtrim-transact-sql.md)  
+ [STRING_SPLIT &#40;Transact-SQL&#41;](../../t-sql/functions/string-split-transact-sql.md)  
+ [SUBSTRING &#40;Transact-SQL&#41;](../../t-sql/functions/substring-transact-sql.md)  
+ [String Functions &#40;Transact-SQL&#41;](../../t-sql/functions/string-functions-transact-sql.md)   

@@ -2,15 +2,9 @@
 title: "sys.sp_rda_reconcile_indexes (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/10/2016"
-ms.prod: "sql-non-specified"
-ms.prod_service: "database-engine"
-ms.service: ""
-ms.component: "system-stored-procedures"
+ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "dbe-stretch"
-ms.tgt_pltfrm: ""
+ms.technology: stored-procedures
 ms.topic: "language-reference"
 f1_keywords: 
   - "sp_rda_reconcile_indexes"
@@ -20,11 +14,9 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.sp_rda_reconcile_indexes stored procedure"
 ms.assetid: 96b31ab9-bf84-46d6-9990-81f5c51f885a
-caps.latest.revision: 9
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
-ms.workload: "Inactive"
+manager: craigg
 ---
 # sys.sp_rda_reconcile_indexes (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]

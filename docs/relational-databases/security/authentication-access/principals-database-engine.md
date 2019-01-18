@@ -2,16 +2,11 @@
 title: "Principals (Database Engine) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/09/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
-ms.service: ""
-ms.component: "security"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: security
+ms.topic: conceptual
 f1_keywords: 
   - "sql13.swb.roleproperties.selectroll.f1"
   - "sql13.swb.databaseuser.permissions.user.f1--May use common.permissions"
@@ -31,11 +26,10 @@ helpviewer_keywords:
   - "users [SQL Server], principals"
   - "##MS_SQLReplicationSigningCertificate##"
 ms.assetid: 3f7adbf7-6e40-4396-a8ca-71cbb843b5c2
-caps.latest.revision: 57
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "craigg"
-ms.workload: "On Demand"
+author: VanMSFT
+ms.author: vanto
+manager: craigg
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Principals (Database Engine)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -44,18 +38,18 @@ ms.workload: "On Demand"
   
 ## SQL Server-level principals  
   
--  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] authentication Login   
--  Windows authentication login for a Windows user  
--  Windows authentication login for a Windows group   
--  Azure Active Directory authentication login for a AD user
--  Azure Active Directory authentication login for a AD group
--  Server Role  
+- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] authentication Login   
+- Windows authentication login for a Windows user  
+- Windows authentication login for a Windows group   
+- Azure Active Directory authentication login for a AD user
+- Azure Active Directory authentication login for a AD group
+- Server Role  
   
- ## Database-level principals  
+## Database-level principals
   
--   Database User (There are 11 types of users. For more information, see [CREATE USER](../../../t-sql/statements/create-user-transact-sql.md).) 
--   Database Role  
--   Application Role  
+- Database User (There are 11 types of users. For more information, see [CREATE USER](../../../t-sql/statements/create-user-transact-sql.md).)
+- Database Role
+- Application Role
   
 ## sa Login  
  The [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] `sa` log in is a server-level principal. By default, it is created when an instance is installed. Beginning in [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], the default database of sa is master. This is a change of behavior from earlier versions of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. The `sa` login is a member of the `sysadmin` fixed database role. The `sa` login has all permissions on the server and cannot be limited. The `sa` login cannot be dropped, but it can be disabled so that no one can use it.

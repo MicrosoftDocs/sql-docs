@@ -2,15 +2,10 @@
 title: "SetStringValue Method (SqlServiceAdvancedProperty Class ) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/03/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "database-engine"
-ms.service: ""
-ms.component: "wmi"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: wmi
 ms.topic: "reference"
 apiname: 
   - "SetStringValue Method (SqlServiceAdvancedProperty Class )"
@@ -20,11 +15,9 @@ apitype: "MOFDef"
 helpviewer_keywords: 
   - "SetStringValue method"
 ms.assetid: a02d05f6-1072-4709-9ecc-e23e51c8c898
-caps.latest.revision: 15
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-ms.workload: "Inactive"
+author: "CarlRabeler"
+ms.author: "carlrab"
+manager: craigg
 ---
 # SetStringValue Method (SqlServiceAdvancedProperty Class )
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -54,6 +47,6 @@ object.SetStringValue(StrValue)
  The property value type must be **string** to be able to set the property to a string value.  
   
 ## See Also  
- [Starting and Stopping Services](http://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  
+ [Starting and Stopping Services](https://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  
   
   

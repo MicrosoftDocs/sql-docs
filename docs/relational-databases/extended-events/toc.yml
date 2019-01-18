@@ -1,0 +1,42 @@
+- name: Overview
+  href: extended-events.md
+- name: "Quick Start: Extended events in SQL Server"
+  href: quick-start-extended-events-in-sql-server.md
+- name: Manage Event Sessions in the Object Explorer
+  href: manage-event-sessions-in-the-object-explorer.md
+- name: Advanced Viewing of Target Data from Extended Events in SQL Server
+  href: advanced-viewing-of-target-data-from-extended-events-in-sql-server.md
+- name: Extended Events Packages
+  href: sql-server-extended-events-packages.md
+- name: Targets for Extended Events in SQL Server
+  href: targets-for-extended-events-in-sql-server.md
+  items:
+  - name: Event Tracing for Windows Target
+    href: event-tracing-for-windows-target.md
+- name: Extended Events Engine
+  href: sql-server-extended-events-engine.md
+- name: Extended Events Sessions
+  href: sql-server-extended-events-sessions.md
+- name: Extended Events Tools
+  href: extended-events-tools.md
+  items:
+  - name: Use the SSMS XEvent Profiler
+    href: use-the-ssms-xe-profiler.md
+  - name: Use the system_health Session
+    href: use-the-system-health-session.md
+  - name: Use the PowerShell Provider for Extended Events
+    href: use-the-powershell-provider-for-extended-events.md
+- name: Alter an Extended Events Session
+  href: alter-an-extended-events-session.md
+- name: SELECTs and JOINs From System Views for Extended Events in SQL Server
+  href: selects-and-joins-from-system-views-for-extended-events-in-sql-server.md
+- name: View the Extended Events Equivalents to SQL Trace Event Classes
+  href: view-the-extended-events-equivalents-to-sql-trace-event-classes.md
+- name: Convert an Existing SQL Trace Script to an Extended Events Session
+  href: convert-an-existing-sql-trace-script-to-an-extended-events-session.md
+- name: Determine Which Queries Are Holding Locks
+  href: determine-which-queries-are-holding-locks.md
+- name: Find the Objects That Have the Most Locks Taken on Them
+  href: find-the-objects-that-have-the-most-locks-taken-on-them.md
+- name: Monitor System Activity Using Extended Events
+  href: monitor-system-activity-using-extended-events.md

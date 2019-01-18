@@ -2,15 +2,10 @@
 title: "sp_control_dbmasterkey_password (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "02/25/2016"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "database-engine"
-ms.service: ""
-ms.component: "system-stored-procedures"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: system-objects
 ms.topic: "language-reference"
 f1_keywords: 
   - "sp_control_dbmasterkey_password"
@@ -20,11 +15,9 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_control_dbmasterkey_password"
 ms.assetid: 63979a87-42a2-446e-8e43-30481faaf3ca
-caps.latest.revision: 27
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "craigg"
-ms.workload: "Inactive"
+author: VanMSFT
+ms.author: vanto
+manager: craigg
 ---
 # sp_control_dbmasterkey_password (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

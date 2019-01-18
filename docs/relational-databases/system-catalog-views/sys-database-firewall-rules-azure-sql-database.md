@@ -5,12 +5,7 @@ ms.date: "03/14/2017"
 ms.prod: ""
 ms.prod_service: "sql-database"
 ms.reviewer: ""
-ms.service: "sql-database"
-ms.component: "system-catalog-views"
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: system-objects
 ms.topic: "language-reference"
 f1_keywords: 
   - "sys.database_firewall_rules_TSQL"
@@ -23,11 +18,10 @@ helpviewer_keywords:
   - "database_firewall_rules"
   - "sys.database_firewall_rules"
 ms.assetid: 2e821593-3b9f-43d6-a99b-1ceffe177faf
-caps.latest.revision: 10
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "craigg"
-ms.workload: "Inactive"
+author: VanMSFT
+ms.author: vanto
+manager: craigg
+monikerRange: "= azuresqldb-current || = sqlallproducts-allversions"
 ---
 # sys.database_firewall_rules (Azure SQL Database)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]

@@ -2,24 +2,17 @@
 title: "Fixed and Changing Attribute Options (Slowly Changing Dimension Wizard | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "integration-services"
-ms.service: ""
-ms.component: "data-flow"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: integration-services
+ms.topic: conceptual
 f1_keywords: 
   - "sql13.dts.loaddimwizard.attriboption.f1"
 ms.assetid: c841345c-7d03-452f-9379-1c8c464f029c
-caps.latest.revision: 29
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
-ms.workload: "Inactive"
+manager: craigg
 ---
 # Fixed and Changing Attribute Options (Slowly Changing Dimension Wizard
   Use the **Fixed and Changing Attribute Options** dialog box to specify how to respond to changes in fixed and changing attributes.  

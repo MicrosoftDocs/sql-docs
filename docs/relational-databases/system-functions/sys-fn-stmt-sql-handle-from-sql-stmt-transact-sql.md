@@ -2,24 +2,18 @@
 title: "sys.fn_stmt_sql_handle_from_sql_stmt (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.service: ""
-ms.component: "system-functions"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: system-objects
 ms.topic: "language-reference"
 dev_langs: 
   - "TSQL"
 ms.assetid: 6794e073-0895-4507-aba3-c3545acc843f
-caps.latest.revision: 9
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-ms.workload: "Inactive"
+author: "rothja"
+ms.author: "jroth"
+manager: craigg
+monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.fn_stmt_sql_handle_from_sql_stmt (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -45,15 +39,15 @@ sys.fn_stmt_sql_handle_from_sql_stmt
  *query_param_type*  
  Is the parameter type of the query. *query_param_type* is a **tinyint**. Possible values are:  
   
--   NULL – defaults to 0  
+-   NULL - defaults to 0  
   
--   0 – None  
+-   0 - None  
   
--   1 – User  
+-   1 - User  
   
--   2 – Simple  
+-   2 - Simple  
   
--   3 – Forced  
+-   3 - Forced  
   
 ## Columns Returned  
  The following table lists the columns that sys.fn_stmt_sql_handle_from_sql_stmt returns.  

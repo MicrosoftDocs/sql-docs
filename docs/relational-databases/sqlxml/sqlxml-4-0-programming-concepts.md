@@ -2,25 +2,19 @@
 title: "SQLXML 4.0 Programming Concepts | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.service: ""
-ms.component: "sqlxml"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "dbe-xml"
-ms.tgt_pltfrm: ""
+ms.technology: xml
 ms.topic: "reference"
 helpviewer_keywords: 
   - "SQLXML, about SQLXML"
   - "SQLXML"
 ms.assetid: 5a11cda2-b8a3-4453-848f-641afdaa7024
-caps.latest.revision: 38
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
-ms.workload: "Inactive"
+manager: craigg
+monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # SQLXML 4.0 Programming Concepts
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -63,7 +57,7 @@ ms.workload: "Inactive"
  [SQLXML 4.0 Data Access Components](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/data-access-components-provider/sqlxml-4-0-data-access-components-sqlxmloledb-provider.md)  
  Documents the SQLXMLOLEDB Provider and provides links to other SQLXML 4.0 data access components.  
   
- [SQLXML 4.0 .NET Framework Support](http://msdn.microsoft.com/library/c18cf801-f893-4fbc-8e2b-c563f6108acf)  
+ [SQLXML 4.0 .NET Framework Support](https://msdn.microsoft.com/library/c18cf801-f893-4fbc-8e2b-c563f6108acf)  
  Describes the SQLXML 4.0 support for the .NET Framework.  
   
  [Caching Templates, XSL, and Schemas &#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/caching-templates-xml-schemas/caching-templates-xsl-and-schemas-sqlxml-4-0.md)  

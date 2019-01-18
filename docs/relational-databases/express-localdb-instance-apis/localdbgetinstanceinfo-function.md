@@ -2,15 +2,10 @@
 title: "LocalDBGetInstanceInfo Function | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "database-engine"
-ms.service: ""
-ms.component: "localdb"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 apiname: 
   - "LocalDBGetInstanceInfo"
@@ -18,11 +13,9 @@ apilocation:
   - "sqluserinstance.dll"
 apitype: "DLLExport"
 ms.assetid: 231706f5-26c6-42eb-ab47-315df6b8f824
-caps.latest.revision: 15
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-ms.workload: "Inactive"
+author: "CarlRabeler"
+ms.author: "carlrab"
+manager: craigg
 ---
 # LocalDBGetInstanceInfo Function
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -137,7 +130,7 @@ HRESULT LocalDBGetInstanceInfo(
   
 ```  
 LocalDBInstanceInfo ii;  
-LocalDBInstanceInfo(L”Test”, &ii, sizeof(LocalDBInstanceInfo));  
+LocalDBInstanceInfo(L"Test", &ii, sizeof(LocalDBInstanceInfo));  
   
 ```  
   

@@ -1,32 +1,14 @@
 ---
 title: "Microsoft Naive Bayes Algorithm Technical Reference | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: analysis-services
-ms.prod_service: "analysis-services"
-ms.service: ""
-ms.component: ""
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
-  
-ms.component: data-mining
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "MINIMUM_DEPENDENCY_PROBABILITY parameter"
-  - "MAXIMUM_INPUT_ATTRIBUTES parameter"
-  - "naive bayes model [Analysis Services]"
-  - "Bayesian classifiers"
-  - "naive bayes algorithms [Analysis Services]"
-  - "MAXIMUM_OUTPUT_ATTRIBUTES parameter"
-  - "MAXIMUM_STATES parameter"
-ms.assetid: a4cd47fe-2127-4930-b18f-3edd17ee9a65
-caps.latest.revision: 16
-author: "Minewiskan"
-ms.author: "owend"
-manager: "kfile"
-ms.workload: "Inactive"
+ms.date: 05/08/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: data-mining
+ms.topic: conceptual
+ms.author: owend
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
 ---
 # Microsoft Naive Bayes Algorithm Technical Reference
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -76,7 +58,7 @@ ms.workload: "Inactive"
  The default is 0.5.  
   
  *MAXIMUM_STATES*  
- Specifies the maximum number of attribute states that the algorithm supports. If the number of states that an attribute has is greater than the maximum number of states, the algorithm uses the attribute’s most popular states and treats the remaining states as missing.  
+ Specifies the maximum number of attribute states that the algorithm supports. If the number of states that an attribute has is greater than the maximum number of states, the algorithm uses the attribute's most popular states and treats the remaining states as missing.  
   
  The default is 100.  
   

@@ -1,16 +1,11 @@
 ---
 title: "AT TIME ZONE (Transact-SQL) | Microsoft Docs"
 ms.date: "11/16/2016"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.service: ""
-ms.component: "t-sql|queries"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.custom: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: t-sql
 ms.topic: "language-reference"
 f1_keywords: 
   - "AT TIME ZONE"
@@ -18,11 +13,9 @@ f1_keywords:
 helpviewer_keywords: 
   - "AT TIME ZONE function"
 ms.assetid: 311f682f-7f1b-43b6-9ea0-24e36b64f73a
-caps.latest.revision: 13
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-ms.workload: "Active"
+author: "douglaslMS"
+ms.author: "douglasl"
+manager: craigg
 ---
 # AT TIME ZONE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -149,7 +142,7 @@ FROM Sales.SalesOrderHeader;
 ```  
   
 ### C. Query Temporal Tables using local time zone  
- The following example example selects data from a temporal table.  
+ The following example selects data from a temporal table.  
   
 ```  
 USE AdventureWorks2016;  

@@ -1,0 +1,86 @@
+- name: SQL Server Installation
+  href: installation-for-sql-server.md
+- name: Upgrade SQL Server
+  href: upgrade-sql-server.md
+  items:
+  - name: Supported Version and Edition Upgrades SQL Server 2017
+    href: supported-version-and-edition-upgrades-2017.md
+  - name: Supported Version and Edition Upgrades SQL Server 2016
+    href: supported-version-and-edition-upgrades.md
+  - name: Prepare for upgrade by running Data Migration Assistant
+    href: prepare-for-upgrade-by-running-data-migration-assistant.md
+  - name: Upgrading from SQL 2005, 2008, or 2008 R2?
+    href: are-you-upgrading-from-sql-server-2005.md
+  - name: Upgrade Analysis Services
+    href: upgrade-analysis-services.md
+  - name: Upgrade Database Engine
+    href: upgrade-database-engine.md
+    items:
+    - name: Choose a Database Engine Upgrade Method
+      href: choose-a-database-engine-upgrade-method.md
+    - name: Plan and Test the Database Engine Upgrade Plan
+      href: plan-and-test-the-database-engine-upgrade-plan.md
+    - name: Complete the Database Engine Upgrade
+      href: complete-the-database-engine-upgrade.md
+      items:
+      - name: Change the Database Compatibility Mode and Use the Query Store
+        href: change-the-database-compatibility-mode-and-use-the-query-store.md
+  - name: Upgrade Data Quality Services
+    href: upgrade-data-quality-services.md
+  - name: Upgrade Master Data Services
+    href: upgrade-master-data-services.md
+  - name: Upgrade Power Pivot for SharePoint
+    href: upgrade-power-pivot-for-sharepoint.md
+  - name: Upgrade Replicated Databases
+    href: upgrade-replicated-databases.md
+  - name: Upgrade SQL Server Management Tools
+    href: upgrade-sql-server-management-tools.md
+  - name: Upgrade SQL Server Using the Installation Wizard (Setup)
+    href: upgrade-sql-server-using-the-installation-wizard-setup.md
+  - name: Upgrade to a Different Edition of SQL Server (Setup)
+    href: upgrade-to-a-different-edition-of-sql-server-setup.md
+- name: Install SQL Server
+  href: install-sql-server.md
+  items:
+  - name: Install SQL Server Database Engine
+    href: install-sql-server-database-engine.md
+  - name: Install SQL Server Replication
+    href: install-sql-server-replication.md
+  - name: Install SQL Server PowerShell
+    href: install-sql-server-powershell.md
+  - name: Install SQL Server with SMB Fileshare as a Storage Option
+    href: install-sql-server-with-smb-fileshare-as-a-storage-option.md
+  - name: Considerations for Installing SQL Server Using SysPrep
+    href: considerations-for-installing-sql-server-using-sysprep.md
+  - name: Check Parameters for the System Configuration Checker
+    href: check-parameters-for-the-system-configuration-checker.md
+  - name: Configure SQL Server on a Server Core Installation
+    href: configure-sql-server-on-a-server-core-installation.md
+  - name: Install SQL Server on Server Core
+    href: install-sql-server-on-server-core.md
+  - name: Install SQL Server from the Installation Wizard (Setup)
+    href: install-sql-server-from-the-installation-wizard-setup.md
+  - name: Install SQL Server from the Command Prompt
+    href: install-sql-server-from-the-command-prompt.md
+  - name: Install SQL Server Using a Configuration File
+    href: install-sql-server-using-a-configuration-file.md
+  - name: Install SQL Server Using SysPrep
+    href: install-sql-server-using-sysprep.md
+  - name: Install SQL Server With PowerShell Desired State Configuration
+    href: install-sql-server-with-powershell-desired-state-configuration.md
+  - name: Add Features to an Instance of SQL Server (Setup)
+    href: add-features-to-an-instance-of-sql-server-setup.md
+  - name: Repair a Failed SQL Server Installation
+    href: repair-a-failed-sql-server-installation.md
+  - name: Rename a Computer that Hosts a Stand-Alone Instance of SQL Server
+    href: rename-a-computer-that-hosts-a-stand-alone-instance-of-sql-server.md
+  - name: Install SQL Server Servicing Updates
+    href: install-sql-server-servicing-updates.md
+  - name: View and Read SQL Server Setup Log Files
+    href: view-and-read-sql-server-setup-log-files.md
+  - name: Validate a SQL Server Installation
+    href: validate-a-sql-server-installation.md
+  - name: Installing Updates from the Command Prompt
+    href: installing-updates-from-the-command-prompt.md
+- name: Local Audit for SQL Server Usage Feedback Collection
+  href: local-audit-for-sql-server-usage-feedback-collection.md

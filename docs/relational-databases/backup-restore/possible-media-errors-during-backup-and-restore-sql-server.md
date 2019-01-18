@@ -2,16 +2,11 @@
 title: "Possible Media Errors During Backup and Restore (SQL Server) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/15/2017"
-ms.prod: "sql-non-specified"
-ms.prod_service: "database-engine"
-ms.service: ""
-ms.component: "backup-restore"
+ms.prod: sql
+ms.prod_service: backup-restore
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "dbe-backup-restore"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: backup-restore
+ms.topic: conceptual
 helpviewer_keywords: 
   - "media errors [SQL Server]"
   - "CONTINUE_AFTER_ERROR option"
@@ -26,11 +21,9 @@ helpviewer_keywords:
   - "NO_CHECKSUM option"
   - "checksums [SQL Server]"
 ms.assetid: 83a27b29-1191-4f8d-9648-6e6be73a9b7c
-caps.latest.revision: 37
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-ms.workload: "Inactive"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ---
 # Possible Media Errors During Backup and Restore (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

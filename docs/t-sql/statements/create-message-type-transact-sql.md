@@ -2,15 +2,10 @@
 title: "CREATE MESSAGE TYPE (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "04/10/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "sql-database"
-ms.service: ""
-ms.component: "t-sql|statements"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: t-sql
 ms.topic: "language-reference"
 f1_keywords: 
   - "CREATE_MESSAGE_TSQL"
@@ -31,11 +26,9 @@ helpviewer_keywords:
   - "binary [SQL Server], message types"
   - "CREATE MESSAGE TYPE statement"
 ms.assetid: 98fe0fff-1a2e-4ca2-b37f-83a06fdf098e
-caps.latest.revision: 41
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-ms.workload: "Inactive"
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
 ---
 # CREATE MESSAGE TYPE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -111,8 +104,8 @@ CREATE MESSAGE TYPE
 CREATE XML SCHEMA COLLECTION ExpenseReportSchema AS  
 N'<?xml version="1.0" encoding="UTF-16" ?>  
   <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
-     targetNamespace="http://Adventure-Works.com/schemas/expenseReport"  
-     xmlns:expense="http://Adventure-Works.com/schemas/expenseReport"  
+     targetNamespace="https://Adventure-Works.com/schemas/expenseReport"  
+     xmlns:expense="https://Adventure-Works.com/schemas/expenseReport"  
      elementFormDefault="qualified"  
    >   
     <xsd:complexType name="expenseReportType">  

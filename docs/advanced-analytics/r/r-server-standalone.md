@@ -1,105 +1,90 @@
 ---
-title: "R Server (Standalone) | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "06/22/2017"
-ms.reviewer: 
-ms.suite: sql
-ms.prod: machine-learning-services
-ms.prod_service: machine-learning-services
-ms.component: r
-vms.technology: 
-  
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "R"
-ms.assetid: ca9e48f1-67b8-4905-9b78-56752d7a4e81
-caps.latest.revision: 22
-author: "jeannt"
-ms.author: "jeannt"
-manager: "jhubbard"
+title: Standalone R Server or Machine Learning Server installation - SQL Server Machine Learning Services
+description: Overview introduction to standalone R Server and Machine Learning Server in SQL Server Setup
+ms.prod: sql
+ms.technology: machine-learning
+
+ms.date: 12/18/2018  
+ms.topic: overview
+author: HeidiSteen
+ms.author: heidist
+manager: cgronlun
 ---
-# R Server (Standalone)
+# R Server (Standalone) and Machine Learning Server (Standalone) in SQL Server
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-In SQL Server 2016, Microsoft released **R Server (Standalone)**, as part of its platform for supporting enterprise-class analytics.  Microsoft R Server provides scalability and security for the R language, and addresses the in-memory limitations of open source R. Like SQL Server R Services, Microsoft R Server (Standalone) provides parallel and chunked processing of data, enabling R users to use data much bigger than can fit in memory.
+SQL Server provides installation support for a standalone R Server or Machine Learning Server that runs independently of SQL Server. Depending on your SQL Server version, a standalone server has a foundation of open-source R and possibly Python, overlaid with high-performance libraries from Microsoft that add statistical and predictive analytics at scale. Libraries also enable machine learning tasks scripted in R or Python. 
 
-In SQL Server 2017, support has been added for the Python language, which enjoys broad support in the machine community learning, and includes popular libraries for text analytics and deep learning.  To reflect this broader set of languages, we've also renamed it to **Microsoft Machine Learning Server (Standalone)**.
+In SQL Server 2016, this feature is called **R Server (Standalone)** and is R-only. In SQL Server 2017, it's called **Machine Learning Server (Standalone)** and includes both R and Python.  
 
-## Benefits of Microsoft R Server
+> [!Note]
+> As installed by SQL Server Setup, a standalone server is functionally equivalent to the non-SQL-branded versions of [Microsoft Machine Learning Server](https://docs.microsoft.com/machine-learning-server/what-is-machine-learning-server), supporting the same user scenarios, including remote execution, operationalization and web services, and the complete collection of R and Python libraries.
 
-You can use Microsoft R Server for distributed computing on multiple platforms. When you install from SQL Server setup, you get the Windows-based server and all the required tools for publishing and deploying models. For more information about other platforms, see these resources in the MSDN library:
+## Components
 
-+ [Introducing Microsoft R Server](https://msdn.microsoft.com/microsoft-r/rserver)
-+ [R Server for Windows](https://msdn.microsoft.com/microsoft-r/rserver-install-windows)
+SQL Server 2016 is R only. SQL Server 2017 supports R and Python. The following table describes the features in each version.
 
-You can also install Microsoft R Server to use as a development client, to get the RevoScaleR libraries and tools needed to create R solutions that can be deployed to SQL Server.
+| Component | Description |
+|-----------|-------------|
+| R packages | [**RevoScaleR**](ref-r-revoscaler.md) is the primary library for scalable R with functions for data manipulation, transformation, visualization, and analysis.  <br/>[**MicrosoftML**](ref-r-microsoftml.md) adds machine learning algorithms to create custom models for text analysis, image analysis, and sentiment analysis. <br/>[**sqlRUtils**](ref-r-sqlrutils.md) provides helper functions for putting R scripts into a T-SQL stored procedure, registering a stored procedure with a database, and running the stored procedure from an R development environment.<br/>[**mrsdeploy**](operationalization-with-mrsdeploy.md) offers web service deployment (in SQL Server 2017 only). <br/>[**olapR**](ref-r-olapr.md) is for specifying MDX queries in R.|
+| Microsoft R Open (MRO) | [**MRO**](https://mran.microsoft.com/open) is Microsoft's open-source distribution of R. The package and interpreter are included. Always use the version of MRO bundled in setup. |
+| R tools | R console windows and command prompts are standard tools in an R distribution. Find them at \Program files\Microsoft SQL Server\140\R_SERVER\bin\x64. |
+| R Samples and scripts |  Open-source R and RevoScaleR packages include built-in data sets so that you can create and run script using pre-installed data. Look for them at \Program files\Microsoft SQL Server\140\R_SERVER\library\datasets and \library\RevoScaleR. |
+| Python packages | [**revoscalepy**](../python/ref-py-revoscalepy.md) is the primary library for scalable Python with functions for data manipulation, transformation, visualization, and analysis. <br/>[**microsoftml**](../python/ref-py-microsoftml.md) adds machine learning algorithms to create custom models for text analysis, image analysis, and sentiment analysis.  |
+| Python tools | The built-in Python command-line tool is useful for ad hoc testing and tasks. Find the tool at \Program files\Microsoft SQL Server\140\PYTHON_SERVER\python.exe. |
+| Anaconda | Anaconda is an open-source distribution of Python and essential packages. |
+| Python samples and scripts | As with R, Python includes built-in data sets  and scripts. Find the revoscalepy data at \Program files\Microsoft SQL Server\140\PYTHON_SERVER\lib\site-packages\revoscalepy\data\sample-data. |
+| Pre-trained models in R and Python | Pre-trained models are created for specific use cases and maintained by the data science engineering team at Microsoft. You can use the pre-trained models as-is to score positive-negative sentiment in text, or detect features in images, using new data inputs that you provide. Pre-trained models are supported and usable on a standalone server, but you cannot install them through SQL Server Setup. For more information, see [Install pretrained machine learning models on SQL Server](../install/sql-pretrained-models-install.md). |
 
-## What's new in Microsoft Machine Learning Server
+## Using a standalone server
 
-If you install Machine Learning Services (Standalone) using SQL Server 2017 setup, you now have the option to add the Python language. Naturally, the R language is still a supported option, and you can even install both languages if desired.
- 
-In SQL Server 2017 CTP 2.0, the server installation also includes the mrsdeploy package and other utilities used for operationalizing models. For more information, see [Operationalization with mrsdeploy](../../advanced-analytics/operationalization-with-mrsdeploy.md).
+R and Python developers typically choose a standalone server to move beyond the memory and processing constraints of open-source R and Python. R and Python libraries executing on a standalone server can load and process large amounts of data on multiple cores and aggregate the results into a single consolidated output. High-performance functions are engineered for both scale and utility: delivering predictive analytics, statistical modeling, data visualizations, and leading-edge machine learning algorithms in a commercial server product engineered and supported by Microsoft.
 
-Enterprise users of SQL Server Machine Learning can use the downloadable installers for Microsoft R Server to upgrade their R components, in a process called binding. For more information, see [Use SqlBindR to Upgrade and Instance of SQL Server](use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md)
+As an independent server decoupled from SQL Server, the R and Python environment is configured, secured, and accessed using the underlying operating system and standard tools provided in the standalone server, not SQL Server. There is no built-in support for SQL Server relational data. If you want to use SQL Server data, you can create data source objects and connections as you would from any client.
 
-## Get Microsoft R Server or Machine Learning Server (Standalone)
+As an adjunct to SQL Server, a standalone server is also useful as a powerful development environment if you need both local and remote computing. The R and Python packages on a standalone server are the same as those provided with a database engine installation, allowing for code portability and [compute-context switching](https://docs.microsoft.com/machine-learning-server/r/concept-what-is-compute-context).
 
- There are multiple options for installing Microsoft R Server:
+## How to get started
 
-+ Use the SQL Server setup wizard
+Start with setup, attach the binaries to your favorite development tool, and write your first script.
 
-  [Create a Standalone R Server](../r/create-a-standalone-r-server.md)
+### Step 1: Install the software
 
-  Run SQL Server 2016 setup to install **Microsoft R Server (Standalone)**. The R language is added by default.
-  Or, run SQL Server 2017 setup to install **Machine Learning Server (Standalone)** and select either R or Python, or both.
+Install either one of these versions:
 
-  > [!IMPORTANT]
-  > The option to install the server is in the **Shared Features** section of setup. Do not install any other components.
-  >
-  > Preferably, do not install the server on a computer where SQL Server R Services or SQL Server Machine Learning Services has been installed.
++ [SQL Server 2017 Machine Learning Server (standalone)](../install/sql-machine-learning-standalone-windows-install.md)
++ [SQL Server 2016 R Server (Standalone) - R only](../install/sql-r-standalone-windows-install.md)
 
-+ Use command-line options for SQL Server setup
+### Step 2: Configure a development tool
 
-  [Install Microsoft R Server from the Command Line](../r/install-microsoft-r-server-from-the-command-line.md)
+On a standalone server, it's common to work locally using a development installed on the same computer.
 
-  SQL Server setup supports unattended installs via a rich set of command-line arguments.
++ [Set up R tools](set-up-a-data-science-client.md)
++ [Set up Python tools](../python/setup-python-client-tools-sql.md)
 
-+ Use the standalone installer
+### Step 3: Write your first script
 
-  [Run Microsoft R Server for Windows](https://msdn.microsoft.com/microsoft-r/rserver-install-windows).
-
-  You can now use a new Windows installer to set up a new instance of Microsoft R Server or Microsoft Machine Learning Server.  Microsoft R Server (and Microsoft Machine Learning Server) requires a SQL Server Enterprise agreement. However, after you run the standalone installer, the support policy for an existing installation is updated, to use the new Modern Lifecycle policy. This support option ensures that updates to machine learning components are applied more frequently than they would be when using the SQL Server service releases.
-
+Write R or Python script using functions from RevoScaleR, revoscalepy, and the machine learning algorithms.
   
-+ Upgrade a SQL Server instance
+  + [Explore R and RevoScaleR in 25 Functions](https://docs.microsoft.com/machine-learning-server/r/tutorial-r-to-revoscaler): Start with basic R commands and then progress to the RevoScaleR distributable analytical functions that provide high performance and scaling to R solutions. Includes parallelizable versions of many of the most popular R modeling packages, such as k-means clustering, decision trees, and decision forests, and tools for data manipulation.
 
-  [Using SqlBindR to Upgrade an Instance of R Services](./use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md).
-  
-  You can use the standalone installer to upgrade an instance of SQL Server 2016 R Services to use the latest version of R. When you run the installer, the Modern Lifecycle support policy will be applied to the server, and the R components will get more frequent updates.
-  
-  > [!NOTE}
-  > Currently this update method is available only for existing installations of SQL Server 2016. However, upgrades will be supported for SQL Server 2017 in future.
+  + [Quickstart: An example of binary classification with the microsoftml Python package](https://docs.microsoft.com/machine-learning-server/python/quickstart-binary-classification-with-microsoftml): Create a binary classification model using the functions from microsoftml and the well-known breast cancer dataset.
 
-## Related machine learning products
+Choose the best language for the task. R is best for statistical computations that are difficult to implement using SQL. For set-based operations over data, leverage the power of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to achieve maximum performance. Use the in-memory database engine for very fast computations over columns.
 
-+ Azure virtual machines with R Server
+### Step 4: Operationalize your solution
 
-  [Provision an R Server Virtual Machine](../../advanced-analytics/r-services/provision-the-r-server-only-sql-server-2016-enterprise-vm-on-azure.md)
-  
-  The Azure marketplace includes multiple virtual machine images that include R Server. Creating a new R Server virtual machine in Microsoft Azure is the fastest way to set up a server to use in developing and deploying predictive models. Images come with features for scaling and sharing already configured, which makes it easier to embed R analytics inside applications and to integrate R with backend systems.
+Standalone servers can use the [operationalization](https://docs.microsoft.com//machine-learning-server/what-is-operationalization) functionality of the non-SQL-branded [Microsoft Machine Learning Server](https://docs.microsoft.com/machine-learning-server/what-is-machine-learning-server). You can configure a standalone server for operationalization, which gives you these benefits: deploy and host your code as web services, run diagnostics, test web service capacity.
 
-+ Data Science Virtual Machine
+### Step 5: Maintain your server
 
-  [Data Science Virtual Machine - Windows 2016 Preview](http://aka.ms/dsvm/win2016)
+SQL Server releases cumulative updates on a regular basis. Applying the cumulative updates adds security and functional enhancements to an existing installation. 
 
-  The latest version of the Data Science Virtual machine includes R Server, SQL Server, plus an array of the most popular tools for machine learning, all preinstalled and tested. Create Jupyter notebooks, develop solutions in Julia, and use GPU-enabled deep learning libraries like MXNet, CNTK, and TensorFlow.
+Descriptions of new or changed functionality can be found in the [CAB Downloads](../install/sql-ml-cab-downloads.md) article and on the web pages for [SQL Server 2016 cumulative updates](https://support.microsoft.com/help/3177312/sql-server-2016-build-versions) and [SQL Server 2017 cumulative updates](https://support.microsoft.com/help/4047329). 
 
-## Resources
+For more information on how to apply updates to an existing instance, see [Apply updates](../install/sql-machine-learning-standalone-windows-install.md#apply-cu) in the installation instructions.
 
-For samples, tutorials, and more information about Microsoft R Server, see [Microsoft R Products](https://msdn.microsoft.com/microsoft-r/microsoft-r-getting-started).
+## See also
 
-## See Also
-
- [SQL Server R Services](../../advanced-analytics/r/sql-server-r-services.md)
+ [Install R Server (Standalone) or Machine Learning Server (Standalone)](../install/sql-machine-learning-standalone-windows-install.md)
 

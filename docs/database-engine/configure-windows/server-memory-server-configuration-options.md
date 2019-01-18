@@ -2,16 +2,11 @@
 title: "Server Memory Server Configuration Options | Microsoft Docs"
 ms.custom: ""
 ms.date: "11/27/2017"
-ms.prod: "sql-non-specified"
-ms.prod_service: "database-engine"
-ms.service: ""
-ms.component: "configure-windows"
+ms.prod: sql
+ms.prod_service: high-availability
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: configuration
+ms.topic: conceptual
 helpviewer_keywords: 
   - "Virtual Memory Manager"
   - "max server memory option"
@@ -24,11 +19,9 @@ helpviewer_keywords:
   - "manual memory options [SQL Server]"
   - "memory [SQL Server], servers"
 ms.assetid: 29ce373e-18f8-46ff-aea6-15bbb10fb9c2
-caps.latest.revision: 78
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-ms.workload: "Active"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ---
 # Server Memory Server Configuration Options
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -41,7 +34,7 @@ The minimum memory amount allowable for **max server memory** is 128 MB.
   
 > [!IMPORTANT]  
 > Setting **max server memory** value too high can cause a single instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] might have to compete for memory with other [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instances hosted on the same host. However, setting this value too low could cause significant memory pressure and performance problems. 
-> Setting **max server memory** to the minimum value can even prevent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] from starting. If you cannot start [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] after changing this option, start it using the ***–f*** startup option and reset **max server memory** to its previous value. For more information, see [Database Engine Service Startup Options](../../database-engine/configure-windows/database-engine-service-startup-options.md).  
+> Setting **max server memory** to the minimum value can even prevent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] from starting. If you cannot start [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] after changing this option, start it using the **_-f_** startup option and reset **max server memory** to its previous value. For more information, see [Database Engine Service Startup Options](../../database-engine/configure-windows/database-engine-service-startup-options.md).  
     
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] can use memory dynamically; however, you can set the memory options manually and restrict the amount of memory that [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] can access. Before you set the amount of memory for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], determine the appropriate memory setting by subtracting, from the total physical memory, the memory required for the OS, memory allocations not controlled by the max_server_memory setting, and any other instances of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (and other system uses, if the computer is not wholly dedicated to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]). This difference is the maximum amount of memory you can assign to the current [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance.  
  
@@ -58,7 +51,7 @@ The server options **min server memory** and **max server memory** can be set to
   
 <a name="max_server_memory"></a> Use **max_server_memory** to guarantee the OS does not experience detrimental memory pressure. To set max server memory configuration, monitor overall consumption of the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] process in order to determine memory requirements. To be more accurate with these calculations for a single instance:
  -  From the total OS memory, reserve 1GB-4GB to the OS itself.
- -  Then subtract the equivalent of potential [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] memory allocations outside the **max server memory** control, which is comprised of ***stack size <sup>1</sup> * calculated max worker threads <sup>2</sup> + -g startup parameter <sup>3</sup>*** (or 256MB by default if *-g* is not set). What remains should be the max_server_memory setting for a single instance setup.
+ -  Then subtract the equivalent of potential [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] memory allocations outside the **max server memory** control, which is comprised of **_stack size <sup>1</sup> \* calculated max worker threads <sup>2</sup> + -g startup parameter <sup>3</sup>_** (or 256MB by default if *-g* is not set). What remains should be the max_server_memory setting for a single instance setup.
  
 <sup>1</sup> Refer to the [Memory Management Architecture guide](../../relational-databases/memory-management-architecture-guide.md#stacksizes) for information on thread stack sizes per architecture.
 
@@ -124,7 +117,7 @@ To enable the lock pages in memory option:
  You can change these settings without restarting the instances, so you can easily experiment to find the best settings for your usage pattern.  
   
 ## Providing the maximum amount of memory to SQL Server  
-Memory can be configured up to the process virtual address space limit in all [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] editions. For more information, see [Memory Limits for Windows and Windows Server Releases](http://msdn.microsoft.com/library/windows/desktop/aa366778(v=vs.85).aspx#physical_memory_limits_windows_server_2016).
+Memory can be configured up to the process virtual address space limit in all [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] editions. For more information, see [Memory Limits for Windows and Windows Server Releases](/windows/desktop/Memory/memory-limits-for-windows-releases#physical_memory_limits_windows_server_2016).
   
 ## Examples  
   
@@ -170,5 +163,5 @@ FROM sys.dm_os_process_memory;
  [Editions and supported features of SQL Server 2016](../../sql-server/editions-and-components-of-sql-server-2016.md#Cross-BoxScaleLimits)   
  [Editions and supported features of SQL Server 2017](../../sql-server/editions-and-components-of-sql-server-2017.md#Cross-BoxScaleLimits)   
  [Editions and supported features of SQL Server 2017 on Linux](../../linux/sql-server-linux-editions-and-components-2017.md#Cross-BoxScaleLimits)   
- [Memory Limits for Windows and Windows Server Releases](http://msdn.microsoft.com/library/windows/desktop/aa366778(v=vs.85).aspx)
+ [Memory Limits for Windows and Windows Server Releases](/windows/desktop/Memory/memory-limits-for-windows-releases)
  

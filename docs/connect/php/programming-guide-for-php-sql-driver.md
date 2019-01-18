@@ -1,25 +1,18 @@
 ---
-title: "Programming Guide for PHP SQL Driver | Microsoft Docs"
+title: "Programming Guide for the Microsoft Drivers for PHP for SQL Server | Microsoft Docs"
 ms.custom: ""
-ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
-ms.prod_service: "drivers"
-ms.service: ""
-ms.component: "php"
+ms.date: "03/26/2018"
+ms.prod: sql
+ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "drivers"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: connectivity
+ms.topic: conceptual
 ms.assetid: a7acb507-670b-4a97-92df-90f0c0b3dd32
-caps.latest.revision: 26
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
-ms.workload: "Inactive"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
-# Programming Guide for PHP SQL Driver
+# Programming Guide for the Microsoft Drivers for PHP for SQL Server
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
 This section contains topics that help you develop applications with the [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)].  
@@ -36,12 +29,17 @@ This section contains topics that help you develop applications with the [!INCLU
 |[Converting Data Types](../../connect/php/converting-data-types.md)|Addresses how to specify data types and provide details on default data types.|  
 |[Handling Errors and Warnings](../../connect/php/handling-errors-and-warnings.md)|Addresses how to handle errors and warnings.|  
 |[Logging Activity](../../connect/php/logging-activity.md)|Provides information about logging errors and warnings.|  
-|[Security Considerations for PHP SQL Driver](../../connect/php/security-considerations-for-php-sql-driver.md)|Describes security considerations for developing, deploying, and running applications.|  
+|[Using Always Encrypted with the Microsoft Drivers for PHP for SQL Server](../../connect/php/using-always-encrypted-php-drivers.md)|Provides information about using Always Encrypted feature with the PHP drivers.|  
+|[Security Considerations for the Microsoft Drivers for PHP for SQL Server](../../connect/php/security-considerations-for-php-sql-driver.md)|Describes security considerations for developing, deploying, and running applications.|  
   
 ## See Also  
-[Overview of the PHP SQL Driver](../../connect/php/overview-of-the-php-sql-driver.md)
-[Getting Started with the PHP SQL Driver](../../connect/php/getting-started-with-the-php-sql-driver.md)
-[SQLSRV Driver API Reference](../../connect/php/sqlsrv-driver-api-reference.md)  
-[Constants &#40;Microsoft Drivers for PHP for SQL Server&#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md)  
+[Overview of the Microsoft Drivers for PHP for SQL Server](../../connect/php/overview-of-the-php-sql-driver.md)
+
+[Getting Started with the Microsoft Drivers for PHP for SQL Server](../../connect/php/getting-started-with-the-php-sql-driver.md)
+
+[SQLSRV Driver API Reference](../../connect/php/sqlsrv-driver-api-reference.md)
+
+[Constants &#40;Microsoft Drivers for PHP for SQL Server&#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md)
+
 [Example Application &#40;SQLSRV Driver&#41;](../../connect/php/example-application-sqlsrv-driver.md)  
   

@@ -2,24 +2,17 @@
 title: "Back Up Database (General Page) | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/01/2016"
-ms.prod: "sql-non-specified"
-ms.prod_service: "database-engine"
-ms.service: ""
-ms.component: "backup-restore"
+ms.prod: sql
+ms.prod_service: backup-restore
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "dbe-backup-restore"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: backup-restore
+ms.topic: conceptual
 f1_keywords: 
   - "sql13.swb.backupdatabase.general.f1"
 ms.assetid: 5c344dfd-1ad3-41cc-98cd-732973b4a162
-caps.latest.revision: 64
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-ms.workload: "On Demand"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ---
 # Back Up Database (General Page)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -37,7 +30,7 @@ ms.workload: "On Demand"
 -   [Create a Differential Database Backup &#40;SQL Server&#41;](../../relational-databases/backup-restore/create-a-differential-database-backup-sql-server.md)  
   
     > [!IMPORTANT]  
-    >  You can define a database maintenance plan to create database backups. For more information, see [Database Maintenance Plans](http://msdn.microsoft.com/library/ms187658.aspx) in [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] Books Online.  
+    >  You can define a database maintenance plan to create database backups. For more information, see [Database Maintenance Plans](../maintenance-plans/maintenance-plans.md) in [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] Books Online.  
   
  **To create a partial backup**  
   

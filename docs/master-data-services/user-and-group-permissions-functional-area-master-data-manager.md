@@ -2,25 +2,21 @@
 title: "User and Group Permissions Functional Area (Master Data Manager) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "mds"
-ms.service: ""
-ms.component: "non-specific"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "master-data-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: master-data-services
+ms.topic: conceptual
 ms.assetid: 320d417e-a370-48fc-a05b-444d85fd24c0
-caps.latest.revision: 7
-author: "smartysanthosh"
-ms.author: "nagavo"
-manager: "craigg"
-ms.workload: "Inactive"
+author: leolimsft
+ms.author: lle
+manager: craigg
 ---
 # User and Group Permissions Functional Area (Master Data Manager)
-  In the User and Group Permissions functional area, administrators can grant permission to functional areas, to attributes (on the Models tab), and to members (on the Hierarchy Members tab). Overlapping permissions are resolved to determine a user’s permission to each individual attribute value.  
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
+  In the User and Group Permissions functional area, administrators can grant permission to functional areas, to attributes (on the Models tab), and to members (on the Hierarchy Members tab). Overlapping permissions are resolved to determine a user's permission to each individual attribute value.  
   
  [Administrators &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md)  
   
@@ -46,7 +42,7 @@ ms.workload: "Inactive"
   
  [How Permissions Are Determined &#40;Master Data Services&#41;](../master-data-services/how-permissions-are-determined-master-data-services.md)  
   
- [Troubleshooting Master Data Manager Security](http://social.technet.microsoft.com/wiki/contents/articles/troubleshooting-master-data-manager-security-master-data-services.aspx)  
+ [Troubleshooting Master Data Manager Security](https://social.technet.microsoft.com/wiki/contents/articles/troubleshooting-master-data-manager-security-master-data-services.aspx)  
   
 ## See Also  
  [Master Data Manager Web Application](../master-data-services/master-data-manager-web-application.md)  

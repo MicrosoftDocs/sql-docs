@@ -1,25 +1,14 @@
 ---
 title: "Schedule Data Refresh and Data Sources - No Windows Authentication | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/07/2017"
-ms.prod: analysis-services
-ms.prod_service: "analysis-services"
-ms.service: ""
-ms.component: ""
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
-  
-ms.component: multidimensional-tabular
-ms.component: data-mining
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-ms.assetid: d8d875bc-7823-46b7-a939-867cefd4de12
-caps.latest.revision: 9
-author: "Minewiskan"
-ms.author: "owend"
-manager: "kfile"
-ms.workload: "Inactive"
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: ppvt-sharepoint
+ms.topic: conceptual
+ms.author: owend
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
 ---
 # Schedule Data Refresh and Data Sources - No Windows Authentication
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -37,7 +26,7 @@ ms.workload: "Inactive"
   
 -   **(2) OracleAuthentication:** A Secure Store Target Application ID that is set with Oracle credentials.  
   
--   **(3)** The [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] Service application is configure to use the target application “PowerPivotDataRefresh” for the **Unattended Data Refresh Account**.  
+-   **(3)** The [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] Service application is configure to use the target application "PowerPivotDataRefresh" for the **Unattended Data Refresh Account**.  
   
 -   **(4)** PowerePivot Workbook uses Oracle data. The workbook refresh settings specify the data source connection to use the target application **(2)** for credentials.  
   
@@ -119,13 +108,13 @@ ms.workload: "Inactive"
   
 11. Type the Oracle User ID and Oracle Password and then click **OK**.  
   
- For more information, see section “To Create a target application for SQL Server Authentication” in [Use Secure Store with SQL Server Authentication (SharePoint Server 2013)](http://technet.microsoft.com/library/gg298949.aspx) (http://technet.microsoft.com/library/gg298949.aspx).  
+ For more information, see section "To Create a target application for SQL Server Authentication" in [Use Secure Store with SQL Server Authentication (SharePoint Server 2013)](http://technet.microsoft.com/library/gg298949.aspx) (http://technet.microsoft.com/library/gg298949.aspx).  
   
 ## To Configure the Power Pivot Service Application  
   
 1.  In SharePoint central administration, click Manage Service Applications.  
   
-2.  Click the name of your [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] Service Application, for example “Default [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] Service Application”.  
+2.  Click the name of your [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] Service Application, for example "Default [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] Service Application".  
   
 3.  Click **Configure service application settings** in the Actions section.  
   
@@ -172,6 +161,6 @@ ms.workload: "Inactive"
   
 -   [Configure the Secure Store Service in SharePoint 2013](http://technet.microsoft.com/library/ee806866.aspx).  
   
--   See the "Scheduled Data Refresh” section of [Power Pivot Data Refresh with SharePoint 2013 and SQL Server 2012 SP1 (Analysis Services)](http://msdn.microsoft.com/library/jj879294.aspx#bkmk_windows_auth_interactive_data_refresh).  
+-   See the "Scheduled Data Refresh" section of [Power Pivot Data Refresh with SharePoint 2013 and SQL Server 2012 SP1 (Analysis Services)](http://msdn.microsoft.com/library/jj879294.aspx#bkmk_windows_auth_interactive_data_refresh).  
   
   

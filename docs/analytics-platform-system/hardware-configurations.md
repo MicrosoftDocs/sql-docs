@@ -1,24 +1,17 @@
 ---
-title: "Hardware Configurations (Analytics Platform System)"
-author: "barbkess" 
-ms.author: "barbkess"
-manager: "jhubbard"	  
-ms.prod: "analytics-platform-system"
-ms.prod_service: "mpp-data-warehouse"
-ms.service: ""
-ms.component:
-ms.suite: "sql"
-ms.custom: ""
-ms.technology: "mpp-data-warehouse"
-description: "The Analytics Platform System (APS) hardware is architected with scalable units so that you buy the right amount of processing and storage according to your business requirements."
-ms.date: "01/05/2017"
-ms.topic: "article"
-ms.assetid: f95945b7-97ae-4ab9-bae5-c792a516acea
-caps.latest.revision: 9
-
+title: Hardware configurations - Analytics Platform System | Microsoft Docs
+description: The Analytics Platform System (APS) appliance hardware is architected with scalable units so that you buy the right amount of processing and storage according to your business requirements. The appliance scales storage for Parallel Data Warehouse from a few terabytes to over 6 petabytes of data.  
+author: mzaman1 
+manager: craigg
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
 ---
 
-# Hardware configurations
+# Hardware configurations - Analytics Platform System
 The Analytics Platform System (APS) hardware is architected with scalable units so that you buy the right amount of processing and storage according to your business requirements. The appliance scales storage for SQL Server Parallel Data Wareouse (PDW) from a few Terabytes to over 6 Petabytes of data.  
   
 ## Contents  
@@ -44,14 +37,14 @@ The minimum configuration for an HPE appliance has 2 Compute nodes. You can add 
 ## <a name="section2"></a>Multi-rack configurations  
 To add capacity to PDW you can add Data Scale Units, along with additional Rack & Network components as necessary to provide the proper power, networking, and rack infrastructure. Each additional Rack & Network requires a passive host.  
   
-Each hardware vendor specifies the number of Data Scale units you can add given the capacity of your appliance. We recommend adding enough Data Scale units to see at least a 20 percent uplift in performance. For example, adding one Data Scale unit to an appliance that already has 20 Data Scale units might result in a negligible performance gain. The net gain wouldn’t be worth the cost and effort.  
+Each hardware vendor specifies the number of Data Scale units you can add given the capacity of your appliance. We recommend adding enough Data Scale units to see at least a 20 percent uplift in performance. For example, adding one Data Scale unit to an appliance that already has 20 Data Scale units might result in a negligible performance gain. The net gain wouldn't be worth the cost and effort.  
   
 ### Scale out example - HPE  
 This diagram shows a 3 rack HP appliance that contains 20 Compute nodes.  
   
 ![HPE appliance with 20 Compute nodes](media/scale-out-hpe.png "HPE appliance with 20 Compute nodes")  
   
-### Scale Out Example – DELL, Quanta  
+### Scale Out Example - DELL, Quanta  
 This diagram shows a 3 rack DELL or Quanta appliance that contains 21 Compute nodes.  
   
 ![Dell appliance with 21 Compute nodes](media/scale-out-dell.png "Dell appliance with 21 Compute nodes")  

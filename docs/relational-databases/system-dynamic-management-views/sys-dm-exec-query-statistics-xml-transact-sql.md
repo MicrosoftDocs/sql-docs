@@ -2,16 +2,10 @@
 title: "sys.dm_exec_query_statistics_xml (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "11/16/2016"
-ms.prod: "sql-non-specified"
-ms.prod_service: "database-engine"
-ms.service: ""
-ms.component: "dmv's"
+ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: system-objects
+ms.topic: conceptual
 f1_keywords: 
   - "sys.dm_exec_query_statistics_xml"
   - "sys.dm_exec_query_statistics_xml_TSQL"
@@ -20,11 +14,9 @@ f1_keywords:
 helpviewer_keywords: 
   - "sys.dm_exec_query_statistics_xml management view"
 ms.assetid: fdc7659e-df41-488e-b2b5-0d79734dfecb
-caps.latest.revision: 6
 author: "pmasl"
 ms.author: "pelopes"
-manager: "jhubbard"
-ms.workload: "Inactive"
+manager: craigg
 ---
 # sys.dm_exec_query_statistics_xml (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -57,7 +49,7 @@ sys.dm_exec_query_statistics_xml(session_id)
 |query_plan|**xml**|Showplan XML with partial statistics. Nullable.|
 
 ## Remarks
-This system function is available starting with [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1.
+This system function is available starting with [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1. See KB [3190871](https://support.microsoft.com/en-us/help/3190871)
 
 This system function works under both **standard** and **lightweight** query execution statistics profiling infrastructure.  
   
@@ -66,9 +58,9 @@ This system function works under both **standard** and **lightweight** query exe
   -  [SET STATISTICS PROFILE ON](../../t-sql/statements/set-statistics-profile-transact-sql.md)
   -  the `query_post_execution_showplan` extended event.  
   
-**Lightweight** statistics profiling infrastructure is available in [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2 and [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] and can be enabled:
+**Lightweight** statistics profiling infrastructure is available in [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 and can be enabled:
   -  Globally by using trace flag 7412.
-  -  Using the [*query_thread_profile*](http://support.microsoft.com/kb/3170113) extended event.
+  -  Using the [*query_thread_profile*](https://support.microsoft.com/kb/3170113) extended event.
   
 > [!NOTE]
 > Once enabled by trace flag 7412, lightweight profiling will be enabled to any consumer of the query execution statistics profiling infrastructure instead of standard profiling, such as the DMV [sys.dm_exec_query_profiles](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-profiles-transact-sql.md).

@@ -2,15 +2,9 @@
 title: "sys.dm_cryptographic_provider_algorithms (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/10/2016"
-ms.prod: "sql-non-specified"
-ms.prod_service: "database-engine"
-ms.service: ""
-ms.component: "dmv's"
+ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: system-objects
 ms.topic: "language-reference"
 f1_keywords: 
   - "dm_cryptographic_provider_algorithms_TSQL"
@@ -22,11 +16,9 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.dm_cryptographic_provider_algorithms dynamic management function"
 ms.assetid: 8bcccb37-5cfb-4e1e-a0bb-7ff4c279fe8e
-caps.latest.revision: 12
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-ms.workload: "Inactive"
+author: stevestein
+ms.author: sstein
+manager: craigg
 ---
 # sys.dm_cryptographic_provider_algorithms (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

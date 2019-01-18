@@ -1,25 +1,14 @@
 ---
 title: Managing SQL Server partners | Microsoft Docs
-description: Lists of third-party partners with solutions to monitor Server.
-services: sql-server
-documentationcenter: NA
-author: MikeRayMSFT
-manager: jhubbard
-editor: ''
-ms.assetid: 
-ms.service: ""
-ms.component: "sql-non-specified"
-ms.suite: "sql"
-ms.devlang: NA
-ms.topic: article
-ms.tgt_pltfrm: NA
-ms.workload: sql-server
+description: Lists of third-party partners with solutions to monitor SQL Server.
+ms.topic: conceptual
 ms.custom: ""
-ms.date: 17/09/2017    
-ms.prod: "sql-non-specified"
-ms.prod_service: "database-engine"
+ms.date: 09/17/2017    
+ms.prod: sql
+ms.technology:
 ms.author: mikeray
-
+author: MikeRayMSFT
+manager: craigg
 ---
 # SQL Server managing partners
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -51,7 +40,7 @@ To learn more about some of our other partners, see [High availability, and disa
 <!--Datasheet Links-->
 
 <!--Marketplace Links -->
-<!----Not available[idera_marketplace]:https://azure.microsoft.com/en-us/marketplace/-->
+<!----Not available[idera_marketplace]:https://azure.microsoft.com/marketplace/-->
 
 <!--Press links-->
 <!--[idera_press]:-->

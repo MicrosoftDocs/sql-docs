@@ -2,25 +2,19 @@
 title: "Query Parameters Dialog Box (Visual Database Tools) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "sql-tools"
-ms.service: ""
-ms.component: "ssms-visual-db"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "tools-ssms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: ssms
+ms.topic: conceptual
 f1_keywords: 
   - "vdtsql.chm:69645"
   - "vdt.dlgbox.definequeryparameters"
 ms.assetid: 31cdaee2-d7cd-4d64-a45f-924b27e8b1f0
-caps.latest.revision: 4
 author: "stevestein"
 ms.author: "sstein"
-manager: "jhubbard"
-ms.workload: "Inactive"
+manager: craigg
+
 ---
 # Query Parameters Dialog Box (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -34,7 +28,7 @@ Lists the parameters defined for the query being executed. If the query contains
 Enter the value for each parameter listed under **Name**. The value used most recently appears as the default parameter value.  
   
 ## Example  
-The following query in the SQL Pane, opens the Query Parameters dialog box when executed in the [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject_md.md)] database.  
+The following query in the SQL Pane, opens the Query Parameters dialog box when executed in the [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] database.  
   
 ```  
 SELECT   FirstName, LastName  

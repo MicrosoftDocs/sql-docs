@@ -1,17 +1,12 @@
 ---
-title: "Join a Secondary Replica to an Availability Group (SQL Server) | Microsoft Docs"
-ms.custom: ""
+title: "Join a secondary replica to an availability group"
+description: "Steps to join a secondary replica to an Always On availability group using either Transact-SQL (T-SQL), PowerShell, or SQL Server Management Studio."
+ms.custom: "seodec18"
 ms.date: "05/17/2016"
-ms.prod: "sql-non-specified"
-ms.prod_service: "database-engine"
-ms.service: ""
-ms.component: "availability-groups"
+ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: high-availability
+ms.topic: conceptual
 f1_keywords: 
   - "sql13.swb.availabilitygroup.joinreplica.f1"
 helpviewer_keywords: 
@@ -19,13 +14,11 @@ helpviewer_keywords:
   - "Availability Groups [SQL Server], joining"
   - "Availability Groups [SQL Server], configuring"
 ms.assetid: e5bd2489-097a-490e-8ea1-34fe48378ad1
-caps.latest.revision: 41
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-ms.workload: "On Demand"
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
 ---
-# Join a Secondary Replica to an Availability Group (SQL Server)
+# Join a secondary replica to an Always On availability group
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   This topic describes how to join a secondary replica to an Always On availability group by using [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)], or PowerShell in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. After a secondary replica is added to an Always On availability group, the secondary replica must be joined to the availability group. The join-replica operation must be performed on the instance of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] that is hosting the secondary replica.  
   

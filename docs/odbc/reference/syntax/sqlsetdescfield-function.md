@@ -2,16 +2,11 @@
 title: "SQLSetDescField Function | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
-ms.prod_service: "drivers"
-ms.service: ""
-ms.component: "odbc"
+ms.prod: sql
+ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "drivers"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: connectivity
+ms.topic: conceptual
 apiname: 
   - "SQLSetDescField"
 apilocation: 
@@ -22,11 +17,9 @@ f1_keywords:
 helpviewer_keywords: 
   - "SQLSetDescField function [ODBC]"
 ms.assetid: 8c544388-fe9d-4f94-a0ac-fa0b9c9c88a5
-caps.latest.revision: 28
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
-ms.workload: "Inactive"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # SQLSetDescField Function
 **Conformance**  
@@ -40,11 +33,11 @@ ms.workload: "Inactive"
 ```  
   
 SQLRETURN SQLSetDescField(  
-     SQLHDESC      DescriptorHandle,  
-     SQLSMALLINT   RecNumber,  
-     SQLSMALLINT   FieldIdentifier,  
-     SQLPOINTER    ValuePtr,  
-     SQLINTEGER    BufferLength);  
+     SQLHDESC      DescriptorHandle,  
+     SQLSMALLINT   RecNumber,  
+     SQLSMALLINT   FieldIdentifier,  
+     SQLPOINTER    ValuePtr,  
+     SQLINTEGER    BufferLength);  
 ```  
   
 ## Arguments  
@@ -217,7 +210,7 @@ SQL_DESC_TYPE_NAME|SQLCHAR *|ARD: Unused APD: Unused IRD: R IPD: R|ARD: Unused A
  **SQL_DESC_ARRAY_STATUS_PTR [All]**  
  For each descriptor type, this SQLUSMALLINT * header field points to an array of SQLUSMALLINT values. These arrays are named as follows: row status array (IRD), parameter status array (IPD), row operation array (ARD), and parameter operation array (APD).  
   
- In the IRD, this header field points to a row status array containing status values after a call to **SQLBulkOperations**, **SQLFetch**, **SQLFetchScroll**, or **SQLSetPos**. The array has as many elements as there are rows in the rowset. The application must allocate an array of SQLUSMALLINTs and set this field to point to the array. The field is set to a null pointer by default. The driver will populate the array — unless the SQL_DESC_ARRAY_STATUS_PTR field is set to a null pointer, in which case no status values are generated and the array is not populated.  
+ In the IRD, this header field points to a row status array containing status values after a call to **SQLBulkOperations**, **SQLFetch**, **SQLFetchScroll**, or **SQLSetPos**. The array has as many elements as there are rows in the rowset. The application must allocate an array of SQLUSMALLINTs and set this field to point to the array. The field is set to a null pointer by default. The driver will populate the array - unless the SQL_DESC_ARRAY_STATUS_PTR field is set to a null pointer, in which case no status values are generated and the array is not populated.  
   
 > [!CAUTION]  
 >  Driver behavior is undefined if the application sets the elements of the row status array pointed to by the SQL_DESC_ARRAY_STATUS_PTR field of the IRD.  
@@ -242,7 +235,7 @@ SQL_DESC_TYPE_NAME|SQLCHAR *|ARD: Unused APD: Unused IRD: R IPD: R|ARD: Unused A
   
  The SQL_DESC_ARRAY_STATUS_PTR field of the IRD is valid only after SQL_SUCCESS or SQL_SUCCESS_WITH_INFO has been returned. If the return code is not one of these, the location pointed to by SQL_DESC_ROWS_PROCESSED_PTR is undefined.  
   
- In the IPD, this header field points to a parameter status array containing status information for each set of parameter values after a call to **SQLExecute** or **SQLExecDirect**. If the call to **SQLExecute** or **SQLExecDirect** did not return SQL_SUCCESS or SQL_SUCCESS_WITH_INFO, the contents of the array pointed to by this field are undefined. The application must allocate an array of SQLUSMALLINTs and set this field to point to the array. The driver will populate the array — unless the SQL_DESC_ARRAY_STATUS_PTR field is set to a null pointer, in which case no status values are generated and the array is not populated. The elements in the array can contain the following values:  
+ In the IPD, this header field points to a parameter status array containing status information for each set of parameter values after a call to **SQLExecute** or **SQLExecDirect**. If the call to **SQLExecute** or **SQLExecDirect** did not return SQL_SUCCESS or SQL_SUCCESS_WITH_INFO, the contents of the array pointed to by this field are undefined. The application must allocate an array of SQLUSMALLINTs and set this field to point to the array. The driver will populate the array - unless the SQL_DESC_ARRAY_STATUS_PTR field is set to a null pointer, in which case no status values are generated and the array is not populated. The elements in the array can contain the following values:  
   
 -   SQL_PARAM_SUCCESS: The SQL statement was successfully executed for this set of parameters.  
   
@@ -514,7 +507,7 @@ QL_INTERVAL_SECOND/ SQL_C_INTERVAL_SECOND|SQL_CODE_SECOND|
  When an application calls **SQLSetDescField** to set fields of a descriptor rather than calling **SQLSetDescRec**, the application must first declare the data type. When it does, the other fields indicated in the previous table are implicitly set. If any of the values implicitly set are unacceptable, the application can then call **SQLSetDescField** or **SQLSetDescRec** to set the unacceptable value explicitly.  
   
  **SQL_DESC_TYPE_NAME [Implementation descriptors]**  
- This read-only SQLCHAR * record field contains the data source–dependent type name (for example, "CHAR", "VARCHAR", and so on). If the data type name is unknown, this variable contains an empty string.  
+ This read-only SQLCHAR * record field contains the data source-dependent type name (for example, "CHAR", "VARCHAR", and so on). If the data type name is unknown, this variable contains an empty string.  
   
  **SQL_DESC_UNNAMED [Implementation descriptors]**  
  This SQLSMALLINT record field in a row descriptor is set by the driver to either SQL_NAMED or SQL_UNNAMED when it sets the SQL_DESC_NAME field. If the SQL_DESC_NAME field contains a column alias or if the column alias does not apply, the driver sets the SQL_DESC_UNNAMED field to SQL_NAMED. If an application sets the SQL_DESC_NAME field of an IPD to a parameter name or alias, the driver sets the SQL_DESC_UNNAMED field of the IPD to SQL_NAMED. If there is no column name or a column alias, the driver sets the SQL_DESC_UNNAMED field to SQL_UNNAMED.  

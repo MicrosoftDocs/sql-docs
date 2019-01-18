@@ -2,24 +2,17 @@
 title: "Enable and configure FILESTREAM | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/23/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "database-engine"
-ms.service: ""
-ms.component: "blob"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "dbe-blob"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: filestream
+ms.topic: conceptual
 helpviewer_keywords: 
   - "FILESTREAM [SQL Server], enabling"
 ms.assetid: 78737e19-c65b-48d9-8fa9-aa6f1e1bce73
-caps.latest.revision: 25
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-ms.workload: "Active"
+author: "douglaslMS"
+ms.author: "douglasl"
+manager: craigg
 ---
 # Enable and configure FILESTREAM
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -83,7 +76,7 @@ ms.workload: "Active"
 |RAID level|Write performance|Read performance|Fault tolerance|Remarks|  
 |RAID 5|Normal|Normal|Excellent|Performance is better than one disk or JBOD; and less than RAID 0 or RAID 5 with striping.|  
 |RAID 0|Excellent|Excellent|None||  
-|RAID 5 + stripping|Excellent|Excellent|Excellent|Most expensive option.|  
+|RAID 5 + striping|Excellent|Excellent|Excellent|Most expensive option.|  
   
   
 ###  <a name="database"></a> Physical database design  

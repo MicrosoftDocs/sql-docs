@@ -1,29 +1,18 @@
 ---
-title: "Create a New Tabular Model Project (Analysis Services) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: analysis-services
-ms.prod_service: "analysis-services, azure-analysis-services"
-ms.service: ""
-ms.component: ""
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
-  
-ms.component: multidimensional-tabular
-ms.component: data-mining
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-ms.assetid: 001bed84-f50f-4961-bc25-9906728d99ec
-caps.latest.revision: 19
-author: "Minewiskan"
-ms.author: "owend"
-manager: "kfile"
-ms.workload: "Inactive"
+title: "Create a new tabular model project (Analysis Services) | Microsoft Docs"
+ms.date: 05/07/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: tabular-models
+ms.topic: conceptual
+ms.author: owend
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
 ---
-# Create a New Tabular Model Project (Analysis Services)
+# Create a new tabular model project
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
-  This topic describes how to create a new, blank tabular model project in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. After a new model project has been created, you can begin authoring your model project by importing data from data sources.  
+  This article describes how to create a new, blank tabular model project in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. After a new model project has been created, you can begin authoring your model project by importing data from data sources.  
   
 #### To create a new, blank tabular model project  
   
@@ -33,10 +22,10 @@ ms.workload: "Inactive"
   
 3.  In **Name**, type a name for the project, then specify a location and solution name, and then click **OK**.  
   
- After your new project is created, it is important to set project and model properties. For more information, see [Project Properties &#40;SSAS Tabular&#41;](../../analysis-services/tabular-models/project-properties-ssas-tabular.md) and [Model Properties &#40;SSAS Tabular&#41;](../../analysis-services/tabular-models/model-properties-ssas-tabular.md).  
+ After your new project is created, it is important to set project and model properties. For more information, see [Project properties](../../analysis-services/tabular-models/project-properties-ssas-tabular.md) and [Model properties](../../analysis-services/tabular-models/model-properties-ssas-tabular.md).  
   
 ## See Also  
- [Project Properties &#40;SSAS Tabular&#41;](../../analysis-services/tabular-models/project-properties-ssas-tabular.md)   
- [Model Properties &#40;SSAS Tabular&#41;](../../analysis-services/tabular-models/model-properties-ssas-tabular.md)  
+ [Project properties](../../analysis-services/tabular-models/project-properties-ssas-tabular.md)   
+ [Model properties](../../analysis-services/tabular-models/model-properties-ssas-tabular.md)  
   
   

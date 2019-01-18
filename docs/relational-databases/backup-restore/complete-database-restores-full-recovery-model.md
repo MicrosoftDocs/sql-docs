@@ -2,16 +2,11 @@
 title: "Complete Database Restores (Full Recovery Model) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-non-specified"
-ms.prod_service: "database-engine"
-ms.service: ""
-ms.component: "backup-restore"
+ms.prod: sql
+ms.prod_service: backup-restore
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "dbe-backup-restore"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: backup-restore
+ms.topic: conceptual
 helpviewer_keywords: 
   - "complete database restores"
   - "database restores [SQL Server], complete database"
@@ -20,11 +15,9 @@ helpviewer_keywords:
   - "full recovery model [SQL Server], performing restores"
   - "log backups [SQL Server["
 ms.assetid: 5b4c471c-b972-498e-aba9-92cf7a0ea881
-caps.latest.revision: 77
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-ms.workload: "On Demand"
+author: mashamsft
+ms.author: mathoma
+manager: craigg
 ---
 # Complete Database Restores (Full Recovery Model)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

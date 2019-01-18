@@ -1,31 +1,19 @@
 ---
-title: "Load data into memory using rxImport (SQL and R deep dive)| Microsoft Docs"
-ms.custom: ""
-ms.date: "12/14/2017"
-ms.reviewer: 
-ms.suite: sql
-ms.prod: machine-learning-services
-ms.prod_service: machine-learning-services
-ms.component: 
-ms.technology: 
-  
-ms.tgt_pltfrm: ""
-ms.topic: "tutorial"
-applies_to: 
-  - "SQL Server 2016"
-  - "SQL Server 2017"
-dev_langs: 
-  - "R"
-ms.assetid: 47a42e9a-05a0-4a50-871d-de73253cf070
-caps.latest.revision: 14
-author: "jeannt"
-ms.author: "jeannt"
-manager: "cgronlund"
-ms.workload: "Inactive"
----
-# Load data into memory using rxImport (SQL and R deep dive)
+title: Load data into memory using RevoScaleR rxImport - SQL Server Machine Learning
+description: Tutorial walkthrough on how to load data using the R language on SQL Server.
+ms.prod: sql
+ms.technology: machine-learning
 
-This article is part of the Data Science Deep Dive tutorial, on how to use [RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) with SQL Server.
+ms.date: 11/27/2018  
+ms.topic: tutorial
+author: HeidiSteen
+ms.author: heidist
+manager: cgronlun
+---
+# Load data into memory using rxImport (SQL Server and RevoScaleR tutorial)
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
+This lesson is part of the [RevoScaleR tutorial](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md) on how to use [RevoScaleR functions](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) with SQL Server.
 
 The [rxImport](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rximport) function can be used to move data from a data source into a data frame in session memory, or into an XDF file on disk. If you don't specify a file as destination, data is put into memory as a data frame.
 
@@ -68,19 +56,15 @@ You've decided that you want to examine only the high risk individuals in more d
 
 **Results**
 
-*ccFraudLogitScore   state gender cardholder balance numTrans numIntlTrans creditLine ccFraudProb1*
-
-*9.786345    SD   Male  Principal   23456       25            5 75   0.99994382*
-
-*9.433040    FL Female  Principal   20629       24           28 75   0.99992003*
-
-*8.556785    NY Female  Principal   19064       82           53 43   0.99980784*
-
-*8.188668    AZ Female  Principal   19948       29            0 75   0.99972235*
-
-*7.551699    NY Female  Principal   11051       95            0 75   0.99947516*
-
-*7.335080    NV   Male  Principal   21566        4            6  75   0.9993482*
+```R
+ccFraudLogitScore   state gender cardholder balance numTrans numIntlTrans creditLine ccFraudProb1
+9.786345    SD   Male  Principal   23456       25            5 75   0.99994382
+9.433040    FL Female  Principal   20629       24           28 75   0.99992003
+8.556785    NY Female  Principal   19064       82           53 43   0.99980784
+8.188668    AZ Female  Principal   19948       29            0 75   0.99972235
+7.551699    NY Female  Principal   11051       95            0 75   0.99947516
+7.335080    NV   Male  Principal   21566        4            6  75   0.9993482
+```
 
 ## More about rxImport
 
@@ -90,11 +74,7 @@ The **rxImport** function assigns variable names to the columns during the impor
 
 By specifying additional operations in the *transforms* parameter, you can do elementary processing on each chunk of data that is read.
 
-## Next step
+## Next steps
 
-[Create new SQL Server table using rxDataStep](../../advanced-analytics/tutorials/deepdive-create-new-sql-server-table-using-rxdatastep.md)
-
-## Previous step
-
-[Transform data using R](../../advanced-analytics/tutorials/deepdive-transform-data-using-r.md)
-
+> [!div class="nextstepaction"]
+> [Create new SQL Server table using rxDataStep](../../advanced-analytics/tutorials/deepdive-move-data-between-sql-server-and-xdf-file.md)

@@ -1,24 +1,15 @@
 ---
 title: "Set Synchronization Scope (Report Builder and SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/07/2017"
+ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
-ms.service: ""
-ms.component: "report-design"
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
+ms.technology: report-design
 
 
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 ms.assetid: 6f4a11e6-6151-47be-a43f-e3dbf6c0e737
-caps.latest.revision: 8
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "kfile"
-ms.workload: "Inactive"
+author: maggiesMSFT
+ms.author: maggies
 ---
 # Set Synchronization Scope (Report Builder and SSRS)
   In a [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] paginated report, indicators convey data values by synchronizing across the range of indicator values within a specified scope.   

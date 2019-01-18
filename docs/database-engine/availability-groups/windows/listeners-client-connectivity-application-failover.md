@@ -1,17 +1,12 @@
 ---
-title: "Listeners, Client Connectivity, Application Failover | Microsoft Docs"
-ms.custom: ""
+title: "Connect to an availability group listener"
+description: "Contains information about connecting to an Always On availability group listener, before and after failover."
+ms.custom: "seodec18"
 ms.date: "05/17/2016"
-ms.prod: "sql-non-specified"
-ms.prod_service: "database-engine"
-ms.service: ""
-ms.component: "availability-groups"
+ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: high-availability
+ms.topic: conceptual
 helpviewer_keywords: 
   - "Availability Groups [SQL Server], listeners"
   - "read-only routing"
@@ -20,13 +15,11 @@ helpviewer_keywords:
   - "Availability Groups [SQL Server], read-only routing"
   - "Availability Groups [SQL Server], client connectivity"
 ms.assetid: 76fb3eca-6b08-4610-8d79-64019dd56c44
-caps.latest.revision: 48
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-ms.workload: "Active"
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
 ---
-# Listeners, Client Connectivity, Application Failover
+# Connect to an Always On availability group listener 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   This topic contains information about considerations for [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] client connectivity and application-failover functionality.  
   
@@ -78,7 +71,7 @@ ms.workload: "Active"
  An availability group listener is defined by the following:  
   
  A unique DNS name  
- This is also known as a Virtual Network Name (VNN). Active Directory naming rules for DNS host names apply. For more information, see the [Naming conventions in Active Directory for computers, domains, sites, and OUs](http://support.microsoft.com/kb/909264) KB article.  
+ This is also known as a Virtual Network Name (VNN). Active Directory naming rules for DNS host names apply. For more information, see the [Naming conventions in Active Directory for computers, domains, sites, and OUs](https://support.microsoft.com/kb/909264) KB article.  
   
  One or more Virtual IP addresses (VIPs)  
  VIPs are configured for one or more subnets to which the availability group can failover.  
@@ -118,7 +111,9 @@ Server=tcp: AGListener,1433;Database=MyDB;IntegratedSecurity=SSPI
  *Read-only routing* refers to the ability of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] to route incoming connections to an availability group listener to a secondary replica that is configured to allow read-only workloads. An incoming connection referencing an availability group listener name can automatically be routed to a read-only replica if the following are true:  
   
 -   At least one secondary replica is set to read-only access, and each read-only secondary replica and the primary replica are configured to support read-only routing. For more information, see [To Configure Availability Replicas for Read-Only Routing](#ConfigureARsForROR), later in this section.  
-  
+
+-   The connection string references a database involved in the Availability Group. An alternative to this would be the login used in the connection has the database configured as its default database. For more information, see [this article on how the algorithm works with read-only routing](https://blogs.msdn.microsoft.com/mattn/2012/04/25/calculating-read_only_routing_url-for-alwayson/).
+
 -   The connection string references an availability group listener, and the application intent of the incoming connection is set to read-only (for example, by using the **Application Intent=ReadOnly** keyword in the ODBC or OLEDB connection strings or connection attributes or properties). For more information, see [Read-Only Application Intent and Read-Only Routing](#ReadOnlyAppIntent), later in this section.  
   
 ###  <a name="ConfigureARsForROR"></a> To Configure Availability Replicas for Read-Only Routing  
@@ -139,9 +134,9 @@ Server=tcp: AGListener,1433;Database=MyDB;IntegratedSecurity=SSPI
 -   [Configure Read-Only Routing for an Availability Group &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/configure-read-only-routing-for-an-availability-group-sql-server.md)  
   
 ###  <a name="ReadOnlyAppIntent"></a> Read-Only Application Intent and Read-Only Routing  
- The application intent connection string property expresses the client application’s request to be directed either to a read-write or read-only version of an availability group database. To use read-only routing, a client must use an application intent of read-only in the connection string when connecting to the availability group listener. Without the read-only application intent, connections to the availability group listener are directed to the database on the primary replica.  
+ The application intent connection string property expresses the client application's request to be directed either to a read-write or read-only version of an availability group database. To use read-only routing, a client must use an application intent of read-only in the connection string when connecting to the availability group listener. Without the read-only application intent, connections to the availability group listener are directed to the database on the primary replica.  
   
- The application intent attribute is stored in the client’s session during login and the instance of SQL Server will then process this intent and determine what to do according to the configuration of the availability group and the current read-write state of the target database in the secondary replica.  
+ The application intent attribute is stored in the client's session during login and the instance of SQL Server will then process this intent and determine what to do according to the configuration of the availability group and the current read-write state of the target database in the secondary replica.  
   
  An example of a connection string for the ADO.NET provider (System.Data.SqlClient) that designates read-only application intent is as follows:  
   
@@ -149,7 +144,7 @@ Server=tcp: AGListener,1433;Database=MyDB;IntegratedSecurity=SSPI
 Server=tcp:AGListener,1433;Database=AdventureWorks;IntegratedSecurity=SSPI;ApplicationIntent=ReadOnly  
 ```  
   
- In this connection string example, the client is attempting to connect to an availability group listener named `AGListener` on port 1433 (you may also omit the port if the availability group listener is listening on 1433).  The connection string has the **ApplicationIntent** property set to **ReadOnly**, making this a *read-intent connection string*.  Without this setting, the server would not have attempted a read-only routing of the connection.  
+ In this connection string example, the client is attempting to connect to the AdventureWorks database via an availability group listener named `AGListener` on port 1433 (you may also omit the port if the availability group listener is listening on 1433).  The connection string has the **ApplicationIntent** property set to **ReadOnly**, making this a *read-intent connection string*.  Without this setting, the server would not have attempted a read-only routing of the connection.  
   
  The primary database of the availability group processes the incoming read-only routing request and attempts to locate an online, read-only replica that is joined to the primary replica and is configured for read-only routing.  The client receives back connection information from the primary replica server and connects to the identified read-only replica.  
   
@@ -180,10 +175,10 @@ Server=tcp:AGListener,1433;Database=AdventureWorks;IntegratedSecurity=SSPI;Appli
 ##  <a name="CCBehaviorOnFailover"></a> Behavior of Client Connections on Failover  
  When an availability group failover occurs, existing persistent connections to the availability group are terminated and the client must establish a new connection in order to continue working with the same primary database or read-only secondary database.  While a failover is occurring on the server side, connectivity to the availability group may fail, forcing the client application to retry connecting until the primary is brought fully back online.  
   
- If the availability group comes back online during a client application’s connection attempt but before the connect timeout period, the client driver may successfully connect during one of its internal retry attempts and no error will be surfaced to the application in this case.  
+ If the availability group comes back online during a client application's connection attempt but before the connect timeout period, the client driver may successfully connect during one of its internal retry attempts and no error will be surfaced to the application in this case.  
   
 ##  <a name="SupportAgMultiSubnetFailover"></a> Supporting Availability Group Multi-Subnet Failovers  
- If you are using client libraries that support the MultiSubnetFailover connection option in the connection string, you can optimize availability group failover to a different subnet by setting MultiSubnetFailover to “True” or "Yes", depending on the syntax of the provider you are using.  
+ If you are using client libraries that support the MultiSubnetFailover connection option in the connection string, you can optimize availability group failover to a different subnet by setting MultiSubnetFailover to "True" or "Yes", depending on the syntax of the provider you are using.  
   
 > [!NOTE]  
 >  We recommend this setting for both single and multi-subnet connections to availability groups listeners and to SQL Server Failover Cluster Instance names.  Enabling this option adds additional optimizations, even for single-subnet scenarios.  
@@ -237,7 +232,7 @@ setspn -A MSSQLSvc/AG1listener.Adventure-Works.com:1433 corp/svclogin2
   
 ##  <a name="RelatedContent"></a> Related Content  
   
--   [Microsoft SQL Server Always On Solutions Guide for High Availability and Disaster Recovery](http://go.microsoft.com/fwlink/?LinkId=227600)  
+-   [Microsoft SQL Server Always On Solutions Guide for High Availability and Disaster Recovery](https://go.microsoft.com/fwlink/?LinkId=227600)  
   
 -   [Introduction to the Availability Group Listener](https://blogs.msdn.microsoft.com/sqlalwayson/2012/01/16/introduction-to-the-availability-group-listener/) (a SQL Server Always On team blog)  
   

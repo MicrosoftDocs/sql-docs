@@ -1,17 +1,12 @@
 ---
 title: "Parameters Collection (ADO) | Microsoft Docs"
-ms.prod: "sql-non-specified"
-ms.prod_service: "drivers"
-ms.service: ""
-ms.component: "ado"
-ms.technology:
-  - "drivers"
+ms.prod: sql
+ms.prod_service: connectivity
+ms.technology: connectivity
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 apitype: "COM"
 f1_keywords: 
   - "Command15::get_Parameters"
@@ -20,11 +15,9 @@ f1_keywords:
 helpviewer_keywords: 
   - "Parameters collection [ADO]"
 ms.assetid: 497cae10-3913-422a-9753-dcbb0a639b1b
-caps.latest.revision: 20
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
-ms.workload: "On Demand"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # Parameters Collection (ADO)
 Contains all the [Parameter](../../../ado/reference/ado-api/parameter-object.md) objects of a [Command](../../../ado/reference/ado-api/command-object-ado.md) object.  
@@ -46,7 +39,7 @@ Contains all the [Parameter](../../../ado/reference/ado-api/parameter-object.md)
   
 2.  When calling a stored procedure with parameters and explicitly appending a parameter to the **Parameters** collection with **Append**, the return value/output parameter should be appended to the **Parameters** collection. The return value must first be appended to the **Parameters** collection. Use **Append** to add the other parameters into the **Parameters** collection in the order of definition. For example, the stored procedure SPWithParam has two parameters. The first parameter, *InParam*, is an input parameter defined as adVarChar (20), and the second parameter, *OutParam*, is an output parameter defined as adVarChar (20). You can retrieve the return value/output parameter with the following code.  
   
-    ```  
+    ```vb
     ' Open Connection Conn  
     set ccmd = CreateObject("ADODB.Command")  
     ccmd.Activeconnection= Conn  
@@ -56,7 +49,7 @@ Contains all the [Parameter](../../../ado/reference/ado-api/parameter-object.md)
   
     ccmd.parameters.Append ccmd.CreateParameter(, adInteger, adParamReturnValue, , NULL)   ' return value  
     ccmd.parameters.Append ccmd.CreateParameter("InParam", adVarChar, adParamInput, 20, "hello world")   ' input parameter  
-    ccmd.parameters.Append ccmd.CreateParameter("OutParam", adVarChar, adParamOuput, 20, NULL)   ' output parameter  
+    ccmd.parameters.Append ccmd.CreateParameter("OutParam", adVarChar, adParamOutput, 20, NULL)   ' output parameter  
   
     ccmd.execute()  
   
@@ -67,7 +60,7 @@ Contains all the [Parameter](../../../ado/reference/ado-api/parameter-object.md)
   
 3.  When calling a stored procedure with parameters and configuring the parameters by calling the **Item** method on the **Parameters** collection, the return value/output parameter of the stored procedure can be retrieved from the **Parameters** collection. For example, the stored procedure SPWithParam has two parameters. The first parameter, *InParam*, is an input parameter defined as adVarChar (20), and the second parameter, *OutParam*, is an output parameter defined as adVarChar (20). You can retrieve the return value/output parameter with the following code.  
   
-    ```  
+    ```vb
     ' Open Connection Conn  
     set ccmd = CreateObject("ADODB.Command")  
     ccmd.Activeconnection= Conn  

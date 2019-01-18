@@ -2,15 +2,10 @@
 title: "dbo.sysdac_instances (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/04/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "database-engine"
-ms.service: ""
-ms.component: "system-catalog-views"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: system-objects
 ms.topic: "language-reference"
 f1_keywords: 
   - "dbo.sysdac_instances_TSQL"
@@ -23,11 +18,9 @@ helpviewer_keywords:
   - "dbo.sysdac_instances"
   - "sysdac_instances"
 ms.assetid: 28285f3d-3889-439f-8b24-3bdef08e46b4
-caps.latest.revision: 9
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-ms.workload: "Inactive"
+author: "stevestein"
+ms.author: "sstein"
+manager: craigg
 ---
 # Data-tier Application Views - dbo.sysdac_instances
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -54,6 +47,6 @@ ms.workload: "Inactive"
   
 ## See Also  
  [Data-tier Applications](../../relational-databases/data-tier-applications/data-tier-applications.md)   
- [Data-tier Application Views &#40;Transact-SQL&#41;](http://msdn.microsoft.com/library/0de01328-d7a6-4677-b7a0-dcd3098c23d4)  
+ [Data-tier Application Views &#40;Transact-SQL&#41;](https://msdn.microsoft.com/library/0de01328-d7a6-4677-b7a0-dcd3098c23d4)  
   
   

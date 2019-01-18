@@ -2,16 +2,11 @@
 title: "Database Instant File Initialization | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/09/2018"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "database-engine"
-ms.service: ""
-ms.component: "databases"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: configuration
+ms.topic: conceptual
 helpviewer_keywords: 
   - "initializing files [SQL Server]"
   - "instant file initialization [SQL Server]"
@@ -20,11 +15,9 @@ helpviewer_keywords:
   - "IFI [SQL Server]"
   - "database instant file initialization [SQL Server]"
 ms.assetid: 1ad468f5-4f75-480b-aac6-0b01b048bd67
-caps.latest.revision: 33
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-ms.workload: "Active"
+author: "stevestein"
+ms.author: "sstein"
+manager: craigg
 ---
 # Database File Initialization
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -40,9 +33,9 @@ File initialization causes these operations to take longer. However, when data i
 ## Instant File Initialization (IFI)  
 In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], data files can be initialized instantaneously to avoid zeroing operations. Instant file initialization allows for fast execution of the previously mentioned file operations. Instant file initialization reclaims used disk space without filling that space with zeros. Instead, disk content is overwritten as new data is written to the files. Log files cannot be initialized instantaneously.  
   
-> [!NOTE]  
+> [!NOTE]
 > Instant file initialization is available only on [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[winxppro](../../includes/winxppro-md.md)] or [!INCLUDE[winxpsvr](../../includes/winxpsvr-md.md)] or later versions.  
-
+> 
 > [!IMPORTANT]
 > Instant file initialization is available only for data files. Log files will always be zeroed when being created, or growing in size.
   
@@ -88,6 +81,10 @@ Database Instant File Initialization: disabled. For security and performance con
 When using Instant File Initialization (IFI), because the deleted disk content is overwritten only as new data is written to the files, the deleted content might be accessed by an unauthorized principal, until some other data writes on that specific area of the data file. 
 While the database file is attached to the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], this information disclosure risk is reduced by the discretionary access control list (DACL) on the file. This DACL allows file access only to the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] service account and the local administrator. 
 However, when the file is detached, it may be accessed by a user or service that does not have *SE_MANAGE_VOLUME_NAME*. A similar consideration exists when the database is backed up: if the backup file is not protected with an appropriate DACL, the deleted content can become available to an unauthorized user or service.  
+
+Another consideration is that when a file is grown using IFI, a SQL Server administrator could potentially access the raw page contents and see the previously deleted content.
+
+If the database files are hosted on a storage area network, it is also possible that the storage area network always presents new pages as pre-initialized, and having the operating system re-initialize the pages might be unnecessary overhead.
  
 > [!NOTE]
 > If [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is installed in a secure physical environment, the performance benefits of enabling instant file initialization can outweigh the security risk and hence the reason for this recommendation.

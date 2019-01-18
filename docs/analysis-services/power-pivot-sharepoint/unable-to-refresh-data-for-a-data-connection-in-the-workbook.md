@@ -1,23 +1,14 @@
 ---
 title: "Unable to refresh data for a data connection in the workbook | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: analysis-services
-ms.prod_service: "analysis-services"
-ms.service: ""
-ms.component: ""
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
-  
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-ms.assetid: 0f6fd52d-ac72-43e3-aa08-05a2d2bb873d
-caps.latest.revision: 18
-author: "Minewiskan"
-ms.author: "owend"
-manager: "kfile"
-ms.workload: "On Demand"
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: ppvt-sharepoint
+ms.topic: conceptual
+ms.author: owend
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
 ---
 # Unable to refresh data for a data connection in the workbook
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -37,23 +28,23 @@ ms.workload: "On Demand"
   
  **Scenario 1: Service is not started**  
   
- The SQL Server Analysis Services ([!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]) instance is not started. An expired password will cause the service to stop running. For more information about changing the password, see [Configure Power Pivot Service Accounts](../../analysis-services/power-pivot-sharepoint/configure-power-pivot-service-accounts.md) and [Start or Stop a Power Pivot for SharePoint Server](../../analysis-services/power-pivot-sharepoint/start-or-stop-a-power-pivot-for-sharepoint-server.md).  
+ The SQL Server Analysis Services ( [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]) instance is not started. An expired password will cause the service to stop running. For more information about changing the password, see [Configure Power Pivot Service Accounts](../../analysis-services/power-pivot-sharepoint/configure-power-pivot-service-accounts.md) and [Start or Stop a Power Pivot for SharePoint Server](../../analysis-services/power-pivot-sharepoint/start-or-stop-a-power-pivot-for-sharepoint-server.md).  
   
  **Scenario 2a: Opening an earlier version workbook n the server**  
   
  The workbook you are attempting to open might have been created in the SQL Server 2008 R2 version of [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for Excel. Most likely, the Analysis Services data provider that is specified in the data connection string is not present on the computer that is handling the request.  
   
- If this is the case, you will find this message in the ULS log: “Refresh failed for ‘[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]t Data’ in the workbook ‘\<URL to workbook>’”, followed by “Unable to get a connection”.  
+ If this is the case, you will find this message in the ULS log: "Refresh failed for ' [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]t Data' in the workbook '\<URL to workbook>'", followed by "Unable to get a connection".  
   
  To determine the version of the workbook, open it in Excel and check which data provider is specified in the connection string. A SQL Server 2008 R2 workbook uses MSOLAP.4 as its data provider.  
   
- To work around this issue, you can upgrade the workbook. Alternatively, you can install client libraries from the SQL Server 2008 R2 version of Analysis Services on the physical computers running [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint or Excel Services, [Install the Analysis Services OLE DB Provider on SharePoint Servers](http://msdn.microsoft.com/en-us/2c62daf9-1f2d-4508-a497-af62360ee859).  
+ To work around this issue, you can upgrade the workbook. Alternatively, you can install client libraries from the SQL Server 2008 R2 version of Analysis Services on the physical computers running [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint or Excel Services, [Install the Analysis Services OLE DB Provider on SharePoint Servers](http://msdn.microsoft.com/2c62daf9-1f2d-4508-a497-af62360ee859).  
   
  **Scenario 2b: Excel Services is running on an application server that has the wrong version of the client libraries**  
   
  By default, SharePoint Server 2010 installs the SQL Server 2008 version of the Analysis Services OLE DB provider on application servers that run Excel Services. In a farm that supports [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] data access, all physical servers running applications that request [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] data, such as Excel Services and [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint, must use a later version of the data provider.  
   
- Servers that run [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint get the updated OLE DB data provider automatically. Other servers, such as those running a standalone instance Excel Services without [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint on the same computer, must be patched to use the newer client libraries. For more information, see [Install the Analysis Services OLE DB Provider on SharePoint Servers](http://msdn.microsoft.com/en-us/2c62daf9-1f2d-4508-a497-af62360ee859).  
+ Servers that run [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint get the updated OLE DB data provider automatically. Other servers, such as those running a standalone instance Excel Services without [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint on the same computer, must be patched to use the newer client libraries. For more information, see [Install the Analysis Services OLE DB Provider on SharePoint Servers](http://msdn.microsoft.com/2c62daf9-1f2d-4508-a497-af62360ee859).  
   
  **Scenario 3: Domain controller is unavailable**  
   

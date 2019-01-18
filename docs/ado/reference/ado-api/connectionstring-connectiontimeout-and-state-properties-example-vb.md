@@ -1,17 +1,12 @@
 ---
 title: "Connection Properties Example (VB) | Microsoft Docs"
-ms.prod: "sql-non-specified"
-ms.prod_service: "drivers"
-ms.service: ""
-ms.component: "ado"
-ms.technology:
-  - "drivers"
+ms.prod: sql
+ms.prod_service: connectivity
+ms.technology: connectivity
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 dev_langs: 
   - "VB"
 helpviewer_keywords: 
@@ -19,11 +14,9 @@ helpviewer_keywords:
   - "ConnectionTimeout property [ADO], Visual Basic example"
   - "State property [ADO], Visual Basic example"
 ms.assetid: 4de7336a-b5ea-43f1-b750-5fa302b5b756
-caps.latest.revision: 11
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
-ms.workload: "On Demand"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # ConnectionString, ConnectionTimeout, and State Properties Example (VB)
 This example demonstrates different ways of using the [ConnectionString](../../../ado/reference/ado-api/connectionstring-property-ado.md) property to open a [Connection](../../../ado/reference/ado-api/connection-object-ado.md) object. It also uses the [ConnectionTimeout](../../../ado/reference/ado-api/connectiontimeout-property-ado.md) property to set a connection timeout period, and the [State](../../../ado/reference/ado-api/state-property-ado.md) property to check the state of the connections. The GetState function is required for this procedure to run.  

@@ -2,27 +2,21 @@
 title: "Import Native and Character Format Data from Earlier Versions of SQL Server | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
-ms.service: ""
-ms.component: "import-export"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "dbe-bulk-import-export"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: data-movement
+ms.topic: conceptual
 helpviewer_keywords: 
   - "earlier versions [SQL Server], import and export data formats"
   - "-V switch"
   - "data formats [SQL Server], earlier versions"
   - "previous versions [SQL Server], import and export data formats"
 ms.assetid: e644696f-9017-428e-a5b3-d445d1c630b3
-caps.latest.revision: 40
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-ms.workload: "Inactive"
+author: "douglaslMS"
+ms.author: "douglasl"
+manager: craigg
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Import Native and Character Format Data from Earlier Versions of SQL Server
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -54,8 +48,8 @@ ms.workload: "Inactive"
   
  **UDT indicates a user defined type.  
   
-## Exporting using –V 80  
- When you bulk export data by using the **–V80** switch, **nvarchar(max)**, **varchar(max)**, **varbinary(max)**, XML, and UDT data in native mode are stored with a 4-byte prefix, like **text**, **image**, and **ntext** data, rather than with an 8-byte prefix, which is the default for [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] and later versions.  
+## Exporting using -V 80  
+ When you bulk export data by using the **-V80** switch, **nvarchar(max)**, **varchar(max)**, **varbinary(max)**, XML, and UDT data in native mode are stored with a 4-byte prefix, like **text**, **image**, and **ntext** data, rather than with an 8-byte prefix, which is the default for [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] and later versions.  
   
 ## Copying Date Values  
  **bcp** uses the ODBC bulk copy API. Therefore, to import date values into [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], **bcp** uses the ODBC date format (*yyyy-mm-dd hh:mm:ss*[*.f...*]).  

@@ -1,25 +1,20 @@
 ---
 title: "Columnstore indexes - Query performance | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/01/2017"
-ms.prod: "sql-non-specified"
+ms.date: 01/11/2019
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
-ms.service: ""
-ms.component: "indexes"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: table-view-index
+ms.topic: conceptual
 ms.assetid: 83acbcc4-c51e-439e-ac48-6d4048eba189
-caps.latest.revision: 23
-author: "barbkess"
-ms.author: "barbkess"
-manager: "jhubbard"
-ms.workload: "On Demand"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Columnstore indexes - Query performance
+
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
   Recommendations for achieving the very fast query performance that columnstore indexes are designed to provide.    
@@ -110,7 +105,7 @@ ms.workload: "On Demand"
 |top sort||no|no|yes||    
 |window aggregates||NA|NA|yes|New operator in [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)].|    
     
- ¹Applies to [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], [!INCLUDE[ssSDS](../../includes/sssds-md.md)] V12 Premium Edition, and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]    
+ ¹Applies to [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], [!INCLUDE[ssSDS](../../includes/sssds-md.md)] Premium tiers, Standard tiers - S3 and above, and all vCore tiers, and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]    
     
 ### Aggregate Pushdown    
  A normal execution path for aggregate computation to fetch the qualifying rows from the SCAN node and aggregate the values in Batch Mode. While this delivers good performance, but with [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], the aggregate operation can be pushed to the SCAN node to improve the performance of aggregate computation by orders of magnitude on top of Batch Mode execution provided the following conditions are met: 
@@ -141,7 +136,7 @@ FROM FactResellerSalesXL_CCI
 ```    
     
 ### String predicate pushdown    
-When designing a data warehouse schema, the recommended schema modeling is to use star-schema or snowflake schema consisting of one or more fact tables and many dimension tables. The [fact table](https://en.wikipedia.org/wiki/Fact_table) stores the business measurements or transactions and [dimension table](https://en.wikipedia.org/wiki/Dimension_table) store the dimensions across which facts need to be analyzed.    
+When designing a data warehouse schema, the recommended schema modeling is to use star-schema or snowflake schema consisting of one or more fact tables and many dimension tables. The [fact table](https://wikipedia.org/wiki/Fact_table) stores the business measurements or transactions and [dimension table](https://wikipedia.org/wiki/Dimension_table) store the dimensions across which facts need to be analyzed.    
     
 For example, a fact can be a record representing a sale of a particular product in a specific region while the dimension represents a set of regions, products and so on. The fact and dimension tables are connected through a primary/foreign key relationship. Most commonly used analytics queries join one or more dimension tables with the fact table.    
     

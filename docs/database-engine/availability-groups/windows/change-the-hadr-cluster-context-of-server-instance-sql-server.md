@@ -1,32 +1,28 @@
 ---
-title: "Change the HADR Cluster Context of Server Instance (SQL Server) | Microsoft Docs"
-ms.custom: ""
+title: "Change which cluster manages the metadata for replicas in an availability group"
+description: "When doing a cross-cluster migration, change which cluster manages the metadata for availability replicas within an Always On availability group by changing the HADR cluster context for an instance of SQL Server."
+ms.custom: "seodec18"
 ms.date: "05/17/2016"
-ms.prod: "sql-non-specified"
-ms.prod_service: "database-engine"
-ms.service: ""
-ms.component: "availability-groups"
+ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: high-availability
+ms.topic: conceptual
 helpviewer_keywords: 
   - "Availability Groups [SQL Server], WSFC clusters"
   - "Availability replicas [SQL Server], change WSFC cluster context"
 ms.assetid: ecd99f91-b9a2-4737-994e-507065a12f80
-caps.latest.revision: 32
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-ms.workload: "Inactive"
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+monikerRange: ">=sql-server-2016||=sqlallproducts-allversions"
 ---
-# Change the HADR Cluster Context of Server Instance (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+# Change which cluster manages the metadata for replicas in an Always On availability group
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
   This topic describes how to switch the HADR cluster context of an instance of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] by using [!INCLUDE[tsql](../../../includes/tsql-md.md)] in [!INCLUDE[ssSQL11SP1](../../../includes/sssql11sp1-md.md)] and later versions. The *HADR cluster context* determines which Windows Server Failover Clustering (WSFC) cluster manages the metadata for availability replicas hosted by the server instance.  
   
- Switch the HADR cluster context only during a cross-cluster migration of [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] to an instance of [!INCLUDE[ssSQL11SP1](../../../includes/sssql11sp1-md.md)] on a new WSFC cluster. Cross-cluster migration of [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] supports OS upgrade to [!INCLUDE[win8](../../../includes/win8-md.md)] or [!INCLUDE[win8srv](../../../includes/win8srv-md.md)] with minimal downtime of availability groups. For more information, see [Cross-Cluster Migration of Always On Availability Groups for OS Upgrade](http://msdn.microsoft.com/library/jj873730.aspx).  
+ Switch the HADR cluster context only during a cross-cluster migration of [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] to an instance of [!INCLUDE[ssSQL11SP1](../../../includes/sssql11sp1-md.md)] on a new WSFC cluster. Cross-cluster migration of [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] supports OS upgrade to [!INCLUDE[win8](../../../includes/win8-md.md)] or [!INCLUDE[win8srv](../../../includes/win8srv-md.md)] with minimal downtime of availability groups. For more information, see [Cross-Cluster Migration of Always On Availability Groups for OS Upgrade](https://msdn.microsoft.com/library/jj873730.aspx).  
   
 -   **Before you begin:**  
   
@@ -109,7 +105,7 @@ ms.workload: "Inactive"
   
 2.  Use the SET HADR CLUSTER CONTEXT clause of the [ALTER SERVER CONFIGURATION](../../../t-sql/statements/alter-server-configuration-transact-sql.md) statement, as follows:  
   
-     ALTER SERVER CONFIGURATION SET HADR CLUSTER CONTEXT **=** { **'***windows_cluster***'** | LOCAL }  
+     ALTER SERVER CONFIGURATION SET HADR CLUSTER CONTEXT **=** { **'**_windows\_cluster_**'** | LOCAL }  
   
      where,  
   
@@ -165,7 +161,7 @@ SELECT cluster_name FROM sys.dm_hadr_cluster
   
 ##  <a name="RelatedContent"></a> Related Content  
   
--   [SQL Server 2012 Technical Articles](http://msdn.microsoft.com/library/bb418445\(SQL.10\).aspx)  
+-   [SQL Server 2012 Technical Articles](https://msdn.microsoft.com/library/bb418445\(SQL.10\).aspx)  
   
 -   [SQL Server Always On Team Blog: The official SQL Server Always On Team Blog](https://blogs.msdn.microsoft.com/sqlalwayson/)  
   

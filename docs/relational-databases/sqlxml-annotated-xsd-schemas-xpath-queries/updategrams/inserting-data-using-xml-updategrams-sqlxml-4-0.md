@@ -2,15 +2,10 @@
 title: "Inserting Data Using XML Updategrams (SQLXML 4.0) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/17/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.service: ""
-ms.component: "sqlxml"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "dbe-xml"
-ms.tgt_pltfrm: ""
+ms.technology: xml
 ms.topic: "reference"
 helpviewer_keywords: 
   - "xsi:nil attribute"
@@ -36,11 +31,10 @@ helpviewer_keywords:
   - "at-identity attribute"
   - "xml data type [SQL Server], SQLXML"
 ms.assetid: 4dc48762-bc12-43fb-b356-ea1b9c1e287e
-caps.latest.revision: 33
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
-ms.workload: "Inactive"
+manager: craigg
+monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Inserting Data Using XML Updategrams (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -214,7 +208,7 @@ ms.workload: "Inactive"
  In [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], table names can include a space, such as the Order Details table in the Northwind database. However, this is not valid in XML characters that are valid [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] identifiers but not valid XML identifiers can be encoded using '__xHHHH\_\_' as the encoding value, where HHHH stands for the four-digit hexadecimal UCS-2 code for the character in the most significant bit-first order.  
   
 > [!NOTE]  
->  This example uses the Northwind database. You can install the Northwind database by using an SQL script available for download from this [Microsoft Web site](http://go.microsoft.com/fwlink/?LinkId=30196).  
+>  This example uses the Northwind database. You can install the Northwind database by using an SQL script available for download from this [Microsoft Web site](https://go.microsoft.com/fwlink/?LinkId=30196).  
   
  Also, the element name must be enclosed within brackets ([ ]). Because the characters [and] are not valid in XML, you must encode them as _x005B\_ and _x005D\_, respectively. (If you use a mapping schema, you can provide element names that do not contain characters that are not valid, such as white spaces. The mapping schema does the necessary mapping; therefore, you do not need to encode for these characters).  
   
@@ -538,7 +532,7 @@ CustOrder(OrderID, EmployeeID, OrderType)
 <ROOT xmlns:updg="urn:schemas-microsoft-com:xml-updategram">  
   <updg:sync mapping-schema='XSD-ElementHavingNameSpace.xml'>  
     <updg:after>  
-       <x:Order  xmlns:x="http://server/xyz/schemas/"  
+       <x:Order  xmlns:x="https://server/xyz/schemas/"  
              updg:at-identity="SalesOrderID"   
              RevisionNumber="1"  
              OrderDate="2001-07-01 00:00:00.000"  
@@ -567,8 +561,8 @@ CustOrder(OrderID, EmployeeID, OrderType)
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"   
      xmlns:dt="urn:schemas-microsoft-com:datatypes"   
      xmlns:sql="urn:schemas-microsoft-com:mapping-schema"    
-     xmlns:x="http://server/xyz/schemas/"   
-     targetNamespace="http://server/xyz/schemas/" >  
+     xmlns:x="https://server/xyz/schemas/"   
+     targetNamespace="https://server/xyz/schemas/" >  
   <xsd:element name="Order" sql:relation="Sales.SalesOrderHeader" type="x:Order_type"/>  
   <xsd:complexType name="Order_type">  
     <xsd:attribute name="SalesOrderID"  type="xsd:ID"/>  
@@ -633,9 +627,9 @@ CustOrder(OrderID, EmployeeID, OrderType)
  <ProductModel>  
     <Name>Mountain-100</Name>  
     <Desc><?xml-stylesheet href="ProductDescription.xsl" type="text/xsl"?>  
-        <p1:ProductDescription xmlns:p1="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription"   
-              xmlns:wm="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelWarrAndMain"   
-              xmlns:wf="http://www.adventure-works.com/schemas/OtherFeatures"   
+        <p1:ProductDescription xmlns:p1="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription"   
+              xmlns:wm="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelWarrAndMain"   
+              xmlns:wf="https://www.adventure-works.com/schemas/OtherFeatures"   
               xmlns:html="http://www.w3.org/1999/xhtml"   
               xmlns="">  
   <p1:Summary>  
@@ -689,7 +683,7 @@ CustOrder(OrderID, EmployeeID, OrderType)
 <?xml version="1.0" encoding="utf-8" ?>  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"   
            xmlns:sql="urn:schemas-microsoft-com:mapping-schema"  
-           xmlns="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription">   
+           xmlns="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription">   
   <xsd:element name="ProductModel"  sql:relation="Production.ProductModel" >  
      <xsd:complexType>  
        <xsd:sequence>  

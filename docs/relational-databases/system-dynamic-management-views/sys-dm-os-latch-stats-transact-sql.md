@@ -2,15 +2,9 @@
 title: "sys.dm_os_latch_stats (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/18/2017"
-ms.prod: "sql-non-specified"
-ms.prod_service: "database-engine"
-ms.service: ""
-ms.component: "dmv's"
+ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: system-objects
 ms.topic: "language-reference"
 f1_keywords: 
   - "sys.dm_os_latch_stats_TSQL"
@@ -22,14 +16,12 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.dm_os_latch_stats dynamic management view"
 ms.assetid: 2085d9fc-828c-453e-82ec-b54ed8347ae5
-caps.latest.revision: 33
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-ms.workload: "Inactive"
+author: stevestein
+ms.author: sstein
+manager: craigg
 ---
 # sys.dm_os_latch_stats (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Returns information about all latch waits organized by class.  
   
@@ -45,8 +37,9 @@ ms.workload: "Inactive"
 |pdw_node_id|**int**|**Applies to**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> The identifier for the node that this distribution is on.|  
   
 ## Permissions  
+
 On [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], requires `VIEW SERVER STATE` permission.   
-On [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] Premium Tiers, requires the `VIEW DATABASE STATE` permission in the database. On [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] Standard and Basic Tiers, requires the  **Server admin** or an **Azure Active Directory admin** account.    
+On [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], requires the `VIEW DATABASE STATE` permission in the database.   
   
 ## Remarks  
  sys.dm_os_latch_stats can be used to identify the source of latch contention by examining the relative wait numbers and wait times for the different latch classes. In some situations, you may be able to resolve or reduce latch contention. However, there might be situations that will require that you to contact [!INCLUDE[msCoName](../../includes/msconame-md.md)] Customer Support Services.  
@@ -124,7 +117,7 @@ GO
 |FCB|Used to synchronize access to the file control block.|  
 |FCB_REPLICA|Internal use only.|  
 |FGCB_ALLOC|Use to synchronize access to round robin allocation information within a filegroup.|  
-|FGCB_ADD_REMOVE|Use to synchronize access to filegroups for ADD and DROP file operations.|  
+|FGCB_ADD_REMOVE|Use to synchronize access to filegroups for add, drop, grow, and shrink file operations.|  
 |FILEGROUP_MANAGER|Internal use only.|  
 |FILE_MANAGER|Internal use only.|  
 |FILESTREAM_FCB|Internal use only.|  

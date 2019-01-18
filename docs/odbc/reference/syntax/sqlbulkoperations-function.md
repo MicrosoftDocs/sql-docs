@@ -2,16 +2,11 @@
 title: "SQLBulkOperations Function | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
-ms.prod_service: "drivers"
-ms.service: ""
-ms.component: "odbc"
+ms.prod: sql
+ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "drivers"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: connectivity
+ms.topic: conceptual
 apiname: 
   - "SQLBulkOperations"
 apilocation: 
@@ -22,11 +17,9 @@ f1_keywords:
 helpviewer_keywords: 
   - "SQLBulkOperations function [ODBC]"
 ms.assetid: 7029d0da-b0f2-44e6-9114-50bd96f47196
-caps.latest.revision: 24
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
-ms.workload: "Inactive"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # SQLBulkOperations Function
 **Conformance**  
@@ -40,8 +33,8 @@ ms.workload: "Inactive"
 ```  
   
 SQLRETURN SQLBulkOperations(  
-     SQLHSTMT       StatementHandle,  
-     SQLUSMALLINT   Operation);  
+     SQLHSTMT       StatementHandle,  
+     SQLUSMALLINT   Operation);  
 ```  
   
 ## Arguments  
@@ -90,7 +83,7 @@ SQLRETURN SQLBulkOperations(
 |HY010|Function sequence error|(DM) An asynchronously executing function was called for the connection handle that is associated with the *StatementHandle*. This asynchronous function was still executing when the **SQLBulkOperations** function was called.<br /><br /> (DM) **SQLExecute**, **SQLExecDirect**, or **SQLMoreResults** was called for the *StatementHandle* and returned SQL_PARAM_DATA_AVAILABLE. This function was called before data was retrieved for all streamed parameters.<br /><br /> (DM) The specified *StatementHandle* was not in an executed state. The function was called without first calling **SQLExecDirect**, **SQLExecute**, or a catalog function.<br /><br /> (DM) An asynchronously executing function (not this one) was called for the *StatementHandle* and was still executing when this function was called.<br /><br /> (DM) **SQLExecute**, **SQLExecDirect**, or **SQLSetPos** was called for the *StatementHandle* and returned SQL_NEED_DATA. This function was called before data was sent for all data-at-execution parameters or columns.<br /><br /> (DM) The driver was an ODBC 2.*x* driver, and **SQLBulkOperations** was called for a *StatementHandle* before **SQLFetchScroll** or **SQLFetch** was called.<br /><br /> (DM) **SQLBulkOperations** was called after **SQLExtendedFetch** was called on the *StatementHandle*.|  
 |HY011|Attribute cannot be set now|(DM) The driver was an ODBC 2.*x* driver, and the SQL_ATTR_ROW_STATUS_PTR statement attribute was set between calls to **SQLFetch** or **SQLFetchScroll** and **SQLBulkOperations**.|  
 |HY013|Memory management error|The function call could not be processed because the underlying memory objects could not be accessed, possibly because of low memory conditions.|  
-|HY090|Invalid string or buffer length|The *Operation* argument was SQL_ADD or SQL_UPDATE_BY_BOOKMARK; a data value was not a null pointer; the C data type was SQL_C_BINARY or SQL_C_CHAR; and the column length value was less than 0, but not equal to SQL_DATA_AT_EXEC, SQL_COLUMN_IGNORE, SQL_NTS, or SQL_NULL_DATA, or less than or equal to SQL_LEN_DATA_AT_EXEC_OFFSET.<br /><br /> The value in a length/indicator buffer was SQL_DATA_AT_EXEC; the SQL type was either SQL_LONGVARCHAR, SQL_LONGVARBINARY, or a long data source–specific data type; and the SQL_NEED_LONG_DATA_LEN information type in **SQLGetInfo** was "Y".<br /><br /> The *Operation* argument was SQL_ADD, the SQL_ATTR_USE_BOOKMARK statement attribute was set to SQL_UB_VARIABLE, and column 0 was bound to a buffer whose length was not equal to the maximum length for the bookmark for this result set. (This length is available in the SQL_DESC_OCTET_LENGTH field of the IRD and can be obtained by calling **SQLDescribeCol**, **SQLColAttribute**, or **SQLGetDescField**.)|  
+|HY090|Invalid string or buffer length|The *Operation* argument was SQL_ADD or SQL_UPDATE_BY_BOOKMARK; a data value was not a null pointer; the C data type was SQL_C_BINARY or SQL_C_CHAR; and the column length value was less than 0, but not equal to SQL_DATA_AT_EXEC, SQL_COLUMN_IGNORE, SQL_NTS, or SQL_NULL_DATA, or less than or equal to SQL_LEN_DATA_AT_EXEC_OFFSET.<br /><br /> The value in a length/indicator buffer was SQL_DATA_AT_EXEC; the SQL type was either SQL_LONGVARCHAR, SQL_LONGVARBINARY, or a long data source-specific data type; and the SQL_NEED_LONG_DATA_LEN information type in **SQLGetInfo** was "Y".<br /><br /> The *Operation* argument was SQL_ADD, the SQL_ATTR_USE_BOOKMARK statement attribute was set to SQL_UB_VARIABLE, and column 0 was bound to a buffer whose length was not equal to the maximum length for the bookmark for this result set. (This length is available in the SQL_DESC_OCTET_LENGTH field of the IRD and can be obtained by calling **SQLDescribeCol**, **SQLColAttribute**, or **SQLGetDescField**.)|  
 |HY092|Invalid attribute identifier|(DM) The value specified for the *Operation* argument was invalid.<br /><br /> The *Operation* argument was SQL_ADD, SQL_UPDATE_BY_BOOKMARK, or SQL_DELETE_BY_BOOKMARK, and the SQL_ATTR_CONCURRENCY statement attribute was set to SQL_CONCUR_READ_ONLY.<br /><br /> The *Operation* argument was SQL_DELETE_BY_BOOKMARK, SQL_FETCH_BY_BOOKMARK, or SQL_UPDATE_BY_BOOKMARK, and the bookmark column was not bound or the SQL_ATTR_USE_BOOKMARKS statement attribute was set to SQL_UB_OFF.|  
 |HY117|Connection is suspended due to unknown transaction state. Only disconnect and read-only functions are allowed.|(DM) For more information about suspended state, see [SQLEndTran Function](../../../odbc/reference/syntax/sqlendtran-function.md).|  
 |HYC00|Optional feature not implemented|The driver or data source does not support the operation requested in the *Operation* argument.|  
@@ -233,7 +226,7 @@ SQLRETURN SQLBulkOperations(
   
 1.  When it binds the data by using **SQLBindCol**, the application places an application-defined value, such as the column number, in the *\*TargetValuePtr* buffer for data-at-execution columns. The value can be used later to identify the column.  
   
-     The application places the result of the SQL_LEN_DATA_AT_EXEC(*length*) macro in the *\*StrLen_or_IndPtr* buffer. If the SQL data type of the column is SQL_LONGVARBINARY, SQL_LONGVARCHAR, or a long data source–specific data type and the driver returns "Y" for the SQL_NEED_LONG_DATA_LEN information type in **SQLGetInfo**, *length* is the number of bytes of data to be sent for the parameter; otherwise, it must be a nonnegative value and is ignored.  
+     The application places the result of the SQL_LEN_DATA_AT_EXEC(*length*) macro in the *\*StrLen_or_IndPtr* buffer. If the SQL data type of the column is SQL_LONGVARBINARY, SQL_LONGVARCHAR, or a long data source-specific data type and the driver returns "Y" for the SQL_NEED_LONG_DATA_LEN information type in **SQLGetInfo**, *length* is the number of bytes of data to be sent for the parameter; otherwise, it must be a nonnegative value and is ignored.  
   
 2.  When **SQLBulkOperations** is called, if there are data-at-execution columns, the function returns SQL_NEED_DATA and proceeds to step 3, which follows. (If there are no data-at-execution columns, the process is complete.)  
   
@@ -244,7 +237,7 @@ SQLRETURN SQLBulkOperations(
   
      Data-at-execution columns are columns in a rowset for which data will be sent with **SQLPutData** when a row is updated or inserted with **SQLBulkOperations**. They are bound with **SQLBindCol**. The value returned by **SQLParamData** is the address of the row in the **TargetValuePtr* buffer that is being processed.  
   
-4.  The application calls **SQLPutData** one or more times to send data for the column. More than one call is needed if all the data value cannot be returned in the *\*TargetValuePtr* buffer specified in **SQLPutData**; multiple calls to **SQLPutData** for the same column are allowed only when sending character C data to a column with a character, binary, or data source–specific data type or when sending binary C data to a column with a character, binary, or data source–specific data type.  
+4.  The application calls **SQLPutData** one or more times to send data for the column. More than one call is needed if all the data value cannot be returned in the *\*TargetValuePtr* buffer specified in **SQLPutData**; multiple calls to **SQLPutData** for the same column are allowed only when sending character C data to a column with a character, binary, or data source-specific data type or when sending binary C data to a column with a character, binary, or data source-specific data type.  
   
 5.  The application calls **SQLParamData** again to signal that all data has been sent for the column.  
   

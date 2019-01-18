@@ -2,24 +2,18 @@
 title: "Enhanced Date and Time Type Behavior with Previous SQL Server Versions (ODBC) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
-ms.service: ""
-ms.component: "native-client-odbc-date-time"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-
-ms.tgt_pltfrm: ""
+ms.technology: native-client
 ms.topic: "reference"
 helpviewer_keywords: 
   - "date/time [ODBC], enhanced behavior with earlier SQL Server versions"
 ms.assetid: cd4e137f-dc5e-4df7-bc95-51fe18c587e0
-caps.latest.revision: 21
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-ms.workload: "Inactive"
+author: MightyPen
+ms.author: genemi
+manager: craigg
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Enhanced Date and Time Type Behavior with Previous SQL Server Versions (ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -42,8 +36,8 @@ ms.workload: "Inactive"
 |||SQL_C_TYPE_TIMESTAMP|Time fields set to zero.|OK (2)<br /><br /> Fails if time field is non-zero. Works with [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)].|  
 ||Time(0)|SQL_C_TYPE_TIME|OK|OK (1)|  
 |||SQL_C_TYPE_TIMESTAMP|Date fields set to current date.|OK (2)<br /><br /> Date ignored. Fails if fractional seconds are non-zero. Works with [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)].|  
-||Time(7)|SQL_C_TIME|Fails – invalid time literal.|OK (1)|  
-|||SQL_C_TYPE_TIMESTAMP|Fails – invalid time literal.|OK (1)|  
+||Time(7)|SQL_C_TIME|Fails - invalid time literal.|OK (1)|  
+|||SQL_C_TYPE_TIMESTAMP|Fails - invalid time literal.|OK (1)|  
 ||Datetime2(3)|SQL_C_TYPE_TIMESTAMP|OK|OK (1)|  
 ||Datetime2(7)|SQL_C_TYPE_TIMESTAMP|OK|Value will be rounded to 1/300th second by client conversion.|  
 |Smalldatetime|Date|SQL_C_TYPE_DATE|OK|OK|  
@@ -92,8 +86,8 @@ ms.workload: "Inactive"
 |TYPE_NAME|date|time|smalldatetime|datetime|datetime2|datetimeoffset|  
 |DATA_TYPE|SQL_WVARCHAR|SQL_WVARCHAR|SQL_TYPE_TIMESTAMP|SQL_TYPE_TIMESTAMP|SQL_WVARCHAR|SQL_WVARCHAR|  
 |COLUMN_SIZE|10|16|16|23|27|34|  
-|LITERAL_PREFIX|‘|‘|‘|‘|‘|‘|  
-|LITERAL_SUFFIX|‘|‘|‘|‘|‘|‘|  
+|LITERAL_PREFIX|'|'|'|'|'|'|  
+|LITERAL_SUFFIX|'|'|'|'|'|'|  
 |CREATE_PARAMS|NULL|NULL|NULL|NULL|NULL|NULL|  
 |NULLABLE|SQL_NULLABLE|SQL_NULLABLE|SQL_NULLABLE|SQL_NULLABLE|SQL_NULLABLE|SQL_NULLABLE|  
 |CASE_SENSITIVE|SQL_FALSE|SQL_FALSE|SQL_FALSE|SQL_FALSE|SQL_FALSE|SQL_FALSE|  

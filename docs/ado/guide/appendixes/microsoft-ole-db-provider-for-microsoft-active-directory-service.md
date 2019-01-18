@@ -1,28 +1,21 @@
 ---
 title: "Microsoft OLE DB Provider for Microsoft Active Directory Service | Microsoft Docs"
-ms.prod: "sql-non-specified"
-ms.prod_service: "drivers"
-ms.service: ""
-ms.component: "ado"
-ms.technology:
-  - "drivers"
+ms.prod: sql
+ms.prod_service: connectivity
+ms.technology: connectivity
 ms.custom: ""
-ms.date: "01/19/2017"
+ms.date: 11/08/2018
 ms.reviewer: ""
-ms.suite: "sql"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "ADSI provider [ADO]"
   - "Active Directory Service Interfaces provider [ADO]"
   - "providers [ADO], OLE DB provider for Active Directory service"
   - "OLE DB provider for Active Directory service [ADO]"
 ms.assetid: f9e81452-5675-4cfc-9949-cfbd2fe57534
-caps.latest.revision: 13
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
-ms.workload: "On Demand"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # Microsoft OLE DB Provider for Microsoft Active Directory Service
 The Active Directory Service Interfaces (ADSI) Provider allows ADO to connect to heterogeneous directory services through ADSI. This gives ADO applications read-only access to the Microsoft Windows NT 4.0 and Microsoft Windows 2000 directory services, in addition to any LDAP-compliant directory service and Novell Directory Services. ADSI itself is based on a provider model, so that if there is a new provider giving access to another directory, the ADO application will be able to access it seamlessly. The ADSI provider is free-threaded and Unicode enabled.  
@@ -30,7 +23,7 @@ The Active Directory Service Interfaces (ADSI) Provider allows ADO to connect to
 ## Connection String Parameters  
  To connect to this provider, set the **Provider** argument of the [ConnectionString](../../../ado/reference/ado-api/connectionstring-property-ado.md) property to the following:  
   
-```  
+```vb
 ADSDSOObject  
 ```  
   
@@ -39,7 +32,7 @@ ADSDSOObject
 ## Typical Connection String  
  A typical connection string for this provider is as follows:  
   
-```  
+```vb
 "Provider=ADSDSOObject;User ID=MyUserID;Password=MyPassword;"  
 ```  
   
@@ -57,7 +50,7 @@ ADSDSOObject
 ## Command Text  
  A four-part command text string is recognized by the provider in the following syntax:  
   
-```  
+```vb
 "Root; Filter; Attributes[; Scope]"  
 ```  
   
@@ -66,17 +59,17 @@ ADSDSOObject
 |*Root*|Indicates the **ADsPath** object from which to start the search (that is, the root of the search).|  
 |*Filter*|Indicates the search filter in the RFC 1960 format.|  
 |*Attributes*|Indicates a comma-delimited list of attributes to be returned.|  
-|*Scope*|Optional. A **String** that specifies the scope of the search. Can be one of the following:<br /><br /> -   Base — Search only the base object (root of the search).<br />-   OneLevel — Search only one level.<br />-   Subtree — Search the whole subtree.|  
+|*Scope*|Optional. A **String** that specifies the scope of the search. Can be one of the following:<br /><br /> -   Base - Search only the base object (root of the search).<br />-   OneLevel - Search only one level.<br />-   Subtree - Search the whole subtree.|  
   
  For example:  
   
-```  
+```vb
 "<LDAP://DC=ArcadiaBay,DC=COM>;(objectClass=*);sn, givenName; subtree"  
 ```  
   
  The provider also supports SQL SELECT for command text. For example:  
   
-```  
+```vb
 "SELECT title, telephoneNumber From 'LDAP://DC=Microsoft, DC=COM' WHERE   
 objectClass='user' AND objectCategory='Person'"  
 ```  

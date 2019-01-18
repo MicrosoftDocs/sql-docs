@@ -2,24 +2,17 @@
 title: "FileTable DDL, Functions, Stored Procedures, and Views | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "database-engine"
-ms.service: ""
-ms.component: "blob"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "dbe-blob"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: filestream
+ms.topic: conceptual
 helpviewer_keywords: 
   - "FileTables [SQL Server], database objects"
 ms.assetid: 7e2e0f7f-94a8-4178-8bc7-d2e14ac8528c
-caps.latest.revision: 13
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-ms.workload: "Inactive"
+author: "douglaslMS"
+ms.author: "douglasl"
+manager: craigg
 ---
 # FileTable DDL, Functions, Stored Procedures, and Views
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

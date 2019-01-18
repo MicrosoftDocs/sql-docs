@@ -2,15 +2,9 @@
 title: "CLR User-Defined Functions | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-non-specified"
-ms.prod_service: "database-engine"
-ms.service: ""
-ms.component: "clr"
+ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-
-ms.tgt_pltfrm: ""
+ms.technology: clr
 ms.topic: "reference"
 helpviewer_keywords: 
   - "building database objects [CLR integration], user-defined functions"
@@ -19,11 +13,9 @@ helpviewer_keywords:
   - "database objects [CLR integration], user-defined functions"
   - "user-defined functions [CLR integration]"
 ms.assetid: 6f7491f1-9a46-4146-ae09-056248634de2
-caps.latest.revision: 46
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-ms.workload: "On Demand"
+author: "rothja"
+ms.author: "jroth"
+manager: craigg
 ---
 # CLR User-Defined Functions
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

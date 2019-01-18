@@ -1,0 +1,195 @@
+- name: UI Wizards for Multidimensional
+  href: ui-wizards-multidimensional.md
+- name: Analysis Services Wizards (Multidimensional)
+  href: ../analysis-services-wizards-multidimensional-data.md
+- name: Aggregation Design Wizard F1 Help
+  href: ../aggregation-design-wizard-f1-help.md
+  items:
+  - name: Select Partitions to Modify (Aggregation Design Wizard)
+    href: ../select-partitions-to-modify-aggregation-design-wizard.md
+  - name: Review Aggregation Usage (Aggregation Design Wizard)
+    href: ../review-aggregation-usage-aggregation-design-wizard.md
+  - name: Specify Object Counts (Aggregation Design Wizard)
+    href: ../specify-object-counts-aggregation-design-wizard.md
+  - name: Set Aggregation Options (Aggregation Design Wizard)
+    href: ../set-aggregation-options-aggregation-design-wizard.md
+  - name: Completing the Wizard (Aggregation Design Wizard)
+    href: ../completing-the-wizard-aggregation-design-wizard.md
+- name: Business Intelligence Wizard F1 Help
+  href: ../business-intelligence-wizard-f1-help.md
+  items:
+  - name: Choose Enhancement (Business Intelligence Wizard)
+    href: ../choose-enhancement-business-intelligence-wizard.md
+  - name: Choose Time Calculations (Business Intelligence Wizard)
+    href: ../choose-time-calculations-business-intelligence-wizard.md
+  - name: Define Scope of Calculations (Business Intelligence Wizard)
+    href: ../define-scope-of-calculations-business-intelligence-wizard.md
+  - name: Define Account Intelligence (Dimension) (Business Intelligence Wizard)
+    href: ../define-account-intelligence-dimension-business-intelligence-wizard.md
+  - name: Configure Dimension Attributes (Business Intelligence Wizard)
+    href: ../configure-dimension-attributes-business-intelligence-wizard.md
+  - name: Define Account Intelligence (Business Intelligence Wizard)
+    href: ../define-account-intelligence-business-intelligence-wizard.md
+  - name: Set Dimension Intelligence Options (Business Intelligence Wizard)
+    href: ../set-dimension-intelligence-options-business-intelligence-wizard.md
+  - name: Define Dimension Intelligence (Business Intelligence Wizard)
+    href: ../define-dimension-intelligence-business-intelligence-wizard.md
+  - name: Specify a Unary Operator (Dimension) (Business Intelligence Wizard)
+    href: ../specify-a-unary-operator-dimension-business-intelligence-wizard.md
+  - name: Specify a Unary Operator (Business Intelligence Wizard)
+    href: ../specify-a-unary-operator-business-intelligence-wizard.md
+  - name: Create a Custom Member Formula (Dimension) (Business Intelligence Wizard)
+    href: ../create-a-custom-member-formula-dimension-business-intelligence-wizard.md
+  - name: Create a Custom Member Formula (Business Intelligence Wizard)
+    href: ../create-a-custom-member-formula-business-intelligence-wizard.md
+  - name: Specify Attribute Ordering (Dimension) (Business Intelligence Wizard)
+    href: ../specify-attribute-ordering-dimension-business-intelligence-wizard.md
+  - name: Specify Attribute Ordering (Business Intelligence Wizard)
+    href: ../specify-attribute-ordering-business-intelligence-wizard.md
+  - name: Enable Dimension Writeback (Dimension) (Business Intelligence Wizard)
+    href: ../enable-dimension-writeback-dimension-business-intelligence-wizard.md
+  - name: Enable Dimension Writeback (Business Intelligence Wizard)
+    href: ../enable-dimension-writeback-business-intelligence-wizard.md
+  - name: Define Semiadditive Behavior (Business Intelligence Wizard)
+    href: ../define-semiadditive-behavior-business-intelligence-wizard.md
+  - name: Set Currency Conversion Options (Business Intelligence Wizard)
+    href: ../set-currency-conversion-options-business-intelligence-wizard.md
+  - name: Select Members (Business Intelligence Wizard)
+    href: ../select-members-business-intelligence-wizard.md
+  - name: Select Conversion Type (Business Intelligence Wizard)
+    href: ../select-conversion-type-business-intelligence-wizard.md
+  - name: Define Local Currency Reference (Business Intelligence Wizard)
+    href: ../define-local-currency-reference-business-intelligence-wizard.md
+  - name: Specify Reporting Currencies (Business Intelligence Wizard)
+    href: ../specify-reporting-currencies-business-intelligence-wizard.md
+  - name: Define Currency Conversion (Business Intelligence Wizard)
+    href: ../define-currency-conversion-business-intelligence-wizard.md
+  - name: Select a Column Dialog Box (Business Intelligence Wizard)
+    href: ../select-a-column-dialog-box-business-intelligence-wizard.md
+  - name: Completing the Wizard (Business Intelligence Wizard)
+    href: ../completing-the-wizard-business-intelligence-wizard.md
+- name: Cube Wizard F1 Help
+  href: ../cube-wizard-f1-help.md
+  items:
+  - name: Select Creation Method (Cube Wizard)
+    href: ../select-creation-method-cube-wizard.md
+  - name: Select a Data Source View (Cube Wizard)
+    href: ../select-a-data-source-view-cube-wizard.md
+  - name: Select Measure Group Tables (Cube Wizard)
+    href: ../select-measure-group-tables-cube-wizard.md
+  - name: Define New Measures (Cube Wizard)
+    href: ../define-new-measures-cube-wizard.md
+  - name: Select Measures (Cube Wizard)
+    href: ../select-measures-cube-wizard.md
+  - name: Select Existing Dimensions (Cube Wizard)
+    href: ../select-existing-dimensions-cube-wizard.md
+  - name: Select New Dimensions (Cube Wizard)
+    href: ../select-new-dimensions-cube-wizard.md
+  - name: Select Missing Dimension Keys (Cube Wizard)
+    href: ../select-missing-dimension-keys-cube-wizard.md
+  - name: Completing the Wizard (Cube Wizard)
+    href: ../completing-the-wizard-cube-wizard.md
+- name: Data Source Wizard F1 Help
+  href: ../data-source-wizard-f1-help-analysis-services.md
+  items:
+  - name: Select how to define the connection (Data Source Wizard)
+    href: ../select-how-to-define-the-connection-data-source-wizard-analysis-services.md
+  - name: Impersonation Information
+    href: ../impersonation-information.md
+  - name: Data sources from existing objects (Data Source Wizard)
+    href: ../data-sources-from-existing-objects-data-source-wizard-analysis-services.md
+  - name: Completing the Wizard
+    href: ../completing-the-wizard-data-source-wizard-analysis-services.md
+- name: Data Source View Wizard F1 Help
+  href: ../data-source-view-wizard-f1-help-analysis-services.md
+  items:
+  - name: Select a Data Source (Data Source View Wizard)
+    href: ../select-a-data-source-data-source-view-wizard-analysis-services.md
+  - name: Advanced Data Source View Options Dialog Box (Data Source View Wizard)
+    href: ../advanced-data-source-view-options-data-source-view-wizard-analysis-services.md
+  - name: Name Matching (Data Source View Wizard)
+    href: ../name-matching-data-source-view-wizard-analysis-services.md
+  - name: Select Tables and Views (Data Source View Wizard)
+    href: ../select-tables-and-views-data-source-view-wizard-analysis-services.md
+  - name: Completing the Wizard (Data Source View Wizard)
+    href: ../completing-the-wizard-data-source-view-wizard-analysis-services.md
+- name: Dimension Wizard F1 Help
+  href: ../dimension-wizard-f1-help.md
+  items:
+  - name: Select Creation Method (Dimension Wizard)
+    href: ../select-creation-method-dimension-wizard.md
+  - name: Define Time Periods (Data Source) (Dimension Wizard)
+    href: ../define-time-periods-data-source-dimension-wizard.md
+  - name: Define Time Periods (Dimension Wizard)
+    href: ../define-time-periods-dimension-wizard.md
+  - name: Select Calendars (Dimension Wizard)
+    href: ../select-calendars-dimension-wizard.md
+  - name: Specify Source Information (Dimension Wizard)
+    href: ../specify-source-information-dimension-wizard.md
+  - name: Select Related Tables (Dimension Wizard)
+    href: ../select-related-tables-dimension-wizard.md
+  - name: Select Dimension Attributes (Dimension Wizard)
+    href: ../select-dimension-attributes-dimension-wizard.md
+  - name: Specify Dimension Type (Dimension Wizard)
+    href: ../specify-dimension-type-dimension-wizard.md
+  - name: Specify Dimension Key and Type (Dimension Wizard)
+    href: ../specify-dimension-key-and-type-dimension-wizard.md
+  - name: Define Account Intelligence (Dimension Wizard)
+    href: ../define-account-intelligence-dimension-wizard.md
+  - name: Completing the Wizard (Dimension Wizard)
+    href: ../completing-the-wizard-dimension-wizard.md
+- name: Import Analysis Services Database Wizard F1 Help
+  href: ../import-analysis-services-database-wizard-f1-help.md
+  items:
+  - name: Source database (Import Analysis Services Database Wizard)
+    href: ../source-database-import-analysis-services-database-wizard.md
+  - name: Completing the Wizard (Import Analysis Services Database Wizard)
+    href: ../completing-the-wizard-import-analysis-services-database-wizard.md
+- name: Linked Object Wizard F1 Help
+  href: ../linked-object-wizard-f1-help.md
+  items:
+  - name: Select a Data Source (Linked Object Wizard)
+    href: ../select-a-data-source-linked-object-wizard.md
+  - name: Select Objects (Linked Object Wizard)
+    href: ../select-objects-linked-object-wizard.md
+  - name: Completing the Wizard (Linked Object Wizard)
+    href: ../completing-the-wizard-linked-object-wizard.md
+- name: Partition Wizard F1 Help
+  href: ../partition-wizard-f1-help-analysis-services-multidimensional-data.md
+  items:
+  - name: Specify Source Information (Partition Wizard)
+    href: ../specify-source-information-partition-wizard.md
+  - name: Restrict Rows (Partition Wizard)
+    href: ../restrict-rows-partition-wizard.md
+  - name: Processing and Storage Locations (Partition Wizard)
+    href: ../processing-and-storage-locations-partition-wizard.md
+  - name: Completing the Wizard (Partition Wizard)
+    href: ../completing-the-wizard-partition-wizard.md
+- name: Schema Generation Wizard F1 Help
+  href: ../schema-generation-wizard-f1-help-analysis-services-multidimensional-data.md
+  items:
+  - name: Specify Target (Schema Generation Wizard)
+    href: ../specify-target-schema-generation-wizard-analysis-services-multidimensional-data.md
+  - name: Subject Area Database Schema Options (Schema Generation Wizard)
+    href: ../subject-area-database-schema-options-analysis-services-multidimensional-data.md
+  - name: Specify Naming Conventions (Schema Generation Wizard)
+    href: ../specify-naming-conventions-schema-generation-analysis-services-multidimensional-data.md
+  - name: Completing the Wizard (Schema Generation Wizard)
+    href: ../complete-schema-generation-wizard-analysis-services-multidimensional-data.md
+- name: Usage-Based Optimization Wizard F1 Help
+  href: ../usage-based-optimization-wizard-f1-help.md
+  items:
+  - name: Select Partitions to Modify (Usage-Based Optimization Wizard)
+    href: ../select-partitions-to-modify-usage-based-optimization-wizard.md
+  - name: Specify Query Criteria (Usage-Based Optimization Wizard)
+    href: ../specify-query-criteria-usage-based-optimization-wizard.md
+  - name: Review the Queries that will be Optimized (Usage-Based Optimization Wizard)
+    href: ../review-the-queries-that-will-be-optimized-usage-based-optimization-wizard.md
+  - name: Review Aggregation Usage (Usage-Based Optimiation Wizard)
+    href: ../review-aggregation-usage-usage-based-optimiation-wizard.md
+  - name: Specify Object Counts (Usage-Based Optimization Wizard)
+    href: ../specify-object-counts-usage-based-optimization-wizard.md
+  - name: Set Aggregation Options (Usage-Based Optimization Wizard)
+    href: ../set-aggregation-options-usage-based-optimization-wizard.md
+  - name: Completing the Wizard (Usage-Based Optimization Wizard)
+    href: ../completing-the-wizard-usage-based-optimization-wizard.md

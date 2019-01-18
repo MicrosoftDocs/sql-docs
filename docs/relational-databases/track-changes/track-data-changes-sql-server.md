@@ -1,17 +1,11 @@
 ---
 title: "Track Data Changes (SQL Server) | Microsoft Docs"
-ms.custom: ""
 ms.date: "08/08/2016"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.service: ""
-ms.component: "track-changes"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "change data capture [SQL Server], compared to change tracking"
   - "change data capture vs. change tracking"
@@ -22,11 +16,10 @@ helpviewer_keywords:
   - "change data capture [SQL Server], security"
   - "change data capture [SQL Server], other SQL Server features and"
 ms.assetid: 7a34be46-15b4-4b6b-8497-cfd8f9f14234
-caps.latest.revision: 39
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-ms.workload: "Active"
+author: rothja
+ms.author: jroth
+manager: craigg
+monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Track Data Changes (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -45,7 +38,7 @@ ms.workload: "Active"
   
 -   Functions are provided to obtain change information.  
   
--   There is low overhead to DML operations. Synchronous change tracking will always have some overhead. However, using change tracking can help minimize the overhead. The overhead will frequently be less than that of using alternative solutions, especially solutions that require the use triggers.  
+-   There is low overhead to DML operations. Synchronous change tracking will always have some overhead. However, using change tracking can help minimize the overhead. The overhead will frequently be less than that of using alternative solutions, especially solutions that require the use of triggers.  
   
 -   Change tracking is based on committed transactions. The order of the changes is based on transaction commit time. This allows for reliable results to be obtained when there are long-running and overlapping transactions. Custom solutions that use **timestamp** values must be specifically designed to handle these scenarios.  
   
@@ -66,7 +59,7 @@ ms.workload: "Active"
 ##  <a name="Capture"></a> Change Data Capture  
  Change data capture provides historical change information for a user table by capturing both the fact that DML changes were made and the actual data that was changed. Changes are captured by using an asynchronous process that reads the transaction log and has a low impact on the system.  
   
- As shown in the following illustration, the changes that were made to user tables are captured in corresponding change tables. These change tables provide an historical view of the changes over time. The [change data capture](../../relational-databases/system-functions/change-data-capture-functions-transact-sql.md)functions that [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provides enable the change data to be consumed easily and systematically.  
+ As shown in the following illustration, the changes that were made to user tables are captured in corresponding change tables. These change tables provide an historical view of the changes over time. The [change data capture](../../relational-databases/system-functions/change-data-capture-functions-transact-sql.md) functions that [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provides enable the change data to be consumed easily and systematically.  
   
  ![Conceptual illustration of change data capture](../../relational-databases/track-changes/media/cdcart1.gif "Conceptual illustration of change data capture")  
   
@@ -82,7 +75,7 @@ ms.workload: "Active"
  To gain access to the change data that is associated with a capture instance, the user must be granted select access to all the captured columns of the associated source table. In addition, if a gating role is specified when the capture instance is created, the caller must also be a member of the specified gating role. Other general change data capture functions for accessing metadata will be accessible to all database users through the public role, although access to the returned metadata will also typically be gated by using select access to the underlying source tables, and by membership in any defined gating roles.  
   
  **DDL Operations to Change Data Capture Enabled Source Tables**  
- When a table is enabled for change data capture, DDL operations can only be applied to the table by a member of the fixed server role **sysadmin**, a member of the **database role db_owner**, or a member of the **database role db_ddladmin**. Users who have explicit grants to perform DDL operations on the table will receive error 22914 if they try these operation.  
+ When a table is enabled for change data capture, DDL operations can only be applied to the table by a member of the fixed server role **sysadmin**, a member of the **database role db_owner**, or a member of the **database role db_ddladmin**. Users who have explicit grants to perform DDL operations on the table will receive error 22914 if they try these operations.  
   
 ### Data Type Considerations for Change Data Capture  
  All base column types are supported by change data capture. The following table lists the behavior and limitations for several column types.  
@@ -141,7 +134,7 @@ ms.workload: "Active"
 ##  <a name="Tracking"></a> Change Tracking  
  Change tracking captures the fact that rows in a table were changed, but does not capture the data that was changed. This enables applications to determine the rows that have changed with the latest row data being obtained directly from the user tables. Therefore, change tracking is more limited in the historical questions it can answer compared to change data capture. However, for those applications that do not require the historical information, there is far less storage overhead because of the changed data not being captured. A synchronous tracking mechanism is used to track the changes. This has been designed to have minimal overhead to the DML operations.  
   
- The following illustration shows a synchronization scenario that would benefit by using change tracking. In the scenario, an application requires the following information: all the rows in the table that were changed since in the last time that the table was synchronized, and only the current row data. Because a synchronous mechanism is used to track the changes, an application can perform two-way synchronization and reliably detect any conflicts that might have occurred.  
+ The following illustration shows a synchronization scenario that would benefit by using change tracking. In the scenario, an application requires the following information: all the rows in the table that were changed since the last time that the table was synchronized, and only the current row data. Because a synchronous mechanism is used to track the changes, an application can perform two-way synchronization and reliably detect any conflicts that might have occurred.  
   
  ![Conceptual illustration of change tracking](../../relational-databases/track-changes/media/cdcart2.gif "Conceptual illustration of change tracking")  
   
@@ -154,7 +147,7 @@ ms.workload: "Active"
   
      Describes change tracking, provides a high-level overview of how change tracking works, and describes how change tracking interacts with other [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] features.  
   
--   [Microsoft Sync Framework Developer Center](http://go.microsoft.com/fwlink/?LinkId=108054)  
+-   [Microsoft Sync Framework Developer Center](https://go.microsoft.com/fwlink/?LinkId=108054)  
   
      Provides complete documentation for [!INCLUDE[ssSyncFrameLong](../../includes/sssyncframelong-md.md)] and [!INCLUDE[sql_sync_short](../../includes/sql-sync-short-md.md)]. In the documentation for [!INCLUDE[sql_sync_short](../../includes/sql-sync-short-md.md)], the topic "How to: Use SQL Server Change Tracking" contains detailed information and code examples.  
   
@@ -177,7 +170,7 @@ ms.workload: "Active"
  [Change Tracking Functions &#40;Transact-SQL&#41;](../../relational-databases/system-functions/change-tracking-functions-transact-sql.md)   
  [Change Data Capture Stored Procedures &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/change-data-capture-stored-procedures-transact-sql.md)   
  [Change Data Capture Tables &#40;Transact-SQL&#41;](../../relational-databases/system-tables/change-data-capture-tables-transact-sql.md)   
- [Change Data Capture Related Dynamic Management Views &#40;Transact-SQL&#41;](http://msdn.microsoft.com/library/2a771d7d-693a-4f56-9227-02cd00e0e200)  
+ [Change Data Capture Related Dynamic Management Views &#40;Transact-SQL&#41;](https://msdn.microsoft.com/library/2a771d7d-693a-4f56-9227-02cd00e0e200)  
   
   
 

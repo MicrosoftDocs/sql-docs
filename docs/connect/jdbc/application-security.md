@@ -2,22 +2,15 @@
 title: "Application Security | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
-ms.prod_service: "drivers"
-ms.service: ""
-ms.component: "jdbc"
+ms.prod: sql
+ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "drivers"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: connectivity
+ms.topic: conceptual
 ms.assetid: 940879b4-aa0f-41ce-a369-6cfc0e78e01d
-caps.latest.revision: 23
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
-ms.workload: "Inactive"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # Application Security
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -61,7 +54,7 @@ permission java.net.SocketPermission "*", "listen, connect, accept";
 >  The code "file:/install_dir/lib/-" refers to the installation directory of the JDBC driver.  
   
 ## Protecting Server Communication  
- When you use the JDBC driver to communicate with a [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] database, you can secure the communication channel by using either Internet Protocol Security (IPSEC) or Secure Sockets Layer (SSL); or you can use both.  
+ When you use the JDBC driver to communicate with a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database, you can secure the communication channel by using either Internet Protocol Security (IPSEC) or Secure Sockets Layer (SSL); or you can use both.  
   
  SSL support can be used to provide an additional level of protection besides IPSEC. For more information about using SSL, see [Using SSL Encryption](../../connect/jdbc/using-ssl-encryption.md).  
   

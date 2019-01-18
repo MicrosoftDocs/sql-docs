@@ -5,12 +5,7 @@ ms.date: "03/04/2017"
 ms.prod: ""
 ms.prod_service: "sql-database"
 ms.reviewer: ""
-ms.service: "sql-database"
-ms.component: "system-catalog-views"
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: system-objects
 ms.topic: "language-reference"
 f1_keywords: 
   - "bandwidth_usage"
@@ -23,11 +18,10 @@ helpviewer_keywords:
   - "sys.bandwidth_usage"
   - "bandwidth_usage"
 ms.assetid: 43ed8435-f059-4907-b5c0-193a258b394a
-caps.latest.revision: 21
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "craigg"
-ms.workload: "Inactive"
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+monikerRange: "= azuresqldb-current || = sqlallproducts-allversions"
 ---
 # sys.bandwidth_usage (Azure SQL Database)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -45,7 +39,7 @@ ms.workload: "Inactive"
 |**time**|The hour when the bandwidth was consumed. The rows in this view are on a per-hour basis. For example, 2009-09-19 02:00:00.000 means that the bandwidth was consumed on September 19, 2009 between 2:00 A.M. and 3:00 A.M.|  
 |**database_name**|The name of the database that used bandwidth.|  
 |**direction**|The type of bandwidth that was used, one of:<br /><br /> Ingress: Data that is moving into the [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].<br /><br /> Egress: Data that is moving out of the [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|  
-|**class**|The class of bandwidth that was used, one of:<br />Internal: Data that is moving within the Azure platform.<br />External: Data that is moving out of the Azure platform.<br /><br /> This class is returned only if the database is engaged in a continuous copy relationship between regions ([!INCLUDE[ssGeoDR](../../includes/ssgeodr-md.md)]). If a given database does not participate in any continuous copy relationship, then “Interlink” rows are not returned. For more information, see the “Remarks" section later in this topic.|  
+|**class**|The class of bandwidth that was used, one of:<br />Internal: Data that is moving within the Azure platform.<br />External: Data that is moving out of the Azure platform.<br /><br /> This class is returned only if the database is engaged in a continuous copy relationship between regions ([!INCLUDE[ssGeoDR](../../includes/ssgeodr-md.md)]). If a given database does not participate in any continuous copy relationship, then "Interlink" rows are not returned. For more information, see the "Remarks" section later in this topic.|  
 |**time_period**|The time period when the usage occurred is either Peak or OffPeak. The Peak time is based on the region in which the server was created. For example, if a server was created in the "US_Northwest" region, the Peak time is defined as being between 10:00 A.M. and 6:00 P.M. PST.|  
 |**quantity**|The amount of bandwidth, in kilobytes (KBs), that was used.|  
   

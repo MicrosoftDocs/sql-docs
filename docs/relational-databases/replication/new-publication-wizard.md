@@ -2,16 +2,11 @@
 title: "New Publication Wizard | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "database-engine"
-ms.service: ""
-ms.component: "replication"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: replication
+ms.topic: conceptual
 f1_keywords: 
   - "sql13.swb.dbpublishin"
   - "sql13.swb.dbpublishingwizard.choosetables.f1"
@@ -43,11 +38,9 @@ f1_keywords:
 helpviewer_keywords: 
   - "New Publication Wizard"
 ms.assetid: 57d65d16-90d1-4b4c-b68e-6418a7064e76
-caps.latest.revision: 18
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-ms.workload: "Inactive"
+author: "MashaMSFT"
+ms.author: "mathoma"
+manager: craigg
 ---
 # New Publication Wizard
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -82,6 +75,6 @@ ms.workload: "Inactive"
 ## See Also  
  [Create a Publication](../../relational-databases/replication/publish/create-a-publication.md)   
  [Publish Data and Database Objects](../../relational-databases/replication/publish/publish-data-and-database-objects.md)   
- [Properties Reference &#40;Replication&#41;](../../relational-databases/replication/properties-reference-replication.md)  
+
   
   

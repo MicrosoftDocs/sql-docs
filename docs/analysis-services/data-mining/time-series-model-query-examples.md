@@ -1,34 +1,14 @@
 ---
 title: "Time Series Model Query Examples | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: analysis-services
-ms.prod_service: "analysis-services"
-ms.service: ""
-ms.component: ""
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
-  
-ms.component: data-mining
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "time series algorithms [Analysis Services]"
-  - "MISSING_VALUE_SUBSTITUTION"
-  - "time series [Analysis Services]"
-  - "predictions [Analysis Services], time series"
-  - "EXTEND_MODEL_CASES parameter"
-  - "REPLACE_MODEL_CASES parameter"
-  - "prediction queries [DMX]"
-  - "PREDICTION_SMOOTHING"
-  - "content queries [DMX]"
-ms.assetid: 9a1c527e-2997-493b-ad6a-aaa71260b018
-caps.latest.revision: 35
-author: "Minewiskan"
-ms.author: "owend"
-manager: "kfile"
-ms.workload: "Inactive"
+ms.date: 05/08/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: data-mining
+ms.topic: conceptual
+ms.author: owend
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
 ---
 # Time Series Model Query Examples
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -70,7 +50,7 @@ WHERE MODEL_NAME = '<model name>'
   
 |MINING_PARAMETERS|  
 |------------------------|  
-|COMPLEXITY_PENALTY=0.1,MINIMUM_SUPPORT=10,PERIODICITY_HINT={1,3},….|  
+|COMPLEXITY_PENALTY=0.1,MINIMUM_SUPPORT=10,PERIODICITY_HINT={1,3},....|  
   
  The default periodicity hint is {1} and appears in all models; this sample model was created with an additional hint that might not be present in the final model.  
   
@@ -104,7 +84,7 @@ WHERE NODE_NAME = 'TA00000007'
   
 |Short equation|t.ATTRIBUTE_NAME|t.ATTRIBUTE_VALUE|  
 |--------------------|-----------------------|------------------------|  
-|ARIMA (2,0,7)x(1,0,2)(12)|R250 Europe:Quantity(Intercept)|15.24….|  
+|ARIMA (2,0,7)x(1,0,2)(12)|R250 Europe:Quantity(Intercept)|15.24....|  
 |ARIMA (2,0,7)x(1,0,2)(12)|R250 Europe:Quantity(Periodicity)|1|  
 |ARIMA (2,0,7)x(1,0,2)(12)|R250 Europe:Quantity(Periodicity)|12|  
   

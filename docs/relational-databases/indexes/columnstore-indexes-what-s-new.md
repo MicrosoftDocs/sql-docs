@@ -1,39 +1,32 @@
 ---
 title: "Columnstore indexes - what&#39;s new | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/1/2017"
-ms.prod: "sql-non-specified"
+ms.date: "03/20/2018"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
-ms.service: ""
-ms.component: "indexes"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-ms.assetid: 1fe5ea05-5b19-45a4-9b7a-8ae5ca367897
-caps.latest.revision: 28
-author: "barbkess"
-ms.author: "barbkess"
-manager: "jhubbard"
-ms.workload: "On Demand"
+ms.technology: table-view-index
+ms.topic: conceptual
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Columnstore indexes - what&#39;s new
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  Summary of columnstore features available for each version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], and the latest releases of [!INCLUDE[ssSDS](../../includes/sssds-md.md)] Premium Edition, [!INCLUDE[ssSDW](../../includes/sssdw-md.md)], and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].  
+  Summary of columnstore features available for each version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], and the latest releases of [!INCLUDE[ssSDS](../../includes/sssds-md.md)], [!INCLUDE[ssSDW](../../includes/sssdw-md.md)], and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].  
 
  > [!NOTE]
- > For [!INCLUDE[ssSDS](../../includes/sssds-md.md)], columnstore indexes are only available in Premium Edition.
+ > For [!INCLUDE[ssSDS](../../includes/sssds-md.md)], columnstore indexes are available in [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] Premium tiers, Standard tiers - S3 and above, and all vCore tiers. For [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 and above, columnstore indexes are available in all editions. For [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] (before SP1) and earlier versions, columnstore indexes are only available in Enterprise Edition.
  
 ## Feature Summary for Product Releases  
  This table summarizes key features for columnstore indexes and the products in which they are available.  
 
-|Columnstore Index Feature|[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]|[!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]|[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] Premium Edition|[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]|  
+|Columnstore Index Feature|[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]|[!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]|[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]|[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]|  
 |-------------------------------|---------------------------|---------------------------|---------------------------|--------------------------------------------|-------------------------|---|  
-|Batch execution for multi-threaded queries|yes|yes|yes|yes|yes|yes| 
-|Batch execution for single-threaded queries|||yes|yes|yes|yes|  
+|Batch mode execution for multi-threaded queries|yes|yes|yes|yes|yes|yes| 
+|Batch mode execution for single-threaded queries|||yes|yes|yes|yes|  
 |Archival compression option||yes|yes|yes|yes|yes|  
 |Snapshot isolation and read-committed snapshot isolation|||yes|yes|yes|yes| 
 |Specify columnstore index when creating a table|||yes|yes|yes|yes|  
@@ -79,7 +72,7 @@ ms.workload: "On Demand"
   
 -   Columnstore indexes support read committed snapshot isolation level (RCSI) and snapshot isolation (SI). This enables transactional consistent analytics queries with no locks.  
   
--   Columnstore supports index defragmentation by removing deleted rows without the need to explicitly rebuild the index. The `ALTER INDEX … REORGANIZE` statement removes deleted rows, based on an internally defined policy, from the columnstore as an online operation  
+-   Columnstore supports index defragmentation by removing deleted rows without the need to explicitly rebuild the index. The `ALTER INDEX ... REORGANIZE` statement removes deleted rows, based on an internally defined policy, from the columnstore as an online operation  
   
 -   Columnstore indexes can be access on an AlwaysOn readable secondary replica. You can improve performance for operational analytics by offloading analytics queries to an AlwaysOn secondary replica.  
   
@@ -116,7 +109,8 @@ These in-memory OLTP-based DMVs contain updates for columnstore:
   
 ### Limitations  
   
--   MERGE is disabled when a B-tree index is defined on a clustered columnstore index.  
+
+  
 -   For in-memory tables, a columnstore index must include all the columns; the columnstore index cannot have a filtered condition.  
 -   For in-memory tables, queries on columnstore indexes run only in InterOP mode, and not in the in-memory native mode. Parallel execution is supported.  
   

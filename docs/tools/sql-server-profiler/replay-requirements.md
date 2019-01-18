@@ -2,27 +2,20 @@
 title: "Replay Requirements | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "sql-tools"
-ms.service: ""
-ms.component: "sql-server-profiler"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: profiler
+ms.topic: conceptual
 helpviewer_keywords: 
   - "event classes [SQL Server], replaying traces"
   - "traces [SQL Server], replaying"
   - "replaying traces"
   - "TSQL_Replay template [SQL Server]"
 ms.assetid: 0e01dfc7-84b9-47f6-8bf7-b0656df4fa7d
-caps.latest.revision: 18
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-ms.workload: "Inactive"
+author: "stevestein"
+ms.author: "sstein"
+manager: craigg
 ---
 # Replay Requirements
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

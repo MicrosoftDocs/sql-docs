@@ -2,15 +2,10 @@
 title: "(Division Assignment) (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "09/12/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
-ms.service: ""
-ms.component: "t-sql|language-elements"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: t-sql
 ms.topic: "language-reference"
 f1_keywords: 
   - "/=_TSQL"
@@ -23,11 +18,10 @@ helpviewer_keywords:
   - "augmented operators, /="
   - "/= (divide equals)"
 ms.assetid: 9ab25d1e-5c98-4dd7-b2cd-9f49499c86e7
-caps.latest.revision: 12
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-ms.workload: "Inactive"
+author: "douglaslMS"
+ms.author: "douglasl"
+manager: craigg
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 
 # /= (Division Assignment) (Transact-SQL)

@@ -2,22 +2,16 @@
 title: "Implementing MERGE Functionality in a Natively Compiled Stored Procedure | Microsoft Docs"
 ms.custom: ""
 ms.date: "11/17/2016"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.service: ""
-ms.component: "in-memory-oltp"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine-imoltp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: in-memory-oltp
+ms.topic: conceptual
 ms.assetid: d4bcdc36-3302-4abc-9b35-64ec2b920986
-caps.latest.revision: 8
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
-ms.workload: "Inactive"
+author: MightyPen
+ms.author: genemi
+manager: craigg
+monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Implementing MERGE Functionality in a Natively Compiled Stored Procedure
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

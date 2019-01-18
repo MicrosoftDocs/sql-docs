@@ -1,28 +1,18 @@
 ---
 title: "Defining the Unknown Member and Null Processing Properties | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: analysis-services
-ms.prod_service: "analysis-services"
-ms.service: ""
-ms.component: ""
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
-  
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
-applies_to: 
-  - "SQL Server 2016"
-ms.assetid: d9abb09c-9bfa-4e32-b530-8590e4383566
-caps.latest.revision: 18
-author: "Minewiskan"
-ms.author: "owend"
-manager: "kfile"
-ms.workload: "On Demand"
+ms.date: 05/08/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: multidimensional-models
+ms.topic: tutorial
+ms.author: owend
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
 ---
 # Lesson 4-7 - Defining the Unknown Member and Null Processing Properties
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
 When [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] processes a dimension, all the distinct values from the underlying columns in the tables, or views in the data source view, populate the attributes in the dimension. If [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] encounters a null value during processing, by default, it converts this null to a zero for numeric columns or to an empty string for string columns. You can modify the default settings or convert null values in your extract, transform, and load process (if any) of the underlying relational data warehouse. Additionally, you can have [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] convert the null value to a designated value by configuring three properties: the **UnknownMember** and **UnknownMemberName** properties for the dimension, and the **NullProcessing** property for the dimension's key attribute.  
   
 The Dimension Wizard and the Cube Wizard will enable these properties for you based on whether the key attribute of a dimension is nullable or the root attribute of a snowflake dimension is based on a nullable column. In these cases, the **NullProcessing** property of the key attribute will be set to **UnknownMember** and the **UnknownMember** property will be set to **Visible**.  
@@ -94,7 +84,7 @@ In the tasks in this topic, you will add the product category and product subcat
   
 9. In the **Attributes** pane, change the name of this new attribute to **Category**.  
   
-10. In the Properties window, click in the **NameColumn** property field and then click the browse (**…**) button to open the **Name Column** dialog box.  
+10. In the Properties window, click in the **NameColumn** property field and then click the browse (**...**) button to open the **Name Column** dialog box.  
   
 11. Select **EnglishProductCategoryName** in the **Source column** list and then click **OK**.  
   
@@ -102,7 +92,7 @@ In the tasks in this topic, you will add the product category and product subcat
   
 13. In the **Attributes** pane, change the name of this new attribute to **Subcategory**.  
   
-14. In the Properties window, click in the **NameColumn** property field and then click the browse **(…)** button to open the **Name Column** dialog box.  
+14. In the Properties window, click in the **NameColumn** property field and then click the browse **(...)** button to open the **Name Column** dialog box.  
   
 15. Select **EnglishProductSubcategoryName** in the **Source column** list and then click **OK**.  
   

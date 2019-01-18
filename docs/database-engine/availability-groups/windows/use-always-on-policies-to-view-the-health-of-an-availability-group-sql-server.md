@@ -2,24 +2,16 @@
 title: "Use Always On Policies to View the Health of an Availability Group | Microsoft Docs"
 ms.custom: ""
 ms.date: "05/17/2016"
-ms.prod: "sql-non-specified"
-ms.prod_service: "database-engine"
-ms.service: ""
-ms.component: "availability-groups"
+ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: high-availability
+ms.topic: conceptual
 helpviewer_keywords: 
   - "Availability Groups [SQL Server], policies"
 ms.assetid: 6f1bcbc3-1220-4071-8e53-4b957f5d3089
-caps.latest.revision: 17
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-ms.workload: "Inactive"
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
 ---
 # Use Always On Policies to View the Health of an Availability Group (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -125,7 +117,7 @@ ms.workload: "Inactive"
 -   [Get Help SQL Server PowerShell](../../../relational-databases/scripting/get-help-sql-server-powershell.md)  
   
 ##  <a name="RelatedContent"></a> Related Content  
- **SQL Server Always On Team Blogs—Monitoring Always On Health with PowerShell:**  
+ **SQL Server Always On Team Blogs-Monitoring Always On Health with PowerShell:**  
   
 -   [Part 1: Basic Cmdlet Overview](https://blogs.msdn.microsoft.com/sqlalwayson/2012/02/13/monitoring-alwayson-health-with-powershell-part-1-basic-cmdlet-overview/)  
   

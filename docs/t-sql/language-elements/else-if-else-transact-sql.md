@@ -2,15 +2,10 @@
 title: "ELSE (IF...ELSE) (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/15/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
-ms.service: ""
-ms.component: "t-sql|language-elements"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: t-sql
 ms.topic: "language-reference"
 f1_keywords: 
   - "ELSE"
@@ -22,14 +17,16 @@ helpviewer_keywords:
   - "ELSE keyword"
   - "IF keyword"
 ms.assetid: 6f2b4278-0dea-4603-bbd3-7cbad602a645
-caps.latest.revision: 34
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-ms.workload: "Active"
+author: "douglaslMS"
+ms.author: "douglasl"
+manager: craigg
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # ELSE (IF...ELSE) (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+
+  > [!div class="nextstepaction"]
+  > [Please share your feedback about the SQL Docs Table of Contents!](https://aka.ms/sqldocsurvey)
 
   Imposes conditions on the execution of a [!INCLUDE[tsql](../../includes/tsql-md.md)] statement. The [!INCLUDE[tsql](../../includes/tsql-md.md)] statement (*sql_statement*) following the *Boolean_expression*is executed if the *Boolean_expression* evaluates to TRUE. The optional ELSE keyword is an alternate [!INCLUDE[tsql](../../includes/tsql-md.md)] statement that is executed when *Boolean_expression* evaluates to FALSE or NULL.  
   
@@ -118,7 +115,7 @@ GO
 ```  
   
 ### D. Using nested IF...ELSE statements  
- The following example shows how an IF … ELSE statement can be nested inside another. Set the `@Number` variable to `5`, `50`, and `500` to test each statement.  
+ The following example shows how an IF ... ELSE statement can be nested inside another. Set the `@Number` variable to `5`, `50`, and `500` to test each statement.  
   
 ```  
 DECLARE @Number int;  
@@ -138,7 +135,7 @@ GO
 ## Examples: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### E: Using a query as part of a Boolean expression  
- The following example uses `IF…ELSE` to determine which of two responses to show the user, based on the weight of an item in the `DimProduct` table.  
+ The following example uses `IF...ELSE` to determine which of two responses to show the user, based on the weight of an item in the `DimProduct` table.  
   
 ```  
 -- Uses AdventureWorks  

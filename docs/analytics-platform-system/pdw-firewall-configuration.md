@@ -1,24 +1,17 @@
 ---
-title: "PDW Firewall Configuration (Analytics Platform System)"
-author: "barbkess" 
-ms.author: "barbkess"
-manager: "jhubbard"	  
-ms.prod: "analytics-platform-system"
-ms.prod_service: "mpp-data-warehouse"
-ms.service: ""
-ms.component:
-ms.technology: "mpp-data-warehouse"
-ms.custom: ""
-ms.date: 01/05/2017
-ms.reviewer: na
-ms.suite: "sql"
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: 191f292d-16bc-4166-b855-158854ad062d
-caps.latest.revision: 28
-
+title: PDW firewall configuration - Analytics Platform System | Microsoft Docs
+description: The firewall page of the SQL Server PDW Configuration Manager enables you to enable or disable firewall rules that allow or prevent access to specific ports on the Analytics Platform System appliance.  
+aauthor: mzaman1 
+manager: craigg
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
 ---
-# PDW Firewall Configuration
+
+# Parallel Data Warehouse firewall configuration in Analytics Platform System
 The **Firewall** page of the SQL Server PDW Configuration Manager enables you to enable or disable firewall rules that allow or prevent access to specific ports on the Analytics Platform System appliance.  
   
 ## To manage ports and firewall rules for appliance nodes  
@@ -43,7 +36,7 @@ The following ports are opened for client connections coming from outside of PDW
 |Remote desktop access|3389|CTL, CMP|  
 |SSIS BinaryLoaderDataChannel|16551|CTL|  
 |dwloader BinaryLoaderDataChannel|16551|CMP|  
-|SSL encrypted connections (For internal communications, to access the Admin Console, and to access HDInsight cluster services)|443|All nodes|  
+|SSL encrypted connections (For internal communications, to access the Admin Console)|443|All nodes|  
 |SQL Server PDW Load Control Flow - Windows Credentials|8002|CTL|  
 |_Kerberos|88|AD01 and AD02,|  
 |_ldap|389|AD01 and AD02|  

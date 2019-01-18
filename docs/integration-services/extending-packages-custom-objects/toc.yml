@@ -1,0 +1,20 @@
+- name: Extending Packages with Custom Objects
+  href: extending-packages-with-custom-objects.md
+- name: Developing Custom Objects for Integration Services
+  href: developing-custom-objects-for-integration-services.md
+- name: Persisting Custom Objects
+  href: persisting-custom-objects.md
+- name: Building, Deploying, and Debugging Custom Objects
+  href: building-deploying-and-debugging-custom-objects.md
+- name: Support multi-targeting in your custom components
+  href: support-multi-targeting-in-your-custom-components.md
+- name: Developing a Custom Task
+  href: ../../integration-services/extending-packages-custom-objects/task/developing-a-custom-task.md
+- name: Developing a Custom Connection manager
+  href: ../../integration-services/extending-packages-custom-objects/connection-manager/developing-a-custom-connection-manager.md
+- name: Developing a Custom Log provider
+  href: ../../integration-services/extending-packages-custom-objects/log-provider/developing-a-custom-log-provider.md
+- name: Developing a Custom ForEach Enumerator
+  href: foreach-enumerator/developing-a-custom-foreach-enumerator.md
+- name: Developing a Custom Data Flow Component
+  href: data-flow/developing-a-custom-data-flow-component.md

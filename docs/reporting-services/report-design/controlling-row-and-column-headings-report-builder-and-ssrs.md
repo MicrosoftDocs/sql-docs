@@ -1,27 +1,18 @@
 ---
 title: "Controlling Row and Column Headings (Report Builder and SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
+ms.date: 05/24/2018
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
-ms.service: ""
-ms.component: "report-design"
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
+ms.technology: report-design
 
 
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 ms.assetid: 4be6e836-158e-4bc9-8870-7f394d7c7e11
-caps.latest.revision: 8
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "kfile"
-ms.workload: "On Demand"
+author: maggiesMSFT
+ms.author: maggies
 ---
 # Controlling Row and Column Headings (Report Builder and SSRS)
-  A table, matrix, or list data region can span multiple pages horizontally or vertically. You can specify whether to repeat row or column headings on each page. In an interactive renderer such as Report Manager or report preview, you can also specify whether to freeze row or column headings to keep them in view when you scroll across or down a report. In a table or matrix, the first row usually contains column headings that label data in each column; the first column usually contains row headings that label the data in each row. For nested groups, you might want to repeat the initial set of row and column headings that contain group labels. By default, a list data region does not include headings.  
+  A table, matrix, or list data region can span multiple pages horizontally or vertically. You can specify whether to repeat row or column headings on each page. In an interactive renderer such as the web portal or report preview, you can also specify whether to freeze row or column headings to keep them in view when you scroll across or down a report. In a table or matrix, the first row usually contains column headings that label data in each column; the first column usually contains row headings that label the data in each row. For nested groups, you might want to repeat the initial set of row and column headings that contain group labels. By default, a list data region does not include headings.  
   
  How you control whether headings repeat or freeze depends on the following:  
   
@@ -155,7 +146,7 @@ ms.workload: "On Demand"
   
 -   Repeat column headers when a tablix data region expands vertically down multiple pages.  
   
- In addition, renderers that use soft page breaks (Report Manager, report preview, or the report viewer control) support the following features:  
+ In addition, renderers that use soft page breaks (the web portal, report preview, or the report viewer control) support the following features:  
   
 -   Keep row headers in view when you scroll horizontally across a report.  
   

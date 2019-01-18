@@ -2,15 +2,10 @@
 title: "sys.sp_xtp_bind_db_resource_pool (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/03/2016"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "database-engine"
-ms.service: ""
-ms.component: "system-stored-procedures"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: system-objects
 ms.topic: "language-reference"
 f1_keywords: 
   - "sp_xtp_bind_db_resource_pool_TSQL"
@@ -23,11 +18,9 @@ helpviewer_keywords:
   - "sp_xtp_bind_db_resource_pool"
   - "sys.sp_xtp_bind_db_resource_pool"
 ms.assetid: c2a78073-626b-4159-996e-1808f6bfb6d2
-caps.latest.revision: 9
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-ms.workload: "Inactive"
+author: "stevestein"
+ms.author: "sstein"
+manager: craigg
 ---
 # sys.sp_xtp_bind_db_resource_pool (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
@@ -85,7 +78,7 @@ Resource pool 'Pool_Hekaton' does not exist or resource governor has not been re
 ```  
   
 **Pool_name refers to a reserved system pool**  
- The pool names “INTERNAL” and “DEFAULT” are reserved for system pools.  It is not valid to explicitly bind a database to either of these.  If a system pool name is entered, the following error is returned:  
+ The pool names "INTERNAL" and "DEFAULT" are reserved for system pools.  It is not valid to explicitly bind a database to either of these.  If a system pool name is entered, the following error is returned:  
 *Resource Pool %s is a system resource pool.  System resource pools may not be explicitly bound to a database using this procedure.*  
   
 ```  

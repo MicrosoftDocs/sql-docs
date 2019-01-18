@@ -2,27 +2,20 @@
 title: "OLE DB Command Transformation | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "integration-services"
-ms.service: ""
-ms.component: "data-flow"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: integration-services
+ms.topic: conceptual
 f1_keywords: 
   - "sql13.dts.designer.oledbcommandtrans.f1"
 helpviewer_keywords: 
   - "statements [Integration Services]"
   - "OLE DB Command transformation"
 ms.assetid: baa6735c-5acf-4759-b077-1216aca16c6c
-caps.latest.revision: 55
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
-ms.workload: "On Demand"
+manager: craigg
 ---
 # OLE DB Command Transformation
   The OLE DB Command transformation runs an SQL statement for each row in a data flow. For example, you can run an SQL statement that inserts, updates, or deletes rows in a database table.  
@@ -62,13 +55,13 @@ ms.workload: "On Demand"
   
 3.  Click the **Data Flow** tab, and then, from the **Toolbox**, drag the OLE DB Command transformation to the design surface.  
   
-4.  Connect the OLE DB Command transformation to the data flow by dragging a connector—the green or red arrow—from a data source or a previous transformation to the OLE DB Command transformation.  
+4.  Connect the OLE DB Command transformation to the data flow by dragging a connector-the green or red arrow-from a data source or a previous transformation to the OLE DB Command transformation.  
   
 5.  Right-click the component and select Edit or Show **Advanced Editor**.  
   
 6.  On the **Connection Managers** tab, select an OLE DB connection manager in the **Connection Manager** list. For more information, see [OLE DB Connection Manager](../../../integration-services/connection-manager/ole-db-connection-manager.md).  
   
-7.  Click the **Component Properties** tab and click the ellipsis button **(…)** in the **SqlCommand** box.  
+7.  Click the **Component Properties** tab and click the ellipsis button **(...)** in the **SqlCommand** box.  
   
 8.  In the **String Value Editor**, type the parameterized SQL statement using a question mark (?) as the parameter marker for each parameter.  
   

@@ -1,25 +1,17 @@
 ---
-title: "Converting R Code for Use in R Services | Microsoft Docs"
-ms.date: "12/20/2017"
-ms.reviewer: 
-ms.suite: sql
-ms.prod: machine-learning-services
-ms.prod_service: machine-learning-services
-ms.component: r
-ms.technology: 
-  
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "R"
-ms.assetid: 0b11ab52-b2f9-4a4f-b1ab-68ba09c8adcc
-caps.latest.revision: 13
-author: "jeannt"
-ms.author: "jeannt"
-manager: "cgronlund"
-ms.workload: "Inactive"
+title: Convert R code for stored procedures - SQL Server Machine Learning Services
+description: Migrate R code to a SQL Server stored procedure for solution deployment and data access to relational data on SQL Server.
+ms.prod: sql
+ms.technology: machine-learning
+
+ms.date: 04/15/2018  
+ms.topic: conceptual
+author: HeidiSteen
+ms.author: heidist
+manager: cgronlun
 ---
-# Converting R code for execution in-database
+# Convert R code for execution in SQL Server (In-Database) instances
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 This article provides high-level guidance on how to modify R code to work in SQL Server. 
 
@@ -77,7 +69,7 @@ How much you change your code depends on whether you intend to submit the R code
 
     For example, the following scalar input `@model_name` contains the model name, which is also output in its own column in the results:
 
-    ```SQL
+    ```sql
     EXEC sp_execute_external_script @model_name="DefaultModel" OUTPUT, @language=N'R', @script=N'R code here'
     ``` 
 
@@ -137,8 +129,8 @@ How much you change your code depends on whether you intend to submit the R code
 
 + If your code is relatively simple, you can embed it in a T-SQL user-defined function without modification, as described in these samples:
 
-    + [Create an R function that runs in rxExec](..\tutorials\deepdive-create-a-simple-simulation.md)
-    + [Feature engineering using T-SQL and R](..\tutorials\sqldev-create-data-features-using-t-sql.md)
+    + [Create an R function that runs in rxExec](../tutorials/deepdive-create-a-simple-simulation.md)
+    + [Feature engineering using T-SQL and R](../tutorials/sqldev-create-data-features-using-t-sql.md)
 
 + If the code is more complex, use the R package **sqlrutils** to convert your code. This package is designed to help experienced R users write good stored procedure code. 
 
@@ -146,7 +138,7 @@ How much you change your code depends on whether you intend to submit the R code
 
     Then, use the **sqlrutils** package to generate the input and outputs in the correct format. The **sqlrutils** package generates the complete stored procedure code for you, and can also register the stored procedure in the database. 
 
-    For more information and examples, see [SqlRUtils](../r/generating-an-r-stored-procedure-for-r-code-using-the-sqlrutils-package.md).
+    For more information and examples, see [sqlrutils (SQL)](ref-r-sqlrutils.md).
 
 **Integrate with other workflows**
 

@@ -2,15 +2,10 @@
 title: "date (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "7/23/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
-ms.service: ""
-ms.component: "t-sql|data-types"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: t-sql
 ms.topic: "language-reference"
 f1_keywords: 
   - "date_TSQL"
@@ -24,11 +19,10 @@ helpviewer_keywords:
   - "date data type [SQL Server]"
   - "data types [SQL Server], date and time"
 ms.assetid: c963e8b4-5a85-4bd0-9d48-3f8da8f6516b
-caps.latest.revision: 44
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "craigg"
-ms.workload: "Active"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # date (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -40,7 +34,7 @@ Defines a date in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
 |Property|Value|  
 |--------------|-----------|  
 |Syntax|**date**|  
-|Usage|DECLARE @MyDate **date**<br /><br /> CREATE TABLE Table1 ( Column1 **date** )|  
+|Usage|DECLARE \@MyDate **date**<br /><br /> CREATE TABLE Table1 ( Column1 **date** )|  
 |Default string literal format<br /><br /> (used for down-level client)|YYYY-MM-DD<br /><br /> For more information, see the "Backward Compatibility for Down-level Clients" section that follows.|  
 |Range|0001-01-01 through 9999-12-31 (1582-10-15 through 9999-12-31 for Informatica)<br /><br /> January 1, 1 CE through December 31, 9999 CE (October 15, 1582 CE through December 31, 9999 CE for Informatica)|  
 |Element ranges|YYYY is four digits from 0001 to 9999 that represent a year. For Informatica, YYYY is limited to the range 1582 to 9999.<br /><br /> MM is two digits from 01 to 12 that represent a month in the specified year.<br /><br /> DD is two digits from 01 to 31, depending on the month, that represent a day of the specified month.|  
@@ -66,7 +60,7 @@ The following tables show the valid string literal formats for the **date** data
 |------------------|-----------------|  
 |mon [dd][,] yyyy<br /><br /> mon dd[,] [yy]yy<br /><br /> mon yyyy [dd]<br /><br /> [dd] mon[,] yyyy<br /><br /> dd mon[,][yy]yy<br /><br /> dd [yy]yy mon<br /><br /> [dd] yyyy mon<br /><br /> yyyy mon [dd]<br /><br /> yyyy [dd] mon|**mon** represents the full month name or the month abbreviation given in the current language. Commas are optional and capitalization is ignored.<br /><br /> To avoid ambiguity, use four-digit years.<br /><br /> If the day is missing, the first day of the month is supplied.|  
   
-|ISO 8601|Descripton|  
+|ISO 8601|Description|  
 |--------------|----------------|  
 |YYYY-MM-DD<br /><br /> YYYYMMDD|Same as the SQL standard. This is the only format that is defined as an international standard.|  
   
@@ -80,10 +74,10 @@ The following tables show the valid string literal formats for the **date** data
   
 |W3C XML format|Description|  
 |--------------------|-----------------|  
-|yyyy-mm-ddTZD|Specifically supported for XML/SOAP usage.<br /><br /> TZD is the time zone designator (Z or +hh:mm or -hh:mm):<br /><br /> -   hh:mm represents the time zone offset. hh is two digits, ranging from 0 to 14, that represent the number of hours in the time zone offset.<br />-   MM is two digits, ranging from 0 to 59, that represent the number of additional minutes in the time zone offset.<br />-   + (plus) or – (minus) the mandatory sign of the time zone offset. This indicates that the time zone offset is added or subtracted from the Coordinated Universal Times (UTC) time to obtain the local time. The valid range of time zone offset is from -14:00 to +14:00.|  
+|yyyy-mm-ddTZD|Specifically supported for XML/SOAP usage.<br /><br /> TZD is the time zone designator (Z or +hh:mm or -hh:mm):<br /><br /> -   hh:mm represents the time zone offset. hh is two digits, ranging from 0 to 14, that represent the number of hours in the time zone offset.<br />-   MM is two digits, ranging from 0 to 59, that represent the number of additional minutes in the time zone offset.<br />-   + (plus) or - (minus) the mandatory sign of the time zone offset. This indicates that the time zone offset is added or subtracted from the Coordinated Universal Times (UTC) time to obtain the local time. The valid range of time zone offset is from -14:00 to +14:00.|  
   
 ## ANSI and ISO 8601 compliance  
-**date** complies with the ANSI SQL standard definition for the Gregorian calendar: "NOTE 85 - Datetime data types will allow dates in the Gregorian format to be stored in the date range 0001–01–01 CE through 9999–12–31 CE."
+**date** complies with the ANSI SQL standard definition for the Gregorian calendar: "NOTE 85 - Datetime data types will allow dates in the Gregorian format to be stored in the date range 0001-01-01 CE through 9999-12-31 CE."
   
 The default string literal format, which is used for down-level clients, complies with the SQL standard form which is defined as YYYY-MM-DD. This format is the same as the ISO 8601 definition for DATE.
   
@@ -101,73 +95,7 @@ Some down-level clients do not support the **time**, **date**, **datetime2** and
 |**datetimeoffset**|YYYY-MM-DD hh:mm:ss[.nnnnnnn] [+&#124;-]hh:mm|SQL_WVARCHAR or SQL_VARCHAR|DBTYPE_WSTRor DBTYPE_STR|Java.sql.String|String or SqString|  
   
 ## Converting date and time data
-When you convert to date and time data types, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] rejects all values it cannot recognize as dates or times. For information about using the CAST and CONVERT functions with date and time data, see [CAST and CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md).
-  
-When the conversion is to **time(n)**, the conversion fails, and error message 206 is raised: "Operand type clash: date is incompatible with time".
-  
-If the conversion is to **datetime**, the  date is copied and the time component is set to 00:00:00.000. The following code shows the results of converting a `date` value to a `datetime` value.  
-  
-```sql
-DECLARE @date date= '12-10-25';  
-DECLARE @datetime datetime= @date;  
-  
-SELECT @date AS '@date', @datetime AS '@datetime';  
-  
---Result  
---@date      @datetime  
------------- -----------------------  
---2025-12-10 2025-12-10 00:00:00.000  
---  
---(1 row(s) affected)  
-```  
-  
-In the case of conversion to **smalldatetime**, when the **date** value is in the range of a [smalldatetime](../../t-sql/data-types/smalldatetime-transact-sql.md), the date component is copied and the time component is set to 00:00:00. When the **date** value is outside the range of a **smalldatetime** value, error message 242 is raised: "The conversion of a **date** data type to a **smalldatetime** data type results in an out-of-range value;and the **smalldatetime** value is set to NULL. The following code shows the results of converting a `date` value to a `smalldatetime` value.
-  
-```sql
-DECLARE @date date= '1912-10-25';  
-DECLARE @smalldatetime smalldatetime = @date;  
-  
-SELECT @date AS '@date', @smalldatetime AS '@smalldatetime';  
-  
---Result  
---@date      @smalldatetime  
------------- -----------------------  
---1912-10-25 1912-10-25 00:00:00  
---  
---(1 row(s) affected)  
-```  
-  
-When the conversion is to **datetimeoffset(n)**, the date is copied, and the time is set to 00:00.0000000 +00:00. The following code shows the results of converting a `date` value to a `datetimeoffset(3)` value.
-  
-```sql
-DECLARE @date date = '1912-10-25';  
-DECLARE @datetimeoffset datetimeoffset(3) = @date;  
-  
-SELECT @date AS '@date', @datetimeoffset AS '@datetimeoffset';  
-  
---Result  
---@date      @datetimeoffset  
------------- ------------------------------  
---1912-10-25 1912-10-25 00:00:00.000 +00:00  
---  
---(1 row(s) affected)  
-```  
-  
-If the conversion is to **datetime2(n)**, the date component is copied, and the time component is set to 00:00:00.00 regardless of the value of (n). The following code shows the results of converting a `date` value to a `datetime2(3)` value.
-  
-```sql
-DECLARE @date date = '1912-10-25';  
-DECLARE @datetime2 datetime2(3) = @date;  
-  
-SELECT @date AS '@date', @datetime2 AS '@datetime2(3)';  
-  
---Result  
---@date      @datetime2(3)  
------------- -----------------------  
---1912-10-25 1912-10-25 00:00:00.00  
---  
---(1 row(s) affected)  
-```  
+When you convert to date and time data types, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] rejects all values it cannot recognize as dates or times. For information about using the CAST and CONVERT functions with date and time data, see [CAST and CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md).  
   
 ### Converting date to other date and time types
 This section describes what occurs when a **date** data type is converted to other date and time data types.

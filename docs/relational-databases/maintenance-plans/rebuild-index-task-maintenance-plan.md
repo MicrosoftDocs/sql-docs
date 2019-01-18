@@ -2,27 +2,20 @@
 title: "Rebuild Index Task (Maintenance Plan) | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/21/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "database-engine"
-ms.service: ""
-ms.component: "maintenance-plans"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: supportability
+ms.topic: conceptual
 f1_keywords: 
   - "reindex"
   - "sql13.swb.maint.reindex.f1"
 helpviewer_keywords: 
   - "Rebuild Index Task dialog box"
 ms.assetid: 33e2940b-139f-4563-b0cb-5683f08bd879
-caps.latest.revision: 42
-author: "MightyPen"
-ms.author: "genemi"
-manager: "craigg"
-ms.workload: "On Demand"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # Rebuild Index Task (Maintenance Plan)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -80,7 +73,7 @@ ms.workload: "On Demand"
  **Keep index online**  
  Use the `ONLINE` option which allows users to access the underlying table or clustered index data and any associated nonclustered indexes during index operations.  
   
-> [!NOTE]  
+> [!NOTE]
 >  Online index operations are not available in every edition of [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. For a list of features that are supported by the editions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], see [Features Supported by the Editions of SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md).  
   
  **Do not rebuild indexes | Rebuild indexes offline**  

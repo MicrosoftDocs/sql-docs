@@ -1,31 +1,14 @@
 ---
 title: "Supported Data Sources (SSAS - Multidimensional) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: analysis-services
-ms.prod_service: "analysis-services"
-ms.service: ""
-ms.component: ""
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
-  
-ms.component: multidimensional-tabular
-ms.component: data-mining
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "SQL Server Analysis Services, data sources"
-  - "data sources [Analysis Services], about data sources"
-  - "Analysis Services, data sources"
-  - "connections [Analysis Services]"
-  - "SSAS, data sources"
-ms.assetid: c97e0f8d-7ddd-4941-8b51-e7832f30fbbe
-caps.latest.revision: 69
-author: "Minewiskan"
-ms.author: "owend"
-manager: "kfile"
-ms.workload: "On Demand"
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: multidimensional-models
+ms.topic: conceptual
+ms.author: owend
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
 ---
 # Supported Data Sources (SSAS - Multidimensional)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -54,7 +37,7 @@ ms.workload: "On Demand"
  ** Some features require a SQL Server relational database that runs on-premises. Specifically, writeback, and ROLAP storage require that the underlying data source is a SQL Server relational database.  
   
 ## See Also  
- [Data Sources Supported &#40;SSAS Tabular&#41;](../../analysis-services/tabular-models/data-sources-supported-ssas-tabular.md)   
+ [Data Sources Supported](../../analysis-services/tabular-models/data-sources-supported-ssas-tabular.md)   
  [Data Sources in Multidimensional Models](../../analysis-services/multidimensional-models/data-sources-in-multidimensional-models.md)   
  [Data Source Views in Multidimensional Models](../../analysis-services/multidimensional-models/data-source-views-in-multidimensional-models.md)  
   

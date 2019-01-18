@@ -1,26 +1,15 @@
 ---
 title: "Accessing the WMI Provider Programmatically | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/02/2016"
+ms.date: 11/02/2016
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
-ms.service: ""
-ms.component: "reporting-services"
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
+ms.technology: reporting-services
 
 
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-applies_to: 
-  - "SQL Server 2016 Preview"
+ms.topic: reference
 ms.assetid: 67bd266b-1484-4863-8152-060a993420a9
-caps.latest.revision: 7
-author: "markingmyname"
-ms.author: "maghan"
-manager: "kfile"
-ms.workload: "Inactive"
+author: markingmyname
+ms.author: maghan
 ---
 # Accessing the WMI Provider Programmatically
 

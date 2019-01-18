@@ -2,16 +2,11 @@
 title: "Specify Multiple Search Conditions for Multiple Columns | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "sql-tools"
-ms.service: ""
-ms.component: "ssms-visual-db"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "tools-ssms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: ssms
+ms.topic: conceptual
 helpviewer_keywords: 
   - "search criteria [SQL Server], multiple conditions"
   - "multiple search conditions"
@@ -19,11 +14,10 @@ helpviewer_keywords:
   - "OR operator"
   - "AND, Criteria pane"
 ms.assetid: 06617729-0d0b-4da2-9890-b7e2f5cdbc7b
-caps.latest.revision: 4
 author: "stevestein"
 ms.author: "sstein"
-manager: "jhubbard"
-ms.workload: "Inactive"
+manager: craigg
+
 ---
 # Specify Multiple Search Conditions for Multiple Columns (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

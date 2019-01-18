@@ -2,22 +2,15 @@
 title: "catalog.create_execution (SSISDB Database) | Microsoft Docs"
 ms.custom: ""
 ms.date: "12/16/2016"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "integration-services"
-ms.service: ""
-ms.component: "system-stored-procedures"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
+ms.technology: integration-services
 ms.topic: "language-reference"
 ms.assetid: 45d0c2f6-1f38-445f-ac06-e2a01f6ac600
-caps.latest.revision: 18
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
-ms.workload: "On Demand"
+manager: craigg
 ---
 # catalog.create_execution (SSISDB Database)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -61,9 +54,9 @@ catalog.create_execution [@folder_name = folder_name
 [@useanyworker =] *useanyworker*  
 Indicate whether any Scale Out Worker is allowed to do the execution.
 
--   Use the value of 1 to execute the package with any Scale Out Worker. When you set `@useanyworker` to true, any worker whose maximum task count (as specified in the worker configuration file) is not yet reached is available to run the package.
+-   Use the value of 1 to execute the package with any Scale Out Worker. When you set `@useanyworker` to true, any worker whose maximum task count (as specified in the worker configuration file) is not yet reached is available to run the package. For info about the worker configuration file, see [Integration Services (SSIS) Scale Out Worker](../scale-out/integration-services-ssis-scale-out-worker.md).
 
--   Use the value of 0 to indicate that not all Scale Out Workers are allowed to execute the package. When you set `@useanyworker` to false, you have to specify the workers that are allowed to run the package by using Scale Out Manager or by calling the stored procedure `[catalog].[add_execution_worker]`.
+-   Use the value of 0 to indicate that not all Scale Out Workers are allowed to execute the package. When you set `@useanyworker` to false, you have to specify the workers that are allowed to run the package by using Scale Out Manager or by calling the stored procedure `[catalog].[add_execution_worker]`. If you specify a worker that's already running another package, the worker finishes running the current package before it requests another execution.
 
 This parameter is optional. If not specified, its value is set to 1. The *useanyworker* is **bit**. 
   

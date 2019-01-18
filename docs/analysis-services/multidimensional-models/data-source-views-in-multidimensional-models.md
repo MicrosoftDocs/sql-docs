@@ -1,33 +1,14 @@
 ---
 title: "Data Source Views in Multidimensional Models | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: analysis-services
-ms.prod_service: "analysis-services"
-ms.service: ""
-ms.component: ""
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
-  
-ms.component: multidimensional-tabular
-ms.component: data-mining
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "data source views [Analysis Services]"
-  - "data source views [Analysis Services], about data source views"
-  - "SQL Server Analysis Services, data source views"
-  - "data source views [Analysis Services], multiple"
-  - "Analysis Services, data source views"
-  - "multiple data source views"
-  - "SSAS, data source views"
-ms.assetid: 4c12376f-4fc2-492b-9a00-93eec34571ed
-caps.latest.revision: 36
-author: "Minewiskan"
-ms.author: "owend"
-manager: "kfile"
-ms.workload: "On Demand"
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: multidimensional-models
+ms.topic: conceptual
+ms.author: owend
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
 ---
 # Data Source Views in Multidimensional Models
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]

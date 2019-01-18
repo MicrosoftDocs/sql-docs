@@ -1,31 +1,27 @@
 ---
-title: Configure RHEL Cluster for SQL Server Availability Group | Microsoft Docs
-description: 
+title: Configure RHEL Cluster for SQL Server Availability Group
+titleSuffix: SQL Server
+description: Learn about availability group clusters when running Red Hat Enterprise Linux (RHEL)
 author: MikeRayMSFT 
 ms.author: mikeray 
-manager: jhubbard
+manager: craigg
 ms.date: 06/14/2017
-ms.topic: article
-ms.prod: "sql-non-specified"
-ms.prod_service: "database-engine"
-ms.service: ""
-ms.component: sql-linux
-ms.suite: "sql"
-ms.custom: ""
-ms.technology: database-engine
+ms.topic: conceptual
+ms.prod: sql
+ms.custom: "sql-linux, seodec18"
+ms.technology: linux
 ms.assetid: b7102919-878b-4c08-a8c3-8500b7b42397
-ms.workload: "Inactive"
 ---
 # Configure RHEL Cluster for SQL Server Availability Group
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-This document explains how to create a three-node availability group cluster for SQL Server on Red Hat Enterprise Linux. For high availability, an availability group on Linux requires three nodes - see [High availability and data protection for availability group configurations](sql-server-linux-availability-group-ha.md). The clustering layer is based on Red Hat Enterprise Linux (RHEL) [HA add-on](https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/6/pdf/High_Availability_Add-On_Overview/Red_Hat_Enterprise_Linux-6-High_Availability_Add-On_Overview-en-US.pdf) built on top of [Pacemaker](http://clusterlabs.org/). 
+This document explains how to create a three-node availability group cluster for SQL Server on Red Hat Enterprise Linux. For high availability, an availability group on Linux requires three nodes - see [High availability and data protection for availability group configurations](sql-server-linux-availability-group-ha.md). The clustering layer is based on Red Hat Enterprise Linux (RHEL) [HA add-on](https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/6/pdf/High_Availability_Add-On_Overview/Red_Hat_Enterprise_Linux-6-High_Availability_Add-On_Overview-en-US.pdf) built on top of [Pacemaker](https://clusterlabs.org/). 
 
 > [!NOTE] 
 > Access to Red Hat full documentation requires a valid subscription. 
 
-For more details on cluster configuration, resource agents options, and management, visit [RHEL reference documentation](http://access.redhat.com/documentation/Red_Hat_Enterprise_Linux/7/html/High_Availability_Add-On_Reference/index.html).
+For more information on cluster configuration, resource agents options, and management, visit [RHEL reference documentation](https://access.redhat.com/documentation/Red_Hat_Enterprise_Linux/7/html/High_Availability_Add-On_Reference/index.html).
 
 > [!NOTE] 
 > SQL Server is not as tightly integrated with Pacemaker on Linux as it is with Windows Server failover clustering. A SQL Server instance is not aware of the cluster. Pacemaker provides cluster resource orchestration. Also, the virtual network name is specific to Windows Server failover clustering - there is no equivalent in Pacemaker. Availability group dynamic management views (DMVs) that query cluster information return empty rows on Pacemaker clusters. To create a listener for transparent reconnection after failover, manually register the listener name in DNS with the IP used to create the virtual IP resource. 
@@ -57,7 +53,7 @@ To configure high availability for RHEL, enable the high availability subscripti
 
 ### Enable the high availability subscription for RHEL
 
-Each node in the cluster must have an appropriate subscription for RHEL and the High Availability Add on. Review the requirements at [How to install High Availability cluster packages in Red Hat Enterprise Linux](http://access.redhat.com/solutions/45930). Follow these steps to configure the subscription and repos:
+Each node in the cluster must have an appropriate subscription for RHEL and the High Availability Add on. Review the requirements at [How to install High Availability cluster packages in Red Hat Enterprise Linux](https://access.redhat.com/solutions/45930). Follow these steps to configure the subscription and repos:
 
 1. Register the system.
 
@@ -87,7 +83,7 @@ Each node in the cluster must have an appropriate subscription for RHEL and the 
    sudo subscription-manager repos --enable=rhel-ha-for-rhel-7-server-rpms
    ```
 
-For more information, see [Pacemaker – The Open Source, High Availability Cluster](http://www.opensourcerers.org/pacemaker-the-open-source-high-availability-cluster/). 
+For more information, see [Pacemaker - The Open Source, High Availability Cluster](https://www.opensourcerers.org/pacemaker-the-open-source-high-availability-cluster/). 
 
 After you have configured the subscription, complete the following steps to configure Pacemaker:
 
@@ -109,9 +105,9 @@ Node level fencing ensures that a node does not run any resources. This is done 
 
 For information about STONITH, and fencing, see the following articles:
 
-* [Pacemaker Clusters from Scratch](http://clusterlabs.org/doc/en-US/Pacemaker/1.1-plugin/html/Clusters_from_Scratch/ch05.html)
-* [Fencing and STONITH](http://clusterlabs.org/doc/crm_fencing.html)
-* [Red Hat High Availability Add-On with Pacemaker: Fencing](http://access.redhat.com/documentation/Red_Hat_Enterprise_Linux/6/html/Configuring_the_Red_Hat_High_Availability_Add-On_with_Pacemaker/ch-fencing-HAAR.html)
+* [Pacemaker Clusters from Scratch](https://clusterlabs.org/doc/en-US/Pacemaker/1.1-plugin/html/Clusters_from_Scratch/ch05.html)
+* [Fencing and STONITH](https://clusterlabs.org/doc/crm_fencing.html)
+* [Red Hat High Availability Add-On with Pacemaker: Fencing](https://access.redhat.com/documentation/Red_Hat_Enterprise_Linux/6/html/Configuring_the_Red_Hat_High_Availability_Add-On_with_Pacemaker/ch-fencing-HAAR.html)
 
 Because the node level fencing configuration depends heavily on your environment, disable it for this tutorial (it can be configured later). The following script disables node level fencing:
 
@@ -122,20 +118,34 @@ sudo pcs property set stonith-enabled=false
 >[!IMPORTANT]
 >Disabling STONITH is just for testing purposes. If you plan to use Pacemaker in a production environment, you should plan a STONITH implementation depending on your environment and keep it enabled. RHEL does not provide fencing agents for any cloud environments (including Azure) or Hyper-V. Consequentially, the cluster vendor does not offer support for running production clusters in these environments. We are working on a solution for this gap that will be available in future releases.
 
-## Set cluster property start-failure-is-fatal to false
+## Set cluster property cluster-recheck-interval
 
-`start-failure-is-fatal` indicates whether a failure to start a resource on a node prevents further start attempts on that node. When set to `false`, the cluster decides whether to try starting on the same node again based on the resource's current failure count and migration threshold. After failover occurs, Pacemaker retries starting the availability group resource on the former primary once the SQL instance is available. Pacemaker demotes the replica to secondary and it automatically rejoins the availability group. 
+`cluster-recheck-interval` indicates the polling interval at which the cluster checks for changes in the resource parameters, constraints or other cluster options. If a replica goes down, the cluster tries to restart the replica at an interval that is bound by the `failure-timeout` value and the `cluster-recheck-interval` value. For example, if `failure-timeout` is set to 60 seconds and `cluster-recheck-interval` is set to 120 seconds, the restart is tried at an interval that is greater than 60 seconds but less than 120 seconds. We recommend that you set failure-timeout to 60s and cluster-recheck-interval to a value that is greater than 60 seconds. Setting cluster-recheck-interval to a small value is not recommended.
 
-To update the property value to `false` run:
+To update the property value to `2 minutes` run:
 
 ```bash
-sudo pcs property set start-failure-is-fatal=false
+sudo pcs property set cluster-recheck-interval=2min
 ```
 
->[!WARNING]
->After an automatic failover, when `start-failure-is-fatal = true` the resource manager will attempt to start the resource. If it fails on the first attempt, manually run `pcs resource cleanup <resourceName>` to clean up the resource failure count and reset the configuration.
+> [!IMPORTANT] 
+> All distributions (including RHEL 7.3 and 7.4) that use the latest available Pacemaker package 1.1.18-11.el7 introduce a behavior change for the start-failure-is-fatal cluster setting when its value is false. This change affects the failover workflow. If a primary replica experiences an outage, the cluster is expected to failover to one of the available secondary replicas. Instead, users will notice that the cluster keeps trying to start the failed primary replica. If that primary never comes online (because of a permanent outage), the cluster never fails over to another available secondary replica. Because of this change, a previously recommended configuration to set start-failure-is-fatal is no longer valid and the setting needs to be reverted back to its default value of `true`. 
+> Additionally, the AG resource needs to be updated to include the `failover-timeout` property. 
 
-For information on Pacemaker cluster properties, see [Pacemaker Clusters Properties](http://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/7/html/High_Availability_Add-On_Reference/ch-clusteropts-HAAR.html).
+To update the property value to `true` run:
+
+```bash
+sudo pcs property set start-failure-is-fatal=true
+```
+
+To update the `ag1` resource property `failure-timeout` to `60s` run:
+
+```bash
+pcs resource update ag1 meta failure-timeout=60s
+```
+
+
+For information on Pacemaker cluster properties, see [Pacemaker Clusters Properties](https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/7/html/High_Availability_Add-On_Reference/ch-clusteropts-HAAR.html).
 
 ## Create a SQL Server login for Pacemaker
 
@@ -146,8 +156,8 @@ For information on Pacemaker cluster properties, see [Pacemaker Clusters Propert
 To create the availability group resource, use `pcs resource create` command and set the resource properties. The following command creates a `ocf:mssql:ag` master/slave type resource for availability group with name `ag1`.
 
 ```bash
-sudo pcs resource create ag_cluster ocf:mssql:ag ag_name=ag1 master notify=true
-```
+sudo pcs resource create ag_cluster ocf:mssql:ag ag_name=ag1 meta failure-timeout=30s master notify=true
+``` 
 
 [!INCLUDE [required-synchronized-secondaries-default](../includes/ss-linux-cluster-required-synchronized-secondaries-default.md)]
 
@@ -155,10 +165,10 @@ sudo pcs resource create ag_cluster ocf:mssql:ag ag_name=ag1 master notify=true
 
 ## Create virtual IP resource
 
-To create the virtual IP address resource, run the following command on one node. Use an available static IP address from the network. Replace the IP address between `**<10.128.16.240>**` with a valid IP address.
+To create the virtual IP address resource, run the following command on one node. Use an available static IP address from the network. Replace the IP address between `<10.128.16.240>` with a valid IP address.
 
 ```bash
-sudo pcs resource create virtualip ocf:heartbeat:IPaddr2 ip=**<10.128.16.240>**
+sudo pcs resource create virtualip ocf:heartbeat:IPaddr2 ip=<10.128.16.240>
 ```
 
 There is no virtual server name equivalent in Pacemaker. To use a connection string that points to a string server name instead of an IP address, register the virtual IP resource address and desired virtual server name in DNS. For DR configurations, register the desired virtual server name and IP address with the DNS servers on both primary and DR site.

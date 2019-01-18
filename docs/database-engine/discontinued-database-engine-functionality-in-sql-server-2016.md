@@ -2,16 +2,11 @@
 title: "Discontinued Database Engine Functionality in SQL Server 2016 | Microsoft Docs"
 ms.custom: ""
 ms.date: "02/02/2017"
-ms.prod: "sql-non-specified"
-ms.prod_service: "database-engine"
-ms.service: ""
-ms.component: "database-engine"
+ms.prod: sql
+ms.prod_service: high-availability
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: release-landing
+ms.topic: conceptual
 helpviewer_keywords: 
   - "VIA protocol"
   - "unsupported features [SQL Server]"
@@ -36,11 +31,9 @@ helpviewer_keywords:
   - "FASTFIRSTROW hint"
   - "SET DISABLE_DEF_CNST_CHK"
 ms.assetid: d686cdf0-d11d-4dba-9ec8-de1a5f189f25
-caps.latest.revision: 100
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-ms.workload: "On Demand"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ---
 # Discontinued Database Engine Functionality in SQL Server 2016
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -57,11 +50,11 @@ ms.workload: "On Demand"
   
 ## Previous Versions  
   
--   [Discontinued Database Engine Functionality in SQL Server 2014](https://msdn.microsoft.com/library/ms144262\(v=sql.120\))  
+-   [Discontinued Database Engine Functionality in SQL Server 2014](discontinued-database-engine-functionality-in-sql-server-2016.md))  
   
--   [Discontinued Database Engine Functionality in SQL Server 2012](https://msdn.microsoft.com/library/ms144262\(v=sql.110\))  
+-   [Discontinued Database Engine Functionality in SQL Server 2012](discontinued-database-engine-functionality-in-sql-server-2016.md))  
   
--   [Discontinued Database Engine Functionality in SQL Server 2008](https://msdn.microsoft.com/library/ms144262\(v=sql.100\))  
+-   [Discontinued Database Engine Functionality in SQL Server 2008](discontinued-database-engine-functionality-in-sql-server-2016.md))  
   
 ## See Also  
  [Deprecated Database Engine Features in SQL Server 2016](../database-engine/deprecated-database-engine-features-in-sql-server-2016.md)   

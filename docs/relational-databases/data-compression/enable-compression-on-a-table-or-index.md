@@ -2,15 +2,11 @@
 title: "Enable Compression on a Table or Index | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: sql-non-specified
+ms.prod: sql  
 ms.reviewer: ""
-ms.suite: "SQL"
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: data-compression
-ms.technology: 
-  - "dbe-data-compression"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: performance
+ms.topic: conceptual
 f1_keywords: 
   - "sql13.swb.compwiz.compressiontype.f1"
   - "sql13.swb.compwiz.outputoptions.f1"
@@ -24,11 +20,10 @@ helpviewer_keywords:
   - "data compression wizard"
   - "compression [SQL Server], enable"
 ms.assetid: b7442cff-e616-475a-9c5a-5a765089e5f2
-caps.latest.revision: 10
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-ms.workload: "On Demand"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Enable Compression on a Table or Index
 
@@ -73,7 +68,7 @@ ms.workload: "On Demand"
   
 2.  To compress an index, expand the table that contains the index that you want to compress and then expand the **Indexes** folder.  
   
-3.  Right-click the table or index to compress, point to **Storage** and select **Manage Compression…**.  
+3.  Right-click the table or index to compress, point to **Storage** and select **Manage Compression...**.  
   
 4.  In the Data Compression Wizard, on the **Welcome to the Data Compression Wizard** page, click **Next**.  
   
@@ -120,7 +115,7 @@ ms.workload: "On Demand"
   
      If you select **Schedule**, click **Change schedule**.  
   
-    1.  In the **New Job Schedule** dialog box, in the **Name** box, enter the job schedule’s name.  
+    1.  In the **New Job Schedule** dialog box, in the **Name** box, enter the job schedule's name.  
   
     2.  On the **Schedule type** list, select the type of schedule:  
   
@@ -144,15 +139,15 @@ ms.workload: "On Demand"
   
             -   If you select **Monthly**, select either **Day** or **The**.  
   
-                -   If you select **Day**, enter both the date of the month you want the job schedule to run and how often the job schedule repeats in months. For example, if you want the job schedule to run on the 15th day of the month every other month, select **Day** and enter “15” in the first box and “2” in the second box. Please note that the largest number allowed in the second box is “99”.  
+                -   If you select **Day**, enter both the date of the month you want the job schedule to run and how often the job schedule repeats in months. For example, if you want the job schedule to run on the 15th day of the month every other month, select **Day** and enter "15" in the first box and "2" in the second box. Please note that the largest number allowed in the second box is "99".  
   
-                -   If you select **The**, select the specific day of the week within the month that you want the job schedule to run and how often the job schedule repeats in months. For example, if you want the job schedule to run on the last weekday of the month every other month, select **Day**, select **last** from the first list and **weekday** from the second list, and then enter “2” in the last box. You can also select **first**, **second**, **third**, or **fourth**, as well as specific weekdays (for example: Sunday or Wednesday) from the first two lists. Please note that the largest number allowed in the last box is “99”.  
+                -   If you select **The**, select the specific day of the week within the month that you want the job schedule to run and how often the job schedule repeats in months. For example, if you want the job schedule to run on the last weekday of the month every other month, select **Day**, select **last** from the first list and **weekday** from the second list, and then enter "2" in the last box. You can also select **first**, **second**, **third**, or **fourth**, as well as specific weekdays (for example: Sunday or Wednesday) from the first two lists. Please note that the largest number allowed in the last box is "99".  
   
         2.  Under **Daily frequency**, specify how often the job schedule repeats on the day the job schedule runs:  
   
             -   If you select **Occurs once at**, enter the specific time of day when the job schedule should run in the **Occurs once at** box. Enter the hour, minute, and second of the day, as well as AM or PM.  
   
-            -   If you select **Occurs every**, specify how often the job schedule runs during the day chosen under **Frequency**. For example, if you want the job schedule to repeat every 2 hours during the day that the job schedule is run, select **Occurs every**, enter “2” in the first box, and then select **hour(s)** from the list. From this list you can also select **minute(s)** and **second(s)**. Please note that the largest number allowed in the first box is “100”.  
+            -   If you select **Occurs every**, specify how often the job schedule runs during the day chosen under **Frequency**. For example, if you want the job schedule to repeat every 2 hours during the day that the job schedule is run, select **Occurs every**, enter "2" in the first box, and then select **hour(s)** from the list. From this list you can also select **minute(s)** and **second(s)**. Please note that the largest number allowed in the first box is "100".  
   
                  In the **Starting at** box, enter the time that the job schedule should start running. In the **Ending at** box, enter the time that the job schedule should stop repeating. Enter the hour, minute, and second of the day, as well as AM or PM.  
   
@@ -194,10 +189,10 @@ ms.workload: "On Demand"
      Opens the **Save Report As** dialog box.  
   
      **Copy Report to Clipboard**  
-     Copies the results of the wizard’s progress report to the Clipboard.  
+     Copies the results of the wizard's progress report to the Clipboard.  
   
      **Send Report as Email**  
-     Copies the results of the wizard’s progress report into an email message.  
+     Copies the results of the wizard's progress report into an email message.  
   
      When complete, click **Close**.  
   
@@ -227,7 +222,7 @@ ms.workload: "On Demand"
   
 2.  On the Standard bar, click **New Query**.  
   
-3.  Copy and paste the following example into the query window and click **Execute**. The example first queries the `sys.indexes` catalog view to return the name and `index_id` for each index on the `Production.TransactionHistory` table. It then executes the the stored procedure `sp_estimate_data_compression_savings` to return the estimated size of the specified index ID if it were to use the PAGE compression setting. Finally, the example rebuilds index ID 2 (`IX_TransactionHistory_ProductID`), specifying PAGE compression.  
+3.  Copy and paste the following example into the query window and click **Execute**. The example first queries the `sys.indexes` catalog view to return the name and `index_id` for each index on the `Production.TransactionHistory` table. It then executes the stored procedure `sp_estimate_data_compression_savings` to return the estimated size of the specified index ID if it were to use the PAGE compression setting. Finally, the example rebuilds index ID 2 (`IX_TransactionHistory_ProductID`), specifying PAGE compression.  
   
     ```  
     USE AdventureWorks2012;   

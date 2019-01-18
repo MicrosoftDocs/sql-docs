@@ -2,29 +2,20 @@
 title: "sp_addmergefilter (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "database-engine"
-ms.service: ""
-ms.component: "system-stored-procedures"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
+ms.technology: replication
 ms.topic: "language-reference"
-applies_to: 
-  - "SQL Server"
 f1_keywords: 
   - "sp_addmergefilter"
   - "sp_addmergefilter_TSQL"
 helpviewer_keywords: 
   - "sp_addmergefilter"
 ms.assetid: 4c118cb1-2008-44e2-a797-34b7dc34d6b1
-caps.latest.revision: 49
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "craigg"
-ms.workload: "Inactive"
+author: stevestein
+ms.author: sstein
+manager: craigg
 ---
 # sp_addmergefilter (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,16 +40,16 @@ sp_addmergefilter [ @publication = ] 'publication'
 ```  
   
 ## Arguments  
- [ **@publication=** ] **'***publication***'**  
+ [ **@publication=** ] **'**_publication_**'**  
  Is the name of the publication in which the merge filter is being added. *publication* is **sysname**, with no default.  
   
- [ **@article=** ] **'***article***'**  
+ [ **@article=** ] **'**_article_**'**  
  Is the name of the article on which the merge filter is being added. *article* is **sysname**, with no default.  
   
- [ **@filtername=** ] **'***filtername***'**  
+ [ **@filtername=** ] **'**_filtername_**'**  
  Is the name of the filter. *filtername* is a required parameter. *filtername*is **sysname**, with no default.  
   
- [ **@join_articlename=** ] **'***join_articlename***'**  
+ [ **@join_articlename=** ] **'**_join_articlename_**'**  
  Is the parent article to which the child article, specified by *article*, must be joined using the join clause specified by *join_filterclause*, in order to determine the rows in the child article that meet the filter criterion of the merge filter. *join_articlename* is **sysname**, with no default. The article must be in the publication given by *publication*.  
   
  [ **@join_filterclause=** ] *join_filterclause*  

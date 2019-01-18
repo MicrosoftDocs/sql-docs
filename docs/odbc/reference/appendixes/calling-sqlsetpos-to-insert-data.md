@@ -2,26 +2,19 @@
 title: "Calling SQLSetPos to Insert Data | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
-ms.prod_service: "drivers"
-ms.service: ""
-ms.component: "odbc"
+ms.prod: sql
+ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "drivers"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: connectivity
+ms.topic: conceptual
 helpviewer_keywords: 
   - "compatibility [ODBC], SQLSetPos"
   - "SQLSetPos function [ODBC], inserting data"
   - "backward compatibility [ODBC], SqlSetPos"
 ms.assetid: 03e5c4d0-2bb3-4649-9781-89cab73f78eb
-caps.latest.revision: 5
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
-ms.workload: "Inactive"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # Calling SQLSetPos to Insert Data
 When an ODBC 2.*x* application working with an ODBC 3*.x* driver calls **SQLSetPos** with an *Operation* argument of SQL_ADD, the Driver Manager does not map this call to **SQLBulkOperations**. If an ODBC 3*.x* driver should work with an application that calls **SQLSetPos** with SQL_ADD, the driver should support that operation.  

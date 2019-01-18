@@ -2,15 +2,10 @@
 title: "+ (Addition) (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/16/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
-ms.service: ""
-ms.component: "t-sql|language-elements"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: t-sql
 ms.topic: "language-reference"
 f1_keywords: 
   - "add"
@@ -26,11 +21,10 @@ helpviewer_keywords:
   - "plus sign (+)"
   - "add operator (+)"
 ms.assetid: 4ba8baac-5f07-432c-87c5-d23e7011da55
-caps.latest.revision: 39
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-ms.workload: "On Demand"
+author: "douglaslMS"
+ms.author: "douglasl"
+manager: craigg
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 
 # + (Addition) (Transact-SQL)
@@ -76,7 +70,7 @@ GO
   
 SET NOCOUNT ON  
 DECLARE @startdate datetime, @adddays int;  
-SET @startdate = ''January 10, 1900 12:00 AM';  
+SET @startdate = 'January 10, 1900 12:00 AM';  
 SET @adddays = 5;  
 SET NOCOUNT OFF;  
 SELECT @startdate + 1.25 AS 'Start Date',   

@@ -1,26 +1,19 @@
 ---
 title: "Create, Construct, and Query geometry Instances | Microsoft Docs"
-ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.service: ""
-ms.component: "spatial"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: 
-  - "dbe-spatial"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "planar spatial data [SQL Server], getting started"
   - "geometry data type [SQL Server], getting started"
 ms.assetid: c6b5c852-37d2-48d0-a8ad-e43bb80d6514
-caps.latest.revision: 27
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-ms.workload: "On Demand"
+author: "douglaslMS"
+ms.author: "douglasl"
+manager: craigg
+monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Create, Construct, and Query geometry Instances
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -32,11 +25,11 @@ ms.workload: "On Demand"
   
  For more information on OGC specifications, see the following:  
   
--   [OGC Specifications, Simple Feature Access Part 1 - Common Architecture](http://go.microsoft.com/fwlink/?LinkId=93628)  
+-   [OGC Specifications, Simple Feature Access Part 1 - Common Architecture](https://go.microsoft.com/fwlink/?LinkId=93628)  
   
--   [OGC Specifications, Simple Feature Access Part 2 – SQL Options](http://go.microsoft.com/fwlink/?LinkId=93629)  
+-   [OGC Specifications, Simple Feature Access Part 2 - SQL Options](https://go.microsoft.com/fwlink/?LinkId=93629)  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] supports a subset of the existing GML 3.1 standard which is defined in the following schema: [http://schemas.microsoft.com/sqlserver/profiles/gml/SpatialGML.xsd](http://go.microsoft.com/fwlink/?LinkId=230959).  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] supports a subset of the existing GML 3.1 standard which is defined in the following schema: [https://schemas.microsoft.com/sqlserver/profiles/gml/SpatialGML.xsd](https://go.microsoft.com/fwlink/?LinkId=230959).  
   
 ##  <a name="creating"></a> Creating or constructing a new geometry instance  
   
@@ -220,7 +213,7 @@ ms.workload: "On Demand"
   
   
 ###  <a name="empty"></a> Empty  
- An *empty***geometry** instance does not have any points. The length of empty **LineString, CircularString**, **CompoundCurve**, and **MultiLineString** instances is zero. The area of empty **Polygon**, **CurvePolygon**, and **MultiPolygon** instances is 0.  
+ An _empty_**geometry** instance does not have any points. The length of empty **LineString, CircularString**, **CompoundCurve**, and **MultiLineString** instances is zero. The area of empty **Polygon**, **CurvePolygon**, and **MultiPolygon** instances is 0.  
   
  **To determine if an instance is empty**  
  [STIsEmpty](../../t-sql/spatial-geometry/stisempty-geometry-data-type.md).  
@@ -249,7 +242,7 @@ ms.workload: "On Demand"
   
 -   **LineString** and **MultiLineString** boundaries are formed by the start points and end points, removing those that occur an even number of times.  
   
-```  
+```sql  
 DECLARE @g geometry;  
 SET @g = geometry::Parse('MULTILINESTRING((0 1, 0 0, 1 0, 0 1), (1 1, 1 0))');  
 SELECT @g.STBoundary().ToString();  
@@ -257,7 +250,7 @@ SELECT @g.STBoundary().ToString();
   
  The boundary of a **Polygon** or **MultiPolygon** instance is the set of its rings.  
   
-```  
+```sql  
 DECLARE @g geometry;  
 SET @g = geometry::Parse('POLYGON((0 0, 3 0, 3 3, 0 3, 0 0), (1 1, 1 2, 2 2, 2 1, 1 1))');  
 SELECT @g.STBoundary().ToString();  
@@ -265,17 +258,15 @@ SELECT @g.STBoundary().ToString();
   
  **To return the boundary of an instance**  
  [STBoundary](../../t-sql/spatial-geometry/stboundary-geometry-data-type.md)  
-  
-  
+   
 ###  <a name="envelope"></a> Envelope  
  The *envelope* of a **geometry** instance, also known as the *bounding box*, is the axis-aligned rectangle formed by the minimum and maximum (X,Y) coordinates of the instance.  
   
  **To return the envelope of an instance**  
  [STEnvelope](../../t-sql/spatial-geometry/stenvelope-geometry-data-type.md)  
   
-  
 ###  <a name="closure"></a> Closure  
- A *closed***geometry** instance is a figure whose start points and end points are the same. **Polygon** instances are considered closed. **Point** instances are not closed.  
+ A _closed_**geometry** instance is a figure whose start points and end points are the same. **Polygon** instances are considered closed. **Point** instances are not closed.  
   
  A ring is a simple, closed **LineString** instance.  
   
@@ -301,8 +292,8 @@ SELECT @g.STBoundary().ToString();
  **To set or return the SRID of an instance**  
  [STSrid](../../t-sql/spatial-geometry/stsrid-geometry-data-type.md)  
   
- This property can be modified.  
-  
+> [!NOTE]
+> This property can be modified.  
   
 ##  <a name="rel"></a> Determining Relationships between geometry Instances  
  The **geometry** data type provides many built-in methods you can use to determine relationships between two **geometry** instances.  
@@ -340,47 +331,48 @@ SELECT @g.STBoundary().ToString();
  **To determine the shortest distance between points in two geometries**  
  [STDistance](../../t-sql/spatial-geometry/stdistance-geometry-data-type.md)  
   
-  
 ##  <a name="defaultsrid"></a> geometry Instances Default to Zero SRID  
  The default SRID for **geometry** instances in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is 0. With **geometry** spatial data, the specific SRID of the spatial instance is not required to perform calculations; thus, instances can reside in undefined planar space. To indicate undefined planar space in the calculations of **geometry** data type methods, the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] uses SRID 0.  
   
 ##  <a name="examples"></a> Examples  
- The following two examples show how to add and query geometry data.  
+The following two examples show how to add and query geometry data.  
   
--   The first example creates a table with an identity column and a `geometry` column `GeomCol1`. A third column renders the `geometry` column into its Open Geospatial Consortium (OGC) Well-Known Text (WKT) representation, and uses the `STAsText()` method. Two rows are then inserted: one row contains a `LineString` instance of `geometry`, and one row contains a `Polygon` instance.  
+### Example A.
+This example creates a table with an identity column and a `geometry` column `GeomCol1`. A third column renders the `geometry` column into its Open Geospatial Consortium (OGC) Well-Known Text (WKT) representation, and uses the `STAsText()` method. Two rows are then inserted: one row contains a `LineString` instance of `geometry`, and one row contains a `Polygon` instance.  
   
-    ```  
-    IF OBJECT_ID ( 'dbo.SpatialTable', 'U' ) IS NOT NULL   
-        DROP TABLE dbo.SpatialTable;  
-    GO  
+```sql  
+IF OBJECT_ID ( 'dbo.SpatialTable', 'U' ) IS NOT NULL   
+DROP TABLE dbo.SpatialTable;  
+GO  
+
+CREATE TABLE SpatialTable   
+  ( id int IDENTITY (1,1),  
+    GeomCol1 geometry,   
+    GeomCol2 AS GeomCol1.STAsText() 
+  );  
+GO  
+
+INSERT INTO SpatialTable (GeomCol1)  
+VALUES (geometry::STGeomFromText('LINESTRING (100 100, 20 180, 180 180)', 0));  
+
+INSERT INTO SpatialTable (GeomCol1)  
+VALUES (geometry::STGeomFromText('POLYGON ((0 0, 150 0, 150 150, 0 150, 0 0))', 0));  
+GO  
+```  
   
-    CREATE TABLE SpatialTable   
-        ( id int IDENTITY (1,1),  
-        GeomCol1 geometry,   
-        GeomCol2 AS GeomCol1.STAsText() );  
-    GO  
+### Example B.
+This example uses the `STIntersection()` method to return the points where the two previously inserted `geometry` instances intersect.  
   
-    INSERT INTO SpatialTable (GeomCol1)  
-    VALUES (geometry::STGeomFromText('LINESTRING (100 100, 20 180, 180 180)', 0));  
-  
-    INSERT INTO SpatialTable (GeomCol1)  
-    VALUES (geometry::STGeomFromText('POLYGON ((0 0, 150 0, 150 150, 0 150, 0 0))', 0));  
-    GO  
-    ```  
-  
--   The second example uses the `STIntersection()` method to return the points where the two previously inserted `geometry` instances intersect.  
-  
-    ```  
-    DECLARE @geom1 geometry;  
-    DECLARE @geom2 geometry;  
-    DECLARE @result geometry;  
-  
-    SELECT @geom1 = GeomCol1 FROM SpatialTable WHERE id = 1;  
-    SELECT @geom2 = GeomCol1 FROM SpatialTable WHERE id = 2;  
-    SELECT @result = @geom1.STIntersection(@geom2);  
-    SELECT @result.STAsText();  
-    ```  
-  
+```sql  
+DECLARE @geom1 geometry;  
+DECLARE @geom2 geometry;  
+DECLARE @result geometry;  
+
+SELECT @geom1 = GeomCol1 FROM SpatialTable WHERE id = 1;  
+SELECT @geom2 = GeomCol1 FROM SpatialTable WHERE id = 2;  
+SELECT @result = @geom1.STIntersection(@geom2);  
+SELECT @result.STAsText();  
+```  
   
 ## See Also  
  [Spatial Data &#40;SQL Server&#41;](../../relational-databases/spatial/spatial-data-sql-server.md)  

@@ -2,22 +2,15 @@
 title: "PDOStatement::bindColumn | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
-ms.prod_service: "drivers"
-ms.service: ""
-ms.component: "php"
+ms.prod: sql
+ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "drivers"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: connectivity
+ms.topic: conceptual
 ms.assetid: bbdcea53-d23d-4769-89a0-95c7cf4d5390
-caps.latest.revision: 14
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
-ms.workload: "Inactive"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # PDOStatement::bindColumn
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -69,6 +62,7 @@ while ( $row = $stmt->fetch( PDO::FETCH_BOUND ) ){
 ```  
   
 ## See Also  
-[PDOStatement Class](../../connect/php/pdostatement-class.md)  
-[PDO](http://go.microsoft.com/fwlink/?LinkID=187441)  
+[PDOStatement Class](../../connect/php/pdostatement-class.md)
+
+[PDO](https://php.net/manual/book.pdo.php)  
   

@@ -2,16 +2,11 @@
 title: "SQLInstallDriverEx Function | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
-ms.prod_service: "drivers"
-ms.service: ""
-ms.component: "odbc"
+ms.prod: sql
+ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "drivers"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: connectivity
+ms.topic: conceptual
 apiname: 
   - "SQLInstallDriverEx"
 apilocation: 
@@ -22,11 +17,9 @@ f1_keywords:
 helpviewer_keywords: 
   - "SQLInstallDriverEx function [ODBC]"
 ms.assetid: 1dd74544-f4e9-46e1-9b5f-c11d84fdab4c
-caps.latest.revision: 16
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
-ms.workload: "Inactive"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # SQLInstallDriverEx Function
 **Conformance**  
@@ -44,13 +37,13 @@ ms.workload: "Inactive"
 ```  
   
 BOOL SQLInstallDriverEx(  
-     LPCSTR    lpszDriver,  
-     LPCSTR    lpszPathIn,  
-     LPSTR     lpszPathOut,  
-     WORD      cbPathOutMax,  
-     WORD *    pcbPathOut,  
-     WORD      fRequest,  
-     LPDWORD   lpdwUsageCount);  
+     LPCSTR    lpszDriver,  
+     LPCSTR    lpszPathIn,  
+     LPSTR     lpszPathOut,  
+     WORD      cbPathOutMax,  
+     WORD *    pcbPathOut,  
+     WORD      fRequest,  
+     LPDWORD   lpdwUsageCount);  
 ```  
   
 ## Arguments  
@@ -101,9 +94,9 @@ BOOL SQLInstallDriverEx(
 ## Comments  
  The *lpszDriver* argument is a list of attributes in the form of keyword-value pairs. Each pair is terminated with a null byte, and the entire list is terminated with a null byte. (That is, two null bytes mark the end of the list.) The format of this list is as follows:  
   
- *driver-desc* **\\**0Driver**=***driver-DLL-filename***\\**0[Setup**=***setup-DLL-filename***\\**0]  
+ _driver-desc_ **\\**0Driver**=**_driver-DLL-filename_**\\**0[Setup**=**_setup-DLL-filename_<b>\\</b>0]  
   
- [*driver-attr-keyword1***=***value1***\\**0][*driver-attr-keyword2***=***value2***\\**0]...**\\**0  
+ [_driver-attr-keyword1_**=**_value1_<b>\\</b>0][_driver-attr-keyword2_**=**_value2_<b>\\</b>0]...<b>\\</b>0  
   
  where \0 is a null byte and *driver-attr-keywordn* is any driver attribute keyword. The keywords must appear in the specified order. For example, suppose a driver for formatted text files has separate driver and setup DLLs and can use files with the .txt and .csv extensions. The *lpszDriver* argument for this driver might be as follows:  
   

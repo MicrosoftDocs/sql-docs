@@ -1,17 +1,12 @@
 ---
 title: "Clone Method (ADO) | Microsoft Docs"
-ms.prod: "sql-non-specified"
-ms.prod_service: "drivers"
-ms.service: ""
-ms.component: "ado"
-ms.technology:
-  - "drivers"
+ms.prod: sql
+ms.prod_service: connectivity
+ms.technology: connectivity
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 apitype: "COM"
 f1_keywords: 
   - "Recordset20::Clone"
@@ -19,11 +14,9 @@ f1_keywords:
 helpviewer_keywords: 
   - "Clone method [ADO]"
 ms.assetid: ad49265f-1c05-4271-9bbf-7c00010ac18c
-caps.latest.revision: 13
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
-ms.workload: "Inactive"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # Clone Method (ADO)
 Creates a duplicate [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) object from an existing **Recordset** object. Optionally, specifies that the clone be read-only.  

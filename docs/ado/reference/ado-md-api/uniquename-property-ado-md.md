@@ -1,17 +1,12 @@
 ---
 title: "UniqueName Property (ADO MD) | Microsoft Docs"
-ms.prod: "sql-non-specified"
-ms.prod_service: "drivers"
-ms.service: ""
-ms.component: "ado"
-ms.technology:
-  - "drivers"
+ms.prod: sql
+ms.prod_service: connectivity
+ms.technology: connectivity
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 apitype: "COM"
 f1_keywords: 
   - "Level::UniqueName"
@@ -22,11 +17,9 @@ f1_keywords:
 helpviewer_keywords: 
   - "UniqueName property [ADO MD]"
 ms.assetid: 5b977956-e252-4861-8425-f1aaf6b80130
-caps.latest.revision: 11
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
-ms.workload: "Inactive"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # UniqueName Property (ADO MD)
 Indicates an unambiguous name for the current object.  

@@ -2,15 +2,9 @@
 title: "sys.sp_rda_reauthorize_db (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/10/2016"
-ms.prod: "sql-non-specified"
-ms.prod_service: "database-engine"
-ms.service: ""
-ms.component: "system-stored-procedures"
+ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "dbe-stretch"
-ms.tgt_pltfrm: ""
+ms.technology: stored-procedures
 ms.topic: "language-reference"
 f1_keywords: 
   - "sp_rda_reauthorize_db"
@@ -20,11 +14,9 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.sp_rda_reauthorize_db stored procedure"
 ms.assetid: f6f3e4b2-8c72-4d23-a5de-fe671ca5c5cd
-caps.latest.revision: 20
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
-ms.workload: "Inactive"
+manager: craigg
 ---
 # sys.sp_rda_reauthorize_db (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]

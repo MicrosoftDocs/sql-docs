@@ -2,15 +2,10 @@
 title: "SET ANSI_WARNINGS (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "12/04/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
-ms.service: ""
-ms.component: "t-sql|statements"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: t-sql
 ms.topic: "language-reference"
 f1_keywords: 
   - "SET ANSI_WARNINGS"
@@ -25,11 +20,10 @@ helpviewer_keywords:
   - "SET ANSI_WARNINGS statement"
   - "ANSI_WARNINGS option"
 ms.assetid: f82aaab0-334f-427b-89b0-de4af596b4fa
-caps.latest.revision: 33
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "craigg"
-ms.workload: "On Demand"
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # SET ANSI_WARNINGS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -59,46 +53,44 @@ SET ANSI_WARNINGS ON
   
 -   When set to ON, the divide-by-zero and arithmetic overflow errors cause the statement to be rolled back and an error message is generated. When set to OFF, the divide-by-zero and arithmetic overflow errors cause null values to be returned. The behavior in which a divide-by-zero or arithmetic overflow error causes null values to be returned occurs if an INSERT or UPDATE is tried on a **character**, Unicode, or **binary** column in which the length of a new value exceeds the maximum size of the column. If SET ANSI_WARNINGS is ON, the INSERT or UPDATE is canceled as specified by the ISO standard. Trailing blanks are ignored for character columns and trailing nulls are ignored for binary columns. When OFF, data is truncated to the size of the column and the statement succeeds.  
   
-    > [!NOTE]  
-    >  When truncation occurs in any conversion to or from **binary** or **varbinary** data, no warning or error is issued, regardless of SET options.  
+> [!NOTE]  
+> When truncation occurs in any conversion to or from **binary** or **varbinary** data, no warning or error is issued, regardless of SET options.  
   
-    > [!NOTE]  
-    >  ANSI_WARNINGS is not honored when passing parameters in a stored procedure, user-defined function, or when declaring and setting variables in a batch statement. For example, if a variable is defined as **char(3)**, and then set to a value larger than three characters, the data is truncated to the defined size and the INSERT or UPDATE statement succeeds.  
+> [!NOTE]  
+> ANSI_WARNINGS is not honored when passing parameters in a stored procedure, user-defined function, or when declaring and setting variables in a batch statement. For example, if a variable is defined as **char(3)**, and then set to a value larger than three characters, the data is truncated to the defined size and the INSERT or UPDATE statement succeeds.  
   
- You can use the user options option of sp_configure to set the default setting for ANSI_WARNINGS for all connections to the server. For more information, see [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md).  
+You can use the user options option of sp_configure to set the default setting for ANSI_WARNINGS for all connections to the server. For more information, see [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md).  
   
- SET ANSI_WARNINGS must be ON when you are creating or manipulating indexes on computed columns or indexed views. If SET ANSI_WARNINGS is OFF, CREATE, UPDATE, INSERT, and DELETE statements on tables with indexes on computed columns or indexed views will fail. For more information about required SET option settings with indexed views and indexes on computed columns, see "Considerations When You Use the SET Statements" in [SET Statements &#40;Transact-SQL&#41;](../../t-sql/statements/set-statements-transact-sql.md).  
+ANSI_WARNINGS must be ON when you are creating or manipulating indexes on computed columns or indexed views. If SET ANSI_WARNINGS is OFF, CREATE, UPDATE, INSERT, and DELETE statements on tables with indexes on computed columns or indexed views will fail. For more information about required SET option settings with indexed views and indexes on computed columns, see "Considerations When You Use the SET Statements" in [SET Statements &#40;Transact-SQL&#41;](../../t-sql/statements/set-statements-transact-sql.md).  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] includes the ANSI_WARNINGS database option. This is equivalent to SET ANSI_WARNINGS. When SET ANSI_WARNINGS is ON, errors or warnings are raised in divide-by-zero, string too large for database column, and other similar errors. When SET ANSI_WARNINGS is OFF, these errors and warnings are not raised. The default value in the model database for SET ANSI_WARNINGS is OFF. If not specified, the setting of ANSI_WARNINGS applies. If SET ANSI_WARNINGS is OFF, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] uses the value of the is_ansi_warnings_on column in the [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) catalog view.  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] includes the ANSI_WARNINGS database option. This is equivalent to SET ANSI_WARNINGS. When SET ANSI_WARNINGS is ON, errors or warnings are raised in divide-by-zero, string too large for database column, and other similar errors. When SET ANSI_WARNINGS is OFF, these errors and warnings are not raised. The default value in the model database for SET ANSI_WARNINGS is OFF. If not specified, the setting of ANSI_WARNINGS applies. If SET ANSI_WARNINGS is OFF, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] uses the value of the is_ansi_warnings_on column in the [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) catalog view.  
   
- ANSI_WARNINGS should be set to ON for executing distributed queries.  
+> [!IMPORTANT]
+> ANSI_WARNINGS should be set to ON for executing distributed queries.  
   
  The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC driver and [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB Provider for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] automatically set ANSI_WARNINGS to ON when connecting. This can be configured in ODBC data sources, in ODBC connection attributes, set in the application before connecting. The default for SET ANSI_WARNINGS is OFF for connections from DB-Library applications.  
   
- When SET ANSI_DEFAULTS is ON, SET ANSI_WARNINGS is enabled.  
+When ANSI_DEFAULTS is ON, ANSI_WARNINGS is enabled.  
   
- The setting of SET ANSI_WARNINGS is set at execute or run time and not at parse time.  
+The setting of ANSI_WARNINGS is defined at execute or run time and not at parse time.  
   
- If either SET ARITHABORT or SET ARITHIGNORE is OFF and SET ANSI_WARNINGS is ON, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] still returns an error message when encountering divide-by-zero or overflow errors.  
+If either SET ARITHABORT or SET ARITHIGNORE is OFF and SET ANSI_WARNINGS is ON, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] still returns an error message when encountering divide-by-zero or overflow errors.  
   
- To view the current setting for this setting, run the following query.  
+To view the current setting for this setting, run the following query.  
   
-```  
+```sql  
 DECLARE @ANSI_WARN VARCHAR(3) = 'OFF';  
 IF ( (8 & @@OPTIONS) = 8 ) SET @ANSI_WARN = 'ON';  
 SELECT @ANSI_WARN AS ANSI_WARNINGS;  
 ```  
   
 ## Permissions  
- Requires membership in the public role.  
+Requires membership in the **public** role.  
   
 ## Examples  
- The following example demonstrates the three situations that are previously mentioned, with the SET ANSI_WARNINGS to ON and OFF.  
+The following example demonstrates the three situations that are previously mentioned, with the SET ANSI_WARNINGS to ON and OFF.  
   
-```  
-USE AdventureWorks2012;  
-GO  
-  
+```sql  
 CREATE TABLE T1   
 (  
    a int,   
@@ -117,7 +109,11 @@ VALUES (1, NULL, '')
   
 SET NOCOUNT OFF;  
 GO  
-  
+```
+
+Now set ANSI_WARNINGS to ON and test.
+
+```sql
 PRINT '**** Setting ANSI_WARNINGS ON';  
 GO  
   
@@ -142,7 +138,11 @@ GO
 SELECT a / b AS ab   
 FROM T1;  
 GO  
-  
+```
+
+Now set ANSI_WARNINGS to OFF and test.
+
+```sql
 PRINT '**** Setting ANSI_WARNINGS OFF';  
 GO  
 SET ANSI_WARNINGS OFF;  
@@ -171,7 +171,7 @@ SELECT a / b AS ab
 FROM T1;  
 GO  
   
-DROP TABLE T1  
+DROP TABLE T1;  
 ```  
   
 ## See Also  

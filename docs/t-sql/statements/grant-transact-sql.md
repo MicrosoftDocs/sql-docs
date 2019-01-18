@@ -2,15 +2,10 @@
 title: "GRANT (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/12/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
-ms.service: ""
-ms.component: "t-sql|statements"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: t-sql
 ms.topic: "language-reference"
 f1_keywords: 
   - "GRANT_TSQL"
@@ -27,18 +22,17 @@ helpviewer_keywords:
   - "database-level securables [SQL Server]"
   - "permissions [SQL Server], granting"
 ms.assetid: a760c16a-4d2d-43f2-be81-ae9315f38185
-caps.latest.revision: 64
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "craigg"
-ms.workload: "Active"
+author: VanMSFT
+ms.author: vanto
+manager: craigg
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # GRANT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Grants permissions on a securable to a principal.  The general concept is to GRANT \<some permission> ON \<some object> TO \<some user, login, or group>. For a general discussion of permissions, see [Permissions &#40;Database Engine&#41;](../../relational-databases/security/permissions-database-engine.md).  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Article link icon](../../database-engine/configure-windows/media/topic-link.gif "Article link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
@@ -78,7 +72,7 @@ GRANT
   
 ## Arguments  
  ALL  
- This option is deprecated and maintained only for backward compatibility. It does not grant all possible permissions. Granting ALL is equivalent to granting the following permissions.  
+ This option is deprecated and maintained only for backward compatibility. It does not grant all possible permissions. Granting ALL is equivalent to granting the following permissions: 
   
 -   If the securable is a database, ALL means BACKUP DATABASE, BACKUP LOG, CREATE DATABASE, CREATE DEFAULT, CREATE FUNCTION, CREATE PROCEDURE, CREATE RULE, CREATE TABLE, and CREATE VIEW.  
   
@@ -96,7 +90,7 @@ PRIVILEGES
  Included for ISO compliance. Does not change the behavior of ALL.  
   
 *permission*  
- Is the name of a permission. The valid mappings of permissions to securables are described in the sub-topics listed below.  
+ Is the name of a permission. The valid mappings of permissions to securables are described in the subtopics listed below.  
   
 *column*  
  Specifies the name of a column in a table on which permissions are being granted. The parentheses () are required.  
@@ -108,7 +102,7 @@ PRIVILEGES
  Specifies the securable on which the permission is being granted.  
   
 TO *principal*  
- Is the name of a principal. The principals to which permissions on a securable can be granted vary, depending on the securable. See the sub-topics listed below for valid combinations.  
+ Is the name of a principal. The principals to which permissions on a securable can be granted vary, depending on the securable. See the subtopics listed below for valid combinations.  
   
 GRANT OPTION  
  Indicates that the grantee will also be given the ability to grant the specified permission to other principals.  
@@ -121,7 +115,7 @@ Using the AS clause is typically not recommended unless you need to explicitly d
 The use of AS in this statement does not imply the ability to impersonate another user. 
   
 ## Remarks  
- The full syntax of the GRANT statement is complex. The syntax diagram above was simplified to draw attention to its structure. Complete syntax for granting permissions on specific securables is described in the topics listed below.  
+ The full syntax of the GRANT statement is complex. The syntax diagram above was simplified to draw attention to its structure. Complete syntax for granting permissions on specific securables is described in the articles listed below.  
   
  The REVOKE statement can be used to remove granted permissions, and the DENY statement can be used to prevent a principal from gaining a specific permission through a GRANT.  
   
@@ -135,7 +129,7 @@ The use of AS in this statement does not imply the ability to impersonate anothe
  The sp_helprotect system stored procedure reports permissions on a database-level securable.  
   
 ## WITH GRANT OPTION  
- The **GRANT** … **WITH GRANT OPTION** specifies that the security principal receiving the permission is given the ability to grant the specified permission to other security accounts. When the principal that receives the permission is a role or a Windows group, the **AS** clause must be used when the object permission needs to be further granted to users who are not members of the group or role. Because only a user, rather than a group or role, can execute a **GRANT** statement, a specific member of the group or role must use the **AS** clause to explicitly invoke the role or group membership when granting the permission. The following example shows how the **WITH GRANT OPTION** is used when granted to a role or Windows group.  
+ The **GRANT** ... **WITH GRANT OPTION** specifies that the security principal receiving the permission is given the ability to grant the specified permission to other security accounts. When the principal that receives the permission is a role or a Windows group, the **AS** clause must be used when the object permission needs to be further granted to users who are not members of the group or role. Because only a user, rather than a group or role, can execute a **GRANT** statement, a specific member of the group or role must use the **AS** clause to explicitly invoke the role or group membership when granting the permission. The following example shows how the **WITH GRANT OPTION** is used when granted to a role or Windows group.  
   
 ```  
 -- Execute the following as a database owner  
@@ -149,17 +143,17 @@ GRANT EXECUTE ON TestMe TO User2 AS TesterRole;
 ```  
   
 ## Chart of SQL Server Permissions  
- For a poster sized chart of all [!INCLUDE[ssDE](../../includes/ssde-md.md)] permissions in pdf format, see [http://go.microsoft.com/fwlink/?LinkId=229142](http://go.microsoft.com/fwlink/?LinkId=229142).  
+ For a poster sized chart of all [!INCLUDE[ssDE](../../includes/ssde-md.md)] permissions in pdf format, see [https://aka.ms/sql-permissions-poster](https://aka.ms/sql-permissions-poster).  
   
 ## Permissions  
- The grantor (or the principal specified with the AS option) must have either the permission itself with GRANT OPTION, or a higher permission that implies the permission being granted. If using the AS option, additional requirements apply. See the securable-specific topic for details.  
+ The grantor (or the principal specified with the AS option) must have either the permission itself with GRANT OPTION, or a higher permission that implies the permission being granted. If using the AS option, additional requirements apply. See the securable-specific article for details.  
   
  Object owners can grant permissions on the objects they own. Principals with CONTROL permission on a securable can grant permission on that securable.  
   
  Grantees of CONTROL SERVER permission, such as members of the sysadmin fixed server role, can grant any permission on any securable in the server. Grantees of CONTROL permission on a database, such as members of the db_owner fixed database role, can grant any permission on any securable in the database. Grantees of CONTROL permission on a schema can grant any permission on any object within the schema.  
   
 ## Examples  
- The following table lists the securables and the topics that describe the securable-specific syntax.  
+ The following table lists the securables and the articles that describe the securable-specific syntax.  
   
 |||  
 |-|-|  

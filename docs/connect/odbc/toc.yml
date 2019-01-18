@@ -1,0 +1,26 @@
+- name: Microsoft ODBC Driver for SQL Server
+  href: microsoft-odbc-driver-for-sql-server.md
+- name: Linux and Mac +
+  href: linux-mac/system-requirements.md
+- name: Windows +
+  href: windows/microsoft-odbc-driver-for-sql-server-on-windows.md
+- name: ODBC Reference and Details +
+  href: ../../odbc/microsoft-open-database-connectivity-odbc.md
+- name: Download ODBC Driver for SQL Server
+  href: download-odbc-driver-for-sql-server.md
+- name: Feature Guides
+  items:
+  - name: Custom Keystore Providers
+    href: custom-keystore-providers.md
+  - name: DSN Connection String Keywords and Attributes
+    href: dsn-connection-string-attribute.md
+  - name: Using Always Encrypted
+    href: using-always-encrypted-with-the-odbc-driver.md
+  - name: Using Azure Active Directory
+    href: using-azure-active-directory.md
+  - name: Using Transparent Network IP Resolution
+    href: using-transparent-network-ip-resolution.md
+  - name: Data Classification
+    href: data-classification.md
+- name: Bug Fixes
+  href: bug-fixes.md

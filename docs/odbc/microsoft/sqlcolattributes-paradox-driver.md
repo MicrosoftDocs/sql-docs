@@ -2,25 +2,18 @@
 title: "SQLColAttributes (Paradox Driver) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
-ms.prod_service: "drivers"
-ms.service: ""
-ms.component: "odbc"
+ms.prod: sql
+ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "drivers"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: connectivity
+ms.topic: conceptual
 helpviewer_keywords: 
   - "SQLColAttribute function [ODBC], Paradox Driver"
   - "Paradox driver [ODBC], SQLColAttributes"
 ms.assetid: bbeef024-d470-4d28-b61b-26997ef41007
-caps.latest.revision: 6
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
-ms.workload: "Inactive"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # SQLColAttributes (Paradox Driver)
 > [!NOTE]  

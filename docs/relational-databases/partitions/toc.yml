@@ -1,0 +1,10 @@
+- name: Overview
+  href: partitioned-tables-and-indexes.md
+- name: Create
+  href: create-partitioned-tables-and-indexes.md
+- name: Modify a Partition Function
+  href: modify-a-partition-function.md
+- name: Modify a Partition Scheme
+  href: modify-a-partition-scheme.md
+- name: Manage Partition Wizard F1 Help
+  href: manage-partition-wizard-f1-help.md

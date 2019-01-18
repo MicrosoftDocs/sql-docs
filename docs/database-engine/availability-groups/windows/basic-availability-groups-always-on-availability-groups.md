@@ -1,24 +1,18 @@
 ---
-title: "Basic Availability Groups (Always On Availability Groups) | Microsoft Docs"
-ms.custom: ""
-ms.date: "09/27/2016"
-ms.prod: "sql-non-specified"
-ms.prod_service: "database-engine"
-ms.service: ""
-ms.component: "availability-groups"
+title: "Basic availability groups for a single database"
+description: "Describes the differences between a regular and basic Always On availability group, as well as how to configure a basic availability group. "
+ms.custom: "seodec18"
+ms.date: "02/01/2018"
+ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: high-availability
+ms.topic: conceptual
 ms.assetid: 285adbc7-ac9b-40f6-b4a9-3f1591d3b632
-caps.latest.revision: 9
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
 ---
-# Basic Availability Groups (Always On Availability Groups)
+# Basic Always On availability groups for a single database
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   Always On Basic Availability Groups provide a high availability solution for SQL Server 2016 and SQL Server 2017 Standard Edition. A basic availability group supports a failover environment for a single database. It is created and managed much like traditional (advanced) [Always On Availability Groups &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md) with Enterprise Edition. The differences and limitations of basic availability groups are summarized in this document.  
@@ -38,9 +32,7 @@ manager: "jhubbard"
 - No integrity checks on secondary replicas. 
 
 - No support for replicas hosted on servers running a version of SQL Server prior to SQL Server 2016 Community Technology Preview 3 (CTP3).  
-  
-- No support for adding or removing a replica to an existing basic availability group.  
-  
+
 - Support for one availability database.  
   
 - Basic availability groups cannot be upgraded to advanced availability groups. The group must be dropped and re-added to a group that contains servers running only SQL Server 2016 Enterprise Edition.  
@@ -52,7 +44,7 @@ manager: "jhubbard"
 ## Configuration  
  An Always On basic availability group can be created on any two SQL Server 2016 Standard Edition servers. When you create a basic availability group, you must specify both replicas during creation.  
   
- To create a basic availability group, use the **CREATE AVAILABILITY GROUP** transact-SQL command and specify the **WITH BASIC** option (the default is **ADVANCED**). For more information, see [CREATE AVAILABILITY GROUP &#40;Transact-SQL&#41;](../../../t-sql/statements/create-availability-group-transact-sql.md). At this time, there is no UI support to create basic availability groups in SQL Server Management Studio.  
+ To create a basic availability group, use the **CREATE AVAILABILITY GROUP** transact-SQL command and specify the **WITH BASIC** option (the default is **ADVANCED**). You can also create the basic availability group using the UI in SQL Server Management Studio starting with version 17.8. For more information, see [CREATE AVAILABILITY GROUP &#40;Transact-SQL&#41;](../../../t-sql/statements/create-availability-group-transact-sql.md). 
   
 > [!NOTE]  
 >  The limitations of basic availability groups apply to the **CREATE AVAILABILITY GROUP** command when **WITH BASIC** is specified. For example, you will get an error if you attempt to create a basic availability group that permits read access. Other limitations apply in the same manner. Refer to the Limitations section of this topic for details.  

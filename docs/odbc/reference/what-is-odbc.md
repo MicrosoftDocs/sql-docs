@@ -2,29 +2,22 @@
 title: "What Is ODBC? | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
-ms.prod_service: "drivers"
-ms.service: ""
-ms.component: "odbc"
+ms.prod: sql
+ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "drivers"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: connectivity
+ms.topic: conceptual
 helpviewer_keywords: 
   - "ODBC [ODBC], about ODBC"
 ms.assetid: badf3a45-f941-44ae-a31d-393116f68a18
-caps.latest.revision: 9
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
-ms.workload: "On Demand"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # What Is ODBC?
 Many misconceptions about ODBC exist in the computing world. To the end user, it is an icon in the Microsoft® Windows® Control Panel. To the application programmer, it is a library containing data access routines. To many others, it is the answer to all database access problems ever imagined.  
   
- First and foremost, ODBC is a specification for a database API. This API is independent of any one DBMS or operating system; although this manual uses C, the ODBC API is language-independent. The ODBC API is based on the CLI specifications from Open Group and ISO/IEC. ODBC 3.*x* fully implements both of these specifications — earlier versions of ODBC were based on preliminary versions of these specifications but did not fully implement them — and adds features commonly needed by developers of screen-based database applications, such as scrollable cursors.  
+ First and foremost, ODBC is a specification for a database API. This API is independent of any one DBMS or operating system; although this manual uses C, the ODBC API is language-independent. The ODBC API is based on the CLI specifications from Open Group and ISO/IEC. ODBC 3.*x* fully implements both of these specifications - earlier versions of ODBC were based on preliminary versions of these specifications but did not fully implement them - and adds features commonly needed by developers of screen-based database applications, such as scrollable cursors.  
   
  The functions in the ODBC API are implemented by developers of DBMS-specific drivers. Applications call the functions in these drivers to access data in a DBMS-independent manner. A Driver Manager manages communication between applications and drivers.  
   

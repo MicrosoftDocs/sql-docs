@@ -1,18 +1,12 @@
 ---
 title: "Page Headers and Footers (Report Builder and SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
+ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
-ms.service: ""
-ms.component: "report-design"
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
+ms.technology: report-design
 
 
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "10125"
   - "sql13.rtp.rptdesigner.pagefooter.border.f1"
@@ -27,11 +21,8 @@ f1_keywords:
   - "sql13.rtp.rptdesigner.pagefooter.general.f1"
   - "10124"
 ms.assetid: 4fb9faac-511e-404a-b8d7-1f2e3cb47b11
-caps.latest.revision: 6
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "kfile"
-ms.workload: "On Demand"
+author: maggiesMSFT
+ms.author: maggies
 ---
 # Page Headers and Footers (Report Builder and SSRS)
   A report can contain a header and footer that run along the top and bottom of each page, respectively. Headers and footers can contain static text, images, lines, rectangles, borders, background color, background images, and expressions. Expressions include dataset field references for reports with exactly one dataset and aggregate function calls that include the dataset as a scope.  

@@ -2,25 +2,18 @@
 title: "catalog.revoke_permission (SSISDB Database) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "integration-services"
-ms.service: ""
-ms.component: "system-stored-procedures"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
+ms.technology: integration-services
 ms.topic: "language-reference"
 helpviewer_keywords: 
   - "revoke_permission stored procedure [Integration Services]"
   - "catalog.revoke_permission stored procedure [Integration Services]"
 ms.assetid: 850b9c26-5c7c-47b9-a61c-5cf9bb5948cf
-caps.latest.revision: 25
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
-ms.workload: "Inactive"
+manager: craigg
 ---
 # catalog.revoke_permission (SSISDB Database)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -38,7 +31,7 @@ catalog.revoke_permission [ @object_type = ] object_type
   
 ## Arguments  
  [ @object_type = ] *object_type*  
- The type of securable object. Securable objects types include folder (`1`), project (`2`), environment (`3`), and operation (`4`).The *object_type* is **smallint***.*  
+ The type of securable object. Securable objects types include folder (`1`), project (`2`), environment (`3`), and operation (`4`).The *object_type* is **smallint**_._  
   
  [ @object_id = ] *object_id*  
  The unique identitifier (ID) of the securable object. The *object_id* is **bigint**.  

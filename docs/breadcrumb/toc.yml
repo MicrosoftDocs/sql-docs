@@ -106,6 +106,66 @@
           - name: Syntax
             href: /sql/odbc/reference/syntax/
             homepage: /sql/odbc/reference/syntax/odbc-reference
+      - name: OLE DB
+        href: /sql/connect/oledb/
+        homepage: /sql/connect/oledb/oledb-driver-for-sql-server
+        items:
+        - name: Features
+          href: /sql/connect/oledb/features/
+          homepage: /sql/connect/oledb/features/oledb-driver-for-sql-server-features
+        - name: Applications
+          href: /sql/connect/oledb/applications/
+          homepage: /sql/connect/oledb/applications/building-applications-with-oledb-driver-for-sql-server
+        - name: OLE DB Programming
+          href: /sql/connect/oledb/ole-db/
+          homepage: /sql/connect/oledb/ole-db/oledb-driver-for-sql-server-programming
+          items:
+          - name: Driver
+            href: /sql/connect/oledb/ole-db-driver/
+            homepage: /sql/connect/oledb/ole-db-driver/creating-a-oledb-driver-for-sql-server-application
+          - name: Data source objects
+            href: /sql/connect/oledb/ole-db-data-source-objects/
+            homepage: /sql/connect/oledb/ole-db-data-source-objects/data-source-objects-ole-db
+          - name: Commands
+            href: /sql/connect/oledb/ole-db-commands/
+            homepage: /sql/connect/oledb/ole-db-commands/commands
+          - name: Rowsets
+            href: /sql/connect/oledb/ole-db-rowsets/
+            homepage: /sql/connect/oledb/ole-db-rowsets/rowsets
+          - name: Blobs
+            href: /sql/connect/oledb/ole-db-blobs/
+            homepage: /sql/connect/oledb/ole-db-blobs/blobs-and-ole-objects
+          - name: Tables and indexes
+            href: /sql/connect/oledb/ole-db-tables-indexes/
+            homepage: /sql/connect/oledb/ole-db-tables-indexes/tables-and-indexes
+          - name: Data types
+            href: /sql/connect/oledb/ole-db-data-types/
+            homepage: /sql/connect/oledb/ole-db-data-types/data-types-ole-db
+          - name: Table valued parameters
+            href: /sql/connect/oledb/ole-db-table-valued-parameters/
+            homepage: /sql/connect/oledb/ole-db-table-valued-parameters/table-valued-parameters-ole-db
+          - name: Date time
+            href: /sql/connect/oledb/ole-db-date-time/
+            homepage: /sql/connect/oledb/ole-db-date-time/date-and-time-improvements-ole-db
+          - name: Transactions
+            href: /sql/connect/oledb/ole-db-transactions/
+            homepage: /sql/connect/oledb/ole-db-transactions/transactions
+          - name: Errors
+            href: /sql/connect/oledb/ole-db-errors/
+            homepage: /sql/connect/oledb/ole-db-errors/errors
+          - name: Interfaces
+            href: /sql/connect/oledb/ole-db-interfaces/
+            homepage: /sql/connect/oledb/ole-db-interfaces/oledb-driver-for-sql-server-ole-db-interfaces
+          - name: How to
+            href: /sql/connect/oledb/ole-db-how-to/
+            homepage: /sql/connect/oledb/ole-db-how-to/ole-db-how-to-topics
+            items:
+            - name: Results
+              href: /sql/connect/oledb/ole-db-how-to/results/
+              homepage: /sql/connect/oledb/ole-db-how-to/results/processing-results-how-to-topics-ole-db
+            - name: FileStream
+              href: /sql/connect/oledb/ole-db-how-to/filestream/
+              homepage: /sql/connect/oledb/ole-db-how-to/filestream/filestream-and-ole-db
       - name: PHP
         href: /sql/connect/php/
         homepage: /sql/connect/php/microsoft-php-driver-for-sql-server
@@ -125,12 +185,19 @@
     - name: SQL Server on Linux
       href: /sql/linux/
       homepage: /sql/linux/sql-server-linux-overview
-    - name: Advanced analytics on SQL Server
+    - name: SQL Server Machine Learning Services
       href: /sql/advanced-analytics/
-      homepage: /sql/advanced-analytics/getting-started-with-machine-learning-services
-    - name: R Services on SQL Server
-      href: /sql/advanced-analytics/r/
-      homepage: /sql/advanced-analytics/r/architecture-overview-sql-server-r
+      homepage: /sql/advanced-analytics/what-is-sql-server-machine-learning
+      items:
+      - name: Java
+        href: /sql/advanced-analytics/java/
+        homepage: /sql/advanced-analytics/java/extension-java
+      - name: Install
+        href: /sql/advanced-analytics/install/
+        homepage: /sql/advanced-analytics/install/sql-machine-learning-services-windows-install
+      - name: Tutorials
+        href: /sql/advanced-analytics/tutorials/
+        homepage: /sql/advanced-analytics/tutorials/machine-learning-services-tutorials  
     - name: SQL Server
       href: /sql/sql-server/
       homepage: /sql/sql-server/sql-server-technical-documentation
@@ -568,7 +635,7 @@
       - name: Extended events
         href: /sql/relational-databases/extended-events/
         homepage: /sql/relational-databases/extended-events/extended-events
-      - name: Graphs
+      - name: SQL Graph
         href: /sql/relational-databases/graphs/
         homepage: /sql/relational-databases/graphs/sql-graph-overview
       - name: Import and export
@@ -620,7 +687,7 @@
         items:
         - name: Administration
           href: /sql/relational-databases/replication/administration/
-          homepage: /sql/relational-databases/replication/administration/administration-replication
+          homepage: /sql/relational-databases/replication/administration/frequently-asked-questions-for-replication-administrators
         - name: Agents
           href: /sql/relational-databases/replication/agents/
           homepage: /sql/relational-databases/replication/agents/replication-agents
@@ -648,9 +715,6 @@
       - name: Resource Governor
         href: /sql/relational-databases/resource-governor/
         homepage: /sql/relational-databases/resource-governor/resource-governor
-      - name: Scripting
-        href: /sql/relational-databases/scripting/
-        homepage: /sql/relational-databases/scripting/database-engine-scripting
       - name: Search
         href: /sql/relational-databases/search/
         homepage: /sql/relational-databases/search/full-text-search
@@ -673,7 +737,7 @@
       - name: Service Broker
         href: /sql/relational-databases/service-broker/
         homepage: /sql/relational-databases/service-broker/event-notifications
-      - name: Spatial
+      - name: Spatial data
         href: /sql/relational-databases/spatial/
         homepage: /sql/relational-databases/spatial/spatial-data-sql-server
       - name: SQL Trace
@@ -1033,9 +1097,9 @@
       href: /sql/tools/
       homepage: /sql/tools/overview-sql-tools
       items:
-      - name: SQL Operations Studio
-        href: /sql/sql-operations-studio/
-        homepage: /sql/sql-operations-studio/what-is
+      - name: Azure Data Studio
+        href: /sql/azure-data-studio/
+        homepage: /sql/azure-data-studio/what-is
       - name: Configuration Manager
         href: /sql/tools/configuration-manager/
         homepage: /sql/tools/configuration-manager/sql-server-configuration-manager-help
@@ -1080,6 +1144,9 @@
         - name: Tutorials
           href: /sql/ssms/tutorials/
           homepage: /sql/ssms/tutorials/tutorial-sql-server-management-studio
+        - name: Scripting
+          href: /sql/ssms/scripting/
+          homepage: /sql/ssms/scripting/database-engine-scripting
         - name: Visual DB tools
           href: /sql/ssms/visual-db-tools/
           homepage: /sql/ssms/visual-db-tools/visual-database-tools

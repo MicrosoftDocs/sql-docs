@@ -1,31 +1,25 @@
 ---
 title: "ReadyState Property (RDS) | Microsoft Docs"
-ms.technology:
-  - "drivers"
+ms.technology: connectivity
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: 
-ms.suite: sql
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.component: reference
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.prod: sql  
+ms.prod_service: connectivity
+ms.topic: conceptual
 apitype: "COM"
 helpviewer_keywords: 
   - "ReadyState property [ADO]"
 ms.assetid: 5be75bc7-1171-4440-a37e-c8cc6b5cd865
-caps.latest.revision: 15
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
-ms.workload: "Inactive"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # ReadyState Property (RDS)
 Indicates the progress of a [DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) object as it retrieves data into its [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) object.  
   
 > [!IMPORTANT]
->  Beginning with Windows 8 and Windows Server 2012, RDS server components are no longer included in the Windows operating system (see Windows 8 and [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/en-us/download/details.aspx?id=27416) for more detail). RDS client components will be removed in a future version of Windows. Avoid using this feature in new development work, and plan to modify applications that currently use this feature. Applications that use RDS should migrate to [WCF Data Service](http://go.microsoft.com/fwlink/?LinkId=199565).  
+>  Beginning with Windows 8 and Windows Server 2012, RDS server components are no longer included in the Windows operating system (see Windows 8 and [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) for more detail). RDS client components will be removed in a future version of Windows. Avoid using this feature in new development work, and plan to modify applications that currently use this feature. Applications that use RDS should migrate to [WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565).  
   
 ## Settings and Return Values  
  Sets or returns one of the following values.  

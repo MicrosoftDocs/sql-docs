@@ -1,16 +1,11 @@
 ---
 title: "ALTER SERVER AUDIT  (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "08/10/2017"
-ms.prod: "sql-non-specified"
+ms.date: "09/07/2018"
+ms.prod: sql
 ms.prod_service: "sql-database"
-ms.service: ""
-ms.component: "t-sql|statements"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: t-sql
 ms.topic: "language-reference"
 f1_keywords: 
   - "ALTER_SERVER_AUDIT_TSQL"
@@ -22,17 +17,16 @@ helpviewer_keywords:
   - "audits [SQL Server], specification"
   - "ALTER SERVER AUDIT statement"
 ms.assetid: 63426d31-7a5c-4378-aa9e-afcf4f64ceb3
-caps.latest.revision: 43
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "craigg"
-ms.workload: "Inactive"
+author: VanMSFT
+ms.author: vanto
+manager: craigg
+monikerRange: "=azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017"
 ---
 # ALTER SERVER AUDIT  (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
   Alters a server audit object using the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Audit feature. For more information, see [SQL Server Audit &#40;Database Engine&#41;](../../relational-databases/security/auditing/sql-server-audit-database-engine.md).  
-  
+
  ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
@@ -40,7 +34,7 @@ ms.workload: "Inactive"
 ```  
 ALTER SERVER AUDIT audit_name  
 {  
-    [ TO { { FILE ( <file_options> [, ...n] ) } | APPLICATION_LOG | SECURITY_LOG } ]  
+    [ TO { { FILE ( <file_options> [, ...n] ) } | APPLICATION_LOG | SECURITY_LOG } | URL]  
     [ WITH ( <audit_options> [ , ...n] ) ]   
     [ WHERE <predicate_expression> ]  
 }  
@@ -76,16 +70,19 @@ ALTER SERVER AUDIT audit_name
 ```  
   
 ## Arguments  
- TO { FILE | APPLICATION_LOG | SECURITY }  
+ TO { FILE | APPLICATION_LOG | SECURITY |URL}  
  Determines the location of the audit target. The options are a binary file, the Windows application log, or the Windows security log.  
+
+> [!IMPORTANT]
+> In Azure SQL Database Managed Instance, SQL Audit works at the server level and stores `.xel` files in Azure blob storage.
   
- FILEPATH **= '***os_file_path***'**  
+ FILEPATH **= '**_os\_file\_path_**'**  
  The path of the audit trail. The file name is generated based on the audit name and audit GUID.  
   
- MAXSIZE **=***max_size*  
+ MAXSIZE **=**_max\_size_  
  Specifies the maximum size to which the audit file can grow. The *max_size* value must be an integer followed by **MB**, **GB**, **TB**, or **UNLIMITED**. The minimum size that you can specify for *max_size* is 2 **MB** and the maximum is 2,147,483,647 **TB**. When **UNLIMITED** is specified, the file grows until the disk is full. Specifying a value lower than 2 MB raises MSG_MAXSIZE_TOO_SMALL the error. The default value is **UNLIMITED**.  
   
- MAX_ROLLOVER_FILES **=***integer* | **UNLIMITED**  
+ MAX_ROLLOVER_FILES **=**_integer_ | **UNLIMITED**  
  Specifies the maximum number of files to retain in the file system. When the setting of MAX_ROLLOVER_FILES=0, there is no limit imposed on the number of rollover files that are created. The default value is 0. The maximum number of files that can be specified is 2,147,483,647.  
   
  MAX_FILES =*integer*  
@@ -95,7 +92,7 @@ ALTER SERVER AUDIT audit_name
  RESERVE_DISK_SPACE **=** { ON | OFF }  
  This option pre-allocates the file on the disk to the MAXSIZE value. Only applies if MAXSIZE is not equal to UNLIMITED. The default value is OFF.  
   
- QUEUE_DELAY **=***integer*  
+ QUEUE_DELAY **=**_integer_  
  Determines the time in milliseconds that can elapse before audit actions are forced to be processed. A value of 0 indicates synchronous delivery. The minimum settable query delay value is 1000 (1 second), which is the default. The maximum is 2,147,483,647 (2,147,483.647 seconds or 24 days, 20 hours, 31 minutes, 23.647 seconds). Specifying an invalid number, raises the error MSG_INVALID_QUEUE_DELAY.  
   
  ON_FAILURE **=** { CONTINUE | SHUTDOWN | FAIL_OPERATION}  
@@ -140,7 +137,7 @@ Forces the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
   
  You can add, alter, and remove audit specifications without stopping an audit.  
   
- You cannot change an audit’s GUID after the audit has been created.  
+ You cannot change an audit's GUID after the audit has been created.  
   
 ## Permissions  
  To create, alter, or drop a server audit principal, you must have ALTER ANY SERVER AUDIT or the CONTROL SERVER permission.  
@@ -148,7 +145,7 @@ Forces the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
 ## Examples  
   
 ### A. Changing a server audit name  
- The following example changes the name of the server audit `HIPPA_Audit` to `HIPAA_Audit_Old`.  
+ The following example changes the name of the server audit `HIPAA_Audit` to `HIPAA_Audit_Old`.  
   
 ```  
 USE master  
@@ -165,7 +162,7 @@ GO
 ```  
   
 ### B. Changing a server audit target  
- The following example changes the server audit called `HIPPA_Audit` to a file target.  
+ The following example changes the server audit called `HIPAA_Audit` to a file target.  
   
 ```  
 USE master  

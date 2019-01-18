@@ -2,15 +2,10 @@
 title: "DBCC CHECKCATALOG (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "11/14/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "sql-database"
-ms.service: ""
-ms.component: "t-sql|database-console-commands"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: t-sql
 ms.topic: "language-reference"
 f1_keywords: 
   - "DBCC_CHECKCATALOG_TSQL"
@@ -26,11 +21,9 @@ helpviewer_keywords:
   - "integrity [SQL Server], catalogs"
   - "consistency [SQL Server], catalogs"
 ms.assetid: 8076eb4e-f049-44bf-9a35-45cdd6ef0105
-caps.latest.revision: 51
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-ms.workload: "On Demand"
+author: uc-msft
+ms.author: umajay
+manager: craigg
 ---
 # DBCC CHECKCATALOG (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -42,7 +35,6 @@ ms.workload: "On Demand"
 ## Syntax  
   
 ```  
-  
 DBCC CHECKCATALOG   
 [   
     (   
@@ -75,23 +67,23 @@ DBCC CHECKCATALOG performs various consistency checks between system metadata ta
 If a snapshot cannot be created DBCC CHECKCATALOG acquires an exclusive database lock to obtain the required consistency. If any inconsistencies are detected, they cannot be repaired and the database must be restored from a backup.
   
 > [!NOTE]  
->  Running DBCC CHECKCATALOG against **tempdb** does not perform any checks. This is because, for performance reasons, database snapshots are not available on **tempdb**. This means that the required transactional consistency cannot be obtained. Recycle the server to resolve any **tempdb** metadata issues.  
+> Running DBCC CHECKCATALOG against **tempdb** does not perform any checks. This is because, for performance reasons, database snapshots are not available on **tempdb**. This means that the required transactional consistency cannot be obtained. Recycle the server to resolve any **tempdb** metadata issues.  
   
 > [!NOTE]  
->  DBCC CHECKCATALOG does not check FILESTREAM data. FILESTREAM stores binary large objects (BLOBS) on the file system.  
+> DBCC CHECKCATALOG does not check FILESTREAM data. FILESTREAM stores binary large objects (BLOBS) on the file system.  
   
 DBCC CHECKCATALOG is also run as part of [DBCC CHECKDB](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md).
   
 ## Result Sets  
 If no database is specified, DBCC CHECKCATALOG returns:
   
-```sql
+```
 DBCC execution completed. If DBCC printed error messages, contact your system administrator.  
 ```  
   
 If [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] is specified as the database name, DBCC CHECKCATALOG returns:
   
-```sql
+```
 DBCC execution completed. If DBCC printed error messages, contact your system administrator.  
 ```  
   

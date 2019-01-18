@@ -2,15 +2,10 @@
 title: "Using SQLXML Bulk Load in the .NET Environment | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/04/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.service: ""
-ms.component: "sqlxml"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "dbe-xml"
-ms.tgt_pltfrm: ""
+ms.technology: xml
 ms.topic: "reference"
 helpviewer_keywords: 
   - "SQLXML, XML Bulk Load"
@@ -18,11 +13,10 @@ helpviewer_keywords:
   - ".NET Framework [SQLXML], XML Bulk Load"
   - "bulk load [SQLXML], .NET environment"
 ms.assetid: b85df83b-ba56-43bf-bcdf-b2a6fca43276
-caps.latest.revision: 23
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
-ms.workload: "Inactive"
+manager: craigg
+monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # SQLXML 4.0 .NET Framework Support - Using Bulk Load
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

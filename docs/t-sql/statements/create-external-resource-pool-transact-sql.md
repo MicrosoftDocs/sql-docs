@@ -1,16 +1,10 @@
 ---
 title: "CREATE EXTERNAL RESOURCE POOL (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "11/13/2017"
-ms.prod: "sql-non-specified"
-ms.prod_service: "sql-database"
-ms.service: ""
-ms.component: "t-sql|statements"
+ms.date: "09/11/2017"
+ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: t-sql
 ms.topic: "language-reference"
 f1_keywords: 
   - "CREATE EXTERNAL RESOURCE POOL"
@@ -24,21 +18,18 @@ dev_langs:
 helpviewer_keywords: 
   - "CREATE EXTERNAL RESOURCE POOL statement"
 ms.assetid: 8cc798ad-c395-461c-b7ff-8c561c098808
-caps.latest.revision: 12
-author: "jeannt"
-ms.author: "edmaca"
-manager: "craigg"
-ms.workload: "Inactive"
+author: HeidiSteen
+ms.author: heidist
+manager: cgronlund
 ---
 # CREATE EXTERNAL RESOURCE POOL (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
-**Applies to:** [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] [!INCLUDE[rsql-productname-md](../../includes/rsql-productname-md.md)] and [!INCLUDE[sssql17-md](../../includes/sssql17-md.md)] [!INCLUDE[rsql-productnamenew-md](../../includes/rsql-productnamenew-md.md)]
 
 Creates an external pool used to define resources for external processes. A resource pool represents a subset of the physical resources (memory and CPUs) of an instance of the Database Engine. Resource Governor enables a database administrator to distribute server resources among resource pools, up to a maximum of 64 pools.
 
 + For [!INCLUDE[rsql-productname-md](../../includes/rsql-productname-md.md)] in [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)], the external pool governs `rterm.exe`, `BxlServer.exe`, and other processes spawned by them.
 
-+ For [!INCLUDE[rsql-productnamenew-md](../../includes/rsql-productnamenew-md.md)] in [!INCLUDE[sssql17-md](../../includes/sssql17-md.md)], the external pool governs the R processes listed for SQL Server 2016, as well as `python.exe`, `BxlServer.exe`, and other processes spawned by them.
++ For [!INCLUDE[rsql-productnamenew-md](../../includes/rsql-productnamenew-md.md)] in [!INCLUDE[sssql17-md](../../includes/sssql17-md.md)], the external pool governs `rterm.exe` as well as `python.exe`, `BxlServer.exe`, and other processes spawned by them.
 
   
  ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).  

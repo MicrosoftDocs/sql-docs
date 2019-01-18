@@ -2,26 +2,19 @@
 title: "Load Data by Using the OLE DB Destination | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "integration-services"
-ms.service: ""
-ms.component: "data-flow"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: integration-services
+ms.topic: conceptual
 helpviewer_keywords: 
   - "loading data"
   - "OLE DB destination [Integration Services]"
   - "destinations [Integration Services], OLE DB"
 ms.assetid: 78899498-725e-4300-a7af-f983f4ea384b
-caps.latest.revision: 28
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
-ms.workload: "Inactive"
+manager: craigg
 ---
 # Load Data by Using the OLE DB Destination
   To add and configure an OLE DB destination, the package must already include at least one Data Flow task and a source.  

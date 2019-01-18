@@ -2,15 +2,10 @@
 title: "sys.dm_db_index_operational_stats (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/10/2016"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "sql-data-warehouse, database-engine, pdw, sql-database"
-ms.service: ""
-ms.component: "dmv's"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: system-objects
 ms.topic: "language-reference"
 f1_keywords: 
   - "dm_db_index_operational_stats"
@@ -22,16 +17,15 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.dm_db_index_operational_stats dynamic management function"
 ms.assetid: 13adf2e5-2150-40a6-b346-e74a33ce29c6
-caps.latest.revision: 61
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-ms.workload: "On Demand"
+author: stevestein
+ms.author: sstein
+manager: craigg
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.dm_db_index_operational_stats (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-pdw-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  Returns current lowore-level I/O, locking, latching, and access method activity for each partition of a table or index in the database.    
+  Returns current lower-level I/O, locking, latching, and access method activity for each partition of a table or index in the database.    
     
  Memory-optimized indexes do not appear in this DMV.    
     
@@ -86,7 +80,7 @@ sys.dm_db_index_operational_stats (
 |**database_id**|**smallint**|Database ID.|    
 |**object_id**|**int**|ID of the table or view.|    
 |**index_id**|**int**|ID of the index or heap.<br /><br /> 0 = Heap|    
-|**hobt_id**|**bigint**|**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] through [current version](http://go.microsoft.com/fwlink/p/?LinkId=299658)), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].<br /><br /> ID of the data heap or B-tree rowset that tracks internal data for a columnstore index.<br /><br /> NULL – this is not an internal columnstore rowset.<br /><br /> For more details, see [sys.internal_partitions &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-internal-partitions-transact-sql.md)|    
+|**hobt_id**|**bigint**|**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] through [current version](https://go.microsoft.com/fwlink/p/?LinkId=299658)), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].<br /><br /> ID of the data heap or B-tree rowset that tracks internal data for a columnstore index.<br /><br /> NULL - this is not an internal columnstore rowset.<br /><br /> For more details, see [sys.internal_partitions &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-internal-partitions-transact-sql.md)|    
 |**partition_number**|**int**|1-based partition number within the index or heap.|    
 |**leaf_insert_count**|**bigint**|Cumulative count of leaf-level inserts.|    
 |**leaf_delete_count**|**bigint**|Cumulative count of leaf-level deletes. leaf_delete_count is only incremented for deleted records that are not marked as ghost first. For deleted records that are ghosted first, **leaf_ghost_count** is incremented instead.|    

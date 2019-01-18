@@ -3,30 +3,25 @@ title: Configure SLES shared disk cluster for SQL Server | Microsoft Docs
 description: Implement high availability by configuring SUSE Linux Enterprise Server (SLES) shared disk cluster for SQL Server.
 author: MikeRayMSFT 
 ms.author: mikeray 
-manager: jhubbard
+manager: craigg
 ms.date: 03/17/2017
-ms.topic: article
-ms.prod: "sql-non-specified"
-ms.prod_service: "database-engine"
-ms.service: ""
-ms.component: sql-linux
-ms.suite: "sql"
-ms.custom: ""
-ms.technology: database-engine
+ms.topic: conceptual
+ms.prod: sql
+ms.custom: "sql-linux"
+ms.technology: linux
 ms.assetid: e5ad1bdd-c054-4999-a5aa-00e74770b481
-ms.workload: "Inactive"
 ---
 # Configure SLES shared disk cluster for SQL Server
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-This guide provides instructions to create a two-nodes shared disk cluster for SQL Server on SUSE Linux Enterprise Server (SLES). The clustering layer is based on SUSE [High Availability Extension (HAE)](https://www.suse.com/products/highavailability) built on top of [Pacemaker](http://clusterlabs.org/). 
+This guide provides instructions to create a two-nodes shared disk cluster for SQL Server on SUSE Linux Enterprise Server (SLES). The clustering layer is based on SUSE [High Availability Extension (HAE)](https://www.suse.com/products/highavailability) built on top of [Pacemaker](https://clusterlabs.org/). 
 
-For more details on cluster configuration, resource agent options, management, best practices, and recommendations, see [SUSE Linux Enterprise High Availability Extension 12 SP2](https://www.suse.com/documentation/sle-ha-12/index.html).
+For more information on cluster configuration, resource agent options, management, best practices, and recommendations, see [SUSE Linux Enterprise High Availability Extension 12 SP2](https://www.suse.com/documentation/sle-ha-12/index.html).
 
 ## Prerequisites
 
-To complete the end-to-end scenario below you need two machines to deploy the two nodes cluster and another server to configure the NFS share. Below steps outline how these servers will be configured.
+To complete the following end-to-end scenario, you need two machines to deploy the two nodes cluster and another server to configure the NFS share. Below steps outline how these servers will be configured.
 
 ## Setup and configure the operating system on each cluster node
 
@@ -34,7 +29,7 @@ The first step is to configure the operating system on the cluster nodes. For th
 
 ## Install and configure SQL Server on each cluster node
 
-1. Install and setup SQL Server on both nodes. For detailed instructions see [Install SQL Server on Linux](sql-server-linux-setup.md).
+1. Install and setup SQL Server on both nodes. For detailed instructions, see [Install SQL Server on Linux](sql-server-linux-setup.md).
 2. Designate one node as primary and the other as secondary, for purposes of configuration. Use these terms for the following this guide. 
 3. On the secondary node, stop and disable SQL Server. The following example stops and disables SQL Server:
 
@@ -44,13 +39,13 @@ The first step is to configure the operating system on the cluster nodes. For th
     ```
 
     > [!NOTE]
-    > At setup time, a Server Master Key is generated for the SQL Server instance and placed at `/var/opt/mssql/secrets/machine-key`. On Linux, SQL Server always runs as a local account called mssql. Because it’s a local account, its identity isn’t shared across nodes. Therefore, you need to copy the encryption key from primary node to each secondary node so each local mssql account can access it to decrypt the Server Master Key.
-4. On the primary node, create a SQL server login for Pacemaker and grant the login permission to run `sp_server_diagnostics`. Pacemaker will use this account to verify which node is running SQL Server.
+    > At setup time, a Server Master Key is generated for the SQL Server instance and placed at `/var/opt/mssql/secrets/machine-key`. On Linux, SQL Server always runs as a local account called mssql. Because it's a local account, its identity isn't shared across nodes. Therefore, you need to copy the encryption key from primary node to each secondary node so each local mssql account can access it to decrypt the Server Master Key.
+4. On the primary node, create a SQL server login for Pacemaker and grant the login permission to run `sp_server_diagnostics`. Pacemaker uses this account to verify which node is running SQL Server.
 
     ```bash
     sudo systemctl start mssql-server
     ```
-    Connect to the SQL Server master database with the ‘sa’ account and run the following:
+    Connect to the SQL Server master database with the 'sa' account and run the following:
 
     ```tsql
     USE [master]
@@ -59,7 +54,7 @@ The first step is to configure the operating system on the cluster nodes. For th
     GRANT VIEW SERVER STATE TO <loginName>
     ```
 5. On the primary node, stop and disable SQL Server.
-6. Follow the directions [in the SUSE documentation](https://www.suse.com/documentation/sles11/book_sle_admin/data/sec_basicnet_yast.html) to configure and update the hosts file for each cluster node. The ‘hosts’ file must include the IP address and name of every cluster node.
+6. Follow the directions [in the SUSE documentation](https://www.suse.com/documentation/sles11/book_sle_admin/data/sec_basicnet_yast.html) to configure and update the hosts file for each cluster node. The 'hosts' file must include the IP address and name of every cluster node.
 
     To check the IP address of the current node run:
 
@@ -101,7 +96,7 @@ Another storage option is to use SMB file share:
 
 ### Configure an NFS server
 
-To configure an NFS server, refer to the following steps in the SUSE documentation: [Configuring NFS Server](https://www.suse.com/documentation/sles-12/singlehtml/book_sle_admin/book_sle_admin.html#sec.nfs.configuring-nfs-server).
+To configure an NFS server,see the following steps in the SUSE documentation: [Configuring NFS Server](https://www.suse.com/documentation/sles-12/singlehtml/book_sle_admin/book_sle_admin.html#sec.nfs.configuring-nfs-server).
 
 ### Configure all cluster nodes to connect to the NFS shared storage
 
@@ -122,7 +117,7 @@ Before configuring the client NFS to mount the SQL Server database files path to
     - [Configuring Clients](https://www.suse.com/documentation/sles-12/singlehtml/book_sle_admin/book_sle_admin.html#sec.nfs.configuring-nfs-clients)
 
     > [!NOTE]
-    > It is recommended to follow SUSE’s best practices and recommendations regarding Highly Available NFS storage: [Highly Available NFS Storage with DRBD and Pacemaker](https://www.suse.com/documentation/sle-ha-12/book_sleha_techguides/data/art_ha_quick_nfs.html).
+    > It is recommended to follow SUSE's best practices and recommendations regarding Highly Available NFS storage: [Highly Available NFS Storage with DRBD and Pacemaker](https://www.suse.com/documentation/sle-ha-12/book_sleha_techguides/data/art_ha_quick_nfs.html).
 
 2. Validate that SQL Server starts successfully with the new file path. Do this on each node. At this point only one node should run SQL Server at a time. They cannot both run at the same time because they will both try to access the data files simultaneously (to avoid accidentally starting SQL Server on both nodes, use a File System cluster resource to make sure the share is not mounted twice by the different nodes). The following commands start SQL Server, check the status, and then stop SQL Server.
 
@@ -198,7 +193,7 @@ The following steps explain how to configure the cluster resource for SQL Server
 - **SQL Server Resource Name**: A name for the clustered SQL Server resource. 
 - **Timeout Value**: The timeout value is the amount of time that the cluster waits while a resource is brought online. For SQL Server, this is the time that you expect SQL Server to take to bring the `master` database online. 
 
-Update the values from the script below for your environment. Run on one node to configure and start the clustered service.
+Update the values from the following script for your environment. Run on one node to configure and start the clustered service.
 
 ```bash
 sudo crm configure
@@ -247,7 +242,7 @@ Full list of resources:
 
 ## Managing cluster resources
 
-To manage your cluster resources, refer to the following SUSE topic:
+To manage your cluster resources,see the following SUSE topic:
 [Managing Cluster Resources](https://www.suse.com/documentation/sle-ha-12/singlehtml/book_sleha/book_sleha.html#sec.ha.config.crm )
 
 ### Manual failover

@@ -1,29 +1,14 @@
 ---
 title: "Make a Copy of a Mining Model | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/20/2017"
-ms.prod: analysis-services
-ms.prod_service: "analysis-services"
-ms.service: ""
-ms.component: ""
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
-  
-ms.component: data-mining
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "mining models [Analysis Services], copying"
-  - "mining models [Analysis Services], creating"
-  - "mining models [Analysis Services], how-to topics"
-  - "copying mining models"
-ms.assetid: 7975bb02-f188-49a0-b7de-5b9b216254ad
-caps.latest.revision: 12
-author: "Minewiskan"
-ms.author: "owend"
-manager: "kfile"
-ms.workload: "Inactive"
+ms.date: 05/08/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: data-mining
+ms.topic: conceptual
+ms.author: owend
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
 ---
 # Make a Copy of a Mining Model
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -41,7 +26,7 @@ ms.workload: "Inactive"
   
 3.  Select the model, and right-click to open the shortcut menu.  
   
-     –or–  
+     -or-  
   
      Select the model. On the **Mining Model** menu, select **New Mining Model**.  
   
@@ -51,7 +36,7 @@ ms.workload: "Inactive"
   
 1.  Select the mining model.  
   
-2.  In the **Properties** window, click the text box for the **Filter** property, and the click the build **(…)** button.  
+2.  In the **Properties** window, click the text box for the **Filter** property, and the click the build **(...)** button.  
   
 3.  Change the filter conditions.  
   

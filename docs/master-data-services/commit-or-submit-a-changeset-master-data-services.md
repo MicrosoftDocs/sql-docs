@@ -2,31 +2,27 @@
 title: "Commit or Submit a Changeset (Master Data Services) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "mds"
-ms.service: ""
-ms.component: "non-specific"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "master-data-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: master-data-services
+ms.topic: conceptual
 ms.assetid: d323bbac-c8d4-4d2f-a7d2-a597e8b53e2d
-caps.latest.revision: 10
-author: "smartysanthosh"
-ms.author: "nagavo"
-manager: "craigg"
-ms.workload: "Inactive"
+author: leolimsft
+ms.author: lle
+manager: craigg
 ---
 # Commit or Submit a Changeset (Master Data Services)
-  A changeset is a collection of the pending changes on the master data. If entity changes don’t require administrator approval, you can commit the changeset. If the entity changes require administrator approval, you can submit the changeset for approval.  
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
+  A changeset is a collection of the pending changes on the master data. If entity changes don't require administrator approval, you can commit the changeset. If the entity changes require administrator approval, you can submit the changeset for approval.  
   
 ## Prerequisites  
   
 -   You must have permission to access the **Explorer** functional area. For more information, see [Functional Area Permissions &#40;Master Data Services&#41;](../master-data-services/functional-area-permissions-master-data-services.md)  
   
--   If the entity changes don’t require administrator approval, you can commit the changeset only if you own the changeset and the changeset status is open.  
+-   If the entity changes don't require administrator approval, you can commit the changeset only if you own the changeset and the changeset status is open.  
   
 -   If the entity changes require administrator approval, you can submit the changeset for approval only if you own the changeset and the changeset status is open or rejected.  
   

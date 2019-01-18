@@ -2,15 +2,9 @@
 title: "sys.dm_os_cluster_nodes (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/18/2017"
-ms.prod: "sql-non-specified"
-ms.prod_service: "database-engine"
-ms.service: ""
-ms.component: "dmv's"
+ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: system-objects
 ms.topic: "language-reference"
 f1_keywords: 
   - "sys.dm_os_cluster_nodes_TSQL"
@@ -22,11 +16,9 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.dm_os_cluster_nodes dynamic management view"
 ms.assetid: 92fa804e-2d08-42c6-a36f-9791544b1d42
-caps.latest.revision: 36
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-ms.workload: "On Demand"
+author: stevestein
+ms.author: sstein
+manager: craigg
 ---
 # sys.dm_os_cluster_nodes (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -38,7 +30,7 @@ ms.workload: "On Demand"
 |Column name|Data type|Description|  
 |-----------------|---------------|-----------------|  
 |**NodeName**|**sysname**|Name of a node in the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] failover cluster instance (virtual server) configuration.|  
-|status|**int**|Status of the node in a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] failover cluster instance: 0, 1, 2, 3, -1. For more information, see [GetClusterNodeState Function](http://go.microsoft.com/fwlink/?LinkId=204794).|  
+|status|**int**|Status of the node in a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] failover cluster instance: 0, 1, 2, 3, -1. For more information, see [GetClusterNodeState Function](https://go.microsoft.com/fwlink/?LinkId=204794).|  
 |status_description|**nvarchar(20)**|Description of the status of the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] failover cluster node.<br /><br /> 0 = up<br /><br /> 1 = down<br /><br /> 2 = paused<br /><br /> 3 = joining<br /><br /> -1 = unknown|  
 |is_current_owner|bit|1 means this node is the current owner of the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] failover cluster resource.|  
 |pdw_node_id|**int**|**Applies to**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> The identifier for the node that this distribution is on.|  

@@ -1,27 +1,20 @@
 ---
 title: "Retrieving Resultsets into Streams | Microsoft Docs"
-ms.prod: "sql-non-specified"
-ms.prod_service: "drivers"
-ms.service: ""
-ms.component: "ado"
-ms.technology:
-  - "drivers"
+ms.prod: sql
+ms.prod_service: connectivity
+ms.technology: connectivity
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "streams [ADO], retrieving query results"
   - "query results into stream [ADO]"
   - "retrieving results into stream [ADO]"
 ms.assetid: 996c1321-c926-4f57-8297-85c8c20de974
-caps.latest.revision: 12
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
-ms.workload: "Inactive"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # Retrieving Resultsets into Streams
 Instead of receiving results in the traditional **Recordset** object, ADO can instead retrieve query results into a stream. The ADO **Stream** object (or other objects that support the COM **IStream** interface, such as the ASP **Request** and **Response** objects) can be used to contain these results. One use for this feature is to retrieve results in XML format. With SQL Server, for example, XML results can be returned in multiple ways, such as using the FOR XML clause with a SQL SELECT query or using an XPath query.  

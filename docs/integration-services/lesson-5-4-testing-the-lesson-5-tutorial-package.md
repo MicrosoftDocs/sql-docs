@@ -2,24 +2,15 @@
 title: "Step 4: Testing the Lesson 5 Tutorial Package | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "integration-services"
-ms.service: ""
-ms.component: "tutorial"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
-applies_to: 
-  - "SQL Server 2016"
+ms.technology: integration-services
+ms.topic: tutorial
 ms.assetid: 5215b77d-c2ec-4b25-a3de-ca49ea197d74
-caps.latest.revision: 25
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
-ms.workload: "Inactive"
+manager: craigg
 ---
 # Lesson 5-4 - Testing the Lesson 5 Tutorial Package
 At run time, your package will obtain the value for the **Directory** property from a variable updated at run time, rather than using the original directory name that you specified when you created the package. The value of the variable is populated by the SSISTutorial.dtsConfig file.  

@@ -1,34 +1,19 @@
 ---
 title: "TupleToStr (MDX) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/02/2016"
-ms.prod: analysis-services
-ms.prod_service: "analysis-services"
-ms.service: ""
-ms.component: ""
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
-  
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "TUPLETOSTR"
-dev_langs: 
-  - "kbMDX"
-helpviewer_keywords: 
-  - "TupletoStr function"
-ms.assetid: ad12347c-d1c4-4d8b-a910-3116bd6b68e0
-caps.latest.revision: 32
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-ms.workload: "Inactive"
+ms.date: 06/04/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: mdx
+ms.topic: reference
+ms.author: owend
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
 ---
 # TupleToStr (MDX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
-  Returns a Multidimensional Expressions (MDX)–formatted string that corresponds to a specified tuple.  
+
+  Returns a Multidimensional Expressions (MDX)-formatted string that corresponds to a specified tuple.  
   
 ## Syntax  
   

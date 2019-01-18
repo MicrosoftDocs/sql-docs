@@ -2,22 +2,16 @@
 title: "Data-Tier Application Framework - License Terms | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "sql-tools"
-ms.service: ""
-ms.component: "ssdt"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "tools-ssdt"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: ssdt
+ms.topic: conceptual
 ms.assetid: 68b76541-ab99-436a-982b-f18c46bc6fe3
-caps.latest.revision: 4
 author: "stevestein"
 ms.author: "sstein"
-manager: "jhubbard"
-ms.workload: "Inactive"
+manager: craigg
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||=azuresqldb-mi-current"
 ---
 # Data-Tier Application Framework - License Terms
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -47,7 +41,7 @@ for this software, unless other terms accompany those items. If so, those terms 
 &nbsp;a.    **Distributable Code.**  
 &nbsp;&nbsp;i.  **Right to Use and Distribute. If you comply with the terms below:**  
   
-    - You may copy and distribute the object code form of the software (“Distributable Code”) in programs you develop; and  
+    - You may copy and distribute the object code form of the software ("Distributable Code") in programs you develop; and  
     - You may permit distributors of your programs to copy and distribute the Distributable Code as part of those programs.  
   
     &nbsp;ii.   **Distribution Requirements. For any Distributable Code you distribute, you must**  
@@ -57,12 +51,12 @@ for this software, unless other terms accompany those items. If so, those terms 
     - distribute Distributable Code included in a setup program only as part of that setup program without modification;  
     - require distributors and external end users to agree to terms that protect it at least as much as this agreement;   
     - display your valid copyright notice on your programs; and  
-    -   indemnify, defend, and hold harmless Microsoft from any claims, including attorneys’ fees, related to the distribution or use of your programs.  
+    -   indemnify, defend, and hold harmless Microsoft from any claims, including attorneys' fees, related to the distribution or use of your programs.  
       
     &nbsp;iii.  **Distribution Restrictions. You may not**  
       
     -   alter any copyright, trademark or patent notice in the Distributable Code;  
-    -   use Microsoft’s trademarks in your programs’ names or in a way that suggests your programs come from or are endorsed by Microsoft;  
+    -   use Microsoft's trademarks in your programs' names or in a way that suggests your programs come from or are endorsed by Microsoft;  
     -   distribute Distributable Code to run on a platform other than the Windows platform;  
     -   include Distributable Code in malicious, deceptive or unlawful programs; or  
     -   modify or distribute the source code of any Distributable Code so that any part of it becomes subject to an Excluded License. An Excluded License is one that requires, as a condition of use, modification or distribution, that  
@@ -79,7 +73,7 @@ for this software, unless other terms accompany those items. If so, those terms 
     -   transfer the software or this agreement to any third party; or  
     -   use the software for commercial software hosting services.  
       
-4.  **THIRD PARTY NOTICES.** The software may include third party code, that Microsoft, not the third party, licenses to you under the terms set forth in this agreement. Notices, if any, for any third party code are included for your information only. Additionally, any third party scripts, linked to, called or referenced from this software, are licensed to you by the third parties that own such code, not by Microsoft, see ASP.NET Ajax CDN Terms of Use: http://www.asp.net/ajaxlibrary/CDN.ashx.  
+4.  **THIRD PARTY NOTICES.** The software may include third party code, that Microsoft, not the third party, licenses to you under the terms set forth in this agreement. Notices, if any, for any third party code are included for your information only. Additionally, any third party scripts, linked to, called or referenced from this software, are licensed to you by the third parties that own such code, not by Microsoft, see ASP.NET Ajax CDN Terms of Use: https://www.asp.net/ajaxlibrary/CDN.ashx.  
   
 5.  **BACKUP COPY.** You may make one backup copy of the software. You may use it only to reinstall the software.  
   
@@ -87,7 +81,7 @@ for this software, unless other terms accompany those items. If so, those terms 
   
 7.  **EXPORT RESTRICTIONS.** The software is subject to United States export laws and regulations. You must comply with all domestic and international export laws and regulations that apply to the software. These laws include restrictions on destinations, end users and end use. For additional information, see www.microsoft.com/exporting.  
   
-8.  **SUPPORT SERVICES.** Because this software is “as is,” we may not provide support services for it.  
+8.  **SUPPORT SERVICES.** Because this software is "as is," we may not provide support services for it.  
   
 9.  **ENTIRE AGREEMENT.** This agreement, and the terms for supplements, updates, Internet-based services and support services that you use, are the entire agreement for the software and support services.  
   
@@ -98,9 +92,9 @@ b.  **Outside the United States.** If you acquired the software in any other cou
   
 11. **LEGAL EFFECT.** This agreement describes certain legal rights. You may have other rights under the laws of your country. You may also have rights with respect to the party from whom you acquired the software. This agreement does not change your rights under the laws of your country if the laws of your country do not permit it to do so.  
   
-12. **DISCLAIMER OF WARRANTY. THE SOFTWARE IS LICENSED “AS-IS.” YOU BEAR THE RISK OF USING IT. MICROSOFT GIVES NO EXPRESS WARRANTIES, GUARANTEES OR CONDITIONS. YOU MAY HAVE ADDITIONAL CONSUMER RIGHTS OR STATUTORY GUARANTEES UNDER YOUR LOCAL LAWS WHICH THIS AGREEMENT CANNOT CHANGE. TO THE EXTENT PERMITTED UNDER YOUR LOCAL LAWS, MICROSOFT EXCLUDES THE IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT.**  
+12. **DISCLAIMER OF WARRANTY. THE SOFTWARE IS LICENSED "AS-IS." YOU BEAR THE RISK OF USING IT. MICROSOFT GIVES NO EXPRESS WARRANTIES, GUARANTEES OR CONDITIONS. YOU MAY HAVE ADDITIONAL CONSUMER RIGHTS OR STATUTORY GUARANTEES UNDER YOUR LOCAL LAWS WHICH THIS AGREEMENT CANNOT CHANGE. TO THE EXTENT PERMITTED UNDER YOUR LOCAL LAWS, MICROSOFT EXCLUDES THE IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT.**  
   
-    **FOR AUSTRALIA – YOU HAVE STATUTORY GUARANTEES UNDER THE AUSTRALIAN CONSUMER LAW AND NOTHING IN THESE TERMS IS INTENDED TO AFFECT THOSE RIGHTS.**  
+    **FOR AUSTRALIA - YOU HAVE STATUTORY GUARANTEES UNDER THE AUSTRALIAN CONSUMER LAW AND NOTHING IN THESE TERMS IS INTENDED TO AFFECT THOSE RIGHTS.**  
   
 13. **LIMITATION ON AND EXCLUSION OF REMEDIES AND DAMAGES. YOU CAN RECOVER FROM MICROSOFT AND ITS SUPPLIERS ONLY DIRECT DAMAGES UP TO U.S. $5.00. YOU CANNOT RECOVER ANY OTHER DAMAGES, INCLUDING CONSEQUENTIAL, LOST PROFITS, SPECIAL, INDIRECT OR INCIDENTAL DAMAGES.**  
   
@@ -115,17 +109,17 @@ It also applies even if Microsoft knew or should have known about the possibilit
   
 **Remarque : Ce logiciel étant distribué au Québec, Canada, les termes de cette licence sont fournis ci-dessous en français.**  
   
--   **EXCLUSIONS DE GARANTIE. Le logiciel est concédé sous licence « en l’état ». Vous assumez tous les risques liés à son utilisation. Microsoft n’accorde aucune garantie ou condition expresse. Vous pouvez bénéficier de droits des consommateurs supplémentaires ou de garanties statutaires dans le cadre du droit local, que ce contrat ne peut modifier. Lorsque cela est autorisé par le droit local, Microsoft exclut les garanties implicites de qualité, d’adéquation à un usage particulier et d’absence de contrefaçon.**  
+-   **EXCLUSIONS DE GARANTIE. Le logiciel est concédé sous licence « en l'état ». Vous assumez tous les risques liés à son utilisation. Microsoft n'accorde aucune garantie ou condition expresse. Vous pouvez bénéficier de droits des consommateurs supplémentaires ou de garanties statutaires dans le cadre du droit local, que ce contrat ne peut modifier. Lorsque cela est autorisé par le droit local, Microsoft exclut les garanties implicites de qualité, d'adéquation à un usage particulier et d'absence de contrefaçon.**  
   
-    **POUR L’AUSTRALIE – La loi australienne sur la consommation (Australian Consumer Law) vous accorde des garanties statutaires qu’aucun élément du présent accord ne peut affecter.**  
+    **POUR L'AUSTRALIE - La loi australienne sur la consommation (Australian Consumer Law) vous accorde des garanties statutaires qu'aucun élément du présent accord ne peut affecter.**  
   
 -   **LIMITATION ET EXCLUSION DE RECOURS ET DE DOMMAGES. Vous pouvez obtenir de Microsoft et de ses fournisseurs une indemnisation en cas de dommages directs limitée uniquement à hauteur de 5,00 $ US. Vous ne pouvez prétendre à aucune indemnisation pour les autres dommages, y compris les dommages spéciaux, indirects ou accessoires et pertes de bénéfices.**  
   
     Cette limitation concerne:  
       
    - toute affaire liée au logiciel, aux services ou au contenu (y compris le code) figurant sur des sites Internet tiers ou dans des programmes tiers et  
-- les réclamations au titre de violation de contrat ou de garantie, ou au titre de responsabilité stricte, de négligence ou d’une autre faute dans la limite autorisée par la loi en vigueur.  
+- les réclamations au titre de violation de contrat ou de garantie, ou au titre de responsabilité stricte, de négligence ou d'une autre faute dans la limite autorisée par la loi en vigueur.  
   
-Elle s’applique également même si Microsoft connaissait l'éventualité d'un tel dommage. La limitation ou exclusion ci-dessus peut également ne pas vous être applicable, car votre pays n’autorise pas l’exclusion ou la limitation de responsabilité pour les dommages indirects, accessoires ou de quelque nature que ce soit.  
+Elle s'applique également même si Microsoft connaissait l'éventualité d'un tel dommage. La limitation ou exclusion ci-dessus peut également ne pas vous être applicable, car votre pays n'autorise pas l'exclusion ou la limitation de responsabilité pour les dommages indirects, accessoires ou de quelque nature que ce soit.  
   
   

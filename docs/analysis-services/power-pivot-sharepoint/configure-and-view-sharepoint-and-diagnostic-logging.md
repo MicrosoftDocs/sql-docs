@@ -1,25 +1,14 @@
 ---
 title: "Configure and View SharePoint and Diagnostic Logging | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: analysis-services
-ms.prod_service: "analysis-services"
-ms.service: ""
-ms.component: ""
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
-  
-ms.component: multidimensional-tabular
-ms.component: data-mining
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-ms.assetid: 85f62d29-cdc6-45b3-be1f-ff1182939858
-caps.latest.revision: 10
-author: "Minewiskan"
-ms.author: "owend"
-manager: "kfile"
-ms.workload: "Active"
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: ppvt-sharepoint
+ms.topic: conceptual
+ms.author: owend
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
 ---
 # Configure and View SharePoint and Diagnostic Logging
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -81,7 +70,7 @@ ms.workload: "Active"
   
 -   For errors that provide a correlation ID, copy the ID and use it as a search term in the log file.  
   
--   Search for error status "High" or "Exception". Search for “[!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] Service”.  
+-   Search for error status "High" or "Exception". Search for "[!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] Service".  
   
 -   If you know when the error occurred, use the date and time information to narrow the scope of entries you must scroll through.  
   

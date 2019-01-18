@@ -2,30 +2,24 @@
 title: "Create Foreign Key Relationships | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/25/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.service: ""
-ms.component: "tables"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "dbe-tables"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: table-view-index
+ms.topic: conceptual
 helpviewer_keywords: 
   - "relationships [SQL Server], creating"
 ms.assetid: 867a54b8-5be4-46e6-9702-49ae6dabf67c
-caps.latest.revision: 21
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-ms.workload: "Active"
+author: stevestein
+ms.author: sstein
+manager: craigg
+monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Create Foreign Key Relationships
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
- > For content related to previous versions of SQL Server, see [Create Foreign Key Relationships](https://msdn.microsoft.com/en-US/library/ms189049(SQL.120).aspx).
-
+  > [!div class="nextstepaction"]
+  > [Please share your feedback about the SQL Docs Table of Contents!](https://aka.ms/sqldocsurvey)
 
   This topic describes how to create foreign key relationships in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)]. You create a relationship between two tables when you want to associate rows of one table with rows of another.    
      
@@ -80,7 +74,7 @@ ms.workload: "Active"
     
 4.  Click the relationship in the **Selected Relationship** list.    
     
-5.  Click **Tables and Columns Specification** in the grid to the right and click the ellipses (**…**) to the right of the property.    
+5.  Click **Tables and Columns Specification** in the grid to the right and click the ellipses (**...**) to the right of the property.    
     
 6.  In the **Tables and Columns** dialog box, in the **Primary Key** drop-down list, choose the table that will be on the primary-key side of the relationship.    
     
@@ -113,7 +107,7 @@ ms.workload: "Active"
     ```    
     
 ## Create a foreign key in an existing table 
-#### Using Transasct-SQL   
+#### Using Transact-SQL   
     
 1.  In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../../includes/ssde-md.md)].    
     

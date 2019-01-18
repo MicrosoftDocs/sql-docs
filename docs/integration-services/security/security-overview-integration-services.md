@@ -1,17 +1,12 @@
 ---
 title: "Security Overview (Integration Services) | Microsoft Docs"
-ms.custom: ""
+ms.custom: security
 ms.date: "03/14/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "integration-services"
-ms.service: ""
-ms.component: "security"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: integration-services
+ms.topic: conceptual
 helpviewer_keywords: 
   - "SSIS packages, security"
   - "Integration Services, security"
@@ -23,11 +18,9 @@ helpviewer_keywords:
   - "Integration Services packages, security"
   - "SQL Server Integration Services packages, security"
 ms.assetid: 01aa0b88-d477-4581-9a3b-2efc3de2b133
-caps.latest.revision: 73
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
-ms.workload: "Inactive"
+manager: craigg
 ---
 # Security Overview (Integration Services)
   Security in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] consists of several layers that provide a rich and flexible security environment. These security layers include the use of digital signatures, package properties, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database roles, and operating system permissions. Most of these security features fall into the categories of identity and access control.  

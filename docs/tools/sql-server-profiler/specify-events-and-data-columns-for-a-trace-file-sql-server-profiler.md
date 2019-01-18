@@ -2,16 +2,11 @@
 title: "Specify Events and Data Columns for a Trace File (SQL Server Profiler) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "sql-tools"
-ms.service: ""
-ms.component: "sql-server-profiler"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: profiler
+ms.topic: conceptual
 helpviewer_keywords: 
   - "adding events"
   - "traces [SQL Server], data columns"
@@ -19,11 +14,9 @@ helpviewer_keywords:
   - "removing events"
   - "traces [SQL Server], events"
 ms.assetid: 7da715a3-2f03-4063-b6a4-20fd7b44e675
-caps.latest.revision: 24
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-ms.workload: "Inactive"
+author: "stevestein"
+ms.author: "sstein"
+manager: craigg
 ---
 # Specify Events and Data Columns for a Trace File (SQL Server Profiler)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

@@ -1,0 +1,151 @@
+- name: Overview
+  href: databases.md
+- name: System Databases
+  href: system-databases.md
+  items:
+  - name: master Database
+    href: master-database.md
+  - name: model Database
+    href: model-database.md
+  - name: msdb Database
+    href: msdb-database.md
+  - name: Resource Database
+    href: resource-database.md
+  - name: tempdb Database
+    href: tempdb-database.md
+  - name: Rebuild System Databases
+    href: rebuild-system-databases.md
+- name: Contained Databases
+  href: contained-databases.md
+  items:
+  - name: Modified Features (Contained Database)
+    href: modified-features-contained-database.md
+  - name: Contained Database Collations
+    href: contained-database-collations.md
+  - name: Security Best Practices with Contained Databases
+    href: security-best-practices-with-contained-databases.md
+  - name: Migrate to a Partially Contained Database
+    href: migrate-to-a-partially-contained-database.md
+- name: SQL Server Data Files in Microsoft Azure
+  href: sql-server-data-files-in-microsoft-azure.md
+- name: Database Files and Filegroups
+  href: database-files-and-filegroups.md
+- name: Database States
+  href: database-states.md
+- name: File States
+  href: file-states.md
+- name: Database Identifiers
+  href: database-identifiers.md
+- name: Estimate the Size of a Database
+  href: estimate-the-size-of-a-database.md
+  items:
+  - name: Estimate the Size of a Table
+    href: estimate-the-size-of-a-table.md
+  - name: Estimate the Size of a Clustered Index
+    href: estimate-the-size-of-a-clustered-index.md
+  - name: Estimate the Size of a Nonclustered Index
+    href: estimate-the-size-of-a-nonclustered-index.md
+  - name: Estimate the Size of a Heap
+    href: estimate-the-size-of-a-heap.md
+- name: Copy Databases to Other Servers
+  href: copy-databases-to-other-servers.md
+  items:
+  - name: Use the Copy Database Wizard
+    href: use-the-copy-database-wizard.md
+  - name: Copy Databases with Backup and Restore
+    href: copy-databases-with-backup-and-restore.md
+  - name: Publish a Database (SQL Server Management Studio)
+    href: publish-a-database-sql-server-management-studio.md
+- name: Database Detach and Attach
+  href: database-detach-and-attach-sql-server.md
+  items:
+  - name: Move a Database Using Detach and Attach (Transact-SQL)
+    href: move-a-database-using-detach-and-attach-transact-sql.md
+  - name: Upgrade a Database Using Detach and Attach (Transact-SQL)
+    href: upgrade-a-database-using-detach-and-attach-transact-sql.md
+  - name: Detach a Database
+    href: detach-a-database.md
+  - name: Attach a Database
+    href: attach-a-database.md
+- name: Add Data or Log Files to a Database
+  href: add-data-or-log-files-to-a-database.md
+- name: Change the Configuration Settings for a Database
+  href: change-the-configuration-settings-for-a-database.md
+- name: Create a Database
+  href: create-a-database.md
+- name: Delete a Database
+  href: delete-a-database.md
+- name: Delete Data or Log Files from a Database
+  href: delete-data-or-log-files-from-a-database.md
+- name: Display Data and Log Space Information for a Database
+  href: display-data-and-log-space-information-for-a-database.md
+- name: Increase the Size of a Database
+  href: increase-the-size-of-a-database.md
+- name: Manage Metadata When Making a Database Available on Another Server Instance
+  href: manage-metadata-when-making-a-database-available-on-another-server.md
+- name: Move Database Files
+  href: move-database-files.md
+  items:
+  - name: Move User Databases
+    href: move-user-databases.md
+  - name: Move System Databases
+    href: move-system-databases.md
+- name: Rename a Database
+  href: rename-a-database.md
+- name: Set a Database to Single-user Mode
+  href: set-a-database-to-single-user-mode.md
+- name: Shrink a Database
+  href: shrink-a-database.md
+- name: Shrink a File
+  href: shrink-a-file.md
+- name: View or Change the Properties of a Database
+  href: view-or-change-the-properties-of-a-database.md
+  items:
+  - name: Value for Extended Property Dialog Box
+    href: value-for-extended-property-dialog-box.md
+  - name: Database Object (Extended Properties Page)
+    href: database-object-extended-properties-page.md
+  - name: Database Properties (General Page)
+    href: database-properties-general-page.md
+  - name: Database Properties (Files Page)
+    href: database-properties-files-page.md
+  - name: Database Properties (Filegroups Page)
+    href: database-properties-filegroups-page.md
+  - name: Database Properties (Options Page)
+    href: database-properties-options-page.md
+  - name: Database Properties (ChangeTracking Page)
+    href: database-properties-changetracking-page.md
+  - name: Database Properties (Transaction Log Shipping Page)
+    href: database-properties-transaction-log-shipping-page.md
+    items:
+    - name: Log Shipping Transaction Log Backup Settings
+      href: log-shipping-transaction-log-backup-settings.md
+    - name: Secondary Database Settings
+      href: secondary-database-settings.md
+    - name: Log Shipping Monitor Settings
+      href: log-shipping-monitor-settings.md
+  - name: Database Properties (Mirroring Page)
+    href: database-properties-mirroring-page.md
+  - name: Database Properties (Query Store Page)
+    href: database-properties-query-store-page.md
+- name: View a List of Databases on an Instance of SQL Server
+  href: view-a-list-of-databases-on-an-instance-of-sql-server.md
+- name: View or Change the Compatibility Level of a Database
+  href: view-or-change-the-compatibility-level-of-a-database.md
+- name: Create a User-Defined Data Type Alias
+  href: create-a-user-defined-data-type-alias.md
+- name: Database Snapshots
+  href: database-snapshots-sql-server.md
+  items:
+  - name: View the Size of the Sparse File of a Database Snapshot (Transact-SQL)
+    href: view-the-size-of-the-sparse-file-of-a-database-snapshot-transact-sql.md
+  - name: Create a Database Snapshot (Transact-SQL)
+    href: create-a-database-snapshot-transact-sql.md
+  - name: View a Database Snapshot (SQL Server)
+    href: view-a-database-snapshot-sql-server.md
+  - name: Revert a Database to a Database Snapshot
+    href: revert-a-database-to-a-database-snapshot.md
+  - name: Drop a Database Snapshot (Transact-SQL)
+    href: drop-a-database-snapshot-transact-sql.md
+- name: Database Instant File Initialization
+  href: database-instant-file-initialization.md

@@ -1,28 +1,14 @@
 ---
 title: "Local Cubes (Analysis Services - Multidimensional Data) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/16/2017"
-ms.prod: analysis-services
-ms.prod_service: "analysis-services"
-ms.service: ""
-ms.component: ""
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
-  
-
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-applies_to: 
-  - "SQL Server 2016 Preview"
-helpviewer_keywords: 
-  - "cubes [Analysis Services], local"
-ms.assetid: e52e1515-35a7-4dc3-9bbf-736d176ba0c7
-caps.latest.revision: 13
-author: "Minewiskan"
-ms.author: "owend"
-manager: "kfile"
-ms.workload: "Inactive"
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: olap
+ms.topic: conceptual
+ms.author: owend
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
 ---
 # Local Cubes (Analysis Services - Multidimensional Data)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
@@ -44,8 +30,8 @@ ms.workload: "Inactive"
   
 |Source for data for local cube|Creation method|  
 |------------------------------------|---------------------|  
-|Server-based cube|You can use either the CREATE GLOBAL CUBE statement or an [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] Scripting Language (ASSL) script to create and populate a cube from a server-based cube. For more information, see [CREATE GLOBAL CUBE Statement  &#40;MDX&#41;](../../../mdx/mdx-data-definition-create-global-cube.md) or [Analysis Services Scripting Language &#40;ASSL for XMLA&#41;](../../../analysis-services/scripting/analysis-services-scripting-language-assl-for-xmla.md).|  
-|Relational data source|You use an ASSL script to create and populate a cube from an OLE DB relational database. To create a local cube using ASSL, you simply connect to a local cube file (*.cub) and execute the ASSL script in the same manner as executing an ASSL script against an [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] instance to create a server cube. For more information, see [Analysis Services Scripting Language &#40;ASSL for XMLA&#41;](../../../analysis-services/scripting/analysis-services-scripting-language-assl-for-xmla.md).|  
+|Server-based cube|You can use either the CREATE GLOBAL CUBE statement or an [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] Scripting Language (ASSL) script to create and populate a cube from a server-based cube. For more information, see [CREATE GLOBAL CUBE Statement  &#40;MDX&#41;](../../../mdx/mdx-data-definition-create-global-cube.md) or [Analysis Services Scripting Language &#40;ASSL for XMLA&#41;](https://docs.microsoft.com/bi-reference/assl/analysis-services-scripting-language-assl-for-xmla).|  
+|Relational data source|You use an ASSL script to create and populate a cube from an OLE DB relational database. To create a local cube using ASSL, you simply connect to a local cube file (*.cub) and execute the ASSL script in the same manner as executing an ASSL script against an [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] instance to create a server cube. For more information, see [Analysis Services Scripting Language &#40;ASSL for XMLA&#41;](https://docs.microsoft.com/bi-reference/assl/analysis-services-scripting-language-assl-for-xmla).|  
   
  Use the REFRESH CUBE statement to rebuild a local cube and update its data. For more information, see [REFRESH CUBE Statement &#40;MDX&#41;](../../../mdx/mdx-data-definition-refresh-cube.md).  
   

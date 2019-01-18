@@ -2,16 +2,10 @@
 title: "Start and Use the Database Engine Tuning Advisor | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/09/2017"
-ms.prod: "sql-non-specified"
-ms.prod_service: "database-engine"
-ms.service: ""
-ms.component: "performance"
+ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: performance
+ms.topic: conceptual
 f1_keywords: 
   - "sql13.dta.workload.f1"
   - "sql13.dta.general.f1"
@@ -22,11 +16,9 @@ f1_keywords:
 helpviewer_keywords: 
   - "Database Engine Tuning Advisor [SQL Server], starting"
 ms.assetid: a4e3226a-3917-4ec8-bdf0-472879d231c9
-caps.latest.revision: 33
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-ms.workload: "On Demand"
+author: julieMSFT
+ms.author: jrasnick
+manager: craigg
 ---
 # Start and Use the Database Engine Tuning Advisor
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -225,7 +217,7 @@ See [Tuning Database Using Workload from Query Store](../../relational-databases
 >  Pausing Database Engine Tuning Advisor is not supported. If you click the **Start Analysis** toolbar button after clicking either the **Stop Analysis** or **Stop Analysis (With Recommendations)** toolbar buttons, Database Engine Tuning Advisor starts a new tuning session.  
   
 ###  <a name="dta"></a> Use the dta Utility  
- The [dta utility](../../tools/dta/dta-utility.md) provides a command prompt executable file that you can use to tune databases. It enables you to use Database Engine Tuning Advisor functionality in batch files and scripts. The **dta** utility takes plan cache entries, trace files, trace tables, and [!INCLUDE[tsql](../../includes/tsql-md.md)] scripts as workloads. It also takes XML input that conforms to the Database Engine Tuning Advisor XML schema, which is available at this [Microsoft Web site](http://go.microsoft.com/fwlink/?linkid=43100).  
+ The [dta utility](../../tools/dta/dta-utility.md) provides a command prompt executable file that you can use to tune databases. It enables you to use Database Engine Tuning Advisor functionality in batch files and scripts. The **dta** utility takes plan cache entries, trace files, trace tables, and [!INCLUDE[tsql](../../includes/tsql-md.md)] scripts as workloads. It also takes XML input that conforms to the Database Engine Tuning Advisor XML schema, which is available at this [Microsoft Web site](https://go.microsoft.com/fwlink/?linkid=43100).  
   
  Consider the following before you begin tuning a workload with the **dta** utility:  
   
@@ -247,16 +239,16 @@ See [Tuning Database Using Workload from Query Store](../../relational-databases
     dta -E -D DatabaseName -ip -s SessionName  
     ```  
   
-2.  To modify the number of events to use for analysis, specify the **–n** option. The following example increases the number of cache entries to 2,000.  
+2.  To modify the number of events to use for analysis, specify the **-n** option. The following example increases the number of cache entries to 2,000.  
   
     ```  
-    dta -E -D DatabaseName -ip –n 2000-s SessionName1  
+    dta -E -D DatabaseName -ip -n 2000-s SessionName1  
     ```  
   
 3.  To analyze events for all databases in the instance, specify the **-ipf** option.  
   
     ```  
-    dta -E -D DatabaseName -ip –ipf –n 2000 -s SessionName2  
+    dta -E -D DatabaseName -ip -ipf -n 2000 -s SessionName2  
     ```  
   
 ##### To tune a database by using a workload and dta utility default settings  
@@ -315,7 +307,7 @@ See [Tuning Database Using Workload from Query Store](../../relational-databases
   
  C:\Program Files\Microsoft SQL Server\100\Tools\Binn\schemas\sqlserver\2004\07\dta\dtaschema.xsd  
   
- The [!INCLUDE[ssDE](../../includes/ssde-md.md)] Tuning Advisor XML schema is also available online at this [Microsoft Web site](http://go.microsoft.com/fwlink/?linkid=43100&clcid=0x409).  
+ The [!INCLUDE[ssDE](../../includes/ssde-md.md)] Tuning Advisor XML schema is also available online at this [Microsoft Web site](https://go.microsoft.com/fwlink/?linkid=43100&clcid=0x409).  
   
  This URL takes you to a page where many [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] XML schemas are available. Scroll down the page until you reach the row for [!INCLUDE[ssDE](../../includes/ssde-md.md)] Tuning Advisor.  
   

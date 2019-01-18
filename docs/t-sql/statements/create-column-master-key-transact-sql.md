@@ -1,16 +1,11 @@
 ---
 title: "CREATE COLUMN MASTER KEY (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "07/18/2016"
-ms.prod: "sql-non-specified"
+ms.date: "09/24/2018"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.service: ""
-ms.component: "t-sql|statements"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: t-sql
 ms.topic: "language-reference"
 f1_keywords: 
   - "SQL13.SWB.NEWCOLUMNMASTERKEYDEF.GENERAL.F1"
@@ -29,11 +24,9 @@ helpviewer_keywords:
   - "CREATE COLUMN MASTER KEY statement"
   - "Always Encrypted, create column master key"
 ms.assetid: f8926b95-e146-4e3f-b56b-add0c0d0a30e
-caps.latest.revision: 32
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "craigg"
-ms.workload: "Inactive"
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
 ---
 # CREATE COLUMN MASTER KEY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -41,14 +34,19 @@ ms.workload: "Inactive"
   Creates a column master key metadata object in a database. A column master key metadata entry that represents a key, stored in an external key store, which is used to protect (encrypt) column encryption keys when using the [Always Encrypted &#40;Database Engine&#41;](../../relational-databases/security/encryption/always-encrypted-database-engine.md) feature. Multiple column master keys allow for key rotation; periodically changing the key to enhance security. You can create a column master key in a key store and its corresponding metadata object in the database by using the Object Explorer in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or PowerShell. For details, see [Overview of Key Management for Always Encrypted](../../relational-databases/security/encryption/overview-of-key-management-for-always-encrypted.md).  
   
  ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
-  
+ 
+
+> [!IMPORTANT]
+> Creating enclave-enabled keys (with ENCLAVE_COMPUTATIONS) requires [Always Encrypted with secure enclaves](../../relational-databases/security/encryption/always-encrypted-enclaves.md).
+
 ## Syntax  
-  
+
 ```  
 CREATE COLUMN MASTER KEY key_name   
     WITH (  
         KEY_STORE_PROVIDER_NAME = 'key_store_provider_name',  
         KEY_PATH = 'key_path'   
+        [,ENCLAVE_COMPUTATIONS (SIGNATURE = signature)]
          )   
 [;]  
 ```  
@@ -58,7 +56,7 @@ CREATE COLUMN MASTER KEY key_name
  Is the name by which the column master key will be known in the database.  
   
  *key_store_provider_name*  
- Specifies the name of a key store provider, which is a client-side software component that encapsulates a key store containing the column master key. An Always Encrypted-enabled client driver uses a key store provider name to look up a key store provider in driver’s registry of key store providers. The driver uses the provider to decrypt column encryption keys, protected by a column master key, stored in the underlying key store. A plaintext value of the column encryption key is then used to encrypt query parameters, corresponding to encrypted database columns, or to decrypt query results from encrypted columns.  
+ Specifies the name of a key store provider, which is a client-side software component that encapsulates a key store containing the column master key. An Always Encrypted-enabled client driver uses a key store provider name to look up a key store provider in driver's registry of key store providers. The driver uses the provider to decrypt column encryption keys, protected by a column master key, stored in the underlying key store. A plaintext value of the column encryption key is then used to encrypt query parameters, corresponding to encrypted database columns, or to decrypt query results from encrypted columns.  
   
  Always Encrypted-enabled client driver libraries include key store providers for popular key stores.   
   
@@ -151,10 +149,12 @@ The below tables captures the names of system providers:
      *KeyUrl*  
      The URL of the key in Azure Key Vault
 
+ENCLAVE_COMPUTATIONS  
+Specifies the column master key is enclave-enabled, which means all column encryption keys encrypted with this column master key can be shared with a server-side secure enclave and used for computations inside the enclave. For more information, see [Always Encrypted with secure enclaves](../../relational-databases/security/encryption/always-encrypted-enclaves.md).
 
-Example:
- 
-`N'https://myvault.vault.azure.net:443/keys/MyCMK/4c05f1a41b12488f9cba2ea964b6a700'`  
+ *signature*  
+A binary literal that is a result of digitally signing *key path* and the ENCLAVE_COMPUTATIONS setting with the column master key (the signature reflects whether ENCLAVE_COMPUTATIONS has been specified or not). The signature protects the signed values from being altered by unauthorized users. An Always Encrypted-enabled client driver can verify the signature and return an error to the application if the signature is invalid. The signature must be generated using client-side tools. For more information, see [Always Encrypted with secure enclaves](../../relational-databases/security/encryption/always-encrypted-enclaves.md).
+  
   
 ## Remarks  
 
@@ -188,7 +188,7 @@ WITH (
 );  
 ```  
   
- Creating a column master key stored in the Azure Key Vault, for client applications that use the AZURE_KEY_VAULT provider, to access the column master key.  
+ Creating a column master key metadata entry for a column master key stored in the Azure Key Vault, for client applications that use the AZURE_KEY_VAULT provider, to access the column master key.  
   
 ```  
 CREATE COLUMN MASTER KEY MyCMK  
@@ -198,7 +198,7 @@ WITH (
         MyCMK/4c05f1a41b12488f9cba2ea964b6a700');  
 ```  
   
- Creating a CMK stored in a custom column master key store:  
+ Creating a column master key metadata entry for a column master key stored in a custom column master key store:  
   
 ```  
 CREATE COLUMN MASTER KEY MyCMK  
@@ -206,6 +206,28 @@ WITH (
     KEY_STORE_PROVIDER_NAME = 'CUSTOM_KEY_STORE',    
     KEY_PATH = 'https://contoso.vault/sales_db_tce_key'  
 );  
+```  
+### B. Creating an enclave-enabled column master key  
+ Creating a column master key metadata entry for an enclave-enabled column master key stored in Certificate Store, for client applications that use the MSSQL_CERTIFICATE_STORE provider to access the column master key:  
+  
+```  
+CREATE COLUMN MASTER KEY MyCMK  
+WITH (  
+     KEY_STORE_PROVIDER_NAME = N'MSSQL_CERTIFICATE_STORE',   
+     KEY_PATH = 'Current User/Personal/f2260f28d909d21c642a3d8e0b45a830e79a1420'  
+     ENCLAVE_COMPUTATIONS (SIGNATURE = 0xA80F5B123F5E092FFBD6014FC2226D792746468C901D9404938E9F5A0972F38DADBC9FCBA94D9E740F3339754991B6CE26543DEB0D094D8A2FFE8B43F0C7061A1FFF65E30FDDF39A1B954F5BA206AAC3260B0657232020542419990261D878318CC38EF4E853970ED69A8D4A306693B8659AAC1C4E4109DE5EB148FD0E1FDBBC32F002C1D8199D313227AD689279D8DEEF91064DF122C19C3767C463723AB663A6F8412AE17E745922C0E3A257EAEF215532588ACCBD440A03C7BC100A38BD0609A119E1EF7C5C6F1B086C68AB8873DBC6487B270340E868F9203661AFF0492CEC436ABF7C4713CE64E38CF66C794B55636BFA55E5B6554AF570CF73F1BE1DBD)
+  );  
+```  
+  
+ Creating a column master key metadata entry for an enclave-enabled column master key stored in the Azure Key Vault, for client applications that use the AZURE_KEY_VAULT provider, to access the column master key.  
+  
+```  
+CREATE COLUMN MASTER KEY MyCMK  
+WITH (  
+    KEY_STORE_PROVIDER_NAME = N'AZURE_KEY_VAULT',  
+    KEY_PATH = N'https://myvault.vault.azure.net:443/keys/MyCMK/4c05f1a41b12488f9cba2ea964b6a700');
+    ENCLAVE_COMPUTATIONS (SIGNATURE = 0xA80F5B123F5E092FFBD6014FC2226D792746468C901D9404938E9F5A0972F38DADBC9FCBA94D9E740F3339754991B6CE26543DEB0D094D8A2FFE8B43F0C7061A1FFF65E30FDDF39A1B954F5BA206AAC3260B0657232020582413990261D878318CC38EF4E853970ED69A8D4A306693B8659AAC1C4E4109DE5EB148FD0E1FDBBC32F002C1D8199D313227AD689279D8DEEF91064DF122C19C3767C463723AB663A6F8412AE17E745922C0E3A257EAEF215532588ACCBD440A03C7BC100A38BD0609A119E1EF7C5C6F1B086C68AB8873DBC6487B270340E868F9203661AFF0492CEC436ABF7C4713CE64E38CF66C794B55636BFA55E5B6554AF570CF73F1BE1DBD)
+  );
 ```  
   
 ## See Also

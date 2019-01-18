@@ -2,15 +2,9 @@
 title: "Overview of CLR Integration | Microsoft Docs"
 ms.custom: ""
 ms.date: "04/19/2017"
-ms.prod: "sql-non-specified"
-ms.prod_service: "database-engine"
-ms.service: ""
-ms.component: "clr"
+ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-
-ms.tgt_pltfrm: ""
+ms.technology: clr
 ms.topic: "reference"
 helpviewer_keywords: 
   - "common language runtime [SQL Server], about CLR integration"
@@ -21,11 +15,9 @@ helpviewer_keywords:
   - "managed code [SQL Server], vs. extended stored procedures"
   - "execution at client vs. execution at server [CLR integration]"
 ms.assetid: 5aa176da-3652-4afa-a742-4c40c77ce5c3
-caps.latest.revision: 50
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-ms.workload: "On Demand"
+author: "rothja"
+ms.author: "jroth"
+manager: craigg
 ---
 # CLR Integration - Overview
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -49,7 +41,7 @@ ms.workload: "On Demand"
   
  CLR integration offers the potential for improved performance. For information, see [Performance of CLR Integration](../../relational-databases/clr-integration/clr-integration-architecture-performance.md).  
  
->  [!WARNING]
+> [!WARNING]
 >  CLR uses Code Access Security (CAS) in the .NET Framework, which is no longer supported as a security boundary. A CLR assembly created with `PERMISSION_SET = SAFE` may be able to access external system resources, call unmanaged code, and acquire sysadmin privileges. Beginning with [!INCLUDE[sssqlv14](../../includes/sssqlv14-md.md)], an `sp_configure` option called `clr strict security` is introduced to enhance the security of CLR assemblies. `clr strict security` is enabled by default, and treats `SAFE` and `EXTERNAL_ACCESS` assemblies as if they were marked `UNSAFE`. The `clr strict security` option can be disabled for backward compatibility, but this is not recommended. Microsoft recommends that all assemblies be signed by a certificate or asymmetric key with a corresponding login that has been granted `UNSAFE ASSEMBLY` permission in the master database. For more information, see [CLR strict security](../../database-engine/configure-windows/clr-strict-security.md). 
   
 ## Choosing Between Transact-SQL and Managed Code  
@@ -62,8 +54,8 @@ ms.workload: "On Demand"
  Extended stored procedures can be built to perform functionality not possible with [!INCLUDE[tsql](../../includes/tsql-md.md)] stored procedures. Extended stored procedures can, however, compromise the integrity of the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] process, while managed code that is verified to be type-safe cannot. Further, memory management, scheduling of threads and fibers, and synchronization services are more deeply integrated between the managed code of the CLR and [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. With CLR integration, you have a more secure way than extended stored procedures to write the stored procedures you need to perform tasks not possible in [!INCLUDE[tsql](../../includes/tsql-md.md)]. For more information about CLR integration and extended stored procedures, see [Performance of CLR Integration](../../relational-databases/clr-integration/clr-integration-architecture-performance.md).  
   
 ## See Also  
- [Installing the .NET Framework](http://technet.microsoft.com/library/ms166014\(v=SQL.105\).aspx)   
- [Architecture of CLR Integration](http://msdn.microsoft.com/library/05e4b872-3d21-46de-b4d5-739b5f2a0cf9)   
+ [Installing the .NET Framework](https://technet.microsoft.com/library/ms166014\(v=SQL.105\).aspx)   
+ [Architecture of CLR Integration](https://msdn.microsoft.com/library/05e4b872-3d21-46de-b4d5-739b5f2a0cf9)   
  [Data Access from CLR Database Objects](../../relational-databases/clr-integration/data-access/data-access-from-clr-database-objects.md)   
  [Getting Started with CLR Integration](../../relational-databases/clr-integration/database-objects/getting-started-with-clr-integration.md)  
   

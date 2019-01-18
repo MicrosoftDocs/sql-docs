@@ -1,25 +1,14 @@
 ---
 title: "Configure Usage Data Collection for (Power Pivot for SharePoint | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: analysis-services
-ms.prod_service: "analysis-services"
-ms.service: ""
-ms.component: ""
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
-  
-ms.component: multidimensional-tabular
-ms.component: data-mining
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-ms.assetid: 955ca6d6-9d5b-47a4-a87c-59bd23f1bf74
-caps.latest.revision: 10
-author: "Minewiskan"
-ms.author: "owend"
-manager: "kfile"
-ms.workload: "Inactive"
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: ppvt-sharepoint
+ms.topic: conceptual
+ms.author: owend
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
 ---
 # Configure Usage Data Collection for (Power Pivot for SharePoint
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -91,9 +80,9 @@ ms.workload: "Inactive"
 ##  <a name="jobs"></a> Configure the timer jobs used in usage data collection  
  [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] server health and usage data is moved to different locations in the usage data collection system through two timer jobs.:  
   
--   The “Microsoft SharePoint Foundation Usage Data Import” timer job moves [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] usage to the [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] service application database.  
+-   The "Microsoft SharePoint Foundation Usage Data Import" timer job moves [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] usage to the [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] service application database.  
   
--   The “[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] Management Dashboard Processing timer job” the data to [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] workbook that is the source of data for built-in administrative reports.  
+-   The "[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] Management Dashboard Processing timer job" the data to [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] workbook that is the source of data for built-in administrative reports.  
   
  If you need to refresh the administrative reports that appear in the [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] Management Dashboard more frequently, follow these steps.  
   

@@ -1,24 +1,15 @@
 ---
 title: "Cache Shared Datasets (SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
+ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
-ms.service: ""
-ms.component: "report-server"
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
+ms.technology: report-server
 
 
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 ms.assetid: 4acb1bbe-1c04-4979-b893-dc1b1c5039b6
-caps.latest.revision: 6
-author: "markingmyname"
-ms.author: "maghan"
-manager: "kfile"
-ms.workload: "Inactive"
+author: markingmyname
+ms.author: maghan
 ---
 # Cache Shared Datasets (SSRS)
   Query results for a shared dataset can be copied to a cache to provide consistent data for multiple reports and to improve response time for the dataset query. Like reports, you can configure a shared dataset to be cached on first use or by specifying a schedule.  
@@ -56,7 +47,7 @@ ms.workload: "Inactive"
   
  While the query results for a specific parameter combination are in the cache, each report that is launched for processing and that includes a reference to the shared dataset with those parameter values will use the cached data.  
   
- You can specify how long to keep data in the the cache before it expires. For more information, see [Caching Page, Shared Datasets &#40;Report Manager&#41;](http://msdn.microsoft.com/library/eac372e9-d2a1-48a8-bbe5-09d101df16ea).  
+ You can specify how long to keep data in the cache before it expires. For more information, see [Caching Page, Shared Datasets &#40;Report Manager&#41;](https://msdn.microsoft.com/library/eac372e9-d2a1-48a8-bbe5-09d101df16ea).  
   
 ## Preloading the Cache  
  You can preload the cache by creating a cache refresh plan. With a refresh plan, you can specify how often to refresh the cache by using an item-specific schedule or a shared schedule. To avoid multiple cache entries for the same item, the schedule that you specify should allow enough time for query processing on the external data source. For example, if the query takes 20 minutes to run, the refresh schedule should be greater than 20 minutes. For more information, see [Schedules](../../reporting-services/subscriptions/schedules.md).  
@@ -73,7 +64,7 @@ ms.workload: "Inactive"
   
 -   You must have ReadPolicy and UpdatePolicy permissions on the shared dataset.  
   
- Cache refresh plans apply to both shared datasets and reports. For more information, see [Cache Refresh Options &#40;Report Manager&#41;](http://msdn.microsoft.com/library/227da40c-6bd2-48ec-aa9c-50ce6c1ca3a6).  
+ Cache refresh plans apply to both shared datasets and reports. For more information, see [Cache Refresh Options &#40;Report Manager&#41;](https://msdn.microsoft.com/library/227da40c-6bd2-48ec-aa9c-50ce6c1ca3a6).  
   
 ## Conditions that Cause Cache Expiration  
  The following conditions can cause a shared dataset cache to become not valid.  

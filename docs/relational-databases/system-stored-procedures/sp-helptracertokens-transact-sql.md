@@ -2,29 +2,20 @@
 title: "sp_helptracertokens (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "database-engine"
-ms.service: ""
-ms.component: "system-stored-procedures"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
+ms.technology: replication
 ms.topic: "language-reference"
-applies_to: 
-  - "SQL Server"
 f1_keywords: 
   - "sp_helptracertokens"
   - "sp_helptracertokens_TSQL"
 helpviewer_keywords: 
   - "sp_helptracertokens"
 ms.assetid: 61f27234-531d-4b37-8fa3-fe4c32e6f521
-caps.latest.revision: 16
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "craigg"
-ms.workload: "Inactive"
+author: stevestein
+ms.author: sstein
+manager: craigg
 ---
 # sp_helptracertokens (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,8 +40,8 @@ sp_helptracertokens [ @publication = ] 'publication'
  [ **@publisher=** ] **'***publisher***'**  
  The name of the Publisher. *publisher* is **sysname**, with a default of NULL.  
   
-> [!NOTE]  
->  This parameter should only be specified for non-[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Publishers.  
+> [!NOTE]
+>  This parameter should only be specified for non- [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Publishers.  
   
  [ **@publisher_db=** ] **'***publisher_db***'**  
  The name of the publication database. *publisher_db* is **sysname**, with a default value of NULL. This parameter is ignored if the stored procedure is executed at the Publisher.  

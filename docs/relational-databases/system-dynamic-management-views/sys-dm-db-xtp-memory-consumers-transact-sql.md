@@ -2,15 +2,10 @@
 title: "sys.dm_db_xtp_memory_consumers (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/07/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.service: ""
-ms.component: "dmv's"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: system-objects
 ms.topic: "language-reference"
 f1_keywords: 
   - "sys.dm_db_xtp_memory_consumers"
@@ -22,11 +17,10 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.dm_db_xtp_memory_consumers dynamic management view"
 ms.assetid: f7ab2eaf-e627-464d-91fe-0e170b3f37bc
-caps.latest.revision: 24
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-ms.workload: "Inactive"
+author: stevestein
+ms.author: sstein
+manager: craigg
+monikerRange: "=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.dm_db_xtp_memory_consumers (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
@@ -39,7 +33,7 @@ ms.workload: "Inactive"
 |-----------------|---------------|-----------------|  
 |memory_consumer_id|**bigint**|ID (internal) of the memory consumer.|  
 |memory_consumer_type|**int**|The type of memory consumer:<br /><br /> 0=Aggregation. (Aggregates memory usage of two or more consumers. It should not be displayed.)<br /><br /> 2=VARHEAP (Tracks memory consumption for a variable-length heap.)<br /><br /> 3=HASH (Tracks memory consumption for an index.)<br /><br /> 5=DB page pool (Tracks memory consumption for a database page pool used for runtime operations. For example, table variables and some serializable scans. There is only one memory consumer of this type per database.)|  
-|memory_consumer_type_desc|**nvarchar(64)**|Type of memory consumer: VARHEAP, HASH, or PGPOOL.<br /><br /> 0 – (It should not be displayed.)<br /><br /> 2 - VARHEAP<br /><br /> 3 - HASH<br /><br /> 5 - PGPOOL|  
+|memory_consumer_type_desc|**nvarchar(64)**|Type of memory consumer: VARHEAP, HASH, or PGPOOL.<br /><br /> 0 - (It should not be displayed.)<br /><br /> 2 - VARHEAP<br /><br /> 3 - HASH<br /><br /> 5 - PGPOOL|  
 |memory_consumer_desc|**nvarchar(64)**|Description of the memory consumer instance:<br /><br /> VARHEAP: <br />Database heap. Used to allocate user data for a database (rows).<br />Database System heap. Used to allocate database data that will be included in memory dumps and do not include user data.<br />Range index heap. Private heap used by range index to allocate BW pages.<br /><br /> HASH: No description since the object_id indicates the table and the index_id the hash index itself.<br /><br /> PGPOOL: For the database there is only one page pool Database 64K page pool.|  
 |object_id|**bigint**|The object ID to which the allocated memory is attributed. A negative value for system objects.|  
 |xtp_object_id|**bigint**|The object ID for the memory-optimized table.|  

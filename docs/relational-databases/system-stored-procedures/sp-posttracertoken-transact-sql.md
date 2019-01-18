@@ -2,18 +2,11 @@
 title: "sp_posttracertoken (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "database-engine"
-ms.service: ""
-ms.component: "system-stored-procedur+I741es"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
+ms.technology: replication
 ms.topic: "language-reference"
-applies_to: 
-  - "SQL Server"
 f1_keywords: 
   - "posttracerttoken"
   - "posttracerttoken_TSQL"
@@ -22,11 +15,9 @@ f1_keywords:
 helpviewer_keywords: 
   - "sp_posttracertoken"
 ms.assetid: 24da5cd2-1c45-475e-93db-5bdf660f1c2c
-caps.latest.revision: 28
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "craigg"
-ms.workload: "Inactive"
+author: stevestein
+ms.author: sstein
+manager: craigg
 ---
 # sp_posttracertoken (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,14 +36,14 @@ sp_posttracertoken [ @publication = ] 'publication'
 ```  
   
 ## Arguments  
- [ **@publication**= ] **'***publication***'**  
+ [ **@publication**= ] **'**_publication_**'**  
  Is the name of the publication for which latency is being measured. *publication* is **sysname**, with no default.  
   
- [ **@tracer_token_id=** ] *tracer_token_id***OUTPUT**  
+ [ **@tracer_token_id=** ] _tracer_token_id_**OUTPUT**  
  Is the ID of the tracer token inserted. *tracer_token_id* is **int** with a default of NULL, and it is an OUTPUT parameter. This value can be used to execute [sp_helptracertokenhistory &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helptracertokenhistory-transact-sql.md) or [sp_deletetracertokenhistory &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-deletetracertokenhistory-transact-sql.md) without first executing [sp_helptracertokens &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helptracertokens-transact-sql.md).  
   
- [ **@publisher=** ] **'***publisher***'**  
- Specifies a non-[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Publisher. *publisher* is **sysname**, with a default of NULL and should not be specified for a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Publisher.  
+ [ **@publisher=** ] **'**_publisher_**'**  
+ Specifies a non- [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Publisher. *publisher* is **sysname**, with a default of NULL and should not be specified for a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Publisher.  
   
 ## Return Code Values  
  **0** (success) or **1** (failure)  

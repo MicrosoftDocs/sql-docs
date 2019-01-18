@@ -2,22 +2,15 @@
 title: "SQL Server Managed Backup to Microsoft Azure | Microsoft Docs"
 ms.custom: ""
 ms.date: "10/18/2016"
-ms.prod: "sql-non-specified"
-ms.prod_service: "database-engine"
-ms.service: ""
-ms.component: "backup-restore"
+ms.prod: sql
+ms.prod_service: backup-restore
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "dbe-backup-restore"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: backup-restore
+ms.topic: conceptual
 ms.assetid: afa01165-39e0-4efe-ac0e-664edb8599fd
-caps.latest.revision: 44
-author: "MightyPen"
-ms.author: "genemi"
-manager: "craigg"
-ms.workload: "On Demand"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ---
 # SQL Server Managed Backup to Microsoft Azure
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -41,10 +34,10 @@ ms.workload: "On Demand"
   
 |Prerequisite|Description|  
 |------------------|-----------------|  
-|**Microsoft Azure Account**|You can get started with Azure with a [free trial](http://azure.microsoft.com/pricing/free-trial/) before exploring [purchase options](http://azure.microsoft.com/pricing/purchase-options/).|  
-|**Azure Storage Account**|The backups are stored in Azure blob storage associated with an Azure storage account. For step-by-step instructions to create a storage account, see [About Azure Storage Accounts](http://azure.microsoft.com/en-us/documentation/articles/storage-create-storage-account/).|  
-|**Blob Container**|Blobs are organized in containers. You specify the target container for the backup files. You can create a container in the [Azure Management Portal](https://manage.windowsazure.com/), or you use the **New-AzureStorageContainer**[Azure PowerShell](http://azure.microsoft.com/en-us/documentation/articles/powershell-install-configure/) command.|  
-|**Shared Access Signature (SAS)**|Access to the target container is controlled by a Shared Access Signature (SAS). For an overview of SAS, see [Shared Access Signatures, Part 1: Understanding the SAS Model](http://azure.microsoft.com/en-us/documentation/articles/storage-dotnet-shared-access-signature-part-1/). You can create a SAS token in code or with the **New-AzureStorageContainerSASToken** PowerShell command. For a PowerShell script that simplifies this process, see [Simplifying creation of SQL Credentials with Shared Access Signature ( SAS ) tokens on Azure Storage with Powershell](http://blogs.msdn.com/b/sqlcat/archive/2015/03/21/simplifying-creation-sql-credentials-with-shared-access-signature-sas-keys-on-azure-storage-containers-with-powershell.aspx). The SAS token can be stored in a **SQL Credential** for use with [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)].|  
+|**Microsoft Azure Account**|You can get started with Azure with a [free trial](https://azure.microsoft.com/pricing/free-trial/) before exploring [purchase options](https://azure.microsoft.com/pricing/purchase-options/).|  
+|**Azure Storage Account**|The backups are stored in Azure blob storage associated with an Azure storage account. For step-by-step instructions to create a storage account, see [About Azure Storage Accounts](https://azure.microsoft.com/documentation/articles/storage-create-storage-account/).|  
+|**Blob Container**|Blobs are organized in containers. You specify the target container for the backup files. You can create a container in the [Azure Management Portal](https://manage.windowsazure.com/), or you use the **New-AzureStorageContainer**[Azure PowerShell](https://azure.microsoft.com/documentation/articles/powershell-install-configure/) command.|  
+|**Shared Access Signature (SAS)**|Access to the target container is controlled by a Shared Access Signature (SAS). For an overview of SAS, see [Shared Access Signatures, Part 1: Understanding the SAS Model](https://azure.microsoft.com/documentation/articles/storage-dotnet-shared-access-signature-part-1/). You can create a SAS token in code or with the **New-AzureStorageContainerSASToken** PowerShell command. For a PowerShell script that simplifies this process, see [Simplifying creation of SQL Credentials with Shared Access Signature ( SAS ) tokens on Azure Storage with Powershell](https://blogs.msdn.com/b/sqlcat/archive/2015/03/21/simplifying-creation-sql-credentials-with-shared-access-signature-sas-keys-on-azure-storage-containers-with-powershell.aspx). The SAS token can be stored in a **SQL Credential** for use with [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)].|  
 |**SQL Server Agent**|SQL Server Agent must be running for [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] to work. Consider setting the startup option to automatic.|  
   
 ## Components  
@@ -76,7 +69,7 @@ ms.workload: "On Demand"
  You can specify a custom backup schedule using the system stored procedure [managed_backup.sp_backup_config_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/managed-backup-sp-backup-config-schedule-transact-sql.md). If you do not specify a custom schedule, the type of backups scheduled and the backup frequency is determined based on the workload of the database. The retention period settings are used to determine the length of time a backup file should be retained in the storage and the ability to recover the database to a point-in-time within the retention period.  
   
 ### Backup File Naming Conventions  
- [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] uses the container that you specify, so you have control over the name of the container. For the backup files, non availability databases are named using the following convention: The name is created using the first 40 characters of the database name, the database GUID without the ‘-‘, and the timestamp. The underscore character is inserted between segments as separators. The **.bak** file extension is used for full backup and **.log** for log backups. For Avaialbility Group databases, in addition to the file naming convention described above, the Availability Group database GUID is added after the 40 characters of the database name. The Availability Group database GUID value is the value for group_database_id in sys.databases.  
+ [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] uses the container that you specify, so you have control over the name of the container. For the backup files, non availability databases are named using the following convention: The name is created using the first 40 characters of the database name, the database GUID without the '-', and the timestamp. The underscore character is inserted between segments as separators. The **.bak** file extension is used for full backup and **.log** for log backups. For Avaialbility Group databases, in addition to the file naming convention described above, the Availability Group database GUID is added after the 40 characters of the database name. The Availability Group database GUID value is the value for group_database_id in sys.databases.  
   
 ### Full Database Backup  
  [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] agent schedules a full database backup if any of the following is true.  

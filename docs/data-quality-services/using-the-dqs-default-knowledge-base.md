@@ -2,24 +2,20 @@
 title: "Using the DQS Default Knowledge Base | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/31/2012"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "data-quality-services"
-ms.service: ""
-ms.component: "data-quality-services"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "data-quality-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: data-quality-services
+ms.topic: conceptual
 ms.assetid: b36af13b-9fcc-4168-bb92-214d600b1c93
-caps.latest.revision: 13
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-ms.workload: "Inactive"
+author: "douglaslMS"
+ms.author: "douglasl"
+manager: craigg
 ---
 # Using the DQS Default Knowledge Base
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
   This topic describes the default knowledge base, **DQS Data**, which is installed with [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). This is a pre-built default knowledge base that contains the following domains:  
   
 -   **Country/Region**: Contains the conventional long (official name as designated by the country/region ) and short names (common name used in lists, on maps, etc. ), two-letter abbreviation, three-letter abbreviation and three-digit code for each location.  Leading value is set to the long country name.  
@@ -36,7 +32,7 @@ ms.workload: "Inactive"
   
 -   **US - State**: Contains the conventional long (official) name and two-letter abbreviation for each state in US. Leading value is set to the conventional state name.  
   
--   **US – State (2-letter heading)**: Contains the conventional long (official) name and two-letter abbreviation for each state in US. Leading value is set to the two-letter abbreviation state name.  
+-   **US - State (2-letter heading)**: Contains the conventional long (official) name and two-letter abbreviation for each state in US. Leading value is set to the two-letter abbreviation state name.  
   
 ## Using the Default Knowledge Base  
  You can use the default DQS knowledge base, DQS Data, in the following ways:  
@@ -47,7 +43,7 @@ ms.workload: "Inactive"
   
 -   Create a new knowledge base using the default knowledge base. To create a knowledge base from an existing knowledge base, see [Create a Knowledge Base](../data-quality-services/create-a-knowledge-base.md).  
   
--   Use it in the [DQS Cleansing component in Integration Services](http://go.microsoft.com/fwlink/?LinkId=238830) and [Master Data Services Add-in for Excel](../master-data-services/microsoft-excel-add-in/data-quality-matching-in-the-mds-add-in-for-excel.md).  
+-   Use it in the [DQS Cleansing component in Integration Services](https://go.microsoft.com/fwlink/?LinkId=238830) and [Master Data Services Add-in for Excel](../master-data-services/microsoft-excel-add-in/data-quality-matching-in-the-mds-add-in-for-excel.md).  
   
 ## See Also  
  [DQS Knowledge Bases and Domains](../data-quality-services/dqs-knowledge-bases-and-domains.md)  

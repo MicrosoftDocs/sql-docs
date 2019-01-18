@@ -2,26 +2,20 @@
 title: "Keep Identity Values When Bulk Importing Data (SQL Server) | Microsoft Docs"
 ms.custom: ""
 ms.date: "09/21/2016"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
-ms.service: ""
-ms.component: "import-export"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "dbe-bulk-import-export"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: data-movement
+ms.topic: conceptual
 helpviewer_keywords: 
   - "identity values [SQL Server], bulk imports"
   - "data formats [SQL Server], identity values"
   - "bulk importing [SQL Server], identity values"
 ms.assetid: 45894a3f-2d8a-4edd-9568-afa7d0d3061f
-caps.latest.revision: 22
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-ms.workload: "On Demand"
+author: "douglaslMS"
+ms.author: "douglasl"
+manager: craigg
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Keep Identity Values When Bulk Importing Data (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

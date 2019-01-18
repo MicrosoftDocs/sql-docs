@@ -2,16 +2,11 @@
 title: "Database Files and Filegroups | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/07/2018"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "database-engine"
-ms.service: ""
-ms.component: "databases"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: configuration
+ms.topic: conceptual
 helpviewer_keywords: 
   - "databases [SQL Server], files"
   - "filegroups [SQL Server]"
@@ -35,11 +30,9 @@ helpviewer_keywords:
   - "primary files [SQL Server]"
   - "file types [SQL Server]"
 ms.assetid: 9ca11918-480d-4838-9198-cec221ef6ad0
-caps.latest.revision: 33
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-ms.workload: "Active"
+author: "stevestein"
+ms.author: "sstein"
+manager: craigg
 ---
 # Database Files and Filegroups
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -99,19 +92,29 @@ The form of file that is used by a database snapshot to store its copy-on-write 
 ## Filegroups  
  Every database has a primary filegroup. This filegroup contains the primary data file and any secondary files that are not put into other filegroups. User-defined filegroups can be created to group data files together for administrative, data allocation, and placement purposes.  
   
- For example, three files, Data1.ndf, Data2.ndf, and Data3.ndf, can be created on three disk drives, respectively, and assigned to the filegroup **fgroup1**. A table can then be created specifically on the filegroup **fgroup1**. Queries for data from the table will be spread across the three disks; this will improve performance. The same performance improvement can be accomplished by using a single file created on a RAID (redundant array of independent disks) stripe set. However, files and filegroups let you easily add new files to new disks.  
+ For example, three files, `Data1.ndf`, `Data2.ndf`, and `Data3.ndf`, can be created on three disk drives, respectively, and assigned to the filegroup `fgroup1`. A table can then be created specifically on the filegroup `fgroup1`. Queries for data from the table will be spread across the three disks; this will improve performance. The same performance improvement can be accomplished by using a single file created on a RAID (redundant array of independent disks) stripe set. However, files and filegroups let you easily add new files to new disks.  
   
  All data files are stored in the filegroups listed in the following table.  
   
 |Filegroup|Description|  
 |---------------|-----------------|  
 |Primary|The filegroup that contains the primary file. All system tables are allocated to the primary filegroup.|  
+|Memory Optimized Data|A memory-optimized filegroup is based on filestream filegroup|  
+|Filestream||    
 |User-defined|Any filegroup that is specifically created by the user when the user first creates or later modifies the database.|  
   
-### Default Filegroup  
+### Default (Primary) Filegroup  
  When objects are created in the database without specifying which filegroup they belong to, they are assigned to the default filegroup. At any time, exactly one filegroup is designated as the default filegroup. The files in the default filegroup must be large enough to hold any new objects not allocated to other filegroups.  
   
  The PRIMARY filegroup is the default filegroup unless it is changed by using the ALTER DATABASE statement. Allocation for the system objects and tables remains within the PRIMARY filegroup, not the new default filegroup.  
+ 
+### Memory Optimized Data Filegroup
+
+For more information on memory-optimized filegroups, see [Memory Optimized Filegroup](../../relational-databases/in-memory-oltp/the-memory-optimized-filegroup.md).
+
+### Filestream Filegroup
+
+For more information on filestream filegroups, see [FILESTREAM](../../relational-databases/blob/filestream-sql-server.md#filestream-storage) and [Create a FILESTREAM-Enabled Database](../../relational-databases/blob/create-a-filestream-enabled-database.md).
 
 ### File and Filegroup Example
  The following example creates a database on an instance of SQL Server. The database has a primary data file, a user-defined filegroup, and a log file. The primary data file is in the primary filegroup and the user-defined filegroup has two secondary data files. An ALTER DATABASE statement makes the user-defined filegroup the default. A table is then created specifying the user-defined filegroup. (This example uses a generic path `c:\Program Files\Microsoft SQL Server\MSSQL.1` to avoid specifying a version of SQL Server.)
@@ -120,7 +123,7 @@ The form of file that is used by a database snapshot to store its copy-on-write 
 USE master;
 GO
 -- Create the database with the default data
--- filegroup and a log file. Specify the
+-- filegroup, filstream filegroup and a log file. Specify the
 -- growth increment and the max size for the
 -- primary data file.
 CREATE DATABASE MyDB
@@ -143,7 +146,10 @@ FILEGROUP MyDB_FG1
        'c:\Program Files\Microsoft SQL Server\MSSQL.1\MSSQL\data\MyDB_FG1_2.ndf',
     SIZE = 1MB,
     MAXSIZE=10MB,
-    FILEGROWTH=1MB)
+    FILEGROWTH=1MB),
+FILEGROUP FileStreamGroup1 CONTAINS FILESTREAM
+  ( NAME = 'MyDB_FG_FS',
+    FILENAME = 'c:\Data\filestream1')
 LOG ON
   ( NAME='MyDB_log',
     FILENAME =
@@ -163,9 +169,17 @@ CREATE TABLE MyTable
     colb char(8) )
 ON MyDB_FG1;
 GO
+
+-- Create a table in the filestream filegroup
+CREATE TABLE MyFSTable
+(
+	cola int PRIMARY KEY,
+  colb VARBINARY(MAX) FILESTREAM NULL
+)
+GO
 ```
 
-The following illustration summarizes the results of the previous example.
+The following illustration summarizes the results of the previous example (except for the Filestream data).
 
 ![filegroup_example](../../relational-databases/databases/media/filegroup-example.gif)
 

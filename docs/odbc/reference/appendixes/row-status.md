@@ -2,27 +2,20 @@
 title: "Row Status | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
-ms.prod_service: "drivers"
-ms.service: ""
-ms.component: "odbc"
+ms.prod: sql
+ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "drivers"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: connectivity
+ms.topic: conceptual
 helpviewer_keywords: 
   - "ODBC cursor library [ODBC], cache"
   - "cursor library [ODBC], cache"
   - "row status [ODBC]"
   - "cache [ODBC]"
 ms.assetid: 0f0b1fb6-f697-4ced-811c-2908e210bc71
-caps.latest.revision: 8
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
-ms.workload: "Inactive"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # Row Status
 > [!IMPORTANT]  

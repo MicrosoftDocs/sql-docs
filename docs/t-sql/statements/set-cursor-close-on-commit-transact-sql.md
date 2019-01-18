@@ -2,15 +2,10 @@
 title: "SET CURSOR_CLOSE_ON_COMMIT (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/26/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.service: ""
-ms.component: "t-sql|statements"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: t-sql
 ms.topic: "language-reference"
 f1_keywords: 
   - "CURSOR_CLOSE_ON_COMMIT"
@@ -26,11 +21,9 @@ helpviewer_keywords:
   - "cursors [SQL Server], closing"
   - "SET CURSOR_CLOSE_ON_COMMIT statement"
 ms.assetid: 7b976154-98ce-4a06-bbae-7e59c34211f7
-caps.latest.revision: 38
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "craigg"
-ms.workload: "Inactive"
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
 ---
 # SET CURSOR_CLOSE_ON_COMMIT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

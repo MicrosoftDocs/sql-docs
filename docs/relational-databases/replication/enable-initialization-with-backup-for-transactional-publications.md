@@ -2,16 +2,11 @@
 title: "Enable Initialization with Backup for Transactional Publications | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/07/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "database-engine"
-ms.service: ""
-ms.component: "replication"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: replication
+ms.topic: conceptual
 helpviewer_keywords: 
   - "manual subscription initialization [SQL Server replication]"
   - "subscriptions [SQL Server replication], initializing"
@@ -19,11 +14,9 @@ helpviewer_keywords:
   - "transactional replication, backup and restore"
   - "backups [SQL Server replication], transactional replication"
 ms.assetid: 9df00514-aa9d-4ac6-9766-d226c9958175
-caps.latest.revision: 30
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-ms.workload: "Inactive"
+author: "MashaMSFT"
+ms.author: "mathoma"
+manager: craigg
 ---
 # Enable Initialization with Backup for Transactional Publications
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

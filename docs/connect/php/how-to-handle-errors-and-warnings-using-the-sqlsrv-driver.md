@@ -2,29 +2,22 @@
 title: "How to: Handle Errors and Warnings Using the SQLSRV Driver | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
-ms.prod_service: "drivers"
-ms.service: ""
-ms.component: "php"
+ms.prod: sql
+ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "drivers"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: connectivity
+ms.topic: conceptual
 helpviewer_keywords: 
   - "errors and warnings"
 ms.assetid: fa231d60-4c06-4137-89e8-097c28638c5d
-caps.latest.revision: 18
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
-ms.workload: "Inactive"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # How to: Handle Errors and Warnings Using the SQLSRV Driver
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-By default, the SQLSRV driver treats warnings as errors; a call to a **sqlsrv** function that generates an error or a warning will return **false**. This topic demonstrates how to turn off this default behavior and how to handle warnings separately from errors.  
+By default, the SQLSRV driver treats warnings as errors; a call to a **sqlsrv** function that generates an error or a warning returns **false**. This topic demonstrates how to turn off this default behavior and how to handle warnings separately from errors.  
   
 > [!NOTE]  
 > There are some exceptions to the default behavior of treating warnings as errors. Warnings that correspond to the SQLSTATE values 01000, 01001, 01003, and 01S02 are never treated as errors.  
@@ -40,11 +33,11 @@ The following code example uses two user-defined functions, **DisplayErrors** an
   
 4.  Displays the remaining vacation hours for each employee.  
   
-Note that in the first call to a **sqlsrv** function ([sqlsrv_configure](../../connect/php/sqlsrv-configure.md)), warnings are treated as errors. Because warnings are added to the error collection, you do not have to check for warnings separately from errors. In subsequent calls to **sqlsrv** functions, however, warnings will not be treated as errors, so you must check explicitly for warnings and for errors.  
+In the first call to a **sqlsrv** function ([sqlsrv_configure](../../connect/php/sqlsrv-configure.md)), warnings are treated as errors. Because warnings are added to the error collection, you do not have to check for warnings separately from errors. In subsequent calls to **sqlsrv** functions, however, warnings will not be treated as errors, so you must check explicitly for warnings and for errors.  
   
 Also note that the example code checks for errors after each call to a **sqlsrv** function. This is the recommended practice.  
   
-This example assumes that SQL Server and the [AdventureWorks](http://go.microsoft.com/fwlink/?LinkID=67739) database are installed on the local computer. All output is written to the console when the example is run from the command line. When the example is run against a new installation of the AdventureWorks database, it produces three warnings and two errors. The first two warnings are standard warnings that are issued when you connect to a database. The third warning occurs because an employee's available vacation hours are updated to a value less than zero. The errors occur because an employee's available vacation hours are updated to a value less than -40 hours, which is a violation of a constraint on the table.  
+This example assumes that SQL Server and the [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) database are installed on the local computer. All output is written to the console when the example is run from the command line. When the example is run against a new installation of the AdventureWorks database, it produces three warnings and two errors. The first two warnings are standard warnings that are issued when you connect to a database. The third warning occurs because an employee's available vacation hours are updated to a value less than zero. The errors occur because an employee's available vacation hours are updated to a value less than -40 hours, which is a violation of a constraint on the table.  
   
 ```  
 <?php  
@@ -202,6 +195,7 @@ function DisplayWarnings()
 ```  
   
 ## See Also  
-[How to: Configure Error and Warning Handling Using the SQLSRV Driver](../../connect/php/how-to-configure-error-and-warning-handling-using-the-sqlsrv-driver.md)  
+[How to: Configure Error and Warning Handling Using the SQLSRV Driver](../../connect/php/how-to-configure-error-and-warning-handling-using-the-sqlsrv-driver.md)
+
 [SQLSRV Driver API Reference](../../connect/php/sqlsrv-driver-api-reference.md)  
   

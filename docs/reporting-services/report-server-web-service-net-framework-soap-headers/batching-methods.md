@@ -1,20 +1,12 @@
 ---
 title: "Batching Methods | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/04/2017"
+ms.date: 03/04/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
-ms.service: ""
-ms.component: "report-server-web-service-net-framework-soap-headers"
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
+ms.technology: report-server-web-service-net-framework-soap-headers
 
 
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-applies_to: 
-  - "SQL Server 2016 Preview"
+ms.topic: reference
 helpviewer_keywords: 
   - "methods [Reporting Services], batches"
   - "BatchHeader SOAP header"
@@ -25,11 +17,8 @@ helpviewer_keywords:
   - "locking [Reporting Services]"
   - "multiple Web service methods"
 ms.assetid: 86435534-c9fe-4b49-b88c-7fb6d21976b0
-caps.latest.revision: 36
-author: "markingmyname"
-ms.author: "maghan"
-manager: "kfile"
-ms.workload: "Inactive"
+author: markingmyname
+ms.author: maghan
 ---
 # Batching Methods
   The use of SOAP headers in [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] enables you to include multiple Web service methods in a single operation. Methods run within the scope of a single database transaction, in the order in which they are called.  
@@ -52,7 +41,7 @@ Class Sample
         Dim rs As New ReportingService2005()  
         rs.Credentials = System.Net.CredentialCache.DefaultCredentials  
       ' Set the base Web service URL of the source server  
-      rs.Url = "http://<Server Name>/reportserver/ReportService2005.asmx"  
+      rs.Url = "https://<Server Name>/reportserver/ReportService2005.asmx"  
   
         Dim bh As New BatchHeader()  
   
@@ -84,7 +73,7 @@ class Sample
         ReportingService2005 rs = new ReportingService2005();  
         rs.Credentials = System.Net.CredentialCache.DefaultCredentials;  
       // Set the base Web service URL of the source server  
-      rs.Url = "http://<Server Name>/reportserver/ReportService2005.asmx"  
+      rs.Url = "https://<Server Name>/reportserver/ReportService2005.asmx"  
   
         BatchHeader bh = new BatchHeader();  
   

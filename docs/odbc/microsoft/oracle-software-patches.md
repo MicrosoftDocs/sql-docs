@@ -2,25 +2,18 @@
 title: "Oracle Software Patches | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
-ms.prod_service: "drivers"
-ms.service: ""
-ms.component: "odbc"
+ms.prod: sql
+ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "drivers"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: connectivity
+ms.topic: conceptual
 helpviewer_keywords: 
   - "ODBC driver for Oracle [ODBC], Oraclesoftware patches"
   - "Oracle software patches [ODBC]"
 ms.assetid: 1275157b-f4e1-4c24-b273-c02555e261c2
-caps.latest.revision: 8
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
-ms.workload: "Inactive"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # Oracle Software Patches
 > [!IMPORTANT]  
@@ -37,7 +30,7 @@ ms.workload: "Inactive"
   
 2.  Navigate to the following directory: /server/wgt_tech/server/windowsNT.  
   
-3.  To download patches most relevant for Windows 95, Windows 98 and Windows NT/Windows 2000, navigate to the subdirectory for your version of Oracle — 7.3 or 8.0. The two subdirectories are /73patchsets and /80patchsets.  
+3.  To download patches most relevant for Windows 95, Windows 98 and Windows NT/Windows 2000, navigate to the subdirectory for your version of Oracle - 7.3 or 8.0. The two subdirectories are /73patchsets and /80patchsets.  
   
 4.  To download patches for Oracle's network technology, either SQL*Net or Net8, navigate to the following directory: /network.  
   

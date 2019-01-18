@@ -1,7 +1,0 @@
-# [Developing a Custom Task](developing-a-custom-task.md)
-# [Creating a Custom Task](creating-a-custom-task.md)
-# [Coding a Custom Task](coding-a-custom-task.md)
-# [Connecting to Data Sources in a Custom Task](connecting-to-data-sources-in-a-custom-task.md)
-# [Raising and Defining Events in a Custom Task](raising-and-defining-events-in-a-custom-task.md)
-# [Adding Support for Debugging in a Custom Task](adding-support-for-debugging-in-a-custom-task.md)
-# [Developing a User Interface for a Custom Task](developing-a-user-interface-for-a-custom-task.md)

@@ -2,29 +2,20 @@
 title: "sp_helpmergedeleteconflictrows (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/04/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "database-engine"
-ms.service: ""
-ms.component: "system-stored-procedures"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
+ms.technology: replication
 ms.topic: "language-reference"
-applies_to: 
-  - "SQL Server"
 f1_keywords: 
   - "sp_helpmergedeleteconflictrows"
   - "sp_helpmergedeleteconflictrows_TSQL"
 helpviewer_keywords: 
   - "sp_helpmergedeleteconflictrows"
 ms.assetid: 222be651-5690-4341-9dfb-f9ec1d80c970
-caps.latest.revision: 17
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "craigg"
-ms.workload: "Inactive"
+author: stevestein
+ms.author: sstein
+manager: craigg
 ---
 # sp_helpmergedeleteconflictrows (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,16 +35,16 @@ sp_helpmergedeleteconflictrows [ [ @publication = ] 'publication']
 ```  
   
 ## Arguments  
- [ **@publication=**] **'***publication***'**  
+ [ **@publication=**] **'**_publication_**'**  
  Is the name of the publication. *publication* is **sysname**, with a default of **%**. If the publication is specified, all conflicts qualified by the publication are returned.  
   
- [ **@source_object=**] **'***source_object***'**  
+ [ **@source_object=**] **'**_source_object_**'**  
  Is the name of the source object. *source_object* is **nvarchar(386)**, with a default of NULL.  
   
- [ **@publisher=**] **'***publisher***'**  
+ [ **@publisher=**] **'**_publisher_**'**  
  Is the name of the Publisher.*publisher* is **sysname**, with a default of NULL.  
   
- [ **@publisher_db=**] **'***publisher_db***'**  
+ [ **@publisher_db=**] **'**_publisher_db_**'**  
  Is the name of the publisher database.*publisher_db* is **sysname**, with a default of NULL.  
   
 ## Result Sets  

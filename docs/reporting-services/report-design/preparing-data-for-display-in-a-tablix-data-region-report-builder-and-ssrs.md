@@ -1,24 +1,15 @@
 ---
 title: "Preparing Data for Display in a Tablix Data Region (Report Builder and SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
+ms.date: 08/17/2018
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
-ms.service: ""
-ms.component: "report-design"
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
+ms.technology: report-design
 
 
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 ms.assetid: fbb00dc6-7887-480c-b771-cab6fecb8dcc
-caps.latest.revision: 5
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "kfile"
-ms.workload: "Inactive"
+author: maggiesMSFT
+ms.author: maggies
 ---
 # Preparing Data for Display in a Tablix Data Region (Report Builder and SSRS)
   A tablix data region displays data from a dataset. You can view all the data retrieved for the dataset or you can create filters so that you see only a subset of the data. You can also add conditional expressions to fill in null values or modify the query for a dataset to include columns that define the sort order for an existing column.  
@@ -35,7 +26,7 @@ ms.workload: "Inactive"
 =IIF(Fields!Size.Value IS NOTHING,"Null",Fields!Size.Value)  
 ```  
   
- For more information about eliminating nulls in your data before retrieving the data from a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] data source using [!INCLUDE[tsql](../../includes/tsql-md.md)] queries, see "Null Values" and "Null Values and Joins" in the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] documentation in [SQL Server Books Online](http://go.microsoft.com/fwlink/?linkid=120955).  
+ For more information about eliminating nulls in your data before retrieving the data from a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] data source using [!INCLUDE[tsql](../../includes/tsql-md.md)] queries, see [NULL and UNKNOWN (Transact-SQL)](../../t-sql/language-elements/null-and-unknown-transact-sql.md).  
   
 ## Handling Null Field Names  
  Testing for null values in an expression is fine as long as the field itself exists in the query result set. From custom code, you can test whether the field itself is present in the collection fields returned from the data source at run time. For more information, see [Dataset Fields Collection References &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/built-in-collections-dataset-fields-collection-references-report-builder.md).  

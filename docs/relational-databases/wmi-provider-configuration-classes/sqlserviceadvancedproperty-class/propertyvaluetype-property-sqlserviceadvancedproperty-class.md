@@ -2,15 +2,10 @@
 title: "PropertyValueType Property (SqlServiceAdvancedProperty Class) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/03/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "database-engine"
-ms.service: ""
-ms.component: "wmi"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: wmi
 ms.topic: "reference"
 apiname: 
   - "PropertyValueType Property (SqlServiceAdvancedProperty Class)"
@@ -20,11 +15,9 @@ apitype: "MOFDef"
 helpviewer_keywords: 
   - "PropertyValueType property"
 ms.assetid: f1b1dcc6-6d44-4ad2-8c2e-4fd48c2c8086
-caps.latest.revision: 33
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-ms.workload: "Inactive"
+author: "CarlRabeler"
+ms.author: "carlrab"
+manager: craigg
 ---
 # PropertyValueType Property (SqlServiceAdvancedProperty Class)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,6 +40,6 @@ object.PropertyValueType [= value]
 ## Remarks  
   
 ## See Also  
- [Starting and Stopping Services](http://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  
+ [Starting and Stopping Services](https://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  
   
   

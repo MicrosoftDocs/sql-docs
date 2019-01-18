@@ -2,27 +2,21 @@
 title: "Duplicate Tables | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-non-specified"
-ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
-ms.service: ""
-ms.component: "tables"
+ms.prod: sql
+ms.prod_service: "table-view-index, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "dbe-tables"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: table-view-index
+ms.topic: conceptual
 helpviewer_keywords: 
   - "copying tables"
   - "tables [SQL Server], duplicating"
   - "duplicating tables"
   - "table copying [SQL Server]"
 ms.assetid: c6b07423-d1e5-4e5e-8681-5088921f5df3
-caps.latest.revision: 15
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-ms.workload: "Active"
+author: stevestein
+ms.author: sstein
+manager: craigg
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Duplicate Tables
 [!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
@@ -67,7 +61,7 @@ ms.workload: "Active"
   
 6.  From the **Edit** menu, click **Paste**.  
   
-7.  From the **File** menu, click **Save***table name*.  
+7.  From the **File** menu, click **Save**_table name_.  
   
 8.  In the **Choose Name** dialog box, type a name for the new table and click **OK**.  
   

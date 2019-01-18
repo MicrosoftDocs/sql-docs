@@ -2,15 +2,9 @@
 title: "CLR Integration Security | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-non-specified"
-ms.prod_service: "database-engine"
-ms.service: ""
-ms.component: "clr"
+ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-
-ms.tgt_pltfrm: ""
+ms.technology: clr
 ms.topic: "reference"
 helpviewer_keywords: 
   - "security [CLR integration]"
@@ -18,11 +12,9 @@ helpviewer_keywords:
   - "common language runtime [SQL Server], security"
   - "database objects [CLR integration], security"
 ms.assetid: 05d7a471-c5d5-4730-b903-e4edc8157bb4
-caps.latest.revision: 55
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-ms.workload: "Inactive"
+author: "rothja"
+ms.author: "jroth"
+manager: craigg
 ---
 # CLR Integration Security
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -48,16 +40,16 @@ ms.workload: "Inactive"
  [Host Protection Attributes and CLR Integration Programming](../../../relational-databases/clr-integration-security-host-protection-attributes/host-protection-attributes-and-clr-integration-programming.md)  
  Provides information about the host protection attribute (HPA) values that are disallowed in SAFE and EXTERNAL_ACCESS assemblies.  
   
- [Links in CLR Integration Security](http://msdn.microsoft.com/library/168efd01-d12e-4bdf-a1b3-0b5c76474eaf)  
+ [Links in CLR Integration Security](https://msdn.microsoft.com/library/168efd01-d12e-4bdf-a1b3-0b5c76474eaf)  
  Describes how pieces of user-code can call each other in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
- [Impersonation and CLR Integration Security](http://msdn.microsoft.com/library/1495a7af-2248-4cee-afdb-9269fb3a7774)  
+ [Impersonation and CLR Integration Security](https://msdn.microsoft.com/library/1495a7af-2248-4cee-afdb-9269fb3a7774)  
  Discusses how managed code accesses external resources using impersonation.  
   
- [Allowing Partially Trusted Callers](http://msdn.microsoft.com/library/20b0248f-36da-4fc3-97d2-3789fcf6e084)  
+ [Allowing Partially Trusted Callers](https://msdn.microsoft.com/library/20b0248f-36da-4fc3-97d2-3789fcf6e084)  
  Discusses issues that arise when a managed method invokes a method in a class contained in another assembly.  
   
- [Application Domains and CLR Integration Security](http://msdn.microsoft.com/library/54ee904e-e21a-4ee7-b4ad-a6f6f71bd473)  
+ [Application Domains and CLR Integration Security](https://msdn.microsoft.com/library/54ee904e-e21a-4ee7-b4ad-a6f6f71bd473)  
  Describes how assemblies are loaded into application domains.  
   
 ## See Also  

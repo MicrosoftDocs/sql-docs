@@ -1,33 +1,14 @@
 ---
 title: "Attach and Detach Analysis Services Databases | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/06/2017"
-ms.prod: analysis-services
-ms.prod_service: "analysis-services"
-ms.service: ""
-ms.component: ""
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
-  
-ms.component: multidimensional-tabular
-ms.component: data-mining
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.asvs.ssmsimbi.AttachDatabase.f1"
-  - "sql13.asvs.ssms.attachdatabase.f1"
-  - "sql13.asvs.ssmsimbi.DetachDatabase.f1"
-  - "sql13.asvs.ssms.detachdatabase.f1"
-helpviewer_keywords: 
-  - "databases [Analysis Services], attach"
-  - "databases [Analysis Services], detach"
-ms.assetid: 41887413-2d47-49b8-8614-553cb799fb18
-caps.latest.revision: 24
-author: "Minewiskan"
-ms.author: "owend"
-manager: "kfile"
-ms.workload: "Inactive"
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: multidimensional-models
+ms.topic: conceptual
+ms.author: owend
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
 ---
 # Attach and Detach Analysis Services Databases
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -66,7 +47,7 @@ ms.workload: "Inactive"
  [Move an Analysis Services Database](../../analysis-services/multidimensional-models/move-an-analysis-services-database.md)   
  [Database ReadWriteModes](../../analysis-services/multidimensional-models/database-readwritemodes.md)   
  [Switch an Analysis Services database between ReadOnly and ReadWrite modes](../../analysis-services/multidimensional-models/switch-an-analysis-services-database-between-readonly-and-readwrite-modes.md)   
- [Detach Element](../../analysis-services/xmla/xml-elements-commands/detach-element.md)   
- [Attach Element](../../analysis-services/xmla/xml-elements-commands/attach-element.md)  
+ [Detach Element](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/detach-element)   
+ [Attach Element](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/attach-element)  
   
   

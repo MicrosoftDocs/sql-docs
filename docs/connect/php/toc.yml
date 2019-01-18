@@ -1,0 +1,272 @@
+- name: Microsoft Drivers for PHP for SQL Server
+  href: microsoft-php-driver-for-sql-server.md
+- name: Getting Started
+  href: getting-started-with-the-php-sql-driver.md
+  items:
+  - name: "Step 1: Configure development environment for PHP development"
+    href: step-1-configure-development-environment-for-php-development.md
+  - name: "Step 2: Create a SQL database for PHP development"
+    href: step-2-create-a-sql-database-for-php-development.md
+  - name: "Step 3: Proof of concept connecting to SQL Server using PHP"
+    href: step-3-proof-of-concept-connecting-to-sql-using-php.md
+  - name: "Step 4: Connect resiliently to SQL Server with PHP"
+    href: step-4-connect-resiliently-to-sql-with-php.md
+- name: Overview
+  href: overview-of-the-php-sql-driver.md
+  items:
+  - name: System Requirements
+    href: system-requirements-for-the-php-sql-driver.md
+  - name: Download Drivers for PHP for SQL Server
+    href: download-drivers-php-sql-server.md
+  - name: Loading the drivers
+    href: loading-the-php-sql-driver.md
+  - name: Configuring IIS
+    href: configuring-iis-for-php-sql-driver.md
+  - name: PHP Linux and Mac drivers installation tutorial
+    href: installation-tutorial-linux-mac.md
+  - name: Release Notes
+    href: release-notes-for-the-php-sql-driver.md
+  - name: Support Resources
+    href: support-resources-for-the-php-sql-driver.md
+  - name: About Code Samples
+    href: about-code-examples-in-the-documentation.md
+  - name: Support Matrix for the Microsoft Drivers for PHP for SQL Server
+    href: microsoft-php-drivers-for-sql-server-support-matrix.md
+- name: Programming Guide
+  href: programming-guide-for-php-sql-driver.md
+  items:
+  - name: Connecting to the Server
+    href: connecting-to-the-server.md
+    items:
+    - name: "How to: Connect Using Windows Authentication"
+      href: how-to-connect-using-windows-authentication.md
+    - name: "How to: Connect Using SQL Server Authentication"
+      href: how-to-connect-using-sql-server-authentication.md
+    - name: "How to: Connect Using Azure Active Directory Authentication"
+      href: azure-active-directory.md
+    - name: "How to: Connect on a Specified Port"
+      href: how-to-connect-on-a-specified-port.md
+    - name: Connection Pooling
+      href: connection-pooling-microsoft-drivers-for-php-for-sql-server.md
+    - name: "How to: Disable Multiple Active Resultsets (MARS)"
+      href: how-to-disable-multiple-active-resultsets-mars.md
+    - name: Connection Options
+      href: connection-options.md
+    - name: Support for LocalDB
+      href: php-driver-for-sql-server-support-for-localdb.md
+    - name: Support for High Availability, Disaster Recovery
+      href: php-driver-for-sql-server-support-for-high-availability-disaster-recovery.md
+    - name: Connecting to Microsoft Azure SQL Database
+      href: connecting-to-microsoft-azure-sql-database.md
+    - name: Connection Resiliency
+      href: connection-resiliency.md
+  - name: Comparing Execution Functions
+    href: comparing-execution-functions.md
+  - name: Direct Statement Execution and Prepared Statement Execution in the PDO_SQLSRV Driver
+    href: direct-statement-execution-prepared-statement-execution-pdo-sqlsrv-driver.md
+  - name: Retrieving Data
+    href: retrieving-data.md
+    items:
+    - name: Retrieving Data as a Stream Using the SQLSRV Driver
+      href: retrieving-data-as-a-stream-using-the-sqlsrv-driver.md
+      items:
+      - name: Data Types with Stream Support Using the SQLSRV Driver
+        href: data-types-with-stream-support-using-the-sqlsrv-driver.md
+      - name: "How to: Retrieve Character Data as a Stream Using the SQLSRV Driver"
+        href: how-to-retrieve-character-data-as-a-stream-using-the-sqlsrv-driver.md
+      - name: "How to: Retrieve Binary Data as a Stream Using the SQLSRV Driver"
+        href: how-to-retrieve-binary-data-as-a-stream-using-the-sqlsrv-driver.md
+    - name: Using Directional Parameters
+      href: using-directional-parameters.md
+      items:
+      - name: "How to: Specify Parameter Direction Using the SQLSRV Driver"
+        href: how-to-specify-parameter-direction-using-the-sqlsrv-driver.md
+      - name: "How to: Retrieve Output Parameters Using the SQLSRV Driver"
+        href: how-to-retrieve-output-parameters-using-the-sqlsrv-driver.md
+      - name: "How to: Retrieve Input and Output Parameters Using the SQLSRV Driver"
+        href: how-to-retrieve-input-and-output-parameters-using-the-sqlsrv-driver.md
+    - name: Specifying a Cursor Type and Selecting Rows
+      href: specifying-a-cursor-type-and-selecting-rows.md
+      items:
+      - name: Cursor Types (SQLSRV Driver)
+        href: cursor-types-sqlsrv-driver.md
+      - name: Cursor Types (PDO_SQLSRV Driver)
+        href: cursor-types-pdo-sqlsrv-driver.md
+    - name: "How to: Retrieve Date and Time Type as Strings Using the SQLSRV Driver"
+      href: how-to-retrieve-date-and-time-type-as-strings-using-the-sqlsrv-driver.md
+  - name: Updating Data
+    href: updating-data-microsoft-drivers-for-php-for-sql-server.md
+    items:
+    - name: "How to: Perform Parameterized Queries"
+      href: how-to-perform-parameterized-queries.md
+    - name: "How to: Send Data as a Stream"
+      href: how-to-send-data-as-a-stream.md
+    - name: "How to: Perform Transactions"
+      href: how-to-perform-transactions.md
+  - name: Converting Data Types
+    href: converting-data-types.md
+    items:
+    - name: Default SQL Server Data Types
+      href: default-sql-server-data-types.md
+    - name: Default PHP Data Types
+      href: default-php-data-types.md
+    - name: "How to: Specify SQL Server Data Types When Using the SQLSRV Driver"
+      href: how-to-specify-sql-server-data-types-when-using-the-sqlsrv-driver.md
+    - name: "How to: Specify PHP Data Types"
+      href: how-to-specify-php-data-types.md
+    - name: "How to: Send and Retrieve UTF-8 Data Using Built-In UTF-8 Support"
+      href: how-to-send-and-retrieve-utf-8-data-using-built-in-utf-8-support.md
+    - name: "How to: Send and Retrieve ASCII Data in Linux and macOS"
+      href: how-to-send-and-retrieve-ascii-data-in-linux-mac.md
+  - name: Handling Errors and Warnings
+    href: handling-errors-and-warnings.md
+    items:
+    - name: "How to: Configure Error and Warning Handling Using the SQLSRV Driver"
+      href: how-to-configure-error-and-warning-handling-using-the-sqlsrv-driver.md
+    - name: "How to: Handle Errors and Warnings Using the SQLSRV Driver"
+      href: how-to-handle-errors-and-warnings-using-the-sqlsrv-driver.md
+  - name: Logging Activity
+    href: logging-activity.md
+  - name: Using Always Encrypted with the PHP Drivers for SQL Server
+    href: using-always-encrypted-php-drivers.md
+  - name: Constants (Microsoft Drivers for PHP for SQL Server)
+    href: constants-microsoft-drivers-for-php-for-sql-server.md
+  - name: SQLSRV Driver API Reference
+    href: sqlsrv-driver-api-reference.md
+    items:
+    - name: sqlsrv_begin_transaction
+      href: sqlsrv-begin-transaction.md
+    - name: sqlsrv_cancel
+      href: sqlsrv-cancel.md
+    - name: sqlsrv_client_info
+      href: sqlsrv-client-info.md
+    - name: sqlsrv_close
+      href: sqlsrv-close.md
+    - name: sqlsrv_commit
+      href: sqlsrv-commit.md
+    - name: sqlsrv_configure
+      href: sqlsrv-configure.md
+    - name: sqlsrv_connect
+      href: sqlsrv-connect.md
+    - name: sqlsrv_errors
+      href: sqlsrv-errors.md
+    - name: sqlsrv_execute
+      href: sqlsrv-execute.md
+    - name: sqlsrv_fetch
+      href: sqlsrv-fetch.md
+    - name: sqlsrv_fetch_array
+      href: sqlsrv-fetch-array.md
+    - name: sqlsrv_fetch_object
+      href: sqlsrv-fetch-object.md
+    - name: sqlsrv_field_metadata
+      href: sqlsrv-field-metadata.md
+    - name: sqlsrv_free_stmt
+      href: sqlsrv-free-stmt.md
+    - name: sqlsrv_get_config
+      href: sqlsrv-get-config.md
+    - name: sqlsrv_get_field
+      href: sqlsrv-get-field.md
+    - name: sqlsrv_has_rows
+      href: sqlsrv-has-rows.md
+    - name: sqlsrv_next_result
+      href: sqlsrv-next-result.md
+    - name: sqlsrv_num_fields
+      href: sqlsrv-num-fields.md
+    - name: sqlsrv_num_rows
+      href: sqlsrv-num-rows.md
+    - name: sqlsrv_prepare
+      href: sqlsrv-prepare.md
+    - name: sqlsrv_query
+      href: sqlsrv-query.md
+    - name: sqlsrv_rollback
+      href: sqlsrv-rollback.md
+    - name: sqlsrv_rows_affected
+      href: sqlsrv-rows-affected.md
+    - name: sqlsrv_send_stream_data
+      href: sqlsrv-send-stream-data.md
+    - name: sqlsrv_server_info
+      href: sqlsrv-server-info.md
+  - name: PDO_SQLSRV Driver Reference
+    href: pdo-sqlsrv-driver-reference.md
+    items:
+    - name: PDO Class
+      href: pdo-class.md
+      items:
+      - name: "PDO::__construct"
+        href: pdo-construct.md
+      - name: "PDO::beginTransaction"
+        href: pdo-begintransaction.md
+      - name: "PDO::commit"
+        href: pdo-commit.md
+      - name: "PDO::errorCode"
+        href: pdo-errorcode.md
+      - name: "PDO::errorInfo"
+        href: pdo-errorinfo.md
+      - name: "PDO::exec"
+        href: pdo-exec.md
+      - name: "PDO::getAttribute"
+        href: pdo-getattribute.md
+      - name: "PDO::getAvailableDrivers"
+        href: pdo-getavailabledrivers.md
+      - name: "PDO::lastInsertId"
+        href: pdo-lastinsertid.md
+      - name: "PDO::prepare"
+        href: pdo-prepare.md
+      - name: "PDO::query"
+        href: pdo-query.md
+      - name: "PDO::quote"
+        href: pdo-quote.md
+      - name: "PDO::rollback"
+        href: pdo-rollback.md
+      - name: "PDO::setAttribute"
+        href: pdo-setattribute.md
+    - name: PDOStatement Class
+      href: pdostatement-class.md
+      items:
+      - name: "PDOStatement::bindColumn"
+        href: pdostatement-bindcolumn.md
+      - name: "PDOStatement::bindParam"
+        href: pdostatement-bindparam.md
+      - name: "PDOStatement::bindValue"
+        href: pdostatement-bindvalue.md
+      - name: "PDOStatement::closeCursor"
+        href: pdostatement-closecursor.md
+      - name: "PDOStatement::columnCount"
+        href: pdostatement-columncount.md
+      - name: "PDOStatement::debugDumpParams"
+        href: pdostatement-debugdumpparams.md
+      - name: "PDOStatement::errorCode"
+        href: pdostatement-errorcode.md
+      - name: "PDOStatement::errorInfo"
+        href: pdostatement-errorinfo.md
+      - name: "PDOStatement::execute"
+        href: pdostatement-execute.md
+      - name: "PDOStatement::fetch"
+        href: pdostatement-fetch.md
+      - name: "PDOStatement::fetchAll"
+        href: pdostatement-fetchall.md
+      - name: "PDOStatement::fetchColumn"
+        href: pdostatement-fetchcolumn.md
+      - name: "PDOStatement::fetchObject"
+        href: pdostatement-fetchobject.md
+      - name: "PDOStatement::getAttribute"
+        href: pdostatement-getattribute.md
+      - name: "PDOStatement::getColumnMeta"
+        href: pdostatement-getcolumnmeta.md
+      - name: "PDOStatement::nextRowset"
+        href: pdostatement-nextrowset.md
+      - name: "PDOStatement::rowCount"
+        href: pdostatement-rowcount.md
+      - name: "PDOStatement::setAttribute"
+        href: pdostatement-setattribute.md
+      - name: "PDOStatement::setFetchMode"
+        href: pdostatement-setfetchmode.md
+- name: Security Considerations
+  href: security-considerations-for-php-sql-driver.md
+- name: Code Samples
+  href: code-samples-for-php-sql-driver.md
+  items:
+  - name: Example Application (PDO_SQLSRV Driver)
+    href: example-application-pdo-sqlsrv-driver.md
+  - name: Example Application (SQLSRV Driver)
+    href: example-application-sqlsrv-driver.md

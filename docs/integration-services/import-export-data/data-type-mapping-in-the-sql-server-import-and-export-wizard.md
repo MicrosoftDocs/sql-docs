@@ -2,22 +2,15 @@
 title: "Data Type Mapping in the SQL Server Import and Export Wizard | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/11/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "integration-services"
-ms.service: ""
-ms.component: "import-export-data"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: integration-services
+ms.topic: conceptual
 ms.assetid: 669be403-cb17-4b12-bbbf-e7a74003c4b6
-caps.latest.revision: 2
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
-ms.workload: "On Demand"
+manager: craigg
 ---
 # Data Type Mapping in the SQL Server Import and Export Wizard
  In the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Import and Export Wizard, you can set the name, the data type, and the data type properties of columns in new destination tables and files, but you can't specify custom conversions for column values. As a result, the built-in mapping of data types from source to destination is important.  
@@ -33,7 +26,7 @@ The wizard uses mapping files that are installed by [!INCLUDE[ssNoVersion](../..
 If your business requires different mappings between data types, you can update the mapping files to change the mappings used by the wizard. For example, if you want the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **nchar** data type to map to the DB2 **GRAPHIC** data type instead of the DB2 **VARGRAPHIC** data type when you transfer data from [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to DB2, you can change the **nchar** mapping in the **SqlClientToIBMDB2.xml** mapping file to use **GRAPHIC** instead of **VARGRAPHIC.**  
   
 ## You can add a new mapping file
-[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] installs mappings between many commonly used combinations of source and destination. You can also add new mapping files to the **MappingFiles** directory to support additional sources and destinations. The new mapping files must conform to the published XSD schema and must map between a unique combination of source and destination. The schema for mapping files, **DataTypeMapping.xsd**, is published [here](http://schemas.microsoft.com/sqlserver/2008/07/IntegrationServices/DataTypeMapping/DataTypeMapping.xsd).
+[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] installs mappings between many commonly used combinations of source and destination. You can also add new mapping files to the **MappingFiles** directory to support additional sources and destinations. The new mapping files must conform to the published XSD schema and must map between a unique combination of source and destination. The schema for mapping files, **DataTypeMapping.xsd**, is published [here](https://schemas.microsoft.com/sqlserver/2008/07/IntegrationServices/DataTypeMapping/DataTypeMapping.xsd).
  
 ## Sample mapping file
 Here's a portion of the XML mapping file that maps from SQL Server data types (or, more specifically, from the data types used by the .Net Framework Data Provider for SQL Server) to Oracle data types. As one example, you can see that a SQL Server **int** data type maps to an Oracle **INTEGER** data type.
@@ -41,7 +34,7 @@ Here's a portion of the XML mapping file that maps from SQL Server data types (o
 ```xml  
   
 <dtm:DataTypeMappings  
-    xmlns:dtm="http://www.microsoft.com/SqlServer/Dts/DataTypeMapping.xsd"   
+    xmlns:dtm="https://www.microsoft.com/SqlServer/Dts/DataTypeMapping.xsd"   
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  
     SourceType="System.Data.SqlClient.SqlConnection"   
     MinSourceVersion="*"   

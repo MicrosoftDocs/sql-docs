@@ -2,23 +2,16 @@
 title: "SELECTs and JOINs From System Views for Extended Events in SQL Server | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/02/2016"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.service: ""
-ms.component: "extended-events"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-  - "xevents"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: xevents
+ms.topic: conceptual
 ms.assetid: 04521d7f-588c-4259-abc2-1a2857eb05ec
-caps.latest.revision: 6
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
-ms.workload: "Inactive"
+author: MightyPen
+ms.author: genemi
+manager: craigg
+monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # SELECTs and JOINs From System Views for Extended Events in SQL Server
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -80,7 +73,7 @@ To SELECT from the system views, the following permission is necessary:
 
 This section matches and correlates three different technological perspectives on the same defined event session. The session has been defined and is visible in the **Object Explorer** of SQL Server Management Studio (SSMS.exe), but the session is not currently running.
 
-Every month it is wise to [install the latest update of SSMS](http://msdn.microsoft.com/library/mt238290.aspx), to avoid unexpected failures.
+Every month it is wise to [install the latest update of SSMS](https://msdn.microsoft.com/library/mt238290.aspx), to avoid unexpected failures.
 
 
 Reference documentation about the catalog views for extended events is at [Extended Events Catalog Views (Transact-SQL)](../../relational-databases/system-catalog-views/extended-events-catalog-views-transact-sql.md).
@@ -370,7 +363,7 @@ event_session_test3   7_WITH_STARTUP_STATE   startup_state                   1
 ```
 
 
-This completes the the section on catalog views.
+This completes the section on catalog views.
 
 
 

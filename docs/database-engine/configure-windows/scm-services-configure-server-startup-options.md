@@ -2,16 +2,11 @@
 title: "Configure Server Startup Options (SQL Server Configuration Manager) | Microsoft Docs"
 ms.custom: ""
 ms.date: "11/23/2017"
-ms.prod: "sql-non-specified"
-ms.prod_service: "database-engine"
-ms.service: ""
-ms.component: "configure-windows"
+ms.prod: sql
+ms.prod_service: high-availability
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: configuration
+ms.topic: conceptual
 helpviewer_keywords: 
   - "parameters [SQL Server], startup options"
   - "SQL Server, startup options"
@@ -22,15 +17,13 @@ helpviewer_keywords:
   - "SQL Server services, setting startup options"
   - "SQL Server services, setting startup parameters"
 ms.assetid: 7a94643c-6460-4baf-bb31-0cb99eaf970d
-caps.latest.revision: 31
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-ms.workload: "On Demand"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ---
 # SCM Services - Configure Server Startup Options
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  This topic describes how to to configure startup options that will be used every time the [!INCLUDE[ssDE](../../includes/ssde-md.md)] starts in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] by using [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager. For a list of startup options, see [Database Engine Service Startup Options](../../database-engine/configure-windows/database-engine-service-startup-options.md).  
+  This topic describes how to configure startup options that will be used every time the [!INCLUDE[ssDE](../../includes/ssde-md.md)] starts in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] by using [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager. For a list of startup options, see [Database Engine Service Startup Options](../../database-engine/configure-windows/database-engine-service-startup-options.md).  
   
 ##  <a name="BeforeYouBegin"></a> Before You Begin  
   
@@ -64,7 +57,7 @@ ms.workload: "On Demand"
   
 2.  In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager, click **SQL Server Services**.  
   
-3.  In the right pane, right-click **SQL Server (***<instance_name>***)**, and then click **Properties**.  
+3.  In the right pane, right-click **SQL Server (**_<instance_name>_**)**, and then click **Properties**.  
   
 4.  On the **Startup Parameters** tab, in the **Specify a startup parameter** box, type the parameter, and then click **Add**.  
   

@@ -2,15 +2,9 @@
 title: "Requirements for CLR User-Defined Aggregates | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/17/2017"
-ms.prod: "sql-non-specified"
-ms.prod_service: "database-engine"
-ms.service: ""
-ms.component: "clr"
+ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-
-ms.tgt_pltfrm: ""
+ms.technology: clr
 ms.topic: "reference"
 helpviewer_keywords: 
   - "aggregate functions [CLR integration]"
@@ -23,18 +17,16 @@ helpviewer_keywords:
   - "user-defined functions [CLR integration]"
   - "UDTs [CLR integration], user-defined aggregates"
 ms.assetid: dbf9eb5a-bd99-42f7-b275-556d0def045d
-caps.latest.revision: 56
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-ms.workload: "Inactive"
+author: "rothja"
+ms.author: "jroth"
+manager: craigg
 ---
 # CLR User-Defined Aggregates - Requirements
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   A type in a common language runtime (CLR) assembly can be registered as a user-defined aggregate function, as long as it implements the required aggregation contract. This contract consists of the **SqlUserDefinedAggregate** attribute and the aggregation contract methods. The aggregation contract includes the mechanism to save the intermediate state of the aggregation, and the mechanism to accumulate new values, which consists of four methods: **Init**, **Accumulate**, **Merge**, and **Terminate**. When you have met these requirements, you will be able to take full advantage of user-defined aggregates in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. The following sections of this topic provide additional details about how to create and work with user-defined aggregates. For an example, see [Invoking CLR User-Defined Aggregate Functions](../../relational-databases/clr-integration-database-objects-user-defined-functions/clr-user-defined-aggregate-invoking-functions.md).  
   
 ## SqlUserDefinedAggregate  
- For more information, see [SqlUserDefinedAggregateAttribute](http://go.microsoft.com/fwlink/?LinkId=124626).  
+ For more information, see [SqlUserDefinedAggregateAttribute](https://go.microsoft.com/fwlink/?LinkId=124626).  
   
 ## Aggregation Methods  
  The class registered as a user-defined aggregate should support the following instance methods. These are the methods that the query processor uses to compute the aggregation:  

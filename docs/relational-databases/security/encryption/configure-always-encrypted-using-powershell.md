@@ -2,22 +2,15 @@
 title: "Configure Always Encrypted using PowerShell | Microsoft Docs"
 ms.custom: ""
 ms.date: "05/17/2017"
-ms.prod: "sql-non-specified"
-ms.prod_service: "database-engine, sql-database"
-ms.service: ""
-ms.component: "security"
-ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "dbe-security"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.prod: sql
+ms.reviewer: vanto
+ms.technology: security
+ms.topic: conceptual
 ms.assetid: 12f2bde5-e100-41fa-b474-2d2332fc7650
-caps.latest.revision: 15
-author: "stevestein"
-ms.author: "sstein"
-manager: "jhubbard"
-ms.workload: "Inactive"
+author: VanMSFT
+ms.author: vanto
+manager: craigg
+monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Configure Always Encrypted using PowerShell
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -136,7 +129,7 @@ The following PowerShell cmdlets are available for Always Encrypted:
 |**[New-SqlCngColumnMasterKeySettings](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/new-sqlcngcolumnmasterkeysettings)**	|Creates a SqlColumnMasterKeySettings object describing an asymmetric key stored in a key store supporting the Cryptography Next Generation (CNG) API.
 |**[New-SqlColumnEncryptionKey](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/new-sqlcolumnencryptionkey)**	|Creates a column encryption key object in the database.
 |**[New-SqlColumnEncryptionKeyEncryptedValue](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/new-sqlcolumnencryptionkeyencryptedvalue)**	|Produces an encrypted value of a column encryption key.
-|**[New-SqlColumnEncryptionSettings](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/new-sqlcolumnencryptionsettings)**	|Creates a SqlColumnEncryptionSettings object that encapsulates information about a single column’s encryption, including CEK and encryption type.
+|**[New-SqlColumnEncryptionSettings](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/new-sqlcolumnencryptionsettings)**	|Creates a SqlColumnEncryptionSettings object that encapsulates information about a single column's encryption, including CEK and encryption type.
 |**[New-SqlColumnMasterKey](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/new-sqlcolumnmasterkey)**	|Creates a column master key object in the database.
 |**[New-SqlColumnMasterKeySettings](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/new-sqlcolumnmasterkeysettings)**|Creates a SqlColumnMasterKeySettings object for a column master key with the specified provider and key path.
 |**[New-SqlCspColumnMasterKeySettings](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/new-sqlcspcolumnmasterkeysettings)**	|Creates a SqlColumnMasterKeySettings object describing an asymmetric key stored in a key store with a Cryptography Service Provider (CSP) supporting Cryptography API (CAPI).

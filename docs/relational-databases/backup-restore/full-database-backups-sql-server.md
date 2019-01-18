@@ -2,16 +2,11 @@
 title: "Full Database Backups (SQL Server) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-non-specified"
-ms.prod_service: "database-engine"
-ms.service: ""
-ms.component: "backup-restore"
+ms.prod: sql
+ms.prod_service: backup-restore
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "dbe-backup-restore"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: backup-restore
+ms.topic: conceptual
 helpviewer_keywords: 
   - "full backups [SQL Server]"
   - "backups [SQL Server], database"
@@ -22,11 +17,9 @@ helpviewer_keywords:
   - "size [SQL Server], backups"
   - "database backups [SQL Server], about backing up databases"
 ms.assetid: 4d933d19-8d21-4aa1-8153-d230cb3a3f99
-caps.latest.revision: 64
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-ms.workload: "On Demand"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ---
 # Full Database Backups (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -53,7 +46,7 @@ ms.workload: "On Demand"
   
  ![Shows work-loss exposure between database backups](../../relational-databases/backup-restore/media/bnr-rmsimple-1-fulldb-backups.gif "Shows work-loss exposure between database backups")  
   
-### Example ([!INCLUDE[tsql](../../includes/tsql-md.md)])  
+### Example ( [!INCLUDE[tsql](../../includes/tsql-md.md)])  
  The following example shows how to create a full database backup by using WITH FORMAT to overwrite any existing backups and create a new media set.  
   
 ```  
@@ -71,7 +64,7 @@ GO
   
  For information about how to create log backups, see [Transaction Log Backups &#40;SQL Server&#41;](../../relational-databases/backup-restore/transaction-log-backups-sql-server.md).  
   
-### Example ([!INCLUDE[tsql](../../includes/tsql-md.md)])  
+### Example ( [!INCLUDE[tsql](../../includes/tsql-md.md)])  
  The following example shows how to create a full database backup by using WITH FORMAT to overwrite any existing backups and create a new media set. Then, the example backs up the transaction log. In a real-life situation, you would have to perform a series of regular log backups. For this example, the [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] sample database is set to use the full recovery model.  
   
 ```  

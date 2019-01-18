@@ -2,25 +2,18 @@
 title: "Divide (SSIS Expression) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "integration-services"
-ms.service: ""
-ms.component: "expressions"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: integration-services
+ms.topic: conceptual
 helpviewer_keywords: 
   - "/ (divide)"
   - "divide operator (/)"
 ms.assetid: 5bde9223-872d-443e-8a27-57735e1d8f3d
-caps.latest.revision: 36
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
-ms.workload: "Inactive"
+manager: craigg
 ---
 # Divide (SSIS Expression)
   Divides the first numeric expression by the second one.  

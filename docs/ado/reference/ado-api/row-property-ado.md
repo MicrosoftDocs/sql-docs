@@ -1,17 +1,12 @@
 ---
 title: "Row Property (ADO) | Microsoft Docs"
-ms.prod: "sql-non-specified"
-ms.prod_service: "drivers"
-ms.service: ""
-ms.component: "ado"
-ms.technology:
-  - "drivers"
+ms.prod: sql
+ms.prod_service: connectivity
+ms.technology: connectivity
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 apitype: "COM"
 f1_keywords: 
   - "ADORecordConstruction::PutRow"
@@ -22,11 +17,9 @@ f1_keywords:
 helpviewer_keywords: 
   - "Row property [ADO]"
 ms.assetid: 21019d89-2dd1-4a26-ac6f-384b81d66949
-caps.latest.revision: 11
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
-ms.workload: "Inactive"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # Row Property (ADO)
 Gets or sets an OLE DB **Row** object from or on an [ADORecordConstruction Interface](../../../ado/reference/ado-api/adorecordconstruction-interface.md) object. When you use **put_Row** to set a **Row** object, a row is turned into an ADO **Record** object.  

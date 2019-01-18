@@ -2,15 +2,10 @@
 title: "sys.dm_db_index_physical_stats (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/10/2016"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.service: ""
-ms.component: "dmv's"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: system-objects
 ms.topic: "language-reference"
 f1_keywords: 
   - "dm_db_index_physical_stats"
@@ -23,11 +18,10 @@ helpviewer_keywords:
   - "sys.dm_db_index_physical_stats dynamic management function"
   - "fragmentation [SQL Server]"
 ms.assetid: d294dd8e-82d5-4628-aa2d-e57702230613
-caps.latest.revision: 95
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-ms.workload: "Active"
+author: stevestein
+ms.author: sstein
+manager: craigg
+monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.dm_db_index_physical_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -93,7 +87,7 @@ sys.dm_db_index_physical_stats (
 |object_id|**int**|Object ID of the table or view that the index is on.|  
 |index_id|**int**|Index ID of an index.<br /><br /> 0 = Heap.|  
 |partition_number|**int**|1-based partition number within the owning object; a table, view, or index.<br /><br /> 1 = Nonpartitioned index or heap.|  
-|index_type_desc|**nvarchar(60)**|Description of the index type:<br /><br /> HEAP<br /><br /> CLUSTERED INDEX<br /><br /> NONCLUSTERED INDEX<br /><br /> PRIMARY XML INDEX<br /><br /> SPATIAL INDEX<br /><br /> XML INDEX<br /><br /> COLUMNSTORE MAPPING INDEX (internal)<br /><br /> COLUMNSTORE DELETEBUFFER INDEX (internal)<br /><br /> COLUMNSTORE DELETEBITMAP INDEX (internal)|  
+|index_type_desc|**nvarchar(60)**|Description of the index type:<br /><br /> HEAP<br /><br /> CLUSTERED INDEX<br /><br /> NONCLUSTERED INDEX<br /><br /> PRIMARY XML INDEX<br /><br /> EXTENDED INDEX<br /><br /> XML INDEX<br /><br /> COLUMNSTORE MAPPING INDEX (internal)<br /><br /> COLUMNSTORE DELETEBUFFER INDEX (internal)<br /><br /> COLUMNSTORE DELETEBITMAP INDEX (internal)|  
 |hobt_id|**bigint**|Heap or B-Tree ID of the index or partition.<br /><br /> Besides returning the hobt_id of user-defined indexes, this also returns the hobt_id of the internal columnstore indexes.|  
 |alloc_unit_type_desc|**nvarchar(60)**|Description of the allocation unit type:<br /><br /> IN_ROW_DATA<br /><br /> LOB_DATA<br /><br /> ROW_OVERFLOW_DATA<br /><br /> The LOB_DATA allocation unit contains the data that is stored in columns of type **text**, **ntext**, **image**, **varchar(max)**, **nvarchar(max)**, **varbinary(max)**, and **xml**. For more information, see [Data Types &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md).<br /><br /> The ROW_OVERFLOW_DATA allocation unit contains the data that is stored in columns of type **varchar(n)**, **nvarchar(n)**, **varbinary(n)**, and **sql_variant** that have been pushed off-row.|  
 |index_depth|**tinyint**|Number of index levels.<br /><br /> 1 = Heap, or LOB_DATA or ROW_OVERFLOW_DATA allocation unit.|  
@@ -111,9 +105,9 @@ sys.dm_db_index_physical_stats (
 |avg_record_size_in_bytes|**float**|Average record size in bytes.<br /><br /> For an index, the average record size applies to the current level of the b-tree in the IN_ROW_DATA allocation unit.<br /><br /> For a heap, the average record size in the IN_ROW_DATA allocation unit.<br /><br /> For LOB_DATA or ROW_OVERFLOW_DATA allocation units, the average record size in the complete allocation unit.<br /><br /> NULL when *mode* = LIMITED.|  
 |forwarded_record_count|**bigint**|Number of records in a heap that have forward pointers to another data location. (This state occurs during an update, when there is not enough room to store the new row in the original location.)<br /><br /> NULL for any allocation unit other than the IN_ROW_DATA allocation units for a heap.<br /><br /> NULL for heaps when *mode* = LIMITED.|  
 |compressed_page_count|**bigint**|The number of compressed pages.<br /><br /> For heaps, newly allocated pages are not PAGE compressed. A heap is PAGE compressed under two special conditions: when data is bulk imported or when a heap is rebuilt. Typical DML operations that cause page allocations will not be PAGE compressed. Rebuild a heap when the compressed_page_count value grows larger than the threshold you want.<br /><br /> For tables that have a clustered index, the compressed_page_count value indicates the effectiveness of PAGE compression.|  
-|hobt_id|bigint|**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] through [current version](http://go.microsoft.com/fwlink/p/?LinkId=299658)), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].<br /><br /> For columnstore indexes only, this is the ID for a rowset that tracks internal columnstore data for a partition. The rowsets are stored as data heaps or binary trees. They have the same index ID as the parent columnstore index. For more information, see [sys.internal_partitions &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-internal-partitions-transact-sql.md).<br /><br /> NULL if|  
-|column_store_delete_buffer_state|tinyint|**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] through [current version](http://go.microsoft.com/fwlink/p/?LinkId=299658)), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].<br /><br /> 0 = NOT_APPLICABLE<br /><br /> 1 = OPEN<br /><br /> 2 = DRAINING<br /><br /> 3 = FLUSHING<br /><br /> 4 = RETIRING<br /><br /> 5 = READY|  
-|column_store_delete_buff_state_desc||**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] through [current version](http://go.microsoft.com/fwlink/p/?LinkId=299658)), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].<br /><br /> NOT_APPLICABLE –the parent index is not a columnstore index.<br /><br /> OPEN – deleters and scanners use this.<br /><br /> DRAINING – deleters are draining out but scanners still use it.<br /><br /> FLUSHING – buffer is closed and rows in the buffer are being written to the delete bitmap.<br /><br /> RETIRING – rows in the closed delete buffer have been written to the delete bitmap, but the buffer has not been truncated because scanners are still using it. New scanners don’t need to use the retiring buffer because the open buffer is enough.<br /><br /> READY – This delete buffer is ready for use.|  
+|hobt_id|bigint|**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] through [current version](https://go.microsoft.com/fwlink/p/?LinkId=299658)), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].<br /><br /> For columnstore indexes only, this is the ID for a rowset that tracks internal columnstore data for a partition. The rowsets are stored as data heaps or binary trees. They have the same index ID as the parent columnstore index. For more information, see [sys.internal_partitions &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-internal-partitions-transact-sql.md).<br /><br /> NULL if|  
+|column_store_delete_buffer_state|tinyint|**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] through [current version](https://go.microsoft.com/fwlink/p/?LinkId=299658)), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].<br /><br /> 0 = NOT_APPLICABLE<br /><br /> 1 = OPEN<br /><br /> 2 = DRAINING<br /><br /> 3 = FLUSHING<br /><br /> 4 = RETIRING<br /><br /> 5 = READY|  
+|column_store_delete_buff_state_desc||**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] through [current version](https://go.microsoft.com/fwlink/p/?LinkId=299658)), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].<br /><br /> NOT VALID -the parent index is not a columnstore index.<br /><br /> OPEN - deleters and scanners use this.<br /><br /> DRAINING - deleters are draining out but scanners still use it.<br /><br /> FLUSHING - buffer is closed and rows in the buffer are being written to the delete bitmap.<br /><br /> RETIRING - rows in the closed delete buffer have been written to the delete bitmap, but the buffer has not been truncated because scanners are still using it. New scanners don't need to use the retiring buffer because the open buffer is enough.<br /><br /> READY - This delete buffer is ready for use.|  
   
 ## Remarks  
  The sys.dm_db_index_physical_stats dynamic management function replaces the DBCC SHOWCONTIG statement.  
@@ -197,7 +191,7 @@ GO
   
 -   Use ALTER INDEX REBUILD, the replacement for DBCC DBREINDEX, to rebuild the index online or offline. For more information, see [ALTER INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md).  
   
- Fragmentation alone is not a sufficient reason to reorganize or rebuild an index. The main effect of fragmentation is that it slows down page read-ahead throughput during index scans. This causes slower response times. If the query workload on a fragmented table or index does not involve scans, because the workload is primarily singleton lookups, removing fragmentation may have no effect. For more information, see this [Microsoft Web site](http://go.microsoft.com/fwlink/?linkid=31012).  
+ Fragmentation alone is not a sufficient reason to reorganize or rebuild an index. The main effect of fragmentation is that it slows down page read-ahead throughput during index scans. This causes slower response times. If the query workload on a fragmented table or index does not involve scans, because the workload is primarily singleton lookups, removing fragmentation may have no effect. For more information, see this [Microsoft Web site](https://go.microsoft.com/fwlink/?linkid=31012).  
   
 > [!NOTE]  
 >  Running DBCC SHRINKFILE or DBCC SHRINKDATABASE may introduce fragmentation if an index is partly or completely moved during the shrink operation. Therefore, if a shrink operation must be performed, you should do it before fragmentation is removed.  
@@ -431,7 +425,7 @@ select * from sys.dm_db_index_physical_stats (db_id(), object_id ('ExpenseQueue'
  [sys.dm_db_index_usage_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-usage-stats-transact-sql.md)   
  [sys.dm_db_partition_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-partition-stats-transact-sql.md)   
  [sys.allocation_units &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-allocation-units-transact-sql.md)   
- [System Views &#40;Transact-SQL&#41;](http://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90)  
+ [System Views &#40;Transact-SQL&#41;](https://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90)  
   
   
 

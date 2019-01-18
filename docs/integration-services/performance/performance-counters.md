@@ -1,17 +1,12 @@
 ---
 title: "Performance Counters | Microsoft Docs"
-ms.custom: ""
+ms.custom: supportability
 ms.date: "08/27/2016"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "integration-services"
-ms.service: ""
-ms.component: "performance"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: integration-services
+ms.topic: conceptual
 helpviewer_keywords: 
   - "logs [Integration Services], performance counters"
   - "performance counters [Integration Services]"
@@ -19,11 +14,9 @@ helpviewer_keywords:
   - "counters [Integration Services]"
   - "data flow engine [Integration Services]"
 ms.assetid: 11e17f4e-72ed-44d7-a71d-a68937a78e4c
-caps.latest.revision: 63
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
-ms.workload: "On Demand"
+manager: craigg
 ---
 # Performance Counters
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] installs a set of performance counters that you can use to monitor the performance of the data flow engine. For example, you can watch the "Buffers spooled" counter to determine whether data buffers are being written to disk temporarily while a package is running. This swapping reduces performance and indicates that the computer has insufficient memory.  
@@ -71,11 +64,11 @@ select * from [catalog].[dm_execution_performance_counters] (NULL)
   
 ## Related Content  
   
--   Tool, [SSIS Performance Visualization for Business Intelligence Development Studio (CodePlex Project)](http://go.microsoft.com/fwlink/?LinkId=146626), on codeplex.com.  
+-   Tool, [SSIS Performance Visualization for Business Intelligence Development Studio (CodePlex Project)](https://go.microsoft.com/fwlink/?LinkId=146626), on codeplex.com.  
   
--   Video, [Measuring and Understanding the Performance of Your SSIS Packages in the Enterprise (SQL Server Video)](http://go.microsoft.com/fwlink/?LinkId=150497), on msdn.microsoft.com.  
+-   Video, [Measuring and Understanding the Performance of Your SSIS Packages in the Enterprise (SQL Server Video)](https://go.microsoft.com/fwlink/?LinkId=150497), on msdn.microsoft.com.  
   
--   Support article, [The SSIS performance counter is no longer available in the Performance Monitor after you upgrade to Windows Server 2008](http://go.microsoft.com/fwlink/?LinkId=235319), on support.microsoft.com.  
+-   Support article, [The SSIS performance counter is no longer available in the Performance Monitor after you upgrade to Windows Server 2008](https://go.microsoft.com/fwlink/?LinkId=235319), on support.microsoft.com.  
 
 ## Add a Log for Data Flow Performance Counters
   This procedure describes how to add a log for the performance counters that the data flow engine provides.  

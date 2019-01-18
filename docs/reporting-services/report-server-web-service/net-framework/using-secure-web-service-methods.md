@@ -1,31 +1,20 @@
 ---
 title: "Using Secure Web Service Methods | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/06/2017"
+ms.date: 03/06/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
-ms.service: ""
-ms.component: "report-server-web-service"
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
+ms.technology: report-server-web-service
 
 
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-applies_to: 
-  - "SQL Server 2016 Preview"
+ms.topic: reference
 helpviewer_keywords: 
   - "SOAP [Reporting Services], secure connections"
   - "Web service [Reporting Services], SOAP"
   - "Report Server Web service, SOAP"
   - "XML Web service [Reporting Services], SOAP"
 ms.assetid: 87329299-c2ea-4517-9148-d855726768a9
-caps.latest.revision: 36
-author: "markingmyname"
-ms.author: "maghan"
-manager: "kfile"
-ms.workload: "Inactive"
+author: markingmyname
+ms.author: maghan
 ---
 # Using Secure Web Service Methods
   Certain Report Server Web service methods may require a secure connection when you invoke them. The methods that require a secure connection are determined by the **SecureConnectionLevel** setting in the RSReportServer.config file. The value of the setting is an integer value with a valid range of 0 and higher. The following table describes these values.  

@@ -2,25 +2,18 @@
 title: "Dynamic Tracing | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
-ms.prod_service: "drivers"
-ms.service: ""
-ms.component: "odbc"
+ms.prod: sql
+ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "drivers"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: connectivity
+ms.topic: conceptual
 helpviewer_keywords: 
   - "tracing options [ODBC], dynamic"
   - "dynamic tracing [ODBC]"
 ms.assetid: ebe58a83-a7b0-4747-86c8-2af2940471ef
-caps.latest.revision: 5
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
-ms.workload: "Inactive"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # Dynamic Tracing
 Tracing can be enabled or disabled at any point in an application run. This allows an application to trace any number of function calls.  

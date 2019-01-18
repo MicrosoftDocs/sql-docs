@@ -2,15 +2,10 @@
 title: "DBCC TRACESTATUS (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/17/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "sql-database"
-ms.service: ""
-ms.component: "t-sql|database-console-commands"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: t-sql
 ms.topic: "language-reference"
 f1_keywords: 
   - "DBCC_TRACESTATUS_TSQL"
@@ -27,11 +22,9 @@ helpviewer_keywords:
   - "session trace flags [SQL Server]"
   - "displaying trace flag status"
 ms.assetid: 9be51199-78b4-4b87-ae6e-557246b7e29a
-caps.latest.revision: 36
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-ms.workload: "On Demand"
+author: uc-msft
+ms.author: umajay
+manager: craigg
 ---
 # DBCC TRACESTATUS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

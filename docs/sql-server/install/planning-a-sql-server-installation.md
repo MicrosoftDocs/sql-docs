@@ -2,26 +2,20 @@
 title: "Planning a SQL Server Installation | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/23/2017"
-ms.prod: "sql-non-specified"
-ms.prod_service: "database-engine"
-ms.service: ""
-ms.component: "install"
+ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "setup-install"
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
+ms.technology: install
+ms.topic: quickstart
 helpviewer_keywords: 
   - "installing SQL Server, planning"
 ms.assetid: b1d56f2f-603f-48f2-b902-c715f14a6db9
-caps.latest.revision: 36
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
 ---
 # Planning a SQL Server Installation
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
   To install [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], follow these steps:  
   
 -   Review installation requirements, system configuration checks, and security considerations for a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] installation.  
@@ -32,32 +26,32 @@ manager: "jhubbard"
   
  Regardless of the installation method, you are required to confirm acceptance of the software license terms as an individual or on behalf of an entity, unless your use of the software is governed by a separate agreement such as a [!INCLUDE[msCoName](../../includes/msconame-md.md)] volume licensing agreement or a third-party agreement with an ISV or OEM.  
   
- The license terms are displayed for review and acceptance in the Setup user interface. Unattended installations (using the `/Q` or `/QS` parameters) must include the `/IAcceptSQLServerLicenseTerms` parameter. Download and review the license terms separately at [Microsoft SQL Server License Terms and Information](http://www.microsoft.com/Licensing/product-licensing/sql-server.aspx). For volume licensing terms, see [Licensing Termss and Documentation](http://www.microsoftvolumelicensing.com/DocumentSearch.aspx?Mode=3&DocumentTypeId=53). For older versions of SQL Server, see [Microsoft Software License Terms](http://go.microsoft.com/fwlink/?LinkID=148209).  
+ The license terms are displayed for review and acceptance in the Setup user interface. Unattended installations (using the `/Q` or `/QS` parameters) must include the `/IAcceptSQLServerLicenseTerms` parameter. Download and review the license terms separately at [Microsoft SQL Server License Terms and Information](https://www.microsoft.com/Licensing/product-licensing/sql-server.aspx). For volume licensing terms, see [Licensing Termss and Documentation](https://www.microsoftvolumelicensing.com/DocumentSearch.aspx?Mode=3&DocumentTypeId=53). For older versions of SQL Server, see [Microsoft Software License Terms](https://go.microsoft.com/fwlink/?LinkID=148209).  
   
 > [!NOTE]  
 >  Depending on how you received the software (for example, through [!INCLUDE[msCoName](../../includes/msconame-md.md)] volume licensing), your use of the software may be subject to additional terms and conditions.  
   
 ## In This Section  
  [What's New in SQL Server Installation](../../sql-server/install/what-s-new-in-sql-server-installation.md)  
- This topic describes the details about the new or improved features of installation in this version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ This article describes the details about the new or improved features of installation in this version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  [Hardware and Software Requirements for Installing SQL Server](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)  
- This topic lists the minimum hardware and software requirements to install and run an instance of [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+ This article lists the minimum hardware and software requirements to install and run an instance of [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
  [Security Considerations for a SQL Server Installation](../../sql-server/install/security-considerations-for-a-sql-server-installation.md)  
- This topic describes some security best practices that you should consider before you install [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and after you install [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ This article describes some security best practices that you should consider before you install [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and after you install [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  [Configure Windows Service Accounts and Permissions](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)  
- This topic describes the default configuration of services in this release of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], and configuration options for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] services that you can set during and after [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] installation.  
+ This article describes the default configuration of services in this release of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], and configuration options for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] services that you can set during and after [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] installation.  
   
  [Network Protocols and Network Libraries](../../sql-server/install/network-protocols-and-network-libraries.md)  
- This topic describes the default configuration of network protocols in this release of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], and the configuration options available.  
+ This article describes the default configuration of network protocols in this release of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], and the configuration options available.  
   
  [Work with Multiple Versions and Instances of SQL Server](../../sql-server/install/work-with-multiple-versions-and-instances-of-sql-server.md)  
- This topic describes the considerations for installing multiple versions and instances of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ This article describes the considerations for installing multiple versions and instances of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  [Local Language Versions in SQL Server](../../sql-server/install/local-language-versions-in-sql-server.md)  
- This topic describes about the localized versions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ This article describes about the localized versions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ## Related Sections  
  [Install SQL Server](../../database-engine/install-windows/install-sql-server.md)  

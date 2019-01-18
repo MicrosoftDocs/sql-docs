@@ -2,16 +2,11 @@
 title: "Integration Services (SSIS) Projects and Solutions | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/24/2016"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "integration-services"
-ms.service: ""
-ms.component: "non-specific"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: integration-services
+ms.topic: conceptual
 f1_keywords: 
   - "sql13.ssis.importprojectwizard.f1"
 helpviewer_keywords: 
@@ -21,11 +16,9 @@ helpviewer_keywords:
   - "folders [Integration Services]"
   - "projects [Integration Services], about projects"
 ms.assetid: 28ea8120-0a79-4029-93f0-07d521b32bee
-caps.latest.revision: 63
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
-ms.workload: "Active"
+manager: craigg
 ---
 # Integration Services (SSIS) Projects and Solutions
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] provides [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] for the development of [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] packages.  

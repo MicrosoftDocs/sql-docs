@@ -2,15 +2,10 @@
 title: "xp_cmdshell (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/16/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "database-engine"
-ms.service: ""
-ms.component: "system-stored-procedures"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: system-objects
 ms.topic: "language-reference"
 f1_keywords: 
   - "xp_cmdshell"
@@ -20,11 +15,9 @@ dev_langs:
 helpviewer_keywords: 
   - "xp_cmdshell"
 ms.assetid: 18935cf4-b320-4954-b6c1-e007fcefe358
-caps.latest.revision: 26
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "craigg"
-ms.workload: "Active"
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
 ---
 # xp_cmdshell (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -71,7 +64,7 @@ The command(s) completed successfully.
   
  **xp_cmdshell** can be enabled and disabled by using the Policy-Based Management or by executing **sp_configure**. For more information, see [Surface Area Configuration](../../relational-databases/security/surface-area-configuration.md) and [xp_cmdshell Server Configuration Option](../../database-engine/configure-windows/xp-cmdshell-server-configuration-option.md).  
   
-> [!IMPORTANT]  
+> [!IMPORTANT]
 >  If **xp_cmdshell** is executed within a batch and returns an error, the batch will fail. This is a change of behavior. In earlier versions of [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] the batch would continue to execute.  
   
 ## xp_cmdshell Proxy Account  

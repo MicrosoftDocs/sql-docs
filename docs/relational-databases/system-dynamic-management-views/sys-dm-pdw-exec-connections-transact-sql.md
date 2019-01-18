@@ -4,22 +4,15 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: ""
 ms.prod_service: "sql-data-warehouse, pdw"
-ms.service: "sql-data-warehouse"
-ms.component: "dmv's"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 dev_langs: 
   - "TSQL"
 ms.assetid: 2625466b-d0ef-4c71-bedc-6d13491a8351
-caps.latest.revision: 9
-author: "barbkess"
-ms.author: "barbkess"
-manager: "jhubbard"
-ms.workload: "Inactive"
+author: ronortloff
+ms.author: rortloff
+manager: craigg
+monikerRange: ">= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions"
 ---
 # sys.dm_pdw_exec_connections (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]

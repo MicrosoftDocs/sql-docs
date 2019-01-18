@@ -2,15 +2,10 @@
 title: "COUNT (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/24/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
-ms.service: ""
-ms.component: "t-sql|functions"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: t-sql
 ms.topic: "language-reference"
 f1_keywords: 
   - "COUNT_TSQL"
@@ -25,76 +20,63 @@ helpviewer_keywords:
   - "number of group items"
   - "COUNT function [Transact-SQL]"
 ms.assetid: 28d39da6-bc2e-46c7-858c-b1721c938830
-caps.latest.revision: 45
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "craigg"
-ms.workload: "Active"
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # COUNT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-Returns the number of items in a group. COUNT works like the [COUNT_BIG](../../t-sql/functions/count-big-transact-sql.md) function. The only difference between the two functions is their return values. COUNT always returns an **int** data type value. COUNT_BIG always returns a **bigint** data type value.
+This function returns the number of items found in a group. `COUNT` operates like the [COUNT_BIG](../../t-sql/functions/count-big-transact-sql.md) function. These functions differ only in the data types of their return values. `COUNT` always returns an **int** data type value. `COUNT_BIG` always returns a **bigint** data type value.
   
 ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## Syntax  
   
 ```sql
--- Syntax for SQL Server and Azure SQL Database  
-  
-COUNT ( { [ [ ALL | DISTINCT ] expression ] | * } )   
-    [ OVER (   
-        [ partition_by_clause ]   
-        [ order_by_clause ]   
-        [ ROW_or_RANGE_clause ]  
-    ) ]  
-```  
-  
-```sql
--- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
-  
+
 -- Aggregation Function Syntax  
 COUNT ( { [ [ ALL | DISTINCT ] expression ] | * } )  
 
 -- Analytic Function Syntax  
-COUNT ( { expression | * } ) OVER ( [ <partition_by_clause> ] )  
+COUNT ( [ ALL ]  { expression | * } ) OVER ( [ <partition_by_clause> ] )  
 ```  
   
 ## Arguments  
 **ALL**  
-Applies the aggregate function to all values. ALL is the default.
+Applies the aggregate function to all values. ALL serves as the default.
   
 DISTINCT  
-Specifies that COUNT returns the number of unique nonnull values.
+Specifies that `COUNT` returns the number of unique nonnull values.
   
 *expression*  
-Is an [expression](../../t-sql/language-elements/expressions-transact-sql.md) of any type except **text**, **image**, or **ntext**. Aggregate functions and subqueries are not permitted.
+An [expression](../../t-sql/language-elements/expressions-transact-sql.md) of any type, except **image**, **ntext**, or **text**. Note that `COUNT` does not support aggregate functions or subqueries in an expression.
   
 \*  
-Specifies that all rows should be counted to return the total number of rows in a table. COUNT(\*) takes no parameters and cannot be used with DISTINCT. COUNT(\*) does not require an *expression* parameter because, by definition, it does not use information about any particular column. COUNT(*) returns the number of rows in a specified table without getting rid of duplicates. It counts each row separately. This includes rows that contain null values.
+Specifies that `COUNT` should count all rows to determine the total table row count to return. `COUNT(*)` takes no parameters and does not support the use of DISTINCT. `COUNT(*)` does not require an *expression* parameter because by definition, it does not use information about any particular column. `COUNT(*)` returns the number of rows in a specified table, and it preserves duplicate rows. It counts each row separately. This includes rows that contain null values.
   
 OVER **(** [ *partition_by_clause* ] [ *order_by_clause* ] [ *ROW_or_RANGE_clause* ] **)**  
-*partition_by_clause* divides the result set produced by the FROM clause into partitions to which the function is applied. If not specified, the function treats all rows of the query result set as a single group. *order_by_clause* determines the logical order in which the operation is performed. For more information, see [OVER Clause &#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md).
-  
+The *partition_by_clause* divides the result set produced by the `FROM` clause into partitions to which the `COUNT` function is applied. If not specified, the function treats all rows of the query result set as a single group. The *order_by_clause* determines the logical order of the operation. See [OVER Clause &#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md) for more information. 
+
 ## Return types
  **int**  
   
 ## Remarks  
-COUNT(*) returns the number of items in a group. This includes NULL values and duplicates.
+COUNT(\*) returns the number of items in a group. This includes NULL values and duplicates.
   
-COUNT(ALL *expression*) evaluates *expression* for each row in a group and returns the number of nonnull values.
+COUNT(ALL *expression*) evaluates *expression* for each row in a group, and returns the number of nonnull values.
   
-COUNT(DISTINCT *expression*) evaluates *expression* for each row in a group and returns the number of unique, nonnull values.
+COUNT(DISTINCT *expression*) evaluates *expression* for each row in a group, and returns the number of unique, nonnull values.
   
-For return values greater than 2^31-1, COUNT produces an error. Use COUNT_BIG instead.
+For return values exceeding 2^31-1, `COUNT` returns an error. For these cases, use `COUNT_BIG` instead.
   
-COUNT is a deterministic function when used without the OVER and ORDER BY clauses. It is nondeterministic when specified with the OVER and ORDER BY clauses. For more information, see [Deterministic and Nondeterministic Functions](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md).
+`COUNT` is a deterministic function when used ***without*** the OVER and ORDER BY clauses. It is nondeterministic when used ***with*** the OVER and ORDER BY clauses. See [Deterministic and Nondeterministic Functions](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md) for more information.
   
 ## Examples  
   
 ### A. Using COUNT and DISTINCT  
-The following example lists the number of different titles that an employee who works at [!INCLUDE[ssSampleDBCoFull](../../includes/sssampledbcofull-md.md)] can hold.
+This example returns the number of different titles that an [!INCLUDE[ssSampleDBCoFull](../../includes/sssampledbcofull-md.md)] employee can hold.
   
 ```sql
 SELECT COUNT(DISTINCT Title)  
@@ -111,8 +93,8 @@ GO
 (1 row(s) affected)
 ```
   
-### B. Using COUNT(*)  
-The following example finds the total number of employees who work at [!INCLUDE[ssSampleDBCoFull](../../includes/sssampledbcofull-md.md)].
+### B. Using COUNT(\*)  
+This example returns the total number of [!INCLUDE[ssSampleDBCoFull](../../includes/sssampledbcofull-md.md)] employees.
   
 ```sql
 SELECT COUNT(*)  
@@ -129,8 +111,8 @@ GO
 (1 row(s) affected)
 ```
   
-### C. Using COUNT(*) with other aggregates  
-The following example shows that `COUNT(*)` can be combined with other aggregate functions in the select list. The example uses the [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] database.
+### C. Using COUNT(\*) with other aggregates  
+This example shows that `COUNT(*)` works with other aggregate functions in the `SELECT` list. The example uses the [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] database.
   
 ```sql
 SELECT COUNT(*), AVG(Bonus)  
@@ -149,7 +131,7 @@ GO
 ```
   
 ### D. Using the OVER clause  
-The following example uses the MIN, MAX, AVG and COUNT functions with the OVER clause to provide aggregated values for each department in the `HumanResources.Department` table in the [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] database.
+This example uses the `MIN`, `MAX`, `AVG` and `COUNT` functions with the `OVER` clause, to return aggregated values for each department in the [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] database `HumanResources.Department` table.
   
 ```sql
 SELECT DISTINCT Name  
@@ -194,7 +176,7 @@ Tool Design                   8.62                  29.8462               23.505
 ## Examples: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### E. Using COUNT and DISTINCT  
-The following example lists the number of different titles that an employee who works at a specific company can hold.
+This example returns the number of different titles that an employee of a specific company can hold.
   
 ```sql
 USE ssawPDW;  
@@ -210,8 +192,8 @@ FROM dbo.DimEmployee;
 67
 ```  
   
-### F. Using COUNT(*)  
-The following example returns the total number of rows in the `dbo.DimEmployee` table.
+### F. Using COUNT(\*)  
+This example returns the total number of rows in the `dbo.DimEmployee` table.
   
 ```sql
 USE ssawPDW;  
@@ -227,8 +209,8 @@ FROM dbo.DimEmployee;
 296
 ```  
   
-### G. Using COUNT(*) with other aggregates  
-The following example combines `COUNT(*)` with other aggregate functions in the SELECT list. The query returns the number of sales representatives with a annual sales quota greater than $500,000 and the average sales quota.
+### G. Using COUNT(\*) with other aggregates  
+This example combines `COUNT(*)` with other aggregate functions in the `SELECT` list. It returns the number of sales representatives with an annual sales quota greater than $500,000, and the average sales quota of those sales representatives.
   
 ```sql
 USE ssawPDW;  
@@ -248,7 +230,7 @@ TotalCount  Average Sales Quota
 ```
   
 ### H. Using COUNT with HAVING  
-The following example uses COUNT with the HAVING clause to return the departments in a company that have more than 15 employees.
+This example uses `COUNT` with the `HAVING` clause to return the departments of a company, each of which has more than 15 employees.
   
 ```sql
 USE ssawPDW;  
@@ -270,7 +252,7 @@ Production      179
 ```
   
 ### I. Using COUNT with OVER  
-The following example uses COUNT with the OVER clause to return the number of products that are contained in each of the specified sales orders.
+This example uses `COUNT` with the `OVER` clause, to return the number of products contained in each of the specified sales orders.
   
 ```sql
 USE ssawPDW;  

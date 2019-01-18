@@ -1,18 +1,12 @@
 ---
 title: "Create, Delete, or Modify a Role (Management Studio) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
+ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
-ms.service: ""
-ms.component: "security"
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
+ms.technology: security
 
 
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "roles [Reporting Services], creating"
   - "deleting roles"
@@ -22,11 +16,8 @@ helpviewer_keywords:
   - "roles [Reporting Services], deleting"
   - "roles [Reporting Services], modifying"
 ms.assetid: 3d1d56e6-a283-44a7-8417-36cb4d2c74d1
-caps.latest.revision: 42
-author: "markingmyname"
-ms.author: "maghan"
-manager: "kfile"
-ms.workload: "On Demand"
+author: markingmyname
+ms.author: maghan
 ---
 # Role Definitions - Create, Delete, or Modify
   Reporting Services provides predefined roles that define a level of access to a report server. Each user or group who requires access to report server does so through a role that describes the tasks that can be performed. Roles are defined for the report server as a whole. You cannot vary a role definition for specific parts of the report server, or specify that a role be used differently depending on the circumstances.  
@@ -48,7 +39,7 @@ ms.workload: "On Demand"
   
      Or, if you are creating a system-level role definition, right-click **System Roles**, and point to **New System Role**.  
   
-4.  Type a unique name for the role. A name must contain at least one character. It can also include spaces and certain symbols, but not the characters ; ? : @ & = + , $ / * < > | " or /.  
+4.  Type a unique name for the role. A name must contain at least one character. It can also include spaces and certain symbols, but not the characters ; ? : \@ & = + , $ / * < > | " or /.  
   
 5.  Optionally type a description. In [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] this description is visible only on this page. Users who view this item through Report Manager can see this description in that tool.  
   

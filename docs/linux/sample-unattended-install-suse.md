@@ -1,23 +1,19 @@
 ---
-title: Unattended install for SQL Server on SUSE Linux Enterprise Server | Microsoft Docs
+title: Unattended install for SQL Server on SUSE Linux Enterprise Server
+titleSuffix: SQL Server
 description: SQL Server Script Sample - Unattended Install on SUSE Linux Enterprise Server
-author: edmacauley
-ms.author: edmaca
+author: rothja
+ms.author: jroth
 manager: craigg
 ms.date: 10/02/2017
-ms.topic: article
-ms.prod: "sql-non-specified"
-ms.prod_service: "database-engine"
-ms.service: ""
-ms.component: sql-linux
-ms.suite: "sql"
-ms.custom: ""
-ms.technology: database-engine
-ms.workload: "Inactive"
+ms.topic: conceptual
+ms.prod: sql
+ms.custom: "sql-linux, seodec18"
+ms.technology: linux
 ---
 # Sample: Unattended SQL Server installation script for SUSE Linux Enterprise Server
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 This sample Bash script installs SQL Server 2017 on SUSE Linux Enterprise Server (SLES) v12 SP2 without interactive input. It provides examples of installing the database engine, the SQL Server command-line tools, SQL Server Agent, and performs post-install steps. You can optionally install full-text search and create an administrative user.
 

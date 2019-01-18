@@ -1,25 +1,14 @@
 ---
 title: "Lesson 2: Specifying Connection Information (Reporting Services) | Microsoft Docs"
-ms.custom: ""
-ms.date: "05/23/2016"
+ms.date: 05/23/2016
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
-ms.service: ""
-ms.component: "reporting-services"
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
+ms.technology: reporting-services
 
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
-applies_to: 
-  - "SQL Server 2016"
+ms.topic: conceptual
 ms.assetid: 54405a3a-d7fa-4d95-8963-9aa224e5901e
-caps.latest.revision: 53
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "kfile"
-ms.workload: "Active"
+author: maggiesMSFT
+ms.author: maggies
 ---
 # Lesson 2: Specifying Connection Information (Reporting Services)
 After you add a [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] paginated report to your Tutorial project in Lesson 1, now you need to define a *data source*, which is the connection information the report uses to access data from either a relational database, multidimensional database, or another source.  

@@ -2,16 +2,11 @@
 title: "SQL Server Destination | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "integration-services"
-ms.service: ""
-ms.component: "data-flow"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: integration-services
+ms.topic: conceptual
 f1_keywords: 
   - "sql13.dts.designer.sqlserverdest.f1"
   - "sql13.dts.designer.sqlserverdestadapter.connection.f1"
@@ -24,11 +19,9 @@ helpviewer_keywords:
   - "inserting data"
   - "bulk load [Integration Services]"
 ms.assetid: a0227cd8-6944-4547-87e8-7b2507e26442
-caps.latest.revision: 65
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
-ms.workload: "Inactive"
+manager: craigg
 ---
 # SQL Server Destination
   The SQL Server destination connects to a local [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database and bulk loads data into [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tables and views. You cannot use the SQL Server destination in packages that access a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database on a remote server. Instead, the packages should use the OLE DB destination. For more information, see [OLE DB Destination](../../integration-services/data-flow/ole-db-destination.md).  
@@ -96,7 +89,7 @@ ms.workload: "Inactive"
   
  The **Advanced Editor** dialog box reflects the properties that can be set programmatically. For more information about the properties that you can set in the **Advanced Editor** dialog box or programmatically, click one of the following topics:  
   
--   [Common Properties](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
+-   [Common Properties](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
 -   [SQL Server Destination Custom Properties](../../integration-services/data-flow/sql-server-destination-custom-properties.md)  
   
@@ -114,11 +107,11 @@ ms.workload: "Inactive"
   
 ## Related Content  
   
--   Technical article, [You may get "Unable to prepare the SSIS bulk insert for data insertion" error on UAC enabled systems](http://go.microsoft.com/fwlink/?LinkId=199482), on support.microsoft.com.  
+-   Technical article, [You may get "Unable to prepare the SSIS bulk insert for data insertion" error on UAC enabled systems](https://go.microsoft.com/fwlink/?LinkId=199482), on support.microsoft.com.  
   
--   Technical article, [The Data Loading Performance Guide](http://go.microsoft.com/fwlink/?LinkId=233700), on msdn.microsoft.com.  
+-   Technical article, [The Data Loading Performance Guide](https://go.microsoft.com/fwlink/?LinkId=233700), on msdn.microsoft.com.  
   
--   Technical article, [Using SQL Server Integration Services to Bulk Load Data](http://go.microsoft.com/fwlink/?LinkId=233701), on simple-talk.com.  
+-   Technical article, [Using SQL Server Integration Services to Bulk Load Data](https://go.microsoft.com/fwlink/?LinkId=233701), on simple-talk.com.  
   
 ## SQL Destination Editor (Connection Manager Page)
   Use the **Connection Manager** page of the **SQL Destination Editor** dialog box to specify data source information, and to preview the results. The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] destination loads data into tables or views in a [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database.  
@@ -190,7 +183,7 @@ ms.workload: "Inactive"
 >  Clear the text box in the **SQL Destination Editor** to indicate that you do not want to assign a value for this property. Use -1 in the **Properties** window, the **Advanced Editor**, and the object model.  
   
  **Maximum number of errors**  
- Specify the number of errors that can occur before the bulk insert stops. The default value of this property is **–1**, indicating that no value has been assigned.  
+ Specify the number of errors that can occur before the bulk insert stops. The default value of this property is **-1**, indicating that no value has been assigned.  
   
 > [!NOTE]  
 >  Clear the text box in the **SQL Destination Editor** to indicate that you do not want to assign a value for this property. Use -1 in the **Properties** window, the **Advanced Editor**, and the object model.  

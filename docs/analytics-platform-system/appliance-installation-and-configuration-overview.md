@@ -1,25 +1,18 @@
 ---
-title: "Appliance Installation and Configuration Overview (Analytics Platform System)"
-author: "barbkess" 
-ms.author: "barbkess"
-manager: "jhubbard"	  
-ms.prod: "analytics-platform-system"
-ms.prod_service: "mpp-data-warehouse"
-ms.service: ""
-ms.component:
-ms.technology: "mpp-data-warehouse"
-ms.custom: ""
-ms.date: 01/05/2017
-ms.reviewer: na
-ms.suite: "sql"
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: 10934f62-4acf-4ca5-b550-f426ba81fe11
-caps.latest.revision: 23
-
+title: Appliance install and configure - Analytics Platform System | Microsoft Docs
+description: Walks Analytics Platform System (APS) appliance administrators through the initial steps to set up and get started using your new appliance. 
+author: mzaman1 
+manager: craigg
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
 ---
-# Appliance Installation and Configuration Overview
-Walks SQL Server PDW appliance administrators through the initial steps to set up and get started using your new SQL Server PDW appliance.  
+
+# Appliance installation and configuration for Analytics Platform System
+Walks Analytics Platform System (APS) appliance administrators through the initial steps to set up and get started using your new appliance.  
   
 <!-- MISSING LINKS ## <a name="BeforeYouBegin"></a>Before You Begin  
 Before you begin to install, configure, and use your new appliance, we recommend reviewing information about the appliance components. Review the following to familiarize yourself with the appliance:  

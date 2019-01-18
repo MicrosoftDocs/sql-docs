@@ -1,0 +1,8 @@
+- name: Caching Templates, XSL, and Schemas (SQLXML 4.0)
+  href: caching-templates-xsl-and-schemas-sqlxml-4-0.md
+- name: Schema Caching (SQLXML 4.0)
+  href: schema-caching-sqlxml-4-0.md
+- name: Template Caching (SQLXML 4.0)
+  href: template-caching-sqlxml-4-0.md
+- name: XSL Caching (SQLXML 4.0)
+  href: xsl-caching-sqlxml-4-0.md

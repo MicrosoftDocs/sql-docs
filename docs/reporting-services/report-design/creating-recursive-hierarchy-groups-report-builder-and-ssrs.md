@@ -1,24 +1,15 @@
 ---
 title: "Creating Recursive Hierarchy Groups (Report Builder and SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
+ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
-ms.service: ""
-ms.component: "report-design"
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
+ms.technology: report-design
 
 
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 ms.assetid: 06eccab6-4089-46e8-a84f-5bf3bbe0c23b
-caps.latest.revision: 8
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "kfile"
-ms.workload: "On Demand"
+author: maggiesMSFT
+ms.author: maggies
 ---
 # Creating Recursive Hierarchy Groups (Report Builder and SSRS)
 To display recursive data in [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] paginated reports (where the relationship between parent and child is represented by fields in the dataset), set the data region group expression based on the child field and set the Parent property based on the parent field.  

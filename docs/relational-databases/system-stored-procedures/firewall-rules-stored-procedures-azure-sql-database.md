@@ -5,12 +5,7 @@ ms.date: "07/28/2016"
 ms.prod: ""
 ms.prod_service: "sql-database, sql-data-warehouse"
 ms.reviewer: ""
-ms.service: "sql-database"
-ms.component: "system-stored-procedures"
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: system-objects
 ms.topic: "language-reference"
 dev_langs: 
   - "TSQL"
@@ -20,11 +15,10 @@ helpviewer_keywords:
   - "firewall_rules, Azure SQL Database"
   - "firewall systems, Azure SQL Database"
 ms.assetid: 3d4c2585-00de-46b5-8eee-0efb71cb3aea
-caps.latest.revision: 10
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "craigg"
-ms.workload: "Inactive"
+author: VanMSFT
+ms.author: vanto
+manager: craigg
+monikerRange: "= azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions"
 ---
 # Firewall Rules Stored Procedures (Azure SQL Database)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-asdw-xxx-md.md)]

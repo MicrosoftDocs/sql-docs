@@ -2,15 +2,11 @@
 title: "Estimate the Size of a Clustered Index | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
-ms.prod: sql-non-specified
+ms.prod: sql  
 ms.reviewer: ""
-ms.suite: "SQL"
 ms.prod_service: database-engine, sql-database
-ms.component: indexes
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: supportability
+ms.topic: conceptual
 helpviewer_keywords: 
   - "space allocation [SQL Server], index size"
   - "size [SQL Server], tables"
@@ -24,11 +20,10 @@ helpviewer_keywords:
   - "designing databases [SQL Server], estimating size"
   - "calculating table size"
 ms.assetid: 2b5137f8-98ad-46b5-9aae-4c980259bf8d
-caps.latest.revision: 49
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-ms.workload: "On Demand"
+author: "stevestein"
+ms.author: "sstein"
+manager: craigg
+monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Estimate the Size of a Clustered Index
 

@@ -2,22 +2,15 @@
 title: "Back up Multiple Databases to Azure Blob Storage - PowerShell | Microsoft Docs"
 ms.custom: ""
 ms.date: "05/20/2016"
-ms.prod: "sql-non-specified"
-ms.prod_service: "database-engine"
-ms.service: ""
-ms.component: "backup-restore"
+ms.prod: sql
+ms.prod_service: backup-restore
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "dbe-backup-restore"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: backup-restore
+ms.topic: conceptual
 ms.assetid: f7008339-e69d-4e20-9265-d649da670460
-caps.latest.revision: 13
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-ms.workload: "Inactive"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ---
 # Back up Multiple Databases to Azure Blob Storage - PowerShell
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -55,14 +48,14 @@ ms.workload: "Inactive"
   
 1.  **Navigating SQL Server PowerShell paths:** Windows PowerShell implements cmdlets to navigate the path structure that represents the hierarchy of objects supported by a PowerShell provider. When you have navigated to a node in the path, you can use other cmdlets to perform basic operations on the current object.  
   
-2.  **Get-ChildItem** cmdlet: The information returned by the **Get-ChildItem** depends on the location in a SQL Server PowerShell path. For example, if the location is at the computer level, this cmdlet returns all the SQL Server database engine instances installed on the computer. As another example, if the location is at the object level such as databases, then this cmdlet returns a list of database objects.  By default the **Get-ChildItem** cmdlet does not return system objects.  Using the –Force parameter you can see the system objects.  
+2.  **Get-ChildItem** cmdlet: The information returned by the **Get-ChildItem** depends on the location in a SQL Server PowerShell path. For example, if the location is at the computer level, this cmdlet returns all the SQL Server database engine instances installed on the computer. As another example, if the location is at the object level such as databases, then this cmdlet returns a list of database objects.  By default the **Get-ChildItem** cmdlet does not return system objects.  Using the -Force parameter you can see the system objects.  
   
      For more information, see [Navigate SQL Server PowerShell Paths](../../relational-databases/scripting/navigate-sql-server-powershell-paths.md).  
   
 3.  Although each code sample can be tried independently by changing the variable values, creating a Windows Azure Storage Account and a SQL Credential are prerequisites and required for all backup and restore operations to Windows Azure Blob storage service.  
   
 ### Create a SQL Credential on All the Instances of SQL Server  
- There are two sample scripts, and both create a SQL Credential “mybackupToURL” on all the instances of SQL Server on a computer. The first example creates is simple and creates the credential and does not trap exceptions.  For example, if there was already an existing credential with the same name on one of the instances of the computer, the script would fail. The second example traps errors and allows the script to continue.  
+ There are two sample scripts, and both create a SQL Credential "mybackupToURL" on all the instances of SQL Server on a computer. The first example creates is simple and creates the credential and does not trap exceptions.  For example, if there was already an existing credential with the same name on one of the instances of the computer, the script would fail. The second example traps errors and allows the script to continue.  
   
 ```  
   

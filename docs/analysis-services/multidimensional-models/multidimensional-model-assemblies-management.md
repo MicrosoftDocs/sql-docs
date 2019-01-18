@@ -1,36 +1,14 @@
 ---
 title: "Multidimensional Model Assemblies Management | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: analysis-services
-ms.prod_service: "analysis-services"
-ms.service: ""
-ms.component: ""
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
-  
-ms.component: multidimensional-tabular
-ms.component: data-mining
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "permissions [Analysis Services], assemblies"
-  - "calling user-defined functions"
-  - "user impersonation [Analysis Services]"
-  - "impersonation [Analysis Services]"
-  - "Data Mining Extensions [Analysis Services], assemblies"
-  - "MDX [Analysis Services], assemblies"
-  - "user-defined functions [Analysis Services]"
-  - "Analysis Services objects, assemblies"
-  - "assemblies [Analysis Services]"
-  - "application domains [Analysis Services]"
-ms.assetid: b2645d10-6d17-444e-9289-f111ec48bbfb
-caps.latest.revision: 35
-author: "Minewiskan"
-ms.author: "owend"
-manager: "kfile"
-ms.workload: "Inactive"
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: multidimensional-models
+ms.topic: conceptual
+ms.author: owend
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
 ---
 # Multidimensional Model Assemblies Management
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -87,7 +65,7 @@ Call MyAssembly.MyClass.MyVoidProcedure(a, b, c)
 ## Security  
  Security for assemblies is based on the .NET Framework security model, which is a code-access security model. .NET Framework supports a code-access security mechanism that assumes that the runtime can host both fully trusted and partially trusted code. The resources that are protected by .NET Framework code access security are typically wrapped by managed code which demands the corresponding permission before enabling access to the resource. The demand for the permission is satisfied only if all the callers (at the assembly level) in the call stack have the corresponding resource permission.  
   
- For assemblies, permission for execution is passed with the **PermissionSet** property on the **Assembly** object. The permissions that managed code receives are determined by the security policy in effect. There are already three levels of policy in effect in a non-[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] hosted environment: enterprise, computer and user. The effective list of permissions that code receives is determined by the intersection of the permissions obtained by these three levels.  
+ For assemblies, permission for execution is passed with the **PermissionSet** property on the **Assembly** object. The permissions that managed code receives are determined by the security policy in effect. There are already three levels of policy in effect in a non- [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] hosted environment: enterprise, computer and user. The effective list of permissions that code receives is determined by the intersection of the permissions obtained by these three levels.  
   
  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] supplies a host-level security policy level to the CLR while hosting it; this policy is an additional policy level below the three policy levels that are always in effect. This policy is set for every application domain that is created by [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  
   

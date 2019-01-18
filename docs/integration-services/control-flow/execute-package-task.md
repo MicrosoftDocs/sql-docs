@@ -2,16 +2,11 @@
 title: "Execute Package Task | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "integration-services"
-ms.service: ""
-ms.component: "control-flow"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: integration-services
+ms.topic: conceptual
 f1_keywords: 
   - "sql13.dts.designer.executepackagetask.f1"
   - "sql13.dts.designer.executepackagetask.package.f1"
@@ -22,11 +17,9 @@ helpviewer_keywords:
   - "child packages"
   - "parent packages [Integration Services]"
 ms.assetid: 042d4ec0-0668-401c-bb3a-a25fe2602eac
-caps.latest.revision: 63
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
-ms.workload: "On Demand"
+manager: craigg
 ---
 # Execute Package Task
   The Execute Package task extends the enterprise capabilities of [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] by letting packages run other packages as part of a workflow.  
@@ -64,7 +57,7 @@ ms.workload: "On Demand"
  By default, the ExecuteOutOfProcess property of the Execute Package task is set to **False**, and the child package runs in the same process as the parent package. If you set this property to **True**, the child package runs in a separate process. This may slow down the launching of the child package. In addition, if you set the property to **True**, you cannot debug the package in a tools-only install. You must install [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. For more information, see [Install Integration Services](../../integration-services/install-windows/install-integration-services.md)  
   
 ## Extending Transactions  
- The transaction that the parent package uses can extend to the child package; therefore, the work both packages perform can be committed or rolled back. For example, the database inserts that the parent package performs can be committed or rolled back, depending on the database inserts that the child package performs, and vice versa. For more information, see [Inherited Transactions](http://msdn.microsoft.com/library/90db5564-d41e-4cfe-8c9e-4e68d41eff1c).  
+ The transaction that the parent package uses can extend to the child package; therefore, the work both packages perform can be committed or rolled back. For example, the database inserts that the parent package performs can be committed or rolled back, depending on the database inserts that the child package performs, and vice versa. For more information, see [Inherited Transactions](https://msdn.microsoft.com/library/90db5564-d41e-4cfe-8c9e-4e68d41eff1c).  
   
 ## Propagating Logging Details  
  The child package that the Execute Package task runs may or may not be configured to use logging, but the child package will always forward the log details to the parent package. If the Execute Package task is configured to use logging, the task logs the log details from the child package. For more information, see [Integration Services &#40;SSIS&#41; Logging](../../integration-services/performance/integration-services-ssis-logging.md).  
@@ -104,7 +97,7 @@ ms.workload: "On Demand"
  For more information, see [Use the Values of Variables and Parameters in a Child Package](../../integration-services/packages/legacy-package-deployment-ssis.md#child).  
   
 ### Accessing Parent Package Variables  
- Child packages can access parent package variables by using the Script task. When you enter the name of the parent package variable on the **Script** page in the **Script Task Editor**, don’t include **User:** in the variable name. Otherwise, the child package doesn’t locate the variable when you run the parent package.  
+ Child packages can access parent package variables by using the Script task. When you enter the name of the parent package variable on the **Script** page in the **Script Task Editor**, don't include **User:** in the variable name. Otherwise, the child package doesn't locate the variable when you run the parent package.  
   
 ## Configuring the Execute Package Task  
  You can set properties through [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer or programmatically.  
@@ -115,7 +108,7 @@ ms.workload: "On Demand"
   
  For more information about how to set these properties in [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer, click the following topic:  
   
--   [Set the Properties of a Task or Container](http://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
+-   [Set the Properties of a Task or Container](https://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
   
 ## Configuring the Execute Package Task Programmatically  
  For more information about programmatically setting these properties, click the following topic:  
@@ -159,7 +152,7 @@ ms.workload: "On Demand"
 >  The **ReferenceType** option is ready-only and set to **External Reference** if the project that contains the package has not been converted to the project deployment model. [Deploy Integration Services (SSIS) Projects and Packages](../../integration-services/packages/deploy-integration-services-ssis-projects-and-packages.md).  
   
  **Password**  
- If the child package is password protected, provide the password for the child package, or click the ellipsis button (…) and create a new password for the child package.  
+ If the child package is password protected, provide the password for the child package, or click the ellipsis button (...) and create a new password for the child package.  
   
  **ExecuteOutOfProcess**  
  Specify whether the child package runs in the process of the parent package or in a separate process. By default, the ExecuteOutOfProcess property of the Execute Package task is set to **False**, and the child package runs in the same process as the parent package. If you set this property to **true**, the child package runs in a separate process. This may slow down the launching of the child package. In addition, if set the property to **true**, you cannot debug the package in a tools-only install; you must install the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] product. For more information, see [Install Integration Services](../../integration-services/install-windows/install-integration-services.md).  
@@ -194,7 +187,7 @@ ms.workload: "On Demand"
  **Related Topics:** [OLE DB Connection Manager](../../integration-services/connection-manager/ole-db-connection-manager.md)  
   
  **PackageName**  
- Type the name of the child package, or click the ellipsis (…) and then locate the package.  
+ Type the name of the child package, or click the ellipsis (...) and then locate the package.  
   
 ##### Location = File system  
  **Connection**  

@@ -2,25 +2,17 @@
 title: "Open File Dialog Box | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "sql-tools"
-ms.service: ""
-ms.component: "ssms-visual-db"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "tools-ssms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: ssms
+ms.topic: conceptual
 f1_keywords: 
   - "vs.openfile"
-  - "vs.openproject"
 ms.assetid: 3e01b9f5-2b0a-4fb3-9da8-984d27d17b8a
-caps.latest.revision: 4
 author: "stevestein"
 ms.author: "sstein"
-manager: "jhubbard"
-ms.workload: "Inactive"
+manager: craigg
 ---
 # Open File Dialog Box
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -29,7 +21,7 @@ Use the **Open File** dialog box to open an existing file from disk. You can als
 To access this dialog box, select **Open** from the **File** menu and then choose **File**. This dialog box also appears when you are opening files from other elements, such as the **External Tools** dialog box. From the **File** menu, select **Open**, and then choose **Project/Solution** to open the similar **Open Project** dialog box.  
   
 > [!NOTE]  
-> Before opening a project or component in [!INCLUDE[ssManStudio](../../includes/ssmanstudio_md.md)], determine the trustworthiness of its code. The act of opening the project or component in a [!INCLUDE[ssManStudio](../../includes/ssmanstudio_md.md)] may execute its code in a trusted process on your local machine.  
+> Before opening a project or component in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], determine the trustworthiness of its code. The act of opening the project or component in a [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] may execute its code in a trusted process on your local machine.  
   
 ## Option  
 **Look in**  
@@ -100,4 +92,3 @@ Deletes the selected file or folder from storage.
   
 **Map Network Drive**  
 Opens the **Map Network Drive** dialog box.  
-  

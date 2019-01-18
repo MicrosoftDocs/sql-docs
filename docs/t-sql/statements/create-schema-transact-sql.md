@@ -2,15 +2,10 @@
 title: "CREATE SCHEMA (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "12/01/2016"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
-ms.service: ""
-ms.component: "t-sql|statements"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: t-sql
 ms.topic: "language-reference"
 f1_keywords: 
   - "CREATE_SCHEMA_TSQL"
@@ -26,11 +21,10 @@ helpviewer_keywords:
   - "schemas [SQL Server], creating"
   - "CREATE SCHEMA statement"
 ms.assetid: df74fc36-20da-4efa-b412-c4e191786695
-caps.latest.revision: 60
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "craigg"
-ms.workload: "Active"
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # CREATE SCHEMA (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -123,7 +117,7 @@ CREATE SCHEMA schema_name [ AUTHORIZATION owner_name ] [;]
   
  This behavior is necessary to allow users that are based on Windows groups to create and own objects. However it can result in the unintentional creation of schemas and users. To avoid implicitly creating users and schemas, whenever possible explicitly create database principals and assign a default schema. Or explicitly state an existing schema when creating objects in a database, using two or three-part object names.  
 
->  [!NOTE]
+> [!NOTE]
 >  The implicit creation of an Azure Active Directory user is not possible on [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]. Since creating an Azure AD user from external provider must check the users status in the AAD, creating the user will fail with error 2760: **The specified schema name "\<user_name@domain>" either does not exist or you do not have permission to use it.** And then error 2759: **CREATE SCHEMA failed due to previous errors.** To work around these errors, create the Azure AD user from external provider first and then rerun the statement creating the object.
  
   

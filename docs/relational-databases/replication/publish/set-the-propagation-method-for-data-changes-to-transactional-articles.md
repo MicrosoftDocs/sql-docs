@@ -2,25 +2,18 @@
 title: "Set the Propagation Method for Data Changes to Transactional Articles | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/16/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "database-engine"
-ms.service: ""
-ms.component: "replication"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: replication
+ms.topic: conceptual
 helpviewer_keywords: 
   - "transactional replication, propagation methods"
   - "propagating data changes [SQL Server replication]"
 ms.assetid: 0a291582-f034-42da-a1a3-29535b607b74
-caps.latest.revision: 39
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-ms.workload: "Inactive"
+author: "MashaMSFT"
+ms.author: "mathoma"
+manager: craigg
 ---
 # Set the Propagation Method for Data Changes to Transactional Articles
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -163,6 +156,6 @@ ms.workload: "Inactive"
   
 ## See Also  
  [Specify How Changes Are Propagated for Transactional Articles](../../../relational-databases/replication/transactional/transactional-articles-specify-how-changes-are-propagated.md)   
- [Create, Modify, and Delete Publications and Articles &#40;Replication&#41;](../../../relational-databases/replication/publish/create-modify-and-delete-publications-and-articles-replication.md)  
+ [Create a Publication](../../../relational-databases/replication/publish/create-a-publication.md)  
   
   

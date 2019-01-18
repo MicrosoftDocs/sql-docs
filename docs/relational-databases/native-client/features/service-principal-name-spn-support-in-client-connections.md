@@ -2,15 +2,9 @@
 title: "Service Principal Name (SPN) Support in Client Connections | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/08/2016"
-ms.prod: "sql-non-specified"
-ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
-ms.service: ""
-ms.component: "native-client|features"
+ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-
-ms.tgt_pltfrm: ""
+ms.technology: native-client
 ms.topic: "reference"
 helpviewer_keywords: 
   - "SQL Server Native Client, SPNs"
@@ -18,11 +12,10 @@ helpviewer_keywords:
   - "OLE DB, SPNs"
   - "SPNs [SQL Server]"
 ms.assetid: 96598c69-ce9a-4090-aacb-d546591e8af7
-caps.latest.revision: 31
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-ms.workload: "On Demand"
+author: MightyPen
+ms.author: genemi
+manager: craigg
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Service Principal Name (SPN) Support in Client Connections
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -38,13 +31,13 @@ ms.workload: "On Demand"
 >  An SPN specified by a client application is only used when a connection is made with Windows integrated security.  
   
 > [!TIP]  
->  **[!INCLUDE[msCoName](../../../includes/msconame-md.md)] Kerberos Configuration Manager for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]** is a diagnostic tool that helps troubleshoot Kerberos related connectivity issues with [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. For more information, see [Microsoft Kerberos Configuration Manager for SQL Server](http://www.microsoft.com/download/details.aspx?id=39046).  
+>  **[!INCLUDE[msCoName](../../../includes/msconame-md.md)] Kerberos Configuration Manager for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]** is a diagnostic tool that helps troubleshoot Kerberos related connectivity issues with [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. For more information, see [Microsoft Kerberos Configuration Manager for SQL Server](https://www.microsoft.com/download/details.aspx?id=39046).  
   
  For more information about Kerberos, see the following articles:  
   
--   [Kerberos Technical Supplement for Windows](http://go.microsoft.com/fwlink/?LinkId=101449)  
+-   [Kerberos Technical Supplement for Windows](https://go.microsoft.com/fwlink/?LinkId=101449)  
   
--   [Microsoft Kerberos](http://go.microsoft.com/fwlink/?LinkID=100758)  
+-   [Microsoft Kerberos](https://go.microsoft.com/fwlink/?LinkID=100758)  
   
 ## Usage  
  The following table describes the most common scenarios in which client applications can enable secure authentication.  
@@ -74,7 +67,7 @@ ms.workload: "On Demand"
  The new connection behavior is implemented by the client; therefore, it is not specific to a version of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
 ## Linked Servers and Delegation  
- When linked servers are created, the **@provstr** parameter of [sp_addlinkedserver](../../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md) can be used to specify the server and failover partner SPNs. The benefits of doing this are the same as specifiying SPNs in client connection strings: It is simpler and more reliable to establish connections that use Kerberos authentication.  
+ When linked servers are created, the **@provstr** parameter of [sp_addlinkedserver](../../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md) can be used to specify the server and failover partner SPNs. The benefits of doing this are the same as specifying SPNs in client connection strings: It is simpler and more reliable to establish connections that use Kerberos authentication.  
   
  Delegation with linked servers requires Kerberos authentication.  
   
@@ -111,7 +104,7 @@ ms.workload: "On Demand"
   
 -   [Service Principal Names &#40;SPNs&#41; in Client Connections &#40;OLE DB&#41;](../../../relational-databases/native-client/ole-db/service-principal-names-spns-in-client-connections-ole-db.md)  
   
- For information about sample applications that demonstrate this feature, see [SQL Server Data Programmability Samples](http://msftdpprodsamples.codeplex.com/).  
+ For information about sample applications that demonstrate this feature, see [SQL Server Data Programmability Samples](https://msftdpprodsamples.codeplex.com/).  
   
 ## See Also  
  [SQL Server Native Client Features](../../../relational-databases/native-client/features/sql-server-native-client-features.md)  

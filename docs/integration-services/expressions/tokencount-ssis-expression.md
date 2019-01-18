@@ -2,22 +2,15 @@
 title: "TOKENCOUNT (SSIS Expression) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "integration-services"
-ms.service: ""
-ms.component: "expressions"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: integration-services
+ms.topic: conceptual
 ms.assetid: 1c0efed1-c2b3-4f20-a3a1-ad91283b7c0a
-caps.latest.revision: 8
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
-ms.workload: "Inactive"
+manager: craigg
 ---
 # TOKENCOUNT (SSIS Expression)
   Returns the number of tokens in a string that contains tokens separated by the specified delimiters.  
@@ -33,7 +26,7 @@ TOKENCOUNT(character_expression, delimiter_string)
  A string that contains tokens separated by delimiters.  
   
  *delimiter_string*  
- A string that contains delimiter characters. For example, "; ,” contains three delimiter characters semi-colon, a blank space, and a comma.  
+ A string that contains delimiter characters. For example, "; ," contains three delimiter characters semi-colon, a blank space, and a comma.  
   
 ## Result Types  
  DT_I4  
@@ -52,13 +45,13 @@ TOKENCOUNT(character_expression, delimiter_string)
 -   You can use variables and columns as arguments for this expression.  
   
 ## Expression Examples  
- In the following example, the TOKENCOUNT function returns 3 because the string contains three tokens: “01”, “12”, “2011”.  
+ In the following example, the TOKENCOUNT function returns 3 because the string contains three tokens: "01", "12", "2011".  
   
 ```  
 TOKENCOUNT("01/12/2011", "/")  
 ```  
   
- In the following example, the TOKENCOUNT function returns 4 because there are four tokens (“a”, “little”, “white”, “dog”).  
+ In the following example, the TOKENCOUNT function returns 4 because there are four tokens ("a", "little", "white", "dog").  
   
 ```  
 TOKENCOUNT("a little white dog"," ")  
@@ -70,7 +63,7 @@ TOKENCOUNT("a little white dog"," ")
 TOKENCOUNT("a little white dog","|")  
 ```  
   
- In the following example, the TOKENCOUNT function returns 4. The delimiter string in this example contains 5 delimiters. The input string contains 4 tokens: “a”, “little”, “white”, “dog”.  
+ In the following example, the TOKENCOUNT function returns 4. The delimiter string in this example contains 5 delimiters. The input string contains 4 tokens: "a", "little", "white", "dog".  
   
 ```  
 TOKENCOUNT("a:little|white dog","| ,.:")  

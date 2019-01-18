@@ -2,15 +2,10 @@
 title: "smalldatetime (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "7/22/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
-ms.service: ""
-ms.component: "t-sql|data-types"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: t-sql
 ms.topic: "language-reference"
 f1_keywords: 
   - "smalldatetime_TSQL"
@@ -24,11 +19,10 @@ helpviewer_keywords:
   - "date and time [SQL Server], smalldatetime"
   - "data types [SQL Server], date and time"
 ms.assetid: 68b74610-d54c-4c8e-b4b2-7e3747546ee0
-caps.latest.revision: 50
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "craigg"
-ms.workload: "Active"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # smalldatetime (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -43,7 +37,7 @@ Defines a date that is combined with a time of day. The time is based on a 24-ho
 |||  
 |-|-|  
 |Syntax|**smalldatetime**|  
-|Usage|DECLARE @MySmalldatetime **smalldatetime**<br /><br /> CREATE TABLE Table1 ( Column1 **smalldatetime** )|  
+|Usage|DECLARE \@MySmalldatetime **smalldatetime**<br /><br /> CREATE TABLE Table1 ( Column1 **smalldatetime** )|  
 |Default string literal formats<br /><br /> (used for down-level client)|Not applicable|  
 |Date range|1900-01-01 through 2079-06-06<br /><br /> January 1, 1900, through June 6, 2079|  
 |Time range|00:00:00 through 23:59:59<br /><br /> 2007-05-09 23:59:59 will round to<br /><br /> 2007-05-10 00:00:00|  

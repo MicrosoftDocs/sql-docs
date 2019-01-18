@@ -2,25 +2,18 @@
 title: "Overview of the Replication Monitor Interface | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "database-engine"
-ms.service: ""
-ms.component: "replication"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: replication
+ms.topic: conceptual
 helpviewer_keywords: 
   - "Replication Monitor"
   - "Replication Monitor, about Replication Monitor"
 ms.assetid: 078f0e34-7153-45c4-8725-778b5bef88da
-caps.latest.revision: 41
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-ms.workload: "Inactive"
+author: "MashaMSFT"
+ms.author: "mathoma"
+manager: craigg
 ---
 # Overview of the Replication Monitor Interface
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -107,7 +100,7 @@ ms.workload: "Inactive"
   
      This tab displays detailed information about the agents and jobs used by all types of replication. The tab also allows you to start and stop each agent and job.  
   
- For more information, see [View Information and Perform Tasks for a Publisher &#40;Replication Monitor&#41;](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-a-publisher-replication-monitor.md).  
+ For more information, see [View Information and Perform Tasks for a Publisher &#40;Replication Monitor&#41;](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-replication-monitor.md).  
   
  Replication Monitor also provides a context menu for the Publisher node. Right-click a Publisher in the left pane to:  
   
@@ -180,7 +173,7 @@ ms.workload: "Inactive"
   
          The error messages available provide detailed information on why an agent is not running and provide a starting point for troubleshooting issues with the agents associated with a publication.  
   
- For more information, see [View Information and Perform Tasks for a Publication &#40;Replication Monitor&#41;](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-a-publication-replication-monitor.md) and [View Information and Perform Tasks for the Agents Associated With a Publication &#40;Replication Monitor&#41;](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-publication-agents.md).  
+ For more information, see [View Information and Perform Tasks using Replication Monitor](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-replication-monitor.md).  
   
  Replication Monitor also provides a context menu for the publications node. Right-click a publication in the left pane to:  
   
@@ -219,7 +212,7 @@ ms.workload: "Inactive"
   
          This tab provides detailed statistics for each article processed during synchronization, including the amount of time spent in each processing phase (uploading changes, downloading changes, and so on). It can help pinpoint specific tables that are causing slowdowns and is the best place to troubleshoot performance issues with merge subscriptions.  
   
- For more information, see [View Information and Perform Tasks for a Subscription &#40;Replication Monitor&#41;](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-a-subscription-replication-monitor.md) and [View Information and Perform Tasks for the Agents Associated With a Subscription &#40;Replication Monitor&#41;](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-subscription-agents.md).  
+ For more information, see [View information and perform tasks using Replication Monitor](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-replication-monitor.md).
   
 ## Viewing Information and Performing Tasks Related to Agent Profiles  
  Replication Monitor includes a number of dialog boxes for managing agent profiles. Agent profiles are sets of parameters for an agent that determine agent behavior. For more information, see [Replication Agent Profiles](../../../relational-databases/replication/agents/replication-agent-profiles.md). The dialog boxes are:  
@@ -237,6 +230,6 @@ ms.workload: "Inactive"
      This dialog box allows you to create a new profile, optionally including the values from an existing profile.  
   
 ## See Also  
- [Monitoring Replication](../../../relational-databases/replication/monitor/monitoring-replication-overview.md)  
+ [Monitoring Replication](../../../relational-databases/replication/monitor/monitoring-replication.md)  
   
   

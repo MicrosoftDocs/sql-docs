@@ -2,22 +2,15 @@
 title: "PDO::getAttribute | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/13/2017"
-ms.prod: "sql-non-specified"
-ms.prod_service: "drivers"
-ms.service: ""
-ms.component: "php"
+ms.prod: sql
+ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "drivers"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: connectivity
+ms.topic: conceptual
 ms.assetid: c81833ea-8b8a-459d-8f24-920098da994d
-caps.latest.revision: 20
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
-ms.workload: "Inactive"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # PDO::getAttribute
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -43,7 +36,7 @@ The following table contains the list of supported attributes.
 |Attribute|Processed by|Supported Values|Description|  
 |-------------|----------------|--------------------|---------------|  
 |PDO::ATTR_CASE|PDO|PDO::CASE_LOWER<br /><br />PDO::CASE_NATURAL<br /><br />PDO::CASE_UPPER|Specifies whether the column names should be in a specific case. PDO::CASE_LOWER forces lower case column names, PDO::CASE_NATURAL leaves the column name as returned by the database, and PDO::CASE_UPPER forces column names to upper case.<br /><br />The default is PDO::CASE_NATURAL.<br /><br />This attribute can also be set using PDO::setAttribute.|  
-|PDO::ATTR_CLIENT_VERSION|[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]|Array of strings|Describes the versions of the driver and related libraries. Returns an array with the following elements: ODBC version (*MajorVer*.*MinorVer*), [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Native Client DLL name and version, [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] version (*MajorVer*.*MinorVer*.*BuildNumber*.*Revision*)|  
+|PDO::ATTR_CLIENT_VERSION|[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]|Array of strings|Describes the versions of the driver and related libraries. Returns an array with the following elements: ODBC version (*MajorVer*.*MinorVer*), [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client DLL name and version, [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] version (*MajorVer*.*MinorVer*.*BuildNumber*.*Revision*)|  
 |PDO::ATTR_DRIVER_NAME|PDO|String|Always returns "sqlsrv".|  
 |PDO::ATTR_DRIVER_VERSION|[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]|String|Indicates the [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] version (*MajorVer*.*MinorVer*.*BuildNumber*.*Revision*)|  
 |PDO::ATTR_ERRMODE|PDO|PDO::ERRMODE_SILENT<br /><br />PDO::ERRMODE_WARNING<br /><br />PDO::ERRMODE_EXCEPTION|Specifies how failures should be handled by the driver.<br /><br />PDO::ERRMODE_SILENT (the default) sets the error codes and information.<br /><br />PDO::ERRMODE_WARNING raises an E_WARNING.<br /><br />PDO::ERRMODE_EXCEPTION raises an exception.<br /><br />This attribute can also be set using PDO::setAttribute.|  
@@ -90,6 +83,7 @@ print_r($conn->getAttribute( PDO::ATTR_CLIENT_VERSION ));
 ```  
   
 ## See Also  
-[PDO Class](../../connect/php/pdo-class.md)  
-[PDO](http://go.microsoft.com/fwlink/?LinkID=187441)  
+[PDO Class](../../connect/php/pdo-class.md)
+
+[PDO](https://php.net/manual/book.pdo.php)  
   

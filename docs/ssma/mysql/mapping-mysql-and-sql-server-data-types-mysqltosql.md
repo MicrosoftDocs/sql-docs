@@ -1,32 +1,21 @@
 ---
 title: "Mapping MySQL and SQL Server Data Types (MySQLToSQL) | Microsoft Docs"
-ms.prod: "sql-non-specified"
-ms.prod_service: "sql-tools"
-ms.service: ""
-ms.component: "ssma-mysql"
+ms.prod: sql
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "sql-ssma"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to: 
-  - "Azure SQL Database"
-  - "SQL Server"
+ms.technology: ssma
+ms.topic: conceptual
 helpviewer_keywords: 
   - "Mapping, customize data type mapping"
   - "Mapping, Type mapping"
 ms.assetid: 14f98054-13b4-4231-a6b0-2452f3b9941d
-caps.latest.revision: 15
 author: "Shamikg"
 ms.author: "Shamikg"
-manager: "jhubbard"
-ms.workload: "Inactive"
+manager: craigg
 ---
 # Mapping MySQL and SQL Server Data Types (MySQLToSQL)
-MySQL database types differ from [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] or SQL Azure database types. When you convert MySQL database objects to [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] or SQL Azure objects, you must specify how to map data types from MySQL to [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] or SQL Azure. You can accept the default data type mappings, or you can customize the mappings as shown in the following procedures.  
+MySQL database types differ from [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] or SQL Azure database types. When you convert MySQL database objects to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] or SQL Azure objects, you must specify how to map data types from MySQL to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] or SQL Azure. You can accept the default data type mappings, or you can customize the mappings as shown in the following procedures.  
   
 ## Default Mappings  
 SSMA has a default set of data type mappings. For the list of default mappings, see [Project Settings &#40;Type Mapping&#41; &#40;MySQLToSQL&#41;](../../ssma/mysql/project-settings-type-mapping-mysqltosql.md).  
@@ -85,7 +74,7 @@ When you view the **Type Mapping** tab in SSMA, the background is color-coded to
     2.  Click **Remove**.  
   
 ## Next Step  
-The next step in the migration process is to either [Create an assessment report](http://msdn.microsoft.com/en-us/2a56a003-3b0f-453a-963c-00c9e40933ec) or [Convert MySQL database objects into SQL Server or SQL Azure syntax](http://msdn.microsoft.com/en-us/ac21850b-fb32-4704-9985-5759b7c688c7). If you create a report, MySQL objects are automatically converted during the assessment.  
+The next step in the migration process is to either [Create an assessment report](assessing-mysql-databases-for-conversion-mysqltosql.md) or [Convert MySQL database objects into SQL Server or SQL Azure syntax](converting-mysql-databases-mysqltosql.md). If you create a report, MySQL objects are automatically converted during the assessment.  
   
 ## See Also  
 [Migrating MySQL Databases to SQL Server - Azure SQL DB &#40;MySQLToSql&#41;](../../ssma/mysql/migrating-mysql-databases-to-sql-server-azure-sql-db-mysqltosql.md)  

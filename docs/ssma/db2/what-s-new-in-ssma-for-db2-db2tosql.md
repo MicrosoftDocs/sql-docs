@@ -1,32 +1,55 @@
 ---
 title: "What's New in SSMA  for DB2 (DB2ToSQL) | Microsoft Docs"
-ms.prod: "sql-non-specified"
-ms.prod_service: "sql-tools"
-ms.service: ""
-ms.component: "ssma-db2"
+ms.prod: sql
 ms.custom: ""
-ms.date: "09/30/2017"
+ms.date: "09/22/2018"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "sql-ssma"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to: 
-  - "Azure SQL Database"
-  - "SQL Server"
+ms.technology: ssma
+ms.topic: conceptual
 ms.assetid: 1cc38f85-3caa-42d0-8c76-a380c1d15c67
-caps.latest.revision: 8
 author: "Shamikg"
 ms.author: "Shamikg"
-manager: "craigg"
-ms.workload: "Inactive"
+manager: craigg
 ---
 # What's New in SSMA for DB2 (DB2ToSQL)
-This topic lists SSMA for DB2 changes in each release.  
+This article lists SSMA for DB2 changes in each release.  
+
+## SSMA v7.10
+The v7.10 release of SSMA for DB2 contains the following changes:
+- Targeted fixes designed to provide additional security and privacy protections to meet changes in global requirements.
+- A fix for conversion of BEGIN-END blocks.
+
+> [!IMPORTANT]
+> With SSMA v7.4 and later versions, .Net 4.5.2 is an installation pre-requisite.
+
+## SSMA v7.9
+The v7.9 release of SSMA for DB2 contains the following changes:
+- Targeted fixes that improve quality and conversion metrics.
+- Support in SSMA command line to alter Data Type mapping and Project Preferences.
+- Support for migrating data using SQL Server Integration Services (SSIS). After converting the schema, it's possible to create an SSIS package by using a right-click context menu option.
+- The Azure SQL Database connection dialog in SSMA has also been altered to specify the fully qualified server name. In previous versions of SSMA, the Azure SQL Database prefix had to be explicitly mentioned inside projects settings.
+
+> [!IMPORTANT]
+> With SSMA v7.4 and later versions, .Net 4.5.2 is an installation pre-requisite.
+
+## SSMA v7.8
+The v7.8 release of SSMA for DB2 contains the following changes:
+- Highlighted change type mapping in Project Settings.
+- Provided the ability for users to disable telemetry.
+
+> [!IMPORTANT]
+> With SSMA v7.4 and later versions, .Net 4.5.2 is an installation pre-requisite.
+
+## SSMA v7.7
+The v7.7 release of SSMA for DB2 contains the following changes:
+- SSMA for DB2 has been enhanced with targeted fixes that improve quality and conversion metrics.
+- Based on the popular demand, the 32-bit version of SSMA for DB2 is back. Compared to the previous implementation (prior to v7.4), there are two installer packages, but they cannot be installed side by side. As a result, you must choose the most appropriate version based on the connectivity components you have. It's always preferable to use the 64-bit version, if possible.
+
+> [!IMPORTANT]
+> With SSMA v7.4 and later versions, .Net 4.5.2 is an installation pre-requisite.
 
 ## SSMA v7.6
-The v7.6 release of SSMA for DB2 has been enhanced with targeted fixes that improve quality and conversion metrics and with support for SQL Server 2017 (public preview). Support for SQL Server 2017 on Windows and Linux is in public preview and should not be used for production migrations.
+The v7.6 release of SSMA for DB2 has been enhanced with targeted fixes that improve quality and conversion metrics and with support for SQL Server 2017 (public preview). Support for SQL Server 2017 on Windows and Linux is in public preview and shouldn't be used for production migrations.
 
 > [!IMPORTANT]
 > With SSMA v7.4 and later versions, .Net 4.5.2 is an installation pre-requisite, and the 32-bit version of the tool has been discontinued.
@@ -57,17 +80,17 @@ The v7.3 release of SSMA for DB2 contains the following changes:
   - Libraries that can be consumed by SSMA for performing custom conversions.
     - You can now construct code that can handle custom syntax conversions and conversions that weren't previously handled by SSMA.
       - Instructions on how to construct a custom converter are available in this blog post, [Extending SQL Server Migration Assistant's conversion capabilities](https://blogs.msdn.microsoft.com/datamigration/2017/02/21/2185/).
-      - Sample project for conversion can be download this [blog post](https://blogs.msdn.microsoft.com/datamigration/ssmafororacleconversionsample/).
+      - Download a sample project for conversion from this [blog post](https://blogs.msdn.microsoft.com/datamigration/ssmafororacleconversionsample/).
 
 ## SSMA v7.2
 The v7.2 release of SSMA for DB2 contains the following changes:
 - Improved quality and conversion metric with targeted fixes based on customer feedback.
-- Telemetry enhancements to provide better data points to troubleshoot customer issues and improve SSMA’s conversion rates.
+- Telemetry enhancements to provide better data points to troubleshoot customer issues and improve SSMA's conversion rates.
 
 ## SSMA v7.1
 The v7.1 release of SSMA for Access contains the following changes:
 - SQL Server 2017 on Windows and Linux CTP1 is now a supported target platform for migration. This feature is in technical preview and allows schema and data movement to target SQL servers.
-- SSMA now supports automatic updates to download the latest version of SSMA as soon as it is available.
+- SSMA now supports automatic updates to download the latest version of SSMA as soon as it's available.
 - SSMA installable binaries are now delivered through Windows installer package files (.msi).
 
 **Resources**

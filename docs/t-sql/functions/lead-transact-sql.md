@@ -2,15 +2,10 @@
 title: "LEAD (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "11/09/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
-ms.service: ""
-ms.component: "t-sql|functions"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: t-sql
 ms.topic: "language-reference"
 f1_keywords: 
   - "LEAD_TSQL"
@@ -21,11 +16,10 @@ helpviewer_keywords:
   - "LEAD function"
   - "analytic functions, LEAD"
 ms.assetid: 21f66bbf-d1ea-4f75-a3c4-20dc7fc1c69e
-caps.latest.revision: 22
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "craigg"
-ms.workload: "Active"
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # LEAD (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
@@ -51,7 +45,7 @@ LEAD ( scalar_expression [ ,offset ] , [ default ] )
  *default*  
  The value to return when *scalar_expression* at *offset* is NULL. If a default value is not specified, NULL is returned. *default* can be a column, subquery, or other expression, but it cannot be an analytic function. *default* must be type-compatible with *scalar_expression*.  
   
- OVER **(** [ *partition_by_clause* ] *order_by_clause***)**  
+ OVER **(** [ _partition\_by\_clause_ ] _order\_by\_clause_**)**  
  *partition_by_clause* divides the result set produced by the FROM clause into partitions to which the function is applied. If not specified, the function treats all rows of the query result set as a single group. *order_by_clause* determines the order of the data before the function is applied. When *partition_by_clause* is specified, it determines the order of the data in each partition. The *order_by_clause* is required. For more information, see [OVER Clause &#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md).  
   
 ## Return Types  

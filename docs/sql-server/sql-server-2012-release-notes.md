@@ -1,30 +1,24 @@
 ---
 title: "SQL Server 2012 Release Notes | Microsoft Docs"
-ms.prod: "sql-non-specified"
-ms.prod_service: "sql-non-specified"
-ms.service: ""
-ms.component: "sql-non-specified"
-ms.technology: "server-general"
+ms.prod: sql
+ms.technology: install
 ms.custom: ""
-ms.date: "01/31/2017"
+ms.date: "02/01/2017"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "Release Notes, SQL Server"
 ms.assetid: 9ccb390a-67a9-4593-85ea-2b4c41c4620f
-caps.latest.revision: 21
-author: "craigg-msft"
-ms.author: "craigg"
-manager: "jhubbard"
-ms.workload: "Inactive"
+author: craigg-msft
+ms.author: craigg
+manager: jhubbard
+monikerRange: "= sql-server-2014 || = sqlallproducts-allversions"
 ---
 # SQL Server 2012 Release Notes
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
-This Release Notes document describes known issues that you should read about before you install or troubleshoot Microsoft SQL Server 2012 ([click here to download it](http://go.microsoft.com/fwlink/?LinkId=238647)). This Release Notes document is available online only, not on the installation media, and it is updated periodically.  
+This Release Notes document describes known issues that you should read about before you install or troubleshoot Microsoft SQL Server 2012 ([click here to download it](https://go.microsoft.com/fwlink/?LinkId=238647)). This Release Notes document is available online only, not on the installation media, and it is updated periodically.  
   
-For information about how to get started and install SQL Server 2012, see the SQL Server 2012 Readme. The Readme document is available on the installation media and from the [Readme](http://download.microsoft.com/download/3/B/D/3BD9DD65-D3E3-43C3-BB50-0ED850A82AD5/ENU/Readme.htm) download page. You can also find more information in [SQL Server Books Online](http://go.microsoft.com/fwlink/?LinkId=190948) and on the [SQL Server Forums](http://go.microsoft.com/fwlink/?LinkId=213599).  
+For information about how to get started and install SQL Server 2012, see the SQL Server 2012 Readme. The Readme document is available on the installation media and from the [Readme](https://download.microsoft.com/download/3/B/D/3BD9DD65-D3E3-43C3-BB50-0ED850A82AD5/ENU/Readme.htm) download page. You can also find more information in [SQL Server Books Online](https://go.microsoft.com/fwlink/?LinkId=190948) and on the [SQL Server Forums](https://go.microsoft.com/fwlink/?LinkId=213599).  
   
 ## <a name="Install"></a>1.0 Before You Install  
 Before installing [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)], consider the following information.  
@@ -35,9 +29,9 @@ Before installing [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)], consider t
 **Workaround :** You can refer to the system configuration check report to learn more about these setup rules. The system configuration check generates a report that contains a short description for each executed rule, and the execution status. The system configuration check report is located at %programfiles%\Microsoft SQL Server\110\Setup Bootstrap\Log\\<YYYYMMDD_HHMM>\\.  
   
 ### 1.2 Adding a Local User Account for the Distributed Replay Controller Service Might Terminate Setup Unexpectedly  
-**Issue:** In the **Distributed Replay Controller** page of SQL Server setup, when attempting to add a local user account for the Distributed Replay Controller service, setup will be terminated unexpectedly with a “SQL Server Setup failure” error message.  
+**Issue:** In the **Distributed Replay Controller** page of SQL Server setup, when attempting to add a local user account for the Distributed Replay Controller service, setup will be terminated unexpectedly with a "SQL Server Setup failure" error message.  
   
-**Workaround:** During SQL setup, do not add local user accounts via either “Add Current User” or “Add…”. After setup, add a local user account manually by using the following steps:  
+**Workaround:** During SQL setup, do not add local user accounts via either "Add Current User" or "Add...". After setup, add a local user account manually by using the following steps:  
   
 1.  Stop the SQL Server Distributed Replay controller service  
   
@@ -70,12 +64,12 @@ or
 <pre>The following error has occurred:  
 SQL Server Browser configuration for feature 'SQL_Browser_Redist_SqlBrowser_Cpu32' was cancelled by user after a previous installation failure. The last attempted step: Starting the SQL Server Browser service 'SQLBrowser', and waiting for up to '900' seconds for the process to complete.</pre>  
   
-**Workaround:** This can happen when SQL Server Engine or Analysis Services fails to install. To fix this issue, refer the SQL Server Setup logs, and troubleshoot the SQL Server Engine and Analysis Services failures. For more information, see View and Read SQL Server Setup Log Files. For more information, see [View and Read SQL Server Setup Log Files](http://msdn.microsoft.com/library/ms143702(SQL.110).aspx).  
+**Workaround:** This can happen when SQL Server Engine or Analysis Services fails to install. To fix this issue, refer the SQL Server Setup logs, and troubleshoot the SQL Server Engine and Analysis Services failures. For more information, see View and Read SQL Server Setup Log Files. For more information, see [View and Read SQL Server Setup Log Files](../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md).  
   
 ### 1.4 SQL Server 2008, 2008 R2 Analysis Services Failover Cluster upgrade to SQL Server 2012 might fail after renaming the network name  
 **Issue:** After you change the network name of a Microsoft SQL Server 2008, or 2008 R2 Analysis Services failover cluster instance using the Windows Cluster Administrator tool, the upgrade operation might fail.  
   
-**Workaround:** To resolve this issue update the ClusterName registry entry following the instructions in the resolution section of [this KB article](http://support.microsoft.com/kb/955784).  
+**Workaround:** To resolve this issue update the ClusterName registry entry following the instructions in the resolution section of [this KB article](https://support.microsoft.com/kb/955784).  
   
 ### 1.5 Installing SQL Server 2012 on Windows Server 2008 R2 Server Core Service Pack 1  
 You can install SQL Server on Windows Server 2008 R2 Server Core SP1, with the following limitations:  
@@ -88,14 +82,14 @@ You can install SQL Server on Windows Server 2008 R2 Server Core SP1, with the f
   
 -   Microsoft SQL Server 2012 cannot be installed side-by-side with earlier versions of SQL Server on a computer that is running Windows Server 2008 R2 Server Core SP1.  
   
--   Not all features of SQL Server 2012 are supported on the Server Core operating system. For more information on features supported, and on installing SQL Server 2012 on Server Core, see [Install SQL Server 2012 on Server Core](http://msdn.microsoft.com/library/hh231669(SQL.110).aspx).  
+-   Not all features of SQL Server 2012 are supported on the Server Core operating system. For more information on features supported, and on installing SQL Server 2012 on Server Core, see [Install SQL Server 2012 on Server Core](https://msdn.microsoft.com/library/hh231669(SQL.110).aspx).  
   
 ### 1.6 Semantic Search Requires You to Install an Additional Dependency  
 **Issue:** Statistical Semantic Search has an additional prerequisite, the semantic language statistics database, which is not installed by the SQL Server Setup program.  
   
 **Workaround:** To set up the semantic language statistics database as a prerequisite for semantic indexing, perform the following tasks:  
   
-1.  Locate and run the Windows Installer package named SemanticLanguageDatabase.msi on the SQL Server installation media to extract the database. For SQL Server 2012 Express, download the semantic language statistics database from [Microsoft Download Center](https://www.microsoft.com/download/details.aspx?id=35582) (http://go.microsoft.com/fwlink/?LinkId=221787), and then run the Windows Installer package.  
+1.  Locate and run the Windows Installer package named SemanticLanguageDatabase.msi on the SQL Server installation media to extract the database. For SQL Server 2012 Express, download the semantic language statistics database from [Microsoft Download Center](https://www.microsoft.com/download/details.aspx?id=35582) (https://go.microsoft.com/fwlink/?LinkId=221787), and then run the Windows Installer package.  
   
 2.  Move the database to an appropriate data folder. If you leave the database in the default location, you must change permissions before you can attach it successfully.  
   
@@ -156,7 +150,7 @@ The following items describe the prerequisite installation behavior during SQL S
   
         **Use Deployment Image Servicing and Management (DISM.exe) to enable .NET Framework 3.5 SP1:**  
   
-        You can also enable .NET Framework 3.5 SP1 using Deployment Image Servicing and Management (DISM.exe). For more information about enabling windows features online, see [Enable or Disable Windows Features Online](http://technet.microsoft.com/library/dd744582(WS.10).aspx). The following are the instructions to enable .NET Framework 3.5 SP1:  
+        You can also enable .NET Framework 3.5 SP1 using Deployment Image Servicing and Management (DISM.exe). For more information about enabling windows features online, see [Enable or Disable Windows Features Online](https://technet.microsoft.com/library/dd744582(WS.10).aspx). The following are the instructions to enable .NET Framework 3.5 SP1:  
   
         1.  At the command prompt, type the following command to list all of the features available in the operating system.  
   
@@ -182,17 +176,17 @@ The following items describe the prerequisite installation behavior during SQL S
   
 -   To make sure that the Visual Studio component can be installed correctly, SQL Server requires you to install an update. SQL Server Setup checks for the presence of this update and then requires you to download and install the update before you can continue with the SQL Server installation. To avoid the interruption during SQL Server Setup, you can download and install the update as described below before running SQL Server Setup (or you can install all the updates for the .NET Framework 3.5 SP1 that are available on Windows Update):  
   
-    -   If you install SQL Server 2012 on a computer with the Windows Vista SP2 or Windows Server 2008 SP2 operating system, you can get the required update from [here](http://support.microsoft.com/?kbid=956250).  
+    -   If you install SQL Server 2012 on a computer with the Windows Vista SP2 or Windows Server 2008 SP2 operating system, you can get the required update from [here](https://support.microsoft.com/?kbid=956250).  
   
     -   If you install SQL Server 2012 on a computer with the Windows 7 SP1 or Windows Server 2008 R2 SP1 operating system, this update is already installed on the computer.  
   
--   Windows PowerShell 2.0 is a prerequisite for installing SQL Server 2012 Database Engine components and SQL Server Management Studio, but Windows PowerShell is no longer installed by SQL Server Setup. If PowerShell 2.0 is not present on your computer, you can enable it by following the instructions on the [Windows Management Framework](http://support.microsoft.com/kb/968929) page. How you get Windows PowerShell 2.0 depends on which operating system you are running:  
+-   Windows PowerShell 2.0 is a prerequisite for installing SQL Server 2012 Database Engine components and SQL Server Management Studio, but Windows PowerShell is no longer installed by SQL Server Setup. If PowerShell 2.0 is not present on your computer, you can enable it by following the instructions on the [Windows Management Framework](https://support.microsoft.com/kb/968929) page. How you get Windows PowerShell 2.0 depends on which operating system you are running:  
   
-    -   Windows Server 2008 – Windows PowerShell 1.0 is a feature and can be added. Windows PowerShell 2.0 versions are downloaded and installed (effectively as an OS Patch).  
+    -   Windows Server 2008 - Windows PowerShell 1.0 is a feature and can be added. Windows PowerShell 2.0 versions are downloaded and installed (effectively as an OS Patch).  
   
-    -   Windows 7/Windows Server 2008 R2 – Windows PowerShell 2.0 are installed by default.  
+    -   Windows 7/Windows Server 2008 R2 - Windows PowerShell 2.0 are installed by default.  
   
--   If you plan to use SQL Server 2012 features in a SharePoint environment, then SharePoint Server 2010 Service Pack 1 (SP1) and the SharePoint August Cumulative Update is required. You must install SP1, the SharePoint [August Cumulative Update](http://blogs.technet.com/b/stefan_gossner/archive/2010/09/02/august-2010-cumulative-update-for-sharepoint-has-been-released.aspx), and fully patch the server farm before you add SQL Server 2012 features to the farm. This requirement applies to the following SQL Server 2012 features: using an instance of Database Engine as the farm's database server, configuring PowerPivot for SharePoint, or deploying Reporting Services in SharePoint mode.  
+-   If you plan to use SQL Server 2012 features in a SharePoint environment, then SharePoint Server 2010 Service Pack 1 (SP1) and the SharePoint August Cumulative Update is required. You must install SP1, the SharePoint [August Cumulative Update](https://blogs.technet.com/b/stefan_gossner/archive/2010/09/02/august-2010-cumulative-update-for-sharepoint-has-been-released.aspx), and fully patch the server farm before you add SQL Server 2012 features to the farm. This requirement applies to the following SQL Server 2012 features: using an instance of Database Engine as the farm's database server, configuring PowerPivot for SharePoint, or deploying Reporting Services in SharePoint mode.  
   
 ### 1.8 Supported Operating Systems for SQL Server 2012  
 SQL Server 2012 is supported on the Windows Vista SP2, Windows Server 2008 SP2, Windows 2008 R2 SP1, and Windows 7 SP1 operating systems.  
@@ -200,7 +194,7 @@ SQL Server 2012 is supported on the Windows Vista SP2, Windows Server 2008 SP2, 
 ### 1.9 Sync Framework Is Not Included in the Installation Package  
 **Issue:** Sync Framework is not included in the SQL Server 2012 installation package.  
   
-**Workaround:** Download the appropriate version of Sync Framework from [this Microsoft Download Center page](http://www.microsoft.com/download/en/details.aspx?displaylang=en&id=23217).  
+**Workaround:** Download the appropriate version of Sync Framework from [this Microsoft Download Center page](https://www.microsoft.com/download/en/details.aspx?displaylang=en&id=23217).  
   
 ### 1.10 If Visual Studio 2010 Service Pack 1 is uninstalled, the SQL Server 2012 instance must be repaired to restore certain components  
 **Issue:**[!INCLUDE[ssSQL11](../includes/sssql11-md.md)] installation is dependent on some components of the Visual Studio 2010 Service Pack 1. If you uninstall Service Pack 1, some of the shared components are downgraded to their original versions, and a few other components are completely removed from the machine.  
@@ -223,19 +217,19 @@ SQL Server 2012 is supported on the Windows Vista SP2, Windows Server 2008 SP2, 
   
 8.  The **Repair Progress** page shows the status of the repair operation. The **Complete** page indicates that the operation is finished.  
   
-For more information on how to repair an instance of SQL Server, see [Repair a Failed SQL Server 2012 Installation](http://msdn.microsoft.com/library/cc646006(SQL.110).aspx).  
+For more information on how to repair an instance of SQL Server, see [Repair a Failed SQL Server 2012 Installation](../database-engine/install-windows/repair-a-failed-sql-server-installation.md).  
   
 ### 1.11 An instance of SQL Server 2012 might fail after an OS upgrade  
 **Issue:** An instance of SQL Server 2012 might fail with the following error after you upgrade the operating system to Windows 7 SP1 from Windows Vista.  
   
 `Setup has detected that the .NET Framework version 4 needs to be repaired. Do not restart your computer until Setup is complete.`  
   
-**Workaround**: Repair your installation of the .NET Framework 4 after you upgrade your operating system. For more information, see [How to repair an existing installation of the.NET Framework](http://support.microsoft.com/kb/306160).  
+**Workaround**: Repair your installation of the .NET Framework 4 after you upgrade your operating system. For more information, see [How to repair an existing installation of the.NET Framework](https://support.microsoft.com/kb/306160).  
   
 ### 1.12 SQL Server Edition upgrade requires a restart  
 **Issue**: When you edition upgrade an instance of SQL Server 2012, some of the functionalities associated with the new edition might not be activated immediately.  
   
-**Workaround**: Restart the machine after the edition upgrade of an instance of SQL Server 2012. For more information about supported upgrades in SQL Server 2012, see [Supported Version and Edition Upgrades](http://msdn.microsoft.com/library/ms143393.aspx).  
+**Workaround**: Restart the machine after the edition upgrade of an instance of SQL Server 2012. For more information about supported upgrades in SQL Server 2012, see [Supported Version and Edition Upgrades](../database-engine/install-windows/supported-version-and-edition-upgrades-2017.md).  
   
 ### 1.13 Database with read-only filegroup or files cannot be upgraded  
 **Issue**:  You cannot upgrade a database by either attaching the database or restoring the database from backup if the database or its files/filegroups are set to read-only.  Error 3415 is returned.  This issue also applies when performing an in-place upgrade of an instance of SQL Server. That is, you attempt to replace an existing instance of SQL Server by installing SQL Server 2012 and one or more of the existing databases is set to read-only.  
@@ -245,7 +239,7 @@ For more information on how to repair an instance of SQL Server, see [Repair a F
 ### 1.14 Reinstalling an instance of SQL Server Failover Custer fails if you use the same IP address  
 **Issue:** If you specify an incorrect IP address during an installation of a SQL Server Failover Cluster instance, the installation fails. After you uninstall the failed instance, and if you try to reinstall the SQL Server failover cluster instance with the same instance name, and correct IP address, the installation fails. The failure is because of the duplicate resource group left behind by the previous installation.  
   
-**Workaround:** To resolve this issue, use a different instance name during the reinstallation, or manually delete the resource group before reinstalling. For more information, see [Add or Remove Nodes in a SQL Server Failover Cluster](http://msdn.microsoft.com/library/ms191545).  
+**Workaround:** To resolve this issue, use a different instance name during the reinstallation, or manually delete the resource group before reinstalling. For more information, see [Add or Remove Nodes in a SQL Server Failover Cluster](failover-clusters/install/add-or-remove-nodes-in-a-sql-server-failover-cluster-setup.md).  
   
 ![horizontal_bar](media/horizontal-bar.png "horizontal_bar")  
   
@@ -308,12 +302,12 @@ There are problems with the AS Processing Task when you work with tabular models
   
 **Workaround**: To avoid this issue, enable IPv4, or use the following steps to add a registry entry and create an ACL to enable the Help viewer for IPv6:  
   
-1.  Create a registry key with the name “IPv6” and a value of “1 (DWORD(32 bit))” under HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Help\v1.0.  
+1.  Create a registry key with the name "IPv6" and a value of "1 (DWORD(32 bit))" under HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Help\v1.0.  
   
-2.  Set the security ACL’s for the port for IPv6, executing the following from an admin CMD window:  
+2.  Set the security ACL's for the port for IPv6, executing the following from an admin CMD window:  
   
     ```  
-    netsh http add urlacl url=http://[::1]:47873/help/ sddl=D:(A;;GX;;;WD)  
+    netsh http add urlacl url=https://[::1]:47873/help/ sddl=D:(A;;GX;;;WD)  
     ```  
   
 ![horizontal_bar](media/horizontal-bar.png "horizontal_bar")  
@@ -323,12 +317,12 @@ There are problems with the AS Processing Task when you work with tabular models
 ### 4.1 DQS Not Supported in a Cluster  
 **Issue:** DQS is not supported in a SQL Server cluster installation. If you are installing a cluster instance of SQL Server, you must not select the **Data Quality Services** and **Data Quality Client** check boxes on the **Feature Selection** page. If these check boxes are selected during cluster instance installation (and you complete the Data Quality Server installation by running the DQSInstaller.exe file), DQS will be installed on this node, but will not be available on additional nodes when you add more nodes to the cluster, and hence will not work on additional nodes.  
   
-**Workaround:** Install SQL Server 2012 Cumulative Update 1 to resolve this issue. For instructions, see [http://support.microsoft.com/kb/2674817](http://support.microsoft.com/kb/2674817).  
+**Workaround:** Install SQL Server 2012 Cumulative Update 1 to resolve this issue. For instructions, see [https://support.microsoft.com/kb/2674817](https://support.microsoft.com/kb/2674817).  
   
 ### 4.2 To Reinstall Data Quality Server, Delete the DQS Objects After Uninstalling Data Quality Server  
 **Issue:** If you uninstall the Data Quality Server, the DQS objects (DQS databases, DQS logins, and a DQS stored procedure) are not deleted from the SQL Server instance.  
   
-**Workaround:** To reinstall Data Quality Server on the same computer and in the same SQL Server instance, you must manually delete the DQS objects from the SQL Server instance. Additionally, you must also delete the DQS databases (DQS_MAIN, DQS_PROJECTS, and DQS_STAGING_DATA) files from the C:\Program Files\Microsoft SQL Server\MSSQL11.<SQL_Server_Instance>\MSSQL\DATA folder on your computer before you reinstall Data Quality Server. Otherwise, the Data Quality Server installation fails. Move the database files instead of deleting them if you want to preserve data, such as knowledge bases or data quality projects. For more information about removing DQS objects after the uninstall process is complete, see [Remove Data Quality Server Objects](http://msdn.microsoft.com/library/hh231667.aspx).  
+**Workaround:** To reinstall Data Quality Server on the same computer and in the same SQL Server instance, you must manually delete the DQS objects from the SQL Server instance. Additionally, you must also delete the DQS databases (DQS_MAIN, DQS_PROJECTS, and DQS_STAGING_DATA) files from the C:\Program Files\Microsoft SQL Server\MSSQL11.<SQL_Server_Instance>\MSSQL\DATA folder on your computer before you reinstall Data Quality Server. Otherwise, the Data Quality Server installation fails. Move the database files instead of deleting them if you want to preserve data, such as knowledge bases or data quality projects. For more information about removing DQS objects after the uninstall process is complete, see [Remove Data Quality Server Objects](https://msdn.microsoft.com/library/hh231667.aspx).  
   
 ### 4.3 Indication of a Terminated Knowledge Discovery or Interactive Cleansing Activity is Delayed  
 **Issue:** If an administrator terminates an activity in the Activity Monitoring screen, an interactive user who is running the knowledge discovery, domain management, or interactive cleansing activity will not receive any indication that his or her activity was terminated until he or she performs the next operation.  
@@ -341,7 +335,7 @@ There are problems with the AS Processing Task when you work with tabular models
 **Workaround:** To avoid this, publish work that you need to persist in the knowledge base before starting a new activity.  
   
 ### 4.5 Controls Do Not Scale Properly On Large Font Sizes  
-**Issue:** If you change the size of text to “Larger – 150%” (in Windows Server 2008 or Windows 7), or change the Custom DPI setting to 200% (in Windows 7), the **Cancel** and **Create** buttons on the **New Knowledge Base** page are not accessible.  
+**Issue:** If you change the size of text to "Larger - 150%" (in Windows Server 2008 or Windows 7), or change the Custom DPI setting to 200% (in Windows 7), the **Cancel** and **Create** buttons on the **New Knowledge Base** page are not accessible.  
   
 **Workaround:**To resolve the issue, set the font to a smaller size.  
   
@@ -403,7 +397,7 @@ Issue: You might receive the following error if you open a knowledge base in the
   
 This occurs because of the difference in the way DQS compares strings in the SQL Server database and C#. The string comparison in the SQL Server database is case insensitive whereas it is case sensitive in C#.  
   
-Let us illustrate this with an example. Consider a user, Domain\user1. The user logs on to the Data Quality Client computer using the “user1” account, and works on a knowledge base. DQS stores the recent knowledge base for each user as a record in the A_CONFIGURATION table in the DQS_MAIN database. In this case, the record will be stored with the following name: RecentList:KB:Domain\user1. Later, the user logs on the Data Quality Client computer as “User1” (note the U in upper case), and tries to open the knowledge base in the **Recent Knowledge Base** list for the domain management activity. The underlying code in DQS will compare the two strings, RecentList:KB:DOMAIN\user1 and DOMAIN\User1, and considering the case-sensitive string comparison in C#, the strings won’t match and therefore DQS will attempt to insert a new record for the user (User1) in the A_CONFIGURATION table in the DQS_MAIN database. However, owing to the case-insensitive string comparison in SQL database, the string already exists in the A_CONFIGURATION table in the DQS_MAIN database, and the insert operation will fail.  
+Let us illustrate this with an example. Consider a user, Domain\user1. The user logs on to the Data Quality Client computer using the "user1" account, and works on a knowledge base. DQS stores the recent knowledge base for each user as a record in the A_CONFIGURATION table in the DQS_MAIN database. In this case, the record will be stored with the following name: RecentList:KB:Domain\user1. Later, the user logs on the Data Quality Client computer as "User1" (note the U in upper case), and tries to open the knowledge base in the **Recent Knowledge Base** list for the domain management activity. The underlying code in DQS will compare the two strings, RecentList:KB:DOMAIN\user1 and DOMAIN\User1, and considering the case-sensitive string comparison in C#, the strings won't match and therefore DQS will attempt to insert a new record for the user (User1) in the A_CONFIGURATION table in the DQS_MAIN database. However, owing to the case-insensitive string comparison in SQL database, the string already exists in the A_CONFIGURATION table in the DQS_MAIN database, and the insert operation will fail.  
   
 **Workaround:** To fix this issue, you can do one of the following:  
   
@@ -488,7 +482,7 @@ Issue: Intellisense in SQL Server Management Studio (SSMS) and SQL Server Data T
 **Workaround**:  None  
   
 ### 5.7 AlwaysOn Availability Groups  
-Before you attempt to create an availability group, see [Prerequisites, Restrictions, and Recommendations for AlwaysOn Availability Groups (SQL Server)](http://go.microsoft.com/?linkid=9753168) in Books Online. For an introduction to AlwaysOn Availability Groups, see [AlwaysOn Availability Groups (SQL Server)](http://go.microsoft.com/?linkid=9753166)in Books Online.  
+Before you attempt to create an availability group, see [Prerequisites, Restrictions, and Recommendations for AlwaysOn Availability Groups (SQL Server)](https://go.microsoft.com/?linkid=9753168) in Books Online. For an introduction to AlwaysOn Availability Groups, see [AlwaysOn Availability Groups (SQL Server)](https://go.microsoft.com/?linkid=9753166)in Books Online.  
   
 #### 5.7.1 Client-Connectivity for AlwaysOn Availability Groups  
 **Updated on:** August 13, 2012  
@@ -507,9 +501,9 @@ The following table summarizes driver support for AlwaysOn Availability Groups:
 |ADO.NET with .NET Framework 3.5 SP1 with connectivity patch **\&#42;\&#42;**|Yes|Yes|Yes|Yes|Yes|  
 |Microsoft JDBC driver 4.0 for SQL Server|Yes|Yes|Yes|Yes|Yes|  
   
-**\&#42;** Download the connectivity patch for ADO .NET with .NET Framework 4.0: [http://support.microsoft.com/kb/2600211](http://support.microsoft.com/kb/2600211).  
+**\&#42;** Download the connectivity patch for ADO .NET with .NET Framework 4.0: [https://support.microsoft.com/kb/2600211](https://support.microsoft.com/kb/2600211).  
   
-**\&#42;\&#42;** Download the connectivity patch for ADO.NET with .NET Framework 3.5 SP1: [http://support.microsoft.com/kb/2654347](http://support.microsoft.com/kb/2654347).  
+**\&#42;\&#42;** Download the connectivity patch for ADO.NET with .NET Framework 3.5 SP1: [https://support.microsoft.com/kb/2654347](https://support.microsoft.com/kb/2654347).  
   
 **MultiSubnetFailover Keyword and Associated Features**  
   
@@ -570,10 +564,10 @@ This is due to a limitation in the CTP3 build. Future builds will not have this 
 **Workaround:** Use 'multisubnetfailover = true' in the connection string.  
   
 #### 5.7.6 Failure to Create New Availability Group Listeners Because of Active Directory Quotas  
-**Issue:** The creation of a new availability group listener may fail upon creation because you have reached an Active Directory quota for the participating cluster node machine account. For more information, see [How to troubleshoot the Cluster service account when it modifies computer objects](http://support.microsoft.com/kb/307532) and [Active Directory Quotas](http://technet.microsoft.com/library/cc904295(WS.10).aspx).,  
+**Issue:** The creation of a new availability group listener may fail upon creation because you have reached an Active Directory quota for the participating cluster node machine account. For more information, see [How to troubleshoot the Cluster service account when it modifies computer objects](https://support.microsoft.com/kb/307532) and [Active Directory Quotas](https://technet.microsoft.com/library/cc904295(WS.10).aspx).,  
   
 #### 5.7.7 NetBIOS Conflicts Because Availability Group Listener Names Use an Identical 15-Character Prefix  
-If you have two WSFC clusters that are controlled by the same Active Directory and you try to create availability group listeners in both of clusters using names with more than 15 characters and an identical 15 character prefix, you will get an error reporting that the Virtual Network Name resource could not be brought online. For information about prefix naming rules for DNS names, see [Assigning Domain Names](http://technet.microsoft.com/library/cc731265(WS.10).aspx)  
+If you have two WSFC clusters that are controlled by the same Active Directory and you try to create availability group listeners in both of clusters using names with more than 15 characters and an identical 15 character prefix, you will get an error reporting that the Virtual Network Name resource could not be brought online. For information about prefix naming rules for DNS names, see [Assigning Domain Names](https://technet.microsoft.com/library/cc731265(WS.10).aspx)  
   
 ![horizontal_bar](media/horizontal-bar.png "horizontal_bar")  
   
@@ -607,10 +601,10 @@ The CDC Service for Oracle is a Windows service that scans Oracle transaction lo
   
 3.  Install SQL Server 2012 with the MDS feature on the primary cluster node, and then install SQL Server 2012 with the MDS feature on any additional cluster nodes.  
   
-For more information about the issues, and information about how to perform the above steps, see [http://support.microsoft.com/kb/2683467](http://support.microsoft.com/kb/2683467).  
+For more information about the issues, and information about how to perform the above steps, see [https://support.microsoft.com/kb/2683467](https://support.microsoft.com/kb/2683467).  
   
 ### 7.2 Microsoft Silverlight 5 Required  
-To work in the Master Data Manager web application, Silverlight 5.0 must be installed on the client computer. If you do not have the required version of Silverlight, you will be prompted to install it when you navigate to an area of the web application that requires it. You can install Silverlight 5 from [http://go.microsoft.com/fwlink/?LinkId=243096](http://go.microsoft.com/fwlink/?LinkId=243096).  
+To work in the Master Data Manager web application, Silverlight 5.0 must be installed on the client computer. If you do not have the required version of Silverlight, you will be prompted to install it when you navigate to an area of the web application that requires it. You can install Silverlight 5 from [https://go.microsoft.com/fwlink/?LinkId=243096](https://go.microsoft.com/fwlink/?LinkId=243096).  
   
 ![horizontal_bar](media/horizontal-bar.png "horizontal_bar")  
   
@@ -622,7 +616,7 @@ Connectivity from SQL Server 2012 Reporting Services to Microsoft SQL Server PDW
 ![horizontal_bar](media/horizontal-bar.png "horizontal_bar")  
   
 ## <a name="SI"></a>9.0 StreamInsight  
-SQL Server 2012 includes StreamInsight 2.0. StreamInsight 2.0 requires a Microsoft SQL Server 2012 license and .NET Framework 4.0. It includes a number of performance improvements along with few bug fixes. For more information see the [Microsoft StreamInsight 2.0 Release Notes](http://social.technet.microsoft.com/wiki/contents/articles/6539.aspx). In order to download StreamInsight 2.0 separately, please visit the [Microsoft StreamInsight 2.0 download page](http://go.microsoft.com/fwlink/?LinkId=241593) on the Microsoft Download Center.  
+SQL Server 2012 includes StreamInsight 2.0. StreamInsight 2.0 requires a Microsoft SQL Server 2012 license and .NET Framework 4.0. It includes a number of performance improvements along with few bug fixes. For more information see the [Microsoft StreamInsight 2.0 Release Notes](https://social.technet.microsoft.com/wiki/contents/articles/6539.aspx). In order to download StreamInsight 2.0 separately, please visit the [Microsoft StreamInsight 2.0 download page](https://go.microsoft.com/fwlink/?LinkId=241593) on the Microsoft Download Center.  
   
 ![horizontal_bar](media/horizontal-bar.png "horizontal_bar")  
   

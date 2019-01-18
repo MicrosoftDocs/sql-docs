@@ -2,16 +2,10 @@
 title: "Configure the Management Data Warehouse (SQL Server Management Studio) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-non-specified"
-ms.prod_service: "database-engine"
-ms.service: ""
-ms.component: "data-collection"
+ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: supportability
+ms.topic: conceptual
 f1_keywords: 
   - "sql13.swb.dc.datacollection.wizard_completecfg.f1"
   - "sql13.swb.dc.datacollection.wizard_config.f1"
@@ -26,11 +20,9 @@ helpviewer_keywords:
   - "Configure Management Data Warehouse Wizard"
   - "management data warehouse, configuring"
 ms.assetid: 23a584f3-c5e1-414c-9afe-73cd7efbda4b
-caps.latest.revision: 28
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-ms.workload: "On Demand"
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
 ---
 # Configure the Management Data Warehouse (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

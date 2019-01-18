@@ -1,0 +1,615 @@
+- name: Overview
+  href: errors-and-events-reference-database-engine.md
+- name: Understanding Database Engine Errors
+  href: understanding-database-engine-errors.md
+- name: Database Engine Error Severities
+  href: database-engine-error-severities.md
+- name: MSSQL Errors
+  href: database-engine-events-and-errors.md
+  items:
+  - name: Errors -2 to 950
+    items:
+    - name: "-2"
+      href: mssqlserver-neg2-database-engine-error.md
+    - name: "-1"
+      href: mssqlserver-1-database-engine-error.md
+    - name: 2
+      href: mssqlserver-2-database-engine-error.md
+    - name: 53
+      href: mssqlserver-53-database-engine-error.md
+    - name: 102
+      href: mssqlserver-102-database-engine-error.md
+    - name: 107
+      href: mssqlserver-107-database-engine-error.md
+    - name: 125
+      href: mssqlserver-125-database-engine-error.md
+    - name: 137
+      href: mssqlserver-137-database-engine-error.md
+    - name: 207
+      href: mssqlserver-207-database-engine-error.md
+    - name: 208
+      href: mssqlserver-208-database-engine-error.md
+    - name: 233
+      href: mssqlserver-233-database-engine-error.md
+    - name: 360
+      href: mssqlserver-360-database-engine-error.md
+    - name: 511
+      href: mssqlserver-511-database-engine-error.md
+    - name: 601
+      href: mssqlserver-601-database-engine-error.md
+    - name: 605
+      href: mssqlserver-605-database-engine-error.md
+    - name: 611
+      href: mssqlserver-611-database-engine-error.md
+    - name: 617
+      href: mssqlserver-617-database-engine-error.md
+    - name: 701
+      href: mssqlserver-701-database-engine-error.md
+    - name: 802
+      href: mssqlserver-802-database-engine-error.md
+    - name: 823
+      href: mssqlserver-823-database-engine-error.md
+    - name: 824
+      href: mssqlserver-824-database-engine-error.md
+    - name: 825
+      href: mssqlserver-825-database-engine-error.md
+    - name: 833
+      href: mssqlserver-833-database-engine-error.md
+    - name: 844
+      href: mssqlserver-844-database-engine-error.md
+    - name: 845
+      href: mssqlserver-845-database-engine-error.md
+    - name: 846
+      href: mssqlserver-846-database-engine-error.md
+    - name: 847
+      href: mssqlserver-847-database-engine-error.md
+    - name: 905
+      href: mssqlserver-905-database-engine-error.md
+    - name: 916
+      href: mssqlserver-916-database-engine-error.md
+    - name: 926
+      href: mssqlserver-926-database-engine-error.md
+    - name: 945
+      href: mssqlserver-945-database-engine-error.md
+    - name: 948
+      href: mssqlserver-948-database-engine-error.md
+  - name: Errors 1100 to 1950
+    items:
+    - name: 1101
+      href: mssqlserver-1101-database-engine-error.md
+    - name: 1105
+      href: mssqlserver-1105-database-engine-error.md
+    - name: 1203
+      href: mssqlserver-1203-database-engine-error.md
+    - name: 1204
+      href: mssqlserver-1204-database-engine-error.md
+    - name: 1205
+      href: mssqlserver-1205-database-engine-error.md
+    - name: 1222
+      href: mssqlserver-1222-database-engine-error.md
+    - name: 1401
+      href: mssqlserver-1401-database-engine-error.md
+    - name: 1406
+      href: mssqlserver-1406-database-engine-error.md
+    - name: 1418
+      href: mssqlserver-1418-database-engine-error.md
+    - name: 1457
+      href: mssqlserver-1457-database-engine-error.md
+    - name: 1458
+      href: mssqlserver-1458-database-engine-error.md
+    - name: 1461
+      href: mssqlserver-1461-database-engine-error.md
+    - name: 1462
+      href: mssqlserver-1462-database-engine-error.md
+    - name: 1505
+      href: mssqlserver-1505-database-engine-error.md
+    - name: 1793
+      href: mssqlserver-1793-database-engine-error.md
+    - name: 1803
+      href: mssqlserver-1803-database-engine-error.md
+    - name: 1807
+      href: mssqlserver-1807-database-engine-error.md
+    - name: 1904
+      href: mssqlserver-1904-database-engine-error.md
+  - name: Errors 2000 to 2850
+    items:
+    - name: 2020
+      href: mssqlserver-2020-database-engine-error.md
+    - name: 2501
+      href: mssqlserver-2501-database-engine-error.md
+    - name: 2508
+      href: mssqlserver-2508-database-engine-error.md
+    - name: 2511
+      href: mssqlserver-2511-database-engine-error.md
+    - name: 2512
+      href: mssqlserver-2512-database-engine-error.md
+    - name: 2515
+      href: mssqlserver-2515-database-engine-error.md
+    - name: 2516
+      href: mssqlserver-2516-database-engine-error.md
+    - name: 2518
+      href: mssqlserver-2518-database-engine-error.md
+    - name: 2519
+      href: mssqlserver-2519-database-engine-error.md
+    - name: 2522
+      href: mssqlserver-2522-database-engine-error.md
+    - name: 2527
+      href: mssqlserver-2527-database-engine-error.md
+    - name: 2530
+      href: mssqlserver-2530-database-engine-error.md
+    - name: 2533
+      href: mssqlserver-2533-database-engine-error.md
+    - name: 2534
+      href: mssqlserver-2534-database-engine-error.md
+    - name: 2536
+      href: mssqlserver-2536-database-engine-error.md
+    - name: 2537
+      href: mssqlserver-2537-database-engine-error.md
+    - name: 2538
+      href: mssqlserver-2538-database-engine-error.md
+    - name: 2539
+      href: mssqlserver-2539-database-engine-error.md
+    - name: 2540
+      href: mssqlserver-2540-database-engine-error.md
+    - name: 2546
+      href: mssqlserver-2546-database-engine-error.md
+    - name: 2570
+      href: mssqlserver-2570-database-engine-error.md
+    - name: 2574
+      href: mssqlserver-2574-database-engine-error.md
+    - name: 2575
+      href: mssqlserver-2575-database-engine-error.md
+    - name: 2576
+      href: mssqlserver-2576-database-engine-error.md
+    - name: 2577
+      href: mssqlserver-2577-database-engine-error.md
+    - name: 2579
+      href: mssqlserver-2579-database-engine-error.md
+    - name: 2592
+      href: mssqlserver-2592-database-engine-error.md
+    - name: 2593
+      href: mssqlserver-2593-database-engine-error.md
+    - name: 2596
+      href: mssqlserver-2596-database-engine-error.md
+    - name: 2814
+      href: mssqlserver-2814-database-engine-error.md
+  - name: Errors 3000 to 4850
+    items:
+    - name: 3151
+      href: mssqlserver-3151-database-engine-error.md
+    - name: 3156
+      href: mssqlserver-3156-database-engine-error.md
+    - name: 3159
+      href: mssqlserver-3159-database-engine-error.md
+    - name: 3168
+      href: mssqlserver-3168-database-engine-error.md
+    - name: 3169
+      href: mssqlserver-3169-database-engine-error.md
+    - name: 3176
+      href: mssqlserver-3176-database-engine-error.md
+    - name: 3181
+      href: mssqlserver-3181-database-engine-error.md
+    - name: 3260
+      href: mssqlserver-3260-database-engine-error.md
+    - name: 3271
+      href: mssqlserver-3271-database-engine-error.md
+    - name: 3313
+      href: mssqlserver-3313-database-engine-error.md
+    - name: 3314
+      href: mssqlserver-3314-database-engine-error.md
+    - name: 3413
+      href: mssqlserver-3413-database-engine-error.md
+    - name: 3414
+      href: mssqlserver-3414-database-engine-error.md
+    - name: 3417
+      href: mssqlserver-3417-database-engine-error.md
+    - name: 3431
+      href: mssqlserver-3431-database-engine-error.md
+    - name: 3437
+      href: mssqlserver-3437-database-engine-error.md
+    - name: 3452
+      href: mssqlserver-3452-database-engine-error.md
+    - name: 3456
+      href: mssqlserver-3456-database-engine-error.md
+    - name: 3619
+      href: mssqlserver-3619-database-engine-error.md
+    - name: 3937
+      href: mssqlserver-3937-database-engine-error.md
+    - name: 3961
+      href: mssqlserver-3961-database-engine-error.md
+    - name: 4064
+      href: mssqlserver-4064-database-engine-error.md
+    - name: 4104
+      href: mssqlserver-4104-database-engine-error.md
+    - name: 4186
+      href: mssqlserver-4186-database-engine-error.md
+    - name: 4846
+      href: mssqlserver-4846-database-engine-error.md
+  - name: Errors 5000 to 8000
+    items:
+    - name: 5228
+      href: mssqlserver-5228-database-engine-error.md
+    - name: 5229
+      href: mssqlserver-5229-database-engine-error.md
+    - name: 5231
+      href: mssqlserver-5231-database-engine-error.md
+    - name: 5233
+      href: mssqlserver-5233-database-engine-error.md
+    - name: 5235
+      href: mssqlserver-5235-database-engine-error.md
+    - name: 5237
+      href: mssqlserver-5237-database-engine-error.md
+    - name: 5242
+      href: mssqlserver-5242-database-engine-error.md
+    - name: 5243
+      href: mssqlserver-5243-database-engine-error.md
+    - name: 5245
+      href: mssqlserver-5245-database-engine-error.md
+    - name: 5250
+      href: mssqlserver-5250-database-engine-error.md
+    - name: 5256
+      href: mssqlserver-5256-database-engine-error.md
+    - name: 5512
+      href: mssqlserver-5512-database-engine-error.md
+    - name: 5515
+      href: mssqlserver-5515-database-engine-error.md
+    - name: 5554
+      href: mssqlserver-5554-database-engine-error.md
+    - name: 7308
+      href: mssqlserver-7308-database-engine-error.md
+    - name: 7711
+      href: mssqlserver-7711-database-engine-error.md
+    - name: 7901
+      href: mssqlserver-7901-database-engine-error.md
+    - name: 7903
+      href: mssqlserver-7903-database-engine-error.md
+    - name: 7904
+      href: mssqlserver-7904-database-engine-error.md
+    - name: 7905
+      href: mssqlserver-7905-database-engine-error.md
+    - name: 7906
+      href: mssqlserver-7906-database-engine-error.md
+    - name: 7907
+      href: mssqlserver-7907-database-engine-error.md
+    - name: 7908
+      href: mssqlserver-7908-database-engine-error.md
+    - name: 7910
+      href: mssqlserver-7910-database-engine-error.md
+    - name: 7911
+      href: mssqlserver-7911-database-engine-error.md
+    - name: 7912
+      href: mssqlserver-7912-database-engine-error.md
+    - name: 7913
+      href: mssqlserver-7913-database-engine-error.md
+    - name: 7914
+      href: mssqlserver-7914-database-engine-error.md
+    - name: 7915
+      href: mssqlserver-7915-database-engine-error.md
+    - name: 7916
+      href: mssqlserver-7916-database-engine-error.md
+    - name: 7920
+      href: mssqlserver-7920-database-engine-error.md
+    - name: 7923
+      href: mssqlserver-7923-database-engine-error.md
+    - name: 7931
+      href: mssqlserver-7931-database-engine-error.md
+    - name: 7932
+      href: mssqlserver-7932-database-engine-error.md
+    - name: 7933
+      href: mssqlserver-7933-database-engine-error.md
+    - name: 7934
+      href: mssqlserver-7934-database-engine-error.md
+    - name: 7935
+      href: mssqlserver-7935-database-engine-error.md
+    - name: 7936
+      href: mssqlserver-7936-database-engine-error.md
+    - name: 7937
+      href: mssqlserver-7937-database-engine-error.md
+    - name: 7984
+      href: mssqlserver-7984-database-engine-error.md
+    - name: 7986
+      href: mssqlserver-7986-database-engine-error.md
+    - name: 7987
+      href: mssqlserver-7987-database-engine-error.md
+    - name: 7988
+      href: mssqlserver-7988-database-engine-error.md
+    - name: 7995
+      href: mssqlserver-7995-database-engine-error.md
+  - name: Errors 8400 to 9999
+    items:
+    - name: 8443
+      href: mssqlserver-8443-database-engine-error.md
+    - name: 8525
+      href: mssqlserver-8525-database-engine-error.md
+    - name: 8601
+      href: mssqlserver-8601-database-engine-error.md
+    - name: 8621
+      href: mssqlserver-8621-database-engine-error.md
+    - name: 8630
+      href: mssqlserver-8630-database-engine-error.md
+    - name: 8642
+      href: mssqlserver-8642-database-engine-error.md
+    - name: 8645
+      href: mssqlserver-8645-database-engine-error.md
+    - name: 8649
+      href: mssqlserver-8649-database-engine-error.md
+    - name: 8651
+      href: mssqlserver-8651-database-engine-error.md
+    - name: 8680
+      href: mssqlserver-8680-database-engine-error.md
+    - name: 8689
+      href: mssqlserver-8689-database-engine-error.md
+    - name: 8710
+      href: mssqlserver-8710-database-engine-error.md
+    - name: 8712
+      href: mssqlserver-8712-database-engine-error.md
+    - name: 8966
+      href: mssqlserver-8966-database-engine-error.md
+    - name: 8974
+      href: mssqlserver-8974-database-engine-error.md
+    - name: 8992
+      href: mssqlserver-8992-database-engine-error.md
+    - name: 8993
+      href: mssqlserver-8993-database-engine-error.md
+    - name: 8994
+      href: mssqlserver-8994-database-engine-error.md
+    - name: 8996
+      href: mssqlserver-8996-database-engine-error.md
+    - name: 9001
+      href: mssqlserver-9001-database-engine-error.md
+    - name: 9002
+      href: mssqlserver-9002-database-engine-error.md
+    - name: 9003
+      href: mssqlserver-9003-database-engine-error.md
+    - name: 9004
+      href: mssqlserver-9004-database-engine-error.md
+    - name: 9524
+      href: mssqlserver-9524-database-engine-error.md
+    - name: 9532
+      href: mssqlserver-9532-database-engine-error.md
+    - name: 9692
+      href: mssqlserver-9692-database-engine-error.md
+    - name: 9790
+      href: mssqlserver-9790-database-engine-error.md
+    - name: 9955
+      href: mssqlserver-9955-database-engine-error.md
+  - name: Errors 10,000 to 12,000
+    items:
+    - name: 10001
+      href: mssqlserver-10001-database-engine-error.md
+    - name: 10003
+      href: mssqlserver-10003-database-engine-error.md
+    - name: 10060
+      href: mssqlserver-10060-database-engine-error.md
+    - name: 10061
+      href: mssqlserver-10061-database-engine-error.md
+    - name: 10502
+      href: mssqlserver-10502-database-engine-error.md
+    - name: 10507
+      href: mssqlserver-10507-database-engine-error.md
+    - name: 10509
+      href: mssqlserver-10509-database-engine-error.md
+    - name: 10519
+      href: mssqlserver-10519-database-engine-error.md
+    - name: 10520
+      href: mssqlserver-10520-database-engine-error.md
+    - name: 10521
+      href: mssqlserver-10521-database-engine-error.md
+    - name: 10531
+      href: mssqlserver-10531-database-engine-error.md
+    - name: 10532
+      href: mssqlserver-10532-database-engine-error.md
+    - name: 10533
+      href: mssqlserver-10533-database-engine-error.md
+    - name: 10534
+      href: mssqlserver-10534-database-engine-error.md
+    - name: 10535
+      href: mssqlserver-10535-database-engine-error.md
+    - name: 10536
+      href: mssqlserver-10536-database-engine-error.md
+    - name: 10537
+      href: mssqlserver-10537-database-engine-error.md
+    - name: 10538
+      href: mssqlserver-10538-database-engine-error.md
+    - name: 10539
+      href: mssqlserver-10539-database-engine-error.md
+    - name: 10737
+      href: mssqlserver-10737-database-engine-error.md
+    - name: 10770
+      href: mssqlserver-10770-database-engine-error.md
+    - name: 10771
+      href: mssqlserver-10771-database-engine-error.md
+    - name: 10772
+      href: mssqlserver-10772-database-engine-error.md
+    - name: 10773
+      href: mssqlserver-10773-database-engine-error.md
+    - name: 10785
+      href: mssqlserver-10785-database-engine-error.md
+    - name: 10787
+      href: mssqlserver-10787-database-engine-error.md
+    - name: 10794
+      href: mssqlserver-10794-database-engine-error.md
+    - name: 11001
+      href: mssqlserver-11001-database-engine-error.md
+    - name: 11409
+      href: mssqlserver-11409-database-engine-error.md
+  - name: Errors 12,3000 to 16,000
+    items:
+    - name: 12300
+      href: mssqlserver-12300-database-engine-error.md
+    - name: 12301
+      href: mssqlserver-12301-database-engine-error.md
+    - name: 12302
+      href: mssqlserver-12302-database-engine-error.md
+    - name: 12303
+      href: mssqlserver-12303-database-engine-error.md
+    - name: 12304
+      href: mssqlserver-12304-database-engine-error.md
+    - name: 12305
+      href: mssqlserver-12305-database-engine-error.md
+    - name: 12306
+      href: mssqlserver-12306-database-engine-error.md
+    - name: 12307
+      href: mssqlserver-12307-database-engine-error.md
+    - name: 12308
+      href: mssqlserver-12308-database-engine-error.md
+    - name: 12329
+      href: mssqlserver-12329-database-engine-error.md
+    - name: 14265
+      href: mssqlserver-14265-database-engine-error.md
+    - name: 14420
+      href: mssqlserver-14420-database-engine-error.md
+    - name: 14421
+      href: mssqlserver-14421-database-engine-error.md
+    - name: 15404
+      href: mssqlserver-15404-database-engine-error.md
+    - name: 15517
+      href: mssqlserver-15517-database-engine-error.md
+    - name: 15599
+      href: mssqlserver-15599-database-engine-error.md
+    - name: 15661
+      href: mssqlserver-15661-database-engine-error.md
+  - name: Errors 17,000 to 19,000
+    items:
+    - name: 17053
+      href: mssqlserver-17053-database-engine-error.md
+    - name: 17065
+      href: mssqlserver-17065-database-engine-error.md
+    - name: 17066
+      href: mssqlserver-17066-database-engine-error.md
+    - name: 17067
+      href: mssqlserver-17067-database-engine-error.md
+    - name: 17083
+      href: mssqlserver-17083-database-engine-error.md
+    - name: 17084
+      href: mssqlserver-17084-database-engine-error.md
+    - name: 17128
+      href: mssqlserver-17128-database-engine-error.md
+    - name: 17130
+      href: mssqlserver-17130-database-engine-error.md
+    - name: 17132
+      href: mssqlserver-17132-database-engine-error.md
+    - name: 17142
+      href: mssqlserver-17142-database-engine-error.md
+    - name: 17147
+      href: mssqlserver-17147-database-engine-error.md
+    - name: 17148
+      href: mssqlserver-17148-database-engine-error.md
+    - name: 17194
+      href: mssqlserver-17194-database-engine-error.md
+    - name: 17204
+      href: mssqlserver-17204-database-engine-error.md
+    - name: 17300
+      href: mssqlserver-17300-database-engine-error.md
+    - name: 17660
+      href: mssqlserver-17660-database-engine-error.md
+    - name: 17676
+      href: mssqlserver-17676-database-engine-error.md
+    - name: 17803
+      href: mssqlserver-17803-database-engine-error.md
+    - name: 17809
+      href: mssqlserver-17809-database-engine-error.md
+    - name: 17832
+      href: mssqlserver-17832-database-engine-error.md
+    - name: 17883
+      href: mssqlserver-17883-database-engine-error.md
+    - name: 17884
+      href: mssqlserver-17884-database-engine-error.md
+    - name: 17887
+      href: mssqlserver-17887-database-engine-error.md
+    - name: 18264
+      href: mssqlserver-18264-database-engine-error.md
+    - name: 18452
+      href: mssqlserver-18452-database-engine-error.md
+    - name: 18456
+      href: mssqlserver-18456-database-engine-error.md
+    - name: 18752
+      href: mssqlserver-18752-database-engine-error.md
+  - name: Errors 20,000 to 34,000
+    items:
+    - name: 20557
+      href: mssqlserver-20557-database-engine-error.md
+    - name: 20572
+      href: mssqlserver-20572-database-engine-error.md
+    - name: 20574
+      href: mssqlserver-20574-database-engine-error.md
+    - name: 21862
+      href: mssqlserver-21862-database-engine-error.md
+    - name: 21871
+      href: mssqlserver-21871-database-engine-error.md
+    - name: 21879
+      href: mssqlserver-21879-database-engine-error.md
+    - name: 21889
+      href: mssqlserver-21889-database-engine-error.md
+    - name: 21892
+      href: mssqlserver-21892-database-engine-error.md
+    - name: 21893
+      href: mssqlserver-21893-database-engine-error.md
+    - name: 21898
+      href: mssqlserver-21898-database-engine-error.md
+    - name: 21899
+      href: mssqlserver-21899-database-engine-error.md
+    - name: 26013
+      href: mssqlserver-26013-database-engine-error.md
+    - name: 26014
+      href: mssqlserver-26014-database-engine-error.md
+    - name: 30053
+      href: mssqlserver-30053-database-engine-error.md
+    - name: 30089
+      href: mssqlserver-30089-database-engine-error.md
+    - name: 32040
+      href: mssqlserver-32040-database-engine-error.md
+    - name: 32042
+      href: mssqlserver-32042-database-engine-error.md
+    - name: 32043
+      href: mssqlserver-32043-database-engine-error.md
+    - name: 32044
+      href: mssqlserver-32044-database-engine-error.md
+    - name: 33027
+      href: mssqlserver-33027-database-engine-error.md
+    - name: 33028
+      href: mssqlserver-33028-database-engine-error.md
+    - name: 33081
+      href: mssqlserver-33081-database-engine-error.md
+    - name: 33085
+      href: mssqlserver-33085-database-engine-error.md
+    - name: 33128
+      href: mssqlserver-33128-database-engine-error.md
+    - name: 33129
+      href: mssqlserver-33129-database-engine-error.md
+  - name: Errors 41,000 to 41,400
+    items:
+    - name: 41030
+      href: mssqlserver-41030-database-engine-error.md
+    - name: 41301
+      href: mssqlserver-41301-database-engine-error.md
+    - name: 41302
+      href: mssqlserver-41302-database-engine-error.md
+    - name: 41305
+      href: mssqlserver-41305-database-engine-error.md
+    - name: 41307
+      href: mssqlserver-41307-database-engine-error.md
+    - name: 41325
+      href: mssqlserver-41325-database-engine-error.md
+    - name: 41332
+      href: mssqlserver-41332-database-engine-error.md
+    - name: 41333
+      href: mssqlserver-41333-database-engine-error.md
+    - name: 41342
+      href: mssqlserver-41342-database-engine-error.md
+    - name: 41349
+      href: mssqlserver-41349-database-engine-error.md
+    - name: 41350
+      href: mssqlserver-41350-database-engine-error.md
+    - name: 41359
+      href: mssqlserver-41359-database-engine-error.md
+    - name: 41365
+      href: mssqlserver-41365-database-engine-error.md
+    - name: 41368
+      href: mssqlserver-41368-database-engine-error.md
+    - name: 41396
+      href: mssqlserver-41396-database-engine-error.md
+    - name: 41399
+      href: mssqlserver-41399-database-engine-error.md
+  - name: Native Client Error 50000
+    href: sql-server-native-client-error-mssqlserver-50000.md

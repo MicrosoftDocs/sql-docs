@@ -1,36 +1,17 @@
 ---
 title: "Multidimensional Expressions (MDX) Reference | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/02/2016"
-ms.prod: analysis-services
-ms.prod_service: "analysis-services"
-ms.service: ""
-ms.component: ""
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
-  
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "sql13.asvs.sqlserverstudio.startpage.mdx.f1"
-dev_langs: 
-  - "kbMDX"
-helpviewer_keywords: 
-  - "Multidimensional Expressions [Analysis Services]"
-  - "MDX [Analysis Services], reference"
-  - "data access [MDX]"
-  - "MDX [Analysis Services]"
-  - "Analysis Services Multidimensional Expressions"
-ms.assetid: 7e1cb1fb-2a50-41c2-9c70-b853ad6b6c3f
-caps.latest.revision: 43
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-ms.workload: "On Demand"
+ms.date: 06/04/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: mdx
+ms.topic: reference
+ms.author: owend
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
 ---
 # Multidimensional Expressions (MDX) Reference
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
 
     
 ## In This Section  
@@ -42,8 +23,8 @@ ms.workload: "On Demand"
   
 ## See Also  
  [Querying Multidimensional Data with MDX](../analysis-services/multidimensional-models/mdx/querying-multidimensional-data-with-mdx.md)   
- [Analysis Services Scripting Language &#40;ASSL for XMLA&#41;](../analysis-services/scripting/analysis-services-scripting-language-assl-for-xmla.md)   
- [Retrieving Data from an Analytical Data Source](../analysis-services/multidimensional-models-adomd-net-client/retrieving-data-from-an-analytical-data-source.md)   
+ [Analysis Services Scripting Language &#40;ASSL for XMLA&#41;](https://docs.microsoft.com/bi-reference/assl/analysis-services-scripting-language-assl-for-xmla)   
+ [Retrieving Data from an Analytical Data Source](https://docs.microsoft.com/bi-reference/adomd/multidimensional-models-adomd-net-client/retrieving-data-from-an-analytical-data-source)   
  [Define Assignments and Other Script Commands](../analysis-services/multidimensional-models/define-assignments-and-other-script-commands.md)  
   
   

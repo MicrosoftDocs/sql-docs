@@ -2,19 +2,11 @@
 title: "sys.column_encryption_key_values (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/10/2016"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.service: ""
-ms.component: "system-catalog-views"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: system-objects
 ms.topic: "language-reference"
-applies_to: 
-  - "Azure SQL Database"
-  - "SQL Server 2016 Preview"
 f1_keywords: 
   - "column_encryption_key_values"
   - "column_encryption_key_values_TSQL"
@@ -25,11 +17,10 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.column_encryption_key_values catalog view"
 ms.assetid: 440875ab-b0e9-4966-8c16-01503558fedd
-caps.latest.revision: 12
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "craigg"
-ms.workload: "Inactive"
+author: VanMSFT
+ms.author: vanto
+manager: craigg
+monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.column_encryption_key_values (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

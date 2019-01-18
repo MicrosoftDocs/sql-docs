@@ -2,16 +2,10 @@
 title: "Work with Multiple Versions and Instances of SQL Server | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/25/2017"
-ms.prod: "sql-non-specified"
-ms.prod_service: "database-engine"
-ms.service: ""
-ms.component: "install"
+ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "setup-install"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: install
+ms.topic: conceptual
 helpviewer_keywords: 
   - "concurrent installations [SQL Server]"
   - "versions [SQL Server], multiple"
@@ -23,14 +17,13 @@ helpviewer_keywords:
   - "32-bit edition [SQL Server]"
   - "editions [SQL Server], side-by-side installations"
 ms.assetid: 93acefa8-bb41-4ccc-b763-7801f51134e0
-caps.latest.revision: 67
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-ms.workload: "Active"
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
 ---
 # Work with Multiple Versions and Instances of SQL Server
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] supports multiple instances of the [!INCLUDE[ssDE](../../includes/ssde-md.md)], [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], and [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] on the same computer. You can also upgrade earlier versions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], or install [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] on a computer where earlier [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] versions are already installed. For supported upgrade scenarios, see [Supported Version and Edition Upgrades](../../database-engine/install-windows/supported-version-and-edition-upgrades.md).  
   
 ## Version Components and Numbering  
@@ -106,6 +99,6 @@ The following table shows side-by-side support for [!INCLUDE[ssSQL15](../../incl
  [Upgrade SQL Server](../../database-engine/install-windows/upgrade-sql-server.md)   
  [Editions and supported features of SQL Server 2017](../../sql-server/editions-and-components-of-sql-server-2017.md)   
  [Editions and supported features of SQL Server 2016](../../sql-server/editions-and-components-of-sql-server-2016.md)   
- [Backward Compatibility_deleted](http://msdn.microsoft.com/library/15d9117e-e2fa-4985-99ea-66a117c1e9fd)  
+ [Backward Compatibility_deleted](https://msdn.microsoft.com/library/15d9117e-e2fa-4985-99ea-66a117c1e9fd)  
   
   

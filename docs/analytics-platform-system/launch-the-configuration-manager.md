@@ -1,24 +1,17 @@
 ---
-title: "Launch the Configuration Manager (Analytics Platform System)"
-author: "barbkess" 
-ms.author: "barbkess"
-manager: "jhubbard"	  
-ms.prod: "analytics-platform-system"
-ms.prod_service: "mpp-data-warehouse"
-ms.service: ""
-ms.component:
-ms.technology: "mpp-data-warehouse"
-ms.custom: ""
-ms.date: 01/05/2017
-ms.reviewer: na
-ms.suite: "sql"
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: b914ba9a-e4ec-4750-934a-c447fc8909e3
-caps.latest.revision: 22
-
+title: Launch Configuration Manager - Analytics Platform System | Microsoft Docs
+description: Instructions for launching the Configuration Manager tool for the Analytics Platform System appliance.  
+author: mzaman1 
+manager: craigg
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
 ---
-# Launch the Configuration Manager
+
+# Launch the Configuration Manager in Analytics Platform System
 This topic provides instructions for launching the **Configuration Manager** for the Analytics Platform System appliance.  
   
 ## Before You Begin  
@@ -27,7 +20,7 @@ This topic provides instructions for launching the **Configuration Manager** for
 The Analytics Platform System**Configuration Manager** can only be run by the appliance domain administrator. To run this tool, you need the password for the appliance domain administrator. To create additional APS administrators, see [Create an APS Domain Administrator &#40;APS&#41;](create-an-aps-domain-administrator-aps.md).  
   
 ## <a name="Accessing"></a>Launch the Configuration Manager Tool  
-To run the Configuration Manager, use Remote Desktop to connect to the PDW Control node (***PDW_region*-CTL01**)node, and log in as *appliance_domain***\Administrator**. When starting the **Configuration Manager** program, use the **Run as Administrator** option to ensure that your administrator credentials are used.  
+To run the Configuration Manager, use Remote Desktop to connect to the PDW Control node (**_PDW_region_-CTL01**)node, and log in as _appliance_domain_**\Administrator**. When starting the **Configuration Manager** program, use the **Run as Administrator** option to ensure that your administrator credentials are used.  
   
 #### To launch from a browser window  
   

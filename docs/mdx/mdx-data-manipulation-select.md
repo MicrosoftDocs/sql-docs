@@ -1,33 +1,17 @@
 ---
 title: "SELECT Statement (MDX) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/02/2016"
-ms.prod: analysis-services
-ms.prod_service: "analysis-services"
-ms.service: ""
-ms.component: ""
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
-  
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "SELECT"
-dev_langs: 
-  - "kbMDX"
-helpviewer_keywords: 
-  - "SELECT statement [MDX]"
-  - "cubes [Analysis Services], SELECT statement"
-ms.assetid: c0a57214-aa3f-44ce-a369-660c69746f34
-caps.latest.revision: 43
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-ms.workload: "On Demand"
+ms.date: 06/04/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: mdx
+ms.topic: reference
+ms.author: owend
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
 ---
 # MDX Data Manipulation - SELECT
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
 
   Retrieves data from a specified cube.  
   
@@ -127,7 +111,7 @@ FROM
   
  The NON VISUAL option in the subselect statement enables you to filter out members while keeping the true totals instead of filtered totals. This enables you to query for the top ten sales (persons/products/regions) and obtain the true total of sales for all queried members, instead of the total value of sales for the top ten returned. See the examples below for more information.  
   
- Calculated members can be included in \<SELECT query axis clause> whenever the connection was opened using the connection string parameter *subqueries=1*; see [Supported XMLA Properties &#40;XMLA&#41;](../analysis-services/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties.md) and <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A> for parameter usage. An example is provided on calculated members in subselects.  
+ Calculated members can be included in \<SELECT query axis clause> whenever the connection was opened using the connection string parameter *subqueries=1*; see [Supported XMLA Properties &#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties) and <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A> for parameter usage. An example is provided on calculated members in subselects.  
   
 ## Autoexists  
  When two or more attributes of the dimension are used in a SELECT statement, Analysis Services evaluates the attributes' expressions to make sure that the members of those attributes are properly confined to meet the criteria of all other attributes. For example, suppose you are working with attributes from the Geography dimension. If you have one expression that returns all members from the City attribute, and another expression that confines members from the Country attribute to all countries in Europe, then this will result in the City members being confined to only those cities that belong to countries in Europe. This characteristic of Analysis Services is called Autoexists and applies only to attributes in the same dimension. Autoexists only applies to attributes from the same dimension because it tries to prevent the dimension records excluded in one attribute expression from being included by the other attribute expressions. Autoexists can also be understood as the resulting intersection of the different attributes expressions over the dimension records. See the following examples below:  
@@ -350,7 +334,7 @@ FROM
 |**Mountain-100**|**$8,568,958.27**|**$139,393.27**|**1.63%**|  
 |**HL Mountain Frame**|**$3,365,069.27**|**$174.11**|**0.01%**|  
   
- Autoexists behavior can be modified by using the AUTOEXISTS=[1|2|3] parameter in the connection string; see [Supported XMLA Properties &#40;XMLA&#41;](../analysis-services/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties.md) and <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A> for parameter usage.  
+ Autoexists behavior can be modified by using the AUTOEXISTS=[1|2|3] parameter in the connection string; see [Supported XMLA Properties &#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties) and <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A> for parameter usage.  
   
 ## Examples  
  The following example returns the sum of the `Measures.[Order Quantity]` member, aggregated over the first eight months of calendar year 2003 that are contained in the `Date` dimension, from the **Adventure Works** cube.  

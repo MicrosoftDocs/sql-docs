@@ -2,25 +2,18 @@
 title: "Driver Manager Error and Warning Checks | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
-ms.prod_service: "drivers"
-ms.service: ""
-ms.component: "odbc"
+ms.prod: sql
+ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "drivers"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: connectivity
+ms.topic: conceptual
 helpviewer_keywords: 
   - "diagnostic information [ODBC], driver manager error checking"
   - "driver manager [ODBC], error checking"
 ms.assetid: eeb5ab3f-987d-4f30-87d2-7425a81ad1d7
-caps.latest.revision: 5
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
-ms.workload: "Inactive"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # Driver Manager Error and Warning Checks
 The Driver Manager completely or partially implements a number of functions and therefore checks for all or some of the errors and warnings in those functions.  

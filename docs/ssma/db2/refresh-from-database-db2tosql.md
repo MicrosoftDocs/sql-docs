@@ -1,26 +1,15 @@
 ---
 title: "Refresh from Database (DB2ToSQL) | Microsoft Docs"
-ms.prod: "sql-non-specified"
-ms.prod_service: "sql-tools"
-ms.service: ""
-ms.component: "ssma-db2"
+ms.prod: sql
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "sql-ssma"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to: 
-  - "Azure SQL Database"
-  - "SQL Server"
+ms.technology: ssma
+ms.topic: conceptual
 ms.assetid: 613a8368-b372-443f-8252-fb6dc31a003d
-caps.latest.revision: 5
 author: "Shamikg"
 ms.author: "Shamikg"
-manager: "jhubbard"
-ms.workload: "Inactive"
+manager: craigg
 ---
 # Refresh from Database (DB2ToSQL)
 The **Refresh from Database** dialog box lets you select which objects to refresh from the DB2 database. Rows in the dialog box are color coded based on the state of the metadata:  

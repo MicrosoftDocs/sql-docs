@@ -2,24 +2,17 @@
 title: "Edit Tables | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "integration-services"
-ms.service: ""
-ms.component: "change-data-capture"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: integration-services
+ms.topic: conceptual
 f1_keywords: 
   - "tabProps"
 ms.assetid: fed8fada-2abc-45e2-8228-0656f9c599cb
-caps.latest.revision: 6
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
-ms.workload: "Inactive"
+manager: craigg
 ---
 # Edit Tables
   Use the **Tables** tab to make changes to the tables and columns that you selected from the Oracle source database. This tab has the following elements:  

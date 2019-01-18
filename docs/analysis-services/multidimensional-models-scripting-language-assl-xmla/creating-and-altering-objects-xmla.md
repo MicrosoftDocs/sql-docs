@@ -1,37 +1,16 @@
 ---
 title: "Creating and Altering Objects (XMLA) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: analysis-services
-ms.prod_service: "analysis-services"
-ms.service: ""
-ms.component: ""
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
-  
-
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-applies_to: 
-  - "SQL Server 2016 Preview"
-helpviewer_keywords: 
-  - "objects [XML for Analysis]"
-  - "subordinate objects [XML for Analysis]"
-  - "XML for Analysis, objects"
-  - "modifying objects"
-  - "removing objects"
-  - "deleting objects"
-  - "XMLA, objects"
-ms.assetid: a2080867-e130-440c-92eb-f768869f34a8
-caps.latest.revision: 17
-author: "Minewiskan"
-ms.author: "owend"
-manager: "kfile"
-ms.workload: "Inactive"
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: xmla
+ms.topic: conceptual
+ms.author: owend
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
 ---
 # Creating and Altering Objects (XMLA)
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   Major objects can be independently created, altered, and deleted. Major objects include the following objects:  
   
 -   Servers  
@@ -56,27 +35,27 @@ ms.workload: "Inactive"
   
 -   Data sources  
   
- You use the [Create](../../analysis-services/xmla/xml-elements-commands/create-element-xmla.md) command to create a major object on an instance of [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], and the [Alter](../../analysis-services/xmla/xml-elements-commands/alter-element-xmla.md) command to alter an existing major object on an instance. Both commands are run using the [Execute](../../analysis-services/xmla/xml-elements-methods-execute.md) method.  
+ You use the [Create](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/create-element-xmla) command to create a major object on an instance of [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], and the [Alter](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/alter-element-xmla) command to alter an existing major object on an instance. Both commands are run using the [Execute](https://docs.microsoft.com/bi-reference/xmla/xml-elements-methods-execute) method.  
   
 ## Creating Objects  
- When you create objects by using the **Create** method, you must first identify the parent object that contains the [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] object to be created. You identify the parent object by providing an object reference in the [ParentObject](../../analysis-services/xmla/xml-elements-properties/parentobject-element-xmla.md) property of the **Create** command. Each object reference contains the object identifiers needed to uniquely identify the parent object for the **Create** command. For more information about object references, see [Defining and Identifying Objects &#40;XMLA&#41;](../../analysis-services/multidimensional-models-scripting-language-assl-xmla/defining-and-identifying-objects-xmla.md).  
+ When you create objects by using the **Create** method, you must first identify the parent object that contains the [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] object to be created. You identify the parent object by providing an object reference in the [ParentObject](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/object-element-xmla) property of the **Create** command. Each object reference contains the object identifiers needed to uniquely identify the parent object for the **Create** command. For more information about object references, see [Defining and Identifying Objects &#40;XMLA&#41;](../../analysis-services/multidimensional-models-scripting-language-assl-xmla/defining-and-identifying-objects-xmla.md).  
   
  For example, you must provide an object reference to a cube to create a new measure group for the cube. The object reference for the cube in the **ParentObject** property contains both a database identifier and a cube identifier, as the same cube identifier could potentially be used on a different database.  
   
- The [ObjectDefinition](../../analysis-services/xmla/xml-elements-properties/objectdefinition-element-xmla.md) element contains Analysis Services Scripting Language (ASSL) elements that define the major object to be created. For more information about ASSL, see [Developing with Analysis Services Scripting Language &#40;ASSL&#41;](../../analysis-services/multidimensional-models/scripting-language-assl/developing-with-analysis-services-scripting-language-assl.md).  
+ The [ObjectDefinition](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/objectdefinition-element-xmla) element contains Analysis Services Scripting Language (ASSL) elements that define the major object to be created. For more information about ASSL, see [Developing with Analysis Services Scripting Language &#40;ASSL&#41;](../../analysis-services/multidimensional-models/scripting-language-assl/developing-with-analysis-services-scripting-language-assl.md).  
   
  If you set the **AllowOverwrite** attribute of the **Create** command to true, you can overwrite an existing major object that has the specified identifier. Otherwise, an error occurs if a major object that has the specified identifier already exists in the parent object.  
   
- For more information about the **Create** command, see [Create Element &#40;XMLA&#41;](../../analysis-services/xmla/xml-elements-commands/create-element-xmla.md).  
+ For more information about the **Create** command, see [Create Element &#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/create-element-xmla).  
   
 ### Creating Session Objects  
  Session objects are temporary objects that are available only to the explicit or implicit session used by a client application and are deleted when the session is ended. You can create session objects by setting the **Scope** attribute of the **Create** command to *Session*.  
   
 > [!NOTE]  
->  When using the *Session* setting, the **ObjectDefinition** element can only contain [Dimension](../../analysis-services/scripting/objects/dimension-element-assl.md), [Cube](../../analysis-services/scripting/objects/cube-element-assl.md), or [MiningModel](../../analysis-services/scripting/objects/miningmodel-element-assl.md) ASSL elements.  
+>  When using the *Session* setting, the **ObjectDefinition** element can only contain [Dimension](https://docs.microsoft.com/bi-reference/assl/objects/dimension-element-assl), [Cube](https://docs.microsoft.com/bi-reference/assl/objects/cube-element-assl), or [MiningModel](https://docs.microsoft.com/bi-reference/assl/objects/miningmodel-element-assl) ASSL elements.  
   
 ## Altering Objects  
- When modifying objects by using the **Alter** method, you must first identify the object to be modified by providing an object reference in the [Object](../../analysis-services/xmla/xml-elements-properties/object-element-xmla.md) property of the **Alter** command. Each object reference contains the object identifiers needed to uniquely identify the object for the **Alter** command. For more information about object references, see [Defining and Identifying Objects &#40;XMLA&#41;](../../analysis-services/multidimensional-models-scripting-language-assl-xmla/defining-and-identifying-objects-xmla.md).  
+ When modifying objects by using the **Alter** method, you must first identify the object to be modified by providing an object reference in the [Object](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/object-element-xmla) property of the **Alter** command. Each object reference contains the object identifiers needed to uniquely identify the object for the **Alter** command. For more information about object references, see [Defining and Identifying Objects &#40;XMLA&#41;](../../analysis-services/multidimensional-models-scripting-language-assl-xmla/defining-and-identifying-objects-xmla.md).  
   
  For example, you must provide an object reference to a cube in order to modify the structure of a cube. The object reference for the cube in the **Object** property contains both a database identifier and a cube identifier, as the same cube identifier could potentially be used on a different database.  
   
@@ -93,7 +72,7 @@ ms.workload: "Inactive"
  To modify session objects created by the **Create** command, set the **Scope** attribute of the **Alter** command to *Session*.  
   
 > [!NOTE]  
->  When using the *Session* setting, the **ObjectDefinition** element can only contain [Dimension](../../analysis-services/scripting/objects/dimension-element-assl.md), [Cube](../../analysis-services/scripting/objects/cube-element-assl.md), or [MiningModel](../../analysis-services/scripting/objects/miningmodel-element-assl.md) ASSL elements.  
+>  When using the *Session* setting, the **ObjectDefinition** element can only contain [Dimension](https://docs.microsoft.com/bi-reference/assl/objects/dimension-element-assl), [Cube](https://docs.microsoft.com/bi-reference/assl/objects/cube-element-assl), or [MiningModel](https://docs.microsoft.com/bi-reference/assl/objects/miningmodel-element-assl) ASSL elements.  
   
 ## Creating or Altering Subordinate Objects  
  Although a **Create** or **Alter** command creates or alters only one topmost major object, the major object being created or modified can contain definitions within the enclosing **ObjectDefinition** property for other major and minor objects that are subordinate to it. For example, if you define a cube, you specify the parent database in **ParentObject**, and within the cube definition in **ObjectDefinition** you can define measure groups for the cube, and within the measure groups you can define partitions for each measure group. A minor object can be defined only under the major object that contains it. For more information about major and minor objects, see [Database Objects &#40;Analysis Services - Multidimensional Data&#41;](../../analysis-services/multidimensional-models/olap-logical/database-objects-analysis-services-multidimensional-data.md).  
@@ -149,10 +128,10 @@ ms.workload: "Inactive"
 ```  
   
 ### Comments  
- The **ObjectExpansion** attribute of the **Alter** command was set to *ObjectProperties*. This setting allows the [ImpersonationInfo](../../analysis-services/scripting/properties/impersonationinfo-element-assl.md) element, a minor object, to be excluded from the data source defined in **ObjectDefinition**. Therefore, the impersonation information for that data source remains set to the service account, as specified in the first example.  
+ The **ObjectExpansion** attribute of the **Alter** command was set to *ObjectProperties*. This setting allows the [ImpersonationInfo](https://docs.microsoft.com/bi-reference/assl/properties/impersonationinfo-element-assl) element, a minor object, to be excluded from the data source defined in **ObjectDefinition**. Therefore, the impersonation information for that data source remains set to the service account, as specified in the first example.  
   
 ## See Also  
- [Execute Method &#40;XMLA&#41;](../../analysis-services/xmla/xml-elements-methods-execute.md)   
+ [Execute Method &#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-elements-methods-execute)   
  [Developing with Analysis Services Scripting Language &#40;ASSL&#41;](../../analysis-services/multidimensional-models/scripting-language-assl/developing-with-analysis-services-scripting-language-assl.md)   
  [Developing with XMLA in Analysis Services](../../analysis-services/multidimensional-models-scripting-language-assl-xmla/developing-with-xmla-in-analysis-services.md)  
   

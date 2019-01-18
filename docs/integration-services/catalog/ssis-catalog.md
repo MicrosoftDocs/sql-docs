@@ -1,39 +1,37 @@
 ---
 title: "SSIS Catalog | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-non-specified"
+ms.date: 11/12/2018
+ms.prod: sql
 ms.prod_service: "integration-services"
-ms.service: ""
-ms.component: "service"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: integration-services
+ms.topic: conceptual
 f1_keywords: 
   - "sql13.ssis.ssms.iscreatecatalog.f1"
   - "sql13.ssis.ssms.iscatalogprop.general.f1"
   - "sql13.ssis.dbupgradewizard.f1"
 ms.assetid: 24bd987e-164a-48fd-b4f2-cbe16a3cd95e
-caps.latest.revision: 28
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
-ms.workload: "Active"
+manager: craigg
 ---
 
 # SSIS Catalog
-  The **SSISDB** catalog is the central point for working with [!INCLUDE[ssISnoversion_md](../../includes/ssisnoversion-md.md)] (SSIS) projects that you’ve deployed to the [!INCLUDE[ssISnoversion_md](../../includes/ssisnoversion-md.md)] server. For example, you set project and package parameters, configure environments to specify runtime values for packages, execute and troubleshoot packages, and manage [!INCLUDE[ssISnoversion_md](../../includes/ssisnoversion-md.md)] server operations.  
-  
+  The **SSISDB** catalog is the central point for working with [!INCLUDE[ssISnoversion_md](../../includes/ssisnoversion-md.md)] (SSIS) projects that you've deployed to the [!INCLUDE[ssISnoversion_md](../../includes/ssisnoversion-md.md)] server. For example, you set project and package parameters, configure environments to specify runtime values for packages, execute and troubleshoot packages, and manage [!INCLUDE[ssISnoversion_md](../../includes/ssisnoversion-md.md)] server operations.  
+ 
+> [!NOTE]
+> This article describes the SSIS Catalog in general, and the SSIS Catalog running on premises. You can also create the SSIS Catalog in Azure SQL Database, and deploy and run SSIS packages in Azure. For more info, see [Lift and shift SQL Server Integration Services workloads to the cloud](../lift-shift/ssis-azure-lift-shift-ssis-packages-overview.md).
+>
+> Although you can also run SSIS packages on Linux, the SSIS Catalog is not supported on Linux. For more info, see [Extract, transform, and load data on Linux with SSIS](../../linux/sql-server-linux-migrate-ssis.md).
+ 
  The objects that are stored in the **SSISDB** catalog include projects, packages, parameters, environments, and operational history.  
   
  You inspect objects, settings, and operational data that are stored in the **SSISDB** catalog, by querying the views in the **SSISDB** database. You manage the objects by calling stored procedures in the **SSISDB** database or by using the UI of the **SSISDB** catalog. In many cases, the same task can be performed in the UI or by calling a stored procedure.  
   
  To maintain the **SSISDB** database, it is recommended that you apply standard enterprise policies for managing user databases. For information about creating maintenance plans, see [Maintenance Plans](../../relational-databases/maintenance-plans/maintenance-plans.md).  
   
- The **SSISDB** catalog and the **SSISDB** database support Windows PowerShell. For more information about using SQL Server with Windows PowerShell, see [SQL Server PowerShell](../../relational-databases/scripting/sql-server-powershell.md). For examples of how to use Windows PowerShell to complete tasks such as deploying a project, see the blog entry, [SSIS and PowerShell in SQL Server 2012](http://go.microsoft.com/fwlink/?LinkId=242539), on blogs.msdn.com.  
+ The **SSISDB** catalog and the **SSISDB** database support Windows PowerShell. For more information about using SQL Server with Windows PowerShell, see [SQL Server PowerShell](../../relational-databases/scripting/sql-server-powershell.md). For examples of how to use Windows PowerShell to complete tasks such as deploying a project, see the blog entry, [SSIS and PowerShell in SQL Server 2012](https://go.microsoft.com/fwlink/?LinkId=242539), on blogs.msdn.com.  
   
  For more information about viewing operations data, see [Monitor Running Package and Other Operations](../../integration-services/performance/monitor-running-packages-and-other-operations.md).  
   
@@ -85,7 +83,7 @@ ms.workload: "Active"
   
 -   The name might not contain leading or trailing spaces.  
   
--   @ is not allowed as the first character, but subsequent characters might use @.  
+-   \@ is not allowed as the first character, but subsequent characters might use \@.  
   
 -   The length of the name must be greater than 0 and less than or equal to 128.  
   
@@ -103,7 +101,7 @@ ms.workload: "Active"
   
 -   The name might not contain leading or trailing spaces.  
   
--   @ is not allowed as the first character, but subsequent characters might use @.  
+-   \@ is not allowed as the first character, but subsequent characters might use \@.  
   
 -   The length of the name must be greater than 0 and less than or equal to 128.  
   
@@ -219,7 +217,7 @@ To run the **SSIS Server Maintenance Job**, SSIS creates the SQL Server login **
   
 -   [catalog.get_project &#40;SSISDB Database&#41;](../../integration-services/system-stored-procedures/catalog-get-project-ssisdb-database.md)  
   
--   [catalog.move_project &#40;&#40;SSISDB Database&#41;](../Topic/catalog.move_project%20\(\(SSISDB%20Database\).md)  
+-   [catalog.move_project &#40;&#40;SSISDB Database&#41;](../../integration-services/system-stored-procedures/catalog-move-project-ssisdb-database.md)  
   
 -   [catalog.restore_project &#40;SSISDB Database&#41;](../../integration-services/system-stored-procedures/catalog-restore-project-ssisdb-database.md)  
   
@@ -353,12 +351,12 @@ To run the **SSIS Server Maintenance Job**, SSIS creates the SQL Server login **
   
     ```  
   
-     For more examples of how to use Windows PowerShell and the <xref:Microsoft.SqlServer.Management.IntegrationServices> namespace, see the blog entry, [SSIS and PowerShell in SQL Server 2012](http://go.microsoft.com/fwlink/?LinkId=242539), on blogs.msdn.com. For an overview of the namespace and code examples, see the blog entry, [A Glimpse of the SSIS Catalog Managed Object Model](http://go.microsoft.com/fwlink/?LinkId=254267), on blogs.msdn.com.  
+     For more examples of how to use Windows PowerShell and the <xref:Microsoft.SqlServer.Management.IntegrationServices> namespace, see the blog entry, [SSIS and PowerShell in SQL Server 2012](https://go.microsoft.com/fwlink/?LinkId=242539), on blogs.msdn.com. For an overview of the namespace and code examples, see the blog entry, [A Glimpse of the SSIS Catalog Managed Object Model](https://go.microsoft.com/fwlink/?LinkId=254267), on blogs.msdn.com.  
 
 ## Catalog Properties Dialog Box
   Use the Catalog Properties dialog box to configure the SSISDB catalog. Catalog properties define how sensitive data is encrypted, how operations and project versioning data is retained, and when validation operations time out. The SSISDB catalog is a central storage and administration point for [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] projects, packages, parameters, and environments.  
   
- You can also view catalog properties in the catalog.catalog_property view, and set the properties by using the catalog.configure_catalog stored procedure. For more information, see [catalog.catalog_properties &#40;SSISDB Database&#41;](../../integration-services/system-views/catalog-catalog-properties-ssisdb-database.md) and [catalog.configure_catalog &#40;SSISDB Database&#41;](../../integration-services/system-stored-procedures/catalog-configure-catalog-ssisdb-database.md).  
+ You can also view catalog properties in the `catalog.catalog_properties` view, and set the properties by using the `catalog.configure_catalog` stored procedure. For more information, see [catalog.catalog_properties &#40;SSISDB Database&#41;](../../integration-services/system-views/catalog-catalog-properties-ssisdb-database.md) and [catalog.configure_catalog &#40;SSISDB Database&#41;](../../integration-services/system-stored-procedures/catalog-configure-catalog-ssisdb-database.md).  
   
  **What do you want to do?**  
   
@@ -377,22 +375,21 @@ To run the **SSIS Server Maintenance Job**, SSIS creates the SQL Server login **
 ###  <a name="options"></a> Configure the Options  
   
 #### Options  
- The following table describes certain properties in the dialog box and the corresponding properties in the catalog.catalog_property view.  
+ The following table describes certain properties in the dialog box and the corresponding properties in the `catalog.catalog_properties` view.  
   
-|Property Name (Catalog Properties dialog box)|Property Name (catalog.catalog_property view)|Description|  
+|Property Name (Catalog Properties dialog box)|Property Name (catalog.catalog_properties view)|Description|  
 |-----------------------------------------------------|------------------------------------------------------|-----------------|  
-|Encryption Algorithm Name|ENCRYPTION_CLEANUP_ENABLED|Specifies the type of encryption that is used to encrypt the sensitive parameter values in the catalog. The following are the possible values:<br /><br /> DES<br /><br /> TRIPLE_DES<br /><br /> TRIPLE_DES_3KEY<br /><br /> DESPX<br /><br /> AES_128<br /><br /> AES_192<br /><br /> AES_256 (default)|  
-|Validation Timeout (seconds)|VALIDATION_TIMEOUT|Specify the maximum number of seconds a project validation or a package validation can run before it is stopped. The default value is 300 seconds.<br /><br /> Performing the validation is an asynchronous operation. The larger the project or package is, the longer it takes to validate.<br /><br /> For information on validating projects and packages, see [Integration Services Data Types in Expressions](../../integration-services/expressions/integration-services-data-types-in-expressions.md).|  
+|Encryption Algorithm Name|ENCRYPTION_ALGORITHM|Specifies the type of encryption that is used to encrypt the sensitive parameter values in the catalog. The following are the possible values:<br /><br /> DES<br /><br /> TRIPLE_DES<br /><br /> TRIPLE_DES_3KEY<br /><br /> DESPX<br /><br /> AES_128<br /><br /> AES_192<br /><br /> AES_256 (default)|  
+|Maximum Number of Versions per Project|MAX_PROJECT_VERSIONS|Specify how many versions of a project are stored in the catalog. Older versions of projects that exceed the maximum are removed when the project version cleanup job runs.|  
 |Clean Logs Periodically|OPERATION_CLEANUP_ENABLED|Set the property to True to indicate that the SQL Server Agent job, operations cleanup, runs. Otherwise, set the property to False.|  
 |Retention Period (days)|RETENTION_WINDOW|Specify the maximum age of allowable operations data (in days). Data that is older than the specified number of days are removed by the SQL Agent job, operations cleanup.|  
-|Maximum Number of Versions per Project|MAX_PROJECT_VERSIONS|Specify how many versions of a project are stored in the catalog. Older versions of projects that exceed the maximum are removed when the project version cleanup job runs.|  
 
 ## Back up, Restore, and Move the SSIS Catalog
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] includes the SSISDB database. You query views in the SSISDB database to inspect objects, settings, and operational data that are stored in the **SSISDB** catalog. This topic provides instructions for backing up and restoring the database.  
   
- The **SSISDB** catalog stores the packages that you’ve deployed to the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] server. For more information about the catalog, see [SSIS Catalog](../../integration-services/catalog/ssis-catalog.md).  
+ The **SSISDB** catalog stores the packages that you've deployed to the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] server. For more information about the catalog, see [SSIS Catalog](../../integration-services/catalog/ssis-catalog.md).  
   
 ###  <a name="backup"></a> To Back up the SSIS Database  
   
@@ -410,7 +407,7 @@ To run the **SSIS Server Maintenance Job**, SSIS creates the SQL Server login **
   
     ```  
   
-3.  Back up the SSISDB database by using the **Backup Database** dialog box in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. For more information, see [How to: Back Up a Database (SQL Server Management Studio)](http://go.microsoft.com/fwlink/?LinkId=231812).  
+3.  Back up the SSISDB database by using the **Backup Database** dialog box in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. For more information, see [How to: Back Up a Database (SQL Server Management Studio)](https://go.microsoft.com/fwlink/?LinkId=231812).  
   
 4.  Generate the CREATE LOGIN script for ##MS_SSISServerCleanupJobLogin##, by doing the following things. For more information, see [CREATE LOGIN &#40;Transact-SQL&#41;](../../t-sql/statements/create-login-transact-sql.md).  
   
@@ -434,7 +431,7 @@ To run the **SSIS Server Maintenance Job**, SSIS creates the SQL Server login **
   
 ### To Restore the SSIS Database  
   
-1.  If you are restoring the SSISDB database to an [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance where the SSISDB catalog was never created, enable common language runtime (clr) by running the sp_configure stored procedure. For more information, see [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) and [clr enabled Option](http://go.microsoft.com/fwlink/?LinkId=231855).  
+1.  If you are restoring the SSISDB database to an [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance where the SSISDB catalog was never created, enable common language runtime (clr) by running the `sp_configure` stored procedure. For more information, see [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) and [clr enabled Option](https://go.microsoft.com/fwlink/?LinkId=231855).  
   
     ```  
     use master   
@@ -483,7 +480,7 @@ To run the **SSIS Server Maintenance Job**, SSIS creates the SQL Server login **
   
     -   **Method 1**  
   
-         Use this method if you’ve already performed a backup of the database master key, and you have the password used to encrypt the master key.  
+         Use this method if you've already performed a backup of the database master key, and you have the password used to encrypt the master key.  
   
         ```  
                Restore master key from file = 'c:\temp\RCTestInstKey'  
@@ -539,10 +536,10 @@ To run the **SSIS Server Maintenance Job**, SSIS creates the SQL Server login **
   
 2.  In [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], expand the local server, and then expand **Integration Services Catalogs**.  
   
-3.  Right-click on **SSISDB**, and then select **Database Upgrade** to launch the SSISDB Upgrade Wizard.  
+3.  Right-click on **SSISDB**, and then select **Database Upgrade** to launch the SSISDB Upgrade Wizard. Or launch the SSISDB Upgrade Wizard by running `C:\Program Files\Microsoft SQL Server\140\DTS\Binn\ISDBUpgradeWizard.exe` with elevated permissions on the local server.
   
-     ![Launch the SSISDB upgrade wizard](../../integration-services/service/media/ssisdb-upgrade-wizard-1.png "Launch the SSISDB upgrade wizard")  
-  
+     ![Launch the SSISDB upgrade wizard](../../integration-services/service/media/ssisdb-upgrade-wizard-1.png)
+
 4.  On the **Select Instance** page, select a SQL Server instance on the local server.  
   
     > [!IMPORTANT]  
@@ -577,7 +574,7 @@ To run the **SSIS Server Maintenance Job**, SSIS creates the SQL Server login **
 ###  <a name="prereq"></a> Prerequisites  
 Do the following prerequisite steps before enabling Always On support for the SSISDB database.  
   
-1.  Set up a Windows failover cluster. See [Installing the Failover Cluster Feature and Tools for Windows Server 2012](http://blogs.msdn.com/b/clustering/archive/2012/04/06/10291601.aspx) blog post for instructions. Install the feature and tools on all cluster nodes.  
+1.  Set up a Windows failover cluster. See [Installing the Failover Cluster Feature and Tools for Windows Server 2012](https://blogs.msdn.com/b/clustering/archive/2012/04/06/10291601.aspx) blog post for instructions. Install the feature and tools on all cluster nodes.  
   
 2.  Install SQL Server 2016 with Integration Services (SSIS) feature on each node of the cluster.  
   
@@ -596,7 +593,7 @@ Do the following prerequisite steps before enabling Always On support for the SS
 > -   You must enable **SSIS support for Always On** *after* you add SSISDB to an Always On Availability Group.  
 
 > [!NOTE]
-> For more info about this procedure, see the following walkthrough with additional screen shots by SQL Server MVP Marcos Freccia: [Adding SSISDB to AG for SQL Server 2016](https://marcosfreccia.wordpress.com/2017/04/28/adding-ssisdb-to-ag-for-sql-server-2016/).
+> For more info about this procedure, see the following walkthrough with additional screen shots by Data Platform MVP Marcos Freccia: [Adding SSISDB to AG for SQL Server 2016](https://marcosfreccia.com/2017/04/28/adding-ssisdb-to-ag-for-sql-server-2016/).
 
 ####  <a name="Step1"></a> Step 1: Create Integration Services Catalog  
   
@@ -615,9 +612,7 @@ Adding the SSISDB database to an Always On Availability Group is almost same as 
   
 Provide the password that you specified while creating the SSIS Catalog in the **Select Databases** page of the **New Availability Group** wizard.
 
-When you're prompted to **Select your data synchronization preference**, select **Skip initial data synchronization**.
-  
- ![New Availability Group](../../integration-services/service/media/ssis-newavailabilitygroup.png "New Availability Group")  
+![New Availability Group](../../integration-services/service/media/ssis-newavailabilitygroup.png "New Availability Group")  
   
 ####  <a name="Step3"></a> Step 3: Enable SSIS support for Always On  
  After you create the Integration Service Catalog, right-click the **Integration Service Catalogs** node, and click **Enable Always On Support.** You should see the following **Enable Support for Always On** dialog box. If this menu item is disabled, confirm that you have all the prerequisites installed and click **Refresh**.  
@@ -627,7 +622,7 @@ When you're prompted to **Select your data synchronization preference**, select 
 > [!WARNING]  
 >  Auto-failover of SSISDB database is not supported until you enable SSIS Support for Always On.  
   
- The newly added secondary replicas from the Always On availability group are shown in the table. Click **Connect…** button for each replica in the list and enter authentication credentials to connect to the replica. The user account must be a member of sysadmin group on each replica to enable SSIS support for Always On. After you successfully connect to each replica, click **OK** to enable SSIS support for Always On.  
+ The newly added secondary replicas from the Always On availability group are shown in the table. Click **Connect...** button for each replica in the list and enter authentication credentials to connect to the replica. The user account must be a member of sysadmin group on each replica to enable SSIS support for Always On. After you successfully connect to each replica, click **OK** to enable SSIS support for Always On.  
  
 If the **Enable Always On support** option on the context menu appears to be disabled after you've completed the other prerequisites, try these things:
 1.  Refresh the context menu by clicking the **Refresh** option.
@@ -635,13 +630,13 @@ If the **Enable Always On support** option on the context menu appears to be dis
 3.  Make sure the SQL Server version is 13.0 or higher. SSIS supports Always On only on SQL Server 2016 and later versions.
 
 ###  <a name="Upgrade"></a> Upgrading SSISDB in an availability group  
- If you're upgrading SQL Server from a previous version, and SSISDB is in an Always On availability group, your upgrade may be blocked by the “SSISDB in Always On Availability Group check” rule. This blocking occurs because upgrade runs in single-user mode, while an availability database must be a multi-user database. Therefore, during upgrade or patching, all availability databases including SSISDB are taken offline and are not upgraded or patched. To let upgrade continue, first remove SSISDB from the availability group, then upgrade or patch each node, then add SSISDB back to the availability group.  
+ If you're upgrading SQL Server from a previous version, and SSISDB is in an Always On availability group, your upgrade may be blocked by the "SSISDB in Always On Availability Group check" rule. This blocking occurs because upgrade runs in single-user mode, while an availability database must be a multi-user database. Therefore, during upgrade or patching, all availability databases including SSISDB are taken offline and are not upgraded or patched. To let upgrade continue, first remove SSISDB from the availability group, then upgrade or patch each node, then add SSISDB back to the availability group.  
   
- If you are blocked by the “SSISDB in Always On Availability Group check” rule, follow these steps to upgrade SQL Server.  
+ If you are blocked by the "SSISDB in Always On Availability Group check" rule, follow these steps to upgrade SQL Server.  
   
 1.  Remove the SSISDB database from the availability group. For more info, see [Remove a Secondary Database from an Availability Group &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/remove-a-secondary-database-from-an-availability-group-sql-server.md) and [Remove a Primary Database from an Availability Group &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/remove-a-primary-database-from-an-availability-group-sql-server.md).  
   
-2.  Click **Rerun** in the upgrade wizard. The “SSISDB in Always On Availability Group check” rule passes.  
+2.  Click **Rerun** in the upgrade wizard. The "SSISDB in Always On Availability Group check" rule passes.  
   
 3.  Click the **Next** to continue the upgrade.  
   
@@ -661,8 +656,8 @@ If the **Enable Always On support** option on the context menu appears to be dis
   
 ##  <a name="RelatedContent"></a> Related Content  
   
--   Blog entry, [SSIS and PowerShell in SQL Server 2012](http://go.microsoft.com/fwlink/?LinkId=242539), on blogs.msdn.com.  
+-   Blog entry, [SSIS and PowerShell in SQL Server 2012](https://go.microsoft.com/fwlink/?LinkId=242539), on blogs.msdn.com.  
   
--   Blog entry, [SSIS Catalog Access Control Tips](http://go.microsoft.com/fwlink/?LinkId=246669), on blogs.msdn.com.  
+-   Blog entry, [SSIS Catalog Access Control Tips](https://go.microsoft.com/fwlink/?LinkId=246669), on blogs.msdn.com.  
   
--   Blog entry, [A Glimpse of the SSIS Catalog Managed Object Model](http://go.microsoft.com/fwlink/?LinkId=254267), on blogs.msdn.com.  
+-   Blog entry, [A Glimpse of the SSIS Catalog Managed Object Model](https://go.microsoft.com/fwlink/?LinkId=254267), on blogs.msdn.com.  

@@ -1,35 +1,30 @@
 ---
 title: "Microsoft OLE DB Provider for SQL Server | Microsoft Docs"
-ms.prod: "sql-non-specified"
-ms.prod_service: "drivers"
-ms.service: ""
-ms.component: "ado"
-ms.technology:
-  - "drivers"
+ms.prod: sql
+ms.prod_service: connectivity
+ms.technology: connectivity
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords:
   - "providers [ADO], OLE DB provider for SQL Server"
   - "OLE DB provider for SQL Server [ADO]"
   - "SQLOLEDB [ADO]"
 ms.assetid: 99bc40c4-9181-4ca1-a06f-9a1a914a0b7b
-caps.latest.revision: 19
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
-ms.workload: "Active"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # Microsoft OLE DB Provider for SQL Server Overview
 The Microsoft OLE DB Provider for SQL Server, SQLOLEDB, allows ADO to access Microsoft SQL Server.
 
+**NOTE:**  It is not recommended to use this driver for new development. The new OLE DB provider is called the [Microsoft OLE DB Driver for SQL Server](../../../connect/oledb/oledb-driver-for-sql-server.md) (MSOLEDBSQL) which will be updated with the most recent server features going forward.
+
 ## Connection String Parameters
  To connect to this provider, set the *Provider* argument to the [ConnectionString](../../../ado/reference/ado-api/connectionstring-property-ado.md) property to:
 
-```
+```vb
 SQLOLEDB
 ```
 
@@ -38,7 +33,7 @@ SQLOLEDB
 ## Typical Connection String
  A typical connection string for this provider is:
 
-```
+```vb
 "Provider=SQLOLEDB;Data Source=serverName;"
 Initial Catalog=databaseName;
 User ID=MyUserID;Password=MyPassword;"
@@ -75,14 +70,14 @@ User ID=MyUserID;Password=MyPassword;"
 ## Command Object Usage
  SQLOLEDB accepts an amalgam of ODBC, ANSI, and SQL Server-specific Transact-SQL as valid syntax. For example, the following SQL statement uses an ODBC SQL escape sequence to specify the LCASE string function:
 
-```
+```sql
 SELECT customerid={fn LCASE(CustomerID)} FROM Customers
 
 ```
 
  LCASE returns a character string, converting all uppercase characters to their lowercase equivalents. The ANSI SQL string function LOWER performs the same operation, so the following SQL statement is an ANSI equivalent to the ODBC statement presented earlier:
 
-```
+```sql
 SELECT customerid=LOWER(CustomerID) FROM Customers
 
 ```
@@ -94,14 +89,14 @@ SELECT customerid=LOWER(CustomerID) FROM Customers
 
 ## ODBC SQL
 
-```
+```vb
 {call SalesByCategory('Produce', '1995')}
 
 ```
 
 ## Transact-SQL
 
-```
+```sql
 EXECUTE SalesByCategory 'Produce', '1995'
 
 ```
@@ -134,7 +129,7 @@ EXECUTE SalesByCategory 'Produce', '1995'
 ## Dynamic Properties
  The Microsoft OLE DB Provider for SQL Server inserts several dynamic properties into the **Properties** collection of the unopened [Connection](../../../ado/reference/ado-api/connection-object-ado.md), [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md), and [Command](../../../ado/reference/ado-api/command-object-ado.md) objects.
 
- The following tables are a cross-index of the ADO and OLE DB names for each dynamic property. The OLE DB Programmer's Reference refers to an ADO property name by the term "Description." You can find more information about these properties in the OLE DB Programmer's Reference. Search for the OLE DB property name in the Index or see [Appendix C: OLE DB Properties](http://msdn.microsoft.com/en-us/deded3ff-f508-4e1b-b2b1-fd9afd3bd292).
+ The following tables are a cross-index of the ADO and OLE DB names for each dynamic property. The OLE DB Programmer's Reference refers to an ADO property name by the term "Description." You can find more information about these properties in the OLE DB Programmer's Reference. Search for the OLE DB property name in the Index or see [Appendix C: OLE DB Properties](https://msdn.microsoft.com/deded3ff-f508-4e1b-b2b1-fd9afd3bd292).
 
 ## Connection Dynamic Properties
  The following properties are added to the **Properties** collection of the **Connection** object.
@@ -354,7 +349,7 @@ EXECUTE SalesByCategory 'Produce', '1995'
 |XML Root|SSPROP_STREAM_XMLROOT|
 |XSL|SSPROP_STREAM_XSL|
 
- For specific implementation details and functional information about the Microsoft SQL Server OLE DB Provider, see the [SQL Server Provider](http://msdn.microsoft.com/en-us/adf1d6c4-5930-444a-9248-ff1979729635).
+ For specific implementation details and functional information about the Microsoft SQL Server OLE DB Provider, see the [SQL Server Provider](https://msdn.microsoft.com/adf1d6c4-5930-444a-9248-ff1979729635).
 
 ## See Also
  [ConnectionString Property (ADO)](../../../ado/reference/ado-api/connectionstring-property-ado.md)

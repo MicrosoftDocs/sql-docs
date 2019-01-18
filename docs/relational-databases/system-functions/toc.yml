@@ -1,0 +1,156 @@
+- name: Overview
+  href: system-functions-for-transact-sql.md
+- name: Always On Availability Groups
+  href: always-on-availability-groups-functions-transact-sql.md
+  items:
+  - name: sys.fn_hadr_is_primary_replica
+    href: sys-fn-hadr-is-primary-replica-transact-sql.md
+  - name: sys.fn_hadr_backup_is_preferred_replica 
+    href: sys-fn-hadr-backup-is-preferred-replica-transact-sql.md
+  - name: sys.fn_hadr_distributed_ag_replica
+    href: sys-fn-hadr-distributed-ag-replica-transact-sql.md
+  - name: sys.fn_hadr_distributed_ag_database_replica
+    href: sys-fn-hadr-distributed-ag-database-replica-transact-sql.md
+- name: Change Data Capture
+  href: change-data-capture-functions-transact-sql.md
+  items:
+  - name: cdc.fn_cdc_get_all_changes_<capture_instance> 
+    href: cdc-fn-cdc-get-all-changes-capture-instance-transact-sql.md
+  - name: cdc.fn_cdc_get_net_changes_<capture_instance>
+    href: cdc-fn-cdc-get-net-changes-capture-instance-transact-sql.md
+  - name: sys.fn_cdc_decrement_lsn
+    href: sys-fn-cdc-decrement-lsn-transact-sql.md
+  - name: sys.fn_cdc_get_column_ordinal
+    href: sys-fn-cdc-get-column-ordinal-transact-sql.md
+  - name: sys.fn_cdc_get_max_lsn
+    href: sys-fn-cdc-get-max-lsn-transact-sql.md
+  - name: sys.fn_cdc_get_min_lsn
+    href: sys-fn-cdc-get-min-lsn-transact-sql.md
+  - name: sys.fn_cdc_has_column_changed
+    href: sys-fn-cdc-has-column-changed-transact-sql.md
+  - name: sys.fn_cdc_increment_lsn
+    href: sys-fn-cdc-increment-lsn-transact-sql.md
+  - name: sys.fn_cdc_is_bit_set
+    href: sys-fn-cdc-is-bit-set-transact-sql.md
+  - name: sys.fn_cdc_map_lsn_to_time
+    href: sys-fn-cdc-map-lsn-to-time-transact-sql.md
+  - name: sys.fn_cdc_map_time_to_lsn
+    href: sys-fn-cdc-map-time-to-lsn-transact-sql.md
+  - name: sys.fn_all_changes_<capture_instance>
+    href: sys-fn-all-changes-capture-instance-transact-sql.md
+  - name: sys.fn_net_changes_<capture_instance>
+    href: sys-fn-net-changes-capture-instance-transact-sql.md
+- name: Change Tracking
+  href: change-tracking-functions-transact-sql.md
+  items:
+  - name: CHANGETABLE
+    href: changetable-transact-sql.md
+  - name: CHANGE_TRACKING_MIN_VALID_VERSION
+    href: change-tracking-min-valid-version-transact-sql.md
+  - name: CHANGE_TRACKING_CURRENT_VERSION
+    href: change-tracking-current-version-transact-sql.md
+  - name: CHANGE_TRACKING_IS_COLUMN_IN_MASK
+    href: change-tracking-is-column-in-mask-transact-sql.md
+  - name: WITH CHANGE_TRACKING_CONTEXT
+    href: with-change-tracking-context-transact-sql.md
+- name: Data Collector 
+  href: data-collector-functions-transact-sql.md
+  items:
+  - name: fn_syscollector_get_execution_details
+    href: fn-syscollector-get-execution-details-transact-sql.md
+  - name: fn_syscollector_get_execution_stats
+    href: fn-syscollector-get-execution-stats-transact-sql.md
+  - name: snapshots.fn_trace_getdata
+    href: snapshots-fn-trace-getdata-transact-sql.md
+- name: Filestream and FileTable
+  href: filestream-and-filetable-functions-transact-sql.md
+  items:
+  - name: FileTableRootPath
+    href: filetablerootpath-transact-sql.md
+  - name: GetFileNamespacePath
+    href: getfilenamespacepath-transact-sql.md
+  - name: GetPathLocator
+    href: getpathlocator-transact-sql.md
+  - name: PathName
+    href: pathname-transact-sql.md
+- name: Managed Backup
+  href: managed-backup-functions-transact-sql.md
+  items:
+  - name: managed_backup.fn_backup_db_config
+    href: managed-backup-fn-backup-db-config-transact-sql.md
+  - name: managed_backup.fn_is_master_switch_on
+    href: managed-backup-fn-is-master-switch-on-transact-sql.md
+  - name: managed_backup.fn_get_current_xevent_settings
+    href: managed-backup-fn-get-current-xevent-settings-transact-sql.md
+  - name: managed_backup.fn_get_parameter
+    href: managed-backup-fn-get-parameter-transact-sql.md
+  - name: managed_backup.fn_available_backups
+    href: managed-backup-fn-available-backups-transact-sql.md
+  - name: managed_backup.fn_get_health_status
+    href: managed-backup-fn-get-health-status-transact-sql.md
+  - name: managed_backup.fn_backup_instance_config
+    href: managed-backup-fn-backup-instance-config-transact-sql.md
+- name: sys.fn_get_sql
+  href: sys-fn-get-sql-transact-sql.md
+- name: sys.fn_MSxe_read_event_stream
+  href: sys-fn-msxe-read-event-stream-transact-sql.md
+- name: sys.fn_stmt_sql_handle_from_sql_stmt
+  href: sys-fn-stmt-sql-handle-from-sql-stmt-transact-sql.md
+- name: sys.fn_validate_plan_guide
+  href: sys-fn-validate-plan-guide-transact-sql.md
+- name: sys.fn_xe_file_target_read_file
+  href: sys-fn-xe-file-target-read-file-transact-sql.md
+- name: sys.fn_db_backup_file_snapshots
+  href: sys-fn-db-backup-file-snapshots-transact-sql.md
+- name: Full-Text Search and Semantic Search
+  href: full-text-search-and-semantic-search-functions-transact-sql.md
+  items:
+  - name: CONTAINSTABLE
+    href: containstable-transact-sql.md
+  - name: FREETEXTTABLE
+    href: freetexttable-transact-sql.md
+  - name: semantickeyphrasetable
+    href: semantickeyphrasetable-transact-sql.md
+  - name: semanticsimilaritydetailstable
+    href: semanticsimilaritydetailstable-transact-sql.md
+  - name: semanticsimilaritytable
+    href: semanticsimilaritytable-transact-sql.md
+- name: System Metadata
+  href: system-metadata-functions.md
+  items:
+  - name: sys.fn_helpcollations
+    href: sys-fn-helpcollations-transact-sql.md
+  - name: sys.fn_listextendedproperty
+    href: sys-fn-listextendedproperty-transact-sql.md
+  - name: sys.fn_servershareddrives
+    href: sys-fn-servershareddrives-transact-sql.md
+  - name: sys.fn_virtualfilestats
+    href: sys-fn-virtualfilestats-transact-sql.md
+  - name: sys.fn_virtualservernodes
+    href: sys-fn-virtualservernodes-transact-sql.md
+  - name: sys.fn_PageResCracker
+    href: sys-fn-pagerescracker-transact-sql.md
+- name: System Security
+  href: system-security-functions.md
+  items:
+  - name: sys.fn_builtin_permissions
+    href: sys-fn-builtin-permissions-transact-sql.md
+  - name: sys.fn_check_object_signatures
+    href: sys-fn-check-object-signatures-transact-sql.md
+  - name: sys.fn_get_audit_file
+    href: sys-fn-get-audit-file-transact-sql.md
+  - name: sys.fn_my_permissions
+    href: sys-fn-my-permissions-transact-sql.md
+  - name: sys.fn_translate_permissions
+    href: sys-fn-translate-permissions-transact-sql.md
+- name: System Trace
+  href: system-trace-functions.md
+  items:
+  - name: sys.fn_trace_geteventinfo
+    href: sys-fn-trace-geteventinfo-transact-sql.md
+  - name: sys.fn_trace_getfilterinfo
+    href: sys-fn-trace-getfilterinfo-transact-sql.md
+  - name: sys.fn_trace_getinfo
+    href: sys-fn-trace-getinfo-transact-sql.md
+  - name: sys.fn_trace_gettable
+    href: sys-fn-trace-gettable-transact-sql.md

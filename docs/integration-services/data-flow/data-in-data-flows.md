@@ -2,16 +2,11 @@
 title: "Data in Data Flows | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "integration-services"
-ms.service: ""
-ms.component: "data-flow"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: integration-services
+ms.topic: conceptual
 helpviewer_keywords: 
   - "converting data types [Integration Services]"
   - "comparing data"
@@ -20,11 +15,9 @@ helpviewer_keywords:
   - "string comparisons"
   - "data flow [Integration Services], data options"
 ms.assetid: 8a9d6186-eb52-48e3-997e-021f24d458a3
-caps.latest.revision: 42
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
-ms.workload: "Inactive"
+manager: craigg
 ---
 # Data in Data Flows
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] provides a set of data types that are used in data flows.  

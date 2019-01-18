@@ -2,26 +2,19 @@
 title: "Load-Balancing Packages on Remote Servers by Using SQL Server Agent | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "integration-services"
-ms.service: ""
-ms.component: "packages"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: integration-services
+ms.topic: conceptual
 helpviewer_keywords: 
   - "load-balancing [Integration Services]"
   - "parent packages [Integration Services]"
   - "SQL Server Agent [Integration Services]"
 ms.assetid: 9281c5f8-8da3-4ae8-8142-53c5919a4cfe
-caps.latest.revision: 19
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
-ms.workload: "Inactive"
+manager: craigg
 ---
 # Load-Balancing Packages on Remote Servers by Using SQL Server Agent
   When many packages have to be run, it is convenient to use other servers that are available. This method of using other servers to run packages when the packages are all under the control of one parent package is called load balancing. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], load balancing is a manual procedure that must be architected by the owners of the packages. Load balancing is not performed automatically by the servers. Also, the packages that are run on the remote servers must be whole packages, not individual tasks in other packages.  
@@ -90,7 +83,7 @@ ms.workload: "Inactive"
   
 -   Running the individual SQL Server Agent job on the remote computer by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], to make sure that the package runs.  
   
- For information about how to troubleshoot packages that you run from [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent jobs, see [An SSIS package does not run when you call the SSIS package from a SQL Server Agent job step](http://support.microsoft.com/kb/918760) in the [!INCLUDE[msCoName](../../includes/msconame-md.md)] Support Knowledge Base.  
+ For information about how to troubleshoot packages that you run from [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent jobs, see [An SSIS package does not run when you call the SSIS package from a SQL Server Agent job step](https://support.microsoft.com/kb/918760) in the [!INCLUDE[msCoName](../../includes/msconame-md.md)] Support Knowledge Base.  
   
  The SQL Server Agent checks subsystem access for a proxy and gives access to the proxy every time the job step runs.  
   

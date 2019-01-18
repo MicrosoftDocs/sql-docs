@@ -2,18 +2,11 @@
 title: "Adding Tasks Programmatically | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "integration-services"
-ms.service: ""
-ms.component: "building-packages-programmatically"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-
-ms.tgt_pltfrm: ""
+ms.technology: integration-services 
 ms.topic: "reference"
-applies_to: 
-  - "SQL Server 2016 Preview"
 dev_langs: 
   - "VB"
   - "CSharp"
@@ -21,11 +14,9 @@ helpviewer_keywords:
   - "tasks [Integration Services], packages"
   - "adding package tasks"
 ms.assetid: 5d4652d5-228c-4238-905c-346dd8503fdf
-caps.latest.revision: 54
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
-ms.workload: "Inactive"
+manager: craigg
 ---
 # Adding Tasks Programmatically
   Tasks can be added to the following types of objects in the run-time engine:  
@@ -414,7 +405,7 @@ End Module
 ```  
   
 ## External Resources  
- Blog entry, [EzAPI – Updated for SQL Server 2012](http://go.microsoft.com/fwlink/?LinkId=243223), on blogs.msdn.com.  
+ Blog entry, [EzAPI - Updated for SQL Server 2012](https://go.microsoft.com/fwlink/?LinkId=243223), on blogs.msdn.com.  
 
 ## See Also  
  [Connecting Tasks Programmatically](../../integration-services/building-packages-programmatically/connecting-tasks-programmatically.md)  

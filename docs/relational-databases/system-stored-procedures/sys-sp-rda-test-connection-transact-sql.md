@@ -2,15 +2,9 @@
 title: "sys.sp_rda_test_connection (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/10/2016"
-ms.prod: "sql-non-specified"
-ms.prod_service: "database-engine"
-ms.service: ""
-ms.component: "system-stored-procedures"
+ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "dbe-stretch"
-ms.tgt_pltfrm: ""
+ms.technology: stored-procedures
 ms.topic: "language-reference"
 f1_keywords: 
   - "sys.sp_rda_test_connection"
@@ -20,11 +14,9 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.sp_rda_test_connection stored procedure"
 ms.assetid: e2ba050c-d7e3-4f33-8281-c9b525b4edb4
-caps.latest.revision: 7
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
-ms.workload: "Inactive"
+manager: craigg
 ---
 # sys.sp_rda_test_connection (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]

@@ -2,25 +2,18 @@
 title: "Example: Specifying the ELEMENT Directive and Entity Encoding | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "database-engine"
-ms.service: ""
-ms.component: "xml"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "dbe-xml"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: xml
+ms.topic: conceptual
 helpviewer_keywords: 
   - "ELEMENT directive"
   - "entity encoding [XML]"
 ms.assetid: 50cda5c1-7293-4080-93b3-872e3b8d484e
-caps.latest.revision: 12
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-ms.workload: "Inactive"
+author: "douglaslMS"
+ms.author: "douglasl"
+manager: craigg
 ---
 # Example: Specifying the ELEMENT Directive and Entity Encoding
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -87,7 +80,7 @@ SELECT  2 as Tag,
         ProductModelID,  
         Name,  
        (SELECT CatalogDescription.query('  
-            declare namespace pd="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription";  
+            declare namespace pd="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription";  
           /pd:ProductDescription/pd:Summary'))  
 FROM     Production.ProductModel  
 WHERE    CatalogDescription is not null  

@@ -1,25 +1,19 @@
 ---
-title: "Workload Management (SQL Server PDW)"
-author: "barbkess" 
-ms.author: "barbkess"
-manager: "jhubbard"	  
-ms.prod: "analytics-platform-system"
-ms.prod_service: "mpp-data-warehouse"
-ms.service: ""
-ms.component:
-ms.technology: "mpp-data-warehouse"
-ms.custom: ""
-ms.date: 01/12/2017
-ms.reviewer: na
-ms.suite: "sql"
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: 69063b1a-a8f3-453a-83ab-afbe7eb4f463
-caps.latest.revision: 11
-
+title: Workload management in Analytics Platform System | Microsoft Docs
+description: Workload management in Analytics Platform System.
+author: mzaman1 
+manager: craigg
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
 ---
-# Workload Management
-SQL Server PDW’s workload management capabilities allow users and administrators to assign requests to pre-set configurations of memory, and concurrency. Use workload management to improve performance of your workload, either consistent or mixed, by allowing requests to have the appropriate resources without starving any requests forever.  
+
+# Workload management in Analytics Platform System
+
+SQL Server PDW's workload management capabilities allow users and administrators to assign requests to pre-set configurations of memory, and concurrency. Use workload management to improve performance of your workload, either consistent or mixed, by allowing requests to have the appropriate resources without starving any requests forever.  
   
 For example, with the workload management techniques in SQL Server PDW, you could:  
   
@@ -38,7 +32,7 @@ Workload Management
 Resource Class  
 In SQL Server PDW, a *resource class* is a built-in server role that has pre-assigned limits for memory and concurrency. SQL Server PDW allocates resources to requests according to the resource class server role membership of the login that submits the requests.  
   
-On the Compute nodes, the implementation of resource classes uses the Resource Governor feature in SQL Server. For more information about Resource Governor, see [Resource Governor](http://msdn.microsoft.com/en-us/library/bb933866(v=sql.11).aspx) on MSDN.  
+On the Compute nodes, the implementation of resource classes uses the Resource Governor feature in SQL Server. For more information about Resource Governor, see [Resource Governor](../relational-databases/resource-governor/resource-governor.md) on MSDN.  
   
 ### Understand Current Resource Utilization  
 To understand system resource utilization for the currently running requests, use the SQL Server PDW dynamic management views. For example, you can use DMVs to understand if a slow-running large hash join could benefit by having more memory.  
@@ -108,7 +102,7 @@ For each login, the resource class settings are applied to individual statements
   
 Before SQL Server PDW runs a statement, it tries to acquire the concurrency slots needed for the request. If it cannot acquire enough concurrency slots, SQL Server PDW moves the request into a waiting-to-be-executed state. All resources system that were already allocated to the request are returned back to the system.  
   
-Most of the SQL statements always need the default resource allocations, and therefore are not controlled by resource classes. For example, CREATE LOGIN only needs a small amount of resources, and is allocated the default resources even if the login calling CREATE LOGIN is a member of a a resource class.  For example, if Anna is a member of the largerc resource class and she submits a CREATE LOGIN statement, the CREATE LOGIN statement will run with the default number of resources.  
+Most of the SQL statements always need the default resource allocations, and therefore are not controlled by resource classes. For example, CREATE LOGIN only needs a small amount of resources, and is allocated the default resources even if the login calling CREATE LOGIN is a member of a resource class.  For example, if Anna is a member of the largerc resource class and she submits a CREATE LOGIN statement, the CREATE LOGIN statement will run with the default number of resources.  
   
 SQL statements and operations governed by resource classes:  
   

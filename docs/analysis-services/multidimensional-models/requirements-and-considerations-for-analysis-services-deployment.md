@@ -1,36 +1,14 @@
 ---
 title: "Requirements and Considerations for Analysis Services Deployment | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/16/2017"
-ms.prod: analysis-services
-ms.prod_service: "analysis-services"
-ms.service: ""
-ms.component: ""
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
-  
-ms.component: multidimensional-tabular
-ms.component: data-mining
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "memory [Analysis Services]"
-  - "scalability [Analysis Services]"
-  - "space [Analysis Services]"
-  - "Analysis Services deployments, requirements"
-  - "deploying [Analysis Services], requirements"
-  - "disk space [Analysis Services]"
-  - "requirements [Analysis Services]"
-  - "processors [Analysis Services]"
-  - "system requirements [Analysis Services]"
-  - "availability [Analysis Services]"
-ms.assetid: ef1387a5-5137-4ef4-b731-fec347e5f5ed
-caps.latest.revision: 27
-author: "Minewiskan"
-ms.author: "owend"
-manager: "kfile"
-ms.workload: "On Demand"
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: multidimensional-models
+ms.topic: conceptual
+ms.author: owend
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
 ---
 # Requirements and Considerations for Analysis Services Deployment
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -66,7 +44,7 @@ ms.workload: "On Demand"
  Cubes that have large fact tables require more disk space than cubes that have small fact tables. Similarly, although to a lesser extent, cubes that have many large dimensions require more disk space than cubes that have fewer dimension members. Generally, you can expect that an [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] database will require approximately 20 percent of the amount of space required for the same data stored in the underlying relational database.  
   
  Aggregations  
- Aggregations require additional space proportional to aggregations added—the more aggregations there are, the more space is required. If you avoid creating unneeded aggregations, the additional disk space that is needed for aggregations typically should not exceed approximately 10 percent of the size of the data that is stored in the underlying relational database.  
+ Aggregations require additional space proportional to aggregations added-the more aggregations there are, the more space is required. If you avoid creating unneeded aggregations, the additional disk space that is needed for aggregations typically should not exceed approximately 10 percent of the size of the data that is stored in the underlying relational database.  
   
  Data Mining  
  By default, mining structures cache to disk the dataset with which they are trained. To remove this cached data from the disk, you can use the **Process Clear Structure** processing option on the mining structure object. For more information, see [Processing Requirements and Considerations &#40;Data Mining&#41;](../../analysis-services/data-mining/processing-requirements-and-considerations-data-mining.md).  
@@ -103,7 +81,7 @@ ms.workload: "On Demand"
   
 -   If one or more relational databases provide data to an [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] database, you can move these databases to a separate computer. Before you move the databases, consider the network speed and bandwidth that exist between the [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] database and its underlying databases. If the network is slow or congested, moving the underlying databases to a separate computer will degrade processing performance.  
   
--   If processing affects query performance, but you can’t process during times of reduced query load, consider moving your processing tasks to a staging server and then performing an online synchronization of the production server and the staging server. For more information, see [Synchronize Analysis Services Databases](../../analysis-services/multidimensional-models/synchronize-analysis-services-databases.md). You can also distribute processing across multiple instances of [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] by using remote partitions. Processing remote partitions uses the processor and memory resources on the remote server, instead of the resources on the local computer. For information on remote partitions management, see [Create and Manage a Remote Partition &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/create-and-manage-a-remote-partition-analysis-services.md).  
+-   If processing affects query performance, but you can't process during times of reduced query load, consider moving your processing tasks to a staging server and then performing an online synchronization of the production server and the staging server. For more information, see [Synchronize Analysis Services Databases](../../analysis-services/multidimensional-models/synchronize-analysis-services-databases.md). You can also distribute processing across multiple instances of [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] by using remote partitions. Processing remote partitions uses the processor and memory resources on the remote server, instead of the resources on the local computer. For information on remote partitions management, see [Create and Manage a Remote Partition &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/create-and-manage-a-remote-partition-analysis-services.md).  
   
 -   If query performance is poor but you cannot increase the processor and memory resources on the local server, consider deploying an [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] project onto two or more production servers. Then you can use Network Load Balancing (NLB) to combine the servers into a single cluster. In an NLB cluster, queries are automatically distributed across all the servers in the NLB cluster.  
   

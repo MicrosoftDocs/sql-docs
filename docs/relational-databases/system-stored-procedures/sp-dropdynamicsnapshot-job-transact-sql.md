@@ -2,29 +2,20 @@
 title: "sp_dropdynamicsnapshot_job (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "database-engine"
-ms.service: ""
-ms.component: "system-stored-procedures"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
+ms.technology: replication
 ms.topic: "language-reference"
-applies_to: 
-  - "SQL Server"
 f1_keywords: 
   - "sp_dropdynamicsnapshot_job_TSQL"
   - "sp_dropdynamicsnapshot_job"
 helpviewer_keywords: 
   - "sp_dropdynamicsnapshot_job"
 ms.assetid: 128e428a-01b3-4062-8c6e-d22d5fa268a9
-caps.latest.revision: 18
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "craigg"
-ms.workload: "Inactive"
+author: stevestein
+ms.author: sstein
+manager: craigg
 ---
 # sp_dropdynamicsnapshot_job (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,13 +35,13 @@ sp_dropdynamicsnapshot_job [ @publication = ] 'publication'
 ```  
   
 ## Arguments  
- [ **@publication=**] **'***publication***'**  
+ [ **@publication=**] **'**_publication_**'**  
  Is the name of the publication from which the filtered data snapshot job is being removed. *publication* is **sysname**, with no default.  
   
- [ **@dynamic_snapshot_jobname**= ] **'***dynamic_snapshot_jobname***'**  
+ [ **@dynamic_snapshot_jobname**= ] **'**_dynamic_snapshot_jobname_**'**  
  Is the name of the filtered data snapshot job being removed. *dynamic_snapshot_jobname*is sysname, and if it is not supplied defaults to whatever job name is associated with *dynamic_snapshot_jobid*.  
   
- [ **@dynamic_snapshot_jobid**= ] **'***dynamic_snapshot_jobid***'**  
+ [ **@dynamic_snapshot_jobid**= ] **'**_dynamic_snapshot_jobid_**'**  
  Is an identifier for the filtered data snapshot job being removed. *dynamic_snapshot_jobid*is **uniqueidentifier**, with default of NULL.  
   
 > [!IMPORTANT]  

@@ -2,25 +2,18 @@
 title: "C to SQL Data Conversion Examples | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
-ms.prod_service: "drivers"
-ms.service: ""
-ms.component: "odbc"
+ms.prod: sql
+ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "drivers"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: connectivity
+ms.topic: conceptual
 helpviewer_keywords: 
   - "converting data from c to SQL types [ODBC], examples"
   - "data conversions from C to SQL types [ODBC], examples"
 ms.assetid: 9f390afc-d8b8-4286-b559-98b3b8781f3d
-caps.latest.revision: 7
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
-ms.workload: "Inactive"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # C to SQL Data Conversion Examples
 The following examples illustrate how the driver converts C data to SQL data :  

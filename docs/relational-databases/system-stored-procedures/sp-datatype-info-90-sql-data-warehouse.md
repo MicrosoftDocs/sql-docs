@@ -4,22 +4,15 @@ ms.custom: ""
 ms.date: "03/13/2017"
 ms.prod: ""
 ms.prod_service: "sql-data-warehouse, pdw"
-ms.service: "sql-data-warehouse"
-ms.component: "system-stored-procedures"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 dev_langs: 
   - "TSQL"
 ms.assetid: 1d043964-dc6e-4c3e-ab61-bc444d5e25ae
-caps.latest.revision: 9
-author: "barbkess"
-ms.author: "barbkess"
-manager: "jhubbard"
-ms.workload: "Inactive"
+author: ronortloff
+ms.author: rortloff
+manager: craigg
+monikerRange: ">= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions"
 ---
 # sp_datatype_info_90 (SQL Data Warehouse)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]

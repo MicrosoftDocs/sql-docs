@@ -2,15 +2,9 @@
 title: "CLR Scalar-Valued Functions | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/17/2017"
-ms.prod: "sql-non-specified"
-ms.prod_service: "database-engine"
-ms.service: ""
-ms.component: "clr"
+ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-
-ms.tgt_pltfrm: ""
+ms.technology: clr
 ms.topic: "reference"
 dev_langs: 
   - "TSQL"
@@ -20,11 +14,9 @@ helpviewer_keywords:
   - "SVF"
   - "scalar-valued functions"
 ms.assetid: 20dcf802-c27d-4722-9cd3-206b1e77bee0
-caps.latest.revision: 81
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-ms.workload: "On Demand"
+author: "rothja"
+ms.author: "jroth"
+manager: craigg
 ---
 # CLR Scalar-Valued Functions
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -155,7 +147,7 @@ GO
   
 ## See Also  
  [Mapping CLR Parameter Data](../../relational-databases/clr-integration-database-objects-types-net-framework/mapping-clr-parameter-data.md)   
- [Overview of CLR Integration Custom Attributes](http://msdn.microsoft.com/library/ecf5c097-0972-48e2-a9c0-b695b7dd2820)   
+ [Overview of CLR Integration Custom Attributes](https://msdn.microsoft.com/library/ecf5c097-0972-48e2-a9c0-b695b7dd2820)   
  [User-Defined Functions](../../relational-databases/user-defined-functions/user-defined-functions.md)   
  [Data Access from CLR Database Objects](../../relational-databases/clr-integration/data-access/data-access-from-clr-database-objects.md)  
   

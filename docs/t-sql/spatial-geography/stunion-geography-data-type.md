@@ -2,15 +2,10 @@
 title: "STUnion (geography Data Type) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.service: ""
-ms.component: "t-sql|spatial-geography"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: t-sql
 ms.topic: "language-reference"
 f1_keywords: 
   - "STUnion (geography Data Type)"
@@ -20,11 +15,9 @@ dev_langs:
 helpviewer_keywords: 
   - "STUnion method"
 ms.assetid: 9bf87691-efd8-4c53-bd2f-eefe0acd19ca
-caps.latest.revision: 23
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-ms.workload: "Inactive"
+author: "douglaslMS"
+ms.author: "douglasl"
+manager: craigg
 ---
 # STUnion (geography Data Type)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -81,7 +74,7 @@ SELECT @g.STUnion(@h).ToString();
  SELECT @g.STUnion(@h).ToString();
  ```  
   
-### C. Producing a triagonal hole from a union of a CurvePolygon and a traigonal hole.  
+### C. Producing a triagonal hole from a union of a CurvePolygon and a triagonal hole.  
  The following example produces a triagonal hole from the union of a `CurvePolygon` with a `Polygon` instance.  
   
 ```

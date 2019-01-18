@@ -1,25 +1,18 @@
 ---
 title: "Overview of Multidimensional Schemas and Data | Microsoft Docs"
-ms.prod: "sql-non-specified"
-ms.prod_service: "drivers"
-ms.service: ""
-ms.component: "ado"
-ms.technology:
-  - "drivers"
+ms.prod: sql
+ms.prod_service: connectivity
+ms.technology: connectivity
 ms.custom: ""
-ms.date: "01/19/2017"
+ms.date: 11/08/2018
 ms.reviewer: ""
-ms.suite: "sql"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "multidimensional schemas and data"
 ms.assetid: ce37fa06-c581-4d80-9a9b-c3aa66408909
-caps.latest.revision: 11
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
-ms.workload: "Inactive"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # Overview of Multidimensional Schemas and Data
 ## Understanding Multidimensional Schemas  
@@ -42,7 +35,7 @@ ms.workload: "Inactive"
   
  The Geography dimension has the following set of members:  
   
-```  
+```console
 {All, North America, Europe, Canada, USA, UK, Germany, Canada-West,  
 Canada-East, USA-NW, USA-SW, USA-NE, USA-SE, England, Scotland,   
 Wales,Ireland, Germany-North, Germany-South, Ottawa, Toronto,   

@@ -2,15 +2,10 @@
 title: "DECRYPTBYKEYAUTOCERT (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "09/09/2015"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "sql-database"
-ms.service: ""
-ms.component: "t-sql|functions"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: t-sql
 ms.topic: "language-reference"
 f1_keywords: 
   - "DECRYPTBYKEYAUTOCERT"
@@ -20,17 +15,15 @@ dev_langs:
 helpviewer_keywords: 
   - "DECRYPTBYKEYAUTOCERT function"
 ms.assetid: 6b45fa2e-ffaa-46f7-86ff-5624596eda4a
-caps.latest.revision: 26
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "craigg"
-ms.workload: "Inactive"
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
 ---
 # DECRYPTBYKEYAUTOCERT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Decrypts by using a symmetric key that is automatically decrypted with a certificate.  
-  
+This function decrypts data with a symmetric key. That symmetric key automatically decrypts with a certificate.  
+
  ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
@@ -45,40 +38,40 @@ DecryptByKeyAutoCert ( cert_ID , cert_password
   
 ## Arguments  
  *cert_ID*  
- Is the ID of the certificate that is used to protect the symmetric key. *cert_ID* is **int**.  
+The ID of the certificate used to protect the symmetric key. *cert_ID* has an **int** data type.  
   
- *cert_password*  
- Is the password that protects the private key of the certificate. Can be NULL if the private key is protected by the database master key. *cert_password* is **nvarchar**.  
+*cert_password*  
+The password used to encrypt the private key of the certificate. Can have a `NULL` value if the database master key protects the private key. *cert_password* has an **nvarchar** data type.  
+
+'*ciphertext*'  
+The string of data encrypted with the key. *ciphertext* has a **varbinary** data type.  
+
+@ciphertext  
+A variable of type **varbinary** containing data encrypted with the key.  
+
+*add_authenticator*  
+Indicates whether the original encryption process included, and encrypted, an authenticator together with the plaintext. Must match the value passed to [ENCRYPTBYKEY (Transact-SQL)](./encryptbykey-transact-sql.md) during the data encryption process. *add_authenticator* has a value of 1 if the encryption process used an authenticator. *add_authenticator* has an **int** data type.  
   
- '*ciphertext*'  
- Is the data that was encrypted with the key. *ciphertext* is **varbinary**.  
+@add_authenticator  
+A variable indicating whether the original encryption process included, and encrypted, an authenticator together with the plaintext. Must match the value passed to [ENCRYPTBYKEY (Transact-SQL)](./encryptbykey-transact-sql.md) during the data encryption process. *@add_authenticator* has an **int** data type.  
   
- @ciphertext  
- Is a variable of type **varbinary** that contains data that was encrypted with the key.  
+*authenticator*  
+The data used as the basis for the generation of the authenticator. Must match the value supplied to [ENCRYPTBYKEY (Transact-SQL)](./encryptbykey-transact-sql.md). *authenticator* has a **sysname** data type.  
   
- *add_authenticator*  
- Indicates whether an authenticator was encrypted together with the plaintext. Must be the same value that is passed to EncryptByKey when encrypting the data.Is **1** if an authenticator was used. *add_authenticator* is **int**.  
-  
- @add_authenticator  
- Indicates whether an authenticator was encrypted together with the plaintext. Must be the same value that is passed to EncryptByKey when encrypting the data.  
-  
- *authenticator*  
- Is the data from which to generate an authenticator. Must match the value that was supplied to EncryptByKey. *authenticator* is **sysname**.  
-  
- @authenticator  
- Is a variable that contains data from which to generate an authenticator. Must match the value that was supplied to EncryptByKey.  
+@authenticator  
+A variable containing data from which an authenticator generates. Must match the value supplied to [ENCRYPTBYKEY (Transact-SQL)](./encryptbykey-transact-sql.md). *@authenticator* has a **sysname** data type.  
   
 ## Return Types  
- **varbinary** with a maximum size of 8,000 bytes.  
+**varbinary**, with a maximum size of 8,000 bytes.  
   
 ## Remarks  
- DecryptByKeyAutoCert combines the functionality of OPEN SYMMETRIC KEY and DecryptByKey. In a single operation, it decrypts a symmetric key and uses that key to decrypt cipher text.  
+`DECRYPTBYKEYAUTOCERT` combines the functionality of `OPEN SYMMETRIC KEY` and `DECRYPTBYKEY`. In a single operation, it first decrypts a symmetric key, and then decrypts encrypted ciphertext with that key.  
   
 ## Permissions  
- Requires VIEW DEFINITION permission on the symmetric key and CONTROL permission on the certificate.  
+Requires `VIEW DEFINITION` permission on the symmetric key, and `CONTROL` permission on the certificate.   
   
 ## Examples  
- The following example shows how `DecryptByKeyAutoCert` can be used to simplify code that performs a decryption. This code should be run on an [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] database that does not already have a database master key.  
+This example shows how `DECRYPTBYKEYAUTOCERT` can simplify decryption code. This code should run on an [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] database that does not already have a database master key.  
   
 ```  
 --Create the keys and certificate.  

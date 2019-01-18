@@ -2,24 +2,16 @@
 title: "MSSQLSERVER_3168 | Microsoft Docs"
 ms.custom: ""
 ms.date: "04/04/2017"
-ms.prod: "sql-non-specified"
-ms.prod_service: "database-engine"
-ms.service: ""
-ms.component: "errors-events"
+ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: supportability
 ms.topic: "language-reference"
 helpviewer_keywords: 
   - "3168 (Database Engine error)"
 ms.assetid: 991111d9-1eb3-43e9-9333-a75a775c3200
-caps.latest.revision: 11
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "craigg"
-ms.workload: "Inactive"
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
 ---
 # MSSQLSERVER_3168
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -51,7 +43,7 @@ Some scenarios in which this problem may occur include the following:
 -   A user tries to restore a system database from a backup taken on the same server. However, the server was running a different build when the backup occurred. That is, the server was upgraded since the backup was performed.  
   
 ## User Action  
-The restore process in this situation is fairly involved, and used only as a last resort. For more information, see"[You cannot restore system database backups to a different build of SQL Server](http://support.microsoft.com/kb/264474)".  
+The restore process in this situation is fairly involved, and used only as a last resort. For more information, see"[You cannot restore system database backups to a different build of SQL Server](https://support.microsoft.com/kb/264474)".  
   
 ## See Also  
 [Back Up and Restore of System Databases &#40;SQL Server&#41;](~/relational-databases/backup-restore/back-up-the-transaction-log-when-the-database-is-damaged-sql-server.md)  

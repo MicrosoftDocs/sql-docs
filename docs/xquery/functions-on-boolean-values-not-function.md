@@ -2,18 +2,11 @@
 title: "not Function (XQuery) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/09/2017"
-ms.prod: "sql-non-specified"
-ms.prod_service: "sql-non-specified"
-ms.service: ""
-ms.component: "xquery"
+ms.prod: sql
+ms.prod_service: sql
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: xml
 ms.topic: "language-reference"
-applies_to: 
-  - "SQL Server"
 dev_langs: 
   - "XML"
 helpviewer_keywords: 
@@ -22,11 +15,9 @@ helpviewer_keywords:
   - "not function [XQuery]"
   - "EBV"
 ms.assetid: 93dfc377-45f1-4384-9392-560d9331a915
-caps.latest.revision: 33
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-ms.workload: "Inactive"
+author: "rothja"
+ms.author: "jroth"
+manager: craigg
 ---
 # Functions on Boolean Values - not Function 
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -51,7 +42,7 @@ fn:not($arg as item()*) as xs:boolean
  The following query constructs XML that contains product model IDs for product models whose catalog descriptions do not include the <`Specifications`> element.  
   
 ```  
-WITH XMLNAMESPACES ('http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription' AS pd)  
+WITH XMLNAMESPACES ('https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription' AS pd)  
 SELECT ProductModelID, CatalogDescription.query('  
        <Product   
            ProductModelID="{ sql:column("ProductModelID") }"  
@@ -80,7 +71,7 @@ WHERE CatalogDescription.exist('
   
 ```  
 SELECT ProductModelID, Instructions.query('  
-declare namespace AWMI="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions" ;  
+declare namespace AWMI="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions" ;  
      for $i in /AWMI:root/AWMI:Location[not(@MachineHours)]  
      return  
        <Location LocationID="{ $i/@LocationID }"   

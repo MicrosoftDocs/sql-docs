@@ -2,24 +2,17 @@
 title: "Job Activity Monitor Refresh | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "database-engine"
-ms.service: ""
-ms.component: "maintenance-plans"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: supportability
+ms.topic: conceptual
 f1_keywords: 
   - "sql13.swb.jobactivitymon.refresh.f1"
 ms.assetid: 413a368e-fd2b-4e1f-b370-002cdbc85bab
-caps.latest.revision: 11
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-ms.workload: "Inactive"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ---
 # Job Activity Monitor Refresh
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -35,6 +28,6 @@ ms.workload: "Inactive"
  The number of seconds between auto-refresh attempts. Defaults to 60 seconds. Refreshes every 5 seconds when set to 5 or less.  
   
 ## See Also  
- [Monitor Job Activity](http://msdn.microsoft.com/library/71cb432b-631d-4b8b-9965-e731b3d8266d)  
+ [Monitor Job Activity](../../ssms/agent/monitor-job-activity.md)  
   
   

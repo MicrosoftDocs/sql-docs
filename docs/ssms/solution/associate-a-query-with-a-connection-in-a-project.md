@@ -2,27 +2,20 @@
 title: "Associate a Query with a Connection in a Project | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "sql-tools"
-ms.service: ""
-ms.component: "ssms-solutions"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "tools-ssms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: ssms
+ms.topic: conceptual
 helpviewer_keywords: 
   - "connections [SQL Server Management Studio], query associations"
   - "projects [SQL Server Management Studio], connections"
   - "projects [SQL Server Management Studio], query connections"
   - "query associations [SQL Server Management Studio]"
 ms.assetid: c9625ae0-29c1-4179-a709-51b7e2f9e23d
-caps.latest.revision: 4
 author: "stevestein"
 ms.author: "sstein"
-manager: "jhubbard"
-ms.workload: "Inactive"
+manager: craigg
 ---
 # Associate a Query with a Connection in a Project
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

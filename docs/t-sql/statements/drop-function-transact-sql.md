@@ -2,15 +2,10 @@
 title: "DROP FUNCTION (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/28/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "sql-data-warehouse, database-engine, pdw, sql-database"
-ms.service: ""
-ms.component: "t-sql|statements"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: t-sql
 ms.topic: "language-reference"
 f1_keywords: 
   - "DROP_FUNCTION_TSQL"
@@ -24,14 +19,13 @@ helpviewer_keywords:
   - "dropping user-defined functions"
   - "deleting user-defined functions"
 ms.assetid: ee5ad283-9e44-4109-902f-0ce12669ee11
-caps.latest.revision: 49
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "craigg"
-ms.workload: "On Demand"
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # DROP FUNCTION (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-pdw-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Removes one or more user-defined functions from the current database. User-defined functions are created by using [CREATE FUNCTION](../../t-sql/statements/create-function-transact-sql.md) and modified by using [ALTER FUNCTION](../../t-sql/statements/alter-function-transact-sql.md).  
   
@@ -58,7 +52,7 @@ DROP FUNCTION [ schema_name. ] function_name
   
 ## Arguments  
  *IF EXISTS*    
- Conditionally drops the function only if it already exists. Available beginning with [!INCLUDE[ssnoversion_md](../../includes/ssnoversion_md.md)] 2016 and in [!INCLUDE[sssds_md](../../includes/sssds_md.md)].
+ Conditionally drops the function only if it already exists. Available beginning with [!INCLUDE[ssnoversion_md](../../includes/ssnoversion-md.md)] 2016 and in [!INCLUDE[sssds_md](../../includes/sssds-md.md)].
   
  *schema_name*  
  Is the name of the schema to which the user-defined function belongs.  

@@ -2,15 +2,10 @@
 title: "CREATE TYPE (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "04/11/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.service: ""
-ms.component: "t-sql|statements"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: t-sql
 ms.topic: "language-reference"
 f1_keywords: 
   - "sql13.swb.sysdatatype.properties.f1"
@@ -29,11 +24,9 @@ helpviewer_keywords:
   - "alias data types [SQL Server], creating"
   - "data types [SQL Server], creating"
 ms.assetid: 2202236b-e09f-40a1-bbc7-b8cff7488905
-caps.latest.revision: 92
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "craigg"
-ms.workload: "Active"
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
 ---
 # CREATE TYPE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -50,15 +43,17 @@ ms.workload: "Active"
 ## Syntax  
   
 ```  
--- Disk-Based Type Syntax  
+-- User-defined Data Type Syntax    
 CREATE TYPE [ schema_name. ] type_name  
 {   
     FROM base_type   
     [ ( precision [ , scale ] ) ]  
     [ NULL | NOT NULL ]   
   | EXTERNAL NAME assembly_name [ .class_name ]   
-  | AS TABLE ( { <column_definition> | <computed_column_definition> }  
-        [ <table_constraint> ] [ ,...n ] )    
+AS TABLE ( { <column_definition> | <computed_column_definition> [ ,... n ] }
+    | [ <table_constraint> ] [ ,... n ]    
+    | [ <table_index> ] [ ,... n ] } )
+ 
 } [ ; ]  
   
 <column_definition> ::=  
@@ -113,14 +108,18 @@ column_name AS computed_column_expression
 {  
     IGNORE_DUP_KEY = { ON | OFF }  
 }  
+
+< table_index > ::=  
+  INDEX constraint_name  
+     [ CLUSTERED | NONCLUSTERED ]   (column [ ASC | DESC ] [ ,... n ] )} }  
 ```  
   
 ```  
--- Memory-Optimized Table Type Syntax  
+-- User-defined Memory Optimized Table Types Syntax  
 CREATE TYPE [schema_name. ] type_name  
-AS TABLE ( { <column_definition> }  
-    |  [ <table_constraint> ] [ ,... n ]    
-    | [ <table_index> ] [ ,... n ]    } )
+AS TABLE ( { <column_definition> [ ,... n ] }  
+    | [ <table_constraint> ] [ ,... n ]    
+    | [ <table_index> ] [ ,... n ] } )
     [ WITH ( <table_option> [ ,... n ] ) ]  
  [ ; ]  
   
@@ -220,6 +219,12 @@ column_name <data_type>
   
  \<index_option>  
  Specifies the error response to duplicate key values in a multiple-row insert operation on a unique clustered or unique nonclustered index. For more information about index options, see [CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md).  
+ 
+  `INDEX *index_name* [ CLUSTERED | NONCLUSTERED ] (*column_name* [ ASC | DESC ] [ ,... *n* ] )`  
+     
+**Applies to**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
+
+Specifies to create an index on the table. This can be a clustered index, or a nonclustered index. The index will contain the columns listed, and will sort the data in either ascending or descending order.
   
  INDEX  
  You must specify column and table indexes as part of the CREATE TABLE statement. CREATE INDEX and DROP INDEX are not supported for memory-optimized tables.  
@@ -265,6 +270,12 @@ column_name <data_type>
   
 ## Permissions  
  Requires CREATE TYPE permission in the current database and ALTER permission on *schema_name*. If *schema_name* is not specified, the default name resolution rules for determining the schema for the current user apply. If *assembly_name* is specified, a user must either own the assembly or have REFERENCES permission on it.  
+
+ If any columns in the CREATE TABLE statement are defined to be of a user-defined type, REFERENCES permission on the user-defined type is required.
+ 
+   >[!NOTE]
+  > A user creating a table with a column that uses a user-defined type needs the REFERENCES permission on the user-defined type.
+  > If this table must be created in TempDB, then either the REFERENCES permission needs to be granted explicitly each time **before** the table is created, or this data type and REFERENCES permissions need to be added to the Model database. If this is done, then this data type and permissions will be available in TempDB permanently. Otherwise, the user-defined data type and permissions will disappear when SQL Server is restarted. For more information, see [CREATE TABLE](https://docs.microsoft.com/sql/t-sql/statements/create-table-transact-sql?view=sql-server-2017#permissions-1)
   
 ## Examples  
   

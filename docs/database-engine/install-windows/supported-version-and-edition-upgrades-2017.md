@@ -2,30 +2,26 @@
 title: "Supported Version and Edition Upgrades - SQL Server 2017| Microsoft Docs"
 ms.custom: ""
 ms.date: "07/18/2017"
-ms.prod: "sql-non-specified"
-ms.prod_service: "database-engine"
-ms.service: ""
-ms.component: "install-windows"
+ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "setup-install"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: install
+ms.topic: conceptual
 helpviewer_keywords: 
   - "components [SQL Server], adding to existing installations"
   - "versions [SQL Server], upgrading"
   - "upgrading SQL Server, upgrades supported"
   - "cross-language support"
 ms.assetid: 702359c4-6ca9-42a8-860c-a95a802898a1
-caps.latest.revision: 148
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
+author: MashaMSFT
+ms.author: mathoma
+monikerRange: ">=sql-server-2016||=sqlallproducts-allversions"
+manager: craigg
 ---
 # Supported Version and Edition Upgrades for SQL Server 2017
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  You can upgrade from [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], and [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)]. This topic lists the supported upgrade paths from these [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] versions, and the supported edition upgrades for [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)].  
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+  
+  You can upgrade from [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], and [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)]. This article lists the supported upgrade paths from these [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] versions, and the supported edition upgrades for [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)].  
   
 ## Pre upgrade Checklist  
   
@@ -48,9 +44,7 @@ manager: "jhubbard"
 -   You cannot add new features during the upgrade of your existing instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. After you upgrade an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)], you can add features by using the [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] Setup. For more information, see [Add Features to an Instance of SQL Server &#40;Setup&#41;](../../database-engine/install-windows/add-features-to-an-instance-of-sql-server-2016-setup.md).  
  
 -   Failover Clusters are not supported in WOW mode.  
-  
--   Upgrade from an Evaluation edition of a previous [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] version is not supported.
-  
+    
 ## Upgrades from Earlier Versions to [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)]  
  
 [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] supports upgrade from the following versions of SQL Server:

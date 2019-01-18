@@ -2,30 +2,23 @@
 title: "Remove or Delete an Item or Project | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "sql-tools"
-ms.service: ""
-ms.component: "ssms-solutions"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "tools-ssms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: ssms
+ms.topic: conceptual
 helpviewer_keywords: 
   - "deleting project items"
   - "projects [SQL Server Management Studio], item removal"
   - "removing project items"
 ms.assetid: 3fd92434-70f5-466e-bef0-7e0fd73ddb1c
-caps.latest.revision: 3
 author: "stevestein"
 ms.author: "sstein"
-manager: "jhubbard"
-ms.workload: "Inactive"
+manager: craigg
 ---
 # Remove or Delete an Item or Project
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-Project items in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] projects are Queries, Connections, and Miscellaneous files. You can remove project queries and miscellaneous files from your solution without erasing the files from storage. Remove a project or item when it is not useful in the current solution but you want to include it in another solution.  
+Project items in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] projects are Queries, Connections, and Miscellaneous files. You can remove project queries and miscellaneous files from your solution without erasing the files from storage. Remove a project or item when it is not useful in the current solution but you want to include it in another solution.  
   
 ### To remove a project item  
   
@@ -45,7 +38,7 @@ A removed item still exists on the file system. Therefore, you can add a removed
   
 3.  On the confirmation dialog, click **OK**, to remove the project from the solution.  
   
-You can delete a project permanently, but you first need to remove any references to the project from [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] solutions, and then use [!INCLUDE[msCoName](../../includes/msconame_md.md)] Windows Explorer to permanently delete the associated files from storage.  
+You can delete a project permanently, but you first need to remove any references to the project from [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] solutions, and then use [!INCLUDE[msCoName](../../includes/msconame_md.md)] Windows Explorer to permanently delete the associated files from storage.  
   
 #### To delete a project  
   

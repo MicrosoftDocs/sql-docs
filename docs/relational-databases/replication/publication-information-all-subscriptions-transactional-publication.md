@@ -2,24 +2,17 @@
 title: "Publication Information, All Subscriptions (Transactional Publication) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "database-engine"
-ms.service: ""
-ms.component: "replication"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: replication
+ms.topic: conceptual
 f1_keywords: 
   - "sql13.rep.monitor.publicationinfo.allsubscriptions.tran.f1"
 ms.assetid: 7073350c-f667-4f70-88e9-152c9a1b08dd
-caps.latest.revision: 30
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-ms.workload: "Inactive"
+author: "MashaMSFT"
+ms.author: "mathoma"
+manager: craigg
 ---
 # Publication Information, All Subscriptions (Transactional Publication)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -89,8 +82,7 @@ ms.workload: "Inactive"
   
 ## See Also  
  [Start the Replication Monitor](../../relational-databases/replication/monitor/start-the-replication-monitor.md)   
- [View Information and Perform Tasks for a Subscription &#40;Replication Monitor&#41;](../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-a-subscription-replication-monitor.md)   
- [View Information and Perform Tasks for the Agents Associated With a Subscription &#40;Replication Monitor&#41;](../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-subscription-agents.md)   
- [Monitoring Replication](../../relational-databases/replication/monitor/monitoring-replication-overview.md)  
+ [View Information and Perform Tasks using Replication Monitor](../../relational-databases/replication/monitor/view-information-and-perform-tasks-replication-monitor.md)   
+ [Monitoring Replication](../../relational-databases/replication/monitor/monitoring-replication.md)  
   
   

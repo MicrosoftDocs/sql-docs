@@ -3,21 +3,16 @@ title: Configure failover cluster instance storage NFS - SQL Server on Linux | M
 description: 
 author: MikeRayMSFT 
 ms.author: mikeray 
-manager: jhubbard
+manager: craigg
 ms.date: 08/28/2017
-ms.topic: article
-ms.prod: "sql-non-specified"
-ms.prod_service: "database-engine"
-ms.service: ""
-ms.component: sql-linux
-ms.suite: "sql"
-ms.custom: ""
-ms.technology: database-engine
-ms.workload: "Inactive"
+ms.topic: conceptual
+ms.prod: sql
+ms.custom: "sql-linux"
+ms.technology: linux
 ---
 # Configure failover cluster instance - NFS - SQL Server on Linux
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 This article explains how to configure NFS storage for a failover cluster instance (FCI) on Linux. 
 
@@ -75,7 +70,7 @@ Ensure that your security standards are enforced for accessing. When configuring
     mkdir <TempDir>
     ```
 
-    \<TempDir> is the name of the folder. The example below creates a folder named /var/opt/mssql/tmp.
+    \<TempDir> is the name of the folder. The following example creates a folder named /var/opt/mssql/tmp.
 
     ```bash
     mkdir /var/opt/mssql/tmp
@@ -100,7 +95,7 @@ Ensure that your security standards are enforced for accessing. When configuring
    * Delete the files from the existing SQL Server data directory. You will not receive any acknowledgement if successful.
 
     ```bash
-    rm – f /var/opt/mssql/data/*
+    rm - f /var/opt/mssql/data/*
     ```
 
    * Verify that the files have been deleted. 
@@ -119,7 +114,7 @@ Ensure that your security standards are enforced for accessing. When configuring
 
     \<IPAddressOfNFSServer> is the IP address of the NFS server that you are going to use 
 
-    \<FolderOnNFSServer> is the name of the NFS share. The example syntax below matches the NFS information from Step 2.
+    \<FolderOnNFSServer> is the name of the NFS share. The following example syntax matches the NFS information from Step 2.
 
     ```bash
     mount -t nfs4 200.201.202.63:/var/nfs/fci1 /var/opt/mssql/data -o nfsvers=4.2,timeo=14,intr
@@ -162,7 +157,7 @@ Ensure that your security standards are enforced for accessing. When configuring
     sudo systemctl status mssql-server
     ```
     
-   * Create a database to test that security is set up properly. The example below will show that being done via Transact-SQL; it can be done via SSMS.
+   * Create a database to test that security is set up properly. The following example shows that being done via Transact-SQL; it can be done via SSMS.
  
     ![CreateTestdatabase][3]
 
@@ -199,7 +194,7 @@ Ensure that your security standards are enforced for accessing. When configuring
     mkdir <FolderName>
     ```
 
-    \<FolderName> is the name of the folder. The folder’s full path will need to be specified if not in the right location. The example below creates a folder named /var/opt/mssql/userdata.
+    \<FolderName> is the name of the folder. The folder's full path needs to be specified if not in the right location. The following example creates a folder named /var/opt/mssql/userdata.
 
     ```bash
     mkdir /var/opt/mssql/userdata
@@ -225,7 +220,7 @@ Ensure that your security standards are enforced for accessing. When configuring
   
    * Type exit to no longer be the superuser.
 
-   * To test, create a database in that folder. The example shown below uses sqlcmd to create a database, switch context to it, verify the files exist at the OS level, and then deletes the temporary location. You can use SSMS.
+   * To test, create a database in that folder. The following example uses sqlcmd to create a database, switch context to it, verify the files exist at the OS level, and then deletes the temporary location. You can use SSMS.
 
     ![15-createtestdatabase][4]
  

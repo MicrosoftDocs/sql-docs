@@ -2,22 +2,15 @@
 title: "Step 3: Proof of concept connecting to SQL using PHP | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
-ms.prod_service: "drivers"
-ms.service: ""
-ms.component: "php"
+ms.prod: sql
+ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "drivers"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: connectivity
+ms.topic: conceptual
 ms.assetid: a7451a85-18e5-4fd0-bbcb-2f15a1117290
-caps.latest.revision: 7
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
-ms.workload: "On Demand"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # Step 3: Proof of concept connecting to SQL using PHP
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -49,7 +42,7 @@ This **OpenConnection** function is called near the top in all of the functions 
   
 ## Step 2:  Execute query  
   
-The [sqlsrv_query()](http://php.net/manual/en/function.sqlsrv-query.php) function can be used to retrieve a result set from a query against SQL Database. This function essentially accepts any query and the connection object and returns a result set which can be iterated over with the use of [sqlsrv_fetch_array()](http://php.net/manual/en/function.sqlsrv-fetch-array.php).  
+The [sqlsrv_query()](https://php.net/manual/en/function.sqlsrv-query.php) function can be used to retrieve a result set from a query against SQL Database. This function essentially accepts any query and the connection object and returns a result set which can be iterated over with the use of [sqlsrv_fetch_array()](https://php.net/manual/en/function.sqlsrv-fetch-array.php).  
   
 ```php  
     function ReadData()  
@@ -167,4 +160,5 @@ This code example demonstrates the use of transactions in which you:
 ## Additional Examples  
   
 [Example Application (SQLSRV Driver)](../../connect/php/example-application-sqlsrv-driver.md)  
+
 [Example Application (PDO_SQLSRV Driver)](../../connect/php/example-application-pdo-sqlsrv-driver.md)

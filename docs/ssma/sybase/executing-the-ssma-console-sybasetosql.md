@@ -2,19 +2,10 @@
 title: "Executing the SSMA Console (SybaseToSQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "09/27/2017"
-ms.prod: "sql-non-specified"
-ms.prod_service: "sql-tools"
-ms.service: ""
-ms.component: "ssma-sybase"
+ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "sql-ssma"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to: 
-  - "Azure SQL Database"
-  - "SQL Server"
+ms.technology: ssma
+ms.topic: conceptual
 helpviewer_keywords: 
   - "Sybase Console,Database Connection Commands"
   - "Sybase Console,Manageability Commands"
@@ -25,11 +16,9 @@ helpviewer_keywords:
   - "Sybase Console,Script File Commands"
   - "Sybase Console,Script Generation Commands"
 ms.assetid: ea8950b7-fabc-4aa4-89f8-9573a2617d70
-caps.latest.revision: 22
 author: "Shamikg"
 ms.author: "Shamikg"
-manager: "jhubbard"
-ms.workload: "Inactive"
+manager: craigg
 ---
 # Executing the SSMA Console (SybaseToSQL)
 Microsoft provides you with a robust set of script file commands to execute and control SSMA activities. The ensuing sections detail the same.  
@@ -49,7 +38,7 @@ This command creates a new SSMA project.
   
 -   `overwrite-if-exists`Optional attribute indicates whether an existing project should be overwritten. {boolean}  
   
--   `project-type:`Optional attribute. Indicates the project type, that is “sql-server-2005” project or “sql-server-2008” project or “sql-server-2012” project or “sql-server-2014” project or “sql-azure” project. Default is “sql-server-2008.”  
+-   `project-type:`Optional attribute. Indicates the project type, that is "sql-server-2005" project or "sql-server-2008" project or "sql-server-2012" project or "sql-server-2014" project or "sql-azure" project. Default is "sql-server-2008."  
   
 **Syntax example:**  
   
@@ -62,12 +51,12 @@ This command creates a new SSMA project.
   
   overwrite-if-exists="<true/false>" (optional)  
   
-   project-type=”<sql-server-2008/sql-server-2005/sql-server-2012/sql-server-2014/sql-azure>”  
+   project-type="<sql-server-2008/sql-server-2005/sql-server-2012/sql-server-2014/sql-azure>"  
 />  
 ```  
-Attribute ‘overwrite-if-exists’ is **false** by default.  
+Attribute 'overwrite-if-exists' is **false** by default.  
   
-Attribute ‘project-type’ is **sql-server-2008** by default.  
+Attribute 'project-type' is **sql-server-2008** by default.  
   
 ### open-project  
 This command opens the project.
@@ -109,14 +98,14 @@ This command closes the migration project.
   if-modified="<save/error/ignore>"   (optional)  
 />  
 ```  
-Attribute ‘if-modified’ is optional, **ignore** by default.  
+Attribute 'if-modified' is optional, **ignore** by default.  
   
 ## Database Connection commands  
 The Database Connection commands help connect to the database.  
   
 > [!NOTE]  
 > - The **Browse** feature of the UI is not supported in console.  
-> - For more information on ‘Creating Script Files’, see [Creating Script Files &#40;SybaseToSQL&#41;](../../ssma/sybase/creating-script-files-sybasetosql.md).  
+> - For more information on 'Creating Script Files', see [Creating Script Files &#40;SybaseToSQL&#41;](../../ssma/sybase/creating-script-files-sybasetosql.md).  
   
 ### connect-source-database  
 This command performs connection to the source database and loads high-level metadata of the source database, but not all of the metadata.
@@ -141,7 +130,7 @@ This command requires one or several metabase nodes as command-line parameter.
 **Syntax example:**  
   
 ```xml  
-<force-load metabase=”<source/target>” >  
+<force-load metabase="<source/target>" >  
   
   <metabase-object object-name="<object-name>"/>  
   
@@ -224,7 +213,7 @@ Failure to connect to the source database server during the command execution, a
   
   object-type="<object-category>"  
   
-  write-summary-report-to="<file-name/folder-name>”             (optional)  
+  write-summary-report-to="<file-name/folder-name>"             (optional)  
   
   verbose="<true/false>"                       (optional)  
   
@@ -375,7 +364,7 @@ or
 The Migration Preparation command initiates schema mapping between the source and target databases.  
   
 > [!NOTE]  
-> The default console output setting for the migration commands is ‘Full' output report with no detailed error reporting: Only summary at the source object tree root node.  
+> The default console output setting for the migration commands is 'Full' output report with no detailed error reporting: Only summary at the source object tree root node.  
   
 ### map-schema  
 This command provides the schema mapping of the source database to the target schema.  
@@ -396,7 +385,7 @@ sql-server-schema="<target-schema>"/>
 The Manageability commands help synchronize the target database objects with the source database.  
   
 > [!NOTE]  
-> The default console output setting for the migration commands is ‘Full' output report with no detailed error reporting: Only summary at the source object tree root node.  
+> The default console output setting for the migration commands is 'Full' output report with no detailed error reporting: Only summary at the source object tree root node.  
   
 ### synchronize-target  
 This command synchronizes the target objects with the target database.  

@@ -2,22 +2,15 @@
 title: "Step 1: Configure development environment for Ruby development | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
-ms.prod_service: "drivers"
-ms.service: ""
-ms.component: "ruby"
+ms.prod: sql
+ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "drivers"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: connectivity
+ms.topic: conceptual
 ms.assetid: 8cdbadeb-f640-406c-977c-d2d44b7b5368
-caps.latest.revision: 9
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
-ms.workload: "Inactive"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # Step 1: Configure development environment for Ruby development
 You will need to configure your development environment with the prerequisites in order to develop an application using the Ruby Driver for SQL Server.    
@@ -28,7 +21,7 @@ Note that the Ruby Driver uses the TDS protocol, which is enabled by default in 
 ## Windows  
   
 1.  **Download Ruby Installer**  
-If your machine does not have Ruby please install it. For new ruby users, we recommend you use Ruby 2.2.X installers. These provide a stable language and a extensive list of packages (gems) that are compatible and updated. Go the [Ruby download page](http://rubyinstaller.org/downloads/) and download the appropriate 2.1.x installer. For example if you are on a 64 bit machine, download the Ruby 2.1.6 (x64) installer.   
+If your machine does not have Ruby please install it. For new ruby users, we recommend you use Ruby 2.2.X installers. These provide a stable language and a extensive list of packages (gems) that are compatible and updated. Go the [Ruby download page](https://rubyinstaller.org/downloads/) and download the appropriate 2.1.x installer. For example if you are on a 64 bit machine, download the Ruby 2.1.6 (x64) installer.   
   
 2.  **Install Ruby**  
 Once the installer is downloaded, do the following:  

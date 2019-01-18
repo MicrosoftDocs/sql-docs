@@ -2,15 +2,9 @@
 title: "Manipulating UDT Data | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/16/2017"
-ms.prod: "sql-non-specified"
-ms.prod_service: "database-engine"
-ms.service: ""
-ms.component: "clr"
+ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-
-ms.tgt_pltfrm: ""
+ms.technology: clr
 ms.topic: "reference"
 dev_langs: 
   - "TSQL"
@@ -32,11 +26,9 @@ helpviewer_keywords:
   - "invoking UDT methods"
   - "inserting data"
 ms.assetid: 51b1a5f2-7591-4e11-bfe2-d88e0836403f
-caps.latest.revision: 14
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-ms.workload: "Inactive"
+author: "rothja"
+ms.author: "jroth"
+manager: craigg
 ---
 # Working with User-Defined Types - Manipulating UDT Data
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

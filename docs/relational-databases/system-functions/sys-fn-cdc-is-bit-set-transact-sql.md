@@ -2,18 +2,11 @@
 title: "sys.fn_cdc_is_bit_set (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "database-engine"
-ms.service: ""
-ms.component: "system-functions"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: system-objects
 ms.topic: "language-reference"
-applies_to: 
-  - "SQL Server (starting with 2008)"
 f1_keywords: 
   - "fn_cdc_is_bit_set"
   - "sys.fn_cdc_is_bit_set_TSQL"
@@ -25,11 +18,9 @@ helpviewer_keywords:
   - "sys.fn_cdc_is_bit_set"
   - "fn_cdc_is_bit_set"
 ms.assetid: 792fe7cf-b3b8-4f25-8329-78d63f0e6921
-caps.latest.revision: 15
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-ms.workload: "Inactive"
+author: "rothja"
+ms.author: "jroth"
+manager: craigg
 ---
 # sys.fn_cdc_is_bit_set (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

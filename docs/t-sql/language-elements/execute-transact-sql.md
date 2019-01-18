@@ -2,15 +2,10 @@
 title: "EXECUTE (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/07/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
-ms.service: ""
-ms.component: "t-sql|language-elements"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: t-sql
 ms.topic: "language-reference"
 f1_keywords: 
   - "EXEC"
@@ -33,11 +28,10 @@ helpviewer_keywords:
   - "switching execution context"
   - "EXECUTE statement"
 ms.assetid: bc806b71-cc55-470a-913e-c5f761d5c4b7
-caps.latest.revision: 104
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-ms.workload: "Active"
+author: "douglaslMS"
+ms.author: "douglasl"
+manager: craigg
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 
 # EXECUTE (Transact-SQL)
@@ -236,6 +230,8 @@ Execute a character string
   
  If the value of a parameter is an object name, character string, or qualified by a database name or schema name, the whole name must be enclosed in single quotation marks. If the value of a parameter is a keyword, the keyword must be enclosed in double quotation marks.  
   
+If you pass a single word that does not begin with `@` and that's not enclosed in quotation marks - for example, if you forget `@` on a parameter name - the word is treated as an nvarchar string, in spite of the missing quotation marks.
+
  If a default is defined in the module, a user can execute the module without specifying a parameter.  
   
  The default can also be NULL. Generally, the module definition specifies the action that should be taken if a parameter value is NULL.  
@@ -288,7 +284,7 @@ Execute a character string
  Is a constant string that contains the command to be passed through to the linked server. If the N is included, the string is interpreted as **nvarchar** data type.  
   
  [?]  
- Indicates parameters for which values are supplied in the \<arg-list> of pass-through commands that are used in an EXEC('…', \<arg-list>) AT \<linkedsrv> statement.  
+ Indicates parameters for which values are supplied in the \<arg-list> of pass-through commands that are used in an EXEC('...', \<arg-list>) AT \<linkedsrv> statement.  
   
  AT *linked_server_name*  
 **Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
@@ -296,7 +292,7 @@ Execute a character string
  Specifies that *command_string* is executed against *linked_server_name* and results, if any, are returned to the client. *linked_server_name* must refer to an existing linked server definition in the local server. Linked servers are defined by using [sp_addlinkedserver](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md).  
   
  WITH \<execute_option>  
- Possible execute options. The RESULT SETS options cannot be specified in an INSERT…EXEC statement.  
+ Possible execute options. The RESULT SETS options cannot be specified in an INSERT...EXEC statement.  
   
 |Term|Definition|  
 |----------|----------------|  
@@ -317,7 +313,7 @@ Execute a character string
 |schema_name|The name of the schema owning the table, view or table valued function.|  
 |table_name &#124; view_name &#124; table_valued_function_name|Specifies that the columns returned will be those specified in the table, view or table valued function named. Table variables, temporary tables, and synonyms are not supported in the AS object syntax.|  
 |AS TYPE [schema_name.]table_type_name|Specifies that the columns returned will be those specified in the table type.|  
-|AS FOR XML|Specifies that the XML results from the statement or stored procedure called by the EXECUTE statement will be converted into the format as though they were produced by a SELECT … FOR XML … statement. All formatting from the type directives in the original statement are removed, and the results returned are as though no type directive was specified. AS FOR XML does not convert non-XML tabular results from the executed statement or stored procedure into XML.|  
+|AS FOR XML|Specifies that the XML results from the statement or stored procedure called by the EXECUTE statement will be converted into the format as though they were produced by a SELECT ... FOR XML ... statement. All formatting from the type directives in the original statement are removed, and the results returned are as though no type directive was specified. AS FOR XML does not convert non-XML tabular results from the executed statement or stored procedure into XML.|  
   
 |Term|Definition|  
 |----------|----------------|  

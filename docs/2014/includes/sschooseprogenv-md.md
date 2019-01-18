@@ -1,0 +1,1 @@
+To use any code example that is provided, you will have to choose the programming environment, the programming template, and the programming language in which to create your application. For more information, see "How to: Create a Visual Basic SMO Project in Visual Studio .NET" or "How to: Create a Visual C\# SMO Project in Visual Studio .NET" in SQL Server Books Online.

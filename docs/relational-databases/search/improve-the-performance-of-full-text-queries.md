@@ -2,22 +2,16 @@
 title: "Improve the Performance of Full-Text Queries | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-non-specified"
-ms.prod_service: "database-engine, sql-database"
-ms.service: ""
-ms.component: "search"
+ms.prod: sql
+ms.prod_service: "search, sql-database"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "dbe-search"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: search
+ms.topic: conceptual
 ms.assetid: 0658dc74-25eb-4486-bbd6-e85c1f92c272
-caps.latest.revision: 17
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-ms.workload: "On Demand"
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Improve the Performance of Full-Text Queries
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -51,7 +45,7 @@ ms.workload: "On Demand"
 -   For applications that contain selective-relation predications, queries that use selective relational predicates and unselective full-text predicates might perform best when they are written to use the query optimizer. This allows the query optimizer to decide whether it can exploit predicate or range pushdown to produce an effective query plan. This approach is simpler and often more efficient than indexing relational data as full-text data.  
   
 ## Related Resources  
- [SQL Server 2008 Full-Text Search: Internals and Enhancements](http://go.microsoft.com/fwlink/?LinkId=129544)  
+ [SQL Server 2008 Full-Text Search: Internals and Enhancements](https://go.microsoft.com/fwlink/?LinkId=129544)  
   
 ## See Also  
  [sys.dm_fts_memory_buffers &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-fts-memory-buffers-transact-sql.md)   

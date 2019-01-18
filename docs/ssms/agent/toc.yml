@@ -1,0 +1,318 @@
+- name: SQL Server Agent
+  href: sql-server-agent.md
+- name: SQL Server Agent Error Log
+  href: sql-server-agent-error-log.md
+  items:
+  - name: View SQL Server Agent Error Log (SQL Server Management Studio)
+    href: view-sql-server-agent-error-log-sql-server-management-studio.md
+  - name: Rename a SQL Server Agent Error Log (SSMS)
+    href: rename-a-sql-server-agent-error-log-sql-server-management-studio.md
+  - name: Write Execution Trace Messages to the SQL Server Agent Error Log (SSMS)
+    href: write-execution-trace-messages-to-sql-server-agent-log-ssms.md
+- name: Automated Administration Tasks (SQL Server Agent)
+  href: automated-administration-tasks-sql-server-agent.md
+  items:
+  - name: Implement SQL Server Agent Security
+    href: implement-sql-server-agent-security.md
+  - name: Implement Jobs
+    href: implement-jobs.md
+  - name: Monitor and Respond to Events
+    href: monitor-and-respond-to-events.md
+  - name: Automated Administration Across an Enterprise
+    href: automated-administration-across-an-enterprise.md
+    items:
+    - name: Change Steps of a SQL Server Agent Master Job
+      href: change-steps-of-a-sql-server-agent-master-job.md
+    - name: Change Scheduling Details for Master Job
+      href: change-the-scheduling-details-for-a-sql-server-agent-master-job.md
+- name: SQL Server Agent F1 Help
+  href: sql-server-agent-f1-help.md
+  items:
+  - name: Jobs Node (SQL Server Agent F1 Help)
+    href: jobs-node-sql-server-agent-f1-help.md
+  - name: Alerts Node (SQL Server Agent F1 Help)
+    href: alerts-node-sql-server-agent-f1-help.md
+  - name: Proxies Node (SQL Server Agent F1 Help)
+    href: proxies-node-sql-server-agent-f1-help.md
+  - name: Operators Node (SQL Server Agent F1 Help)
+    href: operators-node-sql-server-agent-f1-help.md
+  - name: Configure SQL Server Agent Error Logs (General Page)
+    href: configure-sql-server-agent-error-logs-general-page.md
+  - name: Recycle SQL Server Agent Error Logs
+    href: recycle-sql-server-agent-error-logs.md
+  - name: SQL Server Agent Properties (Advanced Page)
+    href: sql-server-agent-properties-advanced-page.md
+  - name: SQL Server Agent Properties (Alert System Page)
+    href: sql-server-agent-properties-alert-system-page.md
+  - name: SQL Server Agent Properties (Connection Page)
+    href: sql-server-agent-properties-connection-page.md
+  - name: SQL Server Agent Properties (General Page)
+    href: sql-server-agent-properties-general-page.md
+  - name: SQL Server Agent Properties (History Page)
+    href: sql-server-agent-properties-history-page.md
+  - name: SQL Server Agent Properties (Job System Page)
+    href: sql-server-agent-properties-job-system-page.md
+  - name: Target Servers (Download Instructions Tab)
+    href: target-servers-download-instructions-tab.md
+  - name: Target Servers (Target Server Status Tab)
+    href: target-servers-target-server-status-tab.md
+  - name: Post Download Instructions
+    href: post-download-instructions.md
+- name: SQL Server Agent details
+  items:
+  - name: Alerts
+    href: alerts.md
+  - name: Alert Properties - New Alert (General Page)
+    href: alert-properties-new-alert-general-page.md
+  - name: Alert Properties - New Alert (Options Page)
+    href: alert-properties-new-alert-options-page.md
+  - name: Alert Properties - New Alert (Response Page)
+    href: alert-properties-new-alert-response-page.md
+  - name: Alert Properties (History Page)
+    href: alert-properties-history-page.md
+  - name: Assign a Job to a Job Category
+    href: assign-a-job-to-a-job-category.md
+  - name: Assign Alerts to an Operator
+    href: assign-alerts-to-an-operator.md
+  - name: Automatically Delete a Job
+    href: automatically-delete-a-job.md
+  - name: Autostart SQL Server Agent
+    href: autostart-sql-server-agent-sql-server-management-studio.md
+  - name: Change an Operator's Availability
+    href: change-an-operator-s-availability.md
+  - name: Change the Membership of a Job Category
+    href: change-the-membership-of-a-job-category.md
+  - name: Choose the Right Agent Service Account for Multiserver Environments
+    href: choose-the-right-sql-server-agent-service-account-for-multiserver-environments.md
+  - name: Clear the Job History Log
+    href: clear-the-job-history-log.md
+  - name: Configure a User to Create and Manage SQL Server Agent Jobs
+    href: configure-a-user-to-create-and-manage-sql-server-agent-jobs.md
+  - name: Configure SQL Server Agent
+    href: configure-sql-server-agent.md
+  - name: Create a CmdExec Job Step
+    href: create-a-cmdexec-job-step.md
+  - name: Create a Job Category
+    href: create-a-job-category.md
+  - name: Create a Job
+    href: create-a-job.md
+  - name: Create a Multiserver Environment
+    href: create-a-multiserver-environment.md
+  - name: Create a PowerShell Script Job Step
+    href: create-a-powershell-script-job-step.md
+  - name: Create a Schedule
+    href: create-a-schedule.md
+  - name: Create a SQL Server Agent Master Job
+    href: create-a-sql-server-agent-master-job.md
+  - name: Create a SQL Server Agent Proxy
+    href: create-a-sql-server-agent-proxy.md
+  - name: Create a Transact-SQL Job Step
+    href: create-a-transact-sql-job-step.md
+  - name: Create a User-Defined Event
+    href: create-a-user-defined-event.md
+  - name: Create a WMI Event Alert
+    href: create-a-wmi-event-alert.md
+  - name: Create an ActiveX Script Job Step
+    href: create-an-activex-script-job-step.md
+  - name: Create an Alert Using an Error Number
+    href: create-an-alert-using-an-error-number.md
+  - name: Create an Alert Using Severity Level
+    href: create-an-alert-using-severity-level.md
+  - name: Create an Analysis Services Job Step
+    href: create-an-analysis-services-job-step.md
+  - name: Create an Operator
+    href: create-an-operator.md
+  - name: Create and Attach Schedules to Jobs
+    href: create-and-attach-schedules-to-jobs.md
+  - name: Create Jobs
+    href: create-jobs.md
+  - name: Defect a Target Server from a Master Server
+    href: defect-a-target-server-from-a-master-server.md
+  - name: Defect Multiple Target Servers from a Master Server
+    href: defect-multiple-target-servers-from-a-master-server.md
+  - name: Define the Response to an Alert (SSMS)
+    href: define-the-response-to-an-alert-sql-server-management-studio.md
+  - name: Define Transact-SQL Job Step Options
+    href: define-transact-sql-job-step-options.md
+  - name: Delete a Job Category
+    href: delete-a-job-category.md
+  - name: Delete a Job Step Log
+    href: delete-a-job-step-log.md
+  - name: Delete a SQL Server Agent Proxy
+    href: delete-a-sql-server-agent-proxy.md
+  - name: Delete an Alert
+    href: delete-an-alert.md
+  - name: Delete an Operator
+    href: delete-an-operator.md
+  - name: Delete Jobs
+    href: delete-jobs.md
+  - name: Delete One or More Jobs
+    href: delete-one-or-more-jobs.md
+  - name: Delete Operator
+    href: delete-operator.md
+  - name: Designate a Fail-Safe Operator
+    href: designate-a-fail-safe-operator.md
+  - name: Designate an Events Forwarding Server (SSMS)
+    href: designate-an-events-forwarding-server-sql-server-management-studio.md
+  - name: Disable or Enable a Job
+    href: disable-or-enable-a-job.md
+  - name: Disable or Reactivate an Alert
+    href: disable-or-reactivate-an-alert.md
+  - name: Edit an Alert
+    href: edit-an-alert.md
+  - name: Edit an Operator
+    href: edit-an-operator.md
+  - name: Enlist a Target Server to a Master Server
+    href: enlist-a-target-server-to-a-master-server.md
+  - name: Force a Target Server to Poll the Master Server
+    href: force-a-target-server-to-poll-the-master-server.md
+  - name: Format Pager Addresses for Alerts
+    href: format-pager-addresses-for-alerts.md
+  - name: Give Others Ownership of a Job
+    href: give-others-ownership-of-a-job.md
+  - name: Handle Multiple Job Steps
+    href: handle-multiple-job-steps.md
+  - name: Job Activity Monitor
+    href: job-activity-monitor.md
+  - name: Job Categories - Manage Job Categories
+    href: job-categories-manage-job-categories.md
+  - name: Job Categories Properties - New Job Category
+    href: job-categories-properties-new-job-category.md
+  - name: Job Properties - New Job (Alerts Page)
+    href: job-properties-new-job-alerts-page.md
+  - name: Job Properties - New Job (General Page)
+    href: job-properties-new-job-general-page.md
+  - name: Job Properties - New Job (Notifications Page)
+    href: job-properties-new-job-notifications-page.md
+  - name: Job Properties - New Job (Schedules Page)
+    href: job-properties-new-job-schedules-page.md
+  - name: Job Properties - New Job (Steps Page)
+    href: job-properties-new-job-steps-page.md
+  - name: Job Properties - New Job (Targets Page)
+    href: job-properties-new-job-targets-page.md
+  - name: Job Step Properties - New Job Step (Advanced Page)
+    href: job-step-properties-new-job-step-advanced-page.md
+  - name: Job Step Properties - New Job Step (General Page)
+    href: job-step-properties-new-job-step-general-page.md
+  - name: Jobs That Reference a Schedule
+    href: jobs-that-reference-a-schedule.md
+  - name: List Job Category Information
+    href: list-job-category-information.md
+  - name: Make a Master Server
+    href: make-a-master-server.md
+  - name: Make a Target Server
+    href: make-a-target-server.md
+  - name: Manage Events
+    href: manage-events.md
+  - name: Manage Job Steps
+    href: manage-job-steps.md
+  - name: Manage Jobs Across an Enterprise
+    href: manage-jobs-across-an-enterprise.md
+  - name: Manage Schedules
+    href: manage-schedules.md
+  - name: Modify a Job
+    href: modify-a-job.md
+  - name: Modify a SQL Server Agent Master Job
+    href: modify-a-sql-server-agent-master-job.md
+  - name: Modify a SQL Server Agent Proxy
+    href: modify-a-sql-server-agent-proxy.md
+  - name: Modify Target Server(s) Associated with an Agent Master Job
+    href: modify-the-target-server-s-associated-with-a-sql-server-agent-master-job.md
+  - name: Modify the Target Servers for a Job
+    href: modify-the-target-servers-for-a-job.md
+  - name: Monitor Job Activity
+    href: monitor-job-activity.md
+  - name: New Job Schedule - Job Schedule Properties
+    href: new-job-schedule-job-schedule-properties.md
+  - name: Notify an Operator of Job Status
+    href: notify-an-operator-of-job-status.md
+  - name: Operator Properties (History Page)
+    href: operator-properties-history-page.md
+  - name: Operator Properties - New Operator (General Page)
+    href: operator-properties-new-operator-general-page.md
+  - name: Operator Properties - New Operator (Notifications Page)
+    href: operator-properties-new-operator-notifications-page.md
+  - name: Operators
+    href: operators.md
+  - name: Organize Jobs
+    href: organize-jobs.md
+  - name: Pick Schedule for Job
+    href: pick-schedule-for-job.md
+  - name: Poll Servers
+    href: poll-servers.md
+  - name: Proxy Account Properties (References Tab)
+    href: proxy-account-properties-references-tab.md
+  - name: Proxy Account Properties - New Proxy Account (General Page)
+    href: proxy-account-properties-new-proxy-account-general-page.md
+  - name: Proxy Account Properties - New Proxy Account (Principals Tab)
+    href: proxy-account-properties-new-proxy-account-principals-tab.md
+  - name: Proxy Editor - Add Principal
+    href: proxy-editor-add-principal.md
+  - name: Remove Steps from a SQL Server Agent Master Job
+    href: remove-steps-from-a-sql-server-agent-master-job.md
+  - name: Resize the Job History Log
+    href: resize-the-job-history-log.md
+  - name: Run Jobs
+    href: run-jobs.md
+  - name: Schedule a Job
+    href: schedule-a-job.md
+  - name: Select an Account for the SQL Server Agent Service
+    href: select-an-account-for-the-sql-server-agent-service.md
+  - name: Send SQL Server Agent Error Messages
+    href: send-sql-server-agent-error-messages.md
+  - name: Set an Alias for SQL Server Agent Service (SQL Server Management Studio)
+    href: set-sql-server-alias-for-sql-server-agent-service-ssms.md
+  - name: Set CPU Idle Time and Duration (SSMS)
+    href: set-cpu-idle-time-and-duration-sql-server-management-studio.md
+  - name: Set Encryption Options on Target Servers
+    href: set-encryption-options-on-target-servers.md
+  - name: Set Job Execution Shutdown (SSMS)
+    href: set-job-execution-shutdown-sql-server-management-studio.md
+  - name: Set Job Step Success or Failure Flow
+    href: set-job-step-success-or-failure-flow.md
+  - name: Set the Polling Interval for Target Servers
+    href: set-the-polling-interval-for-target-servers.md
+  - name: Set the Service Startup Account for SQL Server Agent (SQL Server Configuration Manager)
+    href: set-service-startup-account-sql-server-agent-sql-server-configuration-manager.md
+  - name: Set the SQL Server Connection for Agent Service
+    href: set-sql-server-connection-for-sql-server-agent-service-ssms.md
+  - name: Set Up the Job History Log
+    href: set-up-the-job-history-log.md
+  - name: Specify a Target Server's Location (SSMS)
+    href: specify-a-target-server-s-location-sql-server-management-studio.md
+  - name: Specify Job Responses
+    href: specify-job-responses.md
+  - name: SQL Server Agent Fixed Database Roles
+    href: sql-server-agent-fixed-database-roles.md
+  - name: Start a Job
+    href: start-a-job.md
+  - name: Start, Stop, or Pause the SQL Server Agent Service
+    href: start-stop-or-pause-the-sql-server-agent-service.md
+  - name: Stop a Job
+    href: stop-a-job.md
+  - name: Synchronize Target Server Clocks (SSMS)
+    href: synchronize-target-server-clocks-sql-server-management-studio.md
+  - name: Troubleshoot Multiserver Jobs That Use Proxies
+    href: troubleshoot-multiserver-jobs-that-use-proxies.md
+  - name: Tune Automated Administration Across an Enterprise
+    href: tune-automated-administration-across-an-enterprise.md
+  - name: Use Performance Objects
+    href: use-performance-objects.md
+  - name: Use Tokens in Job Steps
+    href: use-tokens-in-job-steps.md
+  - name: View a Job
+    href: view-a-job.md
+  - name: View Information About an Alert
+    href: view-information-about-an-alert.md
+  - name: View Information About an Operator
+    href: view-information-about-an-operator.md
+  - name: View Job Activity
+    href: view-job-activity.md
+  - name: View Job Step Information
+    href: view-job-step-information.md
+  - name: View or Modify Jobs
+    href: view-or-modify-jobs.md
+  - name: View the Job History
+    href: view-the-job-history.md
+  - name: Write Job Status to Windows Application Log
+    href: write-the-job-status-to-the-windows-application-log.md

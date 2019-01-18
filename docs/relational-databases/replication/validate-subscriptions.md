@@ -2,26 +2,20 @@
 title: "Validate Subscriptions | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.service: ""
-ms.component: "replication"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: replication
+ms.topic: conceptual
 f1_keywords: 
   - "sql13.rep.validate.subscriptions.f1"
 helpviewer_keywords: 
   - "Validate Subscriptions dialog box"
 ms.assetid: 0ca39a35-f22c-46c5-82a4-342e34bf5d1b
-caps.latest.revision: 21
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-ms.workload: "Inactive"
+author: "MashaMSFT"
+ms.author: "mathoma"
+manager: craigg
+monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Validate Subscriptions
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -38,6 +32,6 @@ ms.workload: "Inactive"
  Click to access the **Subscription Validation Options** dialog box, which allows you to specify whether to use row count validation or binary checksum validation.  
   
 ## See Also  
- [Validate Replicated Data](../../relational-databases/replication/validate-replicated-data.md)  
+ [Validate Replicated Data](../../relational-databases/replication/validate-data-at-the-subscriber.md)  
   
   

@@ -1,22 +1,15 @@
 ---
 title: "Choosing between URL access and SOAP in Reporting Services | Microsoft Docs"
-ms.custom: ""
-ms.date: "10/19/2017"
+ms.date: 10/19/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
-ms.service: ""
-ms.component: "application-integration"
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
+ms.technology: application-integration
 
 
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-author: "markingmyname"
-ms.author: "maghan"
-manager: "kfile"
-ms.workload: "Inactive"
+ms.topic: reference
+author: markingmyname
+ms.author: maghan
+monikerRange: "= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Choosing between URL access and SOAP in Reporting Services
 
@@ -48,6 +41,6 @@ Integrating [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] into c
   
  In the majority of cases, URL access and SOAP calls are both required to meet your reporting needs. SOAP is used when initially connecting to the report server database and presenting the available list of reports in a user interface and URL access is used to actually access and navigate individual reports.  
   
- For an example of combining URL access and the Web service to provide integrated reporting, see [SQL Server Reporting Services Product Samples](http://go.microsoft.com/fwlink/?LinkId=177889).
+ For an example of combining URL access and the Web service to provide integrated reporting, see [SQL Server Reporting Services Product Samples](https://go.microsoft.com/fwlink/?LinkId=177889).
 
-More questions? [Try asking the Reporting Services forum](http://go.microsoft.com/fwlink/?LinkId=620231)
+More questions? [Try asking the Reporting Services forum](https://go.microsoft.com/fwlink/?LinkId=620231)

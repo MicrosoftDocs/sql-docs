@@ -1,28 +1,21 @@
 ---
 title: "ADORecordConstruction Interface | Microsoft Docs"
-ms.prod: "sql-non-specified"
-ms.prod_service: "drivers"
-ms.service: ""
-ms.component: "ado"
-ms.technology:
-  - "drivers"
+ms.prod: sql
+ms.prod_service: connectivity
+ms.technology: connectivity
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 apitype: "COM"
 f1_keywords: 
   - "ADORecordConstruction"
 helpviewer_keywords: 
   - "ADORecordConstruction interface [ADO]"
 ms.assetid: 52a5429e-5829-455e-be3b-31f05cbecf2d
-caps.latest.revision: 9
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
-ms.workload: "Inactive"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # ADORecordConstruction Interface
 The **ADORecordConstruction**interface is used to construct an ADO **Record** object from an OLE DB **Row** object in a C/C++ application.  

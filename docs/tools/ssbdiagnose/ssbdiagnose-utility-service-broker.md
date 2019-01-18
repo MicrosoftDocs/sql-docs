@@ -2,16 +2,11 @@
 title: "ssbdiagnose Utility (Service Broker) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "sql-tools"
-ms.service: ""
-ms.component: "ssbdiagnose"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: tools-other
+ms.topic: conceptual
 helpviewer_keywords: 
   - "Service Broker, runtime reports"
   - "Service Broker, command prompt utilities"
@@ -28,11 +23,9 @@ helpviewer_keywords:
   - "Service Broker, ssbdiagnose utility"
   - "ssbdiagnose"
 ms.assetid: 0c1636e8-a3db-438e-be4c-1ea40d1f4877
-caps.latest.revision: 45
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-ms.workload: "Inactive"
+author: "stevestein"
+ms.author: "sstein"
+manager: craigg
 ---
 # ssbdiagnose Utility (Service Broker)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -94,7 +87,7 @@ ssbdiagnose
   [ CONNECT TO <connectionoptions> ] [ ...n]  
   
 <connectionoptions> ::=  
-    [ –E | { -U login_id [ -P password ] } ]  
+    [ -E | { -U login_id [ -P password ] } ]  
   [ -S server_name[\instance_name] ]  
   [ -d database_name ]  
   [ -l login_timeout ]  
@@ -116,7 +109,7 @@ ssbdiagnose
   
  The default setting is **WARNING**.  
   
- **-IGNORE** *error_id*  
+ **-IGNORE** _error_id_  
  Specifies that errors or messages that have the specified *error_id* not be included in reports. You can specify **-IGNORE** multiple times to suppress multiple message IDs.  
   
  **\<baseconnectionoptions>**  
@@ -125,13 +118,13 @@ ssbdiagnose
  **CONFIGURATION**  
  Requests a report of configuration errors between a pair of [!INCLUDE[ssSB](../../includes/sssb-md.md)] services, or for a single service.  
   
- **FROM SERVICE** *service_name*  
+ **FROM SERVICE** _service_name_  
  Specifies the service that initiates conversations.  
   
  **\<fromconnectionoptions>**  
  Specifies the information that is required to connect to the database that holds the initiator service. If **fromconnectionoptions** is not specified, **ssbdiagnose** uses the connection information from **baseconnectionoptions** to connect to the initiator database. If **fromconnectionoptions** is specified it must include the database that contains the initiator service. If **fromconnectionoptions** is not specified, the **baseconnectionoptions** must specify the initiator database.  
   
- **TO SERVICE** *service_name*[, *broker_id* ]  
+ **TO SERVICE** _service_name_[, *broker_id* ]  
  Specifies the service that is the target for the conversations.  
   
  *service_name*: specifies the name of the target service.  
@@ -153,7 +146,7 @@ WHERE database_id = DB_ID();
  **\<mirrorconnectionoptions>**  
  Specifies the information that is required to connect to the mirror database. If **mirrorconnectionoptions** is not specified, **ssbdiagnose** uses the connection information from **baseconnectionoptions** to connect to the mirror database.  
   
- **ON CONTRACT** *contract_name*  
+ **ON CONTRACT** _contract_name_  
  Requests that **ssbdiagnose** only check configurations that use the specified contract. If ON CONTRACT is not specified, **ssbdiagnose** reports on the contract named DEFAULT.  
   
  **ENCRYPTION** { **ON** | **OFF** | **ANONYMOUS** }  
@@ -202,13 +195,13 @@ WHERE database_id = DB_ID();
   
  Conversation IDs are reported in the **conversation_id** column of the **sys.conversation_endpoints** catalog view.  
   
- **-TIMEOUT** *timeout_interval*  
+ **-TIMEOUT** _timeout_interval_  
  Specifies the number of seconds for a **RUNTIME** report to run. If **-TIMEOUT** is not specified the runtime report runs indefinitely. **-TIMEOUT** is used only on **RUNTIME** reports, not **CONFIGURATION** reports. Use ctrl + C to quit **ssbdiagnose** if **-TIMEOUT** was not specified or to end a runtime report before the time**-**out interval expires. *timeout_interval* must be a number between 1 and 2,147,483,647.  
   
  **\<runtimeconnectionoptions>**  
  Specifies the connection information for the databases that contain the services associated with conversation elements being monitored. If all the services are in the same database, you only have to specify one **CONNECT TO** clause. If the services are in separate databases you must supply a **CONNECT TO** clause for each database. If **runtimeconnectionoptions** is not specified, **ssbdiagnose** uses the connection information from **baseconnectionoptions**.  
   
- **–E**  
+ **-E**  
  Open a Windows Authentication connection to an instance of the [!INCLUDE[ssDE](../../includes/ssde-md.md)] by using your current Windows account as the login ID. The login must be a member of the **sysadmin** fixed-server role.  
   
  The -E option ignores the user and password settings of the SQLCMDUSER and SQLCMDPASSWORD environment variables.  
@@ -217,14 +210,14 @@ WHERE database_id = DB_ID();
   
  If the **-E** option is used together with the **-U** option or the **-P** option, an error message is generated.  
   
- **-U** *login_id*  
+ **-U** _login_id_  
  Open a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentication connection by using the specified login ID. The login must be a member of the **sysadmin** fixed-server role.  
   
  If neither **-E** nor **-U** is specified, **ssbdiagnose** uses the value from the SQLCMDUSER environment variable. If SQLCMDUSER is not set either, **ssbdiagnose** tries to connect by using Windows Authentication mode based on the Windows account of the user who is running **ssbdiagnose**.  
   
- If the **-U** option is used together with the **-E** option, an error message is generated. If the **–U** option is followed by more than one argument, an error message is generated and the program exits.  
+ If the **-U** option is used together with the **-E** option, an error message is generated. If the **-U** option is followed by more than one argument, an error message is generated and the program exits.  
   
- **-P** *password*  
+ **-P** _password_  
  Specifies the password for the **-U** login ID. Passwords are case sensitive. If the **-U** option is used and the **-P** option is not used, **ssbdiagnose** uses the value from the SQLCMDPASSWORD environment variable. If SQLCMDPASSWORD is not set either, **ssbdiagnose** prompts the user for a password.  
   
 > [!IMPORTANT]  
@@ -243,15 +236,15 @@ WHERE database_id = DB_ID();
   
  If the **-P** option is followed by more than one argument, an error message is generated.  
   
- **-S** *server_name*[\\*instance_name*]  
+ **-S** _server_name_[\\*instance_name*]  
  Specifies the instance of the [!INCLUDE[ssDE](../../includes/ssde-md.md)] that holds the [!INCLUDE[ssSB](../../includes/sssb-md.md)] services to be analyzed.  
   
- Specify *server_name* to connect to the default instance of the [!INCLUDE[ssDE](../../includes/ssde-md.md)] on that server. Specify *server_name***\\***instance_name* to connect to a named instance of the [!INCLUDE[ssDE](../../includes/ssde-md.md)] on that server. If **-S** is not specified, **ssbdiagnose** uses the value of the SQLCMDSERVER environment variable. If SQLCMDSERVER is not set either, **ssbdiagnose** connects to the default instance of the [!INCLUDE[ssDE](../../includes/ssde-md.md)] on the local computer.  
+ Specify *server_name* to connect to the default instance of the [!INCLUDE[ssDE](../../includes/ssde-md.md)] on that server. Specify _server\_name_**\\**_instance\_name_ to connect to a named instance of the [!INCLUDE[ssDE](../../includes/ssde-md.md)] on that server. If **-S** is not specified, **ssbdiagnose** uses the value of the SQLCMDSERVER environment variable. If SQLCMDSERVER is not set either, **ssbdiagnose** connects to the default instance of the [!INCLUDE[ssDE](../../includes/ssde-md.md)] on the local computer.  
   
- **-d** *database_name*  
+ **-d** _database_name_  
  Specifies the database that holds the [!INCLUDE[ssSB](../../includes/sssb-md.md)] services to be analyzed. If the database does not exist, an error message is generated. If **-d** is not specified, the default is the database specified in the default-database property for your login.  
   
- **-l** *login_timeout*  
+ **-l** _login_timeout_  
  Specifies the number of seconds before an attempt to connect to a server times out. If **-l** is not specified, **ssbdiagnose** uses the value set for the SQLCMDLOGINTIMEOUT environment variable. If SQLCMDLOGINTIMEOUT is not set either, the default time-out is thirty seconds. The login time-out must be a number between 0 and 65534. If the value that is supplied is not numeric or does not fall into that range, **ssbdiagnose** generates an error message. A value of 0 specifies time-out to be infinite.  
   
  **-?**  

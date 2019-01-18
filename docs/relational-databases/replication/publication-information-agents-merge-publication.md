@@ -2,24 +2,17 @@
 title: "Publication Information, Agents (Merge Publication) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/07/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "database-engine"
-ms.service: ""
-ms.component: "replication"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: replication
+ms.topic: conceptual
 f1_keywords: 
   - "sql13.rep.monitor.publicationinfo.downlevelagents.merge.f1"
 ms.assetid: 73ff590a-20da-4f10-b592-c60b7226d22b
-caps.latest.revision: 23
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-ms.workload: "Inactive"
+author: "MashaMSFT"
+ms.author: "mathoma"
+manager: craigg
 ---
 # Publication Information, Agents (Merge Publication)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -50,7 +43,7 @@ ms.workload: "Inactive"
 -   Completed  
   
  **Agent**  
- The Snapshot Agent. This is the only agent associated with a merge publication. The Merge Agent is associated with subscriptions to this publication. For more information, see [View Information and Perform Tasks for the Agents Associated With a Subscription &#40;Replication Monitor&#41;](../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-subscription-agents.md).  
+ The Snapshot Agent. This is the only agent associated with a merge publication. The Merge Agent is associated with subscriptions to this publication. For more information, see [View Information and Perform Tasks with Replication Monitor](../../relational-databases/replication/monitor/view-information-and-perform-tasks-replication-monitor.md).  
   
  **Last Start Time**  
  The last time the agent started.  
@@ -63,8 +56,7 @@ ms.workload: "Inactive"
   
 ## See Also  
  [Start the Replication Monitor](../../relational-databases/replication/monitor/start-the-replication-monitor.md)   
- [View Information and Perform Tasks for a Publication &#40;Replication Monitor&#41;](../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-a-publication-replication-monitor.md)   
- [View Information and Perform Tasks for the Agents Associated With a Publication &#40;Replication Monitor&#41;](../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-publication-agents.md)   
- [Monitoring Replication](../../relational-databases/replication/monitor/monitoring-replication-overview.md)  
+ [Monitoring Replication](../../relational-databases/replication/monitor/monitoring-replication.md)  
+ [View Information and Perform Tasks with Replication Monitor](../../relational-databases/replication/monitor/view-information-and-perform-tasks-replication-monitor.md).
   
   

@@ -2,15 +2,10 @@
 title: "NumberOfFlags Property (ClientNetworkProtocol Class) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "database-engine"
-ms.service: ""
-ms.component: "wmi"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: wmi
 ms.topic: "reference"
 apiname: 
   - "NumberOfFlags Property (ClientNetworkProtocol Class)"
@@ -20,11 +15,9 @@ apitype: "MOFDef"
 helpviewer_keywords: 
   - "NumberOfFlags property"
 ms.assetid: 7a656644-2154-419f-9787-99877f597770
-caps.latest.revision: 32
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-ms.workload: "Inactive"
+author: "CarlRabeler"
+ms.author: "carlrab"
+manager: craigg
 ---
 # NumberOfFlags Property (ClientNetworkProtocol Class)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,6 +40,6 @@ object.NumberofFlags [= value]
 ## Remarks  
   
 ## See Also  
- [Configure Client Protocols](http://technet.microsoft.com/library/ms181035.aspx)  
+ [Configure Client Protocols](https://technet.microsoft.com/library/ms181035.aspx)  
   
   

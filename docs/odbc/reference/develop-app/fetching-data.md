@@ -2,25 +2,18 @@
 title: "Fetching Data | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
-ms.prod_service: "drivers"
-ms.service: ""
-ms.component: "odbc"
+ms.prod: sql
+ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "drivers"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: connectivity
+ms.topic: conceptual
 helpviewer_keywords: 
   - "result sets [ODBC], fetching"
   - "fetches [ODBC], defined"
 ms.assetid: 04a1efc1-0a46-42f9-8c4e-9f063740dd8a
-caps.latest.revision: 5
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
-ms.workload: "Inactive"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # Fetching Data
 The process of retrieving rows from the result set and returning them to the application is called *fetching*. This section describes how to fetch data.  

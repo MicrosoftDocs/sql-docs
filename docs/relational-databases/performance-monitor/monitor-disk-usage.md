@@ -2,16 +2,11 @@
 title: "Monitor Disk Usage | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "database-engine"
-ms.service: ""
-ms.component: "performance-monitor"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: performance"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "database monitoring [SQL Server], disk usage"
   - "disks [SQL Server]"
@@ -26,11 +21,9 @@ helpviewer_keywords:
   - "database performance [SQL Server], disk usage"
   - "monitoring server performance [SQL Server], disk usage"
 ms.assetid: 1525449c-ea7d-4222-b294-1ba1fe99c9ac
-caps.latest.revision: 23
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-ms.workload: "On Demand"
+author: julieMSFT
+ms.author: jrasnick
+manager: craigg
 ---
 # Monitor Disk Usage
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -42,6 +35,6 @@ ms.workload: "On Demand"
   
 -   Isolating Disk Activity That [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Creates  
   
- For more information see, [Monitoring Disk Usage](http://social.technet.microsoft.com/wiki/contents/articles/monitoring-disk-usage.aspx)  
+ For more information see, [Monitoring Disk Usage](https://social.technet.microsoft.com/wiki/contents/articles/monitoring-disk-usage.aspx)  
   
   

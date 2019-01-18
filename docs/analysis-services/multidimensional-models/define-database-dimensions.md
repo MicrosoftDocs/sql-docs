@@ -1,27 +1,14 @@
 ---
 title: "Define Database Dimensions | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: analysis-services
-ms.prod_service: "analysis-services"
-ms.service: ""
-ms.component: ""
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
-  
-ms.component: multidimensional-tabular
-ms.component: data-mining
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "dimensions [Analysis Services], defining"
-ms.assetid: fe84588b-66a3-4100-a1cf-59b21b7adf01
-caps.latest.revision: 27
-author: "Minewiskan"
-ms.author: "owend"
-manager: "kfile"
-ms.workload: "Inactive"
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: multidimensional-models
+ms.topic: conceptual
+ms.author: owend
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
 ---
 # Define Database Dimensions
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -47,7 +34,7 @@ ms.workload: "Inactive"
   
 |Tab|Description|  
 |---------|-----------------|  
-|**Dimension Structure**|Use this tab to work with the structure of a dimension—to examine or create the data source view schema for a dimension, to work with attributes, and to organize attributes in user-defined hierarchies.|  
+|**Dimension Structure**|Use this tab to work with the structure of a dimension-to examine or create the data source view schema for a dimension, to work with attributes, and to organize attributes in user-defined hierarchies.|  
 |**Attribute Relationships**|Use this tab to create, modify, or delete the attribute relationships of a dimension.|  
 |**Translations**|Use this tab to add and edit translations of dimension metadata in different languages.|  
 |**Browser**|Use this tab to examine the members of a processed dimension and to review translations of dimension metadata.|  

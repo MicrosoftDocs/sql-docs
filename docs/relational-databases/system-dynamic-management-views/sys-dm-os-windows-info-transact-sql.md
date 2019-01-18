@@ -2,15 +2,9 @@
 title: "sys.dm_os_windows_info (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/30/2017"
-ms.prod: "sql-non-specified"
-ms.prod_service: "database-engine"
-ms.service: ""
-ms.component: "dmv's"
+ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: system-objects
 ms.topic: "language-reference"
 f1_keywords: 
   - "dm_os_windows_info"
@@ -22,11 +16,9 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.dm_os_windows_info dynamic management view"
 ms.assetid: adc81283-fdc2-46c0-bb48-abe82bbf2459
-caps.latest.revision: 15
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-ms.workload: "On Demand"
+author: stevestein
+ms.author: sstein
+manager: craigg
 ---
 # sys.dm_os_windows_info (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -37,10 +29,10 @@ ms.workload: "On Demand"
   
 |Column name|Data type|Description|  
 |-----------------|---------------|-----------------|  
-|**windows_release**|**nvarchar(256)**|For Windows, returns the release number. For a list of values and descriptions, see [Operating System Version (Windows)](http://msdn.microsoft.com/library/ms724832\(VS.85\).aspx). Cannot be NULL.|  
+|**windows_release**|**nvarchar(256)**|For Windows, returns the release number. For a list of values and descriptions, see [Operating System Version (Windows)](/windows/desktop/SysInfo/operating-system-version). Cannot be NULL.|  
 |**windows_service_pack_level**|**nvarchar(256)**| For Windows, returns the service pack number. Cannot be NULL. |  
-|**windows_sku**|**int**|For Windows, returns the Windows Stock Keeping Unit (SKU) ID. For a list of SKU IDs and descriptions, see [GetProductInfo Function](http://msdn.microsoft.com/library/ms724358.aspx). Is NULLable. |  
-|**os_language_version**|**int**| For Windows, returns the Windows locale identifier (LCID) of the operating system. For a list of LCID values and descriptions, see [Locale IDs Assigned by Microsoft](http://go.microsoft.com/fwlink/?LinkId=208080). Cannot be NULL.|  
+|**windows_sku**|**int**|For Windows, returns the Windows Stock Keeping Unit (SKU) ID. For a list of SKU IDs and descriptions, see [GetProductInfo Function](https://msdn.microsoft.com/library/ms724358.aspx). Is NULLable. |  
+|**os_language_version**|**int**| For Windows, returns the Windows locale identifier (LCID) of the operating system. For a list of LCID values and descriptions, see [Locale IDs Assigned by Microsoft](https://go.microsoft.com/fwlink/?LinkId=208080). Cannot be NULL.|  
   
   
 ## Permissions  

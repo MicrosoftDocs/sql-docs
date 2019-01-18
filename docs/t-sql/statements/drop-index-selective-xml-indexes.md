@@ -2,26 +2,19 @@
 title: "DROP INDEX (Selective XML Indexes) | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/10/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.service: ""
-ms.component: "t-sql|statements"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: t-sql
 ms.topic: "language-reference"
 f1_keywords: 
   - "DROP XML INDEX statement"
 dev_langs: 
   - "TSQL"
 ms.assetid: 4779ae84-e5f4-4d04-8fc1-e24a6631b428
-caps.latest.revision: 12
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
-ms.workload: "Inactive"
+manager: craigg
 ---
 # DROP INDEX (Selective XML Indexes)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]

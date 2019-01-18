@@ -2,26 +2,19 @@
 title: "Database Mirroring - Use Certificates for Inbound Connections | Microsoft Docs"
 ms.custom: ""
 ms.date: "05/17/2016"
-ms.prod: "sql-non-specified"
-ms.prod_service: "database-engine"
-ms.service: ""
-ms.component: "database-mirroring"
+ms.prod: sql
+ms.prod_service: high-availability
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: high-availability
+ms.topic: conceptual
 helpviewer_keywords: 
   - "certificates [SQL Server], database mirroring"
   - "inbound connections"
   - "database mirroring [SQL Server], security"
 ms.assetid: 5d48bb98-61f0-4b99-8f1a-b53f831d63d0
-caps.latest.revision: 31
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-ms.workload: "Inactive"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ---
 # Database Mirroring - Use Certificates for Inbound Connections
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -116,7 +109,7 @@ ms.workload: "Inactive"
   
 5.  Grant CONNECT permission on the login for the remote mirroring endpoint.  
   
-     For example, to grant permission on HOST_A to the remote server instance on HOST_B to connect to its local login—that is, to connect to `HOST_B_login`—use the following [!INCLUDE[tsql](../../includes/tsql-md.md)] statements:  
+     For example, to grant permission on HOST_A to the remote server instance on HOST_B to connect to its local login-that is, to connect to `HOST_B_login`-use the following [!INCLUDE[tsql](../../includes/tsql-md.md)] statements:  
   
     ```  
     USE master;  

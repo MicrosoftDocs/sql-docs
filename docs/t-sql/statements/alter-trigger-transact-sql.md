@@ -2,15 +2,10 @@
 title: "ALTER TRIGGER (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "05/08/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.service: ""
-ms.component: "t-sql|statements"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: t-sql
 ms.topic: "language-reference"
 f1_keywords: 
   - "ALTER TRIGGER"
@@ -24,11 +19,9 @@ helpviewer_keywords:
   - "ALTER TRIGGER statement"
   - "DML triggers, modifying"
 ms.assetid: 2a99c7c1-ac2f-4637-aa7c-3d1bf514e500
-caps.latest.revision: 74
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "craigg"
-ms.workload: "On Demand"
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
 ---
 # ALTER TRIGGER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

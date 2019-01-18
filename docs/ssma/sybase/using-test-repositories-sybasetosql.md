@@ -2,27 +2,16 @@
 title: "Using Test Repositories (SybaseToSQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
-ms.prod_service: "sql-tools"
-ms.service: ""
-ms.component: "ssma-sybase"
+ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "sql-ssma"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to: 
-  - "Azure SQL Database"
-  - "SQL Server"
+ms.technology: ssma
+ms.topic: conceptual
 helpviewer_keywords: 
   - "Tester Component,Test Repositories"
 ms.assetid: c359c25c-db2a-4a20-afa9-62d87a62df72
-caps.latest.revision: 7
 author: "Shamikg"
 ms.author: "Shamikg"
-manager: "jhubbard"
-ms.workload: "Inactive"
+manager: craigg
 ---
 # Using Test Repositories (SybaseToSQL)
 The SSMA Test Repository stores SSMA Tester test cases and test results for later use. The Repository data are saved in the SQL Server tables **TestCaseRepository** and **RunTestCaseResultRepository** in the schema **ssma_sybase_utilities** of **ssmatesterdb_syb** database.  
@@ -34,7 +23,7 @@ The following buttons are available on the Repository of Test Cases dialog box:
 -   Click the **Close** button to close Repository of Test Cases dialog box.  
   
 ## Test Cases Repository  
-You can view the Test Cases Repository by clicking **Test Cases…** from the **Tester** menu. SSMA then displays the **Repository of Test Cases** dialog window with a list of saved test cases on the **Test Cases** page.  
+You can view the Test Cases Repository by clicking **Test Cases...** from the **Tester** menu. SSMA then displays the **Repository of Test Cases** dialog window with a list of saved test cases on the **Test Cases** page.  
   
 The grid shows the following information about each test case:  
   
@@ -57,7 +46,7 @@ The following buttons are available on Test Cases page:
 -   Click the **Run** button to open the [Running Test Cases &#40;SybaseToSQL&#41;](../../ssma/sybase/running-test-cases-sybasetosql.md) dialog and execute the selected test.  
   
 ## Test Results Repository  
-You can view the Test Results Repository on the **Test Results** page of the **Repository of Test Cases** window. Open it by clicking **Test Results…** from the **Tester** menu.  
+You can view the Test Results Repository on the **Test Results** page of the **Repository of Test Cases** window. Open it by clicking **Test Results...** from the **Tester** menu.  
   
 You can use two filters on **Test Results** page:  
   

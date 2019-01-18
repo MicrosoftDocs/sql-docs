@@ -2,27 +2,23 @@
 title: "Leaf Member Staging Table (Master Data Services) | Microsoft Docs"
 ms.custom: ""
 ms.date: "04/01/2016"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "mds"
-ms.service: ""
-ms.component: "non-specific"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "master-data-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: master-data-services
+ms.topic: conceptual
 helpviewer_keywords: 
   - "members staging table [Master Data Services]"
   - "database [Master Data Services], members staging table"
 ms.assetid: a8c953da-ec20-47dc-8656-ed5f0dfed89b
-caps.latest.revision: 14
-author: "smartysanthosh"
-ms.author: "nagavo"
-manager: "craigg"
-ms.workload: "On Demand"
+author: leolimsft
+ms.author: lle
+manager: craigg
 ---
 # Leaf Member Staging Table (Master Data Services)
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
   Use the leaf members staging table (stg.name_Leaf) in the [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] database to create, update, deactivate, and delete leaf members. You can also use it to update attribute values for leaf members.  
   
 ##  <a name="TableColumns"></a> Table Columns  
@@ -39,7 +35,7 @@ ms.workload: "On Demand"
 |**Code**<br /><br /> Required, except when codes are generated automatically for **ImportType1** or **2**; see [Automatic Code Creation &#40;Master Data Services&#41;](../master-data-services/automatic-code-creation-master-data-services.md) for more information|A unique code for the member.||  
 |**Name**<br /><br /> Optional|A name for the member.||  
 |**NewCode**|Use only if you are changing the member code.||  
-|\<Attribute name>|A column exists for each attribute in the entity. Use this with an **ImportType** of **0** or **2**. For free-form attributes, specify the new text or string value for the attribute. For domain-based attributes, specify the code for the member that will be the attribute. For link attributes, the URL must start with **http://**.<br /><br /> Note: You cannot stage file attributes.||  
+|\<Attribute name>|A column exists for each attribute in the entity. Use this with an **ImportType** of **0** or **2**. For free-form attributes, specify the new text or string value for the attribute. For domain-based attributes, specify the code for the member that will be the attribute. For link attributes, the URL must start with **https://**.<br /><br /> Note: You cannot stage file attributes.||  
   
 ## See Also  
  [Overview: Importing Data from Tables &#40;Master Data Services&#41;](../master-data-services/overview-importing-data-from-tables-master-data-services.md)   

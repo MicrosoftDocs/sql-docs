@@ -2,15 +2,9 @@
 title: "Creating an Assembly | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-non-specified"
-ms.prod_service: "database-engine"
-ms.service: ""
-ms.component: "clr"
+ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-
-ms.tgt_pltfrm: ""
+ms.technology: clr
 ms.topic: "reference"
 helpviewer_keywords: 
   - "creating assemblies"
@@ -20,11 +14,9 @@ helpviewer_keywords:
   - "EXTERNAL_ACCESS assemblies"
   - "assemblies [CLR integration], creating"
 ms.assetid: a2bc503d-b6b2-4963-8beb-c11c323f18e0
-caps.latest.revision: 27
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-ms.workload: "On Demand"
+author: "rothja"
+ms.author: "jroth"
+manager: craigg
 ---
 # Creating an Assembly
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -53,7 +45,7 @@ FROM 'C:\MyDBApp\SQLCLRTest.dll';
 -   The assembly that is called or referenced was created in the same database.  
   
 ## Specifying Security When Creating Assemblies  
- When creating an assembly into a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] database, you can specify one of three different levels of security in which your code can run: **SAFE**, **EXTERNAL_ACCESS**, or **UNSAFE**. When the **CREATE ASSEMBLY** statement is run, certain checks are performed on the code assembly which may cause the assembly to fail to register on the server. For more information, see the Impersonation sample on [CodePlex](http://msftengprodsamples.codeplex.com/).  
+ When creating an assembly into a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] database, you can specify one of three different levels of security in which your code can run: **SAFE**, **EXTERNAL_ACCESS**, or **UNSAFE**. When the **CREATE ASSEMBLY** statement is run, certain checks are performed on the code assembly which may cause the assembly to fail to register on the server. For more information, see the Impersonation sample on [CodePlex](https://msftengprodsamples.codeplex.com/).  
   
  **SAFE** is the default permission set and works for the majority of scenarios. To specify a given security level, you modify the syntax of the CREATE ASSEMBLY statement as follows:  
   
@@ -138,6 +130,6 @@ WITH PERMISSION_SET = UNSAFE;
  [Dropping an Assembly](../../../relational-databases/clr-integration/assemblies/dropping-an-assembly.md)   
  [CLR Integration Code Access Security](../../../relational-databases/clr-integration/security/clr-integration-code-access-security.md)   
  [TRUSTWORTHY Database Property](../../../relational-databases/security/trustworthy-database-property.md)   
- [Allowing Partially Trusted Callers](http://msdn.microsoft.com/library/20b0248f-36da-4fc3-97d2-3789fcf6e084)  
+ [Allowing Partially Trusted Callers](https://msdn.microsoft.com/library/20b0248f-36da-4fc3-97d2-3789fcf6e084)  
   
   

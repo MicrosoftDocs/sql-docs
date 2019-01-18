@@ -2,15 +2,9 @@
 title: "sys.dm_xe_sessions (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/10/2016"
-ms.prod: "sql-non-specified"
-ms.prod_service: "database-engine"
-ms.service: ""
-ms.component: "dmv's"
+ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: system-objects
 ms.topic: "language-reference"
 f1_keywords: 
   - "dm_xe_sessions_TSQL"
@@ -23,11 +17,9 @@ helpviewer_keywords:
   - "sys.dm_xe_sessions dynamic management view"
   - "extended events [SQL Server], views"
 ms.assetid: defd6efb-9507-4247-a91f-dc6ff5841e17
-caps.latest.revision: 17
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-ms.workload: "Inactive"
+author: stevestein
+ms.author: sstein
+manager: craigg
 ---
 # sys.dm_xe_sessions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -56,14 +48,6 @@ ms.workload: "Inactive"
   
 ## Permissions  
  Requires VIEW SERVER STATE permission on the server.  
-  
-## Change History  
-  
-|Updated content|  
-|---------------------|  
-|Corrected the data type for the name and the blocked_event_fire_time columns.|  
-|Removed the buffer_size and total_buffers columns.|  
-|Added the total_regular_buffers,regular_buffer_size, total_large_buffers, large_buffer_size and total_buffer_size columns.|  
   
 ## See Also  
  [Dynamic Management Views and Functions &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)  

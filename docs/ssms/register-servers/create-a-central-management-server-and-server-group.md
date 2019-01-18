@@ -2,24 +2,17 @@
 title: "Create a Central Management Server and Server Group | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "sql-tools"
-ms.service: ""
-ms.component: "ssms-registration"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: ssms
+ms.topic: conceptual
 helpviewer_keywords: 
   - "configuration server"
 ms.assetid: da265482-3953-440a-ac23-0ab7e42a55eb
-caps.latest.revision: 35
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-ms.workload: "On Demand"
+author: "stevestein"
+ms.author: "sstein"
+manager: craigg
 ---
 # Create a Central Management Server and Server Group
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -64,7 +57,7 @@ ms.workload: "On Demand"
   
 4.  In **Registered Server**, enter a server name and optional description.  
   
-5.  From the **Connection Properties** tab, review or modifiy the network  and connection properties. For more information, see [Connect to Server &#40;Connection Properties Page&#41; Database Engine](http://msdn.microsoft.com/library/edc1143c-6a47-4b02-92ab-441bdea8ea8a)  
+5.  From the **Connection Properties** tab, review or modifiy the network  and connection properties. For more information, see [Connect to Server &#40;Connection Properties Page&#41; Database Engine](https://msdn.microsoft.com/library/edc1143c-6a47-4b02-92ab-441bdea8ea8a)  
   
 6.  Click **Test**, to test the connection.  
   

@@ -1,61 +1,53 @@
 ---
 title: "Connecting to SQL Server (OracleToSQL) | Microsoft Docs"
-ms.prod: "sql-non-specified"
-ms.prod_service: "sql-tools"
-ms.service: ""
-ms.component: "ssma-oracle"
+ms.prod: sql
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "sql-ssma"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: ssma
+ms.topic: conceptual
 helpviewer_keywords: 
   - "Connecting to SQL Server,Synchronizing SQL Server Metadata"
 ms.assetid: 1b2a8059-1829-4904-a82f-9c06de1e245f
-caps.latest.revision: 16
 author: "Shamikg"
 ms.author: "Shamikg"
 manager: "v-thobro"
-ms.workload: "Inactive"
 ---
 # Connecting to SQL Server (OracleToSQL)
-To migrate Oracle databases to [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2005, [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2008, [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2008 R2 or [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2012 or [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2014 you must connect to any of these target instances of [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]. When you connect, SSMA obtains metadata about all the databases in the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] and displays database metadata in the [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Metadata Explorer. SSMA stores information about which instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] you are connected to, but does not store passwords.  
+To migrate Oracle databases to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2005, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2008, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2008 R2 or [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2012 or [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2014 you must connect to any of these target instances of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. When you connect, SSMA obtains metadata about all the databases in the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and displays database metadata in the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Metadata Explorer. SSMA stores information about which instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] you are connected to, but does not store passwords.  
   
-Your connection to [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] stays active until you close the project. When you reopen the project, you must reconnect to [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] if you want an active connection to the server. You can work offline until you load database objects into [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] and migrate data.  
+Your connection to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] stays active until you close the project. When you reopen the project, you must reconnect to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] if you want an active connection to the server. You can work offline until you load database objects into [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and migrate data.  
   
-Metadata about the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] is not automatically synchronized. Instead, to update the metadata in [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Metadata Explorer, you must manually update the [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] metadata. For more information, see the "Synchronizing [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Metadata" section later in this topic.  
+Metadata about the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is not automatically synchronized. Instead, to update the metadata in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Metadata Explorer, you must manually update the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] metadata. For more information, see the "Synchronizing [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Metadata" section later in this topic.  
   
 ## Required SQL Server Permissions  
-The account that is used to connect to [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] requires different permissions depending on the actions that the account performs:  
+The account that is used to connect to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] requires different permissions depending on the actions that the account performs:  
   
--   To convert Oracle objects to [!INCLUDE[tsql](../../includes/tsql_md.md)] syntax, to update metadata from [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], or to save converted syntax to scripts, the account must have permission to log on to the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)].  
+-   To convert Oracle objects to [!INCLUDE[tsql](../../includes/tsql-md.md)] syntax, to update metadata from [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], or to save converted syntax to scripts, the account must have permission to log on to the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
--   To load database objects into [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], the account must be a member of the   **sysadmin** server role. This is required to install CLR assemblies.  
+-   To load database objects into [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], the account must be a member of the   **sysadmin** server role. This is required to install CLR assemblies.  
   
--   To migrate data to [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], the account must be a member of the **sysadmin** server role. This is required to run the [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent data migration packages.  
+-   To migrate data to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], the account must be a member of the **sysadmin** server role. This is required to run the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent data migration packages.  
   
 -   To run the code that is generated by SSMA, the account must have **Execute** permissions for all user-defined functions in the **ssma_oracle** schema of the target database. These functions provide equivalent functionality of Oracle system functions, and are used by converted objects.  
   
-If the account that is used to connect to [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] is to perform all migration tasks, the account must be a member of the **sysadmin** server role.  
+If the account that is used to connect to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is to perform all migration tasks, the account must be a member of the **sysadmin** server role.  
   
 ## Establishing a SQL Server Connection  
-Before you convert Oracle database objects to [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] syntax, you must establish a connection to the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] where you want to migrate the Oracle database or databases.  
+Before you convert Oracle database objects to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] syntax, you must establish a connection to the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] where you want to migrate the Oracle database or databases.  
   
-When you define the connection properties, you also specify the database where objects and data will be migrated. You can customize this mapping at the Oracle schema level after you connect to [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]. For more information, see [Mapping Oracle Schemas to SQL Server Schemas &#40;OracleToSQL&#41;](../../ssma/oracle/mapping-oracle-schemas-to-sql-server-schemas-oracletosql.md).  
+When you define the connection properties, you also specify the database where objects and data will be migrated. You can customize this mapping at the Oracle schema level after you connect to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. For more information, see [Mapping Oracle Schemas to SQL Server Schemas &#40;OracleToSQL&#41;](../../ssma/oracle/mapping-oracle-schemas-to-sql-server-schemas-oracletosql.md).  
   
 > [!IMPORTANT]  
-> Before you try to connect to [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], make sure that the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] is running and can accept connections.  
+> Before you try to connect to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], make sure that the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is running and can accept connections.  
   
 **To connect to SQL Server**  
   
 1.  On the **File** menu, select **Connect to SQL Server**.  
   
-    If you previously connected to [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], the command name will be **Reconnect to SQL Server**.  
+    If you previously connected to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], the command name will be **Reconnect to SQL Server**.  
   
-2.  In the connection dialog box, enter or select the name of the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)].  
+2.  In the connection dialog box, enter or select the name of the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
     -   If you are connecting to the default instance on the local computer, you can enter **localhost** or a dot (**.**).  
   
@@ -63,13 +55,13 @@ When you define the connection properties, you also specify the database where o
   
     -   If you are connecting to a named instance on another computer, enter the computer name followed by a backslash and then the instance name, such as MyServer\MyInstance.  
   
-3.  If your instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] is configured to accept connections on a non-default port, enter the port number that is used for [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] connections in the **Server port** box. For the default instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], the default port number is 1433. For named instances, SSMA will try to obtain the port number from the [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Browser Service.  
+3.  If your instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is configured to accept connections on a non-default port, enter the port number that is used for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] connections in the **Server port** box. For the default instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], the default port number is 1433. For named instances, SSMA will try to obtain the port number from the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser Service.  
   
 4.  In the **Database** box, enter the name of the target database.  
   
-    This option is not available when you reconnect to [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)].  
+    This option is not available when you reconnect to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-5.  In the **Authentication** box, select the authentication type to use for the connection. To use the current Windows account, select **Windows Authentication**. To use a [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] login, select **SQL Server Authentication**, and then provide the login name and password.  
+5.  In the **Authentication** box, select the authentication type to use for the connection. To use the current Windows account, select **Windows Authentication**. To use a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] login, select **SQL Server Authentication**, and then provide the login name and password.  
   
 6.  For Secure connection, two controls are added, the **Encrypt Connection** and **TrustServerCertificate** check boxes. Only when **Encrypt Connection** is checked, the **TrustServerCertificate** check box is visible. When **Encrypt Connection** is checked (true) and **TrustServerCertificate** is unchecked (false), it will validate the SQL Server SSL certificate. Validating the server certificate is a part of the SSL handshake and ensures that the server is the correct server to connect to. To ensure this, a certificate must be installed on the client side as well as on the server side.  
   
@@ -77,33 +69,33 @@ When you define the connection properties, you also specify the database where o
   
 **Higher Version Compatability**  
   
--   You will be able to connect to [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2008 and [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2012 and [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2014 and [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2016 when the migration project created is [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2005.  
+-   You will be able to connect to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2008 and [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2012 and [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2014 and [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016 when the migration project created is [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2005.  
   
--   You will be able to connect to [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2012 and [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2014 and [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2016 when the migration project created is [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2008 but you will not be able to connect to lower versions i.e. [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2005.  
+-   You will be able to connect to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2012 and [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2014 and [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016 when the migration project created is [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2008 but you will not be able to connect to lower versions i.e. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2005.  
   
--   You will be able to connect to [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2012 and [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2014 and [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2016 when the project created is SQL Server 2012.  
+-   You will be able to connect to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2012 and [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2014 and [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016 when the project created is SQL Server 2012.  
   
 ||||||||  
 |-|-|-|-|-|-|-|  
-|**PROJECT TYPE Vs TARGET SERVER VERSION**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2005<br /> (Version: 9.x)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2008<br /> (Version: 10.x)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2012 <br />(Version:11.x)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2014 <br />(Version:12.x)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2016 <br />(Version:13.x)|Azure SQL DB|  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2005|Yes|Yes|Yes|Yes|Yes||  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2008||Yes|Yes|Yes|Yes||
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2012|||Yes|Yes|Yes||
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2014||||Yes|Yes||
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2016|||||Yes||
+|**PROJECT TYPE Vs TARGET SERVER VERSION**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2005<br /> (Version: 9.x)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2008<br /> (Version: 10.x)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2012 <br />(Version:11.x)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2014 <br />(Version:12.x)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016 <br />(Version:13.x)|Azure SQL DB|  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2005|Yes|Yes|Yes|Yes|Yes||  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2008||Yes|Yes|Yes|Yes||
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2012|||Yes|Yes|Yes||
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2014||||Yes|Yes||
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016|||||Yes||
 |Azure SQL DB||||||Yes|
   
-> [!IMPORTANT]  
-> Conversion of the database objects is carried out as per the project type but not as per the version of the [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] you are connected to. In case of [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2005 project, Conversion is carried out as per [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2005 even though you are connected to a higher version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] ([!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2008 or [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2012 or [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2014 or [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2016).  
+> [!IMPORTANT]
+> Conversion of the database objects is carried out as per the project type but not as per the version of the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] you are connected to. In case of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2005 project, Conversion is carried out as per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2005 even though you are connected to a higher version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ( [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2008 or [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2012 or [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2014 or [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016).  
   
 ## Synchronizing SQL Server Metadata  
-Metadata about [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] databases is not automatically updated. The metadata in [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Metadata Explorer is a snapshot of the metadata when you first connected to [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], or the last time that you manually updated metadata. You can manually update metadata for all databases, or for any single database or database object.  
+Metadata about [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] databases is not automatically updated. The metadata in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Metadata Explorer is a snapshot of the metadata when you first connected to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], or the last time that you manually updated metadata. You can manually update metadata for all databases, or for any single database or database object.  
   
 **To synchronize metadata**  
   
-1.  Make sure that you are connected to [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)].  
+1.  Make sure that you are connected to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-2.  In [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Metadata Explorer, select the check box next to the database or database schema that you want to update.  
+2.  In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Metadata Explorer, select the check box next to the database or database schema that you want to update.  
   
     For example, to update the metadata for all databases, select the box next to **Databases**.  
   
@@ -112,13 +104,13 @@ Metadata about [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] databas
 ## Next Step  
 The next step in the migration depends on your project needs:  
   
--   To customize the mapping between Oracle schemas and [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] databases and schemas, see [Mapping Oracle Schemas to SQL Server Schemas &#40;OracleToSQL&#41;](../../ssma/oracle/mapping-oracle-schemas-to-sql-server-schemas-oracletosql.md).  
+-   To customize the mapping between Oracle schemas and [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] databases and schemas, see [Mapping Oracle Schemas to SQL Server Schemas &#40;OracleToSQL&#41;](../../ssma/oracle/mapping-oracle-schemas-to-sql-server-schemas-oracletosql.md).  
   
 -   To customize configuration options for the projects, see [Setting Project Options &#40;OracleToSQL&#41;](../../ssma/oracle/setting-project-options-oracletosql.md).  
   
 -   To customize the mapping of source and target data types, see [Mapping Oracle and SQL Server Data Types &#40;OracleToSQL&#41;](../../ssma/oracle/mapping-oracle-and-sql-server-data-types-oracletosql.md).  
   
--   If you do not have to perform any of these tasks, you can convert the Oracle database object definitions into [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] object definitions. For more information, see [Converting Oracle Schemas &#40;OracleToSQL&#41;](../../ssma/oracle/converting-oracle-schemas-oracletosql.md).  
+-   If you do not have to perform any of these tasks, you can convert the Oracle database object definitions into [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] object definitions. For more information, see [Converting Oracle Schemas &#40;OracleToSQL&#41;](../../ssma/oracle/converting-oracle-schemas-oracletosql.md).  
   
 ## See Also  
 [Migrating Oracle Databases to SQL Server &#40;OracleToSQL&#41;](../../ssma/oracle/migrating-oracle-databases-to-sql-server-oracletosql.md)  

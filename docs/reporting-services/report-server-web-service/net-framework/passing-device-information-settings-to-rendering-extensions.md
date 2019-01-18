@@ -1,20 +1,12 @@
 ---
 title: "Passing Device Information Settings to Rendering Extensions | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/16/2017"
+ms.date: 03/16/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
-ms.service: ""
-ms.component: "report-server-web-service"
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
+ms.technology: report-server-web-service
 
 
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-applies_to: 
-  - "SQL Server 2016 Preview"
+ms.topic: reference
 helpviewer_keywords: 
   - "device information settings [Reporting Services]"
   - "Render method"
@@ -27,11 +19,8 @@ helpviewer_keywords:
   - "device information settings [Reporting Services], about device information settings"
   - "extensions [Reporting Services], device information settings"
 ms.assetid: fe718939-7efe-4c7f-87cb-5f5b09caeff4
-caps.latest.revision: 47
-author: "markingmyname"
-ms.author: "maghan"
-manager: "kfile"
-ms.workload: "On Demand"
+author: markingmyname
+ms.author: maghan
 ---
 # Passing Device Information Settings to Rendering Extensions
   In [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)], device information settings are used to pass rendering parameters to a rendering extension. Settings in the Report Server Web service are passed as a **DeviceInfo** XML element and processed by the report server. Because device information settings have default values, they are considered optional arguments in the rendering process. However, you can use device information settings to customize rendering and to override the default values that are supplied by the server.  
@@ -53,7 +42,7 @@ ms.workload: "On Demand"
  You can also pass device information settings through URL access. Device information settings are passed as URL parameters. The following URL access string can be passed to the report server to generate a rendered report without the HTML viewer toolbar.  
   
 ```  
-http://<Server Name>/reportserver?/SampleReports/Sales Order Detail&rs:Command=Render&rs:Format=HTML4.0&rc:Toolbar=False  
+https://<Server Name>/reportserver?/SampleReports/Sales Order Detail&rs:Command=Render&rs:Format=HTML4.0&rc:Toolbar=False  
 ```  
   
  For more information, see [Specify Device Information Settings in a URL](../../../reporting-services/specify-device-information-settings-in-a-url.md).  

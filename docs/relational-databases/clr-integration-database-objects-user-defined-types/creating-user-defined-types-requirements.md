@@ -2,15 +2,9 @@
 title: "User-Defined Type Requirements | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/16/2017"
-ms.prod: "sql-non-specified"
-ms.prod_service: "database-engine"
-ms.service: ""
-ms.component: "clr"
+ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-
-ms.tgt_pltfrm: ""
+ms.technology: clr
 ms.topic: "reference"
 helpviewer_keywords: 
   - "UDTs [CLR integration], requirements"
@@ -23,11 +17,9 @@ helpviewer_keywords:
   - "user-defined types [CLR integration], Native serialization"
   - "UDTs [CLR integration], Native serialization"
 ms.assetid: bedc3372-50eb-40f2-bcf2-d6db6a63b7e6
-caps.latest.revision: 31
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-ms.workload: "Inactive"
+author: "rothja"
+ms.author: "jroth"
+manager: craigg
 ---
 # Creating User-Defined Types - Requirements
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -74,7 +66,7 @@ ms.workload: "Inactive"
   
  **bool**, **byte**, **sbyte**, **short**, **ushort**, **int**, **uint**, **long**, **ulong**, **float**, **double**, **SqlByte**, **SqlInt16**, **SqlInt32**, **SqlInt64**, **SqlDateTime**, **SqlSingle**, **SqlDouble**, **SqlMoney**, **SqlBoolean**  
   
- Value types that that are composed of fields of the above types are good candidates for **Native** format, such as **structs** in Visual C#, (or **Structures** as they are known in Visual Basic). For example, a UDT specified with the **Native** serialization format may contain a field of another UDT that was also specified with the **Native** format. If the UDT definition is more complex and contains data types not on the above list, you must specify the **UserDefined** serialization format instead.  
+ Value types that are composed of fields of the above types are good candidates for **Native** format, such as **structs** in Visual C#, (or **Structures** as they are known in Visual Basic). For example, a UDT specified with the **Native** serialization format may contain a field of another UDT that was also specified with the **Native** format. If the UDT definition is more complex and contains data types not on the above list, you must specify the **UserDefined** serialization format instead.  
   
  The **Native** format has the following requirements:  
   

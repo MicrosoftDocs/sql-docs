@@ -1,54 +1,18 @@
 ---
-title: "General Properties | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: analysis-services
-ms.prod_service: "analysis-services"
-ms.service: ""
-ms.component: ""
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
-  
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-helpviewer_keywords: 
-  - "IdleConnectionTimeout property"
-  - "InstanceVisible property"
-  - "TempDir property"
-  - "AdminTimeout property"
-  - "MinIdleSessionTimeout property"
-  - "MaxIdleSessionTimeout property"
-  - "IdleOrphanSessionTimeout property"
-  - "BackupDir property"
-  - "CommitTimeout property"
-  - "ExternalCommandTimeout property"
-  - "Enabled property"
-  - "ForceCommitTimeout property"
-  - "Port property"
-  - "CoordinatorShutdownMode property"
-  - "ServerTimeout property"
-  - "AllowedBrowsingFolders property"
-  - "CoordinatorCancelCount property"
-  - "DataDir property"
-  - "CoordinatorQueryMaxThreads property"
-  - "CoordinatorExecutionMode property"
-  - "ExternalConnectionTimeout property"
-  - "CollationName property"
-  - "EnableFast1033Locale property"
-  - "CoordinatorBuildMaxThreads property"
-  - "Language property"
-  - "StatisticsStoreSize property"
-  - "RepositoryConnectionString property"
-ms.assetid: 88a8117c-396a-469f-a62d-c6f262504021
-caps.latest.revision: 31
-author: "Minewiskan"
-ms.author: "owend"
-manager: "kfile"
-ms.workload: "Inactive"
+title: "Analysis Services General Properties | Microsoft Docs"
+ms.date: 06/07/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: 
+ms.topic: conceptual
+ms.author: owend
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
 ---
 # General Properties
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
+
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] supports the server properties listed in the following tables. This topic documents those server properties in the msmdsrv.ini file that are not otherwise included in a specific section, such as Security, Network, or ThreadPool. For more information about additional server properties and how to set them, see [Server Properties in Analysis Services](../../analysis-services/server-properties/server-properties-in-analysis-services.md).  
   
  **Applies to:** Multidimensional and Tabular server mode, unless noted otherwise  
@@ -63,7 +27,7 @@ ms.workload: "Inactive"
  A string property that specifies in a delimited list the folders that can be browsed when saving, opening, and finding files in Analysis Services dialog boxes. The Analysis Services service account must have read and write permissions to any folders that you add to the list.  
   
  **BackupDir**  
- A string property that identifies the name of the directory where backup files are stored by default, in the event a path is not specified as part of the the Backup command.  
+ A string property that identifies the name of the directory where backup files are stored by default, in the event a path is not specified as part of the Backup command.  
   
  **CollationName**  
  A string property that identifies the server collation. For more information, see [Languages and Collations &#40;Analysis Services&#41;](../../analysis-services/languages-and-collations-analysis-services.md).  
@@ -94,7 +58,7 @@ ms.workload: "Inactive"
  A string property that identifies the name of the directory where data is stored.  
   
  **DeploymentMode**  
- Determines the operational context of an Analysis Services server instance. This property is referred to as ‘server mode’ in dialog boxes, messages, and documentation. This property is configured by SQL Server Setup based on the server mode you selected when installing Analysis Services. This property should be considered internal only, always using the value specified by Setup.  
+ Determines the operational context of an Analysis Services server instance. This property is referred to as 'server mode' in dialog boxes, messages, and documentation. This property is configured by SQL Server Setup based on the server mode you selected when installing Analysis Services. This property should be considered internal only, always using the value specified by Setup.  
   
  Valid values for this property include the following:  
   

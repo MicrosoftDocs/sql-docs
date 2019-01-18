@@ -1,0 +1,30 @@
+- name: Overview
+  href: replication-views-transact-sql.md
+- name: IHextendedArticleView (Transact-SQL)
+  href: ihextendedarticleview-transact-sql.md
+- name: IHextendedSubscriptionView (Transact-SQL)
+  href: ihextendedsubscriptionview-transact-sql.md
+- name: IHsyscolumns (Transact-SQL)
+  href: ihsyscolumns-transact-sql.md
+- name: MSdatatype_mappings (Transact-SQL)
+  href: msdatatype-mappings-transact-sql.md
+- name: MSdistribution_status (Transact-SQL)
+  href: msdistribution-status-transact-sql.md
+- name: sysarticlecolumns (System View) (Transact-SQL)
+  href: sysarticlecolumns-system-view-transact-sql.md
+- name: sysarticles (System View) (Transact-SQL)
+  href: sysarticles-system-view-transact-sql.md
+- name: sysdatatypemappings (Transact-SQL)
+  href: sysdatatypemappings-transact-sql.md
+- name: sysextendedarticlesview (Transact-SQL)
+  href: sysextendedarticlesview-transact-sql.md
+- name: sysmergeextendedarticlesview (Transact-SQL)
+  href: sysmergeextendedarticlesview-transact-sql.md
+- name: sysmergepartitioninfoview (Transact-SQL)
+  href: sysmergepartitioninfoview-transact-sql.md
+- name: syspublications (System View) (Transact-SQL)
+  href: syspublications-system-view-transact-sql.md
+- name: syssubscriptions (System View) (Transact-SQL)
+  href: syssubscriptions-system-view-transact-sql.md
+- name: systranschemas (Transact-SQL)
+  href: systranschemas-transact-sql.md

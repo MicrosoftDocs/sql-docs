@@ -2,27 +2,20 @@
 title: "Specify a Server Network Address (Database Mirroring) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-non-specified"
-ms.prod_service: "database-engine"
-ms.service: ""
-ms.component: "database-mirroring"
+ms.prod: sql
+ms.prod_service: high-availability
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: high-availability
+ms.topic: conceptual
 helpviewer_keywords: 
   - "database mirroring [SQL Server], deployment"
   - "database mirroring [SQL Server], endpoint"
   - "endpoints [SQL Server], database mirroring"
   - "server network addresses [SQL Server]"
 ms.assetid: a64d4b6b-9016-4f1e-a310-b1df181dd0c6
-caps.latest.revision: 60
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-ms.workload: "On Demand"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ---
 # Specify a Server Network Address (Database Mirroring)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -34,7 +27,7 @@ ms.workload: "On Demand"
 ##  <a name="Syntax"></a> Syntax for a Server Network Address  
  The syntax for a server network address is of the form:  
   
- TCP**://***\<system-address>***:***\<port>*  
+ TCP<strong>://</strong>*\<system-address>*<strong>:</strong>*\<port>*  
   
  where  
   
@@ -42,15 +35,15 @@ ms.workload: "On Demand"
   
     -   If the systems are the same domain, you can use the name of the computer system; for example, `SYSTEM46`.  
   
-    -   To use an IP address, it must be unique in your environment. We recommend that you use an IP address only if it is static. The IP address can be IP Version 4 (IPv4) or IP Version 6 (IPv6). An IPv6 address must be enclosed within square brackets, for example: **[***<IPv6_address>***]**.  
+    -   To use an IP address, it must be unique in your environment. We recommend that you use an IP address only if it is static. The IP address can be IP Version 4 (IPv4) or IP Version 6 (IPv6). An IPv6 address must be enclosed within square brackets, for example: **[**_<IPv6_address>_**]**.  
   
          To learn the IP address of a system, at the Windows command prompt, enter the **ipconfig** command.  
   
     -   The fully qualified domain name is guaranteed to work. This is a locally defined address string that different forms in different places. Often, but not always, a fully qualified domain name is a compound name that includes the computer name and a series of period-separated domain segments of the form:  
   
-         *computer_name* **.** *domain_segment*[...**.***domain_segment*]  
+         _computer_name_ **.** _domain_segment_[...**.**_domain_segment_]  
   
-         where *computer_name i*s the network name of the computer running the server instance, and *domain_segment*[...**.***domain_segment*] is the remaining domain information of the server; for example: `localinfo.corp.Adventure-Works.com`.  
+         where *computer_name i*s the network name of the computer running the server instance, and *domain_segment*[...**.**_domain_segment_] is the remaining domain information of the server; for example: `localinfo.corp.Adventure-Works.com`.  
   
          The content and number of domain segments are determined within the company or organization. If you do not know the fully qualified domain name for your server, see your system administrator.  
   
@@ -110,7 +103,7 @@ ALTER DATABASE AdventureWorks SET PARTNER ='tcp://[2001:4898:23:1002:20f:1fff:fe
   
  To form the fully qualified domain name, concatenate the values of*<host_name>* and *<Primary_Dns_Suffix>* as follows:  
   
- *<host_name>* **.** *<Primary_Dns_Suffix>*  
+ _<host_name>_ **.** _<Primary_Dns_Suffix>_  
   
  For example, the IP configuration  
   

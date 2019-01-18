@@ -2,27 +2,20 @@
 title: "Diagnostics for Desktop Database Drivers | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
-ms.prod_service: "drivers"
-ms.service: ""
-ms.component: "odbc"
+ms.prod: sql
+ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "drivers"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: connectivity
+ms.topic: conceptual
 helpviewer_keywords: 
   - "Jet-based ODBC drivers [ODBC], diagnostic information"
   - "desktop database drivers [ODBC], diagnostic information"
   - "ODBC desktop database drivers [ODBC], diagnostic information"
   - "diagnostic information [ODBC], desktop database drivers"
 ms.assetid: 1c3740eb-62c6-4009-b4b2-570fcf5661e4
-caps.latest.revision: 6
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
-ms.workload: "Inactive"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # Diagnostics for Desktop Database Drivers
 All errors and warnings not checked or partially checked by the Driver Manager are handled by the driver. The driver also maps native errors, or errors returned by the data source, to SQLSTATEs. Each function listed in the *ODBC Programmer's Reference* contains a "Diagnostics" section that specifies conditions and messages.  

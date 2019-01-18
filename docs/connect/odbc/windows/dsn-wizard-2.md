@@ -1,23 +1,16 @@
 ---
 title: "Data Source Wizard Screen 2 (ODBC Driver for SQL Server) | Microsoft Docs"
 ms.custom: ""
-ms.date: "09/27/2017"
-ms.prod: "sql-non-specified"
-ms.prod_service: "drivers"
-ms.service: ""
-ms.component: "odbc"
+ms.date: "03/21/2018"
+ms.prod: sql
+ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "drivers"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: connectivity
+ms.topic: conceptual
 ms.assetid: 76326eeb-1144-4b9f-85db-50524c655d30
-caps.latest.revision: 22
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
-ms.workload: "Inactive"
+author: MightyPen
+ms.author: "v-jizho2"
+manager: craigg
 ---
 # Data Source Wizard Screen 2
 
@@ -43,9 +36,13 @@ Specifies that the driver authenticate to SQL Server using a login ID and passwo
 
 Specifies that the driver authenticate to SQL Server using an Azure Active Directory login ID and password.
 
+### With Active Directory Interactive authentication
+
+Specifies that the driver authenticate to SQL Server using Azure Active Directory Interactive mode by providing login ID. This will trigger the Windows Azure Authentication prompt dialog.
+
 ### Login ID
 
-Specifies the login ID the driver uses when connecting to SQL Server if **With SQL Server Authentication using a login ID and password entered by the user** or **With Active Directory Password authentication using a login ID and password entered by the user** is selected. This only applies to the connection made to determine the server default settings; it does not apply to subsequent connections made using the data source after it has been created.
+Specifies the login ID the driver uses when connecting to SQL Server if **With SQL Server Authentication using a login ID and password entered by the user** or **With Active Directory Password authentication using a login ID and password entered by the user** or **With Active Directory Interactive authentication using a login ID entered by the user** is selected. This only applies to the connection made to determine the server default settings; it does not apply to subsequent connections made using the data source after it has been created.
 
 ### Password
 

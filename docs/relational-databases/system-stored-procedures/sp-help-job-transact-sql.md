@@ -2,15 +2,10 @@
 title: "sp_help_job (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/02/2016"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "database-engine"
-ms.service: ""
-ms.component: "system-stored-procedures"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: system-objects
 ms.topic: "language-reference"
 f1_keywords: 
   - "sp_help_job_TSQL"
@@ -20,11 +15,9 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_help_job"
 ms.assetid: 8a8b6104-e0e4-4d07-a2c3-f4243ee0d6fa
-caps.latest.revision: 27
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-ms.workload: "On Demand"
+author: "stevestein"
+ms.author: "sstein"
+manager: craigg
 ---
 # sp_help_job (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -61,7 +54,7 @@ sp_help_job { [ @job_id = ] job_id
  The name of the job. *job_name* is **sysname**, with a default of NULL.  
   
 > [!NOTE]  
->  Either *job_id* or *job_name* must be specified, but both cannot be specified.  
+>  To view a specific job, either *job_id* or *job_name* must be specified.  Omit both *job_id* and *job_name* to return information about all jobs.
   
  [ **@job_aspect =**] **'***job_aspect***'**  
  The job attribute to display. *job_aspect* is **varchar(9)**, with a default of NULL, and can be one of these values.  
@@ -232,7 +225,7 @@ sp_help_job { [ @job_id = ] job_id
   
 -   **SQLAgentOperatorRole**  
   
- For details about the permissions of these roles, see [SQL Server Agent Fixed Database Roles](http://msdn.microsoft.com/library/719ce56b-d6b2-414a-88a8-f43b725ebc79).  
+ For details about the permissions of these roles, see [SQL Server Agent Fixed Database Roles](../../ssms/agent/sql-server-agent-fixed-database-roles.md).  
   
  Members of **SQLAgentUserRole** can only view jobs that they own. Members of **sysadmin**, **SQLAgentReaderRole**, and **SQLAgentOperatorRole** can view all local and multiserver jobs.  
   

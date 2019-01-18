@@ -1,16 +1,11 @@
 ---
 title: "COMPRESS (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "07/24/2017"
-ms.prod: "sql-non-specified"
+ms.date: "10/11/2018"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.service: ""
-ms.component: "t-sql|functions"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: t-sql
 ms.topic: "reference"
 f1_keywords: 
   - "COMPRESS"
@@ -18,16 +13,14 @@ f1_keywords:
 helpviewer_keywords: 
   - "COMPRESS function"
 ms.assetid: c2bfe9b8-57a4-48b4-b028-e1a3ed5ece88
-caps.latest.revision: 9
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "craigg"
-ms.workload: "On Demand"
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
 ---
 # COMPRESS (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
 
-Compresses the input expression using the GZIP algorithm. The result of the compression is byte array of type **varbinary(max)**.
+This function compresses the input expression, using the GZIP algorithm. The function returns a byte array of type **varbinary(max)**.
   
 ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -39,20 +32,35 @@ COMPRESS ( expression )
   
 ## Arguments  
 *expression*  
-Is a **nvarchar(***n***)**, **nvarchar(max)**, **varchar(***n***)**, **varchar(max)**, **varbinary(***n***)**, **varbinary(max)**, **char(***n***)**, **nchar(***n***)**, or **binary(***n***)** expression. For more information, see [Expressions &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md).
+A
+
+* **binary(***n***)**
+* **char(***n***)**
+* **nchar(***n***)**
+* **nvarchar(max)**
+* **nvarchar(***n***)**
+* **varbinary(max)**
+* **varbinary(***n***)**
+* **varchar(max)**
+
+or
+
+* **varchar(***n***)**
+
+expression. See [Expressions &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md) for more information.
   
 ## Return types
-Returns the data type of **varbinary(max)** that represents the compressed content of input.
+**varbinary(max)** representing the compressed content of the input.
   
 ## Remarks  
 Compressed data cannot be indexed.
   
-The COMPRESS function compresses the data provided as the input expression and must be invoked for each section of data to be compressed. For automatic compression at the row or page level during storage, see [Data Compression](../../relational-databases/data-compression/data-compression.md).
+The `COMPRESS` function compresses the input expression data. You must invoke this function for each data section to compress. See [Data Compression](../../relational-databases/data-compression/data-compression.md) for more information about automatic data compression during storage at the row or page level.
   
 ## Examples  
   
 ### A. Compress Data During the Table Insert  
-The following example shows how to compress data inserted into table:
+This example shows how to compress data inserted into a table:
   
 ```sql
 INSERT INTO player (name, surname, info )  
@@ -64,13 +72,13 @@ VALUES (N'Michael', N'Raheem', compress(@info));
 ```  
   
 ### B. Archive compressed version of deleted rows  
-The following statement deletes old player records from the `player` table and stores the records in the `inactivePlayer` table in a compressed format to save space.
+This statement first deletes old player records from the `player` table. To save space, it then stores the records in the `inactivePlayer` table, in a compressed format.
   
 ```sql
-DELETE player  
-WHERE datemodified < @startOfYear  
-OUTPUT id, name, surname datemodifier, COMPRESS(info)   
-INTO dbo.inactivePlayers ;  
+DELETE FROM player  
+OUTPUT deleted.id, deleted.name, deleted.surname, deleted.datemodifier, COMPRESS(deleted.info)   
+INTO dbo.inactivePlayers
+WHERE datemodified < @startOfYear; 
 ```  
   
 ## See also

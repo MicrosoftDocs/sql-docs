@@ -2,15 +2,10 @@
 title: "datetime2 (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "7/23/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
-ms.service: ""
-ms.component: "t-sql|data-types"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: t-sql
 ms.topic: "language-reference"
 f1_keywords: 
   - "datetime2"
@@ -24,11 +19,10 @@ helpviewer_keywords:
   - "data types [SQL Server], date and time"
   - "datetime2 data type [SQL Server]"
 ms.assetid: 868017f3-214f-43ef-8536-cc1632a2288f
-caps.latest.revision: 58
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "craigg"
-ms.workload: "Active"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # datetime2 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -40,7 +34,7 @@ Defines a date that is combined with a time of day that is based on 24-hour cloc
 |Property|Value|  
 |--------------|-----------|  
 |Syntax|**datetime2** [ (*fractional seconds precision*) ]|  
-|Usage|DECLARE @MyDatetime2 **datetime2(7)**<br /><br /> CREATE TABLE Table1 ( Column1 **datetime2(7)** )|  
+|Usage|DECLARE \@MyDatetime2 **datetime2(7)**<br /><br /> CREATE TABLE Table1 ( Column1 **datetime2(7)** )|  
 |Default string literal format<br /><br /> (used for down-level client)|YYYY-MM-DD hh:mm:ss[.fractional seconds]<br /><br /> For more information, see the "Backward Compatibility for Down-level Clients" section that follows.|  
 |Date range|0001-01-01 through 9999-12-31<br /><br /> January 1,1 CE through December 31, 9999 CE|  
 |Time range|00:00:00 through 23:59:59.9999999|  
@@ -144,7 +138,7 @@ SELECT @datetime2 AS '@datetime2', @datetimeoffset AS '@datetimeoffset';
 --2016-10-23 12:45:37.1234567 2016-10-23 12:45:37.1234567 +10:00
 ```  
 
-When the conversion is from **datetime**, the date and time are copied.  The fractional precision is extended to 7 digits.  The following example shows the results of converting a `datetime` value to a `datetime2` value.
+When the conversion is from **datetime**, the date and time are copied. The fractional precision is extended to 7 digits. The following example shows the results of converting a `datetime` value to a `datetime2` value.
 
 ```sql
 DECLARE @datetime datetime = '2016-10-23 12:45:37.333';
@@ -157,7 +151,10 @@ SELECT @datetime2 AS '@datetime2', @datetime AS '@datetime';
 ------------------------- ---------------------------
 --2016-10-23 12:45:37.3333333 2016-10-23 12:45:37.333
 ```  
-  
+
+> [!NOTE]
+> Under database compatibility level 130, implicit conversions from datetime to datetime2 data types show improved accuracy by accounting for the fractional milliseconds, resulting in different converted values, as seen in the example above. Use explicit casting to datetime2 datatype whenever a mixed comparison scenario between datetime and datetime2 datatypes exists. For more information, refer to this [Microsoft Support Article](https://support.microsoft.com/help/4010261).
+
 ### Converting String Literals to datetime2  
 Conversions from string literals to date and time types are permitted if all parts of the strings are in valid formats. Otherwise, a runtime error is raised. Implicit conversions or explicit conversions that do not specify a style, from date and time types to string literals will be in the default format of the current session. The following table shows the rules for converting a string literal to the **datetime2** data type.
   

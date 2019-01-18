@@ -1,17 +1,12 @@
 ---
 title: "Specify Field and Row Terminators (SQL Server) | Microsoft Docs"
 ms.custom: ""
-ms.date: "08/10/2016"
-ms.prod: "sql-non-specified"
+ms.date: "07/26/2018"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
-ms.service: ""
-ms.component: "import-export"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "dbe-bulk-import-export"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: data-movement
+ms.topic: conceptual
 helpviewer_keywords: 
   - "bcp utility [SQL Server], terminators"
   - "field terminators [SQL Server]"
@@ -19,17 +14,16 @@ helpviewer_keywords:
   - "row terminators [SQL Server]"
   - "terminators [SQL Server]"
 ms.assetid: f68b6782-f386-4947-93c4-e89110800704
-caps.latest.revision: 39
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-ms.workload: "Active"
+author: "douglaslMS"
+ms.author: "douglasl"
+manager: craigg
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Specify Field and Row Terminators (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
   For character data fields, optional terminating characters allow you to mark the end of each field in a data file with a *field terminator* and the end of each row with a *row terminator*. Terminating characters are one way to indicate to programs that read the data file where one field or row ends and another field or row begins.  
   
-> [!IMPORTANT]  
+> [!IMPORTANT]
 >  When you use native or Unicode native format, use length prefixes rather than field terminators. Native format data can conflict with terminators because a native-format data file is stored in the [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] internal binary data format.  
   
 ## Characters Supported As Terminators  
@@ -43,7 +37,7 @@ ms.workload: "Active"
 |Backslash*|\\\|  
 |Null terminator (nonvisible terminator)**|\0|  
 |Any printable character (control characters are not printable, except null, tab, newline, and carriage return)|(*, A, t, l, and so on)|  
-|String of up to 10 printable characters, including some or all of the terminators listed earlier|(**\t\*\*, end, !!!!!!!!!!, \t—\n, and so on)|  
+|String of up to 10 printable characters, including some or all of the terminators listed earlier|(**\t\*\*, end, !!!!!!!!!!, \t-\n, and so on)|  
   
  *Only the t, n, r, 0 and '\0' characters work with the backslash escape character to produce a control character.  
   
@@ -94,7 +88,15 @@ ms.workload: "Active"
 -   For a long fixed-length column whose space is only partially used by many rows.  
   
      In this situation, specifying a terminator can minimize storage space allowing the field to be treated as a variable-length field.  
-  
+
+### Specifying `\n` as a Row Terminator for Bulk Export
+
+When you specify `\n` as a row terminator for bulk export, or implicitly use the default row terminator, bcp outputs a carriage return-line feed combination (CRLF) as the row terminator. If you want to output a line feed character only (LF) as the row terminator - as is typical on Unix and Linux computers - use hexadecimal notation to specify the LF row terminator. For example:
+
+```cmd
+bcp -r '0x0A'
+```
+
 ### Examples  
  This example bulk exports the data from the `AdventureWorks.HumanResources.Department` table to the `Department-c-t.txt` data file using character format, with a comma as a field terminator and the newline character (\n) as the row terminator.  
   
@@ -140,7 +142,14 @@ bcp AdventureWorks.HumanResources.Department out C:\myDepartment-c-t.txt -c -t, 
      For the OPENROWSET bulk rowset provider, terminators can be specified only in the format file (which is required except for large-object data types). If a character data file uses a non-default terminator, it must be defined in the format file. For more information, see [Create a Format File &#40;SQL Server&#41;](../../relational-databases/import-export/create-a-format-file-sql-server.md) and [Use a Format File to Bulk Import Data &#40;SQL Server&#41;](../../relational-databases/import-export/use-a-format-file-to-bulk-import-data-sql-server.md).  
   
      For more information about the OPENROWSET BULK clause, see [OPENROWSET &#40;Transact-SQL&#41;](../../t-sql/functions/openrowset-transact-sql.md).  
-  
+
+### Specifying `\n` as a Row Terminator for Bulk Import
+When you specify `\n` as a row terminator for bulk import, or implicitly use the default row terminator, bcp and the BULK INSERT statement expect a carriage return-line feed combination (CRLF) as the row terminator. If your source file uses a line feed character only (LF) as the row terminator - as is typical in files generated on Unix and Linux computers - use hexadecimal notation to specify the LF row terminator. For example, in a BULK INSERT statement:
+
+```sql
+	ROWTERMINATOR = '0x0A'
+```
+ 
 ### Examples  
  The examples in this section bulk import character data form the `Department-c-t.txt` data file created in the preceding example into the `myDepartment` table in the [!INCLUDE[ssSampleDBUserInputNonLocal](../../includes/sssampledbuserinputnonlocal-md.md)] sample database. Before you can run the examples, you must create this table. To create this table under the **dbo** schema, in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] Query Editor, execute the following code:  
   

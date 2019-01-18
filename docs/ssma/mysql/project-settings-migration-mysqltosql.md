@@ -1,26 +1,15 @@
 ---
 title: "Project Settings (Migration) (MySQLToSQL) | Microsoft Docs"
-ms.prod: "sql-non-specified"
-ms.prod_service: "sql-tools"
-ms.service: ""
-ms.component: "ssma-mysql"
+ms.prod: sql
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "sql-ssma"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to: 
-  - "Azure SQL Database"
-  - "SQL Server"
+ms.technology: ssma
+ms.topic: conceptual
 ms.assetid: 2a3cba9e-cd54-4a8b-b858-8fc4cf2580d9
-caps.latest.revision: 14
 author: "Shamikg"
 ms.author: "Shamikg"
-manager: "jhubbard"
-ms.workload: "Inactive"
+manager: craigg
 ---
 # Project Settings (Migration) (MySQLToSQL)
 The Migration page of the **Project Settings** dialog box contains settings that customize how SSMA migrates data from MySQL to SQL Server.  
@@ -48,13 +37,13 @@ The Migration pane is available in the **Project Settings** and **Default Projec
   
 |Term|Definition|  
 |--------|--------------|  
-|**Invalid Dates Migration**|Specifies how to migrate invalid dates with like ‘2007-04-23’ or ‘2000-06-31 10:00:00’ in DATE and DATETIME formats.<br /><br />**Default Mode**:  Set NULL<br /><br />**Optimistic Mode**:  Set NULL<br /><br />**Full Mode**:  Set NULL|  
-|**Negative TIME values Migration**|Specifies how to migrate negative values like ‘-30:11:00’ in TIME columns.<br /><br />**Default Mode**:  Set NULL<br /><br />**Optimistic Mode**:  Set NULL<br /><br />**Full Mode**:  Set NULL|  
-|**TIME values over 24 hours Migration**|Specifies how to migrate TIME values of more than ’23:59:59’ in TIME columns.<br /><br />**Default Mode**:  Set NULL<br /><br />**Optimistic Mode**:  Set NULL<br /><br />**Full Mode**:  Set NULL|  
+|**Invalid Dates Migration**|Specifies how to migrate invalid dates with like '2007-04-23' or '2000-06-31 10:00:00' in DATE and DATETIME formats.<br /><br />**Default Mode**:  Set NULL<br /><br />**Optimistic Mode**:  Set NULL<br /><br />**Full Mode**:  Set NULL|  
+|**Negative TIME values Migration**|Specifies how to migrate negative values like '-30:11:00' in TIME columns.<br /><br />**Default Mode**:  Set NULL<br /><br />**Optimistic Mode**:  Set NULL<br /><br />**Full Mode**:  Set NULL|  
+|**TIME values over 24 hours Migration**|Specifies how to migrate TIME values of more than '23:59:59' in TIME columns.<br /><br />**Default Mode**:  Set NULL<br /><br />**Optimistic Mode**:  Set NULL<br /><br />**Full Mode**:  Set NULL|  
 |**Truncate binary values to fit into column**|If Yes, SSMA truncates binary values from MySQL that do not fit into SQL table columns and generates appropriate error message. If No, the row causes an error<br /><br />**Default Mode**:  No<br /><br />**Optimistic Mode**:  No<br /><br />**Full Mode**:  No|  
 |**Truncate character values to fit into column**|SSMA truncates character values from MySQL that do not fit into SQL table columns and generates appropriate error message.<br /><br />**Default Mode**:  No<br /><br />**Optimistic Mode**:  No<br /><br />**Full Mode**:  No|  
-|**Zero Dates Migration**|Specifies how to migrate zero dates like ‘0000-00-00’ or ‘0000-00-00 00:00:00’ in DATE and DATETIME columns.<br /><br />**Default Mode**:  Set NULL<br /><br />**Optimistic Mode**:  Set NULL<br /><br />**Full Mode**:  Set NULL|  
-|**Zero in Dates Migration**|Specifies how to migrate dates with zero parts like ‘2009-01-00’ or ‘2000-00-00 11:00:00’ in DATE and DATETIME columns.<br /><br />**Default Mode**:  Set NULL<br /><br />**Optimistic Mode**:  Set NULL<br /><br />**Full Mode**:  Set NULL|  
+|**Zero Dates Migration**|Specifies how to migrate zero dates like '0000-00-00' or '0000-00-00 00:00:00' in DATE and DATETIME columns.<br /><br />**Default Mode**:  Set NULL<br /><br />**Optimistic Mode**:  Set NULL<br /><br />**Full Mode**:  Set NULL|  
+|**Zero in Dates Migration**|Specifies how to migrate dates with zero parts like '2009-01-00' or '2000-00-00 11:00:00' in DATE and DATETIME columns.<br /><br />**Default Mode**:  Set NULL<br /><br />**Optimistic Mode**:  Set NULL<br /><br />**Full Mode**:  Set NULL|  
   
 ### Migration Engine  
   

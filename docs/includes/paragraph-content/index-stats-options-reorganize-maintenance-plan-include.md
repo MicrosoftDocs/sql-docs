@@ -11,7 +11,7 @@ Initially used in:
 -->
 
 
-In earlier versions of Microsoft SQL Server it could cause system slowdown to reorganize or rebuild a large index. SQL Server 2015 implemented major performance improvements for these index operations.
+In earlier versions of Microsoft SQL Server it could cause system slowdown to reorganize or rebuild a large index. SQL Server 2016 implemented major performance improvements for these index operations.
 
 Also, in earlier versions the granularity of control was less refined. This caused the system to reorganize or rebuild some indexes even when the indexes were not much fragmented, which was wasteful. Newer controls on the Maintenance Plan user interface (UI) enable you to exclude indexes which do not need to be refreshed, based on index statistics criteria. For this the following dynamic management views (DMVs) of Transact-SQL are used internally:
 

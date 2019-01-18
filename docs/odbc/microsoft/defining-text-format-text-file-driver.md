@@ -2,25 +2,18 @@
 title: "Defining Text Format (Text File Driver) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
-ms.prod_service: "drivers"
-ms.service: ""
-ms.component: "odbc"
+ms.prod: sql
+ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "drivers"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: connectivity
+ms.topic: conceptual
 helpviewer_keywords: 
   - "text format [ODBC]"
   - "text file driver [ODBC], text format"
 ms.assetid: 3af46dad-52cc-4d5c-a27e-6315d65a74e6
-caps.latest.revision: 6
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
-ms.workload: "Inactive"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # Defining Text Format (Text File Driver)
 When the Text driver is used, you can use the **Define Text Format** dialog box to define the format for columns in a selected file. This dialog box enables you to specify the schema for each data table. This information is written to a Schema.ini file in the data source directory. A separate Schema.ini file is created for each text data source directory.  

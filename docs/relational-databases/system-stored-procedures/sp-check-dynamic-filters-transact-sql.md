@@ -2,18 +2,11 @@
 title: "sp_check_dynamic_filters (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "database-engine"
-ms.service: ""
-ms.component: "system-stored-procedures"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
+ms.technology: replication
 ms.topic: "language-reference"
-applies_to: 
-  - "SQL Server"
 f1_keywords: 
   - "dynamic_filters_TSQL"
   - "sp_check_TSQL"
@@ -31,11 +24,9 @@ f1_keywords:
 helpviewer_keywords: 
   - "sp_check_dynamic_filters"
 ms.assetid: dd7760db-a3a5-460f-bd97-b8d436015e19
-caps.latest.revision: 23
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "craigg"
-ms.workload: "Inactive"
+author: stevestein
+ms.author: sstein
+manager: craigg
 ---
 # sp_check_dynamic_filters (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -52,7 +43,7 @@ sp_check_dynamic_filters [ @publication = ] 'publication'
 ```  
   
 ## Arguments  
- [ **@publication**= ] **'***publication***'**  
+ [ **@publication**= ] **'**_publication_**'**  
  Is the name of the publication. *publication* is **sysname**, with no default.  
   
 ## Result Sets  

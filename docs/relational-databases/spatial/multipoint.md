@@ -1,48 +1,45 @@
 ---
 title: "MultiPoint | Microsoft Docs"
-ms.custom: ""
 ms.date: "03/01/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.service: ""
-ms.component: "spatial"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: 
-  - "dbe-spatial"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "MultiPoint geometry subtype [SQL Server]"
 ms.assetid: 2aaab211-3aba-4dbd-90b7-095d997b1f62
-caps.latest.revision: 15
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-ms.workload: "Inactive"
+author: "douglaslMS"
+ms.author: "douglasl"
+manager: craigg
+monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # MultiPoint
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   A **MultiPoint** is a collection of zero or more points. The boundary of a **MultiPoint** instance is empty.  
   
 ## Examples  
- The following example creates a `geometry MultiPoint` instance with SRID 23 and two points: one point with the coordinates (2, 3), one point with the coordinates (7, 8), and a Z value of 9.5.  
+
+### Example A.
+The following example creates a `geometry MultiPoint` instance with SRID 23 and two points: one point with the coordinates (2, 3), one point with the coordinates (7, 8), and a Z value of 9.5.  
   
-```  
+```sql  
 DECLARE @g geometry;  
 SET @g = geometry::STGeomFromText('MULTIPOINT((2 3), (7 8 9.5))', 23);  
 ```  
   
- This `MultiPoint` instance can also be expressed using `STMPointFromText()` as shown below.  
+### Example B. 
+The following example expresses the `MultiPoint` instance using `STMPointFromText()`.  
   
-```  
+```sql  
 DECLARE @g geometry;  
 SET @g = geometry::STMPointFromText('MULTIPOINT((2 3), (7 8 9.5))', 23);  
 ```  
   
- The following example uses the method `STGeometryN()` to retrieve a description of the first point in the collection.  
+### Example C.
+The following example uses the method `STGeometryN()` to retrieve a description of the first point in the collection.  
   
-```  
+```sql  
 SELECT @g.STGeometryN(1).STAsText();  
 ```  
   

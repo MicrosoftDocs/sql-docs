@@ -2,16 +2,11 @@
 title: "SQL Server Management Studio Keyboard Shortcuts | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "sql-tools"
-ms.service: ""
-ms.component: "ssms"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: ssms
+ms.topic: conceptual
 helpviewer_keywords: 
   - "SQL Server Management Studio [SQL Server], shortcuts"
   - "keyboard shortcuts [SQL Server Management Studio]"
@@ -23,11 +18,9 @@ helpviewer_keywords:
   - "shortcuts [SQL Server Management Studio]"
   - "accelerator keys"
 ms.assetid: 98baaac4-0727-4ce4-8bfe-c63793ae69b8
-caps.latest.revision: 82
 author: "stevestein"
 ms.author: "sstein"
-manager: "jhubbard"
-ms.workload: "Active"
+manager: craigg
 ---
 # SQL Server Management Studio Keyboard Shortcuts
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -463,6 +456,6 @@ ms.workload: "Active"
 |Display the grid on the design surface|ENTER|No equivalent|  
   
 ## See Also  
- [Customize Menus and Shortcut Keys](http://msdn.microsoft.com/library/fb4edf3c-71b6-4645-b1d1-ddfdd69f0d7b)  
+ [Customize Menus and Shortcut Keys](customize-menus-and-shortcut-keys.md)  
   
   

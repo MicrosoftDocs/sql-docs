@@ -1,24 +1,15 @@
 ---
 title: "Add, Move, or Delete a Text Box (Report Builder and SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
+ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
-ms.service: ""
-ms.component: "report-design"
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
+ms.technology: report-design
 
 
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 ms.assetid: f042cf81-d933-4ac7-9287-c074a46bde98
-caps.latest.revision: 7
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "kfile"
-ms.workload: "Inactive"
+author: maggiesMSFT
+ms.author: maggies
 ---
 # Add, Move, or Delete a Text Box (Report Builder and SSRS)
   Text boxes are the most commonly used report item in [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] paginated reports. You can add a text box to the report body to display information such as titles, parameter choices, built-in fields, and dates.  

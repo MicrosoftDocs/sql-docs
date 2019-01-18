@@ -2,33 +2,25 @@
 title: "Data Collector Security | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-non-specified"
-ms.prod_service: "database-engine"
-ms.service: ""
-ms.component: "data-collection"
+ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: supportability
+ms.topic: conceptual
 helpviewer_keywords: 
   - "data collection [SQL Server]"
   - "security [data collector]"
   - "data collector [SQL Server], security"
 ms.assetid: e75d6975-641e-440a-a642-cb39a583359a
-caps.latest.revision: 32
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-ms.workload: "Inactive"
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
 ---
 # Data Collector Security
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   The data collector uses the role-based security model implemented by [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent. This model lets the database administrator run the various data collector tasks in a security context that has only the permissions required to perform that task. This approach is also used for operations involving internal tables, which can only be accessed by using a stored procedure or view. No permissions are granted to internal tables. Instead, permissions are checked on the user of the stored procedure or view that is used to access a table.  
   
 > [!IMPORTANT]  
->  Another key aspect of this security model is concentric permissions. Under concentric permissions, more privileged roles inherit the permissions of less privileged roles on objects (including alerts, operators, jobs, schedules, and proxies). For more information, see [SQL Server Agent Fixed Database Roles](http://msdn.microsoft.com/library/719ce56b-d6b2-414a-88a8-f43b725ebc79).  
+>  Another key aspect of this security model is concentric permissions. Under concentric permissions, more privileged roles inherit the permissions of less privileged roles on objects (including alerts, operators, jobs, schedules, and proxies). For more information, see [SQL Server Agent Fixed Database Roles](../../ssms/agent/sql-server-agent-fixed-database-roles.md).  
   
  The following sections describe data collection security in general, as well as the roles you must grant to users so they can configure and use the data collector, and carry out tasks associated with the management data warehouse.  
   
@@ -148,6 +140,6 @@ ms.workload: "Inactive"
  Members of the **mdw_reader** role have Read access to the management data warehouse. Because the purpose of this role is to support troubleshooting by providing access to historical data, members of this role cannot view other elements of the management data warehouse schema.  
   
 ## See Also  
- [Implement SQL Server Agent Security](http://msdn.microsoft.com/library/d770d35c-c8de-4e00-9a85-7d03f45a0f0d)  
+ [Implement SQL Server Agent Security](../../ssms/agent/implement-sql-server-agent-security.md)  
   
   

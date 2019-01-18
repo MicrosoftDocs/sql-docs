@@ -1,32 +1,14 @@
 ---
 title: "SELECT FROM &lt;structure&gt;.CASES | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/02/2016"
-ms.prod: analysis-services
-ms.prod_service: "analysis-services"
-ms.service: ""
-ms.component: ""
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
-  
-ms.component: data-mining
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "SELECT"
-  - "CASES"
-  - "FROM"
-dev_langs: 
-  - "DMX"
-helpviewer_keywords: 
-  - "SELECT FROM <structure> statements"
-ms.assetid: 36f50213-14dc-42da-b899-20240b781e1a
-caps.latest.revision: 15
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-ms.workload: "Inactive"
+ms.date: 06/07/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: dmx
+ms.topic: conceptual
+ms.author: owend
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
 ---
 # SELECT FROM &lt;structure&gt;.CASES
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -78,7 +60,7 @@ SELECT StructureColumn('<column name>') FROM <model>.CASES
  Therefore, to protect sensitive data or personal information, you should construct your data source view to mask personal information, and grant **AllowDrillthrough** permission on a mining structure or mining model only when necessary.  
   
 ## Examples  
- The following examples are based on the mining structure, Targeted Mailing, which is based on the [!INCLUDE[ssAWDWsp](../includes/ssawdwsp-md.md)] database, and the associated mining models. For more information, see [Basic Data Mining Tutorial](http://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c).  
+ The following examples are based on the mining structure, Targeted Mailing, which is based on the [!INCLUDE[ssAWDWsp](../includes/ssawdwsp-md.md)] database, and the associated mining models. For more information, see [Basic Data Mining Tutorial](https://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c).  
   
 ### Example 1: Drill through to Structure Cases  
  The following example returns a list of the 500 oldest customers in the mining structure, Targeted Mailing. The query returns all the columns in the mining model, but restricts the rows to those who purchased a bike, and orders them by age. You can also edit the expression list to return only the columns that you need.  

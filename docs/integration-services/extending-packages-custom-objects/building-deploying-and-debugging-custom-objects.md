@@ -2,26 +2,17 @@
 title: "Building, Deploying, and Debugging Custom Objects | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "integration-services"
-ms.service: ""
-ms.component: "extending-packages-custom-objects"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-
-ms.tgt_pltfrm: ""
+ms.technology: integration-services
 ms.topic: "reference"
-applies_to: 
-  - "SQL Server 2016 Preview"
 helpviewer_keywords: 
   - "custom objects [Integration Services]"
 ms.assetid: b03685bc-5398-4c3f-901a-1219c1098fbe
-caps.latest.revision: 50
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
-ms.workload: "On Demand"
+manager: craigg
 ---
 # Building, Deploying, and Debugging Custom Objects
   After you have written the code for a custom object for [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], you must build the assembly, deploy it, and integrate it into [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer to make it available for use in packages, and test and debug it.  
@@ -65,7 +56,7 @@ ms.workload: "On Demand"
 ##  <a name="building"></a> Building the Assembly  
  After signing the project, you must build or rebuild the project or the solution by using the commands available on the **Build** menu of [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]. Your solution may contain a separate project for a custom user interface, which must also be signed with a strong name, and can be built at the same time.  
   
- The most convenient method for performing the next two steps—deploying the assembly and installing it in the global assembly cache—is to script these steps as a post-build event in [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]. Build events are available from the **Compile** page of Project Properties for a [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] project, and from the **Build Events** page for a C# project. The full path is required for command prompt utilities such as **gacutil.exe**. Quotation marks are required both around paths that contain spaces and around macros such as $(TargetPath) that expand to paths that contain spaces.  
+ The most convenient method for performing the next two steps-deploying the assembly and installing it in the global assembly cache-is to script these steps as a post-build event in [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]. Build events are available from the **Compile** page of Project Properties for a [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] project, and from the **Build Events** page for a C# project. The full path is required for command prompt utilities such as **gacutil.exe**. Quotation marks are required both around paths that contain spaces and around macros such as $(TargetPath) that expand to paths that contain spaces.  
   
  Here is an example of a post-build event command line for a custom log provider:  
   

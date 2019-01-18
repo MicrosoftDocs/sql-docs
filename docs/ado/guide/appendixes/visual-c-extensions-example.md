@@ -1,28 +1,21 @@
 ---
 title: "Visual C++ Extensions Example | Microsoft Docs"
-ms.prod: "sql-non-specified"
-ms.prod_service: "drivers"
-ms.service: ""
-ms.component: "ado"
-ms.technology:
-  - "drivers"
+ms.prod: sql
+ms.prod_service: connectivity
+ms.technology: connectivity
 ms.custom: ""
-ms.date: "01/19/2017"
+ms.date: 11/08/2018
 ms.reviewer: ""
-ms.suite: "sql"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 dev_langs: 
   - "C++"
 helpviewer_keywords: 
   - "ADO, Visual C++"
   - "Visual C++ [ADO], VC++ extensions example"
 ms.assetid: 9739c278-582c-402b-a158-7f68a1b2c293
-caps.latest.revision: 11
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
-ms.workload: "Inactive"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # Visual C++ Extensions Example
 This program shows how values are retrieved from fields and converted to C/C++ variables.  
@@ -31,30 +24,30 @@ This program shows how values are retrieved from fields and converted to C/C++ v
   
  Without smart pointers, you would code:  
   
-```  
+```cpp
 IADORecordBinding   *picRs = NULL;  
 ...  
 TESTHR(pRs->QueryInterface(  
-          __uuidof(IADORecordBinding), (LPVOID*)&picRs));  
+          __uuidof(IADORecordBinding), (LPVOID*)&picRs));  
 ...  
 if (picRs) picRs->Release();  
 ```  
   
  With smart pointers, you derive the `IADORecordBindingPtr` type from the `IADORecordBinding` interface with this statement:  
   
-```  
+```cpp
 _COM_SMARTPTR_TYPEDEF(IADORecordBinding, __uuidof(IADORecordBinding));  
 ```  
   
  And instantiate the pointer like this:  
   
-```  
+```cpp
 IADORecordBindingPtr picRs(pRs);  
 ```  
   
  Because the Visual C++ Extensions are implemented by the **Recordset** object, the constructor for the smart pointer, `picRs`, takes the _`RecordsetPtr` pointer, `pRs`. The constructor calls `QueryInterface` using `pRs` to find the `IADORecordBinding` interface.  
   
-```  
+```cpp
 // Visual_Cpp_Extensions_Example.cpp  
 // compile with: /EHsc  
 #import "msado15.dll" no_namespace rename("EOF", "EndOfFile")  

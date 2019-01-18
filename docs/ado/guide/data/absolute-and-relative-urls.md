@@ -1,27 +1,20 @@
 ---
 title: "Absolute and Relative URLs | Microsoft Docs"
-ms.prod: "sql-non-specified"
-ms.prod_service: "drivers"
-ms.service: ""
-ms.component: "ado"
-ms.technology:
-  - "drivers"
+ms.prod: sql
+ms.prod_service: connectivity
+ms.technology: connectivity
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "relative URLs [ADO]"
   - "absolute URLs [ADO]"
   - "URLs [ADO]"
 ms.assetid: 6a34a7ef-50cc-4c3d-82f7-106b9a8f3caf
-caps.latest.revision: 12
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
-ms.workload: "On Demand"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # Absolute and Relative URLs
 A URL specifies the location of a target stored on a local or networked computer. The target can be a file, directory, HTML page, image, program, and so on*.*  
@@ -59,7 +52,7 @@ A URL specifies the location of a target stored on a local or networked computer
  Context can also be defined by opening a **Record** or **Recordset** object that represents a directory, because these objects already have an implicitly or explicitly declared **Connection** object that specifies context.  
   
 ## Scoped Operations  
- The context also defines scope—that is, the directory and its subdirectories that can participate in subsequent operations. The **Record** object has several scoped methods that operate on a directory and all its subdirectories. These methods include [CopyRecord](../../../ado/reference/ado-api/copyrecord-method-ado.md), [MoveRecord](../../../ado/reference/ado-api/moverecord-method-ado.md), and [DeleteRecord](../../../ado/reference/ado-api/deleterecord-method-ado.md).  
+ The context also defines scope-that is, the directory and its subdirectories that can participate in subsequent operations. The **Record** object has several scoped methods that operate on a directory and all its subdirectories. These methods include [CopyRecord](../../../ado/reference/ado-api/copyrecord-method-ado.md), [MoveRecord](../../../ado/reference/ado-api/moverecord-method-ado.md), and [DeleteRecord](../../../ado/reference/ado-api/deleterecord-method-ado.md).  
   
 ## Relative URLs as Command Text  
  You can specify a command to be executed on the data source by typing a string in the *CommandText* parameter of the **Connection** object's [Execute](../../../ado/reference/ado-api/execute-method-ado-connection.md) method, and in the *Source* parameter of the **Recordset** object's [Open](../../../ado/reference/ado-api/open-method-ado-recordset.md) method.  
@@ -69,7 +62,7 @@ A URL specifies the location of a target stored on a local or networked computer
  For example, the following code sample shows how to open a **Recordset** on the Readme25.txt file of the Winnt/system32 directory:  
   
 ```  
-recordset.Open "system32/Readme25.txt", "URL=http://YourServer/Winnt/",,,adCmdTableDirect  
+recordset.Open "system32/Readme25.txt", "URL=https://YourServer/Winnt/",,,adCmdTableDirect  
 ```  
   
  The absolute URL in the connection string specifies the server (`YourServer`) and the path (`Winnt`). This URL also defines the context.  
@@ -81,7 +74,7 @@ recordset.Open "system32/Readme25.txt", "URL=http://YourServer/Winnt/",,,adCmdT
  As another example, the following code will open a **Recordset** on the contents of the `Winnt` directory:  
   
 ```  
-recordset.Open "", "URL=http://YourServer/Winnt/",,,adCmdTableDirect  
+recordset.Open "", "URL=https://YourServer/Winnt/",,,adCmdTableDirect  
 ```  
   
 ## OLE DB Provider-Supplied URL Schemes  

@@ -1,24 +1,17 @@
 ---
-title: "Antivirus Software (Analytics Platform System)"
-author: "barbkess" 
-ms.author: "barbkess"
-manager: "jhubbard"	  
-ms.prod: "analytics-platform-system"
-ms.prod_service: "mpp-data-warehouse"
-ms.service: ""
-ms.component:
-ms.technology: "mpp-data-warehouse"
-ms.custom: ""
-ms.date: 01/05/2017
-ms.reviewer: na
-ms.suite: "sql"
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: 60ab9a88-d339-4917-a38b-f9481aef38fd
-caps.latest.revision: 29
-
+title: Antivirus software - Analytics Platform System | Microsoft Docs
+description: If your data center requires antivirus software, use these guidelines to install antivirus software on Analytics Platform System. We recommend not installing antivirus software unless it is a firm requirement of your data center. 
+author: mzaman1 
+manager: craigg
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/24/2018
+ms.author: murshedz
+ms.reviewer: martinle
 ---
-# Antivirus Software
+
+# Antivirus software for Analytics Platform System
 If your data center requires antivirus software, use these guidelines to install antivirus software on Analytics Platform System. We recommend not installing antivirus software unless it is a firm requirement of your data center.  
   
 > [!WARNING]  
@@ -26,7 +19,7 @@ If your data center requires antivirus software, use these guidelines to install
 >   
 > Virus protection software requires some system resources to execute. You must perform testing before and after you install your antivirus software to determine whether there is any performance effect on the Analytics Platform System.  
   
-This topic is based on the guidance in [How to choose antivirus software to run on computers that are running SQL Server](http://support.microsoft.com/kb/309422) and [KB Article 961804](http://support.microsoft.com/kb/961804/en-us).  
+This topic is based on the guidance in [How to choose antivirus software to run on computers that are running SQL Server](https://support.microsoft.com/kb/309422) and [KB Article 961804](https://support.microsoft.com/kb/961804/en-us).  
   
 ## Exclusion List for Physical Hosts  
 To install the antivirus software on the physical hosts, exclude the following list of directories and processes. These should not be scanned by the antivirus software.  
@@ -48,13 +41,13 @@ To install the antivirus software on the physical hosts, exclude the following l
 ## Exclusion List for Virtual Machines (VMs)  
 To install the antivirus software on the VMs, exclude the following list of directories and files. These should not be scanned by the antivirus software.  
   
-***PDW_region*-CTL01**  
+**_PDW_region_-CTL01**  
   
 -   C:\windows\cluster\  
   
 -   G:\  
   
-***appliance_domain*-AD01** and ***appliance_domain*-AD02**  
+**_appliance_domain_-AD01** and **_appliance_domain_-AD02**  
   
 -   No restrictions  
   
@@ -64,15 +57,15 @@ To install the antivirus software on the VMs, exclude the following list of dire
   
 -   G:\  
   
-***appliance_domain*-VMM**  
+**_appliance_domain_-VMM**  
   
 -   No restrictions  
   
-***appliance_domain*-WDS**  
+**_appliance_domain_-WDS**  
   
 -   No restrictions  
   
-***appliance_domain*-ISCSI01**  
+**_appliance_domain_-ISCSI01**  
   
 -   C:\iscsitarget  
   

@@ -1,28 +1,21 @@
 ---
 title: "Bookmark Property (ADO) | Microsoft Docs"
-ms.prod: "sql-non-specified"
-ms.prod_service: "drivers"
-ms.service: ""
-ms.component: "ado"
-ms.technology:
-  - "drivers"
+ms.prod: sql
+ms.prod_service: connectivity
+ms.technology: connectivity
 ms.custom: ""
-ms.date: "01/19/2017"
+ms.date: "03/20/2018"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 apitype: "COM"
 f1_keywords: 
   - "Recordset15::Bookmark"
 helpviewer_keywords: 
   - "Bookmark property [ADO]"
 ms.assetid: 481dcc93-487b-490e-ac58-a1e9b2ebfd43
-caps.latest.revision: 12
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
-ms.workload: "Inactive"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # Bookmark Property (ADO)
 Indicates a bookmark that uniquely identifies the current record in a [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) object or sets the current record in a **Recordset** object to the record identified by a valid bookmark.  
@@ -35,7 +28,7 @@ Indicates a bookmark that uniquely identifies the current record in a [Recordset
   
  When you open a **Recordset** object, each of its records has a unique bookmark. To save the bookmark for the current record, assign the value of the **Bookmark** property to a variable. To quickly return to that record at any time after moving to a different record, set the **Recordset** object's **Bookmark** property to the value of that variable.  
   
- The user may not be able to view the value of the bookmark. Also, users should not expect bookmarks to be directly comparable ??? two bookmarks that refer to the same record may have different values.  
+ The user may not be able to view the value of the bookmark. Also, users should not expect bookmarks to be directly comparable, because two bookmarks that refer to the same record may have different values.  
   
  If you use the [Clone](../../../ado/reference/ado-api/clone-method-ado.md) method to create a copy of a **Recordset** object, the **Bookmark** property settings for the original and the duplicate **Recordset** objects are identical and you can use them interchangeably. However, you cannot use bookmarks from different **Recordset** objects interchangeably, even if they were created from the same source or command.  
   

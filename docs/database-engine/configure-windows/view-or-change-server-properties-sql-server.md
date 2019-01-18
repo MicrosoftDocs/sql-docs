@@ -2,16 +2,11 @@
 title: "View or Change Server Properties (SQL Server) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-non-specified"
-ms.prod_service: "database-engine"
-ms.service: ""
-ms.component: "configure-windows"
+ms.prod: sql
+ms.prod_service: high-availability
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: configuration
+ms.topic: conceptual
 f1_keywords: 
   - "sql13.swb.connectionproperties.f1"
 helpviewer_keywords: 
@@ -21,11 +16,9 @@ helpviewer_keywords:
   - "servers [SQL Server], viewing"
   - "Connection Properties dialog box"
 ms.assetid: 55f3ac04-5626-4ad2-96bd-a1f1b079659d
-caps.latest.revision: 32
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-ms.workload: "On Demand"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ---
 # View or Change Server Properties (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -156,9 +149,9 @@ GO
   
 2.  In **SQL Server Configuration Manager**, click **SQL Server Services**.  
   
-3.  In the details pane, right-click **SQL Server (\<***instancename***>)**, and then click **Properties**.  
+3.  In the details pane, right-click **SQL Server (\<**_instancename_**>)**, and then click **Properties**.  
   
-4.  In the **SQL Server (\<***instancename***>) Properties** dialog box, change the server properties on the **Service** tab or the **Advanced** tab, and then click **OK**.  
+4.  In the **SQL Server (\<**_instancename_**>) Properties** dialog box, change the server properties on the **Service** tab or the **Advanced** tab, and then click **OK**.  
   
 ##  <a name="FollowUp"></a> Follow Up: After you change server properties  
  For some properties, the server might have to be restarted before the change can take effect.  
@@ -170,7 +163,7 @@ GO
  [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)   
  [RECONFIGURE &#40;Transact-SQL&#41;](../../t-sql/language-elements/reconfigure-transact-sql.md)   
  [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)   
- [Configure WMI to Show Server Status in SQL Server Tools](http://msdn.microsoft.com/library/7e97197b-ed4d-40d1-9a52-9ab1d92401d7)   
+ [Configure WMI to Show Server Status in SQL Server Tools](../../ssms/configure-wmi-to-show-server-status-in-sql-server-tools.md)   
  [SQL Server Configuration Manager](../../relational-databases/sql-server-configuration-manager.md)   
  [Configuration Functions &#40;Transact-SQL&#41;](../../t-sql/functions/configuration-functions-transact-sql.md)   
  [Server-Related Dynamic Management Views and Functions &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/server-related-dynamic-management-views-and-functions-transact-sql.md)  

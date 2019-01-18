@@ -3,21 +3,16 @@ title: Configure failover cluster instance storage SMB - SQL Server on Linux | M
 description: 
 author: MikeRayMSFT 
 ms.author: mikeray 
-manager: jhubbard
+manager: craigg
 ms.date: 08/28/2017
-ms.topic: article
-ms.prod: "sql-non-specified"
-ms.prod_service: "database-engine"
-ms.service: ""
-ms.component: sql-linux
-ms.suite: "sql"
-ms.custom: ""
-ms.technology: database-engine
-ms.workload: "Inactive"
+ms.topic: conceptual
+ms.prod: sql
+ms.custom: "sql-linux"
+ms.technology: linux
 ---
 # Configure failover cluster instance - SMB - SQL Server on Linux
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 This article explains how to configure SMB storage for a failover cluster instance (FCI) on Linux. 
  
@@ -76,7 +71,7 @@ Here are some tips and notes for successfully using SMB:
     mkdir <TempDir>
     ```
 
-    <TempDir> is the name of the folder. The example below creates a folder named /var/opt/mssql/tmp.
+    <TempDir> is the name of the folder. The following example creates a folder named /var/opt/mssql/tmp.
 
     ```bash
     mkdir /var/opt/mssql/tmp
@@ -101,7 +96,7 @@ Here are some tips and notes for successfully using SMB:
    *	Delete the files from the existing SQL Server data directory. You will not receive any acknowledgement if successful.
  
     ```bash
-    rm – f /var/opt/mssql/data/*
+    rm - f /var/opt/mssql/data/*
     ```
 
    *	Verify that the files have been deleted. 
@@ -167,7 +162,7 @@ Here are some tips and notes for successfully using SMB:
     sudo systemctl status mssql-server
     ```
  
-   *	To test further, create a database to ensure the permissions are fine. The example below uses Transact-SQL; you can use SSMS.
+   *	To test further, create a database to ensure the permissions are fine. The following example uses Transact-SQL; you can use SSMS.
 
     ![10_testcreatedb][2] 
   
@@ -204,7 +199,7 @@ Here are some tips and notes for successfully using SMB:
     mkdir <FolderName>
     ```
 
-    \<FolderName> is the name of the folder. The folder’s full path will need to be specified if not in the right location. The example below creates a folder named /var/opt/mssql/userdata.
+    \<FolderName> is the name of the folder. The folder's full path needs to be specified if not in the right location. The following example creates a folder named /var/opt/mssql/userdata.
 
     ```bash
     mkdir /var/opt/mssql/userdata
@@ -234,7 +229,7 @@ Here are some tips and notes for successfully using SMB:
  
    * Type exit to no longer be the superuser.
 
-   * To test, create a database in that folder. The example shown below uses sqlcmd to create a database, switch context to it, verify the files exist at the OS level, and then deletes the temporary location. You can use SSMS.
+   * To test, create a database in that folder. The following example uses sqlcmd to create a database, switch context to it, verify the files exist at the OS level, and then deletes the temporary location. You can use SSMS.
  
    * Unmount the share 
 

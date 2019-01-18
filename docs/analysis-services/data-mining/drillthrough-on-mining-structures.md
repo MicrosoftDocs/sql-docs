@@ -1,24 +1,14 @@
 ---
 title: "Drillthrough on Mining Structures | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/06/2017"
-ms.prod: analysis-services
-ms.prod_service: "analysis-services"
-ms.service: ""
-ms.component: ""
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
-  
-ms.component: data-mining
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-ms.assetid: a0b00a3b-f9db-4289-a8cb-ddf600cd64ac
-caps.latest.revision: 6
-author: "Minewiskan"
-ms.author: "owend"
-manager: "kfile"
-ms.workload: "Inactive"
+ms.date: 05/01/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: data-mining
+ms.topic: conceptual
+ms.author: owend
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
 ---
 # Drillthrough on Mining Structures
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -42,7 +32,7 @@ ms.workload: "Inactive"
   
 -   Drillthrough works by retrieving information about the training cases that was cached when you processed the mining structure. Therefore, if you clear the cached data after processing the structure by changing the <xref:Microsoft.AnalysisServices.MiningStructureCacheMode> property to **ClearAfterProcessing**, drillthrough will not work. To enable drillthrough to structure columns, you must change the <xref:Microsoft.AnalysisServices.MiningStructureCacheMode> property to **KeepTrainingCases** and then reprocess the structure.  
   
--   Verify that both the mining structure and the mining model have the [AllowDrillThrough](../../analysis-services/scripting/properties/allowdrillthrough-element-assl.md) property set to **True**. Moreover, you must be a member of a role that has drillthrough permissions on both the structure and the model.  
+-   Verify that both the mining structure and the mining model have the [AllowDrillThrough](https://docs.microsoft.com/bi-reference/assl/properties/allowdrillthrough-element-assl) property set to **True**. Moreover, you must be a member of a role that has drillthrough permissions on both the structure and the model.  
   
 ## Security Issues for Drillthrough  
  Drillthrough permissions are set separately on the structure and model. The model permission lets you drill through from the model, even if you do not have permissions on the structure. Drillthrough permissions on the structure provide the additional ability to include structure columns in drillthrough queries from the model, by using the [StructureColumn &#40;DMX&#41;](../../dmx/structurecolumn-dmx.md) function.  

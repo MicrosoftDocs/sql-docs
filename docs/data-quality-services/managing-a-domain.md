@@ -2,24 +2,20 @@
 title: "Managing a Domain | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/31/2012"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "data-quality-services"
-ms.service: ""
-ms.component: "data-quality-services"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "data-quality-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: data-quality-services
+ms.topic: conceptual
 ms.assetid: c5ab71a3-0dac-45b1-be8e-93bf7e0e03ce
-caps.latest.revision: 13
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-ms.workload: "Inactive"
+author: "douglaslMS"
+ms.author: "douglasl"
+manager: craigg
 ---
 # Managing a Domain
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
   This topic describes the use of domains in [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). A domain contains a semantic representation of the data in a specific field in the data source that is to be analyzed. A domain is part of the knowledge base that you create for a data source, and the knowledge that you build up by analyzing a sample data source, or importing data, is added to the domains defined in the knowledge base. The knowledge in those domains is later used to perform cleansing and matching in a data quality project. Domains are at the core of all activities in Data Quality Services.  
   
  A domain is mapped to a data source field, and is populated in the knowledge discovery, domain management, and matching activities. How you load data from the data source and output data in a report is defined in domain properties. When you use a reference data provider to cleanse data, you attach a reference data service to a single or composite domain. You create rules to be applied to your data in a domain, and you can create term-based relations for a domain. You can view and correct data in the domain.  
@@ -52,7 +48,7 @@ ms.workload: "Inactive"
 |Change or augment the values in a knowledge base|[Change Domain Values](../data-quality-services/change-domain-values.md)|  
 |Use validation and standardization rules|[Create a Domain Rule](../data-quality-services/create-a-domain-rule.md)|  
 |Use relations to correct a term that is part of a value in a domain|[Create Term-Based Relations](../data-quality-services/create-term-based-relations.md)|  
-|Complete, close, or cancel the domain management activity|[End the Domain Management Activity](http://msdn.microsoft.com/library/ab6505ad-3090-453b-bb01-58435e7fa7c0)|  
+|Complete, close, or cancel the domain management activity|[End the Domain Management Activity](https://msdn.microsoft.com/library/ab6505ad-3090-453b-bb01-58435e7fa7c0)|  
   
 ## Related Tasks  
   

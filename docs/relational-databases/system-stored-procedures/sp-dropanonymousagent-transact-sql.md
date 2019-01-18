@@ -2,29 +2,20 @@
 title: "sp_dropanonymousagent (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/04/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "database-engine"
-ms.service: ""
-ms.component: "system-stored-procedures"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
+ms.technology: replication
 ms.topic: "language-reference"
-applies_to: 
-  - "SQL Server"
 f1_keywords: 
   - "sp_dropanonymousagent"
   - "sp_dropanonymousagent_TSQL"
 helpviewer_keywords: 
   - "sp_dropanonymousagent"
 ms.assetid: 4cb96efa-9358-44a3-a8ee-a7e181bed089
-caps.latest.revision: 25
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "craigg"
-ms.workload: "Inactive"
+ms.author: vanto
+manager: craigg
+manager: craigg
 ---
 # sp_dropanonymousagent (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

@@ -1,29 +1,22 @@
 ---
-title: "Set AD Nodes Admin Logon Password in Directory Services Restore Mode (APS)"
-author: "barbkess" 
-ms.author: "barbkess"
-manager: "jhubbard"	  
-ms.prod: "analytics-platform-system"
-ms.prod_service: "mpp-data-warehouse"
-ms.service: ""
-ms.component:
-ms.technology: "mpp-data-warehouse"
-ms.custom: ""
-ms.date: 01/05/2017
-ms.reviewer: na
-ms.suite: "sql"
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: 97a9c715-2763-417d-b45c-bb0180759e47
-caps.latest.revision: 20
-
+title: Set Active Directory password - Analytics Platform System | Microsoft Docs
+description: Set Active Directory nodes admin logon password in Directory Services Restore Mode in Analytics Platform System (APS).
+author: mzaman1 
+manager: craigg
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
 ---
-# Set Admin Password for Logging on to AD Nodes in Directory Services Restore Mode (DSRM)
-Directory Services Restore Mode (DSRM) is a boot mode for repairing or recovering Active Directory Domain Services (AD DS). It is used to log on to the appliance AD nodes after AD DS has failed or when AD DS needs to be restored. The password for DSRM was initialized during the appliance setup at the hardware vendor site and should be changed by the appliance administrator. Analytics Platform System has two AD DS (domain controllers); ***appliance_domain*-AD01** and ***appliance_domain*-AD02**. For each appliance AD node, change the DSRM password using the following steps.  
+
+# Set Admin Password for Logging on to AD Nodes in Directory Services Restore Mode (DSRM) - Analytics Platform System
+Directory Services Restore Mode (DSRM) is a boot mode for repairing or recovering Active Directory Domain Services (AD DS). It is used to log on to the appliance AD nodes after AD DS has failed or when AD DS needs to be restored. The password for DSRM was initialized during the appliance setup at the hardware vendor site and should be changed by the appliance administrator. Analytics Platform System has two AD DS (domain controllers); **_appliance_domain_-AD01** and **_appliance_domain_-AD02**. For each appliance AD node, change the DSRM password using the following steps.  
   
 ## <a name="HowToDSRM"></a>To reset the administrator password  
   
-1.  Open a Command Prompt window on an appliance AD node ***appliance_domain*–AD*xx***virtual machine.  
+1.  Open a Command Prompt window on an appliance AD node <strong>_appliance_domain_-AD_xx_</strong>virtual machine.  
   
 2.  At the command prompt, type `ntdsutil`.  
   
@@ -33,7 +26,7 @@ Directory Services Restore Mode (DSRM) is a boot mode for repairing or recoverin
   
 5.  At the prompt, type the new password.  
   
-6.  Repeat steps 1 – 5 above for each appliance AD virtual machine.  
+6.  Repeat steps 1 - 5 above for each appliance AD virtual machine.  
   
     > [!WARNING]  
     > Analytics Platform System does not support the dollar sign character ($) in the domain administrator or local administrator passwords. A password containing a dollar sign will validate and be usable but can block upgrade and maintenance activities.  

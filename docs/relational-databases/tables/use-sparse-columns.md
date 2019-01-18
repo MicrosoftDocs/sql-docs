@@ -2,26 +2,20 @@
 title: "Use Sparse Columns | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/22/2016"
-ms.prod: "sql-non-specified"
-ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
-ms.service: ""
-ms.component: "tables"
+ms.prod: sql
+ms.prod_service: "table-view-index, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "dbe-tables"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: table-view-index
+ms.topic: conceptual
 helpviewer_keywords: 
   - "sparse columns, described"
   - "null columns"
   - "sparse columns"
 ms.assetid: ea7ddb87-f50b-46b6-9f5a-acab222a2ede
-caps.latest.revision: 47
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-ms.workload: "On Demand"
+author: stevestein
+ms.author: sstein
+manager: craigg
+monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Use Sparse Columns
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -47,7 +41,7 @@ ms.workload: "On Demand"
   
 -   Catalog views for a table that has sparse columns are the same as for a typical table. The sys.columns catalog view contains a row for each column in the table and includes a column set if one is defined.  
   
--   Sparse columns are a property of the storage layer, rather than the logical table. Therefore a SELECT…INTO statement does not copy over the sparse column property into a new table.  
+-   Sparse columns are a property of the storage layer, rather than the logical table. Therefore a SELECT...INTO statement does not copy over the sparse column property into a new table.  
   
 -   The COLUMNS_UPDATED function returns a **varbinary** value to indicate all the columns that were updated during a DML action. The bits that are returned by the COLUMNS_UPDATED function are as follows:  
   
@@ -89,7 +83,7 @@ ms.workload: "On Demand"
 |**uniqueidentifier**|16|20|43%|  
 |**date**|3|7|69%|  
   
- **Precision-Dependent–Length Data Types**  
+ **Precision-Dependent-Length Data Types**  
   
 |Data type|Nonsparse bytes|Sparse bytes|NULL percentage|  
 |---------------|---------------------|------------------|---------------------|  
@@ -103,7 +97,7 @@ ms.workload: "On Demand"
 |**decimal/numeric(38,s)**|17|21|42%|  
 |**vardecimal(p,s)**|Use the **decimal** type as a conservative estimate.|||  
   
- **Data-Dependent–Length Data Types**  
+ **Data-Dependent-Length Data Types**  
   
 |Data type|Nonsparse bytes|Sparse bytes|NULL percentage|  
 |---------------|---------------------|------------------|---------------------|  
@@ -119,7 +113,7 @@ ms.workload: "On Demand"
 ## In-Memory Overhead Required for Updates to Sparse Columns  
  When designing tables with sparse columns, keep in mind that an additional 2 bytes of overhead are required for each non-null sparse column in the table when a row is being updated. As a result of this additional memory requirement, updates can fail unexpectedly with error 576 when the total row size, including this memory overhead, exceeds 8019, and no columns can be pushed off the row.  
   
- Consider the example of a table that has 600 sparse columns of type bigint. If there are 571 non-null columns, then the total size on disk is 571 * 12 = 6852 bytes. After including additional row overhead and the sparse column header, this increases to around 6895 bytes. The page still has around 1124 bytes available on disk. This can give the impression that additional columns can be updated successfully. However, during the update, there is additional overhead in memory which is 2\*(number of non-null sparse columns). In this example, including the additional overhead – 2 \* 571 = 1142 bytes – increases the row size on disk to around 8037 bytes. This size exceeds the maximum allowed size of 8019 bytes. Since all the columns are fixed-length data types, they cannot be pushed off the row. As a result, the update fails with the 576 error.  
+ Consider the example of a table that has 600 sparse columns of type bigint. If there are 571 non-null columns, then the total size on disk is 571 * 12 = 6852 bytes. After including additional row overhead and the sparse column header, this increases to around 6895 bytes. The page still has around 1124 bytes available on disk. This can give the impression that additional columns can be updated successfully. However, during the update, there is additional overhead in memory which is 2\*(number of non-null sparse columns). In this example, including the additional overhead - 2 \* 571 = 1142 bytes - increases the row size on disk to around 8037 bytes. This size exceeds the maximum allowed size of 8019 bytes. Since all the columns are fixed-length data types, they cannot be pushed off the row. As a result, the update fails with the 576 error.  
   
 ## Restrictions for Using Sparse Columns  
  Sparse columns can be of any [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] data type and behave like any other column with the following restrictions:  

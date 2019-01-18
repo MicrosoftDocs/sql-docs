@@ -1,17 +1,10 @@
 ---
 title: Transparent Data Encryption (TDE) | Microsoft Docs
 ms.custom: ""
-ms.date: "03/09/2017"
-ms.prod: "sql-non-specified"
-ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
-ms.service: ""
-ms.component: "security"
-ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.date: "01/08/2019"
+ms.prod: sql
+ms.technology: security
+ms.topic: conceptual
 helpviewer_keywords: 
   - "Transparent Data Encryption"
   - "database encryption key, about"
@@ -21,26 +14,24 @@ helpviewer_keywords:
   - "Transparent Data Encryption, about"
   - "encryption [SQL Server], transparent data encryption"
 ms.assetid: c75d0d4b-4008-4e71-9a9d-cee2a566bd3b
-caps.latest.revision: 75
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "craigg"
-ms.workload: "On Demand"
+author: aliceku
+ms.author: aliceku
+ms.reviewer: vanto
+manager: craigg
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Transparent Data Encryption (TDE)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-
- > For content related to previous versions of SQL Server, see [Transparent Data Encryption (TDE)](https://msdn.microsoft.com/library/bb934049(SQL.120).aspx).
 
   *Transparent Data Encryption* (TDE) encrypts [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], [!INCLUDE[ssSDSFull](../../../includes/sssdsfull-md.md)], and [!INCLUDE[ssSDWfull](../../../includes/sssdwfull-md.md)] data files, known as encrypting data at rest. You can take several precautions to help secure the database such as designing a secure system, encrypting confidential assets, and building a firewall around the database servers. However, in a scenario where the physical media (such as drives or backup tapes) are stolen, a malicious party can just restore or attach the database and browse the data. One solution is to encrypt the sensitive data in the database and protect the keys that are used to encrypt the data with a certificate. This prevents anyone without the keys from using the data, but this kind of protection must be planned in advance.  
   
  TDE performs real-time I/O encryption and decryption of the data and log files. The encryption uses a database encryption key (DEK), which is stored in the database boot record for availability during recovery. The DEK is a symmetric key secured by using a certificate stored in the master database of the server or an asymmetric key protected by an EKM module. TDE protects data "at rest", meaning the data and log files. It provides the ability to comply with many laws, regulations, and guidelines established in various industries. This enables software developers to encrypt data by using AES and 3DES encryption algorithms without changing existing applications.  
   
-> [!IMPORTANT]  
+> [!IMPORTANT]
 >  TDE does not provide encryption across communication channels. For more information about how to encrypt data across communication channels, see [Enable Encrypted Connections to the Database Engine &#40;SQL Server Configuration Manager&#41;](../../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md).  
->   
+> 
 >  **Related topics:**  
->   
+> 
 >  -   [Transparent Data Encryption with Azure SQL Database](../../../relational-databases/security/encryption/transparent-data-encryption-azure-sql.md)  
 > -   [Get started with Transparent Data Encryption (TDE) on SQL Data Warehouse](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-encryption-tde-tsql/)  
 > -   [Move a TDE Protected Database to Another SQL Server](../../../relational-databases/security/encryption/move-a-tde-protected-database-to-another-sql-server.md)  
@@ -54,7 +45,7 @@ ms.workload: "On Demand"
   
  **Information applicable to [!INCLUDE[ssSDS](../../../includes/sssds-md.md)]**  
   
- When using TDE with [!INCLUDE[sqldbesa](../../../includes/sqldbesa-md.md)] V12 the server-level certificate stored in the master database is automatically created for you by [!INCLUDE[ssSDS](../../../includes/sssds-md.md)]. To move a TDE database on [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] you must decrypt the database, move the database, and then re-enable TDE on the destination [!INCLUDE[ssSDS](../../../includes/sssds-md.md)]. For step-by-step instructions for TDE on [!INCLUDE[ssSDS](../../../includes/sssds-md.md)], see [Transparent Data Encryption with Azure SQL Database](../../../relational-databases/security/encryption/transparent-data-encryption-azure-sql.md).  
+ When using TDE with [!INCLUDE[sqldbesa](../../../includes/sqldbesa-md.md)] V12, the server-level certificate stored in the master database is automatically created for you by [!INCLUDE[ssSDS](../../../includes/sssds-md.md)]. To move a TDE database on [!INCLUDE[ssSDS](../../../includes/sssds-md.md)], you do not have to decrypt the database for the move operation. For more information on utilizing TDE with [!INCLUDE[ssSDS](../../../includes/sssds-md.md)], see [Transparent Data Encryption with Azure SQL Database](../../../relational-databases/security/encryption/transparent-data-encryption-azure-sql.md).  
   
  **Information applicable to [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]**  
   

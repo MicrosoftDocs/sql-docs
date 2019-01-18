@@ -2,16 +2,11 @@
 title: "Diagnostic Connection for Database Administrators | Microsoft Docs"
 ms.custom: ""
 ms.date: "10/16/2015"
-ms.prod: "sql-non-specified"
-ms.prod_service: "database-engine"
-ms.service: ""
-ms.component: "configure-windows"
+ms.prod: sql
+ms.prod_service: high-availability
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: configuration
+ms.topic: conceptual
 helpviewer_keywords: 
   - "server management [SQL Server], connections"
   - "administrator connections [SQL Server]"
@@ -23,11 +18,9 @@ helpviewer_keywords:
   - "ports [SQL Server]"
   - "dedicated administrator connections [SQL Server]"
 ms.assetid: 993e0820-17f2-4c43-880c-d38290bf7abc
-caps.latest.revision: 65
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-ms.workload: "On Demand"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ---
 # Diagnostic Connection for Database Administrators
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -37,7 +30,7 @@ ms.workload: "On Demand"
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] makes every attempt to make DAC connect successfully, but under extreme situations it may not be successful.  
   
-**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]), [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
+**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ( [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]), [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
   
 ## Connecting with DAC  
  By default, the connection is only allowed from a client running on the server. Network connections are not permitted unless they are configured by using the sp_configure stored procedure with the [remote admin connections option](../../database-engine/configure-windows/remote-admin-connections-server-configuration-option.md).  
@@ -55,7 +48,7 @@ ms.workload: "On Demand"
   
 -   The DAC initially attempts to connect to the default database associated with the login. After it is successfully connected, you can connect to the master database. If the default database is offline or otherwise not available, the connection will return error 4060. However, it will succeed if you override the default database to connect to the master database instead using the following command:  
   
-     **sqlcmd –A –d master**  
+     **sqlcmd -A -d master**  
   
      We recommend that you connect to the master database with the DAC because master is guaranteed to be available if the instance of the [!INCLUDE[ssDE](../../includes/ssde-md.md)] is started.  
   
@@ -94,11 +87,11 @@ ms.workload: "On Demand"
   
  The DAC port is assigned dynamically by [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] during startup. When connecting to the default instance, the DAC avoids using a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Resolution Protocol (SSRP) request to the SQL Server Browser Service when connecting. It first connects over TCP port 1434. If that fails, it makes an SSRP call to get the port. If [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser is not listening for SSRP requests, the connection request returns an error. Refer to the error log to find the port number DAC is listening on. If [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is configured to accept remote administration connections, the DAC must be initiated with an explicit port number:  
   
- **sqlcmd –S tcp:***\<server>,\<port>*  
+ **sqlcmd -S tcp:**_\<server>,\<port>_  
   
  The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] error log lists the port number for the DAC, which is 1434 by default. If [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is configured to accept local DAC connections only, connect using the loopback adapter using the following command:  
   
- **sqlcmd –S 127.0.0.1,1434**  
+ **sqlcmd -S 127.0.0.1,1434**  
   
 > [!TIP]  
 >  When connecting to the [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)] with the DAC, you must also specify the database name in the connection string by using the -d option.  
@@ -106,7 +99,7 @@ ms.workload: "On Demand"
 ## Example  
  In this example, an administrator notices that server `URAN123` is not responding and wants to diagnose the problem. To do this, the user activates the `sqlcmd` command prompt utility and connects to server `URAN123` using `-A` to indicate the DAC.  
   
- `sqlcmd -S URAN123 -U sa -P <xxx> –A`  
+ `sqlcmd -S URAN123 -U sa -P <xxx> -A`  
   
  The administrator can now execute queries to diagnose the problem and possibly terminate the unresponsive sessions.  
   

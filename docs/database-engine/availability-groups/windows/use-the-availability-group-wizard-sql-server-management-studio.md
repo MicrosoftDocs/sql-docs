@@ -2,16 +2,10 @@
 title: "Use the Availability Group Wizard (SQL Server Management Studio) | Microsoft Docs"
 ms.custom: ""
 ms.date: "05/17/2016"
-ms.prod: "sql-non-specified"
-ms.prod_service: "database-engine"
-ms.service: ""
-ms.component: "availability-groups"
+ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: high-availability
+ms.topic: conceptual
 f1_keywords: 
   - "sql13.swb.newagwizard.f1"
   - "sql13.swb.newavgroupwiz.f1"
@@ -20,11 +14,9 @@ helpviewer_keywords:
   - "Availability Groups [SQL Server], wizards"
   - "Availability Groups [SQL Server], creating"
 ms.assetid: e1f1dccc-9e65-471d-8fd1-b45085c9484a
-caps.latest.revision: 46
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-ms.workload: "On Demand"
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
 ---
 # Use the Availability Group Wizard (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -115,7 +107,7 @@ In most cases, you can use the New Availability Group Wizard to complete all of 
   
          If you select **Full**, after creating the availability group, the wizard will back up every primary database and its transaction log to a network share and restore the backups on every server instance that hosts an secondary replica. The wizard will then join every secondary database to the availability group.  
   
-         In the **Specify a shared network location accessible by all replicas:** field, specify a backup share to which all of the server instance that host replicas have read-write access. For more information, see [Prerequisites](#Prerequisites), earlier in this topic.  
+         In the **Specify a shared network location accessible by all replicas:** field, specify a backup share to which all of the server instance that host replicas have read-write access. For more information, see [Prerequisites](#Prerequisites), earlier in this topic.  In the validation step, the wizard will perform a test to make sure the provided network location is valid, the test will create a database on the primary replica named "BackupLocDb_" followed by a Guid and perform backup to the provided network location, then restore it on the secondary replicas. It is safe to delete this database along with its backup history and backup file in case the wizard failed to delete them.
   
     -   **Join only**  
   
@@ -183,25 +175,25 @@ In most cases, you can use the New Availability Group Wizard to complete all of 
   
 -   **Blogs:**  
   
-     [Always On - HADRON Learning Series: Worker Pool Usage for HADRON Enabled Databases](http://blogs.msdn.com/b/psssql/archive/2012/05/17/Always%20On-hadron-learning-series-worker-pool-usage-for-hadron-enabled-databases.aspx)  
+     [Always On - HADRON Learning Series: Worker Pool Usage for HADRON Enabled Databases](https://blogs.msdn.com/b/psssql/archive/2012/05/17/Always%20On-hadron-learning-series-worker-pool-usage-for-hadron-enabled-databases.aspx)  
   
      [SQL Server Always On Team Blogs: The official SQL Server Always On Team Blog](https://blogs.msdn.microsoft.com/sqlalwayson/)  
   
-     [CSS SQL Server Engineers Blogs](http://blogs.msdn.com/b/psssql/)  
+     [CSS SQL Server Engineers Blogs](https://blogs.msdn.com/b/psssql/)  
   
 -   **Videos:**  
   
-     [Microsoft SQL Server Code-Named "Denali" Always On Series,Part 1: Introducing the Next Generation High Availability Solution](http://channel9.msdn.com/Events/TechEd/NorthAmerica/2011/DBI302)  
+     [Microsoft SQL Server Code-Named "Denali" Always On Series,Part 1: Introducing the Next Generation High Availability Solution](https://channel9.msdn.com/Events/TechEd/NorthAmerica/2011/DBI302)  
   
-     [Microsoft SQL Server Code-Named "Denali" Always On Series,Part 2: Building a Mission-Critical High Availability Solution Using Always On](http://channel9.msdn.com/Events/TechEd/NorthAmerica/2011/DBI404)  
+     [Microsoft SQL Server Code-Named "Denali" Always On Series,Part 2: Building a Mission-Critical High Availability Solution Using Always On](https://channel9.msdn.com/Events/TechEd/NorthAmerica/2011/DBI404)  
   
 -   **Whitepapers:**  
   
-     [Microsoft SQL Server Always On Solutions Guide for High Availability and Disaster Recovery](http://go.microsoft.com/fwlink/?LinkId=227600)  
+     [Microsoft SQL Server Always On Solutions Guide for High Availability and Disaster Recovery](https://go.microsoft.com/fwlink/?LinkId=227600)  
   
-     [Microsoft White Papers for SQL Server 2012](http://msdn.microsoft.com/library/hh403491.aspx)  
+     [Microsoft White Papers for SQL Server 2012](https://msdn.microsoft.com/library/hh403491.aspx)  
   
-     [SQL Server Customer Advisory Team Whitepapers](http://sqlcat.com/)  
+     [SQL Server Customer Advisory Team Whitepapers](https://sqlcat.com/)  
   
 ## Alternate ways to create availability groups
 

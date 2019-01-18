@@ -2,15 +2,10 @@
 title: "managed_backup.sp_backup_config_schedule (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/10/2016"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "database-engine"
-ms.service: ""
-ms.component: "system-stored-procedures"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: system-objects
 ms.topic: "language-reference"
 f1_keywords: 
   - "sp_backup_config_schedule_TSQL"
@@ -23,11 +18,9 @@ helpviewer_keywords:
   - "managed_backup.sp_backup_config_schedule"
   - "sp_backup_config_schedule"
 ms.assetid: 82541160-d1df-4061-91a5-6868dd85743a
-caps.latest.revision: 12
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-ms.workload: "Inactive"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ---
 # managed_backup.sp_backup_config_schedule (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -40,7 +33,8 @@ ms.workload: "Inactive"
   
 ```vb  
 EXEC managed_backup.sp_backup_config_schedule   
-    [@database_name = ] 'database_name'    ,[@scheduling_option = ] {'Custom' | 'System'}  
+    [@database_name = ] 'database_name'
+    ,[@scheduling_option = ] {'Custom' | 'System'}  
     ,[@full_backup_freq_type = ] {'Daily' | 'Weekly'}  
     ,[@days_of_week = ] 'days_of_the_week'  
     ,[@backup_begin_time = ] 'begin time of the backup window'  
@@ -59,7 +53,7 @@ EXEC managed_backup.sp_backup_config_schedule
  The frequency type for the managed  backup operation, which can be set to 'Daily' or 'Weekly'.  
   
  @days_of_week  
- The days of the week for the backups when @full_backup_freq_type is set to Weekly. Specify full string names like 'Monday'.  You can also specify more than one day name, separated by commas. For example 'Monday, Wednesday, Friday'.  
+ The days of the week for the backups when @full_backup_freq_type is set to Weekly. Specify full string names like 'Monday'.  You can also specify more than one day name, separated by Pipe. For example N'Monday | Wednesday | Friday'.  
   
  @backup_begin_time  
  The start time of the backup window. Backups will not be started outside of the time window, which is defined by a combination of @backup_begin_time and @backup_duration.  

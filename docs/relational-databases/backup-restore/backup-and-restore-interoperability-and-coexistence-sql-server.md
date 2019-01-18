@@ -2,16 +2,11 @@
 title: "Backup and Restore: Interoperability and Coexistence (SQL Server) | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/05/2016"
-ms.prod: "sql-non-specified"
-ms.prod_service: "database-engine"
-ms.service: ""
-ms.component: "backup-restore"
+ms.prod: sql
+ms.prod_service: backup-restore
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "dbe-backup-restore"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: backup-restore
+ms.topic: conceptual
 helpviewer_keywords: 
   - "file restores [SQL Server], related features"
   - "restoring [SQL Server], files"
@@ -19,11 +14,9 @@ helpviewer_keywords:
   - "backups [SQL Server], files or filegroups"
   - "file backups [SQL Server], related features"
 ms.assetid: 69f212b8-edcd-4c5d-8a8a-679ced33c128
-caps.latest.revision: 45
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-ms.workload: "Inactive"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ---
 # Backup and Restore: Interoperability and Coexistence (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

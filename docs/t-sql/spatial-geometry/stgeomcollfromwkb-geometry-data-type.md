@@ -2,15 +2,10 @@
 title: "STGeomCollFromWKB (geometry Data Type) | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/03/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.service: ""
-ms.component: "t-sql|spatial-geography"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: t-sql
 ms.topic: "language-reference"
 f1_keywords: 
   - "STGeomCollFromWKB (geometry Data Type)"
@@ -20,11 +15,9 @@ dev_langs:
 helpviewer_keywords: 
   - "STGeomCollFromWKB (geometry Data Type)"
 ms.assetid: 6c55032c-7f5e-4181-8e67-c0265032db63
-caps.latest.revision: 19
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-ms.workload: "Inactive"
+author: "douglaslMS"
+ms.author: "douglasl"
+manager: craigg
 ---
 # STGeomCollFromWKB (geometry Data Type)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -51,7 +44,7 @@ STGeomCollFromWKB ( 'WKB_geometrycollection' , SRID )
  CLR return type: **SqlGeometry**  
   
 ## Remarks  
- The OGC type of the **geometry** instance returned by `STGeomCollFromWKB()` is set to **GeomCollection**, **MultiPolygon**, **MultiLineString**, or **MulitPoint**, depending on the corresponding WKB input.  
+ The OGC type of the **geometry** instance returned by `STGeomCollFromWKB()` is set to **GeomCollection**, **MultiPolygon**, **MultiLineString**, or **MultiPoint**, depending on the corresponding WKB input.  
   
  This method will throw a FormatException  exception if the input is not well-formatted.  
   

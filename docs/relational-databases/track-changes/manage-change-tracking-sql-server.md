@@ -1,28 +1,21 @@
 ---
 title: "Manage Change Tracking (SQL Server) | Microsoft Docs"
-ms.custom: ""
 ms.date: "08/08/2016"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.service: ""
-ms.component: "track-changes"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "tracking data changes [SQL Server]"
   - "change tracking [SQL Server], overhead"
   - "change tracking [SQL Server]"
   - "change tracking [SQL Server], managing"
 ms.assetid: 94a8d361-e897-4d6d-9a8f-1bb652e7a850
-caps.latest.revision: 9
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-ms.workload: "On Demand"
+author: rothja
+ms.author: jroth
+manager: craigg
+monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Manage Change Tracking (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

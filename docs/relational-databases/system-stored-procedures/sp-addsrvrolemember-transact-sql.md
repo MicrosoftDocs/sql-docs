@@ -2,15 +2,10 @@
 title: "sp_addsrvrolemember (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/20/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "database-engine"
-ms.service: ""
-ms.component: "system-stored-procedures"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: system-objects
 ms.topic: "language-reference"
 f1_keywords: 
   - "sp_addsrvrolemember"
@@ -20,11 +15,9 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_addsrvrolemember"
 ms.assetid: 777f0e09-8ee5-4cb2-a3ac-939d02c3cd22
-caps.latest.revision: 32
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "craigg"
-ms.workload: "On Demand"
+author: stevestein
+ms.author: sstein
+manager: craigg
 ---
 # sp_addsrvrolemember (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,10 +38,10 @@ sp_addsrvrolemember [ @loginame= ] 'login'
 ```  
   
 ## Arguments  
- [ @loginame **=** ] **'***login***'**  
+ [ @loginame **=** ] **'**_login_**'**  
  Is the name of the login being added to the fixed server role. *login* is **sysname**, with no default. *login* can be a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] login or a Windows login. If the Windows login has not already been granted access to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], access is automatically granted.  
   
- [ @rolename **=** ] **'***role***'**  
+ [ @rolename **=** ] **'**_role_**'**  
  Is the name of the fixed server role to which the login is being added. *role* is **sysname**, with a default of NULL, and must be one of the following values:  
   
 -   sysadmin  

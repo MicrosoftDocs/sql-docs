@@ -1,17 +1,10 @@
 ---
 title: "Add and Remove Encryption Keys for Scale-Out Deployment | Microsoft Docs"
-ms.custom: ""
-ms.date: "05/31/2016"
+ms.date: 05/31/2016
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
-ms.service: ""
-ms.component: "install-windows"
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
 
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "encryption keys [Reporting Services]"
   - "deleting encryption keys"
@@ -20,11 +13,8 @@ helpviewer_keywords:
   - "rskeymgmt utility"
   - "scale-out deployments [Reporting Services]"
 ms.assetid: 2da86fb3-4b4d-407f-9825-74dcc42486f5
-caps.latest.revision: 10
-author: "markingmyname"
-ms.author: "maghan"
-manager: "kfile"
-ms.workload: "Inactive"
+author: markingmyname
+ms.author: maghan
 ---
 # Add and Remove Encryption Keys for Scale-Out Deployment
   You can run [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] in a scale-out deployment model by configuring multiple report servers to use a shared report server database. Membership in a scale-out deployment is based on whether the report server stores an encryption key in the report server database. You can control scale-out deployment membership by adding and removing encryption keys for specific report server instances. If you are removing nodes from the deployment, you can remove them in any order. If you are adding nodes to a deployment, you must join any new instances from a report server that is already part of the deployment.  

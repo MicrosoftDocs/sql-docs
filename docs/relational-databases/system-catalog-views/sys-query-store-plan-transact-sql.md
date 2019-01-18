@@ -1,16 +1,11 @@
 ---
 title: "sys.query_store_plan (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "09/12/2017"
-ms.prod: "sql-non-specified"
+ms.date: "11/29/2018"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.service: ""
-ms.component: "system-catalog-views"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: system-objects
 ms.topic: "language-reference"
 f1_keywords: 
   - "QUERY_STORE_PLAN_TSQL"
@@ -23,14 +18,13 @@ helpviewer_keywords:
   - "query_store_plan catalog view"
   - "sys.query_store_plan catalog view"
 ms.assetid: b4d05439-6360-45db-b1cd-794f4a64935e
-caps.latest.revision: 18
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "craigg"
-ms.workload: "Inactive"
+author: stevestein
+ms.author: sstein
+manager: craigg
+monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.query_store_plan (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
 
   Contains information about each execution plan associated with a query.  
   
@@ -57,7 +51,15 @@ ms.workload: "Inactive"
 |**last_execution_time**|**datetimeoffset**|Last execution time refers to the last end time of the query/plan.|  
 |**avg_compile_duration**|**float**|Plan compilation statistics.|  
 |**last_compile_duration**|**bigint**|Plan compilation statistics.|  
-  
+|**plan_forcing_type**|**int**|Plan forcing type.<br /><br />
+0: NONE<br /><br />
+1: MANUAL<br /><br />
+2: AUTO|
+|**plan_forcing_type_desc**|**nvarchar(60)**|Text description of plan_forcing_type.<br /><br />
+NONE: No plan forcing<br /><br />
+MANUAL: Plan forced by user<br /><br />
+AUTO: Plan forced by automatic tuning|
+
 ## Plan forcing limitations
 Query Store has a mechanism to enforce Query Optimizer to use certain execution plan. 
 However, there are some limitations that can prevent a plan to be enforced. 

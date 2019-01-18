@@ -1,24 +1,18 @@
 ---
-title: "Monitor Loads for Parallel Data Warehouse"
-author: "barbkess" 
-ms.author: "barbkess"
-manager: "jhubbard"	  
-ms.prod: "analytics-platform-system"
-ms.prod_service: "mpp-data-warehouse"
-ms.service: ""
-ms.component:
-ms.suite: "sql"
-ms.custom: ""
-ms.technology: "mpp-data-warehouse"
-description: "You can monitor active and recent [dwloader](dwloader.md) loads by using the Analytics Platform System (APS) Admin Console or the Parallel Data Warehouse (PDW) System Views."
-ms.date: "10/20/2016"
-ms.topic: "article"
-ms.assetid: c0c55c16-00bc-4676-8970-a8e10b3e9408
-caps.latest.revision: 6
-
+title: Monitor loads for Parallel Data Warehouse | Microsoft Docs
+description: Monitor active and recent loads by using the Analytics Platform System (APS) Admin Console or the Parallel Data Warehouse (PDW) System Views."
+author: mzaman1 
+manager: craigg
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
 ---
-# Monitor loads
-You can monitor active and recent [dwloader](dwloader.md) loads by using the Analytics Platform System (APS) Admin Console or the Parallel Data Warehouse (PDW) [System Views](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-reference-tsql-system-views/). 
+
+# Monitor loads into Parallel Data Warehouse
+Monitor active and recent [dwloader](dwloader.md) loads by using the Analytics Platform System (APS) Admin Console or the Parallel Data Warehouse (PDW) [System Views](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-reference-tsql-system-views/). 
   
 > [!TIP]  
 > Some loads are initiated by using INSERT statements or business intelligence tools that use SQL statements to perform the load. 
@@ -31,7 +25,7 @@ To monitor this type of load, see [Monitoring Active Queries](monitor-active-que
 Regardless of the method used to monitor a load, the login must have permission to access the underlying data sources. 
 
 <!-- MISSING LINKS
-For the permissions to grant, see “Use All of the Admin Console” in [Grant Permissions to Use the Admin Console](grant-permissions-admin-console.md). 
+For the permissions to grant, see "Use All of the Admin Console" in [Grant Permissions to Use the Admin Console](grant-permissions-admin-console.md). 
 
 --> 
   
@@ -50,7 +44,7 @@ See these system views for information on the metadata about the load that is sh
   
 -   [sys.dm_pdw_exec_requests](../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-requests-transact-sql.md)  
   
--   [sys.pdw_loader_run_stages](https://msdn.microsoft.com/library/mt203879.aspx.md)  
+-   [sys.pdw_loader_run_stages](https://msdn.microsoft.com/library/mt203879.aspx)  
   
 -   [sys.pdw_loader_backup_runs](../relational-databases/system-catalog-views/sys-pdw-loader-backup-runs-transact-sql.md)  
   
@@ -76,7 +70,7 @@ To monitor active and recent loads by using SQL Server PDW views, follow the ste
     LEFT OUTER JOIN   
     sys.pdw_loader_backup_runs lbr   
     ON (er.request_id=lbr.requst_id)   
-    WHERE er.request_id=’12738’;  
+    WHERE er.request_id='12738';  
     ```  
   
 <!-- MISSING LINKS

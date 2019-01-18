@@ -1,0 +1,3 @@
+The following graphic shows the permissions and their relationships to each other. Some of the higher level permissions (such as `CONTROL SERVER`) are listed many times. In this article, the poster is far too small to read. Click the image to download the **Database Engine Permissions Poster** in pdf format.  
+  
+ [![Database Engine Permissions](../media/database-engine-permissions/database-engine-permissions.png)](https://aka.ms/sql-permissions-poster)

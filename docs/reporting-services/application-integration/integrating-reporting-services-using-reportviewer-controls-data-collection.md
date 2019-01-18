@@ -1,40 +1,33 @@
 ---
-title: "Data collection in ReportViewer Control 2016 | Microsoft Docs"
-ms.custom: ""
-ms.date: "09/06/2016"
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.service: ""
-ms.component: "application-integration"
+title: Data collection in ReportViewer Control 2016
+uthor: markingmyname
+ms.author: maghan
+manager: kfile
 ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
-
-
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-ms.assetid: 112e0240-351d-46a9-98c7-2be09f26ac60
-caps.latest.revision: 2
-author: "markingmyname"
-ms.author: "maghan"
-manager: "kfile"
-ms.workload: "Inactive"
+ms.prod: reporting-services
+ms.prod_service: reporting-services-native, reporting-services-sharepoint
+ms.technology: application-integration
+ms.topic: reference
+ms.custom: ""
+ms.date: 09/18/2018
 ---
+
 # Integrating Reporting Services Using ReportViewer Controls - Data Collection
-By default, the ReportViewer Control collects anonymous usage information in order for Microsoft to better understand how customers are making use of the control. By creating a better understanding of how customers are deploying and using the Viewer Control, future development can be focused on improvements that deliver the most value to customers.
 
-For an explanation of the user data collection and use practices for Microsoft SQL Server 2016 releases and any other products and services, please refer to this [privacy statement from Microsoft](https://www.microsoft.com/EN-US/privacystatement/SQLServer/Default.aspx).
+Anonymous usage data is collected by the control to better understand how customers make use of the product. Usage data enables future development to be focused on improvements that are most relevant to customers.
 
-## Opting out of telemetry
+An explanation of the data collection and usage practices of Microsoft SQL Server and Report Viewer are available in the [privacy statement](https://go.microsoft.com/fwlink/?LinkID=868444).
 
-Telemetry can be disabled programmatically through the “EnableTelemetry”. This can be done by editing the .aspx page hosting the control
+## Opting out of data collection
+
+Collection of usage data can be disabled through the ```EnableTelemetry``` property.
 
 ```
-\<rsweb:ReportViewer ID="ReportViewer1" runat="server" EnableTelemetry="false">
-\</rsweb:ReportViewer>
+<rsweb:ReportViewer ID="ReportViewer1" runat="server" EnableTelemetry="false">
+</rsweb:ReportViewer>
 ```
 
-Or, pragmatically before the control is rendered such as in the hosting page’s Page_Load call.
+Or pragmatically before the control is rendered.
     
 ```
 protected void Page_Load(object sender, EventArgs e)
@@ -44,8 +37,8 @@ protected void Page_Load(object sender, EventArgs e)
 ```
 ## See also
 
-[Using the WebForms ReportViewer Control](../../reporting-services/application-integration/using-the-webforms-reportviewer-control.md)  
-[Integrating Reporting Services Using the ReportViewer Controls](../../reporting-services/application-integration/integrating-reporting-services-using-reportviewer-controls.md) 
+[Using the WebForms Report Viewer Control](../../reporting-services/application-integration/using-the-webforms-reportviewer-control.md)  
+[Integrating Reporting Services Using the Report Viewer Controls](../../reporting-services/application-integration/integrating-reporting-services-using-reportviewer-controls.md) 
 
 
 

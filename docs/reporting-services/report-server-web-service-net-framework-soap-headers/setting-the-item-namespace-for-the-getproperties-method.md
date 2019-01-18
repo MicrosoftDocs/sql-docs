@@ -1,30 +1,19 @@
 ---
 title: "Setting the Item Namespace for the GetProperties Method | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/06/2017"
+ms.date: 03/06/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
-ms.service: ""
-ms.component: "report-server-web-service-net-framework-soap-headers"
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
+ms.technology: report-server-web-service-net-framework-soap-headers
 
 
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-applies_to: 
-  - "SQL Server 2016 Preview"
+ms.topic: reference
 helpviewer_keywords: 
   - "item properties [Reporting Services]"
   - "ItemNamespaceHeader SOAP header"
   - "GetProperties method"
 ms.assetid: b0a08639-3101-40a2-abe2-3a41753826d1
-caps.latest.revision: 38
-author: "markingmyname"
-ms.author: "maghan"
-manager: "kfile"
-ms.workload: "Inactive"
+author: markingmyname
+ms.author: maghan
 ---
 # Setting the Item Namespace for the GetProperties Method
   You can use the <xref:ReportService2010.ItemNamespaceHeader> SOAP header in [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] to retrieve item properties based on two different item identifiers: the full path of the item or the ID of the item.  
@@ -44,7 +33,7 @@ Class Sample
    Sub Main()  
       Dim rs As New ReportingService2010()  
       rs.Credentials = System.Net.CredentialCache.DefaultCredentials  
-      rs.Url = "http://<Server Name>/reportserver/ReportService2010.asmx"  
+      rs.Url = "https://<Server Name>/reportserver/ReportService2010.asmx"  
   
       Dim items() As CatalogItem  
   
@@ -87,7 +76,7 @@ class Sample
    {  
    ReportingService2010 rs = new ReportingService2010();  
       rs.Credentials = System.Net.CredentialCache.DefaultCredentials;  
-      rs.Url = "http://<Server Name>/reportserver/ReportService2010.asmx";  
+      rs.Url = "https://<Server Name>/reportserver/ReportService2010.asmx";  
   
       CatalogItem[] items;  
   

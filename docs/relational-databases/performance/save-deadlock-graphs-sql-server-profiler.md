@@ -2,26 +2,18 @@
 title: "Save deadlock graphs (SQL Server Profiler) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
-ms.prod: "sql-non-specified"
-ms.prod_service: "database-engine"
-ms.service: ""
-ms.component: "performance"
+ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: performance
+ms.topic: conceptual
 helpviewer_keywords: 
   - "deadlocks [SQL Server], saving deadlock graphs"
   - "graphs [SQL Server]"
   - "saving deadlock graphs"
 ms.assetid: bf1fc906-abd6-4a89-842e-da0d66b2defe
-caps.latest.revision: 26
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-ms.workload: "On Demand"
+author: julieMSFT
+ms.author: jrasnick
+manager: craigg
 ---
 # Save deadlock graphs (SQL Server Profiler)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

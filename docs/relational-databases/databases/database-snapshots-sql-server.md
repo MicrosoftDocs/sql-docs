@@ -2,16 +2,11 @@
 title: "Database Snapshots (SQL Server) | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/08/2016"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "database-engine"
-ms.service: ""
-ms.component: "databases"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: configuration
+ms.topic: conceptual
 helpviewer_keywords: 
   - "static database views"
   - "snapshots [SQL Server database snapshots]"
@@ -21,11 +16,9 @@ helpviewer_keywords:
   - "read-only database views"
   - "database snapshots [SQL Server], about database snapshots"
 ms.assetid: 00179314-f23e-47cb-a35c-da6f180f86d3
-caps.latest.revision: 54
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-ms.workload: "On Demand"
+author: "stevestein"
+ms.author: "sstein"
+manager: craigg
 ---
 # Database Snapshots (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

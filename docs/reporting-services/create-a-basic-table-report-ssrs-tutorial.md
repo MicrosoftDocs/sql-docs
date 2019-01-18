@@ -1,31 +1,19 @@
 ---
 title: "Create a Basic Table Report (SSRS Tutorial) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/07/2017"
+ms.date: 11/07/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
-ms.service: ""
-ms.component: "reporting-services"
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
+ms.technology: reporting-services
 
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
-applies_to: 
-  - "SQL Server 2016"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "walkthroughs [Reporting Services]"
   - "tutorials [Reporting Services]"
   - "reports [Reporting Services], creating"
 ms.assetid: 3b539b4b-26f2-4c0b-b506-80f175679a46
-caps.latest.revision: 67
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "kfile"
-ms.workload: "Active"
+author: maggiesMSFT
+ms.author: maggies
 ---
-
 # Create a Basic Table Report (SSRS Tutorial)
 
 In this tutorial, you use Report Designer in SQL Server Data Tools to create a basic [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] paginated report with a table, based on the **[!INCLUDE[ssSampleDBAdventureworks2014_md](../includes/sssampledbadventureworks2014-md.md)]** database. You can also create [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] paginated reports with Report Builder. 
@@ -64,4 +52,4 @@ You must also have read-only permissions to retrieve data from the [!INCLUDE[ssS
 
 [Reporting Services Tutorials](../reporting-services/reporting-services-tutorials-ssrs.md)  
 
-More questions? [Try asking the Reporting Services forum](http://go.microsoft.com/fwlink/?LinkId=620231)
+More questions? [Try asking the Reporting Services forum](https://go.microsoft.com/fwlink/?LinkId=620231)

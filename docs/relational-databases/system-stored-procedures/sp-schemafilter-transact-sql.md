@@ -2,29 +2,20 @@
 title: "sp_schemafilter (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "database-engine"
-ms.service: ""
-ms.component: "system-stored-procedures"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
+ms.technology: replication
 ms.topic: "language-reference"
-applies_to: 
-  - "SQL Server"
 f1_keywords: 
   - "sp_schemafilter_TSQL"
   - "sp_schemafilter"
 helpviewer_keywords: 
   - "sp_schemafilter"
 ms.assetid: 199e869b-2cd2-44ee-b2ee-69edb06a1bc4
-caps.latest.revision: 24
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "craigg"
-ms.workload: "Inactive"
+author: stevestein
+ms.author: sstein
+manager: craigg
 ---
 # sp_schemafilter (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,7 +35,7 @@ sp_schemafilter [ @publisher = ] 'publisher'
   
 ## Arguments  
  [**@publisher** = ] **'***publisher***'**  
- Is the name of the non-[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Publisher. *publisher* is **sysname**, with no default.  
+ Is the name of the non- [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Publisher. *publisher* is **sysname**, with no default.  
   
  [**@schema** = ] **'***schema***'**  
  Is the name of the schema. *schema* is **sysname**, with a default value of NULL.  

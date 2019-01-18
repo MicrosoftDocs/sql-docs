@@ -1,18 +1,12 @@
 ---
 title: "Formatting Lines, Colors, and Images (Report Builder and SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
+ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
-ms.service: ""
-ms.component: "report-design"
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
+ms.technology: report-design
 
 
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "sql13.rtp.rptdesigner.textboxproperties.border.f1"
   - "10502"
@@ -27,11 +21,8 @@ f1_keywords:
   - "10066"
   - "sql13.rtp.rptdesigner.subreportproperties.border.f1"
 ms.assetid: 0f5f0d2a-9537-4152-b441-b40d7f04cf4c
-caps.latest.revision: 7
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "kfile"
-ms.workload: "Inactive"
+author: maggiesMSFT
+ms.author: maggies
 ---
 # Formatting Lines, Colors, and Images (Report Builder and SSRS)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] gives you the ability to format lines, colors, data regions, images, and other report items.  
@@ -62,6 +53,6 @@ ms.workload: "Inactive"
  [Formatting Text and Placeholders &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/formatting-text-and-placeholders-report-builder-and-ssrs.md)   
  [Formatting Numbers and Dates &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/formatting-numbers-and-dates-report-builder-and-ssrs.md)   
  [Format Text in a Text Box &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/format-text-in-a-text-box-report-builder-and-ssrs.md)   
- [Fill Dialog Box &#40;Report Builder and SSRS&#41;](http://msdn.microsoft.com/library/93a91d02-d558-4a0e-8d17-3fdf21e208d3)  
+ [Fill Dialog Box &#40;Report Builder and SSRS&#41;](https://msdn.microsoft.com/library/93a91d02-d558-4a0e-8d17-3fdf21e208d3)  
   
   

@@ -1,30 +1,14 @@
 ---
 title: "TopSum (DMX) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/02/2016"
-ms.prod: analysis-services
-ms.prod_service: "analysis-services"
-ms.service: ""
-ms.component: ""
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
-  
-ms.component: data-mining
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "TOPSUM"
-dev_langs: 
-  - "DMX"
-helpviewer_keywords: 
-  - "TopSum function"
-ms.assetid: a0bebdfa-3db2-4818-ab8c-440598de71f1
-caps.latest.revision: 41
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-ms.workload: "Inactive"
+ms.date: 06/07/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: dmx
+ms.topic: conceptual
+ms.author: owend
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
 ---
 # TopSum (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -48,7 +32,7 @@ TopSum(<table expression>, <rank expression>, <sum>)
  The **TopSum** function returns the top-most rows in decreasing order of rank based on the evaluated value of the \<rank expression> argument for each row, such that the sum of the \<rank expression> values is at least the given total that is specified by the \<sum> argument. **TopSum** returns the smallest number of elements possible while still meeting the specified sum value.  
   
 ## Examples  
- The following example creates a prediction query against the Association model that you build by using the [Basic Data Mining Tutorial](http://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c).  
+ The following example creates a prediction query against the Association model that you build by using the [Basic Data Mining Tutorial](https://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c).  
   
  To understand how TopPercent works, it might be helpful to first execute a prediction query that returns only the nested table.  
   
@@ -103,9 +87,9 @@ NATURAL PREDICTION JOIN
   
 |Model|$SUPPORT|$PROBABILITY|$ADJUSTEDPROBABILITY|  
 |-----------|--------------|------------------|--------------------------|  
-|Sport-100|4334|0.29…|0.25…|  
-|Water Bottle|2866|0.19…|0.17…|  
-|Patch kit|2113|0.14…|0.13…|  
+|Sport-100|4334|0.29...|0.25...|  
+|Water Bottle|2866|0.19...|0.17...|  
+|Patch kit|2113|0.14...|0.13...|  
   
  **Note** This example is provided only to illustrate the usage of **TopSum**. Depending on the size of your data set, this query might take a long time to run.  
   

@@ -2,18 +2,11 @@
 title: "SET XACT_ABORT (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/07/2016"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
-ms.service: ""
-ms.component: "t-sql|statements"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: t-sql
 ms.topic: "language-reference"
-applies_to: 
-  - "SQL Server 2016 Preview"
 f1_keywords: 
   - "XACT_ABORT_TSQL"
   - "XACT_ABORT"
@@ -30,18 +23,17 @@ helpviewer_keywords:
   - "roll back transactions [SQL Server]"
   - "SET XACT_ABORT statement"
 ms.assetid: cbcaa433-58f2-4dc3-a077-27273bef65b5
-caps.latest.revision: 50
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "craigg"
-ms.workload: "Active"
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # SET XACT_ABORT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
     
 > [!NOTE]  
->  The **THROW** statement honors **SET XACT_ABORT RAISERROR** does not. New Applications should use **THROW** instead of **RAISERROR**.  
+>  The **THROW** statement honors **SET XACT_ABORT**. **RAISERROR** does not. New applications should use **THROW** instead of **RAISERROR**.  
   
  Specifies whether [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] automatically rolls back the current transaction when a [!INCLUDE[tsql](../../includes/tsql-md.md)] statement raises a run-time error.  
   
@@ -49,17 +41,10 @@ ms.workload: "Active"
   
 ## Syntax  
   
-```  
--- Syntax for SQL Server and Azure SQL Database  
-  
+```    
 SET XACT_ABORT { ON | OFF }  
 ```  
-  
-```  
--- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
-  
-SET XACT_ABORT ON   
-```  
+
   
 ## Remarks  
  When SET XACT_ABORT is ON, if a [!INCLUDE[tsql](../../includes/tsql-md.md)] statement raises a run-time error, the entire transaction is terminated and rolled back.  

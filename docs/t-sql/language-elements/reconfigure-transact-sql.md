@@ -2,15 +2,10 @@
 title: "RECONFIGURE (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "05/20/2016"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "sql-database"
-ms.service: ""
-ms.component: "t-sql|language-elements"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: t-sql
 ms.topic: "language-reference"
 f1_keywords: 
   - "RECONFIGURE"
@@ -25,11 +20,9 @@ helpviewer_keywords:
   - "RECONFIGURE"
   - "RECONFIGURE, WITH OVERRIDE statement"
 ms.assetid: 2e6e4eeb-b70b-4f45-a253-28ac4e595d75
-caps.latest.revision: 50
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-ms.workload: "On Demand"
+author: "douglaslMS"
+ms.author: "douglasl"
+manager: craigg
 ---
 # RECONFIGURE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

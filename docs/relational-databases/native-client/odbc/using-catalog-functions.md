@@ -2,15 +2,10 @@
 title: "Using Catalog Functions | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
-ms.service: ""
-ms.component: "native-client|ODBC"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-
-ms.tgt_pltfrm: ""
+ms.technology: native-client
 ms.topic: "reference"
 helpviewer_keywords: 
   - "ODBC, functions"
@@ -20,11 +15,10 @@ helpviewer_keywords:
   - "catalog functions [ODBC]"
   - "functions [ODBC]"
 ms.assetid: 7773fb2e-06b5-4c4b-88e9-0ad9132ad273
-caps.latest.revision: 36
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-ms.workload: "Inactive"
+author: MightyPen
+ms.author: genemi
+manager: craigg
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Using Catalog Functions
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -48,7 +42,7 @@ ms.workload: "Inactive"
   
      Returns a list of the catalogs contained in a linked server.  
   
- After you have a linked server name and a catalog name, the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC driver supports getting information from the catalog by using a two-part name of *linked_server_name***.***catalog* for *CatalogName* on the following ODBC catalog functions:  
+ After you have a linked server name and a catalog name, the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC driver supports getting information from the catalog by using a two-part name of _linked_server_name_**.**_catalog_ for *CatalogName* on the following ODBC catalog functions:  
   
 -   **SQLColumnPrivileges**  
   
@@ -62,7 +56,7 @@ ms.workload: "Inactive"
   
 -   **SQLTables**  
   
- The two-part *linked_server_name***.***catalog* is also supported for *FKCatalogName* and *PKCatalogName* on [SQLForeignKeys](../../../relational-databases/native-client-odbc-api/sqlforeignkeys.md).  
+ The two-part _linked_server_name_**.**_catalog_ is also supported for *FKCatalogName* and *PKCatalogName* on [SQLForeignKeys](../../../relational-databases/native-client-odbc-api/sqlforeignkeys.md).  
   
  Using SQLLinkedServers and SQLLinkedCatalogs requires the following files:  
   

@@ -2,15 +2,10 @@
 title: "cdc.fn_cdc_get_net_changes_&lt;capture_instance&gt; (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "database-engine"
-ms.service: ""
-ms.component: "system-functions"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: system-objects
 ms.topic: "language-reference"
 dev_langs: 
   - "TSQL"
@@ -19,11 +14,9 @@ helpviewer_keywords:
   - "change data capture [SQL Server], querying metadata"
   - "cdc.fn_cdc_get_net_changes_<capture_instance>"
 ms.assetid: 43ab0d1b-ead4-471c-85f3-f6c4b9372aab
-caps.latest.revision: 29
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-ms.workload: "Inactive"
+author: "rothja"
+ms.author: "jroth"
+manager: craigg
 ---
 # cdc.fn_cdc_get_net_changes_&lt;capture_instance&gt; (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -91,7 +84,9 @@ cdc.fn_cdc_get_net_changes_capture_instance ( from_lsn , to_lsn , '<row_filter_o
  Requires membership in the sysadmin fixed server role or db_owner fixed database role. For all other users, requires SELECT permission on all captured columns in the source table and, if a gating role for the capture instance was defined, membership in that database role. When the caller does not have permission to view the source data, the function returns error 208 (Invalid object name).  
   
 ## Remarks  
- If the specified LSN range does not fall within the change tracking timeline for the capture instance, the function returns error 208 (Invalid object name).  
+ If the specified LSN range does not fall within the change tracking timeline for the capture instance, the function returns error 208 (Invalid object name).
+
+ Modifications on the unique identifier of a row will cause fn_cdc_get_net_changes to show the initial UPDATE command with a DELETE and then INSERT command instead.  This behavior is necessary to track the key both before and after the change.
   
 ## Examples  
  The following example uses the function `cdc.fn_cdc_get_net_changes_HR_Department` to report the net changes made to the source table `HumanResources.Department` during a specific time interval.  

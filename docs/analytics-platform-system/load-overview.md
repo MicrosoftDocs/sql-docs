@@ -1,24 +1,17 @@
 ---
-title: "Load"
-author: "barbkess" 
-ms.author: "barbkess"
-manager: "jhubbard"	  
-ms.prod: "analytics-platform-system"
-ms.prod_service: "mpp-data-warehouse"
-ms.service: ""
-ms.component:
-ms.suite: "sql"
-ms.custom: ""
-ms.technology: "mpp-data-warehouse"
-description: "You can load or insert data into SQL Server Parallel Data Warehouse (PDW) by using Integration Services, bcp Utility, dwloader, or the SQL INSERT statement."
-ms.date: "10/20/2016"
-ms.topic: "article"
-ms.assetid: c7292108-4a48-409e-b0f4-e4ba84dce26f
-caps.latest.revision: 22
-
+title: Loading data into Parallel Data Warehouse | Microsoft Docs
+description: You can load or insert data into SQL Server Parallel Data Warehouse (PDW) by using Integration Services, bcp Utility, dwloader, or the SQL INSERT statement.
+author: mzaman1 
+manager: craigg
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
 ---
 
-# Load (SQL Server PDW)
+# Loading data into Parallel Data Warehouse
 You can load or insert data into SQL Server Parallel Data Warehouse (PDW) by using Integration Services, [bcp Utility](../tools/bcp-utility.md), **dwloader** Command-line Loader, or the SQL INSERT statement.  
 
 ## Loading Environment  
@@ -33,7 +26,7 @@ dwloader loads data directly to the Compute nodes without passing the data throu
   
 On each Compute node, Data Movement Service (DMS) receives and processes the chunks of data. Processing the data includes converting each row into SQL Server native format, and computing the distribution hash to determine the Compute node to which each row belongs.  
   
-After processing the rows, DMS uses a shuffle move to transfer each row to the correct Compute node and instance of SQL Server. As SQL Server receives the rows, it batches them according to the **–b** batch size parameter set in dwloader, and then bulk loads the batch.  
+After processing the rows, DMS uses a shuffle move to transfer each row to the correct Compute node and instance of SQL Server. As SQL Server receives the rows, it batches them according to the **-b** batch size parameter set in dwloader, and then bulk loads the batch.  
 
 ## Load with prepared statements
 

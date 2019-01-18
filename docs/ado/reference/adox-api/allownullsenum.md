@@ -1,28 +1,21 @@
 ---
 title: "AllowNullsEnum | Microsoft Docs"
-ms.prod: "sql-non-specified"
-ms.prod_service: "drivers"
-ms.service: ""
-ms.component: "ado"
-ms.technology:
-  - "drivers"
+ms.prod: sql
+ms.prod_service: connectivity
+ms.technology: connectivity
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 apitype: "COM"
 f1_keywords: 
   - "AllowNullsEnum"
 helpviewer_keywords: 
   - "AllowNullsEnum enumeration [ADOX]"
 ms.assetid: 6acf3689-1a7f-4379-9d7f-df452ccbac27
-caps.latest.revision: 12
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
-ms.workload: "Inactive"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # AllowNullsEnum
 Specifies whether records with null values are indexed.  

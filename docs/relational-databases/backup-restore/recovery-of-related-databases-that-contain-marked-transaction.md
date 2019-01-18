@@ -2,16 +2,11 @@
 title: "Recovery of Related  Databases That Contain Marked Transaction | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-non-specified"
-ms.prod_service: "database-engine"
-ms.service: ""
-ms.component: "backup-restore"
+ms.prod: sql
+ms.prod_service: backup-restore
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "dbe-backup-restore"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: backup-restore
+ms.topic: conceptual
 helpviewer_keywords: 
   - "transaction logs [SQL Server], marks"
   - "STOPBEFOREMARK option [RESTORE statement]"
@@ -25,11 +20,9 @@ helpviewer_keywords:
   - "marked transactions [SQL Server], restoring"
   - "database restores [SQL Server], point in time"
 ms.assetid: 77a0d9c0-978a-4891-8b0d-a4256c81c3f8
-caps.latest.revision: 37
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-ms.workload: "Inactive"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ---
 # Recovery of Related  Databases That Contain Marked Transaction
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -64,11 +57,11 @@ BEGIN TRANSACTION Tx1 WITH MARK 'not the mark name, just a description'
 ## Transact-SQL Syntax for Recovering to a Mark  
  When you target a marked transaction by using a[RESTORE LOG](../../t-sql/statements/restore-statements-transact-sql.md)statement, you can use one the following clauses to stop at or immediately before the mark:  
   
--   Use the WITH STOPATMARK = **'***<mark_name>***'** clause to specify that the marked transaction is the recovery point.  
+-   Use the WITH STOPATMARK = **'**_<mark_name>_**'** clause to specify that the marked transaction is the recovery point.  
   
      STOPATMARK rolls forward to the mark and includes the marked transaction in the roll forward.  
   
--   Use the WITH STOPBEFOREMARK = **'***<mark_name>***'** clause to specify that the log record that is immediately before the mark is the recovery point.  
+-   Use the WITH STOPBEFOREMARK = **'**_<mark_name>_**'** clause to specify that the log record that is immediately before the mark is the recovery point.  
   
      STOPBEFOREMARK rolls forward to the mark and excludes marked the transaction from the roll forward.  
   

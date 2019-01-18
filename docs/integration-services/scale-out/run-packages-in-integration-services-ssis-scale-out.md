@@ -1,26 +1,19 @@
 ---
 title: "Run Packages in SQL Server Integration Services (SSIS) Scale Out | Microsoft Docs"
-ms.description: "This article describes how to run SSIS packages in Scale Out"
-ms.custom: ""
+description: "This article describes how to run SSIS packages in Scale Out"
+ms.custom: performance
 ms.date: "12/13/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "integration-services"
-ms.service: ""
-ms.component: "scale-out"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-caps.latest.revision: 1
+ms.technology: integration-services
+ms.topic: conceptual
 author: "haoqian"
 ms.author: "haoqian"
 ms.reviewer: "douglasl"
-manager: "craigg"
+manager: craigg
 f1_keywords: 
   - "sql13.ssis.ssms.ispackageexecuteinscaleout.f1"
-ms.workload: "Inactive"
 ---
 # Run packages in Integration Services (SSIS) Scale Out
 After you deploy packages to the Integration Services server, you can run them in Scale Out by using one of the following methods:
@@ -64,7 +57,7 @@ After you deploy packages to the Integration Services server, you can run them i
 
 1.  Create executions.
 
-    Call `[catalog].[create_execution]` for each package. Set the parameter **@runinscaleout** to `True`. If not all Scale Out Worker computers are allowed to run the package, set the parameter **@useanyworker** to `False`.   
+    Call `[catalog].[create_execution]` for each package. Set the parameter **@runinscaleout** to `True`. If not all Scale Out Worker computers are allowed to run the package, set the parameter **@useanyworker** to `False`. For more info about this stored procedure and the **@useanyworker** parameter, see [catalog.create_execution](../system-stored-procedures/catalog-create-execution-ssisdb-database.md). 
 
 2. Set execution parameters.
 
@@ -119,7 +112,7 @@ To set the default execution mode for packages to **Scale Out**, do the followin
 
 After you set this default execution mode, you no longer have to specify the **@runinscaleout** parameter when you call the `[catalog].[create_execution]` stored procedure. Packages are run in Scale Out automatically. 
 
-![Exe mode](media\exe-mode.PNG)
+![Exe mode](media/exe-mode.PNG)
 
 To switch the default execution mode back so that packages no longer run by default in Scale Out mode, set  **Server-wide Default execution mode** to **Server**.
 

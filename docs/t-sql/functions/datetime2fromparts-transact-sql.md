@@ -2,15 +2,10 @@
 title: "DATETIME2FROMPARTS (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/29/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
-ms.service: ""
-ms.component: "t-sql|functions"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: t-sql
 ms.topic: "language-reference"
 f1_keywords: 
   - "DATETIME2FROMPARTS_TSQL"
@@ -20,16 +15,15 @@ dev_langs:
 helpviewer_keywords: 
   - "DATETIME2FROMPARTS function"
 ms.assetid: 632b757d-d2d1-43a5-b870-792a779ae204
-caps.latest.revision: 16
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "craigg"
-ms.workload: "On Demand"
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # DATETIME2FROMPARTS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
 
-Returns a **datetime2** value for the specified date and time and with the specified precision.
+This function returns a **datetime2** value for the specified date and time arguments. The returned value has a precision specified by the precision argument.
   
 ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -41,42 +35,42 @@ DATETIME2FROMPARTS ( year, month, day, hour, minute, seconds, fractions, precisi
   
 ## Arguments  
 *year*  
-Integer expression specifying a year.
+An integer expression that specifies a year.
   
 *month*  
-Integer expression specifying a month.
+An integer expression that specifies a month.
   
 *day*  
-Integer expression specifying a day.
+An integer expression that specifies a day.
   
- *hour*  
-Integer expression specifying hours.
+*hour*  
+An integer expression that specifies the hours.
   
-*minute*
-Integer expression specifying minutes.
+*minute*  
+An integer expression that specifies the minutes.
   
 *seconds*  
-Integer expression specifying seconds.
+An integer expression that specifies the seconds.
   
 *fractions*  
-Integer expression specifying fractions.
+An integer expression that specifies a fractional seconds value.
   
 *precision*  
-Integer literal specifying the precision of the **datetime2** value to be returned.
+An integer expression that specifies the precision of the **datetime2** value that `DATETIME2FROMPARTS` will return.
   
 ## Return types
 **datetime2(** *precision* **)**
   
 ## Remarks  
-**DATETIME2FROMPARTS** returns a fully initialized **datetime2** value. If the arguments are not valid, an error is raised. If required arguments are null, then null is returned. However, if the *precision* argument is null, then an error is raised.
+`DATETIME2FROMPARTS` returns a fully initialized **datetime2** value. `DATETIME2FROMPARTS` will raise an error if at least one required argument has an invalid value. `DATETIME2FROMPARTS` returns null if at least one required argument has a null value. However, if the *precision* argument has a null value, `DATETIME2FROMPARTS` will raise an error.
+
+The *fractions* argument depends on the *precision* argument. For example, for a *precision* value of 7, each fraction represents 100 nanoseconds; for a *precision* of 3, each fraction represents a millisecond. For a *precision* value of zero, the value of *fractions* must also be zero; otherwise, `DATETIME2FROMPARTS` will raise an error.
   
-The *fractions* argument depends on the *precision* argument. For example, if *precision* is 7, then each fraction represents 100 nanoseconds; if *precision* is 3, then each fraction represents a millisecond. If the value of *precision* is zero, then the value of *fractions* must also be zero; otherwise, an error is raised.
-  
-This function is capable of being remoted to [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] servers and above. It will not be remoted to servers that have a version below [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].
+This function supports remoting to [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] servers and above. It will not support remoting to servers that have a version below [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].
   
 ## Examples  
   
-### A. Simple example without fractions of a second  
+### A. An example without fractions of a second  
   
 ```sql
 SELECT DATETIME2FROMPARTS ( 2010, 12, 31, 23, 59, 59, 0, 0 ) AS Result;  
@@ -93,13 +87,13 @@ Result
 ```  
   
 ### B. Example with fractions of a second  
-The following example demonstrates the use of the *fractions* and *precision* parameters:
+This example shows the use of the *fractions* and *precision* parameters:
   
-1.  When *fractions* has a value of 5 and *precision* has a value of 1, then the value of *fractions* represents 5/10 of a second.  
+1.  When *fractions* has a value of 5, and *precision* has a value of 1, the value of *fractions* represents 5/10 of a second.  
   
-2.  When *fractions* has a value of 50 and *precision* has a value of 2, then the value of *fractions* represents 50/100 of a second.  
+2.  When *fractions* has a value of 50, and *precision* has a value of 2, the value of *fractions* represents 50/100 of a second.  
   
-3.  When *fractions* has a value of 500 and *precision* has a value of 3, then the value of *fractions* represents 500/1000 of a second.  
+3.  When *fractions* has a value of 500, and *precision* has a value of 3, then the value of *fractions* represents 500/1000 of a second.  
   
 ```sql
 SELECT DATETIME2FROMPARTS ( 2011, 8, 15, 14, 23, 44, 5, 1 );  

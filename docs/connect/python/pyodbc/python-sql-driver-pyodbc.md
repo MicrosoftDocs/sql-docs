@@ -2,22 +2,15 @@
 title: "Python SQL Driver - pyodbc | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/09/2017"
-ms.prod: "sql-non-specified"
-ms.prod_service: "drivers"
-ms.service: ""
-ms.component: "python"
+ms.prod: sql
+ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "drivers"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: connectivity
+ms.topic: conceptual
 ms.assetid: fdb60557-006c-4eb5-9cef-2eb392e862de
-caps.latest.revision: 3
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
-ms.workload: "Active"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # Python SQL Driver - pyodbc
 
@@ -31,4 +24,4 @@ ms.workload: "Active"
 
 ## Documentation
 
-* [pyodbc documentation](http://mkleehammer.github.io/pyodbc/)  
+* [pyodbc documentation](https://mkleehammer.github.io/pyodbc/)  

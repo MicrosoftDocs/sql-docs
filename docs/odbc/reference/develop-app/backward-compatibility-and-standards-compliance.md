@@ -2,26 +2,19 @@
 title: "Backward Compatibility and Standards Compliance | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
-ms.prod_service: "drivers"
-ms.service: ""
-ms.component: "odbc"
+ms.prod: sql
+ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "drivers"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: connectivity
+ms.topic: conceptual
 helpviewer_keywords: 
   - "backward compatibility [ODBC], standards compliance"
   - "compatibility [ODBC], standards compliance"
   - "standards compliance [ODBC]"
 ms.assetid: b5eee7be-28ed-4467-8cf1-2205e2010a53
-caps.latest.revision: 5
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
-ms.workload: "Inactive"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # Backward Compatibility and Standards Compliance
 Backward compatibility is the ability of newer ODBC components to work with old ODBC components. The following sections discuss how these components are affected by the changes in ODBC 3*.x*. The information contained in them primarily addresses the writing of an ODBC 3*.x* application and how backward compatibility issues are handled by ODBC drivers. For specific guidelines about how backward compatibility issues affect the writing of an ODBC 3*.x* driver, see [Appendix G: Driver Guidelines for Backward Compatibility](../../../odbc/reference/appendixes/appendix-g-driver-guidelines-for-backward-compatibility.md).  

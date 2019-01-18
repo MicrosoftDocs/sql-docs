@@ -1,25 +1,18 @@
 ---
-title: "Appliance Monitoring (Analytics Platform System)"
-author: "barbkess" 
-ms.author: "barbkess"
-manager: "jhubbard"	  
-ms.prod: "analytics-platform-system"
-ms.prod_service: "mpp-data-warehouse"
-ms.service: ""
-ms.component:
-ms.technology: "mpp-data-warehouse"
-ms.custom: ""
-ms.date: 01/05/2017
-ms.reviewer: na
-ms.suite: "sql"
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: 253864fb-9178-41d2-a0ae-5dd9fd0a4fda
-caps.latest.revision: 25
-
+title: Appliance monitoring - Analytics Platform System | Microsoft Docs
+description: This appliance monitoring guide describes the tools and tasks for monitoring the Analytics Platform System appliance. 
+author: mzaman1 
+manager: craigg
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
 ---
-# Appliance Monitoring
-This Appliance Monitoring Guide describes the tools and tasks for monitoring the SQL Server PDW appliance.  
+
+# Appliance monitoring for Analytics Platform System
+This appliance monitoring guide describes the tools and tasks for monitoring the Analytics Platform System appliance.  
   
 ## <a name="Basics"></a>Monitoring Basics and Tools  
 The values and information that can be monitored on the SQL Server PDW appliance are extensive. For example, the following are typical monitoring tasks.  
@@ -61,7 +54,7 @@ For situations when System Center is not available with your data center monitor
   
 If your monitoring solution does not support direct Transact\-SQL queries, or you do not have a monitoring tool, then you can use scripts to perform monitoring tasks, such as sending email when an alert occurs.  The TechNet wiki contains a scripted monitoring solution example.  
   
--   [Power Shell Monitoring Example for SQL Server PDW](http://go.microsoft.com/fwlink/?LinkId=248020)  
+-   [Power Shell Monitoring Example for SQL Server PDW](https://go.microsoft.com/fwlink/?LinkId=248020)  
    
 ## <a name="Tasks"></a>Related Monitoring Tasks  
   

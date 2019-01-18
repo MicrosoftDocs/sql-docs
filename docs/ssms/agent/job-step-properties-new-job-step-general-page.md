@@ -2,30 +2,28 @@
 title: "Job Step Properties - New Job Step (General Page) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "sql-tools"
-ms.service: ""
-ms.component: "ssms-agent"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "tools-ssms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: ssms
+ms.topic: conceptual
 f1_keywords: 
   - "sql13.ag.job.stepgeneral.f1"
 ms.assetid: 8d1885ba-4386-4528-8f2b-68c16852720c
-caps.latest.revision: 5
 author: "stevestein"
 ms.author: "sstein"
-manager: "jhubbard"
-ms.workload: "Inactive"
+manager: craigg
+monikerRange: "= azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Job Step Properties - New Job Step (General Page)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-Use this page to view and change the properties of a [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent job step, or to define a new job step.  
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+
+> [!IMPORTANT]  
+> On [Azure SQL Database Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance), most, but not all SQL Server Agent features are currently supported. See [Azure SQL Database Managed Instance T-SQL differences from SQL Server](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent) for details.
+
+Use this page to view and change the properties of a [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent job step, or to define a new job step.  
   
-To navigate to this page, in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] Object Explorer, expand [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent, right-click **Jobs**, click **New Jobs**, select the **Steps** page, and click **New**. You can also navigate to this page by right-clicking a job in Object Explorer, clicking **Properties**, selecting the **Steps** page, and clicking **New**, **Insert**, or **Edit**.  
+To navigate to this page, in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] Object Explorer, expand [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent, right-click **Jobs**, click **New Jobs**, select the **Steps** page, and click **New**. You can also navigate to this page by right-clicking a job in Object Explorer, clicking **Properties**, selecting the **Steps** page, and clicking **New**, **Insert**, or **Edit**.  
   
 ## Options  
 **Step name**  
@@ -61,8 +59,8 @@ Check the syntax of the command.
   
 ## Options for ActiveX Script Job Steps  
   
-> [!IMPORTANT]  
-> The ActiveX Scripting subsystem will be removed from [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent in a future version of [!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]. Avoid using this feature in new development work, and plan to modify applications that currently use this feature.  
+> [!IMPORTANT]
+> The ActiveX Scripting subsystem will be removed from [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent in a future version of [!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Avoid using this feature in new development work, and plan to modify applications that currently use this feature.  
   
 **VBScript**  
 Specify [!INCLUDE[msCoName](../../includes/msconame_md.md)] Visual Basic Scripting Edition as the language for the job steps.  
@@ -205,7 +203,7 @@ Paste the contents of the Clipboard.
 ## Options for Integration Services Package Execution Job Steps  
   
 ### General Tab  
-Specify where the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion_md.md)] ([!INCLUDE[ssIS](../../includes/ssis_md.md)]) package is located and what authentication method to use. The following options are available when you select this tab.  
+Specify where the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] ([!INCLUDE[ssIS](../../includes/ssis_md.md)]) package is located and what authentication method to use. The following options are available when you select this tab.  
   
 **Package source**  
 Specify where the [!INCLUDE[ssIS](../../includes/ssis_md.md)] package is stored. Choose one of the following:  
@@ -220,19 +218,19 @@ Specify where the [!INCLUDE[ssIS](../../includes/ssis_md.md)] package is stored.
 Type the server name where the [!INCLUDE[ssIS](../../includes/ssis_md.md)] package is stored. This option is only available when **SQL Server** or **SSIS Package Store** is specified for **Package Source**.  
   
 **Use Windows Authentication**  
-Logins to [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] use [!INCLUDE[msCoName](../../includes/msconame_md.md)] Windows Authentication.  
+Logins to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] use [!INCLUDE[msCoName](../../includes/msconame_md.md)] Windows Authentication.  
   
 **Use SQL Server Authentication**  
-Logins to [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] use [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Authentication. If this method of authentication is selected, enter the appropriate **User name** and **Password**.  
+Logins to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] use [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentication. If this method of authentication is selected, enter the appropriate **User name** and **Password**.  
   
 > [!IMPORTANT]  
-> [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Authentication is provided for backward compatibility. For improved security, use Windows Authentication if possible.  
+> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentication is provided for backward compatibility. For improved security, use Windows Authentication if possible.  
   
 **Package**  
 Type the location of the package.  
   
 > [!IMPORTANT]  
-> For password-protected [!INCLUDE[ssIS](../../includes/ssis_md.md)] packages, click the **Configurations** tab to enter the password in the **Package Password** dialog box. Otherwise, the [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent job that executes the password-protected package will fail.  
+> For password-protected [!INCLUDE[ssIS](../../includes/ssis_md.md)] packages, click the **Configurations** tab to enter the password in the **Package Password** dialog box. Otherwise, the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent job that executes the password-protected package will fail.  
   
 ### Configurations Tab  
 Specify configuration options for the [!INCLUDE[ssIS](../../includes/ssis_md.md)] package. The following options are available when this tab is selected.  
@@ -371,6 +369,6 @@ Type the command line options to use for this package.
   
 ## See Also  
 [Manage Job Steps](../../ssms/agent/manage-job-steps.md)  
-[SQL Server Agent Jobs for Packages](http://msdn.microsoft.com/en-us/ecf7a5f9-b8a7-47f1-9ac0-bac07cb89e31)  
-[Administering Replication Agents](http://msdn.microsoft.com/en-us/f27186b8-b1b2-4da0-8b2b-91f632c2ab7e)  
+[SQL Server Agent Jobs for Packages](../../integration-services/packages/sql-server-agent-jobs-for-packages.md)  
+[Administering Replication Agents](../../relational-databases/replication/agents/replication-agent-administration.md)  
   

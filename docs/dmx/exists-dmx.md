@@ -1,30 +1,14 @@
 ---
 title: "Exists (DMX) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/02/2016"
-ms.prod: analysis-services
-ms.prod_service: "analysis-services"
-ms.service: ""
-ms.component: ""
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
-  
-ms.component: data-mining
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "Exists"
-dev_langs: 
-  - "DMX"
-helpviewer_keywords: 
-  - "Exists function"
-ms.assetid: 3b54dd93-f0a8-4f9a-96ae-a38bf977dda1
-caps.latest.revision: 14
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-ms.workload: "Inactive"
+ms.date: 06/07/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: dmx
+ms.topic: conceptual
+ms.author: owend
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
 ---
 # Exists (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -53,7 +37,7 @@ EXISTS(<subquery>)
 ## Examples  
  You can use EXISTS and NOT EXISTS to check for conditions in a nested table. This is useful when creating a filter that controls the data used to train or test a data mining model. For more information, see [Filters for Mining Models &#40;Analysis Services - Data Mining&#41;](../analysis-services/data-mining/filters-for-mining-models-analysis-services-data-mining.md).  
   
- The following example is based on the `[Association]` mining structure and mining model that you created in the [Basic Data Mining Tutorial](http://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c). The query returns only those cases where the customer purchased at least one patch kit.  
+ The following example is based on the `[Association]` mining structure and mining model that you created in the [Basic Data Mining Tutorial](https://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c). The query returns only those cases where the customer purchased at least one patch kit.  
   
 ```  
 SELECT * FROM [Association].CASES  

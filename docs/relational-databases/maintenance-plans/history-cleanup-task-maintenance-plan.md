@@ -2,26 +2,19 @@
 title: "History Cleanup Task (Maintenance Plan) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "database-engine"
-ms.service: ""
-ms.component: "maintenance-plans"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: supportability"
+ms.topic: conceptual
 f1_keywords: 
   - "sql13.swb.maint.historycleanup.f1"
 helpviewer_keywords: 
   - "History Cleanup Task dialog box"
 ms.assetid: 66bb6c39-958c-4053-a27f-b1118d2567f5
-caps.latest.revision: 21
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-ms.workload: "Inactive"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ---
 # History Cleanup Task (Maintenance Plan)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

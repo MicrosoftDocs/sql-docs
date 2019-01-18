@@ -1,23 +1,17 @@
 ---
-title: "Restore a Database Protected by TDE in Parallel Data Warehouse"
-author: "barbkess" 
-ms.author: "barbkess"
-manager: "jhubbard"	  
-ms.prod: "analytics-platform-system"
-ms.prod_service: "mpp-data-warehouse"
-ms.service: ""
-ms.component:
-ms.suite: "sql"
-ms.custom: ""
-ms.technology: "mpp-data-warehouse"
-description: "Use the following steps to restore a database that is encrypted by using transparent data encryption."
-ms.date: "10/20/2016"
-ms.topic: "article"
-ms.assetid: ffb681ca-8598-4614-b06c-660376333fc3
-caps.latest.revision: 4
-
+title: Restore a database protected by TDE - Parallel Data Warehouse | Microsoft Docs
+description: Use the following steps to restore a database that is encrypted by using transparent data encryption in Analytics Platform System Parallel Data Warehouse.
+author: mzaman1 
+manager: craigg
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
 ---
-# Restore a database protected by TDE
+
+# Restore a database protected by TDE in Parallel Data Warehouse
 Use the following steps to restore a database that is encrypted by using transparent data encryption.  
   
 The [Using Transparent Data Encryption](transparent-data-encryption.md#using-tde) example has code to enable TDE on the `AdventureWorksPDW2012` database. The following code continues that example, by creating a backup of the database on the original Analytics Platform System (APS) appliance, and then restoring the certificate and the database on a different appliance.  

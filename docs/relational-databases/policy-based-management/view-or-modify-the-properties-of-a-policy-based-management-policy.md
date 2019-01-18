@@ -2,25 +2,18 @@
 title: "View or Modify the Properties of a Policy-Based Management Policy | Microsoft Docs"
 ms.custom: ""
 ms.date: "10/06/2016"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "database-engine"
-ms.service: ""
-ms.component: "performance-monitor"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: security
+ms.topic: conceptual
 helpviewer_keywords: 
   - "Policy-Based Management, modify policies"
   - "Policy-Based Management, view policies"
 ms.assetid: ba805504-5db5-4731-a8da-a0e89cb20c37
-caps.latest.revision: 9
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-ms.workload: "Inactive"
+author: VanMSFT
+ms.author: vanto
+manager: craigg
 ---
 # View or Modify the Properties of a Policy-Based Management Policy
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -37,7 +30,7 @@ ms.workload: "Inactive"
   
 #### To view the properties of all policies on an object  
   
-1.  In Object Explorer, right-click a server, server object, database, or database object, point to **Policies** and select **View**. For more information on the available options in the **View Policies –***object_name* dialog box, see [View Policies Dialog Box](../../relational-databases/policy-based-management/view-policies-dialog-box.md).  
+1.  In Object Explorer, right-click a server, server object, database, or database object, point to **Policies** and select **View**. For more information on the available options in the **View Policies -**_object_name_ dialog box, see [View Policies Dialog Box](../../relational-databases/policy-based-management/view-policies-dialog-box.md).  
   
 2.  When finished, click **Close**.  
   
@@ -51,7 +44,7 @@ ms.workload: "Inactive"
   
 4.  Click the plus sign to expand the **Policies** folder.  
   
-5.  Right-click the policy that you want to view or modify and select **Properties**. For more information on the available options in the **Open Policy –***policy_name* dialog box, see [Create New Policy or Open Policy Dialog Box, General Page](../../relational-databases/policy-based-management/create-new-policy-or-open-policy-dialog-box-general-page.md) and [Create New Policy or Open Policy Dialog Box, Description Page](../../relational-databases/policy-based-management/create-new-policy-or-open-policy-dialog-box-description-page.md).  
+5.  Right-click the policy that you want to view or modify and select **Properties**. For more information on the available options in the **Open Policy -**_policy_name_ dialog box, see [Create New Policy or Open Policy Dialog Box, General Page](../../relational-databases/policy-based-management/create-new-policy-or-open-policy-dialog-box-general-page.md) and [Create New Policy or Open Policy Dialog Box, Description Page](../../relational-databases/policy-based-management/create-new-policy-or-open-policy-dialog-box-description-page.md).  
   
 6.  When finished, click **OK**.  
   

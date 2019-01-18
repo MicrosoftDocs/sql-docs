@@ -2,16 +2,11 @@
 title: "Modify Trace Templates | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/12/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "sql-tools"
-ms.service: ""
-ms.component: "sql-server-profiler"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: profiler
+ms.topic: conceptual
 helpviewer_keywords: 
   - "templates [SQL Server], SQL Server Profiler"
   - "Profiler [SQL Server Profiler], templates"
@@ -19,11 +14,9 @@ helpviewer_keywords:
   - "modifying trace templates"
   - "SQL Server Profiler, templates"
 ms.assetid: 75b62a54-8d16-4599-bd2d-c42cfcc209f4
-caps.latest.revision: 24
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-ms.workload: "Inactive"
+author: "stevestein"
+ms.author: "sstein"
+manager: craigg
 ---
 # Modify trace templates
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

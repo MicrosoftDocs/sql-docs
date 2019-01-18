@@ -2,18 +2,11 @@
 title: "sysmergearticles (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "database-engine"
-ms.service: ""
-ms.component: "system-tables"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
+ms.technology: replication
 ms.topic: "language-reference"
-applies_to: 
-  - "SQL Server"
 f1_keywords: 
   - "sysmergearticles"
   - "sysmergearticles_TSQL"
@@ -22,11 +15,9 @@ dev_langs:
 helpviewer_keywords: 
   - "sysmergearticles system table"
 ms.assetid: e9b1648e-4660-4688-9f56-18b2baf7228c
-caps.latest.revision: 37
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "craigg"
-ms.workload: "Inactive"
+author: stevestein
+ms.author: sstein
+manager: craigg
 ---
 # sysmergearticles (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -80,7 +71,7 @@ ms.workload: "Inactive"
 |**fast_multicol_updateproc**|**bit**|Specifies whether the Merge Agent has been enabled to apply changes to multiple columns in the same row in one UPDATE statement.<br /><br /> **0** = Issues a separate UPDATE for each column changed.<br /><br /> **1** = Issues an UPDATE statement which causes updates to occur to multiple columns in one statement.|  
 |**check_permissions**|**int**|The bitmap of the table-level permissions that is verified when the Merge Agent applies changes to the Publisher. *check_permissions* can have one of these values:<br /><br /> **0x00 =** Permissions are not checked.<br /><br /> **0x10 =** Checks permissions at the Publisher before INSERTs made at a Subscriber can be uploaded.<br /><br /> **0x20 =** Checks permissions at the Publisher before UPDATEs made at a Subscriber can be uploaded.<br /><br /> **0x40 =** Checks permissions at the Publisher before DELETEs made at a Subscriber can be uploaded.|  
 |**maxversion_at_cleanup**|**int**|The highest generation for which the metadata is cleaned up.|  
-|**processing_order**|**int**|Indicates the processing order of articles in a merge publication; where a value of **0** indicated that the article is unordered, and articles are processed in order from lowest to highest value. If two articles have the same value, they are processed concurrently. For more information, see [Specify the Processing Order of Merge Articles](../../relational-databases/replication/merge/specify-the-processing-order-of-merge-articles.md).|  
+|**processing_order**|**int**|Indicates the processing order of articles in a merge publication; where a value of **0** indicated that the article is unordered, and articles are processed in order from lowest to highest value. If two articles have the same value, they are processed concurrently. For more information, see [Specify Merge Replication properties](../../relational-databases/replication/merge/specify-merge-replication-properties.md).|  
 |**upload_options**|**tinyint**|Defines restrictions on updates made at a Subscriber with a client subscription, which can be one of the following values.<br /><br /> **0** = There are no restrictions on updates made at a Subscriber with a client subscription; all changes are uploaded to the Publisher.<br /><br /> **1** = Changes are allowed at a Subscriber with a client subscription, but they are not uploaded to the Publisher.<br /><br /> **2** = Changes are not allowed at a Subscriber with a client subscription.<br /><br /> For more information, see [Optimize Merge Replication Performance with Download-Only Articles](../../relational-databases/replication/merge/optimize-merge-replication-performance-with-download-only-articles.md).|  
 |**published_in_tran_pub**|**bit**|Indicates that an article in a merge publication is also published in a transactional publication.<br /><br /> **0** = The article is not published in a transactional article.<br /><br /> **1** = The article is also published in a transactional article.|  
 |**lightweight**|**bit**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  

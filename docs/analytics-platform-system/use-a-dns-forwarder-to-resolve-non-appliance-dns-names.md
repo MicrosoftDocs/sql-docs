@@ -1,32 +1,25 @@
 ---
-title: "Use a DNS Forwarder to Resolve Non-Appliance DNS Names (APS)"
-author: "barbkess" 
-ms.author: "barbkess"
-manager: "jhubbard"	  
-ms.prod: "analytics-platform-system"
-ms.prod_service: "mpp-data-warehouse"
-ms.service: ""
-ms.component:
-ms.technology: "mpp-data-warehouse"
-ms.custom: ""
-ms.date: 01/05/2017
-ms.reviewer: na
-ms.suite: "sql"
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: 123d8a83-b7fd-4dc9-90d4-fa01af2d629d
-caps.latest.revision: 21
-
+title: Use a DNS forwarder in Analytics Platform System | Microsoft Docs"
+description: Use a DNS forwarder to resolve non-appliance DNS names in Analytics Platform System.
+author: mzaman1 
+manager: craigg
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
 ---
-# Use a DNS Forwarder to Resolve Non-Appliance DNS Names
-A DNS forwarder can be configured on the Active Directory Domain Services nodes (***appliance_domain*-AD01** and ***appliance_domain*-AD02**) of your Analytics Platform System appliance to allow scripts and software applications to access external servers.  
+
+# Use a DNS Forwarder to Resolve Non-Appliance DNS Names in Analytics Platform System
+A DNS forwarder can be configured on the Active Directory Domain Services nodes (**_appliance\_domain_-AD01** and **_appliance\_domain_-AD02**) of your Analytics Platform System appliance to allow scripts and software applications to access external servers.  
   
 ## <a name="ResolveDNS"></a>Using a DNS Forwarder  
 The Analytics Platform System appliance is configured to prevent resolving DNS names of servers that are not in the appliance. Some processes, such as Windows Software Update Services (WSUS), will need to access servers outside of the appliance. To support this usage scenario the Analytics Platform System DNS can be configured to support an external name forwarder that will allow Analytics Platform System hosts and Virtual Machines (VMs) to use external DNS servers to resolve names outside of the appliance. Custom configuration of DNS suffixes is not supported, which means you must use fully qualified domain names to resolve a non-appliance server name.  
   
 **To create a DNS forwarder with the DNS GUI**  
   
-1.  Log on to the ***appliance_domain*-AD01** node.  
+1.  Log on to the **_appliance\_domain_-AD01** node.  
   
 2.  Open the DNS Manager (**dnsmgmt.msc**).  
   
@@ -38,13 +31,13 @@ The Analytics Platform System appliance is configured to prevent resolving DNS n
   
 6.  Enter the IP address for the external DNS server that will provide the name resolution. The VMs and servers (hosts) in the appliance will connect to external servers by using fully qualified domain names.  
   
-7.  Repeat steps 1 – 6 on the ***appliance_domain*-AD02** node  
+7.  Repeat steps 1 - 6 on the **_appliance\_domain_-AD02** node  
   
 **To create a DNS forwarder by using Windows PowerShell**  
   
-1.  Log on to the ***appliance_domain*-AD01**node.  
+1.  Log on to the **_appliance\_domain_-AD01**node.  
   
-2.  Run the following Windows PowerShell script from the ***appliance_domain*-AD01** node. Before running the Windows PowerShell script, replace IP addresses with the IP addresses of your non-appliance DNS servers.  
+2.  Run the following Windows PowerShell script from the **_appliance\_domain_-AD01** node. Before running the Windows PowerShell script, replace IP addresses with the IP addresses of your non-appliance DNS servers.  
   
     ```  
     $DNS=Get-WmiObject -class "MicrosoftDNS_Server"  -Namespace "root\microsoftdns"  
@@ -52,7 +45,7 @@ The Analytics Platform System appliance is configured to prevent resolving DNS n
     $DNS.put()  
     ```  
   
-3.  Execute the same command on the ***appliance_domain*-AD02** node.  
+3.  Execute the same command on the **_appliance\_domain_-AD02** node.  
   
 ## Configuring DNS resolution for WSUS  
 SQL Server PDW 2012 provides integrated servicing and patching functionality. SQL Server PDW uses Microsoft Update and other Microsoft servicing technologies. To enable updates the appliance must be able to either connect to a corporate WSUS repository or to the Microsoft public WSUS repository.  

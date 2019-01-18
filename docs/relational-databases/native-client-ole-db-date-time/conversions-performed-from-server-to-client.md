@@ -2,24 +2,19 @@
 title: "Conversions Performed from Server to Client | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
-ms.service: ""
-ms.component: "native-client-ole-db-date-time"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: 
 
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 
   - "conversions [OLE DB], server to client"
 ms.assetid: 676fdf24-fb72-4ea0-a8d2-2b197da3c83f
-caps.latest.revision: 26
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-ms.workload: "Inactive"
+author: MightyPen
+ms.author: genemi
+manager: craigg
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Conversions Performed from Server to Client
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -28,7 +23,7 @@ ms.workload: "Inactive"
   This topic describes date/time conversions performed between [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] (or later) and a client application written with [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB.  
   
 ## Conversions  
- The following table describes conversions between the type returned to the client and the type in the binding. For output parameters, if ICommandWithParameters::SetParameterInfo has been called and the type specified in *pwszDataSourceType* does not match the actual type on the server, an implicit conversion will be performed by the server, and the type returned to the client will match the type specified through ICommandWithParameters::SetParameterInfo. This can lead to unexpected conversion results when the server’s conversion rules are different from those described in this topic. For example, when a default date must be provided, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] uses 1900-1-1 rather than 1899-12-30.  
+ The following table describes conversions between the type returned to the client and the type in the binding. For output parameters, if ICommandWithParameters::SetParameterInfo has been called and the type specified in *pwszDataSourceType* does not match the actual type on the server, an implicit conversion will be performed by the server, and the type returned to the client will match the type specified through ICommandWithParameters::SetParameterInfo. This can lead to unexpected conversion results when the server's conversion rules are different from those described in this topic. For example, when a default date must be provided, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] uses 1900-1-1 rather than 1899-12-30.  
   
 |To -><br /><br /> From|DATE|DBDATE|DBTIME|DBTIME2|DBTIMESTAMP|DBTIMESTAMPOFFSET|FILETIME|BYTES|VARIANT|SSVARIANT|BSTR|STR|WSTR|  
 |----------------------|----------|------------|------------|-------------|-----------------|-----------------------|--------------|-----------|-------------|---------------|----------|---------|----------|  

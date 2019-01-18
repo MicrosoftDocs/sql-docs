@@ -1,17 +1,12 @@
 ---
 title: "Procedures Collection (ADOX) | Microsoft Docs"
-ms.prod: "sql-non-specified"
-ms.prod_service: "drivers"
-ms.service: ""
-ms.component: "ado"
-ms.technology:
-  - "drivers"
+ms.prod: sql
+ms.prod_service: connectivity
+ms.technology: connectivity
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 apitype: "COM"
 f1_keywords: 
   - "Procedures"
@@ -19,11 +14,9 @@ f1_keywords:
 helpviewer_keywords: 
   - "Procedures collection [ADOX]"
 ms.assetid: dc7a38e1-93b9-4034-9af2-ff419e8fb2a3
-caps.latest.revision: 10
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
-ms.workload: "Inactive"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # Procedures Collection (ADOX)
 Contains all [Procedure](../../../ado/reference/adox-api/procedure-object-adox.md) objects of a catalog.  

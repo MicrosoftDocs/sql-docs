@@ -2,25 +2,18 @@
 title: "Maintenance Plan (Servers) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "database-engine"
-ms.service: ""
-ms.component: "maintenance-plans"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: supportability
+ms.topic: conceptual
 f1_keywords: 
   - "sql13.swb.maint.servers.f1"
   - "sql13.swb.maint.maintplanproperties.server.f1"
 ms.assetid: ac24d1a8-dd2f-4162-b804-c0df1fc1e61d
-caps.latest.revision: 7
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-ms.workload: "Inactive"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ---
 # Maintenance Plan (Servers)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -30,8 +23,8 @@ ms.workload: "Inactive"
   
 ## See Also  
  [Maintenance Plans](../../relational-databases/maintenance-plans/maintenance-plans.md)   
- [Create a Multiserver Environment](http://msdn.microsoft.com/library/edc2b60d-15da-40a1-8ba3-f1d473366ee6)   
- [Make a Master Server](http://msdn.microsoft.com/library/05739a73-1fdf-4d9d-92a6-70f328380322)   
- [Make a Target Server](http://msdn.microsoft.com/library/13aabe2d-67fe-4c67-8d49-2928dd705b7a)  
+ [Create a Multiserver Environment](../../ssms/agent/create-a-multiserver-environment.md)   
+ [Make a Master Server](../../ssms/agent/make-a-master-server.md)   
+ [Make a Target Server](../../ssms/agent/make-a-target-server.md)  
   
   

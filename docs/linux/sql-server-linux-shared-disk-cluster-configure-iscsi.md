@@ -3,21 +3,16 @@ title: Configure failover cluster instance storage iSCSI - SQL Server on Linux |
 description: 
 author: MikeRayMSFT 
 ms.author: mikeray 
-manager: jhubbard
+manager: craigg
 ms.date: 08/28/2017
-ms.topic: article
-ms.prod: "sql-non-specified"
-ms.prod_service: "database-engine"
-ms.service: ""
-ms.component: sql-linux
-ms.suite: "sql"
-ms.custom: ""
-ms.technology: database-engine
-ms.workload: "Inactive"
+ms.topic: conceptual
+ms.prod: sql
+ms.custom: "sql-linux"
+ms.technology: linux
 ---
 # Configure failover cluster instance - iSCSI - SQL Server on Linux
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 This article explains how to configure iSCSI storage for a failover cluster instance (FCI) on Linux. 
 
@@ -36,9 +31,9 @@ The most important thing to ensure is completed on the target is that the disks 
 
 This section will cover how to configure an iSCSI initiator on the servers that will serve as nodes for the FCI. The instructions should work as is on RHEL and Ubuntu.
 
-For additional information on iSCSI initiator for the supported distributions, consult the following links:
-- [Red Hat](http://access.redhat.com/documentation/Red_Hat_Enterprise_Linux/6/html/Storage_Administration_Guide/iscsi-api.html)
-- [SUSE](http://www.suse.com/documentation/sles11/stor_admin/data/sec_inst_system_iscsi_initiator.html) 
+For more information on iSCSI initiator for the supported distributions, consult the following links:
+- [Red Hat](https://access.redhat.com/documentation/Red_Hat_Enterprise_Linux/6/html/Storage_Administration_Guide/iscsi-api.html)
+- [SUSE](https://www.suse.com/documentation/sles11/stor_admin/data/sec_inst_system_iscsi_initiator.html) 
 - [Ubuntu](https://help.ubuntu.com/lts/serverguide/iscsi-initiator.html)
 
 1.	Choose one of the servers that will participate in the FCI configuration. It does not matter which one. iSCSI should be on a dedicated network, so configure iSCSI to recognize and use that network. Run `sudo iscsiadm -m iface -I <iSCSIIfaceName> -o new` where `<iSCSIIfaceName>` is the unique or friendly name for the network. The following example uses `iSCSINIC`:
@@ -92,7 +87,7 @@ For additional information on iSCSI initiator for the supported distributions, c
 6.	Check iSCSI attached disks
 
     ```bash
-    sudo grep “Attached SCSI” /var/log/messages
+    sudo grep "Attached SCSI" /var/log/messages
     ```
     ![30-iSCSIattachedDisks][7]
 
@@ -186,7 +181,7 @@ For additional information on iSCSI initiator for the supported distributions, c
    *	Delete the files from the existing SQL Server data directory. You will not receive any acknowledgement if successful.
 
     ```bash
-    rm – f /var/opt/mssql/data/*
+    rm - f /var/opt/mssql/data/*
     ```
 
    *	Verify that the files have been deleted. The picture below shows an example of the entire sequence from c through h.
@@ -205,7 +200,7 @@ For additional information on iSCSI initiator for the supported distributions, c
     mount /dev/<VolumeGroupName>/<LogicalVolumeName> /var/opt/mssql/data
     ``` 
 
-    \<VolumeGroupName> is the name of the volume group and \<LogicalVolumeName> is the name of the logical volume that was created. The example syntax below matches the volume group and logical volume crated above.
+    \<VolumeGroupName> is the name of the volume group and \<LogicalVolumeName> is the name of the logical volume that was created. The following example syntax matches the volume group and logical volume from the previous command.
 
     ```bash
     mount /dev/FCIDataVG1/FCIDataLV1 /var/opt/mssql/data
@@ -273,7 +268,7 @@ For additional information on iSCSI initiator for the supported distributions, c
     mkdir <FolderName>
     ```
 
-    \<FolderName> is the name of the folder. The folder’s full path will need to be specified if not in the right location. The example below creates a folder named /var/opt/mssql/userdata.
+    \<FolderName> is the name of the folder. The folder's full path needs to be specified if not in the right location. The example below creates a folder named /var/opt/mssql/userdata.
 
     ```bash
     mkdir /var/opt/mssql/userdata
@@ -336,7 +331,7 @@ For additional information on iSCSI initiator for the supported distributions, c
 14.	Configure the server so that only Pacemaker can activate the volume group.
 
     ```bash
-    sudo lvmconf --enable-halvm --services –startstopservices
+    sudo lvmconf --enable-halvm --services -startstopservices
     ```
  
 15.	Generate a list of the volume groups on the server. Anything listed that is not the iSCSI disk is used by the system, such as for the OS disk.
@@ -366,7 +361,7 @@ For additional information on iSCSI initiator for the supported distributions, c
 
 18.	Reboot the server.
 
-19.	On another server that will participate in the FCI, perform Steps 1 – 6. This will present the iSCSI target to the SQL Server. 
+19.	On another server that will participate in the FCI, perform Steps 1 - 6. This will present the iSCSI target to the SQL Server. 
  
 20.	Generate a list of the volume groups on the server. It should show the volume group created earlier. 
 
@@ -386,7 +381,7 @@ For additional information on iSCSI initiator for the supported distributions, c
     sudo systemctl stop mssql-server
     sudo systemctl status mssql-server
     ```
-25.	Repeat Steps 1 – 6 on any other servers that will participate in the FCI.
+25.	Repeat Steps 1 - 6 on any other servers that will participate in the FCI.
 
 You are now ready to configure the FCI.
 

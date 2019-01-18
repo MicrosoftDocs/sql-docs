@@ -2,16 +2,11 @@
 title: "Lookup Transformation | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "integration-services"
-ms.service: ""
-ms.component: "data-flow"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: integration-services
+ms.topic: conceptual
 f1_keywords: 
   - "sql13.dts.designer.lookuptrans.f1"
   - "sql13.dts.designer.lookuptransformation.general.f1"
@@ -26,11 +21,9 @@ helpviewer_keywords:
   - "lookups [Integration Services]"
   - "exact matches [Integration Services]"
 ms.assetid: de1cc8de-e7af-4727-b5a5-a1f0a739aa09
-caps.latest.revision: 106
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
-ms.workload: "On Demand"
+manager: craigg
 ---
 # Lookup Transformation
   The Lookup transformation performs lookups by joining data in input columns with columns in a reference dataset. You use the lookup to access additional information in a related table that is based on values in common columns.  
@@ -132,15 +125,15 @@ ms.workload: "On Demand"
   
 ## Related Content  
   
--   Video, [How to: Implement a Lookup Transformation in Full Cache Mode](http://go.microsoft.com/fwlink/?LinkId=131031), on msdn.microsoft.com  
+-   Video, [How to: Implement a Lookup Transformation in Full Cache Mode](https://go.microsoft.com/fwlink/?LinkId=131031), on msdn.microsoft.com  
   
--   Blog entry, [Best Practices for Using the Lookup Transformation Cache Modes](http://go.microsoft.com/fwlink/?LinkId=146623), on blogs.msdn.com  
+-   Blog entry, [Best Practices for Using the Lookup Transformation Cache Modes](https://go.microsoft.com/fwlink/?LinkId=146623), on blogs.msdn.com  
   
--   Blog entry, [Lookup Pattern: Case Insensitive](http://go.microsoft.com/fwlink/?LinkId=157782), on blogs.msdn.com  
+-   Blog entry, [Lookup Pattern: Case Insensitive](https://go.microsoft.com/fwlink/?LinkId=157782), on blogs.msdn.com  
   
--   Sample, [Lookup Transformation](http://go.microsoft.com/fwlink/?LinkId=267528), on msftisprodsamples.codeplex.com.  
+-   Sample, [Lookup Transformation](https://go.microsoft.com/fwlink/?LinkId=267528), on msftisprodsamples.codeplex.com.  
   
-     For information on installing [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] product samples and sample databases, see [SQL Server Integration Services Product Samples](http://go.microsoft.com/fwlink/?LinkId=267527).  
+     For information on installing [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] product samples and sample databases, see [SQL Server Integration Services Product Samples](https://go.microsoft.com/fwlink/?LinkId=267527).  
   
 ## Lookup Transformation Editor (General Page)
   Use the **General** page of the Lookup Transformation Editor dialog box to select the cache mode, select the connection type, and specify how to handle rows with no matching entries.  
@@ -169,7 +162,7 @@ ms.workload: "On Demand"
  When you select any other option in the **Specify how to handle rows with no matching entries** list box, the rows are handled as errors. The **Error** option on the **Error Output** page is available.  
   
 ### External Resources  
- Blog entry, [Lookup cache modes](http://go.microsoft.com/fwlink/?LinkId=219518) on blogs.msdn.com  
+ Blog entry, [Lookup cache modes](https://go.microsoft.com/fwlink/?LinkId=219518) on blogs.msdn.com  
   
 ## Lookup Transformation Editor (Connection Page)
   Use the **Connection** page of the **Lookup Transformation Editor** dialog box to select a connection manager. If you select an OLE DB connection manager, you also select a query, table, or view to generate the reference dataset.  
@@ -216,7 +209,7 @@ ms.workload: "On Demand"
  Preview results by using the **Preview Query Results** dialog box. This option displays up to 200 rows.  
   
 ### External Resources  
- Blog entry, [Lookup cache modes](http://go.microsoft.com/fwlink/?LinkId=219518) on blogs.msdn.com  
+ Blog entry, [Lookup cache modes](https://go.microsoft.com/fwlink/?LinkId=219518) on blogs.msdn.com  
   
 ## Lookup Transformation Editor (Columns Page)
   Use the **Columns** page of the **Lookup Transformation Editor** dialog box to specify the join between the source table and the reference table, and to select lookup columns from the reference table.  
@@ -273,7 +266,7 @@ ms.workload: "On Demand"
  Map input columns to parameters by using the **Set Query Parameters** dialog box.  
   
 ### External Resources  
- Blog entry, [Lookup cache modes](http://go.microsoft.com/fwlink/?LinkId=219518) on blogs.msdn.com  
+ Blog entry, [Lookup cache modes](https://go.microsoft.com/fwlink/?LinkId=219518) on blogs.msdn.com  
   
 ## See Also  
  [Fuzzy Lookup Transformation](../../../integration-services/data-flow/transformations/fuzzy-lookup-transformation.md)   

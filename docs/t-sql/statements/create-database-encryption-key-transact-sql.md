@@ -2,15 +2,10 @@
 title: "CREATE DATABASE ENCRYPTION KEY (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/24/2016"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "pdw, sql-database"
-ms.service: ""
-ms.component: "t-sql|statements"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: t-sql
 ms.topic: "language-reference"
 f1_keywords: 
   - "DATABASE_ENCRYPTION_KEY_TSQL"
@@ -30,11 +25,10 @@ helpviewer_keywords:
   - "CREATE DATABASE ENCRYPTION KEY statement"
   - "database encryption key, create"
 ms.assetid: 2ee95a32-5140-41bd-9ab3-a947b9990688
-caps.latest.revision: 30
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "craigg"
-ms.workload: "On Demand"
+author: VanMSFT
+ms.author: vanto
+manager: craigg
+monikerRange: ">=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # CREATE DATABASE ENCRYPTION KEY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-pdw-md.md)]
@@ -70,9 +64,9 @@ CREATE DATABASE ENCRYPTION KEY
 ## Arguments  
 WITH ALGORITHM = { AES_128 | AES_192 | AES_256 | TRIPLE_DES_3KEY  }  
 Specifies the encryption algorithm that is used for the encryption key.   
->  [!NOTE]
+> [!NOTE]
 >    Beginning with SQL Server 2016, all algorithms other than AES_128, AES_192, and AES_256 are deprecated. 
-  To use older algorithms (not recommended) you must set the database to database compatibility level 120 or lower.  
+>   To use older algorithms (not recommended) you must set the database to database compatibility level 120 or lower.  
   
 ENCRYPTION BY SERVER CERTIFICATE Encryptor_Name  
 Specifies the name of the encryptor used to encrypt the database encryption key.  

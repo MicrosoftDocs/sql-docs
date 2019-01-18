@@ -2,16 +2,11 @@
 title: "SQLProcedureColumns Function | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
-ms.prod_service: "drivers"
-ms.service: ""
-ms.component: "odbc"
+ms.prod: sql
+ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "drivers"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: connectivity
+ms.topic: conceptual
 apiname: 
   - "SQLProcedureColumns"
 apilocation: 
@@ -22,11 +17,9 @@ f1_keywords:
 helpviewer_keywords: 
   - "SQLProcedureColumns function [ODBC]"
 ms.assetid: 4ca37b28-a6df-465b-8988-d422d37fc025
-caps.latest.revision: 22
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
-ms.workload: "Inactive"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # SQLProcedureColumns Function
 **Conformance**  
@@ -40,15 +33,15 @@ ms.workload: "Inactive"
 ```  
   
 SQLRETURN SQLProcedureColumns(  
-     SQLHSTMT      StatementHandle,  
-     SQLCHAR *     CatalogName,  
-     SQLSMALLINT   NameLength1,  
-     SQLCHAR *     SchemaName,  
-     SQLSMALLINT   NameLength2,  
-     SQLCHAR *     ProcName,  
-     SQLSMALLINT   NameLength3,  
-     SQLCHAR *     ColumnName,  
-     SQLSMALLINT   NameLength4);  
+     SQLHSTMT      StatementHandle,  
+     SQLCHAR *     CatalogName,  
+     SQLSMALLINT   NameLength1,  
+     SQLCHAR *     SchemaName,  
+     SQLSMALLINT   NameLength2,  
+     SQLCHAR *     ProcName,  
+     SQLSMALLINT   NameLength3,  
+     SQLCHAR *     ColumnName,  
+     SQLSMALLINT   NameLength4);  
 ```  
   
 ## Arguments  
@@ -164,7 +157,7 @@ SQLRETURN SQLProcedureColumns(
 |COLUMN_NAME (ODBC 2.0)|4|Varchar not NULL|Procedure column name. The driver returns an empty string for a procedure column that does not have a name.|  
 |COLUMN_TYPE (ODBC 2.0)|5|Smallint not NULL|Defines the procedure column as a parameter or a result set column:<br /><br /> SQL_PARAM_TYPE_UNKNOWN: The procedure column is a parameter whose type is unknown. (ODBC 1.0)<br /><br /> SQL_PARAM_INPUT: The procedure column is an input parameter. (ODBC 1.0)<br /><br /> SQL_PARAM_INPUT_OUTPUT: The procedure column is an input/output parameter. (ODBC 1.0)<br /><br /> SQL_PARAM_OUTPUT: The procedure column is an output parameter. (ODBC 2.0)<br /><br /> SQL_RETURN_VALUE: The procedure column is the return value of the procedure. (ODBC 2.0)<br /><br /> SQL_RESULT_COL: The procedure column is a result set column. (ODBC 1.0)|  
 |DATA_TYPE (ODBC 2.0)|6|Smallint not NULL|SQL data type. This can be an ODBC SQL data type or a driver-specific SQL data type. For datetime and interval data types, this column returns the concise data types (for example, SQL_TYPE_TIME or SQL_INTERVAL_YEAR_TO_MONTH). For a list of valid ODBC SQL data types, see [SQL Data Types](../../../odbc/reference/appendixes/sql-data-types.md) in Appendix D: Data Types. For information about driver-specific SQL data types, see the driver's documentation.|  
-|TYPE_NAME (ODBC 2.0)|7|Varchar not NULL|Data source–dependent data type name; for example, "CHAR", "VARCHAR", "MONEY", "LONG VARBINARY", or "CHAR ( ) FOR BIT DATA".|  
+|TYPE_NAME (ODBC 2.0)|7|Varchar not NULL|Data source-dependent data type name; for example, "CHAR", "VARCHAR", "MONEY", "LONG VARBINARY", or "CHAR ( ) FOR BIT DATA".|  
 |COLUMN_SIZE (ODBC 2.0)|8|Integer|The column size of the procedure column on the data source. NULL is returned for data types where column size is not applicable. For more information concerning precision, see [Column Size, Decimal Digits, Transfer Octet Length, and Display Size](../../../odbc/reference/appendixes/column-size-decimal-digits-transfer-octet-length-and-display-size.md) in Appendix D: Data Types.|  
 |BUFFER_LENGTH (ODBC 2.0)|9|Integer|The length in bytes of data transferred on an **SQLGetData** or **SQLFetch** operation if SQL_C_DEFAULT is specified. For numeric data, this size may be different than the size of the data stored on the data source. For more information, see [Column Size, Decimal Digits, Transfer Octet Length, and Display Size](../../../odbc/reference/appendixes/column-size-decimal-digits-transfer-octet-length-and-display-size.md), in Appendix D: Data Types.|  
 |DECIMAL_DIGITS (ODBC 2.0)|10|Smallint|The decimal digits of the procedure column on the data source. NULL is returned for data types where decimal digits is not applicable. For more information concerning decimal digits, see [Column Size, Decimal Digits, Transfer Octet Length, and Display Size](../../../odbc/reference/appendixes/column-size-decimal-digits-transfer-octet-length-and-display-size.md), in Appendix D: Data Types.|  
@@ -176,7 +169,7 @@ SQLRETURN SQLProcedureColumns(
 |SQL_DATETIME_SUB (ODBC 3.0)|16|Smallint|The subtype code for datetime and interval data types. For other data types, this column returns a NULL.|  
 |CHAR_OCTET_LENGTH (ODBC 3.0)|17|Integer|The maximum length in bytes of a character or binary data type column. For all other data types, this column returns a NULL.|  
 |ORDINAL_POSITION (ODBC 3.0)|18|Integer not NULL|For input and output parameters, the ordinal position of the parameter in the procedure definition (in increasing parameter order, starting at 1). For a return value (if any), 0 is returned. For result-set columns, the ordinal position of the column in the result set, with the first column in the result set being number 1. If there are multiple result sets, column ordinal positions are returned in a driver-specific manner.|  
-|IS_NULLABLE (ODBC 3.0)|19|Varchar|"NO" if the column does not include NULLs.<br /><br /> "YES" if the column can include NULLs.<br /><br /> This column returns a zero-length string if nullability is unknown.<br /><br /> ISO rules are followed to determine nullability. An ISO SQL–compliant DBMS cannot return an empty string.<br /><br /> The value returned for this column is different from the value returned for the NULLABLE column. (See the description of the NULLABLE column.)|  
+|IS_NULLABLE (ODBC 3.0)|19|Varchar|"NO" if the column does not include NULLs.<br /><br /> "YES" if the column can include NULLs.<br /><br /> This column returns a zero-length string if nullability is unknown.<br /><br /> ISO rules are followed to determine nullability. An ISO SQL-compliant DBMS cannot return an empty string.<br /><br /> The value returned for this column is different from the value returned for the NULLABLE column. (See the description of the NULLABLE column.)|  
   
 ## Code Example  
  See [Procedure Calls](../../../odbc/reference/develop-app/procedure-calls.md).  

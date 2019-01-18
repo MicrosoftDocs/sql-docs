@@ -2,16 +2,11 @@
 title: "Specify Metaproperties in OPENXML | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/04/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "database-engine"
-ms.service: ""
-ms.component: "xml"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "dbe-xml"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: xml
+ms.topic: conceptual
 helpviewer_keywords: 
   - "overflow in XML document [SQL Server]"
   - "metaproperties [XML in SQL Server]"
@@ -19,11 +14,9 @@ helpviewer_keywords:
   - "extracting information of XML nodes [SQL Server]"
   - "OPENXML statement, metaproperties"
 ms.assetid: 29bfd1c6-3f9a-43c4-924a-53d438e442f4
-caps.latest.revision: 23
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-ms.workload: "Inactive"
+author: "douglaslMS"
+ms.author: "douglasl"
+manager: craigg
 ---
 # Specify Metaproperties in OPENXML
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,21 +35,21 @@ ms.workload: "Inactive"
   
 |Metaproperty attribute|Description|  
 |----------------------------|-----------------|  
-|**@mp:id**|Provides a system-generated, document-wide identifier of the DOM node. As long as the document is not reparsed, this ID refers to the same XML node.<br /><br /> An XML ID of **0** indicates that the element is a root element. Its parent XML ID is NULL.|  
-|**@mp:localname**|Stores the local part of the name of the node. It is used with a prefix and a namespace URI to name element or attribute nodes.|  
-|**@mp:namespaceuri**|Provides the namespace URI of the current element. If the value of this attribute is NULL, no namespace is present|  
-|**@mp:prefix**|Stores the namespace prefix of the current element name.<br /><br /> If no prefix is present (NULL) and a URI is given, it indicates that the specified namespace is the default namespace. If no URI is given, no namespace is attached.|  
-|**@mp:prev**|Stores the previous sibling relative to a node. This provides information about the ordering of elements in the document.<br /><br /> **@mp:prev** contains the XML ID of the previous sibling that has the same parent element. If an element is at the front of the sibling list, **@mp:prev** is NULL.|  
-|**@mp:xmltext**|Used for processing purposes. It is the textual serialization of the element and its attributes, and also the subelements, as used in the overflow handling of OPENXML.|  
+|**\@mp:id**|Provides a system-generated, document-wide identifier of the DOM node. As long as the document is not reparsed, this ID refers to the same XML node.<br /><br /> An XML ID of **0** indicates that the element is a root element. Its parent XML ID is NULL.|  
+|**\@mp:localname**|Stores the local part of the name of the node. It is used with a prefix and a namespace URI to name element or attribute nodes.|  
+|**\@mp:namespaceuri**|Provides the namespace URI of the current element. If the value of this attribute is NULL, no namespace is present|  
+|**\@mp:prefix**|Stores the namespace prefix of the current element name.<br /><br /> If no prefix is present (NULL) and a URI is given, it indicates that the specified namespace is the default namespace. If no URI is given, no namespace is attached.|  
+|**\@mp:prev**|Stores the previous sibling relative to a node. This provides information about the ordering of elements in the document.<br /><br /> **\@mp:prev** contains the XML ID of the previous sibling that has the same parent element. If an element is at the front of the sibling list, **\@mp:prev** is NULL.|  
+|**\@mp:xmltext**|Used for processing purposes. It is the textual serialization of the element and its attributes, and also the subelements, as used in the overflow handling of OPENXML.|  
   
  This table shows the additional parent properties that are provided and which allow you to retrieve information about the hierarchy.  
   
 |Parent metaproperty attribute|Description|  
 |-----------------------------------|-----------------|  
-|**@mp:parentid**|Corresponds to **../@mp:id**|  
-|**@mp:parentlocalname**|Corresponds to **../@mp:localname**|  
-|**@mp:parentnamespacerui**|Corresponds to **../@mp:namespaceuri**|  
-|**@mp:parentprefix**|Corresponds to **../@mp:prefix**|  
+|**\@mp:parentid**|Corresponds to **../\@mp:id**|  
+|**\@mp:parentlocalname**|Corresponds to **../\@mp:localname**|  
+|**\@mp:parentnamespacerui**|Corresponds to **../\@mp:namespaceuri**|  
+|**\@mp:parentprefix**|Corresponds to **../\@mp:prefix**|  
   
 ## Examples  
  The following examples illustrate how OPENXML is used to create different rowset views.  
@@ -66,11 +59,11 @@ ms.workload: "Inactive"
   
  The OPENXML statement illustrates the following:  
   
--   The **id** column is mapped to the **@mp:id** metaproperty attribute and indicates that the column contains the system-generated unique XML ID of the element.  
+-   The **id** column is mapped to the **\@mp:id** metaproperty attribute and indicates that the column contains the system-generated unique XML ID of the element.  
   
--   The **parent** column is mapped to **@mp:parentid** and indicates that the column contains the XML ID of the parent of the element.  
+-   The **parent** column is mapped to **\@mp:parentid** and indicates that the column contains the XML ID of the parent of the element.  
   
--   The **parentLocalName** column is mapped to **@mp:parentlocalname** and indicates that the column contains the local name of the parent.  
+-   The **parentLocalName** column is mapped to **\@mp:parentlocalname** and indicates that the column contains the local name of the parent.  
   
  The SELECT statement then returns the rowset that is provided by OPENXML:  
   
@@ -163,13 +156,13 @@ EXEC sp_xml_removedocument @idoc
 ### C. Specifying the xmltext metaproperty to retrieve the unconsumed data in a column  
  This example uses OPENXML to create a rowset view of the sample XML document. The example shows how to retrieve unconsumed XML data by mapping the **xmltext** metaproperty attribute to a rowset column in OPENXML.  
   
- The **comment** column is identified as the overflow column by mapping it to the **@mp:xmltext** metaproperty. The *flags* parameter is set to **9** (XML_ATTRIBUTE and XML_NOCOPY). This indicates **attribute-centric** mapping and indicates that only the unconsumed data should be copied to the overflow column.  
+ The **comment** column is identified as the overflow column by mapping it to the **\@mp:xmltext** metaproperty. The *flags* parameter is set to **9** (XML_ATTRIBUTE and XML_NOCOPY). This indicates **attribute-centric** mapping and indicates that only the unconsumed data should be copied to the overflow column.  
   
  The SELECT statement then returns the rowset provided by OPENXML.  
   
- In this example, the **@mp:parentlocalname** metaproperty is set for a column, **ParentLocalName**, in the rowset generated by OPENXML. As a result, this column contains the local name of the parent element.  
+ In this example, the **\@mp:parentlocalname** metaproperty is set for a column, **ParentLocalName**, in the rowset generated by OPENXML. As a result, this column contains the local name of the parent element.  
   
- Two additional columns are specified in the rowset, **parent** and **comment**. The **parent** column is mapped to **@mp:parentid** and indicates that the column contains the XML ID of the parent element of the element. The comment column is identified as the overflow column by mapping it to the **@mp:xmltext** metaproperty.  
+ Two additional columns are specified in the rowset, **parent** and **comment**. The **parent** column is mapped to **\@mp:parentid** and indicates that the column contains the XML ID of the parent element of the element. The comment column is identified as the overflow column by mapping it to the **\@mp:xmltext** metaproperty.  
   
 ```  
 DECLARE @idoc int  

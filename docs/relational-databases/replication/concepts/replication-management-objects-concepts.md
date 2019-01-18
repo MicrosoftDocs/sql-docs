@@ -2,18 +2,11 @@
 title: "Replication Management Objects Concepts | Microsoft Docs"
 ms.custom: ""
 ms.date: "11/08/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "database-engine"
-ms.service: ""
-ms.component: "replication"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-
-ms.tgt_pltfrm: ""
+ms.technology: replication
 ms.topic: "reference"
-applies_to: 
-  - "SQL Server 2016 Preview"
 dev_langs: 
   - "VB"
   - "CSharp"
@@ -25,11 +18,9 @@ helpviewer_keywords:
   - "Replication Management Objects"
   - "programming [SQL Server replication], RMO"
 ms.assetid: 37476d50-fb47-49e3-9504-3b163ac381d8
-caps.latest.revision: 61
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-ms.workload: "Inactive"
+author: "MashaMSFT"
+ms.author: "mathoma"
+manager: craigg
 ---
 # Replication Management Objects Concepts
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -41,19 +32,19 @@ ms.workload: "Inactive"
  [Configure Distribution](../../../relational-databases/replication/configure-distribution.md)  
  Topics in this section show how to use RMO to configure publishing and distribution.  
   
- [Create, Modify, and Delete Publications and Articles &#40;Replication&#41;](../../../relational-databases/replication/publish/create-modify-and-delete-publications-and-articles-replication.md)  
+ [Create a Publication](../../../relational-databases/replication/publish/create-a-publication.md)  
  Topics in this section show how to use RMO to create, delete, and modify publications and articles.  
   
  [Subscribe to Publications](../../../relational-databases/replication/subscribe-to-publications.md)  
  Topics in this section show how to use RMO to create, delete, and modify subscriptions.  
   
- [Secure a Replication Topology](../../../relational-databases/replication/security/secure-a-replication-topology.md)  
+ [Secure a Replication Topology](../../../relational-databases/replication/security/view-and-modify-replication-security-settings.md)  
  Topics in this section show how to use RMO to view and modify security settings.  
   
- [Synchronize Subscriptions &#40;Replication&#41;](../../../relational-databases/replication/synchronize-subscriptions-replication.md)  
+ [Synchronize Subscriptions &#40;Replication&#41;](../../../relational-databases/replication/synchronize-data.md)  
  Topics in this section show how to synchronize subscriptions.  
   
- [Monitoring Replication](../../../relational-databases/replication/monitor/monitoring-replication-overview.md)  
+ [Monitoring Replication](../../../relational-databases/replication/monitor/monitoring-replication.md)  
  Topics in this section show how to programmatically monitor a replication topology.  
   
 ## Introduction to RMO Programming  
@@ -187,7 +178,7 @@ ms.workload: "Inactive"
 >  Although the <xref:Microsoft.SqlServer.Management.Common.ServerConnection> class supports declaring explicit transactions when setting properties, such transactions may interfere with internal replication transactions, can produce unanticipated results, and should not be used with RMO.  
 
 ### Enabling TLS 1.2 Support for RMO Components 
- TLS1.2 support for RMO Components on Windows 2012 and lower can be enabled by installing the update [KB 3140245](http://support.microsoft.com/help/3140245), and creating the registry keys as mentioned in the article. On Windows 2012 R2 and later versions, only the registry keys as mentioned in above article, need to be created.
+ TLS1.2 support for RMO Components on Windows 2012 and lower can be enabled by installing the update [KB 3140245](https://support.microsoft.com/help/3140245), and creating the registry keys as mentioned in the article. On Windows 2012 R2 and later versions, only the registry keys as mentioned in above article, need to be created.
  
 ## Example  
  This example demonstrates the caching of property changes. Changes made to the attributes of a transactional publication are cached until they are explicitly sent to the server.  

@@ -2,15 +2,10 @@
 title: "Precision, scale, and length (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "7/22/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "sql-database"
-ms.service: ""
-ms.component: "t-sql|data-types"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: t-sql
 ms.topic: "language-reference"
 dev_langs: 
   - "TSQL"
@@ -24,11 +19,9 @@ helpviewer_keywords:
   - "scale [SQL Server], data types"
   - "data types [SQL Server], precision"
 ms.assetid: fbc9ad2c-0d3b-4e98-8fdd-4d912328e40a
-caps.latest.revision: 31
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "craigg"
-ms.workload: "Active"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ---
 # Precision, scale, and Length (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -64,10 +57,10 @@ The operand expressions are denoted as expression e1, with precision p1 and scal
   
 \* The result precision and scale have an absolute maximum of 38. When a result precision is greater than 38, it is reduced to 38, and the corresponding scale is reduced to try to prevent the integral part of a result from being truncated. In some cases such as multiplication or division, scale factor will not be reduced in order to keep decimal precision, although the overflow error can be raised.
 
-In addition and subtraction operations we need `max(p1 – s1, p2 – s2)` places to store integral part of the decimal number. If there is not enough space to store them i.e. `max(p1 – s1, p2 – s2) < min(38, precision) – scale`, the scale is reduced to provide enough space for integral part. Resulting scale is `MIN(precision, 38) - max(p1 – s1, p2 – s2)`, so the fractional part might be rounded to fit into the resulting scale.
+In addition and subtraction operations we need `max(p1 - s1, p2 - s2)` places to store integral part of the decimal number. If there is not enough space to store them i.e. `max(p1 - s1, p2 - s2) < min(38, precision) - scale`, the scale is reduced to provide enough space for integral part. Resulting scale is `MIN(precision, 38) - max(p1 - s1, p2 - s2)`, so the fractional part might be rounded to fit into the resulting scale.
 
 In multiplication and division operations we need `precision - scale` places to store the integral part of the result. The scale might be reduced using the following rules:
-1.  The resulting scale is reduced to `min(scale, 38 – (precision-scale))` if the integral part is less than 32, because it cannot be greater than `38 – (precision-scale)`. Result might be rounded in this case.
+1.  The resulting scale is reduced to `min(scale, 38 - (precision-scale))` if the integral part is less than 32, because it cannot be greater than `38 - (precision-scale)`. Result might be rounded in this case.
 1. The scale will not be changed if it is less than 6 and if the integral part is greater than 32. In this case, overflow error might be raised if it cannot fit into decimal(38, scale) 
 1. The scale will be set to 6 if it is greater than 6 and if the integral part is greater than 32. In this case, both integral part and scale would be reduced and resulting type is decimal(38,6). Result might be rounded to 6 decimal places or overflow error will be thrown if integral part cannot fit into 32 digits.
 
@@ -77,7 +70,7 @@ The following expression returns result `0.00000090000000000` without rounding, 
 select cast(0.0000009000 as decimal(30,20)) * cast(1.0000000000 as decimal(30,20)) [decimal 38,17]
 ```
 In this case precision is 61, and scale is 40.
-Integral part (precision-scale = 21) is less than 32, so this is case (1) in multiplication rules and scale is calculated as `min(scale, 38 – (precision-scale)) = min(40, 38 – (61-40)) = 17`. Result type is `decimal(38,17)`.
+Integral part (precision-scale = 21) is less than 32, so this is case (1) in multiplication rules and scale is calculated as `min(scale, 38 - (precision-scale)) = min(40, 38 - (61-40)) = 17`. Result type is `decimal(38,17)`.
 
 The following expression returns result `0.000001` to fit into `decimal(38,6)`:
 ```sql

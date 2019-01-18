@@ -2,16 +2,11 @@
 title: "SQLGetConnectAttr Function | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
-ms.prod_service: "drivers"
-ms.service: ""
-ms.component: "odbc"
+ms.prod: sql
+ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "drivers"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: connectivity
+ms.topic: conceptual
 apiname: 
   - "SQLGetConnectOption"
 apilocation: 
@@ -22,11 +17,9 @@ f1_keywords:
 helpviewer_keywords: 
   - "SQLGetConnectAttr function [ODBC]"
 ms.assetid: 2cb4ffa8-19d3-4664-8c2f-6682cdcc3f33
-caps.latest.revision: 32
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
-ms.workload: "Inactive"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # SQLGetConnectAttr Function
 **Conformance**  
@@ -35,7 +28,7 @@ ms.workload: "Inactive"
  **Summary**  
  **SQLGetConnectAttr** returns the current setting of a connection attribute.  
   
-> [!NOTE]  
+> [!NOTE]
 >  For more information about what the Driver Manager maps this function to when an ODBC 3*.x* application is working with an ODBC 2*.x* driver, see [Mapping Replacement Functions for Backward Compatibility of Applications](../../../odbc/reference/develop-app/mapping-replacement-functions-for-backward-compatibility-of-applications.md).  
   
 ## Syntax  
@@ -43,11 +36,11 @@ ms.workload: "Inactive"
 ```  
   
 SQLRETURN SQLGetConnectAttr(  
-     SQLHDBC        ConnectionHandle,  
-     SQLINTEGER     Attribute,  
-     SQLPOINTER     ValuePtr,  
-     SQLINTEGER     BufferLength,  
-     SQLINTEGER *   StringLengthPtr);  
+     SQLHDBC        ConnectionHandle,  
+     SQLINTEGER     Attribute,  
+     SQLPOINTER     ValuePtr,  
+     SQLINTEGER     BufferLength,  
+     SQLINTEGER *   StringLengthPtr);  
 ```  
   
 ## Arguments  

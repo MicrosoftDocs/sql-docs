@@ -2,16 +2,11 @@
 title: "View Information About an Operator | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "sql-tools"
-ms.service: ""
-ms.component: "ssms-agent"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "tools-ssms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: ssms
+ms.topic: conceptual
 helpviewer_keywords: 
   - "SQL Server Agent jobs, operators"
   - "viewing operators"
@@ -20,15 +15,18 @@ helpviewer_keywords:
   - "notifications [SQL Server], job status"
   - "displaying operators"
 ms.assetid: 92c82cdf-f704-444e-9539-82aea7fe6fb7
-caps.latest.revision: 5
 author: "stevestein"
 ms.author: "sstein"
-manager: "jhubbard"
-ms.workload: "Inactive"
+manager: craigg
+monikerRange: "= azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # View Information About an Operator
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-This topic describes how to view information about a [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent operator in [!INCLUDE[ssCurrent](../../includes/sscurrent_md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] or [!INCLUDE[tsql](../../includes/tsql_md.md)].  
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+
+> [!IMPORTANT]  
+> On [Azure SQL Database Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance), most, but not all SQL Server Agent features are currently supported. See [Azure SQL Database Managed Instance T-SQL differences from SQL Server](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent) for details.
+
+This topic describes how to view information about a [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent operator in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
 **In This Topic**  
   
@@ -47,7 +45,7 @@ This topic describes how to view information about a [!INCLUDE[msCoName](../../i
 ### <a name="Security"></a>Security  
   
 #### <a name="Permissions"></a>Permissions  
-By default, members of the **sysadmin** fixed server role can execute this stored procedure. Other users must be granted one of the following [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent fixed database roles in the **msdb** database:  
+By default, members of the **sysadmin** fixed server role can execute this stored procedure. Other users must be granted one of the following [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent fixed database roles in the **msdb** database:  
   
 -   **SQLAgentUserRole**  
   
@@ -69,7 +67,7 @@ For details about the permissions of these roles, see [SQL Server Agent Fixed Da
   
 4.  Right-click the operator that you want to view and select **Properties**.  
   
-    For more information on the available options contained in the *operator_name***Properties** dialog box, see:  
+    For more information on the available options contained in the _operator_name_**Properties** dialog box, see:  
   
     -   [Operator Properties - New Operator &#40;General Page&#41;](../../ssms/agent/operator-properties-new-operator-general-page.md)  
   
@@ -100,5 +98,5 @@ For details about the permissions of these roles, see [SQL Server Agent Fixed Da
     GO  
     ```  
   
-For more information, see [sp_help_operator (Transact-SQL)](http://msdn.microsoft.com/en-us/caedc43d-44b8-415a-897e-92923f6de3b8).  
+For more information, see [sp_help_operator (Transact-SQL)](https://msdn.microsoft.com/caedc43d-44b8-415a-897e-92923f6de3b8).  
   

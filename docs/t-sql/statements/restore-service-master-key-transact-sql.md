@@ -2,15 +2,10 @@
 title: "RESTORE SERVICE MASTER KEY (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "sql-database"
-ms.service: ""
-ms.component: "t-sql|statements"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: t-sql
 ms.topic: "language-reference"
 f1_keywords: 
   - "RESTORE SERVICE MASTER KEY"
@@ -26,11 +21,9 @@ helpviewer_keywords:
   - "RESTORE SERVICE MASTER KEY statement"
   - "transferring Service Master Keys"
 ms.assetid: a68fd0ee-70ce-4104-aca0-fcae5f41fc38
-caps.latest.revision: 22
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "craigg"
-ms.workload: "Inactive"
+author: VanMSFT
+ms.author: vanto
+manager: craigg
 ---
 # RESTORE SERVICE MASTER KEY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,10 +41,10 @@ RESTORE SERVICE MASTER KEY FROM FILE = 'path_to_file'
 ```  
   
 ## Arguments  
- FILE **='***path_to_file***'**  
+ FILE **='**_path\_to\_file_**'**  
  Specifies the complete path, including file name, to the stored service master key. *path_to_file* can be a local path or a UNC path to a network location.  
   
- PASSWORD **='***password***'**  
+ PASSWORD **='**_password_**'**  
  Specifies the password required to decrypt the service master key that is being imported from a file.  
   
  FORCE  

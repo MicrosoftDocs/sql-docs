@@ -1,28 +1,17 @@
 ---
 title: "Configure Report Server URLs  (SSRS Configuration Manager) | Microsoft Docs"
-ms.custom: ""
-ms.date: "05/18/2016"
+ms.date: 05/18/2016
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
-ms.service: ""
-ms.component: "install-windows"
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
 
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "Report Server Windows service, virtual directories"
   - "report servers [Reporting Services], virtual directories"
   - "virtual directories [Reporting Services]"
-  - "Report Manager [Reporting Services], virtual directories"
 ms.assetid: a0134ef0-086c-443e-93b9-7213a3d76393
-caps.latest.revision: 10
-author: "markingmyname"
-ms.author: "maghan"
-manager: "kfile"
-ms.workload: "Active"
+author: markingmyname
+ms.author: maghan
 ---
 # Configure Report Server URLs  (SSRS Configuration Manager)
   In [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], URLs are used to access the Report Server Web service and the [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)]. Before you can use either application, you must configure at least one URL each for the Web service and the [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)]. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] provides default values for both application URLs that work well in most deployment scenarios, including side-by-side deployments with other Web services and applications.  
@@ -44,9 +33,9 @@ ms.workload: "Active"
 ## Default URLs  
  When you access a report server or the [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] through its URL, the URL should include the host name and not the IP address. On a TCP/IP network, the IP address will resolve to a host name (or the network name of the computer). If you used the default values to configure URLs, you should be able to access the Report Server Web service using URLs that specify the computer name or localhost as the host name:  
   
--   `http://<computername>/reportserver`  
+-   `https://<computername>/reportserver`  
   
--   `http://localhost/reportserver`  
+-   `https://localhost/reportserver`  
   
  The settings that make these URLs available appear in the following table. This table shows the default values that enable a report server connection though URLs that include a host name:  
   

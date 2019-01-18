@@ -2,26 +2,19 @@
 title: "Using Connection Strings | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
-ms.prod_service: "drivers"
-ms.service: ""
-ms.component: "odbc"
+ms.prod: sql
+ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "drivers"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: connectivity
+ms.topic: conceptual
 helpviewer_keywords: 
   - "connection strings [ODBC]"
   - "connecting to data source [ODBC], Visual FoxPro"
   - "Visual FoxPro data source [ODBC], connecting"
 ms.assetid: 57634960-47e9-49bf-95c1-6e3702ac8166
-caps.latest.revision: 5
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
-ms.workload: "Inactive"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # Using Connection Strings
 You can use a connection string to connect to a Visual FoxPro data source.  

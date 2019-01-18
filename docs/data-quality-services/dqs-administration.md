@@ -2,28 +2,24 @@
 title: "DQS Administration | Microsoft Docs"
 ms.custom: ""
 ms.date: "10/01/2012"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "data-quality-services"
-ms.service: ""
-ms.component: "data-quality-services"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "data-quality-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: data-quality-services
+ms.topic: conceptual
 helpviewer_keywords: 
   - "dqs administration"
   - "administration"
   - "dqs,adminstration"
 ms.assetid: 9940ef5d-f6f6-4dec-9414-1077a4d7f12b
-caps.latest.revision: 21
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-ms.workload: "Inactive"
+author: "douglaslMS"
+ms.author: "douglasl"
+manager: craigg
 ---
 # DQS Administration
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
   [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) allows you to administer and manage various DQS activities performed on [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)], configure server-level properties related to DQS activities, configure the Reference Data Service settings, and configure DQS log settings. These things are done through the **Administration** feature in [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)]. Depending upon your security access (role) in DQS, you are granted/denied access to certain functionalities in this area.  
   
  Apart from these administration activities, this topic also provides information about an administration activity, backing up and restoring DQS databases, which is not performed using [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)].  

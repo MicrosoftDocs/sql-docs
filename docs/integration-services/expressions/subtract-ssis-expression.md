@@ -2,25 +2,18 @@
 title: "- (Subtract) (SSIS Expression) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "integration-services"
-ms.service: ""
-ms.component: "expressions"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: integration-services
+ms.topic: conceptual
 helpviewer_keywords: 
   - "- (subtract)"
   - "subtract operator (-)"
 ms.assetid: b48da086-37dd-460a-8a4b-912f52c9b158
-caps.latest.revision: 32
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
-ms.workload: "Inactive"
+manager: craigg
 ---
 # - (Subtract) (SSIS Expression)
   Subtracts the second numeric expression from the first one.  
@@ -29,7 +22,7 @@ ms.workload: "Inactive"
   
 ```  
   
-numeric_expression1 – numeric_expression2  
+numeric_expression1 - numeric_expression2  
   
 ```  
   

@@ -2,15 +2,9 @@
 title: "SQL Server Native Client Programming | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-non-specified"
-ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
-ms.service: ""
-ms.component: "native-client"
+ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-
-ms.tgt_pltfrm: ""
+ms.technology: native-client
 ms.topic: "reference"
 helpviewer_keywords: 
   - "SQLNCLI, about SQL Server Native Client"
@@ -21,11 +15,10 @@ helpviewer_keywords:
   - "SQLNCLI"
   - "native data access [SQL Server Native Client]"
 ms.assetid: 14ba2cb1-a424-4e4d-b224-0bf1015ab801
-caps.latest.revision: 66
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-ms.workload: "On Demand"
+author: MightyPen
+ms.author: genemi
+manager: craigg
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # SQL Server Native Client Programming
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -71,7 +64,7 @@ ms.workload: "On Demand"
  [Finding More SQL Server Native Client Information](../../relational-databases/native-client/finding-more-sql-server-native-client-information.md)  
  Provides additional resources about [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client, including links to external resources and getting further assistance.  
   
- [SQL Server Native Client Errors](http://msdn.microsoft.com/library/ebd0e9a8-5fe5-4b15-9a44-2f131a13c186)  
+ [SQL Server Native Client Errors](https://msdn.microsoft.com/library/ebd0e9a8-5fe5-4b15-9a44-2f131a13c186)  
  Contains topics about runtime errors associated with [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client.  
   
 ## See Also  

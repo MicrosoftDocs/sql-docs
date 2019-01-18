@@ -1,34 +1,29 @@
 ---
 title: Manage SQL Server on Linux with PowerShell | Microsoft Docs
-description: This topic provides an overview of using PowerShell on Windows with SQL Server on Linux.
-author: sanagama 
-ms.author: sanagama 
-manager: jhubbard
+description: This article provides an overview of using PowerShell on Windows with SQL Server on Linux.
+author: rothja 
+ms.author: jroth 
+manager: craigg
 ms.date: 10/02/2017
-ms.topic: article
-ms.prod: "sql-non-specified"
-ms.prod_service: "database-engine"
-ms.service: ""
-ms.component: sql-linux
-ms.suite: "sql"
-ms.custom: ""
-ms.technology: database-engine
+ms.topic: conceptual
+ms.prod: sql
+ms.custom: "sql-linux"
+ms.technology: linux
 ms.assetid: a3492ce1-5d55-4505-983c-d6da8d1a94ad
-ms.workload: "Inactive"
 ---
 # Use PowerShell on Windows to Manage SQL Server on Linux
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-This topic introduces [SQL Server PowerShell](https://msdn.microsoft.com/en-us/library/mt740629.aspx) and walks you through a couple of examples on how to use it with SQL Server 2017 on Linux. PowerShell support for SQL Server is currently available on Windows, so you can use it when you have a Windows machine that can connect to a remote SQL Server instance on Linux.
+This article introduces [SQL Server PowerShell](https://msdn.microsoft.com/library/mt740629.aspx) and walks you through a couple of examples on how to use it with SQL Server on Linux. PowerShell support for SQL Server is currently available on Windows, so you can use it when you have a Windows machine that can connect to a remote SQL Server instance on Linux.
 
 ## Install the newest version of SQL PowerShell on Windows
 
-[SQL PowerShell](https://msdn.microsoft.com/en-us/library/mt740629.aspx) on Windows is included with [SQL Server Management Studio (SSMS)](../ssms/sql-server-management-studio-ssms.md). When working with SQL Server, you should always use the most recent version of SSMS and SQL PowerShell. The latest version of SSMS is continually updated and optimized and currently works with SQL Server 2017 on Linux. To download and install the latest version, see [Download SQL Server Management Studio](../ssms/download-sql-server-management-studio-ssms.md). To stay up-to-date, the latest version of SSMS prompts you when there is a new version available to download.
+[SQL PowerShell](https://msdn.microsoft.com/library/mt740629.aspx) on Windows is included with [SQL Server Management Studio (SSMS)](../ssms/sql-server-management-studio-ssms.md). When working with SQL Server, you should always use the most recent version of SSMS and SQL PowerShell. The latest version of SSMS is continually updated and optimized and currently works with SQL Server on Linux. To download and install the latest version, see [Download SQL Server Management Studio](../ssms/download-sql-server-management-studio-ssms.md). To stay up-to-date, the latest version of SSMS prompts you when there is a new version available to download.
 
 ## Before you begin
 
-Read the [Known Issues](sql-server-linux-release-notes.md) for SQL Server 2017 on Linux.
+Read the [Known Issues](sql-server-linux-release-notes.md) for SQL Server on Linux.
 
 ## Launch PowerShell and import the *sqlserver* module
 
@@ -40,19 +35,19 @@ PowerShell
 
 SQL Server provides a Windows PowerShell module named **SqlServer** that you can use to import the SQL Server components (SQL Server provider and cmdlets) into a PowerShell environment or script.
 
-Copy and paste the command below at the PowerShell prompt to import the **SqlServer** module into your current PowerShell session:
+Copy and paste the following command at the PowerShell prompt to import the **SqlServer** module into your current PowerShell session:
 
 ```powershell
 Import-Module SqlServer
 ```
 
-Type the command below at the PowerShell prompt to verify that the **SqlServer** module was imported correctly:
+Type the following command at the PowerShell prompt to verify that the **SqlServer** module was imported correctly:
 
 ```powershell
 Get-Module -Name SqlServer
 ```
 
-PowerShell should display information similar to what's below:
+PowerShell should display information similar to the following output:
 
 ```
 ModuleType Version    Name          ExportedCommands
@@ -63,15 +58,15 @@ Manifest   20.0       SqlServer     {Add-SqlAvailabilityDatabase, Add-SqlAvailab
 
 ## Connect to SQL Server and get server information
 
-Let's use PowerShell on Windows to connect to your SQL Server 2017 instance on Linux and display a couple of server properties.
+Let's use PowerShell on Windows to connect to your SQL Server instance on Linux and display a couple of server properties.
 
-Copy and paste the commands below at the PowerShell prompt. When you run these commands, PowerShell will:
-- Display the *Windows PowerShell credential request* dialog that prompts you for the credentials (*SQL username* and *SQL password*) to connect to your SQL Server 2017 instance on Linux
+Copy and paste the following commands at the PowerShell prompt. When you run these commands, PowerShell will:
+- Display the *Windows PowerShell credential request* dialog that prompts you for the credentials (*SQL username* and *SQL password*) to connect to your SQL Server instance on Linux
 - Load the SQL Server Management Objects (SMO) assembly
-- Create an instance of the [Server](https://msdn.microsoft.com/en-us/library/microsoft.sqlserver.management.smo.server.aspx) object
+- Create an instance of the [Server](https://msdn.microsoft.com/library/microsoft.sqlserver.management.smo.server.aspx) object
 - Connect to the **Server** and display a few properties
 
-Remember to replace **\<your_server_instance\>** with the IP address or the hostname of your SQL Server 2017 instance on Linux.
+Remember to replace **\<your_server_instance\>** with the IP address or the hostname of your SQL Server instance on Linux.
 
 ```powershell
 # Prompt for credentials to login into SQL Server
@@ -92,7 +87,7 @@ $server.Information | Select-Object Edition, HostPlatform, HostDistribution | Fo
 # done
 ```
 
-PowerShell should display information similar to what's shown below:
+PowerShell should display information similar to the following output:
 
 ```
 Edition          : Developer Edition (64-bit)
@@ -104,14 +99,14 @@ HostDistribution : Ubuntu
 
 ## Examine SQL Server error logs
 
-Let's use PowerShell on Windows to examine error logs connect on your SQL Server 2017 instance on Linux. We will also use the **Out-GridView** cmdlet to show information from the error logs in a grid view display.
+Let's use PowerShell on Windows to examine error logs connect on your SQL Server instance on Linux. We will also use the **Out-GridView** cmdlet to show information from the error logs in a grid view display.
 
-Copy and paste the commands below at the PowerShell prompt. They might take a few minutes to run. These commands do the following:
-- Display the *Windows PowerShell credential request* dialog that prompts you for the credentials (*SQL username* and *SQL password*) to connect to your SQL Server 2017 instance on Linux
-- Use the **Get-SqlErrorLog** cmdlet to connect to the SQL Server 2017 instance on Linux and retrieve error logs since **Yesterday**
+Copy and paste the following commands at the PowerShell prompt. They might take a few minutes to run. These commands do the following:
+- Display the *Windows PowerShell credential request* dialog that prompts you for the credentials (*SQL username* and *SQL password*) to connect to your SQL Server instance on Linux
+- Use the **Get-SqlErrorLog** cmdlet to connect to the SQL Server instance on Linux and retrieve error logs since **Yesterday**
 - Pipe the output to the **Out-GridView** cmdlet
 
-Remember to replace **\<your_server_instance\>** with the IP address or the hostname of your SQL Server 2017 instance on Linux.
+Remember to replace **\<your_server_instance\>** with the IP address or the hostname of your SQL Server instance on Linux.
 
 ```powershell
 # Prompt for credentials to login into SQL Server

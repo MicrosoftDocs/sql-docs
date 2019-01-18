@@ -2,15 +2,10 @@
 title: "SELECT @local_variable (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "09/06/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.service: ""
-ms.component: "t-sql|language-elements"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: t-sql
 ms.topic: "language-reference"
 f1_keywords: 
   - "variable_TSQL"
@@ -27,11 +22,9 @@ helpviewer_keywords:
   - "@local_variable"
   - "local variables [SQL Server]"
 ms.assetid: 8e1a9387-2c5d-4e51-a1fd-a2a95f026d6f
-caps.latest.revision: 32
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-ms.workload: "Active"
+author: "douglaslMS"
+ms.author: "douglasl"
+manager: craigg
 ---
 # SELECT @local_variable (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

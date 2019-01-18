@@ -1,23 +1,14 @@
 ---
-title: "PowerShell Reference for Power Pivot for SharePoint | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/16/2015"
-ms.prod: analysis-services
-ms.prod_service: "analysis-services"
-ms.service: ""
-ms.component: ""
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
-  
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-ms.assetid: c01735a8-f919-48ad-8d74-35d75a18f821
-caps.latest.revision: 11
-author: "Minewiskan"
-ms.author: "owend"
-manager: "kfile"
-ms.workload: "Inactive"
+title: "PowerShell Reference for Analysis Services Power Pivot for SharePoint | Microsoft Docs"
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: powershell
+ms.topic: reference
+ms.author: owend
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
 ---
 # PowerShell Reference for Power Pivot for SharePoint
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]

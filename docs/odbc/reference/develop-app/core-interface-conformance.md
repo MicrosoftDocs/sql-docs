@@ -2,29 +2,22 @@
 title: "Core Interface Conformance | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
-ms.prod_service: "drivers"
-ms.service: ""
-ms.component: "odbc"
+ms.prod: sql
+ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "drivers"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: connectivity
+ms.topic: conceptual
 helpviewer_keywords: 
   - "interface conformance levels [ODBC]"
   - "conformance levels [ODBC], interface"
   - "core-level interface conformance levels [ODBC]"
 ms.assetid: aaaa864a-6477-45ff-a50a-96d8db66a252
-caps.latest.revision: 6
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
-ms.workload: "Inactive"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # Core Interface Conformance
-All ODBC drivers must exhibit at least Core-level interface conformance. Because the features in the Core level are those required by most generic interoperable applications, the driver can work with such applications. The features in the Core level also correspond to the features defined in the ISO CLI specification and to the nonoptional features defined in the Open Group CLI specification. A Core-level interface–conformant ODBC driver allows the application to do all of the following:  
+All ODBC drivers must exhibit at least Core-level interface conformance. Because the features in the Core level are those required by most generic interoperable applications, the driver can work with such applications. The features in the Core level also correspond to the features defined in the ISO CLI specification and to the nonoptional features defined in the Open Group CLI specification. A Core-level interface-conformant ODBC driver allows the application to do all of the following:  
   
 -   Allocate and free all types of handles, by calling **SQLAllocHandle** and **SQLFreeHandle**.  
   

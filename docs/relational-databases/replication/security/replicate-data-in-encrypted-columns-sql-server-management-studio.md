@@ -2,26 +2,19 @@
 title: "Replicate Data in Encrypted Columns (SQL Server Management Studio) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "database-engine"
-ms.service: ""
-ms.component: "replication"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: replication
+ms.topic: conceptual
 helpviewer_keywords: 
   - "encryption [SQL Server], replicating data"
   - "encryption [SQL Server replication]"
   - "publishing [SQL Server replication], encrypted columns"
 ms.assetid: d1f8f586-e5a3-4a71-9391-11198d42bfa3
-caps.latest.revision: 8
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-ms.workload: "Inactive"
+author: "MashaMSFT"
+ms.author: "mathoma"
+manager: craigg
 ---
 # Replicate Data in Encrypted Columns (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -89,7 +82,7 @@ ms.workload: "Inactive"
  [!code-sql[HowTo#sp_SubscriberEncryptedColumn](../../../relational-databases/replication/codesnippet/tsql/replicate-data-in-encryp_3.sql)]  
   
 ## See Also  
- [Security Overview &#40;Replication&#41;](../../../relational-databases/replication/security/security-overview-replication.md)   
+ [View and modify replication security settings](../../../relational-databases/replication/security/view-and-modify-replication-security-settings.md)   
  [Create Identical Symmetric Keys on Two Servers](../../../relational-databases/security/encryption/create-identical-symmetric-keys-on-two-servers.md)  
   
   

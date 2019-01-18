@@ -2,16 +2,11 @@
 title: "Row Status Array | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
-ms.prod_service: "drivers"
-ms.service: ""
-ms.component: "odbc"
+ms.prod: sql
+ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "drivers"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: connectivity
+ms.topic: conceptual
 helpviewer_keywords: 
   - "row status array [ODBC]"
   - "cursors [ODBC], block"
@@ -20,11 +15,9 @@ helpviewer_keywords:
   - "result sets [ODBC], block cursors"
   - "rowset status [ODBC]"
 ms.assetid: 4b69f189-2722-4314-8a02-f4ffecd6dabd
-caps.latest.revision: 5
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
-ms.workload: "Inactive"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # Row Status Array
 In addition to data, **SQLFetch** and **SQLFetchScroll** can return an array that gives the status of each row in the rowset. This array is specified through the SQL_ATTR_ROW_STATUS_PTR statement attribute. This array is allocated by the application and must have as many elements as are specified by the SQL_ATTR_ROW_ARRAY_SIZE statement attribute. The values in the array are set by **SQLBulkOperations**, **SQLFetch**, **SQLFetchScroll**, and **SQLSetPos.** The values describe the status of the row and whether that status has changed since it was last fetched.  

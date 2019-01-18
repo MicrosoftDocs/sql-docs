@@ -2,24 +2,17 @@
 title: "SAP BW Destination Editor (Advanced Page) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "integration-services"
-ms.service: ""
-ms.component: "data-flow"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: integration-services
+ms.topic: conceptual
 f1_keywords: 
   - "sql13.dts.designer.sapbwdestination.advanced.f1"
 ms.assetid: 862957db-bbc6-4dda-bc0e-591457f1baa7
-caps.latest.revision: 10
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
-ms.workload: "Inactive"
+manager: craigg
 ---
 # SAP BW Destination Editor (Advanced Page)
   Use the **Advanced** page of the **SAP BW Destination Editor** to set advanced settings such as package size and time-out information.  

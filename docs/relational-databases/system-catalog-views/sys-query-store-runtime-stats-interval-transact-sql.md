@@ -1,16 +1,11 @@
 ---
 title: "sys.query_store_runtime_stats_interval (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/29/2016"
-ms.prod: "sql-non-specified"
+ms.date: "11/29/2018"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.service: ""
-ms.component: "system-catalog-views"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: system-objects
 ms.topic: "language-reference"
 f1_keywords: 
   - "QUERY_STORE_RUNTIME_STATS_INTERVAL"
@@ -23,14 +18,13 @@ helpviewer_keywords:
   - "sys.query_store_runtime_stats_interval catalog view"
   - "query_store_runtime_stats_interval catalog view"
 ms.assetid: 2be83785-0569-41a3-88c8-59bfa0932e6e
-caps.latest.revision: 9
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "craigg"
-ms.workload: "Inactive"
+author: stevestein
+ms.author: sstein
+manager: craigg
+monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.query_store_runtime_stats_interval (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
 
   Contains  information about the start and end time of each interval over which runtime execution statistics information for a query has been collected.  
   

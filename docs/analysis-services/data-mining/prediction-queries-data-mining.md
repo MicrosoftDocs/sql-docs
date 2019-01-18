@@ -1,24 +1,14 @@
 ---
 title: "Prediction Queries (Data Mining) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/04/2017"
-ms.prod: analysis-services
-ms.prod_service: "analysis-services"
-ms.service: ""
-ms.component: ""
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
-  
-ms.component: data-mining
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-ms.assetid: e5e6686c-1360-480e-8c0d-8a56204fbed9
-caps.latest.revision: 14
-author: "Minewiskan"
-ms.author: "owend"
-manager: "kfile"
-ms.workload: "Inactive"
+ms.date: 05/08/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: data-mining
+ms.topic: conceptual
+ms.author: owend
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
 ---
 # Prediction Queries (Data Mining)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -72,7 +62,7 @@ ms.workload: "Inactive"
  Singleton prediction queries do not require a separate table that contains input. Instead, you provide one or multiple rows of values as input to the model, and the prediction or predictions are returned in real time.  
   
 > [!WARNING]  
->  Despite the name, singleton prediction queries do not just make single predictions—you can generate multiple predictions for each set of inputs. You provide multiple input cases by creating a SELECT statement for each input case and combining them with the UNION operator.  
+>  Despite the name, singleton prediction queries do not just make single predictions-you can generate multiple predictions for each set of inputs. You provide multiple input cases by creating a SELECT statement for each input case and combining them with the UNION operator.  
   
  When you create a singleton prediction query, you must provide the new data to the model in the form of a PREDICTION JOIN. This means that even though you are not mapping to an actual table, you must make sure that the new data matches the existing columns in the mining model. If the new data columns and the new data match exactly, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] will map the columns for you. This is called a *NATURAL PREDICTION JOIN*. However, if the columns do not match, or if the new data does not contain the same kind and amount of data that is in the model, you must specify which columns in the model map to the new data, or specify the missing values.  
   

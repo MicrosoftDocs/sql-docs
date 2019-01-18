@@ -1,16 +1,8 @@
 ---
 title: "CREATE CRYPTOGRAPHIC PROVIDER (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-non-specified"
-ms.prod_service: "sql-database"
-ms.service: ""
-ms.component: "t-sql|statements"
-ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.prod: sql
+ms.technology: t-sql
 ms.topic: "language-reference"
 f1_keywords: 
   - "CREATE_CRYPTOGRAPHIC_TSQL"
@@ -28,11 +20,9 @@ helpviewer_keywords:
   - "CREATE CRYPTOGRAPHIC PROVIDER statement"
   - "33032 (Database Engine error)"
 ms.assetid: 059a39a6-9d32-4d3f-965b-0a1ce75229c7
-caps.latest.revision: 20
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "craigg"
-ms.workload: "Inactive"
+author: VanMSFT
+ms.author: vanto
+manager: craigg
 ---
 # CREATE CRYPTOGRAPHIC PROVIDER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

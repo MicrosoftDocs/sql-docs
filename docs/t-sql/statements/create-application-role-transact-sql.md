@@ -2,15 +2,10 @@
 title: "CREATE APPLICATION ROLE (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.service: ""
-ms.component: "t-sql|statements"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: t-sql
 ms.topic: "language-reference"
 f1_keywords: 
   - "APPLICATION_ROLE_TSQL"
@@ -26,11 +21,9 @@ helpviewer_keywords:
   - "CREATE APPLICATION ROLE statement"
   - "application roles [SQL Server], creating"
 ms.assetid: 647386da-ee80-41cf-86c9-dd590f9d66b6
-caps.latest.revision: 37
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "craigg"
-ms.workload: "Inactive"
+author: VanMSFT
+ms.author: vanto
+manager: craigg
 ---
 # CREATE APPLICATION ROLE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -51,10 +44,10 @@ CREATE APPLICATION ROLE application_role_name
  *application_role_name*  
  Specifies the name of the application role. This name must not already be used to refer to any principal in the database.  
   
- PASSWORD **='***password***'**  
+ PASSWORD **='**_password_**'**  
  Specifies the password that database users will use to activate the application role. You should always use strong passwords. *password* must meet the Windows password policy requirements of the computer that is running the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- DEFAULT_SCHEMA **=***schema_name*  
+ DEFAULT_SCHEMA **=**_schema\_name_  
  Specifies the first schema that will be searched by the server when it resolves the names of objects for this role. If DEFAULT_SCHEMA is left undefined, the application role will use DBO as its default schema. *schema_name* can be a schema that does not exist in the database.  
   
 ## Remarks  

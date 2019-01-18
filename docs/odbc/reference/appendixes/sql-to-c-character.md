@@ -2,26 +2,19 @@
 title: "SQL to C: Character | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
-ms.prod_service: "drivers"
-ms.service: ""
-ms.component: "odbc"
+ms.prod: sql
+ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "drivers"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: connectivity
+ms.topic: conceptual
 helpviewer_keywords: 
   - "converting data from SQL to C types [ODBC], character"
   - "character data type [ODBC]"
   - "data conversions from SQL to C types [ODBC], character"
 ms.assetid: 7fdb7f38-b64d-48f2-bcb4-1ca96b2bbdb6
-caps.latest.revision: 8
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
-ms.workload: "Inactive"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # SQL to C: Character
 The identifiers for the character ODBC SQL data types are:  

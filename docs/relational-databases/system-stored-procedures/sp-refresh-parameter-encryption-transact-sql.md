@@ -2,16 +2,11 @@
 title: "sp_refresh_parameter_encryption (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/11/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.service: ""
-ms.component: "system-stored-procedures"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: system-objects
+ms.topic: conceptual
 f1_keywords: 
   - "sp_refresh_parameter_encryption"
   - "sp_refresh_parameter_encryption_TSQL"
@@ -21,11 +16,10 @@ helpviewer_keywords:
   - "sp_refresh_parameter_encryption"
   - "Always Encrypted, sp_refresh_parameter_encryption"
 ms.assetid: 00b44baf-fcf0-4095-aabe-49fa87e77316
-caps.latest.revision: 3
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "craigg"
-ms.workload: "Inactive"
+author: stevestein
+ms.author: sstein
+manager: craigg
+monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sp_refresh_parameter_encryption (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -70,7 +64,7 @@ When encryption properties of a table are modified, `sp_refresh_parameter_encryp
 
 To refresh a server-level DDL trigger, execute this stored procedure from the context of any database.
 
->  [!NOTE]   
+> [!NOTE]
 >  Any signatures that are associated with the object are dropped when you run `sp_refresh_parameter_encryption`.
 
 ## Permissions

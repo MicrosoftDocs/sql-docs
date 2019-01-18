@@ -1,23 +1,16 @@
 ---
 title: "Add an SSIS Scale Out Worker with Scale Out Manager | Microsoft Docs"
-ms.description: "This article describes how to add an SSIS Scale Out Worker to an existing Scale Out environment by using Scale Out Manager."
-ms.custom: ""
+description: "This article describes how to add an SSIS Scale Out Worker to an existing Scale Out environment by using Scale Out Manager."
+ms.custom: performance
 ms.date: "12/19/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "integration-services"
-ms.service: ""
-ms.component: "scale-out"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-caps.latest.revision: 1
+ms.technology: integration-services
+ms.topic: conceptual
 author: "haoqian"
 ms.author: "haoqian"
-manager: "jhubbard"
-ms.workload: "Inactive"
+manager: craigg
 ---
 # Add a Scale Out Worker with Scale Out Manager
 

@@ -2,15 +2,10 @@
 title: "sp_procoption (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "database-engine"
-ms.service: ""
-ms.component: "system-stored-procedures"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: system-objects
 ms.topic: "language-reference"
 f1_keywords: 
   - "sp_procoption"
@@ -20,11 +15,9 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_procoption"
 ms.assetid: 6f0221bd-70b4-4b04-b15d-722235aceb3c
-caps.latest.revision: 28
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "craigg"
-ms.workload: "Inactive"
+author: stevestein
+ms.author: sstein
+manager: craigg
 ---
 # sp_procoption (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,13 +36,13 @@ sp_procoption [ @ProcName = ] 'procedure'
 ```  
   
 ## Arguments  
- [ **@ProcName =** ] **'***procedure***'**  
+ [ **@ProcName =** ] **'**_procedure_**'**  
  Is the name of the procedure for which to set an option. *procedure* is **nvarchar(776)**, with no default.  
   
- [ **@OptionName =** ] **'***option***'**  
+ [ **@OptionName =** ] **'**_option_**'**  
  Is the name of the option to set. The only value for *option* is **startup**.  
   
- [ **@OptionValue =** ] **'***value***'**  
+ [ **@OptionValue =** ] **'**_value_**'**  
  Is whether to set the option on (**true** or **on**) or off (**false** or **off**). *value* is **varchar(12)**, with no default.  
   
 ## Return Code Values  

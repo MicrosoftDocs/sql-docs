@@ -2,22 +2,15 @@
 title: "XML Data Type and Columns (SQL Server) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "database-engine"
-ms.service: ""
-ms.component: "xml"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "dbe-xml"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: xml
+ms.topic: conceptual
 ms.assetid: 00db8f21-7d4b-4347-ae43-3a7c314d2fa1
-caps.latest.revision: 6
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-ms.workload: "Active"
+author: "douglaslMS"
+ms.author: "douglasl"
+manager: craigg
 ---
 # XML Data Type and Columns (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -62,9 +55,9 @@ ms.workload: "Active"
   
 -   Native storage as **xml** data type  
   
-     The data is stored in an internal representation that preserves the XML content of the data. This internal representation includes information about the containment hierarchy, document order, and element and attribute values. Specifically, the InfoSet content of the XML data is preserved. For more information about InfoSet, visit [http://www.w3.org/TR/xml-infoset](http://go.microsoft.com/fwlink/?LinkId=48843). The InfoSet content may not be an identical copy of the text XML, because the following information is not retained: insignificant white spaces, order of attributes, namespace prefixes, and XML declaration.  
+     The data is stored in an internal representation that preserves the XML content of the data. This internal representation includes information about the containment hierarchy, document order, and element and attribute values. Specifically, the InfoSet content of the XML data is preserved. For more information about InfoSet, visit [http://www.w3.org/TR/xml-infoset](https://go.microsoft.com/fwlink/?LinkId=48843). The InfoSet content may not be an identical copy of the text XML, because the following information is not retained: insignificant white spaces, order of attributes, namespace prefixes, and XML declaration.  
   
-     For typed **xml** data type, an **xml** data type bound to XML schemas, the post-schema validation InfoSet (PSVI) adds type information to the InfoSet and is encoded in the internal representation. This improves parsing speed significantly. For more information, see the W3C XML Schema specifications at [http://www.w3.org/TR/xmlschema-1](http://go.microsoft.com/fwlink/?LinkId=48881) and [http://www.w3.org/TR/xmlschema-2](http://go.microsoft.com/fwlink/?LinkId=4871).  
+     For typed **xml** data type, an **xml** data type bound to XML schemas, the post-schema validation InfoSet (PSVI) adds type information to the InfoSet and is encoded in the internal representation. This improves parsing speed significantly. For more information, see the W3C XML Schema specifications at [http://www.w3.org/TR/xmlschema-1](https://go.microsoft.com/fwlink/?LinkId=48881) and [http://www.w3.org/TR/xmlschema-2](https://go.microsoft.com/fwlink/?LinkId=4871).  
   
 -   Mapping between XML and relational storage  
   
@@ -143,7 +136,7 @@ ms.workload: "Active"
   
 -   You want to bulk load XML data and decompose them into the underlying tables by using the XML view.  
   
- Examples include relational data exposed as XML for data exchange and Web services, and XML data with fixed schema. For more information, see the [MSDN Online Library](http://go.microsoft.com/fwlink/?linkid=31174).  
+ Examples include relational data exposed as XML for data exchange and Web services, and XML data with fixed schema. For more information, see the [MSDN Online Library](https://go.microsoft.com/fwlink/?linkid=31174).  
   
 #### Example: Modeling Data Using an Annotated XML Schema (AXSD)  
  For illustration, assume that you have existing relational data, such as customers, orders, and line items, that you want to handle as XML. Define an XML view by using AXSD over the relational data. The XML view allows you to bulk load XML data into your tables and query and update the relational data by using the XML view. This model is useful if you have to exchange data that contains XML markup with other applications while your SQL applications work uninterrupted.  

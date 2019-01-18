@@ -2,29 +2,20 @@
 title: "sp_droppullsubscription (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "database-engine"
-ms.service: ""
-ms.component: "system-stored-procedures"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
+ms.technology: replication
 ms.topic: "language-reference"
-applies_to: 
-  - "SQL Server"
 f1_keywords: 
   - "sp_droppullsubscription"
   - "sp_droppullsubscription_TSQL"
 helpviewer_keywords: 
   - "sp_droppullsubscription"
 ms.assetid: 7352d94a-f8f2-42ea-aaf1-d08c3b5a0e76
-caps.latest.revision: 21
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "craigg"
-ms.workload: "Inactive"
+author: stevestein
+ms.author: sstein
+manager: craigg
 ---
 # sp_droppullsubscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,13 +35,13 @@ sp_droppullsubscription [ @publisher= ] 'publisher'
 ```  
   
 ## Arguments  
- [ **@publisher=** ] **'***publisher***'**  
+ [ **@publisher=** ] **'**_publisher_**'**  
  Is the remote server name. *publisher* is **sysname**, with no default. If **all**, the subscription is dropped at all the Publishers.  
   
- [ **@publisher_db=** ] **'***publisher_db***'**  
+ [ **@publisher_db=** ] **'**_publisher_db_**'**  
  Is the name of the Publisher database. *publisher_db* is **sysname**, with no default. **all** means all the Publisher databases.  
   
- [ **@publication=** ] **'***publication***'**  
+ [ **@publication=** ] **'**_publication_**'**  
  Is the publication name. *publication* is **sysname**, with no default. If **all**, the subscription is dropped to all the publications.  
   
  [ **@reserved=** ] *reserved*  

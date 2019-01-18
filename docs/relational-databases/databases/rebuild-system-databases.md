@@ -2,27 +2,20 @@
 title: "Rebuild System Databases | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/06/2016"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "database-engine"
-ms.service: ""
-ms.component: "databases"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "master database [SQL Server], rebuilding"
   - "REBUILDDATABASE parameter"
   - "rebuilding databases, master"
   - "system databases [SQL Server], rebuilding"
 ms.assetid: af457ecd-523e-4809-9652-bdf2e81bd876
-caps.latest.revision: 39
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-ms.workload: "Active"
+author: "stevestein"
+ms.author: "sstein"
+manager: craigg
 ---
 # Rebuild System Databases
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -108,7 +101,7 @@ ms.workload: "Active"
     |/ACTION=REBUILDDATABASE|Specifies that Setup re-create the system databases.|  
     |/INSTANCENAME=*InstanceName*|Is the name of the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. For the default instance, enter MSSQLSERVER.|  
     |/SQLSYSADMINACCOUNTS=*accounts*|Specifies the Windows groups or individual accounts to add to the **sysadmin** fixed server role. When specifying more than one account, separate the accounts with a blank space. For example, enter **BUILTIN\Administrators MyDomain\MyUser**. When you are specifying an account that contains a blank space within the account name, enclose the account in double quotation marks. For example, enter **NT AUTHORITY\SYSTEM**.|  
-    |[ /SAPWD=*StrongPassword* ]|Specifies the password for the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **sa** account. This parameter is required if the instance uses Mixed Authentication ([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and Windows Authentication) mode.<br /><br /> **\*\* Security Note \*\***The **sa** account is a well-known [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] account and it is often targeted by malicious users. It is very important that you use a strong password for the **sa** login.<br /><br /> Do not specify this parameter for Windows Authentication mode.|  
+    |[ /SAPWD=*StrongPassword* ]|Specifies the password for the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **sa** account. This parameter is required if the instance uses Mixed Authentication ([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and Windows Authentication) mode.<br /><br /> **&#42;&#42; Security Note &#42;&#42;**The **sa** account is a well-known [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] account and it is often targeted by malicious users. It is very important that you use a strong password for the **sa** login.<br /><br /> Do not specify this parameter for Windows Authentication mode.|  
     |[ /SQLCOLLATION=*CollationName* ]|Specifies a new server-level collation. This parameter is optional. When not specified, the current collation of the server is used.<br /><br /> **\*\* Important \*\***Changing the server-level collation does not change the collation of existing user databases. All newly created user databases will use the new collation by default.<br /><br /> For more information, see [Set or Change the Server Collation](../../relational-databases/collations/set-or-change-the-server-collation.md).|  
     |[ /SQLTEMPDBFILECOUNT=NumberOfFiles ]|Specifies the number of tempdb data files. This value can be increased up to 8 or the number of cores, whichever is higher.<br /><br /> Default value: 8 or the number of cores, whichever is lower.|  
     |[ /SQLTEMPDBFILESIZE=FileSizeInMB ]|Specifies the initial size of each tempdb data file in MB. Setup allows the size up to 1024 MB.<br /><br /> Default value: 8|  
@@ -164,7 +157,7 @@ ms.workload: "Active"
 > [!WARNING]  
 >  Rebuilding the **msdb** database using the **instmsdb** script will eliminate all the information stored in **msdb** such as jobs, alert, operators, maintenance plans, backup history, Policy-Based Management settings, Database Mail, Performance Data Warehouse, etc.  
   
-1.  Stop all services connecting to the [!INCLUDE[ssDE](../../includes/ssde-md.md)], including [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent, [!INCLUDE[ssRS](../../includes/ssrs-md.md)], [!INCLUDE[ssIS](../../includes/ssis-md.md)], and all applications using [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] as data store.  
+1.  Stop all services connecting to the [!INCLUDE[ssDE](../../includes/ssde-md.md)], including [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent, [!INCLUDE[ssRS](../../includes/ssrs.md)], [!INCLUDE[ssIS](../../includes/ssis-md.md)], and all applications using [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] as data store.  
   
 2.  Start [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] from the command line using the command: `NET START MSSQLSERVER /T3608`  
   
@@ -176,7 +169,7 @@ ms.workload: "Active"
   
 5.  Using [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager, stop and restart the [!INCLUDE[ssDE](../../includes/ssde-md.md)] service normally.  
   
-6.  In a command line window, connect to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and execute the command: `SQLCMD -E -S<servername> -i"C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Install\instmsdb.sql" -o" C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Install\instmsdb.out"`  
+6.  In a command line window, connect to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and execute the command: `SQLCMD -E -S<servername> -i"C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Install\instmsdb.sql" -o"C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Install\instmsdb.out"`  
   
      Replace *\<servername>* with the instance of the [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Use the file system path of the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   

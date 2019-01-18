@@ -1,27 +1,14 @@
 ---
 title: "Intrinsic Member Properties (MDX) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: analysis-services
-ms.prod_service: "analysis-services"
-ms.service: ""
-ms.component: ""
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
-  
-ms.component: multidimensional-tabular
-ms.component: data-mining
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "intrinsic member properties [MDX]"
-ms.assetid: 84e6fe64-9b37-4e79-bedf-ae02e80bfce8
-caps.latest.revision: 41
-author: "Minewiskan"
-ms.author: "owend"
-manager: "kfile"
-ms.workload: "On Demand"
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: mdx
+ms.topic: conceptual
+ms.author: owend
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
 ---
 # MDX Member Properties - Intrinsic Member Properties
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
@@ -33,9 +20,9 @@ ms.workload: "On Demand"
   
  For an introduction to using and viewing dimension member properties, see [Viewing SSAS Member Properties within an MDX Query Window in SSMS](http://go.microsoft.com/fwlink/?LinkId=317362).  
   
-> [!NOTE]  
+> [!NOTE]
 >  As a provider that is compliant with the OLAP section of the OLE DB specification dated March 1999 (2.6), [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] supports the intrinsic member properties listed in this topic.  
->   
+> 
 >  Providers other than [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)][!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] may support additional intrinsic member properties. For more information about the intrinsic member properties supported by other providers, refer to the documentation that comes with those providers.  
   
 ## Types of Member Properties  
@@ -92,7 +79,7 @@ ms.workload: "On Demand"
  The following table lists the non-context sensitive intrinsic properties supported by [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].  
   
 > [!NOTE]  
->  Columns in the MEMBERS schema rowset support the intrinsic member properties listed in the following table. For more information about the **MEMBERS** schema rowset, see [MDSCHEMA_MEMBERS Rowset](../../../analysis-services/schema-rowsets/ole-db-olap/mdschema-members-rowset.md).  
+>  Columns in the MEMBERS schema rowset support the intrinsic member properties listed in the following table. For more information about the **MEMBERS** schema rowset, see [MDSCHEMA_MEMBERS Rowset](https://docs.microsoft.com/bi-reference/schema-rowsets/ole-db-olap/mdschema-members-rowset).  
   
 |Property|Description|  
 |--------------|-----------------|  

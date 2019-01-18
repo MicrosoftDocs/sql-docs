@@ -1,28 +1,18 @@
 ---
 title: "Tools and applications used in Analysis Services | Microsoft Docs"
-ms.custom: ""
-ms.date: "05/11/2017"
-ms.prod: analysis-services
-ms.prod_service: "analysis-services, azure-analysis-services"
-ms.service: ""
-ms.component: ""
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
-  
-ms.component: multidimensional-tabular
-ms.component: data-mining
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
-ms.assetid: 0ddb3b7a-7464-4d04-8659-11cb2e4cf3c3
-caps.latest.revision: 17
-author: "Minewiskan"
-ms.author: "owend"
-manager: "kfile"
-ms.workload: "On Demand"
+ms.date: 05/08/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom:
+ms.topic: conceptual
+ms.author: owend
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
 ---
 # Tools and applications used in Analysis Services
 [!INCLUDE[ssas-appliesto-sqlas-aas](../includes/ssas-appliesto-sqlas-aas.md)]
+
   Find the tools and applications you'll need for building Analysis Services models and managing deployed databases.  
   
 ## Analysis Services Model Designers  

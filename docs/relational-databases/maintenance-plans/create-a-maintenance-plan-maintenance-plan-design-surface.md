@@ -2,24 +2,17 @@
 title: "Create a Maintenance Plan (Maintenance Plan Design Surface) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "database-engine"
-ms.service: ""
-ms.component: "maintenance-plans"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: supportability
+ms.topic: conceptual
 helpviewer_keywords: 
   - "Maintenance Plan Design Surface"
 ms.assetid: 2ef803ee-a9f8-454a-ad63-fedcbe6838d1
-caps.latest.revision: 10
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-ms.workload: "On Demand"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ---
 # Create a Maintenance Plan (Maintenance Plan Design Surface)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -84,7 +77,7 @@ ms.workload: "On Demand"
      Displays the **Reporting and Logging** dialog box. See below for more information on this dialog box.  
   
      **Servers**  
-     Display the **Servers** dialog box, which is used to select the servers where the subplan tasks will be run. This option is enabled only on master servers in multiserver environments. For more information, see [Create a Multiserver Environment](http://msdn.microsoft.com/library/edc2b60d-15da-40a1-8ba3-f1d473366ee6) and [Maintenance Plan &#40;Servers&#41;](../../relational-databases/maintenance-plans/maintenance-plan-servers.md).  
+     Display the **Servers** dialog box, which is used to select the servers where the subplan tasks will be run. This option is enabled only on master servers in multiserver environments. For more information, see [Create a Multiserver Environment](../../ssms/agent/create-a-multiserver-environment.md) and [Maintenance Plan &#40;Servers&#41;](../../relational-databases/maintenance-plans/maintenance-plan-servers.md).  
   
      **Name**  
      Display the maintenance plan name. For new maintenance plans, the name is specified in a dialog box before the maintenance plan designer opens. To rename a maintenance plan, right-click the plan in Object Explorer, and then click **Rename**.  
@@ -202,7 +195,7 @@ ms.workload: "On Demand"
   
     3.  In the **Connection Properties** dialog box, in the **Connection name** box, enter the name of the connection you are creating.  
   
-    4.  Under **Specify the following to connect to SQL Server data**, in the **Select or enter a server name** box, either enter the name of the SQL server you want to use or click the ellipsis **(…)** and select a server in the **SQL Server** dialog box. If you select a server from the **SQL Server** dialog box, click **OK**.  
+    4.  Under **Specify the following to connect to SQL Server data**, in the **Select or enter a server name** box, either enter the name of the SQL server you want to use or click the ellipsis **(...)** and select a server in the **SQL Server** dialog box. If you select a server from the **SQL Server** dialog box, click **OK**.  
   
     5.  Under **Enter information to log on to the server**, select either **Use Windows NT Integrated security** or **Use a specific user name and password**. If you elect to use a specific user name and password, enter that information in the **User name** and **Password** boxes, respectively.  
   
@@ -218,7 +211,7 @@ ms.workload: "On Demand"
   
         1.  If you select **Generate a text file report**, select either **Create a new file** or **Append to file**.  
   
-        2.  Depending on the selection above, enter the name and full path of the new file or file to be appended by entering the information in the **Folder** or **File name** boxes. Alternately, click on the ellipsis **(…)** and select the path to the folder or file name from the **Locate Folder –***server_name* or **Locate Database Files –***server_name* dialog boxes.  
+        2.  Depending on the selection above, enter the name and full path of the new file or file to be appended by entering the information in the **Folder** or **File name** boxes. Alternately, click on the ellipsis **(...)** and select the path to the folder or file name from the **Locate Folder -**_server\_name_ or **Locate Database Files -**_server\_name_ dialog boxes.  
   
         3.  If you select **Send report to an email recipient**, on the **Agent operator** list, select the recipient of the emailed report.  
   
@@ -233,7 +226,7 @@ ms.workload: "On Demand"
   
 12. To view the results in the log file viewer, in **Object Explorer**, right-click either the **Maintenance Plans** folder or the specific maintenance plan and select **View History**.  
   
-     The following options are available on the **Log File Viewer –***server_name* dialog box.  
+     The following options are available on the **Log File Viewer -**_server\_name_ dialog box.  
   
      **Load Log**  
      Open a dialog box where you can specify a log file to load.  

@@ -2,16 +2,11 @@
 title: "Search for Words Close to Another Word with NEAR | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-non-specified"
-ms.prod_service: "database-engine, sql-database"
-ms.service: ""
-ms.component: "search"
+ms.prod: sql
+ms.prod_service: "search, sql-database"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "dbe-search"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: search
+ms.topic: conceptual
 dev_langs: 
   - "TSQL"
 helpviewer_keywords: 
@@ -23,11 +18,10 @@ helpviewer_keywords:
   - "full-text queries [SQL Server], proximity"
   - "queries [full-text search], proximity"
 ms.assetid: 87520646-4865-49ae-8790-f766b80a41f3
-caps.latest.revision: 65
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-ms.workload: "On Demand"
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Search for Words Close to Another Word with NEAR
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -60,11 +54,11 @@ The basic syntax of **NEAR** is:
   
  {  
   
- *search_term* [ ,…*n* ]  
+ *search_term* [ ,...*n* ]  
   
  |  
   
- (*search_term* [ ,…*n* ] ) [, <maximum_distance> [, <match_order> ] ]  
+ (*search_term* [ ,...*n* ] ) [, <maximum_distance> [, <match_order> ] ]  
   
  }  
   
@@ -113,15 +107,15 @@ GO
 ## Combine NEAR with other terms  
  You can combine NEAR with some other terms. You can use AND (&), OR (|), or AND NOT (&!) to combine a custom proximity term with another custom proximity term, a simple term, or a prefix term. For example:  
   
--   CONTAINS('NEAR((*term1*,*term2*),5) AND *term3*')  
+-   CONTAINS('NEAR((*term1*, *term2*),5) AND *term3*')  
   
--   CONTAINS('NEAR((*term1*,*term2*),5) OR *term3*')  
+-   CONTAINS('NEAR((*term1*, *term2*),5) OR *term3*')  
   
--   CONTAINS('NEAR((*term1*,*term2*),5) AND NOT *term3*')  
+-   CONTAINS('NEAR((*term1*, *term2*),5) AND NOT *term3*')  
   
--   CONTAINS('NEAR((*term1*,*term2*),5) AND NEAR((*term3*,*term4*),2)')  
+-   CONTAINS('NEAR((*term1*, *term2*),5) AND NEAR((*term3*, *term4*),2)')  
   
--   CONTAINS('NEAR((*term1*,*term2*),5) OR NEAR((*term3*,*term4*),2, TRUE)')  
+-   CONTAINS('NEAR((*term1*, *term2*),5) OR NEAR((*term3*, *term4*),2, TRUE)')  
   
  For example,  
   
@@ -129,7 +123,7 @@ GO
 CONTAINS(column_name, 'NEAR((term1, term2), 5, TRUE) AND term3')  
 ```  
   
- You can't combine NEAR with a generation term (ISABOUT …) or a weighted term (FORMSOF …).  
+ You can't combine NEAR with a generation term (ISABOUT ...) or a weighted term (FORMSOF ...).  
   
 ##  <a name="Additional_Considerations"></a> More info about proximity searches  
    

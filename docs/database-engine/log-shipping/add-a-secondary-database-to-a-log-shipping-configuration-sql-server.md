@@ -2,27 +2,19 @@
 title: "Add a Secondary Database to a Log Shipping Configuration (SQL Server) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-non-specified"
-ms.prod_service: "database-engine"
-ms.service: ""
-ms.component: "log-shipping"
+ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: high-availability
+ms.topic: conceptual
 helpviewer_keywords: 
   - "adding secondary databases"
   - "secondary databases [SQL Server], in log shipping"
   - "secondary data files [SQL Server], adding"
   - "log shipping [SQL Server], secondary databases"
 ms.assetid: b02eba13-f8e6-4684-b7e4-75ea038ea473
-caps.latest.revision: 20
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-ms.workload: "Inactive"
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
 ---
 # Add a Secondary Database to a Log Shipping Configuration (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -95,7 +87,7 @@ ms.workload: "Inactive"
   
 4.  On the primary server, execute [sp_add_log_shipping_primary_secondary](../../relational-databases/system-stored-procedures/sp-add-log-shipping-primary-secondary-transact-sql.md) to add the required information about the new secondary database to the primary server.  
   
-5.  On the secondary server, enable the copy and restore jobs. For more information, see [Disable or Enable a Job](http://msdn.microsoft.com/library/5041261f-0c32-4d4a-8bee-59a6c16200dd).  
+5.  On the secondary server, enable the copy and restore jobs. For more information, see [Disable or Enable a Job](../../ssms/agent/disable-or-enable-a-job.md).  
   
 ##  <a name="RelatedTasks"></a> Related Tasks  
   

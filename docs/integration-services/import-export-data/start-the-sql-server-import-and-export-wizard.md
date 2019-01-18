@@ -2,31 +2,25 @@
 title: "Start the SQL Server Import and Export Wizard | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/20/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "integration-services"
-ms.service: ""
-ms.component: "import-export-data"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: integration-services
+ms.topic: conceptual
 helpviewer_keywords: 
   - "SQL Server Import and Export Wizard"
   - "starting SQL Server Import and Export Wizard"
   - "Import and Export Wizard"
   - "starting Import and Export Wizard"
 ms.assetid: 5fc4f6d1-1f6f-444e-9aeb-827f85e1c405
-caps.latest.revision: 130
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
-ms.workload: "Active"
+manager: craigg
 ---
 # Start the SQL Server Import and Export Wizard
 
- > For content related to previous versions of SQL Server, see [Run the SQL Server Import and Export Wizard](https://msdn.microsoft.com/library/ms140052(SQL.120).aspx).
+  > [!div class="nextstepaction"]
+  > [Please share your feedback about the SQL Docs Table of Contents!](https://aka.ms/sqldocsurvey)
 
 Start the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Import and Export Wizard in one of the ways described in this topic to import data from and export data to any supported data source.
 

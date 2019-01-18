@@ -2,16 +2,11 @@
 title: "Restore Pages (SQL Server) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/15/2017"
-ms.prod: "sql-non-specified"
-ms.prod_service: "database-engine"
-ms.service: ""
-ms.component: "backup-restore"
+ms.prod: sql
+ms.prod_service: backup-restore
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "dbe-backup-restore"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: backup-restore
+ms.topic: conceptual
 f1_keywords: 
   - "sql13.swb.restorepage.general.f1"
 helpviewer_keywords: 
@@ -22,11 +17,9 @@ helpviewer_keywords:
   - "pages [SQL Server], damaged"
   - "restoring [SQL Server], pages"
 ms.assetid: 07e40950-384e-4d84-9ac5-84da6dd27a91
-caps.latest.revision: 67
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-ms.workload: "On Demand"
+author: mashamsft
+ms.author: mathoma
+manager: craigg
 ---
 # Restore Pages (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -188,7 +181,7 @@ ms.workload: "On Demand"
     |-----------------------|-----------|  
     |**msdb..suspect_pages**|[Manage the suspect_pages Table &#40;SQL Server&#41;](../../relational-databases/backup-restore/manage-the-suspect-pages-table-sql-server.md)|  
     |Error log|[View the SQL Server Error Log &#40;SQL Server Management Studio&#41;](../../relational-databases/performance/view-the-sql-server-error-log-sql-server-management-studio.md)|  
-    |Event traces|[Monitor and Respond to Events](http://msdn.microsoft.com/library/f7fbe155-5b68-4777-bc71-a47637471f32)|  
+    |Event traces|[Monitor and Respond to Events](../../ssms/agent/monitor-and-respond-to-events.md)|  
     |DBCC|[DBCC &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-transact-sql.md)|  
     |WMI provider|[WMI Provider for Server Events Concepts](../../relational-databases/wmi-provider-server-events/wmi-provider-for-server-events-concepts.md)|  
   

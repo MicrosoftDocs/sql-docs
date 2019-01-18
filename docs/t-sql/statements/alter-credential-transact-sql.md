@@ -1,16 +1,9 @@
----
+﻿---
 title: "ALTER CREDENTIAL (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "08/19/2015"
-ms.prod: "sql-non-specified"
-ms.prod_service: "sql-database"
-ms.service: ""
-ms.component: "t-sql|statements"
-ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.date: 09/07/2018
+ms.prod: sql
+ms.technology: t-sql
 ms.topic: "language-reference"
 f1_keywords: 
   - "ALTER CREDENTIAL"
@@ -24,18 +17,18 @@ helpviewer_keywords:
   - "authentication [SQL Server], credentials"
   - "ALTER CREDENTIAL statement"
 ms.assetid: b08899a6-c09e-4af4-91aa-a978ada79264
-caps.latest.revision: 27
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "craigg"
-ms.workload: "Inactive"
+author: VanMSFT
+ms.author: vanto
+manager: craigg
+monikerRange: "=azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017"
 ---
 # ALTER CREDENTIAL (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
 
   Changes the properties of a credential.  
-  
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+
+> [!IMPORTANT]
+> "Should do" info as best practice; "must do" to complete task ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
@@ -53,7 +46,10 @@ ALTER CREDENTIAL credential_name WITH IDENTITY = 'identity_name'
  Specifies the name of the account to be used when connecting outside the server.  
   
  SECRET **='***secret***'**  
- Specifies the secret required for outgoing authentication. *secret* is optional.  
+ Specifies the secret required for outgoing authentication. *secret* is optional.
+  
+> [!IMPORTANT]
+> Azure SQL Database only supports Azure Key Vault and Shared Access Signature identities. Windows user identities are not supported.
   
 ## Remarks  
  When a credential is changed, the values of both *identity_name* and *secret* are reset. If the optional SECRET argument is not specified, the value of the stored secret will be set to NULL.  

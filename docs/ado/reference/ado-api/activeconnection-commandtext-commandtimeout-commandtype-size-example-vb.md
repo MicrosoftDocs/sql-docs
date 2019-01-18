@@ -1,17 +1,12 @@
 ---
 title: "Stored Procedure Properties Example (VB) | Microsoft Docs"
-ms.prod: "sql-non-specified"
-ms.prod_service: "drivers"
-ms.service: ""
-ms.component: "ado"
-ms.technology:
-  - "drivers"
+ms.prod: sql
+ms.prod_service: connectivity
+ms.technology: connectivity
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 dev_langs: 
   - "VB"
 helpviewer_keywords: 
@@ -21,11 +16,9 @@ helpviewer_keywords:
   - "ActiveConnection property [ADO], Visual Basic example"
   - "Direction property [ADO], Visual Basic example"
 ms.assetid: dade4531-0bcc-4a52-8f86-b110ba2a3f9d
-caps.latest.revision: 10
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
-ms.workload: "Inactive"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # ActiveConnection, CommandText, CommandTimeout, CommandType, Size, and Direction Properties Example (VB)
 This example uses the [ActiveConnection](../../../ado/reference/ado-api/activeconnection-property-ado.md), [CommandText](../../../ado/reference/ado-api/commandtext-property-ado.md), [CommandTimeout](../../../ado/reference/ado-api/commandtimeout-property-ado.md), [CommandType](../../../ado/reference/ado-api/commandtype-property-ado.md), [Size](../../../ado/reference/ado-api/size-property-ado-parameter.md), and [Direction](../../../ado/reference/ado-api/direction-property.md) properties to execute a stored procedure.  

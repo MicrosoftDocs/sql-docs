@@ -2,16 +2,11 @@
 title: "SQLDataSources Function | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
-ms.prod_service: "drivers"
-ms.service: ""
-ms.component: "odbc"
+ms.prod: sql
+ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "drivers"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: connectivity
+ms.topic: conceptual
 apiname: 
   - "SQLDataSources"
 apilocation: 
@@ -22,11 +17,9 @@ f1_keywords:
 helpviewer_keywords: 
   - "SQLDataSources function [ODBC]"
 ms.assetid: 3f63b1b4-e70e-44cd-96c6-6878d50d0117
-caps.latest.revision: 22
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
-ms.workload: "Inactive"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # SQLDataSources Function
 **Conformance**  
@@ -40,14 +33,14 @@ ms.workload: "Inactive"
 ```  
   
 SQLRETURN SQLDataSources(  
-     SQLHENV          EnvironmentHandle,  
-     SQLUSMALLINT     Direction,  
-     SQLCHAR *        ServerName,  
-     SQLSMALLINT      BufferLength1,  
-     SQLSMALLINT *    NameLength1Ptr,  
-     SQLCHAR *        Description,  
-     SQLSMALLINT      BufferLength2,  
-     SQLSMALLINT *    NameLength2Ptr);  
+     SQLHENV          EnvironmentHandle,  
+     SQLUSMALLINT     Direction,  
+     SQLCHAR *        ServerName,  
+     SQLSMALLINT      BufferLength1,  
+     SQLSMALLINT *    NameLength1Ptr,  
+     SQLCHAR *        Description,  
+     SQLSMALLINT      BufferLength2,  
+     SQLSMALLINT *    NameLength2Ptr);  
 ```  
   
 ## Arguments  
@@ -91,7 +84,7 @@ SQLRETURN SQLDataSources(
   
 |SQLSTATE|Error|Description|  
 |--------------|-----------|-----------------|  
-|01000|General warning|(DM) Driver Manager–specific informational message. (Function returns SQL_SUCCESS_WITH_INFO.)|  
+|01000|General warning|(DM) Driver Manager-specific informational message. (Function returns SQL_SUCCESS_WITH_INFO.)|  
 |01004|String data, right truncated|(DM) The buffer \**ServerName* was not large enough to return the complete data source name. Therefore, the name was truncated. The length of the entire data source name is returned in \**NameLength1Ptr*. (Function returns SQL_SUCCESS_WITH_INFO.)<br /><br /> (DM) The buffer \**Description* was not large enough to return the complete driver description. Therefore, the description was truncated. The length of the untruncated data source description is returned in **NameLength2Ptr*. (Function returns SQL_SUCCESS_WITH_INFO.)|  
 |HY000|General error|(DM) An error occurred for which there was no specific SQLSTATE and for which no implementation-specific SQLSTATE was defined. The error message returned by **SQLGetDiagRec** in the *\*MessageText* buffer describes the error and its cause.|  
 |HY001|Memory allocation error|(DM) The Driver Manager was unable to allocate memory that is required to support execution or completion of the function.|  

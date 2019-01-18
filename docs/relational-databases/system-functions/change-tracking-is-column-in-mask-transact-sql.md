@@ -2,15 +2,10 @@
 title: "CHANGE_TRACKING_IS_COLUMN_IN_MASK (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/08/2016"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.service: ""
-ms.component: "system-functions"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: system-objects
 ms.topic: "language-reference"
 f1_keywords: 
   - "CHANGE_TRACKING_IS_COLUMN_IN_MASK_TSQL"
@@ -21,16 +16,15 @@ helpviewer_keywords:
   - "change tracking [SQL Server], CHANGE_TRACKING_IS_COLUMN_IN_MASK"
   - "CHANGE_TRACKING_IS_COLUMN_IN_MASK"
 ms.assetid: 649b370b-da54-4915-919d-1b597a39d505
-caps.latest.revision: 15
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-ms.workload: "Inactive"
+author: "rothja"
+ms.author: "jroth"
+manager: craigg
+monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # CHANGE_TRACKING_IS_COLUMN_IN_MASK (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Interprets the SYS_CHANGE_COLUMNS value that is returned by the CHANGETABLE(CHANGES …) function. This enables an application to determine whether the specified column is included in the values that are returned for SYS_CHANGE_COLUMNS.  
+  Interprets the SYS_CHANGE_COLUMNS value that is returned by the CHANGETABLE(CHANGES ...) function. This enables an application to determine whether the specified column is included in the values that are returned for SYS_CHANGE_COLUMNS.  
   
  ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   

@@ -2,15 +2,10 @@
 title: "dbo.sysjobhistory (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/03/2016"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "database-engine"
-ms.service: ""
-ms.component: "system-tables"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: system-objects
 ms.topic: "language-reference"
 f1_keywords: 
   - "dbo.sysjobhistory_TSQL"
@@ -22,11 +17,9 @@ dev_langs:
 helpviewer_keywords: 
   - "sysjobhistory system table"
 ms.assetid: 1b1fcdbb-2af2-45e6-bf3f-e8279432ce13
-caps.latest.revision: 21
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-ms.workload: "On Demand"
+author: "stevestein"
+ms.author: "sstein"
+manager: craigg
 ---
 # dbo.sysjobhistory (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,7 +37,7 @@ ms.workload: "On Demand"
 |**sql_message_id**|**int**|ID of any [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] error message returned if the job failed.|  
 |**sql_severity**|**int**|Severity of any [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] error.|  
 |**message**|**nvarchar(4000)**|Text, if any, of a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] error.|  
-|**run_status**|**int**|Status of the job execution:<br /><br /> **0** = Failed<br /><br /> **1** = Succeeded<br /><br /> **2** = Retry<br /><br /> **3** = Canceled|  
+|**run_status**|**int**|Status of the job execution:<br /><br /> **0** = Failed<br /><br /> **1** = Succeeded<br /><br /> **2** = Retry<br /><br /> **3** = Canceled<br /><br /> **4** = In Progress|  
 |**run_date**|**int**|Date the job or step started execution. For an In Progress history, this is the date/time the history was written.|  
 |**run_time**|**int**|Time the job or step started.|  
 |**run_duration**|**int**|Elapsed time in the execution of the job or step in **HHMMSS** format.|  

@@ -2,16 +2,11 @@
 title: "Microsoft Excel Data Types | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
-ms.prod_service: "drivers"
-ms.service: ""
-ms.component: "odbc"
+ms.prod: sql
+ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "drivers"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: connectivity
+ms.topic: conceptual
 helpviewer_keywords: 
   - "data types [ODBC], Excel driver"
   - "Excel data types [ODBC]"
@@ -20,11 +15,9 @@ helpviewer_keywords:
   - "ODBC desktop database drivers [ODBC], Excel driver"
   - "Excel driver [ODBC], data types"
 ms.assetid: 7b44c8e5-0bc3-4912-8a5d-56f4d5562fe6
-caps.latest.revision: 5
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
-ms.workload: "On Demand"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # Microsoft Excel Data Types
 The following table shows how Microsoft Excel driver data types are mapped to ODBC SQL data types. The Microsoft Excel driver assigns these data types to columns in Microsoft Excel tables based on the data in the column.  

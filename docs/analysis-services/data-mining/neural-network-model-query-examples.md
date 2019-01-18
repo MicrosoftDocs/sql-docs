@@ -1,28 +1,14 @@
 ---
 title: "Neural Network Model Query Examples | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: analysis-services
-ms.prod_service: "analysis-services"
-ms.service: ""
-ms.component: ""
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
-  
-ms.component: data-mining
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "neural network algorithms [Analysis Services]"
-  - "content queries [DMX]"
-  - "neural network model [Analysis Services]"
-ms.assetid: 81b06183-620f-4e0c-bc10-532e6a1f0829
-caps.latest.revision: 29
-author: "Minewiskan"
-ms.author: "owend"
-manager: "kfile"
-ms.workload: "Inactive"
+ms.date: 05/08/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: data-mining
+ms.topic: conceptual
+ms.author: owend
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
 ---
 # Neural Network Model Query Examples
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -202,7 +188,7 @@ NATURAL PREDICTION JOIN
   
 |Predicted Orders|Probability|  
 |----------------------|-----------------|  
-|364|0.9532…|  
+|364|0.9532...|  
   
  The predicted sales volume is higher than the current range of sales for Tuesday, and the probability of the prediction is very high. However, you might want to create multiple predictions by using a batch process to test a variety of hypotheses on the model.  
   

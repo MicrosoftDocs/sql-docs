@@ -1,40 +1,14 @@
 ---
 title: "Attribute Relationships | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: analysis-services
-ms.prod_service: "analysis-services"
-ms.service: ""
-ms.component: ""
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
-  
-
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-applies_to: 
-  - "SQL Server 2016 Preview"
-helpviewer_keywords: 
-  - "member properties [Analysis Services], attribute relationships"
-  - "security [Analysis Services], properties"
-  - "PROPERTIES keyword"
-  - "storage [Analysis Services], attribute relationships"
-  - "natural hierarchies [Analysis Services]"
-  - "dimensions [Analysis Services], member properties"
-  - "queries [MDX], attribute relationships"
-  - "user-defined hierarchies [Analysis Services]"
-  - "attributes [Analysis Services], relationships"
-  - "member properties [Analysis Services]"
-  - "members [Analysis Services], attribute relationships"
-  - "storing data [Analysis Services], attribute relationships"
-  - "relationships [Analysis Services], attributes"
-ms.assetid: 2491422a-4cf5-4b23-b6ab-289222b22ce8
-caps.latest.revision: 45
-author: "Minewiskan"
-ms.author: "owend"
-manager: "kfile"
-ms.workload: "Inactive"
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: olap
+ms.topic: conceptual
+ms.author: owend
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
 ---
 # Attribute Relationships
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -84,7 +58,7 @@ ms.workload: "Inactive"
   
 -   The City attribute as an attribute relationship to the Customer attribute.  
   
- For navigating data in the cube, you can also create a user-defined hierarchy that does not represent a natural hierarchy in the data (which is called an *ad hoc* or *reporting* hierarchy). For example, you could create a user-defined hierarchy based on `{Age, Gender}`. Users do not see any difference in how the two hierarchies behave, although the natural hierarchy benefits from aggregating and indexing structures — hidden from the user — that account for the natural relationships in the source data.  
+ For navigating data in the cube, you can also create a user-defined hierarchy that does not represent a natural hierarchy in the data (which is called an *ad hoc* or *reporting* hierarchy). For example, you could create a user-defined hierarchy based on `{Age, Gender}`. Users do not see any difference in how the two hierarchies behave, although the natural hierarchy benefits from aggregating and indexing structures - hidden from the user - that account for the natural relationships in the source data.  
   
  The **SourceAttribute** property of a level determines which attribute is used to describe the level. The **KeyColumns** property on the attribute specifies the column in the data source view that supplies the members. The **NameColumn** property on the attribute can specify a different name column for the members.  
   

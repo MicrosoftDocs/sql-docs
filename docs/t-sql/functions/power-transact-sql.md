@@ -2,15 +2,10 @@
 title: "POWER (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/13/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
-ms.service: ""
-ms.component: "t-sql|functions"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: t-sql
 ms.topic: "language-reference"
 f1_keywords: 
   - "POWER_TSQL"
@@ -20,11 +15,10 @@ dev_langs:
 helpviewer_keywords: 
   - "POWER function"
 ms.assetid: 0fd34494-90b9-4559-8011-a8c1b9f40239
-caps.latest.revision: 41
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "craigg"
-ms.workload: "On Demand"
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # POWER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -47,7 +41,18 @@ POWER ( float_expression , y )
  Is the power to which to raise *float_expression*. *y* can be an expression of the exact numeric or approximate numeric data type category, except for the **bit** data type.  
   
 ## Return Types  
- Returns the same type as submitted in *float_expression*. For example, if a **decimal**(2,0) is submitted as *float_expression*, the result returned is **decimal**(2,0).  
+ The return type depends on the input type of *float_expression*:
+ 
+|Input type|Return type|  
+|----------|-----------|  
+|**float**, **real**|**float**|
+|**decimal(*p*, *s*)**|**decimal(38, *s*)**|
+|**int**, **smallint**, **tinyint**|**int**|
+|**bigint**|**bigint**|
+|**money**, **smallmoney**|**money**|
+|**bit**, **char**, **nchar**, **varchar**, **nvarchar**|**float**|
+ 
+If the result does not fit in the return type, an arithmetic overflow error occurs.
   
 ## Examples  
   

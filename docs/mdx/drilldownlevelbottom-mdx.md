@@ -1,32 +1,17 @@
 ---
 title: "DrilldownLevelBottom (MDX) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/02/2016"
-ms.prod: analysis-services
-ms.prod_service: "analysis-services"
-ms.service: ""
-ms.component: ""
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
-  
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "DRILLDOWNLEVELBOTTOM"
-dev_langs: 
-  - "kbMDX"
-helpviewer_keywords: 
-  - "DrilldownLevelBottom function"
-ms.assetid: c00a6a02-e618-4713-805a-870e042f2d51
-caps.latest.revision: 37
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-ms.workload: "Inactive"
+ms.date: 06/04/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: mdx
+ms.topic: reference
+ms.author: owend
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
 ---
 # DrilldownLevelBottom (MDX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
 
   Drills down the bottommost members of a set, at a specified level, to one level below.  
   
@@ -59,7 +44,7 @@ DrilldownLevelBottom(Set_Expression, Count [,[<Level_Expression>] [,[<Numeric_Ex
   
  The **DrilldownLevelBottom** function is similar to the [DrilldownLevel](../mdx/drilldownlevel-mdx.md) function, but instead of including all children for each member at the specified level, the **DrilldownLevelBottom** function returns the bottom-most number of child members.  
   
- Querying the XMLA property MdpropMdxDrillFunctions enables you to verify the level of support that the server provides for the drilling functions; see [Supported XMLA Properties &#40;XMLA&#41;](../analysis-services/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties.md) for details.  
+ Querying the XMLA property MdpropMdxDrillFunctions enables you to verify the level of support that the server provides for the drilling functions; see [Supported XMLA Properties &#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties) for details.  
   
 ## Examples  
  The following example returns the bottom three children of the Product Category level, based on the default measure. In the Adventure Works sample cube, the bottom three children for Accessories are Tires and Tubes, Pumps, and Panniers. In Management Studio, in the MDX query window, you can navigate to Products | Product Categories | Members | All Products | Accessories to view the complete list. You can increase the Count argument to return more members.  

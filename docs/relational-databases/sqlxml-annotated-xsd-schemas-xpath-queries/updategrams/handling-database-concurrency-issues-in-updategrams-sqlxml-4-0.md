@@ -2,15 +2,10 @@
 title: "Handling Database Concurrency Issues in Updategrams (SQLXML 4.0) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/16/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.service: ""
-ms.component: "sqlxml"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "dbe-xml"
-ms.tgt_pltfrm: ""
+ms.technology: xml
 ms.topic: "reference"
 helpviewer_keywords: 
   - "<before> block"
@@ -23,11 +18,10 @@ helpviewer_keywords:
   - "concurrency [SQLXML]"
   - "intermediate concurrency protection [SQLXML]"
 ms.assetid: d4b908d1-b25b-4ad9-8478-9cd882e8c44e
-caps.latest.revision: 26
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
-ms.workload: "Inactive"
+manager: craigg
+monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Handling Database Concurrency Issues in Updategrams (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

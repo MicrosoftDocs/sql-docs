@@ -1,25 +1,14 @@
 ---
 title: "Lesson 12: Create Roles | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/27/2017"
-ms.prod: analysis-services
-ms.prod_service: "analysis-services, azure-analysis-services"
-ms.service: ""
-ms.component: ""
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
-  
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
-applies_to: 
-  - "SQL Server 2016"
-ms.assetid: 984face4-00fc-46d3-8ae1-9755bf737bdf
-caps.latest.revision: 17
-author: "Minewiskan"
-ms.author: "owend"
-manager: "kfile"
-ms.workload: "On Demand"
+ms.date: 05/08/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: tabular-models
+ms.topic: tutorial
+ms.author: owend
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
 ---
 # Lesson 11: Create Roles
 [!INCLUDE[ssas-appliesto-sql2016-later-aas](../includes/ssas-appliesto-sql2016-later-aas.md)]
@@ -31,11 +20,11 @@ In this lesson, you will create roles. Roles provide model database object and d
   
 You will create three roles:  
   
--   **Sales Manager** – This role can include users in your organization for which you want to have Read permission to all model objects and data.  
+-   **Sales Manager** - This role can include users in your organization for which you want to have Read permission to all model objects and data.  
   
--   **Sales Analyst US** – This role can include users in your organization for which you want only to be able to browse data related to sales in the United States. For this role, you will use a DAX formula to define a *Row Filter*, which restricts members to browse data only for the United States.  
+-   **Sales Analyst US** - This role can include users in your organization for which you want only to be able to browse data related to sales in the United States. For this role, you will use a DAX formula to define a *Row Filter*, which restricts members to browse data only for the United States.  
   
--   **Administrator** – This role can include users for which you want to have Administrator permission, which allows unlimited access and permissions to perform administrative tasks on the model database.  
+-   **Administrator** - This role can include users for which you want to have Administrator permission, which allows unlimited access and permissions to perform administrative tasks on the model database.  
   
 Because Windows user and group accounts in your organization are unique, you can add accounts from your particular organization to members. However, for this tutorial, you can also leave the members blank. You will still be able to test the effect of each role later in Lesson 12: Analyze in Excel.  
   
@@ -74,7 +63,7 @@ This topic is part of a tabular modeling tutorial, which should be completed in 
     =DimGeography[CountryRegionCode] = "US" 
     ```
     
-    A Row Filter formula must resolve to a Boolean (TRUE/FALSE) value. With this formula, you are specifying that only rows with the Country Region Code value of “US” be visible to the user.  
+    A Row Filter formula must resolve to a Boolean (TRUE/FALSE) value. With this formula, you are specifying that only rows with the Country Region Code value of "US" be visible to the user.  
     ![as-tabular-lesson11-role-filter](../analysis-services/media/as-tabular-lesson11-role-filter.png) 
   
 6.  Optional: Click on the **Members** tab, and then click **Add**. In the **Select Users or Groups** dialog box, enter the Windows users or groups from your organization you want to include in the role.  

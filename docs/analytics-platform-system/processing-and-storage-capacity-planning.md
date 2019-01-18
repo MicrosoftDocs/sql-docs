@@ -1,38 +1,31 @@
 ---
-title: "Analytics Platform processing and storage capacity"
-author: "barbkess" 
-ms.author: "barbkess"
-manager: "jhubbard"	  
-ms.prod: "analytics-platform-system"
-ms.prod_service: "mpp-data-warehouse"
-ms.service: ""
-ms.component:
-ms.suite: "sql"
-ms.custom: ""
-ms.technology: "mpp-data-warehouse"
-description: "Your business requirements determine the number of Data Scale Units, and the size of the Compute node disks that you need in your Analytics Platform System (APS) appliance."
-ms.date: "10/20/2016"
-ms.topic: "article"
-ms.assetid: 2c32fec4-e97c-4797-b7f8-7c8d4301b7b6
-caps.latest.revision: 7
-
+title: Processing and storage capacity - Analytics Platform System | Microsoft Docs
+description: Your business requirements determine the number of Data Scale Units, and the size of the Compute node disks that you need in your Analytics Platform System (APS) appliance.
+author: mzaman1 
+manager: craigg
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
 ---
 
-# Analytics Platform System processing and storage capacity
+# Processing and storage capacity in Analytics Platform System
 Your business requirements determine the number of Data Scale Units, and the size of the Compute node disks that you need in your Analytics Platform System (APS) appliance. Use these processing and storage calculations to guide your capacity purchasing and planning decisions.  
   
   
 ## <a name="section1"></a>Planning for processing capacity  
 Query performance for SQL Server Parallel Data Warehouse (PDW) depends heavily on the number of CPU cores working on your data in parallel. Within limits, increasing parallelism improves the massively parallel processing (MPP) query performance. Even if your data size is relatively small, the power of the MPP query engine is enhanced by having greater parallelism.  
   
-For example, an appliance with 12 Compute nodes has 192 CPU cores that process your data in parallel. That’s 192-way parallelism! An appliance with 56 Compute nodes has 896 cores all working in parallel. This magnitude of parallelism is not achievable without MPP computing.  
+For example, an appliance with 12 Compute nodes has 192 CPU cores that process your data in parallel. That's 192-way parallelism! An appliance with 56 Compute nodes has 896 cores all working in parallel. This magnitude of parallelism is not achievable without MPP computing.  
   
 As the number of Compute nodes increases, scaling out the appliance requires adding more than one Compute node at a time to get a noticeable benefit. Hardware vendors support only specific configurations of Data Scale Units to ensure that the benefit of scaling the appliance outweighs the cost of redistributing the data across more Compute nodes.  
   
 ### Data Scale Unit configuration examples - HPE  
 These are examples of the supported HPE configurations for Data Scale Uunits. They might vary from the most current supported configurations, but are provided as an example of how to increase capacity by approximately 20 percent.  
   
-Uplift is the percent capacity gain by increasing the Data Scale Uunits from one row to the next. For example, increasing the Data Scale units from 6 to 8 gives a 33% uplift in CPU cores and memory.  It also increases the disk space which isn’t shown in this table.  
+Uplift is the percent capacity gain by increasing the Data Scale Uunits from one row to the next. For example, increasing the Data Scale units from 6 to 8 gives a 33% uplift in CPU cores and memory.  It also increases the disk space which isn't shown in this table.  
   
 |Data Scale units|Compute nodes|CPU cores|Memory (GB)|Uplift|  
 |--------------------|-----------------|-------------|-----------------|----------|  
@@ -60,10 +53,10 @@ Explanation:
   
 -   **Memory** per appliance. Each core has 256 GB memory.  
   
-### Data Scale unit configuration examples – Dell, Quanta  
+### Data Scale unit configuration examples - Dell, Quanta  
 These are examples of the supported Dell and Quanta configurations for Data Scale Uunits. They might vary from the most current supported configurations, but are provided as an example of how to increase capacity by approximately 20 percent.  
   
-Uplift is the percent capacity gain by increasing the Data Scale Uunits from one row to the next. For example, increasing the Data Scale units from 6 to 8 gives a 33% uplift in CPU cores and memory. It also increases the disk space which isn’t shown in this table.  
+Uplift is the percent capacity gain by increasing the Data Scale Uunits from one row to the next. For example, increasing the Data Scale units from 6 to 8 gives a 33% uplift in CPU cores and memory. It also increases the disk space which isn't shown in this table.  
   
 |Data Scale Units|Compute Nodes|CPU Cores|Memory (GB)|Uplift|  
 |--------------------|-----------------|-------------|-----------------|----------|  
@@ -87,14 +80,14 @@ This table estimates that you could load and store up to 6 petabytes of uncompre
 |----------|--------------|------------------------------------------|----------------------------------|------------------------------------------|------------------------------------------------|-----------------|-----------------------------------------------------|  
 |HPE|1 TB|16 TB|8|128 TB|320 TB|7|2,240 TB|  
 |HPE|2 TB|32 TB|8|256 TB|640 TB|7|4,480 TB|  
-|HPE|3 TB|48 TB|8|384 TB|960 TB|7|6,720 TB|  
+|HPE|4 TB|64 TB|8|512 TB|1280 TB|7|8,960 TB|  
 |DELL|1 TB|16 TB|9|144 TB|360 TB|6|2,160 TB|  
 |DELL|2 TB|32 TB|9|288 TB|720 TB|6|4,320 TB|  
-|DELL|3 TB|48 TB|9|432 TB|1080 TB|6|6,480 TB|  
+|DELL|4 TB|64 TB|9|576 TB|1440 TB|6|8,640 TB|   
   
 Explanation:  
   
--   **Drive size** is 1, 2, or 3 TB for each Hardware vendor.  
+-   **Drive size** is 1, 2, or 4 TB for each Hardware vendor.  
   
 -   **Physical data storage per Compute node** = (Drive size) * (16 disks per Compute node). The mirrored disks are not included since they are for redundancy.  
   

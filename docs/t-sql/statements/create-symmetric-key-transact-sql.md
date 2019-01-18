@@ -2,15 +2,10 @@
 title: "CREATE SYMMETRIC KEY (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "09/12/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.service: ""
-ms.component: "t-sql|statements"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: t-sql
 ms.topic: "language-reference"
 f1_keywords: 
   - "CREATE SYMMETRIC KEY"
@@ -25,11 +20,9 @@ helpviewer_keywords:
   - "symmetric keys [SQL Server], creating"
   - "symmetric keys [SQL Server]"
 ms.assetid: b5d23572-b79d-4cf1-9eef-d648fa3b1358
-caps.latest.revision: 72
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "craigg"
-ms.workload: "On Demand"
+author: VanMSFT
+ms.author: vanto
+manager: craigg
 ---
 # CREATE SYMMETRIC KEY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -83,13 +76,13 @@ CREATE SYMMETRIC KEY key_name
 > [!NOTE]  
 >  This option is not available in a contained database.  
   
- KEY_SOURCE **='***pass_phrase***'**  
+ KEY_SOURCE **='**_pass\_phrase_**'**  
  Specifies a pass phrase from which to derive the key.  
   
- IDENTITY_VALUE **='***identity_phrase***'**  
+ IDENTITY_VALUE **='**_identity\_phrase_**'**  
  Specifies an identity phrase from which to generate a GUID for tagging data that is encrypted with a temporary key.  
   
- PROVIDER_KEY_NAME**='***key_name_in_provider***'**  
+ PROVIDER_KEY_NAME**='**_key\_name\_in\_provider_**'**  
  Specifies the name referenced in the Extensible Key Management provider.  
   
 > [!NOTE]  

@@ -1,29 +1,17 @@
 ---
-title: "Lesson 4: Create data features using T-SQL  | Microsoft Docs"
-ms.custom: ""
-ms.date: "07/26/2016"
-ms.reviewer: 
-ms.suite: sql
-ms.prod: machine-learning-services
-ms.prod_service: machine-learning-services
-ms.component: 
-ms.technology: 
-  
-ms.tgt_pltfrm: ""
-ms.topic: "tutorial"
-applies_to: 
-  - "SQL Server 2016"
-dev_langs: 
-  - "R"
-  - "TSQL"
-ms.assetid: 5b2f4c44-6192-40df-abf1-fc983844f1d0
-caps.latest.revision: 10
-author: "jeannt"
-ms.author: "jeannt"
-manager: "jhubbard"
-ms.workload: "Inactive"
+title: Lesson 2 Create data features using R and T-SQL functions - SQL Server Machine Learning
+description: Tutorial showing how to add calculations to stored procedures for use in R machine learning models.
+ms.prod: sql
+ms.technology: machine-learning
+
+ms.date: 10/19/2018  
+ms.topic: tutorial
+author: HeidiSteen
+ms.author: heidist
+manager: cgronlun
 ---
-# Lesson 4: Create data features using T-SQL
+# Lesson 2: Create data features using R and T-SQL
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 This article is part of a tutorial for SQL developers on how to use R in SQL Server.
 
@@ -53,7 +41,7 @@ The function _fnCalculateDistance_ should have been downloaded and registered wi
 
 2. Right-click _fnCalculateDistance_, and select **Modify** to open the [!INCLUDE[tsql](../../includes/tsql-md.md)] script in a new query window.
   
-    ```SQL
+    ```sql
     CREATE FUNCTION [dbo].[fnCalculateDistance] (@Lat1 float, @Long1 float, @Lat2 float, @Long2 float)  
     -- User-defined function that calculates the direct distance between two geographical coordinates.  
     RETURNS float  
@@ -87,7 +75,7 @@ To add the computed values to a table that can be used for training the model, y
 
 1. Take a minute to review the code for the custom T-SQL function, _fnEngineerFeatures_, which should have been created for you as part of the preparation for this walkthrough.
   
-    ```SQL
+    ```sql
     CREATE FUNCTION [dbo].[fnEngineerFeatures] (  
     @passenger_count int = 0,  
     @trip_distance float = 0,  
@@ -117,7 +105,7 @@ To add the computed values to a table that can be used for training the model, y
 
 2.  To verify that this function works, use it to calculate the geographical distance for those trips where the metered distance was 0 but the pick-up and drop-off locations were different.
   
-    ```SQL
+    ```sql
         SELECT tipped, fare_amount, passenger_count,(trip_time_in_secs/60) as TripMinutes,
         trip_distance, pickup_datetime, dropoff_datetime,
         dbo.fnCalculateDistance(pickup_latitude, pickup_longitude,  dropoff_latitude, dropoff_longitude) AS direct_distance
@@ -130,8 +118,8 @@ To add the computed values to a table that can be used for training the model, y
 
 ## Next lesson
 
-[Lesson 5: Train and save a model using T-SQL](../r/sqldev-train-and-save-a-model-using-t-sql.md)
+[Lesson 3: Train and save a model using T-SQL](sqldev-train-and-save-a-model-using-t-sql.md)
 
 ## Previous lesson
 
-[Lesson 3: Explore and visualize the data](../tutorials/sqldev-explore-and-visualize-the-data.md)
+[Lesson 1: Explore and visualize the data using R and stored procedures](sqldev-explore-and-visualize-the-data.md)

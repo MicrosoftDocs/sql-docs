@@ -2,15 +2,10 @@
 title: "sp_delete_maintenance_plan (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "database-engine"
-ms.service: ""
-ms.component: "system-stored-procedures"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: system-objects
 ms.topic: "language-reference"
 f1_keywords: 
   - "sp_delete_maintenance_plan"
@@ -20,11 +15,9 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_delete_maintenance_plan"
 ms.assetid: 6f36b63f-3d18-4d42-9469-2febb6926530
-caps.latest.revision: 30
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-ms.workload: "Inactive"
+author: "stevestein"
+ms.author: "sstein"
+manager: craigg
 ---
 # sp_delete_maintenance_plan (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,7 +39,7 @@ sp_delete_maintenance_plan [ @plan_id = ] 'plan_id'
 ```  
   
 ## Arguments  
- [ **@plan_id =**] **'***plan_id***'**  
+ [ **@plan_id =**] **'**_plan\_id_**'**  
  Specifies the ID of the maintenance plan to be deleted. *plan_id* is **uniqueidentifier**, and must be a valid ID.  
   
 ## Return Code Values  

@@ -1,16 +1,11 @@
 ---
 title: "OBJECT_SCHEMA_NAME (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/06/2017"
-ms.prod: "sql-non-specified"
+ms.date: "06/25/2018"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.service: ""
-ms.component: "t-sql|functions"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: t-sql
 ms.topic: "language-reference"
 f1_keywords: 
   - "OBJECT_SCHEMA_NAME"
@@ -24,14 +19,12 @@ helpviewer_keywords:
   - "database objects [SQL Server], names"
   - "OBJECT_SCHEMA_NAME function"
 ms.assetid: 5ba90bb9-d045-4164-963e-e9e96c0b1e8b
-caps.latest.revision: 11
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "craigg"
-ms.workload: "On Demand"
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
 ---
 # OBJECT_SCHEMA_NAME (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]
 
   Returns the database schema name for schema-scoped objects. For a list of schema-scoped objects, see [sys.objects &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md).  
   
@@ -69,7 +62,7 @@ OBJECT_SCHEMA_NAME ( object_id [, database_id ] )
   
  If *database_id* is not specified, the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] assumes that *object_id* is in the context of the current database. A query that references an *object_id* in another database returns NULL or incorrect results. For example, in the following query the context of the current database is [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]. The [!INCLUDE[ssDE](../../includes/ssde-md.md)] tries to return an object schema name for the specified object ID in that database instead of the database specified in the FROM clause of the query. Therefore, incorrect information is returned.  
   
-```  
+```sql
 SELECT DISTINCT OBJECT_SCHEMA_NAME(object_id)  
 FROM master.sys.objects;  
   
@@ -77,7 +70,7 @@ FROM master.sys.objects;
   
  The following example specifies the database ID for the `master` database in the `OBJECT_SCHEMA_NAME` function and returns the correct results.  
   
-```  
+```sql
 SELECT DISTINCT OBJECT_SCHEMA_NAME(object_id, 1) AS schema_name  
 FROM master.sys.objects;  
   
@@ -88,7 +81,7 @@ FROM master.sys.objects;
 ### A. Returning the object schema name and object name  
  The following example returns the object schema name, object name, and SQL text for all cached query plans that are not ad hoc or prepared statements.  
   
-```  
+```sql
 SELECT DB_NAME(st.dbid) AS database_name,   
     OBJECT_SCHEMA_NAME(st.objectid, st.dbid) AS schema_name,  
     OBJECT_NAME(st.objectid, st.dbid) AS object_name,   
@@ -102,7 +95,7 @@ GO
 ### B. Returning three-part object names  
  The following example returns the database, schema, and object name along with all other columns in the `sys.dm_db_index_operational_stats` dynamic management view for all objects in all databases.  
   
-```  
+```sql
 SELECT QUOTENAME(DB_NAME(database_id))   
     + N'.'   
     + QUOTENAME(OBJECT_SCHEMA_NAME(object_id, database_id))   
@@ -118,6 +111,4 @@ GO
  [OBJECT_DEFINITION &#40;Transact-SQL&#41;](../../t-sql/functions/object-definition-transact-sql.md)   
  [OBJECT_ID &#40;Transact-SQL&#41;](../../t-sql/functions/object-id-transact-sql.md)   
  [OBJECT_NAME &#40;Transact-SQL&#41;](../../t-sql/functions/object-name-transact-sql.md)   
- [Securables](../../relational-databases/security/securables.md)  
-  
-  
+ [Securables](../../relational-databases/security/securables.md)

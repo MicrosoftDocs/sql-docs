@@ -2,16 +2,11 @@
 title: "Include or Exclude Rows (Visual Database Tools) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "sql-tools"
-ms.service: ""
-ms.component: "ssms-visual-db"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "tools-ssms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: ssms
+ms.topic: conceptual
 helpviewer_keywords: 
   - "search criteria [SQL Server], excluding rows"
   - "search criteria [SQL Server], WHERE clause"
@@ -24,11 +19,10 @@ helpviewer_keywords:
   - "row included in search [SQL Server]"
   - "excluding rows"
 ms.assetid: ba4e1202-31a2-444d-8365-c68a530ef223
-caps.latest.revision: 4
 author: "stevestein"
 ms.author: "sstein"
-manager: "jhubbard"
-ms.workload: "Inactive"
+manager: craigg
+
 ---
 # Include or Exclude Rows (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

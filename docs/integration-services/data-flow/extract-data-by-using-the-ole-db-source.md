@@ -2,26 +2,19 @@
 title: "Extract Data by Using the OLE DB Source | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "integration-services"
-ms.service: ""
-ms.component: "data-flow"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: integration-services
+ms.topic: conceptual
 helpviewer_keywords: 
   - "extracting data [Integration Services]"
   - "sources [Integration Services], OLE DB"
   - "OLE DB source [Integration Services]"
 ms.assetid: 4ca6eeb5-b60e-4b81-86dd-0674be8ae8d8
-caps.latest.revision: 23
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
-ms.workload: "Inactive"
+manager: craigg
 ---
 # Extract Data by Using the OLE DB Source
   To add and configure an OLE DB source, the package must already include at least one Data Flow task.  

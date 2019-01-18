@@ -2,26 +2,19 @@
 title: "Other dBASE Driver Programming Details | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
-ms.prod_service: "drivers"
-ms.service: ""
-ms.component: "odbc"
+ms.prod: sql
+ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "drivers"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: connectivity
+ms.topic: conceptual
 helpviewer_keywords: 
   - "Jet-based ODBC drivers [ODBC], DBasedriver"
   - "desktop database drivers [ODBC], DBasedriver"
   - "ODBC desktop database drivers [ODBC], DBasedriver"
 ms.assetid: 1bb9b727-66e8-49e8-9a6b-587ad6217031
-caps.latest.revision: 6
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
-ms.workload: "Inactive"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # Other dBASE Driver Programming Details
 > [!NOTE]  

@@ -2,15 +2,10 @@
 title: "@@CONNECTIONS (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "09/18/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "sql-database"
-ms.service: ""
-ms.component: "t-sql|functions"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: t-sql
 ms.topic: "language-reference"
 f1_keywords: 
   - "@@CONNECTIONS"
@@ -24,16 +19,14 @@ helpviewer_keywords:
   - "number of connection attempts"
   - "attempted connections"
 ms.assetid: c59836a8-443c-4b9a-8b96-8863ada97ac7
-caps.latest.revision: 32
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "craigg"
-ms.workload: "Inactive"
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
 ---
 # &#x40;&#x40;CONNECTIONS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-Returns the number of attempted connections, either successful or unsuccessful since [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] was last started.
+This function returns the number of attempted connections - both successful and unsuccessful - since [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] was last started.
   
 ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -47,14 +40,14 @@ Returns the number of attempted connections, either successful or unsuccessful s
 **integer**
   
 ## Remarks  
-Connections are different from users. Applications, for example, can open multiple connections to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] without the user observing the connections.
+Connections are different from users. An application, for example, can open multiple connections to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] without user observation of those connections.
   
-To display a report containing several [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] statistics, including connection attempts, run **sp_monitor**.
+Run **sp_monitor** for a report containing several [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] statistics, including count of connection attempts.
   
-@@MAX_CONNECTIONS is the maximum number of connections allowed simultaneously to the server. @@CONNECTIONS is incremented with each login attempt, therefore @@CONNECTIONS can be greater than @@MAX_CONNECTIONS.
+@@MAX_CONNECTIONS is the maximum allowed number of simultaneous connections to the server. @@CONNECTIONS increments with each login attempt; therefore, @@CONNECTIONS can exceed @@MAX_CONNECTIONS.
   
 ## Examples  
-The following example shows returning the number of login attempts as of the current date and time.
+This example returns the count of login attempts as of the current date and time.
   
 ```sql
 SELECT GETDATE() AS 'Today''s Date and Time',   

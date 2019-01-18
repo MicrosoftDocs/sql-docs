@@ -1,0 +1,25 @@
+### YamlMime:XRefMap
+sorted: true
+hrefUpdated: true
+references:
+- uid: Microsoft.SqlServer.Replication.DistributionPublisher
+  commentId: T:Microsoft.SqlServer.Replication.DistributionPublisher
+  href: https://msdn.microsoft.com/library/microsoft.sqlserver.replication.distributionpublisher(v=sql.120).aspx
+  name: DistributionPublisher
+  name.vb: DistributionPublisher
+  fullName: Microsoft.SqlServer.Replication.DistributionPublisher
+  fullName.vb: Microsoft.SqlServer.Replication.DistributionPublisher
+- uid: Microsoft.SqlServer.Replication.DistributionPublisher.Name*
+  commentId: P:Microsoft.SqlServer.Replication.DistributionPublisher.Name
+  href: https://msdn.microsoft.com/library/ms152653(v=sql.120).aspx
+  name: Name
+  name.vb: Name
+  fullName: DistributionPublisher.Name
+  fullName.vb: DistributionPublisher.Name
+- uid: Microsoft.SqlServer.Replication.DistributionPublisher.Remove*
+  commentId: M:Microsoft.SqlServer.Replication.DistributionPublisher.Remove(System.Boolean)
+  href: https://msdn.microsoft.com/library/ms149470(v=sql.120).aspx
+  name: Remove
+  name.vb: Remove
+  fullName: DistributionPublisher.Remove
+  fullName.vb: DistributionPublisher.Remove

@@ -2,16 +2,11 @@
 title: "Database Mirroring (SQL Server) | Microsoft Docs"
 ms.custom: ""
 ms.date: "05/16/2016"
-ms.prod: "sql-non-specified"
-ms.prod_service: "database-engine"
-ms.service: ""
-ms.component: "database-mirroring"
+ms.prod: sql
+ms.prod_service: high-availability
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: high-availability
+ms.topic: conceptual
 helpviewer_keywords: 
   - "partners [SQL Server]"
   - "standby servers [SQL Server]"
@@ -26,11 +21,9 @@ helpviewer_keywords:
   - "mirror database [SQL Server]"
   - "mirror server [SQL Server] See database mirroring"
 ms.assetid: a7f95ddc-5154-4ed5-8117-c9fcf2221f13
-caps.latest.revision: 125
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-ms.workload: "Active"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ---
 # Database Mirroring (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

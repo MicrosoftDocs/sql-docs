@@ -1,16 +1,11 @@
 ---
 title: "sys.dm_os_wait_stats (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "01/04/2018"
-ms.prod: "sql-non-specified"
+ms.date: "12/04/2018"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
-ms.service: ""
-ms.component: "dmv's"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: system-objects
 ms.topic: "language-reference"
 f1_keywords: 
   - "dm_os_wait_stats_TSQL"
@@ -22,11 +17,10 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.dm_os_wait_stats dynamic management view"
 ms.assetid: 568d89ed-2c96-4795-8a0c-2f3e375081da
-caps.latest.revision: 111
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-ms.workload: "Active"
+author: "MashaMSFT"
+ms.author: "mathoma"
+manager: craigg
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.dm_os_wait_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -45,10 +39,11 @@ Returns information about all the waits encountered by threads that executed. Yo
 |signal_wait_time_ms|**bigint**|Difference between the time that the waiting thread was signaled and when it started running.|  
 |pdw_node_id|**int**|The identifier for the node that this distribution is on. <br/> **Applies to**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] |  
   
-## Permissions  
+## Permissions
+
 On [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], requires `VIEW SERVER STATE` permission.   
-On [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] Premium Tiers, requires the `VIEW DATABASE STATE` permission in the database. On [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] Standard and Basic Tiers, requires the  **Server admin** or an **Azure Active Directory admin** account.  
-  
+On [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], requires the `VIEW DATABASE STATE` permission in the database.   
+
 ##  <a name="WaitTypes"></a> Types of Waits  
  **Resource waits** 
  Resource waits occur when a worker requests access to a resource that is not available because the resource is being used by some other worker or is not yet available. Examples of resource waits are locks, latches, network and disk I/O waits. Lock and latch waits are waits on synchronization objects  
@@ -77,7 +72,7 @@ On [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] Premium Tiers, requires the 
   
  The contents of this dynamic management view can be reset by running the following command:  
   
-``` t-sql  
+```sql  
 DBCC SQLPERF ('sys.dm_os_wait_stats', CLEAR);  
 GO  
 ```  
@@ -126,7 +121,7 @@ This command resets all counters to 0.
 |BROKER_FORWARDER |TBD <br /> **Applies to**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
 |BROKER_INIT |Occurs when initializing Service Broker in each active database. This should occur infrequently.| 
 |BROKER_MASTERSTART |Occurs when a task is waiting for the primary event handler of the Service Broker to start. This should occur very briefly.| 
-|BROKER_RECEIVE_WAITFOR |Occurs when the RECEIVE WAITFOR is waiting. This is typical if no messages are ready to be received.| 
+|BROKER_RECEIVE_WAITFOR |Occurs when the RECEIVE WAITFOR is waiting. This may mean that either no messages are ready to be received in the queue or a lock contention is preventing it from receiving messages from the queue.| 
 |BROKER_REGISTERALLENDPOINTS |Occurs during the initialization of a Service Broker connection endpoint. This should occur very briefly.| 
 |BROKER_SERVICE |Occurs when the Service Broker destination list that is associated with a target service is updated or re-prioritized.| 
 |BROKER_SHUTDOWN |Occurs when there is a planned shutdown of Service Broker. This should occur very briefly, if at all.| 
@@ -138,7 +133,7 @@ This command resets all counters to 0.
 |BROKER_TRANSMISSION_OBJECT |TBD <br /> **Applies to**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
 |BROKER_TRANSMISSION_TABLE |TBD <br /> **Applies to**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
 |BROKER_TRANSMISSION_WORK |TBD <br /> **Applies to**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
-|BROKER_TRANSMITTER |Occurs when the Service Broker transmitter is waiting for work.| 
+|BROKER_TRANSMITTER |Occurs when the Service Broker transmitter is waiting for work. Service Broker has a component known as the Transmitter which schedules messages from multiple dialogs to be sent across the wire over one or more connection endpoints. The transmitter has 2 dedicated threads for this purpose. This wait type is charged when these transmitter threads are waiting for dialog messages to be sent using the transport connections. High values of waiting_tasks_count for this wait type point to intermittent work for these transmitter threads and are not indications of any performance problem. If service broker is not used at all, waiting_tasks_count should be 2 (for the 2 transmitter threads) and wait_time_ms should be twice the duration since instance startup. See [Service broker wait stats](https://blogs.msdn.microsoft.com/sql_service_broker/2008/12/01/service-broker-wait-types).|
 |BUILTIN_HASHKEY_MUTEX |May occur after startup of instance, while internal data structures are initializing. Will not recur once data structures have initialized.| 
 |CHANGE_TRACKING_WAITFORCHANGES |TBD <br /> **Applies to**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
 |CHECK_PRINT_RECORD |Identified for informational purposes only. Not supported. Future compatibility is not guaranteed.| 
@@ -168,8 +163,8 @@ This command resets all counters to 0.
 |CONNECTION_ENDPOINT_LOCK |TBD <br /> **Applies to**: [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
 |COUNTRECOVERYMGR |TBD <br /> **Applies to**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
 |CREATE_DATINISERVICE |TBD <br /> **Applies to**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
-|CXCONSUMER |Occurs with parallel query plans when a consumer thread waits for a producer thread to send rows. This is a normal part of parallel query execution. <br /> **Applies to**: [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3 and [!INCLUDE[ssSDS](../../includes/sssds-md.md)]|
-|CXPACKET |Occurs with parallel query plans when synchronizing the query processor exchange iterator, and when producing and consuming rows. If waiting is excessive and cannot be reduced by tuning the query (such as adding indexes), consider adjusting the cost threshold for parallelism or lowering the degree of parallelism.<br /> **Note:** In [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3 and [!INCLUDE[ssSDS](../../includes/sssds-md.md)], CXPACKET only refers to synchronizing the query processor exchange iterator, and to producing rows for consumer threads. Consumer threads are tracked separately in the CXCONSUMER wait type.| 
+|CXCONSUMER |Occurs with parallel query plans when a consumer thread waits for a producer thread to send rows. This is a normal part of parallel query execution. <br /> **Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2, [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3), [!INCLUDE[ssSDS](../../includes/sssds-md.md)]|
+|CXPACKET |Occurs with parallel query plans when synchronizing the query processor exchange iterator, and when producing and consuming rows. If waiting is excessive and cannot be reduced by tuning the query (such as adding indexes), consider adjusting the cost threshold for parallelism or lowering the degree of parallelism.<br /> **Note:** Starting with [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2, [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3, and [!INCLUDE[ssSDS](../../includes/sssds-md.md)], CXPACKET only refers to synchronizing the query processor exchange iterator, and to producing rows for consumer threads. Consumer threads are tracked separately in the CXCONSUMER wait type.| 
 |CXROWSET_SYNC |Occurs during a parallel range scan.| 
 |DAC_INIT |Occurs while the dedicated administrator connection is initializing.| 
 |DBCC_SCALE_OUT_EXPR_CACHE |TBD <br /> **Applies to**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
@@ -788,7 +783,7 @@ This command resets all counters to 0.
 |REMOTE_DATA_ARCHIVE_SCHEMA_TASK_QUEUE |TBD <br /> **Applies to**: [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
 |REPL_CACHE_ACCESS |Occurs during synchronization on a replication article cache. During these waits, the replication log reader stalls, and data definition language (DDL) statements on a published table are blocked.| 
 |REPL_HISTORYCACHE_ACCESS |TBD| 
-|REPL_SCHEMA_ACCESS |Occurs during synchronization of replication schema version information. This state exists when DDL statements are executed on the replicated object, and when the log reader builds or consumes versioned schema based on DDL occurrence.| 
+|REPL_SCHEMA_ACCESS |Occurs during synchronization of replication schema version information. This state exists when DDL statements are executed on the replicated object, and when the log reader builds or consumes versioned schema based on DDL occurrence. Contention can be seen on this wait type if you have many published databases on a single publisher with transactional replication and the published databases are very active.| 
 |REPL_TRANFSINFO_ACCESS |TBD <br /> **Applies to**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
 |REPL_TRANHASHTABLE_ACCESS |TBD| 
 |REPL_TRANTEXTINFO_ACCESS |TBD <br /> **Applies to**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
@@ -931,6 +926,7 @@ This command resets all counters to 0.
 |VIA_ACCEPT |Occurs when a Virtual Interface Adapter (VIA) provider connection is completed during startup.| 
 |VIEW_DEFINITION_MUTEX |Occurs during synchronization on access to cached view definitions.| 
 |WAIT_FOR_RESULTS |Occurs when waiting for a query notification to be triggered.| 
+|WAIT_ON_SYNC_STATISTICS_REFRESH |Occurs when waiting for synchronous statistics update to complete before query compilation and execution can resume.<br /> **Applies to**: Starting with [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]|
 |WAIT_SCRIPTDEPLOYMENT_REQUEST |TBD <br /> **Applies to**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
 |WAIT_SCRIPTDEPLOYMENT_WORKER |TBD <br /> **Applies to**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
 |WAIT_XLOGREAD_SIGNAL |TBD <br /> **Applies to**: [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 

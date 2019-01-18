@@ -1,16 +1,11 @@
 ---
 title: "table (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "7/23/2017"
-ms.prod: "sql-non-specified"
+ms.date: "10/11/2018"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.service: ""
-ms.component: "t-sql|data-types"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: t-sql
 ms.topic: "language-reference"
 dev_langs: 
   - "TSQL"
@@ -18,11 +13,9 @@ helpviewer_keywords:
   - "table data type [SQL Server]"
   - "table variables [SQL Server]"
 ms.assetid: 1ef0b60e-a64c-4e97-847b-67930e3973ef
-caps.latest.revision: 48
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "craigg"
-ms.workload: "Active"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ---
 # table (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -30,7 +23,7 @@ ms.workload: "Active"
 Is a special data type that can be used to store a result set for processing at a later time. **table** is primarily used for temporary storage of a set of rows returned as the result set of a table-valued function. Functions and variables can be declared to be of type **table**. **table** variables can be used in functions, stored procedures, and batches. To declare variables of type **table**, use [DECLARE @local_variable](../../t-sql/language-elements/declare-local-variable-transact-sql.md).
   
 
-**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [current version](http://go.microsoft.com/fwlink/p/?LinkId=299658)), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
+**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ( [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
   
 ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -103,8 +96,8 @@ SELECT select_list INTO table_variable;
   
 Queries that modify **table** variables do not generate parallel query execution plans. Performance can be affected when very large **table** variables, or **table** variables in complex queries, are modified. In these situations, consider using temporary tables instead. For more information, see [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md). Queries that read **table** variables without modifying them can still be parallelized.
   
-Indexes cannot be created explicitly on **table** variables, and no statistics are kept on **table** variables. In some cases, performance may improve by using temporary tables instead, which support indexes and statistics. For more information about temporary tables, see [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md).
-  
+Indexes cannot be created explicitly on **table** variables, and no statistics are kept on **table** variables. Starting with [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], new syntax was introduced which allows you to create certain index types inline with the table definition.  Using this new syntax, you can create indexes on **table** variables as part of the table definition. In some cases, performance may improve by using temporary tables instead, which provide full index support and statistics. For more information about temporary tables and inline index creation, see [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md).
+
 CHECK constraints, DEFAULT values and computed columns in the **table** type declaration cannot call user-defined functions.
   
 Assignment operation between **table** variables is not supported.
@@ -112,6 +105,61 @@ Assignment operation between **table** variables is not supported.
 Because **table** variables have limited scope and are not part of the persistent database, they are not affected by transaction rollbacks.
   
 Table variables cannot be altered after creation.
+
+## Table variable deferred compilation
+**Table variable deferred compilation** improves plan quality and overall performance for queries referencing table variables. During optimization and initial plan compilation, this feature will propagate cardinality estimates that are based on actual table variable row counts. This accurate row count information will then be used for optimizing downstream plan operations.
+
+> [!NOTE]
+> Table variable deferred compilation is a public preview feature in [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] and [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)].
+
+With table variable deferred compilation, compilation of a statement that references a table variable is deferred until the first actual execution of the statement. This deferred compilation behavior is identical to the behavior of temporary tables, and this change results in the use of actual cardinality instead of the original one-row guess. 
+
+To enable the public preview of table variable deferred compilation, enable database compatibility level 150 for the database you are connected to when executing the query.
+
+Table variable deferred compilation does **not** change any other characteristics of table variables. For example, this feature does not add column statistics to table variables.
+
+Table variable deferred compilation **does not increase recompilation frequency**.  Rather, it shifts where the initial compilation occurs. The resulting cached plan is generated based on the initial deferred compilation table variable row count. The cached plan is re-used by consecutive queries until the plan is evicted or recompiled. 
+
+If the table variable row count used for initial plan compilation represents a typical value that is significantly different from a fixed row count guess,  downstream operations will benefit.  If the table variable row count varies significantly across executions, then performance may not be improved by this feature.
+
+### Disabling table variable deferred compilation without changing the compatibility level
+Table variable deferred compilation can be disabled at the database or statement scope while still maintaining database compatibility level 150 and higher. To disable table variable deferred compilation for all query executions originating from the database, execute the following within the context of the applicable database:
+
+```sql
+ALTER DATABASE SCOPED CONFIGURATION SET DEFERRED_COMPILATION_TV = OFF;
+```
+
+To re-enable table variable deferred compilation for all query executions originating from the database, execute the following within the context of the applicable database:
+
+```sql
+ALTER DATABASE SCOPED CONFIGURATION SET DEFERRED_COMPILATION_TV = ON;
+```
+
+You can also disable table variable deferred compilation for a specific query by designating DISABLE_DEFERRED_COMPILATION_TV as a USE HINT query hint.  For example:
+
+```sql
+DECLARE @LINEITEMS TABLE 
+	(L_OrderKey INT NOT NULL,
+	 L_Quantity INT NOT NULL
+	);
+
+INSERT @LINEITEMS
+SELECT L_OrderKey, L_Quantity
+FROM dbo.lineitem
+WHERE L_Quantity = 5;
+
+SELECT	O_OrderKey,
+	O_CustKey,
+	O_OrderStatus,
+	L_QUANTITY
+FROM	
+	ORDERS,
+	@LINEITEMS
+WHERE	O_ORDERKEY	=	L_ORDERKEY
+	AND O_OrderStatus = 'O'
+OPTION (USE HINT('DISABLE_DEFERRED_COMPILATION_TV'));
+```
+
   
 ## Examples  
   
@@ -177,12 +225,10 @@ SELECT * FROM Sales.ufn_SalesByStore (602);
 ```  
   
 ## See also
-[COLLATE &#40;Transact-SQL&#41;](http://msdn.microsoft.com/library/4ba6b7d8-114a-4f4e-bb38-fe5697add4e9)  
+[COLLATE &#40;Transact-SQL&#41;](https://msdn.microsoft.com/library/4ba6b7d8-114a-4f4e-bb38-fe5697add4e9)  
 [CREATE FUNCTION &#40;Transact-SQL&#41;](../../t-sql/statements/create-function-transact-sql.md)  
 [User-Defined Functions](../../relational-databases/user-defined-functions/user-defined-functions.md)  
 [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)  
 [DECLARE @local_variable &#40;Transact-SQL&#41;](../../t-sql/language-elements/declare-local-variable-transact-sql.md)  
 [Use Table-Valued Parameters &#40;Database Engine&#41;](../../relational-databases/tables/use-table-valued-parameters-database-engine.md)  
 [Query Hints &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-query.md)
-  
-  

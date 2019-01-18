@@ -2,30 +2,23 @@
 title: "Integration Services (SSIS) Package and Project Parameters | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/03/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "integration-services"
-ms.service: ""
-ms.component: "non-specific"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: integration-services
+ms.topic: conceptual
 f1_keywords: 
   - "sql13.ssis.designer.parameter.f1"
-  - "sql13.dts.designer.paramterwindow.f1"
+  - "sql13.dts.designer.parameterwindow.f1"
 ms.assetid: 9ed9ca8e-8b1e-48d9-907d-285516d6562b
-caps.latest.revision: 23
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
-ms.workload: "Active"
+manager: craigg
 ---
 # Integration Services (SSIS) Package and Project Parameters
   [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] (SSIS) parameters allow you to assign values to properties within packages at the time of package execution. You can create *project parameters* at the project level and *package parameters* at the package level. Project parameters are used to supply any external input the project receives to one or more packages in the project. Package parameters allow you to modify package execution without having to edit and redeploy the package.  
   
- In [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] you create, modify, or delete project parameters by using the **Project.params** window. You create, modify, and delete package parameters by using the **Parameters** tab in the [!INCLUDE[ssIS](../includes/ssis-md.md)] Designer. You associate a new or an existing parameter with a task property by using the **Parameterize** dialog box. For more about using the **Project.params** window and the **Parameters** tab, see [Create Parameters](http://msdn.microsoft.com/library/cd5d675b-dd5d-49cc-8b1f-dc717a973f99). For more information about the **Parameterize** dialog box, see [Parameterize Dialog Box](http://msdn.microsoft.com/library/fac02b6d-d247-447a-8940-e8700c7ac350).  
+ In [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] you create, modify, or delete project parameters by using the **Project.params** window. You create, modify, and delete package parameters by using the **Parameters** tab in the [!INCLUDE[ssIS](../includes/ssis-md.md)] Designer. You associate a new or an existing parameter with a task property by using the **Parameterize** dialog box. For more about using the **Project.params** window and the **Parameters** tab, see [Create Parameters](https://msdn.microsoft.com/library/cd5d675b-dd5d-49cc-8b1f-dc717a973f99). For more information about the **Parameterize** dialog box, see [Parameterize Dialog Box](https://msdn.microsoft.com/library/fac02b6d-d247-447a-8940-e8700c7ac350).  
   
 ## Parameters and Package Deployment Model  
  In general, if you are deploying a package using the package deployment model, you should use configurations instead of parameters.  
@@ -215,6 +208,6 @@ The Deployment Wizard allows you to set server default parameter values when you
  To set server defaults with Transact-SQL, use the [catalog.set_object_parameter_value &#40;SSISDB Database&#41;](../integration-services/system-stored-procedures/catalog-set-object-parameter-value-ssisdb-database.md) stored procedure. To view current server defaults, query the [catalog.object_parameters &#40;SSISDB Database&#41;](../integration-services/system-views/catalog-object-parameters-ssisdb-database.md) view. To clear a server default value, use the [catalog.clear_object_parameter_value &#40;SSISDB Database&#41;](../integration-services/system-stored-procedures/catalog-clear-object-parameter-value-ssisdb-database.md) stored procedure.  
   
 ## Related Content  
- Blog entry, [SSIS Quick Tip: Required Parameters](http://go.microsoft.com/fwlink/?LinkId=239781), on mattmasson.com.  
+ Blog entry, [SSIS Quick Tip: Required Parameters](https://go.microsoft.com/fwlink/?LinkId=239781), on mattmasson.com.  
   
   

@@ -2,24 +2,18 @@
 title: "Variables (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "09/12/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
-ms.service: ""
-ms.component: "t-sql|language-elements"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: t-sql
 ms.topic: "language-reference"
 dev_langs: 
   - "TSQL"
 ms.assetid: f372ae86-a003-40af-92de-fa52e3eea13f
-caps.latest.revision: 12
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-ms.workload: "On Demand"
+author: "douglaslMS"
+ms.author: "douglasl"
+manager: craigg
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Variables (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -31,7 +25,7 @@ A Transact-SQL local variable is an object that can hold a single data value of 
 * To save a data value to be returned by a stored procedure return code or function return value.
 
 > [!NOTE]
-> The names of some Transact-SQL system functions begin with two *at* signs (@@). Although in earlier versions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], the @@functions are referred to as global variables, they are not variables and do not have the same behaviors as variables. The @@functions are system functions, and their syntax usage follows the rules for functions.
+> The names of some Transact-SQL system functions begin with two *at* signs (\@\@). Although in earlier versions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], the \@\@functions are referred to as global variables, they are not variables and do not have the same behaviors as variables. The \@\@functions are system functions, and their syntax usage follows the rules for functions.
 
 The following script creates a small test table and populates it with 26 rows. The script uses a variable to do three things: 
 
@@ -82,17 +76,17 @@ GO
 
 ## Declaring a Transact-SQL Variable
 The DECLARE statement initializes a Transact-SQL variable by: 
-* Assigning a name. The name must have a single @ as the first character.
+* Assigning a name. The name must have a single \@ as the first character.
 * Assigning a system-supplied or user-defined data type and a length. For numeric variables, a precision and scale are also assigned. For variables of type XML, an optional schema collection may be assigned.
 * Setting the value to NULL.
 
-For example, the following **DECLARE** statement creates a local variable named **@mycounter** with an int data type.  
+For example, the following **DECLARE** statement creates a local variable named **\@mycounter** with an int data type.  
 ```sql
 DECLARE @MyCounter int;
 ```
 To declare more than one local variable, use a comma after the first local variable defined, and then specify the next local variable name and data type.
 
-For example, the following **DECLARE** statement creates three local variables named **@LastName**, **@FirstName** and **@StateProvince**, and initializes each to NULL:  
+For example, the following **DECLARE** statement creates three local variables named **\@LastName**, **\@FirstName** and **\@StateProvince**, and initializes each to NULL:  
 ```sql
 DECLARE @LastName nvarchar(30), @FirstName nvarchar(20), @StateProvince nchar(2);
 ```
@@ -162,7 +156,7 @@ GO
 > [!WARNING]
 > If there are multiple assignment clauses in a single SELECT statement, SQL Server does not guarantee the order of evaluation of the expressions. Note that effects are only visible if there are references among the assignments.
 
-If a SELECT statement returns more than one row and the variable references a non-scalar expression, the variable is set to the value returned for the expression in the last row of the result set. For example, in the following batch **@EmpIDVariable** is set to the **BusinessEntityID** value of the last row returned, which is 1:  
+If a SELECT statement returns more than one row and the variable references a non-scalar expression, the variable is set to the value returned for the expression in the last row of the result set. For example, in the following batch **\@EmpIDVariable** is set to the **BusinessEntityID** value of the last row returned, which is 1:  
 
 ```sql
 USE AdventureWorks2014;

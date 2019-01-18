@@ -2,22 +2,15 @@
 title: "The Oracle CDC Service | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "integration-services"
-ms.service: ""
-ms.component: "change-data-capture"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: integration-services
+ms.topic: conceptual
 ms.assetid: 47759ddc-358d-405b-acb9-189ada76ea6d
-caps.latest.revision: 8
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
-ms.workload: "Inactive"
+manager: craigg
 ---
 # The Oracle CDC Service
   The Oracle CDC Service is a Windows service running the program xdbcdcsvc.exe. The Oracle CDC Service can be configured to run multiple Windows services on the same computer, each one with a different Windows service name. Creating multiple Oracle CDC Windows services on a single computer is often done to achieve a better separation between them, or when each needs to work with a different [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance.  

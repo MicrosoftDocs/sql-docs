@@ -1,26 +1,15 @@
 ---
 title: "SQL Modes (MySQLToSQL) | Microsoft Docs"
-ms.prod: "sql-non-specified"
-ms.prod_service: "sql-tools"
-ms.service: ""
-ms.component: "ssma-mysql"
+ms.prod: sql
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "sql-ssma"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to: 
-  - "Azure SQL Database"
-  - "SQL Server"
+ms.technology: ssma
+ms.topic: conceptual
 ms.assetid: d840ee51-b863-4e77-84aa-37d3f094bfed
-caps.latest.revision: 4
 author: "Shamikg"
 ms.author: "Shamikg"
-manager: "jhubbard"
-ms.workload: "Inactive"
+manager: craigg
 ---
 # SQL Modes (MySQLToSQL)
 The SSMA for MySQL can operate in different SQL Modes, and can apply these modes differently for different clients.  
@@ -36,7 +25,7 @@ Modes define the SQL syntax that MySQL should support, and the kind of data vali
 -   SQL Modes Grid at Stored Procedure, Stored Function, and Trigger level contains the following columns: **SQL Mode Name**,  **Original SQL Modes**, and **Effective SQL Modes**.  
   
 > [!NOTE]  
-> Group modes will be shown in bold, under the column ‘SQL Mode Name’.  
+> Group modes will be shown in bold, under the column 'SQL Mode Name'.  
   
 ## Loaded SQL Modes  
 These are the SQL Modes, which are SET at the session or root level. The SQL Modes once loaded into the target database cannot be edited or modified.  
@@ -60,7 +49,7 @@ Effective SQL Modes can be defined at various levels in the following way:
   
 -   **At session level:**  
   
-    1.  All the Loaded SQL Modes can be called, “Effective SQL Modes”.  
+    1.  All the Loaded SQL Modes can be called, "Effective SQL Modes".  
   
     2.  At this level, the effective SQL modes can be directly and explicitly modified.  
   
@@ -68,7 +57,7 @@ Effective SQL Modes can be defined at various levels in the following way:
   
 -   **At function or procedure or trigger level:**  
   
-    1.  All the Original SQL Modes can be called, “Effective SQL Modes”.  
+    1.  All the Original SQL Modes can be called, "Effective SQL Modes".  
   
     2.  At this level, the effective SQL mode can be explicitly modified only when the **Use original** checkbox is unchecked.  
   
@@ -76,7 +65,7 @@ Effective SQL Modes can be defined at various levels in the following way:
   
 -   **At nodes other than function or procedure or trigger level:**  
   
-    1.  All the Inherited SQL Modes can be called, “Effective SQL Modes”.  
+    1.  All the Inherited SQL Modes can be called, "Effective SQL Modes".  
   
     2.  At this level, the effective SQL mode can be explicitly modified only when the **Inherit From Parent** checkbox is unchecked.  
   

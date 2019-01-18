@@ -2,22 +2,16 @@
 title: "Temporal Tables | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/11/2016"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.service: ""
-ms.component: "tables"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "dbe-tables"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: table-view-index
+ms.topic: conceptual
 ms.assetid: e442303d-4de1-494e-94e4-4f66c29b5fb9
-caps.latest.revision: 47
 author: "CarlRabeler"
 ms.author: "carlrab"
-manager: "jhubbard"
-ms.workload: "Active"
+manager: craigg
+monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Temporal Tables
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -46,7 +40,7 @@ ms.workload: "Active"
   
     -   [Querying Data in a System-Versioned Temporal Table](../../relational-databases/tables/querying-data-in-a-system-versioned-temporal-table.md)  
   
-    -   **Download Adventure Works sample database:** To get started with Temporal Tables download [AdventureWorks database for SQL Server 2016 CTP3](https://www.microsoft.com/download/details.aspx?id=49502) with script samples and follow the instructions in the folder ‘Temporal’  
+    -   **Download Adventure Works sample database:** To get started with Temporal Tables download [AdventureWorks database for SQL Server 2016 CTP3](https://www.microsoft.com/download/details.aspx?id=49502) with script samples and follow the instructions in the folder 'Temporal'  
   
 -   **Syntax:**  
   
@@ -56,7 +50,7 @@ ms.workload: "Active"
   
     -   [FROM &#40;Transact-SQL&#41;](../../t-sql/queries/from-transact-sql.md)  
   
--   **Video:** For a 20 minute discussion of temporal, see [Temporal in SQL Server 2016](http://channel9.msdn.com/Shows/Data-Exposed/Temporal-in-SQL-Server-2016).  
+-   **Video:** For a 20 minute discussion of temporal, see [Temporal in SQL Server 2016](https://channel9.msdn.com/Shows/Data-Exposed/Temporal-in-SQL-Server-2016).  
   
 ## What is a system-versioned temporal table?  
  A system-versioned temporal table is a type of user table designed to keep a full history of data changes and allow easy point in time analysis. This type of temporal table is referred to as a system-versioned temporal table because the period of validity for each row is managed by the system (i.e. database engine).  
@@ -119,7 +113,7 @@ CREATE TABLE dbo.Employee
 >  The times recorded in the system datetime2 columns are based on the begin time of the transaction itself. For example, all rows inserted within a single transaction will have the same UTC time recorded in the column corresponding to the start of the **SYSTEM_TIME** period.  
   
 ## How do I query temporal data?  
- The **SELECT** statement **FROM***\<table>* clause has a new clause **FOR SYSTEM_TIME** with five temporal-specific sub-clauses to query data across the current and history tables. This new **SELECT** statement syntax is supported directly on a single table, propagated through multiple joins, and through views on top of multiple temporal tables.  
+ The **SELECT** statement **FROM**_\<table\>_ clause has a new clause **FOR SYSTEM_TIME** with five temporal-specific sub-clauses to query data across the current and history tables. This new **SELECT** statement syntax is supported directly on a single table, propagated through multiple joins, and through views on top of multiple temporal tables.  
   
  ![Temporal-Querying](../../relational-databases/tables/media/temporal-querying.PNG "Temporal-Querying")  
   
@@ -149,10 +143,7 @@ SELECT * FROM Employee
 |**ALL**|All rows|Returns the union of rows that belong to the current and the history table.|  
   
 > [!NOTE]  
->  Optionally, you can choose to hide these period columns such that queries that do not explicitly reference these period columns do not return these columns (the **SELECT \* FROM***\<table>* scenario). To return a hidden column, simply explicitly refer to the hidden column in the query. Similarly **INSERT** and **BULK INSERT** statements will continue as if these new period columns were not present (and the column values will be auto-populated). For details on using the **HIDDEN** clause, see [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md) and [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md).  
-  
-## Did this Article Help You? We’re Listening  
- What information are you looking for, and did you find it? We’re listening to your feedback to improve the content. Please submit your comments to [sqlfeedback@microsoft.com](mailto:sqlfeedback@microsoft.com?subject=Your%20feedback%20about%20the%20Temporal%20Tables%20page)  
+>  Optionally, you can choose to hide these period columns such that queries that do not explicitly reference these period columns do not return these columns (the **SELECT \* FROM**_\<table\>_ scenario). To return a hidden column, simply explicitly refer to the hidden column in the query. Similarly **INSERT** and **BULK INSERT** statements will continue as if these new period columns were not present (and the column values will be auto-populated). For details on using the **HIDDEN** clause, see [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md) and [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md).  
   
 ## See Also  
  [Getting Started with System-Versioned Temporal Tables](../../relational-databases/tables/getting-started-with-system-versioned-temporal-tables.md)   

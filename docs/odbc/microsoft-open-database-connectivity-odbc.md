@@ -2,27 +2,20 @@
 title: "Microsoft Open Database Connectivity (ODBC) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
-ms.prod_service: "drivers"
-ms.service: ""
-ms.component: "odbc"
+ms.prod: sql
+ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "drivers"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: connectivity
+ms.topic: conceptual
 ms.assetid: 278cf36e-9817-4ee3-842e-dbd149f15273
-caps.latest.revision: 20
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
-ms.workload: "Active"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # Microsoft Open Database Connectivity (ODBC)
 The Microsoft Open Database Connectivity (ODBC) interface is a C programming language interface that makes it possible for applications to access data from a variety of database management systems (DBMSs). ODBC is a low-level, high-performance interface that is designed specifically for relational data stores.  
   
- The ODBC interface allows maximum interoperability—an application can access data in diverse DBMSs through a single interface. Moreover, that application will be independent of any DBMS from which it accesses data. Users of the application can add software components called drivers, which interface between an application and a specific DBMS.  
+ The ODBC interface allows maximum interoperability-an application can access data in diverse DBMSs through a single interface. Moreover, that application will be independent of any DBMS from which it accesses data. Users of the application can add software components called drivers, which interface between an application and a specific DBMS.  
   
 ## Documentation  
  [ODBC Programmer's Reference](../odbc/reference/odbc-programmer-s-reference.md)  
@@ -50,4 +43,4 @@ The Microsoft Open Database Connectivity (ODBC) interface is a C programming lan
  Describes the command-line utility for configuring drivers and data source names.  
   
 ## Support  
- Information about support options can be found on the [Microsoft Help and Support](http://go.microsoft.com/fwlink?linkid=5521) Web site.
+ Information about support options can be found on the [Microsoft Help and Support](https://go.microsoft.com/fwlink?linkid=5521) Web site.

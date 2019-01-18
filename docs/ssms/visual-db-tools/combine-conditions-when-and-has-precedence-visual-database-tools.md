@@ -2,16 +2,11 @@
 title: "Combine Conditions When AND Has Precedence (Visual Database Tools) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "sql-tools"
-ms.service: ""
-ms.component: "ssms-visual-db"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "tools-ssms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: ssms
+ms.topic: conceptual
 helpviewer_keywords: 
   - "search conditions [SQL Server], combining"
   - "precedence [SQL Server], Criteria pane"
@@ -19,11 +14,10 @@ helpviewer_keywords:
   - "combining search conditions"
   - "AND, Criteria pane"
 ms.assetid: 450eb2eb-6ea3-405b-8dd2-1ff926c016e7
-caps.latest.revision: 5
 author: "stevestein"
 ms.author: "sstein"
-manager: "jhubbard"
-ms.workload: "Inactive"
+manager: craigg
+
 ---
 # Combine Conditions When AND Has Precedence (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

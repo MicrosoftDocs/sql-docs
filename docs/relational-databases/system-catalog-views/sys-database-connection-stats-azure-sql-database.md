@@ -5,12 +5,7 @@ ms.date: "03/25/2016"
 ms.prod: ""
 ms.prod_service: "sql-database"
 ms.reviewer: ""
-ms.service: "sql-database"
-ms.component: "system-catalog-views"
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: system-objects
 ms.topic: "language-reference"
 f1_keywords: 
   - "sys.database_connection_stats"
@@ -23,11 +18,10 @@ helpviewer_keywords:
   - "sys.database_connection_stats"
   - "database_connection_stats"
 ms.assetid: 5c8cece0-63b0-4dee-8db7-6b43d94027ec
-caps.latest.revision: 13
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "craigg"
-ms.workload: "Inactive"
+author: stevestein
+ms.author: sstein
+manager: craigg
+monikerRange: "= azuresqldb-current || = sqlallproducts-allversions"
 ---
 # sys.database_connection_stats (Azure SQL Database)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -42,8 +36,8 @@ ms.workload: "Inactive"
 |**success_count**|**int**|Number of successful connections.|  
 |**total_failure_count**|**int**|Total number of failed connections. This is the sum of **connection_failure_count**, **terminated_connection_count**, and **throttled_connection_count**, and does not include deadlock events.|  
 |**connection_failure_count**|**int**|Number of login failures.|  
-|**terminated_connection_count**|**int**|***Only applicable for [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] v11.***<br /><br /> Number of terminated connections.|  
-|**throttled_connection_count**|**int**|***Only applicable for [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] v11.***<br /><br /> Number of throttled connections.|  
+|**terminated_connection_count**|**int**|**_Only applicable for [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] v11._**<br /><br /> Number of terminated connections.|  
+|**throttled_connection_count**|**int**|**_Only applicable for [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] v11._**<br /><br /> Number of throttled connections.|  
   
 ## Remarks  
   
@@ -57,7 +51,7 @@ ms.workload: "Inactive"
 |`Database1`|`2012-02-05 11:00:00`|`2012-02-05 11:05:00`|`0`|`7`|`7`|`0`|`0`|  
   
 ### Interval start_time and end_time  
- An event is included in an aggregation interval when the event occurs *on* or *after***start_time** and *before***end_time** for that interval. For example, an event occurring exactly at `2012-10-30 19:25:00.0000000` would be included only in the second interval shown below:  
+ An event is included in an aggregation interval when the event occurs *on* or _after_**start_time** and _before_**end_time** for that interval. For example, an event occurring exactly at `2012-10-30 19:25:00.0000000` would be included only in the second interval shown below:  
   
 ```  
   
@@ -94,6 +88,6 @@ WHERE start_time>='2011-09-25:12:00:00' and end_time<='2011-09-28 12:00:00';
 ```  
   
 ## See Also  
- [Troubleshooting Windows Azure SQL Database](http://msdn.microsoft.com/library/windowsazure/ee730906.aspx)  
+ [Troubleshooting Windows Azure SQL Database](https://msdn.microsoft.com/library/windowsazure/ee730906.aspx)  
   
   

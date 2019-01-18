@@ -1,25 +1,21 @@
 ---
 title: "Refreshing Data (MDS Add-in for Excel) | Microsoft Docs"
-ms.custom: ""
+ms.custom: microsoft-excel-add-in
 ms.date: "03/01/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "mds"
-ms.service: ""
-ms.component: "microsoft-excel-add-in"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "master-data-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: master-data-services
+ms.topic: conceptual
 ms.assetid: 58dbe99a-288d-4f1c-9cd5-704d6836c945
-caps.latest.revision: 10
-author: "smartysanthosh"
-ms.author: "nagavo"
-manager: "craigg"
-ms.workload: "Inactive"
+author: leolimsft
+ms.author: lle
+manager: craigg
 ---
 # Refreshing Data (MDS Add-in for Excel)
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
   In [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)], refresh data when you want to get the latest information from the MDS repository without opening a new worksheet. You can refresh either all cells or a selection of cells. This can be useful when you have inserted columns with custom formulas or other data that is not managed in MDS and you want to preserve it.  
   
 ## When You Can Refresh MDS-Managed Data  
@@ -37,7 +33,7 @@ ms.workload: "Inactive"
   
 -   If an attribute value has changed in the MDS repository, the value in the worksheet is updated with value from the MDS repository. The cell color does not change.  
   
-> [!WARNING]  
+> [!WARNING]
 >  -   In the active worksheet, if non-managed data exists in rows beneath the MDS-managed data, the non-managed data may be overwritten. This occurs when you refresh the sheet and new rows of MDS-managed data, which overlap with the non-managed data, are added.  
 > -   When you refresh, comments on MDS-managed cells are deleted.  
   

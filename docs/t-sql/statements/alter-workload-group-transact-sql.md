@@ -1,16 +1,11 @@
 ---
 title: "ALTER WORKLOAD GROUP (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "01/04/2018"
-ms.prod: "sql-non-specified"
+ms.date: "04/23/2018"
+ms.prod: sql
 ms.prod_service: "sql-database"
-ms.service: ""
-ms.component: "t-sql|statements"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: t-sql
 ms.topic: "language-reference"
 f1_keywords: 
   - "ALTER_WORKLOAD_GROUP_TSQL"
@@ -20,11 +15,9 @@ dev_langs:
 helpviewer_keywords: 
   - "ALTER WORKLOAD GROUP statement"
 ms.assetid: 957addce-feb0-4e54-893e-5faca3cd184c
-caps.latest.revision: 56
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-ms.workload: "Inactive"
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
 ---
 # ALTER WORKLOAD GROUP (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -103,13 +96,13 @@ ALTER WORKLOAD GROUP { group_name | "default" }
 > By default, Resource Governor will not prevent a request from continuing if the maximum time is exceeded. However, an event will be generated. For more information, see [CPU Threshold Exceeded Event Class](../../relational-databases/event-classes/cpu-threshold-exceeded-event-class.md). 
 
 > [!IMPORTANT]
-> Starting with [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3, and using [trace flag 2422](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md), Resource Governor will abort a request when the maximum time is exceeded.
+> Starting with [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 and [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3, and using [trace flag 2422](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md), Resource Governor will abort a request when the maximum time is exceeded.
   
  REQUEST_MEMORY_GRANT_TIMEOUT_SEC =*value*  
  Specifies the maximum time, in seconds, that a query can wait for memory grant (work buffer memory) to become available.  
   
 > [!NOTE]  
->  A query does not always fail when memory grant time-out is reached. A query will only fail if there are too many concurrent queries running. Otherwise, the query may only get the minimum memory grant, resulting in reduced query performance.  
+> A query does not always fail when memory grant time-out is reached. A query will only fail if there are too many concurrent queries running. Otherwise, the query may only get the minimum memory grant, resulting in reduced query performance.  
   
  *value* must be a positive integer. The default setting for *value*, 0, uses an internal calculation based on query cost to determine the maximum time.  
   
@@ -117,10 +110,10 @@ ALTER WORKLOAD GROUP { group_name | "default" }
  Specifies the maximum degree of parallelism (DOP) for parallel requests. *value* must be 0 or a positive integer, 1 though 255. When *value* is 0, the server chooses the max degree of parallelism. This is the default and recommended setting.  
   
 > [!NOTE]  
->  The actual value that the [!INCLUDE[ssDE](../../includes/ssde-md.md)] sets for MAX_DOP by might be less than the specified value. The final value is determined by the formula min(255, *number of CPUs)*.  
+> The actual value that the [!INCLUDE[ssDE](../../includes/ssde-md.md)] sets for MAX_DOP by might be less than the specified value. The final value is determined by the formula min(255, *number of CPUs)*.  
   
 > [!CAUTION]  
->  Changing MAX_DOP can adversely affect a server's performance. If you must change MAX_DOP, we recommend that it be set to a value that is less than or equal to the maximum number of hardware schedulers that are present in a single NUMA node. We recommend that you do not set MAX_DOP to a value greater than 8.  
+> Changing MAX_DOP can adversely affect a server's performance. If you must change MAX_DOP, we recommend that it be set to a value that is less than or equal to the maximum number of hardware schedulers that are present in a single NUMA node. We recommend that you do not set MAX_DOP to a value greater than 8.  
   
  MAX_DOP is handled as follows:  
   
@@ -143,7 +136,7 @@ ALTER WORKLOAD GROUP { group_name | "default" }
  The option "default" must be enclosed by quotation marks ("") or brackets ([]) when used with ALTER WORKLOAD GROUP to avoid conflict with DEFAULT, which is a system reserved word. For more information, see [Database Identifiers](../../relational-databases/databases/database-identifiers.md).  
   
 > [!NOTE]  
->  The option "default" is case-sensitive.  
+> The option "default" is case-sensitive.  
   
 ## Remarks  
  ALTER WORKLOAD GROUP is allowed on the default group.  
@@ -155,7 +148,7 @@ ALTER WORKLOAD GROUP { group_name | "default" }
 -   If you are changing MAX_DOP from 1 to 0 or a value greater than 1, executing DBCC FREEPROCCACHE is not required. However, serial plans cannot run in parallel, so clearing the respective cache will allow new plans to potentially be compiled using parallelism.  
   
 > [!CAUTION]  
->  Clearing cached plans from a resource pool that is associated with more than one workload group will affect all workload groups with the user-defined resource pool identified by *pool_name*.  
+> Clearing cached plans from a resource pool that is associated with more than one workload group will affect all workload groups with the user-defined resource pool identified by *pool_name*.  
   
  When you are executing DDL statements, we recommend that you be familiar with Resource Governor states. For more information, see [Resource Governor](../../relational-databases/resource-governor/resource-governor.md).  
   
@@ -171,7 +164,7 @@ ALTER WORKLOAD GROUP { group_name | "default" }
 ## Examples  
  The following example shows how to change the importance of requests in the default group from `MEDIUM` to `LOW`.  
   
-```  
+```sql  
 ALTER WORKLOAD GROUP "default"  
 WITH (IMPORTANCE = LOW);  
 GO  
@@ -181,7 +174,7 @@ GO
   
  The following example shows how to move a workload group from the pool that it is in to the default pool.  
   
-```  
+```sql  
 ALTER WORKLOAD GROUP adHoc  
 USING [default];  
 GO  

@@ -1,30 +1,18 @@
 ---
 title: "Data Mining Tutorials (Analysis Services) | Microsoft Docs"
-ms.custom: ""
-ms.date: "05/06/2016"
-ms.prod: analysis-services
-ms.prod_service: "analysis-services"
-ms.service: ""
-ms.component: ""
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
-  
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
-applies_to: 
-  - "SQL Server 2016"
-helpviewer_keywords: 
-  - "data mining [Analysis Services], designing"
-ms.assetid: 96eea930-4a4f-42d8-bf72-6c5daf1a5f09
-caps.latest.revision: 25
-author: "Minewiskan"
-ms.author: "owend"
-manager: "kfile"
-ms.workload: "On Demand"
+ms.date: 05/08/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: data-mining
+ms.topic: tutorial
+ms.author: owend
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
 ---
 # Data Mining Tutorials (Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] makes it easy to create data mining solutions using wizards and integrated visualizations. Particularly if you are new to machine learning, the tools in [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] are an easy way to design, train, and explore data mining models. The data in your models can be stored in a cube, relational database, or any other source support by [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. After creating a model, you can put it into production by accessing the model to create predictions using prediction multiple clients, including [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] and ASP.NET.  
   
 > [!NOTE]  

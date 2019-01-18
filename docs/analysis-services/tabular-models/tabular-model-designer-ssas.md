@@ -1,29 +1,16 @@
 ---
-title: "Tabular Model Designer | Microsoft Docs"
-ms.date: "10/19/2017"
-ms.prod: analysis-services
-ms.prod_service: "analysis-services, azure-analysis-services"
-ms.service: ""
-ms.component: ""
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.custom: ""
-ms.technology: 
-  
-ms.component: multidimensional-tabular
-ms.component: data-mining
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.ASVS.BIDTOOLSET.TOPLEVSEMMODUIENTRY.F1"
-ms.assetid: 45735c57-2a95-4e45-8994-7242df6c9c5f
-caps.latest.revision: 22
-author: "Minewiskan"
-ms.author: "owend"
-manager: "kfile"
-ms.workload: "On Demand"
+title: "Analysis Services tabular model designer in SQL Server Data Tools| Microsoft Docs"
+ms.date: 05/07/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: tabular-models
+ms.topic: conceptual
+ms.author: owend
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
 ---
-# Tabular Model Designer (SSAS)
+# Tabular model designer
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
 The tabular model designer is part of [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], integrated with Microsoft [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)], with additional project type templates specifically for developing professional tabular model solutions.  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] is installed as a free web download. See [Download SQL Server Data Tools (SSDT)](../../ssdt/download-sql-server-data-tools-ssdt.md) for details.    
   
@@ -79,7 +66,7 @@ The tabular model designer is part of [!INCLUDE[ssBIDevStudioFull](../../include
    
   ![Tabular Model Explorer](../../analysis-services/tabular-models/media/tabular-model-explorer.png) 
   
- Tabular Model Explorer organizes metadata objects into a tree structure that closely resembles the schema of a tabular model. Data Sources, Perspectives, Relationships, Roles, Tables, and Translations correspond to top-level schema objects. There are some exceptions, specifically KPIs and Measures, which technically aren’t top-level objects, but child objects of the various tables in the model. However, having consolidated top-level containers for all KPIs and Measures makes it easier to work with these objects, especially if your model includes a very large number of tables. Measures are also listed under their corresponding parent tables, so you have a clear view of the actual parent-child relationships. If you select a measure in the top-level Measures container, the same measure is also selected in the child collection under its table, and vice-versa.  
+ Tabular Model Explorer organizes metadata objects into a tree structure that closely resembles the schema of a tabular model. Data Sources, Perspectives, Relationships, Roles, Tables, and Translations correspond to top-level schema objects. There are some exceptions, specifically KPIs and Measures, which technically aren't top-level objects, but child objects of the various tables in the model. However, having consolidated top-level containers for all KPIs and Measures makes it easier to work with these objects, especially if your model includes a very large number of tables. Measures are also listed under their corresponding parent tables, so you have a clear view of the actual parent-child relationships. If you select a measure in the top-level Measures container, the same measure is also selected in the child collection under its table, and vice-versa.  
  
  Object nodes in Tabular Model Explorer are linked to appropriate menu options that until now were hiding under the Model, Table, and Column menus in Visual Studio. You can right-click an object to explore options for the object type. Not all object node types have a context menu yet, but additional options and improvements are coming in subsequent releases. 
 
@@ -96,7 +83,7 @@ The tabular model designer is part of [!INCLUDE[ssBIDevStudioFull](../../include
   
 -   Measure  
   
- Project Properties display only the project name and project folder in the Properties window. Projects also have additional deployment Options and deployment server settings that you can set using a modal properties dialog box. To view these properties, in **Solution Explorer**, right click the project, and then click **Properties**.  
+ Project properties display only the project name and project folder in the Properties window. Projects also have additional deployment Options and deployment server settings that you can set using a modal properties dialog box. To view these properties, in **Solution Explorer**, right click the project, and then click **Properties**.  
   
  Fields in the Properties window have embedded controls that open when you click them. The type of edit control depends on the particular property. Controls include edit boxes, dropdown lists, and links to custom dialog boxes. Properties that are shown as dimmed are read-only.  
   
@@ -137,7 +124,6 @@ The tabular model designer is part of [!INCLUDE[ssBIDevStudioFull](../../include
  The Analysis Services keyboard shortcuts can be configured/remapped through the Tools->Options->Keyboard dialog. Some global [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] shortcuts, such as build, save, debug, new project, etc. are supported in the tabular model designer context. Other tabular model designer specific shortcuts are in the Analysis Services context.  
   
 ## See also  
- [Tabular Model Projects &#40;SSAS Tabular&#41;](../../analysis-services/tabular-models/tabular-model-projects-ssas-tabular.md)   
- [Properties &#40;SSAS Tabular&#41;](../../analysis-services/tabular-models/properties-ssas-tabular.md)  
+ [Tabular Model Projects](../../analysis-services/tabular-models/tabular-model-projects-ssas-tabular.md)   
   
   

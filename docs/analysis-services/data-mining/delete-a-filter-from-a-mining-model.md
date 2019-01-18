@@ -1,26 +1,14 @@
 ---
 title: "Delete a Filter from a Mining Model | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: analysis-services
-ms.prod_service: "analysis-services"
-ms.service: ""
-ms.component: ""
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
-  
-ms.component: data-mining
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "filters [Analysis Services]"
-ms.assetid: 91220b21-adbc-49a9-b200-8bf0a724eff1
-caps.latest.revision: 13
-author: "Minewiskan"
-ms.author: "owend"
-manager: "kfile"
-ms.workload: "Inactive"
+ms.date: 05/01/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: data-mining
+ms.topic: conceptual
+ms.author: owend
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
 ---
 # Delete a Filter from a Mining Model
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -36,7 +24,7 @@ ms.workload: "Inactive"
   
 3.  Select the model, and right-click to open the shortcut menu.  
   
-     –or–  
+     -or-  
   
      Select the model. On the **Mining Model** menu, select **Set Model Filter**.  
   

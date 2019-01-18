@@ -2,15 +2,10 @@
 title: "sys.dm_hadr_cluster_members (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/23/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.service: ""
-ms.component: "dmv's"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: system-objects
 ms.topic: "language-reference"
 f1_keywords: 
   - "sys.dm_hadr_cluster_members_TSQL"
@@ -24,11 +19,10 @@ helpviewer_keywords:
   - "Availability Groups [SQL Server], WSFC clusters"
   - "sys.dm_hadr_cluster_members catalog view"
 ms.assetid: feb20b3a-8835-41d3-9a1c-91d3117bc170
-caps.latest.revision: 23
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-ms.workload: "Inactive"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.dm_hadr_cluster_members (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]

@@ -1,18 +1,12 @@
 ---
 title: "Errors and Events Reference (Reporting Services) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/18/2017"
+ms.date: 03/18/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
-ms.service: ""
-ms.component: "troubleshooting"
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
+ms.technology: troubleshooting
 
 
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "messages [Reporting Services]"
   - "errors [Reporting Services]"
@@ -20,11 +14,8 @@ helpviewer_keywords:
   - "troubleshooting [Reporting Services], errors"
   - "events [Reporting Services]"
 ms.assetid: 818b4cc1-e65d-4f1a-bf7d-fe269e6dd739
-caps.latest.revision: 42
-author: "markingmyname"
-ms.author: "maghan"
-manager: "kfile"
-ms.workload: "On Demand"
+author: markingmyname
+ms.author: maghan
 ---
 # Errors and Events Reference (Reporting Services)
   This topic provides information about errors and events for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. The [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] log files also contain error information. For more information about the types of log files that are available and how to view the logs, see [Reporting Services Log Files and Sources](../../reporting-services/report-server/reporting-services-log-files-and-sources.md).  
@@ -53,7 +44,7 @@ ms.workload: "On Demand"
 |119|Error|Activation|Report Server<br /><br /> Scheduling and Delivery Processor|*\<Source>* has not been granted access to the contents of the report server database.|  
 |120|Error|Activation|Report Server|The symmetric key cannot be decrypted. Most likely, the there has been a change to the account that the service runs as. For more information, see [Configure and Manage Encryption Keys &#40;SSRS Configuration Manager&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md).|  
 |121|Error|Startup/Shutdown|Report Server|Remote Procedure Call (RPC) Service failed to start.|  
-|122|Warning|Delivery|Scheduling and Delivery Processor|Scheduling and Delivery Processor cannot connect to the SMTP server that is used for e-mail delivery. For more information about SMTP server connections, see [Configure a Report Server for E-Mail Delivery (SSRS Configuration Manager)](http://msdn.microsoft.com/en-us/b838f970-d11a-4239-b164-8d11f4581d83).|  
+|122|Warning|Delivery|Scheduling and Delivery Processor|Scheduling and Delivery Processor cannot connect to the SMTP server that is used for e-mail delivery. For more information about SMTP server connections, see [Configure a Report Server for E-Mail Delivery (SSRS Configuration Manager)](https://msdn.microsoft.com/b838f970-d11a-4239-b164-8d11f4581d83).|  
 |123|Warning|Logging|Report Server<br /><br /> Report Manager|The report server failed to write to the trace log. For more information about trace logs, see [Report Server Service Trace Log](../../reporting-services/report-server/report-server-service-trace-log.md).|  
 |124|Information|Activation|Report Server|The Report Server service has been initialized. For more information, see [Initialize a Report Server &#40;SSRS Configuration Manager&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-initialize-a-report-server.md).|  
 |125|Information|Activation|Report Server|The key used for encrypting data was successfully extracted. For more information about keys, see [Configure and Manage Encryption Keys &#40;SSRS Configuration Manager&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md).|  

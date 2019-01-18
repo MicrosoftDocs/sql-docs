@@ -1,22 +1,15 @@
 ---
 title: "Local mode vs. connected mode reports in the Report Viewer | Microsoft Docs"
-ms.custom: ""
-ms.date: "09/25/2017"
+ms.date: 09/25/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
-ms.service: ""
-ms.component: "report-server-sharepoint"
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
+ms.technology: report-server-sharepoint
 
 
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-author: "markingmyname"
-ms.author: "maghan"
-manager: "kfile"
-ms.workload: "Inactive"
+ms.topic: conceptual
+author: markingmyname
+ms.author: maghan
+monikerRange: ">=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions"
 ---
 # Local mode vs. connected mode reports in the Report Viewer
 
@@ -39,7 +32,7 @@ ms.workload: "Inactive"
   
  The following is a list of the data processing extensions that support local mode reporting:  
   
--   [!INCLUDE[msCoName](../../includes/msconame-md.md)] Access 2010 reporting extension. For more information on Access Services, see [Use Access Services with SQL Reporting Services: Installing SQL Server 2008 R2 Reporting Services Add-In (SharePoint Server 2010)](http://go.microsoft.com/fwlink/?LinkId=192686).  
+-   [!INCLUDE[msCoName](../../includes/msconame-md.md)] Access 2010 reporting extension. For more information on Access Services, see [Use Access Services with SQL Reporting Services: Installing SQL Server 2008 R2 Reporting Services Add-In (SharePoint Server 2010)](https://go.microsoft.com/fwlink/?LinkId=192686).  
   
 -   The [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint list data extension. For more information on the SharePoint List Data Extension, see [Data Sources Supported by Reporting Services &#40;SSRS&#41;](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md)  
   
@@ -52,15 +45,15 @@ ms.workload: "Inactive"
   
 ## Configure local mode and access services with SharePoint 2013
 
- You can configure your SharePoint 2013 farm to support existing Access 2010 web databases and [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] local mode. For more information, see [Set up and configure Access Services 2010 for web databases in SharePoint Server 2013](http://technet.microsoft.com/library/ee748653\(office.15\).aspx).  
+ You can configure your SharePoint 2013 farm to support existing Access 2010 web databases and [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] local mode. For more information, see [Set up and configure Access Services 2010 for web databases in SharePoint Server 2013](https://technet.microsoft.com/library/ee748653\(office.15\).aspx).  
   
  It is not possible to create new Access web databases for SharePoint 2013. Access 2013 uses a new type of database, *Access web app* that you build in Access, then use and share with others as a SharePoint app in a web browser.  
   
  For more information, see the following.  
   
--   [What's new in Access 2013](http://office.microsoft.com/access-help/what-s-new-in-access-2013-HA102809500.aspx) (http://office.microsoft.com/access-help/what-s-new-in-access-2013-HA102809500.aspx).  
+-   [What's new in Access 2013](https://office.microsoft.com/access-help/what-s-new-in-access-2013-HA102809500.aspx) (https://office.microsoft.com/access-help/what-s-new-in-access-2013-HA102809500.aspx).  
   
--   [Basic tasks for an Access app](http://office.microsoft.com/access-help/basic-tasks-for-an-access-app-HA102840210.aspx?CTT=5&origin=HA102809500) (http://office.microsoft.com/access-help/basic-tasks-for-an-access-app-HA102840210.aspx?CTT=5&origin=HA102809500).  
+-   [Basic tasks for an Access app](https://office.microsoft.com/access-help/basic-tasks-for-an-access-app-HA102840210.aspx?CTT=5&origin=HA102809500) (https://office.microsoft.com/access-help/basic-tasks-for-an-access-app-HA102840210.aspx?CTT=5&origin=HA102809500).  
   
 ## Configure local mode reporting with SharePoint 2010
 
@@ -78,14 +71,14 @@ ms.workload: "Inactive"
   
 4.  Perform an IIS reset.  
   
- For more information, see [Use Access Services with SQL Reporting Services: Installing SQL Server 2008 R2 Reporting Services Add-In (SharePoint Server 2010)](http://go.microsoft.com/fwlink/?LinkId=192686) and [Enable-SPSessionStateService](http://technet.microsoft.com/library/ff607857\(v=office.15\).aspx).  
+ For more information, see [Use Access Services with SQL Reporting Services: Installing SQL Server 2008 R2 Reporting Services Add-In (SharePoint Server 2010)](https://go.microsoft.com/fwlink/?LinkId=192686) and [Enable-SPSessionStateService](https://technet.microsoft.com/library/ff607857\(v=office.15\).aspx).  
   
 ## Connected mode
 
- For the latest information on using ADS extension with [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] connected mode, see [Access Services Report in SharePoint Site shows error in data extension ‘ADS’](http://social.technet.microsoft.com/wiki/contents/articles/25298.access-services-report-in-sharepoint-site-shows-error-in-data-extension-ads.aspx).  
+ For the latest information on using ADS extension with [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] connected mode, see [Access Services Report in SharePoint Site shows error in data extension 'ADS'](https://social.technet.microsoft.com/wiki/contents/articles/25298.access-services-report-in-sharepoint-site-shows-error-in-data-extension-ads.aspx).  
   
 ## See also
 
  [Data sources supported by Reporting Services](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md)  
 
-More questions? [Try asking the Reporting Services forum](http://go.microsoft.com/fwlink/?LinkId=620231)
+More questions? [Try asking the Reporting Services forum](https://go.microsoft.com/fwlink/?LinkId=620231)

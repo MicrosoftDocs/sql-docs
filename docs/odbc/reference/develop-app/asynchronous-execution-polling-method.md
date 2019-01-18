@@ -2,24 +2,17 @@
 title: "Asynchronous Execution (Polling Method) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
-ms.prod_service: "drivers"
-ms.service: ""
-ms.component: "odbc"
+ms.prod: sql
+ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "drivers"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: connectivity
+ms.topic: conceptual
 helpviewer_keywords: 
   - "asynchronous execution [ODBC]"
 ms.assetid: 8cd21734-ef8e-4066-afd5-1f340e213f9c
-caps.latest.revision: 40
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
-ms.workload: "Inactive"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # Asynchronous Execution (Polling Method)
 Prior to ODBC 3.8 and the Windows 7 SDK, asynchronous operations were permitted only on statement functions. For more information, see the **Executing Statement Operations Asynchronously**, later in this topic.  
@@ -136,9 +129,9 @@ while ((rc = SQLExecDirect(hstmt1, SQLStatement, SQL_NTS)) == SQL_STILL_EXECUTIN
 }  
 ```  
   
- When an application calls a function to determine whether it is still executing asynchronously, it must use the original statement handle. This is because asynchronous execution is tracked on a per-statement basis. The application must also supply valid values for the other arguments — the original arguments will do — to get past error checking in the Driver Manager. However, after the driver checks the statement handle and determines that the statement is executing asynchronously, it ignores all other arguments.  
+ When an application calls a function to determine whether it is still executing asynchronously, it must use the original statement handle. This is because asynchronous execution is tracked on a per-statement basis. The application must also supply valid values for the other arguments - the original arguments will do - to get past error checking in the Driver Manager. However, after the driver checks the statement handle and determines that the statement is executing asynchronously, it ignores all other arguments.  
   
- While a function is executing asynchronously — that is, after it has returned SQL_STILL_EXECUTING and before it returns a different code — the application can cancel it by calling **SQLCancel** or **SQLCancelHandle** with the same statement handle. This is not guaranteed to cancel function execution. For example, the function might have already finished. Furthermore, the code returned by **SQLCancel** or **SQLCancelHandle** only indicates whether the attempt to cancel the function was successful, not whether it actually canceled the function. To determine whether the function was canceled, the application calls the function again. If the function was canceled, it returns SQL_ERROR and SQLSTATE HY008 (Operation canceled). If the function was not canceled, it returns another code, such as SQL_SUCCESS, SQL_STILL_EXECUTING, or SQL_ERROR with a different SQLSTATE.  
+ While a function is executing asynchronously - that is, after it has returned SQL_STILL_EXECUTING and before it returns a different code - the application can cancel it by calling **SQLCancel** or **SQLCancelHandle** with the same statement handle. This is not guaranteed to cancel function execution. For example, the function might have already finished. Furthermore, the code returned by **SQLCancel** or **SQLCancelHandle** only indicates whether the attempt to cancel the function was successful, not whether it actually canceled the function. To determine whether the function was canceled, the application calls the function again. If the function was canceled, it returns SQL_ERROR and SQLSTATE HY008 (Operation canceled). If the function was not canceled, it returns another code, such as SQL_SUCCESS, SQL_STILL_EXECUTING, or SQL_ERROR with a different SQLSTATE.  
   
  To disable asynchronous execution of a particular statement when the driver supports statement-level asynchronous processing, the application calls **SQLSetStmtAttr** with the SQL_ATTR_ASYNC_ENABLE attribute and sets it to SQL_ASYNC_ENABLE_OFF. If the driver supports connection-level asynchronous processing, the application calls **SQLSetConnectAttr** to set SQL_ATTR_ASYNC_ENABLE to SQL_ASYNC_ENABLE_OFF, which disables asynchronous execution of all statements on the connection.  
   

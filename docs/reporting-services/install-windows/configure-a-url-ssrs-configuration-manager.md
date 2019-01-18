@@ -1,25 +1,15 @@
 ---
 title: "Configure a URL  (SSRS Configuration Manager) | Microsoft Docs"
-ms.custom: ""
-ms.date: "05/26/2016"
+ms.date: 05/26/2016
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
-ms.service: ""
-ms.component: "install-windows"
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
 
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "URL access [Reporting Services], syntax"
 ms.assetid: 851e163a-ad2a-491e-bc1e-4df92327092f
-caps.latest.revision: 13
-author: "markingmyname"
-ms.author: "maghan"
-manager: "kfile"
-ms.workload: "Active"
+author: markingmyname
+ms.author: maghan
 ---
 # Configure a URL  (SSRS Configuration Manager)
   Before you can use the [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] or the Report Server Web service, you must configure at least one URL for each application. Configuring the URLs is mandatory if you installed [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] in "files-only" mode (that is, by selecting the **Install but do not configure the server** option on the Report Server Installation Options page in the Installation Wizard). If you installed [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] in the default configuration, URLs are already configured for each application.  
@@ -81,9 +71,9 @@ ms.workload: "Active"
   
     -   From a command prompt, type the following command to return a list of TCP ports that are being used:  
   
-         `netstat –anp tcp`  
+         `netstat -anp tcp`  
   
-    -   Review the Microsoft Support article, [Information about TCP/IP port assignments](http://support.microsoft.com/kb/174904), to read about TCP port assignments and the differences between Well Known Ports (0 through 1023), Registered Ports (1024 through 49151), and Dynamic or Private Ports (49152 through 65535).  
+    -   Review the Microsoft Support article, [Information about TCP/IP port assignments](https://support.microsoft.com/kb/174904), to read about TCP port assignments and the differences between Well Known Ports (0 through 1023), Registered Ports (1024 through 49151), and Dynamic or Private Ports (49152 through 65535).  
   
     -   If you are using Windows Firewall, you must open the port. For instructions, see [Configure a Firewall for Report Server Access](../../reporting-services/report-server/configure-a-firewall-for-report-server-access.md).  
   
@@ -97,17 +87,17 @@ ms.workload: "Active"
   
 10. Test the URL by clicking the link in the **URLs** section of page. Note that the report server database must be created and configured before you can test the URL. For instructions, see [Create a Native Mode Report Server Database  &#40;SSRS Configuration Manager&#41;](../../reporting-services/install-windows/ssrs-report-server-create-a-native-mode-report-server-database.md).  
 
-> [!NOTE]  
+> [!NOTE]
 >  If you have existing SSL Bindings and URL Reservations and you want to change the SSL Binding, for example use a different certificate or hostheader, then it is recommended you complete the following steps in order:  
->   
+> 
 >  1.  First remove all URL Reservations.  
 > 2.  Then remove all SSL Bindings.  
 > 3.  Then recreate the URLs and the SSL bindings.  
->   
+> 
 >  The previous steps can be completed using [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configuration Manager.  
->   
+> 
 >  Microsoft Windows supports one binding for each IP address to Port combination. If you configure a report server to use a specific hostheader value and the certificate on the Port to IP address combination is also issued to a different hostheader value, you will see in your browser, a warning indicating the certificate does not match the URL that is being used.  
->   
+> 
 >  To correct the issue, delete all bindings and then create new bindings with unique settings or configure the Reporting Services URL registrations with wildcards.
   
 ### To create a URL reservation for the [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)]  
@@ -129,9 +119,9 @@ ms.workload: "Active"
 ## Setting Advanced Properties to Specify Additional URLs  
  You can reserve multiple URLs for the Report Server Web service or the [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] by specifying different ports or host names (either an IP address or a host header name that a domain name server can resolve to an IP address assigned to the computer). By creating multiple URLs, you can set up different access paths to the same report server instance. For example, to enable intranet and extranet access to a report server, you might use the default URL for access across the intranet, and an additional fully qualified host name for extranet access:  
   
--   `http://myserver01/reportserver`  
+-   `https://myserver01/reportserver`  
   
--   `http://www.adventure-works.com/reportserver`  
+-   `https://www.adventure-works.com/reportserver`  
   
  You cannot set multiple virtual directory names for the same application instance. Each [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] application instance is mapped to a single virtual directory name. If you have multiple instances of [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] on the same computer, the virtual directory name for an application should include the instance name to ensure that each request reaches its intended target.  
  
@@ -156,7 +146,7 @@ ms.workload: "Active"
   
 2.  Click **Add**.  
   
-3.  Click IP Address or Host Header Name. If you specify a host header, be sure to specify a name that the DNS service can resolve. If you are specifying publicly available domain name, include the whole URL, including `http://www`.  
+3.  Click IP Address or Host Header Name. If you specify a host header, be sure to specify a name that the DNS service can resolve. If you are specifying publicly available domain name, include the whole URL, including `https://www`.  
   
 4.  Specify the port. If you specify a custom port, the URL to the application must always include the port number.  
   
@@ -170,13 +160,13 @@ ms.workload: "Active"
 ##  <a name="URLExamples"></a> Examples of URL Configurations  
  The following list shows some examples of what a report server URL might resemble:  
   
--   `http://localhost/reportserver`  
+-   `https://localhost/reportserver`  
   
--   `http://localhost/reportserver_SQLEXPRESS`  
+-   `https://localhost/reportserver_SQLEXPRESS`  
   
--   `http://sales01/reportserver`  
+-   `https://sales01/reportserver`  
   
--   `http://sales01:8080/reportserver`  
+-   `https://sales01:8080/reportserver`  
   
 -   `https://sales.adventure-works.com/reportserver`  
   
@@ -184,13 +174,13 @@ ms.workload: "Active"
   
  URLs that you use to access the [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] share a similar format and are typically created under the same Web site that hosts the report server. The only difference is the virtual directory name (in this case, it is **reports** but you can configure it to use whatever name that you want):  
   
--   `http://localhost/reports`  
+-   `https://localhost/reports`  
   
--   `http://localhost/reports_SQLEXPRESS`  
+-   `https://localhost/reports_SQLEXPRESS`  
   
--   `http://sales01/reports`  
+-   `https://sales01/reports`  
   
--   `http://sales01:8080/reports`  
+-   `https://sales01:8080/reports`  
   
 -   `https://sales.adventure-works.com/reports`  
   

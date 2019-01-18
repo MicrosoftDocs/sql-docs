@@ -1,35 +1,14 @@
 ---
 title: "Parent-Child Dimensions | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/06/2017"
-ms.prod: analysis-services
-ms.prod_service: "analysis-services"
-ms.service: ""
-ms.component: ""
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
-  
-ms.component: multidimensional-tabular
-ms.component: data-mining
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "hierarchies [Analysis Services], parent-child"
-  - "dimensions [Analysis Services], parent-child"
-  - "parent attributes [Analysis Services]"
-  - "data members [Analysis Services]"
-  - "hierarchies [Analysis Services], multilevel"
-  - "self-joins"
-  - "self-referencing relationships"
-  - "members [Analysis Services], data"
-  - "parent-child dimensions [Analysis Services]"
-ms.assetid: 4657f5dc-d88e-48d2-a448-08f79bc89546
-caps.latest.revision: 42
-author: "Minewiskan"
-ms.author: "owend"
-manager: "kfile"
-ms.workload: "On Demand"
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: multidimensional-models
+ms.topic: conceptual
+ms.author: owend
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
 ---
 # Parent-Child Dimension
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -49,7 +28,7 @@ ms.workload: "On Demand"
   
  However, parent-child dimensions construct parent-child hierarchies by examining the data that the dimension main table contains, and then evaluating the parent-child relationships between the records in the table. For more information about parent-child hierarchies, see [User Hierarchies](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/user-hierarchies.md).  
   
- Parent-child hierarchies do not derive the names for the levels in a parent-child hierarchy from the attributes that are used to create the hierarchy. Instead, these dimensions create level names automatically by using a naming template—a string expression you can specify at the level of the parent attribute that controls how the attribute generates the attribute hierarchy. For more information about how to set the naming template for a parent attribute, see [Attributes and Attribute Hierarchies](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/attributes-and-attribute-hierarchies.md).  
+ Parent-child hierarchies do not derive the names for the levels in a parent-child hierarchy from the attributes that are used to create the hierarchy. Instead, these dimensions create level names automatically by using a naming template-a string expression you can specify at the level of the parent attribute that controls how the attribute generates the attribute hierarchy. For more information about how to set the naming template for a parent attribute, see [Attributes and Attribute Hierarchies](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/attributes-and-attribute-hierarchies.md).  
   
 ## Data Members  
  Typically, leaf members in a dimension contain data derived directly from underlying data sources, whereas nonleaf members contain data derived from aggregations performed on child members.  

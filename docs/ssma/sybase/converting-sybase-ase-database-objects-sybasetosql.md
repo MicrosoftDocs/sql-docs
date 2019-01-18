@@ -2,33 +2,22 @@
 title: "Converting Sybase ASE Database Objects (SybaseToSQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "12/01/2017"
-ms.prod: "sql-non-specified"
-ms.prod_service: "sql-tools"
-ms.service: ""
-ms.component: "ssma-sybase"
+ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "sql-ssma"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to: 
-  - "Azure SQL Database"
-  - "SQL Server"
+ms.technology: ssma
+ms.topic: conceptual
 helpviewer_keywords: 
   - "Converting Database Objects"
 ms.assetid: 509cb65d-2f54-427a-83d7-37919cc4e3e3
-caps.latest.revision: 8
 author: "Shamikg"
 ms.author: "Shamikg"
-manager: "jhubbard"
-ms.workload: "Inactive"
+manager: craigg
 ---
 # Converting SAP ASE database objects (SybaseToSQL)
-After you have connected to SAP Adaptive Server Enterprise (ASE), connected to [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] or Azure SQL and set project and data mapping options, you can convert SAP Adaptive Server Enterprise (ASE) database objects to [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] or Azure SQL database objects.  
+After you have connected to SAP Adaptive Server Enterprise (ASE), connected to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] or Azure SQL and set project and data mapping options, you can convert SAP Adaptive Server Enterprise (ASE) database objects to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] or Azure SQL database objects.  
   
 ## The conversion process  
-Converting database objects takes the object definitions from ASE, converts them to similar [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] or SQL Azure objects, and then loads this information into the SSMA metadata. It does not load the information into the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] or Azure SQL. You can then view the objects and their properties by using the [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] or Azure SQL Metadata Explorer.
+Converting database objects takes the object definitions from ASE, converts them to similar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] or SQL Azure objects, and then loads this information into the SSMA metadata. It does not load the information into the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] or Azure SQL. You can then view the objects and their properties by using the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] or Azure SQL Metadata Explorer.
   
 During the conversion, SSMA prints output messages to the Output pane and error messages to the **Error List** pane. Use the output and error information to determine whether you have to modify your ASE databases or your conversion process to obtain the desired conversion results.  
   
@@ -59,7 +48,7 @@ To convert ASE database objects, first select the objects you want to convert, a
     You can also convert individual objects or categories of objects by right-clicking the object or its containing folder, and then selecting **Convert Schema**.  
   
 > [!NOTE]  
-> Some of the SAP ASE system functions do not exactly match the equivalent SQL Server system functions in behavior. To emulate the SAP ASE behavior, SSMA generates User Defined functions in the converted SQL Server database under a schema called ‘s2ss’. Depending on the project settings, some of the SQL Server system functions are replaced with these emulated functions. SSMA creates the following user-defined functions:  
+> Some of the SAP ASE system functions do not exactly match the equivalent SQL Server system functions in behavior. To emulate the SAP ASE behavior, SSMA generates User Defined functions in the converted SQL Server database under a schema called 's2ss'. Depending on the project settings, some of the SQL Server system functions are replaced with these emulated functions. SSMA creates the following user-defined functions:  
   
 ||||  
 |-|-|-|  
@@ -126,10 +115,10 @@ For each item that could not be converted, you have to determine what you want t
   
 -   You can alter the SAP ASE object to remove or revise problematic code. To load the updated code into SSMA, you have to update the metadata. For more information, see [Connecting to SAP ASE &#40;SybaseToSQL&#41;](../../ssma/sybase/connecting-to-sybase-ase-sybasetosql.md).  
   
--   You can exclude the object from migration. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] or Azure SQL Metadata Explorer and Sybase Metadata Explorer, clear the check box next to the item before loading the objects into [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] or Azure SQL and migrating data from SAP ASE.  
+-   You can exclude the object from migration. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] or Azure SQL Metadata Explorer and Sybase Metadata Explorer, clear the check box next to the item before loading the objects into [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] or Azure SQL and migrating data from SAP ASE.  
   
 ## Next steps  
-The next step in the migration process is [Loading Converted Database Objects into SQL Server/ SQL Azure (SybaseToSQL)](http://msdn.microsoft.com/en-us/4c59256f-99a8-4351-9559-a455813dbd06).  
+The next step in the migration process is [Loading Converted Database Objects into SQL Server/ SQL Azure (SybaseToSQL)](https://msdn.microsoft.com/4c59256f-99a8-4351-9559-a455813dbd06).  
   
 ## See also  
 [Migrating SAP ASE Databases to SQL Server - Azure SQL Database &#40;SybaseToSQL&#41;](../../ssma/sybase/migrating-sybase-ase-databases-to-sql-server-azure-sql-db-sybasetosql.md)  

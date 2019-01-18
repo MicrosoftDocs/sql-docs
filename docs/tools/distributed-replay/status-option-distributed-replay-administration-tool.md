@@ -1,23 +1,14 @@
 ---
 title: "Status Option (Distributed Replay Administration Tool) | Microsoft Docs"
-ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-non-specified"
-ms.prod_service: "sql-tools"
-ms.service: ""
-ms.component: "distributed-replay"
-ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.prod: sql
+ms.reviewer:
+ms.technology: tools-other
+ms.topic: conceptual
 ms.assetid: ea89386e-1598-4412-8b37-680d14b2a5b6
-caps.latest.revision: 17
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-ms.workload: "Inactive"
+author: stevestein
+ms.author: sstein
+manager: craigg
 ---
 # Status Option (Distributed Replay Administration Tool)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -35,12 +26,12 @@ dreplay status [-m controller] [-f status_interval]
 ```  
   
 #### Parameters  
- **-m** *controller*  
+ **-m** _controller_  
  Specifies the computer name of the controller. You can use "`localhost`" or "`.`" to refer to the local computer.  
   
  If the **-m** parameter is not specified, the local computer is used.  
   
- **-f** *status_interval*  
+ **-f** _status_interval_  
  Specifies the frequency (in seconds) at which to display the status.  
   
  If the **-f** parameter is not specified, the default interval is 30 seconds.  
@@ -49,7 +40,7 @@ dreplay status [-m controller] [-f status_interval]
  In the following example, the current status is displayed every 60 seconds. The value `localhost` indicates that the controller service is running on the same computer as the administration tool.  
   
 ```  
-dreplay status –m localhost -f 60  
+dreplay status -m localhost -f 60  
 ```  
   
 ## Permissions  

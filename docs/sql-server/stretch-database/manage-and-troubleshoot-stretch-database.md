@@ -2,32 +2,24 @@
 title: "Manage and troubleshoot Stretch Database | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/27/2016"
-ms.prod: "sql-non-specified"
-ms.prod_service: "database-engine"
-ms.service: ""
-ms.component: "stretch-database"
+ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "dbe-stretch"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "Stretch Database, managing"
   - "Stretch Database, troubleshooting"
   - "managing Stretch Database"
   - "troubleshooting Stretch Database"
 ms.assetid: 6334db3e-9297-44df-8d53-211187a95520
-caps.latest.revision: 42
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "craigg"
-ms.workload: "Inactive"
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ---
 # Manage and troubleshoot Stretch Database
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly.md)]
 
-  To manage and troubleshoot Stretch Database, use the tools and methods described in this topic .  
+
+  To manage and troubleshoot Stretch Database, use the tools and methods described in this article .  
 ## Manage local data  
   
 ###  <a name="LocalInfo"></a> Get info about local databases and tables enabled for Stretch Database  

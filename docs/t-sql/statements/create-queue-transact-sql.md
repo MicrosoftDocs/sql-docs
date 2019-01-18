@@ -2,15 +2,10 @@
 title: "CREATE QUEUE (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "04/10/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "sql-database"
-ms.service: ""
-ms.component: "t-sql|statements"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: t-sql
 ms.topic: "language-reference"
 f1_keywords: 
   - "QUEUE_TSQL"
@@ -28,11 +23,9 @@ helpviewer_keywords:
   - "activation stored procedures [Service Broker]"
   - "queues [Service Broker], creating"
 ms.assetid: fce80faf-2bdc-475d-8ca1-31438ed41fb0
-caps.latest.revision: 67
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-ms.workload: "On Demand"
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
 ---
 # CREATE QUEUE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

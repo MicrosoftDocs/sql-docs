@@ -1,30 +1,21 @@
 ---
 title: "sp_adddistributiondb (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-non-specified"
+ms.date: "04/30/2018"
+ms.prod: sql
 ms.prod_service: "database-engine"
-ms.service: ""
-ms.component: "system-stored-procedures"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
+ms.technology: replication
 ms.topic: "language-reference"
-applies_to: 
-  - "SQL Server"
 f1_keywords: 
   - "sp_adddistributiondb_TSQL"
   - "sp_adddistributiondb"
 helpviewer_keywords: 
   - "sp_adddistributiondb"
 ms.assetid: e9bad56c-d2b3-44ba-a4d7-ff2fd842e32d
-caps.latest.revision: 27
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "craigg"
-ms.workload: "Inactive"
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
 ---
 # sp_adddistributiondb (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -51,26 +42,28 @@ sp_adddistributiondb [ @database= ] 'database'
     [ , [ @login= ] 'login' ]   
     [ , [ @password= ] 'password' ]   
     [ , [ @createmode= ] createmode ]  
-    [ , [ @from_scripting = ] from_scripting ]  
+    [ , [ @from_scripting = ] from_scripting ] 
+    [ , [ @deletebatchsize_xact = ] deletebatchsize_xact ] 
+    [ , [ @deletebatchsize_cmd = ] deletebatchsize_cmd ] 
 ```  
   
 ## Arguments  
  [ **@database=**] *database'*  
  Is the name of the distribution database to be created. *database* is **sysname**, with no default. If the specified database already exists and is not already marked as a distribution database, then the objects needed to enable distribution are installed and the database is marked as a distribution database. If the specified database is already enabled as a distribution database, an error is returned.  
   
- [ **@data_folder=**] **'***data_folder'*  
+ [ **@data_folder=**] **'**_data_folder'_  
  Is the name of the directory used to store the distribution database data file. *data_folder* is **nvarchar(255)**, with a default of NULL. If NULL, the data directory for that instance of [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is used, for example, `C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Data`.  
   
- [ **@data_file=**] **'***data_file***'**  
+ [ **@data_file=**] **'**_data_file_**'**  
  Is the name of the database file. *data_file* is **nvarchar(255)**, with a default of **database**. If NULL, the stored procedure constructs a file name using the database name.  
   
  [ **@data_file_size=**] *data_file_size*  
  Is the initial data file size in megabytes (MB). *data_file_size i*s **int**, with a default of 5MB.  
   
- [ **@log_folder=**] **'***log_folder***'**  
+ [ **@log_folder=**] **'**_log_folder_**'**  
  Is the name of the directory for the database log file. *log_folder* is **nvarchar(255)**, with a default of NULL. If NULL, the data directory for that instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is used (for example, `C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Data`).  
   
- [ **@log_file=**] **'***log_file***'**  
+ [ **@log_file=**] **'**_log_file_**'**  
  Is the name of the log file. *log_file* is **nvarchar(255)**, with a default of NULL. If NULL, the stored procedure constructs a file name using the database name.  
   
  [ **@log_file_size=**] *log_file_size*  
@@ -88,10 +81,10 @@ sp_adddistributiondb [ @database= ] 'database'
  [ **@security_mode=**] *security_mode*  
  Is the security mode to use when connecting to the Distributor. *security_mode* is **int**, with a default of 1. **0** specifies [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentication; **1** specifies Windows Integrated Authentication.  
   
- [ **@login=**] **'***login***'**  
+ [ **@login=**] **'**_login_**'**  
  Is the login name used when connecting to the Distributor to create the distribution database. This is required if *security_mode* is set to **0**. *login* is **sysname**, with a default of NULL.  
   
- [ **@password=**] **'***password***'**  
+ [ **@password=**] **'**_password_**'**  
  Is the password used when connecting to the Distributor. This is required if *security_mode* is set to **0**. *password* is **sysname**, with a default of NULL.  
   
  [ **@createmode=**] *createmode*  
@@ -105,6 +98,13 @@ sp_adddistributiondb [ @database= ] 'database'
   
  [ **@from_scripting =** ] *from_scripting*  
  [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
+ 
+ [ **@deletebatchsize_xact=**] *deletebatchsize_xact*  
+ Specifies the batch size to be used during cleanup of expired transactions from the MSRepl_Transactions tables. *deletebatchsize_xact* is **int**, with a default of 5000. This parameter was first introduced in SQL Server 2017, followed by releases in SQL Server 2012 SP4 and SQL Server 2016 SP2.  
+
+ [ **@deletebatchsize_cmd=**] *deletebatchsize_cmd*  
+ Specifies the batch size to be used during cleanup of expired commands from the MSRepl_Commands tables. *deletebatchsize_cmd* is **int**, with a default of 2000. This parameter was first introduced in SQL Server 2017, followed by releases in SQL Server 2012 SP4 and SQL Server 2016 SP2. 
+ 
   
 ## Return Code Values  
  0 (success) or 1 (failure)  

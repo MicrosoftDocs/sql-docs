@@ -2,15 +2,10 @@
 title: "sp_OAMethod (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "database-engine"
-ms.service: ""
-ms.component: "system-stored-procedures"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: system-objects
 ms.topic: "language-reference"
 f1_keywords: 
   - "sp_OAMethod"
@@ -20,11 +15,9 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_OAMethod"
 ms.assetid: 1dfaebe2-c7cf-4041-a586-5d04faf2e25e
-caps.latest.revision: 25
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "craigg"
-ms.workload: "On Demand"
+author: stevestein
+ms.author: sstein
+manager: craigg
 ---
 # sp_OAMethod (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,7 +42,7 @@ sp_OAMethod objecttoken , methodname
  *methodname*  
  Is the method name of the OLE object to call.  
   
- *returnvalue*  **OUTPUT**  
+ _returnvalue_  **OUTPUT**  
  Is the return value of the method of the OLE object. If specified, it must be a local variable of the appropriate data type.  
   
  If the method returns a single value, either specify a local variable for *returnvalue*, which returns the method return value in the local variable, or do not specify *returnvalue*, which returns the method return value to the client as a single-column, single-row result set.  
@@ -66,17 +59,17 @@ sp_OAMethod objecttoken , methodname
   
 -   The method returns an array as an output parameter.  
   
- [ *@parametername***=** ] *parameter*[ **OUTPUT** ]  
+ [ _@parametername_**=** ] *parameter*[ **OUTPUT** ]  
  Is a method parameter. If specified, *parameter* must be a value of the appropriate data type.  
   
  To obtain the return value of an output parameter, *parameter* must be a local variable of the appropriate data type, and **OUTPUT** must be specified. If a constant parameter is specified, or if **OUTPUT** is not specified, any return value from an output parameter is ignored.  
   
- If specified, *parametername* must be the name of the [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] named parameter. Note that **@***parametername*is not a [!INCLUDE[tsql](../../includes/tsql-md.md)] local variable. The at sign (**@**) is removed, and *parametername*is passed to the OLE object as the parameter name. All named parameters must be specified after all positional parameters are specified.  
+ If specified, *parametername* must be the name of the [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] named parameter. Note that **@**_parametername_is not a [!INCLUDE[tsql](../../includes/tsql-md.md)] local variable. The at sign (**@**) is removed, and *parametername*is passed to the OLE object as the parameter name. All named parameters must be specified after all positional parameters are specified.  
   
  *n*  
  Is a placeholder indicating that multiple parameters can be specified.  
   
-> [!NOTE]  
+> [!NOTE]
 >  *@parametername* can be a named parameter because it is part of the specified method and is passed through to the object. The other parameters for this stored procedure are specified by position, not name.  
   
 ## Return Code Values  

@@ -1,24 +1,17 @@
 ---
-title: "Configuration and administration of a SQL Server Reporting Services report server | Microsoft Docs"
-ms.custom: ""
-ms.date: "09/25/2017"
+title: "Configuration and administration of a report server (SSRS) | Microsoft Docs"
+ms.date: 08/17/2018
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
-ms.service: ""
-ms.component: "report-server-sharepoint"
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
+ms.technology: report-server-sharepoint
 
 
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-author: "markingmyname"
-ms.author: "maghan"
-manager: "kfile"
-ms.workload: "Inactive"
+ms.topic: conceptual
+author: markingmyname
+ms.author: maghan
+monikerRange: ">=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions"
 ---
-# Configuration and administration of a SQL Server Reporting Services report server
+# Configuration and administration of a SQL Server Reporting Services (SSRS) report server
 
 [!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016](../../includes/ssrs-appliesto-2016.md)] [!INCLUDE[ssrs-appliesto-sharepoint-2013-2016i](../../includes/ssrs-appliesto-sharepoint-2013-2016.md)] [!INCLUDE[ssrs-appliesto-not-pbirsi](../../includes/ssrs-appliesto-not-pbirs.md)]
 
@@ -45,8 +38,6 @@ Use the following sections to help you understand concepts, deployment scenarios
   
     -   [Set Processing Options &#40;Reporting Services in SharePoint Integrated Mode&#41;](../../reporting-services/report-server-sharepoint/set-processing-options-reporting-services-in-sharepoint-integrated-mode.md)  
   
-    -   [Cache Refresh Options &#40;Report Manager&#41;](http://msdn.microsoft.com/library/227da40c-6bd2-48ec-aa9c-50ce6c1ca3a6)  
-  
 -   [Reporting Services Site Collection Features](../../reporting-services/report-server-sharepoint/site-collection-features-reporting-services.md)  
   
 -   [Activate the Report Server and Power View Integration Features in SharePoint](../../reporting-services/report-server-sharepoint/site-collection-features-report-server-and-power-view.md)  
@@ -63,6 +54,4 @@ Use the following sections to help you understand concepts, deployment scenarios
   
 -   [Set Processing Options &#40;Reporting Services in SharePoint Integrated Mode&#41;](../../reporting-services/report-server-sharepoint/set-processing-options-reporting-services-in-sharepoint-integrated-mode.md)  
   
- For more general information about Reporting Services, see [Reporting Services](../../reporting-services/create-deploy-and-manage-mobile-and-paginated-reports.md) in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Books Online. For information about other [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] components, tools, and resources, see [SQL Server Books Online](../../sql-server/sql-server-technical-documentation.md).  
-
-More questions? [Try asking the Reporting Services forum](http://go.microsoft.com/fwlink/?LinkId=620231)
+More questions? [Try asking the Reporting Services forum](https://go.microsoft.com/fwlink/?LinkId=620231)

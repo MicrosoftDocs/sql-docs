@@ -2,16 +2,10 @@
 title: "Considerations for Using Test Servers | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-non-specified"
-ms.prod_service: "database-engine"
-ms.service: ""
-ms.component: "performance"
+ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: performance
+ms.topic: conceptual
 helpviewer_keywords: 
   - "overhead [Database Engine Tuning Advisor]"
   - "tuning overhead [SQL Server]"
@@ -22,11 +16,9 @@ helpviewer_keywords:
   - "production servers [SQL Server]"
   - "offload tuning overhead [SQL Server]"
 ms.assetid: 94e6c3e5-1f09-4616-9da2-4e44d066d494
-caps.latest.revision: 27
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-ms.workload: "Inactive"
+author: julieMSFT
+ms.author: jrasnick
+manager: craigg
 ---
 # Considerations for Using Test Servers
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

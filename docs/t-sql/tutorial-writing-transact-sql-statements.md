@@ -2,26 +2,19 @@
 title: "Tutorial: Writing Transact-SQL Statements | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/03/2016"
-ms.prod: "sql-non-specified"
-ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
-ms.service: ""
-ms.component: "t-sql"
+ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
+ms.technology: t-sql
+ms.topic: quickstart
 helpviewer_keywords: 
   - "Transact-SQL statements, tutorials"
   - "Transact-SQL tutorials"
   - "tutorials [Transact-SQL]"
 ms.assetid: 2addc9be-67d0-423d-a457-192fe9d7d058
-caps.latest.revision: 21
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "craigg"
-ms.workload: "Active"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Tutorial: Writing Transact-SQL Statements
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../includes/tsql-appliesto-ss2008-all-md.md)]

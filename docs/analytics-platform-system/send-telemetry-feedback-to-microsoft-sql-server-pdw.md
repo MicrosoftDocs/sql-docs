@@ -1,31 +1,24 @@
 ---
-title: "Send Telemetry Feedback to Microsoft (SQL Server PDW)"
-author: "barbkess" 
-ms.author: "barbkess"
-manager: "jhubbard"	  
-ms.prod: "analytics-platform-system"
-ms.prod_service: "mpp-data-warehouse"
-ms.service: ""
-ms.component:
-ms.technology: "mpp-data-warehouse"
-ms.custom: ""
-ms.date: 01/05/2017
-ms.reviewer: na
-ms.suite: "sql"
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: 40a994f0-7eff-4db9-9572-401d6e1187a0
-caps.latest.revision: 18
-
+title: Telemetry feedback - Analytics Platform System | Microsoft Docs
+description: Send telemetry feedback to Microsoft for Analytics Platform System.
+author: mzaman1 
+manager: craigg
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
 ---
-# Send Telemetry Feedback to Microsoft
-Analytics Platform System has an optional telemetry feature that sends Admin Console data to Microsoft. We encourage you to enable this to help us improve the product.  
+
+# Send telemetry feedback to Microsoft for Analytics Platform System
+Analytics Platform System has an optional telemetry feature that sends Admin Console data to Microsoft. 
   
 > [!NOTE]  
 > In this release, Microsoft is not actively monitoring the telemetry data. The data is being collected for analysis purposes only.  
   
 ## <a name="privacy"></a>Privacy  
-To provide the maximum privacy protection, APS ships without enabling telemetry. Before enabling this feature, first review the [Microsoft Analytics Platform System Privacy Statement](http://go.microsoft.com/fwlink/?LinkId=400902). Then, to opt-in run the PowerShell script described below.  
+To provide the maximum privacy protection, APS ships without enabling telemetry. Before enabling this feature, first review the [Microsoft Analytics Platform System Privacy Statement](https://go.microsoft.com/fwlink/?LinkId=400902). To opt in, run the PowerShell script described below.  
   
 ## <a name="enable"></a>Enable Telemetry  
 **DNS Forwarding:** Sending telemetry data to Microsoft requires Analytics Platform System to connect to the internet through a DNS forwarder. To enable this feature, you must enable DNS forwarding on all hosts and workload VMs. Invoke the `Enable-RemoteMonitoring` command with the `SetupDnsForwarder` option to properly configure DNS forwarding and enable telemetry. Invoke the `Enable-RemoteMonitoring` command without the `SetupDnsForwarder` option when DNS forwarding is already configured and you only want to enable Heartbeat Monitoring.  
@@ -35,7 +28,7 @@ To provide the maximum privacy protection, APS ships without enabling telemetry.
   
 #### To Enable Feedback  
   
-1.  Using an appliance domain administrator account, connect to the Control node (***appliance_domain*-CTL01**) and open a command prompt using your Windows administrator credentials.  
+1.  Using an appliance domain administrator account, connect to the Control node (<strong>*appliance_domain*-CTL01</strong>) and open a command prompt using your Windows administrator credentials.  
   
 2.  Navigate to the following directory: `C:\Program Files\Microsoft SQL Server Parallel Data Warehouse\100`.  
   
@@ -85,7 +78,7 @@ Disabling telemetry will stop all operations which communicate information about
   
 #### To Disable telemetry  
   
-1.  Using an appliance domain administrator account, connect to the Control node (***appliance_domain*-CTL01**) and open a PowerShell window with administrator privileges.  
+1.  Using an appliance domain administrator account, connect to the Control node (<strong>*appliance_domain*-CTL01</strong>) and open a PowerShell window with administrator privileges.  
   
 2.  Navigate to the following directory: `C:\Program Files\Microsoft SQL Server Parallel Data Warehouse\100`.  
   
@@ -112,9 +105,10 @@ If you see any errors or information that leads you to believe that the command 
   
 There is no harm in running the `Disable-RemoteMonitoring` command multiple times.  
   
-## See Also  
-[Monitor the Appliance by Using the Admin Console &#40;Analytics Platform System&#41;](monitor-the-appliance-by-using-the-admin-console.md)  
-[Monitor the Appliance by Using System Views &#40;Analytics Platform System&#41;](monitor-the-appliance-by-using-system-views.md)  
-[Monitor the Appliance by Using System Center Operations Manager &#40;Analytics Platform System&#41;](monitor-the-appliance-by-using-system-center-operations-manager.md)  
-[Use a DNS Forwarder to Resolve Non-Appliance DNS Names &#40;Analytics Platform System&#41;](use-a-dns-forwarder-to-resolve-non-appliance-dns-names.md)  
+## Next steps
+For more information, see:
+- [Monitor the Appliance by Using the Admin Console &#40;Analytics Platform System&#41;](monitor-the-appliance-by-using-the-admin-console.md)  
+- [Monitor the Appliance by Using System Views &#40;Analytics Platform System&#41;](monitor-the-appliance-by-using-system-views.md)  
+- [Monitor the Appliance by Using System Center Operations Manager &#40;Analytics Platform System&#41;](monitor-the-appliance-by-using-system-center-operations-manager.md)  
+- [Use a DNS Forwarder to Resolve Non-Appliance DNS Names &#40;Analytics Platform System&#41;](use-a-dns-forwarder-to-resolve-non-appliance-dns-names.md)  
   

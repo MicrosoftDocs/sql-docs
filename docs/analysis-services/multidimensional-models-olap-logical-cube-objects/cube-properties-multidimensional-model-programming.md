@@ -1,47 +1,14 @@
 ---
 title: "Cube Properties - Multidimensional Model Programming | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/17/2017"
-ms.prod: analysis-services
-ms.prod_service: "analysis-services"
-ms.service: ""
-ms.component: ""
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
-  
-
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-applies_to: 
-  - "SQL Server 2016 Preview"
-helpviewer_keywords: 
-  - "Collation property"
-  - "ID property"
-  - "ErrorConfiguration property"
-  - "cubes [Analysis Services], properties"
-  - "Description property"
-  - "DefaultMeasure property"
-  - "ProcessingMode property"
-  - "AggregationPrefix property"
-  - "EstimatedRows property"
-  - "Visible property"
-  - "StorageLocation property"
-  - "StorageMode property"
-  - "ScriptErrorHandlingMode property"
-  - "Source property"
-  - "ScriptCacheProcessingMode property"
-  - "Language property"
-  - "Name property"
-  - "properties [Analysis Services], cubes"
-  - "ProcessingPriority property"
-  - "ProactiveCaching property"
-ms.assetid: 72ca3387-620d-4473-8e23-7fe1f2b3d5bf
-caps.latest.revision: 40
-author: "Minewiskan"
-ms.author: "owend"
-manager: "kfile"
-ms.workload: "Inactive"
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: olap
+ms.topic: conceptual
+ms.author: owend
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
 ---
 # Cube Properties - Multidimensional Model Programming
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -70,7 +37,7 @@ ms.workload: "Inactive"
 |**ScriptErrorHandlingMode**|Determines error handling. Options are **IgnoreNone** or **IgnoreAll**|  
 |**Source**|Displays the data source view used for the cube.|  
 |**StorageLocation**|Specifies the file system storage location for the cube. If none is specified, the location is inherited from the database that contains the cube object.|  
-|**StorageMode**|Specifies the storage mode for the cube. Values are **MOLAP**, **ROLAP**, or **HOLAP****.**|  
+|**StorageMode**|Specifies the storage mode for the cube. Values are **MOLAP**, **ROLAP**, or **HOLAP**.|  
 |**Visible**|Determines the visibility of the cube.|  
   
 > [!NOTE]  

@@ -2,15 +2,10 @@
 title: "sys.dm_exec_describe_first_result_set (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/10/2016"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.service: ""
-ms.component: "dmv's"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: system-objects
 ms.topic: "language-reference"
 f1_keywords: 
   - "sys.dm_exec_describe_first_result_set"
@@ -20,11 +15,10 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.dm_exec_describe_first_result_set catalog view"
 ms.assetid: 6ea88346-0bdb-4f0e-9f1f-4d85e3487d23
-caps.latest.revision: 25
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-ms.workload: "On Demand"
+author: stevestein
+ms.author: sstein
+manager: craigg
+monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.dm_exec_describe_first_result_set (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -40,19 +34,19 @@ ms.workload: "On Demand"
   
 ```  
   
-sys.dm_exec_describe_first_result(@tsql, @params, @include_browse_information)  
+sys.dm_exec_describe_first_result_set(@tsql, @params, @include_browse_information)  
 ```  
   
 ## Arguments  
- *@tsql*  
+ *\@tsql*  
  One or more [!INCLUDE[tsql](../../includes/tsql-md.md)] statements. *Transact-SQL_batch* may be **nvarchar(***n***)** or **nvarchar(max)**.  
   
- *@params*  
- @params provides a declaration string for parameters for the [!INCLUDE[tsql](../../includes/tsql-md.md)] batch, similar to sp_executesql. Parameters may be **nvarchar(n)** or **nvarchar(max)**.  
+ *\@params*  
+ \@params provides a declaration string for parameters for the [!INCLUDE[tsql](../../includes/tsql-md.md)] batch, similar to sp_executesql. Parameters may be **nvarchar(n)** or **nvarchar(max)**.  
   
- Is one string that contains the definitions of all parameters that have been embedded in the [!INCLUDE[tsql](../../includes/tsql-md.md)]*_batch*. The string must be either a Unicode constant or a Unicode variable. Each parameter definition consists of a parameter name and a data type. *n* is a placeholder that indicates additional parameter definitions. Every parameter specified in stmt must be defined in @params. If the [!INCLUDE[tsql](../../includes/tsql-md.md)] statement or batch in the statement does not contain parameters, @params is not required. NULL is the default value for this parameter.  
+ Is one string that contains the definitions of all parameters that have been embedded in the [!INCLUDE[tsql](../../includes/tsql-md.md)]*_batch*. The string must be either a Unicode constant or a Unicode variable. Each parameter definition consists of a parameter name and a data type. *n* is a placeholder that indicates additional parameter definitions. Every parameter specified in stmt must be defined in \@params. If the [!INCLUDE[tsql](../../includes/tsql-md.md)] statement or batch in the statement does not contain parameters, \@params is not required. NULL is the default value for this parameter.  
   
- *@include_browse_information*  
+ *\@include_browse_information*  
  If set to 1, each query is analyzed as if it has a FOR BROWSE option on the query. Additional key columns and source table information are returned.  
   
 ## Table Returned  
@@ -116,15 +110,15 @@ sys.dm_exec_describe_first_result(@tsql, @params, @include_browse_information)
 |5|CLR_PROCEDURE|The result could not be determined because a CLR stored procedure could potentially return the first result.|  
 |6|CLR_TRIGGER|The result could not be determined because a CLR trigger could potentially return the first result.|  
 |7|EXTENDED_PROCEDURE|The result could not be determined because an extended stored procedure could potentially return the first result.|  
-|8|UNDECLARED_PARAMETER|The result could not be determined because the data type of one or more of the result set’s columns potentially depends on an undeclared parameter.|  
+|8|UNDECLARED_PARAMETER|The result could not be determined because the data type of one or more of the result set's columns potentially depends on an undeclared parameter.|  
 |9|RECURSION|The result could not be determined because the batch contains a recursive statement.|  
 |10|TEMPORARY_TABLE|The result could not be determined because the batch contains a temporary table and is not supported by **sp_describe_first_result_set** .|  
 |11|UNSUPPORTED_STATEMENT|The result could not be determined because the batch contains a statement that is not supported by **sp_describe_first_result_set** (e.g., FETCH, REVERT etc.).|  
-|12|OBJECT_TYPE_NOT_SUPPORTED|The @object_id passed to the function is not supported (i.e. not a stored procedure)|  
-|13|OBJECT_DOES_NOT_EXIST|The @object_id passed to the function was not found in the system catalog.|  
+|12|OBJECT_TYPE_NOT_SUPPORTED|The \@object_id passed to the function is not supported (i.e. not a stored procedure)|  
+|13|OBJECT_DOES_NOT_EXIST|The \@object_id passed to the function was not found in the system catalog.|  
   
 ## Permissions  
- Requires permission to execute the @tsql argument.  
+ Requires permission to execute the \@tsql argument.  
   
 ## Examples  
  Additional examples in the topic [sp_describe_first_result_set &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md) can be adapted to use **sys.dm_exec_describe_first_result_set**.  

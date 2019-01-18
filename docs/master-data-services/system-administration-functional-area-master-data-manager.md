@@ -2,24 +2,20 @@
 title: "System Administration Functional Area (Master Data Manager) | Microsoft Docs"
 ms.custom: ""
 ms.date: "04/01/2016"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "mds"
-ms.service: ""
-ms.component: "non-specific"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "master-data-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: master-data-services
+ms.topic: conceptual
 ms.assetid: 4254e825-d76a-4daf-961f-087b961644a7
-caps.latest.revision: 9
-author: "smartysanthosh"
-ms.author: "nagavo"
-manager: "craigg"
-ms.workload: "Inactive"
+author: leolimsft
+ms.author: lle
+manager: craigg
 ---
 # System Administration Functional Area (Master Data Manager)
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
   In the System Administration functional area, administrators can create a model and all its objects. They can also create business rules and create and deploy model packages. For more information about administrators, see [Administrators &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md).  
   
 ## Model  
@@ -49,7 +45,7 @@ ms.workload: "Inactive"
   
  [Create a Model Deployment Package by Using the Wizard](../master-data-services/create-a-model-deployment-package-by-using-the-wizard.md)  
   
- [Troubleshooting Model Deployment (Master Data Services)](http://social.technet.microsoft.com/wiki/contents/articles/troubleshooting-model-deployment-master-data-services.aspx)  
+ [Troubleshooting Model Deployment (Master Data Services)](https://social.technet.microsoft.com/wiki/contents/articles/troubleshooting-model-deployment-master-data-services.aspx)  
   
 ## Business Rules  
  [Business Rules &#40;Master Data Services&#41;](../master-data-services/business-rules-master-data-services.md)  

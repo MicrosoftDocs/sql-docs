@@ -2,15 +2,9 @@
 title: "Deploying CLR Database Objects | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/16/2017"
-ms.prod: "sql-non-specified"
-ms.prod_service: "database-engine"
-ms.service: ""
-ms.component: "clr"
+ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-
-ms.tgt_pltfrm: ""
+ms.technology: clr
 ms.topic: "reference"
 helpviewer_keywords: 
   - "deployment script [CLR integration]"
@@ -18,11 +12,9 @@ helpviewer_keywords:
   - "deploying assemblies [CLR integration]"
   - "deploying [CLR integration]"
 ms.assetid: 00752573-3367-41a7-af98-7b7a29e8e2f2
-caps.latest.revision: 35
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-ms.workload: "On Demand"
+author: "rothja"
+ms.author: "jroth"
+manager: craigg
 ---
 # Deploying CLR Database Objects
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -78,7 +70,7 @@ ms.workload: "On Demand"
   
  `EXTERNAL NAME HelloWorld.Procedures.HelloWorld`  
   
- For more information about creating the different types of managed database objects in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], see [CLR User-Defined Functions](../../relational-databases/clr-integration-database-objects-user-defined-functions/clr-user-defined-functions.md), [CLR User-Defined Aggregates](../../relational-databases/clr-integration-database-objects-user-defined-functions/clr-user-defined-aggregates.md), [CLR User-Defined Types](../../relational-databases/clr-integration-database-objects-user-defined-types/clr-user-defined-types.md), [CLR Stored Procedures](http://msdn.microsoft.com/library/bbdd51b2-a9b4-4916-ba6f-7957ac6c3f33), and [CLR Triggers](http://msdn.microsoft.com/library/302a4e4a-3172-42b6-9cc0-4a971ab49c1c).  
+ For more information about creating the different types of managed database objects in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], see [CLR User-Defined Functions](../../relational-databases/clr-integration-database-objects-user-defined-functions/clr-user-defined-functions.md), [CLR User-Defined Aggregates](../../relational-databases/clr-integration-database-objects-user-defined-functions/clr-user-defined-aggregates.md), [CLR User-Defined Types](../../relational-databases/clr-integration-database-objects-user-defined-types/clr-user-defined-types.md), [CLR Stored Procedures](https://msdn.microsoft.com/library/bbdd51b2-a9b4-4916-ba6f-7957ac6c3f33), and [CLR Triggers](https://msdn.microsoft.com/library/302a4e4a-3172-42b6-9cc0-4a971ab49c1c).  
   
 ## Deploying the Assembly to Production Servers  
  Once the CLR database objects have been tested and verified on the test server, they can be distributed to production servers. For more information about debugging managed database objects, see [Debugging CLR Database Objects](../../relational-databases/clr-integration/debugging-clr-database-objects.md).  

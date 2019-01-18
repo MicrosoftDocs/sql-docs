@@ -4,22 +4,15 @@ ms.custom: ""
 ms.date: "03/03/2017"
 ms.prod: ""
 ms.prod_service: "sql-data-warehouse, pdw"
-ms.service: "sql-data-warehouse"
-ms.component: "system-catalog-views"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 dev_langs: 
   - "TSQL"
 ms.assetid: 17a4c925-d4b5-46ee-9cd6-044f714e6f0e
-caps.latest.revision: 10
-author: "barbkess"
-ms.author: "barbkess"
-manager: "jhubbard"
-ms.workload: "Inactive"
+author: ronortloff
+ms.author: rortloff
+manager: craigg
+monikerRange: ">= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions"
 ---
 # sys.pdw_nodes_column_store_row_groups (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -34,7 +27,7 @@ ms.workload: "Inactive"
 |**row_group_id**|**int**|ID of this row group. This is unique within the partition.|  
 |**dellta_store_hobt_id**|**bigint**|The hobt_id for delta row groups, or NULL if the row group type is not delta. A delta row group is a read/write row group that is accepting new records. A delta row group has the **OPEN** status. A delta row group is still in rowstore format and has not been compressed to columnstore format.|  
 |**state**|**tinyint**|ID number associated with the state_description.<br /><br /> 1 = OPEN<br /><br /> 2 = CLOSED<br /><br /> 3 = COMPRESSED|  
-|**state_desccription**|**nvarchar(60)**|Description of the persistent state of the row group:<br /><br /> OPEN – A read/write row group that is accepting new records. An open row group is still in rowstore format and has not been compressed to columnstore format.<br /><br /> CLOSED – A row group that has been filled, but not yet compressed by the tuple mover process.<br /><br /> COMPRESSED – A row group that has filled and compressed.|  
+|**state_desccription**|**nvarchar(60)**|Description of the persistent state of the row group:<br /><br /> OPEN - A read/write row group that is accepting new records. An open row group is still in rowstore format and has not been compressed to columnstore format.<br /><br /> CLOSED - A row group that has been filled, but not yet compressed by the tuple mover process.<br /><br /> COMPRESSED - A row group that has filled and compressed.|  
 |**total_rows**|**bigint**|Total rows physically stored in the row group. Some may have been deleted but they are still stored. The maximum number of rows in a row group is 1,048,576 (hexadecimal FFFFF).|  
 |**deleted_rows**|**bigint**|Number of rows physically stored in the row group that are marked for deletion.<br /><br /> Always 0 for DELTA row groups.|  
 |**size_in_bytes**|**int**|Combined size, in bytes, of all the pages in this row group. This size does not include the size required to store metadata or shared dictionaries.|  

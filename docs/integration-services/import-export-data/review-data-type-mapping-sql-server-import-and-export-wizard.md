@@ -2,24 +2,17 @@
 title: "Review Data Type Mapping (SQL Server Import and Export Wizard) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/16/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "integration-services"
-ms.service: ""
-ms.component: "import-export-data"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: integration-services
+ms.topic: conceptual
 f1_keywords: 
   - "sql13.dts.impexpwizard.reviewissues.f1"
 ms.assetid: 0625c4f9-b8ff-4593-b884-39398b9d43af
-caps.latest.revision: 43
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
-ms.workload: "On Demand"
+manager: craigg
 ---
 # Review Data Type Mapping (SQL Server Import and Export Wizard)
 If you specified a data type mapping that may not succeed in the **Mappings** list of the **Column Mappings** dialog box, the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Import and Export Wizard shows the **Review Data Type Mapping** page. On this page, you review detailed information about data type conversions that the wizard has to perform to make the source data compatible with the destination. This information includes visual cues to distinguish data type conversions that are expected to succeed from conversions that may cause errors or truncations. For each conversion, you decide whether to accept the conversion that the wizard suggests, and you specify how to handle any errors that may occur.   

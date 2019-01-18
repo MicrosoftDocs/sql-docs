@@ -2,15 +2,10 @@
 title: "sp_add_maintenance_plan_job (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "database-engine"
-ms.service: ""
-ms.component: "system-stored-procedures"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: system-objects
 ms.topic: "language-reference"
 f1_keywords: 
   - "sp_add_maintenance_plan_job_TSQL"
@@ -20,11 +15,9 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_add_maintenance_plan_job"
 ms.assetid: 7205855c-964f-4f55-bf75-39a55f6fe7bd
-caps.latest.revision: 32
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-ms.workload: "Inactive"
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
 ---
 # sp_add_maintenance_plan_job (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,10 +39,10 @@ sp_add_maintenance_plan_job [ @plan_id = ] 'plan_id' , [ @job_id = ] 'job_id'
 ```  
   
 ## Arguments  
- [ **@plan_id =**] **'***plan_id***'**  
+ [ **@plan_id =**] **'**_plan_id_**'**  
  Specifies the ID of the maintenance plan. *plan_id* is **uniqueidentifier**, and must be a valid ID.  
   
- [ **@job_id =**] **'***job_id***'**  
+ [ **@job_id =**] **'**_job_id_**'**  
  Specifies the ID of the job to be associated with the maintenance plan. *job_id* is **uniqueidentifier**, and must be a valid ID. To create a job or jobs, execute **sp_add_job**, or use SQL Server Management Studio.  
   
 ## Return Code Values  

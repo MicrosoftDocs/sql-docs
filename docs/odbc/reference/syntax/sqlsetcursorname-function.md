@@ -2,16 +2,11 @@
 title: "SQLSetCursorName Function | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
-ms.prod_service: "drivers"
-ms.service: ""
-ms.component: "odbc"
+ms.prod: sql
+ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "drivers"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: connectivity
+ms.topic: conceptual
 apiname: 
   - "SQLSetCursorName"
 apilocation: 
@@ -22,11 +17,9 @@ f1_keywords:
 helpviewer_keywords: 
   - "SQLSetCursorName function [ODBC]"
 ms.assetid: 4e055946-12d4-4589-9891-41617a50f34e
-caps.latest.revision: 18
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
-ms.workload: "Inactive"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # SQLSetCursorName Function
 **Conformance**  
@@ -40,9 +33,9 @@ ms.workload: "Inactive"
 ```  
   
 SQLRETURN SQLSetCursorName(  
-     SQLHSTMT      StatementHandle,  
-     SQLCHAR *     CursorName,  
-     SQLSMALLINT   NameLength);  
+     SQLHSTMT      StatementHandle,  
+     SQLCHAR *     CursorName,  
+     SQLSMALLINT   NameLength);  
 ```  
   
 ## Arguments  
@@ -79,7 +72,7 @@ SQLRETURN SQLSetCursorName(
 |IM001|Driver does not support this function|(DM) The driver associated with the *StatementHandle* does not support the function.|  
   
 ## Comments  
- Cursor names are used only in positioned update and delete statements (for example, **UPDATE** *table-name* ...**WHERE CURRENT OF** *cursor-name*). For more information, see [Positioned Update and Delete Statements](../../../odbc/reference/develop-app/positioned-update-and-delete-statements.md). If the application does not call **SQLSetCursorName** to define a cursor name, on execution of a query statement the driver generates a name that begins with the letters SQL_CUR and does not exceed 18 characters in length.  
+ Cursor names are used only in positioned update and delete statements (for example, **UPDATE** _table-name_ ...**WHERE CURRENT OF** _cursor-name_). For more information, see [Positioned Update and Delete Statements](../../../odbc/reference/develop-app/positioned-update-and-delete-statements.md). If the application does not call **SQLSetCursorName** to define a cursor name, on execution of a query statement the driver generates a name that begins with the letters SQL_CUR and does not exceed 18 characters in length.  
   
  All cursor names within the connection must be unique. The maximum length of a cursor name is defined by the driver. For maximum interoperability, it is recommended that applications limit cursor names to no more than 18 characters. In ODBC 3*.x*, if a cursor name is a quoted identifier, it is treated in a case-sensitive manner and it can contain characters that the syntax of SQL would not permit or would treat specially, such as blanks or reserved keywords. If a cursor name must be treated in a case-sensitive manner, it must be passed as a quoted identifier.  
   

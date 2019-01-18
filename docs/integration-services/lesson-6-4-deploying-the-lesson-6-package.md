@@ -2,24 +2,15 @@
 title: "Step 4: Deploying the Lesson 6 Package | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "integration-services"
-ms.service: ""
-ms.component: "tutorial"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
-applies_to: 
-  - "SQL Server 2016"
+ms.technology: integration-services
+ms.topic: tutorial
 ms.assetid: b613cef7-7993-4d89-a429-a8251d74d435
-caps.latest.revision: 5
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
-ms.workload: "On Demand"
+manager: craigg
 ---
 # Lesson 6-4 - Deploying the Lesson 6 Package
 Deploying the package involves adding the package to the SSISDB catalog in Integration Services on an instance of SQL Server. In this lesson you will add the Lesson 6 package to the SSISDB catalog, set the parameter, and execute the package. For this lesson you will use SQL Server Management Studio to add the Lesson 6 package to the SSISDB catalog, and deploy the package. After deploying the package you will modify the parameter to point to a new location then execute the package.  
@@ -34,7 +25,7 @@ In this lesson you will:
   
 -   Execute the package in SSMS.  
   
-### To Locate or add the the SSISDB catalog  
+### To Locate or add the SSISDB catalog  
   
 1.  Click Start, point to All Programs, point to Microsoft SQL Server 2012, and then click SQL Management Studio.  
   

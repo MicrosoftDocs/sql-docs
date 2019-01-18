@@ -2,18 +2,11 @@
 title: "Backslash (Line Continuation) (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "11/09/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.service: ""
-ms.component: "t-sql|language-elements"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: t-sql
 ms.topic: "language-reference"
-applies_to: 
-  - "SQL Server (starting with 2008)"
 f1_keywords: 
   - "\\_TSQL"
   - "\\"
@@ -22,7 +15,7 @@ dev_langs:
 helpviewer_keywords: 
   - "backwhack"
   - "backslash"
-  - "excape character"
+  - "escape character"
   - "hack character"
   - "\\ (backslash)"
   - "backslant"
@@ -33,11 +26,9 @@ helpviewer_keywords:
   - "line continuation character"
   - "reverse solidus"
 ms.assetid: c97fbb20-3d12-4d0b-9b52-62a229bc83c0
-caps.latest.revision: 22
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-ms.workload: "On Demand"
+author: "douglaslMS"
+ms.author: "douglasl"
+manager: craigg
 ---
 # Backslash (Line Continuation) (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

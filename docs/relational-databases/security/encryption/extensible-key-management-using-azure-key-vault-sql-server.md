@@ -2,16 +2,10 @@
 title: "Extensible Key Management Using Azure Key Vault (SQL Server) | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/22/2016"
-ms.prod: "sql-non-specified"
-ms.prod_service: "database-engine"
-ms.service: ""
-ms.component: "security"
-ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.prod: sql
+ms.reviewer: vanto
+ms.technology: security
+ms.topic: conceptual
 helpviewer_keywords: 
   - "Extensible Key Management with key vault"
   - "Transparent Data Encryption, using EKM and key vault"
@@ -20,11 +14,9 @@ helpviewer_keywords:
   - "Key Management with key vault"
   - "SQL Server Connector, about"
 ms.assetid: 3efdc48a-8064-4ea6-a828-3fbf758ef97c
-caps.latest.revision: 66
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "craigg"
-ms.workload: "On Demand"
+author: aliceku
+ms.author: aliceku
+manager: craigg
 ---
 # Extensible Key Management Using Azure Key Vault (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -43,14 +35,14 @@ ms.workload: "On Demand"
    
  The [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Connector serves as a bridge between [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] and Azure Key Vault, so [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] can leverage the scalability, high performance, and highly availability of the Azure Key Vault service. The following image represents how the key hierarchy works in the EKM provider architecture with Azure Key Vault and [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Connector.  
   
-  Azure Key Vault can be used with [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] installations on [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Azure Virtual Machines and for on-premises servers. The key vault service also provides the option to use tightly controlled and monitored Hardware Security Modules (HSMs) for a higher level of protection for asymmetric encryption keys. For more information about the key vault, see [Azure Key Vault](http://go.microsoft.com/fwlink/?LinkId=521401).  
+  Azure Key Vault can be used with [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] installations on [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Azure Virtual Machines and for on-premises servers. The key vault service also provides the option to use tightly controlled and monitored Hardware Security Modules (HSMs) for a higher level of protection for asymmetric encryption keys. For more information about the key vault, see [Azure Key Vault](https://go.microsoft.com/fwlink/?LinkId=521401).  
   
  The following image summarizes the process flow of EKM using the key vault. (The process step numbers in the image are not meant to match the setup step numbers that follow the image.)  
   
  ![SQL Server EKM using the Azure Key Vault](../../../relational-databases/security/encryption/media/ekm-using-azure-key-vault.png "SQL Server EKM using the Azure Key Vault")  
 
 > [!NOTE]  
->  Versions 1.0.0.440 and older have been replaced and are no longer supported in production environments. Upgrade to version 1.0.1.0 or later by visiting the [Microsoft Download Center](https://www.microsoft.com/download/details.aspx?id=45344) and using the instructions on the [SQL Server Connector Maintenance & Troubleshooting](../../../relational-databases/security/encryption/sql-server-connector-maintenance-troubleshooting.md) page under “Upgrade of SQL Server Connector.”
+>  Versions 1.0.0.440 and older have been replaced and are no longer supported in production environments. Upgrade to version 1.0.1.0 or later by visiting the [Microsoft Download Center](https://www.microsoft.com/download/details.aspx?id=45344) and using the instructions on the [SQL Server Connector Maintenance & Troubleshooting](../../../relational-databases/security/encryption/sql-server-connector-maintenance-troubleshooting.md) page under "Upgrade of SQL Server Connector."
   
  For the next step, see [Setup Steps for Extensible Key Management Using the Azure Key Vault](../../../relational-databases/security/encryption/setup-steps-for-extensible-key-management-using-the-azure-key-vault.md).  
   

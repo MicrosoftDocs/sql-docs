@@ -2,22 +2,15 @@
 title: "OLE DB Custom Properties | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/04/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "integration-services"
-ms.service: ""
-ms.component: "data-flow"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: integration-services
+ms.topic: conceptual
 ms.assetid: 13a82d41-dd7a-4708-bc84-4407a536c877
-caps.latest.revision: 8
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
-ms.workload: "Inactive"
+manager: craigg
 ---
 # OLE DB Custom Properties
   **Source Custom Properties**  
@@ -53,7 +46,7 @@ ms.workload: "Inactive"
   
 |Property name|Data Type|Description|  
 |-------------------|---------------|-----------------|  
-|AccessMode|Integer (enumeration)|A value that specifies how the destination access its destination database.<br /><br /> This property can have one of the following values:<br /><br /> <br /><br /> **OpenRowset** (0)—You provide the name of a table or view.<br /><br /> **OpenRowset from Variable** (1)—You provide the name of a variable that contains the name of a table or view.<br /><br /> **OpenRowset Using Fastload** (3)—You provide the name of a table or view.<br /><br /> **OpenRowset Using Fastload from Variable** (4)—You provide the name of a variable that contains the name of a table or view.<br /><br /> **SQL Command** (2)—You provide a SQL statement.|  
+|AccessMode|Integer (enumeration)|A value that specifies how the destination access its destination database.<br /><br /> This property can have one of the following values:<br /><br /> <br /><br /> **OpenRowset** (0)-You provide the name of a table or view.<br /><br /> **OpenRowset from Variable** (1)-You provide the name of a variable that contains the name of a table or view.<br /><br /> **OpenRowset Using Fastload** (3)-You provide the name of a table or view.<br /><br /> **OpenRowset Using Fastload from Variable** (4)-You provide the name of a variable that contains the name of a table or view.<br /><br /> **SQL Command** (2)-You provide a SQL statement.|  
 |AlwaysUseDefaultCodePage|Boolean|A value that indicates whether to use the value of the **DefaultCodePage** property for each column, or to try to derive the codepage from each column's locale. The default value of this property is **False**.|  
 |CommandTimeout|Integer|The maximum number of seconds that the SQL command can run before timing out. A value of 0 indicates an infinite time. The default value of this property is 0.<br /><br /> Note: This property is not available in the **OLE DB Destination Editor**, but can be set by using the **Advanced Editor**.|  
 |DefaultCodePage|Integer|The default codepage associated with the OLE DB destination.|  
@@ -70,6 +63,6 @@ ms.workload: "Inactive"
  For more information, see [OLE DB Destination](../../integration-services/data-flow/ole-db-destination.md).  
   
 ## See Also  
- [Common Properties](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
+ [Common Properties](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
   

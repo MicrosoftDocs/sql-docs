@@ -1,20 +1,12 @@
 ---
 title: "Using Strong-Named Custom Assemblies | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
+ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
-ms.service: ""
-ms.component: "custom-assemblies"
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
+ms.technology: custom-assemblies
 
 
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-applies_to: 
-  - "SQL Server 2016 Preview"
+ms.topic: reference
 helpviewer_keywords: 
   - "AllowPartiallyTrustedCallersAttribute attribute"
   - "strong-named custom assemblies [Reporting Services]"
@@ -22,11 +14,8 @@ helpviewer_keywords:
   - "assemblies [Reporting Services], strong names"
   - "custom assemblies [Reporting Services], strong-named"
 ms.assetid: ca9f19d7-6e86-46f2-b9ad-9bf807eaa52e
-caps.latest.revision: 35
-author: "markingmyname"
-ms.author: "maghan"
-manager: "kfile"
-ms.workload: "Inactive"
+author: markingmyname
+ms.author: maghan
 ---
 # Using Strong-Named Custom Assemblies
   A strong name identifies an assembly and includes the assembly's text name, four-part version number, culture information (if provided), a public key, and a digital signature stored in the assembly's manifest. A strong name uniquely identifies an assembly to the common language runtime (CLR) and ensures binary integrity.  

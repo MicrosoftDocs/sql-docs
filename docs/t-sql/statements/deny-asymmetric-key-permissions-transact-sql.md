@@ -2,15 +2,10 @@
 title: "DENY Asymmetric Key Permissions (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/10/2016"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.service: ""
-ms.component: "t-sql|statements"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: t-sql
 ms.topic: "language-reference"
 dev_langs: 
   - "TSQL"
@@ -22,11 +17,9 @@ helpviewer_keywords:
   - "DENY statement, asymmetric keys"
   - "cryptography [SQL Server], asymmetric keys"
 ms.assetid: dd7d8cd5-536b-460c-ab5b-cb4752bbdfaa
-caps.latest.revision: 14
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "craigg"
-ms.workload: "Inactive"
+author: VanMSFT
+ms.author: vanto
+manager: craigg
 ---
 # DENY Asymmetric Key Permissions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -51,7 +44,7 @@ DENY { permission  [ ,...n ] }
  *permission*  
  Specifies a permission that can be denied on an asymmetric key. Listed below.  
   
- ON ASYMMETRIC KEY **::***asymmetric_key_name*  
+ ON ASYMMETRIC KEY **::**_asymmetric_key_name_  
  Specifies the asymmetric key on which the permission is being denied. The scope qualifier "::" is required.  
   
  *database_principal*  

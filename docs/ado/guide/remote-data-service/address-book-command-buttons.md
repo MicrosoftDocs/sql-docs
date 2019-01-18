@@ -1,26 +1,19 @@
 ---
 title: "Address Book Command Buttons | Microsoft Docs"
-ms.prod: "sql-non-specified"
-ms.prod_service: "drivers"
-ms.service: ""
-ms.component: "ado"
-ms.technology:
-  - "drivers"
+ms.prod: sql
+ms.prod_service: connectivity
+ms.technology: connectivity
 ms.custom: ""
-ms.date: "01/19/2017"
+ms.date: 11/09/2018
 ms.reviewer: ""
-ms.suite: "sql"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "address book application scenario [ADO], command buttons"
   - "RDS scenarios [ADO], command buttons"
 ms.assetid: 80676831-6488-4dad-a558-c47c52256a22
-caps.latest.revision: 16
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
-ms.workload: "Inactive"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # Address Book Command Buttons
 The Address Book application includes the following command buttons:  
@@ -34,7 +27,7 @@ The Address Book application includes the following command buttons:
 -   A **Cancel Changes** button to discard changes.  
   
 > [!IMPORTANT]
->  Beginning with Windows 8 and Windows Server 2012, RDS server components are no longer included in the Windows operating system (see Windows 8 and [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/en-us/download/details.aspx?id=27416) for more detail). RDS client components will be removed in a future version of Windows. Avoid using this feature in new development work, and plan to modify applications that currently use this feature. Applications that use RDS should migrate to [WCF Data Service](http://go.microsoft.com/fwlink/?LinkId=199565).  
+>  Beginning with Windows 8 and Windows Server 2012, RDS server components are no longer included in the Windows operating system (see Windows 8 and [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) for more detail). RDS client components will be removed in a future version of Windows. Avoid using this feature in new development work, and plan to modify applications that currently use this feature. Applications that use RDS should migrate to [WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565).  
   
 ## Find Button  
  Clicking the **Find** button activates the VBScript Find_OnClick Sub procedure, which builds and sends the SQL query. Clicking this button populates the data grid.  
@@ -46,7 +39,7 @@ The Address Book application includes the following command buttons:
   
  For example, if the **Last Name** box contained the entry "Berge" and the **Title** box contained the entry "Program Manager", the SQL statement (value of `myQuery`) would read:  
   
-```  
+```sql
 Select FirstName, LastName, Title, Email, Building, Room, Phone from Employee where lastname like 'Berge%' and title like 'Program Manager%'  
 ```  
   
@@ -55,7 +48,7 @@ Select FirstName, LastName, Title, Email, Building, Room, Phone from Employee wh
 ## Preparing and Sending the Query  
  The last part of the Find_OnClick Sub procedure consists of two statements. The first statement assigns the [SQL](../../../ado/reference/rds-api/sql-property.md) property of the [RDS.DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) object equal to the dynamically built SQL query. The second statement causes the **RDS.DataControl** object (`DC1`) to query the database, and then display the new results of the query in the grid.  
   
-```  
+```vb
 Sub Find_OnClick  
    '...  
    DC1.SQL = myQuery  
@@ -66,7 +59,7 @@ End Sub
 ## Update Profile Button  
  Clicking the **Update Profile** button activates the VBScript Update_OnClick Sub procedure, which executes the [RDS.DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) object's (`DC1`) [SubmitChanges](../../../ado/reference/rds-api/submitchanges-method-rds.md) and [Refresh](../../../ado/reference/rds-api/refresh-method-rds.md) methods.  
   
-```  
+```vb
 Sub Update_OnClick  
    DC1.SubmitChanges  
    DC1.Refresh  
@@ -78,7 +71,7 @@ End Sub
 ## Cancel Changes Button  
  Clicking **Cancel Changes** activates the VBScript Cancel_OnClick Sub procedure, which executes the [RDS.DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) object's (`DC1)` [CancelUpdate](../../../ado/reference/rds-api/cancelupdate-method-rds.md) method.  
   
-```  
+```vb
 Sub Cancel_OnClick  
    DC1.CancelUpdate  
 End Sub  

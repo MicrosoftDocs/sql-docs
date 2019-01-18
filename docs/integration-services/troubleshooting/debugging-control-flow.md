@@ -2,16 +2,11 @@
 title: "Debugging Control Flow | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "integration-services"
-ms.service: ""
-ms.component: "troubleshooting"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: integration-services
+ms.topic: conceptual
 f1_keywords: 
   - "sql13.dts.designer.setbreakpoints.f1"
 helpviewer_keywords: 
@@ -22,11 +17,9 @@ helpviewer_keywords:
   - "color-coded progress reporting [Integration Services]"
   - "Set Breakpoints dialog box"
 ms.assetid: 54a458cc-9f4f-4b48-8cf2-db2e0fa7756c
-caps.latest.revision: 54
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
-ms.workload: "On Demand"
+manager: craigg
 ---
 # Debugging Control Flow
   [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] and [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] include features and tools that you can use to troubleshoot the control flow in an [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] package.  
@@ -54,7 +47,7 @@ ms.workload: "On Demand"
 |When the task or container receives the **OnTaskFailed** event.|Called by the task host when it fails.|  
 |When the task or container receives the **OnProgress** event.|Called to update progress about task execution.|  
 |When the task or container receives the **OnQueryCancel** event.|Called at any time in task processing when you can cancel execution.|  
-|When the task or container receives the **OnVariableValueChanged** event.|Called by the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] runtime when the value of a variable changes. The RaiseChangeEvent of the variable must be set to **true** to raise this event.<br /><br /> **\*\* Warning \*\*** The variable associated with this breakpoint must be defined at the **container** scope. If the variable is defined at the package scope, the breakpoint does not get hit.|  
+|When the task or container receives the **OnVariableValueChanged** event.|Called by the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] runtime when the value of a variable changes. The RaiseChangeEvent of the variable must be set to **true** to raise this event.<br /><br /> **&#42;&#42; Warning &#42;&#42;** The variable associated with this breakpoint must be defined at the **container** scope. If the variable is defined at the package scope, the breakpoint does not get hit.|  
 |When the task or container receives the **OnCustomEvent** event.|Called by tasks to raise custom task-defined events.|  
   
  In addition to the break conditions available to all tasks and containers, some tasks and containers include special break conditions for setting breakpoints. For example, you can enable a break condition on the For Loop container that sets a breakpoint that suspends execution at the start of each iteration of the loop.  

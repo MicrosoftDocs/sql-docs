@@ -2,15 +2,10 @@
 title: "DATEFROMPARTS (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/29/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
-ms.service: ""
-ms.component: "t-sql|functions"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: t-sql
 ms.topic: "language-reference"
 f1_keywords: 
   - "DATEFROMPARTS_TSQL"
@@ -20,16 +15,15 @@ dev_langs:
 helpviewer_keywords: 
   - "DATEFROMPARTS function"
 ms.assetid: 5b885376-87aa-41f1-9e18-04987aead250
-caps.latest.revision: 16
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "craigg"
-ms.workload: "Active"
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # DATEFROMPARTS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
 
-Returns a **date** value for the specified year, month, and day.
+This function returns a **date** value that maps to the specified year, month, and day values.
   
 ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -41,24 +35,24 @@ DATEFROMPARTS ( year, month, day )
   
 ## Arguments  
 *year*  
-Integer expression specifying a year.
+An integer expression that specifies a year.
   
 *month*  
-Integer expression specifying a month, from 1 to 12.
+An integer expression that specifies a month, from 1 to 12.
   
 *day*  
-Integer expression specifying a day.
+An integer expression that specifies a day.
   
 ## Return types
 **date**
   
 ## Remarks  
-**DATEFROMPARTS** returns a **date** value with the date portion set to the specified year, month and day, and the time portion set to the default. If the arguments are not valid, then an error is raised. If required arguments are null, then null is returned.
+`DATEFROMPARTS` returns a **date** value, with the date portion set to the specified year, month and day, and the time portion set to the default. For invalid arguments, `DATEFROMPARTS` will raise an error. `DATEFROMPARTS` returns null if at least one required argument has a null value.
   
-This function is capable of being remoted to [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] servers and above. It will not be remoted to servers with a version below [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)].
+This function can handle remoting to [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] servers and above. It cannot handle remoting to servers with a version below [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)].
   
 ## Examples  
-The following example demonstrates the **DATEFROMPARTS** function.
+This example shows the `DATEFROMPARTS` function in action.
   
 ```sql
 SELECT DATEFROMPARTS ( 2010, 12, 31 ) AS Result;  

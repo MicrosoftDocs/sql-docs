@@ -2,16 +2,11 @@
 title: "SQLSetEnvAttr Function | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
-ms.prod_service: "drivers"
-ms.service: ""
-ms.component: "odbc"
+ms.prod: sql
+ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "drivers"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: connectivity
+ms.topic: conceptual
 apiname: 
   - "SQLSetEnvAttr"
 apilocation: 
@@ -22,11 +17,9 @@ f1_keywords:
 helpviewer_keywords: 
   - "SQLSetEnvAttr function [ODBC]"
 ms.assetid: 0343241c-4b15-4d4b-aa2b-2e8ab5215cd2
-caps.latest.revision: 38
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
-ms.workload: "Inactive"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # SQLSetEnvAttr Function
 **Conformance**  
@@ -40,10 +33,10 @@ ms.workload: "Inactive"
 ```  
   
 SQLRETURN SQLSetEnvAttr(  
-     SQLHENV      EnvironmentHandle,  
-     SQLINTEGER   Attribute,  
-     SQLPOINTER   ValuePtr,  
-     SQLINTEGER   StringLength);  
+     SQLHENV      EnvironmentHandle,  
+     SQLINTEGER   Attribute,  
+     SQLPOINTER   ValuePtr,  
+     SQLINTEGER   StringLength);  
 ```  
   
 ## Arguments  

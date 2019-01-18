@@ -2,16 +2,11 @@
 title: "Copy Databases to Other Servers | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "database-engine"
-ms.service: ""
-ms.component: "databases"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: backup-restore
+ms.topic: conceptual
 helpviewer_keywords: 
   - "servers [SQL Server], copying databases between"
   - "bulk exporting [SQL Server], between servers"
@@ -21,11 +16,9 @@ helpviewer_keywords:
   - "copying databases"
   - "bulk importing [SQL Server], between servers"
 ms.assetid: 978406d6-a3c8-4902-b1f4-4ced75234be5
-caps.latest.revision: 42
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-ms.workload: "On Demand"
+author: "stevestein"
+ms.author: "sstein"
+manager: craigg
 ---
 # Copy Databases to Other Servers
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

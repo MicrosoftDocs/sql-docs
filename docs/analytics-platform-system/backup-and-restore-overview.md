@@ -1,27 +1,18 @@
 ---
-title: "Backup and restore"
-author: "barbkess" 
-ms.author: "barbkess"
-manager: "jhubbard"	  
-ms.prod: "analytics-platform-system"
-ms.prod_service: "mpp-data-warehouse"
-ms.service: ""
-ms.component:
-ms.suite: "sql"
-ms.custom: ""
-ms.technology: "mpp-data-warehouse"
-description: "Describes how data backup and restore works for SQL Server Parallel Data Warehouse (PDW)."
-ms.date: "10/20/2016"
-ms.topic: "article"
-
-ms.assetid: d4669957-270a-4e50-baf3-14324ca63049
-caps.latest.revision: 50
-
-
+title: Backup and restore - Parallel Data Warehouse | Microsoft Docs
+description: Describes how data backup and restore works for Parallel Data Warehouse (PDW). Backup and restore operations are used for disaster recovery. Backup and restore can also be used to copy a database from one appliance to another appliance.  
+author: mzaman1 
+manager: craigg
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
 ---
 
 # Backup and restore
-Describes how data backup and restore works for SQL Server Parallel Data Warehouse (PDW). Backup and restore operations are used for disaster recovery. Backup and restore can also be used to copy a database from one appliance to another appliance.  
+Describes how data backup and restore works for Parallel Data Warehouse (PDW). Backup and restore operations are used for disaster recovery. Backup and restore can also be used to copy a database from one appliance to another appliance.  
     
 ## <a name="BackupRestoreBasics"></a>Backup and restore basics  
 A PDW *database backup* is a copy of an appliance database, stored in a format so that it can be used to restore the original database to an appliance.  
@@ -102,7 +93,7 @@ The following diagram shows the flow of data during a database restore.
   
 When restoring data, the appliance detects the number of Compute nodes on the source appliance and the destination appliance. If both appliances have an equal number of Compute nodes, the restore process works as follows:  
   
-1.  The database backup to be restored is available on a Windows file share on a non-appliance backup server. For best performance, this server is usually connected to the appliance InfiniBand network.  
+1.  The database backup to be restored is available on a Windows file share on a non-appliance backup server. For best performance, this server is connected to the appliance InfiniBand network.  
   
 2.  User submits a [RESTORE DATABASE](../t-sql/statements/restore-database-parallel-data-warehouse.md) tsql statement to the Control node.  
   
@@ -124,9 +115,9 @@ When restoring data, the appliance detects the number of Compute nodes on the so
   
 Restoring a backup to an appliance with a larger number of Compute nodes grows the allocated database size in proportion to the number of Compute nodes.  
   
-For example, when restoring a 60 GB database from a 2-node appliance (30 GB per node) to a 6-node appliance, SQL Server PDW creates a 180 GB database (6 nodes with 30 GB per node) on the 6-node appliance. SQL Server PDW initially restores the database to 2 nodes to match the source configuration, and then redistributes the data to all 6 nodes.  
+For example, when restoring a 60 GB database from a 2-node appliance (30 GB per node) to a 6-node appliance, SQL Server PDW creates a 180-GB database (6 nodes with 30 GB per node) on the 6-node appliance. SQL Server PDW initially restores the database to 2 nodes to match the source configuration, and then redistributes the data to all 6 nodes.  
   
-After the redistribution each Compute node will contain less actual data and more free space than each Compute node on the smaller source appliance. Use the additional space to add more data to the database. If the restored database size is larger than you need, you can use [ALTER DATABASE](../t-sql/statements/alter-database-parallel-data-warehouse.md) to shrink the database file sizes.  
+After the redistribution, each Compute node will contain less actual data and more free space than each Compute node on the smaller source appliance. Use the additional space to add more data to the database. If the restored database size is larger than you need, you can use [ALTER DATABASE](../t-sql/statements/alter-database-transact-sql.md?tabs=sqlpdw) to shrink the database file sizes.  
   
 ## Related Tasks  
   

@@ -2,24 +2,17 @@
 title: "Snapshot Folder | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "database-engine"
-ms.service: ""
-ms.component: "replication"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: replication
+ms.topic: conceptual
 f1_keywords: 
   - "sql13.rep.replicationutilities.specifysnapshotfolder.f1"
 ms.assetid: 3eb1b73f-ddb3-4d09-be6e-811c414698e9
-caps.latest.revision: 24
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-ms.workload: "Inactive"
+author: "MashaMSFT"
+ms.author: "mathoma"
+manager: craigg
 ---
 # Snapshot Folder
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -35,7 +28,7 @@ ms.workload: "Inactive"
 >  [!INCLUDE[msCoName](../../includes/msconame-md.md)] recommends that you use a network share as a snapshot folder location. Local paths (those starting with a drive letter, such as C:\\) are not accessible to agents on other computers.  
   
 ## See Also  
- [Alternate Snapshot Folder Locations](../../relational-databases/replication/alternate-snapshot-folder-locations.md)   
+ [Modify snapshot options](../../relational-databases/replication/snapshot-options.md)   
  [Configure Distribution](../../relational-databases/replication/configure-distribution.md)   
  [Configure Publishing and Distribution](../../relational-databases/replication/configure-publishing-and-distribution.md)   
  [View and Modify Distributor and Publisher Properties](../../relational-databases/replication/view-and-modify-distributor-and-publisher-properties.md)   

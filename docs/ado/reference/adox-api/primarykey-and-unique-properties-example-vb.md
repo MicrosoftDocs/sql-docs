@@ -1,28 +1,21 @@
 ---
 title: "PrimaryKey and Unique Properties Example (VB) | Microsoft Docs"
-ms.prod: "sql-non-specified"
-ms.prod_service: "drivers"
-ms.service: ""
-ms.component: "ado"
-ms.technology:
-  - "drivers"
+ms.prod: sql
+ms.prod_service: connectivity
+ms.technology: connectivity
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 dev_langs: 
   - "VB"
 helpviewer_keywords: 
   - "Unique property [ADOX], Visual Basic example"
   - "PrimaryKey property [ADOX], Visual Basic example"
 ms.assetid: f536acac-06ea-4b39-bfba-ee9902b01615
-caps.latest.revision: 9
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
-ms.workload: "Inactive"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # PrimaryKey and Unique Properties Example (VB)
 This example demonstrates the [PrimaryKey](../../../ado/reference/adox-api/primarykey-property-adox.md) and [Unique](../../../ado/reference/adox-api/unique-property-adox.md) properties of an [Index](../../../ado/reference/adox-api/index-object-adox.md). The code creates a new table with two columns. The **PrimaryKey** and **Unique** properties are used to make one column the primary key for which duplicate values are not allowed.  

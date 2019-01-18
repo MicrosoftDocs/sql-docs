@@ -2,15 +2,10 @@
 title: "core.sp_purge_data (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/09/2016"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "database-engine"
-ms.service: ""
-ms.component: "system-stored-procedures"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: system-objects
 ms.topic: "language-reference"
 f1_keywords: 
   - "sp_purge_data_TSQL"
@@ -23,16 +18,14 @@ helpviewer_keywords:
   - "core.sp_purge_data stored procedure"
   - "data collector [SQL Server], stored procedures"
 ms.assetid: 056076c3-8adf-4f51-8a1b-ca39696ac390
-caps.latest.revision: 21
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-ms.workload: "Inactive"
+author: "stevestein"
+ms.author: "sstein"
+manager: craigg
 ---
 # core.sp_purge_data (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Removes data from the management data warehouse based on a retention policy. This procedure is executed daily by the mdw_purge_data[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent job against the management data warehouse associated with the specified instance. You can use this stored procedure to perform an on-demand removal of data from the management data warehouse.  
+  Removes data from the management data warehouse based on a retention policy. This procedure is executed daily by the mdw_purge_data [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent job against the management data warehouse associated with the specified instance. You can use this stored procedure to perform an on-demand removal of data from the management data warehouse.  
   
  ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   

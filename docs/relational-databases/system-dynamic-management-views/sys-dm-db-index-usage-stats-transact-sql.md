@@ -2,15 +2,10 @@
 title: "sys.dm_db_index_usage_stats (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/20/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
-ms.service: ""
-ms.component: "dmv's"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: system-objects
 ms.topic: "language-reference"
 f1_keywords: 
   - "dm_db_index_usage_stats_TSQL"
@@ -22,24 +17,23 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.dm_db_index_usage_stats dynamic management view"
 ms.assetid: d06a001f-0f72-4679-bc2f-66fff7958b86
-caps.latest.revision: 35
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-ms.workload: "On Demand"
+author: stevestein
+ms.author: sstein
+manager: craigg
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.dm_db_index_usage_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  Returns counts of different types of index operations and the time each type of operation was last performed in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+  Returns counts of different types of index operations and the time each type of operation was last performed.  
   
- In [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], dynamic management views cannot expose information that would impact database containment or expose information about other databases the user has access to. To avoid exposing this information, every row that contains data that doesn’t belong to the connected tenant is filtered out.  
+ In [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], dynamic management views cannot expose information that would impact database containment or expose information about other databases the user has access to. To avoid exposing this information, every row that contains data that doesn't belong to the connected tenant is filtered out.  
   
 > [!NOTE]  
 >  **sys.dm_db_index_usage_stats** does not return information about memory-optimized indexes. For information about memory-optimized index use, see [sys.dm_db_xtp_index_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-xtp-index-stats-transact-sql.md).  
   
 > [!NOTE]  
->  To call this from [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] or [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], use the name **sys.dm_pdw_nodes_db_index_usage_stats**.  
+>  To call this view from [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] or [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], use **sys.dm_pdw_nodes_db_index_usage_stats**.  
   
 |Column name|Data type|Description|  
 |-----------------|---------------|-----------------|  
@@ -47,9 +41,9 @@ ms.workload: "On Demand"
 |**object_id**|**int**|ID of the table or view on which the index is defined|  
 |**index_id**|**int**|ID of the index.|  
 |**user_seeks**|**bigint**|Number of seeks by user queries.|  
-|**user_scans**|**bigint**|Number of scans by user queries. This represents scans that did not use 'seek' predicate.|  
+|**user_scans**|**bigint**|Number of scans by user queries that did not use 'seek' predicate.|  
 |**user_lookups**|**bigint**|Number of bookmark lookups by user queries.|  
-|**user_updates**|**bigint**|Number of updates by user queries. This includes Insert, Delete and Updates representing number of operations done not the actual rows affected. For example, if you delete 1000 rows in one statement, this count will increment by 1|  
+|**user_updates**|**bigint**|Number of updates by user queries. This includes Insert, Delete, and Updates representing number of operations done not the actual rows affected. For example, if you delete 1000 rows in one statement, this count increments by 1|  
 |**last_user_seek**|**datetime**|Time of last user seek|  
 |**last_user_scan**|**datetime**|Time of last user scan.|  
 |**last_user_lookup**|**datetime**|Time of last user lookup.|  
@@ -77,7 +71,7 @@ ms.workload: "On Demand"
   
 ## Permissions  
 On [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], requires `VIEW SERVER STATE` permission.   
-On [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] Premium Tiers, requires the `VIEW DATABASE STATE` permission in the database. On [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] Standard and Basic Tiers, requires the  **Server admin** or an **Azure Active Directory admin** account.  
+On [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], requires the `VIEW DATABASE STATE` permission in the database.  
   
 ## See Also  
 

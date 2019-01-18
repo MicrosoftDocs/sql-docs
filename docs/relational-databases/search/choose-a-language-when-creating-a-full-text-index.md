@@ -2,15 +2,11 @@
 title: "Choose a Language When Creating a Full-Text Index | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: sql-non-specified
+ms.prod: sql  
 ms.reviewer: ""
-ms.suite: "sql"
-ms.prod_service: "database-engine, sql-database"
-ms.component: search
-ms.technology: 
-  - "dbe-search"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.prod_service: "search, sql-database"
+ms.technology: search
+ms.topic: conceptual
 helpviewer_keywords: 
   - "languages [full-text search]"
   - "full-text indexes [SQL Server], languages"
@@ -21,11 +17,10 @@ helpviewer_keywords:
   - "languages [SQL Server], full-text indexes"
   - "word breakers [full-text search]"
 ms.assetid: 670a5181-ab80-436a-be96-d9498fbe2c09
-caps.latest.revision: 49
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-ms.workload: "Inactive"
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Choose a Language When Creating a Full-Text Index
 
@@ -63,7 +58,7 @@ ms.workload: "Inactive"
   
      Word breakers have been redesigned, and testing has shown that the new word breakers provide better semantic quality than previous word breakers. This increases the recall accuracy.  
   
--   Coverage for a vast list of languages, word breakers are included in SQL Server out of the box and enabled by default .  
+-   Coverage for a vast list of languages, word breakers are included in SQL Server out of the box and enabled by default.  
   
  For a list of the languages for which SQL Server includes a word breaker and stemmers, see [sys.fulltext_languages &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-fulltext-languages-transact-sql.md).  
   
@@ -76,7 +71,7 @@ ms.workload: "Inactive"
   
   
 ##  <a name="breaking"></a> Word Breaking  
- A word breaker tokenizes the text being indexed on word boundaries, which are language specific. Therefore, word-breaking behavior differs among different languages. If you use one language, x, to index a number of languages {x, y, and ,z}, some of the behavior might cause unexpected results. For example, a dash (-) or a comma (,) might be a word-break element that will be thrown away in one language but not in another. Also rarely unexpected stemming behavior might occur because a given word might stem differently in different language. For example, in the English language, word boundaries are typically white space or some form of punctuation. In other languages, such as German, words or characters may be combined together. Therefore, the column-level language that you choose should represent the language that you expect will be stored in rows of that column.  
+ A word breaker tokenizes the text being indexed on word boundaries, which are language-specific. Therefore, word-breaking behavior differs among different languages. If you use one language, x, to index a number of languages {x, y, and z}, some of the behavior might cause unexpected results. For example, a dash (-) or a comma (,) might be a word-break element that will be thrown away in one language but not in another. Also rarely unexpected stemming behavior might occur because a given word might stem differently in different language. For example, in the English language, word boundaries are typically white space or some form of punctuation. In other languages, such as German, words or characters may be combined together. Therefore, the column-level language that you choose should represent the language that you expect will be stored in rows of that column.  
   
 ### Western Languages  
  For the Western family of languages, if you are unsure which languages will be stored in a column or you expect more than one to be stored, a general workaround is to use the word breaker for the most complex language that might be stored in the column. For instance, you might expect to store English, Spanish and German content in a single column. These three Western languages possess very similar word-breaking patterns, with the German patterns being the most complex. Therefore, a good choice is this case would be to use the German word breaker, which should be able to process English and Spanish text correctly. In contrast, the English word breaker might not process German text perfectly because of the compound words of German.  
@@ -101,13 +96,13 @@ ms.workload: "Inactive"
   
   
 ##  <a name="stemming"></a> Stemming  
- An additional consideration when choosing your column-level language is stemming. *Stemming* in full-text queries is the process of searching for all stemmed (inflectional) forms of a word in a particular language. When you use a generic word breaker to process several languages, the stemming process works only for the language specified for the column, not for other languages in the column. For example, German stemmers do not work for English or Spanish (and so forth). This might affect your recall depending of which language you choose at query time.  
+ An additional consideration when choosing your column-level language is stemming. *Stemming* in full-text queries is the process of searching for all stemmed (inflectional) forms of a word in a particular language. When you use a generic word breaker to process several languages, the stemming process works only for the language specified for the column, not for other languages in the column. For example, German stemmers do not work for English or Spanish (and so forth). This might affect your recall depending on which language you choose at query time.  
   
   
 ##  <a name="type"></a> Effect of Column Type on Full-Text Search  
  Another consideration in language choice is related to how the data is represented. For data that is not stored in **varbinary(max)** column, no special filtering is performed. Rather, the text is generally passed through the word breaking component as-is.  
   
- Also, word breakers are designed mainly to process written text. So, if you have any type of markup (such as HTML) on your text, you may not get great linguistic accuracy during indexing and search. In that case, you have two choices—the preferred method is simply to store the text data in **varbinary(max)** column, and to indicate its document type so it may be filtered. If this is not an option, you may consider using the neutral word breaker and, if possible, adding markup data (such as 'br' in HTML) to your noise word lists.  
+ Also, word breakers are designed mainly to process written text. So, if you have any type of markup (such as HTML) on your text, you may not get great linguistic accuracy during indexing and search. In that case, you have two choices-the preferred method is simply to store the text data in **varbinary(max)** column, and to indicate its document type so it may be filtered. If this is not an option, you may consider using the neutral word breaker and, if possible, adding markup data (such as 'br' in HTML) to your noise word lists.  
   
 > [!NOTE]  
 >  Language based stemming does not come into play when you specify the neutral language.  

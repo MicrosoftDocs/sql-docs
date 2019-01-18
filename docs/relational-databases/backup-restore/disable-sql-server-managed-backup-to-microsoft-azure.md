@@ -2,22 +2,15 @@
 title: "Disable SQL Server Managed Backup to Microsoft Azure | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/04/2017"
-ms.prod: "sql-non-specified"
-ms.prod_service: "database-engine"
-ms.service: ""
-ms.component: "backup-restore"
+ms.prod: sql
+ms.prod_service: backup-restore
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "dbe-backup-restore"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: backup-restore
+ms.topic: conceptual
 ms.assetid: 3e02187f-363f-4e69-a82f-583953592544
-caps.latest.revision: 8
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
-ms.workload: "Inactive"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ---
 # Disable SQL Server Managed Backup to Microsoft Azure
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -74,7 +67,8 @@ SELECT db_name
        FROM   
   
        msdb.managed_backup.fn_backup_db_config (NULL)  
-       WHERE is_managed_backup_enabled = 1  
+       WHERE is_managed_backup_enabled = 1 
+       AND is_dropped = 0
   
        --Select DBName from @DBNames  
   
@@ -122,8 +116,7 @@ GO
   
     ```  
     EXEC msdb.managed_backup.sp_backup_config_basic  
-                    @database_name = 'TestDB'   
-                    ,@enable_backup = 0;  
+                    @enable_backup = 0;  
     GO  
   
     ```  
@@ -158,7 +151,7 @@ Go
 ```  
 Use msdb;  
 Go  
-EXEC managed_backup. sp_backup_master_switch @new_state=1;  
+EXEC managed_backup.sp_backup_master_switch @new_state=1;  
 GO  
   
 ```  

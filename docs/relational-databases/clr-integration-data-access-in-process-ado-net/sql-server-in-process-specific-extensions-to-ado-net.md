@@ -2,15 +2,10 @@
 title: "SQL Server In-Process Specific Extensions to ADO.NET | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "database-engine"
-ms.service: ""
-ms.component: "clr"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-
-ms.tgt_pltfrm: ""
+ms.technology: clr
 ms.topic: "reference"
 helpviewer_keywords: 
   - "data access [CLR integration]"
@@ -20,11 +15,9 @@ helpviewer_keywords:
   - "in-process data access providers [CLR integration]"
   - "extensions [CLR integration]"
 ms.assetid: 781b812e-eb14-472a-85fa-aa4cdb929bee
-caps.latest.revision: 33
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-ms.workload: "Inactive"
+author: "rothja"
+ms.author: "jroth"
+manager: craigg
 ---
 # SQL Server In-Process Specific Extensions to ADO.NET
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

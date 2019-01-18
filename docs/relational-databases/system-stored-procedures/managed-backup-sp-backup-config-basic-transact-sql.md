@@ -2,15 +2,10 @@
 title: "managed_backup.sp_backup_config_basic (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "10/03/2016"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "database-engine"
-ms.service: ""
-ms.component: "system-stored-procedures"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: system-objects
 ms.topic: "language-reference"
 f1_keywords: 
   - "sp_backup_config_basic_TSQL"
@@ -23,11 +18,9 @@ helpviewer_keywords:
   - "managed_backup.sp_backup_config_basic"
   - "sp_backup_config_basic"
 ms.assetid: 3ad73051-ae9a-4e41-a889-166146e5508f
-caps.latest.revision: 15
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-ms.workload: "Inactive"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ---
 # managed_backup.sp_backup_config_basic (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -55,7 +48,7 @@ EXEC managed_backup.sp_backup_config_basic
  The database name for enabling managed backup on a specific database.  
   
  @container_url  
- A URL that indicates the location of the backup. When @credential_name is NULL, this URL is a shared access signature (SAS) URL to a blob container in Azure Storage, and the backups use the new backup to block blob functionality. For more information, please review [Understanding SAS](http://azure.microsoft.com/documentation/articles/storage-dotnet-shared-access-signature-part-1/). When @credential_name is specified, then this is a storage account URL, and the backups use the deprecated backup to page blob functionality.  
+ A URL that indicates the location of the backup. When @credential_name is NULL, this URL is a shared access signature (SAS) URL to a blob container in Azure Storage, and the backups use the new backup to block blob functionality. For more information, please review [Understanding SAS](https://azure.microsoft.com/documentation/articles/storage-dotnet-shared-access-signature-part-1/). When @credential_name is specified, then this is a storage account URL, and the backups use the deprecated backup to page blob functionality.  
   
 > [!NOTE]  
 >  Only a SAS URL is supported for this parameter at this time.  
@@ -66,7 +59,7 @@ EXEC managed_backup.sp_backup_config_basic
  @credential_name  
  The name of the SQL Credential used to authenticate to the Windows Azure storage account. @credentail_name is **SYSNAME**. When specified, the backup is stored to a page blob. If this parameter is NULL, the backup will be stored as a block blob. Backup to page blob is deprecated, so it is preferred to use the new block blob backup functionality. When used to change the [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] configuration, this parameter is optional. If not specified, then the existing configuration values are retained.  
   
-> [!WARNING]  
+> [!WARNING]
 >  The **@credential_name** parameter is not supported at this time. Only backup to block blob is supported, which requires this parameter to be NULL.  
   
 ## Return Code Value  

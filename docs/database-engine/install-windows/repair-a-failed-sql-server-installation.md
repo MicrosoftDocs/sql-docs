@@ -2,24 +2,20 @@
 title: "Repair a Failed SQL Server Installation | Microsoft Docs"
 ms.custom: ""
 ms.date: "09/08/2017"
-ms.prod: "sql-non-specified"
-ms.prod_service: "database-engine"
-ms.service: ""
-ms.component: "install-windows"
+ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "setup-install"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: install
+ms.topic: conceptual
 ms.assetid: 90c11b28-892b-44d6-978e-0eee48c75b7d
-caps.latest.revision: 18
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
+author: MashaMSFT
+ms.author: mathoma
+monikerRange: ">=sql-server-2016||=sqlallproducts-allversions"
+manager: craigg
 ---
 # Repair a Failed SQL Server Installation
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
 Repair operation can be used in the following scenarios:  
   
 - Repair an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] that is corrupted after it was successfully installed. 
@@ -79,6 +75,6 @@ Repair operation can be used in the following scenarios:
   
 ## See Also  
  [View and Read SQL Server Setup Log Files](../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md)   
- [Installation How-to Topics](http://msdn.microsoft.com/library/59de41e7-557f-462a-8914-53ec35496baa)  
+ [Installation How-to articles](https://msdn.microsoft.com/library/59de41e7-557f-462a-8914-53ec35496baa)  
   
   

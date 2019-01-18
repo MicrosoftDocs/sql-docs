@@ -2,16 +2,11 @@
 title: "IBM DB2 Subscribers | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/02/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "database-engine"
-ms.service: ""
-ms.component: "replication"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: replication
+ms.topic: conceptual
 helpviewer_keywords: 
   - "non-SQL Server Subscribers, IBM DB2"
   - "data types [SQL Server replication], non-SQL Server Subscribers"
@@ -19,11 +14,9 @@ helpviewer_keywords:
   - "mapping data types [SQL Server replication]"
   - "heterogeneous Subscribers, IBM DB2"
 ms.assetid: a1a27b1e-45dd-4d7d-b6c0-2b608ed175f6
-caps.latest.revision: 74
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-ms.workload: "Inactive"
+author: "MashaMSFT"
+ms.author: "mathoma"
+manager: craigg
 ---
 # IBM DB2 Subscribers
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -35,7 +28,7 @@ ms.workload: "Inactive"
   
 1.  Install the latest version of the [!INCLUDE[msCoName](../../../includes/msconame-md.md)] OLE DB Provider for DB2 on the Distributor:  
   
-    -   If you are using [!INCLUDE[ssNoVersion_md](../../../includes/ssnoversion-md.md)] Enterprise Edition, on the [SQL Server Downloads](http://go.microsoft.com/fwlink/?LinkId=149256) Web page, in the **Related Downloads** section, click the link to the latest version of the Microsoft SQL Server Feature Pack. On the **Microsoft SQL Server Feature Pack** Web page, search for **Microsoft OLE DB Provider for DB2**.  
+    -   If you are using [!INCLUDE[ssNoVersion_md](../../../includes/ssnoversion-md.md)] Enterprise Edition, on the [SQL Server Downloads](https://go.microsoft.com/fwlink/?LinkId=149256) Web page, in the **Related Downloads** section, click the link to the latest version of the Microsoft SQL Server Feature Pack. On the **Microsoft SQL Server Feature Pack** Web page, search for **Microsoft OLE DB Provider for DB2**.  
   
     -   If you are using [!INCLUDE[ssNoVersion_md](../../../includes/ssnoversion-md.md)] Standard Edition, install the latest version of the [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Host [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] (HIS) server, which includes the provider.  
   

@@ -1,36 +1,14 @@
 ---
 title: "Calculations in Multidimensional Models | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: analysis-services
-ms.prod_service: "analysis-services"
-ms.service: ""
-ms.component: ""
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
-  
-ms.component: multidimensional-tabular
-ms.component: data-mining
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "calculations [Analysis Services], creating"
-  - "deleting calculations"
-  - "calculations [Analysis Services], scripts"
-  - "Cube Designer"
-  - "modifying scripts"
-  - "removing calculations"
-  - "calculations [Analysis Services], deleting"
-  - "scripts [Analysis Services], calculations"
-  - "cubes [Analysis Services], calculations"
-  - "solve orders [Analysis Services]"
-ms.assetid: c21b3459-9bef-45a2-aba5-c992eba5b66e
-caps.latest.revision: 26
-author: "Minewiskan"
-ms.author: "owend"
-manager: "kfile"
-ms.workload: "Inactive"
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: multidimensional-models
+ms.topic: conceptual
+ms.author: owend
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
 ---
 # Calculations in Multidimensional Models
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -44,8 +22,6 @@ ms.workload: "Inactive"
   
 -   The Calculation Expressions pane supports a form view and a script view.  
   
-> [!NOTE]  
->  For more information about MDX scripting, see [Introduction to MDX Scripting in Microsoft SQL Server 2005](http://go.microsoft.com/fwlink/?LinkId=81892), and see the Additional Resources section on the [SQL Server 2005 – Analysis Services](http://go.microsoft.com/fwlink/?LinkId=80853) page on the Microsoft TechNet Web site. For more information about performance issues related to cube design, see the [SQL Server 2005 Analysis Services Performance Guide](http://go.microsoft.com/fwlink/?LinkId=81621).  
   
 ## Creating a New Calculation  
  To create a new calculation, on the **Calculations** tab of Cube Designer, on the **Cube** menu, click either **New Calculated Member**, **New Named Set**, or **New Script Command**, depending on the type of calculation you want to create. You can also click any of the corresponding buttons on the toolbar, or right-click anywhere in the **Script Organizer** pane and then click one of the commands on the shortcut menu. This action adds a new calculation to the **Script Organizer** pane and displays fields for it in the calculations form in the Calculations Expressions pane. If you create a new script, this action opens the Script view in the Calculation Expressions pane. For more information about building the three types of calculations, see [Create Calculated Members](../../analysis-services/multidimensional-models/create-calculated-members.md), [Create Named Sets](../../analysis-services/multidimensional-models/create-named-sets.md), and [Define Assignments and Other Script Commands](../../analysis-services/multidimensional-models/define-assignments-and-other-script-commands.md).  

@@ -1,25 +1,18 @@
 ---
 title: "ADOX Object Model | Microsoft Docs"
-ms.prod: "sql-non-specified"
-ms.prod_service: "drivers"
-ms.service: ""
-ms.component: "ado"
-ms.technology:
-  - "drivers"
+ms.prod: sql
+ms.prod_service: connectivity
+ms.technology: connectivity
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "ADOX, object model"
 ms.assetid: 31c0781c-96c8-4460-90ea-134066154fc7
-caps.latest.revision: 12
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
-ms.workload: "Inactive"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # ADOX Object Model
 The following diagram illustrates how objects are represented and related in ADOX. For more information about a specific object or collection, see the specific reference topic, or [ADOX Objects](../../../ado/reference/adox-api/adox-objects.md) and [ADOX Collections](../../../ado/reference/adox-api/adox-collections.md).  

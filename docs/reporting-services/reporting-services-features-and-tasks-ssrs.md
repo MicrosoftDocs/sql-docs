@@ -1,27 +1,18 @@
 ---
 title: "Reporting Services Features and Tasks (SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/18/2015"
+ms.date: 12/18/2015
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
-ms.service: ""
-ms.component: "reporting-services"
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
+ms.technology: reporting-services
 
 
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "Reporting Services, programming"
   - "development [Reporting Services]"
 ms.assetid: 0cc20225-5784-479c-bfb0-445854111367
-caps.latest.revision: 42
-author: "markingmyname"
-ms.author: "maghan"
-manager: "kfile"
-ms.workload: "On Demand"
+author: markingmyname
+ms.author: maghan
 ---
 # Reporting Services Features and Tasks (SSRS)
   [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] foundational content is organized by reports and report features, report server features, and [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] product features.  

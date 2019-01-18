@@ -1,32 +1,21 @@
 ---
 title: "Project Settings (Conversion) (AccessToSQL) | Microsoft Docs"
-ms.prod: "sql-non-specified"
-ms.prod_service: "sql-tools"
-ms.service: ""
-ms.component: "ssma-access"
+ms.prod: sql
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "sql-ssma"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to: 
-  - "Azure SQL Database"
-  - "SQL Server"
+ms.technology: ssma
+ms.topic: conceptual
 helpviewer_keywords: 
   - "conversion, options described"
   - "Project Settings dialog box, Conversion"
 ms.assetid: bcebc635-c638-4ddb-924c-b9ccfef86388
-caps.latest.revision: 16
 author: "Shamikg"
 ms.author: "Shamikg"
-manager: "jhubbard"
-ms.workload: "Inactive"
+manager: craigg
 ---
 # Project Settings (Conversion) (AccessToSQL)
-The Conversion project settings let you configure how objects are converted from Access database objects to [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] or SQL Azure database objects.  
+The Conversion project settings let you configure how objects are converted from Access database objects to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] or SQL Azure database objects.  
   
 The Conversion pane is available in the **Project Settings** and **Default Project Settings** dialog boxes.  
   
@@ -36,7 +25,7 @@ The Conversion pane is available in the **Project Settings** and **Default Proje
   
 ## Options  
 **Add primary key**  
-Creates a new primary key in the [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] or SQL Azure table if an Access table has no primary key or unique index.  
+Creates a new primary key in the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] or SQL Azure table if an Access table has no primary key or unique index.  
   
 -   **Default Mode**: False  
   
@@ -117,5 +106,5 @@ Displays a message in the assessment report and in the Output pane when an objec
 -   **Full Mode**: True  
   
 ## See Also  
-[User Interface Reference(Access)](http://msdn.microsoft.com/en-us/af24c303-4a41-449b-9c86-d6558a97e839)  
+[User Interface Reference(Access)](https://msdn.microsoft.com/af24c303-4a41-449b-9c86-d6558a97e839)  
   

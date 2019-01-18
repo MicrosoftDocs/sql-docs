@@ -2,19 +2,11 @@
 title: "SOME | ANY (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/15/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.service: ""
-ms.component: "t-sql|language-elements"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: t-sql
 ms.topic: "language-reference"
-applies_to: 
-  - "Azure SQL Database"
-  - "SQL Server (starting with 2008)"
 f1_keywords: 
   - "SOME"
   - "SOME_TSQL"
@@ -27,11 +19,9 @@ helpviewer_keywords:
   - "SOME | ANY keyword"
   - "single-column set of values [SQL Server]"
 ms.assetid: 1f717ad6-f67b-4980-9397-577ecb0e5789
-caps.latest.revision: 41
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-ms.workload: "On Demand"
+author: "douglaslMS"
+ms.author: "douglasl"
+manager: craigg
 ---
 # SOME | ANY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -65,7 +55,7 @@ scalar_expression { = | < > | ! = | > | > = | ! > | < | < = | ! < }
  **Boolean**  
   
 ## Result Value  
- SOME or ANY returns **TRUE** when the comparison specified is TRUE for any pair (*scalar_expression***,***x*) where *x* is a value in the single-column set; otherwise, returns **FALSE**.  
+ SOME or ANY returns **TRUE** when the comparison specified is TRUE for any pair (_scalar_expression_**,**_x_) where *x* is a value in the single-column set; otherwise, returns **FALSE**.  
   
 ## Remarks  
  SOME requires the *scalar_expression* to compare positively to at least one value returned by the subquery. For statements that require the *scalar_expression* to compare positively to every value that is returned by the subquery, see [ALL &#40;Transact-SQL&#41;](../../t-sql/language-elements/all-transact-sql.md). For instance, if the subquery returns values of 2 and 3, *scalar_expression* = SOME (subquery) would evaluate as TRUE for a *scalar_express* of 2. If the subquery returns values of 2 and 3, *scalar_expression* = ALL (subquery) would evaluate as FALSE, because some of the values of the subquery (the value of 3) would not meet the criteria of the expression.  

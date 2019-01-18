@@ -1,32 +1,21 @@
 ---
-title: T-SQL statements Analytics Platform System Parallel Data Warehouse | Microsoft Docs
-author: "barbkess" 
-ms.author: "barbkess"
-manager: "jhubbard"	  
-ms.prod: "analytics-platform-system"
-ms.prod_service: "mpp-data-warehouse"
-ms.service: ""
-ms.component:
-ms.suite: "sql"
-ms.custom: ""
-ms.technology: "mpp-data-warehouse"
-description: Transact-SQL (T-SQL) statements for Analytic Platform System (APS) SQL Server Parallel Data Warehouse (PDW).
-documentationcenter: NA
-editor: ''
-ms.assetid: 0abc5934-1e67-491a-b7d7-8b520d1ae98e
-ms.devlang: NA
-ms.topic: article
-ms.tgt_pltfrm: NA
-ms.workload: data-services
-ms.date: 12/15/2016
-ms.author: barbkess
-
+title: T-SQL statements - Parallel Data Warehouse | Microsoft Docs
+description: T-SQL statements for Analytic Platform System (APS) SQL Server Parallel Data Warehouse (PDW).
+author: mzaman1 
+manager: craigg
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
 ---
-# T-SQL topics
+
+# T-SQL statements for Parallel Data Warehouse
 Transact-SQL (T-SQL) statements for Analytic Platform System (APS) SQL Server Parallel Data Warehouse (PDW).
 
 ## Data Definition Language (DDL) statements
-* [ALTER DATABASE](../t-sql/statements/alter-database-azure-sql-data-warehouse.md)
+* [ALTER DATABASE](../t-sql/statements/alter-database-transact-sql.md?tabs=sqlpdw)
 * [ALTER INDEX](../t-sql/statements/alter-index-transact-sql.md)
 * [ALTER PROCEDURE](../t-sql/statements/alter-procedure-transact-sql.md)
 * [ALTER SCHEMA](../t-sql/statements/alter-schema-transact-sql.md)

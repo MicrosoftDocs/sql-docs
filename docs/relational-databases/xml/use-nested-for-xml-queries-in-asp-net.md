@@ -2,27 +2,20 @@
 title: "Use Nested FOR XML Queries in ASP.NET | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "database-engine"
-ms.service: ""
-ms.component: "xml"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "dbe-xml"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: xml
+ms.topic: conceptual
 helpviewer_keywords: 
   - "FOR XML clause, nested FOR XML queries"
   - "queries [XML in SQL Server], ASP.NET and"
   - "nested FOR XML queries in ASP.NET"
   - "ASP.NET [SQL Server]"
 ms.assetid: 691ac7dd-afc5-4760-932c-2b1dcd9394ed
-caps.latest.revision: 10
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-ms.workload: "Inactive"
+author: "douglaslMS"
+ms.author: "douglasl"
+manager: craigg
 ---
 # Use Nested FOR XML Queries in ASP.NET
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -93,7 +86,7 @@ using(System.Data.SqlClient.SqlCommand cmd = c.CreateCommand())
   
 2.  Save the .aspx application in the c:\inetpub\wwwroot directory (GetSalesOrderInfo.aspx).  
   
-3.  Execute the application (`http://server/GetSalesOrderInfo.aspx`).  
+3.  Execute the application (`https://server/GetSalesOrderInfo.aspx`).  
   
 ## See Also  
  [Use Nested FOR XML Queries](../../relational-databases/xml/use-nested-for-xml-queries.md)  

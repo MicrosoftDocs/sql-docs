@@ -2,16 +2,11 @@
 title: "Term Extraction Transformation | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "integration-services"
-ms.service: ""
-ms.component: "data-flow"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: integration-services
+ms.topic: conceptual
 f1_keywords: 
   - "sql13.dts.designer.termextractiontrans.f1"
   - "sql13.dts.designer.termextraction.termextraction.f1"
@@ -31,11 +26,9 @@ helpviewer_keywords:
   - "term extractions [Integration Services]"
   - "stemming words [Integration Services]"
 ms.assetid: d0821526-1603-4ea6-8322-2d901568fbeb
-caps.latest.revision: 61
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
-ms.workload: "Inactive"
+manager: craigg
 ---
 # Term Extraction Transformation
   The Term Extraction transformation extracts terms from text in a transformation input column, and then writes the terms to a transformation output column. The transformation works only with English text and it uses its own English dictionary and linguistic information about English.  
@@ -58,7 +51,7 @@ ms.workload: "Inactive"
 ## Exclusion Terms  
  Optionally, the Term Extraction transformation can reference a column in a table that contains exclusion terms, meaning terms that the transformation should skip when it extracts terms from a data set. This is useful when a set of terms has already been identified as inconsequential in a particular business and industry, typically because the term occurs with such high frequency that it becomes a noise word. For example, when extracting terms from a data set that contains customer support information about a particular brand of cars, the brand name itself might be excluded because it is mentioned too frequently to have significance. Therefore, the values in the exclusion list must be customized to the data set you are working with.  
   
- When you add a term to the exclusion list, all the terms—words or noun phrases—that contain the term are also excluded. For example, if the exclusion list includes the single word *data*, then all the terms that contain this word, such as *data*, *data mining*, *data integrity*, and *data validation* will also be excluded. If you want to exclude only compounds that contain the word *data*, you must explicitly add those compound terms to the exclusion list. For example, if you want to extract incidences of *data*, but exclude *data validation*, you would add *data validation* to the exclusion list, and make sure that *data* is removed from the exclusion list.  
+ When you add a term to the exclusion list, all the terms-words or noun phrases-that contain the term are also excluded. For example, if the exclusion list includes the single word *data*, then all the terms that contain this word, such as *data*, *data mining*, *data integrity*, and *data validation* will also be excluded. If you want to exclude only compounds that contain the word *data*, you must explicitly add those compound terms to the exclusion list. For example, if you want to extract incidences of *data*, but exclude *data validation*, you would add *data validation* to the exclusion list, and make sure that *data* is removed from the exclusion list.  
   
  The reference table must be a table in a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] or an Access database. The Term Extraction transformation uses a separate OLE DB connection to connect to the reference table. For more information, see [OLE DB Connection Manager](../../../integration-services/connection-manager/ole-db-connection-manager.md).  
   
@@ -143,7 +136,7 @@ ms.workload: "Inactive"
   
 -   ASCII line-break characters 0x0d (carriage return) and 0x0a (line feed). To use this character as a sentence boundary, there must be two or more line-break characters in a row.  
   
--   Hyphens (–). To use this character as a sentence boundary, neither the character to the left nor to the right of the hyphen can be a letter.  
+-   Hyphens (-). To use this character as a sentence boundary, neither the character to the left nor to the right of the hyphen can be a letter.  
   
 -   Underscore (_). To use this character as a sentence boundary, neither the character to the left nor to the right of the hyphen can be a letter.  
   
@@ -151,7 +144,7 @@ ms.workload: "Inactive"
   
 -   Combinations of numbers, punctuation marks, and alphabetical characters. For example, *A23B#99* returns the term *A23B*.  
   
--   The characters, %, @, &, $, #, \*, :, ;, ., **,** , !, ?, \<, >, +, =, ^, ~, |, \\, /, (, ), [, ], {, }, “, and ‘.  
+-   The characters, %, @, &, $, #, \*, :, ;, ., **,** , !, ?, \<, >, +, =, ^, ~, |, \\, /, (, ), [, ], {, }, ", and '.  
   
     > [!NOTE]  
     >  Acronyms that include one or more periods (.) are not separated into multiple sentences.  
@@ -178,7 +171,7 @@ ms.workload: "Inactive"
   
  For more information about the properties that you can set in the **Advanced Editor** dialog box or programmatically, click one of the following topics:  
   
--   [Common Properties](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
+-   [Common Properties](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
 -   [Transformation Custom Properties](../../../integration-services/data-flow/transformations/transformation-custom-properties.md)  
   
@@ -198,7 +191,7 @@ ms.workload: "Inactive"
  Provide a name for the output column that will contain the score for each extracted term.  
   
  **Configure Error Output**  
- Use the [Configure Error Output](http://msdn.microsoft.com/library/5f8da390-fab5-44f8-b268-d8fa313ce4b9) dialog box to specify error handling for rows that cause errors.  
+ Use the [Configure Error Output](https://msdn.microsoft.com/library/5f8da390-fab5-44f8-b268-d8fa313ce4b9) dialog box to specify error handling for rows that cause errors.  
   
 ## Term Extraction Transformation Editor (Exclusion Tab)
   Use the **Exclusion** tab of the **Term Extraction Transformation Editor** dialog box to set up a connection to an exclusion table and specify the columns that contain exclusion terms.  
@@ -220,7 +213,7 @@ ms.workload: "Inactive"
  Select the column in the table or view that contains the exclusion terms.  
   
  **Configure Error Output**  
- Use the [Configure Error Output](http://msdn.microsoft.com/library/5f8da390-fab5-44f8-b268-d8fa313ce4b9) dialog box to specify error handling for rows that cause errors.  
+ Use the [Configure Error Output](https://msdn.microsoft.com/library/5f8da390-fab5-44f8-b268-d8fa313ce4b9) dialog box to specify error handling for rows that cause errors.  
   
 ## Term Extraction Transformation Editor (Advanced Tab)
   Use the **Advanced** tab of the **Term Extraction Transformation Editor** dialog box to specify properties for the extraction such as frequency, length, and whether to extract words or phrases.  
@@ -251,7 +244,7 @@ ms.workload: "Inactive"
  Specify whether to make the extraction case-sensitive. The default is **False**.  
   
  **Configure Error Output**  
- Use the [Configure Error Output](http://msdn.microsoft.com/library/5f8da390-fab5-44f8-b268-d8fa313ce4b9) dialog box to specify error handling for rows that cause errors.  
+ Use the [Configure Error Output](https://msdn.microsoft.com/library/5f8da390-fab5-44f8-b268-d8fa313ce4b9) dialog box to specify error handling for rows that cause errors.  
   
 ## See Also  
  [Integration Services Error and Message Reference](../../../integration-services/integration-services-error-and-message-reference.md)   

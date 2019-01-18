@@ -2,15 +2,10 @@
 title: "bit (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "7/23/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
-ms.service: ""
-ms.component: "t-sql|data-types"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: t-sql
 ms.topic: "language-reference"
 f1_keywords: 
   - "bit_TSQL"
@@ -20,11 +15,10 @@ dev_langs:
 helpviewer_keywords: 
   - "bit data type"
 ms.assetid: 40adfd08-a31c-49cb-a172-386bcaa6edee
-caps.latest.revision: 33
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "craigg"
-ms.workload: "Active"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # bit (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -32,7 +26,7 @@ ms.workload: "Active"
   An integer data type that can take a value of 1, 0, or NULL.  
   
 ## Remarks  
-The [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] optimizes storage of **bit** columns. If there are 8 or less **bit** columns in a table, the columns are stored as 1 byte. If there are from 9 up to 16 **bit** columns, the columns are stored as 2 bytes, and so on.
+The [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] optimizes storage of **bit** columns. If there are 8 or fewer **bit** columns in a table, the columns are stored as 1 byte. If there are from 9 up to 16 **bit** columns, the columns are stored as 2 bytes, and so on.
   
 The string values TRUE and FALSE can be converted to **bit** values: TRUE is converted to 1 and FALSE is converted to 0.
   

@@ -2,16 +2,11 @@
 title: "Integration Services Paths | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/04/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "integration-services"
-ms.service: ""
-ms.component: "data-flow"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: integration-services
+ms.topic: conceptual
 f1_keywords: 
   - "sql13.dts.designer.patheditor.general.f1"
   - "sql13.dts.designer.patheditor.metadata.f1"
@@ -23,11 +18,9 @@ helpviewer_keywords:
   - "destinations [Integration Services], paths"
   - "sources [Integration Services], paths"
 ms.assetid: 6c4629a9-2ede-4011-9101-3b342249640e
-caps.latest.revision: 41
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
-ms.workload: "Inactive"
+manager: craigg
 ---
 # Integration Services Paths
   A path connects two components in a data flow by connecting the output of one data flow component to the input of another component. A path has a source and a destination. For example, if a path connects an OLE DB source and a Sort transformation, the OLE DB source is the source of the path, and the Sort transformation is the destination of the path. The source is the component where the path starts, and the destination is the component where the path ends.  

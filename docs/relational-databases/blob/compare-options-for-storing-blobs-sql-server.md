@@ -2,28 +2,21 @@
 title: "Compare Options for Storing Blobs (SQL Server) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "database-engine"
-ms.service: ""
-ms.component: "blob"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "dbe-blob"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: filestream
+ms.topic: conceptual
 ms.assetid: 6038697b-36a9-49e8-a02a-2ad9e2e60e5a
-caps.latest.revision: 10
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-ms.workload: "On Demand"
+author: "douglaslMS"
+ms.author: "douglasl"
+manager: craigg
 ---
 # Compare Options for Storing Blobs (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Discusses and compares the options that are available for storing files and documents in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-##  <a name="Expectations"></a> Storing Files in the Database – Benefits and Expectations  
+##  <a name="Expectations"></a> Storing Files in the Database - Benefits and Expectations  
  A large percentage of enterprise data is unstructured in nature, and is typically stored as files and documents in file systems. Most of this data is produced, managed and consumed by applications that access the files through Windows APIs. Enterprises typically keep this data in the file system, while storing the related metadata for the files in a relational database.  
   
  Integrating unstructured data into the relational database provides significant benefits. These benefits include the following:  
@@ -59,7 +52,7 @@ ms.workload: "On Demand"
 |**Relational access to file attributes**|No|No|**Yes**|  
   
 ##  <a name="CompareRBS"></a> Comparing FILESTREAM and Remote BLOB Store (RBS)  
- For a comparison of these two features, see this blog post from the RBS team: [SQL Server Remote BLOB Store and FILESTREAM feature comparison](http://go.microsoft.com/fwlink/?LinkId=210317).  
+ For a comparison of these two features, see this blog post from the RBS team: [SQL Server Remote BLOB Store and FILESTREAM feature comparison](https://go.microsoft.com/fwlink/?LinkId=210317).  
   
 ##  <a name="more"></a> More Information  
  [FILESTREAM &#40;SQL Server&#41;](../../relational-databases/blob/filestream-sql-server.md)  

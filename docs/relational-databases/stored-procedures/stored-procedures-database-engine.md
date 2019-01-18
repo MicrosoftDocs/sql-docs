@@ -2,25 +2,18 @@
 title: "Stored Procedures (Database Engine) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-non-specified"
-ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
-ms.service: ""
-ms.component: "stored-procedures"
+ms.prod: sql
+ms.technology: stored-procedures
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "dbe-stored-Procs"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "storing programs as stored procedures"
   - "stored procedures [SQL Server], about stored procedures"
 ms.assetid: cc6daf62-9663-4c3e-950a-ab42e2830427
-caps.latest.revision: 35
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-ms.workload: "On Demand"
+author: "stevestein"
+ms.author: "sstein"
+manager: craigg
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Stored Procedures (Database Engine)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -96,6 +89,6 @@ ms.workload: "On Demand"
 |Describes how Parameters are used in a stored procedure.|[Parameters](../../relational-databases/stored-procedures/parameters.md)|  
   
 ## Related Content  
- [CLR Stored Procedures](http://msdn.microsoft.com/library/bbdd51b2-a9b4-4916-ba6f-7957ac6c3f33)  
+ [CLR Stored Procedures](https://msdn.microsoft.com/library/bbdd51b2-a9b4-4916-ba6f-7957ac6c3f33)  
   
   

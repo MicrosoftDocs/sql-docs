@@ -2,16 +2,11 @@
 title: "SQLForeignKeys Function | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
-ms.prod_service: "drivers"
-ms.service: ""
-ms.component: "odbc"
+ms.prod: sql
+ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "drivers"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: connectivity
+ms.topic: conceptual
 apiname: 
   - "SQLForeignKeys"
 apilocation: 
@@ -22,11 +17,9 @@ f1_keywords:
 helpviewer_keywords: 
   - "SQLForeignKeys function [ODBC]"
 ms.assetid: 07f3f645-f643-4d39-9a10-70a72f24e608
-caps.latest.revision: 24
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
-ms.workload: "Inactive"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # SQLForeignKeys Function
 **Conformance**  
@@ -46,19 +39,19 @@ ms.workload: "Inactive"
 ```  
   
 SQLRETURN SQLForeignKeys(  
-     SQLHSTMT       StatementHandle,  
-     SQLCHAR *      PKCatalogName,  
-     SQLSMALLINT    NameLength1,  
-     SQLCHAR *      PKSchemaName,  
-     SQLSMALLINT    NameLength2,  
-     SQLCHAR *      PKTableName,  
-     SQLSMALLINT    NameLength3,  
-     SQLCHAR *      FKCatalogName,  
-     SQLSMALLINT    NameLength4,  
-     SQLCHAR *      FKSchemaName,  
-     SQLSMALLINT    NameLength5,  
-     SQLCHAR *      FKTableName,  
-     SQLSMALLINT    NameLength6);  
+     SQLHSTMT       StatementHandle,  
+     SQLCHAR *      PKCatalogName,  
+     SQLSMALLINT    NameLength1,  
+     SQLCHAR *      PKSchemaName,  
+     SQLSMALLINT    NameLength2,  
+     SQLCHAR *      PKTableName,  
+     SQLSMALLINT    NameLength3,  
+     SQLCHAR *      FKCatalogName,  
+     SQLSMALLINT    NameLength4,  
+     SQLCHAR *      FKSchemaName,  
+     SQLSMALLINT    NameLength5,  
+     SQLCHAR *      FKTableName,  
+     SQLSMALLINT    NameLength6);  
 ```  
   
 ## Arguments  

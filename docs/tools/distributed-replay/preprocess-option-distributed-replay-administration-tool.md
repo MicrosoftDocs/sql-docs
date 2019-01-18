@@ -2,22 +2,15 @@
 title: "Preprocess Option (Distributed Replay Administration Tool) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "sql-tools"
-ms.service: ""
-ms.component: "distributed-replay"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: tools-other
+ms.topic: conceptual
 ms.assetid: 9b5012fd-233e-4a25-a2e1-585c63b70502
-caps.latest.revision: 25
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-ms.workload: "Inactive"
+author: "stevestein"
+ms.author: "sstein"
+manager: craigg
 ---
 # Preprocess Option (Distributed Replay Administration Tool)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -36,20 +29,20 @@ dreplay preprocess [-m controller] -i input_trace_file
 ```  
   
 #### Parameters  
- **-m** *controller*  
+ **-m** _controller_  
  Specifies the computer name of the controller. You can use "`localhost`" or "`.`" to refer to the local computer.  
   
  If the **-m** parameter is not specified, the local computer is used.  
   
- **-i** *input_trace_file*  
+ **-i** _input_trace_file_  
  Specifies the full path of the input trace file on the controller, such as `D:\Mytrace.trc`. The **-i** parameter is required.  
   
- If there are rollover files in the same directory, they will be loaded and used automatically. The files must follow the file rollover naming convention, for example: `Mytrace.trc`, `Mytrace_1.trc`, `Mytrace_2.trc`, `Mytrace_3.trc`, … `Mytrace_n.trc`.  
+ If there are rollover files in the same directory, they will be loaded and used automatically. The files must follow the file rollover naming convention, for example: `Mytrace.trc`, `Mytrace_1.trc`, `Mytrace_2.trc`, `Mytrace_3.trc`, ... `Mytrace_n.trc`.  
   
 > [!NOTE]  
 >  If you are using the administration tool on a different computer than the controller, you will need to copy the input trace files to the controller so that a local path can be used for this parameter.  
   
- **-d** *controller_working_dir*  
+ **-d** _controller_working_dir_  
  Specifies the directory on the controller where the intermediate file will be stored. The **-d** parameter is required.  
   
  The following requirements apply:  
@@ -62,14 +55,14 @@ dreplay preprocess [-m controller] -i input_trace_file
   
 -   UNC paths are not supported.  
   
- **-c** *config_file*  
+ **-c** _config_file_  
  Is the full path of the preprocess configuration file; used to specify the location of the preprocess configuration file when stored in a different location. This parameter can be a UNC path, or can reside locally on the computer where you run the administration tool.  
   
  The **-c** parameter is not required if no filtering is needed, or if you do not want to modify the maximum idle time.  
   
  Without the **-c** parameter, the default preprocess configuration file, `DReplay.exe.preprocess.config`, is used.  
   
- **-f** *status_interval*  
+ **-f** _status_interval_  
  Specifies the frequency (in seconds) at which to display status messages.  
   
  If **-f** is not specified, the default interval is 30 seconds.  
@@ -78,13 +71,13 @@ dreplay preprocess [-m controller] -i input_trace_file
  In this example, the preprocess stage is initiated with all of the default settings. The value `localhost` indicates that the controller service is running on the same computer as the administration tool. The *input_trace_file* parameter specifies the location of the input trace data, `c:\mytrace.trc`. Because there is no trace file filtering involved, the **-c** parameter does have to be specified.  
   
 ```  
-dreplay preprocess –m localhost -i c:\mytrace.trc -d c:\WorkingDir  
+dreplay preprocess -m localhost -i c:\mytrace.trc -d c:\WorkingDir  
 ```  
   
  In this example, the preprocess stage is initiated and a modified preprocess configuration file is specified. Unlike the previous example, the **-c** parameter is used to point to the modified configuration file, if you have stored it in a different location. For example:  
   
 ```  
-dreplay preprocess –m localhost -i c:\mytrace.trc -d c:\WorkingDir -c c:\DReplay.exe.preprocess.config  
+dreplay preprocess -m localhost -i c:\mytrace.trc -d c:\WorkingDir -c c:\DReplay.exe.preprocess.config  
 ```  
   
  In the modified preprocess configuration file, a filter condition is added that filters out system sessions during distributed replay. The filter is added by modifying the `<PreprocessModifiers>` element in the preprocess configuration file, `DReplay.exe.preprocess.config`.  

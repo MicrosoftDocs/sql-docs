@@ -1,29 +1,14 @@
 ---
 title: "Configure Analysis Services Project Properties (SSDT) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: analysis-services
-ms.prod_service: "analysis-services"
-ms.service: ""
-ms.component: ""
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
-  
-ms.component: multidimensional-tabular
-ms.component: data-mining
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "VS.TOOLSOPTIONSPAGES.BUSINESS_INTELLIGENCE_DESIGNERS.ANALYSIS_SERVICES_DESIGNERS.GENERAL"
-helpviewer_keywords: 
-  - "projects [Analysis Services], properties"
-ms.assetid: d9786c66-7d8c-48e3-950d-3f25044b4ce2
-caps.latest.revision: 24
-author: "Minewiskan"
-ms.author: "owend"
-manager: "kfile"
-ms.workload: "On Demand"
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: multidimensional-models
+ms.topic: conceptual
+ms.author: owend
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
 ---
 # Configure Analysis Services Project Properties (SSDT)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -37,7 +22,7 @@ ms.workload: "On Demand"
 |Property|Default Setting|Description|  
 |--------------|---------------------|-----------------|  
 |Build / Deployment Server Edition|The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] edition used to develop the project|Specifies the edition of the server to which projects will finally be deployed. When working with multiple developers on a project, developers need to understand the server edition to know which features to incorporate into the [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] project.|  
-|Build / Deployment Server Edition|The version used to develop the projects|Specifies the version of the server to which projects will finally be deployed.|  
+|Build / Deployment Server Version|The version used to develop the projects|Specifies the version of the server to which projects will finally be deployed.|  
 |Build / Outputs|/bin|The relative path for the output of the project build process|  
 |Build / Remove Passwords|True|Specifies whether known passwords will be removed from connection strings that are written to the output directory during the build process. Passwords are removed to increase security. If passwords are removed, they will need to be provided when the deployed project is processed in order for [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] to access the source data.|  
 |Debugging / Start Object|\<Currently Active Object>|Determines that object that will be started when you start debugging.|  
@@ -52,7 +37,7 @@ ms.workload: "On Demand"
   
  A project is initially created with a single configuration, called Development. You can create additional configurations and switch between configurations using the Configuration Manager.  
   
- Until additional configurations are created, all developers use this common configuration. However, during the various phases of project development — such as during the initial development and testing of a project — different developers will may use different data sources and deploy the project to different servers for different purposes. Configurations enable you to retain these different settings in different configuration files.  
+ Until additional configurations are created, all developers use this common configuration. However, during the various phases of project development - such as during the initial development and testing of a project - different developers will may use different data sources and deploy the project to different servers for different purposes. Configurations enable you to retain these different settings in different configuration files.  
   
 ## See Also  
  [Build Analysis Services Projects &#40;SSDT&#41;](../../analysis-services/multidimensional-models/build-analysis-services-projects-ssdt.md)   

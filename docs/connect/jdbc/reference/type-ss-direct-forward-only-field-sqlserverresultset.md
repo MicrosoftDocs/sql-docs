@@ -2,32 +2,25 @@
 title: "TYPE_SS_DIRECT_FORWARD_ONLY Field (SQLServerResultSet) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
-ms.prod_service: "drivers"
-ms.service: ""
-ms.component: "jdbc"
+ms.prod: sql
+ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "drivers"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: connectivity
+ms.topic: conceptual
 apiname: 
   - "SQLServerResultSet.TYPE_SS_DIRECT_FORWARD_ONLY"
 apilocation: 
   - "sqljdbc.jar"
 apitype: "Assembly"
 ms.assetid: f8eb2fc2-f624-4fd5-a408-ae4bb1de4913
-caps.latest.revision: 10
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
-ms.workload: "Inactive"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # TYPE_SS_DIRECT_FORWARD_ONLY Field (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Used to specify a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] fast forward-only, read-only cursor type.  
+  Used to specify a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] fast forward-only, read-only cursor type.  
   
 ## Syntax  
   

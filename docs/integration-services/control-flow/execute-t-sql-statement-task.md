@@ -2,16 +2,11 @@
 title: "Execute T-SQL Statement Task | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/13/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "integration-services"
-ms.service: ""
-ms.component: "control-flow"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: integration-services
+ms.topic: conceptual
 f1_keywords: 
   - "sql13.dts.designer.executetsqlstatementtask.f1"
 helpviewer_keywords: 
@@ -19,11 +14,9 @@ helpviewer_keywords:
   - "statements [Integration Services]"
   - "Execute T-SQL Statement task [Integration Services]"
 ms.assetid: 7e9086ca-d27e-46c0-bfad-d61333ebd55e
-caps.latest.revision: 35
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
-ms.workload: "Inactive"
+manager: craigg
 ---
 # Execute T-SQL Statement Task
   The Execute T-SQL Statement task runs Transact-SQL statements. For more information, see [Transact-SQL Reference &#40;Database Engine&#41;](../../t-sql/transact-sql-reference-database-engine.md) and [Integration Services &#40;SSIS&#41; Queries](../../integration-services/integration-services-ssis-queries.md).  
@@ -39,7 +32,7 @@ ms.workload: "Inactive"
   
  For more information about how to set these properties in [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer, click the following topic:  
   
--   [Set the Properties of a Task or Container](http://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
+-   [Set the Properties of a Task or Container](https://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
   
 ## See Also  
  [Integration Services Tasks](../../integration-services/control-flow/integration-services-tasks.md)   

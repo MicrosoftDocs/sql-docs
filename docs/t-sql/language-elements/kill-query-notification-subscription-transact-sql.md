@@ -2,15 +2,10 @@
 title: "KILL QUERY NOTIFICATION SUBSCRIPTION (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/27/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "sql-database"
-ms.service: ""
-ms.component: "t-sql|language-elements"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: t-sql
 ms.topic: "language-reference"
 f1_keywords: 
   - "KILL QUERY NOTIFICATION SUBSCRIPTION"
@@ -23,11 +18,9 @@ helpviewer_keywords:
   - "subscriptions [SQL Server query notifications], stopping"
   - "query notifications [SQL Server], subscriptions"
 ms.assetid: 8aeadf51-286c-4748-bef2-d25858b250bf
-caps.latest.revision: 17
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-ms.workload: "Inactive"
+author: "douglaslMS"
+ms.author: "douglasl"
+manager: craigg
 ---
 # KILL QUERY NOTIFICATION SUBSCRIPTION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

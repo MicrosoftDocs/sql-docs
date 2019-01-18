@@ -2,15 +2,10 @@
 title: "nodes() Method (xml Data Type) | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/26/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.service: ""
-ms.component: "t-sql|xml"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: t-sql
 ms.topic: "language-reference"
 dev_langs: 
   - "TSQL"
@@ -18,11 +13,9 @@ helpviewer_keywords:
   - "nodes() method"
   - "nodes method"
 ms.assetid: 7267fe1b-2e34-4213-8bbf-1c953822446c
-caps.latest.revision: 39
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
-ms.workload: "Active"
+manager: craigg
 ---
 # nodes() Method (xml Data Type)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -225,7 +218,7 @@ go
     SELECT C.query('.') as result  
     FROM Production.ProductModel  
     CROSS APPLY Instructions.nodes('  
-    declare namespace MI="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";  
+    declare namespace MI="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";  
     /MI:root/MI:Location') as T(C)  
     WHERE ProductModelID=7  
     ```  
@@ -258,10 +251,10 @@ SELECT ProductModelID, Locations.value('./@LocationID','int') as LocID,
 steps.query('.') as Step         
 FROM Production.ProductModel         
 CROSS APPLY Instructions.nodes('         
-declare namespace MI="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";         
+declare namespace MI="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";         
 /MI:root/MI:Location') as T1(Locations)         
 CROSS APPLY T1.Locations.nodes('         
-declare namespace MI="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";         
+declare namespace MI="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";         
 ./MI:step ') as T2(steps)         
 WHERE ProductModelID=7         
 GO         
@@ -285,7 +278,7 @@ ProductModelID LocID Step
   
 ```  
 WITH XMLNAMESPACES (  
-   'http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions'  AS MI)  
+   'https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions'  AS MI)  
   
 SELECT ProductModelID, Locations.value('./@LocationID','int') as LocID,  
 steps.query('.') as Step         

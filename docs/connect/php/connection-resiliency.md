@@ -1,19 +1,14 @@
 ---
 title: "Idle Connection Resiliency"
 ms.date: "07/13/2017"
-ms.prod: "sql-non-specified"
-ms.prod_service: "drivers"
-ms.service: ""
-ms.component: "php"
-ms.suite: "sql"
+ms.prod: sql
+ms.prod_service: connectivity
 ms.custom: ""
-ms.technology:
-  - "drivers"
-ms.topic: "article"
+ms.technology: connectivity
+ms.topic: conceptual
 author: "david-puglielli"
 ms.author: "v-dapugl"
 manager: "v-hakaka"
-ms.workload: "Inactive"
 ---
 # Idle Connection Resiliency
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -31,7 +26,7 @@ If the product of **ConnectRetryCount** multiplied by **ConnectRetryInterval** i
 
 #### Remarks
 
-Connection resiliency applies when the connection is idle. Failures that occur while executing a transaction, for example, will not trigger reconnection attempts – they will fail as would otherwise be expected. The following situations, known as non-recoverable session states, will not trigger reconnection attempts:
+Connection resiliency applies when the connection is idle. Failures that occur while executing a transaction, for example, will not trigger reconnection attempts - they will fail as would otherwise be expected. The following situations, known as non-recoverable session states, will not trigger reconnection attempts:
 
 * Temporary tables
 * Global and local cursors
@@ -130,4 +125,4 @@ Statement 2 successful.
 ```
 
 ## See Also
-[Connection Resiliency in the Windows ODBC Driver](https://docs.microsoft.com/en-us/sql/connect/odbc/windows/connection-resiliency-in-the-windows-odbc-driver)
+[Connection Resiliency in the Windows ODBC Driver](https://docs.microsoft.com/sql/connect/odbc/windows/connection-resiliency-in-the-windows-odbc-driver)

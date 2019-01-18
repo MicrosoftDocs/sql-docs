@@ -2,16 +2,11 @@
 title: "Apply Transaction Log Backups (SQL Server) | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/13/2016"
-ms.prod: "sql-non-specified"
-ms.prod_service: "database-engine"
-ms.service: ""
-ms.component: "backup-restore"
+ms.prod: sql
+ms.prod_service: backup-restore
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "dbe-backup-restore"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: backup-restore
+ms.topic: conceptual
 helpviewer_keywords: 
   - "restoring [SQL Server], log backups"
   - "transaction log backups [SQL Server], applying backups"
@@ -19,11 +14,9 @@ helpviewer_keywords:
   - "transaction log backups [SQL Server], quantity needed for restore sequence"
   - "backups [SQL Server], log backups"
 ms.assetid: 9b12be51-5469-46f9-8e86-e938e10aa3a1
-caps.latest.revision: 38
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-ms.workload: "On Demand"
+author: mashamsft
+ms.author: mathoma
+manager: craigg
 ---
 # Apply Transaction Log Backups (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

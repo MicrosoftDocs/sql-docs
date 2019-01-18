@@ -1,0 +1,77 @@
+- name: Overview of Importing and Exporting Data
+  href: overview-import-export.md
+- name: Import with BCP or SQL statements
+  items:
+  - name: Bulk Overview
+    href: bulk-import-and-export-of-data-sql-server.md
+  - name: Import and Export Bulk Data by Using the bcp Utility
+    href: import-and-export-bulk-data-by-using-the-bcp-utility-sql-server.md
+  - name: Import Bulk Data by Using BULK INSERT or OPENROWSET(BULK...)
+    href: import-bulk-data-by-using-bulk-insert-or-openrowset-bulk-sql-server.md
+  - name: Prerequisites for Minimal Logging in Bulk Import
+    href: prerequisites-for-minimal-logging-in-bulk-import.md
+  - name: Prepare to Bulk Import Data
+    href: prepare-to-bulk-import-data-sql-server.md
+  - name: Prepare Data for Bulk Export or Import
+    href: prepare-data-for-bulk-export-or-import-sql-server.md
+  - name: HumanResources.myTeam Sample Table
+    href: humanresources-myteam-sample-table-sql-server.md
+  - name: Data Formats for Bulk Import or Bulk Export
+    href: data-formats-for-bulk-import-or-bulk-export-sql-server.md
+    items:
+    - name: Use Native Format to Import or Export Data
+      href: use-native-format-to-import-or-export-data-sql-server.md
+    - name: Use Character Format to Import or Export Data
+      href: use-character-format-to-import-or-export-data-sql-server.md
+    - name: Use Unicode Native Format to Import or Export Data
+      href: use-unicode-native-format-to-import-or-export-data-sql-server.md
+    - name: Use Unicode Character Format to Import or Export Data
+      href: use-unicode-character-format-to-import-or-export-data-sql-server.md
+    - name: Import Native and Character Format Data from Earlier Versions of SQL Server
+      href: import-native-and-character-format-data-from-earlier-versions-of-sql-server.md
+  - name: Specify Data Formats for Compatibility when Using bcp
+    href: specify-data-formats-for-compatibility-when-using-bcp-sql-server.md
+    items:
+    - name: Specify File Storage Type by Using bcp
+      href: specify-file-storage-type-by-using-bcp-sql-server.md
+    - name: Specify Prefix Length in Data Files by Using bcp
+      href: specify-prefix-length-in-data-files-by-using-bcp-sql-server.md
+    - name: Specify Field Length by Using bcp
+      href: specify-field-length-by-using-bcp-sql-server.md
+    - name: Specify Field and Row Terminators
+      href: specify-field-and-row-terminators-sql-server.md
+  - name: Keep Nulls or Use Default Values During Bulk Import
+    href: keep-nulls-or-use-default-values-during-bulk-import-sql-server.md
+  - name: Keep Identity Values When Bulk Importing Data
+    href: keep-identity-values-when-bulk-importing-data-sql-server.md
+  - name: Bulk Import Large-Object Data by using the OPENROWSET Bulk Rowset Provider
+    href: bulk-import-large-object-data-with-openrowset-bulk-rowset-provider.md
+  - name: Format Files for Importing or Exporting Data
+    href: format-files-for-importing-or-exporting-data-sql-server.md
+    items:
+    - name: Non-XML Format Files
+      href: non-xml-format-files-sql-server.md
+    - name: XML Format Files
+      href: xml-format-files-sql-server.md
+    - name: Create a Format File
+      href: create-a-format-file-sql-server.md
+    - name: Use a Format File to Bulk Import Data
+      href: use-a-format-file-to-bulk-import-data-sql-server.md
+    - name: Use a Format File to Skip a Table Column
+      href: use-a-format-file-to-skip-a-table-column-sql-server.md
+    - name: Use a Format File to Skip a Data Field
+      href: use-a-format-file-to-skip-a-data-field-sql-server.md
+    - name: Use a Format File to Map Table Columns to Data-File Fields
+      href: use-a-format-file-to-map-table-columns-to-data-file-fields-sql-server.md
+- name: Import Flat File with the Import Flat File Wizard
+  href: import-flat-file-wizard.md
+- name: Import and Export with the Import and Export Wizard
+  href: ../../integration-services/import-export-data/import-and-export-data-with-the-sql-server-import-and-export-wizard.md
+- name: Import from Excel
+  href: import-data-from-excel-to-sql.md
+- name: Import JSON Documents
+  href: ../json/import-json-documents-into-sql-server.md
+- name: Import and Export XML Documents
+  href: examples-of-bulk-import-and-export-of-xml-documents-sql-server.md
+- name: Import and Export from Azure Blob Storage
+  href: examples-of-bulk-access-to-data-in-azure-blob-storage.md

@@ -2,15 +2,10 @@
 title: "sp_dropapprole (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "database-engine"
-ms.service: ""
-ms.component: "system-stored-procedures"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: system-objects
 ms.topic: "language-reference"
 f1_keywords: 
   - "sp_dropapprole_TSQL"
@@ -20,11 +15,9 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_dropapprole"
 ms.assetid: ea1aefe6-8f7d-46e9-a3cb-7b037b393e73
-caps.latest.revision: 28
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "craigg"
-ms.workload: "Inactive"
+ms.author: vanto
+manager: craigg
+manager: craigg
 ---
 # sp_dropapprole (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,7 +37,7 @@ sp_dropapprole [@rolename = ] 'role'
 ```  
   
 ## Arguments  
- [ **@rolename =** ] **'***role***'**  
+ [ **@rolename =** ] **'**_role_**'**  
  Is the application role to remove. *role* is a **sysname**, with no default. *role* must exist in the current database.  
   
 ## Return Code Values  

@@ -2,16 +2,11 @@
 title: "Create a SQL Server Utility Control Point (SQL Server Utility) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "database-engine"
-ms.service: ""
-ms.component: "maintenance-plans"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: configuration
+ms.topic: conceptual
 f1_keywords: 
   - "sql13.SWB.create.ucp.validation.F1"
   - "sql13.SWB.create.ucp.Summary.F1"
@@ -23,11 +18,9 @@ helpviewer_keywords:
   - "Create UCP"
   - "UCP"
 ms.assetid: d5335124-1625-47ce-b4ac-36078967158c
-caps.latest.revision: 13
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-ms.workload: "Inactive"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ---
 # Create a SQL Server Utility Control Point (SQL Server Utility)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -79,7 +72,7 @@ ms.workload: "Inactive"
   
 -   This procedure must be run by a user with sysadmin permissions, the same permissions required to create a UCP.  
   
--   All managed instances of SQL Server must be removed from the UCP. Note that the UCP is a managed instance of SQL Server. For more information, see [How to: Remove an Instance of SQL Server from the SQL Server Utility](http://go.microsoft.com/fwlink/?LinkId=169392).  
+-   All managed instances of SQL Server must be removed from the UCP. Note that the UCP is a managed instance of SQL Server. For more information, see [How to: Remove an Instance of SQL Server from the SQL Server Utility](https://go.microsoft.com/fwlink/?LinkId=169392).  
   
  Use this procedure to remove a SQL Server UCP from the SQL Server Utility. After the operation is complete, a UCP can be created on the instance of SQL Server again.  
   
@@ -134,19 +127,19 @@ EXEC msdb.dbo.sp_sysutility_ucp_remove;
 ##  <a name="Instance_name"></a> Specify Instance  
  Specify the following information about the UCP you are creating:  
   
--   **Instance Name** - To select an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] from the connection dialog, click **Connect…**. Provide the computer name and the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance name in the format ComputerName\InstanceName.  
+-   **Instance Name** - To select an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] from the connection dialog, click **Connect...**. Provide the computer name and the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance name in the format ComputerName\InstanceName.  
   
 -   **Utility Name** - Specify a name that will be used to identify the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Utility on the network.  
   
  To continue, click **Next**.  
   
 ##  <a name="Connection_dialog"></a> Connection Dialog  
- On the Connect to Server dialog box, verify the server type, computer name, and [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance name information. For more information, see [Connect to Server &#40;Database Engine&#41;](http://msdn.microsoft.com/library/ee9017b4-8a19-4360-9003-9e6484082d41).  
+ On the Connect to Server dialog box, verify the server type, computer name, and [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance name information. For more information, see [Connect to Server &#40;Database Engine&#41;](https://msdn.microsoft.com/library/ee9017b4-8a19-4360-9003-9e6484082d41).  
   
 > [!NOTE]  
 >  If the connection is encrypted, the encrypted connection will be used. If the connection is not encrypted, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Utility will reconnect using an encrypted connection.  
   
- To continue, click **Connect…**.  
+ To continue, click **Connect...**.  
   
 ##  <a name="Agent_configuration"></a> Utility Collection Set Account  
  Specify a Windows domain account to run the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Utility collection set. This account is used as the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent proxy account for the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Utility collection set. Alternatively, you can use the existing [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent service account. To pass validation requirements, use the following guidelines to specify the account.  
@@ -171,7 +164,7 @@ EXEC msdb.dbo.sp_sysutility_ucp_remove;
 |The instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cannot have a database named "sysutility_mdw."|The create UCP operation will create a utility management data warehouse (UMDW) named "sysutility_mdw." The operation requires that the name does not exist on the computer at the time that validation rules are run. To continue, you must remove or rename any database named "sysutility_mdw." For more information about renaming operations, see [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md).|  
 |Collection sets on the specified instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] must be stopped.|Stop pre-existing collection sets while the UCP is created on the specified instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. If the data collector is disabled, enable it, stop any running collection sets, then re-run validation rules for the Create UCP operation.<br /><br /> To enable the data collector:<br /><br /> In Object Explorer, expand the **Management** node.<br /><br /> Right-click **Data Collection**, and then click **Enable Data Collection**.<br /><br /> To stop a collection set:<br /><br /> In Object Explorer, expand the Management node, expand **Data Collection**, and then expand **System Data Collection Sets**.<br /><br /> Right-click the collection set that you want to stop, and then click **Stop Data Collection Set**.<br /><br /> A message box will display the result of this action, and a red circle on the icon for the collection set indicates that the collection set has stopped.|  
 |The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent service on the specified instance must be started. If the specified instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] failover cluster instance, the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent service must be configured to start manually. Otherwise, the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent service must be configured to start automatically.|Start the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent service. If the specified instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] failover cluster instance, configure the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent service to start manually. Otherwise, configure the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent service to start automatically.|  
-|WMI must be configured correctly.|To troubleshoot WMI configuration, see [Troubleshoot the SQL Server Utility](http://msdn.microsoft.com/library/f5f47c2a-38ea-40f8-9767-9bc138d14453).|  
+|WMI must be configured correctly.|To troubleshoot WMI configuration, see [Troubleshoot the SQL Server Utility](https://msdn.microsoft.com/library/f5f47c2a-38ea-40f8-9767-9bc138d14453).|  
 |The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent proxy account cannot be a built-in account, like Network Service.|If the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent proxy account is a built-in account, like Network Service, re-assign the account to a Windows domain account that is sysadmin.|  
 |If you select the proxy account option, the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent proxy account must be a valid Windows domain account.|Specify a valid Windows domain account. To ensure that the account is valid, logon to the specified instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] using the Windows domain account.|  
 |If you select the service account option, the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent service account cannot be a built-in account, like Network Service.|If the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent service account is a built-in account, like Network Service, re-assign the account to a Windows domain account.|  
@@ -223,13 +216,13 @@ EXEC msdb.dbo.sp_sysutility_ucp_remove;
  Use the following example to create a new utility control point:  
   
 ```  
-> $UtilityInstance = new-object –Type Microsoft.SqlServer.Management.Smo.Server "ComputerName\UCP-Name";  
+> $UtilityInstance = new-object -Type Microsoft.SqlServer.Management.Smo.Server "ComputerName\UCP-Name";  
 > $SqlStoreConnection = new-object -Type Microsoft.SqlServer.Management.Sdk.Sfc.SqlStoreConnection $UtilityInstance.ConnectionContext.SqlConnectionObject;  
 > $Utility = [Microsoft.SqlServer.Management.Utility.Utility]::CreateUtility("Utility", $SqlStoreConnection, "ProxyAccount", "ProxyAccountPassword");  
 ```  
   
 ## See Also  
  [SQL Server Utility Features and Tasks](../../relational-databases/manage/sql-server-utility-features-and-tasks.md)   
- [Troubleshoot the SQL Server Utility](http://msdn.microsoft.com/library/f5f47c2a-38ea-40f8-9767-9bc138d14453)  
+ [Troubleshoot the SQL Server Utility](https://msdn.microsoft.com/library/f5f47c2a-38ea-40f8-9767-9bc138d14453)  
   
   

@@ -1,42 +1,14 @@
 ---
 title: "Microsoft Neural Network Algorithm Technical Reference | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: analysis-services
-ms.prod_service: "analysis-services"
-ms.service: ""
-ms.component: ""
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
-  
-ms.component: data-mining
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "HIDDEN_NODE_RATIO parameter"
-  - "MAXIMUM_INPUT_ATTRIBUTES parameter"
-  - "HOLDOUT_PERCENTAGE parameter"
-  - "neural network algorithms [Analysis Services]"
-  - "output layer [Data Mining]"
-  - "neural networks"
-  - "MAXIMUM_OUTPUT_ATTRIBUTES parameter"
-  - "MAXIMUM_STATES parameter"
-  - "SAMPLE_SIZE parameter"
-  - "hidden layer"
-  - "hidden neurons"
-  - "input layer [Data Mining]"
-  - "activation function [Data Mining]"
-  - "Back-Propagated Delta Rule network"
-  - "neural network model [Analysis Services]"
-  - "coding [Data Mining]"
-  - "HOLDOUT_SEED parameter"
-ms.assetid: b8fac409-e3c0-4216-b032-364f8ea51095
-caps.latest.revision: 26
-author: "Minewiskan"
-ms.author: "owend"
-manager: "kfile"
-ms.workload: "Inactive"
+ms.date: 05/08/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: data-mining
+ms.topic: conceptual
+ms.author: owend
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
 ---
 # Microsoft Neural Network Algorithm Technical Reference
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -106,7 +78,7 @@ ms.workload: "Inactive"
   
  **Discrete values**  
   
- `μ = p` – the prior probability of a state  
+ `μ = p` - the prior probability of a state  
   
  `StdDev  = sqrt(p(1-p))`  
   

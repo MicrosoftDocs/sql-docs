@@ -2,15 +2,10 @@
 title: "sys.sp_cdc_get_captured_columns (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/15/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "database-engine"
-ms.service: ""
-ms.component: "system-stored-procedures"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: system-objects
 ms.topic: "language-reference"
 f1_keywords: 
   - "sp_cdc_get_captured_columns"
@@ -24,11 +19,9 @@ helpviewer_keywords:
   - "sp_cdc_get_captured_columns"
   - "change data capture [SQL Server], querying metadata"
 ms.assetid: d9e680be-ab9b-4e0c-b63a-90658f241df8
-caps.latest.revision: 30
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "craigg"
-ms.workload: "Inactive"
+author: rothja
+ms.author: jroth
+manager: craigg
 ---
 # sys.sp_cdc_get_captured_columns (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -63,7 +56,7 @@ sys.sp_cdc_get_captured_columns
 |capture_instance|**sysname**|Name of the capture instance.|  
 |column_name|**sysname**|Name of the captured source column.|  
 |column_id|**int**|ID of the column in the source table.|  
-|ordinal_position|**int**|Position of the column within the source table.|  
+|column_ordinal|**int**|Position of the column within the source table.|  
 |data_type|**sysname**|Column data type.|  
 |character_maximum_length|**int**|Maximum character length of the character-based column; otherwise, NULL.|  
 |numeric_precision|**tinyint**|Precision of the column if numeric-based; otherwise, NULL.|  

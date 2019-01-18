@@ -1,23 +1,16 @@
 ---
 title: "Retrieve numeric data with SQL_NUMERIC_STRUCT | Microsoft Docs" 
 description: "C/C++ using ODBC retrieves the SQL Server numeric data type by using SQL_NUMERIC_STRUCT, related to SQL_C_NUMERIC."
-documentationCenter: ""
-authors: "MightyPen"
-manager: "jhubbard"
 editor: ""
-ms.prod: "sql-non-specified"
-ms.prod_service: "drivers"
-ms.service: ""
-ms.component: "odbc"
-ms.suite: "sql"
-ms.technology: "dbe-data-tier-apps"
-ms.devlang: "C++"
-ms.topic: "article"
+ms.prod: sql
+ms.technology:
+ms.devlang: cpp
+ms.topic: conceptual
 ms.custom: ""
-ms.tgt_pltfrm: "NA"
-ms.workload: "Inactive"
 ms.date: "07/13/2017"
-ms.author: "genemi"
+ms.author: genemi
+authors: MightyPen
+manager: craigg
 ---
 # Retrieve numeric data with SQL\_NUMERIC\_STRUCT
 
@@ -373,14 +366,14 @@ void main() {
 <!--
 GeneMi historical notes, 2017/July/12. Per Jason.C
 
-http://go.microsoft.com/fwlink/?LinkId=147596
+https://go.microsoft.com/fwlink/?LinkId=147596
 
-https://support.microsoft.com/en-us/help/222831
+https://support.microsoft.com/help/222831
 
-http://web.archive.org/web/20140319133434/http:/support.microsoft.com:80/kb/222831
+https://web.archive.org/web/20140319133434/http:/support.microsoft.com:80/kb/222831
 
-http://web.archive.org/web/20080505073901/http:/support.microsoft.com:80/kb/181254
+https://web.archive.org/web/20080505073901/http:/support.microsoft.com:80/kb/181254
 
-https://docs.microsoft.com/en-us/sql/odbc/reference/appendixes/c-data-types
+https://docs.microsoft.com/sql/odbc/reference/appendixes/c-data-types
 -->
 

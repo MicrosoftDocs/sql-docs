@@ -2,24 +2,17 @@
 title: "SQLRateConnection Function | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
-ms.prod_service: "drivers"
-ms.service: ""
-ms.component: "odbc"
+ms.prod: sql
+ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "drivers"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: connectivity
+ms.topic: conceptual
 helpviewer_keywords: 
   - "SQLRateConnection function [ODBC]"
 ms.assetid: e8da2ffb-d6ef-4ca7-824f-57afd29585d8
-caps.latest.revision: 11
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
-ms.workload: "Inactive"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # SQLRateConnection Function
 **Conformance**  
@@ -53,7 +46,7 @@ SQLRETURN  SQLRateConnection(
  [Input] If *fRequiredTransactionEnlistment* is TRUE, *transId* represents the DTC transaction that the request will enlist. If *fRequiredTransactionEnlistment* is FALSE, *transId* will be ignored.  
   
  *pRating*  
- [Output] *hCandidateConnection*’s reuse rating for the *hRequest*. This rating will be in between 0 and 100 (inclusive).  
+ [Output] *hCandidateConnection*'s reuse rating for the *hRequest*. This rating will be in between 0 and 100 (inclusive).  
   
 ## Returns  
  SQL_SUCCESS, SQL_ERROR, or SQL_INVALID_HANDLE.  

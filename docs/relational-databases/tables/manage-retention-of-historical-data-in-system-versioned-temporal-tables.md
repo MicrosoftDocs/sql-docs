@@ -2,22 +2,16 @@
 title: "Manage Retention of Historical Data in System-Versioned Temporal Tables | Microsoft Docs"
 ms.custom: ""
 ms.date: "05/18/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.service: ""
-ms.component: "tables"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "dbe-tables"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: table-view-index
+ms.topic: conceptual
 ms.assetid: 7925ebef-cdb1-4cfe-b660-a8604b9d2153
-caps.latest.revision: 23
 author: "CarlRabeler"
 ms.author: "carlrab"
-manager: "jhubbard"
-ms.workload: "On Demand"
+manager: craigg
+monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Manage Retention of Historical Data in System-Versioned Temporal Tables
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -43,7 +37,7 @@ ms.workload: "On Demand"
 
 -   [Retention Policy](https://msdn.microsoft.com/library/mt637341.aspx#using-temporal-history-retention-policy-approach)  
 
- With each of these approaches, the logic for migrating or cleaning history data is based on the column that corresponds to end of period in the current table. The end of period value for each row determines the moment when the row version becomes “closed”, i.e. when it lands in the history table. For example, the condition `SysEndTime < DATEADD (DAYS, -30, SYSUTCDATETIME ())` specifies that historical data older than one month needs to be removed or moved out from the history table.  
+ With each of these approaches, the logic for migrating or cleaning history data is based on the column that corresponds to end of period in the current table. The end of period value for each row determines the moment when the row version becomes "closed", i.e. when it lands in the history table. For example, the condition `SysEndTime < DATEADD (DAYS, -30, SYSUTCDATETIME ())` specifies that historical data older than one month needs to be removed or moved out from the history table.  
   
 > **NOTE:**  The examples in this topic use this [Temporal Table example](creating-a-system-versioned-temporal-table.md).  
   
@@ -51,7 +45,7 @@ ms.workload: "On Demand"
   
 > **NOTE:**  Using the Stretch Database approach only applies to [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] and does not apply to [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
   
- [Stretch Database](../../sql-server/stretch-database/stretch-database.md) in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] migrates your historical data transparently to Azure. For additional security, you can encrypt data in motion using SQL Server's [Always Encrypted](https://msdnstage.redmond.corp.microsoft.com/library/mt163865.aspx) feature. Additionally, you can use [Row-Level Security](../../relational-databases/security/row-level-security.md) and other advanced SQL Server security features with Temporal and Stretch Database to protect your data.  
+ [Stretch Database](../../sql-server/stretch-database/stretch-database.md) in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] migrates your historical data transparently to Azure. For additional security, you can encrypt data in motion using SQL Server's [Always Encrypted](https://msdn.microsoft.com/library/mt163865.aspx) feature. Additionally, you can use [Row-Level Security](../../relational-databases/security/row-level-security.md) and other advanced SQL Server security features with Temporal and Stretch Database to protect your data.  
   
  Using the Stretch Database approach, you can stretch some or all of your temporal history tables to Azure and SQL Server will silently move historical data to Azure. Stretch-enabling a history table does not change how you interact with the temporal table in terms of data modification and temporal querying.  
   
@@ -108,7 +102,7 @@ SET (REMOTE_DATA_ARCHIVE = ON (MIGRATION_STATE = OUTBOUND));
 ```  
   
 ### Using Transact-SQL to stretch a portion of the history table  
- To stretch only a portion of the history table, you start by creating an [inline predicate function](../../sql-server/stretch-database/select-rows-to-migrate-by-using-a-filter-function-stretch-database.md). For this example, let’s assume that you configured inline predicate function for the first time on December 1, 2015 and want to stretch to Azure all history date older than November 1, 2015. To accomplish this, start by creating the following function:  
+ To stretch only a portion of the history table, you start by creating an [inline predicate function](../../sql-server/stretch-database/select-rows-to-migrate-by-using-a-filter-function-stretch-database.md). For this example, let's assume that you configured inline predicate function for the first time on December 1, 2015 and want to stretch to Azure all history date older than November 1, 2015. To accomplish this, start by creating the following function:  
   
 ```  
 CREATE FUNCTION dbo.fn_StretchBySystemEndTime20151101(@systemEndTime datetime2)   
@@ -174,7 +168,7 @@ COMMIT ;
   
 -   Recurring partition maintenance tasks  
   
- For the illustration, let’s assume that we want to keep historical data for 6 months and that we want to keep every month of data in a separate partition. Also, let’s assume that we activated system-versioning in September of 2015.  
+ For the illustration, let's assume that we want to keep historical data for 6 months and that we want to keep every month of data in a separate partition. Also, let's assume that we activated system-versioning in September of 2015.  
   
  A partitioning configuration task creates the initial partitioning configuration for the history table. For this example, we would create the same number partitions as the size of sliding window, in months, plus one additional empty partition pre-prepared (explained below). This configuration  ensures that the system will be able to store new data correctly when we start the recurring partition maintenance task for the first time and guarantees that we never split partitions with data to avoid expensive data movements. You should perform this task using Transact-SQL using the example script below.  
   
@@ -184,7 +178,7 @@ COMMIT ;
   
 > **NOTE:** See Performance considerations with table partitioning below for the performance implications of using RANGE LEFT versus RANGE RIGHT when configuring partitioning.  
   
- Note that first and last partition are “open” on lower and upper boundaries respectively to ensure that every new row has destination partition regardless of the value in partitioning column.   
+ Note that first and last partition are "open" on lower and upper boundaries respectively to ensure that every new row has destination partition regardless of the value in partitioning column.   
 As time goes by, new rows in history table will land in higher partitions. When 6th partition gets filled up, we will have reached the targeted retention period. This is the moment to start the recurring partition maintenance task for the first time (it needs to be scheduled to run periodically, once per month in this example).  
   
  The following picture illustrates the recurring partition maintenance tasks (see detailed steps below).  
@@ -333,7 +327,7 @@ COMMIT TRANSACTION
 ### Performance considerations with table partitioning  
  It is important to perform the MERGE and SPLIT RANGE operations to avoid any data movement as data movement can incur significant performance overhead. For more information, see [Modify a Partition Function](../../relational-databases/partitions/modify-a-partition-function.md).You accomplish this by using RANGE LEFT rather than RANGE RIGHT when you [CREATE PARTITION FUNCTION &#40;Transact-SQL&#41;](../../t-sql/statements/create-partition-function-transact-sql.md).  
   
- Let’s first visually explain meaning of the  RANGE LEFT and RANGE RIGHT options:  
+ Let's first visually explain meaning of the  RANGE LEFT and RANGE RIGHT options:  
   
  ![Partitioning3](../../relational-databases/tables/media/partitioning3.png "Partitioning3")  
   
@@ -341,7 +335,7 @@ COMMIT TRANSACTION
   
  In sliding window scenario, we always remove lowest partition boundary.  
   
--   RANGE LEFT case: In RANGE LEFT case, the lowest partition boundary belongs to partition 1, which is empty (after partition switch out), so MERGE RANGE won’t incur any data movement.  
+-   RANGE LEFT case: In RANGE LEFT case, the lowest partition boundary belongs to partition 1, which is empty (after partition switch out), so MERGE RANGE won't incur any data movement.  
   
 -   RANGE RIGHT case: In RANGE RIGHT case, the lowest partition boundary belongs to partition 2, which is not empty as we assumed that partition 1 was emptied by switch out. In this case MERGE RANGE will incur data movement (data from partition 2 will be moved to partition 1). To avoid this, RANGE RIGHT in the sliding window scenario needs to have partition 1, which is always empty. This means that if we use RANGE RIGHT, we should create and maintain one additional partition compared to RANGE LEFT case.  
   
@@ -411,7 +405,14 @@ EXECUTE sp_executesql
 IF @historyTableName IS NULL OR @historyTableSchema IS NULL OR @periodColumnName IS NULL  
     THROW 50010, 'History table cannot be found. Either specified table is not system-versioned temporal or you have provided incorrect argument values.', 1  
   
-/*Generate 3 statements that will run inside a transaction: SET SYSTEM_VERSIONING = OFF, DELETE FROM history_table, SET SYSTEM_VERSIONING = ON */  
+/*Generate 3 statements that will run inside a transaction:
+  (1) SET SYSTEM_VERSIONING = OFF,
+  (2) DELETE FROM history_table,
+  (3) SET SYSTEM_VERSIONING = ON
+  On SQL Server 2016, it is critical that (1) and (2) run in separate EXEC statements, or SQL Server will generate the following error: 
+  Msg 13560, Level 16, State 1, Line XXX
+  Cannot delete rows from a temporal history table '<database_name>.<history_table_schema_name>.<history_table_name>'.
+*/  
 SET @disableVersioningScript =  @disableVersioningScript + 'ALTER TABLE [' + @temporalTableSchema + '].[' + @temporalTableName + '] SET (SYSTEM_VERSIONING = OFF)'  
 SET @deleteHistoryDataScript =  @deleteHistoryDataScript + ' DELETE FROM  [' + @historyTableSchema + '].[' + @historyTableName + ']   
      WHERE ['+ @periodColumnName + '] < ' + '''' + convert(varchar(128), @cleanupOlderThanDate, 126) +  ''''   
@@ -494,7 +495,7 @@ The cleanup task for the clustered columnstore removes entire row groups at once
 
 Excellent data compression and efficient retention cleanup makes clustered columnstore index a perfect choice for scenarios when your workload rapidly generates high amount of historical data. That pattern is typical for intensive transactional processing workloads that use temporal tables for change tracking and auditing, trend analysis, or IoT data ingestion.
 
-Please check [Manage historical data in Temporal Tables with retention policy](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-temporal-tables-retention-policy) for more details.
+Please check [Manage historical data in Temporal Tables with retention policy](https://docs.microsoft.com/azure/sql-database/sql-database-temporal-tables-retention-policy) for more details.
 
 ## See Also  
  [Temporal Tables](../../relational-databases/tables/temporal-tables.md)   

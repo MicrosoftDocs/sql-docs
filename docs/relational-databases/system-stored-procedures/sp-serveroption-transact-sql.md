@@ -2,15 +2,10 @@
 title: "sp_serveroption (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "09/11/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "database-engine"
-ms.service: ""
-ms.component: "system-stored-procedures"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: system-objects
 ms.topic: "language-reference"
 f1_keywords: 
   - "sp_serveroption_TSQL"
@@ -21,11 +16,9 @@ helpviewer_keywords:
   - "7343 (Database Engine error)"
   - "sp_serveroption"
 ms.assetid: 47d04a2b-dbf0-4f15-bd9b-81a2efc48131
-caps.latest.revision: 40
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "craigg"
-ms.workload: "On Demand"
+author: stevestein
+ms.author: sstein
+manager: craigg
 ---
 # sp_serveroption (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,10 +37,10 @@ sp_serveroption [@server = ] 'server'
 ```  
   
 ## Arguments  
- [ **@server =** ] **'***server***'**  
+ [ **@server =** ] **'**_server_**'**  
  Is the name of the server for which to set the option. *server* is **sysname**, with no default.  
   
- [ **@optname =** ] **'***option_name***'**  
+ [ **@optname =** ] **'**_option_name_**'**  
  Is the option to set for the specified server. *option_name* is **varchar(**35**)**, with no default. *option_name* can be any of the following values.  
   
 |Value|Description|  
@@ -67,7 +60,7 @@ sp_serveroption [@server = ] 'server'
 |**use remote collation**|Determines whether the collation of a remote column or of a local server will be used.<br /><br /> If **true**, the collation of remote columns is used for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] data sources, and the collation specified in **collation name** is used for non-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] data sources.<br /><br /> If **false**, distributed queries will always use the default collation of the local server, while **collation name** and the collation of remote columns are ignored. The default is **false**. (The **false** value is compatible with the collation semantics used in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0.)|  
 |**remote proc transaction promotion**|Use this option to protect the actions of a server-to-server procedure through a [!INCLUDE[msCoName](../../includes/msconame-md.md)] Distributed Transaction Coordinator (MS DTC) transaction. When this option is TRUE (or ON) calling a remote stored procedure starts a distributed transaction and enlists the transaction with MS DTC. The instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] making the remote stored procedure call is the transaction originator and controls the completion of the transaction. When a subsequent COMMIT TRANSACTION or ROLLBACK TRANSACTION statement is issued for the connection, the controlling instance requests that MS DTC manage the completion of the distributed transaction across the computers involved.<br /><br /> After a [!INCLUDE[tsql](../../includes/tsql-md.md)] distributed transaction has been started, remote stored procedure calls can be made to other instances of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] that have been defined as linked servers. The linked servers are all enlisted in the [!INCLUDE[tsql](../../includes/tsql-md.md)] distributed transaction, and MS DTC ensures that the transaction is completed against each linked server.<br /><br /> If this option is set to FALSE (or OFF), a local transaction will not be promoted to a distributed transaction while calling a remote procedure call on a linked server.<br /><br /> If before making a server-to-server procedure call, the transaction is already a distributed transaction, then this option does not have effect. The procedure call against linked server will run under the same distributed transaction.<br /><br /> If before making a server-to-server procedure call, there is no transaction active in the connection, then this option does not have effect. The procedure then runs against linked server without active transactions.<br /><br /> The default value for this option is TRUE (or ON).|  
   
- [ **@optvalue =**] **'***option_value***'**  
+ [ **@optvalue =**] **'**_option_value_**'**  
  Specifies whether or not the *option_name* should be enabled (**TRUE** or **on**) or disabled (**FALSE** or **off**). *option_value* is **varchar(**10**)**, with no default.  
   
  *option_value* may be a nonnegative integer for the **connect timeout** and **query timeout** options. For the **collation name** option, *option_value* may be a collation name or NULL.  

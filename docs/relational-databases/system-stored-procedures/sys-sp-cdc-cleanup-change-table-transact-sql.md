@@ -2,15 +2,10 @@
 title: "sys.sp_cdc_cleanup_change_table (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "database-engine"
-ms.service: ""
-ms.component: "system-stored-procedures"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: system-objects
 ms.topic: "language-reference"
 f1_keywords: 
   - "sp_cdc_cleanup_change_table"
@@ -23,11 +18,9 @@ helpviewer_keywords:
   - "sys.sp_cdc_cleanup_change_tables"
   - "sp_cdc_cleanup_change_tables"
 ms.assetid: 02295794-397d-4445-a3e3-971b25e7068d
-caps.latest.revision: 28
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "craigg"
-ms.workload: "Inactive"
+author: rothja
+ms.author: jroth
+manager: craigg
 ---
 # sys.sp_cdc_cleanup_change_table (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

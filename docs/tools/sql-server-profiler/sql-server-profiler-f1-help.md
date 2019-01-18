@@ -2,15 +2,10 @@
 title: "SQL Server Profiler dialog boxes | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/07/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "sql-tools"
-ms.service: ""
-ms.component: "sql-server-profiler"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: profiler
 ms.topic: "reference"
 f1_keywords: 
   - "sql13.pro.traceproperties.general.f1;"
@@ -44,11 +39,9 @@ helpviewer_keywords:
   - "Replay Configuration dialog box"
   - "Find dialog box"
 ms.assetid: e57b9160-4b78-4353-abb2-bfdbdf523d7a
-caps.latest.revision: 23
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-ms.workload: "Inactive"
+author: "stevestein"
+ms.author: "sstein"
+manager: craigg
 ---
 # SQL Server Profiler dialog boxes
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -79,7 +72,7 @@ Use the **Events Selection** tab of the **Trace Properties** dialog box to view 
 |---|---
 |**Events** column|Specify traced events by selecting or clearing the check box in the event column. **Events** are organized by event category. Event classes specified in the template are automatically selected. For more information, see [SQL Server Event Class Reference](../../relational-databases/event-classes/sql-server-event-class-reference.md).  
 |Data columns|Specify traced data columns by checking the box that corresponds with the event and the data column you need. All relevant event columns are checked by default for each event included in the trace.  
-|Filters|Specify filters by clicking the data column heading and entering the filter criteria. Filtered data columns are indicated by a filter icon to the left of the column label in the **Edit Filter** dialog box. For more information, see [SQL Server Profiler - Edit Filter](http://msdn.microsoft.com/library/a589eff5-6ec6-4f6e-94b8-831658257f14).  
+|Filters|Specify filters by clicking the data column heading and entering the filter criteria. Filtered data columns are indicated by a filter icon to the left of the column label in the **Edit Filter** dialog box. For more information, see [SQL Server Profiler - Edit Filter](https://msdn.microsoft.com/library/a589eff5-6ec6-4f6e-94b8-831658257f14).  
 |**Show all events**|Show all available events. By default, only rows in the **Events Selection** grid that are selected display. Uncheck this box to hide all unselected events in the **Events Selection** grid.  
 |**Show all columns**|Show all available data columns. By default, only data columns that are selected display. Uncheck this box to hide all unselected data columns in the **Events Selection** grid.  
 |**Column Filters**|Launches the **Edit Filter** dialog box. You can use this dialog to edit data column filters.  

@@ -1,31 +1,20 @@
 ---
 title: "Reporting Services Extension Library | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
+ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
-ms.service: ""
-ms.component: "extensions"
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
+ms.technology: extensions
 
 
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-applies_to: 
-  - "SQL Server 2016 Preview"
+ms.topic: reference
 helpviewer_keywords: 
   - "namespaces [Reporting Services]"
   - "Reporting Services, extending"
   - "extensions [Reporting Services], library"
   - "library [Reporting Services]"
 ms.assetid: e8eff470-64d6-41c3-b98b-5ec916c121c3
-caps.latest.revision: 33
-author: "markingmyname"
-ms.author: "maghan"
-manager: "kfile"
-ms.workload: "Inactive"
+author: markingmyname
+ms.author: maghan
 ---
 # Reporting Services Extension Library
   The Reporting Services Extension Library is a set of classes, interfaces, and value types that are included in [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. This library provides access to system functionality and is designed to be the foundation on which [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] applications can be used to extend [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] components.  

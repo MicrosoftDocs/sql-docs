@@ -1,31 +1,14 @@
 ---
 title: "Monitor Analysis Services with SQL Server Extended Events | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/29/2017"
-ms.prod: analysis-services
-ms.prod_service: "analysis-services"
-ms.service: ""
-ms.component: ""
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
-  
-ms.component: multidimensional-tabular
-ms.component: data-mining
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "XEvents"
-  - "Sql13.ssms.XeASNewEventSession.General.f1"
-  - "Sql13.ssms.XeASNewEventSession.Events.f1"
-  - "Sql13.ssms.XeASNewEventSession.Targets.f1"
-  - "Sql13.ssms.XeASNewEventSession.Advanced.f1"
-ms.assetid: b57cc2fe-52dc-4fa9-8554-5a866e25c6d7
-caps.latest.revision: 11
-author: "Minewiskan"
-ms.author: "owend"
-manager: "kfile"
-ms.workload: "On Demand"
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom:
+ms.topic: conceptual
+ms.author: owend
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
 ---
 # Monitor Analysis Services with SQL Server Extended Events
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
@@ -38,11 +21,6 @@ ms.workload: "On Demand"
 > [!NOTE]  
 >  Watch this [quick video introduction](https://www.youtube.com/watch?v=ja2mOHWRVC0&index=1&list=PLv2BtOtLblH1YvzQ5YnjfQFr_oKEvMk19) or read the [supporting blog post](http://blogs.msdn.com/b/analysisservices/archive/2015/09/22/using-extended-events-with-sql-server-analysis-services-2016-cpt-2-3.aspx) to learn more about xEvents for Analysis Services in SQL Server 2016.  
   
-##  <a name="bkmk_top"></a> In this topic  
-  
--   [Use Management Studio to Configure Analysis Services](#bkmk_ssas_extended_events_ssms)  
-  
--   [XMLA Script to Start Extended Events in Analysis Services](#bkmk_script_start)  
   
 ##  <a name="bkmk_ssas_extended_events_ssms"></a> Use Management Studio to Configure Analysis Services  
  For both tabular and multidimensional instances, Management Studio provides a new Management folder that contains user-initiated xEvent sessions. You can run multiple sessions at once. However, in the current implementation, the [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Extended Events user interface does not support updating or replaying an existing session.  
@@ -91,18 +69,18 @@ ms.workload: "On Demand"
  Extended Event tracing is enabled using a similar XMLA create object script command as shown below:  
   
 ```  
-<Execute …>  
+<Execute ...>  
    <Command>  
-      <Batch …>  
-         <Create …>  
+      <Batch ...>  
+         <Create ...>  
             <ObjectDefinition>  
                <Trace>  
                   <ID>trace_id</ID>  
                   <Name>trace_name</Name>  
                   <ddl300_300:XEvent>  
-                     <event_session …>  
+                     <event_session ...>  
                         <event package="AS" name="AS_event">  
-                           <action package="PACKAGE0" …/>  
+                           <action package="PACKAGE0" .../>  
                         </event>  
                         <target package="PACKAGE0" name="asynchronous_file_target">  
                            <parameter name="filename" value="data_filename.xel"/>  
@@ -129,7 +107,7 @@ ms.workload: "On Demand"
  The name given to this trace; usually a human readable definition of the trace. It is a common practice to use the *trace_id* value as the name.  
   
  *AS_event*  
- The Analysis Services event to be exposed. See [Analysis Services Trace Events](../../analysis-services/trace-events/analysis-services-trace-events.md) for names of the events.  
+ The Analysis Services event to be exposed. See [Analysis Services Trace Events](https://docs.microsoft.com/bi-reference/trace-events/analysis-services-trace-events) for names of the events.  
   
  *data_filename*  
  The name of the file that contains the events data. This name is suffixed with a time stamp to avoid data overwriting if the trace is sent over and over.  
@@ -137,9 +115,6 @@ ms.workload: "On Demand"
  *metadata_filename*  
  The name of the file that contains the events metadata. This name is suffixed with a time stamp to avoid data overwriting if the trace is sent over and over.  
   
-||  
-|-|  
-|![Arrow icon used with Back to Top link](../../analysis-services/instances/media/uparrow16x16.gif "Arrow icon used with Back to Top link") [In this topic](#bkmk_top)|  
   
 ##  <a name="bkmk_script_stop"></a> XMLA Script to Stop Extended Events in Analysis Services  
  To stop the Extended Events tracing object you need to delete that object using a similar XMLA delete object script command as shown below:  
@@ -147,8 +122,8 @@ ms.workload: "On Demand"
 ```  
 <Execute xmlns="urn:schemas-microsoft-com:xml-analysis">  
    <Command>  
-      <Batch …>  
-         <Delete …>  
+      <Batch ...>  
+         <Delete ...>  
             <Object>  
                <TraceID>trace_id</TraceID>  
             </Object>  
@@ -165,9 +140,6 @@ ms.workload: "On Demand"
  *trace_id*  
  Defines the unique identifier for the trace to be deleted.  
   
-||  
-|-|  
-|![Arrow icon used with Back to Top link](../../analysis-services/instances/media/uparrow16x16.gif "Arrow icon used with Back to Top link") [In this topic](#bkmk_top)|  
   
 ## See Also  
  [Extended Events](../../relational-databases/extended-events/extended-events.md)  

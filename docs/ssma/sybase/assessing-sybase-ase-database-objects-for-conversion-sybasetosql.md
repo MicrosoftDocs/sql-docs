@@ -2,31 +2,20 @@
 title: "Assessing SAP ASE Database Objects for Conversion (SybaseToSQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "12/01/2017"
-ms.prod: "sql-non-specified"
-ms.prod_service: "sql-tools"
-ms.service: ""
-ms.component: "ssma-sybase"
+ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "sql-ssma"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to: 
-  - "Azure SQL Database"
-  - "SQL Server"
+ms.technology: ssma
+ms.topic: conceptual
 ms.assetid: eb996b7c-1eef-4f73-b5e6-2fa6faf7336c
-caps.latest.revision: 7
 author: "Shamikg"
 ms.author: "Shamikg"
-manager: "jhubbard"
-ms.workload: "Inactive"
+manager: craigg
 ---
 # Assessing SAP ASE database objects for conversion (SybaseToSQL)
-Before you load objects and migrate data to [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] or Azure SQL, you should determine how complexity of the migration and how much time it should take. SSMA can create an assessment report that shows the percentage of objects and procedures that will successfully be converted to [!INCLUDE[tsql](../../includes/tsql_md.md)]. SSMA also lets you view the specific issues that can cause conversion failures.  
+Before you load objects and migrate data to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] or Azure SQL, you should determine how complexity of the migration and how much time it should take. SSMA can create an assessment report that shows the percentage of objects and procedures that will successfully be converted to [!INCLUDE[tsql](../../includes/tsql-md.md)]. SSMA also lets you view the specific issues that can cause conversion failures.  
   
 ## Create assessment reports  
-When creating this assessment report, SSMA converts the selected SAP Adaptive Server Enterprise (ASE) database objects to [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] or Azure SQL syntax, and then shows the results.  
+When creating this assessment report, SSMA converts the selected SAP Adaptive Server Enterprise (ASE) database objects to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] or Azure SQL syntax, and then shows the results.  
   
 **To create an assessment report**  
   
@@ -40,7 +29,7 @@ When creating this assessment report, SSMA converts the selected SAP Adaptive Se
   
     SSMA shows progress in the status bar at the bottom of the window. If the Output pane is visible, you will also see any related messages.  
   
-    When the assessment is complete, the [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Migration Assistant for Sybase : Assessment Report window will appear.  
+    When the assessment is complete, the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Migration Assistant for Sybase : Assessment Report window will appear.  
   
 ## Use assessment reports  
 The Assessment Report window contains three panes:  
@@ -77,7 +66,7 @@ The **Conversion Statistics panes** show the conversion statistics. If the perce
   
     -   In ASE, you can alter the ASE object to remove or revise problematic code. To load the updated code into SSMA, you will have to update the metadata. For more information, see [Connecting to Sybase ASE &#40;SybaseToSQL&#41;](../../ssma/sybase/connecting-to-sybase-ase-sybasetosql.md).  
   
-    -   You can exclude the object from migration. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] or Azure SQL Metadata Explorer and Sybase Metadata Explorer, clear the check box next to the item before you load the objects into [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] or Azure SQL and migrate data from ASE.
+    -   You can exclude the object from migration. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] or Azure SQL Metadata Explorer and Sybase Metadata Explorer, clear the check box next to the item before you load the objects into [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] or Azure SQL and migrate data from ASE.
   
 ## Next steps  
 [Converting SAP ASE Database Objects &#40;SybaseToSQL&#41;](../../ssma/sybase/converting-sybase-ase-database-objects-sybasetosql.md)  

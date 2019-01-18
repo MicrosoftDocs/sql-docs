@@ -2,15 +2,10 @@
 title: "sp_tables_ex (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "database-engine"
-ms.service: ""
-ms.component: "system-stored-procedures"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: system-objects
 ms.topic: "language-reference"
 f1_keywords: 
   - "sp_tables_ex"
@@ -20,11 +15,9 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_tables_ex"
 ms.assetid: 33755c33-7e1e-4ef7-af14-a9cebb1e2ed4
-caps.latest.revision: 33
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "craigg"
-ms.workload: "Inactive"
+author: stevestein
+ms.author: sstein
+manager: craigg
 ---
 # sp_tables_ex (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,19 +39,19 @@ sp_tables_ex [ @table_server = ] 'table_server'
 ```  
   
 ## Arguments  
- [ **@table_server=** ] **'***table_server***'**  
+ [ **@table_server=** ] **'**_table_server_**'**  
  Is the name of the linked server for which to return table information. *table_server* is **sysname**, with no default.  
   
- [ **,** [ **@table_name=** ] **'***table_name***'**]  
+ [ **,** [ **@table_name=** ] **'**_table_name_**'**]  
  Is the name of the table for which to return data type information. *table_name*is **sysname**, with a default of NULL.  
   
- [ **@table_schema=** ] **'***table_schema***'**]  
+ [ **@table_schema=** ] **'**_table_schema_**'**]  
  Is the table schema. *table_schema*is **sysname**, with a default of NULL.  
   
- [ **@table_catalog=** ] **'***table_catalog***'**  
+ [ **@table_catalog=** ] **'**_table_catalog_**'**  
  Is the name of the database in which the specified *table_name* resides. *table_catalog* is **sysname**, with a default of NULL.  
   
- [ **@table_type=** ] **'***table_type***'**  
+ [ **@table_type=** ] **'**_table_type_**'**  
  Is the type of the table to return. *table_type* is **sysname**, with a default of NULL, and can have one of the following values.  
   
 |Value|Description|  
@@ -72,7 +65,7 @@ sp_tables_ex [ @table_server = ] 'table_server'
 |**TABLE**|Name of a user table.|  
 |**VIEW**|Name of a view.|  
   
- [ **@fUsePattern=** ] **'***fUsePattern***'**  
+ [ **@fUsePattern=** ] **'**_fUsePattern_**'**  
  Determines whether the characters **_**, **%**, **[**, and **]** are interpreted as wildcard characters. Valid values are 0 (pattern matching is off) and 1 (pattern matching is on). *fUsePattern* is **bit**, with a default of 1.  
   
 ## Return Code Values  
@@ -82,7 +75,7 @@ sp_tables_ex [ @table_server = ] 'table_server'
   
 |Column name|Data type|Description|  
 |-----------------|---------------|-----------------|  
-|**TABLE_CAT**|**sysname**|Table qualifier name. Various DBMS products support three-part naming for tables (*qualifier***.***owner***.***name*). In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], this column represents the database name. In some other products, it represents the server name of the database environment of the table. This field can be NULL.|  
+|**TABLE_CAT**|**sysname**|Table qualifier name. Various DBMS products support three-part naming for tables (_qualifier_**.**_owner_**.**_name_). In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], this column represents the database name. In some other products, it represents the server name of the database environment of the table. This field can be NULL.|  
 |**TABLE_SCHEM**|**sysname**|Table owner name. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], this column represents the name of the database user who created the table. This field always returns a value.|  
 |**TABLE_NAME**|**sysname**|Table name. This field always returns a value.|  
 |**TABLE_TYPE**|**varchar(32)**|Table, system table, or view.|  

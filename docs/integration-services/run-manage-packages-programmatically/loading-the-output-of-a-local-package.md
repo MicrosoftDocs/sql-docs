@@ -2,18 +2,11 @@
 title: "Loading the Output of a Local Package | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/17/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "integration-services"
-ms.service: ""
-ms.component: "run-manage-packages-programmatically"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-
-ms.tgt_pltfrm: ""
+ms.technology: integration-services
 ms.topic: "reference"
-applies_to: 
-  - "SQL Server 2016 Preview"
 dev_langs: 
   - "VB"
   - "CSharp"
@@ -21,17 +14,18 @@ helpviewer_keywords:
   - "data flow [Integration Services], loading results"
   - "loading data flow results"
 ms.assetid: aba8ecb7-0dcf-40d0-a2a8-64da0da94b93
-caps.latest.revision: 66
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
-ms.workload: "Inactive"
+manager: craigg
 ---
 # Loading the Output of a Local Package
   Client applications can read the output of [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] packages when the output is saved to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] destinations by using [!INCLUDE[vstecado](../../includes/vstecado-md.md)], or when the output is saved to a flat file destination by using the classes in the **System.IO** namespace. However, a client application can also read the output of a package directly from memory, without the need for an intermediate step to persist the data. The key to this solution is the **Microsoft.SqlServer.Dts.DtsClient** namespace, which contains specialized implementations of the **IDbConnection**, **IDbCommand**, and **IDbDataParameter** interfaces from the **System.Data** namespace. The assembly Microsoft.SqlServer.Dts.DtsClient.dll is installed by default in **%ProgramFiles%\Microsoft SQL Server\100\DTS\Binn**.  
-  
+
+> [!IMPORTANT]
+> The procedure described in this article, which uses the `DtsClient` library, works only for packages deployed with the package deployment model (that is, with the `/SQL`, `/DTS`, or `/File` option). This procedure does not work for packages deployed with the server deployment model (that is, with the `/ISServer` option). To consume the output of a local package deployed with the server deployment model (that is, with the `/ISServer` option), use the [Data Streaming Destination](../data-flow/data-streaming-destination.md) instead of the procedure described in this article.
+
 > [!NOTE]  
->  The procedure described in this topic requires that the DelayValidation property of the Data Flow task and of any parent objects be set to its default value of **False**.  
+> The procedure described in this topic requires that the DelayValidation property of the Data Flow task and of any parent objects be set to its default value of **False**.
   
 ## Description  
  This procedure demonstrates how to develop a client application in managed code that loads the output of a package with a DataReader destination directly from memory. The steps summarized here are demonstrated in the code sample that follows.  

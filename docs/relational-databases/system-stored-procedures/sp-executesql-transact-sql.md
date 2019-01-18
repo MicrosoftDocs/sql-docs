@@ -2,15 +2,10 @@
 title: "sp_executesql (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/16/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
-ms.service: ""
-ms.component: "system-stored-procedures"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: system-objects
 ms.topic: "language-reference"
 f1_keywords: 
   - "sp_executesql"
@@ -21,14 +16,16 @@ helpviewer_keywords:
   - "sp_executesql"
   - "dynamic SQL"
 ms.assetid: a8d68d72-0f4d-4ecb-ae86-1235b962f646
-caps.latest.revision: 64
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "craigg"
-ms.workload: "Active"
+author: stevestein
+ms.author: sstein
+manager: craigg
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sp_executesql (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+
+  > [!div class="nextstepaction"]
+  > [Please share your feedback about the SQL Docs Table of Contents!](https://aka.ms/sqldocsurvey)
 
   Executes a [!INCLUDE[tsql](../../includes/tsql-md.md)] statement or batch that can be reused many times, or one that has been built dynamically. The [!INCLUDE[tsql](../../includes/tsql-md.md)] statement or batch can contain embedded parameters.  
   
@@ -50,19 +47,19 @@ sp_executesql [ @stmt = ] statement
 ```  
   
 ## Arguments  
- [ @stmt= ] *statement*  
- Is a Unicode string that contains a [!INCLUDE[tsql](../../includes/tsql-md.md)] statement or batch. @stmt must be either a Unicode constant or a Unicode variable. More complex Unicode expressions, such as concatenating two strings with the + operator, are not allowed. Character constants are not allowed. If a Unicode constant is specified, it must be prefixed with an **N**. For example, the Unicode constant **N'sp_who'** is valid, but the character constant **'sp_who'** is not. The size of the string is limited only by available database server memory. On 64-bit servers, the size of the string is limited to 2 GB, the maximum size of **nvarchar(max)**.  
+ [ \@stmt= ] *statement*  
+ Is a Unicode string that contains a [!INCLUDE[tsql](../../includes/tsql-md.md)] statement or batch. \@stmt must be either a Unicode constant or a Unicode variable. More complex Unicode expressions, such as concatenating two strings with the + operator, are not allowed. Character constants are not allowed. If a Unicode constant is specified, it must be prefixed with an **N**. For example, the Unicode constant **N'sp_who'** is valid, but the character constant **'sp_who'** is not. The size of the string is limited only by available database server memory. On 64-bit servers, the size of the string is limited to 2 GB, the maximum size of **nvarchar(max)**.  
   
 > [!NOTE]  
->  @stmt can contain parameters having the same form as a variable name, for example: `N'SELECT * FROM HumanResources.Employee WHERE EmployeeID = @IDParameter'`  
+>  \@stmt can contain parameters having the same form as a variable name, for example: `N'SELECT * FROM HumanResources.Employee WHERE EmployeeID = @IDParameter'`  
   
- Each parameter included in @stmt must have a corresponding entry in both the @params parameter definition list and the parameter values list.  
+ Each parameter included in \@stmt must have a corresponding entry in both the \@params parameter definition list and the parameter values list.  
   
- [ @params= ] N'@*parameter_name**data_type* [ ,... *n* ] '  
- Is one string that contains the definitions of all parameters that have been embedded in @stmt. The string must be either a Unicode constant or a Unicode variable. Each parameter definition consists of a parameter name and a data type. *n* is a placeholder that indicates additional parameter definitions. Every parameter specified in @stmtmust be defined in @params. If the [!INCLUDE[tsql](../../includes/tsql-md.md)] statement or batch in @stmt does not contain parameters, @params is not required. The default value for this parameter is NULL.  
+ [ \@params= ] N'\@*parameter_name**data_type* [ ,... *n* ] '  
+ Is one string that contains the definitions of all parameters that have been embedded in \@stmt. The string must be either a Unicode constant or a Unicode variable. Each parameter definition consists of a parameter name and a data type. *n* is a placeholder that indicates additional parameter definitions. Every parameter specified in \@stmtmust be defined in \@params. If the [!INCLUDE[tsql](../../includes/tsql-md.md)] statement or batch in \@stmt does not contain parameters, \@params is not required. The default value for this parameter is NULL.  
   
- [ @param1= ] '*value1*'  
- Is a value for the first parameter that is defined in the parameter string. The value can be a Unicode constant or a Unicode variable. There must be a parameter value supplied for every parameter included in @stmt. The values are not required when the [!INCLUDE[tsql](../../includes/tsql-md.md)] statement or batch in @stmt has no parameters.  
+ [ \@param1= ] '*value1*'  
+ Is a value for the first parameter that is defined in the parameter string. The value can be a Unicode constant or a Unicode variable. There must be a parameter value supplied for every parameter included in \@stmt. The values are not required when the [!INCLUDE[tsql](../../includes/tsql-md.md)] statement or batch in \@stmt has no parameters.  
   
  [ OUT | OUTPUT ]  
  Indicates that the parameter is an output parameter. **text**, **ntext**, and **image** parameters can be used as OUTPUT parameters, unless the procedure is a common language runtime (CLR) procedure. An output parameter that uses the OUTPUT keyword can be a cursor placeholder, unless the procedure is a CLR procedure.  
@@ -79,7 +76,7 @@ sp_executesql [ @stmt = ] statement
 ## Remarks  
  sp_executesql parameters must be entered in the specific order as described in the "Syntax" section earlier in this topic. If the parameters are entered out of order, an error message will occur.  
   
- sp_executesql has the same behavior as EXECUTE with regard to batches, the scope of names, and database context. The [!INCLUDE[tsql](../../includes/tsql-md.md)] statement or batch in the sp_executesql @stmt parameter is not compiled until the sp_executesql statement is executed. The contents of @stmt are then compiled and executed as an execution plan separate from the execution plan of the batch that called sp_executesql. The sp_executesql batch cannot reference variables declared in the batch that calls sp_executesql. Local cursors or variables in the sp_executesql batch are not visible to the batch that calls sp_executesql. Changes in database context last only to the end of the sp_executesql statement.  
+ sp_executesql has the same behavior as EXECUTE with regard to batches, the scope of names, and database context. The [!INCLUDE[tsql](../../includes/tsql-md.md)] statement or batch in the sp_executesql \@stmt parameter is not compiled until the sp_executesql statement is executed. The contents of \@stmt are then compiled and executed as an execution plan separate from the execution plan of the batch that called sp_executesql. The sp_executesql batch cannot reference variables declared in the batch that calls sp_executesql. Local cursors or variables in the sp_executesql batch are not visible to the batch that calls sp_executesql. Changes in database context last only to the end of the sp_executesql statement.  
   
  sp_executesql can be used instead of stored procedures to execute a [!INCLUDE[tsql](../../includes/tsql-md.md)] statement many times when the change in parameter values to the statement is the only variation. Because the [!INCLUDE[tsql](../../includes/tsql-md.md)] statement itself remains constant and only the parameter values change, the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] query optimizer is likely to reuse the execution plan it generates for the first execution.  
   
@@ -250,7 +247,7 @@ EXECUTE sp_executesql
           @level = 109;  
 ```  
   
- For additional examples, see [sp_executesql (Transact-SQL)](http://msdn.microsoft.com/library/ms188001.aspx).  
+ For additional examples, see [sp_executesql (Transact-SQL)](https://msdn.microsoft.com/library/ms188001.aspx).  
   
 ## See Also  
  [EXECUTE &#40;Transact-SQL&#41;](../../t-sql/language-elements/execute-transact-sql.md)   

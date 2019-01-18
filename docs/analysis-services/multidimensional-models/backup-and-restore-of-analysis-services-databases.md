@@ -1,36 +1,14 @@
 ---
 title: "Backup and Restore of Analysis Services Databases | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: analysis-services
-ms.prod_service: "analysis-services"
-ms.service: ""
-ms.component: ""
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
-  
-ms.component: multidimensional-tabular
-ms.component: data-mining
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.asvs.ssmsimbi.Restore.f1"
-  - "sql13.asvs.ssmsimbi.Backup.f1"
-helpviewer_keywords: 
-  - "backing up databases [Analysis Services]"
-  - "encryption [Analysis Services]"
-  - "databases [Analysis Services], restoring"
-  - "cryptography [Analysis Services]"
-  - "databases [Analysis Services], backing up"
-  - "restoring databases [Analysis Services]"
-  - "recovery [Analysis Services]"
-ms.assetid: 947eebd2-3622-479e-8aa6-57c11836e4ec
-caps.latest.revision: 54
-author: "Minewiskan"
-ms.author: "owend"
-manager: "kfile"
-ms.workload: "On Demand"
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: multidimensional-models
+ms.topic: conceptual
+ms.author: owend
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
 ---
 # Backup and Restore of Analysis Services Databases
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -40,7 +18,7 @@ ms.workload: "On Demand"
   
  For a full backup that includes source data, you have to back up the database which contains detail data. Specifically, if you are using ROLAP or DirectQuery database storage, detail data is stored in an external SQL Server relational database that is distinct from the Analysis Services database. Otherwise, if all objects are tabular or multidimensional, the Analysis Services backup will include both the metadata and source data.  
   
- One clear benefit of automating backup is that the data snapshot will always be as up-to-date as the automated frequency of backup specifies. Automated schedulers ensure that backups are not forgotten. Restoring a database can also be automated, and can be a good way to replicate data, but be sure to back up the encryption key file on the instance you replicate to. The synchronization feature is dedicated to replication of [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] databases, but only for the data that is out of date. All of the features mentioned here can be implemented through the user interface, by way of XML/A commands or programmatically run through AMO. For more information about backup strategies, see [Backup Strategies with SQL Server 2005 Analysis Services](http://go.microsoft.com/fwlink/?LinkId=81888).  
+ One clear benefit of automating backup is that the data snapshot will always be as up-to-date as the automated frequency of backup specifies. Automated schedulers ensure that backups are not forgotten. Restoring a database can also be automated, and can be a good way to replicate data, but be sure to back up the encryption key file on the instance you replicate to. The synchronization feature is dedicated to replication of [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] databases, but only for the data that is out of date. All of the features mentioned here can be implemented through the user interface, by way of XML/A commands or programmatically run through AMO.
   
  This topic includes the following sections:  
   

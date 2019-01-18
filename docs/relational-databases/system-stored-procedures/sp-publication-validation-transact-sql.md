@@ -2,29 +2,20 @@
 title: "sp_publication_validation (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/16/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "database-engine"
-ms.service: ""
-ms.component: "system-stored-procedures"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
+ms.technology: replication
 ms.topic: "language-reference"
-applies_to: 
-  - "SQL Server"
 f1_keywords: 
   - "sp_publication_validation"
   - "sp_publication_validation_TSQL"
 helpviewer_keywords: 
   - "sp_publication_validation"
 ms.assetid: 06be2363-00c0-4936-97c1-7347f294a936
-caps.latest.revision: 34
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "craigg"
-ms.workload: "Inactive"
+author: stevestein
+ms.author: sstein
+manager: craigg
 ---
 # sp_publication_validation (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,7 +36,7 @@ sp_publication_validation [ @publication = ] 'publication'
 ```  
   
 ## Arguments  
- [**@publication=**] **'***publication'*  
+ [**@publication=**] **'**_publication'_  
  Is the name of the publication. *publication* is **sysname**, with no default.  
   
  [**@rowcount_only=**] *rowcount_only*  
@@ -69,8 +60,8 @@ sp_publication_validation [ @publication = ] 'publication'
  [ **@shutdown_agent=**] *shutdown_agent*  
  Is whether the Distribution Agent should shut down immediately upon completion of the validation. *shutdown_agent* is **bit**, with a default of **0**. If **0**, the replication agent does not shut down. If **1**, the replication agent shuts down after the last article is validated.  
   
- [ **@publisher** = ] **'***publisher***'**  
- Specifies a non-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Publisher. *publisher* is **sysname**, with a default of NULL.  
+ [ **@publisher** = ] **'**_publisher_**'**  
+ Specifies a non- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Publisher. *publisher* is **sysname**, with a default of NULL.  
   
 > [!NOTE]  
 >  *publisher* should not be used when requesting validation on a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Publisher.  

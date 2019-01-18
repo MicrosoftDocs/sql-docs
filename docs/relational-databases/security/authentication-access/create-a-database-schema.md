@@ -2,16 +2,11 @@
 title: "Create a Database Schema | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/05/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
-ms.service: ""
-ms.component: "security"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: security
+ms.topic: conceptual
 f1_keywords: 
   - "sql13.swb.schemas.general.f1"
 helpviewer_keywords: 
@@ -20,29 +15,14 @@ helpviewer_keywords:
   - "database schemas"
   - "schemas [SQL Server], creating"
 ms.assetid: ed2a5522-f4d2-4111-95a4-d3e1e5081739
-caps.latest.revision: 11
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "craigg"
-ms.workload: "Active"
+author: VanMSFT
+ms.author: vanto
+manager: craigg
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Create a Database Schema
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
   This topic describes how to create a schema in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../../includes/tsql-md.md)].  
-  
- **In This Topic**  
-  
--   **Before you begin:**  
-  
-     [Limitations and Restrictions](#Restrictions)  
-  
-     [Security](#Security)  
-  
--   **To create a schema, using:**  
-  
-     [SQL Server Management Studio](#SSMSProcedure)  
-  
-     [Transact-SQL](#TsqlProcedure)  
   
 ##  <a name="BeforeYouBegin"></a> Before You Begin  
   
@@ -75,9 +55,12 @@ ms.workload: "Active"
 5.  In the **Schema owner** box, enter the name of a database user or role to own the schema. Alternately, click **Search** to open the **Search Roles and Users** dialog box.  
   
 6.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
+
+> [!NOTE]
+> A dialog box will not appear if you are creating a Schema using SSMS against an **Azure SQL Database** or an **Azure SQL Data Warehouse**. You will need to run the Create Schema Template T-SQL Statement that is generated.
   
 ### Additional Options  
- The **Schema– New** dialog box also offers options on two additional pages: **Permissions** and **Extended Properties**.  
+ The **Schema- New** dialog box also offers options on two additional pages: **Permissions** and **Extended Properties**.  
   
 -   The **Permissions** page lists all possible securables and the permissions on those securables that can be granted to the login.  
   

@@ -2,24 +2,17 @@
 title: "Monitor and Enforce Best Practices by Using Policy-Based Management | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "database-engine"
-ms.service: ""
-ms.component: "performance-monitor"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: security
+ms.topic: conceptual
 helpviewer_keywords: 
   - "Best Practices [Database Engine]"
 ms.assetid: 46788407-187e-4b0b-bfe4-529af8d77c60
-caps.latest.revision: 27
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-ms.workload: "Inactive"
+author: VanMSFT
+ms.author: vanto
+manager: craigg
 ---
 # Monitor and Enforce Best Practices by Using Policy-Based Management
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -31,11 +24,11 @@ ms.workload: "Inactive"
 |Policy name|Best practice rule|  
 |-----------------|------------------------|  
 |Asymmetric Key Encryption Algorithm|[Asymmetric Keys Encryption Strength](../../relational-databases/policy-based-management/asymmetric-keys-encryption-strength.md)|  
-|Backup and Data File Location|[Backup Files Must Be on Separate Devices from the Database Files](http://msdn.microsoft.com/library/7039bebb-1f25-4cf3-81f1-393dfb78da12)|  
+|Backup and Data File Location|[Backup Files Must Be on Separate Devices from the Database Files](https://msdn.microsoft.com/library/7039bebb-1f25-4cf3-81f1-393dfb78da12)|  
 |Data and Log File Location|[Place Data and Log Files on Separate Drives](../../relational-databases/policy-based-management/place-data-and-log-files-on-separate-drives.md)|  
 |Database Auto Close|[Set the AUTO_CLOSE Database Option to OFF](../../relational-databases/policy-based-management/set-the-auto-close-database-option-to-off.md)|  
 |Database Auto Shrink|[Set the AUTO_SHRINK Database Option to OFF](../../relational-databases/policy-based-management/set-the-auto-shrink-database-option-to-off.md)|  
-|Database Collation|[Set the Collation of User-defined Databases to Match Those of the master and model Databases](http://msdn.microsoft.com/library/c686446f-dae1-4b05-a3df-837b3422988d)|  
+|Database Collation|[Set the Collation of User-defined Databases to Match Those of the master and model Databases](https://msdn.microsoft.com/library/c686446f-dae1-4b05-a3df-837b3422988d)|  
 |Database Page Verification|[Set the PAGE_VERIFY Database Option to CHECKSUM](../../relational-databases/policy-based-management/set-the-page-verify-database-option-to-checksum.md)|  
 |Database Page Status|[Check Integrity of Database with Suspect Pages](../../relational-databases/policy-based-management/check-integrity-of-database-with-suspect-pages.md)|  
 |Guest Permissions|[Guest Permissions on User Databases](../../relational-databases/policy-based-management/guest-permissions-on-user-databases.md)|  

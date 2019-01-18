@@ -1,33 +1,28 @@
 ---
 title: "Rename Tables (Database Engine) | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-non-specified"
-ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
-ms.service: ""
-ms.component: "tables"
+ms.date: "02/23/2018"
+ms.prod: sql
+ms.prod_service: "table-view-index, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "dbe-tables"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: table-view-index
+ms.topic: conceptual
 helpviewer_keywords: 
   - "table renaming [SQL Server]"
   - "table names [SQL Server]"
   - "tables [SQL Server], Visual Database Tools"
   - "renaming tables"
-ms.assetid: 2f5c922d-4d71-4694-9fca-28dd99375799
-caps.latest.revision: 16
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-ms.workload: "Active"
+author: stevestein
+ms.author: sstein
+manager: craigg
+monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Rename Tables (Database Engine)
-[!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-  You can rename a table in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)].  
+Rename a table in SQL Server or Azure SQL Database.
+
+To rename a table in Azure SQL Data Warehouse or Parallel Data Warehouse, use the t-sql [RENAME OBJECT](../../t-sql/statements/rename-transact-sql.md) statement. 
   
 > [!CAUTION]  
 >  Think carefully before you rename a table. If existing queries, views, user-defined functions, stored procedures, or programs refer to that table, the name modification will make these objects invalid.  
@@ -68,7 +63,7 @@ ms.workload: "Active"
   
 4.  To cancel this action, press the ESC key before leaving this field.  
   
-5.  From the **File** menu choose **Save***table name*.  
+5.  From the **File** menu choose **Save** _table name_.  
   
 ##  <a name="TsqlProcedure"></a> Using Transact-SQL  
   

@@ -2,26 +2,21 @@
 title: "Master Data Services Developer Documentation | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/17/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "mds"
-ms.service: ""
-ms.component: "develop"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: 
 
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
-applies_to: 
-  - "SQL Server 2016 Preview"
 ms.assetid: 067b1f69-84eb-4a13-b220-120cd63704b4
-caps.latest.revision: 8
-author: "smartysanthosh"
-ms.author: "nagavo"
-manager: "craigg"
-ms.workload: "Inactive"
+author: leolimsft
+ms.author: lle
+manager: craigg
 ---
 # Master Data Services Developer Documentation
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
   Find information about how to write code to customize the way you and your users interact with [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]. Learn how to:  
   
 -   Write a program that accesses the [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] web service. The [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] web service is a Windows Communication Foundation (WCF) service that developers use to control [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] features through code.  

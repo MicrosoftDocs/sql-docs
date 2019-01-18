@@ -2,38 +2,31 @@
 title: "Configure IIS for Web Synchronization | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "database-engine"
-ms.service: ""
-ms.component: "replication"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: replication
+ms.topic: conceptual
 helpviewer_keywords: 
   - "IIS server configuration [SQL Server replication]"
   - "websync.log"
   - "Web synchronization, IIS servers"
 ms.assetid: d651186e-c9ca-4864-a444-2cd6943b8e35
-caps.latest.revision: 88
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-ms.workload: "Inactive"
+author: "MashaMSFT"
+ms.author: "mathoma"
+manager: craigg
 ---
 # Configure IIS for Web Synchronization
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   The procedures in this topic make up the second step in configuring Web synchronization for merge replication. You perform this step after you enable a publication for Web synchronization. For an overview of the configuration process, see [Configure Web Synchronization](../../relational-databases/replication/configure-web-synchronization.md). After you complete the procedures in this topic, continue to the third step, configuring a subscription to use Web synchronization. This third step is described in the following topics:  
   
--   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]: [How to: Configure a Subscription to Use Web Synchronization \(SQL Server Management Studio\)](http://msdn.microsoft.com/library/ms345214.aspx)  
+-   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]: [How to: Configure a Subscription to Use Web Synchronization \(SQL Server Management Studio\)](https://msdn.microsoft.com/library/ms345214.aspx)  
   
--   Replication [!INCLUDE[tsql](../../includes/tsql-md.md)] programming: [How to: Configure a Subscription to Use Web Synchronization (Replication Transact-SQL Programming)](http://msdn.microsoft.com/library/ms345206.aspx)  
+-   Replication [!INCLUDE[tsql](../../includes/tsql-md.md)] programming: [How to: Configure a Subscription to Use Web Synchronization (Replication Transact-SQL Programming)](https://msdn.microsoft.com/library/ms345206.aspx)  
   
--   RMO: [How to: Configure a Subscription to Use Web Synchronization (RMO Programming)](http://msdn.microsoft.com/library/ms345207.aspx)  
+-   RMO: [How to: Configure a Subscription to Use Web Synchronization (RMO Programming)](https://msdn.microsoft.com/library/ms345207.aspx)  
   
- Web synchronization uses a computer that is running [!INCLUDE[msCoName](../../includes/msconame-md.md)] Internet Information Services (IIS) to synchronize pull subscriptions to merge publications. IIS version 5.0, IIS version 6.0, and [!INCLUDE[iisver](../../includes/iisver-md.md)] are supported. The Configure Web Synchronization Wizard is not supported on [!INCLUDE[iisver](../../includes/iisver-md.md)].  
+ Web synchronization uses a computer that is running [!INCLUDE[msCoName](../../includes/msconame-md.md)] Internet Information Services (IIS) to synchronize pull subscriptions to merge publications. IIS version 5.0, IIS version 6.0, and IIS version 7.0 are supported. The Configure Web Synchronization Wizard is not supported on IIS version 7.0.  
   
 > [!IMPORTANT]  
 >  Make sure that your application uses only [!INCLUDE[dnprdnlong](../../includes/dnprdnlong-md.md)] or later versions, and that earlier versions of the [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] are not installed on the IIS server. Earlier versions of the [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] can cause errors. These include the following: "The format of a message during Web synchronization was invalid. Ensure that replication components are properly configured at the Web server".  
@@ -85,7 +78,7 @@ ms.workload: "Inactive"
   
 4.  Click **OK**.  
   
- If you cannot obtain a server certificate from a CA, you can specify a certificate for testing. To configure IIS 6.0 for testing, install a certificate by using the SelfSSL utility. This utility is available in the IIS 6.0 Resource Kit. You can download the tools from the [Microsoft Download Center](http://go.microsoft.com/fwlink/?LinkId=30958). For IIS 5.0, go to [Microsoft Help and Support](http://go.microsoft.com/fwlink/?LinkId=46229).  
+ If you cannot obtain a server certificate from a CA, you can specify a certificate for testing. To configure IIS 6.0 for testing, install a certificate by using the SelfSSL utility. This utility is available in the IIS 6.0 Resource Kit. You can download the tools from the [Microsoft Download Center](https://go.microsoft.com/fwlink/?LinkId=30958). For IIS 5.0, go to [Microsoft Help and Support](https://go.microsoft.com/fwlink/?LinkId=46229).  
   
 > [!NOTE]  
 >  A certificate must be associated with a Web site before that Web site can use SSL. SelfSSL automatically associates the certificate with the default Web site. If you already have a certificate or later install a certificate from a CA, you must explicitly associate that certificate with the Web site that is used by Web synchronization. Make sure there is only one certificate associated with the Web site that is used to synchronize subscriptions. If there are multiple certificates, the Subscriber will use the first available Web site.  

@@ -2,37 +2,29 @@
 title: "Enable Stretch Database for a database | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/05/2016"
-ms.prod: "sql-non-specified"
-ms.prod_service: "database-engine"
-ms.service: ""
-ms.component: "stretch-database"
+ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "dbe-stretch"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "Stretch Database, enabling database"
   - "enabling database for Stretch Database"
 ms.assetid: 37854256-8c99-4566-a552-432e3ea7c6da
-caps.latest.revision: 70
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "craigg"
-ms.workload: "Inactive"
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ---
 # Enable Stretch Database for a database
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly.md)]
+
 
   To configure an existing database for Stretch Database, select **Tasks | Stretch | Enable** for a database in SQL Server Management Studio to open the **Enable Database for Stretch** wizard. You can also use Transact-SQL to enable Stretch Database for a database.  
   
- If you select **Tasks | Stretch | Enable** for an individual table, and you have not yet enabled the database for Stretch Database, the wizard configures the database for Stretch Database and lets you select tables as part of the process. Follow the steps in this topic instead of the steps in [Enable Stretch Database for a table](../../sql-server/stretch-database/enable-stretch-database-for-a-table.md).  
+ If you select **Tasks | Stretch | Enable** for an individual table, and you have not yet enabled the database for Stretch Database, the wizard configures the database for Stretch Database and lets you select tables as part of the process. Follow the steps in this article instead of the steps in [Enable Stretch Database for a table](../../sql-server/stretch-database/enable-stretch-database-for-a-table.md).  
   
  Enabling Stretch Database on  a database or a table requires db_owner permissions. Enabling Stretch Database on a database also requires CONTROL DATABASE permissions.  
 
- >   [!NOTE]
- > Later, if you disable Stretch Database, remember that disabling Stretch Database for a table or for a database does not delete the remote object. If you want to delete the remote table or the remote database, you have to drop it by using the Azure management portal. The remote objects continue to incur Azure costs until you delete them manually. 
+> [!NOTE]
+> Later, if you disable Stretch Database, remember that disabling Stretch Database for a table or for a database does not delete the remote object. If you want to delete the remote table or the remote database, you have to drop it by using the Azure management portal. The remote objects continue to incur Azure costs until you delete them manually. 
  
 ## Before you get started  
   
@@ -40,7 +32,7 @@ ms.workload: "Inactive"
   
 -   Review [Limitations for Stretch Database](../../sql-server/stretch-database/limitations-for-stretch-database.md).  
   
--   Stretch Database migrates data to Azure . Therefore you have to have an Azure account and a subscription for billing. To get an Azure account, [click here](http://azure.microsoft.com/en-us/pricing/free-trial/).  
+-   Stretch Database migrates data to Azure . Therefore you have to have an Azure account and a subscription for billing. To get an Azure account, [click here](https://azure.microsoft.com/pricing/free-trial/).  
   
 -   Have the connection and login info you need to create a new Azure server or to select an existing Azure server.  
   

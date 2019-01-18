@@ -1,24 +1,17 @@
 ---
-title: "Restore the Master Database (Analytics Platform System)"
-author: "barbkess" 
-ms.author: "barbkess"
-manager: "jhubbard"	  
-ms.prod: "analytics-platform-system"
-ms.prod_service: "mpp-data-warehouse"
-ms.service: ""
-ms.component:
-ms.technology: "mpp-data-warehouse"
-ms.custom: ""
-ms.date: 01/05/2017
-ms.reviewer: na
-ms.suite: "sql"
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: 7870021a-0d89-422e-b8ea-1cc95b45c139
-caps.latest.revision: 11
-
+title: Restore master database - Analytics Platform System | Microsoft Docs
+description: Restore the master database in Analytics Platform System.
+author: mzaman1 
+manager: craigg
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
 ---
-# Restore the Master Database
+
+# Restore the master database in Analytics Platform System
 The **Restore Master** page of the SQL Server PDW Configuration Manager enables you to restore the master database from a backup.  
   
 ## Before You Begin  

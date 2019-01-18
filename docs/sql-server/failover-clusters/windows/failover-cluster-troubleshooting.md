@@ -2,26 +2,18 @@
 title: "Failover Cluster Troubleshooting | Microsoft Docs"
 ms.custom: ""
 ms.date: "10/21/2015"
-ms.prod: "sql-non-specified"
-ms.prod_service: "database-engine"
-ms.service: ""
-ms.component: "failover-clusters"
+ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: high-availability
+ms.topic: conceptual
 helpviewer_keywords: 
   - "troublshooting, failover clustering"
   - "failover clustering, troubleshooting"
   - "cluster troubleshooting"
 ms.assetid: 84012320-5a7b-45b0-8feb-325bf0e21324
-caps.latest.revision: 12
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-ms.workload: "Active"
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
 ---
 # Failover Cluster Troubleshooting
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -59,7 +51,7 @@ Failover Clustering comes with a built-in safeguard to prevent accidental downti
   
 -   [Recommended hotfixes and updates for Windows Server 2012 R2-based failover clusters](https://support.microsoft.com/kb/2920151)  
   
--   [Recommended hotfixes and updates for Windows Server 2012-based failover clusters](https://support.microsoft.com/kb/278426)  
+-   [Recommended hotfixes and updates for Windows Server 2012-based failover clusters](https://support.microsoft.com/kb/2784261)  
   
 -   [Recommended hotfixes and updates for Windows Server 2008 R2-based failover clusters](https://support.microsoft.com/kb/980054)  
   
@@ -80,7 +72,7 @@ Failover Clustering comes with a built-in safeguard to prevent accidental downti
   
      Recovering from operating system failure this way can take time. If the operating system failure can be recovered easily, avoid using this technique.  
   
-     For more information, see [Create a New SQL Server Failover Cluster &#40;Setup&#41;](../../../sql-server/failover-clusters/install/create-a-new-sql-server-failover-cluster-setup.md) and [How to: Recover from Failover Cluster Failure in Scenario 2](https://msdn.microsoft.com/library/ms181075\(v=sql.105\).aspx).  
+     For more information, see [Create a New SQL Server Failover Cluster &#40;Setup&#41;](../../../sql-server/failover-clusters/install/create-a-new-sql-server-failover-cluster-setup.md) and [How to: Recover from Failover Cluster Failure in Scenario 2](recover-from-failover-cluster-instance-failure.md).  
   
 ## Resolving Common Problems  
  The following list describes common usage issues and explains how to resolve them.  

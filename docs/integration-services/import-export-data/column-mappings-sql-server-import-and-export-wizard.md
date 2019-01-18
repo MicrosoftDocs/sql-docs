@@ -2,24 +2,17 @@
 title: "Column Mappings (SQL Server Import and Export Wizard) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/16/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "integration-services"
-ms.service: ""
-ms.component: "import-export-data"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: integration-services
+ms.topic: conceptual
 f1_keywords: 
   - "sql13.dts.impexpwizard.columnmapandtransform.f1"
 ms.assetid: eadc54a6-f936-4ffc-91d7-fbfd2bdcab93
-caps.latest.revision: 69
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
-ms.workload: "On Demand"
+manager: craigg
 ---
 # Column Mappings (SQL Server Import and Export Wizard)
   After you select the existing tables and views to copy or review the query that you provided, if you click **Edit mappings**, the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Import and Export Wizard shows the **Column Mappings** dialog box. On this page you specify and configure destination columns to receive the data copied from the source columns. Often you don't have to change anything on this page.

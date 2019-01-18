@@ -1,23 +1,16 @@
 ---
 title: "SQL Server Integration Services (SSIS) Scale Out Master | Microsoft Docs"
-ms.description: "This article describes the Scale Out Master component of SSIS Scale Out"
-ms.custom: ""
+description: "This article describes the Scale Out Master component of SSIS Scale Out"
+ms.custom: performance
 ms.date: "12/19/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "integration-services"
-ms.service: ""
-ms.component: "scale-out"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-caps.latest.revision: 1
+ms.technology: integration-services
+ms.topic: conceptual
 author: "haoqian"
 ms.author: "haoqian"
-manager: "jhubbard"
-ms.workload: "Inactive"
+manager: craigg
 ---
 # Integration Services (SSIS) Scale Out Master
 The Scale Out Master manages the Scale Out system through the SSISDB Catalog and the Scale Out Master service. 
@@ -29,10 +22,10 @@ The Scale Out Master service is a Windows service that is responsible for the co
 ## Scale Out views and stored procedures in SSISDB
 
 ### Views:
--   [[catalog].[master_properties(../../integration-services/system-views/catalog-master-properties-ssisdb-database.md)
+-   [[catalog].[master_properties]](../../integration-services/system-views/catalog-master-properties-ssisdb-database.md)
 -   [[catalog].[worker_agents]](../../integration-services/system-views/catalog-worker-agents-ssisdb-database.md).
 
-####Stored procedures:
+### Stored procedures:
 
 -   For managing Scale Out Workers:  
     -   [[catalog].[disable_worker_agent]](../../integration-services/system-stored-procedures/catalog-disable-worker-agent-ssisdb-database.md)

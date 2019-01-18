@@ -2,16 +2,11 @@
 title: "Oracle Publishing Overview | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/29/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "database-engine"
-ms.service: ""
-ms.component: "replication"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: replication
+ms.topic: conceptual
 helpviewer_keywords: 
   - "publishing [SQL Server replication], Oracle publishing"
   - "snapshot replication [SQL Server], Oracle publishing"
@@ -19,11 +14,9 @@ helpviewer_keywords:
   - "transactional replication, Oracle publishing"
   - "Oracle publishing [SQL Server replication], about Oracle publishing"
 ms.assetid: 2e013259-0022-4897-a08d-5f8deb880fa8
-caps.latest.revision: 40
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-ms.workload: "Inactive"
+author: "MashaMSFT"
+ms.author: "mathoma"
+manager: craigg
 ---
 # Oracle Publishing Overview  
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

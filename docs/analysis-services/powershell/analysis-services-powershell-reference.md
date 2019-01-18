@@ -1,26 +1,17 @@
 ---
 title: "Analysis Services PowerShell Reference | Microsoft Docs"
-ms.custom: ""
-ms.date: "06/21/2017"
-ms.prod: analysis-services
-ms.prod_service: "analysis-services"
-ms.service: ""
-ms.component: ""
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
-  
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-ms.assetid: 6c435e40-bfaf-4073-8cef-bc3260602246
-caps.latest.revision: 9
-author: "Minewiskan"
-ms.author: "owend"
-manager: "kfile"
-ms.workload: "On Demand"
+ms.date: 06/25/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: powershell
+ms.topic: reference
+ms.author: owend
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
 ---
 # Analysis Services PowerShell Reference
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
 
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] PowerShell cmdlets are included in the [SqlServer module](https://www.powershellgallery.com/packages/SqlServer/21.0.17099). 
   
@@ -34,19 +25,19 @@ ms.workload: "On Demand"
   
 |Cmdlet|Description|Equivalent AMO Methods|  
 |------------|-----------------|----------------------------|  
-|[Add-RoleMember cmdlet](../../analysis-services/powershell/add-rolemember-cmdlet.md)|Add a member to a database role.|<xref:Microsoft.AnalysisServices.RoleMemberCollection.Add%2A>|  
-|[Backup-ASDatabase cmdlet](../../analysis-services/powershell/backup-asdatabase-cmdlet.md)|Backup an Analysis Services database.|[Database.Backup](https://msdn.microsoft.com/library/microsoft.analysisservices.database.backup.aspx)|  
-|[Invoke-ASCmd cmdlet](../../analysis-services/powershell/invoke-ascmd-cmdlet.md)|Execute a query or script in XMLA or TSML (JSON) format.|<xref:Microsoft.AnalysisServices.Core.Server.Execute%2A>|  
-|[Invoke-ProcessASDatabase](../../analysis-services/powershell/invoke-processasdatabase.md)|Process a database.|<xref:Microsoft.AnalysisServices.IProcessable.Process%2A>|  
-|[Invoke-ProcessCube cmdlet](../../analysis-services/powershell/invoke-processcube-cmdlet.md)|Process a cube.|<xref:Microsoft.AnalysisServices.IProcessable.Process%2A>|  
-|[Invoke-ProcessDimension cmdlet](../../analysis-services/powershell/invoke-processdimension-cmdlet.md)|Process a dimension.|<xref:Microsoft.AnalysisServices.IProcessable.Process%2A>|  
-|[Invoke-ProcessPartition cmdlet](../../analysis-services/powershell/invoke-processpartition-cmdlet.md)|Process a partition.|<xref:Microsoft.AnalysisServices.IProcessable.Process%2A>|  
-|[Invoke-ProcessTable cmdlet](../../analysis-services/powershell/invoke-processtable-cmdlet.md)|Process a table in a Tabular model, compatibility model 1200 or higher.|<xref:Microsoft.AnalysisServices.IProcessable.Process%2A>|  
-|[Merge-Partition cmdlet](../../analysis-services/powershell/merge-partition-cmdlet.md)|Merge a partition.|<xref:Microsoft.AnalysisServices.Partition.Merge%2A>|  
-|[New-RestoreFolder cmdlet](../../analysis-services/powershell/new-restorefolder-cmdlet.md)|Create a folder to contain a database backup.|<xref:Microsoft.AnalysisServices.RestoreFolder>|  
-|[New-RestoreLocation cmdlet](../../analysis-services/powershell/new-restorelocation-cmdlet.md)|Specify one or more remote servers on which to restore the database.|<xref:Microsoft.AnalysisServices.RestoreLocation>|  
-|[Remove-RoleMember cmdlet](../../analysis-services/powershell/remove-rolemember-cmdlet.md)|Remove a member from a database role.|<xref:Microsoft.AnalysisServices.RoleMemberCollection.Remove%2A>|  
-|[Restore-ASDatabase cmdlet](../../analysis-services/powershell/restore-asdatabase-cmdlet.md)|Restore a database on a server instance.|<xref:Microsoft.AnalysisServices.Core.Server.Restore%2A>|  
+|[Add-RoleMember cmdlet](https://docs.microsoft.com/powershell/module/sqlserver/Add-RoleMember)|Add a member to a database role.|<xref:Microsoft.AnalysisServices.RoleMemberCollection.Add%2A>|  
+|[Backup-ASDatabase cmdlet](https://docs.microsoft.com/powershell/module/sqlserver/backup-asdatabase)|Backup an Analysis Services database.|[Database.Backup](https://msdn.microsoft.com/library/microsoft.analysisservices.database.backup.aspx)|  
+|[Invoke-ASCmd cmdlet](https://docs.microsoft.com/powershell/module/sqlserver/invoke-ascmd)|Execute a query or script in XMLA or TSML (JSON) format.|<xref:Microsoft.AnalysisServices.Core.Server.Execute%2A>|  
+|[Invoke-ProcessASDatabase](https://docs.microsoft.com/powershell/module/sqlserver/invoke-processasdatabase)|Process a database.|<xref:Microsoft.AnalysisServices.IProcessable.Process%2A>|  
+|[Invoke-ProcessCube cmdlet](https://docs.microsoft.com/powershell/module/sqlserver/invoke-processcube)|Process a cube.|<xref:Microsoft.AnalysisServices.IProcessable.Process%2A>|  
+|[Invoke-ProcessDimension cmdlet](https://docs.microsoft.com/powershell/module/sqlserver/invoke-processdimension)|Process a dimension.|<xref:Microsoft.AnalysisServices.IProcessable.Process%2A>|  
+|[Invoke-ProcessPartition cmdlet](https://docs.microsoft.com/powershell/module/sqlserver/invoke-processpartition)|Process a partition.|<xref:Microsoft.AnalysisServices.IProcessable.Process%2A>|  
+|[Invoke-ProcessTable cmdlet](https://docs.microsoft.com/powershell/module/sqlserver/invoke-processtable)|Process a table in a Tabular model, compatibility model 1200 or higher.|<xref:Microsoft.AnalysisServices.IProcessable.Process%2A>|  
+|[Merge-Partition cmdlet](https://docs.microsoft.com/powershell/module/sqlserver/merge-partition)|Merge a partition.|<xref:Microsoft.AnalysisServices.Partition.Merge%2A>|  
+|[New-RestoreFolder cmdlet](https://docs.microsoft.com/powershell/module/sqlserver/new-restorefolder)|Create a folder to contain a database backup.|<xref:Microsoft.AnalysisServices.RestoreFolder>|  
+|[New-RestoreLocation cmdlet](https://docs.microsoft.com/powershell/module/sqlserver/new-restorelocation)|Specify one or more remote servers on which to restore the database.|<xref:Microsoft.AnalysisServices.RestoreLocation>|  
+|[Remove-RoleMember cmdlet](https://docs.microsoft.com/powershell/module/sqlserver/remove-rolemember)|Remove a member from a database role.|<xref:Microsoft.AnalysisServices.RoleMemberCollection.Remove%2A>|  
+|[Restore-ASDatabase cmdlet](https://docs.microsoft.com/powershell/module/sqlserver/restore-asdatabase)|Restore a database on a server instance.|<xref:Microsoft.AnalysisServices.Core.Server.Restore%2A>|  
   
 
   

@@ -2,15 +2,9 @@
 title: "sys.dm_hadr_cluster_networks (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/10/2016"
-ms.prod: "sql-non-specified"
-ms.prod_service: "database-engine"
-ms.service: ""
-ms.component: "dmv's"
+ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: system-objects
 ms.topic: "language-reference"
 f1_keywords: 
   - "dm_hadr_cluster_networks"
@@ -24,11 +18,9 @@ helpviewer_keywords:
   - "Availability Groups [SQL Server], WSFC clusters"
   - "sys.dm_hadr_cluster_networks dynamic management view"
 ms.assetid: ece32b15-d63f-4f93-92b7-e2930333e97a
-caps.latest.revision: 15
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-ms.workload: "Inactive"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ---
 # sys.dm_hadr_cluster_networks (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]

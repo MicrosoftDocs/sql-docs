@@ -3,23 +3,16 @@ title: "sys.pdw_nodes_column_store_dictionaries (Transact-SQL) | Microsoft Docs"
 ms.date: "03/03/2017"
 ms.prod: ""
 ms.prod_service: "sql-data-warehouse, pdw"
-ms.service: "sql-data-warehouse"
-ms.component: "system-catalog-views"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.custom: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 dev_langs: 
   - "TSQL"
 ms.assetid: 7ae1c2e4-45c0-4880-a692-1f299fbcfd19
-caps.latest.revision: 7
-author: "barbkess"
-ms.author: "barbkess"
-manager: "jhubbard"
-ms.workload: "Inactive"
+author: ronortloff
+ms.author: rortloff
+manager: craigg
+monikerRange: ">= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions"
 ---
 # sys.pdw_nodes_column_store_dictionaries (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -33,7 +26,7 @@ ms.workload: "Inactive"
 |**column_id**|**int**|ID of the columnstore column.|  
 |**dictionary_id**|**int**|Id of the dictionary.|  
 |**version**|**int**|Version of the dictionary format.|  
-|**type**|**int**|Dictionary type:<br /><br /> 1 – Hash dictionary containing **int** values<br /><br /> 2 – Not used<br /><br /> 3 – Hash dictionary containing string values<br /><br /> 4 – Hash dictionary containing **float** values|  
+|**type**|**int**|Dictionary type:<br /><br /> 1 - Hash dictionary containing **int** values<br /><br /> 2 - Not used<br /><br /> 3 - Hash dictionary containing string values<br /><br /> 4 - Hash dictionary containing **float** values|  
 |**last_id**|**int**|The last data id in the dictionary.|  
 |**entry_count**|**bigint**|Number of entries in the dictionary.|  
 |**on_disc_size**|**bigint**|Size of dictionary in bytes.|  

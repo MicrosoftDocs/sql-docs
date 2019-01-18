@@ -2,16 +2,11 @@
 title: "SQL Command Prompt Utilities (Database Engine) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "sql-tools"
-ms.service: ""
-ms.component: "misc"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: tools-other
+ms.topic: conceptual
 helpviewer_keywords: 
   - "command prompt utilities [SQL Server]"
   - "command prompt utilities [SQL Server], about command prompt utilities"
@@ -19,15 +14,17 @@ helpviewer_keywords:
   - "utilities [SQL Server], command prompt"
   - "command prompt [SQL Server], utilities"
 ms.assetid: 48364bd9-6ea7-45e9-a332-acf3d81bbfae
-caps.latest.revision: 90
 author: "stevestein"
 ms.author: "sstein"
-manager: "craigg"
-ms.workload: "On Demand"
+manager: craigg
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017"
 ---
 # SQL Command Prompt Utilities (Database Engine)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-  Command prompt utilities enable you to script [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] operations. The following table contains a list of command prompt utilities that ship with [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
+  Command prompt utilities enable you to script [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] operations. The following table contains a list of many command prompt utilities that ship with [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
+
+For information on the *main* SQL gui and command-line tools, see [SQL Tools Overview](overview-sql-tools.md).
+
   
 |**Utility**|**Description**|**Installed in**|  
 |-----------------|---------------------|----------------------|  
@@ -35,8 +32,7 @@ ms.workload: "On Demand"
 |[dta Utility](../tools/dta/dta-utility.md)|Used to analyze a workload and recommend physical design structures to optimize server performance for that workload.|[!INCLUDE[ssInstallPathVar](../includes/ssinstallpathvar-md.md)]Tools\Binn|  
 |[dtexec Utility](../integration-services/packages/dtexec-utility.md)|Used to configure and execute an [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] package. A user interface version of this command prompt utility is called **DTExecUI**, which brings up the Execute Package Utility.|[!INCLUDE[ssInstallPathVar](../includes/ssinstallpathvar-md.md)]DTS\Binn|  
 |[dtutil Utility](../integration-services/dtutil-utility.md)|Used to manage SSIS packages.|[!INCLUDE[ssInstallPathVar](../includes/ssinstallpathvar-md.md)]DTS\Binn|  
-|[Deploy Model Solutions with the Deployment Utility](../analysis-services/multidimensional-models/deploy-model-solutions-with-the-deployment-utility.md)|Used to deploy [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] projects to instances of [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)].|[!INCLUDE[ssInstallPathVar](../includes/ssinstallpathvar-md.md)]Tools\Binn\VShell\Common7\IDE|  
-|[mssql-scripter (Public Preview)](https://blogs.technet.microsoft.com/dataplatforminsider/2017/05/17/try-new-sql-server-command-line-tools-to-generate-t-sql-scripts-and-monitor-dynamic-management-views/)|Used to generate CREATE and INSERT T-SQL scripts for database objects in SQL Server, Azure SQL Database, and Azure SQL Data Warehouse.|See our [GitHub repo](https://github.com/Microsoft/sql-xplat-cli) for download and usage information.| 
+|[Deploy Model Solutions with the Deployment Utility](../analysis-services/multidimensional-models/deploy-model-solutions-with-the-deployment-utility.md)|Used to deploy [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] projects to instances of [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)].|[!INCLUDE[ssInstallPathVar](../includes/ssinstallpathvar-md.md)]Tools\Binn\VShell\Common7\IDE|   
 |[osql Utility](../tools/osql-utility.md)|Allows you to enter [!INCLUDE[tsql](../includes/tsql-md.md)] statements, system procedures, and script files at the command prompt.|[!INCLUDE[ssInstallPathVar](../includes/ssinstallpathvar-md.md)]Tools\Binn|  
 |[Profiler Utility](../tools/profiler-utility.md)|Used to start [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] from a command prompt.|[!INCLUDE[ssInstallPathVar](../includes/ssinstallpathvar-md.md)]Tools\Binn|  
 |[RS.exe Utility &#40;SSRS&#41;](../reporting-services/tools/rs-exe-utility-ssrs.md)|Used to run scripts designed for managing [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] report servers.|[!INCLUDE[ssInstallPathVar](../includes/ssinstallpathvar-md.md)]Tools\Binn|  

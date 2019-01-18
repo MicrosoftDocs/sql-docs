@@ -2,30 +2,23 @@
 title: "Data Access Tracing with the ODBC Driver on Linux and macOS | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
-ms.prod_service: "drivers"
-ms.service: ""
-ms.component: "odbc"
+ms.prod: sql
+ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "drivers"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: connectivity
+ms.topic: conceptual
 helpviewer_keywords: 
   - "data access tracing"
   - "tracing"
 ms.assetid: 3149173a-588e-47a0-9f50-edb8e9adf5e8
-caps.latest.revision: 13
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
-ms.workload: "Inactive"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # Data Access Tracing with the ODBC Driver on Linux and macOS
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
 
-The unixODBC Driver Manager on macOS and Linux supports tracing of ODBC API call entry and exit of the ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)].
+The unixODBC Driver Manager on macOS and Linux supports tracing of ODBC API call entry and exit of the ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].
 
 To trace your application's ODBC behavior, edit the `odbcinst.ini` file's `[ODBC]` section to set the values `Trace=Yes` and `TraceFile`
 to the path of the file which is to contain the trace output; for example:
@@ -65,7 +58,7 @@ SQLLEN Size........: 8
 SQLSETPOSIROW Size.: 8
 ```
 
-The [unixODBC documentation](http://www.unixodbc.org/doc/UserManual/) explains the differences between user and system DSNs. In summary:  
+The [unixODBC documentation](https://www.unixodbc.org/doc/UserManual/) explains the differences between user and system DSNs. In summary:  
 
 - User DSNs --- these are DSNs which are only available to a specific user. Users can connect using, add, modify, and remove their own user DSNs. User DSNs are stored in a file in the user's home directory, or a subdirectory thereof.
   

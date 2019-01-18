@@ -2,16 +2,11 @@
 title: "Server Configuration Options (SQL Server) | Microsoft Docs"
 ms.custom: ""
 ms.date: "04/13/2017"
-ms.prod: "sql-non-specified"
-ms.prod_service: "database-engine"
-ms.service: ""
-ms.component: "configure-windows"
+ms.prod: sql
+ms.prod_service: high-availability
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: configuration
+ms.topic: conceptual
 keywords: 
   - "server configuration (SQL Server)"
 helpviewer_keywords: 
@@ -32,11 +27,9 @@ helpviewer_keywords:
   - "server configuration [SQL Server]"
   - "administering SQL Server, configuration options"
 ms.assetid: 9f38eba6-39b1-4f1d-ba24-ee4f7e2bc969
-caps.latest.revision: 128
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-ms.workload: "Active"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ---
 # Server Configuration Options (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -63,7 +56,7 @@ Self-configuring options are those that [!INCLUDE[ssNoVersion](../../includes/ss
 ## Configuration Options Table  
  The following table lists all available configuration options, the range of possible settings, and default values. Configuration options are marked with letter codes as follows:  
   
--   A= Advanced options, which should be changed only by an experienced database administrator or a certified [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] technician, and which require setting show advanced options to 1.  
+-   A= Advanced options, which should be changed only by an experienced database administrator or a certified [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] professional, and which require setting show advanced options to 1.  
   
 -   RR = Options requiring a restart of the [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
@@ -82,7 +75,7 @@ Self-configuring options are those that [!INCLUDE[ssNoVersion](../../includes/ss
     |[affinity64 mask](../../database-engine/configure-windows/affinity64-mask-server-configuration-option.md) (A, RR), only available on 64-bit version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|-2147483648|2147483647|0|  
     |[Agent XPs](../../database-engine/configure-windows/agent-xps-server-configuration-option.md) (A)|0|1|0<br /><br /> (Changes to 1 when [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent is started. Default value is 0 if [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent is set to automatic start during Setup.)|  
     |[allow updates](../../database-engine/configure-windows/allow-updates-server-configuration-option.md) (Obsolete. Do not use. Will cause an error during reconfigure.)|0|1|0|  
-    |[automatic soft-NUMA disabled](http://msdn.microsoft.com/library/ms345357.aspx)|0|1|0|  
+    |[automatic soft-NUMA disabled](soft-numa-sql-server.md)|0|1|0|  
     |[backup checksum default](../../database-engine/configure-windows/backup-checksum-default.md)|0|1|0|  
     |[backup compression default](../../database-engine/configure-windows/view-or-configure-the-backup-compression-default-server-configuration-option.md)|0|1|0| 
     |[blocked process threshold](../../database-engine/configure-windows/blocked-process-threshold-server-configuration-option.md) (A)|0|86400|0|  
@@ -136,7 +129,7 @@ Self-configuring options are those that [!INCLUDE[ssNoVersion](../../includes/ss
     |[remote data archive](../../database-engine/configure-windows/configure-the-remote-data-archive-server-configuration-option.md)|0|1|0|  
     |[remote login timeout](../../database-engine/configure-windows/configure-the-remote-login-timeout-server-configuration-option.md)|0|2147483647|10|  
     |[remote proc trans](../../database-engine/configure-windows/configure-the-remote-proc-trans-server-configuration-option.md)|0|1|0|  
-    |[remote query timeout](../../database-engine/configure-windows/configure-the-remote-query-timeout-server-configuration-option.md)|0|2147483647|0|  
+    |[remote query timeout](../../database-engine/configure-windows/configure-the-remote-query-timeout-server-configuration-option.md)|0|2147483647|600|  
     |[Replication XPs Option](../../database-engine/configure-windows/replication-xps-server-configuration-option.md) (A)|0|1|0|  
     |[scan for startup procs](../../database-engine/configure-windows/configure-the-scan-for-startup-procs-server-configuration-option.md) (A, RR)|0|1|0|  
     |[server trigger recursion](../../database-engine/configure-windows/server-trigger-recursion-server-configuration-option.md)|0|1|1|  

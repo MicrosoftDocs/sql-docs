@@ -1,27 +1,18 @@
 ---
-title: "Data Exploration and Predictive Modeling with R | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "04/18/2017"
-ms.reviewer: 
-ms.suite: sql
-ms.prod: machine-learning-services
-ms.prod_service: machine-learning-services
-ms.component: r
-ms.technology: 
-  
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-ms.assetid: bf6de7e2-f394-4b8a-a4b7-0b8dadf25426
-caps.latest.revision: 20
-author: "jeannt"
-ms.author: "jeannt"
-manager: "jhubbard"
-ms.workload: "Inactive"
----
-# Data Exploration and Predictive Modeling with R
+title: Data exploration and predictive modeling with R - SQL Server Machine Learning Services
+ms.prod: sql
+ms.technology: machine-learning
 
-This topic describes improvements to the data science process that are possible through integration with SQL Server.
+ms.date: 04/15/2018  
+ms.topic: conceptual
+author: HeidiSteen
+ms.author: heidist
+manager: cgronlun
+---
+# Data exploration and predictive modeling with R in SQL Server
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
+This article describes improvements to the data science process that are possible through integration with SQL Server.
 
 Applies to: SQL Server 2016 R Services, SQL Server 2017 Machine Learnign Services
 
@@ -34,7 +25,7 @@ However, this approach has many drawbacks, that hae hindered the wider adoption 
 + Data movement can be slow, inefficient, or insecure
 + R itself has performance and scale limitations
 
-These drawbacks become more apparent when you need to move and analyze large amounts of data, or use data sets that don’t fit into the memory available on your computer.
+These drawbacks become more apparent when you need to move and analyze large amounts of data, or use data sets that don't fit into the memory available on your computer.
 
 The new, scalable packages and R functions included with [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)] help you overcome many of these challenges. 
 
@@ -66,7 +57,7 @@ In addition to the proprietary R libraries included with Microsoft Machine Learn
   
      For more information about these packages and how to use them, see [What is RevoScaleR](https://msdn.microsoft.com/microsoft-r/scaler-user-guide-introduction) and [Get started with RevoPemaR](https://msdn.microsoft.com/microsoft-r/pemar-getting-started). 
 
-+ **MicrosoftML** contains a collection of highly optimized machine learning algorithms and data transformations from the Microsoft Data Science team. Many of the algorithms are also used in Azure Machine Learning. For more information, see [Using the MicrosoftML Package](../../advanced-analytics/using-the-microsoftml-package.md).
++ **MicrosoftML** contains a collection of highly optimized machine learning algorithms and data transformations from the Microsoft Data Science team. Many of the algorithms are also used in Azure Machine Learning. For more information, see [MicrosoftML in SQL Server](ref-r-microsoftml.md).
 
 ### R Development Tools
 
@@ -93,7 +84,7 @@ When using the RevoScaleR package to connect to [!INCLUDE[ssNoVersion](../../inc
 For examples of how to create and work with data sources and execution contexts,  see these tutorials:
 
 + [Data Science Deep Dive](../../advanced-analytics/tutorials/deepdive-data-science-deep-dive-using-the-revoscaler-packages.md)  
-+  [Data Analysis using Microsoft R](https://msdn.microsoft.com/en-us/microsoft-r/data-analysis-in-microsoft-r)
++  [Data Analysis using Microsoft R](https://msdn.microsoft.com/microsoft-r/data-analysis-in-microsoft-r)
 
 ## Deploy R Code to Production
 
@@ -107,4 +98,4 @@ Typically the deployment process begins with cleaning up your script to eliminat
 
 [Comparison of Base R and ScaleR Functions](https://msdn.microsoft.com/microsoft-r/scaler/compare-base-r-scaler-functions)
 
-[ScaleR Functions for Working with SQL Server](../../advanced-analytics/r/scaler-functions-for-working-with-sql-server-data.md)
+[RevoScaleR library in SQL Server](ref-r-revoscaler.md)

@@ -2,25 +2,19 @@
 title: "Uses of ODBC Table-Valued Parameters | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
-ms.service: ""
-ms.component: "native-client-odbc-table-valued-parameters"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-
-ms.tgt_pltfrm: ""
+ms.technology: native-client
 ms.topic: "reference"
 helpviewer_keywords: 
   - "table-valued parameters (ODBC), scenarios"
   - "ODBC, table-valued parameters"
 ms.assetid: f1b73932-4570-4a8a-baa0-0f229d9c32ee
-caps.latest.revision: 33
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-ms.workload: "Inactive"
+author: MightyPen
+ms.author: genemi
+manager: craigg
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Uses of ODBC Table-Valued Parameters
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -39,7 +33,7 @@ ms.workload: "Inactive"
 ## Table-Valued Parameter with Fully Bound Multirow Buffers (Send Data as a TVP with All Values in Memory)  
  When used with fully bound multirow buffers, all parameter values are available in memory. This is typical, for example, of an OLTP transaction, in which table-valued parameters can be packaged into a single stored procedure. Without table-valued parameters, this would involve either generating a complex multi-statement batch dynamically, or making multiple calls to the server.  
   
- The table-valued parameter itself is bound by using [SQLBindParameter](http://go.microsoft.com/fwlink/?LinkId=59328) along with the other parameters. After all parameters have been bound, the application sets the parameter focus attribute, SQL_SOPT_SS_PARAM_FOCUS, on each table-valued parameter and calls SQLBindParameter for the columns of the table-valued parameter.  
+ The table-valued parameter itself is bound by using [SQLBindParameter](https://go.microsoft.com/fwlink/?LinkId=59328) along with the other parameters. After all parameters have been bound, the application sets the parameter focus attribute, SQL_SOPT_SS_PARAM_FOCUS, on each table-valued parameter and calls SQLBindParameter for the columns of the table-valued parameter.  
   
  The server type for a table-valued parameter is a new [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-specific type, SQL_SS_TABLE. The binding C type for SQL_SS_TABLE must always be SQL_C_DEFAULT. No data is transferred for the table-valued parameter bound parameter; it is used to pass table metadata and to control how to pass data in the constituent columns of the table-valued parameter.  
   
@@ -56,9 +50,9 @@ ms.workload: "Inactive"
 ## Table-Valued Parameter with Row Streaming (Send Data as a TVP Using Data-At-Execution)  
  In this scenario, the application supplies rows to the driver as it requests them and they are streamed to the server. This avoids having to buffer all rows in memory. This is representative of bulk insert/update scenarios. Table-valued parameters provide a performance point somewhere between parameter arrays and bulk copy. That is, table-valued parameters are about as easy to program as parameter arrays, but they provide greater flexibility at the server.  
   
- The table-valued parameter and its columns are bound as discussed in the previous section, Table-Valued Parameter with Fully Bound Multirow Buffers, but the length indicator of the table-valued parameter itself is set to SQL_DATA_AT_EXEC. The driver responds to SQLExecute or SQLExecuteDirect in the usual way for data-at-execution parameters—that is, by returning SQL_NEED_DATA. When the driver is ready to accept data for a table-valued parameter, SQLParamData returns the value of *ParameterValuePtr* in SQLBindParameter.  
+ The table-valued parameter and its columns are bound as discussed in the previous section, Table-Valued Parameter with Fully Bound Multirow Buffers, but the length indicator of the table-valued parameter itself is set to SQL_DATA_AT_EXEC. The driver responds to SQLExecute or SQLExecuteDirect in the usual way for data-at-execution parameters-that is, by returning SQL_NEED_DATA. When the driver is ready to accept data for a table-valued parameter, SQLParamData returns the value of *ParameterValuePtr* in SQLBindParameter.  
   
- An application uses SQLPutData for a table-valued parameter to indicate the availability of data for table-valued parameter constituent columns. When SQLPutData is called for a table-valued parameter, *DataPtr* must always be null and *StrLen_or_Ind* must be either 0 or a number less than or equal to the array size specified for table-valued parameter buffers (the *ColumnSize* parameter of SQLBindParameter). 0 signifies that there are no more rows for the table-valued parameter, and the driver will proceed to process to the next actual procedure parameter. When *StrLen_or_Ind* is not 0, the driver will process the table-valued parameter constituent columns in the same way as non–table-valued parameter bound parameters: Each table-valued parameter column can specify its actual data length, SQL_NULL_DATA, or it can specify data at execution via its length/indicator buffer. Table-valued parameter column values can be passed by repeated calls to SQLPutData as usual when a character or binary value is to be passed in pieces.  
+ An application uses SQLPutData for a table-valued parameter to indicate the availability of data for table-valued parameter constituent columns. When SQLPutData is called for a table-valued parameter, *DataPtr* must always be null and *StrLen_or_Ind* must be either 0 or a number less than or equal to the array size specified for table-valued parameter buffers (the *ColumnSize* parameter of SQLBindParameter). 0 signifies that there are no more rows for the table-valued parameter, and the driver will proceed to process to the next actual procedure parameter. When *StrLen_or_Ind* is not 0, the driver will process the table-valued parameter constituent columns in the same way as non-table-valued parameter bound parameters: Each table-valued parameter column can specify its actual data length, SQL_NULL_DATA, or it can specify data at execution via its length/indicator buffer. Table-valued parameter column values can be passed by repeated calls to SQLPutData as usual when a character or binary value is to be passed in pieces.  
   
  When all table-valued parameter columns have been processed, the driver returns to the table-valued parameter to process further rows of table-valued parameter data. Therefore, for data-at-execution table-valued parameters, the driver does not follow the usual sequential scan of bound parameters. A bound table-valued parameter will be polled until SQLPutData is called with *StrLen_Or_IndPtr* equal to 0, at which time the driver skips table-valued parameter columns and moves to the next actual stored procedure parameter.  When SQLPutData passes an indicator value greater than or equal to 1, the driver processes table-valued parameter columns and rows sequentially until it has values for all bound rows and columns. Then the driver returns to the table-valued parameter. Between receiving the token for the table-valued parameter from SQLParamData and calling SQLPutData(hstmt, NULL, n) for a table-valued parameter, the application must set table-valued parameter constituent column data and indicator buffer contents for the next row or rows to be passed to the server.  
   

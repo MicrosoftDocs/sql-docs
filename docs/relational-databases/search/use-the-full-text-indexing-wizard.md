@@ -2,16 +2,11 @@
 title: "Use the Full-Text Indexing Wizard | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/19/2016"
-ms.prod: "sql-non-specified"
-ms.prod_service: "database-engine, sql-database"
-ms.service: ""
-ms.component: "search"
+ms.prod: sql
+ms.prod_service: "search, sql-database"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "dbe-search"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: search
+ms.topic: conceptual
 f1_keywords: 
   - "sql13.swb.fulltextindexingwizard.welcome.f1"
   - "sql13.swb.fulltextindexingwizard.selectorcreatepopschedules.f1"
@@ -26,11 +21,10 @@ helpviewer_keywords:
   - "Full-Text Indexing Wizard"
   - "full-text search [SQL Server], Full-Text Indexing Wizard"
 ms.assetid: 3e9d9605-6525-4781-9168-fdaa06db3459
-caps.latest.revision: 24
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-ms.workload: "Inactive"
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Use the Full-Text Indexing Wizard
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

@@ -2,15 +2,10 @@
 title: "sp_OAGetErrorInfo (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/16/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "database-engine"
-ms.service: ""
-ms.component: "system-stored-procedures"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: system-objects
 ms.topic: "language-reference"
 f1_keywords: 
   - "sp_OAGetErrorInfo_TSQL"
@@ -20,11 +15,9 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_OAGetErrorInfo"
 ms.assetid: ceecea08-456f-4819-85d9-ecc9647d7187
-caps.latest.revision: 16
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "craigg"
-ms.workload: "Inactive"
+author: stevestein
+ms.author: sstein
+manager: craigg
 ---
 # sp_OAGetErrorInfo (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,16 +41,16 @@ sp_OAGetErrorInfo [ objecttoken ]
  *objecttoken*  
  Is either the object token of an OLE object that was previously created by using **sp_OACreate** or it is NULL. If *objecttoken* is specified, error information for that object is returned. If NULL is specified, the error information for the entire batch is returned.  
   
- *source* **OUTPUT**  
+ _source_ **OUTPUT**  
  Is the source of the error information. If specified, it must be a local **char**, **nchar**, **varchar**, or **nvarchar** variable. The return value is truncated to fit the local variable if necessary.  
   
- *description* **OUTPUT**  
+ _description_ **OUTPUT**  
  Is the description of the error. If specified, it must be a local **char**, **nchar**, **varchar**, or **nvarchar** variable. The return value is truncated to fit the local variable if necessary.  
   
- *helpfile* **OUTPUT**  
+ _helpfile_ **OUTPUT**  
  Is the help file for the OLE object. If specified, it must be a local **char**, **nchar**, **varchar**, or **nvarchar** variable. The return value is truncated to fit the local variable if necessary.  
   
- *helpid* **OUTPUT**  
+ _helpid_ **OUTPUT**  
  Is the help file context ID. If specified, it must be a local **int** variable.  
   
 > [!NOTE]  

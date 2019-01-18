@@ -2,15 +2,9 @@
 title: "CLR Integration Programming Model Restrictions | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/17/2017"
-ms.prod: "sql-non-specified"
-ms.prod_service: "database-engine"
-ms.service: ""
-ms.component: "clr"
+ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-
-ms.tgt_pltfrm: ""
+ms.technology: clr
 ms.topic: "reference"
 helpviewer_keywords: 
   - "common language runtime [SQL Server], programming model restrictions"
@@ -18,11 +12,9 @@ helpviewer_keywords:
   - "programming model restrictions [CLR integration]"
   - "assemblies [CLR integration], runtime checks"
 ms.assetid: 2446afc2-9d21-42d3-9847-7733d3074de9
-caps.latest.revision: 22
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-ms.workload: "Inactive"
+author: "rothja"
+ms.author: "jroth"
+manager: craigg
 ---
 # CLR Integration Programming Model Restrictions
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -40,9 +32,9 @@ ms.workload: "Inactive"
   
 -   The assembly is one of the supported assemblies. For more information, see [Supported .NET Framework Libraries](../../../relational-databases/clr-integration/database-objects/supported-net-framework-libraries.md).  
   
--   You are using **CREATE ASSEMBLY FROM***\<location>,* and all the referenced assemblies and their dependencies are available in *\<location>*.  
+-   You are using **CREATE ASSEMBLY FROM**_\<location>,_ and all the referenced assemblies and their dependencies are available in *\<location>*.  
   
--   You are using **CREATE ASSEMBLY FROM***\<bytes …>,* and all the references are specified via space separated bytes.  
+-   You are using **CREATE ASSEMBLY FROM**_\<bytes ...>,_ and all the references are specified via space separated bytes.  
   
 ### EXTERNAL_ACCESS  
  All **EXTERNAL_ACCESS** assemblies must meet the following criteria:  
@@ -89,7 +81,7 @@ ms.workload: "Inactive"
  At runtime, the code assembly is checked for the following conditions. If any of these conditions are found, the managed code will not be allowed to run and an exception will be thrown.  
   
 ### UNSAFE  
- Loading an assembly—either explicitly by calling the **System.Reflection.Assembly.Load()** method from a byte array, or implicitly through the use of **Reflection.Emit** namespace—is not permitted.  
+ Loading an assembly-either explicitly by calling the **System.Reflection.Assembly.Load()** method from a byte array, or implicitly through the use of **Reflection.Emit** namespace-is not permitted.  
   
 ### EXTERNAL_ACCESS  
  All **UNSAFE** conditions are checked.  

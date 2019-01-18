@@ -2,15 +2,10 @@
 title: "COALESCE (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/30/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
-ms.service: ""
-ms.component: "t-sql|language-elements"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: t-sql
 ms.topic: "language-reference"
 f1_keywords: 
   - "COALESCE"
@@ -23,14 +18,16 @@ helpviewer_keywords:
   - "first nonnull expressions [SQL Server]"
   - "nonnull expressions"
 ms.assetid: fafc0dba-f8a8-4aad-9b7f-908e34b74d88
-caps.latest.revision: 52
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-ms.workload: "Active"
+author: "douglaslMS"
+ms.author: "douglasl"
+manager: craigg
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # COALESCE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+
+  > [!div class="nextstepaction"]
+  > [Please share your feedback about the SQL Docs Table of Contents!](https://aka.ms/sqldocsurvey)
 
 Evaluates the arguments in order and returns the current value of the first expression that initially does not evaluate to `NULL`. For example, `SELECT COALESCE(NULL, NULL, 'third_value', 'fourth_value');` returns the third value because the third value is the first value that is not null. 
   

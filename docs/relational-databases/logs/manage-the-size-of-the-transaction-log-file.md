@@ -2,26 +2,19 @@
 title: "Manage Transaction Log File Size | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/05/2018"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "database-engine"
-ms.service: ""
-ms.component: "logs"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "dbe-transaction-log"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: supportability
+ms.topic: conceptual
 helpviewer_keywords: 
   - "transaction logs [SQL Server], size management"
   - "manage log size"
   - "log size, manage"
 ms.assetid: 3a70e606-303f-47a8-96d4-2456a18d4297
-caps.latest.revision: 23
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-ms.workload: "Active"
+author: "MashaMSFT"
+ms.author: "mathoma"
+manager: craigg
 ---
 # Manage the size of the transaction log file
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -33,7 +26,7 @@ Monitor log space use by using [sys.dm_db_log_space_usage](../../relational-data
 For information about the current log file size, its maximum size, and the autogrow option for the file, you can also use the **size**, **max_size**, and **growth** columns for that log file in [sys.database_files](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md).  
   
 > [!IMPORTANT]
-> Avoid overloading the log disk. Ensure the log storage can withstand the [IOPS](http://wikipedia.org/wiki/IOPS) and low latency requirements for your transactional load. 
+> Avoid overloading the log disk. Ensure the log storage can withstand the [IOPS](https://wikipedia.org/wiki/IOPS) and low latency requirements for your transactional load. 
   
 ##  <a name="ShrinkSize"></a> Shrink log file size  
  To reduce the physical size of a physical log file, you must shrink the log file. This is useful when you know that a transaction log file contains unused space. You can shrink a log file only while the database is online, and at least one [virtual log file (VLF)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch) is free. In some cases, shrinking the log may not be possible until after the next log truncation.  
@@ -102,9 +95,9 @@ Following are some general recommendations when you are working with transaction
       |Starting with [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]|Data 1 MB. Log files 10%.|  
       |Prior to [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]|Data 10%. Log files 10%.|  
 
--   A small growth increment can generate too many small [VLFs](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch) and can reduce performance. 
+-   A small growth increment can generate too many small [VLFs](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch) and can reduce performance. To determine the optimal VLF distribution for the current transaction log size of all databases in a given instance, and the required growth increments to achieve the required size, see this [script](https://github.com/Microsoft/tigertoolbox/tree/master/Fixing-VLFs).
 
--   A large growth increment can generate too few and large [VLFs](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch) and can also affect performance. 
+-   A large growth increment can generate too few and large [VLFs](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch) and can also affect performance. To determine the optimal VLF distribution for the current transaction log size of all databases in a given instance, and the required growth increments to achieve the required size, see this [script](https://github.com/Microsoft/tigertoolbox/tree/master/Fixing-VLFs). 
 
 -   Even with autogrow enabled, you can receive a message that the transaction log is full, if it cannot grow fast enough to satisfy the needs of your query. For more information on changing the growth increment, see [ALTER DATABASE &#40;Transact-SQL&#41; File and Filegroup options](../../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md)
 

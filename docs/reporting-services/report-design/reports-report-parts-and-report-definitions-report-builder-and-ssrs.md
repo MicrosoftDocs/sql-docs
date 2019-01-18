@@ -1,27 +1,18 @@
 ---
 title: "Reports, Report Parts, and Report Definitions (Report Builder and SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
+ms.date: 05/24/2018
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
-ms.service: ""
-ms.component: "report-design"
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
+ms.technology: report-design
 
 
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "report definitions"
   - "reports"
 ms.assetid: 2d746550-f8cc-4e97-8a06-d0f03cffc18d
-caps.latest.revision: 26
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "kfile"
-ms.workload: "Inactive"
+author: maggiesMSFT
+ms.author: maggies
 ---
 # Reports, Report Parts, and Report Definitions (Report Builder and SSRS)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] uses a variety of terms to describe a paginated report in different states, including the initial definition, the published report, and the viewed report as it appears to the user.  
@@ -52,7 +43,7 @@ ms.workload: "Inactive"
  A published report is secured through role assignments using the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] role-based security model. Published reports are accessed through URLs, SharePoint Web parts, or the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] web portal, or you can navigate to and open them in Report Builder.  
   
 ### Report Snapshots  
- A report can also be published as a snapshot that contains both layout information and data as of the time the report was initially run. Report snapshots are not saved in a particular rendering format. Instead, report snapshots are rendered in a final viewing format (such as HTML) only when a user or an application requests it. For more information, see [Finding and Viewing Reports in Report Manager &#40;Report Builder and SSRS&#41;](../report-builder/finding-and-viewing-reports-with-a-browser-report-builder-and-ssrs.md).  
+ A report can also be published as a snapshot that contains both layout information and data as of the time the report was initially run. Report snapshots are not saved in a particular rendering format. Instead, report snapshots are rendered in a final viewing format (such as HTML) only when a user or an application requests it. For more information, see [Finding and Viewing Reports in the web portal](../report-builder/finding-and-viewing-reports-with-a-browser-report-builder-and-ssrs.md).  
   
 ## Rendered Reports  
  A rendered report is a fully processed report that contains both data and layout information in a format suitable for viewing (such as HTML). Until a report is rendered into an output format, it cannot be viewed. You can render a report by doing one of the following:  
@@ -69,7 +60,7 @@ ms.workload: "Inactive"
   
 ## See Also  
  [Report Authoring Concepts &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/report-authoring-concepts-report-builder-and-ssrs.md)   
- [Report Builder in SQL Server 2016](../../reporting-services/report-builder/report-builder-in-sql-server-2016.md)   
+ [Report Builder in SQL Server](../../reporting-services/report-builder/report-builder-in-sql-server-2016.md)   
  [Finding, Viewing, and Managing Reports &#40;Report Builder and SSRS &#41;](../../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)   
  [Export Reports &#40;Report Builder and SSRS&#41;](../../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md)  
   

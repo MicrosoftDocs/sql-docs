@@ -2,29 +2,20 @@
 title: "sp_articleview (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "database-engine"
-ms.service: ""
-ms.component: "system-stored-procedures"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
+ms.technology: replication
 ms.topic: "language-reference"
-applies_to: 
-  - "SQL Server"
 f1_keywords: 
   - "sp_articleview"
   - "sp_articleview_TSQL"
 helpviewer_keywords: 
   - "sp_articleview"
 ms.assetid: a3d63fd6-f360-4a2f-8a82-a0dc15f650b3
-caps.latest.revision: 29
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "craigg"
-ms.workload: "Inactive"
+author: "stevestein"
+ms.author: "sstein"
+manager: craigg
 ---
 # sp_articleview (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -50,16 +41,16 @@ sp_articleview [ @publication = ] 'publication'
 ```  
   
 ## Arguments  
- [ **@publication=**] **'***publication***'**  
+ [ **@publication=**] **'**_publication_**'**  
  Is the name of the publication that contains the article. *publication* is **sysname**, with no default.  
   
- [ **@article=**] **'***article***'**  
+ [ **@article=**] **'**_article_**'**  
  Is the name of the article. *article* is **sysname**, with no default.  
   
- [ **@view_name=**] **'***view_name***'**  
+ [ **@view_name=**] **'**_view_name_**'**  
  Is the name of the view that defines the published article. *view_name* is **nvarchar(386)**, with a default of NULL.  
   
- [ **@filter_clause=**] **'***filter_clause***'**  
+ [ **@filter_clause=**] **'**_filter_clause_**'**  
  Is a restriction (WHERE) clause that defines a horizontal filter. When entering the restriction clause, omit the WHERE keyword. *filter_clause* is **ntext**, with a default of NULL.  
   
  [ **@change_active =** ] *change_active*  
@@ -72,15 +63,15 @@ sp_articleview [ @publication = ] 'publication'
   
  **1** specifies that changes to the article may cause the snapshot to be invalid, and if there are existing subscriptions that would require a new snapshot, gives permission for the existing snapshot to be marked as obsolete and a new snapshot generated.  
   
- [ **@force_reinit_subscription = ]** *force_reinit_subscription*  
+ [ **@force_reinit_subscription = ]** _force_reinit_subscription_  
  Acknowledges that the action taken by this stored procedure may require existing subscriptions to be reinitialized. *force_reinit_subscription* is a **bit** with a default of **0**.  
   
  **0** specifies that changes to the article do not cause the subscription to be reinitialized. If the stored procedure detects that the change would require subscriptions to be reinitialized, an error occurs and no changes are made.  
   
  **1** specifies that changes to the article causes existing subscription to be reinitialized, and gives permission for the subscription reinitialization to occur.  
   
- [ **@publisher**= ] **'***publisher***'**  
- Specifies a non-[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] publisher. *publisher* is **sysname**, with a default of NULL.  
+ [ **@publisher**= ] **'**_publisher_**'**  
+ Specifies a non- [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] publisher. *publisher* is **sysname**, with a default of NULL.  
   
 > [!NOTE]  
 >  *publisher* should not be used when publishing from a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Publisher.  

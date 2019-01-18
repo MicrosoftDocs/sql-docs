@@ -1,31 +1,14 @@
 ---
 title: "Customize Mining Models and Structure | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/13/2017"
-ms.prod: analysis-services
-ms.prod_service: "analysis-services"
-ms.service: ""
-ms.component: ""
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
-  
-ms.component: data-mining
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "attributes [data mining]"
-  - "mining models [Analysis Services], properties"
-  - "algorithms [data mining]"
-  - "mining models [Analysis Services], creating"
-  - "mining models [Analysis Services], modifying"
-  - "mining models [Analysis Services], about data mining models"
-ms.assetid: 32c17b4f-e090-45f9-b3aa-ffa7084e928e
-caps.latest.revision: 23
-author: "Minewiskan"
-ms.author: "owend"
-manager: "kfile"
-ms.workload: "Inactive"
+ms.date: 05/01/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: data-mining
+ms.topic: conceptual
+ms.author: owend
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
 ---
 # Customize Mining Models and Structure
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -60,7 +43,7 @@ ms.workload: "Inactive"
   
 -   Removing columns that have a lot of unique values, or columns that are really reference data and not useful for analysis, such as addresses or middle names.  
   
- You don’t need to physically remove columns from the mining structure; you can just flag the column as **Ignore**. The column is removed from the mining model, but can still be used by other mining models in the structure, ore referenced in a drillthrough query.  
+ You don't need to physically remove columns from the mining structure; you can just flag the column as **Ignore**. The column is removed from the mining model, but can still be used by other mining models in the structure, ore referenced in a drillthrough query.  
   
 ### Creating Aliases for Model Columns  
  When [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] creates the mining model, it uses the same column names that are in the mining structure. You can add an alias to any column in the mining model. This might make it easier to understand the column contents or usage, or make the name shorter for convenience in creating queries. Aliases are also helpful when you want to create a copy of a column and name it something descriptive.  

@@ -1,44 +1,37 @@
 ---
 title: "sys.servers (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "06/10/2016"
-ms.prod: "sql-non-specified"
+ms.date: "09/07/2018"
+ms.prod: sql
 ms.prod_service: "database-engine"
-ms.service: ""
-ms.component: "system-catalog-views"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: system-objects
 ms.topic: "language-reference"
 f1_keywords: 
-  - "servers_TSQL"
-  - "sys.servers_TSQL"
-  - "servers"
-  - "sys.servers"
+  - servers_TSQL
+  - sys.servers_TSQL
+  - servers
+  - sys.servers
 dev_langs: 
   - "TSQL"
 helpviewer_keywords: 
   - "sys.servers catalog view"
 ms.assetid: 4e774ed9-4e83-4726-9f1d-8efde8f9feff
-caps.latest.revision: 53
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "craigg"
-ms.workload: "On Demand"
+author: stevestein
+ms.author: sstein
+manager: craigg
+monikerRange: "=azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017"
 ---
 # sys.servers (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
 
   Contains a row per linked or remote server registered, and a row for the local server that has **server_id** = 0.  
-  
-  
+
 |Column name|Data type|Description|  
 |-----------------|---------------|-----------------|  
 |**server_id**|**int**|Local ID of linked server.|  
-|**name**|**sysname**|When **server_id** = 0, this is the server name.<br /><br /> When **server_id** >0 , this is the local name of linked server.|  
-|**product**|**sysname**|Product name of the linked server. "SQL Server" indicates this is another instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
+|**name**|**sysname**|When **server_id** = 0, the returned value is the server name.<br /><br /> When **server_id** > 0, the returned value is the local name of linked server.|  
+|**product**|**sysname**|Product name of the linked server. A value of "SQL Server" indicates another instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |**provider**|**sysname**|OLE DB provider name for connecting to linked server.|  
 |**data_source**|**nvarchar(4000)**|OLE DB data source connection property.|  
 |**location**|**nvarchar(4000)**|OLE DB location connection property. NULL if none.|  
@@ -67,13 +60,12 @@ ms.workload: "On Demand"
   
  Permissions are not required to view the local server (**server_id** = 0).  
   
- When you create a linked or remote server, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] creates a default login mapping to the **public** server role. This means that by default, all logins can view all linked and remote servers. To restrict visibility to these servers, remove the default login mapping by executing [sp_droplinkedsrvlogin](../../relational-databases/system-stored-procedures/sp-droplinkedsrvlogin-transact-sql.md) and specifying NULL for the *locallogin* parameter.  
+ When you create a linked or remote server, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] creates a default login mapping to the **public** server role. Default login mapping means that all logins can view all linked and remote servers. To restrict visibility to these servers, remove the default login mapping by executing [sp_droplinkedsrvlogin](../../relational-databases/system-stored-procedures/sp-droplinkedsrvlogin-transact-sql.md) and specifying NULL for the *locallogin* parameter.  
   
- If the default login mapping is deleted, only users that have been explicitly added as a linked login or remote login can view the linked or remote servers for which they have a login. To view all linked and remote servers after the default login mapping is deleted requires the following permissions:  
+ If the default login mapping is deleted, only users that have been explicitly added as a linked login or remote login can view the linked or remote servers for which they have a login.  The following permissions are required to view all linked and remote servers after the default login mapping:  
   
--   ALTER ANY LINKED SERVER or ALTER ANY LOGIN ON SERVER  
-  
--   Membership in the **setupadmin** or **sysadmin** fixed server roles  
+- `ALTER ANY LINKED SERVER` or `ALTER ANY LOGIN ON SERVER`  
+- Membership in the **setupadmin** or **sysadmin** fixed server roles  
   
 ## See Also  
  [Catalog Views &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   

@@ -1,22 +1,15 @@
 ---
 title: "Reporting Services site settings and site features (SharePoint mode) | Microsoft Docs"
-ms.custom: ""
-ms.date: "09/25/2017"
+ms.date: 09/25/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
-ms.service: ""
-ms.component: "report-server-sharepoint"
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
+ms.technology: report-server-sharepoint
 
 
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-author: "markingmyname"
-ms.author: "maghan"
-manager: "kfile"
-ms.workload: "Inactive"
+ms.topic: conceptual
+author: markingmyname
+ms.author: maghan
+monikerRange: ">=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions"
 ---
 # Reporting Services site settings and site features (SharePoint mode)
 
@@ -37,7 +30,7 @@ Reporting Services SharePoint mode has several site level custom features and si
   
 ## Open the Reporting Services site settings page
   
-1.  From the SharePoint site’s **Site Actions** menu, select **Site Settings**.  
+1.  From the SharePoint site's **Site Actions** menu, select **Site Settings**.  
   
 2.  In the **Reporting Services** section, select **Reporting Services Site Settings**.  
   

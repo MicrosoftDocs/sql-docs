@@ -2,15 +2,10 @@
 title: "sp_primarykeys (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "database-engine"
-ms.service: ""
-ms.component: "system-stored-procedures"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: system-objects
 ms.topic: "language-reference"
 f1_keywords: 
   - "sp_primarykeys_TSQL"
@@ -20,11 +15,9 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_primarykeys"
 ms.assetid: 0f76dd31-5b7b-4209-9e2e-b9ed5cac164d
-caps.latest.revision: 27
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "craigg"
-ms.workload: "Inactive"
+author: stevestein
+ms.author: sstein
+manager: craigg
 ---
 # sp_primarykeys (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,16 +37,16 @@ sp_primarykeys [ @table_server = ] 'table_server'
 ```  
   
 ## Arguments  
- [ **@table_server =** ] **'***table_server'*  
+ [ **@table_server =** ] **'**_table_server'_  
  Is the name of the linked server from which to return primary key information. *table_server* is **sysname**, with no default.  
   
- [ **@table_name =** ] **'***table_name***'**  
+ [ **@table_name =** ] **'**_table_name_**'**  
  Is the name of the table for which to provide primary key information. *table_name*is **sysname**, with a default of NULL.  
   
- [ **@table_schema =** ] **'***table_schema***'**  
+ [ **@table_schema =** ] **'**_table_schema_**'**  
  Is the table schema. *table_schema* is **sysname**, with a default of NULL. In the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] environment, this corresponds to the table owner.  
   
- [ **@table_catalog =** ] **'***table_catalog***'**  
+ [ **@table_catalog =** ] **'**_table_catalog_**'**  
  Is the name of the catalog in which the specified *table_name* resides. In the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] environment, this corresponds to the database name. *table_catalog* is **sysname**, with a default of NULL.  
   
 ## Return Code Values  

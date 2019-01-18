@@ -2,15 +2,10 @@
 title: "CREATE PROCEDURE (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "09/06/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
-ms.service: ""
-ms.component: "t-sql|statements"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: t-sql
 ms.topic: "language-reference"
 f1_keywords: 
   - "PROC"
@@ -48,16 +43,18 @@ helpviewer_keywords:
   - "automatic stored procedure execution"
   - "creating stored procedures"
 ms.assetid: afe3d86d-c9ab-44e4-b74d-4e3dbd9cc58c
-caps.latest.revision: 180
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "craigg"
-ms.workload: "Active"
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # CREATE PROCEDURE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  Creates a [!INCLUDE[tsql](../../includes/tsql-md.md)] or common language runtime (CLR) stored procedure in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], Azure SQL Data Warehouse and Parallel Data Warehouse. Stored procedures are similar to procedures in other programming languages in that they can:  
+> [!div class="nextstepaction"]
+> [Please share your feedback about the SQL Docs Table of Contents!](https://aka.ms/sqldocsurvey)
+
+Creates a [!INCLUDE[tsql](../../includes/tsql-md.md)] or common language runtime (CLR) stored procedure in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], Azure SQL Data Warehouse and Parallel Data Warehouse. Stored procedures are similar to procedures in other programming languages in that they can:  
   
 -   Accept input parameters and return multiple values in the form of output parameters to the calling procedure or batch.  
   
@@ -76,7 +73,7 @@ Jump to [Simple Examples](#Simple) to skip the details of the syntax and get to 
   
 ## Syntax  
   
-```  
+```sql
 -- Transact-SQL Syntax for Stored Procedures in SQL Server and Azure SQL Database  
   
 CREATE [ OR ALTER ] { PROC | PROCEDURE } 
@@ -95,7 +92,7 @@ AS { [ BEGIN ] sql_statement [;] [ ...n ] [ END ] }
     [ EXECUTE AS Clause ]  
 ```  
   
-```  
+```sql
 -- Transact-SQL Syntax for CLR Stored Procedures  
   
 CREATE [ OR ALTER ] { PROC | PROCEDURE } 
@@ -108,7 +105,7 @@ AS { EXTERNAL NAME assembly_name.class_name.method_name }
 [;]  
 ```  
   
-```  
+```sql
 -- Transact-SQL Syntax for Natively Compiled Stored Procedures  
   
 CREATE [ OR ALTER ] { PROC | PROCEDURE } [schema_name.] procedure_name  
@@ -132,7 +129,7 @@ sql_statement [;] [ ... n ]
   | [ DELAYED_DURABILITY = { OFF | ON } ]  
 ```  
   
-```  
+```sql
 -- Transact-SQL Syntax for Stored Procedures in Azure SQL Data Warehouse
 -- and Parallel Data Warehouse  
   
@@ -178,7 +175,7 @@ OR ALTER
   
  Parameters cannot be declared if FOR REPLICATION is specified.  
   
- [ *type_schema_name***.** ] *data_type*  
+ [ _type\_schema\_name_**.** ] *data_type*  
  The data type of the parameter and the schema to which the data type belongs.  
   
 **Guidelines for [!INCLUDE[tsql](../../includes/tsql-md.md)] procedures**:  
@@ -217,7 +214,7 @@ RECOMPILE
  To instruct the [!INCLUDE[ssDE](../../includes/ssde-md.md)] to discard query plans for individual queries inside a procedure, use the RECOMPILE query hint in the definition of the query. For more information, see [Query Hints &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-query.md).  
   
 ENCRYPTION  
- **Applies to**: SQL Server ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
+ **Applies to**: SQL Server ( [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
   
  Indicates that [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] converts the original text of the CREATE PROCEDURE statement to an obfuscated format. The output of the obfuscation is not directly visible in any of the catalog views in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Users who have no access to system tables or database files cannot retrieve the obfuscated text. However, the text is available to privileged users who can either access system tables over the [DAC port](../../database-engine/configure-windows/diagnostic-connection-for-database-administrators.md) or directly access database files. Also, users who can attach a debugger to the server process can retrieve the decrypted procedure from memory at runtime. For more information about accessing system metadata, see [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
@@ -228,12 +225,12 @@ ENCRYPTION
 EXECUTE AS *clause*  
  Specifies the security context under which to execute the procedure.  
   
- For natively compiled stored procedures, starting [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] and in [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], there are no limitations on the EXECUTE AS clause. In [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] the SELF, OWNER, and *‘user_name’* clauses are supported with natively compiled stored procedures.  
+ For natively compiled stored procedures, starting [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] and in [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], there are no limitations on the EXECUTE AS clause. In [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] the SELF, OWNER, and *'user_name'* clauses are supported with natively compiled stored procedures.  
   
  For more information, see [EXECUTE AS Clause &#40;Transact-SQL&#41;](../../t-sql/statements/execute-as-clause-transact-sql.md).  
   
 FOR REPLICATION  
- **Applies to**: SQL Server ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
+ **Applies to**: SQL Server ( [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
   
  Specifies that the procedure is created for replication. Consequently, it cannot be executed on the Subscriber. A procedure created with the FOR REPLICATION option is used as a procedure filter and is executed only during replication. Parameters cannot be declared if FOR REPLICATION is specified. FOR REPLICATION cannot be specified for CLR procedures. The RECOMPILE option is ignored for procedures created with FOR REPLICATION.  
   
@@ -242,7 +239,7 @@ FOR REPLICATION
  { [ BEGIN ] *sql_statement* [;] [ ...*n* ] [ END ] }  
  One or more [!INCLUDE[tsql](../../includes/tsql-md.md)] statements comprising the body of the procedure. You can use the optional BEGIN and END keywords to enclose the statements. For information, see the Best Practices, General Remarks, and Limitations and Restrictions sections that follow.  
   
-EXTERNAL NAME *assembly_name***.***class_name***.***method_name*  
+EXTERNAL NAME _assembly\_name_**.**_class\_name_**.**_method\_name_  
  **Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
   
  Specifies the method of a [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] assembly for a CLR procedure to reference. *class_name* must be a valid  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] identifier and must exist as a class in the assembly. If the class has a namespace-qualified name that uses a period (**.**) to separate namespace parts, the class name must be delimited by using brackets (**[]**) or quotation marks (**""**). The specified method must be a static method of the class.  
@@ -359,7 +356,7 @@ See [Examples](#Examples) towards the end of this topic for many more examples.
   
 -   Use the SET NOCOUNT ON statement as the first statement in the body of the procedure. That is, place it just after the AS keyword. This turns off messages that [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sends back to the client after any SELECT, INSERT, UPDATE, MERGE, and DELETE statements are executed. Overall performance of the database and application is improved by eliminating this unnecessary network overhead. For information, see [SET NOCOUNT &#40;Transact-SQL&#41;](../../t-sql/statements/set-nocount-transact-sql.md).  
   
--   Use schema names when creating or referencing database objects in the procedure. It takes less processing time for the [!INCLUDE[ssDE](../../includes/ssde-md.md)] to resolve object names if it does not have to search multiple schemas. It also prevents permission and access problems caused by a user’s default schema being assigned when objects are created without specifying the schema.  
+-   Use schema names when creating or referencing database objects in the procedure. It takes less processing time for the [!INCLUDE[ssDE](../../includes/ssde-md.md)] to resolve object names if it does not have to search multiple schemas. It also prevents permission and access problems caused by a user's default schema being assigned when objects are created without specifying the schema.  
   
 -   Avoid wrapping functions around columns specified in the WHERE and JOIN clauses. Doing so makes the columns non-deterministic and prevents the query processor from using indexes.  
   
@@ -371,7 +368,7 @@ See [Examples](#Examples) towards the end of this topic for many more examples.
   
 -   Use explicit transactions by using BEGIN/COMMIT TRANSACTION and keep transactions as short as possible. Longer transactions mean longer record locking and a greater potential for deadlocking.  
   
--   Use the [!INCLUDE[tsql](../../includes/tsql-md.md)] TRY…CATCH feature for error handling inside a procedure. TRY…CATCH can encapsulate an entire block of [!INCLUDE[tsql](../../includes/tsql-md.md)] statements. This not only creates less performance overhead, it also makes error reporting more accurate with significantly less programming.  
+-   Use the [!INCLUDE[tsql](../../includes/tsql-md.md)] TRY...CATCH feature for error handling inside a procedure. TRY...CATCH can encapsulate an entire block of [!INCLUDE[tsql](../../includes/tsql-md.md)] statements. This not only creates less performance overhead, it also makes error reporting more accurate with significantly less programming.  
   
 -   Use the DEFAULT keyword on all table columns that are referenced by CREATE TABLE or ALTER TABLE [!INCLUDE[tsql](../../includes/tsql-md.md)] statements in the body of the procedure. This prevents passing NULL to columns that do not allow null values.  
   
@@ -421,7 +418,7 @@ See [Examples](#Examples) towards the end of this topic for many more examples.
   
  You cannot specify a function name as a parameter default value or as the value passed to a parameter when executing a procedure. However, you can pass a function as a variable as shown in the following example.  
   
-```  
+```sql
 -- Passing the function value as a variable.  
 DECLARE @CheckDate datetime = GETDATE();  
 EXEC dbo.uspGetWhereUsedProductID 819, @CheckDate;   
@@ -495,7 +492,7 @@ GO
 |[Basic Syntax](#BasicSyntax)|CREATE PROCEDURE|  
 |[Passing parameters](#Parameters)|@parameter <br> &nbsp;&nbsp;  • = default <br> &nbsp;&nbsp; • OUTPUT <br> &nbsp;&nbsp; • table-valued parameter type <br> &nbsp;&nbsp; • CURSOR VARYING|  
 |[Modifying data by using a stored procedure](#Modify)|UPDATE|  
-|[Error Handling](#Error)|TRY…CATCH|  
+|[Error Handling](#Error)|TRY...CATCH|  
 |[Obfuscating the procedure definition](#Encrypt)|WITH ENCRYPTION|  
 |[Forcing the Procedure to Recompile](#Recompile)|WITH RECOMPILE|  
 |[Setting the Security Context](#Security)|EXECUTE AS|  
@@ -584,7 +581,7 @@ GO
   
  The `uspGetEmployees` procedure can be executed in the following ways:  
   
-```  
+```sql
 EXECUTE HumanResources.uspGetEmployees N'Ackerman', N'Pilar';  
 -- Or  
 EXEC HumanResources.uspGetEmployees @LastName = N'Ackerman', @FirstName = N'Pilar';  
@@ -794,8 +791,8 @@ EXEC HumanResources.Update_VacationHours 40;
 ###  <a name="Error"></a> Error Handling  
  Examples in this section demonstrate methods to handle errors that might occur when the stored procedure is executed.  
   
-#### J. Using TRY…CATCH  
- The following example using the TRY…CATCH construct to return error information caught during the execution of a stored procedure.  
+#### J. Using TRY...CATCH  
+ The following example using the TRY...CATCH construct to return error information caught during the execution of a stored procedure.  
   
 ```sql  
 CREATE PROCEDURE Production.uspDeleteWorkOrder ( @WorkOrderID int )  
@@ -984,6 +981,7 @@ BEGIN
     ORDER BY AnnualSales DESC, ResellerName ASC;  
 END  
 ;  
+GO
   
 --Show 10 Top Resellers  
 EXEC Get10TopResellers;  

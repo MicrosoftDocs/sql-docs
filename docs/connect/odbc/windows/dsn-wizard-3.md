@@ -2,22 +2,15 @@
 title: "Data Source Wizard Screen 3 (ODBC Driver for SQL Server) | Microsoft Docs"
 ms.custom: ""
 ms.date: "09/27/2017"
-ms.prod: "sql-non-specified"
-ms.prod_service: "drivers"
-ms.service: ""
-ms.component: "odbc"
+ms.prod: sql
+ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "drivers"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: connectivity
+ms.topic: conceptual
 ms.assetid: 76326eeb-1144-4b9f-85db-50524c655d30
-caps.latest.revision: 22
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
-ms.workload: "Inactive"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # Data Source Wizard Screen 3
 
@@ -78,6 +71,10 @@ Alters the behavior of **Multi-subnet failover** to allow for faster reconnectio
 ### Column Encryption.
 
 Enables automatic decryption and encryption of data transfers to and from columns encrypted with the [Always Encrypted](../../../connect/odbc/using-always-encrypted-with-the-odbc-driver.md) feature available in SQL Server 2016 and later.
+
+### Use FMTONLY metadata discovery:
+
+Use the legacy SET FMTONLY metadata discovery method when connecting to SQL Server 2012 or newer. Enable this only when using queries not supported by [sp_describe_first_result_set](../../../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md), such as those containing temporary tables. 
 
 ### Next
 

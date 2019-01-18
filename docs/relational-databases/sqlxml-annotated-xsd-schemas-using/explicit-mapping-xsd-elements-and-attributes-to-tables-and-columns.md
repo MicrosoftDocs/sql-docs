@@ -2,15 +2,10 @@
 title: "Explicit Mapping XSD Elements and Attributes to Tables and Columns | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.service: ""
-ms.component: "sqlxml"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "dbe-xml"
-ms.tgt_pltfrm: ""
+ms.technology: xml
 ms.topic: "reference"
 helpviewer_keywords: 
   - "explicit schema mapping [SQLXML]"
@@ -31,11 +26,10 @@ helpviewer_keywords:
   - "table mapping [SQLXML], explicit mapping"
   - "element/attribute mapping [SQLXML]"
 ms.assetid: 7a5ebeb6-7322-4141-a307-ebcf95976146
-caps.latest.revision: 28
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
-ms.workload: "Inactive"
+manager: craigg
+monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Explicit Mapping XSD Elements and Attributes to Tables and Columns
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

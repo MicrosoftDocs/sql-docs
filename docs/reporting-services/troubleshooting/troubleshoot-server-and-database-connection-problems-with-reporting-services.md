@@ -1,24 +1,15 @@
 ---
 title: "Troubleshoot Server and Database Connection Problems with Reporting Services | Microsoft Docs"
-ms.custom: ""
-ms.date: "02/28/2016"
+ms.date: 02/28/2016
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
-ms.service: ""
-ms.component: "troubleshooting"
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
+ms.technology: troubleshooting
 
 
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 ms.assetid: 8bbb88df-72fd-4c27-91b7-b255afedd345
-caps.latest.revision: 6
-author: "markingmyname"
-ms.author: "maghan"
-manager: "kfile"
-ms.workload: "On Demand"
+author: markingmyname
+ms.author: maghan
 ---
 # Troubleshoot Server and Database Connection Problems with Reporting Services
 Use this topic to troubleshoot problems that you experience when connecting to a report server. This topic also provides information about "Unexpected error" messages. For more information about data source configuration and configuring report server connection information, see [Specify Credential and Connection Information for Report Data Sources](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md) and [Configure a Report Server Database Connection (SSRS Configuration Manager)](../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md).  
@@ -36,10 +27,10 @@ This error occurs when credentials are passed across multiple computer connectio
 When connecting to SQL Server, this failure may be caused by the fact that under the default settings SQL Server does not allow remote connections. (provider: Named Pipes Provider, error: 40 - Could not open a connection to SQL Server). This error is returned by the instance of the Database Engine that hosts the report server database. In most cases, this error occurs because the SQL Server service is stopped. Or, if you are using SQL Server Express with Advanced Services or a named instance, this error will occur if the report server URL or connection string for the report server database is not correct. To work through these issues, do the following:  
   
 * Verify that the SQL Server (**MSSQLSERVER**) service is started. On the computer that hosts the instance of the Database Engine, click Start, click Administrative Tools, click Services, and scroll to SQL Server (**MSSQLSERVER**). If it is not started, right-click the service, select Properties, in Startup Type select Automatic, click Apply, click Start, and then click OK.   
-* Verify that the report server URL and report server database connection string is correct. If Reporting Services or the Database Engine was installed as a named instance, the default connection string that is created during Setup will include the instance name. For example, if you installed a default instance of SQL Server Express with Advanced Services on a server named DEVSRV01, the Report Manager URL is DEVSRV01\Reports$SQLEXPRESS. Furthermore, the database server name in the connection string will resemble DEVSRV01\SQLEXPRESS. For more information about URLs and data source connection strings for SQL Server Express, see [Reporting Services in SQL Server Express with Advanced Services](http://technet.microsoft.com/library/ms365166(v=sql.105).aspx). To verify the connection string for the report server database, start the Reporting Services Configuration tool and view the Database Setup page.  
+* Verify that the report server URL and report server database connection string is correct. If Reporting Services or the Database Engine was installed as a named instance, the default connection string that is created during Setup will include the instance name. For example, if you installed a default instance of SQL Server Express with Advanced Services on a server named DEVSRV01, the Report Manager URL is DEVSRV01\Reports$SQLEXPRESS. Furthermore, the database server name in the connection string will resemble DEVSRV01\SQLEXPRESS. For more information about URLs and data source connection strings for SQL Server Express, see [Reporting Services in SQL Server Express with Advanced Services](https://technet.microsoft.com/library/ms365166(v=sql.105).aspx). To verify the connection string for the report server database, start the Reporting Services Configuration tool and view the Database Setup page.  
   
 ### A connection cannot be made. Ensure that the server is running.  
-This error is returned by ADOMD.NET provider. There are several reasons why this error can occur. If you specified the server as "localhost", try specifying the server name instead. This error can also occur if memory cannot be allocated to the new connection. For more information, see [Knowledge Base Article 912017 - Error message when you connect to an instance of SQL Server 2005 Analysis Services:](http://support.microsoft.com/kb/912017).  
+This error is returned by ADOMD.NET provider. There are several reasons why this error can occur. If you specified the server as "localhost", try specifying the server name instead. This error can also occur if memory cannot be allocated to the new connection. For more information, see [Knowledge Base Article 912017 - Error message when you connect to an instance of SQL Server 2005 Analysis Services:](https://support.microsoft.com/kb/912017).  
   
 If the error also includes "No such host is known", it indicates that the Analysis Services server is not available or is refusing the connection. If the Analysis Services server is installed as a named instance on a remote computer, you might have to run the SQL Server Browser service to get the port number used by that instance.  
   
@@ -64,7 +55,7 @@ Cannot connect to \<your server name>. The Reporting Services WMI provider is no
   
 To resolve this error, you should reinstall the software. For all other cases, as a temporary work-around, you can connect to the report server through the SOAP endpoint:  
   
-* In the **Connect to Server** dialog box in Management Studio, in **Server Name**, type the report server URL. By default, it is `http://<your server name>/reportserver`. Or if you are using SQL Server 2008 Express with Advanced Services, it is `http://<your server name>/reportserver$sqlexpress`.  
+* In the **Connect to Server** dialog box in Management Studio, in **Server Name**, type the report server URL. By default, it is `https://<your server name>/reportserver`. Or if you are using SQL Server 2008 Express with Advanced Services, it is `https://<your server name>/reportserver$sqlexpress`.  
   
 To resolve the error so that you can connect using the WMI provider, you should run Setup to repair Reporting Services, or reinstall Reporting Services.  
   
@@ -123,5 +114,5 @@ When you create the report server databases, **ReportServer** and **ReportServer
   
   
 
-[!INCLUDE[feedback_stackoverflow_msdn_connect](../../includes/feedback-stackoverflow-msdn-connect.md)]
+[!INCLUDE[feedback_stackoverflow_msdn_connect](../../includes/feedback-stackoverflow-msdn-connect-md.md)]
 

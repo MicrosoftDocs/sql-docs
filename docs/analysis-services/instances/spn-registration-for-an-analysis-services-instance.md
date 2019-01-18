@@ -1,25 +1,14 @@
 ---
 title: "SPN registration for an Analysis Services instance | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: analysis-services
-ms.prod_service: "analysis-services"
-ms.service: ""
-ms.component: ""
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
-  
-ms.component: multidimensional-tabular
-ms.component: data-mining
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-ms.assetid: 9e78dc37-a3f0-415d-847c-32fec69efa8c
-caps.latest.revision: 16
-author: "Minewiskan"
-ms.author: "owend"
-manager: "kfile"
-ms.workload: "On Demand"
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom:
+ms.topic: conceptual
+ms.author: owend
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
 ---
 # SPN registration for an Analysis Services instance
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -57,7 +46,7 @@ ms.workload: "On Demand"
  [SPN registration for SSAS instances listening on fixed ports](#bkmk_spnFixedPorts)  
   
 ##  <a name="bkmk_scnearios"></a> When SPN registration is required  
- Any client connection that specifies “SSPI=Kerberos” on the connection string will introduce SPN registration requirements for an Analysis Services instance.  
+ Any client connection that specifies "SSPI=Kerberos" on the connection string will introduce SPN registration requirements for an Analysis Services instance.  
   
  SPN registration is required under the following circumstances. For more detailed information, see [Configure Analysis Services for Kerberos constrained delegation](../../analysis-services/instances/configure-analysis-services-for-kerberos-constrained-delegation.md).  
   
@@ -75,7 +64,7 @@ ms.workload: "On Demand"
 |Element|Description|  
 |-------------|-----------------|  
 |Service class|MSOLAPSvc.3 identifies the service as an Analysis Services instance. The .3 is a reference to the version of the XMLA-over-TCP/IP protocol used in Analysis Services transmissions. It is unrelated to product release. As such, MSOLAPSvc.3 is the correct service class for SQL Server 2005, 2008, 2008 R2, 2012 and any future release of Analysis Services until the protocol itself is revised.|  
-|Host-name|Identifies the computer on which the service is running. This can be a fully-qualified domain name or a NetBIOS name. You should register an SPN for both.<br /><br /> When registering an SPN for the NetBIOS name of a server, be sure to use `SetupSPN –S` to check for duplicate registration. NetBIOS names are not guaranteed to be unique in a forest, and having a duplicate SPN registration will cause the connection to fail.<br /><br /> For Analysis Services load balanced clusters, the host name should be the virtual name assigned to the cluster.<br /><br /> Never create an SPN using the IP address. Kerberos uses the DNS resolution capabilities of the domain. Specifying an IP address bypasses that capability.|  
+|Host-name|Identifies the computer on which the service is running. This can be a fully-qualified domain name or a NetBIOS name. You should register an SPN for both.<br /><br /> When registering an SPN for the NetBIOS name of a server, be sure to use `SetupSPN -S` to check for duplicate registration. NetBIOS names are not guaranteed to be unique in a forest, and having a duplicate SPN registration will cause the connection to fail.<br /><br /> For Analysis Services load balanced clusters, the host name should be the virtual name assigned to the cluster.<br /><br /> Never create an SPN using the IP address. Kerberos uses the DNS resolution capabilities of the domain. Specifying an IP address bypasses that capability.|  
 |Port-number|Although the port number is part of SPN syntax, you never specify a port number when registering an Analysis Services SPN. The colon ( : ) character, typically used to provide a port number in standard SPN syntax, is used by Analysis Services to specify the instance name. For an Analysis Services instance, the port is assumed to be the default port (TCP 2383) or a port assigned by the SQL Server Browser service (TCP 2382).|  
 |Instance-name|Analysis Services is a replicable service that can be installed multiple times on the same computer. Each instance is identified through its instance name.<br /><br /> The instance name is prefixed with a colon ( : ) character. For example, given a host computer named SRV01 and a named instance of SSAS-Tabular, the SPN should be SRV01:SSAS-Tabular.<br /><br /> Note that the syntax for specifying a named Analysis Services instance differs from that used by other SQL Server instances. Other services uses a backslash ( \ ) to append the instance name in an SPN.|  
 |Service-account|This is the startup account of the **MSSQLServerOLAPService** Windows service. It can be a Windows domain user account, virtual account, managed service account (MSA) or a built-in account such as a per-service SID, NetworkService, or LocalSystem. A Windows domain user account can be formatted as domain\user or user@domain.|  
@@ -114,7 +103,7 @@ Setspn -s MSOLAPSvc.3/AW-SRV02.AdventureWorks.com:AW-FINANCE AW-SRV02
  This example shows **setspn** syntax for Analysis Services default instance running under a domain user account, **SSAS-Service**, in the AdventureWorks domain.  
   
 ```  
-Setspn –s msolapsvc.3\AW-SRV01.Adventureworks.com AdventureWorks\SSAS-Service  
+Setspn -s msolapsvc.3/AW-SRV01.Adventureworks.com AdventureWorks\SSAS-Service  
 ```  
   
 > [!TIP]  
@@ -148,13 +137,13 @@ Setspn -S MSOLAPDisco.3/AW-SRV01.AdventureWorks.com AW-SRV01
  **SPN syntax for an Analysis Services cluster**  
   
 ```  
-Setspn –s msolapsvc.3/<virtualname.FQDN > <domain user account>  
+Setspn -s msolapsvc.3/<virtualname.FQDN > <domain user account>  
 ```  
   
  Recall that nodes in an Analysis Services cluster are required to use the default port (TCP 2383) and run under the same domain user account so that each node has the same SID. See [How to Cluster SQL Server Analysis Services](http://msdn.microsoft.com/library/dn736073.aspx) for more information.  
   
 ##  <a name="bkmk_spnHTTP"></a> SPN registration for SSAS instances configured for HTTP access  
- Depending on solution requirements, you might have configured Analysis Services for HTTP access. If your solution includes IIS as a middle tier component, and Kerberos authentication is a solution requirement, you might need to manually register an SPN for IIS. For more information, see “Configure the settings on the computer running IIS” in [How to configure SQL Server 2008 Analysis Services and SQL Server 2005 Analysis Services to use Kerberos authentication](http://support.microsoft.com/kb/917409).  
+ Depending on solution requirements, you might have configured Analysis Services for HTTP access. If your solution includes IIS as a middle tier component, and Kerberos authentication is a solution requirement, you might need to manually register an SPN for IIS. For more information, see "Configure the settings on the computer running IIS" in [How to configure SQL Server 2008 Analysis Services and SQL Server 2005 Analysis Services to use Kerberos authentication](http://support.microsoft.com/kb/917409).  
   
  In terms of SPN registration for the Analysis Services instance, there is no difference between an instance configured for TCP or HTTP. The connection to Analysis Services from IIS, using the MSMDPUMP ISAPI extension, is always TCP.  
   
@@ -177,7 +166,7 @@ Setspn –s msolapsvc.3/<virtualname.FQDN > <domain user account>
  [Service Accounts Step-by-Step Guide](http://technet.microsoft.com/library/dd548356\(WS.10\).aspx)   
  [Configure Windows Service Accounts and Permissions](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)   
  [How to use SPNs when you configure Web applications that are hosted on Internet Information Services](http://support.microsoft.com/kb/929650)   
- [what’s new in service accounts](http://technet.microsoft.com/library/dd367859\(WS.10\).aspx)   
+ [what's new in service accounts](http://technet.microsoft.com/library/dd367859\(WS.10\).aspx)   
  [Configure Kerberos authentication for SharePoint 2010 Products (white paper)](http://technet.microsoft.com/library/ff829837.aspx)  
   
   

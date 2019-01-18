@@ -1,18 +1,12 @@
 ---
 title: "Change Map Legends-Color Scale-Associated Rules in Report Builder-SSRS | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/07/2017"
+ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
-ms.service: ""
-ms.component: "report-design"
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
+ms.technology: report-design
 
 
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "sql13.rtp.rptdesigner.mapcolorscaleproperties.labels.f1"
   - "sql13.rtp.rptdesigner.mappointlayerproperties.typerules.f1"
@@ -37,11 +31,8 @@ f1_keywords:
   - "10540"
   - "10517"
 ms.assetid: a1d691b2-c5ae-420f-af60-b7c54a7385a4
-caps.latest.revision: 12
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "kfile"
-ms.workload: "Inactive"
+author: maggiesMSFT
+ms.author: maggies
 ---
 # Change Map Legends, Color Scale, and Associated Rules (Report Builder and SSRS)
   In a [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] paginated report, a map can contain map legends, a color scale, and a distance scale. These parts of a map help users interpret the data visualization on the map.  
@@ -60,7 +51,7 @@ ms.workload: "Inactive"
   
 #### To change the position of a legend relative to the viewport  
   
-1.  In Design view, right-click the legend and open the *\<report item>***Properties** page.  
+1.  In Design view, right-click the legend and open the _\<report item>_**Properties** page.  
   
 2.  In **Position**, click the location that specifies where to display the legend relative to the viewport.  
   
@@ -106,7 +97,7 @@ ms.workload: "Inactive"
   
 1.  In Design view, click the map until the Map pane appears.  
   
-2.  Right-click the layer that has the data that you want and then click *\<map element type>***Color Rule**.  
+2.  Right-click the layer that has the data that you want and then click _\<map element type>_**Color Rule**.  
   
 3.  Click **Legend**.  
   
@@ -120,7 +111,7 @@ ms.workload: "Inactive"
   
 1.  In Design view, click the map until the Map pane appears.  
   
-2.  Right-click the layer that has the data that you want and then click *\<map element type>***Color Rule**.  
+2.  Right-click the layer that has the data that you want and then click _\<map element type>_**Color Rule**.  
   
 3.  Click **Apply template style**.  
   
@@ -134,7 +125,7 @@ ms.workload: "Inactive"
   
 1.  In Design view, click the map until the Map pane appears.  
   
-2.  Right-click the layer that has the data that you want, and then click *\<map element type>***Color Rule**.  
+2.  Right-click the layer that has the data that you want, and then click _\<map element type>_**Color Rule**.  
   
 3.  Click **Visualize data by using color palette**.  
   
@@ -152,7 +143,7 @@ ms.workload: "Inactive"
   
 1.  In Design view, click the map until the Map pane appears.  
   
-2.  Right-click the layer that has the data that you want, and then click *\<map element type>***Color Rule**.  
+2.  Right-click the layer that has the data that you want, and then click _\<map element type>_**Color Rule**.  
   
 3.  Click **Visualize data by using color ranges**.  
   
@@ -174,7 +165,7 @@ ms.workload: "Inactive"
   
 1.  In Design view, click the map until the Map pane appears.  
   
-2.  Right-click the layer that has the data that you want, and then click *\<map element type>***Color Rule**.  
+2.  Right-click the layer that has the data that you want, and then click _\<map element type>_**Color Rule**.  
   
 3.  Click **Visualize data by using custom colors**.  
   
@@ -192,7 +183,7 @@ ms.workload: "Inactive"
   
 1.  In Design view, click the map until the Map pane appears.  
   
-2.  Right-click the layer that has the data that you want, and then click *\<map element type>***Color Rule**.  
+2.  Right-click the layer that has the data that you want, and then click _\<map element type>_**Color Rule**.  
   
 3.  Select the **Visualize data by using** \<rule type> option. To use distribution options, you must create ranges on the **Distribution** page based on analytical data that is associated with the layer.  
   
@@ -224,7 +215,7 @@ ms.workload: "Inactive"
   
 1.  In Design view, click the map until the Map pane appears.  
   
-2.  Right-click the layer that has the data that you want, and then click *\<map element type>***Rule**.  
+2.  Right-click the layer that has the data that you want, and then click _\<map element type>_**Rule**.  
   
 3.  Verify that **Visualize data by using** \<*rule type*> is selected.  
   
@@ -245,7 +236,7 @@ ms.workload: "Inactive"
   
 1.  In Design view, click the map until the Map pane appears.  
   
-2.  Right-click the layer that has the data that you want, and then click *\<map element type>***Color Rule**.  
+2.  Right-click the layer that has the data that you want, and then click _\<map element type>_**Color Rule**.  
   
 3.  Select the color rule option to use. To display items in a map legend or color scale, you must select one of the **Visualize data by using** \<rule type> options.  
   
@@ -266,7 +257,7 @@ ms.workload: "Inactive"
   
 1.  In Design view, click the map until the Map pane appears.  
   
-2.  Right-click the layer that has the data that you want, and then click *\<map element type>***Rule**.  
+2.  Right-click the layer that has the data that you want, and then click _\<map element type>_**Rule**.  
   
 3.  Click **Legend**.  
   
@@ -279,7 +270,7 @@ ms.workload: "Inactive"
   
 1.  In Design view, click the map until the Map pane appears.  
   
-2.  Right-click the layer that has the data that you want, and then click *\<map element type>***Rule**.  
+2.  Right-click the layer that has the data that you want, and then click _\<map element type>_**Rule**.  
   
 3.  Click **Legend**.  
   

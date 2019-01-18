@@ -1,0 +1,110 @@
+- name: Remote Data Service (RDS)
+  href: remote-data-service-rds.md
+- name: RDS Fundamentals
+  href: rds-fundamentals.md
+  items:
+  - name: Solutions for Remote Data Access
+    href: solutions-for-remote-data-access.md
+  - name: Basic RDS Programming Model
+    href: basic-rds-programming-model.md
+  - name: RDS Programming Model in Detail
+    href: rds-programming-model-in-detail.md
+  - name: RDS Programming Model with Objects
+    href: rds-programming-model-with-objects.md
+  - name: RDS Object Model Summary
+    href: rds-object-model-summary.md
+  - name: RDS Scenario
+    href: rds-scenario.md
+    items:
+    - name: System Requirements for the Address Book Application
+      href: system-requirements-for-the-address-book-application.md
+    - name: Running the Address Book SQL Script
+      href: running-the-address-book-sql-script.md
+    - name: Running the Address Book Sample Application
+      href: running-the-address-book-sample-application.md
+    - name: Address Book Data-Binding Object
+      href: address-book-data-binding-object.md
+    - name: Address Book Command Buttons
+      href: address-book-command-buttons.md
+    - name: Address Book Navigation Buttons
+      href: address-book-navigation-buttons.md
+- name: RDS Tutorial
+  href: rds-tutorial.md
+  items:
+  - name: "Step 1: Specify a Server Program (RDS Tutorial)"
+    href: step-1-specify-a-server-program-rds-tutorial.md
+  - name: "Step 2: Invoke the Server Program (RDS Tutorial)"
+    href: step-2-invoke-the-server-program-rds-tutorial.md
+  - name: "Step 3: Server Obtains a Recordset (RDS Tutorial)"
+    href: step-3-server-obtains-a-recordset-rds-tutorial.md
+  - name: "Step 4: Server Returns the Recordset (RDS Tutorial)"
+    href: step-4-server-returns-the-recordset-rds-tutorial.md
+  - name: "Step 5: DataControl is Made Usable (RDS Tutorial)"
+    href: step-5-datacontrol-is-made-usable-rds-tutorial.md
+  - name: "Step 6: Changes are Sent to the Server (RDS Tutorial)"
+    href: step-6-changes-are-sent-to-the-server-rds-tutorial.md
+  - name: RDS Tutorial (VBScript)
+    href: rds-tutorial-vbscript.md
+- name: RDS Usage and Security
+  href: rds-usage-and-security.md
+  items:
+  - name: Configuring RDS
+    href: configuring-rds.md
+    items:
+    - name: Granting Guest Privileges to a Web Server Computer
+      href: granting-guest-privileges-to-a-web-server-computer.md
+    - name: Registering a Custom Business Object
+      href: registering-a-custom-business-object.md
+    - name: Marking Business Objects as Safe for Scripting
+      href: marking-business-objects-as-safe-for-scripting.md
+    - name: Registering Business Objects on the Client for Use with DCOM
+      href: registering-business-objects-on-the-client-for-use-with-dcom.md
+    - name: Setting DCOM Stream Marshaling Format
+      href: setting-dcom-stream-marshaling-format.md
+    - name: Enabling a DLL to Run on DCOM
+      href: enabling-a-dll-to-run-on-dcom.md
+    - name: Configuring Virtual Servers on IIS
+      href: configuring-virtual-servers-on-iis.md
+    - name: Securing RDS Applications
+      href: securing-rds-applications.md
+    - name: Configuring DataFactory for Safe or Unrestricted Modes
+      href: configuring-datafactory-for-safe-or-unrestricted-modes.md
+  - name: Using Related Technologies with RDS
+    href: using-related-technologies-with-rds.md
+    items:
+    - name: Using RDS with ODBC Connection Pooling
+      href: using-rds-with-odbc-connection-pooling.md
+    - name: Running Business Objects in Component Services
+      href: running-business-objects-in-component-services.md
+  - name: DataFactory Customization
+    href: datafactory-customization.md
+    items:
+    - name: Understanding the Customization File
+      href: understanding-the-customization-file.md
+    - name: Customization File Connect Section
+      href: customization-file-connect-section.md
+    - name: Customization File SQL Section
+      href: customization-file-sql-section.md
+    - name: Customization File UserList Section
+      href: customization-file-userlist-section.md
+    - name: Customization File Logs Section
+      href: customization-file-logs-section.md
+    - name: Required Client Settings
+      href: required-client-settings.md
+    - name: Writing Your Own Customized Handler
+      href: writing-your-own-customized-handler.md
+  - name: Troubleshooting RDS
+    href: troubleshooting-rds.md
+    items:
+    - name: Configuring RDS on Windows 2000
+      href: configuring-rds-on-windows-2000.md
+    - name: "Internet Server Error: Access Denied"
+      href: internet-server-error-access-denied.md
+    - name: RDS Returns "Stream Not Read" Error
+      href: rds-returns-stream-not-read-error.md
+    - name: Deadlocks with Read Repeatable Isolation Level
+      href: deadlocks-with-read-repeatable-isolation-level.md
+    - name: Ensuring Sufficient TempDB Space
+      href: ensuring-sufficient-tempdb-space.md
+    - name: Minimizing Log File Space Usage
+      href: minimizing-log-file-space-usage.md

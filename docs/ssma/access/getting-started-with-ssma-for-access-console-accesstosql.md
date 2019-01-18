@@ -1,26 +1,15 @@
 ---
 title: "Getting Started with SSMA for Access Console (AccessToSQL) | Microsoft Docs"
-ms.prod: "sql-non-specified"
-ms.prod_service: "sql-tools"
-ms.service: ""
-ms.component: "ssma-access"
+ms.prod: sql
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "sql-ssma"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to: 
-  - "Azure SQL Database"
-  - "SQL Server"
+ms.technology: ssma
+ms.topic: conceptual
 ms.assetid: 8585ec16-7e0a-483a-b250-adab9b9232a3
-caps.latest.revision: 21
 author: "Shamikg"
 ms.author: "Shamikg"
-manager: "jhubbard"
-ms.workload: "Inactive"
+manager: craigg
 ---
 # Getting Started with SSMA for Access Console (AccessToSQL)
 This section describes the procedure to launch and get started with the Access console application. Also listed, herein, are the conventions used in a typical SSMA Console output window.  
@@ -47,9 +36,9 @@ After the console is successfully launched on your Windows system, you could use
   
 Additional features:  
   
-1.  [Specify a password](http://msdn.microsoft.com/en-us/b099d0f9-dd37-4c87-8b6f-ed0177881ea4) and export/ import it onto other Window machines  
+1.  [Specify a password](managing-passwords-accesstosql.md) and export/ import it onto other Window machines  
   
-2.  [Generate Reports](http://msdn.microsoft.com/en-us/abb4264a-622e-4215-af5b-14e309b8a399) to view the detailed xml output reports for assessment /conversion and data migration. Detailed error reports can also be generated for refresh and synchronization commands.  
+2.  [Generate Reports](generating-reports-accesstosql.md) to view the detailed xml output reports for assessment /conversion and data migration. Detailed error reports can also be generated for refresh and synchronization commands.  
   
 ## SSMA Console Output Conventions  
 Upon executing the SSMA script commands and options, the console program displays the results and messages (information, error, etc.) to the user on the console or if required, redirects to an xml output file. Each type of message in the output is signified by a unique color. For example, the text message in white color denotes script file commands; the one in green color represents a prompt for user-input, and so on.  
@@ -68,5 +57,5 @@ Color-interpretation of the console output in the following table:
 |Cyan|Start, Finish and Result of an operation|  
   
 ## See Also  
-[Installing SQL Server Migration Assistant for Access](http://msdn.microsoft.com/en-us/dd50eebd-75df-4e0d-8c4d-88b511aae4c7)  
+[Installing SQL Server Migration Assistant for Access](installing-sql-server-migration-assistant-for-access-accesstosql.md)  
   

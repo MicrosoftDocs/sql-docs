@@ -1,34 +1,18 @@
 ---
 title: "Globalization scenarios for Analysis Services | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: analysis-services
-ms.prod_service: "analysis-services, azure-analysis-services"
-ms.service: ""
-ms.component: ""
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
-  
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "multiple language support [Analysis Services]"
-  - "languages [Analysis Services]"
-  - "SSAS, international considerations"
-  - "international considerations [Analysis Services]"
-  - "global considerations [Analysis Services]"
-  - "SQL Server Analysis Services, international considerations"
-  - "Analysis Services, international considerations"
-ms.assetid: e8af85ff-ef33-4659-a003-bb34578eb2a2
-caps.latest.revision: 40
-author: "Minewiskan"
-ms.author: "owend"
-manager: "kfile"
-ms.workload: "Inactive"
+ms.date: 05/08/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom:
+ms.topic: conceptual
+ms.author: owend
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
 ---
 # Globalization scenarios for Analysis Services
 [!INCLUDE[ssas-appliesto-sqlas-aas](../includes/ssas-appliesto-sqlas-aas.md)]
+
   [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] stores and manipulates multilingual data and metadata for both tabular and multidimensional data models. Data storage is Unicode (UTF-16), in character sets that use Unicode encoding. If you load ANSI data into a data model, characters are stored using Unicode equivalent code points.  
   
  The implications of Unicode support means that [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] can store data in any of the languages supported by the Windows client and server operating systems, allowing read, write, sort, and comparison of data in any character set used on a Windows computer. BI client applications consuming [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] data can represent data in the user's language of choice, assuming the data exists in that language in the model.  

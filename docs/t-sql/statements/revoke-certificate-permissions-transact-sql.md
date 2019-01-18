@@ -2,15 +2,10 @@
 title: "REVOKE Certificate Permissions (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/10/2016"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.service: ""
-ms.component: "t-sql|statements"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: t-sql
 ms.topic: "language-reference"
 dev_langs: 
   - "TSQL"
@@ -19,11 +14,9 @@ helpviewer_keywords:
   - "permissions [SQL Server], certificates"
   - "REVOKE statement, certificates"
 ms.assetid: 2272324a-98f2-42c6-88b1-96a99020c9e9
-caps.latest.revision: 24
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "craigg"
-ms.workload: "Inactive"
+author: VanMSFT
+ms.author: vanto
+manager: craigg
 ---
 # REVOKE Certificate Permissions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -53,7 +46,7 @@ REVOKE [ GRANT OPTION FOR ] permission  [ ,...n ]
  *permission*  
  Specifies a permission that can be revoked on a certificate. Listed below.  
   
- ON CERTIFICATE **::***certificate_name*  
+ ON CERTIFICATE **::**_certificate_name_  
  Specifies the certificate on which the permission is being revoked. The scope qualifier "::" is required.  
   
  *database_principal*  

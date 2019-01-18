@@ -2,24 +2,20 @@
 title: "Custom Index (Master Data Services) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "mds"
-ms.service: ""
-ms.component: "non-specific"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "master-data-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: master-data-services
+ms.topic: conceptual
 ms.assetid: c57bf8b8-55a6-4b6c-9adb-91b5f4f1ee3c
-caps.latest.revision: 9
-author: "smartysanthosh"
-ms.author: "nagavo"
-manager: "craigg"
-ms.workload: "Inactive"
+author: leolimsft
+ms.author: lle
+manager: craigg
 ---
 # Custom Index (Master Data Services)
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
   Custom indexes create a non-clustered index on one attribute (single index) or on a list of attributes (composite index), in an entity. Generally indexes improve the performance of querying process. For more information about SQL Server indexes, see [Indexes](../relational-databases/indexes/indexes.md).  
   
 ## Type of Indexes  

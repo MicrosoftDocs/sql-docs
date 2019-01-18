@@ -1,21 +1,13 @@
 ---
 title: "Find the product key for SQL Server 2017 Reporting Services (SSRS) | Microsoft Docs"
-ms.date: "12/20/2017"
+ms.date: 12/20/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
-ms.service: ""
-ms.component: "install-windows"
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.custom: ""
-ms.technology: 
 
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "kfile"
-ms.workload: "Active"
+ms.topic: conceptual
+author: maggiesMSFT
+ms.author: maggies
+monikerRange: ">= sql-server-2017 || = sqlallproducts-allversions"
 ---
 # How to find the product key for SQL Server 2017 Reporting Services
 
@@ -43,10 +35,10 @@ You should only have to do this step the first time you install SSRS 2017. Servi
 
 ## Related information
 
-- For information on installing SQL Server 2016 Reporting Services native mode, see [Install Reporting Services native mode report server](install-reporting-services-native-mode-report-server.md). 
-- For information on installing SQL Server 2016 Reporting Services in SharePoint integration mode, see [Install the first Report Server in SharePoint mode](install-the-first-report-server-in-sharepoint-mode.md).
+- For information on installing SQL Server Reporting Services native mode, see [Install Reporting Services native mode report server](install-reporting-services-native-mode-report-server.md). 
+- For information on installing SQL Server 2016 Reporting Services (and earlier) in SharePoint integration mode, see [Install the first Report Server in SharePoint mode](install-the-first-report-server-in-sharepoint-mode.md).
 
 ## Next steps
 
 - [Install SQL Server 2017 Reporting Services](install-reporting-services.md)
-- More questions? [Try asking the Reporting Services forum](http://go.microsoft.com/fwlink/?LinkId=620231)
+- More questions? [Try asking the Reporting Services forum](https://go.microsoft.com/fwlink/?LinkId=620231)

@@ -1,28 +1,14 @@
 ---
 title: "Roles and Permissions (Analysis Services) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: analysis-services
-ms.prod_service: "analysis-services"
-ms.service: ""
-ms.component: ""
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
-  
-ms.component: multidimensional-tabular
-ms.component: data-mining
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "security [Analysis Services], about security"
-  - "security [Analysis Services - multidimensional data], about security"
-ms.assetid: bb885447-868b-4686-853c-8241f63d4370
-caps.latest.revision: 21
-author: "Minewiskan"
-ms.author: "owend"
-manager: "kfile"
-ms.workload: "On Demand"
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: multidimensional-models
+ms.topic: conceptual
+ms.author: owend
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
 ---
 # Roles and Permissions (Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -62,6 +48,6 @@ ms.workload: "On Demand"
 -   [Grant custom access to cell data &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/grant-custom-access-to-cell-data-analysis-services.md)  
   
 ## See Also  
- [Create and Manage Roles &#40;SSAS Tabular&#41;](../../analysis-services/tabular-models/create-and-manage-roles-ssas-tabular.md)  
+ [Create and Manage Roles](../../analysis-services/tabular-models/create-and-manage-roles-ssas-tabular.md)  
   
   

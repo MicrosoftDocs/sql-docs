@@ -1,26 +1,17 @@
 ---
 title: "Report Parts (Report Builder and SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
+ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
-ms.service: ""
-ms.component: "report-design"
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
+ms.technology: report-design
 
 
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "10543"
 ms.assetid: 957f664c-8a7a-4532-b5a6-5f859c5840bd
-caps.latest.revision: 12
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "kfile"
-ms.workload: "On Demand"
+author: maggiesMSFT
+ms.author: maggies
 ---
 # Report Parts (Report Builder and SSRS)
   Report items such as tables, matrices, charts, and images can be published as *report parts*. Report parts are paginated report items that have been published separately to a report server and that can be reused in other paginated reports. Report parts have an .rsc file extension.  
@@ -90,12 +81,12 @@ ms.workload: "On Demand"
  The easiest way to create a report is to add an existing report part, like a table or chart, to your report from the Report Part Gallery. After you add it to your report, you can modify it as much as you need, or accept updates from the server. Changing the report item in your report will not affect the instance of the report part published on the site or server, nor will it break the relationship between the instance in the report and on the site or server. If you have sufficient permissions, you can save the updated copy back to the site or server. If someone else modifies the copy on the site or server, you can decide to keep your copy as it is, or you can update it to be like the copy on the site or server.  
   
 ### Searching for Report Parts  
- You look for report parts to add to your report in the Report Part Gallery. You can filter the report parts by all or part of the name of the part, who created it, who last modified it, when it was last modified, where it’s stored, or what type of report part it is. For example, you could search for all charts created last week by one of your coworkers.  
+ You look for report parts to add to your report in the Report Part Gallery. You can filter the report parts by all or part of the name of the part, who created it, who last modified it, when it was last modified, where it's stored, or what type of report part it is. For example, you could search for all charts created last week by one of your coworkers.  
   
  You can view the search results either as thumbnails or as a list, and sort the search results by name, created and modified dates, and creator. For more information, see [Browse for Report Parts and Set a Default Folder &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/browse-for-report-parts-and-set-a-default-folder-report-builder-and-ssrs.md).  
   
 ### What Comes with a Report Part  
- When you add a report part to your report, you are also adding everything it must have to work. For example, any object that displays data is dependent on a dataset – a query and a connection to a data source. It may also have one or more parameters. All of the items it is dependent on are its *dependencies*, and all of them, or pointers to them, are included with the report part when you add it to your report. The dataset and parameters are listed in the Report Data pane of your report.  
+ When you add a report part to your report, you are also adding everything it must have to work. For example, any object that displays data is dependent on a dataset - a query and a connection to a data source. It may also have one or more parameters. All of the items it is dependent on are its *dependencies*, and all of them, or pointers to them, are included with the report part when you add it to your report. The dataset and parameters are listed in the Report Data pane of your report.  
   
  The dataset for the report part may be embedded in the report part, or it may be a separate, shared dataset that the report part points to. If it is embedded in the report part, you may be able to modify it. If it is a shared dataset, it is a separate object that you would need permissions for. For more information about shared and embedded datasets, see [Report Datasets &#40;SSRS&#41;](../../reporting-services/report-data/report-datasets-ssrs.md).  
   
@@ -112,7 +103,7 @@ ms.workload: "On Demand"
  Every time you open a report, Report Builder checks to see if the server instances of report parts in that report have been updated on the server. It also checks for changes in the report parts' dependent items, such as the dataset and parameters. If any published report parts or their dependencies have been updated on the server, an information bar in your report displays the number that have been updated. You can choose to view and accept or reject the updates, or dismiss the information bar. If you choose to view the updates, you see a thumbnail of the report part, who last modified it, and when. Then you can accept any or all of the updated items.  
   
 > [!NOTE]  
->  You can disable the information bar and not be informed if a report part has changed. You set this option when you add the report part to your report. Even if you have disabled the information bar, you can still check for updates. For more information, see [Check for Updates or Turn Updates Off (Report Builder and SSRS)](http://msdn.microsoft.com/en-us/9c69792d-d7c4-453b-ae2f-6d2d071d8606).  
+>  You can disable the information bar and not be informed if a report part has changed. You set this option when you add the report part to your report. Even if you have disabled the information bar, you can still check for updates. For more information, see [Check for Updates or Turn Updates Off (Report Builder and SSRS)](https://msdn.microsoft.com/9c69792d-d7c4-453b-ae2f-6d2d071d8606).  
   
  Report Builder checks for differences between the date the report part was last updated on the server and the date when you last synchronized the report part with the server. It does not check the date that you modified the report part in your report. Thus, the report part in your report and the report part on the server could be quite different, but when Report Builder checks for updates, it will not find any.  
   
@@ -141,11 +132,11 @@ ms.workload: "On Demand"
   
  [Browse for Report Parts and Set a Default Folder &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/browse-for-report-parts-and-set-a-default-folder-report-builder-and-ssrs.md)  
   
- [Check for Updates or Turn Updates Off (Report Builder and SSRS)](http://msdn.microsoft.com/en-us/9c69792d-d7c4-453b-ae2f-6d2d071d8606)  
+ [Check for Updates or Turn Updates Off (Report Builder and SSRS)](https://msdn.microsoft.com/9c69792d-d7c4-453b-ae2f-6d2d071d8606)  
   
 ## See Also  
  [Report Parts and Datasets in Report Builder](../../reporting-services/report-data/report-parts-and-datasets-in-report-builder.md)   
- [Troubleshoot Report Parts (Report Builder and SSRS)](http://msdn.microsoft.com/en-us/d9fe1932-46e7-421b-a8a9-4c54d9576e94)   
+ [Troubleshoot Report Parts (Report Builder and SSRS)](https://msdn.microsoft.com/d9fe1932-46e7-421b-a8a9-4c54d9576e94)   
  [Managing Report Parts](../../reporting-services/report-design/managing-report-parts.md)  
   
   

@@ -1,38 +1,17 @@
 ---
 title: "CREATE GLOBAL CUBE Statement  (MDX) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/02/2016"
-ms.prod: analysis-services
-ms.prod_service: "analysis-services"
-ms.service: ""
-ms.component: ""
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
-  
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "GLOBAL CUBE"
-  - "CUBE"
-  - "GLOBAL"
-  - "CREATE"
-  - "CREATE GLOBAL"
-  - "CREATE GLOBAL CUBE"
-dev_langs: 
-  - "kbMDX"
-helpviewer_keywords: 
-  - "statements [MDX], CREATE GLOBAL CUBE"
-  - "CREATE GLOBAL CUBE"
-ms.assetid: b46f3c98-a4f1-4ebb-915f-a3333f4054dc
-caps.latest.revision: 17
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-ms.workload: "Inactive"
+ms.date: 06/04/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: mdx
+ms.topic: reference
+ms.author: owend
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
 ---
 # MDX Data Definition - CREATE GLOBAL CUBE
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
 
   Creates and populates a locally persisted cube, based on a subcube from a cube on the server. A connection to the server is not required to connect to the locally persisted cube. For more information about local cubes, see [Local Cubes &#40;Analysis Services - Multidimensional Data&#41;](../analysis-services/multidimensional-models/olap-physical/local-cubes-analysis-services-multidimensional-data.md).  
   

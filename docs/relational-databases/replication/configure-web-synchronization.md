@@ -2,16 +2,11 @@
 title: "Configure Web Synchronization | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/10/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "database-engine"
-ms.service: ""
-ms.component: "replication"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: replication
+ms.topic: conceptual
 f1_keywords: 
   - "SQL10.REP.CONFIGWEBSYNCWIZARD.SNAPSHARE.F1"
   - "SQL13.REP.CONFIGWEBSYNCWIZARD.SNAPSHARE.F1"
@@ -35,11 +30,9 @@ helpviewer_keywords:
   - "Web synchronization, security best practices"
   - "Web synchronization, configuring"
 ms.assetid: 21f8e4d4-cd07-4856-98f0-9c9890ebbc82
-caps.latest.revision: 74
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-ms.workload: "Inactive"
+author: "MashaMSFT"
+ms.author: "mathoma"
+manager: craigg
 ---
 # Configure Web Synchronization
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -163,7 +156,7 @@ ms.workload: "Inactive"
   
 -   The account under which the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Replication Listener (Replisapi.dll) runs is also the account that will connect to the Publisher and Distributor during synchronization. This account must be mapped to a SQL Login account on the Publisher and Distributor. For more information, see the "Setting Permissions for the SQL Server Replication Listener" section in the [Configure IIS for Web Synchronization](../../relational-databases/replication/configure-iis-for-web-synchronization.md).  
   
--   You can use FTP to deliver the snapshot from the Publisher to the computer that is running IIS. The snapshot is always delivered from the computer that is running IIS to the Subscriber by using HTTPS. For more information, see [Transfer Snapshots Through FTP](../../relational-databases/replication/transfer-snapshots-through-ftp.md).  
+-   You can use FTP to deliver the snapshot from the Publisher to the computer that is running IIS. The snapshot is always delivered from the computer that is running IIS to the Subscriber by using HTTPS. For more information, see [Transfer Snapshots Through FTP](../../relational-databases/replication/publish/deliver-a-snapshot-through-ftp.md).  
   
 -   If servers in the replication topology are behind a firewall, you might need to open ports in the firewall to enable Web synchronization.  
   
@@ -171,7 +164,7 @@ ms.workload: "Inactive"
   
     -   The computer that is running IIS typically connects to the Publisher or Distributor using port 1433 (default instance). When the Publisher or Distributor is a named instance on a server with another default instance, port 1500 is typically used to connect to the named instance.  
   
-    -   If the computer running IIS is separated from the Distributor by a firewall and an FTP share is used for snapshot delivery, the ports used for FTP must be opened. For more information, see [Transfer Snapshots Through FTP](../../relational-databases/replication/transfer-snapshots-through-ftp.md).  
+    -   If the computer running IIS is separated from the Distributor by a firewall and an FTP share is used for snapshot delivery, the ports used for FTP must be opened. For more information, see [Transfer Snapshots Through FTP](../../relational-databases/replication/publish/deliver-a-snapshot-through-ftp.md).  
   
 > [!IMPORTANT]  
 >  Opening ports in your firewall can leave your server exposed to malicious attacks. Make sure that you understand firewall systems before you open ports. For more information, see [Security Considerations for a SQL Server Installation](../../sql-server/install/security-considerations-for-a-sql-server-installation.md).  

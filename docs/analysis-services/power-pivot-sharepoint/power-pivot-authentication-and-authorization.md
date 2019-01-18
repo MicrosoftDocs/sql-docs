@@ -1,25 +1,14 @@
 ---
 title: "Power Pivot Authentication and Authorization | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: analysis-services
-ms.prod_service: "analysis-services"
-ms.service: ""
-ms.component: ""
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
-  
-ms.component: multidimensional-tabular
-ms.component: data-mining
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-ms.assetid: 48230cc0-4037-4f99-8360-dadf4bc169bd
-caps.latest.revision: 31
-author: "Minewiskan"
-ms.author: "owend"
-manager: "kfile"
-ms.workload: "Inactive"
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: ppvt-sharepoint
+ms.topic: conceptual
+ms.author: owend
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
 ---
 # Power Pivot Authentication and Authorization
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -76,7 +65,7 @@ ms.workload: "Inactive"
   
 -   Loading [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] data from cache or a library if the data is not otherwise available. If a data connection request is made for [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] data that is not already loaded in the system, the [!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)] instance will use the identity of the SharePoint user to retrieve the data source from a content library and load it into memory.  
   
--   Data refresh operations that save an updated copy of the data source to the workbook in a content library. In this case, an actual log on operation is performed using the user name and password that is retrieved from a target application in Secure Store Service. Credentials can be the [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] unattended data refresh account, or credentials that were stored with the data refresh schedule when it was created. For more information, see [Configure Stored Credentials for Power Pivot Data Refresh (Power Pivot for SharePoint)](http://msdn.microsoft.com/en-us/987eff0f-bcfe-4bbd-81e0-9aca993a2a75) and [Configure the Power Pivot Unattended Data Refresh Account (Power Pivot for SharePoint)](http://msdn.microsoft.com/en-us/81401eac-c619-4fad-ad3e-599e7a6f8493).  
+-   Data refresh operations that save an updated copy of the data source to the workbook in a content library. In this case, an actual log on operation is performed using the user name and password that is retrieved from a target application in Secure Store Service. Credentials can be the [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] unattended data refresh account, or credentials that were stored with the data refresh schedule when it was created. For more information, see [Configure Stored Credentials for Power Pivot Data Refresh (Power Pivot for SharePoint)](http://msdn.microsoft.com/987eff0f-bcfe-4bbd-81e0-9aca993a2a75) and [Configure the Power Pivot Unattended Data Refresh Account (Power Pivot for SharePoint)](http://msdn.microsoft.com/81401eac-c619-4fad-ad3e-599e7a6f8493).  
   
 ##  <a name="Permissions"></a> SharePoint Permissions for Power Pivot Data Access  
  Publishing, managing, and securing a [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] workbook is supported solely through SharePoint integration. SharePoint servers provide authentication and authorization subsystems that ensure legitimate access to data. There are no supported scenarios for securely deploying a [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] workbook outside of a SharePoint farm.  
@@ -92,7 +81,7 @@ ms.workload: "Inactive"
 |Farm or service administrator|Install, enable, and configure services and applications.<br /><br /> Use [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] Management Dashboard and view administrative reports.|  
 |Full control|Activate [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] feature integration at the site collection level.<br /><br /> Create a [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] Gallery library.<br /><br /> Create a data feed library.|  
 |Contribute|Add, edit, delete, and download [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] workbooks.<br /><br /> Configure data refresh.<br /><br /> Create new workbooks and reports based on [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] workbooks on a SharePoint site.<br /><br /> Create data service documents in a data feed library|  
-|Read|Access [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] workbooks as an external data source, where the workbook URL is explicitly entered in a connection dialog box (for example, in Excel’s Data Connection Wizard).|  
+|Read|Access [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] workbooks as an external data source, where the workbook URL is explicitly entered in a connection dialog box (for example, in Excel's Data Connection Wizard).|  
 |View Only|View [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] workbooks.<br /><br /> View data refresh history.<br /><br /> Connect a local workbook to a [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] workbook on a SharePoint site, to repurpose its data in other ways.<br /><br /> Download a snapshot of the workbook. The snapshot is a static copy of the data, without slicers, filters, formulas, or data connections. The contents of the snapshot are similar to copying cell values from the browser window.|  
   
 ##  <a name="excel"></a> Excel Services security considerations for Power Pivot workbooks  
@@ -100,7 +89,7 @@ ms.workload: "Inactive"
   
  When a [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] workbook is opened on a SharePoint site, Excel Services reads the embedded [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] data connection string and forwards the request to the local SQL Server Analysis Services OLE DB provider. The provider then passes the connection information to a [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] server in the farm. In order for requests to flow seamlessly between the two servers, Excel Services must be configured to use settings that are required by [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint.  
   
- In Excel Services, security-related configuration settings are specified on trusted locations, trusted data providers, and trusted data connection libraries. The following table describes the settings that enable or enhance [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] data access. If a setting is not listed here, it has no effect on [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] server connections. For instructions on how to specify these settings step by step, see the section "Enable Excel Services" in [Initial Configuration (Power Pivot for SharePoint)](http://msdn.microsoft.com/en-us/3a0ec2eb-017a-40db-b8d4-8aa8f4cdc146).  
+ In Excel Services, security-related configuration settings are specified on trusted locations, trusted data providers, and trusted data connection libraries. The following table describes the settings that enable or enhance [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] data access. If a setting is not listed here, it has no effect on [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] server connections. For instructions on how to specify these settings step by step, see the section "Enable Excel Services" in [Initial Configuration (Power Pivot for SharePoint)](http://msdn.microsoft.com/3a0ec2eb-017a-40db-b8d4-8aa8f4cdc146).  
   
 > [!NOTE]  
 >  Most security-related settings apply to trusted locations. If you want to preserve default values or use different values for different sites, you can create an additional trusted location for sites that contain [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] data, and then configure the following settings for just that site. For more information, see [Create a trusted location for Power Pivot sites in Central Administration](../../analysis-services/power-pivot-sharepoint/create-a-trusted-location-for-power-pivot-sites-in-central-administration.md).  
@@ -111,13 +100,13 @@ ms.workload: "Inactive"
 |Trusted location|Location Type|This value must be set to **Microsoft SharePoint Foundation**. [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] servers retrieve a copy of the .xlsx file and load it on an Analysis Services server in the farm. The server can only retrieve .xlsx files from a content library.|  
 ||Allow External Data|This value must be set to **Trusted data connection libraries and embedded**. [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] data connections are embedded in the workbook. If you disallow embedded connections, users can view the [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] cache, but they will not be able to interact with the [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] data.|  
 ||Warn on Refresh|This value should be disabled if you are using [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] Gallery to store workbooks and reports. [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] Gallery includes a document preview feature that works best if both refresh on open and Warn on Refresh are turned off.|  
-|Trusted data providers|MSOLAP.4<br /><br /> MSOLAP.5|MSOLAP.4 is included by default, but [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] data access requires that the MSOLAP.4 provider be the SQL Server 2008 R2 version.<br /><br /> MSOLAP.5 is installed with the [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] version of [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint.<br /><br /> Do not remove these providers from the trusted data provider list. In some cases, you might need to install additional copies of this provider on other SharePoint servers in your farm. For more information, see [Install the Analysis Services OLE DB Provider on SharePoint Servers](http://msdn.microsoft.com/en-us/2c62daf9-1f2d-4508-a497-af62360ee859).|  
+|Trusted data providers|MSOLAP.4<br /><br /> MSOLAP.5|MSOLAP.4 is included by default, but [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] data access requires that the MSOLAP.4 provider be the SQL Server 2008 R2 version.<br /><br /> MSOLAP.5 is installed with the [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] version of [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint.<br /><br /> Do not remove these providers from the trusted data provider list. In some cases, you might need to install additional copies of this provider on other SharePoint servers in your farm. For more information, see [Install the Analysis Services OLE DB Provider on SharePoint Servers](http://msdn.microsoft.com/2c62daf9-1f2d-4508-a497-af62360ee859).|  
 |Trusted data connection libraries|Optional.|You can use Office Data Connection (.odc) files in [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] workbooks. If you use .odc files to provide connection information to local [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] workbooks, you can add the same .odc files to this library.|  
 |User defined function assembly|Not applicable.|[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint ignores user-defined function assemblies that you build deploy for Excel Services. If you rely on user-defined assemblies for a specific behavior, be aware that [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] query processing will not use the user-defined functions you created.|  
   
 ## See Also  
  [Configure Power Pivot Service Accounts](../../analysis-services/power-pivot-sharepoint/configure-power-pivot-service-accounts.md)   
- [Configure the Power Pivot Unattended Data Refresh Account (Power Pivot for SharePoint)](http://msdn.microsoft.com/en-us/81401eac-c619-4fad-ad3e-599e7a6f8493)   
+ [Configure the Power Pivot Unattended Data Refresh Account (Power Pivot for SharePoint)](http://msdn.microsoft.com/81401eac-c619-4fad-ad3e-599e7a6f8493)   
  [Create a trusted location for Power Pivot sites in Central Administration](../../analysis-services/power-pivot-sharepoint/create-a-trusted-location-for-power-pivot-sites-in-central-administration.md)   
  [Power Pivot Securtiy Architecture](http://go.microsoft.com/fwlink/?linkID=220970)  
   

@@ -2,25 +2,18 @@
 title: "How to: Specify PHP Data Types | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
-ms.prod_service: "drivers"
-ms.service: ""
-ms.component: "php"
+ms.prod: sql
+ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "drivers"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: connectivity
+ms.topic: conceptual
 helpviewer_keywords: 
   - "converting data types"
   - "streaming data"
 ms.assetid: fee6e6b8-aad9-496b-84a2-18d2950470a4
-caps.latest.revision: 32
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
-ms.workload: "Inactive"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # How to: Specify PHP Data Types
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -33,14 +26,14 @@ The following steps summarize how to specify PHP data types when retrieving data
   
 2.  Make a row of data available for reading with [sqlsrv_fetch](../../connect/php/sqlsrv-fetch.md).  
   
-3.  Retrieve field data from a returned row using [sqlsrv_get_field](../../connect/php/sqlsrv-get-field.md) with the desired PHP data type specified as the optional third parameter. If the optional third parameter is not specified, data will be returned according to the default PHP types. For information about the default PHP return types, see [Default PHP Data Types](../../connect/php/default-php-data-types.md).  
+3.  Retrieve field data from a returned row using [sqlsrv_get_field](../../connect/php/sqlsrv-get-field.md) with the desired PHP data type specified as the optional third parameter. If the optional third parameter is not specified, data is returned according to the default PHP types. For information about the default PHP return types, see [Default PHP Data Types](../../connect/php/default-php-data-types.md).  
   
     For information about the constants used to specify the PHP data type, see the PHPTYPEs section of [Constants &#40;Microsoft Drivers for PHP for SQL Server&#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md).  
   
 ## Example  
-The following example retrieves rows from the *Production.ProductReview* table of the AdventureWorks database. In each returned row the *ReviewDate* field is retrieved as a string and the *Comments* field is retrieved as a stream. The stream data is displayed by using the PHP [fpassthru](http://php.net/manual/en/function.fpassthru.php) function.  
+The following example retrieves rows from the *Production.ProductReview* table of the AdventureWorks database. In each returned row, the *ReviewDate* field is retrieved as a string and the *Comments* field is retrieved as a stream. The stream data is displayed by using the PHP [fpassthru](https://php.net/manual/en/function.fpassthru.php) function.  
   
-The example assumes that SQL Server and the [AdventureWorks](http://go.microsoft.com/fwlink/?LinkID=67739) database are installed on the local computer. All output is written to the console when the example is run from the command line.  
+The example assumes that SQL Server and the [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) database are installed on the local computer. All output is written to the console when the example is run from the command line.  
   
 ```  
 <?php  
@@ -107,8 +100,11 @@ Retrieving the fourth field (*Comments*) as a stream is for demonstration purpos
 > The [sqlsrv_field_metadata](../../connect/php/sqlsrv-field-metadata.md) function provides a way to obtain field information, including type information, before executing a query.  
   
 ## See Also  
-[Retrieving Data](../../connect/php/retrieving-data.md)  
-[About Code Examples in the Documentation](../../connect/php/about-code-examples-in-the-documentation.md)  
-[How to: Retrieve Output Parameters Using the SQLSRV Driver](../../connect/php/how-to-retrieve-output-parameters-using-the-sqlsrv-driver.md)  
+[Retrieving Data](../../connect/php/retrieving-data.md)
+
+[About Code Examples in the Documentation](../../connect/php/about-code-examples-in-the-documentation.md)
+
+[How to: Retrieve Output Parameters Using the SQLSRV Driver](../../connect/php/how-to-retrieve-output-parameters-using-the-sqlsrv-driver.md)
+
 [How to: Retrieve Input and Output Parameters Using the SQLSRV Driver](../../connect/php/how-to-retrieve-input-and-output-parameters-using-the-sqlsrv-driver.md)  
   

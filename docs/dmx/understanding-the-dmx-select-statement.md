@@ -1,35 +1,14 @@
 ---
 title: "Understanding the DMX Select Statement | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/02/2016"
-ms.prod: analysis-services
-ms.prod_service: "analysis-services"
-ms.service: ""
-ms.component: ""
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
-  
-ms.component: data-mining
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "DMX"
-helpviewer_keywords: 
-  - "browsing mining model [Analysis Services]"
-  - "Data Mining Extensions [Analysis Services], statements"
-  - "DMX [Analysis Services], statements"
-  - "predictions [DMX]"
-  - "queries [DMX], Select statement"
-  - "SELECT statement [DMX]"
-  - "statements [DMX], SELECT statement"
-  - "copying mining models"
-ms.assetid: 61e97285-4a06-4434-9a40-38cde5af7c3f
-caps.latest.revision: 40
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-ms.workload: "Inactive"
+ms.date: 06/07/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: dmx
+ms.topic: conceptual
+ms.author: owend
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
 ---
 # Understanding the DMX Select Statement
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -48,7 +27,7 @@ ms.workload: "Inactive"
   
 -   Copy mining models.  
   
- Each of these tasks uses a different set of data, which we’ll call a *data domain*. You define the data domain in the **FROM** clause of the statement.  
+ Each of these tasks uses a different set of data, which we'll call a *data domain*. You define the data domain in the **FROM** clause of the statement.  
   
 -   You want to find objects in the data mining model itself, such as the rule that defines a set of data, or a formula used to make predictions.  
   
@@ -91,7 +70,7 @@ ms.workload: "Inactive"
 |SELECT DISTINCT FROM *\<model>*|Returns all the state values from the mining model for the specified column.<br /><br /> The data domain for this query type is the data mining model.<br /><br /> [SELECT DISTINCT FROM &#60;model &#62; &#40;DMX&#41;](../dmx/select-distinct-from-model-dmx.md)<br /><br /> [Content Queries &#40;Data Mining&#41;](../analysis-services/data-mining/content-queries-data-mining.md)|  
 |SELECT FROM *\<model>*.CONTENT|Returns content that describes the mining model.<br /><br /> The data domain for this query type is the content schema rowset.<br /><br /> [SELECT FROM &#60;model&#62;.CONTENT &#40;DMX&#41;](../dmx/select-from-model-content-dmx.md)<br /><br /> [Content Queries &#40;Data Mining&#41;](../analysis-services/data-mining/content-queries-data-mining.md)|  
 |SELECT FROM *\<model>*.DIMENSION_CONTENT|Returns content that describes the mining model.<br /><br /> The data domain for this query type is the content schema rowset.<br /><br /> [SELECT FROM &#60;model&#62;.DIMENSION_CONTENT &#40;DMX&#41;](../dmx/select-from-model-dimension-content-dmx.md)|  
-|SELECT FROM *\<model>*.PMML|Returns the Predictive Model Markup Language (PMML) representation of the mining model, for algorithms that support this functionality.<br /><br /> The domain for this query type is the PMML schema rowset.<br /><br /> [DMSCHEMA_MINING_MODEL_CONTENT_PMML Rowset](../analysis-services/schema-rowsets/data-mining/dmschema-mining-model-content-pmml-rowset.md)|  
+|SELECT FROM *\<model>*.PMML|Returns the Predictive Model Markup Language (PMML) representation of the mining model, for algorithms that support this functionality.<br /><br /> The domain for this query type is the PMML schema rowset.<br /><br /> [DMSCHEMA_MINING_MODEL_CONTENT_PMML Rowset](https://docs.microsoft.com/bi-reference/schema-rowsets/data-mining/dmschema-mining-model-content-pmml-rowset)|  
   
  [Back to Select Types](#Select_Types)  
   

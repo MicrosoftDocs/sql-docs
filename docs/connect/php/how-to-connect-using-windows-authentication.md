@@ -1,30 +1,23 @@
 ---
 title: "How to: Connect Using Windows Authentication | Microsoft Docs"
 ms.custom: ""
-ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
-ms.prod_service: "drivers"
-ms.service: ""
-ms.component: "php"
+ms.date: "03/26/2018"
+ms.prod: sql
+ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "drivers"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: connectivity
+ms.topic: conceptual
 helpviewer_keywords: 
   - "connecting to the server, Windows Authentication"
 ms.assetid: f403a4e0-b0a8-4939-9dc1-e1209626367e
-caps.latest.revision: 35
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
-ms.workload: "On Demand"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # How to: Connect Using Windows Authentication
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-By default, the [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] use Windows Authentication to connect to SQL Server. It is important to notice that in most scenarios, this means that the Web server's process identity or thread identity (if the Web server is using impersonation) is used to connect to the server, not an end-user's identity.  
+By default, the [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] use Windows Authentication to connect to SQL Server. It is important to note that in most scenarios, this means that the Web server's process identity or thread identity (if the Web server is using impersonation) is used to connect to the server, not an end-user's identity.  
   
 The following points must be considered when you use Windows Authentication to connect to SQL Server:  
   
@@ -46,7 +39,7 @@ If Windows Authentication is not a practical option, see [How to: Connect Using 
 ## Example  
 Using the SQLSRV driver of the [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)], the following example uses the Windows Authentication to connect to a local instance of SQL Server. After the connection has been established, the server is queried for the login of the user who is accessing the database.  
   
-The example assumes that SQL Server and the [AdventureWorks](http://go.microsoft.com/fwlink/?LinkID=67739) database are installed on the local computer. All output is written to the browser when the example is run from the browser.  
+The example assumes that SQL Server and the [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) database are installed on the local computer. All output is written to the browser when the example is run from the browser.  
   
 ```  
 <?php  
@@ -107,12 +100,19 @@ while ( $row = $stmt->fetch( PDO::FETCH_ASSOC ) ){
 ```  
   
 ## See Also  
-[How to: Connect Using SQL Server Authentication](../../connect/php/how-to-connect-using-sql-server-authentication.md)  
-[Programming Guide for PHP SQL Driver](../../connect/php/programming-guide-for-php-sql-driver.md)
-[About Code Examples in the Documentation](../../connect/php/about-code-examples-in-the-documentation.md)  
-[How to: Create a SQL Server Login](http://go.microsoft.com/fwlink/?LinkId=106325)  
-[How to: Create a Database User](http://go.microsoft.com/fwlink/?LinkId=106327)  
-[Managing Users, Roles, and Logins](http://go.microsoft.com/fwlink/?LinkId=106329)  
-[User-Schema Separation](http://go.microsoft.com/fwlink/?LinkId=106330)  
-[Grant Object Permissions (Transact-SQL)](http://go.microsoft.com/fwlink/?LinkId=106332)  
+[How to: Connect Using SQL Server Authentication](../../connect/php/how-to-connect-using-sql-server-authentication.md)
+
+[Programming Guide for the Microsoft Drivers for PHP for SQL Server](../../connect/php/programming-guide-for-php-sql-driver.md)
+
+[About Code Examples in the Documentation](../../connect/php/about-code-examples-in-the-documentation.md)
+
+[How to: Create a SQL Server Login](../../relational-databases/security/authentication-access/create-a-login.md)
+
+[How to: Create a Database User](../../relational-databases/security/authentication-access/create-a-database-user.md)
+
+[Managing Users, Roles, and Logins](../../relational-databases/server-management-objects-smo/tasks/managing-users-roles-and-logins.md)
+
+[User-Schema Separation](../../relational-databases/server-management-objects-smo/tasks/managing-users-roles-and-logins.md)
+
+[Grant Object Permissions (Transact-SQL)](../../t-sql/statements/grant-object-permissions-transact-sql.md)  
   

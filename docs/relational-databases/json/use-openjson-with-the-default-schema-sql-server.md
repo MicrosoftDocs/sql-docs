@@ -2,28 +2,23 @@
 title: "Use OPENJSON with the Default Schema (SQL Server) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/02/2016"
-ms.prod: "sql-non-specified"
-ms.prod_service: "database-engine, sql-database"
-ms.component: "json"
+ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: 
-  - "dbe-json"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "OPENJSON, with default schema"
 ms.assetid: 8e28a8f8-71a8-4c25-96b8-0bbedc6f41c4
-caps.latest.revision: 11
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "craigg"
-ms.workload: "Inactive"
+author: "jovanpop-msft"
+ms.author: "jovanpop"
+ms.reviewer: douglasl
+manager: craigg
+monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Use OPENJSON with the Default Schema (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
-  Use **OPENJSON** with the default schema to returns a table with one row for each property of the object or for each element in the array.  
+  Use **OPENJSON** with the default schema to return a table with one row for each property of the object or for each element in the array.  
   
  Here are some examples that use **OPENJSON** with the default schema. For more info and more examples, see [OPENJSON &#40;Transact-SQL&#41;](../../t-sql/functions/openjson-transact-sql.md).  
   
@@ -93,7 +88,7 @@ FROM OPENJSON(@json,N'lax $.info')
 |tags|[ "Sport", "Water polo" ]|4|  
   
 ## Example - Combine relational data and JSON data  
- In the following example, the SalesOrderHeader table has a SalesReason text column that contains an array of SalesOrderReasons in JSON format. The SalesOrderReasons objects contain properties like "Manufacturer" and "Quality". The example creates a report that joins every sales order row to the related sales reasons by expanding the JSON array of sales reasons as if the reasons were stored in a separate child table.  
+ In the following example, the SalesOrderHeader table has a SalesReason text column that contains an array of SalesOrderReasons in JSON format. The SalesOrderReasons objects contain properties like "Manufacturer" and "Quality." The example creates a report that joins every sales order row to the related sales reasons by expanding the JSON array of sales reasons as if the reasons were stored in a separate child table.  
   
 ```sql  
 SELECT SalesOrderID,OrderDate,value AS Reason
@@ -103,10 +98,17 @@ CROSS APPLY OPENJSON(SalesReasons)
   
  In this example, OPENJSON returns a table of sales reasons in which the reasons appear as the value column. The CROSS APPLY operator joins each sales order row to the rows returned by the OPENJSON table-valued function.  
 
-## Learn more about the built-in JSON support in SQL Server  
-For lots of specific solutions, use cases, and recommendations, see the [blog posts about the built-in JSON support](http://blogs.msdn.com/b/sqlserverstorageengine/archive/tags/json/) in SQL Server and in Azure SQL Database by Microsoft Program Manager Jovan Popovic.
+## Learn more about JSON in SQL Server and Azure SQL Database  
+  
+### Microsoft videos
+
+For a visual introduction to the built-in JSON support in SQL Server and Azure SQL Database, see the following videos:
+
+-   [SQL Server 2016 and JSON Support](https://channel9.msdn.com/Shows/Data-Exposed/SQL-Server-2016-and-JSON-Support)
+
+-   [Using JSON in SQL Server 2016 and Azure SQL Database](https://channel9.msdn.com/Shows/Data-Exposed/Using-JSON-in-SQL-Server-2016-and-Azure-SQL-Database)
+
+-   [JSON as a bridge between NoSQL and relational worlds](https://channel9.msdn.com/events/DataDriven/SQLServer2016/JSON-as-a-bridge-betwen-NoSQL-and-relational-worlds)
   
 ## See Also  
  [OPENJSON &#40;Transact-SQL&#41;](../../t-sql/functions/openjson-transact-sql.md)  
-  
-  

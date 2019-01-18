@@ -2,27 +2,20 @@
 title: "Semantic Search (SQL Server) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-non-specified"
-ms.prod_service: "database-engine, sql-database"
-ms.service: ""
-ms.component: "search"
+ms.prod: sql
+ms.prod_service: "search, sql-database"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "dbe-search"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: search
+ms.topic: conceptual
 helpviewer_keywords: 
   - "semantic search [SQL Server]"
   - "semantic search [SQL Server], overview"
   - "statistical semantic search [SQL Server]"
   - "statistical semantic search [SQL Server], overview"
 ms.assetid: cd8faa9d-07db-420d-93f4-a2ea7c974b97
-caps.latest.revision: 20
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-ms.workload: "On Demand"
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ---
 # Semantic Search (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

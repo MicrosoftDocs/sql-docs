@@ -1,28 +1,14 @@
 ---
 title: "Mining Model Content for Time Series Models (Analysis Services - Data Mining) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: analysis-services
-ms.prod_service: "analysis-services"
-ms.service: ""
-ms.component: ""
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
-  
-ms.component: data-mining
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "time series algorithms [Analysis Services]"
-  - "time series [Analysis Services]"
-  - "mining model content, time series models"
-ms.assetid: bb225387-fbbf-4189-b172-9daa2495fa9c
-caps.latest.revision: 26
-author: "Minewiskan"
-ms.author: "owend"
-manager: "kfile"
-ms.workload: "Inactive"
+ms.date: 05/08/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: data-mining
+ms.topic: conceptual
+ms.author: owend
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
 ---
 # Mining Model Content for Time Series Models (Analysis Services - Data Mining)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -67,7 +53,7 @@ ms.workload: "Inactive"
 >  If you want to view the formulas, you can find the complete regression formula at the leaf node level, but not in an intermediate or root node.  
   
 ### Structure of an ARIMA Model  
- The ARIMA algorithm creates a single piece of information for each combination of a data series (such as **[Region]**) and a predictable attribute (such as **[Sales Amount]**)—the equation that describes the change of the predictable attribute over time.  
+ The ARIMA algorithm creates a single piece of information for each combination of a data series (such as **[Region]**) and a predictable attribute (such as **[Sales Amount]**)-the equation that describes the change of the predictable attribute over time.  
   
  The equation for each series is derived from multiple components, one for each periodic structure that was found in the data. For example, if you have sales data that is collected on a monthly basis, the algorithm might detect monthly, quarterly, or yearly periodic structures.  
   
@@ -416,7 +402,7 @@ AND (NODE_TYPE = 29 or NODE_TYPE = 30)
 |27 (ARIMA Root)|Intercept<br /><br /> Periodicity|11|  
 |28 (ARIMA Periodic Structure)|Periodicity<br /><br /> Auto Regressive order<br /><br /> Difference order<br /><br /> Moving average order|12<br /><br /> 13<br /><br /> 15<br /><br /> 14|  
 |29 (ARIMA Autoregressive)|Coefficient<br /><br /> (complement of coefficient)|7|  
-|30 (ARIMA Moving Average)|Value at t<br /><br /> Value at t-1<br /><br /> …<br /><br /> Value at t-n|7|  
+|30 (ARIMA Moving Average)|Value at t<br /><br /> Value at t-1<br /><br /> ...<br /><br /> Value at t-n|7|  
   
  The value for the *moving average order* indicates the number of moving averages in a series. Generally the moving average is calculated `n-1` times if there are `n` terms in a series, but the number can be reduced for easier computation.  
   

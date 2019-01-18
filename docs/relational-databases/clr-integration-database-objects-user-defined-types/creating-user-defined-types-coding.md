@@ -2,15 +2,9 @@
 title: "Coding User-Defined Types | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/16/2017"
-ms.prod: "sql-non-specified"
-ms.prod_service: "database-engine"
-ms.service: ""
-ms.component: "clr"
+ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-
-ms.tgt_pltfrm: ""
+ms.technology: clr
 ms.topic: "reference"
 dev_langs: 
   - "VB"
@@ -34,11 +28,9 @@ helpviewer_keywords:
   - "validating UDT values"
   - "exposing UDT properties [CLR integration]"
 ms.assetid: 1e5b43b3-4971-45ee-a591-3f535e2ac722
-caps.latest.revision: 37
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-ms.workload: "Inactive"
+author: "rothja"
+ms.author: "jroth"
+manager: craigg
 ---
 # Creating User-Defined Types - Coding
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -623,7 +615,7 @@ public void Rotate(double anglex, double angley, double anglez)
   
  The purpose of the padding is to ensure that the culture is completely separated from the currency value, so that when one UDT is compared against another in [!INCLUDE[tsql](../../includes/tsql-md.md)] code, culture bytes are compared against culture bytes, and currency byte values are compared against currency byte values.  
   
- For the complete code listing for the **Currency** UDT, follow the directions for installing the CLR samples in [SQL Server Database Engine Samples](http://msftengprodsamples.codeplex.com/).  
+ For the complete code listing for the **Currency** UDT, follow the directions for installing the CLR samples in [SQL Server Database Engine Samples](https://msftengprodsamples.codeplex.com/).  
   
 ### Currency Attributes  
  The **Currency** UDT is defined with the following attributes.  
@@ -747,7 +739,7 @@ public void Read(System.IO.BinaryReader r)
 }  
 ```  
   
- For the complete code listing for the **Currency** UDT, see [SQL Server Database Engine Samples](http://msftengprodsamples.codeplex.com/).  
+ For the complete code listing for the **Currency** UDT, see [SQL Server Database Engine Samples](https://msftengprodsamples.codeplex.com/).  
   
 ## See Also  
  [Creating a User-Defined Type](../../relational-databases/clr-integration-database-objects-user-defined-types/creating-user-defined-types.md)  

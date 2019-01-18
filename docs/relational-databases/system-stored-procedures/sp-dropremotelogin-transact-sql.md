@@ -2,15 +2,10 @@
 title: "sp_dropremotelogin (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "database-engine"
-ms.service: ""
-ms.component: "system-stored-procedures"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: system-objects
 ms.topic: "language-reference"
 f1_keywords: 
   - "sp_dropremotelogin"
@@ -20,11 +15,9 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_dropremotelogin"
 ms.assetid: 9f097652-a286-40b2-be73-568d77ada698
-caps.latest.revision: 30
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "craigg"
-ms.workload: "Inactive"
+ms.author: vanto
+manager: craigg
+manager: craigg
 ---
 # sp_dropremotelogin (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,13 +39,13 @@ sp_dropremotelogin [ @remoteserver = ] 'remoteserver'
 ```  
   
 ## Arguments  
- [ **@remoteserver =** ] **'***remoteserver***'**  
+ [ **@remoteserver =** ] **'**_remoteserver_**'**  
  Is the name of the remote server mapped to the remote login that is to be removed. *remoteserver* is **sysname**, with no default. *remoteserver* must already exist.  
   
- [ **@loginame =** ] **'***login***'**  
+ [ **@loginame =** ] **'**_login_**'**  
  Is the optional login name on the local server that is associated with the remote server. *login* is **sysname**, with a default of NULL. *login* must already exist if specified.  
   
- [ **@remotename =** ] **'***remote_name***'**  
+ [ **@remotename =** ] **'**_remote_name_**'**  
  Is the optional name of the remote login that is mapped to *login* when logging in from the remote server. *remote_name* is **sysname**, with a default of NULL.  
   
 ## Return Code Values  

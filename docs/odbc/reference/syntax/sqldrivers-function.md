@@ -2,16 +2,11 @@
 title: "SQLDrivers Function | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
-ms.prod_service: "drivers"
-ms.service: ""
-ms.component: "odbc"
+ms.prod: sql
+ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "drivers"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: connectivity
+ms.topic: conceptual
 apiname: 
   - "SQLDrivers"
 apilocation: 
@@ -22,11 +17,9 @@ f1_keywords:
 helpviewer_keywords: 
   - "SQLDrivers function [ODBC]"
 ms.assetid: 6b5b7514-e9cb-4cfd-8b7a-ab51dfab9efa
-caps.latest.revision: 23
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
-ms.workload: "Inactive"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # SQLDrivers Function
 **Conformance**  
@@ -40,14 +33,14 @@ ms.workload: "Inactive"
 ```  
   
 SQLRETURN SQLDrivers(  
-     SQLHENV         EnvironmentHandle,  
-     SQLUSMALLINT    Direction,  
-     SQLCHAR *       DriverDescription,  
-     SQLSMALLINT     BufferLength1,  
-     SQLSMALLINT *   DescriptionLengthPtr,  
-     SQLCHAR *       DriverAttributes,  
-     SQLSMALLINT     BufferLength2,  
-     SQLSMALLINT *   AttributesLengthPtr);  
+     SQLHENV         EnvironmentHandle,  
+     SQLUSMALLINT    Direction,  
+     SQLCHAR *       DriverDescription,  
+     SQLSMALLINT     BufferLength1,  
+     SQLSMALLINT *   DescriptionLengthPtr,  
+     SQLCHAR *       DriverAttributes,  
+     SQLSMALLINT     BufferLength2,  
+     SQLSMALLINT *   AttributesLengthPtr);  
 ```  
   
 ## Arguments  
@@ -87,7 +80,7 @@ SQLRETURN SQLDrivers(
   
 |SQLSTATE|Error|Description|  
 |--------------|-----------|-----------------|  
-|01000|General warning|(DM) Driver Manager–specific informational message. (Function returns SQL_SUCCESS_WITH_INFO.)|  
+|01000|General warning|(DM) Driver Manager-specific informational message. (Function returns SQL_SUCCESS_WITH_INFO.)|  
 |01004|String data, right truncated|(DM) The buffer \**DriverDescription* was not large enough to return the complete driver description. Therefore, the description was truncated. The length of the complete driver description is returned in \**DescriptionLengthPtr*. (Function returns SQL_SUCCESS_WITH_INFO.)<br /><br /> (DM) The buffer \**DriverAttributes* was not large enough to return the complete list of attribute value pairs. Therefore, the list was truncated. The length of the untruncated list of attribute value pairs is returned in **AttributesLengthPtr*. (Function returns SQL_SUCCESS_WITH_INFO.)|  
 |HY000|General error|An error occurred for which there was no specific SQLSTATE and for which no implementation-specific SQLSTATE was defined. The error message returned by **SQLGetDiagRec** in the *\*MessageText* buffer describes the error and its cause.|  
 |HY001|Memory allocation  error|(DM) The Driver Manager was unable to allocate memory that is required to support execution or completion of the function.|  

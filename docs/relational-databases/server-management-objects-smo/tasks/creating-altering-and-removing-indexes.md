@@ -1,28 +1,25 @@
 ---
 title: "Creating, Altering, and Removing Indexes | Microsoft Docs"
 ms.custom: ""
-ms.date: "08/06/2017"
-ms.prod: "sql-non-specified"
+ms.date: 01/11/2019
+ms.prod: sql
 ms.prod_service: "database-engine"
-ms.service: ""
-ms.component: "smo"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: 
 
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 
   - "indexes [SMO]"
 ms.assetid: ad1befa5-46e0-4895-b9d3-42852e07607b
-caps.latest.revision: 50
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-ms.workload: "Inactive"
+author: "stevestein"
+ms.author: "sstein"
+manager: craigg
+monikerRange: "=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Creating, Altering, and Removing Indexes
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+
+[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
+
   In the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Management Objects (SMO) hierarchy, indexes are represented by the <xref:Microsoft.SqlServer.Management.Smo.Index> object. The indexed columns are represented by a collection of <xref:Microsoft.SqlServer.Management.Smo.IndexedColumn> objects represented by the <xref:Microsoft.SqlServer.Management.Smo.Index.IndexedColumns%2A> property.  
   
  You can create an index on a XML column by specifying the <xref:Microsoft.SqlServer.Management.Smo.Index.IsXmlIndex%2A> property of the <xref:Microsoft.SqlServer.Management.Smo.Index> object.  

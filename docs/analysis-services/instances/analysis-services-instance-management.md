@@ -1,38 +1,30 @@
 ---
-title: "Analysis Services Instance Management | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: analysis-services
-ms.prod_service: "analysis-services"
-ms.service: ""
-ms.component: ""
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
-  
-ms.component: multidimensional-tabular
-ms.component: data-mining
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-ms.assetid: 0455fa4f-b92d-4a8b-a8f0-f2a268a5c84e
-caps.latest.revision: 25
-author: "Minewiskan"
-ms.author: "owend"
-manager: "kfile"
-ms.workload: "On Demand"
+title: "SQL Server Analysis Services Server Management | Microsoft Docs"
+ms.date: 11/15/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom:
+ms.topic: conceptual
+ms.author: owend
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
 ---
-# Analysis Services Instance Management
+# SQL Server Analysis Services server management
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-  An instance of Analysis Services is a copy of the **msmdsrv.exe** executable that runs as an operating system service. Each instance is fully independent of other instances on the same server, having its own configuration settings, permissions, ports, startup accounts, file storage, and server mode properties.  
+
+For Azure Analysis Services, see [Manage Azure Analysis Services](https://docs.microsoft.com/azure/analysis-services/analysis-services-manage).
+
+  A server instance of Analysis Services is a copy of the **msmdsrv.exe** executable that runs as an operating system service. Each instance is fully independent of other instances on the same server, having its own configuration settings, permissions, ports, startup accounts, file storage, and server mode properties.  
   
- Each instance of [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] runs as Windows service, Msmdsrv.exe, in the security context of a defined logon account.  
+ Each instance runs as Windows service, Msmdsrv.exe, in the security context of a defined logon account.  
   
--   The service name of default instance of [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] is MSSQLServerOLAPService.  
+-   The service name of default instance is MSSQLServerOLAPService.  
   
--   The service name of each named instance of [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] is MSOLAP$InstanceName.  
+-   The service name of each named instance of is MSOLAP$InstanceName.  
   
 > [!NOTE]  
->  If multiple instances of [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] are installed, Setup also installs a redirector service, which is integrated with the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser service. The redirector service is responsible for directing clients to the appropriate named instance of [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser service always runs in the security context of the Local Service account, a limited user account used by Windows for services that do not access resources outside the local computer.  
+>  If multiple instances are installed, Setup also installs a redirector service, which is integrated with the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser service. The redirector service is responsible for directing clients to the appropriate named instance of [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser service always runs in the security context of the Local Service account, a limited user account used by Windows for services that do not access resources outside the local computer.  
   
  Multi-instance means that you can scale-up by installing multiple server instances on the same hardware. For Analysis Services in particular, it also means that you can support different server modes by having multiple instances on the same server, each one configured to run in a specific mode.  
   
@@ -45,13 +37,13 @@ ms.workload: "On Demand"
  As a general rule, most of the administrative tasks you must perform do not vary by mode. As an Analysis Services system administrator, you can use the same procedures and scripts to manage any Analysis Services instance on your network regardless of how it was installed.  
   
 > [!NOTE]  
->  The exception is [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint. Server administration of a [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] deployment is always within the context of a SharePoint farm. [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] differs from other server modes in that it is always single-instance, and always managed through SharePoint Central Administration or the [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] Configuration Tool. Although it is possible to connect to [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint in SQL Server Management Studio or [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], it is not desirable. A SharePoint farm includes infrastructure that synchronizes server state and oversees server availability. Using other tools can interfere with these operations. For more information about [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] server administration, see [Power Pivot for SharePoint &#40;SSAS&#41;](../../analysis-services/power-pivot-sharepoint/power-pivot-for-sharepoint-ssas.md).  
+>  The exception is [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint. Server administration of a [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] deployment is always within the context of a SharePoint farm. [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] differs from other server modes in that it is always single-instance, and always managed through SharePoint Central Administration or the [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] Configuration Tool. Although it is possible to connect to [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint in SQL Server Management Studio or [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], it is not desirable. A SharePoint farm includes infrastructure that synchronizes server state and oversees server availability. Using other tools can interfere with these operations. For more information about [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] server administration, see [Power Pivot for SharePoint ](../../analysis-services/power-pivot-sharepoint/power-pivot-for-sharepoint-ssas.md).  
   
-## In This Section  
+## Common server management topics  
   
 |Link|Task Description|  
 |----------|----------------------|  
-|[Post-install Configuration &#40;Analysis Services&#41;](../../analysis-services/instances/post-install-configuration-analysis-services.md)|Describes the required and optional tasks that complete or modify an installation of Analysis.|  
+|[Post-install Configuration](../../analysis-services/instances/post-install-configuration-analysis-services.md)|Describes the required and optional tasks that complete or modify an installation of Analysis.|  
 |[Connect to Analysis Services](../../analysis-services/instances/connect-to-analysis-services.md)|Describes connection string properties, client libraries, authentication methodologies, and steps for establishing or clearing connections.|  
 |[Monitor an Analysis Services Instance](../../analysis-services/instances/monitor-an-analysis-services-instance.md)|Describes tools and techniques for monitoring a server instance, including how to use Performance Monitor and SQL Server Profiler.|  
 |[High availability and Scalability](../../analysis-services/instances/high-availability-and-scalability-in-analysis-services.md)|Describes the most commonly used techniques for making Analysis Services databases high available and scalable. |  
@@ -59,10 +51,8 @@ ms.workload: "On Demand"
 |[Log operations in Analysis Services](../../analysis-services/instances/log-operations-in-analysis-services.md)|Describes the logs and explains how to configure them.|  
   
   
-## See Also  
- [Comparing Tabular and Multidimensional Solutions &#40;SSAS&#41;](../../analysis-services/comparing-tabular-and-multidimensional-solutions-ssas.md)   
- [Power Pivot Configuration Tools](../../analysis-services/power-pivot-sharepoint/power-pivot-configuration-tools.md)   
- [Power Pivot Server Administration and Configuration in Central Administration](../../analysis-services/power-pivot-sharepoint/power-pivot-server-administration-and-configuration-in-central-administration.md)   
+## See also  
+ [Comparing Tabular and Multidimensional Solutions ](../../analysis-services/comparing-tabular-and-multidimensional-solutions-ssas.md)   
  [Determine the Server Mode of an Analysis Services Instance](../../analysis-services/instances/determine-the-server-mode-of-an-analysis-services-instance.md)  
   
   

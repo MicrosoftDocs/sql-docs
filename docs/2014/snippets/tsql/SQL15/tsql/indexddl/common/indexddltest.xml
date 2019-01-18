@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" ?> 
+<testSuite 
+    name="IndexDDLTest" projectPath="/Microsoft/SqlServer/Snippets/TSQL/IndexDDL"
+    xmlns="https://schemas.microsoft.com/sqlserver/2004/07/UXTestSpec"
+    managementDatabaseConnectionString="data source=SqlSampTest;initial catalog=UXTest;integrated security=SSPI;persist security info=False"
+    testDatabaseConnectionString="data source=localhost;initial catalog=AdventureWorks;integrated security=SSPI;persist security info=False"
+    rootDirectory="\\sunbeam\Yukon_CodeSnippets\TSQL\IndexDDL"
+    testOwner="gaile">
+    <tsqlTestCase name="CreateIndex" component="IndexDDLSnippets" rootDirectory="SQL">
+        <testFile path="CreateIndex.sql" />
+	<cleanupFile path ="CreateIndexCleanup.sql"/>
+    </tsqlTestCase>
+    <tsqlTestCase name="AlterIndex" component="IndexDDLSnippets" rootDirectory="SQL">
+        <testFile path="AlterIndex.sql" />
+    </tsqlTestCase>
+    <tsqlTestCase name="DropIndex" component="IndexDDLSnippets" rootDirectory="SQL">
+        <testFile path="DropIndex.sql" />
+	<cleanupFile path = "DropIndexCleanup.sql"/>
+    </tsqlTestCase>
+</testSuite>

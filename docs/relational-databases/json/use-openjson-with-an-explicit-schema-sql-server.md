@@ -2,23 +2,18 @@
 title: "Use OPENJSON with an Explicit Schema (SQL Server) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/02/2016"
-ms.prod: "sql-non-specified"
-ms.prod_service: "database-engine, sql-database"
-ms.component: "json"
+ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: 
-  - "dbe-json"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "OPENJSON, with explicit schema"
 ms.assetid: 9c1c3bfb-e1ad-4659-b94f-722b0848d5a2
-caps.latest.revision: 13
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "craigg"
-ms.workload: "On Demand"
+author: "jovanpop-msft"
+ms.author: "jovanpop"
+ms.reviewer: douglasl
+manager: craigg
+monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Use OPENJSON with an Explicit Schema (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -86,8 +81,17 @@ DECLARE @json NVARCHAR(MAX) = '{
         dateOfBirth datetime2, spouse nvarchar(50))  
 ```  
 
-## Learn more about the built-in JSON support in SQL Server  
-For lots of specific solutions, use cases, and recommendations, see the [blog posts about the built-in JSON support](http://blogs.msdn.com/b/sqlserverstorageengine/archive/tags/json/) in SQL Server and in Azure SQL Database by Microsoft Program Manager Jovan Popovic.
+## Learn more about JSON in SQL Server and Azure SQL Database  
+  
+### Microsoft videos
+
+For a visual introduction to the built-in JSON support in SQL Server and Azure SQL Database, see the following videos:
+
+-   [SQL Server 2016 and JSON Support](https://channel9.msdn.com/Shows/Data-Exposed/SQL-Server-2016-and-JSON-Support)
+
+-   [Using JSON in SQL Server 2016 and Azure SQL Database](https://channel9.msdn.com/Shows/Data-Exposed/Using-JSON-in-SQL-Server-2016-and-Azure-SQL-Database)
+
+-   [JSON as a bridge between NoSQL and relational worlds](https://channel9.msdn.com/events/DataDriven/SQLServer2016/JSON-as-a-bridge-betwen-NoSQL-and-relational-worlds)
   
 ## See Also  
  [OPENJSON &#40;Transact-SQL&#41;](../../t-sql/functions/openjson-transact-sql.md)  

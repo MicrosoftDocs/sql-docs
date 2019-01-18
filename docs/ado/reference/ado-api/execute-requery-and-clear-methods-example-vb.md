@@ -1,17 +1,12 @@
 ---
 title: "Execute, Requery, and Clear Methods Example (VB) | Microsoft Docs"
-ms.prod: "sql-non-specified"
-ms.prod_service: "drivers"
-ms.service: ""
-ms.component: "ado"
-ms.technology:
-  - "drivers"
+ms.prod: sql
+ms.prod_service: connectivity
+ms.technology: connectivity
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 dev_langs: 
   - "VB"
 helpviewer_keywords: 
@@ -19,11 +14,9 @@ helpviewer_keywords:
   - "Clear method [ADO], Visual Basic example"
   - "Execute method [ADO], Visual Basic example"
 ms.assetid: ed5e1b60-3769-4b26-a253-1d721e37941d
-caps.latest.revision: 10
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
-ms.workload: "On Demand"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # Execute, Requery, and Clear Methods Example (VB)
 This example demonstrates the **Execute** method when run from both a [Command](../../../ado/reference/ado-api/command-object-ado.md) object and a [Connection](../../../ado/reference/ado-api/connection-object-ado.md) object. It also uses the [Requery](../../../ado/reference/ado-api/requery-method.md) method to retrieve current data in a [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md), and the [Clear](../../../ado/reference/ado-api/clear-method-ado.md) method to clear the contents of the [Errors](../../../ado/reference/ado-api/errors-collection-ado.md) collection. (The **Errors** collection is accessed via the **Connection** object of the [ActiveConnection](../../../ado/reference/ado-api/activeconnection-property-ado.md) property of the [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md).) The ExecuteCommand and PrintOutput procedures are required for this procedure to run.  

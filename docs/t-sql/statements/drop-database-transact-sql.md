@@ -2,15 +2,10 @@
 title: "DROP DATABASE (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "09/15/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "sql-data-warehouse, database-engine, pdw, sql-database"
-ms.service: ""
-ms.component: "t-sql|statements"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: t-sql
 ms.topic: "language-reference"
 f1_keywords: 
   - "DROP DATABASE"
@@ -27,14 +22,13 @@ helpviewer_keywords:
   - "DROP DATABASE statement"
   - "database removal [SQL Server], DROP DATABASE statement"
 ms.assetid: 477396a9-92dc-43c9-9b97-42c8728ede8e
-caps.latest.revision: 83
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "craigg"
-ms.workload: "Active"
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # DROP DATABASE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-pdw-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Removes one or more user databases or database snapshots from an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
@@ -54,7 +48,7 @@ DROP DATABASE database_name [;]
   
 ## Arguments  
  *IF EXISTS*  
- **Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] through [current version](http://go.microsoft.com/fwlink/p/?LinkId=299658)).  
+ **Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ( [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] through [current version](https://go.microsoft.com/fwlink/p/?LinkId=299658)).  
   
  Conditionally drops the database only if it already exists.  
   
@@ -76,10 +70,10 @@ DROP DATABASE database_name [;]
  Dropping a database deletes the database from an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and deletes the physical disk files used by the database. If the database or any one of its files is offline when it is dropped, the disk files are not deleted. These files can be deleted manually by using Windows Explorer. To remove a database from the current server without deleting the files from the file system, use [sp_detach_db](../../relational-databases/system-stored-procedures/sp-detach-db-transact-sql.md).  
   
 > [!WARNING]  
->  Dropping a database that has FILE_SNAPSHOT backups associated with it will succeed, but the database files that have associated snapshots will not be deleted to avoid invalidating the backups referring to these database files. The file will be truncated, but will not be physically deleted in order to keep the FILE_SNAPSHOT backups intact. For more information, see [SQL Server Backup and Restore with Microsoft Azure Blob Storage Service](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md). **Applies to**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] through [current version](http://go.microsoft.com/fwlink/p/?LinkId=299658).  
+>  Dropping a database that has FILE_SNAPSHOT backups associated with it will succeed, but the database files that have associated snapshots will not be deleted to avoid invalidating the backups referring to these database files. The file will be truncated, but will not be physically deleted in order to keep the FILE_SNAPSHOT backups intact. For more information, see [SQL Server Backup and Restore with Microsoft Azure Blob Storage Service](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md). **Applies to**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] through [current version](https://go.microsoft.com/fwlink/p/?LinkId=299658).  
   
 ### [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
- Dropping a database snapshot deletes the database snapshot from an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and deletes the physical NTFS File System sparse files used by the snapshot. For information about using sparse files by database snapshots, see [Database Snapshots &#40;SQL Server&#41;](../../relational-databases/databases/database-snapshots-sql-server.md). Dropping a database snapshot clears the plan cache for the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Clearing the plan cache causes a recompilation of all subsequent execution plans and can cause a sudden, temporary decrease in query performance. For each cleared cachestore in the plan cache, the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] error log contains the following informational message: "[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] has encountered %d occurrence(s) of cachestore flush for the '%s' cachestore (part of plan cache) due to some database maintenance or reconfigure operations". This message is logged every five minutes as long as the cache is flushed within that time interval.  
+ Dropping a database snapshot deletes the database snapshot from an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and deletes the physical NTFS File System sparse files used by the snapshot. For information about using sparse files by database snapshots, see [Database Snapshots &#40;SQL Server&#41;](../../relational-databases/databases/database-snapshots-sql-server.md). Dropping a database snapshot clears the plan cache for the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Clearing the plan cache causes a recompilation of all subsequent execution plans and can cause a sudden, temporary decrease in query performance. For each cleared cachestore in the plan cache, the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] error log contains the following informational message: " [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] has encountered %d occurrence(s) of cachestore flush for the '%s' cachestore (part of plan cache) due to some database maintenance or reconfigure operations". This message is logged every five minutes as long as the cache is flushed within that time interval.  
   
 ## Interoperability  
   
@@ -94,7 +88,10 @@ DROP DATABASE database_name [;]
   
  The DROP DATABASE statement must run in autocommit mode and is not allowed in an explicit or implicit transaction. Autocommit mode is the default transaction management mode.  
   
- You cannot drop a database currently being used. This means open for reading or writing by any user. To remove users from the database, use ALTER DATABASE to set the database to SINGLE_USER.  
+ You cannot drop a database currently being used. This means open for reading or writing by any user. One way to remove users from the database is to use ALTER DATABASE to set the database to SINGLE_USER. 
+ 
+ >[!Warning] 
+ > This is not a fail-proof approach, since first consecutive connection made by any thread will receive the SINGLE_USER thread, causing your connection to fail. Sql server does not provide a built-in way to drop databases under load.
   
 ### [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
  Any database snapshots on a database must be dropped before the database can be dropped.  
@@ -153,7 +150,7 @@ DROP DATABASE sales_snapshot0600;
   
 ## See Also  
  [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)   
- [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md)   
+ [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-transact-sql.md?&tabs=sqlserver)   
  [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)   
  [sys.databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)  
   

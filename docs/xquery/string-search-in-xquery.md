@@ -2,18 +2,11 @@
 title: "String Search in XQuery | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/04/2017"
-ms.prod: "sql-non-specified"
-ms.prod_service: "sql-non-specified"
-ms.service: ""
-ms.component: "xquery"
+ms.prod: sql
+ms.prod_service: sql
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: xml
 ms.topic: "language-reference"
-applies_to: 
-  - "SQL Server"
 dev_langs: 
   - "XML"
 helpviewer_keywords: 
@@ -22,11 +15,9 @@ helpviewer_keywords:
   - "searches [SQL Server], XML documents"
   - "XQuery, string search"
 ms.assetid: edc62024-4c4c-4970-b5fa-2e54a5aca631
-caps.latest.revision: 23
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-ms.workload: "Inactive"
+author: "rothja"
+ms.author: "jroth"
+manager: craigg
 ---
 # String Search in XQuery
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -39,7 +30,7 @@ ms.workload: "Inactive"
   
 ```  
 SELECT CatalogDescription.query('  
-     declare namespace p1="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription";  
+     declare namespace p1="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription";  
     for $f in /p1:ProductDescription/p1:Features/*  
      where contains(string($f), "maintenance")  
      return  
@@ -54,7 +45,7 @@ WHERE ProductModelID=19
   
 ```  
 <p1:Maintenance     
-      xmlns:p1="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelWarrAndMain">  
+      xmlns:p1="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelWarrAndMain">  
  <p1:NoOfYears>10</p1:NoOfYears>  
  <p1:Description>maintenance contact available through your   
                dealer or any AdventureWorks retail store.</p1:Description>  

@@ -2,24 +2,17 @@
 title: "Sort Columns | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/04/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "database-engine"
-ms.service: ""
-ms.component: "replication"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: replication
+ms.topic: conceptual
 f1_keywords: 
   - "sql13.rep.monitor.sortcolumns.f1"
 ms.assetid: 66b44b6c-10a5-4e3f-a97b-7568609c88ac
-caps.latest.revision: 7
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-ms.workload: "Inactive"
+author: "MashaMSFT"
+ms.author: "mathoma"
+manager: craigg
 ---
 # Sort Columns
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -40,6 +33,6 @@ ms.workload: "Inactive"
  Remove all rows from the sorting grid. To remove a single row, select the row and press the Delete key.  
   
 ## See Also  
- [Monitoring Replication](../../relational-databases/replication/monitor/monitoring-replication-overview.md)  
+ [Monitoring Replication](../../relational-databases/replication/monitor/monitoring-replication.md)  
   
   

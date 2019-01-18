@@ -2,31 +2,24 @@
 title: "Database Mirroring and Replication (SQL Server) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-non-specified"
-ms.prod_service: "database-engine"
-ms.service: ""
-ms.component: "database-mirroring"
+ms.prod: sql
+ms.prod_service: high-availability
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: high-availability
+ms.topic: conceptual
 helpviewer_keywords: 
   - "database mirroring [SQL Server], interoperability"
   - "replication [SQL Server], database mirroring and"
 ms.assetid: 82796217-02e2-4bc5-9ab5-218bae11a2d6
-caps.latest.revision: 39
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-ms.workload: "Active"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ---
 # Database Mirroring and Replication (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Database mirroring can be used in conjunction with replication to improve availability for the publication database. Database mirroring involves two copies of a single database that typically reside on different computers. At any given time, only one copy of the database is currently available to clients. This copy is known as the principal database. Updates made by clients to the principal database are applied on the other copy of the database, known as the mirror database. Mirroring involves applying the transaction log from every insertion, update, or deletion made on the principal database onto the mirror database.  
   
- Replication failover to a mirror is fully supported for publication databases, with limited support for subscription databases. Database mirroring is not supported for the distribution database. For information about recovering a distribution database or subscription database without any need to reconfigure replication, see [Back Up and Restore Replicated Databases](../../relational-databases/replication/administration/back-up-and-restore-replicated-databases.md). For information about mirroring the subscriber database, see the  
+ Replication failover to a mirror is fully supported for publication databases, with limited support for subscription databases. Database mirroring is not supported for the distribution database. For information about recovering a distribution database or subscription database without any need to reconfigure replication, see [Back Up and Restore Replicated Databases](../../relational-databases/replication/administration/back-up-and-restore-replicated-databases.md).   
   
 > [!NOTE]  
 >  After a failover, the mirror becomes the principal. In this topic, "principal" and "mirror" always refer to the original principal and mirror.  
@@ -78,7 +71,7 @@ ms.workload: "Active"
   
     -   Set the value of the **@working_directory** parameter to the snapshot folder used by the principal.  
   
-4.  Specify the mirror name for the **–PublisherFailoverPartner** agent parameter. Agent This parameter is required for the following agents to identify the mirror after failover:  
+4.  Specify the mirror name for the **-PublisherFailoverPartner** agent parameter. Agent This parameter is required for the following agents to identify the mirror after failover:  
   
     -   Snapshot Agent (for all publications)  
   
@@ -100,7 +93,7 @@ ms.workload: "Active"
   
     -   [Replication Agent Executables Concepts](../../relational-databases/replication/concepts/replication-agent-executables-concepts.md)  
   
-     We recommend adding the **–PublisherFailoverPartner** to an agent profile, and then specifying the mirror name in the profile. For example, if you are configuring replication with stored procedures:  
+     We recommend adding the **-PublisherFailoverPartner** to an agent profile, and then specifying the mirror name in the profile. For example, if you are configuring replication with stored procedures:  
   
     ```  
     -- Execute sp_help_agent_profile in the context of the distribution database to get the list of profiles.  
@@ -164,7 +157,7 @@ ms.workload: "Active"
 |High-safety mode without automatic failover|All committed transactions are guaranteed to be hardened to disk on the mirror. The Log Reader Agent replicates only those transactions that are hardened on the mirror. If the mirror is unavailable, the principal disallows further activity in the database; therefore the Log Reader Agent has no transactions to replicate.|  
   
 ## See Also  
- [Replication Features and Tasks](../../relational-databases/replication/replication-features-and-tasks.md)   
+ [SQL Server Replication](../../relational-databases/replication/sql-server-replication.md)   
  [Log Shipping and Replication &#40;SQL Server&#41;](../../database-engine/log-shipping/log-shipping-and-replication-sql-server.md)  
   
   

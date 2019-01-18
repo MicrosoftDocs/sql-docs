@@ -2,25 +2,18 @@
 title: "Visual FoxPro Language Reference | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
-ms.prod_service: "drivers"
-ms.service: ""
-ms.component: "odbc"
+ms.prod: sql
+ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "drivers"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: connectivity
+ms.topic: conceptual
 helpviewer_keywords: 
   - "commands for FoxPro ODBC driver [ODBC]"
   - "Visual FoxPro ODBC driver [ODBC], commands"
 ms.assetid: 8e052213-ca6f-44ca-917e-054ecb3eb0e5
-caps.latest.revision: 5
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
-ms.workload: "Inactive"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # Visual FoxPro Language Reference
 This section contains the following topics.  

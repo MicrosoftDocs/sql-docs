@@ -1,23 +1,16 @@
 ---
 title: "Troubleshoot SQL Server Integration Services (SSIS) Scale Out | Microsoft Docs"
-ms.description: "This article describes how to troubleshoot common issues with SSIS Scale Out"
-ms.custom: ""
-ms.date: "12/19/2017"
-ms.prod: "sql-non-specified"
+description: "This article describes how to troubleshoot common issues with SSIS Scale Out"
+ms.custom: performance
+ms.date: 01/09/2019
+ms.prod: sql
 ms.prod_service: "integration-services"
-ms.service: ""
-ms.component: "scale-out"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-caps.latest.revision: 1
+ms.technology: integration-services
+ms.topic: conceptual
 author: "haoqian"
 ms.author: "haoqian"
-manager: "jhubbard"
-ms.workload: "Inactive"
+manager: craigg
 ---
 # Troubleshoot Scale Out
 
@@ -37,9 +30,9 @@ To investigate the symptoms you encounter, follow the steps below one by one unt
 ### Solution
 1.  Check whether Scale Out is enabled.
 
-    In SSMS, in Objecy Explorer, right-click **SSISDB** and check **Scale Out feature is enabled**.
+    In SSMS, in Object Explorer, right-click **SSISDB** and check **Scale Out feature is enabled**.
 
-    ![Is Scale Out enabled](media\isenabled.PNG)
+    ![Is Scale Out enabled](media/isenabled.PNG)
 
     If the property value is False, enable Scale Out by calling the stored procedure `[catalog].[enable_scaleout]`.
 
@@ -109,7 +102,7 @@ Check whether the account running the Scale Out Worker service has access to the
 winhttpcertcfg.exe -l -c LOCAL_MACHINE\MY -s {CN of the worker certificate}
 ```
 
-If the account does not have access, grant access by running the folloowing command, and restart Scale Out Worker service.
+If the account does not have access, grant access by running the following command, and restart Scale Out Worker service.
 
 ```dos
 winhttpcertcfg.exe -g -c LOCAL_MACHINE\My -s {CN of the worker certificate} -a {the account running Scale Out Worker service}
@@ -126,7 +119,7 @@ winhttpcertcfg.exe -g -c LOCAL_MACHINE\My -s {CN of the worker certificate} -a {
 ### Solution
 1.  Install the Scale Out Worker certificate to the Root certificate store of the local computer on the Scale Out Master node, if the certificate is not yet installed, and restart the Scale Out Worker service.
 
-2.  Clean up useless certificates in the Root certificate store of the local computer on Sthe cale Out Master node.
+2.  Clean up useless certificates in the Root certificate store of the local computer on the Scale Out Master node.
 
 3.  Configure Schannel to no longer send the list of trusted root certification authorities during the TLS/SSL handshake process by adding the following registry entry on the Scale Out Master node.
 
@@ -137,6 +130,19 @@ winhttpcertcfg.exe -g -c LOCAL_MACHINE\My -s {CN of the worker certificate} -a {
     Value type: **REG_DWORD** 
 
     Value data: **0 (False)**
+
+4.  If it is not possible to clean up all non-self-signed certificates as described in step 2, set the value of the following registry key to 2.
+
+    `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL`
+
+    Value name: **ClientAuthTrustMode** 
+
+    Value type: **REG_DWORD** 
+
+    Value data: **2**
+
+    > [!NOTE]
+    > If you have non-self-signed certificates in the Root certificate store, client certificate authentication fails. For more info, see [Internet Information Services (IIS) 8 may reject client certificate requests with HTTP 403.7 or 403.16 errors](https://support.microsoft.com/help/2802568/internet-information-services-iis-8-may-reject-client-certificate-requ).
 
 ## HTTP request error
 

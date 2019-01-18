@@ -2,15 +2,9 @@
 title: "sys.dm_resource_governor_resource_pool_affinity (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/09/2016"
-ms.prod: "sql-non-specified"
-ms.prod_service: "database-engine"
-ms.service: ""
-ms.component: "dmv's"
+ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: system-objects
 ms.topic: "language-reference"
 f1_keywords: 
   - "sys.dm_resource_governor_resource_pool_affinity_TSQL"
@@ -23,11 +17,9 @@ helpviewer_keywords:
   - "dm_resource_governor_resource_pool_affinity"
   - "sys.dm_resource_governor_resource_pool_affinity"
 ms.assetid: a197ec19-a2ba-44f5-a4f2-3eee33ebd77d
-caps.latest.revision: 9
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-ms.workload: "Inactive"
+author: stevestein
+ms.author: sstein
+manager: craigg
 ---
 # sys.dm_resource_governor_resource_pool_affinity (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]

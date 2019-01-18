@@ -2,15 +2,10 @@
 title: "COL_LENGTH (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/24/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.service: ""
-ms.component: "t-sql|functions"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: t-sql
 ms.topic: "language-reference"
 f1_keywords: 
   - "COL_LENGTH"
@@ -23,16 +18,14 @@ helpviewer_keywords:
   - "column properties [SQL Server]"
   - "column length [SQL Server]"
 ms.assetid: cf891206-c49f-40eb-858e-eefd2b638a33
-caps.latest.revision: 20
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "craigg"
-ms.workload: "On Demand"
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
 ---
 # COL_LENGTH (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-Returns the defined length, in bytes, of a column.
+This function returns the defined length of a column, in bytes.
   
 ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -44,24 +37,24 @@ COL_LENGTH ( 'table' , 'column' )
   
 ## Arguments  
 **'** *table* **'**  
-Is the name of the table for which to determine column length information. *table* is an expression of type **nvarchar**.
+The name of the table whose column length information we want to determine. *table* is an expression of type **nvarchar**.
   
 **'** *column* **'**  
-Is the name of the column for which to determine length. *column* is an expression of type **nvarchar**.
+The column name whose length we want to determine. *column* is an expression of type **nvarchar**.
   
 ## Return type
 **smallint**
   
 ## Exceptions  
-Returns NULL on error or if a caller does not have permission to view the object.
+Returns NULL on error, or if a caller does not have the correct permission to view the object.
   
-In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], a user can only view the metadata of securables that the user owns or on which the user has been granted permission. This means that metadata-emitting, built-in functions such as COL_LENGTH may return NULL if the user does not have any permission on the object. For more information, see [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).
+In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], a user can only view the metadata of securables that the user owns, or on which the user has been granted permission. This means that metadata-emitting, built-in functions such as COL_LENGTH might return NULL, if the user does not have correct permission on the object. See [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md) for more information.
   
 ## Remarks  
-For columns of type **varchar** declared with the **max** specifier (**varchar(max)**), COL_LENGTH returns the value –1.
+For **varchar** columns declared with the **max** specifier (**varchar(max)**), COL_LENGTH returns the value -1.
   
 ## Examples  
-The following example shows the return values for a column of type `varchar(40)` and a column of type `nvarchar(40)`.
+This example shows the return values for a column of type `varchar(40)` and a column of type `nvarchar(40)`:
   
 ```sql
 USE AdventureWorks2012;  

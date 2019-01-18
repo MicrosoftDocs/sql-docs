@@ -1,59 +1,54 @@
 ---
-title: "Define and use compute contexts (SQL and R deep dive) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/14/2017"
-ms.reviewer: 
-ms.suite: sql
-ms.prod: machine-learning-services
-ms.prod_service: machine-learning-services
-ms.component: 
-ms.technology: 
-  
-ms.tgt_pltfrm: ""
-ms.topic: "tutorial"
-applies_to: 
-  - "SQL Server 2016"
-  - "SQL Server 2017"
-dev_langs: 
-  - "R"
-ms.assetid: b13058d0-9c6a-44e1-849b-72189d9050ba
-caps.latest.revision: 17
-author: "jeannt"
-ms.author: "jeannt"
-manager: "cgronlund"
-ms.workload: "Inactive"
+title: Define and use RevoScaleR compute contexts - SQL Server Machine Learning
+description: Tutorial walkthrough on how to define a compute context using the R language on SQL Server.
+ms.prod: sql
+ms.technology: machine-learning
+
+ms.date: 11/27/2018  
+ms.topic: tutorial
+author: HeidiSteen
+ms.author: heidist
+manager: cgronlun
 ---
-# Define and use compute contexts (SQL and R deep dive)
+# Define and use compute contexts (SQL Server and RevoScaleR tutorial)
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-This article is part of the Data Science Deep Dive tutorial, on how to use [RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) with SQL Server.
+This lesson is part of the [RevoScaleR tutorial](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md) on how to use [RevoScaleR functions](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) with SQL Server.
 
-This lesson introduces the [RxInSqlServer](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxinsqlserver) function, which lets you define a compute context for SQL Server and then execute complex calculations on the server, rather than your local computer. 
+In the previous lesson, you used **RevoScaleR** functions to inspect data objects. This lesson introduces the [RxInSqlServer](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxinsqlserver) function, which lets you define a compute context for a remote SQL Server. With a remote compute context, you can shift R execution from a local session to a remote session on the server. 
 
-RevoScaleR supports multiple compute contexts, so that you can run R code in Hadoop, Spark, or in-database. For SQL Server, you define the server, and the function handles the tasks of creating the database connection and passing objects between the local computer and the remote execution context.
+> [!div class="checklist"]
+> * Learn the elements of a remote SQL Server compute context
+> * Enable tracing on a compute context object
 
-The function that creates the SQL Server compute context uses the following information:
-
-- Connection string for the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance
-- Specification of how output should be handled
-- Optional arguments that enable tracing or specify the trace level
-- Optional specification of a shared data directory
+**RevoScaleR** supports multiple compute contexts: Hadoop, Spark on HDFS, and SQL Server in-database. For SQL Server, the **RxInSqlServer** function is used for server connections and passing objects between the local computer and the remote execution context.
 
 ## Create and set a compute context
 
-1. Specify the connection string for the instance where computations are performed.  You can re-use the connection string that you created earlier. You can create a different connection string if you want to move the computations to a different server, or use a different login to perform some tasks.
+The **RxInSqlServer** function that creates the SQL Server compute context uses the following information:
+
++ Connection string for the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance
++ Specification of how output should be handled
++ Optional specification of a shared data directory
++ Optional arguments that enable tracing or specify the trace level
+
+This section walks you through each part.
+
+1. Specify the connection string for the instance where computations are performed. You can re-use the connection string that you created earlier.
 
     **Using a SQL login**
 
-      ```R
-      sqlConnString <- "Driver=SQL Server;Server=<SQL Server instance name>; Database=<database name>;Uid=<SQL user name>;Pwd=<password>"
+    ```R
+    sqlConnString <- "Driver=SQL Server;Server=<SQL Server instance name>; Database=<database name>;Uid=<SQL user nme>;Pwd=<password>"
       ```
 
     **Using Windows authentication**
 
-      ```R
-      sqlConnString <- "Driver=SQL Server;Server=instance_name;Database=DeepDive;Trusted_Connection=True"
-      ```
-2. Specify how you want the output handled. In the following code, you are indicating that the R session on the workstation should always wait for R job results, but not return console output from remote computations.
+    ```R
+    sqlConnString <- "Driver=SQL Server;Server=instance_name;Database=RevoDeepDive;Trusted_Connection=True"
+    ```
+    
+2. Specify how you want the output handled. The following script directs the local R session to wait for R job results on the server before processing the next operation. It also suppresses output from remote computations from appearing in the local session.
   
     ```R
     sqlWait <- TRUE
@@ -66,21 +61,19 @@ The function that creates the SQL Server compute context uses the following info
   
     -   **FALSE**. Jobs are configured as non-blocking and return immediately, allowing you to continue running other R code. However, even in non-blocking mode, the client connection with [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] must be maintained while the job is running.
 
-3. Optionally, you can specify the location of a local directory for shared use by the local R session and by the remote [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] computer and its accounts.
+3. Optionally, specify the location of a local directory for shared use by the local R session and by the remote [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] computer and its accounts.
 
     ```R
     sqlShareDir <- paste("c:\\AllShare\\", Sys.getenv("USERNAME"), sep="")
     ```
     
-4. If you want to manually create a specific directory for sharing, you can add a line like the following:
+   If you want to manually create a specific directory for sharing, you can add a line like the following:
 
-    ```
+    ```R
     dir.create(sqlShareDir, recursive = TRUE)
     ```
 
-    To determine which folder is currently being used for sharing, run `rxGetComputeContext()`, which returns details about the current compute context. For more information, see the [ScaleR reference](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/).
-
-4. Having prepared all the variables, provide them as arguments to the **RxInSqlServer** constructor, to create the *compute context object*.
+4. Pass arguments to the **RxInSqlServer** constructor to create the *compute context object*.
 
     ```R
     sqlCompute <- RxInSqlServer(  
@@ -97,9 +90,30 @@ The function that creates the SQL Server compute context uses the following info
     
     Defining a compute context does not affect any other generic R computations that you might perform on your workstation, and does not change the source of the data. For example, you could define a local text file as the data source but change the compute context to SQL Server and do all your reading and summaries on the data on the SQL Server computer.
 
-## Enable tracing on the compute context
+5. Activate the remote compute context.
 
-Sometimes operations work on your local context, but have issues when running in a remote compute context. if you want to analyze issues or monitor performance, you can enable tracing in the compute context, to support run-time troubleshooting.
+    ```R
+    rxSetComputeContext(sqlCompute)
+    ```
+
+6. Return information about the compute context, including its properties.
+
+    ```R
+    rxGetComputeContext()
+    ```
+
+7. Reset the compute context back to the local computer by specifying the "local" keyword (the next lesson demonstrates using the remote compute context).
+
+    ```R
+    rxSetComputeContext("local")
+    ```
+
+> [!Tip]
+> For a list of other keywords supported by this function, type `help("rxSetComputeContext")` from an R command line.
+
+## Enable tracing
+
+Sometimes operations work on your local context, but have issues when running in a remote compute context. If you want to analyze issues or monitor performance, you can enable tracing in the compute context, to support run-time troubleshooting.
 
 1. Create a new compute context that uses the same connection string, but add the arguments *traceEnabled* and *traceLevel* to the **RxInSqlServer** constructor.
 
@@ -113,26 +127,17 @@ Sometimes operations work on your local context, but have issues when running in
         traceLevel = 7)
     ```
   
-    In this example, the *traceLevel* property is set to 7, meaning "show all tracing information."
+   In this example, the *traceLevel* property is set to 7, meaning "show all tracing information."
 
-2. To change the compute context, use the [rxSetComputeContext](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxsetcomputecontext) function and specify the context by name.
+2. Use the [rxSetComputeContext](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxsetcomputecontext) function to specify the tracing-enabled compute context by name.
 
     ```R
-    rxSetComputeContext( sqlComputeTrace)
+    rxSetComputeContext(sqlComputeTrace)
     ```
 
-    > [!NOTE]
-    > 
-    > For this tutorial, use the compute context that does not have tracing enabled. 
-    > 
-    > However, if you decide to use tracing, be aware that your experience may be affected by network connectivity. Also be aware that because performance for the tracing-enabled option has not been tested for all operations.
+## Next steps
 
-In the next step you learn how to use compute contexts, to run R code on the server or locally.
+Learn how to switch compute contexts to run R code on the server or locally.
 
-## Next step
-
-[Create and run R scripts](../../advanced-analytics/tutorials/deepdive-create-and-run-r-scripts.md)
-
-## Previous step
-
-[Query and modify the SQL Server data](../../advanced-analytics/tutorials/deepdive-query-and-modify-the-sql-server-data.md)
+> [!div class="nextstepaction"]
+> [Compute summary statistics in local and remote compute contexts](../../advanced-analytics/tutorials/deepdive-create-and-run-r-scripts.md)

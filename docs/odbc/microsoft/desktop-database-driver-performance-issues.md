@@ -2,26 +2,19 @@
 title: "Desktop Database Driver Performance Issues | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
-ms.prod_service: "drivers"
-ms.service: ""
-ms.component: "odbc"
+ms.prod: sql
+ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "drivers"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: connectivity
+ms.topic: conceptual
 helpviewer_keywords: 
   - "ODBC desktop database drivers [ODBC], performance"
   - "desktop database drivers [ODBC], performance"
   - "Jet-based ODBC drivers [ODBC], performance"
 ms.assetid: 1a4c4b7e-9744-411f-9b6e-06dfdad92cf7
-caps.latest.revision: 6
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
-ms.workload: "Inactive"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # Desktop Database Driver Performance Issues
 To ensure compatibility with existing ANSI applications, the SQL_WCHAR, SQL_WVARCHAR, and SQL_WLONGVARCHAR data types are exposed as SQL_CHAR, SQL_VARCHAR, and SQL_LONGVARCHAR for Microsoft Access 4.0 or higher data sources. The data sources do not return WIDE CHAR data types but the data still must be sent to Jet in Wide Char form. It is important to understand that conversion will take place if a SQL_C_CHAR parameter or result column is bound to a SQL_CHAR data type in an ANSI application.  

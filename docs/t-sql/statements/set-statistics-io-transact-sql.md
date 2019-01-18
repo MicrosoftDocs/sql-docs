@@ -2,15 +2,10 @@
 title: "SET STATISTICS IO (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "11/10/2016"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.service: ""
-ms.component: "t-sql|statements"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: t-sql
 ms.topic: "language-reference"
 f1_keywords: 
   - "SET_STATISTICS_IO_TSQL"
@@ -28,11 +23,9 @@ helpviewer_keywords:
   - "SET STATISTICS IO statement"
   - "statistical information [SQL Server], disk activity"
 ms.assetid: 7033aac9-a944-4156-9ff4-6ef65717a28b
-caps.latest.revision: 40
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "craigg"
-ms.workload: "On Demand"
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
 ---
 # SET STATISTICS IO (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -58,7 +51,7 @@ SET STATISTICS IO { ON | OFF }
 |Output item|Meaning|  
 |-----------------|-------------|  
 |**Table**|Name of the table.|  
-|**Scan count**|Number of seeks/scans started after reaching the leaf level in any direction to retrieve all the values to construct the final dataset for the output.<br /><br /> Scan count is 0 if the index used is a unique index or clustered index on a primary key and you are seeking for only one value. For example `WHERE Primary_Key_Column = <value>`.<br /><br /> Scant count is 1 when you are searching for one value using a non-unique clustered index which is defined on a non-primary key column. This is done to check for duplicate values for the key value that you are searching for. For example `WHERE Clustered_Index_Key_Column = <value>`.<br /><br /> Scan count is N when N is the number of different seek/scan started towards the left or right side at the leaf level after locating a key value using the index key.|  
+|**Scan count**|Number of seeks/scans started after reaching the leaf level in any direction to retrieve all the values to construct the final dataset for the output.<br /><br /> Scan count is 0 if the index used is a unique index or clustered index on a primary key and you are seeking for only one value. For example `WHERE Primary_Key_Column = <value>`.<br /><br /> Scan count is 1 when you are searching for one value using a non-unique clustered index which is defined on a non-primary key column. This is done to check for duplicate values for the key value that you are searching for. For example `WHERE Clustered_Index_Key_Column = <value>`.<br /><br /> Scan count is N when N is the number of different seek/scan started towards the left or right side at the leaf level after locating a key value using the index key.|  
 |**logical reads**|Number of pages read from the data cache.|  
 |**physical reads**|Number of pages read from disk.|  
 |**read-ahead reads**|Number of pages placed into the cache for the query.|  

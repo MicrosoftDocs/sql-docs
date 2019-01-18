@@ -2,16 +2,11 @@
 title: "Criteria Pane (Visual Database Tools) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "sql-tools"
-ms.service: ""
-ms.component: "ssms-visual-db"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "tools-ssms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: ssms
+ms.topic: conceptual
 helpviewer_keywords: 
   - "Query Designer [SQL Server], Criteria pane"
   - "View Designer, Criteria pane"
@@ -21,15 +16,14 @@ helpviewer_keywords:
   - "grid showing query options [SQL Server]"
   - "adding query options into grid"
 ms.assetid: 6291affe-580e-482f-a7ff-45ce3837956a
-caps.latest.revision: 4
 author: "stevestein"
 ms.author: "sstein"
-manager: "jhubbard"
-ms.workload: "Inactive"
+manager: craigg
+
 ---
 # Criteria Pane (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-The Criteria pane allows you to specify query options — such as which data columns to display, how to order the results, and what rows to select — by entering your choices into a spreadsheet-like grid. In the Criteria pane you can specify the following:  
+The Criteria pane allows you to specify query options - such as which data columns to display, how to order the results, and what rows to select - by entering your choices into a spreadsheet-like grid. In the Criteria pane you can specify the following:  
   
 -   Columns to display and column name aliases.  
   

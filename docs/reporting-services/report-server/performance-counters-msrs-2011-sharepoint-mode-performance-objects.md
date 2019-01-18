@@ -1,18 +1,12 @@
 ---
 title: "Performance Counters MSRS 2011 SharePoint Mode Performance Objects | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
+ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
-ms.service: ""
-ms.component: "report-server"
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
+ms.technology: report-server
 
 
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "performance counters [Reporting Services]"
   - "counters [Reporting Services]"
@@ -21,11 +15,8 @@ helpviewer_keywords:
   - "Scheduling and Delivery Processor performance object [Reporting Services]"
   - "performance [Reporting Services]"
 ms.assetid: 70bf6980-7845-4ab5-8b2a-ebf526d811a6
-caps.latest.revision: 52
-author: "markingmyname"
-ms.author: "maghan"
-manager: "kfile"
-ms.workload: "Inactive"
+author: markingmyname
+ms.author: maghan
 ---
 # Performance Counters MSRS 2011 SharePoint Mode Performance Objects
   This topic describes performance counters for the **MSRS 2011 Web Service SharePoint Mode** and **MSRS 2011 Windows Service SharePoint Mode** performance objects that are part of a [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] SharePoint mode deployment.  
@@ -33,7 +24,7 @@ ms.workload: "Inactive"
 > [!NOTE]  
 >  This performance objects monitor events on the local report server. If you are running a report server in a scale-out deployment, the counts apply to the current server and not the scale-out deployment as a whole.  
   
- The performance objects are available in the Windows Performance Monitor (**Perfmon.exe**). For more information, see the Windows documentation. [Runtime Profiling](http://msdn.microsoft.com/library/w4bz2147.aspx) (http://msdn.microsoft.com/library/w4bz2147.aspx).  
+ The performance objects are available in the Windows Performance Monitor (**Perfmon.exe**). For more information, see the Windows documentation. [Runtime Profiling](https://msdn.microsoft.com/library/w4bz2147.aspx) (https://msdn.microsoft.com/library/w4bz2147.aspx).  
   
  For information regarding performance counters and Native mode report servers, see [Performance Counters for the MSRS 2011 Web Service and MSRS 2011 Windows Service Performance Objects &#40;Native Mode&#41;](../../reporting-services/report-server/performance-counters-msrs-2011-web-service-performance-objects.md)[Performance Counters for the MSRS 2011 Web Service SharePoint Mode and MSRS 2011 Windows Service SharePoint Mode Performance Objects (SharePoint Mode)](../../reporting-services/report-server/performance-counters-msrs-2011-sharepoint-mode-performance-objects.md).  
   
@@ -85,12 +76,12 @@ ms.workload: "Inactive"
 |**Active Sessions**|Number of active sessions stored in the report server database. This counter provides a cumulative count of all usable browser sessions generated from report subscriptions, whether they are still active or not.|  
 |**Alerting: event queue length**||  
 |**Alerting: events processed - CreateSchedule**||  
-|**Alerting: events processed – Delete schedule**||  
-|**Alerting: events processed – DeliverAlert**||  
-|**Alerting: events processed – FireAlert**||  
-|**Alerting: events processed – FireSchedule**||  
-|**Alerting: events processed – GenerateAlert**||  
-|**Alerting: events processed – UpdateSchedule**||  
+|**Alerting: events processed - Delete schedule**||  
+|**Alerting: events processed - DeliverAlert**||  
+|**Alerting: events processed - FireAlert**||  
+|**Alerting: events processed - FireSchedule**||  
+|**Alerting: events processed - GenerateAlert**||  
+|**Alerting: events processed - UpdateSchedule**||  
 |**Cache Flushes/Sec**|Number of cache flushes per second.|  
 |**Cache Hits/Sec**|Number of requests per second for cached reports. These are requests for re-rendered reports, not requests for reports processed directly from the cache. (See **Total Cache Hits** later in this topic.)|  
 |**Cache Hits/Sec (Semantic Models)**|Number of requests per second for cached models.|  
@@ -123,7 +114,7 @@ ms.workload: "Inactive"
 |**Total Snapshot Updates**|Total number of report execution snapshot updates.|  
   
 ##  <a name="bkmk_powershell"></a> Use PowerShell Cmdlets to return lists  
- ![PowerShell related content](../../analysis-services/instances/install-windows/media/rs-powershellicon.jpg "PowerShell related content")The following Windows PowerShell script will return the counter sets where the CounterSetName starts with “msr”  
+ ![PowerShell related content](../../analysis-services/instances/install-windows/media/rs-powershellicon.jpg "PowerShell related content")The following Windows PowerShell script will return the counter sets where the CounterSetName starts with "msr"  
   
 ```  
 get-counter -listset msr*  
@@ -132,7 +123,7 @@ CounterSetName     : MSRS 2011 Windows Service SharePoint Mode
 CounterSetName     : MSRS 2011 Web Service SharePoint Mode  
 ```  
   
- The following Windows PowerShell script will return the list of performance counters for the CounterSetName “MSRS 2011 Windows Service SharePoint Mode”.  
+ The following Windows PowerShell script will return the list of performance counters for the CounterSetName "MSRS 2011 Windows Service SharePoint Mode".  
   
 ```  
 (get-counter -listset "MSRS 2011 Windows Service SharePoint Mode").paths  

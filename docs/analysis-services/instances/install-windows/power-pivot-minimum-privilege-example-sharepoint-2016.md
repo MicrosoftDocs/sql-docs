@@ -1,34 +1,21 @@
 ---
 title: "Power Pivot Minimum-Privilege Example - SharePoint 2016 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/07/2017"
-ms.prod: analysis-services
-ms.prod_service: "analysis-services"
-ms.service: ""
-ms.component: ""
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
-  
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-ms.assetid: 35757f68-7bfc-4906-a985-f369690b9237
-caps.latest.revision: 8
-author: "Minewiskan"
-ms.author: "owend"
-manager: "kfile"
-ms.workload: "Inactive"
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: ppvt-sharepoint
+ms.topic: conceptual
+ms.author: owend
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
 ---
 # Power Pivot Minimum-Privilege Example - SharePoint 2016
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
   This topic describes an example [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] for SharePoint 2016 configuration with minimum privileges. The configuration utilizes a different account for each of the three components and each account has the minimum level of privileges.  
   
-||  
-|-|  
-|**[!INCLUDE[applies](../../../includes/applies-md.md)]**  SharePoint 2016|  
-  
 ## Summary of Accounts  
- [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] for SharePoint 2016 supports the use of the Network Service account for the Analysis Services service account. The Network Service account is not a supported scenario with SharePoint 2010. For more information on Service accounts, see [Configure Windows Service Accounts and Permissions](http://msdn.microsoft.com/library/ms143504.aspx) (http://msdn.microsoft.com/library/ms143504.aspx).  
+ [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] for SharePoint 2016 supports the use of the Network Service account for the Analysis Services service account. The Network Service account is not a supported scenario with SharePoint 2010. For more information on Service accounts, see [Configure Windows Service Accounts and Permissions](../../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md) (http://msdn.microsoft.com/library/ms143504.aspx).  
   
  The following table summarizes the three accounts used in this example of a minimum privileged configuration.  
   

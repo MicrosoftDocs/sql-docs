@@ -1,25 +1,18 @@
 ---
 title: "Comments on HelloData | Microsoft Docs"
-ms.prod: "sql-non-specified"
-ms.prod_service: "drivers"
-ms.service: ""
-ms.component: "ado"
-ms.technology:
-  - "drivers"
+ms.prod: sql
+ms.prod_service: connectivity
+ms.technology: connectivity
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "hellodata sample application [ADO]"
 ms.assetid: a2831d77-7040-4b73-bbae-fe0bf78107ed
-caps.latest.revision: 12
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
-ms.workload: "Inactive"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # Comments on HelloData
 The HelloData application steps through the basic operations of a typical ADO application: getting, examining, editing, and updating data. When you start the application, click the first button, **Get Data**. This will run the **GetData** subroutine.  
@@ -75,4 +68,4 @@ The HelloData application steps through the basic operations of a typical ADO ap
  For detailed information about how to update data, including what to do when data on the server changes while your **Recordset** is disconnected, see [Updating and Persisting Data](../../../ado/guide/data/updating-and-persisting-data.md).  
   
 ## Form_Unload  
- The **Form_Unload** subroutine is important for several reasons. First, because this is a sample application, Form_Unload cleans up the changes that were made to the database before the application exits. Second, the code shows how a command can be executed directly from an open **Connection** object by using the **Execute** method. Finally, it shows an example of executing a non-row–returning query (an UPDATE query) against the data source.
+ The **Form_Unload** subroutine is important for several reasons. First, because this is a sample application, Form_Unload cleans up the changes that were made to the database before the application exits. Second, the code shows how a command can be executed directly from an open **Connection** object by using the **Execute** method. Finally, it shows an example of executing a non-row-returning query (an UPDATE query) against the data source.

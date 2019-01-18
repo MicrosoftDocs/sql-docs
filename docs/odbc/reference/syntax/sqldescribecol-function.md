@@ -2,16 +2,11 @@
 title: "SQLDescribeCol Function | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
-ms.prod_service: "drivers"
-ms.service: ""
-ms.component: "odbc"
+ms.prod: sql
+ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "drivers"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: connectivity
+ms.topic: conceptual
 apiname: 
   - "SQLDescribeCol"
 apilocation: 
@@ -22,18 +17,16 @@ f1_keywords:
 helpviewer_keywords: 
   - "SQLDescribeCol function [ODBC]"
 ms.assetid: eddef353-83f3-4a3c-8f24-f9ed888890a4
-caps.latest.revision: 35
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
-ms.workload: "Inactive"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # SQLDescribeCol Function
 **Conformance**  
  Version Introduced: ODBC 1.0 Standards Compliance: ISO 92  
   
  **Summary**  
- **SQLDescribeCol** returns the result descriptor — column name,type, column size, decimal digits, and nullability — for one column in the result set. This information also is available in the fields of the IRD.  
+ **SQLDescribeCol** returns the result descriptor - column name,type, column size, decimal digits, and nullability - for one column in the result set. This information also is available in the fields of the IRD.  
   
 ## Syntax  
   

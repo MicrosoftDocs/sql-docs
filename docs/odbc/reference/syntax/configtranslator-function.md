@@ -2,16 +2,11 @@
 title: "ConfigTranslator Function | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
-ms.prod_service: "drivers"
-ms.service: ""
-ms.component: "odbc"
+ms.prod: sql
+ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "drivers"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: connectivity
+ms.topic: conceptual
 apiname: 
   - "ConfigTranslator"
 apilocation: 
@@ -22,11 +17,9 @@ f1_keywords:
 helpviewer_keywords: 
   - "ConfigTranslator [ODBC]"
 ms.assetid: 7c22f07e-36de-425b-aa67-e32a84afae92
-caps.latest.revision: 7
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
-ms.workload: "Inactive"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # ConfigTranslator Function
 **Conformance**  
@@ -40,8 +33,8 @@ ms.workload: "Inactive"
 ```  
   
 BOOL ConfigTranslator(  
-     HWND     hwndParent,  
-     DWORD *  pvOption);  
+     HWND     hwndParent,  
+     DWORD *  pvOption);  
 ```  
   
 ## Arguments  

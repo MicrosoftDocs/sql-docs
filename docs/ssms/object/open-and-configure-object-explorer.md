@@ -2,29 +2,22 @@
 title: "Open and Configure Object Explorer | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "sql-tools"
-ms.service: ""
-ms.component: "ssms-objects"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "tools-ssms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: ssms
+ms.topic: conceptual
 ms.assetid: a138ba3d-d00b-420c-917e-e586d590d30f
-caps.latest.revision: 4
 author: "stevestein"
 ms.author: "sstein"
-manager: "jhubbard"
-ms.workload: "On Demand"
+manager: craigg
 ---
 # Open and Configure Object Explorer
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-Open Object Explorer by using the **View** menu in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)]. Configure Obect Explorer options by using **Options** on the **Tools** menu.  
+Open Object Explorer by using the **View** menu in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Configure Obect Explorer options by using **Options** on the **Tools** menu.  
   
 ## Viewing Object Explorer  
-Object Explorer is visible in [!INCLUDE[ssManStudio](../../includes/ssmanstudio_md.md)] by default. If you cannot see Object Explorer, on the **View** menu, click **Object Explorer**.  
+Object Explorer is visible in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] by default. If you cannot see Object Explorer, on the **View** menu, click **Object Explorer**.  
   
 ## Configuring Object Explorer Options  
 To configure the Object Explorer settings, on the **Tools** menu, click **Options**, and then click **SQL Server Object Explorer**.  

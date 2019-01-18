@@ -2,16 +2,11 @@
 title: "SQLGetDiagField Function | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
-ms.prod_service: "drivers"
-ms.service: ""
-ms.component: "odbc"
+ms.prod: sql
+ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "drivers"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: connectivity
+ms.topic: conceptual
 apiname: 
   - "SQLGetDiagField"
 apilocation: 
@@ -22,11 +17,9 @@ f1_keywords:
 helpviewer_keywords: 
   - "SQLGetDiagField function [ODBC]"
 ms.assetid: 1dbc4398-97a8-4585-bb77-1f7ea75e24c4
-caps.latest.revision: 26
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
-ms.workload: "Inactive"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # SQLGetDiagField Function
 **Conformance**  
@@ -40,13 +33,13 @@ ms.workload: "Inactive"
 ```  
   
 SQLRETURN SQLGetDiagField(  
-     SQLSMALLINT     HandleType,  
-     SQLHANDLE       Handle,  
-     SQLSMALLINT     RecNumber,  
-     SQLSMALLINT     DiagIdentifier,  
-     SQLPOINTER      DiagInfoPtr,  
-     SQLSMALLINT     BufferLength,  
-     SQLSMALLINT *   StringLengthPtr);  
+     SQLSMALLINT     HandleType,  
+     SQLHANDLE       Handle,  
+     SQLSMALLINT     RecNumber,  
+     SQLSMALLINT     DiagIdentifier,  
+     SQLPOINTER      DiagInfoPtr,  
+     SQLSMALLINT     BufferLength,  
+     SQLSMALLINT *   StringLengthPtr);  
 ```  
   
 ## Arguments  
@@ -138,7 +131,7 @@ SQLRETURN SQLGetDiagField(
   
  For more information, see [Using SQLGetDiagRec and SQLGetDiagField](../../../odbc/reference/develop-app/using-sqlgetdiagrec-and-sqlgetdiagfield.md) and [Implementing SQLGetDiagRec and SQLGetDiagField](../../../odbc/reference/develop-app/implementing-sqlgetdiagrec-and-sqlgetdiagfield.md).  
   
- Calling an API other than the one that’s being executed asynchronously will generate HY010 "Function sequence error". However, the error record cannot be retrieved before the asynchronous operation completes.  
+ Calling an API other than the one that's being executed asynchronously will generate HY010 "Function sequence error". However, the error record cannot be retrieved before the asynchronous operation completes.  
   
 ## HandleType Argument  
  Each handle type can have diagnostic information associated with it. The *HandleType* argument indicates the handle type of *Handle*.  
@@ -179,7 +172,7 @@ SQLRETURN SQLGetDiagField(
 |SQL_DIAG_COLUMN_NUMBER|SQLINTEGER|If the SQL_DIAG_ROW_NUMBER field is a valid row number in a rowset or a set of parameters, this field contains the value that represents the column number in the result set or the parameter number in the set of parameters. Result set column numbers always start at 1; if this status record pertains to a bookmark column, the field can be zero. Parameter numbers start at 1. It has the value SQL_NO_COLUMN_NUMBER if the status record is not associated with a column number or parameter number. If the driver cannot determine the column number or parameter number that this record is associated with, this field has the value SQL_COLUMN_NUMBER_UNKNOWN.<br /><br /> The contents of this field are defined only for statement handles.|  
 |SQL_DIAG_CONNECTION_NAME|SQLCHAR *|A string that indicates the name of the connection that the diagnostic record relates to. This field is driver-defined. For diagnostic data structures associated with the environment handle and for diagnostics that do not relate to any connection, this field is a zero-length string.|  
 |SQL_DIAG_MESSAGE_TEXT|SQLCHAR *|An informational message on the error or warning. This field is formatted as described in [Diagnostic Messages](../../../odbc/reference/develop-app/diagnostic-messages.md). There is no maximum length to the diagnostic message text.|  
-|SQL_DIAG_NATIVE|SQLINTEGER|A driver/data source–specific native error code. If there is no native error code, the driver returns 0.|  
+|SQL_DIAG_NATIVE|SQLINTEGER|A driver/data source-specific native error code. If there is no native error code, the driver returns 0.|  
 |SQL_DIAG_ROW_NUMBER|SQLLEN|This field contains the row number in the rowset, or the parameter number in the set of parameters, with which the status record is associated. Row numbers and parameter numbers start with 1. This field has the value SQL_NO_ROW_NUMBER if this status record is not associated with a row number or parameter number. If the driver cannot determine the row number or parameter number that this record is associated with, this field has the value SQL_ROW_NUMBER_UNKNOWN.<br /><br /> The contents of this field are defined only for statement handles.|  
 |SQL_DIAG_SERVER_NAME|SQLCHAR *|A string that indicates the server name that the diagnostic record relates to. It is the same as the value returned for a call to **SQLGetInfo** with the SQL_DATA_SOURCE_NAME option. For diagnostic data structures associated with the environment handle and for diagnostics that do not relate to any server, this field is a zero-length string.|  
 |SQL_DIAG_SQLSTATE|SQLCHAR *|A five-character SQLSTATE diagnostic code. For more information, see [SQLSTATEs](../../../odbc/reference/develop-app/sqlstates.md).|  
@@ -228,13 +221,13 @@ n-definition*|"CREATE DOMAIN"|SQL_DIAG_CREATE_DOMAIN|
   
  If there are two or more status records, the sequence of the records is determined first by row number. The following rules apply to determining the sequence of diagnostic records by row:  
   
--   Records that do not correspond to any row appear in front of records that correspond to a particular row, because SQL_NO_ROW_NUMBER is defined to be –1.  
+-   Records that do not correspond to any row appear in front of records that correspond to a particular row, because SQL_NO_ROW_NUMBER is defined to be -1.  
   
--   Records for which the row number is unknown appear in front of all other records, because SQL_ROW_NUMBER_UNKNOWN is defined to be –2.  
+-   Records for which the row number is unknown appear in front of all other records, because SQL_ROW_NUMBER_UNKNOWN is defined to be -2.  
   
 -   For all records that pertain to specific rows, records are sorted by the value in the SQL_DIAG_ROW_NUMBER field. All errors and warnings of the first row affected are listed, and then all errors and warnings of the next row affected, and so on.  
   
-> [!NOTE]  
+> [!NOTE]
 >  The ODBC 3*.x* Driver Manager does not order status records in the diagnostic queue if SQLSTATE 01S01 (Error in row) is returned by an ODBC 2*.x* driver or if SQLSTATE 01S01 (Error in row) is returned by an ODBC 3*.x* driver when **SQLExtendedFetch** is called or **SQLSetPos** is called on a cursor that has been positioned with **SQLExtendedFetch**.  
   
  Within each row, or for all those records that do not correspond to a row or for which the row number is unknown, or for all those records with a row number equal to SQL_NO_ROW_NUMBER, the first record listed is determined by using a set of sorting rules. After the first record, the order of the other records affecting a row is undefined. An application cannot assume that errors precede warnings after the first record. Applications should scan the complete diagnostic data structure to obtain complete information about an unsuccessful call to a function.  

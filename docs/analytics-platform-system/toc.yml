@@ -1,0 +1,226 @@
+- name: What's new in APS
+  href: whats-new-analytics-platform-system.md
+  items:
+  - name: APS CU7.3
+    href: whats-new-analytics-platform-system.md#h2-aps-cu7.3
+  - name: APS CU7.2
+    href: whats-new-analytics-platform-system.md#h2-aps-cu7.2
+  - name: APS CU7.1
+    href: whats-new-analytics-platform-system.md#h2-aps-cu7.1
+  - name: APS AU7
+    href: whats-new-analytics-platform-system.md#h2-aps-au7
+  - name: APS 2016
+    href: whats-new-analytics-platform-system.md#h2-aps-au6
+- name: Architecture
+  items:
+  - name: Parallel Data Warehouse overview
+    href: parallel-data-warehouse-overview.md
+  - name: Hardware components
+    href: hardware-components.md
+  - name: Hardware configurations
+    href: hardware-configurations.md
+  - name: Processing and storage capacity
+    href: processing-and-storage-capacity-planning.md
+  - name: High availability
+    href: high-availability.md
+- name: Backup and loading hardware
+  items:
+  - name: Overview
+    href: backup-and-loading-hardware.md
+  - name: Acquire and configure a loading server
+    href: acquire-and-configure-loading-server.md
+  - name: Loading server capacity planning worksheet
+    href: loading-server-capacity-planning-worksheet.md
+  - name: Acquire and configure a backup server
+    href: acquire-and-configure-backup-server.md
+  - name: Backup server capacity planning worksheet
+    href: backup-capacity-planning-worksheet.md
+  - name: Configure InfiniBand network adapters
+    href: configure-infiniband-network-adapters.md
+- name: Query
+  items:
+  - name: Configure auto-stats
+    href: configure-auto-statistics.md
+  - name: Monitoring active queries
+    href: monitoring-active-queries.md
+  - name: Common subexpression elimination
+    href: common-sub-expression-elimination.md
+- name: Load
+  items:
+  - name: Overview
+    href: load-overview.md
+  - name: Create staging database
+    href: staging-database.md
+  - name: Load with Integration Services
+    href: load-with-ssis.md
+  - name: Create an Integration Services script task that uses the PDW destination adapter
+    href: create-ssis-script-task-using-pdw-destination-adapter.md
+  - name: Data type conversion rules for dwloader
+    href: dwloader-data-type-conversion-rules.md
+  - name: Load data with INSERT
+    href: load-with-insert.md
+  - name: dwloader Command-line Loading Tool
+    href: dwloader.md
+  - name: Monitor loads
+    href: monitor-loads.md
+- name: Database administration
+  items:
+  - name: Backup and restore
+    items:
+    - name: Overview
+      href: backup-and-restore-overview.md
+    - name: Restore a database protected by TDE
+      href: restore-database-protected-by-tde.md
+  - name: PDW permissions
+    href: pdw-permissions.md
+    items:
+    - name: Grant permissions
+      href: grant-permissions.md
+  - name: Error messages
+    href: error-messages.md
+  - name: Locking behavior
+    href: locking-behavior.md
+  - name: Remote table copy
+    href: remote-table-copy.md
+    items:
+    - name: Configure an external Windows system to receive remote table copies using InfiniBand
+      href: configure-an-external-windows-system-to-receive-remote-table-copies-using-infiniband.md
+    - name: Configure an external SMP SQL Server to receive remote table copies
+      href: configure-an-external-smp-sql-server-to-receive-remote-table-copies.md
+    - name: Configure SQL Server PDW for remote table copies
+      href: configure-sql-server-pdw-for-remote-table-copies.md
+  - name: System databases
+    href: system-databases.md
+    items:
+    - name: Reserved database names
+      href: reserved-database-names.md
+    - name: tempdb database
+      href: tempdb-database.md
+    - name: master database
+      href: master-database.md
+  - name: User sessions
+    href: user-sessions.md
+  - name: Workload management
+    href: workload-management.md
+    items:
+    - name: Workload management tasks
+      href: workload-management-tasks.md
+- name: Security
+  items:
+  - name: Transparent Data Encryption
+    href: transparent-data-encryption.md
+  - name: Provision a certificate
+    href: provision-certificate.md
+- name: Appliance management tasks
+  href: appliance-management-tasks.md
+  items:
+  - name: Appliance installation and configuration overview
+    href: appliance-installation-and-configuration-overview.md
+    items:
+    - name: Information to obtain from your IHV
+      href: information-to-obtain-from-your-ihv.md
+    - name: Hardware installation
+      href: hardware-installation.md
+  - name: Connect to appliance nodes
+    href: connect-to-appliance-nodes.md
+  - name: Antivirus software
+    href: antivirus-software.md
+  - name: Appliance configuration
+    href: appliance-configuration.md
+    items:
+    - name: PDW and appliance fabric physical components
+      href: pdw-and-appliance-fabric-physical-components.md
+    - name: Launch the Configuration Manager
+      href: launch-the-configuration-manager.md
+    - name: Appliance topology
+      href: appliance-topology.md
+    - name: Password reset
+      href: password-reset.md
+    - name: Appliance time zone configuration
+      href: appliance-time-zone-configuration.md
+    - name: Appliance network configuration
+      href: appliance-network-configuration.md
+    - name: PDW topology
+      href: pdw-topology.md
+    - name: PDW certificate provisioning
+      href: pdw-certificate-provisioning.md
+    - name: PDW feature switch
+      href: appliance-feature-switch.md
+    - name: PDW firewall configuration
+      href: pdw-firewall-configuration.md
+    - name: PDW services status
+      href: pdw-services-status.md
+    - name: Instant file initialization configuration
+      href: instant-file-initialization-configuration.md
+    - name: Restore the master database
+      href: restore-the-master-database.md
+    - name: Set admin password for logging on to AD nodes in Directory Services Restore Mode (DSRM)
+      href: set-admin-password-for-logging-on-to-ad-nodes-in-directory-services-restore-mode.md
+    - name: Configure Windows Server Update Services
+      href: configure-windows-server-update-services-wsus.md
+    - name: Configure PolyBase connectivity to external data
+      href: configure-polybase-connectivity-to-external-data.md
+      items:
+      - name: Connect to Hadoop
+        href: polybase-configure-hadoop.md
+      - name: Configure Hadoop Security
+        href: polybase-configure-hadoop-security.md
+      - name: Azure Blob Storage
+        href: polybase-configure-azure-blob-storage.md
+    - name: Configure TLS 1.2 on APS
+      href: configure-tls12-aps.md
+    - name: Use a DNS forwarder to resolve non-appliance DNS names
+      href: use-a-dns-forwarder-to-resolve-non-appliance-dns-names.md
+    - name: Create an APS Domain administrator
+      href: create-an-aps-domain-administrator-aps.md
+    - name: Send telemetry feedback to Microsoft
+      href: send-telemetry-feedback-to-microsoft-sql-server-pdw.md
+  - name: Software servicing
+    href: software-servicing.md
+    items:
+    - name: Download and apply Microsoft updates
+      href: download-and-apply-microsoft-updates.md
+    - name: Uninstall Microsoft updates
+      href: uninstall-microsoft-updates.md
+    - name: Apply Analytics Platform System hotfixes
+      href: apply-analytics-platform-system-hotfixes.md
+    - name: Uninstall Analytic Platform System hotfixes
+      href: uninstall-analytics-platform-system-hotfixes.md
+  - name: Power the APS appliance on or off
+    href: power-the-aps-appliance-on-or-off.md
+  - name: Appliance monitoring
+    href: appliance-monitoring.md
+    items:
+    - name: Monitor the appliance by using the Admin Console
+      href: monitor-the-appliance-by-using-the-admin-console.md
+    - name: Monitor the appliance by using system views
+      href: monitor-the-appliance-by-using-system-views.md
+    - name: Monitor the appliance by using System Center Operations Manager
+      href: monitor-the-appliance-by-using-system-center-operations-manager.md
+      items:
+      - name: Install the SCOM management packs
+        href: install-the-scom-management-packs.md
+      - name: Import the SCOM management pack for PDW
+        href: import-the-scom-management-pack-for-pdw.md
+      - name: Configure SCOM to monitor Analytics Platform System
+        href: configure-scom-to-monitor-analytics-platform-system.md
+    - name: Monitor appliance health state
+      href: monitor-appliance-health-state.md
+    - name: Track appliance alerts
+      href: track-appliance-alerts.md
+    - name: View capacity utilization
+      href: view-capacity-utilization.md
+    - name: Determine polling frequency
+      href: determine-polling-frequency.md
+    - name: Determine which cluster node failed
+      href: determine-which-cluster-node-failed.md
+    - name: Understanding Admin Console alerts
+      href: understanding-admin-console-alerts.md
+- name: Reference
+  items:
+  - name: T-SQL language elements
+    href: tsql-language-elements.md
+  - name: T-SQL statements
+    href: tsql-statements.md
+  - name: T-SQL system views
+    href: tsql-system-views.md

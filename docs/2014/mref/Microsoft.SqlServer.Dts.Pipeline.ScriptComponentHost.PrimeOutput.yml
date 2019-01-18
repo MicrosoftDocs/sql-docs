@@ -1,0 +1,11 @@
+### YamlMime:XRefMap
+sorted: true
+hrefUpdated: true
+references:
+- uid: Microsoft.SqlServer.Dts.Pipeline.ScriptComponentHost.PrimeOutput*
+  commentId: M:Microsoft.SqlServer.Dts.Pipeline.ScriptComponentHost.PrimeOutput
+  href: https://msdn.microsoft.com/library/microsoft.sqlserver.dts.pipeline.scriptcomponenthost.primeoutput(v=sql.120).aspx
+  name: PrimeOutput
+  name.vb: PrimeOutput
+  fullName: Microsoft.SqlServer.Dts.Pipeline.ScriptComponentHost.PrimeOutput
+  fullName.vb: Microsoft.SqlServer.Dts.Pipeline.ScriptComponentHost.PrimeOutput

@@ -2,22 +2,15 @@
 title: "Step 1:  Configure development environment for Node.js development | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
-ms.prod_service: "drivers"
-ms.service: ""
-ms.component: "node-js"
+ms.prod: sql
+ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "drivers"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: connectivity
+ms.topic: conceptual
 ms.assetid: 2dad01f1-fadf-4ac9-9b4d-26be3d301886
-caps.latest.revision: 17
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
-ms.workload: "On Demand"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # Step 1:  Configure development environment for Node.js development
 You will need to configure your development environment with the prerequisites in order to develop an application using the Node.js Driver for SQL Server.  The most common method is to use the node package manager (npm) to install the tedious module, but you can download the tedious module directly at [Github](https://github.com/pekim/tedious) if you prefer.  

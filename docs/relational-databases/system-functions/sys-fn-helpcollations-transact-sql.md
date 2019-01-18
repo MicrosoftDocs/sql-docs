@@ -2,15 +2,10 @@
 title: "sys.fn_helpcollations (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/23/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
-ms.service: ""
-ms.component: "system-functions"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: system-objects
 ms.topic: "language-reference"
 f1_keywords: 
   - "fn_helpcollations"
@@ -22,14 +17,13 @@ helpviewer_keywords:
   - "collations [SQL Server], supported"
   - "fn_helpcollations function"
 ms.assetid: b5082e81-1fee-4e2c-b567-5412eaee41c1
-caps.latest.revision: 38
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-ms.workload: "Inactive"
+author: "rothja"
+ms.author: "jroth"
+manager: craigg
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.fn_helpcollations (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-pdw-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Returns a list of all supported collations.  
   
@@ -56,7 +50,7 @@ fn_helpcollations ()
 ## Examples  
  The following example returns all collation names starting with the letter `L` and that are binary sort collations.  
   
-```  
+```sql  
 SELECT Name, Description FROM fn_helpcollations()  
 WHERE Name like 'L%' AND Description LIKE '% binary sort';  
 ```  

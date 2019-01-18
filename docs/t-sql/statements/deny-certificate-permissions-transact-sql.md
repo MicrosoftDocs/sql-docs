@@ -2,15 +2,10 @@
 title: "DENY Certificate Permissions (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/10/2016"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.service: ""
-ms.component: "t-sql|statements"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: t-sql
 ms.topic: "language-reference"
 dev_langs: 
   - "TSQL"
@@ -20,11 +15,9 @@ helpviewer_keywords:
   - "DENY statement, certificates"
   - "denying permissions [SQL Server], certificates"
 ms.assetid: 5971ff9e-d6a4-414b-ae1f-819bc2e348f5
-caps.latest.revision: 22
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "craigg"
-ms.workload: "Inactive"
+author: VanMSFT
+ms.author: vanto
+manager: craigg
 ---
 # DENY Certificate Permissions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -49,7 +42,7 @@ DENY permission  [ ,...n ]
  *permission*  
  Specifies a permission that can be denied on a certificate. Listed below.  
   
- ON CERTIFICATE **::***certificate_name*  
+ ON CERTIFICATE **::**_certificate_name_  
  Specifies the certificate on which the permission is being denied. The scope qualifier "::" is required.  
   
  *database_principal*  

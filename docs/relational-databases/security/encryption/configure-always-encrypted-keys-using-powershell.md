@@ -2,22 +2,15 @@
 title: "Configure Always Encrypted Keys using PowerShell | Microsoft Docs"
 ms.custom: ""
 ms.date: "05/17/2017"
-ms.prod: "sql-non-specified"
-ms.prod_service: "database-engine, sql-database"
-ms.service: ""
-ms.component: "security"
-ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "dbe-security"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.prod: sql
+ms.reviewer: vanto
+ms.technology: security
+ms.topic: conceptual
 ms.assetid: 3bdf8629-738c-489f-959b-2f5afdaf7d61
-caps.latest.revision: 27
-author: "stevestein"
-ms.author: "sstein"
-manager: "jhubbard"
-ms.workload: "Inactive"
+author: VanMSFT
+ms.author: vanto
+manager: craigg
+monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Configure Always Encrypted Keys using PowerShell
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -44,7 +37,7 @@ Step 3.  Connect to your server and database.     |     [Connect to a Database](
 Step 4.  Create a *SqlColumnMasterKeySettings* object that contains information about the location of your column master key. SqlColumnMasterKeySettings is an object that exists in memory (in PowerShell). Use the cmdlet that is specific to your key store.   |     [New-SqlAzureKeyVaultColumnMasterKeySettings](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/new-sqlazurekeyvaultcolumnmasterkeysettings)<br><br>[New-SqlCertificateStoreColumnMasterKeySettings](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/new-sqlcertificatestorecolumnmasterkeysettings)<br><br>[New-SqlCngColumnMasterKeySettings](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/new-sqlcngcolumnmasterkeysettings)<br><br>[New-SqlCspColumnMasterKeySettings](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/new-sqlcspcolumnmasterkeysettings)        |   No      | No         
 Step 5.  Create the metadata about the column master key in your database.      |    [New-SqlColumnMasterKey](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/new-sqlcolumnmasterkey)<br><br>**Note:** under the covers, the cmdlet issues the [CREATE COLUMN MASTER KEY (Transact-SQL)](../../../t-sql/statements/create-column-master-key-transact-sql.md) statement to create key metadata.|    No     |    Yes
 Step 6.  Authenticate to Azure, if your column master key is stored in Azure Key Vault. | [Add-SqlAzureAuthenticationContext](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/add-sqlazureauthenticationcontext)    |  Yes   | No         
-Step 7.  Generate a new column encryption key, encrypt it with the column master key and create column encryption key metadata in the database.     |    [New-SqlColumnEncryptionKey](https://docs.microsoft.com/en-us/powershell/sqlserver/sqlserver/vlatest/new-sqlcolumnencryptionkey)<br><br>**Note:** Use a variation of the cmdlet that internally generates and encrypts a column encryption key.<br><br>**Note:** Under the covers, the cmdlet issues the [CREATE COLUMN ENCRYPTION KEY (Transact-SQL)](../../../t-sql/statements/create-column-encryption-key-transact-sql.md) statement to create key metadata.  | Yes | Yes
+Step 7.  Generate a new column encryption key, encrypt it with the column master key and create column encryption key metadata in the database.     |    [New-SqlColumnEncryptionKey](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/new-sqlcolumnencryptionkey)<br><br>**Note:** Use a variation of the cmdlet that internally generates and encrypts a column encryption key.<br><br>**Note:** Under the covers, the cmdlet issues the [CREATE COLUMN ENCRYPTION KEY (Transact-SQL)](../../../t-sql/statements/create-column-encryption-key-transact-sql.md) statement to create key metadata.  | Yes | Yes
   
 
 ## Windows Certificate Store without Role Separation (Example)
@@ -89,16 +82,16 @@ This script is an end-to-end example for provisioning and configuring an Azure K
 
 ```
 # Create a column master key in Azure Key Vault.
-Login-AzureRmAccount
+Connect-AzAccount
 $SubscriptionId = "<Azure SubscriptionId>"
 $resourceGroup = "<resource group name>"
 $azureLocation = "<datacenter location>"
 $akvName = "<key vault name>"
 $akvKeyName = "<key name>"
-$azureCtx = Set-AzureRMConteXt -SubscriptionId $SubscriptionId # Sets the context for the below cmdlets to the specified subscription.
-New-AzureRmResourceGroup –Name $resourceGroup –Location $azureLocation # Creates a new resource group - skip, if you desire group already exists.
-New-AzureRmKeyVault -VaultName $akvName -ResourceGroupName $resourceGroup -Location $azureLocation # Creates a new key vault - skip if your vault already exists.
-Set-AzureRmKeyVaultAccessPolicy -VaultName $akvName -ResourceGroupName $resourceGroup -PermissionsToKeys get, create, delete, list, update, import, backup, restore, wrapKey,unwrapKey, sign, verify -UserPrincipalName $azureCtx.Account
+$azureCtx = Set-AzConteXt -SubscriptionId $SubscriptionId # Sets the context for the below cmdlets to the specified subscription.
+New-AzResourceGroup -Name $resourceGroup -Location $azureLocation # Creates a new resource group - skip, if you desire group already exists.
+New-AzKeyVault -VaultName $akvName -ResourceGroupName $resourceGroup -Location $azureLocation # Creates a new key vault - skip if your vault already exists.
+Set-AzKeyVaultAccessPolicy -VaultName $akvName -ResourceGroupName $resourceGroup -PermissionsToKeys get, create, delete, list, update, import, backup, restore, wrapKey,unwrapKey, sign, verify -UserPrincipalName $azureCtx.Account
 $akvKey = Add-AzureKeyVaultKey -VaultName $akvName -Name $akvKeyName -Destination "Software"
 
 # Import the SqlServer module.
@@ -133,7 +126,7 @@ New-SqlColumnEncryptionKey -Name $cekName -InputObject $database -ColumnMasterKe
 
 The below script is an end-to-end example for generating a column master key in a key store that implements Cryptography Next Generation API (CNG), generating and encrypting a column encryption key, and creating key metadata in a SQL Server database.
 
-The example leverages the key store that uses Microsoft Software Key Storage Provider. You may choose to modify the example to use another store, such as your hardware security module. For that, you will need to make sure the key store provider (KSP) that implements CNG for your device is installed and properly on your machine. You will need to replace "Microsoft Software Key Storage Provider" with your device’s KSP name.
+The example leverages the key store that uses Microsoft Software Key Storage Provider. You may choose to modify the example to use another store, such as your hardware security module. For that, you will need to make sure the key store provider (KSP) that implements CNG for your device is installed and properly on your machine. You will need to replace "Microsoft Software Key Storage Provider" with your device's KSP name.
 
 
 ```

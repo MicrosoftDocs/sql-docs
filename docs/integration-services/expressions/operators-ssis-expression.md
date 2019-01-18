@@ -2,27 +2,20 @@
 title: "Operators (SSIS Expression) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "integration-services"
-ms.service: ""
-ms.component: "expressions"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: integration-services
+ms.topic: conceptual
 helpviewer_keywords: 
   - "SSIS, operators"
   - "SQL Server Integration Services, operators"
   - "operators [Integration Services]"
   - "expressions [Integration Services], operators"
 ms.assetid: 33df3a3d-1f5c-429b-a3b9-52b7d8689089
-caps.latest.revision: 35
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
-ms.workload: "On Demand"
+manager: craigg
 ---
 # Operators (SSIS Expression)
   This section describes the operators the expression language provides and the operator precedence and associativity that the expression evaluator uses.  
@@ -42,11 +35,11 @@ ms.workload: "On Demand"
 |[% &#40;Modulo&#41; &#40;SSIS Expression&#41;](../../integration-services/expressions/modulo-ssis-expression.md)|Provides the integer remainder after dividing the first numeric expression by the second one.|  
 |[&#124;&#124; &#40;Logical OR&#41; &#40;SSIS Expression&#41;](../../integration-services/expressions/logical-or-ssis-expression.md)|Performs a logical OR operation.|  
 |[&& &#40;Logical AND&#41; &#40;SSIS Expression&#41;](../../integration-services/expressions/logical-and-ssis-expression.md)|Performs a logical AND operation.|  
-|[\! &#40;Logical Not&#41; &#40;SSIS Expression&#41;](../../integration-services/expressions/logical-not-ssis-expression.md)|Negates a Boolean operand.|  
+|[\! &#40;Logical NOT&#41; &#40;SSIS Expression&#41;](../../integration-services/expressions/logical-not-ssis-expression.md)|Negates a Boolean operand.|  
 |[&#124; &#40;Bitwise Inclusive OR&#41; &#40;SSIS Expression&#41;](../../integration-services/expressions/bitwise-inclusive-or-ssis-expression.md)|Performs a bitwise OR operation of two integer values.|  
 |[^ &#40;Bitwise Exclusive OR&#41; &#40;SSIS Expression&#41;](../../integration-services/expressions/bitwise-exclusive-or-ssis-expression.md)|Performs a bitwise exclusive OR operation of two integer values.|  
 |[& &#40;Bitwise AND&#41; &#40;SSIS Expression&#41;](../../integration-services/expressions/bitwise-and-ssis-expression.md)|Performs a bitwise AND operation of two integer values.|  
-|[~ &#40;Bitwise Not&#41; &#40;SSIS Expression&#41;](../../integration-services/expressions/bitwise-not-ssis-expression.md)|Performs a bitwise negation of an integer.|  
+|[~ &#40;Bitwise NOT&#41; &#40;SSIS Expression&#41;](../../integration-services/expressions/bitwise-not-ssis-expression.md)|Performs a bitwise negation of an integer.|  
 |[== &#40;Equal&#41; &#40;SSIS Expression&#41;](../../integration-services/expressions/equal-ssis-expression.md)|Performs a comparison to determine if two expressions are equal.|  
 |[\!= &#40;Unequal&#41; &#40;SSIS Expression&#41;](../../integration-services/expressions/unequal-ssis-expression.md)|Performs a comparison to determine if two expressions are not equal.|  
 |[&#62; &#40;Greater Than&#41; &#40;SSIS Expression&#41;](../../integration-services/expressions/greater-than-ssis-expression.md)|Performs a comparison to determine if the first expression is greater than the second one.|  

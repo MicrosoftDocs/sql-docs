@@ -2,27 +2,20 @@
 title: "Unicode Applications | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
-ms.prod_service: "drivers"
-ms.service: ""
-ms.component: "odbc"
+ms.prod: sql
+ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "drivers"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: connectivity
+ms.topic: conceptual
 helpviewer_keywords: 
   - "Unicode [ODBC], compiling as Unicode application"
   - "Unicode [ODBC], functions"
   - "compiling Unicode applications [ODBC]"
   - "functions [ODBC], Unicode functions"
 ms.assetid: 7986c623-2792-4e77-bfee-c86cbf84f08d
-caps.latest.revision: 6
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
-ms.workload: "Inactive"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # Unicode Applications
 You can recompile an application as a Unicode application in one of two ways:  

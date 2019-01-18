@@ -1,25 +1,17 @@
 ---
-title: "Operationalize R code (Machine Learning Services) | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "07/26/2016"
-ms.reviewer: 
-ms.suite: sql
-ms.prod: machine-learning-services
-ms.prod_service: machine-learning-services
-ms.component: r
-ms.technology: 
-  
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-ms.assetid: f15696b1-2479-4e5f-ac5e-4beaf958a043
-caps.latest.revision: 11
-author: "jeannt"
-ms.author: "jeannt"
-manager: "jhubbard"
-ms.workload: "Inactive"
+title: Operationalize R code using stored procedures - SQL Server Machine Learning Services
+description: Embed R language code in a SQL Server stored procedure to make it available to any client application having access to a SQL Server database.
+ms.prod: sql
+ms.technology: machine-learning
+
+ms.date: 04/15/2018  
+ms.topic: conceptual
+author: HeidiSteen
+ms.author: heidist
+manager: cgronlun
 ---
 # Operationalize R code (Machine Learning Services)
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 Database developers are tasked with integrating multiple technologies and bringing together the results so that they can be shared throughout the enterprise. The database developer works with application developers, SQL developers, and data scientists to design and deploy solutions.
 
@@ -27,7 +19,7 @@ This article summarizes the key points for the database developer to consider wh
 
 ## Get started with R code in SQL Server
 
-Traditionally, integration of machine learning solutions has meant extensive recoding to support performance and integration. However, moving R and Python code to a production environment is much easier in Microsoft Machine Learning Services, because the code can be run in SQL Server and called using stored procedures. You can continue to use familiar tools and don't need to install an R development environment. 
+Traditionally, integration of machine learning solutions has meant extensive recoding to support performance and integration. However, moving R and Python code to a production environment is much easier in SQL Server Machine Learning Services, because the code can be run in SQL Server and called using stored procedures. You can continue to use familiar tools and don't need to install an R development environment. 
 
 For more information about basic syntax, see:
 
@@ -46,7 +38,7 @@ Of course, converting your R code in SQL is easier if some optimizations are don
 
 + [Converting R code for use in R Services](converting-r-code-for-use-in-sql-server.md)
 
-+ [Generating an R stored procedure by using sqlrutils](generating-an-r-stored-procedure-for-r-code-using-the-sqlrutils-package.md)
++ [Use sqlrutils helper functions](ref-r-sqlrutils.md)
 
 ## Integrate R and Python with applications
 
@@ -67,14 +59,14 @@ This walkthrough provides examples of scoring using a stored procedure in both b
 See these solution templates for examples of how to integrate scoring in an application:
 
 + [Retail forecasting](https://github.com/Microsoft/SQL-Server-R-Services-Samples/blob/master/RetailForecasting/Introduction.md)
-+ [Fraud detection](https://github.com/Microsoft/SQL-Server-R-Services-Samples/blob/master/FraudDetection/Introduction.md)
++ [Fraud detection](https://github.com/Microsoft/r-server-fraud-detection)
 + [Customer clustering](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/r-services/getting-started/customer-clustering)
 
 ## Boost performance and scale
 
 Although the open source R language is known to have limitations, the RevoScaleR package APIs can operate on large datasets and benefit from multi-threaded, multi-core, multi-process in-database computations.
 
-If your R solution uses complex aggregations or involves large datasets, you can leverage SQL Server’s highly efficient in-memory aggregations and columnstore indexes, and let the R code handle the statistical computations and scoring.
+If your R solution uses complex aggregations or involves large datasets, you can leverage SQL Server's highly efficient in-memory aggregations and columnstore indexes, and let the R code handle the statistical computations and scoring.
 
 For more information about how to improve performance in SQL Server Machine Learning, see:
 

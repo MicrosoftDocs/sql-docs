@@ -1,25 +1,14 @@
 ---
 title: "Subselects in Queries | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/16/2017"
-ms.prod: analysis-services
-ms.prod_service: "analysis-services"
-ms.service: ""
-ms.component: ""
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
-  
-ms.component: multidimensional-tabular
-ms.component: data-mining
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-ms.assetid: 9e361798-688e-4b11-9eef-31fc793e8ba4
-caps.latest.revision: 5
-author: "Minewiskan"
-ms.author: "owend"
-manager: "kfile"
-ms.workload: "On Demand"
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: mdx
+ms.topic: conceptual
+ms.author: owend
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
 ---
 # Subselects in Queries
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
@@ -354,6 +343,6 @@ SELECT [Sales Territory].[Sales Territory Region].MEMBERS on 0
   
 -   The HAVING clause is not allowed in an axis clause; use a [Filter &#40;MDX&#41;](../../../mdx/filter-mdx.md) function expression instead.  
   
--   By default calculated members are not allowed in subselects; however, this restriction can be changed, in a per session basis, by assigning a value to the **SubQueries** connection string property in <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A> or **DBPROP_MSMD_SUBQUERIES** property in [Supported XMLA Properties &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties.md). See [Calculated Members in Subselects and Subcubes](../../../analysis-services/multidimensional-models/mdx/calculated-members-in-subselects-and-subcubes.md) for a detailed explanation of the behavior of calculated members depending on the values of **SubQueries** or **DBPROP_MSMD_SUBQUERIES**.  
+-   By default calculated members are not allowed in subselects; however, this restriction can be changed, in a per session basis, by assigning a value to the **SubQueries** connection string property in <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A> or **DBPROP_MSMD_SUBQUERIES** property in [Supported XMLA Properties &#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties). See [Calculated Members in Subselects and Subcubes](../../../analysis-services/multidimensional-models/mdx/calculated-members-in-subselects-and-subcubes.md) for a detailed explanation of the behavior of calculated members depending on the values of **SubQueries** or **DBPROP_MSMD_SUBQUERIES**.  
   
   

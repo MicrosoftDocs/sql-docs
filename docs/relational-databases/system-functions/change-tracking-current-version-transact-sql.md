@@ -2,15 +2,10 @@
 title: "CHANGE_TRACKING_CURRENT_VERSION (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/08/2016"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.service: ""
-ms.component: "system-functions"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: system-objects
 ms.topic: "language-reference"
 f1_keywords: 
   - "CHANGE_TRACKING_CURRENT_VERSION_TSQL"
@@ -21,11 +16,10 @@ helpviewer_keywords:
   - "change tracking [SQL Server], CHANGE_TRACKING_CURRENT_VERSION"
   - "CHANGE_TRACKING_CURRENT_VERSION"
 ms.assetid: 3027c4f7-6b4d-4089-a369-5926e8a8da1c
-caps.latest.revision: 16
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-ms.workload: "Inactive"
+author: "rothja"
+ms.author: "jroth"
+manager: craigg
+monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # CHANGE_TRACKING_CURRENT_VERSION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

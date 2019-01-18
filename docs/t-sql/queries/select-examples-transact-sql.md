@@ -2,15 +2,10 @@
 title: "SELECT Examples (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/16/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.service: ""
-ms.component: "t-sql|queries"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: t-sql
 ms.topic: "language-reference"
 dev_langs: 
   - "TSQL"
@@ -33,11 +28,9 @@ helpviewer_keywords:
   - "computed sums"
   - "WHERE clause, SELECT statement"
 ms.assetid: 9b9caa3d-e7d0-42e1-b60b-a5572142186c
-caps.latest.revision: 45
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-ms.workload: "Active"
+author: "douglaslMS"
+ms.author: "douglasl"
+manager: craigg
 ---
 # SELECT Examples (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -133,7 +126,7 @@ ms.workload: "Active"
   
  This query uses the `LIKE` clause in the `HAVING` clause.  
   
-```  
+```sql
 USE AdventureWorks2012 ;  
 GO  
 SELECT SalesOrderID, CarrierTrackingNumber   

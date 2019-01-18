@@ -2,15 +2,10 @@
 title: "@@IDENTITY (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/29/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.service: ""
-ms.component: "t-sql|functions"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: t-sql
 ms.topic: "language-reference"
 f1_keywords: 
   - "@@IDENTITY_TSQL"
@@ -22,11 +17,9 @@ helpviewer_keywords:
   - "identity values [SQL Server], last-inserted"
   - "@@IDENTITY function"
 ms.assetid: 912e4485-683c-41c2-97b3-8831c0289ee4
-caps.latest.revision: 35
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "craigg"
-ms.workload: "Active"
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
 ---
 # &#x40;&#x40;IDENTITY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

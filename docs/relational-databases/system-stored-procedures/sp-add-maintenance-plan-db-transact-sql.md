@@ -2,15 +2,10 @@
 title: "sp_add_maintenance_plan_db (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/10/2016"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "database-engine"
-ms.service: ""
-ms.component: "system-stored-procedures"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: system-objects
 ms.topic: "language-reference"
 f1_keywords: 
   - "sp_add_maintenance_plan_db_TSQL"
@@ -20,11 +15,9 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_add_maintenance_plan_db"
 ms.assetid: 76f4fefa-5b99-4deb-beed-e198987a45a9
-caps.latest.revision: 20
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-ms.workload: "Inactive"
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
 ---
 # sp_add_maintenance_plan_db (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,10 +40,10 @@ sp_add_maintenance_plan_db [ @plan_id = ] 'plan_id' ,
 ```  
   
 ## Arguments  
- [ **@plan_id =**] **'***plan_id***'**  
+ [ **@plan_id =**] **'**_plan_id_**'**  
  Specifies the plan ID of the maintenance plan. *plan_id* is **uniqueidentifier**, and must be a valid ID.  
   
- [ **@db_name =**] **'***database_name***'**  
+ [ **@db_name =**] **'**_database_name_**'**  
  Specifies the name of the database to be added to the maintenance plan. The database must be created or exist before its addition to the plan. *database_name* is **sysname**.  
   
 ## Return Code Values  

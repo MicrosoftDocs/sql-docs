@@ -1,23 +1,18 @@
 ---
-title: "R package synchronization for SQL Server | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/04/2018"
-ms.reviewer: 
-ms.suite: sql
-ms.prod: machine-learning-services
-ms.prod_service: machine-learning-services
-ms.component: r
-ms.technology: 
-  
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-author: "jeannt"
-ms.author: "jeannt"
-manager: "cgronlund"
-ms.workload: "Inactive"
+title: R package synchronization from the file system - SQL Server Machine Learning Services
+description: Update R libraries on SQL Server with newer versions installed on the file system.
+ms.prod: sql
+ms.technology: machine-learning
+
+ms.date: 04/15/2018  
+ms.topic: conceptual
+author: HeidiSteen
+ms.author: heidist
+manager: cgronlun
 ---
 
 # R package synchronization for SQL Server
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 The version of RevoScaleR included in SQL Server 2017 includes the ability to synchronize collections of R packages between the file system and the instance and database where packages are used.
 
@@ -128,4 +123,4 @@ rxSyncPackages(computeContext=computeContext, scope="private", owner = "user1", 
 
 ## Related resources
 
-[R package management for SQL Server](r-package-management-for-sql-server-r-services.md)
+[R package management for SQL Server](install-additional-r-packages-on-sql-server.md)

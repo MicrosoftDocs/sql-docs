@@ -2,24 +2,17 @@
 title: "Database Properties (Options Page) | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/28/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "database-engine"
-ms.service: ""
-ms.component: "databases"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: configuration
+ms.topic: conceptual
 f1_keywords: 
   - "sql13.swb.databaseproperties.options.f1"
 ms.assetid: a3447987-5507-4630-ac35-58821b72354d
-caps.latest.revision: 67
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-ms.workload: "On Demand"
+author: "stevestein"
+ms.author: "sstein"
+manager: craigg
 ---
 # Database Properties (Options Page)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -96,10 +89,10 @@ ms.workload: "On Demand"
  In SQL Server 2016 and in Azure SQL Database, there are a number of configuration properties that can be scoped to the database level. For more information for all of these settings, see [ALTER DATABASE SCOPED CONFIGURATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md).  
   
  **Legacy Cardinality Estimation**  
- Specify the query optimizer cardinality estimation model for the primary independent of the compatibility level of the database. This is equivalent to [Trace Flag 9481](https://support.microsoft.com/en-us/kb/2801413).  
+ Specify the query optimizer cardinality estimation model for the primary independent of the compatibility level of the database. This is equivalent to [Trace Flag 9481](https://support.microsoft.com/kb/2801413).  
   
  **Legacy Cardinality Estimation for Secondary**  
- Specify the query optimizer cardinality estimation model for secondaries, if any, independent of the compatibility level of the database. This is equivalent to [Trace Flag 9481](https://support.microsoft.com/en-us/kb/2801413).  
+ Specify the query optimizer cardinality estimation model for secondaries, if any, independent of the compatibility level of the database. This is equivalent to [Trace Flag 9481](https://support.microsoft.com/kb/2801413).  
   
  **Max DOP**  
  Specify the default [MAXDOP](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md) setting for the primary that should be used for statements.  
@@ -108,16 +101,16 @@ ms.workload: "On Demand"
  Specify the default [MAXDOP](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md) setting for secondaries, if any, that should be used for statements.  
   
  **Parameter Sniffing**  
- Enables or disables parameter sniffing on the primary. This is equivalent to [Trace Flag 4136](https://support.microsoft.com/en-us/kb/980653).  
+ Enables or disables parameter sniffing on the primary. This is equivalent to [Trace Flag 4136](https://support.microsoft.com/kb/980653).  
   
  **Parameter Sniffing for Secondary**  
- Enables or disables parameter sniffing on secondaries, if any. This is equivalent to [Trace Flag 4136](https://support.microsoft.com/en-us/kb/980653).  
+ Enables or disables parameter sniffing on secondaries, if any. This is equivalent to [Trace Flag 4136](https://support.microsoft.com/kb/980653).  
   
  **Query Optimizer Fixes**  
- Enables or disables query optimization hotfixes on the primary regardless of the compatibility level of the database. This is equivalent to [Trace Flag 4199](https://support.microsoft.com/en-us/kb/974006).  
+ Enables or disables query optimization hotfixes on the primary regardless of the compatibility level of the database. This is equivalent to [Trace Flag 4199](https://support.microsoft.com/kb/974006).  
   
  **Query Optimizer Fixes for Secondary**  
- Enables or disables query optimization hotfixes on secondaries, if any, regardless of the compatibility level of the database. This is equivalent to [Trace Flag 4199](https://support.microsoft.com/en-us/kb/974006).  
+ Enables or disables query optimization hotfixes on secondaries, if any, regardless of the compatibility level of the database. This is equivalent to [Trace Flag 4199](https://support.microsoft.com/kb/974006).  
   
 ## FILESTREAM  
  **FILESTREAM Directory Name**  

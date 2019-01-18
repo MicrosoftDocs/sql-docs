@@ -2,15 +2,9 @@
 title: "sys.dm_cdc_errors (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/10/2016"
-ms.prod: "sql-non-specified"
-ms.prod_service: "database-engine"
-ms.service: ""
-ms.component: "dmv's"
+ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: system-objects
 ms.topic: "language-reference"
 f1_keywords: 
   - "dm_cdc_errors_TSQL"
@@ -23,11 +17,9 @@ helpviewer_keywords:
   - "sys.dm_cdc_errors dynamic management view"
   - "change data capture [SQL Server], error reporting"
 ms.assetid: 898f2d76-9e63-45ef-94da-8034e86004ab
-caps.latest.revision: 14
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-ms.workload: "Inactive"
+author: stevestein
+ms.author: sstein
+manager: craigg
 ---
 # Change Data Capture - sys.dm_cdc_errors
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

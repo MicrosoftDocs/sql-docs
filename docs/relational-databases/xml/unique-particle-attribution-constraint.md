@@ -2,16 +2,11 @@
 title: "Unique Particle Attribution Constraint | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "database-engine"
-ms.service: ""
-ms.component: "xml"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "dbe-xml"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: xml
+ms.topic: conceptual
 f1_keywords: 
   - "unique particle attribution"
 helpviewer_keywords: 
@@ -20,11 +15,9 @@ helpviewer_keywords:
   - "UPA constraint rule"
   - "unique particle attribution constraint rule"
 ms.assetid: 6bb879e9-a5ee-402e-94e4-fe8cec5966b0
-caps.latest.revision: 14
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-ms.workload: "Inactive"
+author: "douglaslMS"
+ms.author: "douglasl"
+manager: craigg
 ---
 # Unique Particle Attribution Constraint
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -89,7 +82,7 @@ ms.workload: "Inactive"
   
 -   Appendix H: Analysis of the Unique Particle Attribution Constraint (non-normative)  
   
- To see the document, visit [http://www.w3.org/TR/xmlschema-1](http://go.microsoft.com/fwlink/?linkid=48881).  
+ To see the document, visit [http://www.w3.org/TR/xmlschema-1](https://go.microsoft.com/fwlink/?linkid=48881).  
   
 ## See Also  
  [XML Schema Collections &#40;SQL Server&#41;](../../relational-databases/xml/xml-schema-collections-sql-server.md)  

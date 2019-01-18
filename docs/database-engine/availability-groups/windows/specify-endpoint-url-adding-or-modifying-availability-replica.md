@@ -2,31 +2,23 @@
 title: "Specify Endpoint URL - Adding or Modifying Availability Replica | Microsoft Docs"
 ms.custom: ""
 ms.date: "05/17/2016"
-ms.prod: "sql-non-specified"
-ms.prod_service: "database-engine"
-ms.service: ""
-ms.component: "availability-groups"
+ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: high-availability
+ms.topic: conceptual
 helpviewer_keywords: 
   - "endpoints [SQL Server], AlwaysOn Availability Groups"
   - "Availability Groups [SQL Server], configuring"
   - "Availability Groups [SQL Server], endpoint"
   - "Endpoint URLs (HADR)"
 ms.assetid: d7520c13-a8ee-4ddc-9e9a-54cd3d27ef1c
-caps.latest.revision: 22
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-ms.workload: "On Demand"
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
 ---
 # Specify Endpoint URL - Adding or Modifying Availability Replica
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  To host an availability replica for an availability group, a server instance must possess a database mirroring endpoint. The server instance uses this endpoint to listen for [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] messages from availability replicas hosted by other server instances. To define an availability replica for an availability group, you must specify the endpoint URL of the server instance that will host the replica. The *endpoint URL* identifies the transport protocol of the database mirroring endpoint—TCP, the system address of the server instance, and the port number associated with the endpoint.  
+  To host an availability replica for an availability group, a server instance must possess a database mirroring endpoint. The server instance uses this endpoint to listen for [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] messages from availability replicas hosted by other server instances. To define an availability replica for an availability group, you must specify the endpoint URL of the server instance that will host the replica. The *endpoint URL* identifies the transport protocol of the database mirroring endpoint-TCP, the system address of the server instance, and the port number associated with the endpoint.  
   
 > [!NOTE]  
 >  The term "endpoint URL" is synonymous with the term "server network address" used by the database mirroring user interface and documentation.  
@@ -42,7 +34,7 @@ ms.workload: "On Demand"
 ##  <a name="SyntaxOfURL"></a> Syntax for an Endpoint URL  
  The syntax for an endpoint URL is of the form:  
   
- TCP**://***\<system-address>***:***\<port>*  
+ TCP<strong>://</strong>*\<system-address>*<strong>:</strong>*\<port>*  
   
  where  
   
@@ -50,15 +42,15 @@ ms.workload: "On Demand"
   
     -   Because the nodes of Windows Server Failover Clustering (WSFC) cluster are the same domain, you can use the name of the computer system; for example, `SYSTEM46`.  
   
-    -   To use an IP address, it must be unique in your environment. We recommend that you use an IP address only if it is static. The IP address can be IP Version 4 (IPv4) or IP Version 6 (IPv6). An IPv6 address must be enclosed within square brackets, for example: **[***<IPv6_address>***]**.  
+    -   To use an IP address, it must be unique in your environment. We recommend that you use an IP address only if it is static. The IP address can be IP Version 4 (IPv4) or IP Version 6 (IPv6). An IPv6 address must be enclosed within square brackets, for example: **[**_<IPv6_address>_**]**.  
   
          To learn the IP address of a system, at the Windows command prompt, enter the **ipconfig** command.  
   
     -   The fully qualified domain name is guaranteed to work. This is a locally defined address string that takes different forms in different places. Often, but not always, a fully qualified domain name is a compound name that includes the computer name and a series of period-separated domain segments of the form:  
   
-         *computer_name* **.** *domain_segment*[...**.***domain_segment*]  
+         _computer_name_ **.** _domain_segment_[...**.**_domain_segment_]  
   
-         where *computer_name i*s the network name of the computer running the server instance, and *domain_segment*[...**.***domain_segment*] is the remaining domain information of the server; for example: `localinfo.corp.Adventure-Works.com`.  
+         where *computer_name i*s the network name of the computer running the server instance, and *domain_segment*[...**.**_domain_segment_] is the remaining domain information of the server; for example: `localinfo.corp.Adventure-Works.com`.  
   
          The content and number of domain segments are determined within the company or organization. For more information, see [Finding the Fully Qualified Domain Name](#Finding_FQDN), later in this topic.  
   
@@ -107,7 +99,7 @@ ms.workload: "On Demand"
   
  To form the fully qualified domain name, concatenate the values of*<host_name>* and *<Primary_Dns_Suffix>* as follows:  
   
- *<host_name>* **.** *<Primary_Dns_Suffix>*  
+ _<host_name>_ **.** _<Primary_Dns_Suffix>_  
   
  For example, the IP configuration  
   
@@ -153,7 +145,7 @@ ms.workload: "On Demand"
   
 ##  <a name="RelatedContent"></a> Related Content  
   
--   [Microsoft SQL Server Always On Solutions Guide for High Availability and Disaster Recovery](http://go.microsoft.com/fwlink/?LinkId=227600)  
+-   [Microsoft SQL Server Always On Solutions Guide for High Availability and Disaster Recovery](https://go.microsoft.com/fwlink/?LinkId=227600)  
   
 ## See Also  
  [Creation and Configuration of Availability Groups &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/creation-and-configuration-of-availability-groups-sql-server.md)   

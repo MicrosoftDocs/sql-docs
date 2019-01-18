@@ -1,34 +1,25 @@
 ---
-title: "Create a Calculated Table (SSAS Tabular) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: analysis-services
-ms.prod_service: "analysis-services, azure-analysis-services"
-ms.service: ""
-ms.component: ""
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
-  
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-ms.assetid: 3d7ff98a-82a9-4333-a7d3-7a95a6f2caf7
-caps.latest.revision: 10
-author: "Minewiskan"
-ms.author: "owend"
-manager: "kfile"
-ms.workload: "On Demand"
+title: "Create a calculated table in Analysis Services tabular models | Microsoft Docs"
+ms.date: 12/19/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: tabular-models
+ms.topic: conceptual
+ms.author: owend
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
 ---
-# Create a Calculated Table (SSAS Tabular)
+# Create a calculated table 
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
   A *calculated table* is a computed object, based on either a DAX query or expression, derived from all or part of other tables in the same model.  
   
- A common design problem that calculated tables can solve is surfacing a role-playing dimension in a specific context so that you can expose it as a query structure in client applications.  You might recall that  a role-playing dimension  is simply a table surfaced in multiple  contexts -- a classic example is the Date table, manifested as OrderDate, ShipDate, or DueDate, depending on the foreign key relationship. By creating a calculated table for ShipDate explicitly, you get a standalone table that is available for queries, as fully operable as any other table.  
+ A common design problem that calculated tables can solve is surfacing a role-playing dimension in a specific context so that you can expose it as a query structure in client applications.  You might recall that  a role-playing dimension  is simply a table surfaced in multiple  contexts -- a classic example is the Date table, manifested as OrderDate, ShipDate, or DueDate, depending on the foreign key relationship. By creating a calculated table for ShipDate explicitly, you get a standalone table that is available for queries, as fully operable as any other table. Another use includes configuring a filtered rowset, a subset, or superset of columns from other existing tables. This allows you to keep the original table intact while creating variations of that table to support specific scenarios.  
   
- A second use for a calculated table includes configuring a filtered rowset or a subset or superset of columns from other existing tables. This allows you to keep the original table intact while creating variations of that table to support specific scenarios.  
-  
- Using calculated tables to best advantage will require that you know at least some DAX. As you work with expressions for your table, it might help to know that a calculated table  contains a single partition with a DAXSource, where the expression is a DAX expression.  
-There is one CalculatedTableColumn for each column returned by the expression, where the SourceColumn is the name of the column returned (similar to DataColumns on non-calculated tables).  
+ Using calculated tables to best advantage will require that you know at least some DAX. As you work with expressions for your table, it might help to know that a calculated table contains a single partition with a DAXSource, where the expression is a DAX expression.  
+There is one CalculatedTableColumn for each column returned by the expression, where the SourceColumn is the name of the column returned (similar to DataColumns on non-calculated tables). 
+
+At least one table must already exist before you can create a calculated table. If you are creating a calculated table as a standalone computed table object, you can first create a table by importing from a file data source (csv, xls, xml). The file you import from can have a single column and single value. You can then hide that table. 
   
 ## How to create a calculated table  
   
@@ -42,7 +33,7 @@ There is one CalculatedTableColumn for each column returned by the expression, w
   
 5.  Name the table.  
   
-6.  Create relationships to other tables in the model. See [Create a Relationship Between Two Tables &#40;SSAS Tabular&#41;](../../analysis-services/tabular-models/create-a-relationship-between-two-tables-ssas-tabular.md) if you need help with this step.  
+6.  Create relationships to other tables in the model. See [Create a Relationship Between Two Tables](../../analysis-services/tabular-models/create-a-relationship-between-two-tables-ssas-tabular.md) if you need help with this step.  
   
 7.  Reference the table in calculations or expressions in your model or use **Analyze in Excel** for ad hoc data exploration.  
   
@@ -70,9 +61,9 @@ There is one CalculatedTableColumn for each column returned by the expression, w
 =CROSSJOIN(DimProductCategory, DimCurrency)  
 ```  
   
-## See Also  
- [Compatibility Level for Tabular models in Analysis Services](../../analysis-services/tabular-models/compatibility-level-for-tabular-models-in-analysis-services.md)   
+## See also  
+ [Compatibility level](../../analysis-services/tabular-models/compatibility-level-for-tabular-models-in-analysis-services.md)   
  [Data Analysis Expressions &#40;DAX&#41; in Analysis Services](http://msdn.microsoft.com/library/abb336c9-3346-4cab-b91b-90f93f4575e5)   
- [Understanding DAX in Tabular Models &#40;SSAS Tabular&#41;](../../analysis-services/tabular-models/understanding-dax-in-tabular-models-ssas-tabular.md)  
+ [Understanding DAX in tabular models](../../analysis-services/tabular-models/understanding-dax-in-tabular-models-ssas-tabular.md)  
   
   

@@ -1,36 +1,16 @@
 ---
 title: "Managing Connections and Sessions (XMLA) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/06/2017"
-ms.prod: analysis-services
-ms.prod_service: "analysis-services"
-ms.service: ""
-ms.component: ""
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
-  
-
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-applies_to: 
-  - "SQL Server 2016 Preview"
-helpviewer_keywords: 
-  - "statefulness [XML for Analysis]"
-  - "statelessness [XML for Analysis]"
-  - "XML for Analysis, sessions"
-  - "states [XML for Analysis]"
-  - "XMLA, sessions"
-  - "sessions [XML for Analysis]"
-ms.assetid: b83bb3ff-09be-4fda-9d1d-6248e04ffb21
-caps.latest.revision: 31
-author: "Minewiskan"
-ms.author: "owend"
-manager: "kfile"
-ms.workload: "Inactive"
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: xmla
+ms.topic: conceptual
+ms.author: owend
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
 ---
 # Managing Connections and Sessions (XMLA)
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   *Statefulness* is a condition during which the server preserves the identity and context of a client between method calls. *Statelessness* is a condition during which the server does not remember the identity and context of a client after a method call finishes.  
   
  To provide statefulness, XML for Analysis (XMLA) supports *sessions* that allow a series of statements to be performed together. An example of such a series of statements would be the creation of a calculated member that is to be used in subsequent queries.  
@@ -41,7 +21,7 @@ ms.workload: "Inactive"
   
 -   Multiple commands can be run in the context of a single session.  
   
--   Support for transactions in the XMLA context is through provider-specific commands sent with the [Execute](../../analysis-services/xmla/xml-elements-methods-execute.md) method.  
+-   Support for transactions in the XMLA context is through provider-specific commands sent with the [Execute](https://docs.microsoft.com/bi-reference/xmla/xml-elements-methods-execute) method.  
   
  XMLA defines a way to support sessions in a Web environment in a mode similar to the approach used by the Distributed Authoring and Versioning (DAV) protocol to implement locking in a loosely coupled environment. This implementation parallels DAV in that the provider is allowed to expire sessions for various reasons (for example, a timeout or connection error). When sessions are supported, Web services must be aware and ready to handle interrupted sets of commands that must be restarted.  
   

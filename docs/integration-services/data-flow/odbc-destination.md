@@ -2,27 +2,20 @@
 title: "ODBC Destination | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "integration-services"
-ms.service: ""
-ms.component: "data-flow"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: integration-services
+ms.topic: conceptual
 f1_keywords: 
   - "sql13.ssis.designer.odbcdest.f1"
   - "sql13.ssis.designer.odbcdest.connection.f1"
   - "sql13.ssis.designer.odbcdest.columns.f1"
   - "sql13.ssis.designer.odbcdest.errorhandling.f1"
 ms.assetid: bffa63e0-c737-4b54-b4ea-495a400ffcf8
-caps.latest.revision: 12
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
-ms.workload: "Inactive"
+manager: craigg
 ---
 # ODBC Destination
   The ODBC destination bulk loads data into ODBC-supported database tables. The ODBC destination uses an ODBC connection manager to connect to the data source.  

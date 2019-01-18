@@ -2,24 +2,15 @@
 title: "Step 3: Testing the Lesson 6 Package | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "integration-services"
-ms.service: ""
-ms.component: "tutorial"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
-applies_to: 
-  - "SQL Server 2016"
+ms.technology: integration-services
+ms.topic: tutorial
 ms.assetid: c184c92d-948f-4037-a502-5fabd909c84c
-caps.latest.revision: 4
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
-ms.workload: "Inactive"
+manager: craigg
 ---
 # Lesson 6-3 - Testing the Lesson 6 Package
 At run time, your package will obtain the value for the Directory property from the VarFolderName parameter.  

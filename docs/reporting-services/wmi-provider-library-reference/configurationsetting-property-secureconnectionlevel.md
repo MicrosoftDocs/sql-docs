@@ -1,31 +1,22 @@
 ---
 title: "SecureConnectionLevel Property (WMI MSReportServer_ConfigurationSetting) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
+ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
-ms.service: ""
-ms.component: "wmi-provider-library-reference"
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
+ms.technology: wmi-provider-library-reference
 
 
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 apiname: 
   - "SecureConnectionLevel"
 apilocation: 
   - "reportingservices.mof"
-apitype: "MOFDef"
+apitype: MOFDef
 helpviewer_keywords: 
   - "SecureConnectionLevel property"
 ms.assetid: fd5549e7-b874-41e2-866e-2f58caf6f733
-caps.latest.revision: 19
-author: "markingmyname"
-ms.author: "maghan"
-manager: "kfile"
-ms.workload: "Inactive"
+author: markingmyname
+ms.author: maghan
 ---
 # ConfigurationSetting Property - SecureConnectionLevel
   Returns the secure connection level specified in the RSReportServer.config file. Read-only.  
@@ -46,6 +37,10 @@ public Integer SecureConnectionLevel;
 ## Example Code  
  [MSReportServer_ConfigurationSetting Class](../../reporting-services/wmi-provider-library-reference/msreportserver-configurationsetting-class.md)  
   
+## Remarks
+
+In SQL Server 2008 R2, SecureConnectionLevel is made an on/off switch. For more information, see [ConfigurationSetting Method - SetSecureConnectionLevel](../../reporting-services/wmi-provider-library-reference/configurationsetting-method-setsecureconnectionlevel.md).
+
 ## Requirements  
  **Namespace:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   

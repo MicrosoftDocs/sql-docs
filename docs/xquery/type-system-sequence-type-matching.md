@@ -2,29 +2,20 @@
 title: "Sequence Type Matching | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"
-ms.prod: "sql-non-specified"
-ms.prod_service: "sql-non-specified"
-ms.service: ""
-ms.component: "xquery"
+ms.prod: sql
+ms.prod_service: sql
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: xml
 ms.topic: "language-reference"
-applies_to: 
-  - "SQL Server"
 dev_langs: 
   - "XML"
 helpviewer_keywords: 
   - "sequence type matching [XQuery]"
   - "XQuery, sequence type matching"
 ms.assetid: 8c56fb69-ca04-4aba-b55a-64ae216c492d
-caps.latest.revision: 16
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-ms.workload: "Inactive"
+author: "rothja"
+ms.author: "jroth"
+manager: craigg
 ---
 # Type System - Sequence Type Matching
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -168,7 +159,7 @@ GO
   
 ```  
 SELECT Instructions.query('   
-declare namespace AWMI="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";   
+declare namespace AWMI="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";   
 data(/AWMI:root[1]/AWMI:Location[1]/@LocationID) instance of xs:integer?') as Result   
 FROM Production.ProductModel   
 WHERE ProductModelID = 7  
@@ -177,15 +168,15 @@ WHERE ProductModelID = 7
 ## Comparing the Node Type Returned by an Expression  
  If an expression returns a sequence of nodes, you may have to find the type of the node in the sequence. The following examples illustrate how sequence type syntax can be used to evaluate the node type returned by an expression. You can use the following sequence types:  
   
--   **item()** – Matches any item in the sequence.  
+-   **item()** - Matches any item in the sequence.  
   
--   **node()** – Determines whether the sequence is a node.  
+-   **node()** - Determines whether the sequence is a node.  
   
--   **processing-instruction()** – Determines whether the expression returns a processing instruction.  
+-   **processing-instruction()** - Determines whether the expression returns a processing instruction.  
   
--   **comment()** – Determines whether the expression returns a comment.  
+-   **comment()** - Determines whether the expression returns a comment.  
   
--   **document-node()** – Determines whether the expression returns a document node.  
+-   **document-node()** - Determines whether the expression returns a document node.  
   
  The following example illustrates these sequence types.  
   

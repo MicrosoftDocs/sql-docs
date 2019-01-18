@@ -2,22 +2,15 @@
 title: "getFunctionColumns Method (SQLServerDatabaseMetaData) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
-ms.prod_service: "drivers"
-ms.service: ""
-ms.component: "jdbc"
+ms.prod: sql
+ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "drivers"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: connectivity
+ms.topic: conceptual
 ms.assetid: e2b0e0f7-717c-48e6-bcd2-a325d938a833
-caps.latest.revision: 27
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
-ms.workload: "Inactive"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # getFunctionColumns Method (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -79,9 +72,9 @@ public ResultSet getFunctionColumns(java.lang.String catalog,
 |RADIX|**short**|The base for numeric types.|  
 |NULLABLE|**short**|Indicates if the parameter or return value can contain a **null** value.<br /><br /> **It can be one of the following values:**<br /><br /> functionNoNulls (0): NULL value is not allowed.<br /><br /> functionNullable (1): NULL value is allowed.<br /><br /> functionNullableUnknown (2): Unknown.|  
 |REMARKS|**String**|The comments about a column or a parameter.|  
-|COLUMN_DEF|**String**|The default value of the column.<br /><br /> **Note:** This information is available with [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] and is JDBC driver-specific.|  
-|SQL_DATA_TYPE|**smallint**|This column is the same as the **DATA_TYPE** column, except for the **datetime** and ISO **interval** data types.<br /><br /> **Note:** This information is available with [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] and is JDBC driver-specific.|  
-|SQL_DATETIME_SUB|**smallint**|The **datetime** ISO **interval** subcode if the value of **SQL_DATA_TYPE** is **SQL_DATETIME** or **SQL_INTERVAL**. For data types other than **datetime** and ISO **interval**, this column is NULL.<br /><br /> **Note:**This information is available with [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] and is JDBC driver-specific.|  
+|COLUMN_DEF|**String**|The default value of the column.<br /><br /> **Note:** This information is available with [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] and is JDBC driver-specific.|  
+|SQL_DATA_TYPE|**smallint**|This column is the same as the **DATA_TYPE** column, except for the **datetime** and ISO **interval** data types.<br /><br /> **Note:** This information is available with [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] and is JDBC driver-specific.|  
+|SQL_DATETIME_SUB|**smallint**|The **datetime** ISO **interval** subcode if the value of **SQL_DATA_TYPE** is **SQL_DATETIME** or **SQL_INTERVAL**. For data types other than **datetime** and ISO **interval**, this column is NULL.<br /><br /> **Note:**This information is available with [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] and is JDBC driver-specific.|  
 |CHAR_OCTET_LENGTH|**int**|The maximum length of binary and character based parameters or columns. For other data types, it is NULL.|  
 |ORDINAL_POSITION|**int**|For input and output parameters, it represents the position starting from 1.<br /><br /> For result set columns, it is the position of the column in the result set starting from 1.<br /><br /> For return value, it is 0.|  
 |IS_NULLABLE|**String**|Determines the nullability of a parameter or column.<br /><br /> It can be one of the following values:<br /><br /> **YES**: The parameter or column can include NULL values.<br /><br /> **NO**: The parameter or column can not include NULL values.<br /><br /> Empty string (""): Unknown.|  
@@ -93,7 +86,7 @@ public ResultSet getFunctionColumns(java.lang.String catalog,
 |SS_XML_SCHEMACOLLECTION_CATALOG_NAME|**String**|The name of an XML schema collection. If the name cannot be found, this is an empty string.|  
 |SS_XML_SCHEMACOLLECTION_SCHEMA_NAME|**String**|The name of the catalog that contains the user-defined type (UDT).|  
 |SS_XML_SCHEMACOLLECTION_NAME|**String**|The name of the schema that contains the user-defined type (UDT).|  
-|SS_DATA_TYPE|**tinyint**|The [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] data type that is used by extended stored procedures.<br /><br /> **Note** For more information about the data types returned by [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)], see "Data Types (Transact-SQL)" in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] Books Online.|  
+|SS_DATA_TYPE|**tinyint**|The [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] data type that is used by extended stored procedures.<br /><br /> **Note** For more information about the data types returned by [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], see "Data Types (Transact-SQL)" in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Books Online.|  
   
 ## See Also  
  [SQLServerDatabaseMetaData Members](../../../connect/jdbc/reference/sqlserverdatabasemetadata-members.md)   

@@ -2,15 +2,10 @@
 title: "sys.fn_get_audit_file (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "05/16/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.service: ""
-ms.component: "system-functions"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: system-objects
 ms.topic: "language-reference"
 f1_keywords: 
   - "fn_get_audit_file_TSQL"
@@ -23,11 +18,10 @@ helpviewer_keywords:
   - "sys.fn_get_audit_file function"
   - "fn_get_audit_file function"
 ms.assetid: d6a78d14-bb1f-4987-b7b6-579ddd4167f5
-caps.latest.revision: 27
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-ms.workload: "On Demand"
+author: "rothja"
+ms.author: "jroth"
+manager: craigg
+monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.fn_get_audit_file (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -79,7 +73,7 @@ fn_get_audit_file ( file_pattern,
  Specifies a known location with the file specified for the initial_file_name. When this argument is used the function will start reading at the first record of the Buffer immediately following the specified offset.  
   
 > [!NOTE]  
->  The *audit_record_offset* argument must contain valid entries or must contain either the default | NULL value. Type is **bitint**.  
+>  The *audit_record_offset* argument must contain valid entries or must contain either the default | NULL value. Type is **bigint**.  
   
 ## Tables Returned  
  The following table describes the audit file content that can be returned by this function.  
@@ -107,8 +101,8 @@ fn_get_audit_file ( file_pattern,
 |target_server_principal_sid|**varbinary**|SID of target login. Is nullable. Returns NULL if not applicable.|  
 |target_database_principal_name|**sysname**|Target user of action. Is nullable. Returns NULL if not applicable.|  
 |server_instance_name|**sysname**|Name of the server instance where the audit occurred. The standard server\instance format is used.|  
-|database_name|**sysname**|The database context in which the action occurred. Is nullable. Returns NULL for audits occuring at the server level.|  
-|schema_name|**sysname**|The schema context in which the action occurred. Is nullable. Returns NULL for audits occuring outside a schema.|  
+|database_name|**sysname**|The database context in which the action occurred. Is nullable. Returns NULL for audits occurring at the server level.|  
+|schema_name|**sysname**|The schema context in which the action occurred. Is nullable. Returns NULL for audits occurring outside a schema.|  
 |object_name|**sysname**|The name of the entity on which the audit occurred. This includes the following:<br /> Server objects<br /> Databases<br /> Database objects<br /> Schema objects<br /> Is nullable. Returns NULL if the entity is the Server itself or if the audit is not performed at an object level. For example, Authentication.|  
 |statement|**nvarchar(4000)**|TSQL statement if it exists. Is nullable. Returns NULL if not applicable.|  
 |additional_information|**nvarchar(4000)**|Unique information that only applies to a single event is returned as XML. A small number of auditable actions contain this kind of information.<br /><br /> One level of TSQL stack will be displayed in XML format for actions that have TSQL stack associated with them. The XML format will be:<br /><br /> `<tsql_stack><frame nest_level = '%u' database_name = '%.*s' schema_name = '%.*s' object_name = '%.*s' /></tsql_stack>`<br /><br /> Frame nest_level indicates the current nesting level of the frame. The Module name is represented in three part format (database_name, schema_name and object_name).  The module name will be parsed to escape invalid xml characters like `'\<'`, `'>'`, `'/'`, `'_x'`. They will be escaped as `_xHHHH\_`. The HHHH stands for the four-digit hexadecimal UCS-2 code for the character<br /><br /> Is nullable. Returns NULL when there is no additional information reported by the event.|  
@@ -117,13 +111,15 @@ fn_get_audit_file ( file_pattern,
 |user_defined_event_id|**smallint**|**Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> User defined event id passed as an argument to **sp_audit_write**. **NULL** for system events (default) and non-zero for user-defined event. For more information, see [sp_audit_write &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-audit-write-transact-sql.md).|  
 |user_defined_information|**nvarchar(4000)**|**Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Used to record any extra information the user wants to record in |audit log by using the **sp_audit_write** stored procedure.|  
 |audit_schema_version |**int** | |  
-|sequence_group_id |**nvarbinary** | SQL Server only (starting with 2016) |  
-|transaction_id |**bigint** | SQL Server only (starting with 2016) |  
-|client_ip |**nvarchar(128)** | Azure SQL DB + SQL Server (starting with 2017) |  
-|application_name |**nvarchar(128)** | Azure SQL DB + SQL Server (starting with 2017) |  
-|duration_milliseconds |**bigint** | Azure SQL DB only |  
-|response_rows |**bigint** | Azure SQL DB only |  
-|affected_rows |**bigint** | Azure SQL DB only |  
+|sequence_group_id |**varbinary** | **Applies to**: SQL Server only (starting with 2016) |  
+|transaction_id |**bigint** | **Applies to**: SQL Server only (starting with 2016) |  
+|client_ip |**nvarchar(128)** | **Applies to**: Azure SQL DB + SQL Server (starting with 2017) |  
+|application_name |**nvarchar(128)** | **Applies to**: Azure SQL DB + SQL Server (starting with 2017) |  
+|duration_milliseconds |**bigint** | **Applies to**: Azure SQL DB only |  
+|response_rows |**bigint** | **Applies to**: Azure SQL DB only |  
+|affected_rows |**bigint** | **Applies to**: Azure SQL DB only |  
+|connection_id |GUID | **Applies to**: Azure SQL DB only |
+|data_sensitivity_information |nvarchar(4000) | **Applies to**: Azure SQL DB only |
   
 ## Remarks  
  If the *file_pattern* argument passed to **fn_get_audit_file** references a path or file that does not exist, or if the file is not an audit file, the **MSG_INVALID_AUDIT_FILE** error message is returned.  
@@ -139,10 +135,10 @@ fn_get_audit_file ( file_pattern,
 
 - **SQL Server**
 
-  This example reads from a file that is named `\\serverName\Audit\HIPPA_AUDIT.sqlaudit`.  
+  This example reads from a file that is named `\\serverName\Audit\HIPAA_AUDIT.sqlaudit`.  
   
   ```  
-  SELECT * FROM sys.fn_get_audit_file ('\\serverName\Audit\HIPPA_AUDIT.sqlaudit',default,default);  
+  SELECT * FROM sys.fn_get_audit_file ('\\serverName\Audit\HIPAA_AUDIT.sqlaudit',default,default);  
   GO  
   ```  
 
@@ -173,7 +169,7 @@ fn_get_audit_file ( file_pattern,
 
 For a full example about how to create an audit, see [SQL Server Audit &#40;Database Engine&#41;](../../relational-databases/security/auditing/sql-server-audit-database-engine.md).
 
-For information on setting up Azure SQL Database auditing, see [Get Started with SQL Database auditing](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-auditing).
+For information on setting up Azure SQL Database auditing, see [Get Started with SQL Database auditing](https://docs.microsoft.com/azure/sql-database/sql-database-auditing).
   
 ## See Also  
  [CREATE SERVER AUDIT &#40;Transact-SQL&#41;](../../t-sql/statements/create-server-audit-transact-sql.md)   

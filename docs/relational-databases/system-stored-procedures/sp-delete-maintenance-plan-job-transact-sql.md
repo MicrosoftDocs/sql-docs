@@ -2,15 +2,10 @@
 title: "sp_delete_maintenance_plan_job (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "database-engine"
-ms.service: ""
-ms.component: "system-stored-procedures"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: system-objects
 ms.topic: "language-reference"
 f1_keywords: 
   - "sp_delete_maintenance_plan_job"
@@ -20,11 +15,9 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_delete_maintenance_plan_job"
 ms.assetid: 1c2148c3-2928-4d9b-b1c8-3512cfbd6a63
-caps.latest.revision: 31
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-ms.workload: "Inactive"
+author: "stevestein"
+ms.author: "sstein"
+manager: craigg
 ---
 # sp_delete_maintenance_plan_job (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,10 +40,10 @@ sp_delete_maintenance_plan_job [ @plan_id = ] 'plan_id' ,
 ```  
   
 ## Arguments  
- [ **@plan_id =**] **'***plan_id***'**  
+ [ **@plan_id =**] **'**_plan\_id_**'**  
  Specifies the ID of the maintenance plan. *plan_id* is **uniqueidentifier**, and must be a valid ID.  
   
- [ **@job_id =**] **'***job_id***'**  
+ [ **@job_id =**] **'**_job\_id_**'**  
  Specifies the ID of the job with which the maintenance plan is associated. *job_id* is **uniqueidentifier**, and must be a valid ID.  
   
 ## Return Code Values  

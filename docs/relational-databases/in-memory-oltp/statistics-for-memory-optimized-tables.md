@@ -2,22 +2,16 @@
 title: "Statistics for Memory-Optimized Tables | Microsoft Docs"
 ms.custom: ""
 ms.date: "10/23/2016"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.service: ""
-ms.component: "in-memory-oltp"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine-imoltp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: in-memory-oltp
+ms.topic: conceptual
 ms.assetid: e644766d-1d1c-43d7-83ff-8ccfe4f3af9f
-caps.latest.revision: 18
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
-ms.workload: "Inactive"
+author: MightyPen
+ms.author: genemi
+manager: craigg
+monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Statistics for Memory-Optimized Tables
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

@@ -2,22 +2,14 @@
 title: "LOCALDB_ERROR_CANNOT_ACCESS_INSTANCE_FOLDER | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/04/2017"
-ms.prod: "sql-non-specified"
-ms.prod_service: "database-engine"
-ms.service: ""
-ms.component: "localdb"
+ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-
-ms.tgt_pltfrm: ""
+ms.technology: performance
 ms.topic: "reference"
 ms.assetid: c4288265-43f7-44fd-acab-ba64d04264d9
-caps.latest.revision: 10
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-ms.workload: "Inactive"
+author: stevestein
+ms.author: sstein
+manager: craigg
 ---
 # LOCALDB_ERROR_CANNOT_ACCESS_INSTANCE_FOLDER
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

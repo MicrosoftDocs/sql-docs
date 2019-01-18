@@ -2,15 +2,10 @@
 title: "ALTER SECURITY POLICY (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "05/01/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.service: ""
-ms.component: "t-sql|statements"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: t-sql
 ms.topic: "language-reference"
 f1_keywords: 
   - "ALTER_SECURITY_POLICY_TSQL"
@@ -22,11 +17,9 @@ dev_langs:
 helpviewer_keywords: 
   - "ALTER SECURITY POLICY statement"
 ms.assetid: a8efc37e-113d-489c-babc-b914fea2c316
-caps.latest.revision: 20
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "craigg"
-ms.workload: "Inactive"
+author: VanMSFT
+ms.author: vanto
+manager: craigg
 ---
 # ALTER SECURITY POLICY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -41,10 +34,10 @@ ms.workload: "Inactive"
 ALTER SECURITY POLICY schema_name.security_policy_name   
     (  
         { ADD { FILTER | BLOCK } PREDICATE tvf_schema_name.security_predicate_function_name   
-           ( { column_name | arguments } [ , …n ] ) ON table_schema_name.table_name   
+           ( { column_name | arguments } [ , ...n ] ) ON table_schema_name.table_name   
            [ <block_dml_operation> ]  }   
         | { ALTER { FILTER | BLOCK } PREDICATE tvf_schema_name.new_security_predicate_function_name   
-             ( { column_name | arguments } [ , …n ] ) ON table_schema_name.table_name   
+             ( { column_name | arguments } [ , ...n ] ) ON table_schema_name.table_name   
            [ <block_dml_operation> ] }  
         | { DROP { FILTER | BLOCK } PREDICATE ON table_schema_name.table_name }   
         | [ <additional_add_alter_drop_predicate_statements> [ , ...n ] ]  
@@ -82,7 +75,7 @@ ALTER SECURITY POLICY schema_name.security_policy_name
  You cannot ALTER the operation for which a block predicate will be applied, because the operation is used to uniquely identify the predicate. Instead, you must drop the predicate and add a new one for the new operation.  
   
  WITH ( STATE = { ON | OFF } )  
- Enables or disables the security policy from enforcing its security predicates against the target tables. If not specified the security policy being created is disabled.  
+ Enables or disables the security policy from enforcing its security predicates against the target tables. If not specified the security policy being created is enabled.  
   
  NOT FOR REPLICATION  
  Indicates that the security policy should not be executed when a replication agent modifies the target object. For more information, see [Control the Behavior of Triggers and Constraints During Synchronization &#40;Replication Transact-SQL Programming&#41;](../../relational-databases/replication/control-behavior-of-triggers-and-constraints-in-synchronization.md).  

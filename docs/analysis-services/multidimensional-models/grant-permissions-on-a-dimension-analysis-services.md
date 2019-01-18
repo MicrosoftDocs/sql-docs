@@ -1,32 +1,14 @@
 ---
 title: "Grant permissions on a dimension (Analysis Services) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/04/2017"
-ms.prod: analysis-services
-ms.prod_service: "analysis-services"
-ms.service: ""
-ms.component: ""
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
-  
-ms.component: multidimensional-tabular
-ms.component: data-mining
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.asvs.roledesignerdialog.dimensions.f1"
-helpviewer_keywords: 
-  - "dimensions [Analysis Services], security"
-  - "read/write permissions"
-  - "user access rights [Analysis Services], dimensions"
-  - "permissions [Analysis Services], dimensions"
-ms.assetid: be5b2746-0336-4b12-827e-131462bdf605
-caps.latest.revision: 39
-author: "Minewiskan"
-ms.author: "owend"
-manager: "kfile"
-ms.workload: "Inactive"
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: multidimensional-models
+ms.topic: conceptual
+ms.author: owend
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
 ---
 # Grant permissions on a dimension (Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -70,7 +52,7 @@ ms.workload: "Inactive"
      By default, permissions are inherited from a corresponding database dimension. Clear the **Inherit** check box to alter permissions from **Read** to **Read/Write**. Before using **Read/Write**, be sure to read the note in the previous section.  
   
 > [!IMPORTANT]  
->  If you configure database role permissions by using Analysis Management Objects (AMO), any reference to a cube dimension in a cube's DimensionPermission attribute severs the permission inheritance from the database's DimensionPermission attribute. For more information about AMO, see [Developing with Analysis Management Objects &#40;AMO&#41;](../../analysis-services/multidimensional-models/analysis-management-objects/developing-with-analysis-management-objects-amo.md).  
+>  If you configure database role permissions by using Analysis Management Objects (AMO), any reference to a cube dimension in a cube's DimensionPermission attribute severs the permission inheritance from the database's DimensionPermission attribute. For more information about AMO, see [Developing with Analysis Management Objects &#40;AMO&#41;](https://docs.microsoft.com/bi-reference/amo/developing-with-analysis-management-objects-amo).  
   
 ## See Also  
  [Roles and Permissions &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/roles-and-permissions-analysis-services.md)   

@@ -2,26 +2,17 @@
 title: "Toolbox Component F1 Help | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "database-engine"
-ms.service: ""
-ms.component: "maintenance-plans"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: supportability
 ms.topic: "reference"
-f1_keywords: 
-  - "vs.toolbox"
 helpviewer_keywords: 
   - "Toolbox [SQL Server Management Studio]"
 ms.assetid: d8401ecc-7d47-49df-aae5-22a148eeb23f
-caps.latest.revision: 22
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-ms.workload: "Inactive"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ---
 # Toolbox Component F1 Help
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -43,7 +34,5 @@ ms.workload: "Inactive"
  The Azure Feature Pack for Integration Services contains connection managers to connect to Azure data sources and tasks to do common Azure operations. Install the Feature Pack to add these items to the Toolbox. For more info, see [Azure Feature Pack for Integration Services &#40;SSIS&#41;](../../integration-services/azure-feature-pack-for-integration-services-ssis.md).  
   
 ## See Also  
- [Use the Toolbox](http://msdn.microsoft.com/library/16733e39-4dc5-416f-ab10-c1d823f79d2d)   
- [Choose Toolbox Items &#40;Maintenance Tasks Page&#41;](http://msdn.microsoft.com/library/b92c9054-7479-45d8-a54c-c1bb6699bdb3)  
-  
-  
+ [Use the Toolbox](../../ssms/use-the-toolbox.md)   
+ [Choose Toolbox Items &#40;Maintenance Tasks Page&#41;](https://msdn.microsoft.com/library/b92c9054-7479-45d8-a54c-c1bb6699bdb3)  

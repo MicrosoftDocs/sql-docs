@@ -2,32 +2,23 @@
 title: "Developing a User Interface for a Custom Connection Manager | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "integration-services"
-ms.service: ""
-ms.component: "extending-packages-custom-objects"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-
-ms.tgt_pltfrm: ""
+ms.technology: integration-services
 ms.topic: "reference"
-applies_to: 
-  - "SQL Server 2016 Preview"
 helpviewer_keywords: 
   - "custom connection managers [Integration Services], developing user interface"
   - "custom user interface [Integration Services], custom connection manager"
 ms.assetid: 908bf2ac-fc84-4af8-a869-1cb43573d2df
-caps.latest.revision: 27
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
-ms.workload: "Inactive"
+manager: craigg
 ---
 # Developing a User Interface for a Custom Connection Manager
   After you have overridden the implementation of the properties and methods of the base class to provide your custom functionality, you may want to create a custom user interface for your connection manager. If you do not create a custom user interface, users can configure your connection manager only by using the Properties window.  
   
- In a custom user interface project or assembly, you normally have two classes—a class that implements <xref:Microsoft.SqlServer.Dts.Runtime.Design.IDtsConnectionManagerUI>, and the Windows form that it displays to gather information from the user.  
+ In a custom user interface project or assembly, you normally have two classes-a class that implements <xref:Microsoft.SqlServer.Dts.Runtime.Design.IDtsConnectionManagerUI>, and the Windows form that it displays to gather information from the user.  
   
 > [!IMPORTANT]  
 >  After signing and building your custom user interface and installing it in the global assembly cache as described in [Coding a Custom Connection Manager](../../../integration-services/extending-packages-custom-objects/building-deploying-and-debugging-custom-objects.md), remember to provide the fully qualified name of this class in the <xref:Microsoft.SqlServer.Dts.Runtime.DtsConnectionAttribute.UITypeName%2A> property of the <xref:Microsoft.SqlServer.Dts.Runtime.DtsConnectionAttribute>.  

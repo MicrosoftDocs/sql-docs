@@ -3,20 +3,17 @@ title:  SQL Server on Linux FAQ | Microsoft Docs
 description: This article provides answers to frequently asked questions about SQL Server running on Linux.
 author: rothja 
 ms.author: jroth 
-manager: jhubbard
-ms.date: 12/21/2017
-ms.topic: article
-ms.prod: "sql-non-specified"
-ms.prod_service: "database-engine"
-ms.service: ""
-ms.component: sql-linux
-ms.suite: "sql"
-ms.custom: ""
-ms.technology: database-engine
-ms.workload: "Active"
+manager: craigg
+ms.date: 07/25/2018
+ms.topic: conceptual
+ms.prod: sql
+ms.custom: "sql-linux"
+ms.technology: linux
 ---
 
 # SQL Server on Linux Frequently Asked Questions (FAQ)
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 The following sections provide common questions and answers for SQL Server running on Linux.
 
@@ -24,11 +21,19 @@ The following sections provide common questions and answers for SQL Server runni
 
 1. **What Linux platforms are supported?**
 
-   SQL Server is currently supported on Red Hat Enterprise Server, SUSE Linux Enterprise Server, and Ubuntu. For the latest information about the supported versions, see [Supported platforms](sql-server-linux-setup.md#supportedplatforms).
+   SQL Server is currently supported on Red Hat Enterprise Server, SUSE Linux Enterprise Server, and Ubuntu. It also supported running in a container with Docker. For the latest information about the supported versions, see [Supported platforms](sql-server-linux-setup.md#supportedplatforms).
 
-1. **What SQL Server features are supported on Linux?**
+1. **Will SQL Server on Linux work on other platforms**?
 
-   For a complete list of supported features and known issues, see the [Release notes](sql-server-linux-release-notes.md).
+   SQL Server is tested and supported on Linux for the previously listed distributions. Other Linux distributions are closely related and might be able to run SQL Server (for example, CentOS is closely related to Red Hat Enterprise Server). But if you choose to install SQL Server on an unsupported operating system, please review the **Support policy** section of the [Technical support policy for Microsoft SQL Server](https://support.microsoft.com/help/4047326/support-policy-for-microsoft-sql-server) to understand the support implications. Also note that some community-maintained Linux distributions do not have a formal way to receive support if the underlying operating system is the problem.
+
+1. **How does licensing work on Linux?**
+
+   SQL Server is licensed the same way for both Windows and Linux. In fact, you license SQL Server and then you can choose to use that license on the platform of your choice. For more information, see [How to license SQL Server](https://www.microsoft.com/sql-server/sql-server-2017-pricing).
+
+1. **Is SQL Server on Linux the same as on Windows?**
+
+   The core Database Engine for SQL Server is the same on Linux as it is on Windows. However, some features are currently not supported on Linux. For a list of features that are not supported on Linux, see the [Unsupported features & services](sql-server-linux-release-notes.md#Unsupported). Also review the [Known issues](sql-server-linux-release-notes.md#known-issues). Unless specified in these lists, other SQL Server features and services are supported on Linux.
 
 1. **What is the support policy for SQL Server?**
 
@@ -48,7 +53,7 @@ The following sections provide common questions and answers for SQL Server runni
 
    No. Linux running on Windows 10 is currently not a supported platform for SQL Server and related tools.
 
-1. **Which Linux file systems can SQL Server 2017 use for data files?**
+1. **Which Linux file systems can SQL Server use for data files?**
 
    Currently SQL Server on Linux supports ext4 and XFS. Support for other file systems will be added as needed in the future.
 
@@ -60,6 +65,22 @@ The following sections provide common questions and answers for SQL Server runni
 
    Yes. For a discussion of unattended installation, see [Installation guidance for SQL Server on Linux](sql-server-linux-setup.md#unattended). See the sample scripts for [Red Hat](sample-unattended-install-redhat.md), [SUSE Linux Enterprise Server](sample-unattended-install-suse.md), and [Ubuntu](sample-unattended-install-ubuntu.md). You can also review [this sample script](https://blogs.msdn.microsoft.com/sqlcat/2017/10/03/unattended-install-and-configuration-for-sql-server-2017-on-linux/) created by the SQL Server Customer Advisory Team.
 
+1. **What edition of SQL Server should I choose when I already purchased it?**
+
+   When you run mssql-conf setup you are given these options:  
+   `Choose an edition of SQL Server:` <br>
+`     1. Evaluation (free, no production use rights, 180-day limit)` <br>
+`     2. Developer (free, no production use rights)` <br>
+`     3. Express (free)` <br>
+`     4. Web (PAID)` <br>
+`     5. Standard (PAID)` <br>
+`     6. Enterprise (PAID)` <br>
+`     7. Enterprise Core (PAID)` <br>
+`     8. I bought a license through a retail sales channel and have a product key to enter.`
+     
+   If you have obtained your license through volume licensing as part of an Enterprise Agreement or through your MSDN subscription, you need to select 4 through 7. If you have purchased Standard edition through a retail channel, you need to select 8. 
+
+
 ## Tools
 
 1. **Can I use the SQL Server Management Studio client on Windows to access SQL Server on Linux?**
@@ -68,7 +89,7 @@ The following sections provide common questions and answers for SQL Server runni
 
 1. **Is there a tool like SSMS that runs on Linux?**
 
-   The new Microsoft SQL Operations Studio (preview) is a cross-platform tool for managing SQL Server. For more information, see [What is Microsoft SQL Operations Studio (preview)](../sql-operations-studio/what-is.md).
+   The new Azure Data Studio (preview) is a cross-platform tool for managing SQL Server. For more information, see [What is Azure Data Studio (preview)](../azure-data-studio/what-is.md).
 
 1. **Are commands like sqlcmd and bcp available on Linux?**
 
@@ -82,6 +103,9 @@ The following sections provide common questions and answers for SQL Server runni
 
    You can use [system dynamic management views (DMVs)](../relational-databases/system-dynamic-management-views/system-dynamic-management-views.md) to collect various types of information about SQL Server, including Linux process information. You can use [Query Store](../relational-databases/performance/monitoring-performance-by-using-the-query-store.md) to improve query performance. Other tools, such as the built-in [Performance Dashboard](https://blogs.msdn.microsoft.com/sql_server_team/new-in-ssms-performance-dashboard-built-in/), work remotely in SQL Server Management Studio (SSMS) from Windows.
 
+   > [!TIP]
+   > One way to improve performance is to properly configure your Linux operating system and the SQL Server insance. For more information, see [Performance best practices and configuration guidelines for SQL Server on Linux](sql-server-linux-performance-best-practices.md).
+
 ## Administration
 
 1. **Has Microsoft created an app like the SQL Server Configuration Manager on Linux?**
@@ -90,7 +114,7 @@ The following sections provide common questions and answers for SQL Server runni
 
 1. **Does SQL Server on Linux support multiple instances on the same host?**
 
-   We recommend running multiple containers on a host to have multiple distinct instances. Each container will need to listen on a different port. For more information, see [Run multiple SQL Server containers](sql-server-linux-configure-docker.md#run-multiple-sql-server-containers).
+   We recommend running multiple containers on a host to have multiple distinct instances. This is easily achieved using docker, but each container needs to listen on a different port. For more information, see [Run multiple SQL Server containers](sql-server-linux-configure-docker.md#run-multiple-sql-server-containers).
 
 1. **Is Active Directory Authentication supported on Linux?**
 
@@ -110,7 +134,7 @@ The following sections provide common questions and answers for SQL Server runni
 
 1. **Can I migrate my data from Oracle and other database engines to SQL Server on Linux?**
 
-   Yes. SSMA supports migration from several types of database engines: Microsoft Access, DB2, MySQL, Oracle, and SAP ASE (formerly SAP Sybase ASE). For an example of how to use SSMA, see [Migrate an Oracle schema to SQL Server 2017 on Linux with the SQL Server Migration Assistant](../ssma/oracle/sql-server-linux-convert-from-oracle.md?toc=%2fsql%2flinux%2ftoc.json).
+   Yes. SSMA supports migration from several types of database engines: Microsoft Access, DB2, MySQL, Oracle, and SAP ASE (formerly SAP Sybase ASE). For an example of how to use SSMA, see [Migrate an Oracle schema to SQL Server on Linux with the SQL Server Migration Assistant](../ssma/oracle/sql-server-linux-convert-from-oracle.md?toc=%2fsql%2flinux%2ftoc.json).
 
 1. **What permissions are required for SQL Server files?**
 
@@ -124,6 +148,4 @@ The following sections provide common questions and answers for SQL Server runni
 
    We do not support changing the ownership of SQL Server directory and files from the default installation. The mssql account and group is specifically used for SQL Server and has no interactive login access.
 
-## Next steps
-
-For more information about running SQL Server on Linux, see the [Overview of SQL Server on Linux](sql-server-linux-overview.md).
+[!INCLUDE[Get Help Options](../includes/paragraph-content/get-help-options.md)]

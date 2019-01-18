@@ -2,18 +2,11 @@
 title: "Logical Expressions (XQuery) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-non-specified"
-ms.prod_service: "sql-non-specified"
-ms.service: ""
-ms.component: "xquery"
+ms.prod: sql
+ms.prod_service: sql
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: xml
 ms.topic: "language-reference"
-applies_to: 
-  - "SQL Server"
 dev_langs: 
   - "XML"
 helpviewer_keywords: 
@@ -23,11 +16,9 @@ helpviewer_keywords:
   - "EBV"
   - "expressions [XQuery], logical"
 ms.assetid: de94cd2e-2d48-49fb-9ebd-a2d90c79bf62
-caps.latest.revision: 26
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-ms.workload: "Inactive"
+author: "rothja"
+ms.author: "jroth"
+manager: craigg
 ---
 # Logical Expressions (XQuery)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -55,7 +46,7 @@ expression1 or expression2
   
 ```  
 SELECT CatalogDescription.query('  
-     declare namespace PD="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription";  
+     declare namespace PD="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription";  
      for $F in /PD:ProductDescription/PD:Picture[PD:Size="small"   
                                                  and PD:Angle="front"]  
      return   
@@ -69,7 +60,7 @@ where ProductModelID=19
   
 ```  
 <PD:Picture   
-  xmlns:PD="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription">  
+  xmlns:PD="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription">  
   <PD:Angle>front</PD:Angle>  
   <PD:Size>small</PD:Size>  
   <PD:ProductPhotoID>31</PD:ProductPhotoID>  

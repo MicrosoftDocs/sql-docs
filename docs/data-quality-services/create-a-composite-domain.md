@@ -2,27 +2,23 @@
 title: "Create a Composite Domain | Microsoft Docs"
 ms.custom: ""
 ms.date: "11/22/2011"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "data-quality-services"
-ms.service: ""
-ms.component: "data-quality-services"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "data-quality-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: data-quality-services
+ms.topic: conceptual
 f1_keywords: 
   - "sql13.dqs.kb.createcd.f1"
   - "sql13.dqs.dm.cdproperties.f1"
 ms.assetid: c7f0bd84-a02e-4a81-885d-985e6415c499
-caps.latest.revision: 21
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-ms.workload: "Inactive"
+author: "douglaslMS"
+ms.author: "douglasl"
+manager: craigg
 ---
 # Create a Composite Domain
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
   This topic describes how to create a composite domain in a knowledge base in [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). A composite domain consists of one or more single domains that apply to a single data field. For more information on composite domains, see [Managing a Composite Domain](../data-quality-services/managing-a-composite-domain.md).  
   
  There are two ways to create a new composite domain. The first is during the Map step of the knowledge discovery activity, when you are in the process of analyzing a data sample to add knowledge to a new or existing knowledge base. The second is during the domain management activity, when instead of changing an existing domain, you create a new one. In order to create a composite domain, you must already have created at least two single domains to add to the composite domain. Only those single domains that have already been created and that have not been added to an existing composite domain are available when you create a new composite domain. A single domain cannot be added to more than one composite domain, and a composite domain cannot be added to another composite domain.  
@@ -81,21 +77,21 @@ ms.workload: "Inactive"
   
 4.  Select one of the following for the **Parsing Method**:  
   
-    -   **Reference Data**: Parse the field’s values according to how the data is formatted by the Reference Data Service (RDS). Data Quality Services will send the values in the composite domain to the RDS, and the RDS returns the data corrected and parsed according to the domain in the composite domain.  
+    -   **Reference Data**: Parse the field's values according to how the data is formatted by the Reference Data Service (RDS). Data Quality Services will send the values in the composite domain to the RDS, and the RDS returns the data corrected and parsed according to the domain in the composite domain.  
   
-    -   **In Order**: Parse the field’s values according to the order of domains in the composite domain. The first value will be included in the first domain, the second value in the second domains, and so on.  
+    -   **In Order**: Parse the field's values according to the order of domains in the composite domain. The first value will be included in the first domain, the second value in the second domains, and so on.  
   
-    -   **Delimiters**: Parse the field’s values based on the delimiter selected from the radio buttons displayed when Delimiters is selected. Can be **Tab**, **Semicolon**, **Comma**, **Space**, or **Other**. If **Other**, enter the value that will serve as the delimiter.  
+    -   **Delimiters**: Parse the field's values based on the delimiter selected from the radio buttons displayed when Delimiters is selected. Can be **Tab**, **Semicolon**, **Comma**, **Space**, or **Other**. If **Other**, enter the value that will serve as the delimiter.  
   
 5.  If you selected **Delimiters** for the parsing method, you can also select **Use Knowledge Based Parsing**. For more information, see [Knowledge-Based Parsing](#KnowledgeBaseParsing).  
   
-6.  Click **Finish** to complete the domain management activity, as described in [End the Domain Management Activity](http://msdn.microsoft.com/library/ab6505ad-3090-453b-bb01-58435e7fa7c0).  
+6.  Click **Finish** to complete the domain management activity, as described in [End the Domain Management Activity](https://msdn.microsoft.com/library/ab6505ad-3090-453b-bb01-58435e7fa7c0).  
   
 ##  <a name="FollowUp"></a> Follow Up: After Creating a Composite Domain  
  After you create a composite domain, you can perform other domain management tasks on the domain, you can perform knowledge discovery to add knowledge to the domain, or you can add a matching policy to the domain. For more information, see [Perform Knowledge Discovery](../data-quality-services/perform-knowledge-discovery.md), [Managing a Domain](../data-quality-services/managing-a-domain.md), or [Create a Matching Policy](../data-quality-services/create-a-matching-policy.md).  
   
 ##  <a name="KnowledgeBaseParsing"></a> Knowledge-Based Parsing  
- Data Quality Services enables you to parse data based on knowledge, not just on delimiter or order. Knowledge-based parsing is used when complex source data is mapped to a composite domain, and you are not using reference data services. You can use knowledge-based parsing to parse the data from the data source into the relevant single domains. With knowledge-based parsing, DQS will first attempt to use knowledge to parse complex data into single domains. If possible, it will identify parts of the string as in one or more domains, and parse the string into its various domains. For example, suppose you have “John B. Doe” as a complex values in a full-name field represented by a Full Name composite domain. If DQS identifies “John” as in the First Name domain, and “Doe” as in the Last Name domain, then DQS will add “B.” to the Middle Name domain based on domain knowledge.  
+ Data Quality Services enables you to parse data based on knowledge, not just on delimiter or order. Knowledge-based parsing is used when complex source data is mapped to a composite domain, and you are not using reference data services. You can use knowledge-based parsing to parse the data from the data source into the relevant single domains. With knowledge-based parsing, DQS will first attempt to use knowledge to parse complex data into single domains. If possible, it will identify parts of the string as in one or more domains, and parse the string into its various domains. For example, suppose you have "John B. Doe" as a complex values in a full-name field represented by a Full Name composite domain. If DQS identifies "John" as in the First Name domain, and "Doe" as in the Last Name domain, then DQS will add "B." to the Middle Name domain based on domain knowledge.  
   
  You can use knowledge-based parsing only if you also select delimiter-based parsing. Knowledge-based parsing does not replace delimiter parsing, but enhances it. Only if no knowledge exists to do that will DQS use a delimiter to do the parsing. In some instances, DQS may determine some parsing by knowledge-based parsing, and then determine other parsing by delimiter-based parsing.  
   

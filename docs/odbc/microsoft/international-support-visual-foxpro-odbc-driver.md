@@ -2,16 +2,11 @@
 title: "International Support (Visual FoxPro ODBC Driver) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
-ms.prod_service: "drivers"
-ms.service: ""
-ms.component: "odbc"
+ms.prod: sql
+ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "drivers"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: connectivity
+ms.topic: conceptual
 helpviewer_keywords: 
   - "double-byte character sets [ODBC]"
   - "FoxPro ODBC driver [ODBC], international support"
@@ -21,11 +16,9 @@ helpviewer_keywords:
   - "collating sequences [ODBC]"
   - "Visual FoxPro ODBC driver [ODBC], international support"
 ms.assetid: cd3fab32-13f1-4a86-abc4-5e18667669fc
-caps.latest.revision: 5
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
-ms.workload: "Inactive"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # International Support (Visual FoxPro ODBC Driver)
 The Microsoft Visual FoxPro ODBC Driver supports:  

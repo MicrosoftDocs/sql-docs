@@ -1,38 +1,19 @@
 ---
 title: "Identifiers (MDX) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/02/2016"
-ms.prod: analysis-services
-ms.prod_service: "analysis-services"
-ms.service: ""
-ms.component: ""
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
-  
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "kbMDX"
-helpviewer_keywords: 
-  - "formats [Analysis Services]"
-  - "Multidimensional Expressions [Analysis Services], identifiers"
-  - "identifiers [MDX]"
-  - "MDX [Analysis Services], identifiers"
-  - "delimited identifiers [MDX]"
-  - "regular identifiers [MDX]"
-  - "formats [Analysis Services], identifiers"
-ms.assetid: 739a8a67-bef3-4b56-961d-ee96cfc36b5b
-caps.latest.revision: 32
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-ms.workload: "Inactive"
+ms.date: 06/04/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: mdx
+ms.topic: reference
+ms.author: owend
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
 ---
 # Identifiers (MDX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
-  An identifier is the name of an [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] object. Every [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] object can and must have an identifier. This includes cubes, dimensions, hierarchies, levels, members, and so on. You use the identifier of an object to reference the object in Multidimensional Expressions (MDX) statements.  
+
+  An identifier is the name of an Analysis Services object. Every object can and must have an identifier. This includes cubes, dimensions, hierarchies, levels, members, and so on. You use the identifier of an object to reference the object in Multidimensional Expressions (MDX) statements.  
   
  Depending on how you name the object, the identifier of the object identifier will be either a regular or delimited identifier.  
   
@@ -93,7 +74,7 @@ ms.workload: "Inactive"
   
 -   When the name of an object or part of the name uses reserved words.  
   
-     We recommend that reserved keywords not be used as object names. Databases upgraded from earlier versions of [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] may contain identifiers that include words not reserved in the earlier version, but are reserved words for [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. Until you can change the identifier for the object, you can reference the object using a delimited identifier.  
+     We recommend that reserved keywords not be used as object names. Databases upgraded from earlier versions of [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] may contain identifiers that include words not reserved in the earlier version, but are now reserved. Until you can change the identifier for the object, you can reference the object using a delimited identifier.  
   
 -   When the name of an object uses characters not listed as qualified identifiers.  
   

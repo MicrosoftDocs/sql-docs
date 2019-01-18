@@ -2,24 +2,16 @@
 title: "Use the Add Azure Replica Wizard (SQL Server) | Microsoft Docs"
 ms.custom: ""
 ms.date: "05/17/2016"
-ms.prod: "sql-non-specified"
-ms.prod_service: "database-engine"
-ms.service: ""
-ms.component: "availability-groups"
+ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: high-availability
+ms.topic: conceptual
 f1_keywords: 
   - "sql13.swb.addreplicawizard.azurereplica.f1"
 ms.assetid: b89cc41b-07b4-49f3-82cc-bc42b2e793ae
-caps.latest.revision: 12
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-ms.workload: "Inactive"
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
 ---
 # Use the Add Azure Replica Wizard (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -40,7 +32,7 @@ ms.workload: "Inactive"
   
 -   You must be connected to the server instance that hosts the current primary replica.  
   
--   You must have a hybrid-IT environment where your on-premise subnet has a site-to-site VPN with Windows Azure. For more information, see [Configure a Site-to-Site VPN in the Management Portal](https://azure.microsoft.com/en-us/documentation/articles/vpn-gateway-site-to-site-create).  
+-   You must have a hybrid-IT environment where your on-premise subnet has a site-to-site VPN with Windows Azure. For more information, see [Configure a Site-to-Site VPN in the Management Portal](https://azure.microsoft.com/documentation/articles/vpn-gateway-site-to-site-create).  
   
 -   Your availability group must contain on-premise availability replicas.  
   
@@ -66,7 +58,7 @@ ms.workload: "Inactive"
   
 1.  First, download a management certificate for your Windows Azure subscription. Click **Download** to open the sign-in page.  
   
-2.  Sign in to Microsoft Azure with your Microsoft account or your organizational account. Your Microsoft or organizational account is in the format of an email address, such as  HYPERLINK "mailto:patc@contoso.com" patc@contoso.com. For more information about Azure credentials, see [Microsoft Account for Organizations FAQ](http://technet.microsoft.com/jj592903) and [Troubleshooting sign-in problems with your organizational account](https://support.microsoft.com/kb/2756852).  
+2.  Sign in to Microsoft Azure with your Microsoft account or your organizational account. Your Microsoft or organizational account is in the format of an email address, such as  HYPERLINK "mailto:patc@contoso.com" patc@contoso.com. For more information about Azure credentials, see [Microsoft Account for Organizations FAQ](https://technet.microsoft.com/jj592903) and [Troubleshooting sign-in problems with your organizational account](https://support.microsoft.com/kb/2756852).  
   
 3.  Next, connect to your subscription by clicking **Connect**. Once you are connected, the drop-down lists are populated with your Windows Azure parameters, such as **Virtual Network** and **Virtual Network Subnet**.  
   

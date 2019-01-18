@@ -1,24 +1,17 @@
 ---
-title: "Understanding Admin Console Alerts (Analytics Platform System)"
-author: "barbkess" 
-ms.author: "barbkess"
-manager: "jhubbard"	  
-ms.prod: "analytics-platform-system"
-ms.prod_service: "mpp-data-warehouse"
-ms.service: ""
-ms.component:
-ms.technology: "mpp-data-warehouse"
-ms.custom: ""
-ms.date: 01/05/2017
-ms.reviewer: na
-ms.suite: "sql"
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: 0c4aa221-55c2-44cf-9eaa-3bf7bd55e51a
-caps.latest.revision: 10
-
+title: Admin Console alerts - Analytics Platform System | Microsoft Docs
+description: Understanding Admin Console alerts in Analytics Platform System (APS).
+author: mzaman1 
+manager: craigg
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
 ---
-# Understanding Admin Console Alerts
+
+# Understanding Admin Console alerts in Analytics Platform System
 Alerts appear in the appliance **Admin Console** and in **System Center Operations Manager** (SCOM). Use this list of alerts to help identify which alerts require additional investigation.  
   
 For information about connecting to the **Admin Console** by using Internet Explorer, see [Monitor the Appliance by Using the Admin Console &#40;Analytics Platform System&#41;](monitor-the-appliance-by-using-the-admin-console.md). For information about **SCOM**, see [Monitor the Appliance by Using System Center Operations Manager &#40;Analytics Platform System&#41;](monitor-the-appliance-by-using-system-center-operations-manager.md)  

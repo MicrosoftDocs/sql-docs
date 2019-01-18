@@ -1,28 +1,17 @@
 ---
-title: "Step 3: Explore and visualize the data | Microsoft Docs"
-ms.custom: ""
-ms.date: "10/17/2017"
-ms.reviewer: 
-ms.suite: sql
-ms.prod: machine-learning-services
-ms.prod_service: machine-learning-services
-ms.component: 
-ms.technology: 
-  
-ms.tgt_pltfrm: ""
-ms.topic: "tutorial"
-applies_to: 
-  - "SQL Server 2017"
-dev_langs: 
-  - "Python"
-  - "TSQL"
-ms.assetid: 
-caps.latest.revision: 2
-author: "jeannt"
-ms.author: "jeannt"
-manager: "jhubbard"
+title: Lesson 1 Explore and visualize data using Python and T-SQL - SQL Server Machine Learning
+description: Tutorial showing how to embed Python in SQL Server stored procedures and T-SQL functions 
+ms.prod: sql
+ms.technology: machine-learning
+
+ms.date: 11/01/2018  
+ms.topic: tutorial
+author: HeidiSteen
+ms.author: heidist
+manager: cgronlun
 ---
-# Step 3: Explore and visualize the data
+# Explore and visualize the data
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 This article is part of a tutorial, [In-database Python analytics for SQL developers](sqldev-in-database-python-for-sql-developers.md). 
 
@@ -37,7 +26,7 @@ First, take a minute to browse the data schema, as we've made some changes to ma
 
 **Taxi identifiers**
 
-The _medallion_ column represents the taxi’s unique ID number.
+The _medallion_ column represents the taxi's unique ID number.
 
 The _hack_license_ column contains the taxi driver's license number (anonymized).
 
@@ -75,18 +64,19 @@ In this section, you learn how to work with plots using stored procedures. Rathe
 
 ### Create a plot as varbinary data
 
-The **revoscalepy** module included with SQL Server 2017 Machine Learning Services supports features similar to those in the **RevoScaleR** package for R.  This example uses the Python equivalent of `rxHistogram` to plot a histogram based on data from a [!INCLUDE[tsql](../../includes/tsql-md.md)] query. 
-
 The stored procedure returns a serialized Python `figure` object as a stream of **varbinary** data. You cannot view the binary data directly, but you can use Python code on the client to deserialize and view the figures, and then save the image file on a client computer.
 
-1. Create the stored procedure _SerializePlots_, if the PowerShell script did not already do so.
+1. Create the stored procedure **PyPlotMatplotlib**, if the PowerShell script did not already do so.
 
     - The variable `@query` defines the query text `SELECT tipped FROM nyctaxi_sample`, which is passed to the Python code block as the argument to the script input variable, `@input_data_1`.
     - The Python script is fairly simple: **matplotlib** `figure` objects are used to make the histogram and scatter plot, and these objects are then serialized using the `pickle` library.
     - The Python graphics object is serialized to a **pandas** DataFrame for output.
   
-    ```SQL
-	CREATE PROCEDURE [dbo].[SerializePlots]
+    ```sql
+    DROP PROCEDURE IF EXISTS PyPlotMatplotlib;
+    GO
+
+	CREATE PROCEDURE [dbo].[PyPlotMatplotlib]
 	AS
 	BEGIN
       SET NOCOUNT ON;
@@ -140,13 +130,13 @@ The stored procedure returns a serialized Python `figure` object as a stream of 
 
 2. Now run the stored procedure with no arguments to generate a plot from the data hard-coded as the input query.
 
-    ```
-    EXEC [dbo].[SerializePlots]
+    ```sql
+    EXEC [dbo].[PyPlotMatplotlib]
     ```
 
 3. The results should be something like this:
   
-	```
+	```sql
     plot
     0xFFD8FFE000104A4649...
 	0xFFD8FFE000104A4649...
@@ -155,19 +145,20 @@ The stored procedure returns a serialized Python `figure` object as a stream of 
     ```
 
   
-4. From a Python client, you can now connect to the SQL Server instance that generated the binary plot objects, and view the plots. 
+4. From a [Python client](../python/setup-python-client-tools-sql.md), you can now connect to the SQL Server instance that generated the binary plot objects, and view the plots. 
 
     To do this, run the following Python code, replacing the server name, database name, and credentials as appropriate. Make sure the Python version is the same on the client and the server. Also make sure that the Python libraries on your client (such as matplotlib) are the same or higher version relative to the libraries installed on the server.
   
     **Using SQL Server authentication:**
     
     ```python
+    %matplotlib notebook
     import pyodbc
     import pickle
     import os
     cnxn = pyodbc.connect('DRIVER={SQL Server};SERVER={SERVER_NAME};DATABASE={DB_NAME};UID={USER_NAME};PWD={PASSWORD}')
     cursor = cnxn.cursor()
-    cursor.execute("EXECUTE [dbo].[SerializePlots]")
+    cursor.execute("EXECUTE [dbo].[PyPlotMatplotlib]")
     tables = cursor.fetchall()
     for i in range(0, len(tables)):
         fig = pickle.loads(tables[i][0])
@@ -178,12 +169,13 @@ The stored procedure returns a serialized Python `figure` object as a stream of 
     **Using Windows authentication:**
 
     ```python
+    %matplotlib notebook
     import pyodbc
     import pickle
     import os
-    cnxn = pyodbc.connect('DRIVER={SQL Server};SERVER={SERVER_NAME};DATABASE={DB_NAME};Trusted_Connection=yes;')
+    cnxn = pyodbc.connect('DRIVER={SQL Server};SERVER={SERVER_NAME};DATABASE={DB_NAME};Trusted_Connection=True;')
     cursor = cnxn.cursor()
-    cursor.execute("EXECUTE [dbo].[SerializePlots]")
+    cursor.execute("EXECUTE [dbo].[PyPlotMatplotlib]")
     tables = cursor.fetchall()
     for i in range(0, len(tables)):
         fig = pickle.loads(tables[i][0])
@@ -201,9 +193,9 @@ The stored procedure returns a serialized Python `figure` object as a stream of 
 
 ## Next step
 
-[Step 4: Create data features using T-SQL](sqldev-py5-train-and-save-a-model-using-t-sql.md)
+[Create data features using T-SQL](sqldev-py5-train-and-save-a-model-using-t-sql.md)
 
 ## Previous step
 
-[Step 2: Import data to SQL Server using PowerShell](sqldev-py2-import-data-to-sql-server-using-powershell.md)
+[Download the NYC Taxi data set](demo-data-nyctaxi-in-sql.md)
 

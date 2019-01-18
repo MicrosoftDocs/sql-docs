@@ -1,27 +1,18 @@
 ---
 title: "Turn Reporting Services Features On or Off | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/17/2017"
+ms.date: 03/17/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
-ms.service: ""
-ms.component: "report-server"
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
+ms.technology: report-server
 
 
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "Reporting Services, configuration"
   - "security [Reporting Services], strategies"
 ms.assetid: b69db02a-43a7-4fdc-ad9b-438d817a7f83
-caps.latest.revision: 10
-author: "markingmyname"
-ms.author: "maghan"
-manager: "kfile"
-ms.workload: "On Demand"
+author: markingmyname
+ms.author: maghan
 ---
 # Turn Reporting Services Features On or Off
   You can turn off report server features that you do not use as part of a lockdown strategy for reducing the attack surface of a production report server. In most cases, you will want to run [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] features concurrently to use all of the functionality provided in [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. However, depending on your deployment model, you can disable the features that you do not require. For example, you can enable only the background processing if all report processing is configured as scheduled operations. Similarly, you can run just the Report Server Web service if you only want interactive, on-demand reporting.  
@@ -157,7 +148,7 @@ In previous versions, you could disable Report Manager by setting **IsReportMana
 4.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
 ## See Also  
- [Reporting Services Configuration Manager (SSRS Native Mode)](http://msdn.microsoft.com/en-us/63519ef4-e68a-42fb-9cf7-31228ea4e434)  
- More questions? [Try the Reporting Services forum](http://go.microsoft.com/fwlink/?LinkId=620231)
+ [Reporting Services Configuration Manager (SSRS Native Mode)](https://msdn.microsoft.com/63519ef4-e68a-42fb-9cf7-31228ea4e434)  
+ More questions? [Try the Reporting Services forum](https://go.microsoft.com/fwlink/?LinkId=620231)
   
   

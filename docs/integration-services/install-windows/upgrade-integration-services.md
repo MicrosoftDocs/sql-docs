@@ -2,27 +2,20 @@
 title: "Upgrade Integration Services | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "integration-services"
-ms.service: ""
-ms.component: "install-windows"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: integration-services
+ms.topic: conceptual
 helpviewer_keywords: 
   - "Integration Services, upgrading"
   - "SSIS, upgrading"
   - "SQL Server Integration Services, upgrading"
   - "upgrading Integration Services"
 ms.assetid: 04f9863c-ba0b-47c5-af91-f2d41b078a23
-caps.latest.revision: 53
 author: "MikeRayMSFT"
 ms.author: "mikeray"
 manager: "erikre"
-ms.workload: "On Demand"
 ---
 # Upgrade Integration Services
   If [!INCLUDE[ssISversion10](../../includes/ssisversion10-md.md)] or later is currently installed on your computer, you can upgrade to [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)].  
@@ -37,17 +30,17 @@ ms.workload: "On Demand"
 ## Before Upgrading Integration Services  
  We recommended that you run Upgrade Advisor before you upgrade to [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Upgrade Advisor reports issues that you might encounter if you migrate existing [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] packages to the new package format that [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] uses.  
   
-> [!NOTE]  
->  Support for migrating or running Data Transformation Services (DTS) packages has been discontinued in in the current release of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. The following DTS functionality has been discontinued.  
->   
+> [!NOTE]
+>  Support for migrating or running Data Transformation Services (DTS) packages has been discontinued in SQL Server 2012. The following DTS functionality has been discontinued.  
+> 
 >  -   DTS runtime  
 > -   DTS API  
 > -   Package Migration Wizard for migrating DTS packages to the next version of [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]  
 > -   Support for DTS package maintenance in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]  
 > -   Execute DTS 2000 Package task  
 > -   Upgrade Advisor scan of DTS packages.  
->   
->  For information about other discontinued features, see [Discontinued Integration Services Functionality in SQL Server 2016](http://msdn.microsoft.com/library/5ee40ceb-37b9-47a9-b90d-ce1de74b10f7).  
+> 
+>  For information about other discontinued features, see [Discontinued Integration Services Functionality in SQL Server 2016](https://msdn.microsoft.com/library/5ee40ceb-37b9-47a9-b90d-ce1de74b10f7).  
   
 ## Upgrading Integration Services  
  You can upgrade by using one of the following methods:  
@@ -146,6 +139,6 @@ ms.workload: "On Demand"
 -   You cannot use [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent jobs on [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] computers to run [!INCLUDE[ssISversion10](../../includes/ssisversion10-md.md)] packages that are stored in the upgraded instance of the [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 ## External Resources  
- Blog entry, [Making your Existing Custom SSIS Extensions and Applications Work in Denali](http://go.microsoft.com/fwlink/?LinkId=238157), on blogs.msdn.com.  
+ Blog entry, [Making your Existing Custom SSIS Extensions and Applications Work in Denali](https://go.microsoft.com/fwlink/?LinkId=238157), on blogs.msdn.com.  
   
   

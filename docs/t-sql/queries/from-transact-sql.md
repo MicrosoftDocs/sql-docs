@@ -1,16 +1,11 @@
 ---
 title: "FROM (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "08/09/2017"
-ms.prod: "sql-non-specified"
+ms.date: "03/16/2018"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
-ms.service: ""
-ms.component: "t-sql|queries"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: t-sql
 ms.topic: "language-reference"
 f1_keywords: 
   - "JOIN"
@@ -36,11 +31,10 @@ helpviewer_keywords:
   - "UPDATE statement [SQL Server], FROM clause"
   - "derived tables"
 ms.assetid: 36b19e68-94f6-4539-aeb1-79f5312e4263
-caps.latest.revision: 97
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-ms.workload: "Active"
+author: "douglaslMS"
+ms.author: "douglasl"
+manager: craigg
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # FROM (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -132,11 +126,15 @@ FROM { <table_source> [ ,...n ] }
   
 <table_source> ::=   
 {  
-    [ database_name . [ schema_name ] . | schema_name . ] table_or_view_name [ AS ] table_or_view_alias  
+    [ database_name . [ schema_name ] . | schema_name . ] table_or_view_name [ AS ] table_or_view_alias 
+    [<tablesample_clause>]  
     | derived_table [ AS ] table_alias [ ( column_alias [ ,...n ] ) ]  
     | <joined_table>  
 }  
   
+<tablesample_clause> ::=
+    TABLESAMPLE ( sample_number [ PERCENT ] ) -- SQL Data Warehouse only  
+ 
 <joined_table> ::=   
 {  
     <table_source> <join_type> <table_source> ON search_condition   
@@ -225,8 +223,10 @@ FROM { <table_source> [ ,...n ] }
   
  Specifies that a specific version of data is returned from the specified temporal table and its linked system-versioned history table  
   
-\<tablesample_clause>  
- Specifies that a sample of data from the table is returned. The sample may be approximate. This clause can be used on any primary or joined table in a SELECT, UPDATE, or DELETE statement. TABLESAMPLE cannot be specified with views.  
+### Tablesample clause
+**Applies to:** SQL Server, SQL Database 
+ 
+ Specifies that a sample of data from the table is returned. The sample may be approximate. This clause can be used on any primary or joined table in a SELECT or UPDATE statement. TABLESAMPLE cannot be specified with views.  
   
 > [!NOTE]  
 >  When you use TABLESAMPLE against databases that are upgraded to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], the compatibility level of the database is set to 110 or higher, PIVOT is not allowed in a recursive common table expression (CTE) query. For more information, see [ALTER DATABASE Compatibility Level &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md).  
@@ -249,13 +249,22 @@ FROM { <table_source> [ ,...n ] }
  *repeat_seed*  
  Is a constant integer expression used by [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to generate a random number. *repeat_seed* is **bigint**. If *repeat_seed* is not specified, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] assigns a value at random. For a specific *repeat_seed* value, the sampling result is always the same if no changes have been applied to the table. The *repeat_seed* expression must evaluate to an integer greater than zero.  
   
- \<joined_table>  
- Is a result set that is the product of two or more tables. For multiple joins, use parentheses to change the natural order of the joins.  
+### Tablesample clause
+**Applies to:** SQL Data Warehouse
+
+ Specifies that a sample of data from the table is returned. The sample may be approximate. This clause can be used on any primary or joined table in a SELECT or UPDATE statement. TABLESAMPLE cannot be specified with views. 
+
+ PERCENT  
+ Specifies that a *sample_number* percent of the rows of the table should be retrieved from the table. When PERCENT is specified, SQL Data Warehouse returns an approximate of the percent specified. When PERCENT is specified, the *sample_number* expression must evaluate to a value from 0 to 100.  
+
+
+### Joined table 
+A joined table is a result set that is the product of two or more tables. For multiple joins, use parentheses to change the natural order of the joins.  
   
-\<join_type>  
- Specifies the type of join operation.  
+### Join type
+Specifies the type of join operation.  
   
- **INNER**  
+ INNER  
  Specifies all matching pairs of rows are returned. Discards unmatched rows from both tables. When no join type is specified, this is the default.  
   
  FULL [ OUTER ]  
@@ -267,8 +276,8 @@ FROM { <table_source> [ ,...n ] }
  RIGHT [OUTER]  
  Specifies all rows from the right table not meeting the join condition are included in the result set, and output columns that correspond to the other table are set to NULL, in addition to all rows returned by the inner join.  
   
-\<join_hint>  
- For [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and [!INCLUDE[ssSDS](../../includes/sssds-md.md)], specifies that the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] query optimizer use one join hint, or execution algorithm, per join specified in the query FROM clause. For more information, see [Join Hints &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-join.md).  
+### Join hint  
+For [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and [!INCLUDE[ssSDS](../../includes/sssds-md.md)], specifies that the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] query optimizer use one join hint, or execution algorithm, per join specified in the query FROM clause. For more information, see [Join Hints &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-join.md).  
   
  For [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], these join hints apply to INNER joins on two distribution incompatible columns. They can improve query performance by restricting the amount of data movement that occurs during query processing. The allowable join hints for [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] are as follows:  
   
@@ -319,6 +328,8 @@ ON (p.ProductID = v.ProductID);
  *right_table_source*  
  Is a table source as defined in the previous argument. For more information, see the Remarks section.  
   
+### PIVOT clause
+
  *table_source* PIVOT \<pivot_clause>  
  Specifies that the *table_source* is pivoted based on the *pivot_column*. *table_source* is a table or table expression. The output is a table that contains all columns of the *table_source* except the *pivot_column* and *value_column*. The columns of the *table_source*, except the *pivot_column* and *value_column*, are called the grouping columns of the pivot operator. For more information about PIVOT and UNPIVOT, see [Using PIVOT and UNPIVOT](../../t-sql/queries/from-using-pivot-and-unpivot.md).  
   
@@ -347,7 +358,7 @@ ON (p.ProductID = v.ProductID);
  *table_alias*  
  Is the alias name of the output table. *pivot_table_alias* must be specified.  
   
- UNPIVOT \< unpivot_clause >  
+ UNPIVOT \<unpivot_clause>  
  Specifies that the input table is narrowed from multiple columns in *column_list* into a single column called *pivot_column*. For more information about PIVOT and UNPIVOT, see [Using PIVOT and UNPIVOT](../../t-sql/queries/from-using-pivot-and-unpivot.md).  
   
  AS OF \<date_time>  
@@ -392,15 +403,15 @@ ON (p.ProductID = v.ProductID);
 ## Using APPLY  
  Both the left and right operands of the APPLY operator are table expressions. The main difference between these operands is that the *right_table_source* can use a table-valued function that takes a column from the *left_table_source* as one of the arguments of the function. The *left_table_source* can include table-valued functions, but it cannot contain arguments that are columns from the *right_table_source*.  
   
- The APPLY operator works in the following way to produce the table source for the FROM clause:  
+The APPLY operator works in the following way to produce the table source for the FROM clause:  
   
 1.  Evaluates *right_table_source* against each row of the *left_table_source* to produce rowsets.  
   
-     The values in the *right_table_source* depend on *left_table_source*. *right_table_source* can be represented approximately this way: `TVF(left_table_source.row)`, where `TVF` is a table-valued function.  
+    The values in the *right_table_source* depend on *left_table_source*. *right_table_source* can be represented approximately this way: `TVF(left_table_source.row)`, where `TVF` is a table-valued function.  
   
 2.  Combines the result sets that are produced for each row in the evaluation of *right_table_source* with the *left_table_source* by performing a UNION ALL operation.  
   
-     The list of columns produced by the result of the APPLY operator is the set of columns from the *left_table_source* that is combined with the list of columns from the *right_table_source*.  
+    The list of columns produced by the result of the APPLY operator is the set of columns from the *left_table_source* that is combined with the list of columns from the *right_table_source*.  
   
 ## Using PIVOT and UNPIVOT  
  The *pivot_column* and *value_column* are grouping columns that are used by the PIVOT operator. PIVOT follows the following process to obtain the output result set:  
@@ -468,7 +479,7 @@ FROM HumanResources.Employee WITH (TABLOCK, HOLDLOCK) ;
 ### C. Using the SQL-92 CROSS JOIN syntax  
  The following example returns the cross product of the two tables `Employee` and `Department` in the [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] database. A list of all possible combinations of `BusinessEntityID` rows and all `Department` name rows are returned.  
   
-```wql    
+```sql    
 SELECT e.BusinessEntityID, d.Name AS Department  
 FROM HumanResources.Employee AS e  
 CROSS JOIN HumanResources.Department AS d  
@@ -562,32 +573,35 @@ FROM Sales.Customer TABLESAMPLE SYSTEM (10 PERCENT) ;
 ```  
   
 ### K. Using APPLY  
- The following example assumes that the following tables with the following schema exist in the database:  
+The following example assumes that the following tables and table-valued function exist in the database:  
+
+|Object Name|Column Names|      
+|---|---|   
+|Departments|DeptID, DivisionID, DeptName, DeptMgrID|      
+|EmpMgr|MgrID, EmpID|     
+|Employees|EmpID, EmpLastName, EmpFirstName, EmpSalary|  
+|GetReports(MgrID)|EmpID, EmpLastName, EmpSalary|     
   
--   `Departments`: `DeptID`, `DivisionID`, `DeptName`, `DeptMgrID`  
+The `GetReports` table-valued function, returns the list of all employees that report directly or indirectly to the specified `MgrID`.  
   
--   `EmpMgr`: `MgrID`, `EmpID`  
-  
--   `Employees`: `EmpID`, `EmpLastName`, `EmpFirstName`, `EmpSalary`  
-  
- There is also a table-valued function, `GetReports(MgrID)` that returns the list of all employees (`EmpID`, `EmpLastName`, `EmpSalary`) that report directly or indirectly to the specified `MgrID`.  
-  
- The example uses `APPLY` to return all departments and all employees in that department. If a particular department does not have any employees, there will not be any rows returned for that department.  
+The example uses `APPLY` to return all departments and all employees in that department. If a particular department does not have any employees, there will not be any rows returned for that department.  
   
 ```sql
 SELECT DeptID, DeptName, DeptMgrID, EmpID, EmpLastName, EmpSalary  
-FROM Departments d CROSS APPLY dbo.GetReports(d.DeptMgrID) ;  
+FROM Departments d    
+CROSS APPLY dbo.GetReports(d.DeptMgrID) ;  
 ```  
   
- If you want the query to produce rows for those departments without employees, which will produce null values for the `EmpID`, `EmpLastName` and `EmpSalary` columns, use `OUTER APPLY` instead.  
+If you want the query to produce rows for those departments without employees, which will produce null values for the `EmpID`, `EmpLastName` and `EmpSalary` columns, use `OUTER APPLY` instead.  
   
 ```sql
 SELECT DeptID, DeptName, DeptMgrID, EmpID, EmpLastName, EmpSalary  
-FROM Departments d OUTER APPLY dbo.GetReports(d.DeptMgrID) ;  
+FROM Departments d   
+OUTER APPLY dbo.GetReports(d.DeptMgrID) ;  
 ```  
   
 ### L. Using CROSS APPLY  
- The following example retrieves a snapshot of all query plans residing in the plan cache, by querying the `sys.dm_exec_cached_plans` dynamic management view to retrieve the plan handles of all query plans in the cache. Then the `CROSS APPLY` operator is specified to pass the plan handles to `sys.dm_exec_query_plan`. The XML Showplan output for each plan currently in the plan cache is in the `query_plan` column of the table that is returned.  
+The following example retrieves a snapshot of all query plans residing in the plan cache, by querying the `sys.dm_exec_cached_plans` dynamic management view to retrieve the plan handles of all query plans in the cache. Then the `CROSS APPLY` operator is specified to pass the plan handles to `sys.dm_exec_query_plan`. The XML Showplan output for each plan currently in the plan cache is in the `query_plan` column of the table that is returned.  
   
 ```sql
 USE master;  
@@ -690,7 +704,7 @@ JOIN DimProduct AS dp
 ON dp.ProductKey = fis.ProductKey;  
 ```  
   
- A `WHERE` clause could also be used with this query to limit results. This example limits results to `SalesOrderNumber` values higher than ‘SO5000’:  
+ A `WHERE` clause could also be used with this query to limit results. This example limits results to `SalesOrderNumber` values higher than 'SO5000':  
   
 ```sql
 -- Uses AdventureWorks  
@@ -790,7 +804,7 @@ ORDER BY fis.SalesOrderNumber;
 ```  
   
 ### R. Using a derived table  
- The following example uses a derived table (a `SELECT` statement after the `FROM` clause) to return the `CustomerKey` and `LastName` columns of all customers in the `DimCustomer` table with `BirthDate` values later than January 1, 1970 and the last name ‘Smith’.  
+ The following example uses a derived table (a `SELECT` statement after the `FROM` clause) to return the `CustomerKey` and `LastName` columns of all customers in the `DimCustomer` table with `BirthDate` values later than January 1, 1970 and the last name 'Smith'.  
   
 ```sql
 -- Uses AdventureWorks  
@@ -849,6 +863,14 @@ FROM DimProduct AS dp
 INNER REDISTRIBUTE JOIN FactInternetSales AS fis  
     ON dp.ProductKey = fis.ProductKey;  
 ```  
+
+### V. Using TABLESAMPLE to read data from a sample of rows in a table  
+ The following example uses `TABLESAMPLE` in the `FROM` clause to return approximately `10` percent of all the rows in the `Customer` table.  
+  
+```sql    
+SELECT *  
+FROM Sales.Customer TABLESAMPLE SYSTEM (10 PERCENT) ;
+```
   
 ## See Also  
  [CONTAINSTABLE &#40;Transact-SQL&#41;](../../relational-databases/system-functions/containstable-transact-sql.md)   

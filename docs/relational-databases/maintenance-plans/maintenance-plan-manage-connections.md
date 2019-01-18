@@ -2,24 +2,17 @@
 title: "Maintenance Plan (Manage Connections) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "database-engine"
-ms.service: ""
-ms.component: "maintenance-plans"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: supportability
+ms.topic: conceptual
 f1_keywords: 
   - "sql13.swb.maint.connections.f1"
 ms.assetid: 95ad9375-6584-423e-b9de-0e86782f8017
-caps.latest.revision: 14
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-ms.workload: "Inactive"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ---
 # Maintenance Plan (Manage Connections)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -31,7 +24,10 @@ ms.workload: "Inactive"
   
  **Authentication**  
  Indicates whether the connection is made with Windows Authentication or [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentication.  
-  
+
+> [!IMPORTANT]  
+> The package is stored in **msdb** database with its **ProtectionLevel** set to **ServerStorage**, so when *SQL Server Authentication* is used, the password will not be encrypted in **msdb**. You can use *SQL Server Authentication* as long as **msdb** is secured, but using *Windows Authentication* is recommended
+
 ## See Also  
  [Maintenance Plans](../../relational-databases/maintenance-plans/maintenance-plans.md)  
   

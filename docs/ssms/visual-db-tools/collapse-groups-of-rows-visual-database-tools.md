@@ -2,32 +2,26 @@
 title: "Collapse Groups of Rows (Visual Database Tools) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "sql-tools"
-ms.service: ""
-ms.component: "ssms-visual-db"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "tools-ssms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: ssms
+ms.topic: conceptual
 helpviewer_keywords: 
   - "group collapsing [SQL Server]"
   - "collapsing rows"
   - "row collapsing [SQL Server]"
 ms.assetid: 7338dad0-965d-44ba-8c1a-b993acb7156d
-caps.latest.revision: 4
 author: "stevestein"
 ms.author: "sstein"
-manager: "jhubbard"
-ms.workload: "Inactive"
+manager: craigg
+
 ---
 # Collapse Groups of Rows (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 You can create a query result in which each result row corresponds to an entire group of rows from the original data. When collapsing rows, there are several things to keep in mind:  
   
--   **You can eliminate duplicate rows** Some queries can create result sets in which multiple identical rows appear. For example, you can create a result set in which each row contains the city and state name of a city containing an author – but if a city contains several authors, there will be several identical rows. The resulting SQL might look like this:  
+-   **You can eliminate duplicate rows** Some queries can create result sets in which multiple identical rows appear. For example, you can create a result set in which each row contains the city and state name of a city containing an author - but if a city contains several authors, there will be several identical rows. The resulting SQL might look like this:  
   
     ```  
     SELECT city, state  

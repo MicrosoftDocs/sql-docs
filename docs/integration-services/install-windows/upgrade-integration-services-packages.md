@@ -2,25 +2,18 @@
 title: "Upgrade Integration Services Packages | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "integration-services"
-ms.service: ""
-ms.component: "install-windows"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: integration-services
+ms.topic: conceptual
 helpviewer_keywords: 
   - "Integration Services, migrating"
   - "migrating packages [Integration Services]"
 ms.assetid: 68dbdf81-032c-4a73-99f6-41420e053980
-caps.latest.revision: 54
 author: "MikeRayMSFT"
 ms.author: "mikeray"
 manager: "erikre"
-ms.workload: "On Demand"
 ---
 # Upgrade Integration Services Packages
   When you upgrade an instance of [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] to the current release of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], your existing [!INCLUDE[ssISversion10](../../includes/ssisversion10-md.md)] packages are not automatically upgraded to the package format that the current release [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] uses. You will have to select an upgrade method and manually upgrade your packages.  
@@ -44,7 +37,7 @@ ms.workload: "On Demand"
 ## Custom Applications and Custom Components  
  [!INCLUDE[ssISversion2005](../../includes/ssisversion2005-md.md)] custom components will not work with the current release of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].  
   
- You can use the current release of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] tools to run and manage packages that include [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], or [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)][!INCLUDE[ssIS](../../includes/ssis-md.md)] custom components. We added four binding redirection rules to the following files to help redirect the runtime assemblies from version 10.0.0.0 ([!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]), version 11.0.0.0 ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]), or version 12.0.0.0 ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]) to version 13.0.0.0 ([!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]).  
+ You can use the current release of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] tools to run and manage packages that include [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], or [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)][!INCLUDE[ssIS](../../includes/ssis-md.md)] custom components. We added four binding redirection rules to the following files to help redirect the runtime assemblies from version 10.0.0.0 ( [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]), version 11.0.0.0 ( [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]), or version 12.0.0.0 ( [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]) to version 13.0.0.0 ( [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]).  
   
 -   DTExec.exe.config  
   
@@ -58,7 +51,7 @@ ms.workload: "On Demand"
   
  To use [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] to design packages that include [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], or [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] custom components, you need to modify the devenv.exe.config file that is located at *\<drive>*:\Program Files\Microsoft Visual Studio 10.0\Common7\IDE.  
   
- To use these packages with customer applications that are built with the runtime for [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], include redirection rules in the configuration section of the *.exe.config file for the executable. The rules redirect the runtime assemblies to version 13.0.0.0 ([!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]). For more information about assembly version redirection, see [\<assemblyBinding> Element for \<runtime>](http://msdn.microsoft.com/library/twy1dw1e.aspx).  
+ To use these packages with customer applications that are built with the runtime for [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], include redirection rules in the configuration section of the *.exe.config file for the executable. The rules redirect the runtime assemblies to version 13.0.0.0 ([!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]). For more information about assembly version redirection, see [\<assemblyBinding> Element for \<runtime>](https://msdn.microsoft.com/library/twy1dw1e.aspx).  
   
 ### Locating the Assemblies  
  In [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] assemblies were upgraded to .NET 4.0. There is a separate global assembly cache for .NET 4, located in *\<drive>*:\Windows\Microsoft.NET\assembly. You can find all of the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] assemblies under this path, usually in the GAC_MSIL folder.  

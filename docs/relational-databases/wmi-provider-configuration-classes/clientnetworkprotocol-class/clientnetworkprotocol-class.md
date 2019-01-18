@@ -2,15 +2,11 @@
 title: "ClientNetworkProtocol Class | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "database-engine"
-ms.service: ""
-ms.component: "wmi"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: 
 
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 apiname: 
   - "ClientNetworkProtocol Class"
@@ -19,11 +15,9 @@ apilocation:
 helpviewer_keywords: 
   - "ClientNetworkProtocol class"
 ms.assetid: 19ccc16b-0afe-4e28-a7ac-d5ff25b873b6
-caps.latest.revision: 28
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-ms.workload: "Inactive"
+author: "CarlRabeler"
+ms.author: "carlrab"
+manager: craigg
 ---
 # ClientNetworkProtocol Class
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

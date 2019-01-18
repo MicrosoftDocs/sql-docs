@@ -1,31 +1,24 @@
 ---
 title: "Handler Property Example (VC++) | Microsoft Docs"
-ms.prod: "sql-non-specified"
-ms.prod_service: "drivers"
-ms.service: ""
-ms.component: "ado"
-ms.technology:
-  - "drivers"
+ms.prod: sql
+ms.prod_service: connectivity
+ms.technology: connectivity
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 dev_langs: 
   - "C++"
 helpviewer_keywords: 
   - "Handler property [ADO], VC++ example"
 ms.assetid: d046d89c-622b-48bc-9d30-f454c3e13595
-caps.latest.revision: 18
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
-ms.workload: "Inactive"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # Handler Property Example (VC++)
 > [!IMPORTANT]
->  Beginning with Windows 8 and Windows Server 2012, RDS server components are no longer included in the Windows operating system (see Windows 8 and [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/en-us/download/details.aspx?id=27416) for more detail). RDS client components will be removed in a future version of Windows. Avoid using this feature in new development work, and plan to modify applications that currently use this feature. Applications that use RDS should migrate to [WCF Data Service](http://go.microsoft.com/fwlink/?LinkId=199565).  
+>  Beginning with Windows 8 and Windows Server 2012, RDS server components are no longer included in the Windows operating system (see Windows 8 and [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) for more detail). RDS client components will be removed in a future version of Windows. Avoid using this feature in new development work, and plan to modify applications that currently use this feature. Applications that use RDS should migrate to [WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565).  
   
  This example demonstrates the [RDS DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) object [Handler](../../../ado/reference/rds-api/handler-property-rds.md) property. (See [DataFactory Customization](../../../ado/guide/remote-data-service/datafactory-customization.md) for more details.)  
   
@@ -79,7 +72,7 @@ void HandlerX() {
       dc->Handler = "MSDFMAP.Handler";  
       dc->ExecuteOptions = 1;  
       dc->FetchOptions = 1;  
-      dc->Server = "http://MyServer";  
+      dc->Server = "https://MyServer";  
       dc->Connect = "Data Source=AuthorDatabase";  
       dc->SQL = "AuthorById('267-41-2394')";  
   

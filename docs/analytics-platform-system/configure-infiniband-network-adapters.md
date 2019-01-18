@@ -1,58 +1,50 @@
 ---
-title: "Configure InfiniBand network adapters for Analytics Platform System (APS)"
-author: "barbkess" 
-ms.author: "barbkess"
-manager: "jhubbard"	  
-ms.prod: "analytics-platform-system"
-ms.prod_service: "mpp-data-warehouse"
-ms.service: ""
-ms.component:
-ms.suite: "sql"
-ms.custom: ""
-ms.technology: "mpp-data-warehouse"
-description: "Describes how to configure the InfiniBand network adapters on a non-appliance client server to connect to the Control node on SQL Server Parallel Data Warehouse (PDW)."
-ms.date: "01/05/2017"
-ms.topic: "article"
-ms.assetid: 61f3c51a-4411-4fe8-8b03-c8e1ba279646
-caps.latest.revision: 15
-
-
+title: Configure InfiniBand - Analytics Platform System | Microsoft Docs
+description: Describes how to configure the InfiniBand network adapters on a non-appliance client server to connect to the Control node on Parallel Data Warehouse (PDW). Use these instructions for basic connectivity and for high availability, so that loading, backup, and other processes automatically connect to the active InfiniBand network. 
+author: mzaman1 
+manager: craigg
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
 ---
 
 # Configure InfiniBand network adapters for Analytics Platform System
-Describes how to configure the InfiniBand network adapters on a non-appliance client server to connect to the Control node on SQL Server Parallel Data Warehouse (PDW). Use these instructions for basic connectivity and for high availability, so that loading, backup, and other processes will automatically connect to the active InfiniBand network.  
+Describes how to configure the InfiniBand network adapters on a non-appliance client server to connect to the Control node on Parallel Data Warehouse (PDW). Use these instructions for basic connectivity and for high availability, so that loading, backup, and other processes automatically connect to the active InfiniBand network.  
   
 ## <a name="Basics"></a>Description  
-These instructions show you how to find and then set the correct InfiniBand IP addresses and subnet masks on your InfiniBand-connected server. They also explain how to set your server to use the APS appliance DNS so that your connection will resolve to the active InfiniBand network.  
+These instructions show you how to find and then set the correct InfiniBand IP addresses and subnet masks on your InfiniBand-connected server. They also explain how to set your server to use the APS appliance DNS so that your connection resolves to the active InfiniBand network.  
   
 For high availability, APS has two InfiniBand networks, one active and one passive. Each InfiniBand network has a different IP address for the Control node. If the active InfiniBand network goes down, the passive InfiniBand network becomes the active network. When this happens a script or process automatically connects to the active InfiniBand network without changing the script parameters.  
   
-Specifically, in this topic you will:  
+Specifically, in this article you:  
   
-1.  Find the InfiniBand IP addresses of the APS DNS servers (appliance_domain-AD01 and appliance_domain*-AD02). To do this you will log into the AD01 and AD02 servers and get the IP addresses for each InfiniBand network. The InfiniBand IP addresses on the AD node are the DNS IP addresses.  
+1.  Find the InfiniBand IP addresses of the APS DNS servers (appliance_domain-AD01 and appliance_domain*-AD02). To do this you log into the AD01 and AD02 servers and get the IP addresses for each InfiniBand network. The InfiniBand IP addresses on the AD node are the DNS IP addresses.  
   
 2.  Configure each network adapter to use an available IP address on the APS InfiniBand networks.  
   
-    1.  If you have two InfiniBand network adapters, you will configure one adapter with an available IP address in the first InfiniBand network which is called TeamIB1, and the other adapter with an available IP address in the second InfiniBand network which is called TeamIB2. Use the appliance_domain-AD01 TeamIB1 IP address as the preferred DNS server and appliance_domain-AD02 TeamIB1 IP address as the alternate DNS server for TeamIB1 network adapter. Use the appliance_domain-AD01 TeamIB2 IP address as the preferred DNS server and appliance_domain-AD02 TeamIB2 IP address as the alternate DNS server for TeamIB2 network adapter.  
+    1.  If you have two InfiniBand network adapters, you configure one adapter with an available IP address in the first InfiniBand network which is called TeamIB1, and the other adapter with an available IP address in the second InfiniBand network which is called TeamIB2. Use the appliance_domain-AD01 TeamIB1 IP address as the preferred DNS server and appliance_domain-AD02 TeamIB1 IP address as the alternate DNS server for TeamIB1 network adapter. Use the appliance_domain-AD01 TeamIB2 IP address as the preferred DNS server and appliance_domain-AD02 TeamIB2 IP address as the alternate DNS server for TeamIB2 network adapter.  
   
-    2.  If you have only one InfiniBand network adapter, you will configure the adapter with an available IP address from one of the InfiniBand networks. Then you will configure the preferred and the alternate DNS servers on this adapter using either appliance_domain-AD01 TeamIB1 and appliance_domain-AD02 TeamIB1 or using appliance_domain-AD01 TeamIB2 and appliance_domain-AD02 TeamIB2 whichever is on the same network as the configured adapter as the preferred and the alternate DNS servers respectively.  
+    2.  If you have only one InfiniBand network adapter, you configure the adapter with an available IP address from one of the InfiniBand networks. Then you configure the preferred and the alternate DNS servers on this adapter using either appliance_domain-AD01 TeamIB1 and appliance_domain-AD02 TeamIB1 or using appliance_domain-AD01 TeamIB2 and appliance_domain-AD02 TeamIB2 whichever is on the same network as the configured adapter as the preferred and the alternate DNS servers respectively.  
   
 3.  Configure your InfiniBand network adapter to use APS DNS servers to resolve your connection to the active InfiniBand network.  
   
-    1.  To configure this you will use the advanced TCP/IP settings to add the  appliance domain DNS suffix to the beginning of the list of DNS suffixes on your client server. This only needs to be configured on one of the network adapters; the setting will apply to both adapters.  
+    1.  To configure this you use the advanced TCP/IP settings to add the  appliance domain DNS suffix to the beginning of the list of DNS suffixes on your client server. This only needs to be configured on one of the network adapters; the setting applies to both adapters.  
   
-After configuring your InfiniBand network adapters, client processes can connect to the Control node on the InfiniBand network by using `PDW_region-SQLCTL01` for the address of the server. Your server will append the Analytics Platform System DNS suffix, or you can enter the complete address which is `PDW_region-SQLCTL01.appliance_domain.pdw.local`.  
+After configuring your InfiniBand network adapters, client processes can connect to the Control node on the InfiniBand network by using `PDW_region-SQLCTL01` for the address of the server. Your server appends the Analytics Platform System DNS suffix, or you can enter the complete address which is `PDW_region-SQLCTL01.appliance_domain.pdw.local`.  
   
-For example, if your PDW region name is MyPDW and the appliance name is MyAPS, the dwloader server specification for loading data will either of the following:  
+For example, if your PDW region name is MyPDW and the appliance name is MyAPS, the dwloader server specification for loading data is one of the following:  
   
--   `dwloader –S MYPDW-SQLCTL01.MyAPS.pdw.local`  
+-   `dwloader -S MYPDW-SQLCTL01.MyAPS.pdw.local`  
   
--   `dwloader –S MYPDW-SQLCTL01`  
+-   `dwloader -S MYPDW-SQLCTL01`  
   
 ## <a name="BeforeBegin"></a>Before You Begin  
   
 ### Requirements  
-You need an APS appliance domain account to login to the AD01 node. For example, F12345*\Administrator.  
+You need an APS appliance domain account to log in to the AD01 node. For example, F12345*\Administrator.  
   
 You need a Windows account on the client server that has permission to configure the network adapters.  
   
@@ -60,14 +52,14 @@ You need a Windows account on the client server that has permission to configure
 These instructions assume the client server is already racked and cabled to the appliance InfiniBand network. For racking and cabling instructions, see [Acquire and Configure a Loading Server](acquire-and-configure-loading-server.md).  
   
 ### General Remarks  
-By using SQLCTL01, the Analytics Platform System DNS will connect your client server to the Control node by using the active InfiniBand network. This applies only to getting connected; if the InfiniBand network goes down during a load or backup, you will need to restart the process.  
+By using SQLCTL01, the Analytics Platform System DNS connects your client server to the Control node by using the active InfiniBand network. This applies only to getting connected; if the InfiniBand network goes down during a load or backup, you need to restart the process.  
   
 To meet your own business requirements, you can also join the client server to your own non-appliance workgroup or Windows domain.  
   
 ## <a name="Sec1"></a>Step 1: Obtain the appliance InfiniBand network settings  
 *To obtain the appliance InfiniBand network settings*  
   
-1.  Login to the appliance AD01 node by using the appliance_domain\Administrator account.  
+1.  Log in to the appliance AD01 node by using the appliance_domain\Administrator account.  
   
 2.  On the appliance AD01 node, open the Control Panel, select Network and Internet, select Network and Sharing Center*, and then select Change Adapter Settings.  
   
@@ -75,9 +67,9 @@ To meet your own business requirements, you can also join the client server to y
   
     ![InfiniBand connections on the Management node](media/network-teamib.png "InfiniBand connections on the Management node")  
   
-4.  From the Internet Protocol Version 4 (TCP/IPv4) Properties window, write down the values for the **IP address** and **Subnet mask**.  The IP address of the ***appliance_domain*-AD01** node is the IP address of the Analytics Platform System DNS server.  
+4.  From the Internet Protocol Version 4 (TCP/IPv4) Properties window, write down the values for the **IP address** and **Subnet mask**.  The IP address of the **_appliance\_domain_-AD01** node is the IP address of the Analytics Platform System DNS server.  
   
-5.  Repeat steps 1-5 above for the TeamIB1 adapter on ***appliance_domain*-AD02** server.  
+5.  Repeat steps 1-5 above for the TeamIB1 adapter on **_appliance\_domain_-AD02** server.  
   
     ![PDW Management node InfiniBand 1 properties](media/network-ip1-properties.png "PDW Management node InfiniBand 1 properties")  
   
@@ -111,7 +103,7 @@ To meet your own business requirements, you can also join the client server to y
   
 ### To configure the InfiniBand network adapter settings on your client server  
   
-1.  Login as a Windows administrator to your loading, backup, or other client server on the appliance InfiniBand network.  
+1.  Log in as a Windows administrator to your loading, backup, or other client server on the appliance InfiniBand network.  
   
 2.  Open the Control Pane*, select Network and Sharing Center, and then select Change Adapter Settings.  
   
@@ -123,7 +115,7 @@ To meet your own business requirements, you can also join the client server to y
   
 2.  In the Properties window  
   
-    1.  On the General tab, set the IP address to the IP address that you verified as free in the ping test for TeamIB1. For the example values used in this topic, you would enter 172.16.14.254.  
+    1.  On the General tab, set the IP address to the IP address that you verified as free in the ping test for TeamIB1. For the example values used in this article, you would enter 172.16.14.254.  
   
     2.  Set the subnet mask to the subnet mask you wrote down for TeamIB1.  
   
@@ -145,7 +137,7 @@ To meet your own business requirements, you can also join the client server to y
   
 3.  In the Properties window  
   
-    1.  On the General tab, set the IP address to the IP address that you verified as free in the ping test for TeamIB2. For the example values used in this topic, you would enter 172.16.18.254.  
+    1.  On the General tab, set the IP address to the IP address that you verified as free in the ping test for TeamIB2. For the example values used in this article, you would enter 172.16.18.254.  
   
     2.  Set the subnet mask to the subnet mask you wrote down for TeamIB2.  
   
@@ -164,9 +156,9 @@ To meet your own business requirements, you can also join the client server to y
   
 1.  In the Network Connections window, right-click on one of the network slots for the Mellanox Adapter and select Properties.  
   
-2.  Click on the Advanced… button.  
+2.  Click on the Advanced... button.  
   
-3.  In the Advanced TCP/IP Settings window, if the Append these DNS Suffixes (in order) option is not greyed out, check the box called Append these DNS suffixes (in order):, select the appliance domain suffix, and click Add…. The appliance domain suffix will be `appliance_domain.local`  
+3.  In the Advanced TCP/IP Settings window, if the Append these DNS Suffixes (in order) option is not greyed out, check the box called Append these DNS suffixes (in order):, select the appliance domain suffix, and click Add.... The appliance domain suffix is `appliance_domain.local`  
   
 4.  If the Append these DNS suffixes (in order): option is greyed out, you can add the APS domain to this server by modifying the registry key HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows NT\DNSClient.  
   
@@ -178,7 +170,7 @@ To meet your own business requirements, you can also join the client server to y
   
 7.  Now, you can connect to the appliance Infiniband network by using `PDW_region-SQLCTL01.appliance_domain.local`, or simply `appliance_domain-SQLCTL01`. The connection might be established faster if you connect with the full name and DNS suffix.  
   
-    Examples for an appliance named named MyAPS with a MyPDW PDW region:  
+    Examples for an appliance named MyAPS with a MyPDW PDW region:  
   
     -   MyPDW-SQLCTL01.MyAPS.local  
   

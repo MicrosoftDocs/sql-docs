@@ -2,15 +2,9 @@
 title: "Mapping CLR Parameter Data | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/01/2016"
-ms.prod: "sql-non-specified"
-ms.prod_service: "database-engine"
-ms.service: ""
-ms.component: "clr"
+ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-
-ms.tgt_pltfrm: ""
+ms.technology: clr
 ms.topic: "reference"
 helpviewer_keywords: 
   - "SqlBinary data type"
@@ -29,11 +23,9 @@ helpviewer_keywords:
   - "SqlChars data type"
   - "SqlInt32 data type"
 ms.assetid: 89b43ee9-b9ad-4281-a4bf-c7c8d116daa2
-caps.latest.revision: 71
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-ms.workload: "On Demand"
+author: "rothja"
+ms.author: "jroth"
+manager: craigg
 ---
 # Mapping CLR Parameter Data
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -89,13 +81,13 @@ ms.workload: "On Demand"
 ```csharp  
 [Microsoft.SqlServer.Server.SqlProcedure]  
 public static void PriceSum(out SqlInt32 value)  
-{ … }  
+{ ... }  
 ```  
   
 ```vb  
 \<Microsoft.SqlServer.Server.SqlProcedure> _  
 Public Shared Sub PriceSum( \<Out()> ByRef value As SqlInt32)  
-…  
+...  
 End Sub  
 ```  
   

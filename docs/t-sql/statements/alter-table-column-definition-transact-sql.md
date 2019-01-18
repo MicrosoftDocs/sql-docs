@@ -1,16 +1,11 @@
 ---
 title: "column_definition (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "05/05/2017"
-ms.prod: "sql-non-specified"
+ms.date: "09/24/2018"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
-ms.service: ""
-ms.component: "t-sql|statements"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: t-sql
 ms.topic: "language-reference"
 f1_keywords: 
   - "column_definition"
@@ -23,11 +18,10 @@ helpviewer_keywords:
   - "column properties [SQL Server]"
   - "column definitions [SQL Server]"
 ms.assetid: a1742649-ca29-4d9b-9975-661cdbf18f78
-caps.latest.revision: 78
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "craigg"
-ms.workload: "On Demand"
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # ALTER TABLE column_definition (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -85,7 +79,7 @@ column_name <data_type>
  *column_name*  
  Is the name of the column to be altered, added, or dropped. *column_name* can consist of 1 through 128 characters. For new columns, created with a timestamp data type, *column_name* can be omitted. If no *column_name* is specified for a **timestamp** data type column, the name **timestamp** is used.  
   
- [ *type_schema_name***.** ] *type_name*  
+ [ _type_schema_name_**.** ] *type_name*  
  Is the data type for the column that is added and the schema to which it belongs.  
   
  *type_name* can be:  
@@ -154,8 +148,13 @@ DEFAULT
 *constant_expression*  
  Is a literal value, a NULL, or a system function used as the default column value. If used in conjunction with a column defined to be of a [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] user-defined type, the implementation of the type must support an implicit conversion from the *constant_expression* to the user-defined type.  
   
-WITH VALUES  
- Specifies that the value given in DEFAULT *constant_expression* is stored in a new column added to existing rows. If the added column allows null values and WITH VALUES is specified, the default value is stored in the new column, added to existing rows. If WITH VALUES is not specified for columns that allow nulls, the value NULL is stored in the new column in existing rows. If the new column does not allow nulls, the default value is stored in new rows regardless of whether WITH VALUES is specified.  
+WITH VALUES   
+ When adding a column AND a DEFAULT constraint, if the column allows NULLS using WITH VALUES will, for existing rows, set the new column's value to the value given in DEFAULT *constant_expression*. 
+ If the column being added does not allow NULLS, for existing rows, the column's value will always be set to the value given in the DEFAULT *constant expression*. 
+ Starting in SQL Server 2012 this may be a meta data operation [adding-not-null-columns-as-an-online-operation](alter-table-transact-sql.md?view=sql-server-2017#adding-not-null-columns-as-an-online-operation).
+ If this is used when the related column isn't also being added then it has no effect.
+ 
+ Specifies that the value given in DEFAULT *constant_expression* is stored in a new column that is added to existing rows. If the added column allows null values and WITH VALUES is specified, the default value is stored in the new column that is added to existing rows. If WITH VALUES is not specified for columns that allow nulls, the value NULL is stored in the new column, in existing rows. If the new column does not allow nulls, the default value is stored in new rows regardless of whether WITH VALUES is specified.  
   
 IDENTITY  
  Specifies that the new column is an identity column. The [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] provides a unique, incremental value for the column. When you add identifier columns to existing tables, the identity numbers are added to the existing rows of the table with the seed and increment values. The order in which the rows are updated is not guaranteed. Identity numbers are also generated for any new rows that are added.  
@@ -202,9 +201,11 @@ SPARSE
 ENCRYPTION_TYPE = { DETERMINISTIC | RANDOMIZED }  
  **Deterministic encryption** uses a method which always generates the same encrypted value for any given plain text value. Using deterministic encryption allows searching using equality comparison, grouping, and joining tables using equality joins based on encrypted values, but can also allow unauthorized users to guess information about encrypted values by examining patterns in the encrypted column. Joining two tables on columns encrypted deterministically is only possible if both columns are encrypted using the same column encryption key. Deterministic encryption must use a column collation with a binary2 sort order for character columns.  
   
- **Randomized encryption** uses a method that encrypts data in a less predictable manner. Randomized encryption is more secure, but prevents equality searches, grouping, and joining on encrypted columns. Columns using randomized encryption cannot be indexed.  
+ **Randomized encryption** uses a method that encrypts data in a less predictable manner. Randomized encryption is more secure, but it prevents any computations and indexing on encrypted columns, unless your SQL Server instance supports [Always Encrypted with secure enclaves](../../relational-databases/security/encryption/always-encrypted-enclaves.md).
   
- Use deterministic encryption for columns that will be search parameters or grouping parameters, for example a government ID number. Use randomized encryption, for data such as a credit card number, which is not grouped with other records, or used to join tables, and which is not searched for because you use other columns (such as a transaction number) to find the row which contains the encrypted column of interest.  
+ If you are using Always Encrypted (without secure enclaves), use deterministic encryption for columns to be searched with parameters or grouping parameters, for example a government ID number. Use randomized encryption, for data such as a credit card number, which is not grouped with other records, or used to join tables, and which is not searched for because you use other columns (such as a transaction number) to find the row which contains the encrypted column of interest.  
+
+ If you are using Always Encrypted with secure enclaves, randomized encryption is a recommended encryption type.  
   
  Columns must be of a qualifying data type.  
   

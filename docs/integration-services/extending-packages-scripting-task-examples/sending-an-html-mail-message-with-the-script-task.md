@@ -2,18 +2,11 @@
 title: "Sending an HTML Mail Message with the Script Task | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "integration-services"
-ms.service: ""
-ms.component: "extending-packages-scripting-task-examples"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-
-ms.tgt_pltfrm: ""
+ms.technology: integration-services
 ms.topic: "reference"
-applies_to: 
-  - "SQL Server 2016 Preview"
 dev_langs: 
   - "VB"
 helpviewer_keywords: 
@@ -21,11 +14,9 @@ helpviewer_keywords:
   - "Script task [Integration Services], examples"
   - "Script task [Integration Services], HTML mail message"
 ms.assetid: dd2b1eef-b04f-4946-87ab-7bc56bb525ce
-caps.latest.revision: 30
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
-ms.workload: "On Demand"
+manager: craigg
 ---
 # Sending an HTML Mail Message with the Script Task
   The [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] SendMail task only supports mail messages in plain text format. However you can easily send HTML mail messages by using the Script task and the mail capabilities of the .NET Framework.  

@@ -1,24 +1,17 @@
 ---
-title: "User Sessions (SQL Server PDW)"
-author: "barbkess" 
-ms.author: "barbkess"
-manager: "jhubbard"	  
-ms.prod: "analytics-platform-system"
-ms.prod_service: "mpp-data-warehouse"
-ms.service: ""
-ms.component:
-ms.technology: "mpp-data-warehouse"
-ms.custom: ""
-ms.date: 01/13/2017
-ms.reviewer: na
-ms.suite: "sql"
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: 0425cef2-de4d-4f42-91c5-cb1cd4bb1265
-caps.latest.revision: 15
-
+title: User sessions in Analytics Platform System | Microsoft Docs"
+description: User sessions in Analytics Platform System's Parallel Data Warehouse.
+author: mzaman1 
+manager: craigg
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
 ---
-# User Sessions
+
+# User Sessions in Analytics Platform System
 A login with the appropriate permissions can manage the sessions of all logins on a SQL Server PDW appliance, including performing these actions:  
   
 -   View the current sessions on the appliance, including both active and idle sessions.  
@@ -37,7 +30,7 @@ The permissions required to manage sessions by using either method are the same,
   
 1.  On the top menu, click **Sessions**.  
   
-2.  The resulting list displays all recent sessions. To view only ‘Active’ or ‘Idle’ sessions, click the **Status** column header to sort results by status.  
+2.  The resulting list displays all recent sessions. To view only 'Active' or 'Idle' sessions, click the **Status** column header to sort results by status.  
   
 ### To view active and recent queries for a session by using the Admin Console  
   
@@ -53,14 +46,14 @@ The permissions required to manage sessions by using either method are the same,
   
 2.  Find the session ID for the session to cancel.  
   
-3.  Click the red **X** to the left of the session ID to end the session. Only sessions with a status of ‘Active’ or ‘Idle’ will have a red **X**; only these sessions can be ended.  
+3.  Click the red **X** to the left of the session ID to end the session. Only sessions with a status of 'Active' or 'Idle' will have a red **X**; only these sessions can be ended.  
   
 ## Manage Sessions by Using System Views and SQL Commands  
   
 ### To View Current Sessions by Using System Views  
 Use [sys.dm_pdw_exec_sessions](../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-sessions-transact-sql.md) to generate a list of current sessions.  
   
-This example returns the session_id, login_name, and status for all sessions with a status of ‘Active’ or ‘Idle’.  
+This example returns the session_id, login_name, and status for all sessions with a status of 'Active' or 'Idle'.  
   
 ```sql  
 SELECT session_id, login_name, status FROM sys.dm_pdw_exec_sessions WHERE status='Active' OR status='Idle';  
@@ -88,7 +81,7 @@ In this example, select the login_name, session_id, and status values to find a 
 SELECT session_id, login_name, status FROM sys.dm_pdw_exec_sessions;  
 ```  
   
-Sessions with an ‘Active’ or ‘Idle’ status can be ended by using the KILL command.  
+Sessions with an 'Active' or 'Idle' status can be ended by using the KILL command.  
   
 ```sql  
 KILL 'SID137';  

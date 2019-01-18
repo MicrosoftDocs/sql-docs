@@ -2,15 +2,10 @@
 title: "HAS_PERMS_BY_NAME (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/29/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.service: ""
-ms.component: "t-sql|functions"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: t-sql
 ms.topic: "language-reference"
 f1_keywords: 
   - "HAS_PERMS_BY_NAME"
@@ -25,11 +20,9 @@ helpviewer_keywords:
   - "testing permissions"
   - "HAS_PERMS_BY_NAME function"
 ms.assetid: eaf8cc82-1047-4144-9e77-0e1095df6143
-caps.latest.revision: 40
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "craigg"
-ms.workload: "On Demand"
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
 ---
 # HAS_PERMS_BY_NAME (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -62,7 +55,7 @@ HAS_PERMS_BY_NAME ( securable , securable_class , permission
  An optional scalar expression of type **sysname** that represents the name of the securable sub-entity against which the permission is tested. The default is NULL.  
   
 > [!NOTE]  
->  In versions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], sub-securables cannot use brackets in the form **'[***sub name***]'**. Use **'***sub name***'** instead.  
+>  In versions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], sub-securables cannot use brackets in the form **'[**_sub name_**]'**. Use **'**_sub name_**'** instead.  
   
  *sub-securable_class*  
  An optional scalar expression of type **nvarchar(60)** that represent the class of securable subentity against which the permission is tested. The default is NULL.  

@@ -1,24 +1,17 @@
 ---
-title: "Load Data With Integration Services"
-author: "barbkess" 
-ms.author: "barbkess"
-manager: "jhubbard"	  
-ms.prod: "analytics-platform-system"
-ms.prod_service: "mpp-data-warehouse"
-ms.service: ""
-ms.component:
-ms.suite: "sql"
-ms.custom: ""
-ms.technology: "mpp-data-warehouse"
-description: "Provides reference and deployment information for loading data into SQL Server Parallel Data Warehouse by using SQL Server Integration Services (SSIS) packages."
-ms.date: "10/20/2016"
-ms.topic: "article"
-ms.assetid: 9bdb559a-a91c-4342-8a6e-438cb93f975c
-caps.latest.revision: 69
-
+title: Load with Integration Services - Parallel Data Warehouse | Microsoft Docs
+description: Provides reference and deployment information for loading data into Parallel Data Warehouse (PDW) by using SQL Server Integration Services (SSIS) packages.  
+author: mzaman1 
+manager: craigg
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
 ---
 
-# Load data with Integration Services
+# Load data with Integration Services to Parallel Data Warehouse
 Provides reference and deployment information for loading data into SQL Server Parallel Data Warehouse by using SQL Server Integration Services (SSIS) packages.  
   
 <!-- MISSING LINKS
@@ -31,7 +24,7 @@ Before you can start loading data, use the following topics to install the Integ
   
 -   [Connect With Integration Services for loading](connect-with-ssis-for-loading.md)  
   
-For general information about developing Integration Services packages, see [Designing and Implementing Packages (Integration Services)](http://msdn.microsoft.com/library/ms141091&#40;v=sql11&#40;.aspx) on MSDN.  
+For general information about developing Integration Services packages, see [Designing and Implementing Packages (Integration Services)](https://msdn.microsoft.com/library/ms141091\(v=sql11\).aspx) on MSDN.  
 
 -->
   
@@ -42,7 +35,7 @@ The PDW Destination Adapter is an Integration Services component that lets you l
   
 In addition to the tasks described in this topic, you can use other features of Integration Services to filter, transform, analyze, and cleanse your data before loading it into the data warehouse. You can also enhance the workflow of the package by running SQL statements, running child packages, or sending mail.  
   
-For complete documentation of Integration Services, see [SQL Server Integration Services](http://msdn.microsoft.com/library/ms141026(v=sql11).aspx).  
+For complete documentation of Integration Services, see [SQL Server Integration Services](../integration-services/sql-server-integration-services.md).  
   
 ## <a name="HowToDeployPackage"></a>Methods for running an Integration Services package  
 Use one of these methods to run an Integration Services package.  
@@ -250,16 +243,16 @@ Run the package on your computer Integration Services.
   
 ## See Also  
 [Create a script task that uses the SSIS PDW destination adapter](create-ssis-script-task-using-pdw-destination-adapter.md)  
-[SQL Server Integration Services](http://msdn.microsoft.com/library/ms141026&#40;v=sql11&#40;.aspx)  
-[Designing and Implementing Packages (Integration Services)](http://msdn.microsoft.com/library/ms141091&#40;v=sql11&#40;.aspx)  
-[Tutorial: Creating a Basic Package Using a Wizard](http://technet.microsoft.com/library/ms365330&#40;v=sql11&#40;.aspx)  
-[Getting Started (Integration Services)](http://go.microsoft.com/fwlink/?LinkId=202412)  
-[Dynamic Package Generation Sample](http://go.microsoft.com/fwlink/?LinkId=202413)  
-[Designing Your SSIS Packages for Parallelism (SQL Server Video)](http://msdn.microsoft.com/library/dd795221.aspx)  
-[Microsoft SQL Server Community Examples: Integration Services](http://go.microsoft.com/fwlink/?LinkId=202415)  
-[Improving Incremental Loads with Change Data Capture](http://msdn.microsoft.com/library/bb895315&#40;v=sql11&#40;.aspx)  
-[Slowly Changing Dimension Transformation](http://msdn.microsoft.com/library/ms141715&#40;v=sql11&#40;.aspx)  
-[Bulk Insert Task](http://msdn.microsoft.com/library/ms141239&#40;v=sql11&#40;.aspx)  
+[SQL Server Integration Services](../integration-services/sql-server-integration-services.md)  
+[Designing and Implementing Packages (Integration Services)](https://msdn.microsoft.com/library/ms141091\(v=sql11\).aspx)  
+[Tutorial: Creating a Basic Package Using a Wizard](https://technet.microsoft.com/library/ms365330\(v=sql11\).aspx)  
+[Getting Started (Integration Services)](https://go.microsoft.com/fwlink/?LinkId=202412)  
+[Dynamic Package Generation Sample](https://go.microsoft.com/fwlink/?LinkId=202413)  
+[Designing Your SSIS Packages for Parallelism (SQL Server Video)](https://msdn.microsoft.com/library/dd795221.aspx)  
+[Microsoft SQL Server Community Examples: Integration Services](https://go.microsoft.com/fwlink/?LinkId=202415)  
+[Improving Incremental Loads with Change Data Capture](../integration-services/change-data-capture/change-data-capture-ssis.md)  
+[Slowly Changing Dimension Transformation](../integration-services/data-flow/transformations/slowly-changing-dimension-transformation.md)  
+[Bulk Insert Task](../integration-services/control-flow/bulk-insert-task.md)  
   
 <!-- MISSING LINKS
 [Grant permissions to load data](grant-permissions-to-load-data.md)  

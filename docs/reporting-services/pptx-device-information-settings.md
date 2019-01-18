@@ -1,29 +1,20 @@
 ---
 title: "PPTX Device Information Settings | Microsoft Docs"
-ms.custom: ""
-ms.date: "09/11/2015"
+ms.date: 09/11/2015
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
-ms.service: ""
-ms.component: "reporting-services"
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
+ms.technology: reporting-services
 
 
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "render"
   - "powerpoint"
   - "pptx"
   - "export"
 ms.assetid: 4dc2045f-8025-41a3-8f9d-5635fb24cf4a
-caps.latest.revision: 6
-author: "markingmyname"
-ms.author: "maghan"
-manager: "kfile"
-ms.workload: "Inactive"
+author: markingmyname
+ms.author: maghan
 ---
 # PPTX Device Information Settings
   The following table lists the device information settings for rendering [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] reports in the PPTX format.  
@@ -42,7 +33,7 @@ ms.workload: "Inactive"
 |**PageHeight**|The page height, in inches, to set for the report. You must include an integer or decimal value followed by "in" (for example, **11in**). This value overrides the report's original settings.|  
 |**PageWidth**|The page width, in inches, to set for the report. You must include an integer or decimal value followed by "in" (for example, **8.5in**). This value overrides the report's original settings.|  
 |**StartPage**|The first page of the report to render. A value of **0** indicates that all pages are rendered. The default value is **1**.|  
-|**UseReportPageSize**|If UseReportPageSize =**false** then the default slide size is PowerPoint’s default of 13.333” x 7.5” (16:9 aspect ratio). If UseReportPageSize =true, then the default slide size is the define page size of the report.<br /><br /> The default value is **false**<br /><br /> Note, the PageWidth and PageHeight settings override the default width and height.|  
+|**UseReportPageSize**|If UseReportPageSize =**false** then the default slide size is PowerPoint's default of 13.333" x 7.5" (16:9 aspect ratio). If UseReportPageSize =true, then the default slide size is the define page size of the report.<br /><br /> The default value is **false**<br /><br /> Note, the PageWidth and PageHeight settings override the default width and height.|  
   
 ## See Also  
  <xref:ReportExecution2005.ReportExecutionService.Render%2A>   

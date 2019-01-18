@@ -1,55 +1,51 @@
 ---
-title: "PolyBase T-SQL objects | Microsoft Docs"
+title: "PolyBase Transact-SQL reference | Microsoft Docs"
 ms.custom: ""
-ms.date: "08/15/2017"
-ms.prod: "sql-non-specified"
-ms.prod_service: "database-engine, sql-data-warehouse, pdw"
-ms.service: ""
-ms.component: "polybase"
+ms.date: 09/24/2018
+ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine-polybase"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: polybase
+ms.topic: reference
 helpviewer_keywords: 
   - "PolyBase, fundamentals"
   - "PolyBase, SQL statements"
   - "PolyBase, SQL objects"
-caps.latest.revision: 20
-author: "barbkess"
-ms.author: "barbkess"
-manager: "jhubbard"
-ms.workload: "On Demand"
+author: rothja
+ms.author: jroth
+manager: craigg
 ---
-# PolyBase T-SQL objects
-[!INCLUDE[appliesto-ss-xxxx-asdw-pdw-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  To use  PolyBase, you must create external tables to reference your external data.  
+# PolyBase Transact-SQL reference
+
+[!INCLUDE[appliesto-ss-xxxx-asdw-pdw-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
+To use  PolyBase, you must create external tables to reference your external data.  
   
- [CREATE DATABASE SCOPED CREDENTIAL &#40;Transact-SQL&#41;](../../t-sql/statements/create-database-scoped-credential-transact-sql.md)  
+[CREATE DATABASE SCOPED CREDENTIAL &#40;Transact-SQL&#41;](../../t-sql/statements/create-database-scoped-credential-transact-sql.md)  
   
- [CREATE EXTERNAL DATA SOURCE &#40;Transact-SQL&#41;](../../t-sql/statements/create-external-data-source-transact-sql.md)  
+[CREATE EXTERNAL DATA SOURCE &#40;Transact-SQL&#41;](../../t-sql/statements/create-external-data-source-transact-sql.md)  
   
- [CREATE EXTERNAL FILE FORMAT &#40;Transact-SQL&#41;](../../t-sql/statements/create-external-file-format-transact-sql.md)  
+[CREATE EXTERNAL FILE FORMAT &#40;Transact-SQL&#41;](../../t-sql/statements/create-external-file-format-transact-sql.md)  
   
- [CREATE EXTERNAL TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-external-table-transact-sql.md)  
+[CREATE EXTERNAL TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-external-table-transact-sql.md)  
   
- [CREATE STATISTICS &#40;Transact-SQL&#41;](../../t-sql/statements/create-statistics-transact-sql.md)  
- 
+[CREATE STATISTICS &#40;Transact-SQL&#41;](../../t-sql/statements/create-statistics-transact-sql.md)  
+
 > [!NOTE]
->  PolyBase in SQL Server 2016 only supports Windows users. If you try to use a SQL user to query a PolyBase external table, the query will fail.
+> PolyBase in SQL Server 2016 only supports Windows users. If you try to use a SQL user to query a PolyBase external table, the query will fail.
 
 ## Prerequisites  
- Configure PolyBase. See [PolyBase configuration](../../relational-databases/polybase/polybase-configuration.md).  
+
+Configure PolyBase. See [PolyBase configuration](../../relational-databases/polybase/polybase-configuration.md).  
   
 ## Create external tables for Hadoop
+
 Applies to: SQL Server (starting with 2016), Parallel Data Warehouse
-  
- **1. Create Database Scoped Credential**  
-  
- This step is required only for Kerberos-secured Hadoop clusters.  
-  
-```sql  
+
+**1. Create Database Scoped Credential**
+
+This step is required only for Kerberos-secured Hadoop clusters.  
+
+```sql
 -- Create a master key on the database.  
 -- Required to encrypt the credential secret.  
   
@@ -61,11 +57,10 @@ CREATE MASTER KEY ENCRYPTION BY PASSWORD = 'S0me!nfo';
   
 CREATE DATABASE SCOPED CREDENTIAL HadoopUser1   
 WITH IDENTITY = '<hadoop_user_name>', Secret = '<hadoop_password>';  
-  
-```  
-  
- **2. Create External Data Source**  
-  
+```
+
+**2. Create External Data Source**
+
 ```sql  
 -- Create an external data source.  
 -- LOCATION (Required) : Hadoop Name Node IP address and port.  
@@ -78,11 +73,10 @@ CREATE EXTERNAL DATA SOURCE MyHadoopCluster WITH (
         RESOURCE_MANAGER_LOCATION = '10.xxx.xx.xxx:xxxx',   
         CREDENTIAL = HadoopUser1      
 );  
-  
-```  
-  
- **3. Create External File Format**  
-  
+```
+
+**3. Create External File Format**
+
 ```sql  
 -- Create an external file format.  
 -- FORMAT TYPE: Type of format in Hadoop (DELIMITEDTEXT,  RCFILE, ORC, PARQUET).  
@@ -93,9 +87,9 @@ CREATE EXTERNAL FILE FORMAT TextFileFormat WITH (
                 USE_TYPE_DEFAULT = TRUE)  
   
 ```  
-  
- **4. Create External Table**  
-  
+
+**4. Create External Table**  
+
 ```sql  
 -- Create an external table pointing to data stored in Hadoop.  
 -- LOCATION: path to file or directory that contains the data (relative to HDFS root).  
@@ -111,22 +105,20 @@ WITH (LOCATION='/Demo/',
         DATA_SOURCE = MyHadoopCluster,  
         FILE_FORMAT = TextFileFormat  
 );  
-  
 ```  
-  
- **5. Create Statistics**  
-  
+
+**5. Create Statistics**  
+
 ```sql  
 -- Create statistics on an external table.   
 CREATE STATISTICS StatsForSensors on CarSensor_Data(CustomerKey, Speed)  
-  
 ```  
-  
+
 ## Create external tables for Azure blob storage  
 Applies to: SQL Server (starting with 2016), Azure SQL Data Warehouse, Parallel Data Warehouse
 
- **1. Create Database Scoped Credential**  
-  
+**1. Create Database Scoped Credential**  
+
 ```sql  
 -- Create a master key on the database.  
 -- Required to encrypt the credential secret.  
@@ -139,11 +131,10 @@ CREATE MASTER KEY ENCRYPTION BY PASSWORD = 'S0me!nfo';
   
 CREATE DATABASE SCOPED CREDENTIAL AzureStorageCredential   
 WITH IDENTITY = 'user', Secret = '<azure_storage_account_key>';  
-  
 ```  
-  
- **2. Create External Data Source**  
-  
+
+**2. Create External Data Source**  
+
 ```sql  
 -- Create an external data source.  
 -- LOCATION:  Azure account storage account name and blob container name.  
@@ -156,9 +147,9 @@ CREATE EXTERNAL DATA SOURCE AzureStorage with (
 );  
   
 ```  
-  
- **3. Create External File Format**  
-  
+
+**3. Create External File Format**  
+
 ```sql  
 -- Create an external file format.  
 -- FORMAT TYPE: Type of format in Hadoop (DELIMITEDTEXT,  RCFILE, ORC, PARQUET).  
@@ -169,9 +160,9 @@ CREATE EXTERNAL FILE FORMAT TextFileFormat WITH (
                 USE_TYPE_DEFAULT = TRUE)  
   
 ```  
-  
- **4. Create External Table**  
-  
+
+**4. Create External Table**  
+
 ```sql  
 -- Create an external table pointing to data stored in Azure storage.  
 -- LOCATION: path to a file or directory that contains the data (relative to the blob container).  
@@ -188,23 +179,22 @@ WITH (LOCATION='/Demo/',
         DATA_SOURCE = AzureStorage,  
         FILE_FORMAT = TextFileFormat  
 );  
-  
 ```  
-  
- **5. Create Statistics**  
-  
+
+**5. Create Statistics**  
+
 ```sql  
 -- Create statistics on an external table.   
 CREATE STATISTICS StatsForSensors on CarSensor_Data(CustomerKey, Speed)  
   
 ```  
- 
+
 ## Create external tables for Azure Data Lake Store
 Applies to: Azure SQL Data Warehouse
 
-For more information, see [Load with Azure Data Lake Store](https://docs.microsoft.com/en-us/azure/sql-data-warehouse/sql-data-warehouse-load-from-azure-data-lake-store)
- 
- **1. Create Database Scoped Credential**   
+For more information, see [Load with Azure Data Lake Store](https://docs.microsoft.com/azure/sql-data-warehouse/sql-data-warehouse-load-from-azure-data-lake-store)
+
+**1. Create Database Scoped Credential**   
 
 ```sql
 -- Create a Database Master Key.
@@ -216,7 +206,7 @@ CREATE MASTER KEY;
 -- Create a database scoped credential
 -- IDENTITY: Pass the client id and OAuth 2.0 Token Endpoint taken from your Azure Active Directory Application
 -- SECRET: Provide your AAD Application Service Principal key.
--- For more information on Create Database Scoped Credential: https://msdn.microsoft.com/en-us/library/mt270260.aspx
+-- For more information on Create Database Scoped Credential: https://msdn.microsoft.com/library/mt270260.aspx
 
 CREATE DATABASE SCOPED CREDENTIAL ADL_User
 WITH
@@ -224,9 +214,9 @@ WITH
     ,SECRET = '<key>'
 ;
 ```  
-  
- **2. Create External Data Source**  
-  
+
+**2. Create External Data Source**  
+
 ```sql  
 -- TYPE: HADOOP - PolyBase uses Hadoop APIs to access data in Azure Data Lake Store.
 -- LOCATION: Provide Azure storage account name and blob container name.
@@ -239,9 +229,9 @@ WITH (
     CREDENTIAL = AzureStorageCredential
 );
 ```  
-  
- **3. Create External File Format**  
-  
+
+**3. Create External File Format**  
+
 ```sql  
 -- FIELD_TERMINATOR: Marks the end of each field (column) in a delimited text file
 -- STRING_DELIMITER: Specifies the field terminator for data of type string in the text-delimited file.
@@ -258,9 +248,9 @@ WITH
                     )
 );
 ```  
-  
- **4. Create External Table**  
-  
+
+**4. Create External Table**  
+
 ```sql  
 -- LOCATION: Folder under the ADLS root folder.
 -- DATA_SOURCE: Specifies which Data Source Object to use.
@@ -284,18 +274,16 @@ WITH
 )
 ;
 ```  
-  
- **5. Create Statistics**  
-  
-```sql     
+
+**5. Create Statistics**
+
+```sql
 CREATE STATISTICS StatsForProduct on DimProduct_external(ProductKey)  
 ```  
 
 ## Next steps  
- For examples of queries, see [PolyBase Queries](../../relational-databases/polybase/polybase-queries.md).  
+For examples of queries, see [PolyBase Queries](../../relational-databases/polybase/polybase-queries.md).  
   
 ## See Also  
- [Get started with PolyBase](../../relational-databases/polybase/get-started-with-polybase.md)   
- [PolyBase Guide](../../relational-databases/polybase/polybase-guide.md)  
-  
-  
+[Get started with PolyBase](../../relational-databases/polybase/get-started-with-polybase.md)   
+[PolyBase Guide](../../relational-databases/polybase/polybase-guide.md)

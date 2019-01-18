@@ -1,58 +1,51 @@
 ---
-title: "Step 3: Adding and Configuring an OLE DB Connection Manager | Microsoft Docs"
+title: "Step 3: Add and configure an OLE DB connection manager | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-non-specified"
+ms.date: "01/03/2019"
+ms.prod: sql
 ms.prod_service: "integration-services"
-ms.service: ""
-ms.component: "tutorial"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to: 
-  - "SQL Server 2016"
+ms.technology: integration-services
+ms.topic: tutorial
 ms.assetid: e7b74cba-a0e5-4478-af12-3f81b9484e9e
-caps.latest.revision: 19
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
-ms.workload: "Active"
+manager: craigg
 ---
-# Lesson 1-3 - Adding and Configuring an OLE DB Connection Manager
-After you have added a Flat File connection manager to connect to the data source, the next task is to add an OLE DB connection manager to connect to the destination. An OLE DB connection manager enables a package to extract data from or load data into any OLE DB–compliant data source. Using the OLE DB Connection manager, you can specify the server, the authentication method, and the default database for the connection.  
+# Lesson 1-3: Add and configure an OLE DB connection manager
+
+After you add a Flat File connection manager to connect to the data source, you add an OLE DB connection manager to connect to the data destination. An OLE DB connection manager enables a package to extract data from or load data into any OLE DB-compliant data source. Using an OLE DB connection manager, you can specify the server, the authentication method, and the default database for the connection.  
   
-In this lesson, you will create an OLE DB connection manager that uses Windows Authentication to connect to the local instance of **AdventureWorksDB2012**. The OLE DB connection manager that you create will also be referenced by other components that you will create later in this tutorial, such as the Lookup transformation and the OLE DB destination.  
+In this task, you create an OLE DB connection manager that uses Windows Authentication to connect to the local instance of **AdventureWorksDW2012**. This OLE DB connection manager is also referenced by other components that you create later in this tutorial, such as the Lookup transformation and the OLE DB destination.  
   
-### Add and configure an OLE DB Connection Manager to the SSIS package  
+## Add and configure an OLE DB connection manager
+
+1. In the **Solution Explorer** pane, right-click on **Connection Managers** and select **New Connection Manager**.
+
+1. In the **Add SSIS Connection Manager** dialog, select **OLEDB**, then select **Add**.
+    
+2. In the **Configure OLE DB Connection Manager** dialog box, select **New**.  
   
-1.  Right-click anywhere in the **Connection Managers** area, and then click **New OLE DB Connection**.  
-  
-2.  In the **Configure OLE DB Connection Manager** dialog box, click **New**.  
-  
-3.  For **Server name**, enter **localhost**.  
+3. For **Server name**, enter **localhost**.  
   
     When you specify localhost as the server name, the connection manager connects to the default instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] on the local computer. To use a remote instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], replace localhost with the name of the server to which you want to connect.  
   
-4.  In the **Log on to the server** group, verify that **Use Windows Authentication** is selected.  
+4. In the **Log on to the server** group, verify that **Use Windows Authentication** is selected.  
   
-5.  In the **Connect to a database** group, in the **Select or enter a database name** box, type or select **AdventureWorksDW2012**.  
+5. In the **Connect to a database** group, in the **Select or enter a database name** box, type or select **AdventureWorksDW2012**.  
   
-6.  Click **Test Connection** to verify that the connection settings you have specified are valid.  
+6. Select **Test Connection** to verify that the connection settings you have specified are valid.  
   
-7.  Click **OK**.  
+7. Select **OK**.  
   
-8.  Click **OK**.  
+8. Select **OK**.  
   
-9. In the **Data Connections** pane of the **Configure OLE DB Connection Manager** dialog box, verify that **localhost.AdventureWorksDW2012** is selected.  
+9. In the **Connection Managers** pane, verify that **localhost.AdventureWorksDW2012** is selected.  
   
-10. Click **OK**.  
+
+## Go to next task
+[Step 4: Add a Data Flow task to the package](../integration-services/lesson-1-4-adding-a-data-flow-task-to-the-package.md)  
   
-## Next Task in Lesson  
-[Step 4: Adding a Data Flow Task to the Package](../integration-services/lesson-1-4-adding-a-data-flow-task-to-the-package.md)  
-  
-## See Also  
-[OLE DB Connection Manager](../integration-services/connection-manager/ole-db-connection-manager.md)  
+## See also  
+[OLE DB connection manager](../integration-services/connection-manager/ole-db-connection-manager.md)  
   

@@ -1,35 +1,28 @@
 ---
-title: "Perform a planned manual failover of an availability group (SQL Server) | Microsoft Docs"
-ms.custom: ""
+title: "Perform a planned manual failover of an availability group"
+description: "This topic describes how to perform a planned manual failover of an Always On availability group."
+ms.custom: "seodec18"
 ms.date: "10/25/2017"
-ms.prod: "sql-non-specified"
-ms.prod_service: "database-engine"
-ms.service: ""
-ms.component: "availability-groups"
+ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: high-availability
+ms.topic: conceptual
 f1_keywords: 
   - "sql13.swb.availabilitygroup.manualfailover.f1"
 helpviewer_keywords: 
   - "Availability Groups [SQL Server], failover"
   - "failover [SQL Server], AlwaysOn Availability Groups"
 ms.assetid: 419f655d-3f9a-4e7d-90b9-f0bab47b3178
-caps.latest.revision: 36
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-ms.workload: "On Demand"
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
 ---
 
-# Perform a planned manual failover of an availability group (SQL Server)
+# Perform a planned manual failover of an Always On availability group (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 This topic describes how to perform a manual failover without data loss (a *planned manual failover*) on an AlwaysOn availability group by using [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)], or PowerShell in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. An availability group fails over at the level of an availability replica. A planned manual failover, like any AlwaysOn availability group failover, transitions a secondary replica to primary role. Concurrently, the failover transitions the former primary replica to the secondary role.  
   
-A planned manual failover is supported only when the primary replica and the target secondary replica are running in synchronous-commit mode and are currently synchronized. A planned manual failver preserves all the data in the secondary databases that are joined to the availability group on the target secondary replica. After the former primary replica transitions to the secondary role, its databases become secondary databases. Then they begin to synchronize with the new primary databases. After they all transition into the SYNCHRONIZED state, the new secondary replica becomes eligible to serve as the target of a future planned manual failover.  
+A planned manual failover is supported only when the primary replica and the target secondary replica are running in synchronous-commit mode and are currently synchronized. A planned manual failover preserves all the data in the secondary databases that are joined to the availability group on the target secondary replica. After the former primary replica transitions to the secondary role, its databases become secondary databases. Then they begin to synchronize with the new primary databases. After they all transition into the SYNCHRONIZED state, the new secondary replica becomes eligible to serve as the target of a future planned manual failover.  
   
 > [!NOTE]  
 >  If the secondary and primary replicas are both configured for automatic failover mode, after the secondary replica is synchronized, it also can serve as the target for an automatic failover. For more information, see [Availability modes &#40;AlwaysOn availability groups&#41;](../../../database-engine/availability-groups/windows/availability-modes-always-on-availability-groups.md).  
@@ -37,7 +30,7 @@ A planned manual failover is supported only when the primary replica and the tar
 ##  <a name="BeforeYouBegin"></a> Before you begin 
 
 >[!IMPORTANT]
->There are specific procedures to fail over a read-scale availability group with no cluster manager. When an availability group has CLUSTER_TYPE = NONE, follow the procedures under [Fail over the primary replica on a read-scale availability group](#Fail-over-the-primary-replica-on-a-read-scale-availability-group).
+>There are specific procedures to fail over a read-scale availability group with no cluster manager. When an availability group has CLUSTER_TYPE = NONE, follow the procedures under [Fail over the primary replica on a read-scale availability group](#fail-over-the-primary-replica-on-a-read-scale-availability-group).
 
 ###  <a name="Restrictions"></a> Limitations and restrictions 
   

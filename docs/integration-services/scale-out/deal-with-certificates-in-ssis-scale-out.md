@@ -1,22 +1,16 @@
 ---
 title: "Manage certificates for Sql Server Integration Services Scale Out | Microsoft Docs"
-ms.custom: "This article describes how to manage certificates to secure communications between SSIS Scale Out Master and Scale Out Workers."
+ms.description: "This article describes how to manage certificates to secure communications between SSIS Scale Out Master and Scale Out Workers."
 ms.date: "12/19/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "integration-services"
-ms.service: ""
-ms.component: "scale-out"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-caps.latest.revision: 1
+ms.technology: integration-services
+ms.custom: performance
+ms.topic: conceptual
 author: "haoqian"
 ms.author: "haoqian"
-manager: "jhubbard"
-ms.workload: "Inactive"
+manager: craigg
 ---
 # Manage certificates for SQL Server Integration Services Scale Out
 
@@ -42,12 +36,12 @@ You may want to change your Scale Out Master certificate due to certificate expi
 Create and install a new SSL certificate on the Master node with the following command:
 
 ```dos
-MakeCert.exe -n CN={master endpoint host} SSISScaleOutMaster.cer -r -ss Root -sr LocalMachine
+MakeCert.exe -n CN={master endpoint host} SSISScaleOutMaster.cer -r -ss Root -sr LocalMachine -a sha1
 ```
 For example:
 
 ```dos
-MakeCert.exe -n CN=MasterMachine SSISScaleOutMaster.cer -r -ss Root -sr LocalMachine
+MakeCert.exe -n CN=MasterMachine SSISScaleOutMaster.cer -r -ss Root -sr LocalMachine -a sha1
 ```
 
 #### 2. Bind the certificate to the Master port
@@ -89,7 +83,7 @@ a.  Install the client SSL certificate to the Root store of the local computer o
 
 b.  Update the Scale Out Worker service configuration file.
 
-    Update the Scale Out Worker service configuration file, `\<drive\>:\Program Files\Microsoft SQL Server\140\DTS\Binn\WorkerSettings.config`, on the Worker node. Update **MasterHttpsCertThumbprint** to the thumbprint of the new SSL certificate.
+Update the Scale Out Worker service configuration file, `\<drive\>:\Program Files\Microsoft SQL Server\140\DTS\Binn\WorkerSettings.config`, on the Worker node. Update **MasterHttpsCertThumbprint** to the thumbprint of the new SSL certificate.
 
 c.  Restart the Scale Out Worker service.
 
@@ -134,7 +128,7 @@ winhttpcertcfg.exe -g -c LOCAL_MACHINE\My -s WorkerMachine -a SSISScaleOutWorker
 #### 4. Update the Scale Out Worker service configuration file
 Update the Scale Out Worker service configuration file, `\<drive\>:\Program Files\Microsoft SQL Server\140\DTS\Binn\WorkerSettings.config`, on the Worker node. Update **WorkerHttpsCertThumbprint** to the thumbprint of the new certificate.
 
-#### 5. Install the client certificate to the Root store of the local computer on the Worker node
+#### 5. Install the client certificate to the Root store of the local computer on the Master node
 
 #### 6. Restart the Scale Out Worker service
 

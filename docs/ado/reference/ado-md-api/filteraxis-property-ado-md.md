@@ -1,17 +1,12 @@
 ---
 title: "FilterAxis Property (ADO MD) | Microsoft Docs"
-ms.prod: "sql-non-specified"
-ms.prod_service: "drivers"
-ms.service: ""
-ms.component: "ado"
-ms.technology:
-  - "drivers"
+ms.prod: sql
+ms.prod_service: connectivity
+ms.technology: connectivity
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 apitype: "COM"
 f1_keywords: 
   - "Cellset::FilterAxis"
@@ -19,11 +14,9 @@ f1_keywords:
 helpviewer_keywords: 
   - "FilterAxis property [ADO MD]"
 ms.assetid: 9c656963-531e-4cd1-b698-d5f42a9b7ba3
-caps.latest.revision: 13
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
-ms.workload: "Inactive"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # FilterAxis Property (ADO MD)
 Indicates filter information about the current [cellset](../../../ado/reference/ado-md-api/cellset-object-ado-md.md).  

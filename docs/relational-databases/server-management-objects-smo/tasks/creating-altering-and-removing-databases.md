@@ -2,15 +2,11 @@
 title: "Creating, Altering, and Removing Databases | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/06/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "database-engine"
-ms.service: ""
-ms.component: "smo"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: 
 
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 
   - "databases [SMO]"
@@ -18,14 +14,14 @@ helpviewer_keywords:
   - "databases [SMO], modifying"
   - "databases [SMO], deleting"
 ms.assetid: fcfb3ec2-7556-4f72-971a-501295892cb0
-caps.latest.revision: 41
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-ms.workload: "On Demand"
+author: "stevestein"
+ms.author: "sstein"
+manager: craigg
+monikerRange: "=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Creating, Altering, and Removing Databases
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
+
   In SMO, a database is represented by the <xref:Microsoft.SqlServer.Management.Smo.Database> object.  
   
  It is not necessary to create a <xref:Microsoft.SqlServer.Management.Smo.Database> object to modify or remove it. The database can be referenced by using a collection.  

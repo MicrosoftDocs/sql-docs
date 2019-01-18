@@ -2,34 +2,32 @@
 title: "Upgrade SQL Server | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/17/2017"
-ms.prod: "sql-non-specified"
-ms.prod_service: "database-engine"
-ms.service: ""
-ms.component: "install-windows"
+ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "setup-install"
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
+ms.technology: install
+ms.topic: quickstart
 helpviewer_keywords: 
   - "upgrading SQL Server"
 ms.assetid: 5064e35b-b70d-4a0b-a9e9-fff04162f9d2
-caps.latest.revision: 40
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
+author: MashaMSFT
+ms.author: mathoma
+monikerRange: ">=sql-server-2016||=sqlallproducts-allversions"
+manager: craigg
 ---
 # Upgrade SQL Server
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
- You can upgrade instances of [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], or [!INCLUDE[ss2016](../../includes/sssql15-md.md)], to [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Before running [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Setup to upgrade to [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], review the following topics about the upgrade process and the release notes.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
+  > [!div class="nextstepaction"]
+  > [Please share your feedback about the SQL Docs Table of Contents!](https://aka.ms/sqldocsurvey)
+ 
+ You can upgrade instances of [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], or [!INCLUDE[ss2016](../../includes/sssql15-md.md)], to [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Before running [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Setup to upgrade to [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], review the following articles about the upgrade process and the release notes.  
   
    - For information about upgrading from [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], see [Are you upgrading from SQL Server 2005?](../../database-engine/install-windows/are-you-upgrading-from-sql-server-2005.md).  
    - [SQL Server 2016 Release Notes](../../sql-server/sql-server-2016-release-notes.md) 
    - [SQL Server 2017 Release Notes](../../sql-server/sql-server-2017-release-notes.md) 
   
 ## In This Section  
-This section contains the following topics:  
+This section contains the following articles:  
   
 -   [Supported Version and Edition Upgrades](../../database-engine/install-windows/supported-version-and-edition-upgrades.md)  
 -   [Prepare for upgrade by running Data Migration Assistant](../../database-engine/install-windows/prepare-for-upgrade-by-running-data-migration-assistant.md)  
@@ -53,7 +51,7 @@ This section contains the following topics:
  [Upgrade Integration Services](../../integration-services/install-windows/upgrade-integration-services.md)   
  [Upgrade Replicated Databases](../../database-engine/install-windows/upgrade-replicated-databases.md)   
  [Upgrade Master Data Services](../../database-engine/install-windows/upgrade-master-data-services.md)   
- [SQL Server 2008 R2 Best Practices Analyzer](http://go.microsoft.com/fwlink/?LinkId=197135)   
- [Backward Compatibility_deleted](http://msdn.microsoft.com/library/15d9117e-e2fa-4985-99ea-66a117c1e9fd)  
+ [SQL Server 2008 R2 Best Practices Analyzer](https://go.microsoft.com/fwlink/?LinkId=197135)   
+ [Backward Compatibility_deleted](https://msdn.microsoft.com/library/15d9117e-e2fa-4985-99ea-66a117c1e9fd)  
   
   

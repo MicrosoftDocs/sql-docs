@@ -2,24 +2,15 @@
 title: "Step 1: Copying the Lesson 4 Package | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "integration-services"
-ms.service: ""
-ms.component: "tutorial"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
-applies_to: 
-  - "SQL Server 2016"
+ms.technology: integration-services
+ms.topic: tutorial
 ms.assetid: 8aa7d690-4649-4c0a-ac6f-9504637ee426
-caps.latest.revision: 24
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
-ms.workload: "Inactive"
+manager: craigg
 ---
 # Lesson 5-1 - Copying the Lesson 4 Package
 In this task, you will create a copy of the Lesson 4.dtsx package that you created in Lesson 4. Alternatively, you can add the completed lesson 4 package that is included with the tutorial to the project, and then copy it instead. You will use this new copy throughout the rest of Lesson 5.  
@@ -52,11 +43,11 @@ In this task, you will create a copy of the Lesson 4.dtsx package that you creat
   
 3.  In the **Add Copy of Existing Package** dialog box, in **Package location**, select **File system**.  
   
-4.  Click the browse **(…)** button, navigate to **Lesson 4.dtsx** on your machine, and then click **Open**.  
+4.  Click the browse **(...)** button, navigate to **Lesson 4.dtsx** on your machine, and then click **Open**.  
   
     To download all of the lesson packages for this tutorial, do the following.  
   
-    1.  Navigate to [Integration Services Product Samples](http://go.microsoft.com/fwlink/?LinkId=275027)  
+    1.  Navigate to [Integration Services Product Samples](https://go.microsoft.com/fwlink/?LinkId=275027)  
   
     2.  Click the **DOWNLOADS** tab.  
   

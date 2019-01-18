@@ -1,18 +1,12 @@
 ---
 title: "rskeymgmt Utility (SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/20/2017"
+ms.date: 03/20/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
-ms.service: ""
-ms.component: "tools"
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
+ms.technology: tools
 
 
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "report servers [Reporting Services], encryption"
   - "joining report server instances [SQL Server]"
@@ -25,11 +19,8 @@ helpviewer_keywords:
   - "rskeymgmt utility"
   - "scale-out deployments [Reporting Services]"
 ms.assetid: 53f1318d-bd2d-4c08-b19f-c8b698b5b3d3
-caps.latest.revision: 56
-author: "markingmyname"
-ms.author: "maghan"
-manager: "kfile"
-ms.workload: "Inactive"
+author: markingmyname
+ms.author: maghan
 ---
 # rskeymgmt Utility (SSRS)
   Extracts, restores, creates, and deletes the symmetric key used to protect sensitive report server data against unauthorized access. This utility is also used to join report server instances in a scale-out deployment. A *report server scale-out deployment* refers to multiple report server instances that share a single report server database.  
@@ -39,11 +30,11 @@ ms.workload: "Inactive"
 ```  
   
 rskeymgmt {-?}  
-{–eextract}  
-{–aapply}  
+{-eextract}  
+{-aapply}  
 {-ddeleteall}  
-{–srecreatekey}  
-{–rremoveinstancekey}  
+{-srecreatekey}  
+{-rremoveinstancekey}  
 {-jjoinfarm}  
 {-iinstance}  
 {-ffile}  
@@ -178,7 +169,7 @@ rskeymgmt -r <installationID>
  For more information about the encryption keys, see [Configure and Manage Encryption Keys &#40;SSRS Configuration Manager&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md) and [Initialize a Report Server &#40;SSRS Configuration Manager&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-initialize-a-report-server.md).  
   
 ## See Also  
- [Scale-out Deployment  - Reporting Services Native mode &#40;Configuration Manager&#41;](http://msdn.microsoft.com/library/4df38294-6f9d-4b40-9f03-1f01c1f0700c)   
+ [Scale-out Deployment  - Reporting Services Native mode &#40;Configuration Manager&#41;](https://msdn.microsoft.com/library/4df38294-6f9d-4b40-9f03-1f01c1f0700c)   
  [Reporting Services Report Server &#40;Native Mode&#41;](../../reporting-services/report-server/reporting-services-report-server-native-mode.md)   
  [Report Server Command Prompt Utilities &#40;SSRS&#41;](../../reporting-services/tools/report-server-command-prompt-utilities-ssrs.md)   
  [Configure and Manage Encryption Keys &#40;SSRS Configuration Manager&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md)  

@@ -2,22 +2,16 @@
 title: "Calling Natively Compiled Stored Procedures from Data Access Applications | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.service: ""
-ms.component: "in-memory-oltp"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine-imoltp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: in-memory-oltp
+ms.topic: conceptual
 ms.assetid: 9cf6c5ff-4548-401a-b3ec-084f47ff0eb8
-caps.latest.revision: 10
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-ms.workload: "Inactive"
+author: "CarlRabeler"
+ms.author: "carlrab"
+manager: craigg
+monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Calling Natively Compiled Stored Procedures from Data Access Applications
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -64,7 +58,7 @@ if (returnCode != SQL_SUCCESS && returnCode != SQL_SUCCESS_WITH_INFO) {
 }  
   
 // 2, 3, 4 - ItemNo, ProdCode, Qty  
-…  
+...  
   
 // Prepare stored procedure  
 returnCode = SQLPrepare(hstmt, (SQLTCHAR *) _T("{call ItemInsert(?, ?, ?, ?)}"),SQL_NTS);  
@@ -90,7 +84,7 @@ for (unsigned int i = 0; i < order.ItemCount; i++) {
   
 1.  Create a sample database with a memory-optimized data filegroup. For information on how to create a database with a memory-optimized data filegroup, see [Creating a Memory-Optimized Table and a Natively Compiled Stored Procedure](../../relational-databases/in-memory-oltp/creating-a-memory-optimized-table-and-a-natively-compiled-stored-procedure.md).  
   
-2.  Create an ODBC data source called PrepExecSample that points to the database. Use the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client driver. You could also modify the sample and use the [Microsoft ODBC Driver for SQL Server](http://msdn.microsoft.com/library/jj730314.aspx).  
+2.  Create an ODBC data source called PrepExecSample that points to the database. Use the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client driver. You could also modify the sample and use the [Microsoft ODBC Driver for SQL Server](https://msdn.microsoft.com/library/jj730314.aspx).  
   
 3.  Run the [!INCLUDE[tsql](../../includes/tsql-md.md)] script (below) on the sample database.  
   

@@ -2,15 +2,10 @@
 title: "CREATE SEARCH PROPERTY LIST (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "04/10/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.service: ""
-ms.component: "t-sql|statements"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: t-sql
 ms.topic: "language-reference"
 f1_keywords: 
   - "CREATE_SEARCH_PROPERTY_LIST_TSQL"
@@ -26,11 +21,9 @@ helpviewer_keywords:
   - "search property lists [SQL Server], creating"
   - "CREATE SEARCH PROPERTY LIST statement"
 ms.assetid: 5440cbb8-3403-4d27-a2f9-8e1f5a1bc12b
-caps.latest.revision: 29
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "craigg"
-ms.workload: "Inactive"
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
 ---
 # CREATE SEARCH PROPERTY LIST (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]

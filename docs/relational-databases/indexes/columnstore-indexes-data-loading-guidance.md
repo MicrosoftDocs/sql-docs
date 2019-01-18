@@ -2,22 +2,16 @@
 title: "Columnstore indexes - Data loading guidance | Microsoft Docs"
 ms.custom: ""
 ms.date: "12/01/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
-ms.service: ""
-ms.component: "indexes"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: table-view-index
+ms.topic: conceptual
 ms.assetid: b29850b5-5530-498d-8298-c4d4a741cdaf
-caps.latest.revision: 31
-author: "barbkess"
-ms.author: "barbkess"
-manager: "jhubbard"
-ms.workload: "On Demand"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Columnstore indexes - Data loading guidance
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -65,7 +59,7 @@ These scenarios describe when loaded rows go directly to the columnstore or when
   
 ```sql  
 SELECT object_id, index_id, partition_number, row_group_id, delta_store_hobt_id, 
-  state state_desc, total_rows, deleted_rows, size_in_bytes   
+  state, state_desc, total_rows, deleted_rows, size_in_bytes   
 FROM sys.dm_db_column_store_row_group_physical_stats  
 ```  
   
@@ -121,4 +115,4 @@ ALTER INDEX <index-name> on <table-name> REORGANIZE with (COMPRESS_ALL_ROW_GROUP
  For partitioned data, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] first assigns each row to a partition, and then performs columnstore operations on the data within the partition. Each partition has its own rowgroups and at least one delta rowgroup.  
   
  ## Next steps
- For further discussion on loading, see this [blog post](http://blogs.msdn.com/b/sqlcat/archive/2015/03/11/data-loading-performance-considerations-on-tables-with-clustered-columnstore-index.aspx).  
+ For further discussion on loading, see this [blog post](https://blogs.msdn.com/b/sqlcat/archive/2015/03/11/data-loading-performance-considerations-on-tables-with-clustered-columnstore-index.aspx).  

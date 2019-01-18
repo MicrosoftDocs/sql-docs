@@ -1,0 +1,22 @@
+- name: Overview
+  href: user-defined-functions.md
+- name: Deterministic and Nondeterministic Functions
+  href: deterministic-and-nondeterministic-functions.md
+- name: Scalar User-defined function inlining
+  href: scalar-udf-inlining.md
+- name: Create User-defined Functions (Database Engine)
+  href: create-user-defined-functions-database-engine.md
+- name: Create CLR Functions
+  href: create-clr-functions.md
+- name: Create User-defined Aggregates
+  href: create-user-defined-aggregates.md
+- name: Modify User-defined Functions
+  href: modify-user-defined-functions.md
+- name: Delete User-defined Functions
+  href: delete-user-defined-functions.md
+- name: Execute User-defined Functions
+  href: execute-user-defined-functions.md
+- name: Rename User-defined Functions
+  href: rename-user-defined-functions.md
+- name: View User-defined Functions
+  href: view-user-defined-functions.md

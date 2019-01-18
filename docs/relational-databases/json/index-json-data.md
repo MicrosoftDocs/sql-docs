@@ -2,24 +2,19 @@
 title: "Index JSON data | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/01/2016"
-ms.prod: "sql-non-specified"
-ms.prod_service: "database-engine, sql-database"
-ms.component: "json"
+ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: 
-  - "dbe-json"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "JSON, indexing JSON data"
   - "indexing JSON data"
 ms.assetid: ced241e1-ff09-4d6e-9f04-a594a9d2f25e
-caps.latest.revision: 9
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "craigg"
-ms.workload: "On Demand"
+author: "jovanpop-msft"
+ms.author: "jovanpop"
+ms.reviewer: douglasl
+manager: craigg
+monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Index JSON data
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -65,7 +60,7 @@ The computed column is not persisted. It's computed only when the index needs to
   
 It's important that you create the computed column with the same expression that you plan to use in your queries - in this example, the expression is `JSON_VALUE(Info, '$.Customer.Name')`.  
   
-You don’t have to rewrite your queries. If you use expressions with the `JSON_VALUE` function, as shown in the preceding example query, SQL Server sees that there's an equivalent computed column with the same expression and applies an index if possible.
+You don't have to rewrite your queries. If you use expressions with the `JSON_VALUE` function, as shown in the preceding example query, SQL Server sees that there's an equivalent computed column with the same expression and applies an index if possible.
 
 ### Execution plan for this example
 Here's the execution plan for the query in this example.  
@@ -128,7 +123,7 @@ CREATE INDEX idx_name
 ON JsonCollection(vName)
 ```  
   
-The preceding commands create a standard index on the computed column `vName`, which represents the value from the JSON `$.name` property. In the Serbian Cyrillic code page, the order of the letters is ‘А’,’Б’,’В’,’Г’,’Д’,’Ђ’,’Е’, etc. The order of items in the index is compliant with Serbian Cyrillic rules because the result of the `JSON_VALUE` function inherits its collation from the source column. The following example queries this collection and sorts the results by name.  
+The preceding commands create a standard index on the computed column `vName`, which represents the value from the JSON `$.name` property. In the Serbian Cyrillic code page, the order of the letters is 'А','Б','В','Г','Д','Ђ','Е', etc. The order of items in the index is compliant with Serbian Cyrillic rules because the result of the `JSON_VALUE` function inherits its collation from the source column. The following example queries this collection and sorts the results by name.  
   
 ```sql  
 SELECT JSON_VALUE(json,'$.name'),*
@@ -148,5 +143,14 @@ ORDER BY JSON_VALUE(json,'$.name')
   
  Since the order of values in the index is not compliant with French collation rules, SQL Server can't use the index to order results. Therefore, it adds a Sort operator that sorts results using French collation rules.  
  
-## Learn more about the built-in JSON support in SQL Server  
-For lots of specific solutions, use cases, and recommendations, see the [blog posts about the built-in JSON support](http://blogs.msdn.com/b/sqlserverstorageengine/archive/tags/json/) in SQL Server and in Azure SQL Database by Microsoft Program Manager Jovan Popovic.
+## Learn more about JSON in SQL Server and Azure SQL Database  
+  
+### Microsoft videos
+
+For a visual introduction to the built-in JSON support in SQL Server and Azure SQL Database, see the following videos:
+
+-   [SQL Server 2016 and JSON Support](https://channel9.msdn.com/Shows/Data-Exposed/SQL-Server-2016-and-JSON-Support)
+
+-   [Using JSON in SQL Server 2016 and Azure SQL Database](https://channel9.msdn.com/Shows/Data-Exposed/Using-JSON-in-SQL-Server-2016-and-Azure-SQL-Database)
+
+-   [JSON as a bridge between NoSQL and relational worlds](https://channel9.msdn.com/events/DataDriven/SQLServer2016/JSON-as-a-bridge-betwen-NoSQL-and-relational-worlds)

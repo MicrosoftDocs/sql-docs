@@ -1,42 +1,22 @@
 ---
 title: "Upgrade Workbooks and Scheduled Data Refresh (SharePoint 2013) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/02/2017"
-ms.prod: analysis-services
-ms.prod_service: "analysis-services"
-ms.service: ""
-ms.component: ""
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
-  - "setup-install"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-ms.assetid: a49c4af4-e243-4926-be97-74da1f9d54eb
-caps.latest.revision: 20
-author: "Minewiskan"
-ms.author: "owend"
-manager: "kfile"
-ms.workload: "Inactive"
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: ppvt-sharepoint
+ms.topic: conceptual
+ms.author: owend
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
 ---
 # Upgrade Workbooks and Scheduled Data Refresh (SharePoint 2013)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
-  This topic explains the user experience of workbooks created in previous [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] environments and how to upgrade [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] workbooks so that you can take advantage of new features introduced in this release. To learn more about new features, see [What’s New in Power Pivot](http://go.microsoft.com/fwlink/?LinkID=203917).  
+  This topic explains the user experience of workbooks created in previous [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] environments and how to upgrade [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] workbooks so that you can take advantage of new features introduced in this release. To learn more about new features, see [What's New in Power Pivot](http://go.microsoft.com/fwlink/?LinkID=203917).  
   
 > [!WARNING]  
 >  You cannot rollback upgrade for workbooks that are upgraded automatically on the server. Once a workbook is upgraded, it remains upgraded. To use a previous version, you can republish the previous workbook to SharePoint, restore a previous version, or recycle the workbook. For more information about restoring or recycling a document in SharePoint, see [Plan to protect content by using recycle bins and versioning](http://go.microsoft.com/fwlink/?LinkId=238669).  
   
- This topic contains the following sections:  
-  
--   [Overview of Upgrading Workbooks](#bkmk_overview)  
-  
--   [Upgrade to SQL Server 2012 Service Pack 1 (SP1) workbooks from 2008 R2 Workbooks](#bkmk_to_2012sp1_from_2008r2)  
-  
--   [Upgrade to Office 2013 workbooks from Versions created by using the 2012 Power Pivot Add-In for Excel](#bkmk_to_2012sp1_from_2012)  
-  
--   [Upgrade to SQL Server 2012 workbooks from Versions created by using the 2008 R2 Power Pivot Add-In for Excel 2010](#bkmk_to_2012_from_2008R2)  
-  
--   [Running Multiple Workbook Versions on a Newer Server](#bkmk_runold)  
   
 ##  <a name="bkmk_overview"></a> Overview of Upgrading Workbooks  
  A [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] workbook is an Excel workbook that contains embedded [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] data. Upgrading a workbook has two benefits:  
@@ -66,7 +46,7 @@ ms.workload: "Inactive"
   
  2008 R2 workbooks will open in [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] for SharePoint 2013, however scheduled data refreshes will not work. If you review the refresh history you will see an error message similar to the following:  
   
- “The workbook contains an unsupported [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] model. The [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] model in the workbook is in the SQL Server 2008 R2 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] for Excel 2010 format. Supported [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] models are the following:  
+ "The workbook contains an unsupported [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] model. The [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] model in the workbook is in the SQL Server 2008 R2 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] for Excel 2010 format. Supported [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] models are the following:  
   
 -   SQL Server 2012 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] for Excel 2010.  
   
@@ -95,7 +75,7 @@ ms.workload: "Inactive"
   
  Upgrading a workbook resolves the following error that occurs when attempting scheduled data refresh on the previous workbook version workbook:  
   
- “Refresh operation for workbooks created with earlier version of [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] is not available.”  
+ "Refresh operation for workbooks created with earlier version of [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] is not available."  
   
  **How to upgrade a workbook**  
   
@@ -112,7 +92,7 @@ ms.workload: "Inactive"
   
  Upgrading a workbook resolves the following error that occurs when attempting scheduled data refresh on the previous workbook version workbook:  
   
- “Refresh operation for workbooks created with earlier version of [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] is not available.”  
+ "Refresh operation for workbooks created with earlier version of [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] is not available."  
   
  **How to upgrade a workbook**  
   
@@ -140,7 +120,7 @@ PS C:\Windows\system32> Get-PowerPivotSystemService
  To enable automatic workbook upgrade, run the following command:  
   
 ```  
-PS C:\Windows\system32> Set-PowerPivotSystemService –WorkbookUpgradeOnDataRefresh:$true –Confirm:$false  
+PS C:\Windows\system32> Set-PowerPivotSystemService -WorkbookUpgradeOnDataRefresh:$true -Confirm:$false  
 ```  
   
  After you upgrade the workbook, you can use scheduled data refresh and new features in the [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] for Excel add-in.  

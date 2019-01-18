@@ -1,35 +1,18 @@
 ---
 title: "The Basic MDX Query (MDX) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/13/2017"
-ms.prod: analysis-services
-ms.prod_service: "analysis-services"
-ms.service: ""
-ms.component: ""
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
-  
-ms.component: multidimensional-tabular
-ms.component: data-mining
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "queries [MDX], SELECT statement"
-  - "queries [MDX], about queries"
-  - "cellsets [MDX]"
-  - "SELECT statement [MDX]"
-  - "cubes [Analysis Services], SELECT statement"
-ms.assetid: 4fa5a95a-fec9-4584-875c-dbf030c53e82
-caps.latest.revision: 32
-author: "Minewiskan"
-ms.author: "owend"
-manager: "kfile"
-ms.workload: "Active"
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: mdx
+ms.topic: conceptual
+ms.author: owend
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
 ---
 # MDX Query - The Basic Query
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
-  The basic Multidimensional Expressions (MDX) query is the SELECT statement—the most frequently used query in MDX. By understanding how an MDX SELECT statement must specify a result set, what the syntax of the SELECT statement is, and how to create a simple query using the SELECT statement, you will have a solid understanding of how to use MDX to query multidimensional data.  
+  The basic Multidimensional Expressions (MDX) query is the SELECT statement-the most frequently used query in MDX. By understanding how an MDX SELECT statement must specify a result set, what the syntax of the SELECT statement is, and how to create a simple query using the SELECT statement, you will have a solid understanding of how to use MDX to query multidimensional data.  
   
 ## Specifying a Result Set  
  In MDX, the SELECT statement specifies a result set that contains a subset of multidimensional data that has been returned from a cube. To specify a result set, an MDX query must contain the following information:  

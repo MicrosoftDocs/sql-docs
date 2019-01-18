@@ -2,16 +2,11 @@
 title: "System Variables | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "integration-services"
-ms.service: ""
-ms.component: "non-specific"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: integration-services
+ms.topic: conceptual
 helpviewer_keywords: 
   - "containers [Integration Services], variables"
   - "tasks [Integration Services], variables"
@@ -19,16 +14,14 @@ helpviewer_keywords:
   - "event handlers [Integration Services], variables"
   - "variables [Integration Services], system"
 ms.assetid: efecd0d4-1489-4eba-a8fe-275d647058b8
-caps.latest.revision: 54
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
-ms.workload: "On Demand"
+manager: craigg
 ---
 # System Variables
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] provides a set of system variables that store information about the running package and its objects. These variables can be used in expressions and property expressions to customize packages, containers, tasks, and event handlers.  
   
- All variables—system and user-defined— can be used in the parameter bindings that the Execute SQL task uses to map variables to parameters.  
+ All variables-system and user-defined- can be used in the parameter bindings that the Execute SQL task uses to map variables to parameters.  
   
 ## System Variables for Packages  
  The following table describes the system variables that [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] provides for packages.  
@@ -106,6 +99,6 @@ ms.workload: "On Demand"
  This rule applies to user-defined variables as well. But, whereas the data types of system variables cannot be changed and you have to tailor your use of these variables to fit the data types, user-defined are more flexible. The user-defined variables that are used in parameter bindings are usually defined with data types that are compatible with the data types of parameters to which they are mapped.  
   
 ## Related Tasks  
- [Map Query Parameters to Variables in an Execute SQL Task](http://msdn.microsoft.com/library/6a164349-dfcf-4995-80bc-d4e7aee52a83)  
+ [Map Query Parameters to Variables in an Execute SQL Task](https://msdn.microsoft.com/library/6a164349-dfcf-4995-80bc-d4e7aee52a83)  
   
   

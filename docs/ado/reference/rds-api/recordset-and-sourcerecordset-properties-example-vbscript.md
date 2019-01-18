@@ -1,31 +1,25 @@
 ---
 title: "Recordset and SourceRecordset Properties Example (VBScript) | Microsoft Docs"
-ms.technology:
-  - "drivers"
+ms.technology: connectivity
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: 
-ms.suite: sql
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.component: reference
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.prod: sql  
+ms.prod_service: connectivity
+ms.topic: conceptual
 dev_langs: 
   - "VB"
 helpviewer_keywords: 
   - "Source property [ADO], VBScript example"
   - "Recordset property [ADO], VBScript example"
 ms.assetid: 95175316-cd10-4cf7-96ba-2a226fd97701
-caps.latest.revision: 16
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
-ms.workload: "Inactive"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # Recordset and SourceRecordset Properties Example (VBScript)
 > [!IMPORTANT]
->  Beginning with Windows 8 and Windows Server 2012, RDS server components are no longer included in the Windows operating system (see Windows 8 and [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/en-us/download/details.aspx?id=27416) for more detail). RDS client components will be removed in a future version of Windows. Avoid using this feature in new development work, and plan to modify applications that currently use this feature. Applications that use RDS should migrate to [WCF Data Service](http://go.microsoft.com/fwlink/?LinkId=199565).  
+>  Beginning with Windows 8 and Windows Server 2012, RDS server components are no longer included in the Windows operating system (see Windows 8 and [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) for more detail). RDS client components will be removed in a future version of Windows. Avoid using this feature in new development work, and plan to modify applications that currently use this feature. Applications that use RDS should migrate to [WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565).  
   
  The following example shows how to set the necessary parameters of the [RDSServer.DataFactory](../../../ado/reference/rds-api/datafactory-object-rdsserver.md) default business object at run time.  
   
@@ -92,7 +86,7 @@ CLASSID="CLSID:BD96C556-65A3-11D0-983A-00C04FC29E36">
    </TR>  
 </TABLE>  
 <HR>  
-<Input Size=70 Name="txtServer" Value="http://<%=Request.ServerVariables("SERVER_NAME")%>"><BR>  
+<Input Size=70 Name="txtServer" Value="https://<%=Request.ServerVariables("SERVER_NAME")%>"><BR>  
 <Input Size=70 Name="txtConnect" Value="Provider='sqloledb';Integrated Security='SSPI';Initial Catalog='Northwind'"><BR>  
 <Input Size=70 Name="txtSQL" Value="SELECT FirstName, LastName FROM Employees">  
 <HR>  
@@ -103,7 +97,7 @@ CLASSID="CLSID:BD96C556-65A3-11D0-983A-00C04FC29E36">
   
    Dim rdsDF  
    Dim strServer  
-   strServer = "http://<%=Request.ServerVariables("SERVER_NAME")%>"  
+   strServer = "https://<%=Request.ServerVariables("SERVER_NAME")%>"  
   
    Sub Run_OnClick()  
   

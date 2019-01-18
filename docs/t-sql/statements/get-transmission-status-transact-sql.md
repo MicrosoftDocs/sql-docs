@@ -2,15 +2,10 @@
 title: "GET_TRANSMISSION_STATUS (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/26/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "sql-database"
-ms.service: ""
-ms.component: "t-sql|statements"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: t-sql
 ms.topic: "language-reference"
 f1_keywords: 
   - "STATUS_TSQL"
@@ -28,11 +23,9 @@ helpviewer_keywords:
   - "status information [SQL Server], conversations"
   - "GET_TRANSMISSION_STATUS statement"
 ms.assetid: 621805d5-49ed-4764-b3cb-2ae4a3bf797e
-caps.latest.revision: 36
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "craigg"
-ms.workload: "Inactive"
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
 ---
 # GET_TRANSMISSION_STATUS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

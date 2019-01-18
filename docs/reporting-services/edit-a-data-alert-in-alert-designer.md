@@ -1,29 +1,21 @@
 ---
 title: "Edit a Data Alert in Alert Designer | Microsoft Docs"
-ms.custom: ""
-ms.date: "07/02/2017"
+ms.date: 07/02/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
-ms.service: ""
-ms.component: "reporting-services"
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
+ms.technology: reporting-services
 
 
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "editing, data alerts"
   - "updating, data alerts"
   - "editing, alerts"
   - "updating, alerts"
 ms.assetid: dde3664d-90b5-4b12-969e-39152c86e58a
-caps.latest.revision: 11
-author: "markingmyname"
-ms.author: "maghan"
-manager: "kfile"
-ms.workload: "Inactive"
+author: markingmyname
+ms.author: maghan
+monikerRange: ">=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions"
 ---
 # Edit a Data Alert in Alert Designer
 
@@ -63,4 +55,4 @@ You open the data alert definition that you want to edit from Data Alert Manager
 [Data Alert Manager for Alerting Administrators](../reporting-services/data-alert-manager-for-alerting-administrators.md)   
 [Reporting Services Data Alerts](../reporting-services/reporting-services-data-alerts.md)  
 
-More questions? [Try asking the Reporting Services forum](http://go.microsoft.com/fwlink/?LinkId=620231)
+More questions? [Try asking the Reporting Services forum](https://go.microsoft.com/fwlink/?LinkId=620231)

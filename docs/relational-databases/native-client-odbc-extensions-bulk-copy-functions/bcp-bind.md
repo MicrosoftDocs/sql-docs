@@ -2,15 +2,10 @@
 title: "bcp_bind | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
-ms.service: ""
-ms.component: "native-client-odbc-extensions-bulk-copy-functions"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: native-client
 ms.topic: "reference"
 apiname: 
   - "bcp_bind"
@@ -20,11 +15,10 @@ apitype: "DLLExport"
 helpviewer_keywords: 
   - "bcp_bind function"
 ms.assetid: 6e335a5c-64b2-4bcf-a88f-35dc9393f329
-caps.latest.revision: 47
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-ms.workload: "Inactive"
+author: MightyPen
+ms.author: genemi
+manager: craigg
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # bcp_bind
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -122,7 +116,51 @@ bcp_bind(hdbc, szName, 0,
   
  The *eDataType* parameter is enumerated by the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] data type tokens in sqlncli.h, not the ODBC C data type enumerators. For example, you can specify a two-byte integer, ODBC type SQL_C_SHORT, using the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-specific type SQLINT2.  
   
- [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] introduced support for SQLXML and SQLUDT data type tokens in the ***eDataType*** paramenter.  
+ [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] introduced support for SQLXML and SQLUDT data type tokens in the **_eDataType_** paramenter.  
+ 
+ The following table lists valid enumerated data types and the corresponding ODBC C data types.
+  
+|eDataType|C type|  
+|-----------------------|------------|  
+|SQLTEXT|char *|  
+|SQLNTEXT|wchar_t *|  
+|SQLCHARACTER|char *|  
+|SQLBIGCHAR|char *|  
+|SQLVARCHAR|char *|  
+|SQLBIGVARCHAR|char *|  
+|SQLNCHAR|wchar_t *|  
+|SQLNVARCHAR|wchar_t *|  
+|SQLBINARY|unsigned char *|  
+|SQLBIGBINARY|unsigned char *|  
+|SQLVARBINARY|unsigned char *|  
+|SQLBIGVARBINARY|unsigned char *|  
+|SQLBIT|char|  
+|SQLBITN|char|  
+|SQLINT1|char|  
+|SQLINT2|short int|  
+|SQLINT4|int|  
+|SQLINT8|_int64|  
+|SQLINTN|*cbIndicator*<br /> 1: SQLINT1<br /> 2: SQLINT2<br /> 4: SQLINT4<br /> 8: SQLINT8|  
+|SQLFLT4|float|  
+|SQLFLT8|float|  
+|SQLFLTN|*cbIndicator*<br /> 4: SQLFLT4<br /> 8: SQLFLT8|  
+|SQLDECIMALN|SQL_NUMERIC_STRUCT|  
+|SQLNUMERICN|SQL_NUMERIC_STRUCT|  
+|SQLMONEY|DBMONEY|  
+|SQLMONEY4|DBMONEY4|  
+|SQLMONEYN|*cbIndicator*<br /> 4: SQLMONEY4<br /> 8: SQLMONEY|  
+|SQLTIMEN|SQL_SS_TIME2_STRUCT|  
+|SQLDATEN|SQL_DATE_STRUCT|  
+|SQLDATETIM4|DBDATETIM4|  
+|SQLDATETIME|DBDATETIME|  
+|SQLDATETIMN|*cbIndicator*<br /> 4: SQLDATETIM4<br /> 8: SQLDATETIME|  
+|SQLDATETIME2N|SQL_TIMESTAMP_STRUCT|  
+|SQLDATETIMEOFFSETN|SQL_SS_TIMESTAMPOFFSET_STRUCT|  
+|SQLIMAGE|unsigned char *|  
+|SQLUDT|unsigned char *|  
+|SQLUNIQUEID|SQLGUID|  
+|SQLVARIANT|*Any data type except:*<br />-   text<br />-   ntext<br />-   image<br />-   varchar(max)<br />-   varbinary(max)<br />-   nvarchar(max)<br />-   xml<br />-   timestamp|  
+|SQLXML|*Supported C data types:*<br />-   char*<br />-   wchar_t *<br />-   unsigned char *|  
   
  *idxServerCol*  
  Is the ordinal position of the column in the database table to which the data is copied. The first column in a table is column 1. The ordinal position of a column is reported by [SQLColumns](../../relational-databases/native-client-odbc-api/sqlcolumns.md).  
@@ -133,7 +171,7 @@ bcp_bind(hdbc, szName, 0,
 ## Remarks  
  Use **bcp_bind** for a fast, efficient way to copy data from a program variable into a table in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- Call [bcp_init](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-init.md) before calling this or any other bulk-copy function. Calling **bcp_init** sets the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] target table for bulk copy. When calling **bcp_init** for use with **bcp_bind** and [bcp_sendrow](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-sendrow.md), the **bcp_init** *szDataFile* parameter, indicating the data file, is set to NULL; the **bcp_init***eDirection* parameter is set to DB_IN.  
+ Call [bcp_init](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-init.md) before calling this or any other bulk-copy function. Calling **bcp_init** sets the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] target table for bulk copy. When calling **bcp_init** for use with **bcp_bind** and [bcp_sendrow](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-sendrow.md), the **bcp_init** _szDataFile_ parameter, indicating the data file, is set to NULL; the **bcp_init**_eDirection_ parameter is set to DB_IN.  
   
  Make a separate **bcp_bind** call for every column in the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] table into which you want to copy. After the necessary **bcp_bind** calls have been made, then call **bcp_sendrow** to send a row of data from your program variables to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Rebinding a column is not supported.  
   

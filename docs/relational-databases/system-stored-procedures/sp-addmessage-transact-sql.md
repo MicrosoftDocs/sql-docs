@@ -2,15 +2,10 @@
 title: "sp_addmessage (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/16/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "database-engine"
-ms.service: ""
-ms.component: "system-stored-procedures"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: system-objects
 ms.topic: "language-reference"
 f1_keywords: 
   - "sp_addmessage"
@@ -20,11 +15,9 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_addmessage"
 ms.assetid: 54746d30-f944-40e5-a707-f2d9be0fb9eb
-caps.latest.revision: 25
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-ms.workload: "On Demand"
+author: "stevestein"
+ms.author: "sstein"
+manager: craigg
 ---
 # sp_addmessage (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,25 +37,25 @@ sp_addmessage [ @msgnum= ] msg_id , [ @severity= ] severity , [ @msgtext= ] 'msg
 ```  
   
 ## Arguments  
- [ **@msgnum****=** ] *msg_id*  
+ [ **\@msgnum =** ] *msg_id*  
  Is the ID of the message. *msg_id* is **int** with a default of NULL. *msg_id* for user-defined error messages can be an integer between 50,001 and 2,147,483,647. The combination of *msg_id* and *language* must be unique; an error is returned if the ID already exists for the specified language.  
   
- [ **@severity =** ]*severity*  
+ [ **\@severity =** ]*severity*  
  Is the severity level of the error. *severity* is **smallint** with a default of NULL. Valid levels are from 1 through 25. For more information about severities, see [Database Engine Error Severities](../../relational-databases/errors-events/database-engine-error-severities.md).  
   
- [ **@msgtext =** ] **'***msg***'**  
+ [ **\@msgtext =** ] **'**_msg_**'**  
  Is the text of the error message. *msg* is **nvarchar(255)** with a default of NULL.  
   
- [ **@lang =** ] **'***language***'**  
+ [ **\@lang =** ] **'**_language_**'**  
  Is the language for this message. *language* is **sysname** with a default of NULL. Because multiple languages can be installed on the same server, *language* specifies the language in which each message is written. When *language* is omitted, the language is the default language for the session.  
   
- [ **@with_log =** ] { **'**TRUE**'** | **'FALSE'** }  
- Is whether the message is to be written to the Windows application log when it occurs. **@with_log** is **varchar(5)** with a default of FALSE. If TRUE, the error is always written to the Windows application log. If FALSE, the error is not always written to the Windows application log but can be written, depending on how the error was raised. Only members of the **sysadmin** server role can use this option.  
+ [ **\@with_log =** ] { **'**TRUE**'** | **'FALSE'** }  
+ Is whether the message is to be written to the Windows application log when it occurs. **\@with_log** is **varchar(5)** with a default of FALSE. If TRUE, the error is always written to the Windows application log. If FALSE, the error is not always written to the Windows application log but can be written, depending on how the error was raised. Only members of the **sysadmin** server role can use this option.  
   
 > [!NOTE]  
 >  If a message is written to the Windows application log, it is also written to the [!INCLUDE[ssDE](../../includes/ssde-md.md)] error log file.  
   
- [ **@replace** *=* ] **'***replace***'**  
+ [ **\@replace =** ] **'**_replace_**'**  
  If specified as the string *replace*, an existing error message is overwritten with new message text and severity level. *replace* is **varchar(7)** with a default of NULL. This option must be specified if *msg_id* already exists. If you replace a U.S. English message, the severity level is replaced for all messages in all other languages that have the same *msg_id*.  
   
 ## Return Code Values  

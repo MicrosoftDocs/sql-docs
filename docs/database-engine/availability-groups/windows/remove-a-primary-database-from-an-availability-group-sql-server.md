@@ -1,17 +1,12 @@
 ---
-title: "Remove a Primary Database from an Availability Group (SQL Server) | Microsoft Docs"
-ms.custom: ""
+title: "Remove a primary database from an availability group"
+description: "Steps to remove a primary database from an Always On availability group using Transact-SQL (T-SQL), PowerShell, or SQL Server Management Studio."
+ms.custom: "seodec18"
 ms.date: "05/17/2016"
-ms.prod: "sql-non-specified"
-ms.prod_service: "database-engine"
-ms.service: ""
-ms.component: "availability-groups"
+ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: high-availability
+ms.topic: conceptual
 f1_keywords: 
   - "sql13.swb.availabilitygroup.removeprimarydb.f1"
 helpviewer_keywords: 
@@ -20,13 +15,11 @@ helpviewer_keywords:
   - "Availability Groups [SQL Server], configuring"
   - "Availability Groups [SQL Server], databases"
 ms.assetid: 6d4ca31e-ddf0-44bf-be5e-a5da060bf096
-caps.latest.revision: 28
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-ms.workload: "On Demand"
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
 ---
-# Remove a Primary Database from an Availability Group (SQL Server)
+# Remove a primary database from an Always On availability group
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   This topic describes how to remove both the primary database and the corresponding secondary database(s) from an Always On availability group by using [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)], or PowerShell in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)].  
   

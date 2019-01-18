@@ -2,27 +2,20 @@
 title: "Implement a Lookup in No Cache or Partial Cache Mode | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "integration-services"
-ms.service: ""
-ms.component: "data-flow"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: integration-services
+ms.topic: conceptual
 helpviewer_keywords: 
   - "Lookup transformation"
   - "match exactly [Integration Services]"
   - "lookups [Integration Services]"
   - "exact matches [Integration Services]"
 ms.assetid: 01b7fbca-5181-4d47-9f75-7f25af6b40d2
-caps.latest.revision: 67
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
-ms.workload: "Inactive"
+manager: craigg
 ---
 # Implement a Lookup in No Cache or Partial Cache Mode
   You can configure the Lookup transformation to use the partial cache or no cache mode:  
@@ -62,11 +55,11 @@ ms.workload: "Inactive"
   
     -   Click **Use results of an SQL query**, and then build a query in the **SQL Command** window.  
   
-         —or—  
+         -or-  
   
          Click **Build Query** to build a query by using the graphical tools that the **Query Builder** provides.  
   
-         —or—  
+         -or-  
   
          Click **Browse** to import an SQL statement from a file.  
   

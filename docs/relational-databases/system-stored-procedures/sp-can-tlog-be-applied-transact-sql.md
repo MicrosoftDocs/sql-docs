@@ -2,15 +2,10 @@
 title: "sp_can_tlog_be_applied (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "database-engine"
-ms.service: ""
-ms.component: "system-stored-procedures"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: system-objects
 ms.topic: "language-reference"
 f1_keywords: 
   - "sp_can_tlog_be_applied_TSQL"
@@ -20,11 +15,9 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_can_tlog_be_applied"
 ms.assetid: 9c143b6c-27ac-4ab7-98d1-3b7b265f3963
-caps.latest.revision: 26
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-ms.workload: "Inactive"
+author: "stevestein"
+ms.author: "sstein"
+manager: craigg
 ---
 # sp_can_tlog_be_applied (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,13 +36,13 @@ sp_can_tlog_be_applied [ @backup_file_name = ] 'backup_file_name'
 ```  
   
 ## Arguments  
- [ **@backup_file_name=** ] **'***backup_file_name***'**  
+ [ **@backup_file_name=** ] **'**_backup_file_name_**'**  
  Is the name of a backup file. *backup_file_name* is **nvarchar(128)**.  
   
- [ **@database_name=** ] **'***database_name***'**  
+ [ **@database_name=** ] **'**_database_name_**'**  
  Is the name of the database. *database_name* is **sysname**.  
   
- [ **@result=** ] *result* **OUTPUT**  
+ [ **@result=** ] _result_ **OUTPUT**  
  Indicates whether the transaction log can be applied to the database. *result* is **bit**.  
   
  1 = The log can be applies  

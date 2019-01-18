@@ -4,22 +4,15 @@ ms.custom: ""
 ms.date: "03/03/2017"
 ms.prod: ""
 ms.prod_service: "sql-data-warehouse, pdw"
-ms.service: "sql-data-warehouse"
-ms.component: "system-catalog-views"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 dev_langs: 
   - "TSQL"
 ms.assetid: 473b5d14-171b-4a16-9195-acf36d3f786c
-caps.latest.revision: 8
-author: "barbkess"
-ms.author: "barbkess"
-manager: "jhubbard"
-ms.workload: "Inactive"
+author: ronortloff
+ms.author: rortloff
+manager: craigg
+monikerRange: ">= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions"
 ---
 # sys.pdw_nodes_tables (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -28,7 +21,7 @@ ms.workload: "Inactive"
   
 |Column Name|Data Type|Description|Range|  
 |-----------------|---------------|-----------------|-----------|  
-|\<inherited columns>||For a list of columns that this view inherits, see [sys.objects](http://msdn.microsoft.com/en-us/c36fa71e-549a-4533-a6cd-1314d26f533f).||  
+|\<inherited columns>||For a list of columns that this view inherits, see [sys.objects](https://msdn.microsoft.com/c36fa71e-549a-4533-a6cd-1314d26f533f).||  
 |lob_data_space_id|**int**||Always 0.|  
 |filestream_data_space_id|**int**|Data space ID for a FILESTREAM filegroup or [!INCLUDE[ssInfoNA](../../includes/ssinfona-md.md)]|NULL|  
 |max_column_id_used|**int**|Maximum column ID used by this table.||  

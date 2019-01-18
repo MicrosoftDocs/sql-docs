@@ -1,30 +1,14 @@
 ---
 title: "BottomPercent (DMX) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/02/2016"
-ms.prod: analysis-services
-ms.prod_service: "analysis-services"
-ms.service: ""
-ms.component: ""
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
-  
-ms.component: data-mining
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "BOTTOMPERCENT"
-dev_langs: 
-  - "DMX"
-helpviewer_keywords: 
-  - "BottomPercent function"
-ms.assetid: 984eb18a-c55c-49f3-81fa-918dfc983174
-caps.latest.revision: 41
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-ms.workload: "Inactive"
+ms.date: 06/07/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: dmx
+ms.topic: conceptual
+ms.author: owend
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
 ---
 # BottomPercent (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -55,7 +39,7 @@ BottomPercent(<table expression>, <rank expression>, <percent>)
  The **BottomPercent** function returns the bottom-most rows in increasing order of rank. The rank is based on the evaluated value of the \<rank expression> argument for each row, such that the sum of the \<rank expression> values is at least the given percentage that is specified by the \<percent> argument. **BottomPercent** returns the smallest number of elements possible while still meeting the specified percent value.  
   
 ## Examples  
- The following example creates a prediction query against the Association model that you built in the [Basic Data Mining Tutorial](http://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c).  
+ The following example creates a prediction query against the Association model that you built in the [Basic Data Mining Tutorial](https://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c).  
   
  To understand how BottomPercent works, it may be helpful to first execute a prediction query that returns only the nested table.  
   

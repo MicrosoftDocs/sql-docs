@@ -2,22 +2,15 @@
 title: "SQL Data Developer | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/28/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "database-engine"
-ms.service: ""
-ms.component: "connect"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "tools-ssma"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: connectivity
+ms.topic: conceptual
 ms.assetid: 249e3794-e3fa-41cb-ad9c-f46e19e6805c
-caps.latest.revision: 5
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
-ms.workload: "Active"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # SQL Data Developer
 Use Microsoft's SQL data platform to create data-centric solutions across mobile devices and desktops for web servers, enterprise servers, and the cloud.  
@@ -25,7 +18,7 @@ Use Microsoft's SQL data platform to create data-centric solutions across mobile
 ## SQL Data storage
 * [SQL Server Database Engine](../database-engine/configure-windows/sql-server-database-engine.md): Use the  SQL Server Database Engine to create relational databases for online transaction processing or online analytical processing data. 
 * [SQL Azure](https://docs.microsoft.com/azure/sql-database/): Use  SQL Azure to move your database to the cloud 
-* [SQL Compact](https://www.microsoft.com/en-us/download/details.aspx?id=17876): SQL Server Compact to build standalone and occasionally connected applications for mobile devices, desktops, and Web clients.
+* [SQL Compact](https://www.microsoft.com/download/details.aspx?id=17876): SQL Server Compact to build standalone and occasionally connected applications for mobile devices, desktops, and Web clients.
 * [LocalDB](../database-engine/configure-windows/sql-server-2016-express-localdb.md): Use LocalDB during development to write and test Transact-SQL code without having to manage a full server instance of SQL Server.
 
 ## SQL Data tools

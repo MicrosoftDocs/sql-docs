@@ -2,15 +2,10 @@
 title: "Comparison Operators (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "sql-database"
-ms.service: ""
-ms.component: "t-sql|language-elements"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: t-sql
 ms.topic: "language-reference"
 dev_langs: 
   - "TSQL"
@@ -23,11 +18,9 @@ helpviewer_keywords:
   - "comparing expressions"
   - "comparison operators [SQL Server]"
 ms.assetid: b0cc68ef-3029-484c-a917-0c15dcbc230d
-caps.latest.revision: 35
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-ms.workload: "Active"
+author: "douglaslMS"
+ms.author: "douglasl"
+manager: craigg
 ---
 # Comparison Operators (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -51,7 +44,7 @@ ms.workload: "Active"
   
  Unlike other [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] data types, a **Boolean** data type cannot be specified as the data type of a table column or variable, and cannot be returned in a result set.  
   
- When SET ANSI_NULLS is ON, an operator that has one or two NULL expressions returns UNKNOWN. When SET ANSI_NULLS is OFF, the same rules apply, except an equals (=) operator returns TRUE if both expressions are NULL. For example, NULL = NULL returns TRUE when SET ANSI_NULLS is OFF.  
+ When SET ANSI_NULLS is ON, an operator that has one or two NULL expressions returns UNKNOWN. When SET ANSI_NULLS is OFF, the same rules apply, except for the equals (=) and not equals (<>) operators. When SET ANSI_NULLS is OFF, these operators treat NULL as a known value, equivalent to any other NULL, and only return TRUE or FALSE (never UNKNOWN).  
   
  Expressions with **Boolean** data types are used in the WHERE clause to filter the rows that qualify for the search conditions and in control-of-flow language statements such as IF and WHILE, for example:  
   

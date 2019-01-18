@@ -43,6 +43,9 @@ The following steps create a new database named `TestDB`.
    GO
    ```
 
+> [!TIP]
+> To learn more about writing Transact-SQL statements and queries, see [Tutorial: Writing Transact-SQL Statements](../t-sql/tutorial-writing-transact-sql-statements.md).
+
 ### Insert data
 
 Next create a new table, `Inventory`, and insert two new rows.
@@ -95,7 +98,21 @@ To end your **sqlcmd** session, type `QUIT`:
 QUIT
 ```
 
-## Connect from Windows
+## Performance best practices
+
+After installing SQL Server on Linux, review the best practices for configuring Linux and SQL Server to improve performance for production scenarios. For more information, see [Performance best practices and configuration guidelines for SQL Server on Linux](../linux/sql-server-linux-performance-best-practices.md).
+
+## Cross-platform data tools
+
+In addition to **sqlcmd**, you can use the following cross-platform tools to manage SQL Server:
+
+|||
+|---|---|
+| [Azure Data Studio](../azure-data-studio/index.md) | A cross-platform GUI database management utility. |
+| [mssql-cli](https://github.com/dbcli/mssql-cli/tree/master/doc) | A cross-platform command-line interface for running Transact-SQL commands. |
+| [Visual Studio Code](../linux/sql-server-linux-develop-use-vscode.md) | A cross-platform GUI code editor that run Transact-SQL statements with the mssql extension. |
+
+## Connecting from Windows
 
 SQL Server tools on Windows connect to SQL Server instances on Linux in the same way they would connect to any remote SQL Server instance.
 
@@ -103,11 +120,11 @@ If you have a Windows machine that can connect to your Linux machine, try the sa
 
 For other tools that run on Windows but connect to SQL Server on Linux, see:
 
-- [SQL Server Management Studio (SSMS)](../linux/sql-server-linux-develop-use-ssms.md)
+- [SQL Server Management Studio (SSMS)](../linux/sql-server-linux-manage-ssms.md)
 - [Windows PowerShell](../linux/sql-server-linux-manage-powershell.md)
 - [SQL Server Data Tools (SSDT)](../linux/sql-server-linux-develop-use-ssdt.md)
 
-## Next steps
+## Other deployment scenarios
 
 For other installation scenarios, see the following resources:
 
@@ -118,6 +135,10 @@ For other installation scenarios, see the following resources:
 | [Unattended install](../linux/sql-server-linux-setup.md#unattended) | Learn how to script the installation without prompts |
 | [Offline install](../linux/sql-server-linux-setup.md#offline) | Learn how to manually download the packages for offline installation |
 
-To explore other ways to connect and manage SQL Server, see [Visual Studio Code](../linux/sql-server-linux-develop-use-vscode.md) and  [SQL Server Management Studio](../linux/sql-server-linux-develop-use-ssms.md).
+> [!TIP]
+> For answers to frequently asked questions, see the [SQL Server on Linux FAQ](../linux/sql-server-linux-faq.md).
 
-To learn more about writing Transact-SQL statements and queries, see [Tutorial: Writing Transact-SQL Statements](../t-sql/tutorial-writing-transact-sql-statements.md).
+## Next steps
+
+> [!div class="nextstepaction"]
+> [Explore the tutorials for SQL Server on Linux](../linux/sql-server-linux-migrate-restore-database.md)

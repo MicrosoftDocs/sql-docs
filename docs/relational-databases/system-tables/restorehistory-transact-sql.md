@@ -2,15 +2,10 @@
 title: "restorehistory (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/03/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "database-engine"
-ms.service: ""
-ms.component: "system-tables"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: system-objects
 ms.topic: "language-reference"
 f1_keywords: 
   - "restorehistory"
@@ -20,11 +15,9 @@ dev_langs:
 helpviewer_keywords: 
   - "restorehistory system table"
 ms.assetid: 9140ecc1-d912-4d76-ae70-e2a857da6d44
-caps.latest.revision: 28
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-ms.workload: "Inactive"
+author: "stevestein"
+ms.author: "sstein"
+manager: craigg
 ---
 # restorehistory (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -34,7 +27,7 @@ ms.workload: "Inactive"
 |Column name|Data type|Description|  
 |-----------------|---------------|-----------------|  
 |**restore_history_id**|**int**|Unique identification number that identifies each restore operation. Identity, primary key.|  
-|**restore_date**|**datetime**|Date and time of the completion of the restore operation. Can be NULL.|  
+|**restore_date**|**datetime**|Date and time of the start of the restore operation. Can be NULL.|  
 |**destination_database_name**|**nvarchar(128)**|Name of the destination database for the restore operation. Can be NULL.|  
 |**user_name**|**nvarchar(128)**|Name of the user who performed the restore operation. Can be NULL.|  
 |**backup_set_id**|**int**|Unique identification number identifying the backup set being restored. References **backupset(backup_set_id)**.|  

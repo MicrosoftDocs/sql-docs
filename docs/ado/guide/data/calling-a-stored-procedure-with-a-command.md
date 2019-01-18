@@ -1,27 +1,20 @@
 ---
 title: "Calling a Stored Procedure with a Command | Microsoft Docs"
-ms.prod: "sql-non-specified"
-ms.prod_service: "drivers"
-ms.service: ""
-ms.component: "ado"
-ms.technology:
-  - "drivers"
+ms.prod: sql
+ms.prod_service: connectivity
+ms.technology: connectivity
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "calling stored procedures [ADO]"
   - "stored procedures [ADO]"
   - "commands [ADO]"
 ms.assetid: 685f7652-2271-4ede-b552-2eeb8c756b4c
-caps.latest.revision: 15
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
-ms.workload: "On Demand"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # Calling a Stored Procedure with a Command
 You can use a command to call a stored procedure. The code sample at the end of this topic refers to a stored procedure in the Northwind sample database, called CustOrdersOrders, which is defined as follows.  
@@ -135,4 +128,4 @@ End Function
 ```  
   
 ## See Also  
- [Knowledge Base article 117500](http://go.microsoft.com/fwlink/?LinkId=117500)
+ [Knowledge Base article 117500](https://go.microsoft.com/fwlink/?LinkId=117500)

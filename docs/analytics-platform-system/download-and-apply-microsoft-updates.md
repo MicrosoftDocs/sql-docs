@@ -1,24 +1,17 @@
 ---
-title: "Download and Apply Microsoft Updates (Analytics Platform System)"
-author: "barbkess" 
-ms.author: "barbkess"
-manager: "jhubbard"	  
-ms.prod: "analytics-platform-system"
-ms.prod_service: "mpp-data-warehouse"
-ms.service: ""
-ms.component:
-ms.technology: "mpp-data-warehouse"
-ms.custom: ""
-ms.date: 01/05/2017
-ms.reviewer: na
-ms.suite: "sql"
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: 4f69df44-8549-4a8a-b10c-f91908594856
-caps.latest.revision: 51
-
+title: Download Microsoft Updates - Analytics Platform System | Microsoft Docs
+description: This topic discusses how to download updates from the Microsoft Update Catalog to Windows Server Update Services (WSUS) and apply those updates to the Analytics Platform System appliance servers. Microsoft Update will install all applicable updates for Windows and SQL Server. WSUS is installed on the VMM virtual machine of the appliance. 
+author: mzaman1 
+manager: craigg
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
 ---
-# Download and Apply Microsoft Updates
+
+# Download and apply Microsoft updates for Analytics Platform System
 This topic discusses how to download updates from the Microsoft Update Catalog to Windows Server Update Services (WSUS) and apply those updates to the Analytics Platform System appliance servers. Microsoft Update will install all applicable updates for Windows and SQL Server. WSUS is installed on the VMM virtual machine of the appliance.  
   
 ## <a name="TOP"></a>Before You Begin  
@@ -77,7 +70,7 @@ Before performing these steps, you need to:
   
 3.  Select all updates, and then click the **Approve** link in the right pane.  
   
-    You can also right-click the selected updates, and then click **Approve**. You may be prompted to accept the “Microsoft Software License Terms”. If so, click **I Accept** in the window to continue.  
+    You can also right-click the selected updates, and then click **Approve**. You may be prompted to accept the "Microsoft Software License Terms". If so, click **I Accept** in the window to continue.  
   
     ![Select all updates that apply and click Approve.](./media/download-and-apply-microsoft-updates/SQL_Server_PDW_WSUSSelectApprove.png "SQL_Server_PDW_WSUSSelectApprove")  
   
@@ -109,7 +102,7 @@ Before performing these steps, you need to:
   
 1.  Before you start, open the [Monitor the Appliance by Using the Admin Console &#40;Analytics Platform System&#41;](monitor-the-appliance-by-using-the-admin-console.md), click the **Appliance State** tab, and verify that the **Cluster** and **Network** columns show green (or NA) for all nodes. If any alerts exist in either of these columns, the appliance might not be able to install updates properly. Address all existing alerts in the **Cluster** and **Network** columns before proceeding.  
   
-2.  Log on to the *<domain_name>***-HST01** node as the Fabric Domain Administrator.  
+2.  Log on to the _<domain_name>_**-HST01** node as the Fabric Domain Administrator.  
   
 3.  To apply all updates approved for WSUS, run the Update program. See [Run the Update Program](#RunUpdateWizard) below for instructions.  
   

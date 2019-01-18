@@ -2,24 +2,17 @@
 title: "Revoke Permissions on an XML Schema Collection | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "database-engine"
-ms.service: ""
-ms.component: "xml"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "dbe-xml"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: xml
+ms.topic: conceptual
 helpviewer_keywords: 
   - "revoking permissions [SQL Server]"
 ms.assetid: 4e542b70-2d56-4a65-8a39-96a1ed477ca6
-caps.latest.revision: 25
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-ms.workload: "Inactive"
+author: "douglaslMS"
+ms.author: "douglasl"
+manager: craigg
 ---
 # Revoke Permissions on an XML Schema Collection
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -78,7 +71,7 @@ setuser 'TestLogin1'
 go  
 CREATE XML SCHEMA COLLECTION dbo.myTestSchemaCollection AS '<?xml version="1.0" encoding="UTF-8" ?>  
   
-<xsd:schema targetNamespace="http://schemas.adventure-works.com/Additional/ContactInfo"   
+<xsd:schema targetNamespace="https://schemas.adventure-works.com/Additional/ContactInfo"   
             xmlns:xsd="http://www.w3.org/2001/XMLSchema"   
 elementFormDefault="qualified">  
 <xsd:element name="telephone" type="xsd:string" />  
@@ -87,7 +80,7 @@ go
 -- TestLogin1 can create XML schema collection in myOtherDBSchema relational schema  
 CREATE XML SCHEMA COLLECTION myOtherDBSchema.myTestSchemaCollection AS '<?xml version="1.0" encoding="UTF-8" ?>  
   
-<xsd:schema targetNamespace="http://schemas.adventure-works.com/Additional/ContactInfo"   
+<xsd:schema targetNamespace="https://schemas.adventure-works.com/Additional/ContactInfo"   
             xmlns:xsd="http://www.w3.org/2001/XMLSchema"   
 elementFormDefault="qualified">  
 <xsd:element name="telephone" type="xsd:string" />  
@@ -107,7 +100,7 @@ go
 setuser 'TestLogin1'  
 go  
 CREATE XML SCHEMA COLLECTION myOtherDBSchema.myTestSchemaCollection AS '<?xml version="1.0" encoding="UTF-8" ?>  
-<xsd:schema targetNamespace="http://schemas.adventure-works.com/Additional/ContactInfo"   
+<xsd:schema targetNamespace="https://schemas.adventure-works.com/Additional/ContactInfo"   
             xmlns:xsd="http://www.w3.org/2001/XMLSchema"   
 elementFormDefault="qualified">  
 <xsd:element name="telephone" type="xsd:string" />  
@@ -126,7 +119,7 @@ setuser 'TestLogin1'
 go  
 -- the following now should fail  
 CREATE XML SCHEMA COLLECTION dbo.myTestSchemaCollection AS '<?xml version="1.0" encoding="UTF-8" ?>  
-<xsd:schema targetNamespace="http://schemas.adventure-works.com/Additional/ContactInfo"   
+<xsd:schema targetNamespace="https://schemas.adventure-works.com/Additional/ContactInfo"   
             xmlns:xsd="http://www.w3.org/2001/XMLSchema"   
 elementFormDefault="qualified">  
 <xsd:element name="telephone" type="xsd:string" />  

@@ -1,29 +1,24 @@
 ---
 title: "Full-Text Search | Microsoft Docs"
 ms.custom: ""
-ms.date: "07/29/2016"
-ms.prod: "sql-non-specified"
-ms.prod_service: "database-engine, sql-database"
-ms.service: ""
-ms.component: "search"
+ms.date: "04/10/2018"
+ms.prod: sql
+ms.prod_service: "search, sql-database"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "dbe-search"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology:
+ms.topic: conceptual
 helpviewer_keywords: 
   - "full-text search [SQL Server]"
 ms.assetid: a0ce315d-f96d-4e5d-b4eb-ff76811cab75
-caps.latest.revision: 54
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-ms.workload: "Active"
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Full-Text Search
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  Full-Text Search in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)] lets users and applications run full-text queries against character-based data in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tables.
+
+Full-Text Search in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)] lets users and applications run full-text queries against character-based data in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tables.
   
 ## Basic tasks
 This topic provides an overview of Full-Text Search and describes its components and its architecture. If you prefer to get started right away, here are the basic tasks.
@@ -60,21 +55,21 @@ A full-text index includes one or more character-based columns in a table. These
   
  Full-text queries use a small set of [!INCLUDE[tsql](../../includes/tsql-md.md)] predicates (CONTAINS and FREETEXT) and functions (CONTAINSTABLE and FREETEXTTABLE). However, the search goals of a given business scenario influence the structure of the full-text queries. For example:  
   
--   e-business—searching for a product on a website:  
+-   e-business-searching for a product on a website:  
   
     ```  
     SELECT product_id   
     FROM products   
-    WHERE CONTAINS(product_description, ”Snap Happy 100EZ” OR FORMSOF(THESAURUS,’Snap Happy’) OR ‘100EZ’)   
+    WHERE CONTAINS(product_description, "Snap Happy 100EZ" OR FORMSOF(THESAURUS,'Snap Happy') OR '100EZ')   
     AND product_cost < 200 ;  
     ```  
   
--   Recruitment scenario—searching for job candidates that have experience working with [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:  
+-   Recruitment scenario-searching for job candidates that have experience working with [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:  
   
     ```  
     SELECT candidate_name,SSN   
     FROM candidates   
-    WHERE CONTAINS(candidate_resume,”SQL Server”) AND candidate_division =DBA;  
+    WHERE CONTAINS(candidate_resume,"SQL Server") AND candidate_division =DBA;  
     ```  
   
  For more information, see [Query with Full-Text Search](../../relational-databases/search/query-with-full-text-search.md).  

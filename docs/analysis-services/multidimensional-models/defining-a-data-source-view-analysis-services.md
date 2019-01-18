@@ -1,34 +1,18 @@
 ---
 title: "Defining a Data Source View (Analysis Services) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: analysis-services
-ms.prod_service: "analysis-services"
-ms.service: ""
-ms.component: ""
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
-  
-ms.component: multidimensional-tabular
-ms.component: data-mining
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "names [Analysis Services], data source views"
-  - "name matching criteria [Analysis Services]"
-  - "Data Source View Wizard"
-  - "data source views [Analysis Services], creating"
-ms.assetid: 0bae4ee4-1742-40e9-bebe-17c788854484
-caps.latest.revision: 42
-author: "Minewiskan"
-ms.author: "owend"
-manager: "kfile"
-ms.workload: "Inactive"
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: multidimensional-models
+ms.topic: conceptual
+ms.author: owend
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
 ---
 # Defining a Data Source View (Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-  A data source view contains the logical model of the schema used by [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] multidimensional database objects—namely cubes, dimensions, and mining structures. A data source view is the metadata definition, stored in an XML format, of these schema elements used by the Unified Dimensional Model (UDM) and by the mining structures. A data source view:  
+  A data source view contains the logical model of the schema used by [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] multidimensional database objects-namely cubes, dimensions, and mining structures. A data source view is the metadata definition, stored in an XML format, of these schema elements used by the Unified Dimensional Model (UDM) and by the mining structures. A data source view:  
   
 -   Contains the metadata that represents selected objects from one or more underlying data sources, or the metadata that will be used to generate an underlying relational data store if you are following the top-down approach to schema generation.  
   
@@ -105,7 +89,7 @@ ms.workload: "Inactive"
   
 4.  **Filter Available Objects**  
   
-     If the Available objects list contains a very large number of objects, you can reduce the list by applying a simple filter that species a string as selection criteria. For example, if you type **dbo** and click the **Filter** button, then only those items starting with "dbo" show up in the **Available objects** list. The filter can be a partial string (for example, “sal” returns sales and salary) but it cannot include multiple strings or operators.  
+     If the Available objects list contains a very large number of objects, you can reduce the list by applying a simple filter that species a string as selection criteria. For example, if you type **dbo** and click the **Filter** button, then only those items starting with "dbo" show up in the **Available objects** list. The filter can be a partial string (for example, "sal" returns sales and salary) but it cannot include multiple strings or operators.  
   
 5.  For relational data sources that do not have table relationships defined, a **Name Matching** page appears so that you can select the appropriate name matching method. For more information, see the [Specify Name Matching Criteria for Relationships](#bkmk_NameMatch) section in this topic.  
   

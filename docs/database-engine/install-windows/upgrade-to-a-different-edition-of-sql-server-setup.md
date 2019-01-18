@@ -2,25 +2,21 @@
 title: "Upgrade to a Different Edition of SQL Server 2016 (Setup) | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/24/2017"
-ms.prod: "sql-non-specified"
-ms.prod_service: "database-engine"
-ms.service: ""
-ms.component: "install-windows"
+ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "setup-install"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: install
+ms.topic: conceptual
 ms.assetid: 31d16820-d126-4c57-82cc-27701e4091bc
-caps.latest.revision: 27
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
+author: MashaMSFT
+ms.author: mathoma
+monikerRange: ">=sql-server-2016||=sqlallproducts-allversions"
+manager: craigg
 ---
 # Upgrade to a Different Edition of SQL Server (Setup)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Setup supports edition upgrade among various editions of [!INCLUDE[ssNoversion](../../includes/ssnoversion-md.md)]. For information about supported edition upgrade paths, see [Supported Version and Edition Upgrades](../../database-engine/install-windows/supported-version-and-edition-upgrades-2017.md). Before you initiate the edition upgrade of an instance of [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], review the following topics:  
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Setup supports edition upgrade among various editions of [!INCLUDE[ssNoversion](../../includes/ssnoversion-md.md)]. For information about supported edition upgrade paths, see [Supported Version and Edition Upgrades](../../database-engine/install-windows/supported-version-and-edition-upgrades-2017.md). Before you initiate the edition upgrade of an instance of [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], review the following articles:  
 
 - [Editions and supported features of SQL Server 2017](../../sql-server/editions-and-components-of-sql-server-2017.md)  
 - [Editions and supported features of SQL Server 2016](../../sql-server/editions-and-components-of-sql-server-2016.md)  
@@ -80,6 +76,6 @@ For local installations, you must run Setup as an administrator. If you install 
   
 ## See Also  
  [Upgrade SQL Server](../../database-engine/install-windows/upgrade-sql-server.md)   
- [Backward Compatibility_deleted](http://msdn.microsoft.com/library/15d9117e-e2fa-4985-99ea-66a117c1e9fd)  
+ [Backward Compatibility_deleted](https://msdn.microsoft.com/library/15d9117e-e2fa-4985-99ea-66a117c1e9fd)  
   
   

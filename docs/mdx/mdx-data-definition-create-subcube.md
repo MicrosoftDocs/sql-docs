@@ -1,36 +1,17 @@
 ---
 title: "CREATE SUBCUBE Statement (MDX) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/02/2016"
-ms.prod: analysis-services
-ms.prod_service: "analysis-services"
-ms.service: ""
-ms.component: ""
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
-  
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "CREATE_SUBCUBE"
-  - "CREATE SUBCUBE"
-  - "CREATE"
-  - "SUBCUBE"
-dev_langs: 
-  - "kbMDX"
-helpviewer_keywords: 
-  - "subcubes [MDX]"
-  - "CREATE SUBCUBE statement"
-ms.assetid: 15b6ac4c-b68a-4f9f-b33c-f5f7c4a74535
-caps.latest.revision: 32
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-ms.workload: "Inactive"
+ms.date: 06/04/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: mdx
+ms.topic: reference
+ms.author: owend
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
 ---
 # MDX Data Definition - CREATE SUBCUBE
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
 
   Redefines the cube space of a specified cube or subcube to a specified subcube. This statement changes the apparent cube space for subsequent operations.  
   

@@ -1,0 +1,16 @@
+- name: Requirements for Running SQLXML Examples
+  href: requirements-for-running-sqlxml-examples.md
+- name: Formatting +
+  href: ../../relational-databases/sqlxml/formatting/client-side-and-server-side-formatting-sqlxml-4-0.md
+- name: Annotated XSD schemas +
+  href: ../../relational-databases/sqlxml/annotated-xsd-schemas/annotated-xsd-schemas-in-sqlxml-4-0.md
+- name: SQLXML 4.0 Programming Concepts
+  href: sqlxml-4-0-programming-concepts.md
+- name: SQLXML Is Not Installed in SQL Server
+  href: sqlxml-is-not-installed-in-sql-server.md
+- name: Using ADO to Execute SQLXML 4.0 Queries
+  href: using-ado-to-execute-sqlxml-4-0-queries.md
+- name: What's New in SQLXML 4.0 SP1
+  href: what-s-new-in-sqlxml-4-0-sp1.md
+- name: xml Data Type Support in SQLXML 4.0
+  href: xml-data-type-support-in-sqlxml-4-0.md

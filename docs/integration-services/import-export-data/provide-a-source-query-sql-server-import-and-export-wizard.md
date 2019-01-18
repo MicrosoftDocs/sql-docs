@@ -2,24 +2,17 @@
 title: "Provide a Source Query (SQL Server Import and Export Wizard) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/16/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "integration-services"
-ms.service: ""
-ms.component: "import-export-data"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: integration-services
+ms.topic: conceptual
 f1_keywords: 
   - "sql13.dts.impexpwizard.providesourcequery.f1"
 ms.assetid: c8cbd07e-b9c3-422f-94b8-d6fc8cf31cf5
-caps.latest.revision: 61
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
-ms.workload: "On Demand"
+manager: craigg
 ---
 # Provide a Source Query (SQL Server Import and Export Wizard)
 If you specified that you want to provide a query to select the data to copy, the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Import and Export Wizard shows **Provide a Source Query**. On this page, you write and test the SQL query that selects the data to copy from the data source to the destination. You can also paste the text of a saved query, or load the query text from a file.
@@ -59,7 +52,10 @@ If your data source is Excel, see [Provide a source query for Excel](#excelQueri
  Select a saved file that contains the text of a SQL query by using the **Open** dialog box. Selecting a file copies the text from the file into the **SQL statement** text box.  
  
 ## <a name="excelQueries"></a> Provide a source query for Excel
-### Specify Excel objects in queries
+
+> [!IMPORTANT]
+> For detailed info about connecting to Excel files, and about limitations and known issues for loading data from or to Excel files, see [Load data from or to Excel with SQL Server Integration Services (SSIS)](../load-data-to-from-excel-with-ssis.md).
+
 There are three types of Excel objects that you can query.
 -   **Worksheet.** To query a worksheet, append the $ character to the end of the sheet name and add delimiters around the string - for example, **[Sheet1$]**.
 
@@ -78,9 +74,6 @@ There are three types of Excel objects that you can query.
     ```sql
     SELECT * FROM [Sheet1$A1:B4]
     ```
-
-### Prepare the Excel source data
-Whether you specify a worksheet or a range as the source table, the driver reads the *contiguous* block of cells starting with the first non-empty cell in the upper-left corner of the worksheet or range. As a result, you can't have empty rows in the source data. For example, you can't have an empty row between the column headers and the data rows. If you have a title followed by empty rows at the top of the worksheet above your data, you can't query the worksheet. In Excel, you have to assign a name to your range of data, and query the named range instead of the worksheet.
 
 ## What's next?  
  After you write and test the SQL query that selects the data to copy, the next page depends on the destination for your data.  

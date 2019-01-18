@@ -2,15 +2,10 @@
 title: "USE (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "11/28/2016"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "pdw, sql-database"
-ms.service: ""
-ms.component: "t-sql|language-elements"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: t-sql
 ms.topic: "language-reference"
 f1_keywords: 
   - "USE_TSQL"
@@ -23,11 +18,10 @@ helpviewer_keywords:
   - "context changes [SQL Server]"
   - "modifying database context"
 ms.assetid: c05acac8-c063-4770-8e36-d7f71d500b10
-caps.latest.revision: 40
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-ms.workload: "Active"
+author: "douglaslMS"
+ms.author: "douglasl"
+manager: craigg
+monikerRange: ">=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # USE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-pdw-md.md)]

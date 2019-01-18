@@ -2,27 +2,23 @@
 title: "Upgrade SQL Server Using the Installation Wizard (Setup) | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/24/2017"
-ms.prod: "sql-non-specified"
-ms.prod_service: "database-engine"
-ms.service: ""
-ms.component: "install-windows"
+ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "setup-install"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: install
+ms.topic: conceptual
 helpviewer_keywords: 
   - "upgrading Database Engine"
   - "Database Engine [SQL Server], upgrading"
 ms.assetid: cef118a5-a7ce-4bfa-8b9d-c81996284cfc
-caps.latest.revision: 65
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
+author: MashaMSFT
+ms.author: mathoma
+monikerRange: ">=sql-server-2016||=sqlallproducts-allversions"
+manager: craigg
 ---
 # Upgrade SQL Server Using the Installation Wizard (Setup)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
 The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Installation Wizard provides a single feature tree for an in-place upgrade of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] components to the latest version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 >[!WARNING]  
@@ -100,15 +96,15 @@ You must run Setup as an administrator. If you install [!INCLUDE[ssNoVersion](..
   
 12. On the Instance Configuration page, specify the Instance ID for the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-     **Instance ID** — By default, the instance name is used as the Instance ID. This is used to identify installation directories and registry keys for your instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. This is the case for default instances and named instances. For a default instance, the instance name and instance ID would be MSSQLSERVER. To use a non-default instance ID, provide a value for the **Instance ID** textbox.  
+     **Instance ID** - By default, the instance name is used as the Instance ID. This is used to identify installation directories and registry keys for your instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. This is the case for default instances and named instances. For a default instance, the instance name and instance ID would be MSSQLSERVER. To use a non-default instance ID, provide a value for the **Instance ID** textbox.  
   
      All [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] service packs and upgrades will apply to every component of an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-     **Installed instances**  — The grid will show instances of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] that are on the computer where Setup is running. If a default instance is already installed on the computer, you must install a named instance of [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)].  
+     **Installed instances**  - The grid will show instances of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] that are on the computer where Setup is running. If a default instance is already installed on the computer, you must install a named instance of [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)].  
   
-13. Work flow for the rest of this topic depends on the features that you have specified for your installation. You might not see all the pages, depending on your selections.  
+13. Work flow for the rest of this article depends on the features that you have specified for your installation. You might not see all the pages, depending on your selections.  
   
-14. On the Server Configuration — Service Accounts page, the default service accounts are displayed for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] services. The actual services that are configured on this page depend on the features that you are upgrading.  
+14. On the Server Configuration - Service Accounts page, the default service accounts are displayed for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] services. The actual services that are configured on this page depend on the features that you are upgrading.  
   
      Authentication and login information will be carried forward from the previous instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. You can assign the same login account to all [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] services, or you can configure each service account individually. You can also specify whether services start automatically, are started manually, or are disabled. [!INCLUDE[msCoName](../../includes/msconame-md.md)] recommends that you configure service accounts individually so that [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] services are granted the minimum permissions they have to have to complete their tasks. For more information, see [Configure Windows Service Accounts and Permissions](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md).  
   
@@ -118,7 +114,7 @@ You must run Setup as an administrator. If you install [!INCLUDE[ssNoVersion](..
   
      When you are finished specifying login information for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] services, click **Next**.  
   
-15. On the Full-Text Search Upgrade Options page, specify the upgrade options for the databases being upgraded. For more information, see [Full-Text Search Upgrade Options](http://msdn.microsoft.com/library/16c9376b-5fbb-4495-a429-06a2493849c9).  
+15. On the Full-Text Search Upgrade Options page, specify the upgrade options for the databases being upgraded. For more information, see [Full-Text Search Upgrade Options](https://msdn.microsoft.com/library/16c9376b-5fbb-4495-a429-06a2493849c9).  
   
 16. The Feature Rules window will automatically advance if all rules pass.  
   
@@ -133,14 +129,14 @@ You must run Setup as an administrator. If you install [!INCLUDE[ssNoVersion](..
 ## Next Steps  
  After you upgrade to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], complete the following tasks:  
   
--   **Register your servers** — Upgrade removes registry settings for the previous instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. After you upgrade, you must reregister your servers.  
+-   **Register your servers** - Upgrade removes registry settings for the previous instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. After you upgrade, you must reregister your servers.  
   
--   **Update statistics** — To help optimize query performance, we recommend that you update statistics on all databases following upgrade. Use the **sp_updatestats** stored procedure to update statistics in user-defined tables in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] databases.  
+-   **Update statistics** - To help optimize query performance, we recommend that you update statistics on all databases following upgrade. Use the **sp_updatestats** stored procedure to update statistics in user-defined tables in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] databases.  
   
--   **Configure your new [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] installation** — To reduce the attackable surface area of a system, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] selectively installs and enables key services and features. For more information about surface area configuration, see the readme file for this release.  
+-   **Configure your new [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] installation** - To reduce the attackable surface area of a system, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] selectively installs and enables key services and features. For more information about surface area configuration, see the readme file for this release.  
   
 ## See Also  
  [Upgrade SQL Server](../../database-engine/install-windows/upgrade-sql-server.md)   
- [Backward Compatibility_deleted](http://msdn.microsoft.com/library/15d9117e-e2fa-4985-99ea-66a117c1e9fd)  
+ [Backward Compatibility_deleted](https://msdn.microsoft.com/library/15d9117e-e2fa-4985-99ea-66a117c1e9fd)  
   
   

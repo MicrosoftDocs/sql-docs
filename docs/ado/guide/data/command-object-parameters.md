@@ -1,25 +1,18 @@
 ---
 title: "Command Object Parameters | Microsoft Docs"
-ms.prod: "sql-non-specified"
-ms.prod_service: "drivers"
-ms.service: ""
-ms.component: "ado"
-ms.technology:
-  - "drivers"
+ms.prod: sql
+ms.prod_service: connectivity
+ms.technology: connectivity
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "Command object [ADO], parameters"
 ms.assetid: 10e7ef4a-78bf-4e91-931e-cbc6c065dd4c
-caps.latest.revision: 14
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
-ms.workload: "Inactive"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # Command Object Parameters
 The previous topic discussed [Creating and Executing a Simple Command](../../../ado/guide/data/creating-and-executing-a-simple-command.md). A more interesting use for the [Command](../../../ado/reference/ado-api/command-object-ado.md) object is shown in the next example, in which the SQL command has been parameterized. This modification makes it possible to reuse the command, passing in a different value for the parameter each time. Because the [Prepared Property](../../../ado/reference/ado-api/prepared-property-ado.md) property on the **Command** object is set to **true**, ADO will require the provider to compile the command specified in [CommandText](../../../ado/reference/ado-api/commandtext-property-ado.md) before executing it for the first time. It also will retain the compiled command in memory. This slows the execution of the command slightly the first time it is executed because of the overhead required to prepare it, but results in a performance gain each time the command is called thereafter. Therefore, commands should be prepared only if they will be used more than one time.  

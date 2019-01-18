@@ -2,15 +2,10 @@
 title: "$PARTITION (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "sql-database"
-ms.service: ""
-ms.component: "t-sql|functions"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: t-sql
 ms.topic: "language-reference"
 f1_keywords: 
   - "$partition_TSQL"
@@ -21,11 +16,9 @@ helpviewer_keywords:
   - "$PARTITION function"
   - "partitions [SQL Server], numbers"
 ms.assetid: abc865d0-57a8-49da-8821-29457c808d2a
-caps.latest.revision: 39
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "craigg"
-ms.workload: "On Demand"
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
 ---
 # $PARTITION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -77,7 +70,7 @@ GO
 ### B. Getting the number of rows in each nonempty partition of a partitioned table or index  
  The following example returns the number of rows in each partition of table `TransactionHistory` that contains data. The `TransactionHistory` table uses partition function `TransactionRangePF1` and is partitioned on the `TransactionDate` column.  
   
- To execute this example, you must first run the PartitionAW.sql script against the [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] sample database. For more information, see [PartitioningScript](http://go.microsoft.com/fwlink/?LinkId=201015).  
+ To execute this example, you must first run the PartitionAW.sql script against the [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] sample database. For more information, see [PartitioningScript](https://go.microsoft.com/fwlink/?LinkId=201015).  
   
 ```  
 USE AdventureWorks2012;  
@@ -93,7 +86,7 @@ GO
  The following example returns all rows that are in partition `5` of the table `TransactionHistory`.  
   
 > [!NOTE]  
->  To execute this example, you must first run the PartitionAW.sql script against the [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] sample database. For more information, see [PartitioningScript](http://go.microsoft.com/fwlink/?LinkId=201015).  
+>  To execute this example, you must first run the PartitionAW.sql script against the [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] sample database. For more information, see [PartitioningScript](https://go.microsoft.com/fwlink/?LinkId=201015).  
   
 ```  
 SELECT * FROM Production.TransactionHistory  

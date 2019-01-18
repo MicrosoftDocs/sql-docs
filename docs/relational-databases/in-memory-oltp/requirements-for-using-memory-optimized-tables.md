@@ -2,27 +2,20 @@
 title: "Requirements for Using Memory-Optimized Tables | Microsoft Docs"
 ms.custom: ""
 ms.date: "11/24/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "database-engine"
-ms.service: ""
-ms.component: "in-memory-oltp"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine-imoltp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: in-memory-oltp
+ms.topic: conceptual
 ms.assetid: 47d9a7e8-c597-4b95-a58a-dcf66df8e572
-caps.latest.revision: 65
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-ms.workload: "On Demand"
+author: "CarlRabeler"
+ms.author: "carlrab"
+manager: craigg
 ---
 # Requirements for Using Memory-Optimized Tables
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-  For using In-Memory OLTP in Azure DB see [Get started with In-Memory in SQL Database](http://azure.microsoft.com/documentation/articles/sql-database-in-memory/).  
+  For using In-Memory OLTP in Azure DB see [Get started with In-Memory in SQL Database](https://azure.microsoft.com/documentation/articles/sql-database-in-memory/).  
   
  In addition to the [Hardware and Software Requirements for Installing SQL Server](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md), the following are requirements to use In-Memory OLTP:  
   

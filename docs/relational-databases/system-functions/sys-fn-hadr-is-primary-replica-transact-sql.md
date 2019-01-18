@@ -2,15 +2,10 @@
 title: "sys.fn_hadr_is_primary_replica (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/17/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "database-engine"
-ms.service: ""
-ms.component: "system-functions"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: system-objects
 ms.topic: "language-reference"
 f1_keywords: 
   - "sys.fn_hadr_is_primary_replica"
@@ -23,11 +18,9 @@ helpviewer_keywords:
   - "fn_hadr_is_primary_replica"
   - "sys.fn_hadr_is_primary_replica"
 ms.assetid: c9b1969f-be1d-4dfb-a33d-551f380b9e27
-caps.latest.revision: 7
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-ms.workload: "On Demand"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ---
 # sys.fn_hadr_is_primary_replica (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]

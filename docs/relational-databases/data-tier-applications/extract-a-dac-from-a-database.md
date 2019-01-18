@@ -2,16 +2,9 @@
 title: "Extract a DAC From a Database | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/18/2016"
-ms.prod: "sql-non-specified"
-ms.prod_service: "database-engine"
-ms.service: ""
-ms.component: "data-tier-applications"
-ms.reviewer: ""
-ms.suite: "sql"
+ms.prod: sql
 ms.technology: 
-  - "dbe-data-tier-apps"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "sql13.swb.extractdacwizard.validationandsummary.f1"
   - "sql13.swb.extractdacwizard.introduction.f1"
@@ -24,14 +17,12 @@ helpviewer_keywords:
   - "data-tier application [SQL Server], extract"
   - "wizard [DAC], extract"
 ms.assetid: ae52a723-91c4-43fd-bcc7-f8de1d1f90e5
-caps.latest.revision: 21
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-ms.workload: "On Demand"
+author: "stevestein"
+ms.author: "sstein"
+manager: craigg
 ---
 # Extract a DAC From a Database
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   Use either the **Extract Data-tier Application Wizard** or a Windows PowerShell script to extract a data-tier application (DAC) package from an existing SQL Server database. The extraction process creates a DAC package file that contains definitions of the database objects and their related instance-level elements. For example, a DAC package file contains the database tables, stored procedures, views, and users, along with the logins that map to the database users.  
   
  
@@ -51,7 +42,7 @@ ms.workload: "On Demand"
   
 2.  Expand the **Databases** node.  
   
-3.  Right-click the node for the database from which the DAC is to be extracted, point to **Tasks**, and then select **Extract Data-tier Application…**  
+3.  Right-click the node for the database from which the DAC is to be extracted, point to **Tasks**, and then select **Extract Data-tier Application...**  
   
 4.  Complete the wizard dialogs:  
   

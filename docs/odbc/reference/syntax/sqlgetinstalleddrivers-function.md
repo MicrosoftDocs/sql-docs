@@ -2,16 +2,11 @@
 title: "SQLGetInstalledDrivers Function | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
-ms.prod_service: "drivers"
-ms.service: ""
-ms.component: "odbc"
+ms.prod: sql
+ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "drivers"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: connectivity
+ms.topic: conceptual
 apiname: 
   - "SQLGetInstalledDrivers"
 apilocation: 
@@ -22,11 +17,9 @@ f1_keywords:
 helpviewer_keywords: 
   - "SQLGetInstalledDrivers function [ODBC]"
 ms.assetid: a1983a2e-0edf-422e-bd1b-ec5db40a34bc
-caps.latest.revision: 7
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
-ms.workload: "Inactive"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # SQLGetInstalledDrivers Function
 **Conformance**  
@@ -40,9 +33,9 @@ ms.workload: "Inactive"
 ```  
   
 BOOL SQLGetInstalledDrivers(  
-     LPSTR   lpszBuf,  
-     WORD    cbBufMax,  
-     WORD *  pcbBufOut);  
+     LPSTR   lpszBuf,  
+     WORD    cbBufMax,  
+     WORD *  pcbBufOut);  
 ```  
   
 ## Arguments  

@@ -2,15 +2,10 @@
 title: "MERGE (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/10/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.service: ""
-ms.component: "t-sql|statements"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: t-sql
 ms.topic: "language-reference"
 f1_keywords: 
   - "MERGE"
@@ -27,16 +22,17 @@ helpviewer_keywords:
   - "data manipulation language [SQL Server], MERGE statement"
   - "inserting data"
 ms.assetid: c17996d6-56a6-482f-80d8-086a3423eecc
-caps.latest.revision: 76
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "craigg"
-ms.workload: "Active"
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
 ---
 # MERGE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Performs insert, update, or delete operations on a target table based on the results of a join with a source table. For example, you can synchronize two tables by inserting, updating, or deleting rows in one table based on differences found in the other table.  
+> [!div class="nextstepaction"]
+> [Please share your feedback about the SQL Docs Table of Contents!](https://aka.ms/sqldocsurvey)
+
+Performs insert, update, or delete operations on a target table based on the results of a join with a source table. For example, you can synchronize two tables by inserting, updating, or deleting rows in one table based on differences found in the other table.  
   
  **Performance Tip:** The conditional behavior described for the MERGE statement works best when the two tables have a complex mixture of matching characteristics. For example, inserting a row if it does not exist, or updating the row if it does match. When simply updating one table based on the rows of another table, improved performance and scalability can be achieved with basic INSERT, UPDATE, and DELETE statements. For example:  
   
@@ -126,10 +122,13 @@ SET
     <search_condition>  
   
 <search condition> ::=  
-    { [ NOT ] <predicate> | ( <search_condition> ) }   
-    [ { AND | OR } [ NOT ] { <predicate> | ( <search_condition> ) } ]   
-[ ,...n ]   
-  
+    MATCH(<graph_search_pattern>) | <search_condition_without_match> | <search_condition> AND <search_condition>
+    
+<search_condition_without_match> ::=
+    { [ NOT ] <predicate> | ( <search_condition_without_match> ) 
+    [ { AND | OR } [ NOT ] { <predicate> | ( <search_condition_without_match> ) } ]   
+[ ,...n ]  
+
 <predicate> ::=   
     { expression { = | < > | ! = | > | > = | ! > | < | < = | ! < } expression   
     | string_expression [ NOT ] LIKE string_expression   
@@ -143,7 +142,21 @@ SET
     | expression { = | < > | ! = | > | > = | ! > | < | < = | ! < }   
   { ALL | SOME | ANY} ( subquery )   
     | EXISTS ( subquery ) }   
+
+<graph_search_pattern> ::=
+    { <node_alias> { 
+                      { <-( <edge_alias> )- } 
+                    | { -( <edge_alias> )-> }
+                    <node_alias> 
+                   } 
+    }
   
+<node_alias> ::=
+    node_table_name | node_table_alias 
+
+<edge_alias> ::=
+    edge_table_name | edge_table_alias
+
 <output_clause>::=  
 {  
     [ OUTPUT <dml_select_list> INTO { @table_variable | output_table }  
@@ -264,6 +277,9 @@ SET
   
  \<search condition>  
  Specifies the search conditions used to specify \<merge_search_condition> or \<clause_search_condition>. For more information about the arguments for this clause, see [Search Condition &#40;Transact-SQL&#41;](../../t-sql/queries/search-condition-transact-sql.md).  
+
+ \<graph search pattern>  
+ Specifies the graph match pattern. For more information about the arguments for this clause, see [MATCH &#40;Transact-SQL&#41;](../../t-sql/queries/match-sql-graph.md)
   
 ## Remarks  
  At least one of the three MATCHED clauses must be specified, but they can be specified in any order. A variable cannot be updated more than once in the same MATCHED clause.  
@@ -295,7 +311,7 @@ SET
 ### A. Using MERGE to perform INSERT and UPDATE operations on a table in a single statement  
  A common scenario is updating one or more columns in a table if a matching row exists, or inserting the data as a new row if a matching row does not exist. This is usually done by passing parameters to a stored procedure that contains the appropriate UPDATE and INSERT statements. With the MERGE statement, you can perform both tasks in a single statement. The following example shows a stored procedure in the [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]database that contains both an INSERT statement and an UPDATE statement. The procedure is then modified to perform the equivalent operations by using a single MERGE statement.  
   
-```  
+```sql  
 CREATE PROCEDURE dbo.InsertUnitMeasure  
     @UnitMeasureCode nchar(3),  
     @Name nvarchar(25)  
@@ -367,7 +383,7 @@ GO
 ### B. Using MERGE to perform UPDATE and DELETE operations on a table in a single statement  
  The following example uses MERGE to update the `ProductInventory` table in the [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] sample database on a daily basis, based on orders that are processed in the `SalesOrderDetail` table. The `Quantity` column of the `ProductInventory` table is updated by subtracting the number of orders placed each day for each product in the `SalesOrderDetail` table. If the number of orders for a product drops the inventory level of a product to 0 or less, the row for that product is deleted from the `ProductInventory` table.  
   
-```  
+```sql  
 CREATE PROCEDURE Production.usp_UpdateInventory  
     @OrderDate datetime  
 AS  
@@ -392,9 +408,9 @@ EXECUTE Production.usp_UpdateInventory '20030501'
 ```  
   
 ### C. Using MERGE to perform UPDATE and INSERT operations on a target table by using a derived source table  
- The following example uses MERGE to modify the `SalesReason` table in the [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] database by either updating or inserting rows. When the value of `NewName` in the source table matches a value in the `Name` column of the target table, (`SalesReason`), the `ReasonType` column is updated in the target table. When the value of `NewName` does not match, the source row is inserted into the target table. The source table is a derived table that uses the [!INCLUDE[tsql](../../includes/tsql-md.md)] table value constructor to specify multiple rows for the source table. For more information about using the table value constructor in a derived table, see [Table Value Constructor &#40;Transact-SQL&#41;](../../t-sql/queries/table-value-constructor-transact-sql.md). The example also shows how to store the results of the OUTPUT clause in a table variable and then summarize the results of the MERGE statment by performing a simple select operation that returns the count of inserted and updated rows.  
+ The following example uses MERGE to modify the `SalesReason` table in the [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] database by either updating or inserting rows. When the value of `NewName` in the source table matches a value in the `Name` column of the target table, (`SalesReason`), the `ReasonType` column is updated in the target table. When the value of `NewName` does not match, the source row is inserted into the target table. The source table is a derived table that uses the [!INCLUDE[tsql](../../includes/tsql-md.md)] table value constructor to specify multiple rows for the source table. For more information about using the table value constructor in a derived table, see [Table Value Constructor &#40;Transact-SQL&#41;](../../t-sql/queries/table-value-constructor-transact-sql.md). The example also shows how to store the results of the OUTPUT clause in a table variable and then summarize the results of the MERGE statement by performing a simple select operation that returns the count of inserted and updated rows.  
   
-```  
+```sql  
 -- Create a temporary table variable to hold the output actions.  
 DECLARE @SummaryOfChanges TABLE(Change VARCHAR(20));  
   
@@ -418,7 +434,7 @@ GROUP BY Change;
 ### D. Inserting the results of the MERGE statement into another table  
  The following example captures data returned from the OUTPUT clause of a MERGE statement and inserts that data into another table. The MERGE statement updates the `Quantity` column of the `ProductInventory` table in the [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] database, based on orders that are processed in the `SalesOrderDetail` table. The example captures the rows that are updated and inserts them into another table that is used to track inventory changes.  
   
-```  
+```sql  
 CREATE TABLE Production.UpdatedInventory  
     (ProductID INT NOT NULL, LocationID int, NewQty int, PreviousQty int,  
      CONSTRAINT PK_Inventory PRIMARY KEY CLUSTERED (ProductID, LocationID));  
@@ -444,6 +460,82 @@ FROM
  WHERE Action = 'UPDATE';  
 GO  
 ```  
+
+### E. Using MERGE to perform INSERT or UPDATE on a target edge table in a graph database
+In this example, we create node tables `Person` and `City` and an edge table `livesIn`. We will use the MERGE statement on `livesIn` edge insert a new row if the edge does not already exist between a `Person` and `City`. If the edge already exists, then we will just update the StreetAddress attribute on the `livesIn` edge.
+
+```sql
+-- CREATE node and edge tables
+CREATE TABLE Person
+    (
+        ID INTEGER PRIMARY KEY, 
+        PersonName VARCHAR(100)
+    )
+AS NODE
+GO
+
+CREATE TABLE City
+    (
+        ID INTEGER PRIMARY KEY, 
+        CityName VARCHAR(100), 
+        StateName VARCHAR(100)
+    )
+AS NODE
+GO
+
+CREATE TABLE livesIn
+    (
+        StreetAddress VARCHAR(100)
+    )
+AS EDGE
+GO
+
+-- INSERT some test data into node and edge tables
+INSERT INTO Person VALUES (1, 'Ron'), (2, 'David'), (3, 'Nancy')
+GO
+
+INSERT INTO City VALUES (1, 'Redmond', 'Washington'), (2, 'Seattle', 'Washington')
+GO
+
+INSERT livesIn SELECT P.$node_id, C.$node_id, c
+FROM Person P, City C, (values (1,1, '123 Avenue'), (2,2,'Main Street')) v(a,b,c)
+WHERE P.id = a AND C.id = b
+GO
+
+-- Use MERGE to update/insert edge data
+CREATE OR ALTER PROCEDURE mergeEdge
+    @PersonId integer,
+    @CityId integer,
+    @StreetAddress varchar(100)
+AS
+BEGIN
+    MERGE livesIn
+        USING ((SELECT @PersonId, @CityId, @StreetAddress) AS T (PersonId, CityId, StreetAddress)
+                JOIN Person ON T.PersonId = Person.ID
+                JOIN City ON T.CityId = City.ID)
+        ON MATCH (Person-(livesIn)->City)
+    WHEN MATCHED THEN
+        UPDATE SET StreetAddress = @StreetAddress
+    WHEN NOT MATCHED THEN
+        INSERT ($from_id, $to_id, StreetAddress)
+        VALUES (Person.$node_id, City.$node_id, @StreetAddress) ;
+END
+GO
+
+-- Following will insert a new edge in the livesIn edge table
+EXEC mergeEdge 3, 2, '4444th Avenue'
+GO
+
+-- Following will update the StreetAddress on the edge that connects Ron to Redmond
+EXEC mergeEdge 1, 1, '321 Avenue'
+GO
+
+-- Verify that all the address were added/updated correctly
+SELECT PersonName, CityName, StreetAddress
+FROM Person , City , livesIn 
+WHERE MATCH(Person-(livesIn)->city)
+GO
+```
   
 ## See Also  
  [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)   

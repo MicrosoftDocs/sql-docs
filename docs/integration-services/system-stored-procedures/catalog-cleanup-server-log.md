@@ -2,22 +2,15 @@
 title: "catalog.cleanup_server_log | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/03/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "integration-services"
-ms.service: ""
-ms.component: "system-stored-procedures"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: integration-services
+ms.topic: conceptual
 ms.assetid: 0dedb685-d3a6-4bd6-8afd-58d98853deee
-caps.latest.revision: 5
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
-ms.workload: "Inactive"
+manager: craigg
 ---
 # catalog.cleanup_server_log
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -58,9 +51,9 @@ catalog.cleanup_server_log
 ## Remarks  
  SQL Server 2012 Service Pack 2 added the SERVER_OPERATION_ENCRYPTION_LEVEL property to the **internal.catalog_properties** table. This property has two possible values:  
   
--   **PER_EXECUTION (1)** – The certificate and symmetric key used for protecting sensitive execution parameters and execution logs are created for each execution. You may run into performance issues (deadlocks, failed maintenance jobs, etc.) in a production environment because certificate/keys are generated for each execution. However, this setting provides a higher level of security than the other value (2).  
+-   **PER_EXECUTION (1)** - The certificate and symmetric key used for protecting sensitive execution parameters and execution logs are created for each execution. You may run into performance issues (deadlocks, failed maintenance jobs, etc.) in a production environment because certificate/keys are generated for each execution. However, this setting provides a higher level of security than the other value (2).  
   
--   **PER_PROJECT (2)** – The certificate and symmetric key used for protecting sensitive parameters are created for each project. PER_PROJECT (2) is the default value. This setting gives you a better performance than the PER_EXECUTION level because the key and certificate are generated once for a project rather than for each execution.  
+-   **PER_PROJECT (2)** - The certificate and symmetric key used for protecting sensitive parameters are created for each project. PER_PROJECT (2) is the default value. This setting gives you a better performance than the PER_EXECUTION level because the key and certificate are generated once for a project rather than for each execution.  
   
  You have to run the [catalog.cleanup_server_log](../../integration-services/system-stored-procedures/catalog-cleanup-server-log.md) stored procedure before you can change the SERVER_OPERATION_ENCRYPTION_LEVEL from 2 to 1 or from 1 to 2. Before running this stored procedure, do the following things:  
   
@@ -76,7 +69,7 @@ catalog.cleanup_server_log
   
      You can specify the scope or level (execution vs. project) and number of keys to be deleted. The default batch size for deletion is 1000. When you set the level to 2, the keys and certificates are deleted only if the associated projects have been deleted.  
   
- For more info, see the following Knowledge Base article: [FIX: Performance issues when you use SSISDB as your deployment store in SQL Server 2012](http://support.microsoft.com/kb/2972285)  
+ For more info, see the following Knowledge Base article: [FIX: Performance issues when you use SSISDB as your deployment store in SQL Server 2012](https://support.microsoft.com/kb/2972285)  
   
 ## Example  
  The following example calls the cleanup_server_log stored procedure.  

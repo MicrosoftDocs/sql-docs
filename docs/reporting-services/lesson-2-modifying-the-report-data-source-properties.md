@@ -1,25 +1,14 @@
 ---
 title: "Lesson 2: Modifying the Report Data Source Properties | Microsoft Docs"
-ms.custom: ""
-ms.date: "05/23/2016"
+ms.date: 05/23/2016
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
-ms.service: ""
-ms.component: "reporting-services"
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
+ms.technology: reporting-services
 
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to: 
-  - "SQL Server 2016"
+ms.topic: conceptual
 ms.assetid: c962b0ff-ce8a-4742-8262-dc730901afcf
-caps.latest.revision: 43
-author: "markingmyname"
-ms.author: "maghan"
-manager: "kfile"
-ms.workload: "On Demand"
+author: markingmyname
+ms.author: maghan
 ---
 # Lesson 2: Modifying the Report Data Source Properties
 In this [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] tutorial lesson, you use web portal to select a report that will be delivered to recipients. The data-driven subscription that you will define will distribute the **Sales Order** report created in the tutorial [Create a Basic Table Report &#40;SSRS Tutorial&#41;](../reporting-services/create-a-basic-table-report-ssrs-tutorial.md).  In the steps that follow, you will modify the data source connection information used by the report to get data. Only reports that use **stored credentials** to access a report data source can be distributed through a data-driven subscription. Stored credentials are necessary for unattended report processing.  
@@ -31,8 +20,8 @@ You will also modify the dataset and report to use a parameter to filter the rep
 1.  Browse to the [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] web portal with administrator privileges, for example, right-click the icon for Internet Explorer and click **Run as administrator**.  
  
 2.    Browse to the web portal URL.  For example:   
-    `http://<server name>/reports`.  
-    `http://localhost/reports`
+    `https://<server name>/reports`.  
+    `https://localhost/reports`
  **Note:** The web *portal* URL is "Reports", not the Report *Server* URL of "Reportserver".  
 3.  Browse to the folder containing the **Sales Orders** report and in the context menu of the report, click **Manage**.  
  
@@ -111,7 +100,7 @@ You will also modify the dataset and report to use a parameter to filter the rep
   
 ## <a name="bkmk_redeploy"></a>Re-deploy the Report  
   
-1.  Re-deploy the report so the subscription configuration in the next lesson can utilize the changes you made in this lesson. For more information on the project properties used in the table tutorial, see section ‘To Publish the Report to the Report Server (Optional)’ of [Lesson 6: Adding Grouping and Totals &#40;Reporting Services&#41;](../reporting-services/lesson-6-adding-grouping-and-totals-reporting-services.md).  
+1.  Re-deploy the report so the subscription configuration in the next lesson can utilize the changes you made in this lesson. For more information on the project properties used in the table tutorial, see section 'To Publish the Report to the Report Server (Optional)' of [Lesson 6: Adding Grouping and Totals &#40;Reporting Services&#41;](../reporting-services/lesson-6-adding-grouping-and-totals-reporting-services.md).  
   
 2.  On the toolbar click **Build** and then click **Deploy tutorial**.  
   

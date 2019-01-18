@@ -1,0 +1,139 @@
+- name: Overview
+  href: report-data-ssrs.md
+- name: Data Sources Supported by Reporting Services
+  href: data-sources-supported-by-reporting-services-ssrs.md
+- name: Data Connections, Data Sources, and Connection Strings (Report Builder and SSRS)
+  href: data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md
+- name: Add and Verify a Data Connection
+  href: add-and-verify-a-data-connection-report-builder-and-ssrs.md
+- name: Create, Modify, and Delete Shared Data Sources
+  href: create-modify-and-delete-shared-data-sources-ssrs.md
+- name: Create and Modify Embedded Data Sources
+  href: create-and-modify-embedded-data-sources.md
+- name: Convert Data Sources
+  href: convert-data-sources-report-builder-and-ssrs.md
+- name: Add Data from External Data Sources
+  href: add-data-from-external-data-sources-ssrs.md
+  items:
+  - name: SQL Server Connection Type
+    href: sql-server-connection-type-ssrs.md
+  - name: Analysis Services Connection Type for MDX
+    href: analysis-services-connection-type-for-mdx-ssrs.md
+    items:
+    - name: Extended Field Properties for an Analysis Services Database
+      href: extended-field-properties-for-an-analysis-services-database-ssrs.md
+  - name: Power Pivot Connection Type
+    href: power-pivot-connection-type-ssrs.md
+  - name: SharePoint List Connection Type
+    href: sharepoint-list-connection-type-ssrs.md
+  - name: SQL Azure Connection Type
+    href: sql-azure-connection-type-ssrs.md
+  - name: OLE DB Connection Type
+    href: ole-db-connection-type-ssrs.md
+  - name: SQL Server Parallel Data Warehouse Connection Type
+    href: sql-server-parallel-data-warehouse-connection-type-ssrs.md
+  - name: Teradata Connection Type
+    href: teradata-connection-type-ssrs.md
+  - name: Oracle Connection Type
+    href: oracle-connection-type-ssrs.md
+  - name: SAP NetWeaver BI Connection Type
+    href: sap-netweaver-bi-connection-type-ssrs.md
+  - name: Hyperion Essbase Connection Type
+    href: hyperion-essbase-connection-type-ssrs.md
+  - name: ODBC Connection Type
+    href: odbc-connection-type-ssrs.md
+  - name: XML Connection Type
+    href: xml-connection-type-ssrs.md
+    items:
+    - name: XML Query Syntax for XML Report Data
+      href: xml-query-syntax-for-xml-report-data-ssrs.md
+    - name: Element Path Syntax for XML Report Data
+      href: element-path-syntax-for-xml-report-data-ssrs.md
+  - name: Report Model Connection
+    href: report-model-connection-ssrs.md
+  - name: Analysis Services Connection Type for DMX
+    href: analysis-services-connection-type-for-dmx-ssrs.md
+    items:
+    - name: Retrieve Data from a Data Mining Model (DMX)
+      href: retrieve-data-from-a-data-mining-model-dmx-ssrs.md
+  - name: Data Processing Extensions and .NET Framework Data Providers
+    href: data-processing-extensions-and-net-framework-data-providers-ssrs.md
+    items:
+    - name: Register a Standard .NET Framework Data Provider
+      href: register-a-standard-net-framework-data-provider-ssrs.md
+- name: Manage Report Data Sources
+  href: manage-report-data-sources.md
+- name: Specify Credential and Connection Information for Report Data Sources
+  href: specify-credential-and-connection-information-for-report-data-sources.md
+- name: Store Credentials in a Reporting Services Data Source
+  href: store-credentials-in-a-reporting-services-data-source.md
+- name: Update Credentials in Report Data Sources from a SharePoint Site
+  href: update-credentials-in-report-data-sources-from-a-sharepoint-site.md
+- name: Specify Connections for Custom Data Processing Extensions
+  href: specify-connections-for-custom-data-processing-extensions.md
+- name: Bind a Report or Model to a Shared Data Source
+  href: bind-a-report-or-model-to-a-shared-data-source-ssrs.md
+- name: Configure Data Source Properties for a Report
+  href: configure-data-source-properties-for-a-report-report-manager.md
+- name: Use an Office Data Connection (.odc) with Reports
+  href: use-an-office-data-connection-odc-with-reports.md
+- name: Report Data Pane
+  href: report-data-pane.md
+- name: Report Datasets
+  href: report-datasets-ssrs.md
+  items:
+  - name: Query Design Tools
+    href: query-design-tools-ssrs.md
+    items:
+    - name: Build a Query in the Relational Query Designer
+      href: build-a-query-in-the-relational-query-designer-report-builder-and-ssrs.md
+    - name: Associate a Query Parameter with a Report Parameter
+      href: associate-a-query-parameter-with-a-report-parameter-report-builder-and-ssrs.md
+    - name: Define Parameters in the MDX Query Designer for Analysis Services
+      href: define-parameters-in-the-mdx-query-designer-for-analysis-services.md
+    - name: Define Query Parameters Dialog Box
+      href: define-query-parameters-dialog-box.md
+    - name: Analysis Services DMX Query Designer User Interface
+      href: analysis-services-dmx-query-designer-user-interface.md
+    - name: Analysis Services MDX Query Designer User Interface
+      href: analysis-services-mdx-query-designer-user-interface.md
+    - name: Graphical Query Designer User Interface
+      href: graphical-query-designer-user-interface.md
+    - name: Relational Query Designer User Interface
+      href: relational-query-designer-user-interface-report-builder.md
+    - name: Hyperion Essbase Query Designer User Interface
+      href: hyperion-essbase-query-designer-user-interface.md
+    - name: Report Model Query Designer User Interface
+      href: report-model-query-designer-user-interface.md
+    - name: SAP NetWeaver BI Query Designer User Interface
+      href: sap-netweaver-bi-query-designer-user-interface.md
+    - name: SharePoint List Query Designer
+      href: sharepoint-list-query-designer-report-builder.md
+    - name: Text-based Query Designer User Interface
+      href: text-based-query-designer-user-interface-report-builder.md
+  - name: Embedded and Shared Datasets
+    href: embedded-and-shared-datasets-report-builder-and-ssrs.md
+  - name: Create a Shared Dataset or Embedded Dataset
+    href: create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md
+  - name: Report Parts and Datasets in Report Builder
+    href: report-parts-and-datasets-in-report-builder.md
+  - name: Manage Shared Datasets
+    href: manage-shared-datasets.md
+  - name: Add, Edit, Refresh Fields in the Report Data Pane
+    href: add-edit-refresh-fields-in-the-report-data-pane-report-builder-and-ssrs.md
+  - name: Add a Filter to a Dataset
+    href: add-a-filter-to-a-dataset-report-builder-and-ssrs.md
+  - name: Show Hidden Datasets for Parameter Values for Multidimensional Data
+    href: show-hidden-datasets-for-parameter-values-multidimensional-data.md
+  - name: Set a No Data Message for a Data Region
+    href: set-a-no-data-message-for-a-data-region-report-builder-and-ssrs.md
+  - name: Dataset Fields Collection
+    href: dataset-fields-collection-report-builder-and-ssrs.md
+  - name: Dataset Properties Dialog Box, Options
+    href: dataset-properties-dialog-box-options-report-builder.md
+  - name: Dataset Properties Dialog Box, Parameters
+    href: dataset-properties-dialog-box-parameters.md
+  - name: Dataset Properties Dialog Box, Query
+    href: dataset-properties-dialog-box-query-report-builder.md
+  - name: Report Embedded Datasets and Shared Datasets
+    href: report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md

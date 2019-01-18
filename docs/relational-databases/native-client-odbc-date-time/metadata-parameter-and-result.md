@@ -2,24 +2,18 @@
 title: "Parameter and Result Metadata | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/04/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
-ms.service: ""
-ms.component: "native-client-odbc-date-time"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-
-ms.tgt_pltfrm: ""
+ms.technology: native-client
 ms.topic: "reference"
 helpviewer_keywords: 
   - "metadata [ODBC]"
 ms.assetid: 1518e6e5-a6a8-4489-b779-064c5624df53
-caps.latest.revision: 27
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-ms.workload: "Inactive"
+author: MightyPen
+ms.author: genemi
+manager: craigg
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Metadata - Parameter and Result
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -86,8 +80,8 @@ ms.workload: "Inactive"
 |SQL_DESC_DISPLAY_SIZE|10|8,10..16|16|23|19, 21..27|26, 28..34|  
 |SQL_DESC_FIXED_PREC_SCALE|SQL_FALSE|SQL_FALSE|SQL_FALSE|SQL_FALSE|SQL_FALSE|SQL_FALSE|  
 |SQL_DESC_LENGTH|10|8,10..16|16|2|19, 21..27|26, 28..34|  
-|SQL_DESC_LITERAL_PREFIX|‘|‘|‘|‘|‘|‘|  
-|SQL_DESC_LITERAL_SUFFIX|‘|‘|‘|‘|‘|‘|  
+|SQL_DESC_LITERAL_PREFIX|'|'|'|'|'|'|  
+|SQL_DESC_LITERAL_SUFFIX|'|'|'|'|'|'|  
 |SQL_DESC_LOCAL_TYPE_NAME|**date**|**time**|**smalldatetime**|**datetime**|**datetime2**|datetimeoffset|  
 |SQL_DESC_OCTET_LENGTH|6|12|4|8|16|20|  
 |SQL_DESC_PRECISION|0|0..7|0|3|0..7|0..7|  
@@ -98,6 +92,6 @@ ms.workload: "Inactive"
 |SQL_DESC_UNSIGNED|SQL_TRUE|SQL_TRUE|SQL_TRUE|SQL_TRUE|SQL_TRUE|SQL_TRUE|  
   
 ## See Also  
- [Metadata &#40;ODBC&#41;](http://msdn.microsoft.com/library/99133efc-b1f2-46e9-8203-d90c324a8e4c)  
+ [Metadata &#40;ODBC&#41;](https://msdn.microsoft.com/library/99133efc-b1f2-46e9-8203-d90c324a8e4c)  
   
   

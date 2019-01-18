@@ -1,16 +1,11 @@
 ---
 title: "sys.query_store_runtime_stats (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/29/2016"
-ms.prod: "sql-non-specified"
+ms.date: "11/29/2018"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.service: ""
-ms.component: "system-catalog-views"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: system-objects
 ms.topic: "language-reference"
 f1_keywords: 
   - "SYS.QUERY_STORE_RUNTIME_STATS_TSQL"
@@ -23,14 +18,13 @@ helpviewer_keywords:
   - "query_store_runtime_stats catalog view"
   - "sys.query_store_runtime_stats catalog view"
 ms.assetid: ccf7a57c-314b-450c-bd34-70749a02784a
-caps.latest.revision: 18
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "craigg"
-ms.workload: "Inactive"
+author: stevestein
+ms.author: sstein
+manager: craigg
+monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.query_store_runtime_stats (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
 
   Contains  information about the runtime execution statistics information for the query.  
   
@@ -39,8 +33,8 @@ ms.workload: "Inactive"
 |**runtime_stats_id**|**bigint**|Identifier of the row representing runtime execution statistics for the **plan_id**, **execution_type** and **runtime_stats_interval_id**. It is unique only for the past runtime statistics intervals. For currently active interval there may be multiple rows representing runtime statistics for the plan referenced by **plan_id**, with the execution type represented by **execution_type**. Typically, one row represents runtime statistics that are flushed to disk, while other(s) represent in-memory state. Hence, to get actual state for every interval you need to aggregate metrics, grouping by **plan_id**, **execution_type** and **runtime_stats_interval_id**. |  
 |**plan_id**|**bigint**|Foreign key. Joins to [sys.query_store_plan &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-plan-transact-sql.md).|  
 |**runtime_stats_interval_id**|**bigint**|Foreign key. Joins to [sys.query_store_runtime_stats_interval &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-runtime-stats-interval-transact-sql.md).|  
-|**execution_type**|**tinyint**|Determines type of query execution:<br /><br /> 0 – Regular execution (successfully finished)<br /><br /> 3 – Client initiated aborted execution<br /><br /> 4 -  Exception aborted execution|  
-|**execution_type_desc**|**nvarchar(128)**|Textual description of the execution type field:<br /><br /> 0 –  Regular<br /><br /> 3 –  Aborted<br /><br /> 4 -  Exception|  
+|**execution_type**|**tinyint**|Determines type of query execution:<br /><br /> 0 - Regular execution (successfully finished)<br /><br /> 3 - Client initiated aborted execution<br /><br /> 4 -  Exception aborted execution|  
+|**execution_type_desc**|**nvarchar(128)**|Textual description of the execution type field:<br /><br /> 0 -  Regular<br /><br /> 3 -  Aborted<br /><br /> 4 -  Exception|  
 |**first_execution_time**|**datetimeoffset**|First execution time for the query plan within the aggregation interval.|  
 |**last_execution_time**|**datetimeoffset**|Last execution time for the query plan within the aggregation interval.|  
 |**count_executions**|**bigint**|Total count of executions for the query plan within the aggregation interval.|  

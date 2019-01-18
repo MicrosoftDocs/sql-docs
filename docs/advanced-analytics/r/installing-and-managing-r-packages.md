@@ -1,110 +1,113 @@
 ---
-title: "R packages installed with SQL Server | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/04/2018"
-ms.reviewer: 
-ms.suite: sql
-ms.prod: machine-learning-services
-ms.prod_service: machine-learning-services
-ms.component: r
-ms.technology: 
-  
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "R"
-ms.assetid: 4d426cf6-a658-4d9d-bfca-4cdfc8f1567f
-caps.latest.revision: 1
-author: "jeannt"
-ms.author: "jeannt"
-manager: "cgronlund"
-ms.workload: "On Demand"
+title: Default R and Python package libraries - SQL Server Machine Learning Services
+description: R and Python packages installed by SQL Server for R Services, R Server, Machine Learning Services (In-Database), and Machine Learning Server (Standalone)
+ms.prod: sql
+ms.technology: machine-learning
+
+ms.date: 05/29/2018  
+ms.topic: conceptual
+author: HeidiSteen
+ms.author: heidist
+manager: cgronlun
 ---
-# R packages installed with SQL Server
+# Default R and Python packages in SQL Server
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-This article describes the R packages that are installed with SQL Server if you install and enable machine learning features. This article also describes how to manage and view existing packages, or add new packages to a SQL Server instance.
+This article lists the R and Python packages installed with SQL Server and where to find the package library.  
 
-**Applies to:** SQL Server 2017 Machine Learning Services (In-Database), SQL Server 2016 R Services (In-Database)
+## R package list for SQL Server
 
-## What is the instance library and where is it?
+R packages are installed with [SQL Server 2016 R Services](../install/sql-r-services-windows-install.md) and [SQL Server 2017 Machine Learning Services](../install/sql-machine-learning-services-windows-install.md) when you select the R feature during setup. 
 
-Any R solution that runs in SQL Server can use only packages that are installed in the default R library associated with the instance. When you install R features in SQL Server, the R package library is located under the instance folder.
+Packages         | 2016 | 2017 | Description |
+|----------------|--------------|--------------|-------------|
+| [RevoScaleR](https://docs.microsoft.com/r-server/r-reference/revoscaler/revoscaler)  | 8.0.3 | 9.2 | Used for remote compute contexts, streaming, parallel execution of rx functions for data import and transformation, modeling, visualization, and analysis. |
+| [sqlrutils](https://docs.microsoft.com/machine-learning-server/r-reference/sqlrutils/sqlrutils) | 8.0.3 | 9.2 |Used for including R script in stored procedures. |
+| [MicrosoftML](https://docs.microsoft.com/r-server/r-reference/microsoftml/microsoftml-package)| n.a. | 9.2 | Adds machine learning algorithms in R. | 
+| [olapR](https://docs.microsoft.com/machine-learning-server/r-reference/olapr/olapr) | n.a.  | 9.2 | Used for writing MDX statements in R. |
 
-+ Default instance *MSSQLSERVER* 
+MicrosoftML and olapR are available by default in SQL Server 2017 Machine Learning Services. On a SQL Server 2016 R Services instance, you can add these packages through a [component upgrade](use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md). A component upgrade also gets you newer versions of packages (for example, newer versions of RevoScaleR include functions for package management on SQL Server).
 
-    SQL Server 2017: `C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\R_SERVICES\library` 
-    
-    SQL Server 2016: `C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\R_SERVICES\library`
+## Python package list for SQL Server
 
-+ Named instance *MyNamedInstance* 
+Python packages are available only in SQL Server 2017 when you install [SQL Server 2017 Machine Learning Services](../install/sql-machine-learning-services-windows-install.md) and select the Python feature.
 
-    SQL Server 2017: `C:\Program Files\Microsoft SQL Server\MSSQL14.MyNamedInstance\R_SERVICES\library` 
-    
-    SQL Server 2016: `C:\Program Files\Microsoft SQL Server\MSSQL13.MyNamedInstance\R_SERVICES\library`
+| Packages         | 2017    |  Description |
+| -----------------|-------------|------------|
+| [revoscalepy](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/revoscalepy-package) | 9.2 | Used for remote compute contexts, streaming, parallel execution of rx functions for data import and transformation, modeling, visualization, and analysis. |
+| [microsoftml](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/microsoftml-package) | 9.2 | Adds machine learning algorithms in Python. |
 
-You can run the following statement to verify the default library for the current instance of R.
+## Open-source R in your installation
 
-```sql
-EXECUTE sp_execute_external_script  @language = N'R'
-, @script = N'OutputDataSet <- data.frame(.libPaths());'
-WITH RESULT SETS (([DefaultLibraryName] VARCHAR(MAX) NOT NULL));
-GO
-```
+R support includes open-source R so that you can call base R functions and install additional open-source and third-party packages. R language support includes core functionality such as **base**, **stats**, **utils**, and others. A base installation of R also includes numerous sample datasets, and standard R tools such as **RGui** (a lightweight interactive editor) and **RTerm** (an R command prompt). 
 
-Alternatiely, you can use the new [rxSqlLibPaths](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxsqllibpaths) function, if executing sp\_execute\_external\_script directly on the target computer. The function cannot return library paths for remote connections.
+The distribution of open-source R included in your installation is [Microsoft R Open (MRO)](https://mran.microsoft.com/open). MRO adds value to base R by including additional open-source packages such as the [Intel Math Kernel Library](https://en.wikipedia.org/wiki/Math_Kernel_Library).
 
-```sql
-EXEC sp_execute_external_script
-  @language =N'R',
-  @script=N'
-  sql_r_path <- rxSqlLibPaths("local")
-  print(sql_r_path)
-```
+The following table summarizes the versions of R provided by MRO using SQL Server Setup.
+
+|Release             | R version       |
+|--------------------|-----------------|
+| [SQL Server 2016 R Services](../install/sql-r-services-windows-install.md) | 3.2.2   | 
+| [SQL Server 2017 Machine Learning Services](../install/sql-machine-learning-services-windows-install.md) | 3.3.3 |
+
+You should never manually overwrite the version of R installed by SQL Server Setup with newer versions on the web. Microsoft R packages are based on specific versions of R. Modifying your installation could destabilize it.
+
+## Open-source Python in your installation
+
+SQL Server 2017 adds Python components. When you select the Python language option, Anaconda 4.2 distribution is installed. In addition to Python code libraries, the standard installation includes sample data, unit tests, and sample scripts. 
+
+SQL Server 2017 Machine Learning is the first release to have both R and Python support.
+
+|Release             | Anaconda version| Microsoft packages    |
+|--------------------|-----------------|-----------------------|
+| SQL Server 2017 Machine Learning Services  | 4.2 over Python 3.5 | revoscalepy, microsoftml |
+
+You should never manually overwrite the version of Python installed by SQL Server Setup with newer versions on the web. Microsoft Python packages are based on specific versions of Anaconda. Modifying your installation could destabilize it.
+
+## Component upgrades
+
+After an initial installation, R and Python packages are refreshed through service packs and cumulative updates, but full version upgrades are only possible by *binding* to the Modern Lifecycle Support policy. Binding changes the servicing model. By default, after an initial installation, R packages are refreshed through service packs and cumulative updates. Additional packages and full version upgrades of core R components are only possible through product upgrades (from SQL Server 2016 to SQL Server 2017) or by binding R support to Microsoft Machine Learning Server. For more information, see [Upgrade R and Python components in SQL Server](use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md).
+
+## Package library location
+
+When you install machine learning with SQL Server, a single package library is created at the instance level for each language that you install. On Windows, the instance library is a secured folder registered with SQL Server.
+
+All script or code that runs in-database on SQL Server must load functions from the instance library. SQL Server cannot access packages installed to other libraries. This applies to remote clients as well. When connecting to the server from a remote client, any R or Python code that you want to run in the server compute context can only use packages installed in the instance library.
+
+To protect server assets, the default instance library can be modified only by a computer administrator. If you are not the owner of the computer, you might need to get permission from an administrator to install packages to this library. 
+
+#### File path for In-Database engine instances
+
+The following table shows the file location of R and Python for version and database engine instance combinations. MSSQL13 indicates SQL Server 2016 and is R-only. MSSQL14 indicates SQL Server 2017 and has R and Python folders. 
+
+File paths also include instance names. SQL Server installs [database engine instances](../../database-engine/configure-windows/database-engine-instances-sql-server.md) as the default instance (MSSQLSERVER) or as a user-defined named instance. If SQL Server is installed as a named instance, you will see that name appended as follows: `MSSQL13.<instance_name>`.
+
+|Version and language  | Default path|
+|----------------------|------------|
+| SQL Server 2016 |C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\R_SERVICES\library|
+| SQL Server 2017 with R|C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\R_SERVICES\library |
+| SQL Server 2017 with Python |C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\PYTHON_SERVICES\Lib\site-packages |
+
+
+#### File path for Standalone server installations
+
+The following table lists the default paths of the binaries when SQL Server 2016 R Server (Standalone) or SQL Server 2017 Machine Learning Server (Standalone) server is installed. 
+
+|Version| Installation|Default path|
+|-------|-------------|------------|
+| SQL Server 2016|R Server (Standalone)| C:\Program Files\Microsoft SQL Server\130\R_SERVER|
+|SQL Server 2017|Machine Learning Server, with R |C:\Program Files\Microsoft SQL Server\140\R_SERVER|
+|SQL Server 2017|Machine Learning Server, with Python |C:\Program Files\Microsoft SQL Server\140\PYTHON_SERVER|
 
 > [!NOTE]
-> If you use binding to upgrade the R components in an instance, the path to the instance library can change. Be sure to verify which library is being used by SQL Server.
+> If you find other folders having similar subfolder names and files, you probably have a standalone installation of  Microsoft R Server or [Machine Learning Server](https://docs.microsoft.com/machine-learning-server/). These server products have different installers and paths (namely, C:\Program Files\Microsoft\R Server\R_SERVER or C:\Program Files\Microsoft\ML SERVER\R_SERVER). For more information, see [Install Machine Learning Server for Windows](https://docs.microsoft.com/machine-learning-server/install/machine-learning-server-windows-install) or [Install R Server 9.1 for Windows](https://docs.microsoft.com/machine-learning-server/install/r-server-install-windows).
 
-## R packages installed with SQL Server
+## Next steps
 
-By default the R **base** packages are installed. Base packages include core functionality provided by packages such as `stats` and `utils`.
-
-Installation of R in SQL Server 2016 or SQL Server 2017 always includes the **RevoScaleR** package, and related enhanced packages and providers, which supports remote compute contexts, streaming, parallel execution of rx function, and many other features. To upgrade the RevoScaleR package, either use binding to upgrade just the machine learning components, or patch or upgrade your instance to a newer version of SQL Server.
-
-+ For an overview of the enhanced R features, see [About Machine Learning Server](https://docs.microsoft.com/machine-learning-server/what-is-microsoft-r-server)
-
-+ To download the RevoScaleR libraries onto a client computer, install [Microsoft R Client](https://docs.microsoft.com/machine-learning-server/r-client/what-is-microsoft-r-client)
-
-## Permissions required for installing R packages
-
-In SQL Server 2016, an administrator had to install new R packages on an instance-wide basis. 
-
-SQL Server 2017 introduced new features for package installation and management:
-
-+ You can use R commands from a remote client to install packages using either private or shared scope. This feature requires either [Microsoft R Server](https://docs.microsoft.com/machine-learning-server/install/r-server-install) or  [Machine Learning Server](https://docs.microsoft.com/machine-learning-server/what-is-machine-learning-server), as well as dbo privileges on the instance.
-+ New database features have been added to support package management by database administrators without using T-SQL. In future, these features provide DBAs with the ability to delegate most facets of package management to privileged users.
-
-This section describes the permissions required to install and manage packages per version.
-
-+ SQL Server 2016 R Services (In-Database)
-
-    To install a new R package on a computer that is running [!INCLUDE[ssCurrent](..\..\includes\sscurrent-md.md)], you must have administrative rights to the computer. It is the task of the database administrator or other administrator on the server to ensure that all required packages are installed on the [!INCLUDE[ssNoVersion_md](..\..\includes\ssnoversion-md.md)] instance.
-
-    If you do not have administrative privileges on the computer that hosts the [!INCLUDE[ssNoVersion_md](..\..\includes\ssnoversion-md.md)] instance, you can provide to the administrator information about how to install R packages, and provide access to a secure package repository where packages requested by users can be obtained.
-
-+ SQL Server 2017 Machine Learning Services
-
-    If you are an administrator on the SQL Server instance, you can install new packages at will. Just be sure to use the default library that is associated with the instance. Packages installed to other locations cannot run when called from a stored procedure. Any R code that runs using the SQL Server as a compute context also requires that packages be available in the instance library.
-
-    This release also includes some new features intended to support easier package management by DBAs in a later release. For now, we recommend that you continue to install R packages on an instance-wide basis.
-
-+ R Server (Standalone)
-
-    You need administrative rights to the computer to install new R packages.
-
-+ Other client environments
-
-    If you are installing a new R package on a computer that is being used as an R workstation and the computer does **not** have an instance of [!INCLUDE[ssNoVersion_md](..\..\includes\ssnoversion-md.md)] installed, you still need administrative rights to the computer to install the package. After you have installed the package, you can run it locally.
-
-## Managing or viewing installed packages
-
-There are multiple ways that you can get a complete list of the packages currently installed. For more information, see [Determine which packages are installed on SQL Server](determine-which-packages-are-installed-on-sql-server.md).
++ [Get package information](determine-which-packages-are-installed-on-sql-server.md)
++ [Install new R packages](install-additional-r-packages-on-sql-server.md)
++ [Install new Python packages](../python/install-additional-python-packages-on-sql-server.md)
++ [Enable remote R package management](r-package-how-to-enable-or-disable.md)
++ [RevoScaleR functions for R package management](use-revoscaler-to-manage-r-packages.md)
++ [R package synchronization](package-install-uninstall-and-sync.md)
++ [miniCRAN for local R package repository](create-a-local-package-repository-using-minicran.md)

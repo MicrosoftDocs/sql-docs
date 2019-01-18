@@ -2,15 +2,10 @@
 title: "SCOPE_IDENTITY (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/06/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.service: ""
-ms.component: "t-sql|functions"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: t-sql
 ms.topic: "language-reference"
 f1_keywords: 
   - "SCOPE_IDENTITY"
@@ -23,11 +18,9 @@ helpviewer_keywords:
   - "last-inserted identity values"
   - "identity values [SQL Server], last-inserted"
 ms.assetid: eef24670-059b-4f10-91d4-a67bc1ed12ab
-caps.latest.revision: 36
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "craigg"
-ms.workload: "Active"
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
 ---
 # SCOPE_IDENTITY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

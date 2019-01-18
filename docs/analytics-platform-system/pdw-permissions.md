@@ -1,25 +1,18 @@
 ---
-title: "PDW Permissions (SQL Server PDW)"
-author: "barbkess" 
-ms.author: "barbkess"
-manager: "jhubbard"	  
-ms.prod: "analytics-platform-system"
-ms.prod_service: "mpp-data-warehouse"
-ms.service: ""
-ms.component:
-ms.technology: "mpp-data-warehouse"
-ms.custom: ""
-ms.date: 01/05/2017
-ms.reviewer: na
-ms.suite: "sql"
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: 7e271980-bec8-424b-9f68-cea11b4e64e8
-caps.latest.revision: 23
-
+title: Permissions in Parallel Data Warehouse | Microsoft Docs
+description: This article describes the requirements and options for managing database permissions for Parallel Data Warehouse.  
+author: mzaman1 
+manager: craigg
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
 ---
-# PDW Permissions
-This topic describes the requirements and options for managing database permissions for SQL Server PDW.  
+
+# Managing permissions in Parallel Data Warehouse
+This article describes the requirements and options for managing database permissions for SQL Server PDW.  
   
 ## <a name="BackupRestoreBasics"></a>Database Engine Permission Basics  
 Database Engine permissions on SQL Server PDW are managed at the server level through logins, and at the database level through database users and user-defined database roles.  
@@ -64,7 +57,7 @@ The following list describes the default permissions:
   
 -   When a login is created by usings **CREATE LOGIN** statement, the login receives the **CONNECT SQL** permission allowing the login to connect to the SQL Server PDW.  
   
--   When a database user is created by using the **CREATE USER** statement, the user receives the **CONNECT ON DATABASE::***<database_name>* permission, allowing the login to connect to that database as a user.  
+-   When a database user is created by using the **CREATE USER** statement, the user receives the **CONNECT ON DATABASE::**_<database_name>_ permission, allowing the login to connect to that database as a user.  
   
 -   All principals, including the PUBLIC role, have no explicit or implicit permissions by default because implicit permissions are inherited from explicit permissions. Therefore, when no explicit permissions are present, there can also be no implicit permissions.  
   
@@ -99,7 +92,7 @@ An *implicit permission* is a **GRANT** or **DENY** permission that a principal 
   
 -   A principal can inherit a permission on a subordinate object (such as a table) if the principal has a permission on one of the objects parent scopes (such as the  schema of the table or the permission on the entire database).  
   
--   A principal can inherit a permission by having a permission that includes a subordinate permission. For example the **ALTER ANY USER** permission includes the both the **CREATE USER** and the **ALTER ON USER::***<name>* permissions.  
+-   A principal can inherit a permission by having a permission that includes a subordinate permission. For example the **ALTER ANY USER** permission includes the both the **CREATE USER** and the **ALTER ON USER::**_<name>_ permissions.  
   
 ### Determining Permissions When Performing Actions  
 The process of determining which permission to assign to a principal is complex. The complexity occurs when determining implicit permissions because principals can be members of multiple roles and permissions can be passed through multiple levels in the role hierarchy.  
@@ -126,7 +119,7 @@ The following list describes general rules for determining permissions:
   
 -   **DENY** overrides **GRANT** when permissions conflict.  
   
-    For example, suppose login David has no permissions on the Customer table and is a member of two database roles –dbgroup1, which has **DENY** permission on the Customer table, and dbgroup2, which has **GRANT** permission on the Customer table. In this case, David will inherit the **DENY** permission on the Customer table. This is the case whether the roles gained their permissions explicitly or implicitly.  
+    For example, suppose login David has no permissions on the Customer table and is a member of two database roles -dbgroup1, which has **DENY** permission on the Customer table, and dbgroup2, which has **GRANT** permission on the Customer table. In this case, David will inherit the **DENY** permission on the Customer table. This is the case whether the roles gained their permissions explicitly or implicitly.  
   
 ### Auditing Permissions  
 To research the permissions of a user check the following.  

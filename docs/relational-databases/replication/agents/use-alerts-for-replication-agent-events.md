@@ -2,16 +2,11 @@
 title: "Use Alerts for Replication Agent Events | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "database-engine"
-ms.service: ""
-ms.component: "replication"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: replication
+ms.topic: conceptual
 helpviewer_keywords: 
   - "viewing alerts"
   - "Queue Reader Agent, alerts"
@@ -24,11 +19,9 @@ helpviewer_keywords:
   - "displaying alerts"
   - "Snapshot Agent, alerts"
 ms.assetid: 8c42e523-7020-471d-8977-a0bd044b9471
-caps.latest.revision: 39
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-ms.workload: "Inactive"
+author: "MashaMSFT"
+ms.author: "mathoma"
+manager: craigg
 ---
 # Use Alerts for Replication Agent Events
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -48,7 +41,7 @@ ms.workload: "Inactive"
 |20578|**Replication: agent custom shutdown**|||  
 |22815|**Peer-to-peer conflict detection alert**|Distribution Agent detected a conflict when it tries to apply a change at a peer-to-peer node.|Yes|  
   
- In addition to these alerts, Replication Monitor provides a set of warnings and alerts related to status and performance. For more information, see [Set Thresholds and Warnings in Replication Monitor](../../../relational-databases/replication/monitor/set-thresholds-and-warnings-in-replication-monitor.md). You can also define alerts for other replication events using the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] alerts infrastructure. For more information, see [Create a User-Defined Event](http://msdn.microsoft.com/library/03d71a35-97fa-4bba-aa9a-23ac9c9cf879).  
+ In addition to these alerts, Replication Monitor provides a set of warnings and alerts related to status and performance. For more information, see [Set Thresholds and Warnings in Replication Monitor](../../../relational-databases/replication/monitor/set-thresholds-and-warnings-in-replication-monitor.md). You can also define alerts for other replication events using the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] alerts infrastructure. For more information, see [Create a User-Defined Event](https://msdn.microsoft.com/library/03d71a35-97fa-4bba-aa9a-23ac9c9cf879).  
   
  **To configure predefined replication alerts**  
   

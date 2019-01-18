@@ -2,26 +2,19 @@
 title: "Single Table Quick Profile Form (Data Profiling Task) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "integration-services"
-ms.service: ""
-ms.component: "control-flow"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: integration-services
+ms.topic: conceptual
 f1_keywords: 
   - "sql13.dts.designer.dataprofilingtask.quickprofile.f1"
 helpviewer_keywords: 
   - "Data Profiling Task Editor"
 ms.assetid: d2fac9ce-730e-474e-961a-69406b633778
-caps.latest.revision: 20
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
-ms.workload: "Inactive"
+manager: craigg
 ---
 # Single Table Quick Profile Form (Data Profiling Task)
   Use the **Single Table Quick Profile Form** to configure the Data Profiling task quickly to profile a single table or view by using default settings.  

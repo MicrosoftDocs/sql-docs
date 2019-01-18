@@ -1,0 +1,28 @@
+- name: Adding Connections Programmatically
+  href: adding-connections-programmatically.md
+- name: Building Packages Programmatically
+  href: building-packages-programmatically.md
+- name: Creating a Package Programmatically
+  href: creating-a-package-programmatically.md
+- name: Adding Tasks Programmatically
+  href: adding-tasks-programmatically.md
+- name: Connecting Tasks Programmatically
+  href: connecting-tasks-programmatically.md
+- name: Working with Variables Programmatically
+  href: working-with-variables-programmatically.md
+- name: Handling Events Programmatically
+  href: handling-events-programmatically.md
+- name: Enabling Logging Programmatically
+  href: enabling-logging-programmatically.md
+- name: Adding the Data Flow Task Programmatically
+  href: adding-the-data-flow-task-programmatically.md
+- name: Discovering Data Flow Components Programmatically
+  href: discovering-data-flow-components-programmatically.md
+- name: Adding Data Flow Components Programmatically
+  href: adding-data-flow-components-programmatically.md
+- name: Connecting Data Flow Components Programmatically
+  href: connecting-data-flow-components-programmatically.md
+- name: Selecting Input Columns Programmatically
+  href: selecting-input-columns-programmatically.md
+- name: Saving a Package Programmatically
+  href: saving-a-package-programmatically.md

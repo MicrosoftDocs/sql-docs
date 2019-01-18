@@ -2,24 +2,17 @@
 title: "Select a Dimension Table and Keys (Slowly Changing Dimension Wizard) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "integration-services"
-ms.service: ""
-ms.component: "data-flow"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: integration-services
+ms.topic: conceptual
 f1_keywords: 
   - "sql13.dts.loaddimwizard.selecttableandkeys.f1"
 ms.assetid: 01e0495f-de35-4607-ba19-0539e801e8fd
-caps.latest.revision: 27
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
-ms.workload: "Inactive"
+manager: craigg
 ---
 # Select a Dimension Table and Keys (Slowly Changing Dimension Wizard)
   Use the **Select a Dimension Table and Keys** page to select a dimension table to load. Map columns from the data flow to the columns that will be loaded.  

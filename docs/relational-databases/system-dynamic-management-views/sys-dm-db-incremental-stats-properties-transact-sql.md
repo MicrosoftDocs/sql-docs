@@ -2,18 +2,10 @@
 title: "sys.dm_db_incremental_stats_properties (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "12/18/2017"
-ms.prod: "sql-non-specified"
-ms.prod_service: "database-engine"
-ms.service: ""
-ms.component: "dmv's"
+ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: system-objects
 ms.topic: "language-reference"
-applies_to: 
-  - "SQL Server 2014"
 f1_keywords: 
   - "sys.dm_db_incremental_stats_properties"
   - "sys.dm_db_incremental_stats_properties_TSQL"
@@ -24,11 +16,9 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.dm_db_incremental_stats_properties"
 ms.assetid: aa0db893-34d1-419c-b008-224852e71307
-caps.latest.revision: 7
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-ms.workload: "Inactive"
+author: stevestein
+ms.author: sstein
+manager: craigg
 ---
 # sys.dm_db_incremental_stats_properties (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]

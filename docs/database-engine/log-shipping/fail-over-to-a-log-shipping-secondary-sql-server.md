@@ -2,27 +2,19 @@
 title: "Fail Over to a Log Shipping Secondary (SQL Server) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/07/2017"
-ms.prod: "sql-non-specified"
-ms.prod_service: "database-engine"
-ms.service: ""
-ms.component: "log-shipping"
+ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: high-availability
+ms.topic: conceptual
 helpviewer_keywords: 
   - "primary databases [SQL Server]"
   - "secondary data files [SQL Server], manual fail over"
   - "log shipping [SQL Server], failover"
   - "failover [SQL Server], log shipping"
 ms.assetid: edfe5d59-4287-49c1-96c9-dd56212027bc
-caps.latest.revision: 31
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-ms.workload: "On Demand"
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
 ---
 # Fail Over to a Log Shipping Secondary (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

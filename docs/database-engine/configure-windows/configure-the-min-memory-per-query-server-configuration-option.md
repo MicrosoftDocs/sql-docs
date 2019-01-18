@@ -2,32 +2,26 @@
 title: "Configure the min memory per query Server Configuration Option | Microsoft Docs"
 ms.custom: ""
 ms.date: "11/24/2017"
-ms.prod: "sql-non-specified"
-ms.prod_service: "database-engine"
-ms.service: ""
-ms.component: "configure-windows"
+ms.prod: sql
+ms.prod_service: high-availability
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: configuration
+ms.topic: conceptual
 helpviewer_keywords: 
   - "memory [SQL Server], queries"
   - "minimum query memory"
   - "queries [SQL Server], memory"
   - "min memory per query option"
+  - "min memory grant"
 ms.assetid: ecd3fb79-b4a6-432f-9ef5-530e0d42d5a6
-caps.latest.revision: 28
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-ms.workload: "Inactive"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ---
 # Configure the min memory per query Server Configuration Option
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-  This topic describes how to configure the **min memory per query** server configuration option in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)]. The **min memory per query** option specifies the minimum amount of memory (in kilobytes) that will be allocated for the execution of a query. For example, if **min memory per query** is set to 2,048 KB, the query is guaranteed to get at least that much total memory. The default value is 1,024 KB. The minimum value 512 KB, and the maximum is 2,147,483,647 KB (2 GB).  
+  This topic describes how to configure the **min memory per query** server configuration option in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)]. The **min memory per query** option specifies the minimum amount of memory (in kilobytes) that will be allocated for the execution of a query. This is also known as the minimum memory grant. For example, if **min memory per query** is set to 2,048 KB, the query is guaranteed to get at least that much total memory. The default value is 1,024 KB. The minimum value 512 KB, and the maximum is 2,147,483,647 KB (2 GB).  
   
  **In This Topic**  
   
@@ -51,16 +45,18 @@ ms.workload: "Inactive"
   
 ###  <a name="Restrictions"></a> Limitations and Restrictions  
   
--   The amount of min memory per query has precedence over the [index create memory](../../database-engine/configure-windows/configure-the-index-create-memory-server-configuration-option.md) option. If you modify both options and the index create memory is less than min memory per query, you receive a warning message, but the value is set. During query execution you receive another similar warning.  
+-   The amount of min memory per query has precedence over the [index create memory](../../database-engine/configure-windows/configure-the-index-create-memory-server-configuration-option.md) option. If you modify both options and the index create memory is less than min memory per query, you receive a warning message, but the value is set. During query execution, you receive another similar warning.  
   
 ###  <a name="Recommendations"></a> Recommendations  
   
--   This option is an advanced option and should be changed only by an experienced database administrator or certified [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] technician.  
+-   This option is an advanced option and should be changed only by an experienced database administrator or certified [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] professional.  
   
--   The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] query processor tries to determine the optimal amount of memory to allocate to a query. The min memory per query option lets the administrator specify the minimum amount of memory any single query receives. Queries generally receive more memory than this if they have hash and sort operations on a large volume of data. Increasing the value of min memory per query may improve performance for some small to medium-sized queries, but doing so could lead to increased competition for memory resources. The min memory per query option includes memory allocated for sort operations.  
+-   The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] query processor tries to determine the optimal amount of memory to allocate to a query. The min memory per query option lets the administrator specify the minimum amount of memory any single query receives. Queries generally receive more memory than this, if they have hash and sort operations on a large volume of data. Increasing the value of min memory per query may improve performance for some small to medium-sized queries, but doing so could lead to increased competition for memory resources. The min memory per query option includes memory allocated for sort operations.  
 
--    Do not set the min memory per query server configuration option too high, especially on very busy systems, because the query has to wait until it can secure the minimum memory requested or until the value specified in the query wait server configuration option is exceeded. If more memory is available than the specified minimum value required to execute the query, the query is allowed to make use of the additional memory, provided that the memory can be used effectively by the query. 
-  
+-    Do not set the min memory per query server configuration option too high, especially on very busy systems, because the query has to wait<sup>1</sup> until it can secure the minimum memory requested, or until the value specified in the query wait server configuration option is exceeded. If more memory is available than the specified minimum value required to execute the query, the query is allowed to make use of the additional memory, provided that the memory can be used effectively by the query.     
+
+<sup>1</sup> In this scenario, the wait type is typically RESOURCE_SEMAPHORE. For more information, see [sys.dm_os_wait_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md).
+
 ###  <a name="Security"></a> Security  
   
 ####  <a name="Permissions"></a> Permissions  
@@ -106,6 +102,8 @@ GO
  [RECONFIGURE &#40;Transact-SQL&#41;](../../t-sql/language-elements/reconfigure-transact-sql.md)   
  [Server Configuration Options &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)   
  [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)   
- [Configure the index create memory Server Configuration Option](../../database-engine/configure-windows/configure-the-index-create-memory-server-configuration-option.md)  
+ [Configure the index create memory Server Configuration Option](../../database-engine/configure-windows/configure-the-index-create-memory-server-configuration-option.md)     
+ [sys.dm_os_wait_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md)     
+ [sys.dm_exec_query_memory_grants &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-memory-grants-transact-sql.md)
   
   

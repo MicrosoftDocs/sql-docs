@@ -1,24 +1,42 @@
 ---
 title: Overview of SQL Server on Linux | Microsoft Docs
-description: This topic describes how SQL Server runs on Linux and provides information on how to learn more.
+description: This article describes how SQL Server runs on Linux and provides information on how to learn more.
 author: rothja 
 ms.author: jroth 
-manager: jhubbard
-ms.date: 12/21/2017
-ms.topic: article
-ms.prod: "sql-non-specified"
-ms.prod_service: "database-engine"
-ms.service: ""
-ms.component: sql-linux
-ms.suite: "sql"
-ms.custom: ""
-ms.technology: database-engine
+manager: craigg
+ms.date: 09/25/2018
+ms.topic: conceptual
+ms.prod: sql
+ms.custom: "sql-linux"
+ms.technology: linux
 ms.assetid: 9dcc6a90-0add-42c2-815b-862e4e2a21ac
-ms.workload: "Active"
 ---
 # SQL Server on Linux
 
-SQL Server 2017 now runs on Linux. It’s the same SQL Server database engine, with many similar features and services regardless of your operating system.
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
+
+::: moniker range="= sql-server-2017 || = sqlallproducts-allversions"
+Starting with SQL Server 2017, SQL Server runs on Linux. It's the same SQL Server database engine, with many similar features and services regardless of your operating system.
+::: moniker-end
+
+::: moniker range=">= sql-server-ver15 || >= sql-server-linux-ver15"
+SQL Server 2019 preview runs on Linux. It's the same SQL Server database engine, with many similar features and services regardless of your operating system. To find out more about this release, see [What's new in SQL Server 2019 preview for Linux](../sql-server/what-s-new-in-sql-server-ver15.md#sqllinux).
+::: moniker-end
+
+::: moniker range="= sql-server-2017"
+> [!TIP]
+> [SQL Server 2019 preview](sql-server-linux-overview.md?view=sql-server-ver15) has been released! To find out what's new for Linux in the latest release, see [What's new in SQL Server 2019 preview for Linux](../sql-server/what-s-new-in-sql-server-ver15.md?view=sql-server-ver15#sqllinux).
+::: moniker-end
+
+::: moniker range="= sql-server-linux-2017"
+> [!TIP]
+> [SQL Server 2019 preview](sql-server-linux-overview.md?view=sql-server-linux-ver15) has been released! To find out what's new for Linux in the latest release, see [What's new in SQL Server 2019 preview for Linux](../sql-server/what-s-new-in-sql-server-ver15.md?view=sql-server-linux-ver15#sqllinux).
+::: moniker-end
+
+::: moniker range="= sqlallproducts-allversions"
+> [!TIP]
+> SQL Server 2019 preview has been released! To find out what's new for Linux in the latest release, see [What's new in SQL Server 2019 preview for Linux](../sql-server/what-s-new-in-sql-server-ver15.md#sqllinux).
+::: moniker-end
 
 ## Install
 
@@ -40,19 +58,48 @@ After installation, connect to the SQL Server instance on your Linux machine. Yo
 | Tool | Tutorial |
 |-----|-----|
 | Visual Studio Code (VS Code) | [Use VS Code with SQL Server on Linux](sql-server-linux-develop-use-vscode.md) |
-| SQL Server Management Studio (SSMS) | [Use SSMS on Windows to connect to SQL Server on Linux](sql-server-linux-develop-use-ssms.md) |
+| SQL Server Management Studio (SSMS) | [Use SSMS on Windows to connect to SQL Server on Linux](sql-server-linux-manage-ssms.md) |
 | SQL Server Data Tools (SSDT) | [Use SSDT with SQL Server on Linux](sql-server-linux-develop-use-ssdt.md) |
 
 ## Explore
 
-SQL Server 2017 has the same underlying database engine on all supported platforms, including Linux. So many existing features and capabilities operate the same way on Linux. This area of the documentation exposes some of these features from a Linux perspective. It also calls out areas that have unique requirements on Linux.
+<!--SQL Server 2017 on Linux-->
+::: moniker range="= sql-server-linux-2017 || = sql-server-2017"
 
-If you are already familiar with SQL Server, review the [Release notes](sql-server-linux-release-notes.md) for general guidelines and known issues for this release. Then look at [what's new for SQL Server on Linux](sql-server-linux-whats-new.md) as well as [what's new for SQL Server 2017 overall](../sql-server/what-s-new-in-sql-server-2017.md). For answers to frequently asked questions, see the [SQL Server on Linux FAQ](sql-server-linux-faq.md).
+SQL Server 2017 has the same underlying database engine on all supported platforms, including Linux. Therefore, many existing features and capabilities operate the same way on Linux. This area of the documentation exposes some of these features from a Linux perspective. It also calls out areas that have unique requirements on Linux.
 
-##  ![info_tip](./media/general/info_tip.png) Engage with the SQL Server engineering team
+If you are already familiar with SQL Server, review the [Release notes](sql-server-linux-release-notes.md) for general guidelines and known issues for this release. Then look at [what's new for SQL Server on Linux](sql-server-linux-whats-new.md) as well as [what's new for SQL Server 2017 overall](../sql-server/what-s-new-in-sql-server-2017.md).
 
-- [DBA Stack Exchange](https://dba.stackexchange.com/questions/tagged/sql-server): Ask database administration questions
-- [Stack Overflow](http://stackoverflow.com/questions/tagged/sql-server): Ask development questions
-- [MSDN Forums](https://social.msdn.microsoft.com/Forums/en-US/home?category=sqlserver): Ask technical questions
-- [Microsoft Connect](https://connect.microsoft.com/SQLServer/Feedback): Report bugs and request feature
-- [Reddit](https://www.reddit.com/r/SQLServer/): Discuss SQL Server
+::: moniker-end
+<!--SQL Server 2019 on Linux-->
+::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15"
+
+[!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] has the same underlying database engine on all supported platforms, including Linux. Therefore, many existing features and capabilities operate the same way on Linux. This area of the documentation exposes some of these features from a Linux perspective. It also calls out areas that have unique requirements on Linux.
+
+If you are already familiar with SQL Server on Linux, review the [Release notes](sql-server-linux-release-notes-2019.md) for general guidelines and known issues for this release. Then look at [what's new for SQL Server 2019 preview on Linux](../sql-server/what-s-new-in-sql-server-ver15.md?view=sql-server-ver15).
+
+::: moniker-end
+
+<!--SQL Server All Versions-->
+::: moniker range="=sqlallproducts-allversions"
+
+SQL Server 2017 and [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] have the same underlying database engine on all supported platforms, including Linux. Therefore, many existing features and capabilities operate the same way on Linux. This area of the documentation exposes some of these features from a Linux perspective. It also calls out areas that have unique requirements on Linux.
+
+If you are already familiar with SQL Server on Linux, review the release notes:
+
+- [SQL Server 2017 release notes](sql-server-linux-release-notes.md)
+- [SQL Server 2019 preview release notes](sql-server-linux-release-notes-2019.md)
+
+Then look at what's new:
+
+- [What's new for SQL Server 2017](sql-server-linux-whats-new.md)
+- [What's new for SQL Server 2019 preview on Linux](../sql-server/what-s-new-in-sql-server-ver15.md#sqllinux)
+
+::: moniker-end
+
+> [!TIP]
+> For answers to frequently asked questions, see the [SQL Server on Linux FAQ](sql-server-linux-faq.md).
+
+[!INCLUDE[Get Help Options](../includes/paragraph-content/get-help-options.md)]
+
+[!INCLUDE[contribute-to-content](../includes/paragraph-content/contribute-to-content.md)]

@@ -2,16 +2,11 @@
 title: "Define a Logical Backup Device for a Disk File (SQL Server) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-non-specified"
-ms.prod_service: "database-engine"
-ms.service: ""
-ms.component: "backup-restore"
+ms.prod: sql
+ms.prod_service: backup-restore
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "dbe-backup-restore"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: backup-restore
+ms.topic: conceptual
 helpviewer_keywords: 
   - "backup devices [SQL Server], defining"
   - "backup devices [SQL Server], disks"
@@ -19,11 +14,9 @@ helpviewer_keywords:
   - "database backups [SQL Server], disks"
   - "backing up databases [SQL Server], disks"
 ms.assetid: 86331d43-c738-4523-ae3d-7d6700348ed1
-caps.latest.revision: 39
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-ms.workload: "On Demand"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ---
 # Define a Logical Backup Device for a Disk File (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

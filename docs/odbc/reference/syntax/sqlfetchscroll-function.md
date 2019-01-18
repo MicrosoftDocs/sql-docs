@@ -2,16 +2,11 @@
 title: "SQLFetchScroll Function | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
-ms.prod_service: "drivers"
-ms.service: ""
-ms.component: "odbc"
+ms.prod: sql
+ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "drivers"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: connectivity
+ms.topic: conceptual
 apiname: 
   - "SQLFetchScroll"
 apilocation: 
@@ -22,11 +17,9 @@ f1_keywords:
 helpviewer_keywords: 
   - "SQLFetchScroll function [ODBC]"
 ms.assetid: c0243667-428c-4dda-ae91-3c307616a1ac
-caps.latest.revision: 30
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
-ms.workload: "Inactive"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # SQLFetchScroll Function
 **Conformance**  
@@ -123,7 +116,7 @@ SQLRETURN SQLFetchScroll(
 |IM018|**SQLCompleteAsync** has not been called to complete the previous asynchronous operation on this handle.|If the previous function call on the handle returns SQL_STILL_EXECUTING and if notification mode is enabled, **SQLCompleteAsync** must be called on the handle to do post-processing and complete the operation.|  
   
 ## Comments  
- **SQLFetchScroll** returns a specified rowset from the result set. Rowsets can be specified by absolute or relative position or by bookmark. **SQLFetchScroll** can be called only while a result set exists — that is, after a call that creates a result set and before the cursor over that result set is closed. If any columns are bound, it returns the data in those columns. If the application has specified a pointer to a row status array or a buffer in which to return the number of rows fetched, **SQLFetchScroll** returns this information as well. Calls to **SQLFetchScroll** can be mixed with calls to **SQLFetch** but cannot be mixed with calls to **SQLExtendedFetch**.  
+ **SQLFetchScroll** returns a specified rowset from the result set. Rowsets can be specified by absolute or relative position or by bookmark. **SQLFetchScroll** can be called only while a result set exists - that is, after a call that creates a result set and before the cursor over that result set is closed. If any columns are bound, it returns the data in those columns. If the application has specified a pointer to a row status array or a buffer in which to return the number of rows fetched, **SQLFetchScroll** returns this information as well. Calls to **SQLFetchScroll** can be mixed with calls to **SQLFetch** but cannot be mixed with calls to **SQLExtendedFetch**.  
   
  For more information, see [Using Block Cursors](../../../odbc/reference/develop-app/using-block-cursors.md) and [Using Scrollable Cursors](../../../odbc/reference/develop-app/using-scrollable-cursors.md).  
   
@@ -142,7 +135,7 @@ SQLRETURN SQLFetchScroll(
   
  Drivers are not required to support all fetch orientations; an application calls **SQLGetInfo** with an information type of SQL_DYNAMIC_CURSOR_ATTRIBUTES1, SQL_KEYSET_CURSOR_ATTRIBUTES1, or SQL_STATIC_CURSOR_ATTRIBUTES1 (depending on the type of the cursor) to determine which fetch orientations are supported by the driver. The application should look at the SQL_CA1_NEXT, SQL_CA1_RELATIVE, SQL_CA1_ABSOLUTE, and WQL_CA1_BOOKMARK bitmasks in these information types. Furthermore, if the cursor is forward-only and FetchOrientation is not SQL_FETCH_NEXT, **SQLFetchScroll** returns SQLSTATE HY106 (Fetch type out of range).  
   
- The SQL_ATTR_ROW_ARRAY_SIZE statement attribute specifies the number of rows in the rowset. If the rowset being fetched by **SQLFetchScroll** overlaps the end of the result set, **SQLFetchScroll** returns a partial rowset. That is, if S + R – 1 is greater than L, where S is the starting row of the rowset being fetched, R is the rowset size, and L is the last row in the result set, then only the first L – S + 1 rows of the rowset are valid. The remaining rows are empty and have a status of SQL_ROW_NOROW.  
+ The SQL_ATTR_ROW_ARRAY_SIZE statement attribute specifies the number of rows in the rowset. If the rowset being fetched by **SQLFetchScroll** overlaps the end of the result set, **SQLFetchScroll** returns a partial rowset. That is, if S + R - 1 is greater than L, where S is the starting row of the rowset being fetched, R is the rowset size, and L is the last row in the result set, then only the first L - S + 1 rows of the rowset are valid. The remaining rows are empty and have a status of SQL_ROW_NOROW.  
   
  After **SQLFetchScroll** returns, the current row is the first row of the rowset.  
   
@@ -179,9 +172,9 @@ SQLRETURN SQLFetchScroll(
 |*Before start*|*Before start*|  
 |*CurrRowsetStart = 1*|*Before start*|  
 |*1 < CurrRowsetStart <= RowsetSize* <sup>[2]</sup>|*1* <sup>[1]</sup>|  
-|*CurrRowsetStart > RowsetSize* <sup>[2]</sup>|*CurrRowsetStart – RowsetSize* <sup>[2]</sup>|  
+|*CurrRowsetStart > RowsetSize* <sup>[2]</sup>|*CurrRowsetStart - RowsetSize* <sup>[2]</sup>|  
 |*After end AND LastResultRow < RowsetSize* <sup>[2]</sup>|*1* <sup>[1]</sup>|  
-|*After end AND LastResultRow >= RowsetSize* <sup>[2]</sup>|*LastResultRow – RowsetSize + 1* <sup>[2]</sup>|  
+|*After end AND LastResultRow >= RowsetSize* <sup>[2]</sup>|*LastResultRow - RowsetSize + 1* <sup>[2]</sup>|  
   
  [1]   **SQLFetchScroll** returns SQLSTATE 01S06 (Attempt to fetch before the result set returned the first rowset) and SQL_SUCCESS_WITH_INFO.  
   
@@ -237,7 +230,7 @@ SQLRETURN SQLFetchScroll(
   
 |Condition|First row of new rowset|  
 |---------------|-----------------------------|  
-|*RowsetSize* <sup>[1]</sup> <= LastResultRow|*LastResultRow – RowsetSize + 1* <sup>[1]</sup>|  
+|*RowsetSize* <sup>[1]</sup> <= LastResultRow|*LastResultRow - RowsetSize + 1* <sup>[1]</sup>|  
 |*RowsetSize* <sup>[1]</sup> > LastResultRow|*1*|  
   
  [1]   If the rowset size has been changed since the previous call to fetch rows, this is the new rowset size.  
@@ -272,7 +265,7 @@ SQLSetPos(hstmt, 3, SQL_REFRESH, SQL_LOCK_NO_CHANGE);
 SQLFetchScroll(hstmt, SQL_FETCH_RELATIVE, 0);  
 ```  
   
- When **SQLFetchScroll** returns a new rowset that has a position relative to the current rowset — that is, FetchOrientation is SQL_FETCH_NEXT, SQL_FETCH_PRIOR, or SQL_FETCH_RELATIVE — it does not include changes to the current rowset when calculating the starting position of the new rowset. However, it does include changes outside the current rowset if it is capable of detecting them. Furthermore, when **SQLFetchScroll** returns a new rowset that has a position independent of the current rowset — that is, FetchOrientation is SQL_FETCH_FIRST, SQL_FETCH_LAST, SQL_FETCH_ABSOLUTE, or SQL_FETCH_BOOKMARK — it includes all changes it is capable of detecting, even if they are in the current rowset.  
+ When **SQLFetchScroll** returns a new rowset that has a position relative to the current rowset - that is, FetchOrientation is SQL_FETCH_NEXT, SQL_FETCH_PRIOR, or SQL_FETCH_RELATIVE - it does not include changes to the current rowset when calculating the starting position of the new rowset. However, it does include changes outside the current rowset if it is capable of detecting them. Furthermore, when **SQLFetchScroll** returns a new rowset that has a position independent of the current rowset - that is, FetchOrientation is SQL_FETCH_FIRST, SQL_FETCH_LAST, SQL_FETCH_ABSOLUTE, or SQL_FETCH_BOOKMARK - it includes all changes it is capable of detecting, even if they are in the current rowset.  
   
  When determining whether newly added rows are inside or outside the current rowset, a partial rowset is considered to end at the last valid row; that is, the last row for which the row status is not SQL_ROW_NOROW. For example, suppose the cursor is capable of detecting newly added rows, the current rowset is a partial rowset, the application adds new rows, and the cursor adds these rows to the end of the result set. If the application calls **SQLFetchScroll** with FetchOrientation set to SQL_FETCH_NEXT, **SQLFetchScroll** returns the rowset starting with the first newly added row.  
   
@@ -328,7 +321,7 @@ SQLFetchScroll(hstmt, SQL_FETCH_RELATIVE, 0);
  In each group of status records that applies to an individual row, the first status record returned by SQLExtendedFetch must contain SQLSTATE 01S01 (Error in row); **SQLFetchScroll** does not return this SQLSTATE. If SQLExtendedFetch is unable to return additional SQLSTATEs, it still must return this SQLSTATE.  
   
 ## SQLFetchScroll and Optimistic Concurrency  
- If a cursor uses optimistic concurrency — that is, the SQL_ATTR_CONCURRENCY statement attribute has a value of SQL_CONCUR_VALUES or SQL_CONCUR_ROWVER — **SQLFetchScroll** updates the optimistic concurrency values used by the data source to detect whether a row has changed. This happens whenever **SQLFetchScroll** fetches a new rowset, including when it refetches the current rowset. (It is called with FetchOrientation set to SQL_FETCH_RELATIVE and FetchOffset set to 0.)  
+ If a cursor uses optimistic concurrency - that is, the SQL_ATTR_CONCURRENCY statement attribute has a value of SQL_CONCUR_VALUES or SQL_CONCUR_ROWVER - **SQLFetchScroll** updates the optimistic concurrency values used by the data source to detect whether a row has changed. This happens whenever **SQLFetchScroll** fetches a new rowset, including when it refetches the current rowset. (It is called with FetchOrientation set to SQL_FETCH_RELATIVE and FetchOffset set to 0.)  
   
 ## SQLFetchScroll and ODBC 2.x Drivers  
  When an application calls **SQLFetchScroll** in an ODBC 2.x driver, the Driver Manager maps this call to **SQLExtendedFetch**. It passes the following values for the arguments of **SQLExtendedFetch**.  

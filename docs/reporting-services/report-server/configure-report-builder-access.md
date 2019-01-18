@@ -1,28 +1,19 @@
 ---
 title: "Configure Report Builder Access | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
+ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
-ms.service: ""
-ms.component: "report-server"
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
+ms.technology: report-server
 
 
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "Reporting Services, Report Builder"
   - "Report Builder 1.0, configuring access"
   - "configuring servers [Reporting Services]"
 ms.assetid: a79003d0-c905-4d4c-9560-93a7cc1e1dd4
-caps.latest.revision: 47
-author: "markingmyname"
-ms.author: "maghan"
-manager: "kfile"
-ms.workload: "On Demand"
+author: markingmyname
+ms.author: maghan
 ---
 # Configure Report Builder Access
   Report Builder is an ad hoc reporting tool that installs with a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] report server configured for either native mode or SharePoint integration mode.  
@@ -38,7 +29,7 @@ ms.workload: "On Demand"
  To use Report Builder, you must have a published report model to work with.  
   
 ## Prerequisites  
- Report Builder is not available in every edition of [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. For a list of features that are supported by the editions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], see [Features Supported by the Editions of SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md).  
+ Report Builder is not available in every edition of [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. For a list of features that are supported by the editions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], see [Features Supported by the Editions of SQL Server 2017](~/sql-server/editions-and-components-of-sql-server-2017.md).  
   
  The client computer must have the [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 2.0 installed. The [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] provides the infrastructure for running [!INCLUDE[ndptecclick](../../includes/ndptecclick-md.md)] applications.  
   
@@ -169,7 +160,7 @@ ms.workload: "On Demand"
  [Authentication with the Report Server](../../reporting-services/security/authentication-with-the-report-server.md)   
  [Browser Support for Reporting Services and Power View](../../reporting-services/browser-support-for-reporting-services-and-power-view.md)   
  [Start Report Builder](../../reporting-services/report-builder/start-report-builder.md)   
- [Report Manager  &#40;SSRS Native Mode&#41;](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)   
+ [Report Manager  &#40;SSRS Native Mode&#41;](https://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)   
  [Connect to a Report Server in Management Studio](../../reporting-services/tools/connect-to-a-report-server-in-management-studio.md)   
  [Report Server System Properties](../../reporting-services/report-server-web-service/net-framework/reporting-services-properties-report-server-system-properties.md)  
   

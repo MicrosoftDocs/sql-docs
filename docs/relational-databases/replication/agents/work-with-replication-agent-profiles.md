@@ -2,27 +2,20 @@
 title: "Work with Replication Agent Profiles | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "database-engine"
-ms.service: ""
-ms.component: "replication"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: replication
+ms.topic: conceptual
 helpviewer_keywords: 
   - "replication [SQL Server], agents and profiles"
   - "replication agent profiles [SQL Server]"
   - "agents [SQL Server replication], profiles"
   - "profiles [SQL Server], replication agents"
 ms.assetid: 9c290a88-4e9f-4a7e-aab5-4442137a9918
-caps.latest.revision: 49
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-ms.workload: "Inactive"
+author: "MashaMSFT"
+ms.author: "mathoma"
+manager: craigg
 ---
 # Work with Replication Agent Profiles
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -173,7 +166,7 @@ ms.workload: "Inactive"
   
 2.  At the Distributor, execute [sp_help_agent_parameter &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-help-agent-parameter-transact-sql.md). Specify the profile identifier from step 1 for **@profile_id**. This returns all parameters for the profile. Note the name of any parameters to modify or remove from the profile.  
   
-3.  To change the value of a parameter in a profile, execute [sp_change_agent_profile &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-change-agent-profile-transact-sql.md). Specify the profile identifier from step 1 for **@profile_id**, the name of the parameter to change for **@property**, and a new value for the parameter for **@value**.  
+3.  To change the value of a parameter in a profile, execute [sp_change_agent_parameter &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-change-agent-parameter-transact-sql.md). Specify the profile identifier from step 1 for **@profile_id**, the name of the parameter to change for **@parameter_name**, and a new value for the parameter for **@parameter_value**.  
   
     > [!NOTE]  
     >  You cannot change an existing agent profile to become the default profile for an agent. You must instead create a new profile as the default profile, as shown in the previous procedure.  
@@ -288,7 +281,7 @@ ms.workload: "Inactive"
 5.  Call the <xref:Microsoft.SqlServer.Replication.AgentProfile.Remove%2A> method to remove the user-defined profile represented by this object from the server.  
   
 ##  <a name="FollowUp"></a> Follow Up: After Changing Agent Parameters  
- Agent parameter changes take effect the next time the agent is started. If the agent runs continuously, you must stop and restart the agent.  
+Agent parameter changes take effect the next time the agent is started. If the agent runs continuously, you must stop and restart the agent. Starting with SQL Server 2017 CU3, some agent parameter changes take effect without having to restart the Agents. 
   
 ## See Also  
  [Replication Agent Profiles](../../../relational-databases/replication/agents/replication-agent-profiles.md)   

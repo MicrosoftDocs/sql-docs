@@ -1,23 +1,16 @@
 ---
 title: "PDOStatement::bindParam | Microsoft Docs"
 ms.custom: ""
-ms.date: "10/24/2017"
-ms.prod: "sql-non-specified"
-ms.prod_service: "drivers"
-ms.service: ""
-ms.component: "php"
+ms.date: "05/22/2018"
+ms.prod: sql
+ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "drivers"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: connectivity
+ms.topic: conceptual
 ms.assetid: 65212058-2632-47a4-ba7d-2206883abf09
-caps.latest.revision: 17
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
-ms.workload: "Inactive"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # PDOStatement::bindParam
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -100,6 +93,9 @@ echo $input1;
 ?>  
 ```  
   
+> [!NOTE]
+> When binding an output parameter to a bigint type, if the value may end up outside the range of an [integer](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md), using PDO::PARAM_INT with PDO::SQLSRV_PARAM_OUT_DEFAULT_SIZE may result in a "value out of range" exception. Therefore, use the default PDO::PARAM_STR instead and provide the size of the resulting string, which is at most 21. It is the maximum number of digits, including the negative sign, of any bigint value. 
+
 ## Example  
 This code sample shows how to use an input/output parameter.  
   
@@ -120,7 +116,7 @@ This code sample shows how to use an input/output parameter.
 ```  
 
 > [!NOTE]
-> It is recommended to use strings as inputs when binding values to a [decimal or numeric column](https://docs.microsoft.com/en-us/sql/t-sql/data-types/decimal-and-numeric-transact-sql) to ensure precision and accuracy as PHP has limited precision for [floating point numbers](http://php.net/manual/en/language.types.float.php).
+> It is recommended to use strings as inputs when binding values to a [decimal or numeric column](../../t-sql/data-types/decimal-and-numeric-transact-sql.md) to ensure precision and accuracy as PHP has limited precision for [floating point numbers](https://php.net/manual/en/language.types.float.php). The same applies to bigint columns, especially when the values are outside the range of an [integer](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md).
 
 ## Example  
 This code sample shows how to bind a decimal value as an input parameter.  
@@ -142,6 +138,7 @@ $stmt->execute();
 
 
 ## See Also  
-[PDOStatement Class](../../connect/php/pdostatement-class.md)  
-[PDO](http://go.microsoft.com/fwlink/?LinkID=187441)  
+[PDOStatement Class](../../connect/php/pdostatement-class.md)
+
+[PDO](https://php.net/manual/book.pdo.php)  
   

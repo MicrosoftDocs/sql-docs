@@ -2,16 +2,11 @@
 title: "Object Explorer Details Pane | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "sql-tools"
-ms.service: ""
-ms.component: "ssms-objects"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "tools-ssms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: ssms
+ms.topic: conceptual
 f1_keywords: 
   - "sql13.swb.summary.general.f1"
   - "sql13.swb.summary.report.f1"
@@ -21,23 +16,21 @@ helpviewer_keywords:
   - "object search [SQL Server]"
   - "searching objects [SQL Server]"
 ms.assetid: b963e3c2-dc9e-4d38-bd28-2e00fe9e0e47
-caps.latest.revision: 5
 author: "stevestein"
 ms.author: "sstein"
-manager: "jhubbard"
-ms.workload: "Inactive"
+manager: craigg
 ---
 # Object Explorer Details Pane
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-Object Explorer Details, a component of [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)], provides a tabular view of all the objects in the server and presents a user interface to manage them. The capabilities of Object Explorer vary slightly depending on the type of server, but generally include the development features for databases and management features for all server types.  
+Object Explorer Details, a component of [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], provides a tabular view of all the objects in the server and presents a user interface to manage them. The capabilities of Object Explorer vary slightly depending on the type of server, but generally include the development features for databases and management features for all server types.  
   
-The Object Explorer Details pane is visible in the [!INCLUDE[ssManStudio](../../includes/ssmanstudio_md.md)] by default. If you cannot see Object Explorer, on the **View** menu, click **Object Explorer Details** or press **F7**.  
+The Object Explorer Details pane is visible in the [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] by default. If you cannot see Object Explorer, on the **View** menu, click **Object Explorer Details** or press **F7**.  
   
 > [!NOTE]  
-> [!INCLUDE[ssManStudio](../../includes/ssmanstudio_md.md)] presents dates formatted with the Microsoft Windows Regional and Language Options in effect when [!INCLUDE[ssManStudio](../../includes/ssmanstudio_md.md)] was started. Restart [!INCLUDE[ssManStudio](../../includes/ssmanstudio_md.md)] to reflect newer settings.  
+> [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] presents dates formatted with the Microsoft Windows Regional and Language Options in effect when [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] was started. Restart [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] to reflect newer settings.  
   
 ## Object Explorer Details  
-Object Explorer Details can be used to navigate through folders and objects on your [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] instance. On 32-bit operating systems, Object Explorer can only display 64,000 objects. An icon must be selected to access additional objects.  
+Object Explorer Details can be used to navigate through folders and objects on your [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance. On 32-bit operating systems, Object Explorer can only display 64,000 objects. An icon must be selected to access additional objects.  
   
 Object Explorer Details includes a toolbar which contains the icons described in the following table. Icons are only available when appropriate.  
   
@@ -52,13 +45,13 @@ Object Explorer Details includes a toolbar which contains the icons described in
 |**Search**|Provides an area to enter a search term for certain database objects.|  
   
 ### Column Header Selections  
-Object Explorer Details has selectable columns. You can right-click in any column header and check the items that you want to display. Your selections will be persisted across the different objects you navigate through. Selections for each user are retained when you leave and restart [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)].  
+Object Explorer Details has selectable columns. You can right-click in any column header and check the items that you want to display. Your selections will be persisted across the different objects you navigate through. Selections for each user are retained when you leave and restart [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
 > [!CAUTION]  
 > Showing all columns for some object types (such as Databases) might slow the display rendering slightly for large sets of objects.  
   
 ### Sorting  
-Clicking one time on a column header will sort by that column. Clicking again on the same header reverse-sorts by that column. Sort selections are maintained for each user across objects and folders, and on [!INCLUDE[ssManStudio](../../includes/ssmanstudio_md.md)] restart.  
+Clicking one time on a column header will sort by that column. Clicking again on the same header reverse-sorts by that column. Sort selections are maintained for each user across objects and folders, and on [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] restart.  
   
 ### Filtering  
 Certain lists of objects displayed in Object Explorer Detail can be filtered using the **Filter** icon on the Object Explorer Details toolbar. The icon will be enabled when filtering is possible.  
@@ -90,7 +83,7 @@ Object Explorer Details supports multiple object selection. For example, if you 
 ## SQL Server Object Search  
 Wildcards  
   
--   Standard wildcard characters are supported. For example, searching for **dm_os%counters** returns both dm_os_memory_cache_counters and dm_os_performance_counters. For more information, see [How to: Search with Wildcards](http://msdn.microsoft.com/en-us/449600f8-cc87-4b3f-878a-59c158a88a40).  
+-   Standard wildcard characters are supported. For example, searching for **dm_os%counters** returns both dm_os_memory_cache_counters and dm_os_performance_counters. For more information, see [How to: Search with Wildcards](../../relational-databases/scripting/search-text-with-wildcards.md).  
   
 Search Scope  
   

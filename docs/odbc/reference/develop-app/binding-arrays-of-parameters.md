@@ -2,26 +2,19 @@
 title: "Binding Arrays of Parameters | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
-ms.prod_service: "drivers"
-ms.service: ""
-ms.component: "odbc"
+ms.prod: sql
+ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "drivers"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: connectivity
+ms.topic: conceptual
 helpviewer_keywords: 
   - "binding parameter arrays [ODBC]"
   - "arrays of parameter values [ODBC]"
   - "parameter arrays [ODBC]"
 ms.assetid: 037afe23-052d-4f3a-8aa7-45302b199ad0
-caps.latest.revision: 14
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
-ms.workload: "Inactive"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # Binding Arrays of Parameters
 Applications that use arrays of parameters bind the arrays to the parameters in the SQL statement. There are two binding styles:  
@@ -55,9 +48,9 @@ SQLINTEGER     PartIDIndArray[ARRAY_SIZE], DescLenOrIndArray[ARRAY_SIZE],
 SQLUSMALLINT   i, ParamStatusArray[ARRAY_SIZE];  
 SQLULEN ParamsProcessed;  
   
-memset(DescLenOrIndArray, 0, sizeof(DescLenOrIndArray);  
-memset(PartIDIndArray, 0, sizeof(PartIDIndArray);  
-memset(PriceIndArray, 0, sizeof(PriceIndArray);  
+memset(DescLenOrIndArray, 0, sizeof(DescLenOrIndArray));  
+memset(PartIDIndArray, 0, sizeof(PartIDIndArray));  
+memset(PriceIndArray, 0, sizeof(PriceIndArray));  
   
 // Set the SQL_ATTR_PARAM_BIND_TYPE statement attribute to use  
 // column-wise binding.  

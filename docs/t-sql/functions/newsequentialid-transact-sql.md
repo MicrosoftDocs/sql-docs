@@ -2,15 +2,10 @@
 title: "NEWSEQUENTIALID (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/08/2015"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.service: ""
-ms.component: "t-sql|functions"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: t-sql
 ms.topic: "language-reference"
 f1_keywords: 
   - "NEWSEQUENTIALID"
@@ -21,11 +16,9 @@ helpviewer_keywords:
   - "NEWSEQUENTIALID function"
   - "GUIDs [SQL Server]"
 ms.assetid: e06d2cab-f1ff-42f1-8550-6aaec57be36f
-caps.latest.revision: 33
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "craigg"
-ms.workload: "On Demand"
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
 ---
 # NEWSEQUENTIALID (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -35,7 +28,7 @@ ms.workload: "On Demand"
 > [!IMPORTANT]  
 >  If privacy is a concern, do not use this function. It is possible to guess the value of the next generated GUID and, therefore, access data associated with that GUID.  
   
- NEWSEQUENTIALID is a wrapper over the Windows [UuidCreateSequential](http://go.microsoft.com/fwlink/?LinkId=164027) function, with some [byte shuffling applied](https://blogs.msdn.microsoft.com/dbrowne/2012/07/03/how-to-generate-sequential-guids-for-sql-server-in-net/).
+ NEWSEQUENTIALID is a wrapper over the Windows [UuidCreateSequential](https://go.microsoft.com/fwlink/?LinkId=164027) function, with some [byte shuffling applied](https://blogs.msdn.microsoft.com/dbrowne/2012/07/03/how-to-generate-sequential-guids-for-sql-server-in-net/).
   
 > [!WARNING]  
 >  The UuidCreateSequential function has hardware dependencies. On [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], clusters of sequential values can develop when databases (such as contained databases) are moved to other computers. When using Always On and on [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)], clusters of sequential values can develop if the database fails over to a different computer.  

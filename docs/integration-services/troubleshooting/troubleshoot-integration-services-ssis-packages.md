@@ -2,22 +2,15 @@
 title: "Troubleshoot Integration Services (SSIS) Packages | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/09/2016"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "integration-services"
-ms.service: ""
-ms.component: "troubleshooting"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: integration-services
+ms.topic: conceptual
 ms.assetid: ce2c0b78-e1f1-409a-9f4c-f90027c70c07
-caps.latest.revision: 2
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
-ms.workload: "Inactive"
+manager: craigg
 ---
 # Troubleshoot Integration Services (SSIS) Packages
 ## In this section

@@ -1,25 +1,18 @@
 ---
 title: "Saving to the XML DOM Object | Microsoft Docs"
-ms.prod: "sql-non-specified"
-ms.prod_service: "drivers"
-ms.service: ""
-ms.component: "ado"
-ms.technology:
-  - "drivers"
+ms.prod: sql
+ms.prod_service: connectivity
+ms.technology: connectivity
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "XML DOM object [ADO], saving to"
 ms.assetid: 4d20fd28-aaf8-4232-83ce-f9d1e5f93dae
-caps.latest.revision: 3
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
-ms.workload: "Inactive"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # Saving to the XML DOM Object
 You can save a Recordset in XML format to an instance of an MSXML DOM object, as shown in the following Visual Basic code:  

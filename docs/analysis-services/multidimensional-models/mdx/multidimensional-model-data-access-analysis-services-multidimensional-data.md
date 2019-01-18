@@ -1,35 +1,14 @@
 ---
 title: "Multidimensional Model Data Access (Analysis Services - Multidimensional Data) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/17/2017"
-ms.prod: analysis-services
-ms.prod_service: "analysis-services"
-ms.service: ""
-ms.component: ""
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
-  
-ms.component: multidimensional-tabular
-ms.component: data-mining
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "SSAS, data access interfaces"
-  - "objects [Analysis Services], data access interfaces"
-  - "Analysis Services data access interfaces"
-  - "data retrieval [Analysis Services]"
-  - "retrieving data"
-  - "metadata [Analysis Services]"
-  - "data access interfaces [Analysis Services]"
-  - "manipulating objects [Analysis Services]"
-  - "Analysis Services data access interfaces, about data access interfaces"
-ms.assetid: 46388efb-3c78-47a2-b5c9-5a69ff394d03
-caps.latest.revision: 46
-author: "Minewiskan"
-ms.author: "owend"
-manager: "kfile"
-ms.workload: "On Demand"
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: mdx
+ms.topic: conceptual
+ms.author: owend
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
 ---
 # Multidimensional Model Data Access (Analysis Services - Multidimensional Data)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
@@ -93,10 +72,10 @@ ms.workload: "On Demand"
   
 |Interface|Description|  
 |---------------|-----------------|  
-|Analysis Services Management Objects (AMO)|AMO is the primary object model for administering Analysis Services instances and multidimensional databases in code. For example, SQL Server Management Studio uses AMO to support server and database administration. For more information, see [Developing with Analysis Management Objects &#40;AMO&#41;](../../../analysis-services/multidimensional-models/analysis-management-objects/developing-with-analysis-management-objects-amo.md).|  
-|ADOMD.NET|ADOMD.NET is the primary object model creating and accessing multidimensional data in custom applications. You can use ADOMD.NET in a managed client application to retrieve [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] information using common Microsoft .NET Framework data access interfaces. For more information, see [Developing with ADOMD.NET](../../../analysis-services/multidimensional-models/adomd-net/developing-with-adomd-net.md) and [ADOMD.NET Client Programming](../../../analysis-services/multidimensional-models-adomd-net-client/adomd-net-client-programming.md).|  
+|Analysis Services Management Objects (AMO)|AMO is the primary object model for administering Analysis Services instances and multidimensional databases in code. For example, SQL Server Management Studio uses AMO to support server and database administration. For more information, see [Developing with Analysis Management Objects &#40;AMO&#41;](https://docs.microsoft.com/bi-reference/amo/developing-with-analysis-management-objects-amo).|  
+|ADOMD.NET|ADOMD.NET is the primary object model creating and accessing multidimensional data in custom applications. You can use ADOMD.NET in a managed client application to retrieve [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] information using common Microsoft .NET Framework data access interfaces. For more information, see [Developing with ADOMD.NET](https://docs.microsoft.com/bi-reference/adomd/developing-with-adomd-net) and [ADOMD.NET Client Programming](https://docs.microsoft.com/bi-reference/adomd/multidimensional-models-adomd-net-client/adomd-net-client-programming).|  
 |Analysis Services OLE DB Provider (MSOLAP.dll)|You can use the native OLE DB provider to access [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] programmatically from a non-managed API. For more information, see [Analysis Services OLE DB Provider &#40;Analysis Services - Multidimensional Data&#41;](http://msdn.microsoft.com/library/cdeecd50-1d91-4162-a4a2-01c7799b02a8).|  
-|Schema Rowsets|Schema rowset tables are data structures that contain descriptive information about a multidimensional model that is deployed on the server, as well as information about current activity on the server. As a programmer, you can query schema rowset tables in client applications to examine metadata stored on, and retrieve support and monitoring information from, an [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] instance. You can use schema rowsets with these programmatic interfaces: OLE DB, OLE DB for Analysis Services, OLE DB for Data Mining, or XMLA. For more information, see [Analysis Services Schema Rowsets](../../../analysis-services/schema-rowsets/analysis-services-schema-rowsets.md).<br /><br /> The following list explains several approaches for using schema rowsets:<br /><br /> -Run DMV queries in SQL Server Management Studio or in custom reports to access schema rowsets using SQL syntax. For more information, see [Use Dynamic Management Views &#40;DMVs&#41; to Monitor Analysis Services](../../../analysis-services/instances/use-dynamic-management-views-dmvs-to-monitor-analysis-services.md).<br /><br /> -Write ADOMD.NET code that calls a schema rowset.<br /><br /> -Run the XMLA **Discover** method directly against an [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] instance to retrieve schema rowset information. For more information, see [Discover Method &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-methods-discover.md).|  
+|Schema Rowsets|Schema rowset tables are data structures that contain descriptive information about a multidimensional model that is deployed on the server, as well as information about current activity on the server. As a programmer, you can query schema rowset tables in client applications to examine metadata stored on, and retrieve support and monitoring information from, an [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] instance. You can use schema rowsets with these programmatic interfaces: OLE DB, OLE DB for Analysis Services, OLE DB for Data Mining, or XMLA. For more information, see [Analysis Services Schema Rowsets](https://docs.microsoft.com/bi-reference/schema-rowsets/analysis-services-schema-rowsets).<br /><br /> The following list explains several approaches for using schema rowsets:<br /><br /> -Run DMV queries in SQL Server Management Studio or in custom reports to access schema rowsets using SQL syntax. For more information, see [Use Dynamic Management Views &#40;DMVs&#41; to Monitor Analysis Services](../../../analysis-services/instances/use-dynamic-management-views-dmvs-to-monitor-analysis-services.md).<br /><br /> -Write ADOMD.NET code that calls a schema rowset.<br /><br /> -Run the XMLA **Discover** method directly against an [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] instance to retrieve schema rowset information. For more information, see [Discover Method &#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-elements-methods-discover).|  
 |XMLA|XMLA is the lowest level API available to an Analysis Services programmer, and is the common denominator that underlies all Analysis Services data access methodologies. XMLA is an industry standard, SOAP based XML protocol that supports universal data access to any standard multidimensional data source available over an HTTP connection. It uses SOAP to formulate requests and responses for multidimensional data. If your application runs on a non-Windows platform, you can use XMLA to access a multidimensional database that is running on a Windows server on your network. For more information, see [Developing with XMLA in Analysis Services](../../../analysis-services/multidimensional-models-scripting-language-assl-xmla/developing-with-xmla-in-analysis-services.md).|  
 |Analysis Services Scripting Language (ASSL)|ASSL is a descriptive term that applies to Analysis Services extensions of the XMLA protocol. Whereas the Execute and Discover methods are described by the XMLA protocol, ASSL adds the following capability:<br /><br /> -XMLA script<br /><br /> -XMLA object definitions<br /><br /> -XMLA commands<br /><br /> ASSL extensions enable Analysis Services to use XMLA constructs beyond the basic provisions of the protocol, adding data definition, data manipulation, and data control support. For more information, see [Developing with Analysis Services Scripting Language &#40;ASSL&#41;](../../../analysis-services/multidimensional-models/scripting-language-assl/developing-with-analysis-services-scripting-language-assl.md).|  
   
@@ -104,6 +83,6 @@ ms.workload: "On Demand"
  [Connect to Analysis Services](../../../analysis-services/instances/connect-to-analysis-services.md)   
  [Developing with Analysis Services Scripting Language &#40;ASSL&#41;](../../../analysis-services/multidimensional-models/scripting-language-assl/developing-with-analysis-services-scripting-language-assl.md)   
  [Developing with XMLA in Analysis Services](../../../analysis-services/multidimensional-models-scripting-language-assl-xmla/developing-with-xmla-in-analysis-services.md)   
- [Tabular Model Data Access](../../../analysis-services/tabular-models/tabular-model-data-access.md)  
+
   
   

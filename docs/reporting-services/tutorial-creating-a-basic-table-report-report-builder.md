@@ -1,25 +1,14 @@
 ---
 title: "Tutorial: Creating a Basic Table Report (Report Builder) | Microsoft Docs"
-ms.custom: ""
-ms.date: "06/23/2016"
+ms.date: 06/23/2016
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
-ms.service: ""
-ms.component: "reporting-services"
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
+ms.technology: reporting-services
 
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
-applies_to: 
-  - "SQL Server 2016"
+ms.topic: conceptual
 ms.assetid: d9e30521-f8ae-4c45-89c3-d40727f622f7
-caps.latest.revision: 16
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "kfile"
-ms.workload: "On Demand"
+author: maggiesMSFT
+ms.author: maggies
 ---
 # Tutorial: Creating a Basic Table Report (Report Builder)
 This tutorial teaches you to create a basic table report based on sample sales data. The following illustration shows the report you will create.  
@@ -361,6 +350,6 @@ This concludes the walkthrough for how to create a basic table report. For more 
   
 ## See Also  
 [Report Builder Tutorials](../reporting-services/report-builder-tutorials.md)  
-[Report Builder in SQL Server 2016](../reporting-services/report-builder/report-builder-in-sql-server-2016.md)  
+[Report Builder in SQL Server](../reporting-services/report-builder/report-builder-in-sql-server-2016.md)  
   
 

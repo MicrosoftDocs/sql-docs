@@ -1,35 +1,18 @@
 ---
-title: "Feature Properties | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: analysis-services
-ms.prod_service: "analysis-services"
-ms.service: ""
-ms.component: ""
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
-  
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-helpviewer_keywords: 
-  - "SQMSupportEnabled property"
-  - "ComUdfEnabled property"
-  - "LinkToOtherInstanceEnabled property"
-  - "ManagedCodeEnabled property"
-  - "ConnStringEncryptionEnabled property"
-  - "LinkFromOtherInstanceEnabled property"
-  - "LinkInsideInstanceEnabled property"
-  - "UseCachedPageAllocators property"
-ms.assetid: a34d046a-6562-4d98-b827-37cebc6d77b4
-caps.latest.revision: 21
-author: "Minewiskan"
-ms.author: "owend"
-manager: "kfile"
-ms.workload: "Inactive"
+title: "Analysis Services Feature Properties | Microsoft Docs"
+ms.date: 06/07/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: 
+ms.topic: conceptual
+ms.author: owend
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
 ---
 # Feature Properties
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+
   Feature properties pertain to product features, most of them advanced, including properties that control links between server instances.  
   
  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] supports the server properties listed in the following table. For more information about additional server properties and how to set them, see [Server Properties in Analysis Services](../../analysis-services/server-properties/server-properties-in-analysis-services.md).  

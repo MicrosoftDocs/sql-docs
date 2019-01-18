@@ -1,33 +1,30 @@
 ---
 title: "SQL Server 2017 Release Notes | Microsoft Docs"
 ms.custom: ""
-ms.date: "10/30/2017"
-ms.prod: "sql-non-specified"
-ms.prod_service: "sql-non-specified"
-ms.service: ""
-ms.component: "sql-non-specified"
+ms.date: "10/31/2017"
+ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "server-general"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: install
+ms.topic: conceptual
 ms.assetid: 13942af8-5a40-4cef-80f5-918386767a47
-author: "craigg-msft"
-ms.author: "craigg"
-manager: "jhubbard"
-ms.workload: "Active"
+author: craigg-msft
+ms.author: craigg
+manager: jhubbard
+monikerRange: "= sql-server-2017 || = sqlallproducts-allversions"
 ---
 # SQL Server 2017 Release Notes
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
 This article describes limitations and issues with SQL Server 2017. For related information, see:
 - [What's New in SQL Server 2017](../sql-server/what-s-new-in-sql-server-2017.md)
 - [SQL Server on Linux release notes](https://docs.microsoft.com/sql/linux/sql-server-linux-release-notes)
-- [SQL Server 2017 Cumulative updates](http://aka.ms/sql2017cu) for information about the latest cumulative update (CU) release
+- [SQL Server 2017 Cumulative updates](https://aka.ms/sql2017cu) for information about the latest cumulative update (CU) release
 
 **Try SQL Server!**
-- [![Download from Evaluation Center](../includes/media/download2.png)](http://go.microsoft.com/fwlink/?LinkID=829477) [Download SQL Server 2017](http://go.microsoft.com/fwlink/?LinkID=829477)
+- [![Download from Evaluation Center](../includes/media/download2.png)](https://go.microsoft.com/fwlink/?LinkID=829477) [Download SQL Server 2017](https://go.microsoft.com/fwlink/?LinkID=829477)
 - [![Create Virtual Machine](../includes/media/azure-vm.png)](https://azure.microsoft.com/services/virtual-machines/sql-server/?wt.mc_id=sqL16_vm) [Spin up a Virtual Machine with SQL Server 2017](https://azure.microsoft.com/services/virtual-machines/sql-server/?wt.mc_id=sqL16_vm)
+
+> [!NOTE]
+> SQL Server 2019 preview is now available. For more information, see [What's New in SQL Server 2019](../sql-server/what-s-new-in-sql-server-ver15.md?view=sql-server-ver15).
 
 ## SQL Server 2017 - general availability release (October 2017)
 ### Database Engine
@@ -48,7 +45,7 @@ On the user permissions page, when granting permission to the root level in the 
 - **Workarounds:** 
   - Grant permission on the sub nodes in the tree view instead of the root level.
   - or
-  - Run the script described in this MDS team blog [error applying permission on entity level](http://sqlblog.com/blogs/mds_team/archive/2017/09/05/sql-server-2016-sp1-cu4-regression-error-while-applying-permission-on-entity-level-quick-workaround.aspx)
+  - Run the script described in this MDS team blog [error applying permission on entity level](https://sqlblog.com/blogs/mds_team/archive/2017/09/05/sql-server-2016-sp1-cu4-regression-error-while-applying-permission-on-entity-level-quick-workaround.aspx)
 
 ### Analysis Services
 - **Issue and customer impact:** Data connectors for the following sources are not yet avaialble for tabular models at the 1400 compatibility level.
@@ -122,7 +119,7 @@ There are no release notes for SQL Server on Windows related to this release. Se
 - **Workaround** To work around this issue and fix an application that depends on the v13 version of the assemblies follow these steps:
 
    1. Go to **Add/Remove Programs**
-   2. Find *Microsoft SQL Server vNext T-SQL Language Service CTP2.1*, right-click it, and select **Uninstall**.
+   2. Find *Microsoft SQL Server 2019 T-SQL Language Service CTP2.1*, right-click it, and select **Uninstall**.
    3. After the component is removed, repair the application that is broken or reinstall the appropriate version of *TSqlLanguageService.MSI*.
 
    This workaround removes the v14 version of those assemblies, so any applications that depend on the v14 versions will no longer function. If those assemblies are needed, then a separate installation without any side-by-side 2016 installs is required.
@@ -153,5 +150,7 @@ There are no release notes for SQL Server on Windows related to this release. Se
 - [SQL Server Update Center - links and information for all supported versions](https://msdn.microsoft.com/library/ff803383.aspx)
 
 [!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]
+
+[!INCLUDE[contribute-to-content](../includes/paragraph-content/contribute-to-content.md)]
 
 ![MS_Logo_X-Small](../sql-server/media/ms-logo-x-small.png)

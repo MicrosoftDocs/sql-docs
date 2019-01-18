@@ -1,30 +1,23 @@
 ---
 title: "Dynamic Data Masking | Microsoft Docs"
-ms.custom: ""
-ms.date: "09/26/2016"
-ms.prod: "sql-non-specified"
+ms.date: "04/23/2018"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.service: ""
-ms.component: "security"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: security
+ms.topic: conceptual
 ms.assetid: a62f4ff9-2953-42ca-b7d8-1f8f527c4d66
-caps.latest.revision: 41
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "craigg"
-ms.workload: "On Demand"
+author: VanMSFT
+ms.author: vanto
+manager: craigg
+monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Dynamic Data Masking
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
 ![Dynamic data masking](../../relational-databases/security/media/dynamic-data-masking.png)
 
-Dynamic data masking limits (DDM) sensitive data exposure by masking it to non-privileged users. It can be used to greatly simplify the design and coding of security in your application.  
+Dynamic data masking (DDM) limits sensitive data exposure by masking it to non-privileged users. It can be used to greatly simplify the design and coding of security in your application.  
 
 Dynamic data masking helps prevent unauthorized access to sensitive data by enabling customers to designate how much of the sensitive data to reveal with minimal impact on the application layer. DDM can be configured on the database to hide sensitive data in the result sets of queries over designated database fields, while the data in the database is not changed. Dynamic data masking is easy to use with existing applications, since masking rules are applied in the query results. Many applications can mask sensitive data without modifying existing queries.
 
@@ -35,9 +28,9 @@ Dynamic data masking helps prevent unauthorized access to sensitive data by enab
 
 As an example, a call center support person may identify callers by several digits of their social security number or credit card number, but those data items should not be fully exposed to the support person. A masking rule can be defined that masks all but the last four digits of any social security number or credit card number in the result set of any query. For another example, by using the appropriate data mask to protect personally identifiable information (PII) data, a developer can query production environments for troubleshooting purposes without violating compliance regulations.
 
- The purpose of dynamic data masking is to limit exposure of sensitive data, preventing users who should not have access to the data from viewing it. Dynamic data masking does not aim to prevent database users from connecting directly to the database and running exhaustive queries that expose pieces of the sensitive data. Dynamic data masking is complementary to other [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] security features (auditing, encryption, row level security…) and it is highly recommended to use this feature in conjunction with them in addition in order to better protect the sensitive data in the database.  
+The purpose of dynamic data masking is to limit exposure of sensitive data, preventing users who should not have access to the data from viewing it. Dynamic data masking does not aim to prevent database users from connecting directly to the database and running exhaustive queries that expose pieces of the sensitive data. Dynamic data masking is complementary to other [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] security features (auditing, encryption, row level security...) and it is highly recommended to use this feature in conjunction with them in addition in order to better protect the sensitive data in the database.  
   
- Dynamic data masking is available in [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] and [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)], and is configured by using [!INCLUDE[tsql](../../includes/tsql-md.md)] commands. For additional information about configuring dynamic data masking by using the Azure portal, see [Get started with SQL Database Dynamic Data Masking (Azure portal)](http://azure.microsoft.com/documentation/articles/sql-database-dynamic-data-masking-get-started/).  
+Dynamic data masking is available in [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] and [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)], and is configured by using [!INCLUDE[tsql](../../includes/tsql-md.md)] commands. For additional information about configuring dynamic data masking by using the Azure portal, see [Get started with SQL Database Dynamic Data Masking (Azure portal)](https://azure.microsoft.com/documentation/articles/sql-database-dynamic-data-masking-get-started/).  
   
 ## Defining a Dynamic Data Mask  
  A masking rule may be defined on a column in a table, in order to obfuscate the data in that column. Four types of masks are available.  
@@ -64,12 +57,12 @@ As an example, a call center support person may identify callers by several digi
   
 -   Using `SELECT INTO` or `INSERT INTO` to copy data from a masked column into another table results in masked data in the target table.  
   
--   Dynamic Data Masking is applied when running [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Import and Export. A database containing masked columns will result in a backup file with masked data (assuming it is exported by a user without **UNMASK** privileges), and the imported database will contain statically masked data.  
+-   Dynamic Data Masking is applied when running [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Import and Export. A database containing masked columns will result in an exported data file with masked data (assuming it is exported by a user without **UNMASK** privileges), and the imported database will contain statically masked data.  
   
 ## Querying for Masked Columns  
  Use the **sys.masked_columns** view to query for table-columns that have a masking function applied to them. This view inherits from the **sys.columns** view. It returns all columns in the **sys.columns** view, plus the **is_masked** and **masking_function** columns, indicating if the column is masked, and if so, what masking function is defined. This view only shows the columns on which there is a masking function applied.  
   
-```  
+```sql 
 SELECT c.name, tbl.name as table_name, c.is_masked, c.masking_function  
 FROM sys.masked_columns AS c  
 JOIN sys.tables AS tbl   
@@ -92,7 +85,7 @@ WHERE is_masked = 1;
   
  For users without the **UNMASK** permission, the deprecated **READTEXT**, **UPDATETEXT**, and **WRITETEXT** statements do not function properly on a column configured for Dynamic Data Masking. 
  
- Adding a dynamic data mask is implemented as a schema change on the underlying table, and therefor cannot be performed on a column with dependencies. To work around this restriction, you can first remove the dependency, then add the dynamic data mask and then re-create the dependency. For example, if the dependency is due to an index dependent on that column, you can drop the index, then add the mask, and then re-create the dependent index.
+ Adding a dynamic data mask is implemented as a schema change on the underlying table, and therefore cannot be performed on a column with dependencies. To work around this restriction, you can first remove the dependency, then add the dynamic data mask and then re-create the dependency. For example, if the dependency is due to an index dependent on that column, you can drop the index, then add the mask, and then re-create the dependent index.
  
 
 ## Security Note: Bypassing masking using inference or brute-force techniques
@@ -102,7 +95,7 @@ Dynamic Data Masking is designed to simplify application development by limiting
 As an example, consider a database principal that has sufficient privileges to run ad-hoc queries on the database, and tries to 'guess' the underlying data and ultimately infer the actual values. Assume that we have a mask defined on the `[Employee].[Salary]` column, and this user connects directly to the database and starts guessing values, eventually inferring the `[Salary]` value of a set of Employees:
  
 
-```
+```sql
 SELECT ID, Name, Salary FROM Employees
 WHERE Salary > 99999 and Salary < 100001;
 ```
@@ -122,15 +115,15 @@ It is important to properly manage the permissions on the database, and to alway
 ### Creating a Dynamic Data Mask  
  The following example creates a table with three different types of dynamic data masks. The example populates the table, and selects to show the result.  
   
-```  
+```sql
 CREATE TABLE Membership  
   (MemberID int IDENTITY PRIMARY KEY,  
    FirstName varchar(100) MASKED WITH (FUNCTION = 'partial(1,"XXXXXXX",0)') NULL,  
    LastName varchar(100) NOT NULL,  
-   Phone# varchar(12) MASKED WITH (FUNCTION = 'default()') NULL,  
+   Phone varchar(12) MASKED WITH (FUNCTION = 'default()') NULL,  
    Email varchar(100) MASKED WITH (FUNCTION = 'email()') NULL);  
   
-INSERT Membership (FirstName, LastName, Phone#, Email) VALUES   
+INSERT Membership (FirstName, LastName, Phone, Email) VALUES   
 ('Roberto', 'Tamburello', '555.123.4567', 'RTamburello@contoso.com'),  
 ('Janice', 'Galvin', '555.123.4568', 'JGalvin@contoso.com.co'),  
 ('Zheng', 'Mu', '555.123.4569', 'ZMu@contoso.net');  
@@ -139,7 +132,7 @@ SELECT * FROM Membership;
   
  A new user is created and granted **SELECT** permission on the table. Queries executed as the `TestUser` view masked data.  
   
-```  
+```sql 
 CREATE USER TestUser WITHOUT LOGIN;  
 GRANT SELECT ON Membership TO TestUser;  
   
@@ -160,14 +153,14 @@ REVERT;
  Use the **ALTER TABLE** statement to add a mask to an existing column in the table, or to edit the mask on that column.  
 The following example adds a masking function to th `LastName` column:  
   
-```  
+```sql  
 ALTER TABLE Membership  
 ALTER COLUMN LastName ADD MASKED WITH (FUNCTION = 'partial(2,"XXX",0)');  
 ```  
   
  The following example changes a masking function on the `LastName` column:  
-  
-```  
+
+```sql  
 ALTER TABLE Membership  
 ALTER COLUMN LastName varchar(100) MASKED WITH (FUNCTION = 'default()');  
 ```  
@@ -175,7 +168,7 @@ ALTER COLUMN LastName varchar(100) MASKED WITH (FUNCTION = 'default()');
 ### Granting Permissions to View Unmasked Data  
  Granting the **UNMASK** permission allows `TestUser` to see the data unmasked.  
   
-```  
+```sql
 GRANT UNMASK TO TestUser;  
 EXECUTE AS USER = 'TestUser';  
 SELECT * FROM Membership;  
@@ -188,7 +181,7 @@ REVOKE UNMASK TO TestUser;
 ### Dropping a Dynamic Data Mask  
  The following statement drops the mask on the `LastName` column created in the previous example:  
   
-```  
+```sql  
 ALTER TABLE Membership   
 ALTER COLUMN LastName DROP MASKED;  
 ```  
@@ -198,6 +191,4 @@ ALTER COLUMN LastName DROP MASKED;
  [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)   
  [column_definition &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-column-definition-transact-sql.md)   
  [sys.masked_columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-masked-columns-transact-sql.md)   
- [Get started with SQL Database Dynamic Data Masking (Azure Preview portal)](http://azure.microsoft.com/documentation/articles/sql-database-dynamic-data-masking-get-started/)  
-  
-  
+ [Get started with SQL Database Dynamic Data Masking (Azure Preview portal)](https://azure.microsoft.com/documentation/articles/sql-database-dynamic-data-masking-get-started/)  

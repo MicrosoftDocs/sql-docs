@@ -2,15 +2,10 @@
 title: "Calling a Stored Procedure | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/16/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
-ms.service: ""
-ms.component: "native-client-odbc-stored-procedures"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-
-ms.tgt_pltfrm: ""
+ms.technology: native-client
 ms.topic: "reference"
 helpviewer_keywords: 
   - "calling stored procedures"
@@ -21,11 +16,10 @@ helpviewer_keywords:
   - "escape sequences [SQL Server]"
   - "CALL statement"
 ms.assetid: d13737f4-f641-45bf-b56c-523e2ffc080f
-caps.latest.revision: 41
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-ms.workload: "On Demand"
+author: MightyPen
+ms.author: genemi
+manager: craigg
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Calling a Stored Procedure
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -34,11 +28,11 @@ ms.workload: "On Demand"
   The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC driver supports both the ODBC CALL escape sequence and the [!INCLUDE[tsql](../../includes/tsql-md.md)][EXECUTE](../../t-sql/language-elements/execute-transact-sql.md) statement for executing stored procedures; the ODBC CALL escape sequence is the preferred method. Using ODBC syntax enables an application to retrieve the return codes of stored procedures and the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC driver is also optimized to use a protocol originally developed for sending remote procedure (RPC) calls between computers running [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. This RPC protocol increases performance by eliminating much of the parameter processing and statement parsing done on the server.  
   
 > [!NOTE]  
->  When calling [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] stored procedures using named parameters with ODBC (for more information, see [Binding Parameters by Name (Named Parameters)](http://go.microsoft.com/fwlink/?LinkID=209721)), the parameter names must start with the '@' character. This is a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] specific restriction. The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC driver enforces this restriction more strictly than the Microsoft Data Access Components (MDAC).  
+>  When calling [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] stored procedures using named parameters with ODBC (for more information, see [Binding Parameters by Name (Named Parameters)](https://go.microsoft.com/fwlink/?LinkID=209721)), the parameter names must start with the '\@' character. This is a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] specific restriction. The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC driver enforces this restriction more strictly than the Microsoft Data Access Components (MDAC).  
   
  The ODBC CALL escape sequence for calling a procedure is:  
   
- {[**?=**]**call***procedure_name*[([*parameter*][**,**[*parameter*]]...)]}  
+ {[**?=**]**call**_procedure_name_[([*parameter*][**,**[*parameter*]]...)]}  
   
  where *procedure_name* specifies the name of a procedure and *parameter* specifies a procedure parameter. Named parameters are only supported in statements using the ODBC CALL escape sequence.  
   
@@ -46,11 +40,11 @@ ms.workload: "On Demand"
   
  Input and input/output parameters can be omitted from procedure calls. If a procedure is called with parentheses but without any parameters, the driver instructs the data source to use the default value for the first parameter. For example:  
   
- {**call** *procedure_name***( )**}  
+ {**call** _procedure_name_**( )**}  
   
  If the procedure does not have any parameters, the procedure can fail. If a procedure is called without parentheses, the driver does not send any parameter values. For example:  
   
- {**call** *procedure_name*}  
+ {**call** _procedure_name_}  
   
  Literals can be specified for input and input/output parameters in procedure calls. For example, the procedure InsertOrder has five input parameters. The following call to InsertOrder omits the first parameter, provides a literal for the second parameter, and uses a parameter marker for the third, fourth, and fifth parameters. (Parameters are numbered sequentially, beginning with a value of 1.)  
   

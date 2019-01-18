@@ -1,17 +1,12 @@
 ---
 title: "InfoMessage Event (ADO) | Microsoft Docs"
-ms.prod: "sql-non-specified"
-ms.prod_service: "drivers"
-ms.service: ""
-ms.component: "ado"
-ms.technology:
-  - "drivers"
+ms.prod: sql
+ms.prod_service: connectivity
+ms.technology: connectivity
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 apitype: "COM"
 f1_keywords: 
   - "Connection::InfoMessage"
@@ -19,11 +14,9 @@ f1_keywords:
 helpviewer_keywords: 
   - "InfoMessage event [ADO]"
 ms.assetid: 468c87dd-e3bc-4084-9941-94d10743d4e9
-caps.latest.revision: 11
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
-ms.workload: "Inactive"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # InfoMessage Event (ADO)
 The **InfoMessage** event is called whenever a warning occurs during a **ConnectionEvent** operation.  

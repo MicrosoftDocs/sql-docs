@@ -2,15 +2,10 @@
 title: "sys.tables (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/22/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
-ms.service: ""
-ms.component: "system-catalog-views"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: system-objects
 ms.topic: "language-reference"
 f1_keywords: 
   - "tables_TSQL"
@@ -22,11 +17,10 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.tables catalog view"
 ms.assetid: 8c42eba1-c19f-4045-ac82-b97a5e994090
-caps.latest.revision: 70
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "craigg"
-ms.workload: "Active"
+author: stevestein
+ms.author: sstein
+manager: craigg
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.tables (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -63,7 +57,9 @@ ms.workload: "Active"
 |history_retention_period|**int**|**Applies to**: [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)]. <br/><br/>The numeric value representing duration of the temporal history retention period in units specified with history_retention_period_unit. |  
 |history_retention_period_unit|**int**|**Applies to**: [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)]. <br/><br/>The numeric value representing type of temporal history retention period unit. <br /><br />-1 :INFINITE <br /><br />3: DAY <br /><br />4: WEEK <br /><br />5: MONTH <br /><br />6: YEAR |  
 |history_retention_period_unit_desc|**nvarchar(10)**|**Applies to**: [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)]. <br/><br/>The text description of type of temporal history retention period unit. <br /><br />INFINITE <br /><br />DAY <br /><br />WEEK <br /><br />MONTH <br /><br />YEAR |  
-  
+|is_node|**bit**|**Applies to**: [!INCLUDE[sssql17-md.md](../../includes/sssql17-md.md)] and [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)]. <br/><br/>1 = This is a graph Node table. <br /><br />0 = This is not a graph Node table. |  
+|is_edge|**bit**|**Applies to**: [!INCLUDE[sssql17-md.md](../../includes/sssql17-md.md)] and [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)]. <br/><br/>1 = This is a graph Edge table. <br /><br />0 = This is not a graph Edge table. |  
+
 ## Permissions  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] For more information, see [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   

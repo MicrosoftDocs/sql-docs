@@ -2,15 +2,10 @@
 title: "DBCC CHECKFILEGROUP (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "11/14/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "sql-database"
-ms.service: ""
-ms.component: "t-sql|database-console-commands"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: t-sql
 ms.topic: "language-reference"
 f1_keywords: 
   - "CHECKFILEGROUP_TSQL"
@@ -28,11 +23,9 @@ helpviewer_keywords:
   - "table integrity checks [SQL Server]"
   - "checking database objects"
 ms.assetid: 8c70bf34-7570-4eb6-877a-e35064a1380a
-caps.latest.revision: 60
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-ms.workload: "Inactive"
+author: uc-msft
+ms.author: umajay
+manager: craigg
 ---
 # DBCC CHECKFILEGROUP (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -94,7 +87,7 @@ DBCC CHECKFILEGROUP
 >  Specifying PHYSICAL_ONLY causes DBCC CHECKFILEGROUP to skip all checks of FILESTREAM data.  
   
  MAXDOP  
- **Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2014 SP2 through [current version](http://go.microsoft.com/fwlink/p/?LinkId=299658).  
+ **Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2014 SP2 through [current version](https://go.microsoft.com/fwlink/p/?LinkId=299658).  
   
  Overrides the **max degree of parallelism** configuration option of **sp_configure** for the statement. The MAXDOP can exceed the value configured with sp_configure. If MAXDOP exceeds the value configured with Resource Governor, the Database Engine uses the Resource Governor MAXDOP value, described in ALTER WORKLOAD GROUP (Transact-SQL). All semantic rules used with the max degree of parallelism configuration option are applicable when you use the MAXDOP query hint. For more information, see [Configure the max degree of parallelism Server Configuration Option](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md).  
   

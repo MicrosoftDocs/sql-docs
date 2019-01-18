@@ -1,29 +1,18 @@
 ---
 title: "Connecting to Azure SQL DB (MySQLToSQL) | Microsoft Docs"
-ms.prod: "sql-non-specified"
-ms.prod_service: "sql-tools"
-ms.service: ""
-ms.component: "ssma-mysql"
+ms.prod: sql
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "sql-ssma"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to: 
-  - "Azure SQL Database"
-  - "SQL Server"
+ms.technology: ssma
+ms.topic: conceptual
 helpviewer_keywords: 
   - "Connecting to SQL Azure, SQL Azure permissions"
   - "Connecting to SQL Azure, synchronization"
 ms.assetid: d0b6f16a-1880-459d-a0c7-28b7ef15c56a
-caps.latest.revision: 10
 author: "Shamikg"
 ms.author: "Shamikg"
-manager: "jhubbard"
-ms.workload: "Inactive"
+manager: craigg
 ---
 # Connecting to Azure SQL DB (MySQLToSQL)
 To migrate MySQL databases to SQL Azure, you must connect to the target instance of SQL Azure. When you connect, SSMA obtains metadata about all the databases in the instance of SQL Azure and displays database metadata in the SQL Azure Metadata Explorer. SSMA stores information of the instance of SQL Azure you are connected to, but does not store passwords.  
@@ -35,7 +24,7 @@ Metadata about the instance of SQL Azure is not automatically synchronized. Inst
 ## Required SQL Azure Permissions  
 The account that is used to connect to SQL Azure requires different permissions depending on the actions that the account performs:  
   
--   To convert MySQL objects to [!INCLUDE[tsql](../../includes/tsql_md.md)] syntax, to update metadata from SQL Azure, or to save converted syntax to scripts, the account must have permission to log on to the instance of SQL Azure.  
+-   To convert MySQL objects to [!INCLUDE[tsql](../../includes/tsql-md.md)] syntax, to update metadata from SQL Azure, or to save converted syntax to scripts, the account must have permission to log on to the instance of SQL Azure.  
   
 -   To load database objects into SQL Azure, the minimum permission requirement is membership in the **db_owner** database role in the target database.  
   

@@ -2,18 +2,11 @@
 title: "Quantified Expressions (XQuery) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-non-specified"
-ms.prod_service: "sql-non-specified"
-ms.service: ""
-ms.component: "xquery"
+ms.prod: sql
+ms.prod_service: sql
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: xml
 ms.topic: "language-reference"
-applies_to: 
-  - "SQL Server"
 dev_langs: 
   - "XML"
 helpviewer_keywords: 
@@ -27,11 +20,9 @@ helpviewer_keywords:
   - "EBV"
   - "expressions [XQuery], quantifiers"
 ms.assetid: a3a75a6c-8f67-4923-8406-1ada546c817f
-caps.latest.revision: 27
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-ms.workload: "Inactive"
+author: "rothja"
+ms.author: "jroth"
+manager: craigg
 ---
 # Quantified Expressions (XQuery)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -47,7 +38,7 @@ ms.workload: "Inactive"
  XQuery supports quantified expressions in the following form:  
   
 ```  
-( some | every ) <variable> in <Expression> (,…) satisfies <Expression>  
+( some | every ) <variable> in <Expression> (,...) satisfies <Expression>  
 ```  
   
  You can use these expressions in a query to explicitly apply either existential or universal quantification to an expression over one or several sequences. In [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], the expression in the `satisfies` clause has to result in one of the following: a node sequence, an empty sequence, or a Boolean value. The effective Boolean value of the result of that expression will be used in the quantification. The existential quantification that uses **some** will return True if at least one of the values bound by the quantifier has a True result in the satisfy expression. The universal quantification that uses **every** must have True for all values bound by the quantifier.  
@@ -56,7 +47,7 @@ ms.workload: "Inactive"
   
 ```  
 SELECT Instructions.query('  
-     declare namespace AWMI="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";  
+     declare namespace AWMI="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";  
         if (every $WC in //AWMI:root/AWMI:Location   
             satisfies $WC/@LocationID)  
         then  
@@ -78,7 +69,7 @@ where ProductModelID=7
   
 ```  
 SELECT Instructions.value('  
-     declare namespace AWMI="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";  
+     declare namespace AWMI="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";  
         every $WC in  //AWMI:root/AWMI:Location   
             satisfies $WC/@LocationID',   
   'nvarchar(10)') as Result  
@@ -90,7 +81,7 @@ where ProductModelID=7
   
 ```  
 SELECT ProductModelID, CatalogDescription.value('  
-     declare namespace PD="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription";  
+     declare namespace PD="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription";  
      some $F in /PD:ProductDescription/PD:Picture  
         satisfies $F/PD:Size="small"', 'nvarchar(20)') as SmallPicturesStored  
 FROM Production.ProductModel  

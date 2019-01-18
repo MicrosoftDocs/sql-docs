@@ -1,29 +1,18 @@
 ---
 title: "Impersonation in Analysis Services tabular models | Microsoft Docs"
-ms.custom: ""
-ms.date: "10/16/2017"
-ms.prod: analysis-services
-ms.prod_service: "analysis-services, azure-analysis-services"
-ms.service: ""
-ms.component: ""
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
-  
-ms.component: multidimensional-tabular
-ms.component: data-mining
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-ms.assetid: fcc79e96-182a-45e9-8ae2-aeb440e9bedd
-caps.latest.revision: 20
-author: "Minewiskan"
-ms.author: "owend"
-manager: "kfile"
-ms.workload: "On Demand"
+ms.date: 05/07/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: tabular-models
+ms.topic: conceptual
+ms.author: owend
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
 ---
 # Impersonation 
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
-  This topic provides tabular model authors an understanding of how logon credentials are used by Analysis Services when connecting to a datasource to import and process (refresh) data.  
+  This article provides tabular model authors an understanding of how logon credentials are used by Analysis Services when connecting to a datasource to import and process (refresh) data.  
 
 ##  <a name="bkmk_conf_imp_info"></a> Configuring impersonation  
  Where, and in what context a model exists determines how impersonation information is configured. When creating a new model project, impersonation is configured in SQL Server Data Tools (SSDT) when you connect to a data source to import data. Once a model is deployed, impersonation can be configured in model database connection string property by using SQL Server Management Studio (SSMS). For tabular models in Azure Analysis Services, you can use SSMS or the **View as: Script** mode in the browser-based designer to edit the Model.bim file in JSON.
@@ -65,7 +54,7 @@ When data is imported or processed, impersonation credentials are used to connec
 |------------|-----------------|  
 |**Impersonate Account**|Specifies the model use a Windows user account to import or process data from the datasource. The domain and name of the user account uses the following format:**\<Domain name>\\<User account name\>**.|  
 |**Impersonate Current User**|Specifies data should be accessed from the datasource using the identity of the user who sent the request. This mode  applies only to Direct Query mode.|  
-|**Impersonate Identity**|Specifies a username to access the datasource, but doesn’t need to specify the account’s password. This mode applies only when Kerberos delegation is enabled and specifies the S4U authentication should be used.|  
+|**Impersonate Identity**|Specifies a username to access the datasource, but doesn't need to specify the account's password. This mode applies only when Kerberos delegation is enabled and specifies the S4U authentication should be used.|  
 |**Impersonate Service Account**|Specifies the model use the security credentials associated with the Analysis Services service instance that manages the model.|  
 |**Impersonate Unattended Account**|Specifies the Analysis Services engine should use a preconfigured unattended account to access the data.|  
 

@@ -1,27 +1,18 @@
 ---
-title: "PDW Topology (Analytics Platform System)"
-author: "barbkess" 
-ms.author: "barbkess"
-manager: "jhubbard"	  
-ms.prod: "analytics-platform-system"
-ms.prod_service: "mpp-data-warehouse"
-ms.service: ""
-ms.component:
-ms.technology: "mpp-data-warehouse"
-ms.custom: ""
-ms.date: 01/05/2017
-ms.reviewer: na
-ms.suite: "sql"
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: 9bf6fb50-eba0-418c-b6b5-787b8e263cac
-caps.latest.revision: 3
-
+title: PDW topology - Analytics Platform System | Microsoft Docs
+description: PDW topology for Analytics Platform System.
+author: mzaman1 
+manager: craigg
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
 ---
+
 # PDW Topology
 Displays name and network information about the SQL Server PDW components. Use the **Appliance Topology Network Configuration** page to change the network IP Addresses.  
-  
-Expand the elements of this section to configure information that applies to the entire appliance. Select the Parallel Data Warehouse Topology or HDInsight Topology sections to configure information that applies to only that region of the appliance.  
   
 ![DWConfig PDW top menu](./media/pdw-topology/SQL_Server_PDW_DWConfig_PDWTop.png "SQL_Server_PDW_DWConfig_PDWTop")  
   

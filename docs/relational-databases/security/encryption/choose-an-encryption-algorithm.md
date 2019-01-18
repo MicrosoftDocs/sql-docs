@@ -1,28 +1,22 @@
 ---
 title: "Choose an Encryption Algorithm | Microsoft Docs"
 ms.custom: ""
-ms.date: "01/08/2016"
-ms.prod: "sql-non-specified"
+ms.date: "08/14/2018"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
-ms.service: ""
-ms.component: "security"
-ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.reviewer: vanto
+ms.technology: security
+ms.topic: conceptual
 helpviewer_keywords: 
   - "cryptography [SQL Server], algorithms"
   - "encryption [SQL Server], algorithms"
   - "security [SQL Server], encryption"
   - "algorithms [SQL Server encryption]"
 ms.assetid: 8227028c-a9c9-489d-bd27-fbf8242634ae
-caps.latest.revision: 36
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "craigg"
-ms.workload: "On Demand"
+author: aliceku
+ms.author: aliceku
+manager: craigg
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Choose an Encryption Algorithm
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -39,11 +33,11 @@ ms.workload: "On Demand"
   
 -   Long keys generally yield stronger encryption than short keys.  
   
--   Asymmetric encryption is weaker than symmetric encryption using the same key length, but it is relatively slow.  
-  
--   Block ciphers with long keys are stronger than stream ciphers.  
+-   Asymmetric encryption is slower than symmetric encryption.  
   
 -   Long, complex passwords are stronger than short passwords.  
+
+-   Symmetric encryption is generally recommended when they key is only stored locally, assymmetric encryption is recommended when keys need to be shared across the wire.
   
 -   If you are encrypting lots of data, you should encrypt the data using a symmetric key, and encrypt the symmetric key with an asymmetric key.  
   
@@ -54,7 +48,7 @@ ms.workload: "On Demand"
 >   
 >  Repeated use of the same RC4 or RC4_128 KEY_GUID on different blocks of data will result in the same RC4 key because [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] does not provide a salt automatically. Using the same RC4 key repeatedly is a well-known error that will result in very weak encryption. Therefore, we have deprecated the RC4 and RC4_128 keywords. [!INCLUDE[ssNoteDepFutureDontUse](../../../includes/ssnotedepfuturedontuse-md.md)]  
   
- For more information about encryption algorithms and encryption technology, see [Key Security Concepts](http://go.microsoft.com/fwlink/?LinkId=62082) in the .NET Framework Developer's Guide on MSDN.  
+ For more information about encryption algorithms and encryption technology, see [Key Security Concepts](https://go.microsoft.com/fwlink/?LinkId=62082) in the .NET Framework Developer's Guide on MSDN.  
   
  **Clarification regarding DES algorithms:**  
   

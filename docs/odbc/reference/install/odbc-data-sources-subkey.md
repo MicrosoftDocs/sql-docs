@@ -2,26 +2,19 @@
 title: "ODBC Data Sources Subkey | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
-ms.prod_service: "drivers"
-ms.service: ""
-ms.component: "odbc"
+ms.prod: sql
+ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "drivers"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: connectivity
+ms.topic: conceptual
 helpviewer_keywords: 
   - "subkeys [ODBC], for data sources"
   - "data sources [ODBC], subkeys"
   - "registry entries for data sources [ODBC], subkeys"
 ms.assetid: 0a8ccb80-c573-4418-84e5-f04a2b0e2ac1
-caps.latest.revision: 5
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
-ms.workload: "Inactive"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # ODBC Data Sources Subkey
 The values under the ODBC Data Sources subkey list the data sources. The format of these values is as shown in the following table.  

@@ -1,30 +1,14 @@
 ---
 title: "Using Cell Properties (MDX) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: analysis-services
-ms.prod_service: "analysis-services"
-ms.service: ""
-ms.component: ""
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
-  
-ms.component: multidimensional-tabular
-ms.component: data-mining
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "intrinsic cell properties [MDX]"
-  - "cells [MDX]"
-  - "cell properties [MDX]"
-  - "CELL PROPERTIES keyword"
-ms.assetid: a593c74d-8c5e-485e-bd92-08f9d22451d4
-caps.latest.revision: 36
-author: "Minewiskan"
-ms.author: "owend"
-manager: "kfile"
-ms.workload: "Inactive"
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: mdx
+ms.topic: conceptual
+ms.author: owend
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
 ---
 # MDX Cell Properties - Using Cell Properties
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
@@ -72,14 +56,14 @@ SELECT [<axis_specification>
 ||**CELL_UPDATE_ENABLED_WITH_UPDATE** (0x00000002)   The cell can be updated with an update statement. The update may fail if a leaf cell is updated that is not write-enabled.|  
 ||**CELL_UPDATE_NOT_ENABLED_FORMULA** (0x10000001)   The cell cannot be updated because the cell has a calculated member among its coordinates; the cell was retrieved with a set in the where clause. A cell can be updated even though a formula affects, or a calculated cell is on, the value of a cell (is somewhere along the aggregation path). In this scenario, the final value of the cell may not be the updated value, because the calculation will affect the result|  
 ||**CELL_UPDATE_NOT_ENABLED_NONSUM_MEASURE** (0x10000002)   The cell cannot be updated because non-sum measures (count, min, max, distinct count, semi-additive) can not be updated.|  
-||**CELL_UPDATE_NOT_ENABLED_NACELL_VIRTUALCUBE** (0x10000003)   The cell cannot be updated because the cell does not exist as it is at the intersection of a measure and a dimension member unrelated to the measure’s measure group.|  
+||**CELL_UPDATE_NOT_ENABLED_NACELL_VIRTUALCUBE** (0x10000003)   The cell cannot be updated because the cell does not exist as it is at the intersection of a measure and a dimension member unrelated to the measure's measure group.|  
 ||**CELL_UPDATE_NOT_ENABLED_SECURE** (0x10000005)    The cell cannot be updated because the cell is secured.|  
 ||**CELL_UPDATE_NOT_ENABLED_CALCLEVEL** (0x10000006)   Reserved for future use.|  
 ||**CELL_UPDATE_NOT_ENABLED_CANNOTUPDATE** (0x10000007)   The cell cannot be updated because of internal reasons.|  
 ||**CELL_UPDATE_NOT_ENABLED_INVALIDDIMENSIONTYPE** (0x10000009)   The cell cannot be updated because update is not supported in mining model, indirect, or data mining dimensions.|  
 |**VALUE**|The unformatted value of the cell.|  
   
- Only the **CELL_ORDINAL**, **FORMATTED_VALUE**, and **VALUE** cell properties are required. All cell properties, intrinsic or provider-specific, are defined in the **PROPERTIES** schema rowset, including their data types and provider support. For more information about the **PROPERTIES** schema rowset, see [MDSCHEMA_PROPERTIES Rowset](../../../analysis-services/schema-rowsets/ole-db-olap/mdschema-properties-rowset.md).  
+ Only the **CELL_ORDINAL**, **FORMATTED_VALUE**, and **VALUE** cell properties are required. All cell properties, intrinsic or provider-specific, are defined in the **PROPERTIES** schema rowset, including their data types and provider support. For more information about the **PROPERTIES** schema rowset, see [MDSCHEMA_PROPERTIES Rowset](https://docs.microsoft.com/bi-reference/schema-rowsets/ole-db-olap/mdschema-properties-rowset).  
   
  By default, if the **CELL PROPERTIES** keyword is not used, the cell properties returned are **VALUE**, **FORMATTED_VALUE**, and **CELL_ORDINAL** (in that order). If the **CELL PROPERTIES** keyword is used, only those cell properties explicitly stated with the keyword are returned.  
   

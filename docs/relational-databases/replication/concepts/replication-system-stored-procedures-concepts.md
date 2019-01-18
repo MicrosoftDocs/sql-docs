@@ -2,18 +2,11 @@
 title: "Replication System Stored Procedures Concepts | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "database-engine"
-ms.service: ""
-ms.component: "replication"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-
-ms.tgt_pltfrm: ""
+ms.technology: replication
 ms.topic: "reference"
-applies_to: 
-  - "SQL Server 2016 Preview"
 dev_langs: 
   - "TSQL"
 helpviewer_keywords: 
@@ -23,11 +16,9 @@ helpviewer_keywords:
   - "system stored procedures [SQL Server replication]"
   - "replication [SQL Server], how-to topics"
 ms.assetid: 816d2bda-ed72-43ec-aa4d-7ee3dc25fd8a
-caps.latest.revision: 41
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-ms.workload: "Inactive"
+author: "MashaMSFT"
+ms.author: "mathoma"
+manager: craigg
 ---
 # Replication System Stored Procedures Concepts
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

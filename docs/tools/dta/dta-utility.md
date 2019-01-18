@@ -2,16 +2,11 @@
 title: "dta Utility | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/09/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "sql-tools"
-ms.service: ""
-ms.component: "dta"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: tools-other
+ms.topic: conceptual
 helpviewer_keywords: 
   - "physical design structures [SQL Server]"
   - "command prompt utilities [SQL Server], dta"
@@ -23,11 +18,9 @@ helpviewer_keywords:
   - "Database Engine Tuning Advisor [SQL Server], command prompt"
   - "optimizing databases [SQL Server]"
 ms.assetid: a0b210ce-9b58-4709-80cb-9363b68a1f5a
-caps.latest.revision: 58
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-ms.workload: "Inactive"
+author: "stevestein"
+ms.author: "sstein"
+manager: craigg
 ---
 # dta Utility
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -43,7 +36,7 @@ dta
 [ -? ] |  
 [  
       [ -S server_name[ \instance ] ]  
-      { { -U login_id [-P password ] } | –E  }  
+      { { -U login_id [-P password ] } | -E  }  
       { -D database_name [ ,...n ] }  
       [ -d database_name ]   
       [ -Tl table_list | -Tf table_list_file ]  
@@ -82,13 +75,13 @@ dta
  **-?**  
  Displays usage information.  
   
- **-A** *time_for_tuning_in_minutes*  
+ **-A** _time_for_tuning_in_minutes_  
  Specifies the tuning time limit in minutes. **dta** uses the specified amount of time to tune the workload and generate a script with the recommended physical design changes. By default **dta** assumes a tuning time of 8 hours. Specifying 0allows unlimited tuning time. **dta** might finish tuning the entire workload before the time limit expires. However, to make sure that the entire workload is tuned, we recommend that you specify unlimited tuning time (-A 0).  
   
  **-a**  
  Tunes workload and applies the recommendation without prompting you.  
   
- **-B** *storage_size*  
+ **-B** _storage_size_  
  Specifies the maximum space in megabytes that can be consumed by the recommended index and partitioning. When multiple databases are tuned, recommendations for all databases are considered for the space calculation. By default, **dta** assumes the smaller of the following storage sizes:  
   
 -   Three times the current raw data size, which includes the total size of heaps and clustered indexes on tables in the database.  
@@ -97,23 +90,23 @@ dta
   
  The default storage size does not include nonclustered indexes and indexed views.  
   
- **-C** *max_columns_in_index*  
+ **-C** _max_columns_in_index_  
  Specifies the maximum number of columns in indexes that **dta** proposes. The maximum value  is 1024. By default, this argument is set to 16.  
   
- **-c** *max_key_columns_in_index*  
+ **-c** _max_key_columns_in_index_  
  Specifies the maximum number of key columns in indexes that **dta** proposes. The default value is 16, the maximum value allowed. **dta** also considers creating indexes with included columns. Indexes recommended with included columns may exceed the number of columns specified in this argument.  
   
- **-D** *database_name*  
+ **-D** _database_name_  
  Specifies the name of each database that is to be tuned. The first database is the default database. You can specify multiple databases by separating the database names with commas, for example:  
   
 ```  
-dta –D database_name1, database_name2...  
+dta -D database_name1, database_name2...  
 ```  
   
- Alternatively, you can specify multiple databases by using the **–D** argument for each database name, for example:  
+ Alternatively, you can specify multiple databases by using the **-D** argument for each database name, for example:  
   
 ```  
-dta –D database_name1 -D database_name2... n  
+dta -D database_name1 -D database_name2... n  
 ```  
   
  The **-D** argument is mandatory. If the **-d** argument has not been specified, **dta** initially connects to the database that is specified with the first `USE database_name` clause in the workload. If there is not explicit `USE database_name` clause in the workload, you must use the **-d** argument.  
@@ -130,7 +123,7 @@ dta -D db_name1, db_name2...
 dta -D db_name1, db_name2 -d db_name1  
 ```  
   
- **-d** *database_name*  
+ **-d** _database_name_  
  Specifies the first database to which **dta** connects when tuning a workload. Only one database can be specified for this argument. For example:  
   
 ```  
@@ -146,14 +139,14 @@ dta -d AdventureWorks2012 ...
  **-E**  
  Uses a trusted connection instead of requesting a password. Either the **-E** argument or the **-U** argument, which specifies a login ID, must be used.  
   
- **-e** *tuning_log_name*  
+ **-e** _tuning_log_name_  
  Specifies the name of the table or file where **dta** records events that it could not tune. The table is created on the server where the tuning is performed.  
   
  If a table is used, specify its name in the format: *[database_name].[owner_name].table_name*. The following table shows the default values for each parameter:  
   
 |Parameter|Default value|Details|  
 |---------------|-------------------|-------------|  
-|*database_name*|*database_name* specified with the **–D** option||  
+|*database_name*|*database_name* specified with the **-D** option||  
 |*owner_name*|**dbo**|*owner_name* must be **dbo**. If any other value is specified, then **dta** execution fails and it returns an error.|  
 |*table_name*|None||  
   
@@ -165,8 +158,8 @@ dta -d AdventureWorks2012 ...
  **-F**  
  Permits **dta** to overwrite an existing output file. If an output file with the same name already exists and **-F** is not specified, **dta**returns an error. You can use **-F** with **-of**, **-or**, or **-ox**.  
   
- **-fa** *physical_design_structures_to_add*  
- Specifies what types of physical design structures **dta** should include in the recommendation. The following table lists and describes the values that can be specified for this argument. When no value is specified, **dta** uses the default **-fa****IDX**.  
+ **-fa** _physical_design_structures_to_add_  
+ Specifies what types of physical design structures **dta** should include in the recommendation. The following table lists and describes the values that can be specified for this argument. When no value is specified, **dta** uses the default **-fa IDX**.  
   
 |Value|Description|  
 |-----------|-----------------|  
@@ -186,7 +179,7 @@ dta -d AdventureWorks2012 ...
 |**Applies to**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].|  
 
   
- **-fk** *keep_existing_option*  
+ **-fk** _keep_existing_option_  
  Specifies what existing physical design structures **dta** must retain when generating its recommendation. The following table lists and describes the values that can be specified for this argument:  
   
 |Value|Description|  
@@ -197,7 +190,7 @@ dta -d AdventureWorks2012 ...
 |CL_IDX|All clustered indexes on tables|  
 |IDX|All clustered and nonclustered indexes on tables|  
   
- **-fp** *partitioning_strategy*  
+ **-fp** _partitioning_strategy_  
  Specifies whether new physical design structures (indexes and indexed views) that **dta** proposes should be partitioned, and how they should be partitioned. The following table lists and describes the values that can be specified for this argument:  
   
 |Value|Description|  
@@ -206,49 +199,49 @@ dta -d AdventureWorks2012 ...
 |FULL|Full partitioning (choose to enhance performance)|  
 |ALIGNED|Aligned partitioning only (choose to enhance manageability)|  
   
- ALIGNED means that in the recommendation generated by **dta** every proposed index is partitioned in exactly the same way as the underlying table for which the index is defined. Nonclustered indexes on an indexed view are aligned with the indexed view. Only one value can be specified for this argument. The default is **-fp****NONE**.  
+ ALIGNED means that in the recommendation generated by **dta** every proposed index is partitioned in exactly the same way as the underlying table for which the index is defined. Nonclustered indexes on an indexed view are aligned with the indexed view. Only one value can be specified for this argument. The default is **-fp NONE**.  
   
- **-fx** *drop_only_mode*  
+ **-fx** _drop_only_mode_  
  Specifies that **dta** only considers dropping existing physical design structures. No new physical design structures are considered. When this option is specified, **dta** evaluates the usefulness of existing physical design structures and recommends dropping seldom used structures. This argument takes no values. It cannot be used with the **-fa**, **-fp**, or **-fk ALL** arguments  
   
- **-ID** *session_ID*  
+ **-ID** _session_ID_  
  Specifies a numerical identifier for the tuning session. If not specified, then **dta** generates an ID number. You can use this identifier to view information for existing tuning sessions. If you do not specify a value for **-ID**, then a session name must be specified with **-s**.  
   
  **-ip**  
- Specifies that the plan cache be used as the workload. The top 1,000 plan cache events for explicitly selected databases are analyzed. This value can be changed using the **–n** option.  
+ Specifies that the plan cache be used as the workload. The top 1,000 plan cache events for explicitly selected databases are analyzed. This value can be changed using the **-n** option.  
  
 **-iq**  
- Specifies that the Query Store be used as the workload. The top 1,000 events from the Query Store for explicitly selected databases are analyzed. This value can be changed using the **–n** option.  See [Query Store](../../relational-databases/performance/how-query-store-collects-data.md) and 
+ Specifies that the Query Store be used as the workload. The top 1,000 events from the Query Store for explicitly selected databases are analyzed. This value can be changed using the **-n** option.  See [Query Store](../../relational-databases/performance/how-query-store-collects-data.md) and 
  [Tuning Database Using Workload from Query Store](../../relational-databases/performance/tuning-database-using-workload-from-query-store.md) for more information.
  ||  
 |-|  
 |**Applies to**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].|  
      
   
- **-if** *workload_file*  
- Specifies the path and name of the workload file to use as input for tuning. The file must be in one of these formats: .trc (SQL Server Profiler trace file), .sql (SQL file), or .log ([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] trace file). Either one workload file or one workload table must be specified.  
+ **-if** _workload_file_  
+ Specifies the path and name of the workload file to use as input for tuning. The file must be in one of these formats: .trc (SQL Server Profiler trace file), .sql (SQL file), or .log ( [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] trace file). Either one workload file or one workload table must be specified.  
   
- **-it** *workload_trace_table_name*  
- Specifies the name of a table containing the workload trace for tuning. The name is specified in the format: [*database_name*]**.**[*owner_name*]**.***table_name*.  
+ **-it** _workload_trace_table_name_  
+ Specifies the name of a table containing the workload trace for tuning. The name is specified in the format: [*database_name*]**.**[*owner_name*]**.**_table_name_.  
   
  The following table shows the default values for each:  
   
 |Parameter|Default value|  
 |---------------|-------------------|  
-|*database_name*|*database_name* specified with **–D** option.|  
+|*database_name*|*database_name* specified with **-D** option.|  
 |*owner_name*|**dbo**.|  
 |*table_name*|None.|  
   
 > [!NOTE]  
 >  *owner_name* must be **dbo**. If any other value is specified, execution of **dta** fails and an error is returned. Also note that either one workload table or one workload file must be specified.  
   
- **-ix** *input_XML_file_name*  
+ **-ix** _input_XML_file_name_  
  Specifies the name of the XML file containing **dta** input information. This must be a valid XML document conforming to DTASchema.xsd. Conflicting arguments specified from the command prompt for tuning options override the corresponding value in this XML file. The only exception is if a user-specified configuration is entered in the evaluate mode in the XML input file. For example, if a configuration is entered in the **Configuration** element of the XML input file and the **EvaluateConfiguration** element is also specified as one of the tuning options, the tuning options specified in the XML input file will override any tuning options entered from the command prompt.  
   
- **-m** *minimum_improvement*  
+ **-m** _minimum_improvement_  
  Specifies the minimum percentage of improvement that the recommended configuration must satisfy.  
   
- **-N** *online_option*  
+ **-N** _online_option_  
  Specifies whether physical design structures are created online. The following table lists and describes the values you can specify for this argument:  
   
 |Value|Description|  
@@ -259,7 +252,7 @@ dta -d AdventureWorks2012 ...
   
  If indexes are created online, ONLINE = ON is appended to its object definition.  
   
- **-n** *number_of_events*  
+ **-n** _number_of_events_  
  Specifies the number of events in the workload that **dta** should tune. If this argument is specified and the workload is a trace file that contains duration information, then **dta** tunes events in decreasing order of duration. This argument is useful to compare two configurations of physical design structures. To compare two configurations, specify the same number of events to be tuned for both configurations and then specify an unlimited tuning time for both also as follows:  
   
 ```  
@@ -268,7 +261,7 @@ dta -n number_of_events -A 0
   
  In this case, it is important to specify an unlimited tuning time (`-A 0`). Otherwise, Database Engine Tuning Advisor assumes an 8 hour tuning time by default.
  
- **-I** *time_window_in_hours*   
+ **-I** _time_window_in_hours_   
    Specifies the time window (in hours) when a query must have executed for it to be considered by DTA for tuning when using **-iq** option (Workload from Query Store). 
 ```  
 dta -iq -I 48  
@@ -280,28 +273,28 @@ In this case, DTA will use Query Store as the source of workload and only consid
 
 
   
- **-of** *output_script_file_name*  
+ **-of** _output_script_file_name_  
  Specifies that **dta** writes the recommendation as a [!INCLUDE[tsql](../../includes/tsql-md.md)] script to the file name and destination specified.  
   
  You can use **-F** with this option. Make sure that the file name is unique, especially if you are also using **-or** and **-ox**.  
   
- **-or** *output_xml_report_file_name*  
+ **-or** _output_xml_report_file_name_  
  Specifies that **dta** writes the recommendation to an output report in XML. If a file name is supplied, then the recommendations are written to that destination. Otherwise, **dta** uses the session name to generate the file name and writes it to the current directory.  
   
  You can use **-F** with this option. Make sure that the file name is unique, especially if you are also using **-of** and **-ox**.  
   
- **-ox** *output_XML_file_name*  
+ **-ox** _output_XML_file_name_  
  Specifies that **dta** writes the recommendation as an XML file to the file name and destination supplied. Ensure that Database Engine Tuning Advisor has permissions to write to the destination directory.  
   
  You can use **-F** with this option. Make sure that the file name is unique, especially if you are also using **-of** and **-or**.  
   
- **-P** *password*  
+ **-P** _password_  
  Specifies the password for the login ID. If this option is not used, **dta** prompts for a password.  
   
  **-q**  
  Sets quiet mode. No information is written to the console, including progress and header information.  
   
- **-rl** *analysis_report_list*  
+ **-rl** _analysis_report_list_  
  Specifies the list of analysis reports to generate. The following table lists the values that can be specified for this argument:  
   
 |Value|Report|  
@@ -329,13 +322,13 @@ In this case, DTA will use Query Store as the source of workload and only consid
 ... -rl EVT_FREQ, VIW_TAB, WKLD_ANL ...  
 ```  
   
- **-S** *server_name*[ *\instance*]  
+ **-S** _server_name_[ *\instance*]  
  Specifies the name of the computer and instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to connect to. If no *server_name* is specified, **dta** connects to the default instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] on the local computer. This option is required when connecting to a named instance or when executing **dta** from a remote computer on the network.  
   
- **-s** *session_name*  
+ **-s** _session_name_  
  Specifies the name of the tuning session. This is required if **-ID** is not specified.  
   
- **-Tf** *table_list_file*  
+ **-Tf** _table_list_file_  
  Specifies the name of a file containing a list of tables to be tuned. Each table listed within the file should begin on a new line. Table names should be qualified with three-part naming, for example, **AdventureWorks2012.HumanResources.Department**. Optionally, to invoke the table-scaling feature, the name of an existing table can be followed by a number indicating the projected number of rows in the table. Database Engine Tuning Advisor takes into consideration the projected number of rows while tuning or evaluating statements in the workload that reference these tables. Note that there can be one or more spaces between the *number_of_rows* count and the *table_name*.  
   
  This is the file format for *table_list_file*:  
@@ -350,12 +343,12 @@ In this case, DTA will use Query Store as the source of workload and only consid
   
  If the **-Tf** and **-Tl** arguments are omitted, all user tables in the specified databases are considered for tuning.  
   
- **-Tl** *table_list*  
+ **-Tl** _table_list_  
  Specifies at the command prompt a list of tables to be tuned. Place commas between table names to separate them. If only one database is specified with the **-D** argument, then table names do not need to be qualified with a database name. Otherwise, the fully qualified name in the format: *database_name.schema_name.table_name* is required for each table.  
   
  This argument is an alternative to using a table list file (**-Tf**). If both **-Tl** and **-Tf** are used, **dta** fails and returns an error.  
   
- **-U** *login_id*  
+ **-U** _login_id_  
  Specifies the login ID used to connect to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  **-u**  
@@ -373,7 +366,7 @@ In this case, DTA will use Query Store as the source of workload and only consid
  This example uses a secure connection (`-E`) to connect to the **tpcd1G** database on MyServer to analyze a workload and create recommendations. It writes the output to a script file named script.sql. If script.sql already exists, then **dta** will overwrite the file because the `-F` argument has been specified. The tuning session runs for an unlimited length of time to ensure a complete analysis of the workload (`-A 0`). The recommendation must provide a minimum improvement of 5% (`-m 5`). **dta** should include indexes and indexed views in its final recommendation (`-fa IDX_IV`).  
   
 ```  
-dta –S MyServer –E -D tpcd1G -if tpcd_22.sql -F –of script.sql –A 0 -m 5 -fa IDX_IV  
+dta -S MyServer -E -D tpcd1G -if tpcd_22.sql -F -of script.sql -A 0 -m 5 -fa IDX_IV  
 ```  
   
  **B. Limit disk use**  
@@ -381,7 +374,7 @@ dta –S MyServer –E -D tpcd1G -if tpcd_22.sql -F –of script.sql –A 0 -m 5
  This example limits the total database size, which includes the raw data and the additional indexes, to 3 gigabytes (GB) (`-B 3000`) and directs the output to d:\result_dir\script1.sql. It runs for no more than 1 hour (`-A 60`).  
   
 ```  
-dta –D tpcd1G –if tpcd_22.sql -B 3000 –of "d:\result_dir\script1.sql" –A 60  
+dta -D tpcd1G -if tpcd_22.sql -B 3000 -of "d:\result_dir\script1.sql" -A 60  
 ```  
   
  **C. Limit the number of tuned queries**  
@@ -389,7 +382,7 @@ dta –D tpcd1G –if tpcd_22.sql -B 3000 –of "d:\result_dir\script1.sql" –A
  This example limits the number of queries read from the file orders_wkld.sql to a maximum of 10 (`-n 10`) and runs for 15 minutes (`-A 15`), whichever comes first. To make sure that all 10 queries are tuned, specify an unlimited tuning time with `-A 0`. If time is important, specify an appropriate time limit by specifying the number of minutes that are available for tuning with the `-A` argument as shown in this example.  
   
 ```  
-dta –D orders –if orders_wkld.sql –of script.sql –A 15 -n 10  
+dta -D orders -if orders_wkld.sql -of script.sql -A 15 -n 10  
 ```  
   
  **D. Tune specific tables listed in a file**  
@@ -415,7 +408,7 @@ AdventureWorks2012.Production.Product  2000000
  The tuning time is 2 hours (`-A 120`) and the output is written to an XML file (`-ox XMLTune.xml`).  
   
 ```  
-dta –D pubs –if pubs_wkld.sql –ox XMLTune.xml –A 120 –Tf table_list.txt  
+dta -D pubs -if pubs_wkld.sql -ox XMLTune.xml -A 120 -Tf table_list.txt  
 ```  
   
 ## See Also  

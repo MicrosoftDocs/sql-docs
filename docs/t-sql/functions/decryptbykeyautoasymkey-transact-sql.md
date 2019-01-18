@@ -2,15 +2,10 @@
 title: "DECRYPTBYKEYAUTOASYMKEY (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "09/09/2015"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "sql-database"
-ms.service: ""
-ms.component: "t-sql|functions"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: t-sql
 ms.topic: "language-reference"
 f1_keywords: 
   - "DECRYPTBYKEYAUTOASYMKEY_TSQL"
@@ -20,16 +15,14 @@ dev_langs:
 helpviewer_keywords: 
   - "DECRYPTBYKEYAUTOASYMSKEY function"
 ms.assetid: 5521d4cf-740c-4ede-98b6-4ba90b84e32d
-caps.latest.revision: 23
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "craigg"
-ms.workload: "Inactive"
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
 ---
 # DECRYPTBYKEYAUTOASYMKEY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Decrypts using a symmetric key that is automatically decrypted using an asymmetric key.  
+This function decrypts encrypted data. To do this, it first decrypts a symmetric key with a separate asymmetric key, and then decrypts the encrypted data with the symmetric key extracted in the first "step".  
   
  ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -45,41 +38,50 @@ DecryptByKeyAutoAsymKey ( akey_ID , akey_password
   
 ## Arguments  
  *akey_ID*  
- Is the ID of the asymmetric key that is used to protect the symmetric key. *akey_ID* is **int**.  
+The ID of the asymmetric key used to encrypt the symmetric key. *akey_ID* has an **int** data type.  
   
  *akey_password*  
- Is the password that protects the private key of the asymmetric key. Can be NULL if the private key is protected by the database master key. *akey_password* is **nvarchar**.  
+The password protecting the asymmetric key. *akey_password* can have a NULL value if the database master key protects the asymmetric private key. *akey_password* has an **nvarchar** data type.  
   
- '*ciphertext*'  
- Is the data that was encrypted with the key. *ciphertext* is **varbinary**.  
+ *ciphertext*
+The data encrypted with the key. *ciphertext* has a **varbinary** data type.  
   
  @ciphertext  
- Is a variable of type **varbinary** that contains data that was encrypted with the key.  
+A variable of type **varbinary** containing data encrypted with the symmetric key.  
   
  *add_authenticator*  
- Indicates whether an authenticator was encrypted together with the plaintext. Must be the same value that is passed to EncryptByKey when encrypting the data. Is 1 if an authenticator was used. *add_authenticator* is **int**.  
+Indicates whether the original encryption process included, and encrypted, an authenticator together with the plaintext. Must match the value passed to [ENCRYPTBYKEY (Transact-SQL)](./encryptbykey-transact-sql.md) during the data encryption process. *add_authenticator* has a value of 1 if the encryption process used an authenticator. *add_authenticator* has an **int** data type.  
   
  @add_authenticator  
- Indicates whether an authenticator was encrypted together with the plaintext. Must be the same value that is passed to EncryptByKey when encrypting the data.  
+A variable indicating whether the original encryption process included, and encrypted, an authenticator together with the plaintext. Must match the value passed to [ENCRYPTBYKEY (Transact-SQL)](./encryptbykey-transact-sql.md) during the data encryption process. *@add_authenticator* has an **int** data type.
   
  *authenticator*  
- Is the data from which to generate an authenticator. Must match the value that was supplied to EncryptByKey. *authenticator* is **sysname**.  
+The data used as the basis for the generation of the authenticator. Must match the value supplied to [ENCRYPTBYKEY (Transact-SQL)](./encryptbykey-transact-sql.md). *authenticator* has a **sysname** data type.  
   
  @authenticator  
- Is a variable that contains data from which to generate an authenticator. Must match the value that was supplied to EncryptByKey.  
+A variable containing data from which an authenticator generates. Must match the value supplied to [ENCRYPTBYKEY (Transact-SQL)](./encryptbykey-transact-sql.md). *@authenticator* has a **sysname** data type.  
   
+@add_authenticator  
+A variable indicating whether the original encryption process included, and encrypted, an authenticator together with the plaintext. Must match the value passed to [ENCRYPTBYKEY (Transact-SQL)](./encryptbykey-transact-sql.md) during the data encryption process. *@add_authenticator* has an **int** data type.  
+
+*authenticator*  
+The data used as the basis for the generation of the authenticator. Must match the value supplied to [ENCRYPTBYKEY (Transact-SQL)](./encryptbykey-transact-sql.md). *authenticator* has a **sysname** data type.
+
+@authenticator  
+A variable containing data from which an authenticator generates. Must match the value supplied to [ENCRYPTBYKEY (Transact-SQL)](./encryptbykey-transact-sql.md). *@authenticator* has a **sysname** data type.  
+
 ## Return Types  
- **varbinary** with a maximum size of 8,000 bytes.  
+**varbinary**, with a maximum size of 8,000 bytes.  
   
 ## Remarks  
- DecryptByKeyAutoAsymKey combines the functionality of OPEN SYMMETRIC KEY and DecryptByKey. In a single operation, it decrypts a symmetric key and uses that key to decrypt ciphertext.  
+`DECRYPTBYKEYAUTOASYMKEY` combines the functionality of both `OPEN SYMMETRIC KEY` and `DECRYPTBYKEY`. In a single operation, it first decrypts a symmetric key, and then decrypts encrypted ciphertext with that key.  
   
 ## Permissions  
- Requires VIEW DEFINITION permission on the symmetric key and CONTROL permission on the asymmetric key.  
+Requires `VIEW DEFINITION` permission on the symmetric key, and `CONTROL` permission on the asymmetric key.  
   
-## Examples  
- The following example shows how `DecryptByKeyAutoAsymKey` can be used to simplify code that performs a decryption. This code should be run on an [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] database that does not already have a database master key.  
-  
+## Examples
+This example shows how `DECRYPTBYKEYAUTOASYMKEY` can simplify decryption code. This code should run on an [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] database that does not already have a database master key.  
+
 ```  
 --Create the keys and certificate.  
 USE AdventureWorks2012;  

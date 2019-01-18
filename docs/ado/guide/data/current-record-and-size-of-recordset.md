@@ -1,26 +1,19 @@
 ---
 title: "Current Record and Size of Recordset | Microsoft Docs"
-ms.prod: "sql-non-specified"
-ms.prod_service: "drivers"
-ms.service: ""
-ms.component: "ado"
-ms.technology:
-  - "drivers"
+ms.prod: sql
+ms.prod_service: connectivity
+ms.technology: connectivity
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "record location [ADO]"
   - "current record [ADO]"
 ms.assetid: e63ff331-8655-4be7-82c6-e6cd6cc9d16d
-caps.latest.revision: 13
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
-ms.workload: "On Demand"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # Current Record and Size of Recordset
 This section describes how to locate the current position of the cursor in the sample **Recordset** in [JScript Code Example to Return a Recordset](../../../ado/guide/data/jscript-code-example-to-return-a-recordset.md).  
@@ -31,7 +24,7 @@ This section describes how to locate the current position of the cursor in the s
 ## Size of Recordset  
  To find out the size of a **Recordset** object, get the value of the **Recordset.RecordCount** property. This value is a long integer that indicates the number of records in the **Recordset**. If the dataset is returned from the OLEDB Provider for Microsoft SQL Server, this value gives the number of rows returned. Reading the **RecordCount** property on a closed **Recordset** causes an error.  
   
- If the number of records cannot be determined, the value of the property is –1.  
+ If the number of records cannot be determined, the value of the property is -1.  
   
  The value of the **RecordCount** property also depends on the capabilities of the provider and the type of cursor used. For a forward-only cursor, the value is -1. For a static or keyset cursor, the value is the actual number of records returned in the **Recordset** object. For a dynamic cursor, the value is either -1 or the actual number of records, depending on the data source.  
   
@@ -39,7 +32,7 @@ This section describes how to locate the current position of the cursor in the s
   
  In some cases, a provider or cursor is unable to determine the **RecordCount** value without first fetching all records from the data source. To ensure accurate counting, call the **Recordset**.**MoveLast** method before calling **Recordset.RecordCount**.  
   
- The sample **Recordset** object obtained using the [JScript Code Example](../../../ado/guide/data/jscript-code-example-to-return-a-recordset.md) uses a forward-only cursor, so calling **RecordCount** on this object always results in –1. If you change the line of code that calls the **Recordset**.**Open** method as shown in the following example, the **RecordCount** property will return the actual number of records fetched.  
+ The sample **Recordset** object obtained using the [JScript Code Example](../../../ado/guide/data/jscript-code-example-to-return-a-recordset.md) uses a forward-only cursor, so calling **RecordCount** on this object always results in -1. If you change the line of code that calls the **Recordset**.**Open** method as shown in the following example, the **RecordCount** property will return the actual number of records fetched.  
   
 ```  
 oRs.Open sSQL, sCnStr, adOpenStatic, adLockOptimistic, adCmdText   

@@ -2,16 +2,11 @@
 title: "Integration Services User Interface | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "integration-services"
-ms.service: ""
-ms.component: "non-specific"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: integration-services
+ms.topic: conceptual
 helpviewer_keywords: 
   - "SQL Server Integration Services, SSIS Designer"
   - "tools [Integration Services], SSIS Designer"
@@ -19,11 +14,9 @@ helpviewer_keywords:
   - "SSIS, SSIS Designer"
   - "Integration Services, SSIS Designer"
 ms.assetid: d2c48cff-46f4-4c70-b1f3-c88f9b8757f3
-caps.latest.revision: 54
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
-ms.workload: "On Demand"
+manager: craigg
 ---
 # Integration Services User Interface
   In addition to the design surfaces on the [!INCLUDE[ssIS](../includes/ssis-md.md)] Designer tabs, the user interface provides access to the following windows and dialog boxes for adding features to packages and configuring the properties of package objects:  
@@ -57,11 +50,11 @@ ms.workload: "On Demand"
   
  `- <SamplesSites>`  
   
- `<GettingStartedSamples>http://go.microsoft.com/fwlink/?LinkID=203147</GettingStartedSamples>`  
+ `<GettingStartedSamples>https://go.microsoft.com/fwlink/?LinkID=203147</GettingStartedSamples>`  
   
  `- <ToolboxSamples>`  
   
- `<Site>http://go.microsoft.com/fwlink/?LinkID=203286&query=SSIS%20{0}</Site>`  
+ `<Site>https://go.microsoft.com/fwlink/?LinkID=203286&query=SSIS%20{0}</Site>`  
   
  `</ToolboxSamples>`  
   

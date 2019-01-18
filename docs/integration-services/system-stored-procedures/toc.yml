@@ -1,0 +1,136 @@
+- name: Overview
+  href: stored-procedures-integration-services-catalog.md
+- name: Add
+  items:
+  - name: catalog.add_data_tap
+    href: catalog-add-data-tap.md
+  - name: catalog.add_data_tap_by_guid
+    href: catalog-add-data-tap-by-guid.md
+  - name: catalog.add_execution_worker
+    href: catalog-add-execution-worker-ssisdb-database.md
+- name: catalog.check_schema_version
+  href: catalog-check-schema-version.md
+- name: catalog.clear_object_parameter_value
+  href: catalog-clear-object-parameter-value-ssisdb-database.md
+- name: catalog.configure_catalog
+  href: catalog-configure-catalog-ssisdb-database.md
+- name: Create
+  items:
+  - name: catalog.create_customized_logging_level
+    href: catalog-create-customized-logging-level.md
+  - name: catalog.create_environment
+    href: catalog-create-environment-ssisdb-database.md
+  - name: catalog.create_environment_reference
+    href: catalog-create-environment-reference-ssisdb-database.md
+  - name: catalog.create_environment_variable
+    href: catalog-create-environment-variable-ssisdb-database.md
+  - name: catalog.create_execution
+    href: catalog-create-execution-ssisdb-database.md
+  - name: catalog.create_execution_dump
+    href: catalog-create-execution-dump.md
+  - name: catalog.create_folder
+    href: catalog-create-folder-ssisdb-database.md
+- name: Delete
+  items:
+  - name: catalog.delete_customized_logging_level
+    href: catalog-delete-customized-logging-level.md
+  - name: catalog.delete_environment
+    href: catalog-delete-environment-ssisdb-database.md
+  - name: catalog.delete_environment_reference
+    href: catalog-delete-environment-reference-ssisdb-database.md
+  - name: catalog.delete_environment_variable
+    href: catalog-delete-environment-variable-ssisdb-database.md
+  - name: catalog.delete_folder
+    href: catalog-delete-folder-ssisdb-database.md
+  - name: catalog.delete_project
+    href: catalog-delete-project-ssisdb-database.md
+- name: catalog.deny_permission
+  href: catalog-deny-permission-ssisdb-database.md
+- name: Deploy
+  items:
+  - name: catalog.deploy_packages
+    href: catalog-deploy-packages.md
+  - name: catalog.deploy_project
+    href: catalog-deploy-project-ssisdb-database.md
+- name: catalog.disable_worker_agent
+  href: catalog-disable-worker-agent-ssisdb-database.md
+- name: catalog.enable_worker_agent
+  href: catalog-enable-worker-agent-ssisdb-database.md
+- name: Get
+  items:
+  - name: catalog.get_parameter_values
+    href: catalog-get-parameter-values-ssisdb-database.md
+  - name: catalog.get_project
+    href: catalog-get-project-ssisdb-database.md
+- name: catalog.grant_permission
+  href: catalog-grant-permission-ssisdb-database.md
+- name: Move
+  items:
+  - name: catalog.move_environment
+    href: catalog-move-environment-ssisdb-database.md
+  - name: catalog.move_project
+    href: catalog-move-project-ssisdb-database.md
+- name: catalog.remove_data_tap
+  href: catalog-remove-data-tap.md
+- name: Rename
+  items:
+  - name: catalog.rename_customized_logging_level
+    href: catalog-rename-customized-logging-level.md
+  - name: catalog.rename_environment
+    href: catalog-rename-environment-ssisdb-database.md
+  - name: catalog.rename_folder
+    href: catalog-rename-folder-ssisdb-database.md
+- name: catalog.restore_project
+  href: catalog-restore-project-ssisdb-database.md
+- name: catalog.revoke_permission
+  href: catalog-revoke-permission-ssisdb-database.md
+- name: Set
+  items:
+  - name: catalog.set_customized_logging_level_description
+    href: catalog-set-customized-logging-level-description.md
+  - name: catalog.set_customized_logging_level_value
+    href: catalog-set-customized-logging-level-value.md
+  - name: catalog.set_environment_property
+    href: catalog-set-environment-property-ssisdb-database.md
+  - name: catalog.set_environment_reference_type
+    href: catalog-set-environment-reference-type-ssisdb-database.md
+  - name: catalog.set_environment_variable_property
+    href: catalog-set-environment-variable-property-ssisdb-database.md
+  - name: catalog.set_environment_variable_protection
+    href: catalog-set-environment-variable-protection-ssisdb-database.md
+  - name: catalog.set_environment_variable_value
+    href: catalog-set-environment-variable-value-ssisdb-database.md
+  - name: catalog.set_execution_parameter_value
+    href: catalog-set-execution-parameter-value-ssisdb-database.md
+  - name: catalog.set_execution_property_override_value
+    href: catalog-set-execution-property-override-value.md
+  - name: catalog.set_folder_description
+    href: catalog-set-folder-description-ssisdb-database.md
+  - name: catalog.set_object_parameter_value
+    href: catalog-set-object-parameter-value-ssisdb-database.md
+  - name: catalog.set_worker_agent_property
+    href: catalog-set-worker-agent-property-ssisdb-database.md
+- name: catalog.startup
+  href: catalog-startup.md
+- name: catalog.start_execution
+  href: catalog-start-execution-ssisdb-database.md
+- name: catalog.stop_operation
+  href: catalog-stop-operation-ssisdb-database.md
+- name: Update
+  items:
+  - name: catalog.update_logdb_info (SSISDB Database)
+    href: catalog-update-logdb-info.md
+  - name: catalog.update_master_address (SSISDB Database)
+    href: catalog-update-master-address.md
+- name: Validate
+  items:
+  - name: catalog.validate_package
+    href: catalog-validate-package-ssisdb-database.md
+  - name: catalog.validate_project
+    href: catalog-validate-project-ssisdb-database.md
+- name: Cleanup
+  items:
+  - name: catalog.cleanup_server_execution_keys
+    href: catalog-cleanup-server-execution-keys.md
+  - name: catalog.cleanup_server_log
+    href: catalog-cleanup-server-log.md

@@ -1,25 +1,18 @@
 ---
-title: "PDW Certificate Provisioning (Analytics Platform System)"
-author: "barbkess" 
-ms.author: "barbkess"
-manager: "jhubbard"	  
-ms.prod: "analytics-platform-system"
-ms.prod_service: "mpp-data-warehouse"
-ms.service: ""
-ms.component:
-ms.technology: "mpp-data-warehouse"
-ms.custom: ""
-ms.date: 01/05/2017
-ms.reviewer: na
-ms.suite: "sql"
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: 0a423b7d-c6ea-45c1-80b0-26758170594c
-caps.latest.revision: 22
-
+title: PDW certificate provisioning - Analytics Platform System | Microsoft Docs
+description: The PDW Certificate Provisioning page of the Analytics Platform System Configuration Manager imports or removes the certificate used by the PDW region. 
+author: mzaman1 
+manager: craigg
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
 ---
-# PDW Certificate Provisioning
-The **PDW Certificate Provisioning** page of the Analytics Platform System**Configuration Manager** imports or removes the certificate used by the PDW region. Using, a certificate to encrypt connections can help secure communication to the Control node through SQL Server clients, tools that use the SQL Server PDW drivers, the [Admin Console](monitor-the-appliance-by-using-the-admin-console.md), and Integration Services loads.  
+
+# PDW certificate provisioning - Analytics Platform System
+The **PDW Certificate Provisioning** page of the Analytics Platform System **Configuration Manager** imports or removes the certificate used by the PDW region. Using, a certificate to encrypt connections can help secure communication to the Control node through SQL Server clients, tools that use the SQL Server PDW drivers, the [Admin Console](monitor-the-appliance-by-using-the-admin-console.md), and Integration Services loads.  
   
 ## Prerequisites  
 Before installing the certificate, do the following:  
@@ -31,7 +24,7 @@ Before installing the certificate, do the following:
 ## For Security Reasons, Obtain a Trusted Certificate  
 SQL Server PDW supports using a certificate to encrypt connections to the Control node; including connections to the **Admin Console**.  
   
-By default, the **Admin Console** includes a self-signed certificate that provides privacy, but not server authentication. This can leave communications vulnerable to a man-in-the-middle attack. When a user connects to the Admin Console by using the self-signed certificate, Internet Explorer returns the error: “There is a problem with this website's security certificate”.  
+By default, the **Admin Console** includes a self-signed certificate that provides privacy, but not server authentication. This can leave communications vulnerable to a man-in-the-middle attack. When a user connects to the Admin Console by using the self-signed certificate, Internet Explorer returns the error: "There is a problem with this website's security certificate".  
   
 Although the connection through the self-signed certificate encrypts in-flight data between the client and the server, the connection is still at risk from attackers.  
   

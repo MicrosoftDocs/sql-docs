@@ -2,28 +2,24 @@
 title: "Functional Area Permissions (Master Data Services) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "mds"
-ms.service: ""
-ms.component: "non-specific"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "master-data-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: master-data-services
+ms.topic: conceptual
 helpviewer_keywords: 
   - "functional area permissions [Master Data Services], about functional area permissions"
   - "functional area permissions [Master Data Services]"
   - "permissions [Master Data Services], functional areas"
 ms.assetid: a80b87b3-b904-4cda-8582-0761c2617c57
-caps.latest.revision: 10
-author: "smartysanthosh"
-ms.author: "nagavo"
-manager: "craigg"
-ms.workload: "Inactive"
+author: leolimsft
+ms.author: lle
+manager: craigg
 ---
 # Functional Area Permissions (Master Data Services)
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
   You can assign permission to each of the functional areas of the [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] user interface (UI). The following are the functional areas:  
   
 -   **Explorer**  

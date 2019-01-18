@@ -2,30 +2,23 @@
 title: "External Tools Dialog Box | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "sql-tools"
-ms.service: ""
-ms.component: "ssms"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "tools-ssms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: ssms
+ms.topic: conceptual
 helpviewer_keywords: 
   - "adding external tools"
   - "external tools [SQL Server Management Studio]"
   - "SQL Server Management Studio [SQL Server], external tools"
 ms.assetid: ba797203-24d0-4922-9b97-8ab483f1db14
-caps.latest.revision: 5
 author: "stevestein"
 ms.author: "sstein"
-manager: "jhubbard"
-ms.workload: "Inactive"
+manager: craigg
 ---
 # External Tools Dialog Box
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-Use the **External Tools** dialog box to add external tools such as SQLCMD or Notepad to the **Tools** menu. Adding external tools allows you to easily launch other applications while working in the [!INCLUDE[msCoName](../includes/msconame_md.md)] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull_md.md)] environment. You can specify arguments and a working directory when launching the tool. In addition, the output from some tools can be displayed in the **Output** window. The **External Tools** dialog box is available on the **Tools** menu.  
+Use the **External Tools** dialog box to add external tools such as SQLCMD or Notepad to the **Tools** menu. Adding external tools allows you to easily launch other applications while working in the [!INCLUDE[msCoName](../includes/msconame_md.md)] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] environment. You can specify arguments and a working directory when launching the tool. In addition, the output from some tools can be displayed in the **Output** window. The **External Tools** dialog box is available on the **Tools** menu.  
   
 ## Options  
 **Menu contents**  
@@ -53,7 +46,7 @@ Specify the path to the file to launch.
 Specify the variables that are passed to the tool when the tool is selected on the menu. Arguments can specify values that are passed to the tool or command when it is launched. For example, a value can specify a file name or directory. Use the arrow button to select from a list of predefined arguments. You can add more than one. For a complete list of predefined arguments and their definitions, see [Arguments for External Tools](../ssms/use-of-sql-server-features-and-capabilities-wwi-oltp.md). You can also enter custom arguments (for example, command line switches), depending on the command or tool you use.  
   
 **Use Output window**  
-Opens the [!INCLUDE[ssManStudio](../includes/ssmanstudio_md.md)] Output window to display output of the command being run. Not all tools present output in a format that can be presented in the Output window. For more information, see [Output Window](http://msdn.microsoft.com/en-us/9808e00c-c8f6-45cc-896e-192b8420f747).  
+Opens the [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] Output window to display output of the command being run. Not all tools present output in a format that can be presented in the Output window. For more information, see [Output Window](../relational-databases/scripting/transact-sql-debugger-output-window.md).  
   
 **Treat output as Unicode**  
 Interprets the output as Unicode.  
@@ -73,7 +66,7 @@ Entering the following values in the **External Tools** dialog box will create a
 |Box|Value|  
 |-------|---------|  
 |**Title**|DAC|  
-|**Command**|[!INCLUDE[ssInstallPath](../includes/ssinstallpath_md.md)]Tools\Binn\SQLCMD.exe|  
+|**Command**|[!INCLUDE[ssInstallPath](../includes/ssinstallpath-md.md)]Tools\Binn\SQLCMD.exe|  
 |**Arguments**|-A|  
   
 ## See Also  

@@ -2,15 +2,10 @@
 title: "sys.dm_db_file_space_usage (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/16/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
-ms.service: ""
-ms.component: "dmv's"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: system-objects
 ms.topic: "language-reference"
 f1_keywords: 
   - "dm_db_file_space_usage"
@@ -22,11 +17,10 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.dm_db_file_space_usage dynamic management view"
 ms.assetid: 148a5276-a8d5-49d2-8146-3c63d24c2144
-caps.latest.revision: 45
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-ms.workload: "On Demand"
+author: stevestein
+ms.author: sstein
+manager: craigg
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.dm_db_file_space_usage (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -48,12 +42,12 @@ ms.workload: "On Demand"
 |user_object_reserved_page_count|**bigint**|Total number of pages allocated from uniform extents for user objects in the database. Unused pages from an allocated extent are included in the count.<br /><br /> IAM pages are not included, because they are always allocated from mixed extents. PFS pages are included if they are allocated from a uniform extent.<br /><br /> You can use the total_pages column in the [sys.allocation_units](../../relational-databases/system-catalog-views/sys-allocation-units-transact-sql.md) catalog view to return the reserved page count of each allocation unit in the user object. However, note that the total_pages column includes IAM pages.|  
 |internal_object_reserved_page_count|**bigint**|Total number of pages in uniform extents allocated for internal objects in the file. Unused pages from an allocated extent are included in the count.<br /><br /> IAM pages are not included, because they are always allocated from mixed extents. PFS pages are included if they are allocated from a uniform extent.<br /><br /> There is no catalog view or dynamic management object that returns the page count of each internal object.|  
 |mixed_extent_page_count|**bigint**|Total number of allocated and unallocated pages in allocated mixed extents in the file. Mixed extents contain pages allocated to different objects. This count does include all the IAM pages in the file.|
-|modified_extent_page_count|**bigint**|**Beginning with**: [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)]<br /><br />Total number of pages modified in allocated extents of the file since last full database backup.The modified page count can be used to track differential changes in the database since last full backup to decide if differential backup is beneficial.|
+|modified_extent_page_count|**bigint**|**Applies to**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br />Total number of pages modified in allocated extents of the file since last full database backup. The modified page count can be used to track amount of differential changes in the database since last full backup, to decide if differential backup is needed.|
 |pdw_node_id|**int**|**Applies to**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> The identifier for the node that this distribution is on.|  
 |distribution_id|**int**|**Applies to**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> The unique numeric id associated with the distribution.|  
   
 ## Remarks  
- Page counts are always at the extent level. Therefore, page count values will always be a multiple of eight. The extents that contain Global Allocation Map (GAM) and Shared Global Allocation Map (SGAM) allocation pages are allocated uniform extents. They are not included in the previously described page counts.  
+ Page counts are always at the extent level. Therefore, page count values will always be a multiple of eight. The extents that contain Global Allocation Map (GAM) and Shared Global Allocation Map (SGAM) allocation pages are allocated uniform extents. They are not included in the previously described page counts. For more information about pages and extents, see [Pages and Extents Architecture Guide](../../relational-databases/pages-and-extents-architecture-guide.md). 
   
  The content of the current version store is in [sys.dm_tran_version_store](../../relational-databases/system-dynamic-management-views/sys-dm-tran-version-store-transact-sql.md). Version store pages are tracked at the file level instead of the session and task level, because they are global resources. A session may generate versions, but the versions cannot be removed when the session ends. Version store cleanup must consider the longest running transaction that needs access to the particular version. The longest running transaction related to version store clean-up can be discovered by viewing the elapsed_time_seconds column in [sys.dm_tran_active_snapshot_database_transactions](../../relational-databases/system-dynamic-management-views/sys-dm-tran-active-snapshot-database-transactions-transact-sql.md).  
   
@@ -89,11 +83,11 @@ ms.workload: "On Demand"
 |----------|--------|------------------|  
 |sys.dm_db_file_space_usage.database_id, file_id|sys.dm_io_virtual_file_stats.database_id, file_id|One-to-one|  
   
-## Permissions  
- On [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] requires VIEW SERVER STATE permission on the server.  
-  
- On [!INCLUDE[ssSDS](../../includes/sssds-md.md)] Premium Tiers requires the VIEW DATABASE STATE permission in the database. On [!INCLUDE[ssSDS](../../includes/sssds-md.md)] Standard and Basic Tiers requires the [!INCLUDE[ssSDS](../../includes/sssds-md.md)] admin account.  
-  
+## Permissions
+
+On [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], requires `VIEW SERVER STATE` permission.   
+On [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], requires the `VIEW DATABASE STATE` permission in the database.   
+
 ## Examples  
   
 ### Determing the Amount of Free Space in tempdb  

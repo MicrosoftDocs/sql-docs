@@ -1,25 +1,18 @@
 ---
-title: "Acquire and Configure a Loading Server (SQL Server PDW)"
-author: "barbkess" 
-ms.author: "barbkess"
-manager: "jhubbard"	  
-ms.prod: "analytics-platform-system"
-ms.prod_service: "mpp-data-warehouse"
-ms.service: ""
-ms.component:
-ms.suite: "sql"
-ms.custom: ""
-ms.technology: "mpp-data-warehouse"
-description: "Acquire and configure a loading server as a non-appliance Windows system for submitting data loads to SQL Server Parallel Data Warehouse."
-ms.date: "10/20/2016"
-ms.topic: "article"
-ms.assetid: a434b174-a818-4f73-b218-264619bab664
-caps.latest.revision: 19
-
+title: Acquire and Configure a loading server - Parallel Data Warehouse | Microsoft Docs
+description: This article describes how to acquire and configure a loading server as a non-appliance Windows system for submitting data loads to Parallel Data Warehouse (PDW). 
+author: mzaman1 
+manager: craigg
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
 ---
 
-# Acquire and configure a loading server
-This topic describes how to acquire and configure a loading server as a non-appliance Windows system for submitting data loads to SQL Server Parallel Data Warehouse (PDW).  
+# Acquire and configure a loading server for Parallel Data Warehouse
+This article describes how to acquire and configure a loading server as a non-appliance Windows system for submitting data loads to Parallel Data Warehouse (PDW).  
   
 ## <a name="Basics"></a>Basics  
 The loading server:  
@@ -56,7 +49,7 @@ Although not required for Loading, InfiniBand is the recommended connection type
   
 To prepare for a Windows Server 2012 or Windows Server 2012 R2 InfiniBand connection:  
   
-1.  Plan to rack the server close enough to the appliance so that you can connect it to the appliance InfiniBand switches. For more information from Mellanox Technologies about InfiniBand, see the whitepaper, [Introduction to InfiniBand](http://www.mellanox.com/pdf/whitepapers/IB_Intro_WP_190.pdf).  
+1.  Plan to rack the server close enough to the appliance so that you can connect it to the appliance InfiniBand switches. For more information from Mellanox Technologies about InfiniBand, see the whitepaper, [Introduction to InfiniBand](https://www.mellanox.com/pdf/whitepapers/IB_Intro_WP_190.pdf).  
   
 2.  Purchase a Mellanox ConnectX-3 FDR InfiniBand single or dual port network adapter. We recommend purchasing the network adapter with two ports for fault tolerance during data transmission. A two port network adapter is required for high availability.  
   

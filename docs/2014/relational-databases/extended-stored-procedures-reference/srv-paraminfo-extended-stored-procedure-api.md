@@ -1,0 +1,91 @@
+---
+title: "srv_paraminfo (Extended Stored Procedure API) | Microsoft Docs"
+ms.custom: ""
+ms.date: "03/08/2017"
+ms.prod: "sql-server-2014"
+ms.reviewer: ""
+ms.technology: stored-procedures
+ms.topic: "reference"
+api_name: 
+  - "srv_paraminfo"
+api_location: 
+  - "opends60.dll"
+topic_type: 
+  - "apiref"
+dev_langs: 
+  - "C++"
+helpviewer_keywords: 
+  - "srv_paraminfo"
+ms.assetid: ee2afd4e-0d91-462b-9403-98d481546330
+author: rothja
+ms.author: jroth
+manager: craigg
+---
+# srv_paraminfo (Extended Stored Procedure API)
+    
+> [!IMPORTANT]  
+>  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] Use CLR integration instead.  
+  
+ Returns information about a parameter. This function supersedes the following functions: [srv_paramtype](srv-paramtype-extended-stored-procedure-api.md), [srv_paramlen](srv-paramlen-extended-stored-procedure-api.md), [srv_parammaxlen](srv-parammaxlen-extended-stored-procedure-api.md), and [srv_paramdata](srv-paramdata-extended-stored-procedure-api.md). **srv_paraminfo** supports the data types in [Data Types](data-types-extended-stored-procedure-api.md) and zero-length data.  
+  
+## Syntax  
+  
+```  
+  
+int srv_paraminfo (  
+SRV_PROC *  
+srvproc  
+,  
+int  
+n  
+,  
+BYTE *  
+pbType  
+,  
+ULONG *  
+pcbMaxLen  
+,  
+ULONG *  
+pcbActualLen  
+,  
+BYTE *  
+pbData  
+,  
+BOOL *  
+pfNull  
+);  
+  
+```  
+  
+## Arguments  
+ *srvproc*  
+ A handle for a client connection.  
+  
+ *n*  
+ The ordinal number of the parameter to be set. The first parameter is 1.  
+  
+ *pbType*  
+ The data type of the parameter.  
+  
+ *pcbMaxLen*  
+ Pointer to the maximum length of the parameter.  
+  
+ *pcbActualLen*  
+ Pointer to the actual length of the parameter. A value of 0 (\**pcbActualLen* == 0) signifies zero-length data if **pfNull* is set to FALSE.  
+  
+ *pbData*  
+ Pointer to the buffer for parameter data. If *pbData* is not NULL, the Extended Store Procedure API writes \**pcbActualLen* bytes of data to \**pbData*. If *pbData* is NULL, no data is written to \**pbData* but the function returns \**pbType*, \**pcbMaxLen*, \**pcbActualLen*, and **pfNull*. The memory for this buffer must be managed by the application.  
+  
+ *pfNull*  
+ Pointer to a null flag. **pfNull* is set to TRUE if the value of the parameter is NULL.  
+  
+## Returns  
+ If the parameter information was successfully obtained, SUCCEED is returned; otherwise, FAIL. FAIL is returned when there is no current remote stored procedure and when there is no *n*th remote stored procedure parameter.  
+  
+## Remarks  
+ **Security Note** You should thoroughly review the source code of extended stored procedures, and you should test the compiled DLLs before you install them on a production server. For information about security review and testing, see this [Microsoft Web site](https://go.microsoft.com/fwlink/?LinkID=54761&amp;clcid=0x409https://msdn.microsoft.com/security/).  
+  
+## See Also  
+ [Extended Stored Procedures Programmer's Reference](database-engine-extended-stored-procedures-reference.md)  
+  
+  

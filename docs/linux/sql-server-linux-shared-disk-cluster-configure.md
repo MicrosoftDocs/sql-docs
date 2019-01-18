@@ -3,22 +3,17 @@ title: Configure failover cluster instance - SQL Server on Linux (RHEL) | Micros
 description: 
 author: MikeRayMSFT 
 ms.author: mikeray 
-manager: jhubbard
+manager: craigg
 ms.date: 08/28/2017
-ms.topic: article
-ms.prod: "sql-non-specified"
-ms.prod_service: "database-engine"
-ms.service: ""
-ms.component: sql-linux
-ms.suite: "sql"
-ms.custom: ""
-ms.technology: database-engine
+ms.topic: conceptual
+ms.prod: sql
+ms.custom: "sql-linux"
+ms.technology: linux
 ms.assetid: 31c8c92e-12fe-4728-9b95-4bc028250d85 
-ms.workload: "Inactive"
 ---
 # Configure failover cluster instance - SQL Server on Linux (RHEL)
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 A SQL Server two-node shared disk failover cluster instance provides server-level redundancy for high availability. In this tutorial, you learn how to create a two-node failover cluster instance of SQL Server on Linux. The specific steps that you will complete include:
 
@@ -36,7 +31,7 @@ For conceptual information, see [SQL Server Failover Cluster Instance (FCI) on L
 
 ## Prerequisites
 
-To complete the end-to-end scenario below you need two machines to deploy the two nodes cluster and another server for storage. Below steps outline how these servers will be configured.
+To complete the following end-to-end scenario, you need two machines to deploy the two nodes cluster and another server for storage. Below steps outline how these servers will be configured.
 
 ## Set up and configure Linux
 
@@ -46,7 +41,7 @@ The first step is to configure the operating system on the cluster nodes. On eac
 
 ## Install and configure SQL Server
 
-1. Install and set up SQL Server on both nodes.  For detailed instructions see [Install SQL Server on Linux](sql-server-linux-setup.md).
+1. Install and set up SQL Server on both nodes.  For detailed instructions, see [Install SQL Server on Linux](sql-server-linux-setup.md).
 1. Designate one node as primary and the other as secondary, for purposes of configuration. Use these terms for the following this guide.  
 1. On the secondary node, stop and disable SQL Server.
     The following example stops and disables SQL Server: 
@@ -56,9 +51,9 @@ The first step is to configure the operating system on the cluster nodes. On eac
     ```
 
     > [!NOTE] 
-    > At set up time, a Server Master Key is generated for the SQL Server instance and placed at `var/opt/mssql/secrets/machine-key`. On Linux, SQL Server always runs as a local account called mssql. Because it’s a local account, its identity isn’t shared across nodes. Therefore, you need to copy the encryption key from primary node to each secondary node so each local mssql account can access it to decrypt the Server Master Key. 
+    > At set up time, a Server Master Key is generated for the SQL Server instance and placed at `var/opt/mssql/secrets/machine-key`. On Linux, SQL Server always runs as a local account called mssql. Because it's a local account, its identity isn't shared across nodes. Therefore, you need to copy the encryption key from primary node to each secondary node so each local mssql account can access it to decrypt the Server Master Key. 
 
-1.  On the primary node, create a SQL server login for Pacemaker and grant the login permission to run `sp_server_diagnostics`. Pacemaker will use this account to verify which node is running SQL Server. 
+1.  On the primary node, create a SQL server login for Pacemaker and grant the login permission to run `sp_server_diagnostics`. Pacemaker uses this account to verify which node is running SQL Server. 
 
     ```bash
     sudo systemctl start mssql-server
@@ -130,7 +125,7 @@ You need to provide storage that both nodes can access. You can use iSCSI, NFS, 
    sudo firewall-cmd --reload
    ```
 
-   > If you’re using another firewall that doesn’t have a built-in high-availability configuration, the following ports need to be opened for Pacemaker to be able to communicate with other nodes in the cluster
+   > If you're using another firewall that doesn't have a built-in high-availability configuration, the following ports need to be opened for Pacemaker to be able to communicate with other nodes in the cluster
    >
    > * TCP: Ports 2224, 3121, 21064
    > * UDP: Port 5405
@@ -140,7 +135,7 @@ You need to provide storage that both nodes can access. You can use iSCSI, NFS, 
    ```bash
    sudo yum install pacemaker pcs fence-agents-all resource-agents
    ```
-1. Set the password for for the default user that is created when installing Pacemaker and Corosync packages. Use the same password on both nodes. 
+1. Set the password for the default user that is created when installing Pacemaker and Corosync packages. Use the same password on both nodes. 
 
    ```bash
    sudo passwd hacluster
@@ -202,7 +197,7 @@ This example will create an FCI in the group NewLinFCIGrp. The name of the resou
 
     \<FolderToMountNFSShare> is the folder to mount the disk (for system databases and the default location, it would be /var/opt/mssql/data)
 
-     An example is shown below:
+    An example is shown here:
 
     ```bash
     mount -t nfs4 200.201.202.63:/var/nfs/fci1 /var/opt/mssql/data -o nfsvers=4.2,timeo=14,intr

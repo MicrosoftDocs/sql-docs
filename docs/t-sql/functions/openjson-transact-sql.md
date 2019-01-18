@@ -2,15 +2,10 @@
 title: "OPENJSON (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/17/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.service: ""
-ms.component: "t-sql|functions"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "dbe-json"
-ms.tgt_pltfrm: ""
+ms.technology: t-sql
 ms.topic: "language-reference"
 f1_keywords: 
   - "OPENJSON"
@@ -20,11 +15,10 @@ helpviewer_keywords:
   - "JSON, importing"
   - "JSON, converting from"
 ms.assetid: 233d0877-046b-4dcc-b5da-adeb22f78531
-caps.latest.revision: 32
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "craigg"
-ms.workload: "Active"
+author: "jovanpop-msft"
+ms.author: "jovanpop"
+ms.reviewer: douglasl
+manager: craigg
 ---
 # OPENJSON (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -358,7 +352,7 @@ DECLARE @json NVARCHAR(max)  = N'{
   WITH (id int,  
         firstName nvarchar(50), lastName nvarchar(50),   
         isAlive bit, age int,  
-        dateOfBirth datetime2, spouse nvarchar(50)
+        dateOfBirth datetime2, spouse nvarchar(50))
 ```  
   
 ## See Also  

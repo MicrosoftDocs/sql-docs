@@ -1,27 +1,20 @@
 ---
-title: "Transparent Data Encryption for Parallel Data Warehouse"
-author: "barbkess" 
-ms.author: "barbkess"
-manager: "jhubbard"	  
-ms.prod: "analytics-platform-system"
-ms.prod_service: "mpp-data-warehouse"
-ms.service: ""
-ms.component:
-ms.suite: "sql"
-ms.custom: ""
-ms.technology: "mpp-data-warehouse"
-description: "Transparent data encryption (TDE) performs real-time I/O encryption and decryption of the data and transaction log files and the special PDW log files."
-ms.date: "10/20/2016"
-ms.topic: "article"
-ms.assetid: b82ad21d-09dd-43dd-8fab-bcf2c8c3ac6d
-caps.latest.revision: 22
-
+title: Transparent data encryption - Parallel Data Warehouse | Microsoft Docs
+description: Transparent data encryption (TDE)  for Parallel Data Warehouse (PDW) performs real-time I/O encryption and decryption of the data and transaction log files and the special PDW log files."
+author: mzaman1 
+manager: craigg
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
 ---
 
 # Transparent Data Encryption
-You can take several precautions to help secure the database such as designing a secure system, encrypting confidential assets, and building a firewall around the database servers. However, in a scenario where the physical media (such as drives or backup tapes) are stolen, a malicious party can just restore or attach the database and browse the data. One solution is to encrypt the sensitive data in the database and protect the keys that are used to encrypt the data with a certificate. This prevents anyone without the keys from using the data, but this kind of protection must be planned in advance.  
+You can take several precautions to help secure the database such as designing a secure system, encrypting confidential assets, and building a firewall around the database servers. However, for a scenario in which the physical media (such as drives or backup tapes) are stolen, a malicious party can just restore or attach the database and browse the data. One solution is to encrypt the sensitive data in the database and protect the keys that are used to encrypt the data with a certificate. This prevents anyone without the keys from using the data, but this kind of protection must be planned in advance.  
   
-*Transparent data encryption* (TDE) performs real-time I/O encryption and decryption of the data and transaction log files and the special PDW log files. The encryption uses a database encryption key (DEK), which is stored in the database boot record for availability during recovery. The DEK is a symmetric key secured by using a certificate stored in the master database of the SQL Server PDW. TDE protects data "at rest", meaning the data and log files. It provides the ability to comply with many laws, regulations, and guidelines established in various industries. This enables software developers to encrypt data by using AES and 3DES encryption algorithms without changing existing applications.  
+*Transparent data encryption* (TDE) performs real-time I/O encryption and decryption of the data and transaction log files and the special PDW log files. The encryption uses a database encryption key (DEK), which is stored in the database boot record for availability during recovery. The DEK is a symmetric key secured by using a certificate stored in the master database of the SQL Server PDW. TDE protects data "at rest", meaning the data and log files. It provides the ability to comply with many laws, regulations, and guidelines established in various industries. This feature enables software developers to encrypt data by using AES and 3DES encryption algorithms without changing existing applications.  
   
 > [!IMPORTANT]  
 > TDE does not provide encryption for data traveling between the client and the PDW. For more information about how to encrypt data between the client and SQL Server PDW, see [Provision a certificate](provision-certificate.md).  
@@ -37,7 +30,7 @@ Encryption of the database file is performed at the page level. The pages in an 
   
 The following illustration shows the hierarchy of keys for TDE encryption:  
   
-![Displays the hierarchy described in the topic.](media/tde-architecture.png "TDE_Architecture")  
+![Displays the hierarchy](media/tde-architecture.png "TDE_Architecture")  
   
 ## <a name="using-tde"></a>Using Transparent Data Encryption  
 To use TDE, follow these steps. The first three steps are only done once, when preparing SQL Server PDW to support TDE.  
@@ -46,11 +39,11 @@ To use TDE, follow these steps. The first three steps are only done once, when p
   
 2.  Use **sp_pdw_database_encryption** to enable TDE on the SQL Server PDW. This operation modifies the temporary databases in order to ensure the protection of future temporary data, and will fail if attempted when there are any active sessions that have temporary tables. **sp_pdw_database_encryption** turns on user data masking in PDW system logs. (For more information about user data masking in PDW system logs, see [sp_pdw_log_user_data_masking](../relational-databases/system-stored-procedures/sp-pdw-log-user-data-masking-sql-data-warehouse.md).)  
   
-3.  Use [sp_pdw_add_network_credentials](../relational-databases/system-stored-procedures/sp-pdw-add-network-credentials-sql-data-warehouse.md) to create a credential that can authenticate and write to the share where the backup of the certificate will be stored. If a credential already exist for the intended storage server, the existing credential can be used.  
+3.  Use [sp_pdw_add_network_credentials](../relational-databases/system-stored-procedures/sp-pdw-add-network-credentials-sql-data-warehouse.md) to create a credential that can authenticate and write to the share where the backup of the certificate will be stored. If a credential already exists for the intended storage server, you can use the existing credential.  
   
 4.  In the master database, create a certificate protected by the master key.  
   
-5.  Backup the certificate to the storage share.  
+5.  Back up the certificate to the storage share.  
   
 6.  In the user database, create a database encryption key and protect it by the certificate that is stored in the master database.  
   
@@ -58,7 +51,7 @@ To use TDE, follow these steps. The first three steps are only done once, when p
   
 The following example illustrates encrypting the `AdventureWorksPDW2012` database using a certificate named `MyServerCert`, created in SQL Server PDW.  
   
-**First: Enable TDE on the SQL Server PDW.** This is only necessary once.  
+**First: Enable TDE on the SQL Server PDW.** This action is only necessary once.  
   
 ```sql  
 USE master;  
@@ -77,7 +70,7 @@ GO
 EXEC sp_pdw_add_network_credentials 'SECURE_SERVER', '<domain>\<Windows_user>', '<password>';  
 ```  
   
-**Second: Create and backup a certificate in the master database.** This is only required once. You can have a separate certificate for each database (recommended), or you can protect multiple databases with one certificate.  
+**Second: Create and backup a certificate in the master database.** This action is only required once. You can have a separate certificate for each database (recommended), or you can protect multiple databases with one certificate.  
   
 ```sql  
 -- Create certificate in master  
@@ -95,7 +88,7 @@ BACKUP CERTIFICATE MyServerCert
 GO  
 ```  
   
-**Last: Create the DEK and use ALTER DATABASE to encrypt a user database.** This is repeated for each database that is protected by TDE.  
+**Last: Create the DEK and use ALTER DATABASE to encrypt a user database.** This action is repeated for each database that is protected by TDE.  
   
 ```sql  
 USE AdventureWorksPDW2012;  
@@ -110,7 +103,7 @@ ALTER DATABASE AdventureWorksPDW2012 SET ENCRYPTION ON;
 GO  
 ```  
   
-The encryption and decryption operations are scheduled on background threads by SQL Server. You can view the status of these operations using the catalog views and dynamic management views in the list that appears later in this topic.  
+The encryption and decryption operations are scheduled on background threads by SQL Server. You can view the status of these operations using the catalog views and dynamic management views in the list that appears later in this article.  
   
 > [!CAUTION]  
 > Backup files of databases that have TDE enabled are also encrypted by using the database encryption key. As a result, when you restore these backups, the certificate protecting the database encryption key must be available. This means that in addition to backing up the database, you have to make sure that you maintain backups of the server certificates to prevent data loss. Data loss will result if the certificate is no longer available.  
@@ -125,7 +118,7 @@ The following table provides links and explanations of TDE commands and function
 |[CREATE DATABASE ENCRYPTION KEY](../t-sql/statements/create-database-encryption-key-transact-sql.md)|Creates a key that is used to encrypt a database.|  
 |[ALTER DATABASE ENCRYPTION KEY](../t-sql/statements/alter-database-encryption-key-transact-sql.md)|Changes the key that is used to encrypt a database.|  
 |[DROP DATABASE ENCRYPTION KEY](../t-sql/statements/drop-database-encryption-key-transact-sql.md)|Removes the key that was used to encrypt a database.|  
-|[ALTER DATABASE](../t-sql/statements/alter-database-parallel-data-warehouse.md)|Explains the **ALTER DATABASE** option that is used to enable TDE.|  
+|[ALTER DATABASE](../t-sql/statements/alter-database-transact-sql.md?tabs=sqlpdw)|Explains the **ALTER DATABASE** option that is used to enable TDE.|  
   
 ## Catalog Views and Dynamic Management Views  
 The following table shows TDE catalog views and dynamic management views.  
@@ -144,7 +137,7 @@ Viewing the metadata involved with TDE requires the `CONTROL SERVER` permission.
 ## Considerations  
 While a re-encryption scan for a database encryption operation is in progress, maintenance operations to the database are disabled.  
   
-You can find the state of the database encryption using the **sys.dm_pdw_nodes_database_encryption_keys** dynamic management view. For more information, see the *Catalog Views and Dynamic Management Views* section earlier in this topic).  
+You can find the state of the database encryption using the **sys.dm_pdw_nodes_database_encryption_keys** dynamic management view. For more information, see the *Catalog Views and Dynamic Management Views* section earlier in this article.  
   
 ### Restrictions  
 The following operations are not allowed during the `CREATE DATABASE ENCRYPTION KEY`, `ALTER DATABASE ENCRYPTION KEY`, `DROP DATABASE ENCRYPTION KEY`, or `ALTER DATABASE...SET ENCRYPTION` statements.  
@@ -199,7 +192,7 @@ SELECT TOP 1 encryption_state
 All data written to the transaction log before a change in the database encryption key will be encrypted by using the previous database encryption key.  
   
 ### PDW Activity Logs  
-SQL Server PDW maintains a set of logs intended for troubleshooting. (Note, this is not the transaction log, the SQL Server error log or the Windows event log.) These PDW activity logs can contain full statements in clear text, some of which can contain user data. Typical examples are **INSERT** and **UPDATE** statements. Masking of user data can be explicitly turned on or off by using **sp_pdw_log_user_data_masking**. Enabling encryption on SQL Server PDW automatically turns on the masking of user data in PDW activity logs in order to protect them. **sp_pdw_log_user_data_masking** can also be used to mask statements when not using TDE, but that is not recommended because it significantly reduces the ability of the Microsoft Support Team to analyze problems.  
+SQL Server PDW maintains a set of logs intended for troubleshooting. (Note, this is not the transaction log, the SQL Server error log, or the Windows event log.) These PDW activity logs can contain full statements in clear text, some of which can contain user data. Typical examples are **INSERT** and **UPDATE** statements. Masking of user data can be explicitly turned on or off by using **sp_pdw_log_user_data_masking**. Enabling encryption on SQL Server PDW automatically turns on the masking of user data in PDW activity logs in order to protect them. **sp_pdw_log_user_data_masking** can also be used to mask statements when not using TDE, but that is not recommended because it significantly reduces the ability of the Microsoft Support Team to analyze problems.  
   
 ### Transparent Data Encryption and the tempdb System Database  
 The tempdb system database is encrypted when encryption is enabled by using [sp_pdw_database_encryption](../relational-databases/system-stored-procedures/sp-pdw-database-encryption-sql-data-warehouse.md). This is required before any database can use TDE. This might have a performance effect for unencrypted databases on the same instance of SQL Server PDW.  
@@ -209,14 +202,14 @@ The database encryption key (DEK) is protected by the certificates stored in the
   
 The system can access the keys without requiring human intervention (such as providing a password). If the certificate is not available, the system will output an error explaining that the DEK cannot be decrypted until the proper certificate is available.  
   
-When moving a database from one appliance to another, the certificate used to protect its’ DEK must be restored first on the destination server. Then the database can be restored as usual. For more information, see the standard SQL Server documentation, at [Move a TDE Protected Database to Another SQL Server](http://technet.microsoft.com/library/ff773063.aspx).  
+When moving a database from one appliance to another, the certificate used to protect its' DEK must be restored first on the destination server. Then the database can be restored as usual. For more information, see the standard SQL Server documentation, at [Move a TDE Protected Database to Another SQL Server](https://technet.microsoft.com/library/ff773063.aspx).  
   
 Certificates used to encrypt DEKs should be retained as long as there are database backups that use them. Certificate backups must include the certificate private key, because without the private key a certificate cannot be used for database restore. Those certificate private key backups are stored in a separate file, protected by a password that must be provided for certificate restore.  
   
 ## Restoring the master Database  
 The master database can be restored using **DWConfig**, as part of the disaster recovery.  
   
--   If the control node hasn’t changed, that is if the master database is restored on the same and unchanged appliance from which the backup of master database was taken, the DMK and all the certificates will be readable without additional action.  
+-   If the control node hasn't changed, that is if the master database is restored on the same and unchanged appliance from which the backup of master database was taken, the DMK and all the certificates will be readable without additional action.  
   
 -   If the master database is restored on a different appliance, or if the control node has been changed since the backup of the master database, additional steps will be required in order to regenerate the DMK.  
   
@@ -240,17 +233,17 @@ If a DMK exists on the appliance on which Upgrade or Replace VM was performed, D
   
 Example of the upgrade action. Replace `**********` with your DMK password.  
   
-`setup.exe /Action=ProvisionUpgrade … DMKPassword='**********'  `  
+`setup.exe /Action=ProvisionUpgrade ... DMKPassword='**********'  `  
   
-Example of the replace virtual machine action.  
+Example of the action to replace a virtual machine.  
   
-`setup.exe /Action=ReplaceVM … DMKPassword='**********'  `  
+`setup.exe /Action=ReplaceVM ... DMKPassword='**********'  `  
   
 During upgrade, if a user DB is encrypted and the DMK password is not provided, the upgrade action will fail. During replace, if the correct password is not provided when a DMK exists, the operation will skip the DMK recovery step. All the other steps will be completed at the end of the replace VM action, however the action will report failure at the end to indicate that additional steps are required. In the setup logs (located in **\ProgramData\Microsoft\Microsoft SQL Server Parallel Data Warehouse\100\Logs\Setup\\<time-stamp>\Detail-Setup**), the following warning will be shown near the end.  
   
 `*** WARNING \*\*\* DMK is detected in master database, but could not be recovered automatically! The DMK password was either not provided or is incorrect!  `
   
-Please execute manually these statements in PDW and restart appliance after that in order to recover DMK:  
+Execute these statement manually in PDW and restart appliance after that in order to recover DMK:  
   
 ```sql
 OPEN MASTER KEY DECRYPTION BY PASSWORD = '<DMK password>';  
@@ -270,7 +263,7 @@ A distributed query failed: Database '<db_name>' cannot be opened due to inacces
 The performance impact of TDE varies with the type of data you have, how it is stored, and the type of workload activity on the SQL Server PDW. When protected by TDE, the I/O of reading and then decrypting data or the encrypting and then writing data is a CPU intensive activity and will have more impact when other CPU intensive activities are happening at the same time. Because TDE encrypts `tempdb`, TDE can affect the performance of databases that are not encrypted. To get an accurate idea of performance, you should test the entire system with your data and query activity.  
   
 ## Related Content  
-The following links contain general information about how SQL Server manages encryption. These topics can help you understand SQL Server encryption, but these topics do not have information specific to SQL Server PDW and they discuss features that are not present in SQL Server PDW.  
+The following links contain general information about how SQL Server manages encryption. These articles can help you understand SQL Server encryption, but these articles do not have information specific to SQL Server PDW and they discuss features that are not present in SQL Server PDW.  
   
 -   [SQL Server Encryption](../relational-databases/security/encryption/sql-server-encryption.md)  
   
@@ -280,7 +273,7 @@ The following links contain general information about how SQL Server manages enc
 
   
 ## See Also  
-[ALTER DATABASE](../t-sql/statements/alter-database-parallel-data-warehouse.md)  
+[ALTER DATABASE](../t-sql/statements/alter-database-transact-sql.md?tabs=sqlpdw)  
 [CREATE MASTER KEY](../t-sql/statements/create-master-key-transact-sql.md)  
 [CREATE DATABASE ENCRYPTION KEY](../t-sql/statements/create-database-encryption-key-transact-sql.md)  
 [BACKUP CERTIFICATE](../t-sql/statements/backup-certificate-transact-sql.md)  

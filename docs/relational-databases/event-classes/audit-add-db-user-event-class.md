@@ -2,24 +2,17 @@
 title: "Audit Add DB User Event Class | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-non-specified"
-ms.prod_service: "database-engine, sql-database"
-ms.service: ""
-ms.component: "event-classes"
+ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: supportability
+ms.topic: conceptual
 helpviewer_keywords: 
   - "Audit Add DB User event class"
 ms.assetid: ac9ed573-c84d-444c-81fb-923a6240c1ef
-caps.latest.revision: 31
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-ms.workload: "Inactive"
+author: "stevestein"
+ms.author: "sstein"
+manager: craigg
+monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Audit Add DB User Event Class
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -36,7 +29,7 @@ ms.workload: "Inactive"
 |**ColumnPermissions**|**int**|Indicator of whether a column permission was set. Parse the statement text to determine which permissions were applied to which columns.|44|Yes|  
 |**DatabaseID**|**int**|ID of the database specified by the USE *database* statement or the default database if no USE *database* statement has been issued for a given instance. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] displays the name of the database if the **ServerName** data column is captured in the trace and the server is available. Determine the value for a database by using the DB_ID function.|3|Yes|  
 |**DatabaseName**|**nvarchar**|Name of the database where the username is being added or removed.|35|Yes|  
-|**DBUserName**|**nvarchar**|Issuer’s username in the database.|40|Yes|  
+|**DBUserName**|**nvarchar**|Issuer's username in the database.|40|Yes|  
 |**EventClass**|**int**|Type of event = 109.|27|No|  
 |**EventSequence**|**int**|Sequence of a given event within the request.|51|No|  
 |**EventSubClass**|**int**|Type of event subclass.<br /><br /> 1=Add<br /><br /> 2=Drop<br /><br /> 3=Grant database access<br /><br /> 4=Revoke database access|21|Yes|  

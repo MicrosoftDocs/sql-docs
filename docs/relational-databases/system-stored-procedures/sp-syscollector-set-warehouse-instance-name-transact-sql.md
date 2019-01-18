@@ -2,15 +2,10 @@
 title: "sp_syscollector_set_warehouse_instance_name (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/09/2016"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "database-engine"
-ms.service: ""
-ms.component: "system-stored-procedures"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: system-objects
 ms.topic: "language-reference"
 f1_keywords: 
   - "sp_syscollector_set_warehouse_instance_name_TSQL"
@@ -21,11 +16,9 @@ helpviewer_keywords:
   - "data collector [SQL Server], stored procedures"
   - "sp_syscollector_set_warehouse_instance_name"
 ms.assetid: 5320fcd4-bed1-468f-b784-a5e10fcfaeb6
-caps.latest.revision: 21
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-ms.workload: "Inactive"
+author: "stevestein"
+ms.author: "sstein"
+manager: craigg
 ---
 # sp_syscollector_set_warehouse_instance_name (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,7 +38,7 @@ sp_syscollector_set_warehouse_instance_name [ @instance_name = ] 'instance_name'
  [ @instance_name = ] '*instance_name*'  
  Is the instance name. *instance_name* is **sysname** and defaults to the local instance if NULL.  
   
-> **NOTE:**  *instance_name* must be the fully qualified instance name, which consists of the computer name and the instance name in the form *computerName*\\*instanceName*.  
+> **NOTE:**  _instance_name_ must be the fully qualified instance name, which consists of the computer name and the instance name in the form *computerName*\\*instanceName*.  
   
 ## Return Code Values  
  **0** (success) or **1** (failure)  

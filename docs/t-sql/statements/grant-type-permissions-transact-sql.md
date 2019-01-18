@@ -2,15 +2,10 @@
 title: "GRANT Type Permissions (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/10/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.service: ""
-ms.component: "t-sql|statements"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: t-sql
 ms.topic: "language-reference"
 dev_langs: 
   - "TSQL"
@@ -20,11 +15,9 @@ helpviewer_keywords:
   - "GRANT statement, types"
   - "type permissions [SQL Server]"
 ms.assetid: 14bd2fb3-1446-49c0-be87-c6a670317ed0
-caps.latest.revision: 27
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "craigg"
-ms.workload: "On Demand"
+author: VanMSFT
+ms.author: vanto
+manager: craigg
 ---
 # GRANT Type Permissions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -57,7 +50,7 @@ GRANT permission  [ ,...n ] ON TYPE :: [ schema_name . ] type_name
  *permission*  
  Specifies a permission that can be granted on a type. For a list of the permissions, see the Remarks section later in this topic.  
   
- ON TYPE **::** [ *schema_name***.** ] *type_name*  
+ ON TYPE **::** [ _schema_name_**.** ] *type_name*  
  Specifies the type on which the permission is being granted. The scope qualifier (**::**) is required. If *schema_name* is not specified, the default schema will be used. If *schema_name* is specified, the schema scope qualifier (**.**) is required.  
   
  TO \<database_principal> 

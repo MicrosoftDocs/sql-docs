@@ -1,16 +1,11 @@
 ---
 title: "Search Condition (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "08/09/2017"
-ms.prod: "sql-non-specified"
+ms.date: "01/15/2018"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
-ms.service: ""
-ms.component: "t-sql|queries"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: t-sql
 ms.topic: "language-reference"
 f1_keywords: 
   - "search"
@@ -39,11 +34,10 @@ helpviewer_keywords:
   - "logical operators [SQL Server], precedence"
   - "LIKE comparisons"
 ms.assetid: 09974469-c5d2-4be8-bc5a-78e404660b2c
-caps.latest.revision: 43
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-ms.workload: "On Demand"
+author: "douglaslMS"
+ms.author: "douglasl"
+manager: craigg
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Search Condition (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -57,9 +51,12 @@ ms.workload: "On Demand"
 ```  
 -- Syntax for SQL Server and Azure SQL Database  
   
-<search_condition> ::=   
-    { [ NOT ] <predicate> | ( <search_condition> ) }   
-    [ { AND | OR } [ NOT ] { <predicate> | ( <search_condition> ) } ]   
+<search_condition> ::=  
+    MATCH(<graph_search_pattern>) | <search_condition_without_match> | <search_condition> AND <search_condition>
+
+<search_condition_without_match> ::= 
+    { [ NOT ] <predicate> | ( <search_condition_without_match> ) }   
+    [ { AND | OR } [ NOT ] { <predicate> | ( <search_condition_without_match> ) } ]   
 [ ,...n ]   
   
 <predicate> ::=   
@@ -75,6 +72,20 @@ ms.workload: "On Demand"
     | expression { = | < > | ! = | > | > = | ! > | < | < = | ! < }   
   { ALL | SOME | ANY} ( subquery )   
     | EXISTS ( subquery )     }   
+    
+<graph_search_pattern> ::=
+    { <node_alias> { 
+                      { <-( <edge_alias> )- } 
+                    | { -( <edge_alias> )-> }
+                    <node_alias> 
+                   } 
+    }
+  
+<node_alias> ::=
+    node_table_name | node_table_alias 
+
+<edge_alias> ::=
+    edge_table_name | edge_table_alias
 ```  
   
 ```  
@@ -98,6 +109,9 @@ ms.workload: "On Demand"
  \<search_condition>  
  Specifies the conditions for the rows returned in the result set for a SELECT statement, query expression, or subquery. For an UPDATE statement, specifies the rows to be updated. For a DELETE statement, specifies the rows to be deleted. There is no limit to the number of predicates that can be included in a [!INCLUDE[tsql](../../includes/tsql-md.md)] statement search condition.  
   
+ \<graph_search_pattern>  
+ Specifies the graph match pattern. For more information about the arguments for this clause, see [MATCH &#40;Transact-SQL&#41;](../../t-sql/queries/match-sql-graph.md)
+ 
  NOT  
  Negates the Boolean expression specified by the predicate. For more information, see [NOT &#40;Transact-SQL&#41;](../../t-sql/language-elements/not-transact-sql.md).  
   
@@ -114,7 +128,9 @@ ms.workload: "On Demand"
  Is a column name, a constant, a function, a variable, a scalar subquery, or any combination of column names, constants, and functions connected by an operator or operators, or a subquery. The expression can also contain the CASE expression.  
   
 > [!NOTE]  
->  When referencing the Unicode character data types **nchar**, **nvarchar**, and **ntext**, 'expression' should be prefixed with the capital letter 'N'. If 'N' is not specified, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] converts the string to the code page that corresponds to the default collation of the database or column. Any characters not found in this code page are lost.  
+>  Non-Unicode string constants and variables use the code page that corresponds to the default collation of the database. Code page conversions can occur when working with only non-Unicode character data and referencing the non-Unicode character data types **char**, **varchar**, and **text**. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] converts non-Unicode string constants and variables to the code page that corresponds to the collation of the referenced column or specified using COLLATE, if that code page is different than the code page that corresponds to the default collation of the database. Any characters not found in the new code page will be translated to a similar character, if a [best-fit mapping](https://www.unicode.org/Public/MAPPINGS/VENDORS/MICSFT/WindowsBestFit/) can be found, or else will be converted to the default replacement character of "?".  
+>  
+> When working with multiple code pages, character constants can be prefixed with the uppercase letter 'N', and Unicode variables can be used, to avoid code page conversions.  
   
  =  
  Is the operator used to test the equality between two expressions.  
@@ -168,7 +184,7 @@ ms.workload: "On Demand"
  Specifies the search for an expression, based on whether the expression is included in or excluded from a list. The search expression can be a constant or a column name, and the list can be a set of constants or, more typically, a subquery. Enclose the list of values in parentheses. For more information, see [IN &#40;Transact-SQL&#41;](../../t-sql/language-elements/in-transact-sql.md).  
   
  *subquery*  
- Can be considered a restricted SELECT statement and is similar to \<query_expresssion> in the SELECT statement. The ORDER BY clause and the INTO keyword are not allowed. For more information, see [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md).  
+ Can be considered a restricted SELECT statement and is similar to \<query_expression> in the SELECT statement. The ORDER BY clause and the INTO keyword are not allowed. For more information, see [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md).  
   
  ALL  
  Used with a comparison operator and a subquery. Returns TRUE for \<predicate> when all values retrieved for the subquery satisfy the comparison operation, or FALSE when not all values satisfy the comparison or when the subquery returns no rows to the outer statement. For more information, see [ALL &#40;Transact-SQL&#41;](../../t-sql/language-elements/all-transact-sql.md).  

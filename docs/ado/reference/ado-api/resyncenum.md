@@ -1,28 +1,21 @@
 ---
 title: "ResyncEnum | Microsoft Docs"
-ms.prod: "sql-non-specified"
-ms.prod_service: "drivers"
-ms.service: ""
-ms.component: "ado"
-ms.technology:
-  - "drivers"
+ms.prod: sql
+ms.prod_service: connectivity
+ms.technology: connectivity
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 apitype: "COM"
 f1_keywords: 
   - "ResyncEnum"
 helpviewer_keywords: 
   - "ResyncEnum enumeration [ADO]"
 ms.assetid: d3df2c90-e570-4c40-a79a-25b3448a009c
-caps.latest.revision: 11
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
-ms.workload: "Inactive"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # ResyncEnum
 Specifies whether underlying values are overwritten by a call to [Resync](../../../ado/reference/ado-api/resync-method.md).  

@@ -1,0 +1,321 @@
+- name: SQL Server Native Client (OLE DB)
+  href: sql-server-native-client-ole-db.md
+- name: Creating a SQL Server Native Client OLE DB Provider Application
+  href: ../../native-client-ole-db-provider/creating-a-sql-server-native-client-ole-db-provider-application.md
+  items:
+  - name: Establishing a Connection to a Data Source
+    href: ../../native-client-ole-db-provider/establishing-a-connection-to-a-data-source.md
+  - name: Executing a Command
+    href: ../../native-client-ole-db-provider/executing-a-command.md
+  - name: Processing Results
+    href: ../../native-client-ole-db-provider/processing-results.md
+  - name: About OLE DB Properties
+    href: ../../native-client-ole-db-provider/about-ole-db-properties.md
+  - name: Using the OUTPUT Clause with OLE DB in SQL Server Native Client
+    href: ../../native-client-ole-db-provider/using-the-output-clause-with-ole-db-in-sql-server-native-client.md
+- name: Data Source Objects (OLE DB)
+  href: ../../native-client-ole-db-data-source-objects/data-source-objects-ole-db.md
+  items:
+  - name: Data Source Properties (OLE DB)
+    href: ../../native-client-ole-db-data-source-objects/data-source-properties-ole-db.md
+  - name: Data Source Information Properties
+    href: ../../native-client-ole-db-data-source-objects/data-source-information-properties.md
+  - name: Initialization and Authorization Properties
+    href: ../../native-client-ole-db-data-source-objects/initialization-and-authorization-properties.md
+  - name: Sessions
+    href: ../../native-client-ole-db-data-source-objects/sessions.md
+  - name: Session Properties
+    href: ../../native-client-ole-db-data-source-objects/session-properties-sql-server-native-client-ole-db-provider.md
+  - name: Persisted Data Source Objects
+    href: ../../native-client-ole-db-data-source-objects/persisted-data-source-objects.md
+- name: Commands
+  href: ../../native-client-ole-db-commands/commands.md
+  items:
+  - name: Command Syntax
+    href: ../../native-client-ole-db-commands/command-syntax.md
+  - name: Command Parameters
+    href: ../../native-client-ole-db-commands/command-parameters.md
+  - name: Preparing Commands
+    href: ../../native-client-ole-db-commands/preparing-commands.md
+  - name: Commands Generating Multiple-Rowset Results
+    href: ../../native-client-ole-db-commands/commands-generating-multiple-rowset-results.md
+- name: Using IMultipleResults to Process Multiple Result Sets
+  href: ../../native-client-ole-db-commands/using-imultipleresults-to-process-multiple-result-sets.md
+- name: Rowsets
+  href: ../../native-client-ole-db-rowsets/rowsets.md
+  items:
+  - name: Creating a Rowset with IOpenRowset
+    href: ../../native-client-ole-db-rowsets/creating-a-rowset-with-iopenrowset.md
+  - name: "Creating Rowsets with ICommand::Execute"
+    href: ../../native-client-ole-db-rowsets/creating-rowsets-with-icommand-execute.md
+  - name: Rowset Properties and Behaviors
+    href: ../../native-client-ole-db-rowsets/rowset-properties-and-behaviors.md
+  - name: Rowsets and SQL Server Cursors
+    href: ../../native-client-ole-db-rowsets/rowsets-and-sql-server-cursors.md
+  - name: Fetching Rows
+    href: ../../native-client-ole-db-rowsets/fetching-rows.md
+  - name: Next Fetch Position
+    href: ../../native-client-ole-db-rowsets/fetching-rows-next-fetch-position.md
+  - name: Fetching a Single Row with IRow
+    href: ../../native-client-ole-db-rowsets/fetching-a-single-row-with-irow.md
+  - name: "Using IRow::GetColumns"
+    href: ../../native-client-ole-db-rowsets/using-irow-getcolumns.md
+  - name: Fetching BLOB Data Using IRow
+    href: ../../../database-engine/dev-guide/fetching-blob-data-using-irow.md
+    items:
+    - name: "Fetching BLOB Data Using IRow::GetColumns and ISequentialStream"
+      href: ../../native-client-ole-db-rowsets/fetching-blob-data-using-irow-getcolumns-and-isequentialstream.md
+    - name: "Fetching BLOB Data Using IRow::Open and ISequentialStream"
+      href: ../../native-client-ole-db-rowsets/fetching-blob-data-using-irow-open-and-isequentialstream.md
+  - name: Bookmarks
+    href: ../../native-client-ole-db-rowsets/bookmarks.md
+  - name: Updating Data in Rowsets
+    href: ../../native-client-ole-db-rowsets/updating-data-in-rowsets.md
+  - name: Updating Data in SQL Server Cursors
+    href: ../../native-client-ole-db-rowsets/updating-data-in-sql-server-cursors.md
+  - name: Resynchronizing Rows
+    href: ../../native-client-ole-db-rowsets/updating-data-in-rowsets-resynchronizing-rows.md
+- name: Stored Procedures
+  href: stored-procedures.md
+  items:
+  - name: Running Stored Procedures (OLE DB)
+    href: stored-procedures-running.md
+  - name: Calling a Stored Procedure (OLE DB)
+    href: stored-procedures-calling.md
+- name: BLOBs and OLE Objects
+  href: ../../native-client-ole-db-blobs/blobs-and-ole-objects.md
+  items:
+  - name: Getting Large Data
+    href: ../../native-client-ole-db-blobs/getting-large-data.md
+  - name: Setting Large Data
+    href: ../../native-client-ole-db-blobs/setting-large-data.md
+  - name: Streaming Support for BLOB Output Parameters
+    href: ../../native-client-ole-db-blobs/streaming-support-for-blob-output-parameters.md
+- name: Tables and Indexes
+  href: ../../native-client-ole-db-tables-indexes/tables-and-indexes.md
+  items:
+  - name: Creating SQL Server Tables
+    href: ../../native-client-ole-db-tables-indexes/creating-sql-server-tables.md
+  - name: Adding a Column to a SQL Server Table
+    href: ../../native-client-ole-db-tables-indexes/adding-a-column-to-a-sql-server-table.md
+  - name: Removing a Column from a SQL Server Table
+    href: ../../native-client-ole-db-tables-indexes/removing-a-column-from-a-sql-server-table.md
+  - name: Dropping a SQL Server Table
+    href: ../../native-client-ole-db-tables-indexes/dropping-a-sql-server-table.md
+  - name: Creating SQL Server Indexes
+    href: ../../native-client-ole-db-tables-indexes/creating-sql-server-indexes.md
+  - name: Dropping a SQL Server Index
+    href: ../../native-client-ole-db-tables-indexes/dropping-a-sql-server-index.md
+- name: Data Types (OLE DB)
+  href: ../../native-client-ole-db-data-types/data-types-ole-db.md
+  items:
+  - name: Data Type Mapping in Rowsets and Parameters
+    href: ../../native-client-ole-db-data-types/data-type-mapping-in-rowsets-and-parameters.md
+  - name: Data Type Mapping in ITableDefinition
+    href: ../../native-client-ole-db-data-types/data-type-mapping-in-itabledefinition.md
+  - name: SSVARIANT Structure
+    href: ../../native-client-ole-db-data-types/ssvariant-structure.md
+- name: Schema Rowset Support (OLE DB)
+  href: schema-rowset-support-ole-db.md
+  items:
+  - name: Distributed Query Support in Schema Rowsets
+    href: schema-rowsets-distributed-query-support.md
+  - name: LINKEDSERVERS Rowset (OLE DB)
+    href: schema-rowsets-linkedservers-rowset.md
+- name: Table-Valued Parameters (OLE DB)
+  href: ../../native-client-ole-db-table-valued-parameters/table-valued-parameters-ole-db.md
+  items:
+  - name: Table-Valued Parameter Rowset Creation
+    href: ../../native-client-ole-db-table-valued-parameters/table-valued-parameter-rowset-creation.md
+  - name: Table-Valued Parameter Type Discovery
+    href: ../../../database-engine/dev-guide/table-valued-parameter-type-discovery.md
+  - name: Executing Commands Containing Table-Valued Parameters
+    href: ../../native-client-ole-db-table-valued-parameters/executing-commands-containing-table-valued-parameters.md
+  - name: Inserting Data into Table-Valued Parameters
+    href: ../../native-client-ole-db-table-valued-parameters/inserting-data-into-table-valued-parameters.md
+  - name: Schema Rowsets Changed for OLE DB Table-Valued Parameters
+    href: ../../native-client-ole-db-table-valued-parameters/schema-rowsets-changed-for-ole-db-table-valued-parameters.md
+  - name: OLE DB Table-Valued Parameter Type Support
+    href: ../../native-client-ole-db-table-valued-parameters/ole-db-table-valued-parameter-type-support.md
+  - name: OLE DB Table-Valued Parameter Type Support (Methods)
+    href: ../../native-client-ole-db-table-valued-parameters/ole-db-table-valued-parameter-type-support-methods.md
+  - name: OLE DB Table-Valued Parameter Type Support (Properties)
+    href: ../../native-client-ole-db-table-valued-parameters/ole-db-table-valued-parameter-type-support-properties.md
+- name: Date/Time Improvements (OLE DB)
+  href: ../../native-client-ole-db-date-time/date-and-time-improvements-ole-db.md
+  items:
+  - name: Data Type Support for OLE DB Date/Time Improvements
+    href: ../../native-client-ole-db-date-time/data-type-support-for-ole-db-date-and-time-improvements.md
+  - name: Metadata (OLE DB)
+    href: ../../../database-engine/dev-guide/metadata-ole-db.md
+    items:
+    - name: Parameter and Rowset Metadata
+      href: ../../native-client-ole-db-date-time/metadata-parameter-and-rowset.md
+    - name: Date/Time and Schema Rowsets
+      href: ../../native-client-ole-db-date-time/metadata-date-and-time-and-schema-rowsets.md
+  - name: Bindings and Conversions (OLE DB)
+    href: ../../native-client-ole-db-date-time/conversions-ole-db.md
+    items:
+    - name: Conversions Performed from Client to Server
+      href: ../../native-client-ole-db-date-time/conversions-performed-from-client-to-server.md
+    - name: Conversions Performed from Server to Client
+      href: ../../native-client-ole-db-date-time/conversions-performed-from-server-to-client.md
+  - name: OLE DB API Support for Date/Time Enhancements
+    href: ../../native-client-ole-db-date-time/ole-db-api-support-for-date-and-time-enhancements.md
+  - name: Comparability for IRowsetFind
+    href: ../../native-client-ole-db-date-time/comparability-for-irowsetfind.md
+  - name: New Date/Time Features with Previous SQL Server Versions (OLE DB)
+    href: ../../native-client-ole-db-date-time/new-date-and-time-features-with-previous-sql-server-versions-ole-db.md
+- name: Large CLR User-Defined Types (OLE DB)
+  href: large-clr-user-defined-types-ole-db.md
+- name: FILESTREAM Support (OLE DB)
+  href: filestream-support-ole-db.md
+- name: Transactions
+  href: ../../native-client-ole-db-transactions/transactions.md
+  items:
+  - name: Supporting Local Transactions
+    href: ../../native-client-ole-db-transactions/supporting-local-transactions.md
+  - name: Supporting Distributed Transactions
+    href: ../../native-client-ole-db-transactions/supporting-distributed-transactions.md
+  - name: Isolation Levels (OLE DB)
+    href: ../../native-client-ole-db-transactions/isolation-levels-ole-db.md
+- name: Errors
+  href: ../../native-client-ole-db-errors/errors.md
+  items:
+  - name: Return Codes
+    href: ../../native-client-ole-db-errors/return-codes.md
+  - name: Information in Error Interfaces
+    href: ../../native-client-ole-db-errors/information-in-error-interfaces.md
+  - name: SQL Server Error Detail
+    href: ../../native-client-ole-db-errors/sql-server-error-detail.md
+  - name: Retrieving Error Information
+    href: ../../native-client-ole-db-errors/retrieving-error-information.md
+  - name: SQL Server Message Results
+    href: ../../native-client-ole-db-errors/sql-server-message-results.md
+- name: Service Principal Names (SPNs) in Client Connections (OLE DB)
+  href: service-principal-names-spns-in-client-connections-ole-db.md
+- name: Sparse Columns Support (OLE DB)
+  href: sparse-columns-support-ole-db.md
+- name: SQL Server Native Client (OLE DB) Reference
+  href: ../../native-client-ole-db-interfaces/sql-server-native-client-ole-db-interfaces.md
+- name: Interfaces (OLE DB)
+  href: ../../../database-engine/dev-guide/interfaces-ole-db.md
+  items:
+  - name: IBCPSession (OLE DB)
+    href: ../../native-client-ole-db-interfaces/ibcpsession-ole-db.md
+    items:
+    - name: "IBCPSession::BCPColFmt (OLE DB)"
+      href: ../../native-client-ole-db-interfaces/ibcpsession-bcpcolfmt-ole-db.md
+    - name: "IBCPSession::BCPColumns (OLE DB)"
+      href: ../../native-client-ole-db-interfaces/ibcpsession-bcpcolumns-ole-db.md
+    - name: "IBCPSession::BCPControl (OLE DB)"
+      href: ../../native-client-ole-db-interfaces/ibcpsession-bcpcontrol-ole-db.md
+    - name: "IBCPSession::BCPDone (OLE DB)"
+      href: ../../native-client-ole-db-interfaces/ibcpsession-bcpdone-ole-db.md
+    - name: "IBCPSession::BCPExec (OLE DB)"
+      href: ../../native-client-ole-db-interfaces/ibcpsession-bcpexec-ole-db.md
+    - name: "IBCPSession::BCPInit (OLE DB)"
+      href: ../../native-client-ole-db-interfaces/ibcpsession-bcpinit-ole-db.md
+    - name: "IBCPSession::BCPReadFmt (OLE DB)"
+      href: ../../native-client-ole-db-interfaces/ibcpsession-bcpreadfmt-ole-db.md
+    - name: "IBCPSession::BCPWriteFmt (OLE DB)"
+      href: ../../native-client-ole-db-interfaces/ibcpsession-bcpwritefmt-ole-db.md
+  - name: IBCPSession2 (OLE DB)
+    href: ../../native-client-ole-db-interfaces/ibcpsession2-ole-db.md
+    items:
+    - name: "IBCPSession2::BCPSetBulkMode"
+      href: ../../native-client-ole-db-interfaces/ibcpsession2-bcpsetbulkmode.md
+  - name: IColumnsRowset
+    href: ../../native-client-ole-db-interfaces/icolumnsrowset.md
+  - name: ICommand (OLE DB)
+    href: ../../native-client-ole-db-interfaces/icommand-ole-db.md
+  - name: ICommandWithParameters
+    href: ../../native-client-ole-db-interfaces/icommandwithparameters.md
+  - name: IDBProperties (OLE DB)
+    href: ../../native-client-ole-db-interfaces/idbproperties-ole-db.md
+  - name: IRowsetFastLoad (OLE DB)
+    href: ../../native-client-ole-db-interfaces/irowsetfastload-ole-db.md
+    items:
+    - name: "IRowsetFastLoad::Commit (OLE DB)"
+      href: ../../native-client-ole-db-interfaces/irowsetfastload-commit-ole-db.md
+    - name: "IRowsetFastLoad::InsertRow (OLE DB)"
+      href: ../../native-client-ole-db-interfaces/irowsetfastload-insertrow-ole-db.md
+  - name: ISSAbort (OLE DB)
+    href: ../../../database-engine/dev-guide/issabort-ole-db.md
+    items:
+    - name: "ISSAbort::Abort (OLE DB)"
+      href: ../../native-client-ole-db-interfaces/issabort-abort-ole-db.md
+  - name: ISSAsynchStatus (OLE DB)
+    href: ../../native-client-ole-db-interfaces/issasynchstatus-ole-db.md
+    items:
+    - name: "ISSAsynchStatus::Abort (OLE DB)"
+      href: ../../native-client-ole-db-interfaces/issasynchstatus-abort-ole-db.md
+    - name: "ISSAsynchStatus::GetStatus (OLE DB)"
+      href: ../../native-client-ole-db-interfaces/issasynchstatus-getstatus-ole-db.md
+    - name: "ISSAsynchStatus::WaitForAsynchCompletion (OLE DB)"
+      href: ../../native-client-ole-db-interfaces/issasynchstatus-waitforasynchcompletion-ole-db.md
+  - name: ISSCommandWithParameters (OLE DB)
+    href: ../../native-client-ole-db-interfaces/isscommandwithparameters-ole-db.md
+    items:
+    - name: "ISSCommandWithParameters::GetParameterProperties (OLE DB)"
+      href: ../../native-client-ole-db-interfaces/isscommandwithparameters-getparameterproperties-ole-db.md
+    - name: "ISSCommandWithParameters::SetParameterProperties (OLE DB)"
+      href: ../../native-client-ole-db-interfaces/isscommandwithparameters-setparameterproperties-ole-db.md
+  - name: ISQLServerErrorInfo (OLE DB)
+    href: ../../../database-engine/dev-guide/isqlservererrorinfo-ole-db.md
+    items:
+    - name: "ISQLServerErrorInfo::GetErrorInfo (OLE DB)"
+      href: ../../native-client-ole-db-interfaces/isqlservererrorinfo-geterrorinfo-ole-db.md
+- name: OLE DB How-to Topics
+  href: ../../native-client-ole-db-how-to/ole-db-how-to-topics.md
+  items:
+  - name: Processing Results How-to Topics (OLE DB)
+    href: ../../native-client-ole-db-how-to/results/processing-results-how-to-topics-ole-db.md
+    items:
+    - name: Execute a Stored Procedure (Using ODBC CALL Syntax) and Process Return Codes and Output Parameters (OLE DB)
+      href: ../../native-client-ole-db-how-to/results/execute-stored-procedure-with-odbc-call-and-process-output.md
+    - name: Execute a Stored Procedure (Using RPC Syntax) and Process Return Codes and Output Parameters (OLE DB)
+      href: ../../native-client-ole-db-how-to/results/execute-stored-procedure-with-rpc-and-process-output.md
+    - name: Execute a User-Defined Function and Process Return Code (OLE DB)
+      href: ../../native-client-ole-db-how-to/results/execute-a-user-defined-function-and-process-return-code-ole-db.md
+    - name: Fetch Rows from a Result Set (OLE DB)
+      href: ../../native-client-ole-db-how-to/results/fetch-rows-from-a-result-set-ole-db.md
+  - name: Set Large Data (OLE DB)
+    href: ../../native-client-ole-db-how-to/set-large-data-ole-db.md
+  - name: Enumerate OLE DB Data Sources (OLE DB)
+    href: ../../native-client-ole-db-how-to/enumerate-ole-db-data-sources-ole-db.md
+  - name: Bulk Copy Data Using IRowsetFastLoad (OLE DB)
+    href: ../../native-client-ole-db-how-to/bulk-copy-data-using-irowsetfastload-ole-db.md
+  - name: Obtain a FAST_FORWARD Cursor
+    href: ../../native-client-ole-db-how-to/obtain-a-fast-forward-cursor.md
+  - name: Retrieve Rows Using Bookmarks (OLE DB)
+    href: ../../native-client-ole-db-how-to/retrieve-rows-using-bookmarks-ole-db.md
+  - name: "Fetch Columns Using IRow::GetColumns (or IRow::Open) and ISequentialStream"
+    href: ../../native-client-ole-db-how-to/fetch-columns-using-irow-getcolumns-or-irow-open-and-isequentialstream.md
+  - name: "Fetch Columns Using IRow::GetColumns (OLE DB)"
+    href: ../../native-client-ole-db-how-to/fetch-columns-using-irow-getcolumns-ole-db.md
+  - name: Change a SQL Server Authentication User Password (OLE DB)
+    href: ../../native-client-ole-db-how-to/change-a-sql-server-authentication-user-password-ole-db.md
+  - name: Use Enhanced Date/Time Features (OLE DB)
+    href: ../../native-client-ole-db-how-to/use-enhanced-date-and-time-features-ole-db.md
+  - name: Filestream and OLE DB
+    href: ../../native-client-ole-db-how-to/filestream/filestream-and-ole-db.md
+    items:
+    - name: Read a FILESTREAM Column to File Using IBCPSession (OLE DB)
+      href: ../../native-client-ole-db-how-to/filestream/read-a-filestream-column-to-file-using-ibcpsession-ole-db.md
+    - name: Retrieve Data from a FILESTREAM Column Using ISequentialStream (OLE DB)
+      href: ../../native-client-ole-db-how-to/filestream/retrieve-data-from-a-filestream-column-using-isequentialstream-ole-db.md
+    - name: Send Data to a FILESTREAM Column Using ISequentialStream Bound to ICommandText Parameter (OLE DB)
+      href: ../../native-client-ole-db-how-to/filestream/send-data-to-filestream-isequentialstream-bound-to-icommandtext.md
+    - name: Send Data to a FILESTREAM Column Using IRowsetFastUpload (OLE DB)
+      href: ../../native-client-ole-db-how-to/filestream/send-data-to-a-filestream-column-using-irowsetfastupload-ole-db.md
+  - name: Send BLOB Data to SQL SERVER Using IROWSETFASTLOAD and ISEQUENTIALSTREAM (OLE DB)
+    href: ../../native-client-ole-db-how-to/send-blob-data-to-sql-server-using-irowsetfastload-and-isequentialstream-ole-db.md
+  - name: Use Large CLR UDTs (OLE DB)
+    href: ../../native-client-ole-db-how-to/use-large-clr-udts-ole-db.md
+  - name: Display Column and Catalog Metadata for Sparse Columns (OLE DB)
+    href: ../../native-client-ole-db-how-to/display-column-and-catalog-metadata-for-sparse-columns-ole-db.md
+  - name: Integrated Kerberos Authentication (OLE DB)
+    href: ../../native-client-ole-db-how-to/integrated-kerberos-authentication-ole-db.md
+  - name: Use Table-Valued Parameters (OLE DB)
+    href: ../../native-client-ole-db-how-to/use-table-valued-parameters-ole-db.md

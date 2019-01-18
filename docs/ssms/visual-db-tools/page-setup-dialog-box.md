@@ -2,24 +2,18 @@
 title: "Page Setup Dialog Box | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "sql-tools"
-ms.service: ""
-ms.component: "ssms-visual-db"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "tools-ssms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: ssms
+ms.topic: conceptual
 f1_keywords: 
   - "vs.PageSetup"
 ms.assetid: 03deb946-34c6-48b1-b639-5e888f47bddb
-caps.latest.revision: 4
 author: "stevestein"
 ms.author: "sstein"
-manager: "jhubbard"
-ms.workload: "Inactive"
+manager: craigg
+
 ---
 # Page Setup Dialog Box
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -30,7 +24,7 @@ You can customize your page design by selecting options in the **Page Setup** di
 Select a size from the list.  
   
 **Source**  
-Specifies the paper to use. [!INCLUDE[ssManStudio](../../includes/ssmanstudio_md.md)] lists the sources available for the selected printer.  
+Specifies the paper to use. [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] lists the sources available for the selected printer.  
   
 ## Orientation  
 **Portrait**  

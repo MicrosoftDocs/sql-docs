@@ -2,16 +2,10 @@
 title: "Use the inserted and deleted Tables | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-non-specified"
-ms.prod_service: "database-engine, sql-database"
-ms.service: ""
-ms.component: "triggers"
+ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: 
-  - "dbe-dml"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "inserted tables"
   - "UPDATE statement [SQL Server], DML triggers"
@@ -21,11 +15,10 @@ helpviewer_keywords:
   - "INSERT statement [SQL Server], DML triggers"
   - "DML triggers, deleted or inserted tables"
 ms.assetid: ed84567f-7b91-4b44-b5b2-c400bda4590d
-caps.latest.revision: 35
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-ms.workload: "Active"
+author: "rothja"
+ms.author: "jroth"
+manager: craigg
+monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Use the inserted and deleted Tables
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

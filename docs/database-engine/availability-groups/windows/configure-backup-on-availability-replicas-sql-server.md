@@ -1,17 +1,12 @@
 ---
-title: "Configure Backup on Availability Replicas (SQL Server) | Microsoft Docs"
-ms.custom: ""
+title: "Configure backups on secondary replicas of an availability group"
+description: "Describes how to configure backups on secondary replicas of an Always On availability group using either Transact-SQL (T-SQL), PowerShell, or SQL Server Management Studio."
+ms.custom: "seodec18"
 ms.date: "05/17/2016"
-ms.prod: "sql-non-specified"
-ms.prod_service: "database-engine"
-ms.service: ""
-ms.component: "availability-groups"
+ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: high-availability
+ms.topic: conceptual
 helpviewer_keywords: 
   - "backup priority"
   - "backup on secondary replicas"
@@ -21,13 +16,11 @@ helpviewer_keywords:
   - "automated backup preference"
   - "Availability Groups [SQL Server], active secondary replicas"
 ms.assetid: 74bc40bb-9f57-44e4-8988-1d69c0585eb6
-caps.latest.revision: 32
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-ms.workload: "On Demand"
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
 ---
-# Configure Backup on Availability Replicas (SQL Server)
+# Configure backups on secondary replicas of an Always On availability group
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   This topic describes how to configure backup on secondary replicas for an Always On availability group by using [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)], or PowerShell in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)].  
   
@@ -97,7 +90,7 @@ ms.workload: "On Demand"
      Specifies that you prefer that backup jobs ignore the role of the availability replicas when choosing the replica to perform backups. Note backup jobs might evaluate other factors such as backup priority of each availability replica in combination with its operational state and connected state.  
   
     > [!IMPORTANT]  
-    >  There is no enforcement of the automated backup preference setting. The interpretation of this preference depends on the logic, if any, that you script into backup jobs for the databases in a given availability group. The automated backup preference setting has no impact on ad-hoc backups. For more information, see see [Follow Up: After Configuring Backup on Secondary Replicas](#FollowUp) later in this topic.  
+    >  There is no enforcement of the automated backup preference setting. The interpretation of this preference depends on the logic, if any, that you script into backup jobs for the databases in a given availability group. The automated backup preference setting has no impact on ad-hoc backups. For more information, see [Follow Up: After Configuring Backup on Secondary Replicas](#FollowUp) later in this topic.  
   
 6.  Use the **Replica backup priorities** grid to change the backup priority of the availability replicas. This grid displays the current backup priority of each server instance that hosts a replica for the availability group. The grid columns are as follows:  
   
@@ -134,7 +127,7 @@ ms.workload: "On Demand"
   
 2.  Optionally, configure the backup priority of each availability replica that you are adding or modifying. This priority is used by the server instance that hosts the primary replica to decide which replica should service an automated backup request on a database in the availability group (the replica with highest priority is chosen). This priority can be any number between 0 and 100, inclusive. A priority of 0 indicates that the replica should not be considered as a candidate for servicing backup requests.  The default setting is 50.  
   
-     When adding an availability replica to an availability group, use the **New-SqlAvailabilityReplica** cmdlet. When modifying an existing availability replica, use the **Set-SqlAvailabilityReplica** cmdlet. In either case, specify the **BackupPriority***n* parameter, where *n* is a value from 0 to 100.  
+     When adding an availability replica to an availability group, use the **New-SqlAvailabilityReplica** cmdlet. When modifying an existing availability replica, use the **Set-SqlAvailabilityReplica** cmdlet. In either case, specify the **BackupPriority**_n_ parameter, where *n* is a value from 0 to 100.  
   
      For example, the following command sets the backup priority of the availability replica `MyReplica` to **60**.  
   
@@ -190,8 +183,8 @@ ms.workload: "On Demand"
 ```  
 IF (NOT sys.fn_hadr_backup_is_preferred_replica(@DBNAME))  
 BEGIN  
-      Select ‘This is not the preferred replica, exiting with success’;  
-      RETURN 0 – This is a normal, expected condition, so the script returns success  
+      Select 'This is not the preferred replica, exiting with success';  
+      RETURN 0 - This is a normal, expected condition, so the script returns success  
 END  
 BACKUP DATABASE @DBNAME TO DISK=<disk>  
    WITH COPY_ONLY;  
@@ -200,7 +193,7 @@ BACKUP DATABASE @DBNAME TO DISK=<disk>
  Scripting a backup job with this logic enables you to schedule the job to run on every availability replica on the same schedule. Each of these jobs looks at the same data to determine which job should run, so only one of the scheduled job actually proceeds to the backup stage.  In the event of a failover, none of the scripts or jobs needs to be modified. Also, if you reconfigure an availability group to add an availability replica, managing the backup job requires simply copying or scheduling the backup job. If you remove an availability replica, simply delete the backup job from the server instance that hosted that replica.  
   
 > [!TIP]  
->  If you use the[Maintenance Plan Wizard](../../../relational-databases/maintenance-plans/use-the-maintenance-plan-wizard.md)to create a given backup job, the job will automatically include the scripting logic that calls and checks the **sys.fn_hadr_backup_is_preferred_replica** function. However, the backup job will not return the “This is not the preferred replica…” message.Be sure to create the job(s) for each availability database on every server instance that hosts an availability replica for the availability group.  
+>  If you use the[Maintenance Plan Wizard](../../../relational-databases/maintenance-plans/use-the-maintenance-plan-wizard.md)to create a given backup job, the job will automatically include the scripting logic that calls and checks the **sys.fn_hadr_backup_is_preferred_replica** function. However, the backup job will not return the "This is not the preferred replica..." message.Be sure to create the job(s) for each availability database on every server instance that hosts an availability replica for the availability group.  
   
 ##  <a name="ForInfoAboutBuPref"></a> To Obtain Information About Backup Preference Settings  
  The following are useful for obtaining information that is relevant for backup on secondary.  
@@ -214,7 +207,7 @@ BACKUP DATABASE @DBNAME TO DISK=<disk>
   
 ##  <a name="RelatedContent"></a> Related Content  
   
--   [Microsoft SQL Server Always On Solutions Guide for High Availability and Disaster Recovery](http://go.microsoft.com/fwlink/?LinkId=227600)  
+-   [Microsoft SQL Server Always On Solutions Guide for High Availability and Disaster Recovery](https://go.microsoft.com/fwlink/?LinkId=227600)  
   
 -   [SQL Server Always On Team Blog: The official SQL Server Always On Team Blog](https://blogs.msdn.microsoft.com/sqlalwayson/)  
   

@@ -1,25 +1,14 @@
 ---
 title: "Report Builder Tutorials | Microsoft Docs"
-ms.custom: ""
-ms.date: "05/30/2017"
+ms.date: 05/30/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
-ms.service: ""
-ms.component: "reporting-services"
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
+ms.technology: reporting-services
 
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
-applies_to: 
-  - "SQL Server 2016"
+ms.topic: conceptual
 ms.assetid: c99495c3-899b-4c84-af87-76e96d4afa23
-caps.latest.revision: 11
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "kfile"
-ms.workload: "Active"
+author: maggiesMSFT
+ms.author: maggies
 ---
 # Report Builder Tutorials
 
@@ -77,7 +66,7 @@ Follow the steps in this tutorial to learn how to use expressions to concatenate
 ## Next steps
 
 [Report Design View](../reporting-services/report-builder/report-design-view-report-builder.md)  
-[Report Builder in SQL Server 2016](../reporting-services/report-builder/report-builder-in-sql-server-2016.md)  
+[Report Builder in SQL Server](../reporting-services/report-builder/report-builder-in-sql-server-2016.md)  
 [Tutorial: Create a Quick Chart Report Offline](../reporting-services/report-builder/tutorial-create-a-quick-chart-report-offline-report-builder.md)  
 
-More questions? [Try asking the Reporting Services forum](http://go.microsoft.com/fwlink/?LinkId=620231)
+More questions? [Try asking the Reporting Services forum](https://go.microsoft.com/fwlink/?LinkId=620231)

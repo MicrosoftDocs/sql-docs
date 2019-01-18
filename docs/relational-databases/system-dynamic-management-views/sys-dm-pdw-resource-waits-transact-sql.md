@@ -5,21 +5,14 @@ ms.date: "03/07/2017"
 ms.prod: ""
 ms.prod_service: "sql-data-warehouse, pdw"
 ms.reviewer: ""
-ms.service: "sql-data-warehouse"
-ms.component: "dmv's"
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 dev_langs: 
   - "TSQL"
 ms.assetid: a43ce9a2-5261-41e3-97f0-555ba05ebed9
-caps.latest.revision: 8
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-ms.workload: "Inactive"
+author: ronortloff
+ms.author: rortloff
+manager: craigg
+monikerRange: ">= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions"
 ---
 # sys.dm_pdw_resource_waits (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -38,7 +31,7 @@ ms.workload: "Inactive"
 |acquire_time|**datetime**|Time at which the lock or resource was acquired.||  
 |state|**nvarchar(50)**|State of the wait state.|[!INCLUDE[ssInfoNA](../../includes/ssinfona-md.md)]|  
 |priority|**int**|Priority of the waiting item.|[!INCLUDE[ssInfoNA](../../includes/ssinfona-md.md)]|  
-|concurrency_slots_used|**int**|Number of concurrency slots (32 max) reserved for this request.|1 – for SmallRC<br /><br /> 3 – for MediumRC<br /><br /> 7 for LargeRC<br /><br /> 22 – for XLargeRC|  
+|concurrency_slots_used|**int**|Number of concurrency slots (32 max) reserved for this request.|1 - for SmallRC<br /><br /> 3 - for MediumRC<br /><br /> 7 for LargeRC<br /><br /> 22 - for XLargeRC|  
 |resource_class|**nvarchar(20)**|The resource class for this request.|SmallRC<br /><br /> MediumRC<br /><br /> LargeRC<br /><br /> XLargeRC|  
   
 ## See Also  

@@ -2,27 +2,19 @@
 title: "Results Page (Always On Availability Group Wizards) | Microsoft Docs"
 ms.custom: ""
 ms.date: "05/17/2016"
-ms.prod: "sql-non-specified"
-ms.prod_service: "database-engine"
-ms.service: ""
-ms.component: "availability-groups"
+ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: high-availability
+ms.topic: conceptual
 f1_keywords: 
   - "sql13.swb.failoverwizard.results.f1"
   - "sql13.swb.newagwizard.results.f1"
   - "sql13.swb.addreplicawizard.results.f1"
   - "sql13.swb.adddatabasewizard.results.f1"
 ms.assetid: d80b14eb-60db-4351-90ad-6c179d235aa3
-caps.latest.revision: 9
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-ms.workload: "Inactive"
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
 ---
 # Results Page (Always On Availability Group Wizards)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

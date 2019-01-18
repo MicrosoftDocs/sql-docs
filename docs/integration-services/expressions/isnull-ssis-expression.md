@@ -2,25 +2,18 @@
 title: "ISNULL (SSIS Expression) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/04/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "integration-services"
-ms.service: ""
-ms.component: "expressions"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: integration-services
+ms.topic: conceptual
 helpviewer_keywords: 
   - "null values [Integration Services]"
   - "ISNULL function"
 ms.assetid: 88dbf49e-1307-4dda-b9db-ff1632053550
-caps.latest.revision: 28
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
-ms.workload: "On Demand"
+manager: craigg
 ---
 # ISNULL (SSIS Expression)
   Returns a Boolean result based on whether an expression is null.  

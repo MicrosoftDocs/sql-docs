@@ -2,16 +2,11 @@
 title: "SQLBindParameter Function | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
-ms.prod_service: "drivers"
-ms.service: ""
-ms.component: "odbc"
+ms.prod: sql
+ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "drivers"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: connectivity
+ms.topic: conceptual
 apiname: 
   - "SQLBindParameter"
 apilocation: 
@@ -22,11 +17,9 @@ f1_keywords:
 helpviewer_keywords: 
   - "SQLBindParameter function [ODBC]"
 ms.assetid: 38349d4b-be03-46f9-9d6a-e50dd144e225
-caps.latest.revision: 52
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
-ms.workload: "On Demand"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # SQLBindParameter Function
 **Conformance**  
@@ -243,7 +236,7 @@ L_PARAM_INPUT_OUTPUT_STREAM|SQL_LEN_DATA_AT_EXEC(*len*) or SQL_DATA_AT_EXEC|Inpu
   
 -   SQL_DEFAULT_PARAM. A procedure is to use the default value of a parameter, instead of a value retrieved from the application. This value is valid only in a procedure called in ODBC canonical syntax, and then only if the *InputOutputType* argument is SQL_PARAM_INPUT, SQL_PARAM_INPUT_OUTPUT, or SQL_PARAM_INPUT_OUTPUT_STREAM. When \**StrLen_or_IndPtr* is SQL_DEFAULT_PARAM, the *ValueType*, *ParameterType*, *ColumnSize*, *DecimalDigits*, *BufferLength*, and *ParameterValuePtr* arguments are ignored for input parameters and are used only to define the output parameter value for input/output parameters.  
   
--   The result of the SQL_LEN_DATA_AT_EXEC(*length*) macro. The data for the parameter will be sent with **SQLPutData**. If the *ParameterType* argument is SQL_LONGVARBINARY, SQL_LONGVARCHAR, or a long, data source–specific data type, and the driver returns "Y" for the SQL_NEED_LONG_DATA_LEN information type in **SQLGetInfo**, *length* is the number of bytes of data to be sent for the parameter; otherwise, *length* must be a nonnegative value and is ignored. For more information, see "Passing Parameter Values," later in this section.  
+-   The result of the SQL_LEN_DATA_AT_EXEC(*length*) macro. The data for the parameter will be sent with **SQLPutData**. If the *ParameterType* argument is SQL_LONGVARBINARY, SQL_LONGVARCHAR, or a long, data source-specific data type, and the driver returns "Y" for the SQL_NEED_LONG_DATA_LEN information type in **SQLGetInfo**, *length* is the number of bytes of data to be sent for the parameter; otherwise, *length* must be a nonnegative value and is ignored. For more information, see "Passing Parameter Values," later in this section.  
   
      For example, to specify that 10,000 bytes of data will be sent with **SQLPutData** in one or more calls, for an SQL_LONGVARCHAR parameter, an application sets **StrLen_or_IndPtr* to SQL_LEN_DATA_AT_EXEC(10000).  
   
@@ -282,7 +275,7 @@ L_PARAM_INPUT_OUTPUT_STREAM|SQL_LEN_DATA_AT_EXEC(*len*) or SQL_DATA_AT_EXEC|Inpu
     > [!NOTE]  
     >  Although data-at-execution parameters resemble data-at-execution columns, the value returned by **SQLParamData** is different for each. Data-at-execution parameters are parameters in an SQL statement for which data will be sent with **SQLPutData** when the statement is executed with **SQLExecDirect** or **SQLExecute**. They are bound with **SQLBindParameter**. The value returned by **SQLParamData** is a pointer value passed to **SQLBindParameter** in the *ParameterValuePtr* argument. Data-at-execution columns are columns in a rowset for which data will be sent with **SQLPutData** when a row is updated or added with **SQLBulkOperations** or updated with **SQLSetPos**. They are bound with **SQLBindCol**. The value returned by **SQLParamData** is the address of the row in the **TargetValuePtr* buffer (set by a call to **SQLBindCol**) that is being processed.  
   
-5.  Calls **SQLPutData** one or more times to send data for the parameter. More than one call is needed if the data value is larger than the \**ParameterValuePtr* buffer specified in **SQLPutData**; multiple calls to **SQLPutData** for the same parameter are allowed only when sending character C data to a column with a character, binary, or data source–specific data type or when sending binary C data to a column with a character, binary, or data source–specific data type.  
+5.  Calls **SQLPutData** one or more times to send data for the parameter. More than one call is needed if the data value is larger than the \**ParameterValuePtr* buffer specified in **SQLPutData**; multiple calls to **SQLPutData** for the same parameter are allowed only when sending character C data to a column with a character, binary, or data source-specific data type or when sending binary C data to a column with a character, binary, or data source-specific data type.  
   
 6.  Calls **SQLParamData** again to signal that all data has been sent for the parameter.  
   
@@ -306,7 +299,7 @@ L_PARAM_INPUT_OUTPUT_STREAM|SQL_LEN_DATA_AT_EXEC(*len*) or SQL_DATA_AT_EXEC|Inpu
   
  When an array of parameters is processed, individual result sets/row counts (one for each parameter set) can be available or result sets/rows counts can be rolled up into one. The SQL_PARAM_ARRAY_ROW_COUNTS option in **SQLGetInfo** indicates whether row counts are available for each set of parameters (SQL_PARC_BATCH) or only one row count is available (SQL_PARC_NO_BATCH).  
   
- The SQL_PARAM_ARRAY_SELECTS option in **SQLGetInfo** indicates whether a result set is available for each set of parameters (SQL_PAS_BATCH) or only one result set is available (SQL_PAS_NO_BATCH). If the driver does not allow a result set–generating statement to be executed with an array of parameters, SQL_PARAM_ARRAY_SELECTS returns SQL_PAS_NO_SELECT.  
+ The SQL_PARAM_ARRAY_SELECTS option in **SQLGetInfo** indicates whether a result set is available for each set of parameters (SQL_PAS_BATCH) or only one result set is available (SQL_PAS_NO_BATCH). If the driver does not allow a result set-generating statement to be executed with an array of parameters, SQL_PARAM_ARRAY_SELECTS returns SQL_PAS_NO_SELECT.  
   
  For more information, see [SQLGetInfo Function](../../../odbc/reference/syntax/sqlgetinfo-function.md).  
   

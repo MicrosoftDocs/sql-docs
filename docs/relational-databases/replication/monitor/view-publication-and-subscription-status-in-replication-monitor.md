@@ -2,16 +2,11 @@
 title: "View Publication and Subscription Status in Replication Monitor | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "database-engine"
-ms.service: ""
-ms.component: "replication"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: replication
+ms.topic: conceptual
 helpviewer_keywords: 
   - "Log Reader Agent, monitoring"
   - "Merge Agent, monitoring"
@@ -24,11 +19,9 @@ helpviewer_keywords:
   - "subscriptions [SQL Server replication], viewing status"
   - "Replication Monitor, publication and subscription status"
 ms.assetid: 16590771-9867-463e-a973-36a5c145ac16
-caps.latest.revision: 34
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-ms.workload: "Inactive"
+author: "MashaMSFT"
+ms.author: "mathoma"
+manager: craigg
 ---
 # View Publication and Subscription Status in Replication Monitor
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -56,11 +49,11 @@ ms.workload: "Inactive"
   
  **To view publication and subscription status**  
   
--   Replication Monitor: [View Information and Perform Tasks for a Publication &#40;Replication Monitor&#41;](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-a-publication-replication-monitor.md) and [View Information and Perform Tasks for a Subscription &#40;Replication Monitor&#41;](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-a-subscription-replication-monitor.md)  
+-   Replication Monitor: [View Information and Perform Tasks using Replication Monitor](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-replication-monitor.md) 
   
  **To view detailed information for agents**  
   
--   Replication Monitor: [View Information and Perform Tasks for the Agents Associated With a Publication &#40;Replication Monitor&#41;](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-publication-agents.md) and [View Information and Perform Tasks for the Agents Associated With a Subscription &#40;Replication Monitor&#41;](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-subscription-agents.md).  
+-   Replication Monitor: [View information and perform tasks using Replication Monitor](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-replication-monitor.md).
   
 ## Publication Status Values  
  The following table shows publication status values and their corresponding icons in priority order.  
@@ -114,6 +107,6 @@ ms.workload: "Inactive"
 |Not Synchronizing|![UI icon: replication agent stopped](../../../relational-databases/replication/monitor/media/repl-icon-stopped.gif "UI icon: replication agent stopped")|  
   
 ## See Also  
- [Monitoring Replication](../../../relational-databases/replication/monitor/monitoring-replication-overview.md)  
+ [Monitoring Replication](../../../relational-databases/replication/monitor/monitoring-replication.md)  
   
   

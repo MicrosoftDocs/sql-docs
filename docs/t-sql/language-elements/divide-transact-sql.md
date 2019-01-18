@@ -2,15 +2,10 @@
 title: "(Division) (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/15/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
-ms.service: ""
-ms.component: "t-sql|language-elements"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: t-sql
 ms.topic: "language-reference"
 f1_keywords: 
   - "/"
@@ -22,11 +17,10 @@ helpviewer_keywords:
   - "division [SQL Server]"
   - "divide operator (/)"
 ms.assetid: 1d69893b-e5c3-441d-8dd8-0e5eb872ecfc
-caps.latest.revision: 45
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-ms.workload: "On Demand"
+author: "douglaslMS"
+ms.author: "douglasl"
+manager: craigg
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 
 # / (Division) (Transact-SQL)
@@ -85,7 +79,7 @@ SalesPersonID FirstName    LastName          SalesQuota  Sales Target Per Month
 ```  
   
 ## Examples: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
- The following example uses the division arithmetic operator to calculate a simple ratio of each employees’ vacation hours to sick hours.  
+ The following example uses the division arithmetic operator to calculate a simple ratio of each employees' vacation hours to sick hours.  
   
 ```  
 -- Uses AdventureWorks  

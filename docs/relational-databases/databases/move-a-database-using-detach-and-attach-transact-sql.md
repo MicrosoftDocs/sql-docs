@@ -2,16 +2,11 @@
 title: "Move a Database Using Detach and Attach (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "database-engine"
-ms.service: ""
-ms.component: "databases"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "database attaching [SQL Server]"
   - "moving databases [SQL Server]"
@@ -20,11 +15,9 @@ helpviewer_keywords:
   - "detaching databases [SQL Server]"
   - "attaching databases [SQL Server]"
 ms.assetid: 6732a431-cdef-4f1e-9262-4ac3b77c275e
-caps.latest.revision: 47
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-ms.workload: "On Demand"
+author: "stevestein"
+ms.author: "sstein"
+manager: craigg
 ---
 # Move a Database Using Detach and Attach (Transact-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -40,9 +33,6 @@ ms.workload: "On Demand"
 1.  Detach the database. For more information, see [Detach a Database](../../relational-databases/databases/detach-a-database.md).  
   
 2.  In a Windows Explorer or Windows Command Prompt window, move the detached database file or files and log file or files to the new location.  
-  
-    > [!NOTE]  
-    >  To move a single-file database, you can use email if the file size is small enough for email to accommodate.  
   
      You should move the log files even if you intend to create new log files. In some cases, reattaching a database requires its existing log files. Therefore, always keep all the detached log files until the database has been successfully attached without them.  
   
@@ -68,7 +58,7 @@ ms.workload: "On Demand"
     > [!IMPORTANT]  
     >  For a production database, place the database and transaction log on separate disks.  
   
-     To copy files over the network to a disk on a remote computer, use the universal naming convention (UNC) name of the remote location. A UNC name takes the form **\\\\***Servername***\\***Sharename***\\***Path***\\***Filename*. As with writing files to the local hard disk, the appropriate permissions that are required to read or write to a file on the remote disk must be granted to the user account used by the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+     To copy files over the network to a disk on a remote computer, use the universal naming convention (UNC) name of the remote location. A UNC name takes the form **\\\\**_Servername_**\\**_Sharename_**\\**_Path_**\\**_Filename_. As with writing files to the local hard disk, the appropriate permissions that are required to read or write to a file on the remote disk must be granted to the user account used by the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 3.  Attach the moved database and, optionally, its log by executing the following [!INCLUDE[tsql](../../includes/tsql-md.md)] statements:  
   

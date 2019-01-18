@@ -2,25 +2,21 @@
 title: "Master Data Services Features and Tasks | Microsoft Docs"
 ms.custom: ""
 ms.date: "04/01/2016"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "mds"
-ms.service: ""
-ms.component: "non-specific"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "master-data-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: master-data-services
+ms.topic: conceptual
 ms.assetid: 19519697-c219-44a8-9339-ee1b02545445
-caps.latest.revision: 8
-author: "smartysanthosh"
-ms.author: "nagavo"
-manager: "craigg"
-ms.workload: "On Demand"
+author: leolimsft
+ms.author: lle
+manager: craigg
 ---
 # Master Data Services Features and Tasks
-  Learn how to use [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] to manage your organization’s master data. Learn how to create and manipulate model objects, which are containers for data. Learn how to organize and maintain the master data itself. Learn how to import and export master data, as well as share models between test and production environments. Finally, learn how to develop custom applications that access the [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] web service.  
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
+  Learn how to use [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] to manage your organization's master data. Learn how to create and manipulate model objects, which are containers for data. Learn how to organize and maintain the master data itself. Learn how to import and export master data, as well as share models between test and production environments. Finally, learn how to develop custom applications that access the [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] web service.  
   
 ## Create Structures to Contain Data  
   

@@ -2,22 +2,15 @@
 title: "Connection Resiliency in the Windows ODBC Driver | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
-ms.prod_service: "drivers"
-ms.service: ""
-ms.component: "odbc"
+ms.prod: sql
+ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "drivers"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: connectivity
+ms.topic: conceptual
 ms.assetid: 614fa0b4-e9fd-4c68-aab3-183f9b9df143
-caps.latest.revision: 14
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
-ms.workload: "Inactive"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # Connection Resiliency in the Windows ODBC Driver
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -27,9 +20,9 @@ ms.workload: "Inactive"
 > [!IMPORTANT]  
 >  The connection resiliency feature is supported on Microsoft Azure SQL Databases and SQL Server 2014 (and later) server versions.  
   
- For additional information about idle connection resiliency, see [Technical Article – Idle Connection Resiliency](http://go.microsoft.com/fwlink/?LinkId=393996).  
+ For additional information about idle connection resiliency, see [Technical Article - Idle Connection Resiliency](https://go.microsoft.com/fwlink/?LinkId=393996).  
   
- To control reconnect behavior, the ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] on Windows has two options:  
+ To control reconnect behavior, the ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] on Windows has two options:  
   
 -   Connection retry count.  
   
@@ -37,7 +30,7 @@ ms.workload: "Inactive"
   
      You can modify the number of connection retries when you:  
   
-    -   Define or modify a data source that uses the ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] with the **Connection Retry Count** control.  
+    -   Define or modify a data source that uses the ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] with the **Connection Retry Count** control.  
   
     -   Use the **ConnectRetryCount** connection string keyword.  
   
@@ -45,11 +38,11 @@ ms.workload: "Inactive"
   
 -   Connect retry interval.  
   
-     The connect retry interval specifies the number of seconds between each connection retry attempt. Valid values are 1–60. The total time to reconnect cannot exceed the connection timeout (SQL_ATTR_QUERY_TIMEOUT in SQLSetStmtAttr). The default value is 10 seconds.  
+     The connect retry interval specifies the number of seconds between each connection retry attempt. Valid values are 1-60. The total time to reconnect cannot exceed the connection timeout (SQL_ATTR_QUERY_TIMEOUT in SQLSetStmtAttr). The default value is 10 seconds.  
   
      You can modify the connection retry interval when you:  
   
-    -   Define or modify a data source that uses the ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] with the **Connect Retry Interval** control.  
+    -   Define or modify a data source that uses the ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] with the **Connect Retry Interval** control.  
   
     -   Use the **ConnectRetryInterval** connection string keyword.  
   
@@ -73,7 +66,7 @@ ms.workload: "Inactive"
 |IMC06|The connection is broken and recovery is not possible. The connection is marked by the client driver as unrecoverable. No attempt was made to restore the connection.|  
   
 ## Example  
- The following sample contains two functions. **func1** shows how you can connect with a data source name (DSN) that uses the ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] on Windows. The DSN uses [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] Authentication, and it specifies the user ID. **func1** then retrieves the number of connection retries with **SQL_COPT_SS_CONNECT_RETRY_COUNT**.  
+ The following sample contains two functions. **func1** shows how you can connect with a data source name (DSN) that uses the ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] on Windows. The DSN uses [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Authentication, and it specifies the user ID. **func1** then retrieves the number of connection retries with **SQL_COPT_SS_CONNECT_RETRY_COUNT**.  
   
  **func2** uses **SQLDriverConnect**, **ConnectRetryCount** connection string keyword, and connection attributes to retrieve the setting for connection retries and retry interval.  
   

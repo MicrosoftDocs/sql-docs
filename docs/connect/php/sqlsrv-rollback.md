@@ -1,17 +1,12 @@
 ---
 title: "sqlsrv_rollback | Microsoft Docs"
 ms.custom: ""
-ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
-ms.prod_service: "drivers"
-ms.service: ""
-ms.component: "php"
+ms.date: "03/26/2018"
+ms.prod: sql
+ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "drivers"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: connectivity
+ms.topic: conceptual
 apiname: 
   - "sqlsrv_rollback"
 apitype: "NA"
@@ -20,11 +15,9 @@ helpviewer_keywords:
   - "API Reference, sqlsrv_rollback"
   - "sqlsrv_rollback"
 ms.assetid: 6e6bac39-45af-428c-bc32-f773482562ee
-caps.latest.revision: 17
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
-ms.workload: "Inactive"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # sqlsrv_rollback
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -55,7 +48,7 @@ The following example executes two queries as part of a transaction. If both que
   
 The first query in the example inserts a new sales order into the *Sales.SalesOrderDetail* table of the AdventureWorks database. The order is for five units of the product that has product ID 709. The second query reduces the inventory quantity of product ID 709 by five units. These queries are included in a transaction because both queries must be successful for the database to accurately reflect the state of orders and product availability.  
   
-The example assumes that SQL Server and the [AdventureWorks](http://go.microsoft.com/fwlink/?LinkID=67739) database are installed on the local computer. All output is written to the console when the example is run from the command line.  
+The example assumes that SQL Server and the [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) database are installed on the local computer. All output is written to the console when the example is run from the command line.  
   
 ```  
 <?php  
@@ -126,7 +119,9 @@ For the purpose of focusing on transaction behavior, some recommended error hand
 > Do not use embedded Transact-SQL to perform transactions. For example, do not execute a statement with "BEGIN TRANSACTION" as the Transact-SQL query to begin a transaction. The expected transactional behavior cannot be guaranteed when using embedded Transact-SQL to perform transactions.  
   
 ## See Also  
-[SQLSRV Driver API Reference](../../connect/php/sqlsrv-driver-api-reference.md)  
-[How to: Perform Transactions](../../connect/php/how-to-perform-transactions.md)  
-[Overview of the PHP SQL Driver](../../connect/php/overview-of-the-php-sql-driver.md) 
+[SQLSRV Driver API Reference](../../connect/php/sqlsrv-driver-api-reference.md)
+
+[How to: Perform Transactions](../../connect/php/how-to-perform-transactions.md)
+
+[Overview of the Microsoft Drivers for PHP for SQL Server](../../connect/php/overview-of-the-php-sql-driver.md) 
   

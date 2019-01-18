@@ -1,20 +1,11 @@
 ---
 title: "Loading Converted Database Objects into SQL Server (AccessToSQL) | Microsoft Docs"
-ms.prod: "sql-non-specified"
-ms.prod_service: "sql-tools"
-ms.service: ""
-ms.component: "ssma-access"
+ms.prod: sql
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "sql-ssma"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to: 
-  - "Azure SQL Database"
-  - "SQL Server"
+ms.technology: ssma
+ms.topic: conceptual
 helpviewer_keywords: 
   - "Access databases, loading converted objects into SQL Azure"
   - "Access databases, loading converted objects into SQL Server"
@@ -36,29 +27,27 @@ helpviewer_keywords:
   - "uploading objects into SQL Azure"
   - "uploading objects into SQL Server"
 ms.assetid: 4e854eee-b10c-4f0b-9d9e-d92416e6f2ba
-caps.latest.revision: 16
 author: "Shamikg"
 ms.author: "Shamikg"
-manager: "jhubbard"
-ms.workload: "Inactive"
+manager: craigg
 ---
 # Loading Converted Database Objects into SQL Server (AccessToSQL)
-After you have converted Access database objects to [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] or SQL Azure, you can load the resulting database objects into [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] or SQL Azure. You can either have SSMA create the objects, or you can script the objects and run the scripts yourself. Also, SSMA lets you update target metadata with the actual contents of [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] or SQL Azure database.  
+After you have converted Access database objects to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] or SQL Azure, you can load the resulting database objects into [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] or SQL Azure. You can either have SSMA create the objects, or you can script the objects and run the scripts yourself. Also, SSMA lets you update target metadata with the actual contents of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] or SQL Azure database.  
   
 ## Choosing Between Synchronization and Scripts  
-If you want to load the converted database objects into [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] or SQL Azure without modification, you can have SSMA directly create or recreate the database objects. That method is quick and easy, but does not allow for customization of the [!INCLUDE[tsql](../../includes/tsql_md.md)] code that defines the [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] or SQL Azure objects, other than stored procedures.  
+If you want to load the converted database objects into [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] or SQL Azure without modification, you can have SSMA directly create or recreate the database objects. That method is quick and easy, but does not allow for customization of the [!INCLUDE[tsql](../../includes/tsql-md.md)] code that defines the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] or SQL Azure objects, other than stored procedures.  
   
-If you want to modify the [!INCLUDE[tsql](../../includes/tsql_md.md)] that is used to create objects, or if you want more control over objects creation, use SSMA to create scripts. You can then modify those scripts, create each object individually, and even use [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent to schedule creating those objects.  
+If you want to modify the [!INCLUDE[tsql](../../includes/tsql-md.md)] that is used to create objects, or if you want more control over objects creation, use SSMA to create scripts. You can then modify those scripts, create each object individually, and even use [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent to schedule creating those objects.  
   
 ## Using SSMA to Synchronize Objects with SQL Server  
-To use SSMA to create [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] or SQL Azure database objects, you select the objects in [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] or SQL Azure Metadata Explorer, and then synchronize the objects with [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] or SQL Azure, as shown in the following procedure. By default, if the objects already exist in [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] or SQL Azure, and if the SSMA metadata has some local changes or updates to the definition of those very objects, then SSMA will alter the object definitions in [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] or SQL Azure. You can change the default behavior by editing **Project Settings**.  
+To use SSMA to create [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] or SQL Azure database objects, you select the objects in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] or SQL Azure Metadata Explorer, and then synchronize the objects with [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] or SQL Azure, as shown in the following procedure. By default, if the objects already exist in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] or SQL Azure, and if the SSMA metadata has some local changes or updates to the definition of those very objects, then SSMA will alter the object definitions in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] or SQL Azure. You can change the default behavior by editing **Project Settings**.  
   
 > [!NOTE]  
-> You can select existing [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] or SQL Azure database objects that were not converted from Access databases. However, SSMA will not re-create or alter those objects.  
+> You can select existing [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] or SQL Azure database objects that were not converted from Access databases. However, SSMA will not re-create or alter those objects.  
   
 **To synchronize objects with SQL Server or SQL Azure**  
   
-1.  In [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] or SQL Azure Metadata Explorer, expand the top [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] or SQL Azure node, and then expand **Databases**.  
+1.  In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] or SQL Azure Metadata Explorer, expand the top [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] or SQL Azure node, and then expand **Databases**.  
   
 2.  Select the objects to process:  
   
@@ -66,7 +55,7 @@ To use SSMA to create [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 
   
     -   To synchronize or omit individual objects or categories of objects, select or clear the check box next to the object or folder.  
   
-3.  After you have selected the objects to process in [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] or SQL Azure Metadata Explorer, right-click **Databases**, and then click **Synchronize with Database**.  
+3.  After you have selected the objects to process in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] or SQL Azure Metadata Explorer, right-click **Databases**, and then click **Synchronize with Database**.  
   
     You can also synchronize individual objects or categories of objects by right-clicking the object or its parent folder, and then clicking **Synchronize with Database**.  
   
@@ -83,11 +72,11 @@ To use SSMA to create [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 
     Click on the action sign to change the state. Actual synchronization will be performed when you click **OK** button of the **Synchronize with Database** dialog.  
   
 ## Scripting Objects  
-If you want to save [!INCLUDE[tsql](../../includes/tsql_md.md)] definitions of the converted database objects, or you want to alter the object definitions and run scripts yourself, you can save the converted database object definitions to [!INCLUDE[tsql](../../includes/tsql_md.md)] scripts.  
+If you want to save [!INCLUDE[tsql](../../includes/tsql-md.md)] definitions of the converted database objects, or you want to alter the object definitions and run scripts yourself, you can save the converted database object definitions to [!INCLUDE[tsql](../../includes/tsql-md.md)] scripts.  
   
 **To save one or more objects to a script**  
   
-1.  In [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Metadata Explorer, expand the top node (the server name) and then expand **Databases**.  
+1.  In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Metadata Explorer, expand the top node (the server name) and then expand **Databases**.  
   
 2.  Do one or more of the following:  
   
@@ -108,26 +97,26 @@ If you want to save [!INCLUDE[tsql](../../includes/tsql_md.md)] definitions of t
     SSMA will append the .sql file name extension.  
   
 ### Modifying Scripts  
-After you have saved the [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] or SQL Azure object definitions as a script, you can use [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] to modify the script.  
+After you have saved the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] or SQL Azure object definitions as a script, you can use [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] to modify the script.  
   
 **To modify a script**  
   
-1.  On the [!INCLUDE[ssManStudio](../../includes/ssmanstudio_md.md)] **File** menu, point to **Open**, and then click **File**.  
+1.  On the [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] **File** menu, point to **Open**, and then click **File**.  
   
 2.  In the **Open** dialog box, locate and select your script file, and then click **OK**.  
   
 3.  Edit the script file by using the query editor.  
   
-    For more information about the query editor, see "Editor Convenience Commands and Features" in [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Books Online.  
+    For more information about the query editor, see "Editor Convenience Commands and Features" in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Books Online.  
   
 4.  To save the script, on the File menu, select **Save**.  
   
 ### Running Scripts  
-You can run a script, or individual statements, in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)].  
+You can run a script, or individual statements, in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
 **To run a script**  
   
-1.  On the [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] **File** menu, point to **Open** and then click **File**.  
+1.  On the [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] **File** menu, point to **Open** and then click **File**.  
   
 2.  In the **Open** dialog box, locate and select your script file, and then click **OK**.  
   
@@ -135,16 +124,16 @@ You can run a script, or individual statements, in [!INCLUDE[ssManStudioFull](..
   
 4.  To run a set of statements, select the statements in the query editor window, and then press the **F5** key.  
   
-For more information about how to use the query editor to run scripts, see "[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] [!INCLUDE[tsql](../../includes/tsql_md.md)] Query" in [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Books Online.  
+For more information about how to use the query editor to run scripts, see " [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] [!INCLUDE[tsql](../../includes/tsql-md.md)] Query" in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Books Online.  
   
-You can also run scripts from the command line by using the **sqlcmd** utility, and from [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent. For more information about **sqlcmd**, see "sqlcmd Utility" in [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Books Online. For more information about [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent, see "Automating Administrative Tasks ([!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent)" in [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Books Online.  
+You can also run scripts from the command line by using the **sqlcmd** utility, and from [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent. For more information about **sqlcmd**, see "sqlcmd Utility" in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Books Online. For more information about [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent, see "Automating Administrative Tasks ( [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent)" in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Books Online.  
   
 ## Securing Objects in SQL Server  
-After you have loaded the converted database objects into [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], you can grant and deny permissions on those objects. It is a good idea to do this before migrating data to [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]. For information about how to help secure objects in [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], see "Security Considerations for Databases and Database Applications" in [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Books Online.  
+After you have loaded the converted database objects into [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], you can grant and deny permissions on those objects. It is a good idea to do this before migrating data to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. For information about how to help secure objects in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], see "Security Considerations for Databases and Database Applications" in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Books Online.  
   
 ## Next Step  
-The next step in the migration process is [migrate data into SQL Server](http://msdn.microsoft.com/en-us/f3b18af7-1af0-499d-a00d-a0af94895625).  
+The next step in the migration process is [migrate data into SQL Server](migrating-access-data-into-sql-server-azure-sql-db-accesstosql.md).  
   
 ## See Also  
-[Migrating Access Databases to SQL Server](http://msdn.microsoft.com/en-us/76a3abcf-2998-4712-9490-fe8d872c89ca)  
+[Migrating Access Databases to SQL Server](migrating-access-databases-to-sql-server-azure-sql-db-accesstosql.md)  
   

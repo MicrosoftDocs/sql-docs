@@ -2,16 +2,11 @@
 title: "Back Up and Restore Full-Text Catalogs and Indexes | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "database-engine"
-ms.service: ""
-ms.component: "search"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "dbe-search"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: search
+ms.topic: conceptual
 helpviewer_keywords: 
   - "full-text indexes [SQL Server], backing up"
   - "full-text search [SQL Server], back up and restore"
@@ -20,11 +15,9 @@ helpviewer_keywords:
   - "full-text indexes [SQL Server], restoring"
   - "restore operations [full-text search]"
 ms.assetid: 6a4080d9-e43f-4b7b-a1da-bebf654c1194
-caps.latest.revision: 62
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-ms.workload: "Inactive"
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ---
 # Back Up and Restore Full-Text Catalogs and Indexes
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -32,7 +25,7 @@ ms.workload: "Inactive"
   This topic explains how to back up and restore full-text indexes created in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], the full-text catalog is a logical concept and does not reside in a filegroup. Therefore, to back up a full-text catalog in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], you must identify every filegroup that contains a full-text index that belongs to the catalog. Then you must back up those filegroups, one by one.  
   
 > [!IMPORTANT]  
->  It is possible to import full-text catalogs when upgrading a [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] database. Each imported full-text catalog is a database file in its own filegroup. To back up an imported catalog, simply back up its filegroup. For more information, see [Backing Up and Restoring Full-Text Catalogs](http://go.microsoft.com/fwlink/?LinkID=121052), in [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Books Online.  
+>  It is possible to import full-text catalogs when upgrading a [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] database. Each imported full-text catalog is a database file in its own filegroup. To back up an imported catalog, simply back up its filegroup. For more information, see [Backing Up and Restoring Full-Text Catalogs](https://go.microsoft.com/fwlink/?LinkID=121052), in [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Books Online.  
   
 ##  <a name="backingup"></a> Backing Up the Full-Text Indexes of a Full-Text Catalog  
   

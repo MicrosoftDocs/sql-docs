@@ -2,28 +2,17 @@
 title: "Project Settings (Type Mapping) (SybaseToSQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
-ms.prod_service: "sql-tools"
-ms.service: ""
-ms.component: "ssma-sybase"
+ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "sql-ssma"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to: 
-  - "Azure SQL Database"
-  - "SQL Server"
+ms.technology: ssma
+ms.topic: conceptual
 ms.assetid: 2698fb3a-f9e6-4e04-94e0-dad289d7ed0a
-caps.latest.revision: 6
 author: "Shamikg"
 ms.author: "Shamikg"
-manager: "jhubbard"
-ms.workload: "Inactive"
+manager: craigg
 ---
 # Project Settings (Type Mapping) (SybaseToSQL)
-The Type Mapping page of the **Project Settings** dialog box contains settings that customize how SSMA converts Sybase Adaptive Server Enterprise (ASE) data types into [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] data types.  
+The Type Mapping page of the **Project Settings** dialog box contains settings that customize how SSMA converts Sybase Adaptive Server Enterprise (ASE) data types into [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] data types.  
   
 The Type Mapping page is available in the **Project Settings** and **Default Project Settings** dialog boxes.  
   
@@ -36,7 +25,7 @@ The Type Mapping page is available in the **Project Settings** and **Default Pro
 The mapped ASE data type.  
   
 **Target Type**  
-The target [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] data type for the specified ASE data type.  
+The target [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] data type for the specified ASE data type.  
   
 See the table in the following section for the default SSMA for Sybase type mapping.  
   
@@ -53,7 +42,7 @@ Click to remove the selected data type mapping from the mapping list.
 Click to reset the type mapping list to the SSMA defaults.  
   
 ## Default Type Mapping  
-The following table contains the default type mapping between ASE and [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] data types.  
+The following table contains the default type mapping between ASE and [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] data types.  
   
 |ASE Data Type|SQL Server Data Type|  
 |-----------------|------------------------|  

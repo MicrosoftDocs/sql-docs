@@ -2,28 +2,21 @@
 title: "Create a New Solution | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "sql-tools"
-ms.service: ""
-ms.component: "ssms-solutions"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "tools-ssms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: ssms
+ms.topic: conceptual
 helpviewer_keywords: 
   - "solutions [SQL Server Management Studio], creating"
 ms.assetid: 05a7edd9-8acc-4ccd-abc9-33ced53265de
-caps.latest.revision: 4
 author: "stevestein"
 ms.author: "sstein"
-manager: "jhubbard"
-ms.workload: "Inactive"
+manager: craigg
 ---
 # Create a New Solution
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-When you create a project, [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] creates a solution to contain it. You can only open one solution at a time. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] does not allow you to create folders within projects. To organize your work, create multiple projects.  
+When you create a project, [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] creates a solution to contain it. You can only open one solution at a time. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] does not allow you to create folders within projects. To organize your work, create multiple projects.  
   
 To access Solution Explorer, click **Solution Explorer** on the **View** menu.  
   
@@ -43,5 +36,5 @@ To access Solution Explorer, click **Solution Explorer** on the **View** menu.
   
 ## See Also  
 [Solution Explorer](../../ssms/solution/solution-explorer.md)  
-[Open Solutions from Source Control](https://msdn.microsoft.com/en-us/library/ms174216.aspx)  
+[Open Solutions from Source Control](https://msdn.microsoft.com/library/ms174216.aspx)  
   

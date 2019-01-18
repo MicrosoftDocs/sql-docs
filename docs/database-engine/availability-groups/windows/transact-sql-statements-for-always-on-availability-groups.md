@@ -2,25 +2,17 @@
 title: "Transact-SQL Statements for Always On Availability Groups | Microsoft Docs"
 ms.custom: ""
 ms.date: "05/17/2016"
-ms.prod: "sql-non-specified"
-ms.prod_service: "database-engine"
-ms.service: ""
-ms.component: "availability-groups"
+ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: high-availability
+ms.topic: conceptual
 helpviewer_keywords: 
   - "Availability Groups [SQL Server], about"
   - "Availability Groups [SQL Server], Transact-SQL statements"
 ms.assetid: 184d0a81-2259-4db9-9d0d-01aac0b502c8
-caps.latest.revision: 23
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-ms.workload: "Inactive"
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
 ---
 # Transact-SQL Statements for Always On Availability Groups
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -42,7 +34,7 @@ ms.workload: "Inactive"
 -   [Restrictions on the AVAILABILITY GROUP Transact-SQL statements](#Restrictions)  
   
 ##  <a name="CreateEndpoint"></a> CREATE ENDPOINT  
- [CREATE ENDPOINT … FOR DATABASE_MIRRORING](../../../t-sql/statements/create-endpoint-transact-sql.md) creates a database mirroring endpoint, if none exists on the server instance. Every server instance on which you intend to deploy [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] or database mirroring requires a database mirroring endpoint.  
+ [CREATE ENDPOINT ... FOR DATABASE_MIRRORING](../../../t-sql/statements/create-endpoint-transact-sql.md) creates a database mirroring endpoint, if none exists on the server instance. Every server instance on which you intend to deploy [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] or database mirroring requires a database mirroring endpoint.  
   
  Execute this statement on the server instance on which you are creating the endpoint. You can create only one database mirroring endpoint on a given server instance. For more information, see [The Database Mirroring Endpoint &#40;SQL Server&#41;](../../../database-engine/database-mirroring/the-database-mirroring-endpoint-sql-server.md).  
   
@@ -56,7 +48,7 @@ ms.workload: "Inactive"
   
  Execute ALTER AVAILABILITY GROUP on the instance of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] that hosts the current primary replica.  
   
-##  <a name="AlterDb"></a> ALTER DATABASE … SET HADR …  
+##  <a name="AlterDb"></a> ALTER DATABASE ... SET HADR ...  
  The options of the [SET HADR](../../../t-sql/statements/alter-database-transact-sql-set-hadr.md) clause of the ALTER DATABASE statement enables you to join a secondary database to the availability group of the corresponding primary database, remove a joined database, and suspend data synchronization on a joined database, and resume data synchronization.  
   
 ##  <a name="DropAG"></a> DROP AVAILABILITY GROUP  

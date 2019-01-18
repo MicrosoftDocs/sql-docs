@@ -2,16 +2,11 @@
 title: "Union All Transformation | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "integration-services"
-ms.service: ""
-ms.component: "data-flow"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: integration-services
+ms.topic: conceptual
 f1_keywords: 
   - "sql13.dts.designer.unionalltrans.f1"
   - "sql13.dts.designer.unionalltransformation.f1"
@@ -21,11 +16,9 @@ helpviewer_keywords:
   - "Union All transformation"
   - "datasets [Integration Services], merging"
 ms.assetid: 942e4b90-9c41-4e9c-a6f3-80b3afe57f2f
-caps.latest.revision: 39
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
-ms.workload: "On Demand"
+manager: craigg
 ---
 # Union All Transformation
   The Union All transformation combines multiple inputs into one output. For example, the outputs from five different Flat File sources can be inputs to the Union All transformation and combined into one output.  
@@ -44,7 +37,7 @@ ms.workload: "On Demand"
 ## Configuration of the Union All Transformation  
  You can set properties through [!INCLUDE[ssIS](../../../includes/ssis-md.md)] Designer or programmatically.  
   
- For more information about the properties that you can set programmatically, see [Common Properties](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796).  
+ For more information about the properties that you can set programmatically, see [Common Properties](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796).  
   
  For more information about how to set properties, click one of the following topics:  
   

@@ -1,49 +1,23 @@
 ---
-title: "Connection String Properties (Analysis Services) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/07/2017"
-ms.prod: analysis-services
-ms.prod_service: "analysis-services"
-ms.service: ""
-ms.component: ""
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
-  
-ms.component: multidimensional-tabular
-ms.component: data-mining
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-ms.assetid: 29a00a41-5b0d-44b2-8a86-1b16fe507768
-caps.latest.revision: 18
-author: "Minewiskan"
-ms.author: "owend"
-manager: "kfile"
-ms.workload: "On Demand"
+title: "Connection string properties (Analysis Services) | Microsoft Docs"
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom:
+ms.topic: conceptual
+ms.author: owend
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
 ---
 # Connection String Properties (Analysis Services)
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-  This topic documents the connection string properties you might set in one of the designer or administration tools, or see in connection strings built by client applications that connect to and query Analysis Services data. As such, it covers just a subset of the available properties. The complete list includes numerous server and database properties, allowing you to customize a connection for a specific application, independent of how the instance or database is configured on the server.  
+[!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
+
+  This topic describes connection string properties you might set in one of the designer or administration tools, or see in connection strings built by client applications that connect to and query Analysis Services data. As such, it covers just a subset of the available properties. The complete list includes numerous server and database properties, allowing you to customize a connection for a specific application, independent of how the instance or database is configured on the server.  
   
  Developers who build custom connection strings in application code should review the API documentation for ADOMD.NET client to view a more detailed list: <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A>  
   
- The properties described in this topic are used by the Analysis Services client libraries, ADOMD.NET, AMO, and the OLE DB provider for Analysis Services. The majority of connection string properties can be used with all three client libraries. Exceptions are called out in the description.  
-  
- This topic includes the following sections:  
-  
- [Connection parameters in common use](#bkmk_common)  
-  
- [Authentication and Security](#bkmk_auth)  
-  
- [Special-purpose parameters](#bkmk_special)  
-  
- [Reserved for future use](#bkmk_reserved)  
-  
- [Example connection strings](#bkmk_examples)  
-  
- [Connection string formats used in Analysis Services](#bkmk_supportedstrings)  
-  
- [Encrypting Connection Strings](#bkmk_encrypt)  
+ The properties described in this topic are used by the Analysis Services client libraries, ADOMD.NET, AMO, and the OLE DB provider for Analysis Services. The majority of connection string properties can be used with all three client libraries. Exceptions are called out in the description.
   
 > [!NOTE]  
 >  When setting properties, if you inadvertently set the same property twice, the last one in the connection string is used.  
@@ -55,9 +29,9 @@ ms.workload: "On Demand"
   
 |Property|Description|Example|  
 |--------------|-----------------|-------------|  
-|**Data Source** or **DataSource**|Specifies the server instance. This property is required for all connections. Valid values include the network name or IP address of the server, local or localhost for local connections, a URL if the server is configured for HTTP or HTTPS access, or the name of a local cube (.cub) file.|`Data source=AW-SRV01` for the default instance and port (TCP 2383).<br /><br /> `Data source=AW-SRV01$Finance:8081` for a named instance ($Finance) and fixed port.<br /><br /> `Data source=AW-SRV01.corp.Adventure-Works.com` for a fully qualified domain name, assuming the default instance and port.<br /><br /> `Data source=172.16.254.1` for an IP address of the server, bypassing DNS server lookup, useful for troubleshooting connection problems.|  
+|**Data Source** or **DataSource**|Specifies the server instance. This property is required for all connections. Valid values include the network name or IP address of the server, local or localhost for local connections, a URL if the server is configured for HTTP or HTTPS access, or the name of a local cube (.cub) file. <br /><br /> Valid value for Azure Analysis Services, `<protocol>://<region>/<servername>` where protocol is string asazure, region is the Uri where the server was created (for example, westus.asazure.windows.net) and servername is the name of your unique server within the region. |`Data source=asazure://westus.asazure.windows.net/myasserver`<br /><br />`Data source=AW-SRV01` for the default instance and port (TCP 2383).<br /><br /> `Data source=AW-SRV01$Finance:8081` for a named instance ($Finance) and fixed port.<br /><br /> `Data source=AW-SRV01.corp.Adventure-Works.com` for a fully qualified domain name, assuming the default instance and port.<br /><br /> `Data source=172.16.254.1` for an IP address of the server, bypassing DNS server lookup, useful for troubleshooting connection problems.|  
 |**Initial Catalog** or **Catalog**|Specifies the name of the Analysis Services database to connect to. The database must be deployed on Analysis Services, and you must have permission to connect to it. This property is optional for AMO connections, but required for ADOMD.NET.|`Initial catalog=AdventureWorks2016`|  
-|**Provider**|Valid values include MSOLAP.\<version>, where \<version> is either 4, 5, 6 or 7.<br /><br /> -   MSOLAP.4 released in SQL Server 2008 and again SQL Server 2008 R2 (filename is msolap100.dll for SQL Server 2008 and 2008 R2)<br />-   MSOLAP.5 released in SQL Server 2012 (filename is msolap110.dll)<br />-   MSOLAP.6 released in SQL Server 2014 (filename is msolap1200.dll)<br />-   MSOLAP.7 released in SQL Server 2016 (filename is msolap130.dll)<br /><br /> This property is optional. By default, the client libraries read the current version of the OLE DB provider from the registry. You only need to set this property if you require a specific version of the data provider, for example to connect to a SQL Server 2012 instance.<br /><br /> MSOLAP.4 was released in both SQL Server 2008 and SQL Server 2008 R2. The 2008 R2 version supports [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] workbooks and sometimes needs to be installed manually on SharePoint servers. To distinguish between these versions, you must check the build number in the file properties of the provider: Go to Program files\Microsoft Analysis Services\AS OLEDB\10. Right-click msolap110.dll and select **Properties**. Click **Details**. View the file version information. The version should include 10.50.\<buildnumber> for SQL Server 2008 R2. For more information, see [Install the Analysis Services OLE DB Provider on SharePoint Servers](http://msdn.microsoft.com/en-us/2c62daf9-1f2d-4508-a497-af62360ee859) and [Data providers used for Analysis Services connections](../../analysis-services/instances/data-providers-used-for-analysis-services-connections.md).|`Provider=MSOLAP.7` is used for connections that require the SQL Server 2016 version of the OLE DB provider for Analysis Services.|  
+|**Provider**|Valid values include MSOLAP.\<version>, where \<version> is either 4, 5, 6 or 7.<br /><br /> -   MSOLAP.4 released in SQL Server 2008 and again SQL Server 2008 R2 (filename is msolap100.dll for SQL Server 2008 and 2008 R2)<br />-   MSOLAP.5 released in SQL Server 2012 (filename is msolap110.dll)<br />-   MSOLAP.6 released in SQL Server 2014 (filename is msolap1200.dll)<br />-   MSOLAP.7 released in SQL Server 2016 (filename is msolap130.dll)<br /><br /> This property is optional. By default, the client libraries read the current version of the OLE DB provider from the registry. You only need to set this property if you require a specific version of the data provider, for example to connect to a SQL Server 2012 instance.<br /><br /> MSOLAP.4 was released in both SQL Server 2008 and SQL Server 2008 R2. The 2008 R2 version supports [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] workbooks and sometimes needs to be installed manually on SharePoint servers. To distinguish between these versions, you must check the build number in the file properties of the provider: Go to Program files\Microsoft Analysis Services\AS OLEDB\10. Right-click msolap110.dll and select **Properties**. Click **Details**. View the file version information. The version should include 10.50.\<buildnumber> for SQL Server 2008 R2. For more information, see [Install the Analysis Services OLE DB Provider on SharePoint Servers](http://msdn.microsoft.com/2c62daf9-1f2d-4508-a497-af62360ee859) and [Data providers used for Analysis Services connections](../../analysis-services/instances/data-providers-used-for-analysis-services-connections.md).|`Provider=MSOLAP.7` is used for connections that require the SQL Server 2016 version of the OLE DB provider for Analysis Services.|  
 |**Cube**|Cube name or perspective name. A database can contain multiple cubes and perspectives. When multiple targets are possible, include the cube or perspective name on the connection string.|`Cube=SalesPerspective` shows that you can use the Cube connection string property to specify either the name of a cube or the name of a perspective.|  
   
 ##  <a name="bkmk_auth"></a> Authentication and Security  
@@ -67,18 +41,18 @@ ms.workload: "On Demand"
   
 |Property|Description|  
 |--------------|-----------------|  
-|**EffectiveUserName**|Use when an end user identity must be impersonated on the server. Specify the account in a domain\user format. To use this property, the caller must have administrative permissions in Analysis Services. For more information about using this property in an Excel workbook from SharePoint, see [Use Analysis Services EffectiveUserName in SharePoint Server 2013](http://go.microsoft.com/fwlink/?LinkId=311905). For an illustration of how this property is used with Reporting Services, see [Using EffectiveUserName To Impersonate in SSAS](http://go.microsoft.com/fwlink/?LinkId=301385).<br /><br /> **EffectiveUserName** is used in a [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint installation to capture usage information. The user identity is provided to the server so that events or errors that include user identity can be recorded in the log files. In the case of [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)], it is not used for authorization purposes.|  
+|**EffectiveUserName**|Use when an end user identity must be impersonated on the server. Specify the account in a domain\user format. To use this property, the caller must have administrative permissions in Analysis Services. For more information about using this property in an Excel workbook from SharePoint, see [Use Analysis Services EffectiveUserName in SharePoint Server 2013](http://go.microsoft.com/fwlink/?LinkId=311905).<br /><br /> **EffectiveUserName** is used in a [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint installation to capture usage information. The user identity is provided to the server so that events or errors that include user identity can be recorded in the log files. In the case of [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)], it is not used for authorization purposes.|  
 |**Encrypt Password**|Specifies whether a local password is to be used to encrypt local cubes. Valid values are True or False. The default is False.|  
 |**Encryption Password**|The password used to decrypt an encrypted local cube. Default value is empty. This value must be explicitly set by the user.|  
 |**Impersonation Level**|Indicates the level of impersonation that the server is allowed to use when impersonating the client. Valid values include:<br /><br /> -   Anonymous. The client is anonymous to the server. The server process cannot obtain information about the client, nor can the client be impersonated.<br />-   Identify. The server process can get the client identity. The server can impersonate the client identity for authorization purposes but cannot access system objects as the client.<br />-   Impersonate. This is the default value. The client identity can be impersonated, but only when the connection is established, and not on every call.<br />-   Delegate. The server process can impersonate the client security context while acting on behalf of the client. The server process can also make outgoing calls to other servers while acting on behalf of the client.|  
 |**Integrated Security**|The Windows identity of the caller is used to connect to Analysis Services. Valid values are blank, SSPI, and BASIC.<br /><br /> **Integrated Security**=**SSPI** is the default value for TCP connections, allowing NTLM, Kerberos, or Anonymous authentication. Blank is the default value for HTTP connections.<br /><br /> When using **SSPI**, **ProtectionLevel** must be set to one of the following: **Connect**, **PktIntegrity**, **PktPrivacy**.|  
 |**Persist Encrypted**|Set this property when the client application requires the data source object to persist sensitive authentication information, such as a password, in encrypted form. By default, authentication information is not persisted.|  
 |**Persist Security Info**|Valid values are True and False. When set to True, security information, such as the user identity or password previously specified on the connection string, can be obtained from the connection after the connection is made. The default value is False.|  
-|**Protection Level**|Determines the security level used on the connection. Valid values are:<br /><br /> -   **None**. Unauthenticated or anonymous connections. Performs no authentication on data sent to the server.<br />-   **Connect**. Authenticated connections. Authenticates only when the client establishes a relationship with a server.<br />-   **Pkt Integrity**. Encrypted connections. Verifies that all data is received from the client and that it has not been changed in transit.<br />-   **Pkt Privacy**. Signed encryption, supported only for XMLA. Verifies that all data is received from the client, that it has not been changed in transit, and protects the privacy of the data by encrypting it.<br /><br /> For more information, see [Establishing Secure Connections in ADOMD.NET](../../analysis-services/multidimensional-models-adomd-net-client/connections-in-adomd-net-establishing-secure-connections.md)|  
-|**Roles**|Specify a comma-delimited list of predefined roles to connect to a server or database using permissions conveyed by that role. If this property is omitted, all roles are used, and the effective permissions are the combination of all roles. Setting the property to an empty value (for example, Roles=’ ‘) the client connection has no role membership.<br /><br /> An administrator using this property connects using the permissions conveyed by the role. Some commands might fail if the role does not provide sufficient permission.|  
+|**Protection Level**|Determines the security level used on the connection. Valid values are:<br /><br /> -   **None**. Unauthenticated or anonymous connections. Performs no authentication on data sent to the server.<br />-   **Connect**. Authenticated connections. Authenticates only when the client establishes a relationship with a server.<br />-   **Pkt Integrity**. Encrypted connections. Verifies that all data is received from the client and that it has not been changed in transit.<br />-   **Pkt Privacy**. Signed encryption, supported only for XMLA. Verifies that all data is received from the client, that it has not been changed in transit, and protects the privacy of the data by encrypting it.<br /><br /> For more information, see [Establishing Secure Connections in ADOMD.NET](https://docs.microsoft.com/bi-reference/adomd/multidimensional-models-adomd-net-client/connections-in-adomd-net-establishing-secure-connections)|  
+|**Roles**|Specify a comma-delimited list of predefined roles to connect to a server or database using permissions conveyed by that role. If this property is omitted, all roles are used, and the effective permissions are the combination of all roles. Setting the property to an empty value (for example, Roles=' ') the client connection has no role membership.<br /><br /> An administrator using this property connects using the permissions conveyed by the role. Some commands might fail if the role does not provide sufficient permission.|  
 |**SSPI**|Explicitly specifies which security package to use for client authentication when **Integrated Security** is set to **SSPI**. SSPI supports multiple packages, but you can use this property to specify a particular package. Valid values are Negotiate, Kerberos, NTLM, and Anonymous User. If this property is not set, all packages will be available to the connection.|  
 |**Use Encryption for Data**|Encrypts data transmissions. Value values are True and False.|  
-|**User ID**=…; **Password**=|**User ID** and **Password** are used together. Analysis Services impersonates the user identity specified through these credentials. On an Analysis Services connection, putting credentials on the command line is used only when the server is configured for HTTP access, and you specified Basic authentication instead of integrated security on the IIS virtual directory. When connecting directly to the server, **UserID** and **Password** connection string params are ignored and the connection is made using the context of the logged on user. <br /><br />The user name and password must be the credentials of a Windows identity, either a local or a domain user account. Notice that **User ID** has an embedded space. Other aliases for this property include **UserName** (no space), and **UID**. Alias for **Password** is **PWD**.|  
+|**User ID**=...; **Password**=|**User ID** and **Password** are used together. Analysis Services impersonates the user identity specified through these credentials. On an Analysis Services connection, putting credentials on the command line is used only when the server is configured for HTTP access, and you specified Basic authentication instead of integrated security on the IIS virtual directory. When connecting directly to the server, **UserID** and **Password** connection string params are ignored and the connection is made using the context of the logged on user. <br /><br />The user name and password must be the credentials of a Windows identity, either a local or a domain user account. Notice that **User ID** has an embedded space. Other aliases for this property include **UserName** (no space), and **UID**. Alias for **Password** is **PWD**.|  
   
 ##  <a name="bkmk_special"></a> Special-purpose parameters  
  This section describes the remainder of the connection string parameters. These are used to ensure specific connection behaviors required by an application.  
@@ -87,13 +61,14 @@ ms.workload: "On Demand"
   
 |Property|Description|  
 |--------------|-----------------|  
-|**Application Name**|Sets the name of the application associated with the connection. This value can be useful when monitoring tracing events, especially when you have several applications accessing the same databases. For example, adding Application Name=’test’ to a connection string causes ‘test’ to appear in a SQL Server Profiler trace, as shown in the following screenshot:<br /><br /> ![SSAS_AppNameExcample](../../analysis-services/instances/media/ssas-appnameexcample.gif "SSAS_AppNameExcample")<br /><br /> Aliases for this property include **sspropinitAppName**, **AppName**. For more information, see [Use Application Name parameter when connecting to SQL Server](http://go.microsoft.com/fwlink/?LinkId=301699).|  
+|**Application Name**|Sets the name of the application associated with the connection. This value can be useful when monitoring tracing events, especially when you have several applications accessing the same databases. For example, adding Application Name='test' to a connection string causes 'test' to appear in a SQL Server Profiler trace, as shown in the following screenshot:<br /><br /> ![SSAS_AppNameExcample](../../analysis-services/instances/media/ssas-appnameexcample.gif "SSAS_AppNameExcample")<br /><br /> Aliases for this property include **sspropinitAppName**, **AppName**. For more information, see [Use Application Name parameter when connecting to SQL Server](http://go.microsoft.com/fwlink/?LinkId=301699).|  
 |**AutoSyncPeriod**|Sets the frequency (in milliseconds) of client and server cache synchronization. ADOMD.NET provides client caching for frequently used objects that have minimal memory overhead. This helps reduce the number of round trips to the server. The default is 10000 milliseconds (or 10 seconds). When set to null or 0, automatic synchronization is turned off.|  
 |**Character Encoding**|Defines how characters are encoded on the request. Valid values are Default or UTF-8 (these are equivalent), and UTF-16| 
 |**CommitTimeout**|An XMLA property. Determines how long, in milliseconds, the commit phase of a currently running command waits before rolling back. When greater than 0, overrides the value of the corresponding CommitTimeout property in the server configuration. |   
 |**CompareCaseSensitiveStringFlags**|Adjusts case-sensitive string comparisons for a specified locale. For more information about setting this property, see [CompareCaseSensitiveStringFlags Property](http://msdn.microsoft.com/library/aa237459\(v=sql.80\).aspx).|  
 |**Compression Level**|If **TransportCompression** is XPRESS, you can set the compression level to control how much compression is used. Valid values are 0 through 9, with 0 having least compression, and 9 having the most compression. Increased compression slows performance. The default value is 0.|  
 |**Connect Timeout**|Determines the maximum amount of time (in seconds) the client attempts a connection before timing out. If a connection does not succeed within this period, the client quits trying to connect and generates an error.|  
+|**DbpropMsmdRequestMemoryLimit**|This property overrides the [Memory\QueryMemoryLimit](../server-properties/memory-properties.md) server property value for a connection. Specified in kilobytes. |
 |**MDX Compatibility**|The purpose of this property is to ensure a consistent set of MDX behaviors for applications that issue MDX queries. Excel, which uses MDX queries to populate and calculate a PivotTable connected to Analysis Services, sets this property to 1, to ensure that placeholder members in ragged hierarchies are visible in a PivotTable. Valid values include 0, 1, 2.<br /><br /> 0 and 1 expose placeholder members; 2 does not. If this is empty, 0 is assumed.|  
 |**MDX Missing Member Mode=Error**|Indicates whether missing members are ignored in MDX statements. Valid values are Default, Error, and Ignore. Default uses a server-defined value. Error generates an error when a member does not exist. Ignore specifies that missing values should be ignored.|  
 |**Optimize Response**|A bitmask indicating which of the following query response optimizations are enabled.<br /><br /> -   0x01 Use the NormalTupleSet (this is the default)<br />-   0x02 Use when slicers are empty|  
@@ -133,7 +108,7 @@ ms.workload: "On Demand"
 -   Use Formula Cache  
   
 ##  <a name="bkmk_examples"></a> Example connection strings  
- This section shows the connection string that you’ll most likely use when setting up an Analysis Services connection in commonly used applications.  
+ This section shows the connection string that you'll most likely use when setting up an Analysis Services connection in commonly used applications.  
   
  **Generic connection string**  
   
@@ -154,17 +129,17 @@ ms.workload: "On Demand"
   
  **Native (or direct) connections to the server**  
   
- `Data Source=server[:port][\instance]` where “port” and “\instance” are optional. For example, specifying “Data Source=server1” opens a connection to the default instance (and default port 2383) on a server named “server1”.  
+ `Data Source=server[:port][\instance]` where "port" and "\instance" are optional. For example, specifying "Data Source=server1" opens a connection to the default instance (and default port 2383) on a server named "server1".  
   
- “Data Source=server1:port1” will open a connection to an Analysis Services instance running on port “port1” on “server1”.  
+ "Data Source=server1:port1" will open a connection to an Analysis Services instance running on port "port1" on "server1".  
   
- “Data Source=server1\instance1” will open a connection to SQL Browser (on its default port 2382), resolve the port for the named instance  “instance1”, then open the connection to that Analysis Services port.  
+ "Data Source=server1\instance1" will open a connection to SQL Browser (on its default port 2382), resolve the port for the named instance  "instance1", then open the connection to that Analysis Services port.  
   
- “Data Source=server1:port1\instance1” will open a connection to SQL Browser on “port1”, resolve the port for the “instance1” named instance, then open the connection to that Analysis Services port.  
+ "Data Source=server1:port1\instance1" will open a connection to SQL Browser on "port1", resolve the port for the "instance1" named instance, then open the connection to that Analysis Services port.  
   
  **Local cube connections (.cub files)**  
   
- `Data Source=<path>`, for example “Data Source=c:\temp\a.cub”  
+ `Data Source=<path>`, for example "Data Source=c:\temp\a.cub"  
   
  **Http(s) connections to msmdpump.dll**  
   

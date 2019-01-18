@@ -2,15 +2,10 @@
 title: "FORMAT (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/15/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.service: ""
-ms.component: "t-sql|functions"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: t-sql
 ms.topic: "language-reference"
 f1_keywords: 
   - "FORMAT_TSQL"
@@ -20,16 +15,18 @@ dev_langs:
 helpviewer_keywords: 
   - "FORMAT function"
 ms.assetid: dad6f24c-b8d9-4dbe-a561-9b167b8f20c8
-caps.latest.revision: 21
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "craigg"
-ms.workload: "Active"
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
 ---
 # FORMAT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
-  Returns a value formatted with the specified format and optional culture in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Use the FORMAT function for locale-aware formatting of date/time and number values as strings. For general data type conversions, use CAST or CONVERT.  
+> [!div class="nextstepaction"]
+> [Please share your feedback about the SQL Docs Table of Contents!](https://aka.ms/sqldocsurvey)
+
+
+Returns a value formatted with the specified format and optional culture in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Use the FORMAT function for locale-aware formatting of date/time and number values as strings. For general data type conversions, use CAST or CONVERT.  
   
  ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -46,7 +43,7 @@ FORMAT ( value, format [, culture ] )
  *format*  
  **nvarchar** format pattern.  
   
- The *format* argument must contain a valid .NET Framework format string, either as a standard format string (for example, "C" or "D"), or as a pattern of custom characters for dates and numeric values (for example, "MMMM DD, yyyy (dddd)"). Composite formatting is not supported. For a full explanation of these formatting patterns, consult the .NET Framework documentation on string formatting in general, custom date and time formats, and custom number formats. A good starting point is the topic, "[Formatting Types](http://go.microsoft.com/fwlink/?LinkId=211776)."  
+ The *format* argument must contain a valid .NET Framework format string, either as a standard format string (for example, "C" or "D"), or as a pattern of custom characters for dates and numeric values (for example, "MMMM DD, yyyy (dddd)"). Composite formatting is not supported. For a full explanation of these formatting patterns, consult the .NET Framework documentation on string formatting in general, custom date and time formats, and custom number formats. A good starting point is the topic, "[Formatting Types](https://go.microsoft.com/fwlink/?LinkId=211776)."  
   
  *culture*  
  Optional **nvarchar** argument specifying a culture.  
@@ -125,7 +122,7 @@ Saturday, October 01, 2011   01 October 2011               Samstag, 1. Oktober 2
 ```  
   
 ### B. FORMAT with custom formatting strings  
- The following example shows formatting numeric values by specifying a custom format. The example assumes that the current date is September 27, 2012. For more information about these and other custom formats, see [Custom Numeric Format Strings](http://msdn.microsoft.com/library/0c899ak8.aspx).  
+ The following example shows formatting numeric values by specifying a custom format. The example assumes that the current date is September 27, 2012. For more information about these and other custom formats, see [Custom Numeric Format Strings](https://msdn.microsoft.com/library/0c899ak8.aspx).  
   
 ```sql  
 DECLARE @d DATETIME = GETDATE();  
@@ -144,7 +141,7 @@ DateTime Result  Custom Number Result
 ```  
   
 ### C. FORMAT with numeric types  
- The following example returns 5 rows from the **Sales.CurrencyRate** table in the [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] database. The column **EndOfDateRate** is stored as type **money** in the table. In this example, the column is returned unformatted and then formatted by specifying the .NET Number format, General format, and Currency format types. For more information about these and other numeric formats, see [Standard Numeric Format Strings](http://msdn.microsoft.com/library/dwhawy9k.aspx).  
+ The following example returns 5 rows from the **Sales.CurrencyRate** table in the [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] database. The column **EndOfDateRate** is stored as type **money** in the table. In this example, the column is returned unformatted and then formatted by specifying the .NET Number format, General format, and Currency format types. For more information about these and other numeric formats, see [Standard Numeric Format Strings](https://msdn.microsoft.com/library/dwhawy9k.aspx).  
   
 ```sql  
 SELECT TOP(5)CurrencyRateID, EndOfDayRate  
@@ -210,5 +207,7 @@ SELECT FORMAT(cast('07:35' as time), N'hh\:mm');  --> returns 07:35
   
 ## See Also  
  [CAST and CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)  
+ [STR &#40;Transact-SQL&#41;](../../t-sql/functions/str-transact-sql.md)  
+ [String Functions &#40;Transact-SQL&#41;](../../t-sql/functions/string-functions-transact-sql.md)   
   
   

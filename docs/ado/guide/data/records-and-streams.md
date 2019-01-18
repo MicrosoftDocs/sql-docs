@@ -1,27 +1,20 @@
 ---
 title: "Records and Streams | Microsoft Docs"
-ms.prod: "sql-non-specified"
-ms.prod_service: "drivers"
-ms.service: ""
-ms.component: "ado"
-ms.technology:
-  - "drivers"
+ms.prod: sql
+ms.prod_service: connectivity
+ms.technology: connectivity
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "streams [ADO]"
   - "streams [ADO], about streams"
   - "records [ADO]"
 ms.assetid: 4d68868e-2611-4b5c-9a89-7caa5f753151
-caps.latest.revision: 12
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
-ms.workload: "Inactive"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # Records and Streams
 ADO currently provides the [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) object as the primary means of accessing information in data sources, such as relational databases. However, some providers support the [Record](../../../ado/reference/ado-api/record-object-ado.md) and [Stream](../../../ado/reference/ado-api/stream-object-ado.md) objects as alternative or complementary objects with which data from providers can be manipulated. For specifics on **Record** behavior, see your provider's documentation.  

@@ -2,16 +2,11 @@
 title: "View the Data and Log Files in a Backup Set (SQL Server) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/15/2017"
-ms.prod: "sql-non-specified"
-ms.prod_service: "database-engine"
-ms.service: ""
-ms.component: "backup-restore"
+ms.prod: sql
+ms.prod_service: backup-restore
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "dbe-backup-restore"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: backup-restore
+ms.topic: conceptual
 helpviewer_keywords: 
   - "database backups [SQL Server], viewing backup sets"
   - "viewing backup set information"
@@ -20,11 +15,9 @@ helpviewer_keywords:
   - "transaction log backups [SQL Server], viewing backup sets"
   - "backing up [SQL Server], viewing backup sets"
 ms.assetid: abb6420c-f809-426e-aeb4-d0a74989cf39
-caps.latest.revision: 23
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-ms.workload: "On Demand"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ---
 # View the Data and Log Files in a Backup Set (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

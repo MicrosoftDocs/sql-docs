@@ -2,26 +2,18 @@
 title: "Assemblies (Database Engine) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-non-specified"
-ms.prod_service: "database-engine"
-ms.service: ""
-ms.component: "clr"
+ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-
-ms.tgt_pltfrm: ""
+ms.technology: clr
 ms.topic: "reference"
 helpviewer_keywords: 
   - "assemblies [CLR integration]"
   - "assemblies [CLR integration], about assemblies"
   - "managed code [SQL Server], assemblies"
 ms.assetid: 4b146437-3061-47f6-9e8c-26eeea10b54e
-caps.latest.revision: 28
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-ms.workload: "Inactive"
+author: "rothja"
+ms.author: "jroth"
+manager: craigg
 ---
 # Assemblies (Database Engine)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -33,7 +25,7 @@ ms.workload: "Inactive"
   
 -   CLR functions. For more information, see [Create CLR Functions](../../relational-databases/user-defined-functions/create-clr-functions.md).  
   
--   CLR stored procedures. For more information, see [CLR Stored Procedures](http://msdn.microsoft.com/library/bbdd51b2-a9b4-4916-ba6f-7957ac6c3f33).  
+-   CLR stored procedures. For more information, see [CLR Stored Procedures](https://msdn.microsoft.com/library/bbdd51b2-a9b4-4916-ba6f-7957ac6c3f33).  
   
 -   CLR triggers. For more information, see [Create CLR Triggers](../../relational-databases/triggers/create-clr-triggers.md).  
   

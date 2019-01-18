@@ -2,15 +2,10 @@
 title: "sp_detach_db (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "09/30/2015"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "database-engine"
-ms.service: ""
-ms.component: "system-stored-procedures"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: system-objects
 ms.topic: "language-reference"
 f1_keywords: 
   - "sp_detach_db"
@@ -21,11 +16,9 @@ helpviewer_keywords:
   - "sp_detach_db"
   - "detaching databases [SQL Server]"
 ms.assetid: abcb1407-ff78-4c76-b02e-509c86574462
-caps.latest.revision: 86
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-ms.workload: "On Demand"
+author: "stevestein"
+ms.author: "sstein"
+manager: craigg
 ---
 # sp_detach_db (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -58,7 +51,7 @@ sp_detach_db [ @dbname= ] 'database_name'
  [ **@keepfulltextindexfile=** ] **'***KeepFulltextIndexFile***'**  
  Specifies that the full-text index file associated with the database that is being detached will not be dropped during the database detach operation. *KeepFulltextIndexFile* is a **nvarchar(10)** value with a default of **true**. If *KeepFulltextIndexFile* is **false**, all the full-text index files associated with the database and the metadata of the full-text index are dropped, unless the database is read-only. If NULL or **true**, full-text related metadata are kept.  
   
-> [!IMPORTANT]  
+> [!IMPORTANT]
 >  The**@keepfulltextindexfile** parameter will be removed in a future version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Do not use this parameter in new development work, and modify applications that currently use this parameter as soon as possible.  
   
 ## Return Code Values  

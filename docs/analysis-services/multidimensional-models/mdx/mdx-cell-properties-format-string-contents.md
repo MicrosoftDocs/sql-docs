@@ -1,31 +1,14 @@
 ---
 title: "FORMAT_STRING Contents (MDX) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/13/2017"
-ms.prod: analysis-services
-ms.prod_service: "analysis-services"
-ms.service: ""
-ms.component: ""
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
-  
-ms.component: multidimensional-tabular
-ms.component: data-mining
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "formats [Analysis Services], string values"
-  - "VALUE property"
-  - "formats [Analysis Services], numeric values"
-  - "FORMATTED_VALUE property"
-  - "FORMAT_STRING contents"
-ms.assetid: c354c938-0328-4b8e-adc5-3b52fd2a7152
-caps.latest.revision: 29
-author: "Minewiskan"
-ms.author: "owend"
-manager: "kfile"
-ms.workload: "On Demand"
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: mdx
+ms.topic: conceptual
+ms.author: owend
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
 ---
 # MDX Cell Properties - FORMAT_STRING Contents
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
@@ -85,7 +68,7 @@ ms.workload: "On Demand"
 |**/**|Represents a date separator that separates the day, month, and year when date values are formatted.<br /><br /> The actual character used as the date separator in formatted output is determined by the system settings on the computer.<br /><br /> Note: In some locales, other characters may used as the date separator.|  
 |**E- E+ e- e+**|Represents scientific format.<br /><br /> If the format expression contains at least one digit placeholder (**0** or **#**) to the right of **E-**, **E+**, **e-**, or **e+**, the formatted value displays in scientific format and E or e is inserted between the number and the number's exponent. The number of digit placeholders to the right determines the number of digits in the exponent. Use **E-** or **e-** to include a minus sign next to negative exponents. Use **E+** or **e+** to include a minus sign next to negative exponents and a plus sign next to positive exponents.|  
 |**- + $ ( )**|Displays a literal character.<br /><br /> To display a character other than one of those listed, put a backslash (**\\**)  before the character or enclose the character in double quotation marks (**" "**).|  
-|**\\**|Displays the next character in the format string.<br /><br /> To display a character that has special meaning as a literal character, put a backslash (**\\**) before the character. The backslash itself is not displayed. Using a backslash is the same as enclosing the next character in double quotation marks. To display a backslash, use two backslashes (**\\\\**). Examples of characters that cannot be displayed as literal characters include the following characters:<br /><br /> <br /><br /> The date-formatting and time-formatting characters—**a**, **c**, **d**, **h**, **m**, **n**, **p**, **q**, **s**, **t**, **w**, **y**, **/**, and **:**<br /><br /> The numeric-formatting characters—**#**, **0**, **%**, **E**, **e**, **comma**, and **period**<br /><br /> The string-formatting characters—**@**, **&**, **\<**, **>**, and **!**|  
+|**\\**|Displays the next character in the format string.<br /><br /> To display a character that has special meaning as a literal character, put a backslash (**\\**) before the character. The backslash itself is not displayed. Using a backslash is the same as enclosing the next character in double quotation marks. To display a backslash, use two backslashes (**\\\\**). Examples of characters that cannot be displayed as literal characters include the following characters:<br /><br /> <br /><br /> The date-formatting and time-formatting characters-**a**, **c**, **d**, **h**, **m**, **n**, **p**, **q**, **s**, **t**, **w**, **y**, **/**, and **:**<br /><br /> The numeric-formatting characters-**#**, **0**, **%**, **E**, **e**, **comma**, and **period**<br /><br /> The string-formatting characters-**@**, **&**, **\<**, **>**, and **!**|  
 |**"ABC"**|Displays the string inside the double quotation marks (**" "**).<br /><br /> To include a string in format from within code, use Chr(**34**) to enclose the text. (The character code for a double quotation mark is **34**.)|  
   
 ### Named Numeric Formats  
@@ -111,28 +94,28 @@ ms.workload: "On Demand"
 |**:**|Represents a time separator that separates hours, minutes, and seconds when time values are formatted.<br /><br /> The actual character used as the time separator in formatted output is determined by the system settings of the computer.<br /><br /> Note: In some locales, other characters may used as the time separator.|  
 |**/**|Represents a date separator that separates the day, month, and year when date values are formatted.<br /><br /> The actual character used as the date separator in formatted output is determined by the system settings of the computer.<br /><br /> Note: In some locales, other characters may be used to represent the date separator|  
 |**C**|Displays the date as **ddddd** and displays the time as **ttttt**, in that order.<br /><br /> Displays only date information if there is no fractional part to the date serial number. Displays only time information if there is no integer portion.|  
-|**d**|Displays the day as a number without a leading zero (1–31).|  
-|**dd**|Displays the day as a number with a leading zero (01–31).|  
-|**ddd**|Displays the day as an abbreviation (Sun–Sat).|  
-|**dddd**|Displays the day as a full name (Sunday–Saturday).|  
+|**d**|Displays the day as a number without a leading zero (1-31).|  
+|**dd**|Displays the day as a number with a leading zero (01-31).|  
+|**ddd**|Displays the day as an abbreviation (Sun-Sat).|  
+|**dddd**|Displays the day as a full name (Sunday-Saturday).|  
 |**ddddd**|Displays the date as a complete date (including day, month, and year), formatted according to your system's short date format setting.<br /><br /> For Microsoft Windows, the default short date format is **m/d/yy**.|  
 |**dddddd**|Displays a date serial number as a complete date (including day, month, and year), formatted according to the long date setting recognized by the computer system.<br /><br /> For Windows, the default long date format is **mmmm dd, yyyy**.|  
 |**w**|Displays the day of the week as a number (1 for Sunday through 7 for Saturday).|  
-|**ww**|Displays the week of the year as a number (1–54).|  
-|**m**|Displays the month as a number without a leading zero (1–12).<br /><br /> If **m** immediately follows **h** or **hh**, the minute instead of the month is displayed.|  
-|**mm**|Displays the month as a number with a leading zero (01–12).<br /><br /> If **m** immediately follows **h** or **hh**, the minute instead of the month is displayed.|  
-|**mmm**|Displays the month as an abbreviation (Jan–Dec).|  
-|**mmmm**|Displays the month as a full month name (January–December).|  
-|**q**|Displays the quarter of the year as a number (1–4).|  
-|**y**|Displays the day of the year as a number (1–366).|  
-|**yy**|Displays the year as a two-digit number (00–99).|  
-|**yyyy**|Displays the year as a four-digit number (100–9999).|  
-|**h**|Displays the hour as a number without leading zeros (0–23).|  
-|**hh**|Displays the hour as a number with leading zeros (00–23).|  
-|**n**|Displays the minute as a number without leading zeros (0–59).|  
-|**nn**|Displays the minute as a number with leading zeros (00–59).|  
-|**s**|Displays the second as a number without leading zeros (0–59).|  
-|**ss**|Displays the second as a number with leading zeros (00–59).|  
+|**ww**|Displays the week of the year as a number (1-54).|  
+|**m**|Displays the month as a number without a leading zero (1-12).<br /><br /> If **m** immediately follows **h** or **hh**, the minute instead of the month is displayed.|  
+|**mm**|Displays the month as a number with a leading zero (01-12).<br /><br /> If **m** immediately follows **h** or **hh**, the minute instead of the month is displayed.|  
+|**mmm**|Displays the month as an abbreviation (Jan-Dec).|  
+|**mmmm**|Displays the month as a full month name (January-December).|  
+|**q**|Displays the quarter of the year as a number (1-4).|  
+|**y**|Displays the day of the year as a number (1-366).|  
+|**yy**|Displays the year as a two-digit number (00-99).|  
+|**yyyy**|Displays the year as a four-digit number (100-9999).|  
+|**h**|Displays the hour as a number without leading zeros (0-23).|  
+|**hh**|Displays the hour as a number with leading zeros (00-23).|  
+|**n**|Displays the minute as a number without leading zeros (0-59).|  
+|**nn**|Displays the minute as a number with leading zeros (00-59).|  
+|**s**|Displays the second as a number without leading zeros (0-59).|  
+|**ss**|Displays the second as a number with leading zeros (00-59).|  
 |**t t t t t**|Displays a time as a complete time (including hour, minute, and second), formatted using the time separator defined by the time format recognized by the computer system.<br /><br /> A leading zero is displayed if the leading zero option is selected, and the time is earlier than 10:00 in either the A.M. or the P.M. cycle. For example, 09:59,<br /><br /> For Windows, the default time format is **h:mm:ss**.|  
 |**AM/PM**|Displays an uppercase **AM** with any hour from midnight until noon; displays an uppercase **PM** with any hour from noon until midnight.<br /><br /> Note: Uses the 12-hour clock.|  
 |**am/pm**|Displays a lowercase **am** with any hour from midnight until noon; displays a lowercase **pm** with any hour from noon until midnight.<br /><br /> Note: Uses the 12-hour clock.|  

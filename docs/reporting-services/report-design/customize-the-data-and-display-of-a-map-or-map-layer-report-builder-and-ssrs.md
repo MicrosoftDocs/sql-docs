@@ -1,18 +1,12 @@
 ---
 title: "Customize the Data and Display of a Map or Map Layer (Report Builder and SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/07/2017"
+ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
-ms.service: ""
-ms.component: "report-design"
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
+ms.technology: report-design
 
 
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "10521"
   - "sql13.rtp.rptdesigner.mapgroupproperties.filter.f1"
@@ -27,11 +21,8 @@ f1_keywords:
   - "sql13.rtp.rptdesigner.mapgroupproperties.variables.f1"
   - "10507"
 ms.assetid: fdd9b994-d138-4990-a291-279b0249eb72
-caps.latest.revision: 13
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "kfile"
-ms.workload: "Inactive"
+author: maggiesMSFT
+ms.author: maggies
 ---
 # Customize the Data and Display of a Map or Map Layer (Report Builder and SSRS)
   After you add a map or map layer to a [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] paginated report by using a wizard, you might want to change the way the map looks in the report. You can make improvements by considering the following ideas:  
@@ -91,7 +82,7 @@ ms.workload: "Inactive"
   
 -   Resolution and simplification. Choose a balance between drawing time and detailed outlines for lines and polygons.  
   
- To change these options, right-click the map viewport, use the [Map Viewport Properties Dialog Box, General](http://msdn.microsoft.com/library/6c9c773e-5c56-4571-95ed-8a157cfdfe52) page and related pages.  
+ To change these options, right-click the map viewport, use the [Map Viewport Properties Dialog Box, General](https://msdn.microsoft.com/library/6c9c773e-5c56-4571-95ed-8a157cfdfe52) page and related pages.  
   
 ##  <a name="Legends"></a> Change Options for the Legends  
  Legends help users interpret the data on a map.  
@@ -122,11 +113,11 @@ ms.workload: "Inactive"
  For more information about layers, see [Add, Change, or Delete a Map or Map Layer &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/add-change-or-delete-a-map-or-map-layer-report-builder-and-ssrs.md).  
   
 ##  <a name="DataGrouping"></a> Change Data Grouping for the Layer  
- You can customize the way to aggregate spatial data for your own shapes. To set the group properties for a layer, select the layer in the Map pane, and in the Properties pane for the layer, click **Group**, and then click the ellipsis (…) to open the Group properties. In this dialog box, you can specify group expressions, create group variables, and filter data that is used for grouping.  
+ You can customize the way to aggregate spatial data for your own shapes. To set the group properties for a layer, select the layer in the Map pane, and in the Properties pane for the layer, click **Group**, and then click the ellipsis (...) to open the Group properties. In this dialog box, you can specify group expressions, create group variables, and filter data that is used for grouping.  
   
  The group expression specifies how analytical data that has a relationship to spatial data is aggregated for each map element on the layer. By default, the group expression is the set of match fields that was specified for the relationship between the spatial data and the analytical data. For example, for a bubble map that displays city locations and population size for a country or region, the match fields include city name [City] and region name [Region] because there can be multiple cities with the same name. The corresponding group expression includes two fields: [City] and [Region].  
   
- For more information, see [Map Tips: How To Import Shapefiles Into SQL Server and Aggregate Spatial Data](http://go.microsoft.com/fwlink/?LinkID=214991).  
+ For more information, see [Map Tips: How To Import Shapefiles Into SQL Server and Aggregate Spatial Data](https://go.microsoft.com/fwlink/?LinkID=214991).  
   
 ##  <a name="MapElements"></a> Change Options for the Map Elements on the Layer  
  Map elements are the points, lines, or polygons on a layer that are based on the spatial data. For map elements, the following options can be set. These options apply to all map elements on the layer, whether or not they are embedded:  

@@ -1,26 +1,21 @@
 ---
 title: Migrate a SQL Server database from Windows to Linux | Microsoft Docs
-description: This tutorial shows how to take a SQL Server database backup on Windows and restore it to a Linux machine running SQL Server 2017.
+description: This tutorial shows how to take a SQL Server database backup on Windows and restore it to a Linux machine running SQL Server.
 author: MikeRayMSFT 
 ms.author: mikeray 
-manager: jhubbard
+manager: craigg
 ms.date: 08/16/2017
-ms.topic: article
-ms.prod: "sql-non-specified"
-ms.prod_service: "database-engine"
-ms.service: ""
-ms.component: sql-linux
-ms.suite: "sql"
-ms.custom: ""
-ms.technology: database-engine
+ms.topic: conceptual
+ms.prod: sql
+ms.custom: "sql-linux"
+ms.technology: linux
 ms.assetid: 9ac64d1a-9fe5-446e-93c3-d17b8f55a28f
-ms.workload: "On Demand"
 ---
 # Migrate a SQL Server database from Windows to Linux using backup and restore
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-SQL Server's backup and restore feature is the recommended way to migrate a database from SQL Server on Windows to SQL Server 2017 on Linux. In this tutorial, you will walk through the steps required to move a database to Linux with backup and restore techniques.
+SQL Server's backup and restore feature is the recommended way to migrate a database from SQL Server on Windows to SQL Server on Linux. In this tutorial, you will walk through the steps required to move a database to Linux with backup and restore techniques.
 
 > [!div class="checklist"]
 > * Create a backup file on Windows with SSMS
@@ -28,6 +23,8 @@ SQL Server's backup and restore feature is the recommended way to migrate a data
 > * Move the backup file to Linux from the Bash shell
 > * Restore the backup file on Linux with Transact-SQL
 > * Run a query to verify the migration
+
+You can also create a SQL Server Always On Availability Group to migrate a SQL Server database from Windows to Linux. See [sql-server-linux-availability-group-cross-platform](sql-server-linux-availability-group-cross-platform.md).
 
 ## Prerequisites
 
@@ -39,7 +36,7 @@ The following prerequisites are required to complete this tutorial:
   * Target database to migrate.
 
 * Linux machine with the following installed:
-  * SQL Server 2017 ([RHEL](quickstart-install-connect-red-hat.md), [SLES](quickstart-install-connect-suse.md), or [Ubuntu](quickstart-install-connect-ubuntu.md)) with command-line tools.
+  * SQL Server ([RHEL](quickstart-install-connect-red-hat.md), [SLES](quickstart-install-connect-suse.md), or [Ubuntu](quickstart-install-connect-ubuntu.md)) with command-line tools.
 
 ## Create a backup on Windows
 
@@ -140,7 +137,7 @@ At this point, the backup file is on your Linux server in your user's home direc
 To restore the database backup, you can use the **RESTORE DATABASE** Transact-SQL (TQL) command.
 
 > [!NOTE]
-> The following steps use the **sqlcmd** tool. If you haven’t install SQL Server Tools, see [Install SQL Server command-line tools on Linux](sql-server-linux-setup-tools.md).
+> The following steps use the **sqlcmd** tool. If you haven't install SQL Server Tools, see [Install SQL Server command-line tools on Linux](sql-server-linux-setup-tools.md).
 
 1. In the same terminal, launch **sqlcmd**. The following example connects to the local SQL Server instance with the **SA** user. Enter the password when prompted, or specify the password by adding the **-P** parameter.
 
@@ -159,6 +156,44 @@ To restore the database backup, you can use the **RESTORE DATABASE** Transact-SQ
    ```
 
    You should get a message the database is successfully restored.
+
+   `RESTORE DATABASE` may return an error like the following example:
+
+   ```bash
+   File 'YourDB_Product' cannot be restored to 'Z:\Microsoft SQL Server\MSSQL11.GLOBAL\MSSQL\Data\YourDB\YourDB_Product.ndf'. Use WITH MOVE to identify a valid location for the file.
+   Msg 5133, Level 16, State 1, Server servername, Line 1
+   Directory lookup for the file "Z:\Microsoft SQL Server\MSSQL11.GLOBAL\MSSQL\Data\YourDB\YourDB_Product.ndf" failed with the operating system error 2(The system cannot find the file specified.).
+   ```
+   
+   In this case, the database contains secondary files. If these files are not specified in the `MOVE` clause of `RESTORE DATABASE`, the restore procedure will try to create them in the same path as the original server. 
+
+   You can list all files included in the backup:
+   ```sql
+   RESTORE FILELISTONLY FROM DISK = '/var/opt/mssql/backup/YourDB.bak'
+   GO
+   ```
+   You should get a list like the one below (listing only the two first columns):
+   ```sql
+   LogicalName         PhysicalName                                                                 ..............
+   ----------------------------------------------------------------------------------------------------------------------
+   YourDB              Z:\Microsoft SQL Server\MSSQL11.GLOBAL\MSSQL\Data\YourDB\YourDB.mdf          ..............
+   YourDB_Product      Z:\Microsoft SQL Server\MSSQL11.GLOBAL\MSSQL\Data\YourDB\YourDB_Product.ndf  ..............
+   YourDB_Customer     Z:\Microsoft SQL Server\MSSQL11.GLOBAL\MSSQL\Data\YourDB\YourDB_Customer.ndf ..............
+   YourDB_log          Z:\Microsoft SQL Server\MSSQL11.GLOBAL\MSSQL\Data\YourDB\YourDB_Log.ldf      ..............
+   ```
+   
+   You can use this list to create `MOVE` clauses for the additional files. In this example, the `RESTORE DATABASE` is:
+
+   ```sql
+   RESTORE DATABASE YourDB
+   FROM DISK = '/var/opt/mssql/backup/YourDB.bak'
+   WITH MOVE 'YourDB' TO '/var/opt/mssql/data/YourDB.mdf',
+   MOVE 'YourDB_Product' TO '/var/opt/mssql/data/YourDB_Product.ndf',
+   MOVE 'YourDB_Customer' TO '/var/opt/mssql/data/YourDB_Customer.ndf',
+   MOVE 'YourDB_Log' TO '/var/opt/mssql/data/YourDB_Log.ldf'
+   GO
+   ```
+
 
 1. Verify the restoration by listing all of the databases on the server. The restored database should be listed.
 
@@ -181,7 +216,7 @@ To restore the database backup, you can use the **RESTORE DATABASE** Transact-SQ
 
 ## Next steps
 
-In this tutorial, you learned how to back up a database on Windows and move it to a Linux server running SQL Server 2017. You learned how to:
+In this tutorial, you learned how to back up a database on Windows and move it to a Linux server running SQL Server. You learned how to:
 > [!div class="checklist"]
 > * Use SSMS and Transact-SQL to create a backup file on Windows
 > * Install a Bash shell on Windows
@@ -190,6 +225,7 @@ In this tutorial, you learned how to back up a database on Windows and move it t
 > * Relocate the backup file to prepare for restore
 > * Use **sqlcmd** to run Transact-SQL commands
 > * Restore the database backup with the **RESTORE DATABASE** command 
+> * Run the query to verify the migration
 
 Next, explore other migration scenarios for SQL Server on Linux. 
 

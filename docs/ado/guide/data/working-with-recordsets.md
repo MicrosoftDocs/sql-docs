@@ -1,28 +1,21 @@
 ---
 title: "Working with Recordsets | Microsoft Docs"
-ms.prod: "sql-non-specified"
-ms.prod_service: "drivers"
-ms.service: ""
-ms.component: "ado"
-ms.technology:
-  - "drivers"
+ms.prod: sql
+ms.prod_service: connectivity
+ms.technology: connectivity
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "Recordset object [ADO]"
 ms.assetid: bdf9a56a-de4a-44de-9111-2f11ab7b16ea
-caps.latest.revision: 13
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
-ms.workload: "Inactive"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # Working with Recordsets
-The **Recordset** object has built-in features that let you rearrange the order of the data in the result set, to search for a specific record based on criteria that you supply, and even to optimize those search operations using indexes. Whether these features are available for use depends on the provider and in some cases — such as that of the [Index](../../../ado/reference/ado-api/index-property.md) property — the structure of the data source itself.  
+The **Recordset** object has built-in features that let you rearrange the order of the data in the result set, to search for a specific record based on criteria that you supply, and even to optimize those search operations using indexes. Whether these features are available for use depends on the provider and in some cases - such as that of the [Index](../../../ado/reference/ado-api/index-property.md) property - the structure of the data source itself.  
   
 ## Arranging Data  
  Frequently, the most efficient way to order the data in your **Recordset** is by specifying an ORDER BY clause in the SQL command used to return results to it. However, you might have to change the order of the data in a **Recordset** that has already been created. You can use the **Sort** property to establish the order in which rows of a **Recordset** are traversed. Additionally, the **Filter** property determines which rows are can be accessed when traversing rows.  
@@ -44,7 +37,7 @@ The **Recordset** object has built-in features that let you rearrange the order 
 ## Finding a Specific Record  
  ADO provides the [Find](../../../ado/reference/ado-api/find-method-ado.md) and [Seek](../../../ado/reference/ado-api/seek-method.md) methods for locating a particular record in a **Recordset**. The **Find** method is supported by a variety of providers but is limited to a single search criterion. The **Seek** method supports searching on multiple criteria, but is not supported by many providers.  
   
- Indexes on fields can greatly enhance the performance of the **Find** method and **Sort** and **Filter** properties of the **Recordset** object. You can create an internal index for a **Field** object by setting its dynamic [Optimize](../../../ado/reference/ado-api/optimize-property-dynamic-ado.md) property. This dynamic property is added to the **Properties** collection of the **Field** object when you set the [CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md) property to **adUseClient**. Remember that this index is internal to ADO — you cannot gain access to it or use it for any other purpose. Also, this index is distinct from the [Index](../../../ado/reference/ado-api/index-property.md) property of the **Recordset** object.  
+ Indexes on fields can greatly enhance the performance of the **Find** method and **Sort** and **Filter** properties of the **Recordset** object. You can create an internal index for a **Field** object by setting its dynamic [Optimize](../../../ado/reference/ado-api/optimize-property-dynamic-ado.md) property. This dynamic property is added to the **Properties** collection of the **Field** object when you set the [CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md) property to **adUseClient**. Remember that this index is internal to ADO - you cannot gain access to it or use it for any other purpose. Also, this index is distinct from the [Index](../../../ado/reference/ado-api/index-property.md) property of the **Recordset** object.  
   
  The **Find** method quickly locates a value within a column (field) of a **Recordset**. You can frequently improve the speed of the **Find** method on a column by using the **Optimize** property to create an index on it.  
   
@@ -117,7 +110,7 @@ The **Recordset** object has built-in features that let you rearrange the order 
 |--------------|-----------------|  
 |**adFilterAffectedRecords**|Filters for viewing only records affected by the last **Delete**, **Resync**, **UpdateBatch**, or **CancelBatch** call.|  
 |**adFilterConflictingRecords**|Filters for viewing the records that failed the last batch update.|  
-|**adFilterFetchedRecords**|Filters for viewing the records in the current cache — that is, the results of the last call to retrieve records from the database.|  
+|**adFilterFetchedRecords**|Filters for viewing the records in the current cache - that is, the results of the last call to retrieve records from the database.|  
 |**adFilterNone**|Removes the current filter and restores all records for viewing.|  
 |**adFilterPendingRecords**|Filters for viewing only records that have changed but have not yet been sent to the server. Applicable only for batch update mode.|  
   

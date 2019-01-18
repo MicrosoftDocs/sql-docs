@@ -1,17 +1,12 @@
 ---
 title: "Command Property (ADOX) | Microsoft Docs"
-ms.prod: "sql-non-specified"
-ms.prod_service: "drivers"
-ms.service: ""
-ms.component: "ado"
-ms.technology:
-  - "drivers"
+ms.prod: sql
+ms.prod_service: connectivity
+ms.technology: connectivity
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 apitype: "COM"
 f1_keywords: 
   - "Procedure::Command"
@@ -19,11 +14,9 @@ f1_keywords:
 helpviewer_keywords: 
   - "Command property [ADOX]"
 ms.assetid: bcc9146f-586f-4e69-9c10-863440c9cffa
-caps.latest.revision: 11
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
-ms.workload: "Inactive"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # Command Property (ADOX)
 Specifies an ADO [Command](../../../ado/reference/ado-api/command-object-ado.md) object that can be used to create or execute the procedure.  

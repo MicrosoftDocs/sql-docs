@@ -2,15 +2,10 @@
 title: "sp_delete_maintenance_plan_db (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "database-engine"
-ms.service: ""
-ms.component: "system-stored-procedures"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: system-objects
 ms.topic: "language-reference"
 f1_keywords: 
   - "sp_delete_maintenance_plan_db_TSQL"
@@ -23,11 +18,9 @@ helpviewer_keywords:
   - "removing maintenance plan"
   - "disassociating maintenance plan"
 ms.assetid: d1e8afb5-12ee-492b-a770-ba708ed7c8a4
-caps.latest.revision: 24
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-ms.workload: "Inactive"
+author: "stevestein"
+ms.author: "sstein"
+manager: craigg
 ---
 # sp_delete_maintenance_plan_db (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -50,10 +43,10 @@ sp_delete_maintenance_plan_db [ @plan_id = ] 'plan_id' ,
 ```  
   
 ## Arguments  
- [ **@plan_id =**] **'***plan_id***'**  
+ [ **@plan_id =**] **'**_plan\_id_**'**  
  Specifies the maintenance plan ID. *plan_id* is **uniqueidentifier**.  
   
- [ **@db_name =**] **'***database_name***'**  
+ [ **@db_name =**] **'**_database\_name_**'**  
  Specifies the database name to be deleted from the maintenance plan. *database_name* is **sysname**.  
   
 ## Return Code Values  

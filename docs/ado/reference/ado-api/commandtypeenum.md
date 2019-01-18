@@ -1,28 +1,21 @@
 ---
 title: "CommandTypeEnum | Microsoft Docs"
-ms.prod: "sql-non-specified"
-ms.prod_service: "drivers"
-ms.service: ""
-ms.component: "ado"
-ms.technology:
-  - "drivers"
+ms.prod: sql
+ms.prod_service: connectivity
+ms.technology: connectivity
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 apitype: "COM"
 f1_keywords: 
   - "CommandTypeEnum"
 helpviewer_keywords: 
   - "CommandTypeEnum enumeration [ADO]"
 ms.assetid: 4b1feb9c-a855-40fe-a906-efe688687e9f
-caps.latest.revision: 13
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
-ms.workload: "On Demand"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # CommandTypeEnum
 Specifies how a command argument should be interpreted.  

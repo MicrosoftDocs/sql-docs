@@ -2,26 +2,17 @@
 title: "Persisting Custom Objects | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/04/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "integration-services"
-ms.service: ""
-ms.component: "extending-packages-custom-objects"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-
-ms.tgt_pltfrm: ""
+ms.technology: integration-services
 ms.topic: "reference"
-applies_to: 
-  - "SQL Server 2016 Preview"
 helpviewer_keywords: 
   - "custom objects [Integration Services], persisting"
 ms.assetid: 97c19716-6447-4c1c-b277-cc2e6c1e6a6c
-caps.latest.revision: 21
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
-ms.workload: "Inactive"
+manager: craigg
 ---
 # Persisting Custom Objects
   You do not need to implement custom persistence for the custom objects that you create as long as their properties use only simple data types such as **integer** and **string**. The default implementation of persistence saves the metadata for your object along with the values of all its properties.  

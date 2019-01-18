@@ -1,28 +1,14 @@
 ---
 title: "Tools and Approaches for Processing (Analysis Services) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/04/2017"
-ms.prod: analysis-services
-ms.prod_service: "analysis-services"
-ms.service: ""
-ms.component: ""
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
-  
-ms.component: multidimensional-tabular
-ms.component: data-mining
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "process [Analysis Services]"
-  - "processing [Analysis Services]"
-ms.assetid: 82347a16-4145-4655-8adf-2a300f1fdf99
-caps.latest.revision: 34
-author: "Minewiskan"
-ms.author: "owend"
-manager: "kfile"
-ms.workload: "Inactive"
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: multidimensional-models
+ms.topic: conceptual
+ms.author: owend
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
 ---
 # Tools and Approaches for Processing (Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -46,12 +32,12 @@ ms.workload: "Inactive"
   
 -   Monitor processing with SQL Server Profiler  
   
--   Program a custom solution using AMO. For more information, see [Programming AMO OLAP Basic Objects](../../analysis-services/multidimensional-models/analysis-management-objects/programming-amo-olap-basic-objects.md).  
+-   Program a custom solution using AMO. For more information, see [Programming AMO OLAP Basic Objects](https://docs.microsoft.com/bi-reference/amo/programming-amo-olap-basic-objects).  
   
  Processing is a highly configurable operation, controlled by a set of processing options that determine whether full or incremental processing occurs at the object level. For more information about processing options and objects, see [Processing Options and Settings &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/processing-options-and-settings-analysis-services.md) and [Processing Analysis Services Objects](../../analysis-services/multidimensional-models/processing-analysis-services-objects.md).  
   
 > [!NOTE]  
->  This topic describes the tools and approaches for processing multidimensional models. For more information about processing tabular models, see [Process Database, Table, or Partition &#40;Analysis Services&#41;](../../analysis-services/tabular-models/process-database-table-or-partition-analysis-services.md) and [Process Data &#40;SSAS Tabular&#41;](../../analysis-services/tabular-models/process-data-ssas-tabular.md).  
+>  This topic describes the tools and approaches for processing multidimensional models. For more information about processing tabular models, see [Process Database, Table, or Partition &#40;Analysis Services&#41;](../../analysis-services/tabular-models/process-database-table-or-partition-analysis-services.md) and [Process Data](../../analysis-services/tabular-models/process-data-ssas-tabular.md).  
   
 ### Processing objects in SQL Server Management Studio  
   

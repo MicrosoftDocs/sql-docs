@@ -2,24 +2,16 @@
 title: "MSSQLSERVER_8992 | Microsoft Docs"
 ms.custom: ""
 ms.date: "04/04/2017"
-ms.prod: "sql-non-specified"
-ms.prod_service: "database-engine"
-ms.service: ""
-ms.component: "errors-events"
+ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: supportability
 ms.topic: "language-reference"
 helpviewer_keywords: 
   - "8992 (Database Engine error)"
 ms.assetid: 68467e6a-09d8-478f-8bd9-3bb09453ada3
-caps.latest.revision: 22
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "craigg"
-ms.workload: "Inactive"
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
 ---
 # MSSQLSERVER_8992
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -78,5 +70,5 @@ This error cannot be repaired.  If you cannot restore the database from a backup
 Do not make manual updates to system tables. SQL Server does not support any manual changes to system databases. If you update a system table in a SQL Server database, two events (event ID 17659 and event ID 3859) are logged. For more information, see KB article 2688307, "Event ID 17659 and event ID 3859 are logged when you update system tables in a SQL Server database".  
   
 ## See Also  
-[Event ID 17659 and event ID 3859 are logged when you update system tables in a SQL Server database](http://support.microsoft.com/kb/2688307/EN-US)  
+[Event ID 17659 and event ID 3859 are logged when you update system tables in a SQL Server database](https://support.microsoft.com/kb/2688307/EN-US)  
   

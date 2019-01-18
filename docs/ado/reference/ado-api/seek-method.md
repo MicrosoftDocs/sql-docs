@@ -1,17 +1,12 @@
 ---
 title: "Seek Method | Microsoft Docs"
-ms.prod: "sql-non-specified"
-ms.prod_service: "drivers"
-ms.service: ""
-ms.component: "ado"
-ms.technology:
-  - "drivers"
+ms.prod: sql
+ms.prod_service: connectivity
+ms.technology: connectivity
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 apitype: "COM"
 f1_keywords: 
   - "Recordset21::Seek"
@@ -19,11 +14,9 @@ f1_keywords:
 helpviewer_keywords: 
   - "Seek method [ADO]"
 ms.assetid: 129293d2-19d3-4940-bf64-483ee72fb4a1
-caps.latest.revision: 12
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
-ms.workload: "Inactive"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # Seek Method
 Searches the index of a [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) to quickly locate the row that matches the specified values, and changes the current row position to that row.  

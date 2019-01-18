@@ -2,15 +2,10 @@
 title: "AVG (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/24/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
-ms.service: ""
-ms.component: "t-sql|functions"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: t-sql
 ms.topic: "language-reference"
 f1_keywords: 
   - "AVG_TSQL"
@@ -24,16 +19,15 @@ helpviewer_keywords:
   - "values [SQL Server], average"
   - "average values"
 ms.assetid: 4534b705-d946-441b-9b5d-5fbe561c9131
-caps.latest.revision: 52
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "craigg"
-ms.workload: "Active"
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # AVG (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-Returns the average of the values in a group. Null values are ignored.
+This function returns the average of the values in a group. It ignores null values.
   
 ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -41,7 +35,7 @@ Returns the average of the values in a group. Null values are ignored.
   
 ```sql
 AVG ( [ ALL | DISTINCT ] expression )  
-   OVER ( [ partition_by_clause ] order_by_clause )    
+   [ OVER ( [ partition_by_clause ] order_by_clause ) ]
 ```  
   
 ## Arguments  
@@ -49,16 +43,16 @@ ALL
 Applies the aggregate function to all values. ALL is the default.
   
 DISTINCT  
-Specifies that AVG be performed only on each unique instance of a value, regardless of how many times the value occurs.
+Specifies that AVG operates only on one unique instance of each value, regardless of how many times that value occurs.
   
 *expression*  
-Is an [expression](../../t-sql/language-elements/expressions-transact-sql.md) of the exact numeric or approximate numeric data type category, except for the **bit** data type. Aggregate functions and subqueries are not permitted.
+An [expression](../../t-sql/language-elements/expressions-transact-sql.md) of the exact numeric or approximate numeric data type category, except for the **bit** data type. Aggregate functions and subqueries are not permitted.
   
-OVER **(** [ *partition_by_clause* ] *order_by_clause***)**  
-*partition_by_clause* divides the result set produced by the FROM clause into partitions to which the function is applied. If not specified, the function treats all rows of the query result set as a single group. *order_by_clause* determines the logical order in which the operation is performed. *order_by_clause* is required. For more information, see [OVER Clause &#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md).
+OVER **(** [ *partition_by_clause* ] _order\_by\_clause_**)**  
+*partition_by_clause* divides the result set produced by the FROM clause into partitions to which the function is applied. If not specified, the function treats all rows of the query result set as a single group. The *order_by_clause* determines the logical order in which the operation is performed. The *order_by_clause* is required. For more information, see [OVER Clause &#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md).
   
 ## Return types
-The return type is determined by the type of the evaluated result of *expression*.
+The evaluated result of *expression* determines the return type.
   
 |Expression result|Return type|  
 |---|---|
@@ -71,16 +65,16 @@ The return type is determined by the type of the evaluated result of *expression
 |**float** and **real** category|**float**|  
   
 ## Remarks  
-If the data type of *expression* is an alias data type, the return type is also of the alias data type. However, if the base data type of the alias data type is promoted, for example from **tinyint** to **int**, the return value is of the promoted data type and not the alias data type.
+If the data type of *expression* is an alias data type, the return type is also of the alias data type. However, if the base data type of the alias data type is promoted, for example from **tinyint** to **int**, the return value will take the promoted data type, and not the alias data type.
   
-AVG () computes the average of a set of values by dividing the sum of those values by the count of nonnull values. If the sum exceeds the maximum value for the data type of the return value an error will be returned.
+AVG () computes the average of a set of values by dividing the sum of those values by the count of nonnull values. If the sum exceeds the maximum value for the data type of the return value, AVG() will return an error.
   
 AVG is a deterministic function when used without the OVER and ORDER BY clauses. It is nondeterministic when specified with the OVER and ORDER BY clauses. For more information, see [Deterministic and Nondeterministic Functions](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md).
   
 ## Examples  
   
 ### A. Using the SUM and AVG functions for calculations  
-The following example calculates the average vacation hours and the sum of sick leave hours that the vice presidents of [!INCLUDE[ssSampleDBCoFull](../../includes/sssampledbcofull-md.md)] have used. Each of these aggregate functions produces a single summary value for all the retrieved rows. The example uses the [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] database.
+This example calculates the average vacation hours, and the sum of sick leave hours, that the vice presidents of [!INCLUDE[ssSampleDBCoFull](../../includes/sssampledbcofull-md.md)] have used. Each of these aggregate functions produces a single summary value for all the retrieved rows. The example uses the [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] database.
   
 ```sql
 SELECT AVG(VacationHours)AS 'Average vacation hours',   
@@ -100,7 +94,7 @@ Average vacation hours       Total sick leave hours
 ```
   
 ### B. Using the SUM and AVG functions with a GROUP BY clause  
-When used with a `GROUP BY` clause, each aggregate function produces a single value for each group, instead of for the whole table. The following example produces summary values for each sales territoryin the [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] database. The summary lists the average bonus received by the sales people in each territory and the sum of year-to-date sales for each territory.
+When used with a `GROUP BY` clause, each aggregate function produces a single value covering each group, instead of a single value covering the whole table. The following example produces summary values for each sales territory in the [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] database. The summary lists the average bonus received by the sales people in each territory, and the sum of year-to-date sales for each territory.
   
 ```sql
 SELECT TerritoryID, AVG(Bonus)as 'Average bonus', SUM(SalesYTD) as 'YTD sales'  
@@ -130,7 +124,7 @@ NULL        0.00                  1252127.9471
 ```  
   
 ### C. Using AVG with DISTINCT  
-The following statement returns the average list price of productsin the [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] database. By specifying DISTINCT, only unique values are considered in the calculation.
+This statement returns the average list price of products in the [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] database. Through the use of DISTINCT, the calculation considers only unique values.
   
 ```sql
 SELECT AVG(DISTINCT ListPrice)  
@@ -147,7 +141,7 @@ FROM Production.Product;
 ```
   
 ### D. Using AVG without DISTINCT  
-Without DISTINCT, the `AVG` function finds the average list price of all products in the `Product` tablein the [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] database including any duplicate values.
+Without DISTINCT, the `AVG` function finds the average list price of all products in the `Product` table in the [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] database, including any duplicate values.
   
 ```sql
 SELECT AVG(ListPrice)  
@@ -164,7 +158,7 @@ FROM Production.Product;
 ```
   
 ### E. Using the OVER clause  
-The following example uses the AVG function with the OVER clause to provide a moving average of yearly sales for each territory in the `Sales.SalesPerson` table in the [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] database. The data is partitioned by `TerritoryID` and logically ordered by `SalesYTD`. This means that the AVG function is computed for each territory based on the sales year. Notice that for `TerritoryID` 1, there are two rows for sales year 2005 representing the two sales people with sales that year. The average sales for these two rows is computed and then the third row representing sales for the year 2006 is included in the computation.
+The following example uses the AVG function with the OVER clause, to provide a moving average of yearly sales for each territory in the `Sales.SalesPerson` table in the [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] database. The data is partitioned by `TerritoryID` and logically ordered by `SalesYTD`. This means that the AVG function is computed for each territory based on the sales year. Note that for `TerritoryID` 1, there are two rows for sales year 2005, which represent the two sales-people with sales that year. The average sales for these two rows is calculated, and then the third row representing sales for the year 2006 is included in the calculation.
   
 ```sql
 SELECT BusinessEntityID, TerritoryID   
@@ -201,7 +195,7 @@ BusinessEntityID TerritoryID SalesYear   SalesYTD             MovingAvg         
   
 ```  
   
-In this example, the OVER clause does not include PARTITION BY. This means that the function will be applied to all rows returned by the query. The ORDER BY clause specified in the OVER clause determines the logical order to which the AVG function is applied. The query returns a moving average of sales by year for all sales territories specified in the WHERE clause. The ORDER BY clause specified in the SELECT statement determines the order in which the rows of the query are displayed.
+In this example, the OVER clause does not include PARTITION BY. This means that the function will apply to all rows returned by the query. The ORDER BY clause specified in the OVER clause determines the logical order to which the AVG function applies. The query returns a moving average of sales, by year, for all sales territories specified in the WHERE clause. The ORDER BY clause specified in the SELECT statement determines the order in which the SELECT statement displays the rows of the query.
   
 ```sql
 SELECT BusinessEntityID, TerritoryID   

@@ -1,27 +1,20 @@
 ---
-title: "Appliance Topology (Analytics Platform System)"
-author: "barbkess" 
-ms.author: "barbkess"
-manager: "jhubbard"	  
-ms.prod: "analytics-platform-system"
-ms.prod_service: "mpp-data-warehouse"
-ms.service: ""
-ms.component:
-ms.technology: "mpp-data-warehouse"
-ms.custom: ""
-ms.date: 01/05/2017
-ms.reviewer: na
-ms.suite: "sql"
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: cd92c07e-4cee-4657-b23a-ed80bee07089
-caps.latest.revision: 4
-
+title: Appliance topology - Analytics Platform System | Microsoft Docs
+description: Displays summary information on the entire Analytics Platform System.  
+author: mzaman1 
+manager: craigg
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
 ---
-# Appliance Topology
+
+# Appliance topology - Analytics Platform System
 Displays summary information on the entire Analytics Platform System.  
   
-Expand the elements of this section to configure information that applies to the entire appliance. Select the Parallel Data Warehouse Topology or HDInsight Topology sections to configure information that applies to only that region of the appliance.  
+The page lists a read-only version of all the hosts and fabric nodes in the current appliance including their Ethernet and Infiniband IP addresses.  
   
 ![SQL_Server_PDW_DWConfig_ApplTop](./media/appliance-topology/SQL_Server_PDW_DWConfig_ApplTop.png "SQL_Server_PDW_DWConfig_ApplTop")  
   

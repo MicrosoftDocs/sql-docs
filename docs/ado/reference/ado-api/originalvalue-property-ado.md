@@ -1,28 +1,21 @@
 ---
 title: "OriginalValue Property (ADO) | Microsoft Docs"
-ms.prod: "sql-non-specified"
-ms.prod_service: "drivers"
-ms.service: ""
-ms.component: "ado"
-ms.technology:
-  - "drivers"
+ms.prod: sql
+ms.prod_service: connectivity
+ms.technology: connectivity
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 apitype: "COM"
 f1_keywords: 
   - "Field20::OriginalValue"
 helpviewer_keywords: 
   - "OriginalValue property [ADO]"
 ms.assetid: 6e33c6ec-14d9-4b1d-ba9b-cb99862e7bac
-caps.latest.revision: 11
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
-ms.workload: "Inactive"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # OriginalValue Property (ADO)
 Indicates the value of a [Field](../../../ado/reference/ado-api/field-object.md) that existed in the record before any changes were made.  

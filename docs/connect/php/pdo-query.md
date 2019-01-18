@@ -1,23 +1,16 @@
 ---
 title: "PDO::query | Microsoft Docs"
 ms.custom: ""
-ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
-ms.prod_service: "drivers"
-ms.service: ""
-ms.component: "php"
+ms.date: "08/01/2018"
+ms.prod: sql
+ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "drivers"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: connectivity
+ms.topic: conceptual
 ms.assetid: f6f5e6d4-8ca9-4f06-89ed-de65ad3952a2
-caps.latest.revision: 19
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
-ms.workload: "Inactive"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # PDO::query
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -43,9 +36,9 @@ If the call succeeds, PDO::query returns a PDOStatement object. If the call fail
 PDOException.  
   
 ## Remarks  
-A query executed with PDO::query can execute either a prepared statement or directly, depending on the setting of PDO::SQLSRV_ATTR_DIRECT_QUERY; see [Direct Statement Execution and Prepared Statement Execution in the PDO_SQLSRV Driver](../../connect/php/direct-statement-execution-prepared-statement-execution-pdo-sqlsrv-driver.md) for more information.  
+A query executed with PDO::query can execute either a prepared statement or directly, depending on the setting of PDO::SQLSRV_ATTR_DIRECT_QUERY. For more information, see [Direct Statement Execution and Prepared Statement Execution in the PDO_SQLSRV Driver](../../connect/php/direct-statement-execution-prepared-statement-execution-pdo-sqlsrv-driver.md).  
   
-PDO::SQLSRV_ATTR_QUERY_TIMEOUT also affects the behavior of PDO::exec; see [PDO::setAttribute](../../connect/php/pdo-setattribute.md) for more information.  
+PDO::SQLSRV_ATTR_QUERY_TIMEOUT also affects the behavior of PDO::exec; for more information, see [PDO::setAttribute](../../connect/php/pdo-setattribute.md).  
   
 You can specify the following options for $*fetch_style*.  
   
@@ -117,9 +110,58 @@ while ( $stmt->fetch() ){
   
 $stmt = null;  
 ?>  
-```  
-  
+```
+
+## Example
+This code sample shows how to create a table of [sql_variant](https://docs.microsoft.com/sql/t-sql/data-types/sql-variant-transact-sql) types and fetch the inserted data.
+
+```
+<?php
+$server = 'serverName';
+$dbName = 'databaseName';
+$uid = 'yourUserName';
+$pwd = 'yourPassword';
+
+$conn = new PDO("sqlsrv:server=$server; database = $dbName", $uid, $pwd);
+$conn->setAttribute( PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION );  
+
+try {
+    $tableName = 'testTable';
+    $query = "CREATE TABLE $tableName ([c1_int] sql_variant, [c2_varchar] sql_variant)";
+
+    $stmt = $conn->query($query);
+    unset($stmt);
+
+    $query = "INSERT INTO [$tableName] (c1_int, c2_varchar) VALUES (1, 'test_data')";
+    $stmt = $conn->query($query);
+    unset($stmt);
+
+    $query = "SELECT * FROM $tableName";
+    $stmt = $conn->query($query);
+
+    $result = $stmt->fetch(PDO::FETCH_ASSOC);
+    print_r($result);
+    
+    unset($stmt);
+    unset($conn);
+} catch (Exception $e) {
+    echo $e->getMessage();
+}
+?>
+```
+
+The expected output would be:
+
+```
+Array
+(
+    [c1_int] => 1
+    [c2_varchar] => test_data
+)
+```
+
 ## See Also  
-[PDO Class](../../connect/php/pdo-class.md)  
-[PDO](http://go.microsoft.com/fwlink/?LinkID=187441)  
+[PDO Class](../../connect/php/pdo-class.md)
+
+[PDO](https://php.net/manual/book.pdo.php)  
   

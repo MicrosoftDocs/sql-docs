@@ -2,16 +2,11 @@
 title: "SQLNativeSql Function | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
-ms.prod_service: "drivers"
-ms.service: ""
-ms.component: "odbc"
+ms.prod: sql
+ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "drivers"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: connectivity
+ms.topic: conceptual
 apiname: 
   - "SQLNativeSql"
 apilocation: 
@@ -22,11 +17,9 @@ f1_keywords:
 helpviewer_keywords: 
   - "SQLNativeSql function [ODBC]"
 ms.assetid: b8efc247-27ab-4a00-92b6-1400785783fe
-caps.latest.revision: 24
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
-ms.workload: "Inactive"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # SQLNativeSql Function
 **Conformance**  
@@ -40,12 +33,12 @@ ms.workload: "Inactive"
 ```  
   
 SQLRETURN SQLNativeSql(  
-     SQLHDBC        ConnectionHandle,  
-     SQLCHAR *      InStatementText,  
-     SQLINTEGER     TextLength1,  
-     SQLCHAR *      OutStatementText,  
-     SQLINTEGER     BufferLength,  
-     SQLINTEGER *   TextLength2Ptr);  
+     SQLHDBC        ConnectionHandle,  
+     SQLCHAR *      InStatementText,  
+     SQLINTEGER     TextLength1,  
+     SQLCHAR *      OutStatementText,  
+     SQLINTEGER     BufferLength,  
+     SQLINTEGER *   TextLength2Ptr);  
 ```  
   
 ## Arguments  

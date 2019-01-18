@@ -1,46 +1,30 @@
 ---
 title: "Server Properties in Analysis Services | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: analysis-services
-ms.prod_service: "analysis-services"
-ms.service: ""
-ms.component: ""
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
-  
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-helpviewer_keywords: 
-  - "SSAS, configuration properties"
-  - "Analysis Services, configuration properties"
-  - "SQL Server Analysis Services, configuration properties"
-  - "configuration options [Analysis Services]"
-  - "server properties [Analysis Services]"
-  - "properties [Analysis Services], configuration"
-  - "properties [Analysis Services]"
-ms.assetid: 274b89cd-14ed-4666-bc13-eedf1de51e18
-caps.latest.revision: 21
-author: "Minewiskan"
-ms.author: "owend"
-manager: "kfile"
-ms.workload: "On Demand"
+ms.date: 06/07/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: 
+ms.topic: conceptual
+ms.author: owend
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
 ---
 # Server Properties in Analysis Services
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
+
   An [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] administrator can modify default server configuration properties of an [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] instance. Each instance has its own configuration properties, which are set independently of other instances on the same server.  
   
- To configure the server, use SQL Server Management Studio or edit the msmdsrv.ini file of a specific instance.  
+ To configure the server, use SQL Server Management Studio or edit the msmdsrv.ini file of a specific SQL Server Analysis Services instance.  
  
 Property pages in SQL Server Management Studio show a subset of the properties most likely to be modified. The full list of properties is found in the msmdsrv.ini file.   
   
 > [!NOTE]  
->  In a default installation, msmdsrv.ini can be found in the \Program Files\Microsoft SQL Server\MSAS13.MSSQLSERVER\OLAP\Config folder.
+>  In a default SQL Server Analysis Services installation, msmdsrv.ini can be found in the \Program Files\Microsoft SQL Server\MSAS13.MSSQLSERVER\OLAP\Config folder.
 > 
 > Other properties affecting server configuration include deployment configuration properties in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. For more information about those properties, see [Specifying Configuration Settings for Solution Deployment](../../analysis-services/multidimensional-models/deployment-script-files-solution-deployment-config-settings.md).
  
-##  <a name="bkmk_config"></a> Configure properties in Management Studio 
+## Configure properties in Management Studio 
   
 1.  In [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], connect to an [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] instance.  
   
@@ -50,12 +34,11 @@ Property pages in SQL Server Management Studio show a subset of the properties m
   
      Modifying server properties is supported only for tabular mode and multidimensional mode servers. If you installed [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)], always use the default values unless otherwise directed otherwise by Microsoft Support.  
   
-     For guidance on how to address operational or performance issues through server properties, see [SQL Server 2008 R2 Analysis Services Operations Guide](http://go.microsoft.com/fwlink/?LinkID=225539).  
   
-     You can also read about server properties (many of which are unchanged over the last several releases) in this Microsoft white paper, [SQL Server 2005 Analysis Services (SSAS) Server Properties](http://go.microsoft.com/fwlink/?LinkID=199102).    
+## Configure properties in msmdsrv.ini
   
-##  <a name="bkmk_msmdsrvini"></a> Configure properties in msmdsrv.ini
-  Some properties can only be set in the msmdrsrv.ini file. If the property you want to set is not visible even after you show advanced properties, you might need to edit the msmdsrv.ini file directly.
+Some properties can only be set in the msmdrsrv.ini file. These properties do not apply to Azure Analysis Services.
+If the property you want to set is not visible even after you show advanced properties, you might need to edit the msmdsrv.ini file directly. 
   
 1.  Check the **DataDir** property in the General property page in Management Studio to verify the location of the Analysis Services program files, including the msmdsrv.ini file.
 
@@ -69,7 +52,7 @@ Property pages in SQL Server Management Studio show a subset of the properties m
   
 5.  Save the file and restart the service.  
   
-##  <a name="bkmk_ref"></a> Server Property Reference  
+##  Server Property Reference  
   
  The following topics describe the various [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] configuration properties:  
   

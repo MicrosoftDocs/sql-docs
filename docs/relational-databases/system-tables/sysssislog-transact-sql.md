@@ -2,15 +2,10 @@
 title: "sysssislog (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/10/2016"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "database-engine"
-ms.service: ""
-ms.component: "system-tables"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: system-objects
 ms.topic: "language-reference"
 f1_keywords: 
   - "sysdtslog90_TSQL"
@@ -20,11 +15,9 @@ dev_langs:
 helpviewer_keywords: 
   - "sysssislog system table"
 ms.assetid: 7fa288a1-81e3-42a0-82f6-8a59019693d0
-caps.latest.revision: 40
-author: "spelluru"
-ms.author: "spelluru"
-manager: "jhubbard"
-ms.workload: "On Demand"
+author: "douglasl"
+ms.author: "douglasl"
+manager: craigg
 ---
 # sysssislog (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

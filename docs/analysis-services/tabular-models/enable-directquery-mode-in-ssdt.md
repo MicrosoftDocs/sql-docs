@@ -1,23 +1,14 @@
 ---
-title: "Enable DirectQuery mode in SSDT | Microsoft Docs"
-ms.custom: ""
-ms.date: "07/06/2017"
-ms.prod: analysis-services
-ms.prod_service: "analysis-services, azure-analysis-services"
-ms.service: ""
-ms.component: ""
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
-  
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-ms.assetid: 71fc7ebd-2e86-4a76-994b-66d3a57bcc9b
-caps.latest.revision: 16
-author: "Minewiskan"
-ms.author: "owend"
-manager: "kfile"
-ms.workload: "Inactive"
+title: "Enable in Analysis Services DirectQuery mode in SSDT | Microsoft Docs"
+ms.date: 05/07/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: tabular-models
+ms.topic: conceptual
+ms.author: owend
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
 ---
 # Enable DirectQuery mode in SSDT
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -44,8 +35,8 @@ You can now import data using the Table Import Wizard to get metadata for the mo
 
 You can create a sample partition for each table and add sample data so that you can verify model behavior as you build it. Any sample data that you add is used in **Analyze for Excel** or in other client tools that can connect to the workspace database. See [Add sample data to a DirectQuery model in design mode](../../analysis-services/tabular-models/add-sample-data-to-a-directquery-model-in-design-mode.md) for details.  
   
-> [!TIP]  
-    >  Even in DirectQuery mode on an empty model, you can always view a small built-in rowset for each table. In [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)], click **Table** > **Table Properties** to view the 50-row dataset.  
+> [!TIP]
+>  Even in DirectQuery mode on an empty model, you can always view a small built-in rowset for each table. In [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)], click **Table** > **Table Properties** to view the 50-row dataset.  
   
   
 ## See also  

@@ -2,25 +2,18 @@
 title: "&gt; (Greater Than) (SSIS Expression) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "integration-services"
-ms.service: ""
-ms.component: "expressions"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: integration-services
+ms.topic: conceptual
 helpviewer_keywords: 
   - "greater than operator (>)"
   - "> (greater than operator)"
 ms.assetid: 2e22efa3-eeb1-4984-a95c-9bccdcf98892
-caps.latest.revision: 47
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
-ms.workload: "Inactive"
+manager: craigg
 ---
 # &gt; (Greater Than) (SSIS Expression)
   Performs a comparison to determine if the first expression is greater than the second one. The expression evaluator automatically converts many data types before it performs the comparison.  

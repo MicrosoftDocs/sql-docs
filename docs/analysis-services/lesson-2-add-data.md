@@ -1,25 +1,14 @@
 ---
 title: "Lesson 2: Add Data | Microsoft Docs"
-ms.custom: ""
-ms.date: "06/19/2017"
-ms.prod: analysis-services
-ms.prod_service: "analysis-services, azure-analysis-services"
-ms.service: ""
-ms.component: ""
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
-  
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
-applies_to: 
-  - "SQL Server 2016"
-ms.assetid: 13c3a8cc-b1db-4aba-ad9b-038b7971be8d
-caps.latest.revision: 33
-author: "Minewiskan"
-ms.author: "owend"
-manager: "kfile"
-ms.workload: "On Demand"
+ms.date: 05/08/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: tabular-models
+ms.topic: tutorial
+ms.author: owend
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
 ---
 # Lesson 2: Add Data
 [!INCLUDE[ssas-appliesto-sql2016-later-aas](../includes/ssas-appliesto-sql2016-later-aas.md)]
@@ -67,7 +56,7 @@ This topic is part of a tabular modeling tutorial, which should be completed in 
     **DO NOT** click **Finish**.  
   
 ## <a name="FilterData"></a>Filter the table data  
-The DimCustomer table that you're importing from the sample database contains a subset of the data from the original SQL Server Adventure Works database. You will filter out some more of the columns from the DimCustomer table that aren’t necessary when imported into your model. When possible, you'll want to filter out data that won't be used in order to save in-memory space used by the model.  
+The DimCustomer table that you're importing from the sample database contains a subset of the data from the original SQL Server Adventure Works database. You will filter out some more of the columns from the DimCustomer table that aren't necessary when imported into your model. When possible, you'll want to filter out data that won't be used in order to save in-memory space used by the model.  
   
 #### To filter the table data prior to importing  
   
@@ -81,7 +70,7 @@ The DimCustomer table that you're importing from the sample database contains a 
   
 3.  Verify that all other columns are checked, and then click **OK**.  
   
-    Notice the words **Applied filters** are now displayed in the **Filter Details** column in the **DimCustomer** row; if you click on that link you’ll see a text description of the filters you just applied.  
+    Notice the words **Applied filters** are now displayed in the **Filter Details** column in the **DimCustomer** row; if you click on that link you'll see a text description of the filters you just applied.  
     
     ![as-tabular-lesson2-applied-filters](../analysis-services/media/as-tabular-lesson2-applied-filters.png)
     

@@ -1,27 +1,16 @@
 ---
-title: "Process Tabular Model Partitions (SSAS Tabular) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: analysis-services
-ms.prod_service: "analysis-services, azure-analysis-services"
-ms.service: ""
-ms.component: ""
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
-  
-ms.component: multidimensional-tabular
-ms.component: data-mining
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-ms.assetid: 6c498d2b-22d6-4661-bc21-2ee708336c8b
-caps.latest.revision: 6
-author: "Minewiskan"
-ms.author: "owend"
-manager: "kfile"
-ms.workload: "Inactive"
+title: "Process Analysis Services tabular model partitions | Microsoft Docs"
+ms.date: 05/07/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: tabular-models
+ms.topic: conceptual
+ms.author: owend
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
 ---
-# Process Tabular Model Partitions (SSAS Tabular)
+# Process Tabular Model Partitions 
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
   Partitions divide a table into logical parts. Each partition can then be processed (Refreshed) independent of other partitions. The tasks in this topic describe how to process partitions in a model database by using the **Process Partitions** dialog box in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
@@ -31,7 +20,7 @@ ms.workload: "Inactive"
   
 2.  In the **Partitions** dialog box, in **Partitions**, click on the Process button.  
   
-3.  In the **Process Parition(s)** dialog box, in the **Mode** listbox, select one of the following process modes:  
+3.  In the **Process Partition(s)** dialog box, in the **Mode** listbox, select one of the following process modes:  
   
     |Mode|Description|  
     |----------|-----------------|  
@@ -44,7 +33,7 @@ ms.workload: "Inactive"
 4.  In the **Process** checkbox column, select the partitions you want to process with the selected mode, and then click **Ok**.  
   
 ## See Also  
- [Tabular Model Partitions &#40;SSAS Tabular&#41;](../../analysis-services/tabular-models/tabular-model-partitions-ssas-tabular.md)   
- [Create and Manage Tabular Model Partitions &#40;SSAS Tabular&#41;](../../analysis-services/tabular-models/create-and-manage-tabular-model-partitions-ssas-tabular.md)  
+ [Tabular Model Partitions](../../analysis-services/tabular-models/tabular-model-partitions-ssas-tabular.md)   
+ [Create and Manage Tabular Model Partitions](../../analysis-services/tabular-models/create-and-manage-tabular-model-partitions-ssas-tabular.md)  
   
   

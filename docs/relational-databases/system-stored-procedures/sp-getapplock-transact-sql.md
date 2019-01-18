@@ -2,15 +2,10 @@
 title: "sp_getapplock (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.service: ""
-ms.component: "system-stored-procedures"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: system-objects
 ms.topic: "language-reference"
 f1_keywords: 
   - "sp_getapplock_TSQL"
@@ -21,11 +16,10 @@ helpviewer_keywords:
   - "application locks"
   - "sp_getapplock"
 ms.assetid: e1e85908-9f31-47cf-8af6-88c77e6f24c9
-caps.latest.revision: 34
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "craigg"
-ms.workload: "On Demand"
+author: stevestein
+ms.author: sstein
+manager: craigg
+monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sp_getapplock (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -62,7 +56,7 @@ sp_getapplock [ @Resource = ] 'resource_name' ,
  Is the owner of the lock, which is the *lock_owner* value when the lock was requested. *lock_owner* is **nvarchar(32)**. The value can be **Transaction** (the default) or **Session**. When the *lock_owner* value is **Transaction**, by default or specified explicitly, sp_getapplock must be executed from within a transaction.  
   
  [ @LockTimeout= ] '*value*'  
- Is a lock time-out value in milliseconds. The default value is the same as the value returned by @@LOCK_TIMEOUT. To indicate that a lock request should return an error instead of wait for the lock when the request cannot be granted immediately, specify 0.  
+ Is a lock time-out value in milliseconds. The default value is the same as the value returned by @@LOCK_TIMEOUT. To indicate that a lock request should return a Return Code of -1 instead of wait for the lock when the request cannot be granted immediately, specify 0.  
   
  [ @DbPrincipal= ] '*database_principal*'  
  Is the user, role, or application role that has permissions to an object in a database. The caller of the function must be a member of *database_principal*, dbo, or the db_owner fixed database role to call the function successfully. The default is public.  
@@ -92,7 +86,7 @@ sp_getapplock [ @Resource = ] 'resource_name' ,
   
  Only a member of the database principal specified in the @DbPrincipal parameter can acquire application locks that specify that principal. Members of the dbo and db_owner roles are implicitly considered members of all roles.  
   
- Locks can be explicitly released with sp_releaseapplock. When an application calls sp_getapplock multiple times for the same lock resource, sp_releaseapplock must be called the same number of times to release the lock.  
+ Locks can be explicitly released with sp_releaseapplock. When an application calls sp_getapplock multiple times for the same lock resource, sp_releaseapplock must be called the same number of times to release the lock.  When a lock is opened with the `Transaction` lock owner, that lock is released when the transaction is committed or rolled back.
   
  If sp_getapplock is called multiple times for the same lock resource, but the lock mode that is specified in any of the requests is not the same as the existing mode, the effect on the resource is a union of the two lock modes. In most cases, this means the lock mode is promoted to the stronger of the lock modes, the existing mode, or the newly requested mode. This stronger lock mode is held until the lock is ultimately released even if lock release calls have occurred before that time. For example, in the following sequence of calls, the resource is held in `Exclusive` mode instead of in `Shared` mode.  
   

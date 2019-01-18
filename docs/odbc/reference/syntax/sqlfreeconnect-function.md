@@ -2,16 +2,11 @@
 title: "SQLFreeConnect Function | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
-ms.prod_service: "drivers"
-ms.service: ""
-ms.component: "odbc"
+ms.prod: sql
+ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "drivers"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: connectivity
+ms.topic: conceptual
 apiname: 
   - "SQLFreeConnect"
 apilocation: 
@@ -22,11 +17,9 @@ f1_keywords:
 helpviewer_keywords: 
   - "SQLFreeConnect function [ODBC]"
 ms.assetid: 0d22eaeb-3c75-47fb-af9a-6f7397e61b9c
-caps.latest.revision: 11
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
-ms.workload: "Inactive"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # SQLFreeConnect Function
 **Conformance**  
@@ -35,7 +28,7 @@ ms.workload: "Inactive"
  **Summary**  
  In ODBC 3*.x*, the ODBC 2.0 function **SQLFreeConnect** has been replaced by **SQLFreeHandle**. For more information, see [SQLFreeHandle](../../../odbc/reference/syntax/sqlfreehandle-function.md).  
   
-> [!NOTE]  
+> [!NOTE]
 >  For more information about what the Driver Manager maps this function to when an ODBC 2*.x* application is working with an ODBC 3*.x* driver, see [Mapping Deprecated Functions](../../../odbc/reference/appendixes/mapping-deprecated-functions.md) in Appendix G: Driver Guidelines for Backward Compatibility.  
   
 ## See Also  

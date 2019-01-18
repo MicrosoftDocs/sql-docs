@@ -2,30 +2,23 @@
 title: "Driver-Aware Connection Pooling in the ODBC Driver for SQL Server | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
-ms.prod_service: "drivers"
-ms.service: ""
-ms.component: "odbc"
+ms.prod: sql
+ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "drivers"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: connectivity
+ms.topic: conceptual
 ms.assetid: 455ab165-8e4d-4df9-a1d7-2b532bfd55d6
-caps.latest.revision: 15
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
-ms.workload: "Inactive"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # Driver-Aware Connection Pooling in the ODBC Driver for SQL Server
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
 
-  The ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] supports [Driver-Aware Connection Pooling](http://msdn.microsoft.com/library/hh405031(VS.85).aspx). This topic describes the enhancements made to driver-aware connection pooling in the Microsoft ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] on Windows:  
+  The ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] supports [Driver-Aware Connection Pooling](https://msdn.microsoft.com/library/hh405031(VS.85).aspx). This topic describes the enhancements made to driver-aware connection pooling in the Microsoft ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] on Windows:  
   
 -   Regardless of the connection properties, connections that use `SQLDriverConnect` go into a separate pool from connections that use `SQLConnect`.
-- When using [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] Authentication and driver-aware connection pooling, the driver does not use the Windows user’s security context for the current thread to separate connections in the pool. That is, if connections are equivalent in their parameters for Windows impersonation scenarios with [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] Authentication, and they are using the same [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] Authentication credentials to connect to the backend, different Windows users can potentially use the same pool of connections. When using Windows Authentication and driver-aware connection pooling, the driver uses the current Windows user’s security context to separate connections in the pool. That is, for Windows impersonation scenarios, different Windows users do not share connections even if the connections use the same parameters.
+- When using [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Authentication and driver-aware connection pooling, the driver does not use the Windows user's security context for the current thread to separate connections in the pool. That is, if connections are equivalent in their parameters for Windows impersonation scenarios with [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Authentication, and they are using the same [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Authentication credentials to connect to the backend, different Windows users can potentially use the same pool of connections. When using Windows Authentication and driver-aware connection pooling, the driver uses the current Windows user's security context to separate connections in the pool. That is, for Windows impersonation scenarios, different Windows users do not share connections even if the connections use the same parameters.
 - When using Azure Active Directory and driver-aware connection pooling, the driver also uses the Authentication value to determine the membership in the connection pool.
   
 -   Driver-aware connection pooling prevents a bad connection from being returned from the pool.  

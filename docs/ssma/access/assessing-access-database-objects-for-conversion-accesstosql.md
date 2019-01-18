@@ -1,20 +1,11 @@
 ---
 title: "Assessing Access Database Objects for Conversion (AccessToSQL) | Microsoft Docs"
-ms.prod: "sql-non-specified"
-ms.prod_service: "sql-tools"
-ms.service: ""
-ms.component: "ssma-access"
+ms.prod: sql
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "sql-ssma"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to: 
-  - "Azure SQL Database"
-  - "SQL Server"
+ms.technology: ssma
+ms.topic: conceptual
 helpviewer_keywords: 
   - "assessing SQL"
   - "assessing syntax"
@@ -25,17 +16,15 @@ helpviewer_keywords:
   - "SQL, assessing"
   - "syntax, assessing"
 ms.assetid: 8b9e23d6-da62-437a-8c05-8ad2628b9441
-caps.latest.revision: 16
 author: "Shamikg"
 ms.author: "Shamikg"
-manager: "jhubbard"
-ms.workload: "Inactive"
+manager: craigg
 ---
 # Assessing Access Database Objects for Conversion (AccessToSQL)
-Before you load objects and migrate data to [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] or SQL Azure, you should determine how much of the migration will be successful, and how long the conversion might take. SSMA can create an assessment report that shows the percentage of objects that were successfully converted to [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] or SQL Azure syntax and time estimates for performing the migration. SSMA also lets you view the specific issues that caused conversion failures.  
+Before you load objects and migrate data to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] or SQL Azure, you should determine how much of the migration will be successful, and how long the conversion might take. SSMA can create an assessment report that shows the percentage of objects that were successfully converted to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] or SQL Azure syntax and time estimates for performing the migration. SSMA also lets you view the specific issues that caused conversion failures.  
   
 ## Creating Assessment Reports  
-When it creates an assessment report, SSMA converts the selected Access database objects to [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] or SQL Azure syntax, and then shows the results.  
+When it creates an assessment report, SSMA converts the selected Access database objects to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] or SQL Azure syntax, and then shows the results.  
   
 **To create an assessment report**  
   
@@ -49,7 +38,7 @@ When it creates an assessment report, SSMA converts the selected Access database
   
     SSMA shows progress in the status bar at the bottom of the window. If the Output pane is visible, you will also see messages in the Output pane.  
   
-When the assessment is complete, the [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Migration Assistant for Access : Assessment Report window appears.  
+When the assessment is complete, the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Migration Assistant for Access : Assessment Report window appears.  
   
 ## Using Assessment Reports  
 The Assessment Report window contains three panes: an explorer, a details pane, and a message pane.  
@@ -63,8 +52,8 @@ The Assessment Report window contains three panes: an explorer, a details pane, 
 You should correct errors before you run the assessment report again or convert schemas. To find errors, click the **Errors** button in the messages pane, and then expand each error to view a list of objects where the error occurred. If you click an object in the messages pane, all errors and warnings for that object will appear in the details pane.  
   
 ## Next Step  
-[Converting Access Database Objects](http://msdn.microsoft.com/en-us/e0ef67bf-80a6-4e6c-a82d-5d46e0623c6c)  
+[Converting Access Database Objects](converting-access-database-objects-accesstosql.md)  
   
 ## See Also  
-[Migrating Access Databases to SQL Server](http://msdn.microsoft.com/en-us/76a3abcf-2998-4712-9490-fe8d872c89ca)  
+[Migrating Access Databases to SQL Server](migrating-access-databases-to-sql-server-azure-sql-db-accesstosql.md)  
   

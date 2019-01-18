@@ -1,25 +1,18 @@
 ---
-title: "Appliance Time Zone Configuration (Analytics Platform System)"
-author: "barbkess" 
-ms.author: "barbkess"
-manager: "jhubbard"	  
-ms.prod: "analytics-platform-system"
-ms.prod_service: "mpp-data-warehouse"
-ms.service: ""
-ms.component:
-ms.technology: "mpp-data-warehouse"
-ms.custom: ""
-ms.date: 01/05/2017
-ms.reviewer: na
-ms.suite: "sql"
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: cea9eeb9-fe05-4e65-b229-539de02ab20a
-caps.latest.revision: 18
-
+title: Configure time zone - Analytics Platform System | Microsoft Docs
+description: The Time Zone page enables you to set the time zone for all nodes on your Analytics Platform System (APS) appliance. 
+author: mzaman1 
+manager: craigg
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
 ---
-# Appliance Time Zone Configuration
-The **Time Zone** page enables you to set the time zone for all nodes on your SQL Server PDW appliance.  
+
+# Appliance time zone configuration - Analytics Platform System
+The **Time Zone** page enables you to set the time zone for all nodes on your Analytics Platform System (APS) appliance.  
   
 ## To set the time zone  
   

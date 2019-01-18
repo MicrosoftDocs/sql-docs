@@ -1,34 +1,14 @@
 ---
 title: "Grant custom access to cell data (Analysis Services) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/06/2017"
-ms.prod: analysis-services
-ms.prod_service: "analysis-services"
-ms.service: ""
-ms.component: ""
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
-  
-ms.component: multidimensional-tabular
-ms.component: data-mining
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.asvs.roledesignerdialog.celldata.f1"
-helpviewer_keywords: 
-  - "user access rights [Analysis Services], cell data"
-  - "permissions [Analysis Services], cells"
-  - "read contingent permissions"
-  - "read permissions"
-  - "cells [Analysis Services]"
-  - "custom cell data access [Analysis Services]"
-ms.assetid: 3b13a4ae-f3df-4523-bd30-b3fdf71e95cf
-caps.latest.revision: 31
-author: "Minewiskan"
-ms.author: "owend"
-manager: "kfile"
-ms.workload: "Inactive"
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: multidimensional-models
+ms.topic: conceptual
+ms.author: owend
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
 ---
 # Grant custom access to cell data (Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -38,7 +18,7 @@ ms.workload: "Inactive"
   
  Cell permissions apply to data inside the cell, and not to its metadata. Notice how the cell is still visible in the results of a query, displaying a value of **#N/A** instead of the actual cell value. The **#N/A** value appears in the cell unless the client application translates the value, or another value is specified by setting the Secured Cell Value property in the connection string.  
   
- To hide the cell entirely, you have to limit the members—dimensions, dimension attributes, and dimension attribute members—that are viewable. For more information, see [Grant custom access to dimension data &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/grant-custom-access-to-dimension-data-analysis-services.md).  
+ To hide the cell entirely, you have to limit the members-dimensions, dimension attributes, and dimension attribute members-that are viewable. For more information, see [Grant custom access to dimension data &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/grant-custom-access-to-dimension-data-analysis-services.md).  
   
  As an administrator, you can specify whether role members have read, read contingent, or read/write permissions on cells within a cube. Putting permissions on a cell is the lowest level of security allowed, so before you start applying permissions at this level, it's important to keep a few facts in mind:  
   

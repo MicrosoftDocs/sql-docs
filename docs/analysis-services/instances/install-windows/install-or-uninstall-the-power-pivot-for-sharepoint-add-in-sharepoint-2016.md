@@ -1,23 +1,14 @@
 ---
 title: "Install or Uninstall the Power Pivot for SharePoint Add-in (SharePoint 2016) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: analysis-services
-ms.prod_service: "analysis-services"
-ms.service: ""
-ms.component: ""
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
-  
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-ms.assetid: 34dd07b8-d59d-49ce-bad0-74f40e4db0b8
-caps.latest.revision: 12
-author: "Minewiskan"
-ms.author: "owend"
-manager: "kfile"
-ms.workload: "Inactive"
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: ppvt-sharepoint
+ms.topic: conceptual
+ms.author: owend
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
 ---
 # Install or Uninstall the Power Pivot for SharePoint Add-in (SharePoint 2016)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
@@ -26,23 +17,6 @@ ms.workload: "Inactive"
  **Note:** This topic describes installing the [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] solution files and [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] for SharePoint 2016 Configuration tool. After the installation, see the following topic for information on the configuration tool and additional features, [Configure Power Pivot and Deploy Solutions &#40;SharePoint 2013&#41;](../../../analysis-services/instances/install-windows/configure-power-pivot-and-deploy-solutions-sharepoint-2013.md).  
   
  For information on how to download **spPowerPivot16.msi**, see [Microsoft® SQL Server® 2016 Power Pivot® for Microsoft SharePoint®](https://www.microsoft.com/download/details.aspx?id=52675).  
-  
- **In this topic:**  
-  
--   [Background](#bkmk_background)  
-  
--   [Where to Install spPowerPivot16.msi?](#bkmk_where_to_install)  
-  
--   [Requirements and Prerequisites](#bkmk_prereq)  
-  
--   [To Install Power Pivot for SharePoint](#bkmk_install)  
-  
--   [Deploy the SharePoint Solution Files with the Power Pivot for SharePoint 2016 Configuration Tool](#bkmk_deploy_solution)  
-  
--   [Uninstall or repair the add-in](#bkmk_remove_addin)  
-  
-
-**[!INCLUDE[applies](../../../includes/applies-md.md)]**  SharePoint 2016 
   
 ##  <a name="bkmk_background"></a> Background  
   
@@ -111,14 +85,14 @@ ms.workload: "Inactive"
   
  `Msiexec.exe /i spPowerPivot16.msi`.  
   
- To create an installation log, use the standard MsiExec logging switches. The following example creates the log file “Install_Log.txt” using the “v” verbose logging switch.  
+ To create an installation log, use the standard MsiExec logging switches. The following example creates the log file "Install_Log.txt" using the "v" verbose logging switch.  
   
 ```  
 Msiexec.exe /i spPowerPivot16.msi /L v c:\test\Install_Log.txt  
 ```  
   
 ### Quiet Command Line Installation for scripting  
- You can use the **/q** or **/quiet** switches for a “quiet” installation that will not display any dialogs or warnings. The quiet installation is useful if you want to script the installation of the add-in.  
+ You can use the **/q** or **/quiet** switches for a "quiet" installation that will not display any dialogs or warnings. The quiet installation is useful if you want to script the installation of the add-in.  
   
 > [!IMPORTANT]  
 >  If you use the **/q** switch for a silent command line installation, the end-user license agreement will not be displayed. Regardless of the installation method, the use of this software is governed by a license agreement and you are responsible for complying with the license agreement.  
@@ -139,7 +113,7 @@ Msiexec.exe /i spPowerPivot16.msi /L v c:\test\Install_Log.txt
  When you install the spPowerPivot16.msi, you can use the command line options to install specific items, such as the data providers and not the [!INCLUDE[ssGeminiShort2016](../../../includes/ssgeminishort2016-md.md)] Configuration tool. The following command line is an example of installing all components except the configuration tool:  
   
 ```  
-Msiexec /i spPowerPivot16.msi AGREETOLICENSE="yes" ADDLOCAL=” SQL_OLAPDM,SQL_ADOMD,SQL_AMO,SQLAS_SP_Common”  
+Msiexec /i spPowerPivot16.msi AGREETOLICENSE="yes" ADDLOCAL=" SQL_OLAPDM,SQL_ADOMD,SQL_AMO,SQLAS_SP_Common"  
 ```  
   
 |Option|Description|  
@@ -165,7 +139,7 @@ Msiexec /i spPowerPivot16.msi AGREETOLICENSE="yes" ADDLOCAL=” SQL_OLAPDM,SQL_A
   
  **To start the configuration tool:**  
   
- From the Windows Start screen type “power” and in the Apps search results, select **[!INCLUDE[ssGeminiShort2016](../../../includes/ssgeminishort2016-md.md)] Configuration**. Note that the search results may include two links because [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] setup installs separate [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] configuration tools for SharePoint 2013 and SharePoint 2016. Make sure you start the [!INCLUDE[ssGeminiShort2016](../../../includes/ssgeminishort2016-md.md)] Configuration tool.  
+ From the Windows Start screen type "power" and in the Apps search results, select **[!INCLUDE[ssGeminiShort2016](../../../includes/ssgeminishort2016-md.md)] Configuration**. Note that the search results may include two links because [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] setup installs separate [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] configuration tools for SharePoint 2013 and SharePoint 2016. Make sure you start the [!INCLUDE[ssGeminiShort2016](../../../includes/ssgeminishort2016-md.md)] Configuration tool.  
   
  ![PowerPivot for SharePoint 2016 Configuration](../../../analysis-services/instances/install-windows/media/powerpivot-for-sharepoint-2016-configuration.png "PowerPivot for SharePoint 2016 Configuration")  
   

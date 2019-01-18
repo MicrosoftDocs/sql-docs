@@ -2,25 +2,19 @@
 title: "Page Compression Implementation | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/30/2016"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.service: ""
-ms.component: "compression"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "dbe-data-compression"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: performance
+ms.topic: conceptual
 helpviewer_keywords: 
   - "page compression [Database Engine]"
   - "compression [SQL Server], page"
 ms.assetid: 78c83277-1dbb-4e07-95bd-47b14d2b5cd4
-caps.latest.revision: 21
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-ms.workload: "On Demand"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Page Compression Implementation
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -37,7 +31,7 @@ ms.workload: "On Demand"
   
 3.  Dictionary compression  
   
- When you use page compression, non–leaf-level pages of indexes are compressed by using only row compression. For more information about row compression, see [Row Compression Implementation](../../relational-databases/data-compression/row-compression-implementation.md).  
+ When you use page compression, non-leaf-level pages of indexes are compressed by using only row compression. For more information about row compression, see [Row Compression Implementation](../../relational-databases/data-compression/row-compression-implementation.md).  
   
 ## Prefix Compression  
  For each page that is being compressed, prefix compression uses the following steps:  
@@ -50,18 +44,18 @@ ms.workload: "On Demand"
   
  The following illustration shows a sample page of a table before prefix compression.  
   
- ![Page before prefix compression](../../relational-databases/data-compression/media/skt-tblcompression1c.gif "Page before prefix compression")  
+ ![Page before prefix compression](media/skt-tblcompression1c.gif "Page before prefix compression")  
   
  The following illustration shows the same page after prefix compression. The prefix is moved to the header, and the column values are changed to references to the prefix.  
   
- ![Page after prefix compression](../../relational-databases/data-compression/media/tblcompression2.gif "Page after prefix compression")  
+ ![Page after prefix compression](media/tblcompression2.gif "Page after prefix compression")  
   
  In the first column of the first row, the value 4b indicates that the first four characters of the prefix (aaab) are present for that row, and also the character b. This makes the resultant value aaabb, which is the original value.  
   
 ## Dictionary Compression  
  After prefix compression has been completed, dictionary compression is applied. Dictionary compression searches for repeated values anywhere on the page, and stores them in the CI area. Unlike prefix compression, dictionary compression is not restricted to one column. Dictionary compression can replace repeated values that occur anywhere on a page. The following illustration shows the same page after dictionary compression.  
   
- ![Page after dictionary compression](../../relational-databases/data-compression/media/tblcompression3.gif "Page after dictionary compression")  
+ ![Page after dictionary compression](media/tblcompression3.gif "Page after dictionary compression")  
   
  Note that the value 4b has been referenced from different columns of the page.  
   

@@ -1,26 +1,19 @@
 ---
 title: "Microsoft Data Shaping Service for OLE DB (ADO Service Provider) | Microsoft Docs"
-ms.prod: "sql-non-specified"
-ms.prod_service: "drivers"
-ms.service: ""
-ms.component: "ado"
-ms.technology:
-  - "drivers"
+ms.prod: sql
+ms.prod_service: connectivity
+ms.technology: connectivity
 ms.custom: ""
-ms.date: "01/19/2017"
+ms.date: 11/08/2018
 ms.reviewer: ""
-ms.suite: "sql"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords:
   - "providers [ADO], data shaping service for OLE DB"
   - "data shaping service for OLE DB [ADO]"
 ms.assetid: 523009ce-e01b-4e2d-a7df-816d7688aff0
-caps.latest.revision: 17
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
-ms.workload: "Inactive"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # Microsoft Data Shaping Service for OLE DB Overview
 > [!IMPORTANT]
@@ -31,7 +24,7 @@ ms.workload: "Inactive"
 ## Provider Keyword
  To invoke the Data Shaping Service for OLE DB, specify the following keyword and value in the connection string.
 
-```
+```vb
 "Provider=MSDataShape"
 ```
 
@@ -45,14 +38,14 @@ ms.workload: "Inactive"
 
  You can also set writable dynamic properties by specifying their names as keywords in the connection string. For example, in Microsoft Visual Basic, set the **Data Provider** dynamic property to "MSDASQL" by specifying:
 
-```
+```vb
 Dim cn as New ADODB.Connection
 cn.Open "Provider=MSDataShape;Data Provider=MSDASQL"
 ```
 
  You can also set or retrieve a dynamic property by specifying its name as the index to the [Properties](../../../ado/reference/ado-api/properties-collection-ado.md) property. For example, the following code example gets and prints the current value of the **Data Provider** dynamic property, then sets a new value if cn.DataProvider has been set to "MSDataShape" (either directly or indirectly through the connection string) and the connection has not been opened:
 
-```
+```vb
 Debug.Print cn.Properties("Data Provider")
 cn.Properties("Data Provider") = "MSDASQL"
 ```

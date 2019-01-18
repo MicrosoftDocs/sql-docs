@@ -2,26 +2,19 @@
 title: "Restore a SQL Server Database to a Point in Time (Full Recovery Model) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/17/2017"
-ms.prod: "sql-non-specified"
-ms.prod_service: "database-engine"
-ms.service: ""
-ms.component: "backup-restore"
+ms.prod: sql
+ms.prod_service: backup-restore
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "dbe-backup-restore"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: backup-restore
+ms.topic: conceptual
 helpviewer_keywords: 
   - "STOPAT clause [RESTORE LOG statement]"
   - "point in time recovery [SQL Server]"
   - "restoring databases [SQL Server], point in time"
 ms.assetid: 3a5daefd-08a8-4565-b54f-28ad01a47d32
-caps.latest.revision: 50
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-ms.workload: "On Demand"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ---
 # Restore a SQL Server Database to a Point in Time (Full Recovery Model)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -136,11 +129,11 @@ ms.workload: "On Demand"
   
  **Basic [!INCLUDE[tsql](../../includes/tsql-md.md)] syntax**  
   
- RESTORE LOG *database_name* FROM <backup_device> WITH STOPAT **=***time***,** RECOVERY…  
+ RESTORE LOG *database_name* FROM <backup_device> WITH STOPAT **=**_time_**,** RECOVERY...  
   
  The recovery point is the latest transaction commit that occurred at or before the **datetime** value that is specified by *time*.  
   
- To restore only the modifications that were made before a specific point in time, specify WITH STOPAT **=** *time* for each backup you restore. This makes sure that you do not go past the target time.  
+ To restore only the modifications that were made before a specific point in time, specify WITH STOPAT **=** _time_ for each backup you restore. This makes sure that you do not go past the target time.  
   
  **To restore a database to a point in time**  
   
@@ -156,7 +149,7 @@ ms.workload: "On Demand"
   
 3.  Restore the last differential database backup, if any,  without recovering the database (RESTORE DATABASE *database_name* FROM *backup_device* WITH NORECOVERY).  
   
-4.  Apply each transaction log backup in the same sequence in which they were created, specifying the time at which you intend to stop restoring log (RESTORE DATABASE *database_name* FROM <backup_device> WITH STOPAT**=***time***,** RECOVERY).  
+4.  Apply each transaction log backup in the same sequence in which they were created, specifying the time at which you intend to stop restoring log (RESTORE DATABASE *database_name* FROM <backup_device> WITH STOPAT**=**_time_**,** RECOVERY).  
   
     > [!NOTE]  
     >  The RECOVERY and STOPAT options. If the transaction log backup does not contain the requested time (for example, if the time specified is beyond the end of the time covered by the transaction log), a warning is generated and the database remains unrecovered.  

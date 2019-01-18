@@ -2,16 +2,11 @@
 title: "Operators | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "sql-tools"
-ms.service: ""
-ms.component: "ssms-agent"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "tools-ssms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: ssms
+ms.topic: conceptual
 helpviewer_keywords: 
   - "operators (users) [Database Engine]"
   - "fail-safe operator [SQL Server]"
@@ -26,15 +21,18 @@ helpviewer_keywords:
   - "jobs [SQL Server Agent], operators"
   - "alerts [SQL Server], operators"
 ms.assetid: 38e8488f-2669-4cea-b9c3-5f394a663678
-caps.latest.revision: 5
 author: "stevestein"
 ms.author: "sstein"
-manager: "jhubbard"
-ms.workload: "Inactive"
+manager: craigg
+monikerRange: "= azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Operators
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-Operators are aliases for people or groups that can receive electronic notification when jobs have completed or alerts have been raised. The [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent service supports the notification of administrators through operators. Operators enable notification and monitoring capabilities of [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent.  
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+
+> [!IMPORTANT]  
+> On [Azure SQL Database Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance), most, but not all SQL Server Agent features are currently supported. See [Azure SQL Database Managed Instance T-SQL differences from SQL Server](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent) for details.
+
+Operators are aliases for people or groups that can receive electronic notification when jobs have completed or alerts have been raised. The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent service supports the notification of administrators through operators. Operators enable notification and monitoring capabilities of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent.  
   
 ## Operator Attributes and Concepts  
 The primary attributes of an operator are:  
@@ -44,13 +42,13 @@ The primary attributes of an operator are:
 -   Contact information  
   
 ### Naming an Operator  
-Every operator must have a name. Operator names must be unique within the [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] instance and can be no longer than **128** characters.  
+Every operator must have a name. Operator names must be unique within the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance and can be no longer than **128** characters.  
   
 ### Contact Information  
 An operator's contact information defines how the operator is notified. Operators can be notified by e-mail, pager, or through the **net send** command:  
   
-> [!IMPORTANT]  
-> The Pager and **net send** options will be removed from [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent in a future version of [!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]. Avoid using these features in new development work, and plan to modify applications that currently use these features.  
+> [!IMPORTANT]
+> The Pager and **net send** options will be removed from [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent in a future version of [!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Avoid using these features in new development work, and plan to modify applications that currently use these features.  
   
 -   **E-mail notification**  
   
@@ -72,7 +70,7 @@ An operator's contact information defines how the operator is notified. Operator
   
         This software is proprietary to pager service providers. The software acts as a e-mail client that periodically processes its inbox either by interpreting all or part of the e-mail address information as a pager number, or by matching the e-mail name to a pager number in a translation table.  
   
-        If all of the operators share a pager provider, you can use [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] to specify any special e-mail formatting that is required by the pager-to-e-mail system. The special formatting can be a prefix or a suffix and can be included in the following lines of the e-mail:  
+        If all of the operators share a pager provider, you can use [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] to specify any special e-mail formatting that is required by the pager-to-e-mail system. The special formatting can be a prefix or a suffix and can be included in the following lines of the e-mail:  
   
         **Subject:**  
   
@@ -88,7 +86,7 @@ An operator's contact information defines how the operator is notified. Operator
     This sends a message to the operator by means of the **net send** command. For **net send**, specify the recipient (computer or user) of a network message.  
   
     > [!NOTE]  
-    > The **net send** command uses Microsoft Windows Messenger. To successfully send alerts, this service must be running on both the computer on which [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] is running and the computer that the operator uses.  
+    > The **net send** command uses Microsoft Windows Messenger. To successfully send alerts, this service must be running on both the computer on which [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is running and the computer that the operator uses.  
   
 ## Alerting and Fail-Safe Operators  
 You can choose which operators are to be notified in response to an alert. For example, you can assign rotating responsibilities for operator notification by scheduling alerts. For example, Individual A is notified of alerts that occur on Monday, Wednesday, or Friday, and Individual B is notified of alerts that occur on Tuesday, Thursday, or Saturday.  
@@ -101,7 +99,7 @@ The fail-safe operator is notified when:
   
     Reasons for failure to reach primary operators include incorrect pager addresses and off-duty operators.  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent cannot access system tables in the **msdb** database.  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent cannot access system tables in the **msdb** database.  
   
     The **sysnotifications** system table specifies operator responsibilities for alerts.  
   
@@ -122,8 +120,8 @@ You must set up one or more of the following in order to notify an operator:
 |-|-|  
 |**Tasks**|**Topic**|  
 |Tasks related to creating an operator|[Create an Operator](../../ssms/agent/create-an-operator.md)<br /><br />[Designate a Fail-Safe Operator](../../ssms/agent/designate-a-fail-safe-operator.md)|  
-|Tasks related to assigning alerts|[Assign Alerts to an Operator](../../ssms/agent/assign-alerts-to-an-operator.md)<br /><br />[Define the Response to an Alert &#40;SQL Server Management Studio&#41;](../../ssms/agent/define-the-response-to-an-alert-sql-server-management-studio.md)<br /><br />[sp_add_notification (Transact-SQL)](http://msdn.microsoft.com/en-us/0525e0a2-ed0b-4e69-8a4c-a9e3e3622fbd)<br /><br />[Assign Alerts to an Operator](../../ssms/agent/assign-alerts-to-an-operator.md)|  
+|Tasks related to assigning alerts|[Assign Alerts to an Operator](../../ssms/agent/assign-alerts-to-an-operator.md)<br /><br />[Define the Response to an Alert &#40;SQL Server Management Studio&#41;](../../ssms/agent/define-the-response-to-an-alert-sql-server-management-studio.md)<br /><br />[sp_add_notification (Transact-SQL)](https://msdn.microsoft.com/0525e0a2-ed0b-4e69-8a4c-a9e3e3622fbd)<br /><br />[Assign Alerts to an Operator](../../ssms/agent/assign-alerts-to-an-operator.md)|  
   
 ## See Also  
-[Database Mail](http://msdn.microsoft.com/en-us/9e4563dd-4799-4b32-a78a-048ea44a44c1)  
+[Database Mail](../../relational-databases/database-mail/database-mail.md)  
   

@@ -2,17 +2,11 @@
 title: "Determine Which Queries Are Holding Locks | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.service: ""
-ms.component: "extended-events"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-  - "xevents"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: xevents
+ms.topic: conceptual
 helpviewer_keywords: 
   - "queries [SQL Server], extended events"
   - "queries [SQL Server], holding locks"
@@ -20,11 +14,10 @@ helpviewer_keywords:
   - "extended events [SQL Server], locks"
   - "extended events [SQL Server], holding locks"
 ms.assetid: bdfce092-3cf1-4b5e-99d5-fd8c6f9ad560
-caps.latest.revision: 15
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
-ms.workload: "On Demand"
+author: MightyPen
+ms.author: genemi
+manager: craigg
+monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Determine Which Queries Are Holding Locks
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

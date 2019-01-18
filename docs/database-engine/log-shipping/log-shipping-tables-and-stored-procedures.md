@@ -2,16 +2,10 @@
 title: "Log Shipping Tables and Stored Procedures | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-non-specified"
-ms.prod_service: "database-engine"
-ms.service: ""
-ms.component: "log-shipping"
+ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: high-availability
+ms.topic: conceptual
 helpviewer_keywords: 
   - "secondary servers [SQL Server]"
   - "monitor servers [SQL Server]"
@@ -19,11 +13,9 @@ helpviewer_keywords:
   - "log shipping [SQL Server], stored procedures"
   - "primary servers [SQL Server]"
 ms.assetid: 03420810-4c38-4c0c-adf0-913eb044c50a
-caps.latest.revision: 20
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-ms.workload: "On Demand"
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
 ---
 # Log Shipping Tables and Stored Procedures
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

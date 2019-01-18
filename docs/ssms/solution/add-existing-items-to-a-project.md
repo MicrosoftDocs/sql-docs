@@ -41,7 +41,7 @@ Add new items to a project to extend application functionality. An existing item
     Use this option to filter the files and folders that are displayed. Enter the full or partial file name on which to filter; use an asterisk (`*`) as a wildcard.  
   
     > [!NOTE]  
-    > Navigate to Web and network locations by entering the URL or network path in the **File name** box. For example, **https://mywebsite** displays the files available at the mywebsite Web location, and **\\\myserver\myshare** displays the files available at the myshare location on myserver.  
+    > Navigate to Web and network locations by entering the URL or network path in the **File name** box. For example, **`https://mywebsite`** displays the files available at the mywebsite Web location, and **\\\myserver\myshare** displays the files available at the myshare location on myserver.  
   
     **Files of type**  
     Use this option to filter files based on file extension. Each product lists default filters of the most common file types.  

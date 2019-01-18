@@ -308,7 +308,7 @@ ms.technology:
                                                           <li><a class="barLink" href="/sql/relational-databases/database-features/">Relational database concepts</a></li>
                                                             <li><a class="barLink" href="/sql/connect/homepage-sql-connection-programming/">Connect with client applications on premises</a></li>
                                                             <li><a class="barLink" href="/azure/sql-database/sql-database-libraries">Azure SQL DB connectivity libraries</a></li>
-                                                            <li><a class="barLink" href="/sql/relational-databases/sql-database-develop-overview/">Azure SQL DB applications</a></li>
+                                                            <li><a class="barLink" href="https://docs.microsoft.com/azure/sql-database/sql-database-develop-overview">Azure SQL DB applications</a></li>
                                                         </ul>
                                                     </div>
                                                 </div>

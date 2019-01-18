@@ -20,7 +20,7 @@ In this task, you modify the configuration setting, stored in the **SSISTutorial
   
 1.  In Notepad or any other text editor, locate and open the **SSISTutorial.dtsConfig** configuration file that you created by using the Package Configuration Wizard in the previous task.  
   
-2.  Change the value of the **ConfiguredValue** element to match the path of the **New Sample Data** folder that you created in the previous task. Do not surround the path in quotes. If the **New Sample Data** folder is at the root level of your drive (for example, **C:\\**), the updated XML should be similar to the following sample:  
+2.  Change the value of the **ConfiguredValue** element to match the path of the **New Sample Data** folder that you created in the previous task. Don't surround the path in quotes. If the **New Sample Data** folder is at the root level of your drive (for example, **C:\\**), the updated XML should be similar to the following sample:  
   
     ```
     <?xml version="1.0"?>

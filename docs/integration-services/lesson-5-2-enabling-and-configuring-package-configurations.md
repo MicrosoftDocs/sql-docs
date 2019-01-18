@@ -35,13 +35,13 @@ In this task, you convert the project to the Package Deployment Model and enable
   
 7.  Return to the **Control Flow** tab and double-click the **Foreach File in Folder** container.  
   
-8.  On the **Collection** page of the **Foreach Loop Editor**, select **Expressions**, and then select the ellipsis button **(...)**.  
+8.  On the **Collection** page of the **Foreach Loop Editor**, select **Expressions** and then select the ellipsis button **(...)**.  
   
-9. In the **Property Expressions Editor**, select in the **Property** list, and select **Directory**.  
+9. In the **Property Expressions Editor**, select in the **Property** list and then select **Directory**.  
   
 10. In the **Expression** box, select the ellipsis button **(...)**.  
   
-11. In the **Expression Builder**, expand the **Variables and Parameters** folder, and drag the variable **User::varFolderName** to the **Expression** box.  
+11. In the **Expression Builder**, expand the **Variables and Parameters** folder and drag the variable **User::varFolderName** to the **Expression** box.  
   
 12. Select **OK** to exit the **Expression Builder**.  
   
@@ -59,9 +59,9 @@ In this task, you convert the project to the Package Deployment Model and enable
   
 4.  On the **SSIS** menu, select **Package Configurations**.  
   
-5.  In the **Package Configurations Organizer** dialog box, select **Enable Package Configurations**, and then select **Add**.  
+5.  In the **Package Configurations Organizer** dialog box, select **Enable Package Configurations** and then select **Add**.  
   
-6.  On the welcome page of the Package Configuration Wizard, select **Next**.  
+6.  On the welcome page of the **Package Configuration Wizard**, select **Next**.  
   
 7.  On the **Select Configuration Type** page, verify that the **Configuration type** is set to **XML configuration file**.  
   
@@ -69,11 +69,11 @@ In this task, you convert the project to the Package Deployment Model and enable
   
 9. The **Select Configuration File Location** dialog box opens to the project folder.  
   
-10. In the **Select Configuration File Location** dialog box, for **File name** enter **SSISTutorial**, and then select **Save**.  
+10. In the **Select Configuration File Location** dialog box, for **File name** enter **SSISTutorial** and then select **Save**.  
   
 11. On the **Select Configuration Type** page, select **Next**.
   
-12. On the **Select Properties to Export** page, in the **Objects** pane, expand **Variables**, expand **varFolderName**, expand **Properties**, and then select **Value**.  
+12. On the **Select Properties to Export** page, in the **Objects** pane, expand **Variables**, expand **varFolderName**, expand **Properties** and then select **Value**.  
   
 13. On the **Select Properties to Export** page, select **Next**.  
   

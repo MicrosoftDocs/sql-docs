@@ -16,7 +16,7 @@ manager: craigg
 
 At run time, your package obtains the value for the **Directory** property from a configuration variable, rather than from the directory name specified when you created the package. The value of the variable comes from the **SSISTutorial.dtsConfig** XML file.  
   
-To verify that the package updates the Directory property with the new value during run time, execute the package. Because only three sample data files were copied to the new directory, the data flow runs only three times.  
+To verify that the package updates the **Directory** property with the new value during run time, run the package. Because only three sample data files are in the new directory, the data flow runs only three times.  
   
 ## Checking the Package Layout  
 Before you test the package, verify that the control and data flows in the Lesson 5 package are similar to the objects shown in the following diagrams:  

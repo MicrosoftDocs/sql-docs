@@ -22,15 +22,15 @@ Use this procedure if you're copying the completed Lesson 4.  To copy the sample
 
 1.  If [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Data Tools isn't already open, select **Start** > **All Programs** > **Microsoft SQL Server 2017**, and then select **SQL Server Data Tools**.
 
-2.  On the **File** menu, select **Open** > **Project/Solution**, select the **SSIS Tutorial** folder and select **Open**, and then double-click **SSIS Tutorial.sln**.
+2.  On the **File** menu, select **Open** > **Project/Solution**, select the **SSIS Tutorial** folder, and select **Open**.  Then, double-click **SSIS Tutorial.sln**.
 
-3.  In **Solution Explorer**, right-click **Lesson 4.dtsx**, and then select **Copy**.
+3.  In **Solution Explorer**, right-click **Lesson 4.dtsx** and then select **Copy**.
 
-4.  In **Solution Explorer**, right-click **SSIS Packages**, and then select **Paste**.
+4.  In **Solution Explorer**, right-click **SSIS Packages** and then select **Paste**.
 
     By default, the name of the copied package is **Lesson 4.dtsx**.
 
-5.  In **Solution Explorer**, double-click **Lesson 4.dtsx** to open the package
+5.  In **Solution Explorer**, double-click **Lesson 4.dtsx** to open the package.
 
 6.  Right-click anywhere in the background of the **Control Flow** design surface and select **Properties**.
 

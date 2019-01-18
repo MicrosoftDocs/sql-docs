@@ -451,7 +451,7 @@ GO
 CREATE TRIGGER Purchasing.LowCredit ON Purchasing.PurchaseOrderHeader  
 AFTER INSERT  
 AS  
-IF (@@ROWCOUNT_BIG  = 0)
+IF (ROWCOUNT_BIG() = 0)
 RETURN;
 IF EXISTS (SELECT *  
            FROM Purchasing.PurchaseOrderHeader AS p   

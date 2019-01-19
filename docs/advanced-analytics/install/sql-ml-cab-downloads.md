@@ -10,7 +10,6 @@ author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
 ---
-
 # CAB downloads for cumulative updates of SQL Server in-database analytics instances
 
 SQL Server instances that are configured for in-database analytics include R and Python features. These features ship in CAB files, installed and serviced through SQL Server Setup. On internet-connected devices, CAB updates are typically applied through Windows Update. On disconnected servers, CAB files must be downloaded and applied manually. 
@@ -32,7 +31,7 @@ CAB files are listed in reverse chronological order. When you download the CAB f
 
 |Release  |Component | Download link  | Issues addressed | 
 |---------|----------|----------------|------------------|
-**[SQL Server 2017 CU13](https://support.microsoft.com/help/4466404)** |  |  |  |
+|**[SQL Server 2017 CU13](https://support.microsoft.com/help/4466404)** |  |  |  |
 | | Microsoft R Open     | [SRO_3.3.3.300_1033.cab](https://go.microsoft.com/fwlink/?LinkId=863894)| No change from previous versions. |
 | | R Server      |[SRS_9.2.0.1300_1033.cab](https://go.microsoft.com/fwlink/?LinkId=2038263&clcid=1033)| Contains a fix for upgrading an [operationalized standalone R Server](https://docs.microsoft.com/machine-learning-server/what-is-operationalization), as installed through SQL Server Setup. Use the CU13 CABs and follow [these instructions](sql-machine-learning-standalone-windows-install.md#apply-cu) to apply the update. |
 | | Microsoft Python Open     | [SPO_9.2.0.24_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851502)| No change from previous versions. |

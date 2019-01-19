@@ -269,7 +269,7 @@ n-definition*|"CREATE DOMAIN"|SQL_DIAG_CREATE_DOMAIN|
   
 |For information about|See|  
 |---------------------------|---------|  
-|Obtaining multiple fields of a diagnostic data structure|[SQLGetDiagRec Function](syntax/sqlgetdiagrec-function.md)|  
+|Obtaining multiple fields of a diagnostic data structure|[SQLGetDiagRec Function](sqlgetdiagrec-function.md)|  
   
 ## See Also  
  [ODBC API Reference](../../../odbc/reference/syntax/odbc-api-reference.md)   

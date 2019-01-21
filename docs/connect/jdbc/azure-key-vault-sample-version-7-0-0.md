@@ -1,7 +1,7 @@
 ---
 title: "Azure Key Vault Sample Version 7.0.0 | Microsoft Docs"
 ms.custom: ""
-ms.date: "07/31/2018"
+ms.date: "01/21/2019"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
@@ -11,7 +11,7 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ---
-# Azure Key Vault Sample Version 7.0.0
+# Azure Key Vault Sample Version 7.0.0, 7.2.0
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 

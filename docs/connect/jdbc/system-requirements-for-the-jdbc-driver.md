@@ -1,7 +1,7 @@
 ---
 title: "System Requirements for the JDBC Driver | Microsoft Docs"
 ms.custom: ""
-ms.date: "07/19/2018"
+ms.date: "01/21/2019"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
@@ -21,6 +21,9 @@ manager: craigg
 - Java Runtime Environment
 
 ## Java Runtime Environment Requirements  
+
+ Starting with the Microsoft JDBC Driver 7.2 for SQL Server, Sun Java SE Development Kit (JDK) 11.0 and Java Runtime Environment (JRE) 11.0 are supported.
+ 
  Starting with the Microsoft JDBC Driver 7.0 for SQL Server, Sun Java SE Development Kit (JDK) 10.0 and Java Runtime Environment (JRE) 10.0 are supported.
 
  Starting with the Microsoft JDBC Driver 6.4 for SQL Server, Sun Java SE Development Kit (JDK) 9.0 and Java Runtime Environment (JRE) 9.0 are supported.
@@ -32,7 +35,31 @@ manager: craigg
  Starting with the [!INCLUDE[jdbc_40](../../includes/jdbc_40_md.md)], the JDBC driver support for Java Database Connectivity (JDBC) Spec API has been extended to include the JDBC 4.0 API. The JDBC 4.0 API was introduced as part of the Sun Java SE Development Kit (JDK) 6.0 and Java Runtime Environment (JRE) 6.0. JDBC 4.0 is a superset of the JDBC 3.0 API.  
   
  When you deploy the [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] on Windows and UNIX operating systems, you must use the installation packages, *sqljdbc_\<version>_enu.exe*, and *sqljdbc_\<version>_enu.tar.gz*, respectively. For more information about how to deploy the JDBC Driver, see [Deploying the JDBC Driver](../../connect/jdbc/deploying-the-jdbc-driver.md) topic.  
+
+**Microsoft JDBC Driver 7.2 for SQL Server:**  
+
+  The JDBC Driver 7.2 includes two JAR class libraries in each installation package: **mssql-jdbc-7.2.0.jre8.jar**, and **mssql-jdbc-7.2.0.jre11.jar**.
+
+  The JDBC Driver 7.2 is designed to work with and be supported by all major Sun equivalent Java virtual machines, but is tested only on Sun JRE 8.0, and 11.0.
   
+  The following summarizes support provided by the two JAR files included with Microsoft JDBC Drivers 7.2 for SQL Server:  
+  
+  |JAR|JDBC Version Compliance|Recommended Java Version|Description|  
+|---------|-----------------------------|----------------------|-----------------|   
+|mssql-jdbc-7.2.0.jre8.jar|4.2|8|Requires a Java Runtime Environment (JRE) 8.0. Using JRE 7.0 or lower throws an exception.<br /><br /> New Features in 7.2 include: JDK 11 support, Active Directory Managed Service Identity (MSI) authentication, OSGi support, SQLServerError APIs. |    
+|mssql-jdbc-7.2.0.jre11.jar|4.3|10|Requires a Java Runtime Environment (JRE) 11.0. Using JRE 10.0 or lower throws an exception.<br /><br /> New Features in 7.2 include: JDK 11 support, Active Directory Managed Service Identity (MSI) authentication, OSGi support, SQLServerError APIs. |    
+
+
+  The JDBC Driver 7.2 is also available on the Maven Central Repository and can be added to a Maven project by adding the following code in the POM.XML:  
+  
+ ```xml
+<dependency>
+    <groupId>com.microsoft.sqlserver</groupId>
+    <artifactId>mssql-jdbc</artifactId>
+    <version>7.2.0.jre11</version>
+</dependency>
+```
+ 
 **Microsoft JDBC Driver 7.0 for SQL Server:**  
 
   The JDBC Driver 7.0 includes two JAR class libraries in each installation package: **mssql-jdbc-7.0.0.jre8.jar**, and **mssql-jdbc-7.0.0.jre10.jar**.
@@ -43,8 +70,8 @@ manager: craigg
   
   |JAR|JDBC Version Compliance|Recommended Java Version|Description|  
 |---------|-----------------------------|----------------------|-----------------|   
-|mssql-jdbc-7.0.0.jre8.jar|4.2|8|Requires a Java Runtime Environment (JRE) 8.0. Using JRE 7.0 or lower throws an exception.<br /><br /> New Features in 7.0 include: JDK 10 support, updated default compliance level to JDBC 4.2 specifications, Spatial Datatypes support, cancelQueryTimeout connection property, Boundary Request methods, useBulkCopyForBatchInsert connection property, Data Discovery and Classification information, UTF-8 feature extension, and CityHash support. |    
-|mssql-jdbc-7.0.0.jre10.jar|4.3|10|Requires a Java Runtime Environment (JRE) 10.0. Using JRE 9.0 or lower throws an exception.<br /><br /> New Features in 7.0 include: JDK 10 support, updated default compliance level to JDBC 4.2 specifications, Spatial Datatypes support, cancelQueryTimeout connection property, Boundary Request methods, useBulkCopyForBatchInsert connection property, Data Discovery and Classification information, UTF-8 feature extension, and CityHash support. |    
+|mssql-jdbc-7.0.0.jre8.jar|4.2|8|Requires a Java Runtime Environment (JRE) 8.0. Using JRE 7.0 or lower throws an exception.<br /><br /> New Features in 7.0 include: JDK 10 support, updated default compliance level to JDBC 4.2 specifications, Spatial Datatypes support, cancelQueryTimeout connection property, Request Boundary methods, useBulkCopyForBatchInsert connection property, Data Discovery and Classification information, UTF-8 feature extension, and CityHash support. |    
+|mssql-jdbc-7.0.0.jre10.jar|4.3|10|Requires a Java Runtime Environment (JRE) 10.0. Using JRE 9.0 or lower throws an exception.<br /><br /> New Features in 7.0 include: JDK 10 support, updated default compliance level to JDBC 4.2 specifications, Spatial Datatypes support, cancelQueryTimeout connection property, Request Boundary methods, useBulkCopyForBatchInsert connection property, Data Discovery and Classification information, UTF-8 feature extension, and CityHash support. |    
 
 
   The JDBC Driver 7.0 is also available on the Maven Central Repository and can be added to a Maven project by adding the following code in the POM.XML:  
@@ -55,7 +82,7 @@ manager: craigg
     <artifactId>mssql-jdbc</artifactId>
     <version>7.0.0.jre10</version>
 </dependency>
-```      
+```
   
 **Microsoft JDBC Driver 6.4 for SQL Server:**  
 

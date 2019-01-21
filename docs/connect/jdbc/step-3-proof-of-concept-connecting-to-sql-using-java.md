@@ -1,7 +1,7 @@
 ---
 title: "Step 3: Proof of concept connecting to SQL using Java | Microsoft Docs"
 ms.custom: ""
-ms.date: "01/21/2018"
+ms.date: "01/21/2019"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""

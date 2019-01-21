@@ -14,9 +14,11 @@ ms.author: genemi
 manager: craigg
 ---
 # Developer Reference for SQL Server 2014
+
   The following features and technologies allow you to develop applications that access data in a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] database.  
   
 ## Programming Reference Sections  
+
  ![Small File Folder Icon](../integration-services/media/filefolder-small.gif "Small File Folder Icon") [Common Language Runtime &#40;CLR&#41; Integration Programming Concepts](../relational-databases/clr-integration/common-language-runtime-clr-integration-programming-concepts.md)  
   
  ![Small File Folder Icon](../integration-services/media/filefolder-small.gif "Small File Folder Icon") [Native XML](https://technet.microsoft.com/library/ms191274.aspx)  
@@ -54,6 +56,7 @@ manager: craigg
  ![Small File Folder Icon](../integration-services/media/filefolder-small.gif "Small File Folder Icon") [Reporting Services Developer's Guide](../reporting-services/reporting-services-features-and-tasks-ssrs.md)  
   
 ## Other Programming Resources  
+
  Developing a data-access application may require you to use one or more of the following technologies:  
   
  [Accessing Data in Visual Studio](https://go.microsoft.com/fwlink/?LinkId=129902)  

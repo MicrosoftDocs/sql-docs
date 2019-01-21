@@ -1,7 +1,7 @@
 ---
 title: "Feature dependencies of the Microsoft JDBC Driver for SQL Server | Microsoft Docs"
 ms.custom: ""
-ms.date: "07/31/2018"
+ms.date: "01/21/2018"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
@@ -22,7 +22,11 @@ This article lists libraries that the Microsoft JDBC Driver for SQL Server depen
 ## Compile time
 
 - `azure-keyvault`: Azure Key Vault Provider for the Always Encrypted Azure Key Vault feature (optional)
+- `azure-keyvault-webkey`: Azure SDK For Key Vault WebKey for the Always Encrypted Azure Key Vault feature (optional)
 - `adal4j`: Azure Active Directory Library for Java for the Azure Active Directory Authentication feature and the Azure Key Vault feature (optional)
+- `client-runtime`: Java Client Runtime For AutoRest for the Azure Active Directory Authentication feature and the Azure Key Vault feature (optional)
+- `OSGi Core`: OSGi Core library for OSGi Framework support. 
+- `OSGI Compendium`: OSGi Compendium library for OSGi Framework support.
 
 ## Test time
 

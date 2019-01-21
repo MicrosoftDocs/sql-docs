@@ -1,7 +1,7 @@
 ---
 title: "Connecting using Azure Active Directory Authentication | Microsoft Docs"
 ms.custom: ""
-ms.date: "07/11/2018"
+ms.date: "01/21/2018"
 ms.reviewer: ""
 ms.prod: sql
 ms.prod_service: connectivity
@@ -74,7 +74,6 @@ public class AADIntegrated {
         ds.setServerName("aad-managed-demo.database.windows.net"); // Replace with your server name
         ds.setDatabaseName("demo"); // Replace with your database name
         ds.setAuthentication("ActiveDirectoryIntegrated");
-        ds.setHostNameInCertificate("*.database.windows.net");
 
         try (Connection connection = ds.getConnection(); 
                 Statement stmt = connection.createStatement();) {
@@ -183,7 +182,6 @@ public class AADUserPassword {
         ds.setUser("bob@cqclinic.onmicrosoft.com"); // Replace with your user name
         ds.setPassword("password"); // Replace with your password
         ds.setAuthentication("ActiveDirectoryPassword");
-        ds.setHostNameInCertificate("*.database.windows.net");
         
         try (Connection connection = ds.getConnection(); 
                 Statement stmt = connection.createStatement();) {
@@ -274,7 +272,6 @@ public class AADTokenBased {
         ds.setServerName("aad-managed-demo.database.windows.net"); // Replace with your server name.
         ds.setDatabaseName("demo"); // Replace with your database name.
         ds.setAccessToken(accessToken);
-        ds.setHostNameInCertificate("*.database.windows.net");
 
         try (Connection connection = ds.getConnection(); 
                 Statement stmt = connection.createStatement();) {

@@ -1,7 +1,7 @@
 ---
 title: "Connecting to an Azure SQL database | Microsoft Docs"
 ms.custom: ""
-ms.date: "07/31/2018"
+ms.date: "01/21/2019"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
@@ -72,16 +72,6 @@ shutdown /r /t 1
 ## Appending the Server Name to the UserId in the Connection String  
 
 Prior to the 4.0 version of the [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)], when connecting to an [!INCLUDE[ssAzure](../../includes/ssazure_md.md)], you were required to append the server name to the UserId in the connection string. For example, user@servername. Beginning in version 4.0 of the [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)], it's no longer necessary to append @servername to the UserId in the connection string.  
-  
-## Using Encryption Requires Setting hostNameInCertificate
-
-When connecting to an [!INCLUDE[ssAzure](../../includes/ssazure_md.md)], you should specify **hostNameInCertificate** if you specify **encrypt=true**. (If the server name in the connection string is *shortName*.*domainName*, set the **hostNameInCertificate** property to \*.*domainName*.)  
-  
-For example:  
-
-```java
-jdbc:sqlserver://abcd.int.mscds.com;databaseName= myDatabase;user=myName;password=myPassword;encrypt=true;hostNameInCertificate= *.int.mscds.com;  
-```
 
 ## See Also
 

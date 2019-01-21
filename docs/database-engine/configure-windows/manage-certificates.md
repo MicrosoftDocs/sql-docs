@@ -40,7 +40,7 @@ SSL/TLS certificates are widely used to secure access to SQL Server. With earlie
   
 1. In SQL Server Configuration Manager, in the console pane, expand **SQL Server Network Configuration**.  
   
-2. Right-click **Protocols for** *<instance Name>*, and then select **Properties**.  
+2. Right-click **Protocols for** *&lt;instance Name&gt;*, and then select **Properties**.  
   
 3. Choose the **Certificate** tab, and then select **Import**.  
   
@@ -53,7 +53,7 @@ SSL/TLS certificates are widely used to secure access to SQL Server. With earlie
   
 1. In SQL Server Configuration Manager, in the console pane, expand SQL Server Network Configuration”.
   
-2. Right-click **Protocols for** *<instance Name>*, and then choose **Properties**. 
+2. Right-click **Protocols for** *&lt;instance Name&gt;*, and then choose **Properties**. 
 
 3. Choose the **Certificate** tab, and then select **Import**.
 
@@ -64,7 +64,7 @@ SSL/TLS certificates are widely used to secure access to SQL Server. With earlie
 6. If installing a certificate for each node, select **Next** to list possible owner nodes. Possible owners for the current SQL Server FCI are pre-selected.
 
 7. Choose **Next** to select the certificate to be imported.
-**
+
 8. Enter the password when prompted. Look for any warnings or errors after validation.
 
 9. Select **Next** to import the selected certificates.
@@ -76,7 +76,7 @@ SSL/TLS certificates are widely used to secure access to SQL Server. With earlie
   
 1. In SQL Server Configuration Manager, in the console pane, expand **SQL Server Network Configuration**.
   
-2. Right-click **Protocols for** *<instance Name>*, and then select **Properties**.  
+2. Right-click **Protocols for** *&lt;instance Name&gt;*, and then select **Properties**.  
   
 3. Choose the **Certificate** tab, and then select **Import**.  
   

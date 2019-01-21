@@ -44,6 +44,7 @@ When data is imported or processed, impersonation credentials are used to connec
   
 > [!IMPORTANT]  
 >  When authoring a model, ensure the credentials you are logged on with and the credentials specified for impersonation have sufficient rights to fetch the data from the datasource.  
+
   
 ##  <a name="bkmk_imp_info_options"></a> Options  
  When configuring impersonation, or when editing properties for an existing datasource connection, specify one of the following options:  
@@ -57,6 +58,9 @@ When data is imported or processed, impersonation credentials are used to connec
 |**Impersonate Identity**|Specifies a username to access the datasource, but doesn't need to specify the account's password. This mode applies only when Kerberos delegation is enabled and specifies the S4U authentication should be used.|  
 |**Impersonate Service Account**|Specifies the model use the security credentials associated with the Analysis Services service instance that manages the model.|  
 |**Impersonate Unattended Account**|Specifies the Analysis Services engine should use a preconfigured unattended account to access the data.|  
+
+> [!IMPORTANT]
+> Impersonate Current User is not supported in some environments. For example, Impersonate Current User is not supported for tabular models deployed to Azure Analysis Services that connect to on-premises data sources. This is because an Azure Analysis Services server resource is not connected to an organization's domain. Client credentials cannot be authenticated against the data source server. Azure Analysis Services also does not currently integrate with (Azure) SQL Database support for single sign-on (SSO). Depending on your environment, other impersonation modes also have restrictions. When attempting to use an impersonation mode that is not supported an error is returned. 
 
 
 **Tabular 1200 models**

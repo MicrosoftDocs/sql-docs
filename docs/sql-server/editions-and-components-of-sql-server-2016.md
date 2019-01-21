@@ -139,7 +139,7 @@ The Developer edition continues to support only 1 client for [SQL Server Distrib
 |Database mirroring|Yes|Yes<br /><br /> Full safety only|Witness only|Witness only|Witness only| 
 |Backup compression|Yes|Yes|No|No|No| 
 |Database snapshot|Yes|Yes <sup>3</sup>|Yes <sup>3</sup>|Yes <sup>3</sup>|Yes <sup>3</sup>|
-|Always On failover cluster instances|Yes<br /><br /> Number of nodes is the operating system maximum|Yes<br /><br /> Support for 2 nodes|No|No|No|  
+|Always On failover cluster instances|Yes<br /><br /> 16|Yes<br /><br /> Support for 2 nodes|No|No|No|  
 |Always On availability groups|Yes<br /><br /> Up to 8 secondary replicas, including 2 synchronous secondary replicas|No|No|No|No|
 |Basic availability groups <sup>2</sup>|No|Yes<br /><br /> Support for 2 nodes|No|No|No|
 |Online page and file restore|Yes|No|No|No|No|

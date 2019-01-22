@@ -26,7 +26,7 @@ manager: craigg
   
 |Option|Allowed values|Description|  
 |------------|--------------------|-----------------|  
-|max_memory|Any 32 bit integer. This value is optional.|The maximum amount of memory in kilobytes (KB) to use. Existing events are dropped based on the limit that is first reached: max_event_limit or max_memory.|  
+|max_memory|Any 32 bit integer. This value is optional.|The maximum amount of memory in kilobytes (KB) to use. Existing events are dropped based on the limit that is first reached: max_event_limit or max_memory. Maxium value is 4194303 KB. A careful consideration should be made before setting the ring buffer size to limits in the GB range as it may impact other memory consumers in SQL Server|  
 |max_event_limit|Any 32 bit integer. This value is optional.|The maximum number of events kept in the ring_buffer. Existing events are dropped based on the limit that is first reached: max_event_limit or max_memory. Default = 1000.|  
 |occurrence_number|One of the following values:<br /><br /> 0 (the default) = Oldest event is discarded when all the memory allocated to the target is used.<br /><br /> Any 32 bit integer = The number of events of each type to keep before being discarded on a per-event FIFO basis.<br /><br /> <br /><br /> This value is optional.|The FIFO mode to use, and, if set to a value greater than 0, the preferred number of events of each type to keep in the buffer.|
 | &nbsp; | &nbsp; | &nbsp; |

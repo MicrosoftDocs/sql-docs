@@ -7,8 +7,8 @@ ms.technology: t-sql
 ms.topic: "language-reference"
 ms.custom: ""
 ms.manager: craigg
-ms.author: giladm
-author: giladmit
+ms.author: arib
+author: vainolo
 f1_keywords:
   - "sys.sensitivity_classifications "
 dev_langs:
@@ -66,6 +66,9 @@ left join sys.all_objects on sys.sensitivity_classifications.major_id = sys.all_
 left join sys.all_columns on sys.sensitivity_classifications.major_id = sys.all_columns.object_id
                          and sys.sensitivity_classifications.minor_id = sys.all_columns.column_id
 ```
+
+## Permissions  
+ [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] For more information, see [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
 
 ## See Also  
 

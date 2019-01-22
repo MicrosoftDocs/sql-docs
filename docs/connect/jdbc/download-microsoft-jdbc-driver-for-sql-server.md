@@ -29,6 +29,7 @@ The JDBC Driver can be added to a Maven project by adding it as a dependency in 
 ```  
 
 ## Available downloads of JDBC Driver for SQL Server
+ * [Microsoft JDBC Driver 7.2 for SQL Server](https://go.microsoft.com/fwlink/?linkid=2063159)
  * [Microsoft JDBC Driver 7.0 for SQL Server](https://go.microsoft.com/fwlink/?linkid=2005972) 
  * [Microsoft JDBC Driver 6.4 for SQL Server](https://go.microsoft.com/fwlink/?linkid=868290) 
  * [Microsoft JDBC Driver 6.2 for SQL Server](https://go.microsoft.com/fwlink/?linkid=852460) 

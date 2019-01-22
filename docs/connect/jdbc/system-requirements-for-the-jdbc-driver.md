@@ -40,7 +40,7 @@ manager: craigg
 
   The JDBC Driver 7.2 includes two JAR class libraries in each installation package: **mssql-jdbc-7.2.0.jre8.jar**, and **mssql-jdbc-7.2.0.jre11.jar**.
 
-  The JDBC Driver 7.2 is designed to work with and be supported by all major Sun equivalent Java virtual machines, but is tested only on Sun JRE 8.0, and 11.0.
+  The JDBC Driver 7.2 is designed to work with and be supported by all major Sun equivalent Java virtual machines, but is tested only on Sun JRE 8.0, and 11.0, Zulu JRE 8.0 and 11.0.
   
   The following summarizes support provided by the two JAR files included with Microsoft JDBC Drivers 7.2 for SQL Server:  
   

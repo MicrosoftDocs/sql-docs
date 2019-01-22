@@ -1,7 +1,7 @@
 ---
 title: "Release notes for the JDBC Driver | Microsoft Docs"
 ms.custom: ""
-ms.date: "07/31/2018"
+ms.date: "01/21/2019"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
@@ -16,6 +16,34 @@ manager: craigg
 # Release notes for the JDBC Driver
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
+
+## Updates in Microsoft JDBC Driver 7.2 for SQL Server
+
+Microsoft JDBC Driver 7.2 for SQL Server is fully compliant with JDBC API Specification 4.2. The jars in the 7.2 package are named according to Java version compatibility. For example, the mssql-jdbc-7.2.0.jre11.jar file from the 7.2 package should be used with Java 11.
+
+### Support for JDK 11
+
+Microsoft JDBC Driver 7.2 for SQL Server is now compatible with Java Development Kit (JDK) version 11.0 in addition to JDK 1.8.
+
+### Support for Active Directory Managed Service Identity (MSI) authentication
+
+Microsoft JDBC Driver 7.2 for SQL Server now provides support for Active Directory Managed Service Identity (MSI) authentication. For more information, see 
+
+### OSGi support
+
+Microsoft JDBC Driver 7.2 for SQL Server introduces OSGi support by adding APIs for DataSourceFactory and OSGi Framework.
+
+### SQLServerError APIs
+
+Microsoft JDBC Driver 7.2 for SQL Server introduces SQLServerError APIs to retrieve additional details about the error generated from the server. For more information, see [Handling Errors](../../connect/jdbc/handling-errors.md).
+
+### Updated "Microsoft Azure Active Directory Authentication Library (ADAL4J) for Java" version: 1.6.3
+
+Microsoft JDBC Driver 7.2 for SQL Server has updated its Maven dependency on "Microsoft Azure Active Directory Authentication Library (ADAL4J) for Java" to version 1.6.3, which also introduces "Java Client Runtime for AutoRest" as a Maven dependency (Version: 1.6.5). For more information about dependencies, see [Feature dependencies of the Microsoft JDBC Driver for SQL Server](../../connect/jdbc/feature-dependencies-of-microsoft-jdbc-driver-for-sql-server.md).
+
+### Updated "Microsoft Azure Key Vault SDK for Java" version: 1.2.0
+
+Microsoft JDBC Driver 7.2 for SQL Server has updated its Maven dependency on "Microsoft Azure Key Vault SDK for Java" to version 1.2.0, which also introduces "Microsoft Azure SDK for Key Vault WebKey" as a Maven dependency (Version: 1.2.0). For more information about dependencies, see [Feature dependencies of the Microsoft JDBC Driver for SQL Server](../../connect/jdbc/feature-dependencies-of-microsoft-jdbc-driver-for-sql-server.md).
 
 ## Updates in Microsoft JDBC Driver 7.0 for SQL Server
 
@@ -70,9 +98,9 @@ public SQLServerColumnEncryptionAzureKeyVaultProvider(
             SQLServerKeyVaultAuthenticationCallback authenticationCallback) throws SQLServerException;
 ```
 
-### Updated ADAL4J version: 1.6.0
+### Updated "Microsoft Azure Active Directory Authentication Library (ADAL4J) for Java" version: 1.6.0
 
-Microsoft JDBC Driver 7.0 for SQL Server has updated its Maven dependency on azure-activedirectory-library-for-java (ADAL4J) to version 1.6.0. For more information about dependencies, see [Feature dependencies of the Microsoft JDBC Driver for SQL Server](../../connect/jdbc/feature-dependencies-of-microsoft-jdbc-driver-for-sql-server.md).
+Microsoft JDBC Driver 7.0 for SQL Server has updated its Maven dependency on "Microsoft Azure Active Directory Authentication Library (ADAL4J) for Java" to version 1.6.0. For more information about dependencies, see [Feature dependencies of the Microsoft JDBC Driver for SQL Server](../../connect/jdbc/feature-dependencies-of-microsoft-jdbc-driver-for-sql-server.md).
 
 ## Updates in Microsoft JDBC Driver 6.4 for SQL Server
 
@@ -126,9 +154,9 @@ The JDBC Driver has implemented prepared statement metadata caching for performa
 
 The JDBC Driver now supports Azure Active Directory (Azure AD) Integrated Authentication on all supported operating systems (Windows, Linux, and Mac) with Kerberos. Alternatively, on Windows operating systems, users can authenticate with sqljdbc_auth.dll.
 
-### Updated ADAL4J version: 1.4.0
+### Updated "Microsoft Azure Active Directory Authentication Library (ADAL4J) for Java" version: 1.4.0
 
-The JDBC Driver has updated its Maven dependency on azure-activedirectory-library-for-java (ADAL4J) to version 1.4.0. For more information about dependencies, see [Feature dependencies of the Microsoft JDBC Driver for SQL Server](../../connect/jdbc/feature-dependencies-of-microsoft-jdbc-driver-for-sql-server.md).
+The JDBC Driver has updated its Maven dependency on "Microsoft Azure Active Directory Authentication Library (ADAL4J) for Java" to version 1.4.0. For more information about dependencies, see [Feature dependencies of the Microsoft JDBC Driver for SQL Server](../../connect/jdbc/feature-dependencies-of-microsoft-jdbc-driver-for-sql-server.md).
 
 ## Updates in Microsoft JDBC Driver 6.2 for SQL Server
 

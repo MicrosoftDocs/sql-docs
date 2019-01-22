@@ -1,7 +1,7 @@
 ---
 title: "Connecting with SSL Encryption | Microsoft Docs"
 ms.custom: ""
-ms.date: "07/11/2018"
+ms.date: "01/21/2019"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
@@ -58,7 +58,7 @@ String connectionUrl =
 > [!NOTE]  
 >  Alternatively, you can set the value of connection properties by using the appropriate **setter** methods provided by the [SQLServerDataSource](../../connect/jdbc/reference/sqlserverdatasource-class.md) class.  
   
- If the **encrypt** property is set to **true** and the **trustServerCertificate** property is set to **false** and if the server name in the connection string doesn't match the server name in the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SSL certificate, the following error will be issued: The driver couldn't establish a secure connection to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] by using Secure Sockets Layer (SSL) encryption. Error: "java.security.cert.CertificateException: Failed to validate the server name in a certificate during Secure Sockets Layer (SSL) initialization."  
+ If the **encrypt** property is set to **true** and the **trustServerCertificate** property is set to **false** and if the server name in the connection string doesn't match the server name in the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SSL certificate, the following error will be issued: `The driver couldn't establish a secure connection to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] by using Secure Sockets Layer (SSL) encryption. Error: "java.security.cert.CertificateException: Failed to validate the server name in a certificate during Secure Sockets Layer (SSL) initialization."`
   
 ## See Also  
  [Using SSL Encryption](../../connect/jdbc/using-ssl-encryption.md)   

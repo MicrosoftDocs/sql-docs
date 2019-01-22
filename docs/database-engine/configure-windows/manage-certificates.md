@@ -24,14 +24,14 @@ manager: craigg
 ---
 # Certificate Management (SQL Server Configuration Manager)
 
-This topic describes how to deploy and manage certificates across your SQL Server Failover Cluster or Always On Availability Group topology.
+This topic describes how to deploy and manage certificates across your SQL Server Always On Failover Cluster or Availability Group topology.
 
 SSL/TLS certificates are widely used to secure access to SQL Server. With earlier versions of SQL Server, organizations with large SQL Server estates had to spend considerable effort to maintain their SQL Server certificate infrastructure, often through developing scripts and running manual commands. With SQL Server 2019, certificate management is integrated into the SQL Server Configuration Manager, simplifying common tasks such as: 
 
 * Viewing and validating certificates installed in a SQL Server instance. 
 * Identifying which certificates may be close to expiring. 
-* Deploying certificates across Always On Availability Group machines from the node holding the primary replica. 
-* Deploying certificates across machines participating in a failover cluster instance from the active node.
+* Deploying certificates across Availability Group machines from the node holding the primary replica. 
+* Deploying certificates across machines participating in a Failover Cluster instance from the active node.
 
 > [!NOTE]
 > You can use certificate management in SQL Server Configuration Manager with lower versions of SQL Server, starting with SQL Server 2008.
@@ -72,7 +72,7 @@ SSL/TLS certificates are widely used to secure access to SQL Server. With earlie
 > [!NOTE]
 > Complete these steps in the active node of the SQL Server Failover Cluster instance. User must have administrator permissions on all the cluster nodes.
 
-##  <a name="provision-always-on-cert"></a>To install a certificate in an Always On configuration  
+##  <a name="provision-availability-group-cert"></a>To install a certificate in an Availability Group configuration  
   
 1. In SQL Server Configuration Manager, in the console pane, expand **SQL Server Network Configuration**.
   

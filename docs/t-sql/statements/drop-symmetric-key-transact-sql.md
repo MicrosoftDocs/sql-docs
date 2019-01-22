@@ -21,8 +21,8 @@ helpviewer_keywords:
   - "cryptography [SQL Server], symmetric keys"
   - "DROP SYMMETRIC KEY statement"
 ms.assetid: 6150bc67-08cb-402e-9c24-b04c9654b434
-author: CarlRabeler
-ms.author: carlrab
+author: VanMSFT
+ms.author: vanto
 manager: craigg
 ---
 # DROP SYMMETRIC KEY (Transact-SQL)

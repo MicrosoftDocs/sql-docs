@@ -90,7 +90,7 @@ go
  This is the result:  
   
 ```  
-<MyRoot xmlns:xsi="https://www.w3.org/2001/XMLSchema-instance">  
+<MyRoot xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">  
    ...  
   <ProductModelData>  
     <ProductModelID>6</ProductModelID>  

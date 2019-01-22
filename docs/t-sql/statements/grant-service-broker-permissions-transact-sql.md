@@ -18,8 +18,8 @@ helpviewer_keywords:
   - "message types [Service Broker], permissions"
   - "contracts [Service Broker], permissions"
 ms.assetid: c5579976-97c4-4123-be0c-d0b98a9e38fb
-author: CarlRabeler
-ms.author: carlrab
+author: VanMSFT
+ms.author: vanto
 manager: craigg
 ---
 # GRANT Service Broker Permissions (Transact-SQL)

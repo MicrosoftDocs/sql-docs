@@ -1,21 +1,20 @@
 ---
-title: "Process Partitions in the Workspace Databse (SSAS Tabular) | Microsoft Docs"
-ms.custom: ""
-ms.date: "06/13/2017"
-ms.prod: "sql-server-2014"
-ms.reviewer: ""
-ms.technology: 
-  - "analysis-services"
+title: "Process partitions in Analysis Services workspace database | Microsoft Docs"
+ms.date: 05/07/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: tabular-models
 ms.topic: conceptual
-ms.assetid: 3a369705-43fa-4961-9045-32e06fbdde33
-author: minewiskan
 ms.author: owend
-manager: craigg
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
 ---
-# Process Partitions in the Workspace Databse (SSAS Tabular)
+# Process Partitions in the Workspace Database 
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
   Partitions divide a table into logical parts. Each partition can then be processed (Refreshed) independent of other partitions. The tasks in this topic describe how to process partitions in the model workspace database by using the **Process Partitions** dialog box in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
   
- After a model has been deployed to another Analysis Services instance, database administrators can create and manage partitions in the (deployed) model by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], by script, or by using an IS package. For more information, see [Create and Manage Tabular Model Partitions &#40;SSAS Tabular&#41;](partitions-ssas-tabular.md).  
+ After a model has been deployed to another Analysis Services instance, database administrators can create and manage partitions in the (deployed) model by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], by script, or by using an IS package. For more information, see [Create and Manage Tabular Model Partitions](../../analysis-services/tabular-models/create-and-manage-tabular-model-partitions-ssas-tabular.md).  
   
 ###  <a name="bkmk_create_new"></a> To process a partition  
   
@@ -34,7 +33,7 @@ manager: craigg
 3.  In the **Process** checkbox column, select the partitions you want to process with the selected mode, and then click **Ok**.  
   
 ## See Also  
- [Partitions &#40;SSAS Tabular&#41;](partitions-ssas-tabular.md)   
- [Create and Manage Partitions in the Workspace Database &#40;SSAS Tabular&#41;](workspace-database-ssas-tabular.md)  
+ [Partitions](../../analysis-services/tabular-models/partitions-ssas-tabular.md)   
+ [Create and Manage Partitions in the Workspace Database](../../analysis-services/tabular-models/create-and-manage-partitions-in-the-workspace-database-ssas-tabular.md)  
   
   

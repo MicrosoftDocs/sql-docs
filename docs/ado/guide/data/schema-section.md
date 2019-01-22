@@ -93,7 +93,7 @@ The schema section is required. As the previous example shows, ADO writes out de
  Similarly, because there is no alias defined for `CompanyName` in the previous example, `CompanyName` must be used consistently throughout the document.  
   
 ## Data Types  
- You can apply a data type to a column with the dt:type attribute. For the definitive guide to allowed XML types, see the Data Types section of the [W3C XML-Data specification](https://www.w3.org/TR/1998/NOTE-XML-data/). You can specify a data type in two ways: either specify the dt:type attribute directly on the column definition itself or use the s:datatype construct as a nested element of the column definition. For example,  
+ You can apply a data type to a column with the dt:type attribute. For the definitive guide to allowed XML types, see the Data Types section of the [W3C XML-Data specification](http://www.w3.org/TR/1998/NOTE-XML-data/). You can specify a data type in two ways: either specify the dt:type attribute directly on the column definition itself or use the s:datatype construct as a nested element of the column definition. For example,  
   
 ```  
 <s:AttributeType name="Phone" >  

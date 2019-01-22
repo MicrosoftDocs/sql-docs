@@ -82,19 +82,19 @@ To create a policy on the container and generate a Shared Access Signature (SAS)
     $resourceGroupName=$prefixName + 'rg'   
   
     # Add an authenticated Azure account for use in the session   
-    Login-AzureRmAccount    
+    Connect-AzAccount    
   
     # Set the tenant, subscription and environment for use in the rest of   
-    Set-AzureRmContext -SubscriptionId $subscriptionID   
+    Set-AzContext -SubscriptionId $subscriptionID   
   
     # Create a new resource group - comment out this line to use an existing resource group  
-    New-AzureRmResourceGroup -Name $resourceGroupName -Location $locationName   
+    New-AzResourceGroup -Name $resourceGroupName -Location $locationName   
   
     # Create a new Azure Resource Manager storage account - comment out this line to use an existing Azure Resource Manager storage account  
-    New-AzureRmStorageAccount -Name $storageAccountName -ResourceGroupName $resourceGroupName -Type Standard_RAGRS -Location $locationName   
+    New-AzStorageAccount -Name $storageAccountName -ResourceGroupName $resourceGroupName -Type Standard_RAGRS -Location $locationName   
   
     # Get the access keys for the Azure Resource Manager storage account  
-    $accountKeys = Get-AzureRmStorageAccountKey -ResourceGroupName $resourceGroupName -Name $storageAccountName  
+    $accountKeys = Get-AzStorageAccountKey -ResourceGroupName $resourceGroupName -Name $storageAccountName  
   
     # Create a new storage account context using an Azure Resource Manager storage account  
     $storageContext = New-AzureStorageContext -StorageAccountName $storageAccountName -StorageAccountKey $accountKeys[0].Value
@@ -120,7 +120,7 @@ To create a policy on the container and generate a Shared Access Signature (SAS)
     Write-Host $tSql 
 
     # Once you're done with the tutorial, remove the resource group to clean up the resources. 
-    # Remove-AzureRmResourceGroup -Name $resourceGroupName  
+    # Remove-AzResourceGroup -Name $resourceGroupName  
     ```  
 
 3.  After the script completes, the CREATE CREDENTIAL statement will be in your clipboard for use in the next section.  
@@ -459,13 +459,13 @@ To delete the resource group, run the following powershell code:
   $resourceGroupName=$prefixName + 'rg'   
   
   # Adds an authenticated Azure account for use in the session   
-  Login-AzureRmAccount    
+  Connect-AzAccount    
   
   # Set the tenant, subscription and environment for use in the rest of   
-  Set-AzureRmContext -SubscriptionId $subscriptionID    
+  Set-AzContext -SubscriptionId $subscriptionID    
     
   # Remove the resource group
-  Remove-AzureRmResourceGroup -Name $resourceGroupName   
+  Remove-AzResourceGroup -Name $resourceGroupName   
   ```
 
 

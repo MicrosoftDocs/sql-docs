@@ -1,7 +1,7 @@
 ---
 title: Power Query Source | Microsoft Docs
 description: Learn how to configure the Power Query Source in the SQL Server Integration Services data flow
-ms.date: 01/18/2018
+ms.date: 01/22/2018
 ms.prod: sql
 ms.prod_service: "integration-services"
 ms.technology: integration-services
@@ -63,7 +63,7 @@ In **Power Query Connection Manager Editor**, you need to specify **Data Source 
 Some of these sources (**Oracle**, **DB2**, **MySQL**, **PostgreSQL**, **Teradata**, **Sybase**) require additional installations of ADO.NET drivers that can be obtained from [Power Query Prerequisites](https://support.office.com/article/data-source-prerequisites-power-query-6062cf52-c764-45d0-a1c6-fbf8fc05b05a) article. You can use the custom setup interface to install them on your Azure-SSIS IR, see [Customizing Azure-SSIS IR](https://docs.microsoft.com/azure/data-factory/how-to-configure-azure-ssis-ir-custom-setup) article.
 
 > [!NOTE]
-> For **Oracle** data source, the Oracle ADO.NET driver cannot currently be installed on Azure-SSIS IR.
+> For **Oracle** data sources, the Oracle ADO.NET driver currently does not work on the Azure-SSIS IR.
 
 For **Data Source Path**, you can enter data source-specific properties forming a connection string without the authentication info. For example, the path for **SQL** data source is formed as `<Server>;<Database>`. You can select the **Edit** button to assign values to data source-specific properties forming the path.
 

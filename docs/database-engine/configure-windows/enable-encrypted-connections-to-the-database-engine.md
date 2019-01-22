@@ -63,6 +63,10 @@ manager: craigg
   
 10. Complete the **Certificate Import Wizard**, to add a certificate to the computer, and close the MMC console. For more information about adding a certificate to a computer, see your Windows documentation.  
   
+## To provision (install) a certificate across multiple servers
+
+Refer to [Certificate Management (SQL Server Configuration Manager)](/sql/database-engine/configure-windows/manage-certificates.md) to add a certificate across multiple servers.
+
 ##  <a name="Export"></a> To export the server certificate  
   
 1.  From the **Certificates** snap-in, locate the certificate in the **Certificates** / **Personal** folder, right-click the **Certificate**, point to **All Tasks**, and then click **Export**.  

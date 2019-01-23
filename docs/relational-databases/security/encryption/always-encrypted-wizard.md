@@ -29,13 +29,13 @@ Use the **Always Encrypted Wizard** to help protect sensitive data  stored in a 
  
  - **Permissions:** To query encrypted columns and to select keys using this wizard you must have the `VIEW ANY COLUMN MASTER KEY DEFINITION` and `VIEW ANY COLUMN ENCRYPTION KEY DEFINITION` permissions. To create new keys, you must also have the `ALTER ANY COLUMN MASTER KEY` and `ALTER ANY COLUMN ENCRYPTION KEY` permissions.  
  
- #### To Open the Always Encrypted Wizard  
+ #### To Open the Always Encrypted Wizard
  
  1.  Connect to your [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] with the Object Explorer component of [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)].  
    
  2.  Right-click your database, point to **Tasks**, and then click **Encrypt Columns**.  
    
- ## Column Selection Page  
+ ## Column Selection Page
  - Locate a table and column, and then select an encryption type  (deterministic or randomized) and an encryption key for selected columns. To decrypt an column that is currently encrypted, select **Plaintext**. To rotate a column encryption key, select different encryption key and the wizard will decrypt the column and re-encrypt the column with the new key. (Encrypting temporal and In-Memory tables is supported by [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] but cannot be configured by this wizard.)  
  
 ## Master Key Configuration Page  

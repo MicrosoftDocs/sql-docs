@@ -6,17 +6,17 @@
     href: big-data-cluster-release-notes.md
 - name: Install
   items:
-  - name: Tools
+  - name: Install Tools
     items:
     - name: Install big data tools
       href: deploy-big-data-tools.md
     - name: Install mssqlctl
       href: deploy-install-mssqlctl.md
-  - name: Automated deployment
+  - name: Deployment scripts
     items:
     - name: Azure Kubernetes Service
       href: quickstart-big-data-cluster-deploy.md
-  - name: Mannual deployment
+  - name: Deployment guidance
     items:
     - name: Deployment guidance
       href: deployment-guidance.md

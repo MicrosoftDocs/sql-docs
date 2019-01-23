@@ -6,24 +6,24 @@
     href: big-data-cluster-release-notes.md
 - name: Install
   items:
-    - name: Quickstart deployment script
-      href: quickstart-big-data-cluster-deploy.md
+  - name: Quickstart
+    href: quickstart-big-data-cluster-deploy.md
+  - name: Deploy a big data cluster
+    items:
     - name: Deployment guidance
       href: deployment-guidance.md
-    - name: Deployment targets
-      items:
-      - name: Azure Kubernetes Service
-        href: deploy-on-aks.md
-      - name: Minikube
-        href: deploy-on-minikube.md
-      - name: Kubeadm
-        href: deploy-with-kubeadm.md
-    - name: Install tools
-      items:
-      - name: Install big data tools
-        href: deploy-big-data-tools.md
-      - name: Install mssqlctl
-        href: deploy-install-mssqlctl.md
+    - name: Azure Kubernetes Service
+      href: deploy-on-aks.md
+    - name: Minikube
+      href: deploy-on-minikube.md
+    - name: Kubeadm
+      href: deploy-with-kubeadm.md
+  - name: Install tools
+    items:
+    - name: Install big data tools
+      href: deploy-big-data-tools.md
+    - name: Install mssqlctl
+      href: deploy-install-mssqlctl.md
 - name: Tutorials
   items:
   - name: 1_Load sample data

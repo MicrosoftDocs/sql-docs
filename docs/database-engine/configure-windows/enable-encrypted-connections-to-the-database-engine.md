@@ -42,6 +42,9 @@ manager: craigg
   
  
 ##  <a name="Provision"></a> To provision (install) a certificate on the server  
+
+>[!NOTE]
+>Refer to [Certificate Management (SQL Server Configuration Manager)](https://docs.microsoft.com/sql/database-engine/configure-windows/manage-certificates.md) to add a certificate on a single server.
   
 1.  On the **Start** menu, click **Run**, and in the **Open** box, type **MMC** and click **OK**.  
   
@@ -65,7 +68,7 @@ manager: craigg
   
 ## To provision (install) a certificate across multiple servers
 
-Refer to [Certificate Management (SQL Server Configuration Manager)](/sql/database-engine/configure-windows/manage-certificates.md) to add a certificate across multiple servers.
+Refer to [Certificate Management (SQL Server Configuration Manager)](https://docs.microsoft.com/sql/database-engine/configure-windows/manage-certificates.md) to add a certificate across multiple servers.
 
 ##  <a name="Export"></a> To export the server certificate  
   

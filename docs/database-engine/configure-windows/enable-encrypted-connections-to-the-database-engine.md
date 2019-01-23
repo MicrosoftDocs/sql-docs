@@ -97,7 +97,7 @@ Beginning with [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2008, [
 > [!WARNING]  
 > [!INCLUDE[ssnoteregistry_md](../../includes/ssnoteregistry-md.md)]  
 
-<a name="client-request-encrypt-connect-23h"/>
+<a name="client-request-encrypt-connect-23h"/></a>
 ##  <a name="ConfigureClientConnections"></a> To configure the client to request encrypted connections  
   
 1.  Copy either the original certificate or the exported certificate file to the client computer.  

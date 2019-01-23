@@ -230,19 +230,31 @@ ROW_MODE_MEMORY_GRANT_FEEDBACK = { ON | OFF}
 
 **Applies to**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] and [!INCLUDE[ssNoVersion](../../includes/sssqlv15-md.md)] (feature is in public preview)
 
-Allows you to enable or disable Row mode memory grant feedback at the database scope while still maintaining database compatibility level 150 and higher. Row mode memory grant feedback a feature that is part of [Adaptive query processing](../../relational-databases/performance/adaptive-query-processing.md) introduced in SQL Server 2017 (row mode is supported in SQL Server 2019 and Azure SQL Database).
+Allows you to enable or disable row mode memory grant feedback at the database scope while still maintaining database compatibility level 150 and higher. Row mode memory grant feedback a feature that is part of [Adaptive query processing](../../relational-databases/performance/adaptive-query-processing.md) introduced in SQL Server 2017 (row mode is supported in SQL Server 2019 and Azure SQL Database).
 
 BATCH_MODE_MEMORY_GRANT_FEEDBACK = { ON | OFF}
 
 **Applies to**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] and [!INCLUDE[ssNoVersion](../../includes/sssqlv15-md.md)] 
 
-Allows you to enable or disable batch mode memory grant feedback at the database or statement scope while still maintaining database compatibility level 140 and higher. Batch mode memory grant feedback a feature that is part of [Adaptive query processing](../../relational-databases/performance/adaptive-query-processing.md) introduced in SQL Server 2017.
+Allows you to enable or disable batch mode memory grant feedback at the database scope while still maintaining database compatibility level 140 and higher. Batch mode memory grant feedback a feature that is part of [Adaptive query processing](../../relational-databases/performance/adaptive-query-processing.md) introduced in SQL Server 2017.
 
 BATCH_MODE_ADAPTIVE_JOINS = { ON | OFF}
 
 **Applies to**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] and [!INCLUDE[ssNoVersion](../../includes/sssqlv15-md.md)] 
 
 Allows you to enable or disable batch mode adaptive joins at the database scope while still maintaining database compatibility level 140 and higher. Batch mode adaptive joins is a feature that is part of [Adaptive query processing](../../relational-databases/performance/adaptive-query-processing.md) introduced in SQL Server 2017.
+
+BATCH_MODE_ON_ROWSTORE = { ON | OFF}
+
+**Applies to**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] and [!INCLUDE[ssNoVersion](../../includes/sssqlv15-md.md)] (feature is in public preview)
+
+Allows you to enable or disable batch mode on rowstore at the database scope while still maintaining database compatibility level 150 and higher. Batch mode on rowstore is a feature that is part of [Intelligent query processing](../../relational-databases/performance/intelligent-query-processing.md) feature family.
+
+DEFERRED_COMPILATION_TV = { ON | OFF}
+
+**Applies to**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] and [!INCLUDE[ssNoVersion](../../includes/sssqlv15-md.md)] (feature is in public preview)
+
+Allows you to enable or disable table variable deferred compilation at the database scope while still maintaining database compatibility level 150 and higher. Table variable deferred compilation is a feature that is part of [Intelligent query processing](../../relational-databases/performance/intelligent-query-processing.md) feature family.
 
 ## <a name="Permissions"></a> Permissions
 

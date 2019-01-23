@@ -13,7 +13,9 @@
     - name: Install mssqlctl
       href: deploy-install-mssqlctl.md
   - name: Automated deployment
-    href: quickstart-big-data-cluster-deploy.md
+    items:
+    - name: Azure Kubernetes Service
+      href: quickstart-big-data-cluster-deploy.md
   - name: Mannual deployment
     items:
     - name: Deployment guidance
